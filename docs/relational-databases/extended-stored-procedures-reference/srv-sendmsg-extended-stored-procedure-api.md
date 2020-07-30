@@ -1,5 +1,6 @@
 ---
 title: srv_sendmsg (интерфейс API расширенных хранимых процедур) | Документы Майкрософт
+description: Сведения о srv_sendmsg в API-интерфейсе расширенных хранимых процедур и о том, как он может отправить сообщение клиенту.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: efcb50b9-f8ff-4121-bf67-05830171b928
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 757712cd6e390c4369cea08aa7d0e59d727b7d39
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3737b6633710a3831cf8cbcb3801263582369dc7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755847"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248248"
 ---
 # <a name="srv_sendmsg-extended-stored-procedure-api"></a>srv_sendmsg (API-интерфейс расширенных хранимых процедур)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -105,7 +106,7 @@ msglen
 ## <a name="returns"></a>Возвращаемое значение  
  SUCCEED или FAIL  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Эта функция отправляет клиенту сообщение об ошибке или информационное сообщение. Она вызывается один раз для каждой отправки сообщения.  
   
  Можно отправлять сообщения клиенту при помощи функции **srv_sendmsg** в любой последовательности перед тем или после того, как были отправлены все строки (если таковые были) при помощи функции **srv_sendrow**. Все сообщения, если таковые имеются, должны быть отправлены клиенту перед тем, как функция **srv_senddone** отправит состояние завершения.  

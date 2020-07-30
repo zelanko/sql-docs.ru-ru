@@ -1,5 +1,5 @@
 ---
-title: Получение строк из результирующего набора (OLE DB) | Документация Майкрософт
+title: Выборка строк из результирующего набора (поставщик собственного клиента OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,13 +13,14 @@ ms.assetid: 8e9916a5-61e1-468e-8a5c-1ab8b5110737
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d9e9f52e17f68a453227ef58b8b00dd5eb79e54
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d806106ab93dc2e7c74b15457fb4017496aec552
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006420"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247010"
 ---
-# <a name="fetch-rows-from-a-result-set-ole-db"></a>Выбор строк из результирующего набора (OLE DB)
+# <a name="fetch-rows-from-a-result-set-native-client-ole-db-provider"></a>Получение строк из результирующего набора (поставщик собственного клиента OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Этот образец показывает, как выбирать строки из результирующего набора. Этот образец не поддерживается на архитектуре IA64.  
@@ -32,7 +33,7 @@ ms.locfileid: "86006420"
 ## <a name="example"></a>Пример  
   
 ### <a name="description"></a>Описание  
- Скомпилируйте с библиотеками ole32.lib и oleaut32.lib и выполните следующий листинг кода (C++). Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Чтобы подключиться к именованному экземпляру, измените строку подключения с L"(local)" на L"(local)\\\<имя>", где <имя> — это именованный экземпляр. По умолчанию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
+ Скомпилируйте с библиотеками ole32.lib и oleaut32.lib и выполните следующий листинг кода (C++). Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Чтобы подключиться к именованному экземпляру, измените строку подключения с L "(local)" на L "(local) \\ \наме", где name — это именованный экземпляр. По умолчанию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
   
 ### <a name="code"></a>Код  
   

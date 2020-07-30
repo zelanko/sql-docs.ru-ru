@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e413913d3064b4302d4673098b82d220acc23aa1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ef825848ee0e2c43a1a70441009a590c41ce5526
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764565"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242844"
 ---
 # <a name="ado-properties"></a>Свойства ADO
 
-|||  
+|Свойство|Описание|  
 |-|-|  
 |[Примеры absolutepage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|Указывает, на какой странице находится текущая запись.|  
 |[Примеры AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|Указывает порядковый номер текущей записи объекта **набора записей** .|  
@@ -55,30 +55,30 @@ ms.locfileid: "82764565"
 |[EOS](../../../ado/reference/ado-api/eos-property.md)|Указывает, находится ли текущая координата в конце потока.|  
 |[Filter](../../../ado/reference/ado-api/filter-property.md)|Указывает фильтр для данных в **наборе записей**.|  
 |[HelpContext и HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)|Указывает файл справки и раздел, связанный с объектом **Error** .<br /><br /> **Хелпконтекстид** возвращает идентификатор контекста в виде **длинного** значения для раздела в файле справки.<br /><br /> **HelpFile** возвращает **строковое** значение, результатом которого является полностью разрешенный путь к файлу справки.|  
-|[Номер](../../../ado/reference/ado-api/index-property.md)|Указывает имя индекса, действующего в настоящий момент для объекта **Recordset** .|  
+|[Index](../../../ado/reference/ado-api/index-property.md)|Указывает имя индекса, действующего в настоящий момент для объекта **Recordset** .|  
 |[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)|Указывает уровень изоляции для объекта **соединения** .|  
-|[Элемент](../../../ado/reference/ado-api/item-property-ado.md)|Указывает конкретный элемент коллекции по имени или порядковому номеру.|  
+|[Item](../../../ado/reference/ado-api/item-property-ado.md)|Указывает конкретный элемент коллекции по имени или порядковому номеру.|  
 |[LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md)|Указывает двоичный символ, используемый в качестве разделителя строк в объектах текстового **потока** .|  
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|Указывает тип блокировок, помещаемых в записи во время редактирования.|  
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|Указывает, какие записи должны быть упакованы обратно на сервер.|  
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|Указывает максимальное число записей, возвращаемых в **набор записей** из запроса.|  
 |[Режим](../../../ado/reference/ado-api/mode-property-ado.md)|Указывает доступные разрешения для изменения данных в **соединении**, **записи**или объекте **потока** .|  
-|[Name](../../../ado/reference/ado-api/name-property-ado.md)|Указывает имя объекта.|  
+|[Имя](../../../ado/reference/ado-api/name-property-ado.md)|Указывает имя объекта.|  
 |[NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md)|Указывает код ошибки конкретного поставщика для конкретного объекта **ошибки** .|  
-|[Нумерация](../../../ado/reference/ado-api/number-property-ado.md)|Указывает число, которое однозначно определяет объект **ошибки** .|  
+|[Число](../../../ado/reference/ado-api/number-property-ado.md)|Указывает число, которое однозначно определяет объект **ошибки** .|  
 |[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)|Указывает масштаб числовых значений в объекте **параметра** или **поля** .|  
 |[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)|Указывает значение **поля** , которое существовало в записи до внесения каких-либо изменений.|  
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|Указывает, сколько страниц данных содержит объект **Recordset** .|  
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|Указывает, сколько записей представляют одну страницу в **наборе записей**.|  
 |[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|Задает контейнер объекта OLE DB **строки** для объекта **адорекордконструктион** , чтобы родительский элемент строки был включен в объект **записи** ADO.|  
 |[парентурл](../../../ado/reference/ado-api/parenturl-property-ado.md)|Указывает абсолютную строку URL-адреса, указывающую на родительскую **запись** текущего объекта **Record** .|  
-|[Положение](../../../ado/reference/ado-api/position-property-ado.md)|Указывает текущую точку в объекте **потока** .|  
+|[Позиция](../../../ado/reference/ado-api/position-property-ado.md)|Указывает текущую точку в объекте **потока** .|  
 |[Точность](../../../ado/reference/ado-api/precision-property-ado.md)|Указывает степень точности для числовых значений в объекте **параметра** или для числовых объектов **полей** .|  
 |[Prepared](../../../ado/reference/ado-api/prepared-property-ado.md)|Указывает, следует ли сохранять скомпилированную версию команды перед выполнением.|  
 |[Поставщик](../../../ado/reference/ado-api/provider-property-ado.md)|Указывает имя поставщика для объекта **соединения** .|  
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|Указывает количество записей в объекте **набора записей** .|  
 |[RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)|Указывает тип объекта **записи** .|  
-|[Строки](../../../ado/reference/ado-api/row-property-ado.md)|Возвращает или задает OLE DB объект **строки** из объекта **адорекордконструктион** или.|  
+|[Строка](../../../ado/reference/ado-api/row-property-ado.md)|Возвращает или задает OLE DB объект **строки** из объекта **адорекордконструктион** или.|  
 |[ровпоситион](../../../ado/reference/ado-api/rowposition-property-ado.md)|Возвращает или задает OLE DB объект **ровпоситион** из или в объекте **адорекордсетконструктион** .|  
 |[Набор строк](../../../ado/reference/ado-api/rowset-property-ado.md)|Возвращает или задает OLE DB объект **набора строк** из объекта **адорекордсетконструктион** или.|  
 |[Источник (ошибка ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)|Указывает имя объекта или приложения, вызвавшего ошибку.|  
@@ -93,8 +93,8 @@ ms.locfileid: "82764565"
 |[Type](../../../ado/reference/ado-api/type-property-ado.md)|Указывает операционный тип или тип данных для **параметра**, **поля**или объекта **Свойства** .|  
 |[Type (поток ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)|Указывает тип данных, содержащихся в **потоке** (двоичный или текстовый).|  
 |[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)|Указывает текущее значение в базе данных для объекта **поля** .|  
-|[Значение](../../../ado/reference/ado-api/value-property-ado.md)|Указывает значение, присваиваемое **полю**, **параметру**или объекту **Свойства** .|  
-|[Версия](../../../ado/reference/ado-api/version-property-ado.md)|Указывает номер версии ADO.|  
+|[Value](../../../ado/reference/ado-api/value-property-ado.md)|Указывает значение, присваиваемое **полю**, **параметру**или объекту **Свойства** .|  
+|[Version](../../../ado/reference/ado-api/version-property-ado.md)|Указывает номер версии ADO.|  
   
 ## <a name="see-also"></a>См. также  
  [Справочник по API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 808661eb-0d7c-4e6d-8e40-9dc3bef3d77a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1bdd16d8e98bd1c038c5bc6c761305e87b65b765
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3487463bf4a13cc97cbc7cd031e18cef5dccb2a7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762515"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242644"
 ---
 # <a name="mode-property-ado"></a>Свойство Mode (ADO)
 Указывает доступные разрешения для изменения данных в [соединении](../../../ado/reference/ado-api/connection-object-ado.md), [записи](../../../ado/reference/ado-api/record-object-ado.md)или объекте [потока](../../../ado/reference/ado-api/stream-object-ado.md) .  
@@ -40,12 +40,20 @@ ms.locfileid: "82762515"
 > [!NOTE]
 >  **Использование удаленной службы данных** При использовании объекта **подключения** на стороне клиента для свойства **mode** можно задать только значение **адмодеункновн**.  
   
-## <a name="applies-to"></a>Применяется к  
-  
-||||  
-|-|-|-|  
-|[Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|[Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
-  
+## <a name="applies-to"></a>Применение  
+
+:::row:::
+    :::column:::
+        [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>См. также  
  [Пример свойств IsolationLevel и Mode (Visual Basic)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)   
  [Пример свойств IsolationLevel и Mode (Visual c++)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)   

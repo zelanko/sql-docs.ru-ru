@@ -1,5 +1,6 @@
 ---
 title: srv_paraminfo (интерфейс API расширенных хранимых процедур) | Документы Майкрософт
+description: Узнайте, как srv_paraminfo в API расширенных хранимых процедур возвращает сведения о параметре.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ee2afd4e-0d91-462b-9403-98d481546330
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9a291487402d4299176b583f4bc6e25e297f314a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 78057c092942455e41f48e0f9f12a9502c1a67ee
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756711"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332347"
 ---
 # <a name="srv_paraminfo-extended-stored-procedure-api"></a>srv_paraminfo (API-интерфейс расширенных хранимых процедур)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -87,7 +88,7 @@ pfNull
 ## <a name="returns"></a>Возвращаемое значение  
  При успешном получении сведений о параметре возвращается значение SUCCEED; в иных случаях – значение FAIL. Значение FAIL возвращается, если удаленной хранимой процедуры сейчас не существует или у нее нет параметра с номером *n*.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **Примечание по безопасности.** Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные DLL-библиотеки перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>См. также  

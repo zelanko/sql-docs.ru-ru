@@ -1,5 +1,6 @@
 ---
 title: srv_convert (интерфейс API расширенных хранимых процедур) | Документы Майкрософт
+description: Узнайте, как srv_convert в API расширенных хранимых процедур изменяет данные из одного типа данных на другой.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 216b4a31-786e-4361-8a33-e5f6e9790f90
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 60acbb6044842c097aa222b7a831addac7cf11d0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f3148ecd51a44bf6c0c9f03546d3bf750c1df1c0
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85678702"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332373"
 ---
 # <a name="srv_convert-extended-stored-procedure-api"></a>srv_convert (API-интерфейс расширенных хранимых процедур)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -89,7 +90,7 @@ destlen
 ## <a name="returns"></a>Возвращаемое значение  
  Длина преобразованных данных в байтах, если преобразование типов было проведено успешно. Если функция **srv_convert** получает запрос на преобразование, которое не поддерживается, то вызывает обработчик ошибок, если он был задан разработчиком, устанавливает глобальный номер ошибки и возвращает значение –1.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Функция **srv_willconvert** определяет, допустимо ли данное преобразование.  
   
  Преобразование в приблизительные числовые типы данных SRVFLT4 и SRVFLT8 может привести к некоторой потере точности. Преобразование из приблизительных числовых типов данных SRVFLT4 и SRVFLT8 в типы SRVCHAR и SRVTEXT также может привести к некоторой потере точности.  

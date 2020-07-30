@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8a4c079f-9f4f-4545-801d-85983b8db71e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 46718126ede409caa749b3a49dfaaffe118afc77
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7bfa47120814058adbc5c2e5f3650a79b2202afb
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761832"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243185"
 ---
 # <a name="type-property-ado"></a>Свойство Type (ADO)
 Указывает операционный тип или тип данных для [параметра](../../../ado/reference/ado-api/parameter-object.md), [поля](../../../ado/reference/ado-api/field-object.md)или объекта [Свойства](../../../ado/reference/ado-api/property-object-ado.md) .  
@@ -34,12 +34,20 @@ ms.locfileid: "82761832"
   
  Для всех остальных объектов свойство **Type** доступно только для чтения.  
   
-## <a name="applies-to"></a>Применяется к  
-  
-||||  
-|-|-|-|  
-|[Объект Field](../../../ado/reference/ado-api/field-object.md)|[Объект Parameter](../../../ado/reference/ado-api/parameter-object.md)|[Объект Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
-  
+## <a name="applies-to"></a>Применение  
+
+:::row:::
+    :::column:::
+        [Объект Field](../../../ado/reference/ado-api/field-object.md)  
+    :::column-end:::
+    :::column:::
+        [Объект Parameter](../../../ado/reference/ado-api/parameter-object.md)  
+    :::column-end:::
+    :::column:::
+        [Объект Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>См. также  
  [Пример свойства Type (Field) (VB)](../../../ado/reference/ado-api/type-property-example-field-vb.md)   
  [Пример свойства Type (Property) (VC + +)](../../../ado/reference/ado-api/type-property-example-property-vc.md)   

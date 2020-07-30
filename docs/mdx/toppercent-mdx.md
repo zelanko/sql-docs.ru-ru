@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7a8c92a4b6a76cb9d15048d6f058038363970cb8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dcb01ae9771f748ad62faba37cea103f1c7acc8c
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036592"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362654"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (многомерные выражения)
 
@@ -67,7 +67,7 @@ WHERE([Product].[Product Categories].[Bikes])
   
  Приведенное выше выражение дает следующие результаты.  
   
-||Reseller Sales Amount|  
+|Город|Reseller Sales Amount|  
 |-|---------------------------|  
 |Toronto|$3 508 904,84|  
 |London|$1 521 530,09|  
@@ -102,7 +102,7 @@ FROM [Adventure Works]
   
  Этот запрос возвращает следующие результаты. Средние строки удалены для упрощения чтения.  
   
-||Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
+|Туристические велосипеды|Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
 |-|---------------------------|---------------------------------|---------------------------|  
 |Touring-2000 Blue, 50|$157 444,56|$163 112,57|($5 668,01)|  
 |Обзор — 2000 синий, 46|$321 027,03|$333 021,50|($11 994,47)|  
@@ -122,11 +122,11 @@ FROM [Adventure Works]
   
  Заметьте, что в запросе указан размер выборки 100 % и должны возвращаться все строки. Однако, поскольку в *Numeric_Expression* есть отрицательные значения, возвращается только одна строка.  
   
-||Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
+|Туристические велосипеды|Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
 |-|---------------------------|---------------------------------|---------------------------|  
 |Touring-2000 Blue, 50|$157 444,56|$163 112,57|($5 668,01)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

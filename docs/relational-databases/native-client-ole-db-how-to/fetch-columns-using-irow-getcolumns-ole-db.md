@@ -1,5 +1,5 @@
 ---
-title: Получение столбцов с помощью IRow::GetColumns (OLE DB) | Документация Майкрософт
+title: 'Выборка столбцов с помощью IRow:: DataColumn (поставщик собственного клиента OLE DB) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,18 +13,19 @@ ms.assetid: a4f79906-da0e-42f2-b0e9-812c29f39e48
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db4a869049b0092f314e2cb89035d4a5549c0760
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 645c627f70b3135792b882a1ae62504948f2839a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004552"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247873"
 ---
-# <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Выбор столбцов при помощи метода IRow::GetColumns (OLE DB)
+# <a name="fetch-columns-in-sql-server-native-client-using-irowgetcolumns-ole-db"></a>Извлечение столбцов в SQL Server Native Client с помощью IRow:: DataColumn (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Интерфейс **IRow** обеспечивает прямой доступ к столбцам одной строки в результирующем наборе. Таким образом, **IRow** является эффективным способом получения столбцов из результирующего набора из одной строки.  
   
- Имеется образец кода, в котором показано получение одной строки с помощью **IRow**. В этом образце из строки за один раз извлекается один столбец. В образце показано следующее.  
+ Доступен пример кода, в котором показано, как получить одну строку с помощью **IRow**. В этом образце из строки за один раз извлекается один столбец. В образце показано следующее.  
   
 -   Как получить группу столбцов (последовательно).  
   
@@ -56,7 +57,7 @@ ms.locfileid: "86004552"
   
  Первый листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]) создает таблицу, которая используется образцом.  
   
- Скомпилируйте с библиотеками ole32.lib и oleaut32.lib и выполните второй листинг кода (C++). Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы подключиться к именованному экземпляру, измените строку подключения с L"(local)" на L"(local)\\\<имя>", где <имя> — это именованный экземпляр. По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
+ Скомпилируйте с библиотеками ole32.lib и oleaut32.lib и выполните второй листинг кода (C++). Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы подключиться к именованному экземпляру, измените строку подключения с L "(local)" на L "(local) \\ \наме", где name — это именованный экземпляр. По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
   
  Третий листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]) удаляет таблицу, используемую образцом.  
   

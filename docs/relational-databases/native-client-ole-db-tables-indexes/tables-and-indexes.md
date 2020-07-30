@@ -1,5 +1,5 @@
 ---
-title: Таблицы и индексы | Документация Майкрософт
+title: Таблицы и индексы (поставщик собственного клиента OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,13 +20,14 @@ ms.assetid: 4217c6d8-8cd2-43dc-b36f-3cfd8a58fabc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfffe60e1522a1ca187f15fa99990640afce8ee9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3cceffac463294bce24b3573aca6ecdeae2ce599
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004261"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332313"
 ---
-# <a name="tables-and-indexes"></a>Таблицы и индексы
+# <a name="tables-and-indexes-in-sql-server-native-client"></a>Таблицы и индексы в SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента предоставляет интерфейсы **IIndexDefinition** и **ITableDefinition** , позволяя потребителям создавать, изменять и удалять [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицы и индексы. Допустимые определения таблиц и индексов зависят от версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -41,7 +42,7 @@ ms.locfileid: "86004261"
 |-----------------|-----------------|  
 |SSPROP_COL_COLLATIONNAME|Тип: VT_BSTR<br /><br /> Чтение и запись.<br /><br /> По умолчанию: NULL<br /><br /> Описание: это свойство используется только в интерфейсе **ITableDefinition**. Строка, указанная в этом свойстве, используется при создании инструкции [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md).<br /><br /> .|  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 -   [Создание таблиц SQL Server](../../relational-databases/native-client-ole-db-tables-indexes/creating-sql-server-tables.md)  
   

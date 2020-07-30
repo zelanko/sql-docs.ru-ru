@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5d22757951cad59c10bc1d7eea85ea8ee11ed0ad
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 456b11972fcb9b7bb20ee07b58e36d2daa5cc0da
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757630"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242387"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 Указывает тип данных [поля](../../../ado/reference/ado-api/field-object.md), [параметра](../../../ado/reference/ado-api/parameter-object.md)или [Свойства](../../../ado/reference/ado-api/property-object-ado.md). Соответствующий индикатор типа OLE DB отображается в круглых скобках в столбце Описание следующей таблицы.  
@@ -114,9 +114,15 @@ ms.locfileid: "82757630"
 |Адоенумс. DataType. ВАРВЧАР|  
 |Адоенумс. DataType. WCHAR|  
   
-## <a name="applies-to"></a>Применяется к  
-  
-|||  
-|-|-|  
-|[Метод Append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)|[Метод CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)|  
-|[Метод CreateRecordset (служба удаленных рабочих столов)](../../../ado/reference/rds-api/createrecordset-method-rds.md)|[Свойство Type (ADO)](../../../ado/reference/ado-api/type-property-ado.md)|
+## <a name="applies-to"></a>Применение  
+
+:::row:::
+    :::column:::
+        [Метод Append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)  
+        [Метод CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Метод CreateRecordset (служба удаленных рабочих столов)](../../../ado/reference/rds-api/createrecordset-method-rds.md)  
+        [Свойство Type (ADO)](../../../ado/reference/ado-api/type-property-ado.md)  
+    :::column-end:::
+:::row-end:::

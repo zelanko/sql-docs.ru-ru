@@ -1,5 +1,5 @@
 ---
-title: Извлечение строк с помощью закладок (OLE DB) | Документация Майкрософт
+title: Получение строк с помощью закладок (поставщик собственного клиента OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,13 +14,14 @@ ms.assetid: 5e14d5c8-e7c6-498f-8041-7e006a1c2d81
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4882c2eaa24ef291e520306ce005c0e8b86dcbab
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1aee0ddd1324660c5b3fcdfd10ffa9c831d4f237
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006402"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247025"
 ---
-# <a name="retrieve-rows-using-bookmarks-ole-db"></a>Получение строк с помощью закладок (OLE DB)
+# <a name="retrieve-rows-using-bookmarks-native-client-ole-db-provider"></a>Получение строк с помощью закладок (поставщик собственного клиента OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Потребитель устанавливает для поля **dwFlag** значение структуры привязки, равное DBCOLUMNSINFO_ISBOOKMARK, для указания, что столбец используется в качестве закладки. Пользователь также присваивает свойству набора строк DBPROP_BOOKMARKS значение VARIANT_TRUE. Это обеспечивает присутствие в наборе строк столбца с номером 0. Затем с помощью метода**IRowsetLocate::GetRowsAt** производится выборка строк, начиная со строки, указанной в качестве смещения относительно закладки.  
@@ -47,7 +48,7 @@ ms.locfileid: "86006402"
   
  Образцу требуется образец базы данных AdventureWorks, который можно загрузить с домашней страницы [Образцы кода и проекты сообщества Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) (возможно, на английском языке).  
   
- Скомпилируйте с библиотеками ole32.lib и oleaut32.lib и выполните следующий листинг кода (C++). Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы подключиться к именованному экземпляру, измените строку подключения с L"(local)" на L"(local)\\\<имя>", где <имя> — это именованный экземпляр. По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
+ Скомпилируйте с библиотеками ole32.lib и oleaut32.lib и выполните следующий листинг кода (C++). Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы подключиться к именованному экземпляру, измените строку подключения с L "(local)" на L "(local) \\ \наме", где name — это именованный экземпляр. По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
   
 ```  
 // compile with: ole32.lib oleaut32.lib  

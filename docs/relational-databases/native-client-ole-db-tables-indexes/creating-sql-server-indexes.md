@@ -17,14 +17,14 @@ ms.assetid: 6239d440-2818-4b98-bb79-732dced41952
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62f1f6d0e30df7202ae85962914cc628c6455041
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 4e5dff60a0605e059c32edd3d4e8501036a42405
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977727"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87241887"
 ---
-# <a name="creating-sql-server-indexes"></a>Создание индексов SQL Server
+# <a name="creating-sql-server-native-client-indexes"></a>Создание индексов SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Поставщик собственного клиента OLE DB предоставляет функцию **IIndexDefinition:: CreateIndex** , позволяющую потребителям определять новые индексы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицах.  
@@ -154,7 +154,7 @@ HRESULT CreatePrimaryKey
     }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Таблицы и индексы](../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)  
   
   

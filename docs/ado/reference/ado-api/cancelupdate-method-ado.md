@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eaa856cc-c786-462e-890c-c896261b1741
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d62837bd06798fd8ce7b51b0345cf5e5a6463e4b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0ecc08dde974826846058d4d8927df202367d28d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763165"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242411"
 ---
 # <a name="cancelupdate-method-ado"></a>Метод CancelUpdate (ADO)
 Отменяет все изменения, внесенные в текущую или новую строку объекта [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) , или коллекцию [полей](../../../ado/reference/ado-api/fields-collection-ado.md) объекта [Record](../../../ado/reference/ado-api/record-object-ado.md) перед вызовом метода [Update](../../../ado/reference/ado-api/update-method.md) .  
@@ -41,15 +41,20 @@ recordset.CancelUpdaterecord.Fields.CancelUpdate
   
  Если вы используете режим редактирования и хотите переместить текущую запись (например, с помощью методов [Move](../../../ado/reference/ado-api/move-method-ado.md), [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)или [Close](../../../ado/reference/ado-api/close-method-ado.md) ), можно использовать **CancelUpdate** для отмены всех ожидающих изменений. Это может потребоваться, если обновление не удается успешно опубликовать в источнике данных. Например, попытка удаления, которая завершилась сбоем из-за нарушений ссылочной целостности, оставляет **набор записей** в режиме редактирования после вызова метода [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md).  
   
-## <a name="record"></a>Записей  
+## <a name="record"></a>Запись  
  Метод **CancelUpdate** отменяет все ожидающие вставки или удаления объектов [полей](../../../ado/reference/ado-api/field-object.md) и отменяет отложенные обновления существующих полей и восстанавливает их исходные значения. Свойство [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) всех полей в коллекции **Fields** имеет значение **адфиелдок**.  
   
-## <a name="applies-to"></a>Применяется к  
-  
-|||  
-|-|-|  
-|[Коллекция Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
-  
+## <a name="applies-to"></a>Применение  
+
+:::row:::
+    :::column:::
+        [Коллекция Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>См. также  
  [Примеры методов Update и CancelUpdate (Visual Basic)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
  [Примеры методов Update и CancelUpdate (Visual c++)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)   

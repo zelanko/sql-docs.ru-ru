@@ -1,5 +1,5 @@
 ---
-title: Установление подключения к источнику данных | Документация Майкрософт
+title: Установить соединение с источником данных (поставщик собственного клиента OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,14 @@ ms.assetid: 7ebd1394-cc8d-4bcf-92f3-c374a26e7ba0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f3f0c654edce21a4ec5543d9488938b65d964f0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1dc465bfa63a0822fc4a1de7b13611c0d1121017
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005292"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248175"
 ---
-# <a name="establishing-a-connection-to-a-data-source"></a>Устанавливает соединение с источником данных
+# <a name="establishing-a-connection-to-a-sql-server-native-client-data-source"></a>Установление соединения с источником данных SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Чтобы получить доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщику OLE DB собственного клиента, потребитель должен сначала создать экземпляр объекта источника данных, вызвав метод **CoCreateInstance** . Каждый поставщик OLE DB определяется уникальным идентификатором класса (CLSID). Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика собственного клиента OLE DB идентификатор класса CLSID_SQLNCLI10. Можно также использовать символы SQLNCLI_CLSID, которые будут разрешаться в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB собственного клиента, используемый в ссылке sqlncli. h.  
@@ -32,7 +33,7 @@ ms.locfileid: "86005292"
   
  Если на компьютере выполняется несколько экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], имя сервера указывается как «Имя_Сервера\Имя_Экземпляра».  
   
- Объект источника данных также предоставляет интерфейс **IDBInitialize**. После присвоения значений свойствам устанавливается соединение с источником данных с помощью вызова метода **IDBInitialize::Initialize**. Пример:  
+ Объект источника данных также предоставляет интерфейс **IDBInitialize**. После присвоения значений свойствам устанавливается соединение с источником данных с помощью вызова метода **IDBInitialize::Initialize**. Пример.  
   
 ```  
 CoCreateInstance(CLSID_SQLNCLI10,   

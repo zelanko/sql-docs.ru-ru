@@ -1,5 +1,6 @@
 ---
 title: Расширенные хранимые процедуры (Transact-SQL)
+description: Дополнительные сведения о расширенных хранимых процедурах, которые можно использовать при работе с базами данных с поддержкой Stretch. См. статью согласование столбцов и выполнение других задач.
 titleSuffix: SQL Server Stretch Database
 ms.custom: seo-dt-2019
 ms.date: 06/10/2016
@@ -14,18 +15,19 @@ helpviewer_keywords:
 ms.assetid: bda29952-4b8b-4295-ab78-f24dcb0b03c6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9f1266fb9967dc429160377bcc1b42d227be5222
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 11afc18f35c23c4a0a55f51eed39ab830f0ce8ad
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052914"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245761"
 ---
 # <a name="stretch-database-extended-stored-procedures-transact-sql"></a>Stretch Database расширенные хранимые процедуры (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
  В этом разделе описаны расширенные хранимые процедуры, связанные с Stretch Database.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
 [sys. sp_rda_deauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md) Удаляет подключение с проверкой подлинности между локальной базой данных с поддержкой Stretch и удаленной базой данных Azure.
 
 [sys. sp_rda_get_rpo_duration](../../relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md) Возвращает количество часов перенесенных данных, которые SQL Server сохранены в промежуточной таблице, чтобы обеспечить полное восстановление удаленной базы данных Azure, если восстановление необходимо.

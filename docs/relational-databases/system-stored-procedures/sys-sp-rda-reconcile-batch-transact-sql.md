@@ -1,5 +1,6 @@
 ---
 title: sys. sp_rda_reconcile_batch (Transact-SQL) | Документация Майкрософт
+description: Узнайте, как использовать sys. sp_rda_reconcile_batch для согласования идентификатора пакета в таблице SQL Server с поддержкой растяжения с ИДЕНТИФИКАТОРом пакета, хранящимся в удаленной таблице Azure.
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,11 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6d21eac3-7b6c-4fe0-8bc4-bf503f3948a6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c8ce7b946005eca97d57ef709557ec9b4334339c
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: aa97030851e13eac020564eec7931a00595b8884
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053240"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247093"
 ---
 # <a name="syssp_rda_reconcile_batch-transact-sql"></a>sys. sp_rda_reconcile_batch (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -48,7 +50,7 @@ sp_rda_reconcile_batch @objname = '@objname'
 ## <a name="permissions"></a>Разрешения  
  Требуются db_owner разрешения.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Если вы хотите удалить данные, которые уже были перенесены в Azure, выполните следующие действия.  
   
 1.  Приостановка переноса данных. Дополнительные сведения см. в разделе [Приостановка и возобновление переноса данных (Stretch Database)](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).  

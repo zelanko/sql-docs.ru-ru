@@ -18,13 +18,14 @@ ms.assetid: 37769b1c-c480-419a-8c54-5cc420bf73db
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed9ce32d2ea7aa06468210277c7688c04fb55022
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 230ecf53d6260cb11411b2513e6b06a7fac883d1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86013098"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246814"
 ---
-# <a name="updating-data-in-rowsets"></a>Обновление данных в наборах строк
+# <a name="updating-data-in-rowsets-in-sql-server-native-client"></a>Обновление данных в наборах строк в SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента обновляет [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данные, когда потребитель обновляет изменяемый набор строк, содержащий эти данные. Набор строк, который можно изменять, создается, если потребитель запрашивает поддержку либо для интерфейса **IRowsetChange**, либо для интерфейса **IRowsetUpdate**.  
@@ -36,7 +37,7 @@ ms.locfileid: "86013098"
 > [!NOTE]  
 >  Интерфейс IRowChange::SetColumns может установить значения одного или более именованных столбцов объекта-строки.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 -   [Обновление данных в курсорах SQL Server](../../relational-databases/native-client-ole-db-rowsets/updating-data-in-sql-server-cursors.md)  
   

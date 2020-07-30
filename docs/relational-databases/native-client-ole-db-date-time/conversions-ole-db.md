@@ -15,13 +15,14 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82c2e5f35d7418f9c1c44a9a7711b7ef546eb3ac
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0dec84f95cf60818336956e2d6e86d871a3fdc00
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998189"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245902"
 ---
-# <a name="conversions-ole-db"></a>Преобразования (OLE DB)
+# <a name="sql-server-native-client-conversions-ole-db"></a>Преобразования SQL Server Native Client (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   В этой статье описано, как выполнять преобразование между значениями типа **datetime** и **datetimeoffset**. Преобразования, описанные в этом разделе, либо уже предоставлены OLE DB, либо являются согласованным расширением OLE DB.  
@@ -63,7 +64,7 @@ ms.locfileid: "85998189"
   
 -   Если усечение секунд или долей секунд происходит при преобразовании с клиента на сервер, устанавливается состояние DBSTATUS_S_TRUNCATED.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Преобразования, выполняемые при передаче от клиента к серверу](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-client-to-server.md)  
  Описывает преобразования даты-времени, проводимые между клиентским приложением, написанным с помощью собственного клиента OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], и [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (или более поздней версией).  
   

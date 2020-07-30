@@ -1,5 +1,6 @@
 ---
 title: srv_senddone (интерфейс API расширенных хранимых процедур) | Документы Майкрософт
+description: Узнайте, как srv_senddone в API расширенных хранимых процедур отправляет клиенту сообщение о завершении выполнения.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1fc4f1d5-56d4-43f6-b5e4-0c0cc295cba3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5b5f7722daf7ebbdda988cf3fb41ac1ab5b06049
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 424ef5a1050def714e7f42483cb2c8d16ecfb99b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755857"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248253"
 ---
 # <a name="srv_senddone-extended-stored-procedure-api"></a>srv_senddone (API-интерфейс расширенных хранимых процедур)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -75,7 +76,7 @@ count
 ## <a name="returns"></a>Возвращаемое значение  
  SUCCEED или FAIL  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  По запросу клиента сервер может выполнить ряд команд и вернуть несколько результирующих наборов. Для каждого результирующего набора функция **srv_senddone** должна вернуть клиенту сообщение о завершении с результатом.  
   
  Поле *count* указывает количество строк, затронутых командой. Если в поле *count* содержится значение счетчика, то в поле *status* должен быть установлен флаг SRV_DONE_COUNT. Это значение позволяет клиенту провести различие между значением *count* (равным 0) и неиспользуемым полем *count* .  

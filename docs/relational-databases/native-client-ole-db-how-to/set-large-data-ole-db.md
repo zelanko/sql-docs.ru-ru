@@ -1,5 +1,5 @@
 ---
-title: Задание данных большого объема (OLE DB) | Документация Майкрософт
+title: Задание больших данных (поставщик собственного клиента OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,13 +13,14 @@ ms.assetid: b057f04b-e5f4-466e-a39a-090dae797236
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6fc1d2797a44caaac9ec7b9a55c26bf7849aa106
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3e7c7d1dd8f24db346b80d7ec95459c54ea95071
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008695"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246976"
 ---
-# <a name="set-large-data-ole-db"></a>Задание данных больших объектов (OLE DB)
+# <a name="set-large-data-native-client-ole-db-provider"></a>Задание больших данных (поставщик собственного клиента OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   В этом образце показывается, как задать данные типа BLOB, создать таблицу, добавить образец записи, выбрать эту запись в набор строк, а затем задать значение поля типа BLOB. Этот образец не поддерживается на архитектуре IA64.  
@@ -50,7 +51,7 @@ ms.locfileid: "86008695"
 ## <a name="example"></a>Пример  
   
 ### <a name="description"></a>Описание  
- Скомпилируйте с библиотеками ole32.lib и oleaut32.lib и выполните следующий листинг кода (C++). Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы подключиться к именованному экземпляру, измените строку подключения с L"(local)" на L"(local)\\\<имя>", где <имя> — это именованный экземпляр. По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
+ Скомпилируйте с библиотеками ole32.lib и oleaut32.lib и выполните следующий листинг кода (C++). Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы подключиться к именованному экземпляру, измените строку подключения с L "(local)" на L "(local) \\ \наме", где name — это именованный экземпляр. По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
   
 ### <a name="code"></a>Код  
   

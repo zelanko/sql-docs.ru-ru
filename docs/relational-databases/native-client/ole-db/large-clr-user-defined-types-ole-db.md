@@ -13,13 +13,14 @@ ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d67e41f3dfaed9ef59e586368d8b80dda2936669
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e851332ad3f8485e7c716101942b1cdc0c6838bb
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010499"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243898"
 ---
-# <a name="large-clr-user-defined-types-ole-db"></a>Большие определяемые пользователем типы данных CLR (OLE DB)
+# <a name="large-clr-user-defined-types-in-sql-server-native-client-ole-db"></a>Большие определяемые пользователем типы данных CLR в SQL Server Native Client (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   В этом разделе описываются изменения OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], связанные с поддержкой больших определяемых пользователем типов данных среды CLR.  
@@ -120,13 +121,13 @@ ms.locfileid: "86010499"
 |Привязка типов данных|Определяемый пользователем тип к серверному типу|Тип, не определяемый пользователем, к серверному типу|Серверный тип к определяемому пользователем типу|Серверный тип к типу, не определяемому пользователем|  
 |----------------------|-------------------|------------------------|---------------------|--------------------------|  
 |DBTYPE_UDT|Поддерживается (5)|Ошибка (1)|Поддерживается (5)|Ошибка (4)|  
-|DBTYPE_BYTES|Поддерживается (5)|Недоступно|Поддерживается (5)|Недоступно|  
-|DBTYPE_WSTR|Поддерживается (2), (5)|Недоступно|Поддерживается (3), (5), (6)|Недоступно|  
-|DBTYPE_BSTR|Поддерживается (2), (5)|Недоступно|Поддерживается (3), (5)|Недоступно|  
-|DBTYPE_STR|Поддерживается (2), (5)|Недоступно|Поддерживается (3), (5)|Недоступно|  
-|DBTYPE_IUNKNOWN|Поддерживается (6)|Недоступно|Поддерживается (6)|Недоступно|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Поддерживается (5)|Недоступно|Поддерживается (3), (5)|Недоступно|  
-|DBTYPE_VARIANT (VT_BSTR)|Поддерживается (2), (5)|Недоступно|Недоступно|Недоступно|  
+|DBTYPE_BYTES|Поддерживается (5)|Н/Д|Поддерживается (5)|Н/Д|  
+|DBTYPE_WSTR|Поддерживается (2), (5)|Н/Д|Поддерживается (3), (5), (6)|Н/Д|  
+|DBTYPE_BSTR|Поддерживается (2), (5)|Н/Д|Поддерживается (3), (5)|Н/Д|  
+|DBTYPE_STR|Поддерживается (2), (5)|Н/Д|Поддерживается (3), (5)|Н/Д|  
+|DBTYPE_IUNKNOWN|Поддерживается (6)|Н/Д|Поддерживается (6)|Н/Д|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Поддерживается (5)|Н/Д|Поддерживается (3), (5)|Н/Д|  
+|DBTYPE_VARIANT (VT_BSTR)|Поддерживается (2), (5)|Н/Д|Недоступно|Недоступно|  
   
 ### <a name="key-to-symbols"></a>Расшифровка символов  
   

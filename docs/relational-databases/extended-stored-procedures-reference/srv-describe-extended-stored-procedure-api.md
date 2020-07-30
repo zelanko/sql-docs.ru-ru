@@ -1,5 +1,6 @@
 ---
 title: srv_describe (интерфейс API расширенных хранимых процедур) | Документы Майкрософт
+description: Узнайте, как srv_describe в API-интерфейсе расширенных хранимых процедур определяет имя столбца и типы данных источника и назначения для определенного столбца в строке.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2115600e-5ce7-4be0-9cd3-a1dd1fab0729
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d6c181ad19d3027c5262b988a8c32fdcff52e901
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e2dc77e2ff3314664b28647980b62dabdde450fc
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85678593"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248472"
 ---
 # <a name="srv_describe-extended-stored-procedure-api"></a>srv_describe (API-интерфейс расширенных хранимых процедур)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -101,7 +102,7 @@ srcdata
 ## <a name="returns"></a>Возвращаемое значение  
  Порядковый номер описываемого столбца. Первый столбец имеет номер 1. При возникновении ошибки возвращается 0.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Функция **srv_describe** должна быть вызвана по одному разу для каждого столбца данной строки перед первым вызовом функции **srv_sendrow**. Столбцы в строке могут быть описаны в любом порядке.  
   
  Для изменения местонахождения и длины исходных данных в строках столбцов до передачи полного результирующего набора можно использовать функции **srv_setcoldata** и **srv_setcollen**, соответственно.  

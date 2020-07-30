@@ -1,5 +1,6 @@
 ---
 title: srv_got_attention (интерфейс API расширенных хранимых процедур) | Документы Майкрософт
+description: Узнайте, как srv_got_attention проверяет, нужно ли прерывать текущее соединение или задачу, и возвращает значение TRUE, если соединение разорвано или пакет прерван.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 805e68e1-d17f-41bd-8b9f-a27283bb6fbe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f30e546a5cd45d9c89923ab9e96670127491f1ff
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2b5ba738ddd220d83cffe2c28b5629ee491d293f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756745"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248452"
 ---
 # <a name="srv_got_attention-extended-stored-procedure-api"></a>srv_got_attention (API-интерфейс расширенных хранимых процедур)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +51,7 @@ srvproc
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает TRUE, если выполнение текущего пакета было прервано или соединение разорвано. Возвращает FALSE, если текущий пакет по-прежнему выполняется или соединение существует.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Расширенная хранимая процедура, которая выполняется в течение длительного времени, должна периодически проверять соединение с сервером путем вызова функции **srv_got_attention**, чтобы завершиться, когда прерывается выполнение текущего пакета или разрывается соединение.  
   
 > [!IMPORTANT]  

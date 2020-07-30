@@ -9,14 +9,14 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 3b754fb2de33a230bc7d27f239b2778d2849fd5a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 352f51e0d53c9dc145b1faf1832faf59587fef6f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401273"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243095"
 ---
-# <a name="what-is-polybase"></a>Что такое PolyBase?
+# <a name="configure-polybase-connectivity"></a>Настройка подключения Polybase
 Polybase позволяет системе аналитики (ТД) обрабатывать запросы Transact-SQL, которые могут считывать данные из внешних источников данных и записывать их в них. Те же запросы, которые обращаются к внешним данным, могут также включать таблицы связей в ТД. Это позволяет объединять данные из внешних источников с высокоценными реляционными данными в базах данных APS.
 
 ![Логика PolyBase](media/polybase/polybase-logical.png)
@@ -32,7 +32,7 @@ Polybase на ТД поддерживает чтение и запись в фа
 > [!NOTE] 
 > Остальные статьи, связанные с Polybase, описывают способы, как настроить Polybase на ТД 2016 (AU6) и более поздних версий.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 - [Hadoop](polybase-configure-hadoop.md)
 - [Хранилище BLOB-объектов Azure](polybase-configure-azure-blob-storage.md)
 <!-- MISSING LINKS [PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase-sql-server-pdw.md)  -->  

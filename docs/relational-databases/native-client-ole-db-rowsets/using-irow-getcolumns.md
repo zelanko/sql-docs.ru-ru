@@ -18,13 +18,14 @@ ms.assetid: 1f5d2e03-e6fe-4ea1-b71d-55d02b5d59ae
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 092c573e808aefc0f35f04e73b54e150a62bebac
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8984b5d883229dfed1219463adcb0b02292d036b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86013071"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246828"
 ---
-# <a name="using-irowgetcolumns"></a>Использование метода IRow::GetColumns
+# <a name="using-irowgetcolumns-in-sql-server-native-client"></a>Использование IRow:: DataColumn в SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Реализация интерфейса **IRow** позволяет перемещаться только вперед с последовательным доступом к столбцам. Столбцы этой строки можно получить либо полностью одним вызовом метода **IRow::GetColumns**, либо по частям, несколько раз вызывая метод **IRow::GetColumns** при доступе к нескольким столбцам строки.  
