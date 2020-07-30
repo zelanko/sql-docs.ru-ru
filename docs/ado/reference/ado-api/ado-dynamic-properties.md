@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 72fa5fd287b285ca7f917c5969b0e27e11837d25
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c727f73abed5fe9a30ebf191e2c6da60f8baa13a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749300"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242894"
 ---
 # <a name="ado-dynamic-properties"></a>Динамические свойства ADO
 Динамические свойства могут быть добавлены к коллекциям [свойств](../../../ado/reference/ado-api/properties-collection-ado.md) [соединения](../../../ado/reference/ado-api/connection-object-ado.md), [команды](../../../ado/reference/ado-api/command-object-ado.md)или объектов [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) . Источником этих свойств является либо поставщик данных, например [поставщик OLE DB для SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), либо поставщик услуг, например [Служба курсора Майкрософт для OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md). Дополнительные сведения о конкретном динамическом свойстве см. в документации соответствующего поставщика данных или поставщика услуг.  
@@ -26,9 +26,9 @@ ms.locfileid: "82749300"
   
  Следующие динамические свойства особенно интересны, они также описаны в источниках, упомянутых ранее. Специальные функции ADO описаны в подразделах справки ADO в следующем списке.  
   
-|||  
+|Динамическое свойство|Описание|  
 |-|-|  
-|[Оптимизация](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|Указывает, следует ли создавать индекс для этого поля.|  
+|[Optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) (Оптимизация)|Указывает, следует ли создавать индекс для этого поля.|  
 |[Командная строка](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md).|Указывает, должен ли поставщик OLE DB запрашивать сведения об инициализации у пользователя.|  
 |[Изменить имя формы](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|Задает имя объекта **набора записей** .|  
 |[Команда повторной синхронизации](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|Указывает указанную пользователем строку команды, которая выдается методом повторной **синхронизации** для обновления данных в таблице, указанной в динамическом свойстве **уникальной таблицы** .|  
@@ -36,7 +36,7 @@ ms.locfileid: "82749300"
 |[Повторная синхронизация обновлений](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md)|Указывает, следует ли за методом **UpdateBatch** выполнить неявную операцию повторной **синхронизации** , и если да, то область действия этой операции.|
 | &nbsp; | &nbsp; |
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
  [Коллекции ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Перечислимые константы ADO](../../../ado/reference/ado-api/ado-enumerated-constants.md)   

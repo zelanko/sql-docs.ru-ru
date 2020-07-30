@@ -20,15 +20,15 @@ ms.assetid: 3c1887df-6bd8-491e-82fc-d25ad9589faf
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d39fe1b573e038459853857496c651e9ad2af83b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2413e629e969fb0aa7dff93dc2959f1b7a007b10
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831481"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394026"
 ---
 # <a name="sysquery_context_settings-transact-sql"></a>sys. query_context_settings (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Содержит сведения о семантике, влияющей на параметры контекста, связанные с запросом. Существует несколько доступных контекстных параметров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые влияют на семантику запроса (определяя правильный результат запроса). Тот же текст запроса, скомпилированный с разными параметрами, может давать разные результаты (в зависимости от базовых данных).  
   
@@ -36,7 +36,7 @@ ms.locfileid: "82831481"
 |-----------------|---------------|-----------------|  
 |**context_settings_id**|**bigint**|Первичный ключ. Это значение предоставляется в инструкциях Showplan XML для запросов.|  
 |**set_options**|**varbinary(8)**|Битовая маска, отражающая состояние нескольких параметров SET. Дополнительные сведения см. в разделе [sys. dm_exec_plan_attributes &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md).|  
-|**language_id**|**smallint**|Идентификатор языка. Дополнительные сведения см. в разделе [sys. syslanguages &#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
+|**language_id**|**smallint**|Идентификатор языка. Дополнительные сведения см. в разделе [языкиsys.sys&#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
 |**date_format**|**smallint**|Формат даты. Дополнительные сведения см. в разделе [SET DATEFORMAT (Transact-SQL)](../../t-sql/statements/set-dateformat-transact-sql.md).|  
 |**date_first**|**tinyint**|Первое значение даты. Дополнительные сведения см. в разделе [SET DATEFIRST (Transact-SQL)](../../t-sql/statements/set-datefirst-transact-sql.md).|  
 |**status**|**varbinary (2)**|Поле битовой маски, указывающее тип запроса или контекста, в котором был выполнен запрос. <br />Значение столбца может быть сочетанием нескольких флагов (выраженное в шестнадцатеричном формате):<br /><br /> 0x0 — обычный запрос (без специальных флагов)<br /><br /> 0x1 — запрос, выполненный с помощью одной из хранимых процедур API курсоров<br /><br /> 0x2 — запрос на уведомление<br /><br /> 0x4 — внутренний запрос<br /><br /> 0x8 — автоматический параметризованный запрос без универсальной параметризации<br /><br /> 0x10 — запрос на обновление выборки курсора<br /><br /> 0x20 — запрос, используемый в запросах на обновление курсора<br /><br /> 0x40 — начальный результирующий набор возвращается при открытии курсора (автоматическая выборка курсора)<br /><br /> 0x80-зашифрованный запрос<br /><br /> 0x100 — запрос в контексте предиката безопасности на уровне строк|  
@@ -59,8 +59,8 @@ ms.locfileid: "82831481"
  [sys. query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)   
  [sys. query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [Мониторинг производительности с использованием хранилища запросов](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Хранимые процедуры хранилища запросов &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
+ [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Query Store Stored Procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  (Хранимые процедуры хранилища запросов (Transact-SQL))  
  [sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
   
   

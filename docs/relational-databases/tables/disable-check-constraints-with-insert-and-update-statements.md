@@ -16,15 +16,15 @@ ms.assetid: c7287ad1-50d2-4e80-bc0c-b5570f7e5f69
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9a25909bfcfb6e8bbc228af03a608c416ab55bd3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 550076bbd091a69e7835d2fd6732d361c6edc740
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68016386"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394444"
 ---
 # <a name="disable-check-constraints-with-insert-and-update-statements"></a>Отключение проверочных ограничений в инструкциях INSERT и UPDATE
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
   В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] проверочное ограничение можно отключить в транзакциях INSERT и UPDATE с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. После отключения проверочных ограничений будущие вставки и обновления столбца не проверяются по проверочным ограничениям. Используйте эту возможность, если новые данные будут нарушать существующее ограничение или если ограничение относится только к данным, уже помещенным в базу данных.  
   

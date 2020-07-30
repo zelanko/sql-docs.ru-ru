@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 48fc3a1adf8dbeae010e4035ac4f2e390c015e54
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0688fc8b45f444ca8c711f3229623484fa2139a8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756536"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242584"
 ---
 # <a name="refresh-method-ado"></a>Метод Refresh (ADO)
 Обновляет объекты в коллекции, чтобы отразить объекты, доступные в поставщике, и связанные с ним.  
@@ -34,7 +34,7 @@ ms.locfileid: "82756536"
 collection.Refresh  
 ```  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Метод **Refresh** выполняет различные задачи в зависимости от коллекции, из которой он вызывается.  
   
 ### <a name="parameters"></a>Параметры  
@@ -53,19 +53,37 @@ collection.Refresh
 ### <a name="properties"></a>Свойства  
  Использование метода **Refresh** в коллекции **свойств** некоторых объектов заполняет коллекцию динамическими свойствами, предоставляемыми поставщиком. Эти свойства предоставляют сведения о функциональных возможностях, характерных для поставщика, помимо встроенных свойств, поддерживаемых ADO.  
   
-## <a name="applies-to"></a>Применяется к  
-  
-||||  
-|-|-|-|  
-|[Коллекция осей](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)|[Коллекция Columns](../../../ado/reference/adox-api/columns-collection-adox.md)|[Коллекция Кубедефс](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)|  
-|[Коллекция Dimensions](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)|[Коллекция ошибок](../../../ado/reference/ado-api/errors-collection-ado.md)|[Коллекция Fields](../../../ado/reference/ado-api/fields-collection-ado.md)|  
-|[Коллекция Groups](../../../ado/reference/adox-api/groups-collection-adox.md)|[Коллекция иерархий](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)|[Коллекция indexes](../../../ado/reference/adox-api/indexes-collection-adox.md)|  
-|[Коллекция Keys](../../../ado/reference/adox-api/keys-collection-adox.md)|[Коллекция Levels](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)|[Коллекция members](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|  
-|[Коллекция Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)|[Коллекция Positions](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|[Коллекция процедур](../../../ado/reference/adox-api/procedures-collection-adox.md)|  
-|[Коллекция Properties](../../../ado/reference/ado-api/properties-collection-ado.md)|[Коллекция таблиц](../../../ado/reference/adox-api/tables-collection-adox.md)|[Коллекция пользователей](../../../ado/reference/adox-api/users-collection-adox.md)|  
-|[Коллекция представлений](../../../ado/reference/adox-api/views-collection-adox.md)|||  
-  
-## <a name="see-also"></a>См. также  
+## <a name="applies-to"></a>Применение  
+
+:::row:::
+    :::column:::
+        [Коллекция осей](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)  
+        [Коллекция Columns](../../../ado/reference/adox-api/columns-collection-adox.md)  
+        [Коллекция Кубедефс](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)  
+        [Коллекция Dimensions](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)  
+        [Коллекция ошибок](../../../ado/reference/ado-api/errors-collection-ado.md)  
+        [Коллекция Fields](../../../ado/reference/ado-api/fields-collection-ado.md)  
+        [Коллекция Groups](../../../ado/reference/adox-api/groups-collection-adox.md)  
+    :::column-end:::
+    :::column:::
+        [Коллекция иерархий](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)  
+        [Коллекция indexes](../../../ado/reference/adox-api/indexes-collection-adox.md)  
+        [Коллекция Keys](../../../ado/reference/adox-api/keys-collection-adox.md)  
+        [Коллекция Levels](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)  
+        [Коллекция members](../../../ado/reference/ado-md-api/members-collection-ado-md.md)  
+        [Коллекция Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Коллекция Positions](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)  
+        [Коллекция процедур](../../../ado/reference/adox-api/procedures-collection-adox.md)  
+        [Коллекция Properties](../../../ado/reference/ado-api/properties-collection-ado.md)  
+        [Коллекция таблиц](../../../ado/reference/adox-api/tables-collection-adox.md)  
+        [Коллекция пользователей](../../../ado/reference/adox-api/users-collection-adox.md)  
+        [Коллекция представлений](../../../ado/reference/adox-api/views-collection-adox.md)  
+    :::column-end:::
+:::row-end:::
+
+## <a name="see-also"></a>См. также:  
  [Пример метода Refresh (Visual Basic)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
  [Пример метода Refresh (Visual c++)](../../../ado/reference/ado-api/refresh-method-example-vc.md)   
  [Свойство Count (ADO)](../../../ado/reference/ado-api/count-property-ado.md)   

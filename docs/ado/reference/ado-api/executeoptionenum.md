@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 68bfa83a-5df4-4bef-8736-0f88ae8c29ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 868acb8dec7ed8a6bd22f3cc5551dede63a50408
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e7465ee994a0e09cf62b80d3317948479354780b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757140"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242714"
 ---
 # <a name="executeoptionenum"></a>ExecuteOptionEnum
 Указывает, как поставщик должен выполнять команду.  
@@ -40,15 +40,21 @@ ms.locfileid: "82757140"
   
 |Константа|  
 |--------------|  
-|Адоенумс. Ексекутеоптион. АСИНЦЕКСЕКУТЕ|  
-|Адоенумс. Ексекутеоптион. АСИНКФЕТЧ|  
-|Адоенумс. Ексекутеоптион. АСИНКФЕТЧНОНБЛОККИНГ|  
-|Адоенумс. Ексекутеоптион. незаписи|  
-|Адоенумс. Ексекутеоптион. не указано|  
+|AdoEnums.ExeКутеоптион. АСИНЦЕКСЕКУТЕ|  
+|AdoEnums.ExeКутеоптион. АСИНКФЕТЧ|  
+|AdoEnums.ExeКутеоптион. АСИНКФЕТЧНОНБЛОККИНГ|  
+|AdoEnums.ExeКутеоптион. незаписи|  
+|AdoEnums.ExeКутеоптион. Unspecified указано|  
   
-## <a name="applies-to"></a>Применяется к  
-  
-|||  
-|-|-|  
-|[Метод Execute (объект Command ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)|[Метод Execute (объект Connection ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|  
-|[Метод Open (объект Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)|[Метод Requery](../../../ado/reference/ado-api/requery-method.md)|
+## <a name="applies-to"></a>Применение  
+
+:::row:::
+    :::column:::
+        [Метод Execute (объект Command ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)  
+        [Метод Execute (объект Connection ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)  
+    :::column-end:::
+    :::column:::
+        [Метод Open (объект Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
+        [Метод Requery](../../../ado/reference/ado-api/requery-method.md)  
+    :::column-end:::
+:::row-end:::

@@ -15,39 +15,145 @@ helpviewer_keywords:
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 155eda8cf8361abff080d52db9a226fa9237b2eb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2d7493fbba302ce23279374177819bfa7ff9b2e5
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763015"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242924"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Функции Visual Basic для приложений
 В выражениях вычисления для формирования данных можно использовать следующие функции Visual Basic для приложений.  
-  
-|||||||  
-|-|-|-|-|-|-|  
-|Abs|Asc|Atn|CBool|CByte|CCur|  
-|CDate|CDbl|Chr|чрб|ChrW|Chr$|  
-|Чрб $|CInt|CLng|Cos|CSng|CStr|  
-|Cvar|CVDate|CVErr|Дата|Date$|DateAdd|  
-|DateDiff|DatePart|DateSerial|DateValue|День|DDB|  
-|Ошибка|Error$|Exp|Fix|Формат|Format$|  
-|FV|Hex|Hex$|Час|IIF|InStr|  
-|Int|IPmt|IRR|IsDate|IsEmpty|IsError|  
-|IsNull|IsNumeric|IsObject|LCase|LCase$|Левый|  
-|Извлекаем|Left$|Функция ЛЕВБ $|Len|Журнал|LTrim|  
-|LTrim$|Mid|Mid$|Минута|MIRR|Месяц|  
-|Сейчас|NPer|NPV|Окт|Oct$|Pmt|  
-|PPmt|PV|QBColor|Тариф|RGB|Правый|  
-|Функция RightB|Right$|Функция RightB $|Rnd|RTrim|RTrim $|  
-|Секунда|Sgn|Sin|SLN|Пробел|Space$|  
-|Sqr|Str|Str$|StrComp|StrConv|Строка|  
-|String$|SYD|Tan|Time|Time$|Таймер|  
-|TimeSerial|TimeValue|Trim|Trim$|TypeName|UCase|  
-|UCase$|Val|VarType|День недели|Год||  
-  
-## <a name="see-also"></a>См. также  
+
+:::row:::
+    :::column:::
+        Abs  
+        Asc  
+        Atn  
+        CBool  
+        CByte  
+        CCur  
+        CDate  
+        CDbl  
+        Chr  
+        чрб  
+        ChrW  
+        Chr$  
+        Чрб $  
+        CInt  
+        CLng  
+        Cos  
+        CSng  
+        CStr  
+        Cvar  
+    :::column-end:::
+    :::column:::
+        CVDate  
+        CVErr  
+        Дата  
+        Date$  
+        DateAdd  
+        DateDiff  
+        DatePart  
+        DateSerial  
+        DateValue  
+        День  
+        DDB  
+        Error  
+        Error$  
+        Exp  
+        Fix  
+        Формат  
+        Format$  
+        FV  
+        Hex  
+    :::column-end:::
+    :::column:::
+        Hex$  
+        Час  
+        IIF  
+        InStr  
+        Int  
+        IPmt  
+        IRR  
+        IsDate  
+        IsEmpty  
+        IsError  
+        IsNull  
+        IsNumeric  
+        IsObject  
+        LCase  
+        LCase$  
+        Левый  
+        Извлекаем  
+        Left$  
+        Функция ЛЕВБ $  
+    :::column-end:::
+    :::column:::
+        Len  
+        Журнал  
+        LTrim  
+        LTrim$  
+        Mid  
+        Mid$  
+        Минута  
+        MIRR  
+        Месяц  
+        Сейчас  
+        NPer  
+        NPV  
+        Окт  
+        Oct$  
+        Pmt  
+        PPmt  
+        PV  
+        QBColor  
+        Тариф  
+    :::column-end:::
+    :::column:::
+        RGB  
+        Правый  
+        Функция RightB  
+        Right$  
+        Функция RightB $  
+        Rnd  
+        RTrim  
+        RTrim $  
+        Секунда  
+        Sgn  
+        Синус  
+        SLN  
+        Пробел  
+        Space$  
+        Sqr  
+        Str  
+        Str$  
+        StrComp  
+        StrConv  
+    :::column-end:::
+    :::column:::
+        Тип String  
+        String$  
+        SYD  
+        Tan  
+        Time  
+        Time$  
+        Таймер  
+        TimeSerial  
+        TimeValue  
+        Trim  
+        Trim$  
+        TypeName  
+        UCase  
+        UCase$  
+        Val  
+        VarType  
+        День недели  
+        Год  
+    :::column-end:::
+:::row-end:::
+
+## <a name="see-also"></a>См. также:  
  [Доступ к строкам в иерархическом наборе записей](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [Общие сведения о формировании данных](../../../ado/guide/data/data-shaping-overview.md)   
  [Грамматика формальной фигуры](../../../ado/guide/data/formal-shape-grammar.md)   

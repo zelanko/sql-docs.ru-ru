@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: acc15d40-68a6-4ba9-85bd-12d331aecaa6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 488fe5a46b994ed664c6355e24fe8d567d5ff11d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fe649e6636f33dfc73ee5aac949830b4175cd3ec
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762911"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242454"
 ---
 # <a name="attributes-property-ado"></a>Свойство Attributes (ADO)
 Указывает одну или несколько характеристик объекта.  
@@ -46,14 +46,20 @@ ms.locfileid: "82762911"
 > [!NOTE]
 >  **Использование удаленной службы данных** Это свойство недоступно для объекта **подключения** на стороне клиента.  
   
-## <a name="applies-to"></a>Применяется к  
-  
-|||  
-|-|-|  
-|[Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Объект Field](../../../ado/reference/ado-api/field-object.md)|  
-|[Объект Parameter](../../../ado/reference/ado-api/parameter-object.md)|[Объект Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
-  
-## <a name="see-also"></a>См. также  
+## <a name="applies-to"></a>Применение  
+
+:::row:::
+    :::column:::
+        [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+        [Объект Field](../../../ado/reference/ado-api/field-object.md)  
+    :::column-end:::
+    :::column:::
+        [Объект Parameter](../../../ado/reference/ado-api/parameter-object.md)  
+        [Объект Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
+## <a name="see-also"></a>См. также:  
  [Пример атрибутов и свойств имени (Visual Basic)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
  [Пример атрибутов и свойств имени (Visual c++)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   
  [Метод AppendChunk (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   

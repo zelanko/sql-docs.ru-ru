@@ -18,12 +18,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 794d2f682c5a32ee348d229cfd2413687a57843e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d70d9599dda2f71edff911ad42821fdf101b524c
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85637814"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363177"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>Перенаправление подключения с правами на чтение и запись с вторичной на первичную реплику (группы доступности AlwaysOn)
 
@@ -62,7 +62,7 @@ ms.locfileid: "85637814"
 
 По умолчанию перенаправление подключения с правами на чтение и запись не задано для реплики. Метод обработки запросов на подключение во вторичной реплике зависит от того, разрешает ли вторичная реплика подключения и задан ли в строке подключения параметр `ApplicationIntent`. В следующей таблице показано, как вторичная реплика обрабатывает подключения на основе `SECONDARY_ROLE (ALLOW CONNECTIONS = )` и `ApplicationIntent`.
 
-||`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
+|Значение `ApplicationIntent`|`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
 |-----|-----|-----|-----|
 |`ApplicationIntent=ReadWrite`<br/> По умолчанию|Сбой подключений|Сбой подключений|Успешные подключения<br/>Успешные операции чтения<br/>Сбой операций записи|
 |`ApplicationIntent=ReadOnly`|Сбой подключений|Успешные подключения|Успешные подключения
@@ -73,7 +73,7 @@ ms.locfileid: "85637814"
 
 После установки перенаправления подключения с правами на чтение и запись реплика обрабатывает запросы на подключение по-другому. Реакция на событие подключения по-прежнему зависит от параметров `SECONDARY_ROLE (ALLOW CONNECTIONS = )` и `ApplicationIntent`. В следующей таблице показано, как вторичная реплика с заданным параметром `READ_WRITE_ROUTING` обрабатывает подключения на основе `SECONDARY_ROLE (ALLOW CONNECTIONS = )` и `ApplicationIntent`.
 
-||`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
+|Значение `ApplicationIntent`|`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
 |-----|-----|-----|-----|
 |`ApplicationIntent=ReadWrite`<br/>По умолчанию|Сбой подключений|Сбой подключений|Перенаправление подключений к первичной реплике|
 |`ApplicationIntent=ReadOnly`|Сбой подключений|Успешные подключения|Успешные подключения

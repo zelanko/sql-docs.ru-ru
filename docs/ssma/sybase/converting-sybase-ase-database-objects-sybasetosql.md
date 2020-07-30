@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 509cb65d-2f54-427a-83d7-37919cc4e3e3
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 507ac2a61043260435a18c90fb473130988e7f35
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0785c3ecc6335494ed4c34f8919e3ad766236631
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67948514"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394516"
 ---
 # <a name="converting-sap-ase-database-objects-sybasetosql"></a>Преобразование объектов базы данных SAP ASE (SybaseToSQL)
 После подключения к адаптивному серверу SAP (ASE), подключению к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure и настройке параметров проекта и сопоставления данных можно преобразовать объекты базы данных SAP адаптивного сервера Enterprise (ASE) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или объекты базы данных SQL Azure.  
   
 ## <a name="the-conversion-process"></a>Процесс преобразования  
-Преобразование объектов базы данных принимает определения объектов из ASE, преобразует их в аналогичные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azureные объекты, а затем загружает эти сведения в метаданные SSMA. Он не загружает сведения в экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или Azure SQL. Затем можно просмотреть объекты и их свойства с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или ОБОЗРЕВАТЕЛЯ метаданных SQL Azure.
+Преобразование объектов базы данных принимает определения объектов из ASE, преобразует их в аналогичные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azureные объекты, а затем загружает эти сведения в метаданные SSMA. Он не загружает сведения в экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или Azure SQL. Затем можно просмотреть объекты и их свойства с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или обозревателя МЕТАДАННЫХ SQL Azure.
   
 Во время преобразования SSMA выводит выходные сообщения на панель вывода и сообщения об ошибках в область **Список ошибок** . Используйте выходные данные и сведения об ошибке, чтобы определить, нужно ли изменить базы данных ASE или процесс преобразования, чтобы получить нужные результаты преобразования.  
   
@@ -54,27 +54,57 @@ ms.locfileid: "67948514"
   
 > [!NOTE]  
 > Некоторые системные функции SAP ASE не полностью соответствуют эквивалентным SQL Server системным функциям в поведении. Чтобы эмулировать поведение SAP ASE, SSMA создает определяемые пользователем функции в преобразованной SQL Server базе данных в схеме с именем 2SS. В зависимости от параметров проекта некоторые из SQL Server системных функций заменяются этими эмулированныхми функциями. SSMA создает следующие определяемые пользователем функции:  
-  
-||||  
-|-|-|-|  
-|**char_length_nvarchar**|**index_colorder**|**ssma_datepart**|  
-|**char_length_varchar**|**инттохекс**|**substring_nvarchar**|  
-|**charindex_nvarchar**|**ssma_datediff**|**substring_varbinary**|  
-|**charindex_varchar**|**хекстоинт**|**substring_varchar**|  
-|**уловсурр**|**to_unichar**|**ssma_current_time**|  
-|**ухигхсурр**|||  
-  
+
+:::row:::
+    :::column:::
+        **char_length_nvarchar**  
+        **char_length_varchar**  
+        **charindex_nvarchar**  
+        **charindex_varchar**  
+        **хекстоинт**  
+        **index_colorder**  
+    :::column-end:::
+    :::column:::
+        **инттохекс**  
+        **ssma_current_time**  
+        **ssma_datediff**  
+        **ssma_datepart**  
+        **substring_nvarchar**  
+        **substring_varbinary**  
+    :::column-end:::
+    :::column:::
+        **substring_varchar**  
+        **to_unichar**  
+        **ухигхсурр**  
+        **уловсурр**  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="objects-not-supported-in-azure-sql"></a>Объекты, не поддерживаемые в SQL Azure  
 Следующие ключевые слова T-SQL используются SSMA для SAP ASE во время преобразования SQL Server в локальную среду, но эти ключевые слова не поддерживаются SQL Azure синтаксисом T-SQL:  
-  
-||||  
-|-|-|-|  
-|CHECKPOINT|CREATE/ALTER/DROP DEFAULT|CREATE/DROP RULE|  
-|DBCC TRACEOFF|DBCC TRACEON|GRANT/REVOKE/DENY ALL|  
-|KILL|READTEXT|SELECT INTO|  
-|SET OFFSETS|SETUSER|SHUTDOWN|  
-|WRITETEXT|||  
-  
+
+:::row:::
+    :::column:::
+        CHECKPOINT  
+        CREATE/ALTER/DROP DEFAULT  
+        CREATE/DROP RULE  
+        DBCC TRACEOFF  
+        DBCC TRACEON  
+    :::column-end:::
+    :::column:::
+        GRANT/REVOKE/DENY ALL  
+        KILL  
+        READTEXT  
+        SELECT INTO  
+        SET OFFSETS  
+    :::column-end:::
+    :::column:::
+        SETUSER  
+        SHUTDOWN  
+        WRITETEXT  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="viewing-conversion-problems"></a>Просмотр проблем преобразования  
 Некоторые объекты SAP ASE могут не преобразовываться. Вы можете определить ставки успешности преобразования, просмотрев отчет о преобразовании сводки.  
   
@@ -120,11 +150,11 @@ ms.locfileid: "67948514"
   
 -   Вы можете изменить объект SAP ASE, чтобы удалить или исправить проблемный код. Чтобы загрузить обновленный код в SSMA, необходимо обновить метаданные. Дополнительные сведения см. [в разделе Подключение к SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md).  
   
--   Вы можете исключить объект из миграции. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ОБОЗРЕВАТЕЛЕ метаданных SQL Azure и в обозревателе метаданных Sybase снимите флажок рядом с элементом перед загрузкой объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или Azure SQL и переносом данных из SAP ASE.  
+-   Вы можете исключить объект из миграции. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обозревателе МЕТАДАННЫХ SQL Azure и в обозревателе метаданных Sybase снимите флажок рядом с элементом перед загрузкой объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или Azure SQL и переносом данных из SAP ASE.  
   
 ## <a name="next-steps"></a>Дальнейшие действия  
 Следующий шаг процесса миграции [загружает преобразованные объекты базы данных в SQL Server или SQL Azure (SybaseToSQL)](https://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
 [Миграция баз данных SAP ASE в SQL Server — база данных SQL Azure &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

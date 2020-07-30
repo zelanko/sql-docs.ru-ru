@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ebfd4cda-4017-4873-9d28-38b1c7db12a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1abce457e64c7f6865f94b85473fbc589e5ffb4f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a1174538ec14eab150d5874b7d6b5b51bcd554ff
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755151"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242724"
 ---
 # <a name="eventstatusenum"></a>EventStatusEnum
 Указывает текущее состояние выполнения события.  
@@ -44,11 +44,34 @@ ms.locfileid: "82755151"
 |Адоенумс. Евентстатус. ОК|  
 |Адоенумс. Евентстатус. УНВАНТЕДЕВЕНТ|  
   
-## <a name="applies-to"></a>Применяется к  
-  
-||||  
-|-|-|-|  
-|[События Бегинтранскомплете, Коммиттранскомплете и Роллбакктранскомплете (ADO)](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|[События ConnectComplete и Disconnect (ADO)](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|[Событие EndOfRecordset (ADO)](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|  
-|[Событие ExecuteComplete (ADO)](../../../ado/reference/ado-api/executecomplete-event-ado.md)|[Событие FetchComplete (ADO)](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|[Событие InfoMessage (ADO)](../../../ado/reference/ado-api/infomessage-event-ado.md)|  
-|[События WillChangeField и FieldChangeComplete (ADO)](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|[События WillChangeRecord и RecordChangeComplete (ADO)](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|[События WillChangeRecordset и RecordsetChangeComplete (ADO)](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|  
-|[Событие WillConnect (ADO)](../../../ado/reference/ado-api/willconnect-event-ado.md)|[Событие WillExecute (ADO)](../../../ado/reference/ado-api/willexecute-event-ado.md)|[События WillMove и MoveComplete (ADO)](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|
+## <a name="applies-to"></a>Применение  
+
+:::row:::
+    :::column:::
+        [События Бегинтранскомплете, Коммиттранскомплете и Роллбакктранскомплете (ADO)](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)  
+
+        [События ConnectComplete и Disconnect (ADO)](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)  
+
+        [Событие EndOfRecordset (ADO)](../../../ado/reference/ado-api/endofrecordset-event-ado.md)  
+
+        [Событие ExecuteComplete (ADO)](../../../ado/reference/ado-api/executecomplete-event-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Событие FetchComplete (ADO)](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)  
+
+        [Событие InfoMessage (ADO)](../../../ado/reference/ado-api/infomessage-event-ado.md)  
+
+        [События WillChangeField и FieldChangeComplete (ADO)](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)  
+
+        [События WillChangeRecord и RecordChangeComplete (ADO)](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)  
+    :::column-end:::
+    :::column:::
+        [События WillChangeRecordset и RecordsetChangeComplete (ADO)](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)  
+
+        [Событие WillConnect (ADO)](../../../ado/reference/ado-api/willconnect-event-ado.md)  
+
+        [Событие WillExecute (ADO)](../../../ado/reference/ado-api/willexecute-event-ado.md)  
+
+        [События WillMove и MoveComplete (ADO)](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)  
+    :::column-end:::
+:::row-end:::
