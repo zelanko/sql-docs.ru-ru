@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 12a9b2cae1c516ed3bf8caef8127034e6ff2a847
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4dca796e9ba3c353d48fd3620c34a141c35a3fe8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747176"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242834"
 ---
 # <a name="adorecordconstruction-interface"></a>Интерфейс ADORecordConstruction
 Интерфейс **адорекордконструктион**используется для создания объекта **записи** ADO из объекта **строки** OLE DB в приложении C/C++.  
@@ -29,10 +29,10 @@ ms.locfileid: "82747176"
   
 ## <a name="properties"></a>Свойства  
   
-|||  
+|Свойство|Описание|  
 |-|-|  
 |[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|Доступный только на запись.<br />Задает контейнер объекта OLE DB **строки** для этого объекта **записи** ADO.|  
-|[Строки](../../../ado/reference/ado-api/row-property-ado.md)|Чтение и запись.<br />Возвращает или задает OLE DB объект **строки** от или в этом объекте ADO **Record** .|  
+|[Строка](../../../ado/reference/ado-api/row-property-ado.md)|Чтение и запись.<br />Возвращает или задает OLE DB объект **строки** от или в этом объекте ADO **Record** .|  
   
 ## <a name="methods"></a>Методы  
  Нет.  
@@ -40,7 +40,7 @@ ms.locfileid: "82747176"
 ## <a name="events"></a>События  
  Нет.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  При наличии объекта **строки** OLE DB ( `pRow` ) построение объекта **записи** ADO () производится в `adoR` следующие три основные операции:  
   
 1.  Создайте объект **записи** ADO.  
@@ -73,6 +73,6 @@ ms.locfileid: "82747176"
 ## <a name="requirements"></a>Требования  
  **Версия:** ADO 2,0 и более поздние версии  
   
- **Библиотека:** Msado15. dll  
+ **Библиотека:** msado15.dll  
   
  **UUID:** 00000567-0000-0010-8000-00AA006D2EA4

@@ -13,11 +13,12 @@ ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 02dacc3323d331c2442e12518146681bdc45cb23
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 298e16b814251cf0068436cb5c1a6331aef8c1b4
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004369"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332420"
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>Преобразования типа данных datetime из C в SQL
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -26,23 +27,22 @@ ms.locfileid: "86004369"
   
  Преобразования, описанные в следующей таблице, относятся к преобразованиям, совершаемым на клиенте. В случаях, когда клиент задает точность доли секунды для параметра, отличающегося от того, который определен на сервере, преобразование клиента может быть выполнено, но сервер возвратит ошибку при вызове **SQLExecute** или **склексекутедирект** . В частности, ODBC обрабатывает любое усечение доли секунды в качестве ошибки, в то время как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поведение является округленным. Например, Округление выполняется при переходе с **datetime2 (6)** на **datetime2 (2)**. Значения столбцов даты-времени округляются до 1/300 секунды, а в значениях типа smalldatetime сервер устанавливает для секунд значение, равное нулю.  
   
-|||||||||  
-|-|-|-|-|-|-|-|-|  
-||SQL_TYPE_DATE|SQL_TYPE_TIME|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_SS_TIMSTAMPOFFSET|SQL_CHAR|SQL_WCHAR|  
-|SQL_C_DATE|1|-|-|1,6|1,5,6|1,13|1,13|  
-|SQL_C_TIME|-|1|1|1,7|1, 5, 7|1,13|1,13|  
-|SQL_C_SS_TIME2|-|1,3|1,10|1,7|1, 5, 7|1,13|1,13|  
-|SQL_C_BINARY(SQL_SS_TIME2_STRUCT)|Недоступно|Недоступно|1,10,11|Недоступно|Недоступно|Недоступно|Недоступно|  
-|SQL_C_TYPE_TIMESTAMP|1,2|1,3,4|1,4,10|1,10|1,5,10|1,13|1,13|  
-|SQL_C_SS_TIMESTAMPOFFSET|1,2,8|1,3,4,8|1,4,8,10|1,8,10|1,10|1,13|1,13|  
-|SQL_C_BINARY(SQL_SS_TIMESTAMPOFFSET_STRUCT)|Недоступно|Недоступно|Недоступно|Недоступно|1,10,11|Недоступно|Недоступно|  
-|SQL_C_CHAR/SQL_WCHAR (date)|9|9|9|9,6|9,5,6|Недоступно|Недоступно|  
-|SQL_C_CHAR/SQL_WCHAR (time2)|9|9, 3|9,10|9,7,10|9,5,7,10|Недоступно|Недоступно|  
-|SQL_C_CHAR/SQL_WCHAR (datetime)|9,2|9, 3, 4|9,4,10|9,10|9,5,10|Недоступно|Недоступно|  
-|SQL_C_CHAR/SQL_WCHAR (datetimeoffset)|9,2,8|9, 3, 4, 8|9,4,8,10|9,8,10|9,10|Недоступно|Недоступно|  
-|SQL_C_BINARY(SQL_DATE_STRUCT)|1,11|Недоступно|Недоступно|Недоступно|Недоступно|Недоступно|Недоступно|  
-|SQL_C_BINARY(SQL_TIME_STRUCT)|Недоступно|Недоступно|Недоступно|Недоступно|Недоступно|Недоступно|Недоступно|  
-|SQL_C_BINARY(SQL_TIMESTAMP_STRUCT)|Недоступно|Недоступно|Недоступно|Недоступно|Недоступно|Недоступно|Недоступно|  
+|   | SQL_TYPE_DATE | SQL_TYPE_TIME | SQL_SS_TIME2 | SQL_TYPE_TIMESTAMP | SQL_SS_TIMSTAMPOFFSET | SQL_CHAR | SQL_WCHAR |
+| - | ------------- | ------------- | ------------ | ------------------ | --------------------- | -------- | --------- |
+| **SQL_C_DATE** |1|-|-|1,6|1,5,6|1,13|1,13|  
+| **SQL_C_TIME** |-|1|1|1,7|1, 5, 7|1,13|1,13|  
+| **SQL_C_SS_TIME2** |-|1,3|1,10|1,7|1, 5, 7|1,13|1,13|  
+| **SQL_C_BINARY(SQL_SS_TIME2_STRUCT)** |Недоступно|Недоступно|1,10,11|Недоступно|Недоступно|Недоступно|Недоступно|  
+| **SQL_C_TYPE_TIMESTAMP** |1,2|1,3,4|1,4,10|1,10|1,5,10|1,13|1,13|  
+| **SQL_C_SS_TIMESTAMPOFFSET** |1,2,8|1,3,4,8|1,4,8,10|1,8,10|1,10|1,13|1,13|  
+| **SQL_C_BINARY(SQL_SS_TIMESTAMPOFFSET_STRUCT)** |Недоступно|Недоступно|Недоступно|Недоступно|1,10,11|Недоступно|Недоступно|  
+| **SQL_C_CHAR/SQL_WCHAR (date)** |9|9|9|9,6|9,5,6|Недоступно|Недоступно|  
+| **SQL_C_CHAR/SQL_WCHAR (time2)** |9|9, 3|9,10|9,7,10|9,5,7,10|Недоступно|Недоступно|  
+| **SQL_C_CHAR/SQL_WCHAR (datetime)** |9,2|9, 3, 4|9,4,10|9,10|9,5,10|Недоступно|Недоступно|  
+| **SQL_C_CHAR/SQL_WCHAR (datetimeoffset)** |9,2,8|9, 3, 4, 8|9,4,8,10|9,8,10|9,10|Недоступно|Недоступно|  
+| **SQL_C_BINARY(SQL_DATE_STRUCT)** |1,11|Недоступно|Недоступно|Недоступно|Недоступно|Недоступно|Недоступно|  
+| **SQL_C_BINARY(SQL_TIME_STRUCT)** |Недоступно|Недоступно|Недоступно|Недоступно|Недоступно|Недоступно|Недоступно|  
+| **SQL_C_BINARY(SQL_TIMESTAMP_STRUCT)** |Недоступно|Недоступно|Недоступно|Недоступно|Недоступно|Недоступно|Недоступно|  
   
 ## <a name="key-to-symbols"></a>Расшифровка символов  
   
@@ -78,10 +78,10 @@ ms.locfileid: "86004369"
   
      Количество долей секунды (шкала) определяется по размеру целевого столбца в соответствии со следующей таблицей.  
   
-    ||||  
-    |-|-|-|  
-    |Тип|Подразумеваемый масштаб<br /><br /> 0|Подразумеваемый масштаб<br /><br /> 1.. 9|  
-    |SQL_C_TYPE_TIMESTAMP|19|21..29|  
+    |   | Подразумеваемый масштаб | Подразумеваемый масштаб |
+    | - | ------------- | ------------- |
+    | **Тип** | 0 | 1.. 9 |  
+    |**SQL_C_TYPE_TIMESTAMP** |19|21..29|  
   
      Однако для типа SQL_C_TYPE_TIMESTAMP, если доли секунды можно представить в трех разрядах без потери данных, и размер столбца больше или равен 23, для дробной доли секунды создаются ровно три разряда. Это поведение обеспечивает обратную совместимость с приложениями, разработанными в расчете на более старые драйверы ODBC.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "86004369"
   
 -   **Н/д**: существующее [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более раннее поведение сохраняется.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Улучшения даты и времени &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

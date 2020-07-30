@@ -13,26 +13,26 @@ helpviewer_keywords:
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 65145ce8f77c352fb24a2a206d99828298b6a60c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a08f7c896b48f6cb76c9805d3bea9910a8f5bda8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747259"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242864"
 ---
 # <a name="ado-methods"></a>Методы ADO
 
-|||  
+|Метод|Описание|  
 |-|-|  
 |[Вызов](../../../ado/reference/ado-api/addnew-method-ado.md)|Создает новую запись для обновляемого объекта **набора записей** .|  
-|[Добавление](../../../ado/reference/ado-api/append-method-ado.md)|Добавляет объект в коллекцию. Если коллекция является **полями**, то перед добавлением в коллекцию можно создать новый объект **поля** .|  
+|[Добавить](../../../ado/reference/ado-api/append-method-ado.md)|Добавляет объект в коллекцию. Если коллекция является **полями**, то перед добавлением в коллекцию можно создать новый объект **поля** .|  
 |[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)|Добавляет данные к большому текстовому или двоичному **полю**данных или к объекту **параметра** .|  
 |[Примеры BeginTrans, CommitTrans и RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|Управляет обработкой транзакций в объекте **соединения** следующим образом:<br /><br /> **Примеры BeginTrans** — начинает новую транзакцию.<br /><br /> **CommitTrans** — сохраняет все изменения и завершает текущую транзакцию. Она также может начать новую транзакцию.<br /><br /> **RollbackTrans** — отменяет все изменения и завершает текущую транзакцию. Она также может начать новую транзакцию.|  
 |[Отмена](../../../ado/reference/ado-api/cancel-method-ado.md)|Отменяет выполнение ожидающего асинхронного вызова метода.|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Отменяет ожидающее пакетное обновление.|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Отменяет все изменения, внесенные в текущую или новую строку объекта **набора записей** , или коллекцию **полей** объекта **Record** перед вызовом метода **Update** .|  
 |[Очистить](../../../ado/reference/ado-api/clear-method-ado.md)|Удаляет все объекты **Error** из коллекции **ошибок** .|  
-|[Clone](../../../ado/reference/ado-api/clone-method-ado.md) (Клонировать)|Создает дубликат объекта **набора записей** из существующего объекта **набора записей** . При необходимости указывает, что клон доступен только для чтения.|  
+|[Клонировать](../../../ado/reference/ado-api/clone-method-ado.md)|Создает дубликат объекта **набора записей** из существующего объекта **набора записей** . При необходимости указывает, что клон доступен только для чтения.|  
 |[Закрыть](../../../ado/reference/ado-api/close-method-ado.md)|Закрывает открытый объект и все зависимые объекты.|  
 |[CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)|Сравнивает две закладки и возвращает значение, указывающее на их относительные значения.|  
 |[копирекорд](../../../ado/reference/ado-api/copyrecord-method-ado.md)|Копирует файл или каталог и его содержимое в другое расположение.|  
@@ -45,7 +45,7 @@ ms.locfileid: "82747259"
 |[Execute (команда ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)|Выполняет запрос, инструкцию SQL или хранимую процедуру, указанную в свойстве **CommandText** .|  
 |[Execute (подключение ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|Выполняет указанный запрос, инструкцию SQL, хранимую процедуру или специфический для поставщика текст.|  
 |[Поиск](../../../ado/reference/ado-api/find-method-ado.md)|Выполняет поиск в **наборе записей** для строки, удовлетворяющей заданным критериям.|  
-|[Идет](../../../ado/reference/ado-api/flush-method-ado.md)|Принудительно применяет содержимое **потока** , остающегося в буфере ADO, к базовому объекту, с которым связан **поток** .|  
+|[Очистка](../../../ado/reference/ado-api/flush-method-ado.md)|Принудительно применяет содержимое **потока** , остающегося в буфере ADO, к базовому объекту, с которым связан **поток** .|  
 |[Метод get_OLEDBCommand](../../../ado/reference/ado-api/get-oledbcommand-method.md)|Возвращает базовую команду OLEDB, сначала распространяюя все сведения о параметрах, заданные в команде ADO, в команду OLEDB.|  
 |[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)|Возвращает **набор записей** , строки которого представляют файлы и подкаталоги в каталоге, представленном этой **записью**.|  
 |[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)|Возвращает все содержимое или часть содержимого большого текстового или двоичного объекта **поля** данных.|  
@@ -65,7 +65,7 @@ ms.locfileid: "82747259"
 |[Метод put_OLEDBCommand](../../../ado/reference/ado-api/put-oledbcommand-method.md)|Этот метод не выполняет никаких операций — он всегда возвращает S_OK.|  
 |[Чтение](../../../ado/reference/ado-api/read-method.md)|Считывает указанное число байтов из объекта **потока** .|  
 |[ReadText](../../../ado/reference/ado-api/readtext-method.md)|Считывает указанное число символов из объекта текстового **потока** .|  
-|[Обновление](../../../ado/reference/ado-api/refresh-method-ado.md)|Обновляет объекты в коллекции, чтобы отразить объекты, доступные в поставщике, и связанные с ним.|  
+|[Обновить](../../../ado/reference/ado-api/refresh-method-ado.md)|Обновляет объекты в коллекции, чтобы отразить объекты, доступные в поставщике, и связанные с ним.|  
 |[Повтор](../../../ado/reference/ado-api/requery-method.md)|Обновляет данные в объекте **набора записей** путем повторного выполнения запроса, на котором основан объект.|  
 |[Повторная синхронизация](../../../ado/reference/ado-api/resync-method.md)|Обновляет данные в текущем объекте **набора записей** или коллекции **полей** объекта **записи** из базовой базы данных.|  
 |[Сохранить](../../../ado/reference/ado-api/save-method.md)|Сохраняет **набор записей** в объекте File или **Stream** .|  
@@ -80,7 +80,7 @@ ms.locfileid: "82747259"
 |[Запись](../../../ado/reference/ado-api/write-method.md)|Записывает двоичные данные в объект **потока** .|  
 |[WriteText](../../../ado/reference/ado-api/writetext-method.md)|Записывает указанную текстовую строку в объект **потока** .|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
  [Коллекции ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Динамические свойства ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

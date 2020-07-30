@@ -1,5 +1,5 @@
 ---
-title: Создание набора строк возвращающего табличное значение параметра | Документация Майкрософт
+title: Создание набора строк возвращающего табличное значение параметра (поставщик собственного клиента OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,13 +13,14 @@ ms.assetid: ffe213ca-cc0e-465e-b31c-a8272324c4fe
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b26fa52fcb817dc7505dffb47d15421841f9c8ea
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c7847c9119e1f67963414a0e22dd9241466b1e1c
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86013003"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87331977"
 ---
-# <a name="table-valued-parameter-rowset-creation"></a>Создание набора строк возвращающего табличное значение параметра
+# <a name="table-valued-parameter-rowset-creation-in-sql-server-native-client"></a>Создание набора строк возвращающего табличное значение параметра в SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Несмотря на то, что потребители могут предоставить для возвращающих табличные значения параметров любой объект набора строк, типичные объекты наборов строк реализуются для конечных хранилищ данных и таким образом предоставляют ограниченную производительность. По этой причине поставщик OLE DB собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] разрешает пользователям создавать специализированный объект набора строк на основе данных в памяти. Этот специальный объект набора строк в памяти — это новый COM-объект, называемый набором строк возвращающего табличное значение параметра. Он предлагает функциональные возможности, аналогичные набору параметров.  
@@ -50,7 +51,7 @@ ms.locfileid: "86013003"
   
  Параметры *pTableID* и *pUnkOuter* устанавливаются так же, как и в статическом сценарии. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента получает сведения о типе (сведения о столбцах и ограничениях) с сервера и возвращает объект набора строк возвращающего табличное значение параметра через параметр *ппровсет* . Данная операция требует связи с сервером, поэтому выполняется не так быстро, как статический сценарий. Динамический сценарий работает только с параметризованными вызовами процедур.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Возвращающие табличное значение параметры &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
  [Использование возвращающих табличные значения параметров &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   

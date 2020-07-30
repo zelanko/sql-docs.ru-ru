@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: d887e428773e6901544422edcb6960e6e9ae0580
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b4f794e66e881ddeb36c724fc583d95a42bce33d
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73595519"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411460"
 ---
 # <a name="configure-column-encryption-in-place-using-always-encrypted-with-secure-enclaves"></a>Настройка шифрования столбцов на месте с помощью Always Encrypted с безопасными анклавами 
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 [Always Encrypted с безопасными анклавами](always-encrypted-enclaves.md) поддерживает криптографические операции над столбцами базы данных на месте — внутри безопасного анклава в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Шифрование на месте устраняет необходимость перемещения данных для таких операций за пределы базы данных, что делает криптографические операции более быстрыми и надежными. 
 

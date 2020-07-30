@@ -1,5 +1,6 @@
 ---
 title: srv_paramsetoutput (API-интерфейс расширенных хранимых процедур)
+description: Узнайте, как srv_paramsetoutput в API расширенных хранимых процедур задает значение возвращаемого параметра.
 ms.custom: seo-dt-2019
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f2810e19-e513-458b-8925-5756b6ee1313
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5b00f2fedd9c1053e332aaee8691207fbf990649
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3e406d8a9f2b9bc6b2f03239dee435364f481af9
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755953"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248424"
 ---
 # <a name="srv_paramsetoutput-extended-stored-procedure-api"></a>srv_paramsetoutput (API-интерфейс расширенных хранимых процедур)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,14 +73,14 @@ fNull
  *fNull*  
  Является флагом, показывающим, равно ли NULL значение возвращаемого параметра. Установите этот флаг в значение TRUE, если параметр должен быть установлен в значение NULL. Значение по умолчанию — FALSE. Если *fNull* установлен в значение TRUE, то аргумент *cbLen* должен быть установлен в значение 0, иначе функция завершится с ошибкой.  
   
-## <a name="returns"></a>Возвращаемое значение  
+## <a name="returns"></a>Результаты  
  Если сведения о параметре были успешно установлены, возвращается значение SUCCEED, в противном случае — FAIL. Значение FAIL возвращается, если:  
   
 -   параметр не является возвращаемым параметром, или  
   
 -   аргумент *cbLen* недопустим.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **Примечание по безопасности.** Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные DLL-библиотеки перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
   

@@ -1,5 +1,6 @@
 ---
 title: srv_rpcoptions (интерфейс API расширенных хранимых процедур) | Документы Майкрософт
+description: Узнайте, как srv_rpcoptions в API расширенных хранимых процедур Возвращает параметры времени выполнения для текущей удаленной хранимой процедуры.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: dbcce5d1-d5a1-4379-9597-04e43af5923d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4a4bc6bf4a8fe1b600ec7bd7b3ba1877023751db
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3d4bd331b54b4bb555fcc6cdbe59155a553332eb
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755888"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332474"
 ---
 # <a name="srv_rpcoptions-extended-stored-procedure-api"></a>srv_rpcoptions (API-интерфейс расширенных хранимых процедур)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,10 +48,10 @@ srvproc
  *srvproc*  
  Указатель на структуру SRV_PROC, представляющую собой дескриптор соединения с клиентом (в данном случае — дескриптор, получивший удаленную хранимую процедуру). Эта структура содержит сведения, которые используются библиотекой API-интерфейса расширенных хранимых процедур для управления связью и передачи данных между приложением и клиентом.  
   
-## <a name="returns"></a>Возвращаемое значение  
+## <a name="returns"></a>Результаты  
  Битовая карта, которая содержит флаги времени выполнения, соединенные логической операцией ИЛИ для текущей удаленной хранимой процедуры. При отсутствии текущей удаленной хранимой процедуры возвращается значение 0 и формируется сообщение.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  В следующей таблице описывается каждый флаг времени выполнения.  
   
 |Флаг времени выполнения|Описание|  

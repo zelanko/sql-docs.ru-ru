@@ -1,5 +1,5 @@
 ---
-title: Свойства и поведение наборов строк | Документация Майкрософт
+title: Свойства и поведение набора строк (поставщик собственного клиента OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,14 @@ ms.assetid: 9baabcb6-0114-42f2-89f8-d8d66b3c8c14
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d66aa7280bb2ce7f92211054713469626b4f6a3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 15f9884944eb5d0298e5536fa5b2f43f3aa46c96
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86013130"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246853"
 ---
-# <a name="rowset-properties-and-behaviors"></a>Свойства и поведение наборов строк
+# <a name="rowset-properties-and-behaviors-native-client-ole-db-provider"></a>Свойства и поведение набора строк (поставщик собственного клиента OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Это [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Свойства набора строк поставщика собственного клиента OLE DB.  
@@ -78,7 +79,7 @@ ms.locfileid: "86013130"
 |DBPROP_REPORTMULTIPLECHANGES|Это свойство набора строк не реализовано [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщиком собственного клиента OLE DB. При попытке считать или записать значение свойства возникает ошибка.|  
 |DBPROP_RETURNPENDINGINSERTS|R/W: только для чтения<br /><br /> Значение по умолчанию: VARIANT_FALSE<br /><br /> Описание: при вызове метода, который выбирает строки, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик собственного клиента OLE DB не возвращает ожидающих вставки строк.|  
 |DBPROP_ROWRESTRICT|R/W: только для чтения<br /><br /> Значение по умолчанию: VARIANT_TRUE<br /><br /> Описание. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственные наборы строк поставщика OLE DB клиента не поддерживают права доступа на основе строки. Если набор строк реализует интерфейс **IRowsetChange**, то потребитель может вызвать метод **SetData**.|  
-|DBPROP_ROWSET_ASYNCH|Ч/З Чтение/запись<br /><br /> По умолчанию: 0<br /><br /> Описание: обеспечивает асинхронную обработку набора строк. Это свойство относится к группе свойств наборов строк и набору свойств DBPROPSET_ROWSET. и имеет тип VT_14.<br /><br /> Единственным значением в битовой маске, поддерживаемом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, является **DBPROPVAL_ASYNCH_INITIALIZE**.|  
+|DBPROP_ROWSET_ASYNCH|Ч/З Чтение/запись<br /><br /> По умолчанию: 0<br /><br /> Описание: обеспечивает асинхронную обработку наборов строк. Это свойство относится к группе свойств наборов строк и набору свойств DBPROPSET_ROWSET. и имеет тип VT_14.<br /><br /> Единственным значением в битовой маске, поддерживаемом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, является **DBPROPVAL_ASYNCH_INITIALIZE**.|  
 |DBPROP_ROWTHREADMODEL|R/W: только для чтения<br /><br /> Значение по умолчанию: DBPROPVAL_RT_FREETHREAD<br /><br /> Описание. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик собственного клиента OLE DB поддерживает доступ к его объектам из нескольких потоков выполнения одного потребителя.|  
 |DBPROP_SERVERCURSOR|Ч/З Чтение/запись<br /><br /> Значение по умолчанию: VARIANT_FALSE<br /><br /> Описание: если задано, то для поддержки набора строк используется курсор [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в статье [Наборы строк и курсоры SQL Server](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md).|  
 |DBPROP_SERVERDATAONINSERT|Ч/З Чтение/запись<br /><br /> Значение по умолчанию: VARIANT_FALSE<br /><br /> Описание: данные сервера при вставке.<br /><br /> VARIANT_TRUE: при передаче операции вставки на сервер поставщик получает данные с сервера для обновления локального кэша строк.<br /><br /> VARIANT_FALSE: поставщик не получает с сервера значения для только что вставленных строк.|  
@@ -101,7 +102,7 @@ ms.locfileid: "86013130"
 |SSPROP_QP_NOTIFICATION_OPTIONS|Столбец: нет<br /><br /> Ч/З Чтение/запись<br /><br /> Тип: VT_BSTR<br /><br /> По умолчанию: Пустая строка<br /><br /> Описание: параметры уведомления о запросах. Указывается в строке `name=value`. За создание службы и считывание уведомлений из очереди отвечает пользователь. Строка параметров уведомлений запросов имеет следующий синтаксис.<br /><br /> `service=<service-name>[;(local database=<database>&#124;broker instance=<broker instance>)]`<br /><br /> Пример:<br /><br /> `service=mySSBService;local database=mydb`|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|Столбец: нет<br /><br /> Ч/З Чтение/запись<br /><br /> Тип: VT_UI4<br /><br /> По умолчанию: 432000 с (5 дней)<br /><br /> Минимум: 1 с<br /><br /> Максимум: 2 ^ 31-1 секунда<br /><br /> Описание: время в секундах, в течение которого уведомление запроса должно оставаться активным.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Наборы строк](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
   

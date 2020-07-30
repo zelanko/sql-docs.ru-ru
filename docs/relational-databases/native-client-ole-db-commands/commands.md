@@ -14,14 +14,14 @@ ms.assetid: de03b27e-8c5a-4060-b650-f77279be01df
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9891c234bd64049ca8c358b4df0706834d7849c6
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: d67cb96b2ff2ac9f2d050cb1d623aa3569e25dcf
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942883"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248664"
 ---
-# <a name="commands"></a>Команды
+# <a name="sql-server-native-client-commands"></a>SQL Server Native Client команды
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента предоставляет интерфейс **ICommand** и объекты команд, описанные в этом разделе.  
@@ -34,7 +34,7 @@ ms.locfileid: "86942883"
   
 -   [Команды, формирующие результаты с несколькими наборами строк](../../relational-databases/native-client-ole-db-commands/commands-generating-multiple-rowset-results.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQL Server Native Client (OLE DB)](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

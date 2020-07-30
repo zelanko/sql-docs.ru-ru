@@ -12,16 +12,16 @@ dev_langs:
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: bcd5752f8e7bfa7b750d43638af4665c25a50b4b
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 5c3dd051156178572a03eeff23052e2c103d9555
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484572"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395891"
 ---
 # <a name="dbcc-pdw_showmaterializedviewoverhead-transact-sql"></a>DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)  
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Эта инструкция отображает количество добавочных изменений в базовых таблицах, которые хранятся в материализованных представлениях в службе "[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]". Коэффициент затрат рассчитывается по следующей формуле: TOTAL_ROWS / MAX (1, BASE_VIEW_ROWS).
 

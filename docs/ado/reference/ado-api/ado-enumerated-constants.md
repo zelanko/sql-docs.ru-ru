@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: c97ed131-1a93-463c-9e61-22f029b0c474
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 00b33a9fa92dd6ec86cbac5a939fe593725bc091
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 74d3cc347d14a1d02ae5953b7762513b252493e6
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749219"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242884"
 ---
 # <a name="ado-enumerated-constants"></a>Перечисляемые константы ADO
 Для облегчения отладки в перечислениях ADO перечисляются значения для каждой константы. Однако это значение является исключительно рекомендацией и может изменяться от одного выпуска ADO к другому. Код должен зависеть только от имени, а не от фактического значения каждой перечислимой константы.  
   
-|||  
+|Константа|Описание|  
 |-|-|  
 |[ADCPROP_ASYNCTHREADPRIORITY_ENUM](../../../ado/reference/ado-api/adcprop-asyncthreadpriority-enum.md)|Для объекта **RECORDSET** RDS указывает приоритет выполнения асинхронного потока, который получает данные.|  
 |[ADCPROP_AUTORECALC_ENUM](../../../ado/reference/ado-api/adcprop-autorecalc-enum.md)|Указывает, когда поставщик **мсдаташапе** повторно вычисляет статистические и вычисляемые столбцы в иерархическом **наборе записей**.|  
@@ -77,7 +77,7 @@ ms.locfileid: "82749219"
 |[StringFormatEnum](../../../ado/reference/ado-api/stringformatenum.md)|Задает формат при извлечении **набора записей** в виде строки. Задает атрибуты транзакции для объекта **соединения** .|  
 |[XactAttributeEnum](../../../ado/reference/ado-api/xactattributeenum.md)|Задает атрибуты транзакции для объекта **соединения** .|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
  [Коллекции ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Динамические свойства ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
