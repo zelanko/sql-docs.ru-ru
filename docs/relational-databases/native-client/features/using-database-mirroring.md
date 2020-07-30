@@ -18,13 +18,14 @@ ms.assetid: 71b15712-7972-4465-9274-e0ddc271eedc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1fc1884791b9bc2a01a5407dc09778476bdfe1d5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4d282569bf88379e36ebb5297d3dbb9f6cf945fc
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009862"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246755"
 ---
-# <a name="using-database-mirroring"></a>Использование зеркального отображения базы данных
+# <a name="using-database-mirroring-in-sql-server-native-client"></a>Использование зеркального отображения базы данных в SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
     
@@ -73,9 +74,9 @@ ms.locfileid: "86009862"
 > [!NOTE]  
 >  Диспетчер драйвера ODBC улучшен для поддержки спецификации имени сервера отработки отказа.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Компоненты собственного клиента SQL Server](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [Подключение клиентов к сеансу зеркального отображения базы данных &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   
+ [Подключение клиентов к сеансу зеркального отображения базы данных (SQL Server)](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [Зеркальное отображение базы данных (SQL Server)](../../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   
   

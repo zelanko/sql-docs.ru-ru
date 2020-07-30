@@ -13,26 +13,26 @@ helpviewer_keywords:
 ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: faad4d819939362f7e3b9c22062768bee71a0cda
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c19252e14ba5a04329c9cdc1c38b5ee6398b7874
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749359"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242904"
 ---
 # <a name="ado-collections"></a>Коллекции ADO
 Связи между этими коллекциями и объектами ADO представлены в [объектной модели ADO](../../../ado/reference/ado-api/ado-object-model.md).  
   
  Каждая коллекция может содержать соответствующий объект. Например, объект [ошибки](../../../ado/reference/ado-api/error-object.md) может содержаться в коллекции [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) . Дополнительные сведения об объектах см. в разделе [объекты ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md) или конкретный объект.  
   
-|||  
+|Коллекция|Описание|  
 |-|-|  
 |[ошибки](../../../ado/reference/ado-api/errors-collection-ado.md)|Содержит все объекты **ошибок** , созданные в ответ на одну ошибку, связанную с поставщиком.|  
 |[Поля](../../../ado/reference/ado-api/fields-collection-ado.md)|Содержит все объекты **field** объекта **Recordset** .|  
 |[Параметры](../../../ado/reference/ado-api/parameters-collection-ado.md)|Содержит все объекты **параметров** объекта **Command** .|  
 |[Свойства](../../../ado/reference/ado-api/properties-collection-ado.md)|Содержит все объекты **свойств** для конкретного экземпляра объекта.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
  [Динамические свойства ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [Перечислимые константы ADO](../../../ado/reference/ado-api/ado-enumerated-constants.md)   

@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: c0c90ba9-0471-4381-96f1-376de22fa2ee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f5c2792f9a5ef413f09793df8ff320d3826773f4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4e6b0846433b317bb1ced7de284113377e4b4528
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764155"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243115"
 ---
 # <a name="adox-collections"></a>Коллекции ADOX
 
-|||  
+|Коллекция|Описание|  
 |-|-|  
 |[Столбцы](../../../ado/reference/adox-api/columns-collection-adox.md)|Содержит все объекты **Column** таблицы, индекса или ключа.|  
 |[Группы](../../../ado/reference/adox-api/groups-collection-adox.md)|Содержит все сохраненные объекты **групп** каталога или пользователя.|  
@@ -33,7 +33,7 @@ ms.locfileid: "82764155"
 |[Пользователи](../../../ado/reference/adox-api/users-collection-adox.md)|Содержит все сохраненные **пользовательские** объекты каталога или группы.|  
 |[Представления](../../../ado/reference/adox-api/views-collection-adox.md)|Содержит все объекты **представления** каталога.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по API ADOX](../../../ado/reference/adox-api/adox-api-reference.md)   
  [Объектная модель ADOX](../../../ado/reference/adox-api/adox-object-model.md)   
  [Объекты ADOX](../../../ado/reference/adox-api/adox-objects.md)   

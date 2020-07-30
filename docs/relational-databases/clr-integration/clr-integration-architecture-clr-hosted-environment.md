@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 04e60b218439a67e0fd0d57f6c36cc725217931b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6730ee9db626356ceb8f569928717af851896b07
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727640"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246399"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>Архитектура интеграции со средой CLR — среда размещения CLR
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -154,12 +154,11 @@ Thread.EndThreadAffinity();
 ###### <a name="security-permission-sets"></a>Безопасность: наборы разрешений  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет пользователям указывать требования к надежности и безопасности для кода, развернутого в базе данных. Когда сборки загружаются в базу данных, автор сборки может указать один из трех наборов разрешений для этой сборки: "надежный", "EXTERNAL_ACCESS" и "ненадежный".  
   
-|||||  
+|Функциональность|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |-|-|-|-|  
-|Набор разрешений|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |Управление доступом для кода|Только выполнение|Выполнение и доступ к внешним ресурсам|С неограниченным доступом|  
-|Ограничения модели программирования|Да|Да|Нет ограничений|  
-|Требование к проверяемости|Да|Да|Нет|  
+|Ограничения модели программирования|да|да|Нет ограничений|  
+|Требование к проверяемости|да|Да|Нет|  
 |Возможность вызова машинного кода|Нет|Нет|Да|  
   
  SAFE — самый надежный и безопасный режим с соответствующими ограничениями в отношении разрешенной программной модели. Сборки SAFE получают достаточные разрешения для запуска, выполнения вычислений и доступа к локальной базе данных. Сборки SAFE должны использовать безопасные типы с возможностью проверки этого факта; они также не могут вызывать неуправляемый код.  
@@ -177,7 +176,7 @@ Thread.EndThreadAffinity();
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]также запрещает вызовы .NET Framework API, помеченные атрибутами защиты узла **шаредстате**, **Synchronization**и **екстерналпроцессмгмт** . Это не позволяет сборкам SAFE и EXTERNAL_ACCESS направлять вызовы к любым API, которые поддерживают общее состояние, выполнение синхронизации и влияют на целостность процесса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [ограничения модели программирования интеграции со средой CLR](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Безопасность интеграции со средой CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)   
  [Производительность интеграции со средой CLR](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)  
   

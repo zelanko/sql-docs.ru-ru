@@ -1,5 +1,5 @@
 ---
-title: Подготовка команд | Документация Майкрософт
+title: Подготовка команд (поставщик собственного клиента OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,18 +16,19 @@ ms.assetid: 09ec0c6c-0a44-4766-b9b7-5092f676ee54
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 731f03b29f48d8e1970bdddd1f6ee2d1a7748c3e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6d9d789b9abdc9af6b392b57d046d9d9c80d0747
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002807"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247053"
 ---
-# <a name="preparing-commands"></a>Подготовка команд
+# <a name="preparing-commands-in-sql-server-native-client"></a>Подготовка команд в SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Поставщик OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает подготовку команды для оптимизированного многократного выполнения, однако подготовка команды создает дополнительную нагрузку; поэтому потребителю нет необходимости подготавливать команду для ее выполнения более одного раза. Как правило, подготовку команды следует выполнять в том случае, если планируется ее не менее чем четырехкратное выполнение.  
   
- По соображениям производительности подготовка команды откладывается до ее выполнения. Это поведение установлено по умолчанию. Об ошибках, содержащихся в подготавливаемой команде, не будет ничего известно до ее выполнения или до выполнения операции с метасвойством. При установке свойства [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSPROP_DEFERPREPARE в значение FALSE это поведение по умолчанию может быть отключено.  
+ По соображениям производительности подготовка команды откладывается до ее выполнения. Это поведение по умолчанию. Об ошибках, содержащихся в подготавливаемой команде, не будет ничего известно до ее выполнения или до выполнения операции с метасвойством. При установке свойства [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSPROP_DEFERPREPARE в значение FALSE это поведение по умолчанию может быть отключено.  
   
  Если команда выполняется напрямую (без предварительной подготовки), то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создает и кэширует план выполнения. При повторном выполнении инструкции SQL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] применяет эффективный алгоритм сопоставления новой инструкции с существующим планом выполнения и повторно использует для этой инструкции тот же план выполнения.  
   
@@ -53,7 +54,7 @@ ms.locfileid: "86002807"
   
  Объект команды имеет в базе данных **tempdb** не более одной хранимой процедуры. Любая существующая временная хранимая процедура представляет текущий текст команды для этого объекта.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Команды](../../relational-databases/native-client-ole-db-commands/commands.md)  
   
   

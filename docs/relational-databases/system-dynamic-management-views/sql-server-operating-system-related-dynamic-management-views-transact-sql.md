@@ -16,19 +16,46 @@ helpviewer_keywords:
 ms.assetid: 3030c86a-0a74-4fed-ac0f-392e244cb965
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 163d3502303ee046a8b931bc81271594c874ca3f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0ca96f4134e58a129ed14129431f5d8caceae31d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894645"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243805"
 ---
 # <a name="sql-server-operating-system-related-dynamic-management-views-transact-sql"></a>Динамические административные представления, относящиеся к операционной системе SQL Server (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 В этом разделе описываются динамические административные представления (DMV), связанные с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] операционной системой (SQLOS). SQLOS отвечает за управление ресурсами операционной системы, которые относятся к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
 
-SQLOS DMV перечислены в содержании. Большинство из них имеют имя `sys.dm_os_<description>` .
+
+|  |  |
+|---------|---------|
+|**sys.dm_os_buffer_descriptors** | **sys.dm_os_buffer_pool_extension_configuration**|
+|**sys.dm_os_child_instances** | **sys.dm_os_cluster_nodes** |
+|**sys.dm_os_cluster_properties** | **sys.dm_os_dispatcher_pools** |
+|**sys.dm_os_enumerate_fixed_drives** | **sys.dm_os_host_info** |
+|**sys.dm_os_hosts** | **sys.dm_os_latch_stats** |
+|**sys.dm_os_loaded_modules** |**sys.dm_os_memory_brokers**|
+|**sys.dm_os_memory_cache_clock_hands**|**sys.dm_os_memory_cache_counters** |
+|**sys.dm_os_memory_cache_entries**|**sys.dm_os_memory_cache_hash_tables**|
+|**sys.dm_os_memory_clerks**|**sys.dm_os_memory_nodes**|
+|**sys.dm_os_nodes**|**sys.dm_os_performance_counters**|
+|**sys.dm_os_process_memory**|**sys.dm_os_schedulers**|
+|**sys.dm_os_server_diagnostics_log_configurations**|**sys.dm_os_spinlock_stats** |
+|**sys.dm_os_stacks**|**sys.dm_os_sys_info**|
+|**sys.dm_os_sys_memory**|**sys.dm_os_tasks**|
+|**sys.dm_os_threads** |**sys.dm_os_virtual_address_dump**|
+|**sys.dm_os_volume_stats**|**sys.dm_os_waiting_tasks**|
+|**sys.dm_os_wait_stats**|**sys.dm_os_windows_info**|
+|**sys.dm_os_workers** ||
+
+
+
+
+
+
+
 
  Ниже [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] перечислены динамические административные представления, связанные с операционной системой [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] .  
   
@@ -38,7 +65,7 @@ SQLOS DMV перечислены в содержании. Большинство
 |**sys.dm_os_memory_allocations**|**sys.dm_os_sublatches**|  
 |**sys.dm_os_worker_local_storage**||  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

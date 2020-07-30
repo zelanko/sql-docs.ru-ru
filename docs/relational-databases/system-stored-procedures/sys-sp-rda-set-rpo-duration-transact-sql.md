@@ -1,5 +1,6 @@
 ---
 title: sys. sp_rda_set_rpo_duration (Transact-SQL) | Документация Майкрософт
+description: Дополнительные сведения о sys. sp_rda_set_rpo_duration. Используйте эту хранимую процедуру, чтобы задать количество часов переносимых данных, которые SQL Server хранятся в промежуточной таблице.
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,11 +17,12 @@ helpviewer_keywords:
 ms.assetid: 95c80c5b-9252-4612-9ea7-544c48834fd2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8e00939df070233efd2087a8534aaa711be01b3d
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: e3dde1d29cd72ce62a306d43d40c067ec140007d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053481"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243345"
 ---
 # <a name="syssp_rda_set_rpo_duration-transact-sql"></a>sys. sp_rda_set_rpo_duration (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -49,10 +51,10 @@ sp_rda_set_rpo_duration [ @duration_hrs = ] duration_hrs
 ## <a name="permissions"></a>Разрешения    
  Требуются db_owner разрешения.    
     
-## <a name="remarks"></a>Комментарии    
+## <a name="remarks"></a>Remarks    
  Получите текущее значение, выполнив [sys. sp_rda_get_rpo_duration &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md).    
     
-## <a name="see-also"></a>См. также    
+## <a name="see-also"></a>См. также:    
  [sys. sp_rda_get_rpo_duration &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md)     
  [Восстановление баз данных с поддержкой Stretch (Stretch Database)](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)     
  [База данных Stretch](../../sql-server/stretch-database/stretch-database.md)    

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca14531410942a77add7c6c99756b64bf99e785c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 89de6b52bd7987a2bdd2b8bee8e5c58b38d6074f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764525"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242704"
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 Задает один или несколько атрибутов объекта [field](../../../ado/reference/ado-api/field-object.md) .  
@@ -63,8 +63,13 @@ ms.locfileid: "82764525"
 |Адоенумс. Фиелдаттрибуте. не указано|  
 |Адоенумс. Фиелдаттрибуте. ОБНОВЛЯЕМый|  
   
-## <a name="applies-to"></a>Применяется к  
-  
-|||  
-|-|-|  
-|[Метод Append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)|[Свойство Attributes (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)|
+## <a name="applies-to"></a>Применение  
+
+:::row:::
+    :::column:::
+        [Метод Append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Свойство Attributes (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)  
+    :::column-end:::
+:::row-end:::

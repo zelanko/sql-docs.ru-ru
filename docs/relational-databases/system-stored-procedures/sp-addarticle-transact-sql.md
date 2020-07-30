@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0483a157-e403-4fdb-b943-23c1b487bef0
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 35aa02236cf3e8a11d03539042ccdaf9049dd8f9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9201e8f74a62315132743c36669892b7bd3cc90f
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731713"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394762"
 ---
 # <a name="sp_addarticle-transact-sql"></a>sp_addarticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -87,7 +87,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @type = ] 'type'`Тип статьи. Аргумент *Type имеет тип* **sysname**и может принимать одно из следующих значений.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**aggregate schema only**|Только агрегатная функция со схемой.|  
 |**func schema only**|Только функция со схемой.|  
@@ -111,7 +111,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @ins_cmd = ] 'ins_cmd'`Тип команды репликации, используемой при репликации вставок для этой статьи. *ins_cmd* имеет тип **nvarchar (255)** и может принимать одно из следующих значений.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**NONE**|Не выполняется никаких действий.|  
 |**CALL sp_MSins_**<br /> **_Таблица_** (по умолчанию)<br /><br /> -или-<br /><br /> **CALL custom_stored_procedure_name**|Вызывается хранимая процедура, выполняемая на подписчике. Чтобы использовать этот метод репликации, используйте *schema_option* , чтобы указать автоматическое создание хранимой процедуры, или создайте указанную хранимую процедуру в целевой базе данных каждого подписчика статьи. *custom_stored_procedure* — имя созданной пользователем хранимой процедуры. <strong>sp_MSins_*Таблица* </strong> содержит имя целевой таблицы вместо *_table* части параметра. Если указан параметр *destination_owner* , он добавляется в начало имени целевой таблицы. Например, для таблицы **ProductCategory** , принадлежащей **производственной** схеме на подписчике, параметр будет иметь значение `CALL sp_MSins_ProductionProductCategory` . Для статьи в одноранговой топологии репликации *_table* добавляется со значением идентификатора GUID. Указание *custom_stored_procedure* не поддерживается для обновления подписчиков.|  
@@ -121,7 +121,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @del_cmd = ] 'del_cmd'`Тип команды репликации, используемой при репликации удалений для этой статьи. *del_cmd* имеет тип **nvarchar (255)** и может принимать одно из следующих значений.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**NONE**|Не выполняется никаких действий.|  
 |**CALLsp_MSdel_**<br /> **_Таблица_** (по умолчанию)<br /><br /> -или-<br /><br /> **CALL custom_stored_procedure_name**|Вызывается хранимая процедура, выполняемая на подписчике. Чтобы использовать этот метод репликации, используйте *schema_option* , чтобы указать автоматическое создание хранимой процедуры, или создайте указанную хранимую процедуру в целевой базе данных каждого подписчика статьи. *custom_stored_procedure* — имя созданной пользователем хранимой процедуры. <strong>sp_MSdel_*Таблица* </strong> содержит имя целевой таблицы вместо *_table* части параметра. Если указан параметр *destination_owner* , он добавляется в начало имени целевой таблицы. Например, для таблицы **ProductCategory** , принадлежащей **производственной** схеме на подписчике, параметр будет иметь значение `CALL sp_MSdel_ProductionProductCategory` . Для статьи в одноранговой топологии репликации *_table* добавляется со значением идентификатора GUID. Указание *custom_stored_procedure* не поддерживается для обновления подписчиков.|  
@@ -132,7 +132,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @upd_cmd = ] 'upd_cmd'`Тип команды репликации, используемой при репликации обновлений для этой статьи. *upd_cmd* имеет тип **nvarchar (255)** и может принимать одно из следующих значений.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**NONE**|Не выполняется никаких действий.|  
 |**CALL sp_MSupd_**<br /> **_Таблица_**<br /><br /> -или-<br /><br /> **CALL custom_stored_procedure_name**|Вызывается хранимая процедура, выполняемая на подписчике. Чтобы использовать этот метод репликации, используйте *schema_option* , чтобы указать автоматическое создание хранимой процедуры, или создайте указанную хранимую процедуру в целевой базе данных каждого подписчика статьи.|  
@@ -150,7 +150,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @pre_creation_cmd = ] 'pre_creation_cmd'`Указывает, что должна делать система, если при применении моментального снимка для этой статьи на подписчике обнаруживается существующий объект с тем же именем. *pre_creation_cmd* имеет тип **nvarchar (10)** и может принимать одно из следующих значений.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**Нет**|Не использует команду.|  
 |**delete**|Перед применением моментального снимка данные из целевой таблицы удаляются. Если для статьи выполнена горизонтальная фильтрация, удаляются данные только в тех столбцах, которые указаны в предложении-фильтре. Если определен горизонтальный фильтр, издатели Oracle не поддерживают это значение.|  
@@ -164,7 +164,7 @@ sp_addarticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  Если этот аргумент равен NULL, система автоматически создает допустимый параметр создания схемы на основе других свойств статьи. Таблица **параметров схемы по умолчанию** , заданная в примечаниях, показывает значение, которое будет выбрано в зависимости от сочетания типа статьи и типа репликации.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**0x00**|Отключает скрипты агент моментальных снимков и использует *creation_script*.|  
 |**0x01**|Создает скрипт создания объекта (CREATE TABLE, CREATE PROCEDURE и т. д.). Это значение по умолчанию для статей хранимых процедур.|  
@@ -229,7 +229,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @status = ] status`Указывает, является ли статья активной и дополнительными параметрами способа распространения изменений. *состояние* имеет тип **tinyint**и может иметь значение [| (Побитовое или)](../../t-sql/language-elements/bitwise-or-transact-sql.md) произведение одного или нескольких из этих значений.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**1**|Статья активна.|  
 |**8**|Включить имя столбца в инструкции INSERT.|  
@@ -251,7 +251,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @auto_identity_range = ] 'auto_identity_range'`Включает и отключает автоматическую обработку диапазона идентификаторов для публикации во время ее создания. *auto_identity_range* имеет тип **nvarchar (5)** и может принимать одно из следующих значений:  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**true**|Включить автоматическую обработку диапазона идентификаторов.|  
 |**false**|Отключить автоматическую обработку диапазона идентификаторов.|  
@@ -285,7 +285,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @identityrangemanagementoption = ] identityrangemanagementoption`Указывает способ обработки управления диапазонами идентификаторов для статьи. *identityrangemanagementoption* имеет тип **nvarchar (10)** и может принимать одно из следующих значений.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**Нет**|При репликации не выполняется явное управление диапазонами идентификаторов. Этот параметр рекомендуется использовать только для обеспечения обратной совместимости с более ранними версиями SQL Server. При репликации узла указывать его нельзя.|  
 |**Вручную**|Помечает столбец идентификаторов как NOT FOR REPLICATION, чтобы разрешить ручное управление диапазонами идентификаторов.|  
@@ -306,7 +306,7 @@ sp_addarticle [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_addarticle** используется в репликации моментальных снимков или репликации транзакций.  
   
  Если типы данных столбцов исходной таблицы не поддерживаются механизмом репликации, эти столбцы по умолчанию не публикуются. Если необходимо опубликовать такой столбец, необходимо выполнить [sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) , чтобы добавить столбец.  
@@ -342,9 +342,8 @@ sp_addarticle [ @publication = ] 'publication'
 ## <a name="default-schema-options"></a>Параметры схемы по умолчанию  
  В этой таблице описывается значение по умолчанию, заданное репликацией, если *schema_options* не задано пользователем, где это значение зависит от типа репликации (отображается в верхней части) и типа статьи (отображается в первом столбце).  
   
-|Тип статьи|Тип репликации||  
+|Тип статьи|Репликация транзакций|репликация моментальных снимков;|  
 |------------------|----------------------|------|  
-||Транзакционную|Снимок|  
 |**aggregate schema only**|**0x01**|**0x01**|  
 |**func schema only**|**0x01**|**0x01**|  
 |**indexed view schema only**|**0x01**|**0x01**|  
@@ -366,9 +365,8 @@ sp_addarticle [ @publication = ] 'publication'
 ## <a name="valid-schema-options"></a>Допустимые параметры схемы  
  В этой таблице описаны допустимые значения *schema_option* в зависимости от типа репликации (отображается в верхней части) и типа статьи (отображается в первом столбце).  
   
-|Тип статьи|Тип репликации||  
+|Тип статьи|Репликация транзакций|репликация моментальных снимков;|  
 |------------------|----------------------|------|  
-||Транзакционную|Снимок|  
 |**logbased**|Все параметры|Все параметры, кроме **0x02**|  
 |**logbased manualfilter**|Все параметры|Все параметры, кроме **0x02**|  
 |**logbased manualview**|Все параметры|Все параметры, кроме **0x02**|  
@@ -392,14 +390,14 @@ sp_addarticle [ @publication = ] 'publication'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_addarticle**.  
   
-## <a name="see-also"></a>См. также  
- [Определение статьи](../../relational-databases/replication/publish/define-an-article.md)   
+## <a name="see-also"></a>См. также:  
+ [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [sp_articlecolumn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_articlefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)   
  [sp_articleview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   
  [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_droparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
- [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
+ [sp_helparticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
  [sp_helparticlecolumns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)   
  [Хранимые процедуры репликации &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [Публикация данных и объектов базы данных](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  

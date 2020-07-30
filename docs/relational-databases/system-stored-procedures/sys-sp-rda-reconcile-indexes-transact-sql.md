@@ -1,5 +1,6 @@
 ---
 title: sys. sp_rda_reconcile_indexes (Transact-SQL) | Документация Майкрософт
+description: Дополнительные сведения о sys. sp_rda_reconcile_indexes. См. инструкции по использованию хранимой процедуры Transact-SQL для постановки в очередь задачи схемы для согласования индексов в удаленной таблице.
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,11 +17,12 @@ helpviewer_keywords:
 ms.assetid: 96b31ab9-bf84-46d6-9990-81f5c51f885a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: be9e80c522cc68cd4438e34d96564a7e49196152
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 098649587cbb6f01caafdedb631c901af160c85f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053029"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87236077"
 ---
 # <a name="syssp_rda_reconcile_indexes-transact-sql"></a>sys. sp_rda_reconcile_indexes (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -46,7 +48,7 @@ sp_rda_reconcile_indexes [@objname = ] 'objname'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или >0 (сбой)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [База данных Stretch](../../sql-server/stretch-database/stretch-database.md)  
   
   

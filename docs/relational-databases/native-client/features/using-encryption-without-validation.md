@@ -17,13 +17,14 @@ ms.assetid: f4c63206-80bb-4d31-84ae-ccfcd563effa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf5497fbddb255a9964d97094838dd3a7ece583e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e22fcf286b0f1d336eebdbc5726af7b2c9f15ff0
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009858"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246753"
 ---
-# <a name="using-encryption-without-validation"></a>Использование шифрования без проверки
+# <a name="using-encryption-without-validation-in-sql-server-native-client"></a>Использование шифрования без проверки в SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] всегда шифрует сетевые пакеты, связанные со входом в систему. Если сертификат не был предоставлен на сервере при запуске, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] создает самозаверенный сертификат, который используется для шифрования пакетов входа.  
@@ -60,7 +61,7 @@ ms.locfileid: "86009858"
 ## <a name="sql-server-native-client-odbc-driver"></a>Драйвер ODBC для собственного клиента SQL Server  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента поддерживает шифрование без проверки с помощью дополнений к функциям [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) и [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) . Добавлен параметр SQL_COPT_SS_TRUST_SERVER_CERTIFICATE, который может принимать значения SQL_TRUST_SERVER_CERTIFICATE_YES или SQL_TRUST_SERVER_CERTIFICATE_NO, где SQL_TRUST_SERVER_CERTIFICATE_NO является значением по умолчанию. Кроме того, добавлено новое ключевое слово строки соединения «TrustServerCertificate». Оно принимает значения «yes» и «no», значение по умолчанию — «no».  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Компоненты собственного клиента SQL Server](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
   
   

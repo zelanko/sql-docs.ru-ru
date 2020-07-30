@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 87b7b030776c1c18bb13307bf97db721fe472bd3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ca6449308f9683bccf55e58d9cec6d5d5a97a59e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68105327"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247138"
 ---
 # <a name="iif-mdx"></a>IIf (многомерные выражения)
 
@@ -28,7 +28,7 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- Функция IIf принимает три аргумента: IIf (\<условие>, \<ветвь>, \<else>).  
+ Функция IIf принимает три аргумента: IIf ( \<condition> , \<then branch> , \<else branch> ).  
   
  *Logical_Expression*  
  Условие, результатом которого является **значение true** (1) или **false** (0). Должно быть допустимым логическим многомерным выражением.  
@@ -63,7 +63,7 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
   
  Указания EAGER и STRICT являются взаимоисключающими: их можно использовать в одной функции IIF(,,), только в разных выражениях.  
   
- Дополнительные сведения см. [в разделе указания запросов функции IIf в SQL Server Analysis Services 2008](https://go.microsoft.com/fwlink/?LinkId=269540) и [планах выполнения и указания планов для функции многомерных выражений IIf и инструкции CASE](https://go.microsoft.com/fwlink/?LinkId=269565).  
+ Дополнительные сведения см. [в разделе указания запросов функции IIf в SQL Server Analysis Services 2008](http://www.ssas-info.com/analysis-services-articles/50-mdx/1103-iif-function-query-hints-in-sql-server-analysis-services-2008) и [планах выполнения и указания планов для функции многомерных выражений IIf и инструкции CASE](https://go.microsoft.com/fwlink/?LinkId=269565).  
   
 ## <a name="examples"></a>Примеры  
  В следующем запросе показано простое использование **IIf** внутри вычисляемой меры для возврата одного из двух различных строковых значений, если мера продажи через Интернет превышает или меньше $10000:  

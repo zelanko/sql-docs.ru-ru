@@ -1,5 +1,5 @@
 ---
-title: Интегрированная проверка подлинности Kerberos (OLE DB) | Документация Майкрософт
+title: Встроенная проверка подлинности Kerberos (поставщик собственного клиента OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,13 +11,14 @@ ms.assetid: 953ee253-a4be-4f47-bbad-d2f6600207b2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f6223848d99c9adb1f92906a2c0a6d20ecb8e89a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6904affb86c55c1611313a15c0db37b581f740e0
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002367"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243656"
 ---
-# <a name="integrated-kerberos-authentication-ole-db"></a>Интеграция проверки подлинности Kerberos (OLE DB)
+# <a name="integrated-kerberos-authentication-native-client-ole-db-provider"></a>Встроенная проверка подлинности Kerberos (поставщик собственного клиента OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Этот образец показывает, как выполнить взаимную проверку подлинности Kerberos с использованием OLE DB в собственном клиенте [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Данный образец работает с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздней версией.  

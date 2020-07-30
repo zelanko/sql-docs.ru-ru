@@ -21,13 +21,14 @@ ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0648fda674a0dba83ae4560fa3744e3c1b1430dc
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 13d0e51b7b06acdfbe847976d093765203b51638
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009085"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245807"
 ---
-# <a name="changing-passwords-programmatically"></a>Смена пароля программным способом
+# <a name="changing-sql-server-native-client-passwords-programmatically"></a>Программное изменение SQL Server Native Client паролей
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   В версиях, предшествующих [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], при истечении пароля пользователя переустановить его мог только администратор. Начиная с [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент поддерживает обработку истечения срока действия пароля программным способом с помощью [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиентского OLE DB поставщика и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] драйвера ODBC собственного клиента, а также путем изменения диалоговых окон **входа в SQL Server** .  
@@ -116,7 +117,7 @@ ms.locfileid: "86009085"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента возвращает SQL_ERROR в четырех случаях для этой функции: истечение срока действия пароля, конфликт политики паролей, блокировка учетной записи и при установке свойства старого пароля при использовании проверки подлинности Windows. Драйвер возвращает пользователю соответствующие сообщения об ошибках при вызове [SQLGetDiagField](../../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Компоненты собственного клиента SQL Server](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
   
   

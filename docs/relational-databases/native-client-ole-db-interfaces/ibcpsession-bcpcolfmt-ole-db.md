@@ -1,5 +1,5 @@
 ---
-title: IBCPSession::BCPColFmt (OLE DB) | Документация Майкрософт
+title: 'IBCPSession:: BCPColFmt (поставщик собственного клиента OLE DB) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,14 @@ ms.assetid: 2852f4ba-f1c6-4c4c-86b2-b77e4abe70de
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c9d7eb13e438a299a4bd74c05080a4adfd14216
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e2899c671b312edff56c11568a74a67d3f961d9e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004841"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247810"
 ---
-# <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
+# <a name="ibcpsessionbcpcolfmt-native-client-ole-db-provider"></a>IBCPSession:: BCPColFmt (поставщик собственного клиента OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Создает привязку между переменными программы и столбцами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -41,7 +42,7 @@ HRESULT BCPColFmt(
       DBORDINAL idxServerCol);  
 ```  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Метод **BCPColFmt** используется для создания привязки между полями файла данных BCP и столбцами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В качестве параметров он принимает длину, тип, признак конца и длину префикса столбца, а также задает каждое из этих свойств для отдельных полей.  
   
  Если пользователь работает в интерактивном режиме, этот метод вызывается дважды для каждого столбца: один раз, чтобы задать формат столбца согласно значениям по умолчанию (которые соответствуют типу столбца на сервере), а второй раз, чтобы задать формат согласно типу столбца, выбранному клиентом в интерактивном режиме.  
@@ -127,7 +128,7 @@ HRESULT BCPColFmt(
  E_OUTOFMEMORY  
  Ошибка, связанная с нехваткой памяти.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [Выполнение операций массового копирования](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   

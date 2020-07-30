@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6e78ab5988d88447539da7c492f0b02943693844
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b9a25677f79ede93f8ea24e979d80dd13adff4fe
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762615"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242764"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
 Указывает доступные разрешения для изменения данных в [соединении](../../../ado/reference/ado-api/connection-object-ado.md), открытия [записи](../../../ado/reference/ado-api/record-object-ado.md)или указания значений для свойства [mode](../../../ado/reference/ado-api/mode-property-ado.md) объектов **Record** и [Stream](../../../ado/reference/ado-api/stream-object-ado.md) .  
@@ -52,9 +52,15 @@ ms.locfileid: "82762615"
 |AdoEnums.ConnectMode.UNKNOWN|  
 |Адоенумс. Коннектмоде. WRITE|  
   
-## <a name="applies-to"></a>Применяется к  
-  
-|||  
-|-|-|  
-|[Свойство Mode (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)|[Метод Open (объект Record ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)|  
-|[Метод Open (объект Stream ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)|[Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|
+## <a name="applies-to"></a>Применение  
+
+:::row:::
+    :::column:::
+        [Свойство Mode (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)  
+        [Метод Open (объект Record ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)  
+    :::column-end:::
+    :::column:::
+        [Метод Open (объект Stream ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)  
+        [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+    :::column-end:::
+:::row-end:::

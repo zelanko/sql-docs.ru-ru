@@ -1,5 +1,6 @@
 ---
 title: srv_pfield (интерфейс API расширенных хранимых процедур) | Документы Майкрософт
+description: Узнайте, как srv_pfield в API расширенных хранимых процедур возвращает сведения о подключении к базе данных.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a61e4c1f-e65b-48ea-a7d1-3e1544af389d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2711fa3c1e7035b75228b02e9d52de8fd3dcd6d3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 12d985ca974f923f37db9d19de048e14af143271
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755935"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248319"
 ---
 # <a name="srv_pfield-extended-stored-procedure-api"></a>srv_pfield (API-интерфейс расширенных хранимых процедур)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +58,7 @@ len
  *полями*  
  Задает возвращаемые сведения о соединении.  
   
-|Применение|Возвращаемое значение|  
+|Значение|Результаты|  
 |-----------|-------------|  
 |SRV_APPLNAME|Имя приложения, задаваемое клиентом при установлении соединения.|  
 |SRV_BCPFLAG|Флаг, имеющий значение TRUE, если клиент готовится к операции массового копирования, и FALSE в противном случае.|  
@@ -82,7 +83,7 @@ len
  *len*  
  Представляет собой указатель на переменную **int**, в которой хранится длина возвращаемого значения *field*. Если значение *len* равно NULL, длина строки не возвращается.  
   
-## <a name="returns"></a>Возвращаемое значение  
+## <a name="returns"></a>Результаты  
  Указатель на оканчивающуюся нулевым байтом строку, содержащую текущее значение указанного поля в процедуре SRV_PROC. Если поле пусто, то возвращается допустимый указатель на пустую строку, а *len* содержит 0. Если поле неизвестно, то возвращается значение NULL, а *len* содержит значение –1.  
   
 > [!IMPORTANT]  

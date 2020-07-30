@@ -9,14 +9,14 @@ ms.date: 10/26/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f275c77556e8abe8932e241075b9e24e2ae5db77
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4a1007529db6d861d3090fbbdcb6c85975fb882a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289682"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243500"
 ---
-# <a name="polybase-configuration-and-security-for-hadoop"></a>Конфигурация и обеспечение безопасности PolyBase для Hadoop
+# <a name="configure-polybase-hadoop-security"></a>Настройка безопасности Hadoop в Polybase
 
 Эта статья содержит справочные сведения о различных параметрах конфигурации, которые влияют на подключение к интерфейсу AP Polybase к Hadoop. Пошаговое руководство по работе с Polybase см. в разделе [понятие polybase](configure-polybase-connectivity-to-external-data.md).
 
@@ -115,7 +115,7 @@ ms.locfileid: "79289682"
 4. Создайте объект учетных данных для базы данных, чтобы указать аутентификационные сведения для каждого пользователя Hadoop. См. статью [Объекты T-SQL PolyBase](../relational-databases/polybase/polybase-t-sql-objects.md).
 
 ## <a name="hadoop-encryption-zone-setup"></a><a id="encryptionzone"></a>Настройка зоны шифрования Hadoop
-Если вы используете зону шифрования Hadoop, измените Core-site. XML и HDFS-site. XML, как показано ниже. Укажите IP-адрес, на котором запущена служба KMS, с соответствующим номером порта. Порт по умолчанию для службы KMS в CDH — 16000.
+Если вы используете зону шифрования Hadoop, измените core-site.xml и hdfs-site.xml следующим образом. Укажите IP-адрес, на котором запущена служба KMS, с соответствующим номером порта. Порт по умолчанию для службы KMS в CDH — 16000.
 
 **core-site.xml**
 ```xml

@@ -9,14 +9,14 @@ ms.date: 12/13/2019
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019, seo-lt-2019
-ms.openlocfilehash: dc796ff58c5320e60011dc46dd45468177a98ed8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2989be74f4c180d07a6270a8ba5f685460780fbd
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245394"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243478"
 ---
-# <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Настройка PolyBase для доступа к внешним данным в Hadoop
+# <a name="configure-polybase-in-parallel-data-warehouse-to-access-external-data-in-hadoop"></a>Настройка Polybase в параллельном хранилище данных для доступа к внешним данным в Hadoop
 
 В этой статье объясняется, как использовать Polybase на устройстве APS для запроса внешних данных в Hadoop.
 
@@ -55,7 +55,7 @@ PolyBase поддерживает два поставщика Hadoop — Horton
   
 1. Откройте подключение к удаленному рабочему столу на узле управления PDW.
 
-2. Найдите файл **Yarn-site. XML** на управляющем узле. Как правило, путь выглядит следующим образом:  
+2. Найдите файл **yarn-site.xml** на управляющем узле. Как правило, путь выглядит следующим образом:  
 
    ```xml  
    C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf\  
@@ -63,7 +63,7 @@ PolyBase поддерживает два поставщика Hadoop — Horton
 
 3. Найдите аналогичный файл на компьютере с Hadoop в каталоге конфигурации. Открыв его, найдите и скопируйте значение ключа конфигурации yarn.application.classpath.  
   
-4. В узле Control в **файле Yarn. site. XML** найдите свойство **Yarn. Application. подкаталог** . Вставьте значение, скопированное на компьютере с Hadoop, в качестве значения элемента.  
+4. На управляющем узле в **файлеyarn.site.xml** найдите свойство **Yarn. Application. подкаталог** . Вставьте значение, скопированное на компьютере с Hadoop, в качестве значения элемента.  
   
 5. Для всех версий CDH 5.X необходимо добавить параметры конфигурации mapreduce.application.classpath либо в конец файла yarn.site.xml, либо в файл mapred-site.xml. HortonWorks содержит эти настройки в конфигурациях yarn.application.classpath. Примеры см. в статье [Конфигурация PolyBase](../relational-databases/polybase/polybase-configuration.md).
 
@@ -102,7 +102,7 @@ Yarn-site.xml yarn.application.classpath и mapreduce.application.classpath ко
 </configuration>
 ```
 
-Если вы решили разбить два параметра конфигурации на mapred-site. XML и Yarn-site. XML, файлы будут выглядеть следующим образом:
+Если вы решили разбить два параметра конфигурации на mapred-site.xml и yarn-site.xml, то файлы будут выглядеть следующим образом:
 
 **yarn-site.xml**
 
@@ -227,7 +227,7 @@ Yarn-site.xml yarn.application.classpath и mapreduce.application.classpath ко
    WITH IDENTITY = '<hadoop_user_name>', Secret = '<hadoop_password>';  
    ```
 
-3. Создайте внешний источник данных с помощью [создания внешнего источника данных](../t-sql/statements/create-external-data-source-transact-sql.md).
+3. Создайте внешний источник данных с помощью инструкции [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md).
 
    ```sql
    -- LOCATION (Required) : Hadoop Name Node IP address and port.  

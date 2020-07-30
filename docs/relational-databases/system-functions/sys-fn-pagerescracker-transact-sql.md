@@ -1,6 +1,6 @@
 ---
 title: sys. fn_PageResCracker (Transact-SQL) | Документация Майкрософт
-description: Документация по системной функции sys. fn_PageResCracker.
+description: Сведения о системной функции sys. fn_PageResCracker. См. примеры и Просмотр дополнительных доступных ресурсов.
 ms.custom: ''
 ms.date: 09/18/2018
 ms.prod: sql
@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: bluefooted
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: 460f1990a7020d7a57ea7ad543f3253576756d05
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a48b5ba06223130a83980bf6cf8ec410bd58e5a1
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790427"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247583"
 ---
 # <a name="sysfn_pagerescracker-transact-sql"></a>sys. fn_PageResCracker (Transact-SQL)
 [!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
@@ -56,7 +56,7 @@ sys.fn_PageResCracker ( page_resource )
 |file_id|**int**|Идентификатор файла|  
 |page_id|**int**|Идентификатор страницы|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
 `sys.fn_PageResCracker`используется для преобразования 8-байтового шестнадцатеричного представления страницы базы данных в набор строк, содержащий идентификатор базы данных, идентификатор файла и идентификатор страницы.   
 
 Допустимый ресурс страницы можно получить из `page_resource` столбца в динамическом административном представлении [sys. Dm_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) или в [sys.sysпроцессов &#40;системное представление&#41;Transact-SQL](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) . Если используется недопустимый ресурс страницы, возвращается значение NULL.  
@@ -75,7 +75,7 @@ CROSS APPLY sys.fn_PageResCracker (d.page_resource) AS r
 CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 1) AS page_info
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sys. dm_db_page_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)  
  [sys.sysные процессы &#40;&#41;Transact-SQL](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [sys.dm_exec_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  

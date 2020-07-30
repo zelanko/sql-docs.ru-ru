@@ -9,27 +9,26 @@ ms.topic: conceptual
 ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: c0332efca72c216ac6ecbb2f5f397fbf57e8b7cf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 29b7aa1a0e7aca34bee82180854a3b2ca63cafb4
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68059961"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394556"
 ---
 # <a name="user-interface-reference-db2tosql"></a>Справочник по пользовательскому интерфейсу (DB2ToSQL)
-В этом разделе содержатся разделы справки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для помощник по миграции (SSMA) для DB2.  
+В этом разделе содержатся разделы справки для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Помощник по миграции (SSMA) для DB2.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
 В следующей таблице приводится список диалоговых окон SSMA.  
   
-|||  
-|-|-|  
 |Раздел|Описание|  
+|-|-|  
 |[Расширенный выбор объектов &#40;DB2ToSQL&#41;](../../ssma/db2/advanced-object-selection-db2tosql.md)|Используйте диалоговое окно **Расширенный выбор объектов** для поиска объектов базы данных с помощью условий фильтра, а затем выберите или отмените выбор этих объектов.|  
-|[Отчет об оценке &#40;DB2ToSQL&#41;](../../ssma/db2/assessment-report-db2tosql.md)|Используйте отчет «Оценка» для просмотра результатов преобразования объектов DB2 в [!INCLUDE[tsql](../../includes/tsql-md.md)] синтаксис, а также для оценки времени и сложности миграции. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|[Отчет об оценке &#40;DB2ToSQL&#41;](../../ssma/db2/assessment-report-db2tosql.md)|Используйте отчет «Оценка» для просмотра результатов преобразования объектов DB2 в [!INCLUDE[tsql](../../includes/tsql-md.md)] синтаксис, а также для оценки времени и сложности миграции [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Подключение к базе данных DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)|Используйте диалоговое окно **Подключение к DB2** для подключения к базе данных DB2, которую требуется перенести.|  
-|[Подключение к SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/connect-to-sql-server-db2tosql.md)|Используйте диалоговое окно **Подключение к SQL Server** , чтобы подключиться к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на который требуется выполнить миграцию.|  
-|[Отчет о переносе данных &#40;DB2ToSQL&#41;](../../ssma/db2/data-migration-report-db2tosql.md)|Отображает результаты миграции данных из DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[Подключение к SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/connect-to-sql-server-db2tosql.md)|Используйте диалоговое окно **Подключение к SQL Server** , чтобы подключиться к экземпляру, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на который требуется выполнить миграцию.|  
+|[Отчет о переносе данных &#40;DB2ToSQL&#41;](../../ssma/db2/data-migration-report-db2tosql.md)|Отображает результаты миграции данных из DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Параметры миграции данных](https://msdn.microsoft.com/573e673e-a194-4cb2-9aba-aaac6e1a225c)|Используйте вкладку **Параметры расширенной миграции данных** для написания пользовательских запросов на перенос данных.|  
 |[Изменение сопоставления типов &#40;DB2ToSQL&#41;](../../ssma/db2/edit-type-mapping-db2tosql.md)|Используйте диалоговые окна **новое сопоставление типов** или **Изменение сопоставления типов** для создания или изменения сопоставления типов данных между исходной и целевой базами данных и объектами базы данных.|  
 |[Редактор &#40;глобальных параметров&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/global-settings-editor-db2tosql.md)|Используйте страницу редактор диалогового окна **глобальные параметры** для настройки параметров редактора кода.|  
@@ -39,14 +38,14 @@ ms.locfileid: "68059961"
 |[Новый проект &#40;DB2ToSQL&#41;](../../ssma/db2/new-project-db2tosql.md)|Используйте диалоговое окно **Создание проекта** для создания нового проекта SSMA для DB2.|  
 |[Параметры проекта &#40;преобразование&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-conversion-db2tosql.md)|Используйте страницу Преобразование диалогового окна **Параметры проекта** , чтобы указать, как SSMA для DB2 преобразует функции и глобальные переменные.|  
 |[Параметры проекта &#40;GUI&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-gui-db2tosql.md)|Используйте страницу графический интерфейс диалогового окна **Параметры проекта** , чтобы указать объем данных, отображаемых на вкладке **данные** .|  
-|[Параметры проекта &#40;миграция&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-migration-db2tosql.md)|Страница миграция диалогового окна **Параметры проекта** используется для настройки того, как SSMA для DB2 переносит данные из DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в.|  
-|[Параметры проекта&#40;синхронизации&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md)|Страница синхронизация диалогового окна **Параметры проекта** используется для настройки того, как SSMA для DB2 создает или изменяет перенесенные объекты базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в.|  
-|[Параметры проекта&#40;загрузке системных объектов&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-loading-system-objects-db2tosql.md)|Используйте страницу Загрузка системных объектов диалогового окна **Параметры проекта** , чтобы указать, какие системные объекты DB2 SSMA преобразует и загружает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в.|  
+|[Параметры проекта &#40;миграция&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-migration-db2tosql.md)|Страница миграция диалогового окна **Параметры проекта** используется для настройки того, как SSMA для DB2 переносит данные из DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|[Параметры проекта&#40;синхронизации&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md)|Страница синхронизация диалогового окна **Параметры проекта** используется для настройки того, как SSMA для DB2 создает или изменяет перенесенные объекты базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|[Параметры проекта&#40;загрузке системных объектов&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-loading-system-objects-db2tosql.md)|Используйте страницу Загрузка системных объектов диалогового окна **Параметры проекта** , чтобы указать, какие системные объекты DB2 SSMA преобразует и загружает в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Параметры проекта &#40;сопоставление типов&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md)|Страница Сопоставление типов диалогового окна **Параметры проекта** используется для указания сопоставлений типов по умолчанию для всех баз данных и объектов базы данных в проекте SSMA для DB2.|  
 |[Обновление из базы данных &#40;DB2ToSQL&#41;](../../ssma/db2/refresh-from-database-db2tosql.md)|Используйте диалоговое окно **обновление из базы данных** , чтобы выбрать объекты для обновления из базы данных DB2.|  
 |[Сохранить метаданные &#40;DB2ToSQL&#41;](../../ssma/db2/save-metadata-db2tosql.md)|Диалоговое окно **Сохранение метаданных** появляется при сохранении проекта, в котором отсутствуют метаданные.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Начало работы с SSMA для DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/getting-started-with-ssma-for-db2-db2tosql.md)  
 [Перенос баз данных DB2 в SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

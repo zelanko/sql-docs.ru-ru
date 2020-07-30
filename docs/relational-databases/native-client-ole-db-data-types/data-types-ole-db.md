@@ -16,14 +16,14 @@ ms.assetid: 15953706-f0d1-45f5-a2eb-a8bd36e1a5fc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42944947ce8c2998a4329064d9ad496fdfff72b2
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: e1574b87bef2e231415b0c95a333c4b7107ca726
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86976641"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245911"
 ---
-# <a name="data-types-ole-db"></a>Типы данных (OLE DB)
+# <a name="sql-server-native-client-data-types-ole-db"></a>Типы данных SQL Server Native Client (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Для выполнения [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций и обработки результатов с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB Provider необходимо иметь представление о том, как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB поставщика собственного клиента сопоставляет [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типы данных с OLE DB типами данных при привязке параметров или столбцов в наборе строк, а также при использовании интерфейса **ITableDefinition** для создания таблицы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

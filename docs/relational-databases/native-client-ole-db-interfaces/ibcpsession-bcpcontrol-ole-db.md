@@ -1,5 +1,5 @@
 ---
-title: IBCPSession::BCPControl (OLE DB) | Документация Майкрософт
+title: 'IBCPSession:: BCPControl (поставщик собственного клиента OLE DB) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,14 @@ ms.assetid: d58f3fe1-45e3-4e46-8e9c-000971829d99
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b189b1faa38c9b9e40fb13c3dd55e57c4f9318d8
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 98d21ab0c4bb17ca9e701a17b5abd8d3da2438dc
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006034"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247789"
 ---
-# <a name="ibcpsessionbcpcontrol-ole-db"></a>Метод IBCPSession::BCPControl (OLE DB)
+# <a name="ibcpsessionbcpcontrol-native-client-ole-db-provider"></a>IBCPSession:: BCPControl (поставщик собственного клиента OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Задает параметры для операции массового копирования.  
@@ -30,13 +31,13 @@ ms.locfileid: "86006034"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
+
 HRESULT BCPControl(   
       int eOption,  
       void *iValue);  
 ```  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Метод **BCPControl** задает различные параметры управления для операций массового копирования, в том числе количество ошибок, допустимых перед отменой массового копирования, номера первой и последней строк, копируемых из файла данных, и размер пакетов.  
   
  Этот метод также применяется, чтобы указать на использование инструкции SELECT при массовом копировании данных из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Можно присвоить аргументу **eOption** значение BCP_OPTION_HINTS, а аргументу **iValue** указатель на строку знаков в Юникоде, содержащую инструкцию SELECT.  
@@ -83,7 +84,7 @@ HRESULT BCPControl(
  E_OUTOFMEMORY  
  Недостаточно памяти.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [Выполнение операций массового копирования](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   

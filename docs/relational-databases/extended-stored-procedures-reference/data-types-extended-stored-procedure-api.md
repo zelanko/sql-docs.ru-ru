@@ -1,5 +1,6 @@
 ---
 title: Типы данных (интерфейс API расширенных хранимых процедур) | Документы Майкрософт
+description: Узнайте, как можно расширить типы данных API расширенных хранимых процедур, включив в программу файл заголовка SRV. h.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 37fb86b9-8819-4387-bcdc-9616968e15ad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b510e74d507cb540fa617b6c0da48c3090429192
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a5ff9f72c7ddec8301940cd14bbfe6086cadbd54
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85679058"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244028"
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>Типы данных (API-интерфейс расширенных хранимых процедур)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "85679058"
 |SRVFLT4|**real**|Тип данных **real** длиной 4 байта.|  
 |SRVFLT8|**float**|Тип данных **float** длиной 8 байт.|  
 |SRVFLTN|**real** &#124; **float null**|Данные типа **real** или **float**, значения NULL допускаются.|  
-|SRVIMAGE|**изображение**|Тип данных **image**.|  
+|SRVIMAGE|**image**|Тип данных **image**.|  
 |SRVINT1|**tinyint**|Тип данных **tinyint** длиной 1 байт.|  
 |SRVINT2|**smallint**|Тип данных **smallint** длиной 2 байта.|  
 |SRVINT4|**int**|Тип данных **int** длиной 4 байта.|  

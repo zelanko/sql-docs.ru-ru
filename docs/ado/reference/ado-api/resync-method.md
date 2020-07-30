@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 54c92fad618ffaad9b22a8ed73b287c0a5716959
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6907bfa9b83370074db9d9e2e522ed49d2c96e7e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756303"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243215"
 ---
 # <a name="resync-method"></a>Метод Resync
 Обновляет данные в текущем объекте [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) или коллекции [полей](../../../ado/reference/ado-api/fields-collection-ado.md) объекта [записи](../../../ado/reference/ado-api/record-object-ado.md) из базовой базы данных.  
@@ -64,13 +64,18 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
   
  **Повторная синхронизация** не приведет к изменению значений **состояния** объектов **полей** , если не возникает ошибка при вызове повторной **синхронизации** . Например, если поле больше не существует, поставщик возвратит соответствующее значение **состояния** для объекта **поля** , например **адфиелддоеснотексист**. Возвращаемые значения **состояния** могут быть логически объединены в значение свойства **Status** .  
   
-## <a name="applies-to"></a>Применяется к  
-  
-|||  
-|-|-|  
-|[Коллекция Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
-  
-## <a name="see-also"></a>См. также  
+## <a name="applies-to"></a>Применение  
+
+:::row:::
+    :::column:::
+        [Коллекция Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
+## <a name="see-also"></a>См. также:  
  [Пример метода Resync (Visual Basic)](../../../ado/reference/ado-api/resync-method-example-vb.md)   
  [Пример метода Resync (Visual c++)](../../../ado/reference/ado-api/resync-method-example-vc.md)   
  [Метод Clear (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   

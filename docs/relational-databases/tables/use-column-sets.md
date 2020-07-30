@@ -14,15 +14,15 @@ ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1877f653244100126226b85b29a24ca458c1cf74
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a45bfb98fa5b8d5a9ce5c640d07c3c13ab7d5284
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71326138"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396180"
 ---
 # <a name="use-column-sets"></a>Использование наборов столбцов
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
   В таблицах, использующих разреженные столбцы, можно назначить набор столбцов, который будет возвращать все разреженные столбцы в таблице. Набор столбцов — это нетипизированное XML-представление, которое объединяет на выходе все разреженные столбцы таблицы в структурированном виде. Набор столбцов похож на вычисляемые столбцы тем, что набор столбцов физически не хранится в таблице. Набор столбцов отличается от вычисляемого столбца тем, что он может быть напрямую обновлен.  
   

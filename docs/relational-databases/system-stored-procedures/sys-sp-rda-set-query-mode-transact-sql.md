@@ -1,5 +1,6 @@
 ---
 title: sys. sp_rda_set_query_mode (Transact-SQL) | Документация Майкрософт
+description: Используйте представление sys. sp_rda_set_query_mode, чтобы указать, должны ли запросы к текущей базе данных с поддержкой растяжения и ее таблицам возвращать локальные и удаленные данные или только локальные данные.
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,11 +17,12 @@ helpviewer_keywords:
 ms.assetid: 65a0b390-cf87-4db7-972a-1fdf13456c88
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 06aa5b76b321206a936340cc5bfd8715dbf14f52
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: b2fbef46606f182e2c9833d2ce421c61fc421105
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053044"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243338"
 ---
 # <a name="syssp_rda_set_query_mode-transact-sql"></a>sys. sp_rda_set_query_mode (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -45,7 +47,7 @@ sp_rda_set_query_mode [ @mode = ] @mode
   
 -   **LOCAL_ONLY** Запросы к таблицам с поддержкой Stretch возвращают только локальные данные.  
   
--   **LOCAL_AND_REMOTE** Запросы к таблицам с поддержкой Stretch возвращают как локальные, так и удаленные данные. Это поведение установлено по умолчанию.  
+-   **LOCAL_AND_REMOTE** Запросы к таблицам с поддержкой Stretch возвращают как локальные, так и удаленные данные. Это поведение по умолчанию.  
   
  [ @force =] * \@ Force*  
  Необязательное битовое значение, которое можно установить в 1, если требуется изменить режим запроса без проверки.  
@@ -56,7 +58,7 @@ sp_rda_set_query_mode [ @mode = ] @mode
 ## <a name="permissions"></a>Разрешения  
  Требуются db_owner разрешения.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Следующие расширенные хранимые процедуры также устанавливают режим запроса для базы данных с поддержкой Stretch.  
   
 -   **sp_rda_deauthorize_db**  
@@ -71,7 +73,7 @@ sp_rda_set_query_mode [ @mode = ] @mode
   
      При выполнении [sys. sp_rda_reauthorize_db &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) для повторного подключения к удаленной базе данных Azure эта операция автоматически сбрасывает режим запроса на LOCAL_AND_REMOTE, что является поведением по умолчанию для Stretch Database. То есть запросы возвращают результаты как из локальных, так и удаленных данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sys. sp_rda_deauthorize_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
  [База данных Stretch](../../sql-server/stretch-database/stretch-database.md)  
   

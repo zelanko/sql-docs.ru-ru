@@ -1,5 +1,6 @@
 ---
 title: srv_rpcowner (интерфейс API расширенных хранимых процедур) | Документы Майкрософт
+description: Узнайте, как srv_rpcowner в API расширенных хранимых процедур Возвращает компонент-владелец для текущей удаленной хранимой процедуры.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e81a60e6-14ea-47bc-a11c-3d7635344447
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6c427b572b6c9320c3ebe320c4469f3571641fa4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 64e9fa0970367ccac5d4fca5bf6b9815ad0e0e17
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755870"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248273"
 ---
 # <a name="srv_rpcowner-extended-stored-procedure-api"></a>srv_rpcowner (API-интерфейс расширенных хранимых процедур)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,10 +55,10 @@ len
  *len*  
  Указатель на целочисленную переменную, получающую значение длины имени владельца. Параметр *len* может быть пустым; в этом случае длина компонента владельца не возвращается.  
   
-## <a name="returns"></a>Возвращаемое значение  
+## <a name="returns"></a>Результаты  
  Указатель DBCHAR на оканчивающийся нулевым байтом компонент владельца для текущей удаленной хранимой процедуры. Если текущей удаленной хранимой процедуры нет, возвращается значение NULL, а переменная *len* принимает значение –1.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Эта функция возвращает только компонент владельца удаленной хранимой процедуры. В него не входят необязательные описатели для имени, имени удаленной хранимой процедуры и номера удаленной хранимой процедуры.  
   
 > [!IMPORTANT]  
