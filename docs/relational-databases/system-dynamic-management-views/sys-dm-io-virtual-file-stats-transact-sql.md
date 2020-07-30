@@ -20,15 +20,15 @@ ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f74fcfb00286d79699eed1e40c3dc36f907026ec
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a2110eea5c008f06f7bdd6637dda7222ad5f50d2
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82811848"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396296"
 ---
 # <a name="sysdm_io_virtual_file_stats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Возвращает статистику ввода-вывода для данных и файлов журнала. Это динамическое административное представление заменяет функцию [fn_virtualfilestats](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md) .  
   
@@ -92,7 +92,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |**io_stall_queued_write_ms**|**bigint**|**Не применяется к:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] с до [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] .<br /><br />  Общая задержка ввода-вывода, созданная регулированием ресурсов ввода-вывода для записи. Не допускает значение NULL.|
 |**pdw_node_id**|**int**|**Применимо к:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Идентификатор узла для распределения.
  
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 При запуске службы SQL Server (MSSQLSERVER) счетчики инициализируются пустыми.
   
 ## <a name="permissions"></a>Разрешения  
@@ -111,7 +111,7 @@ SELECT * FROM sys.dm_io_virtual_file_stats(DB_ID(N'AdventureWorks2012'), 2);
 GO  
 ```  
   
-### <a name="b-return-statistics-for-file-in-tempdb"></a>Б. Возврат статистики для файла в базе данных tempdb
+### <a name="b-return-statistics-for-file-in-tempdb"></a>Б) Возврат статистики для файла в базе данных tempdb
 
 **Применимо к:** Хранилище данных SQL Azure
 
@@ -122,9 +122,9 @@ WHERE database_name = 'tempdb' AND file_id = 2;
 ```
 
 ## <a name="see-also"></a>См. также  
- [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции, связанные с I O &#40;языке Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys. database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   
   

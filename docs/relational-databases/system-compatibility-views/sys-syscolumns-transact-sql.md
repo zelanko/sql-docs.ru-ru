@@ -1,5 +1,5 @@
 ---
-title: sys. syscolumns (Transact-SQL) | Документация Майкрософт
+title: sys.sysстолбцы (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,15 +21,15 @@ ms.assetid: 863fd87b-ff33-4ac5-9aa9-df21140681da
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c158533188db7e3d72235a69bff1b14546a1a1a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c8dcf0f88fed4ef48cc90a6057a757a205d9e56b
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68089240"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396103"
 ---
 # <a name="syssyscolumns-transact-sql"></a>sys.syscolumns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   Возвращает по одной строке на каждый из столбцов всех таблиц и представлений и по одной строке на каждый из параметров хранимых процедур в базе данных.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "68089240"
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Имя столбца или параметра процедуры.|  
 |**идентификатор**|**int**|Идентификатор объекта таблицы, которому принадлежит столбец, или идентификатор хранимой процедуры, с которой связан данный параметр.|  
-|**xtype**|**tinyint**|Тип физического хранилища из **sys. types**.|  
+|**кстипе**|**tinyint**|Тип физического хранилища из **sys. types**.|  
 |**typestat**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**smallint**|Идентификатор расширенного пользовательского типа. Вызывает переполнение или возвращает значение NULL, если количество типов данных превышает 32 767.|  
 |**length**|**smallint**|Максимальная длина физического хранилища в **sys**. **типы**.|  
@@ -52,11 +52,11 @@ ms.locfileid: "68089240"
 |**процессу**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**colstat**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**cdefault**|**int**|Идентификатор значения по умолчанию для данного столбца.|  
-|**домен**|**int**|Идентификатор правила или ограничения CHECK для данного столбца.|  
+|**поддомен**|**int**|Идентификатор правила или ограничения CHECK для данного столбца.|  
 |**number**|**smallint**|Номер подпроцедуры, если процедура сгруппирована:<br /><br /> 0 = Непроцедурные элементы.|  
 |**colorder**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**autoval**|**varbinary(8000)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**собой**|**smallint**|Смещение в строке, по которому находится данный столбец.|  
+|**offset**|**smallint**|Смещение в строке, по которому находится данный столбец.|  
 |**коллатионид**|**int**|Идентификатор параметров сортировки для столбца. Для несимвольных столбцов содержит значение NULL.|  
 |**status**|**tinyint**|Битовая карта, описывающая свойства столбца или параметра:<br /><br /> 0x08 = В столбце допускаются значения NULL;<br /><br /> 0x10 = заполнение ANSI было применено при добавлении столбцов **varchar** или **varbinary** . Замыкающие пробелы сохраняются для **varchar** , а замыкающие нули сохраняются для столбцов типа **varbinary** .<br /><br /> 0x40 = Параметр OUTPUT;<br /><br /> 0x80 = Столбец является столбцом идентификаторов.|  
 |**type**|**tinyint**|Тип физического хранилища из **sys**. **типы**.|  
@@ -65,11 +65,11 @@ ms.locfileid: "68089240"
 |**прек**|**smallint**|Уровень точности для данного столбца:<br /><br /> -1 = **XML** или тип больших значений.|  
 |**масштаб**|**int**|Масштаб для данного столбца.<br /><br /> NULL = данные не числовые.|  
 |**вычислено**|**int**|Флаг, обозначающий, является ли столбец вычисляемым:<br /><br /> 0 = невычисляемый;<br /><br /> 1 = вычисляемый.|  
-|**исаутпарам**|**int**|Указывает, относится ли параметр процедуры к выходным параметрам:<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|**IsNullable**|**int**|Указывает, допускает ли столбец значения NULL:<br /><br /> 1 = True<br /><br /> 0 = False.|  
+|**исаутпарам**|**int**|Указывает, относится ли параметр процедуры к выходным параметрам:<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|**IsNullable**|**int**|Указывает, допускает ли столбец значения NULL:<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
 |**параметры сортировки**|**sysname**|Имя параметров сортировки для данного столбца. Содержит NULL, если столбец не относится к символьному типу.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Представления совместимости (Transact-SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   

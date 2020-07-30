@@ -21,15 +21,15 @@ ms.assetid: 9ea52519-80d1-473f-b988-0572f0e2c92f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 27254df5f0e634f3a6a433efdb99dc53dc233da8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8ec2b25adc213be5b19ab3784a2a6e234c9477b1
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915526"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396773"
 ---
 # <a name="-addition-assignment-transact-sql"></a>+= (присваивание сложения) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Складывает два числа и присваивает значению результат этой операции. Например, если переменная @x равна 35, то @x += 2 принимает исходное значение @x, прибавляет 2 и присваивает переменной @x новое значение (37).  
   

@@ -11,12 +11,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 268844335920f88469119df5cc84a145369da1e1
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: c9d942e2255c2c60978d41004cfe53097c99209d
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197243"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332433"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (хранилище данных SQL Azure)
 
@@ -256,7 +256,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 | `money`|8|  
 | `smallmoney` |4|  
   
- `bigint` | `int` | `smallint` | `tinyint`  
+ `bigint` \| `int` \| `smallint` \| `tinyint`  
  Типы точных числовых данных, использующие целые значения. Размер данных хранения приведен в следующей таблице.  
   
 | Тип данных | Байты хранилища |  
@@ -519,18 +519,18 @@ WITH
  В этом примере данные будут отсортированы в следующих секциях:  
   
 - Секция 1: столбцы до 10-го включительно
-- Секция 2: столбцы с 11-го по 20-й
-- Секция 3: столбцы с 21-го по 30-й
-- Секция 4: столбцы с 31-го по 40-й
-- Секция 5: столбцы с 41-го и далее  
+- Секция 2: столбцы с 11-го по 20-й
+- Секция 3: столбцы с 21-го по 30-й
+- Секция 4: столбцы с 31-го по 40-й
+- Секция 5: столбцы с 41-го и далее  
   
  Если эта же таблица была секционирована с использованием RANGE RIGHT вместо RANGE LEFT (по умолчанию), данные будут отсортированы в следующих секциях:  
   
 - Секция 1: столбцы до 10-го  
-- Секция 2: столбцы с 11-го по 19-й
-- Секция 3: столбцы с 20-го по 29-й
-- Секция 4: столбцы с 30-го по 39-й
-- Секция 5: столбцы с 40-го и далее  
+- Секция 2: столбцы с 10-го по 19-й
+- Секция 3: столбцы с 20-го по 29-й
+- Секция 4: столбцы с 30-го по 39-й
+- Секция 5: столбцы с 40-го и далее  
   
 ### <a name="j-create-a-partitioned-table-with-one-partition"></a><a name="OnePartition"></a> J. Создание секционированной таблицы с одной секцией
 

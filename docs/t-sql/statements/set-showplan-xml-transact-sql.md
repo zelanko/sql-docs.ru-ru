@@ -24,16 +24,16 @@ ms.assetid: a467a1b3-10a5-43c4-9085-13d8aed549c9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 890c84330005c3d9f6c4b30a06662d67dfef46f2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c76ef14e97a44b2e33c816c678700e9f4496ae2d
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67941650"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87397059"
 ---
 # <a name="set-showplan_xml-transact-sql"></a>SET SHOWPLAN_XML (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Отключает выполнение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)]. Вместо этого [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает подробные сведения о плане выполнения инструкций в виде верного XML-документа.
 
@@ -41,7 +41,7 @@ ms.locfileid: "67941650"
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```syntaxsql
 SET SHOWPLAN_XML { ON | OFF }
 ```
 
@@ -61,7 +61,7 @@ SET SHOWPLAN_XML { ON | OFF }
 Инструкция SET STATISTICS XML возвращает данные в виде набора XML-документов. Каждый пакет после выполнения инструкции SET SHOWPLAN_XML ON сопровождается выводом одного документа. Каждый документ содержит текст инструкций, входящих в пакет, за которым следуют подробные сведения об этапах выполнения команды. Документ отображает оценку издержек выполнения, количество строк, индексов, к которым был произведен доступ, типы выполненных операторов, порядок соединения и другие данные о планах выполнения.
 
 > [!NOTE]
-> Если в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] установлен параметр **Включить действительный план выполнения**, то при указании этого параметра SET вывод инструкции SHOWPLAN в формате XML формироваться не будет. Снимите флажок **Включить действительный план выполнения** перед использованием параметра SET.
+> Если в среде **установлен параметр**Включить действительный план выполнения[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], то при указании этого параметра SET вывод инструкции SHOWPLAN в формате XML формироваться не будет. Снимите флажок **Включить действительный план выполнения** перед использованием параметра SET.
 
 ### <a name="location-of-showplan-output"></a>Расположение выходных данных SHOWPLAN
 

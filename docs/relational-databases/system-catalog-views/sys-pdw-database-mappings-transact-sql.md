@@ -12,19 +12,19 @@ ms.assetid: 4ae2c71e-dd56-41ea-a16b-64936175b459
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5a5f3e4f421fbe169d5acb049e5a91ce5ffa3612
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: 013a6bcbba5e7647db1bec04204f8e8fec710c16
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627551"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396099"
 ---
 # <a name="syspdw_database_mappings-transact-sql"></a>sys. pdw_database_mappings (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   Сопоставляет **database_id**s из баз данных с физическим именем, используемым на вычисленных узлах, и предоставляет **идентификатор субъекта** владельца базы данных в системе. Присоедините **sys. pdw_database_mappings** к **sys. databases** и **sys. pdw_nodes_pdw_physical_databases**.  
   
-|Имя столбца|Тип данных|Описание|Диапазон|  
+|Имя столбца|Тип данных|Description|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
 |physical_name|**nvarchar (36)**|Физическое имя базы данных на вычисленных узлах.<br /><br /> **physical_name** и **database_id** формируют ключ для этого представления.||  
 |database_id|**int**|Идентификатор объекта для базы данных. См. раздел [sys. databases &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).<br /><br /> **physical_name** и **database_id** формируют ключ для этого представления.||  
@@ -42,7 +42,7 @@ JOIN sys.pdw_nodes_pdw_physical_databases AS Phys
 ORDER BY DB.database_id, Phys.pdw_node_id;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  (Представления каталога в службе "Хранилище данных SQL" и Parallel Data Warehouse)  
  [sys. pdw_index_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-index-mappings-transact-sql.md)   
  [sys. pdw_table_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md)   
