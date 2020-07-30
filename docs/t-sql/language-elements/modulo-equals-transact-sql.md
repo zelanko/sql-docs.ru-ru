@@ -22,15 +22,15 @@ ms.assetid: 45e35516-1f4c-406b-a580-70a14b087847
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c24c56506cbb2ecd85a7d112ee82edb3c7fa70c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 20bbd65e39a3a689c01612615d54c34e12932a1e
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922903"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395694"
 ---
 # <a name="-modulus-assignment-transact-sql"></a>–= (присваивание модуля) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Одно число делится на другое, и значение задается для результата операции. Например, если переменная @x равна 38, то @x %= 5 делит исходное значение @x на 5 и присваивает переменной @x остаток от этого деления (3).  
   

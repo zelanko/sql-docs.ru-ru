@@ -21,15 +21,15 @@ ms.assetid: b4d05439-6360-45db-b1cd-794f4a64935e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cc78decc0c911376b61cc429ba538be11cbaded6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 25272b586e84b498cfaa9da17a772692dad6f48a
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831441"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87393999"
 ---
 # <a name="sysquery_store_plan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Содержит сведения о каждом плане выполнения, связанном с запросом.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "82831441"
 |**is_forced_plan**|**bit**|План помечается как принудительный, когда пользователь выполняет хранимую процедуру **sys. sp_query_store_force_plan**. Принудительный механизм не *гарантирует* , что именно этот план будет использоваться для запроса, на который ссылается **query_id**. Форсирование плана вызывает повторную компиляцию запроса и, как правило, создает тот же или аналогичный план для плана, на который ссылается **plan_id**. Если форсирование плана не выполняется, **force_failure_count** увеличивается, а **last_force_failure_reason** заполняется причиной сбоя. <br/>**Примечание.** Хранилище данных SQL Azure всегда будет возвращать ноль (0).|  
 |**is_natively_compiled**|**bit**|План включает оптимизированные для обработки в памяти процедуры. (0 = FALSE, 1 = TRUE). <br/>**Примечание.** Хранилище данных SQL Azure всегда будет возвращать ноль (0).|  
 |**force_failure_count**|**bigint**|Число неудачных попыток принудительного выполнения плана. Его можно увеличить, только если запрос перекомпилируется (*не при каждом выполнении*). Он сбрасывается в 0 каждый раз, **is_plan_forced** меняется с **false** на **true**. <br/>**Примечание.** Хранилище данных SQL Azure всегда будет возвращать ноль (0).|  
-|**last_force_failure_reason**|**int**|Причина сбоя принудительного применения плана.<br /><br /> 0: нет ошибки, в противном случае — номер ошибки, вызвавшей сбой принудительного выполнения<br /><br /> 8637: ONLINE_INDEX_BUILD<br /><br /> 8683: INVALID_STARJOIN<br /><br /> 8684: TIME_OUT<br /><br /> 8689: NO_DB<br /><br /> 8690: HINT_CONFLICT<br /><br /> 8691: SETOPT_CONFLICT<br /><br /> 8694: DQ_NO_FORCING_SUPPORTED<br /><br /> 8698: NO_PLAN<br /><br /> 8712: NO_INDEX<br /><br /> 8713: VIEW_COMPILE_FAILED<br /><br /> \<другое значение>: GENERAL_FAILURE <br/>**Примечание.** Хранилище данных SQL Azure всегда будет возвращать ноль (0).|  
+|**last_force_failure_reason**|**int**|Причина сбоя принудительного применения плана.<br /><br /> 0: нет ошибки, в противном случае — номер ошибки, вызвавшей сбой принудительного выполнения<br /><br /> 8637: ONLINE_INDEX_BUILD<br /><br /> 8683: INVALID_STARJOIN<br /><br /> 8684: TIME_OUT<br /><br /> 8689: NO_DB<br /><br /> 8690: HINT_CONFLICT<br /><br /> 8691: SETOPT_CONFLICT<br /><br /> 8694: DQ_NO_FORCING_SUPPORTED<br /><br /> 8698: NO_PLAN<br /><br /> 8712: NO_INDEX<br /><br /> 8713: VIEW_COMPILE_FAILED<br /><br /> \<other value>: GENERAL_FAILURE <br/>**Примечание.** Хранилище данных SQL Azure всегда будет возвращать ноль (0).|  
 |**last_force_failure_reason_desc**|**nvarchar(128)**|Текстовое описание last_force_failure_reason_desc.<br /><br /> ONLINE_INDEX_BUILD: запрос пытается изменить данные, в то время как Целевая таблица имеет индекс, который строится в режиме "в сети"<br /><br /> INVALID_STARJOIN: Plan содержит недопустимую спецификацию Старжоин<br /><br /> TIME_OUT: оптимизатор превысил количество разрешенных операций при поиске плана, указанного принудительным планом<br /><br /> NO_DB: база данных, указанная в плане, не существует<br /><br /> HINT_CONFLICT: не удается скомпилировать запрос, так как возник конфликт плана с указанием запроса<br /><br /> DQ_NO_FORCING_SUPPORTED: не удается выполнить запрос, так как планирование конфликтов с использованием распределенных запросов или полнотекстовых операций.<br /><br /> NO_PLAN: обработчику запросов не удалось создать план запроса, так как принудительный план не может быть проверен на допустимость для запроса<br /><br /> NO_INDEX: индекс, указанный в плане, больше не существует<br /><br /> VIEW_COMPILE_FAILED: не удалось принудительно выполнить план запроса из-за проблемы в индексированном представлении, на которое ссылается план<br /><br /> GENERAL_FAILURE: Общая ошибка принудительного выполнения (не рассматривается по причинам выше) <br/>**Примечание.** Хранилище данных SQL Azure всегда будет возвращать *значение None*.|  
 |**count_compiles**|**bigint**|Планирование статистики компиляции.|  
 |**initial_compile_start_time**|**datetimeoffset**|Планирование статистики компиляции.|  
@@ -94,7 +94,7 @@ ms.locfileid: "82831441"
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [sys. query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [Мониторинг производительности с использованием хранилища запросов](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Хранимые процедуры хранилища запросов &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   
   

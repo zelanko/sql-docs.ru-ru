@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 054bb22c1dfe2f1497af6e74bea0cfc0bca158b8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 09edac79bf52c2826436ecdfdf25b0db342f4aeb
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763622"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363568"
 ---
 # <a name="contained-database-collations"></a>Параметры сортировки автономной базы данных
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -126,9 +126,8 @@ END;
   
  В данной таблице представлен порядок обработки различных объектов в автономных и неавтономных базах данных.  
   
-||||  
+|Item|Неавтономная база данных|Автономная база данных|  
 |-|-|-|  
-|**Item**|**Неавтономная база данных**|**Автономная база данных**|  
 |Пользовательские данные (по умолчанию)|DATABASE_DEFAULT|DATABASE_DEFAULT|  
 |Временные данные (по умолчанию)|Параметры сортировки TempDB|DATABASE_DEFAULT|  
 |Метаданные|DATABASE_DEFAULT / CATALOG_DEFAULT|CATALOG_DEFAULT|  

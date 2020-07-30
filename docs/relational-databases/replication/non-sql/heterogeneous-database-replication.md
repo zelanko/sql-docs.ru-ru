@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3fd983ad-e206-45db-9054-417c9b5bb815
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f6a2540f4b1a3cb35f697ce4e27a51b99f5bdf84
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f392b232e81c0f6dcb2fcd546acf91a714f5c7ee
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893336"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394396"
 ---
 # <a name="heterogeneous-database-replication"></a>разнородная репликация базы данных  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "85893336"
 
 -   Публикация данных в Oracle и из Oracle имеет следующие ограничения:  
 
-  | |2016 или более ранние версии |2017 или более поздние версии |
+  |Сценарий|2016 или более ранние версии |2017 или более поздние версии |
   |-------|-------|--------|
   |Репликация из Oracle |Поддержка только Oracle 10g или более ранних версий |Поддержка только Oracle 10g или более ранних версий |
   |Репликация в Oracle |Версии до Oracle 12c |Не поддерживается |
@@ -44,7 +44,7 @@ ms.locfileid: "85893336"
 ## <a name="publishing-data-from-oracle"></a>Публикация данных из Oracle  
  Для публикации данных из Oracle можно использовать [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , причем большинство функций и простота их использования такие же, как и в случае репликации моментальных снимков и репликации транзакций [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Для этой функции требуется Oracle 10G или более ранней версии. Публикация данных из Oracle идеально подходит для следующих сценариев:  
   
-|Сценарий|Description|  
+|Сценарий|Описание|  
 |--------------|-----------------|  
 |Развертывание приложений на платформе[!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework|Ведите разработку с помощью [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] при работе с данными, реплицируемыми из базы данных, отличной от[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
 |Серверы промежуточного хранения данных|Поддерживайте синхронизацию промежуточных баз данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с базой данных, отличной от[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  

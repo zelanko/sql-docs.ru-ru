@@ -13,15 +13,15 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 7237e7f7b49916e09f4a8c5cab0d7d49486cb971
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cb63045fa1a34898e9c195e7a5c75bdf6b34b15a
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73145659"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394353"
 ---
 # <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys. dm_pdw_nodes_exec_query_profiles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Отслеживает ход выполнения запросов в хранилище данных в реальном времени, пока запрос выполняется.   
   
@@ -66,7 +66,7 @@ ms.locfileid: "73145659"
 |segment_read_count|**int**|Количество операций упреждающего чтения сегментов к текущему времени.|  
 |segment_skip_count|**int**|Количество сегментов, пропущенных к текущему времени.| 
 |actual_read_row_count|**bigint**|Число строк, считанных оператором перед применением остаточного предиката.| 
-|estimated_read_row_count|**bigint**|**Применимо к:** Начиная с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] с пакетом обновления 1. <br/>Количество строк, которое должно быть считано оператором перед применением остаточного предиката.|  
+|estimated_read_row_count|**bigint**|**Применимо к:** Начиная с с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] пакетом обновления 1. <br/>Количество строк, которое должно быть считано оператором перед применением остаточного предиката.|  
   
 ## <a name="remarks"></a>Remarks  
 Те же примечания в [sys. dm_exec_query_profiles](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql?view=sql-server-ver15) применяются.  
@@ -74,7 +74,7 @@ ms.locfileid: "73145659"
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение `VIEW SERVER STATE` на сервере.  
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Динамические административные представления хранилища данных SQL и параллельного хранилища данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
    
 
