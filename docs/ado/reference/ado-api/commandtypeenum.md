@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 68572a642333e4e9c2c334cd7680b96b0cacced3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: cc5d48ab323dd3e75ba40f406ec88505957153c7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760380"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242774"
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 Указывает, как должен интерпретироваться аргумент команды.  
@@ -50,10 +50,18 @@ ms.locfileid: "82760380"
 |Адоенумс. CommandType. FILE|  
 |Адоенумс. CommandType. TABLEDIRECT|  
   
-## <a name="applies-to"></a>Применяется к  
-  
-|||  
-|-|-|  
-|[Свойство CommandType (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)|[Метод Execute (объект Command ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
-|[Метод Execute (объект Connection ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|[Метод Open (объект Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
-|[Метод Requery](../../../ado/reference/ado-api/requery-method.md)||
+## <a name="applies-to"></a>Применение  
+
+:::row:::
+    :::column:::
+        [Свойство CommandType (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)  
+        [Метод Execute (объект Command ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)  
+    :::column-end:::
+    :::column:::
+        [Метод Execute (объект Connection ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)  
+        [Метод Open (объект Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
+    :::column-end:::
+    :::column:::
+        [Метод Requery](../../../ado/reference/ado-api/requery-method.md)  
+    :::column-end:::
+:::row-end:::

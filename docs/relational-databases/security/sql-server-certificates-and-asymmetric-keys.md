@@ -14,12 +14,12 @@ ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f631e55edaacc56c5c8bae3aec3e374824857db4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0da744d41c2135038e14a8aef71e088df7ba851d
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001027"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332653"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>Сертификаты SQL Server и асимметричные ключи
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -68,9 +68,8 @@ ms.locfileid: "86001027"
 ## <a name="tools"></a>Инструменты  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] предоставляет средства и программы, которые создают сертификаты и файлы ключа для строгого имени. Эти средства обеспечивают более гибкий процесс создания ключа, чем синтаксис [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . С помощью этих средств можно создать ключи RSA большей длины, а затем импортировать их в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В следующей таблице показано, где найти эти средства.  
   
-|||  
-|-|-|  
-|Инструмент|Назначение|  
+| Инструмент | Назначение |
+| ---- | ------- |
 |[New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate)|Создает самозаверяющие сертификаты.|  
 |[makecert](/windows/desktop/SecCrypto/makecert)|Создает сертификаты. Вместо него рекомендуется использовать **New-SelfSignedCertificate**.|  
 |[sn](/dotnet/framework/tools/sn-exe-strong-name-tool)|Создает строгие имена для симметричных ключей.|  
