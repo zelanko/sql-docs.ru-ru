@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: e7a3c58612761e046b71cddf35c87680bb6e9528
-ms.sourcegitcommit: f66804e93cf4a7624bfa10168edbf1ed9a83cb86
+ms.openlocfilehash: fd6563881127b7a5c1cf134711a52fdedde629c4
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83868383"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435175"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Оценка предприятия и объединение оценки с помощью DMA
 
@@ -34,10 +34,10 @@ ms.locfileid: "83868383"
   - [.NET Framework](https://www.microsoft.com/download/details.aspx?id=30653) версии 4.5 или выше.
   - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17,0 или более поздней версии.
   - [Power BI Desktop](/power-bi/fundamentals/desktop-get-the-desktop).
-  - [Модули Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
+  - [Модули Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0).
 - Скачайте и извлеките:
-  - [Power BI шаблон отчетов DMA](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/2/PowerBI-Reports.zip).
-  - [Скрипт лоадварехаусе](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/1/LoadWarehouse1.zip).
+  - [Power BI шаблон отчетов DMA](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/2/PowerBI-Reports.zip).
+  - [Скрипт лоадварехаусе](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/3/LoadWarehouse1.zip).
 
 ## <a name="loading-the-powershell-modules"></a>Загрузка модулей PowerShell
 
@@ -46,7 +46,7 @@ ms.locfileid: "83868383"
 Чтобы загрузить модули, выполните следующие действия.
 
 1. Перейдите к папке C:\Program Филес\виндовсповершелл\модулес и создайте папку с именем **датамигратионассистант**.
-2. Откройте [модули PowerShell](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/4/PowerShell-Modules2.zip)и сохраните их в созданной папке.
+2. Откройте [модули PowerShell](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/1/PowerShell-Modules2.zip)и сохраните их в созданной папке.
 
       ![Модули PowerShell](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 
@@ -80,7 +80,6 @@ ms.locfileid: "83868383"
 >
 > Для экземпляров по умолчанию задайте для имени экземпляра значение MSSQLServer.
 
-
 При использовании CSV-файла для импорта данных убедитесь, что существует только два столбца: **имя экземпляра** данных и **имя базы данных**, а столбцы не содержат строк заголовка.
 
  ![Содержимое CSV-файла](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
@@ -97,7 +96,7 @@ ms.locfileid: "83868383"
 - имя_базы_данных
 - ассессментфлаг
 
-![SQL Server содержимого таблицы](../dma/media//dma-consolidatereports/dma-sql-server-table-contents.png)
+![SQL Server содержимого таблицы](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-database-inventory.png)
 
 Если эта база данных не находится на компьютере со средствами, убедитесь, что компьютер с инструментами имеет сетевое подключение к этому экземпляру SQL Server.
 
@@ -105,10 +104,21 @@ ms.locfileid: "83868383"
 
 Помните, что в зависимости от количества объектов и их сложности оценка может занять очень много времени (часы +), поэтому разумно разделить оценку на управляемые фрагменты.
 
+### <a name="if-using-an-instance-inventory"></a>При использовании инвентаризации экземпляра
+
+Создайте базу данных с именем **естатеинвентори** и таблицу с именем **инстанцеинвентори**. Таблица, содержащая эти данные инвентаризации, может содержать любое количество столбцов, если существует четыре столбца:
+
+- ServerName
+- InstanceName
+- Port
+- ассессментфлаг
+
+![SQL Server содержимого таблицы](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-instance-inventory.png)
+
 ## <a name="running-a-scaled-assessment"></a>Выполнение масштабируемой оценки
 
 После загрузки модулей PowerShell в каталог modules и создания инвентаризации необходимо выполнить масштабированную оценку, открыв PowerShell и выполнив функцию Дмадатаколлектор.
- 
+
   ![Списки функций Дмадатаколлектор](../dma/media//dma-consolidatereports/dma-dmaDataCollector-function-listing.png)
 
 Параметры, связанные с функцией Дмадатаколлектор, описаны в следующей таблице.
@@ -119,19 +129,20 @@ ms.locfileid: "83868383"
 |**ксвпас** | Путь к файлу инвентаризации CSV.  Используется, только если для **жетсерверлистфром** задано значение **CSV**. |
 |**Имя** | SQL Server имя экземпляра инвентаризации при использовании **SQLServer** в параметре **жетсерверлистфром** . |
 |**Имя** | База данных, в которой размещена таблица инвентаризации. |
+|**усеинстанцесонли** | Битовый флаг, указывающий, следует ли использовать список экземпляров для оценки.  Если задано значение 0, то для построения списка целевых объектов оценки будет использоваться таблица Датабасеинвентори. |
 |**AssessmentName** | Имя оценки DMA. |
-|**TargetPlatform** | Тип целевого объекта оценки, который требуется выполнить.  Возможные значения: **AzureSQLDatabase**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**, **SQLServerLinux2017**, **SQLServerWindows2017**и **манажедсклсервер**. |
+|**TargetPlatform** | Тип целевого объекта оценки, который требуется выполнить.  Возможные значения: **AzureSQLDatabase**, **манажедсклсервер**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**, **SQLServerLinux2017**, **SQLServerWindows2017**, **SqlServerWindows2019**и **SqlServerLinux2019**.  |
 |**AuthenticationMethod** | Метод проверки подлинности для подключения к SQL Server целям, которые необходимо оценить. Возможными значениями являются **SQLAuth** и **WindowsAuth**. |
 |**аутпутлокатион** | Каталог, в котором хранится выходной файл оценки JSON. В зависимости от числа оцениваемых баз данных и количества объектов в базах данных оценка может занять очень много времени. После завершения всех оценок файл будет записан. |
 
 Если возникает непредвиденная ошибка, то командное окно, инициированное этим процессом, будет прервано.  Проверьте журнал ошибок, чтобы определить причину сбоя.
- 
+
   ![Расположение журнала ошибок](../dma/media//dma-consolidatereports/dma-error-log-file-location.png)
 
 ## <a name="consuming-the-assessment-json-file"></a>Использование JSON – файла оценки
 
 После завершения оценки вы можете импортировать данные в SQL Server для анализа. Чтобы использовать JSON файла оценки, откройте PowerShell и выполните функцию Дмапроцессор.
- 
+
   ![список функций Дмапроцессор](../dma/media//dma-consolidatereports/dma-dmaProcessor-function-listing.png)
 
 Параметры, связанные с функцией Дмапроцессор, описаны в следующей таблице.
@@ -157,8 +168,8 @@ ms.locfileid: "83868383"
     Сценарий принимает данные из таблицы Репортдата в базе данных Дмарепортинг и загружает их в хранилище.  Если во время этого процесса загрузки возникнут ошибки, они, скорее всего, являются результатом отсутствия записей в таблицах измерений.
 
 2. Загрузите хранилище данных.
- 
-      ![Содержимое Лоадварехаусе Загружено](../dma/media//dma-consolidatereports/dma-LoadWarehouse-loaded.png)
+
+  ![Содержимое Лоадварехаусе Загружено](../dma/media//dma-consolidatereports/dma-load-warehouse-loaded.png)
 
 ## <a name="set-your-database-owners"></a>Настройка владельцев базы данных
 
@@ -166,7 +177,7 @@ ms.locfileid: "83868383"
 
 Можно также использовать сценарий Лоадварехаусе, чтобы предоставить основные инструкции TSQL для задания владельцев базы данных.
 
-  ![Владельцы параметров Лоадварехаусе](../dma/media//dma-consolidatereports/dma-LoadWarehouse-set-owners.png)
+  ![Владельцы параметров Лоадварехаусе](../dma/media//dma-consolidatereports/dma-load-warehouse-set-owners.png)
 
 ## <a name="dma-reports"></a>Отчеты DMA
 
@@ -250,7 +261,7 @@ ms.locfileid: "83868383"
 - НЕ ГОТОВО
 
 ### <a name="issues-word-cloud"></a>Проблемы с приложением Word Cloud
- 
+
   ![Проблемы DMA Вордклауд](../dma/media//dma-consolidatereports/dma-issues-word-cloud.png)
 
 Этот визуальный элемент показывает проблемы, которые в данный момент происходят в контексте выбора (все, экземпляр, база данных [кратность]). Чем больше это слово отображается на экране, тем больше число проблем в этой категории. При наведении указателя мыши на слово отображается число ошибок, возникающих в этой категории.
@@ -263,7 +274,7 @@ ms.locfileid: "83868383"
 
 - инстанцедатабасе
 - ChangeCategory
-- Заголовок
+- Название
 - ObjectType
 - импактедобжектнаме
 
@@ -280,7 +291,7 @@ ms.locfileid: "83868383"
   ![Отчет по плану исправления DMA](../dma/media//dma-consolidatereports/dma-remediation-plan-report.png)
 
 Отчет о плане исправления можно также использовать самостоятельно для создания пользовательского плана исправления с помощью фильтров в колонке **Фильтры визуализации** .
- 
+
   ![Параметры фильтра отчетов по плану исправления DMA](../dma/media//dma-consolidatereports/dma-remediation-plan-report-filter-options.png)
 
 ### <a name="script-disclaimer"></a>Заявление об отказе сценария
