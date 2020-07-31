@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 557bc2f2-135c-4e96-be5a-dfbdfd2ec932
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b1c2dd3c546b3a87a661ada98f7cc0ec9225d99c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 505b5a4b6a5528015acc1592bb63c91e13557a4d
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86911008"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442631"
 ---
 # <a name="endpoints-catalog-views-transact-sql"></a>Представления каталога конечных точек (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Этот раздел содержит следующие представления каталога.  
 
@@ -46,7 +46,7 @@ ms.locfileid: "86911008"
     :::column-end:::
 :::row-end:::
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Системные представления &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

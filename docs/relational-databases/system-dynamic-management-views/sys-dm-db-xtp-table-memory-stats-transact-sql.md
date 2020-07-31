@@ -21,15 +21,15 @@ ms.assetid: ad0efc06-3d9c-4861-9dfa-a7a87822d0c8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6ea40fa0a40e90b0ab31912bcda185cc21258b0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0fcac0218e78887aecb4d2ce7e6bbba4ebe24d0a
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830758"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442891"
 ---
 # <a name="sysdm_db_xtp_table_memory_stats-transact-sql"></a>sys.dm_db_xtp_table_memory_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Возвращает статистику использования памяти для каждой таблицы [!INCLUDE[hek_2](../../includes/hek-2-md.md)] (пользовательской и системной) в текущей базе данных. Системные таблицы содержат отрицательные идентификаторы объектов и используются для сохранения сведений времени выполнения для компонента [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. В отличие от пользовательских объектов, системные таблицы являются внутренними и существуют только в памяти, поэтому недоступны для просмотра через представления каталога. Системные таблицы используются для хранения такой информации, как метаданные для всех файлов данных и разностных файлов в хранилище, запросы слияния, конечные точки для разностных файлов с фильтрацией строк, удаленные таблицы и соответствующие сведения для резервного копирования и восстановления. Если компонент [!INCLUDE[hek_2](../../includes/hek-2-md.md)] может содержать до 8,192 пар файлов данных и разностных файлов, то для больших баз данных в памяти может потребоваться несколько МБ памяти для системных таблиц.  
   
@@ -212,7 +212,7 @@ used_memory_mb       target_memory_mb
 1356                 3845  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Оптимизированные для памяти динамические административные представления таблиц &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

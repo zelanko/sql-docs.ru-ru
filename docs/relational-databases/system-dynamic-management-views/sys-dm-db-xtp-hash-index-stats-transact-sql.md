@@ -20,15 +20,15 @@ ms.assetid: 45969884-cd61-48e8-aee5-c725c78e3e4c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 754c254a208adbb40a2efc44934bbcc40608ec85
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d27f44c0d0bcec96d6d4c0d5f4da63038485a1f7
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830802"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442556"
 ---
 # <a name="sysdm_db_xtp_hash_index_stats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Эти статистические данные могут быть полезными для понимания и настройки числа контейнеров. Их также можно использовать, чтобы определить наличие повторяющихся ключей индекса.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "82830802"
   
 Дополнительные сведения см. в статье [хэш-индексы для таблиц, оптимизированных для памяти](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
   
-|Имя столбца|Type|Описание|  
+|Имя столбца|Тип|Описание|  
 |-----------------|----------|-----------------|  
 |object_id|**int**|Идентификатор объекта родительской таблицы.|  
 |xtp_object_id|**bigint**|Идентификатор оптимизированной для памяти таблицы.|  
@@ -89,7 +89,7 @@ ms.locfileid: "82830802"
 
 Дополнительные сведения о том, как интерпретировать результаты этого запроса, см. в разделе [Устранение неполадок хэш-индексов для оптимизированных для памяти таблиц](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) .  
 
-### <a name="b-hash-index-statistics-for-internal-tables"></a>Б. Статистика хэш-индекса для внутренних таблиц
+### <a name="b-hash-index-statistics-for-internal-tables"></a>Б) Статистика хэш-индекса для внутренних таблиц
 
 Некоторые функции используют внутренние таблицы, использующие хэш-индексы, например индексы columnstore в таблицах, оптимизированных для памяти. Следующий запрос возвращает статистику для хэш-индексов во внутренних таблицах, связанных с пользовательскими таблицами.
 
@@ -124,7 +124,7 @@ ms.locfileid: "82830802"
   ) WITH (MEMORY_OPTIMIZED=ON)
 ```
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Оптимизированные для памяти динамические административные представления таблиц &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

@@ -20,15 +20,15 @@ ms.assetid: f7ab2eaf-e627-464d-91fe-0e170b3f37bc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2efcff0a713c4f7f59206b484c26c4c797cd343
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fbe9d8a69a9bbe788c082cf2d684e0dd6763b1e2
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830782"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442680"
 ---
 # <a name="sysdm_db_xtp_memory_consumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Сообщает о потребителях памяти уровня базы данных в компоненте Database Engine [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. Представление возвращает по строке для каждого потребителя памяти, используемого компонентом Database Engine. Используйте это динамическое административное представление, чтобы увидеть, как память распределяется между различными внутренними объектами.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "82830782"
 |memory_consumer_address|**varbinary**|Внутренний адрес потребителя памяти. Только для внутреннего использования.|  
 |xtp_object_id|**bigint**|Идентификатор объекта выполняющейся в памяти OLTP, соответствующий таблице, оптимизированной для памяти.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  На выходе выделения пространства на уровнях базы данных представляют собой пользовательские таблицы, индексы и системные таблицы. VARHEAP с object_id = NULL относится к памяти, выделенной для таблицы со столбцами переменной длины.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -123,7 +123,7 @@ total_allocated_MB   total_used_MB
 1358                 1191  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Оптимизированные для памяти динамические административные представления таблиц &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

@@ -20,15 +20,15 @@ ms.assetid: bbc9704e-158e-4d32-b693-f00dce31cd2f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fed687f9a0f29359e60c05439e36853504e1ab6b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8e0edb4d46ae47b4c45dc01f7d2e33f856424352
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830824"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442568"
 ---
 # <a name="sysdm_db_xtp_gc_cycle_stats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Выдает текущее состояние зафиксированных транзакций, которые удалили одну или несколько строк. Основной бездействующий поток сборки мусора запускается каждую минуту или при достижении определенного числа запущенных фиксированных транзакций DML с момента последнего цикла сборки мусора. В рамках цикла сборки мусора он перемещает зафиксированные транзакции в одну или несколько очередей, связанных с поколениями. Транзакции, которые сформировали устаревшие версии, группируются в блоки по 16 транзакций в 16 поколениях следующим образом.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "82830824"
  Дополнительные сведения см. в разделе [In-Memory OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
   
-|Имя столбца|Type|Описание|  
+|Имя столбца|Тип|Описание|  
 |-----------------|----------|-----------------|  
 |cycle_id|**bigint**|Уникальный идентификатор цикла сборки мусора.|  
 |ticks_at_cycle_start|**bigint**|Такты на момент начала цикла.|  
@@ -91,7 +91,7 @@ cycle_id   ticks_at_cycle_start ticks_at_cycle_end   base_generation  xacts_in_g
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Оптимизированные для памяти динамические административные представления таблиц &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

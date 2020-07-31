@@ -21,12 +21,12 @@ ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e1ebbe98efecd97cb7ddda6284d4a28176e8ec1
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7bceaef8321248bc29be2faad3886319a9267391
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112768"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472217"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,33 +55,33 @@ sys.dm_db_index_physical_stats (
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *database_id* | NULL | 0 | ПАРАМЕТРЫ  
+ *database_id* \| NULL \| 0 \| по умолчанию  
  Идентификатор базы данных. *database_id* имеет **smallint**. Допустимыми входными значениями являются идентификатор базы данных, NULL, 0 или DEFAULT. Значение по умолчанию равно 0. В данном контексте значения NULL, 0 и DEFAULT эквивалентны.  
   
  Укажите значение NULL, чтобы вернуть сведения для всех баз данных в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если для *database_id*указано значение null, необходимо также указать значение null для *object_id*, *index_id*и *partition_number*.  
   
  Может быть указана встроенная функция [DB_ID](../../t-sql/functions/db-id-transact-sql.md). Если функция DB_ID используется без указания имени базы данных, то уровень совместимости текущей базы данных должен быть равен 90 или выше.  
   
- *object_id* | NULL | 0 | ПАРАМЕТРЫ  
+ *object_id* \| NULL \| 0 \| по умолчанию  
  Идентификатор объекта таблицы или представления, имеющего индекс. *object_id* имеет тип **int**.  
   
  Допустимыми входными значениями являются идентификатор таблицы, NULL, 0 или DEFAULT. Значение по умолчанию равно 0. В данном контексте значения NULL, 0 и DEFAULT эквивалентны. В [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] допустимые входные данные также включают имя очереди компонента Service Broker или имя внутренней таблицы очереди. Когда применяются параметры по умолчанию (т. е. все объекты, все индексы и т. д.), сведения о фрагментации для всех очередей включаются в результирующий набор.  
   
  Укажите значение NULL, чтобы вернуть данные для всех таблиц и представлений в указанной базе данных. Если для *object_id*указано значение null, необходимо также указать значение null для *index_id* и *partition_number*.  
   
- *index_id* | 0 | NULL | -1 | ПАРАМЕТРЫ  
+ *index_id* \| 0 \| null \| -1 \| по умолчанию  
  Идентификатор индекса. *index_id* имеет **тип int**. Допустимые входные данные — это ИДЕНТИФИКАЦИОНный номер индекса, 0, если *object_id* является КУЧЕЙ, null,-1 или ЗНАЧЕНИЕМ по умолчанию. Значение по умолчанию — -1. Значения NULL,-1 и DEFAULT являются эквивалентными значениями в этом контексте.  
   
  Укажите значение NULL, чтобы вернуть данные для всех индексов базовой таблицы или представления. Если для *index_id*указано значение null, необходимо также указать значение null для *partition_number*.  
   
- *partition_number* | NULL | 0 | ПАРАМЕТРЫ  
+ *partition_number* \| NULL \| 0 \| по умолчанию  
  Номер секции в объекте. *partition_number* имеет **тип int**. Допустимыми входными значениями являются *partion_number* индекса, КУЧИ, null, 0 или Default. Значение по умолчанию равно 0. В данном контексте значения NULL, 0 и DEFAULT эквивалентны.  
   
  Чтобы получить сведения обо всех секциях объекта, укажите значение NULL.  
   
  *partition_number* , основанный на 1. Несекционированный индекс или куча имеет *partition_number* значение 1.  
   
- *режим* | NULL | ПАРАМЕТРЫ  
+ *режим* \| NULL \| по умолчанию  
  Имя режима. *режим* задает уровень сканирования, используемый для получения статистики. *режим* имеет тип **sysname**. Допустимыми входными данными являются значения DEFAULT, NULL, LIMITED, SAMPLED и DETAILED. Значение по умолчанию (NULL) соответствует значению LIMITED.  
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
@@ -183,7 +183,7 @@ GO
   
  **Логическая фрагментация**  
   
- Это процент неупорядоченных страниц конечного уровня индекса. Неупорядоченной называется страница, для которой следующая физическая страница, выделенная для индекса, не является страницей, на которую ссылается указатель следующей страницы** в текущей конечной странице.  
+ Это процент неупорядоченных страниц конечного уровня индекса. Неупорядоченной называется страница, для которой следующая физическая страница, выделенная для индекса, не является страницей, на которую ссылается указатель следующей страниц*ы* в текущей конечной странице.  
   
  **Фрагментация экстентов**  
   
@@ -270,7 +270,7 @@ GO
   
 ```  
   
-### <a name="b-returning-information-about-a-heap"></a>Б. Возврат сведений о куче  
+### <a name="b-returning-information-about-a-heap"></a>Б) Возврат сведений о куче  
  В следующем примере возвращается вся статистика для кучи `dbo.DatabaseLog` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Так как таблица содержит данные типа LOB, кроме строки, возвращаемой для единицы распределения `LOB_DATA`, хранящей страницы данных кучи, возвращается строка для единицы распределения `IN_ROW_ALLOCATION_UNIT`. Для выполнения этого запроса необходимо по крайней мере разрешение CONTROL на таблицу `dbo.DatabaseLog`.  
   
 ```  
@@ -429,7 +429,7 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции, связанные с индексами &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys. dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   

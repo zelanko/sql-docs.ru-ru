@@ -1,6 +1,6 @@
 ---
 title: Советы и рекомендации по работе с Data Migration Assistant
-description: Ознакомьтесь с рекомендациями по переносу баз данных SQL Server с помощью Помощник по миграции данных
+description: Ознакомьтесь с рекомендациями по переносу баз данных SQL Server с Помощник по миграции данных, включая сведения об установке, оценке и миграции.
 ms.custom: seo-lt-2019
 ms.date: 03/12/2019
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: fbfc995b3271c9618cd773d42d3e8154958d6af5
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 1d9dc4c4030330e7065d6f8531af967dcf88baa3
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886051"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472370"
 ---
-# <a name="best-practices-for-running-data-migration-assistant"></a>Рекомендации по запуску Помощника по миграции данных
+# <a name="best-practices-for-running-data-migration-assistant"></a>Рекомендации по работе с Помощником по миграции данных
 В этой статье содержатся рекомендации по установке, оценке и миграции.
 
 ## <a name="installation"></a>Установка

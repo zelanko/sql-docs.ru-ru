@@ -20,15 +20,15 @@ ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b8a060195e5fba5ae5e97e2ded6afb51c1636687
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8efc79ed772d92986af87a707cf64f4c0f9cbdcf
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82812076"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442547"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Контролирует ход выполнения запросов в реальном времени. Например, используйте данное динамическое административное представление для определения, какая часть запроса выполняется медленно.  Это динамическое административное представление можно объединять с другими за счет столбцов, определенных в поле описания. Или объедините данное динамическое административное представление с другими счетчиками производительности (такими как Системный Монитор, xperf), используя столбцы меток времени.   
   
@@ -83,7 +83,7 @@ ms.locfileid: "82812076"
   
 -   Если есть параллельное сканирование, данное динамическое административное представление выдает счетчики для каждого из параллельных потоков, выполняющих сканирование.
  
-Начиная с с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пакетом обновления 1 (SP1) *Стандартная инфраструктура профилирования статистики выполнения запросов* существует параллельно с *инфраструктурой профилирования статистики выполнения упрощенных запросов*. `SET STATISTICS XML ON`и `SET STATISTICS PROFILE ON` всегда используйте *стандартную инфраструктуру профилирования статистики выполнения запросов*. Для `sys.dm_exec_query_profiles` заполнения необходимо включить одну из инфраструктур профилирования запросов. Дополнительные сведения см. в разделе [инфраструктура профилирования запросов](../../relational-databases/performance/query-profiling-infrastructure.md).    
+Начиная с с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пакетом обновления 1 (SP1) *Стандартная инфраструктура профилирования статистики выполнения запросов* существует параллельно с *инфраструктурой профилирования статистики выполнения упрощенных запросов*. `SET STATISTICS XML ON`и `SET STATISTICS PROFILE ON` всегда используйте *стандартную инфраструктуру профилирования статистики выполнения запросов*. Для `sys.dm_exec_query_profiles` заполнения необходимо включить одну из инфраструктур профилирования запросов. Дополнительные сведения см. в разделе [Инфраструктура профилирования запросов](../../relational-databases/performance/query-profiling-infrastructure.md).    
 
 >[!NOTE]
 > Запрос в процессе расследования должен начаться **после** включения инфраструктуры профилирования запросов, после того как запрос не будет давать результаты в `sys.dm_exec_query_profiles` . Дополнительные сведения о том, как включить инфраструктуру профилирования запросов, см. в разделе [инфраструктура профилирования запросов](../../relational-databases/performance/query-profiling-infrastructure.md).
@@ -123,7 +123,7 @@ GROUP BY node_id,physical_operator_name
 ORDER BY node_id;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+## <a name="see-also"></a>См. также:  
+ [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции, связанные с выполнением (Transact-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
  

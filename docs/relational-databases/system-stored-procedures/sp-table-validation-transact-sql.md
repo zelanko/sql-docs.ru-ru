@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c63e6e535aed72684e56d5f578e52e065f8190d2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 37e03d7552f1297fe4410d68e69bdc15ddeb47ed
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834234"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442422"
 ---
 # <a name="sp_table_validation-transact-sql"></a>sp_table_validation (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Либо возвращает количество строк или сведения о контрольной сумме для таблицы или индексированного представления, либо сравнивает заданное количество строк или сведения о контрольной сумме с заданной таблицей или индексированным представлением. Эта хранимая процедура выполняется на издателе в базе данных публикации и на подписчике в базе данных подписки. *Не поддерживается для издателей Oracle*.  
   
@@ -80,7 +80,7 @@ sp_table_validation [ @table = ] 'table'
   
  Если проверка достоверности по количеству строк и ожидаемый номер строки равны числу в таблице, **sp_table_validation** возвращает сообщение о том, что таблица прошла проверку достоверности по количеству строк. В противном случае будет выведено сообщение о том, что таблица может быть не синхронизирована, и отчет, показывающий разницу между ожидаемым и реальным числом строк.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  **sp_table_validation** используется во всех типах репликации. **sp_table_validation** не поддерживается для издателей Oracle.  
   
  Контрольная сумма выполняет 32-разрядную циклическую проверку избыточности (CRC) всего образа строки на странице. Она не производит выборочной проверки столбцов и не выполняет операций над представлением или вертикальной секцией таблицы. Кроме того, контрольная сумма пропускает содержимое столбцов **Text** и **Image** (по структуре).  
@@ -92,7 +92,7 @@ sp_table_validation [ @table = ] 'table'
 ## <a name="permissions"></a>Разрешения  
  Для выполнения **sp_table_validation**необходимо иметь разрешения SELECT на проверяемую таблицу.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [КОНТРОЛЬная сумма &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)   
  [@@ROWCOUNT (Transact-SQL)](../../t-sql/functions/rowcount-transact-sql.md)   
  [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e92304ae-f920-4b28-8f63-6324973ba359
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ba9b2512e664e4078ea4861f7324a7fff8451f8c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2f4dc329a5872e8c34d1cd302d75c41aa8ba23e1
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86899205"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442702"
 ---
 # <a name="xml-schemas-xml-type-system-catalog-views-transact-sql"></a>Представления каталога XML-схем (системы типов XML) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Этот раздел содержит следующие представления каталога.  
 
@@ -62,7 +62,7 @@ ms.locfileid: "86899205"
     :::column-end:::
 :::row-end:::
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Системные представления &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
