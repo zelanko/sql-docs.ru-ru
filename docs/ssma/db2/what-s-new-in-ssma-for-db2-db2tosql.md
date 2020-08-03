@@ -4,21 +4,29 @@ description: Узнайте об изменениях в Помощник по �
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/2/2020
+ms.date: 7/31/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 ms.author: alexiva
-ms.openlocfilehash: c35b67bebc63c47750b856d5a2ec2d45666c90b8
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c9a6d0b5eee611de7009247484dbb9b7591982d5
+ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003874"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87477256"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>Новые возможности SSMA для DB2 (DB2ToSQL)
 
 В этой статье перечислены Помощник по миграции SQL Server (SSMA) для изменений DB2 в каждом выпуске.
+
+## <a name="ssma-v812"></a>SSMA v 8.12
+
+Выпуск 8.12 версии SSMA для DB2 содержит следующие изменения:
+
+* Преобразование `STRIP` функции
+* Улучшенный анализ параметров процедур
 
 ## <a name="ssma-v811"></a>SSMA v 8.11
 

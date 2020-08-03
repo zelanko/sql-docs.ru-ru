@@ -4,21 +4,26 @@ description: Узнайте об изменениях в Помощник по �
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/2/2020
+ms.date: 7/31/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 ms.author: alexiva
-ms.openlocfilehash: 10ac2af79db21b9320c3ef180a64de8c2a13b29f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 53ae61f78bed3ee262844f5242f3499d8981501b
+ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007851"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87477326"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>Новые возможности SSMA для SAP ASE (SybaseToSQL)
 
 В этой статье перечислены Помощник по миграции SQL Server (SSMA) для SAP ASE (ранее SSMA для Sybase) изменений в каждом выпуске.
+
+## <a name="ssma-v812"></a>SSMA v 8.12
+
+Выпуск v 8.12 SSMA для SAP ASE содержит небольшие улучшения производительности и исправления ошибок.
 
 ## <a name="ssma-v811"></a>SSMA v 8.11
 
@@ -335,6 +340,6 @@ ms.locfileid: "86007851"
 
 Первый выпуск SSMA для СУБД Sybase был в июле 2006 г.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Начало работы с SSMA для Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)
