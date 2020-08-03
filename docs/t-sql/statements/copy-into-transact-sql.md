@@ -18,16 +18,16 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 5d2b3040c53c2bbffb6fd073fa9f385f78e28798
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 6d18996610899fd348b179495ab78af2e2717f83
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091678"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396013"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (предварительная версия)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 В этой статье содержатся сведения об использовании инструкции COPY в хранилище данных SQL Azure для загрузки данных из внешних учетных записей хранения. Инструкция COPY обеспечивает наибольшую гибкость приема данных с высокой скоростью передачи в хранилище данных SQL. COPY предоставляет следующие возможности:
 
@@ -217,7 +217,7 @@ WITH
 *MAXERRORS = max_errors*</br>
 *MAXERRORS* указывает максимальное число отклоненных строк, допустимых в загрузке, прежде чем операция COPY будет отменена. Каждая строка, импорт которой не может быть выполнен операцией COPY, пропускается и считается за одну ошибку. Если аргумент max_errors не указан, значение по умолчанию равно 0.
 
-*COMPRESSION = { 'DefaultCodec '| "Snappy" | "GZIP" | "NONE"}*</br>
+*COMPRESSION = { 'DefaultCodec '\| ’Snappy’ \| ‘GZIP’ \| ‘NONE’}*</br>
 *COMPRESSION* является необязательным и задает метод сжатия данных для внешних данных.
 
 - CSV-файлы поддерживают GZIP.
@@ -250,7 +250,7 @@ ROW TERMINATOR = "row_terminator"</br>
 *FIRSTROW  = First_row_int*</br>
 *FIRSTROW* применяется к CSV-файлам и указывает номер строки, которая считывается первой во всех файлах для команды COPY. Значения начинаются с 1. 1 — значение по умолчанию. Если задано значение 2, первая строка в каждом файле (строка заголовка) при загрузке данных пропускается. Строки пропускаются по признакам конца строк.
 
-*DATEFORMAT = { "mdy" | "dmy" | "ymd" | "ydm" | "myd" | "dym" }*</br>
+*DATEFORMAT = { ‘mdy’ \| ‘dmy’ \| ‘ymd’ \| ‘ydm’ \| ‘myd’ \| ‘dym’ }*</br>
 DATEFORMAT применяется только к CSV-файлам и задает формат даты для сопоставления с форматами дат SQL Server. Обзор всех типов данных и функций даты и времени в языке Transact-SQL см. в статье [Типы данных и функции даты и времени (Transact-SQL)](../functions/date-and-time-data-types-and-functions-transact-sql.md?view=sql-server-ver15). Параметр DATEFORMAT в команде COPY имеет более высокий приоритет, чем [параметр DATEFORMAT, настроенный на уровне сеанса](set-dateformat-transact-sql.md?view=sql-server-ver15).
 
 *ENCODING = "UTF8" | "UTF16"*</br>

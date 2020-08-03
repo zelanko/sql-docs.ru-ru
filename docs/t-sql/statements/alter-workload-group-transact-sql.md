@@ -18,12 +18,12 @@ ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: 575394e11a9d1d0addba6fa6e1eaa7a24479a69f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 51c6e9f7278025614c314ae873e6a484be4f7c4b
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111228"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332243"
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 
@@ -126,7 +126,7 @@ REQUEST_MIN_RESOURCE_GRANT_PERCENT = value
 REQUEST_MAX_RESOURCE_GRANT_PERCENT = value  
 Значение value должно представлять собой десятичное число, превышающее значение request_min_resource_grant_percent.
 
-IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }  
+IMPORTANCE = { LOW \|  BELOW_NORMAL \| NORMAL \| ABOVE_NORMAL \| HIGH }  
 Изменяет уровень важности запроса по умолчанию в группе рабочей нагрузки.
 
 QUERY_EXECUTION_TIMEOUT_SEC = value  

@@ -1,6 +1,6 @@
 ---
 title: Краткое руководство. Подключение и отправка запроса PostgreSQL
-description: В этом кратком руководстве показано, как использовать Azure Data Studio для подключения к PostgreSQL и выполнения запроса.
+description: Выполните краткое руководство, в котором вы используете Azure Data Studio для подключения к PostgreSQL, а затем с помощью инструкций SQL создадите базу данных и отправите к ней запрос.
 ms.custom: seodec18
 ms.date: 09/18/2019
 ms.prod: azure-data-studio
@@ -9,16 +9,16 @@ ms.reviewer: alayu, maghan, sstein
 ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
-ms.openlocfilehash: f429848636de075e64ebaf6f74bc69f7faef5359
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e2ba0f0123faeacd0f431a72ef35add40ee48e19
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717156"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411310"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-postgresql"></a>Краткое руководство. Использование Azure Data Studio для подключения и запросов к PostgreSQL
 
-В этом кратком руководстве показано, как использовать Azure Data Studio для подключения к Postgres и как с помощью инструкций SQL создать базу данных *tutorialdb* и выполнять к ней запросы.
+В этом кратком руководстве показано, как использовать Azure Data Studio для подключения к PostgreSQL и как с помощью инструкций SQL создать базу данных *tutorialdb* и выполнять к ней запросы.
 
 ## <a name="prerequisites"></a>Предварительные требования
 

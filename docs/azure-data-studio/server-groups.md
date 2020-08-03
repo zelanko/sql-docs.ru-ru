@@ -1,6 +1,6 @@
 ---
 title: Группы серверов
-description: Сведения о группах серверов в Azure Data Studio
+description: Узнайте, как сгруппировать серверы и базы данных в группы серверов и назначить группам цветовые коды. Вы можете перетаскивать серверы в соответствующие группы.
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: dfdc9f3c80b61d65d164b8328122a4785b37ba54
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e2936b06376ff130f7bc4e8f3402850c6b2afbef
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758389"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411220"
 ---
 # <a name="server-groups-in-azure-data-studio"></a>Группы серверов в Azure Data Studio
 

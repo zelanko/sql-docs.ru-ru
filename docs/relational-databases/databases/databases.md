@@ -16,12 +16,12 @@ ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 85c45ef2facc4a477c0851c2f2e89a7960eda001
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4d69fbd48f7d7f713d9a10806c65c144fff84d6d
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85630768"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87361604"
 ---
 # <a name="databases"></a>Базы данных
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,28 +40,43 @@ ms.locfileid: "85630768"
  Большинство пользователей, работающих с базами данных, используют средство [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Средство [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] предоставляет графический пользовательский интерфейс для создания баз данных и их объектов. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] также содержит редактор запросов, позволяющий взаимодействовать с базами данных при написании инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] можно установить с установочного диска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или загрузить с MSDN. Дополнительные сведения о [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] см. [здесь](../../ssms/sql-server-management-studio-ssms.md).
   
 ## <a name="in-this-section"></a>в этом разделе  
-  
-|||  
-|-|-|  
-|[Системные базы данных](../../relational-databases/databases/system-databases.md)|[Удаление файлов данных или журналов из базы данных](../../relational-databases/databases/delete-data-or-log-files-from-a-database.md)|  
-|[Автономные базы данных](../../relational-databases/databases/contained-databases.md)|[Отображение сведений о месте на диске, занимаемом данными и журналами базы данных](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)|  
-|[Файлы данных SQL Server в Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)|[Увеличение размера базы данных](../../relational-databases/databases/increase-the-size-of-a-database.md)|  
-|[Файлы и файловые группы базы данных](../../relational-databases/databases/database-files-and-filegroups.md)|[Переименование базы данных](../../relational-databases/databases/rename-a-database.md)|  
-|[Состояния базы данных](../../relational-databases/databases/database-states.md)|[Установка однопользовательского режима базы данных](../../relational-databases/databases/set-a-database-to-single-user-mode.md)|  
-|[Состояния файлов](../../relational-databases/databases/file-states.md)|[Сжатие базы данных](../../relational-databases/databases/shrink-a-database.md)|  
-|[Оценка размера базы данных](../../relational-databases/databases/estimate-the-size-of-a-database.md)|[Сжатие файла](../../relational-databases/databases/shrink-a-file.md)|  
-|[Копирование баз данных на другие серверы](../../relational-databases/databases/copy-databases-to-other-servers.md)|[Просмотр или изменение свойств базы данных](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)|  
-|[Присоединение и отсоединение базы данных (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)|[Просмотр списка баз данных в экземпляре SQL Server](../../relational-databases/databases/view-a-list-of-databases-on-an-instance-of-sql-server.md)|  
-|[Добавление файлов данных или журналов в базу данных](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)|[Просмотр или изменение уровня совместимости базы данных](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)|  
-|[Изменение настроек конфигурации базы данных](../../relational-databases/databases/change-the-configuration-settings-for-a-database.md)|[Использование мастера планов обслуживания](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)|  
-|[Создание базы данных](../../relational-databases/databases/create-a-database.md)|[Создание псевдонима для пользовательского типа данных](../../relational-databases/databases/create-a-user-defined-data-type-alias.md)|  
-|[Удаление базы данных](../../relational-databases/databases/delete-a-database.md)|[Моментальные снимки базы данных (SQL Server)](../../relational-databases/databases/database-snapshots-sql-server.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Системные базы данных](../../relational-databases/databases/system-databases.md)  
+        [Автономные базы данных](../../relational-databases/databases/contained-databases.md)  
+        [Файлы данных SQL Server в Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  
+        [Файлы и файловые группы базы данных](../../relational-databases/databases/database-files-and-filegroups.md)  
+        [Состояния базы данных](../../relational-databases/databases/database-states.md)  
+        [Состояния файлов](../../relational-databases/databases/file-states.md)  
+        [Оценка размера базы данных](../../relational-databases/databases/estimate-the-size-of-a-database.md)  
+        [Копирование баз данных на другие серверы](../../relational-databases/databases/copy-databases-to-other-servers.md)  
+        [Присоединение и отсоединение базы данных (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
+        [Добавление файлов данных или журналов в базу данных](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
+        [Изменение настроек конфигурации базы данных](../../relational-databases/databases/change-the-configuration-settings-for-a-database.md)  
+        [Создание базы данных](../../relational-databases/databases/create-a-database.md)  
+        [Удаление базы данных](../../relational-databases/databases/delete-a-database.md)  
+    :::column-end:::
+    :::column:::
+        [Удаление файлов данных или журнала из базы данных](../../relational-databases/databases/delete-data-or-log-files-from-a-database.md)  
+        [Отображение сведений о месте на диске, занимаемом данными и журналами базы данных](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)  
+        [Увеличение размера базы данных](../../relational-databases/databases/increase-the-size-of-a-database.md)  
+        [Переименование базы данных](../../relational-databases/databases/rename-a-database.md)  
+        [Установка однопользовательского режима базы данных](../../relational-databases/databases/set-a-database-to-single-user-mode.md)  
+        [Сжатие базы данных](../../relational-databases/databases/shrink-a-database.md)  
+        [Сжатие файла](../../relational-databases/databases/shrink-a-file.md)  
+        [Просмотр или изменение свойств базы данных](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)  
+        [Просмотр списка баз данных в экземпляре SQL Server](../../relational-databases/databases/view-a-list-of-databases-on-an-instance-of-sql-server.md)  
+        [Просмотр или изменение уровня совместимости базы данных](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)  
+        [Использование мастера планов обслуживания](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)  
+        [Создание псевдонима определяемого пользователем типа данных](../../relational-databases/databases/create-a-user-defined-data-type-alias.md)  
+        [Моментальные снимки базы данных (SQL Server)](../../relational-databases/databases/database-snapshots-sql-server.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="related-content"></a>См. также  
  [Индексы](../../relational-databases/indexes/indexes.md)  
   
  [Представления](../../relational-databases/views/views.md)  
   
  [Хранимые процедуры (компонент Database Engine)](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)  
-  
-  

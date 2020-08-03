@@ -1,5 +1,6 @@
 ---
 title: Хранимые процедуры (ядро СУБД) | Документация Майкрософт
+description: Узнайте, что хранимая процедура в SQL Server представляет собой группу из одного или нескольких операторов Transact-SQL или ссылку на метод среды CLR .NET Framework.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 73243b7be6587b1e811ac040c5977207748b3889
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 68fbf67a8ff58c4f768c56a84e45c11fd4480c05
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003102"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332233"
 ---
 # <a name="stored-procedures-database-engine"></a>Хранимые процедуры (компонент Database Engine)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -79,9 +80,8 @@ ms.locfileid: "86003102"
   
 ## <a name="related-tasks"></a>Связанные задачи  
   
-|||  
-|-|-|  
-|**Описание задачи**|**Раздел**|  
+| Описание задачи | Раздел |
+| ---------------- | ----- |
 |Описывает создание хранимой процедуры.|[Создание хранимой процедуры](../../relational-databases/stored-procedures/create-a-stored-procedure.md)|  
 |Описывает изменение хранимой процедуры.|[Изменение хранимой процедуры](../../relational-databases/stored-procedures/modify-a-stored-procedure.md)|  
 |Описывает удаление хранимой процедуры.|[Удаление хранимой процедуры](../../relational-databases/stored-procedures/delete-a-stored-procedure.md)|  

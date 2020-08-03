@@ -2,19 +2,19 @@
 title: Настройка групп доступности и экземпляров отказоустойчивого кластера с несколькими подсетями (Linux)
 description: Узнайте, как настроить группы доступности Always On и экземпляры отказоустойчивого кластера в конфигурации с несколькими подсетями для SQL Server на Linux.
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: vanto
-ms.date: 12/01/2017
+author: liweiSecurity
+ms.author: liweiyin
+ms.reviewer: VanMSFT
+ms.date: 07/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 3a18e668d1a62a74396530e37243d75a5a86aee2
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 5abe1d99f753e0f41ca74a0864079293800dc1df
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196972"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362997"
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>Настройка групп доступности Always On и экземпляров отказоустойчивого кластера для конфигураций с несколькими подсетями
 
@@ -57,28 +57,42 @@ ms.locfileid: "86196972"
 2. Измените созданный файл. Найдите раздел `<resources>`. Обратите внимание на различные группы ресурсов, которые были созданы для группы доступности Always On или экземпляра отказоустойчивого кластера. Найдите ресурс, связанный с IP-адресом. Добавьте раздел `<instance attributes>` со сведениями о втором IP-адресе непосредственно перед существующим или после него, но до раздела `<operations>`. Синтаксис будет выглядеть примерно так:
 
     ```xml
-    <instance attributes id="<NameForAttribute>" score="<Score>">
-        <rule id="<RuleName>" score="INFINITY">
-            <expression id="<ExpressionName>" attribute="\#uname" operation="eq" value="<NodeNameInSubnet2>" />
-        </rule>
-        <nvpair id="<NameForSecondIP>" name="ip" value="<IPAddress>"/>
-        <nvpair id="<NameForSecondIPNetmask>" name="cidr\_netmask" value="<Netmask>"/>
+    <instance attributes id="<NameForAttribute>">
+        <nvpair id="<NameForIP>" name="ip" value="<IPAddress>"/>
     </instance attributes>
     ```
     
-    Здесь *NameForAttribute* — это уникальное имя атрибута, *Score* — связанное с атрибутом значение, которое должно быть больше значения основной подсети, *RuleName* — имя правила, *ExpressionName* — имя выражения, *NodeNameInSubnet2* — это имя узла в другой подсети, *NameForSecondIP* — имя, связанное со вторым IP-адресом, *IPAddress* — IP-адрес второй подсети, *NameForSecondIPNetmask* — имя, связанное с маской сети, а *Netmask* — это маска второй подсети.
+    где *NameForAttribute* — это уникальное имя атрибута, *NameForIP* — это имя, связанное с IP-адресом, а *IPAddress* — это IP-адрес второй подсети.
     
     Ниже приводится пример.
     
     ```xml
-    <instance attributes id="Node3-2nd-IP" score="2">
-        <rule id="Subnet2-IP" score="INFINITY">
-            <expression id="Subnet2-Node" attribute="\#uname" operation="eq" value="Node3" />
-        </rule>
-        <nvpair id="IP-In-Subnet-2" name="ip" value="192.168.2.102"/>
-        <nvpair id="Netmask-For-IP2" name="cidr\_netmask" value="24" />
+    <instance attributes id="virtualip-instance_attributes">
+        <nvpair id="virtualip-instance_attributes-ip" name="ip" value="192.168.1.102"/>
     </instance attributes>
     ```
+    
+    По умолчанию в экспортированном XML-файле базы информации о кластере есть только один <instance/>. Предположим, у вас есть две подсети и вам нужны две записи <instance/>.
+    Ниже приведен пример записей для двух подсетей
+    
+    ```xml
+    <instance attributes id="virtualip-instance_attributes1">
+        <rule id="Subnet1-IP" score="INFINITY" boolean-op="or">
+            <expression id="Subnet1-Node1" attribute="#uname" operation="eq" value="Node1" />
+            <expression id="Subnet1-Node2" attribute="#uname" operation="eq" value="Node2" />
+        </rule>
+        <nvpair id="IP-In-Subnet1" name="ip" value="192.168.1.102"/>
+    </instance attributes>
+    <instance attributes id="virtualip-instance_attributes2">
+        <rule id="Subnet2-IP" score="INFINITY">
+            <expression id="Subnet2-Node1" attribute="#uname" operation="eq" value="Node3" />
+        </rule>
+        <nvpair id="IP-In-Subnet2" name="ip" value="192.168.2.102"/>
+    </instance attributes>
+    ```
+   
+   Выражение boolean-op="or" используется, если у подсети более одного сервера.
+
 
 3. Импорт измененной базы информации о кластере и изменение настройки Pacemaker.
 
@@ -99,6 +113,11 @@ ms.locfileid: "86196972"
 ### <a name="check-and-verify-failover"></a>Проверка изменений и отработки отказа
 
 1. После успешного применения базы информации о кластере с обновленной конфигурацией проверьте связь с DNS-именем, которое связано с ресурсом IP-адреса в Pacemaker. Он должен отражать IP-адрес, связанный с подсетью, в которой в данный момент размещаются группа доступности Always On или экземпляр отказоустойчивого кластера.
+
 2. Выполните отработку отказа группы доступности Always On или экземпляра отказоустойчивого кластера в другой подсети.
+
 3. После полного подключения группы доступности Always On или экземпляра отказоустойчивого кластера проверьте связь с DNS-именем, которое связано с IP-адресом. Он должен отражать IP-адрес во второй подсети.
+
 4. При необходимости выполните отработку отказа группы доступности Always On или экземпляра отказоустойчивого кластера в исходной подсети.
+
+Ниже приведена запись CSS, в которой показано, как настроить базу информации о кластере для трех подсетей. Дополнительные сведения см.: [Настройка группы доступности Always On с несколькими подсетями путем изменения базы информации о кластере](https://techcommunity.microsoft.com/t5/sql-server-support/configure-multiple-subnet-alwayson-availability-groups-by/ba-p/1544838).

@@ -19,15 +19,15 @@ ms.assetid: b545413d-c4f7-4c8e-8617-607599a26680
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 00ed86cdfd3002bc44c7a20c49c96663f6206417
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f1718a85927fa4b443576ab7835298db9f59178d
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82803916"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394257"
 ---
 # <a name="percentile_disc-transact-sql"></a>PERCENTILE_DISC (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Вычисляет определенный процентиль для отсортированных значений из всего набора строк или в пределах определенных секций набора строк в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для данного значения процентиля *P* функция PERCENTILE_DISC сортирует значения выражения в предложении ORDER BY. Затем она возвращает значение с наименьшим заданным значением CUME_DIST, которое (по отношению к той же спецификации сортировки), больше или равно *P*. Например, функция PERCENTILE_DISC (0.5) вычислит 50-й процентиль (то есть медиану) выражения. Функция PERCENTILE_DISC вычисляет процентиль на основе дискретного распределения значений столбца. Результат вычисления равен определенному значению из столбца.  
   
@@ -40,7 +40,9 @@ PERCENTILE_DISC ( numeric_literal ) WITHIN GROUP ( ORDER BY order_by_expression 
     OVER ( [ <partition_by_clause> ] )  
 ```  
   
-## <a name="arguments"></a>Аргументы  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Аргументы
  *literal*  
  Процентиль, который необходимо вычислить. Значение должно находиться в диапазоне от 0.0 до 1,0.  
   
@@ -48,7 +50,7 @@ PERCENTILE_DISC ( numeric_literal ) WITHIN GROUP ( ORDER BY order_by_expression 
  Указывает список значений, который следует отсортировать и по которому будет вычисляться процентиль. Разрешен только один аргумент *order_by_expression*. По умолчанию задан порядок сортировки по возрастанию. Список значений может быть любого из типов данных, которые допустимы для операции сортировки.  
   
  OVER **(** \<partition_by_clause>)**  
- Разделяет результирующий набор предложения FROM на секции, к которым применяется функция вычисления процентиля. Дополнительные сведения см. в статье [Предложение OVER (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md). В функции PERCENTILE_DISC нельзя указывать \<предложение ORDER BY>, а также \<строки или предложение диапазона>.  
+ Разделяет результирующий набор предложения FROM на секции, к которым применяется функция вычисления процентиля. Дополнительные сведения см. в статье [Предложение OVER (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md). В функции PERCENTILE_DISC нельзя указать \<ORDER BY clause> и \<rows or range clause>.  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемого значения определяется типом *order_by_expression*.  

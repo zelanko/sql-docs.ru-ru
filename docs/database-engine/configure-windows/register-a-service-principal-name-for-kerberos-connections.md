@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b56afed2447f21f6595bec39873d4298b4762027
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4618c69eb24901580118a6fc6b4119689f1e9663
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85651745"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362677"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Регистрация имени участника-службы для соединений Kerberos
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -94,9 +94,9 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
     > [!NOTE]
     > Новый формат имени участника-службы не требует наличия номера порта. В результате этого серверы с несколькими портами и протоколы, не использующие номера портов, смогут использовать проверку подлинности Kerberos.  
    
-|||  
+|Форматы имени субъекта-службы|Описание|  
 |-|-|  
-|MSSQLSvc/\<FQDN>:<port>|Сформированное поставщиком имя участника-службы для экземпляра по умолчанию, когда используется протокол TCP. \<port> — номер порта TCP.|  
+|MSSQLSvc/\<FQDN>:\<port>|Сформированное поставщиком имя участника-службы для экземпляра по умолчанию, когда используется протокол TCP. \<port> — номер порта TCP.|  
 |MSSQLSvc/\<FQDN>|Сформированное поставщиком имя участника-службы для экземпляра по умолчанию, когда используется протокол, отличный от TCP. \<FQDN> — полное имя домена.|  
 |MSSQLSvc/\<FQDN>:\<instancename>|Сформированное поставщиком имя участника-службы (по умолчанию) для именованного экземпляра, когда используется протокол, отличный от TCP. \<instancename> — имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 

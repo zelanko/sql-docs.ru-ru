@@ -1,6 +1,6 @@
 ---
 title: Вопросы и ответы по Azure Data Studio
-description: Вопросы и ответы, связанные с Azure Data Studio.
+description: Получите ответы на часто задаваемые вопросы об Azure Data Studio, например, о функциях, сценариях применения и стоимости.
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: dfcab918073fedd80def91d3556e15f632a62edc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 123618a84b07aa2215a2666f9d427f669247c5d7
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774616"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411100"
 ---
 # <a name="azure-data-studio-faq"></a>Вопросы и ответы по Azure Data Studio
 
@@ -80,14 +80,14 @@ Azure Data Studio предлагает оптимизированную сред
 
 |Компонент|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Вход в Azure|Да|Да|
+|Вход в Azure|да|да|
 |Панель мониторинга|Да| |
 |Модули|Да| |
 |Встроенный терминал|Да||
-|Обозреватель объектов|Да|Да|
-|Скрипты объектов|Да|Да|
+|Обозреватель объектов|да|да|
+|Скрипты объектов|да|да|
 |Система проектов|Да||
-|Выбор из таблицы|Да|Да|
+|Выбор из таблицы|да|да|
 |Управление исходным кодом|Да||
 |Панель задач|Да||
 |Темы|Да||
@@ -104,8 +104,8 @@ Azure Data Studio предлагает оптимизированную сред
 |:---|:---|:---|
 |Средство просмотра диаграмм|Да||
 |Экспорт результатов в CSV-, JSON-, XLSX-файлы|Да||
-|технология IntelliSense|Да|Да|
-|Фрагменты кода|Да|Да|
+|технология IntelliSense|да|да|
+|Фрагменты кода|да|да|
 |Показ плана|Preview (Предварительный просмотр)|Да|
 |Статистика клиента||Да|
 |Статистика активных запросов||Да|
@@ -120,7 +120,7 @@ Azure Data Studio предлагает оптимизированную сред
 
 |Компонент|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Windows|Да|Да|
+|Windows|да|да|
 |macOS|Да||
 |Linux|Да||
 
@@ -136,7 +136,7 @@ Azure Data Studio предлагает оптимизированную сред
 
 |Компонент|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Резервное копирование и восстановление|Да|Да|
+|Резервное копирование и восстановление|да|да|
 |Импорт неструктурированных файлов|Preview (Предварительный просмотр)|Да|
 |Агент SQL|Preview (Предварительный просмотр)|Да|
 |SQL Profiler|Preview (Предварительный просмотр)|Да|

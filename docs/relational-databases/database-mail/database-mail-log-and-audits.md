@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 846589ee-5fe5-4ab3-b335-0c253e569f99
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8e8b0ce1e5924a2186529fb7f7b301b85d0d547c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4354def42884887539693073bf3108d7227170de
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726495"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363574"
 ---
 # <a name="database-mail-log-and-audits"></a>Ведение журнала и аудит компонента Database Mail
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -34,9 +34,8 @@ ms.locfileid: "85726495"
   
 ## <a name="database-mail-auditing-tasks"></a>Задачи аудита компонента Database Mail  
   
-|||  
+|Обзор журналов компонента Database Mail и управление ими|Ссылка на раздел|  
 |-|-|  
-|**Обзор журналов компонента Database Mail и управление ими**|**Ссылка на раздел**|  
 |Проверьте состояние доставки отдельного сообщения|[Проверка состояния сообщений электронной почты, отправленных с помощью компонента Database Mail](../../relational-databases/database-mail/check-the-status-of-e-mail-messages-sent-with-database-mail.md)|  
 |Очистите сообщения, вложения и записи журнала компонента Database Mail|[sysmail_delete_mailitems_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)<br /><br /> [sysmail_delete_log_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md)|  
 |Заархивируйте сообщения и журналы компонента Database Mail|[Создание задания агента SQL Server по архивации сообщений и журналов событий компонента Database Mail](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)|  

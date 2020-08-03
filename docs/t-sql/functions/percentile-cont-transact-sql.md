@@ -19,15 +19,15 @@ ms.assetid: d019419e-5297-4994-97d5-e9c8fc61bbf4
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dada9214720bbe30711dbc0d722ea2904e0bb491
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0841c29b0897ed739b33e8d7e2d09227b8b495f8
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832943"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395818"
 ---
 # <a name="percentile_cont-transact-sql"></a>PERCENTILE_CONT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Вычисляет процентиль на основе постоянного распределения значения столбца в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Результат интерполируется и может отличаться от всех конкретных значений из этого столбца.  
   
@@ -41,15 +41,17 @@ PERCENTILE_CONT ( numeric_literal )
     OVER ( [ <partition_by_clause> ] )  
 ```  
   
-## <a name="arguments"></a>Аргументы  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Аргументы
  *numeric_literal*  
  Процентиль, который необходимо вычислить. Значение должно находиться в диапазоне от 0.0 до 1,0.  
   
  WITHIN GROUP **(** ORDER BY *order_by_expression* [ **ASC** | DESC ] **)**  
  Указывает список числовых значений, который следует отсортировать и по которому будет вычисляться процентиль. Разрешен только один аргумент *order_by_expression*. Результатом вычисления выражения должен быть точный или приблизительный числовой тип. Другие типы данных недопустимы. Точными числовыми типами являются **int**, **bigint**, **smallint**, **tinyint**, **numeric**, **bit**, **decimal**, **smallmoney** и **money**. Приблизительными числовыми типами являются **float** и **real**. По умолчанию задан порядок сортировки по возрастанию.  
   
- OVER **(** \<деление по предложениям> **)**  
- Делит результирующий набор, полученный с помощью предложения FROM, на секции, к которым применяется функция вычисления процентиля. Дополнительные сведения см. в статье [Предложение OVER (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md). В функции PERCENTILE_CONT нельзя указывать \<предложение ORDER BY>, а также \<предложение ROWS или RANGE> синтаксиса OVER.  
+ OVER **(** \<partition_by_clause> **)**  
+ Делит результирующий набор, полученный с помощью предложения FROM, на секции, к которым применяется функция вычисления процентиля. Дополнительные сведения см. в статье [Предложение OVER (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md). В функции PERCENTILE_CONT нельзя указывать \<ORDER BY clause> и \<rows or range clause>синтаксиса OVER.  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
  **float(53)**  

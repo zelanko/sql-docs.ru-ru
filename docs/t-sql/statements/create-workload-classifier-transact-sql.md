@@ -20,16 +20,16 @@ ms.assetid: ''
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 89ee76f44006227500cdb9e160256800e6a62929
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 9125903880247cd3aece0715ffcd3a9e34b35a36
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634582"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396190"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>Классификатор CREATE WORKLOAD (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Создает объект классификатора для использования при управлении рабочей нагрузкой.  Классификатор назначает входящие запросы в группу рабочей нагрузки в зависимости от параметров, указанных в инструкции определения классификатора.  Классификаторы вычисляются при каждом запросе.  Если запрос не соответствует классификатору, то он назначается в группу рабочей нагрузки по умолчанию.  Группа рабочей нагрузки по умолчанию — класс ресурсов smallrc.
 
@@ -118,7 +118,7 @@ CREATE WORKLOAD CLASSIFIER wcELTLoads WITH
  ,END_TIME       = '02:00' )
 ```
 
-*IMPORTANCE* = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }  
+*IMPORTANCE* = { LOW \| BELOW_NORMAL \| NORMAL \| ABOVE_NORMAL \| HIGH }  
 Указывает относительную важность запроса.  Важность принимает одно из следующих значений:
 
 - LOW

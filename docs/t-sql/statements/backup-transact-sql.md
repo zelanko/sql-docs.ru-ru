@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 29a53d4ccb5958a191bf06f4565cc8f908376086
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e0dc290a3e514d8de7a63a6afb4a0ed6453b6107
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552779"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332513"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -65,10 +65,17 @@ ms.locfileid: "86552779"
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-||||
-|---|---|---|
-|**_\* SQL Server \*_** &nbsp;|[Управляемый экземпляр Базы данных SQL<br />](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
-||||
+:::row:::
+    :::column:::
+        **_\* SQL Server \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [Управляемый экземпляр Базы данных SQL<br />](backup-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -234,9 +241,9 @@ TO \<backup_device> [ **,** ...*n* ] Указывает, что сопутств
 
 Указывает логическое или физическое устройство резервного копирования, используемое для создания резервной копии.
 
-{ *logical_device_name* |  **@** _logical\_device\_name\_var_ } **Применяется к:** SQL Server — логическое имя устройства резервного копирования, на котором создается резервная копия базы данных. Логическое имя должно соответствовать правилам для идентификаторов. Если аргумент задается в виде переменной (@*logical_device_name_var*), имя устройства резервного копирования можно указать как строковую константу (@_logical\_device\_name\_var_ **=** logical backup device name) или как переменную любого строкового типа данных **ntext** или **text**.
+{ *logical_device_name* \| **@** _logical\_device\_name\_var_ } **Область применения:** SQL Server — логическое имя устройства резервного копирования, на котором создается резервная копия базы данных. Логическое имя должно соответствовать правилам для идентификаторов. Если аргумент задается в виде переменной (@*logical_device_name_var*), имя устройства резервного копирования можно указать как строковую константу (@_logical\_device\_name\_var_ **=** logical backup device name) или как переменную любого строкового типа данных **ntext** или **text**.
 
-{ DISK | TAPE | URL} **=** { **'** _physical\_device\_name_ **'**  |  **@** _physical\_device\_name\_var_ | 'NUL' } **Применяется к:** DISK, TAPE и URL применяются к SQL Server.
+{ DISK \| TAPE \| URL} **=** { **'** _physical\_device\_name_ **'** \| **@** _physical\_device\_name\_var_ \| 'NUL' } **Область применения:** DISK, TAPE и URL применяются к SQL Server.
 Определяет файл диска, ленточное устройство или службу хранилища BLOB-объектов Microsoft Azure. Формат URL-адреса используется для создания резервных копий в службе хранилища Microsoft Azure. Дополнительные сведения и примеры см. в разделе [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). См. учебник в статье [Учебник. Резервное копирование и восстановление SQL Server с помощью службы хранилищ BLOB-объектов Microsoft Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)
 
 > [!NOTE]
@@ -664,7 +671,7 @@ GO
 > [!NOTE]
 > Если носитель на магнитной ленте пуст или файла резервной копии диска не существует, то все эти взаимодействия записывают заголовок носителя и продолжают работу. Если носитель не пустой и у него отсутствует допустимый заголовок носителя, то эти операции сформируют отзыв о том, что отсутствует допустимый носитель MTF, и прекратят операцию резервного копирования.
 
-||NOINIT|INIT|
+|Параметр skip|NOINIT|INIT|
 |------|------------|----------|
 |NOSKIP|Если в томе содержится правильный заголовок носителя, то выполняется проверка совпадения имени носителя с указанным параметром `MEDIANAME` (если он задан). Если установлено совпадение, резервный набор данных дозаписывается с сохранением всех существующих резервных наборов данных.<br /> Если том не содержит правильного заголовка носителя, возникает ошибка.|Если том содержит заголовок носителя, проводятся следующие проверки.<br /><ul><li>Если указан параметр `MEDIANAME`, то проверяется, совпадает ли заданное имя носителя с именем носителя заголовка носителя.<sup>1</sup></li><li>Проверяется, есть ли на носителе резервные наборы данных с неистекшим сроком действия. Если есть, то процесс резервного копирования прекращается.</li></ul><br />Если все эти проверки пройдены, то происходит перезапись всех резервных наборов данных на носителе. Сохраняется только заголовок носителя.<br /> Если в томе не содержится правильного заголовка носителя, то он создается с применением указанных параметров `MEDIANAME` и `MEDIADESCRIPTION` (если они заданы).|
 |SKIP|Если том содержит верный заголовок носителя, то резервный набор данных дозаписывается с сохранением всех существующих резервных наборов данных.|Если в томе содержится правильный заголовок носителя<sup>2</sup>, то выполняется перезапись всех резервных наборов данных на носителе, при этом сохраняется только заголовок носителя.<br /> Если носитель пуст, то создается заголовок носителя, исходя из заданных параметров `MEDIANAME` и `MEDIADESCRIPTION` (если они указаны).|
@@ -929,9 +936,17 @@ WHERE r.command LIKE 'BACKUP%'
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> ||||
-> |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* Управляемый экземпляр Базы данных SQL<br />\*_** &nbsp;|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+:::row:::
+    :::column:::
+        [SQL Server](backup-transact-sql.md?view=sql-server-2016)
+    :::column-end:::
+    :::column:::
+        **_\* Управляемый экземпляр Базы данных SQL<br />\*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -1111,9 +1126,17 @@ WITH STATS = 5, COPY_ONLY;
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
-> ||||
-> |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[Управляемый экземпляр Базы данных SQL<br />](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
+:::row:::
+    :::column:::
+        [SQL Server](backup-transact-sql.md?view=sql-server-2016)
+    :::column-end:::
+    :::column:::
+        [Управляемый экземпляр Базы данных SQL<br />](backup-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        **_\* Analytics<br />Platform System (PDW) \*_** &nbsp;
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 

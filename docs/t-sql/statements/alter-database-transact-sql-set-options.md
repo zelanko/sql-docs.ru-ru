@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 4d03eef91636b454b03f20d40c7a602ea8dc3fc5
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e06355d91e73430c203711515fb9501caebfd291
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111264"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87331996"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Параметры ALTER DATABASE SET (Transact-SQL)
 
@@ -524,7 +524,7 @@ OFF
 **\<db_encryption_option> ::=**      
 Определяет параметры шифрования базы данных.
 
-ENCRYPTION { ON | **OFF** | SUSPEND | RESUME }     
+ENCRYPTION { ON \| **OFF** \| SUSPEND \| RESUME }     
 ON     
 Включает шифрование базы данных.
 
@@ -797,7 +797,7 @@ OFF
 
 SIZE_BASED_CLEANUP_MODE имеет тип **nvarchar**.
 
-QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
+QUERY_CAPTURE_MODE { ALL \| AUTO \| CUSTOM \| NONE }     
 Определяет режим записи текущего активного запроса. В каждом режиме определяются собственные политики записи.
 
 > [!NOTE]
@@ -924,7 +924,7 @@ None
 
 Включает или отключает Stretch Database для базы данных. Дополнительные сведения см. в разделе [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
 
-REMOTE_DATA_ARCHIVE = { ON ( SERVER = \<server_name> , { CREDENTIAL = \<db_scoped_credential_name> | FEDERATED_SERVICE_ACCOUNT = ON | OFF } )| **OFF**     
+REMOTE_DATA_ARCHIVE = { ON ( SERVER = \<server_name> , { CREDENTIAL = \<db_scoped_credential_name> \| FEDERATED_SERVICE_ACCOUNT = ON \| OFF } )\| **OFF**     
 ON     
 Включает Stretch Database для базы данных. Дополнительные сведения, включая предварительные условия, см. в разделе [Включение Stretch Database для базы данных](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md).
 
@@ -1914,7 +1914,7 @@ AUTO
 
 SIZE_BASED_CLEANUP_MODE имеет тип **nvarchar**.
 
-QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
+QUERY_CAPTURE_MODE { ALL \| AUTO \| CUSTOM \| NONE }     
 Определяет режим записи текущего активного запроса. В каждом режиме определяются собственные политики записи.   
 
 > [!NOTE]
@@ -2093,7 +2093,7 @@ OFF
 
 Вы можете определить состояние этого параметра, проверив столбец `is_arithabort_on` в представлении каталога [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). Состояние можно также определить, проверив свойство `IsArithmeticAbortEnabled` функции [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
-COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 }     
+COMPATIBILITY_LEVEL = { 150 \| 140 \| 130 \| 120 \| 110 \| 100 }     
 Дополнительные сведения см. в статье [Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
 CONCAT_NULL_YIELDS_NULL { ON | **OFF** }     
@@ -2740,7 +2740,7 @@ AUTO
 
 SIZE_BASED_CLEANUP_MODE имеет тип **nvarchar**.
 
-QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
+QUERY_CAPTURE_MODE { ALL \| AUTO \| CUSTOM \| NONE }     
 Определяет режим записи текущего активного запроса.
 
 ALL     
@@ -2914,7 +2914,7 @@ OFF
 
   Вы можете определить состояние этого параметра, проверив столбец `is_arithabort_on` в представлении каталога [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). Состояние можно также определить, проверив свойство `IsArithmeticAbortEnabled` функции [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
-COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 }     
+COMPATIBILITY_LEVEL = { 150 \| 140 \| 130 \| 120 \| 110 \| 100 }     
 Дополнительные сведения см. в статье [Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
 CONCAT_NULL_YIELDS_NULL { ON | **OFF** }     

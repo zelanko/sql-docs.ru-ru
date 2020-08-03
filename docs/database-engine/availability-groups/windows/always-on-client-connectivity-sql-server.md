@@ -2,7 +2,7 @@
 title: Поддержка возможности подключения драйвера и клиента для групп доступности
 description: 'В этом разделе обсуждаются особенности обеспечения подключений клиентов к группам доступности AlwaysOn, в том числе предварительные условия, ограничения и рекомендации по конфигурации и настройке клиентов. '
 ms.custom: seodec18
-ms.date: 04/26/2018
+ms.date: 07/28/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bb97e94e55f270331ff99909b5ec7dca6f8683e3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 691195b4a44065a95cf97d073d5bf52d2caa19f8
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901033"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395077"
 ---
 # <a name="driver-and-client-connectivity-support-for-availability-groups"></a>Поддержка возможности подключения драйвера и клиента для групп доступности
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -40,8 +40,9 @@ ms.locfileid: "85901033"
 |SQL Native Client 11.0 OLEDB|нет|Да|Да|нет|нет|  
 |ADO.NET с платформой .NET Framework 4.0 с улучшением подключения*|Да|Да|Да|Да|Да|  
 |ADO.NET с платформой .NET Framework 3.5 с пакетом обновления 1 (SP1) с улучшением подключения**|Да|Да|Да|Да|Да|  
-|Драйвер Microsoft JDBC 4.0 для SQL Server|Да|Да|Да|Да|Да| 
-|Драйвер Microsoft OLE DB для SQL Server|Да|Да|Да|Да|Да| 
+|[Microsoft ODBC Driver 13.1+ для SQL Server](../../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)|Да|Да|Да|Да|Да|
+|[Microsoft JDBC Driver 4.0+ для SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md)|Да|Да|Да|Да|Да| 
+|[Драйвер Microsoft OLE DB для SQL Server](../../../connect/jdbc/microsoft-jdbc-driver-for-sql-server.md)|Да|Да|Да|Да|Да| 
   
  * Скачайте исправление подключения для ADO.NET с платформой .NET Framework 4.0: [https://support.microsoft.com/kb/2600211](https://support.microsoft.com/kb/2600211).  
   
@@ -65,7 +66,7 @@ ms.locfileid: "85901033"
  [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Сведения о доступе клиентского подключения к репликам доступности (SQL Server)](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)   
- [Блоги команды разработчиков SQL Server AlwaysOn: официальный блог по SQL Server AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/)   
+ [Блог команды разработчиков SQL Server Always On: официальный блог команды разработчиков SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)   
  [На компьютерах под управлением Windows Server 2003, Windows Vista, Windows Server 2008, Windows 7 или Windows Server 2008 R2 происходит долговременная задержка при повторном подключении с помощью протокола IPSec](https://support.microsoft.com/kb/980915)   
  [Службе кластера необходимо около 30 секунд для отработки отказа IP-адресов IPv6 в Windows Server 2008 R2](https://support.microsoft.com/kb/2578113)   
  [Медленная отработка отказа при отсутствии маршрутизатора между кластером и сервером приложений](https://support.microsoft.com/kb/2582281)  

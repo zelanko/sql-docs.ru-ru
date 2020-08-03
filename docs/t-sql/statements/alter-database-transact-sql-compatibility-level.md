@@ -1,7 +1,7 @@
 ---
 title: Уровень совместимости инструкции ALTER DATABASE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 11/15/2019
+ms.date: 07/22/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7c690545847979fcd50f2de23aca201eed067d5a
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: b17da534ff8b1f5864589882ca924ebd0379bc71
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86302053"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332021"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)
 
@@ -52,7 +52,7 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 
 *database_name* — имя изменяемой базы данных.
 
-COMPATIBILITY_LEVEL {150 | 140 | 130 | 120 | 110 | 100 | 90 | 80} — версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для которой необходимо обеспечить совместимость с базой данных. Можно настроить следующие значения уровня совместимости (не все версии поддерживают все перечисленные в списке выше уровни совместимости):
+COMPATIBILITY_LEVEL { 150 \| 140 \| 130 \| 120 \| 110 \| 100 \| 90 \| 80 } — версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для которой необходимо обеспечить совместимость с базой данных. Можно настроить следующие значения уровня совместимости (не все версии поддерживают все перечисленные в списке выше уровни совместимости):
 
 <a name="supported-dbcompats"></a>
 
@@ -136,7 +136,7 @@ SELECT name, compatibility_level FROM sys.databases;
 > **Нерекомендуемые** функциональные возможности, представленные в определенной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **не** защищены уровнем совместимости. Это относится к возможностям, удаленным из [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].
 > Например, указание `FASTFIRSTROW` больше не поддерживается в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и заменено на указание `OPTION (FAST n )`. Если задать уровень совместимости базы данных 110, нерекомендуемое указание не будет восстановлено.  
 >  
-> См. подробнее о нерекомендуемых функциях в разделах [Нерекомендуемые функции ядра СУБД в SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md), [Нерекомендуемые функции ядра СУБД в SQL Server 2014](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014), [Нерекомендуемые функции ядра СУБД в SQL Server 2012](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali).    
+> Дополнительные сведения о нерекомендуемых функциях см. в разделах [Нерекомендуемые функции ядра СУБД в SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md), [Нерекомендуемые функции ядра СУБД в SQL Server 2014](/sql/database-engine/discontinued-database-engine-functionality-in-sql-server).
 
 > [!IMPORTANT]
 > **Критические изменения**, введенные в определенной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **могут не** защищаться уровнем совместимости. Это относится к изменениям в поведении между версиями [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Поведение [!INCLUDE[tsql](../../includes/tsql-md.md)] обычно защищено уровнем совместимости. Однако измененные или удаленные системные объекты **не** защищены уровнем совместимости.
@@ -148,7 +148,7 @@ SELECT name, compatibility_level FROM sys.databases;
 > - Изменение имен столбцов в системных объектах. В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] столбец *single_pages_kb* в представлении sys.dm_os_sys_info был переименован в *pages_kb*. Независимо от уровня совместимости запрос `SELECT single_pages_kb FROM sys.dm_os_sys_info` вызывает ошибку 207 (Недопустимое имя столбца).
 > - Удаление системных объектов. В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] столбец `sp_dboption` был удален. Независимо от уровня совместимости инструкция `EXEC sp_dboption 'AdventureWorks2016', 'autoshrink', 'FALSE';` вызовет ошибку 2812 (Не удалось найти хранимую процедуру 'sp_dboption').
 >
-> Подробные сведения о критических изменениях см. в статьях [Критические изменения в функциях ядра СУБД в SQL Server 2017 (14.x)](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Критические изменения в функциях ядра СУБД в SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [Discontinued Database Engine Functionality in SQL Server 2014](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014) (Неподдерживаемые функции ядра СУБД в SQL Server 2014) и в разделе [Discontinued Features in SQL Server 2012](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali) (Неподдерживаемые функции в SQL Server 2012).
+> Подробные сведения о критических изменениях см. в статьях [Критические изменения в функциях ядра СУБД в SQL Server 2017](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Критические изменения в функциях ядра СУБД в SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [Критические изменения в функциях ядра СУБД в SQL Server 2014](/sql/database-engine/discontinued-database-engine-functionality-in-sql-server).
 
 ## <a name="differences-between-compatibility-levels"></a>Различия между уровнями совместимости
 Для всех установок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] уровень совместимости по умолчанию установлен в зависимости от версии [!INCLUDE[ssDE](../../includes/ssde-md.md)], как указано в [этой таблице](#supported-dbcompats). Для новых задач разработки всегда планируйте сертификацию приложений на базе новейшего уровня совместимости базы данных.

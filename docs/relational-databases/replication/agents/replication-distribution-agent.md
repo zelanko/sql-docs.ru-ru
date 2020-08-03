@@ -17,12 +17,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 51a34db68f77193c42662476656d46e5fa2f6092
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c9e762060e3afdc5df7802249e99075de66ef751
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87109404"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395029"
 ---
 # <a name="replication-distribution-agent"></a>Агент распространения репликации
 [!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
@@ -133,10 +133,10 @@ distrib [-?]
  **-DistributorPassword** _пароль_распространителя_  
  Пароль распространителя.  
   
- **-DistributorSecurityMode** [ **0**| **1**]  
+ **-DistributorSecurityMode** [ **0**\| **1**]  
  Указывает режим безопасности распространителя. Значение 1 означает проверку подлинности Windows (по умолчанию), а значение 0 — проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
- **-EncryptionLevel** [ **0** | **1** | **2** ]  
+ **-EncryptionLevel** [ **0** \| **1** \| **2** ]  
  Уровень шифрования по протоколу TLS (ранее — SSL), который используется агентом распространения при установлении соединений.  
   
 |Значение EncryptionLevel|Описание|  
@@ -171,7 +171,7 @@ distrib [-?]
  **-FtpUserName**  _имя_пользователя_ftp_  
  Имя пользователя для соединения со службой FTP. Если не указано, то будет использовано имя **anonymous** .  
   
- **-HistoryVerboseLevel** [ **0** | **1** | **2** | **3** ]  
+ **-HistoryVerboseLevel** [ **0** \| **1** \| **2** \| **3** ]  
  Указывает объем данных, регистрируемых в журнале во время операции распространения. Влияние на производительность, оказываемое ведением журнала, можно максимально уменьшить, выбрав значение **1**.  
   
 |Значение HistoryVerboseLevel|Описание|  
@@ -261,7 +261,7 @@ distrib [-?]
 |**1**|Источник данных ODBC|  
 |**3**|OLE DB, источник данных|  
   
- **-SubscriptionStreams** [**0**|**1**|**2**|...**64**]  
+ **-SubscriptionStreams** [**0**\|**1**\|**2**\|...**64**]  
  Число соединений на каждого агента распространителя для параллельного применения пакетов изменений на подписчике при сохранении многих характеристик транзакций, имеющихся для однопоточного выполнения. Для издателя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживается диапазон значений от 1 до 64. Этот параметр поддерживается только тогда, когда издатель и распространитель выполняются на [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] и более поздних версиях. Этот параметр не поддерживается или должен быть равен 0 для подписчиков, отличных от [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], и одноранговых подписок.  
   
 > [!NOTE]  

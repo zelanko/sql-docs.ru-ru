@@ -1,6 +1,6 @@
 ---
 title: Заметки о выпуске
-description: Заметки о выпуске Azure Data Studio
+description: В этой статье содержатся заметки о выпуске Azure Data Studio с ноября 2017 года до настоящего момента. Для многих общих проблем приводятся ссылки на дополнительные сведения.
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 07/17/2020
-ms.openlocfilehash: 5acbadb8d019b6d7d468f756bd25b70d890251c8
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: b064c24ff7717fc5a03ee1413b1e85fbb71530dc
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458889"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411265"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Заметки о выпуске для Azure Data Studio
 
@@ -42,7 +42,7 @@ ms.locfileid: "86458889"
 
 &nbsp;
 
-| Изменение | Сведения |
+| Change | Сведения |
 | :----- | :------ |
 | Добавлен новый обзор возможностей | Страница приветствия и палитра команд теперь позволяют пользователям запустить обзор самых популярных возможностей, включая мини-представления "Подключения" и "Записные книжки", а также магазин расширений. |
 | Новые функции записной книжки | &bull; &nbsp; Поддержка заголовков на панели инструментов Markdown<br/> &bull; &nbsp; Параллельный предпросмотр Markdown в текстовых ячейках

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 951a6967e51d877efdd68b4f4a6f118c5ec1e6e7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 08ef8be56e34d7f0e62a02c5a9819f0f5c41344b
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897340"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362704"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Мониторинг производительности для групп доступности Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -26,9 +26,8 @@ ms.locfileid: "85897340"
   
  ![Синхронизация данных группы доступности](media/always-onag-datasynchronization.gif "Синхронизация данных группы доступности")  
   
-|||||  
+|Последовательность|Описание шага|Комментарии|Полезные метрики|  
 |-|-|-|-|  
-|**Последовательность**|**Описание шага**|**Комментарии**|**Полезные метрики**|  
 |1|Создание журнала|Данные журнала записываются на диск. Этот журнал должен реплицироваться на вторичные реплики. Записи журнала попадают в очередь отправки.|[SQL Server: База данных > Сброшено байтов журнала в секунду](~/relational-databases/performance-monitor/sql-server-databases-object.md)|  
 |2|Сбор|Журналы для каждой базы данных собираются и отправляются в соответствующую очередь партнера (по одной для каждой пары из базы данных и реплики). Этот процесс сбора выполняется непрерывно, пока реплика доступности подключена, а перемещение данных не приостановлено по какой-либо причине. При этом пара из базы данных и реплики отображается как выполняющая синхронизацию или синхронизированная. Если процессу сбора не удается достаточно быстро сканировать сообщения и ставить их в очередь, очередь отправки журнала разрастается.|[SQL Server: Реплика доступности > Отправлено в реплику, байт/с](~/relational-databases/performance-monitor/sql-server-availability-replica.md), который является агрегатом суммы всех сообщений баз данных, помещенных в очередь для этой реплики доступности.<br /><br /> [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (КБ) и [log_bytes_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (КБ/с) на первичной реплике.|  
 |3|Send|Сообщения в каждой очереди базы данных и реплики удаляются из очереди и через проводную сеть передаются в соответствующую вторичную реплику.|[SQL Server: реплика доступности > отправлено в транспорт, байт/с](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
@@ -41,9 +40,8 @@ ms.locfileid: "85897340"
   
  После сбора журналов на первичной реплике к ним применяется два уровня средств управления потоком, как показано в следующей таблице:  
   
-|||||  
+|Level|Количество шлюзов|Количество сообщений|Полезные метрики|  
 |-|-|-|-|  
-|**Level**|**Число шлюзов**|**Число сообщений**|**Полезные метрики**|  
 |Транспортировка|1 на реплику доступности|8192|Расширенное событие **database_transport_flow_control_action**|  
 |База данных|1 на базу данных доступности|11200 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> Расширенное событие **hadron_database_flow_control_action**|  
   

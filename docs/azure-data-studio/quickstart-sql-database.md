@@ -1,6 +1,6 @@
 ---
 title: Подключение и отправка запроса к базе данных SQL Azure
-description: В этом кратком руководстве показано, как использовать Azure Data Studio для подключения к базе данных SQL и выполнения запроса.
+description: Выполните краткое руководство, в котором вы используете Azure Data Studio для подключения к серверу базы данных SQL Azure, а затем создадите базу данных и отправите к ней запрос.
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.reviewer: alayu; maghan; sstein
@@ -9,12 +9,12 @@ author: yualan
 ms.author: alayu
 ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
 ms.date: 05/14/2019
-ms.openlocfilehash: 73e910b6d199a4918eafca067a95136e31ac079c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f7ceb73d25d69e1d8e8f33b2c6a23b0ff7bff636
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771955"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411300"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-azure-sql-database"></a>Краткое руководство. Использование Azure Data Studio для подключения и обращения к базе данных SQL Azure
 

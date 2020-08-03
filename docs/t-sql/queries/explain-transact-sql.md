@@ -10,16 +10,16 @@ ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c4ebe0f59ede7d82ac15260eaa4f2265453fcc57
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: 7383e63ecb96a32c9b1f0087a138bc9f862eb722
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138247"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395159"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL) 
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
   Возвращает план запроса для инструкции [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] без выполнения инструкции. Используйте EXPLAIN, чтобы узнать, каким операциям потребуется перемещение данных, и определить предполагаемые затраты на операции запроса. `WITH RECOMMENDATIONS` применяется к Хранилищу данных SQL Azure (предварительная версия).
   
@@ -71,9 +71,9 @@ EXPLAIN [WITH_RECOMMENDATIONS] SQL_statement
 |\<dsql_query>|Элемент верхнего уровня или документа.|
 |\<sql>|Отображает *SQL_statement*.|  
 |\<params>|Этот тег в настоящее время не используется.|
-|\<materialized_view_candidates > (предварительная версия)|Содержит инструкцию CREATE рекомендуемого материализованного представления для повышения производительности инструкции SQL.| 
+|\<materialized_view_candidates> (предварительная версия)|Содержит инструкцию CREATE рекомендуемого материализованного представления для повышения производительности инструкции SQL.| 
 |\<dsql_operations>|Обобщает и содержит действия запроса, а также включает сведения о стоимости запроса. Также содержит все блоки `<dsql_operation>`. Этот тег содержит сведения о количестве для всего запроса.<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost* — общее предполагаемое время выполнения запроса (в мс).<br /><br /> *total_number_operations* — общее количество операций запроса. Операция, которая будет обрабатываться параллельно и выполняться на нескольких узлах, считается одной операцией.|  
-|\<dsql_operation>|Описывает одну операцию в плане запроса. Тег \<dsql_operation> содержит тип операции, как атрибут:<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* — это одно из значений, содержащихся в [sys.dm_pdw_request_steps (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).<br /><br /> Содержимое в блоке `\<dsql_operation>` зависит от типа операции.<br /><br /> См. таблицу ниже.|  
+|\<dsql_operation>|Описывает одну операцию в плане запроса. Тег \<dsql_operation> содержит тип операции как атрибут:<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* — это одно из значений, содержащихся в [sys.dm_pdw_request_steps (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).<br /><br /> Содержимое в блоке `\<dsql_operation>` зависит от типа операции.<br /><br /> См. таблицу ниже.|  
   
 |Тип операции|Содержимое|Пример|  
 |--------------------|-------------|-------------|  

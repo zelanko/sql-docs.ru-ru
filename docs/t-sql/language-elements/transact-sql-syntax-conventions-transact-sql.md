@@ -28,15 +28,15 @@ ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7b42f9f9db95954509c6e47c28b317eab0626c4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cee1bcbb781319c4cabc2265962350d2480d9d97
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981902"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87392810"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Синтаксические обозначения в Transact-SQL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 В следующей таблице перечислены и описаны соглашения, которые используются в синтаксисе в справочнике по [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   

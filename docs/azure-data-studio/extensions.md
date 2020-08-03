@@ -1,6 +1,6 @@
 ---
 title: Добавление расширений
-description: Добавление расширений из Marketplace в Azure Data Studio
+description: Узнайте, как добавить функциональные возможности в Azure Data Studio, выбрав и установив расширения, предоставляемые корпорацией Майкрософт и сторонними поставщиками.
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: conceptual
@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 10/03/2019
-ms.openlocfilehash: d049b80197fdd50e3f7da5a449c35e092366fa51
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: eb6578f69ab9c0ded637ef9762ea50cfd18a25bb
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483680"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411120"
 ---
 # <a name="extend-the-functionality-of-azure-data-studio"></a>Расширение функциональных возможностей Azure Data Studio
 

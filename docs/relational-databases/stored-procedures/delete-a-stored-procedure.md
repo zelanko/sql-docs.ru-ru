@@ -1,5 +1,6 @@
 ---
 title: Удаление хранимой процедуры | Документация Майкрософт
+description: Узнайте, как в SQL Server 2019 (15.x) удалить хранимую процедуру с помощью SQL Server Management Studio или Transact-SQL.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 232dbf4d-392a-406f-af3a-579518cd8e46
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f880c5c03fdae1b41b53342a85e55b0590cf815
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 58b042c3d8f2ddac50789419f0d5e5d76ebb5fc8
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001008"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332631"
 ---
 # <a name="delete-a-stored-procedure"></a>Удаление хранимой процедуры
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

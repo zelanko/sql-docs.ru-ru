@@ -1,7 +1,7 @@
 ---
 title: CREATE LOGIN (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 03/17/2020
+ms.date: 07/29/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08056878aabb707433dc22ca891798feb96ef329
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 11f67835fe3cd74b63a9f2921850376ff4805881
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245233"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411046"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -51,10 +51,10 @@ CREATE LOGIN участвует в транзакциях. Если откат �
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Отдельная база данных/эластичный пул Базы данных SQL<br />](create-login-transact-sql.md?view=azuresqldb-current)
+        [База данных SQL Azure:<br />отдельная база данных/эластичный пул](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Управляемый экземпляр Базы данных SQL<br />](create-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Управляемый экземпляр<br />SQL Azure](create-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)
@@ -284,10 +284,10 @@ CHECK_EXPIRATION = OFF ;
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* Отдельная база данных/эластичный пул Базы данных SQL<br />\*_**
+        **_\* База данных SQL Azure:<br />отдельная база данных/эластичный пул\*_**
     :::column-end:::
     :::column:::
-        [Управляемый экземпляр Базы данных SQL<br />](create-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Управляемый экземпляр<br />SQL Azure](create-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)
@@ -402,10 +402,10 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Отдельная база данных/эластичный пул Базы данных SQL<br />](create-login-transact-sql.md?view=azuresqldb-current)
+        [База данных SQL Azure:<br />отдельная база данных/эластичный пул](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* Управляемый экземпляр Базы данных SQL<br />\*_**
+        **_\* Управляемый экземпляр<br />SQL Azure\*_**
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)
@@ -495,7 +495,7 @@ SID **=** *sid* — используется для повторного соз
 - Только субъекты уровня сервера SQL (имена входа), которые относятся к роли `sysadmin`, могут выполнять следующие операции, предназначенные для субъектов Azure AD:
   - EXECUTE AS USER;
   - EXECUTE AS LOGIN.
-- Внешних (гостевых) пользователей, импортированных из другого каталога Azure AD, нельзя настроить непосредственно в качестве администратора Azure AD для управляемого экземпляра. Вместо этого присоедините внешнего пользователя к группе с поддержкой безопасности Azure AD и настройте группу в качестве администратора экземпляра.
+- Внешних (гостевых) пользователей, импортированных из другого каталога Azure AD, нельзя настроить непосредственно в качестве администратора Azure AD для управляемого экземпляра SQL на портале Azure. Вместо этого присоедините внешнего пользователя к группе с поддержкой безопасности Azure AD и настройте группу в качестве администратора экземпляра. Для настройки отдельных гостевых пользователей в качестве администратора экземпляра можно использовать PowerShell или Azure CLI.
 - Имя входа не реплицируется на дополнительный экземпляр в группе отработки отказа. Имя входа сохраняется в базе данных master, которая является системной базой данных и, таким образом, не подлежит георепликации. Для решения этой проблемы пользователь должен создать имя входа с тем же идентификатором безопасности на вторичном экземпляре.
 
 ```SQL
@@ -601,10 +601,10 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Отдельная база данных/эластичный пул Базы данных SQL<br />](create-login-transact-sql.md?view=azuresqldb-current)
+        [База данных SQL Azure:<br />отдельная база данных/эластичный пул](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Управляемый экземпляр Базы данных SQL<br />](create-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Управляемый экземпляр<br />SQL Azure](create-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -729,10 +729,10 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Отдельная база данных/эластичный пул Базы данных SQL<br />](create-login-transact-sql.md?view=azuresqldb-current)
+        [База данных SQL Azure:<br />отдельная база данных/эластичный пул](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Управляемый экземпляр Базы данных SQL<br />](create-login-transact-sql.md?view=azuresqldb-mi-current)
+        [Управляемый экземпляр<br />SQL Azure](create-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-login-transact-sql.md?view=azure-sqldw-latest)

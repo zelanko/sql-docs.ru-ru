@@ -106,8 +106,8 @@ QUIT
 
 Помимо **sqlcmd** вы можете использовать следующие кроссплатформенные средства для управления SQL Server:
 
-|||
-|---|---|
+| Средство | Описание |
+| ---- | ----------- |
 | [Azure Data Studio](../azure-data-studio/index.yml) | Кроссплатформенная служебная программа управления базами данных с графическим пользовательским интерфейсом. |
 | [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | Кроссплатформенный редактор кода с графическим пользовательским интерфейсом, позволяющий выполнять инструкции Transact-SQL в выражениях mssql. |
 | [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | Кроссплатформенное средство для автоматизации и настройки на основе командлетов. |
@@ -129,12 +129,10 @@ QUIT
 
 По другим сценариям установки доступны следующие ресурсы.
 
-|||
-|---|---|
-| [Обновление](../linux/sql-server-linux-setup.md#upgrade) | Узнайте, как обновить установленную среду SQL Server на Linux |
-| [Удаление](../linux/sql-server-linux-setup.md#uninstall) | Удаление SQL Server на Linux |
-| [Автоматическая установка](../linux/sql-server-linux-setup.md#unattended) | Узнайте, как создать сценарий для установки без каких-либо запросов |
-| [Автономная установка](../linux/sql-server-linux-setup.md#offline) | Узнайте, как вручную загрузить пакеты для установки в автономном режиме |
+* [Обновление](../linux/sql-server-linux-setup.md#upgrade): Узнайте, как обновить установленную среду SQL Server на Linux
+* [Uninstall](../linux/sql-server-linux-setup.md#uninstall): Удаление SQL Server на Linux
+* [Автоматическая установка](../linux/sql-server-linux-setup.md#unattended). Узнайте, как создать сценарий для установки без каких-либо запросов
+* [Автономная установка](../linux/sql-server-linux-setup.md#offline). Узнайте, как вручную загрузить пакеты для установки в автономном режиме
 
 > [!TIP]
 > Ответы на часто задаваемые вопросы об SQL Server на Linux см. в [этой статье](../linux/sql-server-linux-faq.md).

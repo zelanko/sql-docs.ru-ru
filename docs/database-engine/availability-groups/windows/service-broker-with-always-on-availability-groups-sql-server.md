@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 13dd1cb62f139a672e53b0945e94fc3ba25abc63
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 10eb6fdf211b15cdc5b9f11d7f85cb45c050019a
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883145"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332263"
 ---
 # <a name="service-broker-with-always-on-availability-groups-sql-server"></a>Компонент Service Broker с группами доступности AlwaysOn (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "85883145"
      Дополнительные сведения см. в разделе [CREATE ENDPOINT (Transact-SQL)](../../../t-sql/statements/create-endpoint-transact-sql.md).  
 
     > [!NOTE]  
-    Компонент SQL Server Broker не поддерживает несколько подсетей. Обязательно используйте параметр registerallprovidersip со значением 0 и проверьте, не используете ли вы статические IP-адреса в системе DNS, предоставив необходимое разрешение кластеру в DNS, как определено в https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server. При попытке использовать отключенный IP-адрес компонент Broker может отложить сообщение с состоянием CONVERSING.
+    Компонент SQL Server Service Broker не поддерживает несколько подсетей. Задайте для параметра `RegisterAllProvidersIP` значение 0 и убедитесь, что кластер имеет необходимое разрешение в DNS для использования статических IP-адресов. Дополнительные сведения см. в разделе [Настройка прослушивателя группы доступности](create-or-configure-an-availability-group-listener-sql-server.md). При попытке использовать отключенный IP-адрес Service Broker может отложить сообщение с состоянием CONVERSING.
 
 3.  **Предоставьте разрешение CONNECT на конечную точку.**  
   
