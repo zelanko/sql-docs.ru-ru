@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5e41b5ffc1ff1cbd524298a17e32f5f677954f24
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 26e976ee2a62d29f8f14584159888de428431101
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919227"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472522"
 ---
 # <a name="execute-package-utility-dtexecui"></a>Служебная программа для запуска пакетов (dtexecui)
 
@@ -68,9 +68,8 @@ ms.locfileid: "86919227"
  **Источник пакета**  
  Расположение выполняемого пакета с использованием следующих параметров:  
   
-|||  
-|-|-|  
 |Значение|Description|  
+|-|-|  
 |**SQL Server**|Выберите этот параметр, если пакет находится на [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Укажите экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и введите имя пользователя и пароль для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Указание каждого имени пользователя и пароля приводит к добавлению в командную строку параметров **/USER** _имя_пользователя_ и **/PASSWORD** _пароль_.|  
 |**Файловая система**|Выберите этот параметр, если пакет находится в файловой системе.|  
 |**Хранилище пакетов служб SSIS**|Выберите этот параметр, если пакет находится в хранилище пакетов [!INCLUDE[ssIS](../../includes/ssis-md.md)] .|  

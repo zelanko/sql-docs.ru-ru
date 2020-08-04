@@ -7,12 +7,12 @@ ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 6c2280bacb7947b202d9291637ef294ba391e947
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9610ca6f434f78d332eb85fbf4ed71a4d477946a
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897190"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442895"
 ---
 # <a name="whats-new-for-sql-server-2019-on-linux"></a>Новые возможности SQL Server 2019 на Linux
 
@@ -41,7 +41,7 @@ ms.locfileid: "85897190"
 |Улучшения `tempdb` | По умолчанию новая установка SQL Server на Linux создает несколько файлов данных `tempdb` на основе числа логических ядер (до 8 файлов данных). Это не применимо к обновлениям основной или дополнительной версии на месте. Размер каждого файла `tempdb` составляет 8 МБ с возможностью автоматического увеличения до 64 МБ. Это поведение аналогично поведению установки SQL Server по умолчанию в Windows. |
 | PolyBase на компьютерах под управлением Linux | [Установка PolyBase](../relational-databases/polybase/polybase-linux-setup.md) в Linux для соединителей вне Hadoop.<br/><br/>[Сопоставление типов PolyBase](../relational-databases/polybase/polybase-type-mapping.md). |
 | Поддержка системы отслеживания измененных данных (CDC) | Система отслеживания измененных данных (CDC) теперь поддерживается в Linux для SQL Server 2019. |
-| Реестр контейнеров Майкрософт | [Реестр контейнеров Майкрософт](https://www.ntweekly.com/2019/09/23/microsoft-container-registry-to-replace-docker-hub-for-new-images/) теперь заменяет Docker Hub в качестве источника новых официальных образов контейнеров Майкрософт, включая [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. |
+| Реестр контейнеров Майкрософт | [Реестр контейнеров Майкрософт](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/) теперь заменяет Docker Hub в качестве источника новых официальных образов контейнеров Майкрософт, включая [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. |
 | Непривилегированные контейнеры | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] предоставляет возможность создания более безопасных контейнеров путем запуска процесса [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] по умолчанию от имени пользователя, не являющегося привилегированным. См. раздел [Сборка и запуск контейнеров SQL Server от имени непривилегированного пользователя](sql-server-linux-configure-docker.md#buildnonrootcontainer). |
 
 ## <a name="next-steps"></a>Дальнейшие действия

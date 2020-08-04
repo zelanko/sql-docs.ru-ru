@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 78bc5fe4d059a644c3490c94b02b5880c5d488d0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c75779e244087072d36c041edd22d4a6fb3109b2
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922740"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435431"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Импорт данных из Excel или экспорт данных в Excel с помощью служб SQL Server Integration Services (SSIS)
 
@@ -253,8 +253,6 @@ ms.locfileid: "86922740"
 Чтобы успешно сохранять в столбцы Excel строки, имеющие длину более 255 символов, драйвер должен распознать тип данных целевого столбца как **memo** , а не как **string**.
 
 -   Если в существующей целевой таблице уже содержатся строки данных, то в столбце типа memo в первых нескольких строках, которые проверит драйвер, должен содержаться, по крайней мере, один экземпляр значения, имеющего длину более 255 символов.
-
--   Если новая целевая таблица создается во время проектирования пакета, во время выполнения или с помощью мастера импорта и экспорта, в инструкции `CREATE TABLE` необходимо использовать LONGTEXT (или один из его синонимов) в качестве типа данных для целевого столбца типа memo. В мастере проверьте инструкцию `CREATE TABLE` и при необходимости измените ее, нажав кнопку **Изменить SQL** рядом с параметром **Создать целевую таблицу** на странице **Сопоставления столбцов**.
 
 ## <a name="related-content"></a>См. также
 

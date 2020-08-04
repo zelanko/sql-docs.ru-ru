@@ -22,16 +22,16 @@ helpviewer_keywords:
 ms.custom: ''
 ms.date: 06/10/2020
 monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current || = sqlallproducts-allversions"
-ms.openlocfilehash: b8bfbab9ab06d57bdbb2b3efe3d23690f4d2f0e3
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: dea40dcd8f9e7405d6fe4343e48b8cbdaf835593
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811879"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87523206"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Добавляет метаданные о классификации по уровням конфиденциальности в один или несколько столбцов базы данных. Эта классификация может включать метки конфиденциальности и тип данных.
 

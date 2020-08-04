@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c6b44b5d7e8c83f1ee47462e8cfd297a77e836cf
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3fff08c4259424319621127d3e91762beaa46885
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918914"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472430"
 ---
 # <a name="azure-hdinsight-create-cluster-task"></a>Задача создания кластера Azure HDInsight
 
@@ -37,9 +37,8 @@ ms.locfileid: "86918914"
   
 Следующая таблица содержит описание полей этого диалогового окна.  
   
-|||  
+|Поле|Описание|  
 |-|-|  
-|**Поле**|**Описание**|  
 |AzureResourceManagerConnection|Выберите существующий или создайте новый диспетчер подключений Azure Resource Manager, который будет использоваться для создания кластера HDInsight.|  
 |AzureStorageConnection|Выберите существующий диспетчер подключений службы хранилища Azure или создайте диспетчер подключений, который ссылается на учетную запись хранения Azure, которая будет связана с кластером HDInsight.|
 |SubscriptionId|Укажите идентификатор подписки, где будет создан кластер HDInsight.|

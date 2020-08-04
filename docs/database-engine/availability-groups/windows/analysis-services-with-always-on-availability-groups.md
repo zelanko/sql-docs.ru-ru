@@ -12,16 +12,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 293df346a7eac72f23fa3b3bdd7bbe7994fdc54c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6e520363adc8fb8bff12688aa8c99b879bb510dd
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68892889"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522438"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Службы Analysis Services с группами доступности AlwaysOn
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
 
   Группа доступности AlwaysOn — это предопределенная коллекция реляционных баз данных SQL Server, которые при отработке отказа все вместе переключаются на другой ресурс, если создаются условия для отработки отказа в любой из них. Запросы перенаправляются в зеркальную базу данных на другом экземпляре в той же группе доступности. Если группы доступности используются для обеспечения высокой доступности, можно использовать базу данных в этой группе в качестве источника данных в табличном или многомерном решении служб Analysis Services. Если используется база данных доступности, все следующие операции службы Analysis Services работают, как ожидалось: обработка или импорт данных, прямые запросы к базе данных (с использованием хранилища ROLAP или режима DirectQuery) и обратная запись.  
   

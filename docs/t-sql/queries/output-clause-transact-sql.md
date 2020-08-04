@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a63b7d9565f93a770061fc39a9aac7eb4e496366
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 922e42698f3b911912ffc1f745d171498c37151f
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554779"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435557"
 ---
 # <a name="output-clause-transact-sql"></a>Предложение OUTPUT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,7 +60,6 @@ ms.locfileid: "86554779"
 ## <a name="syntax"></a>Синтаксис  
   
 ```syntaxsql
-  
 <OUTPUT_CLAUSE> ::=  
 {  
     [ OUTPUT <dml_select_list> INTO { @table_variable | output_table } [ ( column_list ) ] ]  
@@ -72,8 +71,8 @@ ms.locfileid: "86554779"
   
 <column_name> ::=  
 { DELETED | INSERTED | from_table_name } . { * | column_name }  
-    | $action  
-```  
+    | $action
+```
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
@@ -129,10 +128,10 @@ ms.locfileid: "86554779"
   
  Например, в следующей инструкции DELETE предложение `OUTPUT DELETED.*` возвращает все столбцы, удаленные из таблицы `ShoppingCartItem`:  
   
-```  
-DELETE Sales.ShoppingCartItem  
-    OUTPUT DELETED.*;  
-```  
+```sql
+DELETE Sales.ShoppingCartItem
+    OUTPUT DELETED.*;
+```
   
  *column_name*  
  Явное указание столбца. Любая ссылка на изменяемую таблицу должна предваряться соответствующим префиксом INSERTED или DELETED, например: INSERTED **.** _столбец\_имя_.  
@@ -233,21 +232,22 @@ DELETE Sales.ShoppingCartItem
 ## <a name="queues"></a>Очереди  
  Предложение OUTPUT может применяться в приложениях, которые применяют таблицы в качестве очередей или для хранения промежуточных результирующих наборов, то есть в приложениях, которые постоянно добавляют и удаляют строки из таблиц. В следующем примере предложение OUTPUT указано в инструкции DELETE и возвращает удаленную строку вызывающему приложению.  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 DELETE TOP(1) dbo.DatabaseLog WITH (READPAST)  
 OUTPUT deleted.*  
 WHERE DatabaseLogID = 7;  
-GO  
-  
-```  
+GO
+```
   
  В этом примере строка удаляется из таблицы, используемой в качестве очереди, и удаляемое значение возвращается приложению. Можно реализовать также и другую семантику, например применение таблицы как стека. Однако при этом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не гарантирует порядок, в котором строки обрабатываются и возвращаются инструкциями DML с предложением OUTPUT. Приложение должно указать соответствующее предложение WHERE, гарантирующее желаемую семантику, либо ориентироваться на то, что порядок, в котором строки обрабатываются операцией DML, не гарантируется. В следующем примере для реализации порядка обработки строк применяется вложенный запрос, который предполагает уникальность значений в столбце `DatabaseLogID`.  
   
-```  
-USE tempdb;  
-GO  
+```sql
+USE tempdb;
+GO
+
 CREATE TABLE dbo.table1  
 (  
     id INT,  
@@ -301,9 +301,8 @@ DROP TABLE dbo.table1;
 --id          employee  
 ------------- ------------------------------  
 --2           Tom  
---4           Alice  
-  
-```  
+--4           Alice
+```
   
 > [!NOTE]  
 >  Если сценарий позволяет нескольким приложениям производить разрушающее чтение из одной таблицы, в инструкциях UPDATE и DELETE следует указывать табличную подсказку READPAST. Это предотвратит блокировку, которая может возникнуть, если другое приложение уже считывает из таблицы первую подходящую запись.  
@@ -318,9 +317,10 @@ DROP TABLE dbo.table1;
 ### <a name="a-using-output-into-with-a-simple-insert-statement"></a>A. Применение предложения OUTPUT INTO в простой инструкции INSERT  
  В приведенном ниже примере производится вставка строки в таблицу `ScrapReason`, а затем с помощью предложения `OUTPUT` результаты выполнения инструкции возвращаются в переменную `@MyTableVar``table`. Поскольку столбец `ScrapReasonID` определен со свойством IDENTITY, для него значение в инструкции `INSERT` не указывается. Обратите внимание, что значение, которое компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] сформировал для этого столбца, возвращается предложением `OUTPUT` в столбец `inserted.ScrapReasonID`.  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 DECLARE @MyTableVar table( NewScrapReasonID smallint,  
                            Name varchar(50),  
                            ModifiedDate datetime);  
@@ -334,34 +334,33 @@ SELECT NewScrapReasonID, Name, ModifiedDate FROM @MyTableVar;
 --Display the result set of the table.  
 SELECT ScrapReasonID, Name, ModifiedDate   
 FROM Production.ScrapReason;  
-GO  
-  
-```  
+GO
+```
   
 ### <a name="b-using-output-with-a-delete-statement"></a>Б. Применение предложения OUTPUT в инструкции DELETE  
  В следующем примере производится удаление всех строк из таблицы `ShoppingCartItem`. Предложение `OUTPUT deleted.*` указывает, что результаты выполнения инструкции `DELETE`, то есть все столбцы удаляемых строк, будут возвращены вызывающему приложению. Следующая инструкция `SELECT` проверяет результаты операции удаления из таблицы `ShoppingCartItem`.  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 DELETE Sales.ShoppingCartItem  
 OUTPUT DELETED.*   
 WHERE ShoppingCartID = 20621;  
   
 --Verify the rows in the table matching the WHERE clause have been deleted.  
 SELECT COUNT(*) AS [Rows in Table] FROM Sales.ShoppingCartItem WHERE ShoppingCartID = 20621;  
-GO  
-  
-```  
+GO
+```
   
 ### <a name="c-using-output-into-with-an-update-statement"></a>В. Применение предложения OUTPUT INTO в инструкции UPDATE  
  В следующем примере в столбце `VacationHours` для первых 10 строк таблицы `Employee` устанавливается значение 25 %. Предложение `OUTPUT` возвращает значение `VacationHours`, существующее до применения инструкции `UPDATE` в столбце `deleted.VacationHours`, и обновленное значение в столбце `inserted.VacationHours` к табличной переменной `@MyTableVar`.  
   
  Две следующие инструкции `SELECT` возвращают значения в табличную переменную `@MyTableVar`, а результаты операции обновления — в таблицу `Employee`.  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
   
 DECLARE @MyTableVar table(  
     EmpID int NOT NULL,  
@@ -386,15 +385,15 @@ GO
 SELECT TOP (10) BusinessEntityID, VacationHours, ModifiedDate  
 FROM HumanResources.Employee;  
 GO  
-  
-```  
-  
+```
+
 ### <a name="d-using-output-into-to-return-an-expression"></a>Г. Применение предложения OUTPUT INTO для возврата выражения  
  Следующий пример, основанный на предыдущем примере, определяет выражение в предложении `OUTPUT` как разницу между обновленным значением `VacationHours` и значением `VacationHours` до применения операции обновления. Значение этого выражения возвращается в переменную `@MyTableVar``table` в столбце `VacationHoursDifference`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
-GO  
+GO
+
 DECLARE @MyTableVar table(  
     EmpID int NOT NULL,  
     OldVacationHours int,  
@@ -419,16 +418,16 @@ FROM @MyTableVar;
 GO  
 SELECT TOP (10) BusinessEntityID, VacationHours, ModifiedDate  
 FROM HumanResources.Employee;  
-GO  
-  
-```  
-  
+GO
+```
+
 ### <a name="e-using-output-into-with-from_table_name-in-an-update-statement"></a>Д. Применение предложения OUTPUT INTO с from_table_name в инструкции UPDATE  
  В приведенном ниже примере производится обновление столбца `ScrapReasonID` таблицы `WorkOrder` для всех заказов на производство с указанными значениями `ProductID` и `ScrapReasonID`. Предложение `OUTPUT INTO` возвращает значения из обновляемой таблицы (`WorkOrder`), а также из таблицы `Product`. Таблица `Product` в предложении `FROM` указывает, какие строки следует обновлять. Для таблицы `WorkOrder` определен триггер `AFTER UPDATE`, поэтому требуется ключевое слово `INTO`.  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 DECLARE @MyTestVar table (  
     OldScrapReasonID int NOT NULL,   
     NewScrapReasonID int NOT NULL,   
@@ -453,16 +452,16 @@ FROM Production.WorkOrder AS wo
 SELECT OldScrapReasonID, NewScrapReasonID, WorkOrderID,   
     ProductID, ProductName   
 FROM @MyTestVar;  
-GO  
-  
-```  
-  
+GO
+```
+
 ### <a name="f-using-output-into-with-from_table_name-in-a-delete-statement"></a>Е. Применение предложения OUTPUT INTO с from_table_name в инструкции DELETE  
  В следующем примере производится удаление строк из таблицы `ProductProductPhoto` на основе критерия поиска, определенного в предложении `FROM` инструкции `DELETE`. Предложение `OUTPUT` возвращает столбцы из таблицы, из которой производится удаление (`deleted.ProductID`, `deleted.ProductPhotoID`) и столбцы из таблицы `Product`. Эта таблица, указанная в предложении `FROM`, определяет, какие строки следует удалять.  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 DECLARE @MyTableVar table (  
     ProductID int NOT NULL,   
     ProductName nvarchar(50)NOT NULL,  
@@ -484,16 +483,16 @@ JOIN Production.Product as p
 SELECT ProductID, ProductName, ProductModelID, PhotoID   
 FROM @MyTableVar  
 ORDER BY ProductModelID;  
-GO  
-  
-```  
+GO
+```
   
 ### <a name="g-using-output-into-with-a-large-object-data-type"></a>Ж. Применение предложения OUTPUT INTO с типом данных больших объектов  
  В следующем примере для обновления части значения в столбце `DocumentSummary`, имеющем тип `nvarchar(max)` в таблице `Production.Document`, используется предложение `.WRITE`. Слово `components` заменяется словом `features`, при этом указывается новое слово, начальное смещение слова, заменяемого в исходном тексте и число заменяемых символов (длина). В примере предложение `OUTPUT` возвращает образы столбца `DocumentSummary` до и после изменения в переменную `@MyTableVar``table`. Обратите внимание, что возвращаются полные образы столбца `DocumentSummary` до и после изменения.  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 DECLARE @MyTableVar table (  
     SummaryBefore nvarchar(max),  
     SummaryAfter nvarchar(max));  
@@ -507,16 +506,16 @@ WHERE Title = N'Front Reflector Bracket Installation';
   
 SELECT SummaryBefore, SummaryAfter   
 FROM @MyTableVar;  
-GO  
-  
-```  
+GO
+```
   
 ### <a name="h-using-output-in-an-instead-of-trigger"></a>З. Применение предложения OUTPUT в триггере INSTEAD OF  
  Следующий пример демонстрирует применение предложения `OUTPUT` в триггере для возвращения результатов выполнения триггера. Первым делом создается представление для таблицы `ScrapReason`, затем для этого представления определяется триггер `INSTEAD OF INSERT`, позволяющий пользователю изменять в базовой таблице только столбец `Name`. Так как столбец `ScrapReasonID` базовой таблицы является столбцом `IDENTITY`, триггер не учитывает значение, предоставленное пользователем. Это приводит к тому, что компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] автоматически формирует верное значение. Указанное пользователем значение `ModifiedDate` также не учитывается, и вместо него подставляется текущая дата. Предложение `OUTPUT` возвращает значения, реально вставленные в таблицу `ScrapReason`.  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 IF OBJECT_ID('dbo.vw_ScrapReason','V') IS NOT NULL  
     DROP VIEW dbo.vw_ScrapReason;  
 GO  
@@ -540,9 +539,8 @@ END
 GO  
 INSERT vw_ScrapReason (ScrapReasonID, Name, ModifiedDate)  
 VALUES (99, N'My scrap reason','20030404');  
-GO  
-  
-```  
+GO
+```
   
  Ниже приведен результирующий набор, полученный 12 апреля 2004 года ('`2004-04-12'`). Обратите внимание, что столбцы `ScrapReasonIDActual` и `ModifiedDate` отражают те значения, которые были получены в результате выполнения триггера, а не те, что были указаны в инструкции `INSERT`.  
   
@@ -555,9 +553,10 @@ GO
 ### <a name="i-using-output-into-with-identity-and-computed-columns"></a>И. Применение предложения OUTPUT INTO со столбцами идентификаторов и вычисляемыми столбцами  
  В следующем примере создается таблица `EmployeeSales`, а затем в нее с помощью инструкции `INSERT` вставляется несколько строк, получаемых инструкцией `SELECT` из исходных таблиц. Таблица `EmployeeSales` содержит столбец идентификаторов (`EmployeeID`) и вычисляемый столбец (`ProjectedSales`).  
   
-```  
-USE AdventureWorks2012 ;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 IF OBJECT_ID ('dbo.EmployeeSales', 'U') IS NOT NULL  
     DROP TABLE dbo.EmployeeSales;  
 GO  
@@ -596,16 +595,16 @@ FROM @MyTableVar;
 GO  
 SELECT EmployeeID, LastName, FirstName, CurrentSales, ProjectedSales  
 FROM dbo.EmployeeSales;  
-GO  
-  
-```  
+GO
+```
   
 ### <a name="j-using-output-and-output-into-in-a-single-statement"></a>К. Применение предложений OUTPUT и OUTPUT INTO в одной инструкции  
  В следующем примере производится удаление строк из таблицы `ProductProductPhoto` на основе критерия поиска, определенного в предложении `FROM` инструкции `DELETE`. Предложение `OUTPUT INTO` возвращает столбцы из удаляемой таблицы (`deleted.ProductID`, `deleted.ProductPhotoID`) и столбцы из таблицы `Product` в переменную `@MyTableVar``table`. Таблица `Product` в предложении `FROM` определяет, какие строки необходимо удалять. Предложение `OUTPUT` возвращает вызывающему приложению столбцы `deleted.ProductID`, `deleted.ProductPhotoID`, а также дату и время удаления строки из таблицы `ProductProductPhoto`.  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 DECLARE @MyTableVar table (  
     ProductID int NOT NULL,   
     ProductName nvarchar(50)NOT NULL,  
@@ -627,16 +626,16 @@ WHERE p.ProductID BETWEEN 800 and 810;
 --Display the results of the table variable.  
 SELECT ProductID, ProductName, PhotoID, ProductModelID   
 FROM @MyTableVar;  
-GO  
-  
-```  
+GO
+```
   
 ### <a name="k-inserting-data-returned-from-an-output-clause"></a>Л. Вставка данных, возвращенных предложением OUTPUT  
  В следующем примере собираются данные, возвращаемые предложением `OUTPUT` инструкции `MERGE`, а затем эти данные вставляются в другую таблицу. Инструкция `MERGE` ежедневно обновляет столбец `Quantity` таблицы `ProductInventory` в соответствии с заказами, обрабатываемыми в таблице `SalesOrderDetail`. Инструкция также удаляет строки с продуктами, запас которых сократился до `0` или ниже. В примере собираются удаленные строки и вставляются в другую таблицу, `ZeroInventory`, в которой ведется учет закончившихся продуктов.  
   
-```  
-USE AdventureWorks2012;  
-GO  
+```sql
+USE AdventureWorks2012;
+GO
+
 IF OBJECT_ID(N'Production.ZeroInventory', N'U') IS NOT NULL  
     DROP TABLE Production.ZeroInventory;  
 GO  
@@ -663,9 +662,10 @@ WHERE Action = 'DELETE';
 IF @@ROWCOUNT = 0  
 PRINT 'Warning: No rows were inserted';  
 GO  
-SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;  
-  
-```  
+SELECT DeletedProductID, RemovedOnDate
+FROM Production.ZeroInventory;
+GO
+```
   
 ## <a name="see-also"></a>См. также:  
  [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)   
@@ -673,6 +673,4 @@ SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)   
  [table (Transact-SQL)](../../t-sql/data-types/table-transact-sql.md)   
  [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)   
- [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
-  
-  
+ [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)

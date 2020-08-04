@@ -13,12 +13,12 @@ f1_keywords:
 - sql13.dts.designer.odataconnectionmanager.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0f97998b439fca6e0290966e2ee8fc2bdd785150
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 788aaa50e7bf083a91a4c919708e0677fc190476
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919678"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472440"
 ---
 # <a name="odata-connection-manager"></a>Диспетчер соединений OData
 
@@ -61,9 +61,8 @@ ms.locfileid: "86919678"
 ## <a name="odata-connection-manager-properties"></a>Свойства диспетчера соединений OData  
  В следующем списке описаны свойства диспетчера подключений OData.  
   
-|||  
-|-|-|  
 |Свойство|Description|  
+|-|-|  
 |Url|URL-адрес сервисного документа.|  
 |UserName|Имя пользователя для проверки подлинности, если это необходимо.|  
 |Пароль|Пароль для проверки подлинности, если это необходимо.|  

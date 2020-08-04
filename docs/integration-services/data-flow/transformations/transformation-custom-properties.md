@@ -41,12 +41,12 @@ helpviewer_keywords:
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e4baea69adce173ee5421605825008f7721b92bd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fb2e93d5266b28ad7be189cd14034aca49abc3a1
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916690"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472528"
 ---
 # <a name="transformation-custom-properties"></a>Transformation Custom Properties
 
@@ -60,19 +60,42 @@ ms.locfileid: "86916690"
  Некоторые свойства преобразований можно устанавливать с помощью выражений свойств. Дополнительные сведения см. в разделе [Свойства потока данных, которые можно задавать с помощью выражений](https://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8).  
   
 ## <a name="transformations-with-custom-properties"></a>Преобразования с пользовательскими свойствами  
-  
-||||  
-|-|-|-|  
-|[Aggregate](#aggregate)|[Экспорт столбца](#extract)|[Количество строк](#rowcount)|  
-|[Аудит](#audit)|[Нечеткое группирование](#fgroup)|[Выборка строк](#rowsamp)|  
-|[Преобразование кэша](#cachetransform)|[Нечеткий уточняющий запрос](#flookup)|[Компонент скрипта](#script)|  
-|[Таблица символов](#charmap)|[Импорт столбцов](#insert)|[Медленно изменяющееся измерение](#scd)|  
-|[Условное разбиение](#condsplit)|[Уточняющий запрос](#lookup)|[Sort](#sort)|  
-|[Скопировать столбец](#copymap)|[Merge Join](#mjoin)|[Извлечение терминов](#textract)|  
-|[Преобразование данных](#dataconv)|[Команда OLE DB](#oledbcmd)|[Уточняющий запрос термина](#tlookup)|  
-|[Запрос интеллектуального анализа данных](#dmquery)|[Процентное отношение выборки](#percent)|[отмена свертывания](#unpivot)|  
-|[Производный столбец](#derived)|[Сведение](#pivot)||  
-  
+
+:::row:::
+    :::column:::
+        [Aggregate](#aggregate)  
+        [Аудит](#audit)  
+        [Преобразование кэша](#cachetransform)  
+        [Таблица символов](#charmap)  
+        [Условное разбиение](#condsplit)  
+        [Скопировать столбец](#copymap)  
+        [Преобразование данных](#dataconv)  
+        [Запрос интеллектуального анализа данных](#dmquery)  
+        [Производный столбец](#derived)  
+    :::column-end:::
+    :::column:::
+        [Экспорт столбца](#extract)  
+        [Нечеткое группирование](#fgroup)  
+        [Нечеткий уточняющий запрос](#flookup)  
+        [Импорт столбцов](#insert)  
+        [Уточняющий запрос](#lookup)  
+        [Merge Join](#mjoin)  
+        [Команда OLE DB](#oledbcmd)  
+        [Процентное отношение выборки](#percent)  
+        [Сведение](#pivot)  
+    :::column-end:::
+    :::column:::
+        [Количество строк](#rowcount)  
+        [Выборка строк](#rowsamp)  
+        [Компонент скрипта](#script)  
+        [Медленно изменяющееся измерение](#scd)  
+        [Sort](#sort)  
+        [Извлечение терминов](#textract)  
+        [Уточняющий запрос термина](#tlookup)  
+        [отмена свертывания](#unpivot)  
+    :::column-end:::
+:::row-end:::
+
 ### <a name="transformations-without-custom-properties"></a>Преобразования без пользовательских свойств  
  Следующие преобразования не обладают пользовательскими свойствами на уровне компонента, входа или выхода: [преобразование "Слияние"](../../../integration-services/data-flow/transformations/merge-transformation.md), [преобразование "Многоадресная рассылка"](../../../integration-services/data-flow/transformations/multicast-transformation.md) и [преобразование "Объединить все"](../../../integration-services/data-flow/transformations/union-all-transformation.md). Они используют только свойства, общие для всех компонентов потока данных.  
   
