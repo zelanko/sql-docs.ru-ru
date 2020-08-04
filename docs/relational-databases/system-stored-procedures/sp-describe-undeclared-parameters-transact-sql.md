@@ -18,15 +18,15 @@ ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: a3745f00e8e2e6d7ed0386a128ee6bcec2adebea
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2c40ef34ffcde3f7a1d02f6ba45963bd83df841a
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831188"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522548"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)] 
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)] 
 
   Возвращает результирующий набор, содержащий метаданные о необъявленных параметрах в [!INCLUDE[tsql](../../includes/tsql-md.md)] пакете. Учитывает каждый параметр, используемый в пакете ** \@ tsql** , но не объявленный в ** \@ параметрах**. Возвращается результирующий набор, содержащий одну строку для каждого такого параметра со сведениями о предполагаемом типе параметра. Процедура возвращает пустой результирующий набор, если у пакета ввода ** \@ tsql** нет параметров, кроме тех, которые объявлены в ** \@ параметре params**.  
   
@@ -87,7 +87,7 @@ sp_describe_undeclared_parameters
 |**suggested_tds_type_id**|**int NOT NULL**|Для внутреннего использования.|  
 |**suggested_tds_length**|**int NOT NULL**|Для внутреннего использования.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_describe_undeclared_parameters** всегда возвращает состояние возврата, равное нулю.  
   
  Чаще всего она применяется, когда приложению передается инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)], которая может содержать параметры и должна некоторым образом их обрабатывать. Примером является пользовательский интерфейс (такой как ODBCTest или RowsetViewer), где пользователь передает запрос с синтаксисом параметров ODBC. Приложение должно динамически обнаруживать число параметров и запрашивать каждый параметр у пользователя.  
@@ -111,7 +111,7 @@ sp_describe_undeclared_parameters
 ## <a name="parameter-selection-algorithm"></a>Алгоритм выбора параметров  
  Для запроса с необъявленными параметрами выполняется процесс определения типов данных необъявленных параметров, состоящий из трех шагов.  
   
- **Шаг 1.**  
+ **Шаг 1**  
   
  Первым шагом определения типов данных для запроса с необъявленными параметрами является поиск типов данных для всех вложенных выражений, типы данных которых не зависят от необъявленных параметров. Тип можно определить для следующих выражений:  
   
@@ -137,7 +137,7 @@ SELECT * FROM t1 WHERE @p1 = SUBSTRING(@p2, 2, 3)
 SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)  
 ```
   
- **Шаг 2.**  
+ **Шаг 2**  
   
  Для данного необъявленного параметра \@ p алгоритм выведения типа находит внутреннее выражение E ( \@ p), которое содержит \@ p, и является одним из следующих:  
   
@@ -177,7 +177,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      Тип данных для \@ P1, \@ P2 и \@ P3 будет иметь тип данных C1, тип возвращаемых данных dbo. tbl и тип данных параметра для dbo. tbl соответственно.  
   
-     В качестве особого случая, если \@ p является аргументом \< оператора, >, \< = или >=, простые правила удержания не применяются. Алгоритм определения типов будет использовать общие правила определения, описанные в следующем разделе. Например, если столбец c1 имеет тип данных char(30), рассмотрим следующие два запроса:  
+     В качестве особого случая, если \@ p является аргументом \<, > \<=, or > оператора, =, простые правила удержания не применяются. Алгоритм определения типов будет использовать общие правила определения, описанные в следующем разделе. Например, если столбец c1 имеет тип данных char(30), рассмотрим следующие два запроса:  
   
     ```sql
     SELECT * FROM t WHERE c1 = @p  
@@ -225,7 +225,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      В этом случае E ( \@ p) имеет Col_Int + \@ p, а TT ( \@ p) — **int**. **int** выбирается для \@ p, так как не создает неявных преобразований. Любой другой выбор типа данных требует не меньше одного неявного преобразования.  
   
-2.  Если несколько типов данных имеют минимальное число преобразований, то используется тип данных с максимальным приоритетом. Например:  
+2.  Если несколько типов данных имеют минимальное число преобразований, то используется тип данных с максимальным приоритетом. Пример  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  
@@ -276,7 +276,7 @@ WHERE object_id = @id OR NAME = @name',
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
  [sys. dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
  [sys. dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)
