@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d9a3f6e52547b40adefd2b94ab320ae4784837aa
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 23df9963bccefaa5a637c7b93196f37e722ac3e4
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86302003"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332023"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -163,7 +163,7 @@ ALTER AVAILABILITY GROUP group_name
  *group_name*  
  Указывает имя новой группы доступности. Аргумент *group_name* должен быть допустимым идентификатором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и являться уникальным во всех группах доступности в кластере WSFC.  
   
- AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY | SECONDARY_ONLY| SECONDARY | NONE }  
+ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NONE }  
  Указывает приоритет, согласно которому задание резервного копирования вычисляет первичную реплику при выборе места для создания резервных копий. Вы можете написать скрипт для того, чтобы задание резервного копирования учитывало приоритет автоматического резервного копирования. Важно понимать, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не определяет приоритет, поэтому он не влияет на выполнение нерегламентированного резервного копирования.  
   
  Поддерживается только в первичной реплике.  
@@ -191,7 +191,7 @@ ALTER AVAILABILITY GROUP group_name
 > [!NOTE]  
 >  Для просмотра приоритета автоматического резервного копирования существующей группы доступности необходимо выбрать столбец **automated_backup_preference** или **automated_backup_preference_desc** представления каталога [sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md). Кроме того, приоритет реплики резервного копирования можно просмотреть в представлении [sys.fn_hadr_backup_is_preferred_replica (Transact-SQL)](../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md).  Эта функция всегда возвращает значение 1 при наличии хотя бы одной реплики, даже если `AUTOMATED_BACKUP_PREFERENCE = NONE`.  
   
- FAILURE_CONDITION_LEVEL **=** { 1 | 2 | **3** | 4 | 5 }  
+ FAILURE_CONDITION_LEVEL **=** { 1 \| 2 \| **3** \| 4 \| 5 }  
  Указывает, какие условия сбоя могут запустить автоматический переход на другой ресурс в этой группе доступности. Параметр FAILURE_CONDITION_LEVEL задается на уровне группы, однако он действует только в отношении реплик доступности, настроенных в режиме доступности синхронной фиксации (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT). Более того, условия сбоя могут запустить автоматический переход на другой ресурс только в том случае, если и первичная, и вторичная реплики настроены на режим автоматического перехода на другой ресурс (FAILOVER_MODE **=** AUTOMATIC), при этом вторичная реплика должна в данный момент быть синхронизирована с первичной.  
   
  Поддерживается только в первичной реплике.  

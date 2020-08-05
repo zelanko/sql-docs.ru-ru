@@ -30,15 +30,15 @@ helpviewer_keywords:
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fdeeb1b5d16612415b1661df257f0530d8749df5
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 122aa921cb742d05c46e2d32430c857f4a723dee
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151647"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920900"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag, программа
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
   Программа **SQLdiag** — это универсальная диагностическая программа для сбора сведений, которая может выполняться как консольное приложение или как служба. Программа **SQLdiag** позволяет выполнять сбор журналов и файлов данных с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и других типов серверов, а также мониторинг серверов и устранение определенных неполадок на серверах. Программа**SQLdiag** предназначена для ускорения и упрощения сбора диагностических сведений, необходимых для службы поддержки пользователей [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
   
 > [!NOTE]  
@@ -360,7 +360,7 @@ SQLDIAG START /A Instance1
  Запустить несколько экземпляров программы **SQLdiag** на одном компьютере можно, указав в командной строке **/A**_SQLdiag\_application\_name_. Это полезно для одновременного сбора различных наборов диагностических сведений для одного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Например, именованный экземпляр **SQLdiag** можно настроить на непрерывное выполнение сбора небольшого количества данных. Тогда в случае возникновения определенной проблемы в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]можно запустить экземпляр **SQLdiag** по умолчанию, чтобы собрать диагностические данные об этой проблеме или собрать набор диагностических данных, запрошенных службами поддержки пользователей [!INCLUDE[msCoName](../includes/msconame-md.md)] для диагностики проблемы.  
   
 ## <a name="collecting-diagnostic-data-from-clustered-sql-server-instances"></a>Сбор диагностических данных из кластеризованных экземпляров SQL Server  
- Программа**SQLdiag** поддерживает сбор диагностических данных из кластеризованных экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Для сбора диагностических данных из кластеризованных экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] убедитесь, что в качестве атрибута **name** элемента **\<Machine>** в файле конфигурации SQLDiag.Xml указан символ **"."** , и не указывайте аргумент командной строки **/G**. По умолчанию для атрибута **name** в файле конфигурации указывается символ **"."** , а аргумент **/G** отключен. Как правило, при сборе данных из кластеризованных экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] не нужно изменять файл конфигурации или аргументы командной строки.  
+ Программа**SQLdiag** поддерживает сбор диагностических данных из кластеризованных экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Для сбора диагностических данных из кластеризованных экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] убедитесь, что в качестве атрибута **name** элемента **\<Machine>** в файле конфигурации SQLDiag.Xml указан символ **.** , и не указывайте аргумент командной строки **/G**. По умолчанию для атрибута **name** в файле конфигурации указывается символ **"."** , а аргумент **/G** отключен. Как правило, при сборе данных из кластеризованных экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] не нужно изменять файл конфигурации или аргументы командной строки.  
   
  Если в качестве имени компьютера указан символ **.** , то программа **SQLdiag** определяет, что она выполняется на кластере, и одновременно получает диагностические сведения для всех виртуальных экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , установленных в этом кластере. Если нужно собрать диагностические сведения только для одного виртуального экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], выполняемого на компьютере, укажите этот виртуальный экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в качестве атрибута **name** элемента **\<Machine>** в файле SQLDiag.Xml.  
   
