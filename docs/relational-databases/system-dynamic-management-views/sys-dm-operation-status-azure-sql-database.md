@@ -1,5 +1,5 @@
 ---
-title: sys. dm_operation_status (база данных SQL Azure) | Документация Майкрософт
+title: sys. dm_operation_status | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/05/2017
 ms.service: sql-database
@@ -19,16 +19,16 @@ ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 6b0894c29e1c3cb525cd9378c0a95e56299e8a1e
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: 080d12cdcf945fe34a2c8f1ab9ea7414e714da8c
+ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85440711"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87544387"
 ---
-# <a name="sysdm_operation_status-azure-sql-database"></a>sys.dm_operation_status (база данных SQL Azure)
+# <a name="sysdm_operation_status"></a>sys.dm_operation_status
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
 
   Возвращает сведения об операциях, выполненных в базах данных на сервере [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
@@ -46,14 +46,14 @@ ms.locfileid: "85440711"
 |error_code|**int**|Код ошибки, возникшей при неудачном выполнении операции. Если значение равно 0, операция завершилась успешно.|  
 |error_desc|**nvarchar (2048)**|Описание ошибки, которая возникла во время неудачного выполнения операции.|  
 |error_severity|**int**|Степень серьезности ошибки, которая возникла во время неудачного выполнения операции. Дополнительные сведения о серьезности ошибок см. в разделе [ядро СУБД серьезности ошибок](https://go.microsoft.com/fwlink/?LinkId=251052).|  
-|error_state|**int**|Зарезервировано для последующего использования. Совместимость с будущими версиями не гарантируется.|  
+|error_state|**int**|Зарезервировано для будущего использования. Совместимость с будущими версиями не гарантируется.|  
 |start_time|**datetime**|Метка времени начала операции.|  
 |last_modify_time|**datetime**|Метка времени последнего изменения записи для длительных операций. Для успешно выполненных операций в этом поле отображается метка времени завершения операции.|  
   
 ## <a name="permissions"></a>Разрешения  
  Это представление доступно в базе данных **master** только для входа субъекта уровня сервера.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Чтобы использовать это представление, необходимо подключиться к базе данных **master** . Используйте `sys.dm_operation_status` представление в базе данных **master** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] сервера для наблюдения за состоянием следующих операций, выполняемых над [!INCLUDE[ssSDS](../../includes/sssds-md.md)] :  
   
 -   Создание базы данных  
@@ -85,7 +85,7 @@ SELECT * FROM sys.dm_operation_status
    ORDER BY start_time DESC;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции георепликации &#40;базе данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
  [sys. dm_geo_replication_link_status &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
  [sys. geo_replication_links &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   

@@ -17,15 +17,15 @@ author: VanMSFT
 ms.author: vanto
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: d06646127c59dca8e72f061b049cabb42f8073ab
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: bace837ef11fc106632b84fe01ed5c8bc1448ffa
+ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246693"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87544356"
 ---
 # <a name="firewall-rules-stored-procedures-azure-sql-database"></a>Хранимые процедуры правил брандмауэра (база данных SQL Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]
 
   В этом разделе представлены следующие хранимые процедуры, которые создают и удаляют правила брандмауэра. [!INCLUDE[tsql_md](../../includes/tsql-md.md)]правила брандмауэра можно использовать с [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] и [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] . Дополнительные сведения см. в статье [о настройке правил брандмауэра для базы данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/).
 

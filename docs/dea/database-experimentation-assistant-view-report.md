@@ -1,6 +1,6 @@
 ---
 title: Просмотр аналитических отчетов для SQL Server обновлений
-description: Просмотр аналитических отчетов в Database Experimentation Assistant
+description: Узнайте, как просматривать и анализировать аналитические отчеты о производительности в Database Experimentation Assistant (ДЕА).
 ms.custom: seo-lt-2019
 ms.date: 02/04/2020
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: 2a6d027c1fb1834e4033a11a498bfc8cdad4561f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5850f3f78590b5ceccea49033b401055180d715e
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76977611"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565493"
 ---
 # <a name="view-analysis-reports-in-database-experimentation-assistant"></a>Просмотр аналитических отчетов в Database Experimentation Assistant
 
@@ -83,6 +83,6 @@ ms.locfileid: "76977611"
    > [!NOTE]
    > При анализе расширенного события (. XEL-). сведения о плане запроса не собираются для ограничения нехватки памяти на компьютере пользователя.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - Чтобы узнать, как создать аналитический отчет в командной строке, см. раздел [Запуск в командной строке](database-experimentation-assistant-run-command-prompt.md).

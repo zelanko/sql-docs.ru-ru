@@ -1,6 +1,6 @@
 ---
 title: Общие сведения о Database Experimentation Assistant
-description: Общие сведения о Database Experimentation Assistant
+description: Дополнительные сведения о Database Experimentation Assistant (ДЕА), например о том, как оценить целевую версию SQL Server для конкретной рабочей нагрузки.
 ms.date: 12/12/2019
 ms.prod: sql
 ms.suite: sql
@@ -11,12 +11,12 @@ author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: dce2bfcafeb95a72e6584e4b619f1e4e5e12bdf1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 94bfd77da2658a4cb6b0e5e07868605f1c12140c
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759160"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565554"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>Общие сведения о Database Experimentation Assistant
 
@@ -32,7 +32,7 @@ Database Experimentation Assistant (ДЕА) — это решение экспе
 
 ## <a name="get-dea"></a>Получить ДЕА
 
-Чтобы установить Деа, [Скачайте](https://www.microsoft.com/download/details.aspx?id=54090) последнюю версию средства. Затем запустите файл **датабасикспериментатионассистант. exe** .
+Чтобы установить Деа, [Скачайте](https://www.microsoft.com/download/details.aspx?id=54090) последнюю версию средства. Затем запустите файл **DatabaseExperimentationAssistant.exe** .
 
 ## <a name="solution-architecture-for-comparing-workloads"></a>Архитектура решения для сравнения рабочих нагрузок
 
@@ -105,7 +105,7 @@ Database Experimentation Assistant (ДЕА) — это решение экспе
 Сбор и отправка данных телеметрии необязательно. Чтобы указать, какие события собираются и какие события были собраны в корпорацию Майкрософт, выполните следующие действия.
 
 1. Перейдите в расположение, в котором установлена Деа (например, C: \\ Program Files (x86) \\ Microsoft Corporation \\ Database experimentation Assistant).
-2. Откройте и измените config-файлы **ДЕА. exe. config** (для приложения) и **деакмд. exe. config** (для интерфейса командной строки), чтобы решить проблему соответствующим образом.
+2. Откройте и измените config-файлы **DEA.exe.config** (для приложения) и **DEACmd.exe.config** (для интерфейса командной строки), чтобы решить проблему соответствующим образом:
     - Чтобы отключить сбор данных о типе события, задайте для *события* (например, **TraceEvent**) значение **false**. Чтобы снова начать сбор события, установите значение **true**.
     - Чтобы отключить сохранение локальных копий событий, присвойте параметру **трацелогжеренаблед** значение **false**. Чтобы снова приступить к сохранению локальных копий, присвойте параметру значение **true**.
     - Чтобы отключить отправку событий в корпорацию Майкрософт, присвойте параметру **аппинсигхтслогжеренаблед** значение **false**. Чтобы снова начать отправку событий в корпорацию Майкрософт, установите значение **true**.

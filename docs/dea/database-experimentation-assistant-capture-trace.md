@@ -1,6 +1,6 @@
 ---
 title: Запись трассировки для SQL Server обновлений
-description: Запись трассировки в Database Experimentation Assistant для SQL Server обновлений
+description: Используйте Database Experimentation Assistant (ДЕА), чтобы создать файл трассировки с журналом перехваченных событий сервера.
 ms.custom: seo-lt-2019
 ms.date: 12/12/2019
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 1c87d791d5a5a16ec3b0d07c6a630f133a7f673c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c560aa2c5ba4b5113ce711601a4e85aab2788240
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289832"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565596"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Запись трассировки в Database Experimentation Assistant
 
@@ -134,7 +134,7 @@ Database Experimentation Assistant (ДЕА) можно использовать 
 - Имя компьютера, на котором работает SQL Server, является допустимым. Для подтверждения попробуйте подключиться к компьютеру, на котором работает SQL Server, с помощью SQL Server Management Studio (SSMS).
 - Конфигурация брандмауэра не блокирует подключения к компьютеру, на котором работает SQL Server.
 - Пользователь имеет разрешения, перечисленные в [разделе часто задаваемые вопросы о воспроизведении](https://docs.microsoft.com/sql/dea/database-experimentation-assistant-replay-trace?view=sql-server-ver15#frequently-asked-questions-about-trace-replay).
-- Имя трассировки не соответствует стандартному соглашению о смене\_ключей (захват 1). Вместо этого попробуйте использовать такие имена трассировок\_, как Capture 1A или Capture1.
+- Имя трассировки не соответствует стандартному соглашению о смене ключей (захват \_ 1). Вместо этого попробуйте использовать такие имена трассировок, как Capture \_ 1A или Capture1.
 
 Ниже приведены некоторые возможные ошибки, которые могут возникнуть, и способы их устранения.
 
@@ -147,6 +147,6 @@ Database Experimentation Assistant (ДЕА) можно использовать 
 
 Если вы видите другие ошибки с меткой " *код ошибки SQL*", см. раздел [ядро СУБД Errors](https://docs.microsoft.com/sql/relational-databases/errors-events/database-engine-events-and-errors) For detailed descriptions.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - Сведения о настройке средств распределенное воспроизведение в SQL Server перед воспроизведением захваченной трассировки см. в разделе [настройка распределенное воспроизведение для Database experimentation Assistant](database-experimentation-assistant-configure-replay.md).

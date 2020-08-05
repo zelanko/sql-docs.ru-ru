@@ -19,15 +19,15 @@ ms.assetid: a974a561-5382-4039-8499-3a56767bcefe
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 9bc37626879b743eb3a5d0864490dc3543a8d8a9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c64e9a9773ae01d4714e5c36d49097ae4f4856f2
+ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70152065"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87544407"
 ---
 # <a name="sp_set_firewall_rule-azure-sql-database"></a>sp_set_firewall_rule (база данных SQL Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]
 
   Создает или обновляет параметры брандмауэра для сервера [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Эта хранимая процедура доступна только в базе данных master для имени входа субъекта уровня сервера или назначенного Azure Active Directory участника.  
   
@@ -42,13 +42,13 @@ sp_set_firewall_rule [@name =] 'name',
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- В следующей таблице показаны поддерживаемые аргументы и параметры в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ В следующей таблице показаны поддерживаемые аргументы и параметры в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .  
   
 |Имя|Datatype|Описание|  
 |----------|--------------|-----------------|  
-|[@name =] безымян|**NVARCHAR (128)**|Имя, используемое для описания и определения параметров брандмауэра на уровне сервера.|  
-|[@start_ip_address =] "start_ip_address"|**VARCHAR (50)**|Наименьший IP-адрес в диапазоне параметра брандмауэра на уровне сервера. IP-адреса, которые больше этого адреса или равны ему, могут попытаться подключиться к серверу [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Наименьший возможный IP-адрес: `0.0.0.0`.|  
-|[@end_ip_address =] "end_ip_address"|**VARCHAR (50)**|Наибольший IP-адрес в диапазоне параметра брандмауэра на уровне сервера. IP-адреса, которые меньше этого адреса или равны ему, могут попытаться подключиться к серверу [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Наибольший возможный IP-адрес: `255.255.255.255`.<br /><br /> Примечание. попытки подключения Azure разрешены, если это поле и поле *start_ip_address* равны `0.0.0.0`.|  
+|[ @name =] "имя"|**NVARCHAR (128)**|Имя, используемое для описания и определения параметров брандмауэра на уровне сервера.|  
+|[ @start_ip_address =] "start_ip_address"|**VARCHAR (50)**|Наименьший IP-адрес в диапазоне параметра брандмауэра на уровне сервера. IP-адреса, которые больше этого адреса или равны ему, могут попытаться подключиться к серверу [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Наименьший возможный IP-адрес: `0.0.0.0`.|  
+|[ @end_ip_address =] "end_ip_address"|**VARCHAR (50)**|Наибольший IP-адрес в диапазоне параметра брандмауэра на уровне сервера. IP-адреса, которые меньше этого адреса или равны ему, могут попытаться подключиться к серверу [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Наибольший возможный IP-адрес: `255.255.255.255`.<br /><br /> Примечание. попытки подключения Azure разрешены, если это поле и поле *start_ip_address* равны `0.0.0.0` .|  
   
 ## <a name="remarks"></a>Remarks  
  Имена настроек брандмауэра на уровне сервера должны быть уникальными. Если имя параметра, указанного для хранимой процедуры, уже существует в таблице параметров брандмауэра, начальный и конечный IP-адреса будут обновлены. В противном случае будет создан новый параметр брандмауэра на уровне сервера.  
@@ -69,7 +69,7 @@ exec sp_set_firewall_rule N'Allow Azure', '0.0.0.0', '0.0.0.0';
   
 ```  
   
- Следующий код создает параметр брандмауэра уровня сервера `Example setting 1` только для IP-адреса `0.0.0.2`. Затем `sp_set_firewall_rule` хранимая процедура вызывается снова для обновления конечного IP-адреса на `0.0.0.4`, в этом параметре брандмауэра. При этом создается диапазон, который разрешает IP `0.0.0.2`- `0.0.0.3`адресам `0.0.0.4` , и доступ к серверу.  
+ Следующий код создает параметр брандмауэра уровня сервера `Example setting 1` только для IP-адреса `0.0.0.2`. Затем `sp_set_firewall_rule` хранимая процедура вызывается снова для обновления конечного IP-адреса на `0.0.0.4` , в этом параметре брандмауэра. При этом создается диапазон, который разрешает IP-адресам `0.0.0.2` , `0.0.0.3` и `0.0.0.4` доступ к серверу.  
   
 ```  
 -- Create server-level firewall setting for only IP 0.0.0.2  

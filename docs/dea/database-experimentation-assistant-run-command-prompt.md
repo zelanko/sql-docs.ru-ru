@@ -1,6 +1,6 @@
 ---
 title: Запуск Database Experimentation Assistant из командной строки
-description: Запуск Database Experimentation Assistant из командной строки
+description: Узнайте, как записать трассировку в Database Experimentation Assistant (ДЕА), а затем анализировать результаты из командной строки.
 ms.custom: seo-lt-2019
 ms.date: 02/25/2020
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: 674f40b16437547956178293c5b491b11c8b2f89
-ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
+ms.openlocfilehash: 161258d8359ce46b9ff2afb2a878c008059772db
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85215491"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565533"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>Запуск Database Experimentation Assistant из командной строки
 
@@ -132,6 +132,6 @@ ms.locfileid: "85215491"
 | --Абу | URL-адрес большого двоичного объекта для экземпляра с ключом SAS |
 | --ББУ | URL-адрес большого двоичного объекта для экземпляра B с ключом SAS |
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - Дополнительные сведения об использовании ДЕА см. в разделе [обзор Database experimentation Assistant](database-experimentation-assistant-overview.md).
