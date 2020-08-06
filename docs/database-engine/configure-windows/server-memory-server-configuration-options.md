@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 27e39532a3b6198fd6d54c7b58407e76c487325a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8620da6349efe012e9e0d75d6ddf5efada437832
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751900"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442809"
 ---
 # <a name="server-memory-configuration-options"></a>Параметры конфигурации памяти сервера
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,9 +77,14 @@ ms.locfileid: "85751900"
   
 2.  Щелкните узел **Память** .  
   
-3.  В пункте **Параметры памяти сервера** введите нужное значение в полях **Минимальный размер памяти сервера** и **Максимальный размер памяти сервера**.  
+3.  В пункте **Параметры памяти сервера**введите нужные значения в поля **Минимальный размер памяти сервера** и **Максимальный размер памяти сервера**.  
   
      Оставьте параметры по умолчанию, чтобы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] изменял требования к памяти динамически, исходя из доступности системных ресурсов. Рекомендуется задать для параметра **Макс. памяти сервера** значение, [указанное выше](#max_server_memory). 
+
+На следующем снимке экрана показаны все три шага: 
+
+:::image type="content" source="media/server-memory-server-configuration-options/configure-memory-in-ssms.png" alt-text="Настройка памяти в SSMS":::
+
   
 ## <a name="lock-pages-in-memory-lpim"></a>Блокировка страниц в памяти (LPIM) 
 Эта политика Windows определяет, какие учетные записи могут использовать процесс для сохранения данных в физической памяти, чтобы система не отправляла страницы данных в виртуальную память на диске. Блокировка страниц в памяти может обеспечивать отклик сервера, когда содержимое памяти заносится в файл подкачки. Для параметра **Блокировка страниц в памяти** указывается значение "Включено" в экземплярах выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition и выше, если учетной записи с привилегией на выполнение sqlservr.exe предоставлено право пользователя Windows *Блокировка страниц в памяти* (LPIM).  

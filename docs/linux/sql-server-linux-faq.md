@@ -7,12 +7,12 @@ ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: bd1c4ad80abb5e6df26ea09fc19e83b457fee87c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a41223036980a77a45094f2a64c22b898902548c
+ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895347"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87477356"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Часто задаваемые вопросы об SQL Server на Linux
 
@@ -163,5 +163,9 @@ ms.locfileid: "85895347"
 1. **Можно ли назначить другого владельца файлов и каталогов SQL Server вместо установленной учетной записи и группы mssql?**
 
    Изменение владельца по умолчанию каталога и файлов SQL Server не поддерживается. Учетная запись и группа mssql предназначены специально для SQL Server, и интерактивный вход для них невозможен.
-
+   
+ 1. **Поддерживаются ли символьные ссылки для каталогов журналов и данных SQL Server?** 
+    
+    Нет, символьные ссылки не поддерживаются для каталогов журналов и данных SQL Server. Сведения об изменении расположения для таких каталогов по умолчанию см. в разделе [Изменение каталога по умолчанию для данных или журналов](sql-server-linux-configure-mssql-conf.md#datadir).
+    
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

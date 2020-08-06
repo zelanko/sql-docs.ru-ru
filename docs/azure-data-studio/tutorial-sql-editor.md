@@ -1,6 +1,6 @@
 ---
 title: Создание объектов базы данных с помощью редактора Transact-SQL
-description: В этом руководстве демонстрируются основные функции Azure Data Studio, упрощающие работу с T-SQL.
+description: Следуйте инструкциям из этого руководства, чтобы научиться использовать редактор Transact-SQL для выполнения основных задач базы данных, включая создание и поиск объектов базы данных.
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.topic: tutorial
@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: b8e5bd6cb986601baf97a02a3f167432e0c29b95
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 172eee223f04ee37cc7b530cdb4db891afad36d8
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726740"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522418"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---azure-data-studio"></a>Руководство по Использование редактора Transact-SQL для создания объектов базы данных — Azure Data Studio
 

@@ -1,6 +1,6 @@
 ---
 title: Расширение центральных серверов управления SQL Server
-description: Установка и использование расширения центральных серверов управления SQL Server (предварительная версия) для Azure Data Studio
+description: Узнайте, как установить и использовать расширение "Центральные серверы управления" SQL Server (предварительная версия) для группирования серверов и применения действий к группе.
 ms.reviewer: alayu, maghan, sstein
 ms.prod: azure-data-studio
 ms.technology: ''
@@ -9,12 +9,12 @@ author: yualan
 ms.author: alayu
 ms.custom: seodec18
 ms.date: 06/06/2019
-ms.openlocfilehash: 5c866ee04194bcbb1d26598766483f03019ebb47
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6f28601245c239b9ffed0379b43123a300d23d30
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758352"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522498"
 ---
 # <a name="sql-server-central-management-servers-extension-preview"></a>Расширение Центральных серверов управления SQL Server (предварительная версия)
 

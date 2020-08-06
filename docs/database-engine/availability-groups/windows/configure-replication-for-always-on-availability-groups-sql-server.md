@@ -14,23 +14,23 @@ ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 881385dbd03af3a2425a4b853ce4b194d474bb4d
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 04bdf5678284b07ecf74799e4e6caaf55af1086b
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196902"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522956"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Настройка репликации в группах доступности Always On
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
 
   Настройка репликации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и групп доступности AlwaysOn включает в себя семь шагов. Каждый шаг более подробно описывается в следующих разделах.  
   
 ##  <a name="1-configure-the-database-publications-and-subscriptions"></a><a name="step1"></a> 1. Настройка публикаций и подписок баз данных  
  **Настройка распространителя**  
   
- Базу данных распространителя нельзя поместить в группу доступности с использованием SQL Server 2012 и SQL Server 2014. Размещение базы данных распространителя в группе доступности поддерживается в SQL 2016 и более поздних версий. Дополнительные сведения см. в статье о [настройке базы данных распространителя в группе доступности](../../../relational-databases/replication/configure-distribution-availability-group.md).
+ Базу данных распространителя нельзя поместить в группу доступности с использованием SQL Server 2012 и SQL Server 2014. Размещение базы данных распространителя в группе доступности поддерживается в SQL 2016 и более поздних версий. Но исключением будут базы данных распространителя, используемые в топологиях слияния, двунаправленной или одноранговой репликации. Дополнительные сведения см. в статье о [настройке базы данных распространителя в группе доступности](../../../relational-databases/replication/configure-distribution-availability-group.md).
   
 1.  Настройка распространения на распространителе. Если хранимые процедуры используются для настройки, запустите **sp_adddistributor**. Используйте параметр *\@password* для определения пароля, который будет использоваться при подключении удаленного издателя к распространителю. Кроме того, пароль понадобится для каждого удаленного издателя при настройке удаленного распространителя.  
   

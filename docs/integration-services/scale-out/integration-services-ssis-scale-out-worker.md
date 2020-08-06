@@ -1,6 +1,6 @@
 ---
 title: Рабочая роль горизонтального увеличения масштаба SQL Server Integration Services (SSIS) | Документы Майкрософт
-description: В этой статье описывается компонент "Мастер горизонтального увеличения масштаба" в развертывании SSIS с горизонтальным увеличением масштаба
+description: Подробные сведения о компоненте Scale Out Master в SQL Server Integration Services (SSIS) Scale Out.
 ms.custom: performance
 ms.date: 01/19/2019
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: b77fbcf909d534304bbaf2a27ca55daccb2a94c4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1fb3f2699133881ad4baba73f47b0f8548735402
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918990"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522308"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Рабочая роль горизонтального увеличения масштаба служб Integration Services (SSIS)
 

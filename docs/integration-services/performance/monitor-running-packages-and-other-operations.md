@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6f899ec9c1e006212483a49133ad343e93f20173
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4506f95337319d0b4a8fa4f63c99a182360cfa2b
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918339"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472512"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>Наблюдение за выполнением пакетов и других операций
 
@@ -73,7 +73,7 @@ ms.locfileid: "86918339"
  **Тип**  
  Задает тип операции. Ниже приведены возможные значения поля **Тип** и соответствующие значения в столбце operations_type представления Transact-SQL **catalog.operations** .  
   
-|||  
+|Описание поля "Тип"|Значение operations_type|  
 |-|-|  
 |Инициализация служб Integration Services|1|  
 |Очистка операций (задание агента SQL Server)|2|  
@@ -139,7 +139,7 @@ ms.locfileid: "86918339"
   
  В этом отчете содержатся следующие разделы.  
   
-|Section|Description|  
+|Section|Описание|  
 |-------------|-----------------|  
 |**Сведения о выполнении**|Показывает количество выполнений в разных состояниях (сбой, не работает, успех, другие) за последние 24 часа.|  
 |**Сведения о пакете**|Показывает общее количество пакетов, которые были выполнены за последние 24 часа.|  

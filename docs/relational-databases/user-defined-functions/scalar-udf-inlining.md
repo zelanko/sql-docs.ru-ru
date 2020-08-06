@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: d32a8c6a2096cab67917db7a464b70eaf16ff6f5
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: b1a8d91cc9da7cb0707211464e53b2cccaf0a111
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484425"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435580"
 ---
 # <a name="scalar-udf-inlining"></a>Встраивание скалярных пользовательских функций
 
@@ -131,7 +131,7 @@ SELECT C_NAME, dbo.customer_category(C_CUSTKEY) FROM CUSTOMER;
 -  Сервер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определил наличие неявного предложения `GROUP BY O_CUSTKEY on ORDERS` и реализовал его с помощью IndexSpool и StreamAggregate.
 -  Теперь [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] применяет параллелизм для всех операторов.
 
-В зависимости от сложности логики в пользовательской функции план запроса также может быть больше и сложнее. Как видите, операции внутри пользовательской функции теперь прозрачны, поэтому оптимизатор запросов может оценить затраты и оптимизировать их. Кроме того, так как в плане больше нет пользовательской функции, полностью устраняются накладные расходы, связанные с ее итеративными вызовами.
+В зависимости от сложности логики в пользовательской функции план запроса также может быть больше и сложнее. Как видите, операции внутри пользовательской функции теперь прозрачны, поэтому оптимизатор запросов может оценить затраты и оптимизировать эти операции. Кроме того, так как в плане больше нет пользовательской функции, полностью устраняются накладные расходы, связанные с ее итеративными вызовами.
 
 ## <a name="inlineable-scalar-udfs-requirements"></a>Требования к встраиваемым скалярным пользовательским функциям
 <a name="requirements"></a> Скалярную пользовательскую функцию T-SQL можно встраивать, если выполняются все перечисленные ниже условия:
