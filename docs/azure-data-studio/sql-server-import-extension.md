@@ -1,6 +1,6 @@
 ---
 title: Расширение "Импорт SQL Server"
-description: Установка и использование расширения "Импорт SQL Server" (предварительная версия) для Azure Data Studio
+description: Узнайте, как установить и использовать расширение "Импорт SQL Server" (предварительная версия) для Azure Data Studio, которое представляет собой мастер для преобразования файлов TXT и CSV в таблицу SQL.
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu, maghan, sstein
@@ -9,12 +9,12 @@ ms.technology: ''
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: a2795282c7a43c5ae582a059ae8b56d1f592e6e6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cac73bebca185f40deb1b1bac4a77c6ceb20264e
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758348"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522458"
 ---
 # <a name="sql-server-import-extension-preview"></a>Расширение "Импорт SQL Server" (предварительная версия)
 
