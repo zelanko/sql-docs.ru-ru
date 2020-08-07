@@ -1,6 +1,6 @@
 ---
 title: Размещение базы данных на управляемом экземпляре
-description: В этой статье описывается настройка базы данных служб Master Data Service (MDS) на управляемом экземпляре.
+description: Узнайте, как создать и настроить базу данных Master Data Services (MDS) и разместить ее на Управляемый экземпляр SQL Azure.
 ms.custom: ''
 ms.date: 07/01/2019
 ms.prod: sql
@@ -12,12 +12,12 @@ ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: v-redu
 ms.author: lle
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a6c318a1fca182e60a5df7fb5d1569433f65d25d
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 616fa3791b0dbc154282f5273cd7fb4e1eb3c1f5
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812930"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87878948"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>Размещение базы данных MDS на управляемом экземпляре
 
@@ -27,19 +27,19 @@ ms.locfileid: "85812930"
   
 ## <a name="preparation"></a>Подготовка
 
-Для подготовки необходимо создать и настроить управляемый экземпляр базы данных SQL Azure и настроить компьютер веб-приложения.
+Для подготовки необходимо создать и настроить Управляемый экземпляр Azure SQL, а также настроить компьютер веб-приложения.
 
 ### <a name="create-and-configure-the-database"></a>Создание и настройка базы данных
 
-1. Создание управляемого экземпляра базы данных SQL Azure с помощью виртуальной сети. Дополнительные сведения см. [в разделе Краткое руководство. Создание управляемого экземпляра базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started) .
+1. Создание управляемого экземпляра с виртуальной сетью. Дополнительные сведения см. [в разделе Краткое руководство. создание управляемый экземпляр SQL](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started) .
 
 1. Настройте подключение типа "точка — сеть". Инструкции см. в статье [Настройка подключения типа "точка — сеть" к виртуальной сети с помощью собственной проверки подлинности Azure Certificate: портал Azure](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) .
 
-1. Настройка проверки подлинности Azure Active Directory с помощью управляемого экземпляра базы данных SQL. Дополнительные сведения см. [в разделе Настройка проверки подлинности Azure Active Directory и управление ею с помощью SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure) .
+1. Настройка проверки подлинности Azure Active Directory с помощью Управляемый экземпляр SQL. Дополнительные сведения см. [в разделе Настройка проверки подлинности Azure Active Directory и управление ею с помощью SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure) .
 
 ### <a name="configure-web-application-machine"></a>Настройка компьютера веб-приложения
 
-1. Установите сертификат подключения типа "точка — сеть" и VPN, чтобы убедиться, что компьютер может получить доступ к управляемому экземпляру базы данных SQL. Дополнительные сведения см. в разделе [Настройка подключения типа "точка — сеть" к виртуальной сети с помощью собственной проверки подлинности сертификата Azure: портал Azure](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) .
+1. Установите сертификат подключения типа "точка — сеть" и VPN, чтобы убедиться, что компьютер может получить доступ к управляемому экземпляру. Дополнительные сведения см. в разделе [Настройка подключения типа "точка — сеть" к виртуальной сети с помощью собственной проверки подлинности сертификата Azure: портал Azure](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) .
 
 1. Установите следующие роли и компоненты:
    - Роли:
@@ -70,7 +70,7 @@ ms.locfileid: "85812930"
        > [!NOTE]
        > Не устанавливать публикацию WebDAV
 
-   - Функции:
+   - Возможности
      - .NET Framework 3.5 (включая .NET 2.0 и 3.0)
      - Дополнительные службы .NET Framework 4.5 Advanced Services
      - ASP.NET 4.5
@@ -163,7 +163,7 @@ ms.locfileid: "85812930"
 
 1. В области **веб-конфигурация** в окне **веб-приложение** выберите созданное приложение и нажмите кнопку **выбрать** в разделе **связать приложение с базой данных** .
 
-1. Выберите **подключить** и выберите [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] базу данных, которую необходимо связать с веб-приложением. Нажмите кнопку **ОК**.
+1. Выберите **подключить** и выберите [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] базу данных, которую необходимо связать с веб-приложением. Нажмите кнопку **OK**.
 
    Настройка веб-сайта завершена. Теперь на странице **веб-конфигурация** отображается выбранный веб-сайт, созданное веб-приложение и [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] база данных, связанная с приложением.
 

@@ -21,12 +21,12 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 484ae60390202e09625166a266c3972d927086f9
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 8956eda2e25ecd96df58f863743ae39d0bb88d8f
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395149"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823729"
 ---
 # <a name="sysquery_store_runtime_stats-transact-sql"></a>sys. query_store_runtime_stats (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -98,16 +98,16 @@ ms.locfileid: "87395149"
 |**min_tempdb_space_used**|**bigint**|Минимальное число операций чтения страниц для плана запроса в пределах интервала статистической обработки. (выражается числом считанных 8 КБ страниц).<br><br/>**Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
 |**max_tempdb_space_used**|**bigint**|Максимальное количество операций чтения страниц для плана запроса в пределах интервала статистической обработки. (выражается числом считанных 8 КБ страниц).<br><br/>**Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
 |**stdev_tempdb_space_used**|**float**|Число чтений страниц стандартное отклонение для плана запроса в пределах интервала агрегирования. (выражается числом считанных 8 КБ страниц).<br><br/>**Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|**avg_page_server_io_reads**|**float**|Среднее число операций чтения ввода-вывода сервера на странице для плана запроса в пределах интервала агрегирования. (выражается числом считанных 8 КБ страниц).<br><br/>**Применимо к:** Масштабирование базы данных SQL Azure</br>**Примечание.** Хранилище данных SQL Azure, база данных SQL Azure, MI (без масштабирования) всегда возвращает ноль (0).|
-|**last_page_server_io_reads**|**bigint**|Последнее число операций чтения ввода-вывода сервера на странице для плана запроса в пределах интервала агрегирования. (выражается числом считанных 8 КБ страниц).<br><br/>**Применимо к:** Масштабирование базы данных SQL Azure</br>**Примечание.** Хранилище данных SQL Azure, база данных SQL Azure, MI (без масштабирования) всегда возвращает ноль (0).|
-|**min_page_server_io_reads**|**bigint**|Минимальное число операций чтения ввода-вывода сервера на странице для плана запроса в пределах интервала агрегирования. (выражается числом считанных 8 КБ страниц).<br><br/>**Применимо к:** Масштабирование базы данных SQL Azure</br>**Примечание.** Хранилище данных SQL Azure, база данных SQL Azure, MI (без масштабирования) всегда возвращает ноль (0).|
-|**max_page_server_io_reads**|**bigint**|Максимальное число операций чтения ввода-вывода сервера на странице для плана запроса в пределах интервала статистической обработки. (выражается числом считанных 8 КБ страниц).<br><br/>**Применимо к:** Масштабирование базы данных SQL Azure</br>**Примечание.** Хранилище данных SQL Azure, база данных SQL Azure, MI (без масштабирования) всегда возвращает ноль (0).|
-|**stdev_page_server_io_reads**|**float**|Число операций ввода-вывода сервера на странице: стандартное отклонение для плана запроса в пределах интервала статистической обработки. (выражается числом считанных 8 КБ страниц).<br><br/>**Применимо к:** Масштабирование базы данных SQL Azure</br>**Примечание.** Хранилище данных SQL Azure, база данных SQL Azure, MI (без масштабирования) всегда возвращает ноль (0).|
+|**avg_page_server_io_reads**|**float**|Среднее число операций чтения ввода-вывода сервера на странице для плана запроса в пределах интервала агрегирования. (выражается числом считанных 8 КБ страниц).<br><br/>**Применимо к:** Масштабирование базы данных SQL Azure</br>**Примечание.** Хранилище данных SQL Azure, база данных SQL Azure, Управляемый экземпляр Azure SQL (без масштабирования) всегда будет возвращать ноль (0).|
+|**last_page_server_io_reads**|**bigint**|Последнее число операций чтения ввода-вывода сервера на странице для плана запроса в пределах интервала агрегирования. (выражается числом считанных 8 КБ страниц).<br><br/>**Применимо к:** Масштабирование базы данных SQL Azure</br>**Примечание.** Хранилище данных SQL Azure, база данных SQL Azure, Управляемый экземпляр Azure SQL (без масштабирования) всегда будет возвращать ноль (0).|
+|**min_page_server_io_reads**|**bigint**|Минимальное число операций чтения ввода-вывода сервера на странице для плана запроса в пределах интервала агрегирования. (выражается числом считанных 8 КБ страниц).<br><br/>**Применимо к:** Масштабирование базы данных SQL Azure</br>**Примечание.** Хранилище данных SQL Azure, база данных SQL Azure, Управляемый экземпляр Azure SQL (без масштабирования) всегда будет возвращать ноль (0).|
+|**max_page_server_io_reads**|**bigint**|Максимальное число операций чтения ввода-вывода сервера на странице для плана запроса в пределах интервала статистической обработки. (выражается числом считанных 8 КБ страниц).<br><br/>**Применимо к:** Масштабирование базы данных SQL Azure</br>**Примечание.** Хранилище данных SQL Azure, база данных SQL Azure, Управляемый экземпляр Azure SQL (без масштабирования) всегда будет возвращать ноль (0).|
+|**stdev_page_server_io_reads**|**float**|Число операций ввода-вывода сервера на странице: стандартное отклонение для плана запроса в пределах интервала статистической обработки. (выражается числом считанных 8 КБ страниц).<br><br/>**Применимо к:** Масштабирование базы данных SQL Azure</br>**Примечание.** Хранилище данных SQL Azure, база данных SQL Azure, Управляемый экземпляр Azure SQL (без масштабирования) всегда будет возвращать ноль (0).|
   
 ## <a name="permissions"></a>Разрешения  
 Требуется разрешение `VIEW DATABASE STATE`.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sys. database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
  [sys. query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
  [sys. query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   

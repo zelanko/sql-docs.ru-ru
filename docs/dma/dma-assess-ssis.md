@@ -1,6 +1,6 @@
 ---
 title: Создание оценки миграции служб SSIS с помощью Помощник по миграции данных
-description: Узнайте, как использовать Помощник по миграции данных для оценки локальной службы интеграции SQL Server (SSIS) перед миграцией в базу данных SQL Azure или управляемый экземпляр базы данных SQL Azure.
+description: Узнайте, как использовать Помощник по миграции данных для оценки локальной службы интеграции SQL Server (SSIS) перед миграцией в базу данных SQL Azure или Azure SQL Управляемый экземпляр
 ms.date: 08/23/2019
 ms.prod: sql
 ms.prod_service: dma
@@ -14,16 +14,16 @@ ms.assetid: ''
 author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 1652d5eec9d6419e7b39f96a8b854eef8651bf26
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9a7b077c3046b2f0c7e50b7ec20f68a5544e91e1
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74687156"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822199"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Выполнение оценки миграции службы интеграции SQL Server с Помощник по миграции данных
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Предварительные условия
 
 Чтобы SQL Server оценить пакеты служб Integration Services (SSIS), необходимо установить следующие компоненты с помощью Помощник по миграции данных:
 
@@ -34,7 +34,7 @@ DMA необходимо запустить с **правами админист
 
 ## <a name="performance-assessments"></a>Оценка производительности
 
-Следующие пошаговые инструкции помогут вам выполнить первую оценку SQL Server миграции пакетов служб Integration Services (SSIS) в базу данных SQL Azure или управляемый экземпляр базы данных SQL Azure с помощью Помощник по миграции данных.
+Следующие пошаговые инструкции помогут вам выполнить первую оценку SQL Server миграции пакетов служб Integration Services (SSIS) в базу данных SQL Azure или Azure SQL Управляемый экземпляр с помощью Помощник по миграции данных.
 
 ## <a name="create-an-assessment"></a>Создание оценки
 
@@ -42,9 +42,9 @@ DMA необходимо запустить с **правами админист
 
 1. Укажите тип исходного и целевого серверов.
 
-    Выберите источник как **SQL Server**и задайте тип целевого сервера в качестве **базы данных SQL Azure** или **управляемого экземпляра базы данных SQL Azure**.
+    Выберите источник как **SQL Server**и задайте тип целевого сервера в качестве **базы данных SQL Azure** или **Azure SQL управляемый экземпляр**.
 
-1. Нажмите кнопку **Создать**.
+1. Нажмите **Создать**.
 
     ![создать оценку](media/dma-assess-ssis/dma-assess-ssis-create.png)
 
@@ -71,8 +71,8 @@ DMA необходимо запустить с **правами админист
 
 ![Просмотр результатов](media/dma-assess-ssis/dma-assess-ssis-result.png)
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Дальнейшие шаги
 
 - [Общие сведения о переносе локальных рабочих нагрузок служб SSIS в службы SSIS в ADF](https://docs.microsoft.com/azure/data-factory/scenario-ssis-migration-overview)
-- [Перенос пакетов SQL Server Integration Services в Управляемый экземпляр Базы данных SQL Azure](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
+- [Перенос пакетов SQL Server Integration Services в Управляемый экземпляр SQL Azure](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
 - [Повторное развертывание пакетов SQL Server Integration Services в базе данных SQL Azure](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages)

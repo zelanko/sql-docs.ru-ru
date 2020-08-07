@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: eb996b7c-1eef-4f73-b5e6-2fa6faf7336c
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: c65c19ee3b95303afb0e1ae0a950efe548c8f0af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8941c243b6741b42b7c3e628305431812ad3f8d7
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68083534"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864841"
 ---
 # <a name="assessing-sap-ase-database-objects-for-conversion-sybasetosql"></a>Оценка объектов базы данных SAP ASE для преобразования (SybaseToSQL)
-Перед загрузкой объектов и переносом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данных в или SQL Azure необходимо определить сложность миграции и время ее выполнения. SSMA может создать отчет об оценке, который показывает процент объектов и процедур, которые будут успешно преобразованы в [!INCLUDE[tsql](../../includes/tsql-md.md)]. SSMA также позволяет просматривать конкретные проблемы, которые могут вызвать сбои при преобразовании.  
+Перед загрузкой объектов и переносом данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure необходимо определить сложность миграции и время ее выполнения. SSMA может создать отчет об оценке, который показывает процент объектов и процедур, которые будут успешно преобразованы в [!INCLUDE[tsql](../../includes/tsql-md.md)] . SSMA также позволяет просматривать конкретные проблемы, которые могут вызвать сбои при преобразовании.  
   
 ## <a name="create-assessment-reports"></a>Создание отчетов об оценке  
-При создании этого отчета об оценке SSMA преобразует выбранные объекты базы данных SAP адаптивного сервера Enterprise (ASE) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в синтаксис SQL Azure и отображает результаты.  
+При создании этого отчета об оценке SSMA преобразует выбранные объекты базы данных SAP адаптивного сервера Enterprise (ASE) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] синтаксис SQL Azure и отображает результаты.  
   
 **Создание отчета об оценке**  
   
@@ -34,7 +34,7 @@ ms.locfileid: "68083534"
   
     SSMA отображает ход выполнения в строке состояния в нижней части окна. Если область вывода видна, также будут отображаться все связанные сообщения.  
   
-    После завершения оценки появится окно [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] помощник по миграции для Sybase: Оценка отчета.  
+    После завершения оценки появится [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] окно Помощник по миграции для Sybase: Оценка отчета.  
   
 ## <a name="use-assessment-reports"></a>Использование отчетов об оценке  
 Окно "Оценка отчета" содержит три панели:  
@@ -73,9 +73,9 @@ ms.locfileid: "68083534"
   
     -   Вы можете исключить объект из миграции. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или в обозревателе метаданных Azure и в обозревателе метаданных Sybase снимите флажок рядом с элементом, прежде чем загружать объекты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или Azure SQL и переносить данные из ASE.
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Дальнейшие шаги  
 [Преобразование объектов базы данных SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)  
   
 ## <a name="see-also"></a>См. также:  
-[Миграция баз данных SAP ASE в SQL Server Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Миграция баз данных SAP ASE в SQL Server — база данных SQL Azure &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: alexiva
-ms.openlocfilehash: 1601ae2430ced8a30a04d8ab52d97dbb9bbb095a
-ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.openlocfilehash: c456c383625f43a5fef7f675edcd86ede6ca2515
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87477456"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862405"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Новые возможности SSMA для Oracle (OracleToSQL)
 
@@ -159,16 +159,16 @@ ms.locfileid: "87477456"
 
 Выпуск версии 8.0 SSMA для Oracle улучшен с помощью целевых исправлений, предназначенных для улучшения качества и показателей преобразования. В этом выпуске также предлагаются следующие новые возможности.
 
-* Поддержка **управляемый экземпляр базы данных SQL Azure** в качестве целевого объекта. Теперь можно создавать новые проекты, нацеленные на Управляемый экземпляр Базы данных SQL Azure:
+* Поддержка **управляемый экземпляр Azure SQL** в качестве целевого объекта. Теперь вы можете создавать новые проекты, предназначенные для Управляемый экземпляр Azure SQL:
 
-  ![Проект SQL DB MI](../media/ssma-newproject-sqldbmi.png)
+  ![Проект SQL MI](../media/ssma-newproject-sqldbmi.png)
 
   > [!NOTE]
-  > Пакет расширения SSMA для Oracle также был обновлен для разрешения удаленной установки на Управляемый экземпляр Базы данных SQL Azure:
+  > Пакет расширения SSMA для Oracle также был обновлен, чтобы разрешить удаленную установку в Управляемый экземпляр Azure SQL:
   >
   > ![SSMA для пакета расширений Oracle](../media/ssma-oracle-ext-pack.png)
 
-  При нацеливании на Управляемый экземпляр Базы данных SQL Azure некоторые функции, включая тест-инженер и перенос данных на стороне сервера, не поддерживаются. Дополнительные сведения см. [здесь](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/migrate-your-oracle-database-to-azure-sql-database-managed-instance-using-ssma-8-0/).
+  Некоторые функции, в том числе миграцию данных на стороне тестера и сервера, не поддерживаются при использовании Управляемый экземпляр Azure SQL. Дополнительные сведения см. [здесь](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/migrate-your-oracle-database-to-azure-sql-database-managed-instance-using-ssma-8-0/).
 
 * **Советник по исправлению**после преобразования. Дополнительные сведения см. [здесь](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
 

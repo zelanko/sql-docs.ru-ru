@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 346fcd2ea7f83abcb9a5c23a22cb0eded76acc0e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d5c85c551ba70d28b4af7eb87126c51ef5a4ff75
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67944682"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863525"
 ---
 # <a name="setting-project-options-mysqltosql"></a>Настройка параметров проекта (MySQLToSQL)
 Для каждого проекта SSMA можно задать параметры уровня проекта. Эти параметры определяют способ преобразования объектов, способ переноса данных и способ, которым типы исходных данных сопоставляются с целевыми типами данных.  Прежде чем преобразовывать объекты в SQL Server или SQL Azure или переносить данные в SQL Server или SQL Azure, убедитесь, что параметры конфигурации подходят для проекта.  
@@ -38,7 +38,7 @@ SSMA имеет пять наборов параметров проекта:
   
 Параметры проекта можно настроить четырьмя способами.  
   
--   Значение по умолчанию  
+-   По умолчанию  
   
 -   Optimistic  
   
@@ -60,7 +60,7 @@ SSMA имеет пять наборов параметров проекта:
   
 -   [Параметры проекта &#40;синхронизации&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
   
--   [Параметры проекта &#40;базы данных SQL Azure&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)  
+-   [Параметры проекта &#40;базе данных SQL Azure&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)  
   
 ## <a name="setting-project-options"></a>Настройка параметров проекта  
 В SSMA можно настроить параметры по умолчанию для всех проектов. Эти параметры сохраняются в файле конфигурации SSMA и применяются ко всем создаваемым проектам.  

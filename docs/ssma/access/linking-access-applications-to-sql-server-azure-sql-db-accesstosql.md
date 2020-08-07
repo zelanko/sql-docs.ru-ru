@@ -24,14 +24,14 @@ ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 382a1d94b46eeef39ca90103691afe45389002e3
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: aadb041b3b9005d0e593e97974090250129ed33d
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293771"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823855"
 ---
-# <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>Связывание приложений Access с SQL Server в базе данных SQL Azure (Акцесстоскл)
+# <a name="linking-access-applications-to-sql-server---azure-sql-database-accesstosql"></a>Связывание приложений Access с SQL Server в базе данных SQL Azure (Акцесстоскл)
 Если вы хотите использовать существующие приложения Access с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , можно связать исходные таблицы Access с перенесенными [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure таблицами. Связывание изменяет базу данных Access таким образом, чтобы запросы, формы, отчеты и страницы доступа к данным использовали данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базе данных или SQL Azure, а не данные в базе данных Access.  
   
 > [!NOTE]  
@@ -154,6 +154,6 @@ Recordset.LastModified
   
 **Решение:** Можно определить запрос доступа, возвращающий только строки с поддерживаемыми типами данных.  
   
-## <a name="see-also"></a>Дополнительно  
+## <a name="see-also"></a>См. также  
 [Миграция баз данных Access в SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

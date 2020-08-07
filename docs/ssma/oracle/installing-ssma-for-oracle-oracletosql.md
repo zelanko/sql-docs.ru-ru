@@ -11,15 +11,15 @@ ms.assetid: 9211013a-ab24-4c52-9b26-87994b35e502
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: b97da15fb97c348afa694eb399d2a0c9a2f08928
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: 3938d01e98bfb2a57057d9573ee7199f0b12fc14
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292916"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864851"
 ---
 # <a name="installing-ssma--for-oracle-oracletosql"></a>Установка SSMA для Oracle (OracleToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Помощник по миграции (SSMA) для Oracle состоит из клиентского приложения, которое используется для миграции из Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и базы данных SQL Azure. Он также содержит пакет расширений, который поддерживает перенос данных и использование системных функций Oracle в перенесенных базах данных.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Помощник по миграции (SSMA) для Oracle состоит из клиентского приложения, которое используется для миграции из Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базу данных SQL Azure и из нее. Он также содержит пакет расширений, который поддерживает перенос данных и использование системных функций Oracle в перенесенных базах данных.  
   
 Установите клиентское приложение на компьютер, с которого будут выполнены действия по переносу. Необходимо установить файлы пакета расширения на компьютере, где будут размещаться перенесенные базы данных. Этот компьютер должен работать под [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6772d0c5-258f-4d7b-afb0-b5f810e71af1
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 9b598915222610470bc9cf2e618cea65d725c5fb
-ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
+ms.openlocfilehash: a38808c64209edb094c986e63305707a0a834edb
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411282"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823675"
 ---
 # <a name="installing-ssma-components-on-sql-server-mysqltosql"></a>Установка компонентов SSMA на SQL Server (MySQLToSql)
 
@@ -29,7 +29,7 @@ ms.locfileid: "86411282"
 
 Кроме того, при переносе данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSMA создает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задания агента, когда для переноса данных используется модуль миграции данных на стороне сервера.
 
-### <a name="prerequisites"></a>Предварительные требования
+### <a name="prerequisites"></a>Предварительные условия
 
 Перед установкой SSMA для серверных компонентов MySQL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Убедитесь, что компьютер соответствует следующим требованиям.
 
@@ -76,7 +76,7 @@ ms.locfileid: "86411282"
 
 12. Чтобы установить служебные программы на другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , выберите **Да**, а затем нажмите кнопку **Далее**. Чтобы выйти из мастера, нажмите кнопку **нет**.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 - [Установка клиента SSMA для MySQL](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)
-- [Перенос баз данных MySQL в SQL Server в базе данных SQL Azure](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)
+- [Перенос баз данных MySQL в базу данных SQL Azure SQL Server](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)

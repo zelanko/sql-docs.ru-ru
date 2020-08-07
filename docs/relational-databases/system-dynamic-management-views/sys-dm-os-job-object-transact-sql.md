@@ -19,12 +19,12 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: dfed6ad282fe702b0f7f3fa484476524118805ad
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e421efbd15f15d56b6446fc39f73bcba04478800
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754150"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865282"
 ---
 # <a name="sysdm_os_job_object-azure-sql-database"></a>sys.dm_os_job_object (база данных SQL Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -52,9 +52,9 @@ ms.locfileid: "85754150"
 |process_physical_affinity|**nvarchar (3072)**|Битовые маски, описывающие логические процессоры, которые процесс SQL Server может использовать в каждой группе процессоров. Значение в этом столбце формируется одной или несколькими парами значений, каждое из которых заключено в фигурные скобки. В каждой паре первое значение — номер группы процессоров, а второе — битовая маска сходства для этой группы процессоров. Например, значение `{{0,a}{1,2}}` означает, что маска сходства для группы процессоров `0` `a` ( `1010` в двоичном коде, указывающая, что используются процессоры 2 и 4), а маска сходства для группы процессоров `1` — `2` ( `10` в двоичном формате, указывающий, что используется процессор 2).|
   
 ## <a name="permissions"></a>Разрешения  
-Для Управляемый экземпляр Базы данных SQL требуется `VIEW SERVER STATE` разрешение. В Базе данных SQL требуется соответствующее разрешение `VIEW DATABASE STATE`.  
+Для Управляемый экземпляр SQL требуется `VIEW SERVER STATE` разрешение. В Базе данных SQL требуется соответствующее разрешение `VIEW DATABASE STATE`.  
  
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 
-Дополнительные сведения об управляемых экземплярах см. в разделе [управляемый экземпляр базы данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
+Дополнительные сведения об управляемых экземплярах см. в разделе [SQL управляемый экземпляр](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
   

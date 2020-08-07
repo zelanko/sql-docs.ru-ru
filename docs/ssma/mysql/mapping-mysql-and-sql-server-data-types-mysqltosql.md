@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 14f98054-13b4-4231-a6b0-2452f3b9941d
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 99e86d99a4214b1ccdf317e75218fe22bb2c7af7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d0b29deae2e0bdba81318130df46e30683717c86
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67908993"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823469"
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>Сопоставление типов данных MySQL и SQL Server (MySQLToSQL)
-Типы баз данных MySQL отличаются [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] от типов баз данных или SQL Azure. При преобразовании объектов базы данных MySQL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в или SQL Azure объекты необходимо указать способ отображения типов данных из MySQL в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure. Можно принять сопоставления типов данных по умолчанию или настроить сопоставления, как показано в следующих процедурах.  
+Типы баз данных MySQL отличаются от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов баз данных или SQL Azure. При преобразовании объектов базы данных MySQL в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure объекты необходимо указать способ отображения типов данных из MySQL в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure. Можно принять сопоставления типов данных по умолчанию или настроить сопоставления, как показано в следующих процедурах.  
   
 ## <a name="default-mappings"></a>Сопоставления по умолчанию  
 SSMA имеет набор сопоставлений типов данных по умолчанию. Список сопоставлений по умолчанию см. в разделе [Project Settings &#40;Type mapping&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md).  
@@ -81,6 +81,6 @@ SSMA имеет набор сопоставлений типов данных п
 ## <a name="next-step"></a>Следующий шаг  
 Следующим шагом процесса миграции является [Создание отчета оценки](assessing-mysql-databases-for-conversion-mysqltosql.md) или [Преобразование объектов базы данных MySQL в SQL Server или SQL Azure синтаксис](converting-mysql-databases-mysqltosql.md). При создании отчета объекты MySQL автоматически преобразуются во время оценки.  
   
-## <a name="see-also"></a>См. также  
-[Перенос баз данных MySQL в SQL Server Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+## <a name="see-also"></a>См. также:  
+[Перенос баз данных MySQL в SQL Server базы данных SQL Azure &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

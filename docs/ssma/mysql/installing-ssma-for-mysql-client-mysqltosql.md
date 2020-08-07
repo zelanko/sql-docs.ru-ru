@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ede3128c-370d-45a5-a815-3d94eecaea30
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7dc2cb4216386e13c57d31f121809a604e91b67d
-ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
+ms.openlocfilehash: d6bda2cad0761dbb53fcc4bb66d29829841f249d
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411612"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87824049"
 ---
 # <a name="installing-ssma-for-mysql-client-mysqltosql"></a>Установка SSMA для клиента MySQL (MySQLToSQL)
 
@@ -31,7 +31,7 @@ ms.locfileid: "86411612"
 
 В этом разделе приведены необходимые условия для установки и инструкции по установке SSMA для клиента MySQL.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Предварительные условия
 
 SSMA для MySQL предназначен для работы с MySQL 4,1 или более поздними версиями и всеми выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 или более поздней версии и [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] .
 
@@ -65,6 +65,6 @@ SSMA можно загрузить из Интернета. Чтобы скач�
 
 Расположение установки по умолчанию — `C:\Program Files\Microsoft SQL Server Migration Assistant for MySQL`.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
-- [Перенос баз данных MySQL в SQL Server в базе данных SQL Azure](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+- [Перенос баз данных MySQL в базу данных SQL Azure SQL Server](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  

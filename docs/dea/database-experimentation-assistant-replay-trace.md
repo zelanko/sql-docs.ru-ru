@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 85143440cc92cdc427be673667e22be6957cbe50
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: ae88f4473414e83a2ffbddee5c47fa40c552115a
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565503"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823369"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>Воспроизведение трассировки в Database Experimentation Assistant
 
@@ -48,7 +48,7 @@ ms.locfileid: "87565503"
     - **Воспроизвести расположение трассировки**: укажите путь для хранения файлов трассировки или XEvents, связанных с воспроизведением трассировки.
 
         > [!NOTE]
-        > Для базы данных SQL Azure или управляемого экземпляра базы данных SQL Azure необходимо предоставить URI SAS учетной записи хранилища BLOB-объектов Azure.
+        > Для базы данных SQL Azure или Управляемый экземпляр Azure SQL необходимо предоставить универсальный код ресурса (URI) SAS учетной записи хранилища BLOB-объектов Azure.
 
 3. Убедитесь, что вы восстановили базы данных, нажав кнопку **Да, флажок базы данных восстановлен вручную** .
 
@@ -163,6 +163,6 @@ SQL Server — это система управления реляционным
   
 Эта ошибка устранена в последнем накопительном пакете обновления 1 для SQL Server 2017. Скачайте последнюю версию [накопительного пакета обновления 1 для SQL Server 2017](https://support.microsoft.com/help/4038634/cumulative-update-1-for-sql-server-2017).
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 - Чтобы создать аналитический отчет, который поможет получить представление о предлагаемых изменениях, см. раздел [Создание отчетов](database-experimentation-assistant-create-report.md).

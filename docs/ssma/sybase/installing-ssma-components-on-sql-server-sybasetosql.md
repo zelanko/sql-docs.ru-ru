@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5ad9e12c-2cdb-4dd2-8703-05a23242d19d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 06bddd3929efa4477039300f38fbdcf301680085
-ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
+ms.openlocfilehash: 1c66255f57a69db0807ab1620cafd60444f296c8
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411602"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865392"
 ---
 # <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>Установка компонентов SSMA на SQL Server (SybaseToSQL)
 
@@ -26,7 +26,7 @@ ms.locfileid: "86411602"
 
 Кроме того, при переносе данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSMA создает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задания агента, когда для переноса данных используется модуль миграции данных на стороне сервера.
 
-### <a name="prerequisites"></a>Предварительные требования
+### <a name="prerequisites"></a>Предварительные условия
 
 Перед установкой SSMA для серверных компонентов Sybase [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Убедитесь, что система соответствует следующим требованиям.
 
@@ -109,7 +109,7 @@ ms.locfileid: "86411602"
 3. На странице Выбор компонентов выберите поставщики данных ODBC, OLE DB и ADO.NET.
 4. Проверьте выбранные компоненты и нажмите кнопку **"Готово"** , чтобы установить поставщик данных.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 - [Установка SSMA для клиента Sybase](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)
-- [Миграция баз данных Sybase ASE в SQL Server в базе данных SQL Azure](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)
+- [Миграция баз данных Sybase ASE в базу данных SQL Azure SQL Server](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)

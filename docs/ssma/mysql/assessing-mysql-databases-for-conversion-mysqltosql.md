@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 2a56a003-3b0f-453a-963c-00c9e40933ec
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: ae9210444311267569d5f240d40252d4fe024877
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 85923b0252eb24012c12e0c19937e076806b78bd
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139209"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823811"
 ---
 # <a name="assessing-mysql-databases-for-conversion-mysqltosql"></a>Оценка баз данных MySQL для преобразования (MySQLToSQL)
-Перед загрузкой объектов и переносом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данных в или SQL Azure следует определить, насколько сложна миграция и сколько времени займет миграция. SSMA может создать отчет об оценке, который показывает процент объектов, которые будут успешно преобразованы. SSMA также позволяет просматривать конкретные проблемы, вызывающие сбои при преобразовании.  
+Перед загрузкой объектов и переносом данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure следует определить, насколько сложна миграция и сколько времени займет миграция. SSMA может создать отчет об оценке, который показывает процент объектов, которые будут успешно преобразованы. SSMA также позволяет просматривать конкретные проблемы, вызывающие сбои при преобразовании.  
   
 ## <a name="creating-assessment-reports"></a>Создание отчетов об оценке  
 При создании этого отчета оценки SSMA преобразует выбранные объекты базы данных MySQL в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] синтаксис или SQL Azure, а затем отображает результаты.  
@@ -36,7 +36,7 @@ ms.locfileid: "68139209"
   
     SSMA будет отображать ход выполнения в строке состояния в нижней части окна. Если область вывода видна, то сообщения также будут отображаться на панели вывода.  
   
-    После завершения оценки появится окно [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] помощник по миграции для MySQL, отчет об оценке.  
+    После завершения оценки появится [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] окно Помощник по миграции для MySQL, отчет об оценке.  
   
 ## <a name="using-assessment-reports"></a>Использование отчетов об оценке  
 Окно "Оценка отчета" содержит три панели:  
@@ -82,5 +82,5 @@ ms.locfileid: "68139209"
 [Преобразование баз данных MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
 ## <a name="see-also"></a>См. также:  
-[Перенос баз данных MySQL в SQL Server Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[Перенос баз данных MySQL в SQL Server базы данных SQL Azure &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

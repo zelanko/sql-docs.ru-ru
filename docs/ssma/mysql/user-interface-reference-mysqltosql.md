@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: 2fad3fa2-5729-4b96-99d4-2c6edfab0a54
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 36cc006382bab28a93beed1ce8c6e48896719674
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 8cbc8606354f6f5ebdcb19c3f14f1717d29ff878
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395179"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863480"
 ---
 # <a name="user-interface-reference-mysqltosql"></a>Справочник по пользовательскому интерфейсу (MySQLToSQL)
 В этом разделе содержатся разделы справки по Помощник по миграции SQL Server (SSMA) для MySQL.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
 В следующей таблице приводится список диалоговых окон SSMA.  
   
 |Раздел|Описание|  
@@ -42,12 +42,12 @@ ms.locfileid: "87395179"
 |[Параметры проекта &#40;GUI&#41;  &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-gui-mysqltosql.md)|Используйте страницу графический интерфейс диалогового окна **Параметры проекта** , чтобы указать объем данных, отображаемых на вкладке **данные** .|  
 |[Параметры проекта &#40;синхронизации&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)|Страница миграция диалогового окна **Параметры проекта** используется для настройки того, как SSMA для MySQL переносит данные из MySQL в SQL Server.|  
 |[Параметры проекта &#40;миграция&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-migration-mysqltosql.md)|Страница синхронизация диалогового окна **Параметры проекта** используется для настройки того, как SSMA для MySQL создает или изменяет перенесенные объекты базы данных в SQL Server.|  
-|[Параметры проекта &#40;базы данных SQL Azure&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)|Используйте страницу SQL Azure диалогового окна **Параметры проекта** , чтобы настроить параметры подключения для переноса данных из MySQL в SQL Azure.|  
+|[Параметры проекта &#40;базе данных SQL Azure&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)|Используйте страницу SQL Azure диалогового окна **Параметры проекта** , чтобы настроить параметры подключения для переноса данных из MySQL в SQL Azure.|  
 |[Параметры проекта &#40;сопоставление типов&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)|Страница Сопоставление типов диалогового окна **Параметры проекта** используется для указания сопоставлений типов по умолчанию для всех баз данных и объектов базы данных в проекте SSMA для MySQL.|  
 |[Обновление из базы данных &#40;MySQLToSQL&#41;](../../ssma/mysql/refresh-from-database-mysqltosql.md)|Используйте диалоговое окно **обновление из базы данных** , чтобы выбрать объекты для обновления из базы данных MySQL.|  
 |[Сохранить метаданные &#40;MySQLToSQL&#41;](../../ssma/mysql/save-metadata-mysqltosql.md)|Диалоговое окно **Сохранение метаданных** появляется при сохранении проекта, в котором отсутствуют метаданные.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Начало работы с SSMA для MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)  
-[Перенос баз данных MySQL в SQL Server Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[Перенос баз данных MySQL в SQL Server базы данных SQL Azure &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

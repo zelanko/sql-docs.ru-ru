@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: 4c59256f-99a8-4351-9559-a455813dbd06
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 5185e8b1364fe2a5bae92c40c99e8f52bcd32ba7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 54054cd433e860135dd30bbfeeac255fa1a7c8fb
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028927"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865382"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-sybasetosql"></a>Загрузка преобразованных объектов базы данных в SQL Server (SybaseToSQL)
-После преобразования объектов базы данных «адаптивный сервер предприятия» (ASE) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в или SQL Azure можно загрузить результирующие объекты базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure. Можно либо создать объекты SSMA, либо создавать сценарии для объектов и выполнять сценарии самостоятельно. Кроме того, SSMA позволяет обновлять целевые метаданные фактическим содержимым [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure базе данных.  
+После преобразования объектов базы данных «адаптивный сервер предприятия» (ASE) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure можно загрузить результирующие объекты базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure. Можно либо создать объекты SSMA, либо создавать сценарии для объектов и выполнять сценарии самостоятельно. Кроме того, SSMA позволяет обновлять целевые метаданные фактическим содержимым [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure базе данных.  
   
 ## <a name="choosing-between-synchronization-and-scripts"></a>Выбор между синхронизацией и скриптами  
-Если вы хотите загрузить преобразованные объекты базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure без изменений, можно создать или повторно создать объекты базы данных с помощью SSMA. Этот метод быстро и прост, но не позволяет настраивать [!INCLUDE[tsql](../../includes/tsql-md.md)] код, определяющий объекты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, кроме хранимых процедур.  
+Если вы хотите загрузить преобразованные объекты базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure без изменений, можно создать или повторно создать объекты базы данных с помощью SSMA. Этот метод быстро и прост, но не позволяет настраивать [!INCLUDE[tsql](../../includes/tsql-md.md)] код, определяющий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объекты или SQL Azure, кроме хранимых процедур.  
   
-Если необходимо изменить [!INCLUDE[tsql](../../includes/tsql-md.md)] объект, который используется для создания объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure или требуется больший контроль над временем и способом создания объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, используйте SSMA для создания [!INCLUDE[tsql](../../includes/tsql-md.md)] скриптов. Затем можно изменить эти скрипты, создать каждый объект по отдельности и даже [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использовать или SQL Azure агент, чтобы запланировать создание этих объектов.  
+Если необходимо изменить объект [!INCLUDE[tsql](../../includes/tsql-md.md)] , который используется для создания объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure или требуется больший контроль над временем и способом создания объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, используйте SSMA для создания [!INCLUDE[tsql](../../includes/tsql-md.md)] скриптов. Затем можно изменить эти скрипты, создать каждый объект по отдельности и даже использовать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure агент, чтобы запланировать создание этих объектов.  
   
 ## <a name="using-ssma-to-load-objects-into-sql-server-or-sql-azure"></a>Использование SSMA для загрузки объектов в SQL Server или SQL Azure  
 Чтобы использовать SSMA для создания [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure объектов базы данных, необходимо выбрать объекты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure обозревателе метаданных, а затем синхронизировать объекты с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, как показано в следующей процедуре. По умолчанию, если объекты уже существуют в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure и метаданные SSMA имеют некоторые локальные изменения или обновления определения этих объектов, SSMA изменяет определения объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure. Поведение по умолчанию можно изменить, отредактировав **Параметры проекта**.  
@@ -72,7 +72,7 @@ ms.locfileid: "68028927"
     SSMA добавит расширение имени файла SQL.  
   
 ### <a name="modifying-scripts"></a>Изменение скриптов  
-После сохранения определений объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure в виде одного или нескольких скриптов можно использовать [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для просмотра и изменения скриптов.  
+После сохранения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определений объектов или SQL Azure в виде одного или нескольких скриптов можно использовать [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для просмотра и изменения скриптов.  
   
 **Изменение скрипта**  
   
@@ -82,12 +82,12 @@ ms.locfileid: "68028927"
   
 3.  Измените и файл скрипта с помощью редактора запросов.  
   
-    Дополнительные сведения о редакторе запросов см. в разделе «удобные команды и возможности редактора» электронной [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] документации по.  
+    Дополнительные сведения о редакторе запросов см. в разделе «удобные команды и возможности редактора» [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронной документации по.  
   
 4.  Чтобы сохранить скрипт, в меню Файл выберите команду **сохранить**.  
   
 ### <a name="running-scripts"></a>Выполнение скриптов  
-Можно выполнить сценарий или отдельные инструкции в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+Можно выполнить сценарий или отдельные инструкции в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 **Запуск сценария**  
   
@@ -99,16 +99,16 @@ ms.locfileid: "68028927"
   
 4.  Чтобы выполнить набор инструкций, выберите инструкции в окне редактора запросов и нажмите клавишу **F5** .  
   
-Дополнительные сведения об использовании редактора запросов для выполнения скриптов см. в разделе « [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] запрос» электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+Дополнительные сведения об использовании редактора запросов для выполнения скриптов см [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] . в разделе «запрос» [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронной документации по.  
   
-Скрипты также можно запускать из командной строки с помощью программы **sqlcmd** и из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента. Дополнительные сведения о программе **sqlcmd**см. в разделе «Программа sqlcmd [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] » электронной документации по. Дополнительные сведения об [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агенте см. в разделе «Автоматизация административных задач [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (агент)» [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронной документации по.  
+Скрипты также можно запускать из командной строки с помощью программы **sqlcmd** и из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента. Дополнительные сведения о программе **sqlcmd**см. в разделе «Программа sqlcmd» [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронной документации по. Дополнительные сведения об [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агенте см. в разделе «Автоматизация административных задач ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агент)» [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронной документации по.  
   
 ## <a name="securing-objects-in-sql-server"></a>Защита объектов в SQL Server  
-После загрузки преобразованных объектов базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]можно предоставлять и запрещать разрешения на эти объекты. Рекомендуется сделать это перед переносом данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о защите объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]см. в разделе «вопросы безопасности для баз данных и приложений баз данных» электронной [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] документации по.  
+После загрузки преобразованных объектов базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно предоставлять и запрещать разрешения на эти объекты. Рекомендуется сделать это перед переносом данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Сведения о защите объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе «вопросы безопасности для баз данных и приложений баз данных» [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронной документации по.  
   
 ## <a name="next-step"></a>Следующий шаг  
 Следующим шагом процесса миграции является [Перенос данных SYBASE ASE в SQL Server или SQL Azure (SybaseToSQL)](https://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811).  
   
 ## <a name="see-also"></a>См. также:  
-[Миграция баз данных Sybase ASE в SQL Server Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Миграция баз данных Sybase ASE в SQL Server — база данных SQL Azure &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

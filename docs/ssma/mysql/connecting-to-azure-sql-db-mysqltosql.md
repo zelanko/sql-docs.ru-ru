@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: d0b6f16a-1880-459d-a0c7-28b7ef15c56a
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 7fb6740681c08cb915755b3362352f139e078c4c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da3e0d05abf24bdd7100769ecfbb597e2953a9d5
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103192"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822563"
 ---
-# <a name="connecting-to-azure-sql-db-mysqltosql"></a>Подключение к базе данных SQL Azure (MySQLToSQL)
+# <a name="connecting-to-azure-sql-database-mysqltosql"></a>Подключение к базе данных SQL Azure (MySQLToSQL)
 Чтобы перенести базы данных MySQL в SQL Azure, необходимо подключиться к целевому экземпляру SQL Azure. При подключении SSMA получает метаданные обо всех базах данных в экземпляре SQL Azure и отображает метаданные базы данных в обозревателе метаданных SQL Azure. SSMA хранит сведения об экземпляре SQL Azure, к которому вы подключены, но не хранят пароли.  
   
 Подключение к SQL Azure остается активным до тех пор, пока проект не будет закрыт. При повторном открытии проекта необходимо повторно подключиться к SQL Azure, если требуется активное соединение с сервером. Вы можете работать в автономном режиме, пока вы не загрузит объекты базы данных в SQL Azure и не перенесете данные.  
@@ -57,7 +57,7 @@ ms.locfileid: "68103192"
   
 6.  SSMA рекомендует зашифрованное подключение к SQL Azure.  
   
-7.  Нажмите кнопку **Соединить**.  
+7.  Нажмите кнопку **Подключиться**.  
   
 > [!IMPORTANT]  
 > SSMA для MySQL не поддерживает подключение к базе данных **master** в SQL Azure.  
@@ -87,5 +87,5 @@ ms.locfileid: "68103192"
 -   Если не нужно выполнять какие – либо из этих задач, можно преобразовать определения объектов базы данных MySQL в определения объектов SQL Azure. Дополнительные сведения см. в статье [Преобразование баз данных MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
 ## <a name="see-also"></a>См. также:  
-[Перенос баз данных MySQL в SQL Server Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[Перенос баз данных MySQL в SQL Server базы данных SQL Azure &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

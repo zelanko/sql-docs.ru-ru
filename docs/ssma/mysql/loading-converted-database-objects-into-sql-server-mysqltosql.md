@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: ac993a6d-0283-4823-8793-6b217677dfa3
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: a6966209300e6959e7ba9cb1afa11eb42b855d82
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fb68a40da645046d94dcd5e8b14ac90f0c53d8bc
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67909015"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822628"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-mysqltosql"></a>Загрузка преобразованных объектов базы данных в SQL Server (MySQLToSQL)
 После преобразования баз данных MySQL в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure можно загрузить результирующие объекты базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure. Можно либо создать объекты SSMA, либо создавать сценарии для объектов и выполнять сценарии самостоятельно. Кроме того, SSMA позволяет обновлять целевые метаданные фактическим содержимым [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure базе данных.  
   
 ## <a name="choosing-between-synchronization-and-scripts"></a>Выбор между синхронизацией и скриптами  
-Если вы хотите загрузить преобразованные объекты базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure без изменений, можно создать или повторно создать объекты базы данных с помощью SSMA. Этот метод быстро и прост, но не позволяет настраивать код Transact-SQL, определяющий объекты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure.  
+Если вы хотите загрузить преобразованные объекты базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure без изменений, можно создать или повторно создать объекты базы данных с помощью SSMA. Этот метод быстро и прост, но не позволяет настраивать код Transact-SQL, определяющий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объекты или SQL Azure.  
   
 Если необходимо изменить Transact-SQL, который используется для создания объектов, или требуется больший контроль над созданием объектов, используйте SSMA для создания скриптов. Затем можно изменить эти скрипты, создать каждый объект по отдельности и даже использовать агент SQL Server, чтобы запланировать создание этих объектов.  
   
@@ -101,8 +101,8 @@ ms.locfileid: "67909015"
 После загрузки преобразованных объектов базы данных в SQL Server можно предоставлять и запрещать разрешения для этих объектов. Рекомендуется сделать это перед переносом данных в SQL Server. Сведения о защите объектов в SQL Server см. в разделе «вопросы безопасности для баз данных и приложений баз данных» в электронная документация на SQL Server.  
   
 ## <a name="next-step"></a>Следующий шаг  
-Следующий шаг процесса миграции — [Перенос данных MySQL в SQL Server Azure SQL DB &#40;MySQLToSQL&#41;](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
+Следующий шаг процесса миграции — [Перенос данных MySQL в SQL Server базу данных SQL Azure &#40;MySQLToSQL&#41;](../../ssma/mysql/migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md)  
   
-## <a name="see-also"></a>См. также  
-[Перенос баз данных MySQL в SQL Server Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+## <a name="see-also"></a>См. также:  
+[Перенос баз данных MySQL в SQL Server базы данных SQL Azure &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 96538007-1099-40c8-9902-edd07c5620ee
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 68fbac69959d423477750a69bb6e5b06ab62af2b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 02db151ff7adbc2d2595ed0eeda385c5a0367126
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68083474"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864781"
 ---
-# <a name="connect-to-azure-sql-db--sybasetosql"></a>Подключение к базе данных SQL Azure (SybaseToSQL)
-Чтобы подключиться к базе данных SQL Azure, которую необходимо перенести, используйте диалоговое окно Подключение к БД SQL Azure.  
+# <a name="connect-to-azure-sql-database--sybasetosql"></a>Подключение к базе данных SQL Azure (SybaseToSQL)
+Используйте диалоговое окно Подключение к базе данных SQL Azure для подключения к базе данных SQL Azure, которую необходимо перенести.  
   
 Чтобы открыть это диалоговое окно, в меню **файл** выберите **подключиться к базе данных SQL Azure**. Если подключение было выполнено ранее, команда **повторно подключится к базе данных SQL Azure.**  
   
@@ -31,7 +31,7 @@ ms.locfileid: "68083474"
 Выберите, введите или **Просмотрите** имя базы данных.  
   
 > [!IMPORTANT]  
-> SSMA для Sybase не поддерживает подключение к базе данных master в Azure SQL DB.  
+> SSMA для Sybase не поддерживает подключение к базе данных master в базе данных SQL Azure.  
   
 **User name**  
   

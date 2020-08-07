@@ -19,12 +19,12 @@ ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a72bb16eddc55f5cf741a7809665b44ada4a7a30
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: be336780f5bbfd45660ea376c0d689b577f052da
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717574"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822936"
 ---
 # <a name="sysresource_stats-azure-sql-database"></a>sys.resource_stats (база данных SQL Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -50,8 +50,8 @@ ms.locfileid: "85717574"
 |dtu_limit|**int**|Текущее максимальное значение DTU базы данных для этой базы данных в течение этого интервала. |
 |xtp_storage_percent|**Decimal (5, 2)**|Использование хранилища для выполняющейся в памяти OLTP в процентах от ограничения уровня службы (в конце интервала отчетности). Сюда входит память, используемая для хранения следующих объектов OLTP в памяти: оптимизированных для памяти таблиц, индексов и табличных переменных. Он также включает память, используемую для обработки операций ALTER TABLE.<br /><br /> Возвращает 0, если выполняющаяся в памяти OLTP не используется в базе данных.|
 |avg_login_rate_percent|**Decimal (5, 2)**|Указано только в ознакомительных целях. Не поддерживается. Совместимость с будущими версиями не гарантируется.|
-|avg_instance_cpu_percent|**Decimal (5, 2)**|Средний уровень использования ЦП базы данных в процентах от процесса SQL DB.|
-|avg_instance_memory_percent|**Decimal (5, 2)**|Средний объем использования памяти базы данных в процентах от процесса SQL DB.|
+|avg_instance_cpu_percent|**Decimal (5, 2)**|Среднее использование ЦП базы данных в процентах от процесса базы данных SQL.|
+|avg_instance_memory_percent|**Decimal (5, 2)**|Среднее использование памяти базы данных в процентах от процесса базы данных SQL.|
 |cpu_limit|**Decimal (5, 2)**|Число виртуальных ядер для этой базы данных в течение этого интервала. Для баз данных, использующих модель на основе DTU, этот столбец имеет значение NULL.|
 |allocated_storage_in_megabytes|**float**|Объем форматированного файлового пространства в МБ, доступный для хранения данных базы данных. Отформатированное место в файле также называется выделенным пространством данных.  Дополнительные сведения см. в разделе [Управление местом в файлах в базе данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management) .|
   
@@ -61,7 +61,7 @@ ms.locfileid: "85717574"
 ## <a name="permissions"></a>Разрешения  
  Это представление доступно для всех ролей пользователей с разрешениями на подключение к виртуальной базе данных **master** .  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Данные, возвращаемые **sys. resource_stats** , выражаются в процентах от максимально допустимого уровня обслуживания и производительности, который вы используете.  
   
  Если база данных является членом эластичного пула, то статистика ресурсов, представленная в виде процентных значений, выражается в процентах от максимального предела для баз данных, как указано в конфигурации эластичного пула.  
@@ -83,7 +83,7 @@ GROUP BY database_name
 HAVING AVG(avg_cpu_percent) >= 80  
 ```  
     
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Уровни служб](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
  [Возможности и ограничения уровней служб](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
   

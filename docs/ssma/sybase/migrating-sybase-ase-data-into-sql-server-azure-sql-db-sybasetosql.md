@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 54a39f5e-9250-4387-a3ae-eae47c799811
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 28a07c08fd801a9d5fdcdde4206f7aa6fe7b926f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b9a2663d22bf3820985712ade72f5eaf480266d6
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028846"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865342"
 ---
-# <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-db--sybasetosql"></a>Миграция данных Sybase ASE в SQL Server в базе данных SQL Azure (SybaseToSQL)
+# <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-database--sybasetosql"></a>Миграция данных Sybase ASE в SQL Server — база данных SQL Azure (SybaseToSQL)
 После успешной загрузки объектов базы данных адаптивного сервера предприятия (ASE) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базе данных SQL Azure можно перенести данные из ASE в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базу данных SQL Azure.  
   
 > [!IMPORTANT]  
 > Если используемое ядро является модулем миграции данных на стороне сервера, то перед переносом необходимо установить пакет расширения SSMA для Sybase ASE и поставщики Sybase ASE на компьютере, на котором работает SSMA. Также должна быть запущена служба агент SQL Server. Дополнительные сведения об установке пакета расширений см. в разделе Install [SSMA Components on SQL Server (SybaseToSQL)](https://msdn.microsoft.com/5ad9e12c-2cdb-4dd2-8703-05a23242d19d) .  
   
 ## <a name="setting-migration-options"></a>Настройка параметров миграции  
-Перед переносом данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в или базу данных SQL Azure проверьте параметры миграции проекта в диалоговом окне " **Параметры проекта** ".  
+Перед переносом данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базу данных SQL Azure проверьте параметры миграции проекта в диалоговом окне " **Параметры проекта** ".  
   
 -   С помощью этого диалогового окна можно задать такие параметры, как размер пакета миграции, блокировка таблицы, проверка ограничений, обработка значений NULL и обработка значений идентификаторов. Дополнительные сведения о параметрах миграции проекта см. в разделе [Project Settings (Migration) (Sybase)](https://msdn.microsoft.com/82f8857f-7ab1-4738-ab6e-b1e95ea94924).  
   
@@ -54,9 +54,9 @@ ms.locfileid: "68028846"
 -   Чтобы начать миграцию на стороне сервера, выберите параметр **модуль миграции данных на стороне сервера** в диалоговом окне **Параметры проекта** .  
   
 > [!NOTE]  
-> Если база данных SQL Azure используется в качестве целевой, допускаются только **Перенос данных на стороне клиента** , а миграция данных на стороне сервера не поддерживается.  
+> Если база данных SQL Azure используется в качестве целевой базы данных, то допускается только **Перенос данных на стороне клиента** , а перенос данных на стороне сервера не поддерживается.  
   
-## <a name="migrating-data-to-sql-server-or-azure-sql-db"></a>Перенос данных в SQL Server или базу данных SQL Azure  
+## <a name="migrating-data-to-sql-server-or-azure-sql-database"></a>Перенос данных в SQL Server или базу данных SQL Azure  
 Миграция данных — это операция групповой загрузки, которая перемещает строки данных из ASE таблиц в SQL Serverные таблицы в транзакциях. Число строк, загруженных в SQL Server или базу данных SQL Azure в каждой транзакции, настраивается в параметрах проекта.  
   
 Чтобы просмотреть сообщения о миграции, убедитесь, что панель вывода видна. В противном случае выберите **выходные данные** в меню **вид** .  
@@ -100,7 +100,7 @@ ms.locfileid: "68028846"
   
     Если целевая база данных SQL Server, введите учетные данные подключения в диалоговом окне **Подключение к SQL Server** и нажмите кнопку **подключить**. Дополнительные сведения о подключении к SQL Server см. в разделе [Подключение к SQL Server (SybaseToSQL)](https://msdn.microsoft.com/dd368a1a-45b0-40e9-b4d3-5cdb48c26606) .  
   
-    Если целевая база данных — Azure SQL DB, введите учетные данные подключения в диалоговом окне **Подключение к базе данных SQL Azure** и нажмите кнопку **подключить**. Дополнительные сведения о подключении к базе данных SQL Azure см. в статье [Подключение к базе данных SQL azure &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)  
+    Если целевая база данных является базой данных SQL Azure, введите учетные данные подключения в диалоговом окне **Подключение к базе данных SQL Azure** и нажмите кнопку **подключить**. Дополнительные сведения о подключении к базе данных SQL Azure см. в статье [Подключение к базе данных SQL azure &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)  
   
     Сообщения будут отображаться в области **вывода** . По завершении миграции появится **отчет о переносе данных** . Если какие бы то ни было данные не были перенесены, щелкните строку, содержащую ошибки, а затем нажмите кнопку **сведения**. Завершив работу с отчетом, нажмите кнопку **Закрыть**. Дополнительные сведения об отчете о переносе данных см. в разделе [отчет о переносе данных (SSMA Common)](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241) .  
   
@@ -108,5 +108,5 @@ ms.locfileid: "68028846"
 > Если в качестве целевой базы данных используется SQL Express Edition, то разрешена только миграция данных на стороне клиента, а миграция данных на стороне сервера не поддерживается.  
   
 ## <a name="see-also"></a>См. также:  
-[Миграция баз данных Sybase ASE в SQL Server Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Миграция баз данных Sybase ASE в SQL Server — база данных SQL Azure &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

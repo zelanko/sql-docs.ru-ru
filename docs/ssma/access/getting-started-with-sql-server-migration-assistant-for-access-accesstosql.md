@@ -20,15 +20,15 @@ ms.assetid: 462a731f-08f1-44e1-9eeb-4deac6d2f6c5
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: e49e55c31e346671f7f66a42e23c39e7a64e3808
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: b27d773bc8fd928e7db2e29c7a01492fb97df78f
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293951"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823952"
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>Начало работы с Помощник по миграции SQL Server для доступа (Акцесстоскл)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Помощник по миграции (SSMA) для Access позволяет быстро преобразовывать объекты базы данных Access в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или объекты SQL Azure, передавать полученные объекты в базу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или Azure SQL DB, а также переносить данные из Access в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базу данных SQL Azure или из нее. При необходимости можно также связать таблицы доступа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или таблицы базы данных SQL Azure, чтобы вы могли продолжать использовать существующие клиентские приложения Access с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базой данных SQL Azure.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Помощник по миграции (SSMA) для Access позволяет быстро преобразовывать объекты базы данных Access в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или объекты базы данных SQL Azure, передавать полученные объекты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базу данных SQL Azure и выполнять перенос данных из Access в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базу данных SQL Azure или из нее. При необходимости можно также связать таблицы доступа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или таблицы базы данных SQL Azure, чтобы вы могли продолжать использовать существующие клиентские приложения Access с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базой данных SQL Azure.  
   
 В этом разделе описывается процесс установки и помогает ознакомиться с пользовательским интерфейсом SSMA.  
   
@@ -38,12 +38,12 @@ ms.locfileid: "84293951"
 Чтобы запустить SSMA, нажмите кнопку **Пуск**, укажите пункт **все программы**, выберите **Помощник по миграции SQL Server для доступа**, а затем выберите **Помощник по миграции SQL Server для доступа**.  
   
 ## <a name="using-ssma"></a>Использование SSMA  
-После установки SSMA мы познакомимся с пользовательским интерфейсом SSMA, прежде чем использовать средство для переноса баз данных Access в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базу данных SQL Azure. Пользовательский интерфейс SSMA, включая обозреватели метаданных, метаданные, панели инструментов, панель вывода и список ошибок, показан на следующей схеме:  
+После установки SSMA помогает ознакомиться с пользовательским интерфейсом SSMA, прежде чем использовать средство для переноса баз данных Access в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базу данных SQL Azure или. Пользовательский интерфейс SSMA, включая обозреватели метаданных, метаданные, панели инструментов, панель вывода и список ошибок, показан на следующей схеме:  
   
 ![SSMA для графического интерфейса пользователя Access](../../ssma/access/media/ssmaforaccessgui.gif "SSMA для графического интерфейса пользователя Access")  
   
 Чтобы начать миграцию, создайте новый проект, а затем добавьте базы данных Access для доступа к обозревателю метаданных. Затем можно щелкнуть правой кнопкой мыши объекты в обозревателе метаданных Access, чтобы выполнить следующие задачи:
-- Экспорт перечня объектов базы данных Access в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или в базе данных SQL Azure.
+- Экспорт перечня объектов базы данных Access в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базу данных SQL Azure или.
 - Создание отчетов, оценивающих преобразования в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базу данных SQL Azure или.
 - Преобразование схем доступа в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] схемы базы данных SQL Azure или.
 
@@ -51,9 +51,9 @@ ms.locfileid: "84293951"
   
 Необходимо также подключиться к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . После успешного подключения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в обозревателе метаданных отобразится иерархия баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . После преобразования схем доступа в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] схемы можно выбрать эти преобразованные схемы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обозревателе метаданных, а затем загрузить схемы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-Если вы выбрали базу данных SQL Azure из диалогового окна миграция в раскрывающийся список в диалоговом окне Новый проект, необходимо подключиться к базе данных SQL Azure. После успешного подключения отобразится иерархия баз данных SQL Azure в обозревателе метаданных базы данных SQL Azure. После преобразования схем доступа в схемы базы данных SQL Azure можно выбрать эти преобразованные схемы в обозревателе метаданных базы данных SQL Azure, а затем загрузить схемы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+Если вы выбрали базу данных SQL Azure в диалоговом окне Миграция в раскрывающийся список в новом проекте, необходимо подключиться к базе данных SQL Azure. После успешного подключения в обозревателе метаданных базы данных SQL Azure отобразится иерархия баз данных SQL Azure. После преобразования схем доступа в схемы базы данных SQL Azure можно выбрать эти преобразованные схемы в обозревателе метаданных базы данных SQL Azure, а затем загрузить схемы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-После загрузки преобразованных схем в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базу данных SQL Azure или в нее можно вернуться к обозревателю метаданных и перенести данные из баз данных Access в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных SQL Azure или из них. При необходимости можно также связать таблицы доступа с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицами базы данных SQL Azure или.  
+После загрузки преобразованных схем в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базу данных SQL Azure или из нее можно вернуться к обозревателю метаданных и перенести данные из баз данных Access в базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure или из них. При необходимости можно также связать таблицы доступа с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицами базы данных SQL Azure или.  
   
 Дополнительные сведения об этих задачах и способах их выполнения см. в следующих разделах:  
   
@@ -66,7 +66,7 @@ ms.locfileid: "84293951"
 В следующих разделах описываются функции пользовательского интерфейса SSMA.  
   
 ### <a name="metadata-explorers"></a>Обозреватель метаданных  
-SSMA содержит два обозревателя метаданных, которые можно использовать для просмотра и выполнения действий в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базах данных Access и Azure SQL DB.  
+SSMA содержит два обозревателя метаданных, которые можно использовать для просмотра и выполнения действий в базах данных Access и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных SQL Azure.  
   
 #### <a name="access-metadata-explorer"></a>Доступ к обозревателю метаданных  
 В обозревателе метаданных Access отображаются сведения о базах данных Access, которые были добавлены в проект. При добавлении базы данных Access SSMA извлекает метаданные об этой базе данных, которая является метаданными, доступными в обозревателе метаданных Access.  
@@ -81,7 +81,7 @@ SSMA содержит два обозревателя метаданных, ко
   
 -   Связывание и отмена связи доступа и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблиц.  
   
-#### <a name="sql-server-or-azure-sql-db-metadata-explorer"></a>SQL Server или обозреватель метаданных базы данных SQL Azure  
+#### <a name="sql-server-or-azure-sql-database-metadata-explorer"></a>SQL Server или обозреватель метаданных базы данных SQL Azure  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или обозреватель метаданных базы данных SQL Azure отображает сведения об экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базе данных SQL Azure. При подключении к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базе данных SQL Azure SSMA извлекает метаданные об этом экземпляре и сохраняет его в файле проекта.  
   
 Вы можете использовать SQL Server или обозреватель метаданных базы данных SQL Azure, чтобы выбрать преобразованные объекты базы данных Access и загрузить (синхронизировать) эти объекты в экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базу данных SQL Azure.  
@@ -101,17 +101,17 @@ SSMA содержит два обозревателя метаданных, ко
 SSMA содержит две панели инструментов: панель инструментов проекта и панель инструментов миграции.  
   
 #### <a name="the-project-toolbar"></a>Панель инструментов проекта  
-Панель инструментов проекта содержит кнопки для работы с проектами, добавления файлов базы данных Access и подключения к базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure. Эти кнопки похожи на команды в меню **файл** .  
+Панель инструментов проекта содержит кнопки для работы с проектами, добавления файлов базы данных Access и подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базе данных SQL Azure. Эти кнопки похожи на команды в меню **файл** .  
   
 #### <a name="the-migration-toolbar"></a>Панель инструментов миграции  
 Панель инструментов миграции содержит следующие команды:  
   
-|Кнопка|Компонент|  
+|Кнопка|Функция|  
 |----------|------------|  
-|**Преобразование, загрузка и миграция**|Преобразует базы данных Access, загружает преобразованные объекты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базу данных SQL Azure, а также переносит данные в базу данных SQL Azure и выполняет их [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] все за один шаг.|  
+|**Преобразование, загрузка и миграция**|Преобразует базы данных Access, загружает преобразованные объекты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базу данных SQL Azure и переносит их в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базу данных SQL Azure и все за один шаг.|  
 |**Создавать отчет**|Преобразует выбранную схему доступа в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или синтаксис базы данных SQL Azure, а затем создает отчет, показывающий, как было выполнено преобразование.<br /><br />Эта команда доступна, только если объекты выбраны в обозревателе метаданных Access.|  
 |**Преобразовать схему**|Преобразует выбранную схему доступа в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] схемы базы данных SQL Azure или.<br /><br />Эта команда доступна, только если объекты выбраны в обозревателе метаданных Access.|  
-|**Перенос данных**|Переносит данные из базы данных Access в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или в базу данных SQL Azure. Перед выполнением этой команды необходимо преобразовать схемы доступа в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или схемы базы данных SQL Azure, а затем загрузить объекты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базу данных SQL Azure.<br /><br />Эта команда доступна, только если объекты выбраны в обозревателе метаданных Access.|  
+|**Перенос данных**|Переносит данные из базы данных Access в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базу данных SQL Azure или. Перед выполнением этой команды необходимо преобразовать схемы доступа в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] схемы базы данных SQL Azure или в нее, а затем загрузить объекты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базу данных SQL Azure.<br /><br />Эта команда доступна, только если объекты выбраны в обозревателе метаданных Access.|  
 |**Остановить**|Останавливает текущий процесс, например преобразование объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или синтаксис базы данных SQL Azure.|  
   
 ### <a name="menus"></a>Меню  
@@ -119,9 +119,9 @@ SSMA содержит следующие меню:
   
 |Меню|Описание|  
 |--------|---------------|  
-|**Файл**|Содержит команды для мастера миграции, работы с проектами, добавления и удаления файлов базы данных Access, а также подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] БД или базе данных SQL Azure.|  
+|**Файл**|Содержит команды для мастера миграции, работы с проектами, добавления и удаления файлов базы данных Access, а также подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базе данных SQL Azure.|  
 |**Edit** (Изменение)|Содержит команды для поиска и работы с текстом на страницах со сведениями, например для копирования [!INCLUDE[tsql](../../includes/tsql-md.md)] из области сведений о SQL. Чтобы открыть диалоговое окно **Управление закладками** , в меню Правка выберите пункт Управление закладками. В диалоговом окне вы увидите список существующих закладок. Для управления закладками можно использовать кнопки в правой части диалогового окна.|  
-|**Вид**|Содержит команду **Синхронизация обозревателей метаданных** . Это синхронизирует объекты между обозревателем метаданных Access и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обозревателем метаданных базы данных SQL Azure. Также содержит команды для отображения и скрытия **выходных** и **Список ошибок** панелей и **макетов** параметров для управления с помощью макетов.|  
+|**Просмотр**|Содержит команду **Синхронизация обозревателей метаданных** . Это синхронизирует объекты между обозревателем метаданных Access и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обозревателем метаданных базы данных SQL Azure. Также содержит команды для отображения и скрытия **выходных** и **Список ошибок** панелей и **макетов** параметров для управления с помощью макетов.|  
 |**Инструменты**|Содержит команды для создания отчетов, экспорта данных, переноса объектов и данных, связывания таблиц и доступа к диалоговым окнам глобальные и параметры проекта.|  
 |**Справка**|Предоставляет доступ к справке SSMA и диалоговому окну " **о программе** ".|  
   
@@ -132,6 +132,6 @@ SSMA содержит следующие меню:
   
 -   В области Список ошибок отображаются сообщения об ошибках, предупреждениях и информационном списке, которые можно сортировать.  
   
-## <a name="see-also"></a>Дополнительно  
+## <a name="see-also"></a>См. также  
 [Миграция баз данных Access в SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

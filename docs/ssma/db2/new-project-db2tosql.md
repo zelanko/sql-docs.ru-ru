@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 66437b45-4686-4fc7-a91b-ebde45e0f1b0
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 8e9edc319a539d438cdb7eb126694812d9084d24
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a670a9766388d4ba1d1908a71ef7a32147f60fc
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084625"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87824047"
 ---
 # <a name="new-project-db2tosql"></a>Новый проект (DB2ToSQL)
 Используйте диалоговое окно **Создание проекта** для создания нового проекта SSMA. Чтобы открыть диалоговое окно **Новый проект** , в меню **файл** выберите команду **создать проект**.  
@@ -35,5 +35,5 @@ ms.locfileid: "68084625"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
--   БД SQL Azure  
+-   База данных SQL Azure  
   

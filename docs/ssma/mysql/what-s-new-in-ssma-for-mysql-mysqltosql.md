@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 ms.author: alexiva
-ms.openlocfilehash: 0511e67a355f960dcc3af90324142d5662b38627
-ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.openlocfilehash: 7c9b0a65da5038f2b8871ae9ae680d3a8bd9bf33
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87477366"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863470"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>Новые возможности в SSMA для MySQL (MySQLToSql)
 
@@ -114,9 +114,9 @@ ms.locfileid: "87477366"
 
 Выпуск версии 8.0 SSMA для MySQL улучшен с помощью целевых исправлений, предназначенных для улучшения качества и показателей преобразования. В этом выпуске также предлагаются следующие новые возможности.
 
-* Поддержка **управляемый экземпляр базы данных SQL Azure** в качестве целевого объекта. Теперь можно создавать новые проекты, нацеленные на Управляемый экземпляр Базы данных SQL Azure:
+* Поддержка **управляемый экземпляр Azure SQL** в качестве целевого объекта. Теперь вы можете создавать новые проекты, предназначенные для Управляемый экземпляр Azure SQL:
 
-  ![Проект SQL DB MI](../media/ssma-newproject-sqldbmi.png)
+  ![Проект SQL MI](../media/ssma-newproject-sqldbmi.png)
 
 * **Советник по исправлению**после преобразования. Дополнительные сведения см. [здесь](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
 

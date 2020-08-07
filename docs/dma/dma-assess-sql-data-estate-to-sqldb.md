@@ -15,12 +15,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a5181dcf07745fc1bf9cd993ebd65c58f55f96c1
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 4a4b9567865132d355a6285ecc046bfe6b4a3f7a
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85054264"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864941"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Оценка готовности SQL Serverного пространства данных для переноса в базу данных SQL Azure с помощью Помощник по миграции данных
 
@@ -99,7 +99,7 @@ ms.locfileid: "85054264"
 1. В левой части щелкните **+** значок, а затем выберите **тип проекта** оценки.
 2. Укажите имя проекта, а затем выберите типы исходного сервера и целевого сервера.
 
-    Если вы обновляете локальный экземпляр SQL Server до более поздней версии SQL Server или для SQL Server, размещенного на виртуальной машине Azure, задайте для параметра Тип исходного и целевого сервера значение **SQL Server**. Задайте тип целевого сервера **управляемый экземпляр базы данных SQL Azure** для оценки готовности целевой базы данных SQL Azure (PaaS).
+    Если вы обновляете локальный экземпляр SQL Server до более поздней версии SQL Server или для SQL Server, размещенного на виртуальной машине Azure, задайте для параметра Тип исходного и целевого сервера значение **SQL Server**. Задайте тип целевого сервера **Azure sql управляемый экземпляр** для оценки готовности целевой базы данных SQL Azure (PaaS).
 
 3. Нажмите кнопку **создания**.
 
@@ -159,7 +159,7 @@ ms.locfileid: "85054264"
    ![Служба "миграция Azure" — Проверка результатов готовности](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-review-readiness.png)
 
     **Оцененные экземпляры базы данных**: количество экземпляров SQL Server, оцененных на данный момент.
-    **Оцененные базы данных**: общее число баз данных, оцененных по одному или нескольким экземплярам SQL Server, **готовых для**базы данных SQL: количество баз данных, готовых к миграции в базу данных SQL Azure (PaaS).
+    **Оцененные базы данных**: общее число баз данных, оцененных по одному или нескольким экземплярам SQL Server, **готовых для базы данных SQL**: количество баз данных, готовых к миграции в базу данных SQL Azure (PaaS).
     **Базы данных, готовые для виртуальной машины SQL Azure**. число баз данных состоит из одного или нескольких блокирований миграции в базу данных SQL Azure (PaaS), но готовы к миграции на виртуальные машины Azure SQL Server.
 
 3. Выберите **оцененные экземпляры базы данных** , чтобы перейти к представлению SQL Server уровня экземпляра.
@@ -178,7 +178,7 @@ ms.locfileid: "85054264"
 
    ![Миграция Azure — проверка блокирования миграции](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-migration-blockers.png)
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 * [Помощник по миграции данных (DMA)](../dma/dma-overview.md)
 * [Помощник по миграции данных: параметры конфигурации](../dma/dma-configurationsettings.md)

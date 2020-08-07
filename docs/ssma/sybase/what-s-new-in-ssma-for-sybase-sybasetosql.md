@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 ms.author: alexiva
-ms.openlocfilehash: 53ae61f78bed3ee262844f5242f3499d8981501b
-ms.sourcegitcommit: 376a6039f917c9f64c45758b257666f5d51387b5
+ms.openlocfilehash: 8391c9642bb7ee0849ea4627b42ac580c4d44d20
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87477326"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864711"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>Новые возможности SSMA для SAP ASE (SybaseToSQL)
 
@@ -114,9 +114,9 @@ ms.locfileid: "87477326"
 
 Выпуск версии 8.0 SSMA для SAP ASE улучшен с помощью целевых исправлений, предназначенных для улучшения качества и показателей преобразования. Кроме того, этот выпуск предоставляет следующие новые возможности:
 
-* Поддержка **управляемый экземпляр базы данных SQL Azure** в качестве целевого объекта. Теперь можно создавать новые проекты, нацеленные на Управляемый экземпляр Базы данных SQL Azure:
+* Поддержка **управляемый экземпляр Azure SQL** в качестве целевого объекта. Теперь вы можете создавать новые проекты, предназначенные для Управляемый экземпляр Azure SQL:
 
-  ![Проект SQL DB MI](../media/ssma-newproject-sqldbmi.png)
+  ![Проект базы данных SQL MI](../media/ssma-newproject-sqldbmi.png)
 
 * **Советник по исправлению**после преобразования. Дополнительные сведения см. [здесь](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
 
@@ -237,7 +237,7 @@ ms.locfileid: "87477326"
 Выпуск SSMA для Sybase в июле 2014 содержит следующие изменения:
 
 * Улучшено преобразование кода базы данных SQL Azure.
-* Перенесены функции пакета расширения в схему для поддержки базы данных SQL Azure.
+* Функции пакета расширений перемещены в схему для поддержки базы данных SQL Azure.
 * Добавлены улучшения производительности, протестированные для баз данных с более чем 10000 объектами.
 * Добавлены улучшения пользовательского интерфейса для работы с большим количеством объектов.
 * Добавлена возможность выделения хорошо известных схем LOB (чтобы их можно было игнорировать при преобразовании).

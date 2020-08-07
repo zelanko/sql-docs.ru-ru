@@ -1,7 +1,7 @@
 ---
 title: sp_execute_external_script (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 05/28/2020
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 10c29ab8faed05c2fb2750e1e4de17b2fc1fb2b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a1ef1dc0f4b59b5eaf8f0ea4978a4eacde023e31
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790399"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87877962"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 
@@ -137,7 +137,7 @@ sp_execute_external_script
   
 `[ @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]`Список значений входных параметров, используемых внешним скриптом.  
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 
 > [!IMPORTANT]
 > Дерево запросов управляется машинным обучением SQL, и пользователи не могут выполнять произвольные операции с запросом.
@@ -177,7 +177,7 @@ sp_execute_external_script
 Скрипт можно выполнить параллельно, указав `@parallel=1` . Если входной запрос можно выполнить параллельно, следует задать в `@parallel=1` качестве части аргументов значение `sp_execute_external_script` . По умолчанию оптимизатор запросов работает в `@parallel=1` таблицах, имеющих более 256 строк, но если вы хотите, чтобы эта возможность была бы обработана явно, этот скрипт включает параметр в качестве демонстрации.
 
 > [!Tip]
-> Для рабочих нагрузок обучения можно использовать `@parallel` с любым произвольным скриптом обучения, даже при использовании алгоритмов, отличных от Microsoft RX. Как правило, в SQL Server параллелизм в скриптах обучения предусмотрен только в алгоритмах RevoScaleR (с префиксом RX). Но с новыми параметрами в SQL Server vNext можно параллелизации скрипта, который вызывает функции, не разработанные специально для этой возможности.
+> Для рабочих нагрузок обучения можно использовать `@parallel` с любым произвольным скриптом обучения, даже при использовании алгоритмов, отличных от Microsoft RX. Как правило, в SQL Server параллелизм в скриптах обучения предусмотрен только в алгоритмах RevoScaleR (с префиксом RX). Но с новыми параметрами в SQL Server 2019 и более поздних версиях можно параллелизации скрипта, который вызывает функции, не разработанные специально для этой возможности.
 ::: moniker-end
 
 ### <a name="streaming-execution-for-python-and-r-scripts"></a>Потоковое выполнение для скриптов Python и R  

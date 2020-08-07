@@ -15,12 +15,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 03/15/2017
-ms.openlocfilehash: 292e2e14f8837aefb076256ec9d61ab7e2cf4032
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 97954598f44b5fa66a6558aae4964cc1651f6f70
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879948"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865070"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
 
@@ -31,7 +31,7 @@ ms.locfileid: "85879948"
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 > [!IMPORTANT]
-> В [управляемый экземпляр базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)поддерживаются большинство типов заданий, но не все агент SQL Server. Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> В [управляемый экземпляр SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)поддерживаются большинство типов заданий, но не все агент SQL Server. Дополнительные сведения см. [в статье отличия T-sql управляемый экземпляр SQL Azure от SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) .
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -74,9 +74,9 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 
 `[ @subsystem = ] 'subsystem'`Подсистема, используемая [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] службой агента для выполнения *команды*. *подсистема* имеет тип **nvarchar (40)** и может принимать одно из следующих значений.
 
-|Значение|Описание|
+|Значение|Описание:|
 |-----------|-----------------|
-|"**ActiveScripting**"|Активный скрипт.<br /><br /> ** \* \* Важно \* ! \* **[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|
+|"**ActiveScripting**"|Активный скрипт.<br /><br /> **\*\* Внимание! \*\*** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|
 |**CmdExec**|Команда операционной системы или исполняемая программа.|
 |"**Distribution**"|Задание агента распространения репликации.|
 |"**Snapshot**"|Задание агента моментальных снимков репликации.|
@@ -211,7 +211,7 @@ EXEC sp_add_jobstep
 GO
 ```
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Дальнейшие шаги
 
 - [Просмотр или изменение заданий](../../ssms/agent/view-or-modify-jobs.md)
 - [sp_add_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)

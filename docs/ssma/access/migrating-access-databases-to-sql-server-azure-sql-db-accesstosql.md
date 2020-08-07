@@ -17,14 +17,14 @@ ms.assetid: 76a3abcf-2998-4712-9490-fe8d872c89ca
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: d3cbe1565642d43aabf3e36604fac5bfc2979c65
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: d35f359186fca7d862ee8da8f4c4932d849c421b
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293743"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823559"
 ---
-# <a name="migrating-access-databases-to-sql-server---azure-sql-db-accesstosql"></a>Миграция баз данных Access в SQL Server в базе данных SQL Azure (Акцесстоскл)
+# <a name="migrating-access-databases-to-sql-server---azure-sql-database-accesstosql"></a>Миграция баз данных Access в SQL Server — база данных SQL Azure (Акцесстоскл)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Помощник по миграции (SSMA) — это средство, предоставляющее исчерпывающую среду, помогающую быстро перенести базы данных Access в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure. С помощью SSMA можно просматривать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объекты базы данных Access и SQL Azure, оценивать базу данных Access для миграции, преобразовывать объекты базы данных Access, загружать их в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, а затем переносить данные.  
   
 ## <a name="recommended-migration-process"></a>Рекомендуемый процесс миграции  
@@ -59,6 +59,6 @@ ms.locfileid: "84293743"
   
 Вы также можете использовать мастер миграции для пошагового выполнения этого процесса. Дополнительные сведения см. в разделе [Мастер миграции](migration-wizard-accesstosql.md).  
   
-## <a name="see-also"></a>Дополнительно  
+## <a name="see-also"></a>См. также  
 [начало работы с Помощник по миграции SQL Server для доступа](getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
 [Подготовка баз данных Access к миграции](preparing-access-databases-for-migration-accesstosql.md)

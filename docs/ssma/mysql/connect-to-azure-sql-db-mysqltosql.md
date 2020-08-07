@@ -9,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 12da1aa42f468b92e1833410e635183aabf3a384
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6cf82511b7819b6c7b0451facc85ef35dc8cf9fc
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103244"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823797"
 ---
-# <a name="connect-to-azure-sql-db-mysqltosql"></a>Подключение к базе данных SQL Azure (MySQLToSQL)
+# <a name="connect-to-azure-sql-database-mysqltosql"></a>Подключение к базе данных SQL Azure (MySQLToSQL)
 Используйте диалоговое окно Подключение к SQL Azure для подключения к базе данных SQL Azure, которую требуется перенести.  
   
 Чтобы открыть это диалоговое окно, в меню **файл** выберите **подключиться к SQL Azure**. Если подключение было выполнено ранее, команда **повторно подключится к SQL Azure.**  

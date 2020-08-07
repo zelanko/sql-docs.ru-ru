@@ -9,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 8c06420a-533b-4de0-948d-a0c6b368c544
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: e4cf080d7a3bcb2d121a58a57be9f3fd41a4c18a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4125f73ec34418261d0308221c448cae1fb06298
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67908819"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862315"
 ---
-# <a name="project-settings-azure-sql-db-mysqltosql"></a>Параметры проекта (база данных SQL Azure) (MySQLToSQL)
+# <a name="project-settings-azure-sql-database-mysqltosql"></a>Параметры проекта (база данных SQL Azure) (MySQLToSQL)
 Параметры проекта SQL Azure позволяют настроить суффикс SQL Azure базы данных для добавления в диалоговом окне соединения, а также разрешить реализацию механизма пульса в SQL Azureном соединении.  
   
 Панель SQL Azure доступна в диалоговых окнах **Параметры проекта** и **Параметры проекта по умолчанию** .  
@@ -27,7 +27,7 @@ ms.locfileid: "67908819"
   
 ## <a name="options"></a>Параметры  
   
-## <a name="connectivity"></a>Соединение  
+## <a name="connectivity"></a>Подключение  
 **Интервал пульса**  
   
 Указывает интервал времени, используемый для механизма пульса, чтобы поддерживать подключение SQL Azure в формате "минуты: секунды".  

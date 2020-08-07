@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 784365d3-df4e-47ab-8ee0-d8392b52f510
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 79313d2344f6feb978a064f3fbd92e1f7bc7dce5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 11d17d35dd8118c2afb9310ffcc45dcbea021f6c
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028892"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87865362"
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>Сопоставление типов данных Sybase ASE и SQL Server (SybaseToSQL)
-Типы баз данных адаптивного сервера уровня Sybase (ASE) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отличаются от типов баз данных или SQL Azure. При преобразовании объектов базы данных ASE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в или SQL Azure объекты необходимо указать способ отображения типов данных из ASE в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure. Можно принять сопоставления типов данных по умолчанию или настроить сопоставления, как показано в следующих разделах.  
+Типы баз данных адаптивного сервера уровня Sybase (ASE) отличаются от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов баз данных или SQL Azure. При преобразовании объектов базы данных ASE в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure объекты необходимо указать способ отображения типов данных из ASE в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure. Можно принять сопоставления типов данных по умолчанию или настроить сопоставления, как показано в следующих разделах.  
   
 ## <a name="default-mappings"></a>Сопоставления по умолчанию  
 SSMA имеет набор сопоставлений типов данных по умолчанию. Список сопоставлений по умолчанию см. в разделе [Project Settings &#40;Type mapping&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md).  
@@ -67,7 +67,7 @@ SSMA имеет набор сопоставлений типов данных п
   
 3.  Чтобы изменить сопоставление типов данных, выполните следующие действия.  
   
-    1.  Щелкните **Правка**.  
+    1.  Нажмите кнопку **Изменить**.  
   
     2.  В разделе **тип источника**выберите тип данных ASE для отображения.  
   
@@ -87,9 +87,9 @@ SSMA имеет набор сопоставлений типов данных п
   
         Унаследованные сопоставления удалить нельзя. Однако унаследованные сопоставления переопределяются пользовательскими сопоставлениями для определенного объекта или категории объектов.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Next Steps  
 Следующим шагом процесса миграции является [Создание отчета оценки](assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md) или [Преобразование объектов базы данных Sybase ASE в SQL Server или SQL Azure синтаксис](converting-sybase-ase-database-objects-sybasetosql.md). При создании отчета об оценке объекты Sybase ASE автоматически преобразуются во время оценки.  
   
 ## <a name="see-also"></a>См. также:  
-[Миграция баз данных Sybase ASE в SQL Server Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Миграция баз данных Sybase ASE в SQL Server — база данных SQL Azure &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   
