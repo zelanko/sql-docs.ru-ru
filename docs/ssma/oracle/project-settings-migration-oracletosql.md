@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: fcd6b988-633b-4b2b-9f36-6368b5e86b60
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 8c9d934cc74bbafc5dca4517a063aaeb8c49e9a1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: b2e6e8b0f74194383afd3adc26a0f5b9c7d13007
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266603"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933245"
 ---
 # <a name="project-settings-migration-oracletosql"></a>Параметры проекта (миграция) (OracleToSQL)
-Страница миграция диалогового окна **Параметры проекта** содержит параметры, которые позволяют настроить SSMA миграцию данных из Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Страница миграция диалогового окна **Параметры проекта** содержит параметры, которые позволяют настроить SSMA миграцию данных из Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 Панель миграция доступна в диалоговых окнах **Параметры проекта** и **Параметры проекта по умолчанию** .  
   

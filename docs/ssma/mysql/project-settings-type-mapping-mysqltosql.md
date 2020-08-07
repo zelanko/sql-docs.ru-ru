@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 7add1259778bf189c981d5b302e989bf7bc233c3
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 79c86ee63638dcc520aa9bb590b8a616172cb1e4
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396564"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935179"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>Параметры проекта (сопоставление типов) (MySQLToSQL)
 Параметры проекта сопоставления типов позволяют задать сопоставления типов по умолчанию для проекта SSMA.  
@@ -69,7 +69,7 @@ ms.locfileid: "87396564"
 |большой двоичный объект [2.. 8000]|varbinary [*]|  
 |BLOB-объект [8001.. *]|varbinary(max)|  
 |bool|bit|  
-|boolean|bit|  
+|Логическое|bit|  
 |char|nchar [1]|  
 |Byte (байт)|двоичный файл [1]|  
 |Byte (байт) [0.. 1]|двоичный файл [1]|  
@@ -98,15 +98,15 @@ ms.locfileid: "87396564"
 |FLOAT|float [24]|  
 |float [*.. 255] [ \* .. пределах|numeric [*] [ \* ]|  
 |float [*.. 53]|float [53]|  
-|INT|INT|  
-|int [*.. 255]|INT|  
-|Целое число|INT|  
-|Integer [*.. 255]|INT|  
+|int|int|  
+|int [*.. 255]|int|  
+|целое число|int|  
+|Integer [*.. 255]|int|  
 |longblob|varbinary(max)|  
 |longtext|nvarchar(max)|  
 |mediumblob|varbinary(max)|  
-|mediumint|INT|  
-|медиуминт [*.. 255]|INT|  
+|mediumint|int|  
+|медиуминт [*.. 255]|int|  
 |mediumtext|nvarchar(max)|  
 |Национальный знак|nchar [1]|  
 |Национальный знак [0.. 1]|nchar [1]|  
@@ -172,15 +172,15 @@ ms.locfileid: "87396564"
 |целое число без знака [*.. 255]|BIGINT|  
 |целое число без знака|BIGINT|  
 |целое число без знака [*.. 255]|BIGINT|  
-|неподписанный медиуминт|INT|  
-|медиуминт без знака [*.. 255]|INT|  
+|неподписанный медиуминт|int|  
+|медиуминт без знака [*.. 255]|int|  
 |число без знака|NUMERIC|  
 |число без знака [*.. 65]|numeric [*] [0]|  
 |число без знака [*.. 65] [ \* .. пределах|numeric [*] [ \* ]|  
 |вещественное без знака|float [53]|  
 |Вещественная сумма без знака [*.. 255 [[ \* .. пределах|numeric [*] [ \* ]|  
-|неподписанный smallint|INT|  
-|неподписанный smallint [*.. 255]|INT|  
+|неподписанный smallint|int|  
+|неподписанный smallint [*.. 255]|int|  
 |неподписанный tinyint|tinyint|  
 |неподписанный tinyint [*.. 255]|tinyint|  
 |varbinary [0.. 1]|varbinary [1]|  

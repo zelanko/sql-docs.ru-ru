@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Command Line Options, Variable Value File Option
 - Command Line Options,Script File Option
 ms.assetid: bf4a9313-349e-4ebf-9c89-9f5bb515f9ff
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 96d76d301e3f937cb0e3c21a43f1939d0149ec9b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 6bddaddeda73133b83d6a7669c98fd89af96cd2c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264508"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934993"
 ---
 # <a name="command-line-options-in-ssma-console-oracletosql"></a>Параметры командной строки в консоли SSMA (OracleToSQL)
 Корпорация Майкрософт предоставляет надежные параметры командной строки для выполнения и управления действиями SSMA. Эти разделы подробно описываются.  
@@ -30,7 +30,7 @@ ms.locfileid: "68264508"
   
 В этом разделе термин "параметр" также называется "Switch".  
   
--   Параметры не учитывают регистр и могут начинаться с символа "**-**" или "**/**".  
+-   Параметры не учитывают регистр и могут начинаться с символа " **-** " или " **/** ".  
   
 -   Если указаны параметры, они становятся обязательными для указания соответствующих параметров параметра.  
   
@@ -127,7 +127,7 @@ ms.locfileid: "68264508"
   
 В качестве параметра командной строки нельзя ввести любой другой параметр или пароль. В противном случае возникает ошибка. Дополнительные сведения см. в разделе [Управление паролями](managing-passwords-oracletosql.md) .  
   
-Поддерживаются следующие подпараметры `-p/securepassword`:  
+Поддерживаются следующие подпараметры `-p/securepassword` :  
   
 -   Чтобы добавить пароль в защищенное хранилище для указанного идентификатора сервера или для всех идентификаторов серверов, определенных в файле соединения с сервером. Параметр-overwrite ниже обновляет пароль, если он уже существует:  
   

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - versions of Access
 - workgroup security
 ms.assetid: 9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114
-author: Shamikg
-ms.author: Shamikg
-manager: murato
-ms.openlocfilehash: 1b0fe1ef2f51da9e64954040e58440a9e7eee58e
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 038ffa60562a443c916d0143fa432d3e5da87bc4
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293731"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937986"
 ---
 # <a name="preparing-access-databases-for-migration-accesstosql"></a>Подготовка баз данных Access для миграции (Акцесстоскл)
 Перед миграцией баз данных Access в необходимо [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определить, какие базы данных необходимо перенести, и убедиться, что эти базы данных готовы к миграции.  
@@ -76,6 +76,6 @@ SSMA не может перенести базы данных, использу�
 ### <a name="documenting-databases"></a>Документирование баз данных  
 Кроме того, может потребоваться документировать свойства баз данных Access, например списки объектов, размер файлов и разрешения. Чтобы создать эту документацию в Access, в меню **Сервис** выберите пункт **анализ**, а затем — **Документация**.  
   
-## <a name="see-also"></a>Дополнительно  
+## <a name="see-also"></a>См. также статью  
 [Миграция баз данных Access в SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [Связывание приложений Access с SQL Server](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)

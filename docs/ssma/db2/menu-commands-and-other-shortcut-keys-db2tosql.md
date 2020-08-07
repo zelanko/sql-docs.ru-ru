@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 13189359-73ff-45cf-8225-2a8f7194accc
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 8937eb796d75afdc404ef4815918245cda7f13a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 3622c9928946e8708097f535b311a70b2a996bf3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68074151"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933725"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-db2tosql"></a>Команды меню и другие сочетания клавиш (DB2ToSQL)
 В следующих разделах описываются сочетания клавиш для доступа к командам меню и другие сочетания клавиш, используемые в различных диалоговых окнах приложения SSMA для DB2.  
@@ -79,7 +79,7 @@ ms.locfileid: "68074151"
 |Создать отчет.|ALT + T + C|  
 |Преобразование схемы.|ALT + T + N или CTRL + R|  
 |Обновите базу данных DB2.|ALT + T + R|  
-|Синхронизируйте с SQL Server или SQL Azure базой данных.|ALT + T + S|  
+|Синхронизируйте с SQL Server или с базой данных SQL Azure.|ALT + T + S|  
 |Сохранить как скрипт.|ALT + T + A|  
 |Перенос данных.|ALT + T + M|  
 |Останавливает текущую операцию.|ALT + T + O|  

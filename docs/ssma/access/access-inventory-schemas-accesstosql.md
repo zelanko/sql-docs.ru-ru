@@ -34,17 +34,17 @@ helpviewer_keywords:
 - SSMA_Access_InventoryTables
 - tables, inventory
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c140489877be5f34bc6d7a5b20a4ce36fdb3820f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: caf6c1045b02a84cf2dec0aba56c5c1c050277c1
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68068948"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934155"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Доступ к схемам инвентаризации (Акцесстоскл)
-В следующих разделах описываются таблицы, созданные с помощью SSMA при экспорте схем доступа в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+В следующих разделах описываются таблицы, созданные с помощью SSMA при экспорте схем доступа в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="databases"></a>Базы данных  
 Метаданные базы данных экспортируются в таблицу **SSMA_Access_InventoryDatabases** . Эта таблица содержит следующие столбцы:  
@@ -96,8 +96,8 @@ ms.locfileid: "68068948"
 |**IsNullable**|**bit**|Указывает, может ли столбец содержать значения NULL. Если значение равно 1, то столбец может содержать значения NULL. Если значение равно 0, столбец не может содержать значения NULL. Обратите внимание, что правило проверки можно также использовать для предотвращения значений NULL.|  
 |**DataType**|**nvarchar(4000)**|Тип данных для доступа к столбцу, например **Text** или **Long**.|  
 |**IsAutoIncrement**|**bit**|Указывает, будет ли столбец автоматически увеличивать целочисленные значения. Если значение равно 1, то целые числа автоматически увеличиваются.|  
-|**Ordinal**|**smallint**|Порядок столбцов в таблице, начиная с нуля.|  
-|**Максимально**|**nvarchar(4000)**|Значение по умолчанию для столбца.|  
+|**Порядковый номер**|**smallint**|Порядок столбцов в таблице, начиная с нуля.|  
+|**DefaultValue**|**nvarchar(4000)**|Значение по умолчанию для столбца.|  
 |**ValidationRule**|**nvarchar(4000)**|Правило, используемое для проверки данных, добавленных в столбец или обновленных в нем.|  
   
 ## <a name="indexes"></a>Индексы  

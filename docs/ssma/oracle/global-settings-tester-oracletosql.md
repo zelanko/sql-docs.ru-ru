@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 4acc0f2a-85ba-4c99-856a-89030f5c418e
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: f7e421774d3a09622835b181d5c053c994e905ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 12ca00b130367495ba725627b7fbd5c523505387
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264413"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934777"
 ---
 # <a name="global-settings-tester-oracletosql"></a>Глобальные параметры (средство тестирования) (OracleToSQL)
 Страница «испытатель» диалогового окна « **глобальные параметры** » используется для указания параметров для тестера SSMA.  
@@ -28,7 +28,7 @@ ms.locfileid: "68264413"
   
 Для этого параметра доступны следующие параметры:  
   
-1.  Да  
+1.  да  
   
 2.  Нет  
   
@@ -50,7 +50,7 @@ ms.locfileid: "68264413"
   
 Для этого параметра доступны следующие параметры:  
   
-1.  Да  
+1.  да  
   
 2.  Нет  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68264413"
   
 Для этого параметра доступны следующие параметры:  
   
-1.  Да  
+1.  да  
   
 2.  Нет  
   

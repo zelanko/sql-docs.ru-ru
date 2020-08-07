@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Mapping, customize data type mapping
 - Mapping, Type mapping
 ms.assetid: 14f98054-13b4-4231-a6b0-2452f3b9941d
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: d0b29deae2e0bdba81318130df46e30683717c86
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 604f9ce8e26e3d2221cd9a4bf7732c56ba3296c0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823469"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935393"
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>Сопоставление типов данных MySQL и SQL Server (MySQLToSQL)
-Типы баз данных MySQL отличаются от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов баз данных или SQL Azure. При преобразовании объектов базы данных MySQL в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure объекты необходимо указать способ отображения типов данных из MySQL в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure. Можно принять сопоставления типов данных по умолчанию или настроить сопоставления, как показано в следующих процедурах.  
+Типы баз данных MySQL отличаются от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов баз данных SQL Azure и. При преобразовании объектов базы данных MySQL в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure объекты необходимо указать способ отображения типов данных из MySQL в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure. Можно принять сопоставления типов данных по умолчанию или настроить сопоставления, как показано в следующих процедурах.  
   
 ## <a name="default-mappings"></a>Сопоставления по умолчанию  
 SSMA имеет набор сопоставлений типов данных по умолчанию. Список сопоставлений по умолчанию см. в разделе [Project Settings &#40;Type mapping&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md).  
@@ -68,9 +68,9 @@ SSMA имеет набор сопоставлений типов данных п
   
     Это позволяет настроить сопоставление данных для меньших и больших значений одного и того же типа данных. В разделе **тип целевого объекта**выберите целевой SQL Server или SQL Azure тип данных.  
   
-    1.  Для некоторых типов требуется длина целевого типа данных. При необходимости введите новую длину данных в поле **заменить на** и нажмите кнопку **ОК**.  
+    -  Для некоторых типов требуется длина целевого типа данных. При необходимости введите новую длину данных в поле **заменить на** и нажмите кнопку **ОК**.  
   
-    2.  Для некоторых типов требуется **точность** и **масштаб** целевого типа данных. При необходимости введите новую точность и масштаб в поле **заменить на** и нажмите кнопку **ОК** .  
+    -  Для некоторых типов требуется **точность** и **масштаб**целевого типа данных. При необходимости введите новую точность и масштаб в поле **заменить на** и нажмите кнопку **ОК**.  
   
 -   **Чтобы удалить сопоставление типов данных, выполните следующие действия.**  
   

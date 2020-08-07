@@ -9,18 +9,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Analyzing Conversion Problems
 ms.assetid: 4de9bcf6-1346-4740-87f9-7f24a8226357
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 0ff56be1b7da0376250c7ed021ae78d7144a7645
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: f8aaa58da9e9ace704d6214dcc56cab997fe082e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264554"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935083"
 ---
 # <a name="assessing-oracle-schemas-for-conversion-oracletosql"></a>Оценка схем Oracle для преобразования (OracleToSQL)
-Перед загрузкой объектов и переносом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]данных в необходимо определить, насколько сложна миграция и сколько времени займет миграция. SSMA может создать отчет об оценке, который показывает процент объектов, которые будут успешно преобразованы. SSMA также позволяет просматривать конкретные проблемы, вызывающие сбои при преобразовании.  
+Перед загрузкой объектов и переносом данных в необходимо [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определить, насколько сложна миграция и сколько времени займет миграция. SSMA может создать отчет об оценке, который показывает процент объектов, которые будут успешно преобразованы. SSMA также позволяет просматривать конкретные проблемы, вызывающие сбои при преобразовании.  
   
 ## <a name="creating-assessment-reports"></a>Создание отчетов об оценке  
 При создании этого отчета оценки SSMA преобразует выбранные объекты базы данных Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] синтаксис, а затем отображает результаты.  
@@ -37,7 +37,7 @@ ms.locfileid: "68264554"
   
     SSMA будет отображать ход выполнения в строке состояния в нижней части окна. Если область вывода видна, то сообщения также будут отображаться на панели вывода.  
   
-    После завершения оценки появится окно [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] помощник по миграции для Oracle: Оценка отчета.  
+    После завершения оценки появится [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] окно Помощник по миграции для Oracle: Оценка отчета.  
   
 ## <a name="using-assessment-reports"></a>Использование отчетов об оценке  
 Окно "Оценка отчета" содержит три панели:  

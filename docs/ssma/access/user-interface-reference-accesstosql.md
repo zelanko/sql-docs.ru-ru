@@ -10,18 +10,18 @@ helpviewer_keywords:
 - reference, user interface
 - user interface
 ms.assetid: af24c303-4a41-449b-9c86-d6558a97e839
-author: Shamikg
-ms.author: Shamikg
-manager: murato
-ms.openlocfilehash: 479c22747f640a9ccfff43534571dabfcd2717a6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 0366c4549c557d2e5f90733f5dadba61cecdc22c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266960"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937779"
 ---
 # <a name="user-interface-reference-accesstosql"></a>Справочник по пользовательскому интерфейсу (Акцесстоскл)
-В этом разделе содержатся разделы справки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по помощник по миграции (SSMA) для доступа.  
+В этом разделе содержатся разделы справки по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Помощник по миграции (SSMA) для доступа.  
   
 ## <a name="in-this-section"></a>В этом разделе  
   
@@ -29,7 +29,7 @@ ms.locfileid: "68266960"
 |---------|---------------|  
 |[Расширенный выбор объектов &#40;Акцесстоскл&#41;](../../ssma/access/advanced-object-selection-accesstosql.md)|Используйте диалоговое окно **Расширенный выбор объектов** для поиска объектов базы данных с помощью условий фильтра, а затем выберите или отмените выбор этих объектов.|  
 |[Отчет об оценке &#40;Акцесстоскл&#41;](../../ssma/access/assessment-report-accesstosql.md)|Используйте диалоговое окно **Оценка отчета** , чтобы проанализировать преобразование объектов базы данных Access и оценить время, в течение которого будет выполняться миграция.|  
-|[Подключение к SQL Server](https://msdn.microsoft.com/ceb77a97-d6d5-4a92-90a6-342e97d12b54)|Используйте диалоговое окно **Подключение к SQL Server** , чтобы подключиться к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на который требуется выполнить миграцию.|  
+|[Подключение к SQL Server](https://msdn.microsoft.com/ceb77a97-d6d5-4a92-90a6-342e97d12b54)|Используйте диалоговое окно **Подключение к SQL Server** , чтобы подключиться к экземпляру, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на который требуется выполнить миграцию.|  
 |[Подключение к SQL Azure](connect-to-azure-sql-db-accesstosql.md)|Используйте диалоговое окно **Подключение к SQL Azure** , чтобы подключиться к экземпляру SQL Azure, на который требуется выполнить миграцию.|  
 |[Преобразование, загрузка и миграция](https://msdn.microsoft.com/4ec83e96-88a5-4b7b-8d5a-f3429d9a936b)|Диалоговое окно **Преобразование, Загрузка и миграция** является частью мастера миграции, а также появляется при использовании команды **преобразовать, загрузить и выполнить миграцию** .|  
 |[Отчет о переносе данных &#40;Акцесстоскл&#41;](../../ssma/access/data-migration-report-accesstosql.md)|Появляется после переноса данных и отчетов об успешном выполнении и сбоях для каждой таблицы.|  
@@ -50,7 +50,7 @@ ms.locfileid: "68266960"
 |[Параметры проекта (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)|Страница SQL Azure диалогового окна **Параметры проекта** используется для указания суффикса базы данных, а также интервала времени ожидания пульса.|  
 |[Сохранить метаданные &#40;Акцесстоскл&#41;](../../ssma/access/save-metadata-accesstosql.md)|Диалоговое окно **Сохранение метаданных** появляется при сохранении проекта, в котором отсутствуют метаданные.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
 [Начало работы с Помощник по миграции SQL Server для доступа &#40;Акцесстоскл&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
 [Подготовка баз данных Access к миграции](preparing-access-databases-for-migration-accesstosql.md)  
 [Миграция баз данных Access в SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  

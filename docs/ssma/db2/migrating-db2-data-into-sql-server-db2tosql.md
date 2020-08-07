@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 86cbd39f-6dac-409a-9ce1-7dd54403f84b
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 408bf80b8c8a6f70488333f476422dedb9db1887
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c4d2511774944e7115172dda7832b10ed967cf1f
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293971"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933791"
 ---
 # <a name="migrating-db2-data-into-sql-server-db2tosql"></a>Перенос данных DB2 в SQL Server (DB2ToSQL)
 После успешной синхронизации преобразованных объектов с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно перенести данные из DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

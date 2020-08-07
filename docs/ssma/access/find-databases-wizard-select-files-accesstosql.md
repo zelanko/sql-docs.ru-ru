@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Find Databases Wizard
 ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c084db939482fe57e150d4beb22eab4d5e6decb9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 3cd166f0e85a4a9a58a43feca8e1f3ba4fc211b7
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006544"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938719"
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>Мастер поиска баз данных (выбор файлов) (Акцесстоскл)
 На странице Выбор файлов мастера поиска баз данных перечислены файлы, найденные во время поиска. Чтобы выбрать файл для добавления в SSMA, выберите строку, содержащую имя файла. Завершив выбор файлов, нажмите кнопку **Далее** , чтобы просмотреть страницу Проверка выбора.  
@@ -47,7 +47,7 @@ ms.locfileid: "68006544"
 **Создан**  
 Дата и время создания базы данных.  
   
-**Изменен**  
+**Изменения**  
 Дата и время последнего обновления базы данных.  
   
 ## <a name="see-also"></a>См. также:  

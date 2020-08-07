@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 513f071a-d5e6-4ed5-acca-269bf76323c5
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: cd8dfbd7aa4205424c45861f6ada1113f76d344e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 043eb1a2eaf9325d8a252598b26317017d92fa94
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029170"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931970"
 ---
 # <a name="edit-type-mapping-sybasetosql"></a>Изменение сопоставления типов (SybaseToSQL)
 Диалоговое окно **Изменение сопоставления типов** позволяет указать, как типы сопоставляются между исходным и целевым объектами базы данных.  
@@ -36,11 +36,11 @@ ms.locfileid: "68029170"
 **От**  
 Укажите минимальную длину для этого сопоставления. Например, для типа данных **nchar** можно ввести значение 10, чтобы указать, что это сопоставление предназначено для диапазона, начиная с **nchar (10)**.  
   
-**Кому**  
+**Чтобы**  
 Укажите максимальную длину для этого сопоставления. Например, для типа данных **nchar** можно ввести значение 20, чтобы указать, что это сопоставление относится к диапазону, завершающему значение **nchar (20)**.  
   
-**Тип результирующего значения**  
-Выберите тип [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данных, с которым сопоставлен исходный тип данных. Когда SSMA создает таблицу или хранимую процедуру в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], тип данных источника изменится на этот тип данных.  
+**Тип целевого объекта**  
+Выберите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных, с которым сопоставлен исходный тип данных. Когда SSMA создает таблицу или хранимую процедуру в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , тип данных источника изменится на этот тип данных.  
   
 Если тип данных имеет переменную длину, в разделе **целевой тип**появится следующее поле:  
   

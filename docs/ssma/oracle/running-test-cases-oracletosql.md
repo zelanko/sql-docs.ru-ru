@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 7905c76803bf637e581af934f473b070d44a6b09
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 429ad47c63393696492d8eb22919749ed03cd71b
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394867"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933055"
 ---
 # <a name="running-test-cases-oracletosql"></a>Запуск тестовых случаев (OracleToSQL)
 Когда тест-инженер SSMA выполняет тестовый случай, он выполняет объекты, выбранные для тестирования, и создает отчет о результатах проверки. Если результаты идентичны на обеих платформах, проверка прошла успешно. Соответствие объектов между Oracle и определяется в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствии с параметрами сопоставления схемы для текущего проекта SSMA.  
@@ -33,7 +33,7 @@ ms.locfileid: "87394867"
   
 ## <a name="test-case-execution-steps"></a>Шаги выполнения тестового случая  
   
-### <a name="prerequisites"></a>Обязательные условия  
+### <a name="prerequisites"></a>Предварительные требования  
 Тест-инженер SSMA проверяет, выполнены ли все предварительные требования для выполнения теста перед началом теста. Если некоторые условия не удовлетворяются, выводится сообщение об ошибке.  
   
 ### <a name="initialization"></a>Инициализация  
@@ -46,10 +46,10 @@ ms.locfileid: "87394867"
 |USER_TABLE $ TRG|триггер|Активация аудита изменений в проверенной таблице.|  
 |USER_TABLE $ AUD|table|Таблица, в которой сохраняются удаленные и перезаписанные строки.|  
 |USER_TABLE $ АУДИД|table|Таблица, в которой сохраняются новые и измененные строки.|  
-|USER_TABLE|представление|Упрощенное представление изменений таблицы.|  
-|USER_TABLE $ NEW|представление|Упрощенное представление вставленных и перезаписанных строк.|  
-|USER_TABLE $ NEW_ID|представление|Идентификация вставленных и измененных строк.|  
-|USER_TABLE $ OLD|представление|Упрощенное представление удаленных и перезаписанных строк.|  
+|USER_TABLE|view|Упрощенное представление изменений таблицы.|  
+|USER_TABLE $ NEW|view|Упрощенное представление вставленных и перезаписанных строк.|  
+|USER_TABLE $ NEW_ID|view|Идентификация вставленных и измененных строк.|  
+|USER_TABLE $ OLD|view|Упрощенное представление удаленных и перезаписанных строк.|  
   
 Следующий объект создается в схеме проверенной таблицы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -63,10 +63,10 @@ ms.locfileid: "87394867"
 |-|-|-|  
 |USER_TABLE $ AUD|table|Таблица, в которой сохраняются удаленные и перезаписанные строки.|  
 |USER_TABLE $ Аудид|table|Таблица, в которой сохраняются новые и измененные строки.|  
-|USER_TABLE|представление|Упрощенное представление изменений таблицы.|  
-|USER_TABLE $ New|представление|Упрощенное представление вставленных и перезаписанных строк.|  
-|USER_TABLE $ new_id|представление|Идентификация вставленных и измененных строк.|  
-|USER_TABLE $ Old|представление|Упрощенное представление удаленных и перезаписанных строк.|  
+|USER_TABLE|view|Упрощенное представление изменений таблицы.|  
+|USER_TABLE $ New|view|Упрощенное представление вставленных и перезаписанных строк.|  
+|USER_TABLE $ new_id|view|Идентификация вставленных и измененных строк.|  
+|USER_TABLE $ Old|view|Упрощенное представление удаленных и перезаписанных строк.|  
   
 ### <a name="test-object-calls"></a>Вызовы тестовых объектов  
 На этом шаге тест-инженер SSMA вызывает каждый объект, выбранный для тестирования, сравнивает результаты и отображает отчет.  
@@ -77,7 +77,7 @@ ms.locfileid: "87394867"
 ## <a name="next-step"></a>Следующий шаг  
 [Просмотр отчетов о тестовых случаях &#40;OracleToSQL&#41;](../../ssma/oracle/viewing-test-case-reports-oracletosql.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Выбор и настройка объектов для тестирования &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
 [Выбор и настройка затронутых объектов &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
 [Тестирование перенесенных объектов базы данных &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  

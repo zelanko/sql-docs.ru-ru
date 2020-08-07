@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Schema Mapping
 ms.assetid: 2c927003-c49d-4fe1-8e3e-5b2899166268
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 212b5719c1ef8bac3e44ec33b786a032acef1d9f
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: acd4b7c13b2f8674f120c7f5b49f503a7f8fb5bc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865332"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931229"
 ---
 # <a name="mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql"></a>Сопоставление схем Sybase ASE со схемами SQL Server (SybaseToSQL)
-В хранилище Sybase адаптивного сервера Enterprise (ASE) каждая база данных имеет одну или несколько схем. По умолчанию SSMA переносит все объекты в базе данных и схеме в ту же базу данных и схему в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure. Однако можно настроить сопоставление между ASE и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure базами данных и схемами.  
+В хранилище Sybase адаптивного сервера Enterprise (ASE) каждая база данных имеет одну или несколько схем. По умолчанию SSMA переносит все объекты в базе данных и схеме в ту же базу данных и схему в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure. Однако вы можете настроить сопоставление между ASE и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базой данных SQL Azure.  
   
 ## <a name="ase-and-sql-server-or-sql-azure-schemas"></a>Схемы ASE и SQL Server или SQL Azure  
 ASE и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure указывают базы данных и их схемы, используя две части нотации: *Database. Schema*. Например, в **демонстрационной** базе данных ASE может существовать схема **dbo** . Эта пара базы данных и схемы указывается как **Demo. dbo**. Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure имеет одну и ту же базу данных и схему, то пара также указывается как **Demo. dbo**.  
@@ -51,7 +51,7 @@ ASE и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure у
   
 -   Сопоставление с SQL Azure  
   
-Исходную базу данных можно сопоставлять с подключенной целевой базой данных SQL Azure или с любой схемой в подключенной целевой SQL Azure базе данных. При сопоставлении исходной схемы с любой несуществующей схемой в разделе подключенная Целевая база данных появится сообщение **"схема не существует в целевых метаданных. Он будет создан во время синхронизации. Вы хотите продолжить? "** Нажмите кнопку Да.  
+Можно сопоставлять базу данных источника с подключенной целевой базой данных SQL Azure или с любой схемой в подключенной целевой базе данных SQL Azure. При сопоставлении исходной схемы с любой несуществующей схемой в разделе подключенная Целевая база данных появится сообщение **"схема не существует в целевых метаданных. Он будет создан во время синхронизации. Вы хотите продолжить? "** Нажмите кнопку Да.  
   
 ## <a name="reverting-to-the-default-database-and-schema"></a>Возврат к базе данных и схеме по умолчанию  
 Если вы настраиваете сопоставление между схемой ASE и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] схемой или SQL Azure, можно вернуть сопоставление к значениям по умолчанию.  

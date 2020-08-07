@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Sybase Console,Command Line Options
 ms.assetid: 337cbd26-67b7-4c88-9deb-d0a69a3d7714
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 285f5c58c94db0f5506f84d19c992dfcdbbd00d3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 5aef07e7b7d1d96d93fba34a376e5374b1754fce
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68083478"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932135"
 ---
 # <a name="command-line-options-in-ssma-console-sybasetosql"></a>Параметры командной строки в консоли SSMA (SybaseToSQL)
 Корпорация Майкрософт предоставляет надежный набор параметров командной строки для выполнения и управления действиями SSMA. Эти разделы подробно описываются.  
@@ -26,7 +26,7 @@ ms.locfileid: "68083478"
   
 В этом разделе термин "параметр" также называется "Switch".  
   
--   Параметры не учитывают регистр и могут начинаться с символа "**-**" или "**/**".  
+-   Параметры не учитывают регистр и могут начинаться с символа " **-** " или " **/** ".  
   
 -   Если указаны параметры, они становятся обязательными для указания соответствующих параметров параметра.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "68083478"
   
 В качестве параметра командной строки нельзя ввести любой другой параметр или пароль. В противном случае возникает ошибка. Дополнительные сведения см. в разделе [Управление паролями](managing-passwords-sybasetosql.md) .  
   
-Поддерживаются следующие подпараметры `-p/securepassword`:  
+Поддерживаются следующие подпараметры `-p/securepassword` :  
   
 -   Чтобы добавить пароль в защищенное хранилище для указанного идентификатора сервера или для всех идентификаторов серверов, определенных в файле соединения с сервером. Параметр-overwrite ниже обновляет пароль, если он уже существует:  
   

@@ -10,14 +10,14 @@ helpviewer_keywords:
 - MySQL Console, launching console
 - MySQL Console, output conventions
 ms.assetid: 218d502c-059f-4d48-9aea-61e553d74303
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 88cf4716ea02b8c5dbcbd73e9839c6bacfbed10b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: a5ade295e64415f50e4887fa971f20d8fe5b7f6a
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68075419"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935523"
 ---
 # <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>Начало работы с консолью SSMA для MySQL (MySQLToSQL)
 В этом разделе описывается процедура запуска и начала работы с консольным приложением MySQL. Здесь также перечислены соглашения, используемые в типичном окне вывода консоли SSMA.  
@@ -29,7 +29,7 @@ ms.locfileid: "68075419"
   
 2.  Щелкните ярлык **командной строки MySQL помощник по миграции SQL Server** .  
   
-    В нем отображается меню использования консоли SSMA и `(/? Help)`, которое поможет приступить к работе с консольным приложением.  
+    В нем отображается меню использования консоли SSMA и `(/? Help)` , которое поможет приступить к работе с консольным приложением.  
   
 ## <a name="procedure-for-using-the-ssma-console"></a>Процедура использования консоли SSMA  
 После успешного запуска консоли в системе Windows для работы с ней можно выполнить следующие действия.  
@@ -55,7 +55,7 @@ ms.locfileid: "68075419"
   
 Цветовая интерпретация выходных данных консоли в следующей таблице:  
   
-|Color|Описание|  
+|Color|Description|  
 |---------|---------------|  
 |Красный|Неустранимая ошибка во время выполнения|  
 |Серый|Отметка даты и времени, сообщение пользователю|  

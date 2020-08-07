@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: b099d0f9-dd37-4c87-8b6f-ed0177881ea4
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: df94b295e7695dc79c78876b5d42f8a0ece7dce6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 0023e6d04b2f339fbd67337b7b241da2df275a79
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897583"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938048"
 ---
 # <a name="managing-passwords-accesstosql"></a>Управление паролями (Акцесстоскл)
 В этом разделе описывается защита паролей базы данных и процедура импорта или экспорта на серверах:  
@@ -130,6 +130,6 @@ SSMA позволяет защитить пароль базы данных.
 
 7. Подтвердите пароль: XXXXXXXX.  
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Запуск консоли SSMA (доступ)](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   
