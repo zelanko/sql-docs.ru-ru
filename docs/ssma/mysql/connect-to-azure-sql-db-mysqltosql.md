@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 6cf82511b7819b6c7b0451facc85ef35dc8cf9fc
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 7180e123572016661fa4de4a2b38a12f8480d89c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823797"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935993"
 ---
 # <a name="connect-to-azure-sql-database-mysqltosql"></a>Подключение к базе данных SQL Azure (MySQLToSQL)
-Используйте диалоговое окно Подключение к SQL Azure для подключения к базе данных SQL Azure, которую требуется перенести.  
+Используйте диалоговое окно Подключение к SQL Azure для подключения к базе данных в базе данных SQL Azure, которую требуется перенести.  
   
 Чтобы открыть это диалоговое окно, в меню **файл** выберите **подключиться к SQL Azure**. Если подключение было выполнено ранее, команда **повторно подключится к SQL Azure.**  
   
@@ -35,7 +35,7 @@ ms.locfileid: "87823797"
   
 **User name**  
   
-Введите имя пользователя, которое SSMA будет использовать для подключения к базе данных SQL Azure  
+Введите имя пользователя, которое SSMA будет использовать для подключения к базе данных SQL Azure.  
   
 **Пароль**  
   

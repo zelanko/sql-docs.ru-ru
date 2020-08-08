@@ -11,17 +11,17 @@ helpviewer_keywords:
 - Mapping, Modifying target database and schema
 - Mapping, reverting to default database and schema
 ms.assetid: 5c6fb445-92ae-4933-b77d-80230931c024
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 5fa0585a82a7c96fac8992b82f631364c27d3b87
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: ded91465a2a9c7b5a0e8ddcdc219b2af5a84395e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823639"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935369"
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>Сопоставление баз данных MySQL со схемами SQL Server (MySQLToSQL)
-По умолчанию SSMA для MySQL переносит все объекты в схеме MySQL в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базу данных или SQL Azure с именем для схемы. Однако можно настроить сопоставление между схемами MySQL и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure базами данных.  
+По умолчанию SSMA для MySQL переносит все объекты в схеме MySQL в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базу данных SQL Azure или с именем схемы. Однако вы можете настроить сопоставление между схемами MySQL и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базой данных SQL Azure.  
   
 ## <a name="mysql-and-sql-server-or-sql-azure-schemas"></a>Схемы MySQL и SQL Server или SQL Azure  
 Концепция MySQL схемы сопоставляется с SQL Server концепцией базы данных и одной из ее схем. SSMA относится к сочетанию SQL Server базы данных и схемы в виде схемы.  

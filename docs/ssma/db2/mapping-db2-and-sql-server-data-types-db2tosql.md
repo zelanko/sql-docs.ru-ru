@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: e7e939a8-5e76-4509-beaf-5acd1cab505e
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 1e9baab08f4295b2c51fd942f6153cc9425dd958
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 50320d85d957e71d317f263d820d4fca5a079547
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68141011"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936943"
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>Сопоставление типов данных DB2 и SQL Server (DB2ToSQL)
-Типы баз данных DB2 отличаются [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] от типов баз данных. При преобразовании объектов базы данных DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в объекты необходимо указать, как сопоставлять типы данных из DB2 с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Можно принять сопоставления типов данных по умолчанию или настроить сопоставления, как показано в следующих разделах.  
+Типы баз данных DB2 отличаются от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов баз данных. При преобразовании объектов базы данных DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объекты необходимо указать, как сопоставлять типы данных из DB2 с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Можно принять сопоставления типов данных по умолчанию или настроить сопоставления, как показано в следующих разделах.  
   
 ## <a name="default-mappings"></a>Сопоставления по умолчанию  
 SSMA имеет набор сопоставлений типов данных по умолчанию. Список сопоставлений по умолчанию см. в разделе [Project Settings &#40;Type mapping&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md).  
@@ -64,7 +64,7 @@ SSMA имеет набор сопоставлений типов данных п
   
 3.  Чтобы изменить сопоставление типов данных, выполните следующие действия.  
   
-    1.  Щелкните **Правка**.  
+    1.  Нажмите кнопку **Изменить**.  
   
     2.  В разделе **тип источника**выберите тип данных DB2 для отображения.  
   
@@ -84,7 +84,7 @@ SSMA имеет набор сопоставлений типов данных п
   
         Унаследованные сопоставления удалить нельзя. Однако унаследованные сопоставления переопределяются пользовательскими сопоставлениями для определенного объекта или категории объектов.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Next Steps  
 Следующим шагом процесса миграции является либо [отчет по оценке &#40;DB2ToSQL&#41;](../../ssma/db2/assessment-report-db2tosql.md) , либо [преобразование схем DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md). При создании отчета об оценке объекты DB2 автоматически преобразуются во время оценки.  
   
 ## <a name="see-also"></a>См. также:  

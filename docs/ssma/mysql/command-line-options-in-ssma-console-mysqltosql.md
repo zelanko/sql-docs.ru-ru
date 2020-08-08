@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Command line options, variable value file option
 - Command line options, XML output option
 ms.assetid: a2310b10-68ad-4285-a08b-c8694cf84416
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 017136669bd6478bb4e08ed0ff5c2adc01786d20
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c941cca65bd5ccd3a234da7da0aa3b710ecb4ae3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103251"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936003"
 ---
 # <a name="command-line-options-in-ssma-console-mysqltosql"></a>Параметры командной строки в консоли SSMA (MySQLToSQL)
 Корпорация Майкрософт предоставляет надежные параметры командной строки для выполнения и управления действиями SSMA. Эти разделы подробно описываются.  
@@ -34,7 +34,7 @@ ms.locfileid: "68103251"
   
 В этом разделе термин "параметр" также называется "Switch".  
   
-Параметры не учитывают регистр и могут начинаться с символа "**-**" или "**/**".  
+Параметры не учитывают регистр и могут начинаться с символа " **-** " или " **/** ".  
   
 Если указаны параметры, они становятся обязательными для указания соответствующих параметров параметра.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "68103251"
   
 В качестве параметра командной строки нельзя ввести любой другой параметр или пароль. В противном случае возникает ошибка. Дополнительные сведения см. в разделе [Управление паролями](managing-passwords-mysqltosql.md) .  
   
-Поддерживаются следующие подпараметры `-p/securepassword`:  
+Поддерживаются следующие подпараметры `-p/securepassword` :  
   
 -   Чтобы добавить пароль в защищенное хранилище для указанного идентификатора сервера или для всех идентификаторов серверов, определенных в файле соединения с сервером. Параметр-overwrite ниже обновляет пароль, если он уже существует:  
   

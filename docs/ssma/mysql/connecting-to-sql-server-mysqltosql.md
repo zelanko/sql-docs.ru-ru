@@ -11,14 +11,14 @@ helpviewer_keywords:
 - connecting to SQL Server 2008, SQL Server permission
 - connecting to SQL Server 2008, synchronization
 ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: f79784b6498f080b15f1ef370e8a3f31be81a871
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 548433b02590ccacf164e9479690f1adadbbc3c4
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823305"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936287"
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>Подключение к SQL Server (MySQLToSQL)
 Чтобы перенести базы данных MySQL в SQL Server, необходимо подключиться к целевому экземпляру SQL Server. При подключении SSMA получает метаданные обо всех базах данных в экземпляре SQL Server и отображает метаданные базы данных в обозревателе метаданных SQL Server. SSMA хранит сведения об экземпляре SQL Server, к которому вы подключены, но не хранят пароли.  
@@ -80,12 +80,12 @@ ms.locfileid: "87823305"
   
 |Тип проекта и версия целевого сервера|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005<br /> (Версия: 9. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008<br /> (Версия: 10. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012<br />(Версия: 11. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014<br />(Версия: 12. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016<br />(Версия: 13. x)|SQL Azure|  
 |-|-|-|-|-|-|-|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|Да|Да|Да|Да|Да||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||Да|Да|Да|Да||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||Да|Да|Да||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||Да|Да||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016|||||Да||  
-|SQL Azure||||||Да|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|да|да|да|да|да||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||да|да|да|да||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||да|да|да||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||да|да||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016|||||да||  
+|SQL Azure||||||да|  
   
 > [!IMPORTANT]  
 > Преобразование объектов базы данных выполняется в соответствии с типом проекта, но не в соответствии с версией, с которой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлено соединение. В случае с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проектом 2005 преобразование выполняется в соответствии с 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] даже если вы подключены к более поздней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016).  

@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 5524a575-67dd-4ef6-9d17-3412df9b9f9c
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: d0bb755336e3d26dd54ea1820ed4fdcfab75e757
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: e9c88bb9f59d38a1d9cf85785954f5fc6b4ae276
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68026601"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935863"
 ---
 # <a name="data-migration-report--mysqltosql"></a>Отчет о миграции данных (MySQLToSQL)
-После переноса данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]появляется диалоговое окно **отчет о переносе данных** .  
+После переноса данных в появляется диалоговое окно **отчет о переносе данных** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Параметры  
 **Состояние**  
@@ -26,7 +26,7 @@ ms.locfileid: "68026601"
 **От**  
 Исходная таблица.  
   
-**Кому**  
+**Чтобы**  
 Целевая таблица.  
   
 **Общее число строк**  
@@ -35,10 +35,10 @@ ms.locfileid: "68026601"
 **Число успешно перенесенных строк**  
 Число строк данных, успешно перенесенных в целевую таблицу.  
   
-**Коэффициент**  
+**Соотношение**  
 Процент успешно перенесенных строк.  
   
-**Сведения**  
+**Подробные сведения**  
 В случае сбоя переноса данных щелкните, чтобы отобразить сведения о миграции для выбранной строки отчета. SSMA отобразит причину сбоя.  
   
 **Сохранить отчет**  

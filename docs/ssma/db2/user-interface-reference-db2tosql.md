@@ -7,19 +7,19 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 29b7aa1a0e7aca34bee82180854a3b2ca63cafb4
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c01e871490f5362e610339c6626252c700eea3f6
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394556"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936584"
 ---
 # <a name="user-interface-reference-db2tosql"></a>Справочник по пользовательскому интерфейсу (DB2ToSQL)
 В этом разделе содержатся разделы справки для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Помощник по миграции (SSMA) для DB2.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
 В следующей таблице приводится список диалоговых окон SSMA.  
   
 |Раздел|Описание|  
@@ -45,7 +45,7 @@ ms.locfileid: "87394556"
 |[Обновление из базы данных &#40;DB2ToSQL&#41;](../../ssma/db2/refresh-from-database-db2tosql.md)|Используйте диалоговое окно **обновление из базы данных** , чтобы выбрать объекты для обновления из базы данных DB2.|  
 |[Сохранить метаданные &#40;DB2ToSQL&#41;](../../ssma/db2/save-metadata-db2tosql.md)|Диалоговое окно **Сохранение метаданных** появляется при сохранении проекта, в котором отсутствуют метаданные.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Начало работы с SSMA для DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/getting-started-with-ssma-for-db2-db2tosql.md)  
 [Перенос баз данных DB2 в SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

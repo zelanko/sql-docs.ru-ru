@@ -10,13 +10,14 @@ helpviewer_keywords:
 - Password management, importing or exporting encrypted password
 - Password management, securing password
 ms.assetid: 4ffbc587-ea3f-49ad-bc42-a654f672325e
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: fc06af58a8e669b836a88490ebcbc7c971ca2f4f
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 55e387cf1f45f557b2e1bbbdce8a119bba03f6f8
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053560"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935293"
 ---
 # <a name="managing-passwords-mysqltosql"></a>Управление паролями (MySQLToSQL)
 Эта статья посвящена защите паролей баз данных и процедуре их импорта или экспорта на серверах.
@@ -68,7 +69,7 @@ SSMA позволяет защитить пароль базы данных.
   
         Выполните `SSMAforMySQLConsole.exe` команду с параметром `-securepassword` и в `-remove` командной строке, передав идентификаторы серверов, чтобы удалить зашифрованные пароли из защищенного файла хранилища, присутствующего на локальном компьютере.  
   
-        Пример.  
+        Пример  
 
         ```console
         C:\SSMA\SSMAforMySQLConsole.EXE -securepassword -remove all
@@ -79,7 +80,7 @@ SSMA позволяет защитить пароль базы данных.
   
         Выполните `SSMAforMySQLConsole.exe` команду с параметром `-securepassword` и в `-list` командной строке, чтобы вывести список всех идентификаторов серверов, пароли которых были зашифрованы.  
   
-        Пример.  
+        Пример  
         
         ```console
         C:\SSMA\SSMAforMySQLConsole.EXE -securepassword -list  
@@ -132,6 +133,6 @@ SSMA позволяет защитить пароль базы данных.
 
 8. Подтвердите пароль: XXXXXXXX.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Исполнение консоли SSMA (MySQL)](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
   

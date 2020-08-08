@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 56d546e3-8747-4169-aace-693302667e94
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: d872066a2143c0fbe3a6b8a710023d91558422a0
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: af41c1a9eed355d75d5bd3e48886845b9a3069d1
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943156"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936682"
 ---
 # <a name="managing-passwords-db2tosql"></a>Управление паролями (DB2ToSQL)
 В этом разделе описывается защита паролей базы данных и процедура импорта или экспорта на серверах:  
@@ -73,7 +73,7 @@ SSMA позволяет защитить пароль базы данных.
   
         Выполните `SSMAforDB2Console.exe` команду с параметром `-securepassword` и в `-remove` командной строке, передав идентификаторы серверов, чтобы удалить зашифрованные пароли из защищенного файла хранилища, присутствующего на локальном компьютере.  
   
-        Пример.  
+        Пример  
 
         ```console
         C:\SSMA\SSMAforDB2Console.EXE -securepassword -remove all
@@ -84,7 +84,7 @@ SSMA позволяет защитить пароль базы данных.
   
         Выполните `SSMAforDB2Console.exe` команду с параметром `-securepassword` и в `-list` командной строке, чтобы вывести список всех идентификаторов серверов, пароли которых были зашифрованы.  
   
-        Пример.  
+        Пример  
 
         ```console
         C:\SSMA\SSMAforDB2Console.EXE -securepassword -list
@@ -137,6 +137,6 @@ _Функция импорта_ считывает идентификатор с
 
 8. Подтверждение пароля: XXXXXXXX
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Выполнение команд консоли SSMA](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
   

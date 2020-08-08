@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: ac21850b-fb32-4704-9985-5759b7c688c7
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c6f8e53a13d5950138f71ed9b4858419eb70f07f
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: cd6dcfc6613b1290fb0798a29a5302b7ede34b43
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823292"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936207"
 ---
 # <a name="converting-mysql-databases-mysqltosql"></a>Преобразование баз данных MySQL (MySQLToSQL)
-После подключения к MySQL, подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure и задания параметров проекта и сопоставления данных можно преобразовать объекты базы данных MySQL в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure объекты базы данных.  
+После подключения к MySQL, подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure и задания параметров проекта и сопоставления данных можно преобразовать объекты базы данных MySQL в объекты базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure или.  
   
 ## <a name="the-conversion-process"></a>Процесс преобразования  
 Преобразование объектов базы данных принимает определения объектов из MySQL, преобразует их в аналогичные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azureные объекты, а затем загружает эти сведения в метаданные SSMA. Он не загружает сведения в экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Затем объекты и их свойства можно просмотреть с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обозревателя метаданных или SQL Azure.  

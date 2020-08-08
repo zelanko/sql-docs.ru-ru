@@ -9,15 +9,15 @@ ms.suite: sql
 ms.technology: dea
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
-author: HJToland3
-ms.author: rajsell
+author: pochiraju
+ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: c560aa2c5ba4b5113ce711601a4e85aab2788240
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: 4caf97a9afb4a40ba82e2fe6730d46dbdcbea7f6
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565596"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87951539"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Запись трассировки в Database Experimentation Assistant
 
@@ -147,6 +147,6 @@ Database Experimentation Assistant (ДЕА) можно использовать 
 
 Если вы видите другие ошибки с меткой " *код ошибки SQL*", см. раздел [ядро СУБД Errors](https://docs.microsoft.com/sql/relational-databases/errors-events/database-engine-events-and-errors) For detailed descriptions.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также статью
 
 - Сведения о настройке средств распределенное воспроизведение в SQL Server перед воспроизведением захваченной трассировки см. в разделе [настройка распределенное воспроизведение для Database experimentation Assistant](database-experimentation-assistant-configure-replay.md).

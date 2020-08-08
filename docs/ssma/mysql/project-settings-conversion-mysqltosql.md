@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 7ad5fe44-6445-4ba8-a457-5af792631f11
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 7a8ad0b6c4c1e836a3eacca1f497d7ed229dbfc4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 378bc98dd24eff758e6f4e368f4e97e211d1f2a8
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67908872"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935223"
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>Параметры проекта (преобразование) (MySQLToSQL)
 На странице преобразование диалогового окна **Параметры проекта** содержатся параметры, которые позволяют настроить, как SSMA преобразует синтаксис MySQL в SQL Server или SQL Azure синтаксис.  
@@ -89,7 +89,7 @@ ms.locfileid: "67908872"
 |**Ограничивающий прямоугольник по умолчанию {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} для пространственных индексов**|Определяет значение по умолчанию для параметра {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} ограничивающего прямоугольника, используемого в пространственных индексах.<br /><br />**Режим по умолчанию**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**Оптимистичный режим**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**Полный режим**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
 |**Плотность сетки по умолчанию для пространственных индексов**|Определяет значение по умолчанию для LEVEL_1, LEVEL_2, LEVEL_3 и LEVEL_4 плотность сетки, используемой в пространственных индексах.<br /><br />**Режим по умолчанию**<br /><br />LEVEL_1: по умолчанию<br /><br />LEVEL_2: по умолчанию<br /><br />LEVEL_3: по умолчанию<br /><br />LEVEL_4: по умолчанию<br /><br />**Оптимистичный режим**<br /><br />LEVEL_1: по умолчанию<br /><br />LEVEL_2: по умолчанию<br /><br />LEVEL_3: по умолчанию<br /><br />LEVEL_4: по умолчанию<br /><br />**Полный режим**<br /><br />LEVEL_1: по умолчанию<br /><br />LEVEL_2: по умолчанию<br /><br />LEVEL_3: по умолчанию<br /><br />LEVEL_4: по умолчанию|  
   
-### <a name="transactions"></a>Transactions  
+### <a name="transactions"></a>Транзакции  
   
 |||  
 |-|-|  
@@ -110,6 +110,6 @@ ms.locfileid: "67908872"
 |**Числовые литералы с точностью, превышающими 38**|Указывает способ преобразования числовых литералов с точностью, превышающим 38.<br /><br />**Режим по умолчанию**: округление по возможности<br /><br />**Оптимистичный режим**: округление по возможности<br /><br />**Полный режим**: округление, если возможно|  
 |**Нулевая дата в столбцах NOT NULL**|Указывает, как выполнять присваивание ненулевых столбцов с нулевой датой, нулевой датой или недопустимыми значениями даты и времени.<br /><br />**Режим по умолчанию**: GETDATE ()<br /><br />**Оптимистичный режим**: GETDATE ()<br /><br />**Полный режим**: GETDATE ()|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Справочник по пользовательскому интерфейсу &#40;MySQLToSQL&#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)  
   

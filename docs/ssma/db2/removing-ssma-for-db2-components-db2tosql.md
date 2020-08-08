@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 4ee0d698-6246-48eb-b963-d62be81cab6a
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 25c8222009c2ea9358c0bab2ad5ae077588fb3cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 6e5d1cd88027dfa3fb4216c93ab4e660ddcc0dc9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060099"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87936742"
 ---
 # <a name="removing-ssma-for-db2-components-db2tosql"></a>Удаление SSMA для компонентов DB2 (DB2ToSQL)
-После завершения миграции баз данных из DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]может потребоваться удалить компоненты SSMA. Вы можете удалить клиентские компоненты в любое время. Однако не следует удалять пакет расширений, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] если только перенесенные базы данных больше не используют функции в схеме **ssma_DB2** базы данных **сисдб** .  
+После завершения миграции баз данных из DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может потребоваться удалить компоненты SSMA. Вы можете удалить клиентские компоненты в любое время. Однако не следует удалять пакет расширений, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] если только перенесенные базы данных больше не используют функции в схеме **ssma_DB2** базы данных **сисдб** .  
   
 ## <a name="uninstalling-the-ssma-for-db2-client"></a>Удаление SSMA для клиента DB2  
 Удалить SSMA можно с помощью компонента " **Установка и удаление программ**".  
@@ -26,7 +26,7 @@ ms.locfileid: "68060099"
   
 1.  На панели управления и откройте элемент **Установка и удаление программ**.  
   
-2.  ** [!INCLUDE[msCoName](../../includes/msconame_md.md)] Выберите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] помощник по миграции для DB2**, а затем нажмите кнопку **Удалить**.  
+2.  Выберите ** [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Помощник по миграции для DB2**, а затем нажмите кнопку **Удалить**.  
   
 3.  Чтобы подтвердить удаление SSMA, нажмите кнопку **Да**.  
   

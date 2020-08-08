@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Connecting to SQL Azure, SQL Azure permissions
 - Connecting to SQL Azure, synchronization
 ms.assetid: d0b6f16a-1880-459d-a0c7-28b7ef15c56a
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: da3e0d05abf24bdd7100769ecfbb597e2953a9d5
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8e288b91c92d8d086d5b066f95868fa0fa733bb9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87822563"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935963"
 ---
 # <a name="connecting-to-azure-sql-database-mysqltosql"></a>Подключение к базе данных SQL Azure (MySQLToSQL)
 Чтобы перенести базы данных MySQL в SQL Azure, необходимо подключиться к целевому экземпляру SQL Azure. При подключении SSMA получает метаданные обо всех базах данных в экземпляре SQL Azure и отображает метаданные базы данных в обозревателе метаданных SQL Azure. SSMA хранит сведения об экземпляре SQL Azure, к которому вы подключены, но не хранят пароли.  
@@ -63,7 +63,7 @@ ms.locfileid: "87822563"
 > SSMA для MySQL не поддерживает подключение к базе данных **master** в SQL Azure.  
   
 ## <a name="synchronizing-sql-azure-metadata"></a>Синхронизация метаданных SQL Azure  
-Метаданные SQL Azure базы данных не обновляются автоматически. Метаданные в SQL Azure обозревателе метаданных являются моментальным снимком метаданных при первом подключении к SQL Azure или при последнем обновлении метаданных вручную. Можно вручную обновить метаданные для всех баз данных или для любой отдельной базы данных или объекта базы данных.  
+Метаданные о базах данных в базе данных SQL Azure не обновляются автоматически. Метаданные в SQL Azure обозревателе метаданных являются моментальным снимком метаданных при первом подключении к SQL Azure или при последнем обновлении метаданных вручную. Можно вручную обновить метаданные для всех баз данных или для любой отдельной базы данных или объекта базы данных.  
   
 **Синхронизация метаданных**  
   
@@ -78,7 +78,7 @@ ms.locfileid: "87822563"
 ## <a name="next-step"></a>Следующий шаг  
 Следующий шаг миграции зависит от потребностей проекта:  
   
--   Сведения о настройке сопоставления между схемами MySQL и SQL Azure базами данных и схемами см. в разделе [Сопоставление баз данных MySQL с SQL Server схемами &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
+-   Сведения о настройке сопоставления между схемами MySQL и базой данных SQL Azure см. в статье [Сопоставление баз данных MySQL с SQL Server схемами &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
   
 -   Сведения о настройке параметров конфигурации для проектов см. в разделе [Установка параметров проекта &#40;MySQLToSQL&#41;](../../ssma/mysql/setting-project-options-mysqltosql.md)  
   

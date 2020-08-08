@@ -10,19 +10,19 @@ helpviewer_keywords:
 - Server connection file validation
 - Server connection files
 ms.assetid: df0e970c-da0b-4118-b359-c9dcbbad16d6
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 1df2c474afa5e062dfa22cf05af6b0edf036f768
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: fa9505c0f5c40dcf2ff7cd84fc956240728385b3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103040"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935733"
 ---
 # <a name="creating-the-server-connection-files-mysqltosql"></a>Создание файлов подключения к серверу (MySQLToSQL)
-Сведения о сервере можно указать либо в разделе Servers файла сценария, либо в отдельном файле соединения сервера. Параметр командной строки для файла соединения сервера имеет значение, `-c <serverconnectionfile>`. Если один и тот же идентификатор сервера имеется как в файле скрипта, так и в файле соединения сервера, то будет считаться определение сервера в файле скрипта.  
+Сведения о сервере можно указать либо в разделе Servers файла сценария, либо в отдельном файле соединения сервера. Параметр командной строки для файла соединения сервера имеет значение, `-c <serverconnectionfile>` . Если один и тот же идентификатор сервера имеется как в файле скрипта, так и в файле соединения сервера, то будет считаться определение сервера в файле скрипта.  
   
-**Пример.**  
+**Пример**.  
   
 ```xml  
 <!--Sample of server connection file commands -->  

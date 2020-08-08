@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 42061ff7-e6e7-497b-a0d9-440b9cf5986c
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: c4437f76a926e84ffe3592042f9d29b50f3eabf9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: cbf4252f9d9fb71fe98755dfbba748ca15ca5657
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67908840"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935193"
 ---
 # <a name="project-settings-synchronization-mysqltosql"></a>Параметры проекта (синхронизация) (MySQLToSQL)
 **Параметры проекта** синхронизации позволяют настроить синхронизацию объектов базы данных MySQL с объектами базы данных SQL Server.  

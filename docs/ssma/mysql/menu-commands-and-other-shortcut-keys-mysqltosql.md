@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 9ae780dc-b33f-4861-a996-176bae9e7211
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 04450495d85eed7ab198090afcc2a4ac9cffb4c0
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: fc847eecec3f84cda54e2820a444036a016ec9a8
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293605"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935273"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>Команды меню и другие сочетания клавиш (MySQLToSQL)
 В следующих разделах описываются сочетания клавиш для доступа к командам меню и другие сочетания клавиш, используемые в различных диалоговых окнах приложения SSMA для MySQL.  
@@ -80,7 +80,7 @@ ms.locfileid: "84293605"
 |Создать отчет.|ALT + T + C|  
 |Преобразование схемы.|ALT + T + N или CTRL + R|  
 |Обновите базу данных MySQL.|ALT + T + R|  
-|Синхронизируйте с SQL Server или SQL Azure базой данных.|ALT + T + S|  
+|Синхронизируйте с SQL Server или с базой данных SQL Azure.|ALT + T + S|  
 |Сохранить как скрипт.|ALT + T + A|  
 |Перенос данных.|ALT + T + M|  
 |Останавливает текущую операцию.|ALT + T + O|  
