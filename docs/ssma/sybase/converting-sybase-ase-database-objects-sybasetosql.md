@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Converting Database Objects
 ms.assetid: 509cb65d-2f54-427a-83d7-37919cc4e3e3
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 0785c3ecc6335494ed4c34f8919e3ad766236631
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: f52700e0b85c2630d30c7ffe32193cbd96ce9d1e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394516"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932285"
 ---
 # <a name="converting-sap-ase-database-objects-sybasetosql"></a>Преобразование объектов базы данных SAP ASE (SybaseToSQL)
 После подключения к адаптивному серверу SAP (ASE), подключению к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure и настройке параметров проекта и сопоставления данных можно преобразовать объекты базы данных SAP адаптивного сервера Enterprise (ASE) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или объекты базы данных SQL Azure.  
@@ -155,6 +155,6 @@ ms.locfileid: "87394516"
 ## <a name="next-steps"></a>Дальнейшие действия  
 Следующий шаг процесса миграции [загружает преобразованные объекты базы данных в SQL Server или SQL Azure (SybaseToSQL)](https://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06).  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также статью  
 [Миграция баз данных SAP ASE в SQL Server — база данных SQL Azure &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

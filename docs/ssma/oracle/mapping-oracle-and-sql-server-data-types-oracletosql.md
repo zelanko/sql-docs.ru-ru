@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Type Mapping Inheritance
 ms.assetid: 05da1495-63b9-47b7-86e2-6746394a2d8a
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 8a9cb39213ed2809b7074a474edf5e4e20bd9122
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 656132dafce39e6007601b75956fd73714638716
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293841"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934797"
 ---
 # <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>Сопоставление типов данных Oracle и SQL Server (OracleToSQL)
 Типы баз данных Oracle отличаются от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов баз данных. При преобразовании объектов базы данных Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объекты необходимо указать, как сопоставлять типы данных из Oracle с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Можно принять сопоставления типов данных по умолчанию или настроить сопоставления, как показано в следующих разделах.  
@@ -88,7 +88,7 @@ SSMA имеет набор сопоставлений типов данных п
   
         Унаследованные сопоставления удалить нельзя. Однако унаследованные сопоставления переопределяются пользовательскими сопоставлениями для определенного объекта или категории объектов.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
 Следующим шагом процесса миграции является [Создание отчета оценки](assessing-oracle-schemas-for-conversion-oracletosql.md) или [Преобразование объектов базы данных Oracle в SQL Server синтаксис](converting-oracle-schemas-oracletosql.md). При создании отчета об оценке объекты Oracle автоматически преобразуются во время оценки.  
   
 ## <a name="see-also"></a>См. также:  

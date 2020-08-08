@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f245c017-023e-4880-8721-8908d339525e
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: fbb0a90d9cfd628e9251a55de3df8b66a22f1ef7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 17798a2ccc0099210874a4bebb4fd05074c43639
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67989654"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933875"
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>Начало работы с SSMA для консоли DB2 (DB2ToSQL)
 В этом разделе описывается процедура запуска и начала работы с консольным приложением DB2. Здесь также перечислены соглашения, используемые в типичном окне вывода консоли SSMA.  
@@ -26,7 +26,7 @@ ms.locfileid: "67989654"
   
 2.  Щелкните ярлык ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] командной строки помощник по миграции для DB2** .  
   
-    В нем отображается меню использования консоли SSMA и `(/? Help)`, которое поможет приступить к работе с консольным приложением.  
+    В нем отображается меню использования консоли SSMA и `(/? Help)` , которое поможет приступить к работе с консольным приложением.  
   
 ## <a name="procedure-for-using-the-ssma-console"></a>Процедура использования консоли SSMA  
 После успешного запуска консоли в системе Windows для работы с ней можно выполнить следующие действия.  
@@ -52,7 +52,7 @@ ms.locfileid: "67989654"
   
 Цветовая интерпретация выходных данных консоли в следующей таблице:  
   
-|Color|Описание|  
+|Color|Description|  
 |---------|---------------|  
 |Красный|Неустранимая ошибка во время выполнения|  
 |Серый|Отметка даты и времени, сообщение пользователю|  

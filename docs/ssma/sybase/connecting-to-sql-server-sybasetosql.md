@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Connecting to SQL Server
 ms.assetid: dd368a1a-45b0-40e9-b4d3-5cdb48c26606
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 318de1e7a463892dbb40639bccacb89f6907b8bf
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c1697d96acf7988fa868ad35fefad6718c159dd1
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864771"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932435"
 ---
 # <a name="connecting-to-sql-server-sybasetosql"></a>Подключение к SQL Server (SybaseToSQL)
 Чтобы перенести адаптивные серверные базы данных Sybase (ASE) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо подключиться к любому из целевых экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . При подключении SSMA получает метаданные обо всех базах данных в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и отображает метаданные базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обозревателе метаданных. SSMA хранит сведения о том, к какому экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вы подключены, но не хранят пароли.  
@@ -84,12 +84,12 @@ ms.locfileid: "87864771"
   
 |Тип проекта и версия целевого сервера|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005<br /> (Версия: 9. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008<br /> (Версия: 10. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br />(Версия: 11. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 <br />(Версия: 12. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(Версия: 13. x)|SQL Azure|
 |-|-|-|-|-|-|-|
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|Да|Да|Да|Да|Да||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||Да|Да|Да|Да||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||Да|Да|Да||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||Да|Да|| 
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||Да||  
-|SQL Azure||||||Да|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|да|да|да|да|да||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||да|да|да|да||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||да|да|да||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||да|да|| 
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||да||  
+|SQL Azure||||||да|  
   
 > [!IMPORTANT]
 > Преобразование объектов базы данных выполняется в соответствии с типом проекта, но не в соответствии с версией, к которой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вы подключены. В случае с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проектом 2005 преобразование выполняется в соответствии с 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] даже если вы подключены к более поздней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016).  

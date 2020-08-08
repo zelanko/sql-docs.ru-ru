@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: ed7952d4-8331-44d7-bccf-3440e17238b2
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 15c3b7d8594f9b0700c7cb1f429a89947c16655b
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: e0a938d615b15dc7b280a6c6b9337a546e0059bf
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865302"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934700"
 ---
 # <a name="migrating-sap-ase-databases-to-sql-server---azure-sql-database-sybasetosql"></a>Миграция баз данных SAP ASE в SQL Server — база данных SQL Azure (SybaseToSQL)
 Помощник по миграции SQL Server (SSMA) для SAP адаптивного сервера Enterprise (ASE) — это Комплексная среда, которая помогает быстро перенести базы данных SAP ASE в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базу данных SQL Azure или. С помощью SSMA для SAP ASE можно просматривать объекты и данные базы данных, оценивать базы данных для миграции, переносить объекты базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базу данных SQL Azure, а затем переносить данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базу данных SQL Azure или из нее.  
@@ -45,7 +45,7 @@ ms.locfileid: "87865302"
   
 9. При необходимости обновите приложения базы данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
 [Установка SSMA для SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  
 [Начало работы с SSMA для SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)  
   

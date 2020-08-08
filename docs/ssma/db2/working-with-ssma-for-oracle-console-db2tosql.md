@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 29d8787c-632e-4ff7-9ccc-3f7ad40480ec
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 62136073116141c206c36d5fcca8dd5b417de0e4
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: acf7affd211dc95d05f8fe6ce8b29f05292ad46c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396426"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933555"
 ---
 # <a name="working-with-ssma-for-oracle-console-db2tosql"></a>Работа с SSMA для консоли Oracle (DB2ToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Выпуск Помощник по миграции (SSMA) для DB2 теперь доступен через консольное приложение в командной строке. Файлы скрипта образуют входные данные для приложения для выполнения команд. Как консольное приложение, SSMA обеспечивает взаимодействие на уровне сценариев, сокращает цикл миграции и масштабирует усилия по миграции.  
@@ -36,6 +36,6 @@ ms.locfileid: "87396426"
 |[Создание отчетов &#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md)|Список команд для создания отчетов.|  
 |[Устранение неполадок &#40;DB2ToSQL&#41;](../../ssma/db2/troubleshooting-db2tosql.md)|Содержит краткие сведения об устранении проблем с миграцией.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [начало работы с SSMA для консоли DB2](https://msdn.microsoft.com/f245c017-023e-4880-8721-8908d339525e)  
   

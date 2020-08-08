@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 2becdd3e5ab0c6980ffbb4b4f4a5d50584f6fd35
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 19753cddaba236d0de75e492962bd6c8ad2675e2
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864901"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988497"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Новые возможности Data Migration Assistant
 
@@ -154,8 +154,8 @@ ms.locfileid: "87864901"
 
 Выпуск версии 3.1 Помощник по миграции данных содержит следующие дополнения.
 
-- Улучшенные рекомендации по оценке баз данных SQL Azure с точки зрения параметров сортировки базы данных, использование неподдерживаемых системных хранимых процедур и объектов CLR.
-- Руководство по оценке уровней совместимости 130, 120, 110 и 100 при миграции в базы данных SQL Azure.
+- Улучшенные рекомендации по оценке для базы данных SQL Azure с точки зрения параметров сортировки базы данных, использование неподдерживаемых системных хранимых процедур и объектов CLR.
+- Руководство по оценке уровней совместимости 130, 120, 110 и 100 при миграции в базу данных SQL Azure.
 
 ## <a name="data-migration-assistant-v30"></a>Помощник по миграции данных версии 3.0
 
@@ -190,6 +190,6 @@ ms.locfileid: "87864901"
   - Хранилище
 - Современные возможности для выполнения оценки.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также статью
 
 [Обзор Помощника по миграции данных](../dma/dma-overview.md)

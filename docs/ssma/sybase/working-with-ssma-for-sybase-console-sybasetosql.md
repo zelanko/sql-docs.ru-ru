@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: c465e477-c479-4aa8-918d-58bf30884789
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: df1539bde5064dc9ae9211029631bb233be0f469
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8a5921282769cb4c8a696a4718ad07bb3f8d7622
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396791"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934536"
 ---
 # <a name="working-with-ssma-for-sybase-console-sybasetosql"></a>Работа с консолью SSMA для Sybase (SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Помощник по миграции (SSMA), выпуск для адаптивного серверного предприятия Sybase (ASE) теперь доступен через консольное приложение в командной строке. Файлы скрипта образуют входные данные для приложения для выполнения команд. Как консольное приложение, SSMA обеспечивает взаимодействие на уровне сценариев, сокращает цикл миграции и масштабирует усилия по миграции.  
@@ -36,6 +36,6 @@ ms.locfileid: "87396791"
 |[Создание отчетов &#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md)|Список команд для создания отчетов.|  
 |[Устранение неполадок &#40;SybaseToSQL&#41;](../../ssma/sybase/troubleshooting-sybasetosql.md)|Содержит краткие сведения об устранении проблем с миграцией.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Начало работы с SSMA для консоли Sybase (SybaseToSQL)](https://msdn.microsoft.com/43219dbe-bcfa-427d-9242-f07b1455f15f)  
   

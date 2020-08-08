@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a5629a72-8c17-46a4-bb4d-19d51a0b98a2
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 38b3da74ce30799a01f28f3961a4fa0461d7543f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c66b7e9ad09c61b1ecfaddb21a9253ae6a6237c9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060174"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933605"
 ---
 # <a name="project-settingssynchronization-db2tosql"></a>Параметры проекта (синхронизация) (DB2ToSQL)
-Страница синхронизация диалогового окна **Параметры проекта** содержит параметры, которые настраивают, как SSMA загружает и обновляет объекты базы данных, такие как таблицы и хранимые процедуры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в.  
+Страница синхронизация диалогового окна **Параметры проекта** содержит параметры, которые настраивают, как SSMA загружает и обновляет объекты базы данных, такие как таблицы и хранимые процедуры, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 Параметры действий по умолчанию определяют параметры по умолчанию для обновления объектов из базы данных DB2 и для синхронизации объектов с базой данных SQL Server. Дополнительные сведения см. [в разделе Обновление из базы данных &#40;DB2ToSQL&#41;](../../ssma/db2/refresh-from-database-db2tosql.md).  
   
@@ -29,7 +29,7 @@ ms.locfileid: "68060174"
   
 ## <a name="miscellaneous-options"></a>Различные параметры  
 **Ошибок**  
-Указывает число попыток, которые SSMA должны выполнить при загрузке объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Объекты, которые не загружаются [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в текущей попытке, будут предприняты повторно, пока SSMA не достигнет максимального числа попыток в текущем процессе синхронизации. Значение по умолчанию равно **2**  
+Указывает число попыток, которые SSMA должны выполнить при загрузке объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Объекты, которые не загружаются [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в текущей попытке, будут предприняты повторно, пока SSMA не достигнет максимального числа попыток в текущем процессе синхронизации. Значение по умолчанию равно **2**  
   
 ## <a name="synchronization-for-db2-options"></a>Синхронизация параметров DB2  
 **Действие при изменении локального и удаленного объектов**  

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1ca622b2-55d8-4666-b80a-8d9791cd3d3b
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: ea6081cb68d084bf51132824a143fc6fdd544399
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8f6ea6e9b9e0971967b58b005e4fe554b397edb0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028881"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934675"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-sybase-to-sql"></a>Команды меню и другие сочетания клавиш (SybaseToSQL)
 В следующих разделах описываются сочетания клавиш для доступа к командам меню и другие сочетания клавиш, используемые в различных диалоговых окнах приложения SSMA для Sybase.  
@@ -79,7 +79,7 @@ ms.locfileid: "68028881"
 |Создать отчет.|ALT + T + C|  
 |Преобразование схемы.|ALT + T + N или CTRL + R|  
 |Обновите базу данных Sybase.|ALT + T + R|  
-|Синхронизируйте с SQL Server или SQL Azure базой данных.|ALT + T + S|  
+|Синхронизируйте с SQL Server или с базой данных SQL Azure.|ALT + T + S|  
 |Сохранить как скрипт.|ALT + T + A|  
 |Перенос данных.|ALT + T + M|  
 |Останавливает текущую операцию.|ALT + T + O|  

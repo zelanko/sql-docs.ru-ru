@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 62e2d30f-a73f-42d9-a6ab-3510a8198f4e
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 295372026ec0a1eed0abb4e62a10bc56fd279d56
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 511095f8b6910f95a7f3e4105fce102bb2a9522e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76910217"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933135"
 ---
 # <a name="new-gui-features-in-ssma-for-oracle-oracletosql"></a>Новые функции графического пользовательского интерфейса в SSMA для Oracle (OracleToSQL)
 В этой главе описываются новые возможности пользовательского интерфейса SSMA.  
@@ -55,14 +55,14 @@ ms.locfileid: "76910217"
   
 -   Щелкните серую область в левой части окна SQL  
   
--   Для задания нумерованной закладки&lt;используйте сочетание клавиш CTRL&gt; + SHIFT + 0.. 9  
+-   &lt; &gt; Для задания нумерованной закладки используйте сочетание клавиш CTRL + SHIFT + 0.. 9  
   
 ### <a name="bookmark-navigation"></a>Навигация по закладкам  
 Вы можете пройти по закладкам следующими способами.  
   
 -   Использование кнопок Следующая закладка, Предыдущая закладка в верхней части окна SQL  
   
--   Используйте Ctrl +&lt;0.. 9&gt; для поиска нумерованной закладки  
+-   Используйте Ctrl + &lt; 0.. 9 &gt; для поиска нумерованной закладки  
   
 -   Использование кнопок для перехода или просмотра исходного кода в диалоговом окне "Управление закладками"  
   

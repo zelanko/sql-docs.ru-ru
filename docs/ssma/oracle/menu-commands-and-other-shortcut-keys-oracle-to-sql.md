@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: fc00e683-189e-4765-b280-84927d635126
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: b9534020525ace1df2976ee732d9016c02d5ed2e
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 76f088100ecdf0172cfb7403bffa4a1546113b6b
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293931"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933275"
 ---
 # <a name="menu-commands-and-other-shortcut-keysoracle-to-sql"></a>Команды меню и другие сочетания клавиш (OracleToSQL)
 В следующих разделах описываются сочетания клавиш для доступа к командам меню и другие сочетания клавиш, используемые в различных диалоговых окнах приложения SSMA для Oracle.  
@@ -81,7 +81,7 @@ ms.locfileid: "84293931"
 |Создать отчет.|ALT + T + C|  
 |Преобразование схемы.|ALT + T + N или CTRL + R|  
 |Обновление из базы данных Oracle.|ALT + T + R|  
-|Синхронизируйте с SQL Server или SQL Azure базой данных.|ALT + T + S|  
+|Синхронизируйте с SQL Server или с базой данных SQL Azure.|ALT + T + S|  
 |Сохранить как скрипт.|ALT + T + A|  
 |Перенос данных.|ALT + T + M|  
 |Останавливает текущую операцию.|ALT + T + O|  

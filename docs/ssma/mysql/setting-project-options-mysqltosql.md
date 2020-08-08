@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Setting project options,configuration options
 ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: d5c85c551ba70d28b4af7eb87126c51ef5a4ff75
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: cf8ac834b014fe49a851d3887fb36e29f59e069e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863525"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935132"
 ---
 # <a name="setting-project-options-mysqltosql"></a>Настройка параметров проекта (MySQLToSQL)
 Для каждого проекта SSMA можно задать параметры уровня проекта. Эти параметры определяют способ преобразования объектов, способ переноса данных и способ, которым типы исходных данных сопоставляются с целевыми типами данных.  Прежде чем преобразовывать объекты в SQL Server или SQL Azure или переносить данные в SQL Server или SQL Azure, убедитесь, что параметры конфигурации подходят для проекта.  
@@ -38,13 +38,13 @@ SSMA имеет пять наборов параметров проекта:
   
 Параметры проекта можно настроить четырьмя способами.  
   
--   По умолчанию  
+-   Значение по умолчанию  
   
 -   Optimistic  
   
 -   Полное  
   
--   Особые настройки  
+-   Другой  
   
 Для большинства пользователей рекомендуется использовать режим по умолчанию. Оптимистичный режим сохраняет больше текущего синтаксиса MySQL и проще в чтении. Однако поддержание текущего синтаксиса может быть неточным. Если синтаксис MySQL необходимо преобразовать в эквивалентный SQL Server или синтаксис SQL Azure, то полный режим выполняет наиболее полное преобразование. Однако результирующий код может оказаться более трудным для чтения. В пользовательском режиме можно задать параметры.  
   

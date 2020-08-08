@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Columns Comparison Settings
 - Selection of Affected Objects
 ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: c06fb621cab581e934ba4655ed6507149d109c60
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 619da90c19cf918b3f53ac6cd213b27e718b6a10
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266496"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932915"
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>Выбор и настройка обрабатываемых объектов (OracleToSQL)
 На этой странице можно выбрать таблицы и внешние ключи, изменения, в которых следует сравнивать, когда SSMA проверяет результаты выполнения для объектов, выбранных на предыдущем шаге. Кроме того, можно настроить параметры проверки.  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Connecting to SQL Server,Synchronizing SQL Server Metadata
 ms.assetid: 1b2a8059-1829-4904-a82f-9c06de1e245f
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 283b91e9cbe263e870856066d94dc2d1cd72dd68
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: c810b85b2e59d02b26ee0b831bbbafe2ede5ba28
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863497"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87935054"
 ---
 # <a name="connecting-to-sql-server-oracletosql"></a>Подключение к SQL Server (OracleToSQL)
 Чтобы перенести базы данных Oracle на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 R2 или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 или 2014, необходимо [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подключиться к любому из этих целевых экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . При подключении SSMA получает метаданные обо всех базах данных в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и отображает метаданные базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обозревателе метаданных. SSMA хранит сведения о том, к какому экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вы подключены, но не хранят пароли.  
@@ -84,11 +84,11 @@ ms.locfileid: "87863497"
   
 |Тип проекта и версия целевого сервера|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005<br /> (Версия: 9. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008<br /> (Версия: 10. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br />(Версия: 11. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 <br />(Версия: 12. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(Версия: 13. x)|База данных SQL Azure|  
 |-|-|-|-|-|-|-|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|Да|Да|Да|Да|Да||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||Да|Да|Да|Да||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||Да|Да|Да||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||Да|Да||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||Да||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|да|да|да|да|да||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||да|да|да|да||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||да|да|да||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||да|да||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||да||
 |База данных SQL Azure||||||Да|
   
 > [!IMPORTANT]

@@ -9,18 +9,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Uninstalling the Extension Pack
 ms.assetid: 8b527a56-4e52-487a-9ac9-2320388e6d7d
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 0434f88c46d14672c84f5f7939488a827b229e27
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 4fbac66cfd7cf549a6321534901ca8a33900f986
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266563"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933155"
 ---
 # <a name="removing-ssma--for-oracle-components-oracletosql"></a>Удаление компонентов SSMA для Oracle (OracleToSQL)
-После завершения миграции баз данных из Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]может потребоваться удалить компоненты SSMA. Вы можете удалить клиентские компоненты в любое время. Однако не следует удалять пакет расширений, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] если только перенесенные базы данных больше не используют функции в схеме **ssma_oracle** базы данных **сисдб** .  
+После завершения миграции баз данных из Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может потребоваться удалить компоненты SSMA. Вы можете удалить клиентские компоненты в любое время. Однако не следует удалять пакет расширений, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] если только перенесенные базы данных больше не используют функции в схеме **ssma_oracle** базы данных **сисдб** .  
   
 ## <a name="uninstalling-the-ssma-for-oracle-client"></a>Удаление SSMA для клиента Oracle  
 Удалить SSMA можно с помощью компонента " **Установка и удаление программ**".  
@@ -29,7 +29,7 @@ ms.locfileid: "68266563"
   
 1.  На панели управления и откройте элемент **Установка и удаление программ**.  
   
-2.  ** [!INCLUDE[msCoName](../../includes/msconame_md.md)] Выберите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] помощник по миграции для Oracle**и нажмите кнопку **Удалить**.  
+2.  Выберите ** [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Помощник по миграции для Oracle**и нажмите кнопку **Удалить**.  
   
 3.  Чтобы подтвердить удаление SSMA, нажмите кнопку **Да**.  
   
@@ -48,13 +48,13 @@ ms.locfileid: "68266563"
   
 5.  На странице Параметры соединения выберите метод проверки подлинности и нажмите кнопку **Далее**.  
   
-    При проверке подлинности Windows будут использоваться учетные данные Windows для входа на экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При выборе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности необходимо ввести имя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа и пароль.  
+    При проверке подлинности Windows будут использоваться учетные данные Windows для входа на экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . При выборе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности необходимо ввести [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя входа и пароль.  
   
 6.  На странице операция завершена нажмите кнопку **ОК**.  
   
 7.  На странице Готово нажмите кнопку **выход**.  
   
-После удаления можно подтвердить, что объекты в схеме **сисдб. ssma_oracle** и, возможно, всю базу данных **сисдб** , были удалены с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Однако при использовании других продуктов SSMA они также используют базу данных **сисдб** . Если база данных существует и вы уверены, что другие базы данных не ссылаются на объекты в этой базе данных, можно отключить базу данных.  
+После удаления можно подтвердить, что объекты в схеме **сисдб. ssma_oracle** и, возможно, всю базу данных **сисдб** , были удалены с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Однако при использовании других продуктов SSMA они также используют базу данных **сисдб** . Если база данных существует и вы уверены, что другие базы данных не ссылаются на объекты в этой базе данных, можно отключить базу данных.  
   
 ## <a name="see-also"></a>См. также:  
 [Установка SSMA для клиента Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  

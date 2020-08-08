@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Oracle Console, Console Output Conventions
 - Oracle Console, Launching Console
 ms.assetid: 667a5e4a-6848-4973-a72d-1287f64718ac
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 25cd6eb9c811548e6300c944c65c5530185d46e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 57170c17538ccd997c5bc4d2e12ab53914b3727c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264501"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934897"
 ---
 # <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>Начало работы с консолью SSMA для Oracle (OracleToSQL)
 В этом разделе описывается процедура запуска и начала работы с консольным приложением Oracle. Здесь также перечислены соглашения, используемые в типичном окне вывода консоли SSMA.  
@@ -30,7 +30,7 @@ ms.locfileid: "68264501"
   
 2.  Щелкните ярлык ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для командной строки Oracle помощник по миграции** .  
   
-    В нем отображается меню использования консоли SSMA и `(/? Help)`, которое поможет приступить к работе с консольным приложением.  
+    В нем отображается меню использования консоли SSMA и `(/? Help)` , которое поможет приступить к работе с консольным приложением.  
   
 ## <a name="procedure-for-using-the-ssma-console"></a>Процедура использования консоли SSMA  
 После успешного запуска консоли в системе Windows для работы с ней можно выполнить следующие действия.  
@@ -56,7 +56,7 @@ ms.locfileid: "68264501"
   
 Цветовая интерпретация выходных данных консоли в следующей таблице:  
   
-|Color|Описание|  
+|Color|Description|  
 |---------|---------------|  
 |Красный|Неустранимая ошибка во время выполнения|  
 |Серый|Отметка даты и времени, сообщение пользователю|  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: f2df572e7e4be92eb91662ffc47448b7becf3a7e
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 3a061ede945ed8eda5264c2ef210bca5ac1d70e9
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864911"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988495"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Указание подходящего номера SKU базы данных SQL Azure или Управляемый экземпляр для локальной базы данных
 
@@ -29,7 +29,7 @@ ms.locfileid: "87864911"
 
 - Отдельная база данных
 - Эластичные пулы
-- управляемый экземпляр
+- Базы данных SQL
 
 Функция "рекомендации SKU" позволяет выявление минимально рекомендованной базы данных SQL Azure или номера SKU Azure SQL Управляемый экземпляр на основе счетчиков производительности, собранных с компьютеров, на которых размещены базы данных. Эта функция предоставляет рекомендации, связанные с ценовой категорией, уровнем вычислений и максимальным размером данных, а также оценочной стоимостью в месяц. Кроме того, она предоставляет возможность выполнять сбор отдельных баз данных и управляемых экземпляров для всех рекомендуемых баз данных.
 
@@ -38,7 +38,7 @@ ms.locfileid: "87864911"
 
 Ниже приведены инструкции по определению рекомендаций SKU и подготовке соответствующих отдельных баз данных или управляемых экземпляров в Azure с помощью DMA.
 
-## <a name="prerequisites"></a>Предварительные условия
+## <a name="prerequisites"></a>Предварительные требования
 
 - Скачайте и установите последнюю версию [DMA](https://aka.ms/get-dma). Если вы уже используете более раннюю версию средства, откройте его, и вам будет предложено обновить DMA.
 - Убедитесь, что на компьютере установлен [PowerShell версии 5,1](https://www.microsoft.com/download/details.aspx?id=54616) или более поздней, который необходим для выполнения всех сценариев. Сведения о том, как узнать, какая версия PowerShell установлена на компьютере, см. в статье [Загрузка и установка Windows PowerShell 5,1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).

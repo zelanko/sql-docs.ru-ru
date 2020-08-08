@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: e223fb7d-05ec-4fa5-8973-d845c33a23dd
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 743ed010107c9557c84b1683f7a81b369ca7cf3c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 697bf746f438d45731e78c0c39d28677c3be6ddd
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266591"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87933208"
 ---
 # <a name="project-settingssynchronization-oracletosql"></a>Параметры проекта (синхронизация) (OracleToSQL)
-Страница синхронизация диалогового окна **Параметры проекта** содержит параметры, которые настраивают, как SSMA загружает и обновляет объекты базы данных, такие как таблицы и хранимые процедуры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в.  
+Страница синхронизация диалогового окна **Параметры проекта** содержит параметры, которые настраивают, как SSMA загружает и обновляет объекты базы данных, такие как таблицы и хранимые процедуры, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 Параметры действий по умолчанию определяют параметры по умолчанию для обновления объектов из базы данных Oracle и для синхронизации объектов с базой данных SQL Server. Дополнительные сведения см. [в разделе Обновление из базы данных Oracle](../../ssma/oracle/refresh-from-database-oracletosql.md).  
   
@@ -30,7 +30,7 @@ ms.locfileid: "68266591"
   
 ## <a name="miscellaneous-options"></a>Различные параметры  
 **Ошибок**  
-Указывает число попыток, которые SSMA должны выполнить при загрузке объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Объекты, которые не загружаются [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в текущей попытке, будут предприняты повторно, пока SSMA не достигнет максимального числа попыток в текущем процессе синхронизации. Значение по умолчанию равно **2**  
+Указывает число попыток, которые SSMA должны выполнить при загрузке объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Объекты, которые не загружаются [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в текущей попытке, будут предприняты повторно, пока SSMA не достигнет максимального числа попыток в текущем процессе синхронизации. Значение по умолчанию равно **2**  
   
 ## <a name="synchronization-for-oracle-options"></a>Параметры синхронизации для Oracle  
 **Действие при изменении локального и удаленного объектов**  

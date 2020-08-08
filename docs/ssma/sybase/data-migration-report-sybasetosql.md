@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: bac234ef-bc16-47e6-8a7c-aa6e76d860c5
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: b05ca315401e587a4a200ff6fc78634993260b07
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: b55228d51099c8c48c181a85d2615039f764b8a4
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029400"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932175"
 ---
 # <a name="data-migration-report-sybasetosql"></a>Отчет о миграции данных (SybaseToSQL)
-После переноса данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]появляется диалоговое окно **отчет о переносе данных** .  
+После переноса данных в появляется диалоговое окно **отчет о переносе данных** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Параметры  
 **Состояние**  
@@ -26,7 +26,7 @@ ms.locfileid: "68029400"
 **От**  
 Исходная таблица.  
   
-**Кому**  
+**Чтобы**  
 Целевая таблица.  
   
 **Общее число строк**  
@@ -35,10 +35,10 @@ ms.locfileid: "68029400"
 **Число успешно перенесенных строк**  
 Число строк данных, успешно перенесенных в целевую таблицу.  
   
-**Коэффициент**  
+**Соотношение**  
 Процент успешно перенесенных строк.  
   
-**Сведения**  
+**Подробные сведения**  
 В случае сбоя переноса данных щелкните, чтобы отобразить сведения о миграции для выбранной строки отчета. SSMA отобразит причину сбоя.  
   
 **Сохранить отчет**  

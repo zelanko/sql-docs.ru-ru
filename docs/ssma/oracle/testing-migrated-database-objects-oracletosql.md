@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f03ef5e1-66e6-4c84-ada2-252dd5ada82f
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 858c564c965fe7105c86a3087923887097e4ddac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 9e7c63986cde88c7a1ccbf67f8dd3751bb6d41b0
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266482"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932835"
 ---
 # <a name="testing-migrated-database-objects-oracletosql"></a>Тестирование объектов баз данных после миграции (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Помощник по миграции для тестера Oracle (SSMA Tester) автоматически проверяет преобразование объектов базы данных и перенос данных, выполняемый SSMA. После завершения миграции SSMA Используйте тестер SSMA, чтобы убедиться, что преобразованные объекты работают одинаково и все данные были переданы должным образом.  
@@ -32,7 +32,7 @@ ms.locfileid: "68266482"
   
 -   Автономные инструкции.  
   
-Тестер SSMA выполняет объекты, выбранные для тестирования в Oracle, и их аналоги в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. После этого он сравнивает результаты в соответствии со следующими критериями:  
+Тестер SSMA выполняет объекты, выбранные для тестирования в Oracle, и их аналоги в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . После этого он сравнивает результаты в соответствии со следующими критериями:  
   
 -   Совпадают ли изменения в данных таблицы?  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68266482"
 -   Совпадают ли результирующие наборы?  
   
 > [!NOTE]  
-> Обратит! Никогда не используйте SSMA Tester в рабочих системах. Во время выполнения тестера изменяются исходная схема и данные. В то же время полное восстановление исходного состояния может оказаться невозможным для некоторых типов протестированного кода.  
+> ВНИМАНИЕ! Никогда не используйте SSMA Tester в рабочих системах. Во время выполнения тестера изменяются исходная схема и данные. В то же время полное восстановление исходного состояния может оказаться невозможным для некоторых типов протестированного кода.  
   
 ## <a name="prerequisites"></a>Предварительные требования  
 Если вы хотите использовать SSMA Tester, установите пакет расширения SSMA Oracle с включенным параметром **Install Tester Database** .  
@@ -52,13 +52,13 @@ ms.locfileid: "68266482"
   
 Кроме того, проверьте следующее:  
   
--   Клиентские средства Oracle устанавливаются на компьютере, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на котором выполняется.  
+-   Клиентские средства Oracle устанавливаются на компьютере, на котором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется.  
   
 -   Интеграция со средой CLR включена на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ядро СУБД.  
   
 Обратите внимание, что текущая версия тестера SSMA не поддерживает параллельное выполнение разными пользователями на одном исходном или целевом сервере.  
   
-## <a name="getting-started"></a>Приступая к работе  
+## <a name="getting-started"></a>Начало работы  
 [Создание тестовых случаев &#40;OracleToSQL&#41;](../../ssma/oracle/creating-test-cases-oracletosql.md)  
   
 ## <a name="see-also"></a>См. также:  

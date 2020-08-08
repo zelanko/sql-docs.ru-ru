@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 7078b4ed-c779-4bf3-8db8-f9dcb3edd50f
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: b3857d2acda8f5c8b16f416987651db2b6b991b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 1df40b843064513f6b2c135355b26f745c336011
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264235"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934947"
 ---
 # <a name="edit-type-mapping-oracletosql"></a>Изменение сопоставления типов (OracleToSQL)
 Диалоговое окно **Изменение сопоставления типов** позволяет указать, как типы сопоставляются между исходным и целевым объектами базы данных.  
@@ -37,11 +37,11 @@ ms.locfileid: "68264235"
 **От**  
 Укажите минимальную длину для этого сопоставления. Например, для типа данных **nchar** можно ввести значение 10, чтобы указать, что это сопоставление предназначено для диапазона, начиная с **nchar (10)**.  
   
-**Кому**  
+**Чтобы**  
 Укажите максимальную длину для этого сопоставления. Например, для типа данных **nchar** можно ввести значение 20, чтобы указать, что это сопоставление относится к диапазону, завершающему значение **nchar (20)**.  
   
-**Тип результирующего значения**  
-Выберите тип [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данных, с которым сопоставлен исходный тип данных. Когда SSMA создает таблицу или хранимую процедуру в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], тип данных источника изменится на этот тип данных.  
+**Тип целевого объекта**  
+Выберите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных, с которым сопоставлен исходный тип данных. Когда SSMA создает таблицу или хранимую процедуру в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , тип данных источника изменится на этот тип данных.  
   
 Если тип данных имеет переменную длину, в разделе **целевой тип**появится следующее поле:  
   

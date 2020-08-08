@@ -14,14 +14,14 @@ helpviewer_keywords:
 - SQL Server data types
 - Type Mapping settings
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 01154cf477435e9dc5335606d0c11a05aecc492b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 2b25cb2dbe5b92e0ece7ef28a842a2585ea9961d
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68066662"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934012"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Параметры проекта (сопоставление типов) (Акцесстоскл)
 Параметры проекта сопоставления типов позволяют задать сопоставления типов по умолчанию для проекта SSMA. Можно также указать сопоставления типов для отдельных объектов базы данных. Дополнительные сведения см. в разделе [Сопоставление исходных и целевых типов данных](mapping-source-and-target-data-types-accesstosql.md).  
@@ -43,22 +43,22 @@ ms.locfileid: "68066662"
   
 |Тип данных Access|Тип данных SQL Server|  
 |--------------------|------------------------|  
-|**двоичный\*файл [.. \*]**|**varbinary [\*]**|  
+|**Binary [ \* .. \* ]**|**varbinary [ \* ]**|  
 |**boolean**|**bit**|  
 |**byte**|**tinyint**|  
 |**режиме**|**money**|  
 |**date**|**datetime**|  
 |**decimal**|**float**|  
 |**double**|**float**|  
-|**устройства**|**uniqueidentifier**|  
+|**guid**|**uniqueidentifier**|  
 |**integer**|**smallint**|  
 |**long**|**int**|  
 |**лонгбинари**|**varbinary(max)**|  
 |**memo**|**nvarchar(max)**|  
 |**МЕМО** — для Access 97|**varchar(max)**|  
 |**single**|**real**|  
-|**Text [\*.. \*]**|**nvarchar [\*]**|  
-|**Text [\*.. ] \*** — для Access 97|**varchar [\*]**|  
+|**Text [ \* .. \* ]**|**nvarchar [ \* ]**|  
+|**Text [ \* .. \* ]** — для Access 97|**varchar [ \* ]**|  
   
 **Добавление**  
 Нажмите, чтобы добавить тип данных в список сопоставления.  

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: eb996b7c-1eef-4f73-b5e6-2fa6faf7336c
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 8941c243b6741b42b7c3e628305431812ad3f8d7
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: fba4692780b9f9f2c556634bf1676bc00bbba169
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864841"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932615"
 ---
 # <a name="assessing-sap-ase-database-objects-for-conversion-sybasetosql"></a>Оценка объектов базы данных SAP ASE для преобразования (SybaseToSQL)
 Перед загрузкой объектов и переносом данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure необходимо определить сложность миграции и время ее выполнения. SSMA может создать отчет об оценке, который показывает процент объектов и процедур, которые будут успешно преобразованы в [!INCLUDE[tsql](../../includes/tsql-md.md)] . SSMA также позволяет просматривать конкретные проблемы, которые могут вызвать сбои при преобразовании.  
@@ -73,7 +73,7 @@ ms.locfileid: "87864841"
   
     -   Вы можете исключить объект из миграции. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или в обозревателе метаданных Azure и в обозревателе метаданных Sybase снимите флажок рядом с элементом, прежде чем загружать объекты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или Azure SQL и переносить данные из ASE.
   
-## <a name="next-steps"></a>Дальнейшие шаги  
+## <a name="next-steps"></a>Дальнейшие действия  
 [Преобразование объектов базы данных SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)  
   
 ## <a name="see-also"></a>См. также:  

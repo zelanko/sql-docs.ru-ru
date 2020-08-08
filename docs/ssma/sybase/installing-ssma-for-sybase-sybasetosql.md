@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 8d5a4ce6-b747-46e3-9184-645d56e8b35c
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 302225b3339f779bbcf138ce0c6ee2e3ee24adf8
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: fa1205a2511eb2c49c5be616caefad0ee0102105
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84292919"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931608"
 ---
 # <a name="installing-ssma-for-sap-ase-sybasetosql"></a>Установка SSMA для SAP ASE (SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Помощник по миграции (SSMA) для SAP адаптивного сервера предприятия (ASE) состоит из клиентского приложения, которое используется для миграции из SAP ASE в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базу данных SQL Azure или из нее. Он также содержит пакет расширений, который поддерживает перенос данных и использование системных функций ASE в перенесенных базах данных.  
@@ -35,5 +35,5 @@ ms.locfileid: "84292919"
 |[Установка компонентов SSMA на SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)|Содержит сведения и инструкции по установке пакета расширения на экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Удаление SSMA для компонентов SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/removing-ssma-for-sybase-components-sybasetosql.md)|Содержит инструкции по удалению клиентской программы и пакета расширений.|  
   
-## <a name="see-also"></a>Дополнительно  
+## <a name="see-also"></a>См. также статью  
 [Миграция баз данных SAP ASE в SQL Server — база данных SQL Azure &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

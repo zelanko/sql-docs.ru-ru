@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: d63aa7e2-62c6-4c84-b3da-dcf2d89ee134
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 0d58f07f4e9d43f78c9c8990d174030cce484781
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: 3be5379cc339326bc8ce35c886982e7eeff4d0a8
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264255"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934971"
 ---
 # <a name="data-migration-report--oracletosql"></a>Отчет о миграции данных (OracleToSQL)
-После переноса данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]появляется диалоговое окно **отчет о переносе данных** .  
+После переноса данных в появляется диалоговое окно **отчет о переносе данных** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Параметры  
 **Состояние**  
@@ -27,7 +27,7 @@ ms.locfileid: "68264255"
 **От**  
 Исходная таблица.  
   
-**Кому**  
+**Чтобы**  
 Целевая таблица.  
   
 **Общее число строк**  
@@ -36,10 +36,10 @@ ms.locfileid: "68264255"
 **Число успешно перенесенных строк**  
 Число строк данных, успешно перенесенных в целевую таблицу.  
   
-**Коэффициент**  
+**Соотношение**  
 Процент успешно перенесенных строк.  
   
-**Сведения**  
+**Подробные сведения**  
 В случае сбоя переноса данных щелкните, чтобы отобразить сведения о миграции для выбранной строки отчета. SSMA отобразит причину сбоя.  
   
 **Сохранить отчет**  

@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Project Options Setting
 ms.assetid: 97b70fc8-1f68-4f15-8e22-db5b784ea4ec
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: b2b16054a0a866d7772243a04cb8f5955931cfc4
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 04efa94a93cc313e520eaebb8448c48e1b106ec6
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864751"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934634"
 ---
 # <a name="setting-project-options-sybasetosql"></a>Настройка параметров проекта (SybaseToSQL)
 Для каждого проекта SSMA можно задать параметры уровня проекта. Эти параметры указывают на преобразование объектов, загрузку объектов, SQL Azure, Пользовательский интерфейс и параметры переноса данных. Прежде чем преобразовывать объекты в или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure или переносить данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, убедитесь, что параметры конфигурации подходят для проекта.  
@@ -38,13 +38,13 @@ SSMA имеет пять наборов параметров проекта:
   
 Он также имеет четыре режима для настройки этих параметров:  
   
-1.  По умолчанию  
+1.  Значение по умолчанию  
   
 2.  Optimistic  
   
 3.  Полное  
   
-4.  Особые настройки  
+4.  Другой  
   
 Для большинства пользователей рекомендуется использовать режим по умолчанию. Оптимистичный режим сохраняет больше текущего синтаксиса адаптивного серверного корпоративного выпуска Sybase (ASE) и становится проще в чтении. Однако поддержание текущего синтаксиса может быть неточным. Если синтаксис ASE должен быть преобразован в эквивалентный [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure синтаксис, в полном режиме выполняется полное преобразование, но результирующий код может оказаться трудным для чтения. В пользовательском режиме задаются параметры.  
   

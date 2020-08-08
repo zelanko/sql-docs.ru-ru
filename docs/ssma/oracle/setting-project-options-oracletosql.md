@@ -9,18 +9,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Configuration Options and Modes
 ms.assetid: a324d07d-cfdf-43bd-98a0-acf332c5a4db
-author: Shamikg
-ms.author: Shamikg
-manager: shamikg
-ms.openlocfilehash: 6947a51b731b22b28ffbaa509f7cd38be5e7ebc5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: e104c2ed456567074b796d68d5a82769ac67e5ac
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266532"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87932965"
 ---
 # <a name="setting-project-options-oracletosql"></a>Настройка параметров проекта (OracleToSQL)
-Для каждого проекта SSMA можно задать параметры уровня проекта. Эти параметры указывают на преобразование объектов, загрузку объектов, Пользовательский интерфейс и параметры переноса данных. Перед преобразованием объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в или их миграции [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в убедитесь, что параметры конфигурации подходят для проекта.  
+Для каждого проекта SSMA можно задать параметры уровня проекта. Эти параметры указывают на преобразование объектов, загрузку объектов, Пользовательский интерфейс и параметры переноса данных. Перед преобразованием объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или их миграции в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Убедитесь, что параметры конфигурации подходят для проекта.  
   
 SSMA позволяет настроить параметры по умолчанию для всех проектов. Эти параметры применяются ко всем новым создаваемым проектам. Затем можно настроить параметры для каждого проекта.  
   
@@ -45,7 +45,7 @@ SSMA имеет пять наборов параметров проекта:
   
 -   Полное  
   
--   Особые настройки  
+-   Другой  
   
 Для большинства пользователей рекомендуется использовать режим по умолчанию. Оптимистичный режим сохраняет больше текущего синтаксиса Oracle и проще в чтении. Однако поддержание текущего синтаксиса может быть неточным. Если синтаксис Oracle должен быть преобразован в эквивалентный [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] синтаксис, то полный режим выполняет наиболее полное преобразование, но результирующий код может быть более трудным для чтения. В пользовательском режиме задаются параметры.  
   
@@ -92,12 +92,12 @@ SSMA имеет пять наборов параметров проекта:
   
 3.  Нажмите кнопку **ОК**, чтобы сохранить настройки.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Next Steps  
 Следующий шаг миграции зависит от потребностей проекта:  
   
 -   Сведения о настройке сопоставления исходных и целевых типов данных см. в разделе [Сопоставление типов данных Oracle и SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md).  
   
--   В противном случае определения объектов базы данных Oracle можно преобразовать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в определения объектов. Дополнительные сведения см. в разделе [Преобразование схем Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md).  
+-   В противном случае определения объектов базы данных Oracle можно преобразовать в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определения объектов. Дополнительные сведения см. в разделе [Преобразование схем Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md).  
   
 ## <a name="see-also"></a>См. также:  
 [Сопоставление типов данных Oracle и SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)  
