@@ -20,14 +20,14 @@ helpviewer_keywords:
 - SQL Server, connecting to
 - SQL Server, reconnecting
 ms.assetid: f84cf007-ddf1-4396-a07c-3e0729abc769
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 757c0e040a047f96a6dcf364638f76593904adf1
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 612921c1640b97135c96a5f81c3099722bf5bb4c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395865"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87939167"
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>Подключение к SQL Server (Акцесстоскл)
 Чтобы перенести базы данных Access в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо подключиться к целевому экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . При подключении SSMA получает метаданные о базах данных в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и отображает метаданные базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обозревателе метаданных. SSMA хранит сведения о том, к какому экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вы подключены, но не хранят пароли.  
@@ -81,7 +81,7 @@ ms.locfileid: "87395865"
   
 6.  Для безопасного подключения добавляются два элемента управления: флажок **Шифровать соединение** и **TrustServerCertificate** . Флажок только при **шифровании подключения** установлен **TrustServerCertificate** . Если флажок **Шифровать соединение** установлен (true) и **TrustServerCertificate** не установлен (false), будет проверять SQL Server SSL-сертификат. Проверка сертификата сервера является частью SSL-подтверждения и гарантирует, что для подключения выбран правильный сервер. Чтобы убедиться в этом, сертификат должен быть установлен на стороне клиента, а также на стороне сервера.  
   
-7.  Нажмите кнопку **Соединить**.  
+7.  Нажмите кнопку **Подключиться**.  
   
 **Совместимость более поздних версий**  
   
@@ -97,12 +97,12 @@ ms.locfileid: "87395865"
   
 |Тип проекта и версия целевого сервера|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005 (версия: 9. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008 (версия: 10. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012 (версия: 11. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 (версия: 12. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016 (версия: 13. x)|SQL Azure|  
 |-|-|-|-|-|-|-|
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|Да|Да|Да|Да|Да||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||Да|Да|Да|Да||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||Да|Да|Да||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||Да|Да||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||Да||
-|SQL Azure||||||Да|
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|да|да|да|да|да||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||да|да|да|да||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||да|да|да||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||да|да||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||да||
+|SQL Azure||||||да|
   
 > [!IMPORTANT]  
 > Преобразование объектов базы данных выполняется в соответствии с типом проекта, но не в соответствии с версией SQL Server, к которой подключена. В случае проекта SQL Server 2005 преобразование выполняется по SQL Server 2005, даже если вы подключены к более поздней версии SQL Server (SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016).  
@@ -119,9 +119,9 @@ ms.locfileid: "87395865"
   
 Процедура повторного подключения к совпадает с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] процедурой установки соединения.  
   
-## <a name="next-steps"></a>Дальнейшие шаги  
+## <a name="next-steps"></a>Next Steps  
 Если вы хотите настроить сопоставление между исходной и целевой базами данных, см. раздел [сопоставление исходной и целевой баз данных](mapping-source-and-target-databases-accesstosql.md) в противном случае следующим шагом является преобразование объектов базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] синтаксис с помощью инструкции [Convert Objects](converting-access-database-objects-accesstosql.md) .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Миграция баз данных Access в SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

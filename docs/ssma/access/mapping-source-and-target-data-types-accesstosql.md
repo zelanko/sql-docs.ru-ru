@@ -13,17 +13,17 @@ helpviewer_keywords:
 - source data types
 - target data types
 ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: e0600778b938a7736ab1112f31bbe4828605cdaf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c67cb826d5a5dce7c142cba3ded468b851cef337
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67907163"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938303"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>Сопоставление исходных и целевых типов данных (Акцесстоскл)
-Типы баз данных Access отличаются [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] от типов баз данных. При преобразовании объектов базы данных Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в объекты необходимо указать, как сопоставлять типы данных из Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Можно принять сопоставления типов данных по умолчанию или настроить сопоставления, как показано в следующих процедурах.  
+Типы баз данных Access отличаются от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов баз данных. При преобразовании объектов базы данных Access в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объекты необходимо указать, как сопоставлять типы данных из Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Можно принять сопоставления типов данных по умолчанию или настроить сопоставления, как показано в следующих процедурах.  
   
 ## <a name="default-mappings"></a>Сопоставления по умолчанию  
 SSMA имеет набор сопоставлений типов данных по умолчанию. Список сопоставлений по умолчанию см. в разделе [Параметры проекта (сопоставление типов)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655).  
@@ -87,9 +87,9 @@ SSMA имеет набор сопоставлений типов данных п
   
     2.  Щелкните **Удалить**.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Next Steps  
 Следующим шагом процесса миграции является [Преобразование объектов базы данных Access в объекты SQL Server](converting-access-database-objects-accesstosql.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Миграция баз данных Access в SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Sybase Console,refresh-from-database report
 - Sybase Console,synchronize-target report
 ms.assetid: 19278f6a-6d58-4867-9d71-c6228040466e
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 564385c15d9877454d30892f9cce54fbca6cf802
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: df30186091344addef429bfb125e90b898d21467
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396393"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931547"
 ---
 # <a name="generating-reports-sybasetosql"></a>Создание отчетов (SybaseToSQL)
 Отчеты о определенных действиях, выполняемых с помощью команд, создаются в консоли SSMA на уровне дерева объектов.  
@@ -141,6 +141,6 @@ ms.locfileid: "87396393"
   
 -   сценарий Fail  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Запуск консоли SSMA (Sybase)](https://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
   

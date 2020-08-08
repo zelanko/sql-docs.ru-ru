@@ -17,14 +17,14 @@ helpviewer_keywords:
 - SQL Azure, reconnecting
 - SQL Azure, synchronizing metadata
 ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 529962cbc303a66102f833374e42c6cfb8981b87
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 3bb372b329ce516cae2ab26ece02721d7934b228
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87822521"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938933"
 ---
 # <a name="connecting-to-azure-sql-database-accesstosql"></a>Подключение к базе данных SQL Azure (Акцесстоскл)
 Чтобы перенести базы данных Access в SQL Azure, необходимо подключиться к целевому экземпляру SQL Azure. При подключении SSMA получает метаданные обо всех базах данных в экземпляре SQL Azure и отображает метаданные базы данных в обозревателе метаданных SQL Azure. SSMA хранит сведения о том, к какому экземпляру SQL Azure вы подключены, но не хранят пароли.  
@@ -72,7 +72,7 @@ ms.locfileid: "87822521"
 Если в учетной записи SQL Azure нет баз данных, можно создать первую базу данных с помощью параметра **создать базу данных Azure** , который отображается при нажатии кнопки **Обзор** .  
   
 ## <a name="synchronizing-sql-azure-metadata"></a>Синхронизация метаданных SQL Azure  
-Метаданные SQL Azure базы данных не обновляются автоматически. Метаданные в SQL Azure обозревателе метаданных являются моментальным снимком метаданных при первом подключении к SQL Azure или при последнем обновлении метаданных вручную. Можно вручную обновить метаданные для всех баз данных или для любой отдельной базы данных или объекта базы данных.  
+Метаданные о базах данных в базе данных SQL Azure не обновляются автоматически. Метаданные в SQL Azure обозревателе метаданных являются моментальным снимком метаданных при первом подключении к SQL Azure или при последнем обновлении метаданных вручную. Можно вручную обновить метаданные для всех баз данных или для любой отдельной базы данных или объекта базы данных.  
   
 **Синхронизация метаданных**  
   
@@ -96,10 +96,10 @@ ms.locfileid: "87822521"
   
 Процедура повторного подключения к SQL Azure аналогична процедуре установки соединения.  
   
-## <a name="next-step"></a>Следующий шаг  
+## <a name="next-steps"></a>Дальнейшие действия  
 Следующий шаг миграции зависит от потребностей проекта:  
   
--   Сведения о настройке сопоставления между схемами доступа и SQL Azure базами данных и схемами см. в разделе [Сопоставление баз данных Access с SQL Server схемами](mapping-source-and-target-databases-accesstosql.md).  
+-   Сведения о настройке сопоставления между схемами доступа и базой данных SQL Azure см. в разделе [Сопоставление баз данных Access с SQL Server схемами](mapping-source-and-target-databases-accesstosql.md).  
   
 -   Сведения о настройке параметров конфигурации для проектов см. в разделе [Задание параметров проекта](setting-conversion-and-migration-options-accesstosql.md).  
   

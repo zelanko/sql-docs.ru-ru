@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Tester Component,Affected Objects
 ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3aa7ccc8d559f7017fd2a9bf0bc20bc7ae191c46
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: c9efc329f80e880a58ec9926db677c4a71604e2c
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020988"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87930455"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>Выбор и настройка обрабатываемых объектов (SybaseToSQL)
 На этой странице можно выбрать таблицы и внешние ключи, изменения, в которых следует сравнивать, когда SSMA проверяет результаты выполнения для объектов, выбранных на предыдущем шаге. Кроме того, можно настроить параметры проверки.  
@@ -110,9 +110,9 @@ ms.locfileid: "68020988"
 -   При выборе значения **false**сравнение будет учитывать регистр букв.  
   
 ## <a name="comparing-sql"></a>Сравнение SQL  
-Инструкции SELECT, созданные SSMA Tester, можно просмотреть на странице **Сравнение SQL** . Тест-инженер будет сравнивать результирующие наборы этих инструкций на основе строк. Каждая следующая строка результирующего набора Sybase должна быть равна следующей строке результирующего набора, полученного в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Инструкции SELECT, созданные SSMA Tester, можно просмотреть на странице **Сравнение SQL** . Тест-инженер будет сравнивать результирующие наборы этих инструкций на основе строк. Каждая следующая строка результирующего набора Sybase должна быть равна следующей строке результирующего набора, полученного в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-Можно изменить эти инструкции SELECT, чтобы обеспечить пользовательскую проверку. Чтобы сохранить изменения в Sybase и в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] инструкциях, используйте кнопки **Применить** в ИСХОДНОМ и целевом SQL, соответственно.  
+Можно изменить эти инструкции SELECT, чтобы обеспечить пользовательскую проверку. Чтобы сохранить изменения в Sybase и в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] инструкциях, используйте кнопки **Применить** в исходном и целевом SQL, соответственно.  
   
 ## <a name="next-step"></a>Следующий шаг  
 [Настройка порядка вызовов &#40;SybaseToSQL&#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md)  

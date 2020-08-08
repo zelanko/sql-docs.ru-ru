@@ -26,14 +26,14 @@ helpviewer_keywords:
 - unique indexes
 - validation rules
 ms.assetid: 99d45b9c-e3b9-4d56-8c25-b594b887ace1
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 8bccdd3ebb49e3694ca472525a7c76d81f1fcc7a
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 27761441dd9df65c276a2afd12565018e4440f85
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293551"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938765"
 ---
 # <a name="incompatible-access-features-accesstosql"></a>Несовместимые функции доступа (Акцесстоскл)
 Не все функции базы данных Access совместимы с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Например, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и Access имеют разные наборы зарезервированных ключевых слов. Такие проблемы могут препятствовать успешной миграции на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Используйте следующую таблицу, чтобы узнать о возможных проблемах, связанных с миграцией, и о том, что можно сделать с ними.  

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: bc14a072-8949-4ee0-a4b4-ada55fe8df5c
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3d96be29aa74d3903e47f20ec6841b4a20135727
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: bd1b92f7daa49ea668a37f212f3fa338fbf3f97a
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68141080"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937353"
 ---
 # <a name="connect-to-sql-server-db2tosql"></a>Подключение к SQL Server (DB2ToSQL)
 Используйте диалоговое окно **Подключение к SQL Server** , чтобы подключиться к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на который требуется выполнить миграцию. Чтобы открыть диалоговое окно **Подключение к SQL Server** , в меню **файл** выберите пункт **подключиться к SQL Server**.  
@@ -27,27 +27,27 @@ ms.locfileid: "68141080"
   
 -   При подключении к экземпляру по умолчанию на другом компьютере введите имя компьютера.  
   
--   При подключении к именованному экземпляру на другом компьютере введите имя компьютера, обратную косую черту и имя экземпляра, например *MyServer*\\*myInstance*.  
+-   При подключении к именованному экземпляру на другом компьютере введите имя компьютера, обратную косую черту и имя экземпляра, например *MyServer* \\ *myInstance*.  
   
 **Порт сервера**  
 Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не настроен для приема подключений через порт по умолчанию (1433), введите номер порта. В противном случае оставьте это значение пустым.  
   
 **База данных**  
-Укажите базу данных для переноса объектов и данных. Этот параметр недоступен при повторном подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Укажите базу данных для переноса объектов и данных. Этот параметр недоступен при повторном подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 **Аутентификация**  
-Выберите метод проверки подлинности, используемый для подключения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]к. Чтобы использовать текущую учетную запись Windows, выберите Проверка подлинности Windows. Чтобы указать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя входа и пароль, выберите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности.  
+Выберите метод проверки подлинности, используемый для подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы использовать текущую учетную запись Windows, выберите Проверка подлинности Windows. Чтобы указать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя входа и пароль, выберите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Проверка подлинности.  
   
 **User name**  
-Если используется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности, введите имя входа для этого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если используется проверка подлинности Windows, этот параметр недоступен.  
+Если используется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Проверка подлинности, введите имя входа для этого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если используется проверка подлинности Windows, этот параметр недоступен.  
   
 **Пароль**  
-Если используется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности, введите пароль для имени входа на этом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если используется проверка подлинности Windows, этот параметр недоступен.  
+Если используется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Проверка подлинности, введите пароль для имени входа на этом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если используется проверка подлинности Windows, этот параметр недоступен.  
   
 **Шифровать соединение**  
 Если вы хотите безопасно подключаться к SQL Server, используйте шифрование соединения, установив флажок **шифровать подключение** .  
   
-**Доверять сертификату сервера**  
+**Надежный сертификат сервера**  
 Если вы хотите использовать этот параметр, установите флажок **доверять сертификату сервера** .  
   
 > [!NOTE]  

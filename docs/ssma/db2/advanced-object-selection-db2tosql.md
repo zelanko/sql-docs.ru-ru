@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: ca098c15-c343-4d7d-a284-c2fc405eb991
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 35e6c735fe0d9411d310298d4f32dbaab97b93c5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: f59e442a70b8c9b621f453ab9837412238ec6102
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67927781"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937263"
 ---
 # <a name="advanced-object-selection-db2tosql"></a>Расширенный выбор объектов (DB2ToSQL)
 Диалоговое окно " **Расширенный раздел объекта** " позволяет фильтровать объекты базы данных с помощью строк и подстрок в имени объекта, а затем выбирать или отменять выбор этих объектов. SSMA выполняет операции преобразования и миграции для выбранных объектов.  
@@ -25,7 +25,7 @@ ms.locfileid: "67927781"
   
 Перед использованием этого диалогового окна может потребоваться принудительно загрузить все метаданные с помощью SSMA, либо путем преобразования схем, либо путем сохранения проекта.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Параметры
 **Проверить все элементы**  
 Добавляет галочку рядом со всеми элементами. Эти элементы будут сразу же выбраны в обозревателе метаданных.  
   

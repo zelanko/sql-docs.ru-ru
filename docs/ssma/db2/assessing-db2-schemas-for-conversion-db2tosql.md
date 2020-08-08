@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 8892f5a4-72ba-4406-8649-7a9d67f4c1d9
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 506b9a32b465c9006fe4030bd6fcbb8ba4d0f136
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: b889b896a70fa43ee3909ff251a3d91125e878b8
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938337"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937473"
 ---
 # <a name="assessing-db2-schemas-for-conversion-db2tosql"></a>Оценка схем DB2 для преобразования (DB2ToSQL)
-Перед загрузкой объектов и переносом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]данных в необходимо определить, насколько сложна миграция и сколько времени займет миграция. SSMA может создать отчет об оценке, который показывает процент объектов, которые будут успешно преобразованы. SSMA также позволяет просматривать конкретные проблемы, вызывающие сбои при преобразовании.  
+Перед загрузкой объектов и переносом данных в необходимо [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определить, насколько сложна миграция и сколько времени займет миграция. SSMA может создать отчет об оценке, который показывает процент объектов, которые будут успешно преобразованы. SSMA также позволяет просматривать конкретные проблемы, вызывающие сбои при преобразовании.  
   
 ## <a name="creating-assessment-reports"></a>Создание отчетов об оценке  
 При создании этого отчета оценки SSMA преобразует выбранные объекты базы данных DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] синтаксис, а затем отображает результаты.  
@@ -34,7 +34,7 @@ ms.locfileid: "67938337"
   
     SSMA будет отображать ход выполнения в строке состояния в нижней части окна. Если область вывода видна, то сообщения также будут отображаться на панели вывода.  
   
-    После завершения оценки появится окно [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] помощник по миграции для DB2: Оценка отчета.  
+    После завершения оценки появится [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] окно Помощник по миграции для DB2: Оценка отчета.  
   
 ## <a name="using-assessment-reports"></a>Использование отчетов об оценке  
 Окно "Оценка отчета" содержит три панели:  
@@ -74,7 +74,7 @@ ms.locfileid: "67938337"
   
     -   В DB2 можно изменить объект DB2, чтобы удалить или исправить проблемный код. Чтобы загрузить обновленный код в SSMA, необходимо обновить метаданные. Дополнительные сведения см. [в разделе Подключение к базе данных DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md).  
   
-    -   Вы можете исключить объект из миграции. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обозревателе метаданных и ОБОЗРЕВАТЕЛЕ метаданных DB2 снимите флажок рядом с элементом, прежде чем загружать объекты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и переносить данные из DB2.  
+    -   Вы можете исключить объект из миграции. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обозревателе метаданных и обозревателе МЕТАДАННЫХ DB2 снимите флажок рядом с элементом, прежде чем загружать объекты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и переносить данные из DB2.  
   
 ## <a name="next-step"></a>Следующий шаг  
 [Преобразование схем DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)  

@@ -8,16 +8,16 @@ ms.suite: sql
 ms.technology: dea
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
-author: HJToland3
-ms.author: rajsell
+author: pochiraju
+ms.author: rajpo
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 36e36060e16ff85ba2b1fa58d9d900231cf6581f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a5a508a31d510d4004ece8d82c01615352739dce
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75258523"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87951219"
 ---
 # <a name="overview-of-the-workload-comparison-process"></a>Обзор процесса сравнения рабочих нагрузок
 
@@ -63,6 +63,6 @@ Database Experimentation Assistant (ДЕА) помогает оценить, к�
 - Если один или несколько компонентов отсутствуют, при попытке создать отчет об анализе (требуется подключение к Интернету) отображается страница предварительные требования со ссылками для загрузки.
 - Для просмотра отчета, созданного в более ранней версии средства, необходимо сначала обновить схему.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также статью
 
 - Сведения о создании файла трассировки с журналом событий, происходящих на сервере, см. в статье [запись трассировки в Database experimentation Assistant](database-experimentation-assistant-capture-trace.md).

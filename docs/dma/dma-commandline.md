@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 0b589d9f5bf90b78d6689ff3b37f09f15fe344b8
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: a4fdc0343d1346833fd58c4e2fa0240e1a2af668
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864921"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87950979"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Запуск Помощник по миграции данных из командной строки
 
@@ -106,7 +106,7 @@ Catalog=DatabaseName;Integrated Security=true"
 /AssessmentResultCsv="C:\\temp\\Results\\AssessmentReport.csv"
 ```
 
-**Оценка одной базы данных для целевой платформы SQL Azure база данных, сохранение результатов в JSON-и CSV-файл**
+**Оценка одной базы данных для целевой платформы база данных SQL Azure, сохранение результатов в JSON-и CSV-файл**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment" 
@@ -155,7 +155,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 
 ```
 
-**Оценка одной базы данных для целевой платформы SQL Azure база данных, сохранение результатов в JSON-и CSV-файл**
+**Оценка одной базы данных для целевой платформы база данных SQL Azure, сохранение результатов в JSON-и CSV-файл**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment" 
@@ -304,7 +304,7 @@ DmaCmd.exe
 |`/SkuRecommendationSubscriptionId` | Идентификатор подписки. | Да <br> (Для последних цен)
 |`/SkuRecommendationDatabasesToRecommend` | Список баз данных с разделителями-пробелами (например, "Database1" "Database2" "Database3"). В именах учитывается регистр, и их необходимо заключить в двойные кавычки. Если этот параметр опущен, для всех баз данных предоставляются рекомендации. | Нет
 |`/AzureAuthenticationTenantId` | Клиент проверки подлинности. | Да <br> (Для последних цен)
-|`/AzureAuthenticationClientId` | Идентификатор клиента приложения AAD, используемого для проверки подлинности. | Да <br> (Для последних цен)
+|`/AzureAuthenticationClientId` | Идентификатор клиента приложения Azure AD, используемого для проверки подлинности. | Да <br> (Для последних цен)
 |`/AzureAuthenticationInteractiveAuthentication` | Задайте значение true для всплывающего окна. | Да <br> (Для последних цен) <br>(Выберите один из трех параметров проверки подлинности — вариант 1)
 |`/AzureAuthenticationCertificateStoreLocation` | Задайте расположение хранилища сертификатов (например, "CurrentUser"). | Да <br>(Для последних цен) <br> (Выберите один из трех параметров проверки подлинности — вариант 2)
 |`/AzureAuthenticationCertificateThumbprint` | Задайте для параметра значение отпечаток сертификата. | Да <br> (Для последних цен) <br>(Выберите один из трех параметров проверки подлинности — вариант 2)
@@ -379,6 +379,6 @@ DmaCmd.exe
 /SkuRecommendationPreventPriceRefresh=true  
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также статью
 - [Помощник по миграции данных](https://aka.ms/get-dma) загрузить.
 - В этой статье [указывается правильный номер SKU базы данных SQL Azure для локальной базы данных](https://aka.ms/dma-sku-recommend-sqldb).

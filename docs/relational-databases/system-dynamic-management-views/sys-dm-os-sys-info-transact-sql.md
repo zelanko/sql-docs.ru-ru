@@ -22,12 +22,12 @@ ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b384190b6ffeee077f6658d0701f036c3f7746a
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 4ce8584d48a20f35b090b957b1455c444e5b4b83
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396848"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87928705"
 ---
 # <a name="sysdm_os_sys_info-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "87396848"
 |**scheduler_total_count**|**int**|Представляет общее число планировщиков в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Не допускает значения NULL.|  
 |**deadlock_monitor_serial_number**|**int**|Указывает идентификатор текущей последовательности монитора взаимоблокировок. Не допускает значения NULL.|  
 |**sqlserver_start_time_ms_ticks**|**bigint**|Представляет **ms_tick** номер при [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] последнем запуске. Сравнивается с текущим столбцом ms_ticks. Не допускает значения NULL.|  
-|**sqlserver_start_time**|**datetime**|Указывает дату и время последнего запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Не допускает значения NULL.|  
+|**sqlserver_start_time**|**datetime**|Указывает дату и время [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] последнего запуска локальной системы. Не допускает значения NULL.|  
 |**affinity_type**|**int**|**Применимо к**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] и выше.<br /><br /> Задает текущий используемый тип привязки процесса к процессорам. Не допускает значения NULL. Дополнительные сведения см. в разделе [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md).<br /><br /> 1 = MANUAL<br /><br /> 2 = AUTO|  
 |**affinity_type_desc**|**varchar(60)**|**Применимо к**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] и выше.<br /><br /> Описывает столбец **affinity_type** . Не допускает значения NULL.<br /><br /> MANUAL = сходство было задано хотя бы для одного ЦП.<br /><br /> AUTO = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может свободно перемещать потоки между процессорами.|  
 |**process_kernel_time_ms**|**bigint**|**Применимо к**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] и выше.<br /><br /> Общее время в миллисекундах, затраченное всеми потоками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в режиме ядра. Это значение может быть больше, чем время одного процессора, поскольку оно включает в себя время всех процессоров сервера. Не допускает значения NULL.|  
@@ -85,7 +85,7 @@ ms.locfileid: "87396848"
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
 На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [SQL Server динамические административные представления, связанные с операционной системой &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   

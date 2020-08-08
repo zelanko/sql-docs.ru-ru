@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: e11452b7-ba94-4367-a745-5ccf1764acec
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 484460c56ae043561f8f19313e6f09743ba2caed
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 4dc7bf9bf6b8f2e20fb8254a3a27ca2e293a0174
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029078"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931465"
 ---
 # <a name="global-settings-dialogs--sybasetosql"></a>Глобальные параметры (диалоговые окна) (SybaseToSQL)
 Используйте страницу диалоговые окна диалогового окна **глобальные параметры** , чтобы указать параметры действия пользователя и предупреждения по умолчанию для SSMA.  

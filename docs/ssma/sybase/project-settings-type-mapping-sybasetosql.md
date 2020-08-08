@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2698fb3a-f9e6-4e04-94e0-dad289d7ed0a
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: d7b16bdf3717fa14f91af41663cbd65365eac52a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 12002496f30d836f01d0b11f4007f63f018266e9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028659"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87930732"
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>Параметры проекта (сопоставление типов) (SybaseToSQL)
-Страница Сопоставление типов диалогового окна **Параметры проекта** содержит параметры, которые настраивают, каким способом SSMA преобразует адаптивные серверные типы данных SYBASE ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ASE) в типы данных.  
+Страница Сопоставление типов диалогового окна **Параметры проекта** содержит параметры, которые настраивают, каким способом SSMA преобразует адаптивные серверные типы данных SYBASE (ASE) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типы данных.  
   
 Страница Сопоставление типов доступна в диалоговых окнах **Параметры проекта** и **Параметры проекта по умолчанию** .  
   
@@ -47,99 +47,99 @@ ms.locfileid: "68028659"
 Нажмите, чтобы сбросить список сопоставления типов к значениям по умолчанию SSMA.  
   
 ## <a name="default-type-mapping"></a>Сопоставление типов по умолчанию  
-В следующей таблице содержится сопоставление типов по умолчанию между ASE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и типами данных.  
+В следующей таблице содержится сопоставление типов по умолчанию между ASE и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типами данных.  
   
 |Тип данных ASE|Тип данных SQL Server|  
 |-----------------|------------------------|  
 |**bigint**|**bigint**|  
 |**binary**|**binary**|  
-|**двоичный\*файл [.. 8000]**|**Binary [\*]**|  
-|**двоичный [8001.\*.]**|**varbinary(max)**|  
+|**двоичный файл [ \* .. 8000]**|**Binary [ \* ]**|  
+|**двоичный [8001.. \* ]**|**varbinary(max)**|  
 |**bit**|**bit**|  
 |**char**|**char**|  
 |**char varying**|**varchar**|  
-|**различные знаки [\*.. 8000]**|**varchar [\*]**|  
-|**изменение типа char [8001.\*.]**|**varchar(max)**|  
-|**Char [\*.. 8000]**|**Char [\*]**|  
-|**Char [8001..\*;]**|**varchar(max)**|  
+|**различные знаки [ \* .. 8000]**|**varchar [ \* ]**|  
+|**изменение типа char [8001.. \* ]**|**varchar(max)**|  
+|**Char [ \* .. 8000]**|**Char [ \* ]**|  
+|**Char [8001.. \* ;]**|**varchar(max)**|  
 |**символов**|**char**|  
 |**character varying**|**varchar**|  
-|**Разное символов\*[.. 8000]**|**varchar [\*]**|  
-|**разное начертание [8001\*..]**|**varchar(max)**|  
-|**символ [\*.. 8000]**|**Char [\*]**|  
-|**символ [8001..\*]**|**varchar(max)**|  
+|**Разное символов [ \* .. 8000]**|**varchar [ \* ]**|  
+|**разное начертание [8001.. \* ]**|**varchar(max)**|  
+|**символ [ \* .. 8000]**|**Char [ \* ]**|  
+|**символ [8001.. \* ]**|**varchar(max)**|  
 |**date**|**date**|  
 |**datetime**|**datetime2 [3]**|  
 |**уменьшение**|**decimal**|  
-|**Dec [\*.. \*]**|**Decimal [\*]**|  
-|**Dec [\*.. \*][\*.. \*]**|**Decimal [\*] [\*]**|  
+|**Dec [ \* .. \* ]**|**Decimal [ \* ]**|  
+|**Dec [ \* .. \* ] [\*..\*]**|**Decimal [ \* ] [ \* ]**|  
 |**decimal**|**decimal**|  
-|**Decimal [\*.. \*]**|**Decimal [\*]**|  
-|**Decimal [\*.. \*][\*.. \*]**|**Decimal [\*] [\*]**|  
+|**Decimal [ \* .. \* ]**|**Decimal [ \* ]**|  
+|**Decimal [ \* .. \* ] [\*..\*]**|**Decimal [ \* ] [ \* ]**|  
 |**Двойная точность**|**float [53]**|  
 |**float**|**float [53]**|  
-|**float [\*.. 15**|**float [24]**|  
-|**float [16..\*]**|**float [53]**|  
+|**float [ \* .. 15**|**float [24]**|  
+|**float [16.. \* ]**|**float [53]**|  
 |**image**|**image**|  
 |**int**|**int**|  
 |**integer**|**int**|  
 |**лонгсиснаме**|**nvarchar [255]**|  
 |**money**|**money**|  
 |**Национальный знак**|**nchar**|  
-|**Национальный знак [\*.. 4000]**|**nchar [\*]**|  
+|**Национальный знак [ \* .. 4000]**|**nchar [ \* ]**|  
 |**разные национальные знаки**|**nvarchar**|  
-|**Национальный символ [\*.. 4000]**|**nvarchar [\*]**|  
-|**Национальный символ [4001..\*]**|**nvarchar(max)**|  
-|**Национальный символ [4001..\*]**|**nvarchar(max)**|  
+|**Национальный символ [ \* .. 4000]**|**nvarchar [ \* ]**|  
+|**Национальный символ [4001.. \* ]**|**nvarchar(max)**|  
+|**Национальный символ [4001.. \* ]**|**nvarchar(max)**|  
 |**Национальный символ**|**nchar**|  
-|**Национальный символ [\*.. 4000]**|**nchar [\*]**|  
-|**Национальный символ [4001..\*]**|**nvarchar(max)**|  
+|**Национальный символ [ \* .. 4000]**|**nchar [ \* ]**|  
+|**Национальный символ [4001.. \* ]**|**nvarchar(max)**|  
 |**изменение национального алфавита**|**nvarchar**|  
-|**Национальный символ, с\*разностью [.. 4000]**|**nvarchar [\*]**|  
-|**Национальный символ, Разное [4001\*..]**|**nvarchar(max)**|  
+|**Национальный символ, с разностью [ \* .. 4000]**|**nvarchar [ \* ]**|  
+|**Национальный символ, Разное [4001.. \* ]**|**nvarchar(max)**|  
 |**Национальный varchar**|**nvarchar**|  
-|**Национальный varchar [\*.. 4000]**|**nvarchar [\*]**|  
-|**Национальный varchar [4001..\*]**|**nvarchar(max)**|  
+|**Национальный varchar [ \* .. 4000]**|**nvarchar [ \* ]**|  
+|**Национальный varchar [4001.. \* ]**|**nvarchar(max)**|  
 |**nchar**|**nchar**|  
 |**Разное изменение типа nchar**|**nvarchar**|  
-|**изменение типа nchar\*[.. 4000]**|**nvarchar [\*]**|  
-|**изменение типа nchar [4001.\*.]**|**nvarchar(max)**|  
-|**nchar [\*.. 4000]**|**nchar [\*]**|  
-|**nchar [4001..\*]**|**nvarchar(max)**|  
+|**изменение типа nchar [ \* .. 4000]**|**nvarchar [ \* ]**|  
+|**изменение типа nchar [4001.. \* ]**|**nvarchar(max)**|  
+|**nchar [ \* .. 4000]**|**nchar [ \* ]**|  
+|**nchar [4001.. \* ]**|**nvarchar(max)**|  
 |**numeric**|**numeric**|  
-|**numeric [\*.. \*]**|**numeric [\*]**|  
-|**numeric [\*.. \*][\*.. \*]**|**numeric [\*] [\*]**|  
+|**numeric [ \* .. \* ]**|**numeric [ \* ]**|  
+|**numeric [ \* .. \* ] [\*..\*]**|**numeric [ \* ] [ \* ]**|  
 |**nvarchar**|**nvarchar**|  
-|**nvarchar [\*.. 4000]**|**nvarchar [\*]**|  
-|**nvarchar [4001..\*]**|**nvarchar(max)**|  
+|**nvarchar [ \* .. 4000]**|**nvarchar [ \* ]**|  
+|**nvarchar [4001.. \* ]**|**nvarchar(max)**|  
 |**real**|**float [24]**|  
 |**smalldatetime**|**smalldatetime**|  
 |**smallint**|**smallint**|  
 |**smallmoney**|**smallmoney**|  
 |**sysname**|**nvarchar [128]**|  
-|**sysname [\*.. \*]**|**nvarchar [255]**|  
+|**sysname [ \* .. \* ]**|**nvarchar [255]**|  
 |**text**|**text**|  
 |**time**|**время [3]**|  
 |**timestamp**|**rowversion**|  
 |**tinyint**|**tinyint**|  
 |**уничар**|**nchar**|  
 |**уничар**|**nvarchar**|  
-|**уничар [\*.. 4000]**|**nvarchar [\*]**|  
-|**уничар [4001..\*]**|**nvarchar(max)**|  
-|**уничар [\*.. 4000]**|**nchar [\*]**|  
-|**уничар [4001..\*]**|**nvarchar(max)**|  
+|**уничар [ \* .. 4000]**|**nvarchar [ \* ]**|  
+|**уничар [4001.. \* ]**|**nvarchar(max)**|  
+|**уничар [ \* .. 4000]**|**nchar [ \* ]**|  
+|**уничар [4001.. \* ]**|**nvarchar(max)**|  
 |**унитекст**|**nvarchar(max)**|  
 |**униварчар**|**nvarchar**|  
-|**униварчар [\*.. 4000]**|**nvarchar [\*]**|  
-|**униварчар [4001..\*]**|**nvarchar(max)**|  
+|**униварчар [ \* .. 4000]**|**nvarchar [ \* ]**|  
+|**униварчар [4001.. \* ]**|**nvarchar(max)**|  
 |**bigint без знака**|**числовой [20] [0]**|  
 |**unsigned int**|**bigint**|  
 |**неподписанный smallint**|**int**|  
 |**неподписанный tinyint**|**tinyint**|  
 |**varbinary**|**varbinary**|  
-|**varbinary [\*.. 8000]**|**varbinary [\*]**|  
-|**varbinary [8001..\*]**|**varbinary(max)**|  
+|**varbinary [ \* .. 8000]**|**varbinary [ \* ]**|  
+|**varbinary [8001.. \* ]**|**varbinary(max)**|  
 |**varchar**|**varchar**|  
-|**varchar [\*.. 8000]**|**varchar [\*]**|  
-|**varchar [8001..\*]**|**varchar(max)**|  
+|**varchar [ \* .. 8000]**|**varchar [ \* ]**|  
+|**varchar [8001.. \* ]**|**varchar(max)**|  
   

@@ -10,17 +10,17 @@ helpviewer_keywords:
 - conversion, options described
 - Project Settings dialog box, Conversion
 ms.assetid: bcebc635-c638-4ddb-924c-b9ccfef86388
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: ff44d34e6c701c8d43260982d3117def4cb9530d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 8889e0d869960f8300194afe31fe87b7f0cf2346
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67929458"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937906"
 ---
 # <a name="project-settings-conversion-accesstosql"></a>Параметры проекта (преобразование) (Акцесстоскл)
-Параметры проекта преобразования позволяют настроить способ преобразования объектов из объектов базы данных Access в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure объектов базы данных.  
+Параметры проекта преобразования позволяют настроить способ преобразования объектов из объектов базы данных Access в или в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объекты базы данных SQL Azure.  
   
 Панель преобразования доступна в диалоговых окнах **Параметры проекта** и **Параметры проекта по умолчанию** .  
   
@@ -30,7 +30,7 @@ ms.locfileid: "67929458"
   
 ## <a name="options"></a>Параметры  
 **Добавить первичный ключ**  
-Создает новый первичный ключ в таблице [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, если таблица доступа не имеет первичного ключа или уникального индекса.  
+Создает новый первичный ключ в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблице или SQL Azure, если таблица доступа не имеет первичного ключа или уникального индекса.  
   
 -   **Режим по умолчанию**: false  
   
@@ -83,7 +83,7 @@ ms.locfileid: "67929458"
   
 -   **Полный режим**: ошибка  
   
-**Предупреждать, если сложный запрос использует подстановочный\&знак (#42;)**  
+**Предупреждать, если сложный запрос использует подстановочный знак ( \& #42;)**  
 Отображает предупреждение в области вывода и Список ошибок, если имя столбца в инструкции SELECT является подстановочным знаком (*).  
   
 -   **Режим по умолчанию**: true  

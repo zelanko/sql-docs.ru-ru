@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Migration settings
 - Project Settings dialog box, Migration
 ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 3e3d979b6f3c5943723fb5dd8f37831adfbc1305
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 973a957f3c2c758aaf83116d9cba1cc8f50a3adc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67929392"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87937771"
 ---
 # <a name="project-settings-migration-accesstosql"></a>Параметры проекта (миграция) (Акцесстоскл)
 Параметры проекта миграции позволяют настроить способ переноса данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure.  
@@ -39,7 +39,7 @@ ms.locfileid: "67929392"
 -   **Полный режим**: false  
   
 **Запускать триггеры**  
-Указывает, должен ли SSMA запускать триггеры вставки при добавлении данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в таблицы.  
+Указывает, должен ли SSMA запускать триггеры вставки при добавлении данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицы.  
   
 -   **Режим по умолчанию**: false  
   
@@ -48,7 +48,7 @@ ms.locfileid: "67929392"
 -   **Полный режим**: false  
   
 **Сохранять ИД**  
-Указывает, сохраняет ли SSMA значения идентификатора доступа при добавлении данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если это значение равно false, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] присваивает значения идентификаторов.  
+Указывает, сохраняет ли SSMA значения идентификатора доступа при добавлении данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если это значение равно false, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] присваивает значения идентификаторов.  
   
 -   **Режим по умолчанию**: true  
   
@@ -57,7 +57,7 @@ ms.locfileid: "67929392"
 -   **Полный режим**: false  
   
 **Сохранять значения NULL**  
-Указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], сохраняет ли SSMA значения NULL в исходных данных при добавлении данных в, независимо от значений по умолчанию, указанных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Указывает, сохраняет ли SSMA значения NULL в исходных данных при добавлении данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , независимо от значений по умолчанию, указанных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   **Режим по умолчанию**: true  
   
@@ -75,7 +75,7 @@ ms.locfileid: "67929392"
 -   **Полный режим**: true  
   
 **Замена неподдерживаемых дат**  
-Указывает, должна ли SSMA исправлять даты доступа, предшествующие самой ранней дате, чем дата [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и время (01 января 1753).  
+Указывает, должна ли SSMA исправлять даты доступа, предшествующие самой ранней дате, чем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Дата и время (01 января 1753).  
   
 -   Для сохранения текущих значений дат выберите **не выполнять никаких действий**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]не будет принимать даты до 01 января 1753 в столбце datetime. При использовании старых дат необходимо преобразовать значения DateTime в символьные значения.  
   

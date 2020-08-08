@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: aec09593-17d9-4ec2-ac56-3cd8851406fd
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 0c76b6b2e4e5295bf7db2d7857a73223fc6f8c7e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 4ffa47be1f35e86d09c136e5aeca6c0811630ca5
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028642"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87930596"
 ---
 # <a name="removing-ssma-for-sybase-components-sybasetosql"></a>Удаление компонентов SSMA для Sybase (SybaseToSQL)
-Когда вы завершите миграцию баз данных из Sybase адаптивного сервера предприятия ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ASE) в, может потребоваться удалить компоненты SSMA. Вы можете удалить клиентские компоненты в любое время, но не следует удалять пакет расширений, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] если не уверены, что перенесенные базы данных больше не используют функции в схеме **ssma_syb** базы данных **сисдб** .  
+Когда вы завершите миграцию баз данных из Sybase адаптивного сервера предприятия (ASE) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , может потребоваться удалить компоненты SSMA. Вы можете удалить клиентские компоненты в любое время, но не следует удалять пакет расширений, если не [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] уверены, что перенесенные базы данных больше не используют функции в схеме **ssma_syb** базы данных **сисдб** .  
   
 ## <a name="uninstalling-the-ssma-for-sybase-client"></a>Удаление SSMA для клиента Sybase  
 Удалить SSMA можно с помощью компонента " **Установка и удаление программ**".  
@@ -51,7 +51,7 @@ ms.locfileid: "68028642"
   
 7.  На странице Готово нажмите кнопку **выход**.  
   
-После удаления можно убедиться, что схема **сисдб. ssma_syb** и, возможно, вся база данных **сисдб** , была удалена с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Однако при использовании других продуктов SSMA они также используют базу данных **сисдб** . Если база данных существует и вы уверены, что другие базы данных не ссылаются на объекты в этой базе данных, можно отключить базу данных.  
+После удаления можно убедиться, что схема **сисдб. ssma_syb** и, возможно, вся база данных **сисдб** , была удалена с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Однако при использовании других продуктов SSMA они также используют базу данных **сисдб** . Если база данных существует и вы уверены, что другие базы данных не ссылаются на объекты в этой базе данных, можно отключить базу данных.  
   
 ## <a name="see-also"></a>См. также:  
 [Установка SSMA для клиента Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)  

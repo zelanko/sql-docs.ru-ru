@@ -21,18 +21,18 @@ helpviewer_keywords:
 - slow performance
 - unlinking tables
 ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
-author: Shamikg
-ms.author: Shamikg
-manager: murato
-ms.openlocfilehash: aadb041b3b9005d0e593e97974090250129ed33d
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+author: nahk-ivanov
+ms.author: alexiva
+manager: alexiva
+ms.openlocfilehash: d19ed1ddfa2c64b653c02d887b9605ea132ae1bc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823855"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87938481"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-database-accesstosql"></a>Связывание приложений Access с SQL Server в базе данных SQL Azure (Акцесстоскл)
-Если вы хотите использовать существующие приложения Access с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , можно связать исходные таблицы Access с перенесенными [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure таблицами. Связывание изменяет базу данных Access таким образом, чтобы запросы, формы, отчеты и страницы доступа к данным использовали данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базе данных или SQL Azure, а не данные в базе данных Access.  
+Если вы хотите использовать существующие приложения Access с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , можно связать исходные таблицы Access с перенесенными [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure таблицами. Связывание изменяет базу данных Access таким образом, чтобы ваши запросы, формы, отчеты и страницы доступа к данным использовали данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базе данных SQL Azure, а не данные в базе данных Access.  
   
 > [!NOTE]  
 > Таблицы Access остаются в доступе, но не обновляются вместе с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure обновлениями. После связывания таблиц и проверки функциональности может потребоваться удалить таблицы Access.  
@@ -154,6 +154,6 @@ Recordset.LastModified
   
 **Решение:** Можно определить запрос доступа, возвращающий только строки с поддерживаемыми типами данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
 [Миграция баз данных Access в SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a9b05b11fcf3110b9f51d1f9cb44fdabb4a3ba36
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 760fcc2212991f0841f4ded3dd2932e551c26060
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728455"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87948455"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>Наблюдение и устранение неполадок в управляемых объектах базы данных
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -28,9 +28,9 @@ ms.locfileid: "85728455"
 ## <a name="profiler-trace-events"></a>События трассировки профайлера  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет приложение трассировки SQL и уведомления о событиях для мониторинга событий компонента Database Engine. Записывая указанные события, приложение трассировки SQL помогает диагностировать проблемы производительности, проводить аудит активности базы данных, собирать образцы данных для тестовой среды, отлаживать инструкции и хранимые процедуры [!INCLUDE[tsql](../../includes/tsql-md.md)] и собирать данные для инструментов анализа производительности. Дополнительные сведения см. в разделе [SQL Trace](../../relational-databases/sql-trace/sql-trace.md) и [Расширенные события](../../relational-databases/extended-events/extended-events.md).  
   
-|событие|Описание|  
+|Событие|Описание|  
 |-----------|-----------------|  
-|[Класс событий Assembly Load](/sql/database-engine/assembly-load-event-class)|Используется для наблюдения за запросами на загрузку сборок (успех или неудача).|  
+|[Класс событий Assembly Load](https://docs.microsoft.com/sql/relational-databases/event-classes/sql-server-event-class-reference)|Используется для наблюдения за запросами на загрузку сборок (успех или неудача).|  
 |[SQL: BatchStarting](../../relational-databases/event-classes/sql-batchstarting-event-class.md), класс событий [SQL: BatchCompleted](../../relational-databases/event-classes/sql-batchcompleted-event-class.md)|Предоставляет сведения о пакетах [!INCLUDE[tsql](../../includes/tsql-md.md)], которые начали или завершили работу.|  
 |Класс событий [SP: Starting](../../relational-databases/event-classes/sp-starting-event-class.md), [SP: Completed](../../relational-databases/event-classes/sp-completed-event-class.md)|Используется для наблюдения за выполнением хранимых процедур [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |[SQL: StmtStarting](../../relational-databases/event-classes/sql-stmtstarting-event-class.md), класс событий [SQL: StmtCompleted](../../relational-databases/event-classes/sql-stmtcompleted-event-class.md)|Используется для наблюдения за выполнением процедур [!INCLUDE[tsql](../../includes/tsql-md.md)] и среды CLR.|  
@@ -84,7 +84,7 @@ ms.locfileid: "85728455"
 |[sys.dm_exec_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|Возвращает сведения о каждом из запросов, выполняющихся в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[sys. dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)|Возвращает все клерки памяти, активные в настоящее время в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в том числе клерки памяти CLR.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основные понятия о программировании интеграции со средой (CLR)](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
   

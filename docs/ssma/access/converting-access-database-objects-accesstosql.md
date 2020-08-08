@@ -28,17 +28,17 @@ helpviewer_keywords:
 - translating Access to SQL Azure
 - translating Access to SQL Server
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: f15fc6cee7f66128af7646b9605234e60830b8db
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 6109f523cce37e64bd13ccf9bf783b07a26fe94e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84302809"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87939152"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Преобразование объектов базы данных Access (Акцесстоскл)
-После добавления баз данных Access и подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure SSMA отображает метаданные для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объектов базы данных access и SQL Azure. Теперь можно выбрать доступ к объектам базы данных, а затем преобразовать схемы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure схемы.  
+После добавления баз данных Access и подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure SSMA отображает метаданные для Access и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объектов базы данных SQL Azure. Теперь можно выбрать доступ к объектам базы данных, а затем преобразовать схемы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure схемы.  
   
 ## <a name="the-conversion-process"></a>Процесс преобразования  
 Преобразование объектов базы данных принимает определения объектов из метаданных доступа, преобразует их в эквивалентный [!INCLUDE[tsql](../../includes/tsql-md.md)] синтаксис, а затем загружает эту информацию в проект. Затем можно просмотреть [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure объекты и их свойства с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure обозревателе метаданных.  
@@ -57,10 +57,10 @@ ms.locfileid: "84302809"
 |Доступ к объекту|Результирующий объект SQL Server|  
 |-----------------|-------------------------------|  
 |table|table|  
-|гистограмма|гистограмма|  
+|столбец|столбец|  
 |индекс|индекс|  
 |внешний ключ|внешний ключ|  
-|query|представление<br /><br />Большинство запросов SELECT преобразуются в представления. Другие запросы, например запросы на обновление, не переносятся.<br /><br />Запросы SELECT, которые принимают параметры, не преобразовываются и не являются запросами перекрестных вкладок.|  
+|query|view<br /><br />Большинство запросов SELECT преобразуются в представления. Другие запросы, например запросы на обновление, не переносятся.<br /><br />Запросы SELECT, которые принимают параметры, не преобразовываются и не являются запросами перекрестных вкладок.|  
 |отчет|не преобразовано|  
 |форма|не преобразовано|  
 |макрос|не преобразовано|  
@@ -88,7 +88,7 @@ ms.locfileid: "84302809"
   
     -   Чтобы преобразовать или исключить отдельные таблицы, разверните базу данных, разверните узел **таблицы**, а затем установите или снимите флажок рядом с таблицей.  
   
-3.  Выполните одно из следующих действий.  
+3.  Используйте один из следующих вариантов:  
   
     -   Чтобы преобразовать схемы, щелкните правой кнопкой мыши **базы данных** и выберите команду **преобразовать схему**.  
   
@@ -111,11 +111,11 @@ ms.locfileid: "84302809"
   
     Переместить курсор за пределы измененной ячейки свойства. Это можно сделать, щелкнув другую строку или нажав клавишу TAB.  
   
-3.  Нажмите кнопку **Применить**.  
+3.  Щелкните **Применить**.  
   
 Теперь можно просмотреть изменения в коде на вкладке **SQL** .  
   
-## <a name="next-step"></a>Следующий шаг  
+## <a name="next-steps"></a>Дальнейшие действия  
 Следующим шагом процесса миграции является [Загрузка преобразованных объектов базы данных в SQL Server](loading-converted-database-objects-into-sql-server-accesstosql.md)  
   
 ## <a name="see-also"></a>См. также:  

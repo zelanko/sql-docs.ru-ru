@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 82f8857f-7ab1-4738-ab6e-b1e95ea94924
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: baa268431f9741e3dfe016476abdf051f8f54a09
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: 5e8a8f9c88537d0dc807efe7baf387ea917468d3
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028712"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87930871"
 ---
 # <a name="project-settings-migration-sybasetosql"></a>Параметры проекта (миграция) (SybaseToSQL)
-Страница миграция диалогового окна **Параметры проекта** содержит параметры, которые позволяют настроить SSMA миграцию данных из Sybase адаптивного сервера Enterprise (ASE) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в.  
+Страница миграция диалогового окна **Параметры проекта** содержит параметры, которые позволяют настроить SSMA миграцию данных из Sybase адаптивного сервера Enterprise (ASE) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 Панель миграция доступна в диалоговых окнах **Параметры проекта** и **Параметры проекта по умолчанию** .  
   

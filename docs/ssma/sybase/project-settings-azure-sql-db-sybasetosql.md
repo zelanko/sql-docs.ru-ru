@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 57002374-0d4d-43c1-b4e9-cbec02355a9c
-author: Shamikg
-ms.author: Shamikg
-ms.openlocfilehash: 0348d548d21ea9b593aa7fe4aa14986607ba76fb
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+author: nahk-ivanov
+ms.author: alexiva
+ms.openlocfilehash: b79d4e94126676e128d803176463b314348ed8a1
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863446"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87930925"
 ---
 # <a name="project-settings-azure-sql-database--sybasetosql"></a>Параметры проекта (база данных SQL Azure) (SybaseToSQL)
 Параметры проекта базы данных SQL Azure позволяют настроить суффикс базы данных SQL Azure, который будет добавлен в диалоговое окно подключения, а также разрешить использование механизма пульса в подключении к базе данных SQL Azure.  
@@ -25,7 +25,7 @@ ms.locfileid: "87863446"
   
 -   Используйте диалоговое окно Параметры проекта по умолчанию, чтобы задать параметры конфигурации для всех проектов. Чтобы получить доступ к параметрам базы данных SQL Azure, в меню **Сервис** выберите **Параметры Дефаултпрожект**, щелкните **Общие** в нижней части левой панели, а затем выберите **база данных SQL Azure**.  
   
-## <a name="connectivity"></a>Подключение  
+## <a name="connectivity"></a>Соединение  
 **Интервал пульса**  
   
 Указывает интервал времени, который будет использоваться для механизма пульса, чтобы обеспечить активность подключения к базе данных SQL Azure в формате "минуты: секунды".  
