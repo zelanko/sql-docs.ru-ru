@@ -85,12 +85,12 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 78d413af670dd62d3eb761babf1e0df846117c14
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 190f757b7c9849866788646fe3288086d73f8811
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892346"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934393"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Установка SQL Server из командной строки
 
@@ -883,7 +883,7 @@ setup.exe /q /ACTION=RemoveNode /INSTANCENAME="<Insert Instance Name>" [/INDICAT
 |/FEATURES=SQLEngine,PolyBase|Устанавливает обработчик PolyBase.|  
   
 ##  <a name="role-parameters"></a><a name="RoleParameters"></a> Параметры роли  
- Роль установки или параметр /Role позволяет устанавливать стандартный набор компонентов. Роли SSAS устанавливают экземпляр служб SSAS в существующей ферме SharePoint либо в новой ненастроенной ферме. Каждый сценарий поддерживается двумя ролями установки. Одновременно может быть выбрана только одна роль установки. При выборе роли программа установки устанавливает функции и компоненты, которые принадлежат роли. Указанные для роли компоненты могут быть изменены. Дополнительные сведения об использовании параметра роли функций см. в разделе [Установка Power Pivot из командной строки](https://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328). 
+ Роль установки или параметр /Role позволяет устанавливать стандартный набор компонентов. Роли SSAS устанавливают экземпляр служб SSAS в существующей ферме SharePoint либо в новой ненастроенной ферме. Каждый сценарий поддерживается двумя ролями установки. Одновременно может быть выбрана только одна роль установки. При выборе роли программа установки устанавливает функции и компоненты, которые принадлежат роли. Указанные для роли компоненты могут быть изменены. Дополнительные сведения об использовании параметра роли функций см. в разделе [Установка Power Pivot из командной строки](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode). 
   
  Роль AllFeatures_WithDefaults действует по умолчанию для выпусков [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] и позволяет сократить количество диалоговых окон, показываемых пользователю. Она может быть указана из командной строки при установке выпуска SQL Server, не являющегося [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. 
   

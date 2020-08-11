@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 6d578ee456d2ddd9531af307e2106f4a12dbbece
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 81d876df75fd096b897f13322bb76f90fffa5cad
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411350"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87947842"
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>Центр производительности для базы данных Azure SQL и SQL Server Database Engine
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "87411350"
  [Руководство по архитектуре страниц и экстентов](../../relational-databases/pages-and-extents-architecture-guide.md)  
  [Руководство по оптимизации и проверке после миграции](../../relational-databases/post-migration-validation-and-optimization-guide.md)  
  [Руководство по архитектуре обработки запросов](../../relational-databases/query-processing-architecture-guide.md)  
- [Руководство по блокировке транзакций и управлению версиями строк SQL Server](https://msdn.microsoft.com/library/jj856598)  
+ [Руководство по блокировке транзакций и управлению версиями строк SQL Server](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)  
  [Руководство по архитектуре журнала транзакций SQL Server и управлению им](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)  
  [Руководство по архитектуре потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md) 
   

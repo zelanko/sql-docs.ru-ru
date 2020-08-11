@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: ff4ab76193c13b03fbd4d7fab05cbf212d1aae4b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b6964ee33ecbd52f538a60446c72d66bcde9927d
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247626"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934407"
 ---
 # <a name="query-processing-architecture-guide"></a>Руководство по архитектуре обработки запросов
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -147,7 +147,7 @@ GO
 - Арифметические выражения, такие как 1+1, 5/3*2, которые содержат только константы.
 - Логические выражения, такие как 1=1, 1>2 и 3>4, которые содержат только константы.
 - Встроенные функции, которые считаются сворачиваемыми [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], включая `CAST` и `CONVERT`. Обычно внутренняя функция является свертываемой, если это функция только своих входных данных, а не контекстуальных данных, таких как параметры SET, настройки языка, параметры базы данных, ключи шифрования. Недетерминированные функции не являются свертываемыми. Детерминированные встроенные функции являются свертываемыми за некоторыми исключениями.
-- Детерминированные методы определяемых пользователем типов данных CLR и детерминированные скалярные определяемые пользователем функции CLR (начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]). Дополнительные сведения см. в разделе [Свертка констант для определяемых пользователем функций и методов среды CLR](https://docs.microsoft.com/sql/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods).
+- Детерминированные методы определяемых пользователем типов данных CLR и детерминированные скалярные определяемые пользователем функции CLR (начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]). Дополнительные сведения см. в разделе [Свертка констант для определяемых пользователем функций и методов среды CLR](https://docs.microsoft.com/sql/database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15?view=sql-server-ver15).
 
 > [!NOTE] 
 > Исключение делается для типов больших объектов. Если в процессе свертки для выходных данных используется тип больших объектов (text, ntext, image, nvarchar(max), varchar(max), varbinary(max) или XML), то [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] не свертывает такое выражение.

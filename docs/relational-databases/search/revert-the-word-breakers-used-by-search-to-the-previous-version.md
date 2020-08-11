@@ -11,12 +11,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a24ea6315575233d1f3fb052334d2a1edb66c05e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4ea742a7dfd4db224e55765ff74bb67c4616f9bc
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629212"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934333"
 ---
 # <a name="revert-word-breakers-used-by-search-to-previous-version-sql-server-search"></a>Восстановление предыдущих версий средств разбиения текста на слова, используемых поиском (поиск SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -380,5 +380,5 @@ ms.locfileid: "85629212"
   
 ## <a name="see-also"></a>См. также:  
  [Изменение средства разбиения по словам, используемого для английского (США) и английского (Британского)](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
- [Изменения в функциях полнотекстового поиска](/sql/database-engine/behavior-changes-to-full-text-search)
+ [Изменения в функциях полнотекстового поиска](https://docs.microsoft.com/sql/relational-databases/search/full-text-search?view=sql-server-ver15)
  

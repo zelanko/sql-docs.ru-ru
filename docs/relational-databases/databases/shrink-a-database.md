@@ -20,12 +20,12 @@ ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5cacfade7921a099d618704b3145f5de2acd2b73
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5761ee136c23cd82296f154e7e87d4756410c55a
+ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715511"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87807517"
 ---
 # <a name="shrink-a-database"></a>Сжатие базы данных
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,9 +57,7 @@ ms.locfileid: "85715511"
   
 -   Размер базы данных нельзя сделать меньше минимального размера базы данных. Минимальный размер — это первоначальный размер, заданный при создании базы данных, или последний размер, явно установленный операцией изменения размера файла (например, DBCC SHRINKFILE). Если, допустим, база данных была создана с размером 10 МБ и затем увеличилась до 100 МБ, ее можно сжать только до 10 МБ, даже если удалить из нее все данные.  
   
--   Невозможно сжать базу данных во время создания ее резервной копии. И наоборот, нельзя создать резервную копию базы данных во время операции сжатия.  
-  
--   Инструкция DBCC SHRINKDATABASE завершится с ошибкой при обнаружении оптимизированного для памяти xVelocity индекса columnstore. Работа, выполненная до встречи с индексом columnstore, будет выполнена успешно, поэтому база данных может иметь меньший размер. Чтобы выполнить инструкцию DBCC SHRINKDATABASE, отключите все индексы columnstore до ее запуска, а затем перестройте индексы columnstore.  
+-   Невозможно сжать базу данных во время создания ее резервной копии. И наоборот, нельзя создать резервную копию базы данных во время операции сжатия.
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> Рекомендации  
   

@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: b4c7a5eb3f76cfa3366c7cc961ba6c5e36961f95
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f6aef5ff65ee10c01cecd012eb1f35d5b2aab136
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915294"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823799"
 ---
 # <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Планирование выполнения пакетов служб SQL Server Integration Services (SSIS), развернутых в Azure
 
@@ -113,7 +113,7 @@ EXECÂ jobs.sp_update_jobÂ @job_name='ExecutePackageJob',Â @enabled=1,Â 
 2.  **Настройка учетных данных связанного сервера**
 
     ```sql
-    -- Add your Azure SQL DB server admin credentials
+    -- Add your Azure SQL Database server admin credentials
     EXEC sp_addlinkedsrvlogin
         @rmtsrvname = 'myLinkedServer',
         @useself = 'false',

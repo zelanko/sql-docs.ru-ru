@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1cba83176d921846f1eac55ef84a70eebd5af42a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 829d60517864d9df7f8019a92e00664c1a1337ea
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733838"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87943781"
 ---
 # <a name="data-collection"></a>Сбор данных
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "85733838"
   
  Сборщик данных позволяет задавать область сбора данных в соответствии с требованиями тестовой и рабочей сред. Сборщик данных также использует хранилище данных, реляционную базу данных, которая предоставляет возможность управлять собираемыми данными, задавая различные сроки их хранения.  
   
- Сборщик данных поддерживает динамическую настройку сбора данных и его возможности можно расширить посредством API-интерфейса сборщика данных. Дополнительные сведения см. в статье [Data Collector Programming](https://msdn.microsoft.com/library/53b4752b-055d-4716-b2bc-75b4cce84101).  
+ Сборщик данных поддерживает динамическую настройку сбора данных и его возможности можно расширить посредством API-интерфейса сборщика данных. Дополнительные сведения см. в статье [Data Collector Programming](https://docs.microsoft.com/sql/relational-databases/system-functions/data-collector-functions-transact-sql).  
   
  Роль сборщика данных в общей стратегии сбора и управления данными в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]показана на следующем рисунке.  
   

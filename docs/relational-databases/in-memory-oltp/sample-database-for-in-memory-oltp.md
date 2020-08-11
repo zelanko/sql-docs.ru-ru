@@ -12,12 +12,12 @@ ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4eaa35280b4f469f6fcf49fe9d73f4b33bfda672
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 2cc94e5f36b6c36ed44185c47356f67efb8729fe
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245213"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87947648"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Пример базы данных для выполняющейся в памяти OLTP
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "87245213"
  Этот пример демонстрирует возможности выполняющейся в памяти OLTP. Он показывает оптимизированные для памяти таблицы и скомпилированные в собственном коде хранимые процедуры. С его помощью можно также продемонстрировать преимущества выполняющейся в памяти OLTP.  
   
 > [!NOTE]  
->  Этот раздел о [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]можно найти в статье [Расширения AdventureWorks для демонстрации выполняющейся в памяти OLTP](https://msdn.microsoft.com/library/dn511655\(v=sql.120\).aspx).  
+>  Этот раздел о [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]можно найти в статье [Расширения AdventureWorks для демонстрации выполняющейся в памяти OLTP](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/overview-and-usage-scenarios?view=sql-server-ver15#in-memory-oltp-overview).  
   
  Пример выполняет преобразование 5 таблиц в базе данных AdventureWorks в оптимизированные для памяти таблицы. В нем также есть демонстрационная рабочая нагрузка в форме обработки заказа на продажу. С помощью этой демонстрационной рабочей нагрузки можно оценить выигрыш по производительности, который формируется при использовании выполняющейся в памяти OLTP на сервере.  
   
@@ -183,12 +183,11 @@ ms.locfileid: "87245213"
   
  Для дальнейшей оптимизации рабочей нагрузки можно использовать индексы HASH. Они особенно хорошо подходят для уточняющих запросов и вставки строк. Однако следует учитывать, что они не поддерживают просмотр диапазонов, упорядоченный просмотр или поиск в начальных столбцах ключа индекса. Поэтому при использовании этих индексов требуется соблюдать осторожность. Кроме того, при создании необходимо указать параметр bucket_count. Обычно его значение должно быть в 1–2 раза больше числа значение ключей индекса, однако переоценка редко создает проблему.  
   
-Дополнительные указания по [работе с индексами](https://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx), а также указания по [выбору правильного значения bucket_count](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx) см. в электронной документации.  
+Дополнительные указания по [работе с индексами](https://docs.microsoft.com/sql/relational-databases/indexes/guidelines-for-online-index-operations), а также указания по [выбору правильного значения bucket_count](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx) см. в электронной документации.  
 
 
 В электронной документации содержатся дополнительные сведения о следующих разделах:
-- [Рекомендации по индексам](https://docs.microsoft.com/sql/database-engine/guidelines-for-using-indexes-on-memory-optimized-tables) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn133166 -->
-- [Выбор правильного значения bucket_count](https://docs.microsoft.com/sql/database-engine/determining-the-correct-bucket-count-for-hash-indexes) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn494956 -->
+- [Рекомендации по индексам](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn133166 -->
 
  Индексы в перенесенных таблицах настроены для выполнения демонстрационной рабочей нагрузки по обработке заказов на продажу. Рабочая нагрузка состоит из операций вставки и уточняющих запросов, которые выполняются в таблицах Sales.SalesOrderHeader_inmem и Sales.SalesOrderDetail_inmem, а также операций уточняющих запросов, которые выполняются в столбцах первичного ключа из таблиц Production.Product_inmem и Sales.SpecialOffer_inmem.  
   
@@ -276,7 +275,7 @@ ms.locfileid: "87245213"
   
     -   Обновляет сведения о доставке для данного заказа на продажу. Также обновляются сведения о доставке для всех линейных элементов заказа на продажу.  
   
-    -   Это процедура-оболочка для скомпилированных в собственном коде хранимых процедур Sales.usp_UpdateSalesOrderShipInfo_native, содержащих логику повтора для обработки (непредвиденных) возможных конфликтов, возникающих при обновлении одного заказа выполняющимися одновременно транзакциями. Дополнительные сведения о логике повтора см. в [этом разделе электронной документации](https://technet.microsoft.com/library/dn169141\(v=sql.120\).aspx).  
+    -   Это процедура-оболочка для скомпилированных в собственном коде хранимых процедур Sales.usp_UpdateSalesOrderShipInfo_native, содержащих логику повтора для обработки (непредвиденных) возможных конфликтов, возникающих при обновлении одного заказа выполняющимися одновременно транзакциями. Дополнительные сведения о логике повтора см. в [этом разделе электронной документации](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables).  
   
 -   Sales.usp_UpdateSalesOrderShipInfo_native  
   
