@@ -20,16 +20,16 @@ ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a9346aa6dbf98bbc827b90423f02b5027481f956
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 35f9272b3b11e5c29fe0e2f9068ad458bd5becfa
+ms.sourcegitcommit: 95be98587f6a3730ca75a77676dd952c45e4f53a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196512"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88046892"
 ---
 # <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 Возвращает гистограмму статистики для указанного объекта базы данных (таблицы или индексированного представления) в текущей [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базе данных. Аналогично `DBCC SHOW_STATISTICS WITH HISTOGRAM`.
 
@@ -84,7 +84,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
 -   Закрашенная область слева от *range_high_key* обозначает диапазон значений столбца и среднее количество вхождений каждого значения столбца (*average_range_rows*). В первом шаге гистограммы значение *average_range_rows* всегда равно 0.  
   
--   Пунктирные линии обозначают выборку значений, используемых для оценки общего числа различных значений в диапазоне (*DISTINCT_RANGE_ROWS*) и общего количества значений в диапазоне (*RANGE_ROWS*). Оптимизатор запросов использует *range_rows* и *distinct_range_rows* для вычисления *average_range_rows* и не хранит выбранные значения.  
+-   Пунктирные линии обозначают выбранные значения, которые используются для оценки общего числа различающихся значений (*distinct_range_rows*) и общего числа значений в диапазоне (*range_rows*). Оптимизатор запросов использует *range_rows* и *distinct_range_rows* для вычисления *average_range_rows* и не хранит выбранные значения.  
   
  Оптимизатор запросов определяет шаги гистограммы согласно их статистической значимости. Он использует алгоритм максимальной разности для сведения к минимуму числа шагов в гистограмме и вместе с тем максимального увеличения разницы между граничными значениями. Максимальное число шагов — 200. Число шагов гистограммы может быть меньше, чем количество различающихся значений, даже для столбцов, в которых число граничных точек меньше 200. Например, столбец со 100 различающимися значениями может иметь гистограмму, число граничных точек в которой меньше 100.  
   
@@ -145,7 +145,7 @@ WHERE ss.[object_id] = OBJECT_ID('Country')
     AND sh.range_high_key = CAST('Canada' AS CHAR(8));
 ```
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
 [Динамические административные представления и функции, связанные с объектом (Transact-SQL)](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)  
 [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  
