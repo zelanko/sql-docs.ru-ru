@@ -1,5 +1,6 @@
 ---
 title: Пользовательский интерфейс конструктора DMX-запросов служб Analysis Services | Документы Майкрософт
+description: Узнайте о графических конструкторах запросов Reporting Services для создания DMX-запросов.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5fd726a4-aed7-4e6c-9404-ccb2db66cf26
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 42313894264979caf49ccbbe54d25b91261a8a10
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4b5ec7c356cef924749ae4ea9a1f6519cd983099
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573579"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812139"
 ---
 # <a name="analysis-services-dmx-query-designer-user-interface"></a>Пользовательский интерфейс конструктора DMX-запросов служб Analysis Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют графические конструкторы запросов для построения DMX-запросов и запросов многомерных выражений из источника данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . В этом разделе описан конструктор DMX-запросов. Дополнительные сведения о конструкторе запросов многомерных выражений см. в разделе [Analysis Services MDX Query Designer User Interface](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md).  
@@ -30,7 +31,7 @@ ms.locfileid: "65573579"
 ## <a name="graphical-dmx-query-designer-toolbar"></a>Панель инструментов графического конструктора DMX-запросов  
  На панели инструментов графического конструктора расположены кнопки, помогающие проектировать DMX-запросы с помощью графического интерфейса. В следующей таблице перечислены кнопки и описаны их функции.  
   
-|Кнопка|Description|  
+|Кнопка|Описание|  
 |------------|-----------------|  
 |**Редактировать как текст**|Отключена для этого типа источника данных.|  
 |**Импорт**|Импортировать существующий запрос из файла определения отчета (RDL), расположенного в файловой системе. Дополнительные сведения см. в разделе [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  

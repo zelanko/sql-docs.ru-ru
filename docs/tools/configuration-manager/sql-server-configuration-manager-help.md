@@ -1,5 +1,6 @@
 ---
 title: Справка диспетчера конфигурации SQL Server
+description: Ознакомьтесь с диспетчером конфигурации SQL Server. Узнайте, как использовать его для управления службами SQL Server и настройки сетевого подключения.
 ms.custom: seo-lt-2019
 ms.date: 02/01/2018
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: 6e909911-39a6-469b-b22a-3afdfd08a30b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8ade0d0e0944b01005866fc5c38e50ce45fae0fd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 02926be4321c3f423f33c9b10b810009e65e2731
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306953"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895056"
 ---
 # <a name="sql-server-configuration-manager-help"></a>Справка диспетчера конфигурации SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Используйте диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы настроить службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и сетевые соединения. Для создания и управления объектами базы данных, настройки безопасности и создания запросов [!INCLUDE[tsql](../../includes/tsql-md.md)] используйте среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения о среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]см. в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
  > [!TIP]
@@ -55,7 +56,7 @@ ms.locfileid: "75306953"
 -   настройка сетевого протокола [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  Краткий учебник о настройке протоколов и подключении к компоненту [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]см. в разделе [Учебник. Приступая к работе с компонентом Database Engine](../../relational-databases/tutorial-getting-started-with-the-database-engine.md).  
+>  Краткие инструкции по настройке протоколов и подключению к компоненту [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] см. в руководстве [по началу работы с ядром СУБД](../../relational-databases/tutorial-getting-started-with-the-database-engine.md).  
   
 ## <a name="sql-server-native-client-configuration"></a>Конфигурация собственного клиента SQL Server  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подключаются к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при помощи сетевой библиотеки собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Используйте диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для следующих задач, относящихся к клиентским приложениям на этом компьютере:  

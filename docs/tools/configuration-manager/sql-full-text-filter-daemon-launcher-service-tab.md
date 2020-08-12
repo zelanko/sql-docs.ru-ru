@@ -1,5 +1,6 @@
 ---
 title: Средство запуска управляющей программы полнотекстовой фильтрации SQL (вкладка «Служба»)
+description: Сведения о средстве SQL Full-text Filter Daemon Launcher, используемом для полнотекстового поиска SQL Server. Сведения о вкладке "Служба" диалогового окна свойств.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 6aad7ebe-c4be-4d37-8536-61502f51faa2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 72e85b49f70a93a633ad8ef2eeeecd526e59e97a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c2ac97396017a5ef2d4e772049bbaa17ed72f1ec
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306737"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881889"
 ---
 # <a name="sql-full-text-filter-daemon-launcher-service-tab"></a>Средство запуска управляющей программы полнотекстовой фильтрации SQL (вкладка «Служба»)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Начиная с версии [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], в полнотекстовом поиске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется средство запуска управляющей программы полнотекстовой фильтрации SQL (средство запуска FDHOST). Эта служба должна быть запущена при использовании полнотекстового поиска. Сведения о хост-процессах управляющей программы фильтрации см. в разделе «Архитектура компонента Full-Text Search» электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Используйте вкладку **Служба**в диалоговом окне **Свойства запуска управляющей программы полнотекстовой фильтрации (SQL)** , чтобы просмотреть или указать следующие параметры.  
@@ -37,7 +38,7 @@ ms.locfileid: "75306737"
  **Host Name**  
  Отображает имя компьютера или кластера, где запущена служба [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **Название**  
+ **имя**;  
  Указывает отображаемое имя службы.  
   
  **Идентификатор процесса**  
@@ -49,9 +50,9 @@ ms.locfileid: "75306737"
  **Режим запуска**  
  Установите для этой службы один из следующих вариантов:  
   
--   Вручную. Эта служба не запускается автоматически при запуске компьютера. Необходимо запустить службу при помощи диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или другого средства.  
+-   Вручную: Эта служба не запускается автоматически при запуске компьютера. Необходимо запустить службу при помощи диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или другого средства.  
   
--   Автоматически. Эта служба пытается запуститься при запуске компьютера.  
+-   Автоматически. Выполняется попытка запуска службы при запуске компьютера.  
   
 -   Отключено. Служба не может быть запущена.  
   

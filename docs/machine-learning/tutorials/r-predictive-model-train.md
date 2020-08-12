@@ -8,19 +8,18 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4d168b32b85e4d0bbf42e166e175d9951de4dd31
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 2b57a54c66259fe16c3143e0328476279a1aea01
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607007"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748500"
 ---
 # <a name="tutorial-create-a-predictive-model-in-r-with-sql-machine-learning"></a>Руководство по созданию прогнозной модели в R с помощью машинного обучения SQL
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 В третьей части этого цикла учебников, состоящего из четырех частей, вы обучите прогнозную модель на языке R. В следующей части цикла вы развернете эту модель в базе данных SQL Server с помощью Служб машинного обучения или в Кластерах больших данных.
@@ -29,7 +28,10 @@ ms.locfileid: "83607007"
 В третьей части этого цикла учебников, состоящего из четырех частей, вы обучите прогнозную модель на языке R. В следующей части цикла вы развернете эту модель в базе данных SQL Server с помощью Служб машинного обучения.
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-В третьей части этого цикла учебников, состоящего из четырех частей, вы обучите прогнозную модель на языке R. В следующей части цикла вы развернете эту модель в базе данных SQL Server с помощью служб SQL Server R Services.
+В третьей части этого цикла учебников, состоящего из четырех частей, вы обучите прогнозную модель на языке R. В следующей части цикла вы развернете эту модель в базе данных с помощью служб SQL Server R Services.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+В третьей части этого цикла учебников, состоящего из четырех частей, вы обучите прогнозную модель на языке R. В следующей части цикла вы развернете эту модель в базе данных Управляемого экземпляра SQL Azure с помощью Служб машинного обучения.
 ::: moniker-end
 
 В этой статье вы узнаете, как выполнять следующие задачи.
@@ -67,6 +69,7 @@ actual_counts <- test_data$RentalCount;
 model_lm <- lm(RentalCount ~  Month + Day + WeekDay + Snow + Holiday, data = train_data);
 
 #Model 2: Use rpart to create a decision tree model, trained with the training data set
+library(rpart);
 model_rpart  <- rpart(RentalCount ~ Month + Day + WeekDay + Snow + Holiday, data = train_data);
 ```
 

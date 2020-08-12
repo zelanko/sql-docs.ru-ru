@@ -1,6 +1,6 @@
 ---
 title: Обновление экземпляра отказоустойчивого кластера
-description: Сведения о процедуре обновления экземпляра отказоустойчивого кластера SQL Server с использованием установочного носителя.
+description: Сведения об обновлении экземпляра отказоустойчивого кластера SQL Server с использованием установочного носителя. Сведения о последовательном обновлении и обновлении кластера с несколькими подсетями.
 ms.custom: seo-lt-2019
 ms.date: 11/21/2019
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 24607a6372ba733165aa12fd159baea10f80ebd4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 43447d1fbba7ceb9a1c3faa79443f6304e8e6015
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74822027"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85858583"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance"></a>Обновление экземпляра отказоустойчивого кластера SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает обновление отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] при установке новой версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], нового пакета обновления [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]или накопительного пакета обновления, а также при установке нового пакета обновлений Windows или накопительного пакета обновлений Windows отдельно на все отказоустойчивые кластеры. Это позволяет сократить время простоя до одной операции перехода на другой ресурс вручную (или двух таких операций, если нужно перейти на исходную первичную реплику).  
   
  Обновление операционной системы Windows, в которой размещен отказоустойчивый кластер, не поддерживается для операционных систем, предшествующих [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)]. Сведения об обновлении узла кластера под управлением [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)] или более поздней версии см. в разделе [Выполнение последовательного обновления](#perform-a-rolling-upgrade-or-update).  
@@ -43,16 +43,16 @@ ms.locfileid: "74822027"
   
 -   При обновлении отказоустойчивого кластера время простоя ограничивается временем отработки отказа и временем, необходимым для обновления запускаемых скриптов. При соблюдении процесса последовательного обновления, описанного ниже, и выполнении всех предварительных условий для всех узлов до начала процедуры обновления время простоя сводится к минимуму. Обновление [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] при использовании оптимизированных для памяти таблиц займет немного больше времени. Дополнительные сведения см. в разделе [Составление и тестирование плана обновления ядра СУБД](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Перед установкой ознакомьтесь со следующими важными сведениями.  
   
--   [Обновления поддерживаемых версий и выпусков](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md). Убедитесь, что текущая версия операционной системы Windows позволяет обновить текущую версию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] до версии [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Например, невозможно напрямую обновить экземпляр отказоустойчивого кластера SQL Server 2005 до версии [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] или обновить отказоустойчивый кластер, запущенный в [!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)].  
+-   [Поддерживаемые обновления версий и выпусков](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md). Убедитесь в том, что текущая версия операционной системы Windows позволяет обновить текущую версию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] до версии [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Например, невозможно напрямую обновить экземпляр отказоустойчивого кластера SQL Server 2005 до версии [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] или обновить отказоустойчивый кластер, запущенный в [!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)].  
   
--   [Choose a Database Engine Upgrade Method](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md). Выберите подходящий метод обновления с учетом сведений о поддерживаемых версиях и обновлениях выпуска, а также компонентах, установленных в среде и требующих обновления (это нужно, чтобы обеспечить правильный порядок обновления этих компонентов).  
+-   [Выбор метода обновления ядра СУБД](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md). Выберите подходящий метод обновления с учетом сведений о поддерживаемых версиях и обновлениях выпуска, а также компонентах, установленных в среде и требующих обновления (это нужно, чтобы обеспечить правильный порядок обновления этих компонентов).  
   
--   [Составление и тестирование плана обновления Database Engine](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md). Просмотрите заметки о выпуске и известные проблемы, связанные с обновлением, изучите контрольный список предварительных требований, а затем разработайте и протестируйте план обновления.  
+-   [Составление и тестирование плана обновления ядра СУБД](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md). Просмотрите заметки о выпуске и известные проблемы, связанные с обновлением, изучите контрольный список предварительных требований, а затем разработайте и протестируйте план обновления.  
   
--   [Требования к оборудованию и программному обеспечению для установки SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). Ознакомьтесь с требованиями к оборудованию и ПО для установки [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Если требуется дополнительное программное обеспечение, установите его на каждом узле перед запуском обновления, чтобы минимизировать время простоя.  
+-   [Требования к оборудованию и программному обеспечению для установки SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md):  Изучите требования к программному обеспечению для установки [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Если требуется дополнительное программное обеспечение, установите его на каждом узле перед запуском обновления, чтобы минимизировать время простоя.  
   
 ## <a name="perform-a-rolling-upgrade-or-update"></a>Выполнение последовательного обновления  
  Чтобы обновить отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] до версии [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], необходимо поочередно запустить программу установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на каждом узле отказоустойчивого кластера, начиная с пассивных. В процессе обновления каждого узла связи последнего с возможными владельцами соответствующего отказоустойчивого кластера прерываются. В случае непредвиденной отработки отказа обновленные узлы не участвуют в этом процессе до тех пор, пока программа установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не передаст группу ресурсов кластера во владение одному из обновленных узлов.  

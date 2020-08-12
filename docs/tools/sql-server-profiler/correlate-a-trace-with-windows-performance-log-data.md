@@ -1,6 +1,7 @@
 ---
 title: Сопоставление трассировки с журналом производительности Windows
 titleSuffix: SQL Server Profiler
+description: Узнайте, как сопоставлять журналы производительности Windows с трассировкой, чтобы можно было просматривать данные из объектов и счетчиков системного монитора в SQL Server Profiler.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,26 +12,26 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 07/12/2017
-ms.openlocfilehash: b9fca7d522d21706681ddfa714d45e8d18b3d4c1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 10fc6d48bc8187e49cac7d2dcfffb806419b1799
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307326"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774894"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data"></a>Сопоставление трассировки с журналом производительности Windows
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 С помощью приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]можно открыть журнал производительности Microsoft Windows, выбрать счетчики, которые нужно сопоставить с трассировкой, и отобразить выбранные счетчики производительности рядом с трассировкой в графическом пользовательском интерфейсе приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . При выборе события в окне трассировки вертикальная красная линия на панели окна системного монитора в приложении [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] показывает данные журнала производительности, которые сопоставлены выбранному событию трассировки.  
   
- Чтобы сопоставить трассировку со счетчиками производительности, откройте файл трассировки или таблицу, содержащую столбцы данных **StartTime** и **EndTime**, а затем щелкните элемент **Импорт данных производительности** в меню [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Файл**в**. Потом можно открыть журнал производительности и выбрать объекты системного монитора и счетчики, которые сопоставляются с трассировкой.  
+ Чтобы сопоставить трассировку со счетчиками производительности, откройте файл трассировки или таблицу, содержащую столбцы данных **StartTime** и **EndTime**, а затем щелкните элемент **Импорт данных производительности** в меню [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **Файл** в . Потом можно открыть журнал производительности и выбрать объекты системного монитора и счетчики, которые сопоставляются с трассировкой.  
   
 ### <a name="to-correlate-a-trace-with-performance-log-data"></a>Согласование трассировки с данными журнала производительности  
   
 1.  В [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]откройте сохраненный файл трассировки или таблицу трассировки. Нельзя согласовывать запущенную трассировку, которая производит сбор данных события. Чтобы гарантировать точность связывания с данными системного монитора, трассировка должна содержать столбцы данных **StartTime** и **EndTime** .  
   
-2.  В меню [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Файл**в** выберите **Импорт данных производительности**.  
+2.  В меню **Файл** в [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] выберите **Импорт данных производительности**.  
   
 3.  В диалоговом окне **Открыть** выберите файл с журналом производительности. Чтобы данные журнала производительности можно было связать с трассировкой, они должны быть собраны в то же время, что и данные трассировки.  
   

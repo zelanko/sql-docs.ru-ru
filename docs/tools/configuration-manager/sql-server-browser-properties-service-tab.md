@@ -1,5 +1,6 @@
 ---
 title: Свойства браузер SQL Server (вкладка «Службы»)
+description: Узнайте о параметрах на вкладке "Служба" в диалоговом окне свойств обозревателя SQL Server, таких как путь к двоичному файлу, имя узла и режим запуска.
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 98ace9b0-72d5-4b72-9b7b-11fbc490981a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9c9e5cb32206a2a2b81970a43308058dc2ad1c52
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7fa05db685f2597d92c6314f5b42a7e1976db4fa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307098"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894259"
 ---
 # <a name="sql-server-browser-properties-service-tab"></a>Свойства браузер SQL Server (вкладка «Службы»)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Программа браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает в качестве службы на сервере. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прослушивает входящие запросы к ресурсам [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и предоставляет сведения об экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], установленных на компьютере.  
   
  Используйте вкладку **Службы** в диалоговом окне **Свойства браузера SQL Server** , чтобы просмотреть следующие параметры. Все свойства, кроме свойства **Режим запуска** , доступны только для чтения.  
@@ -37,7 +38,7 @@ ms.locfileid: "75307098"
  **Host Name**  
  Отображает имя компьютера или кластера, где запущена служба браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Название**  
+ **имя**;  
  Указывает отображаемое имя службы.  
   
  **Идентификатор процесса**  
@@ -49,9 +50,9 @@ ms.locfileid: "75307098"
  **Режим запуска**  
  Установите для этой службы один из следующих вариантов:  
   
--   Вручную. Эта служба не запускается автоматически при запуске компьютера. Необходимо запустить службу при помощи диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или другого средства.  
+-   Вручную: Эта служба не запускается автоматически при запуске компьютера. Необходимо запустить службу при помощи диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или другого средства.  
   
--   Автоматически. Эта служба пытается запуститься при запуске компьютера.  
+-   Автоматически. Выполняется попытка запуска службы при запуске компьютера.  
   
 -   Отключено. Служба не может быть запущена.  
   

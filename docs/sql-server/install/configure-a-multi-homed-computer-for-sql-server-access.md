@@ -1,5 +1,6 @@
 ---
 title: Настройка многосетевого компьютера для доступа
+description: Узнайте, как настроить SQL Server и брандмауэр Windows, чтобы разрешить сетевые подключения к экземпляру SQL Server в многосетевой среде.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - multi-homed computer [SQL Server] configuring ports
 - firewall systems [Database Engine], multi-homed computer
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: d8733c9a4624bcadb60eb5cfa70cf81f242f43a7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 74f365ec21285609055d8ecc04690787f5870802
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244464"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894907"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Настройка многосетевого компьютера для доступа к SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Если сервер должен предоставить соединение с двумя или более сетями или подсетями, обычно используется многосетевой компьютер. Часто этот компьютер расположен в пограничной сети (также известной как сеть периметра, сеть периметра или экранированная подсеть). В этой статье описываются настройки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и брандмауэра Windows в режиме повышенной безопасности для предоставления сетевого подключения к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в многосетевой среде.  
   
@@ -69,7 +70,7 @@ ms.locfileid: "75244464"
   
 1.  Нажмите кнопку **Пуск**, последовательно наведите указатель на пункты **Все программы**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Средства настройки** и выберите пункт **Диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** .  
   
-2.  В области консоли **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Диспетчер конфигурации** разверните узел **Сетевая конфигурация[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , затем **Протоколы для \<имя экземпляра>** , и дважды щелкните **TCP/IP**.  
+2.  В области консоли **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Диспетчер конфигурации** разверните узел **Сетевая конфигурация[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , затем **Протоколы для \<instance name>** , и дважды щелкните **TCP/IP**.  
   
 3.  В диалоговом окне **Свойства TCP/IP** на вкладке **IP-адреса** появится несколько IP-адресов в формате **IP1**, **IP2**до **IPAll**. Одним из приведенных IP-адресов является адрес адаптера заглушки 127.0.0.1. Для каждого IP-адреса, настроенного на компьютере, появятся дополнительные IP-адреса.  
   

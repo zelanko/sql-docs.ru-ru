@@ -1,6 +1,7 @@
 ---
 title: Replay Requirements
 titleSuffix: SQL Server Profiler
+description: Узнайте, какие классы событий и столбцы данных следует регистрировать в трассировке, чтобы воспроизводить данные трассировки с помощью SQL Server Profiler или программы распределенного воспроизведения.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 85f062ae15addae9908dca572c916e55a7ffde39
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d5fa4964a2ffb0d62777c25aa0d0c6ef205ee94b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307485"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789926"
 ---
 # <a name="replay-requirements"></a>Replay Requirements
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Для воспроизведения данных трассировки с помощью [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] или программы распределенного воспроизведения в трассировке должен быть записан определенный набор классов событий и столбцов. Если для настройки трассировки, которая в дальнейшем будет использоваться для воспроизведения, применяется шаблон трассировки **TSQL_Replay** , то по умолчанию эти параметры включены. В этом разделе приводится описание этих параметров и других требований к воспроизведению.  
   
@@ -97,7 +98,7 @@ ms.locfileid: "75307485"
   
 -   **NTUserName**  
   
--   **Ошибка**  
+-   **Error**  
   
 > [!NOTE]  
 >  В трассировках, захватывающих данные для воспроизведения, следует использовать шаблон **TSQL_Replay** .  

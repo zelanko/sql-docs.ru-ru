@@ -1,5 +1,6 @@
 ---
 title: Удаление существующего экземпляра
+description: Эта статья описывает удаление изолированного экземпляра SQL Server, который также подготавливает систему для переустановки SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -13,17 +14,17 @@ helpviewer_keywords:
 - instances of SQL Server, uninstalling
 - uninstalling SQL Server
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 61647a4e0a654d478050268587b2b47fd79fc686
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fd4e3ee094bca1d27543a92a357f705b0e3d82fe
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78335748"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883728"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>Удаление существующего экземпляра SQL Server (программа установки)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В данной статье описан процесс удаления изолированного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Шаги, перечисленные в этой статье, помогут подготовить систему для повторной установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

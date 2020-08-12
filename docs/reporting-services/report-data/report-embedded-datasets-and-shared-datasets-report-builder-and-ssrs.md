@@ -1,5 +1,6 @@
 ---
 title: Внедренные и общие наборы данных отчета (построитель отчетов) | Документация Майкрософт
+description: Сведения о внедренных в отчет и общих наборах данных отчета, позволяющих создавать выражения, значением которых при выполнении отчета являются фактические данные.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a77d0b930b15d287a010e141c256c9bf311dc303
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1347086db055ab0bb13f337d8125b3f9795157dc
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081800"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812255"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)
   Набор данных указывает данные, которые надо извлечь через соединение с данными. Набор данных основывается на подключении к данным, сохраненном в отчете как внедренный источник данных или как ссылка на общий источник данных на сервере отчетов. Набор данных включает в себя запрос, указывающий на набор полей. При перетаскивании этих полей в область конструктора создаются выражения, значением которых при выполнении отчета являются фактические данные.  
@@ -122,7 +123,7 @@ ms.locfileid: "77081800"
   
  Различие между общими и внедренными источниками данных состоит в способе создания, хранения и управления. В следующей таблице приведены все различия между внедренными и общими источниками данных.  
   
-|Description|Внедренный<br /><br /> Источник данных|Совмещаемая блокировка<br /><br /> Источник данных|  
+|Описание|Внедренный<br /><br /> Источник данных|Совмещаемая блокировка<br /><br /> Источник данных|  
 |-----------------|------------------------------|----------------------------|  
 |Подключение к данным внедрено в определение отчета.|![Доступно](../../reporting-services/report-data/media/greencheck.gif "Доступно")||  
 |Указатель на подключение к данным на сервере ответов внедрен в определение отчета.||![Доступно](../../reporting-services/report-data/media/greencheck.gif "Доступно")|  
@@ -219,7 +220,7 @@ ms.locfileid: "77081800"
   
 ## <a name="see-also"></a>См. также:  
  [Коллекция полей набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Создание строк подключения к данным (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [Create data connection strings — Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  (Создание строк подключения к данным (построитель отчетов и службы SSRS))  
  [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
   
   

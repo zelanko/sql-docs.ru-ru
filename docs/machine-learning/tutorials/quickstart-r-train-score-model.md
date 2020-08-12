@@ -10,16 +10,16 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 532a08f29b3b623d531d03ff7bc0ac56605faa17
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 21b3f8f93d3375789de9da92ab4bb2b1e136964c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606242"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772337"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-machine-learning"></a>Краткое руководство. Создание и оценка прогнозной модели в R с помощью машинного обучения SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 В этом кратком руководстве вы создадите и обучите прогнозную модель с помощью T. Затем вы сохраните ее в таблицу в экземпляре SQL Server и примените эту модель для прогнозирования значений на основе новых данных с помощью [Служб машинного обучения SQL Server](../sql-server-machine-learning-services.md) в [кластерах больших данных](../../big-data-cluster/machine-learning-services.md).
@@ -29,6 +29,9 @@ ms.locfileid: "83606242"
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 В этом кратком руководстве вы создадите и обучите прогнозную модель с помощью T. Затем вы сохраните ее в таблицу в экземпляре SQL Server и примените эту модель для прогнозирования значений на основе новых данных с помощью служб [SQL Server R Services](../r/sql-server-r-services.md).
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+В этом кратком руководстве вы создадите и обучите прогнозную модель с помощью T. Затем вы сохраните модель в таблице в экземпляре SQL Server и примените эту модель для прогнозирования значений на основе новых данных с помощью [Служб машинного обучения в Управляемом экземпляре SQL Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
 Вы создадите и запустите две хранимые процедуры, выполняемые в SQL. В первой из них используется набор данных **mtcars**, входящий в состав R, на основе которого создается простая обобщенная линейная модель (ОЛМ), которая прогнозирует вероятность оснащения автомобиля механической КПП. Вторая процедура предназначена для оценки — она вызывает модель, созданную в первой процедуре, для вывода набора прогнозов на основе новых данных. Поместив код R в хранимую процедуру SQL, вы переносите операции в SQL, благодаря чему они могут многократно использоваться и вызываться другими хранимыми процедурами и клиентскими приложениями.
@@ -55,6 +58,9 @@ ms.locfileid: "83606242"
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 - SQL Server 2016 R Services. Сведения об установке служб R Services см. в [руководстве по установке для Windows](../install/sql-r-services-windows-install.md).
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Службы машинного обучения в Управляемом экземпляре SQL Azure. Сведения о регистрации см. в статье [Общие сведения о Службах машинного обучения в управляемом экземпляре SQL Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
 - Инструмент для выполнения SQL-запросов, содержащих сценарии R. В этом кратком руководстве используется [Azure Data Studio](../../azure-data-studio/what-is.md).

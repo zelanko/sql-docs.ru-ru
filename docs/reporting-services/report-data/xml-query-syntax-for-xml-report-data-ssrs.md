@@ -1,5 +1,6 @@
 ---
 title: Синтаксис запроса XML для XML-данных отчета | Документация Майкрософт
+description: Узнайте, как создать запрос к набору данных в Reporting Services, включив XML-запрос или путь к элементу.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dd1bccb6bff8f19e9abb779310033f4685b31f67
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0ee76c36c70c201de03700b8838e5f21a8589448
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081349"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812196"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>Синтаксис запроса XML для XML-данных отчета (SSRS)
   В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]можно создавать наборы данных для источников XML-данных. После определения источника данных можно создать запрос для получения набора данных. В зависимости от типа XML-данных, на которые указывает источник данных, этот запрос создается путем включения либо элемента XML **Query** , либо пути к элементу. Элемент XML **Query** начинается с тега **\<Query>** и включает пространства имен и XML-элементы, зависящие от источника данных. Путь к элементу не зависит от пространства имен и указывает необходимые узлы и атрибуты узлов в базовых XML-данных при помощи XPath-подобного синтаксиса. Дополнительные сведения о путях к элементу см. в разделе [Синтаксис пути к элементу для XML-данных отчета (службы SSRS)](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md).  
@@ -61,7 +62,7 @@ ms.locfileid: "77081349"
 |XML-документ, использующий значения по умолчанию.|*No query*.<br /><br /> Путь к элементу определяется на основе самого XML-документа и не зависит от пространства имен.|  
   
 > [!NOTE]  
->  Первый пример веб-службы перечисляет содержимое сервера отчетов, применяющего метод <xref:ReportService2006.ReportingService2006.ListChildren%2A> . Для выполнения этого запроса необходимо создать новый источник данных и задать строку подключения: `https://localhost/reportserver/reportservice2006.asmx`. Метод <xref:ReportService2006.ReportingService2006.ListChildren%2A> имеет два параметра: **Item** и **Recursive**. Для **Item** установите значение по умолчанию **/** , а для параметра **Recursive** — значение **1**.  
+>  Первый пример веб-службы перечисляет содержимое сервера отчетов, применяющего метод <xref:ReportService2006.ReportingService2006.ListChildren%2A> . Для выполнения этого запроса необходимо создать новый источник данных и задать строку подключения: `https://localhost/reportserver/reportservice2006.asmx`. Метод <xref:ReportService2006.ReportingService2006.ListChildren%2A> принимает два параметра: **Item** и **Recursive**. Для **Item** установите значение по умолчанию **/** , а для параметра **Recursive** — значение **1**.  
   
 ## <a name="specifying-namespaces"></a>Указание пространств имен  
  Для указания пространств имен, используемых XML-данными из источника данных, используется элемент XML **Query** . Следующий XML-запрос использует пространство имен **sales**. Узлы XML **ElementPath** для элементов `sales:LineItems` и `sales:LineItem` используют пространство имен **sales**.  
@@ -78,7 +79,7 @@ ms.locfileid: "77081349"
 </Query>  
 ```  
   
- Чтобы указать пространство имен поставщика данных, оставив пространство имен по умолчанию пустым, используется **xmldp**. Это показано в следующем примере.  
+ Чтобы указать пространство имен поставщика данных, оставив пространство имен по умолчанию пустым, используется **xmldp**. Эти действия показаны в следующем примере.  
   
 ### <a name="example"></a>Пример  
  В следующих примерах используется XML-документ DPNamespace.xml, который для наглядности приводится после таблицы. В таблице представлены два примера синтаксиса пути XML ElementPath, включающие префиксы пространства имен.  

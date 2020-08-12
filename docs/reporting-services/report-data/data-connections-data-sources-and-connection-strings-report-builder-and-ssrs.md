@@ -1,18 +1,19 @@
 ---
 title: Создание подключения к данным (построитель отчетов и службы SSRS) | Документация Майкрософт
-ms.date: 11/18/2019
+description: Сведения о том, как создать строки подключения к источникам данных, и важная информация об учетных данных для источников данных.
+ms.date: 05/21/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 73bf9e24ffb42ef93547097c53b5838a22292fda
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: accb94c4fbfe0c7e10b6fdfcaa749e8059b8e498
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74190911"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812299"
 ---
 # <a name="create-data-connection-strings---report-builder--ssrs"></a>Создание подключения к данным (построитель отчетов и службы SSRS)
 
@@ -41,12 +42,12 @@ ms.locfileid: "74190911"
 |Источник данных SAP NetWeaver BI|`DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|Задайте тип источника данных **SAP NetWeaver BI**. Дополнительные сведения см. в разделе [Тип соединения SAP NetWeaver BI (службы SSRS)](../../reporting-services/report-data/sap-netweaver-bi-connection-type-ssrs.md).|  
 |Источник данных Hyperion Essbase|`Data Source=https://localhost:13080/aps/XMLA; Initial Catalog=Sample`|Задайте тип источника данных **Hyperion Essbase**. Дополнительные сведения см. в разделе [Тип соединения Hyperion Essbase (службы SSRS)](../../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md).|  
 |Источник данных типа Teradata|`data source=`\<NNN>.\<NNN>.\<NNN>.\<NNN>`;`|Задайте тип источника данных **Teradata**. Строка подключения представляет собой IP-адрес в виде четырех полей, каждое из которых содержит от одного до трех числовых разрядов. Дополнительные сведения см. в разделе [Тип соединения Teradata (службы SSRS)](../../reporting-services/report-data/teradata-connection-type-ssrs.md).|  
-|Источник данных типа Teradata|`Database=` *\<имя базы данных>* `; data source=` *\<NN*N *>.\<NNN>.\<NNN>.\<N*NN *>* `;Use X Views=False;Restrict to Default Database=True`|Установите для источника данных тип **Teradata**аналогично предыдущему примеру. Используйте только базу данных по умолчанию, указанную в теге Database, и не выполняйте автоматическое обнаружение связей данных.|  
+|Источник данных типа Teradata|`Database=` *\<database name>* `; data source=` *\<NN*N*>.\<NNN>.\<NNN>.\<N*NN*>*`;Use X Views=False;Restrict to Default Database=True`|Установите для источника данных тип **Teradata**аналогично предыдущему примеру. Используйте только базу данных по умолчанию, указанную в теге Database, и не выполняйте автоматическое обнаружение связей данных.|  
 |Источник XML-данных, веб-служба|`data source=https://adventure-works.com/results.aspx`|Задайте тип источника данных **XML**. Строка подключения является URL-адресом веб-службы, поддерживающей язык определения веб-служб (язык WSDL). Дополнительные сведения см. в разделе [Тип соединения XML (службы SSRS)](../../reporting-services/report-data/xml-connection-type-ssrs.md).|  
 |Источник XML-данных, XML-документ|`https://localhost/XML/Customers.xml`|Задайте тип источника данных **XML**. Строкой соединения является URL-адрес XML-документа. 
 |Источник XML-данных, внедренный XML-документ|*Пустой*|Задайте тип источника данных **XML**. XML-данные внедрены в определение отчета.|  
 |SharePoint|`data source=https://MySharePointWeb/MySharePointSite/`|Задайте в качестве типа источника данных **Список SharePoint**.|  
-| Набор данных Power BI Premium (начиная с Reporting Services версии 2019) | Сервер=powerbi://api.powerbi.com/v1.0/myorg/<workspacename>;начальный каталог=<YourDatasetName> | Задайте тип источника данных **Microsoft SQL Server Analysis Services**. |
+| Набор данных Power BI Premium (начиная с Reporting Services версии 2019 и Сервера отчетов Power BI от января 2020 г.) | `Data Source=powerbi://api.powerbi.com/v1.0/myorg/<workspacename>;Initial Catalog=<datasetname>` | Задайте тип источника данных **Microsoft SQL Server Analysis Services**. |
 
   
  Если не удается подключиться к серверу отчетов с помощью **localhost**, убедитесь, что сетевой протокол для TCP/IP включен. Дополнительные сведения см. в статье [Configure Client Protocols](../../database-engine/configure-windows/configure-client-protocols.md).  

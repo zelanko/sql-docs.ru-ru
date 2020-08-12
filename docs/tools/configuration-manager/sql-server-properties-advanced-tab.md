@@ -1,5 +1,6 @@
 ---
 title: Свойства SQL Server (вкладка «Дополнительно»)
+description: Узнайте о параметрах на вкладке "Дополнительно" диалогового окна свойств SQL Server, таких как путь к данным, идентификатор экземпляра и пользовательские свойства.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a21d6eb31b0edb5ab0cfa56f388b2cf3e3065627
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cabf817c5b2a1be512b93235e274d76abba7f69b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306835"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893341"
 ---
 # <a name="sql-server-properties-advanced-tab"></a>Свойства SQL Server (вкладка «Дополнительно»)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   По умолчанию на вкладке **Дополнительно** присутствуют следующие свойства. Если определены пользовательские свойства, они также отображаются на этой вкладке вместе со значениями.  
   
 ## <a name="options"></a>Параметры  
@@ -36,7 +37,7 @@ ms.locfileid: "75306835"
  Отображает расположение дампа памяти в случае возникновения ошибки.  
   
  **Отчет об ошибках**  
- Если установлено значение **Да**, то в случае возникновения серьезного сбоя программа "Доктор Ватсон» направит сведения либо в [!INCLUDE[msCoName](../../includes/msconame-md.md)] , либо на сервер ошибок. Дополнительные сведения по отчетам об ошибках см. в разделе «Настройки параметров отчета об ошибках» электронной документации. Чтобы изменить это значение, в обозревателе объектов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] щелкните сервер правой кнопкой мыши, выберите пункт **Свойства**и перейдите на страницу **Прочие параметры сервера** . Параметры находятся в области **Информационный отчет** .  
+ Если установлено значение **Да**, то в случае возникновения серьезного сбоя программа "Доктор Ватсон» направит сведения либо в [!INCLUDE[msCoName](../../includes/msconame-md.md)], либо на сервер ошибок. Дополнительные сведения по отчетам об ошибках см. в разделе «Настройки параметров отчета об ошибках» электронной документации. Чтобы изменить это значение, в обозревателе объектов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] щелкните сервер правой кнопкой мыши, выберите пункт **Свойства** и перейдите на страницу **Прочие параметры сервера**. Параметры находятся в области **Информационный отчет** .  
   
  **Версия файла**  
  Отображает версию исполняемого объекта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

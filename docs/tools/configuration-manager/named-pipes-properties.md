@@ -1,5 +1,6 @@
 ---
 title: Свойства именованных каналов
+description: Используйте страницу "Протокол" в диалоговом окне "Свойства именованных каналов", чтобы просмотреть или изменить именованный канал, который прослушивается SQL Server во время использования протокола именованных каналов.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: a5fd5b8e-f889-485b-89e3-d4010ec4c6ec
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 923f84ccc98837892d144a07ce71238c877ca5b6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c4fae15dcdd786b93caf189afb478e435d3fc986
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306443"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894848"
 ---
 # <a name="named-pipes-properties"></a>Свойства именованных каналов
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Используйте страницу **Протокол** в диалоговом окне **Named Pipes Properties** (Свойства именованных каналов), чтобы просмотреть или изменить именованный канал, который прослушивается [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], во время использования протокола именованных каналов.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен быть перезапущен, чтобы включить протокол, отключить протокол или изменить именованный канал.  

@@ -1,31 +1,32 @@
 ---
 title: Демонстрационный набор данных Iris для учебников
-Description: Создание базы данных, содержащей набор данных Iris и прогнозных моделей. Этот набор данных используется в руководствах по Python и R для Служб машинного обучения SQL Server.
+titleSuffix: SQL machine learning
+Description: Создание базы данных, содержащей набор данных Iris и прогнозных моделей. Этот набор данных используется в руководствах по Python и R для Служб машинного обучения SQL.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 10/19/2018
+ms.technology: machine-learning-services
+ms.date: 05/26/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b1d3aee4034124f61d88ccdf5e35f86b13b60158
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 9a5b7cc5c89874bddfda0ac978bce5899b1cd64b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116677"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737837"
 ---
-#  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>Демонстрационные данные Iris для учебников по Python и R в SQL Server 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="iris-demo-data-for-python-and-r-tutorials-with-sql-machine-learning"></a>Демонстрационные данные ирисов Фишера для учебников по Python и R при использовании со Службой машинного обучения SQL Server
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-В этом упражнении вы создадите базу данных SQL Server для хранения данных из [набора Iris](https://en.wikipedia.org/wiki/Iris_flower_data_set) и созданных на их основе моделей. Данные Iris входят в дистрибутивы R и Python, устанавливаемые SQL Server, и используются в рамках учебников по машинному обучению для SQL Server. 
+В этом упражнении вы создадите базу данных для хранения данных из [набора ирисов Фишера](https://en.wikipedia.org/wiki/Iris_flower_data_set) и созданных на их основе моделей. Данные ирисов Фишера входят в дистрибутивы R и Python и используются в рамках учебников по машинному обучению для SQL.
 
-Для выполнения этого упражнения вам потребуется [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) или другое средство, поддерживающее выполнение запросов T-SQL.
+Для выполнения этого упражнения вам потребуется [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) или другое средство, поддерживающее выполнение запросов T-SQL.
 
 Этот набор данных используется в следующих учебниках и кратких руководствах:
 
-+  [Краткое руководство. Создание, обучение и использование модели Python с хранимыми процедурами в SQL Server](quickstart-python-train-score-model.md)
++ [Краткое руководство. Создание и оценка модели прогнозирования на Python](quickstart-python-train-score-model.md)
 
 ## <a name="create-the-database"></a>Создание базы данных
 
@@ -39,9 +40,6 @@ ms.locfileid: "81116677"
     USE irissql
     GO
     ```
-
-    > [!TIP] 
-    > Среди тех, кто еще не знаком с SQL Server или использует собственный сервер, часто встречается ошибка, при которой пользователь входит в систему и начинает работу, не замечая, что делает это в базе данных **master**. Чтобы гарантировать использование правильной базы данных, всегда указывайте контекст с помощью инструкции `USE <database name>` (например, `use irissql`).
 
 3. Добавьте пустые таблицы: одну для хранения данных, а другую — для хранения обученных моделей. Таблица **iris_models** используется для хранения сериализованных моделей, создаваемых в рамках других упражнений.
 
@@ -58,15 +56,12 @@ ms.locfileid: "81116677"
     );
     ```
 
-    > [!TIP] 
-    > Если вы не знакомы с T-SQL, обратите внимание на инструкцию `DROP...IF`. При попытке создать таблицу, которая уже существует, SQL Server возвращает следующую ошибку: "В базе данных уже есть объект с именем "iris_data"." Одним из способов избежать этой ошибки является удаление любых существующих таблиц или других объектов в рамках кода.
-
-4. Выполните следующий код, чтобы создать таблицу для хранения обученной модели. Сохраняемые модели Python (или R) в SQL Server необходимо сериализовать и поместить в столбец типа **varbinary(max)** . 
+4. Выполните следующий код, чтобы создать таблицу для хранения обученной модели. Сохраняемые модели Python (или R) в SQL Server необходимо сериализовать и поместить в столбец типа **varbinary(max)** .
 
     ```sql
     DROP TABLE IF EXISTS iris_models;
     GO
-    
+
     CREATE TABLE iris_models (
       model_name VARCHAR(50) NOT NULL DEFAULT('default model') PRIMARY KEY,
       model VARBINARY(MAX) NOT NULL
@@ -78,7 +73,7 @@ ms.locfileid: "81116677"
 
 ## <a name="populate-the-table"></a>Заполнение таблицы
 
-Вы можете получить данные встроенного набора Iris как из R так и из Python. Вы можете загрузить данные в кадр данных с помощью Python или R и затем вставить его в таблицу в базе данных. Перемещение обучающих данных из внешнего сеанса в таблицу SQL Server выполняется в несколько шагов:
+Вы можете получить данные встроенного набора Iris как из R так и из Python. Вы можете загрузить данные в кадр данных с помощью Python или R и затем вставить его в таблицу в базе данных. Перемещение обучающих данных из внешнего сеанса в таблицу выполняется в несколько шагов:
 
 + Создайте хранимую процедуру, которая получает нужные данные.
 + Выполните хранимую процедуру, чтобы получить данные.
@@ -136,10 +131,6 @@ ms.locfileid: "81116677"
 
     Если вы не знакомы с T-SQL, учтите, что инструкция INSERT только добавляет новые данные. Она не проверяет существующие данные и не выполняет удаление или перестроение таблицы. Чтобы исключить многократное копирование одних и тех же данных в таблицу, можно сначала выполнить следующую инструкцию: `TRUNCATE TABLE iris_data`. Инструкция T-SQL [TRUNCATE TABLE](https://docs.microsoft.com/sql/t-sql/statements/truncate-table-transact-sql) удаляет существующие данные, сохраняя при этом структуру таблицы в неизменном виде.
 
-    > [!TIP]
-    > Впоследствии для изменения хранимой процедуры вам не придется удалять и заново создавать ее. Используйте инструкцию [ALTER PROCEDURE](https://docs.microsoft.com/sql/t-sql/statements/alter-procedure-transact-sql). 
-
-
 ## <a name="query-the-data"></a>Запрос данных
 
 Для проверки выполните запрос и убедитесь, что данные были отправлены.
@@ -157,4 +148,4 @@ ms.locfileid: "81116677"
 
 В следующем кратком руководстве вы создадите модель машинного обучения и сохраните ее в таблице, после чего получите результаты прогноза на ее основе.
 
-+ [Краткое руководство. Создание, обучение и использование модели Python с хранимыми процедурами в SQL Server](quickstart-python-train-score-model.md)
++ [Краткое руководство. Создание и оценка модели прогнозирования на Python](quickstart-python-train-score-model.md)

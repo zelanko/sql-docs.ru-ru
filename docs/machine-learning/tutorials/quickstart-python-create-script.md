@@ -1,24 +1,25 @@
 ---
 title: Краткое руководство. Выполнение скриптов Python
-description: Сведения о выполнении простых скриптов Python с помощью Служб машинного обучения SQL Server Вы узнаете, как применить хранимую процедуру sp_execute_external_script для выполнения скрипта в экземпляре SQL Server.
+titleSuffix: SQL machine learning
+description: Сведения о выполнении простых скриптов Python с помощью машинного обучения SQL. Узнайте, как применять хранимую процедуру sp_execute_external_script для выполнения сценария.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/17/2020
+ms.date: 05/21/2020
 ms.topic: quickstart
 author: cawrites
 ms.author: chadam
-ms.reviewer: garye
+ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6b15423d82a13485d343dc797bdf6e6efe25088f
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 111230ebcd1108cc6fc99830d186294534f13a05
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606456"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784115"
 ---
-# <a name="quickstart-run-simple-python-scripts-with-sql-server-machine-learning-services"></a>Краткое руководство. Выполнение простых скриптов Python с помощью Служб машинного обучения SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="quickstart-run-simple-python-scripts-with-sql-machine-learning"></a>Краткое руководство. Выполнение простых скриптов Python с использованием машинного обучения SQL
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 В этом кратком руководстве вы запустите ряд простых сценариев Python с помощью [Служб машинного обучения SQL Server](../sql-server-machine-learning-services.md) или в [Кластерах больших данных](../../big-data-cluster/machine-learning-services.md). Также вы узнаете, как применить хранимую процедуру [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) для выполнения скрипта в экземпляре SQL Server.
@@ -26,26 +27,31 @@ ms.locfileid: "83606456"
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 В этом кратком руководстве вы запустите ряд простых скриптов Python, используя [Службы машинного обучения SQL Server](../sql-server-machine-learning-services.md). Также вы узнаете, как применить хранимую процедуру [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) для выполнения скрипта в экземпляре SQL Server.
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+В этом кратком руководстве вы запустите ряд простых скриптов Python, используя [Службы машинного обучения в управляемом экземпляре SQL Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview). Также вы узнаете, как применить хранимую процедуру [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) для выполнения скрипта в базе данных.
+::: moniker-end
 
 ## <a name="prerequisites"></a>Предварительные требования
 
+Для работы с этим кратким руководством необходимо следующее.
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 - Службы машинного обучения SQL Server. Сведения об установке Служб машинного обучения см. в [руководстве по установке для Windows](../install/sql-machine-learning-services-windows-install.md) или [руководстве по установке для Linux](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). Можно также [включить Службы машинного обучения в кластерах больших данных SQL Server](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
-
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-- Службы машинного обучения SQL Server. Сведения об установке Служб машинного обучения см. в [руководстве по установке для Windows](../install/sql-machine-learning-services-windows-install.md) или [руководстве по установке для Linux](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). Можно также [включить Службы машинного обучения в кластерах больших данных SQL Server](../../big-data-cluster/machine-learning-services.md).
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- Службы машинного обучения SQL Server. Сведения об установке Служб машинного обучения см. в [руководстве по установке для Windows](../install/sql-machine-learning-services-windows-install.md). 
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Службы машинного обучения в управляемом экземпляре SQL Azure. Сведения о регистрации см. в статье [Общие сведения о Службах машинного обучения в управляемом экземпляре SQL Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
-- Вам также понадобится средство для выполнения SQL-запросов, содержащих сценарии Python. Эти сценарии можно выполнять с помощью любого средства управления базами данных или запросов, которые могут подключаться к экземпляру SQL Server и выполнять запросы T-SQL или хранимые процедуры. В этом кратком руководстве используется [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio).
+- Средство для выполнения SQL-запросов, содержащих сценарии Python. В этом кратком руководстве используется [Azure Data Studio](../../azure-data-studio/what-is.md).
 
 ## <a name="run-a-simple-script"></a>Выполнение простого сценария
 
-Чтобы выполнить сценарий Python, необходимо передать его в качестве аргумента в системную хранимую процедуру [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
-Эта системная хранимая процедура запускает среду выполнения Python в контексте SQL Server, передает данные в Python, безопасно управляет пользовательскими сеансами в Python и возвращает результаты на клиент.
+Чтобы выполнить сценарий Python, необходимо передать его в качестве аргумента в системную хранимую процедуру [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Эта системная хранимая процедура запускает среду выполнения Python в контексте машинного обучения SQL, передает данные в Python, безопасно управляет пользовательскими сеансами в Python и возвращает результаты на клиент.
 
-Далее вы будете выполните этот пример сценария Python в своем экземпляре SQL Server.
+На следующих этапах вы запустите этот скрипт Python в базе данных:
 
 ```python
 a = 1
@@ -55,7 +61,7 @@ d = a*b
 print(c, d)
 ```
 
-1. Откройте новое окно запроса в среде **Azure Data Studio**, подключенной к вашему экземпляру SQL Server.
+1. Откройте новое окно запроса в среде **Azure Data Studio**, подключенной к вашему экземпляру SQL.
 
 1. Передайте весь сценарий Python в хранимую процедуру `sp_execute_external_script`.
 
@@ -100,10 +106,9 @@ GO
 | | |
 |-|-|
 | @language | Определяет вызываемое расширение языка (в данном случае Python). |
-| @script | Определяет команды, которые передаются в среду выполнения Python.<br>Весь скрипт Python должен быть включен в этот аргумент в виде текста в Юникоде. Также можно добавить текст в переменную типа **nvarchar**, а затем вызвать ее. |
+| @script | Определяет команды, которые передаются в среду выполнения Python. Весь скрипт Python должен быть включен в этот аргумент в виде текста в Юникоде. Также можно добавить текст в переменную типа **nvarchar**, а затем вызвать ее. |
 | @input_data_1 | Данные, возвращаемые запросом, передаются в среду выполнения Python, которая возвращает их в виде кадра данных. |
-|WITH RESULT SETS | Это предложение определяет схему возвращаемой таблицы данных для SQL Server. В данном случае добавляется "Hello World" в качестве имени столбца и **int** в качестве типа данных. |
-
+| WITH RESULT SETS | Это предложение определяет схему возвращаемой таблицы данных для машинного обучения SQL. В данном случае добавляется "Hello World" в качестве имени столбца и **int** в качестве типа данных. |
 
 Эта команда выводит следующий текст:
 
@@ -170,45 +175,45 @@ GO
 
     Обратите внимание, что в Python учитывается регистр. Входные и выходные переменные, используемые в сценарии Python (**SQL_out**, **SQL_in**), должны соответствовать именам, определенным в аргументах `@input_data_1_name` и `@output_data_1_name`, включая регистр.
 
-   > [!TIP]
-   > В качестве параметра может быть передан только один входной набор данных, и можно возвращать только один набор данных. Однако вы можете вызывать из кода Python другие наборы данных, а также возвращать выходные данные других типов в дополнение к этому набору данных. Вы также можете добавить ключевое слово OUTPUT к любому параметру, чтобы он возвращался с результатами.
+    > [!TIP]
+    > В качестве параметра может быть передан только один входной набор данных, и можно возвращать только один набор данных. Однако вы можете вызывать из кода Python другие наборы данных, а также возвращать выходные данные других типов в дополнение к этому набору данных. Вы также можете добавить ключевое слово OUTPUT к любому параметру, чтобы он возвращался с результатами.
 
 1. Можно также формировать значения только с помощью сценария Python, без каких-либо входных данных (в аргументе `@input_data_1` задано пустое значение).
 
-   Следующий сценарий выводит текст "hello" и "world".
+    Следующий сценарий выводит текст "hello" и "world".
 
-   ```sql
-   EXECUTE sp_execute_external_script @language = N'Python'
-       , @script = N'
-   import pandas as pd
-   mytextvariable = pandas.Series(["hello", " ", "world"]);
-   OutputDataSet = pd.DataFrame(mytextvariable);
-   '
-       , @input_data_1 = N''
-   WITH RESULT SETS(([Col1] CHAR(20) NOT NULL));
-   ```
+    ```sql
+    EXECUTE sp_execute_external_script @language = N'Python'
+        , @script = N'
+    import pandas as pd
+    mytextvariable = pandas.Series(["hello", " ", "world"]);
+    OutputDataSet = pd.DataFrame(mytextvariable);
+    '
+        , @input_data_1 = N''
+    WITH RESULT SETS(([Col1] CHAR(20) NOT NULL));
+    ```
 
-   **Результаты**
+    **Результаты**
 
-   ![Результаты запроса с использованием @script в качестве входных данных](./media/python-data-generated-output.png)
+    ![Результаты запроса с использованием @script в качестве входных данных](./media/python-data-generated-output.png)
 
 > [!NOTE]
 > В Python начальные пробелы используются для группирования инструкций. Поэтому когда внедренный сценарий Python разделяется на несколько строк, как в предыдущем примере, не пытайтесь выровнять команды Python по одной линии с командами SQL. Например, следующий сценарий выдаст ошибку.
-
-  ```text
-  EXECUTE sp_execute_external_script @language = N'Python'
-      , @script = N'
-      import pandas as pd
-      mytextvariable = pandas.Series(["hello", " ", "world"]);
-      OutputDataSet = pd.DataFrame(mytextvariable);
-      '
-      , @input_data_1 = N''
-  WITH RESULT SETS(([Col1] CHAR(20) NOT NULL));
-  ```
+>
+> ```sql
+> EXECUTE sp_execute_external_script @language = N'Python'
+>       , @script = N'
+>       import pandas as pd
+>       mytextvariable = pandas.Series(["hello", " ", "world"]);
+>       OutputDataSet = pd.DataFrame(mytextvariable);
+>       '
+>       , @input_data_1 = N''
+> WITH RESULT SETS(([Col1] CHAR(20) NOT NULL));
+> ```
 
 ## <a name="check-python-version"></a>Проверка версии Python
 
-Если вы хотите узнать, какая версия Python установлена в вашем экземпляре SQL Server, выполните следующий сценарий.
+Если вы хотите узнать, какая версия Python установлена на сервере, выполните следующий сценарий.
 
 ```sql
 EXECUTE sp_execute_external_script @language = N'Python'
@@ -224,13 +229,13 @@ GO
 **Результаты**
 
 ```text
-STDOUT message(s) from external script: 
+STDOUT message(s) from external script:
 3.5.2 |Continuum Analytics, Inc.| (default, Jul  5 2016, 11:41:13) [MSC v.1900 64 bit (AMD64)]
 ```
 
 ## <a name="list-python-packages"></a>Список пакетов Python
 
-Майкрософт предоставляет ряд пакетов Python, которые предустанавливаются со службами машинного обучения SQL Server в вашем экземпляре SQL Server.
+Корпорация Майкрософт предоставляет ряд пакетов Python, которые устанавливаются вместе со Службами машинного обучения.
 
 Чтобы просмотреть список установленных пакетов Python вместе с их версиями, выполните следующий сценарий.
 
@@ -257,5 +262,4 @@ GO
 Сведения о том, как применять структуры данных при использовании Python в машинном обучении SQL, см. в этом кратком руководстве:
 
 > [!div class="nextstepaction"]
-> [Краткое руководство. Работа с типами данных и объектами при использовании Python в службах машинного обучения SQL Server](quickstart-python-data-structures.md)
-
+> [Краткое руководство. Использование структур данных и объектов с помощью Python](quickstart-python-data-structures.md)

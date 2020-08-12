@@ -1,21 +1,21 @@
 ---
 title: Расширение сборки проекта базы данных для формирования статистики модели
+description: Узнайте, как создать, установить и протестировать участник сборки, который выводит статистику из модели базы данных SQL при сборке проекта базы данных.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: fbbedff0adbe0302465344d437f9646bf68d997f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9365c90104fb7291a130f338e88907dce932dd7a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242692"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894019"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Пошаговое руководство. Расширение сборки проекта базы данных для формирования статистики модели
 
@@ -29,7 +29,7 @@ ms.locfileid: "75242692"
   
 -   [Тестирование участника сборки](#TestBuildContributor)  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
 Для выполнения этого пошагового руководства требуются следующие компоненты:  
   
 -   Необходимо установить версию Visual Studio, которая включает SQL Server Data Tools (SSDT) и поддерживает разработку VB или C#.  
@@ -508,7 +508,7 @@ ms.locfileid: "75242692"
         </Project>  
         ```  
   
-    4.  В файле SQLPROJ каждого проекта, в котором вы хотите запускать участников, импортируйте файл TARGETS, добавив следующую инструкцию в файл SQLPROJ после узла \<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/>:  
+    4.  В файле SQLPROJ для любого проекта, где вы хотите запустить участники, импортируйте файл целей построения, добавив следующую инструкцию в файл SQLPROJ после узла \<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/> в файле.  
   
         ```  
         <Import Project="$(MSBuildExtensionsPath)\MyContributors\MyContributors.targets " />  
@@ -525,7 +525,7 @@ ms.locfileid: "75242692"
   
 1.  В Visual Studio щелкните правой кнопкой мыши свой проект и выберите "Построить повторно". Проект будет перестроен, и откроется сформированная статистика модели, которая будет включена в вывод сборки и записана в файл ModelStatistics.xml. Заметьте, что в обозревателе решений может потребоваться перейти на вкладку "Показать все файлы", чтобы увидеть XML-файл.  
   
-2.  Откройте командную строку. Для этого в меню **Пуск** щелкните **Все программы**, **Microsoft Visual Studio<Visual Studio Version>** , **Средства Visual Studio**, затем **Командная строка Visual Studio(<Visual Studio Version>)** .  
+2.  Откройте командную строку. Для этого в меню **Пуск** щелкните **Все программы**, **Microsoft Visual Studio<Visual Studio Version>**, **Средства Visual Studio**, затем **Командная строка Visual Studio(<Visual Studio Version>)**.  
   
 3.  Используя командную строку, перейдите в каталог, содержащий проект SQL.  
   

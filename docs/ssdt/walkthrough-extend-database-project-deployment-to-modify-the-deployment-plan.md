@@ -1,21 +1,21 @@
 ---
 title: Расширение процесса развертывания проекта базы данных для изменения плана развертывания
+description: Создание участника развертывания типа DeploymentPlanModifier, который программирует пакеты скриптов развертывания для повторного запуска при возникновении ошибок во время выполнения.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 22b077b1-fa25-49ff-94f6-6d0d196d870a
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 1f4c73d02d131a0399fd8dde7698592629ef2726
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3fa3d424d3c6d46ba129c96d935612ce687b3ba0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242665"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882911"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>Пошаговое руководство. Расширение процесса развертывания проекта базы данных для изменения плана развертывания
 
@@ -29,7 +29,7 @@ ms.locfileid: "75242665"
   
 -   [выполнение или тестирование применяемого участника развертывания](#TestDeploymentContributor).  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
 Для выполнения этого пошагового руководства требуются следующие компоненты:  
   
 -   Необходимо установить версию Visual Studio, которая включает SQL Server Data Tools и поддерживает разработку VB или C#.  
@@ -181,7 +181,7 @@ ms.locfileid: "75242665"
   
     ```  
   
-    Этот код определяет несколько локальных переменных и задает цикл, осуществляющий обработку всех шагов плана развертывания. После завершения цикла необходимо выполнить некоторую последующую обработку и удалить временную таблицу, созданную во время развертывания для отслеживания хода выполнения плана. Основными применяемыми здесь типами являются [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx) и [DeploymentScriptStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptstep.aspx). Основной метод — AddAfter.  
+    Этот код определяет несколько локальных переменных и задает цикл, осуществляющий обработку всех шагов плана развертывания. После завершения цикла необходимо выполнить некоторую последующую обработку и удалить временную таблицу, созданную во время развертывания для отслеживания хода выполнения плана. Здесь типы ключей: [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx) и [DeploymentScriptStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentscriptstep.aspx). Основной метод — AddAfter.  
   
 3.  Теперь добавим дополнительный шаг обработки вместо комментария с текстом «Ввести дополнительный шаг обработки здесь»:  
   
@@ -687,7 +687,7 @@ ms.locfileid: "75242665"
   
         ```  
   
-    4.  В файле SQLPROJ каждого проекта, в котором будут запускаться участники, импортируйте файл целей построения, добавив следующую инструкцию в файл SQLPROJ после узла \<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/> в файле:  
+    4.  В файле SQLPROJ для любого проекта, где вы хотите запустить участники, импортируйте файл целей построения, добавив следующую инструкцию в файл SQLPROJ после узла \<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/> в файле.  
   
         ```  
         <Import Project="$(MSBuildExtensionsPath)\MyContributors\MyContributors.targets " />  
@@ -791,6 +791,6 @@ ms.locfileid: "75242665"
   
 ## <a name="see-also"></a>См. также:  
 [Изменение процесса сборки и развертывания базы данных с помощью участников сборки и развертывания](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
-[Walkthrough: Extend Database Project Build to Generate Model Statistics](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md) (Пошаговое руководство. Расширение сборки для проекта базы данных для создания статистики модели)  
+[Пошаговое руководство. Расширение сборки проекта базы данных для формирования статистики модели](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md)  
 [Пошаговое руководство. Расширение процесса развертывания проекта базы данных для анализа плана развертывания](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
   

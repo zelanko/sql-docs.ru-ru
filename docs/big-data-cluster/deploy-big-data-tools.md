@@ -5,20 +5,20 @@ description: Узнайте, как установить инструменты,
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 01/07/2020
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cafec0d1542cd2ec6a02557b400a17b6d0d0ddad
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 3fe867d6f075067d949becdbcae4630f1ad019d7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606676"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784311"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Установка средств для работы с большими данными SQL Server 2019
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 В этой статье описываются клиентские средства, которые должны быть установлены для создания, контроля и использования [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. В следующем разделе приведен список средств и ссылки на инструкции по установке. Перед развертыванием кластера больших данных настройте средства, отмеченные как обязательные в Windows или Linux.
 
@@ -37,6 +37,7 @@ ms.locfileid: "83606676"
 | **mssql-cli** | Необязательно | Современный интерфейс командной строки для запроса SQL Server ([дополнительные сведения](../tools/mssql-cli.md)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
 | **sqlcmd** | Для некоторых сценариев | Старый интерфейс командной строки для запроса SQL Server ([дополнительные сведения](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15)). Перед установкой пакета SQLCMD может потребоваться установка драйвера Microsoft ODBC 11 для SQL Server. | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
 | `curl`<sup>3</sup> | Для некоторых сценариев | Программа командной строки для передачи данных по URL-адресам. | [Windows](https://curl.haxx.se/windows/) \| Linux: установите пакет cURL |
+| `oc` | Требуется для развертываний Red Hat OpenShift и Azure Redhat OpenShift. |`oc` — это интерфейс командной строки (CLI) в Open Shift. | [Установка CLI](https://docs.openshift.com/container-platform/4.4/cli_reference/openshift_cli/getting-started-cli.html#installing-the-cli)
 
 <sup>1</sup> Необходимо использовать `kubectl` версии 1.13 или более поздней. Кроме того, версия `kubectl` должна отстоять от младшей версии кластера Kubernetes не более чем на единицу. Если вы хотите установить определенную версию в клиенте `kubectl`, см. статью [Установка двоичных файлов `kubectl` при помощи curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl) (в Windows 10 для запуска curl используйте cmd.exe, а не Windows PowerShell).
 

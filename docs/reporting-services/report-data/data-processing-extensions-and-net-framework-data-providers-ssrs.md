@@ -1,5 +1,6 @@
 ---
 title: Модули обработки данных и поставщики данных .NET Framework | Документация Майкрософт
+description: Сведения о модулях обработки данных, компоненте, устанавливаемом вместе с Reporting Services, и поставщиках данных .NET Framework.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 42a5afb5-f4c8-4957-b1fd-77bf39afa5be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1be86b9522f0386fff2d1014c3d94c652411f029
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5c3e14debc6e14ebff0ef31cb47f560271b1a9b6
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082569"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812279"
 ---
 # <a name="data-processing-extensions-and-net-framework-data-providers-ssrs"></a>Модули обработки данных и поставщики данных .NET Framework (службы SSRS)
   Модуль обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] — это компонент, устанавливаемый вместе со службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]и предназначенный для получения данных из источников данных конкретного типа, а также предоставляющий дополнительную поддержку при проектировании и обработке отчетов. Модуль обработки данных служб [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] — это компонент, предоставляемый [!INCLUDE[msCoName](../../includes/msconame-md.md)] или сторонними поставщиками, который поддерживает интерфейсы <xref:System.Data> , позволяющие получать и изменять данные из источника данных определенного типа.  

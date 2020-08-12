@@ -1,5 +1,6 @@
 ---
 title: Установка компонентов бизнес-аналитики
+description: В этой статье приводятся ссылки на сведения об установке компонентов SQL Server, которые входят в состав платформы бизнес-аналитики Майкрософт.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 67399b24-e48a-49f3-9dd4-32d78c6a2ece
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f1fe29347adabe175745d6994000d7f1f68b05dd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 805247f2fdf491bf75295c232e15d4b066ac179c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253453"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893957"
 ---
 # <a name="install-sql-server-business-intelligence-features"></a>Установка компонентов бизнес-аналитики SQL Server 2016
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Компоненты SQL Server, которые являются частью платформы бизнес-аналитики Майкрософт, включают службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]и несколько клиентских приложений, используемых для создания аналитических данных и работы с ними. В этом разделе документации по программе установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] рассказывается, как установить эти функции.  
   

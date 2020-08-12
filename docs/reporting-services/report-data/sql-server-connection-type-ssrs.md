@@ -1,5 +1,6 @@
 ---
 title: Тип соединения SQL Server | Документация Майкрософт
+description: Сведения о типе подключения SQL Server и включении данных из базы данных SQL Server в отчет.
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 957e7091-e08f-48d2-9506-872227ae8b20
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 916bf1dc2bf861b46b01a069b6fbe15768e4bc1b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e5b7527f0af44931307acc930468df8d4d6404e1
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081362"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812230"
 ---
 # <a name="sql-server-connection-type-ssrs"></a>Тип соединения SQL Server (службы SSRS)
   Чтобы включить в отчет данные из базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], необходимо иметь набор данных, основанный на источнике данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот встроенный тип источника данных основан на модуле обработки данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Используйте этот тип источника данных для соединения и извлечения данных из баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] текущей версии и более ранних версий.  
@@ -48,7 +49,7 @@ Data Source=<server>;Initial Catalog=AdventureWorks
   
 -   Учетные данные не требуются. Чтобы использовать этот параметр, необходима учетная запись автоматического выполнения, настроенная на сервере отчетов. Дополнительные сведения см. в разделе [Настройка учетной записи автоматического выполнения &#40;диспетчер конфигурации служб SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md). 
   
- Дополнительные сведения см. в статьях [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) и [Задание учетных данных и сведениях о соединении для источников данных отчета](specify-credential-and-connection-information-for-report-data-sources.md).  
+ См. сведения о [создании строк подключения к данным (построитель отчетов и SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) и [определении учетных данных и сведений о подключении для источников данных отчета](specify-credential-and-connection-information-for-report-data-sources.md).  
   
   
 ##  <a name="queries"></a><a name="Query"></a> Запросы  
@@ -156,7 +157,7 @@ WHERE EmployeeID = (@EmpID)
  [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
  Предоставляет общие сведения о доступе к данным отчета.  
   
- [Создание строк подключения к данным (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+ [Создание строк подключения к данным (построитель отчетов и SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  Предоставляет сведения о подключениях к данным и источникам данных.  
   
  [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

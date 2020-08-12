@@ -1,6 +1,7 @@
 ---
 title: Анализ взаимоблокировок
 titleSuffix: SQL Server Profiler
+description: Выявление причины взаимоблокировки путем воспроизведения и отображения событий взаимоблокировки для анализа в SQL Server Profiler и путем создания графов ожидания.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
-ms.openlocfilehash: 15d41ae2517a3eadb8305a359f4576fb4407020b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8adc8e6839b6af9765139d0fe26b38cb1d1253c8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307370"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774940"
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>Анализ взаимоблокировок в приложении SQL Server Profiler
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] используется для определения причины взаимоблокировки. Взаимоблокировка возникает, когда имеется циклическая зависимость между несколькими потоками или процессами для некоторого набора ресурсов в сервере SQL Server. При помощи приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]можно создавать трассировку, которая записывает, воспроизводит и отображает для анализа события взаимоблокировки.  
   

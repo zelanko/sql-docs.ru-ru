@@ -1,5 +1,6 @@
 ---
 title: Создание, изменение и удаление общих источников данных | Документация Майкрософт
+description: Узнайте, как управлять источниками данных, на который могут ссылаться несколько отчетов, моделей и управляемых данными подписок, работающих на сервере отчетов служб Reporting Services.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3cb8f79b892b639e618143fd138920650fb5cfda
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 027ff3184e38b1d1848c6a42d2387cd9a8677dc3
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081824"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812289"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>Создание, изменение и удаление общих источников данных (SSRS)
   Общий источник данных — это набор свойств соединения с источником данных, на который могут ссылаться несколько отчетов, моделей и управляемых данными подписок, работающих на сервере отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Общие источники данных предоставляют удобный способ управления часто изменяющимися свойствами источника данных. Если изменились свойства учетной записи пользователя или пароль или база данных перенесена на другой сервер, все сведения о соединении можно изменить в одном месте.  
@@ -30,10 +31,10 @@ ms.locfileid: "77081824"
   
  Общий источник данных состоит из следующих частей:  
   
-|Часть|Description|  
+|Часть|Описание|  
 |----------|-----------------|  
 |Имя|Имя, которое идентифицирует элемент в иерархии папок сервера отчетов.|  
-|Description|Описание, которое отображается с элементом на веб-портале при просмотре содержимого папки.|  
+|Описание|Описание, которое отображается с элементом на веб-портале при просмотре содержимого папки.|  
 |Тип соединений|Модуль обработки данных, используемый с источником данных. Можно использовать только модули обработки данных, развернутые на сервере отчетов. Дополнительные сведения о модулях обработки данных, включенных в службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], см. в разделе [Источники данных, поддерживаемые службами Reporting Services (службы SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).|  
 |Строка подключения|Строка соединения для базы данных. Дополнительные сведения о строках соединения и примеры их использования с часто используемыми источниками данных см. в статье [Создание строк подключения к данным (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).|  
 |Тип учетных данных|Указывает, каким образом соединение получает учетные данные и используются ли они после того, как соединение установлено. Дополнительные сведения см. в статье [Задание учетных данных и сведениях о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).|  
@@ -214,7 +215,7 @@ ms.locfileid: "77081824"
      Для моделей отчетов список зависимых элементов содержит отчеты, созданные в построителе отчетов. Для общих источников данных список зависимых элементов может включать как отчеты, так и модели отчетов.  
   
 ## <a name="see-also"></a>См. также:  
- [Создание строк подключения к данным (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
+ [Create data connection strings — Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  (Создание строк подключения к данным (построитель отчетов и службы SSRS))  
  [Управление источниками данных отчета](../../reporting-services/report-data/manage-report-data-sources.md)   
  [Настройка свойств источника данных для отчета с разбивкой на страницы](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   

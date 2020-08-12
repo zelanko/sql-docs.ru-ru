@@ -1,6 +1,7 @@
 ---
 title: Фильтрация событий в трассировке
 titleSuffix: SQL Server Profiler
+description: Узнайте, как задать фильтр для ограничения событий, которые SQL Server Profiler записывает во время трассировки. Ознакомьтесь с форматами, необходимыми для определенных фильтров.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 66780fe3a71f784679e80779985740a3d9069777
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fd8eae33f37b3e21716a0eabd894f77558ac34da
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307231"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790015"
 ---
 # <a name="filter-events-in-a-trace-sql-server-profiler"></a>фильтровать события в трассировке (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Фильтры ограничивают накопление событий в трассировке. Если фильтр не установлен, то на выход трассировки возвращаются все события выбранных классов событий. Установка фильтра трассировки необязательна. Однако фильтр минимизирует затраты ресурсов при трассировке.  
   
@@ -48,7 +49,7 @@ ms.locfileid: "75307231"
   
          -или-  
   
-    -   В диалоговом окне**Общие параметры** выбран параметр **Применять региональные настройки для отображения даты и времени** . Чтобы открыть диалоговое окно **Общие параметры**, в меню [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Инструменты**в** выберите пункт **Параметры**.  
+    -   В диалоговом окне**Общие параметры** выбран параметр **Применять региональные настройки для отображения даты и времени** . Чтобы открыть диалоговое окно **Общие параметры**, в меню **Инструменты** в [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] выберите пункт **Параметры**.  
   
          и  
   

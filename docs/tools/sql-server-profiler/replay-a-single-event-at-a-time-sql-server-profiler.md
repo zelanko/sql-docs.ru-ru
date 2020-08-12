@@ -1,6 +1,7 @@
 ---
 title: Воспроизведение одиночного события за раз
 titleSuffix: (SQL Server Profiler
+description: Узнайте, как воспроизводить по одному событию трассировки за раз в SQL Server Profiler, пошагово выполняя файл трассировки воспроизведения или таблицу.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: e8f217e2117e22edbd5f763b71c51cb078d49301
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 151c562d5448d94743ba13a49954cd2e7a5c0547
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307509"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774726"
 ---
 # <a name="replay-a-single-event-at-a-time-sql-server-profiler"></a>воспроизвести одиночное событие за раз (приложение SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 В данном разделе описывается, как с помощью приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]воспроизвести одно событие за раз в файл трассировки воспроизведения или таблицу.  
   

@@ -1,6 +1,6 @@
 ---
 title: Настройка HealthCheckTimeout для группы доступности
-description: Настройте параметр HealthCheckTimeout для группы доступности Always On. Он используется для указания времени, которое библиотека DLL ресурсов SQL Server должна подождать, прежде чем сообщать об отсутствии ответа.
+description: Настройка параметра HealthCheckTimeout для группы доступности AlwaysOn, указывающего время, которое библиотека DLL ресурсов SQL Server ожидает, прежде чем сообщать об отсутствии ответа.
 ms.custom: seo-lt-2019
 ms.date: 03/09/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e3baf48a747db8dfdc9fb18387ac92dd0c53b4c8
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 83c59052646a870b513ebe79835d4c5a9345a5d9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925125"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882950"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>Настройка параметров свойства HealthCheckTimeout
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Параметр HealthCheckTimeout используется для задания временного интервала (в миллисекундах) ожидания библиотекой ресурсов SQL Server данных, возвращаемых хранимой процедурой [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) , до появления сообщения о том, что экземпляр отказоустойчивого кластера AlwaysOn SQL Server (FCI) не отвечает. Изменения, внесенные в параметры времени ожидания, вступают в силу немедленно и не требуют перезапуска ресурса SQL Server.  
   
 -   **Перед началом работы**  [Ограничения](#Limits), [Безопасность](#Security)  

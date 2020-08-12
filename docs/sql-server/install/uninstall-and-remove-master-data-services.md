@@ -1,5 +1,6 @@
 ---
 title: Установка и удаление служб Master Data Services | Документация Майкрософт
+description: Этот процесс удаления позволяет удалить папки и файлы Master Data Services, а также удалить диспетчер конфигурации Master Data Services с локального компьютера.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -7,23 +8,23 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: efc2431c-588b-42e7-b23b-c875145a33f6
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: a0ed3134e26bc2ed0f581a722de50526a49fb9e3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ec6345d4470c95669b13a08bde103057409bde67
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68126039"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883717"
 ---
 # <a name="uninstall-and-remove-master-data-services"></a>Удаление служб Master Data Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  Чтобы удалить компонент [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] из экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выполните действия из раздела [Удаление существующего экземпляра SQL Server (программа установки)](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md) и укажите [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] в качестве компонента для удаления на странице **Выбор компонентов**. В процессе удаления удаляются файлы и папки [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , а также удаляется [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] на локальном компьютере.  
+   Чтобы удалить компонент [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] из экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выполните действия из раздела [Удаление существующего экземпляра SQL Server (программа установки)](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md) и укажите [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] в качестве компонента для удаления на странице **Выбор компонентов**. В процессе удаления удаляются файлы и папки [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , а также удаляется [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] на локальном компьютере.  
   
  Чтобы избежать потери данных или нарушения работы других компьютеров в системе, некоторые компоненты при удалении не удаляются или не изменяются. Чтобы определить, следует ли оставить или удалить элементы, просмотрите следующую таблицу.  
   
-|Элемент|Description|  
+|Элемент|Описание|  
 |----------|-----------------|  
 |Файлы и папки|В процессе удаления удаляется большинство файлов и папок, расположенных в пути установки.<br /><br /> В процессе удаления в пути установки не удаляются папки Master Data Services и MDSTempDir. После завершения процесса удаления эти папки можно удалить из файловой системы вручную. Дополнительные сведения см. в разделе [Разрешения для папок и файлов (службы Master Data Services)](../../master-data-services/folder-and-file-permissions-master-data-services.md).|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] сборки|Процесс удаления удаляет сборки [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] из глобального кэша сборок (GAC).|  

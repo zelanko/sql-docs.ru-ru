@@ -4,22 +4,22 @@ titleSuffix: SQL machine learning
 description: Выполните ряд простых сценариев R с использованием машинного обучения SQL. Узнайте, как применять хранимую процедуру sp_execute_external_script для выполнения сценария.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/23/2020
+ms.date: 05/21/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ed4f4899869dbc9609f29d935c80a7df88fa3d4c
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 2327b6644725c77949b49c661bc7d02d13c4e47d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606756"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772361"
 ---
 # <a name="quickstart-run-simple-r-scripts-with-sql-machine-learning"></a>Краткое руководство. Выполнение простых сценариев R с использованием машинного обучения SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 В этом кратком руководстве вы запустите ряд простых сценариев R с помощью [Служб машинного обучения SQL Server](../sql-server-machine-learning-services.md) или в [Кластерах больших данных](../../big-data-cluster/machine-learning-services.md). Также вы узнаете, как применить хранимую процедуру [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) для выполнения скрипта в экземпляре SQL Server.
@@ -29,6 +29,9 @@ ms.locfileid: "83606756"
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 В этом кратком руководстве вы запустите ряд простых сценариев R, используя службы [SQL Server R Services](../r/sql-server-r-services.md). Также вы узнаете, как применить хранимую процедуру [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) для выполнения скрипта в экземпляре SQL Server.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+В этом кратком руководстве вы запустите ряд простых скриптов R, используя [Службы машинного обучения в управляемом экземпляре SQL Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview). Также вы узнаете, как применить хранимую процедуру [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) для выполнения скрипта в базе данных.
 ::: moniker-end
 
 ## <a name="prerequisites"></a>Предварительные требования
@@ -43,6 +46,9 @@ ms.locfileid: "83606756"
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 - SQL Server 2016 R Services. Сведения об установке служб R Services см. в [руководстве по установке для Windows](../install/sql-r-services-windows-install.md). 
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Службы машинного обучения в Управляемом экземпляре SQL Azure. Сведения о регистрации см. в статье [Общие сведения о Службах машинного обучения в управляемом экземпляре SQL Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
 - Инструмент для выполнения SQL-запросов, содержащих сценарии R. В этом кратком руководстве используется [Azure Data Studio](../../azure-data-studio/what-is.md).
@@ -198,12 +204,7 @@ GO
 
 ## <a name="check-r-version"></a>Проверка версии R
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-Если вы хотите узнать, какая версия R была установлена со Службами машинного обучения SQL Server, выполните приведенный ниже сценарий.
-::: moniker-end
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-Если вы хотите узнать, какая версия R была установлена со службами SQL Server 2016 R Services, выполните приведенный ниже сценарий.
-::: moniker-end
+Если вы хотите узнать, какая версия R установлена, выполните приведенный ниже скрипт.
 
 ```sql
 EXECUTE sp_execute_external_script @language = N'R'

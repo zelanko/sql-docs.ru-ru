@@ -1,5 +1,6 @@
 ---
 title: Элементы отчета и наборы данных в построителе отчетов | Документы Майкрософт
+description: Сведения об элементах отчета, которые можно добавить в галерее элементов отчетов в построителе отчетов. Также узнайте о наборах данных, от которых зависят отчеты.
 ms.date: 09/16/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1fe86481-9c41-4535-a4b7-c7c4d780cab6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a06344a119dfba635a07d0050a61f561065a2984
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 80d075cc85f3784459fa7302e601e95a1f11970b
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571200"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85808374"
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>Элементы отчета и наборы данных в построителе отчетов
   В построителе отчетов самым простым способом включения данных в отчет является добавление элементов отчета из коллекции элементов отчета. Части отчетов содержат наборы данных, от которых они зависят, так называемые *зависимые наборы данных*. Зависимые наборы данных основываются на общих источниках данных и могут быть внедренными и общими. Узнайте больше об [элементах отчета](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  

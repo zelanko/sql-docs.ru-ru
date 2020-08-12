@@ -1,6 +1,7 @@
 ---
 title: Параметры воспроизведения
 titleSuffix: SQL Server Profiler
+description: Обзор параметров, которые SQL Server Profiler использует при воспроизведении захваченной трассировки. Сведения о том, как использовать диалоговое окно "Конфигурация воспроизведения" для настройки параметров.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 649bf543417c0772c23c6338862e33b6bac9bad1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bbeda6af1316bacd6b0cca561a989f5e9bd966c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307497"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789912"
 ---
 # <a name="replay-options-sql-server-profiler"></a>Параметры воспроизведения (приложение SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Перед воспроизведением захваченной трассировки с помощью приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]задайте параметры воспроизведения в диалоговом окне **Конфигурация воспроизведения** . Чтобы открыть его, откройте файл трассировки воспроизведения в приложении [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]и в меню **Воспроизведение** выберите **Запуск**. Сведения о разрешениях, необходимых для воспроизведения трассировки, см. в разделе [Permissions Required to Run SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md).  
   

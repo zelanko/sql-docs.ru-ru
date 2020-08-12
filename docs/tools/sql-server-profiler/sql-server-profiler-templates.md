@@ -1,6 +1,7 @@
 ---
 title: Шаблоны
 titleSuffix: SQl Server Profiler
+description: Сведения о предопределенных шаблонах, имеющихся в SQL Server Profiler, и их использовании. Узнайте, как создавать пользовательские шаблоны и изменять шаблон по умолчанию.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 8b0d52f5405e3519b861b7642264460b316acd03
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d278cd7b25dd4a9879f2c3a498bf2288e582beb1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307844"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748638"
 ---
 # <a name="sql-server-profiler-templates"></a>Шаблоны приложения SQL Server Profiler
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Можно использовать приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] для создания шаблонов, определяющих классы событий и столбцы данных с целью включения в трассировку. После определения и сохранения шаблона можно запустить трассировку, которая будет записывать данные для каждого выбранного класса событий. Шаблоны можно использовать для многих трассировок; сам шаблон не выполняется.  
 
@@ -51,7 +52,7 @@ ms.locfileid: "75307844"
 ## <a name="default-template"></a>Шаблон по умолчанию  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] автоматически назначает шаблон **Standard Edition** в качестве шаблона по умолчанию для любой новой трассировки. Однако шаблон по умолчанию можно заменить на любой предопределенный шаблон или определенный пользователем шаблон. Чтобы изменить шаблон по умолчанию, установите флажок **Применять как шаблон по умолчанию для выбранного типа сервера** при создании или редактировании шаблона на вкладке **Общие** в диалоговом окне **Свойства шаблона трассировки** .  
   
- Чтобы перейти в диалоговое окно **Свойства шаблона трассировки**, в меню [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Файл**в** выберите пункт **Шаблоны**, а затем выберите пункт **Создать шаблон** или **Изменить шаблон**.  
+ Чтобы перейти в диалоговое окно **Свойства шаблона трассировки**, в меню **Файл** в [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] выберите пункт **Шаблоны**, а затем выберите пункт **Создать шаблон** или **Изменить шаблон**.  
   
 > [!NOTE]  
 >  Для каждого типа сервера существует свой шаблон по умолчанию. Изменения шаблона по умолчанию для одного типа сервера не влияет на шаблон по умолчанию для сервера другого типа. Дополнительные сведения о настройке шаблона по умолчанию для определенного типа сервера см. в разделе [Установка значений по умолчанию для определения трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md).  

@@ -1,5 +1,6 @@
 ---
 title: Неизвестная служба (вкладка «Вход в систему»)
+description: Узнайте больше о вкладке "Вход в систему" в диалоговом окне "Свойства неизвестной службы" в SQL Server. Узнайте, как использовать ее для указания учетной записи, а также для запуска или завершения работы службы.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: e9b35cb5-d8ae-42ea-b59e-deedc99c4823
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8fae62bb72e41cd9f87200a6bcfd2f17eb780697
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 423b2610627e4c6447dbaa1db8ac4624044a31ea
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307594"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880280"
 ---
 # <a name="unknown-service-log-on-tab"></a>Неизвестная служба (вкладка «Вход в систему»)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Диспетчеру конфигурации [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не удается идентифицировать эту службу.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] получает служебные данные от поставщика инструментария WMI на компьютере, где запущена служба. Произошла ошибка при считывании свойств службы или свойства службы являются неполными. Чтобы разрешить проблему, попытайтесь закрыть и заново открыть диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или проверьте поставщика инструментария WMI на компьютере, где запущена служба.  

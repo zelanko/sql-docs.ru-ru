@@ -1,5 +1,6 @@
 ---
 title: SQL Server Data Tools
+description: Ознакомьтесь с ресурсами по задачам разработки баз данных, которые можно выполнить с помощью SQL Server Data Tools, таким как проектирование таблиц и создание расширений функций.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,16 +9,15 @@ f1_keywords:
 ms.assetid: 5f08f15a-851d-4026-a557-28b3c6492efe
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 2049550374569d10631239419cd380c115022ff2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2fa96a9175124e3aa1bc5f0e7008422fafe85aab
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256343"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883439"
 ---
 # <a name="sql-server-data-tools"></a>SQL Server Data Tools
 
@@ -29,7 +29,7 @@ ms.locfileid: "75256343"
   
 В следующих разделах и подразделах обсуждается, как SSDT может помочь в разработке баз данных. Включены инструкции для выполнения задач, связанных с проектированием баз данных. Эти задачи, написанные во многом подобно учебнику и выполняемые в определенном порядке, содержат примеры для вымышленной компании Northwind Traders, занимающейся импортом и экспортом деликатесов по всему миру.  
   
-|Подразделы и раздел|Description|  
+|Подразделы и раздел|Описание|  
 |-------------------|---------------|  
 |[Разработка базы данных вне сети с учетом проекта](../ssdt/project-oriented-offline-database-development.md)|В подразделах этого раздела описываются функции SQL Server Data Tools для создания, сборки, отладки и публикации проекта базы данных.|  
 |[Разработка баз, ориентированная на проекты, с помощью программ командной строки](../ssdt/project-oriented-database-development-using-command-line-tools.md)|В подразделах этого раздела описываются средства командной строки, позволяющие выполнять ряд проектно ориентированных сценариев разработки баз данных.|  

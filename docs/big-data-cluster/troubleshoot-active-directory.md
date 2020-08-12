@@ -5,20 +5,20 @@ description: Устранение неполадок при развертыва
 author: rl-msft
 ms.author: rafidl
 ms.reviewer: mikeray
-ms.date: 03/12/2020
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 69762b5474f72256975af06e6c79d664de283809
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 302731f3f0c37f60c4944b7df44d02b2cfc64a8b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153252"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772887"
 ---
 # <a name="troubleshoot-sql-server-big-data-cluster-active-directory-integration"></a>Устранение неполадок при интеграции кластера больших данных SQL Server с Active Directory
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 В этой статье описывается устранение неполадок при развертывании кластера больших данных SQL Server в режиме Active Directory.
 
@@ -123,9 +123,9 @@ zookeeper-2       2/2     Running   0          32m
 
 ## <a name="cause"></a>Причина
 
-В примере выше развертыванию не удается создать имя входа для пользователя домена, поскольку доменная группа ограничена локальным доменом. Используйте группы домена с глобальной или универсальной областью. Требования к области группы AD указаны в разделе [Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в режиме Active Directory](deploy-active-directory.md).
+В примере выше развертыванию не удается создать имя входа для пользователя домена, поскольку доменная группа ограничена локальным доменом. Используйте группы с глобальной или универсальной областью. Требования к области группы AD указаны в разделе [Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в режиме Active Directory](deploy-active-directory.md).
 
-## <a name="resolution"></a>Решение
+## <a name="verify"></a>Проверка
 
 Проверьте область группы домена (<`domain-group`>). Используйте [get-adgroup](/powershell/module/addsadministration/get-adgroup/).
 

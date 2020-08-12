@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bbcff4ee14db85a3a973496ce8a5cb24772a35b9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: f07f4e5f6e833419b922dd6f8e6d7b58becf96b5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634286"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85793289"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver-for-sql-server"></a>Заметки о выпуске Microsoft JDBC Driver for SQL Server
 
@@ -51,7 +51,7 @@ Microsoft JDBC Driver версии 8.2 для SQL Server теперь совм�
 | Изменение функции Always Encrypted | Сведения |
 | :--------- | :------ |
 | Microsoft JDBC Driver версии 8.2 для SQL Server теперь поддерживает Always Encrypted с безопасными анклавами. Подробные сведения можно найти здесь: Always Encrypted с безопасными анклавами. |
-| Дополнительные сведения и пример кода. | См. подробнее об [использовании Always Encrypted с безопасными анклавами](always-encrypted-with-secure-enclaves.md). |
+| Дополнительные сведения и пример кода. | См. подробнее об [использовании Always Encrypted с безопасными анклавами](../../connect/jdbc/using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md). |
 | &nbsp; | &nbsp; |
 
 ### <a name="performance-improvement-when-retrieving-temporal-datatypes-from-sql-server-sup1sup"></a>Повышение производительности при извлечении темпоральных типов данных из SQL Server <sup>1</sup>
@@ -64,11 +64,11 @@ Microsoft JDBC Driver версии 8.2 для SQL Server теперь совм�
 
 <sup>1</sup> Из-за различий в обработке часовых поясов интерфейсами API java.util.Calendar и java.time.LocalDateTime это улучшение не влияет на темпоральные типы данных, с которыми связаны предоставленные пользователем объекты java.util.Calendar, и типы данных microsoft.sql.DateTimeOffset.
 
-### <a name="deployment-of-mssql-jdbc_auth-version-archdll-previously-sqljdbc_authdll-to-maven-repository"></a>Развертывание mssql-jdbc_auth-\<версия>-\<архитектура>.dll (ранее sqljdbc_auth.dll) в репозитории Maven
+### <a name="deployment-of-mssql-jdbc_auth-version-archdll-previously-sqljdbc_authdll-to-maven-repository"></a>Развертывание mssql-jdbc_auth-\<version>-\<arch>.dll (ранее sqljdbc_auth.dll) в репозитории Maven
 
 | Изменение, касающееся sqljdbc_auth.dll | Сведения |
 | :------------------- | :------ |
-| Начиная с версии 8.2 драйвер Microsoft JDBC Driver for SQL Server использует библиотеку mssql-jdbc_auth-\<версия>-\<архитектура>.dll вместо sqljdbc_auth.dll при проверке подлинности посредством Azure Active Directory. | &nbsp; |
+| Начиная с версии 8.2 драйвер Microsoft JDBC Driver for SQL Server использует библиотеку mssql-jdbc_auth-\<version>-\<arch>.dll вместо sqljdbc_auth.dll при проверке подлинности посредством Azure Active Directory. | &nbsp; |
 | Эта библиотека DLL также была добавлена в репозиторий Maven для упрощения доступа. | См. [эту страницу](https://search.maven.org/artifact/com.microsoft.sqlserver/mssql-jdbc_auth). |
 | &nbsp; | &nbsp; |
 
@@ -344,7 +344,7 @@ Microsoft JDBC Driver версии 6.4 для SQL Server полностью с�
 
 ### <a name="added-support-for-azure-ad-integrated-authentication-on-linuxmacos"></a>Добавлена ​​поддержка интегрированной проверки подлинности Azure AD в Linux и macOS
 
-Драйвер JDBC поддерживает встроенную проверку подлинности Azure Active Directory во всех поддерживаемых операционных системах (Windows, Linux, macOS) с Kerberos. Кроме того, в операционных системах Windows пользователи могут проходить проверку подлинности с помощью mssql-jdbc_auth-\<версия>-\<архитектура>.dll.
+Драйвер JDBC поддерживает встроенную проверку подлинности Azure Active Directory во всех поддерживаемых операционных системах (Windows, Linux, macOS) с Kerberos. Кроме того, в операционных системах Windows пользователи могут проходить проверку подлинности с помощью mssql-jdbc_auth-\<version>-\<arch>.dll.
 
 ### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-140"></a>Обновлена "Библиотека проверки подлинности Microsoft Azure Active Directory (ADAL4J) для Java" версии 1.4.0
 

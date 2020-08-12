@@ -1,5 +1,6 @@
 ---
 title: Диалоговое окно "Свойства набора данных" — "Параметры" (построитель отчетов) | Документы Майкрософт
+description: Узнайте, как использовать диалоговое окно "Свойства набора данных", чтобы изменять параметры данных, такие как параметры сортировки и обработка промежуточных итогов как подробных данных.
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 43e50133-45ef-47a2-b575-34dfcc28ec98
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e1db5bcd2401d1888fb6dc76e42c5840ed3b0b62
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 141e2f9639ecd89113f738546f47053d9ab630fd
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573122"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812269"
 ---
 # <a name="dataset-properties-dialog-box-options-report-builder"></a>Диалоговое окно «Свойства набора данных» — «Настройки» (построитель отчетов)
   Перейдите на вкладку **Настройки** в диалоговом окне **Свойства набора данных** , чтобы изменить параметры данных для запроса, такие как параметры сортировки и обработка промежуточных итогов как подробных данных. Дополнительные сведения о параметрах сортировки см. в разделе [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md).  

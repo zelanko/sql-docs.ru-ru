@@ -5,20 +5,20 @@ description: Эта статья описывает, как просмотрет
 author: yualan
 ms.author: alayu
 ms.reviewer: mikeray
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 45cf5461b9154d397ee5365fd275d2545a3cc376
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5e3c7f2f34f949f16821ad7c1dd6a3c3b0d4681e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73531587"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772826"
 ---
 # <a name="how-to-view-the-status-of-a-big-data-cluster"></a>Просмотр состояния кластера больших данных 
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 В этой статье описывается, как получить доступ к конечным точкам служб и просмотреть состояние кластера больших данных SQL Server. Вы можете использовать как Azure Data Studio, так и **azdata**, и в этой статье рассмотрены обе методики.
 
@@ -53,7 +53,9 @@ ms.locfileid: "73531587"
 - Мониторинг заданий Spark
 - Управление ресурсами Spark
 
-Вы можете напрямую щелкнуть эти ссылки. При доступе к этим панелям мониторинга вам придется пройти проверку подлинности. Для панелей мониторинга метрик и журналов укажите учетные данные администратора контроллера, которые задаются во время развертывания с помощью переменных среды **AZDATA_USERNAME** и **AZDATA_PASSWORD**. Панели мониторинга Spark будут использовать учетные данные шлюза (Knox): либо удостоверение AD в кластере, интегрированном с AD, либо пользователя **root** и переменную среды **AZDATA_PASSWORD**, если в кластере используется обычная проверка подлинности. 
+Вы можете напрямую щелкнуть эти ссылки. При доступе к этим панелям мониторинга вам придется пройти проверку подлинности. Для панелей мониторинга метрик и журналов укажите учетные данные администратора контроллера, которые задаются во время развертывания с помощью переменных среды **AZDATA_USERNAME** и **AZDATA_PASSWORD**. Панели мониторинга Spark будут использовать учетные данные шлюза (Knox): либо удостоверение AD в кластере, интегрированном с AD, либо пользователя **AZDATA_USERNAME** и переменную среды **AZDATA_PASSWORD**, если в кластере используется обычная проверка подлинности.
+
+[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 ### <a name="cluster-status-notebook"></a><a id="notebook"></a> Записная книжка состояния кластера
 

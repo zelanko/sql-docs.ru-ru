@@ -4,20 +4,20 @@ titleSuffix: SQL Server Language Extensions
 description: Узнайте, как вызывать классы Java из хранимых процедур SQL Server с помощью расширений языка SQL Server.
 author: dphansen
 ms.author: davidph
-ms.date: 11/05/2019
+ms.date: 06/25/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bdff924b63b11eda850378987498e8601367d3fe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5aa8659b57349efb7378209006bbada148206bcb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73658897"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735121"
 ---
 # <a name="how-to-call-the-java-runtime-in-sql-server-language-extensions"></a>Вызов среды выполнения Java в расширениях языка SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 [Расширения языка SQL Server](../language-extensions-overview.md) используют системную хранимую процедуру [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) в качестве интерфейса для вызова среды выполнения Java. 
 
@@ -114,6 +114,20 @@ with result sets ((column1 int))
 ```
 
 Дополнительные сведения см. в разделе [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
+
+## <a name="loopback-connection-to-sql-server"></a>Подключение к SQL Server с замыканием на себя
+
+Используйте подключение с замыканием на себя для обратного соединения с SQL Server через JDBC с целью чтения или записи данных из кода Java, выполняемого с помощью процедуры `sp_execute_external_script`. Его можно применять, если нельзя использовать аргументы **InputDataSet** и **OutputDataSet** процедуры `sp_execute_external_script`.
+Чтобы установить подключение с замыканием на себя в Windows, используйте следующий пример.
+
+```
+jdbc:sqlserver://localhost:1433;databaseName=Adventureworks;integratedSecurity=true;
+``` 
+
+Для установки подключения с замыканием на себя в Linux драйверу JDBC требуются три свойства подключения, определенные в следующем сертификате.
+
+[Client-Certificate-Authenication](https://github.com/microsoft/mssql-jdbc/wiki/Client-Certificate-Authentication-for-Loopback-Scenarios)
+
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

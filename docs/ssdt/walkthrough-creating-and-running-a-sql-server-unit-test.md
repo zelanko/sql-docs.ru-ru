@@ -1,21 +1,21 @@
 ---
 title: Создание и запуск модульного теста SQL Server
+description: Узнайте, как создать модульный тест SQL Server. Выполните пошаговые инструкции по настройке теста, который обнаруживает ошибку в хранимой процедуре.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: cb284457b86d6dd1e2284d6815a1b175640fa0c2
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: edc5f591746673f55dfc7ea10c99822ee0c13098
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087511"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882918"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Пошаговое руководство. Создание и запуск модульного теста SQL Server
 
@@ -181,7 +181,7 @@ ms.locfileid: "82087511"
     AS  
     BEGIN  
     INSERT INTO [Sales].[Customer] (CustomerName) VALUES (@CustomerName);  
-    SELECT SCOPE_IDENTITY()  
+    RETURN SCOPE_IDENTITY()  
     END  
     GO  
     PRINT N'Creating Sales.uspPlaceNewOrder...';  
@@ -274,7 +274,7 @@ ms.locfileid: "82087511"
   
 2.  Щелкните одну из хранимых процедур правой кнопкой мыши и выберите команду **Создать модульные тесты**, чтобы открыть диалоговое окно **Создание модульных тестов**.  
   
-3.  Установите флажки для всех пяти хранимых процедур: **Sales.uspCancelOrder**, **Sales.uspFillOrder**, **Sales.uspNewCustomer**, **Sales.uspPlaceNewOrder** и **Sales.uspShowOrderDetails**.  
+3.  Установите флажки для всех пяти хранимых процедур: **Sales.uspCancelOrder**, **Sales.uspFillOrder**, **Sales.uspNewCustomer**, **Sales.uspPlaceNewOrder**и **Sales.uspShowOrderDetails**.  
   
 4.  В раскрывающемся списке **Проект** выберите **Создать тестовый проект Visual C#** .  
   

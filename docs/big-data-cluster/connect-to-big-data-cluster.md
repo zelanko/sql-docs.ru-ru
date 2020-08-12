@@ -8,16 +8,16 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0c5ba08a492be621e4b1f8871bdfcb49983af26d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7b6f4b11848cd0108dec5f3a4e5de0c089a89b41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79285988"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784347"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Подключение к кластеру больших данных SQL Server с помощью Azure Data Studio
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 В этой статье описывается, как подключиться к [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] из Azure Data Studio.
 
@@ -47,7 +47,7 @@ ms.locfileid: "79285988"
 
 1. В разделе **Тип подключения** выберите **Microsoft SQL Server**.
 
-1. Введите название конечной точки, которую вы нашли для основного экземпляра SQL Server, в текстовом поле **Имя сервера** (например: **\<IP-адрес\>,31433**). 
+1. Введите название конечной точки, которую вы нашли для главного экземпляра SQL Server, в текстовом поле **Имя сервера** (например: **\<IP_Address\>,31433**). 
 
 1. Выберите тип проверки подлинности. Для основного экземпляра SQL Server, выполняемого в кластере больших данных, поддерживаются только **проверка подлинности Windows** и **вход с учетными данными SQL**. 
 

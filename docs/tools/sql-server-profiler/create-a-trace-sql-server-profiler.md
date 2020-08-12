@@ -1,6 +1,7 @@
 ---
 title: Создание трассировки
 titleSuffix: SQL Server Profiler
+description: Узнайте, как собирать данные событий в SQL Server Profiler путем создания трассировки. Ознакомьтесь с различными параметрами, которые можно задавать для трассировок.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 08/01/2016
-ms.openlocfilehash: 5a5c004bbc7e93720f18df998b989c46ced0188e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c9c3fd13687004c1e632e81819ea25bfac7a3689
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307333"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774887"
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>создать трассировку (приложение SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 В этом подразделе описывается, как создать трассировку при помощи [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] .  
   

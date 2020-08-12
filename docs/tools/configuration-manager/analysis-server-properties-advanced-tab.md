@@ -1,5 +1,6 @@
 ---
 title: Свойства сервера анализа данных (вкладка «Дополнительно»)
+description: Узнайте о параметрах на вкладке "Дополнительно" диалогового окна свойств сервера анализа данных, таких как каталог дампа и идентификатор экземпляра.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: f4415e35-8f50-4cb7-813e-bdfafbdee275
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bbf3cee39d32cfa8b48de1f81228e623463a09fd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 72da2262279318c71b7df0a59433af55db7ec1c6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306569"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892069"
 ---
 # <a name="analysis-server-properties-advanced-tab"></a>Свойства сервера анализа данных (вкладка «Дополнительно»)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Это служба Microsoft [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Если определены пользовательские свойства, они отображаются на этой вкладке вместе со значениями.  
   
 ## <a name="options"></a>Параметры  
@@ -33,7 +34,7 @@ ms.locfileid: "75306569"
  Отображает расположение дампа памяти в случае возникновения ошибки.  
   
  **Отчет об ошибках**  
- Если установлено значение **Да**, то в случае возникновения серьезного сбоя программа "Доктор Ватсон» направит сведения либо в [!INCLUDE[msCoName](../../includes/msconame-md.md)] , либо на сервер ошибок. Дополнительные сведения по отчетам об ошибках см. в разделе «Настройки параметров отчета об ошибках» электронной документации.  
+ Если установлено значение **Да**, то в случае возникновения серьезного сбоя программа "Доктор Ватсон» направит сведения либо в [!INCLUDE[msCoName](../../includes/msconame-md.md)], либо на сервер ошибок. Дополнительные сведения по отчетам об ошибках см. в разделе «Настройки параметров отчета об ошибках» электронной документации.  
   
  **Идентификатор экземпляра**  
  Указывает экземпляр, использующий эту службу.  

@@ -1,5 +1,6 @@
 ---
 title: Выполнение модульных тестов SQL Server
+description: Ознакомьтесь с модульными тестами в SQL Server. Просмотрите ресурсы по созданию тестов, созданию пользовательских условий тестов, выполнению тестов и интерпретации результатов.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,16 +9,15 @@ f1_keywords:
 ms.assetid: febcc87f-eb18-4c12-ba30-82ef0d49aaa3
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 93dfaf8cf202b0b9447574ecfc58cc13f151381b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d27d25d374d737cc51f7e0a5149556a4d5a92260
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256984"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883457"
 ---
 # <a name="running-sql-server-unit-tests"></a>Выполнение модульных тестов SQL Server
 
@@ -26,31 +26,31 @@ ms.locfileid: "75256984"
 ## <a name="ways-to-run-sql-server-unit-tests"></a>Способы запуска модульных тестов SQL Server  
 Модульные тесты SQL Server можно запускать несколькими способами в зависимости от установленного программного обеспечения (см. сведения ниже).  
   
--   Выполнение тестов с помощью окна Visual Studio 2010 **Представление теста**. Дополнительные сведения см. в практических руководствах по [выполнению модульных тестов SQL Server](../ssdt/how-to-run-sql-server-unit-tests.md) и [запуску автоматических тестов из Microsoft Visual Studio 2010](https://msdn.microsoft.com/library/ms182470(VS.100).aspx). Для Visual Studio 2012 процесс описан в статье [Практическое руководство. Запуск тестов из Microsoft Visual Studio](https://msdn.microsoft.com/library/ms182470.aspx).  
+-   Выполнение тестов с помощью окна Visual Studio 2010 **Представление теста**. Дополнительные сведения см. в разделе [Как запускать модульные тесты SQL Server](../ssdt/how-to-run-sql-server-unit-tests.md) и [Как запускать автоматические тесты из Microsoft Visual Studio 2010](https://msdn.microsoft.com/library/ms182470(VS.100).aspx). Для Visual Studio 2012 см. раздел [Как запускать автоматические тесты из Microsoft Visual Studio 2012](https://msdn.microsoft.com/library/ms182470.aspx).  
   
 -   Запуск тестов при помощи команды MSTest.exe из командной строки. Дополнительные сведения см. в практических руководствах по запуску автоматических тестов из командной строки с помощью MSTest для Visual Studio [2010](https://msdn.microsoft.com/library/ms182487(VS.100).aspx) и [2012](https://msdn.microsoft.com/library/ms182487.aspx).  
   
 -   Запуск тестов из **обозревателя решений** путем запуска тестового проекта. Дополнительные сведения см. в практических руководствах по запуску автоматических тестов из командной строки с помощью MSTest для Visual Studio [2010](https://msdn.microsoft.com/library/ms182470(VS.100).aspx) и [2012](https://msdn.microsoft.com/library/ms182470.aspx).  
   
--   Повторный запуск тестов из окна **Результаты теста**. Дополнительные сведения см. в статье [Практическое руководство. Повторное выполнение теста](https://msdn.microsoft.com/library/ms182472(VS.100).aspx).  
+-   Повторный запуск тестов из окна **Результаты теста**. Дополнительные сведения см. в разделе [Как повторно запустить тест (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182472(VS.100).aspx).  
   
 -   Запуск отдельных тестов или списков тестов (Visual Studio 2010) из окна **редактора списка тестов**. Дополнительные сведения см. в практических руководствах по запуску автоматических тестов из командной строки с помощью MSTest для Visual Studio [2010](https://msdn.microsoft.com/library/ms182470(VS.100).aspx) и [2012](https://msdn.microsoft.com/library/ms182470.aspx).  
   
 -   Запуск тестов при построении проекта в среде Team Foundation Build. Дополнительные сведения см. в практических руководствах по настройке и запуску запланированных тестов после создания приложения для Visual Studio[2010](https://msdn.microsoft.com/library/ms182465(VS.100).aspx) и [2012](https://msdn.microsoft.com/library/ms182465.aspx).  
   
-Модульные тесты SQL Server можно запускать в определенном порядке при помощи упорядоченного теста. Дополнительные сведения о создании упорядоченных тестов см. в [этой статье для Visual Studio 2010](https://msdn.microsoft.com/library/ms182631(VS.100).aspx) или в [этой статье для Visual Studio 2012](https://msdn.microsoft.com/library/ms182631.aspx).  
+Модульные тесты SQL Server можно запускать в определенном порядке при помощи упорядоченного теста. Дополнительные сведения см. в разделе [Как создавать упорядоченные тесты (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182631(VS.100).aspx) или [Как создавать упорядоченные тесты (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182631.aspx).  
   
 ## <a name="interpreting-tests-results"></a>Интерпретация результатов тестов  
-После выполнения тестов в окне **Результаты тестов** будет показано, какие тесты были успешно выполнены, а какие завершились ошибкой. Дополнительные сведения см. в статье [Интерпретация результатов модульного теста SQL Server](../ssdt/interpreting-sql-server-unit-test-results.md). Дополнительные сведения о диагностике непредвиденных ошибок см. в статье [Практическое руководство. Отладка объектов базы данных](../ssdt/how-to-debug-database-objects.md).  
+После выполнения тестов в окне **Результаты тестов** будет показано, какие тесты были успешно выполнены, а какие завершились ошибкой. Дополнительные сведения см. в статье [Интерпретация результатов модульного теста SQL Server](../ssdt/interpreting-sql-server-unit-test-results.md). Дополнительные сведения о диагностике непредвиденных ошибок см. в разделе [Как выполнить отладку объектов базы данных](../ssdt/how-to-debug-database-objects.md).  
   
 ## <a name="topics-in-this-section"></a>Подразделы в этом разделе  
 В этом разделе рассматриваются следующие вопросы.  
   
--   [Практическое руководство. Отладка объектов базы данных](../ssdt/how-to-debug-database-objects.md)  
+-   [Руководство. выполнить отладку объектов базы данных](../ssdt/how-to-debug-database-objects.md)  
   
--   [How to: Run SQL Server Unit Tests from Team Foundation Build](../ssdt/how-to-run-sql-server-unit-tests-from-team-foundation-build.md) (Практическое руководство. Запуск модульных тестов SQL Server из сборки Team Foundation)  
+-   [Руководство. выполнить модульные тесты SQL Server из сборки Team Foundation](../ssdt/how-to-run-sql-server-unit-tests-from-team-foundation-build.md)  
   
--   [Практическое руководство. Выполнение модульных тестов SQL Server](../ssdt/how-to-run-sql-server-unit-tests.md)  
+-   [Руководство. выполнять модульные тесты SQL Server](../ssdt/how-to-run-sql-server-unit-tests.md)  
   
 -   [Интерпретация результатов модульного теста SQL Server](../ssdt/interpreting-sql-server-unit-test-results.md)  
   

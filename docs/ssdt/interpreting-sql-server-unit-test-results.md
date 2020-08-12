@@ -1,21 +1,21 @@
 ---
 title: Интерпретация результатов модульного теста SQL Server
+description: Узнайте, как использовать окно результатов теста или TRX-файлы для просмотра результатов модульных тестов SQL Server. Узнайте, как получить подробные сведения о результатах.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: fde3c95b-2f68-483d-a197-0f7161b72fa3
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 1708c6aa8a082cfc06aadf832e0dbf30f2c23e23
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 42ec6c34cad7a14d397965717a9447c9d0e29a4b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246425"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893831"
 ---
 # <a name="interpreting-sql-server-unit-test-results"></a>Интерпретация результатов модульного теста SQL Server
 
@@ -26,7 +26,7 @@ ms.locfileid: "75246425"
 Дополнительные сведения об изменении отображения окна **Результаты теста** см. в разделе [Как добавлять или удалять столбцы в окнах с тестами (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182508(VS.100).aspx) или [Как добавлять или удалять столбцы в окнах с тестами (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182508.aspx).  
   
 ## <a name="storing-test-results"></a>Сохранение результатов теста  
-Результаты модульных тестов автоматически сохраняются на жестком диске в файлах с расширением TRX. TRX-файл — это файл в формате XML, который содержит подробные сведения о выполнении теста. Можно загрузить файлы TRX с предыдущих тестов, чтобы просмотреть результаты или повторить предыдущий тест. Дополнительные сведения см. в статье [Практическое руководство. Повторное выполнение теста](https://msdn.microsoft.com/library/ms182472(VS.100).aspx).  
+Результаты модульных тестов автоматически сохраняются на жестком диске в файлах с расширением TRX. TRX-файл — это файл в формате XML, который содержит подробные сведения о выполнении теста. Можно загрузить файлы TRX с предыдущих тестов, чтобы просмотреть результаты или повторить предыдущий тест. Дополнительные сведения см. в разделе [Как повторно запустить тест (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182472(VS.100).aspx).  
   
 > [!NOTE]  
 > Модульные тесты нельзя запускать удаленно.  

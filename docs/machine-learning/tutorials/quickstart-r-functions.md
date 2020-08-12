@@ -4,22 +4,22 @@ titleSuffix: SQL machine learning
 description: В этом кратком руководстве вы узнаете, как использовать математические и служебные функции R в машинном обучении SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/23/2020
+ms.date: 05/21/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c769862ab2ab1b06169ae5191217945cf8220c9b
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: a056d73ae28d822c12752ac60f31df5022acf28b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606673"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772365"
 ---
 # <a name="quickstart-r-functions-with-sql-machine-learning"></a>Краткое руководство. Функции R с использованием машинного обучения SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 В этом кратком руководстве вы узнаете, как использовать математические и служебные функции R в [Службах машинного обучения SQL Server](../sql-server-machine-learning-services.md) или [Кластерах больших данных](../../big-data-cluster/machine-learning-services.md). Зачастую статистические функции, которые сложно реализовать в T-SQL, выполняются в R всего парой строк кода.
@@ -29,6 +29,9 @@ ms.locfileid: "83606673"
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 В этом кратком руководстве вы узнаете, как использовать математические и служебные функции R в службах [SQL Server R Services](../r/sql-server-r-services.md). Зачастую статистические функции, которые сложно реализовать в T-SQL, выполняются в R всего парой строк кода.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+В этом кратком руководстве вы узнаете, как использовать структуры и типы данных при работе с R в [Службах машинного обучения управляемого экземпляра SQL Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview). Вы узнаете о том, как перемещать данные между R и Управляемым экземпляром SQL, и о типичных проблемах, возникающих при этом процессе.
 ::: moniker-end
 
 ## <a name="prerequisites"></a>Предварительные требования
@@ -43,6 +46,9 @@ ms.locfileid: "83606673"
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 - SQL Server 2016 R Services. Сведения об установке служб R Services см. в [руководстве по установке для Windows](../install/sql-r-services-windows-install.md).
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Службы машинного обучения в Управляемом экземпляре SQL Azure. Сведения о регистрации см. в статье [Общие сведения о Службах машинного обучения в управляемом экземпляре SQL Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
 - Инструмент для выполнения SQL-запросов, содержащих сценарии R. В этом кратком руководстве используется [Azure Data Studio](../../azure-data-studio/what-is.md).
@@ -106,21 +112,19 @@ EXECUTE MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
 
 Установленный по умолчанию пакет **utils** предоставляет широкий набор служебных функций для изучения текущей среды R. Они могут оказаться полезными, если вы нашли несоответствия в выполнении кода R в SQL Server и внешних средах.
 
-Например, можно использовать функцию R `memory.limit()`, чтобы получить память для текущей среды R. По умолчанию пакет `utils` устанавливается, но не загружается, поэтому сначала необходимо использовать функцию `library()`, чтобы его загрузить.
+Например, можно использовать функции системного времени в R, такие как `system.time` и `proc.time`, чтобы фиксировать время, затрачиваемое процессами R, и анализировать проблемы производительности. Например, см. руководство [Создание характеристик данных](../tutorials/walkthrough-create-data-features.md), где функции времени R внедрены в решение.
 
 ```sql
 EXECUTE sp_execute_external_script
       @language = N'R'
     , @script = N'
         library(utils);
-        mymemory <- memory.limit();
-        OutputDataSet <- as.data.frame(mymemory);'
-    , @input_data_1 = N' ;'
-WITH RESULT SETS (([Col1] int not null));
+        start.time <- proc.time();
+        
+        # Run R processes
+        
+        elapsed_time <- proc.time() - start.time;'
 ```
-
-> [!TIP]
-> Многие пользователи предпочитают использовать функции системного времени в R, такие как `system.time` и `proc.time`, чтобы фиксировать время, затрачиваемое процессами R, и анализировать проблемы производительности. Например, см. руководство [Создание характеристик данных](../tutorials/walkthrough-create-data-features.md), где функции времени R внедрены в решение.
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

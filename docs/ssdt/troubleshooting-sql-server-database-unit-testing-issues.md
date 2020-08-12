@@ -1,21 +1,21 @@
 ---
 title: Устранение неполадок модульных тестов базы данных SQL Server
+description: Ознакомьтесь с советами по устранению неполадок, которые могут возникнуть в работе модульных тестов SQL Server, таких как сбои времени ожидания и развертывание базы данных на непредвиденные целевые объекты.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: cf4c9cd1-7e73-4c3b-922a-68b9247e7b33
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: fd1b41a9744c112fcafc8968bad7abc5ac9aa4c4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cc9f8c0c87922a54df0bcd3d2ee4fa730ecfaff7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256310"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883415"
 ---
 # <a name="troubleshooting-sql-server-database-unit-testing-issues"></a>Устранение неполадок модульных тестов базы данных SQL Server
 
@@ -49,6 +49,6 @@ ms.locfileid: "75256310"
 ```  
   
 ## <a name="see-also"></a>См. также:  
-[Практическое руководство. Создание модульных тестов SQL Server для функций, триггеров и хранимых процедур](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)  
-[Практическое руководство. Настройка запуска модульного теста SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md)  
+[Руководство. создавать модульные тесты SQL Server для функций, триггеров и хранимых процедур](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)  
+[Руководство. Настройка запуска модульного теста SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md)  
   

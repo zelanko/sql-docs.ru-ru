@@ -5,20 +5,20 @@ description: Эта статья содержит полезные команд�
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/28/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 49ed75b4986a45dfec25547317e3fe0789671fe4
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 4d384a1835d902e56030b62897d657c81c0ec3b7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606406"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773674"
 ---
 # <a name="troubleshoot-big-data-clusters-2019-kubernetes"></a>Устранение неполадок в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Kubernetes
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 В этой статье описывается несколько полезных команд Kubernetes, которые можно использовать для отслеживания и устранения неполадок в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Здесь показано, как просмотреть подробные сведения о Pod или других артефактах Kubernetes, расположенных в кластере больших данных. В этой статье также рассматриваются распространенные задачи, такие как копирование файлов в контейнере, где выполняется одна из служб кластеров больших данных SQL Server.
 
@@ -118,8 +118,10 @@ kubectl get svc -n mssql-cluster
 |---|---|
 | **master-svc-external** | Предоставляет доступ к главному экземпляру.<br/>(**EXTERNAL-IP,31433** и пользователь **SA**) |
 | **controller-svc-external** | Поддерживает средства и клиенты, управляющие кластером. |
-| **gateway-svc-external** | Предоставляет доступ к шлюзу HDFS/Spark.<br/>(**EXTERNAL-IP** и пользователь **root**) |
+| **gateway-svc-external** | Предоставляет доступ к шлюзу HDFS/Spark.<br/>(**EXTERNAL-IP** и пользователь `<AZDATA_USERNAME>`)<sup>1</sup>|
 | **appproxy-svc-external** | Поддержка сценариев развертывания приложений. |
+
+<sup>1</sup> [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 > [!TIP]
 > Это способ просмотра служб с помощью **kubectl**, но для просмотра этих конечных точек можно также использовать команду `azdata bdc endpoint list`. Дополнительные сведения см. в разделе [Получение конечных точек кластера больших данных](deployment-guidance.md#endpoints).

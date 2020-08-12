@@ -2,22 +2,22 @@
 title: Демонстрационные данные по работе такси в Нью-Йорке для учебников
 description: Создание базы данных, содержащей выборку данных о поездках в такси по Нью-Йорку. Этот набор данных используется в руководствах по Python и R для Служб машинного обучения SQL Server.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 10/31/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e55076a539cb2a932c2f1e0c432daf774899518f
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 46ad967b9ecd40b84cf7871e7b9ef113fe686953
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116667"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85814064"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>Демонстрационные данные по работе такси в Нью-Йорке для учебников по Python и R в SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 В этой статье объясняется, как настроить демонстрационную базу данных, состоящую из общедоступных данных [Комиссии по такси и лимузинам Нью-Йорка](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml). Эти данные используются в нескольких учебниках по R и Python для аналитики в базе данных в SQL Server. Чтобы пример кода выполнялся быстрее, была создана репрезентативная выборка в объеме 1 % данных. В вашей системе файл резервной копии базы данных немного превышает 90 МБ и представляет 1,7 млн строк в основной таблице данных.
 
@@ -33,6 +33,11 @@ ms.locfileid: "81116667"
 Демонстрационная база данных — это BAK-файл SQL Server 2016, размещенный корпорацией Майкрософт. Этот файл можно восстановить в SQL Server 2016 и более поздних версий. Скачивание файла начинается сразу же после нажатия ссылки. 
 
 Размер файла составляет приблизительно 90 МБ.
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+>[!NOTE]
+>Чтобы восстановить пример базы данных в [кластерах больших данных SQL Server](../../big-data-cluster/big-data-cluster-overview.md), скачайте файл [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak) и следуйте указаниям в разделе [Восстановление базы данных на главном экземпляре кластера больших данных SQL Server](../../big-data-cluster/data-ingestion-restore-database.md).
+::: moniker-end
 
 1. Щелкните файл [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak), чтобы скачать файл резервной копии базы данных.
 

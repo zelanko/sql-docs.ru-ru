@@ -1,23 +1,23 @@
 ---
 title: формировать структуру и добавлять фрагменты кода к скриптам Transact-SQL
+description: Сведения о фрагментах кода, предоставляемых SSDT. Узнайте, как вставлять фрагменты кода в приложения и как скрывать и развертывать код в редакторе Transact-SQL.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 543e7ce7-8639-4281-8a91-85314755e5de
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: ac322bd8bd53297c4322607819a2ed2ab042a4e1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 655dc1271fa928558974bf6ebc36b8d551207ea2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241361"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880429"
 ---
-# <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>Как формировать структуру и добавлять фрагменты кода к скриптам Transact-SQL
+# <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>Руководство. формировать структуру и добавлять фрагменты кода к скриптам Transact-SQL
 
 В набор SQL Server Data Tools входит библиотека кода, состоящая из фрагментов кода, которые можно сразу вставить в приложение. В каждом фрагменте выполняется законченная задача сценарной поддержки, такая как создание функции, таблицы, триггера, индекса, представления, определяемого пользователем типа данных и т. д. Предусмотрена возможность вставить фрагмент в исходный код с помощью нескольких щелчков кнопкой мыши. Эти фрагменты кода повышают производительность за счет сокращения времени, затрачиваемого на ввод.  
   

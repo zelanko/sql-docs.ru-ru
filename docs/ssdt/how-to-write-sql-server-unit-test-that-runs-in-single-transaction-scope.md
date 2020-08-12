@@ -1,23 +1,23 @@
 ---
 title: Написание модульного теста SQL Server, который выполняется в области действия одной транзакции
+description: Узнайте, как запустить службу координатора распределенных транзакций, написать модульный тест SQL Server с одной транзакцией и откатить изменения теста.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: cb241e94-d81c-40e9-a7ae-127762a6b855
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 36bc1ac2a4a20dd0d05d90b8d12ff63b0a7a6b3e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 13df7080dc1c313279a65eb3457128e43927c9e0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246488"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893026"
 ---
-# <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>Практическое руководство. Написание модульного теста SQL Server, который выполняется в области действия одной транзакции
+# <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>Руководство. написать модульный тест SQL Server, который выполняется в области действия одной транзакции
 
 Можно изменить модульные тесты для запуска в области действия одной транзакции. При использовании этого подхода после завершения теста реализованные им изменения можно будет отменить. Приведенные ниже инструкции показывают, как выполнить следующие задачи.  
   

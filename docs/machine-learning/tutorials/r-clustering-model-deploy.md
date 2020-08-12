@@ -8,28 +8,30 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d9640ee6040e6906f888486f6b0a1f99bb1d071f
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: a949fc5f17d2e6875eeef7f62ecef065283e3a92
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607117"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772319"
 ---
 # <a name="tutorial-deploy-a-clustering-model-in-r-with-sql-machine-learning"></a>Руководство по развертыванию модели кластеризации в R с помощью машинного обучения SQL
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-В четвертой части этого цикла учебников вы развернете модель кластеризации, разработанную в R, в базе данных SQL с помощью Служб машинного обучения SQL Server или в Кластерах больших данных.
+В четвертой части этого цикла учебников вы развернете модель кластеризации, разработанную на R, в базе данных с помощью Служб машинного обучения SQL Server или в Кластерах больших данных.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-В четвертой части этого цикла учебников вы развернете модель кластеризации, разработанную в R, в базе данных SQL с помощью Служб машинного обучения SQL Server.
+В четвертой части этого цикла учебников вы развернете модель кластеризации, разработанную на R, в базе данных с помощью Служб машинного обучения SQL Server.
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-В четвертой части этого цикла учебников вы развернете модель кластеризации, разработанную в R, в базе данных SQL с помощью служб SQL Server R Services.
+В четвертой части этого цикла учебников вы развернете модель кластеризации, разработанную на R, в базе данных с помощью служб SQL Server R Services.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+В четвертой части этого цикла учебников вы развернете модель кластеризации, разработанную на Python, в базе данных с помощью Служб машинного обучения в Управляемом экземпляре SQL Azure.
 ::: moniker-end
 
 Чтобы регулярно выполнять кластеризацию по мере регистрации новых клиентов, необходимо иметь возможность вызывать сценарий R из любого приложения. Для этого можно развернуть сценарий R в базе данных, поместив его в хранимую процедуру SQL. Так как модель выполняется в базе данных, ее можно легко обучать на данных, хранящихся в базе данных.
@@ -38,7 +40,7 @@ ms.locfileid: "83607117"
 
 > [!div class="checklist"]
 > * Создание хранимой процедуры, которая формирует модель
-> * Выполнение кластеризации в SQL Server
+> * Выполнение кластеризации
 > * Использование сведений кластеризации
 
 В [первой части](r-clustering-model-introduction.md) были установлены необходимые компоненты и восстановлена демонстрационная база данных.
@@ -139,10 +141,11 @@ EXECUTE sp_execute_external_script
       @language = N'R'
     , @script = N'
 # Define the connection string
+
 connStr <- paste("Driver=SQL Server; Server=", instance_name,
-               "; Database=", database_name,
-               "; Trusted_Connection=true; ",
-                  sep="" );
+                 "; Database=", database_name,
+                 "; uid=Username;pwd=Password; ",
+                 sep="" )
 
 # Input customer data that needs to be classified.
 # This is the result we get from the query.
@@ -178,7 +181,7 @@ END;
 GO
 ```
 
-## <a name="perform-clustering-in-sql-database"></a>Выполнение кластеризации в базе данных SQL
+## <a name="perform-clustering"></a>Выполнение кластеризации
 
 Теперь, создав хранимую процедуру, выполните следующий сценарий для выполнения кластеризации.
 
@@ -237,7 +240,7 @@ SELECT customer.[c_email_address], customer.c_customer_sk
 В четвертой части этого цикла учебников вы узнали, как выполнять следующие задачи:
 
 * Создание хранимой процедуры, которая формирует модель
-* Выполнение кластеризации в SQL Server
+* Выполнение кластеризации с помощью машинного обучения SQL
 * Использование сведений кластеризации
 
 Дополнительные сведения об использовании R в Службах машинного обучения:

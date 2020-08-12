@@ -4,22 +4,22 @@ titleSuffix: SQL machine learning
 description: В этом кратком руководстве вы узнаете, как применять структуры данных, типы данных и объекты при использовании R и машинного обучения SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/23/2020
+ms.date: 05/21/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e5b5f4e90b680f5ae06944eedc997a43b8a40024
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: b4e2fe7a7f8f5009f289a3db78b58f629e819ff2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606576"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772343"
 ---
 # <a name="quickstart-data-structures-data-types-and-objects-using-r-with-sql-machine-learning"></a>Краткое руководство. Использование структур данных, типов данных и объектов при работе с R и машинным обучением SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 В этом кратком руководстве вы узнаете, как использовать структуры и типы данных при применении R в [Службах машинного обучения SQL Server](../sql-server-machine-learning-services.md) или [Кластерах больших данных](../../big-data-cluster/machine-learning-services.md). Вы узнаете о том, как перемещать данные между R и SQL Server, и о типичных проблемах, возникающих при этом процессе.
@@ -29,6 +29,9 @@ ms.locfileid: "83606576"
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 В этом кратком руководстве вы узнаете, как использовать структуры и типы данных при работе с R в службах [SQL Server R Services](../r/sql-server-r-services.md). Вы узнаете о том, как перемещать данные между R и SQL Server, и о типичных проблемах, возникающих при этом процессе.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+В этом кратком руководстве вы узнаете, как использовать структуры и типы данных при работе с R в [Службах машинного обучения управляемого экземпляра SQL Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview). Вы узнаете о том, как перемещать данные между R и Управляемым экземпляром SQL, и о типичных проблемах, возникающих при этом процессе.
 ::: moniker-end
 
 Основные проблемы, о которых следует знать в самом начале, таковы:
@@ -50,6 +53,9 @@ ms.locfileid: "83606576"
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 - SQL Server 2016 R Services. Сведения об установке служб R Services см. в [руководстве по установке для Windows](../install/sql-r-services-windows-install.md). 
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Службы машинного обучения в управляемом экземпляре SQL Azure. Сведения о регистрации см. в статье [Общие сведения о Службах машинного обучения в управляемом экземпляре SQL Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
 - Инструмент для выполнения SQL-запросов, содержащих сценарии R. В этом кратком руководстве используется [Azure Data Studio](../../azure-data-studio/what-is.md).
@@ -205,7 +211,7 @@ execute sp_execute_external_script
 Почему? Так как в этом случае два аргумента могут обрабатываться как векторы одинаковой длины, код R возвращает скалярное произведение в виде матрицы.  Это ожидаемое поведение в соответствии с правилами линейной алгебры. Тем не менее могут возникнуть проблемы, если нисходящее приложение ожидает, что выходная схема вывода не должна изменяться.
 
 > [!TIP]
-> 
+>
 > Получили сообщения об ошибках? Убедитесь, что хранимая процедура выполняется в контексте базы данных, содержащей таблицу, а не в контексте базы данных **master** или другой базы данных.
 >
 > Кроме того, мы не рекомендуем использовать временные таблицы для этих примеров. Некоторые клиенты R будут завершать подключение между обработкой пакетов, удаляя временные таблицы.
@@ -292,7 +298,7 @@ WITH RESULT SETS undefined;
 
 **Результаты**
 
-```sql
+```text
 STDOUT message(s) from external script: 'data.frame':    37 obs. of  3 variables:
 STDOUT message(s) from external script: $ ReportingDate: POSIXct, format: "2010-12-24 23:00:00" "2010-12-24 23:00:00"
 STDOUT message(s) from external script: $ ProductSeries: Factor w/ 1 levels "M200 Europe",..: 1 1 1 1 1 1 1 1 1 1

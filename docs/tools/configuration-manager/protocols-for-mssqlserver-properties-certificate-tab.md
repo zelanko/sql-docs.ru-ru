@@ -1,5 +1,6 @@
 ---
 title: Протоколы для свойств MSSQLSERVER (вкладка «Сертификат»)
+description: Выберите сертификат для SQL Server или просмотрите свойства сертификата с помощью вкладки "Сертификат" в диалоговом окне "Протоколы для свойств MSSQLSERVER".
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 776addd6-25f3-4875-9a71-064035787090
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b19b12a55f1afee35ed351ab6033179c17be89a8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 71740e97a0518e34ffa410a62efe14f96cfaccfc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306370"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881904"
 ---
 # <a name="protocols-for-mssqlserver-properties-certificate-tab"></a>Протоколы для свойств MSSQLSERVER (вкладка «Сертификат»)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Используйте вкладку **Сертификат** в диалоговом окне **Протоколы для свойств MSSQLSERVER**, чтобы выбрать сертификат для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или просмотреть свойства сертификата. До выбора сертификата все поля остаются пустыми.  
   
  Сертификаты хранятся локально на пользовательских компьютерах. Чтобы загрузить сертификат для использования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], необходимо запустить диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с той же учетной записью пользователя, что и служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

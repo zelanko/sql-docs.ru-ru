@@ -1,6 +1,7 @@
 ---
 title: Необходимые разрешения
 titleSuffix: SQL Server Profiler
+description: Узнайте, какие разрешения требуются для запуска SQL Server Profiler и воспроизведения трассировок, а также какие проверки выполняются во время воспроизведения.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 0570401f34d08009c4af1cfc9038bec9aae0fc7a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 050160b628c2d2a9f4fd558eb3d387bbe27e93d0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307537"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774736"
 ---
 # <a name="permissions-required-to-run-sql-server-profiler"></a>Разрешения, необходимые для запуска приложения SQL Server Profiler
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 По умолчанию для запуска приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] требуются такие же разрешения, что и для хранимых процедур языка Transact-SQL, используемых для создания трассировок. Для запуска приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]пользователь должен обладать разрешением ALTER TRACE. Дополнительные сведения см. в разделе [GRANT, предоставление разрешений на сервер (Transact-SQL)](../../t-sql/statements/grant-server-permissions-transact-sql.md).  
   

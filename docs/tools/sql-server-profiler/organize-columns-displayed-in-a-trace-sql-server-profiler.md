@@ -1,6 +1,7 @@
 ---
 title: Упорядочивание столбцов, отображаемых в трассировке
 titleSuffix: SQL Server Profiler
+description: Упрощение анализа выходных данных трассировки SQL Server Profiler путем группирования и агрегирования событий при определении или просмотре трассировки.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 52fc0c568a3880be3ace28f9f0a65f6bfd6a1225
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2dd83d35238e74908614c2aaed96e3bc8a11180f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307550"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774756"
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>упорядочить столбцы, отображаемые в трассировке (приложение SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Столбцы данных трассировки можно сгруппировать, нажав кнопку **Систематизировать столбцы** в таблице трассировки или в диалоговом окне **Свойства трассировочного файла** или при определении трассировки. Группировка столбцов данных упрощает анализ результатов трассировки в приложении [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . Дополнительные сведения см. в статье [Просмотр и анализ трассировок с помощью приложения SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md).  
   

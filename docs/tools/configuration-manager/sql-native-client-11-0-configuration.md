@@ -1,5 +1,6 @@
 ---
 title: Конфигурация собственного клиента SQL 11.0
+description: Узнайте о параметрах, настроенных в диалоговых окнах настройки SQL Server Native Client в Microsoft SQL Server Configuration Manager.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: e73143e9-5e7b-4d0a-8827-ab900efdcb35
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e205d03c430670a9b51a0ed852629d608d8e78af
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 08b2107b77acecebeb990e6a071963af964f61ca
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306721"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885975"
 ---
 # <a name="sql-native-client-110-configuration"></a>Конфигурация собственного клиента SQL 11.0
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   В этом разделе содержатся разделы справки F1 диалоговых окон модуля **Конфигурация SQL Server Native Client** в диспетчере конфигурации [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client является сетевой библиотекой, при помощи которой клиентские компьютеры подключаются к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], начиная с [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Настройки, установленные в конфигурации собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , используются на компьютере, на котором запущена программа клиента. Если настройки выполняются на компьютере, где запущен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], они затрагивают только те клиентские программы, которые работают на сервере.  

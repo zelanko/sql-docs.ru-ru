@@ -2,22 +2,22 @@
 title: Включение и отключение удаленного управления пакетами R
 description: Включение удаленного управления пакетами R в службах SQL Server 2016 R Services или Службах машинного обучения SQL Server (в базе данных)
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 06/13/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 250be5c8a4207a43d2e4194c78377bd87880a99c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1a18d56d1dcf0733f080da7cf8247421c669a4aa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117987"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757143"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>Включение и отключение удаленного управления пакетами для SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 В этой статье описывается, как включить удаленное управление пакетами R с клиентской рабочей станции или с другого Machine Learning Server. После включения функции управления пакетами в экземпляре SQL Server можно использовать команды RevoScaleR на клиенте для установки пакетов в этом экземпляре.
 
@@ -41,7 +41,7 @@ ms.locfileid: "81117987"
 
     Эта команда создает на компьютере SQL Server объекты уровня экземпляра, которые требуются для управления пакетами. Также выполнится перезапуск панели запуска для экземпляра.
 
-    Если экземпляр не указан, используется экземпляр по умолчанию. Если пользователь не указан, используется текущий контекст безопасности. Например, следующая команда включает управление пакетами для экземпляра в пути к RegisterRExt.exe, используя учетные данные пользователя, открывшего командную строку:
+    Если экземпляр не указан, используется экземпляр по умолчанию. Если пользователь не указан, используется текущий контекст безопасности. Например, следующая команда включает управление пакетами для экземпляра по умолчанию, используя учетные данные пользователя, открывшего командную строку.
 
     `REgisterRExt.exe /install pkgmgmt`
 
@@ -51,7 +51,7 @@ ms.locfileid: "81117987"
    
     Эта команда создает некоторые артефакты базы данных, включая следующие роли базы данных, которые используются для управления разрешениями пользователей: `rpkgs-users`, `rpkgs-private` и `rpkgs-shared`.
 
-    Например, следующая команда включает управление пакетами в базе данных экземпляра, где выполняется RegisterRExt. Если пользователь не указан, используется текущий контекст безопасности.
+    Например, следующая команда включает управление пакетами в базе данных экземпляра по умолчанию. Если пользователь не указан, используется текущий контекст безопасности.
 
     `RegisterRExt.exe /install pkgmgmt /database:TestDB`
 

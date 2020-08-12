@@ -1,5 +1,6 @@
 ---
 title: Свойства агента SQL Server (вкладка «Службы»)
+description: Сведения о параметрах на вкладке "Служба" в диалоговом окне свойств агента SQL Server, таких как путь к двоичному файлу, идентификатор процесса и режим запуска.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 452857fb-be1b-4e1e-851c-dd2216640f35
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ac42d55dea9c8e422a279516afa632810bc83c7c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c6a0ea4bdce650fd7cc1f1ff28c297c9035bf025
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307135"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880376"
 ---
 # <a name="sql-server-agent-properties-service-tab"></a>Свойства агента SQL Server (вкладка «Службы»)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Это служба агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Значения свойств, окрашенные в светло-серый цвет, нельзя изменить при помощи этого приложения.  
   
 ## <a name="options"></a>Параметры  
@@ -35,7 +36,7 @@ ms.locfileid: "75307135"
  **Host Name**  
  Отображает имя компьютера или кластера, где запущен агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Название**  
+ **имя**;  
  Указывает отображаемое имя службы.  
   
  **Идентификатор процесса**  
@@ -47,9 +48,9 @@ ms.locfileid: "75307135"
  **Режим запуска**  
  Установите для этой службы один из следующих вариантов:  
   
--   Вручную. Эта служба не запускается автоматически при запуске компьютера. Необходимо запустить службу при помощи диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или другого средства.  
+-   Вручную: Эта служба не запускается автоматически при запуске компьютера. Необходимо запустить службу при помощи диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или другого средства.  
   
--   Автоматически. Эта служба пытается запуститься при запуске компьютера.  
+-   Автоматически. Выполняется попытка запуска службы при запуске компьютера.  
   
 -   Отключено. Служба не может быть запущена.  
   

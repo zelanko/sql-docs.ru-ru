@@ -1,5 +1,6 @@
 ---
 title: обновить подключенную базу данных с помощью Power Buffer
+description: Узнайте, как использовать Power Buffer для обновления базы данных. Узнайте, как проверять изменения перед их применением и сохранять изменения в скрипте для последующего развертывания.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -8,18 +9,17 @@ f1_keywords:
 ms.assetid: 4048b7f8-71a9-47ad-b812-3fc1e8066240
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: d9feeb9bee84cede398bba5105912385fd5e8c2e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3954ae84a201209e49b65dc421ab41b93126fb65
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244263"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893873"
 ---
-# <a name="how-to-update-a-connected-database-with-power-buffer"></a>Как обновлять подключенную базу данных с помощью Power Buffer
+# <a name="how-to-update-a-connected-database-with-power-buffer"></a>Руководство. обновить подключенную базу данных с помощью Power Buffer
 
 Технология SQL Server Data Tools Power Buffer упрощает применение изменений к подключенной базе данных, сохраняя все изменения в текущем сеансе. Любые ошибки, вызванные внесением изменений в окне Power Buffer (в редакторе Transact\-SQL или в конструкторе таблиц), немедленно отображаются на панели **Список ошибок**, которая позволяет отслеживать ошибки, обозначенные как требующие устранения. Разработчик может проверять отложенные им изменения, пока не будет готов применить их к конкретной базе данных. В ходе этого процесса обновления в SSDT автоматически создается скрипт ALTER на основе конкретных изменений и выводятся предупреждения обо всех потенциальных проблемах. После этого можно применить все изменения, накопленные во всех открытых окнах Power Buffer, к одной и той же базе данных или сохранить скрипт ALTER, предназначенный для дальнейшего развертывания.  
   
@@ -63,5 +63,5 @@ ms.locfileid: "75244263"
 5.  Щелкните **Table_1** правой кнопкой мыши и выберите пункт **Удалить**. Щелкните **Обновить базу данных** в диалоговом окне **Предварительный просмотр обновлений базы данных**.  
   
 ## <a name="see-also"></a>См. также:  
-[Устранение ошибок](../ssdt/how-to-fix-errors.md)  
+[Руководство. исправлять ошибки](../ssdt/how-to-fix-errors.md)  
   

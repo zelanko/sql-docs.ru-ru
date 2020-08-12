@@ -1,26 +1,25 @@
 ---
 title: Краткое руководство. Функции Python
-description: В этом кратком руководстве вы узнаете, как внедрять математические и служебные функции Python в Службах машинного обучения SQL Server.
+titleSuffix: SQL machine learning
+description: В этом кратком руководстве вы узнаете, как использовать математические и служебные функции Python в машинном обучении SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/28/2020
+ms.date: 05/21/2020
 ms.topic: quickstart
 author: cawrites
 ms.author: chadam
-ms.reviewer: garye
+ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6afe1685956c43e30ace59f3e5cc794a2abbd88f
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 5aef8010c48e08931998f1bd7e49c3797ef4e81a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606710"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784093"
 ---
-# <a name="quickstart-python-functions-with-sql-server-machine-learning-services"></a>Краткое руководство. Функции Python в Службах машинного обучения SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="quickstart-python-functions-with-sql-machine-learning"></a>Краткое руководство. Функции Python с использованием машинного обучения SQL
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 В этом кратком руководстве вы узнаете, как использовать математические и служебные функции Python в [Службах машинного обучения SQL Server](../sql-server-machine-learning-services.md) или [Кластерах больших данных](../../big-data-cluster/machine-learning-services.md). Зачастую статистические функции, которые сложно реализовать в T-SQL, выполняются в Python всего парой строк кода.
@@ -28,18 +27,29 @@ ms.locfileid: "83606710"
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 В этом кратком руководстве вы узнаете, как использовать математические и служебные функции Python в [Службах машинного обучения SQL Server](../sql-server-machine-learning-services.md). Зачастую статистические функции, которые сложно реализовать в T-SQL, выполняются в Python всего парой строк кода.
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+В этом кратком руководстве вы узнаете, как использовать математические и служебные функции Python в [Службах машинного обучения управляемого экземпляра SQL Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview). Зачастую статистические функции, которые сложно реализовать в T-SQL, выполняются в Python всего парой строк кода.
+::: moniker-end
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-- Для этого краткого руководства требуется доступ к экземпляру SQL Server со [службами машинного обучения SQL Server](../install/sql-machine-learning-services-windows-install.md) и с установленным языком Python.
+Для работы с этим кратким руководством необходимо следующее.
 
-  Экземпляр SQL Server может находиться в виртуальной машине Azure или на локальном компьютере. Обратите внимание, что функция внешних сценариев по умолчанию отключена, поэтому перед началом работы вам может потребоваться [включить ее](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) и убедиться, что **служба панели запуска SQL Server** выполняется.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- Службы машинного обучения SQL Server. Сведения об установке Служб машинного обучения см. в [руководстве по установке для Windows](../install/sql-machine-learning-services-windows-install.md) или [руководстве по установке для Linux](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). Можно также [включить Службы машинного обучения в кластерах больших данных SQL Server](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- Службы машинного обучения SQL Server. Сведения об установке Служб машинного обучения см. в [руководстве по установке для Windows](../install/sql-machine-learning-services-windows-install.md). 
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Службы машинного обучения в управляемом экземпляре SQL Azure. Сведения о регистрации см. в статье [Общие сведения о Службах машинного обучения в управляемом экземпляре SQL Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview).
+::: moniker-end
 
-- Вам также понадобится средство для выполнения SQL-запросов, содержащих сценарии Python. Эти сценарии можно выполнять с помощью любого средства управления базами данных или запросов, которые могут подключаться к экземпляру SQL Server и выполнять запросы T-SQL или хранимые процедуры. В этом кратком руководстве используется [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio).
+- Средство для выполнения SQL-запросов, содержащих сценарии Python. В этом кратком руководстве используется [Azure Data Studio](../../azure-data-studio/what-is.md).
 
 ## <a name="create-a-stored-procedure-to-generate-random-numbers"></a>Создание хранимой процедуры для формирования случайных чисел
 
-Для простоты мы будем использовать пакет Python `numpy`, который по умолчанию устанавливается и загружается в службы машинного обучения SQL Server при установке Python. Он содержит сотню функций для общих статистических задач, в том числе функцию `random.normal`, которая формирует указанное количество случайных чисел с нормальным распределением при заданном среднем значении и стандартном отклонении.
+Для простоты давайте воспользуемся пакетом Python `numpy`, который устанавливается и загружается по умолчанию. Он содержит сотню функций для общих статистических задач, в том числе функцию `random.normal`, которая формирует указанное количество случайных чисел с нормальным распределением при заданном среднем значении и стандартном отклонении.
 
 Например, следующий код Python возвращает 100 чисел со средним значением 50 и стандартным отклонением 3.
 
@@ -60,9 +70,7 @@ OutputDataSet = pandas.DataFrame(numpy.random.normal(size=100, loc=50, scale=3))
 WITH RESULT SETS(([Density] FLOAT NOT NULL));
 ```
 
-Как упростить формирование другого набора случайных чисел?
-
-С помощью SQL Server это несложно. Вы определяете хранимую процедуру, которая получает предоставленные пользователем аргументы и передает их в качестве переменных в скрипт Python.
+Как упростить формирование другого набора случайных чисел? Вы определяете хранимую процедуру, которая получает предоставленные пользователем аргументы и передает их в качестве переменных в скрипт Python.
 
 ```sql
 CREATE PROCEDURE MyPyNorm (
@@ -119,11 +127,7 @@ elapsed_time = time.time() - start_time
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Инструкции по созданию модели машинного обучения с использованием Python в SQL Server см. в следующем кратком руководстве:
+Сведения о создании модели машинного обучения с использованием Python и машинного обучения SQL приведены в следующем кратком руководстве:
 
 > [!div class="nextstepaction"]
-> [Краткое руководство. Создание и оценка модели прогнозов в Python с помощью служб машинного обучения SQL Server](quickstart-python-train-score-model.md)
-
-Дополнительные сведения о службах машинного обучения SQL Server см. в следующей статье:
-
-- [Что такое службы машинного обучения SQL Server (Python и R)?](../sql-server-machine-learning-services.md)
+> [Краткое руководство. Создание и оценка модели прогнозирования на Python](quickstart-python-train-score-model.md)

@@ -1,6 +1,7 @@
 ---
 title: Изменение фильтра
 titleSuffix: SQL Server Profiler
+description: Узнайте, как изменить фильтр трассировки в SQL Server Profiler, чтобы можно было собрать необходимую информацию. Узнайте о влиянии фильтров трассировки на производительность базы данных.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 4953da977f5172b8e861069616ff96e792dac8ff
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5231ec1526b1f019355f659ac58233c1f31005f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307185"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789958"
 ---
 # <a name="modify-a-filter-sql-server-profiler"></a>изменить фильтр (приложение SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Фильтры добавляются в шаблоны трассировки, которые содержат определение трассировки, чтобы ограничить число событий, собираемых трассировкой. Ограничение числа собираемых событий может уменьшить влияние трассировки на производительность. Если были установлены фильтры для шаблона трассировки, и обнаружилось, что трассировка не собирает необходимый вид сведений, то фильтр может быть отредактирован.  
   

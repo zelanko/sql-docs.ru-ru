@@ -1,5 +1,6 @@
 ---
 title: Удаление Power Pivot для SharePoint | Документация Майкрософт
+description: В этой статье описан процесс удаления установки Power Pivot для SharePoint, который состоит из нескольких этапов.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b39d5f4e33b9ecae8617cb414854d423945637d6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 91b944079d74d13ef7cd3cade08c00f5df9c9f29
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "71952728"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883713"
 ---
 # <a name="uninstall-power-pivot-for-sharepoint"></a>Удаление Power Pivot для SharePoint
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Удаление установки [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] — это многоэтапная процедура, состоящая из подготовки к удалению, удаления компонентов и решений из фермы и удаления файлов программ и параметров реестра.  
   
@@ -48,7 +49,7 @@ ms.locfileid: "71952728"
   
 -   Для удаления служб Analysis Services и [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]необходимо быть администратором служб Analysis Services и членом локальной группы администраторов.  
   
-##  <a name="step-1-pre-uninstall-checklist"></a><a name="bkmk_before"></a> Шаг 1. Контрольный список действий перед удалением  
+##  <a name="step-1-pre-uninstall-checklist"></a><a name="bkmk_before"></a> Шаг 1. Контрольный список действий перед удалением  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . В качестве первого шага необходимо предварительно удалить файлы и библиотеки, работа с которыми далее будет невозможна. Это позволит решить все проблемы отсутствия данных перед началом удаления программного обеспечения.  
   
 1.  Удалите все книги, документы и библиотеки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , которые связаны с установкой [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint. После удаления ПО эти библиотеки и документы перестанут работать.  
@@ -65,7 +66,7 @@ ms.locfileid: "71952728"
   
 5.  Можно также остановить службы и подождать несколько дней, а затем переустановить ПО. Этот шаг не является необходимым для удаления, но он позволяет возобновить обслуживание на время, необходимое для выполнения миграции данных или решения технических проблем, которые еще не решены.  
   
-##  <a name="step-2-remove-features-and-solutions-from-sharepoint"></a><a name="bkmk_remove"></a> Шаг 2. Удаление функций и решений из SharePoint  
+##  <a name="step-2-remove-features-and-solutions-from-sharepoint"></a><a name="bkmk_remove"></a> Шаг 2. Удаление функций и решений из SharePoint  
  Используйте средство настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для удаления служб и приложений [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] из SharePoint.  
   
 -   Пользователь должен быть администратором фермы, администратором сервера в экземпляре служб Analysis Services и членом роли **db_owner** в базе данных конфигурации фермы.  
@@ -100,7 +101,7 @@ ms.locfileid: "71952728"
   
 6.  Нажмите кнопку **Проверка** , чтобы убедиться, что каждое действие является допустимым. Если кнопка **Проверка** недоступна, значит, все действия являются допустимыми.  
   
-7.  Нажмите кнопку **Запуск** , чтобы выполнить все действия, которые являются допустимыми для данной задачи. Кнопка**Запуск** становится доступной только после прохождения проверки. При нажатии кнопки **Запуск** появится предупреждение о том, что действия обрабатываются в пакетном режиме: "Все параметры конфигурации, помеченные средством как действительные, будут применены к ферме SharePoint. Продолжить?".  
+7.  Нажмите кнопку **Запуск** , чтобы выполнить все действия, которые являются допустимыми для данной задачи. Кнопка**Запуск** становится доступной только после прохождения проверки. При нажатии кнопки **Запуск** появится предупреждение о том, что действия обрабатываются в пакетном режиме: "Все параметры конфигурации, отмеченные в средстве как действительные, будут применены к ферме SharePoint. Продолжить?".  
   
 8.  Чтобы продолжить, нажмите кнопку **Да** .  
   
@@ -122,7 +123,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
     Stsadm -o enumdeployments  
     ```  
   
-3.  Просмотрите существующие развертывания для уточнения следующих сведений: **Тип** — откат или развертывание, **Файл** — powerpivotwebapp.wsp или powerpivotfarm.wsp.  
+3.  Просмотрите существующие развертывания для уточнения следующих сведений: **Тип** — откат или развертывание, **Файл** — powerpivotwebapp.wsp или powerpivotfarm.wsp.  
   
 4.  Для развертываний или откатов, связанных с решениями [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], скопируйте значение GUID для **JobId** и вставьте его в следующую команду (воспользуйтесь командами "Пометить", "Копировать" и "Вставить" в меню правки Shell, чтобы копировать GUID):  
   
@@ -134,7 +135,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
  Кроме того, для удаления функций и решений можно воспользоваться PowerShell. Дополнительные сведения см. в разделе [Справочник по PowerShell для Power Pivot для SharePoint](https://docs.microsoft.com/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint).  
   
-##  <a name="step-3-run-sql-server-setup-to-remove-programs-from-the-local-computer"></a><a name="bkmk_uninstall"></a> Шаг 3. Запуск программы установки SQL Server для удаления программ с локального компьютера  
+##  <a name="step-3-run-sql-server-setup-to-remove-programs-from-the-local-computer"></a><a name="bkmk_uninstall"></a> Шаг 3. Запуск программы установки SQL Server для удаления программ с локального компьютера  
  Для удаления программных файлов необходимо запустить программу установки SQL Server в режиме удаления ПО. При этом будут удалены файлы и записи в реестре, созданные в процессе установки. Для удаления ПО можно использовать страницу «Программы и компоненты». [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] является компонентом установки SQL Server.  
   
  Частично удалить установленные компоненты можно, не затрагивая другие уже установленные экземпляры SQL Server (или функции в том же экземпляре). Например, можно удалить [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint и оставить другие компоненты, например службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или ядро СУБД.  
@@ -147,10 +148,10 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
      В программе установки можно выбрать экземпляр **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** , а затем установить флажки **Службы Analysis Services** и **Интеграция служб Analysis Services с SharePoint** , чтобы удалить только эти компоненты, оставив все остальные.  
   
-##  <a name="step-4-uninstall-the-power-pivot-for-sharepoint-add-in"></a><a name="bkmk_addin"></a> Шаг 4. Удаление надстройки Power Pivot для SharePoint  
+##  <a name="step-4-uninstall-the-power-pivot-for-sharepoint-add-in"></a><a name="bkmk_addin"></a> Шаг 4. Удаление надстройки Power Pivot для SharePoint  
  Если развертывание служб [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] имеет два или более сервера и установлена надстройка служб [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , то, чтобы полностью удалить все файлы [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , удалите надстройку служб [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] на каждом сервере, где она установлена. Дополнительные сведения см. в разделе [Установка или удаление надстройки Power Pivot для SharePoint (SharePoint 2013)](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)необходимо быть администратором служб Analysis Services и членом локальной группы администраторов.  
   
-##  <a name="step-5-verify-uninstall"></a><a name="verify"></a> Шаг 5. Проверка удаления  
+##  <a name="step-5-verify-uninstall"></a><a name="verify"></a> Шаг 5. Проверка удаления  
   
 1.  В центре администрирования в окне **Управление службами на сервере**установите соединение с сервером, с которого удалена надстройка [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint.  
   
@@ -168,7 +169,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
     4.  В окне "Общие параметры приложения" убедитесь в том, что на странице отсутствует **Панель мониторинга управления [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** .  
   
-##  <a name="step-6-post-uninstall-checklist"></a><a name="bkmk_post"></a> Шаг 6. Контрольный список действий после удаления  
+##  <a name="step-6-post-uninstall-checklist"></a><a name="bkmk_post"></a> Шаг 6. Контрольный список действий после удаления  
  Используйте следующий список, чтобы удалить программное обеспечение и файлы, которые не были удалены в процессе отмены установки.  
   
 1.  Удалите все файлы данных и вложенные папки из `C:\Program Files\Microsoft SQL Server\MSAS13.PowerPivot`, а затем удалите эту папку. На этом шаге также будут удалены все ранее кэшированные файлы в каталоге DATA.  

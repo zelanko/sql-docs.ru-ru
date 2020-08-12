@@ -1,6 +1,6 @@
 ---
 title: Экземпляры отказоустойчивого кластера AlwaysOn
-description: Описание экземпляра отказоустойчивого кластера Always On для SQL Server.
+description: Узнайте, как экземпляры отказоустойчивого кластера Always On обеспечивают локальную высокую доступность посредством избыточности на уровне экземпляра сервера в SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 01/18/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6d9f3675a2bbd2af5d33452c0dccbb46d0596d85
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 727bc6c3725315a012cff268b180ecc28a5a3631
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75230191"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882967"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>Экземпляры отказоустойчивого кластера AlwaysOn (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   В рамках [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn экземпляры отказоустойчивой кластеризации AlwaysOn используют функциональные возможности отказоустойчивой кластеризации Windows Server (WSFC) для обеспечения высокого уровня доступности локальных ресурсов за счет избыточности на уровне экземпляра сервера — *экземпляра отказоустойчивого кластера* (FCI). Экземпляр отказоустойчивого кластера (FCI) является единственным экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , установленным на всех узлах отказоустойчивой кластеризации Windows Server (WSFC) и, возможно, в нескольких подсетях. Экземпляр отказоустойчивого кластера выглядит в сети как экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , запущенный на одном компьютере, но экземпляр отказоустойчивого кластера обеспечивает отработку отказа с переходом одного узла WSFC на другой узел, если текущий узел становится недоступным.  
   

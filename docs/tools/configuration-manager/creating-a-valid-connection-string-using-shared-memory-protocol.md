@@ -1,5 +1,6 @@
 ---
 title: Создание допустимой строки соединения с использованием протокола общей памяти
+description: Сведения о том, когда подключения к SQL Server используют протокол общей памяти и как создать допустимую строку подключения для этого протокола.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: 5fff42e8-377f-4b40-b0c8-b02393f8a1af
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 28485e1cc85bc9b41e56987191f40ac634db08da
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f2a07fa54680ced7f59fe56445b128a0955e194e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306459"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893899"
 ---
 # <a name="creating-a-valid-connection-string-using-shared-memory-protocol"></a>Создание допустимой строки соединения с использованием протокола общей памяти
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   при подключении к [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с клиента, запущенного на том же компьютере, используется протокол общей памяти. У общей памяти нет настраиваемых свойств. Протокол общей памяти всегда используется первым и его нельзя переместить с верхней строчки списка **Включенные протоколы** окна **Свойства клиентских протоколов** . Протокол общей памяти может быть отключен, что бывает полезным при устранении неполадок в одном из других протоколов.  
   
  При помощи протокола общей памяти нельзя создать псевдоним, но если протокол общей памяти включен, то во время подключения к компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)] по имени создается соединение общей памяти. В строке подключения общей памяти используется формат `lpc:<servername>[\instancename]`.  

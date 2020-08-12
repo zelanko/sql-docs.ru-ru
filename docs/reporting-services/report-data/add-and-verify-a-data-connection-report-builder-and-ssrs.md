@@ -1,5 +1,6 @@
 ---
 title: Добавление и проверка подключения к данным (построитель отчетов) | Документация Майкрософт
+description: Узнайте, как использовать построитель отчетов для добавления и проверки подключения к данным, чтобы проверить, достаточно ли указанных учетных данных.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/01/2017
-ms.openlocfilehash: 26ea58eaaaffbbd0c53d78ca971f472413be322b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e128bf4402074ecce5b65951f0d2463368c08bf6
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082257"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812149"
 ---
 # <a name="add-and-verify-a-data-connection-report-builder-and-ssrs"></a>Добавление и проверка подключения к данным (построитель отчетов и службы SSRS)
 
@@ -52,9 +53,9 @@ ms.locfileid: "77082257"
 
 2. Нажмите кнопку **Проверить соединение**.
 
-3. Если соединение установлено успешно, отображается следующее сообщение: "Соединение создано успешно". [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3. Если подключение установлено успешно, отобразится следующее сообщение: "Соединение создано успешно". [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
-4. Если установить соединение не удалось, отображается следующее сообщение: "Не удалось подключиться к источнику данных".  
+4. Если не удалось установить подключение, отобразится следующее сообщение: "Не удалось подключиться к источнику данных".  
 
 5. Нажмите кнопку **Подробные сведения**и воспользуйтесь предоставленными сведениями, чтобы исправить проблему.
 

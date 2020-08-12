@@ -8,19 +8,18 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1ae2931ca07cdcd6e3f1216ce7adb2551a6e23ae
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: e0c679ce4a146065223123e41cb2935e7d33ad71
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607037"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784077"
 ---
 # <a name="tutorial-prepare-data-to-train-a-predictive-model-in-r-with-sql-machine-learning"></a>Руководство по подготовке данных для обучения прогнозной модели в R с помощью машинного обучения SQL
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Во второй части этого цикла учебников, состоящего из четырех частей, вы подготовите данные из базы данных с помощью R. Далее в этом цикле подготовленные данные будут использоваться для обучения и развертывания прогнозной модели машинного обучения в R с помощью Служб машинного обучения SQL Server или в Кластерах больших данных.
@@ -31,12 +30,15 @@ ms.locfileid: "83607037"
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 Во второй части этого цикла учебников, состоящего из четырех частей, вы подготовите данные из базы данных с помощью R. Далее в этом цикле подготовленные данные будут использоваться для обучения и развертывания прогнозной модели машинного обучения в R с помощью служб SQL Server R Services.
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+Во второй части этого цикла учебников, состоящего из четырех частей, вы подготовите данные из базы данных с помощью R. Далее в этом цикле подготовленные данные будут использоваться для обучения и развертывания прогнозной модели машинного обучения в R с помощью Служб машинного обучения управляемого экземпляра SQL Azure.
+::: moniker-end
 
 В этой статье вы узнаете, как выполнять следующие задачи.
 
 > [!div class="checklist"]
 > * Восстановление примера базы данных в базу данных.
-> * Загрузка данных из базы данных SQL в кадр данных R.
+> * Загрузка данных из базы данных в кадр данных R.
 > * Подготовка данных на языке R путем определения некоторых столбцов как категориальных.
 
 В [первой части](r-predictive-model-introduction.md) вы узнали, как восстановить учебную базу данных.
@@ -51,22 +53,19 @@ ms.locfileid: "83607037"
 
 ## <a name="load-the-data-into-a-data-frame"></a>Загрузка данных в кадр данных
 
-Чтобы использовать данные в R, загрузите их из базы данных SQL в кадр данных (`rentaldata`).
+Чтобы использовать данные в R, загрузите их из базы данных в кадр данных (`rentaldata`).
 
 Создайте файл RScript в RStudio и выполните следующий сценарий. Замените **ServerName** собственными данными для подключения.
 
 ```r
 #Define the connection string to connect to the TutorialDB database
-connStr <- "Driver=SQL Server;Server=ServerName;Database=TutorialDB;Trusted_Connection=TRUE"
+connStr <- "Driver=SQL Server;Server=ServerName;Database=TutorialDB;uid=Username;pwd=Password"
+
 
 #Get the data from the table
 library(RODBC)
 
 ch <- odbcDriverConnect(connStr)
-
-#Take a look at the structure of the data and the top rows
-head(rentaldata)
-str(rentaldata)
 
 #Import the data from the table
 rentaldata <- sqlFetch(ch, "dbo.rental_data")
@@ -138,7 +137,7 @@ $ Snow       : Factor w/ 2 levels "0","1": 1 1 1 1 1 1 1 1 1 1 ...
 
 Во второй части этого цикла учебников вы узнали, как выполнять следующие задачи:
 
-* Загрузка примера данных из SQL Server в кадр данных R.
+* Загрузка примера данных в кадр данных R
 * Подготовка данных на языке R путем определения некоторых столбцов как категориальных.
 
 Чтобы создать модель машинного обучения, которая использует данные из базы данных TutorialDB, перейдите к третьей части этого цикла учебников:
