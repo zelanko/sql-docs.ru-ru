@@ -1,5 +1,6 @@
 ---
 title: Задание ориентации текстового поля (построитель отчетов) | Документация Майкрософт
+description: Узнайте, как повернуть текстовое поле в разных направлениях в отчетах с разбивкой на страницы в построителе отчетов.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,17 +9,18 @@ ms.topic: conceptual
 ms.assetid: 64bd53f4-2f31-4732-8c2e-64c7b54b6972
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 322c393749f60b1fb505577bf3af57238eb093c6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 058da26bfe4fc5bf8ae5d777a35d0356b463ca11
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080997"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681383"
 ---
 # <a name="set-text-box-orientation-report-builder-and-ssrs"></a>Задание ориентации текстового поля (построитель отчетов и службы SSRS)
 В отчете [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы текстовое поле можно поворачивать в разных направлениях:   
 * по горизонтали;   
-* по вертикали (поворот на 90 градусов, текст читается сверху вниз);  
+* по вертикали (поворот на 90 градусов, текст читается сверху вниз, за исключением символов языков Азиатско-Тихоокеанского региона);
+
 * поворот на 270 градусов (текст читается снизу вверх).   
   
 Поскольку поворот задается для текстового поля, а не для текста, вращение применяется ко всему тексту в поле. Для различных областей текста нельзя указать различный поворот вращения. Чтобы разместить разворачиваемый текст, задайте значения ширины столбца и высоты строки вручную.  
@@ -42,6 +44,6 @@ ms.locfileid: "77080997"
   
 ## <a name="see-also"></a>См. также:  
  [Текстовые поля (построитель отчетов и службы SSRS)](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
- [Учебник. Форматирование текста (построитель отчетов)](../../reporting-services/tutorial-format-text-report-builder.md)  
+ [Руководство. Форматирование текста (построитель отчетов)](../../reporting-services/tutorial-format-text-report-builder.md)  
   
   

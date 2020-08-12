@@ -1,5 +1,6 @@
 ---
 title: Отображение верхних и нижних колонтитулов в группе (построитель отчетов) | Документация Майкрософт
+description: Узнайте, как настроить свойства отрисовки верхних и нижних колонтитулов с динамическими строками, связанными с группой в области данных табликса.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8eb7d648-4df2-491a-96cb-99e55629d617
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ecc2cb9b0b2e425627f73ae87aa3a9e8f5a289b1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 54afbcc4f95fdd0c626b6559437e08c454cd2dd4
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080483"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689254"
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>Отображение верхних и нижних колонтитулов в группе (построитель отчетов и службы SSRS)
   Для статических строк, таких как верхние или нижние колонтитулы групп, можно определить, будут ли они подготавливаться к просмотру совместно с динамическими строками, связанными с группой в области данных табликса.  

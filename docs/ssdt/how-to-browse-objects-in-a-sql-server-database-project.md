@@ -1,23 +1,23 @@
 ---
 title: просмотреть объекты из проекта базы данных SQL Server
+description: Узнайте, как просматривать объекты проекта базы данных в SQL Server. Узнайте, как для этой задачи использовать узел проектов в обозревателе объектов SQL Server в Visual Studio.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 5a6443c6-857e-4756-8d87-ae520953335b
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 39e4d8797bbe889653326bff04a44840afceffcd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 26a25e31ff93f2240442ff189fbe14a99338d2d2
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241623"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85519054"
 ---
-# <a name="how-to-browse-objects-in-a-sql-server-database-project"></a>Практическое руководство. Просмотр объектов из проекта базы данных SQL Server
+# <a name="how-to-browse-objects-in-a-sql-server-database-project"></a>Руководство. просмотреть объекты из проекта базы данных SQL Server
 
 В обозревателе объектов SQL Server в Visual Studio теперь добавлен отдельный узел "Проекты". В нем сгруппированы все содержащиеся в решении проекты базы данных SQL Server так, как это делается в SQL Server Management Studio.  
   

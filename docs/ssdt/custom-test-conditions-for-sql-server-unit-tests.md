@@ -1,21 +1,21 @@
 ---
 title: Пользовательские условия теста для модульных тестов SQL Server
+description: Узнайте, как устанавливать пользовательские условия тестов для модульных тестов SQL Server. Ознакомьтесь с рисками, связанными с установкой условий тестов, которые были созданы не вами.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 32a15d61-e908-4ae1-a238-4fd0f988d8c8
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 2852d075b6d5b1f55b76fea6b32443ea14e74384
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 829132cdd70afb725720ba629ae556ea07f09a56
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245534"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518744"
 ---
 # <a name="custom-test-conditions-for-sql-server-unit-tests"></a>Пользовательские условия теста для модульных тестов SQL Server
 
@@ -39,11 +39,11 @@ ms.locfileid: "75245534"
   
 Дополнительные сведения о пользовательских условиях тестов для модульных тестов SQL Server см. в следующих статьях:  
   
--   [Практическое руководство. Создание условий теста для конструктора модульных тестов SQL Server](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md)  
+-   [Руководство. создать условия теста для конструктора модульных тестов SQL Server](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md)  
   
--   [Практическое руководство. Обновление пользовательского условия теста Visual Studio 2010 с предыдущего выпуска до SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)  
+-   [Руководство. обновить пользовательское условие теста Visual Studio 2010 с предыдущего выпуска до SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)  
   
--   [Пошаговое руководство. Использование пользовательского условия теста для проверки результатов выполнения хранимой процедуры](../ssdt/walkthrough-use-custom-test-condition-to-verify-stored-procedure-results.md)  
+-   [Пошаговое руководство. Как использовать пользовательское условие теста для проверки результатов выполнения хранимой процедуры](../ssdt/walkthrough-use-custom-test-condition-to-verify-stored-procedure-results.md)  
   
 ## <a name="see-also"></a>См. также:  
 [Проверка кода базы данных с помощью модульных тестов SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  

@@ -1,5 +1,6 @@
 ---
 title: Счетчики производительности для службы ReportServer, объекты производительности | Документы Майкрософт
+description: Узнайте больше о счетчиках производительности для объектов производительности ReportServer:Service и ReportServerSharePoint:Service, входящих в развертывание SQL Server 2012.
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f86af60001deb0991983fe17c3cf1cf9ba3f2552
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b7afe684cb88327fd7b8bb22ae2637ad4064cb25
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68893443"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545526"
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>Счетчики производительности для службы ReportServer, объекты производительности
   В этом разделе описываются счетчики производительности для объектов производительности **ReportServer:Service** и **ReportServerSharePoint:Service** , входящих в развертывание [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .  
@@ -37,7 +38,7 @@ ms.locfileid: "68893443"
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
 ##  <a name="reportserverservice-performance-counters-native-mode-report-server"></a><a name="bkmk_ReportServer"></a> Счетчики производительности ReportServer:Service (сервер отчетов в собственном режиме)  
- Объект производительности **ReportServer:Service** включает коллекцию счетчиков для отслеживания связанных с HTTP и памятью событий для экземпляра сервера отчетов. Этот объект производительности отображается однократно для каждого экземпляра служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на компьютере; счетчики объекта производительности можно добавлять или удалять для каждого экземпляра. Счетчики для экземпляра по умолчанию отображаются в формате **ReportServer:Service**. Счетчики для именованных экземпляров отображаются в формате **ReportServer$\<***имя_экземпляра***>:Service**.  
+ Объект производительности **ReportServer:Service** включает коллекцию счетчиков для отслеживания связанных с HTTP и памятью событий для экземпляра сервера отчетов. Этот объект производительности отображается однократно для каждого экземпляра служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на компьютере; счетчики объекта производительности можно добавлять или удалять для каждого экземпляра. Счетчики для экземпляра по умолчанию отображаются в формате **ReportServer:Service**. Счетчики для именованных экземпляров отображаются в формате **ReportServer$\<***instance_name***>:Service**.  
   
  Объект производительности **ReportServer:Service** впервые появился в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Он предоставляет часть счетчиков, входивших в службы IIS и в [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] в предыдущих версиях служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Эти новые счетчики являются уникальными для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Они отслеживают связанные с HTTP события для сервера отчетов, такие как запросы, соединения и попытки входа. Кроме того, этот объект производительности включает счетчики для отслеживания событий управления памятью.  
   
@@ -49,7 +50,7 @@ ms.locfileid: "68893443"
 (get-counter -listset "ReportServer:Service").paths  
 ```  
   
-|Счетчик|Description|  
+|Счетчик|Описание|  
 |-------------|-----------------|  
 |**Активные соединения**|Количество активных в текущий момент соединений на сервере.|  
 |**Всего получено байтов**|Число байт, полученных сервером. Этот счетчик ведет подсчет общего приблизительного числа байтов, полученных как диспетчером отчетов, так и сервером отчетов.|  
@@ -82,7 +83,7 @@ ms.locfileid: "68893443"
 (get-counter -listset "ReportServerSharePoint:Service").paths  
 ```  
   
-|Счетчик|Description|  
+|Счетчик|Описание|  
 |-------------|-----------------|  
 |**Состояние нагрузки на память**||  
 |**Объем сжатия памяти**||  

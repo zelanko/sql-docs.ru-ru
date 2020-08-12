@@ -1,6 +1,7 @@
 ---
 title: Установка параметров по умолчанию для определения трассировки
 titleSuffix: SQL Server Profiler
+description: Узнайте, как использовать SQL Server Profiler для настройки шаблонов, которые SQL Server и Analysis Services используют по умолчанию для каждого поставщика или сервера.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 76144d1e3b115bca73683b198abb328ac72fae8a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 48728a7557edc0d2ddfa5d3e1dbf3e9acb868aa7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307414"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726848"
 ---
 # <a name="set-trace-definition-defaults-sql-server-profiler"></a>установить определения трассировки по умолчанию (приложение SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Определение трассировки по умолчанию — это шаблон трассировки по умолчанию, используемый для каждого поставщика или сервера. Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]можно выбирать шаблоны трассировки по умолчанию.  
   

@@ -1,5 +1,6 @@
 ---
 title: Управление разрывами страниц, заголовками, столбцами и строками (построитель отчетов) | Документация Майкрософт
+description: Оптимизируйте просмотр и печать таблиц, списков и изображений с помощью изменения длины страниц, столбцов, заголовков и строк в построителе отчетов.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4b8fa41f-a727-4f23-8efb-fd9bb0d4cd1d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2199d84efbf16b2f9a21ca48b523215749ffc488
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d3bcce26870ffea199d83f542a5d31bed1452cd1
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082297"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012642"
 ---
 # <a name="controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs"></a>Управление разрывами страниц, заголовками, столбцами и строками (построитель отчетов и службы SSRS)
   Разрыв страницы разделяет отчет на отдельные страницы для просмотра и печати. Разрывы страниц определяют, как содержимое соответствует странице отчета для оптимального представления, когда выполняется предварительный просмотр отчета или экспорт в другой формат файла.  

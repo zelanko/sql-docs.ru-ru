@@ -1,5 +1,6 @@
 ---
 title: Рекомендации по обеспечению безопасности модулей | Документы Майкрософт
+description: Сведения о политиках, условиях и требованиях безопасности, определяющих, как серверы отчетов предоставляют разрешения на расширения Reporting Services.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58cbdfeb-1105-4a7d-a3b8-b897ff95f367
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 73da0b40d845e8e2a692b969a119adb3cfce6ef1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fb6a43fba085319b8be4ff374fea7d089e8a529a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193368"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529938"
 ---
 # <a name="security-considerations-for-extensions"></a>Вопросы безопасности для модулей
   Все приложения, предназначенные для работы в среде CLR, должны взаимодействовать с системой безопасности этой среды. Такое приложение после вызова на выполнение автоматически проверяется средой CLR и получает от CLR набор разрешений. В зависимости от полученных разрешений приложение либо продолжает свою работу, либо вырабатывает исключение безопасности. Разрешения для кода, получаемые сборкой, определяются локальными параметрами безопасности и политиками в файлах конфигурации политики безопасности для конкретного сервера отчетов.  

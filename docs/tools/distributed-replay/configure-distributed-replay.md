@@ -12,15 +12,15 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: b1385a3bcc755844f5af803f16d247f0692d9fbb
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 5ec828e6aa1df2ad38c7a3f831d9f8432dc681b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82999384"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85681866"
 ---
 # <a name="configure-distributed-replay"></a>Настройка распределенного воспроизведения
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Сведения о конфигурации распределенного воспроизведения задаются в XML-файлах на контроллере распределенного воспроизведения, на клиентах, а также в месте установки средства администрирования. Эти файлы включают в себя:  
   
 -   [Файл конфигурации контроллера](#DReplayController)  
@@ -34,7 +34,7 @@ ms.locfileid: "82999384"
 ##  <a name="controller-configuration-file-dreplaycontrollerconfig"></a><a name="DReplayController"></a>Файл конфигурации контроллера: DReplayController.config  
  При запуске службы контроллера распределенного воспроизведения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] загружаются данные об уровне ведения журнала из файла конфигурации контроллера `DReplayController.config`. Этот файл находится в папке, в которую установлена служба контроллера распределенного воспроизведения:  
   
- **\<путь установки контроллера>\DReplayController.config**  
+ **\<controller installation path>\DReplayController.config**  
   
  Уровень ведения журнала, заданный в файле конфигурации контроллера, включает следующие параметры.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "82999384"
 ##  <a name="client-configuration-file-dreplayclientconfig"></a><a name="DReplayClient"></a>Файл конфигурации клиента: DReplayClient.config  
  При запуске служба клиента распределенного воспроизведения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] загружает параметры конфигурации из файла конфигурации клиента `DReplayClient.config`. Этот файл находится на каждом клиентском компьютере в папке, где установлена служба клиента распределенного воспроизведения:  
   
- **\<путь установки клиента>\DReplayClient.config**  
+ **\<client installation path>\DReplayClient.config**  
   
  В файле конфигурации клиента указываются следующие параметры:  
   
@@ -86,7 +86,7 @@ ms.locfileid: "82999384"
   
  Файл конфигурации предварительной обработки по умолчанию расположен в папке установки средства администрирования.  
   
- **\<путь установки средства администрирования>\DReplayAdmin\DReplay.exe.preprocess.config**  
+ **\<administration tool installation path>\DReplayAdmin\DReplay.exe.preprocess.config**  
   
  Параметры конфигурации предварительной обработки указываются в дочерних XML-элементах элемента `<PreprocessModifiers>` в файле конфигурации предварительной обработки. В их число входят следующие параметры.  
   
@@ -115,11 +115,11 @@ ms.locfileid: "82999384"
   
  Файл конфигурации воспроизведения по умолчанию расположен в папке установки средства администрирования.  
   
- **\<путь установки средства администрирования>\DReplayAdmin\DReplay.exe.replay.config**  
+ **\<administration tool installation path>\DReplayAdmin\DReplay.exe.replay.config**  
   
  Параметры конфигурации воспроизведения указываются в дочерних XML-элементах элементов `<ReplayOptions>` и `<OutputOptions>` в файле конфигурации воспроизведения.  
   
-### <a name="replayoptions-element"></a>\<ReplayOptions> Element  
+### <a name="replayoptions-element"></a>Элемент \<ReplayOptions>  
  В файле конфигурации воспроизведения в элементе `<ReplayOptions>` указываются следующие параметры.  
   
 |Параметр|XML-элемент|Описание|Допустимые значения|Обязательно|  
@@ -134,7 +134,7 @@ ms.locfileid: "82999384"
 |Время ожидания запроса|`<QueryTimeout>`|Задает время ожидания запроса в секундах. Это значение действует только до возврата первой строки.|Целое число >= 1<br /><br /> (`-1` для отключения)|Нет. Значение по умолчанию — `3600`.|  
 |Потоков на клиент|`<ThreadsPerClient>`|Задает число потоков воспроизведения для использования на каждом клиенте воспроизведения.|Целое число от `1` до `512`.|Нет. Если значение не указано, то для распределенного воспроизведения будет использоваться значение `255`.|  
   
-### <a name="outputoptions-element"></a>\<OutputOptions> Element  
+### <a name="outputoptions-element"></a>Элемент \<OutputOptions>  
  В файле конфигурации воспроизведения в элементе `<OutputOptions>` указываются следующие параметры.  
   
 |Параметр|XML-элемент|Описание|Допустимые значения|Обязательно|  

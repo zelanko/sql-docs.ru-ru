@@ -1,21 +1,21 @@
 ---
 title: выполнить отладку объектов базы данных
+description: Сведения об отладке хранимых процедур, функций и триггеров. Узнайте, как включить отладку, установить точки останова и выполнить модульный тест SQL Server в режиме отладки.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: f5d4584f-e85f-4558-b056-83681c365978
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: ba04eba5107968f1be11c62fbac0f57ca5733b3f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9a9e1b3b6dd7e46872c6196ef3257805c1f5a72f
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241463"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518764"
 ---
 # <a name="how-to--debug-database-objects"></a>Руководство.  выполнить отладку объектов базы данных
 
@@ -23,7 +23,7 @@ ms.locfileid: "75241463"
   
 -   Код модульного теста на языке Visual Basic или Visual C\#. Этот код, который формируется конструктором модульных тестов SQL Server, отвечает за передачу скрипта Transact\-SQL, составляющего основу теста.  
   
--   Одно или несколько условий теста, написанных на Visual C\# или Visual Basic. Для отладки условий теста следуйте процедуре по отладке тестирования модулей, описанной в разделе [Руководство. Отладка во время выполнения теста (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182484(VS.100).aspx) или [Руководство. Отладка во время выполнения теста (Visual Studio 2012)](https://msdn.microsoft.com/library/ms182484.aspx).  
+-   Одно или несколько условий теста, написанных на Visual C\# или Visual Basic. Для отладки условий теста следуйте процедуре, описанной в практических руководствах по отладке при выполнении теста [для Visual Studio 2010](https://msdn.microsoft.com/library/ms182484(VS.100).aspx) или [для Visual Studio 2012](https://msdn.microsoft.com/library/ms182484.aspx).  
   
 -   Один или несколько скриптов Transact\-SQL, которые работают с объектами в тестируемой базе данных. Вы не можете выполнить отладку этих скриптов Transact\-SQL.  
   

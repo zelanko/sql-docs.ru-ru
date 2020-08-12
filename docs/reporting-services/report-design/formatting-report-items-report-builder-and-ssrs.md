@@ -1,5 +1,6 @@
 ---
 title: Форматирование элементов отчета (построитель отчетов) | Документация Майкрософт
+description: Узнайте, как форматирование улучшает удобочитаемость и делает отчеты более привлекательными в построителе отчетов.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d0433667ba85af242374933a028974d1960416c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 156745486165bd4348e70a81c910aa49fd55a0e1
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079637"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779436"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Форматирование элементов отчета (построитель отчетов и службы SSRS)
   Форматирование элементов отчета делает отчет более привлекательным и упрощает его восприятие. В режиме конструктора отчетов можно форматировать текстовые поля и отдельные элементы в их составе, изображения, выражения и данные.  
@@ -30,7 +31,7 @@ ms.locfileid: "77079637"
   
  Чтобы изменить параметры форматирования, выберите нужный элемент и откройте для него диалоговое окно «Свойства». Например, если требуется изменить форматирование всего содержимого текстового поля или отдельного слова в текстовом поле, нужно щелкнуть этот элемент правой кнопкой мыши и выбрать **Свойства текстового поля**. Затем можно применять нужные стили форматирования.  
   
- Чтобы быстро приступить к работе, см. раздел [Учебник. Форматирование текста (построитель отчета)](../../reporting-services/tutorial-format-text-report-builder.md).  
+ Чтобы быстро приступить к работе, см. раздел [Учебник. Форматирование текста (построитель отчетов)](../../reporting-services/tutorial-format-text-report-builder.md)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

@@ -1,5 +1,6 @@
 ---
 title: Управление отображением области данных табликса на странице отчетов | Документы Майкрософт
+description: Узнайте больше о свойствах, которые позволяют изменить отображение отчетов с разбивкой на страницы при просмотре области данных таблицы, матрицы или списка в построителе отчетов.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e87bea9a9bd4807b1d91735cc5a620ac3242de73
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 95ee59f09fd839460c6635600ceb9c00905e6357
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581530"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255307"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page"></a>Управление отображением области данных табликса на странице отчетов
 Ознакомьтесь со свойствами, которые можно задать в отчете [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы для таблицы, матрицы или области данных списка, чтобы изменить отображение этих компонентов в отчете.  

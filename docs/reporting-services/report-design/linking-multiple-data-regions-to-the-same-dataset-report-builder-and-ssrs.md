@@ -1,5 +1,6 @@
 ---
 title: Связывание нескольких областей данных с одним набором данных (построитель отчетов) | Документация Майкрософт
+description: Узнайте, как добавить в отчет с разбиением на страницы несколько областей данных, чтобы предоставить несколько представлений для одного и того же набора данных отчета в построителе отчетов.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 90c94a91-8fb2-42cb-b998-563691f30d2d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d282c2c84060fb205dc0421d531a5fe23003b77e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 91a19a2d0e00fc33e7b9e9842c05f8781678a694
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081956"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84885257"
 ---
 # <a name="linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs"></a>Связывание нескольких областей данных с одним набором данных (построитель отчетов и службы SSRS)
 

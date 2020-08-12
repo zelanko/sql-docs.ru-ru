@@ -1,5 +1,6 @@
 ---
 title: Страницы "Параметры сайта" и "Функции сайта" служб Reporting Services (режим интеграции с SharePoint) | Документы Майкрософт
+description: Существует ряд пользовательских компонентов уровня сайта, а также компонентов сайта, которыми можно управлять на странице "Параметры сайта SharePoint" для служб Reporting Services в режиме интеграции с SharePoint.
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 73d357b6a601265df5e579f1b6acaff6ce8d648d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 558a741feb0e55646b4c45901965a0fb434f665f
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580459"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767378"
 ---
 # <a name="reporting-services-site-settings-and-site-features-sharepoint-mode"></a>Страницы "Параметры сайта" и "Функции сайта" служб Reporting Services (режим интеграции с SharePoint)
 
@@ -26,7 +27,7 @@ ms.locfileid: "65580459"
 > [!NOTE]
 > Интеграция служб Reporting Services с SharePoint больше не доступна после выхода SQL Server 2016.
 
-|Параметр сайта|Description|  
+|Параметр сайта|Описание|  
 |------------------|-----------------|  
 |Параметры сайта служб Reporting Services|Параметры для всего сайта, описанные в этом разделе.|  
 |Управление оповещениями об изменении данных|Управление компонентом предупреждения об изменении данных.|  
@@ -40,7 +41,7 @@ ms.locfileid: "65580459"
   
 ## <a name="options-for-reporting-services-site-settings"></a>Параметры на странице "Параметры сайта служб Reporting Services"
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |**Разрешить загрузку элемента управления RSClientPrint ActiveX**|Данный элемент управления отображает пользовательское диалоговое окно печати, в котором поддерживаются все стандартные функции: предварительный просмотр, указание отдельных страниц и их диапазонов, поля и ориентация страниц. Дополнительные сведения об этом элементе управления см. в разделе [Using the RSClientPrint Control in Custom Applications](../../reporting-services/report-server-web-service/net-framework/using-the-rsclientprint-control-in-custom-applications.md)|  
 |**Разрешить отслеживание удаленных ошибок в локальном режиме**|Показывать или скрывать подробные сообщения об ошибках, возникающих на удаленных компьютерах при работе в локальном режиме. При появлении сообщения об ошибке, аналогичного приведенному далее, может оказаться полезным включение отслеживания удаленных ошибок.<br /><br /> `For more information about this error navigate to the report server on the local server machine or enable remote errors`|  

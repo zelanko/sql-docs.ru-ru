@@ -1,5 +1,6 @@
 ---
 title: Ссылки на коллекции DataSources и DataSets (построитель отчетов) | Документация Майкрософт
+description: Сведения о коллекциях источников данных и наборов данных. Узнайте, как сделать их доступными после публикации отчета на сервере отчетов в построителе отчетов.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f951a4aa-da55-4e43-8579-4a5d4480d11f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2f65020a094258e4d6ee4a3906d29d33438b0783
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8310d67c8305101b1729446d4d9e25bc463ea0fd
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081461"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681273"
 ---
 # <a name="built-in-collections---datasources-and-datasets-references-report-builder"></a>Встроенные коллекции — ссылки на DataSources и DataSets (построитель отчетов)
   Коллекция **DataSources** представляет все источники данных, используемые в отчете. Точно так же коллекция **DataSets** представляет все наборы данных для источников данных в отчете. Для иерархического просмотра наборов данных отчета, организованных в источнике данных, на который они ссылаются, используйте область **Данные отчета** . Если в эти коллекции включаются ссылки, то при предварительном просмотре отчета значения не будут видимыми. Эти коллекции доступны только после публикации отчета на сервере отчетов.  

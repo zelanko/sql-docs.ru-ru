@@ -1,5 +1,6 @@
 ---
 title: Подготовка к реализации модуля доставки | Документы Майкрософт
+description: Узнайте, как реализовать модуль доставки в Reporting Services. Узнайте о доступных интерфейсах и классах, а также об обязательных и дополнительных функциональных возможностях.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: aee1608d-374f-4ad3-bc23-fe07fdaa52b7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 949ab416b0d30f7bb20ec2b797a04121d49b9811
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fa186787f22c6ba3dbabe6f3e219165cbf96a9b7
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193712"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529500"
 ---
 # <a name="preparing-to-implement-a-delivery-extension"></a>Подготовка к реализации модуля доставки
   Перед реализацией модуля доставки служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] следует определить реализуемые интерфейсы. Вначале необходимо решить, как будет использоваться модуль доставки, какие параметры будут необходимы для модуля и какие функции будет необходимо реализовать для доставки уведомлений об отчетах.  
@@ -35,7 +36,7 @@ ms.locfileid: "63193712"
   
  В следующей таблице описаны доступные интерфейсы и классы для модулей доставки.  
   
-|Интерфейс или класс|Description|  
+|Интерфейс или класс|Описание|  
 |------------------------|-----------------|  
 |<xref:Microsoft.ReportingServices.Interfaces.IExtension> Интерфейс|Представляет модуль в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
 |<xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> Интерфейс|Представляет модуль доставки в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  

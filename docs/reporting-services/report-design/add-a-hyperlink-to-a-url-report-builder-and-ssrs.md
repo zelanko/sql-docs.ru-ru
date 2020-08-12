@@ -1,5 +1,6 @@
 ---
 title: Добавление гиперссылки на URL-адрес (построитель отчетов) | Документация Майкрософт
+description: Узнайте, как добавлять действия гиперссылок в текстовые поля, изображения, диаграммы и датчики в отчетах с разбиением на страницы в построителе отчетов.
 ms.date: 09/07/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 85f3b3cabf180d85da9c348a7ec2cf9062b3a4c6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2ba42d27d3aaf798779b8cb9ce6b55b0a5a017d7
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080717"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255717"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Добавление гиперссылки на URL-адрес (построитель отчетов и службы SSRS)
 Вы можете узнать, как добавить действия гиперссылок в текстовые поля, изображения, диаграммы и датчики в отчеты с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  . Ссылки могут указывать на другие отчеты, закладки в отчете либо статические или динамические URL-адреса. 

@@ -1,5 +1,6 @@
 ---
 title: Максимальные размеры отчетов и моментальных снимков | Документы Майкрософт
+description: Сведения об ограничениях максимального размера отчета при публикации на сервере отчетов, подготовке к просмотру во время выполнения и сохранении в файловой системе.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 05ed8b22882264aa16efc8c5b7736bcc517e44f9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a4fa74909490cf7596faa1e38c83a83b6329bd28
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581443"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547996"
 ---
 # <a name="report-and-snapshot-size-limits"></a>Максимальные размеры отчетов и моментальных снимков
   Администраторы, которые управляют развертыванием служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , могут использовать этот раздел, чтобы получить основные сведения об ограничениях максимального размера отчета при публикации на сервере отчетов, о подготовке к просмотру во время выполнения и сохранении в файловой системе. В этом разделе содержатся практические рекомендации по определению размера базы данных сервера отчетов, а также описывается влияние размера моментальных снимков на производительность сервера.  

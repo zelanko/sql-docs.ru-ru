@@ -1,5 +1,6 @@
 ---
 title: Сервер отчетов служб Reporting Services (собственный режим) | Документы Майкрософт
+description: Сведения о сервере отчетов, настроенном для работы в собственном режиме, включая управление содержимым, управление ресурсом и добавление ссылки на ресурс изображения из отчета.
 ms.date: 04/21/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4d4a78281f9e42921f31f8d02c5f167dd13d06d5
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: 2ed406e7bb91f18149b0d42db90ed248de0d86c8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82086843"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535456"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Сервер отчетов служб Reporting Services (собственный режим)
   Сервер отчетов, настроенный для работы в основном режиме, выполняется как сервер приложений, обеспечивающий все функции обработки и управления исключительно через компоненты служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Для управления отчетами служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно использовать среду [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или веб-портал. Для управления сервером отчетов в собственном режиме используйте диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ Для управления отчетами служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно использовать среду [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] или веб-портал. Для управления сервером отчетов в собственном режиме используйте диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  Если сервер отчетов настроен для работы в режиме интеграции с SharePoint, то для управления отчетами, общими источниками данных и другими элементами сервера отчетов необходимо использовать страницы управления содержимым на сайте SharePoint.  
   
@@ -79,7 +80,7 @@ ms.locfileid: "82086843"
   
 -   Балансирование обработки отчетов на сервере путем планирования обработки и указания отчетов, которые могут быть выполнены по требованию, и отчетов, загружаемых из кэша.  
   
- Разрешение на выполнение задач управления предоставляется с использованием стандартных ролей: **Системный администратор** и **Диспетчер содержимого**. Эффективное управление содержимым сервера отчетов требует назначения обеих ролей. Дополнительные сведения об этих стандартных ролях см. в статье [Роли и разрешения (службы Reporting Services)](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
+ Разрешения на выполнение задач управления предоставляются с помощью следующих двух стандартных ролей: **Системный администратор** и **Диспетчер содержимого**. Эффективное управление содержимым сервера отчетов требует назначения обеих ролей. Дополнительные сведения об этих стандартных ролях см. в статье [Роли и разрешения (службы Reporting Services)](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
   
  Инструменты для управления содержимым сервера отчетов включают [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] или веб-портал. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] позволяет задавать значения по умолчанию и включать функции. Веб-портал используется для предоставления пользователям доступа к элементам и операциям сервера отчетов, просмотра и использования отчетов и других типов содержимого, а также для просмотра и использования всех общих элементов и функций распространения отчетов.  
   

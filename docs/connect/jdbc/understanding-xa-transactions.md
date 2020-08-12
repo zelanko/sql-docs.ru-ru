@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9bcf55fd300c977105229473228955581da7cdd3
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: ff48d23727c8dd48048293dd34127b6acbb3f005
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528738"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84294004"
 ---
 # <a name="understanding-xa-transactions"></a>Основные сведения о транзакциях XA
 
@@ -60,7 +60,7 @@ ms.locfileid: "81528738"
 Если источники данных XA нужно использовать вместе с координатором распределенных транзакций (Майкрософт) (MS DTC) для обработки распределенных транзакций, необходимо выполнить следующие действия.  
 
 > [!NOTE]  
-> Компоненты распределенных транзакций JDBC находятся в каталоге XA в каталоге установки драйвера JDBC. К этим компонентам относятся файлы xa_install.sql и sqljdbc_xa.dll.  
+> Компоненты распределенных транзакций JDBC находятся в каталоге XA в каталоге установки драйвера JDBC. К этим компонентам относятся файлы xa_install.sql и sqljdbc_xa.dll. Если на разных клиентах установлены разные версии драйвера JDBC, рекомендуется использовать последнюю версию sqljdbc_xa.dll на сервере.  
 
 > [!NOTE]  
 > Начиная с общедоступной предварительной версии CTP 2.0 SQL Server 2019, компоненты распределенных транзакций JDBC XA включены в ядро SQL Server, и их можно включить или отключить с помощью системной хранимой процедуры.

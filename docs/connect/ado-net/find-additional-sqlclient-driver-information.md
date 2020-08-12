@@ -1,7 +1,7 @@
 ---
 title: Поиск дополнительных сведений о драйвере SqlClient
 description: Страница с полезными сведениями о драйвере.
-ms.date: 09/30/2019
+ms.date: 06/15/2019
 dev_langs:
 - csharp
 - vb
@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 185c8648af5a55f53a25839a40008a203239957f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 26ee3500511ca937e0712b9338ba9a796b3a8a45
+ms.sourcegitcommit: 6b3569977b034554883a94d73d1c4df6e2f74fe2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80929018"
+ms.lasthandoff: 06/19/2020
+ms.locfileid: "85106889"
 ---
 # <a name="finding-additional-sqlclient-driver-information"></a>Поиск дополнительных сведений о драйвере SqlClient
 
@@ -30,7 +30,7 @@ ms.locfileid: "80929018"
   
 |Ресурс|Description|  
 |--------------|-----------------|  
-|[репозиторий .Net CoreFX на сайте GitHub](https://github.com/dotnet/corefx)|Этот репозиторий содержит реализацию библиотеки для .NET Core.|
+|[Репозиторий GitHub среды выполнения .NET](https://github.com/dotnet/runtime)|Этот репозиторий содержит реализацию библиотеки для .NET Core.|
 |[Репозиторий поставщика данных Microsoft SqlClient для SQL Server на сайте GitHub](https://github.com/dotnet/SqlClient)|Этот репозиторий содержит исходный код драйвера SqlClient.|  
 |[Обозреватель .NET API](https://docs.microsoft.com/dotnet/api/)|Этот сайт содержит сведения об API драйвера для .NET.|  
   

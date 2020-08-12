@@ -1,5 +1,6 @@
 ---
 title: Задание области действия синхронизации (построитель отчетов) | Документация Майкрософт
+description: Укажите в построителе отчетов область синхронизации в отчете с разбиением на страницы с индикаторами, чтобы показывать значения данных с синхронизацией по всему диапазону значений индикаторов.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6f4a11e6-6151-47be-a43f-e3dbf6c0e737
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b5c844bf2ad09ee29dbcda1773e20d93eeb069d1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1ff29909da8662d39cadb064bab66eb14df9d013
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081007"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012598"
 ---
 # <a name="set-synchronization-scope-report-builder-and-ssrs"></a>Задание области действия синхронизации (построитель отчетов и службы SSRS)
   В отчете [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы индикаторы показывают значения данных с проведением синхронизации по всему диапазону значений индикаторов в пределах указанной области действия.   

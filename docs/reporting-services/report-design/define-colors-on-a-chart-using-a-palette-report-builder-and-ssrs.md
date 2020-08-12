@@ -1,5 +1,6 @@
 ---
 title: Задание цветов диаграммы с помощью палитры (построитель отчетов) | Документация Майкрософт
+description: Измените цветовую палитру диаграммы, выбрав существующую палитру или определив свою.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d95efc22-5a32-43d4-9bd2-12753e7fd395
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0c20b5893adba8968373656b0358b89deb2dc0e9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 09d5239056225e010431947e99dd508b1c6f01ac
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080506"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689264"
 ---
 # <a name="define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs"></a>Задание цветов диаграммы с помощью палитры (построитель отчетов и службы SSRS)
   Цветовую палитру диаграммы можно изменить, выбрав существующую палитру или определив свою. Пользовательские палитры относятся к конкретным диаграммам.  

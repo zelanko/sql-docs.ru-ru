@@ -5,20 +5,20 @@ description: Узнайте, как развертывать кластеры б
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: eea087ed3a4859e179f7bb0d1e77140bb8229a17
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 052e3794fa058ec988160855123c5b0993f3fbd4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77608384"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85699832"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Развертывание кластера больших данных SQL Server в Службе Azure Kubernetes (AKS) с помощью скрипта Python
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 В этом руководстве используется пример скрипта Python для развертывания [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] в службе Azure Kubernetes (AKS).
 
@@ -85,7 +85,8 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
    > Размер машины **Standard_L8s** по умолчанию может быть доступен не во всех регионах Azure. Если вы выбираете другой размер машины, имейте в виду, что общее количество дисков, которые можно подключить во всех узлах кластера, должно быть не меньше 24. Для каждого утверждения постоянного тома в кластере требуется подключенный диск. В настоящее время для кластера больших данных требуется 24 утверждения постоянных томов. Например, размер машины [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/lsv2-series) поддерживает 32 подключенных диска, поэтому вы можете оценивать кластеры больших данных с одним узлом этого размера.
 
    > [!NOTE]
-   > Учетная запись `sa` SQL Server отключена во время развертывания кластера больших данных. В основном экземпляре SQL Server подготавливается новая учетная запись sysadmin с именем пользователя, соответствующим введенному в поле **Имя пользователя** значению, и паролем, соответствующим значению, введенному в поле **Пароль**. Те же значения **Имя пользователя** и **Пароль** используются для подготовки пользователя с полномочиями администратора контроллера. Поддерживаемый для шлюза (Knox) пользователь — **root**, пароль — такой же, как указано выше.
+   > Учетная запись `sa` SQL Server отключена во время развертывания кластера больших данных. В основном экземпляре SQL Server подготавливается новая учетная запись sysadmin с именем пользователя, соответствующим введенному в поле **Имя пользователя** значению, и паролем, соответствующим значению, введенному в поле **Пароль**. Те же значения **Имя пользователя** и **Пароль** используются для подготовки пользователя с полномочиями администратора контроллера. В кластерах, развернутых до выпуска SQL Server 2019 с накопительным пакетом обновления 5 (CU5), единственный пользователь, поддерживаемый для шлюза (Knox), — **root**. При этом пароль такой же, как указано выше.
+   >[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 1. Скрипт сначала создает кластер AKS, используя указанные параметры. Это может занять несколько минут.
 

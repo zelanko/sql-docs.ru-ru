@@ -1,5 +1,5 @@
 ---
-title: Восстановление прав администратора для HDFS
+title: Восстановление разрешений HDFS
 titleSuffix: SQL Server Big Data Cluster
 description: Восстановление прав администратора для HDFS.
 author: MikeRayMSFT
@@ -9,14 +9,14 @@ ms.date: 04/21/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6fb8c7c53c6edf4a02649f256ac6aa6d7080fdf5
-ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
+ms.openlocfilehash: c6d09921074ca2f2e386535baff5060620a7a3c8
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82108698"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669385"
 ---
-# <a name="restore-hdfs-admin-rights"></a>Восстановление прав администратора для HDFS
+# <a name="restore-hdfs-permissions"></a>Восстановление разрешений HDFS
 
 Изменения в списках управления доступом (ACL) HDFS могут привести к изменениям папок `/system` и `/tmp` в HDFS. Наиболее вероятная причина изменения списков управления доступом — пользователь вручную изменил списки управления доступом для папок. Непосредственное изменение разрешений в папках /system и /tmp/logs не поддерживается.
 

@@ -1,5 +1,6 @@
 ---
 title: Добавление в отчет границы (построитель отчетов) | Документация Майкрософт
+description: Определите области отчета с разбиением на страницы, добавив границы к заголовкам, нижним колонтитулам и тексту отчета в построителе отчетов.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: 81412f94-2991-4e58-bc05-5ccc0cbf2a75
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7790d44cc4160d7f61562cf470da43bb49a82cf2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cfec5b85bce53a018bfab013494f2f0413a3803b
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080782"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681573"
 ---
 # <a name="add-a-border-to-a-report-report-builder-and-ssrs"></a>Добавление в отчет границы (построитель отчетов и службы SSRS)
   К отчету [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы можно добавить границу, добавив границу к верхним или нижним колонтитулам либо к тексту отчета и не добавляя линии или прямоугольники.    
     
- При добавлении границы отчета, которая появляется на колонтитулах страницы, не нужно отключать колонтитулы на первой и последней страницах отчета. Если это сделать, граница может выглядеть обрезанной в верхней или нижней части первой и последней страниц отчета. Дополнительные сведения см. в разделе [Верхние и нижние колонтитулы страницы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md).    
+ При добавлении границы отчета, которая появляется на колонтитулах страницы, не нужно отключать колонтитулы на первой и последней страницах отчета. В противном случае граница может выглядеть обрезанной в верхней или нижней части первой и последней страниц отчета. Дополнительные сведения см. в разделе [Верхние и нижние колонтитулы страницы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md).    
     
 ## <a name="to-add-a-border-to-a-report"></a>Добавление границы в отчет    
     

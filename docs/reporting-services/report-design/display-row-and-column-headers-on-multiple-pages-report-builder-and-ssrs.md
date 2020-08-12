@@ -1,6 +1,6 @@
 ---
 title: Отображение заголовков строк и столбцов на нескольких страницах (построитель отчетов) | Документация Майкрософт
-description: Пользователь может указать, нужно ли повторять заголовки строк и столбцов на каждой странице отчета Reporting Services с разбивкой на страницы в области данных табликса (таблица, матрица или список), если она занимает несколько страниц.
+description: Узнайте, как указать в построителе отчетов, следует ли повторять заголовки строк и столбцов на каждой странице отчета с разбивкой на страницы для области данных табликса, которая занимает несколько страниц.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
@@ -8,12 +8,12 @@ ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.date: 12/09/2019
-ms.openlocfilehash: ca1b00d98c71808cd42acb220e7fbf5d1c382555
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a0ece423e7396e2c3aab07cc1882cf1e7f5b09ad
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254594"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84778646"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>Отображение заголовков строк и столбцов на нескольких страницах (построитель отчетов и службы SSRS)
 

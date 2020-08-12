@@ -1,21 +1,21 @@
 ---
-title: Что такое развертывание приложения
+title: Что такое развертывание приложения?
 titleSuffix: SQL Server Big Data Clusters
 description: В этой статье описывается развертывание приложения в кластере больших данных для SQL Server 2019.
-author: jeroenterheerdt
-ms.author: jterh
+author: cloudmelon
+ms.author: melqin
 ms.reviewer: mikeray
 ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4b647ab4d03d110ce303388a8b62461f28033b6c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4423e6fe624c27c0b9c06d3ff59c56648762af99
+ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76831570"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85215453"
 ---
 # <a name="what-is-application-deployment-on-a-big-data-cluster"></a>Развертывание приложения в кластере больших данных
 
@@ -52,6 +52,28 @@ output: #output parameter the app expects and the type
 После создания объекта ReplicaSet и запуска пулов создается задание cron, если в файле `spec.yaml` был задан параметр `schedule`. Наконец, создается служба Kubernetes, которую можно использовать для управления приложением и его запуска (см. ниже).
 
 При выполнении приложения служба Kubernetes передает запросы в реплику и возвращает результаты.
+
+## <a name="security-considerations-for-applications-deployments-on-openshift"></a><a id="app-deploy-security"></a> Вопросы безопасности при развертывании приложений в OpenShift
+
+SQL Server 2019 с накопительным пакетом обновления 5 (CU5) поддерживает развертывание кластеров больших данных на Red Hat OpenShift, а также обновленную модель безопасности для кластеров больших данных, поэтому привилегированные контейнеры больше не требуются. Помимо непривилегированных, контейнеры работают как пользователи, не являющиеся корневыми по умолчанию для всех новых развертываний, использующих SQL Server 2019 CU5.
+
+На момент выпуска CU5 установка приложений, развертываемых с помощью интерфейсов [развертывания приложений](concept-application-deployment.md), по-прежнему производилась от имени *привилегированного* пользователя. Это обусловлено тем, что во время установки также устанавливаются дополнительные пакеты, используемые приложением. Другой пользовательский код, развертываемый в составе приложения, выполняется от имени пользователя с низким уровнем привилегий. 
+
+Кроме того, имеется дополнительная возможность **CAP_AUDIT_WRITE**, которая необходима для планирования приложений служб SSIS с помощью заданий cron. Если в файле спецификации YAML приложения указано расписание, приложение будет запущено с помощью задания cron, для чего требуется дополнительная возможность.  Приложение можно также активировать по запросу с помощью команды *azdata app run* через вызов веб-службы, для которого не требуется возможность CAP_AUDIT_WRITE. 
+
+> [!NOTE]
+> Настраиваемая SCC в [статье, посвященной развертыванию OpenShift](deploy-openshift.md), не включает эту возможность, так как она не требуется для развертывания кластера больших данных по умолчанию. Чтобы включить эту возможность, необходимо сначала обновить пользовательский YAML-файл SCC, включив CAP_AUDIT_WRITE в 
+
+```yml
+...
+allowedCapabilities:
+- SETUID
+- SETGID
+- CHOWN
+- SYS_PTRACE
+- AUDIT_WRITE
+...
+```
 
 ## <a name="how-to-work-with-application-deployment"></a>Работа с развертыванием приложения
 

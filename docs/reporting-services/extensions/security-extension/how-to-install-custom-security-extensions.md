@@ -1,5 +1,6 @@
 ---
 title: Как установить настраиваемые модули безопасности | Документы Майкрософт
+description: Узнайте о новом веб-портале, который представлен в Reporting Services 2016. Узнайте, как итоговые изменения влияют на реализацию настраиваемых модулей безопасности.
 ms.date: 07/10/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.assetid: bfa0a35b-ccfb-4279-bae6-106c227c5f16
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9fcef802f6c61b85b4905365bda075a9f11d9e10
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4dfc638f65c66f6ecf5957b80b883ab89337b03e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68223237"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529070"
 ---
 # <a name="how-to-install-custom-security-extensions"></a>Как установить настраиваемые модули безопасности
 
@@ -51,7 +52,7 @@ public void GetUserInfo(IRSRequestContext requestContext, out IIdentity userIden
 
 ## <a name="deployment-and-configuration"></a>Развертывание и конфигурация
 
-Основные конфигурации, необходимые для настраиваемого модуля безопасности, совпадают с конфигурациями из предыдущих выпусков. Необходимо внести изменения в web.config и rsreportserver.config. Дополнительные сведения см. в разделе [Настройка нестандартной проверки подлинности или проверки подлинности с помощью форм на сервере отчетов](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md).
+Основные конфигурации, необходимые для настраиваемого модуля безопасности, совпадают с конфигурациями из предыдущих выпусков. Для web.config и rsreportserver.config требуются изменения. Дополнительные сведения см. в статье [Настройка нестандартной проверки подлинности или проверку подлинности с помощью форм на сервере отчетов](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md).
 
 Больше нет отдельного файла web.config для диспетчера отчетов, портал будет наследовать те же параметры, что и конечная точка сервера отчетов.
 

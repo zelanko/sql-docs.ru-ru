@@ -8,22 +8,21 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f13efaa9181521a40d6f3ba9a5cdeef7da3d2afc
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: af3826d5153e2be157a74c96037bff51c6039e7c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606987"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728560"
 ---
 # <a name="tutorial-deploy-a-predictive-model-in-r-with-sql-machine-learning"></a>Руководство по развертыванию прогнозной модели в R с помощью машинного обучения SQL
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-В заключительной части этого цикла учебников, состоящего из четырех частей, вы развернете модель машинного обучения, разработанную в R, в SQL Server с помощью Служб машинного обучения.
+В четвертой части этого цикла учебников, состоящего из четырех частей, вы развернете модель машинного обучения, разработанную в R, в службах машинного обучения SQL Server или в кластерах больших данных.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 В заключительной части этого цикла учебников, состоящего из четырех частей, вы развернете модель машинного обучения, разработанную в R, в SQL Server с помощью Служб машинного обучения.
@@ -31,11 +30,13 @@ ms.locfileid: "83606987"
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 В заключительной части этого цикла учебников, состоящего из четырех частей, вы развернете модель машинного обучения, разработанную в R, в SQL Server с помощью служб SQL Server R Services.
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+В четвертой части этого цикла учебников, состоящего из четырех частей, вы развернете модель машинного обучения, разработанную в R, в управляемом экземпляре SQL Azure с помощью Служб машинного обучения.
+::: moniker-end
 
 В этой статье вы узнаете, как выполнять следующие задачи.
 
 > [!div class="checklist"]
-
 > * Создание хранимой процедуры, которая формирует модель машинного обучения
 > * Сохранение модели в таблице базы данных
 > * Создание хранимой процедуры, которая делает прогнозы с помощью модели
@@ -66,11 +67,14 @@ AS
 BEGIN
     EXECUTE sp_execute_external_script @language = N'R'
         , @script = N'
+rental_train_data$Month   <- factor(rental_train_data$Month);
+rental_train_data$Day     <- factor(rental_train_data$Day);
 rental_train_data$Holiday <- factor(rental_train_data$Holiday);
 rental_train_data$Snow    <- factor(rental_train_data$Snow);
 rental_train_data$WeekDay <- factor(rental_train_data$WeekDay);
 
 #Create a dtree model and train it using the training data set
+library(rpart);
 model_dtree <- rpart(RentalCount ~ Month + Day + WeekDay + Snow + Holiday, data = rental_train_data);
 #Serialize the model before saving it to the database table
 trained_model <- as.raw(serialize(model_dtree, connection=NULL));
@@ -157,6 +161,8 @@ BEGIN
     EXECUTE sp_execute_external_script @language = N'R'
         , @script = N'
 #Convert types to factors
+rentals$Month   <- factor(rentals$Month);
+rentals$Day     <- factor(rentals$Day);
 rentals$Holiday <- factor(rentals$Holiday);
 rentals$Snow    <- factor(rentals$Snow);
 rentals$WeekDay <- factor(rentals$WeekDay);
@@ -202,12 +208,12 @@ RentalCount_Predicted
 332.571428571429
 ```
 
-Вы успешно создали, обучили и развернули модель в базе данных SQL. Затем вы использовали ее в хранимой процедуре для прогнозирования значений на основе новых данных.
+Вы успешно создали, обучили и развернули модель в базе данных. Затем вы использовали ее в хранимой процедуре для прогнозирования значений на основе новых данных.
 
 
 ## <a name="clean-up-resources"></a>Очистка ресурсов
 
-После использования базы данных TutorialDB удалите ее с сервера SQL Server.
+После использования базы данных TutorialDB удалите ее с сервера.
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

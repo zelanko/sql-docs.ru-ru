@@ -1,5 +1,6 @@
 ---
 title: Диаграммы "дерево" и "солнечные лучи" в SQL Server Reporting Services | Документы Майкрософт
+description: Узнайте, как визуально представлять иерархические данные с помощью диаграммы дерева или круговой многоуровневой диаграммы в построителе отчетов.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
-ms.openlocfilehash: fd9ac9ccd0906ee34a66b7144fdd964d05e5f050
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: af294ac47e7523f0b0dba5a57bbf2318bbe8c149
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68259363"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255437"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Диаграммы "дерево" и "солнечные лучи" в Reporting Services 
 
@@ -115,7 +116,7 @@ ms.locfileid: "68259363"
   
 1. **Получение данных**.  
   
-     Запрос в этом разделе основан на базе данных AdventureWorks, которую можно скачать на странице [полной резервной копии базы данных AdventureWorks 2016](https://github.com/Microsoft/sql-server-samples/releases) в GitHub.  
+     Запрос в этом разделе основан на базе данных AdventureWorks, которую можно скачать на странице веб-сайта GitHub о [резервном копировании всей базы данных AdventureWorks 2016](https://github.com/Microsoft/sql-server-samples/releases).  
 
 2. **Создание источника данных**.  
   
@@ -168,7 +169,7 @@ ms.locfileid: "68259363"
                                  Sales.SalesOrderHeaderSalesReason.SalesReasonID = Sales.SalesReason.SalesReasonID  
         ```  
   
-    5. Нажмите кнопку **ОК**.  
+    5. Щелкните **ОК**.  
   
      Дополнительные сведения о создании набора данных см. в разделе [Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
   
@@ -178,6 +179,6 @@ ms.locfileid: "68259363"
 
 * [Отображение всплывающих подсказок для ряда (построитель отчетов и службы SSRS)](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)
 
-* [Учебник. Диаграммы "дерево" в Power BI](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
+* [Руководство. Древовидные диаграммы в Power BI](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
 
-* [Диаграмма "дерево". Приложения визуализации данных Microsoft Research для Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)
+* [Treemap: Microsoft Research Data Visualization Apps for Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx) (Древовидная диаграмма. Приложения визуализации данных Microsoft Research для Office)

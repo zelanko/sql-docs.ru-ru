@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 0b034a0c0d449bd85afbfd46fa407e34921b8cf2
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: 84a7a8261e2fc3d2031b1b38b8ee7709ad015e39
+ms.sourcegitcommit: 48d60fe6b6991303a88936fb32322c005dfca2d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82262125"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85353101"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Заметки о выпуске SqlPackage.exe
 
@@ -34,6 +34,21 @@ Or, if there is no relationship, remove 'DacFx' from the metadata 'title:'.
 I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
+
+## <a name="1851-sqlpackage"></a>18.5.1 sqlpackage
+
+|Платформа|Скачивание|Дата выпуска|Версия|Сборка
+|:---|:---|:---|:---|:---|
+|Windows|[Установщик MSI](https://go.microsoft.com/fwlink/?linkid=2134206)|24 июня 2020 г.|18.5.1|15.0.4826.1|
+|macOS .NET Core |[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2134312)|24 июня 2020 г.| 18.5.1|15.0.4826.1|
+|Linux .NET Core |[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2134311)|24 июня 2020 г.| 18.5.1|15.0.4826.1|
+|Windows .NET Core |[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2134310)|24 июня 2020 г.| 18.5.1|15.0.4826.1|
+
+### <a name="fixes"></a>Исправления
+| Компонент | Сведения |
+| :------ | :------ |
+| Развертывание | Исправлена регрессия, появившаяся в версии 18.5, в результате которой возникает ошибка "Неправильный синтаксис около «тип»" при развертывании пакета DACPAC или импорт пакета BACPAC с пользователем с внешним входом в локальную среду | 
+
 ## <a name="185-sqlpackage"></a>18.5 sqlpackage
 
 |Платформа|Скачивание|Дата выпуска|Версия|Сборка
@@ -60,7 +75,6 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 ### <a name="fixes"></a>Исправления
 | Fix | Сведения |
 | :-- | :------ |
-| Развертывание | Исправлена публикация DACPAC базы данных, содержащей внешнего пользователя, который выдавал ошибку "Ссылка на объект не задана экземпляром объекта". |
 | Развертывание | Исправлен синтаксический анализ пути JSON в качестве выражения. |
 | Развертывание | Исправлено создание инструкций GRANT для разрешений AlterAnyDatabaseScopedConfiguration и AlterAnySensitivityClassification. |
 | Развертывание | Исправлена проблема, при которой разрешение на внешние скрипты не распознается. |
@@ -71,6 +85,13 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | ScriptDom | Устранена ошибка ScriptDom, при которой не удавалось распознать встроенные ограничения, определенные после встроенного индекса. |
 | ScriptDom | Исправлено отсутствие закрывающей скобки ScriptDom SYSTEM_TIME в пакетной инструкции. |
 | Always Encrypted | Исправлена ошибка, при которой таблицу #tmpErrors не удавалось удалить, если sqlpackage повторно подключается, а временная таблица уже исчезла, так как временная таблица исчезает после разрыва соединения. |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>Известные проблемы
+| Компонент | Сведения |
+| :------ | :------ |
+| Развертывание |  В версии 18.5 появилась регрессия, в результате которой возникает ошибка "Неправильный синтаксис около «тип»" при развертывании пакета DACPAC или импорт пакета BACPAC с пользователем с внешним входом в локальную среду. Решение — использовать sqlpackage 18.4, и оно будет исправлено в следующей версии sqlpackage. | 
+| .NET Core | Импорт пакетов BACPAC с конфиденциальной классификацией завершается сбоем с ошибкой "Внутренняя неустранимая ошибка подключения" из-за этой [известной проблемы](https://github.com/dotnet/SqlClient/issues/559) в Microsoft.Data.SqlClient. Эта проблема будет устранена в следующем выпуске sqlpackage. |
 | &nbsp; | &nbsp; |
 
 ## <a name="1841-sqlpackage"></a>sqlpackage версии 18.4.1

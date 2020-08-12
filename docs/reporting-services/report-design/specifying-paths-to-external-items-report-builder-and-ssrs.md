@@ -1,5 +1,6 @@
 ---
 title: Указание путей к внешним элементам (построитель отчетов) | Документация Майкрософт
+description: Сведения о том, как указать пути в свойствах элемента отчета, чтобы сослаться на элементы, которые являются внешними по отношению к файлу определения отчета в построителе отчетов.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4fe513da-f3c5-479c-9fec-8662b91a0d6d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cad68b0b99479b074e04760f419e12ec9837aac3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6ec449fd6b57c81e25e2a05e1702748dd88197d3
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080910"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681473"
 ---
 # <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>Указание путей к внешним элементам (построитель отчетов и службы SSRS)
   В свойствах элемента отчета укажите пути к нужным элементам, таким как детализированные отчеты, вложенные отчеты и файлы изображений, которые являются внешними для файла определения отчета и размещены на сервере отчетов.  
@@ -37,7 +38,7 @@ ms.locfileid: "77080910"
   
 -   **Полный путь к элементу.**  
   
-    -   **На сервере отчетов** путь начинается с **/** (корневой папки). например /Reports/AllSubreports/Subreport1.  
+    -   **На сервере отчетов** путь начинается с **/** (корневой папки), например /Reports/AllSubreports/Subreport1.  
   
     -   **На сайте SharePoint** необходимо указать в выражении имя отчета с полным URL-адресом элемента и расширением файла RDL. Например, `="https://server/site/library/folder/Report1.rdl"`.  
   

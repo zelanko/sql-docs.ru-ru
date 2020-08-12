@@ -6,20 +6,20 @@ author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
 ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a2e1297ee6d32adc59810f3a4f9379e600f1464f
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 7139b427e58e1aabc516c562def45f986ece1c9d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606506"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728028"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-big-data-clusters-2019-in-spark-history-server"></a>Отладка и диагностика приложений Spark в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] на сервере журнала Spark
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 В этой статье содержатся указания по использованию расширенного сервера журнала Spark для отладки и диагностики приложений Spark в кластере больших данных SQL Server. Эти возможности отладки и диагностики встроены в сервер журнала Spark и обеспечиваются технологиями корпорации Майкрософт. Расширение содержит вкладки данных, графа и диагностики. На вкладке данных пользователи могут проверять входные и выходные данные задания Spark. На вкладке графа пользователи могут проверять поток данных и воспроизводить граф задания. На вкладке диагностики пользователь может просматривать результаты анализа неравномерного распределения данных, неравномерного распределения времени и использования исполнителя.
 
@@ -28,7 +28,7 @@ ms.locfileid: "83606506"
 Интерфейс сервера журнала Spark в рамках проекта с открытым кодом дополняется такой информацией, как данные по заданиям и интерактивная визуализация графа заданий и потоков данных для кластера больших данных. 
 
 ### <a name="open-the-spark-history-server-web-ui-by-url"></a>Открытие пользовательского веб-интерфейса сервера журнала Spark по URL-адресу
-Чтобы открыть сервер журнала Spark, перейдите по приведенному ниже URL-адресу, заменив `<Ipaddress>` и `<Port>` на значения для кластера больших данных. Обратите внимание, что в конфигурации кластера больших данных с обычной проверкой подлинности (имя пользователя и пароль) для входа в конечные точки шлюза (Knox) необходимо предоставить учетные данные **привилегированного** пользователя. Дополнительные сведения см. в статье [Развертывание кластера больших данных SQL Server](quickstart-big-data-cluster-deploy.md).
+Чтобы открыть сервер журнала Spark, перейдите по приведенному ниже URL-адресу, заменив `<Ipaddress>` и `<Port>` на значения для кластера больших данных. В кластерах, развернутых до выпуска накопительного пакета обновления 5 (CU5) для SQL Server 2019, с конфигурацией кластера больших данных с обычной проверкой подлинности (имя пользователя и пароль) для входа в конечные точки шлюза (Knox) необходимо предоставить учетные данные **привилегированного** пользователя. См. раздел [Развертывание кластера больших данных SQL Server](quickstart-big-data-cluster-deploy.md). [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 ```
 https://<Ipaddress>:<Port>/gateway/default/sparkhistory
@@ -193,7 +193,13 @@ https://<Ipaddress>:<Port>/gateway/default/sparkhistory
 + Щелкните значок цвета, чтобы выбрать соответствующее содержимое на всех графиках или отменить его выбор.
 
     ![Выбор диаграммы](./media/apache-azure-spark-history-server/sparkui-diagnosis-select-chart.png)
+    
+## <a name="spark--yarn-logs"></a>Журналы Spark и Yarn
+Помимо сервера журнала Spark, журналы для Spark и Yarn соответственно можно найти в следующих местах.
+* Журналы событий Spark: hdfs:///system/spark-events
+* Журналы Yarn: hdfs:///tmp/logs/root/logs-tfile
 
+Примечание. Оба этих журнала имеют период хранения по умолчанию 7 дней. Если вы хотите изменить период хранения, см. страницу [Настройка Apache Spark и Apache Hadoop](configure-spark-hdfs.md). Расположение изменить **нельзя**.
 
 ## <a name="known-issues"></a>Известные проблемы
 Сервер журнала Spark имеет указанные ниже известные проблемы.

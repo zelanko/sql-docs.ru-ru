@@ -9,16 +9,16 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a78074b7e32df18de1308d2354d98079d074f9bf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c051a634199bf6a8adc9a0b52a73196f68901893
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73531942"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730603"
 ---
 # <a name="manage-big-data-clusters-for-sql-server-controller-dashboard"></a>Управление кластерами больших данных для информационной панели контроллера SQL Server
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Для просмотра состояния кластера больших данных SQL Server можно воспользоваться и другими способами, помимо **azdata** и записной книжки состояния кластера. Теперь контроллер кластера больших данных SQL Server можно добавить с помощью мини-приложения обозревателя **Подключения**. Так вы получите информационную панель для просмотра состояния кластера.
 
@@ -27,8 +27,8 @@ ms.locfileid: "73531942"
 
 Для запуска записной книжки требуются следующие компоненты:
 
-* последняя [сборка Azure Data Studio для участников программы предварительной оценки](https://docs.microsoft.com/sql/big-data-cluster/deploy-big-data-tools?view=sqlallproducts-download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc);
-* расширение [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], установленное в Azure Data Studio.
+* последняя версия [Azure Data Studio](https://aka.ms/getazuredatastudio);
+* [расширение [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], установленное в Azure Data Studio](../azure-data-studio/data-virtualization-extension.md).
 
 Помимо перечисленных выше компонентов, для работы кластера больших данных SQL Server 2019 требуется следующее:
 

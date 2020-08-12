@@ -1,5 +1,6 @@
 ---
 title: Включение и отключение компонентов Reporting Services | Документы Майкрософт
+description: Узнайте, как отключить отдельные функции в собственном режиме Reporting Services. Настраивать функции можно различными способами.
 ms.date: 06/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 67945db1fd131b27b37a7e34853987c38fad8d84
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b66ae216df1b50ee1fa71de8e18f7ee8251e1be4
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67140378"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547876"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Включение и отключение компонентов служб Reporting Services
   Неиспользуемые функции сервера отчетов можно отключить в рамках блокирующей стратегии, позволяющей снизить риск атак на рабочий сервер отчетов. В большинстве случаев рекомендуется использовать функции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] параллельно; это позволит использовать все функциональные возможности, предоставляемые службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Однако в зависимости от используемой модели развертывания можно отключить неиспользуемые функции. Например, если вся обработка отчетов производится с использованием операций по расписанию, то можно разрешить только фоновую обработку. Подобным же образом можно ограничиться запуском веб-службы сервера отчетов, чтобы только получать отчеты по требованию в интерактивном режиме.  
@@ -112,7 +113,7 @@ ms.locfileid: "67140378"
   
     -   Чтобы отключить встроенную безопасность Windows, снимите флажок **Использовать встроенную безопасность Windows для источников данных для отчетов**.  
   
-4.  Нажмите кнопку **ОК**.  
+4.  Щелкните **ОК**.  
   
 ## <a name="see-also"></a>См. также раздел  
 [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../install-windows/reporting-services-configuration-manager-native-mode.md)

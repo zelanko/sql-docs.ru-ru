@@ -1,5 +1,6 @@
 ---
 title: Функция CountDistinct (построитель отчетов) | Документация Майкрософт
+description: Возвращает количество всех уникальных значений, отличных от NULL, которые задаются выражением в контексте заданной области.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 902c251e-e1e8-41d2-ac20-5bb6138ac410
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ff5931ea437a2b91bf2232472fbf5780153f38cb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f5689e3b1bf4330c8ac0e18d974a48672223fd2a
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081276"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689744"
 ---
 # <a name="report-builder-functions---countdistinct-function"></a>Функции построителя отчетов — функция CountDistinct
   Возвращает количество уникальных значений, отличных от NULL, определяемое выражением, вычисляемым в контексте данной области.  

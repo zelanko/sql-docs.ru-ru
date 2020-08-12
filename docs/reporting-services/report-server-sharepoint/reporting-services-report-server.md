@@ -1,5 +1,6 @@
 ---
 title: Сравнение серверов отчетов в собственном режиме и режиме интеграции с SharePoint Reporting Services | Документация Майкрософт
+description: Сведения об основном компоненте установки SQL Server Reporting Services, который состоит из модуля обработки и расширений для добавления функциональных возможностей.
 ms.date: 06/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f7a75f578c025386966fc4fc7a15c41e7e44e0a7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b884782c7ae1ad7898a2d2ef04de7de18b7c73df
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67038012"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764894"
 ---
 # <a name="comparing-native-and-sharepoint-reporting-services-report-servers"></a>Сравнение серверов отчетов в собственном режиме и режиме интеграции с SharePoint Reporting Services
 
@@ -54,16 +55,16 @@ ms.locfileid: "67038012"
 |**диспетчер конфигураций**|Да|**\*\* Важно. \*\*** Диспетчер конфигурации нельзя использовать для управления сервером отчетов в режиме интеграции с SharePoint. Вместо этого следует использовать центр администрирования SharePoint.|  
 |**Веб-портал**|Да|Вы не сможете управлять режимом SharePoint на веб-портале. Используйте страницы приложения SharePoint. Дополнительные сведения см. в разделе [Служба SharePoint и приложения служб Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).|  
 |**Связанные отчеты**|Да|Нет.|  
-|**Мои отчеты**|Да|нет|  
-|**Мои подписки** и методы пакетной обработки.|Да|нет|  
-|**Предупреждения об изменении данных**|нет|Да|  
-|**Power View**|нет|Да<br /><br /> Требуется наличие в браузере клиента Silverlight. Дополнительные сведения о требованиях к браузеру см. в разделе [Поддержка браузера для служб Reporting Services и Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).|  
-|**Отчеты RDL**|Да|Да<br /><br /> Отчеты RDL можно запускать на серверах отчетов служб Reporting Services в собственном режиме или в режиме интеграции с SharePoint.|  
-|**Отчеты RDLX**|нет|Да<br /><br /> Отчеты RDLX, созданные компонентом Power View, могут выполняться только на серверах отчетов служб Reporting Services в режиме интеграции с SharePoint.|  
-|**Учетные данные токена пользователя SharePoint для расширения списка SharePoint**|нет|Да|  
-|**AAM-зоны для развертываний, направленных в сторону Интернета**|нет|Да|  
-|**Резервное копирование и восстановление SharePoint**|нет|Да|  
-|**Поддержка журналов ULS**|нет|Да|  
+|**Мои отчеты**|да|Нет|  
+|**Мои подписки** и методы пакетной обработки.|да|Нет|  
+|**Предупреждения об изменении данных**|Нет|Да|  
+|**Power View**|Нет|Да<br /><br /> Требуется наличие в браузере клиента Silverlight. Дополнительные сведения о требованиях к браузеру см. в разделе [Поддержка браузера для служб Reporting Services и Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).|  
+|**Отчеты RDL**|Да|да<br /><br /> Отчеты RDL можно запускать на серверах отчетов служб Reporting Services в собственном режиме или в режиме интеграции с SharePoint.|  
+|**Отчеты RDLX**|Нет|Да<br /><br /> Отчеты RDLX, созданные компонентом Power View, могут выполняться только на серверах отчетов служб Reporting Services в режиме интеграции с SharePoint.|  
+|**Учетные данные токена пользователя SharePoint для расширения списка SharePoint**|Нет|Да|  
+|**AAM-зоны для развертываний, направленных в сторону Интернета**|Нет|Да|  
+|**Резервное копирование и восстановление SharePoint**|Нет|Да|  
+|**Поддержка журналов ULS**|Нет|Да|  
   
 ## <a name="native-mode"></a>Основной режим
 
@@ -97,7 +98,7 @@ ms.locfileid: "67038012"
   
  ![Функциональная архитектура служб SSRS SharePoint](../../reporting-services/report-server-sharepoint/media/rs-sharepoint-architecture.gif "Функциональная архитектура служб SSRS SharePoint")  
   
-||Description|  
+||Описание|  
 |-|-----------------|  
 |**(1)**|Веб-серверы или клиентские веб-интерфейсы (WFE). Надстройка служб Reporting Services должна быть установлена на каждом веб-сервере, функции веб-приложений которого придется использовать (просмотр отчетов и страниц управления Reporting Services для таких задач, как управление источниками данных и подписками).|  
 |**(2)**|Эта надстройка устанавливает конечные точки URL-адресов и SOAP для обеспечения связи клиентов с серверами приложений через прокси-сервер служб Reporting Services.|  

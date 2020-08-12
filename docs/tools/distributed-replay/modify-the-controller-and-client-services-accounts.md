@@ -4,23 +4,23 @@ titleSuffix: SQL Server Distributed Replay
 description: Узнайте, как изменить учетные записи контроллера и клиента распределенного воспроизведения и повторно применить списки управления доступом.
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 44a73ddb-18ad-415c-bfbe-126ab2e3290b
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 7abe40c16dc49e948fbca68486f96db221e1aae8
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 4c8a0f29addf80905ef6edaf5920e479fbaa48e2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000469"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85681165"
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>Изменение учетных записей служб клиента и контроллера
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 В этом разделе будет рассказано о том, как изменить учетные записи контроллера и клиента распределенного воспроизведения и повторно применить списки управления доступом (ACL).  
   
@@ -28,7 +28,7 @@ ms.locfileid: "83000469"
   
 1.  На компьютере, на котором установлены службы распределенного воспроизведения, в командной строке введите команду **dcomcnfg**.  
   
-2.  Дважды щелкните **Службы**, прокрутите вниз, щелкните правой кнопкой мыши **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\<Имя службы> распределенного воспроизведения**, а затем щелкните **Запустить** или **Остановить**.  
+2.  Дважды щелкните **Службы**, прокрутите вниз, щелкните правой кнопкой мыши элемент **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] распределенное воспроизведение \<service name>** , а затем щелкните **Запустить** или **Остановить**.  
   
 ### <a name="to-modify-the-distributed-replay-controller-service"></a>Изменение службы контроллера распределенного воспроизведения  
   

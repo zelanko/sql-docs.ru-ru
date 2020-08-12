@@ -1,21 +1,21 @@
 ---
 title: Разработка подключенной базы данных
+description: Узнайте, как SQL Server Data Tools может работать с подключенными базами данных. Узнайте, как просматривать сущности, проектировать таблицы, изменять сценарии и выполнять другие задачи.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 21f7f959-7b8e-4335-8681-bebcd957692c
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 068418e04624d912671e5b390823fb0903ba50af
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 340df9136dd674f4d340779dfc3d2d5e4db32042
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256130"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85519074"
 ---
 # <a name="connected-database-development"></a>Разработка подключенной базы данных
 
@@ -28,17 +28,17 @@ ms.locfileid: "75256130"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |---------|---------------|  
-|[Практическое руководство. Подключение к базе данных и просмотр существующих объектов](../ssdt/how-to-connect-to-a-database-and-browse-existing-objects.md)|Подключение к базе данных и просмотр ее сущностей.|  
-|[Практическое руководство. Создание объектов базы данных с помощью конструктора таблиц](../ssdt/how-to-create-database-objects-using-table-designer.md)|Использование нового конструктора таблиц для проектирования таблиц и управления связями между таблицами.|  
-|[Практическое руководство. Обновление подключенной базы данных с помощью Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)|Обновление подключенной базы данных без написания скриптов с инструкциями ALTER.|  
+|[Руководство. подключаться к базе данных и просматривать существующие объекты](../ssdt/how-to-connect-to-a-database-and-browse-existing-objects.md)|Подключение к базе данных и просмотр ее сущностей.|  
+|[Руководство. создать объекты базы данных с помощью конструктора таблиц](../ssdt/how-to-create-database-objects-using-table-designer.md)|Использование нового конструктора таблиц для проектирования таблиц и управления связями между таблицами.|  
+|[Руководство. обновить подключенную базу данных с помощью Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)|Обновление подключенной базы данных без написания скриптов с инструкциями ALTER.|  
 |[Диалоговое окно "Фильтрация и сортировка"](../ssdt/filter-and-sort-dialog-box.md)|Указать, какие данные должны отображаться в представлении данных.|  
-|[Практическое руководство. Создание объектов базы данных с помощью запросов](../ssdt/how-to-create-new-database-objects-using-queries.md)|Использование редактора Transact\-SQL для изменения и выполнения скриптов Transact\-SQL.|  
-|[Практическое руководство. Изменение существующих таблиц с помощью запросов](../ssdt/how-to-edit-an-existing-table-using-queries.md)|Написание скриптов Transact\-SQL для изменения определения таблицы или заполнения таблицы данными.|  
-|[Практическое руководство. Просмотр и изменение данных в таблице](../ssdt/how-to-view-and-edit-data-in-a-table.md)|Использование редактора данных для просмотра или ввода данных в таблицу.|  
-|[Практическое руководство. Удаление объектов и разрешение зависимостей](../ssdt/how-to-delete-objects-and-resolve-dependencies.md)|Переименование или удаление сущностей базы данных и настройка SQL Server Data Tools на автоматическое разрешение зависимостей между объектами.|  
-|[Практическое руководство. Клонирование существующей базы данных](../ssdt/how-to-clone-an-existing-database.md)|Создание базы данных разработки из производственной базы данных.|  
+|[Руководство. создать объекты базы данных с помощью запросов](../ssdt/how-to-create-new-database-objects-using-queries.md)|Использование редактора Transact\-SQL для изменения и выполнения скриптов Transact\-SQL.|  
+|[Руководство. изменить существующую таблицу с помощью запросов](../ssdt/how-to-edit-an-existing-table-using-queries.md)|Написание скриптов Transact\-SQL для изменения определения таблицы или заполнения таблицы данными.|  
+|[Руководство. просмотреть и изменить данные в таблице](../ssdt/how-to-view-and-edit-data-in-a-table.md)|Использование редактора данных для просмотра или ввода данных в таблицу.|  
+|[Руководство. удалить объекты и разрешить зависимости](../ssdt/how-to-delete-objects-and-resolve-dependencies.md)|Переименование или удаление сущностей базы данных и настройка SQL Server Data Tools на автоматическое разрешение зависимостей между объектами.|  
+|[Руководство. клонировать существующую базу данных](../ssdt/how-to-clone-an-existing-database.md)|Создание базы данных разработки из производственной базы данных.|  
 |[Извлечение, публикация и регистрация DACPAC-файлов](../ssdt/extract-publish-and-register-dacpac-files.md)|Показывает, как извлечь и опубликовать DACPAC-файлы.|  
   
 ## <a name="related-sections"></a>См. также

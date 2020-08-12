@@ -1,6 +1,7 @@
 ---
 title: Установка параметров по умолчанию для отображения трассировки
 titleSuffix: SQL Server Profiler
+description: Обзор параметров инструментов, которые SQL Server Profiler по умолчанию использует в трассировках, например тип, размер и начертание шрифта, и способов их настройки.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 4a1958ee112b1453a6b86a5e520737b0945147c5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9a1e746b4f418c23e22dafc6c07b211c188b8a13
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307931"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726866"
 ---
 # <a name="set-trace-display-defaults-sql-server-profiler"></a>установить параметры по умолчанию для отображения трассировки (приложение SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Данный раздел описывает способ задания инструментальных параметров, которые определяют типы, размер и начертание шрифтов, используемых приложением [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] для отображения трассировок в окне трассировки. Также можно указывать отображение приложением [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] всех дат и времени с региональными настройками из операционной системы.  
   

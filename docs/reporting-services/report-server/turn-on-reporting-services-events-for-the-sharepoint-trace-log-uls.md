@@ -1,5 +1,6 @@
 ---
 title: Включение событий служб Reporting Services для журнала трассировки SharePoint (ULS) | Документация Майкрософт
+description: Сведения о том, как включить запись событий Reporting Services в журнал трассировки ULS SharePoint для серверов Reporting Services в режиме интеграции с SharePoint.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 07f8cd00781717511bbcaba6e76553cc17d0c5bf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ef8729d35598b59c33a827d77e5e7c5473ead049
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68893244"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547866"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Включение событий служб Reporting Services для журнала трассировки SharePoint (ULS)
 
@@ -38,7 +39,7 @@ ms.locfileid: "68893244"
 ##  <a name="general-uls-log-recommendations"></a><a name="bkmk_general"></a> Общие рекомендации в отношении журнала ULS  
  В следующей таблице перечислены категории и уровни событий, которые рекомендуется использовать при наблюдении за средой служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . При регистрации события каждая запись включает время регистрации, имя процесса и идентификатор потока.  
   
-|Категория|Level|Description|  
+|Категория|Level|Описание|  
 |--------------|-----------|-----------------|  
 |База данных|Подробный|Регистрирует события, требующие доступа к базе данных.|  
 |Общие сведения|Подробный|Регистрирует события, требующие доступа к следующим элементам.<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .<br /><br /> Обработчик HTTP-данных средства просмотра отчетов.<br /><br /> Доступ к отчету (RDL-файлы).<br /><br /> Источники данных (RSDS-файлы).<br /><br /> URL-адреса на сайте SharePoint (SMDL-файлы).|  
@@ -85,9 +86,9 @@ Get-SPDiagnosticConfig
   
 1.  **Продукт: службы SQL Server Reporting Services**  
   
-2.  **Категория:** события, связанные с сервером, будут иметь символы Report Server в начале имени. Например, Report Server Alerting Runtime. Эти события также регистрируются в файлах журнала сервера отчета.  
+2.  **Категория.** События, связанные с сервером, будут иметь символы Report Server в начале имени. Например, Report Server Alerting Runtime. Эти события также регистрируются в файлах журнала сервера отчета.  
   
-3.  **Категория:** события, связанные клиентской веб-частью или полученные от нее, не содержащие символы Report Server. Например, Service Application Proxy (в отличие от Report Server Alerting Runtime). Записи WFE содержат идентификатор CorrelationID; записи сервера его не содержат.  
+3.  **Категория.** События, связанные с интерфейсным веб-компонентом или полученные от него, не содержат символы Report Server. Например, Service Application Proxy (в отличие от Report Server Alerting Runtime). Записи WFE содержат идентификатор CorrelationID; записи сервера его не содержат.  
   
 ##  <a name="list-of-sql-server-reporting-services-events"></a><a name="bkmk_list"></a> Список событий служб SQL Server Reporting Services  
  В следующей таблице приведен список событий в категории служб SQL Server Reporting Services.  
@@ -124,7 +125,7 @@ Get-SPDiagnosticConfig
 |Поставщик для сервера отчетов||  
 |Подготовка отчетов сервера отчетов||  
 |Средство просмотра отчетов сервера отчетов||  
-|Программа ресурсов сервера отчетов|Образцы записей:<br /><br /> Начальный номер SKU служб MediumReporting Services. Ознакомительная версия<br /><br /> Копия MediumEvaluation: осталось 180 дней|  
+|Программа ресурсов сервера отчетов|Образцы записей:<br /><br /> Начальный номер SKU служб MediumReporting Services: Ознакомительная версия<br /><br /> Копия MediumEvaluation: осталось 180 дней|  
 |Выполняющиеся задания сервера отчетов||  
 |Выполняющиеся запросы сервера отчетов||  
 |Расписание сервера отчетов||  

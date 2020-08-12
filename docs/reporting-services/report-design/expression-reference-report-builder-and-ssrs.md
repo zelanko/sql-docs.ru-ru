@@ -1,5 +1,6 @@
 ---
 title: Справочник выражений (построитель отчетов) | Документация Майкрософт
+description: Сведения о синтаксисе, который требуется соблюсти в выражениях перед обработкой или публикацией, чтобы обеспечить поддержку ссылок на встроенные функции и коллекции в построителе отчетов.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: bb16e4ab-b13f-48f2-8cfe-1851656875ef
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1e7f44eef3fe86685bee473a5e985aad36d21c6d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9e201b6688d2c8868a666ef8d294cea7d27c9929
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080228"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681323"
 ---
 # <a name="expression-reference-report-builder-and-ssrs"></a>Справочник выражений (построитель отчетов и службы SSRS)
   Выражения отчета поддерживают различные ссылки на встроенные функции и встроенные коллекции. Чтобы отчет можно было опубликовать или обработать, выражения должны иметь допустимый синтаксис [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .  

@@ -1,5 +1,6 @@
 ---
 title: Практическое руководство. Развертывание модуля обработки данных на сервере отчетов | Документы Майкрософт
+description: Узнайте, как развернуть модуль обработки данных на сервере отчетов, изучив, в какие записи следует добавить файлы конфигурации.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e00dface-70f8-434b-9763-8ebee18737d2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3f0b775b53244cd0a428bb4ce4023906d2f5119
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a43b94a4ef45b210ea2f54b0401962e79ca9a489
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63194116"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529586"
 ---
 # <a name="deploying-a-data-processing-extension-to-a-report-server"></a>Развертывание модуля обработки данных на сервере отчетов
   Серверы отчетов используют модули обработки данных для получения и обработки данных в отчетах, готовых для просмотра. Сборка модуля обработки данных развертывается на сервере отчетов как закрытая сборка. Нужно также внести запись в файл конфигурации сервера отчетов RSReportServer.config.  
@@ -25,7 +26,7 @@ ms.locfileid: "63194116"
   
 #### <a name="to-deploy-a-data-processing-extension-assembly"></a>Развертывание сборки модуля обработки данных  
   
-1.  Скопируйте сборку из промежуточной папки в каталог bin сервера отчетов, на котором будет использоваться модуль обработки данных. По умолчанию каталог bin сервера отчетов располагается по пути %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<*имя_экземпляра*>\Reporting Services\ReportServer\bin.  
+1.  Скопируйте сборку из промежуточной папки в каталог bin сервера отчетов, на котором будет использоваться модуль обработки данных. По умолчанию каталог bin сервера отчетов находится в %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<*Instance Name*>\Reporting Services\ReportServer\bin.  
   
     > [!NOTE]  
     >  Этот шаг предотвратит обновление до более нового экземпляра SQL Server. Дополнительные сведения см. в разделе [Upgrade and Migrate Reporting Services](../../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
@@ -50,7 +51,7 @@ ms.locfileid: "63194116"
   
      По умолчанию **Name** — это уникальное имя модуля обработки данных. Значение параметра **Type** представляет собой список с разделителями-запятыми, включающий полное имя пространства имен для класса, реализующего интерфейсы <xref:Microsoft.ReportingServices.Interfaces.IExtension> и <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>, а затем имя сборки (без расширения DLL). По умолчанию модули обработки данных являются видимыми. Чтобы скрыть модуль в таких пользовательских интерфейсах, как диспетчер отчетов, добавьте атрибут **Visible** к элементу **Extension** и задайте для него значение **false**.  
   
-5.  Добавьте для пользовательской сборки группу кода, которая предоставляет разрешение **FullTrust** вашему модулю. Это можно сделать, добавив группу кода в файл rssrvpolicy.config, который по умолчанию находится в каталоге %ProgramFiles%\Microsoft SQL Server\\<MSRS10_50.\<*имя_экземпляра*>\Reporting Services\ReportServer. Пример группы кода показан ниже.  
+5.  Добавьте для пользовательской сборки группу кода, которая предоставляет разрешение **FullTrust** вашему модулю. Это можно сделать, добавив группу кода в файл rssrvpolicy.config, который по умолчанию расположен в каталоге %ProgramFiles%\Microsoft SQL Server\\<MSRS10.50.\<*Instance Name*>\Reporting Services\ReportServer. Пример группы кода показан ниже.  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  

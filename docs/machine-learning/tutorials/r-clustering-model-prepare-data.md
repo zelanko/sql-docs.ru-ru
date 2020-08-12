@@ -1,48 +1,50 @@
 ---
 title: Руководство по подготовке данных к выполнению кластеризации на языке R
 titleSuffix: SQL machine learning
-description: В второй части этого цикла учебников, состоящего из четырех частей, вы подготовите данные из SQL Server базы данных для выполнения кластеризации в R с помощью машинного обучения SQL.
+description: Во второй части этого цикла учебников, состоящего из четырех частей, вы подготовите данные из базы данных для выполнения кластеризации в R с помощью машинного обучения SQL.
 ms.prod: sql
 ms.technology: machine-learning
 ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/21/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: adeda8bf04333bb256daea8ebc3cab1288f9aebf
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: a83268efebbe53a12806c3e52a38e3c5ea2d94e2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607027"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728549"
 ---
 # <a name="tutorial-prepare-data-to-perform-clustering-in-r-with-sql-machine-learning"></a>Руководство по подготовке данных для кластеризации в R с помощью машинного обучения SQL
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-Во второй части этого цикла учебников, состоящего из четырех частей, вы подготовите данные из базы данных SQL Server для выполнения кластеризации в R с помощью Служб машинного обучения SQL Server или в Кластерах больших данных.
+Во второй части этого цикла учебников, состоящего из четырех частей, вы подготовите данные из базы данных для выполнения кластеризации в R с помощью Служб машинного обучения SQL Server или в кластерах больших данных.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-В второй части этого цикла учебников, состоящего из четырех частей, вы подготовите данные из SQL Server базы данных для выполнения кластеризации в R с помощью Служб машинного обучения Базы данных SQL.
+Во второй части этого цикла учебников, состоящего из четырех частей, вы подготовите данные из базы данных для выполнения кластеризации в R с помощью служб машинного обучения SQL Server.
 ::: moniker-end
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-В второй части этого цикла учебников, состоящего из четырех частей, вы подготовите данные из SQL Server базы данных для выполнения кластеризации в R с помощью служб SQL Database R Services.
+Во второй части этого цикла учебников, состоящего из четырех частей, вы подготовите данные из базы данных для выполнения кластеризации в R с помощью служб SQL Server 2016 R.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+Во второй части этого цикла учебников, состоящего из четырех частей, вы подготовите данные из базы данных для выполнения кластеризации в R с помощью служб машинного обучения управляемого экземпляра SQL Azure.
 ::: moniker-end
 
 В этой статье вы узнаете, как выполнять следующие задачи.
 
 > [!div class="checklist"]
 > * Разделение клиентов по разным измерениям с использованием языка R.
-> * Загрузка данных из базы данных SQL в кадр данных R.
+> * Загрузка данных из базы данных в кадр данных R.
 
 В [первой части](r-clustering-model-introduction.md) были установлены необходимые компоненты и восстановлена демонстрационная база данных.
 
 В [третьей части](r-clustering-model-build.md) вы узнаете, как создать и обучить модель кластеризации на основе k-средних в R.
 
-В [четвертой части](r-clustering-model-deploy.md) вы узнаете, как создать хранимую процедуру в базе данных SQL, которая может выполнять кластеризацию в R на основе новых данных.
+В [четвертой части](r-clustering-model-deploy.md) вы узнаете, как создать хранимую процедуру в базе данных, которая может выполнять кластеризацию в R на основе новых данных.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -63,9 +65,9 @@ ms.locfileid: "83607027"
 ```r
 # Define the connection string to connect to the tpcxbb_1gb database
 
-connStr <- "Driver=SQL Server;Server=ServerName;Database=tpcxbb_1gb;Trusted_Connection=TRUE"
+connStr <- "Driver=SQL Server;Server=ServerName;Database=tpcxbb_1gb;uid=Username;pwd=Password"
 
-#Define the query to select data from SQL Server
+#Define the query to select data
 input_query <- "
 SELECT ss_customer_sk AS customer
     ,round(CASE 
@@ -124,7 +126,7 @@ LEFT OUTER JOIN (
         SUM(sr_return_amt) AS returns_money
     FROM store_returns
     GROUP BY sr_customer_sk
-    ) returned ON ss_customer_sk = sr_customer_sk
+    ) returned ON ss_customer_sk = sr_customer_sk";
 ```
 
 ## <a name="load-the-data-into-a-data-frame"></a>Загрузка данных в кадр данных
@@ -132,7 +134,7 @@ LEFT OUTER JOIN (
 Теперь воспользуйтесь приведенным ниже сценарием, чтобы вернуть результаты из запроса в кадр данных R.
 
 ```r
-# Query SQL Server using input_query and get the results back
+# Query using input_query and get the results back
 # to data frame customer_data
 
 library(RODBC)
@@ -141,7 +143,7 @@ ch <- odbcDriverConnect(connStr)
 
 customer_data <- sqlQuery(ch, input_query)
 
-# Take a look at the data just loaded from SQL Server
+# Take a look at the data just loaded
 head(customer_data, n = 5);
 ```
 
@@ -165,7 +167,7 @@ head(customer_data, n = 5);
 Во второй части этого цикла учебников вы узнали, как выполнять следующие задачи:
 
 * Разделение клиентов по разным измерениям с использованием языка R.
-* Загрузка данных из базы данных SQL в кадр данных R.
+* Загрузка данных из базы данных в кадр данных R.
 
 Чтобы создать модель машинного обучения, которая использует эти данные о клиентах, перейдите к третьей части этого учебника:
 

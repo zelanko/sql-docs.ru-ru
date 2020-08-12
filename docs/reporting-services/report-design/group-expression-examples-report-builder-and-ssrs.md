@@ -1,5 +1,6 @@
 ---
 title: Примеры выражений групп (построитель отчетов) | Документация Майкрософт
+description: Узнайте, как группировать данные по одному полю или создавать более сложные выражения, определяющие данные, по которым выполняется группирование, в построителе отчетов.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 34cd0249-fc74-4cf2-ba11-7b072992bfd2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0e6378f523b74483ed6f1a459f63aafbfa1fc5ee
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ead7e4c893c667021770df4977244bb509c0d79c
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082097"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012422"
 ---
 # <a name="group-expression-examples-report-builder-and-ssrs"></a>Примеры выражений групп (построитель отчетов и службы SSRS)
   В области данных можно группировать данные по одному полю или создавать более сложные выражения, определяющие данные, по которым выполняется группирование. Сложные выражения могут включать ссылки на несколько полей или параметров, условные инструкции или пользовательский код. При определении группы для области данных эти выражения добавляются к свойству **Группировать** . Дополнительные сведения см. в разделе [Добавление или удаление группы в области данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
@@ -31,7 +32,7 @@ ms.locfileid: "77082097"
 ## <a name="examples-of-group-expressions"></a>Примеры выражений группы  
  В следующей таблице приведены примеры выражений группы, которые можно использовать для определения группы.  
   
-|Description|Выражение|  
+|Описание|Выражение|  
 |-----------------|----------------|  
 |Группирование по полю `Region` .|`=Fields!Region.Value`|  
 |Группирование по фамилии и имени.|`=Fields!LastName.Value`<br /><br /> `=Fields!FirstName.Value`|  

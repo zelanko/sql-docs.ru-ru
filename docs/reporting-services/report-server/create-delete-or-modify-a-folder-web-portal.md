@@ -1,5 +1,6 @@
 ---
 title: Создание, изменение или удаление папки в Reporting Services | Документация Майкрософт
+description: Сведения о создании, изменении и удалении папок для организации и управления элементами, публикуемыми на сервере отчетов Reporting Services.
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 874fb7ba143c8f08a0f25501e1852b4d2b280cb2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ae3ae4b181ee6b3308bcbe5bcfc4af1ca370c974
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67492857"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84548026"
 ---
 # <a name="create-delete-or-modify-a-folder---reporting-services"></a>Создание, изменение или удаление папки в Reporting Services
   Для упорядочения элементов и управления элементами, публикуемыми на сервере отчетов, можно создать папки. Создание папок поможет пользователям находить интересующие их отчеты. Для диспетчеров содержимого папки обеспечивают инфраструктуру для применения разрешений. Можно создать назначения ролей для определенных папок, чтобы ограничить доступ к отчетам, которые находятся на стадии разработки или не подлежат широкому распространению.  

@@ -1,5 +1,6 @@
 ---
 title: Типы диаграмм (построитель отчетов) | Документация Майкрософт
+description: Выбирайте уникальные характеристики диаграммы, которые помогут вам визуализировать набор данных и выбрать подходящий тип диаграммы в построителе отчетов.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 57b00017-69ae-4e71-8d78-44744e208ac7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b2d1d58a5a37078021e8ef6c30ed387fe1f2c406
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8f19176d540a547ec4617244835f87b9994d368e
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081735"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681413"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>Типы диаграмм (построитель отчетов и службы SSRS)
 

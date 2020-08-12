@@ -1,5 +1,6 @@
 ---
 title: Настройка сервера отчетов, работающего в собственном режиме, для локального администрирования | Документация Майкрософт
+description: Сведения о настройке сервера отчетов для локального администрирования при установке сервера отчетов Reporting Services в определенных средах.
 ms.date: 05/28/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 535284c89f54fb39f448a71e5484e81c1a9d31af
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 07a5040138bb19bd456a11ad9dcc15dc4cf06e4d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080893"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545616"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Настройка сервера отчетов, работающего в собственном режиме, для локального администрирования (SSRS)
   Развертывание сервера отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в одной из следующих операционных систем требует дополнительных шагов настройки, если вы желаете управлять экземпляром этого сервера локально. Данная тема объясняет как настроить сервер отчетов для локального администрирования. Если вы еще не установили или не настроили сервер отчетов, см. разделы [Установка SQL Server из мастера установки (программа установки)](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) и [Управление сервером отчетов служб Reporting Services в собственном режиме](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (собственный режим)|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в собственном режиме|  
   
 -   [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)]  
   
@@ -93,7 +94,7 @@ ms.locfileid: "77080893"
   
 11. Нажмите кнопку **Добавить**.  
   
-12. Нажмите кнопку **ОК**.  
+12. Щелкните **ОК**.  
   
 ###  <a name="web-portal-folder-settings"></a><a name="bkmk_configure_folder_settings"></a> Параметры папки веб-портала  
   
@@ -105,7 +106,7 @@ ms.locfileid: "77080893"
   
 5.  Выберите **Диспетчер содержимого**.  
   
-6.  Нажмите кнопку **ОК**.  
+6.  Щелкните **ОК**.  
   
 ###  <a name="web-portal-site-settings"></a><a name="bkmk_configure_site_settings"></a> Параметры сайта веб-портала  
   
@@ -123,7 +124,7 @@ ms.locfileid: "77080893"
 
 5.  Выберите **Системный администратор**.  
   
-6.  Нажмите кнопку **ОК**.  
+6.  Щелкните **ОК**.  
   
 7.  Закройте веб-портал.  
   

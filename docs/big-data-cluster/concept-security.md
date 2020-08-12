@@ -5,20 +5,20 @@ description: В этой статье рассматриваются основ�
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 10/23/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0fc816325d4008d1913f0e07e3032677a0eddb4d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f0d19589c057df0af9ffea711edd8963bc381e2d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77074432"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730676"
 ---
 # <a name="security-concepts-for-big-data-clusters-2019"></a>Основные понятия безопасности для работы с [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 В этой статье рассматриваются основные понятия, связанные с обеспечением безопасности в кластере больших данных.
 
@@ -83,17 +83,21 @@ ms.locfileid: "77074432"
 Эти учетные данные для входа необходимо определить при развертывании.
 
 Имя пользователя администратора кластера:
+
  + `AZDATA_USERNAME=<username>`
 
 Пароль администратора кластера:  
  + `AZDATA_PASSWORD=<password>`
 
 > [!NOTE]
-> Обратите внимание, что в режиме, отличном от AD, для проверки подлинности в шлюзе для доступа к HDFS/Spark необходимо указывать имя пользователя "root" в сочетании с приведенным выше паролем.
+> Обратите внимание, что в режиме, отличном от AD, для проверки подлинности в шлюзе для доступа к HDFS/Spark необходимо указывать имя пользователя в сочетании с приведенным выше паролем. До выпуска накопительного пакета обновления 5 для SQL Server 2019 имя пользователя имело значение `root`.
+> 
+> [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Дополнительные сведения о [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] см. в следующих ресурсах.
+[Что такое [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
 
-- [Что такое [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
-- [Семинар. Архитектура [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Майкрософт](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+[Семинар. Архитектура [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Майкрософт](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+
+[Kubernetes RBAC](kubernetes-rbac.md)

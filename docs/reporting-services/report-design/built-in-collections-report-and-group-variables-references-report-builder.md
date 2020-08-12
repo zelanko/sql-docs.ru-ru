@@ -1,5 +1,6 @@
 ---
 title: Ссылки на коллекции переменных отчета и группы (построитель отчетов) | Документация Майкрософт
+description: При наличии сложного вычисления, которое используется в отчете несколько раз, создайте переменную с уникальным именем.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +18,12 @@ f1_keywords:
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 77373c2a1a160c7621f54f3701564eebe1312618
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2ec35aa6399929f90f8e816b8c2d2de50e5cc155
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081450"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83688848"
 ---
 # <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>Встроенные коллекции — ссылки на переменные отчета и группы (построитель отчетов)
   При сложном вычислении, которое используется несколько раз в выражениях отчета, может потребоваться создание переменной. Можно создать переменную отчета или переменную группы. В отчете имена переменных должны быть уникальными.  

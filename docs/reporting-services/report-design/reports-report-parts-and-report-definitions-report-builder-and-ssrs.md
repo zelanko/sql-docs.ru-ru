@@ -1,5 +1,6 @@
 ---
 title: Отчеты, элементы отчетов и определения отчетов (построитель отчетов) | Документация Майкрософт
+description: Ознакомьтесь с терминами, используемыми для описания отчетов в разных состояниях в построителе отчетов. Эти состояния включают начальное определение и опубликованный отчет.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 11236a29e22877e1d785d7ac2325898cc11bac7e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 53e8c7fcd6765742af0056fb44659386cf652561
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081049"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039718"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>Отчеты, элементы отчетов и определения отчетов (построитель отчетов и службы SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] использует различные термины, описывающие отчеты с разбиением на страницы в разных состояниях, применяемые в том числе для отчета во время начального определения, для опубликованного отчета и отчета, просматриваемого пользователем.  

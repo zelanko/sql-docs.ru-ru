@@ -1,5 +1,6 @@
 ---
 title: Функция Count (построитель отчетов) | Документация Майкрософт
+description: Узнайте о функции Count, возвращающей количество значений, отличных от NULL, заданных выражением, которое вычисляется в контексте указанной области.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c37b4999f0fb2dd7cbf14322348e5836e8b38e32
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3e0213d580935112e48df2f8a774ac49202ee7af
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081298"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044091"
 ---
 # <a name="report-builder-functions---count-function"></a>Функции построителя отчетов — функция Count
   Возвращает количество значений, отличных от NULL, определяемое выражением, вычисляемым в контексте данной области.  
@@ -60,7 +61,7 @@ Count(expression, scope, recursive)
   
  Пример  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Описание  
  В следующем примере кода показано выражение, вычисляющее число значений `Size` , отличных от NULL, для области по умолчанию и для области родительской группы. Выражение добавляется в ячейку строки, относящуюся к дочерней группе `GroupbySubcategory`. Родительской группой является `GroupbyCategory`. Выражение отображает результаты для группы `GroupbySubcategory` (область по умолчанию) и затем для группы `GroupbyCategory` (область родительской группы).  
   
 > [!NOTE]  

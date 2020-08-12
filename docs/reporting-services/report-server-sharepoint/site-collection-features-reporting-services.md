@@ -1,5 +1,6 @@
 ---
 title: Компоненты семейства веб-сайтов служб Reporting Services | Документы Майкрософт
+description: Сведения о функциях семейства веб-сайтов SharePoint, предоставляемых режимом SharePoint в SQL Server Reporting Services.
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e13654a38738c84095cc284a24fb723aa2b05327
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 052a6893f28d86a7f966edfe2a4b953ccc442e27
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580497"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83764791"
 ---
 # <a name="reporting-services-site-collection-features"></a>Компоненты семейства веб-сайтов служб Reporting Services
 
@@ -30,7 +31,7 @@ ms.locfileid: "65580497"
 
  В представленной ниже таблице описываются компоненты семейства веб-сайтов служб Reporting Services.  
   
-|Компонент|Description|  
+|Компонент|Описание|  
 |-------------|-----------------|  
 |**Центр администрирования сервера отчетов**|Включает возможности для управления интеграцией с сервером отчетов служб Reporting Services. Этот компонент устанавливается и используется в семействе веб-сайтов центра администрирования SharePoint.<br /><br /> Компонент интеграции сервера отчетов автоматически активируется в семействе веб-сайтов центра администрирования SharePoint после установки надстройки служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] для продуктов SharePoint. В некоторых ситуациях необходимо активировать этот компонент вручную. Чтобы активировать компонент сервера отчетов, используйте страницы служб Reporting Services на странице параметров сайта в центре администрирования SharePoint.<br /><br /> Версия служб [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Reporting Services и более поздние версии надстройки для продуктов SharePoint активируют функцию интеграции сервера отчетов для всех семейств веб-сайтов, существующих на момент установки надстройки. Кроме того, эта функция автоматически активируется для новых семейств веб-сайтов.|  
 |**Компонент интеграции сервера отчетов**|Обеспечивает создание улучшенных отчетов с помощью [!INCLUDE[msCoName](../../includes/msconame-md.md)] Reporting Services.<br /><br /> Этот компонент активен по умолчанию.|  

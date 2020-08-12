@@ -4,21 +4,21 @@ titleSuffix: SQL machine learning
 description: Во второй части этого цикла учебников, состоящего из четырех частей, с помощью Python вы подготовите данные, чтобы спрогнозировать число прокатов лыж с помощью машинного обучения SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2020
+ms.date: 05/26/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 75f475f8a2b4b0d23d95498a69f5e5d745f7510d
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 424d61e24e9cd1163854d86961a34770eee36260
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606726"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730482"
 ---
 # <a name="python-tutorial-prepare-data-to-train-a-linear-regression-model-with-sql-machine-learning"></a>Учебник по Python. Подготовка данных для обучения модели линейной регрессии с помощью машинного обучения SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Во второй части этого цикла учебников, состоящего из четырех частей, вы подготовите данные из базы данных с помощью Python. Далее в этом цикле вы будете использовать подготовленные данные для обучения и развертывания модели линейной регрессии в Python с помощью Служб машинного обучения SQL Server или в Кластерах больших данных.
@@ -26,11 +26,14 @@ ms.locfileid: "83606726"
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 Во второй части этого цикла учебников, состоящего из четырех частей, вы подготовите данные из базы данных с помощью Python. Далее в этой серии руководств вы будете использовать эти данные для обучения и развертывания модели линейной регрессии с использованием Python в Службах машинного обучения SQL Server.
 ::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+Во второй части этого цикла учебников, состоящего из четырех частей, вы подготовите данные из базы данных с помощью Python. Далее в этой серии руководств вы будете использовать эти данные для обучения и развертывания модели линейной регрессии с использованием Python в Службах машинного обучения Управляемого экземпляра SQL Azure.
+::: moniker-end
 
 В этой статье вы узнаете, как выполнять следующие задачи.
 
 > [!div class="checklist"]
-> * Загрузка данных из базы данных SQL Server в кадр данных **pandas**
+> * Загрузка данных из базы данных в кадр данных **pandas**.
 > * Подготовка данных в Python путем удаления некоторых столбцов
 
 В [первой части](python-ski-rental-linear-regression.md) вы узнали, как восстановить учебную базу данных.
@@ -47,7 +50,7 @@ ms.locfileid: "83606726"
 
 Чтобы использовать данные в Python, необходимо загрузить их из базы данных в кадр данных pandas.
 
-Создайте записную книжку Python в Azure Data Studio и выполните приведенный ниже сценарий. Замените `<SQL Server>` именем своего SQL Server.
+Создайте записную книжку Python в Azure Data Studio и выполните приведенный ниже сценарий. 
 
 Приведенный ниже сценарий Python импортирует набор данных из таблицы **dbo.rental_data** вашей базы данных в кадр данных pandas **df**.
 
@@ -60,7 +63,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 
 # Connection string to your SQL Server instance
-conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=<SQL Server>; DATABASE=TutorialDB; Trusted_Connection=yes')
+conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=<server>; DATABASE=TutorialDB;UID=<username>;PWD=<password>)
 
 query_str = 'SELECT Year, Month, Day, Rentalcount, Weekday, Holiday, Snow FROM dbo.rental_data'
 

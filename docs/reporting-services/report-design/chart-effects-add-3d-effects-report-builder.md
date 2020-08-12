@@ -1,5 +1,6 @@
 ---
 title: Добавление в диаграмму трехмерных эффектов (построитель отчетов) | Документация Майкрософт
+description: Используйте трехмерные эффекты в построителе отчетов, чтобы добавить глубину и увеличить визуальную привлекательность диаграммы в отчетах с разбиением на страницы.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ab9625d8-6557-4a4d-8123-eefa7c066ff5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1d8bf9b9951ac461f6aaa3a33602ecb4e2aa4c30
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1dfc09cadd1b98116f2145e95fc6e96759d53013
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078794"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012677"
 ---
 # <a name="chart-effects---add-3d-effects-report-builder"></a>Эффекты диаграммы — добавление трехмерных эффектов (построитель отчетов)
   Объемные (трехмерные) эффекты можно использовать, чтобы добавить глубину и увеличить визуальную привлекательность диаграммы в отчетах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы. Например, если нужно выделить отдельный срез разрезанной круговой диаграммы, можно повернуть диаграмму и изменить перспективу так, что пользователи обратят внимание на этот сегмент в первую очередь. После применения объемных эффектов к диаграмме все цвета градиента и стили штриховки отключаются.  

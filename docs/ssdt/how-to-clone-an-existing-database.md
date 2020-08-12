@@ -1,23 +1,23 @@
 ---
 title: клонировать существующую базу данных
+description: Узнайте, как клонировать базу данных. Ознакомьтесь с порядком создания новой базы данных, дублированием ее схемы и репликацией данных.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: aad3594a-11cf-4e68-a622-071a93d43875
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 79dc8d87ab950336766283be20d79536b31a3cdd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 03dedf5c30c8370195243c11406552d12edd8394
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241591"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518904"
 ---
-# <a name="how-to-clone-an-existing-database"></a>Как клонировать существующую базу данных
+# <a name="how-to-clone-an-existing-database"></a>Руководство. клонировать существующую базу данных
 
 В этой задаче используются некоторые из рассмотренных ранее шагов для создания новой базы данных и переноса существующих данных. Кроме того, в ней используются шаги для синхронизации схемы исходной базы данных и базы данных проекта, которые описаны в статье [Как использовать сравнение схем для сопоставления различных определений баз данных](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md).  
   
@@ -55,5 +55,5 @@ ms.locfileid: "75241591"
 7.  С помощью редактора данных убедитесь, что все таблицы в новой базе данных `TradeDev` заполнены.  
   
 ## <a name="see-also"></a>См. также:  
-[Как использовать сравнение схем для сопоставления различных определений баз данных](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+[Руководство. использовать сравнение схем для сопоставления различных определений баз данных](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

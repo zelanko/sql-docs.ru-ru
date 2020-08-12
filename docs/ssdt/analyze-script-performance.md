@@ -1,21 +1,21 @@
 ---
 title: Анализ производительности скрипта
+description: Узнайте, как статистика клиента, планы выполнения и анализ кода в SQL Server Data Tools могут помочь улучшить производительность запросов, хранимых процедур и сценариев.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: f4bbdd31-12a5-4c57-b0fe-1c6683820f11
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 0c762da9cf6bb8a2a66831e4a75c98a4360afc6a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: dbaec18d8f28e820af1905047de89aa6c00e9743
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245560"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85519114"
 ---
 # <a name="analyze-script-performance"></a>Анализ производительности скрипта
 

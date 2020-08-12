@@ -1,6 +1,7 @@
 ---
 title: Настройка глобальных параметров трассировки
 titleSuffix: SQL Server Profiler
+description: Узнайте, как задать глобальные параметры трассировки, и прочитайте о параметрах, которые конкретный экземпляр SQL Server Profiler может применять ко всем трассировкам.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: c66bb6a8a2f894cb80fd17c9fce24a0d98d027f2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 65f9f3c32da239c7ae6f41dfbe74b7ee8bb9ce41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307940"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726862"
 ---
 # <a name="set-global-trace-options-sql-server-profiler"></a>установить глобальные параметры трассировки (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 В этом разделе описывается, как настроить параметры, влияющие на все трассировки, созданные в экземпляре [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
@@ -46,7 +47,7 @@ ms.locfileid: "75307940"
   
     -   **Число потоков воспроизведения по умолчанию** позволяет управлять количеством потоков процессора, которые применяются во время воспроизведения. С увеличением количества потоков, воспроизведение выполняется быстрее, но снижается производительность сервера во время воспроизведения. Рекомендуется установить значение **4**. Доступные параметры перечислены в следующей таблице:  
   
-        |Значение|Description|  
+        |Значение|Описание|  
         |-----------|-----------------|  
         |**2**|Минимальное значение. Для воспроизведения используется два потока.|  
         |**4**|Значение по умолчанию.|  
@@ -62,7 +63,7 @@ ms.locfileid: "75307940"
   
     -   **Интервал опроса монитора исправности по умолчанию (сек.)** задает частоту опроса потоков воспроизведения для блокирующих процессов. Допустимые значения описаны в следующей таблице.  
   
-        |Значение|Description|  
+        |Значение|Описание|  
         |-----------|-----------------|  
         |**1**|Минимальное значение. Значение **1** означает, что [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] будет опрашивать блокирующие процессы один раз в секунду.|  
         |**60**|Значение по умолчанию. Опрос блокирующих процессов выполняется один раз в минуту.|  

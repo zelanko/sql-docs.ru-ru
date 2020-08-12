@@ -1,5 +1,6 @@
 ---
 title: SQLPackage.exe
+description: Узнайте, как автоматизировать задачи разработки баз данных с помощью SqlPackage.exe. Ознакомьтесь с примерами и параметрами публикации, свойствами и переменными SQLCMD.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -9,12 +10,12 @@ author: pensivebrian
 ms.author: broneill
 ms.reviewer: alayu; sstein
 ms.date: 03/17/2020
-ms.openlocfilehash: 1ee42c97fe4e032835ccb2f8a07ea51fe70114ac
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 1209945c167f26dd7011cc4ce210e61ac24f7134
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81303145"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85441261"
 ---
 # <a name="sqlpackageexe"></a>SQLPackage.exe
 
@@ -94,7 +95,7 @@ sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_ve
 
 ### <a name="properties-specific-to-the-extract-action"></a>Свойства, относящиеся к действию извлечения
 
-|Свойство|Значение|Описание|
+|Свойство|Применение|Описание|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|Задает время ожидания команды в секундах при выполнении запросов к SQL Server.|
 |**/p:**|DacApplicationDescription=(STRING)|Определяет описание приложения для сохранения в метаданных DACPAC.|
@@ -269,7 +270,7 @@ sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_ve
   
 ### <a name="help-for-export-action"></a>Справка по действию экспорта
 
-|Параметр|Краткая форма|Значение|Описание|
+|Параметр|Краткая форма|Значение|Описание:|
 |---|---|---|---|
 |**/Action:**|**/a**|Экспорт|Указывает действие, подлежащее выполнению. |
 |**/AccessToken:**|**/at**|{строка}| Указывает маркер доступа для проверки подлинности на основе маркеров. Этот маркер используется при подключении к целевой базе данных. |
@@ -333,7 +334,7 @@ sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_ve
 
 Свойства, относящиеся к действию импорта:
 
-|Свойство|Значение|Описание|
+|Свойство|Применение|Описание|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|Задает время ожидания команды в секундах при выполнении запросов к SQL Server.|
 |**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;DataWarehouse&#124;GeneralPurpose&#124;BusinessCritical&#124;Hyperscale&#124;Default} 'Default')|Определяет выпуск Базы данных SQL Azure.|

@@ -1,5 +1,6 @@
 ---
 title: Создание счета-фактуры и формы со списками (построитель отчетов) | Документация Майкрософт
+description: Узнайте, как определять и использовать списки для создания отчетов в свободной форме или форм, а также то, как использовать списки в сочетании с другими областями данных в построителе отчетов.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,17 +9,17 @@ ms.topic: conceptual
 ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ce4867fdbaff2ff83f2c7e36d450e6c3b0f07471
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 351b24601c7e7cc101951547eb0a99ca0dcf59c8
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078588"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012692"
 ---
 # <a name="create-invoices-and-forms-with-lists-report-builder-and-ssrs"></a>Создание счета-фактуры и формы со списками (построитель отчетов и службы SSRS)
   Область списка данных повторяется с каждой группой или строкой набора данных отчета с разбиением на страницы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Список может использоваться для создания отчетов произвольного формата, таких как счета, либо совместно с другими областями данных. Можно определять списки, содержащие любое количество элементов отчета. Список может быть вложен  
   
- Чтобы быстро приступить к работе со списками, см. раздел [Учебник. Создание отчета в свободной форме (построитель отчетов)](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md).  
+ Чтобы быстро приступить к работе со списками, см. [Учебник. Создание отчета в свободной форме (построитель отчетов)](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md).  
   
 > [!NOTE]  
 >  Списки можно публиковать отдельно от отчета как элементы отчета. Дополнительные сведения см. в разделе [Элементы отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  

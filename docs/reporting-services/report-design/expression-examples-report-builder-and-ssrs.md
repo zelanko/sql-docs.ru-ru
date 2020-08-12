@@ -1,5 +1,6 @@
 ---
 title: Примеры выражений (построитель отчетов) | Документация Майкрософт
+description: Управление содержимым и внешним видом отчета с помощью встроенных функций, пользовательского кода, переменных отчета и групп, а также определяемых пользователем переменных в построителе отчетов.
 ms.date: 04/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 12933c259fa02e77a76b8c31edf61db916dcde49
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f37521692b7b30cc8db1e56b81222c3e8bad38de
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080338"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681343"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Примеры выражений (построитель отчетов и службы SSRS)
 Выражения часто используются в отчетах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы для управления содержимым и внешним видом отчета. Выражения записываются на языке [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], и в них можно использовать встроенные функции, пользовательский код, переменные отчета, групповые переменные и определяемые пользователем переменные. Выражения начинаются со знака равенства (=). Дополнительные сведения о редакторе выражений и типах ссылок, которые могут быть включены, см. в разделах [Использование выражений в отчетах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) и [Добавление выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
@@ -214,7 +215,7 @@ ms.locfileid: "77080338"
     =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
     ```  
   
-     Следующее выражение возвращает то же значение, что и предыдущее, только вместо функций [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] используются члены класса <xref:System.String> [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]:  
+     Следующее выражение возвращает то же значение, что и предыдущее, только вместо функций [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] используются члены класса [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.String>:  
   
     ```  
     =Parameters!User.Value.Substring(Parameters!User.Value.IndexOf("\")+1, Parameters!User.Value.Length-Parameters!User.Value.IndexOf("\")-1)  

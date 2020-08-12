@@ -1,5 +1,6 @@
 ---
 title: Макет страницы и подготовка к просмотру (построитель отчетов) | Документация Майкрософт
+description: Создавайте или улучшайте отчеты с разбивкой на страницы с помощью модулей подготовки отчетов для макета страниц, разрывов страниц и размера бумаги в построителе отчетов.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ee04e2cef1f4f4681b42ff8ffb4ce549aeae624d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ef2d28282a1fd787585f401e3b532f104cba5e2c
+ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082451"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84012702"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Макет страницы и подготовка к просмотру (построитель отчетов и службы SSRS)
 Ознакомьтесь со сведениями о модулях подготовки отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для отчетов с разбиением на страницы, чтобы гарантировать, что отчет выглядит должным образом, включая макет страницы, разбивку на страницы и размер бумаги. 

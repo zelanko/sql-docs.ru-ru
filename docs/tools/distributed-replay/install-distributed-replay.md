@@ -4,23 +4,23 @@ titleSuffix: SQL Server Distributed Replay
 description: 'В этой статье описываются способы установки распределенного воспроизведения: с помощью мастера установки, окна командной строки или файла конфигурации.'
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 08e69ce63d3bd3524614f014a2c193cad1634389
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 8b05cbaf1978ec06da1f364d337509ca3652d030
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82999394"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85681334"
 ---
 # <a name="install-distributed-replay"></a>Установка распределенного воспроизведения
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Распределенное воспроизведение можно установить одним из трех способов:  
   
@@ -67,7 +67,7 @@ ms.locfileid: "82999394"
   
      \- OR -  
   
-     \<Общий каталог компонента>\Tools\\ (предоставленный пользователем альтернативный общий каталог компонента)  
+     \<Share Feature Directory>\Tools\\ (предоставленный пользователем альтернативный общий каталог компонента)  
   
 -   64-разрядные системы:  
   
@@ -75,7 +75,7 @@ ms.locfileid: "82999394"
   
      \- OR -  
   
-     \<Общий каталог компонента (х86)>\Tools\\ (предоставленный пользователем альтернативный общий каталог компонента (x86))  
+     \<Share Feature Directory (x86)>\Tools\\ (предоставленный пользователем альтернативный общий каталог компонента [x86])  
   
 #### <a name="to-install-distributed-replay-features"></a>Установка компонентов распределенного воспроизведения  
   

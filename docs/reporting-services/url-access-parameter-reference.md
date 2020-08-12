@@ -1,7 +1,7 @@
 ---
 title: Справочник по параметрам доступа по URL-адресу | Документация Майкрософт
 description: Для настройки внешнего вида отчетов Reporting Services можно использовать представленные в этой статье параметры как часть URL-адреса.
-ms.date: 01/31/2020
+ms.date: 05/22/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0ac67de4831d1785f17029bc6c68fa6f7d8aeb16
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5c975f457238912c16e33a13f1f2ba598c82cac3
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77147377"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859038"
 ---
 # <a name="url-access-parameter-reference"></a>Справочник по параметрам доступа по URL-адресу
 
@@ -79,18 +79,21 @@ ms.locfileid: "77147377"
     https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Section=2  
     ```  
   
--   **FindString**. Поиск в отчете определенного текста.
+-   **FindString**. Выполняет поиск определенного текста в отчете и выделяет его.
+    
+    > [!IMPORTANT]  
+    >  Функция *rc:FindString* не работает, если не включить элемент *rc:Toolbar*=**false** в строку доступа по URL-адресу.
   
      Пример в собственном режиме:
   
     ```  
-    https://myrshost/reportserver?/Sales&rc:FindString=Mountain-400  
+    https://myrshost/reportserver?/Sales&rc:Toolbar=false&rc:FindString=Mountain-400  
     ```  
   
      Пример в режиме интеграции с SharePoint:
   
     ```  
-    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:FindString=Mountain-400  
+    https://myspsite/subsite/_vti_bin/reportserver?https://myspsite/subsite/Sales&rc:Toolbar=false&rc:FindString=Mountain-400  
     ```  
   
 -   **StartFind**. Указывает последний раздел поиска. По умолчанию этот параметр имеет значение последней страницы отчета.  
@@ -260,7 +263,7 @@ ms.locfileid: "77147377"
   
 -   **ClearSession**: Значение **true** указывает серверу отчетов, что отчет следует удалить из сеанса отчета. Все экземпляры отчетов, связанные с прошедшим проверку пользователем, удаляются из сеанса отчета (экземпляр отчета определяется как один и тот же отчет, запуск которого выполнен несколько раз с разными значениями параметров отчета). Значение по умолчанию — **false**.
   
--   **ResetSession**: Значение **true** указывает серверу отчетов сбросить настройки сеанса отчета, удалив связь сеанса отчета со всеми моментальными снимками отчета. Значение по умолчанию — **false**.
+-   **ResetSession**— значение **true** указывает серверу отчетов сбросить настройки сеанса отчета, удалив связь сеанса отчета со всеми моментальными снимками отчета. Значение по умолчанию — **false**.
   
 -   **ShowHideToggle**: Отображает или скрывает раздел отчета. Для переключения отображения раздела укажите положительное целое число.
   

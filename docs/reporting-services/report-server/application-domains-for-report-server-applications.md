@@ -1,5 +1,6 @@
 ---
 title: Домены приложений для приложений сервера отчетов | Документы Майкрософт
+description: Сведения о событиях, которые приводят к перезапуску домена приложений для приложений Reporting Services в целях устранения неполадок.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d39f1b9b081d50e5d64a6d5f948255f3a4d6e53b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9492a6617b459fad1afca9200ae9437f02a41d29
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65574799"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535547"
 ---
 # <a name="application-domains-for-report-server-applications"></a>Домены приложений для приложений сервера отчетов
   В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]сервер отчетов реализован как единственная служба, включающая веб-службу сервера отчетов, диспетчер отчетов и приложение фоновой обработки. Каждое приложение эксплуатируется в собственном домене приложения, в составе общего процесса сервера отчетов. Создание, настройка и управление доменами приложений обычно осуществляются внутри процесса. Однако знание того, как происходят операции очистки для доменов приложений сервера отчетов, может быть полезным при исследовании проблем производительности или использования памяти и при устранении неполадок в работе службы.  

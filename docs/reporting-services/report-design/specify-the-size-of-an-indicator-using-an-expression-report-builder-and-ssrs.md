@@ -1,5 +1,6 @@
 ---
 title: Указание размера индикатора с помощью выражения (построитель отчетов) | Документация Майкрософт
+description: Ознакомьтесь со способами использования размера, наряду с цветом, направлением и формой, для изменения визуального представления индикатора в построителе отчетов.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: ab0b86f1-4882-4258-a2b6-c612faecfa4b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ceaff572ac7641de9b7f184fa58baf8d74790677
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b699e22bfe392ae04cbfb504f09e3faba48b08b9
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080921"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681593"
 ---
 # <a name="specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs"></a>Указание размера индикатора с помощью выражения (построитель отчетов и службы SSRS)
   Помимо цвета, направления и формы, для изменения визуального представления индикатора можно использовать его размер.  

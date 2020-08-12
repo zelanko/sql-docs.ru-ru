@@ -1,5 +1,6 @@
 ---
 title: Подключение веб-части "Фильтр" или "Документы" к веб-части "Средство просмотра отчетов" служб Reporting Services | Документы Майкрософт
+description: Если вы используете продукт SharePoint, узнайте, как создать панель мониторинга или страницу веб-частей, включающую веб-части "Фильтр" или "Документы" и веб-часть "Средство просмотра отчетов".
 ms.date: 11/26/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -7,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1f513b93852863d7c3c03ac60289d4ba2bdb4b7b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f0e28fe003407c2f60792bcb9df09dc5d3cc6db0
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256717"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83767098"
 ---
 # <a name="connect-filter-or-documents-web-part-with-a-reporting-services-report-viewer-web-part"></a>Подключение веб-части "Фильтр" или "Документы" к веб-части "Средство просмотра отчетов" служб Reporting Services
 

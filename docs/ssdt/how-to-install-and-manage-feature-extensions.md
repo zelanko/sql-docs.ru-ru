@@ -1,23 +1,23 @@
 ---
 title: Установить расширения компонентов и управлять ими
+description: Узнайте, как устанавливать функциональные модули, чтобы расширять функциональные возможности SQL Server Data Tools, и откуда можно устанавливать модули различных типов.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 9cdc8cd5-c36f-4bee-a191-87ed457803e7
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
-ms.openlocfilehash: 7ef7a61b87c11c63070d1e7713d2aae0ad87f547
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fd971797825b0af5b98ab498ce96549aad468e0c
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241387"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518984"
 ---
-# <a name="how-to-install-and-manage-feature-extensions"></a>Практическое руководство. Установка расширений компонентов и управление ими
+# <a name="how-to-install-and-manage-feature-extensions"></a>Руководство. Установить расширения компонентов и управлять ими
 
 Вы можете добавлять правила для анализа кода базы данных, условия для модульных тестов базы данных и участников создания или развертывания для расширения функциональности, которую предлагают выпуски Visual Studio, включающие SQL Server Data Tools. Но, чтобы использовать расширение компонента, его сначала необходимо установить, независимо от того, кто создал это расширение: вы сами или другой разработчик.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "75241387"
 |Тип расширения|Служба командной строки|Папка установки|  
 |------------------|------------------------|------------------|  
 |Пользовательские условия теста для модульных тестов SQL Server|Для выполнения модульных тестов из Командной строки разработчика в Visual Studio 2013 и аналогичных программ командной строки можно использовать MSBuild или MSTest.|Та же, что и при выполнении в Visual Studio.|  
-|Участники сборки<br /><br />Участники развертывания|[SqlPackage.exe](../tools/sqlpackage.md) или с помощью целевых объектов Deploy или Publish MSBuild при сборке проекта базы данных.|MSBuild: та же папка, что и при выполнении в Visual Studio.<br /><br />[SqlPackage.exe](../tools/sqlpackage.md). Если размещается в том же каталоге Visual Studio, то используется та же папка, что раньше.<br /><br />Если SqlPackage.exe и другие библиотеки DLL DacFx находятся вне этого каталога, то расширения должны размещаться либо в одном с ними каталоге, либо в каталоге C:\Program Files (x86)\\Microsoft SQL Server\120\DAC\bin\Extensions.|  
+|Участники сборки<br /><br />Участники развертывания|[SqlPackage.exe](../tools/sqlpackage.md) или с помощью целевых объектов Deploy или Publish MSBuild при сборке проекта базы данных.|MSBuild. Та же, что и при выполнении в Visual Studio.<br /><br />[SqlPackage.exe](../tools/sqlpackage.md). Если размещается в том же каталоге Visual Studio, то используется та же папка, что раньше.<br /><br />Если SqlPackage.exe и другие библиотеки DLL DacFx находятся вне этого каталога, то расширения должны размещаться либо в одном с ними каталоге, либо в каталоге C:\Program Files (x86)\\Microsoft SQL Server\120\DAC\bin\Extensions.|  
 |Правила анализа статического кода|MSBuild можно использовать для сборки проекта и запуска анализа статического кода.<br /><br />Кроме того, анализ кода можно выполнять с помощью API CodeAnalysisService из собственных приложений. Правила поиска расширения функционируют в этом случае так же, как при использовании SqlPackage.exe.|Там же, где для участников сборки и развертывания.|  
   
 > [!NOTE]  

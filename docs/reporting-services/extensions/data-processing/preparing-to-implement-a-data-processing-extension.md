@@ -1,5 +1,6 @@
 ---
 title: Подготовка к реализации модуля обработки данных | Документы Майкрософт
+description: Узнайте, как реализовать модуль обработки данных в Reporting Services. Узнайте о доступных интерфейсах, а также об обязательных и дополнительных функциональных возможностях.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 698817e4-33da-4eb5-9407-4103e1c35247
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3ae11d41956f37f1a203235abad71639f942ae7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bf7bbaddbe4379c7d56ce7209b6b93eb1b4f6254
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193891"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529170"
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>Подготовка к реализации модуля обработки данных
   Перед реализацией собственного модуля обработки данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] вам следует определить реализуемые интерфейсы. Вы можете создать зависящие от модулей реализации всего набора интерфейсов либо реализовать только ограниченное его подмножество, например интерфейсы <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> и <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand>. Используя эти интерфейсы, клиенты в основном взаимодействовали бы с результирующим набором в виде объекта **DataReader**, а модуль обработки данных служб [!INCLUDE[ssRS](../../../includes/ssrs.md)] использовался бы как посредник между результирующим набором и источником данных.  
@@ -62,7 +63,7 @@ ms.locfileid: "63193891"
 ## <a name="available-extension-interfaces"></a>Доступные интерфейсы модулей  
  В следующей таблице описываются доступные интерфейсы, и поясняется, являются ли они необходимыми или нет.  
   
-|Интерфейс|Description|Реализация|  
+|Интерфейс|Описание|Реализация|  
 |---------------|-----------------|--------------------|  
 |IDbConnection|Представляет уникальный сеанс с источником данных. Если используется система базы данных клиент/сервер, то сеанс может быть эквивалентом сетевого соединения с сервером.|Обязательно|  
 |IDbConnectionExtension|Представляет дополнительные свойства соединения, которые могут быть реализованы модулем обработки данных служб [!INCLUDE[ssRS](../../../includes/ssrs.md)], затрагивающие вопросы безопасности и проверки подлинности.|Необязательно|  

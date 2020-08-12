@@ -1,5 +1,6 @@
 ---
 title: Использование файлов политики безопасности служб Reporting Services | Документы Майкрософт
+description: Сведения о файлах конфигурации, которые используются в Reporting Services для хранения сведений о политиках безопасности для сборок кода. Узнайте, как изменять их.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ae971989342ca6d3fda121b0559bebb681f07fb0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1390e53ddbc864f634b581bd2a1b42902c6b6bb9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193312"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529330"
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Использование файлов политики безопасности служб Reporting Services
   Службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] хранят сведения о политике безопасности компонентов в реестре и файлах конфигурации, которые копируются в файловую систему при установке. В этих файлах конфигурации хранится сочетание внутренней и пользовательской политики безопасности для сборок программного кода в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Три файла конфигурации соответствуют трем защищаемым компонентам служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]: сервер отчетов и служба Windows, веб-приложение диспетчер отчетов и окно предварительного просмотра конструктора отчетов.  
@@ -34,7 +35,7 @@ ms.locfileid: "63193312"
 ## <a name="policy-files-in-reporting-services"></a>Файлы политик в службах Reporting Services  
  В следующей таблице приводится список файлов конфигурации в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], их расположение (предполагается установка по умолчанию) и соответствующие функции.  
   
-|Имя файла|Расположение (установка по умолчанию)|Description|  
+|Имя файла|Расположение (установка по умолчанию)|Описание|  
 |---------------|---------------------------------------|-----------------|  
 |rssrvpolicy.config|C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer|Файл конфигурации политики безопасности сервера отчетов. Эти политики безопасности в первую очередь касаются выражений отчетов и пользовательских сборок после развертывания отчета на сервере отчетов. Этот файл также влияет на пользовательские данные, доставку, модули подготовки отчета и безопасности, развернутые на сервере отчетов.|  
 |rsmgrpolicy.config|C:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportManager|Файл конфигурации политики диспетчера отчетов. Эти политики безопасности касаются всех сборок, расширяющих функции диспетчера отчетов, например расширения подписки для пользовательских модулей доставки.|  

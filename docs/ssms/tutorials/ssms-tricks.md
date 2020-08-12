@@ -1,6 +1,6 @@
 ---
 title: Советы и рекомендации по использованию SSMS
-description: Из этой статьи вы узнаете, как вставлять комментарии в код и удалять их из него, использовать отступы для текста, фильтровать объекты в обозревателе объектов, получать доступ к журналу ошибок SQL Server, а также находить имя экземпляра SQL Server с помощью SQL Server Management Studio.
+description: Сведения о том, как комментировать и раскомментировать код, добавить отступы текста, применить фильтры к объектам, получить доступ к журналам ошибок и выполнять поиск имен экземпляров SQL Server с помощью SQL Server Management Studio.
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - find sql server instance name
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: 7a07e4cd77d02e4c62c34e55eedbd3dbf01c8322
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2147baf038b99140bf21ab72695f779c0fe69faf
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245512"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462348"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>Советы и рекомендации по использованию SQL Server Management Studio (SSMS)
 

@@ -1,5 +1,6 @@
 ---
 title: Практическое руководство. Развертывание модуля обработки данных в конструкторе отчетов | Документы Майкрософт
+description: Узнайте, как развернуть модуль обработки данных в конструкторе отчетов, изучив, в какие записи следует добавить файлы конфигурации.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3614e601-004e-4a16-8388-836ffd67e9dd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b3ff2fbd4cc5b910cdb5191d4fc51941167d8bfb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ae577ca756b4f575dd1bdf7c8e6c59e379d82098
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63194039"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529622"
 ---
 # <a name="deploying-a-data-processing-extension-to-report-designer"></a>Развертывание модуля обработки данных в конструкторе отчетов
   Модули обработки данных используются в конструкторе отчетов для получения и обработки данных в процессе разработки отчетов. Сборка модуля обработки данных должна быть развернута в конструкторе отчетов как закрытая сборка. Необходимо также внести запись в файл конфигурации конструктора отчетов, RSReportDesigner.config.  

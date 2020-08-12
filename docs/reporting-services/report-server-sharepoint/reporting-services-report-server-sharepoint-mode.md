@@ -1,5 +1,6 @@
 ---
 title: Сервер отчетов служб Reporting Services (режим интеграции с SharePoint) | Документы Майкрософт
+description: Сервер отчетов Reporting Services в режиме интеграции с SharePoint можно запустить в SharePoint, чтобы использовать функции совместной работы и управления для типов содержимого Reporting Services.
 ms.date: 09/26/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: af25232f5a1603f25814309270813188c05a89fc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 66cd108b1f96e003645510e3a17a3627a45495e4
+ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68262351"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83765057"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Сервер отчетов служб Reporting Services (режим SharePoint)
 
@@ -66,7 +67,7 @@ ms.locfileid: "68262351"
   
 -   *Локальный режим*. Локальный режим позволяет подготавливать отчеты локально из библиотеки документов SharePoint без интеграции с сервером отчетов служб Reporting Services. Надстройка служб Reporting Services для продуктов SharePoint является обязательной, в отличие от сервера отчетов служб Reporting Services. Надстройка может быть установлена несколькими различными способами, в том числе с помощью средства подготовки продуктов SharePoint 2010. Дополнительные сведения о локальном режиме см. в разделах [Отчеты, созданные в локальном и подключенном режимах в средстве просмотра отчетов](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md) и [Где найти надстройку службы Reporting Services для продуктов SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
--   *Подключенный режим*. Подключенный режим поддерживается путем интеграции сервера отчетов служб Reporting Services с фермой SharePoint с помощью центра администрирования SharePoint. Интеграция с сервером отчетов обеспечивает комплексные возможности работы с отчетами, предоставляя функции совместной работы SharePoint 2010 и серверные функции сервера отчетов, в том числе подписку, моментальные снимки и серверную обработку.  
+-   *Подключенный режим*. Подключенный режим поддерживается путем включения сервера отчетов служб Reporting Services в ферму SharePoint с помощью центра администрирования SharePoint. Интеграция с сервером отчетов обеспечивает комплексные возможности работы с отчетами, предоставляя функции совместной работы SharePoint 2010 и серверные функции сервера отчетов, в том числе подписку, моментальные снимки и серверную обработку.  
   
 ## <a name="unsupported-sharepoint-features"></a>Неподдерживаемые функции SharePoint
 

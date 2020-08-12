@@ -4,24 +4,32 @@ description: Узнайте, как получить сведения об ус�
 ms.custom: ''
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/01/2020
-ms.topic: conceptual
+ms.date: 05/27/2020
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 78dc96f3568bd2a19f2604d76d47010f9d9104a0
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 877728812d36a7d4db8370254c0fdccbe1011350
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606494"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723944"
 ---
 # <a name="get-r-package-information"></a>Получение сведений о пакете R
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-В этой статье описывается, как получить сведения об установленных пакетах R в Службах машинного обучения SQL Server и SQL Server R Services. Примеры сценариев R показывают, как получить сведения о пакете, например путь установки и версия.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+В этой статье описывается, как получить сведения об установленных пакетах R в [Службах машинного обучения в SQL Server](../sql-server-machine-learning-services.md) и [Кластерах больших данных](../../big-data-cluster/machine-learning-services.md). Примеры сценариев R показывают, как получить сведения о пакете, например путь установки и версия.
+::: moniker-end
+::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
+В этой статье описывается, как получить сведения об установленных пакетах R в [Службах машинного обучения SQL Server](../sql-server-machine-learning-services.md). Примеры сценариев R показывают, как получить сведения о пакете, например путь установки и версия.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+В этой статье описывается, как получить сведения об установленных пакетах R в [Службах машинного обучения Управляемого экземпляра SQL Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview). Примеры сценариев R показывают, как получить сведения о пакете, например путь установки и версия.
+::: moniker-end
 
 ## <a name="default-r-library-location"></a>Расположение библиотеки R по умолчанию
 
@@ -90,7 +98,7 @@ GO
 
 ::: moniker-end
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 
 Приведенные ниже пакеты Microsoft R устанавливаются со Службами машинного обучения SQL Server, если во время установки был выбран компонент R.
 
@@ -174,6 +182,6 @@ print(packageDescription("MicrosoftML"))
 ::: moniker range="<=sql-server-2017||=sqlallproducts-allversions"
 + [Установка пакетов с инструментами R](install-r-packages-standard-tools.md)
 ::: moniker-end
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 + [Установка новых пакетов R с помощью sqlmlutils](install-additional-r-packages-on-sql-server.md)
 ::: moniker-end

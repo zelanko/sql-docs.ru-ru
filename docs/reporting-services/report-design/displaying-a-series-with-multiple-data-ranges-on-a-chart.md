@@ -1,5 +1,6 @@
 ---
 title: Отображение на диаграмме ряда с несколькими диапазонами данных | Документы Майкрософт
+description: Узнайте о способах повышения удобочитаемости диаграмм с помощью разрывов шкалы, фильтров и разделения диапазонов данных в построителе отчетов.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 45da3d39-278e-4760-a4b3-9932c9547cf2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 776c8ab4b133a8655ce42c5b5c3d996360c71322
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 976319c02aa641873d2f92bd6c4b10c8e9427566
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65578824"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681523"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart"></a>Отображение на диаграмме ряда с несколькими диапазонами данных
 

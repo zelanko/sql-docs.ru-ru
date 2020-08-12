@@ -1,5 +1,6 @@
 ---
 title: Отображение всплывающих подсказок для ряда (построитель отчетов) | Документация Майкрософт
+description: Узнайте, как добавить подсказку к каждой точке данных в ряду диаграммы для отображения связанных сведений в построителе отчетов.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4c9606ff-e1c3-4cf7-a4e7-bb16f1a9e8ab
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 69804b41ccfafe3edf7be7aba719088d7212c2ba
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f89c94b8a9b457ff312acfd97d84632f037de82a
+ms.sourcegitcommit: 02b22274da4a103760a376c4ddf26c4829018454
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080977"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84681483"
 ---
 # <a name="show-tooltips-on-a-series-report-builder-and-ssrs"></a>Отображение всплывающих подсказок для ряда (построитель отчетов и службы SSRS)
   К каждой точке данных ряда диаграммы можно добавить подсказку со сведениями, относящимися к точке данных, например имя группы, значение точки данных, значение точки данных в процентах от всего ряда. Эти сведения отображаются при наведении указателя на точку данных отображаемого отчета с разбиением на страницы.  

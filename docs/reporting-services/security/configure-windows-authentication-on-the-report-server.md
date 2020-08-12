@@ -1,6 +1,6 @@
 ---
 title: Настройка проверки подлинности Windows на сервере отчетов | Документы Майкрософт
-ms.date: 08/26/2016
+ms.date: 06/22/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: security
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 47cba9b26c56a41b6741211f1f9d228884b32b5b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c3320851b253b8ca509b564405db4b873e5dea0b
+ms.sourcegitcommit: 4fe7b0d5e8ef1bc076caa3819f7a7b058635a486
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66499937"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85263839"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Настройка проверки подлинности Windows на сервере отчетов
   По умолчанию службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] принимают запросы, в которых определена проверка подлинности Negotiate или NTLM. Если в развертывание входят клиентские приложения и браузеры, в которых используются поставщики безопасности, то можно использовать значения по умолчанию без дополнительной настройки. Если нужно использовать другого поставщика безопасности для встроенной безопасности Windows (например, требуется применять протокол Kerberos напрямую) или если значения по умолчанию были изменены, и нужно восстановить первоначальные настройки, то можно использовать сведения данного раздела, чтобы указать настройки проверки подлинности на сервере отчетов.  
@@ -32,7 +32,7 @@ ms.locfileid: "66499937"
   
 -   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] должна быть настроена для проверки подлинности Windows. По умолчанию файлы Web.config для веб-службы сервера отчетов содержат параметр \<authentication mode="Windows">. Если изменить его на \<authentication mode="Forms">, проверка подлинности Windows для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] завершится ошибкой.  
   
--   Файлы Web.config для веб-службы сервера отчетов должны содержать параметр \<identity impersonate= "true"/>.  
+-   Файлы Web.config для веб-службы сервера отчетов должны содержать параметр \<identity impersonate= "true" />.  
   
 -   Клиентское приложение или браузер должны поддерживать встроенную безопасность Windows.  
 
@@ -96,7 +96,7 @@ ms.locfileid: "66499937"
           </AuthenticationTypes>  
     ```  
   
-4.  Вставьте ее на место существующих элементов параметра \<**Authentication**>.  
+4.  Вставьте его на место существующих элементов \<**Authentication**>.  
   
      Также невозможно использование синтаксиса **Custom** с типами **RSWindows** .  
   
@@ -160,14 +160,8 @@ ms.locfileid: "66499937"
     <RSWindowsExtendedProtectionScenario>Any</RSWindowsExtendedProtectionScenario>  
     ```  
   
--   Перезапустите службу [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и найдите в файле журнала трассировки записи, похожие на следующие:  
-  
-    ```  
-    rshost!rshost!e44!01/14/2010-14:43:51:: i INFO: Registered valid SPNs list for endpoint 2: rshost!rshost!e44!01/14/2010-14:43:52:: i INFO: SPN Whitelist Added <Explicit> - \<HTTP/sqlpod064-13.w2k3.net>.  
-    ```  
-  
--   Значения в столбце \<Явные> — это имена субъектов-служб, настроенные в Active Directory для учетной записи службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
-  
+-   Перезапустите службу [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .
+
  Если дальнейшей необходимости в использовании расширенной защиты нет, восстановите параметры по умолчанию и перезапустите учетную запись службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ```  

@@ -1,5 +1,6 @@
 ---
 title: Функция VarP (построитель отчетов) | Документация Майкрософт
+description: Функция VarP в построителе отчетов возвращает дисперсию совокупности всех числовых значений, отличных от NULL, заданных выражением.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e4f86ab3-bdb3-4e4a-9a9d-7ae7abdf4dc4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8a4f054c2b267a0f3a4b6c83c25d990a9462216b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 15f9d359d16100849d4808359369c3937b7a49a7
+ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081080"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84462368"
 ---
 # <a name="report-builder-functions---varp-function"></a>Функции построителя отчетов — функция VarP
   Возвращает дисперсию совокупности всех числовых значений, отличных от NULL, заданных выражением, вычисляемым в контексте данной области.  

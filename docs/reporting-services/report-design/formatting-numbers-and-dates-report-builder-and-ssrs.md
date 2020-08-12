@@ -1,5 +1,6 @@
 ---
 title: Форматирование чисел и дат (построитель отчетов) | Документация Майкрософт
+description: Узнайте о форматировании чисел и дат в областях данных построителя отчетов путем выбора формата на странице "Число" диалогового окна свойств области данных.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -17,12 +18,12 @@ f1_keywords:
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: db780abef8f2d0078ce398e2ab0d30f29ac82a6b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 81a6c4e397ffba96af45a59a3ab26edaafeb05f4
+ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079819"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84255500"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>Форматирование чисел и дат (построитель отчетов и службы SSRS)
   Формат чисел и дат в областях данных можно задать, выбрав формат на странице **Число** в диалоговом окне **Свойства** соответствующей области данных.  
