@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 248377fa1c4d498d6ffeb5b72518b2baf322362a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 67dc81b5a0a3c8c5e7dabdd1013f5927ceedff0b
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248530"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87877798"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON — флаги трассировки (Transact-SQL)
 
@@ -54,7 +54,7 @@ ms.locfileid: "87248530"
 В следующей таблице перечислены и описаны флаги трассировки, доступные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
 > [!NOTE]
-> Управляемый экземпляр Базы данных SQL Azure поддерживает следующие глобальные флаги трассировки: 460, 2301, 2389, 2390, 2453, 2467, 7471, 8207, 9389, 10316 и 11024. Флаги трассировки сеанса пока не поддерживаются в Управляемом экземпляре.
+> Управляемый экземпляр SQL Azure поддерживает следующие глобальные флаги трассировки: 460, 2301, 2389, 2390, 2453, 2467, 7471, 8207, 9389, 10316 и 11024. Флаги трассировки сеанса пока не поддерживаются в Управляемом экземпляре.
  
 > [!NOTE]
 > Некоторые флаги трассировки были представлены в определенных версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения о соответствующей версии см. в статье службы поддержки Майкрософт о конкретном флаге трассировки.

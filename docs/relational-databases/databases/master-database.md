@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: b5f8da43f32319c45c94a8a6f82b012c4460e8e1
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: e313c18ef81f298a7ebd802bcf2b2cc0f69a09dc
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246389"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863344"
 ---
 # <a name="master-database"></a>База данных master
 
@@ -26,11 +26,11 @@ ms.locfileid: "87246389"
   База данных **master** содержит всю системную информацию о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . в том числе общие для всего экземпляра метаданные, такие как сведения об учетных записях входа, конечных точках и связанных серверах, а также параметры конфигурации системы. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]системные объекты больше не хранятся в базе данных **master** ; они хранятся в [базе данных ресурсов](../../relational-databases/databases/resource-database.md). Кроме этого, в базе данных **master** регистрируются все остальные базы данных и хранится информация о расположении их файлов. Здесь же [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]хранит сведения об инициализации. Таким образом, если база данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] master **недоступна, запустить** невозможно.  
 
 > [!IMPORTANT]
-> Для отдельных баз данных и эластичных пулов Базы данных SQL Azure используются только базы данных master и tempdb. Дополнительные сведения см. в разделе [Что являет собою сервер Базы данных SQL Azure?](https://docs.microsoft.com/azure/sql-database/sql-database-servers#what-is-an-azure-sql-database-server). Описание базы данных tempdb в контексте Базы данных SQL Azure см. в разделе [База данных tempdb в базе данных SQL](tempdb-database.md#tempdb-database-in-sql-database). Для Управляемого экземпляра Базы данных Azure SQL применяются все системные базы данных. См. дополнительные сведения об [Управляемом экземпляре Базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
+> Для отдельных баз данных и эластичных пулов Базы данных SQL Azure используются только базы данных master и tempdb. Дополнительные сведения см. в разделе [Что являет собою сервер Базы данных SQL Azure?](https://docs.microsoft.com/azure/sql-database/sql-database-servers#what-is-an-azure-sql-database-server). Описание базы данных tempdb в контексте Базы данных SQL Azure см. в разделе [База данных tempdb в базе данных SQL](tempdb-database.md#tempdb-database-in-sql-database). Для Управляемого экземпляра SQL Azure применяются все системные базы данных. См. дополнительные сведения об [Управляемом экземпляре Базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
   
 ## <a name="physical-properties-of-master"></a>Физические свойства базы данных master
 
-Исходные конфигурационные значения файлов данных и файлов журнала базы данных **master** для SQL Server и Управляемого экземпляра Базы данных SQL приведены в следующей таблице. Размеры этих файлов могут немного изменяться в зависимости от выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Исходные конфигурационные значения файлов данных и файлов журнала базы данных **master** для SQL Server и Управляемого экземпляра SQL Azure приведены в следующей таблице. Размеры этих файлов могут немного изменяться в зависимости от выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Файл|Логическое имя|Физическое имя|Увеличение размера файлов|  
 |----------|------------------|-------------------|-----------------|  
@@ -44,7 +44,7 @@ ms.locfileid: "87246389"
   
 ### <a name="database-options"></a>Параметры базы данных
 
-Значения по умолчанию для всех параметров базы данных **master** для SQL Server и Управляемого экземпляра Базы данных SQL и сведения о том, можно ли их изменять, приведены в следующей таблице. Чтобы просмотреть текущие настройки этих параметров, используйте представление каталога [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .  
+Значения по умолчанию для всех параметров базы данных **master** для SQL Server и Управляемого экземпляра SQL Azure и сведения о том, можно ли их изменять, приведены в следующей таблице. Чтобы просмотреть текущие настройки этих параметров, используйте представление каталога [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .  
   
 > [!IMPORTANT]
 > При работе с отдельными базами данных и эластичными пулами Базы данных SQL Azure пользователь не может управлять этими параметрами базы данных.
