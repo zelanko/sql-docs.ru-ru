@@ -1,8 +1,8 @@
 ---
-title: Большие двоичные объекты и объекты OLE | Документация Майкрософт
+title: Большие двоичные объекты и объекты OLE (драйвер OLE DB) | Документация Майкрософт
 description: Большие двоичные объекты и объекты OLE
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 05/25/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,20 +16,22 @@ helpviewer_keywords:
 - large data, OLE objects
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 70d3ffccfc9613434b09335944e445a2705b95c3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 54f8b4c38c22bcb32b039d9f0f0887c298051302
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67988670"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942803"
 ---
 # <a name="blobs-and-ole-objects"></a>Большие двоичные объекты и объекты OLE
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server предоставляет интерфейс **ISequentialStream** для поддержки доступа потребителей к типам данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**, **text**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** и xml как к большим двоичным объектам (BLOB). Метод **Read** интерфейса **ISequentialStream** позволяет потребителю получать большой объем данных в виде фрагментов данных, с которыми удобно работать.  
-  
+  OLE DB Driver for SQL Server предоставляет интерфейс **ISequentialStream** для поддержки доступа потребителей к типам данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**, **text** <a href="#text_note"><sup>**1**</sup></a>, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** и xml как к большим двоичным объектам (BLOB). Метод **Read** интерфейса **ISequentialStream** позволяет потребителю получать большой объем данных в виде фрагментов данных, с которыми удобно работать.
+
+ <b id="text_note">[1].</b> Использование интерфейса ISequentialStream для вставки данных в кодировке UTF-8 в старый текстовый столбец возможно только на серверах с поддержкой UTF-8. Попытка выполнить этот сценарий при нацеливании на сервер, который не поддерживает UTF-8, приведет к тому, что драйвер отправит следующее сообщение об ошибке: "*Потоки не поддерживаются для выделенного типа столбца*".
+
  Образец приложения, демонстрирующий эту возможность, см. в статье [Задание данных больших объектов (OLE DB)](../../oledb/ole-db-how-to/set-large-data-ole-db.md).  
   
  Драйвер OLE DB для SQL Server может использовать реализованный потребителем интерфейс **IStorage**, если потребитель предоставляет указатель на него в методе доступа, предназначенном для изменения данных.  

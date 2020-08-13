@@ -1,30 +1,28 @@
 ---
 title: Пакет microsoftml для Python
-description: Общие сведения об алгоритмах и моделях машинного обучения Майкрософт для Python, связанных с рабочими нагрузками машинного обучения SQL Server.
+description: microsoftml — это пакет Python от Майкрософт, предоставляющий высокопроизводительные алгоритмы машинного обучения. Он включает в себя функции для обучения и преобразований, оценки, анализа текста и изображений, а также извлечения компонентов для получения значений из существующих данных. Этот пакет входит в состав Служб машинного обучения SQL Server.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 11/06/2019
-ms.topic: conceptual
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 212f739d7786cd3bd080972ab4b61ebff8b32bd9
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: ae408162ada9b43a9601c4058b9850db5a4afec4
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117867"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406197"
 ---
-# <a name="microsoftml-python-module-in-sql-server"></a>microsoftml (модуль Python в SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="microsoftml-python-package-in-sql-server-machine-learning-services"></a>microsoftml (пакет Python в Службах машинного обучения SQL Server)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-**microsoftml** — это совместимый с Python35 модуль от корпорации Майкрософт, предоставляющий высокопроизводительные алгоритмы машинного обучения. Он включает в себя функции для обучения и преобразований, оценки, анализа текста и изображений, а также извлечения компонентов для получения значений из существующих данных.
-
-Интерфейсы API машинного обучения разрабатывались корпорацией Майкрософт для внутренних приложений машинного обучения и улучшались в течение нескольких лет, чтобы обеспечить высокую производительность применительно к большим данным благодаря многоядерной обработке и быстрой потоковой передаче данных. Изначально пакет создавался как аналог версии для R ([MicrosoftML](../r/ref-r-microsoftml.md)), имеющей аналогичные функции. 
+**microsoftml** — это пакет Python от Майкрософт, предоставляющий высокопроизводительные алгоритмы машинного обучения. Он включает в себя функции для обучения и преобразований, оценки, анализа текста и изображений, а также извлечения компонентов для получения значений из существующих данных. Пакет входит в состав [Служб машинного обучения SQL Server](../sql-server-machine-learning-services.md) и поддерживает высокую производительность при работе с большими данными, используя многоядерную обработку и быструю потоковую передачу данных.
 
 ## <a name="full-reference-documentation"></a>Полная справочная документация
 
-Библиотека **MicrosoftML** распространяется в нескольких продуктах Майкрософт и используется так же, как при получении в SQL Server или другом продукте. Благодаря сходству функций [документация по отдельным функциям microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) опубликована только в одном разделе в [справочнике по Python](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference) для Microsoft Machine Learning Server. Если для конкретных продуктов функции будут действовать иначе, выявленные расхождения будут приведены на странице справки по функциям.
+Пакет **microsoftml** распространяется в нескольких продуктах Майкрософт, но его использование не зависит от того, получили ли вы его в SQL Server или в другом продукте. Благодаря сходству функций [документация по отдельным функциям microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) опубликована только в одном разделе в [справочнике по Python](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference) для Microsoft Machine Learning Server. Если для конкретных продуктов функции будут действовать иначе, выявленные расхождения будут приведены на странице справки по функциям.
 
 ## <a name="versions-and-platforms"></a>Версии и платформы
 
@@ -42,7 +40,7 @@ ms.locfileid: "81117867"
 Алгоритмы в **microsoftml** используют [revoscalepy](ref-py-revoscalepy.md) для следующего:
 
 + Объекты источников данных. Данные, потребляемые функциями **microsoftml**, создаются с помощью функций **revoscalepy**.
-+ Удаленное вычисление (перенос выполнения функций в удаленный экземпляр SQL Server). Библиотека **revoscalepy** предоставляет функции для создания и активации удаленного контекста вычисления для SQL Server.
++ Удаленное вычисление (перенос выполнения функций в удаленный экземпляр SQL Server). Пакет **revoscalepy** предоставляет функции для создания и активации контекста удаленных вычислений для SQL Server.
 
 В большинстве случаев при использовании **microsoftml** пакеты будут загружаться вместе.
 
@@ -52,7 +50,7 @@ ms.locfileid: "81117867"
 
 ## <a name="1-training-functions"></a>1\. Функции обучения
 
-| Компонент | Описание |
+| Функция | Описание |
 |----------|-------------|
 |[microsoftml.rx_ensemble](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-ensemble) | Обучение ансамбля моделей. |
 |[microsoftml.rx_fast_forest](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-forest)  | Случайный лес. |
@@ -68,14 +66,14 @@ ms.locfileid: "81117867"
 
 ### <a name="categorical-variable-handling"></a>Обработка категориальных переменных
 
-| Компонент | Описание |
+| Функция | Описание |
 |----------|-------------|
 |[microsoftml.categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical) | Преобразует текстовый столбец в категории. |
 |[microsoftml.categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash) | Хэширует и преобразует текстовый столбец в категории. |
 
 ### <a name="schema-manipulation"></a>Управление схемой
 
-| Компонент | Описание |
+| Функция | Описание |
 |----------|-------------|
 |[microsoftml.concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat) | Сцепляет несколько столбцов в один вектор. |
 |[microsoftml.drop_columns](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/drop-columns) | Удаляет столбцы из набора данных. |
@@ -84,7 +82,7 @@ ms.locfileid: "81117867"
 
 ### <a name="variable-selection"></a>переменные, выбор
 
-| Компонент | Описание |
+| Функция | Описание |
 |----------|-------------|
 |[microsoftml.count_select](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/count-select) |Выбор признаков на основе количества. |
 |[microsoftml.mutualinformation_select](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/mutualinformation-select) | Выбор признаков на основе взаимной информации. |
@@ -92,7 +90,7 @@ ms.locfileid: "81117867"
 
 ### <a name="text-analytics"></a>Текстовая аналитика
 
-| Компонент | Описание |
+| Функция | Описание |
 |----------|-------------|
 |[microsoftml.featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-text) | Преобразует текстовые столбцы в числовые признаки. |
 |[microsoftml.get_sentiment](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/get-sentiment) | Анализ тональности. |
@@ -100,7 +98,7 @@ ms.locfileid: "81117867"
 
 ### <a name="image-analytics"></a>Аналитика изображений 
 
-| Компонент | Описание |
+| Функция | Описание |
 |----------|-------------|
 |[microsoftml.load_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/load-image) | Загружает изображение. |
 |[microsoftml.resize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/resize-image) | Изменяет размеры изображения. |
@@ -109,7 +107,7 @@ ms.locfileid: "81117867"
 
 ### <a name="featurization-functions"></a>Функции добавления признаков
 
-| Компонент | Описание |
+| Функция | Описание |
 |----------|-------------|
 |[microsoftml.rx_featurize](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-featurize) | Преобразование данных для источников данных. |
 

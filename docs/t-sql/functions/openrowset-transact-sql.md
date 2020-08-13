@@ -25,12 +25,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 28519681f18d13fb11a93df9ffd852243c503a0b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9986119c2ceb4a04002344f8c703e302088e474c
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738077"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110895"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
@@ -76,6 +76,8 @@ OPENROWSET
    [ , FORMATFILE = 'format_file_path' ]
    [ , FORMATFILE_DATASOURCE = 'data_source_name' ]
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Аргументы
 
@@ -233,7 +235,7 @@ SELECT *
 #### <a name="bulk-input-file-format-options"></a>BULK: параметры формата входного файла
 
 ##### <a name="codepage"></a>CODEPAGE
-`CODEPAGE` = { 'ACP'| 'OEM'| 'RAW'| '*code_page*' }. Задает кодовую страницу данных в файле данных. Аргумент CODEPAGE имеет смысл только в том случае, если данные содержат столбцы типа **char**, **varchar** или **text** с символами, коды которых больше 127 или меньше 32.
+`CODEPAGE` = { 'ACP' \| 'OEM' \| 'RAW' \| '*code_page*' }. Задает кодовую страницу данных в файле данных. Аргумент CODEPAGE имеет смысл только в том случае, если данные содержат столбцы типа **char**, **varchar** или **text** с символами, коды которых больше 127 или меньше 32.
 
 > [!IMPORTANT]
 > `CODEPAGE` не поддерживается в Linux.

@@ -1,5 +1,6 @@
 ---
 title: Указание соединений для пользовательских модулей обработки данных | Документы Майкрософт
+description: Используйте эти сведения, чтобы узнать, как указать подключения для пользовательских модулей обработки данных сторонних разработчиков.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2cddc9ea-0e28-4350-80ae-332412908e47
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2f6bea94776853f23a02f44ff91748c510fd6f03
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f236fe67a8d551cd7a7ada15550770c34503c026
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74190623"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86455396"
 ---
 # <a name="specify-connections-for-custom-data-processing-extensions"></a>Указание соединений для пользовательских модулей обработки данных
   Для расширения возможностей поддерживаемых источников данных или поддержки их дополнительных типов, недоступных при стандартной установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , на сервере отчетов можно создавать пользовательские модули обработки данных или использовать модули сторонних разработчиков. Соединения обрабатываются по-разному, в зависимости от реализации. Для модулей обработки данных существуют следующие реализации.  

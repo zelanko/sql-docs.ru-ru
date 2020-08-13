@@ -1,39 +1,39 @@
 ---
-title: Библиотека функций R RevoScaleR
-description: Общие сведения о библиотеке функций RevoScaleR в SQL Server 2016 R Services и Службах машинного обучения SQL Server с R.
+title: Пакет R RevoScaleR
+description: RevoScaleR — это пакет R от корпорации Майкрософт, который поддерживает распределенные вычисления, удаленные контексты вычислений и высокопроизводительные алгоритмы обработки и анализа данных. Он также поддерживает импорт и преобразование данных, формирование сводных данных, визуализацию и анализ. Этот пакет входит в состав Служб машинного обучения SQL Server и служб SQL Server 2016 R Services.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 11/06/2019
-ms.topic: conceptual
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7b24d5499e618a09c4d80e8614b08219e6c6f788
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2288c1898d9299fb346a80e2cd0a53104e308724
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117437"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406157"
 ---
-# <a name="revoscaler-r-library-in-sql-server"></a>RevoScaleR (библиотека R в SQL Server)
+# <a name="revoscaler-r-package-in-sql-server-machine-learning-services"></a>RevoScaleR (пакет R в Службах машинного обучения SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-**RevoScaleR** — это библиотека высокопроизводительных функций обработки и анализа данных от Майкрософт. Функции поддерживают импорт и преобразование данных, формирование сводных данных, визуализацию и анализ.
+**RevoScaleR** — это пакет R от корпорации Майкрософт, который поддерживает распределенные вычисления, удаленные контексты вычислений и высокопроизводительные алгоритмы обработки и анализа данных. Он также поддерживает импорт и преобразование данных, формирование сводных данных, визуализацию и анализ. Этот пакет входит в состав [Служб машинного обучения SQL Server](../sql-server-machine-learning-services.md) и [служб SQL Server 2016 R Services](sql-server-r-services.md).
 
-В отличие от базовых функций R, операции RevoScaleR могут выполняться для очень больших наборов данных параллельно и в распределенных файловых системах. Функции могут работать с наборами данных, не умещающимися в памяти, посредством фрагментации и повторной сборки результатов после завершения операций.
+В отличие от базовых функций R, операции RevoScaleR могут выполняться для крупных наборов данных параллельно и в распределенных файловых системах. Функции могут работать с наборами данных, не умещающимися в памяти, посредством фрагментации и повторной сборки результатов после завершения операций.
 
-Функции RevoScaleR указываются с префиксом **rx** или **Rx**, чтобы их было легко найти.
+Функции RevoScaleR указываются с префиксом rx** или **Rx**, чтобы их было легко найти.
 
 RevoScaleR выступает в качестве платформы для распределенной обработки и анализа данных. Например, можно использовать преобразования и контексты вычислений RevoScaleR с передовыми алгоритмами в [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-the-microsoftml-package). Можно также использовать [rxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec) для параллельного выполнения базовых функций R.
 
 ## <a name="full-reference-documentation"></a>Полная справочная документация
 
-Библиотека **RevoScaleR** распространяется в нескольких продуктах Майкрософт и используется так же, как при получении в SQL Server или другом продукте. Благодаря сходству функций [документация по отдельным функциям RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) опубликована только в одном разделе в [справочнике по R](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) для Microsoft Machine Learning Server. Если для конкретных продуктов функции будут действовать иначе, выявленные расхождения будут приведены на странице справки по функциям.
+Пакет **RevoScaleR** распространяется в нескольких продуктах Майкрософт, но его использование не зависит от того, получили ли вы его в SQL Server или в другом продукте. Благодаря сходству функций [документация по отдельным функциям RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) опубликована только в одном разделе в [справочнике по R](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) для Microsoft Machine Learning Server. Если для конкретных продуктов функции будут действовать иначе, выявленные расхождения будут приведены на странице справки по функциям.
 
 ## <a name="versions-and-platforms"></a>Версии и платформы
 
-Библиотека **RevoScaleR** основана на R 3.4.3 и доступна только при установке одного из следующих продуктов или скачиваемых файлов Майкрософт:
+Пакет **RevoScaleR** основан на R 3.4.3 и доступен только при установке одного из следующих продуктов или скачиваемых файлов Майкрософт.
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 + [Службы машинного обучения SQL Server](../install/sql-machine-learning-services-windows-install.md)
@@ -53,7 +53,7 @@ RevoScaleR выступает в качестве платформы для ра
 
 В некоторых случаях SQL Server и R используют разные типы данных. Список сопоставлений между типами данных SQL и R см. в разделе о [типах данных R и SQL](r-libraries-and-data-types.md).
 
-| Компонент| Описание|
+| Функция| Описание|
 | ------- | ---------- |
 | [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) |  Создание объекта контекста вычисления SQL Server для отправки вычислений в удаленный экземпляр. Несколько функций **RevoScaleR** принимают контекст вычисления в качестве аргумента. |
 |[rxGetComputeContext/rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) | Получение или задание активного контекста вычислений. |
@@ -68,7 +68,7 @@ RevoScaleR выступает в качестве платформы для ра
 
 Вы можете выполнить инструкции DDL из R, если у вас имеются необходимые разрешения на экземпляр и базу данных. Следующие функции используют вызовы ODBC для выполнения инструкций DDL или получения схемы базы данных.
 
-| Компонент| Описание|
+| Функция| Описание|
 | ------- | ---------- |
 | [rxSqlServerTableExists и rxSqlServerDropTable](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdroptable) | Удаление таблицы [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] или проверка существования объекта или таблицы базы данных. |
 | [rxExecuteSQLDDL](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexecutesqlddl) | Выполнение команды языка описания данных DDL, которая определяет объекты базы данных или манипулирует ими. Эта функция не может возвращать данные и используется только для получения или изменения метаданных или схемы объекта.|
@@ -77,7 +77,7 @@ RevoScaleR выступает в качестве платформы для ра
 
 После создания объекта источника данных вы можете использовать его, чтобы загрузить в него данные, преобразовать данные или записать новые данные в указанное расположение. В зависимости от размера данных в источнике вы также можете определить размер пакета как часть источника данных и переместить данные фрагментами.
 
-| Компонент | Описание |
+| Функция | Описание |
 |----------|-------------|
 | [Методы rxOpen](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxopen-methods) | Проверка доступности источника данных, открытие или закрытие источника данных, чтение данных из источника, запись данных в целевой объект и закрытие источника данных.|
 | [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) | Перемещение данных из источника данных в хранилище файлов или кадр данных.|

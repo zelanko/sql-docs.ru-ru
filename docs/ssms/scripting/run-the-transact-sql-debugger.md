@@ -1,5 +1,6 @@
 ---
 title: Запуск отладчика Transact-SQL
+description: Сведения о том, как настроить отладчик Transact-SQL и использовать его для отладки кода Transact-SQL. Отладчик можно запустить в экземпляре ядра СУБД, который находится на другом компьютере.
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -22,16 +23,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 471a69f76a9cb663267e6d1b8c5e8c10614912bf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 24fc9e6fd00aa0586630e611ef09568b7bf61cba
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253792"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122844"
 ---
 # <a name="run-the-transact-sql-debugger"></a>Запуск отладчика Transact-SQL
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Запустить отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] можно после открытия окна редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] . После этого можно начать выполнение кода [!INCLUDE[tsql](../../includes/tsql-md.md)] в режиме отладки до остановки отладчика. Можно задать параметры и настроить работу отладчика.
 

@@ -1,5 +1,6 @@
 ---
 title: Образец скрипта программы rs.exe служб Reporting Services для копирования содержимого между серверами отчетов | Документы Майкрософт
+description: Узнайте, как копировать элементы содержимого и параметры с одного сервера отчетов SQL Server Reporting Services на другой с помощью служебной программы RS.exe для запуска сценария RSS Reporting Services.
 ms.date: 05/23/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 18d10f94696f901efd4f3938bf9b5e06d1c7078d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1f56cd8793d75776335769b22195abb27b1818dc
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "70176285"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916920"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>Образец скрипта программы rs.exe служб Reporting Services для копирования содержимого между серверами отчетов
 
@@ -199,7 +200,7 @@ ms.locfileid: "70176285"
   
 ##  <a name="parameter-description"></a><a name="bkmk_parameter_description"></a> Описание параметра  
   
-|Параметр|Описание|Обязательно|  
+|Параметр|Описание|Обязательное значение|  
 |---------------|-----------------|--------------|  
 |**-s** Source_URL|URL-адрес исходного сервера отчетов|Да|  
 |**-u** Domain\password **-p** password|Учетные данные для исходного сервера.|OPTIONAL, если не указаны учетные данные, используются учетные данные по умолчанию.|  
@@ -310,7 +311,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://uetesta02/_vti_bin/reportser
 ##  <a name="troubleshooting"></a><a name="bkmk_troubleshoot"></a> Устранение неполадок  
  Используйте флаг трассировки **-t** для получения дополнительных сведений. Например, если при выполнении скрипта появляется сообщение следующего вида:  
   
--   Не удалось подключиться к серверу https://\<имя_сервера>/ReportServer/ReportService2010.asmx  
+-   Не удалось подключиться к серверу: https://\<servername>/ReportServer/ReportService2010.asmx  
   
  Запустите скрипт еще раз с флагом **-t**, чтобы получить сообщение следующего вида:  
   

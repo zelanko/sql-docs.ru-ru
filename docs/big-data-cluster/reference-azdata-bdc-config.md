@@ -5,40 +5,44 @@ description: Справочная статья по командам azdata bdc 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8a2c87a374be247e4b31f2e34736de95d9edc319
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 66886cc2fc691e27e93d4f8a4d8a2c0a65bd82c9
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74822364"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942927"
 ---
 # <a name="azdata-bdc-config"></a>azdata bdc config
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-В следующей статье приводятся справочные сведения по командам `bdc config` в средстве `azdata`. Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md)
+В следующей статье приводятся справочные сведения по командам `sql` в средстве `azdata`. Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Команды
-|     |     |
+| Команда | Описание |
 | --- | --- |
-[azdata bdc config init](#azdata-bdc-config-init) | Инициализирует профиль конфигурации кластера больших данных, который можно использовать с командой cluster create.
+[azdata bdc config init](#azdata-bdc-config-init) | Инициализирует профиль конфигурации кластера больших данных, который можно использовать с командой bdc create.
 [azdata bdc config list](#azdata-bdc-config-list) | Выводит список доступных профилей конфигурации.
 [azdata bdc config show](#azdata-bdc-config-show) | Выводит текущую конфигурацию кластера больших данных или конфигурацию из указанного локального файла, например custom/bdc.json.
 [azdata bdc config add](#azdata-bdc-config-add) | Добавляет значение для пути JSON в файле конфигурации.
 [azdata bdc config remove](#azdata-bdc-config-remove) | Удаляет значение пути JSON в файле конфигурации.
 [azdata bdc config replace](#azdata-bdc-config-replace) | Заменяет значение пути JSON в файле конфигурации.
 [azdata bdc config patch](#azdata-bdc-config-patch) | Вносит исправление в файл конфигурации на основе файла исправления JSON.
+[azdata bdc config set](#azdata-bdc-config-set) | Это текущая работа, устанавливает конфигурацию для кластера больших данных.
+[azdata bdc config upgrade](#azdata-bdc-config-upgrade) | Это текущая работа, обновляет конфигурацию кластера больших данных.
 ## <a name="azdata-bdc-config-init"></a>azdata bdc config init
-Инициализирует профиль конфигурации кластера больших данных, который можно использовать с командой cluster create. В аргументах можно указать один из трех источников профиля конфигурации.
+Инициализирует профиль конфигурации кластера больших данных, который можно использовать с командой bdc create. В аргументах можно указать определенный источник профиля конфигурации.
 ```bash
 azdata bdc config init [--target -t] 
                        [--source -s]  
-                       [--force -f]  
-                       [--accept-eula -a]
+                       
+[--force -f]  
+                       
+[--accept-eula -a]
 ```
 ### <a name="examples"></a>Примеры
 Интерактивный процесс инициализации конфигурации для кластера больших данных — выводятся запросы требуемых значений.
@@ -53,7 +57,7 @@ azdata bdc config init --source aks-dev-test --target custom
 #### `--target -t`
 Путь к файлу, в который следует поместить профиль конфигурации; по умолчанию <cwd>/custom.
 #### `--source -s`
-Источник профиля конфигурации: ['kubeadm-dev-test', 'kubeadm-prod', 'aks-dev-test', 'aks-dev-test-ha']
+Источник профиля конфигурации: ['openshift-dev-test', 'aro-dev-test-ha', 'aks-dev-test', 'openshift-prod', 'aks-dev-test-ha', 'kubeadm-prod', 'aro-dev-test', 'kubeadm-dev-test']
 #### `--force -f`
 Принудительная перезапись целевого файла.
 #### `--accept-eula -a`
@@ -66,7 +70,7 @@ azdata bdc config init --source aks-dev-test --target custom
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 ## <a name="azdata-bdc-config-list"></a>azdata bdc config list
@@ -74,7 +78,8 @@ azdata bdc config init --source aks-dev-test --target custom
 ```bash
 azdata bdc config list [--config-profile -c] 
                        [--type -t]  
-                       [--accept-eula -a]
+                       
+[--accept-eula -a]
 ```
 ### <a name="examples"></a>Примеры
 Выводит имена всех доступных профилей конфигурации.
@@ -87,10 +92,9 @@ azdata bdc config list --config-profile aks-dev-test
 ```
 ### <a name="optional-parameters"></a>Необязательные параметры
 #### `--config-profile -c`
-Профиль конфигурации по умолчанию: ['kubeadm-dev-test', 'kubeadm-prod', 'aks-dev-test', 'aks-dev-test-ha']
+Профиль конфигурации по умолчанию: ['openshift-dev-test', 'aro-dev-test-ha', 'aks-dev-test', 'openshift-prod', 'aks-dev-test-ha', 'kubeadm-prod', 'aro-dev-test', 'kubeadm-dev-test']
 #### `--type -t`
 Тип конфигурации, который следует просмотреть.
-`cluster`
 #### `--accept-eula -a`
 Вы принимаете условия лицензии? [да/нет]. Если вы не хотите использовать этот аргумент, можно присвоить переменной среды ACCEPT_EULA значение "yes". Условия лицензии для этого продукта можно просмотреть по адресу https://aka.ms/eula-azdata-en.
 ### <a name="global-arguments"></a>Глобальные аргументы
@@ -101,7 +105,7 @@ azdata bdc config list --config-profile aks-dev-test
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 ## <a name="azdata-bdc-config-show"></a>azdata bdc config show
@@ -109,8 +113,10 @@ azdata bdc config list --config-profile aks-dev-test
 ```bash
 azdata bdc config show [--config-file -c] 
                        [--target -t]  
-                       [--json-path -j]  
-                       [--force -f]
+                       
+[--json-path -j]  
+                       
+[--force -f]
 ```
 ### <a name="examples"></a>Примеры
 Вывод конфигурации кластера больших данных в консоли
@@ -119,11 +125,11 @@ azdata bdc config show
 ```
 В локальном файле конфигурации возвращается значение в конце простого пути к ключу JSON.
 ```bash
-azdata bdc config show --config-file custom-config/bdc.json --json-path 'metadata.name' --target section.json
+azdata bdc config show --config-file custom-config/bdc.json --json-path "metadata.name" --target section.json
 ```
 В локальном файле конфигурации возвращаются ресурсы в составе службы
 ```bash
-azdata bdc config show --config-file custom-config/bdc.json --json-path '$.spec.services.sql.resources' --target section.json
+azdata bdc config show --config-file custom-config/bdc.json --json-path "$.spec.services.sql.resources" --target section.json
 ```
 ### <a name="optional-parameters"></a>Необязательные параметры
 #### `--config-file -c`
@@ -142,7 +148,7 @@ azdata bdc config show --config-file custom-config/bdc.json --json-path '$.spec.
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 ## <a name="azdata-bdc-config-add"></a>azdata bdc config add
@@ -154,7 +160,7 @@ azdata bdc config add --config-file -c
 ### <a name="examples"></a>Примеры
 Пример 1. Добавление хранилища уровня управления
 ```bash
-azdata bdc config add --config-file custom/control.json --json-values 'spec.storage={"accessMode":"ReadWriteOnce","className":"managed-premium","size":"10Gi"}'
+azdata bdc config add --config-file custom/control.json --json-values "spec.storage={"accessMode":"ReadWriteOnce","className":"managed-premium","size":"10Gi"}"
 ```
 ### <a name="required-parameters"></a>Необходимые параметры
 #### `--config-file -c`
@@ -169,7 +175,7 @@ azdata bdc config add --config-file custom/control.json --json-values 'spec.stor
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 ## <a name="azdata-bdc-config-remove"></a>azdata bdc config remove
@@ -181,7 +187,7 @@ azdata bdc config remove --config-file -c
 ### <a name="examples"></a>Примеры
 Пример 1. Удаление хранилища уровня управления
 ```bash
-azdata bdc config remove --config-file custom/control.json --json-path '.spec.storage'
+azdata bdc config remove --config-file custom/control.json --json-path ".spec.storage"
 ```
 ### <a name="required-parameters"></a>Необходимые параметры
 #### `--config-file -c`
@@ -196,7 +202,7 @@ azdata bdc config remove --config-file custom/control.json --json-path '.spec.st
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 ## <a name="azdata-bdc-config-replace"></a>azdata bdc config replace
@@ -208,15 +214,15 @@ azdata bdc config replace --config-file -c
 ### <a name="examples"></a>Примеры
 Пример 1. Замена порта одной конечной точки (конечной точки контроллера)
 ```bash
-azdata bdc config replace --config-file custom/control.json --json-values '$.spec.endpoints[?(@.name=="Controller")].port=30080'
+azdata bdc config replace --config-file custom/control.json --json-values "$.spec.endpoints[?(@.name=="Controller")].port=30080"
 ```
 Пример 2. Замена хранилища уровня управления
 ```bash
-azdata bdc config replace --config-file custom/control.json --json-values 'spec.storage={"accessMode":"ReadWriteOnce","className":"managed-premium","size":"10Gi"}'
+azdata bdc config replace --config-file custom/control.json --json-values "spec.storage={"accessMode":"ReadWriteOnce","className":"managed-premium","size":"10Gi"}"
 ```
 Пример 3. Замена спецификации ресурса storage-0, включая реплики.
 ```bash
-azdata bdc config replace --config-file custom/bdc.json --json-values '$.spec.resources.storage-0.spec={"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}'
+azdata bdc config replace --config-file custom/bdc.json --json-values "$.spec.resources.storage-0.spec={"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}"
 ```
 ### <a name="required-parameters"></a>Необходимые параметры
 #### `--config-file -c`
@@ -231,7 +237,7 @@ azdata bdc config replace --config-file custom/bdc.json --json-values '$.spec.re
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 ## <a name="azdata-bdc-config-patch"></a>azdata bdc config patch
@@ -246,7 +252,7 @@ azdata bdc config patch --config-file -c
 azdata bdc config patch --config-file custom/control.json --patch ./patch.json
 
     Patch File Example (patch.json):
-        {"patch":[{"op":"replace","path":"$.spec.endpoints[?(@.name=='Controller')].port","value":30080}]}
+        {"patch":[{"op":"replace","path":"$.spec.endpoints[?(@.name=="Controller")].port","value":30080}]}
 ```
 Пример 2. Замена хранилища уровня управления с помощью файла исправления
 ```bash
@@ -275,7 +281,57 @@ azdata bdc config patch --config-file custom/bdc.json --patch ./patch.json
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org).
+#### `--verbose`
+Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
+## <a name="azdata-bdc-config-set"></a>azdata bdc config set
+Это текущая работа, устанавливает конфигурацию для кластера больших данных.
+```bash
+azdata bdc config set --name -n 
+                      
+```
+### <a name="examples"></a>Примеры
+Конфигурация настроена для тестирования кластера больших данных.
+```bash
+azdata config set --name test
+```
+### <a name="required-parameters"></a>Необходимые параметры
+#### `--name -n`
+Имя кластера больших данных, используемого для пространств имен Kubernetes.
+### <a name="global-arguments"></a>Глобальные аргументы
+#### `--debug`
+Повышение уровня детализации журнала для включения всех журналов отладки.
+#### `--help -h`
+Отображение этого справочного сообщения и выход.
+#### `--output -o`
+Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
+#### `--query -q`
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org).
+#### `--verbose`
+Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
+## <a name="azdata-bdc-config-upgrade"></a>azdata bdc config upgrade
+Это текущая работа, обновляет конфигурацию кластера больших данных.
+```bash
+azdata bdc config upgrade --name -n 
+                          
+```
+### <a name="examples"></a>Примеры
+Обновление конфигурации для тестирования кластера больших данных.
+```bash
+azdata config upgrade --name test
+```
+### <a name="required-parameters"></a>Необходимые параметры
+#### `--name -n`
+Имя кластера больших данных, используемого для пространств имен Kubernetes.
+### <a name="global-arguments"></a>Глобальные аргументы
+#### `--debug`
+Повышение уровня детализации журнала для включения всех журналов отладки.
+#### `--help -h`
+Отображение этого справочного сообщения и выход.
+#### `--output -o`
+Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
+#### `--query -q`
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 

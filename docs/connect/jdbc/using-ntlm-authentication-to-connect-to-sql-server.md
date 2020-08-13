@@ -1,5 +1,6 @@
 ---
-title: Использование проверки подлинности NTLM для подключения к SQL Server| Документация Майкрософт
+title: Использование проверки подлинности NTLM для подключения к SQL Server
+description: Узнайте, как установить подключение к базе данных SQL с помощью проверки подлинности NTLM посредством драйвера JDBC.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -12,18 +13,18 @@ ms.assetid: ''
 author: lilgreenbird
 ms.author: v-susanh
 manager: kenvh
-ms.openlocfilehash: 2fab4794544ada07e0bf5e690da35b72ad6b7421
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 93b4956b70e6e81e215da4fcde61a3a3287b50ec
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69026105"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393152"
 ---
 # <a name="using-ntlm-authentication-to-connect-to-sql-server"></a>Использование проверки подлинности NTLM для подключения к SQL Server
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] позволяет приложению использовать свойство подключения  **authenticationScheme**, чтобы указать, что подключение к базе данных должно устанавливаться с использованием проверки подлинности NTLM v2. 
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] позволяет приложению использовать свойство подключения ** authenticationScheme**, чтобы указать, что подключение к базе данных должно устанавливаться с использованием проверки подлинности NTLM v2. 
 
 Для проверки подлинности NTLM также используются следующие свойства:
 
@@ -72,7 +73,7 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 
 Имя участника-службы (service primary name, SPN) — это имя, по которому клиент единственным образом распознает экземпляр службы.
 
-Вы можете самостоятельно указать имя субъекта-службы с помощью свойства подключения **serverSpn** или разрешить драйверу создать его (вариант по умолчанию). Это свойство имеет следующий формат: MSSQLSvc/fqdn:port\@REALM, где fqdn — это полное доменное имя, порт — номер порта, а REALM  — это область SQL Server в верхнем регистре. Область этого свойства является необязательной, так как область по умолчанию совпадает с областью сервера.
+Вы можете самостоятельно указать имя субъекта-службы с помощью свойства подключения **serverSpn** или разрешить драйверу создать его (вариант по умолчанию). Это свойство имеет вид MSSQLSvc/fqdn:port\@REALM, где fqdn — это полное доменное имя, port — номер порта, а REALM — область SQL Server в верхнем регистре. Область этого свойства является необязательной, так как область по умолчанию совпадает с областью сервера.
 
 Например, имя субъекта-службы может выглядеть так: "MSSQLSvc/some-server.zzz.corp.contoso.com:1433".
 

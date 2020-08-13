@@ -1,22 +1,22 @@
 ---
 title: Создание учетных данных для SQLRUserGroup
-description: Для соединений с замыканием на себя, использующих неявную проверку подлинности, создайте имя входа в SQL Server для SQLRUserGroup, чтобы учетная запись рабочей роли могла войти на сервер для преобразования идентификатора в вызывающего пользователя.
+description: Создайте имя входа в SQL Server для SQLRUserGroup, используя подразумеваемую проверку подлинности для входа на сервер, для преобразования идентификатора в вызывающего пользователя.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 01/25/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c57a62e954ae8cb0fc52c9a5ead22d418243c0b8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f3d7bd23c2a6b218e56f4de57d5b281b34d0687d
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117127"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484640"
 ---
 # <a name="create-a-login-for-sqlrusergroup"></a>Создание учетных данных для SQLRUserGroup
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Создайте [имя входа в SQL Server](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login) для [SQLRUserGroup](../concepts/security.md#sqlrusergroup), когда [соединение с замыканием на себя](../../machine-learning/concepts/security.md#implied-authentication) в скрипте указывает *доверенное подключение* и удостоверение, используемое для выполнения объекта, содержит код учетной записи пользователя Windows.
 

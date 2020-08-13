@@ -1,5 +1,6 @@
 ---
 title: Развертывание и поддержка версий в SQL Server Data Tools (SSDT) | Документы Майкрософт
+description: Сведения о поддерживаемых версиях для создания и публикации отчетов в SQL Server Data Tools и настройке конфигурации проекта и свойств развертывания.
 ms.date: 03/15/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5f055219476507f52894fe7d5b246710e6054a20
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a33626c529d59d9ffa2b80e012dbb325c93b670a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571497"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917969"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>Развертывание и поддержка версий в SQL Server Data Tools (SSDT)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] поддерживает следующие сценарии:  
@@ -33,7 +34,7 @@ ms.locfileid: "65571497"
   
  Построение отчетов производится перед подготовкой к просмотру в конструкторе отчетов или развертыванием на сервере отчетов.  
   
- Задать свойства конфигурации можно в диалоговом окне [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]Свойства проекта**среды**.  
+ Задать свойства конфигурации можно в диалоговом окне **Свойства проекта** среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
  Свойства построения и развертывания включают:  
   

@@ -1,23 +1,23 @@
 ---
-title: Масштабирование параллельных сценариев
+title: Настройка параллельного или одновременного выполнения скрипта R и Python
 description: Настройте параллельное или одновременное выполнение сценариев R и Python в пуле учетных записей пользователей для масштабирования Служб машинного обучения SQL Server.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 09/25/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 430af4eb1127ab5b924b2429e166f68e2dffa334
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 525e9d0931b3ff25d4258004680ed158a9baf82d
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118807"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484451"
 ---
 # <a name="scale-concurrent-execution-of-external-scripts-in-sql-server-machine-learning-services"></a>Масштабирование параллельного выполнения внешних сценариев в Службах машинного обучения SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 Узнайте о рабочих учетных записях для Служб машинного обучения SQL Server и о том, как изменить конфигурацию по умолчанию, чтобы масштабировать количество параллельных выполнений внешних сценариев.
 

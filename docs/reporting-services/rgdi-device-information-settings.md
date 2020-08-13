@@ -1,5 +1,6 @@
 ---
 title: Настройки сведений об устройстве RGDI | Документы Майкрософт
+description: Узнайте о параметрах сведений об устройстве RGDI, доступных для отрисовки в формате RGDI.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b11fd9cc-3b84-4038-9611-a43feb2f6fdd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a8f72dd611e9d0838001091b450ea88e61213a0f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6aee7fed866f15d842ac653fcca420d28fb7d3f5
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65572322"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87235531"
 ---
 # <a name="rgdi-device-information-settings"></a>Настройки сведений об устройстве RGDI
   В следующей таблице указаны настройки сведений об устройстве для подготовки отчетов к просмотру в формате RGDI.  

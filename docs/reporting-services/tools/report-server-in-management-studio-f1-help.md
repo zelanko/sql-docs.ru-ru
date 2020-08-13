@@ -1,5 +1,6 @@
 ---
 title: Справка F1 по работе с сервером отчетов в среде Management Studio | Документы Майкрософт
+description: Просмотрите сведения о функциях для управления серверами отчетов в SQL Server Management Studio.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 982e8c03-7341-4895-8a95-a12d52c564ea
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 026583e0093812dbf683c93de9d11fd8ffabb7e4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8df79e7a132d699428860c076a19ea734f3ce48d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65576145"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916601"
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Справка F1 по использованию сервера отчетов среде Management Studio
   Этот раздел включает подразделы с описанием диалоговых окон в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , которые можно использовать для управления серверами отчетов.  

@@ -2,21 +2,21 @@
 title: Заметки о выпуске SQL Server 2014 | Документация Майкрософт
 description: В этих заметках о выпуске содержится описание известных проблем, которое необходимо прочитать перед установкой или диагностикой выпусков Microsoft SQL Server 2014 (12.x).
 ms.custom: ''
-ms.date: 03/15/2018
+ms.date: 07/22/2020
 ms.prod: sql
-ms.technology: install
+ms.technology: release-landing
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 author: rothja
 ms.author: jroth
-monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 6346b8e611fc70f07211abe3060781d548a6a929
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+monikerRange: = sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: aeeaf52d389da8bb58d4b76bfbe85957cbd832dd
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001144"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111124"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ SQL Server 2014 с пакетом обновления 1 (SP1) включае
 **Решение:** Обходного решения для перехода на более раннюю версию не существует. Перед обновлением до версии SQL Server 2014 RTM рекомендуется создать резервную копию базы данных.  
   
 #### <a name="incorrect-version-of-streaminsight-client-on-sql-server-2014-mediaisocab"></a>Неправильная версия клиента StreamInsight на носителе SQL Server 2014/ISO/CAB  
-На носителе SQL Server/ISO/CAB (StreamInsight\\\<архитектура\>\\\<код языка\>) находится неправильная версия StreamInsight.msi и StreamInsightClient.msi.  
+На носителе SQL Server media/ISO/CAB (StreamInsight\\\<Architecture\>\\\<Language ID\>) находится неправильная версия StreamInsight.msi и StreamInsightClient.msi.  
   
 **Решение:** Скачайте правильную версию со [страницы скачивания пакета дополнительных компонентов SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=306709) и установите ее.  
   
@@ -287,7 +287,7 @@ DATEPART(weekday, @d)
 5.  Определите строки, которые должны соответствовать исправляемому экземпляру. 
 6.  Обновите значение sysdac_history_internal.instance_id, задав значение, которое вы записали на шаге 3 (из таблицы sysdac_instances_internal):  
   
-    `update` sysdac_history_internal `set` instance_id = "\<значение с шага 3\>" `where` \<выражение, соответствующее строкам, которые нужно обновить\>  
+    `update` sysdac_history_internal `set` instance_id = '\<value from step 3\>' `where` \<expression that matches the rows you want to update\>  
   
 ### <a name="reporting-services-rtm"></a><a name="SSRS"></a>Службы Reporting Services (RTM)
   

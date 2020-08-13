@@ -1,5 +1,6 @@
 ---
 title: Создание общего или внедренного набора данных (построитель отчетов) | Документация Майкрософт
+description: Сведения о том, как создавать внедренные и общие наборы данных для использования в различных отчетах. Для создания набора данных необходим внедренный или общий источник данных.
 ms.date: 10/17/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b19b5442731bf52e299450a32cb8536c0f95467f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 76e1482bf441401b02de984529d7fd178d88975c
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081410"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457806"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)
 Внедренные наборы данных предназначены для использования в одном отчете [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Общие наборы данных на сервере отчетов можно использовать в нескольких отчетах, как в мобильных, так и с разбиением на страницы. Для создания набора данных необходим внедренный или общий источник данных.  

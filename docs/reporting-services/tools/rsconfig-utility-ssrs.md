@@ -1,5 +1,6 @@
 ---
 title: Программа rsconfig | Документация Майкрософт
+description: Узнайте больше о программе rsconfig.exe, которая шифрует значения учетной записи и подключения к базе данных сервера отчетов и сохраняет их в файле RSReportServer.config.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7ad41870ac9bcb162e792dc6abd8ca21ceeeb3f2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8397412801d38107c3532bea377d7bd150561f17
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082176"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913646"
 ---
 # <a name="rsconfig-utility-ssrs"></a>Программа rsconfig (SSRS)
   Программа **rsconfig.exe** шифрует значения подключения и учетной записи и сохраняет их в файле RSReportServer.config. Зашифрованные значения включают сведения о подключении к базе данных сервера отчетов и значения учетной записи, используемые для автоматической обработки отчетов.  

@@ -1,5 +1,6 @@
 ---
 title: Установка свойств сервера отчетов (среда Management Studio) | Документы Майкрософт
+description: Узнайте, как устанавливать системные свойства сервера отчетов в SQL Server Management Studio, чтобы включать те или иные функции либо задавать значения по умолчанию.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1ed0f84b-b12a-4e49-b65c-a11a99f9093f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e2632e93cf325a560434e0833e3bb5a7288f83ef
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 360c2408e7078845d58e28dff42fdf932d5e311a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579000"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918020"
 ---
 # <a name="set-report-server-properties-management-studio"></a>Установка свойств сервера отчетов (среда Management Studio)
   Системные свойства сервера отчетов можно установить в среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], чтобы включить те или иные функции либо установить параметры по умолчанию.  

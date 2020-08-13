@@ -1,5 +1,6 @@
 ---
 title: Использование программы командной строки dta
+description: Сведения о том, как программа командной строки dta расширяет функциональные возможности помощника по настройке ядра СУБД SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: 30f27f4d-8852-4b12-ba62-57f63e496f1d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 1c97122d6181470ded13a57c54b0c6d44f830ed6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7d0ffc5d1fa1ba7fa0fbf6b89ce5eea4c8d179c4
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306972"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457523"
 ---
-# <a name="lesson-3-using-the-dta-command-prompt-utility"></a>Занятие 3. Использование программы командной строки dta
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="lesson-3-using-the-dta-command-prompt-utility"></a>Урок 3. Использование программы командной строки dta
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Программа командной строки **dta** расширяет функциональные возможности помощника по настройке ядра СУБД.  
   
 Применяя XML-схему помощника по настройке ядра СУБД, пользователь может создавать входные файлы данной программы с помощью удобных для себя средств XML. Эта схема устанавливается вместе со службами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и находится по следующему адресу: C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd.  
@@ -34,13 +34,13 @@ XML-схема помощника по настройке ядра СУБД ра
   
 Тематика применения функциональности ввода данных на языке XML с использованием помощника по настройке ядра СУБД выходит за рамки данного занятия.  
   
-Эта задача помогает запустить программу **dta** , просмотреть ее справку, а затем использовать эту программу для настройки рабочей нагрузки из командной строки. Программа использует рабочую нагрузку MyScript.sql, созданную для использовании графического пользовательского интерфейса помощника по настройке ядра СУБД (см. руководство по [настройке рабочей нагрузки](lesson-2-using-database-engine-tuning-advisor.md#tuning-a-workload)).  
+ Эта задача помогает запустить программу **dta**, просмотреть ее справку, а затем использовать эту программу для настройки рабочей нагрузки из командной строки. Программа использует рабочую нагрузку MyScript.sql, созданную для использовании графического пользовательского интерфейса помощника по настройке ядра СУБД (см. руководство по [настройке рабочей нагрузки](lesson-2-using-database-engine-tuning-advisor.md#tuning-a-workload)).  
   
 В этом руководстве используется пример базы данных AdventureWorks2017. В целях повышения безопасности образцы баз данных не установлены. Дополнительные сведения об установке образцов баз данных см. в статье [Установка образцов SQL Server и образцов баз данных](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).  
   
 В следующих задачах рассматривается открытие командной строки, запуск программы командной строки **dta** , просмотр справки по ее синтаксису, а также настройка простой рабочей нагрузки MyScript.sql, которая была создана в примере [Настройка рабочей нагрузки](../../tools/dta/lesson-1-1-tuning-a-workload.md).  
 
-## <a name="prerequisites"></a>предварительные требования 
+## <a name="prerequisites"></a>Предварительные требования 
 
 Для работы с этим учебником требуется среда SQL Server Management Studio, доступ к серверу SQL Server и база данных AdventureWorks.
 
@@ -48,7 +48,7 @@ XML-схема помощника по настройке ядра СУБД ра
 - Скачайте [пример базы данных AdventureWorks2017](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
 
 
-См. инструкции по [восстановлению резервной копии базы данных с помощью SSMS](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017).
+См. инструкции по восстановлению резервной копии базы данных с помощью SSMS см. в статье: [Восстановление базы данных](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017).
 
   >[!NOTE]
   > Этот учебник предназначен для пользователей, которые знакомы с SQL Server Management Studio и основными задачами по администрированию базы данных. 
@@ -93,7 +93,7 @@ XML-схема помощника по настройке ядра СУБД ра
 -   В статье[Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md) описывается выполнение задач с использованием этого средства. 
 -   [dta Utility](../../tools/dta/dta-utility.md) — справочный материал по программе командной строки и дополнительному XML-файлу, который вы можете использовать для управления ее работой.  
   
-Чтобы вернуться к началу учебника, воспользуйтесь ссылкой [Учебник. Помощник по настройке ядра СУБД](../../tools/dta/tutorial-database-engine-tuning-advisor.md).  
+Чтобы вернуться к началу учебника, воспользуйтесь статьей [Учебник. Помощник по настройке ядра СУБД](../../tools/dta/tutorial-database-engine-tuning-advisor.md).  
   
 ## <a name="see-also"></a>См. также:  
 [Учебники по компоненту ядра СУБД](../../relational-databases/database-engine-tutorials.md)  

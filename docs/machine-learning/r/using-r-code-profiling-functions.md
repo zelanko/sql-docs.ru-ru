@@ -1,22 +1,22 @@
 ---
-title: Использование функций профилирования кода R
-description: Повышение производительности и быстрое получение результатов вычислений R на SQL Server с помощью функций профилирования R, возвращающих сведения о внутренних вызовах функций.
+title: Повышение производительности с помощью функции профилирования кода R
+description: Собирайте полезные сведения, чтобы повысить производительность и быстрее получать результаты вычислений R в SQL Server, с помощью функций профилирования. Функция *rprof* собирает и возвращает сведения о внутренних вызовах функций.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 12/12/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e03ae1a8c4cdab87f46f63da6271886b4518b5e3
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 16a1ed8df29de58450f87118068e43646c46fd90
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117197"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484645"
 ---
 # <a name="use-r-code-profiling-functions-to-improve-performance"></a>Использование функций профилирования кода R для повышения производительности
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Помимо использования средств и ресурсов SQL Server для отслеживания выполнения скрипта R можно использовать средства обеспечения производительности, входящие в другие пакеты R, чтобы получить дополнительные сведения о внутренних вызовах функций. 
 

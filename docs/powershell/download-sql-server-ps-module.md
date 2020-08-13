@@ -1,23 +1,24 @@
 ---
 title: Загрузка модуля PowerShell (SQL Server)
+description: Узнайте, как установить модуль SqlServer PowerShell, который предоставляет командлеты, поддерживающие последние функции SQL, а также содержит обновленные версии командлетов в модуле SQLPS.
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: carlrab
+ms.reviewer: matteot, aanelson
 ms.custom: ''
-ms.date: 01/23/2020
-ms.openlocfilehash: 99976a12ae76254da5b50c5467df9d9e42fdbbce
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 06/11/2020
+ms.openlocfilehash: 63b91463a265585036416721d1794920e02b9d13
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76920349"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87123006"
 ---
 # <a name="install-the-sql-server-powershell-module"></a>Установка модуля SQL Server PowerShell
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Эта статья содержит инструкции по установке модуля **SqlServer** PowerShell.
 
@@ -26,7 +27,8 @@ ms.locfileid: "76920349"
 Существует два модуля PowerShell SQL Server.
 
 - **SqlServer**. Модуль SqlServer содержит новые командлеты для поддержки новейших функций SQL. Этот модуль также содержит обновленные версии командлетов в **SQLPS**. Чтобы скачать модуль SqlServer, перейдите к странице [модуля SqlServer в коллекции PowerShell](https://www.powershellgallery.com/packages/Sqlserver).
-- **SQLPS**. Модуль SQLPS входит в состав установки SQL Server (для обеспечения обратной совместимости), но больше не обновляется. Самым актуальным модулем PowerShell является модуль **SqlServer**.
+
+- **SQLPS**. SQLPS — это модуль, используемый [агентом SQL](sql-server-powershell.md#sql-server-agent) для запуска заданий агента в шагах задания агента с помощью подсистемы PowerShell.
 
 > [!NOTE]
 > Версии модуля **SqlServer** PowerShell в коллекции PowerShell поддерживают управление версиями и требуют PowerShell 5.0 или более поздней версии.
@@ -38,20 +40,22 @@ ms.locfileid: "76920349"
 
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio
 
-SQL Server Management Studio (SSMS), начиная с версии 17.0, не устанавливает ни один из модулей PowerShell. Для работы PowerShell с SSMS установите модуль **SqlServer** из [коллекции PowerShell](https://www.powershellgallery.com/packages/Sqlserver).
+[SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) не устанавливает ни один из модулей PowerShell. Для работы PowerShell с SSMS установите модуль **SqlServer** из [коллекции PowerShell](https://www.powershellgallery.com/packages/Sqlserver).
 
 > [!NOTE]
-> В SQL Server Management Studio (SSMS) версии 16.x входит более ранняя версия модуля **SqlServer**.
+> В SSMS версии 16.x входит более ранняя версия модуля **SqlServer**.
 
 ## <a name="azure-data-studio"></a>Azure Data Studio
 
-Azure Data Studio не устанавливает ни один из модулей PowerShell. Для работы PowerShell с Azure Data Studio установите модуль **SqlServer** из [коллекции PowerShell](https://www.powershellgallery.com/packages/Sqlserver).
+[Azure Data Studio](../azure-data-studio/download-azure-data-studio.md) не устанавливает ни один из модулей PowerShell. Для работы PowerShell с Azure Data Studio установите модуль **SqlServer** из [коллекции PowerShell](https://www.powershellgallery.com/packages/Sqlserver).
 
 Можно использовать [расширение PowerShell](../azure-data-studio/powershell-extension.md), которое обеспечивает полноценную поддержку редактора PowerShell в Azure Data Studio.
 
 ## <a name="installing-or-updating-the-sqlserver-module"></a>Установка или обновление модуля SqlServer
 
-Чтобы установить модуль **SqlServer** из коллекции PowerShell, запустите сеанс [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting) с правами администратора. Вы также можете запустить Azure Data Studio от имени администратора и выполнить эти команды в сеансе PowerShell во встроенном терминале.
+Чтобы установить модуль **SqlServer** из коллекции PowerShell, запустите сеанс [PowerShell](/powershell/scripting/overview) с правами администратора. Вы также можете запустить Azure Data Studio от имени администратора и выполнить эти команды в сеансе PowerShell во встроенном терминале.
+
+Для выполнения с повышенными правами можно также использовать *Install-Module SQLServer-Scope CurrentUser*. Этот командлет полезен для пользователей, не являющихся администраторами в своей среде. Однако, поскольку область ограничена текущим пользователем, другие пользователи на том же компьютере не могут использовать этот модуль.
 
 ### <a name="install-the-sqlserver-module"></a>Установка модуля SqlServer
 
@@ -152,3 +156,13 @@ Install-Module SqlServer -RequiredVersion 21.1.18040-preview -AllowPrerelease
 ## <a name="sql-server-powershell-on-linux"></a>SQL Server PowerShell в Linux
 
 Сведения об установке SQL Server PowerShell в Linux см. в [этой статье](../linux/sql-server-linux-manage-powershell-core.md).
+
+## <a name="other-modules"></a>Прочие модули
+
+- [AZ. SQL](https://www.powershellgallery.com/packages/Az.Sql/) — командлеты служб SQL для Azure Resource Manager в Windows PowerShell и PowerShell Core.
+
+- [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc/) — модуль с ресурсами DSC для развертывания и настройки Microsoft SQL Server.
+
+## <a name="next-steps"></a>Дальнейшие действия
+
+[SQL Server PowerShell](sql-server-powershell.md)

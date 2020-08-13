@@ -1,24 +1,24 @@
 ---
 title: Вспомогательные функции sqlrutils
-description: Используйте библиотеку функций sqlrutils в SQL Server 2016 R Services и Службах машинного обучения SQL Server с R для создания хранимых процедур, содержащих скрипт R.
+description: sqlrutils — это пакет R от корпорации Майкрософт, который предоставляет пользователям R механизм для помещения скриптов R в хранимую процедуру T-SQL, регистрации этой хранимой процедуры в базе данных и ее запуска из среды разработки R. Этот пакет входит в состав Служб машинного обучения SQL Server и служб SQL Server 2016 R Services.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 12/15/2018
-ms.topic: conceptual
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3de8d438691afb7ebf1aabe15265227b7876b837
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 7c989ad848324536122c042e2b5a823b16b72657
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117397"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406147"
 ---
-# <a name="sqlrutils-r-library-in-sql-server"></a>sqlrutils (библиотека R в SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="sqlrutils-r-package-in-sql-server-machine-learning-services"></a>sqlrutils (пакет R в Службах машинного обучения SQL Server)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Пакет **sqlrutils** предоставляет пользователям R механизм для помещения скриптов R в хранимую процедуру T-SQL, регистрации этой хранимой процедуры с базой данных и ее запуска из среды разработки R. 
+**sqlrutils** — это пакет R от корпорации Майкрософт, который предоставляет пользователям R механизм для помещения скриптов R в хранимую процедуру T-SQL, регистрации этой хранимой процедуры в базе данных и ее запуска из среды разработки R. Этот пакет входит в состав [Служб машинного обучения SQL Server](../sql-server-machine-learning-services.md) и [служб SQL Server 2016 R Services](sql-server-r-services.md).
 
 Преобразование кода R для выполнения в рамках одной хранимой процедуры позволяет более эффективно использовать службы SQL Server R Services, которые требуют внедрить скрипт R в качестве параметра в [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Пакет **sqlrutils** помогает создать такой внедренный скрипт R и правильно настроить соответствующие параметры.
 
@@ -30,18 +30,18 @@ ms.locfileid: "81117397"
 
 Вы также можете выполнить хранимую процедуру из среды R, передав параметры с правильным форматом и обработав результаты. Или вы можете использовать хранимую процедуру из SQL Server для поддержки стандартных сценариев интеграции базы данных, таких как извлечение, преобразование и загрузка, обучение модели и оценка большого объема.
 
-  > [!NOTE]
-  > Если планируется выполнить хранимую процедуру из среды R путем вызова функции *executeStoredProcedure* , следует использовать поставщик ODBC 3.8, например драйвер ODBC 13 для SQL Server.  
+> [!NOTE]
+> Если планируется выполнить хранимую процедуру из среды R путем вызова функции *executeStoredProcedure* , следует использовать поставщик ODBC 3.8, например драйвер ODBC 13 для SQL Server.  
   
 ## <a name="full-reference-documentation"></a>Полная справочная документация
 
-Библиотека **sqlrutils** распространяется в нескольких продуктах Майкрософт и используется так же, как при получении в SQL Server или другом продукте. Благодаря сходству функций [документация по отдельным функциям sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) опубликована только в одном разделе в [справочнике по R](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) для Microsoft Machine Learning Server. Если для конкретных продуктов функции будут действовать иначе, выявленные расхождения будут приведены на странице справки по функциям.
+Пакет **sqlrutils** распространяется в нескольких продуктах Майкрософт, но его использование не зависит от того, получили ли вы его в SQL Server или в другом продукте. Благодаря сходству функций [документация по отдельным функциям sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) опубликована только в одном разделе в [справочнике по R](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) для Microsoft Machine Learning Server. Если для конкретных продуктов функции будут действовать иначе, выявленные расхождения будут приведены на странице справки по функциям.
 
 ## <a name="functions-list"></a>Список функций
 
 Ниже представлен обзор функций, которые можно вызывать из пакета **sqlrutils** в целях разработки хранимой процедуры, содержащей встроенный код R. Сведения о параметрах для каждого метода или каждой функции см. в справке R для этого пакета: `help(package="sqlrutils")`
 
-|Компонент | Description |
+|Функция | Описание |
 |------|-------------|
 |[executeStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/executestoredprocedure)| Выполнение хранимой процедуры SQL.|
 |[getInputParameters](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/getinputparameters)| Получение списка входных параметров в хранимой процедуре.| 
@@ -57,7 +57,7 @@ ms.locfileid: "81117397"
 
 ## <a name="how-to-use-sqlrutils"></a>Как использовать sqlrutils
 
-Функции библиотеки **sqlrutils** должны выполняться на компьютере со службами машинного обучения SQL Server с R. Если вы работаете на клиентской рабочей станции, задайте для удаленного контекста вычислений сдвиг выполнения на SQL Server. Рабочий процесс для использования этого пакета включает следующие шаги:
+Функции пакета **sqlrutils** должны выполняться на компьютере со службами машинного обучения SQL Server с R. Если вы работаете на клиентской рабочей станции, задайте для удаленного контекста вычислений сдвиг выполнения на SQL Server. Рабочий процесс для использования этого пакета включает следующие шаги:
 
 + Определение параметров хранимой процедуры (входные и выходные данные или и то, и другое) 
 + Создание и регистрация хранимой процедуры    
@@ -66,7 +66,7 @@ ms.locfileid: "81117397"
 В сеансе R загрузите **sqlrutils** из командной строки, введя `library(sqlrutils)`.
 
 > [!Note]
-> Эту библиотеку можно загрузить на компьютер, на котором нет SQL Server (например, в экземпляре клиента R), если изменить контекст вычислений на SQL Server и выполнить код в этом контексте вычислений.
+> Этот пакет можно загрузить на компьютер, на котором нет SQL Server (например, в экземпляр клиента R), если изменить контекст вычислений на SQL Server и выполнить код в этом контексте вычислений.
 
 
 ### <a name="define-stored-procedure-parameters-and-inputs"></a>Определение параметров и входных данных хранимой процедуры

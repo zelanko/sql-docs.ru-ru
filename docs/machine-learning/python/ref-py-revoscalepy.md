@@ -1,24 +1,26 @@
 ---
 title: Пакет Python revoscalepy
-description: Общие сведения о модуле Python revoscalepy в службах машинного обучения SQL Server.
+description: revoscalepy — это пакет Python от корпорации Майкрософт, который поддерживает распределенные вычисления, удаленные контексты вычислений и высокопроизводительные алгоритмы обработки и анализа данных. Этот пакет входит в состав Служб машинного обучения SQL Server.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 11/06/2019
-ms.topic: conceptual
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 145c1f571cc76bd8c26fc781ee7f4edcbfd3cb3a
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: ae5d05658d94f6967049d9b6857d407286661f3f
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117927"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406187"
 ---
-# <a name="revoscalepy-python-module-in-sql-server"></a>revoscalepy (модуль Python в SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="revoscalepy-python-package-in-sql-server-machine-learning-services"></a>revoscalepy (пакет Python в Службах машинного обучения SQL Server)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-**revoscalepy** — это совместимый с Python35 модуль от корпорации Майкрософт, который поддерживает распределенные вычисления, удаленные контексты вычислений и высокопроизводительные алгоритмы обработки и анализа данных. Он основан на пакете **RevoScaleR** для R (распространяемом с Microsoft R Server и службами SQL Server R Services) и предлагает аналогичные функциональные возможности:
+**revoscalepy** — это пакет Python от корпорации Майкрософт, который поддерживает распределенные вычисления, удаленные контексты вычислений и высокопроизводительные алгоритмы обработки и анализа данных. Этот пакет входит в состав [Служб машинного обучения SQL Server](../sql-server-machine-learning-services.md).
+
+Пакет предоставляет следующие функциональные возможности.
 
 + локальные и удаленные контексты вычислений в системах с одной версией **revoscalepy**;
 + функции преобразования и визуализации данных;
@@ -29,7 +31,7 @@ ms.locfileid: "81117927"
 
 ## <a name="full-reference-documentation"></a>Полная справочная документация
 
-Библиотека **revoscalepy** распространяется в нескольких продуктах Майкрософт и используется так же, как при получении в SQL Server или другом продукте. Благодаря сходству функций [документация по отдельным функциям revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) опубликована только в одном разделе в [справочнике по Python](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference) для Microsoft Machine Learning Server. Если для конкретных продуктов функции будут действовать иначе, выявленные расхождения будут приведены на странице справки по функциям.
+Пакет **revoscalepy** распространяется в нескольких продуктах Майкрософт, но его использование не зависит от того, получили ли вы его в SQL Server или в другом продукте. Благодаря сходству функций [документация по отдельным функциям revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) опубликована только в одном разделе в [справочнике по Python](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference) для Microsoft Machine Learning Server. Если для конкретных продуктов функции будут действовать иначе, выявленные расхождения будут приведены на странице справки по функциям.
 
 ## <a name="versions-and-platforms"></a>Версии и платформы
 
@@ -40,7 +42,7 @@ ms.locfileid: "81117927"
 + [Клиентские библиотеки Python для клиента обработки и анализа данных](setup-python-client-tools-sql.md)
 
 > [!NOTE]
-> В SQL Server 2017 полные версии выпусков продуктов доступны только для Windows. В [SQL Server 2019](../../linux/sql-server-linux-setup-machine-learning.md) модуль **revoscalepy** поддерживает Windows и Linux.
+> В SQL Server 2017 полные версии выпусков продуктов доступны только для Windows. В [SQL Server 2019](../../linux/sql-server-linux-setup-machine-learning.md) и более поздних версий пакет **revoscalepy** поддерживает Windows и Linux.
 
 ## <a name="functions-by-category"></a>Функции по категориям
 
@@ -52,7 +54,7 @@ ms.locfileid: "81117927"
 
 В некоторых случаях SQL Server и Python используют разные типы данных. Список сопоставлений между типами данных SQL и Python см. в разделе о [типах данных Python и SQL](python-libraries-and-data-types.md).
 
-| Компонент| Описание|
+| Функция| Описание|
 | ------- | ---------- |
 | [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver) |  Создание объекта контекста вычисления SQL Server для отправки вычислений в удаленный экземпляр. Несколько функций **revoscalepy** принимают контекст вычисления в качестве аргумента. Пример переключения контекста см. в статье о [создание модели с помощью пакета revoscalepy](../tutorials/use-python-revoscalepy-to-create-model.md).|
 | [RxSqlServerData](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxsqlserverdata) | Создание объекта данных на основе запроса или таблицы SQL Server. |
@@ -64,7 +66,7 @@ ms.locfileid: "81117927"
 
 ## <a name="2-data-manipulation-etl"></a>2\. Работа с данными (ETL)
 
-| Компонент | Описание |
+| Функция | Описание |
 |----------|-------------|
 |[rx_import](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-import) | Импорт данных в XDF-файл или кадр данных.|
 |[rx_data_step](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-data-step) | Преобразование данных из набора входных данных в набор выходных данных.|
@@ -73,7 +75,7 @@ ms.locfileid: "81117927"
 
 ## <a name="3-training-and-summarization"></a>3\. Обучение и формирование сводных данных
 
-| Компонент| Описание|
+| Функция| Описание|
 | ------- | ---------- |
 |[rx_btrees](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-btrees) | Подбор деревьев принятия решений со стохастическим градиентным усилением|
 |[rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dforest) | Подбор лесов принятия решений по классификации и регрессии|
@@ -107,7 +109,7 @@ ms.locfileid: "81117927"
 
 ### <a name="using-revoscalepy-with-microsoftml"></a>Использование revoscalepy с microsoftml
 
-Функции Python для [microsoftml](ref-py-microsoftml.md) интегрированы с контекстами вычислений и источниками данных, предоставленными в revoscalepy. При вызове функций из microsoftml, например при определении и обучении модели, функции revoscalepy можно использовать для выполнения кода Python в локальной среде или в удаленном контексте вычисления SQL Server.
+Функции Python для [microsoftml](ref-py-microsoftml.md) интегрированы с контекстами вычислений и источниками данных, предоставленными в revoscalepy. При вызове функций из microsoftml, например при определении и обучении модели, функции revoscalepy можно использовать для выполнения кода Python в локальной среде или в удаленном контексте вычисления SQL Server.
 
 В следующем примере показан синтаксис импорта модулей в коде Python. Затем можно сослаться на нужные вам функции.
 

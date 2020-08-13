@@ -1,5 +1,6 @@
 ---
 title: Свойства сервера (страница "Безопасность") — службы Reporting Services | Документация Майкрософт
+description: Сведения о том, как использовать страницу Reporting Services в SQL Server Management Studio, чтобы отключить функции, которые могут скомпрометировать сервер отчетов.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: tools
@@ -10,12 +11,12 @@ ms.assetid: f49aedc6-f145-4df1-8f69-d5d910f492c6
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/10/2016
-ms.openlocfilehash: 0e29dcf7681d105f92b3bf187c38ebe764d2449e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 617b64d6f57bb1d64098ebf8390309a714aa81c2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571303"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86912362"
 ---
 # <a name="server-properties-security-page---reporting-services"></a>Свойства сервера (страница «Безопасность») — службы Reporting Services
 
@@ -45,4 +46,4 @@ ms.locfileid: "65571303"
   
 ## <a name="see-also"></a>См. также:
 
- [Set Report Server Properties &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md) (Установка свойств сервера отчетов (Management Studio)) [Connect to a Report Server in Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md) (Подключение к серверу отчетов в Management Studio) [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) (Задание учетных данных и сведений о соединении для источников данных в отчетах) [Справка F1 по использованию сервера отчетов среде Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)
+ [Set Report Server Properties &#40;Management Studio&#41; (Установка свойств сервера отчетов (Management Studio)) ](../../reporting-services/tools/set-report-server-properties-management-studio.md) [Connect to a Report Server in Management Studio (Подключение к серверу отчетов в Management Studio) ](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md) [Specify Credential and Connection Information for Report Data Sources (Задание учетных данных и сведений о соединении для источников данных в отчетах) ](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) [Справка F1 по использованию сервера отчетов среде Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)

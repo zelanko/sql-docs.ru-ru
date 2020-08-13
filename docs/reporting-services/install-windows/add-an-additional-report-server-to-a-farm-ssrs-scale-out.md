@@ -8,12 +8,12 @@ ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 17cffe2f1eaf94174301212c6bb926528c56c7d3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f7997b4e7bf9ccf51198e317c2e175f115fa6973
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63225694"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942986"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>Добавление дополнительного сервера отчетов в ферму (горизонтально масштабируемые службы SSRS)
 
@@ -66,13 +66,15 @@ ms.locfileid: "63225694"
 ##  <a name="additional-configuration"></a><a name="bkmk_additional"></a> Дополнительная настройка  
  Отдельные серверы служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в масштабном развертывании вы можете оптимизировать для выполнения фоновой обработки только так, чтобы они не соперничали за ресурсы с интерактивным выполнением отчетов. Фоновая обработка включает в себя расписания, подписки и оповещения о данных.  
   
- Чтобы изменить поведение отдельных серверов отчетов, в файле конфигурации **RSreportServer.config** задайте параметру **\<IsWebServiceEnable>** значение false.  
+ Чтобы изменить поведение отдельных серверов отчетов, в файле конфигурации **RSreportServer.config** для **\<IsWebServiceEnable>** задайте значение false.  
   
- По умолчанию для серверов отчетов параметру \<IsWebServiceEnable> задано значение TRUE. Если параметры всех серверов настроены для значения TRUE, нагрузка от интерактивной и фоновой обработки будет сбалансирована по всем узлам фермы.  
+ По умолчанию для серверов отчетов параметру \<IsWebServiceEnable> присвоено значение TRUE. Если параметры всех серверов настроены для значения TRUE, нагрузка от интерактивной и фоновой обработки будет сбалансирована по всем узлам фермы.  
   
- Если параметру \<IsWebServiceEnable> задать значение False для всех серверов отчетов, при попытке использовать функции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на экране появится сообщение об ошибке, подобное приведенному далее.  
+ Если параметру \<IsWebServiceEnable> присвоить значение False для всех серверов отчетов, при попытке использовать функции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на экране появится сообщение об ошибке, подобное приведенному далее.  
   
-      The Reporting Services Web Service is not enabled. Configure at least one instance of the Reporting Services SharePoint Service to have <IsWebServiceEnable> set to true. 
+```output
+The Reporting Services Web Service is not enabled. Configure at least one instance of the Reporting Services SharePoint Service to have <IsWebServiceEnable> set to true.
+```
  
  Дополнительные сведения см. в статье [Изменение файла конфигурации служб Reporting Services (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
 

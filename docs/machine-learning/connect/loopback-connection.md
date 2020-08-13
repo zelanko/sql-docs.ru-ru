@@ -1,8 +1,8 @@
 ---
 title: Подключение SQL с замыканием на себя
-description: Узнайте, как использовать подключение с замыканием на себя для обратного соединения с SQL Server через ODBC с целью чтения или записи данных из скрипта Python или R, выполняемого с помощью процедуры sp_execute_external_script. Его можно применять, если нельзя использовать аргументы InputDataSet и OutputDataSet процедуры sp_execute_external_script.
+description: Узнайте, как использовать подключение с замыканием на себя для обратного соединения с SQL Server через ODBC с целью чтения или записи данных из скрипта Python или R, выполняемого с помощью процедуры sp_execute_external_script.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 08/21/2019
 ms.topic: conceptual
 author: Aniruddh25
@@ -10,15 +10,15 @@ ms.author: anmunde
 ms.reviewer: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c7fa36db48a7912951f0232136945798caf6f7f7
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 00938d1fe628c4984a55cb5c0b76e6910293808a
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118647"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86482675"
 ---
 # <a name="loopback-connection-to-sql-server-from-a-python-or-r-script"></a>Подключение к SQL Server из скрипта Python или R с замыканием на себя
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Узнайте, как использовать подключение с замыканием на себя для обратного соединения с SQL Server через [ODBC](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) с целью чтения или записи данных из скрипта Python или R, выполняемого с помощью процедуры `sp_execute_external_script`. Его можно применять, если нельзя использовать аргументы **InputDataSet** и **OutputDataSet** процедуры `sp_execute_external_script`.
 
@@ -56,7 +56,7 @@ ms.locfileid: "81118647"
 
 Он принимает следующие аргументы:
 
-| Аргумент | Description |
+| Аргумент | Описание |
 |-|-|
 | name_of_database | Имя базы данных, к которой устанавливается подключение |
 | odbc_driver | Имя драйвера ODBC |
@@ -104,7 +104,7 @@ GO
 
 Он принимает следующие аргументы:
 
-| Аргумент | Description |
+| Аргумент | Описание |
 |-|-|
 | nameOfDatabase | Имя базы данных, к которой устанавливается подключение |
 | odbcDriver | Имя драйвера ODBC |

@@ -1,6 +1,6 @@
 ---
-title: Создание приложений с помощью драйвера OLE DB для SQL Server | Документация Майкрософт
-description: Создание приложений с помощью драйвера OLE DB для SQL Server
+title: Создание приложений с помощью драйвера OLE DB для SQL Server
+description: Сведения об общих проблемах при создании приложений с помощью OLE DB Driver for SQL Server и о том, на что следует рассчитывать при обновлении с более старого драйвера OLE DB.
 ms.custom: ''
 ms.date: 02/12/2019
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: c0f168ee99ebaedebf2102363694b5ae6b33687f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c1004ef0005c841ad09818252ec82f82f1fcc6de
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67989339"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393032"
 ---
 # <a name="building-applications-with-ole-db-driver-for-sql-server"></a>Создание приложений с помощью драйвера OLE DB для SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

@@ -1,5 +1,6 @@
 ---
 title: Создание скриптов
+description: Узнайте, как использовать Мастер формирования и публикации скриптов для создания скриптов Transact-SQL для нескольких объектов и как использовать меню "Скрипт" в обозревателе объектов для создания скриптов для отдельных или нескольких объектов.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: scripting
@@ -11,16 +12,16 @@ ms.reviewer: mathoma
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a25249c04d322e2faa4c876b1afd2822896038b6
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 534d4982f46d0d83cb25718646b018dfa662cc35
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151878"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87123135"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Формирование скриптов (среда SQL Server Management Studio)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] предоставляет два механизма формирования скриптов [!INCLUDE[tsql](../../includes/tsql-md.md)] . Создать скрипты для нескольких объектов можно с помощью **мастера формирования и публикации скриптов**. Можно также создать скрипты для отдельных или нескольких объектов с помощью меню **Сформировать скрипт как** в **обозревателе объектов**.
 
@@ -48,7 +49,7 @@ ms.locfileid: "83151878"
 
 3. Разверните категорию объекта. Например, разверните узел **Таблицы** или узел **Представления** .
 
-4. Щелкните объект правой кнопкой мыши, наведите указатель на пункт **Создать скрипт для \<тип объекта>** , например **Создать скрипт для таблицы**.
+4. Щелкните объект правой кнопкой мыши, наведите указатель на пункт **Создать скрипт для \<object type>** , например **Создать скрипт для таблицы**.
 
 5. Укажите тип скрипта, например **Создать** или **Изменить**.
 
@@ -72,6 +73,6 @@ ms.locfileid: "83151878"
 
 6. Удерживая клавишу CTRL, щелкните левой кнопкой второй объект, который необходимо включить в скрипт.
 
-7. Щелкните правой кнопкой мыши один из выделенных объектов и выберите **Создать скрипт для \<тип объекта>** .
+7. Щелкните правой кнопкой мыши один из выделенных объектов и выберите пункт **Создать скрипт для \<object type>** .
 
     ![Обозреватель объектов](media/generate-scripts-sql-server-management-studio/object-explorer-details.png)

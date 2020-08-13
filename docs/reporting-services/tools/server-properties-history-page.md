@@ -1,5 +1,6 @@
 ---
 title: Свойства сервера (страница "Журнал") | Документация Майкрософт
+description: Узнайте, как использовать страницу журнала Reporting Services в SQL Server Management Studio с целью задания значения по умолчанию для количества сохраняемых копий журнала отчета.
 ms.date: 06/10/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: be9d8018-a46f-4625-9ae1-138ebe6b38ba
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f4f3c13e6393dc935c09d54a274d2dbe357401f1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 47238e11a5c4d1b455914fca948dacc680286a14
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571357"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913910"
 ---
 # <a name="server-properties-history-page"></a>Свойства сервера (страница «Журнал»)
   Используйте эту страницу [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] в [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] для задания значения по умолчанию для количества сохраняемых копий журнала отчета. Значение по умолчанию предоставляет начальный параметр, который задает пределы объема журнала отчета для всех отчетов. Эти настройки можно изменить для отдельных отчетов.  

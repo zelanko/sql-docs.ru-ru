@@ -9,16 +9,16 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: eb85d1867461ba25bb4fc572634fba443dd14282
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 299182ad45f8c96f4b2f07d38f1b3f366eea7b33
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665364"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923420"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Новые возможности [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] основан на предыдущих выпусках для расширения SQL Server как платформы, которая поддерживает ряд языков разработки, типов данных, операционных систем, а также работает в локальной и облачной средах.
 
@@ -39,7 +39,7 @@ ms.locfileid: "80665364"
 
 ## <a name="data-virtualization-and-big-data-clusters-2019"></a>Виртуализация данных и [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]
 
-Сегодня предприятиям часто приходится полагаться на большие объемы данных из широкого спектра постоянно увеличивающихся наборов данных, размещенных в неконтролируемых источниках данных в компании. Вы можете получать ценную информацию практически в реальном времени из всех данных с помощью SQL Server 2019 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], которые обеспечивают полномасштабную среду для работы с большими наборами данных, в том числе с использованием машинного обучения и возможностей искусственного интеллекта.
+Сегодня предприятиям часто приходится полагаться на большие объемы данных из широкого спектра постоянно увеличивающихся наборов данных, размещенных в неконтролируемых источниках данных в компании. Вы можете получать ценную информацию практически в реальном времени из всех данных с помощью [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)], которые обеспечивают полномасштабную среду для работы с большими наборами данных, в том числе с использованием машинного обучения и возможностей искусственного интеллекта.
 
 | Новые функции или обновления | Сведения |
 |:---|:---|
@@ -222,7 +222,7 @@ ms.locfileid: "80665364"
 
 |Новые функции или обновления | Сведения |
 |:---|:---| 
-|Новые параметры настройки памяти | Задает конфигурации *минимальной памяти сервера (МБ)* и *максимальной памяти сервера (МБ)* во время установки. См. статью [Настройка ядра СУБД — страница ресурсов памяти](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory), а также в описаниях параметров `USESQLRECOMMENDEDMEMORYLIMITS`, `SQLMINMEMORY` и `SQLMAXMEMORY` в разделе [Установка SQL Server из командной строки](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). Предложенное значение соответствует рекомендациям по настройке памяти, приведенным в разделе [Параметры конфигурации памяти сервера](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually).| 
+|Новые параметры настройки памяти | Задает конфигурации *минимальной памяти сервера (МБ)* и *максимальной памяти сервера (МБ)* во время установки. См. статью [Настройка ядра СУБД — страница ресурсов памяти](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory), а также в описаниях параметров `USESQLRECOMMENDEDMEMORYLIMITS`, `SQLMINMEMORY` и `SQLMAXMEMORY` в разделе [Установка SQL Server из командной строки](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). Предложенное значение соответствует рекомендациям по настройке памяти, приведенным в разделе [Параметры конфигурации памяти сервера](../database-engine/configure-windows/server-memory-server-configuration-options.md#manually).| 
 |Новые параметры настройки параллелизма | Задает параметр *максимального уровня параллелизма* во время установки. См. статью [Настройка ядра СУБД — страница MaxDOP](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop) и в описании параметра `SQLMAXDOP` в разделе [Установка SQL Server из командной строки](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install). Значение по умолчанию соответствует рекомендациям по максимальной степени параллелизма, приведенным в разделе [Настройка параметра конфигурации сервера max degree of parallelism](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).| 
 |Предупреждение при установке ключа продукта лицензии Server/CAL|Если вводится ключ продукта лицензии Enterprise Server или CAL и при включенной технологии Hyper-Threading на компьютере установлено более 20 физических ядер или 40 логических ядер, во время установки отобразится предупреждение. Пользователи по-прежнему могут подтвердить ограничение и продолжить установку, или ввести ключ лицензии, поддерживающий максимальное число процессоров операционной системы.|
 | &nbsp; | &nbsp; |

@@ -1,5 +1,6 @@
 ---
-title: Примеры типов пространственных данных для драйвера MSSQL JDBC Driver | Документация Майкрософт
+title: Пример пространственных типов данных для драйвера JDBC
+description: Этот пример приложения JDBC Driver для SQL Server демонстрирует, как создавать, вставлять и извлекать пространственные типы данных Geometry и Geography из базы данных.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -9,32 +10,32 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 07f05ee878f1f818e7bf500d053ef5a306477d27
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a04840e69f5fd8557d3c6f42f9a339710c9ebe3a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909400"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921020"
 ---
 # <a name="spatial-data-types-sample"></a>Пример пространственных типов данных
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 В этом примере приложения [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] показаны процессы создания, вставки и получения пространственных типов данных (Geometry и Geography).
-  
-Файл кода для этого примера с именем SpatialDataTypes.java находится в следующей папке:  
+
+Файл кода для этого примера с именем SpatialDataTypes.java находится в следующей папке:
 
 ```bash
-\<installation directory>\sqljdbc_<version>\<language>\samples\datatypes  
+\<installation directory>\sqljdbc_<version>\<language>\samples\datatypes
 ```
 
-## <a name="requirements"></a>Требования  
+## <a name="requirements"></a>Требования
 
-Чтобы запустить этот пример приложения, необходимо включить в параметр classpath путь к файлу mssql-jdbc.jar. См. сведения о том, как настроить параметр classpath, в руководстве по [использованию JDBC Driver](../../connect/jdbc/using-the-jdbc-driver.md).  
+Чтобы запустить этот пример приложения, необходимо включить в параметр classpath путь к файлу mssql-jdbc.jar. См. сведения о том, как настроить параметр classpath, в руководстве по [использованию JDBC Driver](using-the-jdbc-driver.md).
 
-> [!NOTE]  
-> Драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] включает файлы библиотек классов mssql-jdbc, которые используются в зависимости от выбранных параметров среды выполнения Java (JRE). Для получения дополнительных сведений о том, какой JAR-файл выбрать, см. статью [Требования к системе для драйвера JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
-  
+> [!NOTE]
+> Драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] включает файлы библиотек классов mssql-jdbc, которые используются в зависимости от выбранных параметров среды выполнения Java (JRE). Для получения дополнительных сведений о том, какой JAR-файл выбрать, см. статью [Требования к системе для драйвера JDBC](system-requirements-for-the-jdbc-driver.md).
+
 ## <a name="example"></a>Пример
 
 Следующий пример кода создает таблицу с именем SpatialDataTypesTable_JDBC_Sample, которая содержит столбцы типов Geometry и Geography.
@@ -95,7 +96,6 @@ public class SpatialDataTypes {
 }
 ```
 
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также раздел
 
-[Работа с типами данных (JDBC)](../../connect/jdbc/working-with-data-types-jdbc.md)  
-  
+[Работа с типами данных (JDBC)](working-with-data-types-jdbc.md)

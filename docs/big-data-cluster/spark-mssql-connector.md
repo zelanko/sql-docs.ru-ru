@@ -1,34 +1,34 @@
 ---
 title: Подключение Spark к SQL Server
 titleSuffix: SQL Server big data clusters
-description: Сведения о том, как использовать соединитель MSSQL Spark в Spark для чтения и записи данных в SQL Server.
+description: Сведения о том, как использовать соединитель Apache Spark для SQL Server и SQL Azure для чтения и записи данных в SQL Server.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: shivsood
+ms.reviewer: mikeray
 ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: big-data-cluster
-ms.openlocfilehash: 7c8b8da0912f3c928857dd84b8981fecb10b17da
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.technology: machine-learning-bdc
+ms.openlocfilehash: 3cb36c4bdddfaa97b9b6c08015308799d54cb0dc
+ms.sourcegitcommit: 56f6892b3795da308d226d4b3c5c859ead2e830a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531117"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86438076"
 ---
-# <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>Чтение и запись в SQL Server из Spark с помощью соединителя MSSQL Spark
+# <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-apache-spark-connector-for-sql-server-and-azure-sql"></a>Чтение и запись данных в SQL Server из Spark с помощью соединителя Apache Spark для SQL Server и SQL Azure
 
 Ключевой шаблон использования больших данных — это обработка больших объемов данных в Spark, а также запись данных в SQL Server для доступа к бизнес-приложениям. Эти шаблоны используют преимущества соединителя, который использует основные оптимизации SQL и предоставляет эффективный механизм записи.
 
-В этой статье представлен обзор интерфейса соединителя MSSQL Spark и создание его экземпляров для использования в режиме с AD и без AD. Также здесь приведен пример использования соединителя MSSQL Spark для чтения и записи в следующих расположениях внутри кластера больших данных.
+В этой статье представлен обзор интерфейса соединителя Apache Spark для SQL Server и SQL Azure и создание его экземпляров для использования в режиме с AD и без AD. Также здесь приведен пример использования соединителя Apache Spark для SQL Server и SQL Azure для чтения и записи данных в следующих расположениях внутри кластера больших данных.
 1. Главный экземпляр SQL Server
 1. Пул данных SQL Server
 
-   ![Схема соединителя MSSQL Spark](./media/spark-mssql-connector/mssql-spark-connector-diagram.png)
+   ![Схема соединителя Apache Spark для SQL Server и SQL Azure](./media/spark-mssql-connector/mssql-spark-connector-diagram.png)
 
-## <a name="mssql-spark-connector-interface"></a>Интерфейс соединителя MSSQL Spark
+## <a name="apache-spark-connector-for-sql-server-and-azure-sql-interface"></a>Интерфейс соединителя Apache Spark для SQL Server и SQL Azure
 
-SQL Server 2019 предоставляет **соединитель MSSQL Spark** для кластеров больших данных, использующий API массовой записи SQL Server для записи из Spark в SQL. Соединитель MSSQL Spark основан на интерфейсах API источника данных Spark и предоставляет привычный интерфейс соединителя JDBC Spark. Сведения о параметрах интерфейса см. в [документации по Apache Spark](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html). Для ссылки на соединитель MSSQL используется имя **com.microsoft.sqlserver.jdbc.spark**. Соединитель MSSQL Spark поддерживает два режима безопасности для подключения к SQL Server — без Active Directory (AD) и с Active Directory:
+SQL Server 2019 предоставляет [**соединитель Apache Spark для SQL Server и SQL Azure**](https://github.com/microsoft/sql-spark-connector) для кластеров больших данных, использующий API массовой записи SQL Server для записи из Spark в SQL. Соединитель Apache Spark для SQL Server и SQL Azure основан на API источника данных Spark и предоставляет привычный интерфейс соединителя JDBC Spark. Сведения о параметрах интерфейса см. в [документации по Apache Spark](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html). Для ссылки на соединитель Apache Spark для SQL Server и SQL Azure используется имя **com.microsoft.sqlserver.jdbc.spark**. Соединитель Apache Spark для SQL Server и SQL Azure поддерживает два режима безопасности для подключения к SQL Server — без Active Directory (AD) и с Active Directory.
 ### <a name="non-ad-mode"></a>Режим без AD:
 В режиме без AD каждый пользователь имеет имя пользователя и пароль, которые необходимо предоставить в качестве параметров во время создания экземпляра соединителя для выполнения операций чтения и записи.
 Ниже приведен пример создания экземпляра соединителя для режима без AD:
@@ -70,11 +70,11 @@ writer.save()
 
 | Имя свойства | Необязательно | Описание |
 |---|---|---|
-| **isolationLevel** | Да | Описывает уровень изоляции подключения. По умолчанию для соединителя MSSQLSpark используется **READ_COMMITTED** |
+| **isolationLevel** | Да | Описывает уровень изоляции подключения. По умолчанию для соединителя используется **READ_COMMITTED**. |
 
 Соединитель использует API-интерфейсы массовой записи SQL Server. Любые параметры массовой записи могут передаваться пользователем в качестве необязательного параметра и передаются соединителем в базовый API. Дополнительные сведения об операциях массовой записи см. в разделе [SQLServerBulkCopyOptions]( ../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions).
 
-## <a name="mssql-spark-connector-sample"></a>Пример соединителя MSSQL Spark
+## <a name="apache-spark-connector-for-sql-server-and-azure-sql-sample"></a>Пример соединителя Apache Spark для SQL Server и SQL Azure
 Этот пример выполняет следующие задачи.
 
 - Чтение файла из HDFS и выполнение базовой обработки.
@@ -111,7 +111,7 @@ writer.save()
 
 ### <a name="run-the-sample-notebook"></a>Запуск примера записной книжки
 
-Чтобы продемонстрировать использование соединителя MSSQL Spark с этими данными в режиме без AD, можно скачать пример записной книжки, открыть его в Azure Data Studio и выполнить каждый блок кода. Дополнительные сведения о работе с записными книжками см. в статье [Использование записных книжек в SQL Server](../azure-data-studio/notebooks-guidance.md).
+Чтобы продемонстрировать использование соединителя Apache Spark для SQL Server и SQL Azure с этими данными в режиме без AD, можно скачать пример записной книжки, открыть его в Azure Data Studio и выполнить каждый блок кода. Дополнительные сведения о работе с записными книжками см. в статье [Использование записных книжек в SQL Server](../azure-data-studio/notebooks-guidance.md).
 
 1. В командной строке PowerShell или оболочке Bash выполните следующую команду, чтобы скачать пример записной книжки **mssql_spark_connector_non_ad_pyspark.ipynb**:
 
@@ -121,7 +121,7 @@ writer.save()
 
 1. В Azure Data Studio откройте пример файла записной книжки. Убедитесь, что он подключен к шлюзу HDFS/Spark для кластера больших данных.
 
-1. Выполните каждую ячейку кода в примере, чтобы просмотреть использование соединителя MSSQL Spark.
+1. Выполните каждую ячейку кода в примере, чтобы просмотреть использование соединителя Apache Spark для SQL Server и SQL Azure.
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

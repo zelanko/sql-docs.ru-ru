@@ -5,38 +5,43 @@ description: Справочная статья по командам azdata bdc 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cccdc543a572df19849afec16d0a2a71413ed19e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bda7fc541c0c89827df28e368d0cf8cc9db8bed5
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74820896"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943047"
 ---
 # <a name="azdata-bdc-debug"></a>azdata bdc debug
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-В следующей статье приводятся справочные сведения по командам `bdc debug` в средстве `azdata`. Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md)
+В следующей статье приводятся справочные сведения по командам `sql` в средстве `azdata`. Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Команды
-|     |     |
+| Команда | Описание |
 | --- | --- |
 [azdata bdc debug copy-logs](#azdata-bdc-debug-copy-logs) | Копирование журналов.
-[azdata bdc debug dump](#azdata-bdc-debug-dump) | Создание дампа журналов.
+[azdata bdc debug dump](#azdata-bdc-debug-dump) | Создание дампа памяти.
 ## <a name="azdata-bdc-debug-copy-logs"></a>azdata bdc debug copy-logs
 Копирование журналов отладки из кластера больших данных. В системе должна быть конфигурация Kubernetes.
 ```bash
 azdata bdc debug copy-logs --namespace -n 
                            [--container -c]  
-                           [--target-folder -d]  
-                           [--pod -p]  
-                           [--timeout -t]  
-                           [--skip-compress -sc]  
-                           [--exclude-dumps -ed]
+                           
+[--target-folder -d]  
+                           
+[--pod -p]  
+                           
+[--timeout -t]  
+                           
+[--skip-compress -sc]  
+                           
+[--exclude-dumps -ed]
 ```
 ### <a name="required-parameters"></a>Необходимые параметры
 #### `--namespace -n`
@@ -62,24 +67,25 @@ azdata bdc debug copy-logs --namespace -n
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 ## <a name="azdata-bdc-debug-dump"></a>azdata bdc debug dump
-Создание дампа журналов и его копирование из контейнера. В системе должна быть конфигурация Kubernetes.
+Создание дампа памяти и его копирование из контейнера. В системе должна быть конфигурация Kubernetes.
 ```bash
 azdata bdc debug dump --namespace -n 
-                      --container -c  
-                      [--target-folder -d]
+                      [--container -c]  
+                      
+[--target-folder -d]
 ```
 ### <a name="required-parameters"></a>Необходимые параметры
 #### `--namespace -n`
 Имя кластера больших данных, используемого для пространства имен Kubernetes.
-#### `--container -c`
-Копирование журналов для контейнеров с одинаковыми именами. Необязательный параметр. По умолчанию копируются журналы для всех контейнеров. Нельзя указывать несколько раз. Если этот параметр указан несколько раз, используется последний параметр.
 ### <a name="optional-parameters"></a>Необязательные параметры
+#### `--container -c`
+Целевой контейнер, запускаемый для создания дампа запущенных процессов `controller`
 #### `--target-folder -d`
-Путь к конечной папке, в которую должны копироваться журналы. Необязательный параметр. По умолчанию результаты помещаются в локальную папку.  Нельзя указывать несколько раз. Если этот параметр указан несколько раз, используется последний параметр `./output/dump`.
+Целевая папка для копирования дампа. `./output/dump`
 ### <a name="global-arguments"></a>Глобальные аргументы
 #### `--debug`
 Повышение уровня детализации журнала для включения всех журналов отладки.
@@ -88,7 +94,7 @@ azdata bdc debug dump --namespace -n
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 

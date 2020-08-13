@@ -1,5 +1,6 @@
 ---
 title: Изменение скриптов SQLCMD при помощи редактора запросов
+description: Скрипты SQLCMD применяются в тех случаях, когда необходимо обработать системные команды Windows и инструкции Transact-SQL в одном и том же скрипте. Узнайте, как писать и редактировать скрипты SQLCMD с помощью редактора запросов ядра СУБД.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 637de4e8168b97e27da707f3f189d3608786d973
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ed1171649c422ccb451fc7540cae8ca6629b65b1
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253914"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122967"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Изменение скриптов SQLCMD при помощи редактора запросов
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Используя редактор запросов [!INCLUDE[ssDE](../../includes/ssde-md.md)] в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] можно записывать и редактировать запросы в виде скриптов SQLMD. Скрипты SQLCMD применяются в тех случаях, когда необходимо обработать системные команды Windows и инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] в одном и том же скрипте.  
   
 ## <a name="sqlcmd-mode"></a>Режим SQLCMD  
@@ -78,7 +79,7 @@ ms.locfileid: "75253914"
   
     -   (Обработано строк: 6)  
   
-    -   \<Сведения о каталоге>  
+    -   \<The directory information>  
   
     -   (Обработано строк: 4)  
   
@@ -140,7 +141,7 @@ ms.locfileid: "75253914"
 > [!NOTE]  
 >  Для `:error` и `:out`, `stderr` и `stdout` вывод направляется на вкладку сообщений.  
   
- Команды SQLCMD, не перечисленные выше, редактором запросов не поддерживаются. Если выполняется скрипт, содержащий неподдерживаемые ключевые слова SQLCMD, для каждого неподдерживаемого ключевого слова редактор запросов отправляет в целевой объект сообщение "Команда *\<пропущенная_команда>* не учитывается". Скрипт будет выполнен успешно, но неподдерживаемые команды не будут учитываться.  
+ Команды SQLCMD, не перечисленные выше, редактором запросов не поддерживаются. Если выполняется скрипт, содержащий неподдерживаемые ключевые слова SQLCMD, для каждого неподдерживаемого ключевого слова редактор запросов отправляет в целевой объект сообщение "Команда *\<ignored command*> не учитывается". Скрипт будет выполнен успешно, но неподдерживаемые команды не будут учитываться.  
   
 > [!CAUTION]  
 >  Так как команды SQLCMD запускаются не из командной строки, при запуске редактора запросов в режиме SQLCMD действуют некоторые ограничения. Нельзя передавать параметры командной строки, например переменные. Кроме того, поскольку редактор запросов не поддерживает возможности реагировать на приглашения операционной системы, не следует выполнять интерактивные инструкции.  

@@ -2,22 +2,22 @@
 title: Преобразование типов данных R и SQL
 description: Обзор явных и неявных преобразований типов данных между R и SQL Server в решениях для обработки и анализа данных и машинного обучения.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 08/08/2019
-ms.topic: conceptual
+ms.technology: machine-learning-services
+ms.date: 07/15/2020
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1f7a6a95033d16e7bc39f07d6b72324e3aea6634
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: bf08045adba7298d5a5b8e261c406915b44effe0
+ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486755"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86411642"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>Сопоставления типов данных между R и SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Для работы с решениями R, которые выполняются в компоненте интеграции R в службах машинного обучения SQL Server, ознакомьтесь со списком неподдерживаемых типов данных и преобразований типов данных, которые могут быть выполнены неявным образом при передаче данных между библиотеками R и SQL Server.
 
@@ -41,17 +41,17 @@ ms.locfileid: "81486755"
 
 |Тип SQL|Класс R|Тип результирующего набора|Комментарии|
 |-|-|-|-|
-|**bigint**|`numeric`|**float**||
+|**bigint**|`numeric`|**float**|Выполнение сценария R с `sp_execute_external_script` допускает использование типа данных bigint в качестве входных данных. Однако, поскольку они преобразуются в числовой тип R, это приводит к ухудшению точности в случае очень высоких значений или значений с десятичным разделителем. R поддерживает только максимум 53-разрядные целые числа, после чего начнется потеря точности.|
 |**binary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|Может использоваться только для входных параметров и выходных данных|
 |**bit**|`logical`|**bit**||
-|**char(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**||
+|**char(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**|Входной кадр данных (input_data_1) создается без явного задания параметра *stringsAsFactors*, поэтому тип столбца будет зависеть от значения *default.stringsAsFactors()* в R|
 |**datetime**|`POSIXct`|**datetime**|Указывается в формате GMT|
 |**date**|`POSIXct`|**datetime**|Указывается в формате GMT|
-|**decimal(p,s)**|`numeric`|**float**||
+|**decimal(p,s)**|`numeric`|**float**|Выполнение сценария R с `sp_execute_external_script` допускает использование типа данных decimal в качестве входных данных. Однако, поскольку они преобразуются в числовой тип R, это приводит к ухудшению точности в случае очень высоких значений или значений с десятичным разделителем. `sp_execute_external_script` со сценарием R не поддерживает полный диапазон типа данных и изменяет несколько последних десятичных знаков, особенно у чисел с дробной частью.|
 |**float**|`numeric`|**float**||
 |**int**|`integer`|**int**||
-|**money**|`numeric`|**float**||
-|**numeric(p,s)**|`numeric`|**float**||
+|**money**|`numeric`|**float**|Выполнение сценария R с `sp_execute_external_script` допускает использование типа данных money в качестве входных данных. Однако, поскольку они преобразуются в числовой тип R, это приводит к ухудшению точности в случае очень высоких значений или значений с десятичным разделителем. Иногда значения центов будут неточными, и будет выдано предупреждение: *Внимание! Не удается точно представить значения центов*.  |
+|**numeric(p,s)**|`numeric`|**float**|Выполнение сценария R с `sp_execute_external_script` допускает использование типа данных numeric в качестве входных данных. Однако, поскольку они преобразуются в числовой тип R, это приводит к ухудшению точности в случае очень высоких значений или значений с десятичным разделителем. `sp_execute_external_script` со сценарием R не поддерживает полный диапазон типа данных и изменяет несколько последних десятичных знаков, особенно у чисел с дробной частью.|
 |**real**|`numeric`|**float**||
 |**smalldatetime**|`POSIXct`|**datetime**|Указывается в формате GMT|
 |**smallint**|`integer`|**int**||
@@ -60,8 +60,7 @@ ms.locfileid: "81486755"
 |**uniqueidentifier**|`character`|**varchar(max)**||
 |**varbinary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|Может использоваться только для входных параметров и выходных данных|
 |**varbinary(max)**|`raw`|**varbinary(max)**|Может использоваться только для входных параметров и выходных данных|
-|**varchar(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**||
-
+|**varchar(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**|Входной кадр данных (input_data_1) создается без явного задания параметра *stringsAsFactors*, поэтому тип столбца будет зависеть от значения *default.stringsAsFactors()* в R|
 
 ## <a name="data-types-not-supported-by-r"></a>Типы данных, не поддерживаемые языком R
 

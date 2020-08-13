@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4494931e0ee189e785ed057471e5560f4737ecc0
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 8eaa889f12adb2470040cab4c0fba5df295a1cb2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922313"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916240"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Использование встроенной проверки подлинности Kerberos для подключения к SQL Server
 
@@ -37,13 +37,13 @@ ms.locfileid: "82922313"
 
 ## <a name="remarks"></a>Remarks
 
-В версиях до [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] приложение должно указывать встроенную проверку подлинности (по протоколу Kerberos или NTLM, в зависимости от доступности этих протоколов) с помощью свойства подключения **integratedSecurity** и посредством указания библиотеки **mssql-jdbc_auth-\<версия>-\<arch>.dll** как описано в статье [Building the connection URL](../../connect/jdbc/building-the-connection-url.md) (Формирование URL-адреса подключения).
+В версиях до [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] приложение должно было указывать встроенную проверку подлинности (по протоколу Kerberos или NTLM, в зависимости от доступности этих протоколов) с помощью свойства подключения **integratedSecurity** и посредством указания библиотеки **mssql-jdbc_auth-\<version>-\<arch>.dll**, как описано в статье [Формирование URL-адреса подключения](../../connect/jdbc/building-the-connection-url.md).
 
 Начиная с версии [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] приложение может с помощью свойства соединения **authenticationScheme** указать, что соединение с базой данных должно выполняться с использованием встроенной проверки подлинности Kerberos с помощью реализации протокола Kerberos исключительно на Java:
 
 - Если необходимо выполнить встроенную проверку подлинности с помощью модуля **Krb5LoginModule**, все еще необходимо указывать свойство подключения **integratedSecurity=true**. Следует также указать и свойство подключения **authenticationScheme=JavaKerberos**.
 
-- Чтобы продолжить использование встроенной проверки подлинности с библиотекой **mssql-jdbc_auth-\<версия>-\<arch>.dll**, просто укажите свойство подключения **integratedSecurity=true** (можно также указать **authenticationScheme=NativeAuthentication**).
+- Чтобы продолжить использование встроенной проверки подлинности с библиотекой **mssql-jdbc_auth-\<version>-\<arch>.dll**, просто укажите свойство подключения **integratedSecurity=true** (можно также указать **authenticationScheme=NativeAuthentication**).
 
 - Если указано свойство **authenticationScheme=JavaKerberos**, но не указано свойство **integratedSecurity=true**, то драйвер не будет использовать свойство подключения **authenticationScheme** и будет искать имя пользователя и пароль в строке подключения.
 
@@ -71,7 +71,7 @@ ms.locfileid: "82922313"
 
 Дополнительные сведения об именах субъектов-служб (SPN) см. в разделах:
 
-- [Как использовать проверку подлинности по протоколу Kerberos в SQL Server](https://support.microsoft.com/kb/319723)
+- [Регистрация имя участника-службы для соединений Kerberos](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)
 
 - [Использование протокола Kerberos в SQL Server](https://docs.microsoft.com/archive/blogs/sql_protocols/using-kerberos-with-sql-server)
 

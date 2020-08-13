@@ -1,5 +1,6 @@
 ---
 title: Свойства сервера (страница "Ведение журнала") | Документация Майкрософт
+description: Узнайте, как использовать параметры на странице Reporting Services в SQL Server Management Studio для установки ограничений на данные для выполнения отчета, собираемые сервером отчетов.
 ms.date: 06/10/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: b338deab-4868-4951-9f22-0605add2fc95
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9e9286363970b568e0690b622fac6d94c2b01f6b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8b06ebb1151d68b462fa96cd1c7493460209d33d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571390"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86912400"
 ---
 # <a name="server-properties-logging-page"></a>Свойства сервера (страница «Регистрация»)
   Эта страница [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] используется в [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] для задания предельных значений данных, собираемых сервером отчетов при выполнении отчета. Данные выполнения сохраняются самим приложением в базе данных сервера отчетов. Предусмотрена возможность отслеживать действия с отчетами применительно к серверу отчетов, который работает в собственном режиме или в режиме интеграции с SharePoint. Если сервер отчетов представляет собой часть масштабного развертывания, то в журнале выполнения отчета ведется регистрация всех действий с отчетами для всего проекта развертывания в виде одного файла журнала.  

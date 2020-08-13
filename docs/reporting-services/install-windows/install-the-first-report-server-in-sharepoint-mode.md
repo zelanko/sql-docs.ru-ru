@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: af1ceea86c3e91cb11c393f585c2906f50f039c1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 05ab2bfea73d7419613d21a3cce85135743e48f5
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286178"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86941306"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>Установка первого сервера отчетов в режиме интеграции с SharePoint
 
@@ -92,13 +92,17 @@ ms.locfileid: "79286178"
     > [!NOTE]
     > Убедитесь, что имя сервера SharePoint указано правильно.
     
-        Set-SPServer SERVERNAME -Role Custom
+    ```powershell
+    Set-SPServer SERVERNAME -Role Custom
+    ```
 
 4. Должно появиться сообщение о том, что задание таймера запланировано. Дождитесь, пока задание будет выполнено.
 
 5. Проверьте назначенную роль сервера с помощью указанной ниже команды.
 
-        Get-SPServer SERVERNAME 
+    ```powershell
+    Get-SPServer SERVERNAME 
+    ```
  
  6. В поле **Роли** должно отобразиться значение **Пользовательская**.
  
@@ -209,7 +213,9 @@ ms.locfileid: "79286178"
     > [!IMPORTANT]
     > Если вы появится примерно следующее сообщение об ошибке:  
     >   
-    >     Install-SPRSService. Имя "Install-SPRSService" **не распознано** как имя командлета, функции, файла сценария или выполняемой программы. Проверьте правильность написания имени, а если включен путь, то проверьте правильность пути и повторите попытку.  
+    ```powershell
+    >     Install-SPRSService : The term 'Install-SPRSService' **is not recognized** as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.  
+    ```
     >
     > Либо вы находитесь в Windows PowerShell, а не в командной консоли SharePoint, либо не установлены службы Reporting Services в режиме интеграции с SharePoint. Дополнительные сведения о службах Reporting Services и PowerShell см. в статье [Командлеты PowerShell для режима служб SharePoint Reporting Services](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
@@ -224,7 +230,7 @@ ms.locfileid: "79286178"
     > [!NOTE]  
     >  Если служба Reporting Services остается в состоянии **Запускается** и не переходит в состояние **Запущена**, в диспетчере Windows Server убедитесь в том, что запущена служба "Администрирование SharePoint 2013".  
   
-##  <a name="step-3-create-a-reporting-services-service-application"></a><a name="bkmk_create_serrviceapplication"></a> Этап 3. Создание приложения службы Reporting Services  
+##  <a name="step-3-create-a-reporting-services-service-application"></a><a name="bkmk_create_serrviceapplication"></a> Шаг 3. Создание приложения службы Reporting Services  
  В этом разделе описаны шаги по созданию приложения службы и описания его свойств (в случае просмотра существующего приложения службы).  
   
 1.  В центре администрирования SharePoint в разделе **Управление приложениями** выберите **Управление приложениями служб**.  
@@ -240,7 +246,7 @@ ms.locfileid: "79286178"
   
 5.  В разделе **Пул приложений** создайте для данного приложения новый пул приложений (рекомендуется). Если использовать одно имя как для нового пула приложений, так и для приложения службы, дальнейшее администрирование может упроститься. Кроме того, многое зависит от количества создаваемых приложений служб и от того, требуется ли использовать несколько из них в одном пуле приложений. Рекомендации и сведения по управлению пулом приложений см. в документации по SharePoint Server.  
   
-     Выберите или создайте учетную запись безопасности для пула приложений. Обязательно укажите учетную запись домена. Учетная запись пользователя домена позволяет использовать функцию управляемой учетной записи SharePoint, с помощью которой пароли и данные учетной записи можно изменять в одном месте. Учетные записи домена также требуются, если планируется горизонтально увеличить масштаб системы и включить дополнительные экземпляры службы, которые работают от лица одного идентификатора.  
+     Выберите или создайте учетную запись безопасности для пула приложений. Обязательно укажите учетную запись домена. Учетная запись пользователя домена позволяет использовать функцию управляемой учетной записи SharePoint, с помощью которой пароли и данные учетной записи можно изменять в одном месте. Учетные записи домена также требуются, если планируется расширение развернутой системы и включение дополнительных экземпляров службы, которые работают от лица одного идентификатора.  
   
 6.  В поле **Сервер баз данных**можно указать текущий сервер или выбрать другой SQL Server.  
   
@@ -250,7 +256,7 @@ ms.locfileid: "79286178"
   
 9. В подразделе **Связь с веб-приложением** выберите веб-приложение, которое должно быть подготовлено для доступа со стороны текущего приложения службы Reporting Services. Одно приложение службы Reporting Services можно связать с одним веб-приложением. Если все имеющиеся веб-приложения уже связаны с приложением службы Reporting Services, отображается предупреждение.  
   
-10. Нажмите кнопку **ОК**.  
+10. Щелкните **ОК**.  
   
 11. Создание приложения службы может занять несколько минут. По завершении этого процесса отобразятся подтверждение и ссылка на страницу **Подготовка подписок и предупреждений** . Выполните шаг подготовки, если нужно использовать функции подписки или предупреждений об изменении данных служб Reporting Services. Дополнительные сведения см. в разделе [Подготовка подписок и предупреждений для приложений служб SSRS](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   
@@ -260,7 +266,7 @@ ms.locfileid: "79286178"
   
 -   Статья [Создание приложения службы Reporting Services с помощью PowerShell](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).  
 
-##  <a name="step-4-activate-the-power-view-site-collection-feature"></a><a name="bkmk_powerview"></a> Этап 4. Активация компонента Power View семейства веб-сайтов.
+##  <a name="step-4-activate-the-power-view-site-collection-feature"></a><a name="bkmk_powerview"></a> Шаг 4. Активация функции Power View семейства веб-сайтов.
 
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], компонент надстройки служб SQL Server 2016 Reporting Services для продуктов [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint, является компонентом семейства веб-сайтов. Этот компонент активируется автоматически для корневых семейств веб-сайтов, созданных после установки надстройки служб Reporting Services. Если вы планируете использовать [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], необходимо удостовериться в том, что этот компонент активирован.  
   
@@ -270,7 +276,7 @@ ms.locfileid: "79286178"
   
 1.  При выполнении следующих шагов предполагается, что сайт SharePoint настроен для **версии взаимодействия**2013 в SharePoint 2013.  
   
-     Откройте в браузере требуемый сайт SharePoint. Например, https://\<имя_сервера>/sites/bi  
+     Откройте в браузере требуемый сайт SharePoint. Например, https://\<servername>/sites/bi  
   
 2.  Щелкните **Параметры**![Параметры SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Параметры SharePoint").  
   

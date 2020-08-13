@@ -1,5 +1,6 @@
 ---
 title: Управление режимами редактирования и просмотра
+description: 'Узнайте, как выбрать один из двух режимов представления в SQL Server Management Studio: режим документов с вкладками и режим интерфейса с несколькими документами. Кроме того, узнайте больше о разделенных представлениях, переносе по словам, режиме виртуального пространства, отображении номеров строк, полноэкранном режиме и функции "Автоматически скрыть все".'
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -20,15 +21,15 @@ ms.assetid: 25c58a14-9f94-4296-9770-7d84c6bc3969
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0bc702e9ada88099e0d13cd3fc9e3a955134532f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9b3017d75cd7222948c63b4883b7935c551f3144
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253800"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122593"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>Управление режимами редактирования и просмотра
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Редактор позволяет управлять способами просмотра кода.  
   
 ## <a name="changing-the-view-mode"></a>Изменение режима просмотра  

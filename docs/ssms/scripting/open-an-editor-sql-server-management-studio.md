@@ -1,5 +1,6 @@
 ---
 title: Открытие редактора (среда SQL Server Management Studio)
+description: Узнайте, как открыть редакторы ядра СУБД, многомерных выражений, расширений интеллектуального анализа данных и XML/A в SQL Server Management Studio.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,27 +11,27 @@ ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 478f48cbea6bccb1cb66838a34d12689a94cf05a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ab96c21c9ac7d6e8b90564d6759c85744adc27f8
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253781"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122575"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Открытие редактора (среда SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   В этом разделе описывается, как открыть редактор запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , редактор многомерных выражений, редактор расширений интеллектуального анализа данных или редактор XML/A в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. После открытия каждое окно редактора отображается в виде вкладки на центральной панели среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 ## <a name="before-you-begin"></a>Перед началом  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] поддерживает четыре редактора: редактор запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] для редактирования скриптов [!INCLUDE[tsql](../../includes/tsql-md.md)] , редакторы многомерных выражений (MDX) и расширений интеллектуального анализа данных (DMX) для редактирования скриптов на этих языках, а также редактор XML для аналитики (XML/A) для редактирования скриптов XML/A или XML-файлов. Любой из этих редакторов также может использоваться для изменения текстовых файлов.  
   
 ### <a name="limitations-and-restrictions"></a>Ограничения  
- Если файлы используются совместно с пользователями, у которых установлены другие кодовые страницы, то для предотвращения ошибок чтения файла такие файлы следует сохранять в соответствующей кодовой странице в Юникоде. Кроме того, при сохранении файлов для использования в системах UNIX или Macintosh убедитесь, что сохраняете их в соответствующем формате документов. В меню **Файл** щелкните **Сохранить как**, **Сохранить с кодировкой** , раскрыв список возле кнопки **Сохранить** , а затем в качестве параметра **Окончания строк** выберите **Unix** или **Macintosh**.  
+ Если файлы используются совместно с пользователями, у которых установлены другие кодовые страницы, то для предотвращения ошибок чтения файла такие файлы следует сохранять в соответствующей кодовой странице в Юникоде. Кроме того, при сохранении файлов для использования в системах UNIX или Macintosh убедитесь, что сохраняете их в соответствующем формате документов. В меню **Файл** щелкните **Сохранить как**, **Сохранить с кодировкой**, раскрыв список возле кнопки **Сохранить**, а затем в качестве параметра **Окончания строк** выберите **Unix** или **Macintosh**.  
   
 ### <a name="permissions"></a>Разрешения  
  Операции, выполняемые в редакторе кода, контролируются разрешениями, предоставленными учетной записи проверки подлинности, которая использовалась для входа. Например, если открыть окно редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , используя проверку подлинности Windows, то будет невозможно выполнять инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , ссылающиеся на объекты, для которых у учетной записи входа Windows нет разрешений на доступ.  
   
-## <a name="how-to-open-editors"></a>Инструкции. Открытие редакторов  
+## <a name="how-to-open-editors"></a>Руководство. Открытие редакторов  
  В этом разделе объясняется, как открыть различные редакторы в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ### <a name="using-the-filenew-menu"></a>С помощью меню «Файл/Создать»  

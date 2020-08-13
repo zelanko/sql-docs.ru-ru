@@ -1,5 +1,6 @@
 ---
 title: изменить целевую платформу и опубликовать проект базы данных
+description: Узнайте, как изменить платформу для проекта базы данных SQL Server Data Tools на поддерживаемый экземпляр SQL Server. Узнайте, как опубликовать проект базы данных.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -9,16 +10,15 @@ f1_keywords:
 ms.assetid: 6012e120-5f72-4f4f-ae6e-f9a57ae1dea7
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: a2af594db8c4f92028a9a36b8cc54f5f3712c9b4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1d69b0f2a11afb46e46ff88a49dff12c2037ecca
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241602"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942470"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>Руководство. изменить целевую платформу и опубликовать проект базы данных
 
@@ -41,7 +41,7 @@ ms.locfileid: "75241602"
   
 2.  Добавьте `ON [PRIMARY]` в конец инструкции `CREATE TABLE` .  
   
-3.  Обратите внимание, что отображается следующая ошибка в области **Список ошибок**:  SQL70015: "Ссылка на файловую группу и схема секционирования" не поддерживается в SQL Azure.  
+3.  Обратите внимание, что на панели **Список ошибок** появляется ошибка SQL70015: "Filegroup reference and partitioning scheme" is not supported in SQL Azure (SQL70015: "Ссылка на файловую группу и схема секционирования" не поддерживается в SQL Azure).  
   
     SSDT автоматически проверяет скрипт с учетом целевой платформы. В этом случае SSDT возвращает ошибку, поскольку файловая группа не поддерживается в SQL Azure. Список неподдерживаемых инструкций Transact\-SQL в SQL Azure см. в статье [Partially Supported Transact-SQL Statements (Microsoft Azure SQL Database)](https://msdn.microsoft.com/library/ee336267.aspx) (Частично поддерживаемые инструкции Transact-SQL в Базе данных SQL Microsoft Azure).  
   
@@ -67,5 +67,5 @@ ms.locfileid: "75241602"
   
 **Проект, где указана целевая платформа Microsoft SQL Server 2012, может вызвать проблемы совместимости с Microsoft SQL Server 2008**. Если этот проект содержит сущности, добавленные только в Microsoft SQL Server 2012, публикация завершится ошибкой.  
   
-    The deployment will fail if object predicates use **CONTAINS** or **FREETEXT** over a newly created full-text index and transactional scripts are used. If the option to include transactional scripts is enabled during deployment, then procedures and views are defined inside a transaction while a full-text index is defined outside of a transaction at the end of the deploy script. Because of this ordering in the script, procedures or views using CONTAINS or FREETEXT will not be resolved against the full-text index, resulting in a deployment error.  
+Развертывание завершится с ошибками, если предикаты объекта используют функцию **CONTAINS** или **FREETEXT** с вновь созданным полнотекстовым индексом, а также если используются транзакционные скрипты. Если параметр включения скриптов транзакций включен во время развертывания, то процедуры и представления определяются внутри транзакции, тогда как полнотекстовый индекс определяется за пределами транзакции в конце скрипта развертывания. В результате такого упорядочения в скрипте процедуры или представления, использующие функции CONTAINS или FREETEXT, не будут сопоставлены с полнотекстовым индексом, что приведет к ошибке развертывания.  
   

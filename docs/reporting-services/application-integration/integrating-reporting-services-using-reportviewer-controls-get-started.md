@@ -2,7 +2,7 @@
 title: Начало работы с элементами управления средства просмотра отчетов
 description: Элементы управления средства просмотра отчетов можно использовать для интеграции отчетов RDL Reporting Services в приложения WebForms и WinForms.
 ms.custom: seo-lt-2019
-ms.date: 12/12/2019
+ms.date: 06/03/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d7e1e64bddcdcc7efed701770aea0e97c8e84ec5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a559bdb5b525b8d95c121b8059076d86029a37fd
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241830"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943197"
 ---
 # <a name="integrating-reporting-services-using-the-report-viewer-controls---get-started"></a>Начало работы с интеграцией служб Reporting Services с помощью элементов управления средства просмотра отчетов
 
@@ -252,10 +252,18 @@ ms.locfileid: "75241830"
     
 Элемент управления "Средство просмотра" предназначено для современных браузеров. Этот элемент управления может работать некорректно, если браузер отрисовывает страницы в режиме совместимости с IE. При работе на сайтах интрасети может потребоваться метатег для переопределения поведения браузера по умолчанию.
 
-    ```
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    ```
-      
+```html
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+```
+
+## <a name="nugetorg-pages"></a>Документация на сайте NuGet.org
+
+Ниже приведены ссылки на статьи на сайте NuGet.org о версиях WebForm и WinForm элемента управления средства просмотра отчетов.
+
+- Microsoft.ReportingServices.ReportViewerControl.WebForms [https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WebForms/](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WebForms/)
+- Microsoft.ReportingServices.ReportViewerControl.Winforms [https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WinForms/](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WinForms/)
+
+
 ## <a name="feedback"></a>Отзывы
 
 Если у вас возникли проблемы, сообщите об этом на [форумах Reporting Services](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices).

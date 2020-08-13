@@ -1,30 +1,30 @@
 ---
 title: Архитектура расширяемости
-description: В этой статье описывается архитектура платформы расширяемости для запуска в SQL Server внешнего сценария, как, например, R или Python.
+description: В этой статье описывается архитектура платформы расширяемости для запуска в Службах машинного обучения SQL Server внешнего скрипта Python или R. Сценарий выполняется в среде языковой среды в качестве расширения ядра СУБД.
 ms.prod: sql
-ms.technology: machine-learning
-ms.date: 11/04/2019
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 408125a3369d35a28893852a2f674e3e4562b063
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 14611369afe42da2e87aab87d675fd77e710c461
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118827"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406297"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Архитектура расширяемости в службах машинного обучения SQL Server. 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-SQL Server располагает платформой расширяемости для запуска на сервере внешнего сценария, как, например, R или Python. Сценарий выполняется в среде языковой среды в качестве расширения ядра СУБД.
+В этой статье описывается архитектура платформы расширяемости для запуска в Службах машинного обучения SQL Server внешнего скрипта Python или R. Сценарий выполняется в среде языковой среды в качестве расширения ядра СУБД.
 
 ## <a name="background"></a>Историческая справка
 
-Платформа расширяемости была внедрена в SQL Server 2016 для поддержки среды выполнения R. В SQL Server 2017 и более поздних версий поддерживается Python.
+Платформа расширяемости появилась в SQL Server 2016 для поддержки среды выполнения R посредством [служб R](../r/sql-server-r-services.md). В SQL Server 2017 и более поздних версий [Службы машинного обучения](../sql-server-machine-learning-services.md) поддерживают Python.
 
 Целью платформы расширяемости является предоставление интерфейса между SQL Server и языками обработки и анализа данных, такими как R и Python. Целью является сокращение трения при перемещении решений обработки и анализа данных в рабочую среду и защита данных, предоставляемых в процессе разработки. Выполняя доверенный язык сценариев на безопасной платформе, управляемой SQL Server, администраторы баз данных могут поддерживать безопасность, обеспечивая анализаторам данных доступ к корпоративным данным.
 

@@ -2,7 +2,7 @@
 title: Соединение с помощью sqlcmd
 description: Узнайте, как использовать служебную программу sqlcmd с Microsoft ODBC Driver for SQL Server в Linux и macOS.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 06/22/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 628968b7d93b9278eb4aaf6ebca3d03fb3cde102
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e96d05b14cb9922572ee5f5c9e773f1c7bc35590
+ms.sourcegitcommit: 41ff0446bd8e4380aad40510ad579a3a4e096dfa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632824"
+ms.lasthandoff: 07/18/2020
+ms.locfileid: "86465311"
 ---
 # <a name="connecting-with-sqlcmd"></a>Соединение с помощью sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "81632824"
   
 Следующие команды демонстрируют, как использовать проверку подлинности Windows (Kerberos) и проверку подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] соответственно.
   
-```  
+```console
 sqlcmd -E -Sxxx.xxx.xxx.xxx  
 sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx  
 ```  
@@ -170,22 +170,30 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
   
 Можно использовать следующий альтернативный метод: Помещайте параметры в один файл, который затем можно добавить в другой файл. Это позволит использовать файл параметров для замены значений. Например, создайте файл с именем `a.sql` (файл параметров) со следующим содержимым:
   
+```console
     :setvar ColumnName object_id  
     :setvar TableName sys.objects  
+```
   
 Затем создайте файл `b.sql` с параметрами для замены:  
   
+```sql
     select $(ColumnName) from $(TableName)  
+```
 
 В командной строке совместите `a.sql` и `b.sql` в `c.sql` с помощью следующих команд:  
   
+```console
     cat a.sql > c.sql 
   
     cat b.sql >> c.sql  
+```
   
 Запустите `sqlcmd` и используйте `c.sql` в качестве входного файла:  
   
-    slqcmd -S<...> -P<..> -U<..> -I c.sql  
+```console
+    sqlcmd -S<...> -P<..> -U<..> -I c.sql  
+```
 
 - -z *password* — изменить пароль.  
   
@@ -203,24 +211,12 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
   
 ## <a name="dsn-support-in-sqlcmd-and-bcp"></a>Поддержка имени DSN в sqlcmd и bcp
 
-Вы можете указать имя источника данных (DSN) вместо имени сервера в **sqlcmd** или параметре **bcp** `-S` (или в команде **sqlcmd** :Connect), если зададите параметр -D. -D вызывает **sqlcmd** или **bcp** для подключения к серверу, указанному в имени DSN, с помощью параметра -S.  
+Вы можете указать имя источника данных (DSN) вместо имени сервера в **sqlcmd** или параметре **bcp** `-S` (или в команде **sqlcmd** :Connect), если зададите параметр `-D`. `-D` вызывает **sqlcmd** или **bcp** для подключения к серверу, указанному в имени DSN, с помощью параметра `-S`.  
   
 Системные имена DSN хранятся в файле `odbc.ini` в каталоге ODBC SysConfigDir (`/etc/odbc.ini` в стандартных установках). Пользовательские имена DSN хранятся в `.odbc.ini` в домашнем каталоге пользователя (`~/.odbc.ini`).
-  
-В имени DSN на Linux и macOS поддерживаются следующие записи:
 
--   **ApplicationIntent=ReadOnly**  
+Список записей, поддерживаемых драйвером, см. в разделе [Ключевые слова и атрибуты строки подключения и имени DSN](../dsn-connection-string-attribute.md).
 
--   **Database=** _database\_name_  
-  
--   **Driver=ODBC Driver 11 for SQL Server** или **Driver=ODBC Driver 13 for SQL Server**
-  
--   **MultiSubnetFailover=Yes**  
-  
--   **Server=** _server\_name\_или\_IP\_address_  
-  
--   **Trusted_Connection=yes**|**no**  
-  
 В имени DSN только запись DRIVER является обязательной, но, чтобы подключиться к серверу, `sqlcmd` или `bcp` требуется значение в записи SERVER.  
 
 Если указать один и тот же параметр и в имени DSN, и в командной строке `sqlcmd` или `bcp`, значение в командной строке имеет приоритет перед значением DSN. Например, если имя DSN содержит запись DATABASE, а командная строка `sqlcmd` включает параметр **-d**, используется значение, передаваемое в **-d**. Если в имени DSN указано **Trusted_Connection=yes**, используется проверка подлинности Kerberos, а имя пользователя ( **–U**) и пароль ( **–P**), если они заданы, игнорируются.

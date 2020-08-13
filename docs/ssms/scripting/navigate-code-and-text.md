@@ -1,5 +1,6 @@
 ---
 title: Перемещение по коду и тексту
+description: 'Узнайте, как перемещаться по документу различными методами: устанавливайте закладки, чтобы легко возвращаться к каким-либо местам, выполняйте добавочный поиск, используйте мышь и клавиатуру, а также используйте команду "Перейти к" для перехода к строке по ее номеру.'
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -21,15 +22,15 @@ ms.assetid: f63247ff-9751-4e99-8ee3-0772ad4009d0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c1a77dfbe88a3018d7ae170675b84461f69a12b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4ac0d91b3d6bc3dd6527063a176b0728f96f144e
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78261853"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122595"
 ---
 # <a name="navigate-code-and-text"></a>Перемещение по коду и тексту
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   По тексту можно перемещаться с помощью:  
   
 -   закладок;  
