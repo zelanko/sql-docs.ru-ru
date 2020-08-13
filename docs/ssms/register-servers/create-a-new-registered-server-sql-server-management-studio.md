@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 716ea070-a3b5-4514-9de2-82ce8a96514b
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: a62555b9cb6f94b4fd51e304537551d857d2c525
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 836775e914023e4f68c7a4a1225c843c639825d1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246571"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001749"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>Создание нового зарегистрированного сервера (среда SQL Server Management Studio)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 В этом разделе описывается, как сохранить сведения о соединении для серверов, к которым часто выполняется обращение, путем регистрации сервера в компоненте «Зарегистрированные серверы» среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Сервер может быть зарегистрирован в обозревателе объектов до или во время подключения. Для регистрации экземпляра сервера на локальном компьютере существует специальный пункт меню.  
   
@@ -56,7 +55,7 @@ ms.locfileid: "75246571"
      При регистрации сервера из окна "Зарегистрированные серверы" поле **Тип сервера** доступно только для чтения и соответствует типу сервера, который выводится на панели "Зарегистрированные серверы". Для регистрации сервера другого типа выберите **ядро СУБД**, **службу Analysis Server**, **службы Reporting Services**или **службы Integration Services** на панели инструментов **Зарегистрированные серверы** перед регистрацией нового сервера.  
   
      **Имя сервера**  
-     Выберите экземпляр сервера для регистрации в формате: *\<имя_сервера>* [\\ *\<имя_экземпляра*].  
+     Выберите экземпляр сервера для регистрации в формате: *\<servername>* [\\ *\<instancename>* ].  
   
      **Аутентификация**  
      При соединении с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]доступны два режима проверки подлинности.  

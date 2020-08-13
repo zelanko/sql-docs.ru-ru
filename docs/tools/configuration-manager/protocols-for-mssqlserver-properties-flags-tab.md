@@ -1,5 +1,6 @@
 ---
 title: Протоколы для свойств MSSQLSERVER (вкладка «Флаги»)
+description: Узнайте, как использовать вкладку "Флаги" диалогового окна "Протоколы для свойств MSSQLSERVER", чтобы просмотреть или задать параметры шифрования протокола и скрытия экземпляра.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: 4d38e6e9-f95f-4e79-ae45-89f631037528
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ff40fa868780078f2e16675b2b565a156cd41200
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: 4a7210d6d4b47888889e7d02fdd692b41ee71585
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087495"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895990"
 ---
 # <a name="protocols-for-mssqlserver-properties-flags-tab"></a>Протоколы для свойств MSSQLSERVER (вкладка «Флаги»)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Если на сервер установлен сертификат, используйте вкладку **Флаги** диалогового окна **Протоколы для свойств MSSQLSERVER** , чтобы просмотреть или задать параметры шифрования протокола и скрытия экземпляра. Необходимо перезапустить [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], чтобы включить или отключить параметр **ForceEncryption**.  
   
  Для шифрования соединений необходимо обеспечить сертификат для компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Если сертификат не установлен, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] формирует сертификат с собственной подписью при запуске экземпляра. Самозаверяющий сертификат можно использовать вместо сертификата, предоставленного доверенным центром сертификации, однако он не обеспечивает проверку подлинности и нет гарантии, что он не будет аннулирован.  
@@ -34,7 +35,7 @@ ms.locfileid: "82087495"
  Процесс входа в систему всегда шифруется. Если для свойства **ForceEncryption** установлено значение **Да**, вся передача данных между клиентом и сервером шифруется, а клиент, соединяющийся с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)] , должен быть настроен на доверие корневому центру сертификата сервера. Дополнительные сведения см. в разделе "Как включить зашифрованные соединения с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)] (диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])" электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="cluster-servers"></a>Серверы кластера  
- Для использования шифрования в отказоустойчивом кластере необходимо установить сертификат сервера с полным именем DNS виртуального сервера на все узлы отказоустойчивого кластера. Например, для кластера, у которого два узла с именами "test1. *\<ваша компания>* .com" и "test2. *\<ваша компания>* .com", и виртуального сервера virtsql необходимо установить сертификат для "virtsql. *\<ваша компания>* .com" на оба узла. Затем можно установить флажок **ForceEncryption** в окне **Диспетчер конфигурации SQL Server** , чтобы настроить шифрование в отказоустойчивом кластере.  
+ Для использования шифрования в отказоустойчивом кластере необходимо установить сертификат сервера с полным именем DNS виртуального сервера на все узлы отказоустойчивого кластера. Например, если имеется кластер с двумя узлами, test1. *\<your company>* .com и test2. *\<your company>* .com, а также виртуальный сервер virtsql, необходимо установить сертификат для virtsql. *\<your company>* .com на обоих узлах. Затем можно установить флажок **ForceEncryption** в окне **Диспетчер конфигурации SQL Server** , чтобы настроить шифрование в отказоустойчивом кластере.  
   
 ## <a name="options"></a>Параметры  
  **ForceEncryption**  

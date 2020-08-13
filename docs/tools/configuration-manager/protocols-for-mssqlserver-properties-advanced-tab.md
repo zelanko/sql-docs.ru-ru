@@ -1,5 +1,6 @@
 ---
 title: Протоколы для свойств MSSQLSERVER (вкладка «Дополнительно»)
+description: Сведения о преимуществах и требованиях расширенной защиты для проверки подлинности для ядра СУБД SQL Server. Сведения о том, как включить и настроить эту функцию.
 ms.custom: seo-lt-2019
 ms.date: 01/24/2019
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: abd5ca68-825f-4c07-b27c-3b3a79d03d74
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b8f767a5ae8bfe691ec5cb8e4128679a6e02ec8b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ccf8f2a6c80dbaf13c6e47ca835c7dc3c3e0d4d0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306384"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897058"
 ---
 # <a name="protocols-for-mssqlserver-properties-advanced-tab"></a>Протоколы для свойств MSSQLSERVER (вкладка «Дополнительно»)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 Используйте вкладку **Дополнительно** в диалоговом окне **Протоколы для свойств MSSQLSERVER**, чтобы настроить функцию **Расширенная защита для проверки подлинности** для компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. **Расширенная защита** представляет собой функцию сетевых компонентов, реализованную операционной системой. **Расширенная защита** доступна в Windows 7 и Windows Server 2008 R2 и включена в пакеты обновления для операционных систем предыдущих версий. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при помощи **расширенную защиту**. Для включения определенных функций **Расширенной защиты** необходимо установить на вкладке **Флаги** флажок **Принудительное шифрование** .
 

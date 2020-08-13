@@ -1,10 +1,11 @@
 ---
 title: Соображения безопасности
+description: В этой статье обсуждаются некоторые рекомендации по безопасности, которых следует придерживаться как до установки SQL Server, так и после.
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - firewall systems [SQL Server]
@@ -23,17 +24,17 @@ helpviewer_keywords:
 - file system security [SQL Server]
 - installing SQL Server, security
 ms.assetid: cf96155f-30a8-48b7-8d6b-24ce90dafdc7
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: c11b2a788561af2281a7f0967972e63358c4ab82
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 1038bdac62902f406a3af510f52bb98728720ab6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258965"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899655"
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>Вопросы безопасности при установке SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
  Безопасность является важной характеристикой для любого продукта и любого предприятия. Следуя простым рекомендациям, можно избежать многих уязвимостей в безопасности. В этой статье обсуждаются некоторые рекомендации по безопасности, которых следует придерживаться как до установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], так и после установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о безопасности для конкретных компонентов приводятся в справочных статьях по этим компонентам.  
   

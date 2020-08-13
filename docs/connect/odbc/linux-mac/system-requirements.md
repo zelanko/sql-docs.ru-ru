@@ -1,5 +1,6 @@
 ---
-title: Требования к системе (драйвер ODBC для SQL Server) | Документация Майкрософт
+title: Требования к системе (драйвер ODBC для SQL Server)
+description: Здесь перечислены требования к системе для драйвера ODBC для SQL Server на Linux и macOS.
 ms.custom: ''
 ms.date: 03/18/2020
 ms.prod: sql
@@ -14,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: f03b7fdd-0e9d-4e74-958d-e8c87e027348
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2459a9f57f3591db1107994d0b18770690f22724
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 01a5dd44d111fd72d76db244c8135d3bdde00ec8
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921178"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391759"
 ---
-# <a name="system-requirements"></a>Требования к системе
+# <a name="system-requirements-linux-and-macos"></a>Требования к системе (Linux и macOS)
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
@@ -33,7 +34,7 @@ ms.locfileid: "80921178"
 
 ## <a name="operating-system-support"></a>Поддержка операционных систем
 
-Версии 17, 13.1 и 13 драйверов Linux и macOS поддерживаются для 64-разрядных версий следующих операционных систем:
+Версии 17, 13.1 и 13 драйверов Linux и macOS поддерживаются для архитектур x64 следующих операционных систем:
 
 |Поддерживаемые операционные системы     |17.5|17.4|17.3|17.2|17.1|17.0|Версия 13.1|13|
 |-------------------------------|----|----|----|----|----|----|----|--|
@@ -82,7 +83,7 @@ ms.locfileid: "80921178"
   * `krb5-libs`  
   * `openssl`  
   
-* Драйвер ODBC для **SUSE Linux Enterprise 11 с пакетом обновления 2 (64-разрядная версия)** требует наличия следующих пакетов, и его можно скачать здесь: [Предварительная версия Microsoft ODBC Driver 11 for SQL Server — SUSE Linux](https://go.microsoft.com/fwlink/?LinkId=264916)  
+* Драйвер ODBC для **SUSE Linux Enterprise 11 с пакетом обновления 2 (64-разрядная версия)** требует наличия следующих пакетов, и его можно скачать здесь: [Microsoft ODBC Driver 11 Previews for SQL Server — SUSE Linux](https://go.microsoft.com/fwlink/?LinkId=264916)  
   * `glibc`  
   * `libstdc++46`  
   * `libgcc46`  

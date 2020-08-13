@@ -7,17 +7,17 @@ ms.author: davidph
 ms.date: 04/30/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: machine-learning
-ms.openlocfilehash: d105db3da8a6732c2884af7e42a71441eef6f077
-ms.sourcegitcommit: ed5f063d02a019becf866c4cb4900e5f39b8db18
+ms.technology: machine-learning-bdc
+ms.openlocfilehash: a14258c15ac1af1445b201f7b999dbec1682555d
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82643341"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196934"
 ---
 # <a name="run-python-and-r-scripts-with-machine-learning-services-on-sql-server-big-data-clusters"></a>Выполнение скриптов Python и R с помощью служб машинного обучения в кластерах больших данных SQL Server
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Скрипты Python и R можно выполнять в главном экземпляре [кластеров больших данных SQL Server](big-data-cluster-overview.md) с помощью [служб машинного обучения](../machine-learning/index.yml).
 
@@ -119,7 +119,7 @@ service/mymaster-2 exposed
 
 Этот процесс показан на следующем рисунке.
 
-[![](media/machine-learning-services/example-kube-enable-scripts.png "Demonstrate enable feature on Kubernetes")](media/machine-learning-services/example-kube-enable-scripts.png#lightbox)
+[![Демонстрация](media/machine-learning-services/example-kube-enable-scripts.png "Демонстрация функции включения в Kubernetes")](media/machine-learning-services/example-kube-enable-scripts.png#lightbox)
 
 Теперь все готово для выполнения скриптов Python и R в главном экземпляре кластеров больших данных. Перед тем как запустить первый скрипт, ознакомьтесь с краткими руководствами в разделе [Следующие шаги](#next-steps).
 
@@ -141,7 +141,7 @@ kubectl delete svc mymaster-2 -n mssql-cluster
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-+ [Краткое руководство. Создание и выполнение простых сценариев Python с помощью служб машинного обучения SQL Server](../machine-learning/tutorials/quickstart-python-create-script.md)
-+ [Краткое руководство. Создание и оценка модели прогнозов в Python с помощью служб машинного обучения SQL Server](../machine-learning/tutorials/quickstart-python-train-score-model.md)
-+ [Краткое руководство. Создание и выполнение простых скриптов R с помощью служб машинного обучения SQL Server](../machine-learning/tutorials/quickstart-r-create-script.md)
-+ [Краткое руководство. Создание и оценка модели прогнозов в R с помощью служб машинного обучения SQL Server](../machine-learning/tutorials/quickstart-r-train-score-model.md)
++ [Запуск простых скриптов Python](../machine-learning/tutorials/quickstart-python-create-script.md?toc=/sql/toc.json)
++ [Обучение и оценка модели прогнозирования на Python](../machine-learning/tutorials/quickstart-python-train-score-model.md?toc=/sql/toc.json)
++ [Запуск простых скриптов R](../machine-learning/tutorials/quickstart-r-create-script.md?toc=/sql/toc.json)
++ [Обучение и оценка модели прогнозирования на R](../machine-learning/tutorials/quickstart-r-train-score-model.md?toc=/sql/toc.json)

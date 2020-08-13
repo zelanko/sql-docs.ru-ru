@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SSVARIANT struct
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 0583e1cdbf7f1e336698a794bef29f804a053318
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: 0d11a6f839fba1905055aefafa65353008530f8d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219253"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004525"
 ---
 # <a name="ssvariant-structure"></a>Структура SSVARIANT
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -74,13 +74,83 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |Time2Val|DBTYPE_DBTIME2|**DBTIME2**|**VT_SS_TIME2**|Поддерживает тип данных **time**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].<br /><br /> Содержит следующие элементы:<br /><br /> *tTime2Val* (**DBTIME2**)<br /><br /> *bScale* (**BYTE**) задает масштаб для значения *tTime2Val*.|  
 |DateTimeVal|DBTYPE_DBTIMESTAMP|**DBTIMESTAMP**|**VT_SS_DATETIME2**|Поддерживает тип данных **datetime2**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].<br /><br /> Содержит следующие элементы:<br /><br /> *tsDataTimeVal* (DBTIMESTAMP)<br /><br /> *bScale* (**BYTE**) задает масштаб для значения *tsDataTimeVal*.|  
 |DateTimeOffsetVal|DBTYPE_DBTIMESTAMPOFSET|**DBTIMESTAMPOFFSET**|**VT_SS_DATETIMEOFFSET**|Поддерживает тип данных **atetimeoffset**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].<br /><br /> Содержит следующие элементы:<br /><br /> *tsoDateTimeOffsetVal* (**DBTIMESTAMPOFFSET**)<br /><br /> *bScale* (**BYTE**) задает масштаб для значения *tsoDateTimeOffsetVal*.|  
-|NCharVal|Отсутствует соответствующий индикатор типа OLE DB.|**struct _NCharVal**|**VT_SS_WVARSTRING,**<br /><br /> **VT_SS_WSTRING**|Поддерживает типы данных **nchar** и **nvarchar**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].<br /><br /> Содержит следующие элементы:<br /><br /> *sActualLength* (**SHORT**) задает фактическую длину строки, на которую указывает *pwchNCharVal*. Не содержит завершающего нуля.<br /><br /> *sMaxLength* (**SHORT**) задает максимальную длину строки, на которую указывает *pwchNCharVal*.<br /><br /> *pwchNCharVal* (**WCHAR** \*) — указатель на строку.<br /><br /> Неиспользуемые элементы: *rgbReserved*, *dwReserved* и *pwchReserved*.|  
-|CharVal|Отсутствует соответствующий индикатор типа OLE DB.|**struct _CharVal**|**VT_SS_STRING,**<br /><br /> **VT_SS_VARSTRING**|Поддерживает типы данных **char** и **varchar**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].<br /><br /> Содержит следующие элементы:<br /><br /> *sActualLength* (**SHORT**) задает фактическую длину строки, на которую указывает *pwchNCharVal*. Не содержит завершающего нуля.<br /><br /> *sMaxLength* (**SHORT**) задает максимальную длину строки, на которую указывает *pwchNCharVal*.<br /><br /> *pchCharVal* (**CHAR** \*) — указатель на строку.<br /><br /> Неиспользуемые элементы:<br /><br /> *rgbReserved*, *dwReserved* и *pwchReserved*.|  
+|NCharVal|Отсутствует соответствующий индикатор типа OLE DB.|**struct _NCharVal**|**VT_SS_WVARSTRING,**<br /><br /> **VT_SS_WSTRING**|Поддерживает типы данных **nchar** и **nvarchar**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].<br /><br /> Содержит следующие элементы:<br /><br /> *sActualLength* (**SHORT**) задает фактическую длину строки, на которую указывает *pwchNCharVal*. Не содержит завершающего нуля.<br /><br /> *sMaxLength* (**SHORT**) задает максимальную длину строки, на которую указывает *pwchNCharVal*.<br /><br /> *pwchNCharVal* (**WCHAR** \*) — указатель на строку.<br /><br /> *rgbReserved* (**BYTE[5]** ) задает сведения о параметрах сортировки.<br /><br /> Неиспользуемые элементы: *dwReserved* и *pwchReserved*.|  
+|CharVal|Отсутствует соответствующий индикатор типа OLE DB.|**struct _CharVal**|**VT_SS_STRING,**<br /><br /> **VT_SS_VARSTRING**|Поддерживает типы данных **char** и **varchar**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].<br /><br /> Содержит следующие элементы:<br /><br /> *sActualLength* (**SHORT**) задает фактическую длину строки, на которую указывает *pwchNCharVal*. Не содержит завершающего нуля.<br /><br /> *sMaxLength* (**SHORT**) задает максимальную длину строки, на которую указывает *pwchNCharVal*.<br /><br /> *pchCharVal* (**CHAR** \*) — указатель на строку.<br /><br /> *rgbReserved* (**BYTE[5]** ) задает сведения о параметрах сортировки.<br /><br /> Неиспользуемые элементы:<br /><br /> *dwReserved* и *pwchReserved*.|  
 |BinaryVal|Отсутствует соответствующий индикатор типа OLE DB.|**struct _BinaryVal**|**VT_SS_VARBINARY,**<br /><br /> **VT_SS_BINARY**|Поддерживает типы данных **binary** и **varbinary**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].<br /><br /> Содержит следующие элементы:<br /><br /> *sActualLength* (**SHORT**) задает фактическую длину для данных, на которую указывает *pwchNCharVal*.<br /><br /> *sMaxLength* (**SHORT**) задает максимальную длину для данных, на которые указывает *pwchNCharVal*.<br /><br /> *prgbBinaryVal* (**BYTE** \*) — указатель на двоичные данные.<br /><br /> Неиспользуемый элемент: *dwReserved*.|  
 |UnknownType|НЕ ИСПОЛЬЗУЕТСЯ|НЕ ИСПОЛЬЗУЕТСЯ|НЕ ИСПОЛЬЗУЕТСЯ|НЕ ИСПОЛЬЗУЕТСЯ|  
 |BLOBType|НЕ ИСПОЛЬЗУЕТСЯ|НЕ ИСПОЛЬЗУЕТСЯ|НЕ ИСПОЛЬЗУЕТСЯ|НЕ ИСПОЛЬЗУЕТСЯ|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
+## <a name="known-issues"></a>Известные проблемы
+### <a name="possible-narrow-string-data-corruption"></a>Возможное повреждение данных для узких строк
+До версии 18.4 драйвера OLE DB вставка в столбец `sql_variant` могла привести к повреждению данных на сервере при соблюдении всех следующих условий:
+- Кодовая страница клиентского компьютера не соответствует кодовой странице параметров сортировки базы данных.
+- Буфер клиента для вставки отличных от ASCII символов узких строк, закодированных с использованием кодовой страницы клиента.
+- Выполняется одно из следующих условий:
+  - Для поля `pwszDataSourceType` в структуре `DBPARAMBINDINFO`, описывающее параметр, соответствующий столбцу `sql_variant`, было установлено значение `L"DBTYPE_SQLVARIANT"`, `L"DBTYPE_VARIANT"` или `L"sql_variant"`. Подробная информация доступна в следующих статьях: [ICommandWithParameters::SetParameterInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms725393(v=vs.85)).
+
+    *или диспетчер конфигурации служб*
+  - Подготовлен параметризованный SQL-запрос, используемый для вставки.
+
+В частности, драйвер OLE DB не преобразовывал данные в кодовую страницу параметров сортировки базы данных перед их вставкой. Однако драйвер ошибочно сообщал серверу, что данные были закодированы с использованием кодовой страницы параметров сортировки базы данных. Такое поведение привело к несовпадению данных и соответствующей кодовой страницы, хранящейся в столбце `sql_variant`.
+
+Аналогичным образом, при извлечении одного и того же значения драйвер OLE DB не преобразовывал строки в кодовую страницу клиента. Однако так как вставленные данные уже находятся в кодовой странице клиента (см. абзац выше), клиентское приложение может интерпретировать данные правильно. Несмотря на это, приложения, использующие другие драйверы, извлекают такие значения в поврежденном формате. Повреждение возникает из-за того, что другие драйверы интерпретируют строку в кодовой странице параметров сортировки базы данных и пытаются преобразовать ее в кодовую страницу клиента.
+
+Начиная с версии 18.4 драйвер OLE DB преобразует узкие строки в кодовую страницу параметров сортировки базы данных перед вставкой. Аналогичным образом, при извлечении драйвер преобразует данные обратно в кодовую страницу клиента. В результате при получении данных, вставленных с помощью более ранней версии драйвера OLE DB, клиентские приложения, которые используют описанную выше ошибку, могут столкнуться с проблемами. Описанная ниже [процедура восстановления](#recovery-procedure) предназначена для предоставления рекомендаций по устранению этих проблем.
+
+### <a name="recovery-procedure"></a>Процедура восстановления
+> [!IMPORTANT]  
+> Прежде чем выполнять указанные ниже шаги по восстановлению, выполните резервное копирование существующих данных.
+
+Если в приложении возникают проблемы с извлечением данных из столбца `sql_variant` после перехода на версию 18.4 драйвера OLE DB, поврежденные данные необходимо изменить, чтобы они имели те же параметры сортировки, что и база данных, в которой они хранятся. Следующий скрипт можно использовать для восстановления одного значения из столбца `sql_variant`. Этот скрипт является шаблоном, и его необходимо изменить в соответствии с вашим сценарием.
+
+> [!IMPORTANT]  
+> Так как исходная кодовая страница данных не сохраняется, необходимо сообщить серверу, как данные были закодированы изначально. Для этого выполните скрипт в контексте базы данных, которая имеет ту же кодовую страницу, что и кодовая страница клиента, который первоначально вставлял данные. Например, если поврежденные данные были вставлены из клиента, настроенного с использованием кодовой страницы `932`, следующий скрипт необходимо выполнить в контексте базы данных с параметрами сортировки на японском языке (например, `Japanese_XJIS_100_CS_AI`).
+
+```sql
+/*
+    Description:
+        Template that can be used to recover the corrupted value inserted into the sql_variant column.
+
+    Scenario:
+        The database is named [YourDatabase] and it contains a table named [YourTable], which contains the corrupted value.
+        Schema is named [dbo].
+        The corrupted value is stored in a column of type sql_variant named [YourColumn].
+        The corrupted value is sql_variant of BaseType char. For details on sql_variant properties, see:
+            https://docs.microsoft.com/sql/t-sql/functions/sql-variant-property-transact-sql
+*/
+
+-- Base type in sql_variant can hold a maximum of 8000 bytes
+-- For details see: 
+--  https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql#remarks
+DECLARE @bin VARBINARY(8000)
+
+-- In the following lines we convert the sql_variant base type to binary.
+-- <FilterExpression>
+--      Is a placeholder and must be replaced with an expression that filters a single corrupted value to be recovered.
+--      Therefore, the expression must result in a single value being returned only.
+SET @bin = (SELECT CAST([YourColumn] AS VARBINARY(8000)) FROM [YourDatabase].[dbo].[YourTable] WHERE <FilterExpression>)
+
+-- In the following lines we store the binary value in char(59) (a fixed-size character data type).
+-- IMPORTANT NOTE: 
+--      This example assumes the corrupted sql_variant's base type is char(59).
+--      You MUST adjust the type (that is, char/varchar) and size to match your scenario exactly.
+DECLARE @char CHAR(59)
+SET @char = CAST((@bin) AS CHAR(59))
+DECLARE @sqlvariant sql_variant
+
+-- The following lines recover the corrupted value by translating the value to the collation of the database.
+-- <DBCollation>
+--      Must be replaced with the collation (for example, Latin1_General_100_CI_AS_SC_UTF8) of the database holding the data.
+SET @sqlvariant = @char collate <DBCollation>
+
+-- Finally, we update the corrupted value with the recovered value.
+-- "<FilterExpression>"
+--      Is a placeholder and must be replaced with an expression that filters a single corrupted value to be recovered.
+--      Therefore, the expression must result in a single value being returned only.
+UPDATE [YourDatabase].[dbo].[YourTable] SET [YourColumn] = @sqlvariant WHERE <FilterExpression>
+```
+
 ## <a name="see-also"></a>См. также:  
  [Типы данных (OLE DB)](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   

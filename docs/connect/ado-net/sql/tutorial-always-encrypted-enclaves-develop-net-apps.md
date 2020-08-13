@@ -1,7 +1,7 @@
 ---
 title: Руководство по Разработка приложения .NET с помощью Always Encrypted с безопасными анклавами | Документация Майкрософт
 ms.custom: ''
-ms.date: 10/18/2019
+ms.date: 07/09/2020
 ms.reviewer: v-kaywon
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: karinazhou
 ms.author: v-jizho2
-ms.openlocfilehash: 82ecd3fa04bbab0a1512ede08ebbc8bfaa3011f9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4af6f82c310393871434010480f0bb57bfca670f
+ms.sourcegitcommit: 7ce4a81c1b91239c8871c50f97ecaf387f439f6c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244050"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86217752"
 ---
 # <a name="tutorial-develop-a-net-application-using-always-encrypted-with-secure-enclaves"></a>Руководство по Разработка приложения .NET с помощью Always Encrypted с безопасными анклавами
 
@@ -24,6 +24,9 @@ ms.locfileid: "75244050"
 [!INCLUDE [appliesto-netfx-netcore-xxxx-md](../../../includes/appliesto-netfx-netcore-xxxx-md.md)]
 
 В этом руководстве содержатся сведения о разработке простого приложения, которое выполняет запросы к базе данных, использующие безопасный анклав на стороне сервера для [Always Encrypted с защищенными анклавами](../../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+
+> [!NOTE]
+> Always Encrypted с безопасными анклавами поддерживается только в Windows.
 
 ## <a name="prerequisites"></a>Предварительные требования
 

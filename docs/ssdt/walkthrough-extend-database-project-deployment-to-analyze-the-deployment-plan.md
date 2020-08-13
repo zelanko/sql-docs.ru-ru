@@ -1,21 +1,21 @@
 ---
 title: Расширение процесса развертывания проекта базы данных для анализа плана развертывания
+description: Создайте участник развертывания DeploymentPlanExecutor. Настройте участник, который хранит записи о событиях, происходящих при развертывании проекта базы данных.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 9ead8470-93ba-44e3-8848-b59322e37621
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 5e51dddb7635ba0f50dfdd7566722b170be9f48a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 797289f29c9c0eff6a7b9d876d21f7573a546c84
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242676"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897474"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Пошаговое руководство. Расширение процесса развертывания проекта базы данных для анализа плана развертывания
 
@@ -29,7 +29,7 @@ ms.locfileid: "75242676"
   
 -   [тестирование участника развертывания](#TestDeploymentContributor).  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
 Для выполнения этого пошагового руководства требуются следующие компоненты:  
   
 -   Необходимо установить версию Visual Studio, которая включает SQL Server Data Tools (SSDT) и поддерживает разработку VB или C#.  
@@ -251,7 +251,7 @@ ms.locfileid: "75242676"
   
     Методу OnExecute передается объект [DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx), который предоставляет доступ ко всем указанным аргументам, модели базы данных-источника и базы данных-получателя, свойствам сборки и файлам расширения. В данном примере мы получаем модель, затем вызываем вспомогательные функции, чтобы вывести сведения о модели. Мы используем вспомогательный метод PublishMessage в базовом классе для вывода всех произошедших ошибок.  
   
-    Также нам интересны такие типы и методы: [TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentPlanHandle](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanhandle.aspx) и [SqlDeploymentOptions](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqldeploymentoptions.aspx).  
+    Дополнительные типы и методы, представляющие интерес, включают [TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentPlanHandle](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanhandle.aspx) и [SqlDeploymentOptions](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqldeploymentoptions.aspx).  
   
     Далее определяем вспомогательный класс, который работает с планом развертывания.  
   
@@ -601,7 +601,7 @@ ms.locfileid: "75242676"
     </Project>  
     ```  
   
-4.  В файле SQLPROJ каждого проекта, в котором будут запускаться участники, импортируйте файл целей построения, добавив следующую инструкцию в файл SQLPROJ после узла \<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/> в файле:  
+4.  В файле SQLPROJ для любого проекта, где вы хотите запустить участники, импортируйте файл целей построения, добавив следующую инструкцию в файл SQLPROJ после узла \<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" \/> в файле.  
   
     ```  
     <Import Project="$(MSBuildExtensionsPath)\MyContributors\MyContributors.targets " />  
@@ -741,7 +741,7 @@ ms.locfileid: "75242676"
 Можно создать дополнительные средства для обработки выходных XML-файлов. Это лишь один пример применения [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx). Также можно создать [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx), чтобы изменить план развертывания до его выполнения.  
   
 ## <a name="see-also"></a>См. также:  
-[Walkthrough: Extend Database Project Build to Generate Model Statistics](https://msdn.microsoft.com/library/ee461508(v=vs.100).aspx) (Пошаговое руководство. Расширение сборки для проекта базы данных для создания статистики модели)  
+[Пошаговое руководство. Расширение сборки проекта базы данных для формирования статистики модели](https://msdn.microsoft.com/library/ee461508(v=vs.100).aspx)  
 [Пошаговое руководство. Расширение процесса развертывания проекта базы данных для изменения плана развертывания](https://msdn.microsoft.com/library/ee461507(v=vs.100).aspx)  
 [Изменение процесса сборки и развертывания базы данных с помощью участников сборки и развертывания](https://msdn.microsoft.com/library/ee461505(v=vs.100).aspx)  
   

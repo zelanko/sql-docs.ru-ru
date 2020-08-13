@@ -2,21 +2,21 @@
 title: Обновление компонентов Python и R
 description: Обновите R и Python в Службах машинного обучения SQL Server или SQL Server R Services, используя sqlbindr.exe для привязки к Machine Learning Server.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 04/03/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: cawrites
 ms.author: chadam
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 4aebb9e64c73762166aa81aebd1bfbab22191bfc
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 918ab8c2b1e643196e99cd11ff92c07c3978e078
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487397"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900078"
 ---
 # <a name="upgrade-machine-learning-python-and-r-components-in-sql-server-instances"></a>Обновление компонентов машинного обучения (R и Python) в экземплярах SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 Интеграция R и Python в SQL Server включает в себя пакеты с открытым кодом и собственные пакеты Майкрософт.
                                                                                
@@ -263,9 +263,9 @@ Anaconda 4.2 и Python 3.5  | 4.2/3.5.2 | 4.2/3.5.2 | | | |
 
 |Имя|Описание|
 |------|------|
-|*list*| Выводит список идентификаторов всех экземпляров баз данных SQL на текущем компьютере.|
-|*bind*| Обновляет указанный экземпляр базы данных SQL до последней версии R Server и обеспечивает автоматическое получение экземпляром будущих обновлений для R Server.|
-|*unbind*|Удаляет последнюю версию R Server из указанного экземпляра базы данных SQL и блокирует применение будущих обновлений R Server к экземпляру.|
+|*list*| Выводит список идентификаторов всех экземпляров SQL Server на текущем компьютере.|
+|*bind*| Обновляет указанный экземпляр SQL Server до последней версии R Server и обеспечивает автоматическое получение экземпляром будущих обновлений для R Server.|
+|*unbind*|Удаляет последнюю версию R Server из указанного экземпляра SQL Server и блокирует применение будущих обновлений R Server к экземпляру.|
 
 <a name="sqlbindr-error-codes"><a/>
 

@@ -1,6 +1,6 @@
 ---
 title: Кластеры SQL Server с несколькими подсетями.
-description: Сведения о настройке экземпляра отказоустойчивого кластера SQL Server в среде с несколькими подсетями.
+description: Сведения о настройке экземпляра отказоустойчивого кластера SQL Server в среде с несколькими подсетями, который обеспечивает аварийное восстановление и высокий уровень доступности.
 ms.custom: seo-lt-2019
 ms.date: 09/01/2016
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e257ead5f858e80095c077643b283645917271be
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 50562836f848834744ceb24365461bc43e8fe949
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258154"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901158"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>Кластеры SQL Server с несколькими подсетями [SQL Server]
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Отказоустойчивый кластер с узлами в нескольких подсетях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] представляет собой конфигурацию, в которой узлы отказоустойчивого кластера подключены к разным подсетям или разным наборам подсетей. Эти подсети могут находиться в одном месте или на географически распределенных сайтах. Кластеры географически распределенных сайтов иногда называют растянутыми. Поскольку не существует общедоступного для всех узлов хранилища, существует необходимость в репликации данных между хранилищами данных, расположенных в разных подсетях. При репликации данных в наличии имеется несколько копий данных. Поэтому, отказоустойчивый кластер с узлами, расположенными в нескольких подсетях, обеспечивает не только высокий уровень доступности, но и является решением для аварийного восстановления данных.  
   
    

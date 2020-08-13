@@ -1,7 +1,7 @@
 ---
 title: Использование Always Encrypted с SqlClient
 description: Узнайте, как разрабатывать приложения с использованием Microsoft.Data.SqlClient и Always Encrypted для обеспечения безопасности данных.
-ms.date: 05/06/2020
+ms.date: 07/09/2020
 ms.assetid: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: cheenamalhotra
 ms.author: v-chmalh
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 5b4634d1d9bed66aed6d7871d1e2c14813e5ec34
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 1bdb50bccf859bdd640e1da1650dc160d1d79c1e
+ms.sourcegitcommit: 7ce4a81c1b91239c8871c50f97ecaf387f439f6c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886471"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86217772"
 ---
 # <a name="using-always-encrypted-with-the-microsoft-net-data-provider-for-sql-server"></a>Использование Always Encrypted с поставщиком данных Microsoft .NET для SQL Server
 
@@ -74,6 +74,9 @@ connection.Open();
 3. Укажите используемый протокол аттестации, задав ключевое слово `Attestation Protocol` в строке подключения. Этому ключевому слову должно быть присвоено значение HGS.
 
 Пошаговое руководство см. в статье [Учебник. Develop a .NET application using Always Encrypted with secure enclaves](tutorial-always-encrypted-enclaves-develop-net-apps.md) (Разработка приложения NET с помощью Always Encrypted с безопасными анклавами).
+
+> [!NOTE]
+> Always Encrypted с безопасными анклавами поддерживается только в Windows.
 
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>Получение и изменение данных в зашифрованных столбцах
 
@@ -288,13 +291,13 @@ using (SqlCommand cmd = connection.CreateCommand())
 
 ### <a name="using-built-in-column-master-key-store-providers"></a>Использование встроенных поставщиков хранилища главных ключей столбцов
 
-В состав **поставщика данных Microsoft .NET для SQL Server** входят следующие встроенные поставщики хранилища главных ключей столбцов, которые предварительно зарегистрированы с конкретными именами поставщиков (используемыми для поиска поставщика).
+В состав **поставщика данных Microsoft .NET для SQL Server** входят следующие встроенные поставщики хранилища главных ключей столбцов, которые предварительно зарегистрированы с конкретными именами поставщиков (используемыми для поиска поставщика). Эти встроенные поставщики хранилища ключей поддерживаются только в Windows.
 
-| Class | Описание | Имя поставщика |
-|:---|:---|:---|
-|[Класс SqlColumnEncryptionCertificateStoreProvider](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider) | Поставщик для хранилища сертификатов Windows. | MSSQL_CERTIFICATE_STORE |
-|[Класс SqlColumnEncryptionCngProvider](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncngprovider) | Поставщик хранилища ключей, поддерживающий [Microsoft Cryptography API: Next Generation (CNG) API](https://docs.microsoft.com/windows/win32/seccng/cng-portal). Как правило, такое хранилище представляет собой аппаратный модуль безопасности — физическое устройство, которое защищает цифровые ключи и управляет ими, а также обеспечивает обработку шифрования. | MSSQL_CNG_STORE |
-| [Класс SqlColumnEncryptionCspProvider](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncspprovider) | Поставщик хранилища ключей, поддерживающий [Microsoft Cryptography API (CAPI)](https://docs.microsoft.com/windows/win32/seccrypto/cryptographic-service-providers). Как правило, такое хранилище представляет собой аппаратный модуль безопасности — физическое устройство, которое защищает цифровые ключи и управляет ими, а также обеспечивает обработку шифрования. | MSSQL_CSP_PROVIDER |
+| Класс | Описание | Имя поставщика | Платформа |
+|:---|:---|:---|:---|
+|[Класс SqlColumnEncryptionCertificateStoreProvider](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider) | Поставщик для хранилища сертификатов Windows. | MSSQL_CERTIFICATE_STORE | Windows |
+|[Класс SqlColumnEncryptionCngProvider](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncngprovider) | Поставщик хранилища ключей, поддерживающий [Microsoft Cryptography API: Next Generation (CNG) API](https://docs.microsoft.com/windows/win32/seccng/cng-portal). Как правило, такое хранилище представляет собой аппаратный модуль безопасности — физическое устройство, которое защищает цифровые ключи и управляет ими, а также обеспечивает обработку шифрования. | MSSQL_CNG_STORE | Windows |
+| [Класс SqlColumnEncryptionCspProvider](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlcolumnencryptioncspprovider) | Поставщик хранилища ключей, поддерживающий [Microsoft Cryptography API (CAPI)](https://docs.microsoft.com/windows/win32/seccrypto/cryptographic-service-providers). Как правило, такое хранилище представляет собой аппаратный модуль безопасности — физическое устройство, которое защищает цифровые ключи и управляет ими, а также обеспечивает обработку шифрования. | MSSQL_CSP_PROVIDER | Windows |
 
 Для использования этих поставщиков не требуется изменять код приложения, однако необходимо учесть следующие моменты:
 
@@ -303,7 +306,11 @@ using (SqlCommand cmd = connection.CreateCommand())
 
 ### <a name="using-the-azure-key-vault-provider"></a>Использование поставщика Azure Key Vault
 
-Хранилище ключей Azure удобно для хранения главных ключей столбцов для постоянного шифрования, особенно в том случае, если приложения размещены в Azure. **Поставщик данных Microsoft .NET для SQL Server** не содержит встроенный поставщик хранилища главных ключей столбцов для хранилища ключей Azure, но он доступен как пакет NuGet, который можно легко интегрировать в приложение. Дополнительные сведения см. в статье [Постоянное шифрование: защита конфиденциальных данных в базе данных SQL с помощью шифрования базы данных и хранение ключей шифрования в хранилище ключей Azure](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/).
+Хранилище ключей Azure удобно для хранения главных ключей столбцов для постоянного шифрования, особенно в том случае, если приложения размещены в Azure. **Поставщик данных Microsoft .NET для SQL Server** не содержит встроенный поставщик хранилища главных ключей столбцов для Azure Key Vault, но он доступен как пакет NuGet ([Microsoft.Data.SqLClient.AlwaysEncrypted.AzureKeyVaultProvider](https://www.nuget.org/packages/Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider)), который можно легко интегрировать в приложение. Дополнительные сведения см. в статье [Постоянное шифрование: защита конфиденциальных данных в базе данных SQL с помощью шифрования базы данных и хранение ключей шифрования в хранилище ключей Azure](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/).
+
+| Класс | Описание | Имя поставщика | Платформа |
+|:---|:---|:---|:---|
+|[Класс SqlColumnEncryptionAzureKeyVaultProvider](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.alwaysencrypted.azurekeyvaultprovider.sqlcolumnencryptionazurekeyvaultprovider) | Поставщик для Azure Key Vault. | AZURE_KEY_VAULT | Windows, Linux, macOS |
 
 Примеры, демонстрирующие выполнение шифрования и расшифровки с помощью Azure Key Vault, см. в статьях об [использовании Azure Key Vault с Always Encrypted](azure-key-vault-example.md) и [с безопасными анклавами](azure-key-vault-enclave-example.md).
 
@@ -508,7 +515,8 @@ SqlConnection.ColumnEncryptionTrustedMasterKeyPaths.Add(serverName, trustedKeyPa
 - Настройте подключения базы данных к исходной и конечной таблицам без включения функции Always Encrypted.
 - Задайте параметр `AllowEncryptedValueModifications` (см. сведения о [SqlBulkCopyOptions](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlbulkcopyoptions)).
 
-Примечание. Используйте параметр `AllowEncryptedValueModifications` с осторожностью. **Поставщик данных Microsoft .NET для SQL Server** не проверяет, являются ли данные зашифрованными и используется ли при шифровании тот же тип, алгоритм и ключ шифрования, что у целевого столбца. Таким образом, изменение значений может повредить целевую базу.
+> [!NOTE]
+> Используйте параметр `AllowEncryptedValueModifications` с осторожностью. **Поставщик данных Microsoft .NET для SQL Server** не проверяет, являются ли данные зашифрованными и используется ли при шифровании тот же тип, алгоритм и ключ шифрования, что у целевого столбца. Таким образом, изменение значений может повредить целевую базу.
 
 Ниже приведен пример копирования данных из одной таблицы в другую. Предполагается, что столбцы SSN и BirthDate зашифрованы.
 

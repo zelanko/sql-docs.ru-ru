@@ -1,10 +1,11 @@
 ---
 title: Переименование экземпляра отказоустойчивого кластера
+description: В этой статье описывается, как переименовать экземпляр SQL Server, являющийся частью отказоустойчивого кластера. Эта операция отличается от переименования изолированного экземпляра.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], virtual servers
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: af1ec295ef8567496da84819532342164cb269cb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ca8faa59c304f145eb2ac1dc46bab46d368d163b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75230722"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897657"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>переименовать экземпляр отказоустойчивого кластера SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Если экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] является частью отказоустойчивого кластера, процесс переименования виртуального сервера отличается от процесса переименования изолированного экземпляра. Дополнительные сведения см. в статье [Переименование компьютера, на который установлен изолированный экземпляр SQL Server](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md).  
   
  Имя виртуального сервера всегда совпадает с сетевым именем SQL-сервера (сетевое имя виртуального SQL-сервера). Несмотря на то, что имя виртуального сервера можно изменить, изменить имя экземпляра нельзя. Например, можно изменить имя виртуального сервера «VS1\экземпляр1» на другое имя, например «SQL35\экземпляр1», но часть имени, содержащая имя экземпляра (т. е. экземпляр1) останется неизменной.  
@@ -63,7 +64,7 @@ ms.locfileid: "75230722"
 ## <a name="additional-considerations-after-the-renaming-operation"></a>Дополнительные меры после операции переименования  
  После изменения сетевого имени кластера отработки отказа необходимо выполнить проверку и следующие инструкции для включения всех сценариев в агенте [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и службах [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
- **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .** Проверьте и выполните следующие дополнительные действия для службы агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
+ **Служба агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].** Проверьте и выполните дополнительные действия для службы агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 -   Исправьте параметры в реестре, если агент SQL Server настроен на пересылку событий. Дополнительные сведения см. в статье [Назначение сервера пересылки событий (среда SQL Server Management Studio)](https://msdn.microsoft.com/library/81dfcbe4-3000-4e77-99de-bf85fef63a12).  
   

@@ -1,7 +1,7 @@
 ---
 title: Пример использования поставщика Azure Key Vault с поддержкой Always Encrypted с безопасными анклавами | Документация Майкрософт
 ms.custom: ''
-ms.date: 10/18/2019
+ms.date: 07/09/2020
 ms.reviewer: v-kaywon
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: karinazhou
 ms.author: v-jizho2
-ms.openlocfilehash: a4ba44733d2a14323f128f1ab105e79169b90cce
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d97d32ba50255181ae21cf0a1ac1cd079092b122
+ms.sourcegitcommit: 7ce4a81c1b91239c8871c50f97ecaf387f439f6c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75250945"
+ms.lasthandoff: 07/10/2020
+ms.locfileid: "86217762"
 ---
 # <a name="example-demonstrating-use-of-azure-key-vault-provider-with-always-encrypted-enabled-with-secure-enclaves"></a>Пример использования поставщика Azure Key Vault с поддержкой Always Encrypted с безопасными анклавами
 
@@ -26,6 +26,9 @@ ms.locfileid: "75250945"
 В этом примере демонстрируется использование поставщика Azure Key Vault при доступе к зашифрованным столбцам.
 
 [!code-csharp [Azure Key Vault Provider with Enclave Example#1](~/../sqlclient/doc/samples/AzureKeyVaultProviderWithEnclaveProviderExample.cs#1)]
+
+> [!NOTE]
+> Always Encrypted с безопасными анклавами поддерживается только в Windows.
 
 ## <a name="see-also"></a>См. также:
 

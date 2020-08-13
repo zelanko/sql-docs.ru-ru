@@ -1,6 +1,6 @@
 ---
 title: Восстановление после сбоя экземпляра отказоустойчивого кластера
-description: В этом документе описано, как выполнить восстановление после отработки отказа экземпляра отказоустойчивого кластера SQL Server.
+description: Узнайте, как выполнить восстановление после отработки отказа экземпляра отказоустойчивого кластера с помощью оснастки "Диспетчер отказоустойчивости кластеров" после отработки отказа в SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3d151d0c-e841-4325-8606-c094de37d7d1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1670638b32f2f5bd32a9ee7b12e28e7a468b75da
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 44f178d5433a1d3de1670b762b6e1d7e60bad033
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74821990"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901208"
 ---
 # <a name="recover-from-failover-cluster-instance-failure"></a>Восстановление после сбоя экземпляра отказоустойчивого кластера
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   В этом разделе описывается восстановление кластера с помощью оснастки «Диспетчер отказоустойчивости кластеров» после отработки отказа в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Оснастка «Диспетчер отказоустойчивости кластеров» — это приложение управления кластером для службы WSFC.  
   
 -   [Восстановление после неустранимого сбоя](#Scenario1)  

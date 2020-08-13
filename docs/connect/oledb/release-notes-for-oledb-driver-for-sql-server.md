@@ -1,23 +1,23 @@
 ---
 title: Заметки о выпуске OLE DB Driver
 description: В этих заметках о выпуске описываются изменения в каждом выпуске драйвера Microsoft OLE DB Driver for SQL Server.
-ms.date: 02/27/2020
+ms.date: 05/25/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: genemi
 author: mateusz-kmiecik
 ms.author: v-makmie
-ms.openlocfilehash: 70f3239f1e644850bc391a0be5ef8918e1e9e617
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 296efcdd888e2424cfb80f40221f7d8f65acab89
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81727967"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011918"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Заметки о выпуске Microsoft OLE DB Driver for SQL Server
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Эта страница описывает, что было добавлено в каждой версии драйвера Microsoft OLE DB для SQL Server.
 
@@ -27,6 +27,37 @@ Hello, from now on, please use the table-based format standard for all new Relea
 See section "## 18.2.1" for a live example in this article.
 Thank you. For questions, contact GeneMi. (2019/03/16)
 -->
+
+## <a name="1840"></a>18.4.0
+![скачать](../../ssms/media/download-icon.png) [Скачать установщик x64](https://go.microsoft.com/fwlink/?linkid=2129954)  
+![скачать](../../ssms/media/download-icon.png) [Скачать установщик x86](https://go.microsoft.com/fwlink/?linkid=2131003)  
+
+Выпущено: Май 2020 г.
+
+Если необходимо загрузить установщик на языке, отличном от обнаруженного, можно использовать эти прямые ссылки.  
+Для драйвера x64: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x40a)  
+Для драйвера x86: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x40a)  
+
+### <a name="features-added"></a>Добавлены возможности
+
+| Добавленная возможность | Сведения |
+| :------------ | :------ |
+| Поддержка разрешения IP-адресов прозрачной сети (TNIR) |[Разрешение IP-адресов прозрачной сети (TNIR)](features/using-transparent-network-ip-resolution.md)|
+| Поддержка кодировки UTF-8 в клиенте | [Поддержка UTF-8 в драйвере OLE DB для SQL Server](features/utf-8-support-in-oledb-driver-for-sql-server.md) |
+
+### <a name="bugs-fixed"></a>Исправлены ошибки
+
+| Исправление ошибки | Сведения |
+| :-------- | :------ |
+| Исправлены различные ошибки в интерфейсе [ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85)) | Некоторые ошибки, касающиеся многобайтовых кодовых страниц, приводили к тому, что интерфейс преждевременно сообщал о завершении потока во время операции чтения.|
+| Исправлена утечка памяти в интерфейсе [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) | Исправлена утечка памяти в интерфейсе [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) при включении свойства `SSPROP_IRowsetFastLoad`. |
+| Исправлена ошибка в сценариях с использованием типа данных `sql_variant` и строк, отличных от ASCII. | Некоторые сценарии с использованием типа данных `sql_variant` и строк, отличных от ASCII, могут приводить к повреждению данных. Подробная информация доступна в следующих статьях: [Известные проблемы](ole-db-data-types/ssvariant-structure.md#known-issues). |
+| Устранены проблемы с кнопкой *Проверить соединение* в диалоговом окне [настройки UDL](help-topics/data-link-pages.md). | Кнопка *Проверить соединение* в диалоговом окне [настройки UDL](help-topics/data-link-pages.md) теперь учитывает свойства инициализации, заданные на вкладке *Все*. |
+| Исправлена обработка значения по умолчанию для свойства `SSPROP_INIT_PACKETSIZE` | Устранена непредвиденная ошибка, возникавшая, когда свойству `SSPROP_INIT_PACKETSIZE` присваивалось значение по умолчанию `0`. Подробные сведения об этом свойстве см. в статье [Свойства инициализации и авторизации](ole-db-data-source-objects/initialization-and-authorization-properties.md). |
+| Устранены проблемы переполнения буфера в [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md) | Устранены проблемы переполнения буфера при использовании неверно сформированных файлов данных. |
+| Устранены проблемы со специальными возможностями | Устранены проблемы со специальными возможностями в пользовательском интерфейсе установщика и [диалоговом окне входа в SQL Server](help-topics/sql-server-login-dialog.md) (чтение содержимого, позиции табуляции). |
+
+## <a name="previous-releases"></a>Предыдущие выпуски
 
 ## <a name="1830"></a>18.3.0
 
@@ -53,8 +84,6 @@ Thank you. For questions, contact GeneMi. (2019/03/16)
 | :-------- | :------ |
 | Исправлена логика удаления индекса в [IIndexDefinition::DropIndex](https://go.microsoft.com/fwlink/?linkid=2106448). | Предыдущие версии драйвера OLE DB не умеют удалять индекс первичного ключа, если идентификатор схемы не совпадает с идентификатором владельца этого индекса. |
 | &nbsp; | &nbsp; |
-
-## <a name="previous-releases"></a>Предыдущие выпуски
 
 Чтобы скачать предыдущие версии драйвера OLE DB, щелкните заголовки со ссылками в приведенных ниже разделах.
 

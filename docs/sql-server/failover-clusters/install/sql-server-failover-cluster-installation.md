@@ -1,23 +1,24 @@
 ---
 title: Установка экземпляра отказоустойчивого кластера
+description: Узнайте, как установить отказоустойчивый кластер SQL Server. Создайте и настройте экземпляр отказоустойчивого кластера, запустив программу установки SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c3de22853ccef8bd38c338b05043da7061ffeed0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 574f8f557eab10fa43be721f9b73bfc446b04687
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75230623"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897660"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>Установка отказоустойчивого кластера SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Чтобы установить отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , необходимо создать и настроить экземпляр отказоустойчивого кластера, запустив программу установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="installing-a-failover-cluster"></a>Установка отказоустойчивого кластера  
@@ -39,7 +40,7 @@ ms.locfileid: "75230623"
   
     -   Все узлы на отказоустойчивом кластере должны работать на одной платформе: либо на 32-разрядной, либо на 64-разрядной. Кроме того, на них должен работать один и тот же выпуск и версия операционной системы. Кроме того, 64-разрядные версии выпусков [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] должны быть установлены на 64-разрядном оборудовании, работающем под управлением 64-разрядных версий операционной системы Windows. В этой версии отсутствует поддержка WOW64 для отказоустойчивой кластеризации.  
   
-3.  Указание нескольких IP-адресов для каждого экземпляра отказоустойчивого кластера. Для каждой подсети можно указать несколько IP-адресов. Если для одной подсети имеется несколько IP-адресов, то программа установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] устанавливает зависимость в «И». Если выполняется кластеризация узлов по нескольким подсетям, то программа установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] устанавливает зависимость в «ИЛИ».  
+3.  Указание нескольких IP-адресов для каждого экземпляра отказоустойчивого кластера. Для каждой подсети можно указать несколько IP-адресов. Если в одной подсети имеется несколько IP-адресов, то программа установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] устанавливает зависимость в "И". Если выполняется кластеризация узлов по нескольким подсетям, то программа установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] устанавливает зависимость в «ИЛИ».  
 
 4.  Для экземпляра отказоустойчивого кластера SQL Server требуется, чтобы узлы кластера были присоединены к домену. Следующие конфигурации **не поддерживаются**:
     - Экземпляр отказоустойчивого кластера SQL в кластерах рабочей группы. 

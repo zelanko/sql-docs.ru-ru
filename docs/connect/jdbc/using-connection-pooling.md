@@ -1,5 +1,6 @@
 ---
-title: Использование объединения подключений в пул | Документация Майкрософт
+title: Использование пулов подключений
+description: Узнайте, как драйвер JDBC для SQL Server предоставляет интерфейсы, совместимые с JDBC, для поддержки пулов соединений в Java.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 699d4e8a-34bf-4c60-b0d5-4a10dad6084a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4551e5a058e03d7a45d2dd21d91821a628e1da3a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c3bcacec5f85150f7de437d936463a3b3807f9ef
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924024"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391753"
 ---
 # <a name="using-connection-pooling"></a>Использование пулов подключений
 
@@ -30,7 +31,7 @@ ms.locfileid: "80924024"
 
 Далее представлены классы для реализации пулов соединений.  
   
-| Class                                                           | Реализации                                                    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Class                                                           | Реализации                                                    | Описание                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | --------------------------------------------------------------- | ------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | com.microsoft.sqlserver.jdbc. SQLServerXADataSource             | javax.sql.ConnectionPoolDataSource и javax.sql.XADataSource | Рекомендуется использовать класс [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) для всех задач сервера Java EE, так как в нем реализованы все интерфейсы пулов JDBC 3.0 и интерфейсы XA.                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | com.microsoft.sqlserver.jdbc. SQLServerConnectionPoolDataSource | javax.sql.ConnectionPoolDataSource                            | Этот класс представляет фабрику соединений, которая позволяет серверу приложений Java EE заполнять пул соединений физическими соединениями. Если конфигурация поставщика Java EE подразумевает необходимость класса, реализующего javax.sql.ConnectionPoolDataSource, укажите имя класса в свойстве [SQLServerConnectionPoolDataSource](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md). Вместо этого рекомендуется использовать класс [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md), так как в нем реализуются и интерфейсы пулов, и интерфейсы XA, а его работоспособность проверена в большем числе конфигураций сервера Java EE. |

@@ -2,7 +2,7 @@
 title: Использование функции Always Encrypted с драйвером JDBC
 description: Узнайте, как использовать Always Encrypted в приложении Java с драйвером JDBC для SQL Server для шифрования конфиденциальных данных на сервере.
 ms.custom: ''
-ms.date: 05/06/2020
+ms.date: 07/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c63c15ad0a435235f246945d25c732798fb758df
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: b2005416234f517a8414f3d9405968659f7e553a
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886357"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279623"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Использование функции Always Encrypted с драйвером JDBC
 
@@ -44,11 +44,11 @@ ms.locfileid: "82886357"
 ### <a name="using-built-in-column-master-key-store-providers"></a>Использование встроенных поставщиков хранилища главных ключей столбцов
 Драйвер Microsoft JDBC для SQL Server поставляется со следующими встроенными поставщиками хранилища главных ключей столбцов. Некоторые из этих поставщиков предварительно зарегистрированы с определенными именами поставщиков (используемыми для поиска поставщика), а для некоторых либо требуются дополнительные учетные данные, либо нужна явная регистрация.
 
-| Class                                                 | Описание                                        | Имя поставщика  | Предварительно зарегистрирован? |
-| :---------------------------------------------------- | :------------------------------------------------- | :---------------------- | :----------------- |
-| **SQLServerColumnEncryptionAzureKeyVaultProvider**    | Поставщик для хранилища ключей для Azure Key Vault. | AZURE_KEY_VAULT         | _Нет_ до версии драйвера JDBC 7.4.1. _Да_ начиная версии драйвера JDBC 7.4.1. |
-| **SQLServerColumnEncryptionCertificateStoreProvider** | Поставщик для хранилища сертификатов Windows.      | MSSQL_CERTIFICATE_STORE | _Да_                |
-| **SQLServerColumnEncryptionJavaKeyStoreProvider**     | Поставщик для хранилища ключей Java.                  | MSSQL_JAVA_KEYSTORE     | _Да_                |
+| Class                                                 | Описание                                        | Имя поставщика  | Предварительно зарегистрирован? | Платформа |
+| :---------------------------------------------------- | :------------------------------------------------- | :---------------------- | :----------------- | :------- |
+| **SQLServerColumnEncryptionAzureKeyVaultProvider**    | Поставщик для хранилища ключей для Azure Key Vault. | AZURE_KEY_VAULT         | _Нет_ до версии драйвера JDBC 7.4.1. _Да_ начиная версии драйвера JDBC 7.4.1. | Windows, Linux, macOS |
+| **SQLServerColumnEncryptionCertificateStoreProvider** | Поставщик для хранилища сертификатов Windows.      | MSSQL_CERTIFICATE_STORE | _Да_                | Windows |
+| **SQLServerColumnEncryptionJavaKeyStoreProvider**     | Поставщик для хранилища ключей Java.                  | MSSQL_JAVA_KEYSTORE     | _Да_                | Windows, Linux, macOS |
 |||||
 
 В случае с предварительно зарегистрированными поставщиками хранилища ключей вам не нужно вносить изменения в код приложения для использования этих поставщиков, но обратите внимание на следующие элементы.
@@ -152,7 +152,7 @@ WITH VALUES
 ```
 
 > [!IMPORTANT]
-> В то время как другие поставщики хранилища ключей в этой статье доступны на всех поддерживаемых драйвером платформах, реализация SQLServerColumnEncryptionCertificateStoreProvider драйвера JDBC доступна только в операционных системах Windows. Эта реализация зависит от библиотеки mssql-jdbc_auth-\<версия>-\<arch>.dll, которая доступна в пакете драйвера. Чтобы использовать этот поставщик, скопируйте файл mssql-jdbc_auth-\<версия>-\<arch>.dll в системный каталог Windows на компьютере, на котором установлен драйвер JDBC. Или можно задать системное свойство java.libary.path для указания каталога, в котором содержится файл mssql-jdbc_auth-\<версия>-\<arch>.dll. При использовании 32-разрядной виртуальной машины Java (JVM) следует использовать файл mssql-jdbc_auth-\<версия>-x86.dll в папке x86, даже если используется операционная система x64. При использовании 64-разрядной виртуальной машины Java и процессора x64 используйте файл mssql-jdbc_auth-\<версия>-x64.dll в папке x64. Например, если используется 32-разрядная виртуальная машина Java и драйвер JDBC установлен в каталоге по умолчанию, можно указать местоположение файла DLL, использовав следующий аргумент виртуальной машины при запуске приложения Java: `-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
+> В то время как другие поставщики хранилища ключей в этой статье доступны на всех поддерживаемых драйвером платформах, реализация SQLServerColumnEncryptionCertificateStoreProvider драйвера JDBC доступна только в операционных системах Windows. Эта реализация зависит от библиотеки mssql-jdbc_auth-\<version>-\<arch>.dll, которая доступна в пакете драйвера. Чтобы использовать этот поставщик, скопируйте файл mssql-jdbc_auth-\<version>-\<arch>.dll в системный каталог Windows на компьютере, на котором установлен драйвер JDBC. Или можно задать системное свойство java.libary.path для указания каталога, в котором содержится файл mssql-jdbc_auth-\<version>-\<arch>.dll. При использовании 32-разрядной виртуальной машины Java (JVM) следует использовать файл mssql-jdbc_auth-\<version>-x86.dll в папке x86, даже если используется операционная система x64. При использовании 64-разрядной виртуальной машины Java и процессора x64 используйте файл mssql-jdbc_auth-\<version>-x64.dll в папке x64. Например, если используется 32-разрядная виртуальная машина Java и драйвер JDBC установлен в каталоге по умолчанию, можно указать местоположение файла DLL, использовав следующий аргумент виртуальной машины при запуске приложения Java: `-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
 
 ### <a name="using-java-key-store-provider"></a>Использование поставщика хранилища ключей Java
 Драйвер JDBC поставляется со встроенной реализацией поставщика хранилища ключей для хранилища ключей Java. Если свойство строки подключения **keyStoreAuthentication** содержится в строке подключения и имеет значение JavaKeyStorePassword, драйвер автоматически создает и регистрирует поставщик для хранилища ключей Java. Имя поставщика хранилища ключей Java — MSSQL_JAVA_KEYSTORE. Это имя можно также запрашивать с помощью API SQLServerColumnEncryptionJavaKeyStoreProvider.getName(). 

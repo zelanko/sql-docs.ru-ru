@@ -1,36 +1,36 @@
 ---
 title: Скачивание драйвера Microsoft OLE DB для SQL Server | Документация Майкрософт
 description: Скачайте драйвер Microsoft ODBC Driver for SQL Server, чтобы разрабатывать Windows-приложения с подключением к SQL Server и базе данных SQL Azure.
-ms.date: 02/27/2020
+ms.date: 05/25/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 626cc125d3bbf0603e8e27f26592a831920f35ef
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 000d7c39221f54459783fc9117a35a880fb02c92
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488386"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006988"
 ---
 # <a name="download-microsoft-ole-db-driver-for-sql-server"></a>Скачать драйвер Microsoft OLE DB для SQL Server
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Драйвер OLE DB для SQL Server — это изолированный прикладной программный интерфейс (API) для доступа к данным, используемый в OLE DB. Драйвер OLE DB для SQL Server есть в Windows и предоставляется в формате одиночной библиотеки динамической компоновки (DLL).
 
 ## <a name="download"></a>Скачивание
 
-Драйвер Microsoft OLE DB 18.3 для SQL Server — это последняя общедоступная версия. Если у вас установлена предыдущая версия, Microsoft OLE DB 18 для SQL Server, то при установке 18.3 она обновляется до версии 18.3.
+Драйвер Microsoft OLE DB 18.4 для SQL Server — это последняя общедоступная версия. Если у вас установлена предыдущая версия, Microsoft OLE DB 18 для SQL Server, при установке 18.4 она обновляется до версии 18.4.
 
-**[![Скачать](../../ssms/media/download-icon.png) Скачать драйвер Microsoft OLE DB для SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2117515)**  
-**[![Скачать](../../ssms/media/download-icon.png) Скачать драйвер Microsoft OLE DB для SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2117517)**  
+**[![Скачать](../../ssms/media/download-icon.png) Скачать драйвер Microsoft OLE DB для SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2129954)**  
+**[![Скачать](../../ssms/media/download-icon.png) Скачать драйвер Microsoft OLE DB для SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2131003)**  
 
 ### <a name="version-information"></a>Сведения о версии
 
-- Номер выпуска: 18.3.0
-- Выпущено: 15 октября 2019 г.
+- Номер выпуска: 18.4.0
+- Выпущено: 30 мая 2020 г.
 
 > [!Note]
 > Если вы открываете локализованную версию этой страницы и хотите просмотреть актуальные материалы, посетите эту страницу на [версии сайта на языке US-English](https://aka.ms/downloadmsoledbsqlusenglish). С версии сайта US-English вы можете скачать SSMS на других [языках из числа доступных](#available-languages).
@@ -39,11 +39,11 @@ ms.locfileid: "81488386"
 
 Этот выпуск драйвера Microsoft OLE DB для SQL Server можно установить на следующих языках:
 
-Драйвер Microsoft OLE DB 18.3 для SQL Server (x64):  
-[Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2117515&clcid=0x40a)
+Драйвер Microsoft OLE DB 18.4 для SQL Server (x64)  
+[Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2129954&clcid=0x40a)
 
-Драйвер Microsoft OLE DB 18.3 для SQL Server (x86):  
-[Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2117517&clcid=0x40a)
+Драйвер Microsoft OLE DB 18.4 для SQL Server (x86)  
+[Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2131003&clcid=0x40a)
 
 ## <a name="release-notes"></a>Заметки о выпуске
 

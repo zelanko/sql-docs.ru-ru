@@ -1,5 +1,6 @@
 ---
 title: Свойства сервера отчетов (вкладка «Вход в систему»)
+description: Узнайте о вкладке "Вход в систему" в диалоговом окне свойств сервера отчетов в SQL Server. Узнайте, как использовать ее для указания учетной записи, а также для запуска или завершения работы службы.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: f54be594-f290-4db2-bf18-fd2521728a4a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1dda864021df72f2e45e2db08fec0c66765fb0a4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8a79108efea864af196de1d8b756195c1a9e4036
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306346"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897614"
 ---
 # <a name="report-server-properties-log-on-tab"></a>Свойства сервера отчетов (вкладка «Вход в систему»)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Используйте вкладку **Вход** в диалоговом окне **Свойства сервера отчетов** для указания учетной записи, используемой службой сервера отчетов, а также для запуска и остановки службы.  
   
 ## <a name="options"></a>Параметры  

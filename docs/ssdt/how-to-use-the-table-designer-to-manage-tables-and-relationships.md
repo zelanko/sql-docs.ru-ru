@@ -1,5 +1,6 @@
 ---
 title: Использование конструктора таблиц для управления таблицами и связями
+description: Знакомство с конструктором таблиц. Сведения о том, как использовать это средство для создания и изменения структуры таблицы базы данных и для просмотра связей между объектами базы данных.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -10,18 +11,17 @@ f1_keywords:
 ms.assetid: 322a2903-d7a6-4f52-9048-1bd413b4c799
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 924a48ffe75c043385043f02125c8e07cfe3fbbc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4262242a0ac9822bed793e1bd78a4ce51294d485
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75226827"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895805"
 ---
-# <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>Как использовать конструктор таблиц для управления таблицами и связями
+# <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>Руководство. использовать конструктор таблиц для управления таблицами и связями
 
 Конструктор таблиц наряду с редактором Transact\-SQL предоставляет графический пользовательский интерфейс для создания и изменения структуры таблиц, включая программные объекты, связанные с таблицами, для баз данных SQL Server.  Он запускается при создании таблицы для подключенной базы данных или проекта, а также при двойном щелчке таблицы для внесения в нее изменений в обозревателе объектов SQL Server или обозревателе решений.  
   
@@ -57,5 +57,5 @@ ms.locfileid: "75226827"
     Заслуживает внимания то, что, с точки зрения пользователя, создание и изменение сущностей базы данных для проекта вне сети идентично выполнению тех же задач с подключенной базой данных.  
   
 ## <a name="see-also"></a>См. также:  
-[Практическое руководство. Создание объектов базы данных с помощью конструктора таблиц](../ssdt/how-to-create-database-objects-using-table-designer.md)  
+[Руководство. создать объекты базы данных с помощью конструктора таблиц](../ssdt/how-to-create-database-objects-using-table-designer.md)  
   

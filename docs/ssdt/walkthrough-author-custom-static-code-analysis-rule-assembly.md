@@ -1,21 +1,21 @@
 ---
 title: Разработка сборки пользовательского правила анализа статического кода для SQL Server
+description: Узнайте, как создавать правила анализа кода SQL Server. Настройте правило, чтобы избегать инструкций WAITFOR DELAY в хранимых процедурах, триггерах и функциях.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: f7b6ed8c-a4e0-4e33-9858-a8aa40aef309
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: d11446e3ef8fade0c4cfe6ec885c40754861fc26
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 31d183a212ea18f681724d06834041b0a50f752c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257030"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896240"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>Пошаговое руководство по созданию сборки настраиваемого правила анализа статического кода для SQL Server
 
@@ -544,7 +544,7 @@ ms.locfileid: "75257030"
   
 3. Щелкните **Анализ кода**. Вы увидите новую категорию с именем RuleSamples.CategorySamples.  
   
-4. Разверните категорию RuleSamples. CategorySamples. Вы должны увидеть следующее: SR1004: Avoid WAITFOR DELAY statement in stored procedures, triggers, and functions (избегать инструкцию WAITFOR DELAY в хранимых процедурах, триггерах и функциях).  
+4. Разверните категорию RuleSamples. CategorySamples. Вы должны увидеть следующее: SR1004: Avoid WAITFOR DELAY statement in stored procedures, triggers, and functions (избегать инструкции WAITFOR DELAY в хранимых процедурах, триггерах и функциях).  
   
 ## <a name="see-also"></a>См. также:
 

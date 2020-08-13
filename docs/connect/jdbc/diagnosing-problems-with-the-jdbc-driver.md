@@ -1,5 +1,6 @@
 ---
-title: Диагностика проблем с JDBC Driver | Документация Майкрософт
+title: Диагностика проблем с JDBC Driver
+description: Узнайте, как диагностировать и устранять проблемы, связанные с обработкой ошибок, проверкой версии драйвера и трассировкой.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 723e2680-a0c5-4a7d-a319-1e49e41078cf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3728ac03477099b81ee51e8cbb779d9773984dbb
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f51f21c3ede1a3bd11cb73e5b9b2fbecfdd851d9
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922431"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381034"
 ---
 # <a name="diagnosing-problems-with-the-jdbc-driver"></a>Диагностика проблем с JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "80922431"
   
 ## <a name="in-this-section"></a>В этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Обработка ошибок](../../connect/jdbc/handling-errors.md)|Описывает обработку ошибок, возвращаемых из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Получение версии драйвера](../../connect/jdbc/getting-the-driver-version.md)|Описывает определение версии установленного драйвера JDBC.|  

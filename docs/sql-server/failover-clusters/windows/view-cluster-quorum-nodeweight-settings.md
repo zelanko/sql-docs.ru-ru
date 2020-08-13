@@ -1,5 +1,6 @@
 ---
 title: Просмотр параметров NodeWeight кворума кластера | Документация Майкрософт
+description: Ознакомьтесь с порядком просмотра параметров NodeWeight для каждого узла элемента в кластере отказоустойчивого кластера Windows Server. Эти параметры используются при голосовании с кворумом.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: b845e73a-bb01-4de2-aac2-8ac12abebc95
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6d3b98adece53952f72afc999f950c0388b65c96
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e75a83bd94e84058cb497885a448c15f37d6f4ee
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67904925"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896717"
 ---
 # <a name="view-cluster-quorum-nodeweight-settings"></a>Просмотр параметров NodeWeight кворума кластера
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   В этом разделе описан порядок просмотра параметров NodeWeight для каждого узла элемента в кластере отказоустойчивого кластера Windows Server (WSFC). Параметры NodeWeight используются при определении голосов в кворуме для поддержки аварийного восстановления и сценариев с несколькими подсетями для экземпляров отказоустойчивого кластера [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   **Перед началом работы:**  [Обязательные условия](#Prerequisites), [Безопасность](#Security)  

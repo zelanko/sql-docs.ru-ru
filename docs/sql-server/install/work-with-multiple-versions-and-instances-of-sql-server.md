@@ -1,5 +1,6 @@
 ---
 title: Работа с несколькими версиями и экземплярами
+description: Можно установить несколько экземпляров SQL Server или установить SQL Server на компьютере с более ранними версиями SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -17,18 +18,18 @@ helpviewer_keywords:
 - 32-bit edition [SQL Server]
 - editions [SQL Server], side-by-side installations
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 42359f4b8b6f36eec3c4618d39ee68d0f8c84ba5
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3067b285a1d821808323cff524b109f782172e84
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528413"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899627"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>Работа с несколькими версиями и экземплярами SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 Можно установить несколько экземпляров SQL Server или установить SQL Server на компьютере с более ранними версиями SQL Server.
 

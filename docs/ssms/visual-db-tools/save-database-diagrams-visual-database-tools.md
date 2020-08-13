@@ -13,22 +13,21 @@ helpviewer_keywords:
 ms.assetid: 747357f2-007c-4586-a371-c7fbe6a2c288
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 5b94759131082e2ce60e8a09dde728cadb4a94cb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 50f3bc0bdfaf804acc563bd6450541f0e364e825
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255144"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010661"
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>Сохранение диаграмм баз данных (визуальные инструменты для баз данных)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 При сохранении диаграммы базы данных могут быть сохранены все изменения в базе данных, включая изменения, выполненные в таблицах, столбцах и других ее объектах.  
   
 ### <a name="to-save-the-database-diagram"></a>Сохранение диаграммы базы данных  
   
-1.  В меню **Файл** выберите команду **Сохранить \<** _имя_таблицы_ **>** .  
+1.  В меню **Файл** выберите команду **Сохранить \<**_tablename_**>** .  
   
 2.  Если это новая диаграмма, которую еще ни разу не сохраняли, откроется диалоговое окно **Сохранить как** . Введите имя диаграммы.  
   

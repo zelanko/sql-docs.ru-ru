@@ -1,6 +1,6 @@
 ---
 title: Просмотр и чтение журнала диагностики для экземпляра отказоустойчивого кластера
-description: Узнайте, как просматривать и читать журнал диагностики, который создается экземпляром отказоустойчивого кластера SQL Server.
+description: Узнайте, как просматривать и читать журнал выполнения диагностики, который создается экземпляром отказоустойчивого кластера SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 44b631bb1c453ebc09e8a38a57b1a3160084b09d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e2f84b38751b57e1fe9ebba525e636da45a59954
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242884"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896673"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>Просмотр и чтение журнала диагностики экземпляра отказоустойчивого кластера
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Все критические ошибки и события предупреждений для библиотеки ресурсов SQL Server записываются в журнал событий Windows. Диагностические сведения, связанные с SQL Server и записываемые в журнал, перехватываются хранимой процедурой [sp_server_diagnostics (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) и записываются в файлы журнала диагностики отказоустойчивого кластера SQL Server (также называемые журналами *SQLDIAG*).  
   
 -   **Перед началом работы**  [Рекомендации](#Recommendations), [Безопасность](#Security)  
@@ -30,7 +30,7 @@ ms.locfileid: "75242884"
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> Рекомендации  
- По умолчанию журналы SQLDIAG хранятся в локальной папке LOG в каталоге экземпляра SQL Server, например C\Program Files\Microsoft SQL Server\MSSQL13.\<имя_экземпляра>\MSSQL\LOG, на том узле, где выполняется экземпляр отказоустойчивого кластера (FCI). Размер каждого файла журнала SQLDIAG ограничен 100 МБ. На компьютере сохраняются десять таких файлов журнала, после чего они освобождаются для новых журналов.  
+ По умолчанию журналы SQLDIAG хранятся в локальной папке LOG в каталоге экземпляра SQL Server, например C:\Program Files\Microsoft SQL Server\MSSQL13.\<InstanceName>\MSSQL\LOG, на том узле, где выполняется экземпляр отказоустойчивого кластера (FCI). Размер каждого файла журнала SQLDIAG ограничен 100 МБ. На компьютере сохраняются десять таких файлов журнала, после чего они освобождаются для новых журналов.  
   
  В журналах используется формат файлов расширенных событий. Для чтения файлов, созданных расширенными событиями, можно использовать системную функцию **sys.fn_xe_file_target_read_file** . Возвращается одно событие в каждой строке в формате XML. Выполните запрос к системному представлению для синтаксического анализа XML-данных в виде результирующего набора. Дополнительные сведения см. в разделе [sys.fn_xe_file_target_read_file (Transact-SQL)](../../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md).  
   

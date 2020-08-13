@@ -1,5 +1,6 @@
 ---
-title: Справочник интерфейса драйвера JDBC | Документация Майкрософт
+title: Справочник интерфейса драйвера JDBC
+description: Технический справочник по интерфейсу API для классов JDBC в драйвере JDBC для SQL Server.
 ms.custom: ''
 ms.date: 07/19/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e4e1ae9d-18a6-41db-8bd2-9cf0eee4cccb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 901eb239b09e44b3e1ed6524284ead9b8a38f3b3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0e96f8eb6ff2e3f20a5d6804ba3083e668c0f3a7
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923103"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391796"
 ---
 # <a name="jdbc-driver-api-reference"></a>Справочник интерфейса драйвера JDBC
 
@@ -71,7 +72,7 @@ ms.locfileid: "80923103"
 
 ## <a name="interfaces"></a>Интерфейсы  
   
-|Имя_интерфейса|Description|  
+|Имя_интерфейса|Описание|  
 |--------------------|-----------------|  
 |[Интерфейс ISQLServerCallableStatement](../../../connect/jdbc/reference/isqlservercallablestatement-interface.md)|Позволяет указать имя вызываемой хранимой процедуры с входными и выходными параметрами.|  
 |[Интерфейс ISQLServerConnection](../../../connect/jdbc/reference/isqlserverconnection-interface.md)|Представляет соединение JDBC с базой данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
@@ -85,7 +86,7 @@ ms.locfileid: "80923103"
   
 ## <a name="classes"></a>Классы  
   
-|Имя класса|Description|  
+|Имя класса|Описание|  
 |----------------|-----------------|  
 |[DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)|Представляет объект типа microsoft.sql.DateTimeOffset.|  
 |[SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md)|Представляет большой двоичный объект (BLOB).|  

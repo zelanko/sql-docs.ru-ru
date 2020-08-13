@@ -1,5 +1,6 @@
 ---
 title: Разработка базы данных вне сети с учетом проекта
+description: Просматривайте доступные ресурсы для ориентированных на проект задач разработки автономной базы данных, таких как импорт объектов в базу данных и использование объектов последовательности.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -9,16 +10,15 @@ f1_keywords:
 ms.assetid: e61e830d-9fcd-45e7-b7b4-93a42155dd56
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 395465b9f07c9927a2a0ed1a277cde9f9e37f587
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5e56a458d06fbc70a71f36f87fdcd68bd8688847
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243736"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896611"
 ---
 # <a name="project-oriented-offline-database-development"></a>Разработка базы данных вне сети с учетом проекта
 
@@ -31,24 +31,24 @@ ms.locfileid: "75243736"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |---------|---------------|  
 |[Импорт в проект базы данных](../ssdt/import-into-a-database-project.md)|Описывает импорт объектов из активной базы данных, файла .dacpac или скрипта.|  
 |[Диалоговое окно "Добавление ссылки на базу данных"](../ssdt/add-database-reference-dialog-box.md)|Описываются различные способы добавления ссылки на базу данных.|  
 |[Диалоговое окно "Проверка наличия обновлений"](../ssdt/check-for-updates-dialog-box.md)|Описывает, как SQL Server Data Tools может проверять наличие обновлений продукта.|  
 |[Параметры проекта базы данных](../ssdt/database-project-settings.md)|Описывает различные параметры проекта для управления аспектами базы данных и конфигураций сборки.|  
-|[Практическое руководство. Просмотр объектов из проекта базы данных SQL Server](../ssdt/how-to-browse-objects-in-a-sql-server-database-project.md)|В обозревателе объектов SQL Server в Visual Studio теперь добавлен отдельный узел "Проекты". В нем сгруппированы все содержащиеся в решении проекты базы данных SQL Server так, как это делается в SQL Server Management Studio.|  
+|[Руководство. просмотреть объекты из проекта базы данных SQL Server](../ssdt/how-to-browse-objects-in-a-sql-server-database-project.md)|В обозревателе объектов SQL Server в Visual Studio теперь добавлен отдельный узел "Проекты". В нем сгруппированы все содержащиеся в решении проекты базы данных SQL Server так, как это делается в SQL Server Management Studio.|  
 |[Окно операций Data Tools](../ssdt/data-tools-operations-window.md)|Описывает окно **Операции Data Tools** , в котором отображается ход выполнения некоторых операций и выводятся уведомления об ошибках.|  
 |[Параметры редактора Transact-SQL](../ssdt/transact-sql-editor-options.md)|Описание параметров Transact\-SQL.|  
-|[Практическое руководство. Создание проекта базы данных](../ssdt/how-to-create-a-new-database-project.md)|Создайте проект базы данных и импортируйте существующую схему базы данных.|  
-|[Как использовать сравнение схем для сопоставления различных определений баз данных](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)|Сравните схемы базы данных и проекта, выполните синхронизацию.|  
-|[Практическое руководство. Сборка и развертывание в локальной базе данных](../ssdt/how-to-build-and-deploy-to-a-local-database.md)|Использование локального экземпляра SQL Server по запросу, который активируется при отладке проекта базы данных.|  
-|[How to: Change Target Platform and Publish a Database Project](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md) (Практическое руководство. Изменение целевой платформы и публикация проекта базы данных)|Изменение целевой платформы SQL Server для проекта на любой поддерживаемый экземпляр SQL Server и проверка синтаксиса.|  
-|[Практическое руководство. Создание моментального снимка проекта](../ssdt/how-to-create-a-snapshot-of-a-project.md)|Создайте доступный только для чтения прокси схемы базы данных и верните исходный проект, если оказались применены нежелательные изменения.|  
-|[Практическое руководство. Использование объектов Microsoft SQL Server 2012 в своем проекте](../ssdt/how-to-use-microsoft-sql-server-2012-objects-in-your-project.md)|Добавьте в проект новый объект последовательности.|  
-|[Практическое руководство. Работа с объектами базы данных среды CLR](../ssdt/how-to-work-with-clr-database-objects.md)|Создание и публикация объектов CLR в проекте базы данных SQL Server.|  
-|[Практическое руководство. Преобразование проектов базы данных Visual Studio 2010 в проекты базы данных SQL Server с изменением целевой платформы](../ssdt/how-to-convert-visual-studio-2010-database-projects-to-ssql-server-projects.md)|Преобразование существующих баз данных SQL Server, объектов CLR и проектов приложений уровня данных, созданных в Visual Studio 2010, в новый проект Базы данных SQL Server.|  
-|[Практическое руководство. Определение скриптов, выполняемых до или после развертывания](../ssdt/how-to-specify-predeployment-or-postdeployment-scripts.md)|Рассматривается порядок использования скриптов, которые выполняются до или после развертывания базы данных.|  
+|[Руководство. создать проект базы данных](../ssdt/how-to-create-a-new-database-project.md)|Создайте проект базы данных и импортируйте существующую схему базы данных.|  
+|[Руководство. использовать сравнение схем для сопоставления различных определений баз данных](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)|Сравните схемы базы данных и проекта, выполните синхронизацию.|  
+|[Руководство. выполнить сборку и развертывание в локальной базе данных](../ssdt/how-to-build-and-deploy-to-a-local-database.md)|Использование локального экземпляра SQL Server по запросу, который активируется при отладке проекта базы данных.|  
+|[Руководство. изменить целевую платформу и опубликовать проект базы данных](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)|Изменение целевой платформы SQL Server для проекта на любой поддерживаемый экземпляр SQL Server и проверка синтаксиса.|  
+|[Руководство. создать моментальный снимок проекта](../ssdt/how-to-create-a-snapshot-of-a-project.md)|Создайте доступный только для чтения прокси схемы базы данных и верните исходный проект, если оказались применены нежелательные изменения.|  
+|[Руководство. использовать объекты Microsoft SQL Server 2012 в своем проекте](../ssdt/how-to-use-microsoft-sql-server-2012-objects-in-your-project.md)|Добавьте в проект новый объект последовательности.|  
+|[Руководство. работать с объектами баз данных CLR](../ssdt/how-to-work-with-clr-database-objects.md)|Создание и публикация объектов CLR в проекте базы данных SQL Server.|  
+|[Руководство. преобразовать проекты базы данных Visual Studio 2010 в проекты базы данных SQL Server с изменением целевой платформы](../ssdt/how-to-convert-visual-studio-2010-database-projects-to-ssql-server-projects.md)|Преобразование существующих баз данных SQL Server, объектов CLR и проектов приложений уровня данных, созданных в Visual Studio 2010, в новый проект Базы данных SQL Server.|  
+|[Руководство. задать скрипты, выполняемые до или после развертывания](../ssdt/how-to-specify-predeployment-or-postdeployment-scripts.md)|Рассматривается порядок использования скриптов, которые выполняются до или после развертывания базы данных.|  
   
 ## <a name="related-sections"></a>См. также
 

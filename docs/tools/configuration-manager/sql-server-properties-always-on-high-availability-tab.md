@@ -1,5 +1,6 @@
 ---
 title: Свойства SQL Server (вкладка "Высокий уровень доступности AlwaysOn")
+description: Чтобы использовать группы доступности в качестве решения для обеспечения высокой доступности и аварийного восстановления, включите функцию "Группы доступности Always On" в SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d57f7e3f98c9db33569414e3c6876e54503f25bf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b5ecf784f4a15bc8b5ff705d46bc64076436c3f8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306819"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902039"
 ---
 # <a name="sql-server-properties-always-on-high-availability-tab"></a>Свойства SQL Server (вкладка "Высокий уровень доступности AlwaysOn")
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   На вкладке **Высокий уровень доступности AlwaysOn** в диалоговом окне **Свойства SQL Server** в диспетчере конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно включить или отключить функцию "Группы доступности AlwaysOn" в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Включение функции "Группы доступности AlwaysOn" является предварительным требованием для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы группы доступности использовались в качестве решения высокого уровня доступности и аварийного восстановления.  
   
 ##  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
@@ -50,7 +51,7 @@ ms.locfileid: "75306819"
     > [!TIP]  
     >  После отключения функции "Группы доступности AlwaysOn" необходимо удалить все локальные реплики доступности с экземпляра сервера. При удалении последней реплики для данной группы доступности будет также удалена и сама группа.  
   
-## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
+## <a name="ui-element-list"></a>Список элементов пользовательского интерфейса  
   
 > [!NOTE]  
 >  Дополнительные сведения о действиях после отключения функции "Группы доступности AlwaysOn" и о том, как создать и настроить группы доступности, см. в электронной документации по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  

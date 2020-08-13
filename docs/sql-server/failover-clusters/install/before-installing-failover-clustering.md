@@ -1,10 +1,11 @@
 ---
 title: Подготовка к установке отказоустойчивого кластера | Документация Майкрософт
+description: В этой статье рассматриваются вопросы планирования при подготовке к установке отказоустойчивого кластера SQL Server, включая оборудование, операционную систему и конфигурацию.
 ms.custom: ''
 ms.date: 08/24/2016
 ms.reviewer: ''
 ms.prod: sql
-ms.technology: install
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], preinstallation checklist
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5d2fe2d80b0f9d54e877d6bc1be9a05c8c34c584
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f13de472628de7f0bfea12cdac2c001682678a66
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "72517939"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900510"
 ---
 # <a name="before-installing-failover-clustering"></a>Подготовка к установке отказоустойчивого кластера
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Перед тем как установить отказоустойчивый кластер SQL Server, необходимо выбрать оборудование и операционную систему, на которых SQL Server будет работать. Кроме того, необходимо настроить отказоустойчивую кластеризацию Windows Server (WSFC) и проверить настройки сети, безопасности и другого программного обеспечения, которое будет запускаться на отказоустойчивом кластере.  
   
  Если в кластере Windows есть локальный диск и при этом диск с такой же буквой используется на одном или нескольких узлах кластера в качестве общего диска, то установить [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на этот диск невозможно. Это ограничение относится как к экземплярам отказоустойчивого кластера SQL Server, так и к автономным экземплярам на сервере, который входит в состав экземпляра отказоустойчивого кластера Windows.
@@ -216,7 +217,7 @@ ms.locfileid: "72517939"
   
 1.  В конфигурации с несколькими подсетями для зависимости ресурса "IP-адрес" задается значение OR. Дополнительные сведения см. на странице [Создание нового отказоустойчивого кластера SQL Server (программа установки)](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md).  
   
-2.  Смешанные конфигурации зависимостей IP-адресов со значением AND-OR не поддерживаются. Например, не поддерживается конструкция \<IP1> AND \<IP2> OR \<IP3>.  
+2.  Смешанные конфигурации зависимостей IP-адресов со значением AND-OR не поддерживаются. Например, \<IP1> И \<IP2> ИЛИ \<IP3> не поддерживается.  
   
 3.  Также не поддерживается несколько IP-адресов в одной в подсети.  
   

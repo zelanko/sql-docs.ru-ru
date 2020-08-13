@@ -1,6 +1,6 @@
 ---
 title: Принудительный запуск кластера WSFC без кворума
-description: В этой статье описан порядок принудительного запуска отказоустойчивого кластера Windows Server без кворума.
+description: Принудительный запуск узла отказоустойчивого кластера Windows Server без кворума, который может потребоваться для восстановления данных и повторного установления высокой доступности.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 078b7087669547b183f8bd34daa6c6fe0cf98cc4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4f7838537d93ce6ef60afc0ac971bbc47d358f79
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258140"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899001"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>Принудительный запуск кластера WSFC без кворума
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   В этом разделе описан порядок принудительного запуска узла отказоустойчивого кластера Windows Server (WSFC) без кворума.  Это может потребоваться в случае аварийного восстановления, в сценариях с несколькими подсетями и восстановлением данных и высокой доступности экземпляров отказоустойчивого кластера [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   **Перед началом работы:**  [Рекомендации](#Recommendations), [Безопасность](#Security)  

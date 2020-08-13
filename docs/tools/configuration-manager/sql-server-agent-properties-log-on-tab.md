@@ -1,5 +1,6 @@
 ---
 title: Свойства агента SQL Server (вкладка «Вход в систему»)
+description: Узнайте о вкладке "Вход в систему" в диалоговом окне свойств агента SQL Server. Узнайте, как использовать ее для указания учетной записи, а также для запуска или завершения работы службы.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 01fc6329-5d6b-4186-9565-395f375477bb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1b9ec7ce2d0280f551953bf14f8494b7bd80becb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8b20e60e719cf988ae4fb8821870f2c2b3333c76
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307150"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900747"
 ---
 # <a name="sql-server-agent-properties-log-on-tab"></a>Свойства агента SQL Server (вкладка «Вход в систему»)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Используйте вкладку **Вход** диалогового окна **Свойства агента SQL Server** , чтобы указать учетную запись, используемую службой « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , агент», а также выполнить запуск или остановку службы. Изменение пароля учетной записи вступает в силу немедленно, без перезапуска службы.  
   
 > [!NOTE]  

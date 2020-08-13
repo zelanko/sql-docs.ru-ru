@@ -1,23 +1,23 @@
 ---
 title: Использование объектов SQL Server 2012 в своем проекте
+description: Ознакомьтесь с последовательностями в SQL Server 2012. Узнайте, как добавлять эти объекты в проекты баз данных и использовать их в запросах.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 9baf122f-cf22-4860-98db-ef782cd972fc
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 69c68812e169d2831ffde71d2b21f9af8f418600
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 42c9c1cdc852aed9a1ff8bf469cd0534bc992ba2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486795"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895839"
 ---
-# <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>Как использовать объекты Microsoft SQL Server 2012 в своем проекте
+# <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>Руководство. использовать объекты Microsoft SQL Server 2012 в своем проекте
 
 В этом примере мы добавим в проект базы данных объект последовательности, ориентированный на Microsoft SQL Server 2012.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "81486795"
     CACHE 10  
     ```  
   
-4.  Если для целевой платформы проекта вместо Microsoft SQL Server 2012 указано другое значение, то в **Списке ошибок** отобразится сообщение о синтаксической ошибке для инструкции `CREATE SEQUENCE`. В разделе [How to: Change Target Platform and Publish a Database Project](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md) (Краткое руководство. Изменение целевой платформы и публикация проекта базы данных) рассказывается, как исправить эту ошибку и изменить целевую платформу соответствующим образом.  
+4.  Если для целевой платформы проекта вместо Microsoft SQL Server 2012 указано другое значение, то в **Списке ошибок** отобразится сообщение о синтаксической ошибке для инструкции `CREATE SEQUENCE`. Чтобы исправить эту ошибку, см. раздел [Руководство. Изменение целевой платформы и публикация проекта базы данных](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md); здесь рассказывается, как изменить целевую платформу соответствующим образом.  
   
 5.  Следуйте инструкциям в статье [Как изменить целевую платформу и опубликовать проект базы данных](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md), чтобы опубликовать проект в базе данных на подключенном сервере Microsoft SQL Server 2012.  
   

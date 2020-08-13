@@ -1,33 +1,33 @@
 ---
 title: Использование MSDeploy с поставщиком dbSqlPackage
+description: Узнайте больше об устаревшем поставщике MSDeploy DbSqlPackage. Просмотрите параметры, примеры и альтернативные средства публикации SQL Server и базы данных SQL Azure.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
-ms.openlocfilehash: f4c45335bae79a0307be27efb88cb0858bd6439f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5a0bda3b935a7123de3c8766a40e7d7f8df5a0d0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243564"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899745"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Использование MSDeploy с поставщиком dbSqlPackage
 
 **DbSqlPackage** — это поставщик **MSDeploy**, который обеспечивает взаимодействие с базами данных SQL Server и SQL Azure. **DbSqlPackage** поддерживает следующие действия:  
   
--   **Извлечение** — создает файл моментального снимка базы данных (DACPAC) из активной базы данных SQL Server или SQL Azure.  
+-   **Extract**: создает файл моментального снимка базы данных (DACPAC) из активной базы данных SQL Server или SQL Azure.  
   
 -   **Publish**: выполняет добавочное обновление схемы базы данных в соответствии со схемой исходного DACPAC-файла.  
   
 -   **DeployReport**: создает XML-отчет по изменениям, которые должны быть внесены в результате публикации.  
   
--   **Скрипт** — создает скрипт Transact\-SQL, эквивалентный скрипту, который выполняется действием публикации.  
+-   **Script**: создает скрипт Transact\-SQL, эквивалентный скрипту, который выполняется действием публикации.  
   
 Дополнительные сведения о DACFx можно найти в разделе документации по управляемому API DACFx по адресу [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx) или описании средства командной строки DACFx [SqlPackage.exe](../tools/sqlpackage.md).  
   
@@ -45,7 +45,7 @@ MSDeploy -verb: MSDeploy-verb -source:dbSqlPackage="Input"[,dbSqlPackage-source-
 ## <a name="ms-deploy-verbs"></a>Команды MS-Deploy  
 Команды MS-Deploy задаются с помощью параметра **-verb** в командной строке MS-Deploy. Поставщик **dbSqlPackage** поддерживает следующие команды **MSDeploy**:  
   
-|Команда|Description|  
+|Команда|Описание|  
 |--------|---------------|  
 |дамп|Предоставляет сведения, включая имя, номер версии и описание базы данных-источника, содержащиеся в DACPAC-файле. Укажите базу данных-источник, используя следующий формат командной строки:<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="** _.dacpac-file-path_ **"**|  
 |sync|Задает действия dbSqlPackage, используя следующий формат командной строки:<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" _[,DbSqlPackage-source-parameters] -_ **dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />Допустимые параметры источника и назначения для команды синхронизации см. в следующих разделах.|  
@@ -53,7 +53,7 @@ MSDeploy -verb: MSDeploy-verb -source:dbSqlPackage="Input"[,dbSqlPackage-source-
 ## <a name="dbsqlpackage-source"></a>База данных-источник dbSqlPackage  
 Поставщик **dbSqlPackage** принимает в качестве входных данных вход допустимую строку подключения SQL Server/SQL Azure или путь к DACPAC-файлу на диске.  Синтаксис задания входного источника для поставщика:  
   
-|Входные данные|По умолчанию|Description|  
+|Входные данные|По умолчанию|Описание|  
 |---------|-----------|---------------|  
 |**-source:dbSqlPackage=** {*input*}|**Н/Д**|*input* содержит допустимую строку подключения к SQL Server или SQL Azure либо путь к DACPAC-файлу на диске.<br /><br />**Примечание.** Если в качестве источника входных данных используется строка подключения, в ней поддерживаются только следующие свойства: *InitialCatalog, DataSource, UserID, Password, IntegratedSecurity, Encrypt, TrustServerCertificate* и *ConnectionTimeout*.|  
   
@@ -61,7 +61,7 @@ MSDeploy -verb: MSDeploy-verb -source:dbSqlPackage="Input"[,dbSqlPackage-source-
   
 Для **источника** принимаются следующие параметры:  
   
-|Параметр|По умолчанию|Description|  
+|Параметр|По умолчанию|Описание|  
 |-------------|-----------|---------------|  
 |**Profile**:{ *строка*}|Недоступно|Указывает путь к файлу приложения уровня данных профиля публикации. Профиль определяет коллекцию свойств и переменных, которые должны использоваться при формировании результирующего DACPAC-файла. Профиль публикации передается в базу данных назначения и используется в качестве параметров по умолчанию при выполнении действий **Publish**, **Script** или **DeployReport**.|  
 |**DacApplicationName**={ *строка* }|Имя базы данных|Определяет имя приложения для сохранения в метаданных DACPAC. Строкой по умолчанию является имя базы данных.|  
@@ -78,13 +78,13 @@ MSDeploy -verb: MSDeploy-verb -source:dbSqlPackage="Input"[,dbSqlPackage-source-
 ## <a name="dbsqlpackage-destination"></a>Целевая база данных dbSqlPackage  
 Поставщик **dbSqlPackage** принимает в качестве входных данных целевой базы данных допустимую строку подключения SQL Server или SQL Azure или путь к DACPAC-файлу на диске.  Синтаксис задания целевой базы данных для поставщика:  
   
-|Входные данные|По умолчанию|Description|  
+|Входные данные|По умолчанию|Описание|  
 |---------|-----------|---------------|  
 |-**dest:dbSqlPackage**={*input*}|Недоступно|*input* — допустимая строка подключения к SQL Server или SQL Azure либо полный или частичный путь к DACPAC-файлу на диске. Если *input* содержит путь к файлу, другие параметры задать нельзя.|  
   
 Следующие параметры **целевой базы данных** доступны для всех операций **dbSqlPackage**:  
   
-|Свойство|По умолчанию|Description|  
+|Свойство|По умолчанию|Описание|  
 |------------|-----------|---------------|  
 |**Action={Publish&#124;DeployReport&#124;Script}**|Недоступно|Необязательные параметры, определяющие действие, которое выполняется в **целевой базе данных**.|  
 |**AllowDropBlockingAssemblies ={True &#124; False}**|**False**|Указывает, будет ли публикация **SqlClr** удалять блокирующие сборки при выполнении плана развертывания. По умолчанию все блокирующие и ссылочные сборки препятствуют обновлению сборки, если необходимо удалить ссылочную сборку.|  
@@ -123,7 +123,7 @@ MSDeploy -verb: MSDeploy-verb -source:dbSqlPackage="Input"[,dbSqlPackage-source-
 |**IgnoreFileSize= {True &#124; False}**|**True**|Указывает, следует пропускать или обновлять различия в размере файлов во время публикации в базе данных.|  
 |**IgnoreFillFactor= {True &#124; False}**|**True**|Указывает, следует пропускать или обновлять различия в коэффициентах заполнения во время публикации в базе данных.|  
   
-|Свойство|По умолчанию|Description|  
+|Свойство|По умолчанию|Описание|  
 |------------|-----------|---------------|  
 |**IgnoreFullTextCatalogFilePath= {True &#124; False}**|**True**|Указывает, следует пропускать или обновлять различия в путях к файлам полнотекстовых индексов и журналов во время публикации в базе данных.|  
 |**IgnoreIdentitySeed= {True &#124; False}**|**False**|Указывает, следует пропускать или обновлять различия в начальных значениях для столбца идентификаторов во время публикации в базе данных.|  
@@ -172,7 +172,7 @@ MSDeploy -verb: MSDeploy-verb -source:dbSqlPackage="Input"[,dbSqlPackage-source-
   
 Следующие параметры **целевой базы данных** доступны только для операций **DeployReport** и **Script**:  
   
-|Параметр|По умолчанию|Description|  
+|Параметр|По умолчанию|Описание|  
 |-------------|-----------|---------------|  
 |**OutputPath**={ *строка* }|Недоступно|Необязательный параметр, который указывает **dbSqlPackage** создать выходной файл DeployReport XML или Script SQL в папке на диске, определяемой значением *строки*. Это действие перезаписывает все скрипты, существующие в данный момент в расположении, указанном строкой.|  
   

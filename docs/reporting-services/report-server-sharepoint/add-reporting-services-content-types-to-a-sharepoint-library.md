@@ -1,5 +1,6 @@
 ---
 title: Добавление типов содержимого служб Reporting Services в библиотеку SharePoint | Документы Майкрософт
+description: После добавления в библиотеку типов содержимого "Отчет построителя отчетов", "Модель отчета" и "Источник данных отчета" будет доступна команда "Создать", позволяющая создавать новые документы этого типа.
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +10,12 @@ ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d50d7e273be27f6b03d98db40c2da1dc70b23306
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8964906be1f9d055e45c7eacb6699f7ccc87da86
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68887747"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197199"
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>Добавление типов содержимого служб Reporting Services в библиотеку SharePoint
 
@@ -72,7 +73,7 @@ ms.locfileid: "68887747"
   
 5.  Обновите браузер, а затем щелкните **Активировать** для пункта **Компонент интеграции с сервером отчетов**.  
   
-     ![](../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-deactivate.gif)  
+     ![rs-reportserver-integration-deactivate](../../reporting-services/report-server-sharepoint/media/rs-reportserver-integration-deactivate.gif)  
   
 ##  <a name="to-enable-content-type-management-for-a-single-document-library-sharepoint-2013"></a><a name="bkmk_enable_content_management"></a> Активация управления типами содержимого для одной библиотеки документов (SharePoint 2013)  
   
@@ -113,7 +114,7 @@ ms.locfileid: "68887747"
 8.  После завершения добавления типов содержимого нажмите кнопку **ОК**.  
   
     > [!NOTE]  
-    >  Если группа типов содержимого [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**Типы содержимого служб SQL Server Reporting Services** не отображается на странице **Добавление типов содержимого** , одно из нижеследующего будет верно:  
+    >   Если группа типов содержимого [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**Типы содержимого служб SQL Server Reporting Services** не отображается на странице **Добавление типов содержимого** , одно из нижеследующего будет верно.  
   
     -   Надстройка служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint еще не установлена. Дополнительные сведения см. в статье [Установка и удаление надстройки служб Reporting Services для SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md). Раздел включает сведения об установке надстройки и пошаговом выполнении установки файлов надстройки для обхода проблем.  
   

@@ -1,5 +1,6 @@
 ---
 title: Свойства SQL Server (вкладка «Вход в систему»)
+description: Узнайте о вкладке "Вход в систему" в диалоговом окне свойств SQL Server. Эта вкладка используется для указания учетной записи, используемой SQL Server, а также для запуска или остановки службы.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 405073fc-eaa3-43c6-bf82-2cd58cacc1c3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 042a0bcf0b0a078b87219a4371d7cb890b4abab6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ac7122b1ec746fa3f73dab8fc104d91851b7569a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306816"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898933"
 ---
 # <a name="sql-server-properties-log-on-tab"></a>Свойства SQL Server (вкладка «Вход в систему»)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Используйте вкладку **Вход** в диалоговом окне **Свойства SQL Server** для указания учетной записи, используемой службой сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы изменить пароль учетной записи и запустить или остановить службу. Изменение пароля учетной записи вступает в силу немедленно.  
   
 > [!NOTE]  

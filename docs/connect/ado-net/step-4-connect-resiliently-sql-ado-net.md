@@ -1,6 +1,6 @@
 ---
-title: Шаг 4. Выполнение устойчивого подключения к SQL с помощью ADO.NET | Документация Майкрософт
-description: Описание устойчивого подключения к SQL
+title: Шаг 4. Выполнение устойчивого подключения к SQL с помощью ADO.NET
+description: Сведения о том, как использовать логику повторных попыток для повышения устойчивости подключения к базе данных SQL с помощью ADO.NET.
 ms.custom: ''
 ms.date: 08/15/2019
 ms.prod: sql
@@ -13,12 +13,12 @@ ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 23b87d6774fb4020b5c7eca3d3f776bbb95fc7fe
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a70b5449d1af02c3b367a204e2e32dfb32281d72
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80918032"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86391769"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>Шаг 4. Выполнение устойчивого подключения к SQL с помощью ADO.NET
 

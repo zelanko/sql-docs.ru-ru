@@ -1,5 +1,6 @@
 ---
 title: просмотреть и изменить данные в таблице
+description: Сведения о том, как использовать редактор данных для просмотра, изменения и удаления данных в существующей таблице. Сведения о просмотре изменений в форме скрипта и их сохранении в файле скрипта.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -9,18 +10,17 @@ f1_keywords:
 ms.assetid: bb67ce83-a87a-4e14-84cd-9a5930fe74c8
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 557b5d5c5986b47eab22bb9d70bd8103c5032eeb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7c8321f4f1264b8bf0352f459bde02a07e439dd3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75226762"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895790"
 ---
-# <a name="how-to-view-and-edit-data-in-a-table"></a>Как просматривать и изменять данные в таблице
+# <a name="how-to-view-and-edit-data-in-a-table"></a>Руководство. просмотреть и изменить данные в таблице
 
 Теперь можно просматривать, изменять и удалять данные в существующей таблице с помощью визуального редактора данных.  
   

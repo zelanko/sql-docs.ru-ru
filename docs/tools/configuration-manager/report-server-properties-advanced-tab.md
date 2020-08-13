@@ -1,5 +1,6 @@
 ---
 title: Свойства сервера отчетов (вкладка «Дополнительно»)
+description: Сведения о параметрах на вкладке "Дополнительно" диалогового окна "Свойства сервера отчетов", например каталог дампа и идентификатор экземпляра.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 80aedab6-2be4-409d-88ba-2107e96345fe
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 42cc01602f1f09958bbff07af7525bb48bca3cc8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e6d5cb99e8c449b8768bcb3a6d692a769fae79bc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306362"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895925"
 ---
 # <a name="report-server-properties-advanced-tab"></a>Свойства сервера отчетов (вкладка «Дополнительно»)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Эта служба представляет собой среду [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Если определены пользовательские свойства, они отображаются на этой вкладке вместе со значениями.  
   
 ## <a name="options"></a>Параметры  
@@ -30,7 +31,7 @@ ms.locfileid: "75306362"
  Отображает расположение дампа памяти в случае возникновения ошибки.  
   
  **Отчет об ошибках**  
- Если установлено значение **Да**, то в случае возникновения серьезного сбоя программа "Доктор Ватсон» направит сведения либо в [!INCLUDE[msCoName](../../includes/msconame-md.md)] , либо на сервер ошибок. Дополнительные сведения по отчетам об ошибках см. в разделе «Настройки параметров отчета об ошибках» электронной документации.  
+ Если установлено значение **Да**, то в случае возникновения серьезного сбоя программа "Доктор Ватсон» направит сведения либо в [!INCLUDE[msCoName](../../includes/msconame-md.md)], либо на сервер ошибок. Дополнительные сведения по отчетам об ошибках см. в разделе «Настройки параметров отчета об ошибках» электронной документации.  
   
  **Идентификатор экземпляра**  
  Указывает экземпляр, использующий эту службу.  
