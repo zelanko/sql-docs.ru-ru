@@ -1,5 +1,6 @@
 ---
 title: Настройки сведений об устройстве Excel | Документы Майкрософт
+description: Узнайте о различных настройках сведений об устройстве, доступных для отрисовки в формате Microsoft Excel.
 ms.date: 01/23/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: bb5f3566-f033-4470-be87-1f52fb7a4ab6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a83bcd79a50400888d5a973ad9a743db19b87b5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c4d84c98923a3cee94f64fed863e621821bd7a39
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76761828"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245133"
 ---
 # <a name="excel-device-information-settings"></a>Настройки сведений об устройстве Excel
   В следующей таблице перечислены настройки сведений об устройстве для подготовки к просмотру в формате [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] .  

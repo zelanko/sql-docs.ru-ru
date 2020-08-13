@@ -1,5 +1,6 @@
 ---
 title: Диспетчер предупреждений данных для оповещения администраторов | Документы Майкрософт
+description: Узнайте, как управлять оповещениями с помощью диспетчера предупреждений об изменении данных для SharePoint в SQL Server Reporting Services.
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ ms.assetid: 32fd968f-1c0c-4ba8-851c-8a3b5e1fbbf2
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a80b90f30ce2b304bd7bbb0229f172407589d3c9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5164302efa34bd74b76211c72617826478c4e515
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571544"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246346"
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>Диспетчер предупреждений данных для оповещения администраторов
 
@@ -54,7 +55,7 @@ ms.locfileid: "65571544"
 |----------------|-----------------|----------------|-----------------|--------------|-------------------|------------|  
 |SalesQTR|SalesByTerritoryAndQTR|Лорен Джонсон|4|6/12/2011|6/1/2011|Последнее предупреждение выполнено успешно; предупреждение было отправлено.|  
 |UnitsSold|ProductsSalesByQTR|Michael Blythe|2|7/1/2011|6/28/2011|Последнее предупреждение выполнено успешно, но данные остались без изменения и предупреждение не было отправлено.|  
-|InventoryCount|StockStatusByQTR|Лорен Джонсон|7|7/10/2011|7/2/2011|\<сообщение об ошибке>Файл журнала содержит подробные сведения об ошибке. Ссылается на запись журнала с идентификатором \<GUID>.|  
+|InventoryCount|StockStatusByQTR|Лорен Джонсон|7|7/10/2011|7/2/2011|\<error message>Файл журнала содержит подробные сведения об ошибке. См. запись журнала с идентификатором: \<GUID>.|  
 |TopPromotion|PromotionTracking|Cristian Petculescu|0||5/23/2011|Предупреждение создано.|  
   
  Дополнительные сведения см. в статье [Управление всеми предупреждениями данных на сайте SharePoint в диспетчере предупреждений данных](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  

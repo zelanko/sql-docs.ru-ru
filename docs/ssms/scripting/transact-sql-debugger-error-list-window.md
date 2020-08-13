@@ -1,5 +1,6 @@
 ---
 title: Окно "Список ошибок"
+description: Узнайте, как использовать список ошибок для просмотра ошибок и предупреждений, создаваемых IntelliSense при редактировании скриптов Transact-SQL.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -16,18 +17,18 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 64fa6b834d3f771712f9ce09dedb237fff46ed2c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4755c439edafb5f38740e12f6ec57abf468bc01a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243387"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247354"
 ---
 # <a name="transact-sql-debugger---error-list-window"></a>Отладчик Transact-SQL, окно списка ошибок
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Список ошибок**среды** отображает синтаксические и семантические ошибки, полученные из кода IntelliSense в редакторе запросов [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+**Список ошибок** среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] отображает синтаксические и семантические ошибки, полученные из кода IntelliSense в редакторе запросов [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
 
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
 
@@ -74,7 +75,7 @@ ms.locfileid: "75243387"
 > [!NOTE]  
 >  **Список ошибок** содержит только ошибки из редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] . В него не включаются ошибки из редакторов многомерных выражений, расширений интеллектуального анализа данных и XML/A. Все ошибки многомерных выражений, расширений интеллектуального анализа данных и XML/A выводятся на вкладке **Сообщения** в соответствующих редакторах.  
   
-## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
+## <a name="ui-element-list"></a>Список элементов пользовательского интерфейса  
  Если **Список ошибок** открыт, сведения отображаются в следующих столбцах.  
   
  **Порядок по умолчанию**  

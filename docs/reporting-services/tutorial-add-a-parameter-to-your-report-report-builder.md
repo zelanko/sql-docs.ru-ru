@@ -1,5 +1,6 @@
 ---
 title: Учебник. Добавление параметра к отчету (построитель отчетов) | Документация Майкрософт
+description: Узнайте, как добавить параметр к отчету Reporting Services с разбивкой на страницы, чтобы его читатели могли фильтровать данные по одному или нескольким значениям.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a50e32eb3d13e2b78705a3f2ba4fd63e9ccd442
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cd5fab649fc481bdb91b42c34be33f5976b5af93
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "72252136"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245681"
 ---
-# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Учебник. Добавление параметра к отчету (построитель отчетов)
+# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Руководство по Добавление параметра к отчету (построитель отчетов)
 В этом учебнике вы добавите параметр к отчету [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы, чтобы его читатели могли фильтровать данные по одному или нескольким значениям. 
   
 ![report-builder-parameter-tutorial](../reporting-services/media/report-builder-parameter-tutorial.png)
@@ -25,7 +26,7 @@ ms.locfileid: "72252136"
 > [!NOTE]  
 > В этом учебнике шаги работы с мастером объединены в одну процедуру. Пошаговые инструкции по переходу к серверу отчетов, выбору источника данных и созданию набора данных см. в первом учебнике этой серии: [Учебник. Создание простого табличного отчета &#40;построитель отчетов&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Предполагаемое время для выполнения заданий данного учебника: 25 минут.  
+На изучение этого руководства потребуется примерно 25 минут.  
   
 ## <a name="requirements"></a>Требования  
 Дополнительные сведения о требованиях см. в разделе [Предварительные условия для использования учебников (построитель отчетов)](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -308,7 +309,7 @@ ms.locfileid: "72252136"
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    Заголовок столбца магазина содержит отображаемый текст для сложного выражения **Expr**.  
+    Заголовок столбца магазина содержит отображаемый текст для сложного выражения: **Expr**.  
   
 8.  Просмотрите отчет.  
   

@@ -1,5 +1,6 @@
 ---
 title: Экспорт отчета с применением доступа по URL-адресу | Документы Майкрософт
+description: Узнайте, как экспортировать отчет с помощью доступа по URL-адресу, указав формат отображения отчета с помощью параметра URL-адреса rs:Format.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6a3b7fc3-3d91-4d12-8371-42ea12e74517
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 24cc4fbe1a1cadeeb9c2e94fe0da85fce24db8a6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c7a6907a20ecbfad89820c3afb792b50a7f2a6f8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571509"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247213"
 ---
 # <a name="export-a-report-using-url-access"></a>Экспорт отчета с применением доступа по URL-адресу
   Можно также указать формат, в котором будет подготовлен отчет, используя параметр URL-адреса *rs:Format* .  Форматы HTML4.0 и HTML5 (модули подготовки отчетов) отображаются прямо в браузере, а для всех остальных форматов браузер предложит сохранить результат в виде локального файла.  

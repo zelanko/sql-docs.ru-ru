@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: de9ceed1aa019b82bc943a1985f0f251ad82b1fa
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b32c0b24aea8e1a55060b501fd001c1ad7f90b36
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917538"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248056"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Параметры пакета и проекта Integration Services (SSIS)
 
@@ -76,10 +76,10 @@ ms.locfileid: "86917538"
  Для отображения и задания значений параметров можно использовать следующие представления и хранимые процедуры Transact-SQL.  
   
  [catalog.execution_parameter_values (база данных SSISDB)](../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md)(представление)  
- Показывает фактические значения параметров, которые будут использоваться определенным выполнением  
+ Показывает фактические значения параметров в определенном выполнении.
   
  [catalog.get_parameter_values (база данных SSISDB)](../integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md) (хранимая процедура)  
- Разрешает и показывает фактические значения для заданного пакета и ссылки на среду  
+ Разрешает и показывает фактические значения для заданного пакета и ссылки на среду.
   
  [catalog.object_parameters (база данных SSISDB)](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) (представление)  
  Отображает параметры и свойства для всех пакетов и проектов в каталоге [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , включая значения по умолчанию проекта и значения по умолчанию сервера.  

@@ -1,5 +1,6 @@
 ---
 title: Окно точек останова
+description: Узнайте, как использовать окно "Точки останова" в редакторе запросов ядра СУБД для управления точками останова отладчика Transact-SQL.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -11,18 +12,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-ms.date: 12/04/2019
-monikerRange: '>= sql-server-2014 || = sqlallproducts-allversions'
-ms.openlocfilehash: a80750a9885bd3cd61afd6b6719f5839b5503eac
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 07/22/2020
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 70178cf723b4e599ca6982668ade3faed61ee8c2
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243373"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248048"
 ---
 # <a name="transact-sql-debugger---breakpoints-window"></a>Отладчик Transact-SQL, окно точек останова
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 В окне **Точки останова** перечисляются все точки останова, которые заданы в текущем редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Чтобы управлять точками останова, используйте панель инструментов в окне **Точки останова** . Точки останова представляют собой точки кода, где выполнение в режиме отладке приостанавливается, чтобы можно было просматривать отладочные данные.
 
@@ -38,7 +39,7 @@ ms.locfileid: "75243373"
 
 По умолчанию в окне **Точки останова** перечислены следующие столбцы.  
 
-**Название**  
+**имя**;  
 Отображается имя точки останова. Имена точек останова предоставляются отладчиком. Это имя включает имя окна редактора запросов компонента Database Engine, которое содержит точку останова, и номер строки в редакторе запросов, на которой задана точка останова.  
 
 **Condition**  

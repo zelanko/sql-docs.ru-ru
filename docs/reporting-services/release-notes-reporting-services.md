@@ -1,6 +1,7 @@
 ---
 title: Заметки о выпуске SQL Server Reporting Services 2017 или более поздних версий | Документация Майкрософт
-ms.date: 04/06/2020
+description: Сведения об изменениях в SQL Server Reporting Services (SSRS) для версий 2017 и более поздних.
+ms.date: 04/28/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -9,12 +10,12 @@ ms.reviewer: maggies
 author: casualoak
 ms.author: rhys
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 9227aa7ad22b64da499020d0c4bc561de00c14f4
-ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
+ms.openlocfilehash: 4a97ab8d68a1b265a25eb3b97a5146a402aa9b3b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80809846"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247513"
 ---
 # <a name="release-notes-for-sql-server-reporting-services-ssrs-2017-and-later"></a>Заметки о выпуске SQL Server Reporting Services (SSRS) 2017 и более поздних версий
 
@@ -50,6 +51,15 @@ We are "standardizing" all our 'Release Notes' style articles:
 
 GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
+## <a name="sql-server-2019-reporting-services"></a>SQL Server 2019 Reporting Services
+
+## <a name="150724337714-20191101"></a>15.0.7243.37714, 01.11.2019
+
+Начальный выпуск.
+
+
+## <a name="sql-server-2017-reporting-services"></a>Службы SQL Server 2017 Reporting Services
+
 ## <a name="1406001572-20200406"></a>14.0.600.1572, 06.04.2020 
 
 | Исправленные проблемы | Сведения |

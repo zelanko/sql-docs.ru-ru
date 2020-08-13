@@ -1,5 +1,6 @@
 ---
 title: Справочник по функциям (службы Reporting Services) | Документы Майкрософт
+description: Узнайте о средствах SQL Server Reporting Services и приложениях, которые можно использовать для создания, администрирования и просмотра отчетов.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -13,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 40e4fb9280d7ff9d05412966487997f507fb3dc7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b5b87404b685fe9e5de09f8703d3c06c48371836
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65503089"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247243"
 ---
 # <a name="feature-reference-reporting-services"></a>Справочник по функциям (службы Reporting Services)
   В [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] доступно несколько средств и приложений для создания, администрирования и просмотра отчетов. В этом разделе приводятся конкретные подразделы, описывающие диалоговые окна, веб-страницы и мастера этих инструментальных средств и приложений.  
   
- Чтобы получить доступ к разделу пользовательского интерфейса во время работы средства или приложения, нажмите клавишу F1 или кнопку **Справка** в открытом диалоговом окне, веб-странице или мастере. Дополнительные сведения о запуске средств [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] см. в разделе [Учебник. Инструкции по поиску и запуску средств служб Reporting Services (SSRS)](../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
+ Чтобы получить доступ к разделу пользовательского интерфейса во время работы средства или приложения, нажмите клавишу F1 или кнопку **Справка** в открытом диалоговом окне, веб-странице или мастере. См. сведения о запуске средств [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в руководстве по [ поиску и запуску средств Reporting Services (SSRS)](../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
   
 ## <a name="in-this-section"></a>в этом разделе  
  [Справка F1 по использованию конструктора отчетов](../reporting-services/tools/report-designer-f1-help.md)  

@@ -1,5 +1,6 @@
 ---
 title: Занятие 4. Определение подключения к данным и таблицы данных для дочернего отчета | Документы Майкрософт
+description: Узнайте, как использовать службы Reporting Services для создания подключения к данным и таблицы данных для дочернего отчета.
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9d9be825b53cfab3601dc755b9122039669ce758
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 80df8e86ed3d23c5ab097cdab3f26d83838c4544
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62651364"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245123"
 ---
-# <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Занятие 4. Определение подключения к данным и таблицы данных для родительского отчета
+# <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Занятие 4: Определение подключения к данным и таблицы данных для дочернего отчета
 После проектирования родительского отчета далее необходимо создать подключение к данным и таблицу данных для дочернего отчета. В этом учебнике в качестве источника подключения к данным используется база данных AdventureWorks2014.  
   
 ### <a name="to-define-a-data-connection-and-datatable-by-adding-a-dataset-for-child-report"></a>Определение подключения к данным и таблицы данных путем добавления набора данных (для дочернего отчета)  
@@ -68,6 +69,6 @@ ms.locfileid: "62651364"
 12. Для предварительного просмотра данных выберите пункт **Предварительный просмотр данных** в меню **Данные** , а затем щелкните **Предварительный просмотр**.  
   
 ## <a name="next-task"></a>Следующая задача  
-Тем самым были успешно созданы подключение к данным и таблица данных для дочернего отчета. Затем необходимо спроектировать дочерний отчет с использованием мастера отчетов. См. [Занятие 5. Проектирование родительского отчета с использованием мастера отчетов](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md).  
+Тем самым были успешно созданы подключение к данным и таблица данных для дочернего отчета. Затем необходимо спроектировать дочерний отчет с использованием мастера отчетов. См. [Занятие 5. Проектирование дочернего отчета с использованием мастера отчетов](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md).  
   
 

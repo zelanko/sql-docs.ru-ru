@@ -1,5 +1,6 @@
 ---
 title: Окно стека вызовов
+description: Узнайте, как использовать окно стека вызовов в отладчике Transact-SQL для просмотра типов данных параметров, а также значений хранимых процедур, функций и триггеров.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -13,16 +14,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c15e01a9555ceeacbbd741660cd19baba1f6842
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8421e448b36cb1cf4958ef5cfaa1d583a7cca262
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243379"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248045"
 ---
 # <a name="transact-sql-debugger---call-stack-window"></a>Отладчик Transact-SQL, окно стека вызовов
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 В окне **Стек вызовов** отображаются модули в стеке вызова, а также типы данных и значения всех параметров, передаваемых в модули. [!INCLUDE[tsql](../../includes/tsql-md.md)] включают в себя хранимые процедуры, функции и триггеры. Чтобы отобразить стек вызова, необходимо находиться в режиме отладки.  
 
@@ -54,7 +55,7 @@ ms.locfileid: "75243379"
   
 ## <a name="columns"></a>Столбцы
 
- **Название**  
+ **имя**;  
  Отображается информация о модуле в стеке вызова.  
   
  В нижней строке в стеке вызова в поле **Имя** указано окно источника редактора запросов и номер строки первого вызова в стеке. В других строках поле **Имя** имеет формат **Модуль(Экземпляр.База_данных)(Список_параметров) Номер_строки**.  

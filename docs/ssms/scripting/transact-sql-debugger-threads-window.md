@@ -1,5 +1,6 @@
 ---
 title: Окно потоков
+description: Узнайте об окне "Потоки", в котором отображаются сведения об отлаживаемом потоке ядра СУБД. Сведения отображаются только в режиме отладки.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -13,16 +14,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 057178568ef12c6de42cde518c02db1ae137a0ae
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 27a1b4f5673b959d378bd70122e334e3a4629bad
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253009"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248037"
 ---
 # <a name="transact-sql-debugger---threads-window"></a>Отладчик Transact-SQL, окно потоков
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 В окне **Потоки** отображаются сведения о потоке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , который используется в отлаживаемом сеансе редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Чтобы иметь возможность просматривать сведения о потоке, необходимо находиться в режиме отладки.  
 
@@ -40,7 +41,7 @@ ms.locfileid: "75253009"
   
  При работе не в режиме использования упрощенных пулов должна быть выполнена выборка строки, в которой значение os_thread_id совпадает со значением в столбце **Идентификатор** . При работе в режиме использования упрощенных пулов выберите строку, в которой значение fiber_context_address совпадает со значением в столбце **Идентификатор** .  
   
- **Название**  
+ **имя**;  
  Выводится информация о сеансе компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] в формате **ИмяКомпьютера/ИмяЭкземпляра [SPID]** .  
   
  **ИмяКомпьютера**  
@@ -52,7 +53,7 @@ ms.locfileid: "75253009"
  **[SPID]**  
  Идентификатор процесса сеанса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который однозначно определяет этот сеанс. Можно получить дополнительные сведения об этом сеансе путем выборки строки в представлении sys.sysprocesses, которая имеет то же значение в столбце spid.  
   
- **Местоположение**  
+ **Расположение**  
  Отображается имя файла скрипта, который используется в отлаживаемом сеансе редактора запросов.  
   
  **Приоритет**  

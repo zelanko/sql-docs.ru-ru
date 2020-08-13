@@ -1,5 +1,6 @@
 ---
 title: Планирование создания отчетов и развертывания отчетов | Службы Reporting Services | Документы Майкрософт
+description: Узнайте, как спланировать создание отчета и среду сервера отчетов с помощью Reporting Services.
 ms.date: 09/12/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bca1457eb9be7b686ccfe86a1f7e7bdcab15cc14
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8921fa3e19ca9de4184af907ee1aac59bd82f824
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581245"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247543"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Планирование создания и развертывания отчетов | Службы Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] предоставляет несколько способов для разработки и развертывания отчетов с разбивкой на страницы. Вы можете ознакомиться с дополнительными сведениями о планировании совместной работы функций создания отчетов и среды сервера отчетов.
@@ -50,15 +51,15 @@ ms.locfileid: "65581245"
   
 -   **Построитель отчетов.** Сохранение отчета из построителя отчетов на сервере отчетов.  
   
--   **Веб-портал.** Передача отчета на сервер отчетов, работающий в основном режиме, из [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)].  
+-   **Веб-портал.** Передача отчета из [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] на сервер отчетов, работающий в собственном режиме.  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
--   **SharePoint.** Передача отчета на сайт SharePoint, настроенный на работу с сервером отчетов в режиме интеграции с SharePoint.  
+-   **SharePoint**. Передача отчета на сайт SharePoint, настроенный на работу с сервером отчетов в режиме интеграции с SharePoint.  
 
 ::: moniker-end
   
--   **Программная работа.** Публикация отчета на сервере отчетов программным образом с помощью API-интерфейсов SOAP. Дополнительные сведения см. в разделе [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md).  
+-   **Программным способом**. Публикация отчета на сервере отчетов программным образом с помощью API-интерфейсов SOAP. Дополнительные сведения см. в разделе [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md).  
   
  В следующей таблице перечислены поддерживаемые версии RDL-схемы по версии сервера отчетов.  
   

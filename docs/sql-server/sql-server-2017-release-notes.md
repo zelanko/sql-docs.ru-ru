@@ -5,21 +5,21 @@ ms.custom: ''
 ms.date: 11/01/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: release-landing
 ms.topic: conceptual
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 43e6451f54e55af8e9c782dbab8a23bc753a03bc
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 33d6fd836bd4676e9f178fb5a3c59cc9fba67f80
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001134"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245608"
 ---
 # <a name="sql-server-2017-release-notes"></a>Заметки о выпуске SQL Server 2017
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 В этом разделе описываются ограничения и проблемы, связанные с SQL Server 2017. Связанные сведения:
 - [Новые возможности в SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
 - [Заметки о выпуске для SQL Server в Linux](../linux/sql-server-linux-release-notes.md)
@@ -74,7 +74,7 @@ ms.locfileid: "83001134"
 - **Проблема и последствия для клиентов**: Параметр *runincluster* хранимой процедуры **[catalog].[create_execution]** переименован в *runinscaleout* для согласованности и удобства чтения.
 - **Решение:** Если у вас есть скрипты для запуска пакетов в развертывании с горизонтальным увеличением масштаба, нужно изменить имя параметра с *runincluster* на *runinscaleout*, чтобы они работали в RC1.
 
-- **Проблема и последствия для клиентов**: SQL Server Management Studio (SSMS) 17.1 и более ранние версии не могут активировать выполнение пакета в развертывании с горизонтальным увеличением масштаба в RC1. Сообщение об ошибке: " *@runincluster* не является параметром процедуры **create_execution**". Эта проблема будет исправлена в следующем выпуске SSMS, в версии 17.2. Версии SSMS, начиная с 17.2, поддерживают новое имя параметра и выполнение пакетов в развертывании с горизонтальным увеличением масштаба. 
+- **Проблема и последствия для клиентов**: SQL Server Management Studio (SSMS) 17.1 и более ранние версии не могут активировать выполнение пакета в развертывании с горизонтальным увеличением масштаба в RC1. Сообщение об ошибке: " *\@runincluster* не является параметром процедуры **create_execution**". Эта проблема будет исправлена в следующем выпуске SSMS, в версии 17.2. Версии SSMS, начиная с 17.2, поддерживают новое имя параметра и выполнение пакетов в развертывании с горизонтальным увеличением масштаба. 
 - **Решение:** пока не станет доступна версия SSMS 17.2, используйте следующие инструкции:
   1. Используйте существующую версию SSMS, чтобы создать скрипт выполнения пакета.
   2. Измените в скрипте имя параметра *runincluster* на *runinscaleout*.
@@ -150,7 +150,7 @@ ms.locfileid: "83001134"
 
 ## <a name="more-information"></a>Дополнительные сведения
 - [Заметки о выпуске служб SQL Server Reporting Services](../reporting-services/release-notes-reporting-services.md).
-- [Known Issues for Machine Learning Services](../machine-learning/known-issues-for-sql-server-machine-learning-services.md) (Известные проблемы в службах машинного обучения)
+- [Known Issues for Machine Learning Services](../machine-learning/troubleshooting/known-issues-for-sql-server-machine-learning-services.md) (Известные проблемы в службах машинного обучения)
 - [Ссылки и сведения для всех поддерживаемых версий в Центре обновления SQL Server](https://msdn.microsoft.com/library/ff803383.aspx)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

@@ -1,5 +1,6 @@
 ---
 title: Функции и задачи служб Reporting Services | Документация Майкрософт
+description: Узнайте, как базовое содержимое Reporting Services упорядочивается с помощью отчетов и функций отчетов, функций сервера отчетов и функций продукта Reporting Services.
 ms.date: 12/18/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0cc20225-5784-479c-bfb0-445854111367
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 764eda3b356a42272b5f26790574746f842768ae
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d10c723351b6c32738a02cfadc1a3715896ca03e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081851"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246650"
 ---
 # <a name="reporting-services-features-and-tasks-ssrs"></a>Функции и задачи служб Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] упорядочивается с помощью отчетов и функций отчетов, функций сервера отчетов и функций продукта [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  

@@ -1,5 +1,6 @@
 ---
 title: Отладчик Transact-SQL
+description: Узнайте, как запустить пошаговое выполнение кода и просмотреть состояние выполнения с помощью отладчика Transact-SQL, а также как выполнять другие задачи отладки.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -11,18 +12,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-ms.date: 12/04/2019
-monikerRange: '>= sql-server-2014 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8e705be1cda43f0645b53f74f3f658a5bc8c2f2c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 07/22/2020
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7a3f86e5df9c94905089cd5382d3895dd9f01e84
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253004"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246167"
 ---
 # <a name="transact-sql-debugger"></a>Отладчик Transact-SQL
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] позволяет находить ошибки в коде [!INCLUDE[tsql](../../includes/tsql-md.md)] путем проверки поведения кода во время его выполнения. После перевода окна редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] в режим отладки можно приостанавливать выполнение на определенных строках кода и просматривать сведения и данные, которые используются или возвращаются соответствующими инструкциями [!INCLUDE[tsql](../../includes/tsql-md.md)] .
 

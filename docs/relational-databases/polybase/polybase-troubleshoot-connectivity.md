@@ -11,12 +11,12 @@ ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 9e50701d0486ee7bc00bf765d2a71cb4de0c0b25
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: cc030aa9036c67b1175a99ef01eab47099b8fc36
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196199"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247305"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Устранение неполадок с подключением PolyBase к Kerberos
 
@@ -69,7 +69,7 @@ ms.locfileid: "86196199"
 
 Эти файлы находятся в следующей папке:
 
-`\[System Drive\]:{install path}\{instance}\{name}\MSSQL\Binn\PolyBase\Hadoop\conf`
+`\[System Drive\]:{install path}\{MSSQL##.INSTANCENAME}\MSSQL\Binn\PolyBase\Hadoop\conf`
 
 Например, для [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по умолчанию используется `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase\Hadoop\conf`.
 
@@ -97,7 +97,7 @@ ms.locfileid: "86196199"
 Инструмент работает независимо от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], поэтому его не требуется запускать заранее или перезапускать при изменении XML-конфигураций. Для запуска инструмента выполните на хост-компьютере с установленным [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] следующие команды:
 
 ```cmd
-> cd C:\Program Files\Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase  
+> cd C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBase  
 > java -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge {Name Node Address} {Name Node Port} {Service Principal} {Filepath containing Service Principal's Password} {Remote HDFS file path (optional)}
 ```
 
@@ -105,7 +105,7 @@ ms.locfileid: "86196199"
 
 | Аргумент | Описание|
 | --- | --- |
-| *Адрес узла имен* | IP-адрес или полное доменное имя узла имен. Относится к аргументу LOCATION в вашей инструкции CREATE EXTERNAL DATA SOURCE (T-SQL).|
+| *Адрес узла имен* | IP-адрес или полное доменное имя узла имен. Относится к аргументу LOCATION в вашей инструкции CREATE EXTERNAL DATA SOURCE (T-SQL). Примечание. Для версии SQL Server 2019 необходимо, чтобы перед IP-адресом или полным доменным именем стоял *hdfs:\/\/* .|
 | *Порт узла имен* | Соответствует порту узла имен. Относится к аргументу LOCATION в вашей инструкции CREATE EXTERNAL DATA SOURCE (T-SQL). Например, 8020. |
 | *Субъект-служба* | Субъект-служба администрирования для вашего центра распространения ключей. Соответствует аргументу IDENTITY в инструкции T-SQL `CREATE DATABASE SCOPED CREDENTIAL`.|
 | *Пароль службы* | Вместо того, чтобы вводить пароль в консоли, сохраните его в файле и передайте сюда путь. Содержимое файла должно соответствовать аргументу SECRET в вашей инструкции `CREATE DATABASE SCOPED CREDENTIAL` (T-SQL). |

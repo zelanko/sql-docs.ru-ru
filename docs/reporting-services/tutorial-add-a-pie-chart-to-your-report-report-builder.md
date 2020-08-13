@@ -1,5 +1,6 @@
 ---
 title: Учебник. Добавление круговой диаграммы к отчету (построитель отчетов) | Документы Майкрософт
+description: Узнайте, как создать круговую диаграмму в отчете Reporting Services с разбивкой на страницы, добавить процентные значения и объединить небольшие сегменты в один большой.
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b25a2f955ddd630c7093a1dc82a22c2cd0ba41b0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 55cf0d48ebe4cec7063089c1ec025dd4b34bce1b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63041339"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245671"
 ---
-# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Учебник. Добавление круговой диаграммы к отчету (построитель отчетов)
+# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Руководство по Добавление круговой диаграммы в отчет (построитель отчетов)
 В этом учебнике вы создадите круговую диаграмму в отчете Reporting Services с разбивкой на страницы. Вы добавите процентные значения и объедините несколько небольших секторов в один сектор.
 
 Данные на круговых и кольцевых диаграммах отображаются в виде пропорциональных долей целого. Такие диаграммы не имеют осей. После добавления числового поля на круговую диаграмму в этой диаграмме вычисляется процентная доля каждого значения в общей сумме.  
@@ -29,7 +30,7 @@ ms.locfileid: "63041339"
 > [!NOTE]  
 > В этом учебнике шаги для мастера объединены в две процедуры. Пошаговые инструкции по переходу к серверу отчетов, добавлению источника данных и набора данных см. в первом учебнике этой серии: [Учебник. Создание простого табличного отчета (построитель отчетов)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Предполагаемое время для выполнения заданий этого учебника: 10 минут  
+На изучение этого руководства потребуется примерно 10 минут.  
   
 ## <a name="requirements"></a>Требования  
 Дополнительные сведения о требованиях см. в разделе [Предварительные условия для использования учебников (построитель отчетов)](../reporting-services/prerequisites-for-tutorials-report-builder.md).  

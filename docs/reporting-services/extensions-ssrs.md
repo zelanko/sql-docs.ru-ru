@@ -1,5 +1,6 @@
 ---
 title: Модули
+description: Узнайте о расширениях, доступных в службах Reporting Services, и о том, как они используют расширения для разделения типов принимаемых входных или выходных данных.
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
@@ -9,12 +10,12 @@ ms.technology: reporting-services
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: f7a64289bd3f1e1bd8fce71d21e5e1604e5bf4b4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0c532561c8d31cce2b5b044d8158be046bb824e4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68262890"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247228"
 ---
 # <a name="extensions-for-sql-server-reporting-services-ssrs"></a>Расширения служб SQL Server Reporting Services (SSRS)
 
@@ -56,7 +57,7 @@ ms.locfileid: "68262890"
   
 ## <a name="rendering-extensions"></a>модули подготовки отчетов;
 
- Модули подготовки отчетов преобразуют данные и макет отчета, полученные от обработчика отчетов, в формат для конкретного устройства. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] входит семь модулей подготовки отчетов: HTML, Excel, CSV, XML, модуль подготовки в формате изображения, PDF и [!INCLUDE[msCoName](../includes/msconame-md.md)] Word.  
+ Модули подготовки отчетов преобразуют данные и макет отчета, полученные от обработчика отчетов, в формат для конкретного устройства. В состав [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] входит семь модулей подготовки отчетов: HTML, Excel, CSV, XML, модуль подготовки в формате изображения, PDF и [!INCLUDE[msCoName](../includes/msconame-md.md)] Word.  
   
 - **Модуль подготовки отчетов в формате HTML** . Если отчет запрашивается через веб-браузер, сервер отчетов использует модуль подготовки отчетов в формате HTML. Этот модуль подготовки отчетов к просмотру формирует код в формате HTML только в кодировке UTF-8. Дополнительные сведения см. в разделах [Подготовка к просмотру в виде HTML (построитель отчетов и службы SSRS)](../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md) и [Поддержка браузера для служб Reporting Services и Power View](../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   

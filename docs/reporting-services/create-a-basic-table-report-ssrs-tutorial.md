@@ -1,5 +1,6 @@
 ---
 title: Создание простого табличного отчета (учебник по службам SSRS) | Документы Майкрософт
+description: Используйте конструктор отчетов в Visual Studio или SQL Server Data Tools (SSDT) для создания отчета SQL Server Reporting Services (SSRS) с разбивкой на страницы.
 ms.date: 04/16/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: af41da75d553794019f1d01c8b8f5bb6aba80622
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f1549d3ba775d598902fd0fd4b5cc33bab2f54de
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65103305"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245143"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>Создание простого табличного отчета (учебник по службам SSRS)
 
@@ -45,7 +46,7 @@ ms.locfileid: "65103305"
   
 Также необходимо иметь разрешения только на чтение для получения данных из базы данных AdventureWorks2016.
 
-**Предполагаемое время для выполнения заданий учебника:** 30 минут.
+**Предполагаемое время для выполнения заданий учебника**: 30 минут.
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
@@ -53,11 +54,11 @@ ms.locfileid: "65103305"
 
 [Занятие 2. Задание информации о соединении (службы Reporting Services)](lesson-2-specifying-connection-information-reporting-services.md)
 
-[Занятие 3. Определение набора данных для табличного отчета (службы Reporting Services)](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)
+[Урок 3. Определение набора данных для табличного отчета (службы Reporting Services)](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)
 
 [Занятие 4. Добавление таблицы в отчет (службы Reporting Services)](lesson-4-adding-a-table-to-the-report-reporting-services.md)
 
-[Занятие 5. Форматирование отчета (Reporting Services)](lesson-5-formatting-a-report-reporting-services.md)
+[Занятие 5. Форматирование отчета (службы Reporting Services)](lesson-5-formatting-a-report-reporting-services.md)
 
 [Занятие 6. Добавление группирования и итогов (службы Reporting Services)](lesson-6-adding-grouping-and-totals-reporting-services.md)
 

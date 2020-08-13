@@ -1,5 +1,6 @@
 ---
 title: Документация для разработчиков служб Reporting Services | Документы Майкрософт
+description: Использование указанной документации, чтобы ознакомиться с функциями и возможностями Reporting Services, позволяющими встроить пользовательские средства ведения отчетов и управления в веб-сайты и приложения Windows.
 author: maggiesMSFT
 ms.author: maggies
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Reporting Services, programming
 - programming [Reporting Services]
 ms.date: 03/17/2017
-ms.openlocfilehash: e2db4a113ebdb53756200879e3797ccbbeec8a52
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2a60936a1a267ac93b181ff8c5b5913486ba9314
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68259617"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246673"
 ---
 # <a name="reporting-services-developer-documentation"></a>Документация для разработчиков служб Reporting Services
   В [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] доступно несколько программных интерфейсов для работы в пользовательских приложениях. Можно использовать существующие функции и возможности служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для построения пользовательских средств создания отчетов и средств управления на сайтах и в приложениях Windows или расширять платформу служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
@@ -24,7 +25,7 @@ ms.locfileid: "68259617"
  Расширение платформы служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] включает создание новых компонентов и ресурсов, которые могут использоваться для доступа к данным, доставки отчетов и других задач. Эти компоненты и ресурсы можно предлагать компаниям, использующим в своей работе службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
 > [!NOTE]  
->  В службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] включены образцы программирования и учебники, помогающие приступить к работе. Дополнительные сведения см. в разделах [Образцы служб Reporting Services](https://msdn.microsoft.com/library/ms160954\(v=sql.110\).aspx) и [Руководство разработчика. Учебники (службы Reporting Services)](https://msdn.microsoft.com/library/aa337423\(v=sql.110\).aspx).  
+>  В службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] включены образцы программирования и учебники, помогающие приступить к работе. См. [примеры служб Reporting Services](https://msdn.microsoft.com/library/ms160954\(v=sql.110\).aspx) и сведения в [руководстве разработчика Reporting Services](https://msdn.microsoft.com/library/aa337423\(v=sql.110\).aspx).  
   
 ## <a name="in-this-section"></a>в этом разделе  
  [Интеграция Reporting Services в приложения](../reporting-services/application-integration/integrating-reporting-services-into-applications.md)  

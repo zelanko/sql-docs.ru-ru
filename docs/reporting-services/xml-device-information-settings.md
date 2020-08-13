@@ -1,5 +1,6 @@
 ---
 title: Настройки сведений об устройстве XML | Документы Майкрософт
+description: Сведения о различных параметрах сведений об устройстве, которые можно использовать для отрисовки в формате XML.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a32e83fe-c10e-4ebd-8975-5be7dcc422e7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ee4e9f30dc190aae78e1e3e763451e42b3a52ecb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 72a645983dadaeff9c446ef3baf6fbcbfc94990b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571017"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247411"
 ---
 # <a name="xml-device-information-settings"></a>Настройки сведений об устройстве XML
   В следующей таблице перечислены настройки сведений об устройстве для подготовки к просмотру в формате XML.  

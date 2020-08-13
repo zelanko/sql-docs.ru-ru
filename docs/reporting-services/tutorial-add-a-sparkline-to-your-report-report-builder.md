@@ -1,5 +1,6 @@
 ---
 title: Учебник. Добавление спарклайна в отчет (построитель отчетов) | Документация Майкрософт
+description: Узнайте, как использовать построитель отчетов для создания простой таблицы с диаграммой спарклайна в отчете Reporting Services с разбивкой на страницы.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4dbe5d5afdf507f3edfd68135aa8ee14aee5ae08
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fe0d52f55905721002a1590f54ada84d7732f2a0
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63043180"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245661"
 ---
-# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Учебник. Добавление спарклайна в отчет (построитель отчетов)
+# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Руководство по Добавление спарклайна в отчет (построитель отчетов)
 
 В этом учебнике по [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)]вы создадите простую таблицу со спарклайн-графиком в отчета [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы.   
   
@@ -23,7 +24,7 @@ ms.locfileid: "63043180"
   
 ![report-builder-sparkline-final](../reporting-services/media/report-builder-sparkline-final.png)  
      
-Предполагаемое время для выполнения заданий данного учебника: 30 минут.  
+На изучение этого руководства потребуется примерно 30 минут.  
   
 ## <a name="requirements"></a>Требования  
 Дополнительные сведения о требованиях см. в разделе [Предварительные условия для использования учебников (построитель отчетов)](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -154,7 +155,7 @@ ms.locfileid: "63043180"
   
 14. Таблица добавляется в область конструктора. Таблица содержит три столбца и три строки.  
   
-    Посмотрите на панель группировки. Если панель группировки не видна, в меню **Вид** выберите пункт **Группирование**. На панели «Группы строк» показана одна группа строк: **Product**. На панели «Группы строк» показана одна группа столбцов: **SalesDate**. Подробные данные — это все данные, которые извлекаются с помощью запроса к набору данных.  
+    Посмотрите на панель группировки. Если панель группировки не видна, в меню **Вид** выберите пункт **Группирование**. В области "Группы строк" показана одна группа строк: **Product**. В области "Группы столбцов" показана одна группа столбцов: **SalesDate**. Подробные данные — это все данные, которые извлекаются с помощью запроса к набору данных.  
     
     ![report-builder-sparkline-grouping-pane](../reporting-services/media/report-builder-sparkline-grouping-pane.png)
   

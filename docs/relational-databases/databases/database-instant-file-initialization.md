@@ -2,7 +2,7 @@
 title: Мгновенная инициализация файлов базы данных
 description: Сведения о быстрой инициализации файлов и о том, как включить ее в базе данных SQL Server.
 ms.custom: contperfq4
-ms.date: 05/30/2020
+ms.date: 07/24/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a10e6f9cff886b18b8bc344270516aaf2b5577db
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 20b182186244221c0f8cea2dda86d8f6a269cd50
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756252"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246593"
 ---
 # <a name="database-instant-file-initialization"></a>Мгновенная инициализация файлов базы данных
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,6 +37,7 @@ ms.locfileid: "85756252"
 - Восстановление базы данных или файловой группы.  
 
 В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] мгновенная инициализация файлов (IFI) позволяет быстрее выполнять ранее упомянутые файловые операции, так как она освобождает занятое место на диске, не заполняя его нулями. Вместо этого содержимое диска перезаписывается, поскольку в файлы записываются новые данные. Файлы журналов не могут быть инициализированы мгновенно.
+
 
 ## <a name="enable-instant-file-initialization"></a>Включить мгновенную инициализацию файлов
 
@@ -99,5 +100,29 @@ ms.locfileid: "85756252"
     > [!NOTE]
     > Отключение увеличивает время выделения файлов для файлов данных и влияет только на создаваемые или увеличивающиеся в размере файлы после отзыва прав пользователя.
   
+### <a name="se_manage_volume_name-user-right"></a>Право пользователя SE_MANAGE_VOLUME_NAME
+
+Право пользователя *SE_MANAGE_VOLUME_NAME* можно назначить в **средствах администрирования Windows** с помощью приложения **Локальная политика безопасности**. В разделе **Локальные политики** выберите **Назначение прав пользователя** и измените свойство **Выполнение задач по обслуживанию томов**.
+
+## <a name="performance-considerations"></a>Вопросы производительности
+
+Процесс инициализации файла базы данных записывает нули в новые регионы файла при инициализации. Длительность этого процесса зависит от размера инициализированной части файла и времени отклика и емкости системы хранения. Если инициализация занимает много времени, могут отобразиться следующие сообщения, записанные в журнал ошибок SQL Server и в журнал приложения.
+
+```
+Msg 5144
+Autogrow of file '%.*ls' in database '%.*ls' was cancelled by user or timed out after %d milliseconds.  Use ALTER DATABASE to set a smaller FILEGROWTH value for this file or to explicitly set a new file size.
+```
+
+```
+Msg 5145
+Autogrow of file '%.*ls' in database '%.*ls' took %d milliseconds.  Consider using ALTER DATABASE to set a smaller FILEGROWTH for this file.
+```
+
+Длительное автоматическое увеличение размера базы данных или файла журнала транзакций может привести к проблемам с производительностью запросов. Это обусловлено тем, что операция, требующая автоматического увеличения размера файла, будет приостановлена на ресурсах, таких как блокировки или кратковременные блокировки, по мере увеличения размера файла. Длительные ожидания кратковременных блокировок могут отображаться для страниц распределения. Для операции, требующей длительного автоматического увеличения размера, будет показан тип ожидания PREEMPTIVE_OS_WRITEFILEGATHER.
+
+
+
+
+
 ## <a name="see-also"></a>См. также:  
  [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)

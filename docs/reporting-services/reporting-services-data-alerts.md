@@ -1,5 +1,6 @@
 ---
 title: Предупреждения об изменении данных в службах Reporting Services | Документы Майкрософт
+description: Узнайте, как оповещения об изменении данных SQL Server Reporting Services помогают быть в курсе данных отчета, которые интересны или важны для вас.
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -9,12 +10,12 @@ ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b1cb553c263bc822d5139d50169241a0f19fdd79
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 7a3d3d4cc792afdef44a6c5ff6684e1e6aa4ff14
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487809"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246683"
 ---
 # <a name="reporting-services-data-alerts"></a>Предупреждения об изменении данных в службах Reporting Services
 
@@ -81,7 +82,7 @@ SQL Server Reporting Services — это управляемое данными
 ### <a name="save-data-alert-definitions-and-alerting-metadata"></a>Сохранение определений предупреждений об изменении данных и метаданных предупреждений  
  При установке служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint будет автоматически создана база данных предупреждений SQL Server.  
   
- Определения предупреждений об изменении данных и метаданные предупреждений сохраняются в базе данных предупреждений. По умолчанию эта база данных имеет имя ReportingServices\<GUID>_Alerting.  
+ Определения предупреждений об изменении данных и метаданные предупреждений сохраняются в базе данных предупреждений. По умолчанию эта база данных называется ReportingServices\<GUID>_Alerting.  
   
  При сохранении определения предупреждения об изменении данных система предупреждений создает задание агента SQL Server для этого определения предупреждения. В задание включено расписание задания. Расписание основано на шаблоне повторения, определенном для определения предупреждения. Запуск этого задания инициирует обработку определения предупреждения об изменении данных.  
   

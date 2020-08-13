@@ -1,5 +1,6 @@
 ---
 title: Занятие 5. Проектирование родительского отчета с использованием мастера отчетов | Документы Майкрософт
+description: Узнайте, как спроектировать дочерний отчет с помощью мастера отчетов в конструкторе отчетов после создания подключения к данным и таблицы данных для дочернего отчета.
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 19a3f927-ea97-4f40-a5f8-cd5f2598e4da
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: da9f07cf60a2ec42e23416b52cbfebab78802247
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cb9555522638ab6c8132f3422c7f0ca30928f893
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62512648"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246259"
 ---
-# <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>Занятие 5. Проектирование родительского отчета с использованием мастера отчетов
+# <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>Занятие 5.: Проектирование дочернего отчета с использованием мастера отчетов
 После создания подключения к данным и таблицы данных для дочернего отчета следующий шаг состоит в проектировании дочернего отчета в конструкторе отчетов с помощью мастера отчетов. Дополнительные сведения о конструкторе отчетов см. в разделе [Разработка отчетов с использованием конструктора отчетов (SSRS)](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
 ### <a name="to-design-the-child-report-using-the-report-wizard"></a>Проектирование дочернего отчета с использованием мастера отчетов  
@@ -38,7 +39,7 @@ ms.locfileid: "62512648"
   
     1.  Перетащите элементы **ProductID**, **PurchaseOrderID**, **PurchaseOrderDetailID**, **OrderQty**, **ReceivedQty**, **RejectedQty**и **StockedQty** из области **Доступные поля** в поле **Значения** .  
   
-    2.  Щелкните стрелку рядом с элементами **Sum(ProductID)** , **Sum(PurchaseOrderID)** , **Sum(PurchaseOrderDetailID)** , **Sum(OrderQty)** , **Sum(ReceivedQty)** , **Sum(RejectedQty)** и **Sum(StockedQty)** и снимите выделение с **Sum** .  
+    2.  Щелкните стрелку рядом с элементами **Sum(ProductID)**, **Sum(PurchaseOrderID)**, **Sum(PurchaseOrderDetailID)**, **Sum(OrderQty)**, **Sum(ReceivedQty)**, **Sum(RejectedQty)** и **Sum(StockedQty)** и снимите выделение с **Sum** .  
   
 7.  Дважды нажмите кнопку **Далее** , а затем нажмите кнопку **Готово** , чтобы закрыть окно **Мастер отчетов**.  
   
@@ -57,7 +58,7 @@ ms.locfileid: "62512648"
 9. Сохраните RDLC-файл.  
   
 ## <a name="next-task"></a>Следующая задача  
-Тем самым с помощью мастера отчетов был успешно спроектирован дочерний отчет. Затем в приложение для веб-сайта необходимо добавить элемент управления ReportViewer. См. [Занятие 6. Добавление в приложение элемента управления ReportViewer](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md).  
+Тем самым с помощью мастера отчетов был успешно спроектирован дочерний отчет. Затем в приложение для веб-сайта необходимо добавить элемент управления ReportViewer. См. [Занятие 6. Добавление в приложение элемента управления ReportViewer](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md).  
   
   
   

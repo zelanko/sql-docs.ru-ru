@@ -1,5 +1,6 @@
 ---
 title: Учебник. Добавление гистограммы к отчету (построитель отчетов) | Документы Майкрософт
+description: Узнайте, как создать отчет Reporting Services с разбивкой на страницы, содержащий гистограмму с рядом в виде набора вертикальных столбцов, сгруппированных по категории.
 ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 55a74bcd165fd06d55eccd6afa718ccd775c7faf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 450e625fba58eaa6ff1d9e9fe13065bf934a633b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63041398"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245691"
 ---
-# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Учебник. Добавление гистограммы к отчету (построитель отчетов)
+# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Руководство по Добавление гистограммы в отчет (построитель отчетов)
 В этом учебнике вы создадите отчет [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы, содержащий гистограмму с рядом в виде набора вертикальных столбцов, сгруппированных по категории. 
 
 Гистограммы удобно использовать в следующих целях:  
@@ -30,7 +31,7 @@ ms.locfileid: "63041398"
 > [!NOTE]  
 > В этом учебнике шаги работы с мастером объединены в одну процедуру. Пошаговые инструкции по переходу к серверу отчетов, выбору источника данных и созданию набора данных см. в первом учебнике этой серии: [Учебник. Создание простого табличного отчета &#40;построитель отчетов&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Предполагаемое время для выполнения заданий этого учебника: 15 минут.  
+На изучение этого руководства потребуется примерно 15 минут.  
   
 ## <a name="requirements"></a>Требования  
 Дополнительные сведения о требованиях см. в разделе [Предварительные условия для использования учебников (построитель отчетов)](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
