@@ -18,11 +18,12 @@ ms.assetid: 18110444-d38d-4cff-90d2-d1fc6236668b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c280be43be2ef4f14e57321cb96420e6cf51eb6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 18a4a5c25c791122191c07e5bb63a6fc6c32cba0
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012686"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180064"
 ---
 # <a name="sp_fkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "86012686"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```syntaxsql  
 sp_fkeys [ @pktable_name = ] 'pktable_name'   
      [ , [ @pktable_owner = ] 'pktable_owner' ]   
      [ , [ @pktable_qualifier = ] 'pktable_qualifier' ]   
@@ -88,7 +89,7 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
   
  Возвращенные результаты сортируются по столбцам FKTABLE_QUALIFIER, FKTABLE_OWNER, FKTABLE_NAME и KEY_SEQ.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Кодирование приложения, в состав которого входят таблицы с отключенными внешними ключами, можно выполнять следующим образом.  
   
 -   Временно отключить проверку ограничений (ALTER TABLE NOCHECK или CREATE TABLE NOT FOR REPLICATION) при работе с таблицами, потом включить ее снова.  
@@ -119,7 +120,7 @@ EXEC sp_fkeys @pktable_name = N'Department'
 EXEC sp_fkeys @pktable_name = N'DimDate;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Хранимые процедуры каталога &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_pkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-pkeys-transact-sql.md)  

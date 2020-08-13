@@ -18,11 +18,12 @@ ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 83f46ddd70061ef0f0647c902221b7f906917048
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5ac9e5647193899335af494ac87f8ecdafe6390d
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999907"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180301"
 ---
 # <a name="sp_columns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85999907"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
   
 sp_columns [ @table_name = ] object  
@@ -70,10 +71,10 @@ sp_columns [ @table_name = ] object
 |**COLUMN_NAME**|**sysname**|Имя столбца для каждого столбца возвращаемого **table_name** . Это поле всегда возвращает значение.|  
 |**DATA_TYPE**|**smallint**|Целочисленный код типа данных ODBC. Если этот тип данных не может быть сопоставлен с типом данных ODBC, возвращается значение NULL. Имя собственного типа данных возвращается в столбец **TYPE_NAME** .|  
 |**TYPE_NAME**|**sysname**|Тип данных в символьном представлении. Название типа предоставляется базовой СУБД.|  
-|**ОБЕСПЕЧИВАЮТ**|**int**|Количество значащих цифр. Возвращаемое значение для столбца **точности** находится в базовом 10.|  
+|**PRECISION**|**int**|Количество значащих цифр. Возвращаемое значение для столбца **точности** находится в базовом 10.|  
 |**LENGTH**|**int**|Размер передаваемых данных. <sup>1</sup>|  
 |**Измените**|**smallint**|Число цифр справа от десятичной запятой.|  
-|**ОСНОВАНИЕ системы СЧИСЛЕНИЯ**|**smallint**|Основание системы счисления числовых типов данных.|  
+|**RADIX**|**smallint**|Основание системы счисления числовых типов данных.|  
 |**ОБНУЛЯЕМОГО**|**smallint**|Указывает возможность содержать значение NULL.<br /><br /> 1 = значение NULL допустимо.<br /><br /> 0 = значение NULL недопустимо.|  
 |**ЗАМЕЧАНИЯ**|**varchar (254)**|Это поле всегда возвращает значение NULL.|  
 |**COLUMN_DEF**|**nvarchar(4000)**|Значение столбца по умолчанию.|  
@@ -89,13 +90,13 @@ sp_columns [ @table_name = ] object
 ## <a name="permissions"></a>Разрешения  
  Требуются разрешения SELECT и VIEW DEFINITION на схему.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **sp_columns** соответствует требованиям для идентификаторов с разделителями. Дополнительные сведения см. в разделе [Идентификаторы баз данных](../../relational-databases/databases/database-identifiers.md).  
   
 ## <a name="examples"></a>Примеры  
  Следующий пример возвращает данные столбца для указанной таблицы.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_columns @table_name = N'Department',  
@@ -105,14 +106,14 @@ EXEC sp_columns @table_name = N'Department',
 ## <a name="examples-sssdwfull-and-sspdw"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Следующий пример возвращает данные столбца для указанной таблицы.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 EXEC sp_columns @table_name = N'DimEmployee',  
    @table_owner = N'dbo';  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_tables &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)   
  [Хранимые процедуры каталога &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

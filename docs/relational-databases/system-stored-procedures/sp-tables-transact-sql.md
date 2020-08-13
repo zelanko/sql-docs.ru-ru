@@ -18,11 +18,12 @@ ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 92ea113cfde897e2735be4ae1a3cc35b6bb788fc
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a11d686bef327e4e3daba1ed5365289f78169853
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85985009"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173117"
 ---
 # <a name="sp_tables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "85985009"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
   
 sp_tables [ [ @table_name = ] 'name' ]   
@@ -75,7 +76,7 @@ sp_tables [ [ @table_name = ] 'name' ]
 |**TABLE_TYPE**|**varchar(32)**|Таблица, системная таблица или представление.|  
 |**ЗАМЕЧАНИЯ**|**varchar (254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не возвращает значение для этого столбца.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Для максимальной совместимости клиент шлюза должен принимать только сопоставление шаблонов стандарта SQL-92 (символы-шаблоны «%» и «_»).  
   
  Данные о правах доступа текущего пользователя на чтение и запись в конкретную таблицу не всегда проверяются. Поэтому доступ не гарантируется. Этот результирующий набор включает не только таблицы и представления, но и синонимы, и псевдонимы для шлюзов к СУБД, поддерживающим эти типы. Если атрибут сервера **ACCESSIBLE_TABLES** имеет значение Y в результирующем наборе для **sp_server_info**, возвращаются только таблицы, к которым текущий пользователь может получить доступ.  
@@ -90,14 +91,14 @@ sp_tables [ [ @table_name = ] 'name' ]
 ### <a name="a-returning-a-list-of-objects-that-can-be-queried-in-the-current-environment"></a>A. Возврат списка объектов, к которым можно выполнять запросы в текущем окружении  
  Следующий пример возвращает список объектов, которые могут быть запросами в текущем окружении.  
   
-```  
+```sql  
 EXEC sp_tables ;  
 ```  
   
 ### <a name="b-returning-information-about-the-tables-in-a-specified-schema"></a>Б. Возврат сведений о таблицах в указанной схеме  
  В следующем примере возвращаются сведения о таблицах, принадлежащих схеме `Person` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_tables   
@@ -111,14 +112,14 @@ EXEC sp_tables
 ### <a name="c-returning-a-list-of-objects-that-can-be-queried-in-the-current-environment"></a>В. Возврат списка объектов, к которым можно выполнять запросы в текущем окружении  
  Следующий пример возвращает список объектов, которые могут быть запросами в текущем окружении.  
   
-```  
+```sql  
 EXEC sp_tables ;  
 ```  
   
 ### <a name="d-returning-information-about-the-tables-in-a-specified-schema"></a>Г. Возврат сведений о таблицах в указанной схеме  
  В следующем примере возвращаются сведения о таблицах измерений в `AdventureWorksPDW201` базе данных.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 EXEC sp_tables   
@@ -127,7 +128,7 @@ EXEC sp_tables
    @table_qualifier = 'AdventureWorksPDW2012';  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sys. синонимы &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

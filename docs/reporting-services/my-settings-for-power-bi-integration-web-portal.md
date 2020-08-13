@@ -1,5 +1,6 @@
 ---
 title: Мои параметры для интеграции с Power BI (веб-портал) | Документы Майкрософт
+description: Сведения о странице "Мои параметры" на веб-портале Reporting Services и о том, как она используется отдельными пользователями для управления входом в Power BI.
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 85c2fac7-80bf-45b7-8654-764b5f5231f5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7535b16e731bc74df98f853156214abcfbe5961f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f25ab8f848c642de95f1ba62eaca15bbb8b7e7d9
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65503719"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248582"
 ---
 # <a name="my-settings-for-power-bi-integration-web-portal"></a>Страница "Мои параметры", используемая для интеграции с Power BI (диспетчер отчетов)
 

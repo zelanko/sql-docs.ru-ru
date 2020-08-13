@@ -12,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: c7be9d3eb55800c2fa5c4f155aff6fd81301490c
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 4a6f551012a744d8659e0f3a4cee83b1fd39fbdf
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197341"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173227"
 ---
 # <a name="sp_pdw_add_network_credentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials (хранилище данных SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "86197341"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```syntaxsql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpasswordꞌ  
@@ -42,7 +42,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
   
  *target_server_name* определяется как nvarchar (337).  
   
- "*user_name*"  
+ '*user_name*'  
  Указывает user_name, имеющую разрешения на доступ к целевому серверу. Если учетные данные для целевого сервера уже существуют, они будут обновлены до новых учетных данных.  
   
  *user_name* определяется как nvarchar (513).  
@@ -67,7 +67,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
 ### <a name="a-add-credentials-for-performing-a-database-backup"></a>A. Добавление учетных данных для выполнения резервного копирования базы данных  
  В следующем примере связываются учетные данные имени пользователя и пароля для пользователя домена сеаттле\давид с целевым сервером, имеющим IP-адрес 10.172.63.255. Пользователь сеаттле\давид имеет разрешения на чтение и запись на целевом сервере. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]сохранит эти учетные данные и будет использовать их для чтения и записи на целевом сервере, если это необходимо для операций резервного копирования и восстановления.  
   
-```  
+```sql  
 EXEC sp_pdw_add_network_credentials '10.172.63.255', 'seattle\david', '********';  
 ```  
   
@@ -76,7 +76,7 @@ EXEC sp_pdw_add_network_credentials '10.172.63.255', 'seattle\david', '********'
 > [!NOTE]  
 >  Чтобы выполнить резервное копирование базы данных через InfiniBand, обязательно используйте IP-адрес InfiniBand сервера архивации.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_pdw_remove_network_credentials хранилища данных SQL &#40;&#41;](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
   
   

@@ -18,11 +18,12 @@ ms.assetid: a583c087-bdb3-46d2-b9e5-3921b3e6d10b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b6afbbc9cc5a1300048b043ab92e0152e68ed03a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f00b2446595835cb4ff556c34d58a3dd04b448a8
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007455"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180114"
 ---
 # <a name="sp_addrolemember-transact-sql"></a>Хранимая процедура sp_addrolemember (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,15 +31,14 @@ ms.locfileid: "86007455"
   Добавляет пользователя базы данных, роль базы данных, имя входа Windows или группу Windows к роли текущей базы данных.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Вместо этого используйте [инструкцию ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте [инструкцию ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) .  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```
+```syntaxsql
 sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'  
-
 ```    
   
 ## <a name="arguments"></a>Аргументы  
@@ -51,7 +51,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Член роли, добавляемый с помощью процедуры sp_addrolemember, наследует разрешения этой роли. Если добавляемый член — участник уровня Windows, не имеющий соответствующего пользователя базы данных, этот пользователь будет создан, но может быть не полностью сопоставлен с именем входа. Всегда проверяйте, существует ли имя входа, и предоставлен ли ему доступ к базе данных.  
   
  Роль не может быть членом самой себя. Такие «циклические» определения недопустимы, даже если подразумевается только косвенное членство через несколько промежуточных ролей.  
@@ -79,7 +79,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
 > [!NOTE]  
 >  Так как `Contoso\Mary5` известен как пользователь базы данных `Mary5` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] , имя пользователя `Mary5` должно быть определено. Выражение будет завершаться с ошибкой `Contoso\Mary5` , пока существует имя для входа. Можно проверить, используя имя входа в домене.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE USER Mary5 FOR LOGIN [Contoso\Mary5] ;  
@@ -89,7 +89,7 @@ GO
 ### <a name="b-adding-a-database-user"></a>Б. Добавление пользователя базы данных  
  В следующем примере пользователь базы данных `Mary5` добавляется к роли базы данных `Production` текущей базы данных.  
   
-```  
+```sql  
 EXEC sp_addrolemember 'Production', 'Mary5';  
 ```  
   
@@ -101,7 +101,7 @@ EXEC sp_addrolemember 'Production', 'Mary5';
 > [!NOTE]  
 >  Так как имя входа `LoginMary` известно как пользователь базы данных `UserMary` в [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] базе данных, `UserMary` необходимо указать его. Выражение будет завершаться с ошибкой `Mary5` , пока существует имя для входа. Имена входа и пользователи обычно имеют одинаковые имена. В этом примере используются разные имена для различения действий, влияющих на имя входа и пользователя.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 CREATE USER UserMary FOR LOGIN LoginMary ;  
@@ -112,16 +112,16 @@ EXEC sp_addrolemember 'Production', 'UserMary'
 ### <a name="d-adding-a-database-user"></a>Г. Добавление пользователя базы данных  
  В следующем примере пользователь базы данных `UserMary` добавляется к роли базы данных `Production` текущей базы данных.  
   
-```  
+```sql  
 EXEC sp_addrolemember 'Production', 'UserMary'  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
  [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_grantdbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Роли уровня базы данных](../../relational-databases/security/authentication-access/database-level-roles.md)  
   
   

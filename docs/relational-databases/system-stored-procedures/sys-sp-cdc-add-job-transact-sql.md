@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 68737e96c3c2c90592b1cccf807675ae5518ee4d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 53bc390e3e95ac49554826ad6ed96b8c4138ca10
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891192"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88172903"
 ---
 # <a name="syssp_cdc_add_job-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -70,7 +70,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
 `[ @pollinginterval ] = polling\_interval_`Количество секунд между циклами просмотра журнала. *polling_interval* имеет тип **bigint** и значение по умолчанию 5.  
   
- *polling_interval* является допустимым только для заданий отслеживания, если параметр *Continuous* установлен в значение 1. Если значение указано, то оно не может быть отрицательным или превышать 24 часа. Если указано значение 0, то пауза между операциями просмотра журналов отсутствует.  
+ *polling_interval* является допустимым только для заданий отслеживания, если параметр *Continuous* установлен в значение 1. Если значение указано, оно должно быть больше или равно 0 и меньше 24 часов (максимум: 86399 секунд). Если указано значение 0, то пауза между операциями просмотра журналов отсутствует.  
   
 `[ @retention ] = retention_`Количество минут, в течение которых строки данных изменения должны храниться в таблицах изменений. параметр *retention* имеет тип **bigint** и значение по умолчанию 4320 (72 часов). Максимальное значение составляет 52494800 (100 лет). Указываемое значение должно быть положительным целым числом.  
   
@@ -120,9 +120,9 @@ EXEC sys.sp_cdc_add_job
     ,@retention = 5760;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [dbo. cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
  [sys. sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
- [Об отслеживании измененных данных (SQL Server)](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
+ [О фиксации измененных данных (SQL Server)](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
   

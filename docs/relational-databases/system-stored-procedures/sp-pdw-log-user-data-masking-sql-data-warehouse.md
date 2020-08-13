@@ -11,12 +11,12 @@ ms.assetid: 43c63b42-03cb-4fb5-8362-ec3b7e22a590
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5541d065b24e349e4a784b7db1b8245df0a8aaf4
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: ea363af9a4f9362e7aa9d09ab29b8a5a9e1a2b5c
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196980"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173213"
 ---
 # <a name="sp_pdw_log_user_data_masking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (хранилище данных SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -32,14 +32,14 @@ ms.locfileid: "86196980"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```syntaxsql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;  
 ```  
   
 #### <a name="parameters"></a>Параметры  
-`[ @masking_mode = ] masking_mode`Определяет, включено ли маскирование прозрачных данных пользователя журнала шифрования данных. *masking_mode* имеет **тип int**и может принимать одно из следующих значений:  
+`[ @masking_mode = ] masking_mode` Определяет, включено ли маскирование прозрачных данных пользователя журнала шифрования данных. *masking_mode* имеет **тип int**и может принимать одно из следующих значений:  
   
 -   0 = отключено, данные пользователя отображаются в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] журналах действий.  
   
@@ -68,11 +68,11 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
 ## <a name="example"></a>Пример  
  В следующем примере включается Маскирование данных пользователя журнала TDE на устройстве.  
   
-```  
+```sql  
 EXEC sp_pdw_log_user_data_masking 1;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_pdw_database_encryption хранилища данных SQL &#40;&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)   
  [sp_pdw_database_encryption_regenerate_system_keys хранилища данных SQL &#40;&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  
   

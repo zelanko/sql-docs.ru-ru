@@ -1,5 +1,6 @@
 ---
 title: Основные понятия служб Reporting Services | Документация Майкрософт
+description: Узнайте о концепциях SQL Server Reporting Services (SSRS), в том числе о планировании отчетов, ролях и разрешениях, подписках на отчеты и их доставке.
 ms.date: 10/25/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,20 +9,20 @@ ms.topic: conceptual
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4679ed954ac7f422a0f3caa0c59c24e5012c927f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: eb4d1592b2541c16a34c96820a27942ef8bc08e3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77078180"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248590"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Основные понятия служб Reporting Services (SSRS)
   Эта статья содержит краткий обзор основных понятий [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
- **[!INCLUDE[applies](../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в собственном режиме | [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint   
+ **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] — собственный режим | [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] — режим SharePoint   
   
 ##  <a name="report-server-concepts"></a><a name="bkmk_ReportServerConcepts"></a> Основные понятия сервера отчетов  
- Сервером отчетов является компьютер, на котором установлен экземпляр служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . На сервере отчетов хранятся такие элементы, как отчеты с разбивкой на страницы и мобильные отчеты, а также связанные с отчетами элементы и ресурсы, расписания и подписки. Сервер отчетов может быть настроен в виде одиночного сервера или фермы с горизонтальным увеличением масштаба, а также он может быть интегрирован с SharePoint Server. Взаимодействие с элементами сервера отчетов происходит с помощью веб-службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , поставщика WMI, доступа по URL-адресу или программными методами с помощью скриптов. Способ взаимодействия с сервером отчетов зависит от топологии развертывания и конфигурации.  
+ Сервером отчетов является компьютер, на котором установлен экземпляр служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . На сервере отчетов хранятся такие элементы, как отчеты с разбивкой на страницы и мобильные отчеты, а также связанные с отчетами элементы и ресурсы, расписания и подписки. Сервер отчетов может быть настроен в виде одиночного сервера или масштабируемой фермы, а также он может быть интегрирован с SharePoint Server. Взаимодействие с элементами сервера отчетов происходит с помощью веб-службы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , поставщика WMI, доступа по URL-адресу или программными методами с помощью скриптов. Способ взаимодействия с сервером отчетов зависит от топологии развертывания и конфигурации.  
   
 ### <a name="native-mode-report-servers"></a>Серверы отчетов в собственном режиме
  Сервер отчетов в собственном режиме — это компьютер, на котором установлены службы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], настроенный в качестве изолированного сервера. Взаимодействие с сервером отчетов, отчетами и связанными с ними элементами производится с помощью браузера с [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] или командами доступа по URL-адресу, с помощью среды SQL Server Management Studio или программными средствами с помощью скриптов. Дополнительные сведения см. в разделе [Сервер отчетов служб Reporting Services (основной режим)](../reporting-services/report-server/reporting-services-report-server-native-mode.md).  

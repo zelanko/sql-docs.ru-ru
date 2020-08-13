@@ -19,15 +19,15 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a825843a69d9ba2f65f272adba86e6d8656aedde
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b6a24a142deef2283c58e21941293f31479f997b
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750706"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180094"
 ---
 # <a name="sysexternal_libraries-transact-sql"></a>sys.external_libraries (Transact-SQL)  
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 Поддерживает управление библиотеками пакетов, связанными с внешними средами выполнения, такими как R, Python и Java.
 
@@ -44,10 +44,10 @@ ms.locfileid: "85750706"
 |name |sysname |Имя внешней библиотеки. Уникален в пределах базы данных на владельца.|
 |principal_id |INT |Идентификатор участника, владеющего этой внешней библиотекой. |
 |язык | sysname | Имя языка или среды выполнения, поддерживающей внешнюю библиотеку. Допустимые значения: "R", "Python" и "Java". В будущем могут быть добавлены дополнительные среды выполнения.|
-|область |INT |0 для общедоступной области; 1 для закрытой области |  
+|scope |INT |0 для общедоступной области; 1 для закрытой области |  
 |scope_desc |varchar (7) |Указывает, является ли пакет открытым или закрытым|
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
 
 + [sys.external_library_files](sys-external-library-files-transact-sql.md)  
 + [СОЗДАТЬ ВНЕШНЮЮ БИБЛИОТЕКУ](../../t-sql/statements/create-external-library-transact-sql.md)  

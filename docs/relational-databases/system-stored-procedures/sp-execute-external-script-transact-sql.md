@@ -20,16 +20,15 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a1ef1dc0f4b59b5eaf8f0ea4978a4eacde023e31
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: 074836973123ae4f0f49acf72cf7bf6f56b17cf5
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87877962"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180261"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
-
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Хранимая процедура **sp_execute_external_script** выполняет скрипт, предоставленный в качестве входного аргумента для процедуры, и используется с [службы машинного обучения](../../machine-learning/sql-server-machine-learning-services.md) и [расширениями языка](../../language-extensions/language-extensions-overview.md). 
@@ -322,7 +321,7 @@ GO
 
 Для оценки можно также применять собственную функцию [PREDICT](../../t-sql/queries/predict-transact-sql.md), которая обычно выполняется быстрее, так как не вызывает среду выполнения Python или R.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 + [Машинное обучение SQL](../../machine-learning/index.yml)
 + [Расширения языка SQL Server](../../language-extensions/language-extensions-overview.md). 

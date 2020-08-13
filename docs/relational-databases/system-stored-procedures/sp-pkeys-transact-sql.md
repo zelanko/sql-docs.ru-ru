@@ -17,11 +17,12 @@ ms.assetid: e614c75d-847b-4726-8f6f-cd18de688eda
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a89ba7886ecca244456b70e9b8dff78b0bea176e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d5e7f0d0d3495abcd716fb5763b29d7e26192f60
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999354"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173196"
 ---
 # <a name="sp_pkeys-transact-sql"></a>sp_pkeys (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85999354"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
   
 sp_pkeys [ @table_name = ] 'name'       
@@ -66,7 +67,7 @@ sp_pkeys [ @table_name = ] 'name'
 |KEY_SEQ|**smallint**|Порядковый номер столбца в первичном ключе, состоящем из нескольких столбцов.|  
 |PK_NAME|**sysname**|Идентификатор первичного ключа. Возвращает NULL, если не применим к источнику данных.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Процедура sp_pkeys возвращает сведения о столбцах, явно указанных в ограничении ПЕРВИЧНЫЙ КЛЮЧ. Поскольку не все системы поддерживают явно именованные первичные ключи, разработчик шлюза определяет, что представляет собой первичный ключ. Обратите внимание на то, что под первичным ключом понимается логический первичный ключ таблицы. Предполагается, что для каждого логического первичного ключа определен уникальный индекс. Этот уникальный индекс возвращает хранимая процедура sp_statistics.  
   
  В ODBC аналогом хранимой процедуры sp_pkeys является SQLPrimaryKeys. Результаты упорядочиваются по столбцам TABLE_QUALIFIER, TABLE_OWNER, TABLE_NAME и KEY_SEQ.  
@@ -77,7 +78,7 @@ sp_pkeys [ @table_name = ] 'name'
 ## <a name="examples"></a>Примеры  
  В следующем примере возвращается первичный ключ таблицы `HumanResources.Department` в базе данных `AdventureWorks2012`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_pkeys @table_name = N'Department'  
@@ -87,13 +88,13 @@ EXEC sp_pkeys @table_name = N'Department'
 ## <a name="examples-sssdwfull-and-sspdw"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  В следующем примере возвращается первичный ключ таблицы `DimAccount` в базе данных `AdventureWorksPDW2012`. Он возвращает нулевые строки, указывающие, что таблица не имеет первичного ключа.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
-EXEC sp_pkeys @table_name = N'DimAccount;  
+EXEC sp_pkeys @table_name = N'DimAccount';  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Хранимые процедуры каталога &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

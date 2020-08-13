@@ -1,5 +1,6 @@
 ---
 title: Новые возможности служб Reporting Services | Документация Майкрософт
+description: Сведения о новых возможностях различных версий SQL Server Reporting Services, включая изменения в основных функциональных областях.
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -9,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 12/05/2019
-ms.openlocfilehash: cb50ca237fb1b9fae87b73fd81a9e6f2426b4775
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 869c2be4422df2361a0522e5b2183e61e43ae797
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77079607"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248556"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Новые возможности служб SQL Server Reporting Services (SSRS)
 
@@ -34,23 +35,23 @@ ms.locfileid: "77079607"
 
 ### <a name="azure-sql-managed-instance-support"></a>Поддержка Управляемого экземпляра SQL Azure
 
-Теперь вы можете разместить каталог базы данных, используемый для служб SQL Server Reporting Services (SSRS), в Управляемом экземпляре SQL Azure, размещенном либо на виртуальной машине, либо в вашем центре обработки данных. Поддержка ограничена использованием учетных данных для подключения к Управляемому экземпляру SQL.
+Теперь вы можете разместить каталог базы данных, используемый для служб SQL Server Reporting Services (SSRS), в Управляемом экземпляре SQL Azure, размещенном либо на виртуальной машине, либо в вашем центре обработки данных. Поддержка предоставляется только для использования учетных данных базы данных для подключения к Управляемому экземпляру SQL.
 
 ### <a name="power-bi-premium-dataset-support"></a>Поддержка набора данных Power BI Premium
 
-Вы можете подключиться к наборам данных Power BI с помощью построителя отчетов (Майкрософт) или SQL Server Data Tools (SSDT). Затем эти отчеты можно опубликовать в SSRS 2019, установив подключение к SQL Server Analysis Services. Для активации сценария пользователям необходимо использовать имя пользователя и пароль, хранимые в Windows.
+Вы можете подключиться к наборам данных Power BI с помощью построителя отчетов (Майкрософт) или средств SQL Server Data Tools (SSDT). Затем эти отчеты можно опубликовать в SSRS 2019, установив подключение к SQL Server Analysis Services. Чтобы включить сценарий, пользователи должны использовать сохраненные имя пользователя и пароль Windows.
 
-### <a name="alttext-alternative-text-support-for-report-elements"></a>Поддержка альтернативного текста для элементов отчетов
+### <a name="alttext-alternative-text-support-for-report-elements"></a>Поддержка AltText (альтернативный текст) для элементов отчета
 
-При создании отчетов вы укажете каждый элемент отчета, введя текст в подсказках. Технология чтения с экрана правильно определяет эти подсказки.
+При создании отчетов вы можете использовать всплывающие подсказки, чтобы указать текст для каждого элемента отчета. Технология чтения с экрана правильно определяет эти подсказки.
 
 ### <a name="azure-active-directory-application-proxy-support"></a>Поддержка Azure Active Directory Application Proxy
 
-Благодаря Azure Active Directory Application Proxy вам больше не нужно управлять собственной прокси-службой веб-приложения для обеспечения безопасного доступа через веб-приложения или мобильные приложения.
+Благодаря Azure Active Directory Application Proxy вам больше не нужно управлять собственной прокси-службой веб-приложения, чтобы обеспечить безопасный доступ через мобильные или веб-приложения.
 
 ### <a name="custom-headers"></a>Настраиваемые заголовки
 
-Они задают значения заголовков для всех URL-адресов, соответствующих указанному шаблону регулярного выражения. Пользователи могут задать значения заголовков для выбранных URL-адресов запросов, указав для настраиваемых заголовков допустимый XML-код. Администраторы могут добавлять любое количество заголовков в XML-код. Дополнительные сведения см. в [этом разделе](tools/server-properties-advanced-page-reporting-services.md#customheaders) статьи **Server Properties Advanced Page - Power BI Report Server & Reporting Services** (Расширенная страница свойств сервера — Сервер отчетов Power BI и службы Reporting Services).
+Устанавливает значения заголовков для всех URL-адресов, соответствующих указанному шаблону регулярных выражений. Пользователи могут обновить значение пользовательского заголовка с допустимым XML, чтобы установить значения заголовка для выбранных URL-адресов запроса. Администраторы могут добавлять любое количество заголовков в XML. Дополнительные сведения см. в [этом разделе](tools/server-properties-advanced-page-reporting-services.md#customheaders) статьи **Server Properties Advanced Page - Power BI Report Server & Reporting Services** (Расширенная страница свойств сервера — Сервер отчетов Power BI и службы Reporting Services).
 
 ### <a name="transparent-database-encryption"></a>Прозрачное шифрование данных
 
@@ -58,7 +59,7 @@ SQL Server 2019 теперь поддерживает прозрачное ши
 
 ### <a name="microsoft-report-builder-update"></a>Обновление построителя отчетов (Майкрософт)
 
-Новая версия построителя отчетов полностью совместима со службами Reporting Services версии 2016, 2017 и 2019. Она также совместима со всеми выпущенными и поддерживаемыми версиями Сервера отчетов Power BI.
+Недавно выпущенная версия построителя отчетов полностью совместима с версиями служб Reporting Services 2016, 2017 и 2019 годов. Она также совместима со всеми выпущенными и поддерживаемыми версиями сервера отчетов Power BI.
 
 ::: moniker-end
 
@@ -137,13 +138,13 @@ SQL Server 2019 теперь поддерживает прозрачное ши
 Мобильные отчеты в службах Reporting Services представляют собой специализированные отчеты, оптимизированные для широкого ряда форм-факторов и обеспечивающие оптимальную работу с данными на мобильных устройствах. Мобильные отчеты содержат различные визуализации — от диаграмм времени, категорий и сравнения до древовидных и пользовательских карт. Подключите мобильные отчеты к различным источникам данных, включая локальные многомерные и табличные данные служб SQL Server Analysis Services. Поля для мобильных отчетов можно поместить в рабочую область конструктора с настраиваемыми строками и столбцами сетки. Гибкие элементы мобильных отчетов автоматически масштабируются в зависимости от размера экрана. Мобильные отчеты можно сохранять на сервере службы отчетов, а затем просматривать в браузере или мобильном приложении Power BI. Поддерживаются такие устройства:
 
 - iPad
-- iPhones
+- iPhone
 - телефоны под управлением Android;
 - любые устройства с Windows 10.
 
 #### <a name="mobile-report-publisher"></a>Издатель мобильных отчетов  
 
-[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] позволяет создавать и публиковать мобильные отчеты SQL Server на [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] служб [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)].  
+[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] позволяет создавать и публиковать мобильные отчеты SQL Server на [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
 
 ![SS_MRP_LayoutTabSmall](../reporting-services/media/ss-mrp-layouttabsm.png "SS_MRP_LayoutTabSmall")  
 
@@ -175,15 +176,15 @@ SQL Server 2019 теперь поддерживает прозрачное ши
 
 ### <a name="report-improvements"></a>Усовершенствования в отчетах
 
-**Механизм визуализации HTML 5** : новый механизм визуализации HTML5, ориентированный на современные "полнофункциональные" веб-стандарты и современные браузеры.  Новый механизм визуализации больше не зависит от режима Quirks, используемого в некоторых старых браузерах.
+**Механизм визуализации HTML 5**: новый механизм визуализации HTML5, ориентированный на современные "полнофункциональные" веб-стандарты и современные браузеры.  Новый механизм визуализации больше не зависит от режима Quirks, используемого в некоторых старых браузерах.
 
 Дополнительные сведения о поддержке браузеров см. в разделе [Поддержка браузера для служб Reporting Services и Power View](../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
 
-**Современные отчеты с разбиением на страницы:** новейшие стили для диаграмм, датчиков, карт и других средств визуального представления данных позволяют создавать удобные актуальные отчеты с разбивкой на страницы.
+**Современные отчеты с разбиением на страницы**: новые, современные стили для диаграмм, датчиков, карт и других средств визуального представления данных позволяют создавать современные удобные отчеты с разбивкой на страницы.
 
 **Диаграммы типа "дерево" и "солнечные лучи"** : улучшайте отчеты с помощью диаграмм "дерево" ![ssrs_treemap_icon](../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon") и "солнечные лучи" ![ssrs_sunburst_icon](../reporting-services/media/ssrs-sunburst-icon.png "ssrs_sunburst_icon") для удобной визуализации иерархических данных. Дополнительные сведения см. в разделе [Tree Map and Sunburst Charts in Reporting Services](../reporting-services/report-design/tree-map-and-sunburst-charts-in-reporting-services.md).  
 
-**Внедрение отчетов:** с помощью iframe и параметров URL-адреса вы можете внедрять мобильные отчеты и отчеты с разбиением по страницам в другие веб-страницы и приложения.  
+**Внедрение отчетов**: теперь с помощью iframe, а также параметров URL-адреса мобильные отчеты и отчеты с разбиением по страницам можно внедрять в другие веб-страницы и приложения.  
 
 **Закрепление элементов отчета на панели мониторинга Power BI** : при просмотре отчета в [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]можно выбрать элементы отчета и закрепить их на панели мониторинга [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] .   Закреплять можно такие элементы, как диаграммы, панели датчиков, карты и изображения. Вы можете:
 
@@ -197,7 +198,7 @@ SQL Server 2019 теперь поддерживает прозрачное ши
 
 Дополнительные сведения см. в разделах [Интеграция Сервера отчетов Power BI (диспетчер конфигурации)](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md) и [Закрепление элементов служб Reporting Services на информационных панелях Power BI](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).  
 
-**Визуализация в PowerPoint и экспорт** : новый модуль подготовки отчетов [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] имеет формат Microsoft PowerPoint (PPTX). Экспортировать отчеты в формате PPTX можно из обычных приложений, построителя отчетов, конструктора отчетов (в SSDT) и [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. Например, на следующем рисунке показано меню экспорта из [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. 
+**Визуализация в PowerPoint и экспорт**: новый модуль подготовки отчетов [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] имеет формат Microsoft PowerPoint (PPTX). Экспортировать отчеты в формате PPTX можно из обычных приложений, построителя отчетов, конструктора отчетов (в SSDT) и [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. Например, на следующем рисунке показано меню экспорта из [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]. 
 
 ![ssrs-export-powerpoint](../reporting-services/media/ssrs-export-powerpoint.png) 
 
@@ -209,7 +210,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 Дополнительные сведения см. в разделе [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md).
 
-**PDF заменяет ActiveX для удаленной печати**. Теперь на панели инструментов в средстве просмотра отчетов для печати используется функция PDF, а не элементы ActiveX. Большинство современных браузеров, включая Microsoft Edge, поддерживают новое средство просмотра отчетов. Никаких дополнительных элементов управления ActiveX загружать не нужно! В зависимости от используемого браузера, а также установленных приложений и служб для просмотра PDF, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] либо будет открывать диалоговое окно для печати отчета, либо предлагать скачать PDF-файл. Имея права администратора, вы можете отключить функцию печати на стороне клиента в [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
+**PDF заменяет ActiveX для удаленной печати**: теперь на панели инструментов в средстве просмотра отчетов для печати используется функция PDF, а не элементы ActiveX. Большинство современных браузеров, включая Microsoft Edge, поддерживают новое средство просмотра отчетов. Никаких дополнительных элементов управления ActiveX загружать не нужно! В зависимости от используемого браузера, а также установленных приложений и служб для просмотра PDF, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] либо будет открывать диалоговое окно для печати отчета, либо предлагать скачать PDF-файл. Имея права администратора, вы можете отключить функцию печати на стороне клиента в [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
 
 Дополнительные сведения см. в разделе [Включение и отключение печати на стороне клиента для служб Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).
 
@@ -230,14 +231,14 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 ### <a name="report-builder-improvements"></a>Усовершенствования построителя отчетов
 
-**Новый пользовательский интерфейс построителя отчетов** : пользовательский интерфейс в [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] теперь имеет современный вид и содержит упрощенные элементы интерфейса.  
+**Новый пользовательский интерфейс построителя отчетов**: пользовательский интерфейс в [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] теперь имеет современный вид и содержит упрощенные элементы интерфейса.  
 
 |||  
 |-|-|  
 |Создать|Previous|  
 |![ssrs_rbfacelift_new](../reporting-services/media/ssrs-rbfacelift-new.png "ssrs_rbfacelift_new")|![ssrs_rbfacelift_old](../reporting-services/media/ssrs-rbfacelift-old.png "ssrs_rbfacelift_old")|  
 
-**Панель пользовательских параметров** : сейчас можно настраивать панель параметров. С помощью области конструктора в построителе отчетов параметр можно перетащить в конкретный столбец и строку на панели параметров. Для изменения макета панели столбцы можно добавлять и удалять. Дополнительные сведения см. в разделах [Настройка области параметров в отчете (построитель отчетов)](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
+**Панель пользовательских параметров**: сейчас можно настраивать панель параметров. С помощью области конструктора в построителе отчетов параметр можно перетащить в конкретный столбец и строку на панели параметров. Для изменения макета панели столбцы можно добавлять и удалять. Дополнительные сведения см. в разделах [Настройка области параметров в отчете (построитель отчетов)](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
 
 ![Список параметров в области данных отчета и на панели параметров](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "Список параметров в области данных отчета и на панели параметров")  
 

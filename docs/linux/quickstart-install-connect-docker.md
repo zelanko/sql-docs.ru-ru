@@ -13,12 +13,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 864abdb32dceaaa18e221295eebebc4f8382d4bb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: af1f6698cc08064d5ff9a8e8c6da32574b01d732
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901563"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248666"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Краткое руководство. Запуск образов контейнеров SQL Server в Docker
 
@@ -177,6 +177,8 @@ SELECT @@SERVERNAME,
 
 Установка параметров `-h` и `--name` равными позволяет легко идентифицировать целевой контейнер.
 
+5. В качестве последнего шага измените пароль SA, так как `SA_PASSWORD` отображается в выходных данных `ps -eax` и хранится в переменной среды с тем же именем. См. действия ниже.
+
 ::: moniker-end
 <!--End of 2017 "Pull and run" section-->
 
@@ -295,8 +297,14 @@ SELECT @@SERVERNAME,
 
 Установка параметров `-h` и `--name` равными позволяет легко идентифицировать целевой контейнер.
 
+
+5. В качестве последнего шага измените пароль SA, так как `SA_PASSWORD` отображается в выходных данных `ps -eax` и хранится в переменной среды с тем же именем. См. действия ниже.
+
+
 ::: moniker-end
 <!--End of 2019 "Pull and run" section-->
+
+
 
 ## <a name="change-the-sa-password"></a><a id="sapassword"></a> Смена пароля системного администратора
 

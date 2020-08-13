@@ -1,5 +1,6 @@
 ---
 title: Учебник. Общие сведения о выражениях | Документация Майкрософт
+description: Узнайте, как использовать выражения со стандартными функциями и операторами для создания эффективных и гибких отчетов Reporting Services с разбивкой на страницы.
 ms.date: 09/16/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7ebb428a12bc75f3c61793918dde0594da531ed2
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63295675"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248543"
 ---
-# <a name="tutorial-introducing-expressions"></a>Учебник. Общие сведения о выражениях
+# <a name="tutorial-introducing-expressions"></a>Руководство по Знакомство с выражениями
 В этом учебнике по [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] вы научитесь использовать выражения со стандартными функциями и операторами для создания эффективных и гибких отчетов [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы. 
 
 Вы будете создавать выражения, производящие объединение значений имен, поиск значений в отдельном наборе данных, отображающие различные цвета в зависимости от значений полей, и т. д.  
@@ -26,7 +27,7 @@ ms.locfileid: "63295675"
   
 ![руководство-по-выражениям-построителя-отчетов-в-браузере](../reporting-services/media/report-builder-expression-tutorial-in-browser.png) 
   
-Предполагаемое время для выполнения заданий данного учебника: 30 минут.  
+На изучение этого руководства потребуется примерно 30 минут.  
   
 ## <a name="requirements"></a>Требования  
 Дополнительные сведения о требованиях см. в разделе [Предварительные условия для использования учебников (построитель отчетов)](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -89,7 +90,7 @@ ms.locfileid: "63295675"
     ```  
 
   
-10. На панели инструментов конструктора запросов нажмите кнопку **Выполнить** ( **!** ). В результирующем наборе будет 23 строки данных в следующих столбцах: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase и LastPurchase.  
+10. На панели инструментов конструктора запросов нажмите кнопку **Выполнить** ( **!** ). В результирующем наборе будет 23 строк данных в следующих столбцах: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase и LastPurchase.  
 
     ![руководство-по-выражениям-построителя-отчетов-запрос-как-текст](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
@@ -147,7 +148,7 @@ ms.locfileid: "63295675"
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="3-display-first-initial-and-last-name"></a><a name="Concatenate"></a>3. Отображение фамилии и инициала имени  
-В этом разделе в выражении используется функция **Left** и оператор **Concatenate** ( **&** ) для вычисления имени, состоящего из фамилии и инициала имени. Можно построить выражение в пошаговом режиме либо пропустить процедуру, а затем скопировать и вставить выражение из учебника в диалоговом окне **Выражение** .   
+В этом разделе в выражении используется функция **Left** и оператор **Concatenate** (**&**) для вычисления имени, состоящего из фамилии и инициала имени. Можно построить выражение в пошаговом режиме либо пропустить процедуру, а затем скопировать и вставить выражение из учебника в диалоговом окне **Выражение** .   
   
 1.  Щелкните правой кнопкой мыши столбец **StateProvince** , наведите указатель на пункт **Вставить столбец**, а затем выберите пункт **Слева**.  
   
@@ -357,7 +358,7 @@ ms.locfileid: "63295675"
   
 ### <a name="to-look-up-values-in-the-countryregion-dataset"></a>Поиск значений в наборе данных CountryRegion  
   
-1.  Щелкните заголовок столбца **Country Region ID** (ИД региона страны) и удалите **ID**, чтобы осталось только **Country Region**(Регион страны).  
+1.  Щелкните заголовок столбца **Country Region ID** (ИД региона страны) и удалите текст: **ID**, чтобы осталось только **Country Region** (Регион страны).  
   
 2.  Щелкните правой кнопкой мыши ячейку для столбца **Country Region** и выберите пункт **Выражение**.  
   

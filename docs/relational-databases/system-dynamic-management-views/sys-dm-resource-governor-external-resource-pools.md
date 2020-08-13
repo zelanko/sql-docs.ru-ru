@@ -20,15 +20,15 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c4058d22364361da622d94c199bedf98562e0531
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ee42a9a7b4fe026df8e9a424ed25224e7a7edb7b
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920840"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88171073"
 ---
 # <a name="sysdm_resource_governor_external_resource_pools-transact-sql"></a>sys. dm_resource_governor_external_resource_pools (Transact-SQL)
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Возвращает сведения о текущем состоянии внешнего пула ресурсов, текущую конфигурацию пулов ресурсов и статистику пула ресурсов. 
   
@@ -55,7 +55,7 @@ ms.locfileid: "86920840"
 
 Требуется разрешение `VIEW SERVER STATE`.
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  
   
   

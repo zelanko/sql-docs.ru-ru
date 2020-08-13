@@ -18,12 +18,12 @@ ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 65b65c0ff721742c1bccbd6998d358797bd6d10b
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 91b38115cfcd9f688187fc7663e3da8c90d3d457
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87393961"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173095"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "87393961"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```syntaxsql  
 sp_spaceused [[ @objname = ] 'objname' ]   
 [, [ @updateusage = ] 'updateusage' ]  
 [, [ @mode = ] 'mode' ]  
@@ -60,7 +60,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
  Аргумент *mode* может иметь следующие значения:  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |ALL|Возвращает статистику хранилища объекта или базы данных, включая локальную и удаленную части.|  
 |LOCAL_ONLY|Возвращает статистику хранилища только для локальной части объекта или базы данных. Если объект или база данных не включены в Stretch, возвращает ту же статистику, что и значение @mode = ALL.|  
@@ -70,7 +70,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 `[ @oneresultset = ] oneresultset`Указывает, следует ли возвращать один результирующий набор. Аргумент *онересултсет* может иметь следующие значения:  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |0|Если значение * \@ objname* равно null или не указано, возвращаются два результирующих набора. Два результирующих набора — это поведение по умолчанию.|  
 |1|Если * \@ objname* = null или не указан, возвращается один результирующий набор.|  
@@ -191,7 +191,7 @@ EXEC sp_spaceused N'Purchasing.Vendor';
 GO  
 ```  
   
-### <a name="b-displaying-updated-space-information-about-a-database"></a>Б) Вывод обновленных сведений о занимаемом месте на диске для базы данных  
+### <a name="b-displaying-updated-space-information-about-a-database"></a>Б. Вывод обновленных сведений о занимаемом месте на диске для базы данных  
  В следующем примере приводятся итоговые сведения об использовании места на диске текущей базой данных с применением необязательного параметра `@updateusage`, чтобы получить достоверные текущие значения.  
   
 ```sql  
@@ -244,7 +244,7 @@ EXEC sp_spaceused
 GO
 ```  
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [DBCC UPDATEUSAGE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   
