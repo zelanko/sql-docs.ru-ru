@@ -8,17 +8,18 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: markingmyname
 ms.author: maghan
 ms.reviewer: carlrab
-ms.date: 05/08/2020
-ms.openlocfilehash: 5ca11e672e91b8d2b8801838c40057d6b2c8fbfd
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.date: 07/22/2020
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || sql-server-previousversions || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 0d4145832aee94a1786308e21ac425081d4d2a88
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151548"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87237982"
 ---
 # <a name="install-sql-server-documentation-to-view-offline-in-ssms"></a>Установка документации по SQL Server для просмотра в автономном режиме в SSMS
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 В этой статье описывается загрузка и просмотр автономного содержимого SQL Server в [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md). Автономное содержимое позволяет получить доступ к документации без подключения к Интернету (хотя изначально для загрузки требуется подключение к Интернету).
 
@@ -34,7 +35,7 @@ ms.locfileid: "83151548"
 
 1. В SSMS в меню "Справка" выберите пункт **Добавление и удаление содержимого справки**.
 
-   ![Пункт меню "Добавление и удаление содержимого справки" в окне справки](../sql-server/media/sql-server-offline-documentation/add-remove-content.png)
+   ![Добавление и удаление содержимого справки](../sql-server/media/sql-server-offline-documentation/add-remove-content.png)
 
    В окне справки откроется вкладка "Управление содержимым".
 
@@ -58,11 +59,14 @@ ms.locfileid: "83151548"
 
 ## <a name="sql-server-2014-offline-content"></a>Автономное содержимое для SQL Server 2014
 
+> [!IMPORTANT]
+> Содержимое для SQL 2014 Transact-SQL доступно только в автономном режиме.
+
 Ниже описаны действия по загрузке автономного содержимого для SQL Server 2014.
 
 1. Скачайте содержимое [документации по продукту Microsoft SQL Server 2014 для сред с брандмауэром и прокси-сервером](https://www.microsoft.com/download/details.aspx?id=42557) из центра загрузки и сохраните его в папке.
 
-2. Распакуйте файл, чтобы просмотреть MSHA-файл.
+2. Распакуйте файл, чтобы просмотреть файл *MSHA*.
 
    ![Файл установки справочной документации по SQL Server 2014](../sql-server/media/sql-server-offline-documentation/sql-2014-help-content-setup-msha.png)
 
@@ -97,16 +101,13 @@ ms.locfileid: "83151548"
 
    ![Автоматическое обновление документации SQL Server 2014](../sql-server/media/sql-server-offline-documentation/sql-2014-content.png)
 
-> [!Tip]
-> Содержимое для SQL 2014 Transact-SQL доступно только в автономном режиме.
-
 ## <a name="sql-server-2012-offline-content"></a>Автономное содержимое для SQL Server 2012
 
 Ниже описаны действия по загрузке автономного содержимого для SQL Server 2012.
 
 1. Скачайте содержимое [документации по продукту Microsoft SQL Server 2012 для сред с брандмауэром и прокси-сервером](https://www.microsoft.com/download/details.aspx?id=35750) из центра загрузки и сохраните его в папке.
 
-2. Распакуйте файл, чтобы просмотреть MSHA-файл.
+2. Распакуйте файл, чтобы просмотреть файл *MSHA*.
 
    ![Файл установки содержимого справки SQL Server 2012](../sql-server/media/sql-server-offline-documentation/sql-2012-help-content-setup-msha.png)
 
@@ -153,7 +154,7 @@ ms.locfileid: "83151548"
 
 В окне справки откроется вкладка "Управление содержимым" с таблицей содержимого установленной справки в левой области. Выберите статьи в таблице содержимого, чтобы просмотреть их в правой области.
 
-> [!TIP]
+> [!Important]
 > Если область содержимого не отображается, щелкните "Содержимое" в левом поле. Чтобы область содержимого не закрывалась, щелкните значок канцелярской кнопки.  
 
    ![Окно справки с содержимым](../sql-server/media/sql-server-offline-documentation/view-offline-all.png)
@@ -170,7 +171,7 @@ ms.locfileid: "83151548"
 
 Дополнительные сведения об архивированном содержимом и окне справки см. на приведенных ниже страницах.
 
-- [Документация по SQL Server](../sql-server/index.yml?view=sql-server-2016)
-- [Документация по SQL Server 2014](../2014/database-engine/install-windows/installation-for-sql-server.md)
-- [Документация по предыдущим версиям SQL Server](https://docs.microsoft.com/previous-versions/sql/)
+- [Электронная документация SQL Server](../sql-server/index.yml?view=sql-server-2016)
+- [Электронная документация SQL Server 2014](/sql/2014-toc/)
+- [Предыдущие версии электронной документации по SQL Server](previous-versions-sql-server.md)
 - [Система управления версиями в документации по SQL](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016)

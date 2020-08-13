@@ -1,5 +1,6 @@
 ---
 title: Работа с общими наборами данных (веб-портал) | Документы Майкрософт
+description: Просматривайте свойства общего набора данных и управляйте ими на веб-портале. Используйте веб-портал для создания или изменения общих наборов данных в построителе отчетов.
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e034b911ec5817ac82214466fdc2bf7087e8865a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0d37e617ef7dcb4c63b7d2239881cc6cb96c7c2f
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68222721"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243605"
 ---
 # <a name="work-with-shared-datasets---web-portal"></a>Работа с общими наборами данных (веб-портал)
 
@@ -37,7 +38,7 @@ ms.locfileid: "68222721"
   
 4.  В диалоговом окне **Создание отчета или набора данных** выберите подключение к источнику данных, которое будет использоваться для этого набора данных. Возможно, вам потребуется перейти в расположение общего источника данных.  
   
-5.  Нажмите кнопку **Создать**.  
+5.  Нажмите кнопку **создания**.  
   
 6.  Постройте набор данных, а затем выберите значок **Сохранить** в левом верхнем углу, чтобы сохранить набор данных на сервере отчетов.  
   

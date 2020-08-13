@@ -1,35 +1,34 @@
 ---
 title: создать тестовый проект для модульного тестирования базы данных SQL Server
+description: Узнайте, как создавать тестовые проекты для модульного тестирования базы данных SQL Server. Узнайте о различных способах добавления тестовых проектов в решения, содержащие проекты баз данных.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 4b3e7ba8-b565-4689-af1a-34cc255b7c60
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: fe6b8e2e70a20041f394afa5cad1d800535559d1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4ff3cb815dcd27f72ea96296935484ec0cc15ea0
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75241520"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243535"
 ---
-# <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>Практическое руководство. Создание проекта тестов для модульного тестирования базы данных SQL Server
+# <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>Руководство. создать тестовый проект для модульного тестирования базы данных SQL Server
 
 Перед тем как приступить к написанию модульных тестов для проверки объектов базы данных, сначала следует создать проект тестов. Этот проект содержит модульные тесты SQL Server, но может содержать и другие типы тестов.  
   
 Вы можете разместить в одном тестовом проекте все модульные тесты SQL Server для определенного проекта базы данных. Изучите следующие вопросы и ответьте на них, чтобы понять, нужно ли вам создавать дополнительные проекты тестов.  
   
-|||  
-|-|-|  
-|**Вопрос**|**Решение**|  
+|Вопрос|Решение|  
+|-|-|   
 |Нужны ли разным модульным тестам SQL Server разные подключения к базам данных для выполнения и проверки теста?|Если да, то вам потребуется несколько проектов тестов. Для выполнения теста можно указать только одно подключение к базе данных. Однако для проверки теста можно указать другое подключение к базе данных.|  
 |Нужно ли развертывать разные проекты базы данных для разных модульных тестов?|Если да, то вам потребуется несколько проектов тестов. Проект тестов может развертывать только один проект базы данных.|  
   
-Дополнительные сведения о каждом из этих вопросов см. в статье [Практическое руководство. Настройка запуска модульного теста SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md). Чтобы не создавать несколько тестовых проектов, можно создать собственную реализацию [DatabaseTestService](https://msdn.microsoft.com/library/microsoft.data.schema.unittesting.databasetestservice.aspx) Microsoft.Data.Schema.UnitTesting.DatabaseTestService.  
+Дополнительные сведения о каждом из этих вопросов см. в разделе [Как настроить выполнение модульного теста SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md). Чтобы не создавать несколько тестовых проектов, можно создать собственную реализацию [DatabaseTestService](https://msdn.microsoft.com/library/microsoft.data.schema.unittesting.databasetestservice.aspx) Microsoft.Data.Schema.UnitTesting.DatabaseTestService.  
   
 Есть три варианта добавления проекта теста к решению, которое содержит проект базы данных.  
   

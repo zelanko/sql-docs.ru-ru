@@ -1,5 +1,6 @@
 ---
 title: Занятие 7. Добавление операции детализации к родительскому отчету | Документы Майкрософт
+description: Узнайте, как добавлять действие детализации в родительский отчет после добавления элемента управления ReportViewer в приложение веб-сайта.
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: aad2da1a-d7b1-4afa-a66a-1ff102e8306f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ade2bf3463ca2efc139cfea661dba0a83394f804
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d6a6e588cb79ffbc97450a4ad0a627957dc73b75
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62651270"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243255"
 ---
-# <a name="lesson-7-add-drillthrough-action-on-parent-report"></a>Занятие 7. Добавление операции детализации к родительскому отчету
+# <a name="lesson-7-add-drillthrough-action-on-parent-report"></a>Занятие 7: Добавление действия детализации к родительскому отчету
 После добавления элемента управления ReportViewer в приложение веб-сайта далее необходимо добавить действие детализации в родительский отчет.  
   
 ### <a name="to-add-drillthrough-action-on-the-parent-report"></a>Добавление действия детализации в родительский отчет  
@@ -40,7 +41,7 @@ ms.locfileid: "62651270"
 8.  Нажмите кнопку **ОК** для завершения.  
   
 ## <a name="next-task"></a>Следующая задача  
-Тем самым в родительский отчет была успешно добавлена операция детализации. Затем необходимо создать фильтр данных для таблицы данных, которая определена в дочернем отчете. См. раздел [Занятие 8. Создание фильтра данных](../reporting-services/lesson-8-create-a-data-filter.md).  
+Тем самым в родительский отчет была успешно добавлена операция детализации. Затем необходимо создать фильтр данных для таблицы данных, которая определена в дочернем отчете. См. [Занятие 8. Создание фильтра данных](../reporting-services/lesson-8-create-a-data-filter.md).  
   
   
   

@@ -1,5 +1,6 @@
 ---
 title: Занятие 2. Определение подключения к данным и таблицы данных для родительского отчета | Документы Майкрософт
+description: Узнайте, как создать подключение к данным и таблицу данных для родительского отчета после создания нового проекта веб-сайта с использованием шаблона веб-сайта ASP.NET для Visual C#.
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e8bcfe976a8094c6faa22d8aab3db8a4a833d8cd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 26599029af2b4fd6a52e85dc9b7567e9a7152038
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62651602"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87235660"
 ---
-# <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>Занятие 2. Определение подключения к данным и таблицы данных для родительского отчета
+# <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>Урок 2. Определение подключения к данным и таблицы данных для родительского отчета
 После создания нового проекта веб-сайта с использованием шаблона веб-сайта ASP.NET для Visual C# далее необходимо создать подключение к данным и таблицу данных для родительского отчета. В этом учебнике в качестве источника подключения к данным используется база данных AdventureWorks2014.  
   
 ## <a name="to-define-a-data-connection-and-data-table-by-adding-a-dataset-for-parent-report"></a>Определение подключения к данным и таблицы данных путем добавления набора данных (для родительского отчета)  
@@ -58,7 +59,7 @@ ms.locfileid: "62651602"
   
     Для создания запроса также можно щелкнуть **Построитель запросов**, а затем проверить запрос, нажав кнопку **Выполнить запрос**. Если запрос не возвращает ожидаемые данные, возможно, используется более ранняя версия AdventureWorks. Дополнительные сведения о получении образца базы данных **AdventureWorks2014** см. на странице [Образцы баз данных AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
   
-11. На странице **Выбор методов для автоматического создания** снимите флажок **Создать методы для отправки обновлений непосредственно в базу данных (GenerateDBDirectMethods)** , а затем нажмите кнопку **Готово**.  
+11. На странице **Выбор методов для автоматического создания** снимите флажок **Создать методы для отправки обновлений непосредственно в базу данных (GenerateDBDirectMethods)**, а затем нажмите кнопку **Готово**.  
   
     > [!WARNING]  
     > Обязательно снимите флажок **Создать методы для отправки обновлений непосредственно в базу данных (GenerateDBDirectMethods)** .  

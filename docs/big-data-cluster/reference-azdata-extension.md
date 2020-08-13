@@ -1,7 +1,7 @@
 ---
-title: Справочник по контекстам azdata
+title: Справочник по расширению azdata
 titleSuffix: SQL Server big data clusters
-description: Справочная статья по командам контекста azdata.
+description: Справочная статья по командам расширения azdata.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,14 +9,14 @@ ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8e5113020c9baeb22fb512ee3be7ed735d50aa48
+ms.openlocfilehash: 9e2585a77c3117df8514622728d0f09df93d7bc2
 ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243019"
+ms.locfileid: "87243005"
 ---
-# <a name="azdata-context"></a>Контекст azdata
+# <a name="azdata-extension"></a>Расширение azdata
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
@@ -25,27 +25,46 @@ ms.locfileid: "87243019"
 ## <a name="commands"></a>Команды
 | Команда | Описание |
 | --- | --- |
-[azdata context list](#azdata-context-list) | Список доступных контекстов в профиле пользователя.
-[azdata context delete](#azdata-context-delete) | Удаление контекста с заданным пространством имен из профиля пользователя.
-[azdata context set](#azdata-context-set) | Установка контекста с заданным пространством имен в качестве активного контекста в профиле пользователя.
-## <a name="azdata-context-list"></a>azdata context list
-Можно установить или удалить любой из этих контекстов с помощью команды `azdata context set` или `azdata context delete`. Для входа в новый контекст используется команда `azdata login`.
+[azdata extension add](#azdata-extension-add) | Добавление расширения.
+[azdata extension remove](#azdata-extension-remove) | Удаление расширения.
+[azdata extension list](#azdata-extension-list) | Вывод списка установленных расширений.
+## <a name="azdata-extension-add"></a>azdata extension add
+Добавление расширения.
 ```bash
-azdata context list [--active -a] 
-                    
+azdata extension add --source -s 
+                     [--index]  
+                     
+[--pip-proxy]  
+                     
+[--pip-extra-index-urls]  
+                     
+[--yes -y]
 ```
 ### <a name="examples"></a>Примеры
-Список всех доступных контекстов в профиле пользователя.
+Добавление расширения из URL-адреса.
 ```bash
-azdata context list
+azdata extension add --source https://contoso.com/some_ext-0.0.1-py2.py3-none-any.whl
 ```
-Список активных контекстов в профиле пользователя.
+Добавление расширения с локального диска.
 ```bash
-azdata context list --active
+azdata extension add --source ~/some_ext-0.0.1-py2.py3-none-any.whl
 ```
+Добавление расширения с локального диска и использование для зависимостей прокси-сервера pip.
+```bash
+azdata extension add --source ~/some_ext-0.0.1-py2.py3-none-any.whl --pip-proxy https://user:pass@proxy.server:8080
+```
+### <a name="required-parameters"></a>Необходимые параметры
+#### `--source -s`
+Путь к модулю расширения на диске или URL-адрес расширения
 ### <a name="optional-parameters"></a>Необязательные параметры
-#### `--active -a`
-Выводить только текущий активный контекст.
+#### `--index`
+Базовый URL-адрес папки пакетов Python (по умолчанию https://pypi.org/simple). Адрес должен указывать на репозиторий, совместимый со стандартом PEP 503 (простой API-интерфейс репозитория) или локальный каталог в таком же формате.
+#### `--pip-proxy`
+Прокси-сервер для pip, используемый для зависимостей расширений, в формате [пользователь:пароль@]прокси-сервер:порт
+#### `--pip-extra-index-urls`
+Разделенный пробелами список дополнительных URL-адресов используемых каталогов пакетов. Адрес должен указывать на репозиторий, совместимый со стандартом PEP 503 (простой API-интерфейс репозитория) или локальный каталог в таком же формате.
+#### `--yes -y`
+Не запрашивать подтверждение.
 ### <a name="global-arguments"></a>Глобальные аргументы
 #### `--debug`
 Повышение уровня детализации журнала для включения всех журналов отладки.
@@ -57,20 +76,23 @@ azdata context list --active
 Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
-## <a name="azdata-context-delete"></a>azdata context delete
-Если удаленный контекст был активен, пользователю нужно будет задать новый активный контекст. Для просмотра контекстов, доступных для установки или удаления, используется команда `azdata context list`
+## <a name="azdata-extension-remove"></a>azdata extension remove
+Удаление расширения.
 ```bash
-azdata context delete --namespace -n 
-                      
+azdata extension remove --name -n 
+                        [--yes -y]
 ```
 ### <a name="examples"></a>Примеры
-Удаляет contextNamespace из профиля пользователя.
+Удаление расширения.
 ```bash
-azdata context delete -n contextNamespace
+azdata extension remove --name some-ext
 ```
 ### <a name="required-parameters"></a>Необходимые параметры
-#### `--namespace -n`
-Пространство имен контекста, который нужно удалить.
+#### `--name -n`
+Имя расширения
+### <a name="optional-parameters"></a>Необязательные параметры
+#### `--yes -y`
+Не запрашивать подтверждение.
 ### <a name="global-arguments"></a>Глобальные аргументы
 #### `--debug`
 Повышение уровня детализации журнала для включения всех журналов отладки.
@@ -82,20 +104,16 @@ azdata context delete -n contextNamespace
 Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
-## <a name="azdata-context-set"></a>azdata context set
-Для просмотра контекстов, доступных для установки, используется команда `azdata context list`. Если никакие контексты не отображаются, необходимо создать контекст в профиле пользователя, выполнив вход с помощью команды `azdata login`. То, куда выполнен вход, станет активным контекстом. При входе в несколько сущностей можно переключаться между активными контекстами с помощью этой команды. Чтобы увидеть текущий активный контекст, используется команда `azdata context list --active`
+## <a name="azdata-extension-list"></a>azdata extension list
+Вывод списка установленных расширений.
 ```bash
-azdata context set --namespace -n 
-                   
+azdata extension list 
 ```
 ### <a name="examples"></a>Примеры
-Установка contextNamespace в качестве активного контекста в профиле пользователя.
+Вывод списка расширений.
 ```bash
-azdata context set -n contextNamespace
+azdata extension list
 ```
-### <a name="required-parameters"></a>Необходимые параметры
-#### `--namespace -n`
-Пространство имен контекста, который нужно установить.
 ### <a name="global-arguments"></a>Глобальные аргументы
 #### `--debug`
 Повышение уровня детализации журнала для включения всех журналов отладки.

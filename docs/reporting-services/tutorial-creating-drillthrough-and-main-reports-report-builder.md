@@ -1,5 +1,6 @@
 ---
 title: Учебник. Создание детализированных и главных отчетов (построитель отчетов) | Документы Майкрософт
+description: 'Узнайте, как создавать отчеты Reporting Services с разбивкой на страницы двух типов: детализированный отчет и главный отчет.'
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,21 +9,21 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 02defc00e1c65eff7eb624a8d3295082d8d6dc8c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ce825906ef6282cd722f91b1c0dbf76463a7c821
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73637987"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87238439"
 ---
-# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Учебник. Создание детализированных и главных отчетов (построитель отчетов)
+# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Руководство по Создание детализированных и главных отчетов (построитель отчетов)
 В этом учебнике описывается создание двух типов отчетов [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы: детализированного отчета и главного отчета. Образцы данных по продажам, использованные в этих отчетах, извлекаются из куба служб Analysis Services. 
 
 На следующей иллюстрации показаны отчеты, которые будут созданы, а также то, как отображается значение поля "Игры и игрушки" главного отчета в заголовке детализированного отчета. Данные в детализированном отчете относятся к категории продуктов "Игры и игрушки".  
   
 ![rs_DrillthroughCubeTutorial](../reporting-services/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
    
-Предполагаемое время для выполнения заданий данного учебника: 30 минут.  
+На изучение этого руководства потребуется примерно 30 минут.  
   
 ## <a name="requirements"></a>Требования  
 В рамках этого учебника требуется доступ к кубу Contoso Sales как для детализированного, так и для главного отчета. Этот набор включает хранилище данных ContosoDW и базу данных OLAP Contoso_Retail. Создаваемые в данном учебнике отчеты извлекают данные из куба Contoso Sales. Базу данных OLAP Contoso_Retail можно скачать в [Центре загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=18279). Необходимо скачать только файл ContosoBIdemoABF.exe. Он содержит базу данных OLAP.  
@@ -627,7 +628,7 @@ ms.locfileid: "73637987"
   
 1.  В области конструктора щелкните ссылку **Щелкните, чтобы добавить заголовок**.  
   
-2.  Введите **Продажи по категориям продуктов за 2009 г.: категории Online и Reseller:** .  
+2.  Введите **Продажи по категориям продуктов за 2009 г.: категории Online и Reseller**.  
   
 3.  Выберите набранный текст.  
   

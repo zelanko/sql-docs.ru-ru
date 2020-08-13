@@ -1,5 +1,6 @@
 ---
 title: Учебники по построителю отчетов | Документы Майкрософт
+description: Узнайте, как создавать базовые отчеты SQL Server Reporting Services (SSRS) с разбивкой на страницы, включая способы подключения к источникам данных и добавления диаграмм в отчеты.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8e9d481e03efdcfb7ff109998eda3f4b2f6f3a3d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 096823a659f8b0e1e75cbde0635a4715068f8392
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "64330633"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242944"
 ---
 # <a name="report-builder-tutorials"></a>Учебники по построителю отчетов
 
@@ -29,49 +30,49 @@ ms.locfileid: "64330633"
 [Альтернативные способы создания подключения к данным (построитель отчетов)](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)  
 В большинстве из этих учебников используются внедренные источники данных. Если имеется доступ к общим источникам данных, можно воспользоваться и ими. В этом разделе описаны шаги, необходимые для использования общих источников данных.  
   
-[Учебник. Создание простого табличного отчета (построитель отчетов)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)  
+[Руководство. Создание простого табличного отчета (построитель отчетов)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)  
 Следуйте инструкциям этого учебника, чтобы научиться создавать отчеты. В этом учебнике показано, как с помощью построителя отчетов создать соединение с источником данных, определить простой запрос, построить макет для данных, отформатировать отчет и добавить группирование и итоги.  
   
-[Учебник. Создание матричного отчета (построитель отчетов)](../reporting-services/tutorial-creating-a-matrix-report-report-builder.md)  
+[Руководство. Создание матричного отчета (построитель отчетов)](../reporting-services/tutorial-creating-a-matrix-report-report-builder.md)  
 Следуйте шагам данного учебника, чтобы научиться добавлять и настраивать матрицы. Для создания источника данных отчета, набора данных и макета, а также для последующего улучшения матрицы в режиме **Конструктор** построителя отчетов будет использоваться мастер таблиц или диаграмм.  
   
-[Учебник. Создание отчета в свободной форме (построитель отчетов)](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)  
+[Руководство. Создание отчета в свободной форме (построитель отчетов)](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)  
 Выполните описанные в этом учебнике шаги, чтобы создать «с нуля» отчет произвольной формы. Такой отчет напоминает газетную верстку.  
   
-[Учебник. Форматирование текста (построитель отчетов)](../reporting-services/tutorial-format-text-report-builder.md)  
+[Руководство. Форматирование текста (построитель отчетов)](../reporting-services/tutorial-format-text-report-builder.md)  
 Выполните инструкции, содержащиеся в этом учебнике, чтобы ознакомиться с некоторыми из многих способов форматирования текста в отчетах.  
   
-[Учебник. Добавление гистограммы к отчету (построитель отчетов)](../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)  
+[Руководство. Добавление гистограммы к отчету (построитель отчетов)](../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)  
 Выполняйте пошаговые процедуры из этого учебника, чтобы узнать, как добавить гистограмму со скользящим средним к отчету.  
   
-[Учебник. Добавление круговой диаграммы к отчету (построитель отчетов)](../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)  
+[Руководство. Добавление круговой диаграммы к отчету (построитель отчетов)](../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)  
 Выполните пошаговые процедуры из этого учебника, чтобы научиться добавлять круговую диаграмму к отчету.  
   
-[Учебник. Добавление линейчатой диаграммы к отчету (построитель отчетов)](../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
+[Руководство. Добавление линейчатой диаграммы к отчету (построитель отчетов)](../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
 Выполните пошаговые процедуры из этого учебника, чтобы научиться добавлять линейчатую диаграмму к отчету.  
   
-[Учебник. Добавление спарклайна в отчет (построитель отчетов)](../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)  
+[Руководство. Добавление спарклайна в отчет (построитель отчетов)](../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)  
 Выполняйте пошаговые процедуры из этого учебника, чтобы узнать, как создать матрицу и добавить в нее набор спарклайн графиков.  
   
-[Учебник. Добавление в отчет ключевого показателя эффективности (построитель отчетов)](../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)  
+[Руководство. Добавление в отчет ключевого показателя эффективности (построитель отчетов)](../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)  
 Выполните пошаговые процедуры из этого учебника, чтобы научиться добавлять к отчету ключевой показатель эффективности.  
   
-[Учебник. Отчет-карта (построитель отчетов)](../reporting-services/tutorial-map-report-report-builder.md)  
+[Руководство. Отчет-карта (построитель отчетов)](../reporting-services/tutorial-map-report-report-builder.md)  
 Выполните пошаговые процедуры из этого учебника, чтобы научиться добавлять к отчету карту.  
   
-[Учебник. Добавление параметра к отчету (построитель отчетов)](../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
+[Руководство. Добавление параметра к отчету (построитель отчетов)](../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
 Выполните пошаговые процедуры из этого учебника, чтобы научиться настраивать внешний вид и содержимое отчета с помощью параметров.  
   
-[Учебник. Создание детализированных и главных отчетов (построитель отчетов)](../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md)  
+[Руководство. Создание детализированных и главных отчетов (построитель отчетов)](../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md)  
 Выполните описанные в этом учебнике шаги, чтобы создать отчеты для сценария детализации на основе куба служб Analysis Services. Будет создан основной отчет, далее он будет использоваться для детализации и в качестве отчета, являющегося целевым объектом для действия детализации.  
   
-[Учебник. Общие сведения о выражениях](../reporting-services/tutorial-introducing-expressions.md)  
+[Руководство. Общие сведения о выражениях](../reporting-services/tutorial-introducing-expressions.md)  
 Следуйте шагам в данном учебнике, чтобы узнать, как с помощью выражений производить сцепления и вычисления значений полей поиска и выводить их в отчете. Кроме того, вы научитесь по условию отображать различные изображения и состояния индикаторов с помощью выражений.  
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
 [Представление конструктора отчетов](../reporting-services/report-builder/report-design-view-report-builder.md)  
 [Построитель отчетов в SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-[Руководство. Создание стандартного отчета с диаграммой в автономном режиме](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+[Руководство. Создание стандартного отчета с диаграммой в режиме "вне сети"](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
 
 Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

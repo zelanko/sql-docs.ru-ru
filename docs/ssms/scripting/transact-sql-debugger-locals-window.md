@@ -1,5 +1,6 @@
 ---
 title: окно локальных переменных
+description: Узнайте, как использовать окно "Локальные переменные" отладчика Transact-SQL для отображения и изменения выражений из текущего кадра стека вызовов.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -13,16 +14,16 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70ee1eee120c94e7f851bc37c3becf1983a57d09
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 00c6704418210c0913470688ae4c8d7a55facaf4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253053"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243776"
 ---
 # <a name="transact-sql-debugger---locals-window"></a>Отладчик Transact-SQL, окно локальных переменных
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 В окне **Локальные переменные** отображаются сведения о локальных выражениях в текущей области отладчика [!INCLUDE[tsql](../../includes/tsql-md.md)] . Областью является текущий кадр стека вызова, выбранный в окне **Стек вызовов** . Чтобы иметь возможность просматривать локальные выражения, необходимо находиться в режиме отладки.  
 
@@ -39,10 +40,10 @@ ms.locfileid: "75253053"
 -   Щелкните правой кнопкой мыши выражение и выберите команду **Изменить значение**.  
   
 ## <a name="columns"></a>Столбцы  
- **Название**  
+ **имя**;  
  Имя локального выражения. В отладчике [!INCLUDE[tsql](../../includes/tsql-md.md)] перечисляются переменные, параметры и системные функции, имена которых начинаются с @@.  
   
- **Value**  
+ **Значение**  
  Отображается значение, которое в настоящее время присвоено локальному выражению. Этот столбец остается пустым, если выражению не присвоено значение.  
   
  Если длина выражения больше ширины столбца **Значение** , полное значение отображается в подсказке при перемещении указателя на ячейку **Значение** для этого выражения.  

@@ -1,5 +1,6 @@
 ---
 title: Занятие 1. Создание образца базы данных подписчика | Документы Майкрософт
+description: Узнайте, как создать небольшую базу данных подписчика для хранения данных подписки, которые будут использоваться управляемой данными подпиской.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -8,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2aa2fefb5df874b08a34c4a7091d450afdfd4828
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a62e0e1c47cd6df4d2d5e4f28b35294af694a824
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62513166"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243275"
 ---
-# <a name="lesson-1-creating-a-sample-subscriber-database"></a>Занятие 1. Создание образца базы данных подписчика
+# <a name="lesson-1-creating-a-sample-subscriber-database"></a>Урок 1. Создание образца базы данных подписчика
 
 На этом занятии учебника [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] создается небольшая база данных подписчика для хранения данных подписки, которые будут использоваться управляемой данными подпиской. После обработки подписки сервер отчетов получит эти данные и использует их для настройки выходных данных отчетов. Например, строки данных включают номера заказов, используемые для фильтров, и сведения о том, в каком формате будут создаваться отчеты.  
   
@@ -55,7 +56,7 @@ ms.locfileid: "62513166"
     GO  
     ```  
   
-7.  Нажмите кнопку **! Выполнить** на панели инструментов.  
+7.  Щелкните **! Выполнить** на панели инструментов.  
   
 8.  С помощью инструкции SELECT удостоверьтесь, что создано три строки данных. Например: `select * from OrderInfo`  
   

@@ -1,5 +1,5 @@
 ---
-title: IBCPSession::BCPControl (OLE DB) | Документация Майкрософт
+title: IBCPSession::BCPControl (драйвер OLE DB) | Документация Майкрософт
 description: Метод IBCPSession::BCPControl (OLE DB)
 ms.custom: ''
 ms.date: 07/03/2018
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - BCPControl method
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 69944fc78ecfe45869ec59c37db20fdb09b2896e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6da5247b073b787a610c026f32e7a4ea2d3623d6
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015521"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244644"
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>Метод IBCPSession::BCPControl (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

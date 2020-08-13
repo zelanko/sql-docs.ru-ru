@@ -8,40 +8,40 @@ ms.topic: tutorial
 author: cawrites
 ms.author: chadam
 ms.reviewer: garye, davidph
-ms.date: 05/04/2020
+ms.date: 05/26/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 237b8d5ac797b6e17a48bde2fff12de55844755e
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 6114ae9acf3ecdf8444dd6aec657d5c293fc4dae
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83607147"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242322"
 ---
-# <a name="tutorial-prepare-data-to-train-a-predictive-model-in-r-with-sql-machine-learning"></a>Руководство по подготовке данных для обучения прогнозной модели в R с помощью машинного обучения SQL
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="tutorial-develop-a-predictive-model-in-r-with-sql-machine-learning"></a>Руководство по Разработка прогнозной модели в R с помощью машинного обучения SQL
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 В этом цикле учебников, состоящем из четырех частей, вы будете использовать R и модель машинного обучения в [Службах машинного обучения SQL Server](../sql-server-machine-learning-services.md) или [Кластерах больших данных](../../big-data-cluster/machine-learning-services.md) для прогнозирования количества прокатов лыж.
 ::: moniker-end
-
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 В этом цикле учебников, состоящем из четырех частей, вы будете использовать R и модель машинного обучения в [Службах машинного обучения SQL Server](../sql-server-machine-learning-services.md) для прогнозирования количества прокатов лыж.
 ::: moniker-end
-
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 В этом цикле учебников, состоящем из четырех частей, вы будете использовать R и модель машинного обучения в службах [SQL Server R Services](../r/sql-server-r-services.md) для прогнозирования количества прокатов лыж.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+В этом цикле учебников, состоящем из четырех частей, вы будете использовать R и модель машинного обучения в [Службах машинного обучения в управляемом экземпляре SQL Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview) для прогнозирования количества прокатов лыж.
 ::: moniker-end
 
 Представьте, что вы являетесь владельцем компании по прокату лыж и хотите спрогнозировать количество прокатов за некоторый будущий период. Эта информация поможет вам подготовить инвентарь, персонал и пункты проката.
 
-В первой части учебника вы установите необходимые компоненты. Во второй и третьей частях вы создадите сценарии R в записной книжке для подготовки данных и обучения модели машинного обучения. Затем, в четвертой части, вы запустите эти сценарии R в SQL Server с помощью хранимых процедур T-SQL.
+В первой части учебника вы установите необходимые компоненты. Во второй и третьей частях вы создадите сценарии R в записной книжке для подготовки данных и обучения модели машинного обучения. Из третьей части вы узнаете, как выполнить эти скрипты на языке R в базе данных с помощью хранимых процедур T-SQL.
 
 В этой статье вы узнаете, как выполнять следующие задачи.
 
 > [!div class="checklist"]
-> * Восстановление примера базы данных в SQL Server. 
+> * Восстановление примера базы данных 
 
 Во [второй части](r-predictive-model-prepare-data.md) вы узнаете, как загрузить данные из базы данных в кадр данных Python, а также подготовить данные в R.
 
@@ -54,9 +54,16 @@ ms.locfileid: "83607147"
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 * Службы машинного обучения SQL Server: сведения об установке служб машинного обучения см. в [руководстве по установке для Windows](../install/sql-machine-learning-services-windows-install.md) или [руководстве по установке для Linux](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). Можно также [включить Службы машинного обучения в кластерах больших данных SQL Server](../../big-data-cluster/machine-learning-services.md).
 ::: moniker-end
-
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 * Службы машинного обучения SQL Server — сведения об установке служб машинного обучения см. в [руководстве по установке для Windows](../install/sql-machine-learning-services-windows-install.md). 
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+* SQL Server 2016 R Services. Сведения об установке служб R Services см. в [руководстве по установке для Windows](../install/sql-r-services-windows-install.md). 
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+* Службы машинного обучения в управляемом экземпляре SQL Azure. Сведения о регистрации см. в статье [Общие сведения о Службах машинного обучения в управляемом экземпляре SQL Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview).
+
+* [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) для восстановления образца базы данных в Управляемый экземпляр SQL Azure.
 ::: moniker-end
 
 * IDE R. В этом учебнике используется [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/).
@@ -74,6 +81,7 @@ ms.locfileid: "83607147"
 > Если вы используете Службы машинного обучения в Кластерах больших данных, ознакомьтесь со статьей [Восстановление базы данных на главном экземпляре кластера больших данных SQL Server](../../big-data-cluster/data-ingestion-restore-database.md).
 ::: moniker-end
 
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 1. Скачайте файл [TutorialDB.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/TutorialDB.bak).
 
 1. Следуйте инструкциям из раздела [Восстановление базы данных из файла резервной копии](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file) в Azure Data Studio, используя следующие сведения:
@@ -87,20 +95,32 @@ ms.locfileid: "83607147"
    USE TutorialDB;
    SELECT * FROM [dbo].[rental_data];
    ```
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+1. Скачайте файл [TutorialDB.bak](https://sqlchoice.blob.core.windows.net/sqlchoice/static/TutorialDB.bak).
 
-1. Включите внешние скрипты, выполнив следующие команды SQL:
+1. Следуйте инструкциям в разделе [Восстановление базы данных в Управляемый экземпляр](/azure/sql-database/sql-database-managed-instance-get-started-restore) в SQL Server Management Studio, используя следующие сведения.
 
-    ```sql
-    sp_configure 'external scripts enabled', 1;
-    RECONFIGURE WITH override;
-    ```
+   * Выполните импорт из скачанного файла **TutorialDB.bak**.
+   * Назовите целевую базу данных "TutorialDB".
 
+1. Чтобы убедиться, что восстановленная база данных существует, выполните запрос к таблице **dbo.rental_data**:
+
+   ```sql
+   USE TutorialDB;
+   SELECT * FROM [dbo].[rental_data];
+   ```
+::: moniker-end
+
+## <a name="clean-up-resources"></a>Очистка ресурсов
+
+Если вы не собираетесь продолжать работу с этим учебником, удалите базу данных TutorialDB.
 ## <a name="next-steps"></a>Дальнейшие действия
 
 В первой части этого учебника вы выполнили следующие действия:
 
 * Установка необходимых компонентов
-* Восстановили пример базы данных в SQL Server.
+* Восстановленный пример базы данных
 
 Чтобы подготовить данные из для модели машинного обучения, перейдите ко второй части этого учебника:
 

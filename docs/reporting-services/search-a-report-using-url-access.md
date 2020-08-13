@@ -1,5 +1,6 @@
 ---
 title: Поиск отчета с использованием URL-адресов | Документы Майкрософт
+description: Узнайте, как выполнять поиск в отчете с использованием URL-адреса. Например, задав в качестве значения параметра rc:FindString в URL-адресе текст, который необходимо найти.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6f3410c4-7944-448f-bae8-bab3e8152d46
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b2568c2930080ddbb060f2c4d014c40476ab38f8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c7d5ba7b312bb89942fd899f4c769179a0c97bab
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570889"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87238436"
 ---
 # <a name="search-a-report-using-url-access"></a>Поиск отчета с использованием URL-адресов
   URL-адрес можно использовать для поиска в отчете определенного текста. Для поиска в отчете задайте в качестве значения параметра *rc:FindString* в URL-адресе текст, который необходимо найти. Можно также использовать параметры *rc:StartFind* и *rc:EndFind* , чтобы сузить поиск определенными страницами внутри отчета.  

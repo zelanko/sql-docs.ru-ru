@@ -1,7 +1,8 @@
 ---
 title: Настройка брандмауэра Windows
+description: Узнайте, как настроить брандмауэр Windows, чтобы разрешить доступ к экземпляру SQL Server через брандмауэр.
 ms.custom: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 07/22/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -20,17 +21,17 @@ helpviewer_keywords:
 - ports [SQL Server], TCP
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: f2e73d6acd17e3a77802ecde712a2e18c7d66846
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dce5cf7e83be47bda2bcfef17b4602eb5f2fb49e
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528878"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87238534"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 Системы брандмауэров предотвращают несанкционированный доступ к ресурсам компьютера. Если брандмауэр включен, но настроен неправильно, попытка соединения с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может оказаться заблокированной.  
   
@@ -182,7 +183,7 @@ ms.locfileid: "81528878"
 |-------------|----------|--------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] удаленные вызовы процедур (MS RPC)<br /><br /> Используется средой выполнения служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|TCP-порт 135<br /><br /> См. раздел [Особые замечания относительно порта 135](#BKMK_port_135)|Служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] обращается к DCOM по порту 135. Диспетчер управления службами использует порт 135 для запуска и остановки службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , передачи управляющих запросов запущенной службе и выполнения других задач. Номер порта не может быть изменен.<br /><br /> Это единственный порт, который должен быть открыт при соединении с удаленным экземпляром службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] из среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] или прикладной программы.|  
   
-Пошаговые инструкции по настройке брандмауэра Windows для служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] см. в статье [Службы Integration Services (службы SSIS)](../../integration-services/service/configure-a-windows-firewall-for-access-to-the-ssis-service.md?view=sql-server-2014).  
+Пошаговые инструкции по настройке брандмауэра Windows для служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] см. в статье [Службы Integration Services (службы SSIS)](/previous-versions/sql/sql-server-2012/ms137861(v=sql.110)).  
   
 ###  <a name="additional-ports-and-services"></a><a name="BKMK_additional_ports"></a> Другие порты и службы  
 В следующей таблице перечислены порты и службы, от которых может зависеть [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

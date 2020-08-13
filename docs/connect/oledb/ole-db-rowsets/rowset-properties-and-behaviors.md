@@ -1,5 +1,5 @@
 ---
-title: Свойства и поведение наборов строк | Документация Майкрософт
+title: Свойства и поведение наборов строк (драйвер OLE DB)
 description: Свойства и поведение наборов строк в OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - OLE DB rowsets, properties
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 1e2fff64739942539fd4fc34c736e32578555f93
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e541289c5ae71a7289cd005ba03ca2f886fc0bb7
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015348"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87244185"
 ---
 # <a name="rowset-properties-and-behaviors"></a>Свойства и поведение наборов строк
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

@@ -1,5 +1,6 @@
 ---
 title: Использование программы sqlcmd
+description: Узнайте, как использовать служебную программу sqlcmd для нерегламентированного интерактивного выполнения инструкций и скриптов Transact-SQL, а также для автоматизации задач скриптов Transact-SQL.
 ms.custom: seo-lt-2019
 ms.date: 06/06/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e41a75e543c325dce4353a512a8396887fe853c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0bd8f259e253083627a32f6f8a8b25b95c9159e5
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79090591"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87238044"
 ---
 # <a name="sqlcmd---use-the-utility"></a>Использование программы sqlcmd
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Служебная программа **sqlcmd** представляет собой программу командной строки для нерегламентированного интерактивного выполнения инструкций и скриптов [!INCLUDE[tsql](../../includes/tsql-md.md)] , а также для автоматизации задач скрипта [!INCLUDE[tsql](../../includes/tsql-md.md)] . Интерактивная работа с **sqlcmd** и создание файлов скриптов, исполняемых с помощью **sqlcmd**, требует от пользователя понимания языка [!INCLUDE[tsql](../../includes/tsql-md.md)]. Программа **sqlcmd** обычно применяется следующим образом.  
   
 -   Пользователь вводит инструкции на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] точно так же, как при работе в командной строке. Результаты выводятся в окно командной строки. Чтобы открыть окно командной строки, введите "cmd" в поле поиска Windows и выберите пункт **Командная строка**. В окне командной строки введите **sqlcmd** и необходимые параметры. Полный перечень параметров, поддерживаемых программой **sqlcmd**, см. в разделе [Программа sqlcmd](../../tools/sqlcmd-utility.md).  
@@ -410,28 +411,6 @@ ms.locfileid: "79090591"
   
     ```  
     :exit(select 100)  
-    @echo off  
-    C:\windowsscript.bat  
-    @echo off  
-  
-    echo Running badscript.sql  
-    sqlcmd -i badscript.sql -b -o out.log  
-    if not errorlevel 1 goto next1  
-    echo == An error occurred   
-  
-    :next1  
-  
-    echo Running goodscript.sql  
-    sqlcmd -i goodscript.sql -b -o out.log  
-    if not errorlevel 1 goto next2  
-    echo == An error occurred   
-  
-    :next2  
-    echo Running returnvalue.sql  
-    sqlcmd -i returnvalue.sql -o out.log  
-    echo SQLCMD returned %errorlevel% to the command shell  
-  
-    :exit  
     ```  
   
 -   C:\windowsscript.bat  

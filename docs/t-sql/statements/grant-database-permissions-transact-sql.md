@@ -20,12 +20,12 @@ ms.assetid: 499e5ed6-945c-4791-ab45-68dec0b9c289
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c421a03bfbafbe8d734ad6d3174e3ea20834606
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 5aca8d2f5135400c80c5943455237c066a7ba424
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483286"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87236912"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>GRANT, предоставление разрешений на базу данных (Transact-SQL)
 
@@ -63,9 +63,9 @@ permission | ALL [ PRIVILEGES ]
 
 *permission* — указывает предоставляемое разрешение для базы данных. Список разрешений см. в подразделе "Примечания" далее в этом разделе.
 
-ALL — этот параметр предоставляет не все возможные разрешения. Предоставление разрешения ALL эквивалентно предоставлению следующих разрешений: BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE и CREATE VIEW.
+ALL — этот параметр предоставляет не все возможные разрешения. Предоставление разрешения ALL эквивалентно предоставлению следующих разрешений: BACKUP DATABASE, BACKUP LOG, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE и CREATE VIEW.
 
-PRIVILEGES — включено для обеспечения совместимости с требованиями ISO. Не изменяет работу ALL.
+PRIVILEGES — включено для обеспечения совместимости с требованиями ANSI-92. Не изменяет работу ALL.
 
 WITH GRANT OPTION — указывает, что субъекту будет дана возможность предоставлять заданное разрешение другим субъектам.
 
