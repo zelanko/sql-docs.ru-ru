@@ -24,12 +24,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
-ms.openlocfilehash: 3812f2f7e2f41259416147e969ceb90e395b5bbb
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 698048be11f3514762f27c23ec16bf4ef18041a5
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279500"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864485"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -350,7 +350,7 @@ GLOBAL_TEMPORARY_TABLE_AUTO_DROP **=** { **ON** | OFF }
 Настройка функции автоматического удаления [глобальных временных таблиц](../../t-sql/statements/create-table-transact-sql.md#temporary-tables). По умолчанию имеет значение ON, то есть глобальные временные таблицы автоматически удаляются, когда не используются ни одним сеансом. Если задано значение OFF, глобальные временные таблицы следует удалять явным образом с помощью инструкции DROP TABLE, или они будут автоматически удалены при перезапуске сервера.
 
 - В отдельных базах данных и эластичных пулах [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] этот параметр можно задать для отдельных баз данных пользователей сервера Базы данных SQL.
-- В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и управляемом экземпляре [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] этот параметр задается в `TempDB` и не учитывается на уровне отдельных пользовательских баз данных.
+- В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и Управляемом экземпляре SQL Azure этот параметр задается в `TempDB` и не учитывается на уровне отдельных пользовательских баз данных.
 
 <a name="lqp"></a>
 

@@ -1,6 +1,6 @@
 ---
 title: Создание группы доступности с помощью Transact-SQL (T-SQL)
-description: 'Шаги для создания группы доступности Always On с помощью Transact-SQL (T-SQL). '
+description: Используйте Transact-SQL для создания и настройки группы доступности в экземплярах SQL Server 2019 (15.x), для которых включена функция групп доступности Always On.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 99e3ea99dc2cd41e6bd818a50c32944b07bc4996
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b6ca67706406b74d9579dd234cee6df15959d5b8
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901021"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565299"
 ---
 # <a name="create-an-always-on-availability-group-using-transact-sql-t-sql"></a>Создание группы доступности Always On с помощью Transact-SQL (T-SQL)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

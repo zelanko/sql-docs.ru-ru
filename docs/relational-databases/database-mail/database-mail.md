@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 27556251ca186661928de29b8a1f6dd4ac0e9fb0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dc3af385e52e998aa8bab2d84fc117987f522ebf
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85694955"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864535"
 ---
 # <a name="database-mail"></a>Database Mail
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  Компонент Database Mail — это решение уровня предприятия для отправки сообщений электронной почты из компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] или [управляемого экземпляра Базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index). Используя компонент Database Mail, приложения базы данных могут отправлять почтовые сообщения пользователям. Сообщения могут содержать результаты запроса, а также могут включать файлы из любого сетевого ресурса.  
+  Компонент Database Mail — это решение уровня предприятия для отправки сообщений электронной почты из компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] или [Управляемого экземпляра SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index). Используя компонент Database Mail, приложения базы данных могут отправлять почтовые сообщения пользователям. Сообщения могут содержать результаты запроса, а также могут включать файлы из любого сетевого ресурса.  
   
 > [!NOTE] 
-> Компонент Database Mail доступен в [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и [управляемом экземпляре Базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index), но не в отдельной базе данных SQL Azure и не в эластичных пулах. 
+> Компонент Database Mail доступен в [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и [Управляемом экземпляре SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index), но не в отдельной базе данных SQL Azure и не в эластичных пулах. 
 
 ##  <a name="benefits-of-using-database-mail"></a><a name="Benefits"></a> Преимущества использования компонента Database Mail  
  Компонент Database Mail спроектирован для надежности, масштабируемости, безопасности и простой поддержки.  

@@ -37,12 +37,12 @@ ms.assetid: 29ddac46-7a0f-4151-bd94-75c1908c89f8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ad86aa823fc10827e8f0d11aaf36ae10fc0622bf
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: aee1c65fb03dcbf192c3f33fc4750bf496b05c77
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112553"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988208"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -61,10 +61,10 @@ ms.locfileid: "87112553"
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Отдельная база данных/эластичный пул Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-current)
+        [База данных SQL](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Управляемый экземпляр Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [База данных SQL<br /> — управляемый экземпляр](create-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
@@ -867,10 +867,10 @@ GO
         [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* Отдельная база данных/эластичный пул Базы данных SQL<br />\*_**
+        **_\* База данных SQL \*_**
     :::column-end:::
     :::column:::
-        [Управляемый экземпляр Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [База данных SQL<br /> — управляемый экземпляр](create-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
@@ -882,11 +882,11 @@ GO
 
 &nbsp;
 
-## <a name="azure-sql-database-single-databaseelastic-pool"></a>Отдельная база данных или эластичный пул Базы данных SQL Azure
+## <a name="sql-database"></a>База данных SQL
 
 ## <a name="overview"></a>Обзор
 
-В отдельной базе данных или эластичном пуле [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] этот оператор можно применить к серверу SQL Azure для создания отдельной базы данных или базы данных в эластичном пуле. При использовании оператора нужно указать имя базы данных, параметры сортировки, максимальный размер, выпуск, цель обслуживания, и, если это применимо, эластичный пул для новой базы данных. Также он позволяет создать базу данных в эластичном пуле. Кроме того, с его помощью можно создать копию базы данных на другом сервере Базы данных SQL.
+В [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] эту инструкцию можно применить к серверу SQL Azure для создания отдельной базы данных или базы данных в эластичном пуле. При использовании оператора нужно указать имя базы данных, параметры сортировки, максимальный размер, выпуск, цель обслуживания, и, если это применимо, эластичный пул для новой базы данных. Также он позволяет создать базу данных в эластичном пуле. Кроме того, с его помощью можно создать копию базы данных на другом сервере Базы данных SQL.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -973,7 +973,7 @@ CATALOG_COLLATION — задает параметры сортировки по
 
 EDITION — определяет уровень службы базы данных.
 
-Отдельные базы данных и базы данных в пуле на отдельной базе данных или в эластичном пуле. Возможные значения: "Basic", "Standard", "Premium", "GeneralPurpose", "BusinessCritical" и "Hyperscale".
+Отдельные базы данных и базы данных в пуле. Возможные значения: "Basic", "Standard", "Premium", "GeneralPurpose", "BusinessCritical" и "Hyperscale".
 
 MAXSIZE — указывает максимальный размер базы данных. Значение параметра MAXSIZE должно быть допустимо для указанного значения параметра EDITION (уровень службы). Далее приведены поддерживаемые значения MAXSIZE и значения по умолчанию (D) для уровней службы.
 
@@ -1273,10 +1273,10 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = '
         [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Отдельная база данных/эластичный пул Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-current)
+        [База данных SQL](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* Управляемый экземпляр Базы данных SQL<br />\*_**
+        **_\* База данных SQL<br />Управляемый экземпляр \*_**
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
@@ -1288,11 +1288,11 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = '
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Управляемый экземпляр Базы данных SQL Azure
+## <a name="azure-sql-managed-instance"></a>Управляемый экземпляр SQL Azure
 
 ## <a name="overview"></a>Обзор
 
-В Управляемом экземпляре Azure SQL эта инструкция используется для создания базы данных. При создании базы данных в управляемом экземпляре вы можете указать имя базы данных и параметры сортировки.
+В Управляемом экземпляре SQL Azure эта инструкция используется для создания базы данных. При создании базы данных в управляемом экземпляре вы можете указать имя базы данных и параметры сортировки.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -1357,10 +1357,10 @@ CREATE DATABASE TestDB1;
         [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Отдельная база данных/эластичный пул Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-current)
+        [База данных SQL](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Управляемый экземпляр Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [База данных SQL<br /> — управляемый экземпляр](create-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -1482,10 +1482,10 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
         [SQL Server](create-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Отдельная база данных/эластичный пул Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-current)
+        [База данных SQL](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Управляемый экземпляр Базы данных SQL<br />](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [База данных SQL<br /> — управляемый экземпляр](create-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)

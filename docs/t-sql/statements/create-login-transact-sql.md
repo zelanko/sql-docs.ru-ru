@@ -27,12 +27,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11f67835fe3cd74b63a9f2921850376ff4805881
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 0ff1117c601cc42d8fa14147df18b90a10fc97bd
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411046"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87987959"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -51,7 +51,7 @@ CREATE LOGIN участвует в транзакциях. Если откат �
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [База данных SQL Azure:<br />отдельная база данных/эластичный пул](create-login-transact-sql.md?view=azuresqldb-current)
+        [База данных SQL Azure](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [Управляемый экземпляр<br />SQL Azure](create-login-transact-sql.md?view=azuresqldb-mi-current)
@@ -284,7 +284,7 @@ CHECK_EXPIRATION = OFF ;
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* База данных SQL Azure:<br />отдельная база данных/эластичный пул\*_**
+        **_\* База данных SQL Azure \*_**
     :::column-end:::
     :::column:::
         [Управляемый экземпляр<br />SQL Azure](create-login-transact-sql.md?view=azuresqldb-mi-current)
@@ -299,7 +299,7 @@ CHECK_EXPIRATION = OFF ;
 
 &nbsp;
 
-## <a name="azure-sql-database-single-databaseelastic-pool"></a>Отдельная база данных или эластичный пул Базы данных SQL Azure
+## <a name="sql-database"></a>База данных SQL
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -402,7 +402,7 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [База данных SQL Azure:<br />отдельная база данных/эластичный пул](create-login-transact-sql.md?view=azuresqldb-current)
+        [База данных SQL Azure](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         **_\* Управляемый экземпляр<br />SQL Azure\*_**
@@ -417,12 +417,12 @@ GO
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Управляемый экземпляр Базы данных SQL Azure
+## <a name="azure-sql-managed-instance"></a>Управляемый экземпляр SQL Azure
 
 ## <a name="syntax"></a>Синтаксис
 
 ```syntaxsql
--- Syntax for Azure SQL Database managed instance
+-- Syntax for Azure SQL Managed Instance
 CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
 
 <option_list> ::=
@@ -451,7 +451,7 @@ SID **=** *sid* — используется для повторного соз
 - Появился новый синтаксис для создания субъектов уровня сервера, сопоставленных с учетными записями Azure AD (**FROM EXTERNAL PROVIDER**)
 - Когда указывается **FROM EXTERNAL PROVIDER**:
 
-  - значение login_name должно представлять имеющуюся учетную запись Azure AD (пользователя, группу или приложение), доступную в Azure AD для текущего управляемого экземпляра SQL Azure. Для субъектов Azure AD действуют такие требования синтаксиса CREATE LOGIN:
+  - значение login_name должно представлять существующую учетную запись Azure AD (пользователя, группу или приложение), доступную в Azure AD для текущего управляемого экземпляра SQL Azure. Для субъектов Azure AD действуют такие требования синтаксиса CREATE LOGIN:
     - имя участника-пользователя (UserPrincipalName) объекта Azure AD для пользователей Azure AD;
     - отображаемое имя (DisplayName) объекта Azure AD для групп и приложений Azure AD.
   - Этот параметр невозможно использовать совместно с параметром **PASSWORD**.
@@ -469,18 +469,18 @@ SID **=** *sid* — используется для повторного соз
 
 Стандартные разрешения, предоставляемые по умолчанию только что созданному имени входа Azure AD в базе данных master: **CONNECT SQL** и **VIEW ANY DATABASE**.
 
-### <a name="sql-database-managed-instance-logins"></a>Имена входа управляемого экземпляра Базы данных SQL
+### <a name="sql-managed-instance-logins"></a>Имена входа в Управляемый экземпляр SQL
 
 - Требуется разрешение **ALTER ANY LOGIN** на сервере или членство в предопределенной роли сервера `securityadmin` или `sysadmin`. Выполнять команду создания может только учетная запись Azure Active Directory (Azure AD) с разрешением **ALTER ANY LOGIN** на сервере или членством в одной из этих ролей.
 - Если имя для входа представляет собой субъект SQL, команду create для создания имен для входа для учетной записи Azure AD можно использовать только с именами для входа, которые являются частью роли `sysadmin`.
-- Требуется членство в Azure AD в том же каталоге, который используется для управляемого экземпляра SQL Azure.
+- Требуется членство в Azure AD в том же каталоге, который используется для управляемого экземпляра Azure SQL.
 
 ## <a name="after-creating-a-login"></a>После создания имени входа
 
 > [!NOTE]
-> Изменились функции, доступные после создания администратору Azure AD для управляемого экземпляра. Дополнительные сведения см. в разделе [Новые функции администратора Azure AD для MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
+> Изменились функции, доступные администратору Azure AD для Управляемого экземпляра SQL Azure после создания. Дополнительные сведения см. в разделе [Новые функции администратора Azure AD для MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
-Созданное имя входа может подключаться к управляемому экземпляру Базы данных SQL, но c разрешениями только для роли **public**. Попробуйте выполнить некоторые из приведенных ниже действий.
+Созданное имя входа может подключаться к управляемому экземпляру, но c разрешениями только для роли **public**. Попробуйте выполнить некоторые из приведенных ниже действий.
 
 - Чтобы создать пользователя Azure AD по имени входа Azure AD, см. раздел [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
 - Чтобы предоставить разрешения пользователю базы данных, используйте инструкцию **ALTER SERVER ROLE** ... **ADD MEMBER** для добавления пользователя в одну из встроенных ролей базы данных или пользовательскую роль либо напрямую предоставьте пользователю разрешения с помощью инструкции [GRANT](../../t-sql/statements/grant-transact-sql.md). Дополнительные сведения см. в разделах [Пользователи без прав администратора](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [Дополнительные административные роли на уровне сервера](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) и [GRANT](grant-transact-sql.md).
@@ -601,7 +601,7 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [База данных SQL Azure:<br />отдельная база данных/эластичный пул](create-login-transact-sql.md?view=azuresqldb-current)
+        [База данных SQL Azure](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [Управляемый экземпляр<br />SQL Azure](create-login-transact-sql.md?view=azuresqldb-mi-current)
@@ -729,7 +729,7 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [База данных SQL Azure:<br />отдельная база данных/эластичный пул](create-login-transact-sql.md?view=azuresqldb-current)
+        [База данных SQL Azure](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [Управляемый экземпляр<br />SQL Azure](create-login-transact-sql.md?view=azuresqldb-mi-current)

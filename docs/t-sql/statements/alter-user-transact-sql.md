@@ -25,12 +25,12 @@ ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f6e25763f585f063eeb25fd512b65a3e51c070e5
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 5626b98f81bcca2a21902cf0d38f44a256fa73e0
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394669"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988449"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 
@@ -47,10 +47,10 @@ ms.locfileid: "87394669"
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Отдельная база данных/эластичный пул Базы данных SQL<br />](alter-user-transact-sql.md?view=azuresqldb-current)
+        [База данных SQL](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Управляемый экземпляр Базы данных SQL<br />](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+        [База данных SQL<br /> — управляемый экземпляр](alter-user-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
@@ -222,10 +222,10 @@ GO
         [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* Отдельная база данных/эластичный пул Базы данных SQL<br />\*_**
+        **_\* База данных SQL \*_**
     :::column-end:::
     :::column:::
-        [Управляемый экземпляр Базы данных SQL<br />](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+        [База данных SQL<br /> — управляемый экземпляр](alter-user-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
@@ -237,7 +237,7 @@ GO
 
 &nbsp;
 
-## <a name="azure-sql-database-single-databaseelastic-pool"></a>Отдельная база данных или эластичный пул Базы данных SQL Azure
+## <a name="sql-database"></a>База данных SQL
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -407,10 +407,10 @@ GO
         [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Отдельная база данных/эластичный пул Базы данных SQL<br />](alter-user-transact-sql.md?view=azuresqldb-current)
+        [База данных SQL](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* Управляемый экземпляр Базы данных SQL<br />\*_**
+        **_\* База данных SQL<br />Управляемый экземпляр \*_**
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
@@ -422,16 +422,16 @@ GO
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Управляемый экземпляр Базы данных SQL Azure
+## <a name="azure-sql-managed-instance"></a>Управляемый экземпляр SQL Azure
 
 ## <a name="syntax"></a>Синтаксис
 
 > [!IMPORTANT]
-> Для управляемого экземпляра Базы данных SQL Azure поддерживаются только следующие параметры при применении к пользователям с именами входа Azure AD: `DEFAULT_SCHEMA = { schemaName | NULL }` и `DEFAULT_LANGUAGE = { NONE | lcid | language name | language alias }`
-> </br> </br> Для сопоставления пользователей в базе данных, которая была перенесена в управляемый экземпляр, было добавлено новое расширение синтаксиса. Синтаксис ALTER USER позволяет сопоставлять пользователей базы данных в объединенном и синхронизированном домене с Azure AD с именами входа Azure AD.
+> Для Управляемого экземпляра SQL Azure поддерживаются только следующие параметры при применении к пользователям с именами входа Azure AD: `DEFAULT_SCHEMA = { schemaName | NULL }` и `DEFAULT_LANGUAGE = { NONE | lcid | language name | language alias }`
+> </br> </br> Для сопоставления пользователей в базе данных, которая была перенесена в Управляемый экземпляр SQL Azure, было добавлено новое расширение синтаксиса. Синтаксис ALTER USER позволяет сопоставлять пользователей базы данных в объединенном и синхронизированном домене с Azure AD с именами входа Azure AD.
 
 ```syntaxsql
--- Syntax for Azure SQL Database managed instance
+-- Syntax for SQL Managed Instance
 ALTER USER userName
  { WITH <set_item> [ ,...n ] | FROM EXTERNAL PROVIDER }
 [;]
@@ -521,7 +521,7 @@ ALTER USER userName
  Предложение WITH LOGIN позволяет сопоставить пользователя с другим именем входа. Пользователи, не имеющие имени входа, а также пользователи, сопоставленные с сертификатом или с асимметричным ключом, не могут быть повторно сопоставлены с помощью этого предложения. Возможно повторное сопоставление только пользователей (или групп) SQL и Windows. Предложение WITH LOGIN не удастся использовать для изменения типа пользователя, например для перехода от учетной записи Windows на имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Единственным исключением является изменение пользователя Windows на пользователя Azure AD.
 
 > [!NOTE]
-> Следующие правила не применяются к пользователям Windows на управляемом экземпляре, так как мы не поддерживаем создание имен входа Windows на управляемом экземпляре. Параметр WITH LOGIN можно использовать только при наличии имен входа Azure AD.
+> Указанные ниже правила не применяются к пользователям Windows в Управляемом экземпляре SQL Azure, так как мы не поддерживаем создание имен входа Windows в Управляемом экземпляре SQL Azure. Параметр WITH LOGIN можно использовать только при наличии имен входа Azure AD.
 
  Имя пользователя будет автоматически изменено на имя входа, если удовлетворяются следующие условия.
 
@@ -540,21 +540,21 @@ ALTER USER userName
 > [!CAUTION]
 > [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]
 
-### <a name="remarks-for-windows-users-in-sql-on-premises-migrated-to-managed-instance"></a>Примечания для пользователей Windows в локальной среде SQL, перенесенных на управляемый экземпляр
+### <a name="remarks-for-windows-users-in-sql-on-premises-migrated-to-azure-sql-managed-instance"></a>Примечания для пользователей Windows в локальной среде SQL, перенесенных в Управляемый экземпляр SQL Azure
 
 Эти замечания относятся к проверке подлинности в качестве пользователей Windows, которые были объединены и синхронизированы с Azure AD.
 
 > [!NOTE]
-> Изменились функции, доступные после создания администратору Azure AD для управляемого экземпляра. Дополнительные сведения см. в разделе [Новые функции администратора Azure AD для MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
+> Изменились функции, доступные администратору Azure AD для Управляемого экземпляра SQL Azure после создания. Дополнительные сведения см. в разделе [Новые функции администратора Azure AD для MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
 - Проверка пользователей или групп Windows, сопоставленных с Azure AD, выполняется по умолчанию с помощью API Graph во всех версиях синтаксиса ALTER USER, используемого для миграции.
 - Локальные пользователи, которым были назначены псевдонимы (другое имя, помимо имени исходной учетной записи Windows), будут иметь имя с псевдонимом.
-- При проверке подлинности Azure AD параметр LOGIN применяется только к управляемому экземпляру и не может использоваться с базой данных SQL.
+- При проверке подлинности Azure AD параметр LOGIN применяется только к Управляемому экземпляру SQL Azure и не может использоваться с базой данных SQL.
 - Чтобы просмотреть имена входа для субъектов Azure AD, используйте следующую команду: `select * from sys.server_principals`.
 - Проверьте, что указанный тип имени входа имеет значение `E` или `X`.
 - Параметр PASSWORD нельзя использовать для пользователей Azure AD.
 - Во всех случаях миграции роли и разрешения пользователей или групп Windows будут автоматически переданы новым пользователям или группам Azure AD.
-- Новое расширение синтаксиса, **FROM EXTERNAL PROVIDER**, доступно для изменения пользователей и групп Windows из локальной среды SQL на пользователей и группы Azure AD. Домен Windows должен быть объединен с Azure AD, а при использовании этого расширения все члены домена Windows должны существовать в Azure AD. Синтаксис **FROM EXTERNAL PROVIDER** применяется к управляемому экземпляру и должен использоваться в случае, если пользователи Windows не имеют имен входа в исходном экземпляре SQL и их следует сопоставлять с автономными пользователями базы данных Azure AD.
+- Новое расширение синтаксиса, **FROM EXTERNAL PROVIDER**, доступно для изменения пользователей и групп Windows из локальной среды SQL на пользователей и группы Azure AD. Домен Windows должен быть объединен с Azure AD, а при использовании этого расширения все члены домена Windows должны существовать в Azure AD. Синтаксис **FROM EXTERNAL PROVIDER** применяется к Управляемому экземпляру SQL Azure и должен использоваться в случае, если пользователи Windows не имеют имен входа в исходном экземпляре SQL и их следует сопоставлять с автономными пользователями базы данных Azure AD.
 - В этом случае допустимое userName может быть следующим:
 - Пользователь Widows (_домен\пользователь_).
 - Группа Windows (_MyWidnowsGroups_).
@@ -628,13 +628,13 @@ GO
 
 ### <a name="d-map-the-user-in-the-database-to-an-azure-ad-login-after-migration"></a>Г. После миграции сопоставьте пользователя в базе данных с именем входа Azure AD
 
-В следующем примере показано повторное сопоставление пользователя `westus/joe` с пользователем Azure AD, `joe@westus.com`. Этот пример предназначен для имен входа, уже существующих в управляемом экземпляре. Это необходимо сделать после завершения миграции базы данных на управляемый экземпляр и в том случае, когда есть необходимость использовать имя входа Azure AD для проверки подлинности.
+В следующем примере показано повторное сопоставление пользователя `westus/joe` с пользователем Azure AD, `joe@westus.com`. Этот пример предназначен для имен входа, уже существующих в управляемом экземпляре. Это необходимо сделать после завершения миграции базы данных на Управляемый экземпляр SQL Azure и в том случае, когда есть необходимость использовать имя входа Azure AD для проверки подлинности.
 
 ```sql
 ALTER USER [westus/joe] WITH LOGIN = joe@westus.com
 ```
 
-### <a name="e-map-an-old-windows-user-in-the-database-without-a-login-in-managed-instance-to-an-azure-ad-user"></a>Д. Сопоставление старого пользователя Windows в базе данных без имени входа в управляемом экземпляре с пользователем Azure AD.
+### <a name="e-map-an-old-windows-user-in-the-database-without-a-login-in-azure-sql-managed-instance-to-an-azure-ad-user"></a>Д. Сопоставление старого пользователя Windows в базе данных без имени входа в Управляемом экземпляре SQL Azure с пользователем Azure AD.
 
 В следующем примере показано повторное сопоставление пользователя, `westus/joe` без имени входа, с пользователем Azure AD, `joe@westus.com`. Федеративный пользователь должен существовать в Azure AD.
 
@@ -650,7 +650,7 @@ ALTER USER [westus/joe] FROM EXTERNAL PROVIDER
 ALTER USER [westus/joe] WITH LOGIN = joe@westus.com, name= joe_alias
 ```
 
-### <a name="g-map-a-windows-group-that-was-migrated-in-managed-instance-to-an-azure-ad-group"></a>Ж. Сопоставление группы Windows, перенесенной в управляемый экземпляр, с группой Azure AD
+### <a name="g-map-a-windows-group-that-was-migrated-in-azure-sql-managed-instance-to-an-azure-ad-group"></a>Ж. Сопоставление группы Windows, перенесенной в Управляемый экземпляр SQL Azure, с группой Azure AD
 
 В следующем примере выполняется повторное сопоставление старой локальной группы `westus\mygroup` с группой Azure AD `mygroup` в управляемом экземпляре. Эта группа должна существовать в Azure AD.
 
@@ -665,7 +665,7 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
 - [Автономные базы данных](../../relational-databases/databases/contained-databases.md)
 - [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)
 - [sp_migrate_user_to_contained (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
-- [Руководство. Миграция локальных пользователей и групп Windows в SQL Server в управляемый экземпляр базы данных SQL Azure с помощью синтаксиса T-SQL DDL](/azure/sql-database/tutorial-managed-instance-azure-active-directory-migration)
+- [Руководство. Миграция локальных пользователей и групп Windows в SQL Server в Управляемый экземпляр SQL с помощью синтаксиса T-SQL DDL](/azure/sql-database/tutorial-managed-instance-azure-active-directory-migration)
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
@@ -675,10 +675,10 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
         [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Отдельная база данных/эластичный пул Базы данных SQL<br />](alter-user-transact-sql.md?view=azuresqldb-current)
+        [База данных SQL](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Управляемый экземпляр Базы данных SQL<br />](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+        [База данных SQL<br /> — управляемый экземпляр](alter-user-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -800,10 +800,10 @@ GO
         [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Отдельная база данных/эластичный пул Базы данных SQL<br />](alter-user-transact-sql.md?view=azuresqldb-current)
+        [База данных SQL](alter-user-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Управляемый экземпляр Базы данных SQL<br />](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+        [База данных SQL<br /> — управляемый экземпляр](alter-user-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)

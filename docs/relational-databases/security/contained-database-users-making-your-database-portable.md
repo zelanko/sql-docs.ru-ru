@@ -15,12 +15,12 @@ ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e297be837d954217aa9197494d6734f53d5a6aa0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a76bc720df1808290a09e2cec5fad1c0667ae389
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005604"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988796"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Пользователи автономной базы данных — создание переносимой базы данных
 
@@ -75,9 +75,9 @@ ms.locfileid: "86005604"
 |-----------------------|-----------------------------------|  
 |Изменение пароля в контексте базы данных master.<br /><br /> `ALTER LOGIN login_name  WITH PASSWORD = 'strong_password';`|Изменение пароля в контексте базы данных пользователя.<br /><br /> `ALTER USER user_name  WITH PASSWORD = 'strong_password';`|  
 
-### <a name="managed-instance"></a>управляемый экземпляр
+### <a name="managed-instance"></a>Базы данных SQL
 
-Управляемый экземпляр базы данных SQL Azure ведет себя как локальный сервер SQL Server в контексте автономных баз данных. При создании автономного пользователя не забудьте изменить контекст базы данных из базы данных master на пользовательскую базу данных. Кроме того, при настройке параметра автономности не должно быть активных подключений к пользовательской базе данных. 
+Управляемый экземпляр SQL Azure ведет себя как локальный сервер SQL Server в контексте автономных баз данных. При создании автономного пользователя не забудьте изменить контекст базы данных из базы данных master на пользовательскую базу данных. Кроме того, при настройке параметра автономности не должно быть активных подключений к пользовательской базе данных. 
 
 Пример: 
 

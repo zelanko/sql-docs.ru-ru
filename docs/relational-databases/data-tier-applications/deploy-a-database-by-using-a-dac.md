@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 11994d1dc3ec931f729c2739a107848464ed7f8b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e93398b38e2fff73e63013fd0bfc1c4bedc31a43
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781696"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988759"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Развертывание базы данных с помощью приложения уровня данных
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  С помощью мастера **развертывания базы данных в SQL Azure** разверните базу данных между экземпляром компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и сервером [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] либо между двумя серверами [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
+  С помощью мастера **развертывания базы данных в службе "База данных SQL Microsoft Azure"** разверните базу данных между экземпляром компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и сервером [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] либо между двумя серверами [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
 ##  <a name="before-you-begin"></a><a name="BeforeBegin"></a> Перед началом  
  Мастер использует архивный файл приложения уровня данных (DAC) BACPAC для развертывания как данных, так и определений объектов базы данных. Он выполняет операцию экспорта приложения уровня данных из базы данных-источника и импорт приложения уровня данных в место назначения.  
@@ -68,7 +68,7 @@ ms.locfileid: "85781696"
   
 3.  Разверните узел **Базы данных** .  
   
-4.  Щелкните правой кнопкой мыши базу данных, которую необходимо развернуть, выберите **Задачи**, а затем **Развертывание базы данных в SQL Azure…** .  
+4.  Щелкните правой кнопкой мыши базу данных, которую необходимо развернуть, выберите пункт **Задачи**, а затем выберите **Развертывание базы данных в базе данных SQL Microsoft Azure**.  
   
 5.  Выполните шаги в диалоговых окнах мастера.  
   

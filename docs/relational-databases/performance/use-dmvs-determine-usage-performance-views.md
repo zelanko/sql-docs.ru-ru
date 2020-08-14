@@ -1,6 +1,6 @@
 ---
 title: Динамические административные представления — статистика использования и производительность представлений
-description: Использование динамических административных представлений для определения статистики использования и производительности представлений
+description: Узнайте, как использовать динамические административные представления sys.dm_exec_query_optimizer_info, sys.views и sys.dmv_exec_cached_plans для получения статистики по производительности SQL-запросов.
 ms.custom: seo-dt-2019
 author: julieMSFT
 ms.author: jrasnick
@@ -9,12 +9,12 @@ ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
-ms.openlocfilehash: e80ba0a8252881b7447dda721f02fc9c3e545917
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ea5ae310606097b9f25a31337222b941ac963fd0
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165888"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87899550"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>Использование динамических административных представлений для определения статистики использования и производительности представлений
 В этой статье рассматриваются методы и скрипты, используемые для получения информации о **производительности запросов, которые используют представления**. Цель этих скриптов — предоставить показатели использования и производительности различных представлений, найденных в базе данных. 

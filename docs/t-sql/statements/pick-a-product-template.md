@@ -14,12 +14,12 @@ helpviewer_keywords: ''
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 27649f57640f6a4575ab9465525e1a89e504da5b
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 5edf147637d7e9e9ca94c4e1daa53f9beabaeb4f
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113217"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988401"
 ---
 # <a name="title-transact-sql"></a>Title (Transact-SQL)
 
@@ -38,10 +38,10 @@ ms.locfileid: "87113217"
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Отдельная база данных/эластичный пул Базы данных SQL<br />](pick-a-product-template.md?view=azuresqldb-current)
+        [База данных SQL](pick-a-product-template.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Управляемый экземпляр Базы данных SQL<br />](pick-a-product-template.md?view=azuresqldb-mi-current)
+        [База данных SQL<br /> — управляемый экземпляр](pick-a-product-template.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](pick-a-product-template.md?view=azure-sqldw-latest)
@@ -61,10 +61,10 @@ ms.locfileid: "87113217"
         [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\*Отдельная база данных/<br />эластичный пул Базы данных SQL \*_** &nbsp;
+        **_\* База данных SQL \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Управляемый экземпляр Базы данных SQL<br />](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+        [База данных SQL<br /> — управляемый экземпляр](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
@@ -73,7 +73,7 @@ ms.locfileid: "87113217"
 
 &nbsp;
 
-## <a name="azure-sql-database-single-databaseelastic-pool"></a>Отдельная база данных или эластичный пул Базы данных SQL Azure
+## <a name="sql-database"></a>База данных SQL
 
 
 
@@ -85,7 +85,7 @@ ms.locfileid: "87113217"
         [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Отдельная база данных/эластичный пул Базы данных SQL<br />](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+        [База данных SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         **_\* Управляемый экземпляр<br />Базы данных SQL \*_** &nbsp;
@@ -97,9 +97,7 @@ ms.locfileid: "87113217"
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Управляемый экземпляр Базы данных SQL Azure
-
-
+## <a name="azure-sql-managed-instance"></a>Управляемый экземпляр SQL Azure
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
@@ -109,10 +107,10 @@ ms.locfileid: "87113217"
         [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Отдельная база данных/эластичный пул Базы данных SQL<br />](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+        [База данных SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Управляемый экземпляр Базы данных SQL<br />](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+        [База данных SQL<br /> — управляемый экземпляр](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;

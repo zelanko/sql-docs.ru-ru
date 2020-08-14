@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cf911fae5cc8df106cc2a4be9556cf873dd49eaa
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: d4b7c4f52c5d0e70ac6c7f59eebf5fd8a5e47e29
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332483"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864881"
 ---
 # <a name="tempdb-database"></a>База данных tempdb
 
@@ -39,8 +39,8 @@ ms.locfileid: "87332483"
   > [!NOTE]
   > Каждый внутренний объект использует минимум девять страниц: страницу IAM и восьмистраничный экстент. Дополнительные сведения о страницах и экстентах см. в разделе [Страницы и экстенты](../../relational-databases/pages-and-extents-architecture-guide.md#pages-and-extents).
   > [!IMPORTANT]
-  > Отдельные базы данных и эластичные пулы Базы данных SQL Azure поддерживают глобальные временные таблицы и глобальные временные хранимые процедуры, которые хранятся в `tempdb` и имеют область действия на уровне базы данных. Глобальные временные таблицы и глобальные временные хранимые процедуры являются общими для всех сеансов пользователей в рамках одной базы данных SQL Azure. Сеансы пользователей, связанные с другими базами данных SQL Azure, не имеют доступа к глобальным временным таблицам. Дополнительные сведения см. в разделе [Глобальные временные таблицы (база данных SQL Azure) в области базы данных](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database). [Управляемый экземпляр Базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)) поддерживает те же временные объекты, что и SQL Server.
-  > Для отдельных баз данных и эластичных пулов Базы данных SQL Azure применяются только базы master и `tempdb`. Дополнительные сведения см. в разделе [Что являет собою сервер Базы данных SQL Azure?](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server). Описание `tempdb` в контексте отдельных баз данных и эластичных пулов Базы данных SQL Azure см. раздел [База данных tempdb в отдельных базах и эластичных пулах Базы данных SQL Azure](#tempdb-database-in-sql-database). Для Управляемого экземпляра Базы данных Azure SQL применяются все системные базы данных.
+  > Отдельные базы данных и эластичные пулы Базы данных SQL Azure поддерживают глобальные временные таблицы и глобальные временные хранимые процедуры, которые хранятся в `tempdb` и имеют область действия на уровне базы данных. Глобальные временные таблицы и глобальные временные хранимые процедуры являются общими для всех сеансов пользователей в рамках одной базы данных SQL Azure. Сеансы пользователей, связанные с другими базами данных SQL Azure, не имеют доступа к глобальным временным таблицам. Дополнительные сведения см. в разделе [Глобальные временные таблицы (база данных SQL Azure) в области базы данных](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database). [Управляемый экземпляр SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживает те же временные объекты, что и SQL Server.
+  > Для отдельных баз данных и эластичных пулов Базы данных SQL Azure применяются только базы master и `tempdb`. Дополнительные сведения см. в разделе [Что являет собою сервер Базы данных SQL Azure?](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server). Описание `tempdb` в контексте отдельных баз данных и эластичных пулов Базы данных SQL Azure см. раздел [База данных tempdb в отдельных базах и эластичных пулах Базы данных SQL Azure](#tempdb-database-in-sql-database). Для Управляемого экземпляра SQL Azure применяются все системные базы данных.
 
 - **Хранилища версий** — это коллекции страниц данных, содержащих строки данных, которые необходимы для поддержки возможностей, применяющих управление версиями строк. Существует два хранилища версий: общее хранилище версий и хранилище версий построения индексов в сети. Хранилища версий содержат следующее:
   - версии строк, сформированные транзакциями изменения данных в базе данных, в которой используются транзакции изоляции моментальных снимков с зафиксированным чтением и транзакции изоляции моментальных снимков;  

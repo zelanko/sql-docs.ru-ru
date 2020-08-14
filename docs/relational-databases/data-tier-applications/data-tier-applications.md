@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f8d91ef65f8beb5194bbb8cbe3b1618d7666e106
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7e7f5fb29c15fbd8532a6852477ed9376df92f72
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781738"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988774"
 ---
 # <a name="data-tier-applications"></a>Приложения уровня данных
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "85781738"
   
     -   Могут использовать среду SQL Server Management Studio для извлечения файла DACPAC из существующей базы данных, а также для выполнения других операций приложения уровня данных.  
   
-    -   Кроме того, для операций приложения уровня данных администратор базы данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] может использовать портал управления SQL Azure.  
+    -   Кроме того, для операций приложения уровня данных администратор базы данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] может использовать портал Azure.  
   
 -   Независимые поставщики программного обеспечения:  
   
@@ -87,7 +87,7 @@ ms.locfileid: "85781738"
   
 -   **ИЗВЛЕЧЕНИЕ** — пользователь может извлечь базу данных в DACPAC.  
   
--   **РАЗВЕРТЫВАНИЕ** — пользователь может развернуть DACPAC на основном сервере. При развертывании из средств управления, например, среды SQL Server Management Studio или портала управления SQL Azure результирующая база данных на основном сервере будет неявно зарегистрирована в качестве приложения уровня данных.  
+-   **РАЗВЕРТЫВАНИЕ** — пользователь может развернуть DACPAC на основном сервере. При развертывании из средства управления, например среды SQL Server Management Studio или портала Azure, результирующая база данных на основном сервере будет неявно зарегистрирована в качестве приложения уровня данных.  
   
 -   **РЕГИСТРАЦИЯ** — пользователь может зарегистрировать базу данных в качестве приложения уровня данных.  
   

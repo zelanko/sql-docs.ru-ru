@@ -44,12 +44,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e4a00b8bff85625cf48f8ba1f5abf3fb14ce94a8
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a2874fa0cd20ed8ff80f7815b0725ce14dd800b5
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113240"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864435"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Параметры инструкции ALTER DATABASE для файлов и файловых групп (Transact-SQL)
 
@@ -66,7 +66,7 @@ ms.locfileid: "87113240"
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Управляемый экземпляр Базы данных SQL<br />](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)
+        [База данных SQL<br /> — управляемый экземпляр](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)
     :::column-end:::
 :::row-end:::
 
@@ -687,17 +687,17 @@ GO
         [SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* Управляемый экземпляр Базы данных SQL<br />\*_**<br />&nbsp;
+        **_\* База данных SQL<br />Управляемый экземпляр \*_**<br />&nbsp;
     :::column-end:::
 :::row-end:::
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Управляемый экземпляр Базы данных SQL Azure
+## <a name="azure-sql-managed-instance"></a>Управляемый экземпляр SQL Azure
 
-Используйте эту инструкцию с базой данных в управляемом экземпляре Базы данных SQL Azure.
+Используйте эту инструкцию с базой данных в Управляемом экземпляре SQL Azure.
 
-## <a name="syntax-for-databases-in-a-managed-instance"></a>Синтаксис для баз данных в управляемом экземпляре
+## <a name="syntax-for-azure-sql-managed-instance"></a>Синтаксис для Управляемого экземпляра SQL Azure
 
 ```syntaxsql
 ALTER DATABASE database_name

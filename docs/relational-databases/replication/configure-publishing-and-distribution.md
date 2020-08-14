@@ -16,12 +16,12 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 0e39946071c85dff0c1e29f6f36e6bafe910f77d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0fba95ecd1553bcd090cbf7ef987728bd17b712d
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774007"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863367"
 ---
 # <a name="configure-publishing-and-distribution"></a>Настройка публикации и распространения
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "85774007"
 
 2. В распространителе, который также является издателем, выполните процедуру [sp_adddistpublisher (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md), указав общий ресурс UNC, который будет использоваться как папка по умолчанию для моментальных снимков, в параметре `@working_directory`.
 
-   Для распространителя в Управляемом экземпляре Базы данных SQL укажите учетную запись хранения Azure в параметре `@working_directory` и ключ доступа к хранилищу в параметре `@storage_connection_string`. 
+   Для распространителя в Управляемом экземпляре SQL укажите учетную запись хранения Azure в параметре `@working_directory` и ключ доступа к хранилищу в параметре `@storage_connection_string`. 
 
 3. На издателе выполните процедуру [sp_replicationdboption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md). Укажите опубликованную базу данных в параметре `@dbname`, тип репликации в параметре `@optname` и значение `true` в параметре `@value`.
 
@@ -80,7 +80,7 @@ ms.locfileid: "85774007"
 
 2. В распространителе выполните процедуру [sp_adddistpublisher (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md), указав общий ресурс UNC, который будет использоваться как папка по умолчанию для моментальных снимков, в параметре `@working_directory`. Если распространитель будет использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при подключении к издателю, то нужно также указать значение `0` в параметре `@security_mode` и данные имени входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в параметрах `@login` и `@password`.
 
-   Для распространителя в Управляемом экземпляре Базы данных SQL укажите учетную запись хранения Azure в параметре `@working_directory` и ключ доступа к хранилищу в параметре `@storage_connection_string`. 
+   Для распространителя в Управляемом экземпляре SQL укажите учетную запись хранения Azure в параметре `@working_directory` и ключ доступа к хранилищу в параметре `@storage_connection_string`. 
 
 3. На издателе в базе данных master выполните процедуру [sp_adddistributor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md). Укажите надежный пароль из шага 1 в параметре `@password`. Этот пароль будет использоваться издателем при соединении с распространителем.
 

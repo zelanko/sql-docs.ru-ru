@@ -1,6 +1,6 @@
 ---
 title: Отслеживание групп доступности с помощью Transact-SQL (T-SQL)
-description: Описание мониторинг групп доступности Always On с помощью Transact-SQL (T-SQL).
+description: Используйте инструкции Transact-SQL SELECT для отслеживания групп доступности Always On, их реплик и баз данных.
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4b21deb3019a2d31c16a61f98ad9a1953ad65174
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 13c92b7783605eb501a73522d0820be9856588a6
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897375"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565580"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Отслеживание групп доступности (Transact-SQL)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

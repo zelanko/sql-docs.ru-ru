@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 6d18996610899fd348b179495ab78af2e2717f83
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 9bbc4017411c457638ac93aac147ab63b44dbcab
+ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396013"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87807507"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (предварительная версия)
 
@@ -428,9 +428,9 @@ WITH (
 ### <a name="when-will-the-copy-command-be-generally-available"></a>Когда команда COPY станет общедоступной?
 Команда COPY станет общедоступной в конце этого календарного года (2020). 
 
-### <a name="are-there-any-known-issues-with-the-copy-command"></a>Существуют ли известные проблемы с командой COPY?
+### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>Есть ли ограничения на число или размер файлов?
+Размер файлов должен быть не менее 4 МБ.
 
-- В инструкции COPY не поддерживаются большие объекты, такие как (n)varchar(max). Их поддержка будет реализована в начале следующего года.
 
 Отзывы и сообщения о проблемах направляйте на следующий адрес списка рассылки: sqldwcopypreview@service.microsoft.com
 

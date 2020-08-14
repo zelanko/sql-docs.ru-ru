@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: e06355d91e73430c203711515fb9501caebfd291
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: ea604f3144f371047c00171947c0b7ceaeaa602f
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87331996"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988389"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Параметры ALTER DATABASE SET (Transact-SQL)
 
@@ -56,10 +56,10 @@ ms.locfileid: "87331996"
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Отдельная база данных/эластичный пул Базы данных SQL<br />](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+        [База данных SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Управляемый экземпляр Базы данных SQL<br />](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+        [База данных SQL<br /> — управляемый экземпляр](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
@@ -1465,10 +1465,10 @@ SET QUERY_STORE = ON
         [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\*Отдельная база данных/<br />эластичный пул Базы данных SQL \*_** &nbsp;
+        **_\* База данных SQL \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Управляемый экземпляр Базы данных SQL<br />](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+        [База данных SQL<br /> — управляемый экземпляр](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
@@ -1477,7 +1477,7 @@ SET QUERY_STORE = ON
 
 &nbsp;
 
-## <a name="azure-sql-database-single-databaseelastic-pool"></a>Отдельная база данных или эластичный пул Базы данных SQL Azure
+## <a name="sql-database"></a>База данных SQL
 
 Уровни совместимости являются параметрами инструкции `SET`, но описаны в отдельной статье [Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
@@ -1831,7 +1831,7 @@ READ_WRITE
 Управляет пользовательским доступом к базе данных.
 
 RESTRICTED_USER     
-Позволяет подключаться к базе данных только членам предопределенной роли базы данных `db_owner` и предопределенных ролей сервера `dbcreator` и `sysadmin`. Количество соединений при этом не ограничивается. Все соединения с базой данных будут отключены на период времени, определяемый завершающим предложением инструкции ALTER DATABASE. После того как база данных перешла в состояние RESTRICTED_USER, попытки подключения пользователей, не соответствующими описанным выше условиям, будут отклонены. **RESTRICTED_USER** нельзя изменить с помощью управляемого экземпляра Базы данных SQL.
+Позволяет подключаться к базе данных только членам предопределенной роли базы данных `db_owner` и предопределенных ролей сервера `dbcreator` и `sysadmin`. Количество соединений при этом не ограничивается. Все соединения с базой данных будут отключены на период времени, определяемый завершающим предложением инструкции ALTER DATABASE. После того как база данных перешла в состояние RESTRICTED_USER, попытки подключения пользователей, не соответствующими описанным выше условиям, будут отклонены. **RESTRICTED_USER** нельзя изменить с помощью Управляемого экземпляра SQL.
 
 MULTI_USER     
 Все пользователи, имеющие соответствующие разрешения на подключение к базе данных, будут допущены к базе данных.
@@ -2357,7 +2357,7 @@ SET QUERY_STORE = ON
         [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Отдельная база данных/эластичный пул Базы данных SQL<br />](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+        [База данных SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         **_\* Управляемый экземпляр<br />Базы данных SQL \*_** &nbsp;
@@ -2369,7 +2369,7 @@ SET QUERY_STORE = ON
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Управляемый экземпляр Базы данных SQL Azure
+## <a name="azure-sql-managed-instance"></a>Управляемый экземпляр SQL Azure
 
 Уровни совместимости являются параметрами инструкции `SET`, но описаны в отдельной статье [Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
@@ -2660,7 +2660,7 @@ READ_WRITE
 Управляет пользовательским доступом к базе данных.
 
 RESTRICTED_USER     
-Позволяет подключаться к базе данных только членам предопределенной роли базы данных `db_owner` и предопределенных ролей сервера `dbcreator` и `sysadmin`. Количество соединений при этом не ограничивается. Все соединения с базой данных будут отключены на период времени, определяемый завершающим предложением инструкции ALTER DATABASE. После того как база данных перешла в состояние RESTRICTED_USER, попытки подключения пользователей, не соответствующими описанным выше условиям, будут отклонены. **RESTRICTED_USER** нельзя изменить с помощью управляемого экземпляра Базы данных SQL.
+Позволяет подключаться к базе данных только членам предопределенной роли базы данных `db_owner` и предопределенных ролей сервера `dbcreator` и `sysadmin`. Количество соединений при этом не ограничивается. Все соединения с базой данных будут отключены на период времени, определяемый завершающим предложением инструкции ALTER DATABASE. После того как база данных перешла в состояние RESTRICTED_USER, попытки подключения пользователей, не соответствующими описанным выше условиям, будут отклонены. **RESTRICTED_USER** нельзя изменить с помощью Управляемого экземпляра SQL.
 
 MULTI_USER     
 Все пользователи, имеющие соответствующие разрешения на подключение к базе данных, будут допущены к базе данных.
@@ -3151,10 +3151,10 @@ SET QUERY_STORE = ON
         [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Отдельная база данных/эластичный пул Базы данных SQL<br />](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+        [База данных SQL](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Управляемый экземпляр Базы данных SQL<br />](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+        [База данных SQL<br /> — управляемый экземпляр](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;

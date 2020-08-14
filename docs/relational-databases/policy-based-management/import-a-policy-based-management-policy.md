@@ -1,7 +1,7 @@
 ---
 title: Импорт политики управления на основе политик | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -12,42 +12,24 @@ helpviewer_keywords:
 ms.assetid: 850b7ef9-d2b7-4754-bf04-7cb419ffb776
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6a534ca6028b7e5f6eade08e5503e9ea83b98179
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 54e0ca12595b0ce8bdde128c9261918c910ffdcf
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749361"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934353"
 ---
 # <a name="import-a-policy-based-management-policy"></a>Импорт политики управления на основе политик
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   В этом разделе описывается импорт экземпляра политики управления на основе политик в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- **В этом разделе**  
+## <a name="permissions"></a>Разрешения
+ Требуется членство в роли PolicyAdministratorRole базы данных msdb.
+
   
--   **Перед началом работы**  
+##  <a name="using-sql-server-management-studio"></a>Использование среды SQL Server Management Studio  
   
-     [Ограничения](#Restrictions)  
-  
-     [Безопасность](#Security)  
-  
--   **Импорт экземпляра политики с помощью:**  
-  
-     [Среда SQL Server Management Studio](#SSMSProcedure)  
-  
-##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
-  
-###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставляется с политиками, которые можно использовать для наблюдения за экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. По умолчанию эти политики не устанавливаются в компоненте [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], однако их можно импортировать из места установки по умолчанию — C:\Program Files\Microsoft SQL Server\###\Tools\Policies\DatabaseEngine\1033 или C:\Program Files (x86)\Microsoft SQL Server\###\Tools\Policies\DatabaseEngine\1033 для 64-разрядных версий.
-  
-###  <a name="security"></a><a name="Security"></a> безопасность  
-  
-####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
- Требуется членство в роли PolicyAdministratorRole базы данных msdb.  
-  
-##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
-  
-#### <a name="to-import-a-policy-instance"></a>Импорт экземпляра политики  
+### <a name="to-import-a-policy-instance"></a>Импорт экземпляра политики  
   
 1.  В **обозревателе объектов**щелкните знак "плюс", чтобы развернуть сервер, где будет располагаться импортируемый экземпляр политики.  
   
@@ -57,7 +39,10 @@ ms.locfileid: "85749361"
   
 4.  Щелкните правой кнопкой мыши папку **Политики** и выберите команду **Импорт политики**.  
   
-5.  Введите имя и путь к файлу в диалоговом окне **Импортировать** либо найдите XML-файл, содержащий политику, при помощи кнопки (**Обзор...** ) и выберите его. Дополнительные сведения о параметрах, доступных в диалоговом окне **Импорт** , см. в разделе [Import Policies Dialog Box](../../relational-databases/policy-based-management/import-policies-dialog-box.md).  
+5.  Введите имя и путь к файлу в диалоговом окне **Импортировать** либо найдите XML-файл, содержащий политику, при помощи кнопки (**Обзор...**) и выберите его. Дополнительные сведения о параметрах, доступных в диалоговом окне **Импорт** , см. в разделе [Import Policies Dialog Box](../../relational-databases/policy-based-management/import-policies-dialog-box.md).  
   
 6.  После завершения нажмите кнопку **ОК**.  
 
+
+## <a name="example-policies"></a>Примеры политик
+ Примеры политик не включены в [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], однако доступ к ранее распространявшимся примерам политик можно получить, установив [SQL Server Management Studio 17](../../ssms/release-notes-ssms.md#previous-ssms-releases).  После установки SQL Server Management Studio 17 примеры политик можно найти в `C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Policies`. Эти политики можно импортировать и использовать в качестве основы для собственных политик управления на основе политик.

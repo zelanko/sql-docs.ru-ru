@@ -18,12 +18,12 @@ ms.assetid: f1375fd7-a2fd-48bf-922a-4f778f0deb1f
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 28e5524c0d2359f3edcbe003be366618df00217b
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7b952b51c6171bf22590403452e7b17899459de0
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112080"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87564938"
 ---
 # <a name="concat_ws-transact-sql"></a>CONCAT_WS (Transact-SQL)
 [!INCLUDE [sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]
@@ -38,16 +38,14 @@ CONCAT_WS ( separator, argument1, argument2 [, argumentN]... )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Аргументы
-separator  
-Выражение любого символьного типа (`char`, `nchar`, `nvarchar` или `varchar`).
+*separator* — выражение любого символьного типа (`char`, `nchar`, `nvarchar` или `varchar`).
 
-argument1, argument2, argument*N*  
-Выражение любого типа.
+*argument1, argument2, argumentN* — выражение любого типа. Функции `CONCAT_WS` требуется по крайней мере два аргумента и не более 254 аргументов.
 
 ## <a name="return-types"></a>Типы возвращаемых данных
 Строковое значение, длина и тип которого зависят от входных данных.
 
-## <a name="remarks"></a>Remarks   
+## <a name="remarks"></a>Комментарии   
 `CONCAT_WS` принимает переменное количество строковых аргументов и объединяет их в одну строку. Она разделяет значения в такой объединенной строке с помощью разделителя, указанного в первом аргументе функции. Для `CONCAT_WS` требуется аргумент разделителя и как минимум два других аргумента строкового значения. Иначе `CONCAT_WS` вызовет ошибку. Функция `CONCAT_WS` неявно преобразует все аргументы в строковые типы перед объединением. 
 
 Неявное преобразование в строки выполняется по существующим правилам преобразования типов данных. Дополнительные сведения о преобразовании типов данных см. в статье [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md).
@@ -125,7 +123,7 @@ STRING_AGG(CONCAT_WS( ',', database_id, ISNULL(recovery_model_desc,''), ISNULL(c
 FROM sys.databases;
 ```
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>Дополнительно
  [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md)  
  [FORMATMESSAGE (Transact-SQL)](../../t-sql/functions/formatmessage-transact-sql.md)  
  [QUOTENAME (Transact-SQL)](../../t-sql/functions/quotename-transact-sql.md)  

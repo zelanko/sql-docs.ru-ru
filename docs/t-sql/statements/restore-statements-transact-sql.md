@@ -40,12 +40,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4ba782e0a2eee78e6f308ffee0d493fbac2032ce
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 089265151307a72e2f029d016df216e077c2dd88
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113227"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864337"
 ---
 # <a name="restore-statements-transact-sql"></a>Инструкции RESTORE (Transact-SQL)
 
@@ -64,7 +64,7 @@ ms.locfileid: "87113227"
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Управляемый экземпляр Базы данных SQL<br />](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
+        [База данных SQL<br /> — управляемый экземпляр](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
@@ -739,7 +739,7 @@ RESTORE DATABASE Sales
         [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* Управляемый экземпляр Базы данных SQL<br />\*_**
+        **_\* База данных SQL<br />Управляемый экземпляр \*_**
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
@@ -748,7 +748,7 @@ RESTORE DATABASE Sales
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Управляемый экземпляр Базы данных SQL Azure
+## <a name="azure-sql-managed-instance"></a>Управляемый экземпляр SQL Azure
 
 Эта команда позволяет восстановить всю базу данных из полной резервной копии (полное восстановление) в учетной записи хранилища BLOB-объектов Azure.
 
@@ -760,7 +760,7 @@ RESTORE DATABASE Sales
 - [RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).
 
 > [!IMPORTANT]
-> Сведения о восстановлении из автоматических резервных копий управляемого экземпляра Базы данных SQL Azure: [Восстановление Базы данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups).
+> Сведения о восстановлении из автоматических резервных копий Управляемого экземпляра SQL Azure см. в статье [Восстановление базы данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -802,17 +802,17 @@ FROM URL
 - Добавляется оптимизированная для операций в памяти файловая группа с названием XTP (если она отсутствовала в исходном BAK-файле). Любые существующие оптимизированные для операций в памяти файловые группы переименовываются в XTP
 - Параметры SINGLE_USER и RESTRICTED_USER преобразуются в MULTI_USER
 
-## <a name="limitations---sql-database-managed-instance"></a>Ограничения — управляемый экземпляр Базы данных SQL
+## <a name="limitations---sql-managed-instance"></a>Ограничения — Управляемый экземпляр SQL
 
 Применяются следующие ограничения:
 
 - BAK-файлы, содержащие несколько резервных наборов данных, не могут быть восстановлены.
 - BAK-файлы, содержащие несколько файлов журнала, не могут быть восстановлены.
 - Если BAK-файл содержит данные FILESTREAM, восстановление завершится сбоем.
-- Резервные копии, которые содержат базы данных с активными объектами в памяти, невозможно восстановить в управляемый экземпляр общего назначения.
+- Резервные копии, которые содержат базы данных с активными объектами в памяти, невозможно восстановить на уровне производительности "Общего назначения".
 - На данный момент невозможно восстановление резервных копий, которые содержат базы данных, находящиеся в режиме только для чтения. В ближайшее время эти ограничения будут устранены.
 
-Дополнительные сведения см. в разделе [Управляемый экземпляр](/azure/sql-database/sql-database-managed-instance)
+Дополнительные сведения см. в статье [Управляемый экземпляр SQL Azure](/azure/sql-database/sql-database-managed-instance).
 
 ## <a name="restoring-an-encrypted-database"></a>Восстановление зашифрованной базы данных
 Чтобы восстановить зашифрованную базу данных, необходимо иметь доступ к сертификату или асимметричному ключу, который использовался для шифрования базы данных. Без сертификата или асимметричного ключа восстановить базу данных нельзя. Поэтому сертификат, используемый для шифрования ключа шифрования базы данных, должен храниться в течение всего времени, пока есть необходимость в резервной копии. Дополнительные сведения см. в статье [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).
@@ -886,7 +886,7 @@ WHERE r.command = 'RESTORE DATABASE'
         [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Управляемый экземпляр Базы данных SQL<br />](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
+        [База данных SQL<br /> — управляемый экземпляр](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Analytics<br />Platform System (PDW) \*_**

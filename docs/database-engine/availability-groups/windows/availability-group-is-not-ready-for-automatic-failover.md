@@ -1,6 +1,6 @@
 ---
 title: Группа доступности не готова для автоматического перехода на другой ресурс
-description: Определение возможных причин, по которым группа доступности Always On может быть не готова к переходу на другой ресурс.
+description: Узнайте, как определять возможные причины, по которым группа доступности Always On может быть не готова к отработке отказа.
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 28261014-342c-442a-bd89-6d04b8d4e8b7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d23e33effa5913689e4886c7a8fac6bf42cd9b7b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 79992ce77b803858c86d4bace6b9f6b128688447
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900884"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565602"
 ---
 # <a name="always-on-availability-group-is-not-ready-for-automatic-failover"></a>Группа доступности Always On не готова к автоматическому переходу на другой ресурс
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

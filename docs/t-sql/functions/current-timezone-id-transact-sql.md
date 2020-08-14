@@ -1,5 +1,5 @@
 ---
-title: CURRENT_TIMEZONE (Transact-SQL) | Документация Майкрософт
+title: CURRENT_TIMEZONE_ID (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/18/2020
 ms.prod: sql
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CURRENT_TIMEZONE_ID function [SQL Server]
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 3cadc9cd33fd1cdabb96cf450ad09253fdd435d1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: beaa58fddd6889b4ebbbce620d98277468dd67a2
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85684621"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988839"
 ---
 # <a name="current_timezone_id-transact-sql"></a>CURRENT_TIMEZONE_ID (Transact-SQL)
 
@@ -38,7 +38,7 @@ ms.locfileid: "85684621"
 Эта функция возвращает идентификатор часового пояса, отслеживаемого сервером или экземпляром. Для Управляемого экземпляра SQL Azure возвращаемое значение зависит от часового пояса, автоматически назначенного экземпляру во время его создания, а не часового пояса базовой операционной системы.
   
 > [!NOTE]  
-> Для отдельных баз данных SQL и баз данных SQL в составе пула часовой пояс всегда устанавливается в формате UTC, а `CURRENT_TIMEZONE_ID` возвращает идентификатор часового пояса UTC.
+> Для Базы данных SQL часовой пояс всегда устанавливается в формате UTC, а `CURRENT_TIMEZONE_ID` возвращает идентификатор часового пояса UTC.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -71,6 +71,6 @@ W. Europe Standard Time
   
 ## <a name="see-also"></a>См. также раздел
 
-[SQL Database Managed Instance Time Zone](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-timezone) (Часовые пояса в Управляемом экземпляре Базы данных SQL)
+[Часовой пояс в Управляемом экземпляре SQL](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-timezone)
 
 [CURRENT_TIMEZONE()](https://docs.microsoft.com/sql/t-sql/functions/current-timezone-transact-sql)

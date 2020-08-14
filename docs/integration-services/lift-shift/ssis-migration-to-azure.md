@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 81fb9b9cb792cf350137a375e7a2e25643656b6e
-ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
+ms.openlocfilehash: 7bf5aa9ee503dff3a00053365485c3ef70cc9247
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "81002855"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823268"
 ---
 # <a name="migrate-on-premises-ssis-workloads-to-ssis-in-adf"></a>Миграция локальных рабочих нагрузок служб SSIS в службы SSIS в ADF
 
@@ -36,5 +36,5 @@ ms.locfileid: "81002855"
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-- [Перенос пакетов SSIS в управляемый экземпляр Базы данных SQL Azure](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance).
+- [Перенос пакетов Integration Services в Управляемый экземпляр SQL Azure](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance).
 - [Перенос заданий SSIS в Фабрику данных Azure (ADF) с помощью SQL Server Management Studio (SSMS)](https://docs.microsoft.com/azure/data-factory/how-to-migrate-ssis-job-ssms).

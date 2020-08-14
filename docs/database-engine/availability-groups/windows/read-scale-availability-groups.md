@@ -1,6 +1,6 @@
 ---
 title: Группы доступности для чтения и масштабирования
-description: 'Описание способов достижения чтения и масштабирования при использовании групп доступности Always On. '
+description: Узнайте, как обеспечить масштабирование для чтения при использовании групп доступности Always On и как использовать распределенные группы доступности для географического масштабирования для чтения.
 ms.custom: seodec18
 ms.date: 10/24/2017
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 28d9540c331ac5a250acc24abbd173f7ddf87e5f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 540f02a2b58fff4c2800dfcf16908d53935ed82c
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882575"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565576"
 ---
 # <a name="use-read-scale-with-always-on-availability-groups"></a>Группы доступности Always On для чтения и масштабирования
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

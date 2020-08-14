@@ -46,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: be5b8f28ec06b48f0f35d8d246ad12ccbc3c8292
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 7c57cfe67bc8407cd02f970ebcf9ddbc92187071
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86482165"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863183"
 ---
 # <a name="create-table-transact-sql"></a>Инструкция CREATE TABLE (Transact-SQL)
 
@@ -793,7 +793,7 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED } **Применимо к**: [!I
 
 - Укажите `PAUSED` для приостановки миграции данных. Дополнительные сведения см. в разделе [Приостановка и возобновление переноса данных (Stretch Database)](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).
 
-MEMORY_OPTIMIZED **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]). Управляемый экземпляр [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] не поддерживает оптимизированные для памяти таблицы.
+MEMORY_OPTIMIZED **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]). Управляемый экземпляр SQL Azure не поддерживает оптимизированные для памяти таблицы.
 
 Значение ON указывает, что таблица оптимизирована для памяти. Таблицы, оптимизированные для памяти, входят в функцию выполняющейся в памяти OLTP, которая используется для оптимизации производительности обработки транзакций. Чтобы приступить к работе с OLTP в памяти, см. статью [Краткое руководство 1. Технологии выполнения OLTP в памяти для повышения производительности службы Transact-SQL](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). Дополнительные сведения об оптимизированных для памяти таблицах см. в разделе [Таблицы, оптимизированные для памяти](../../relational-databases/in-memory-oltp/memory-optimized-tables.md).
 

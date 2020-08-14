@@ -24,12 +24,12 @@ ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 4690f82c1ae731a25edce6dbe0b36d7b31d448f2
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 0f87466ebfccaaf69b970386865af68275e83e10
+ms.sourcegitcommit: 95be98587f6a3730ca75a77676dd952c45e4f53a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392832"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88046669"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 
@@ -89,7 +89,7 @@ FOR CRYPTOGRAPHIC PROVIDER *cryptographic_provider_name*. Указывает и�
 
 ## <a name="examples"></a>Примеры
 
-### <a name="a-basic-example"></a>A. Базовый пример
+### <a name="a-creating-a-credential-for-windows-identity"></a>A. Создание учетных данных для удостоверения Windows
 
 Следующий пример создает учетные данные с именем `AlterEgo`. В эти учетные данные входят имя пользователя Windows `Mary5` и пароль.
 
@@ -145,7 +145,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 
 ### <a name="d-creating-a-credential-using-a-sas-token"></a>Г. Создание учетных данных с помощью токена SAS
 
-**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]по [текущую версию](https://go.microsoft.com/fwlink/p/?LinkId=299658) и в управляемых экземплярах базы данных SQL Azure.
+**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] по [текущую версию](https://go.microsoft.com/fwlink/p/?LinkId=299658) и в Управляемом экземпляре SQL Azure.
 
 В приведенном ниже примере создаются учетные данные с подписанным URL-адресом с использованием токена SAS. См. дополнительные сведения о создании хранимой политики доступа и подписанного URL-адреса в контейнере Azure с последующим созданием учетных данных с помощью подписанного URL-адреса в [руководстве по использованию службы хранилища больших двоичных объектов Microsoft Azure с базами данных SQL Server 2016](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).
 
@@ -159,6 +159,15 @@ USE master
 CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] -- this name must match the container path, start with https and must not contain a trailing forward slash.
     WITH IDENTITY='SHARED ACCESS SIGNATURE' -- this is a mandatory string and do not change it.
     , SECRET = 'sharedaccesssignature' -- this is the shared access signature token
+GO
+```
+
+### <a name="e-creating-a-credential-for-managed-identity"></a>Д. Создание учетных данных для управляемого удостоверения
+
+В приведенном ниже примере создаются учетные данные, представляющие управляемое удостоверение службы SQL Azure или Azure Synapse. В этом случае пароль и секрет не применяются.
+
+```sql
+CREATE CREDENTIAL ServiceIdentity WITH IDENTITY = 'Managed Identity';
 GO
 ```
 

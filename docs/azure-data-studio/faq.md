@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 123618a84b07aa2215a2666f9d427f669247c5d7
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: f7da670d93de95d06fb7a602332011f9218cdc2b
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411100"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87861975"
 ---
 # <a name="azure-data-studio-faq"></a>Вопросы и ответы по Azure Data Studio
 
@@ -80,14 +80,14 @@ Azure Data Studio предлагает оптимизированную сред
 
 |Компонент|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Вход в Azure|да|да|
+|Вход в Azure|Да|Да|
 |Панель мониторинга|Да| |
 |Модули|Да| |
 |Встроенный терминал|Да||
-|Обозреватель объектов|да|да|
-|Скрипты объектов|да|да|
+|Обозреватель объектов|Да|Да|
+|Скрипты объектов|Да|Да|
 |Система проектов|Да||
-|Выбор из таблицы|да|да|
+|Выбор из таблицы|Да|Да|
 |Управление исходным кодом|Да||
 |Панель задач|Да||
 |Темы|Да||
@@ -104,8 +104,8 @@ Azure Data Studio предлагает оптимизированную сред
 |:---|:---|:---|
 |Средство просмотра диаграмм|Да||
 |Экспорт результатов в CSV-, JSON-, XLSX-файлы|Да||
-|технология IntelliSense|да|да|
-|Фрагменты кода|да|да|
+|технология IntelliSense|Да|Да|
+|Фрагменты кода|Да|Да|
 |Показ плана|Preview (Предварительный просмотр)|Да|
 |Статистика клиента||Да|
 |Статистика активных запросов||Да|
@@ -120,7 +120,7 @@ Azure Data Studio предлагает оптимизированную сред
 
 |Компонент|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Windows|да|да|
+|Windows|Да|Да|
 |macOS|Да||
 |Linux|Да||
 
@@ -136,7 +136,7 @@ Azure Data Studio предлагает оптимизированную сред
 
 |Компонент|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|Резервное копирование и восстановление|да|да|
+|Резервное копирование и восстановление|Да|Да|
 |Импорт неструктурированных файлов|Preview (Предварительный просмотр)|Да|
 |Агент SQL|Preview (Предварительный просмотр)|Да|
 |SQL Profiler|Preview (Предварительный просмотр)|Да|
@@ -183,7 +183,7 @@ API управляющих объектов SQL Server на данный мом
 
 ## <a name="does-azure-data-studio-integrate-with-azure-sql-data-warehouse"></a>Интегрируется ли Azure Data Studio с хранилищем данных SQL Azure?
 
-Да. Поддержка хранилища данных SQL Azure в Azure Data Studio на данный момент реализована в виде предварительной версии, так же как и управляемый экземпляр базы данных SQL Azure и большие данные SQL Server 2019.
+Да. Поддержка хранилища данных SQL Azure в Azure Data Studio в настоящее время реализована в виде предварительной версии, так же как для Управляемого экземпляра SQL Azure и больших данных SQL Server 2019.
 
 ## <a name="why-is-azure-data-studio-important-for-the-new-version-of-sql-server"></a>Почему важно использовать Azure Data Studio для работы с новой версией SQL Server?
 

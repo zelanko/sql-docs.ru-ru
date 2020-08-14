@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c89ff705077782d0cf8287f0d1bc010ce609cc72
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 29cef6bf700c6d837c77f02e16debe50e1f1a267
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472480"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823486"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools"></a>Средства DevOps для служб SQL Server Integration Services (SSIS)
 
@@ -95,7 +95,7 @@ cat log.txt
 
 #### <a name="destination-server"></a>Целевой сервер
 
-Имя целевого сервера SQL. Это может быть имя локального сервера SQL Server, Базы данных SQL Azure или управляемого экземпляра Базы данных SQL Azure. Это свойство является видимым, только если выбран тип назначения SSISDB.
+Имя целевого сервера SQL. Это может быть имя локального сервера SQL Server, базы данных SQL Azure или Управляемого экземпляра SQL Azure. Это свойство является видимым, только если выбран тип назначения SSISDB.
 
 #### <a name="destination-path"></a>Конечный путь
 
@@ -184,7 +184,7 @@ cat log.txt
 
 #### <a name="target-server"></a>Целевой сервер
 
-Имя целевого сервера SQL Server. Это может быть имя локального сервера SQL Server, Базы данных SQL Azure или управляемого экземпляра Базы данных SQL Azure.
+Имя целевого сервера SQL Server. Это может быть имя локального сервера SQL Server, базы данных SQL Azure или Управляемого экземпляра SQL Azure.
 
 #### <a name="authentication-type"></a>Authentication type (Тип проверки подлинности)
 

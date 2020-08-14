@@ -2,7 +2,7 @@
 title: Встраивание скалярных пользовательских функций в Microsoft SQL Server | Документация Майкрософт
 description: Функция встраивания скалярных пользовательских функций для повышения производительности запросов, вызывающих скалярные пользовательские функции, в SQL Server (2019 и более поздних версиях).
 ms.custom: ''
-ms.date: 06/23/2020
+ms.date: 08/04/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: b1a8d91cc9da7cb0707211464e53b2cccaf0a111
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: 0d9a618e8170d08250c15c75e83d5d2dbc627447
+ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435580"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87790307"
 ---
 # <a name="scalar-udf-inlining"></a>Встраивание скалярных пользовательских функций
 
@@ -164,6 +164,9 @@ SELECT C_NAME, dbo.customer_category(C_CUSTKEY) FROM CUSTOMER;
 - Определяемая пользователем функция не может содержать несколько инструкций RETURN <sup>6</sup>.
 - Определяемая пользователем функция не может вызываться из инструкции RETURN <sup>6</sup>.
 - Определяемая пользователем функция не ссылается на функцию `STRING_AGG` <sup>6</sup>. 
+- Определяемая пользователем функция не ссылается на удаленные таблицы <sup>7</sup>.
+- В запросе, вызывающем определяемую пользователем функцию, не используется `GROUPING SETS`, `CUBE` или `ROLLUP` <sup>7</sup>.
+- В запросе, вызывающем определяемую пользователем функцию, не содержится переменная, используемая в качестве назначаемого параметра определяемой пользователем функции (например, `SELECT @y = 2`, `@x = UDF(@y)`)<sup>7</sup>.
 
 <sup>1</sup> Встраивание инструкций `SELECT` с накоплением или агрегированием переменных (например, `SELECT @val += col1 FROM table1`) не поддерживается.
 
@@ -176,6 +179,8 @@ SELECT C_NAME, dbo.customer_category(C_CUSTKEY) FROM CUSTOMER;
 <sup>5</sup> Ограничение добавлено в накопительный пакет обновления 4 для [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]
 
 <sup>6</sup> Ограничение добавлено в накопительный пакет обновления 5 для [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]
+
+<sup>7</sup> Ограничение добавлено в накопительном пакете обновления 6 для [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]
 
 > [!NOTE]
 > Сведения о последних исправлениях и изменениях встраивания скалярных пользовательских функций T-SQL см. в статье базы знаний [Устранение проблем встраивания скалярных пользовательских функций в SQL Server 2019](https://support.microsoft.com/help/4538581).

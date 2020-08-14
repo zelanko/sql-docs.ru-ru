@@ -1,6 +1,6 @@
 ---
 title: SQL Server Service Broker | Документы Майкрософт
-description: Ознакомьтесь с Service Broker. Узнайте, каким образом этот компонент предоставляет встроенную поддержку для обмена сообщениями в ядре СУБД SQL Server и Управляемом экземпляре Базы данных SQL Azure.
+description: Ознакомьтесь с Service Broker. Узнайте, каким образом этот компонент предоставляет встроенную поддержку для обмена сообщениями в ядре СУБД SQL Server и Управляемом экземпляре SQL Azure.
 ms.custom: ''
 ms.date: 09/07/2018
 ms.prod: sql
@@ -24,17 +24,17 @@ ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3e915b46eb89c29d260dc66ad7b73bc0cbc73ebc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2841f36d3f9e4498763f6b0862e2fa0cfaa2e4a9
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764045"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863412"
 ---
 # <a name="service-broker"></a>Компонент Service Broker
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] предоставляют встроенную поддержку для обмена сообщениями и очередей в [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и [управляемом экземпляре Базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index). Это облегчает разработчикам создание сложных, надежных распределенных приложений, использующих компоненты [!INCLUDE[ssDE](../../includes/ssde-md.md)] для связи между разнородными базами данных.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] предоставляют встроенную поддержку для обмена сообщениями и очередей в [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и [Управляемом экземпляре SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index). Это облегчает разработчикам создание сложных, надежных распределенных приложений, использующих компоненты [!INCLUDE[ssDE](../../includes/ssde-md.md)] для связи между разнородными базами данных.  
   
 ## <a name="when-to-use-service-broker"></a>Когда следует использовать компонент Service Broker
 
@@ -103,7 +103,7 @@ FROM ExpenseQueue;
 ## <a name="whats-new-in-service-broker"></a>Новые возможности (компонент Service Broker)  
  В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]не были внесены значимые изменения.  В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]появились следующие изменения.  
 
-### <a name="service-broker-and-azure-sql-database-managed-instance"></a>Service Broker и Управляемый экземпляр Базы данных SQL Azure
+### <a name="service-broker-and-azure-sql-managed-instance"></a>Service Broker и Управляемый экземпляр SQL Azure
 
 - Service Broker не поддерживается в нескольких экземплярах. 
  - `sys.routes` — предварительные требование: выберите адрес из sys.routes. Адрес должен иметь значение LOCAL для каждого маршрута. См. статью о [sys.routes](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md).

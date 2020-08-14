@@ -23,12 +23,12 @@ ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0505a5e6c715558b34d2f1a86e88a0b7b938e7d2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 52a669c7a624b2bb88b9f392cf4ecc71be7d681a
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781709"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823990"
 ---
 # <a name="export-a-data-tier-application"></a>Экспорт приложения уровня данных
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "85781709"
 ###  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для экспорта приложения уровня данных необходимы по крайней мере разрешения ALTER ANY LOGIN и VIEW DEFINITION на уровне базы данных, а также разрешение SELECT на представление каталога **sys.sql_expression_dependencies**. Экспорт приложения уровня данных может выполняться членами предопределенной роли сервера securityadmin, которые также входят в предопределенную роль базы данных database_owner для базы данных, из которой экспортируется приложение уровня данных. Экспортировать приложение уровня данных могут также члены предопределенной роли сервера sysadmin или встроенной роли системного администратора SQL Server с названием **sa** .
  
-В службе "База данных SQL Azure" **каждой базе данных** необходимо предоставить привилегии VIEW DEFINITION и SELECT во всех или отдельных таблицах.
+В службе "База данных SQL Azure" **каждой базе данных** необходимо предоставить разрешения VIEW DEFINITION и SELECT во всех или отдельных таблицах.
 
   
 ##  <a name="using-the-export-data-tier-application-wizard"></a><a name="UsingDeployDACWizard"></a> Использование мастера экспорта приложения уровня данных  

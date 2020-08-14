@@ -12,12 +12,12 @@ ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db339d9063378b29f6902f7e52e3006ac57295b7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 60acfdfb738542c39c5974691811c482e36b9f9e
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85776073"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87863354"
 ---
 # <a name="altering-memory-optimized-tables"></a>Изменение таблиц с оптимизацией для памяти
 
@@ -26,7 +26,7 @@ ms.locfileid: "85776073"
 Изменения схемы и индекса в таблицах, оптимизированных для памяти, можно выполнить с помощью инструкции ALTER TABLE. В SQL Server 2016 и базе данных SQL Azure операции ALTER TABLE с таблицами, оптимизированными для памяти, являются автономными, то есть во время выполнения такой операции таблица недоступна для запросов. Приложение базы данных может продолжать работу, и любая операция, которая обращается к таблице, будет блокироваться до завершения процесса изменения. В одной инструкции ALTER TABLE можно сочетать несколько операций ADD, DROP или ALTER.
 
 > [!IMPORTANT]
-> Управляемый экземпляр Базы данных SQL не поддерживает оптимизированные для памяти таблицы на уровне обслуживания "Общего назначения".
+> Управляемый экземпляр SQL Azure не поддерживает оптимизированные для памяти таблицы на уровне обслуживания "Общего назначения".
   
 ## <a name="alter-table"></a>ALTER TABLE  
 

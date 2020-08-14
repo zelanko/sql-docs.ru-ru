@@ -15,12 +15,12 @@ ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e664b1d96683d33ea9ffdc7cf38a5de0fe72a84e
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 3322ef185178ab2254066281d9f6f6a6c85611da
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111058"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87862994"
 ---
 # <a name="distribution-agent-security"></a>Безопасность агента распространителя
 ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions" 
@@ -161,7 +161,7 @@ Persist Security Info=False;Connection Pooling=True;
  Большая часть параметров в строке зависят от настраиваемого сервера DB2, но параметр **Обрабатывать двоичное значение как символ** всегда должен иметь значение **False**. Параметр **Исходный каталог** должен иметь значение для идентификации базы данных подписки. Дополнительные сведения см. в статье [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Репликация транзакций с базой данных SQL Microsoft Azure](/azure/sql-database/sql-database-managed-instance-transactional-replication) [Настройка репликации для управляемого экземпляра](/azure/sql-database/replication-with-sql-database-managed-instance)
+ [Репликация транзакций с базой данных SQL Azure](/azure/sql-database/sql-database-managed-instance-transactional-replication) [Настройка репликации для Управляемого экземпляра SQL Azure](/azure/sql-database/replication-with-sql-database-managed-instance)
 ::: moniker-end
 
 

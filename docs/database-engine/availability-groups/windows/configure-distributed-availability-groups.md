@@ -1,6 +1,6 @@
 ---
 title: Настройка распределенной группы доступности
-description: 'В этом разделе описаны создание и настройка распределенной группы доступности Always On. '
+description: Узнайте, как настроить распределенную группу доступности с помощью примера Transact-SQL. Также узнайте, где можно найти сведения о распределенных группах доступности.
 ms.custom: seodec18
 ms.date: 01/28/2020
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d5bd6d960b30d6c6b261de96ba93ae558e71e866
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 629aceee12a89498d763fde2d3510f69e0cde452
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896129"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565291"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>Настройка распределенной группы доступности Always On  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "85896129"
 
 Технические сведения о распределенных группах доступности см. в статье [Распределенные группы доступности](distributed-availability-groups.md).
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Обязательные условия
 
 ### <a name="set-the-endpoint-listeners-to-listen-to-all-ip-addresses"></a>Настройка прослушивателей конечных точек на прослушивание всех IP-адресов
 

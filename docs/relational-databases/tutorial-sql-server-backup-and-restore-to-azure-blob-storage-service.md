@@ -11,24 +11,24 @@ ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59968cad65f3a80c2d511dad3dc804d151d33095
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 332fde643d285b20c0bd772918f8c9cf1bf578f2
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458046"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864961"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>Краткое руководство. Резервное копирование и восстановление SQL с помощью службы хранилища BLOB-объектов Azure
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 С помощью этого краткого руководства вы научитесь создавать и восстанавливать резервные копии, используя службу хранилища BLOB-объектов Azure.  В этой статье описывается создание контейнера больших двоичных объектов Azure, запись резервной копии в службу BLOB-объектов и выполнение восстановления.
   
 ## <a name="prerequisites"></a>Предварительные требования  
-Чтобы выполнить задания этого руководства, необходимо владеть основными понятиями резервного копирования и восстановления [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и синтаксисом T-SQL.  Вам потребуется учетная запись хранения Azure, среда SQL Server Management Studio (SSMS), доступ к серверу SQL Server или управляемому экземпляру Базы данных SQL Azure. Кроме того, учетная запись, используемая для выдачи команд резервного копирования и восстановления, должна находиться в роли базы данных **db_backupoperator** с разрешениями **изменение любых учетных данных**. 
+Чтобы выполнить задания этого руководства, необходимо владеть основными понятиями резервного копирования и восстановления [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и синтаксисом T-SQL.  Вам потребуется учетная запись хранения Azure, среда SQL Server Management Studio (SSMS) и доступ к серверу SQL Server или Управляемому экземпляру SQL Azure. Кроме того, учетная запись, используемая для выдачи команд резервного копирования и восстановления, должна находиться в роли базы данных **db_backupoperator** с разрешениями **изменение любых учетных данных**. 
 
 - Получите бесплатную [учетную запись Azure](https://azure.microsoft.com/offers/ms-azr-0044p/).
 - Создайте [учетную запись хранения Azure](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal).
 - Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
-- Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) или разверните [управляемый экземпляр](/azure/sql-database/sql-database-managed-instance-get-started) с подключением, установленным через [виртуальную машину SQL Azure](/azure/sql-database/sql-database-managed-instance-configure-vm) или с помощью соединения [точка — сеть](/azure/sql-database/sql-database-managed-instance-configure-p2s).
+- Установите выпуск [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) или разверните [Управляемый экземпляр SQL Azure](/azure/sql-database/sql-database-managed-instance-get-started) с подключением, установленным через [виртуальную машину SQL Azure](/azure/sql-database/sql-database-managed-instance-configure-vm) или с помощью соединения [точка — сеть](/azure/sql-database/sql-database-managed-instance-configure-p2s).
 - Назначьте учетной записи пользователя роль [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) и предоставьте разрешения на [изменение любых учетных данных](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql). 
 
 ## <a name="create-azure-blob-container"></a>Создание контейнера больших двоичных объектов Azure
@@ -53,7 +53,7 @@ ms.locfileid: "86458046"
 
 1. Запустите среду [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) и подключитесь к своему экземпляру SQL Server.
 1. Откройте окно **Новый запрос**. 
-1. Выполните следующий код Transact-SQL (T-SQL) для создания тестовой базы данных. Обновите узел **Базы данных** в **обозревателе объектов** для отображения новой базы данных. Для созданных баз данных в управляемом экземпляре Базы данных SQL Azure автоматически включается TDE. Чтобы продолжить, вам необходимо отключить его. 
+1. Выполните следующий код Transact-SQL (T-SQL) для создания тестовой базы данных. Обновите узел **Базы данных** в **обозревателе объектов** для отображения новой базы данных. Для созданных баз данных в Управляемом экземпляре SQL автоматически включается TDE. Чтобы продолжить, вам необходимо отключить его. 
 
 ```sql
 USE [master]
@@ -87,7 +87,7 @@ GO
 SELECT * FROM SQLTest
 GO
 
--- Disable TDE for newly-created databases on a managed instance 
+-- Disable TDE for newly-created databases on SQL Managed Instance 
 USE [SQLTestDB];
 GO
 ALTER DATABASE [SQLTestDB] SET ENCRYPTION OFF;

@@ -26,12 +26,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b0236522bbdbf174338f9a711e5d636c4c297d66
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 0c45877355d5cb47b8c9ba4ee86784c17d30a816
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87331969"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988290"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -50,10 +50,10 @@ ms.locfileid: "87331969"
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Отдельная база данных/эластичный пул Базы данных SQL<br />](alter-database-transact-sql.md?view=azuresqldb-current)
+        [База данных SQL](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Управляемый экземпляр Базы данных SQL<br />](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+        [База данных SQL<br /> — управляемый экземпляр](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
@@ -290,10 +290,10 @@ GO
         [SQL Server](alter-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\*Отдельная база данных/<br />эластичный пул Базы данных SQL \*_** &nbsp;
+        **_\* База данных SQL \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Управляемый экземпляр Базы данных SQL<br />](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+        [База данных SQL<br /> — управляемый экземпляр](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
@@ -305,9 +305,9 @@ GO
 
 &nbsp;
 
-## <a name="overview-azure-sql-database-single-databaseelastic-pool"></a>Общие сведения. Отдельная база данных или эластичный пул Базы данных SQL Azure
+## <a name="overview-sql-database"></a>Общие сведения. База данных SQL
 
-В Базе данных SQL Azure эта инструкция предназначена для изменения базы данных на отдельной базе данных или эластичном пуле. Используйте эту инструкцию, чтобы изменить имя базы данных, изменить выпуск и цель обслуживания базы данных, присоединить или удалить базы данных из эластичного пула, настроить параметры базы данных, добавить или удалить дополнительные базы данных для георепликации или настроить уровень совместимости базы данных.
+В базе данных SQL Azure эта инструкция предназначена для изменения базы данных. Используйте эту инструкцию, чтобы изменить имя базы данных, изменить выпуск и цель обслуживания базы данных, присоединить или удалить базы данных из эластичного пула, настроить параметры базы данных, добавить или удалить дополнительные базы данных для георепликации или настроить уровень совместимости базы данных.
 
 Так как синтаксис ALTER DATABASE имеет значительную длину, мы разделили его описание на несколько статей.
 
@@ -741,7 +741,7 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJ
         [SQL Server](alter-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Отдельная база данных/эластичный пул Базы данных SQL<br />](alter-database-transact-sql.md?view=azuresqldb-current)
+        [База данных SQL](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         **_\* Управляемый экземпляр<br />Базы данных SQL \*_** &nbsp;
@@ -758,9 +758,9 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJ
 
 &nbsp;
 
-## <a name="overview-azure-sql-database-managed-instance"></a>Общие сведения. Управляемый экземпляр Базы данных SQL Azure
+## <a name="overview-azure-sql-managed-instance"></a>Общие сведения. Управляемый экземпляр SQL Azure
 
-В управляемом экземпляре Базы данных SQL Azure эта инструкция используется для настройки параметров базы данных.
+В Управляемом экземпляре SQL Azure эта инструкция используется для настройки параметров базы данных.
 
 Так как синтаксис ALTER DATABASE имеет значительную длину, мы разделили его описание на несколько статей.
 
@@ -877,10 +877,10 @@ ALTER DATABASE WideWorldImporters
         [SQL Server](alter-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Отдельная база данных/эластичный пул Базы данных SQL<br />](alter-database-transact-sql.md?view=azuresqldb-current)
+        [База данных SQL](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Управляемый экземпляр Базы данных SQL<br />](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+        [База данных SQL<br /> — управляемый экземпляр](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;
@@ -1014,10 +1014,10 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
         [SQL Server](alter-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Отдельная база данных/эластичный пул Базы данных SQL<br />](alter-database-transact-sql.md?view=azuresqldb-current)
+        [База данных SQL](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [Управляемый экземпляр Базы данных SQL<br />](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+        [База данных SQL<br /> — управляемый экземпляр](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: afe2679e29f92d4b222067b6ab3b5220078744e1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dbd46a6a2de2e46841eb8cc7b40542d8073e82c6
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763955"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988639"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Устранение неполадок при соединении с ядром СУБД SQL Server.
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "85763955"
 
 - В этой статье отсутствуют сведения об ошибках SSPI. Сведения об ошибках SSPI см. в разделе [How to troubleshoot the "Cannot generate SSPI context" error message](https://support.microsoft.com/kb/811889)(Исправление ошибки "Не удается создать контекст SSPI").
 - В этой статье отсутствуют сведения об ошибках Kerberos. Справочные сведения см. в разделе [Диспетчер конфигурации Microsoft Kerberos для SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).
-- В этой статье отсутствуют сведения о подключения к SQL Azure. Справочные сведения см. в разделе [Устранение неполадок подключения с базой данных SQL Microsoft Azure](/azure/sql-database/troubleshoot-connectivity-issues-microsoft-azure-sql-database).
+- В этой статье отсутствуют сведения о подключении к базе данных SQL Azure. Справочные сведения см. в разделе [Устранение неполадок подключения с базой данных SQL Microsoft Azure](/azure/sql-database/troubleshoot-connectivity-issues-microsoft-azure-sql-database).
 
 ## <a name="get-instance-name-from-configuration-manger"></a>Получение имени экземпляра из диспетчера конфигурации
 

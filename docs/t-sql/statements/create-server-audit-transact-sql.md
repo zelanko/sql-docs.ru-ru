@@ -22,12 +22,12 @@ ms.assetid: 1c321680-562e-41f1-8eb1-e7fa5ae45cc5
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: d16fcf886e074fb71a148a7f36741c1c7f0a3f74
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 7147c54dc8641697baf7ee519950ec959bf09b19
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392942"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87822661"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
 
@@ -80,7 +80,7 @@ CREATE SERVER AUDIT audit_name
  TO { FILE \| APPLICATION_LOG \| SECURITY_LOG \| URL \| EXTERNAL_MONITOR } Определяет расположение целевого объекта аудита. Возможными параметрами являются двоичный файл, журнал приложений Windows или журнал безопасности Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не может выполнить запись в журнал безопасности Windows без настройки дополнительных параметров Windows. Дополнительные сведения см. в статье [Запись событий подсистемы аудита SQL Server в журнал безопасности](../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md).  
 
 > [!IMPORTANT]
-> В управляемом экземпляре Базы данных SQL Azure компонент аудита SQL выполняется на уровне сервера. Возможны только расположения `URL` или `EXTERNAL_MONITOR`.
+> В Управляемом экземпляре SQL Azure компонент аудита SQL выполняется на уровне сервера. Возможны только расположения `URL` или `EXTERNAL_MONITOR`.
   
  FILEPATH ='*os_file_path*'  
  Путь к журналу аудита. Имя файла формируется на основе имени аудита и его идентификатора GUID.  

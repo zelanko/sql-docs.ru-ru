@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: e6b38724e2cb8fde7fe38a544c3f87fba3cebd45
-ms.sourcegitcommit: 48d60fe6b6991303a88936fb32322c005dfca2d8
+ms.openlocfilehash: 8a415678b777ba6142bab01bced7d7da908b2204
+ms.sourcegitcommit: 68c1dbc465898e20ec95f98cc2f14a8c9cd166a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85352421"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88051113"
 ---
 # <a name="machine-learning-extension-preview-for-azure-data-studio"></a>Расширение "Машинное обучение" (предварительная версия) для Azure Data Studio
 
@@ -23,13 +23,30 @@ ms.locfileid: "85352421"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-На компьютере, на котором выполняется Azure Data Studio, должны быть установлены следующие необходимые компоненты.
+На компьютере, на котором выполняется Azure Data Studio, должны быть установлены перечисленные ниже необходимые компоненты.
 
 - [Python 3](https://www.python.org/downloads/). После установки Python необходимо указать локальный путь к папке установки Python в разделе [Параметры расширения](#settings). Если вы использовали [записную книжку ядра Python](notebooks-tutorial-python-kernel.md) в Azure Data Studio, то расширение по умолчанию будет использовать путь из этой записной книжки.
 
 - [Драйвер Microsoft ODBC 17 для SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) для Windows, macOS или Linux.
 
 - [R 3.5](https://www.r-project.org/) (необязательно). Версии, отличные от 3.5, в настоящее время не поддерживаются. После установки R 3.5 необходимо включить R и указать локальный путь к папке установки R в разделе [Параметры расширения](#settings). Это требуется только в том случае, если вы хотите управлять пакетами R в своей базе данных.
+
+### <a name="trouble-installing-python-3-from-within-ads"></a>Проблемы при установке Python 3 из ADS?
+Если вы пытаетесь установить Python 3, но получаете сообщение об ошибке, связанной с TLS/SSL, добавьте два следующих дополнительных компонента:
+
+_Пример сообщения об ошибке:_
+```
+$: ~/0.0.1/bin/python3 -m pip install --user "jupyter>=1.0.0" --extra-index-url https://prose-python-packages.azurewebsites.net
+WARNING: pip is configured with locations that require TLS/SSL, however the ssl module in Python is not available.
+Looking in indexes: https://pypi.org/simple, https://prose-python-packages.azurewebsites.net
+Requirement already satisfied: jupyter
+```
+
+_Компоненты для установки:_
+
+- [Homebrew](https://brew.sh) (необязательно). Установите Homebrew, а затем выполните команду `brew update` из командной строки.
+
+- *openssl* (необязательно). Затем выполните команду `brew install openssl`.
 
 ## <a name="install-the-extension"></a>Установка расширения
 

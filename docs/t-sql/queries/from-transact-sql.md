@@ -34,12 +34,12 @@ ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e958aaf757ecc9e28c090d50a13ead57b2de90bb
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 4aa3383d88121c1b9fce53c48c24ebfd3ebb73ff
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397083"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87931972"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>Предложение FROM и JOIN, APPLY, PIVOT (Transact-SQL)
 
@@ -228,7 +228,7 @@ FROM { <table_source> [ ,...n ] }
  *derived_table*  
  Это вложенный запрос, который извлекает строки из базы данных. *derived_table* используется в качестве входных данных для внешнего запроса.  
   
- Чтобы указать несколько строк в параметре *derived* *_table*, можно воспользоваться конструктором табличных значений [!INCLUDE[tsql](../../includes/tsql-md.md)]. Например, `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`. Дополнительные сведения см. в разделе [Конструктор табличных значений (Transact-SQL)](../../t-sql/queries/table-value-constructor-transact-sql.md).  
+ Чтобы указать несколько строк в параметре *derived_table*, можно воспользоваться конструктором табличных значений [!INCLUDE[tsql](../../includes/tsql-md.md)]. Например, `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`. Дополнительные сведения см. в разделе [Конструктор табличных значений (Transact-SQL)](../../t-sql/queries/table-value-constructor-transact-sql.md).  
   
  *column_alias*  
  Дополнительный псевдоним для замены имени столбца в результирующем наборе производной таблицы. Для каждого столбца в списке выбора следует включить по одному псевдониму столбца и заключить весь список псевдонимов столбцов в скобки.  
