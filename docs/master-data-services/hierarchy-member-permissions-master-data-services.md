@@ -1,4 +1,5 @@
 ---
+description: Разрешения на элементы иерархии (службы Master Data Services)
 title: Разрешения на элементы иерархии
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 39470b09370db89cdba3e8c8f26e8b08376c1c07
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 3911b44ee31c0bb4cd4e8b829bf3d8e2c70e9913
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813340"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88344100"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>Разрешения на элементы иерархии (службы Master Data Services)
 
@@ -41,8 +42,8 @@ ms.locfileid: "85813340"
 |----------------|-----------------|  
 |**Чтение**|Элементы отображаются.<br /><br /> <br /><br /> Примечание. При назначении только разрешения **Чтение** уровню **Корневой**элементы на более низких уровнях, чем **Корневой** , будут доступны только для чтения. Однако в явных иерархиях и коллекциях пользователь может перемещать элементы на уровень **Корневой** и добавлять новые элементы к уровню **Корневой**.|  
 |**Создание**|Разрешение "Создание" недоступно в разрешении элемента иерархии.|  
-|**Update**|Элементы отображаются, и пользователь может их изменять. Пользователь также может перемещать элементы в явных иерархиях или коллекциях, к которым принадлежат элементы.|  
-|**Удалить**|Элементы отображаются, и пользователь может их удалять.|  
+|**Обновление**|Элементы отображаются, и пользователь может их изменять. Пользователь также может перемещать элементы в явных иерархиях или коллекциях, к которым принадлежат элементы.|  
+|**Удаление**|Элементы отображаются, и пользователь может их удалять.|  
 |**Запретить**|Элементы не отображаются.|  
   
  Назначенные на вкладке **Элементы иерархии** разрешения вступают в силу не сразу. Частота применения разрешений зависит от параметра **Интервал обработки безопасности элементов** в таблице "Системные параметры" в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Применить разрешения для элементов можно немедленно, выполнив шаги, описанные в разделе [Срочное применение разрешения для элемента (службы Master Data Services)](../master-data-services/immediately-apply-member-permissions-master-data-services.md).  
@@ -65,7 +66,7 @@ ms.locfileid: "85813340"
 ## <a name="external-resources"></a>Внешние ресурсы  
  Запись блога [Security Improvements](https://go.microsoft.com/fwlink/p/?LinkId=615376)(Улучшения безопасности) на портале msdn.com.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Назначение разрешений элемента иерархии &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
  [Как определяются разрешения &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
  [Master Data Services &#40;членов&#41;](../master-data-services/members-master-data-services.md)   

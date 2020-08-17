@@ -1,4 +1,5 @@
 ---
+description: Отчет об оценке (OracleToSQL)
 title: Отчет об оценке (OracleToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 168b7465-a6d6-4329-b46e-fc6c5a3f2d9d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: c0861f8f05f4cc386a21a1b7ac867e124a71df81
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 955c87838f92f15f22e937829f95a34ad8cccdad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935003"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320600"
 ---
 # <a name="assessment-report-oracletosql"></a>Отчет об оценке (OracleToSQL)
 В окне «Оценка отчета» отображаются результаты преобразования объектов базы данных к [!INCLUDE[tsql](../../includes/tsql-md.md)] синтаксису, которые также могут помочь оценить сложность и стоимость проектов миграции.  

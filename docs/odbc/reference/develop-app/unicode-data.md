@@ -1,4 +1,5 @@
 ---
+description: Данные в Юникоде
 title: Данные в Юникоде | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: abc28718-e6d9-49fb-97ff-402d50c3c375
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 73ea9035b05f04fec1527ca2aa98531a807db8cf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f217e6b629936cc835d134c89d972bb1408b9d0b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307401"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88339120"
 ---
 # <a name="unicode-data"></a>Данные в Юникоде
 Типы данных SQL в Юникоде предназначены для описания данных, находящиеся в Юникоде изначально в СУБД. Тип данных в Юникоде позволяет приложению привязывать данные к буферу Юникода. Диспетчер драйверов может преобразовать данные из типа Юникода C (SQL_C_WCHAR), чтобы сделать его функцией с драйвером ANSI.  

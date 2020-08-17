@@ -1,4 +1,5 @@
 ---
+description: Глобальные параметры (средство тестирования) (OracleToSQL)
 title: Глобальные параметры (Tester) (OracleToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 4acc0f2a-85ba-4c99-856a-89030f5c418e
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 12ca00b130367495ba725627b7fbd5c523505387
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 789d2cbb22e03053ab8f03e0bdd50b6383ea788e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934777"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320400"
 ---
 # <a name="global-settings-tester-oracletosql"></a>Глобальные параметры (средство тестирования) (OracleToSQL)
 Страница «испытатель» диалогового окна « **глобальные параметры** » используется для указания параметров для тестера SSMA.  
@@ -28,7 +29,7 @@ ms.locfileid: "87934777"
   
 Для этого параметра доступны следующие параметры:  
   
-1.  да  
+1.  Да  
   
 2.  Нет  
   
@@ -50,7 +51,7 @@ ms.locfileid: "87934777"
   
 Для этого параметра доступны следующие параметры:  
   
-1.  да  
+1.  Да  
   
 2.  Нет  
   
@@ -59,7 +60,7 @@ ms.locfileid: "87934777"
   
 Для этого параметра доступны следующие параметры:  
   
-1.  да  
+1.  Да  
   
 2.  Нет  
   

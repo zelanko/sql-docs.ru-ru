@@ -1,4 +1,5 @@
 ---
+description: Справочник по пользовательскому интерфейсу (SybaseToSQL)
 title: Справочник по пользовательскому интерфейсу (SybaseToSQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3f8c07a6-5542-495b-ad29-487ed64f0101
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: afe4c2fe8ad2ff254a44cc2aba477f4ef411fdd7
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: fba0cb8e85556411085a0502364d9b2cd3008ce6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934583"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320240"
 ---
 # <a name="user-interface-reference-sybasetosql"></a>Справочник по пользовательскому интерфейсу (SybaseToSQL)
 В этом разделе содержатся разделы справки по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Помощник по миграции (SSMA) для Sybase.  
@@ -35,7 +36,7 @@ ms.locfileid: "87934583"
 |[Диалоговые окна &#40;глобальных параметров&#41;  &#40;SybaseToSQL&#41;](../../ssma/sybase/global-settings-dialogs-sybasetosql.md)|Страница редактор диалогового окна **глобальные параметры** используется для настройки параметров диалогового окна и предупреждений по умолчанию.|  
 |[Глобальные параметры &#40;ведение журнала&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/global-settings-logging-oracletosql.md)|Страница Ведение журнала диалогового окна **глобальные параметры** используется для настройки ведения журнала.|  
 |[Глобальные параметры &#40;ведение журнала&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/global-settings-logging-sybasetosql.md)|Используйте диалоговое окно **глобальные параметры** , чтобы задать настройки для ПОЛЬЗОВАТЕЛЬСКОГО интерфейса SSMA для Sybase.|  
-|[&#40;"глобальные параметры"&#41; &#40;"тест-инженер"&#41;SybaseToSQL](../../ssma/sybase/global-settings-tester-sybasetosql.md)|Используйте страницу "тест" диалогового окна **глобалсеттингс** , чтобы указать параметры для тестера.|  
+|[&#40;"глобальные параметры"&#41; &#40;"тест-инженер"&#41;SybaseToSQL ](../../ssma/sybase/global-settings-tester-sybasetosql.md)|Используйте страницу "тест" диалогового окна **глобалсеттингс** , чтобы указать параметры для тестера.|  
 |[Новый проект &#40;SybaseToSQL&#41;](../../ssma/sybase/new-project-sybasetosql.md)|Используйте диалоговое окно **Создание проекта** для создания нового проекта SSMA для Sybase.|  
 |[Параметры проекта &#40;преобразование&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)|Используйте страницу Преобразование диалогового окна **Параметры проекта** , чтобы указать, как SSMA для Sybase преобразует функции и глобальные переменные.|  
 |[Параметры проекта &#40;GUI&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-gui-sybasetosql.md)|Используйте страницу графический интерфейс диалогового окна **Параметры проекта** , чтобы указать объем данных, отображаемых на вкладке **данные** .|  

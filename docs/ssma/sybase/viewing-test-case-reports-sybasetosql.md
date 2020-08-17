@@ -1,4 +1,5 @@
 ---
+description: Просмотр отчетов о тестовых случаях (SybaseToSQL)
 title: Просмотр отчетов о тестовых случаях (SybaseToSQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cb75d281-43ef-4f4a-b754-2c4ee3b62ae7
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 99bad46468ff0138c07f531c9e32cdecc4fda5be
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: ef72ea67b28aae674a1ae4b51dc52d9875e3b0e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934528"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88319880"
 ---
 # <a name="viewing-test-case-reports-sybasetosql"></a>Просмотр отчетов о тестовых случаях (SybaseToSQL)
 В отчете о тестовых случаях отображаются результаты проверки тестов и общие сведения о тестах. В случае сбоя теста также отображается информация о любых несовпадающих данных в проверенных объектах.  

@@ -1,4 +1,5 @@
 ---
+description: Развертывание пакета развертывания модели с помощью мастера
 title: Развертывание пакета развертывания модели (мастер)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f65dc60-0ff8-46e6-9988-5bc5b9603ad0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 16e1ff64a2c5178eda70fb681c11a7d7a1b79bc0
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 86170829ee1ae3f5116497f8435bf207edb3d5a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811789"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88344460"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>Развертывание пакета развертывания модели с помощью мастера
 
@@ -50,7 +51,7 @@ ms.locfileid: "85811789"
   
 5.  Найдите свой пакет развертывания (файл PKG) и нажмите кнопку **Открыть**.  
   
-6.  Щелкните **Далее**.  
+6.  Нажмите кнопку **Далее**.  
   
 7.  После загрузки пакета нажмите кнопку **Далее**.  
   
@@ -75,11 +76,11 @@ ms.locfileid: "85811789"
      При обновлении в случае неудачного завершения любого из первых трех шагов переход к следующему шагу не производится. Однако откат уже внесенных изменений также не выполняется.  
   
 ## <a name="next-steps"></a>Next Steps  
- Атрибуты файлов и разрешения для пользователей и групп не включаются в пакеты развертывания модели. При развертывании модели их нужно обновить вручную. Дополнительные сведения см. на странице  
+ Атрибуты файлов и разрешения для пользователей и групп не включаются в пакеты развертывания модели. При развертывании модели их нужно обновить вручную. Дополнительные сведения см. в разделе:  
   
 -   [Назначение разрешения для объекта модели (службы Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Развертывание моделей (службы Master Data Services)](../master-data-services/deploying-models-master-data-services.md)  
   
   

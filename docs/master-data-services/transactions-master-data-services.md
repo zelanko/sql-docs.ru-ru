@@ -1,5 +1,6 @@
 ---
-title: Транзакции
+description: Транзакции (службы Master Data Services)
+title: Transactions
 ms.custom: ''
 ms.date: 01/10/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0b9f2eeec0e5936d215595755bbc92bb5b9a8c42
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: bfaa5eb1d111b29de1354a48f779c5d628e041dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812683"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88342250"
 ---
 # <a name="transactions-master-data-services"></a>Транзакции (службы Master Data Services)
 
@@ -60,7 +61,7 @@ ms.locfileid: "85812683"
 |mdm.udpValidationsCleanup|Очищает журнал проверки|  
 |mdm.udpEntityStagingBatchTableCleanup|Очищает промежуточную таблицу|  
   
- **Следующий**  
+ **Образец**  
   
 ```  
 DECLARE @CleanupOlderThanDate date = '2014-11-11',  
@@ -81,7 +82,7 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
   
  При импорте данных из этой версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]можно указать, следует ли вести журнал транзакций при инициировании хранимых процедур. Дополнительные сведения см. в разделе [Промежуточная хранимая процедура (службы Master Data Services)](../master-data-services/staging-stored-procedure-master-data-services.md).  
   
-## <a name="concurrency"></a>параллелизм  
+## <a name="concurrency"></a>Параллелизм  
  Если значение определенной сущности одновременно отображается в нескольких сеансах обозревателя, это значение может изменяться одновременно несколькими пользователями. Службы MDS не обнаруживают одновременные изменения автоматически. Такая ситуация возможна, когда несколько пользователей работают в обозревателе служб MDS в веб-браузере, например в нескольких сеансах, на нескольких вкладках браузера или в нескольких его окнах либо из-под нескольких учетных записей пользователей.  
   
  Несколько пользователей могут обновлять одно значение сущности без ошибок несмотря на то, что транзакции включены. Обычно приоритет получает изменение, которое по времени было внесено последним. Администратор может просмотреть конфликты, возникающие при одновременном внесении нескольких одинаковых изменений, в журнале транзакций и вручную разрешить их. В журнале транзакций отображаются отдельные транзакции для **предыдущего значения** и **нового значения** для рассматриваемого атрибута из каждого сеанса, однако конфликты, возникающие, если для одного старого значения существуют несколько **новых значений** , автоматически не разрешаются.  

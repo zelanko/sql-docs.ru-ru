@@ -1,4 +1,5 @@
 ---
+description: Выражения куба и вложенного куба
 title: Использование выражений Cube и Cube | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7c656bdaa0de108ade568a22bbcc734f38d43bfd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b431d82f24e5bf531dfa407d459ff9f36b543160
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893528"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341130"
 ---
 # <a name="using-cube-and-subcube-expressions"></a>Выражения куба и вложенного куба
 
@@ -71,8 +72,8 @@ ms.locfileid: "68893528"
 ## <a name="see-also"></a>См. также:  
  [Базовый запрос многомерных выражений &#40;многомерные выражения&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query)   
  [Создание вложенных кубов в многомерных выражениях &#40;многомерных выражениях&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)   
- [Инструкция CREATE CUBE &#40;&#41;многомерных выражений](../mdx/mdx-data-definition-create-subcube.md)   
- [Выражения &#40;&#41;многомерных выражений](../mdx/expressions-mdx.md)   
+ [Инструкция CREATE CUBE &#40;&#41;многомерных выражений ](../mdx/mdx-data-definition-create-subcube.md)   
+ [Выражения &#40;&#41;многомерных выражений ](../mdx/expressions-mdx.md)   
  [Инструкция SCOPE (многомерные выражения)](../mdx/mdx-scripting-scope.md)  
   
   

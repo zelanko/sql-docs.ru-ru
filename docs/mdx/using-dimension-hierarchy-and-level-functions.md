@@ -1,4 +1,5 @@
 ---
+description: Функции измерений, иерархий и уровней
 title: Использование функций измерения, иерархии и уровня | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8fa374ef93f56f8cddaed81bc9e3872d1eb206c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: afb7d324a2a4450a4df09ec3493954f0566a2cfc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097180"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341110"
 ---
 # <a name="using-dimension-hierarchy-and-level-functions"></a>Функции измерений, иерархий и уровней
 
@@ -45,7 +46,7 @@ ms.locfileid: "68097180"
 ## <a name="see-also"></a>См. также:  
  [Многомерные выражения &#40;измерения&#41;](../mdx/dimension-mdx.md)   
  [Функции &#40;синтаксиса многомерных выражений&#41;](../mdx/functions-mdx-syntax.md)   
- [Иерархия &#40;&#41;многомерных выражений](../mdx/hierarchy-mdx.md)   
- [&#41;&#40;уровня многомерных выражений](../mdx/level-mdx.md)  
+ [Иерархия &#40;&#41;многомерных выражений ](../mdx/hierarchy-mdx.md)   
+ [&#41;&#40;уровня многомерных выражений ](../mdx/level-mdx.md)  
   
   

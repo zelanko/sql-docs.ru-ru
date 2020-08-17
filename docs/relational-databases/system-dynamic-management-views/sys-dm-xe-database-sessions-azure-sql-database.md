@@ -1,4 +1,5 @@
 ---
+description: sys.dm_xe_database_sessions (база данных SQL Azure)
 title: sys. dm_xe_database_sessions (база данных SQL Azure) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -9,12 +10,12 @@ ms.assetid: 33ea5179-16bb-4abd-96cc-9bc696e80987
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: ccb292c21cda8a335f1630b08d462f183a1f25e1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d49c252a60cdf08c7ac55c287333de9805d5ff26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85675761"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88322720"
 ---
 # <a name="sysdm_xe_database_sessions-azure-sql-database"></a>sys.dm_xe_database_sessions (база данных SQL Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -38,12 +39,12 @@ ms.locfileid: "85675761"
 ### <a name="relationship-cardinalities"></a>Количество элементов связей  
 Начиная с 2015-07-13, "sys. dm_xe_objects" является одним из этих XEvents динамических административных представлений, которые не содержат "_database" в имени. Не опечатка или ошибка в правом столбце следующей таблицы. Это имя совпадает в Microsoft SQL Server и базе данных SQL Azure.  
   
-|Исходный тип|Кому|Связь|  
+|От|Кому|Связь|  
 |--------|------|----------------|  
 |sys. dm_xe_database_session_events. event_session_address|sys. dm_xe_database_sessions. Address|«многие к одному»|  
 |sys. dm_xe_database_session_events. event_package_guid, sys. dm_xe_database_session_events. event_name|sys.dm_xe_objects.name, sys.dm_xe_objects.package_guid|«многие к одному»|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Расширенные события в базе данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
 [Расширенные события](../../relational-databases/extended-events/extended-events.md)  
   

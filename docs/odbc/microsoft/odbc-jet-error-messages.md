@@ -1,4 +1,5 @@
 ---
+description: Сообщения об ошибках ODBC Jet
 title: Сообщения об ошибках ODBC Jet | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f8d2a8f2-0316-42c4-bc34-5367661634ae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e8fa6e672b69c7791e66dc3919e6fcd22b7c3de7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 19f7d4b00c9e6b206ecd563083c0fcf16ced55e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81293114"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340720"
 ---
 # <a name="odbc-jet-error-messages"></a>Сообщения об ошибках ODBC Jet
 Для ошибок, возникающих в источнике данных, драйвер ODBC возвращает сообщение об ошибке, возвращаемое библиотекой файлов ODBC. Для ошибок, возникающих в драйвере ODBC или диспетчере драйверов, драйвер возвращает сообщение об ошибке, основанное на тексте, связанном с SQLSTATE.  
@@ -34,5 +35,5 @@ ms.locfileid: "81293114"
   
 |Сообщение об ошибке|Расположение ошибки|  
 |-------------------|--------------------|  
-|NNTP [Диспетчер драйверов ODBC] *текст сообщения*|Диспетчер драйверов (библиотеками odbc32. dll)|  
+|NNTP [Диспетчер драйверов ODBC] *текст сообщения*|Диспетчер драйверов (Odbc32.dll)|  
 |NNTP [ODBC *Driver-Name*] *текст сообщения*|Драйвер ISAM (см. драйвер ISAM)|

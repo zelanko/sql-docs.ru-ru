@@ -1,4 +1,5 @@
 ---
+description: Отображение связей "многие-ко-многим" в производных иерархиях (Master Data Services)
 title: Отображение связей "многие-ко-многим" в производных иерархиях
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c8f0a7536605af05457de13ebcd2011083386010
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 9a6c606cf05189d7845db6615add2365efb90c5c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811403"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88342430"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Отображение связей "многие-ко-многим" в производных иерархиях (Master Data Services)
 
@@ -91,7 +92,7 @@ ms.locfileid: "85811403"
  ![mds_hierarchies_dh_screenshot](../master-data-services/media/mds-hierarchies-dh-screenshot.png "mds_hierarchies_dh_screenshot")  
   
 ##  <a name="member-security"></a><a name="bkmk_member_security"></a> Безопасность элементов  
- Иерархию, допускающую дублирование элементов (элемент может иметь несколько родительских элементов), нельзя использовать для назначения элементам разрешений безопасности. Пример:  
+ Иерархию, допускающую дублирование элементов (элемент может иметь несколько родительских элементов), нельзя использовать для назначения элементам разрешений безопасности. Например:  
   
 -   Рекурсивная производная иерархия (RDH), которая не привязывает нулевые рекурсии (каждый элемент на рекурсивном уровне располагается под уровнем ROOT и его рекурсивным родительским элементом).  
   
@@ -102,7 +103,7 @@ ms.locfileid: "85811403"
 ## <a name="collections"></a>Коллекции  
  Коллекции и явные иерархии устарели. Хранимая процедура преобразования (udpConvertCollectionAndConsolidatedMembersToLeaf) преобразует элементы коллекции в конечные элементы и создает производные иерархии "многие-ко-многим" для записи сведений о принадлежности к коллекции.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Производные иерархии (службы Master Data Services)](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   

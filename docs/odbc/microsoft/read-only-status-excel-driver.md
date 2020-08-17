@@ -1,4 +1,5 @@
 ---
+description: Состояние только для чтения (драйвер для Excel)
 title: Состояние только для чтения (драйвер для Excel) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef5d773b-4f8f-4005-b985-84b53d8e9f9b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: eb585d4712b6cac5e09b65ee8e13604763cd0164
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 04a0c5d0cb2c9932d30c0edb900169d8c5e5f82b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304025"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340390"
 ---
 # <a name="read-only-status-excel-driver"></a>Состояние только для чтения (драйвер для Excel)
 При использовании драйвера Microsoft Excel таблицы источников данных по умолчанию открываются как доступные только для чтения и могут быть открыты только одним пользователем за раз. Хотя таблицы имеют состояние только для чтения, однако приложения могут выполнять вставки и обновления для таблиц Microsoft Excel.  

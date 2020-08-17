@@ -1,4 +1,5 @@
 ---
+description: Большие определяемые пользователем типы данных CLR в SQL Server Native Client (OLE DB)
 title: Большие определяемые пользователем типы данных CLR (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e851332ad3f8485e7c716101942b1cdc0c6838bb
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b5342dcab8dee628f074963a7ddc56a0ecc1d940
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243898"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88328290"
 ---
 # <a name="large-clr-user-defined-types-in-sql-server-native-client-ole-db"></a>Большие определяемые пользователем типы данных CLR в SQL Server Native Client (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "87243898"
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>Сопоставление типов данных в методе ITableDefinition::CreateTable  
  Следующие сведения используются в структурах **DBCOLUMNDESC**, применяемых методом ITableDefinition::CreateTable, когда требуются столбцы пользовательских типов:  
   
-|Тип данных OLE DB (*wType*)|*pwszTypeName*|Тип данных SQL Server|*rgPropertySets*|  
+|тип данных OLE DB (*wType*)|*pwszTypeName*|Тип данных SQL Server|*rgPropertySets*|  
 |----------------------------------|--------------------|--------------------------|----------------------|  
 |DBTYPE_UDT|Не учитывается|(UDT)|Должен включать набор свойств DBPROPSET_SQLSERVERCOLUMN.|  
   
@@ -75,12 +76,12 @@ ms.locfileid: "87243898"
   
 |Тип столбца|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE|DBCOLUMN_FLAGS_ISLONG|DBCOLUMNS_ISSEARCHABLE|DBCOLUMN_OCTETLENGTH|  
 |-----------------|--------------------|--------------------------|-------------------------|---------------------|-----------------------------|-----------------------------|---------------------------|  
-|DBTYPE_UDT<br /><br /> (длина не более 8 000 байт)|DBTYPE_UDT|*n*|NULL|NULL|Очистить|DB_ALL_EXCEPT_LIKE|n|  
+|DBTYPE_UDT<br /><br /> (длина не более 8 000 байт)|DBTYPE_UDT|*n*|NULL|NULL|Clear|DB_ALL_EXCEPT_LIKE|n|  
 |DBTYPE_UDT<br /><br /> (длина более 8 000 байт)|DBTYPE_UDT|~0|NULL|NULL|Присвойте параметру|DB_ALL_EXCEPT_LIKE|0|  
   
  Для определяемых пользователем типов определяются также следующие столбцы.  
   
-|Идентификатор столбца|Тип|Описание|  
+|Идентификатор столбца|Тип|Description|  
 |-----------------------|----------|-----------------|  
 |DBCOLUMN_UDT_CATALOGNAME|DBTYPE_WSTR|Для столбцов определяемого пользователем типа — имя каталога, в котором определен тип, определяемый пользователем.|  
 |DBCOLUMN_UDT_SCHEMANAME|DBTYPE_WSTR|Для столбцов определяемого пользователем типа — имя схемы, в которой определен тип, определяемый пользователем.|  
@@ -92,7 +93,7 @@ ms.locfileid: "87243898"
   
 |Тип параметра|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBCOLUMNFLAGS_ISLONG|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------|  
-|DBTYPE_UDT<br /><br /> (длина не более 8 000 байт)|DBTYPE_UDT|*n*|~0|~0|Очистить|  
+|DBTYPE_UDT<br /><br /> (длина не более 8 000 байт)|DBTYPE_UDT|*n*|~0|~0|Clear|  
 |DBTYPE_UDT<br /><br /> (длина более 8 000 байт)|DBTYPE_UDT|~0|~0|~0|Присвойте параметру|  
   
 ## <a name="columns-rowset-schema-rowsets"></a>Набор строк COLUMNS (наборы строк схемы)  
@@ -100,12 +101,12 @@ ms.locfileid: "87243898"
   
 |Тип столбца|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_ISLONG|CHARACTER_OCTET_LENGTH|  
 |-----------------|----------------|-----------------------------------------|------------------------------|  
-|DBTYPE_UDT<br /><br /> (длина не более 8 000 байт)|DBTYPE_UDT|Очистить|*n*|  
+|DBTYPE_UDT<br /><br /> (длина не более 8 000 байт)|DBTYPE_UDT|Clear|*n*|  
 |DBTYPE_UDT<br /><br /> (длина более 8 000 байт)|DBTYPE_UDT|Присвойте параметру|0|  
   
  Для определяемых пользователем типов определяются также следующие дополнительные столбцы.  
   
-|Идентификатор столбца|Тип|Описание|  
+|Идентификатор столбца|Тип|Description|  
 |-----------------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|Для столбцов определяемого пользователем типа — имя каталога, в котором определен тип, определяемый пользователем.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|Для столбцов определяемого пользователем типа — имя схемы, в которой определен тип, определяемый пользователем.|  
@@ -121,13 +122,13 @@ ms.locfileid: "87243898"
 |Привязка типов данных|Определяемый пользователем тип к серверному типу|Тип, не определяемый пользователем, к серверному типу|Серверный тип к определяемому пользователем типу|Серверный тип к типу, не определяемому пользователем|  
 |----------------------|-------------------|------------------------|---------------------|--------------------------|  
 |DBTYPE_UDT|Поддерживается (5)|Ошибка (1)|Поддерживается (5)|Ошибка (4)|  
-|DBTYPE_BYTES|Поддерживается (5)|Н/Д|Поддерживается (5)|Н/Д|  
-|DBTYPE_WSTR|Поддерживается (2), (5)|Н/Д|Поддерживается (3), (5), (6)|Н/Д|  
-|DBTYPE_BSTR|Поддерживается (2), (5)|Н/Д|Поддерживается (3), (5)|Н/Д|  
-|DBTYPE_STR|Поддерживается (2), (5)|Н/Д|Поддерживается (3), (5)|Н/Д|  
-|DBTYPE_IUNKNOWN|Поддерживается (6)|Н/Д|Поддерживается (6)|Н/Д|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Поддерживается (5)|Н/Д|Поддерживается (3), (5)|Н/Д|  
-|DBTYPE_VARIANT (VT_BSTR)|Поддерживается (2), (5)|Н/Д|Недоступно|Недоступно|  
+|DBTYPE_BYTES|Поддерживается (5)|Недоступно|Поддерживается (5)|Недоступно|  
+|DBTYPE_WSTR|Поддерживается (2), (5)|Недоступно|Поддерживается (3), (5), (6)|Недоступно|  
+|DBTYPE_BSTR|Поддерживается (2), (5)|Недоступно|Поддерживается (3), (5)|Недоступно|  
+|DBTYPE_STR|Поддерживается (2), (5)|Недоступно|Поддерживается (3), (5)|Недоступно|  
+|DBTYPE_IUNKNOWN|Поддерживается (6)|Недоступно|Поддерживается (6)|Недоступно|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Поддерживается (5)|Недоступно|Поддерживается (3), (5)|Недоступно|  
+|DBTYPE_VARIANT (VT_BSTR)|Поддерживается (2), (5)|Недоступно|Недоступно|Недоступно|  
   
 ### <a name="key-to-symbols"></a>Расшифровка символов  
   
@@ -172,7 +173,7 @@ ms.locfileid: "87243898"
   
  Если **DataTypeCompatibility** (SSPROP_INIT_DATATYPECOMPATIBILITY) имеет значение 80, то большие пользовательские типы представляются всем клиентам так же, как клиентам низкого уровня.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Большие определяемые пользователем типы данных CLR](~/relational-databases/native-client/features/large-clr-user-defined-types.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 'Примеры SQL Server: пакеты развертывания моделей (MDS)'
 title: Примеры пакетов развертывания модели
 ms.custom: ''
 ms.date: 07/28/2017
@@ -13,12 +14,12 @@ keywords:
 ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 76ef4f409fd5a4072d27cdfa3e4180896534eaa0
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 70375fd359e56081267f2478a582281d96c253eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811383"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88342380"
 ---
 # <a name="sql-server-examples-model-deployment-packages-mds"></a>Примеры SQL Server: пакеты развертывания моделей (MDS)
 
@@ -54,7 +55,7 @@ ms.locfileid: "85811383"
  
  В службах Master Data Services пакет представляет собой XML-файл, содержащий развертываемую структуру модели и (необязательно) данные этой модели. Пакеты модели используются для перемещения копий моделей из одной среды служб MDS в другую либо для создания моделей в существующей среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Развертывание пакета развертывания модели при помощи MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
   
   

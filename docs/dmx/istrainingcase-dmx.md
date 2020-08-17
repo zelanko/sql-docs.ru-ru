@@ -1,4 +1,5 @@
 ---
+description: IsTrainingCase (расширения интеллектуального анализа данных)
 title: IsTrainingCase (расширения интеллектуального анализа данных) | Документация Майкрософт
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e6bdfe1e3d22a2d2c4752e43df254231725fa447
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: e31f1c575441c01c6ff7e9325179ae6776802276
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969563"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88352340"
 ---
 # <a name="istrainingcase-dmx"></a>IsTrainingCase (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -30,7 +31,7 @@ IsTrainingCase()
 ## <a name="result-type"></a>Тип результата  
  Возвращает **значение true** , если вариант является частью набора обучающих данных. в противном случае — **false**.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Если создание структуры интеллектуального анализа данных и соответствующей модели интеллектуального анализа производится при помощи мастера интеллектуального анализа данных, то по умолчанию 30% вариантов резервируются для использования в качестве проверочного набора данных. Оставшиеся варианты в выбранном источнике данных будут использоваться для обучения модели. Однако если для создания модели интеллектуального анализа данных использовались расширения интеллектуального анализа данных, то по умолчанию все данные используются для обучения модели и проверочный набор не создается. Чтобы разрешить создание проверочного набора данных, нужно задать значение параметров предложения WITH HOLDOUT.  
   
  Узнать, были ли данные конкретной структуры интеллектуального анализа данных разделены на обучающие и проверочные, можно, посмотрев значение свойств <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxCases%2A> и <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxPercent%2A>.  
@@ -50,11 +51,11 @@ WHERE IsTrainingCase()
 AND [Age] <40  
 ```  
   
- Другие примеры запросов к вариантам, используемым в интеллектуальном анализе данных, см. в разделе [Выбор из &#60;модели&#62;. В случаях &#40;&#41;расширений интеллектуального анализа данных](../dmx/select-from-model-cases-dmx.md) и [выберите &#60;структура&#62;. ВАРИАНТОВ](../dmx/select-from-structure-cases.md).  
+ Другие примеры запросов к вариантам, используемым в интеллектуальном анализе данных, см. в разделе [Выбор из &#60;модели&#62;. В случаях &#40;&#41;расширений интеллектуального анализа данных ](../dmx/select-from-model-cases-dmx.md) и [выберите &#60;структура&#62;. ВАРИАНТОВ](../dmx/select-from-structure-cases.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обучающие и проверочные наборы данных](https://docs.microsoft.com/analysis-services/data-mining/training-and-testing-data-sets)   
- [Функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/functions-dmx.md)   
+ [Функции &#40;&#41;расширений интеллектуального анализа данных ](../dmx/functions-dmx.md)   
  [Запросы интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries)  
   
   

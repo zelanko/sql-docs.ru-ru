@@ -1,4 +1,5 @@
 ---
+description: Настройка больших данных в SQL Server Native Client
 title: Задание больших данных (поставщик собственного клиента OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01e0e20b410ddf2300779923ed317a897a74862d
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: ab0fb692b2d50dc99276a55ab4773962d757b2c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332181"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88328330"
 ---
 # <a name="setting-large-data-in-sql-server-native-client"></a>Настройка больших данных в SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "87332181"
 ## <a name="how-to-set-large-data"></a>Как сохранить большой объем данных  
  Для передачи указателя на свой собственный объект хранения потребитель создает метод доступа, который привязывает значение столбца BLOB, а затем вызывает метод **IRowsetChange::SetData** или **IRowsetChange::InsertRow** . Сохранение данных BLOB происходит следующим образом.  
   
-1.  Создайте структуру DBOBJECT, описывающую, каким образом должен производиться доступ к столбцу BLOB. Задайте для элемента *dwFlag* структуры DBOBJECT значение STGM_READ и задайте для элемента *IID* значение IID_ISequentialStream (предоставляемый интерфейс).  
+1.  Создайте структуру DBOBJECT, описывающую, каким образом должен производиться доступ к столбцу BLOB. Установите для элемента *dwFlag* структуры DBOBJECT значение STGM_READ, а для элемента *iid* значение IID_ISequentialStream (используемого интерфейса).  
   
 2.  Установите свойства в группе свойств DBPROPSET_ROWSET, чтобы включить возможность обновления для набора строк.  
   
@@ -720,8 +721,8 @@ Exit:
 } //end function  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Большие двоичные объекты и OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
+## <a name="see-also"></a>См. также:  
+ [Большие двоичные объекты и объекты OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [Использование типов больших значений](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

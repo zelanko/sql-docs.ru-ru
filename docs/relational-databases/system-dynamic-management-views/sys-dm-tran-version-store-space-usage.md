@@ -1,4 +1,5 @@
 ---
+description: sys. dm_tran_version_store_space_usage (Transact-SQL)
 title: sys. dm_tran_version_store_space_usage (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/24/2018
@@ -20,12 +21,12 @@ author: savjani
 ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2a4fac732f784a401206f37fb2af9d3d8e0688ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b3e40c6fd2ce7da44c2d6e347c7bcc0729ab0236
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262665"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88322970"
 ---
 # <a name="sysdm_tran_version_store_space_usage-transact-sql"></a>sys. dm_tran_version_store_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -43,10 +44,10 @@ ms.locfileid: "68262665"
 |**reserved_space_kb**|**bigint**|Общее пространство, используемое в килобайтах в базе данных tempdb для записей в хранилище версий.|  
   
 ## <a name="permissions"></a>Разрешения  
-В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]необходимо `VIEW SERVER STATE` разрешение.   
+В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
 
 ## <a name="examples"></a>Примеры  
-Следующий запрос можно использовать для определения пространства, потребляемого в базе данных tempdb, по хранилищу версий каждой из них [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в экземпляре. 
+Следующий запрос можно использовать для определения пространства, потребляемого в базе данных tempdb, по хранилищу версий каждой из них в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляре. 
   
 ```sql  
 SELECT 
@@ -68,6 +69,6 @@ WideWorldImporters        20                   160
 ```
  
 ## <a name="see-also"></a>См. также:  
- [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции, связанные с транзакциями (Transact-SQL)](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

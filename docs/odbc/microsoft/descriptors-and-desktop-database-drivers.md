@@ -1,4 +1,5 @@
 ---
+description: Дескрипторы и драйверы для баз данных на настольном компьютере
 title: Дескрипторы и драйверы для классических баз данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9ae2d9b5-365f-4f0a-9116-defe9498b401
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4ef79855f71d23e5a884822371f1894eb83442a9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 80565f912ef3136dc03cf7216ff3f997ee3eeba3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303515"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340800"
 ---
 # <a name="descriptors-and-desktop-database-drivers"></a>Дескрипторы и драйверы для баз данных на настольном компьютере
 Дескриптор — это структура данных, содержащая сведения о данных столбца или динамических параметрах. **SQLGetDescField** можно использовать для получения поддерживаемых дескрипторов, перечисленных ниже. Дескрипторы параметров реализации (IPD) не заполняются автоматически, так как **SQLDescribeParam** не поддерживается. Поля дескриптора, недоступные через Jet (например, SQL_DESC_BASE_TABLE_NAME), также не поддерживаются.  

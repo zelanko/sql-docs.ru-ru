@@ -1,4 +1,5 @@
 ---
+description: IsAncestor (многомерные выражения)
 title: Ancestor (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5cc8352b0d087b54a623cce892a05dfed29258b5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ccc61de94c87972eda3dbebdba798f9b1c4028b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68105264"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341490"
 ---
 # <a name="isancestor-mdx"></a>IsAncestor (многомерные выражения)
 
@@ -51,7 +52,7 @@ IsAncestor(Member_Expression1, Member_Expression2)
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>См. также:  
- [&#40;&#41;многомерных выражений предков](../mdx/ancestor-mdx.md)   
+ [&#40;&#41;многомерных выражений предков ](../mdx/ancestor-mdx.md)   
  [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

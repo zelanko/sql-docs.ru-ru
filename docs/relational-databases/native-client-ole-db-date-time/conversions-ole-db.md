@@ -1,4 +1,5 @@
 ---
+description: Преобразования SQL Server Native Client (OLE DB)
 title: Привязки и преобразования (OLE DB)
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0dec84f95cf60818336956e2d6e86d871a3fdc00
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a513ca320f072dc74b525ae4511973fa438a7624
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245902"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88328040"
 ---
 # <a name="sql-server-native-client-conversions-ole-db"></a>Преобразования SQL Server Native Client (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "87245902"
   
 -   Строки **DateTime** и **DateTimeOffset** имеют следующий формат:  
   
-     *гггг* - *mm* - *дд*[ *чч*:*мм*:*СС*[.* 9999999*] [± *чч*:*мм*]]  
+     *ГГГГ*-*ММ*-*ДД*[ *чч*:*мм*:*сс*[.*9999999*][ ± *чч*:*мм*]]  
   
 -   Формат строк типа **time**:  
   
@@ -39,7 +40,7 @@ ms.locfileid: "87245902"
   
 -   Строка **date** имеет такой формат:  
   
-     *гггг* - *mm* - *дд*  
+     *гггг*-*мм*-*дд*  
   
 > [!NOTE]  
 >  Предыдущие версии собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и SQLOLEDB реализовали преобразования OLE в случаях, когда стандартные преобразования возвращали ошибку. В результате некоторые преобразования, проводимые собственным клиентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 10.0 и более поздних версий, отличаются от спецификации OLE DB.  
@@ -71,7 +72,7 @@ ms.locfileid: "87245902"
  [Преобразования, выполняемые при передаче от сервера к клиенту](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-server-to-client.md)  
  Описывает преобразования даты-времени, проводимые между [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (или более поздней версией) и клиентским приложением, написанным с помощью собственного клиента OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Улучшения функций даты и времени &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

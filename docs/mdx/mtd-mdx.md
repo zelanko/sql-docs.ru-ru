@@ -1,4 +1,5 @@
 ---
+description: Mtd (многомерные выражения)
 title: MTD (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e604f66e48c8c8bb93ff5fd4abb174449f0fcdd9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 398503bc60be44a0a5fcbcc329f3c455df967d7c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68088445"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341381"
 ---
 # <a name="mtd-mdx"></a>Mtd (многомерные выражения)
 
@@ -50,7 +51,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Sum &#40;&#41;многомерных выражений](../mdx/sum-mdx.md)   
+ [Sum &#40;&#41;многомерных выражений ](../mdx/sum-mdx.md)   
  [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

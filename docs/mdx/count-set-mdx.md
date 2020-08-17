@@ -1,4 +1,5 @@
 ---
+description: Count (набор) (многомерные выражения)
 title: Count (набор) (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: aac2f72cc8cd91e1964fd7734b858be8215cfdd8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3a8760d4df4aa1479aaa9ad365c92a5168eb3869
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68047292"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341530"
 ---
 # <a name="count-set-mdx"></a>Count (набор) (многомерные выражения)
 
@@ -91,16 +92,16 @@ WHERE ([Geography].[State-Province].x,
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Счетчик &#40;измерение&#41; &#40;&#41;многомерных выражений](../mdx/count-dimension-mdx.md)   
+ [Счетчик &#40;измерение&#41; &#40;&#41;многомерных выражений ](../mdx/count-dimension-mdx.md)   
  [Количество &#40;уровней иерархии&#41; &#40;МНОГОМЕРных&#41;](../mdx/count-hierarchy-levels-mdx.md)   
  [Счетчик &#40;кортеж&#41; &#40;многомерных выражений&#41;](../mdx/count-tuple-mdx.md)   
- [DrilldownLevel &#40;&#41;многомерных выражений](../mdx/drilldownlevel-mdx.md)   
- [AddCalculatedMembers &#40;&#41;многомерных выражений](../mdx/addcalculatedmembers-mdx.md)   
- [Hierarchize &#40;&#41;многомерных выражений](../mdx/hierarchize-mdx.md)   
- [Свойства &#40;&#41;многомерных выражений](../mdx/properties-mdx.md)   
+ [DrilldownLevel &#40;&#41;многомерных выражений ](../mdx/drilldownlevel-mdx.md)   
+ [AddCalculatedMembers &#40;&#41;многомерных выражений ](../mdx/addcalculatedmembers-mdx.md)   
+ [Hierarchize &#40;&#41;многомерных выражений ](../mdx/hierarchize-mdx.md)   
+ [Свойства &#40;&#41;многомерных выражений ](../mdx/properties-mdx.md)   
  [Статистическая обработка &#40;многомерных выражений&#41;](../mdx/aggregate-mdx.md)   
- [Фильтрация &#40;&#41;многомерных выражений](../mdx/filter-mdx.md)   
- [PrevMember &#40;&#41;многомерных выражений](../mdx/prevmember-mdx.md)   
+ [Фильтрация &#40;&#41;многомерных выражений ](../mdx/filter-mdx.md)   
+ [PrevMember &#40;&#41;многомерных выражений ](../mdx/prevmember-mdx.md)   
  [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

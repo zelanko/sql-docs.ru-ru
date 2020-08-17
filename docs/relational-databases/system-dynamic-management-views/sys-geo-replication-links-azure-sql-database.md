@@ -1,4 +1,5 @@
 ---
+description: sys.geo_replication_links (база данных SQL Azure)
 title: sys. geo_replication_links (база данных SQL Azure) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/28/2019
@@ -17,12 +18,12 @@ ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: c59f3379d2f210d96b97e497ecb8f332a6f93d2a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d0771578b9d9b478a9f6947fd131abb66b0654d4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85647896"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88322300"
 ---
 # <a name="sysgeo_replication_links-azure-sql-database"></a>sys.geo_replication_links (база данных SQL Azure)
 
@@ -65,8 +66,8 @@ SELECT
 FROM sys.geo_replication_links;  
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
- [ALTER DATABASE (база данных SQL Azure)](../../t-sql/statements/alter-database-azure-sql-database.md)   
+ [CREATE DATABASE (база данных SQL Azure)](../../t-sql/statements/alter-database-azure-sql-database.md)   
  [sys. dm_geo_replication_link_status &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
  [sys. dm_operation_status &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)  

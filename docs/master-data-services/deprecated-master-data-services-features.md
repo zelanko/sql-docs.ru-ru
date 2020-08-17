@@ -1,4 +1,5 @@
 ---
+description: Устаревшие функции Master Data Services
 title: Устаревшие функции Master Data Services
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,12 +12,12 @@ ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: fc17ed2046ead7d142f0f5c138341b7a56eee26c
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 88304221dfa827679f787c55ec5065722cc9bc39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811530"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88344160"
 ---
 # <a name="deprecated-master-data-services-features"></a>Устаревшие функции Master Data Services
 
@@ -55,7 +56,7 @@ ms.locfileid: "85811530"
 ## <a name="external-resources"></a>Внешние ресурсы  
  Запись блога [Deprecated: Explicit Hierarchies and Collections](https://go.microsoft.com/fwlink/p/?LinkId=615373)(Устарелое. Явные иерархии и коллекции) на портале msdn.com.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Неподдерживаемые функции служб Master Data Services](../master-data-services/discontinued-master-data-services-features.md)  
   
   

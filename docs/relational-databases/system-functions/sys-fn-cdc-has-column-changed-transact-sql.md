@@ -1,4 +1,5 @@
 ---
+description: sys.fn_cdc_has_column_changed (Transact-SQL)
 title: sys. fn_cdc_has_column_changed (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2b9e6278-050d-4ffc-8d1a-09606180facc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ce79c24b75fb0efd3b9934e90c7cb748cfe2f154
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b89b4a42df7e0f1481d55fb7d011e947d3e12cf3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898380"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88322020"
 ---
 # <a name="sysfn_cdc_has_column_changed-transact-sql"></a>sys.fn_cdc_has_column_changed (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +55,7 @@ sys.fn_cdc_has_column_changed ( 'capture_instance','column_name' , update_mask )
 ## <a name="return-type"></a>Тип возвращаемых данных  
  **bit**  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Эту функцию можно использовать для получения сведений из маски обновления, которая возвращается в запросе данных изменений. Она особенно полезна во время последующей обработки маски обновления, когда нужно определить, изменился ли конкретный столбец в связанной строке изменений. Дополнительные сведения см. в статье [О системе отслеживания измененных данных (SQL Server)](../../relational-databases/track-changes/about-change-data-capture-sql-server.md).  
   
  Если эта информация будет возвращена как часть запроса на изменение данных, вместо этой функции рекомендуется использовать функции [sys. fn_cdc_get_column_ordinal](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md) и [sys. fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md) . Используйте функцию fn_cdc_get_column_ordinal перед запросом на изменение данных, чтобы нужный порядковый номер столбца вычисляться только один раз. Используйте fn_cdc_is_bit_set в запросе, чтобы извлечь сведения из маски обновления для каждой возвращаемой строки.  
@@ -62,8 +63,8 @@ sys.fn_cdc_has_column_changed ( 'capture_instance','column_name' , update_mask )
 ## <a name="permissions"></a>Разрешения  
  Необходимо членство в предопределенной роли сервера sysadmin или предопределенной роли базы данных db_owner. Всем остальным пользователям необходимо разрешение SELECT для всех отслеживаемых столбцов в исходной таблице. Кроме того, если для экземпляра отслеживания была определена шлюзовая роль, требуется членство в этой роли базы данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [CDC. &#60;capture_instance&#62;_CT &#40;Transact-SQL&#41;](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)   
- [CDC. captured_columns &#40;&#41;Transact-SQL](../../relational-databases/system-tables/cdc-captured-columns-transact-sql.md)  
+ [CDC. captured_columns &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/cdc-captured-columns-transact-sql.md)  
   
   

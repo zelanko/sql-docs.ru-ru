@@ -1,4 +1,5 @@
 ---
+description: Индексы dBASE
 title: Индексы dBASE | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fdfa56f5-e324-4ec2-9267-fdf95ab99373
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9300a38a0e36da771a238f73b77d3dda527334ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 30a6390f0e187cc063b2a650af2da3b9fcc87d57
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307675"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340960"
 ---
 # <a name="dbase-indexes"></a>Индексы dBASE
 Драйвер ODBC dBASE автоматически открывает и обновляет файлы индекса dBASE IV. Чтобы связать файлы dBASE III. ндкс с файлами dBASE, необходимо использовать диалоговое окно **Выбор индексов** , отображаемое в Администраторе источников данных ODBC.  

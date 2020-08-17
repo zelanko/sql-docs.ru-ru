@@ -1,4 +1,5 @@
 ---
+description: Уведомления (службы Master Data Services)
 title: Уведомления
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d7ad32d5-9fe5-48fd-8c61-0b00c0aff082
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c1f645bf481b193b78003808725d60b97b33d845
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 6a907505771493e7e087b5eead35923feb8659ae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812900"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88343170"
 ---
 # <a name="notifications-master-data-services"></a>Уведомления (службы Master Data Services)
 

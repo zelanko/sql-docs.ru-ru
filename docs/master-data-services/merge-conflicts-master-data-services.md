@@ -1,4 +1,5 @@
 ---
+description: Слияние конфликтов (Master Data Services)
 title: Слияние конфликтов
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 797219ad-5109-4666-94d3-dd1d59440a33
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8422b9300b374cbf78eb602dc8ad8f36f7a5e39c
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 908d4d5de8fac337529a8e581a658159c47e3d8d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811900"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88343950"
 ---
 # <a name="merge-conflicts-master-data-services"></a>Слияние конфликтов (Master Data Services)
 
@@ -46,7 +47,7 @@ ms.locfileid: "85811900"
   
 4.  Нажав кнопку **Применить**, можно внести дополнительные изменения и опубликовать данные снова. Можно также нажать кнопку **Отменить** , чтобы отменить обновление и повторно загрузить последнюю версию с сервера.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Элементы (службы Master Data Services)](../master-data-services/members-master-data-services.md)  
   
   

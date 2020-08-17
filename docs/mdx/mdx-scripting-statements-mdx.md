@@ -1,4 +1,5 @@
 ---
+description: Инструкции сценариев многомерных выражений (многомерные выражения)
 title: Инструкции скриптов многомерных выражений (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5564c73ec8d10b37285c1d3e7e7f65fd295894a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 633a44f28852898e2638438a5e8395d8d865fca3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893329"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88341473"
 ---
 # <a name="mdx-scripting-statements-mdx"></a>Инструкции сценариев многомерных выражений (многомерные выражения)
 
@@ -32,8 +33,8 @@ ms.locfileid: "68893329"
 |[Инструкция SCOPE (многомерные выражения)](../mdx/mdx-scripting-scope.md)|Ограничивает область заданных инструкций многомерных выражений указанным вложенным кубом.|  
   
 ## <a name="see-also"></a>См. также:  
- [Справочник по инструкциям многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-statement-reference-mdx.md)   
- [Инструкции определения данных многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-data-definition-statements-mdx.md)   
+ [Справочник по инструкциям многомерных выражений &#40;&#41;многомерных выражений ](../mdx/mdx-statement-reference-mdx.md)   
+ [Инструкции определения данных многомерных выражений &#40;&#41;многомерных выражений ](../mdx/mdx-data-definition-statements-mdx.md)   
  [Инструкции обработки данных многомерных выражений &#40;многомерные выражения&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
  [Основные принципы создания скриптов многомерных выражений (службы Analysis Services)](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services)  
   

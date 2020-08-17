@@ -1,4 +1,5 @@
 ---
+description: Совместимость драйверов для баз данных на настольном компьютере
 title: Совместимость с драйвером базы данных Desktop | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: dd695638-1a0b-4e27-8a6a-9510ebb5a5ee
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 89eea7ab112eaefdc73c7cbc72ee3555797c7efd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6b15ec35a01b61eef401f217733917a80bbe32b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303525"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88340780"
 ---
 # <a name="desktop-database-driver-compatibility"></a>Совместимость драйверов для баз данных на настольном компьютере
 Юникод — это метод кодирования символов программного обеспечения, который обрабатывает все символы как фиксированную ширину в два байта. Этот метод используется в качестве альтернативы кодировке символов ANSI Windows, которая, поскольку представляет символы в одном байте, ограничена 256 символами. Так как Юникод может представлять более 65 000 символов, он поддерживает множество языков, символы которых не представлены в кодировке ANSI.  

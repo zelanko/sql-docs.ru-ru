@@ -1,4 +1,5 @@
 ---
+description: sys.fn_cdc_is_bit_set (Transact-SQL)
 title: sys. fn_cdc_is_bit_set (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 792fe7cf-b3b8-4f25-8329-78d63f0e6921
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b099f578ebe60a7caaf1f0179af549cd42679c11
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ab93830bd9e2b164f5b76412b2b412dc095c6c9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898370"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88321620"
 ---
 # <a name="sysfn_cdc_is_bit_set-transact-sql"></a>sys.fn_cdc_is_bit_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ sys.fn_cdc_is_bit_set ( position , update_mask )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *position*  
+ *разместить*  
  Порядковое положение в битовой маске. *позицией* является **int**.  
   
  *update_mask*  
@@ -51,7 +52,7 @@ sys.fn_cdc_is_bit_set ( position , update_mask )
 ## <a name="return-type"></a>Тип возвращаемых данных  
  **bit**  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Эта функция обычно используется как часть запроса изменения данных для определения изменения столбца. В этом сценарии функция [sys. fn_cdc_get_column_ordinal](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md) используется перед запросом для получения необходимого порядкового номера столбца. После этого **sys. fn_cdc_is_bit_set** применяется к каждой строке возвращаемых данных об изменениях, предоставляя сведения о конкретном столбце как часть возвращаемого результирующего набора.  
   
  Мы советуем использовать эту функцию вместо функции [sys. fn_cdc_has_column_changed](../../relational-databases/system-functions/sys-fn-cdc-has-column-changed-transact-sql.md) при определении того, изменились ли столбцы для всех строк возвращенного результирующего набора.  
@@ -76,8 +77,8 @@ WHERE __$operation = 4;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Функции системы отслеживания измененных данных &#40;языке Transact-SQL&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Функции системы отслеживания измененных данных (Transact-SQL)](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)   
  [sys. fn_cdc_get_column_ordinal &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md)   
  [sys. fn_cdc_has_column_changed &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-has-column-changed-transact-sql.md)   
  [CDC. fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   

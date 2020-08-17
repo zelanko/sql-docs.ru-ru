@@ -1,4 +1,5 @@
 ---
+description: Защита объектов базы данных (службы Master Data Services)
 title: Защита объектов базы данных
 ms.custom: ''
 ms.date: 03/04/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 656b36f796d05d6ea7533c8c35e4b6ffe9572f99
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: f9b2089b72f11872df0dc0c0b2758fb8272a4c06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811589"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88344910"
 ---
 # <a name="database-object-security-master-data-services"></a>Защита объектов базы данных (службы Master Data Services)
 
@@ -57,7 +58,7 @@ ms.locfileid: "85811589"
   
  Дополнительные сведения см. в разделе [Обзор: импорт данных из таблиц &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
-##  <a name="validating-data-against-business-rules"></a><a name="rules"></a>Проверка данных на соответствие бизнес-правилам  
+##  <a name="validating-data-against-business-rules"></a><a name="rules"></a> Проверка данных на соответствие бизнес-правилам  
   
 |Действие|Защищаемый объект|Разрешения|  
 |------------|---------------|-----------------|  
@@ -65,7 +66,7 @@ ms.locfileid: "85811589"
   
  Дополнительные сведения см. в разделе [Проверка хранимых процедур (службы Master Data Services)](../master-data-services/validation-stored-procedure-master-data-services.md).  
   
-##  <a name="deleting-versions"></a><a name="Versions"></a>Удаление версий  
+##  <a name="deleting-versions"></a><a name="Versions"></a> Удаление версий  
   
 |Действие|Защищаемые объекты|Разрешения|  
 |------------|----------------|-----------------|  
@@ -74,7 +75,7 @@ ms.locfileid: "85811589"
   
  Дополнительные сведения см. в разделе [Удаление версии (службы Master Data Services)](../master-data-services/delete-a-version-master-data-services.md).  
   
-##  <a name="immediately-applying-hierarchy-member-permissions"></a><a name="Hierarchy"></a>Немедленное применение разрешений для элементов иерархии  
+##  <a name="immediately-applying-hierarchy-member-permissions"></a><a name="Hierarchy"></a> Немедленное применение разрешений для элементов иерархии  
   
 |Действие|Защищаемые объекты|Разрешения|  
 |------------|----------------|-----------------|  
@@ -82,10 +83,10 @@ ms.locfileid: "85811589"
   
  Дополнительные сведения см. в разделе [Срочное применение разрешений для элемента (службы Master Data Services)](../master-data-services/immediately-apply-member-permissions-master-data-services.md).  
   
-##  <a name="configuring-system-settings"></a><a name="SysSettings"></a>Настройка параметров системы  
+##  <a name="configuring-system-settings"></a><a name="SysSettings"></a> Настройка параметров системы  
  Эти параметры системы можно изменять, настраивая поведение в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Их можно настроить в [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] или при наличии доступа на выполнение команды UPDATE изменять непосредственно в таблице базы данных mdm.tblSystemSetting. Дополнительные сведения см. в разделе [Системные параметры (службы Master Data Services)](../master-data-services/system-settings-master-data-services.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Безопасность (службы Master Data Services)](../master-data-services/security-master-data-services.md)  
   
   

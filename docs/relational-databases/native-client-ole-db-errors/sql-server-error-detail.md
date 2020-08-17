@@ -1,4 +1,5 @@
 ---
+description: Сведения об ошибке SQL Server Native Client
 title: SQL Server сведения об ошибке (поставщик собственного клиента OLE DB)
 ms.custom: ''
 ms.date: 03/16/2017
@@ -18,12 +19,12 @@ ms.assetid: 51500ee3-3d78-47ec-b90f-ebfc55642e06
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3cc3f7ff6550361baf616d26edf19aad3d6640d7
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 34e98418c65a4c00dab1c344c53249dd27457b66
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87942267"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88328390"
 ---
 # <a name="sql-server-native-client-error-detail"></a>Сведения об ошибке SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +48,7 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
   
  Элементы структуры SSERRORINFO обрабатываются потребителем следующим образом.  
   
-|Член|Описание|  
+|Участник|Description|  
 |------------|-----------------|  
 |*pwszMessage*|Сообщение об ошибке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Идентично строке, возвращаемой методом **IErrorInfo::GetDescription**.|  
 |*pwszServer*|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для сеанса.|  
@@ -58,7 +59,7 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
 |*wLineNumber*|Если применимо, номер строки хранимой процедуры, в которой возникла ошибка.|  
   
 ## <a name="see-also"></a>См. также:  
- [Наличии](../../relational-databases/native-client-ole-db-errors/errors.md)   
+ [Ошибки](../../relational-databases/native-client-ole-db-errors/errors.md)   
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   
