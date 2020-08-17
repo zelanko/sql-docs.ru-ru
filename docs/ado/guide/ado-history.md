@@ -1,4 +1,5 @@
 ---
+description: Функции ADO для каждого выпуска
 title: Журнал ADO | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2019
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 726487d366450f003ca745624a916d400990723b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d97e81eca94867ad00317667d08ef6bdf4c6f058
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761712"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355430"
 ---
 # <a name="ado-features-for-each-release"></a>Функции ADO для каждого выпуска
 
@@ -55,7 +56,7 @@ ms.locfileid: "82761712"
 
  [Диалект](../../ado/reference/ado-api/dialect-property.md) _свойства_ **диалекта**— это новое свойство, определяющее синтаксис и общие правила, которые поставщик использует для анализа строки или потока.  
 
- _Метод_ **Command. Execute**. [метод Execute](../../ado/reference/ado-api/execute-method-ado-command.md) объекта **Command** ADO был усовершенствован для использования потоков для ввода и вывода.  
+ **Command.Exe**  _метод_ милые [метод Execute](../../ado/reference/ado-api/execute-method-ado-command.md) объекта **Command** ADO был усовершенствован для использования потоков для ввода и вывода.
 
  *Поле статусвалуес* Если при изменении **поля** **набора записей**пользователь обнаруживает ошибку DB_E_ERRORSOCCURRED, ADO теперь заполняет свойство **field. status** соответствующими сведениями о состоянии, чтобы пользователь имел дополнительные сведения о том, что пошло не так. См. [свойство Status (поле ADO)](../../ado/reference/ado-api/status-property-ado-field.md).
 

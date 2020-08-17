@@ -1,4 +1,5 @@
 ---
+description: Идентификаторы (расширения интеллектуального анализа данных)
 title: Идентификаторы (расширения интеллектуального анализа данных) | Документация Майкрософт
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 980a13c88abc8d6cbe0fcb71f22f4c0a9f564094
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 3a779e16b06b00cb925f28e8da34ce3959d7dc7e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969827"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88352890"
 ---
 # <a name="identifiers-dmx"></a>Идентификаторы (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "86969827"
   
  При определении объекта создается идентификатор объекта, который затем используется для ссылки на объект. Идентификаторы должны иметь не более 100 символов.  
   
-##  <a name="regular-identifiers"></a><a name="RegularIdentifiers"></a>Обычные идентификаторы  
+##  <a name="regular-identifiers"></a><a name="RegularIdentifiers"></a> Обычные идентификаторы  
  Обычные идентификаторы для расширений интеллектуального анализа данных соответствуют правилам служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], установленным для форматов идентификаторов. Обычным идентификаторам для расширений интеллектуального анализа данных не требуются разделители. Далее приводится пример инструкции расширений интеллектуального анализа данных, в котором использован обычный идентификатор без разделителей.  
   
 ```  
@@ -58,7 +59,7 @@ SELECT * FROM Clustering.CONTENT;
   
  Все идентификаторы, которые не соответствуют этим правилам, должны разделяться скобками при их использовании в инструкциях для расширения интеллектуального анализа данных.  
   
-##  <a name="delimited-identifiers"></a><a name="DelimitedIdentifiers"></a>Идентификаторы с разделителями  
+##  <a name="delimited-identifiers"></a><a name="DelimitedIdentifiers"></a> Идентификаторы с разделителями  
  Идентификаторы с разделителями заключаются в квадратные скобки ([ ]).  Далее приводится пример инструкции для расширения интеллектуального анализа данных с идентификатором с разделителем, который соответствует этим правилам.  
   
 ```  
@@ -95,14 +96,14 @@ SELECT * FROM [Targeted Mailing].CONTENT;
 ### <a name="delimiting-identifiers-with-multiple-parts"></a>Выделенные идентификаторы с несколькими частями  
  При использовании уточненных имен объектов может понадобиться выделить несколько идентификаторов, составляющих имя объекта. Необходимо выделить каждый идентификатор по отдельности.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширения интеллектуального анализа данных &#40;Справочник по DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
  [Расширения интеллектуального анализа данных &#40;синтаксические&#41; DMX-элементы](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Расширения интеллектуального анализа данных &#40;Справочник по функциям DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Ссылки на операторы расширений интеллектуального анализа данных &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Расширения интеллектуального анализа данных &#40;Справочник по инструкции DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)   
  [Расширения интеллектуального анализа данных &#40;синтаксические обозначения&#41; DMX](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Общие прогнозирующие функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/general-prediction-functions-dmx.md)   
+ [Общие прогнозирующие функции &#40;&#41;расширений интеллектуального анализа данных ](../dmx/general-prediction-functions-dmx.md)   
  [Структура и использование прогнозирующих запросов расширений интеллектуального анализа данных](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Общие сведения об инструкции расширения интеллектуального анализа данных SELECT](../dmx/understanding-the-dmx-select-statement.md)  
   

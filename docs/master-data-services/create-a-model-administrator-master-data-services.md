@@ -1,4 +1,5 @@
 ---
+description: Создание администратора модели (службы Master Data Services)
 title: Создание администратора модели
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1a81be69eee7a0fa8ea61b4491a296552aca51ff
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 9049dc6e40cb7bba60b68e8185e887fe27f4a5ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85814053"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88390090"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>Создание администратора модели (службы Master Data Services)
 
@@ -57,7 +58,7 @@ ms.locfileid: "85814053"
   
 10. Выберите команду **Сохранить**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Администраторы &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)   
  [Назначение разрешений объекта модели &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [Назначение разрешений элемента иерархии &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   

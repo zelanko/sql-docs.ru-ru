@@ -1,4 +1,5 @@
 ---
+description: FirstChild (многомерные выражения)
 title: FirstChild (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c1bd2f37304131b881d49aaa874eaed13530fc0e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 60194581eb5bd2bb7f0a6252ca33062b60809706
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032072"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387490"
 ---
 # <a name="firstchild-mdx"></a>FirstChild (многомерные выражения)
 
@@ -40,7 +41,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [LastChild &#40;&#41;многомерных выражений](../mdx/lastchild-mdx.md)   
+ [LastChild &#40;&#41;многомерных выражений ](../mdx/lastchild-mdx.md)   
  [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

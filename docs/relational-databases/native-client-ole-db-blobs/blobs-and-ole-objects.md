@@ -1,4 +1,5 @@
 ---
+description: Большие двоичные объекты и OLE (поставщик собственного клиента OLE DB)
 title: Большие двоичные объекты и OLE (поставщик собственного клиента OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,12 +18,12 @@ ms.assetid: 767fa2f6-9cd2-436f-add5-e760bed29a58
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d8ca3c194be1b13bad029a45040daa2f7e61108
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: c9ab95bece59c6ecb2ed3c2df4aeb0b90ec52605
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242307"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88381208"
 ---
 # <a name="blobs-and-ole-objects-in-sql-server-native-client"></a>Большие двоичные объекты и OLE в SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,7 +64,7 @@ ms.locfileid: "87242307"
   
 -   [Присваивание больших данных](../../relational-databases/native-client-ole-db-blobs/setting-large-data.md)  
   
--   [Поддержка потоков для выходных параметров BLOB](../../relational-databases/native-client-ole-db-blobs/streaming-support-for-blob-output-parameters.md)  
+-   [Поддержка потоков для выходных параметров BLOB-объектов](../../relational-databases/native-client-ole-db-blobs/streaming-support-for-blob-output-parameters.md)  
   
 ## <a name="see-also"></a>См. также:  
  [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   

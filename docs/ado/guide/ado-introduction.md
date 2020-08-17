@@ -1,4 +1,5 @@
 ---
+description: Обзор и преимущества ADO
 title: Общие сведения об ADO | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c5b3a134-de22-4e9c-9489-9a1cc7a5dcfa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 811d850127b215e69c3710e7680f655714773f57
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b702f96fab776c383e309a94eea9358ed95cab90
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761702"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355440"
 ---
 # <a name="ado-overview-and-benefits"></a>Обзор и преимущества ADO
 Объекты данных ActiveX (ADO) — это высокоуровневый, простой в использовании интерфейс для OLE DB. OLE DB — это высокопроизводительный интерфейс с большим уровнем производительности для различных хранилищ данных. ADO и OLE DB могут работать с реляционными (табличными) и нереляционными (иерархическими или потоками) данными.

@@ -1,4 +1,5 @@
 ---
+description: Подключение к SQL Server (DB2ToSQL)
 title: Подключение к SQL Server (DB2ToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: bc14a072-8949-4ee0-a4b4-ada55fe8df5c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: bd1b92f7daa49ea668a37f212f3fa338fbf3f97a
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 8b9d2fc6610ad7a0af9518bd91b270d914e9e622
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937353"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373010"
 ---
 # <a name="connect-to-sql-server-db2tosql"></a>Подключение к SQL Server (DB2ToSQL)
 Используйте диалоговое окно **Подключение к SQL Server** , чтобы подключиться к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на который требуется выполнить миграцию. Чтобы открыть диалоговое окно **Подключение к SQL Server** , в меню **файл** выберите пункт **подключиться к SQL Server**.  

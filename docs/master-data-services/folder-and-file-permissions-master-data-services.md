@@ -1,4 +1,5 @@
 ---
+description: Разрешения для папок и файлов (службы Master Data Services)
 title: Разрешения для папок и файлов
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6402d81d-7349-47b1-95ca-99b0c0f4f373
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4183f8be34e7322af72a76297631df2b4060421c
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 0d06fb6aaacdac159ab9241209c862e22758e999
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811509"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88388830"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>Разрешения для папок и файлов (службы Master Data Services)
 
@@ -64,7 +65,7 @@ ms.locfileid: "85811509"
   
  Дополнительные сведения о содержимом файла [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web.config см. в разделе [Раздел "Веб-конфигурация" (службы Master Data Services)](../master-data-services/web-configuration-reference-master-data-services.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Установка служб Master Data Services](../master-data-services/install-windows/install-master-data-services.md)  
   
   

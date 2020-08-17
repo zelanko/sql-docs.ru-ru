@@ -1,4 +1,5 @@
 ---
+description: Создание настраиваемого рабочего процесса (службы Master Data Services)
 title: Создание настраиваемого рабочего процесса
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b30b9a9c8adf7386e0a645b082466dec5afe9220
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7328d550697e1c6e0edd076d748a594946372915
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897443"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88389860"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Создание настраиваемого рабочего процесса (службы Master Data Services)
 
@@ -53,7 +54,7 @@ ms.locfileid: "85897443"
 5.  Примените бизнес-правило к элементу, который запускает пользовательский рабочий процесс.  
   
 ### <a name="create-the-workflow-handler-assembly"></a>Создание сборки обработчика рабочих процессов  
- Настраиваемый рабочий процесс — это сборка библиотеки классов .NET, которая реализует интерфейс [Microsoft. MasterDataServices. воркфловтипикстендер. иворкфловтипикстендер](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) . Служба интеграции рабочего процесса MDS SQL Server вызывает метод [Microsoft. MasterDataServices. воркфловтипикстендер. иворкфловтипикстендер. стартворкфлов *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) для выполнения кода. Пример кода, который реализует [Microsoft. MasterDataServices. воркфловтипикстендер. иворкфловтипикстендер. стартворкфлов *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) , см. в разделе [Пример настраиваемого рабочего процесса &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md).  
+ Настраиваемый рабочий процесс — это сборка библиотеки классов .NET, которая реализует интерфейс [Microsoft. MasterDataServices. воркфловтипикстендер. иворкфловтипикстендер](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) . Служба интеграции рабочего процесса MDS SQL Server вызывает метод [Microsoft. MasterDataServices. воркфловтипикстендер. иворкфловтипикстендер. стартворкфлов *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130))  для выполнения кода. Пример кода, который реализует [Microsoft. MasterDataServices. воркфловтипикстендер. иворкфловтипикстендер. стартворкфлов *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) , см. в разделе [Пример настраиваемого рабочего процесса &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md).  
   
  Выполните следующие действия, чтобы создать с помощью Visual Studio 2010 сборку, которую сможет вызывать служба SQL Server MDS Workflow Integration Service для обработки пользовательского рабочего процесса:  
   
@@ -65,7 +66,7 @@ ms.locfileid: "85897443"
   
 4.  Наследуйте из [Microsoft. MasterDataServices. воркфловтипикстендер. иворкфловтипикстендер](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) в объявлении класса. Объявление класса должно выглядеть примерно так: public class WorkflowTester : IWorkflowTypeExtender.  
   
-5.  Реализуйте интерфейс [Microsoft. MasterDataServices. воркфловтипикстендер. иворкфловтипикстендер](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) . Метод [Microsoft. MasterDataServices. воркфловтипикстендер. иворкфловтипикстендер. стартворкфлов *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) вызывается службой интеграции рабочего процесса MDS SQL Server для запуска рабочего процесса.  
+5.  Реализуйте интерфейс [Microsoft. MasterDataServices. воркфловтипикстендер. иворкфловтипикстендер](/previous-versions/sql/sql-server-2016/hh758785(v=sql.130)) . Метод [Microsoft. MasterDataServices. воркфловтипикстендер. иворкфловтипикстендер. стартворкфлов *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130))  вызывается службой интеграции рабочего процесса MDS SQL Server для запуска рабочего процесса.  
   
 6.  Скопируйте сборку в расположение исполняемого файла SQL Server службы интеграции рабочих процессов MDS с именем Microsoft.MasterDataServices.Workflow.exe в \<Your installation folder> \Мастер Data Services\WebApplication\bin.  
   
@@ -82,7 +83,7 @@ ms.locfileid: "85897443"
     </setting>  
     ```  
   
-3.  Под параметром ConnectionString добавьте параметр WorkflowTypeExtenders, чтобы связать имя тега с используемой сборкой обработчика рабочих процессов. Пример:  
+3.  Под параметром ConnectionString добавьте параметр WorkflowTypeExtenders, чтобы связать имя тега с используемой сборкой обработчика рабочих процессов. Например:  
   
     ```xml  
     <setting name="WorkflowTypeExtenders" serializeAs="String">  
@@ -90,7 +91,7 @@ ms.locfileid: "85897443"
     </setting>  
     ```  
   
-     Внутренний текст \<value> тега имеет вид \<Workflow tag> = \<assembly-qualified workflow type name> . \<Workflow tag>— Это имя, которое используется для задания сборки обработчика рабочего процесса при создании бизнес-правила в [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] . \<assembly-qualified workflow type name>— Это имя класса рабочего процесса с указанием пространства имен, за которым следует запятая, за которым следует отображаемое имя сборки. Если сборка имеет строгое имя, то также необходимо указать данные о версии и ее PublicKeyToken. \<setting>Если вы создали несколько обработчиков рабочих процессов для различных типов рабочих процессов, можно включить несколько тегов.  
+     Внутренний текст \<value> тега имеет вид \<Workflow tag> = \<assembly-qualified workflow type name> . \<Workflow tag> — Это имя, которое используется для задания сборки обработчика рабочего процесса при создании бизнес-правила в [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] . \<assembly-qualified workflow type name> — Это имя класса рабочего процесса с указанием пространства имен, за которым следует запятая, за которым следует отображаемое имя сборки. Если сборка имеет строгое имя, то также необходимо указать данные о версии и ее PublicKeyToken. \<setting>Если вы создали несколько обработчиков рабочих процессов для различных типов рабочих процессов, можно включить несколько тегов.  
   
 > [!NOTE]  
 >  В зависимости от конфигурации сервера при попытке сохранить файл Microsoft.MasterDataServices.Workflow.exe.config на экране может появиться сообщение об ошибке "В доступе отказано". В этом случае временно отключите контроль учетных записей на сервере. Для этого откройте панель управления и выберите пункт **Система и безопасность**. В разделе **Центр уведомлений** щелкните **Изменить параметры контроля учетных записей**. В диалоговом окне **Параметры контроля учетных записей** передвиньте ползунок в самый низ, чтобы не получать никаких уведомлений. Перезагрузите компьютер и повторите описанные ранее действия для изменения файла конфигурации. После сохранения файла, сбросьте параметры контроля учетных записей пользователей на значения по умолчанию.  
@@ -151,7 +152,7 @@ ms.locfileid: "85897443"
 ### <a name="view-the-service-broker-queue"></a>Просмотр очереди компонента Service Broker  
  Очередь компонента Service Broker, в которой содержатся основные данные, переданные в рамках рабочего процесса, находится по адресу mdm.microsoft/mdm/queue/externalaction. В **обозревателе объектов** среды SQL Management Studio очереди находятся в узле компонента Service Broker базы данных [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Имейте в виду, что если служба должным образом очистила очередь, она будет пуста.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример настраиваемого рабочего процесса &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)   
  [Описание XML настраиваемого рабочего процесса (службы Master Data Services)](../../master-data-services/develop/create-a-custom-workflow-xml-description.md)  
   

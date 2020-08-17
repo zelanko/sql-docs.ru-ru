@@ -1,4 +1,5 @@
 ---
+description: Представление каталога sys.sql_expression_dependencies (Transact-SQL)
 title: sys. sql_expression_dependencies (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f358296320ebeeefcc6004a59754ba8e8052e789
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 742b366a871a929463b044b53a822a71fd7e073d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396683"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88376020"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>Представление каталога sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -73,12 +74,12 @@ ms.locfileid: "87396683"
 |Тип сущности|Ссылающаяся сущность|Упоминаемая сущность|  
 |-----------------|------------------------|-----------------------|  
 |Таблица|Да*|Да|  
-|Просмотр|да|да|  
+|Представление|Да|Да|  
 |Фильтруемый индекс|Да**|Нет|  
 |Статистика фильтрации|Да**|Нет|  
-|Хранимая процедура [!INCLUDE[tsql](../../includes/tsql-md.md)]***|да|да|  
+|Хранимая процедура [!INCLUDE[tsql](../../includes/tsql-md.md)]***|Да|Да|  
 |Хранимая процедура CLR|Нет|Да|  
-|Определяемая пользователем функция [!INCLUDE[tsql](../../includes/tsql-md.md)]|да|да|  
+|Определяемая пользователем функция [!INCLUDE[tsql](../../includes/tsql-md.md)]|Да|Да|  
 |Определяемая пользователем функция CLR|Нет|Да|  
 |Триггер CLR (DML и DDL)|Нет|Нет|  
 |Триггер DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Да|Нет|  
@@ -91,7 +92,7 @@ ms.locfileid: "87396683"
 |Коллекция схем XML|Нет|Да|  
 |Функция секционирования|Нет|Да|  
   
- \*Таблица обрабатывается как ссылающаяся сущность, только если она ссылается на [!INCLUDE[tsql](../../includes/tsql-md.md)] модуль, определяемый пользователем тип или коллекцию схем XML в определении вычисляемого столбца, проверочного ограничения или ограничения по умолчанию.  
+ \* Таблица обрабатывается как ссылающаяся сущность, только если она ссылается на [!INCLUDE[tsql](../../includes/tsql-md.md)] модуль, определяемый пользователем тип или коллекцию схем XML в определении вычисляемого столбца, проверочного ограничения или ограничения по умолчанию.  
   
  **Каждый столбец, используемый в предикате фильтра, отслеживается как ссылающаяся сущность.  
   
@@ -123,7 +124,7 @@ GO
   
 ```  
   
-### <a name="b-returning-entities-that-reference-another-entity"></a>Б) Возвращение сущностей, ссылающихся на другую сущность  
+### <a name="b-returning-entities-that-reference-another-entity"></a>Б. Возвращение сущностей, ссылающихся на другую сущность  
  В следующем примере возвращаются сущности, ссылающиеся на таблицу `Production.Product`. Сущности, возвращенные в столбце `referencing_entity_name`, зависят от таблицы `Product`.  
   
 ```  
@@ -171,7 +172,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sys.dm_sql_referenced_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.dm_sql_referencing_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)  
   

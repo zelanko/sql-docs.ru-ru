@@ -1,4 +1,5 @@
 ---
+description: Определение данных многомерных выражений — DROP SUBCUBE
 title: Инструкция DROP CUBE (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0c1af84d315b843669a25f385b1e0ec9b7f123dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 083bcf1f02a8fda49142225c39b8e44dd027dbe2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038147"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387028"
 ---
 # <a name="mdx-data-definition---drop-subcube"></a>Определение данных многомерных выражений — DROP SUBCUBE
 
@@ -33,6 +34,6 @@ DROP SUBCUBE Subcube_Name
   
 ## <a name="see-also"></a>См. также:  
  [Инструкции скриптов многомерных выражений &#40;многомерные выражения&#41;](../mdx/mdx-scripting-statements-mdx.md)   
- [Инструкция CREATE CUBE &#40;&#41;многомерных выражений](../mdx/mdx-data-definition-create-subcube.md)  
+ [Инструкция CREATE CUBE &#40;&#41;многомерных выражений ](../mdx/mdx-data-definition-create-subcube.md)  
   
   

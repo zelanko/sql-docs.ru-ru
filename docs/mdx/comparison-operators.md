@@ -1,4 +1,5 @@
 ---
+description: Операторы сравнения
 title: Операторы сравнения | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 4e3aa00334d98af02521005679174feb3b28c55f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2f1dcb77c15e540a740ac9956dc4c547c5ca61c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68001515"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387673"
 ---
 # <a name="comparison-operators"></a>Операторы сравнения
 
@@ -36,7 +37,7 @@ ms.locfileid: "68001515"
 |[<= (меньше или равно)](../mdx/less-than-or-equal-to-mdx.md)|Для аргументов, отличных от NULL, возвращает значение TRUE, если левый аргумент меньше или равен правому; в противном случае возвращает значение FALSE.<br /><br /> Если один или оба аргумента принимают значение NULL, оператор возвращает значение NULL.|  
   
 ## <a name="see-also"></a>См. также:  
- [Справочник по операторам многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-operator-reference-mdx.md)   
+ [Справочник по операторам многомерных выражений &#40;&#41;многомерных выражений ](../mdx/mdx-operator-reference-mdx.md)   
  [Операторы &#40;синтаксиса многомерных выражений&#41;](../mdx/operators-mdx-syntax.md)  
   
   

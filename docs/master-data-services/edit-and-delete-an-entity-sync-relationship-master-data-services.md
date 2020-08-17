@@ -1,4 +1,5 @@
 ---
+description: Создание и удаление отношения синхронизации сущностей (Master Data Services)
 title: Создание и удаление отношения синхронизации сущностей
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9a5e37f3-352e-45a6-b4a0-6f98f83b4bd8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 92b67b981c5eb7dbd1e05b1d18af291cae78aaa1
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 68b88f98626f2645d2ca69311f4302e0d51fe51c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85814001"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88389470"
 ---
 # <a name="edit-and-delete-an-entity-sync-relationship-master-data-services"></a>Создание и удаление отношения синхронизации сущностей (Master Data Services)
 
@@ -84,7 +85,7 @@ ms.locfileid: "85814001"
   
 5.  В диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание и выполнение отношения синхронизации сущностей &#40;Master Data Services&#41;](../master-data-services/create-and-execute-an-entity-sync-relationship-master-data-services.md)   
  [Отношение синхронизации сущностей (Master Data Services)](../master-data-services/entity-sync-relationship-master-data-services.md)  
   

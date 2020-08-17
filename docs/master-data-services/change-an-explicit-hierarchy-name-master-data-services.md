@@ -1,4 +1,5 @@
 ---
+description: Изменение имени явной иерархии (службы Master Data Services)
 title: Изменение имени явной иерархии
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 12991603-474e-4042-b160-b1f7979694b1
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 31f93bbb8aa214a1353fce1a571f555c94055ccd
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: af898be32f3c3713bbf73a34bec2d9a4f67368be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812039"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88390260"
 ---
 # <a name="change-an-explicit-hierarchy-name-master-data-services"></a>Изменение имени явной иерархии (службы Master Data Services)
 
@@ -48,7 +49,7 @@ ms.locfileid: "85812039"
   
 7.  Выберите команду **Сохранить**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Явные иерархии &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
  [Создание явной иерархии &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
  [Удаление явной иерархии (службы Master Data Services)](../master-data-services/delete-an-explicit-hierarchy-master-data-services.md)  

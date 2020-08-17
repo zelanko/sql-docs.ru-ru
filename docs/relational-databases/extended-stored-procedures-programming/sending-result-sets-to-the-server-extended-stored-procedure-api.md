@@ -1,4 +1,5 @@
 ---
+description: Отправка результирующих наборов на сервер (API-интерфейс расширенных хранимых процедур)
 title: Отправка результирующих наборов на сервер (API-интерфейс расширенных хранимых процедур)
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: 9d54673d-ea9d-4ac6-825a-f216ad8b0e34
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: c0ba957f0cde17f7accfeee66952fe2488a854bd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4747c464956d4c1da804a4bf9182cbb507a45989
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767748"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88383140"
 ---
 # <a name="sending-result-sets-to-the-server-extended-stored-procedure-api"></a>Отправка результирующих наборов на сервер (API-интерфейс расширенных хранимых процедур)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85767748"
   
 -   При отправке строки, в которой не были все столбцы, определенные с помощью **srv_describe** , приложение создает информационное сообщение об ошибке и возвращает клиенту ошибку. В этом случае строка не отправляется.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание расширенных хранимых процедур](../../relational-databases/extended-stored-procedures-programming/creating-extended-stored-procedures.md)  
   
   

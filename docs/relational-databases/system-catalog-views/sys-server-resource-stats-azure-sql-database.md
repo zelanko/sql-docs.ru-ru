@@ -1,4 +1,5 @@
 ---
+description: sys. server_resource_stats (база данных SQL Azure)
 title: sys. server_resource_stats (база данных SQL Azure) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/28/2018
@@ -19,12 +20,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 716d9703ca684adc653d1f43e674b7d99ae91765
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: ef3f27b814405cf6ca56a47ffcac8dd467f939f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864495"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88376710"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>sys. server_resource_stats (база данных SQL Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "87864495"
 |resource_name|NVARCHAR(128)|Имя ресурса.|
 |sku|NVARCHAR(128)|Управляемый экземпляр уровня служб экземпляра. Допустимы следующие значения: <br><ul><li>Общее назначение</li></ul><ul><li>Критически важный для бизнеса</li></ul>|
 |hardware_generation|NVARCHAR(128)|Идентификатор создания оборудования: например, Gen 4 или Gen 5|
-|virtual_core_count|int|Представляет число виртуальных ядер на экземпляр (8, 16 или 24 в общедоступной предварительной версии)|
+|virtual_core_count|INT|Представляет число виртуальных ядер на экземпляр (8, 16 или 24 в общедоступной предварительной версии)|
 |avg_cpu_percent|Decimal (5, 2)|Среднее использование вычислительных ресурсов в процентах от ограничения уровня служб Управляемый экземпляр, используемого экземпляром. Он вычисляется как сумма времени ЦП всех пулов ресурсов для всех баз данных в экземпляре и распределяется по доступному времени ЦП для этого уровня в заданном интервале.|
 |reserved_storage_mb|BIGINT|Зарезервированное хранилище на экземпляр (объем дискового пространства, приобретенный клиентом для управляемого экземпляра)|
 |storage_space_used_mb|десятичное число (18, 2)|Хранилище, используемое всеми файлами базы данных в управляемом экземпляре (включая пользовательские и системные базы данных)|

@@ -1,4 +1,5 @@
 ---
+description: Изменение имени версии (службы Master Data Services)
 title: Изменение имени версии
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cba8b814-155f-49c5-b636-afddc5b0de4f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4d58e5aaa11a69b6b4c733a238bf6d0e0b15ddef
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: df3f24472f7a08f137bf9445a1ce99c5407a4ff1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813619"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88390791"
 ---
 # <a name="change-a-version-name-master-data-services"></a>Изменение имени версии (службы Master Data Services)
 
@@ -44,7 +45,7 @@ ms.locfileid: "85813619"
   
 4.  Нажмите клавишу ВВОД.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Проверка версии на соответствие бизнес-правилам &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
  [Блокировка &#40;версии Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)   
  [Фиксация &#40;версии Master Data Services&#41;](../master-data-services/commit-a-version-master-data-services.md)   

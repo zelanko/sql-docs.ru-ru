@@ -1,4 +1,5 @@
 ---
+description: Образец источника данных
 title: Пример источника данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cbf15f32-0550-4c74-8088-8f7ac3855469
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 48c87f0d9f0a48b7d216151178c15bb019c0cbaa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f0d165279dc0b2f4b056d2e214461c7ef019956b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306525"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386050"
 ---
 # <a name="data-source-example"></a>Образец источника данных
 На компьютерах, работающих под управлением Microsoft® Windows NT® Server/Windows 2000 Server, Microsoft Windows NT Workstation/Windows 2000 Professional или Microsoft Windows® 95/98, сведения об источнике данных компьютера хранятся в реестре. В зависимости от того, в каком разделе реестра хранятся данные, источник данных называется *источником данных пользователя* или *системным источником данных*. Источники данных пользователя хранятся в ключе HKEY_CURRENT_USER и доступны только текущему пользователю. Системные источники данных хранятся в ключе HKEY_LOCAL_MACHINE и могут использоваться несколькими пользователями на одном компьютере. Они также могут использоваться службами на уровне системы, которые затем могут получить доступ к источнику данных, даже если на компьютере не вошел ни один пользователь. Дополнительные сведения о пользовательских и системных источниках данных см. в разделе [склманажедатасаурцес](../../odbc/reference/syntax/sqlmanagedatasources.md).  

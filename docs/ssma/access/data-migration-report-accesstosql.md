@@ -1,4 +1,5 @@
 ---
+description: Отчет о переносе данных (Акцесстоскл)
 title: Отчет о переносе данных (Акцесстоскл) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b090b327-cec6-4d9a-a670-8f96e8ff0046
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 0544ba7d4c0a1d2b896cc7667c4386effc070824
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d7d81b695aaf09fd601b47e67c187676b82f7349
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934061"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88321010"
 ---
 # <a name="data-migration-report-accesstosql"></a>Отчет о переносе данных (Акцесстоскл)
 После переноса данных в появляется диалоговое окно **отчет о переносе данных** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -35,10 +36,10 @@ ms.locfileid: "87934061"
 **Число успешно перенесенных строк**  
 Число строк данных, успешно перенесенных в целевую таблицу.  
   
-**Соотношение**  
+**Коэффициент**  
 Процент успешно перенесенных строк.  
   
-**Подробные сведения**  
+**Сведения**  
 В случае сбоя переноса данных щелкните, чтобы отобразить сведения о миграции для выбранной строки отчета. SSMA отобразит причину сбоя.  
   
 **Сохранить отчет**  

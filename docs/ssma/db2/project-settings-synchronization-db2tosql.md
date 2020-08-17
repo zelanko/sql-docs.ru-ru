@@ -1,4 +1,5 @@
 ---
+description: Параметры проекта (синхронизация) (DB2ToSQL)
 title: Параметры проекта (синхронизация) (DB2ToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a5629a72-8c17-46a4-bb4d-19d51a0b98a2
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c66b7e9ad09c61b1ecfaddb21a9253ae6a6237c9
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d6b4aef228ca1631bb550437ff0f66ff20555cb0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933605"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88321070"
 ---
 # <a name="project-settingssynchronization-db2tosql"></a>Параметры проекта (синхронизация) (DB2ToSQL)
 Страница синхронизация диалогового окна **Параметры проекта** содержит параметры, которые настраивают, как SSMA загружает и обновляет объекты базы данных, такие как таблицы и хранимые процедуры, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

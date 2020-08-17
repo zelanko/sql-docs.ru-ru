@@ -1,4 +1,5 @@
 ---
+description: Создание настраиваемого рабочего процесса — описание XML
 title: Описание XML настраиваемого рабочего процесса
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f7c49f9b2831942552844e6bb479d139988d84c7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c12348fc830a187a8d88841c15e25ba726bef968
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897419"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88389790"
 ---
 # <a name="create-a-custom-workflow---xml-description"></a>Создание настраиваемого рабочего процесса — описание XML
 
@@ -77,7 +78,7 @@ ms.locfileid: "85897419"
 |\<Name>|Первый атрибут элемента, который был изменен. Этот пример элемента содержит только атрибуты Name и Code.|  
 |\<Code>|Следующий атрибут элемента, который был изменен. Если бы этот пример элемента содержал больше атрибутов, то они следовали бы за первым.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание настраиваемого &#40;рабочего процесса Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)   
  [Пример настраиваемого рабочего процесса (службы Master Data Services)](../../master-data-services/develop/create-a-custom-workflow-example.md)  
   

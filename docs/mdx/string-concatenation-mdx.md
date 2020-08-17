@@ -1,4 +1,5 @@
 ---
+description: + (Объединение строк) МНОГОМЕРНЫХ выражений
 title: + (Объединение строк) (МНОГОМЕРНЫЕ ВЫРАЖЕНИЯ) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 4d5f2316e3af5ce3c925ef71e1da5baf5bab868d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e92751cb709a93d3d5d8d05ac76361c22bee5fa7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036850"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386870"
 ---
 # <a name="-string-concatenation-mdx"></a>+ (объединение строк) (многомерные выражения)
 
@@ -38,6 +39,6 @@ String_Expression + String_Expression
  Оба выражения должны иметь одинаковый тип данных, или одно из выражений должно допускать неявное преобразование к типу данных другого выражения. Если результатом вычисления одного выражения является значение NULL, оператор возвращает результат вычисления другого выражения.  
   
 ## <a name="see-also"></a>См. также:  
- [Справочник по операторам многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-operator-reference-mdx.md)  
+ [Справочник по операторам многомерных выражений &#40;&#41;многомерных выражений ](../mdx/mdx-operator-reference-mdx.md)  
   
   

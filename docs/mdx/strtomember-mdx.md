@@ -1,4 +1,5 @@
 ---
+description: StrToMember (многомерные выражения)
 title: StrToMember (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a78f0664ea561825bb279db47aa3c01fc98bf7dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 68d2d99bb51412a98919d1ab1626c7a86bd86245
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036798"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386810"
 ---
 # <a name="strtomember-mdx"></a>StrToMember (многомерные выражения)
 

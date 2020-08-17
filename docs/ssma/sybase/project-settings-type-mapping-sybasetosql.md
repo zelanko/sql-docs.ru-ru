@@ -1,4 +1,5 @@
 ---
+description: Параметры проекта (сопоставление типов) (SybaseToSQL)
 title: Параметры проекта (сопоставление типов) (SybaseToSQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2698fb3a-f9e6-4e04-94e0-dad289d7ed0a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 12002496f30d836f01d0b11f4007f63f018266e9
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 99ab880b69d2c06d462ed42ca0a2529ba6bf7bc2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87930732"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372120"
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>Параметры проекта (сопоставление типов) (SybaseToSQL)
 Страница Сопоставление типов диалогового окна **Параметры проекта** содержит параметры, которые настраивают, каким способом SSMA преобразует адаптивные серверные типы данных SYBASE (ASE) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типы данных.  
@@ -43,7 +44,7 @@ ms.locfileid: "87930732"
 **Удалить**  
 Нажмите, чтобы удалить выбранное сопоставление типа данных из списка сопоставления.  
   
-**По умолчанию**  
+**Сброс до значений по умолчанию**  
 Нажмите, чтобы сбросить список сопоставления типов к значениям по умолчанию SSMA.  
   
 ## <a name="default-type-mapping"></a>Сопоставление типов по умолчанию  

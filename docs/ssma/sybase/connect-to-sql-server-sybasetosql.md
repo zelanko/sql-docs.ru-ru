@@ -1,4 +1,5 @@
 ---
+description: Диалоговое окно "Подключение к SQL Server" (SybaseToSQL)
 title: Подключение к SQL Server (SybaseToSQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 30179b25-409b-4e23-bc73-2f226657098f
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 78007a3d788c7387cd59c2fa1b9f3cf52466c525
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 115b5ca1eadac2e8042abcc6fae7add920889155
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932425"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372490"
 ---
 # <a name="connect-to-sql-server-sybasetosql"></a>Диалоговое окно "Подключение к SQL Server" (SybaseToSQL)
 Используйте диалоговое окно **Подключение к SQL Server** , чтобы подключиться к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на который требуется выполнить миграцию. Чтобы открыть диалоговое окно **Подключение к SQL Server** , в меню **файл** выберите пункт **подключиться к SQL Server**.  

@@ -1,4 +1,5 @@
 ---
+description: Определение данных многомерных выражений — DROP SET
 title: Инструкция DROP SET (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f4e31a687597e454b9afe38d6c6dd1c15af486d0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0992df0c7180c8a572fb1f8c34b99059ab118ea4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893724"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387240"
 ---
 # <a name="mdx-data-definition---drop-set"></a>Определение данных многомерных выражений — DROP SET
 
@@ -43,6 +44,6 @@ DROP [SESSION] SET
  Дополнительные сведения об именованных наборах см. в разделе [Построение именованных наборов в многомерных выражениях](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets).  
   
 ## <a name="see-also"></a>См. также:  
- [Инструкции определения данных многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Инструкции определения данных многомерных выражений &#40;&#41;многомерных выражений ](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

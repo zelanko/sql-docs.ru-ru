@@ -1,4 +1,5 @@
 ---
+description: Работа с консолью SSMA для MySQL (MySQLToSQL)
 title: Работа с SSMA для консоли MySQL (MySQLToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 240aaad1-d65d-4dea-b60b-315cb1ac733d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 757bcd943b1af7c428d666fecacdaf6db7afcae3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 540f09b2fe8de23b9912dc695e0cf1c9c1d69b86
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935153"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372780"
 ---
 # <a name="working-with-ssma-for-mysql-console-mysqltosql"></a>Работа с консолью SSMA для MySQL (MySQLToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Помощник по миграции (SSMA) для MySQL теперь можно получить с помощью консольного приложения в командной строке. Файлы скрипта образуют входные данные для приложения для выполнения команд. Как консольное приложение, SSMA обеспечивает взаимодействие на уровне сценариев, сокращает цикл миграции и масштабирует усилия по миграции.  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Помощник по миграции (SSMA) для MySQL теперь можно получить с помощью консольного приложения в командной строке. Файлы скрипта образуют входные данные для приложения для выполнения команд. Как консольное приложение, SSMA обеспечивает взаимодействие на уровне сценариев, сокращает цикл миграции и масштабирует усилия по миграции.  
   
 В этом разделе описывается процедура миграции базы данных MySQL с помощью консольного приложения SSMA.  
   

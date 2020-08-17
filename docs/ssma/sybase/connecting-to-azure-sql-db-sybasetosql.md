@@ -1,4 +1,5 @@
 ---
+description: Подключение к базе данных SQL Azure (SybaseToSQL)
 title: Подключение к базе данных SQL Azure (SybaseToSQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9e77e4b0-40c0-455c-8431-ca5d43849aa7
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 12e090ef0b2c97fe57d27a61842dd7fe2cb99866
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: eacdca6cf260557171f5adf63f8590842de77fcb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932106"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372350"
 ---
 # <a name="connecting-to-azure-sql-database-sybasetosql"></a>Подключение к базе данных SQL Azure (SybaseToSQL)
 Чтобы перенести базы данных Sybase в базу данных SQL Azure, необходимо подключиться к целевому экземпляру базы данных SQL Azure. При подключении SSMA получает метаданные о всех базах данных в экземпляре базы данных SQL Azure и отображает метаданные базы данных в обозревателе метаданных базы данных SQL Azure. SSMA хранит сведения об экземпляре базы данных SQL Azure, к которой вы подключены, но не сохраняете пароли.  
@@ -28,7 +29,7 @@ ms.locfileid: "87932106"
   
 1.  Чтобы преобразовать объекты Sybase в [!INCLUDE[tsql](../../includes/tsql-md.md)] синтаксис, обновить метаданные из базы данных SQL Azure или сохранить преобразованный синтаксис в скрипты, учетная запись должна иметь разрешение на вход в экземпляр базы данных SQL Azure.  
   
-2.  Чтобы загрузить объекты базы данных в базу данных SQL Azure, минимальные требования к разрешениям являются членство в роли базы данных **db_owner** в целевой базе данных.  
+2.  Чтобы загрузить объекты базы данных в базу данных SQL Azure, минимальные требования к разрешениям являются членство в роли базы данных  **db_owner** в целевой базе данных.  
   
 ## <a name="establishing-an-azure-sql-database-connection"></a>Установка подключения к базе данных SQL Azure  
 Перед преобразованием объектов базы данных Sybase в синтаксис базы данных SQL Azure необходимо установить соединение с экземпляром базы данных SQL Azure, в которую необходимо перенести базы данных Sybase или.  
@@ -54,7 +55,7 @@ ms.locfileid: "87932106"
   
 6.  SSMA рекомендует зашифрованное подключение к базе данных SQL Azure.  
   
-7.  Нажмите кнопку **Подключиться**.  
+7.  Нажмите кнопку **Соединить**.  
   
 > [!IMPORTANT]  
 > SSMA для Sybase не поддерживает подключение к базе данных **master** в базе данных SQL Azure.  

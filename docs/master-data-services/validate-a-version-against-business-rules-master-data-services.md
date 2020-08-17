@@ -1,4 +1,5 @@
 ---
+description: Подтверждение исправления проблемы, обнаруженной при проверке на соответствие бизнес-правилам (службы Master Data Services)
 title: Подтверждение исправления проблемы, обнаруженной при проверке на соответствие бизнес-правилам
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 66a934d1cddad1e7fdb2e36291611fa50e9c8ce5
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 676a6fff88de31480737f1bb82cc0466605b4699
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813210"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88388320"
 ---
 # <a name="validate-a-version-against-business-rules-master-data-services"></a>Подтверждение исправления проблемы, обнаруженной при проверке на соответствие бизнес-правилам (службы Master Data Services)
 
@@ -63,7 +64,7 @@ ms.locfileid: "85813210"
   
 -   [Блокировка версии (службы Master Data Services)](../master-data-services/lock-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Состояния проверки &#40;Master Data Services&#41;](../master-data-services/validation-statuses-master-data-services.md)   
  [Master Data Services &#40;хранимой процедуры проверки&#41;](../master-data-services/validation-stored-procedure-master-data-services.md)   
  [Версии &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   

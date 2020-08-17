@@ -1,4 +1,5 @@
 ---
+description: Настройка параметров проекта (DB2ToSQL)
 title: Настройка параметров проекта (DB2ToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f325a606-97ac-48bc-b344-b55f5e086a48
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: be1cc5ca7d48d72ee9c87ceb2c421a0c411548dc
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 307c726811d4071754ff118ebd56d7d43abd05f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936670"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88321020"
 ---
 # <a name="setting-project-options-db2tosql"></a>Настройка параметров проекта (DB2ToSQL)
 Для каждого проекта SSMA можно задать параметры уровня проекта. Эти параметры указывают на преобразование объектов, загрузку объектов, Пользовательский интерфейс и параметры переноса данных. Перед преобразованием объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или их миграции в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Убедитесь, что параметры конфигурации подходят для проекта.  
@@ -36,7 +37,7 @@ SSMA имеет пять наборов параметров проекта:
   
 Он также имеет четыре режима для настройки этих параметров:  
   
--   Значение по умолчанию  
+-   По умолчанию  
   
 -   Optimistic  
   

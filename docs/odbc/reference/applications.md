@@ -1,4 +1,5 @@
 ---
+description: Приложения
 title: Приложения | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 39d6461f-0d24-4b7d-a723-843ade15ad73
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9184986883f64bd082ca1db472d887609d3071bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dc811b075eb698e5127fc321406bf906012c6d12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306555"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386140"
 ---
 # <a name="applications"></a>Приложения
 *Приложение* — это программа, которая вызывает API ODBC для доступа к данным. Хотя многие типы приложений возможны, большинство из них делятся на три категории, которые используются в качестве примеров в рамках этого руководством.  

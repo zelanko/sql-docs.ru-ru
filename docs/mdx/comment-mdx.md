@@ -1,4 +1,5 @@
 ---
+description: Comment (многомерные выражения)
 title: Comment (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f0aa1455ffd9f52fd917f68d2bb0bb80e3f25a94
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0a06660c0e542f789caa4f4df353559cced4537f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006271"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387690"
 ---
 # <a name="comment-mdx"></a>Comment (многомерные выражения)
 
@@ -32,7 +33,7 @@ ms.locfileid: "68006271"
  Строка, содержащая текст комментария.  
   
 ## <a name="remarks"></a>Remarks  
- Сервер не вычисляет текст между символами комментария,/* и \*/. Комментарии можно вставлять отдельной строкой либо вставлять в инструкцию многомерных выражений. Несколько строк комментариев должны быть помечены символами\* / \*и/.  
+ Сервер не вычисляет текст между символами комментария,/* и \* /. Комментарии можно вставлять отдельной строкой либо вставлять в инструкцию многомерных выражений. Несколько строк комментариев должны быть помечены символами/ \* и \* /.  
   
  Длина комментариев не ограничена. Можно создавать вложенные комментарии. Например, `/* Test /*Comment*/ Text*/` — вложенный комментарий.  
   
@@ -53,8 +54,8 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [&#40;комментарий&#41; &#40;&#41;многомерных выражений](../mdx/comment-mdx-double-slash.md)   
- [--&#40;комментарий&#41; &#40;многомерных выражениях&#41;](../mdx/comment-mdx-operator-reference.md)   
- [Справочник по операторам многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-operator-reference-mdx.md)  
+ [&#40;комментарий&#41; &#40;&#41;многомерных выражений ](../mdx/comment-mdx-double-slash.md)   
+ [-- (Комментарий) (MDX)](../mdx/comment-mdx-operator-reference.md)   
+ [Справочник по операторам многомерных выражений &#40;&#41;многомерных выражений ](../mdx/mdx-operator-reference-mdx.md)  
   
   

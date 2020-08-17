@@ -1,4 +1,5 @@
 ---
+description: Управление резервными копиями (SybaseToSQL)
 title: Управление резервными копиями (SybaseToSQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 266d987c-ecc5-4fa4-bfdf-8c584f1a1332
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2a7a32804d3c4cb08f593398e901bed66d124b2a
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 916c0493f477175d9bb92c5fc0db860ea7b375c6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931082"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372060"
 ---
 # <a name="managing-backups-sybasetosql"></a>Управление резервными копиями (SybaseToSQL)
 Управление резервным копированием Sybase позволяет выполнять резервное копирование и восстановление данных таблиц до или после выполнения теста. Вы также можете управлять содержимым резервной копии с помощью диалогового окна Управление содержимым резервной копии.  

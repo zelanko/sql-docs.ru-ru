@@ -1,4 +1,5 @@
 ---
+description: Журнал изменений элемента (Master Data Services)
 title: Журнал изменений элемента
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 113069c5-12e6-48ec-b443-b42e14f77308
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3ab7e110b66f27ecb738585215567e1aa96f9788
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 16928202fa2007ecdd2566f7ef215b2ffc09ff4f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812719"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88388692"
 ---
 # <a name="member-revision-history-master-data-services"></a>Журнал изменений элемента (Master Data Services)
 
@@ -70,7 +71,7 @@ ms.locfileid: "85812719"
 |----------------------|-----------|  
 |Откат журнала изменений элемента|[Откат журнала изменений элемента (Master Data Services)](../master-data-services/rollback-member-revision-history-master-data-services.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание &#40;модели Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)   
  [Системные параметры (службы Master Data Services)](../master-data-services/system-settings-master-data-services.md)  
   

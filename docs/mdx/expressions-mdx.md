@@ -1,4 +1,5 @@
 ---
+description: Выражения (многомерные выражения)
 title: Выражения (МНОГОМЕРные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a1dfcdc52bb52652c204e31c28ccf5ec48ca7a00
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 78e1bc6056906130422db0aa69aff60977af1d0e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893589"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387530"
 ---
 # <a name="expressions-mdx"></a>Выражения (многомерные выражения)
 
@@ -84,7 +85,7 @@ WHERE [Product].[Category].[Bikes]
 |[Пустые значения](../mdx/working-with-empty-values.md)|Пустые значения и способы их обработки.|  
   
 ## <a name="see-also"></a>См. также:  
- [Справочник по языку многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-language-reference-mdx.md)   
+ [Справочник по языку многомерных выражений &#40;&#41;многомерных выражений ](../mdx/mdx-language-reference-mdx.md)   
  [Основные принципы запросов многомерных выражений (службы Analysis Services)](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)  
   
   

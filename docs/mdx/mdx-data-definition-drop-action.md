@@ -1,4 +1,5 @@
 ---
+description: Определение данных многомерных выражений — DROP ACTION
 title: Инструкция DROP ACTION (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 56884d76ff6b322b0ecc55e29fb2193183811fcf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bfd0bd642be12132e8e1a72a07ff38930d2d8109
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038256"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88387250"
 ---
 # <a name="mdx-data-definition---drop-action"></a>Определение данных многомерных выражений — DROP ACTION
 
@@ -36,7 +37,7 @@ DROP ACTION CURRENTCUBE | Cube_Name
  Допустимое строковое выражение, возвращающее имя действия, которое необходимо удалить.  
   
 ## <a name="see-also"></a>См. также:  
- [СОЗДАНИЕ инструкции действия &#40;&#41;многомерных выражений](../mdx/mdx-data-definition-create-action.md)   
- [Инструкции определения данных многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-data-definition-statements-mdx.md)  
+ [СОЗДАНИЕ инструкции действия &#40;&#41;многомерных выражений ](../mdx/mdx-data-definition-create-action.md)   
+ [Инструкции определения данных многомерных выражений &#40;&#41;многомерных выражений ](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

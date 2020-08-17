@@ -1,4 +1,5 @@
 ---
+description: Изменение имени атрибута и типа данных (службы Master Data Services)
 title: Изменение имени атрибута и типа данных
 ms.custom: ''
 ms.date: 03/15/2017
@@ -13,12 +14,12 @@ ms.assetid: d348f238-f59d-41c7-ad20-3ccd55bfd9e5
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: cb7d82f63f41baa88523f97e45a65635e1d49486
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 3bc0e0fe40a10bdfddac2eccc54df366dfb9dbb7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813468"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88390420"
 ---
 # <a name="change-an-attribute-name-and-data-type-master-data-services"></a>Изменение имени атрибута и типа данных (службы Master Data Services)
 
@@ -59,7 +60,7 @@ ms.locfileid: "85813468"
   
 9. Выберите команду **Сохранить**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание текстового атрибута &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
  [Удаление атрибута &#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-master-data-services.md)   
  [Атрибуты (службы Master Data Services)](../master-data-services/attributes-master-data-services.md)  

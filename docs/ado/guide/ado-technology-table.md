@@ -1,4 +1,5 @@
 ---
+description: Таблица Products and Technologies
 title: Таблица технологий ADO | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 38c8ad3c-d6f1-40f6-a394-bbba6ed861e5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0e0fb8e559dcf98f39b5f3783e3e43d5d10671cb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a524139113cffeaf437b91a41b4f10b4468d5fe4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761662"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355250"
 ---
 # <a name="products-and-technologies-table"></a>Таблица Products and Technologies
 В следующей таблице перечислены продукты, средства и технологии Майкрософт, которые обсуждаются в этом руководством программиста. По возможности он предоставляет ссылки на соответствующие разделы руководства.

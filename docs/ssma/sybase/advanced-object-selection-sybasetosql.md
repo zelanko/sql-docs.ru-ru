@@ -1,4 +1,5 @@
 ---
+description: Расширенный выбор объектов (SybaseToSQL)
 title: Расширенный выбор объектов (SybaseToSQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d2baa90f-1b77-47ce-988d-1910c7c74103
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 13c76ce76b5096d136df0b38b5526e80093f76cd
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: e7b04682474876f0697df97f772a4c6458582caa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932375"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372560"
 ---
 # <a name="advanced-object-selection-sybasetosql"></a>Расширенный выбор объектов (SybaseToSQL)
 Диалоговое окно " **Расширенный раздел объекта** " позволяет фильтровать объекты базы данных с помощью строк и подстрок в имени объекта, а затем выбирать или отменять выбор этих объектов. SSMA выполняет операции преобразования и миграции для выбранных объектов.  

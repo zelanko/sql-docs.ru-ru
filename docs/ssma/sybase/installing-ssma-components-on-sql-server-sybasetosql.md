@@ -1,4 +1,5 @@
 ---
+description: Установка компонентов SSMA на SQL Server (SybaseToSQL)
 title: Установка компонентов SSMA на SQL Server (SybaseToSQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 07/14/2020
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5ad9e12c-2cdb-4dd2-8703-05a23242d19d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1c66255f57a69db0807ab1620cafd60444f296c8
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 33b5663e7693de8c031f2b39c0436a771920be56
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865392"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372370"
 ---
 # <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>Установка компонентов SSMA на SQL Server (SybaseToSQL)
 
@@ -26,11 +27,11 @@ ms.locfileid: "87865392"
 
 Кроме того, при переносе данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSMA создает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задания агента, когда для переноса данных используется модуль миграции данных на стороне сервера.
 
-### <a name="prerequisites"></a>Предварительные условия
+### <a name="prerequisites"></a>Предварительные требования
 
 Перед установкой SSMA для серверных компонентов Sybase [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Убедитесь, что система соответствует следующим требованиям.
 
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]экземпляр установлен.
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляр установлен.
 - Установщик [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows версии 3.1 или более поздняя версия.
 - [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] Версия 4.7.2 или более поздняя. Его можно получить в [центре разработчиков .NET Framework](https://go.microsoft.com/fwlink/?LinkId=48882).
 - Поставщик Sybase OLE DB/ADO.Net/ODBC и подключение к серверу базы данных SAP ASE, содержащему базы данных, которые необходимо перенести. Поставщики можно установить на носителе с продуктом SAP ASE. Дополнительные сведения о подключении см. [в статье подключение к SYBASE ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md).
@@ -109,7 +110,7 @@ ms.locfileid: "87865392"
 3. На странице Выбор компонентов выберите поставщики данных ODBC, OLE DB и ADO.NET.
 4. Проверьте выбранные компоненты и нажмите кнопку **"Готово"** , чтобы установить поставщик данных.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Установка SSMA для клиента Sybase](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)
 - [Миграция баз данных Sybase ASE в базу данных SQL Azure SQL Server](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)

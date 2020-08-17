@@ -1,4 +1,5 @@
 ---
+description: Изменение и удаление индекса (Master Data Services)
 title: Изменение и удаление индекса
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f8fb2a63-f9ae-4b9d-b26f-2024d9af15c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0a543cc6c153af6cd40617d4fe7699ccabad8f9a
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: bd01942fd0545b338c43b1711b4d58be9a5052ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812369"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88389480"
 ---
 # <a name="edit-and-delete-an-index-master-data-services"></a>Изменение и удаление индекса (Master Data Services)
 
@@ -62,7 +63,7 @@ ms.locfileid: "85812369"
   
 5.  В окнах подтверждения нажимайте кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание индекса &#40;Master Data Services&#41;](../master-data-services/create-an-index-master-data-services.md)   
  [Пользовательский индекс (Master Data Services)](../master-data-services/custom-index-master-data-services.md)  
   

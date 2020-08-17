@@ -1,4 +1,5 @@
 ---
+description: Таблица задач программирования ADO
 title: Таблица задач ADO | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2fad33fb-c858-4dcb-98dc-3dfd0e555055
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cfae068fdac58f7e6e6d1320b301aa9c52701dd4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2793674d8952af09856d37400a2d0c34c97aa720
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761672"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355390"
 ---
 # <a name="ado-programming-task-table"></a>Таблица задач программирования ADO
 В следующей таблице перечислены задачи программирования, содержащиеся в документации *программиста* по программированию ADO, и приведены ссылки на каждую задачу. Эти ссылки могут быть текстовыми описаниями или примерами кода, в которых можно найти сведения о функции ADO, которая выполняет эту задачу.

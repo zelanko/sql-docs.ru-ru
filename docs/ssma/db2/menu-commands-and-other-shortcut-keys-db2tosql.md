@@ -1,4 +1,5 @@
 ---
+description: Команды меню и другие сочетания клавиш (DB2ToSQL)
 title: Команды меню и другие сочетания клавиш (DB2ToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 13189359-73ff-45cf-8225-2a8f7194accc
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3622c9928946e8708097f535b311a70b2a996bf3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: b24fb152402386ba3b22cad8be196cd2c042699e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933725"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320790"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-db2tosql"></a>Команды меню и другие сочетания клавиш (DB2ToSQL)
 В следующих разделах описываются сочетания клавиш для доступа к командам меню и другие сочетания клавиш, используемые в различных диалоговых окнах приложения SSMA для DB2.  
@@ -180,5 +181,5 @@ ms.locfileid: "87933725"
 |Переход к объявлению.|F12|  
   
 ## <a name="see-also"></a>См. также:  
-[Сочетания клавиш &#40;&#41;DB2ToSQL](../../ssma/db2/shortcut-keys-db2tosql.md)  
+[Сочетания клавиш &#40;&#41;DB2ToSQL ](../../ssma/db2/shortcut-keys-db2tosql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: Разрешения коллекции (службы основных данных)
 title: Разрешения коллекции
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 703e1bf5-4b4b-4830-8a5b-f979b09f677d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: efeb7025d9b0e959aba43cb172cdcb9d36d6c4c9
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 04ffb34b92aa43c521a9a454a8068e74cf4fd615
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811630"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88390290"
 ---
 # <a name="collection-permissions-master-data-services"></a>Разрешения коллекции (службы основных данных)
 
@@ -33,13 +34,13 @@ ms.locfileid: "85811630"
 |----------------|-----------------|  
 |**Чтение**|Пользователь может просматривать элементы коллекции и атрибуты элементов.|  
 |**Создание**|Пользователь может создавать элементы коллекции и назначать значения атрибутов.|  
-|**Update**|Пользователь может обновить элементы коллекции, атрибуты и связи.|  
-|**Удалить**|Пользователь может удалять элементы коллекции.|  
+|**Обновление**|Пользователь может обновить элементы коллекции, атрибуты и связи.|  
+|**Удаление**|Пользователь может удалять элементы коллекции.|  
 |**Запретить**|Запрет любого доступа к элементам коллекции.|  
   
  Разрешения на чтение, создание, обновление и удаление можно использовать в различных сочетаниях. Когда назначается разрешение на создание, обновление или удаление, автоматически добавляется и разрешение на чтение.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Назначение разрешений объекта модели &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [&#40;коллекций Master Data Services&#41;](../master-data-services/collections-master-data-services.md)   
  [Разрешения объекта модели (службы Master Data Services)](../master-data-services/model-object-permissions-master-data-services.md)  

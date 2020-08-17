@@ -1,4 +1,5 @@
 ---
+description: Использование идентификаторов типов данных
 title: Использование идентификаторов типов данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 467e0c0c-a818-4737-8a24-3d8e15c7e162
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8be8eef0441d48ed03ea6ccf8f656627c1dd9b63
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 54fe7267ea70dc50b0b40f16b27a1306fea533f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301425"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386280"
 ---
 # <a name="using-data-type-identifiers"></a>Использование идентификаторов типов данных
 Приложения используют идентификаторы типов данных двумя способами: для описания их буферов в драйвере и для получения метаданных о результирующем наборе из драйвера, чтобы они могли определить тип буферов C, используемых для хранения данных. Приложения вызывают следующие функции для выполнения следующих задач:  
