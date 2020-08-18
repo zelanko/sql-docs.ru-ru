@@ -1,4 +1,5 @@
 ---
+description: Правила использования методов типа данных XML
 title: Правила использования методов типа данных XML
 ms.custom: ''
 ms.date: 03/04/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2360243c2499d5b9cb274ab7dccfed9626783829
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 25452e6ae26e8375799a344f459473db446c2d5e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393082"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355970"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>Правила использования методов типа данных XML
 
