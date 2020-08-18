@@ -1,4 +1,5 @@
 ---
+description: sys.dm_filestream_non_transacted_handles (Transact-SQL)
 title: sys. dm_filestream_non_transacted_handles (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 507ec125-67dc-450a-9081-94cde5444a92
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a2380091f44c4a78930cb3769e15b9cc9c176857
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d38b5e210e5a9c7a0b75d2ecb619ae84a61373e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898882"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398740"
 ---
 # <a name="sysdm_filestream_non_transacted_handles-transact-sql"></a>sys.dm_filestream_non_transacted_handles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85898882"
   
  Дополнительные сведения см. в статье [Управление таблицами FileTable](../../relational-databases/blob/manage-filetables.md).  
   
-|**Столбец**|**Type**|**Описание**|  
+|**Столбец**|**Тип**|**Описание**|  
 |----------------|--------------|---------------------|  
 |database_id|INT|Идентификатор базы данных, связанной с дескриптором.|  
 |object_id|INT|Идентификатор объекта таблицы FileTable, с которой связан дескриптор.|  
@@ -44,7 +45,7 @@ ms.locfileid: "85898882"
 |correlation_process_id|varbinary(8)|Содержит уникальный идентификатор для процесса, отправившего запрос.|  
 |correlation_thread_id|varbinary(8)|Содержит уникальный идентификатор для потока, отправившего запрос.|  
 |file_context|varbinary(8)|Указатель на файловый объект, используемый данным дескриптором.|  
-|state|INT|Текущее состояние дескриптора. Может быть активным, закрытым или уничтоженным.|  
+|Состояние|INT|Текущее состояние дескриптора. Может быть активным, закрытым или уничтоженным.|  
 |state_desc|nvarchar(120)|"ACTIVE",<br />"ЗАКРЫТо",<br />ЗАВЕРШЕН|  
 |current_workitem_type|INT|Состояние, в котором этот дескриптор обрабатывается в данный момент.|  
 |current_workitem_type_desc|nvarchar(120)|"Носетворкитемтипе",<br />"Ффтпрекреатеворкитем",<br />"Ффтжетфисикалфиленамеворкитем",<br />"Ффтпосткреатеворкитем",<br />"Ффтпреклеанупворкитем",<br />"Ффтпостклеанупворкитем",<br />"Ффтпреклосеворкитем",<br />"Ффткуеридиректориворкитем",<br />"Ффткуеринфоворкитем",<br />"Ффткуериволумеинфоворкитем",<br />"Ффтсетинфоворкитем",<br />"Ффтвритекомплетионворкитем"|  

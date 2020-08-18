@@ -1,4 +1,5 @@
 ---
+description: sys.sysaltfiles (Transact-SQL)
 title: sys.sysалтфилес (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 698dec23-5336-4108-87a5-f8e407f8da09
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ab0e3914ac8de4ec1cdfc5cb1970285b466c516a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 936ce13f9350042f81dbae8591c34131bdb87100
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895880"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88399710"
 ---
 # <a name="syssysaltfiles-transact-sql"></a>sys.sysaltfiles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,15 +42,15 @@ ms.locfileid: "85895880"
 |**Идентификатор**|**smallint**|Идентификационный номер файловой группы.|  
 |**size**|**int**|Размер файла, в страницах по 8 килобайт (КБ).|  
 |**MAXSIZE**|**int**|Максимальный размер файла, в страницах по 8 КБ.<br /><br /> 0 = не возрастает.<br /><br /> -1 = размер файла может увеличиваться до полного заполнения диска.<br /><br /> 268435456 = файл журнала может увеличиваться до 2 ТБ.<br /><br /> Примечание. базы данных, которые были обновлены с неограниченным размером файла журнала, будут сообщать-1 о максимальном размере файла журнала.|  
-|**growth**|**int**|Предельный размер базы данных.<br /><br /> 0 = не возрастает. В зависимости от значения состояния может представлять собой либо процент от размера файла, либо число страниц: Если **Status** имеет значение 0x100000, то **рост** — это процент размера файла; в противном случае это число страниц.|  
+|**квот**|**int**|Предельный размер базы данных.<br /><br /> 0 = не возрастает. В зависимости от значения состояния может представлять собой либо процент от размера файла, либо число страниц: Если **Status** имеет значение 0x100000, то **рост** — это процент размера файла; в противном случае это число страниц.|  
 |**status**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**Счетчик**|**int**|Зарезервировано.|  
 |**DBID**|**smallint**|Идентификационный номер базы данных, которой принадлежит данный файл.|  
 |**name**|**sysname**|Логическое имя файла.|  
 |**filename**|**nvarchar(260)**|Имя физического устройства. Включает полный путь к файлу.|  
   
-## <a name="see-also"></a>См. также  
- [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Представления совместимости (Transact-SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

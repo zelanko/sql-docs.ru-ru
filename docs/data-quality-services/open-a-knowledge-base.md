@@ -1,4 +1,5 @@
 ---
+description: Открытие базы знаний
 title: Открытие базы знаний
 ms.date: 06/04/2013
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 3eec1826d383f51933a9d47ae4acd932ebda7759
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5d93731b7e28aafbffdf659678c0017d37ce61db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882737"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88395890"
 ---
 # <a name="open-a-knowledge-base"></a>Открытие базы знаний
 
@@ -34,7 +35,7 @@ ms.locfileid: "85882737"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для открытия базы знаний необходима роль dqs_kb_editor или dqs_administrator в базе данных DQS_MAIN.  
   
-##  <a name="open-a-knowledge-base"></a><a name="Open"></a>Открытие базы знаний  
+##  <a name="open-a-knowledge-base"></a><a name="Open"></a> Открытие базы знаний  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Запустите приложение Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -70,13 +71,13 @@ ms.locfileid: "85882737"
   
 -   Чтобы открыть базу знаний из списка «Последние», заблокированную не вами, свяжитесь с выполнившим блокировку пользователем и попросите его разблокировать базу знаний.  
   
-##  <a name="follow-up-after-opening-a-knowledge-base"></a><a name="FollowUp"></a>Дальнейшие действия. После открытия базы знаний  
+##  <a name="follow-up-after-opening-a-knowledge-base"></a><a name="FollowUp"></a> Дальнейшие действия. После открытия базы знаний  
  После открытия базы знаний она переходит в состояние, указанное в столбце «Состояние» таблицы «База знаний». Для действий по обнаружению набора знаний и политикам сопоставления база знаний открывается на соответствующей странице мастера. Для действий по управлению доменами база знаний открывается на странице управления доменами. Дополнительные сведения см. в разделах [Обнаружение знаний](../data-quality-services/perform-knowledge-discovery.md), [Управление доменом](../data-quality-services/managing-a-domain.md) и [Создание политики сопоставления](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="if-the-knowledge-base-is-locked"></a><a name="Locked"></a>Если база знаний заблокирована  
+##  <a name="if-the-knowledge-base-is-locked"></a><a name="Locked"></a> Если база знаний заблокирована  
  Значок блокировки в первом столбце сообщает, заблокирована ли база знаний. Имя заблокированной базы знаний отображается красным цветом. База знаний, которая изменяется определенным пользователем посредством действия базы знаний, отмечается как заблокированная. С заблокированной базой знаний не могут параллельно работать другие пользователи. Пользователь, работающий с базой знаний, может разблокировать ее, щелкнув базу знаний правой кнопкой мыши в таблице на странице «Открыть базу знаний» и выбрав пункт **Разблокировать**или опубликовав базу знаний. Когда курсор наведен на заблокированную базу знаний, службы DQS показывают, кто и когда ее заблокировал.  
   
-##  <a name="state-of-a-knowledge-base"></a><a name="State"></a>Состояние базы знаний  
+##  <a name="state-of-a-knowledge-base"></a><a name="State"></a> Состояние базы знаний  
  Поле «Состояние» указывает, на какой стадии действия находится база знаний. При открытии база знаний откроется на этой стадии.  
   
 -   **\<Empty>**: Поле штат пусто для базы знаний, если база знаний опубликована путем нажатия кнопки **опубликовать** в действии управления доменами и нажатия кнопки **Да-опубликовать базу знаний и выйти**.  

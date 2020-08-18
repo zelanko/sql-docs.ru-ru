@@ -1,4 +1,5 @@
 ---
+description: TopCount (расширения интеллектуального анализа данных)
 title: TopCount (расширения интеллектуального анализа данных) | Документация Майкрософт
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0d4c83626c11def14f1ed9f745fca54e94995c97
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: ae44534ae51f0bc49ca687ce73a17f9486bc1b31
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970273"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88395730"
 ---
 # <a name="topcount-dmx"></a>TopCount (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -33,7 +34,7 @@ TopCount(<table expression>, <rank expression>, <count>)
 ## <a name="return-type"></a>Тип возвращаемых данных  
  \<table expression>  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Значение, предоставляемое \<rank expression> аргументом, определяет порядок убывания ранга для строк, указанных в \<table expression> аргументе, и возвращается число верхних строк, указанное в \<count> аргументе.  
   
  Функция TopCount изначально была введена для включения ассоциативных прогнозов и в целом, выдает те же результаты, что и инструкция, включающая предложения **SELECT Top** и **ORDER BY** . Вы получите лучшую производительность для ассоциативных прогнозов, если используете функцию **Predict (DMX)** , которая поддерживает спецификацию количества возвращаемых прогнозов.  
@@ -110,9 +111,9 @@ SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $
   
  Результаты содержат первые 3 прогноза, отсортированные по значению поддержки. Можно заменить $SUPPORT на $PROBABILITY или $ADJUSTED_PROBABILITY, чтобы получить прогнозы, ранжированные по вероятности или скорректированной вероятности. Дополнительные сведения см. в разделе **Predict (расширения интеллектуального анализа данных)**.  
   
-## <a name="see-also"></a>См. также  
- [Функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/functions-dmx.md)   
- [Общие прогнозирующие функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/general-prediction-functions-dmx.md)   
+## <a name="see-also"></a>См. также:  
+ [Функции &#40;&#41;расширений интеллектуального анализа данных ](../dmx/functions-dmx.md)   
+ [Общие прогнозирующие функции &#40;&#41;расширений интеллектуального анализа данных ](../dmx/general-prediction-functions-dmx.md)   
  [BottomCount &#40;расширений интеллектуального анализа данных&#41;](../dmx/bottomcount-dmx.md)   
  [TopPercent &#40;расширений интеллектуального анализа данных&#41;](../dmx/toppercent-dmx.md)   
  [TopSum &#40;расширений интеллектуального анализа данных&#41;](../dmx/topsum-dmx.md)  

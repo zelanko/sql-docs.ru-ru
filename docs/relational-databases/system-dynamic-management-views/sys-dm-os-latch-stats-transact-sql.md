@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_latch_stats (Transact-SQL)
 title: sys. dm_os_latch_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/18/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dc310a735c55bc2cdd248597a6cffe1d6f874d4f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 59624b04e417f2b1b7713adec784abca60303504
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754141"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88398530"
 ---
 # <a name="sysdm_os_latch_stats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,13 +40,13 @@ ms.locfileid: "85754141"
 |waiting_requests_count|**bigint**|Число ожиданий кратковременных блокировок в данном классе. Этот счетчик увеличивается в начале ожидания кратковременной блокировки.|  
 |wait_time_ms|**bigint**|Общее время ожидания кратковременных блокировок в данном классе в миллисекундах.<br /><br /> **Примечание.** Этот столбец обновляется каждые пять минут во время ожидания кратковременной блокировки и в конце ожидания кратковременной блокировки.|  
 |max_wait_time_ms|**bigint**|Максимальный период времени ожидания данной кратковременной блокировки объектом памяти. Если данное значение неестественно велико, это может указывать на взаимоблокировку.|  
-|pdw_node_id|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
+|pdw_node_id|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
   
 ## <a name="permissions"></a>Разрешения  
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
+На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется  **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Представление динамического управления sys.dm_os_latch_stats может быть использовано для выявления источника состязания между кратковременными блокировками путем исследования относительного числа ожиданий и времени ожидания для различных классов кратковременных блокировок. В некоторых ситуациях возможно устранение состязания между кратковременными блокировками или снижение его остроты. Но возможны и такие ситуации, когда будет необходимо обратиться в службу поддержки пользователей [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
 Очистить содержимое представления sys.dm_os_latch_stats с помощью инструкции `DBCC SQLPERF` можно следующим образом.  
@@ -60,7 +61,7 @@ GO
 > [!NOTE]  
 >  При перезапуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] эти статистические данные не сохраняются. Все данные представляют собой совокупные значения, полученные за время после последнего сброса статистических сведений или со времени запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="latches"></a><a name="latches"></a>Кратковременных блокировок  
+## <a name="latches"></a><a name="latches"></a> Кратковременных блокировок  
  Кратковременная блокировка — это внутренний объект облегченной синхронизации, аналогичный блокировке, который используется различными [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компонентами. Кратковременная блокировка используется в основном для синхронизации страниц базы данных во время таких операций, как доступ к буферу или файлу. Каждая кратковременная блокировка ассоциируется с одной единицей распределения. 
   
  Ожидание кратковременной блокировки происходит в случаях, когда запрос на кратковременную блокировку не может быть удовлетворен немедленно, поскольку эта кратковременная блокировка удерживается другим потоком в конфликтующем режиме. В отличие от обычной блокировки, кратковременная блокировка высвобождается немедленно по завершении операции, даже если это операция записи.  
@@ -193,7 +194,7 @@ GO
 |VERSIONING_STATE_CHANGE|Только для внутреннего применения.|  
 |KTM_VIRTUAL_CLOCK|Только для внутреннего применения.|  
   
-## <a name="see-also"></a>См. также  
-[DBCC SQLPERF &#40;&#41;Transact-SQL](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)       
-[SQL Server динамические административные представления, связанные с операционной системой &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
+## <a name="see-also"></a>См. также:  
+[DBCC SQLPERF &#40;&#41;Transact-SQL ](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)       
+[SQL Server динамические административные представления, связанные с операционной системой &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
 [SQL Server, объект Latches](../../relational-databases/performance-monitor/sql-server-latches-object.md)      

@@ -1,4 +1,5 @@
 ---
+description: sys.fn_validate_plan_guide (Transact-SQL)
 title: sys. fn_validate_plan_guide (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8ddc9e534b5f0e434dd9c0ca980da82eddb8006a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b19a3cd2f2ee449780127682555f1ae77fabd5d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898271"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88396900"
 ---
 # <a name="sysfn_validate_plan_guide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,8 +53,8 @@ sys.fn_validate_plan_guide ( plan_guide_id )
 |-----------------|---------------|-----------------|  
 |msgnum|**int**|Идентификатор сообщения об ошибке.|  
 |severity|**tinyint**|Степень серьезности сообщения, от 1 до 25.|  
-|state|**smallint**|Номер состояния ошибки, отмеченной точкой в коде, в котором она произошла.|  
-|message|**nvarchar (2048)**|Текст сообщения ошибки.|  
+|Состояние|**smallint**|Номер состояния ошибки, отмеченной точкой в коде, в котором она произошла.|  
+|сообщение|**nvarchar (2048)**|Текст сообщения ошибки.|  
   
 ## <a name="permissions"></a>Разрешения  
  Для руководств планов области OBJECT требуются разрешения VIEW DEFINITION или ALTER на соответствующий объект и разрешения на компиляцию запроса или пакета, представленного в структуре плана. Например, если пакет содержит инструкции SELECT, необходимы разрешения SELECT на соответствующие объекты.  
@@ -92,7 +93,7 @@ ELSE
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Структуры планов](../../relational-databases/performance/plan-guides.md)   
  [sp_create_plan_guide (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sp_create_plan_guide_from_handle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)  

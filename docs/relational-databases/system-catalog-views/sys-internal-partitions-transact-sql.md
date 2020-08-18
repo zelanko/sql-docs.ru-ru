@@ -1,4 +1,5 @@
 ---
+description: sys. internal_partitions (Transact-SQL)
 title: sys. internal_partitions (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/26/2019
@@ -13,16 +14,17 @@ ms.assetid: 0262df2b-5ba7-4715-b17b-3d9ce470a38e
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9da410954f4fedce101ca95a9a3571898b4cd349
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: abfff1a5f8a9ed447566e5f6a91fe23c51654890
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002720"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88401460"
 ---
 # <a name="sysinternal_partitions-transact-sql"></a>sys. internal_partitions (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-  Возвращает по одной строке для каждого набора строк, который отслеживает внутренние данные для индексов columnstore на дисковых таблицах. Эти наборы строк являются внутренними индексами columnstore и отслеживанием удаленных строк, группы строк сопоставлений и разностного хранилища групп строк. Они отписывают данные для каждой секции таблицы. Каждая таблица имеет по крайней мере одну секцию. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]повторно создает наборы строк каждый раз при пересборке индекса columnstore.   
+  Возвращает по одной строке для каждого набора строк, который отслеживает внутренние данные для индексов columnstore на дисковых таблицах. Эти наборы строк являются внутренними индексами columnstore и отслеживанием удаленных строк, группы строк сопоставлений и разностного хранилища групп строк. Они отписывают данные для каждой секции таблицы. Каждая таблица имеет по крайней мере одну секцию. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] повторно создает наборы строк каждый раз при пересборке индекса columnstore.   
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -43,7 +45,7 @@ ms.locfileid: "86002720"
  Необходимо членство в роли `public`. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="general-remarks"></a>Общие замечания  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]повторно создает новые внутренние индексы columnstore каждый раз при создании или пересборке индекса columnstore.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] повторно создает новые внутренние индексы columnstore каждый раз при создании или пересборке индекса columnstore.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -58,9 +60,9 @@ on i.object_id = p.object_id
 WHERE p.object_id = OBJECT_ID ( '<table name' ) ;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Представления каталога объектов &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Представления каталога объектов (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Часто задаваемые вопросы о запросах к системному каталогу сервера SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   
