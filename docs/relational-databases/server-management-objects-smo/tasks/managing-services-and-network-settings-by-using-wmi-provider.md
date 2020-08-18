@@ -1,4 +1,5 @@
 ---
+description: Управление службами и сетевыми настройками с помощью поставщика WMI
 title: Управление службами и сетевыми настройками с помощью поставщика WMI
 ms.custom: seo-dt-2019
 ms.date: 08/06/2017
@@ -16,11 +17,12 @@ ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 83c0d3894958af7e199632903c93af11e9ddd8ea
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9c6021e6867272d865f0b1c5b95852c55929880e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998021"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88403710"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>Управление службами и сетевыми настройками с помощью поставщика WMI
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -211,7 +213,7 @@ $svc.ServiceState
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основные понятия о поставщике WMI для управления конфигурацией](../../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
   
   
