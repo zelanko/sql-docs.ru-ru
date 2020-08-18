@@ -6,6 +6,7 @@ ms.date: 06/11/2020
 ms.author: mikeray
 ms.openlocfilehash: c0e2396ad1b84aae354df1c488e74c20acf12962
 ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 07/01/2020
 ms.locfileid: "86032572"
