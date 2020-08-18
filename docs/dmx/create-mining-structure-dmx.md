@@ -1,4 +1,5 @@
 ---
+description: CREATE MINING STRUCTURE (расширения интеллектуального анализа данных)
 title: СОЗДАНИЕ СТРУКТУРЫ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ (DMX) | Документация Майкрософт
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: efe160fc3bb50f80b70c0d510eedd880f985f9b9
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 06f013ccb5c33dfbaba2fe0a0e102a448c17e036
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971822"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414030"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -61,7 +62,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  По умолчанию: REPEATABLE (0)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Пользователь определяет структуру интеллектуального анализа данных, указывая список столбцов, при необходимости задавая иерархические связи между столбцами, а также при необходимости выполняя секционирование структуры интеллектуального анализа данных на обучающий и проверочный наборы данных.  
   
  Необязательное ключевое слово SESSION показывает, что структура является временной и ее можно использовать только в течение текущего сеанса. После завершения сеанса структура и любые модели на ее основе удаляются. Чтобы создать временные структуры и модели интеллектуального анализа данных, необходимо сначала задать свойство базы данных AllowSessionMiningModels. Дополнительные сведения см. в статье [Data Mining Properties](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
@@ -73,7 +74,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
 -   Тип данных (обязательно)  
   
--   Дистрибутив  
+-   Distribution  
   
 -   Список флагов моделирования  
   
@@ -106,7 +107,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  Для столбца можно определить несколько значений флагов модели. Однако каждому столбцу может соответствовать только один тип содержимого и тип данных.  
   
 ### <a name="column-relationships"></a>Связи столбцов  
- К любому определению столбца можно добавить предложение, описывающее связь между двумя столбцами. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]поддерживает использование следующего \<column relationship> предложения.  
+ К любому определению столбца можно добавить предложение, описывающее связь между двумя столбцами. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] поддерживает использование следующего \<column relationship> предложения.  
   
  **СВЯЗАНО**  
  Показывает иерархию значений. Назначением столбца RELATED TO может быть ключевой столбец вложенной таблицы, столбец с дискретными значениями из строки вариантов или какой-либо другой столбец с предложением RELATED TO, указывающим на более глубокий уровень иерархии.  
@@ -177,7 +178,7 @@ CREATE MINING STRUCTURE [New Mailing]
 WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширения интеллектуального анализа данных &#40;инструкции расширений интеллектуального анализа данных&#41; DDL](../dmx/dmx-statements-data-definition.md)   
  [Расширения интеллектуального анализа данных &#40;инструкции расширений интеллектуального анализа данных&#41;](../dmx/dmx-statements-data-manipulation.md)   
  [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../dmx/data-mining-extensions-dmx-statements.md)  

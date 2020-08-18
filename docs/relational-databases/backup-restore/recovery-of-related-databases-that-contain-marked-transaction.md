@@ -21,14 +21,14 @@ helpviewer_keywords:
 - marked transactions [SQL Server], restoring
 - database restores [SQL Server], point in time
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4f959ddb388be7f0f21441629239a3d479a0c711
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: MashaMSFT
+ms.author: mathoma
+ms.openlocfilehash: 71241e4a76e90a7c42e4dbd6e176d43bb5281fdb
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85669813"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088172"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Восстановление связанных баз данных, которые содержат помеченную транзакцию
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "85669813"
 ## <a name="transact-sql-syntax-for-inserting-named-marks-into-a-transaction-log"></a>Синтаксис языка Transact-SQL для вставки именованных меток в журнал транзакций  
  Чтобы вставлять метки в журналы транзакций, используйте инструкцию [BEGIN TRANSACTION](../../t-sql/language-elements/begin-transaction-transact-sql.md) и предложение WITH MARK [*описание*]. Имя метки совпадает с именем транзакции. Необязательное *описание* представляет собой текстовое описание, а не имя метки. Например, именем транзакции и метки, которые созданы следующей инструкцией `BEGIN TRANSACTION` , будет `Tx1`.  
   
-```wmimof  
+```sql  
 BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'    
 ```  
   

@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 29c0d209ada9ea624c588b4510191b8ae8b7e91c
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 24a203a45fac725a95402010531185705b3af5cd
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522876"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178269"
 ---
 # <a name="install-sql-server-language-extensions-on-linux"></a>Установка расширений языка для SQL Server в Linux
 
-[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
+[!INCLUDE [SQL Server 2019 - Linux](../includes/applies-to-version/sqlserver2019-linux.md)]
 
 Расширения языка — это надстройка ядра СУБД. Хотя [ядро СУБД и расширения языка можно установить одновременно](#install-all), рекомендуется сначала установить и настроить ядро СУБД SQL Server, чтобы устранить все неполадки, прежде чем добавлять дополнительные компоненты. 
 

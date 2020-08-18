@@ -1,4 +1,5 @@
 ---
+description: SQLColAttributes (драйвер ODBC для Visual FoxPro)
 title: SQLColAttributes (драйвер ODBC для Visual FoxPro) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d403dfa0-c26d-47d4-91d9-2f29aa387399
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9508fa7b9ada8273e1250d7584e577892acf5c51
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 062a5af2e8aab4d71cf201284bd065242c588f6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307915"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412200"
 ---
 # <a name="sqlcolattributes-visual-foxpro-odbc-driver"></a>SQLColAttributes (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
@@ -34,7 +35,7 @@ ms.locfileid: "81307915"
   
  Драйвер ODBC для Visual FoxPro поддерживает все значения *фдесктипе* . В следующей таблице содержатся комментарии к реализации выбранных значений драйвера.  
   
-|*фдесктипе*|Добавление примечаний|  
+|*фдесктипе*|Комментарий|  
 |-----------------|-------------|  
 |SQL_COLUMN_AUTO_INCREMENT|Возвращает значение FALSE: в Visual FoxPro отсутствуют поля счетчика.|  
 |SQL_COLUMN_CASE_SENSITIVE|Всегда возвращает значение TRUE, если столбец имеет тип character.|  
