@@ -1,4 +1,5 @@
 ---
+description: TopSum (расширения интеллектуального анализа данных)
 title: TopSum (расширения интеллектуального анализа данных) | Документация Майкрософт
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c8247440f0e9d074e24eab3e9836fdb46bd0855e
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 2406141d9ffe5846e4dd26e75d471391992d1490
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970247"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88395190"
 ---
 # <a name="topsum-dmx"></a>TopSum (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -33,7 +34,7 @@ TopSum(<table expression>, <rank expression>, <sum>)
 ## <a name="return-type"></a>Тип возвращаемых данных  
  \<table expression>  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Функция **TopSum** Возвращает самые верхние строки в порядке убывания ранга на основе вычисленного значения \<rank expression> аргумента для каждой строки, то есть сумма \<rank expression> значений является по крайней мере заданной суммой, заданной \<sum> аргументом. **TopSum** возвращает наименьшее количество возможных элементов, при этом соблюдая указанное значение Sum.  
   
 ## <a name="examples"></a>Примеры  
@@ -98,9 +99,9 @@ NATURAL PREDICTION JOIN
   
  **Примечание** . Этот пример предоставляется только для иллюстрации использования **TopSum**. В зависимости от размера набора данных выполнение данного запроса может занять значительное время.  
   
-## <a name="see-also"></a>См. также  
- [Функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/functions-dmx.md)   
- [Общие прогнозирующие функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/general-prediction-functions-dmx.md)   
+## <a name="see-also"></a>См. также:  
+ [Функции &#40;&#41;расширений интеллектуального анализа данных ](../dmx/functions-dmx.md)   
+ [Общие прогнозирующие функции &#40;&#41;расширений интеллектуального анализа данных ](../dmx/general-prediction-functions-dmx.md)   
  [TopPercent &#40;расширений интеллектуального анализа данных&#41;](../dmx/toppercent-dmx.md)  
   
   
