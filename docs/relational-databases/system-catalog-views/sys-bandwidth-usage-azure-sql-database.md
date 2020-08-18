@@ -1,4 +1,5 @@
 ---
+description: sys.bandwidth_usage (база данных SQL Azure)
 title: sys. bandwidth_usage (база данных SQL Azure) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/28/2019
@@ -19,12 +20,12 @@ ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 54151b817b443d43f64e119841a7b69df7436d93
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d39486a513e012fc53e66c408145bbf148696ff2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752921"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88402530"
 ---
 # <a name="sysbandwidth_usage-azure-sql-database"></a>sys.bandwidth_usage (база данных SQL Azure)
 
@@ -52,7 +53,7 @@ ms.locfileid: "85752921"
 
  Это представление доступно в базе данных **master** только для входа субъекта уровня сервера.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
 ### <a name="external-and-internal-classes"></a>Внешние и внутренние классы
 

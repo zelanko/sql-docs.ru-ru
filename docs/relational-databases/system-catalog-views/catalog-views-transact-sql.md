@@ -1,4 +1,5 @@
 ---
+description: Системные представления каталога (Transact-SQL)
 title: Представления каталога (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/02/2016
@@ -23,12 +24,12 @@ ms.assetid: 13bccc2f-ed3c-4b58-abd0-ca8bf34a66b8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f7b106652573b5324794848dff69e9ae51c81a20
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6e0fd2e8ee936d9ecf9b7b433870edd3f6da19f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914311"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88402610"
 ---
 # <a name="system-catalog-views-transact-sql"></a>Системные представления каталога (Transact-SQL)
 
@@ -55,15 +56,15 @@ ms.locfileid: "86914311"
         
         [Представления каталога базы данных SQL Azure](../../relational-databases/system-catalog-views/azure-sql-database-catalog-views.md)
         
-        [Отслеживание изменений представления каталога &#40;&#41;Transact-SQL](../system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)
+        [Отслеживание изменений представления каталога &#40;&#41;Transact-SQL ](../system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)
         
-        [Представления каталога сборок среды CLR &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/clr-assembly-catalog-views-transact-sql.md)
+        [Представления каталога сборок среды CLR &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/clr-assembly-catalog-views-transact-sql.md)
         
         [Представления сборщика данных (Transact-SQL)](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)
         
         [Пространства данных &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-spaces-transact-sql.md)
         
-        [Database Mail представления &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/database-mail-views-transact-sql.md)
+        [Database Mail представления &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/database-mail-views-transact-sql.md)
         
         [Представления каталога следящего сервера зеркального отображения базы данных &#40;Transact-SQL&#41;](../system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)
         
@@ -75,7 +76,7 @@ ms.locfileid: "86914311"
         
         [Представления каталога расширенных свойств (Transact-SQL)](../system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)
         
-        [Представления каталога внешних операций &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/external-operations-catalog-views-transact-sql.md)
+        [Представления каталога внешних операций &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/external-operations-catalog-views-transact-sql.md)
         
         [Представления каталога FILESTREAM и FileTable &#40;языке Transact-SQL&#41;](../../relational-databases/system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
         
@@ -88,11 +89,11 @@ ms.locfileid: "86914311"
         
         [Представления каталога объектов (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)
         
-        [Представления каталога функции секционирования &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/partition-function-catalog-views-transact-sql.md)
+        [Представления каталога функции секционирования &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/partition-function-catalog-views-transact-sql.md)
         
         [Административные представления на основе политик (Transact-SQL)](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)
         
-        [Resource Governor представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)
+        [Resource Governor представления каталога &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)
         
         [Представления каталога хранилища запросов (Transact-SQL)](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)
         
@@ -104,20 +105,20 @@ ms.locfileid: "86914311"
         
         [Представления каталога компонента Service Broker (Transact-SQL)](../../relational-databases/system-catalog-views/service-broker-catalog-views-transact-sql.md)
         
-        [Представления каталога конфигурации на уровне сервера &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)
+        [Представления каталога конфигурации на уровне сервера &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)
         
         [Представления каталога пространственных данных](../../relational-databases/system-catalog-views/spatial-data-catalog-views.md)
         
         [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md) (Представления каталога в службе "Хранилище данных SQL" и Parallel Data Warehouse)
         
-        [Stretch Database представления каталога &#40;&#41;Transact-SQL](../system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-databases.md)
+        [Stretch Database представления каталога &#40;&#41;Transact-SQL ](../system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-databases.md)
         
         [Схемы XML &#40;представления каталога системы типов XML&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Представления информационной схемы &#40;&#41;Transact-SQL](../../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
+- [Представления информационной схемы &#40;&#41;Transact-SQL ](../../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
 - [Системные таблицы (Transact-SQL)](../../relational-databases/system-tables/system-tables-transact-sql.md)
 - [Часто задаваемые вопросы о запросах к системному каталогу сервера SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)

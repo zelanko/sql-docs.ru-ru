@@ -1,4 +1,5 @@
 ---
+description: sys.external_data_sources (Transact-SQL)
 title: sys. external_data_sources (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 1016db6e-9950-4ae2-a004-bd4171e27359
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 85b64de0b575738061757254c9698e47982fd942
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 74546998aeba42167659eabcbed4571c2f15c492
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394483"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88401720"
 ---
 # <a name="sysexternal_data_sources-transact-sql"></a>sys.external_data_sources (Transact-SQL)
 
@@ -43,7 +44,7 @@ ms.locfileid: "87394483"
 ## <a name="permissions"></a>Разрешения  
  Видимость метаданных в представлениях каталогов ограничивается защищаемыми объектами, которыми пользователь владеет или на которые ему были предоставлены разрешения. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sys. external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)   
  [sys. external_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)   
  [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)  
