@@ -1,4 +1,5 @@
 ---
+description: SQLSetConnectOption (драйвер для dBASE)
 title: SQLSetConnectOption (драйвер для dBASE) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: b1924c33-6820-4566-b716-6897807edd0f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 32bfb4755d308706372c0d863f8246631c122f21
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b128693ef2dce5dcd9c67e38f4c493b03e19ef7c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301525"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411750"
 ---
 # <a name="sqlsetconnectoption-dbase-driver"></a>SQLSetConnectOption (драйвер для dBASE)
 > [!NOTE]  
 >  В этом разделе приводятся сведения, относящиеся к драйверу dBASE. Общие сведения об этой функции см. в соответствующем разделе [справочника по API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
-|Параметром fOption|Добавление примечаний|  
+|Параметром fOption|Комментарий|  
 |-------------|-------------|  
 |SQL_ACCESS_MODE|SQL_ACCESS_MODE параметром fOption можно задать как SQL_MODE_READ_ONLY, так и SQL_MODE_READ_WRITE. Однако драйвер не запрещает обновление, если для SQL_ACCESS_MODE установлено значение SQL_MODE_READ_ONLY.|  
 |SQL_AUTOCOMMIT|Драйвер dBASE поддерживает только SQL_AUTOCOMMIT, для которых установлено значение ON (состояние по умолчанию), так как оно не поддерживает транзакции.|  
