@@ -1,4 +1,5 @@
 ---
+description: Способ определения разрешений (службы Master Data Services)
 title: Способ определения разрешений
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1dc0b43a-d023-4e7d-b027-8b1459fd058c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 729f8c21155b06f42858edd4cf530f08c049fa47
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 81463077bc370b4cae8ae1838da14a27cdd20f2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812985"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471954"
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>Способ определения разрешений (службы Master Data Services)
 
@@ -78,7 +79,7 @@ ms.locfileid: "85812985"
   
  В этом случае пересечения разрешений пользователя и группы должны определяться, прежде чем можно будет сравнивать разрешения для объектов модели и элементов иерархии. Дополнительные сведения см. в разделе [Перекрытие разрешений пользователей и групп (службы основных данных)](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Перекрывающиеся разрешения пользователей и групп &#40;Master Data Services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   
  [Перекрытие разрешений моделей и элементов (службы Master Data Services)](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   

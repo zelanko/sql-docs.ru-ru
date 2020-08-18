@@ -1,4 +1,5 @@
 ---
+description: Блочные курсоры, прокручиваемые курсоры и обратная совместимость
 title: Блочные курсоры, прокручиваемые курсоры и обратная совместимость | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d9d271f6-d2d9-49b9-a365-4909ca06caae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fe24362f1a49577a7fb494f768947080d0ab6e9e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 46f6d3611b0a55325387f2c7723734500d48af83
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292314"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411300"
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility"></a>Блочные курсоры, прокручиваемые курсоры и обратная совместимость
 Существование обеих **SQLFetchScroll** и **SQLExtendedFetch** представляет собой первое четкое разделение в ODBC между интерфейсом прикладного программирования (API), который представляет собой набор функций, которые вызывает приложение, и интерфейс поставщика услуг (SPI), который представляет собой набор функций, реализуемых драйвером. Это разбиение необходимо для того, чтобы ODBC *3. x*, использующий **SQLFetchScroll**, совпадал с стандартами, а также быть совместимым с ODBC *2. x*, который использует **SQLExtendedFetch**.  

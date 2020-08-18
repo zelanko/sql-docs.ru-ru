@@ -1,4 +1,5 @@
 ---
+description: Отчет о миграции данных (MySQLToSQL)
 title: Отчет о переносе данных (MySQLToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5524a575-67dd-4ef6-9d17-3412df9b9f9c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e9c88bb9f59d38a1d9cf85785954f5fc6b4ae276
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: e591fae2984714fcc0bcb2f70eab614f27e397b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935863"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492487"
 ---
 # <a name="data-migration-report--mysqltosql"></a>Отчет о миграции данных (MySQLToSQL)
 После переноса данных в появляется диалоговое окно **отчет о переносе данных** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -35,10 +36,10 @@ ms.locfileid: "87935863"
 **Число успешно перенесенных строк**  
 Число строк данных, успешно перенесенных в целевую таблицу.  
   
-**Соотношение**  
+**Коэффициент**  
 Процент успешно перенесенных строк.  
   
-**Подробные сведения**  
+**Сведения**  
 В случае сбоя переноса данных щелкните, чтобы отобразить сведения о миграции для выбранной строки отчета. SSMA отобразит причину сбоя.  
   
 **Сохранить отчет**  

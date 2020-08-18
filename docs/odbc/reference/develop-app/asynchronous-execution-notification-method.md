@@ -1,4 +1,5 @@
 ---
+description: Асинхронное выполнение (метод уведомления)
 title: Асинхронное выполнение (метод уведомления) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e509dad9-5263-4a10-9a4e-03b84b66b6b3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 250e71dcb47d44a6e437d12c269ea23fa6fb3c2c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 19c201d71d42c40277ad67cef25922e55e97de12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306415"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483127"
 ---
 # <a name="asynchronous-execution-notification-method"></a>Асинхронное выполнение (метод уведомления)
 ODBC обеспечивает асинхронное выполнение операций подключения и инструкций. Поток приложения может вызывать функцию ODBC в асинхронном режиме, а функция может возвращать до завершения операции, позволяя потоку приложения выполнять другие задачи. В пакете SDK для Windows 7 для асинхронных инструкций или операций подключения приложение определило, что асинхронная операция была завершена с помощью метода опроса. Дополнительные сведения см. в разделе [асинхронное выполнение (метод опроса)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md). Начиная с пакета SDK для Windows 8, можно определить, что асинхронная операция завершена с помощью метода уведомления.  

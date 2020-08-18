@@ -1,4 +1,5 @@
 ---
+description: SQLConfigDataSource (драйвер для текстовых файлов)
 title: SQLConfigDataSource (драйвер для текстовых файлов) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c505d36e-1e72-47b2-a9e5-e4926b408468
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2d2809f9b15dd6843e4404c7cf1887c3caa015a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 400b83d382140d4661b103e24449f14ecdfda43d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283924"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411870"
 ---
 # <a name="sqlconfigdatasource-text-file-driver"></a>SQLConfigDataSource (драйвер для текстовых файлов)
 > [!NOTE]  

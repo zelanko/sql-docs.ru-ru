@@ -1,4 +1,5 @@
 ---
+description: Диалоговое окно "Подключение к SQL Server" (OracleToSQL)
 title: Подключение к SQL Server (OracleToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 4ef384ea-5f3e-4f70-ad7c-b62d7b0da628
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 2a4575f02194ffc97f4c3c23b419c3edb12df5fc
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 1d97fd4a9aa4c92fe1e6376b4b472519b89e4bc7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935039"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492423"
 ---
 # <a name="connect-to-sql-server--oracletosql"></a>Диалоговое окно "Подключение к SQL Server" (OracleToSQL)
 Используйте диалоговое окно **Подключение к SQL Server** , чтобы подключиться к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на который требуется выполнить миграцию. Чтобы открыть диалоговое окно **Подключение к SQL Server** , в меню **файл** выберите пункт **подключиться к SQL Server**.  

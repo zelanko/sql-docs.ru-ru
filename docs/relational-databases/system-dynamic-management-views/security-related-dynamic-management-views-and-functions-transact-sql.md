@@ -1,4 +1,5 @@
 ---
+description: Динамические административные представления и функции, связанные с безопасностью (Transact-SQL)
 title: Динамические административные представления и функции, связанные с безопасностью (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/20/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 450d131c-773a-4e05-ab96-3837b6c33aae
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d4a1ab74b0104f191ae5ba52b79bd983f9e05d71
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 8c5e1d2e5c86993069b69ea7d0240d72b4c66e4b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942165"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88399190"
 ---
 # <a name="security-related-dynamic-management-views-and-functions-transact-sql"></a>Динамические административные представления и функции, связанные с безопасностью (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

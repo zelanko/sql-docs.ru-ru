@@ -1,4 +1,5 @@
 ---
+description: Требования к оборудованию и программному обеспечению (ODBC)
 title: Требования к оборудованию и программному обеспечению (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6df2e9cd-de10-4629-97bd-32f2782616c7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fe69775e379e9a9d661b4ddf81e577b738fcf34d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a0f88c8877161122c11fb65bcdb62fd4e7b684c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81295244"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412490"
 ---
 # <a name="hardware-and-software-requirements-odbc"></a>Требования к оборудованию и программному обеспечению (ODBC)
 В этом разделе перечислены требования к использованию драйверов для базы данных ODBC для настольных систем.  
@@ -39,7 +40,7 @@ ms.locfileid: "81295244"
   
 -   Драйвер ODBC.  
   
--   32-разрядный диспетчер драйверов ODBC версии 3,51 или более поздней (библиотеками odbc32. dll).  
+-   32-разрядный диспетчер драйверов ODBC версии 3,51 или более поздней (Odbc32.dll).  
   
 -   Microsoft Windows 95 или более поздней версии или Windows NT 4,0 или Windows 2000.  
   
@@ -53,4 +54,4 @@ ms.locfileid: "81295244"
   
 ## <a name="driver-specific-hardware-and-software-requirements"></a>Требования к оборудованию и программному обеспечению для конкретного драйвера  
   
--   Микрософтакцесс и Дбаседриверс могут потребовать изменений в файлах Autoexec. bat или config. sys.
+-   Микрософтакцесс и Дбаседриверс могут потребовать изменений в файлах Autoexec.bat или Config.sys.

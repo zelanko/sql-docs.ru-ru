@@ -1,4 +1,5 @@
 ---
+description: Использование скалярных выражений
 title: Использование скалярных выражений | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b87fad1b9c568f4ebd5f65ef3705001b12d26693
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc13d94aaf44e563a9519f797effee7cbeb74305
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038039"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491398"
 ---
 # <a name="using-scalar-expressions"></a>Использование скалярных выражений
 
@@ -69,6 +70,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Выражения &#40;&#41;многомерных выражений](../mdx/expressions-mdx.md)  
+ [Выражения &#40;&#41;многомерных выражений ](../mdx/expressions-mdx.md)  
   
   

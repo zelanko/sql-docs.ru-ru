@@ -1,4 +1,5 @@
 ---
+description: sys.tables (Transact-SQL)
 title: sys. Tables (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/22/2017
@@ -20,11 +21,12 @@ ms.assetid: 8c42eba1-c19f-4045-ac82-b97a5e994090
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 13e37cd873b3158fcde41f0e3b5836a27d370f6e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 83362a976690875df7d45a8ba6a186441bd10283
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002699"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460596"
 ---
 # <a name="systables-transact-sql"></a>sys.tables (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,7 +58,7 @@ ms.locfileid: "86002699"
 |temporal_type|**tinyint**|**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше, а также [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> Числовое значение, представляющее тип таблицы:<br /><br /> 0 = NON_TEMPORAL_TABLE<br /><br /> 1 = HISTORY_TABLE<br /><br /> 2 = SYSTEM_VERSIONED_TEMPORAL_TABLE|  
 |temporal_type_desc|**nvarchar(60)**|**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше, а также [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> Текстовое описание типа таблицы:<br /><br /> NON_TEMPORAL_TABLE<br /><br /> HISTORY_TABLE<br /><br /> SYSTEM_VERSIONED_TEMPORAL_TABLE|  
 |history_table_id|**int**|**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше, а также [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> Если temporal_type в (2, 4) возвращает object_id таблицы, которая поддерживает исторические данные, в противном случае возвращает значение NULL.|  
-|is_remote_data_archive_enabled|**bit**|**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздним версиям и[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> Указывает, включена ли таблица с растяжением.<br /><br /> 0 = таблица не поддерживает растяжение.<br /><br /> 1 = таблица поддерживает растяжение.<br /><br /> Дополнительные сведения см. в разделе [Stretch Database](../../sql-server/stretch-database/stretch-database.md).|  
+|is_remote_data_archive_enabled|**bit**|**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздним версиям и [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> Указывает, включена ли таблица с растяжением.<br /><br /> 0 = таблица не поддерживает растяжение.<br /><br /> 1 = таблица поддерживает растяжение.<br /><br /> Дополнительные сведения см. в разделе [Stretch Database](../../sql-server/stretch-database/stretch-database.md).|  
 |is_external|**bit**|**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздним, [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)] .<br /><br /> Указывает, что таблица является внешней таблицей.<br /><br /> 0 = таблица не является внешней таблицей.<br /><br /> 1 = таблица является внешней таблицей.| 
 |history_retention_period|**int**|**Применимо к**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Числовое значение, представляющее продолжительность временного периода хранения журнала в единицах, указанных с помощью history_retention_period_unit. |  
 |history_retention_period_unit|**int**|**Применимо к**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Числовое значение, представляющее тип временной единицы хранения истории. <br /><br />-1: БЕСКОНЕЧНОСТЬ <br /><br />3: ДЕНЬ <br /><br />4: НЕДЕЛЯ <br /><br />5: МЕСЯЦ <br /><br />6: ГОД |  
@@ -108,10 +110,10 @@ LEFT JOIN sys.tables T2
 ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2 
 ```  
   
-## <a name="see-also"></a>См. также  
- [Представления каталога объектов &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [DBCC CHECKDB &#40;&#41;Transact-SQL](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Представления каталога объектов (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [DBCC CHECKDB &#40;&#41;Transact-SQL ](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)   
  [DBCC CHECKTABLE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)   
  [Запросы к системному каталогу SQL Server вопросы и ответы](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [Выполняющаяся в памяти OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  

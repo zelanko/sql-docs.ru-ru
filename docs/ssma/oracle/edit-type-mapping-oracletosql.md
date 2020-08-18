@@ -1,4 +1,5 @@
 ---
+description: Изменение сопоставления типов (OracleToSQL)
 title: Изменение сопоставления типов (OracleToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 7078b4ed-c779-4bf3-8db8-f9dcb3edd50f
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 1df40b843064513f6b2c135355b26f745c336011
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 7b90da225116a2221d5a2492e1b7e5bfdc33ab91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934947"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492405"
 ---
 # <a name="edit-type-mapping-oracletosql"></a>Изменение сопоставления типов (OracleToSQL)
 Диалоговое окно **Изменение сопоставления типов** позволяет указать, как типы сопоставляются между исходным и целевым объектами базы данных.  
@@ -45,6 +46,6 @@ ms.locfileid: "87934947"
   
 Если тип данных имеет переменную длину, в разделе **целевой тип**появится следующее поле:  
   
-**Заменить на**  
+**Replace with**  
 Укажите целевую длину для этого сопоставления. Например, для типа данных **nvarchar** можно ввести значение 20, чтобы указать, что указанный исходный тип данных должен быть сопоставлен с типом **nvarchar (20)**.  
   

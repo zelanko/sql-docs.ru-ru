@@ -1,4 +1,5 @@
 ---
+description: Разработка приложений
 title: Разработка приложений | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0dd1a3b6-69dc-462f-9290-12ebee2b4a2a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 995d6b9ada4576bb5792042a1f0b5b6a25cde452
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3996987d8aa110da5646db883ff7cb1a98dfc98e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305865"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483097"
 ---
 # <a name="developing-applications"></a>Разработка приложений
 В этом разделе содержатся сведения о разработке приложений, использующих интерфейс ODBC и драйверы, реализующие его.  
@@ -48,7 +49,7 @@ ms.locfileid: "81305865"
   
 -   [Транзакции](../../../odbc/reference/develop-app/transactions-odbc.md)  
   
--   [Диагностика](../../../odbc/reference/develop-app/diagnostics.md)  
+-   [Error Handling](../../../odbc/reference/develop-app/diagnostics.md)  
   
 -   [Взаимодействие](../../../odbc/reference/develop-app/interoperability.md)  
   

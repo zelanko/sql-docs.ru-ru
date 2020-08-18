@@ -1,4 +1,5 @@
 ---
+description: Свойства, методы и события коллекции Dimensions
 title: Свойства, методы и события коллекции измерений | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0025687e-e20d-4c36-8242-b9ab56e50706
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 40d3a6e5bb88e8b38441a8ff4869ac17b74e8bb1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0024a8b0c96d5007f821da86293d40662ca02d98
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764255"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441056"
 ---
 # <a name="dimensions-collection-properties-methods-and-events"></a>Свойства, методы и события коллекции Dimensions
 ## <a name="properties"></a>Свойства  
