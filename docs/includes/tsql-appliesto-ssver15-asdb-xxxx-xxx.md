@@ -11,5 +11,5 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 04/27/2020
 ms.locfileid: "80501745"
 ---
-<Token>Область **применения:** ![да](media/yes-icon.png)SQL Server 2019 и более ![поздних версий](media/yes-icon.png)да ![база](media/no-icon.png)данных SQL Azure нет Azure синапсе Analytics ![(](media/no-icon.png)SQL DW) нет параллельного хранилища данных</Token>
+<Token>**применимо к:** ![ Да ](media/yes-icon.png) SQL Server 2019 и более поздних версий ![ Да ](media/yes-icon.png) база данных SQL Azure ![ нет ](media/no-icon.png) Azure синапсе Analytics (SQL DW) ![ нет ](media/no-icon.png) параллельного хранилища данных </Token>
 

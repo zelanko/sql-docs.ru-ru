@@ -1,4 +1,5 @@
 ---
+description: SQLGetDescRec
 title: SQLGetDescRec | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
@@ -13,12 +14,12 @@ ms.assetid: f3389ff2-f3be-4035-9fb5-c9ebc2f15025
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c3c3f91a81213159f283d769a106b75f1ea28f6
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 3b8cef5ec3586347e9bde76cdde8f0a95de71519
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332315"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88407520"
 ---
 # <a name="sqlgetdescrec"></a>SQLGetDescRec
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,9 +35,9 @@ ms.locfileid: "87332315"
   
 |Параметр|Возвращающий табличное значение параметр|Столбцы возвращающих табличные значения параметров и других параметров|  
 |---------------|-----------------------------|----------------------------------------------------------|  
-|*Имя*|Имя параметра для вызова хранимой процедуры; в противном случае строка длины 0.|Имя столбца возвращающих табличные значения параметров.|  
+|*имя*;|Имя параметра для вызова хранимой процедуры; в противном случае строка длины 0.|Имя столбца возвращающих табличные значения параметров.|  
 |*типептр*|SQL_DESC_TYPE. Для возвращающих табличные значения параметров — SQL_SS_TABLE.|SQL_DESC_TYPE|  
-|*субтипептр*|Не определено|SQL_DESC_DATETIME_INTERVAL_CODE (для записей типа SQL_DATETIME или SQL_INTERVAL).|  
+|*субтипептр*|Не определено.|SQL_DESC_DATETIME_INTERVAL_CODE (для записей типа SQL_DATETIME или SQL_INTERVAL).|  
 |*ленгсптр*|0|SQL_DESC_OCTET_LENGTH|  
 |*преЦисионптр*|0|SQL_DESC_PRECISION|  
 |*скалептр*|0|SQL_DESC_SCALE|  

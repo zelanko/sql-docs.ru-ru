@@ -1,4 +1,5 @@
 ---
+description: Приложение В. Грамматика SQL
 title: Приложение в. грамматика SQL | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ee36f09-59e7-4b94-88ca-7ebc0952a3be
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f783cd4cf65011d80a631eff191d246e1c83c569
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b91f946354659d93ae9609fbf7425ac20eb4278f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298404"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411520"
 ---
 # <a name="appendix-c-sql-grammar"></a>Приложение В. Грамматика SQL
 Это приложение содержит следующие разделы.  
@@ -28,4 +29,4 @@ ms.locfileid: "81298404"
   
 -   [Литералы в ODBC](../../../odbc/reference/appendixes/literals-in-odbc.md)  
   
--   [Зарезервированные слова](../../../odbc/reference/appendixes/reserved-keywords.md)
+-   [Зарезервированные ключевые слова](../../../odbc/reference/appendixes/reserved-keywords.md)

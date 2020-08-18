@@ -1,4 +1,5 @@
 ---
+description: Выбор столбцов с помощью метода IRow::GetColumns (или IRow::Open) и интерфейса ISequentialStream
 title: 'Fetch, IRow:: DataColumn и ISequentialStream'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,11 +16,12 @@ ms.assetid: 0761f469-9b6c-4fa6-bbd7-f0cb936e4f1c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b778ba143c2157278df2d8c0d8c7cbcbf3fd8bda
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7c84ce463eabda4abb641059dc62d6c767e754be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011193"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88407990"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Выбор столбцов с помощью метода IRow::GetColumns (или IRow::Open) и интерфейса ISequentialStream
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,11 +37,11 @@ ms.locfileid: "86011193"
   
 2.  Выполните команду (в этом примере **ICommandExecute::Execute()** вызывается с идентификатором IID_IRow).  
   
-3.  Получите данные из столбцов с помощью метода **IRow::Open()** или **IRow::GetColumns()**.  
+3.  Получите данные из столбцов с помощью метода **IRow::Open()** или **IRow::GetColumns()** .  
   
     -   **IRow::Open()** позволяет открыть поток **ISequentialStream** для одной строки. Задайте параметр DBGUID_STREAM, чтобы указать, что столбец содержит поток двоичных данных. После этого можно прочитать данные из столбца с помощью метода **IStream** или **ISequentialStream**.  
   
-    -   Если используется метод **IRow::GetColumns()**, элементу **pData** структуры DBCOLUMNACCESS присваивается указатель на объект потока.  
+    -   Если используется метод **IRow::GetColumns()** , элементу **pData** структуры DBCOLUMNACCESS присваивается указатель на объект потока.  
   
 4.  Выполните метод **ISequentialStream::Read()** несколько раз, чтобы считать нужное число байтов в буфер потребителя.  
   
@@ -671,7 +673,7 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'MyTable')
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Инструкции по OLE DB](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

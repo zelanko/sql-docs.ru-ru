@@ -1,4 +1,5 @@
 ---
+description: Выгрузка DLL-библиотеки расширенной хранимой процедуры
 title: Выгрузка DLL-библиотеки расширенной хранимой процедуры | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4c75ab14-af54-4965-b376-8d75d385c941
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 76007876547b863f050d1e3fa494cbd8b30a5fc0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f409b15fe8212ca3d5ce25334a0241eb38feea9b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717655"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88408790"
 ---
 # <a name="unloading-an-extended-stored-procedure-dll"></a>Выгрузка DLL-библиотеки расширенной хранимой процедуры
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85717655"
 DBCC xp_hello(FREE)  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [DBCC dllname &#40;бесплатный&#41; &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md)  
   
   

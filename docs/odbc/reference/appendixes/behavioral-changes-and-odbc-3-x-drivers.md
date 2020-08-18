@@ -1,4 +1,5 @@
 ---
+description: Изменения в поведении и драйверы ODBC 3.x
 title: Изменения поведения и драйверы ODBC 3. x | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 88a503cc-bff7-42d9-83ff-8e232109ed06
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4d8343573261d74a6a0c652cf425b12da91f7cb0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 43f64aa4b627130308ea920918c2de6d98116020
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292368"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411340"
 ---
 # <a name="behavioral-changes-and-odbc-3x-drivers"></a>Изменения в поведении и драйверы ODBC 3.x
 Атрибут среды SQL_ATTR_ODBC_VERSION указывает драйверу, требуется ли поведение ODBC *2. x* или поведение ODBC *3. x* . Настройка атрибута среды SQL_ATTR_ODBC_VERSION зависит от приложения. Приложения ODBC *3. x* должны вызывать **SQLSetEnvAttr** для установки этого атрибута после вызова **функцию SQLAllocHandle** для выделения обработчика среды и перед вызовом **функцию SQLAllocHandle** для выделения маркера соединения. Если это не удается сделать, диспетчер драйверов возвращает значение SQLSTATE HY010 (ошибка последовательности функций) при последнем вызове функции **функцию SQLAllocHandle**.  
