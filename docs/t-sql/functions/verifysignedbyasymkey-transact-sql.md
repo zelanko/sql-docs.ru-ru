@@ -1,4 +1,5 @@
 ---
+description: VERIFYSIGNEDBYASYMKEY (Transact-SQL)
 title: VERIFYSIGNEDBYASYMKEY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 9f7c6e0b-5ba4-4dbb-994d-5bd59f4908de
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8404d41f9447eeafd30788c482abd7279c6b6c46
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 0257bd8b66a915ec5d7f0b59e3aa85f197f38867
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112217"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88362250"
 ---
 # <a name="verifysignedbyasymkey-transact-sql"></a>VERIFYSIGNEDBYASYMKEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +53,7 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
  *clear_text*  
  Незашифрованные текстовые данные, проверку которых нужно произвести.  
   
- *signature*  
+ *подпись*  
  Это подпись, которая была прикреплена к подписанным данным. Аргумент *signature* имеет тип **varbinary**.  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
@@ -60,7 +61,7 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
   
  Возвращает 1 в случае совпадения подписей и 0 — в противном случае.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  **VerifySignedByAsymKey** выполняет расшифровку подписи данных с помощью открытого ключа указанного асимметричного ключа и сравнивает расшифрованное значение с новым вычисленным хэшем MD5 данных. Если значения совпадают, подтверждается допустимость подписи.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -93,7 +94,7 @@ AND Description = N'data encrypted by asymmetric key ''WillisKey74''';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ASYMKEY_ID (Transact-SQL)](../../t-sql/functions/asymkey-id-transact-sql.md)   
  [SIGNBYASYMKEY (Transact-SQL)](../../t-sql/functions/signbyasymkey-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   

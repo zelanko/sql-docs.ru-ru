@@ -1,4 +1,5 @@
 ---
+description: DROP STATISTICS (Transact-SQL)
 title: DROP STATISTICS (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/22/2016
@@ -24,12 +25,12 @@ ms.assetid: 222806b7-4e45-445b-8cd0-bd5461f3ca4a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d10b55c020bcd037f82eb841fba549c17a707992
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 0da570526f14e6055883ce93838c2f2acfa68eac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483979"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88358860"
 ---
 # <a name="drop-statistics-transact-sql"></a>DROP STATISTICS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,7 +63,7 @@ DROP STATISTICS [ schema_name . ] table_name.statistics_name
  *statistics_name*  
  Имя удаляемой группы статистических данных. Имена статистических данных должны соответствовать правилам для идентификаторов.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Будьте внимательны при удалении статистических данных. Эта операция может повлиять на план выполнения, избранный оптимизатором запросов.  
   
  Статистическая информация по индексам не может быть удалена с помощью инструкции DROP STATISTICS. Статистические данные существуют, пока существует соответствующий индекс.  
@@ -77,7 +78,7 @@ DROP STATISTICS [ schema_name . ] table_name.statistics_name
 ### <a name="a-dropping-statistics-from-a-table"></a>A. Удаление статистики из таблицы  
  В следующем примере удаляются группы статистических данных (коллекций) из двух таблиц. Удаляются группа статистических данных (коллекция) `VendorCredit` из таблицы `Vendor` и статистическая информация (коллекция) `CustomerTotal` из таблицы `SalesOrderHeader`.  
   
-```  
+```sql  
 -- Create the statistics groups.  
 USE AdventureWorks2012;  
 GO  
@@ -89,7 +90,6 @@ CREATE STATISTICS CustomerTotal
     WITH FULLSCAN;  
 GO  
 DROP STATISTICS Purchasing.Vendor.VendorCredit, Sales.SalesOrderHeader.CustomerTotal;  
-  
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
@@ -97,10 +97,9 @@ DROP STATISTICS Purchasing.Vendor.VendorCredit, Sales.SalesOrderHeader.CustomerT
 ### <a name="b-dropping-statistics-from-a-table"></a>Б. Удаление статистики из таблицы  
  В приведенных ниже примерах статистика `CustomerStats1` удаляется из таблицы `Customer`.  
   
-```  
+```sql  
 DROP STATISTICS Customer.CustomerStats1;  
 DROP STATISTICS dbo.Customer.CustomerStats1;  
-  
 ```  
   
 ## <a name="see-also"></a>См. также:  

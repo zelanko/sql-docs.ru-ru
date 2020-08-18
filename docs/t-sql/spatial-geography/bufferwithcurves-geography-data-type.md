@@ -1,4 +1,5 @@
 ---
+description: BufferWithCurves (тип данных geography)
 title: BufferWithCurves (тип данных geography) | Документы Майкрософт
 ms.custom: ''
 ms.date: 08/11/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 614e099ef075ac4bb4ce5ad4755eded9860c6b7b
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 4f4c5943dd69d651a9038e5e8e27798115911a9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555509"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88360470"
 ---
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves (тип данных geography)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,7 +57,7 @@ ms.locfileid: "86555509"
   
 -   **NULL** передается методу, например `@g.BufferWithCurves(NULL)`  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  В следующей таблице показаны результаты, возвращенные для разных значений расстояния.  
   
 |Значение расстояния|Измерения типа|Возвращенный пространственный тип|  
@@ -141,7 +142,7 @@ ms.locfileid: "86555509"
   
  Обратите внимание на то, что в предыдущих двух примерах передавался строковый литерал методу `BufferWithCurves()`. Первый пример будет работать, поскольку строковый литерал может быть преобразован в числовое значение. Но во втором примере возникнет исключение `ArgumentException`.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширенные методы в экземплярах Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [BufferWithCurves (тип данных geometry)](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
   

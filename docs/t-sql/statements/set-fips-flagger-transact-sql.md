@@ -1,4 +1,5 @@
 ---
+description: SET FIPS_FLAGGER (Transact-SQL)
 title: SET FIPS_FLAGGER (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/29/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e82f6bee-6cf6-4061-be22-9ad2e8e9d3d6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fcbc4df284ef9fdd6467cf5bbe52e91c5c98da18
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: d915f45f9b73b6701ac0994ec87bcf31acb999bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484687"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88356860"
 ---
 # <a name="set-fips_flagger-transact-sql"></a>SET FIPS_FLAGGER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,14 +50,14 @@ SET FIPS_FLAGGER ( 'level' |  OFF )
   
  *level* должен иметь одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |ENTRY|Проверка на соответствие начальному уровню стандарта ISO.|  
 |FULL|Проверка на полное соответствие стандарту ISO.|  
 |INTERMEDIATE|Проверка на соответствие промежуточному уровню стандарта ISO.|  
 |OFF|Без проверки стандарта.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Значение параметра `SET FIPS_FLAGGER` устанавливается во время выполнения или запуска, а не во время синтаксического анализа. Проверка на этапе синтаксического анализа означает, что если инструкция SET присутствует в пакете или хранимой процедуре, то она вступает в силу независимо от того, достигает ли фактическое выполнение кода соответствующей точки. Кроме того, инструкция `SET` вступает в силу до выполнения любых операторов. Например, если инструкция `SET` находится в блоке `IF...ELSE`, который никогда не выполняется во время обработки, то она, тем не менее, `SET` вступает в силу, поскольку блок `IF...ELSE` подвергается синтаксическому анализу.  
   
  Если инструкция `SET FIPS_FLAGGER` установлена в хранимой процедуре, значение `SET FIPS_FLAGGER` восстанавливается после того, как управление выходит из этой хранимой процедуры. Поэтому инструкция `SET FIPS_FLAGGER`, определенная в динамическом коде SQL, не действует на инструкции, следующие за инструкцией динамического SQL.  
@@ -64,7 +65,7 @@ SET FIPS_FLAGGER ( 'level' |  OFF )
 ## <a name="permissions"></a>Разрешения  
  Необходимо быть членом роли **public**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: PATINDEX (Transact-SQL)
 title: PATINDEX (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/19/2016
@@ -22,12 +23,12 @@ ms.assetid: c0dfb17f-2230-4e36-98da-a9b630bab656
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12f1f710a78c6dcd059fbae5078b0b643296700e
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c4d2ee21a4b2c2975fcead1e883cb28459c608dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111425"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88363380"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,9 +56,9 @@ PATINDEX ( '%pattern%' , expression )
  [Выражение](../../t-sql/language-elements/expressions-transact-sql.md), обычно столбец, в котором производится поиск по указанному шаблону. *expression* представляет собой выражение из категории типа данных "символьная строка".  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
-**bigint**, если *expression* имеет тип данных **varchar(max)** или **nvarchar(max)** ; в противном случае **int**.  
+**bigint**, если *expression* имеет тип данных **varchar(max)** или **nvarchar(max)**; в противном случае **int**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
 Если аргумент *pattern* или *expression* имеет значение NULL, функция PATINDEX возвращает значение NULL.  
  
 Начальная позиция PATINDEX — это 1.
@@ -67,7 +68,7 @@ PATINDEX ( '%pattern%' , expression )
 ## <a name="supplementary-characters-surrogate-pairs"></a>Дополнительные символы (суррогатные пары)  
 При использовании параметров сортировки SC возвращаемое значение рассматривает любые суррогатные пары UTF-16 в параметре *expression* как один символ. Дополнительные сведения см. в статье [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
-Символ 0x0000 (**char(0)** ) не определен в параметрах сортировки Windows, и его нельзя включать в PATINDEX.  
+Символ 0x0000 (**char(0)**) не определен в параметрах сортировки Windows, и его нельзя включать в PATINDEX.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -126,7 +127,7 @@ position
  В отличие от `LIKE`, `PATINDEX` возвращает позицию, аналогично `CHARINDEX`.  
 
 ### <a name="d-using-complex-wildcard-expressions-with-patindex"></a>Г. Использование сложных выражений с подстановочными знаками с PATINDEX 
-В следующем примере оператор [string](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md) `[^]` используется для поиска позиции символа, который не является числом, буквой или пробелом.
+В следующем примере оператор  [string](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)`[^]` используется для поиска позиции символа, который не является числом, буквой или пробелом.
 
 ```sql
 SELECT position = PATINDEX('%[^ 0-9A-z]%', 'Please ensure the door is locked!'); 
@@ -174,7 +175,7 @@ position
 22
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [LIKE (Transact-SQL)](../../t-sql/language-elements/like-transact-sql.md)   
  [CHARINDEX (Transact-SQL)](../../t-sql/functions/charindex-transact-sql.md)  
  [LEN (Transact-SQL)](../../t-sql/functions/len-transact-sql.md)  

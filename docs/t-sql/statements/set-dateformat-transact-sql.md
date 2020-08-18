@@ -1,4 +1,5 @@
 ---
+description: SET DATEFORMAT (Transact-SQL)
 title: SET DATEFORMAT (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -27,12 +28,12 @@ ms.assetid: da217878-7ec4-477e-aa13-604073c948f8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8983c1ffb63fae634fe86ffa8b90707d7242d014
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 9d7a2c4feb97c534dcef80c851e1df0ae2721a44
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484668"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88357150"
 ---
 # <a name="set-dateformat-transact-sql"></a>SET DATEFORMAT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,10 +56,10 @@ SET DATEFORMAT { format | @format_var }
  *format* |  **@** _format_var_  
  Порядок следования составляющих частей даты. Допустимые параметры: **mdy**, **dmy**, **ymd**, **ydm**, **myd** и **dym**. Может быть задано в формате Юникод или в виде двухбайтовой кодировки (DBCS), преобразованной в Юникод. Для языкового стандарта "Английский (США)" значение по умолчанию равно **mdy**. Значения параметра DATEFORMAT по умолчанию для всех поддерживаемых языков см. в разделе [sp_helplanguage (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Значение **ydm** параметра DATEFORMAT не поддерживается для типов данных **date**, **datetime2** и **datetimeoffset**.  
   
- Параметр DATEFORMAT может интерпретировать символьные строки по-разному для разных типов данных даты в зависимости от их формата строк. Например, интерпретации **datetime** и **smalldatetime** могут не соответствовать **date**, **datetime2** или  **datetimeoffset**. Этот параметр влияет на интерпретацию символьных строк при их преобразовании в значения даты для базы данных. Он не влияет на отображение значений типов данных даты, хранящихся в базе данных, а также на формат их хранения.  
+ Параметр DATEFORMAT может интерпретировать символьные строки по-разному для разных типов данных даты в зависимости от их формата строк. Например, интерпретации **datetime** и **smalldatetime** могут не соответствовать **date**, **datetime2** или ** datetimeoffset**. Этот параметр влияет на интерпретацию символьных строк при их преобразовании в значения даты для базы данных. Он не влияет на отображение значений типов данных даты, хранящихся в базе данных, а также на формат их хранения.  
   
  Некоторые форматы символьных строк, например ISO 8601, интерпретируются независимо от параметра DATEFORMAT.  
   
@@ -90,6 +91,6 @@ GO
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)  
 

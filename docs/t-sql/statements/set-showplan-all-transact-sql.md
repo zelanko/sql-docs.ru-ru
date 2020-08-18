@@ -1,4 +1,5 @@
 ---
+description: SET SHOWPLAN_ALL (Transact-SQL)
 title: SET SHOWPLAN_ALL (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 04/16/2020
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: a500b682-bae4-470f-9e00-47de905b851b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f6be25893400c5aca52d81c86710042b24979a5f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 01361c4ed6acb7a0a1ea41c5048a6d8eb41dd283
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765709"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88356890"
 ---
 # <a name="set-showplan_all-transact-sql"></a>SET SHOWPLAN_ALL (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,9 @@ ms.locfileid: "85765709"
 SET SHOWPLAN_ALL { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>Remarks
  Задание параметра инструкции SET SHOWPLAN_ALL происходит во время выполнения или запуска инструкций, а не во время синтаксического анализа.  
   
  Если выполнена команда `SET SHOWPLAN_ALL`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает сведения о выполнении каждой инструкции, не выполняя ее, и инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] не выполняются. Если параметр принял значение ON, данные обо всех последующих инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)] возвращаются до тех пор, пока параметру не будет присвоено значение OFF. Например, если инструкция CREATE TABLE была выполнена, когда `SET SHOWPLAN_ALL` была включена, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет возвращать сообщение об ошибке для всех последующих инструкций SELECT, в которых используется данная таблица, уведомляя пользователей о том, что она не существует. Следовательно, последующие ссылки на эту таблицу не действуют. Когда этому параметру присвоено значение OFF, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет инструкции, не формируя отчеты.  

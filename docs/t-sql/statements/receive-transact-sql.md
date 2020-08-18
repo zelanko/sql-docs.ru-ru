@@ -1,4 +1,5 @@
 ---
+description: RECEIVE (Transact-SQL)
 title: RECEIVE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/26/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 45ad55bdf67be6dae67a69994320f9cf282a7beb
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: ab5a7dc7dd87c518a070b123145acad020efeb89
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485425"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88357350"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -107,7 +108,7 @@ ms.locfileid: "86485425"
  TIMEOUT *timeout*  
  Указывает количество времени, в миллисекундах, в течение которого инструкция должна ожидать сообщение. Это предложение может быть использовано только вместе с предложением WAITFOR. Если данное предложение не указано или время ожидания равно –**1**, время ожидания будет неограниченно. По истечении времени ожидания инструкция RECEIVE возвращает пустой результирующий набор.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
   
 > [!IMPORTANT]  
 >  Если инструкция RECEIVE не является первой в пакете или хранимой процедуре, то предшествующая инструкция должна заканчиваться точкой с запятой (;).  
@@ -157,7 +158,7 @@ ms.locfileid: "86485425"
 ## <a name="queue-columns"></a>Столбцы очереди  
  В следующей таблице указаны столбцы в очереди.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**status**|**tinyint**|Состояние сообщения. Состояние сообщений, возвращаемых командой RECEIVE, всегда **0**. Сообщения в очереди могут иметь одно из следующих значений:<br /><br /> **0**= готово**1**= получено сообщение**2**= еще не завершено**3**= отправленное сообщение сохранено.|  
 |**priority**|**tinyint**|Уровень приоритета диалога, распространяющийся на сообщение.|  
@@ -171,7 +172,7 @@ ms.locfileid: "86485425"
 |**service_contract_id**|**int**|Идентификатор объекта контракта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которому следует диалог.|  
 |**message_type_name**|**nvarchar(256)**|Имя типа сообщения, который описывает формат сообщения. Сообщения могут иметь тип, определенный приложением, или быть системными сообщениями компонента Service Broker.|  
 |**message_type_id**|**int**|Идентификатор объекта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для типа сообщения, описывающий сообщение.|  
-|**Проверка**|**nchar(2)**|Проверка, используемая для сообщения:<br /><br /> **E**=Пусто**N**=Нет**X**=XML|  
+|**validation**|**nchar(2)**|Проверка, используемая для сообщения:<br /><br /> **E**=Пусто**N**=Нет**X**=XML|  
 |**message_body**|**varbinary(MAX)**|Содержимое сообщения.|  
   
 ## <a name="permissions"></a>Разрешения  
@@ -329,7 +330,7 @@ WAITFOR(
 ), TIMEOUT 60000 ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [BEGIN DIALOG CONVERSATION (Transact-SQL)](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [BEGIN CONVERSATION TIMER (Transact-SQL)](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
  [END CONVERSATION (Transact-SQL)](../../t-sql/statements/end-conversation-transact-sql.md)   

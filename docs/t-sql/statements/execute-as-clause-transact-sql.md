@@ -1,4 +1,5 @@
 ---
+description: EXECUTE AS, предложение (Transact-SQL)
 title: Предложение EXECUTE AS (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5ad156a9164d2b59833b3103a8f08b9cbe1ab284
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 999773d8e8406dac20f86e9f19a2b886a4988619
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483730"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88358410"
 ---
 # <a name="execute-as-clause-transact-sql"></a>EXECUTE AS, предложение (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -107,7 +108,7 @@ DDL Triggers with Database Scope
   
  В качестве аргумента *login_name* не могут быть указаны роль, сертификат, ключ или встроенная учетная запись (например, NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService или NT AUTHORITY\LocalSystem).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Способ, которым компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] определяет разрешения на объекты, зависит от цепочки владения, связывающей модуль и объекты, на который он ссылается. В предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] цепочки владения были единственным методом, который позволял избежать предоставления пользователю разрешений на все объекты, к которым модуль производит доступ.  
   
  Цепочки владения имеют следующие ограничения.  
@@ -223,7 +224,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sys.assembly_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)   
  [sys.sql_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [sys.service_queues (Transact-SQL)](../../relational-databases/system-catalog-views/sys-service-queues-transact-sql.md)   

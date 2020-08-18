@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;PACK_RECEIVED (Transact-SQL)'
 title: '@@PACK_RECEIVED (Transact-SQL) | Документы Майкрософт'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5c0b3d36-bfad-4f0b-abb8-e8f6391b32cd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 235308a339c1e1e668a2243acfadefeb1323480f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 3fea7af807dee5ff6307817992fe2f034ca00e78
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110362"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88363490"
 ---
 # <a name="x40x40pack_received-transact-sql"></a>&#x40;&#x40;PACK_RECEIVED (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "87110362"
 ## <a name="return-types"></a>Типы возвращаемых данных
  **integer**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Для отображения отчета, содержащего статистику по нескольким экземплярам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], включая перечень полученных и переданных пакетов, выполните процедуру **sp_monitor**.  
   
 ## <a name="examples"></a>Примеры  
@@ -62,7 +63,7 @@ Packets Received
 128  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [@@PACK_SENT](../../t-sql/functions/pack-sent-transact-sql.md)   
  [sp_monitor](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
  [Системные статистические функции](../../t-sql/functions/system-statistical-functions-transact-sql.md)  

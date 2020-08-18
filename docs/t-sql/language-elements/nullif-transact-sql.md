@@ -1,4 +1,5 @@
 ---
+description: Функция NULLIF (Transact-SQL)
 title: NULLIF (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 09/08/2017
@@ -21,12 +22,12 @@ ms.assetid: 44c7b67e-74c7-4bb9-93a4-7a3016bd2feb
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5db97fd036dfa614a5a9c6c399a3100d5128d73
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6ceef62e268cc34f036423b2e55b56152d24ea2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922345"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88361330"
 ---
 # <a name="nullif-transact-sql"></a>Функция NULLIF (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +53,7 @@ NULLIF ( expression , expression )
   
  Если выражения не равны, функция NULLIF возвращает первое выражение *expression*. Если они равны, функция NULLIF возвращает значение NULL с типом, соответствующим типу первого выражения *expression*.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Функция NULLIF аналогична поисковому выражению CASE, в котором два выражения равны, а результирующее выражение равно NULL.  
   
  В функции NULLIF не рекомендуется использовать такие зависимые от времени функции, как RAND(). Это может приводить к тому, что функция будет вычисляться дважды с возвратом различных результатов для каждого из вызовов.  

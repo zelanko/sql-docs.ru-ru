@@ -1,4 +1,5 @@
 ---
+description: SIGNBYASYMKEY (Transact-SQL)
 title: SIGNBYASYMKEY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: b1c46159-cc76-4205-a841-8f4a71742f80
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 44bdf92723ed68b4b79e5b6dd5825d9b9e3a7907
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e39fe276442feec54f7dc87bba65fde0381c82b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111352"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88362610"
 ---
 # <a name="signbyasymkey-transact-sql"></a>SIGNBYASYMKEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,12 +55,12 @@ SignByAsymKey( Asym_Key_ID , @plaintext [ , 'password' ] )
  Переменная типа **nvarchar**, **char**, **varchar** или **nchar**, содержащая данные, которые будут подписаны асимметричным ключом.  
   
  *password*  
- Пароль, которым защищен закрытый ключ. Аргумент *password* имеет тип **nvarchar(128)** .  
+ Пароль, которым защищен закрытый ключ. Аргумент *password* имеет тип **nvarchar(128)**.  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Переменная типа **varbinary** с максимальным размером 8000 байт.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Требуется разрешение CONTROL на асимметричный ключ.  
   
 ## <a name="examples"></a>Примеры  
@@ -81,7 +82,7 @@ INSERT INTO [SignedData04]
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ASYMKEY_ID (Transact-SQL)](../../t-sql/functions/asymkey-id-transact-sql.md)   
  [VERIFYSIGNEDBYASYMKEY (Transact-SQL)](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   

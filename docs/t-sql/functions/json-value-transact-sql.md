@@ -1,4 +1,5 @@
 ---
+description: JSON_VALUE (Transact-SQL)
 title: JSON_VALUE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 06/03/2020
@@ -17,12 +18,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 066ad2fde09d0e3f108c88cbe4fa6fe74882da03
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: f22175349162bac226d41f63ca66743de0668b6e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395683"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88364420"
 ---
 # <a name="json_value-transact-sql"></a>JSON_VALUE (Transact-SQL)
 
@@ -40,8 +41,6 @@ ms.locfileid: "87395683"
 JSON_VALUE ( expression , path )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## <a name="arguments"></a>Аргументы
 
  *expression*  
@@ -95,13 +94,13 @@ SET @jsonInfo=N'{
   
 |путь|Возвращаемое значение в нестрогом режиме|Возвращаемое значение в строгом режиме|Дополнительные сведения|  
 |----------|------------------------------|---------------------------------|---------------|  
-|$|NULL|Ошибка|Не является скалярным значением.<br /><br /> Используйте вместо этого функцию **JSON_QUERY**.|  
+|$|NULL|Error|Не является скалярным значением.<br /><br /> Используйте вместо этого функцию **JSON_QUERY**.|  
 |$.info.type|N'1'|N'1'|Недоступно|  
 |$.info.address.town|N'Bristol'|N'Bristol'|Недоступно|  
-|$.info."address"|NULL|Ошибка|Не является скалярным значением.<br /><br /> Используйте вместо этого функцию **JSON_QUERY**.|  
-|$.info.tags|NULL|Ошибка|Не является скалярным значением.<br /><br /> Используйте вместо этого функцию **JSON_QUERY**.|  
-|$.info.type[0]|NULL|Ошибка|Не является массивом.|  
-|$.info.none|NULL|Ошибка|Свойство не существует.|  
+|$.info."address"|NULL|Error|Не является скалярным значением.<br /><br /> Используйте вместо этого функцию **JSON_QUERY**.|  
+|$.info.tags|NULL|Error|Не является скалярным значением.<br /><br /> Используйте вместо этого функцию **JSON_QUERY**.|  
+|$.info.type[0]|NULL|Error|Не является массивом.|  
+|$.info.none|NULL|Error|Свойство не существует.|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="examples"></a>Примеры  
@@ -147,7 +146,7 @@ CREATE TABLE dbo.Store
  )
 ```  
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
  [Выражения пути JSON (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [Данные JSON (SQL Server)](../../relational-databases/json/json-data-sql-server.md)  
   

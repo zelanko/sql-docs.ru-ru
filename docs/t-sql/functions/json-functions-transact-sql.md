@@ -1,4 +1,5 @@
 ---
+description: Функции JSON (Transact-SQL)
 title: Функции JSON (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 06/03/2020
@@ -12,12 +13,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: c857d57f26c22e0f4eb9346e2925d493ec5e4541
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 06bf0965714c893d5b7684335edbb191e86ee77a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394230"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88364330"
 ---
 # <a name="json-functions-transact-sql"></a>Функции JSON (Transact-SQL)
 
@@ -25,7 +26,7 @@ ms.locfileid: "87394230"
 
 С помощью функций, описанных на страницах в этом разделе, можно проверять или изменять текст в формате JSON, а также извлекать простые или сложные значения.  
   
-|Компонент|Description|  
+|Функция|Описание|  
 |--------------|-----------------|  
 |[ISJSON](../../t-sql/functions/isjson-transact-sql.md)|Проверяет, что строка содержит допустимые данные JSON.|  
 |[JSON_VALUE](../../t-sql/functions/json-value-transact-sql.md)|Извлекает скалярное значение из строки JSON.|  
@@ -34,7 +35,7 @@ ms.locfileid: "87394230"
 
  Дополнительные сведения о встроенной поддержке формата JSON в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в статье [Данные JSON (SQL Server)](../../relational-databases/json/json-data-sql-server.md).  
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
  - [Проверка, построение запросов и изменение данных JSON с помощью встроенных функций (SQL Server)](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md)
  - [Выражения пути JSON (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md)

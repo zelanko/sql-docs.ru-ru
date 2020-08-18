@@ -1,4 +1,5 @@
 ---
+description: MOVE CONVERSATION (Transact-SQL)
 title: MOVE CONVERSATION (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/26/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 1da4d2c9-e767-434e-b49b-615711a7f626
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c06776bc9d3c8080349607a6d349b3bd0b7505de
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 2bfd1e22b79749abf8747362a8e7181def375643
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484061"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88358170"
 ---
 # <a name="move-conversation-transact-sql"></a>MOVE CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -55,11 +56,11 @@ MOVE CONVERSATION conversation_handle
  TO *conversation_group_id*  
  Переменная или константа, содержащая идентификатор группы сообщений, в которую перемещается диалог. *conversation_group_id* должен иметь тип **uniqueidentifier**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Инструкция MOVE CONVERSATION перемещает диалог, указанный аргументом *conversation_handle*, в группу сообщений, определяемую аргументом *conversation_group_id*. Диалоги могут перенаправляться только между группами диалогов, связанными с одной и той же очередью.  
   
 > [!IMPORTANT]  
->  Если инструкция MOVE CONVERSATION не является первой инструкцией в пакете или хранимой процедуре, предыдущая инструкция должна заканчиваться точкой с запятой ( **;** ) — разделителем инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+>  Если инструкция MOVE CONVERSATION не является первой инструкцией в пакете или хранимой процедуре, предыдущая инструкция должна заканчиваться точкой с запятой (**;**) — разделителем инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Инструкция MOVE CONVERSATION блокирует группу сообщений, связанную с диалогом *conversation_handle*, а также группу, заданную аргументом *conversation_group_id*, до тех пор, пока транзакция, содержащая инструкцию, не будет зафиксирована или откачена.  
   
@@ -83,7 +84,7 @@ SET @conversation_group_id =
 MOVE CONVERSATION @conversation_handle TO @conversation_group_id ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [BEGIN DIALOG CONVERSATION (Transact-SQL)](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [GET CONVERSATION GROUP (Transact-SQL)](../../t-sql/statements/get-conversation-group-transact-sql.md)   
  [END CONVERSATION (Transact-SQL)](../../t-sql/statements/end-conversation-transact-sql.md)   

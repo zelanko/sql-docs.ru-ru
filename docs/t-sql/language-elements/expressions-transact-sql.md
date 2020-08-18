@@ -1,4 +1,5 @@
 ---
+description: Выражения (Transact-SQL)
 title: Выражения (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
@@ -21,12 +22,12 @@ ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ef61be1cb01a80c7f95e66ce8a8962d559b2f24
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: bc6e54c2e820794e3346842d748c4bc0c7384b9b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919666"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88361170"
 ---
 # <a name="expressions-transact-sql"></a>Выражения (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -90,10 +91,10 @@ ms.locfileid: "86919666"
 |[ _table_name_ **.** ]|Имя или псевдоним таблицы.|  
 |*column*|Имя столбца. Только имя столбца используется в выражении.|  
 |*variable*|Имя переменной или параметр. Дополнительные сведения см. в статье [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md).|  
-|**(** _expression_  **)**|Любое допустимое выражение из определенных в этом разделе. Скобки являются операторами группировки, гарантирующими, что все операторы выражения внутри скобок будут выполнены, прежде чем результирующее выражение будет объединено с другим.|  
+| **(** _expression_  **)**|Любое допустимое выражение из определенных в этом разделе. Скобки являются операторами группировки, гарантирующими, что все операторы выражения внутри скобок будут выполнены, прежде чем результирующее выражение будет объединено с другим.|  
 |**(** _scalar_subquery_ **)**|Вложенный запрос, возвращающий одиночное значение. Пример:<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
 |{ *unary_operator* }|Унарные операторы можно применять только к выражениям, выполняемым с любыми типами данных из категории числовых типов данных. Оператор, имеющий только один числовой операнд:<br /><br /> + обозначает положительное число.<br /><br /> - обозначает отрицательное число.<br /><br /> ~ обозначает оператор дополнения.|  
-|{ *binary_operator* }|Этот оператор указывает, как объединяются два выражения для получения единого результата. Аргумент *binary_operator* может быть арифметическим, логическим, битовым или унарным оператором, а также оператором присвоения (=), сравнения или объединения (+). Дополнительные сведения об операторах [ см. в разделе ](../../t-sql/language-elements/operators-transact-sql.md)Операторы (Transact-SQL){3}.|  
+|{ *binary_operator* }|Этот оператор указывает, как объединяются два выражения для получения единого результата. Аргумент *binary_operator* может быть арифметическим, логическим, битовым или унарным оператором, а также оператором присвоения (=), сравнения или объединения (+). Дополнительные сведения об операторах  см. в разделе Операторы (Transact-SQL).|  
 |*ranking_windowed_function*|Любая ранжирующая функция языка [!INCLUDE[tsql](../../includes/tsql-md.md)]. Дополнительные сведения см. в разделе [Ранжирующие функции (Transact-SQL)](../../t-sql/functions/ranking-functions-transact-sql.md).|  
 |*aggregate_windowed_function*|Любая агрегатная функция языка [!INCLUDE[tsql](../../includes/tsql-md.md)], содержащая предложение OVER. Дополнительные сведения см. в статье [Предложение OVER (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md).|  
   
@@ -106,7 +107,7 @@ ms.locfileid: "86919666"
   
  Сложные выражения, составленные из нескольких символов и операторов, вычисляются в одиночные результаты. Тип данных, параметры сортировки, точность и значение результирующего выражения определяются объединением составляющих выражений (по два за один раз) до тех пор, пока не будет получен конечный результат. Последовательность, в которой эти выражения объединяются, зависит от приоритета операторов в выражении.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Два выражения можно объединить каким-либо оператором, если оба они относятся к типам данных, поддерживаемым оператором, и выполняется хотя бы одно из следующих условий.  
   
 -   Выражения относятся к одному типу данных.  
@@ -151,7 +152,7 @@ DELETE FROM dbo.MyTable WHERE (c1 = '0000003' AND c2 = 'A000003');
 ...
 ```
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [AT TIME ZONE (Transact-SQL)](../../t-sql/queries/at-time-zone-transact-sql.md)   
  [CASE (Transact-SQL)](../../t-sql/language-elements/case-transact-sql.md)   
  [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)   

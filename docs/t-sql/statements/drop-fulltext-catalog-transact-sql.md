@@ -1,4 +1,5 @@
 ---
+description: DROP FULLTEXT CATALOG (Transact-SQL)
 title: DROP FULLTEXT CATALOG (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b54efb0b-400b-49ce-923b-ce20a2a12255
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f9d5d286ca13d0160ea88c784af4262c0ef70f35
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 09ccdc16a00b60c5f6f0e2e70f2378a9a098048a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483517"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88358610"
 ---
 # <a name="drop-fulltext-catalog-transact-sql"></a>DROP FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +52,7 @@ DROP FULLTEXT CATALOG catalog_name
 ## <a name="permissions"></a>Разрешения  
  Пользователь должен иметь разрешение DROP на полнотекстовый каталог или быть членом предопределенной роли базы данных **db_owner** или **db_ddladmin**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sys.fulltext_catalogs (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
  [ALTER FULLTEXT CATALOG (Transact-SQL)](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
  [CREATE FULLTEXT CATALOG (Transact-SQL)](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   

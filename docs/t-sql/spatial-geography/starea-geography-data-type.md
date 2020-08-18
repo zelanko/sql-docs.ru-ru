@@ -1,4 +1,5 @@
 ---
+description: STArea (тип данных geography)
 title: STArea (тип данных geography) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cfc0b0e0-7fde-431a-863f-d13f3b1b1bef
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9b3b60616c146f668f7bc089a54d531ba6de78d4
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: a8581700ea3145840684cce1e18e24c2f2e1cd3e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555820"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88359740"
 ---
 # <a name="starea-geography-data-type"></a>STArea (тип данных geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "86555820"
   
 Тип возвращаемых данных CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
 Метод STArea() возвращает значение 0, если экземпляр **geography** содержит только объекты размерности 0 и 1 либо является пустым.  
   
 > [!NOTE]  
@@ -58,6 +59,6 @@ SET @g = geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -
 SELECT @g.STArea();  
 ```  
   
-## <a name="see-also"></a>См. также:  
-[Методы OGC в экземплярах Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+## <a name="see-also"></a>См. также  
+[Методы OGC, применяемые к географическим объектам](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   

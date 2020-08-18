@@ -1,4 +1,5 @@
 ---
+description: SET STATISTICS PROFILE (Transact-SQL)
 title: SET STATISTICS PROFILE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: c635e262-35fa-421a-aa6f-a1c30f351647
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 66b4376a41630a45679d2587c7ef8ff920d8f5ad
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ff7554df661b0cfa8ffc68f2d1b5ce19cd4ae4c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765681"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88356610"
 ---
 # <a name="set-statistics-profile-transact-sql"></a>SET STATISTICS PROFILE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,12 +45,14 @@ ms.locfileid: "85765681"
 SET STATISTICS PROFILE { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>Remarks
  Если параметру STATISTICS PROFILE присвоено значение ON, каждый исполняемый запрос возвращает обычный результирующий набор, за которым следует дополнительный результирующий набор, отображающий профиль выполнения запроса.  
   
  Дополнительный результирующий набор содержит столбцы SHOWPLAN_ALL для запроса, а также следующие дополнительные столбцы.  
   
-|Имя столбца|Description|  
+|Имя столбца|Описание|  
 |-----------------|-----------------|  
 |**Строки**|Фактическое количество строк, созданных каждым оператором.|  
 |**Executes**|Количество выполнений каждого оператора.|  

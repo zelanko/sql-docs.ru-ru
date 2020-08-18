@@ -1,4 +1,5 @@
 ---
+description: VAR (Transact-SQL)
 title: VAR (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/13/2017
@@ -20,12 +21,12 @@ ms.assetid: 71dfc339-16c8-42f9-8555-ad45400f7f9b
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7a7e64d73c44bf76d45dd672970f1216f88412c6
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 45c786bf165a26fe4e5d4b9f2461a98615af655d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111300"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88362480"
 ---
 # <a name="var-transact-sql"></a>VAR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "87111300"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```    
+```syntaxsql    
 -- Aggregate Function Syntax   
 VAR ( [ ALL | DISTINCT ] expression )  
   
@@ -62,7 +63,7 @@ VAR ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ## <a name="return-types"></a>Типы возвращаемых данных  
  **float**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Если в инструкции SELECT функция VAR используется для всех элементов, то при вычислении учитывается каждое значение результирующего набора. Функцию VAR можно использовать только для числовых столбцов. Значения NULL пропускаются.  
   
  VAR — это детерминированная функция, если она используется без предложений OVER и ORDER BY. Она не детерминирована при использовании с предложениями OVER и ORDER BY. Дополнительные сведения см. в разделе [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
@@ -72,7 +73,7 @@ VAR ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ### <a name="a-using-var"></a>А. Использование функции VAR  
  В следующем примере возвращается дисперсия для заполнения всех значений премии в таблице `SalesPerson` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql  
 SELECT VAR(Bonus)  
 FROM Sales.SalesPerson;  
 GO  
@@ -83,7 +84,7 @@ GO
 ### <a name="b-using-var"></a>Б. Использование функции VAR  
  В приведенном ниже примере возвращается статистическая дисперсия для значений квот на продажу в таблице `dbo.FactSalesQuota`. Первый столбец содержит дисперсию всех уникальных значений, а второй — дисперсию всех значений, включая повторяющиеся.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT VAR(DISTINCT SalesAmountQuota)AS Distinct_Values, VAR(SalesAmountQuota) AS All_Values  
@@ -101,7 +102,7 @@ Distinct_Values   All_Values
 ### <a name="c-using-var-with-over"></a>В. Использование функции VAR с предложением OVER  
  В приведенном ниже примере возвращается статистическая дисперсия для значений квот на продажу в каждом квартале календарного года. Обратите внимание на то, что ORDER BY в предложении OVER упорядочивает статистическую дисперсию, а ORDER BY в инструкции SELECT упорядочивает результирующий набор.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT CalendarYear AS Year, CalendarQuarter AS Quarter, SalesAmountQuota AS SalesQuota,  

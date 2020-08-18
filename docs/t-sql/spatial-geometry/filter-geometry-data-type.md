@@ -1,4 +1,5 @@
 ---
+description: Filter (тип данных geometry)
 title: Filter (тип данных geometry) | Документы Майкрософт
 ms.custom: ''
 ms.date: 08/03/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3d629a39-157e-4159-a3ca-a3c2e0ed4160
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5cbfa37a468fcc600b4092340d9f58365954294a
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 11092f892c9e6e756849f368a44db3ec7f3d0a61
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556033"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88359260"
 ---
 # <a name="filter-geometry-data-type"></a>Filter (тип данных geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "86556033"
   
 Возвращает значение 1, если экземпляр **geometry** потенциально пересекается с другим экземпляром **geometry**. В результате этого метода может появиться ложный положительный результат, а точный результат может зависеть от плана. Возвращает точное значение 0 (истинный отрицательный результат), если пересечение экземпляров **geometry** не обнаружено.
   
-Если индекс недоступен или не используется, этот метод возвращает те же значения, что и метод **STIntersects()** , при вызове с одинаковыми параметрами.
+Если индекс недоступен или не используется, этот метод возвращает те же значения, что и метод **STIntersects()**, при вызове с одинаковыми параметрами.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -52,7 +53,7 @@ ms.locfileid: "86556033"
   
  Тип возвращаемых данных CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Этот метод не является детерминированным или точным.  
   
 ## <a name="examples"></a>Примеры  
@@ -76,7 +77,7 @@ FROM sample
 WHERE g.Filter(geometry::Parse('POLYGON((-1 -1, 1 -1, 1 1, -1 1, -1 -1))')) = 1;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширенные методы экземпляров Geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
  [STIntersects (тип данных geometry)](../../t-sql/spatial-geometry/stintersects-geometry-data-type.md)  
   

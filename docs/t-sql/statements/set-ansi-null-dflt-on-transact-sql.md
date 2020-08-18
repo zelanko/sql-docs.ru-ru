@@ -1,4 +1,5 @@
 ---
+description: SET ANSI_NULL_DFLT_ON (Transact-SQL)
 title: SET ANSI_NULL_DFLT_ON (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 12/04/2017
@@ -24,12 +25,12 @@ ms.assetid: 8c925924-a466-4c8b-aeb2-7e0d341f32db
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4c4c864ba43d695a88080a77887a015dde7903c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4f37d1ecc339d531204195788cc6fd7bdf6d0c8c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002446"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88357420"
 ---
 # <a name="set-ansi_null_dflt_on-transact-sql"></a>SET ANSI_NULL_DFLT_ON (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +53,9 @@ SET ANSI_NULL_DFLT_ON {ON | OFF}
 SET ANSI_NULL_DFLT_ON ON
 ```
 
-## <a name="remarks"></a>Remarks  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>Remarks
  Данный параметр определяет допустимость значений NULL в новых столбцах только в случае, если допустимость значений NULL не указана в инструкциях CREATE TABLE и ALTER TABLE. Если значение SET ANSI_NULL_DFLT_ON равно ON, для новых, создаваемых с помощью инструкций ALTER TABLE и CREATE TABLE столбцов будут разрешены значения NULL, если для такого столбца явно не задана допустимость значений NULL. Параметр SET ANSI_NULL_DFLT_ON не влияет на столбцы, создаваемые с явным значением NULL или NOT NULL.  
   
  Оба параметра SET ANSI_NULL_DFLT_OFF и SET ANSI_NULL_DFLT_ON не могут быть установлены в ON одновременно. Если один параметр установлен в ON, то другой установлен в OFF. Поэтому можно установить в ON либо ANSI_NULL_DFLT_OFF, либо ANSI_NULL_DFLT_ON, или же установить оба параметра в OFF. Если один из параметров установлен в ON, применяется соответствующая установка (SET ANSI_NULL_DFLT_OFF или SET ANSI_NULL_DFLT_ON). Если оба параметра имеют значение OFF, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует значение столбца **is_ansi_null_default_on** в представлении каталога [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
@@ -69,7 +72,7 @@ SET ANSI_NULL_DFLT_ON ON
   
  Чтобы просмотреть текущее значение для этого параметра, выполните следующий запрос.  
   
-```  
+```sql  
 DECLARE @ANSI_NULL_DFLT_ON VARCHAR(3) = 'OFF';  
 IF ( (1024 & @@OPTIONS) = 1024 ) SET @ANSI_NULL_DFLT_ON = 'ON';  
 SELECT @ANSI_NULL_DFLT_ON AS ANSI_NULL_DFLT_ON;  
@@ -82,7 +85,7 @@ SELECT @ANSI_NULL_DFLT_ON AS ANSI_NULL_DFLT_ON;
 ## <a name="examples"></a>Примеры  
  В следующем примере показаны результаты применения `SET ANSI_NULL_DFLT_ON` с обоими значениями для параметра базы данных **ANSI null default**.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   

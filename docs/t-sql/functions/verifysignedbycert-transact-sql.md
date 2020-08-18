@@ -1,4 +1,5 @@
 ---
+description: VERIFYSIGNEDBYCERT (Transact-SQL)
 title: VERIFYSIGNEDBYCERT (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4e041f33-60c4-4190-91c7-220d51dd6c8f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2d214adb3915ab7d4df137c23cc7bcea31bb9b51
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 433ff155da65471abe8b3ebde3df437b0a3f55ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112200"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88362060"
 ---
 # <a name="verifysignedbycert-transact-sql"></a>VERIFYSIGNEDBYCERT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +54,7 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
  *signed_data*  
  Переменная типа **nvarchar**, **char**, **varchar** или **nchar**, содержащая данные, которые были подписаны с помощью сертификата.  
   
- *signature*  
+ *подпись*  
  Это подпись, которая была прикреплена к подписанным данным. Аргумент *signature* имеет тип **varbinary**.  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
@@ -61,7 +62,7 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
   
  Возвращает 1, если подписанные данные не были изменены, и 0 — в противном случае.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  **VerifySignedBycert** расшифровывает подпись данных с помощью открытого ключа указанного сертификата и сравнивает расшифрованное значение с новым хэшем MD5, вычисленным для данных. Если значения совпадают, подтверждается допустимость подписи.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -91,7 +92,7 @@ AND Description = N'data signed by certificate ''Shipping04''';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CERT_ID (Transact-SQL)](../../t-sql/functions/cert-id-transact-sql.md)   
  [SIGNBYCERT (Transact-SQL)](../../t-sql/functions/signbycert-transact-sql.md)   
  [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)   

@@ -1,4 +1,5 @@
 ---
+description: REVOKE, отмена разрешений для компонента Service Broker (Transact-SQL)
 title: REVOKE, отмена разрешений для компонента Service Broker (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 70f1d938-97e2-48a4-9bc0-8be9f2f2c36d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a3794c016c95be48cfe9e740ac22831641db0f3b
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 2d018e710bb272d9daa9eda7099d201b80ea3c1d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483555"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88357120"
 ---
 # <a name="revoke-service-broker-permissions-transact-sql"></a>REVOKE, отмена разрешений для компонента Service Broker (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,19 +65,19 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  Указывает разрешение, которое может быть отменено для защищаемого объекта компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
- CONTRACT **::** _contract_name_  
+ CONTRACT **::**_contract_name_  
  Указывает контракт, для которого отменяется разрешение. Квалификатор области **::** является обязательным.  
   
- MESSAGE TYPE **::** _message_type_name_  
+ MESSAGE TYPE **::**_message_type_name_  
  Указывает тип сообщения, для которого отменяется разрешение. Квалификатор области **::** является обязательным.  
   
- REMOTE SERVICE BINDING **::** _remote_binding_name_  
+ REMOTE SERVICE BINDING **::**_remote_binding_name_  
  Указывает привязку удаленной службы, для которой отменяется разрешение. Квалификатор области **::** является обязательным.  
   
- ROUTE **::** _route_name_  
+ ROUTE **::**_route_name_  
  Указывает маршрут, для которого отменяется разрешение. Квалификатор области **::** является обязательным.  
   
- SERVICE **::** _message_type_name_  
+ SERVICE **::**_message_type_name_  
  Указывает службу, для которой отменяется разрешение. Квалификатор области **::** является обязательным.  
   
  *database_principal*  
@@ -123,7 +124,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 -   пользователь базы данных, не сопоставленный с сервером-участником.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
   
 ## <a name="service-broker-contracts"></a>Контракты компонента Service Broker  
  Контракт компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] — это защищаемый объект уровня базы данных, содержащийся в базе данных, которая является для него родительской в иерархии разрешений. Наиболее конкретные и ограниченные разрешения, которые могут быть отменены для контракта [!INCLUDE[ssSB](../../includes/sssb-md.md)], а также более общие разрешения, которые неявно содержат эти более конкретные разрешения, указаны в следующей таблице.  
@@ -181,7 +182,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 ## <a name="permissions"></a>Разрешения  
  Требует разрешения CONTROL на контракт, тип сообщений, привязки удаленной службы, маршрут или службу компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [GRANT, предоставление разрешений на Service Broker (Transact-SQL)](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)   
  [DENY, запрет разрешений на Service Broker (Transact-SQL)](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)   
  [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   

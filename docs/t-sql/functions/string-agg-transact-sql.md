@@ -1,4 +1,5 @@
 ---
+description: STRING_AGG (Transact-SQL)
 title: STRING_AGG (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 04/19/2017
@@ -16,12 +17,12 @@ ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f7b87c06324bf168c9dce7441f14c78d89833f24
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 3b8a92c7776251547934799b68f3dc6cf7ada2b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111311"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88362500"
 ---
 # <a name="string_agg-transact-sql"></a>STRING_AGG (Transact-SQL)
 
@@ -49,7 +50,7 @@ STRING_AGG ( expression, separator ) [ <order_clause> ]
 *expression*  
 [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) любого типа данных. Во время объединения выражения преобразуются в тип `NVARCHAR` или `VARCHAR`. Нестроковые типы преобразуются в тип `NVARCHAR`.
 
-*separator*  
+*separator*язательно, количество  
 [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) типа `NVARCHAR` или `VARCHAR`, которое используется в качестве разделителя сцепляемых строк. Может быть литералом или переменной. 
 
 <order_clause>   
@@ -74,7 +75,7 @@ WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 |VARCHAR(1...8000) |VARCHAR(8000) |
 |int, bigint, smallint, tinyint, numeric, float, real, bit, decimal, smallmoney, money, datetime, datetime2, |NVARCHAR(4000) |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 
 `STRING_AGG` — это агрегатная функция, которая принимает все выражения из строк и сцепляет их в одну строку. Значения выражений неявно преобразуются в строковые типы и затем сцепляются. Неявное преобразование в строки выполняется по существующим правилам преобразования типов данных. Дополнительные сведения о преобразовании типов данных см. в статье [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md). 
 
@@ -189,7 +190,7 @@ GROUP BY City;
 > [!NOTE]
 > Результирующий набор отображается обрезанным.
 
-|Город |emails |
+|City |emails |
 |--- |--- |
 |Ballard|paige28@adventure-works.com;joshua24@adventure-works.com;javier12@adventure-works.com;...|
 |Baltimore|gilbert9@adventure-works.com|
@@ -223,7 +224,7 @@ GROUP BY City;
 > [!NOTE]
 > Результирующий набор отображается обрезанным.
 
-|Город |emails |
+|City |emails |
 |--- |--- |
 |Barstow|kristen4@adventure-works.com
 |Basingstoke Hants|dale10@adventure-works.com;heidi9@adventure-works.com
@@ -236,7 +237,7 @@ GROUP BY City;
 |Berkshire|barbara41@adventure-works.com;brenda4@adventure-works.com;carrie14@adventure-works.com;...|
 |Berks|adriana6@adventure-works.com;alisha13@adventure-works.com;arthur19@adventure-works.com;...|
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>Дополнительно
  
  [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md)  
  [CONCAT_WS (Transact-SQL)](../../t-sql/functions/concat-ws-transact-sql.md)  

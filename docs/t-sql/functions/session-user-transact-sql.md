@@ -1,4 +1,5 @@
 ---
+description: SESSION_USER (Transact-SQL)
 title: SESSION_USER (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -23,12 +24,12 @@ ms.assetid: 3dbe8532-31b6-4862-8b2a-e58b00b964de
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82172de7034ad8579d4e1952ca23dae8f7002be1
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 5a69a4d5f7cd7153b6acd4b6d487fbb2a201deb1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112321"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88362820"
 ---
 # <a name="session_user-transact-sql"></a>SESSION_USER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +49,7 @@ SESSION_USER
 ## <a name="return-types"></a>Типы возвращаемых данных
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Функция SESSION_USER с ограничением DEFAULT используется в инструкциях CREATE TABLE или ALTER TABLE, либо как любая стандартная функция. Функцию SESSION_USER можно вставить в таблицу, если не задано значения по умолчанию. Эта функция не имеет аргументов. Функция SESSION_USER может использоваться в запросах.  
   
  Если функция SESSION_USER вызывается после переключения контекста, SESSION_USER возвращает имя пользователя олицетворенного контекста.  
