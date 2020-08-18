@@ -1,4 +1,5 @@
 ---
+description: Задача скачивания BLOB-объектов Azure
 title: Задача скачивания BLOB-объектов Azure | Документы Майкрософт
 ms.custom: ''
 ms.date: 05/22/2019
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 8a63bf44-71be-456d-9a5c-be7c31aff065
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f16ae336c0fd01253bc45439cb3202e3501d6dda
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6437172ce0336938ad17a8b49bdb81e6fc4a0177
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919676"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88350030"
 ---
 # <a name="azure-blob-download-task"></a>Задача скачивания BLOB-объектов Azure
 
@@ -29,7 +30,7 @@ ms.locfileid: "86919676"
 
 Чтобы добавить **задачу скачивания BLOB-объектов Azure**, перетащите ее в конструкторе служб SSIS и дважды щелкните или щелкните правой кнопкой мыши и выберите **Изменить** , чтобы вызвать диалоговое окно **Редактор задач скачивания BLOB-объектов Azure** .  
   
- **Задача скачивания BLOB-объектов Azure** входит в состав [пакета дополнительных компонентов SQL Server Integration Services (SSIS) для Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
+ ** Задача скачивания BLOB-объектов Azure** входит в состав [пакета дополнительных компонентов SQL Server Integration Services (SSIS) для Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
   
  Следующая таблица содержит описание полей этого диалогового окна.  
 

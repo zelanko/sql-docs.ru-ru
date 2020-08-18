@@ -1,4 +1,5 @@
 ---
+description: '&gt; (больше) (выражение служб SSIS)'
 title: '&gt; (больше) (выражение служб SSIS) | Документы Майкрософт'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2e22efa3-eeb1-4984-a95c-9bccdcf98892
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 99a15645e037e578e1594142b9869ef5d92860af
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 45c1cc7d9c5c77141bcbe75ebef9ff056347d5aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916977"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88348200"
 ---
 # <a name="gt-greater-than-ssis-expression"></a>&gt; (больше) (выражение служб SSIS)
 
@@ -47,7 +48,7 @@ expression1 > expression2
 ## <a name="result-types"></a>Типы результата  
  DT_BOOL  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Если какое-нибудь выражение имеет значение NULL, то результат сравнения будет NULL. Если оба выражения имеют значение NULL, то результат будет NULL.  
   
  Наборы выражений *expression1* и *expression2*должны удовлетворять одному из следующих правил:  
@@ -103,7 +104,7 @@ ListPrice > 500
 @LPrice > 500  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [&#60; (меньше чем) (выражение служб SSIS)](../../integration-services/expressions/less-than-ssis-expression.md)   
  [&#62;= (больше или равно) (выражение служб SSIS)](../../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md)   
  [&#60;= (меньше или равно) (выражение служб SSIS)](../../integration-services/expressions/less-than-or-equal-to-ssis-expression.md)   

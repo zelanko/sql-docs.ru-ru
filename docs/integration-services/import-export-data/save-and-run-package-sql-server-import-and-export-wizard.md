@@ -1,4 +1,5 @@
 ---
+description: Сохранение и выполнение пакета (мастер экспорта и импорта SQL Server)
 title: Сохранение и выполнение пакета (мастер экспорта и импорта SQL Server) | Документы Майкрософт
 ms.custom: ''
 ms.date: 02/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 33e4ec58943372643ca25518634fdeea47047b27
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8739c955343207a9a91660a9f8643ea807741e0c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920151"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88346890"
 ---
 # <a name="save-and-run-package-sql-server-import-and-export-wizard"></a>Сохранение и выполнение пакета (мастер экспорта и импорта SQL Server)
 
@@ -96,7 +97,7 @@ ms.locfileid: "86920151"
   
 -   Если выбран параметр для сохранения пакета, откроется страница **Сохранение пакета служб SSIS**. На этой странице можно указать дополнительные параметры для сохранения пакета. (После сохранения пакета откроется страница **Завершение работы мастера**.) Дополнительные сведения см. в разделе [Сохранение пакета служб SSIS](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Сохранение пакетов](../../integration-services/save-packages.md)  
 [Запуск пакетов служб Integration Services (SSIS)](../../integration-services/packages/run-integration-services-ssis-packages.md)  
 [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  

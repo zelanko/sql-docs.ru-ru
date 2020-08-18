@@ -1,4 +1,5 @@
 ---
+description: Свойства последовательности (страница «Общие»)
 title: Свойства последовательности (страница "Общие") | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 0187f413-cdf0-48a2-b2e6-9b3578cd5811
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d5614e25efc21f4c3b4f4f54249bc26397acbfa3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c85265a8461fae5060ac7c8cdbffaf38ce8e9ee3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725902"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88325850"
 ---
 # <a name="sequence-properties-general-page"></a>Свойства последовательности (страница «Общие»)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,9 +44,9 @@ ms.locfileid: "85725902"
 |Тип данных|Диапазон|  
 |---------------|-----------|  
 |**tinyint**|От 0 до 255|  
-|**smallint**|От −32 768 до 32 767|  
-|**int**|От −2 147 483 648 до 2 147 483 647|  
-|**bigint**|От −9 223 372 036 854 775 808 до 9 223 372 036 854 775 807|  
+|**smallint**|От -32 768 до 32 767|  
+|**int**|От -2 147 483 648 до 2 147 483 647|  
+|**bigint**|От -9 223 372 036 854 775 808 до 9 223 372 036 854 775 807|  
   
 -   **decimal** или **numeric** с масштабом 0.  
   
@@ -88,7 +89,7 @@ ms.locfileid: "85725902"
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение **CREATE SEQUENCE**, **ALTER**или **CONTROL** для схемы SCHEMA.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sys.sequences (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)  
   
   

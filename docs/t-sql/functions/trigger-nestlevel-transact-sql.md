@@ -1,4 +1,5 @@
 ---
+description: TRIGGER_NESTLEVEL (Transact-SQL)
 title: TRIGGER_NESTLEVEL (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6a33e74a-0cf9-4ae1-a1e4-4a137a3ea39d
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 105e3ebe3b5d19461732dfcaaac415f707ea4e44
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 183d2e295fcdaf7de1bf20351272662979c888b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112342"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88307567"
 ---
 # <a name="trigger_nestlevel-transact-sql"></a>TRIGGER_NESTLEVEL (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +53,7 @@ TRIGGER_NESTLEVEL ( [ object_id ] , [ 'trigger_type' ] , [ 'trigger_event_catego
  **'** *trigger_event_category* **'**  
  Указывает, к каким триггерам применять функцию TRIGGER_NESTLEVEL — DML или DDL. Для триггеров DML следует указать **DML**, для триггеров DDL — **DDL**. Если указан аргумент *trigger_event_category*, необходимо также указать *trigger_type*. При использовании значения **DDL** значение предыдущего аргумента может быть только **AFTER**, так как триггеры DDL всегда являются триггерами AFTER.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Если не задано никаких аргументов, функция TRIGGER_NESTLEVEL возвращает общее число триггеров в стеке вызова. Этот список также включает и саму функцию TRIGGER_NESTLEVEL. Пропуск аргументов может наблюдаться в случае, когда триггер выполняет команды, приводящие к запуску другого триггера, или создает последовательность запускаемых триггеров.  
   
  Для возвращения общего числа триггеров в стеке вызовов для конкретного типа триггеров и категории событий следует указать аргумент *object_id* = 0.  
@@ -86,7 +87,7 @@ IF ( (SELECT trigger_nestlevel() ) > 5 )
       ('This statement nested over 5 levels of triggers.',16,-1)  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)  
   
   

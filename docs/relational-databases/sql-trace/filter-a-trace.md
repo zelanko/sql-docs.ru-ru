@@ -1,4 +1,5 @@
 ---
+description: Фильтрация трассировки
 title: Фильтрация трассировки | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6d5677de166b1bfff58c64665901ce814a7448fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d6ba791898d86f9e51baa9bd516e8a6752a94254
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750998"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88325100"
 ---
 # <a name="filter-a-trace"></a>Фильтрация трассировки
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -61,7 +62,7 @@ ms.locfileid: "85750998"
   
  Доступность фильтра зависит от столбца данных. По некоторым столбцам данных нельзя проводить фильтрацию. Для столбцов данных, по которым можно проводить фильтрацию, она возможна только с помощью специальных реляционных операторов, как показано в следующей таблице.  
   
-|Реляционный оператор|Символ оператора|Description|  
+|Реляционный оператор|Символ оператора|Описание|  
 |-------------------------|---------------------|-----------------|  
 |Похоже|LIKE|Определяет, что данные событий трассировки должны быть похожи на введенный текст. Допускает множественные значения.|  
 |Не похоже|Не похоже|Определяет то, что данные событий трассировки не должны быть похожи на введенный текст. Допускает множественные значения.|  
@@ -74,7 +75,7 @@ ms.locfileid: "85750998"
   
  В следующей таблице приведен список фильтруемых столбцов данных и доступных реляционных операторов.  
   
-|Столбцы данных|Реляционные операторы|  
+|Столбцы данных|Операторы отношения|  
 |------------------|--------------------------|  
 |**ApplicationName**|LIKE, NOT LIKE|  
 |**BigintData1**|=, <>, >=, <=|  
@@ -88,7 +89,7 @@ ms.locfileid: "85750998"
 |**DBUserName**|LIKE, NOT LIKE|  
 |**Длительность**|=, <>, >=, \<=|  
 |**EndTime**|>=, <=|  
-|**Ошибка**|=, <>, >=, <=|  
+|**Error**|=, <>, >=, <=|  
 |**EventSubClass**|=, <>, >=, <=|  
 |**FileName**|LIKE, NOT LIKE|  
 |**GUID**|С помощью программы [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отфильтруйте события в этом столбце данных. Дополнительные сведения см. в разделе [Фильтрация трассировок с помощью приложения SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
@@ -122,7 +123,7 @@ ms.locfileid: "85750998"
 |**RoleName**|LIKE, NOT LIKE|  
 |**RowCounts**|=, <>, >=, <=|  
 |**SessionLoginName**|LIKE, NOT LIKE|  
-|**Severity**|=, <>, >=, <=|  
+|**Уровень серьезности**|=, <>, >=, <=|  
 |**SourceDatabaseID**|=, <>, >=, <=|  
 |**SPID**|=, <>, >=, \<=|  
 |**SqlHandle**|С помощью программы [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отфильтруйте события в этом столбце данных. Дополнительные сведения см. в разделе [Фильтрация трассировок с помощью приложения SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md).|  
@@ -154,7 +155,7 @@ ms.locfileid: "85750998"
   
  [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)  
   
- [sp_addlinkedsrvlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)  
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)  
   
  [sp_addlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)  
   

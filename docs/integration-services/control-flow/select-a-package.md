@@ -1,4 +1,5 @@
 ---
+description: Выбор пакета
 title: Выбор пакета | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1045623c5eabe80a66a9320cb8425b47788d950d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ce10dbf39c92754b2fbc2879041e98094dc06ceb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921151"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88349940"
 ---
 # <a name="select-a-package"></a>Выбор пакета
 
@@ -29,10 +30,10 @@ ms.locfileid: "86921151"
   Используйте диалоговое окно **Выбор пакета** , чтобы указать пакет, из которого задача «Очередь сообщений» может получать сообщения.  
   
 ## <a name="static-options"></a>Статические параметры  
- **Местоположение**  
+ **Расположение**  
  Определяет местонахождение пакета. Это свойство имеет параметры, указанные в следующей таблице.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Установите местонахождение экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При выборе данного значения отображаются динамические параметры, **Сервер**, **Использовать проверку подлинности Windows**, **Использовать проверку подлинности SQL Server**, **Имя пользователя**и **Пароль**.|  
 |Файл DTSX|Установите местонахождение для файла DTSX. При выборе этого значения отображается динамический параметр **Имя файла**.|  
@@ -62,7 +63,7 @@ ms.locfileid: "86921151"
  **Имя файла**  
  Укажите путь к пакету или нажмите кнопку обзора **(...)** и определите его расположение.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Задача «Очередь сообщений»](../../integration-services/control-flow/message-queue-task.md)  
   
   

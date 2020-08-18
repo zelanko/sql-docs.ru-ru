@@ -1,4 +1,5 @@
 ---
+description: ToString (тип данных geometry)
 title: ToString (тип данных geometry) | Документы Майкрософт
 ms.custom: ''
 ms.date: 08/03/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2e55fa98-aa22-4baa-a516-7c233a33e212
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 62d8f5a0348dd6104983daaf2592feda80514a4f
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: d5b8e9d4c027dd364c9aaf84b4b8e56680548d0c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554930"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88305702"
 ---
 # <a name="tostring-geometry-data-type"></a>ToString (тип данных geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "86554930"
   
  Тип возвращаемых данных CLR: **SqlString**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Этот метод возвращает строку «Null», если он вызван для неопределенного экземпляра.  
   
  Вызов этого метода по отношению к определенным экземплярам эквивалентен использованию метода `AsTextZM().`  
@@ -56,7 +57,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 0 1, 1 0)', 0);
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [STAsText (тип данных geometry)](../../t-sql/spatial-geometry/stastext-geometry-data-type.md)   
  [Расширенные методы экземпляров Geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   

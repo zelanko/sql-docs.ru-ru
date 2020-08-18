@@ -1,4 +1,5 @@
 ---
+description: Функции (выражение служб SSIS)
 title: Функции (выражение служб SSIS) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 72f03d8d53e9d85b9b274ad1ac821fdfc79a6f24
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e0d2644192f6c38b98aaeec134b540ac269560d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917020"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88348141"
 ---
 # <a name="functions-ssis-expression"></a>Функции (выражение служб SSIS)
 
@@ -42,7 +43,7 @@ ms.locfileid: "86917020"
   
  Язык выражений содержит следующие математические функции.  
   
-|Компонент|Description|  
+|Функция|Описание|  
 |--------------|-----------------|  
 |[ABS (выражение служб SSIS)](../../integration-services/expressions/abs-ssis-expression.md)|Возвращает абсолютное положительное значение числового выражения.|  
 |[EXP (выражение служб SSIS)](../../integration-services/expressions/exp-ssis-expression.md)|Возвращает число «е» в степени, определяемой данным выражением.|  
@@ -58,7 +59,7 @@ ms.locfileid: "86917020"
   
  Средство оценки выражений содержит следующие строковые функции.  
   
-|Компонент|Description|  
+|Функция|Описание|  
 |--------------|-----------------|  
 |[CODEPOINT (выражение служб SSIS)](../../integration-services/expressions/codepoint-ssis-expression.md)|Возвращает значение кода Юникод самого первого символа в символьном выражении.|  
 |[FINDSTRING (выражение служб SSIS)](../../integration-services/expressions/findstring-ssis-expression.md)|Возвращает однократный индекс указанного вхождения символьной строки в выражение.|  
@@ -78,7 +79,7 @@ ms.locfileid: "86917020"
   
  Средство оценки выражений содержит следующие функции для работы с датой и временем.  
   
-|Компонент|Description|  
+|Функция|Описание|  
 |--------------|-----------------|  
 |[DATEADD (выражение служб SSIS)](../../integration-services/expressions/dateadd-ssis-expression.md)|Возвращает новое значение типа DT_DBTIMESTAMP, образованное добавлением интервала времени или даты к указанной дате.|  
 |[DATEDIFF (выражение служб SSIS)](../../integration-services/expressions/datediff-ssis-expression.md)|Возвращает числовое значение границ дат или времени между двумя указанными датами.|  
@@ -91,14 +92,14 @@ ms.locfileid: "86917020"
   
  Средство оценки выражений содержит следующие функции для значения NULL.  
   
-|Компонент|Description|  
+|Функция|Описание|  
 |--------------|-----------------|  
 |[ISNULL (выражение служб SSIS)](../../integration-services/expressions/isnull-ssis-expression.md)|Возвращает результат в виде логического выражения, в зависимости от того, имеет ли выражение значение NULL.|  
 |[NULL (выражение служб SSIS)](../../integration-services/expressions/null-ssis-expression.md)|Возвращает значение NULL запрошенного типа данных.|  
   
  Названия выражений указаны в верхнем регистре, но эти имена обрабатываются без учета регистра. Например, значение «null» равносильно использованию значения «NULL».  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Операторы (выражение служб SSIS)](../../integration-services/expressions/operators-ssis-expression.md)   
  [Примеры расширенных выражений служб Integration Services](../../integration-services/expressions/examples-of-advanced-integration-services-expressions.md)   
  [Выражения служб Integration Services (SSIS)](../../integration-services/expressions/integration-services-ssis-expressions.md)  

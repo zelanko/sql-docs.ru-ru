@@ -1,4 +1,5 @@
 ---
+description: класс событий Broker:Message Classify
 title: Класс событий Broker:Message Classify | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/24/2019
@@ -12,12 +13,12 @@ ms.assetid: e51f3351-1239-4c41-b87c-1dd86968e027
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 62227ad9938f94a1381431b57ebed7c3f63c0169
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7e5e8e0bc84e26798716ba1635580b81dbfc08c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763001"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88331080"
 ---
 # <a name="brokermessage-classify-event-class"></a>класс событий Broker:Message Classify
 
@@ -27,13 +28,13 @@ ms.locfileid: "85763001"
   
 ## <a name="brokermessage-classify-event-class-data-columns"></a>Столбцы данных класса событий Broker:Message Classify  
   
-|Столбец данных|Тип данных|Description|Номер столбца|Фильтруемый|  
+|Столбец данных|Тип данных|Описание|Номер столбца|Фильтруемый|  
 |-----------------|---------------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |**ClientProcessID**|**int**|Идентификатор, присвоенный компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент вводит идентификатор клиентского процесса.|9|Да|  
 |**DatabaseID**|**int**|Идентификатор базы данных, указанной в инструкции USE *database* , или базы данных по умолчанию, если для данного экземпляра инструкция USE *database* не выполнялась. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных **ServerName** захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
-|**EventClass**|**int**|Тип захваченного класса событий. Для **Broker:Message Classify** всегда равен **141**.|27|нет|  
-|**EventSequence**|**int**|Порядковый номер этого события.|51|нет|  
+|**EventClass**|**int**|Тип захваченного класса событий. Для **Broker:Message Classify** всегда равен **141**.|27|Нет|  
+|**EventSequence**|**int**|Порядковый номер этого события.|51|Нет|  
 |**EventSubClass**|**nvarchar**|Тип подкласса событий, предоставляющий дополнительные сведения о каждом классе события. Этот столбец может содержать следующие значения.<br /><br /> **Local**: выбранный маршрут имеет адрес LOCAL.<br /><br /> **Remote**: выбранный маршрут имеет адрес, отличный от LOCAL.<br /><br /> **Delayed**: сообщение отложено либо из-за того, что переадресация выключена, либо из-за отсутствия подходящего маршрута.|21|Да|  
 |**FileName**|**nvarchar**|Имя службы, которой направлено сообщение.|36|нет|  
 |**GUID**|**uniqueidentifier**|Идентификатор диалога. Этот идентификатор передается в составе сообщения и является общим для обоих участников диалога.|54|нет|  
@@ -50,7 +51,7 @@ ms.locfileid: "85763001"
 |**TargetUserName**|**nvarchar**|Сетевой адрес посредника следующего шага.|39|нет|  
 |**TransactionID**|**bigint**|Назначенный системой идентификатор транзакции.|4|нет|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

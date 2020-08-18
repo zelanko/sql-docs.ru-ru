@@ -1,4 +1,5 @@
 ---
+description: DROP SEARCH PROPERTY LIST (Transact-SQL)
 title: DROP SEARCH PROPERTY LIST (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7c7ce52a-6b77-4a1c-9abf-d5feb664bea8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 72baa445ceca98fdf66877ae64340dc1fb94f0ae
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: a214dff5fe12656cc4c0fb9c3ce72fef8e42b574
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485478"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88305116"
 ---
 # <a name="drop-search-property-list-transact-sql"></a>DROP SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +53,7 @@ DROP SEARCH PROPERTY LIST property_list_name
 SELECT name FROM sys.registered_search_property_lists;  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Нельзя удалить список свойств поиска из базы данных, пока он связан с каким-либо полнотекстовым индексом, попытки сделать это приводят к ошибкам. Чтобы удалить список свойств поиска из данного полнотекстового индекса, воспользуйтесь инструкцией [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) и укажите предложение SET SEARCH PROPERTY LIST либо с параметром OFF, либо с именем другого списка свойств поиска.  
   
  **Просмотр списков свойств поиска на экземпляре сервера**  
@@ -81,7 +82,7 @@ DROP SEARCH PROPERTY LIST JobCandidateProperties;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ALTER SEARCH PROPERTY LIST (Transact-SQL)](../../t-sql/statements/alter-search-property-list-transact-sql.md)   
  [CREATE SEARCH PROPERTY LIST (Transact-SQL)](../../t-sql/statements/create-search-property-list-transact-sql.md)   
  [Поиск свойств документа с использованием списков свойств поиска](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   

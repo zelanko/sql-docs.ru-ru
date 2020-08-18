@@ -1,4 +1,5 @@
 ---
+description: SUSER_NAME (Transact-SQL)
 title: SUSER_NAME (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,12 +25,12 @@ ms.assetid: ae598d9f-9baa-49b8-b1c1-042854206de4
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3b62e29885c9e23ae7f391106ce83cdf77c1b8d3
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: b47d97f42c1da9420a79f3ed45bd4fb5d6071220
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110757"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88307980"
 ---
 # <a name="suser_name-transact-sql"></a>SUSER_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -54,7 +55,7 @@ _server\_user\_id_
 ## <a name="return-types"></a>Типы возвращаемых данных  
 **nvarchar(128)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
 В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 7.0 идентификатор безопасности (SID) заменил идентификатор пользователя сервера (SUID).  
   
 SUSER_NAME возвращает имя для входа, которое присутствует в системной таблице **syslogins**.  
@@ -71,7 +72,7 @@ SUSER_NAME возвращает имя для входа, которое при�
 SELECT SUSER_NAME(1);  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [SUSER_ID (Transact-SQL)](../../t-sql/functions/suser-id-transact-sql.md)   
 [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   

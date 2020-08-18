@@ -1,4 +1,5 @@
 ---
+description: SUSER_SNAME (Transact-SQL)
 title: SUSER_SNAME (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/29/2017
@@ -26,12 +27,12 @@ ms.assetid: 11ec7d86-d429-4004-a436-da25df9f8761
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a8dc14225d150bb3a8783ffa01e53f95a45f3673
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 570372e0ca0f40284f89e862eee75e5a3d419440
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111833"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88308420"
 ---
 # <a name="suser_sname-transact-sql"></a>SUSER_SNAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,17 +53,17 @@ SUSER_SNAME ( [ server_user_sid ] )
  *server_user_sid*  
 **Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий
   
- Необязательный номер идентификатора безопасности имени входа. Аргумент *server_user_sid* имеет тип **varbinary(85)** . Аргумент *server_user_sid* может быть идентификационным номером безопасности любого имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] либо пользователя или группы [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Если аргумент *server_user_sid* не указан, будут возвращены сведения о текущем пользователе. Если параметр содержит слово NULL, то возвращается NULL.  
+ Необязательный номер идентификатора безопасности имени входа. Аргумент *server_user_sid* имеет тип **varbinary(85)**. Аргумент *server_user_sid* может быть идентификационным номером безопасности любого имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] либо пользователя или группы [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Если аргумент *server_user_sid* не указан, будут возвращены сведения о текущем пользователе. Если параметр содержит слово NULL, то возвращается NULL.  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Функция SUSER_SNAME может применяться как ограничение DEFAULT в инструкциях ALTER TABLE и CREATE TABLE. Функция SUSER_SNAME может применяться в списке выбора, в предложении WHERE и в выражении, где это допустимо. За функцией SUSER_SNAME всегда должны следовать круглые скобки, даже если не указано никаких параметров.  
   
  При вызове без аргумента функция SUSER_SNAME возвращает название текущего контекста безопасности. При вызове без аргумента в пределах пакета, который переключил контекст с помощью EXECUTE AS, функция SUSER_SNAME возвращает название олицетворенного контекста. При вызове из олицетворенного контекста функция ORIGINAL_LOGIN возвращает название оригинального контекста.  
   
-## <a name="sssdsfull-remarks"></a>[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Замечания  
+## <a name="sssdsfull-remarks"></a>[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Замечания  
  SUSER_NAME всегда возвращает имя входа для текущего контекста безопасности.  
   
  Инструкция SUSER_SNAME не поддерживает выполнение с помощью олицетворенного контекста безопасности посредством инструкции EXECUTE AS.  
@@ -147,7 +148,7 @@ SELECT SUSER_SNAME() AS CurrentLogin;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SUSER_SID (Transact-SQL)](../../t-sql/functions/suser-sid-transact-sql.md)   
  [Участники (ядро СУБД)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [sys.server_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   

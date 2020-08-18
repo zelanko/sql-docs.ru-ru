@@ -1,4 +1,5 @@
 ---
+description: Получение значений столбцов с помощью преобразования "Производный столбец"
 title: Получение значений столбцов с помощью преобразования "Производный столбец" | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3ef2d8078dedfb15c1f4be27d4970c7eaaf4731a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 30708e4bfb6dc21aa3f110a74754600aa3492b0e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919403"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88348420"
 ---
 # <a name="derive-column-values-with-the-derived-column-transformation"></a>Получение значений столбцов с помощью преобразования "Производный столбец"
 

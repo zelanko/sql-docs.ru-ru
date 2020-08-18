@@ -1,4 +1,5 @@
 ---
+description: Диспетчер подключений Hadoop
 title: Диспетчер подключений Hadoop | Документы Майкрософт
 ms.custom: ''
 ms.date: 06/29/2020
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 93565cbcc0140dd439dc2e7c52880879c6d815ba
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 72f5629e6ac5200324a149ff7242122b0ae0c16c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915106"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88350220"
 ---
 # <a name="hadoop-connection-manager"></a>Диспетчер подключений Hadoop
 
@@ -175,7 +176,7 @@ ms.locfileid: "86915106"
 
     1. Последовательно выберите **Диспетчер сервера** > **Управление групповой политикой** > **Домен**. После этого выберите **Объекты групповой политики** > **политику домена по умолчанию или активную политику домена** > **Изменить**.
 
-    2. Во всплывающем окне **Редактор управления групповыми политиками последовательно** выберите **Конфигурация компьютера** > **Политики** > **Параметры Windows**. После этого выберите **Настройки безопасности** > **Локальные политики** > **Параметры безопасности**. Настройте политику **Сетевая безопасность: настройка типов шифрования, разрешенных для Kerberos**.
+    2. Во всплывающем окне **Редактор управления групповыми политиками последовательно** выберите **Конфигурация компьютера** > **Политики** > **Параметры Windows**. После этого выберите **Настройки безопасности** > **Локальные политики** > **Параметры безопасности**. Настройте политику **Сетевая безопасность: настройка типов шифрования, разрешенных Kerberos**.
 
     3. Выберите алгоритм шифрования, который будет использоваться для подключения к KDC. Как правило, можно выбрать любой параметр.
 
@@ -206,7 +207,7 @@ C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
 C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
 ```
 
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также  
  [Задача Hadoop Hive](../../integration-services/control-flow/hadoop-hive-task.md)   
  [Задача Pig для Hadoop](../../integration-services/control-flow/hadoop-pig-task.md)   
  [Задача файловой системы Hadoop](../../integration-services/control-flow/hadoop-file-system-task.md)  

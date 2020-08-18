@@ -1,4 +1,5 @@
 ---
+description: IBM DB2 Subscribers
 title: Подписчики IBM DB2 | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/02/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4cc6f19d4b732344f42d27513e7f1a7730566780
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e044fa0e368893f0aaa1fe8175b306c2fc04c24b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893310"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88327070"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -106,7 +107,7 @@ ms.locfileid: "85893310"
 |**binary(1-254)**|CHAR(1-254) FOR BIT DATA|  
 |**binary(255-8000)**|VARCHAR(255-8000) FOR BIT DATA|  
 |**bit**|SMALLINT|  
-|**char(1-254)**|CHAR(1-254)|  
+|**CHAR(1-254)**|CHAR(1-254)|  
 |**char(255-8000)**|VARCHAR(255-8000)|  
 |**date**|DATE|  
 |**datetime**|timestamp|  
@@ -128,7 +129,7 @@ ms.locfileid: "85893310"
 |**numeric(32-38, 0-38)**|VARCHAR(41)|  
 |**nvarchar(1-4000)**|VARCHAR(1-4000)|  
 |**nvarchar(max)**|VARCHAR(0)*|  
-|**real**|real|  
+|**real**|ВЕЩЕСТВЕННОЕ ЧИСЛО|  
 |**smalldatetime**|timestamp|  
 |**smallint**|SMALLINT|  
 |**smallmoney**|DECIMAL(10,4)|  
@@ -154,7 +155,7 @@ ms.locfileid: "85893310"
   
      Это позволяет успешно создавать таблицы на подписчике до тех пор, пока ограничение размера страницы DB2 достаточно велико, чтобы вместить максимальный размер строки. Убедитесь, что имя входа, используемое для доступа к базе данных DB2, имеет разрешения на доступ к табличным пространствам достаточного размера для таблиц, реплицируемых в DB2.  
   
--   DB2 может поддерживать столбцы типа VARCHAR размером до 32 килобайт (КБ), поэтому некоторые столбцы больших объектов [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] могут соответствующим образом сопоставляться со столбцами DB2 типа VARCHAR. Однако поставщик OLE DB, используемый репликацией для DB2, не поддерживает сопоставление больших объектов [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с большими объектами DB2. По этой причине столбцы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **text**, **varchar(max)** , **ntext** и **nvarchar(max)** в создаваемых скриптах сопоставляются с типом VARCHAR(0). Значение длины 0 должно меняться на соответствующее значение до применения скрипта к подписчику. Если длина типа данных не изменяется, то при попытке создания таблицы на подписчике DB2 возникает ошибка 604 (ошибка 604 указывает на недопустимую точность или длину атрибута типа данных).  
+-   DB2 может поддерживать столбцы типа VARCHAR размером до 32 килобайт (КБ), поэтому некоторые столбцы больших объектов [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] могут соответствующим образом сопоставляться со столбцами DB2 типа VARCHAR. Однако поставщик OLE DB, используемый репликацией для DB2, не поддерживает сопоставление больших объектов [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с большими объектами DB2. По этой причине столбцы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **text**, **varchar(max)**, **ntext** и **nvarchar(max)** в создаваемых скриптах сопоставляются с типом VARCHAR(0). Значение длины 0 должно меняться на соответствующее значение до применения скрипта к подписчику. Если длина типа данных не изменяется, то при попытке создания таблицы на подписчике DB2 возникает ошибка 604 (ошибка 604 указывает на недопустимую точность или длину атрибута типа данных).  
   
      На основе своих знаний исходной реплицируемой таблицы определите, подходит ли она для сопоставления большого объекта [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с элементом DB2 переменной длины, и укажите соответствующую максимальную длину в пользовательском скрипте создания. Сведения об указании пользовательского скрипта создания см. в описании шага 5 в подразделе «Настройка подписчика IBM DB2» данного раздела.  
   
@@ -167,7 +168,7 @@ ms.locfileid: "85893310"
   
      В некоторых средах DB2 элемент данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **char** не ограничивается однобайтовыми символами. Это следует учитывать при анализе размера элемента типа CHAR или VARCHAR. Следует также принять во внимание символы *shift in* (сдвиг внутрь) и *shift out* (сдвиг наружу), если в них есть необходимость. При репликации таблиц со столбцами **nchar** и **nvarchar** , возможно, потребуется увеличить максимальную длину для типа данных в пользовательском скрипте создания. Сведения об указании пользовательского скрипта создания см. в описании шага 5 в подразделе «Настройка подписчика IBM DB2» данного раздела.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)   
  [Подписка на публикации](../../../relational-databases/replication/subscribe-to-publications.md)  
   

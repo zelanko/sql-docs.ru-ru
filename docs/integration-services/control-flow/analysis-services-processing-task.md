@@ -1,4 +1,5 @@
 ---
+description: задача «Обработка средствами Analysis Services»
 title: Задача "Обработка средствами Analysis Services" | Документы Майкрософт
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9c39fdf1f63084d7f1340dae6b11f17124a52138
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2287bb2e429eba74f7ca98dcdf2b18b8d11cfda2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86908690"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88349990"
 ---
 # <a name="analysis-services-processing-task"></a>задача «Обработка средствами Analysis Services»
 
@@ -114,7 +115,7 @@ ms.locfileid: "86908690"
  **Создать**  
  Создайте новый диспетчер соединений служб Analysis Services.  
   
- **См. также:** подробные сведения о [диспетчере подключений Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md) и о [добавлении диалогового окна диспетчера подключений Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md).  
+ **См. также:** [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md), [Добавление диалогового окна "Диспетчер соединений со службами Analysis Services" в справочник по пользовательскому интерфейсу](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **Список объектов**  
  
@@ -134,7 +135,7 @@ ms.locfileid: "86908690"
  **Анализ влияния**  
  Выполните анализ влияния на выбранный объект.  
   
- **См. также:** подробные сведения о [диалоговом окне "Анализ влияния" &#40;Analysis Services — многомерные данные&#41;](https://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6).  
+ **См. также:** [Диалоговое окно "Анализ влияния" (службы Analysis Services — многомерные данные)](https://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
   
  **Сводка о настройках пакета**  
  
@@ -149,4 +150,4 @@ ms.locfileid: "86908690"
  **Изменить настройки**  
  Измените параметры обработки и действия при ошибках в ключах измерения.  
   
- **См. также:** подробные сведения о [диалоговом окне "Изменение параметров" &#40;Analysis Services — многомерные данные&#41;](https://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3).  
+ **См. также:** [Диалоговое окно "Изменение настроек" (службы Analysis Services — многомерные данные)](https://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  

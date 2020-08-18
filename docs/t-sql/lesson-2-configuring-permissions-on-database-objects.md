@@ -1,4 +1,5 @@
 ---
+description: Урок 2. Настройка разрешений для объектов базы данных
 title: Руководство по Настройка разрешений для объектов базы данных
 ms.custom: seo-lt-2019
 ms.date: 07/31/2018
@@ -12,12 +13,12 @@ ms.assetid: f964b66a-ec32-44c2-a185-6a0f173bfa22
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 991bdef702b1ed298bb492172ef65c6d25d5d0ab
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 195390d76716bcad18df884491fa07335c70665b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75244749"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88306634"
 ---
 # <a name="lesson-2-configure-permissions-on-database-objects"></a>Урок 2. Настройка разрешений для объектов базы данных
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "75244749"
 - Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 Если у вас нет доступа к экземпляру SQL Server, выберите свою платформу в следующих ссылках. При выборе проверки подлинности SQL используйте учетные данные SQL Server.
-- **Windows**: [Скачать выпуск SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)
+- **Windows**: [скачать выпуск SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - **macOS**: [скачать SQL Server 2017 для Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
 
 [!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
@@ -86,7 +87,7 @@ ms.locfileid: "75244749"
 
 
 ## <a name="create-views-and-stored-procedures"></a>Создание представлений и хранимых процедур
-Будучи администратором, можно выполнять инструкцию SELECT из таблицы **Products** и представления **vw_Names** , а также выполнять процедуру **pr_Names** ; однако Mary всего этого не может. Чтобы предоставить Mary необходимые разрешения, воспользуйтесь инструкцией GRANT.  
+ Будучи администратором, можно выполнять инструкцию SELECT из таблицы **Products** и представления **vw_Names**, а также выполнять процедуру **pr_Names**; однако Мэри всего этого не может. Чтобы предоставить Mary необходимые разрешения, воспользуйтесь инструкцией GRANT.  
 
 ### <a name="grant-permission-to-stored-procedure"></a>Предоставление разрешений на хранимые процедуры  
 Выполните следующую инструкцию, чтобы предоставить `Mary` разрешение на `EXECUTE` для хранимой процедуры `pr_Names` .
@@ -109,5 +110,5 @@ ms.locfileid: "75244749"
 
 Дополнительные сведения см. в следующей статье:
 > [!div class="nextstepaction"]
->[Дальнейшие действия](lesson-3-deleting-database-objects.md)
+>[Следующие шаги](lesson-3-deleting-database-objects.md)
   

@@ -1,4 +1,5 @@
 ---
+description: Инструкции семантического поиска DDL, функции, хранимые процедуры и представления
 title: Инструкции DDL, функции, хранимые процедуры и представления для семантического поиска
 ms.date: 03/20/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 65ac994727a418e0886b0cb3132b537554eb54da
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8564c0f0a5dcd83a434743281c85b3524fa06d10
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629078"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88325791"
 ---
 # <a name="semantic-search-ddl-functions-stored-procedures-and-views"></a>Инструкции семантического поиска DDL, функции, хранимые процедуры и представления
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,26 +30,26 @@ ms.locfileid: "85629078"
   
 |Объект|Дополнительные сведения|  
 |------------|----------------------|  
-|[ALTER FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/alter-fulltext-index-transact-sql.md)|[Включение семантического поиска по таблицам и столбцам](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)|  
-|[CREATE FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/create-fulltext-index-transact-sql.md)|[Включение семантического поиска по таблицам и столбцам](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)|  
+|[ALTER FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/alter-fulltext-index-transact-sql.md)|[Включение семантического поиска на таблицы и столбцы](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)|  
+|[CREATE FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/create-fulltext-index-transact-sql.md)|[Включение семантического поиска на таблицы и столбцы](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)|  
   
 ##  <a name="system-functions"></a><a name="func"></a> Системные функции  
   
 |Объект|Дополнительные сведения|  
 |------------|----------------------|  
-|[semantickeyphrasetable (Transact-SQL)](../../relational-databases/system-functions/semantickeyphrasetable-transact-sql.md)|[Поиск ключевых фраз в документах с помощью семантического поиска](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md)|  
-|[semanticsimilaritydetailstable (Transact-SQL)](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md)|[Поиск похожих и связанных документов с помощью семантического поиска](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)|  
-|[semanticsimilaritytable (Transact-SQL)](../../relational-databases/system-functions/semanticsimilaritytable-transact-sql.md)|[Поиск похожих и связанных документов с помощью семантического поиска](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)|  
+|[semantickeyphrasetable (Transact-SQL)](../../relational-databases/system-functions/semantickeyphrasetable-transact-sql.md)|[Поиск ключевых фраз в документах с использованием семантического поиска](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md)|  
+|[semanticsimilaritydetailstable (Transact-SQL)](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md)|[Поиск похожих и связанных документов с использованием семантического поиска](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)|  
+|[semanticsimilaritytable (Transact-SQL)](../../relational-databases/system-functions/semanticsimilaritytable-transact-sql.md)|[Поиск похожих и связанных документов с использованием семантического поиска](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md)|  
   
 ##  <a name="system-metadata-functions"></a><a name="meta"></a> Системные функции метаданных  
   
 |Объект|Дополнительные сведения|  
 |------------|----------------------|  
-|[COLUMNPROPERTY (Transact-SQL)](../../t-sql/functions/columnproperty-transact-sql.md)|[Включение семантического поиска по таблицам и столбцам](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)|  
-|[DATABASEPROPERTYEX (Transact-SQL)](../../t-sql/functions/databasepropertyex-transact-sql.md)|[Включение семантического поиска по таблицам и столбцам](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)|  
-|[FULLTEXTCATALOGPROPERTY (Transact-SQL)](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)|[Управление семантическим поиском и наблюдение за ним](../../relational-databases/search/manage-and-monitor-semantic-search.md)|  
-|[INDEXPROPERTY (Transact-SQL)](../../t-sql/functions/indexproperty-transact-sql.md)|[Управление семантическим поиском и наблюдение за ним](../../relational-databases/search/manage-and-monitor-semantic-search.md)|  
-|[OBJECTPROPERTYEX (Transact-SQL)](../../t-sql/functions/objectpropertyex-transact-sql.md)|[Включение семантического поиска по таблицам и столбцам](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)|  
+|[COLUMNPROPERTY (Transact-SQL)](../../t-sql/functions/columnproperty-transact-sql.md)|[Включение семантического поиска на таблицы и столбцы](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)|  
+|[DATABASEPROPERTYEX (Transact-SQL)](../../t-sql/functions/databasepropertyex-transact-sql.md)|[Включение семантического поиска на таблицы и столбцы](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)|  
+|[FULLTEXTCATALOGPROPERTY (Transact-SQL)](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)|[Управление и наблюдение за семантическим поиском](../../relational-databases/search/manage-and-monitor-semantic-search.md)|  
+|[INDEXPROPERTY (Transact-SQL)](../../t-sql/functions/indexproperty-transact-sql.md)|[Управление и наблюдение за семантическим поиском](../../relational-databases/search/manage-and-monitor-semantic-search.md)|  
+|[OBJECTPROPERTYEX (Transact-SQL)](../../t-sql/functions/objectpropertyex-transact-sql.md)|[Включение семантического поиска на таблицы и столбцы](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)|  
 |[SERVERPROPERTY (Transact-SQL)](../../t-sql/functions/serverproperty-transact-sql.md)|[Установка и настройка семантического поиска](../../relational-databases/search/install-and-configure-semantic-search.md)|  
   
 ##  <a name="system-stored-procedures"></a><a name="sproc"></a> Системные хранимые процедуры  
@@ -62,7 +63,7 @@ ms.locfileid: "85629078"
   
 |Объект|Дополнительные сведения|  
 |------------|----------------------|  
-|[sys.fulltext_index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)|[Управление семантическим поиском и наблюдение за ним](../../relational-databases/search/manage-and-monitor-semantic-search.md)|  
+|[sys.fulltext_index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)|[Управление и наблюдение за семантическим поиском](../../relational-databases/search/manage-and-monitor-semantic-search.md)|  
 |[sys.fulltext_semantic_language_statistics_database (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)|[Установка и настройка семантического поиска](../../relational-databases/search/install-and-configure-semantic-search.md)|  
 |[sys.fulltext_semantic_languages (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md)|[Установка и настройка семантического поиска](../../relational-databases/search/install-and-configure-semantic-search.md)|  
   
@@ -70,11 +71,11 @@ ms.locfileid: "85629078"
   
 |Объект|Дополнительные сведения|  
 |------------|----------------------|  
-|[sys.dm_db_fts_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql.md)|[Управление семантическим поиском и наблюдение за ним](../../relational-databases/search/manage-and-monitor-semantic-search.md)|  
-|[sys.dm_fts_index_population (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)|[Управление семантическим поиском и наблюдение за ним](../../relational-databases/search/manage-and-monitor-semantic-search.md)|  
-|[sys.dm_fts_semantic_similarity_population (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md)|[Управление семантическим поиском и наблюдение за ним](../../relational-databases/search/manage-and-monitor-semantic-search.md)|  
+|[sys.dm_db_fts_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql.md)|[Управление и наблюдение за семантическим поиском](../../relational-databases/search/manage-and-monitor-semantic-search.md)|  
+|[sys.dm_fts_index_population (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)|[Управление и наблюдение за семантическим поиском](../../relational-databases/search/manage-and-monitor-semantic-search.md)|  
+|[sys.dm_fts_semantic_similarity_population (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md)|[Управление и наблюдение за семантическим поиском](../../relational-databases/search/manage-and-monitor-semantic-search.md)|  
   
-## <a name="see-also"></a>См. также:  
- [Управление семантическим поиском и наблюдение за ним](../../relational-databases/search/manage-and-monitor-semantic-search.md)  
+## <a name="see-also"></a>См. также  
+ [Управление и наблюдение за семантическим поиском](../../relational-databases/search/manage-and-monitor-semantic-search.md)  
   
   

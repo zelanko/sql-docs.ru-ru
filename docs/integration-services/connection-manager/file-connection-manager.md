@@ -1,4 +1,5 @@
 ---
+description: диспетчер соединения файлов
 title: Диспетчер подключения файлов | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 019078bc-44ee-4975-9169-0f9a89e3f3be
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 11c5a2404ec0c5dd8a51f09b1b96a4b5518231ae
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 982ff5a4a48c22de9521d2df5d56cd31919794f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920818"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88351440"
 ---
 # <a name="file-connection-manager"></a>диспетчер соединения файлов
 
@@ -38,7 +39,7 @@ ms.locfileid: "86920818"
   
  В следующей таблице приводятся значения **FileUsageType**.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**0**|Диспетчер подключения файлов использует существующий файл.|  
 |**1**|Диспетчер подключения файлов создает файл.|  
@@ -79,7 +80,7 @@ ms.locfileid: "86920818"
  **Тип применения**  
  Укажите, будет ли **Диспетчер подключения файлов** подключаться к существующему файлу или папке или создаст новый файл или папку.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |Создать файл|Во время выполнения создается новый файл.|  
 |Существующий файл|Использовать существующий файл.|  

@@ -1,4 +1,5 @@
 ---
+description: Страница «Выбор переменных»
 title: Страница "Выбор переменных" | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a9527c0d73ed47e893e51e8e192c170a310172e4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1eec7f57655dd86ef62ee8cef40f2c2a9454a8f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921136"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88349310"
 ---
 # <a name="select-variables-page"></a>Страница «Выбор переменных»
 
@@ -35,13 +36,13 @@ ms.locfileid: "86921136"
  Флажок выбора  
  Выделяет конкретную переменную, выделяет все переменные или снимает выделение со всех переменных.  
   
- **Название**  
+ **имя**;  
  Определяет имя переменной.  
   
  **Тип**  
  Задает тип данных переменной.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Редактор задачи "Скрипт" (страница "Скрипт")](../../integration-services/control-flow/script-task-editor-script-page.md)  
   
   

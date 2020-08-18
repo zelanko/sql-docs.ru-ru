@@ -1,4 +1,5 @@
 ---
+description: Улучшение доступа для трассировки данных
 title: Улучшение доступа к данным трассировки | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c260c000-fd53-4831-993f-df6894f3228b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 55e903200e527dcd9c4c55f4696ea4213a82d673
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f2c85d7c440f32aee7b6b6fb76019fdb2eef2c2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750979"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88324874"
 ---
 # <a name="improve-access-to-trace-data"></a>Улучшение доступа для трассировки данных
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85750979"
   
 5.  Нажмите **ОК** для сохранения изменений.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запуск приложения SQL Server Profiler](../../tools/sql-server-profiler/start-sql-server-profiler.md)   
  [Приложение SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   

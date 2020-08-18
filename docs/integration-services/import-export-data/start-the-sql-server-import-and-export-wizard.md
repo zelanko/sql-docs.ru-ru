@@ -1,4 +1,5 @@
 ---
+description: запустить мастер импорта и экспорта SQL Server
 title: запустить мастер импорта и экспорта SQL Server
 titleSuffix: Integration Services (SSIS)
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.author: chugu
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/18/2019
-ms.openlocfilehash: a80b12db0f303ee82f91be9e3eb60c975396063e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: adbb8eee477e9f021c011b91e586492e64747851
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914373"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88346580"
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>запустить мастер импорта и экспорта SQL Server
 
