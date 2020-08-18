@@ -1,4 +1,5 @@
 ---
+description: sys.sysindexes (Transact-SQL)
 title: Индексы sys.sys(Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: f483d89c-35c4-4a08-8f8b-737fd80d13f5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8ae519a06d98c3c70cdd01064c220e5f2e4ed424
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4b78a272e9fa2ec3a0cc3d4418986078ff02f457
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786323"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88399410"
 ---
 # <a name="syssysindexes-transact-sql"></a>sys.sysindexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,11 +64,11 @@ ms.locfileid: "85786323"
 |**pgmodctr**|**int**|Возвращает 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**ключ**|**varbinary (816)**|Список идентификаторов столбцов, составляющих ключ индекса.<br /><br /> Возвращает значение NULL.<br /><br /> Чтобы отобразить ключевые столбцы индекса, используйте [sys.sysиндекскэйс](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md).|  
 |**name**|**sysname**|Имя индекса или статистики. Возвращает значение NULL, если **столбец indid** = 0. Измените приложение, чтобы оно выполняло поиск кучи с именем NULL.|  
-|**statblob**|**изображение**|Статистический большой двоичный объект (BLOB).<br /><br /> Возвращает значение NULL.|  
+|**statblob**|**image**|Статистический большой двоичный объект (BLOB).<br /><br /> Возвращает значение NULL.|  
 |**maxlen**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**сквоз**|**int**|Количество строк на уровне данных, основанное на столбцах с **indid** = 0 и **indid** = 1, и значение повторяется для **indid** >1.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Столбцы, определенные как зарезервированные, не должны использоваться.  
   
  Столбцы **дпажес**, **reserved**и **used** не будут возвращать точные результаты, если таблица или индекс содержат данные в единице распределения ROW_OVERFLOW. Кроме того, счетчики страниц для каждого индекса отслеживаются отдельно и не суммируются для базовой таблицы. Для просмотра количества страниц используйте представления каталога [sys. allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) или [sys. partitions](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) либо динамическое административное представление [sys. dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) .  
@@ -84,9 +85,9 @@ ms.locfileid: "85786323"
   
 -   Использовать данные уровня приложения для определения времени обновления статистики. Например, каждый раз, когда максимальное значение столбца **идентификаторов** изменяется более чем на 10 000, или каждый раз при выполнении операции выполнения операций с массовыми вставками.  
   
-## <a name="see-also"></a>См. также  
- [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   
   

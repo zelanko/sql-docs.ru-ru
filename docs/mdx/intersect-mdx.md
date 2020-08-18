@@ -1,4 +1,5 @@
 ---
+description: Intersect (многомерные выражения)
 title: Intersect (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f253dad526c509edff5c837b61ae2faae07d5758
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9216b334caf67191e231c3ec0389da3fb7493b24
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68105361"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471846"
 ---
 # <a name="intersect-mdx"></a>Intersect (многомерные выражения)
 

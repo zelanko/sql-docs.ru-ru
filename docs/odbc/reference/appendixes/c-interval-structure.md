@@ -1,4 +1,5 @@
 ---
+description: Структура Interval (C)
 title: Структура интервала C | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52b42b56-50aa-4ce6-8d79-0963c7a71437
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 02c86ebe24a0e12531e355f95185b01f3089a31b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 89962558fdbd6f0de5b5e030fe504669d51c40be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292156"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88411210"
 ---
 # <a name="c-interval-structure"></a>Структура Interval (C)
 Каждый из типов данных интервала C, перечисленных в разделе [типы данных c](../../../odbc/reference/appendixes/c-data-types.md) , использует ту же структуру для хранения данных интервала. При вызове **SQLFetch**, **SQLFetchScroll**или **SQLGetData** драйвер возвращает данные в структуру SQL_INTERVAL_STRUCT, использует значение, заданное приложением для типов данных C (в вызове **SQLBindCol**, **SQLGetData**или **SQLBindParameter**) для интерпретации содержимого SQL_INTERVAL_STRUCT, и заполняет поле *interval_type* структуры значением *перечисления* , соответствующим типу C. Обратите внимание, что драйверы не считывают поле *interval_type* , чтобы определить тип интервала. они получают значение поля дескриптора SQL_DESC_CONCISE_TYPE. Если структура используется для данных параметров, драйвер использует значение, заданное приложением в поле SQL_DESC_CONCISE_TYPE APD для интерпретации содержимого SQL_INTERVAL_STRUCT, даже если приложение устанавливает значение поля *interval_type* в другое значение.  

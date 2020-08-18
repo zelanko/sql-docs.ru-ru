@@ -1,4 +1,5 @@
 ---
+description: IsEmpty (многомерные выражения)
 title: IsEmpty (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8b31b884e0f86bf2aebe4859cd1c7a441669e813
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 504df180a15673ecb0982d5a70c2eea1e9f71d11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905989"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471866"
 ---
 # <a name="isempty-mdx"></a>IsEmpty (многомерные выражения)
 
@@ -37,7 +38,7 @@ IsEmpty(Value_Expression)
 > [!NOTE]  
 >  Свойство элемента по умолчанию — значение элемента.  
   
- Функция **IsEmpty** является единственным способом надежного тестирования пустой ячейки, так как значение пустой ячейки в [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]может быть специальным.  
+ Функция **IsEmpty** является единственным способом надежного тестирования пустой ячейки, так как значение пустой ячейки в может быть специальным [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 > [!IMPORTANT]  
 >  Если вычисление выражения значения возвращает ошибку, функция возвратит **значение false**. Значение выражения возвращает ошибку, например, в том случае, если ссылка свойств указывает на недопустимое или несуществующее свойство.  
@@ -57,7 +58,7 @@ IsEmpty(Value_Expression)
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Работа с пустыми значениями](../mdx/working-with-empty-values.md)   
  [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   

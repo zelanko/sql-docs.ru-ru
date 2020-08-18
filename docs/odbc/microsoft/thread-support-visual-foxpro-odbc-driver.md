@@ -1,4 +1,5 @@
 ---
+description: Поддержка потоков (драйвер ODBC для Visual FoxPro)
 title: Поддержка потоков (драйвер ODBC для Visual FoxPro) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0c6abbbc-012b-41aa-bded-5e7e362d015b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2aa19eb233525b5a65ef67fe9903814fc1163177
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 013ccd1f5d202794ba6b7a44c10339dd14c08d17
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303085"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449076"
 ---
 # <a name="thread-support-visual-foxpro-odbc-driver"></a>Поддержка потоков (драйвер ODBC для Visual FoxPro)
 Драйвер ODBC для Visual FoxPro является потокобезопасным. Доступ к дескрипторам среды (пределам *),* дескрипторам подключений (*хдбк*) и дескрипторам инструкций (*хстмт*) заключается в подходящих семафорах, чтобы другие процессы не обращались к внутренним структурам данных драйвера и могут изменять их.  

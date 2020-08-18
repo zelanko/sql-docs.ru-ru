@@ -1,4 +1,5 @@
 ---
+description: Определение числа затрагиваемых строк
 title: Определение количества затронутых строк | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1e56297d-a786-415e-b66d-b42d1b2a8d45
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 156a5fe41d2c9b57a33bbc2bdb4540d1f5b00340
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 14114700c4d79f83f0388509056dd0b49bb21a8d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305895"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483077"
 ---
 # <a name="determining-the-number-of-affected-rows"></a>Определение числа затрагиваемых строк
 После того как приложение обновляет, удаляет или вставляет строки, оно может вызвать **SQLRowCount** , чтобы определить, сколько строк было затронуто. **SQLRowCount** возвращает это значение, независимо от того, были ли строки обновлены, удалены или вставлены с помощью инструкции **Update**, **Delete**или **INSERT** , выполняя инструкцию позиционированного обновления или удаления или вызывая функцию **SQLSetPos**.  

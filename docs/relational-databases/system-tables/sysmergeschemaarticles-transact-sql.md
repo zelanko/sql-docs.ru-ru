@@ -1,4 +1,5 @@
 ---
+description: sysmergeschemaarticles (Transact-SQL)
 title: сисмержесчемаартиклес (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b5085979-2f76-48e1-bf3b-765a84003dd9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9239181b95485b42e839d7dd6d98de6d4186e750
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c4357681a782b878b9cc9bfe4df002d706e1d1f0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881364"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473140"
 ---
 # <a name="sysmergeschemaarticles-transact-sql"></a>sysmergeschemaarticles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85881364"
 |**type**|**tinyint**|Тип статьи со схемой, который может иметь одно из следующих значений:<br /><br /> **0x20** = статья только со схемой хранимых процедур.<br /><br /> **0x40** = Просмотр статьи только со схемой или индексированного представления только со схемой.|  
 |**objid**|**int**|Идентификатор базового объекта статьи. Может быть идентификатором процедуры, представления, индексированного представления или определяемой пользователем функции.|  
 |**artid**|**uniqueidentifier**|Идентификатор статьи.|  
-|**nописание**|**nvarchar(255)**|Описание статьи.|  
+|**description**|**nvarchar(255)**|Описание статьи.|  
 |**pre_creation_command**|**tinyint**|Действие по умолчанию, выполняемое при создании статьи в базе данных подписки:<br /><br /> **0 =** None — если таблица уже существует на подписчике, никакие действия не предпринимаются.<br /><br /> **1** = Drop — удаляет таблицу перед ее повторным созданием.<br /><br /> **2** = Delete — выдает удаление на основе предложения WHERE в фильтре подмножества.<br /><br /> **3** = усечение — то же, что и **2**, но вместо строк удаляются страницы. Однако предложение WHERE не используется.|  
 |**pubid**|**uniqueidentifier**|Уникальный идентификатор публикации.|  
 |**status**|**tinyint**|Состояние статьи со схемой, которое может иметь следующие значения:<br /><br /> **1** = без синхронизации — скрипт начальной обработки для публикации таблицы выполняется при следующем запуске агент моментальных снимков.<br /><br /> **2** = Active — скрипт первоначальной обработки для публикации таблицы выполнен.<br /><br /> **5** = New_inactive — для добавления.<br /><br /> **6** = New_active — для добавления.|  
@@ -44,8 +45,8 @@ ms.locfileid: "85881364"
 |**destination_object**|**sysname**|Имя целевого объекта в базе данных подписки. Это значение применяется только к статьям со схемой, таким как хранимые процедуры, представления и пользовательские функции.|  
 |**destination_owner**|**sysname**|Владелец объекта в базе данных подписки, если он не является **dbo**.|  
   
-## <a name="see-also"></a>См. также  
- [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

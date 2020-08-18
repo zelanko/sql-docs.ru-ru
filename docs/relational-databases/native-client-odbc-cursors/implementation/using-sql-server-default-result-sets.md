@@ -1,4 +1,5 @@
 ---
+description: Использование результирующих наборов по умолчанию в SQL Server
 title: Использование SQL Server результирующих наборов по умолчанию | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,11 +19,12 @@ ms.assetid: ee1db3e5-60eb-4425-8a6b-977eeced3f98
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ded0e559f7724450fc9787a57c32fd68cf42719b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9efdab422aba328213742d859ccdcca7498ebaed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000588"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423906"
 ---
 # <a name="using-sql-server-default-result-sets"></a>Использование результирующих наборов по умолчанию в SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +39,7 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ROW_ARRAY_SIZE, 1, SQL_IS_INTEGER);
   
  Если для этих атрибутов заданы значения по умолчанию, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] драйвер ODBC для собственного клиента использует [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] результирующий набор по умолчанию. Результирующие наборы по умолчанию могут использоваться для любой инструкции SQL, поддерживаемой [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], и являются самым эффективным методом передачи всего результирующего набора клиенту.  
   
- [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]Добавлена поддержка множественных активных результирующих наборов (MARS). у приложений теперь может быть несколько активных результирующих наборов по умолчанию для каждого подключения. По умолчанию режим MARS не включен.  
+ [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Добавлена поддержка множественных активных результирующих наборов (MARS). у приложений теперь может быть несколько активных результирующих наборов по умолчанию для каждого подключения. По умолчанию режим MARS не включен.  
   
  До версии [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] принимаемые по умолчанию результирующие наборы не поддерживали несколько активных инструкций для одного соединения. После выполнения инструкции SQL для соединения сервер не принимает команд от клиента в этом соединении до тех пор, пока не будут обработаны все строки результирующего набора. Исключение составляют запросы на отмену оставшейся части результирующего набора. Чтобы отменить оставшуюся часть частично обработанного результирующего набора, вызовите [SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md) или [SQLFreeStmt](../../../relational-databases/native-client-odbc-api/sqlfreestmt.md) , указав для параметра *параметром fOption* значение SQL_CLOSE. Чтобы завершить частично обработанный результирующий набор и проверить наличие другого результирующего набора, вызовите [SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md). Если приложение ODBC пытается выполнить команду в обработчике соединения до того, как результирующий набор по умолчанию будет полностью обработан, вызов создает SQL_ERROR и вызов **SQLGetDiagRec** возвращает:  
   
@@ -47,7 +49,7 @@ szErrorMsg: "[Microsoft][SQL Server Native Client]
                 Connection is busy with results for another hstmt."  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Способы реализации курсоров](../../../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
   
   

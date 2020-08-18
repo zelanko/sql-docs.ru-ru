@@ -1,4 +1,5 @@
 ---
+description: Проверка ошибок и предупреждений диспетчера драйверов
 title: Проверка ошибок и предупреждений диспетчера драйверов | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: eeb5ab3f-987d-4f30-87d2-7425a81ad1d7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ee8a0f5ebfac8b6f87281806f07989f4980eb9b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 99a99e1dfeb6cb6993a6967d5d93748afbd44b83
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305788"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483057"
 ---
 # <a name="driver-manager-error-and-warning-checks"></a>Проверка ошибок и предупреждений диспетчера драйверов
 Диспетчер драйверов полностью или частично реализует ряд функций и, следовательно, проверяет наличие всех ошибок и предупреждений в этих функциях.  
