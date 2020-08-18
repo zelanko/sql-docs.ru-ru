@@ -1,4 +1,5 @@
 ---
+description: Parse (компонент Database Engine)
 title: Parse (ядро СУБД) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/22/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b37e28b6-6e2e-470a-945b-ce5252da743a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e024024726ab6366b6dbb3580f1c27367195c130
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 78ff3df45fd3d835d273d2f00f4d7ddf65170a62
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86548689"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88311510"
 ---
 # <a name="parse-database-engine"></a>Parse (компонент Database Engine)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +58,7 @@ CLR: оцениваемое значение типа String.
   
 **Возвращаемый тип CLR:SqlHierarchyId**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
 Если метод Parse получает значение, которое не является допустимым строковым представлением **hierarchyid**, возникает исключение. Например, если типы данных **char** содержат конечные пробелы, возникает исключение.
   
 ## <a name="examples"></a>Примеры  

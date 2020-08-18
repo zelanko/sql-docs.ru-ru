@@ -1,4 +1,5 @@
 ---
+description: SET SHOWPLAN_XML (Transact-SQL)
 title: SET SHOWPLAN_XML (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/09/2018
@@ -24,12 +25,12 @@ ms.assetid: a467a1b3-10a5-43c4-9085-13d8aed549c9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c76ef14e97a44b2e33c816c678700e9f4496ae2d
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: c9ba02ca79db2e79f14483e632eaa6fa77c3d4a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397059"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88304999"
 ---
 # <a name="set-showplan_xml-transact-sql"></a>SET SHOWPLAN_XML (Transact-SQL)
 
@@ -44,6 +45,8 @@ ms.locfileid: "87397059"
 ```syntaxsql
 SET SHOWPLAN_XML { ON | OFF }
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="remarks"></a>Remarks
 
@@ -61,7 +64,7 @@ SET SHOWPLAN_XML { ON | OFF }
 Инструкция SET STATISTICS XML возвращает данные в виде набора XML-документов. Каждый пакет после выполнения инструкции SET SHOWPLAN_XML ON сопровождается выводом одного документа. Каждый документ содержит текст инструкций, входящих в пакет, за которым следуют подробные сведения об этапах выполнения команды. Документ отображает оценку издержек выполнения, количество строк, индексов, к которым был произведен доступ, типы выполненных операторов, порядок соединения и другие данные о планах выполнения.
 
 > [!NOTE]
-> Если в среде **установлен параметр**Включить действительный план выполнения[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], то при указании этого параметра SET вывод инструкции SHOWPLAN в формате XML формироваться не будет. Снимите флажок **Включить действительный план выполнения** перед использованием параметра SET.
+> Если в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] установлен параметр **Включить действительный план выполнения**, то при указании этого параметра SET вывод инструкции SHOWPLAN в формате XML формироваться не будет. Снимите флажок **Включить действительный план выполнения** перед использованием параметра SET.
 
 ### <a name="location-of-showplan-output"></a>Расположение выходных данных SHOWPLAN
 
@@ -109,6 +112,6 @@ GO
 SET SHOWPLAN_XML OFF;
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)

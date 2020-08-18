@@ -1,4 +1,5 @@
 ---
+description: Server Memory Change, класс событий
 title: Класс событий Server Memory Change | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,28 +13,28 @@ ms.assetid: c9836484-39c5-4a89-b080-3567783b6fff
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f07f207cf61c65a3343faf855d1f270ec820433
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 86f8e8a10a7207b75419a14b5b575a57297d9d81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727362"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88329941"
 ---
 # <a name="server-memory-change-event-class"></a>Server Memory Change, класс событий
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  Событие класса **Server Memory Change** происходит, когда использование памяти [!INCLUDE[msCoName](../../includes/msconame-md.md)] экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] увеличивается или уменьшается на 1 МБ или на 5 % от максимального объема памяти сервера в зависимости от того, что больше.  
+  Событие класса **Server Memory Change** происходит, когда использование памяти  экземпляром [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] увеличивается или уменьшается на 1 МБ или на 5 % от максимального объема памяти сервера в зависимости от того, что больше.  
   
 ## <a name="server-memory-change-event-class-data-columns"></a>Столбцы данных класса событий Server Memory Change  
   
-|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Да|  
+|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Да|  
 |----------------------|---------------|-----------------|---------------|---------|  
-|**EventClass**|**int**|Тип события = 81.|27|нет|  
-|**EventSequence**|**int**|Последовательность данного события в запросе.|51|нет|  
+|**EventClass**|**int**|Тип события = 81.|27|Нет|  
+|**EventSequence**|**int**|Последовательность данного события в запросе.|51|Нет|  
 |**EventSubClass**|**int**|Тип подкласса события.<br /><br /> 1 = увеличение памяти<br /><br /> 2 = уменьшение памяти|21|Да|  
 |**IntegerData**|**int**|Новый объем памяти в мегабайтах (МБ).|25|Да|  
 |**IsSystem**|**int**|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  
 |**RequestID**|**int**|Идентификатор запроса, содержащего инструкцию.|49|Да|  
-|**ServerName**|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|нет|  
+|**ServerName**|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|Нет|  
 |**SessionLoginName**|**nvarchar**|Имя входа пользователя, который инициировал сеанс. Например, при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по имени "Имя_входа1" и при выполнении инструкции под именем "Имя_входа2" **SessionLoginName** содержит значение "Имя_входа1", а **LoginName** — значение "Имя_входа2". В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |**SPID**|**int**|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |**StartTime**|**datetime**|Время начала события, если оно известно.|14|Да|  

@@ -1,4 +1,5 @@
 ---
+description: Журнал синхронизации (подписки)
 title: Журнал синхронизации (подписки) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
@@ -14,12 +15,12 @@ ms.assetid: 85f666f6-14ee-4f19-b385-e5cc508aabe4
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b82300ff328470f0b195796385f29e651a1998b9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: db40c8e3848ee5dac3d770e77629555ea87814b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729335"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88326014"
 ---
 # <a name="subscription-synchronization-history"></a>Журнал синхронизации (подписки)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "85729335"
   
 -   Повтор  
   
--   Запущен  
+-   Выполнение  
   
  **Start Time**  
  Время начала сеанса.  
@@ -97,7 +98,7 @@ ms.locfileid: "85729335"
  **Последнее сообщение выбранного сеанса**  
  В этом текстовом поле отображается последнее в выбранном сеансе сообщение. Если произошла ошибка, здесь отображаются детальные сведения о ней и команда, во время попытки выполнения которой ошибка возникла. Также содержит ссылки на дополнительные данные, имеющие отношение к ошибке.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запуск монитора репликации](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Просмотр сведений и выполнение задач с помощью монитора репликации](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Наблюдение за репликацией](../../relational-databases/replication/monitor/monitoring-replication.md)   

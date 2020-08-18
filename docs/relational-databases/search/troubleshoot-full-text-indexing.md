@@ -1,4 +1,5 @@
 ---
+description: Устранение неполадок полнотекстового индексирования
 title: Устранение неполадок полнотекстового индексирования | Документация Майкрософт
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 36a8f05f6f135b5f8790f95e409f5db59dcf145a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c11c753528ed4fdc723ee45884093d9c5ec95dc8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85628970"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88325911"
 ---
 # <a name="troubleshoot-full-text-indexing"></a>Устранение неполадок полнотекстового индексирования
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,7 +59,7 @@ ms.locfileid: "85628970"
  При восстановлении журнала транзакций базы данных может появиться предупреждение о том, что полнотекстовый индекс находится в рассогласованном состоянии. Причина заключается в том, что этот полнотекстовый индекс в таблице был изменен после резервного копирования базы данных. Чтобы привести полнотекстовый индекс в согласованное состояние, необходимо выполнить в таблице полное заполнение (сканирование). Дополнительные сведения см. в разделе [Заполнение полнотекстовых индексов](../../relational-databases/search/populate-full-text-indexes.md).  
   
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ALTER FULLTEXT CATALOG (Transact-SQL)](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
  [Заполнение полнотекстовых индексов](../../relational-databases/search/populate-full-text-indexes.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: binary и varbinary (Transact-SQL)
 title: binary и varbinary (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 08/16/2017
@@ -21,12 +22,12 @@ ms.assetid: bcce65f9-10db-4b3e-bfaf-dfc06c6f820f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f267da97eeb409be81bfcca71af602ebce1ffe1c
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 842cde194f39b32b2140c09afed458f903dc772d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86548748"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88312490"
 ---
 # <a name="binary-and-varbinary-transact-sql"></a>binary и varbinary (Transact-SQL)
 
@@ -40,7 +41,7 @@ ms.locfileid: "86548748"
   
 **varbinary** [ ( _n_ | **max**) ] Двоичные данные с переменной длиной. _n_ может иметь значение от 1 до 8000. Значение **max** указывает, что максимальный размер при хранении составляет 2^31-1 байт. Размер хранения — это фактическая длина введенных данных плюс 2 байта. Введенные данные могут иметь размер 0 символов. В ANSI SQL синонимом для **varbinary** является **binary varying**.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
 Если значение _n_ в определении данных или инструкции объявления переменной не указано, длина по умолчанию равна 1. Когда _n_ не указано функцией CAST, длина по умолчанию равна 30.
 
 | Тип данных | Применение |

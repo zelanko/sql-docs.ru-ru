@@ -1,4 +1,5 @@
 ---
+description: PRINT (Transact-SQL)
 title: PRINT (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
@@ -23,12 +24,12 @@ ms.assetid: 32ba0729-c4b5-4cfb-a5aa-e8b9402be028
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 058c87be49d3089d699b0abbafb0d500f3cb9580
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: be33ffe8e52349e2eb7daad69b0648ae9ea53494
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396873"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88307310"
 ---
 # <a name="print-transact-sql"></a>PRINT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,8 +56,8 @@ PRINT msg_str | @local_variable | string_expr
  *string_expr*  
  Выражение, возвращающее строку. Может содержать объединенные буквенные значения, функции и переменные. Дополнительные сведения см. в разделе [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md).  
   
-## <a name="remarks"></a>Remarks  
- Строка сообщения может иметь длину до 8 000 символов для строки, отличной от Юникода, и 4 000 символов для строки в Юникоде. Более длинные строки усекаются. Типы данных **varchar(max)** и **nvarchar(max)** усекаются до типов данных, которые не длиннее **varchar(8000)** и **nvarchar(4000)** .  
+## <a name="remarks"></a>Комментарии  
+ Строка сообщения может иметь длину до 8 000 символов для строки, отличной от Юникода, и 4 000 символов для строки в Юникоде. Более длинные строки усекаются. Типы данных **varchar(max)** и **nvarchar(max)** усекаются до типов данных, которые не длиннее **varchar(8000)** и **nvarchar(4000)**.  
   
  Для возвращения сообщений можно также использовать функцию RAISERROR. Преимущества функции RAISERROR перед функцией PRINT:  
   

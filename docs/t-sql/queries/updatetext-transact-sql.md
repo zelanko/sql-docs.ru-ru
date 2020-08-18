@@ -1,4 +1,5 @@
 ---
+description: UPDATETEXT (Transact-SQL)
 title: UPDATETEXT (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 10/23/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5da5354681ff38fbcf818294f85b9381db21659a
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: c78bf19d7264d0f1c7d073cbe0ce76e2e5b6f4e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554750"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88306568"
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +63,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
  Имя обновляемой таблицы и столбца типа **text**, **ntext** или **image**. Имена таблиц и имена столбцов должны соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md). Указание имени базы данных и владельца необязательно.  
   
  *dest_text_ptr*  
- Значение текстового указателя (возвращается функцией TEXTPTR), который указывает на обновляемые данные типа **text**, **ntext** или **image**. Значение *dest_text_ptr* должно иметь тип **binary(** 16 **)** .  
+ Значение текстового указателя (возвращается функцией TEXTPTR), который указывает на обновляемые данные типа **text**, **ntext** или **image**. Значение *dest_text_ptr* должно иметь тип **binary(** 16 **)**.  
   
  *insert_offset*  
  Начальная позиция для обновления. Отсчет начинает с нуля. Для столбцов типа **text** или **image***insert_offset* является числом байтов, которые необходимо пропустить с начала существующего столбца перед вставкой новых данных. Для столбцов типа **ntext***insert_offset* является числом символов (каждый символ **ntext** занимает 2 байта). Существующие данные типа **text**, **ntext** или **image**, начиная с этой начальной позиции (отсчет начинается с нуля), сдвигаются вправо, чтобы освободить место для новых данных. При значении 0 новые данные вставляются в начало существующих данных. Если значение равно NULL, новые данные добавляются в конец существующих.  
@@ -85,7 +86,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
 > [!NOTE]  
 >  Значение *scr_text_ptr* не должно совпадать со значением *dest_text_ptr*.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Вставленные данные могут быть константой *inserted_data*, именем таблицы, именем столбца или указателем на текст.  
   
 |Операция обновления|Параметры UPDATETEXT|  
@@ -125,7 +126,7 @@ ALTER DATABASE pubs SET RECOVERY FULL;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [READTEXT (Transact-SQL)](../../t-sql/queries/readtext-transact-sql.md)   
  [TEXTPTR (Transact-SQL)](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)   
  [WRITETEXT (Transact-SQL)](../../t-sql/queries/writetext-transact-sql.md)  

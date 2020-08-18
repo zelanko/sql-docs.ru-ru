@@ -1,4 +1,5 @@
 ---
+description: HOST_NAME (Transact-SQL)
 title: HOST_NAME (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 09/21/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4b8b0705-c083-4b07-b954-c83ee73b2ebb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ec753666e5baac90e9098bc8718d0f0b8fa1878e
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 120580a238307981610179389f39cd7639baf785
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113497"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88309750"
 ---
 # <a name="host_name-transact-sql"></a>HOST_NAME (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "87113497"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```syntaxsql
   
 HOST_NAME ()  
 ```  
@@ -42,7 +43,7 @@ HOST_NAME ()
 ## <a name="return-types"></a>Типы возвращаемых данных
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Если параметр системной функции является необязательным, то предполагаются текущие база данных, главный компьютер, пользователь сервера или пользователь базы данных. За встроенными функциями всегда должны следовать круглые скобки.  
   
  Системные функции можно использовать в списке выбора, в предложении WHERE и в любом месте, где разрешается использование выражений.  

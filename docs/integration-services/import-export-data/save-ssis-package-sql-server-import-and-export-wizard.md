@@ -1,4 +1,5 @@
 ---
+description: Сохранение пакета служб SSIS (мастер экспорта и импорта SQL Server)
 title: Сохранение пакета служб SSIS (мастер экспорта и импорта SQL Server) | Документы Майкрософт
 ms.custom: ''
 ms.date: 02/17/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8f354643c156024eeee1db53ad366dfb63f55859
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 379973cb0174e25a91b6a3dfb0ed7cc319efd842
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914386"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88346820"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>Сохранение пакета служб SSIS (мастер экспорта и импорта SQL Server)
 
@@ -35,7 +36,7 @@ ms.locfileid: "86914386"
 ![Сохранение пакета: общие параметры](../../integration-services/import-export-data/media/save-package-common-options.png)
 
 ## <a name="provide-a-name-and-description-for-the-package"></a>Укажите имя и описание пакета  
- **Название**  
+ **имя**;  
  Введите уникальное имя пакета.  
   
  **Описание**  
@@ -113,7 +114,7 @@ ms.locfileid: "86914386"
 ## <a name="whats-next"></a>Дальнейшие действия  
  После указания дополнительных параметров для сохранения пакета выполняется переход на страницу **Завершение работы мастера**. На этой странице просмотрите параметры, выбранные в мастере, и запустите операцию. Дополнительные сведения см. в разделе [Завершение работы мастера](../../integration-services/import-export-data/complete-the-wizard-sql-server-import-and-export-wizard.md).  
  
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Сохранение пакетов](../../integration-services/save-packages.md)  
 [Запуск пакетов служб Integration Services (SSIS)](../../integration-services/packages/run-integration-services-ssis-packages.md)  
 [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)

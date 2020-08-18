@@ -1,4 +1,5 @@
 ---
+description: SET STATISTICS XML (Transact-SQL)
 title: SET STATISTICS XML (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2b6d4c5a-a7f5-4dd1-b10a-7632265b1af7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cd616d55c63cb2e1a4ce78fa587b3dc79d315ff1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 11d55d52b04436b4e1628c961114535c313c0d1e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765664"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88304929"
 ---
 # <a name="set-statistics-xml-transact-sql"></a>SET STATISTICS XML (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +43,9 @@ ms.locfileid: "85765664"
 SET STATISTICS XML { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>Remarks
  Настройка инструкции SET STATISTICS XML устанавливается во время выполнения или запуска, а не во время синтаксического анализа.  
   
  Если выполнена инструкция SET STATISTICS XML ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает сведения о выполнении каждого оператора после его выполнения. После присвоения этому параметру значения ON сведения обо всех последующих инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)] возвращаются до тех пор, пока параметру не будет присвоено значение OFF. Учтите, что SET STATISTICS XML может быть не единственной инструкцией в пакете.  
@@ -60,7 +63,7 @@ SET STATISTICS XML { ON | OFF }
  Инструкции SET STATISTICS PROFILE и SET STATISTICS XML являются дубликатами друг друга. Первая выводит данные в текстовом формате, а вторая выводит данные в формате XML. В будущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сведения о плане выполнения новых запросов будут доступны лишь посредством инструкции SET STATISTICS XML, но не посредством инструкции SET STATISTICS PROFILE.  
   
 > [!NOTE]  
->  Если в среде **установлен параметр**Включить действительный план выполнения[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], то при указании этого параметра SET вывод инструкции SHOWPLAN в формате XML формироваться не будет. Снимите флажок **Включить действительный план выполнения** перед использованием параметра SET.  
+>  Если в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] установлен параметр **Включить действительный план выполнения**, то при указании этого параметра SET вывод инструкции SHOWPLAN в формате XML формироваться не будет. Снимите флажок **Включить действительный план выполнения** перед использованием параметра SET.  
   
 ## <a name="permissions"></a>Разрешения  
  Чтобы пользоваться инструкцией SET STATISTICS XML и просматривать ее вывод, пользователи должны иметь следующие разрешения.  

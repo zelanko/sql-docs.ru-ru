@@ -1,4 +1,5 @@
 ---
+description: Выполнение операции (мастер импорта и экспорта SQL Server)
 title: Выполнение операции (мастер импорта и экспорта SQL Server) | Документы Майкрософт
 ms.custom: ''
 ms.date: 01/11/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7c9749d32a0e08a6b755db739bb226540b519b85
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1ce2552519eeecb654478f522d3dd3b8880d2697
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917656"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88347280"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>Выполнение операции (мастер импорта и экспорта SQL Server)
 
@@ -42,7 +43,7 @@ ms.locfileid: "86917656"
  **Состояние**  
  Отображает успешное или сбойное выполнение каждого этапа.  
   
- **Сообщение**  
+ **Message**  
  Отображает связанные с соответствующим этапом уведомления и сообщения об ошибках. Щелкните элемент в этом столбце, чтобы получить дополнительные сведения о соответствующем этапе.
 
 ## <a name="interrupt-the-operation-or-save-the-results"></a>Прерывание операции или сохранение результатов

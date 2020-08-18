@@ -1,5 +1,5 @@
 ---
-title: CASE (Transact-SQL) | Документы Майкрософт
+title: Выражение CASE (Transact-SQL)
 description: Справочник по Transact-SQL для выражения CASE. CASE оценивает список условий, чтобы возвратить определенные результаты.
 ms.date: 06/28/2017
 ms.prod: sql
@@ -21,14 +21,15 @@ ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 04000e046e229c36c159d80e1541c69139ba41d4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c0091a060bc75b87ef40d03a48c25b5154c00ee4
+ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915680"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88200431"
 ---
 # <a name="case-transact-sql"></a>Выражение CASE (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Оценка списка условий и возвращение одного из нескольких возможных выражений результатов.  
@@ -68,9 +69,11 @@ END
 CASE  
      WHEN when_expression THEN result_expression [ ...n ]   
      [ ELSE else_result_expression ]   
-END  
-```  
-  
+END
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>Аргументы  
  *input_expression*  
  Выражение, полученное при использовании простого формата функции CASE. *input_expression* — это любое допустимое [выражение](../../t-sql/language-elements/expressions-transact-sql.md).  
