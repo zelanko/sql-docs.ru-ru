@@ -1,4 +1,5 @@
 ---
+description: Длительность октета передачи
 title: Длина октета при переносе | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/28/2019
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9fdc9762-e203-4cff-9212-54f450bf18d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4204b47816747506a5672241eeeef736eca54856
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8c89a9cb1423693e7d92114233f967d6fb5dcee1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302815"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386350"
 ---
 # <a name="transfer-octet-length"></a>Длительность октета передачи
 Длина октета для столбца — это максимальное число байтов, возвращаемых в приложение, когда данные передаются в тип данных C по умолчанию. Для символьных данных длина октета для обмена не включает пробел для завершающего символа null. Длина октета для столбца может отличаться от числа байтов, необходимых для хранения данных в источнике данных.  

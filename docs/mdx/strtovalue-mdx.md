@@ -1,4 +1,5 @@
 ---
+description: StrToValue (многомерные выражения)
 title: StrToValue (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cad8fec605a56a60cfcc7024739225e474fd42f8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 200de3b42f522b77bae0b5037761a00da977176e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036689"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386750"
 ---
 # <a name="strtovalue-mdx"></a>StrToValue (многомерные выражения)
 
@@ -31,7 +32,7 @@ StrToValue(MDX_Expression [,CONSTRAINED] )
  *MDX_Expression*  
  Допустимое строковое выражение, разрешающееся (напрямую или косвенно) в одну ячейку.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Функция **StrToValue** возвращает числовое значение, ЗАданное многомерным выражением. Функция **StrToValue** обычно используется с определяемыми пользователем функциями для возвращения многомерного выражения из внешней функции обратно в ИНСТРУКЦИю многомерных выражений, которая может быть разрешена в одну ячейку.  
   
 -   При использовании флага CONSTRAINED многомерное выражение должно содержать только скалярное значение. Флаг CONSTRAINED позволяет снизить вероятность атак через указанную строку. Если указано МНОГОМЕРное выражение, которое не разрешается напрямую в скалярное значение, появляется следующее сообщение об ошибке: "нарушены ограничения, установленные флагом CONSTRAINED в функции STRTOVALUE".  
@@ -56,7 +57,7 @@ FROM [Adventure Works]
 WHERE [Product].[Product Categories].[Bikes]  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

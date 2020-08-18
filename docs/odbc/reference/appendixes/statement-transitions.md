@@ -1,4 +1,5 @@
 ---
+description: Переходы инструкций
 title: Переходы инструкций | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3d70e0e3-fe83-4b4d-beac-42c82495a05b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 55f82e275bfd5bff12544b35a1370cdb31495320
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3515b1d6aea4cab66bc01ee3d071727e6cb8f447
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302855"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386520"
 ---
 # <a name="statement-transitions"></a>Переходы инструкций
 Инструкции ODBC имеют следующие состояния.  
@@ -61,7 +62,7 @@ ms.locfileid: "81302855"
   
  [4] в этой строке отображаются переходы, когда *параметром handletype* был SQL_HANDLE_DESC.  
   
- [5] вызов **функцию SQLAllocHandle** с *аутпусандлептр* , указывающим на допустимый маркер, перезаписывает этот обработчик без учета предыдущего содержимого в этот обработчик и может вызвать проблемы с драйверами ODBC. Неправильное программирование приложений ODBC для вызова **функцию SQLAllocHandle** дважды с той же переменной приложения, определенной для * \*аутпусандлептр* , без вызова **SQLFreeHandle** для освобождения обработчика перед перераспределением. Перезапись дескрипторов ODBC таким образом может привести к несогласованному поведению или ошибкам в части драйверов ODBC.  
+ [5] вызов **функцию SQLAllocHandle** с *аутпусандлептр* , указывающим на допустимый маркер, перезаписывает этот обработчик без учета предыдущего содержимого в этот обработчик и может вызвать проблемы с драйверами ODBC. Неправильное программирование приложений ODBC для вызова **функцию SQLAllocHandle** дважды с той же переменной приложения, определенной для * \* Аутпусандлептр* , без вызова **SQLFreeHandle** для освобождения обработчика перед перераспределением. Перезапись дескрипторов ODBC таким образом может привести к несогласованному поведению или ошибкам в части драйверов ODBC.  
   
 ## <a name="sqlbindcol"></a>SQLBindCol  
   
@@ -99,19 +100,19 @@ ms.locfileid: "81302855"
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |IH|--|--|--|--|S1 [1] S2 [NR] и [2] S3 [r] и [2] S5 [3] и [5] S6 ([3] или [4]) и [6] S7 [4] и [7]|См. следующую таблицу|  
   
- [1] **SQLExecDirect** вернул SQL_NEED_DATA.  
+ [1]   **SQLExecDirect** вернул SQL_NEED_DATA.  
   
- [2] **SQLExecute** вернул SQL_NEED_DATA.  
+ [2]   **SQLExecute** вернул SQL_NEED_DATA.  
   
- [3] **SQLBulkOperations** вернул SQL_NEED_DATA.  
+ [3]   **SQLBulkOperations** вернул SQL_NEED_DATA.  
   
- [4] функция **SQLSetPos** вернула SQL_NEED_DATA.  
+ [4] функция   **SQLSetPos** вернула SQL_NEED_DATA.  
   
- [5] **SQLFetch**, **SQLFetchScroll**или **SQLExtendedFetch** не были вызваны.  
+ [5]   **SQLFetch**, **SQLFetchScroll**или **SQLExtendedFetch** не были вызваны.  
   
- были вызваны [6] **SQLFetch** или **SQLFetchScroll** .  
+ были вызваны [6]   **SQLFetch** или **SQLFetchScroll** .  
   
- было вызвано [7] **SQLExtendedFetch** .  
+ было вызвано [7]   **SQLExtendedFetch** .  
   
 ## <a name="sqlcancel-asynchronous-states"></a>SQLCancel (асинхронные состояния)  
   
@@ -141,9 +142,9 @@ ms.locfileid: "81302855"
 |-----------------------|--------------------|  
 |--[1] 07005 [2]|--[s] S11 x|  
   
- [1] *фиелдидентифиер* был SQL_DESC_COUNT.  
+ [1]   *фиелдидентифиер* был SQL_DESC_COUNT.  
   
- [2] *фиелдидентифиер* не SQL_DESC_COUNT.  
+ [2]   *фиелдидентифиер* не SQL_DESC_COUNT.  
   
 ## <a name="sqlcolumnprivileges-sqlcolumns-sqlforeignkeys-sqlgettypeinfo-sqlprimarykeys-sqlprocedurecolumns-sqlprocedures-sqlspecialcolumns-sqlstatistics-sqltableprivileges-and-sqltables"></a>SQLColumnPrivileges, SQLColumns, SQLForeignKeys, SQLGetTypeInfo, SQLPrimaryKeys, SQLProcedureColumns, SQLProcedures, SQLSpecialColumns, SQLStatistics, SQLTablePrivileges и SQLTables  
   
@@ -388,7 +389,7 @@ ms.locfileid: "81302855"
   
  [2] в этой строке отображаются переходы, когда *параметром handletype* был SQL_HANDLE_STMT.  
   
- [3] **SQLGetDiagField** всегда возвращает ошибку в этом состоянии, если *диагидентифиер* имеет SQL_DIAG_ROW_COUNT.  
+ [3]   **SQLGetDiagField** всегда возвращает ошибку в этом состоянии, если *диагидентифиер* имеет SQL_DIAG_ROW_COUNT.  
   
 ## <a name="sqlgetenvattr"></a>SQLGetEnvAttr  
   
@@ -472,15 +473,15 @@ ms.locfileid: "81302855"
 |----------------------|---------------------|---------------------|  
 |S1 [e] и [1] S2 [e], [NR] и [2] S3 [e], [r] и [2] S5 [e] и [4] S6 [e] и [5] S7 [e] и [3] S9 [d] S11 [x]|HY010|S1 [e] и [1] S2 [e], [NR] и [2] S3 [e], [r] и [2] S4 [s], [NR] и ([1] или [2]) S5 [s], [r] и ([1] или [2]) S5 ([s] или [e]) и [4] S6 ([s] или [e]) и [5] S7 ([s] или [e]) и [3] S9 [d] S11 [x]|  
   
- [1] **SQLExecDirect** вернул SQL_NEED_DATA.  
+ [1]   **SQLExecDirect** вернул SQL_NEED_DATA.  
   
- [2] **SQLExecute** вернул SQL_NEED_DATA.  
+ [2]   **SQLExecute** вернул SQL_NEED_DATA.  
   
- [3] функция **SQLSetPos** была вызвана из состояния S7 и возвращена SQL_NEED_DATA.  
+ [3] функция   **SQLSetPos** была вызвана из состояния S7 и возвращена SQL_NEED_DATA.  
   
- [4] **SQLBulkOperations** был вызван из состояния S5 и возвращен SQL_NEED_DATA.  
+ [4]   **SQLBulkOperations** был вызван из состояния S5 и возвращен SQL_NEED_DATA.  
   
- [5] **SQLSetPos** или **SQLBulkOperations** были вызваны из состояния S6 и возвращены SQL_NEED_DATA.  
+ [5]   **SQLSetPos** или **SQLBulkOperations** были вызваны из состояния S6 и возвращены SQL_NEED_DATA.  
   
 ## <a name="sqlprepare"></a>SQLPrepare  
   
@@ -514,15 +515,15 @@ ms.locfileid: "81302855"
 |----------------------|---------------------|---------------------|  
 |HY010|S1 [e] и [1] S2 [e], [NR] и [2] S3 [e], [r] и [2] S5 [e] и [4] S6 [e] и [5] S7 [e] и [3] S10 [s] S11 [x]|--[s] S1 [e] и [1] S2 [e], [NR] и [2] S3 [e], [r] и [2] S5 [e] и [4] S6 [e] и [5] S7 [e] и [3] S11 [x] HY011 [6]|  
   
- [1] **SQLExecDirect** вернул SQL_NEED_DATA.  
+ [1]   **SQLExecDirect** вернул SQL_NEED_DATA.  
   
- [2] **SQLExecute** вернул SQL_NEED_DATA.  
+ [2]   **SQLExecute** вернул SQL_NEED_DATA.  
   
- [3] функция **SQLSetPos** была вызвана из состояния S7 и возвращена SQL_NEED_DATA.  
+ [3] функция   **SQLSetPos** была вызвана из состояния S7 и возвращена SQL_NEED_DATA.  
   
- [4] **SQLBulkOperations** был вызван из состояния S5 и возвращен SQL_NEED_DATA.  
+ [4]   **SQLBulkOperations** был вызван из состояния S5 и возвращен SQL_NEED_DATA.  
   
- [5] **SQLSetPos** или **SQLBulkOperations** были вызваны из состояния S6 и возвращены SQL_NEED_DATA.  
+ [5]   **SQLSetPos** или **SQLBulkOperations** были вызваны из состояния S6 и возвращены SQL_NEED_DATA.  
   
  [6] один или несколько вызовов **SQLPutData** для одного параметра вернули SQL_SUCCESS, а затем был выполнен вызов **SQLPutData** для того же параметра, для *StrLen_Or_Ind* задано значение SQL_NULL_DATA.  
   
