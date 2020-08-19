@@ -1,4 +1,5 @@
 ---
+description: Преобразование типов данных (ядро СУБД)
 title: Преобразование типов данных (ядро СУБД) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/23/2017
@@ -21,12 +22,12 @@ ms.assetid: ffacf45e-a488-48d0-9bb0-dcc7fd365299
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 656f76bfb0b015742824b02e8d7f2f09c8bfe098
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e778bdf4adc24b95d5ffa1d8eb438222117c07c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008100"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88368560"
 ---
 # <a name="data-type-conversion-database-engine"></a>Преобразование типов данных (ядро СУБД)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -120,7 +121,7 @@ SELECT @notastring + '1'
   
 В следующей таблице описываются преобразования типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в типы данных [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].
   
-|Тип данных SQL Server|Тип данных Visual Basic|  
+|Тип данных SQL Server|Тип данных в Visual Basic|  
 |--------------------------|----------------------------|  
 |**char**, **varchar**, **text**, **nvarchar**, **ntext**|**String**|  
 |**decimal**, **numeric**|**String**|  
@@ -130,16 +131,16 @@ SELECT @notastring + '1'
 |**smallint**|**Целое число**|  
 |**tinyint**|**Byte**|  
 |**float**|**Double**|  
-|**real**|**Один**|  
+|**real**|**Single**|  
 |**money**, **smallmoney**|**Валюта**|  
 |**datetime**, **smalldatetime**|**Дата**|  
 |Все значения NULL|**Variant** со значением NULL|  
   
-Все одиночные значения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] преобразуются в одиночные значения [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], за исключением **binary**, **varbinary** и **image**. В [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] эти значения преобразуются в одномерные массивы **Byte()**. Этот массив имеет диапазон **Byte(** от 0 до _length_ 1 **)** , где *length* — число байтов в значениях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**, **varbinary** или **image**.
+Все одиночные значения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] преобразуются в одиночные значения [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], за исключением **binary**, **varbinary** и **image**. В [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] эти значения преобразуются в одномерные массивы **Byte()**. Этот массив имеет диапазон **Byte(** от 0 до _length_ 1 **)**, где *length* — число байтов в значениях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**, **varbinary** или **image**.
   
 Ниже приведена таблица преобразования типов данных [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] в типы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
-|Тип данных Visual Basic|Тип данных SQL Server|  
+|Тип данных в Visual Basic|Тип данных SQL Server|  
 |----------------------------|--------------------------|  
 |**Long**, **Integer**, **Byte**, **Boolean**, **Object**|**int**|  
 |**Double**, **Single**|**float**|  
@@ -150,7 +151,7 @@ SELECT @notastring + '1'
 |Одномерный массив **Byte()** размером 8000 байт или меньше|**varbinary**|  
 |Одномерный массив **Byte()** размером более 8000 байт|**image**|  
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 [Хранимые процедуры OLE-автоматизации (Transact-SQL)](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)  
 [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  

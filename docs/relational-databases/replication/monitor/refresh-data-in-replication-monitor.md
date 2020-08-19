@@ -1,4 +1,5 @@
 ---
+description: Обновление данных в мониторе репликации
 title: Обновление данных в мониторе репликации | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -13,12 +14,12 @@ ms.assetid: e9582244-7d00-45f4-be16-020a65c76a5e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c63d6b2f113ba5d9f3d3d2cfed201f9a6535b74f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c3a493417a4c45b43e6b4b6c4c95f20fb4e4fac2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915153"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88380210"
 ---
 # <a name="refresh-data-in-replication-monitor"></a>Обновление данных в мониторе репликации
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
