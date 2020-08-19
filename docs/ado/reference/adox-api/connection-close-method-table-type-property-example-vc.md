@@ -1,4 +1,5 @@
 ---
+description: Примеры метода Close для объекта Connection и свойства Type для объекта Table (Visual C++)
 title: Пример метода Close соединения, свойство типа таблицы (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d0e250aa-fc57-4fd3-9610-d64f50c5507f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aa016c166bc2459c61c34a5ca40f8c1444811782
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6b8d3263ee4d343f9e77b4d64d42ee8e871888d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759280"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440226"
 ---
 # <a name="connection-close-method-table-type-property-example-vc"></a>Примеры метода Close для объекта Connection и свойства Type для объекта Table (Visual C++)
 Присвоение свойству [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) значения **Nothing** должно приводить к закрытию каталога. Связанные коллекции будут пустыми. Все объекты, созданные из объектов схемы в каталоге, будут потеряны. Все свойства этих объектов, которые были кэшированы, будут по-прежнему доступны, но попытка чтения свойств, требующих вызова поставщика, завершится ошибкой.  
@@ -142,5 +143,5 @@ void CloseConnectionX() {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)

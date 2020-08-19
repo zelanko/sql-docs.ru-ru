@@ -1,4 +1,5 @@
 ---
+description: Свойства, методы и события объекта Column
 title: Свойства, методы и события объекта Column | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f87d46fb-4b33-42b5-8a54-6d2c4577c69a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5905bbee711d63d86ddc2988799ee8ab5e5c9e79
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 025f5c3caafd950df9510c41129cea8f5da17c5c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759380"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440336"
 ---
 # <a name="column-object-properties-methods-and-events"></a>Свойства, методы и события объекта Column
 ## <a name="propertiescollections"></a>Свойства и коллекции  
@@ -25,7 +26,7 @@ ms.locfileid: "82759380"
   
  [Свойство DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)  
   
- [Свойство Name](../../../ado/reference/adox-api/name-property-adox.md)  
+ [Имя, свойство](../../../ado/reference/adox-api/name-property-adox.md)  
   
  [NumericScale, свойство](../../../ado/reference/adox-api/numericscale-property-adox.md)  
   
@@ -42,7 +43,7 @@ ms.locfileid: "82759380"
  [Свойство Type (Column)](../../../ado/reference/adox-api/type-property-column-adox.md)  
   
 ## <a name="methods"></a>Методы  
- Нет.  
+ Отсутствует.  
   
 ## <a name="events"></a>События  
  Нет.  

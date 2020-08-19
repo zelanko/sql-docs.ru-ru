@@ -1,4 +1,5 @@
 ---
+description: Коллекция Groups (ADOX)
 title: Коллекция Groups (ADOX) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,24 +18,24 @@ helpviewer_keywords:
 ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e2b6e7b7669e0976cf47e5b4d5d2c827a824f919
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 70c32ba5e4726aca7d6ad8b37c7df082d25b94b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764855"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439996"
 ---
 # <a name="groups-collection-adox"></a>Коллекция Groups (ADOX)
 Содержит все сохраненные объекты [групп](../../../ado/reference/adox-api/group-object-adox.md) каталога или пользователя.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Коллекция **Groups** [каталога](../../../ado/reference/adox-api/catalog-object-adox.md) представляет все учетные записи групп каталога. Коллекция **Groups** для [пользователя](../../../ado/reference/adox-api/user-object-adox.md) представляет только группу, к которой принадлежит пользователь.  
   
- Метод [append](../../../ado/reference/adox-api/append-method-adox-groups.md) для коллекции **GROUPS** уникален для ADOX. Можно сделать следующее:  
+ Метод [append](../../../ado/reference/adox-api/append-method-adox-groups.md) для коллекции **GROUPS** уникален для ADOX. Вы можете:  
   
 -   Добавьте новую группу безопасности в коллекцию с помощью метода **append** .  
   
- Остальные свойства и методы являются стандартными для коллекций ADO. Можно сделать следующее:  
+ Остальные свойства и методы являются стандартными для коллекций ADO. Вы можете:  
   
 -   Доступ к группе в коллекции со свойством [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
   
@@ -51,6 +52,6 @@ ms.locfileid: "82764855"
   
 -   [Свойства, методы и события коллекции Groups](../../../ado/reference/adox-api/groups-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Объект Group (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)

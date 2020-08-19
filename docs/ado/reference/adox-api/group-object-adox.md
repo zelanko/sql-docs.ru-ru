@@ -1,4 +1,5 @@
 ---
+description: Объект Group (ADOX)
 title: Объект Group (ADOX) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55ef0ade-68ea-4da5-8aa5-4cd27d1f6d1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b0cd75780abe01edc6f2e90258cc7d24f5eae016
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: aeeaf4d849efbfe2549a1c4f20b3689048b43a24
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763325"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440016"
 ---
 # <a name="group-object-adox"></a>Объект Group (ADOX)
 Представляет учетную запись группы, имеющую разрешения на доступ в защищенной базе данных.  
@@ -42,6 +43,6 @@ ms.locfileid: "82763325"
   
 -   [Свойства, методы и события объекта Group](../../../ado/reference/adox-api/group-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Коллекция Groups (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
  [Коллекция Users (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)

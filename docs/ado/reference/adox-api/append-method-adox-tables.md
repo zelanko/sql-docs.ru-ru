@@ -1,4 +1,5 @@
 ---
+description: Метод Append (коллекция Tables ADOX)
 title: Метод Append (таблицы ADOX) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a362ed51-314c-4783-9598-538dbf755f3d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 19617c65b350527753895ed613f671c3ac0f88e8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6069b3d99e021be01d8fd2d724b7c25868167bd3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764015"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440476"
 ---
 # <a name="append-method-adox-tables"></a>Метод Append (коллекция Tables ADOX)
 Добавляет новый объект [Table](../../../ado/reference/adox-api/table-object-adox.md) в коллекцию [Tables](../../../ado/reference/adox-api/tables-collection-adox.md) .  
@@ -37,13 +38,13 @@ Tables.Append Table
  *Таблица*  
  Значение **типа Variant** , содержащее ссылку на **таблицу** для добавления или имя таблицы для создания и добавления.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Если поставщик не поддерживает создание таблиц, возникнет ошибка.  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Коллекция Tables (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы добавления столбцов и таблиц, пример свойства Name (Visual Basic)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [Пример свойства ParentCatalog (Visual Basic)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
  [Метод Append (столбцы ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   

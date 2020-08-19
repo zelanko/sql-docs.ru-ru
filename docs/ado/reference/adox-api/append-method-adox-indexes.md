@@ -1,4 +1,5 @@
 ---
+description: Метод Append (коллекция Indexes ADOX)
 title: Метод Append (индексы ADOX) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6695769f-275b-4b70-81bd-1a5f7d74926c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6996f3a0a3ad9f2ffa727a6cbd7b48d3fbf32777
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b13115a657f3bc25ae79cf3ba92a7fe339492536
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764065"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440546"
 ---
 # <a name="append-method-adox-indexes"></a>Метод Append (коллекция Indexes ADOX)
 Добавляет новый объект [index](../../../ado/reference/adox-api/index-object-adox.md) в коллекцию [индексов](../../../ado/reference/adox-api/indexes-collection-adox.md) .  
@@ -33,21 +34,21 @@ Indexes.Append Index [,Columns]
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Номер*  
+ *Index*  
  Добавляемый объект **index** или имя создаваемого и добавляемого индекса.  
   
  *Столбцы*  
- Необязательный элемент. Значение **типа Variant** , указывающее имена столбцов, которые будут индексироваться. Параметр *Columns* соответствует значениям свойства [Name](../../../ado/reference/adox-api/name-property-adox.md) объекта [Column](../../../ado/reference/adox-api/column-object-adox.md) или объектов.  
+ Необязательный параметр. Значение **типа Variant** , указывающее имена столбцов, которые будут индексироваться. Параметр *Columns* соответствует значениям свойства [Name](../../../ado/reference/adox-api/name-property-adox.md) объекта [Column](../../../ado/reference/adox-api/column-object-adox.md) или объектов.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Параметр *Columns* может принимать либо имя столбца, либо массив имен столбцов.  
   
  Если поставщик не поддерживает создание индексов, возникнет ошибка.  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Коллекция Indexes (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример метода Append для индексов (Visual Basic)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
  [Метод Append (столбцы ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Метод Append (группы ADOX)](../../../ado/reference/adox-api/append-method-adox-groups.md)   

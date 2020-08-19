@@ -1,4 +1,5 @@
 ---
+description: Объект Catalog (ADOX)
 title: Объект каталога (ADOX) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: bb651639-a488-4e38-b6de-0ed99fa4dd92
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f13533ce9d14a650e409507e646eb536bad14e4d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 35fa08ba0d93a7adacf6d58338f4808e2a5eba9e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763945"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440386"
 ---
 # <a name="catalog-object-adox"></a>Объект Catalog (ADOX)
 Содержит коллекции ([таблицы](../../../ado/reference/adox-api/tables-collection-adox.md), [представления](../../../ado/reference/adox-api/views-collection-adox.md), [пользователей](../../../ado/reference/adox-api/users-collection-adox.md), [группы](../../../ado/reference/adox-api/groups-collection-adox.md)и [процедуры](../../../ado/reference/adox-api/procedures-collection-adox.md)), которые описывают Каталог схемы источника данных.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Объект **каталога** можно изменить, добавив или удалив объекты или изменив существующие объекты. Некоторые поставщики могут не поддерживать все объекты **каталога** или могут поддерживать только просмотр сведений о схеме.  
   
  Свойства и методы объекта **каталога** позволяют:  
@@ -40,7 +41,7 @@ ms.locfileid: "82763945"
   
 -   [Свойства, методы и события объекта Catalog](../../../ado/reference/adox-api/catalog-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойства ActiveConnection каталога (Visual Basic)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
  [Пример свойств Command и CommandText (Visual Basic)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
  [Пример метода Close соединения, свойство типа таблицы (Visual Basic)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   

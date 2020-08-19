@@ -1,4 +1,5 @@
 ---
+description: Примеры методов GetObjectOwner и SetObjectOwner (Visual Basic)
 title: Примеры методов примеры методов getobjectowner и SetObjectOwner (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e44ec3d4-42ae-447d-aaed-bdea53cb0cca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2cc708ed86c9fd06997ce21c2be8f6ab836c1725
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 502bad9d142df67096f23bf89f60184a958de55a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764935"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440086"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vb"></a>Примеры методов GetObjectOwner и SetObjectOwner (Visual Basic)
 В этом примере демонстрируются методы [примеры методов getobjectowner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) и [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) . В этом коде предполагается наличие учетной записи группы (см. Дополнительные сведения о добавлении этой группы в систему в разделе [группы и пользователи добавим, метод ChangePassword (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md) ). Владелец таблицы Categories имеет значение Accounting.  
@@ -61,7 +62,7 @@ End Sub
 ' EndOwnersVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Метод примеры методов getobjectowner (ADOX)](../../../ado/reference/adox-api/getobjectowner-method-adox.md)   
  [Метод SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)

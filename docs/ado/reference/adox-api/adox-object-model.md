@@ -1,4 +1,5 @@
 ---
+description: Объектная модель ADOX
 title: Объектная модель ADOX | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 31c0781c-96c8-4460-90ea-134066154fc7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6c521a1db30a35e43e5e0a7dbb118320769d4756
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0a221cf2a36cb49b1005362d4cda5ad0ca986ca5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764135"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440576"
 ---
 # <a name="adox-object-model"></a>Объектная модель ADOX
 На следующей схеме показано, как объекты представлены и связаны в ADOX. Дополнительные сведения об определенном объекте или коллекции см. в разделе, посвященном заданному справочному разделу, или [ADOX Objects](../../../ado/reference/adox-api/adox-objects.md) and [ADOX Collections](../../../ado/reference/adox-api/adox-collections.md).  
@@ -26,7 +27,7 @@ ms.locfileid: "82764135"
   
  Каждый объект [таблицы](../../../ado/reference/adox-api/table-object-adox.md), [индекса](../../../ado/reference/adox-api/index-object-adox.md)и [столбца](../../../ado/reference/adox-api/column-object-adox.md) также имеет стандартную коллекцию [свойств](../../../ado/reference/ado-api/properties-collection-ado.md) ADO.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по API ADOX](../../../ado/reference/adox-api/adox-api-reference.md)   
  [Примеры кода ADOX](../../../ado/reference/adox-api/adox-code-examples.md)   
  [ADOX коллекции](../../../ado/reference/adox-api/adox-collections.md)   

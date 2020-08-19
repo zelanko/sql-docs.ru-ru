@@ -1,4 +1,5 @@
 ---
+description: Свойство DateModified (ADOX)
 title: Свойство DateModified (ADOX) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fed09266-1547-4bda-9088-c254d81cc738
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1c3a2a8ba0890dd50621fac143aa102091abcc19
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 7ee921e1865530356e1fd88c97489b63a81a02ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942716"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440156"
 ---
 # <a name="datemodified-property-adox"></a>Свойство DateModified (ADOX)
 Указывает дату последнего изменения объекта.  
@@ -30,7 +31,7 @@ ms.locfileid: "86942716"
 ## <a name="return-values"></a>Возвращаемые значения  
  Возвращает значение **типа Variant** , указывающее дату изменения. Значение равно null, если **DateModified** не поддерживается поставщиком.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Для вновь добавляемых объектов свойство **DateModified** имеет значение null. После добавления нового [представления](../../../ado/reference/adox-api/view-object-adox.md) или [процедуры](../../../ado/reference/adox-api/procedure-object-adox.md)необходимо вызвать метод [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) коллекции [представлений](../../../ado/reference/adox-api/views-collection-adox.md) или [процедур](../../../ado/reference/adox-api/procedures-collection-adox.md) , чтобы получить значения для свойства **DateModified** .  
   
 ## <a name="applies-to"></a>Применение  

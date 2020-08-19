@@ -1,4 +1,5 @@
 ---
+description: Пример свойства ActiveConnection объекта Catalog (Visual Basic)
 title: Пример свойства ActiveConnection каталога (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bb3274b1-764d-43a7-a49f-ef55680ecd26
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dc83a171b9ed2632900c8f31a4ea4d059493b19a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4895f1ec08a0f10c93335fc36954f3a9098ffce4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763965"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440416"
 ---
 # <a name="catalog-activeconnection-property-example-vb"></a>Пример свойства ActiveConnection объекта Catalog (Visual Basic)
 Если задать для свойства [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) допустимое, открытое соединение, каталог будет открыт. Из открытого каталога можно получить доступ к объектам схемы, содержащимся в этом каталоге.  
@@ -65,7 +66,7 @@ End Sub
 Attribute VB_Name = "Catalog"  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Объект Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   

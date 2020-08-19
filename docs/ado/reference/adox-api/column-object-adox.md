@@ -1,4 +1,5 @@
 ---
+description: Объект Column (ADOX)
 title: Объект Column (ADOX) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6e772783-1bc8-4ea7-94b2-7d7a52ea5c47
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 80e462e3bc7a8f5d4833c78bcaf6b4a45705c083
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 582014342380ed5ec77c8a6f0e2adacba52bbdcc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759400"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440346"
 ---
 # <a name="column-object-adox"></a>Объект Column (ADOX)
 Представляет столбец из таблицы, индекса или ключа.  
@@ -61,7 +62,7 @@ ms.locfileid: "82759400"
   
 -   [Свойства, методы и события объекта Column](../../../ado/reference/adox-api/column-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы добавления столбцов и таблиц, пример свойства Name (Visual Basic)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [Пример метода Close соединения, свойство типа таблицы (Visual Basic)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
  [Пример свойств для добавления ключей, типа ключа, RelatedColumn, RelatedTable и UpdateRule (Visual Basic)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   

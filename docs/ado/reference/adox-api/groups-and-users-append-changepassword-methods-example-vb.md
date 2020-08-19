@@ -1,4 +1,5 @@
 ---
+description: Примеры методов Append коллекций Groups и Users, а также пример метода ChangePassword (Visual Basic)
 title: Добавление в группы и пользователей, пример методов ChangePassword (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c9426757-9cdd-4a95-b506-d3d011569109
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c71cca25412a00ea53d62b44a0a4ff7ced67643
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7aa335dc2aabdf05ab34a0245bb0aafc14b17cf1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761742"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439986"
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vb"></a>Примеры методов Append коллекций Groups и Users, а также пример метода ChangePassword (Visual Basic)
 В этом примере демонстрируется метод [append](../../../ado/reference/adox-api/append-method-adox-groups.md) [групп](../../../ado/reference/adox-api/groups-collection-adox.md), а также метод [добавления](../../../ado/reference/adox-api/append-method-adox-users.md) [пользователей](../../../ado/reference/adox-api/users-collection-adox.md) путем добавления новой [группы](../../../ado/reference/adox-api/group-object-adox.md) и нового [пользователя](../../../ado/reference/adox-api/user-object-adox.md) в систему. Новая **Группа** добавляется в коллекцию **Groups** нового **пользователя**. Таким образом, новый **пользователь** добавляется в **группу**. Кроме того, метод [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) используется для указания пароля **пользователя** .  
@@ -122,7 +123,7 @@ End Sub
 ' EndGroupVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод Append (группы ADOX)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
  [Метод Append (пользователи ADOX)](../../../ado/reference/adox-api/append-method-adox-users.md)   
  [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   

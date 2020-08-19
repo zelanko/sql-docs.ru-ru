@@ -1,4 +1,5 @@
 ---
+description: Примеры методов Append для коллекций Columns и Tables, а также пример свойства Name (Visual C++)
 title: Методы добавления столбцов и таблиц, пример свойства Name (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2b6dfef9-bcdf-483d-a164-2fa3ec81a43f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 424813731993841bc503592e42459548dcaf5152
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 655c1d014f312ae0706b242bb8b108d871bcef3b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759350"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440296"
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vc"></a>Примеры методов Append для коллекций Columns и Tables, а также пример свойства Name (Visual C++)
 В следующем коде показано, как создать новую таблицу.  
@@ -81,7 +82,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод Append (столбцы ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Метод Append (таблицы ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Свойство Name (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)

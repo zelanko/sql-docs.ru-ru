@@ -1,4 +1,5 @@
 ---
+description: Пример свойства DeleteRule (Visual Basic)
 title: Пример свойства DeleteRule (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9ba00118-a80d-4a6d-a7d6-4f5492fb7ded
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 928da8cdfa8bb693bde69781ce40ecad7343c038
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 411bada2d562322a14c52965a1b86ed45ef45420
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763925"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440106"
 ---
 # <a name="deleterule-property-example-vb"></a>Пример свойства DeleteRule (Visual Basic)
 В этом примере демонстрируется свойство [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) объекта [Key](../../../ado/reference/adox-api/key-object-adox.md) . Код добавляет новую [таблицу](../../../ado/reference/adox-api/table-object-adox.md) , а затем определяет новый первичный ключ, устанавливая для **DeleteRule** значение **адрикаскаде**.  
@@ -84,6 +85,6 @@ End Sub
 ' EndDeleteRuleVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство DeleteRule (ADOX)](../../../ado/reference/adox-api/deleterule-property-adox.md)   
  [Объект Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)

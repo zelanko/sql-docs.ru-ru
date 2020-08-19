@@ -1,4 +1,5 @@
 ---
+description: Примеры методов GetObjectOwner и SetObjectOwner (Visual C++)
 title: Примеры методов примеры методов getobjectowner и SetObjectOwner (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f5f2aa4b-d790-458f-9e70-1643e3e203b2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 04c8a84da02d31314146b4f54b93cc0edf7bb30e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 76ac35f396f09ee7e6f4360fb03e69c005d03c42
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764923"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440066"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vc"></a>Примеры методов GetObjectOwner и SetObjectOwner (Visual C++)
 В этом примере демонстрируются методы [примеры методов getobjectowner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) и [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) . В этом коде предполагается наличие учетной записи группы (см. Дополнительные сведения о добавлении этой группы в систему в разделе [группы и пользователи добавим, метод ChangePassword (](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vc.md) Visual c++)). Владелец таблицы Categories имеет значение Accounting.  

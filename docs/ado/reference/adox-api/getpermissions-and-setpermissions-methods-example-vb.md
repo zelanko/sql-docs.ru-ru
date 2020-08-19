@@ -1,4 +1,5 @@
 ---
+description: Примеры методов GetPermissions и SetPermissions (Visual Basic)
 title: Примеры методов PermissionSet и SetPermissions (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: aa366d98-8c7a-4189-bdd8-1d663b243d33
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f87e7f9b32c123cae2918f89b92ac2928bb65c65
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 59984877f4c8d86b9adc18b841b17c92740e8602
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764898"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440056"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vb"></a>Примеры методов GetPermissions и SetPermissions (Visual Basic)
 В этом примере демонстрируются методы [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) и [PermissionSet](../../../ado/reference/adox-api/getpermissions-method-adox.md) . Следующий код предоставляет пользователю с правами администратора полный доступ к таблице Orders.  
@@ -94,7 +95,7 @@ End Sub
 ' EndGrantPermissionsVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Метод PermissionSet (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)   
  [Метод SetPermissions (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)   
