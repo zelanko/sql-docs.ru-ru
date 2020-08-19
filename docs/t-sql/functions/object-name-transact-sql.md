@@ -1,4 +1,5 @@
 ---
+description: OBJECT_NAME (Transact-SQL)
 title: OBJECT_NAME (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -24,12 +25,12 @@ ms.assetid: 7d5b923f-0c3e-4af9-b39b-132807a6d5b3
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e51571f24293ee5d9855c6bfd665a6e9bdd7fea
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 3386f37e4888ee8b0734d60d87359314a7bc9325
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111466"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459676"
 ---
 # <a name="object_name-transact-sql"></a>OBJECT_NAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -64,7 +65,7 @@ OBJECT_NAME ( object_id [, database_id ] )
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение ANY на данный объект. Чтобы указать идентификатор базы данных, также требуется разрешение CONNECT на базу данных или необходимо включить гостевую учетную запись.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Системные функции можно использовать в списке выбора, в предложении WHERE и в любом месте, где разрешается использование выражений. Дополнительные сведения см. в разделах [Выражения](../../t-sql/language-elements/expressions-transact-sql.md) и [WHERE](../../t-sql/queries/where-transact-sql.md).  
   
  Значение, возвращаемое системной функцией, использует параметры сортировки текущей базы данных.  
@@ -145,7 +146,7 @@ FROM sys.objects
 WHERE name = OBJECT_NAME(274100017);  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции метаданных (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [OBJECT_DEFINITION (Transact-SQL)](../../t-sql/functions/object-definition-transact-sql.md)   
  [OBJECT_ID (Transact-SQL)](../../t-sql/functions/object-id-transact-sql.md)  

@@ -1,4 +1,5 @@
 ---
+description: Настройка формата маршалинга потока DCOM
 title: Настройка формата маршалирования потока DCOM | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 46664ac5-d6e6-4457-8bae-3a98300f2a41
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f3e7dd82d54b20ccceec73c0917f4f81c3cf16dd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 47e581ec9bd3ee04af7e8f4400e3636ddc22bd37
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758960"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451986"
 ---
 # <a name="setting-dcom-stream-marshaling-format"></a>Настройка формата маршалинга потока DCOM
 Клиентский компьютер, использующий компоненты RDS 1,5 или более ранней версии, несовместим с сервером, использующим компоненты RDS 2,0 или более поздней версии. При использовании DCOM в качестве базового протокола поддержка RDS 2,0 или более поздней версии более эффективна при переносе объектов [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) . Если клиент выполняет компоненты из RDS 1,5 или более ранней версии, можно настроить сервер для работы с предыдущей поддержкой RDS (называемой RDS 1,0) или более новой службой поддержки RDS (под названием RDS 2,0 или более поздней версии). Установите одну из следующих записей реестра:  

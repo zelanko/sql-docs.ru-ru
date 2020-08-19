@@ -1,4 +1,5 @@
 ---
+description: Работа с файлами Excel в задаче "Скрипт"
 title: Работа с файлами Excel в задаче "Скрипт" | Документы Майкрософт
 ms.custom: ''
 ms.date: 05/15/2018
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f851b7a3cbbf665838a8b8c6d6af19cc0797040e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1016c9746ba1cfe266ef944eeb66f7c0327d69dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921096"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430356"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Работа с файлами Excel в задаче "Скрипт"
 
@@ -439,7 +440,7 @@ public class ScriptMain
   
 2.  Соедините каждую задачу "Скрипт" всех четырех образцов друг с другом, чтобы каждая задача выполнялась после успешного завершения предыдущей, и соедините задачу четвертого образца с задачей **DisplayResults**.  
   
-3.  Откройте задачу **DisplayResults** в **редакторе задачи "Скрипт"** .  
+3.  Откройте задачу **DisplayResults** в **редакторе задачи "Скрипт"**.  
   
 4.  На вкладке **Скрипт** щелкните **ReadOnlyVariables** и используйте один из следующих методов, чтобы добавить все семь переменных, перечисленных в разделе [Настройка пакета для тестирования образцов](#configuring):  
   

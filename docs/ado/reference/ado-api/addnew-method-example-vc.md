@@ -1,4 +1,5 @@
 ---
+description: Пример метода AddNew (Visual C++)
 title: Пример метода AddNew (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9cc8774b-6711-4837-b442-959eaf79343e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8d47003a392ade09b1ba4d83c5dccfb1538364f1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 02a439fbe6c5ce483c3a3391421fdfcf7766a579
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760610"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451546"
 ---
 # <a name="addnew-method-example-vc"></a>Пример метода AddNew (Visual C++)
 В этом примере используется метод [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) для создания новой записи с указанным именем.  
@@ -213,6 +214,6 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод AddNew (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

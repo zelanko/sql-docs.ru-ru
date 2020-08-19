@@ -1,4 +1,5 @@
 ---
+description: LEN (Transact-SQL)
 title: LEN (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 09/03/2015
@@ -20,12 +21,12 @@ ms.assetid: fa20fee4-884d-4301-891a-c03e901345ae
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2ce435d3fbc4f6549dfb654914b377541309cbfe
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: bdcfe164aa08677887c1c494309bcf1d9af4c6d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112958"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459714"
 ---
 # <a name="len-transact-sql"></a>LEN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,11 +51,11 @@ LEN ( string_expression )
  Оцениваемое строковое [выражение](../../t-sql/language-elements/expressions-transact-sql.md). Аргумент *string_expression* может быть константой, переменной или столбцом символьных или двоичных данных.  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
- **bigint**, если *expression* имеет тип данных **varchar(max)** , **nvarchar(max)** или **varbinary(max)** ; в противном случае **int**.  
+ **bigint**, если *expression* имеет тип данных **varchar(max)**, **nvarchar(max)** или **varbinary(max)**; в противном случае **int**.  
   
  Если используются параметры сортировки SC, то возвращаемое целое значение рассматривает суррогатные пары Юникода UTF-16 как один символ. Дополнительные сведения см. в статье [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
 Функция LEN исключает конечные пробелы. Если это может создать проблемы, рекомендуется использовать функцию [DATALENGTH (Transact-SQL)](../../t-sql/functions/datalength-transact-sql.md), которая не усекает строку. При обработке строки Юникода DATALENGTH возвращает число, которое, возможно, не будет равно количеству символов. В приведенном ниже примере демонстрируется работа функций LEN и DATALENGTH с конечным пробелом.  
   
 ```sql  
@@ -101,7 +102,7 @@ FNameLength  FirstName  LastName
 4            Lynn       Tsoflias
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [DATALENGTH (Transact-SQL)](../../t-sql/functions/datalength-transact-sql.md)   
  [CHARINDEX (Transact-SQL)](../../t-sql/functions/charindex-transact-sql.md)  
  [PATINDEX (Transact-SQL)](../../t-sql/functions/patindex-transact-sql.md)  

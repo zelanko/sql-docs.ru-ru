@@ -1,4 +1,5 @@
 ---
+description: Connection (ADO — синтаксис WFC)
 title: Соединение (ADO — синтаксис WFC) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8cfc35bb-91e2-47da-ad4c-982e9162cd51
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b8602b170d4c067744fd002a98c949b8d0836d2e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4a9d467a2ab9073bd287fd0cf6a3fc36c60cabda
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760310"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444526"
 ---
 # <a name="connection-ado---wfc-syntax"></a>Connection (ADO — синтаксис WFC)
 ## <a name="package-commswfcdata"></a>упаковать com. MS. WFC. Data  
@@ -44,7 +45,7 @@ public int executeUpdate(String commandText)
 public int executeUpdate(String commandText, int options)  
 ```  
   
- Метод **executeUpdate** — это особый метод Case, который вызывает базовый метод **EXECUTE** ADO с определенными параметрами. Метод **executeUpdate** не поддерживает возврат объекта **набора записей** , поэтому параметр *Options* метода **EXECUTE** изменяется с помощью **адоенумс. ексекутеоптионс.** noreturn. После завершения метода **EXECUTE** его обновленный параметр *рекордсаффектед* передается обратно в метод **executeUpdate** , который, наконец, возвращается в виде **целого**числа.  
+ Метод **executeUpdate** — это особый метод Case, который вызывает базовый метод **EXECUTE** ADO с определенными параметрами. Метод **executeUpdate** не поддерживает возврат объекта **Recordset** , поэтому параметр *options* метода **EXECUTE** изменяется на **AdoEnums.Exeкутеоптионс.** noreturns. После завершения метода **EXECUTE** его обновленный параметр *рекордсаффектед* передается обратно в метод **executeUpdate** , который, наконец, возвращается в виде **целого**числа.  
   
 ```  
 public void open()   
@@ -109,5 +110,5 @@ public void addOnWillExecute(ConnectionEventHandler handler)
 public void removeOnWillExecute(ConnectionEventHandler handler)  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

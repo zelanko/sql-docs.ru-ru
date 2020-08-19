@@ -1,4 +1,5 @@
 ---
+description: Резервное копирование и восстановление баз данных с помощью Always Encrypted
 title: Резервное копирование и восстановление баз данных с помощью Always Encrypted | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/30/2019
@@ -10,12 +11,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb529b9cc518cd7802dfdbbddba8b88e399dbcba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ff78b0f657e70a16051531f1a0bea3fdc5cfe7d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85627388"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475524"
 ---
 # <a name="backup-and-restore-databases-using-always-encrypted"></a>Резервное копирование и восстановление баз данных с помощью Always Encrypted 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "85627388"
 Если база данных восстановлена на другом сервере или с другим именем, не нужно делать ничего особенного, чтобы приложение могло запрашивать зашифрованные данные в целевой базе данных, так как ключи в обеих базах данных одинаковы.
 
 Дополнительные сведения о резервном копировании и восстановлении баз данных см. в следующих статьях:
-- [Общие сведения о резервном копировании (SQL Server)](../../backup-restore/backup-overview-sql-server.md)
+- [Backup Overview (SQL Server)](../../backup-restore/backup-overview-sql-server.md)
 - [Восстановление базы данных в Управляемый экземпляр](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started-restore)
 
 ## <a name="next-steps"></a>Next Steps

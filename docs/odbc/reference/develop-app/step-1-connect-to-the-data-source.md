@@ -1,4 +1,5 @@
 ---
+description: Шаг 1. Подключение к источнику данных
 title: Шаг 1. подключение к источнику данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 84298664-4523-4149-b821-7b2e42c85281
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2a104733c0e5ec5acc87eeabd00c4e51d4bfd000
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9ac15eed6c84745dca6406ad8186f14c65798939
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301354"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482967"
 ---
 # <a name="step-1-connect-to-the-data-source"></a>Шаг 1. Подключение к источнику данных
 Первым шагом в любом приложении является подключение к источнику данных. Этот этап, включая необходимые функции, показан на следующем рисунке.  

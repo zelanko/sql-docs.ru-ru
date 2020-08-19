@@ -1,4 +1,5 @@
 ---
+description: ~ (побитовое НЕ) (Transact-SQL)
 title: ~ (побитовое НЕ) (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 01/10/2017
@@ -23,12 +24,12 @@ ms.assetid: 02da8016-f6c0-41ae-8d59-33eaa02bfc95
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cb8dc14764feeeb8ebc83f424d1b1e979e160e2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 498c2a81c0d7b94cd6288c24165f051bfc073fbf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915820"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459497"
 ---
 # <a name="-bitwise-not-transact-sql"></a>~ (побитовое НЕ) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,7 +62,7 @@ ms.locfileid: "86915820"
   
  **bit**, если входные значения имеют тип **bit**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Побитовый оператор **~** выполняет побитовую логическую операцию НЕ для аргумента *expression*, обрабатывая последовательно каждый бит. Если аргумент *expression* имеет значение 0, то биты в результирующем наборе принимают значение 1. В противном случае бит в результате принимает значение 0. Другими словами, единицы меняются на нули, нули меняются на единицы.  
   
 > [!IMPORTANT]  

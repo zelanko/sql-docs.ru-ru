@@ -1,4 +1,5 @@
 ---
+description: Пример метода AddNew (JScript)
 title: Пример метода AddNew (JScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eabdd278-6576-4be7-9315-fb79cb8ef678
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3943b06e623eca2e90a3a5a3aeefaf2dede83bb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3c1e4ca8f4019153620494a3b6d945d9fdb75338
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760640"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451576"
 ---
 # <a name="addnew-method-example-jscript"></a>Пример метода AddNew (JScript)
 В этом примере используется метод [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) для создания новой записи с указанным именем. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **аддневжс. ASP**.  
@@ -134,6 +135,6 @@ body {
 <!-- EndAddNewJS -->  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод AddNew (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

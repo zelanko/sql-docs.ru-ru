@@ -1,4 +1,5 @@
 ---
+description: Метод CreateParameter (ADO)
 title: Метод CreateParameter (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6cd78e3cbe992a3f2df5046a26eca990479cb3fd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6bf45e2d458784972d7057e95878c9db3526ffac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760220"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444326"
 ---
 # <a name="createparameter-method-ado"></a>Метод CreateParameter (ADO)
 Создает новый объект [Parameter](../../../ado/reference/ado-api/parameter-object.md) с указанными свойствами.  
@@ -37,20 +38,20 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  Возвращает объект **параметра** .  
   
 #### <a name="parameters"></a>Параметры  
- *Name*  
- Необязательный элемент. **Строковое** значение, содержащее имя объекта **параметра** .  
+ *имя*;  
+ Необязательный параметр. **Строковое** значение, содержащее имя объекта **параметра** .  
   
- *Type*  
- Необязательный элемент. Значение [дататипинум](../../../ado/reference/ado-api/datatypeenum.md) , указывающее тип данных объекта **параметра** .  
+ *Тип*  
+ Необязательный параметр. Значение [дататипинум](../../../ado/reference/ado-api/datatypeenum.md) , указывающее тип данных объекта **параметра** .  
   
  *Направление*  
- Необязательный элемент. Значение [параметердиректионенум](../../../ado/reference/ado-api/parameterdirectionenum.md) , указывающее тип объекта **параметра** .  
+ Необязательный параметр. Значение [параметердиректионенум](../../../ado/reference/ado-api/parameterdirectionenum.md) , указывающее тип объекта **параметра** .  
   
  *Размер*  
- Необязательный элемент. Значение **типа Long** , указывающее максимальную длину значения параметра в символах или байтах.  
+ Необязательный параметр. Значение **типа Long** , указывающее максимальную длину значения параметра в символах или байтах.  
   
  *Значение*  
- Необязательный элемент. **Вариант** , указывающий значение для объекта **параметра** .  
+ Необязательный параметр. **Вариант** , указывающий значение для объекта **параметра** .  
   
 ## <a name="remarks"></a>Remarks  
  Используйте метод **CreateParameter** для создания нового объекта **Parameter** с указанными именем, типом, направлением, размером и значением. Любые значения, передаваемые в аргументы, записываются в соответствующие свойства **параметров** .  
@@ -61,10 +62,10 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
   
  Если в аргументе *типа* указан числовой тип данных (**аднумерик** или **аддеЦимал**), необходимо также задать свойства [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) и [Precision](../../../ado/reference/ado-api/precision-property-ado.md) .  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Примеры методов Append и CreateParameter (Visual Basic)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)   
  [Пример методов Append и CreateParameter (Visual c++)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vc.md)   
  [Метод Append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   

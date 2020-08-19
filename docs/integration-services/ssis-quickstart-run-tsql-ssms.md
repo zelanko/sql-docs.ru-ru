@@ -1,4 +1,5 @@
 ---
+description: Выполнение пакета служб SSIS из SSMS с помощью Transact-SQL
 title: Выполнение пакета служб SSIS с помощью Transact-SQL (SSMS) | Документы Майкрософт
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a2526e630468ca7b58a0b21c8d63845b6978fdd8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: afd8fb3bf9b77eaaf5ee69728fafd83ed4f63889
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921867"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430116"
 ---
 # <a name="run-an-ssis-package-from-ssms-with-transact-sql"></a>Выполнение пакета служб SSIS из SSMS с помощью Transact-SQL
 
@@ -24,7 +25,7 @@ ms.locfileid: "86921867"
 
 SQL Server Management Studio — это интегрированная среда для управления любой инфраструктурой SQL, от SQL Server до базы данных SQL. Дополнительные сведения о SSMS см. в разделе [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md).
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Прежде чем начать, убедитесь в наличии последней версии SQL Server Management Studio (SSMS). Чтобы скачать среду SSMS, посетите страницу [Скачивание SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 

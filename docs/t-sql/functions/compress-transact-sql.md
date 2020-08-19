@@ -1,4 +1,5 @@
 ---
+description: COMPRESS (Transact-SQL)
 title: COMPRESS (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 10/11/2018
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: c2bfe9b8-57a4-48b4-b028-e1a3ed5ece88
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6edda04e2520ec915a6c4767751130f091668e85
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 51cf2e37ae548383d7c02b3ba4028b9327857928
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394299"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468195"
 ---
 # <a name="compress-transact-sql"></a>COMPRESS (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-Эта функция сжимает входное выражение с использованием алгоритма GZIP. Она возвращает массив байтов типа **varbinary(max)** .
+Эта функция сжимает входное выражение с использованием алгоритма GZIP. Она возвращает массив байтов типа **varbinary(max)**.
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -35,8 +36,6 @@ ms.locfileid: "87394299"
 COMPRESS ( expression )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## <a name="arguments"></a>Аргументы
 *expression*  
 Объект
@@ -50,16 +49,16 @@ COMPRESS ( expression )
 * **varbinary(***n***)**
 * **varchar(max)**
 
-или диспетчер конфигурации служб
+или
 
 * **varchar(***n***)**
 
 . Дополнительные сведения см. в статье [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md).
   
 ## <a name="return-types"></a>Типы возвращаемых данных
-**varbinary(max)** , представляющие сжатое содержимое входного выражения.
+**varbinary(max)**, представляющие сжатое содержимое входного выражения.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
 Сжатые данные невозможно индексировать.
   
 Функция `COMPRESS` сжимает данные, предоставленные во входном выражении. Ее необходимо вызывать для каждого раздела сжимаемых данных. Дополнительные сведения об автоматическом сжатии хранимых данных на уровне строк или страниц см. в статье [Сжатие данных](../../relational-databases/data-compression/data-compression.md).

@@ -1,4 +1,5 @@
 ---
+description: Пример Embedded SQL
 title: Пример внедренного SQL | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8a26e05-3c82-4c5f-8f01-9de0edb645e9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 39ec504c423817c6a3e11bc954555b201b8b09c6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fec0f3e3776b8ac70e85042c565343b35f8a893e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294175"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429066"
 ---
 # <a name="embedded-sql-example"></a>Пример Embedded SQL
 Следующий код представляет собой простую внедренную программу SQL, написанную на языке C. Программа иллюстрирует многие, но не все встроенные приемы SQL. Программа запрашивает у пользователя номер заказа, получает номер клиента, менеджера по продажам и состояние заказа, а также отображает полученные сведения на экране.  

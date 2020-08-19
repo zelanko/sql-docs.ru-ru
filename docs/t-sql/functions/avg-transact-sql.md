@@ -1,4 +1,5 @@
 ---
+description: AVG (Transact-SQL)
 title: AVG (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/24/2017
@@ -22,12 +23,12 @@ ms.assetid: 4534b705-d946-441b-9b5d-5fbe561c9131
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d0825b40f469e31f12c0fd9d3ebca91fd4d4c69
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 183cc509061439bdc2792e7e81ed0d8f1e847ca1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111130"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459865"
 ---
 # <a name="avg-transact-sql"></a>AVG (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -71,7 +72,7 @@ OVER **(** [ *partition_by_clause* ] _order\_by\_clause_ **)**
 |Категории **money** и **smallmoney**|**money**|  
 |Категории **float** и **real**|**float**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
 Если тип данных *expression* является типом данных-псевдонимом, тип возвращаемого значения также является типом данных-псевдонимом. Однако если базовый тип данных типа данных-псевдонима может повышаться, например из **tinyint** в **int**, возвращаемое значение будет иметь повышенный тип данных, а не тип данных-псевдоним.
   
 Функция AVG () вычисляет среднее арифметическое набора значений, выполняя деление суммы этих значений на число значений, не равных NULL. Если сумма превышает максимальное значение для типа данных возвращаемого значения, AVG() возвратит ошибку.
@@ -235,7 +236,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
 (10 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 [Агрегатные функции (Transact-SQL)](../../t-sql/functions/aggregate-functions-transact-sql.md)  
 [Предложение OVER (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)
   

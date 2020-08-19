@@ -1,4 +1,5 @@
 ---
+description: CURRENT_TIMESTAMP (Transact-SQL)
 title: CURRENT_TIMESTAMP (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/24/2017
@@ -31,12 +32,12 @@ ms.assetid: c724d9cc-7b1f-4c71-bdf5-08bc52b33afc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1777a033358b350c676fbb79aa81677f0907bbd0
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 89ea4e2a54cee32d742dd0e3c2b9607a589f0b35
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112130"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468156"
 ---
 # <a name="current_timestamp-transact-sql"></a>CURRENT_TIMESTAMP (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "87112130"
   
 Эта функция ANSI SQL эквивалентна функции [GETDATE](../../t-sql/functions/getdate-transact-sql.md).
   
-Обзор всех типов данных и функций даты и времени в языке [ см. в статье ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)Типы данных и функции даты и времени[!INCLUDE[tsql](../../includes/tsql-md.md)].
+Обзор всех типов данных и функций даты и времени в языке [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в статье [Типы данных и функции даты и времени](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -67,7 +68,7 @@ CURRENT_TIMESTAMP
 **datetime**
   
 ## <a name="remarks"></a>Remarks  
-Функция [!INCLUDE[tsql](../../includes/tsql-md.md)] может использоваться в инструкциях `CURRENT_TIMESTAMP` везде, где допустимо использование выражения **datetime**.
+Функция `CURRENT_TIMESTAMP` может использоваться в инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)] везде, где допустимо использование выражения **datetime**.
   
 `CURRENT_TIMESTAMP` является недетерминированной функцией. Невозможно проиндексировать представления и выражения, ссылающиеся на этот столбец.
   

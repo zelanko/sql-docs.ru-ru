@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_query_stats (Transact-SQL)
 title: sys. dm_exec_query_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/30/2019
@@ -20,12 +21,12 @@ ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f73452beb45c9f5df4b806d937043f22c5c0dbe1
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 12ef4ff17b243a674911a9611517529bbe0ce0dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865322"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490003"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "87865322"
 Возвращает суммарную статистику производительности для кэшированных планов запросов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Представление содержит по одной строке для каждой инструкции запроса в плане в кэше, а время жизни строк связано с самим планом. Когда план удаляется из кэша, соответствующие строки исключаются из представления.  
   
 > [!NOTE]
-> - Результаты **sys. dm_exec_query_stats** могут различаться при каждом выполнении, так как данные отражают только завершенные запросы, а не по-прежнему в полете.
+> - Результаты **sys. dm_exec_query_stats**  могут различаться при каждом выполнении, так как данные отражают только завершенные запросы, а не по-прежнему в полете.
 > - Чтобы вызвать эту функцию из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , используйте имя **sys. dm_pdw_nodes_exec_query_stats**.    
 
   
@@ -115,7 +116,7 @@ ms.locfileid: "87865322"
 |**last_spills**|**bigint**|Число страниц, сброшенных при последнем выполнении запроса.<br /><br /> Область **применения**: начиная с с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**min_spills**|**bigint**|Минимальное число страниц, которые этот запрос когда-либо был сброшен во время одного выполнения.<br /><br /> Область **применения**: начиная с с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**max_spills**|**bigint**|Максимальное количество страниц, которые этот запрос когда-либо был сброшен во время одного выполнения.<br /><br /> Область **применения**: начиная с с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**pdw_node_id**|**int**|Идентификатор узла, на котором находится данное распределение.<br /><br /> **Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
+|**pdw_node_id**|**int**|Идентификатор узла, на котором находится данное распределение.<br /><br /> **Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
 |**total_page_server_reads**|**bigint**|Общее число операций чтения с сервера удаленной страницы, выполненных при выполнении плана с момента его компиляции.<br /><br /> **Применимо к:** Масштабирование базы данных SQL Azure |  
 |**last_page_server_reads**|**bigint**|Число операций чтения сервера удаленной страницы, выполненных при последнем выполнении плана.<br /><br /> **Применимо к:** Масштабирование базы данных SQL Azure |  
 |**min_page_server_reads**|**bigint**|Минимальное число операций чтения сервером удаленных страниц, которое этот план выполнял во время одного выполнения.<br /><br /> **Применимо к:** Масштабирование базы данных SQL Azure |  
@@ -126,7 +127,7 @@ ms.locfileid: "87865322"
 ## <a name="permissions"></a>Разрешения  
 
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
+На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется  **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
    
 ## <a name="remarks"></a>Remarks  
  Статистика в представлении обновляется после завершения выполнения запроса.  
@@ -173,7 +174,7 @@ WHERE qt.text like '%SELECT%'
 ORDER BY qs.execution_count DESC;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
 [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
 [sys. dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)    
 [sys. dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    

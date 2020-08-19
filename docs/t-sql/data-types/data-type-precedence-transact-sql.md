@@ -1,4 +1,5 @@
 ---
+description: Приоритет типов данных (Transact-SQL)
 title: Приоритет типов данных (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/23/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f4c804ab-ed3f-43b1-a024-c9ac6944b66b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bcf14745af6da26cc625e928d75f510e0da9a2e8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6ed8d2a30d4bcc2cd1adaedc3cccd6642d701533
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70030356"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459935"
 ---
 # <a name="data-type-precedence-transact-sql"></a>Приоритет типов данных (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md.md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -63,7 +64,7 @@ ms.locfileid: "70030356"
 1. **varbinary** (включая **varbinary(max)** )  
 1. **binary** (низший приоритет)  
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
 [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)  
 [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)

@@ -1,4 +1,5 @@
 ---
+description: Соединитель Microsoft Connector для SAP BW
 title: Соединитель Microsoft Connector для SAP BW | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 12375a5d09c34ac9b9e79e99efdee3ccebbe823b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5b3784e4af35afe5fdf0b84290cdf33fc8c77496
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918115"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430156"
 ---
 # <a name="microsoft-connector-for-sap-bw"></a>Соединитель Microsoft Connector для SAP BW
 
@@ -35,7 +36,7 @@ ms.locfileid: "86918115"
 > [!IMPORTANT]  
 >  Для извлечения данных из SAP Netweaver BW требуется дополнительная лицензия SAP. Обратитесь к SAP, чтобы уточнить требования.  
   
-## <a name="components"></a>Components  
+## <a name="components"></a>Компоненты  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector для SAP BW состоит из следующих компонентов:  
   
 -   **SAP BW Source** — это компонент потока данных, который позволяет извлекать данные из системы SAP Netweaver BW версии 7.  

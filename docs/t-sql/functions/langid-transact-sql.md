@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;LANGID (Transact-SQL)'
 title: '@@LANGID (Transact-SQL) | Документы Майкрософт'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 7a0fc089-2a48-4a81-9d78-2aaedb540d37
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6098c5fc8eab31bd567390656d27cc13a5862086
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 0443c0e73593b68b2a1084fbff2fccd7739beebe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110935"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459734"
 ---
 # <a name="x40x40langid-transact-sql"></a>&#x40;&#x40;LANGID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "87110935"
 ## <a name="return-types"></a>Типы возвращаемых данных
  **smallint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Для просмотра сведений о настройках языка, включая номера идентификаторов, выполните процедуру **sp_helplanguage** без параметра.  
   
 ## <a name="examples"></a>Примеры  
@@ -66,7 +67,7 @@ Language ID
 6            
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции настройки (Transact-SQL)](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [SET LANGUAGE (Transact-SQL)](../../t-sql/statements/set-language-transact-sql.md)   
  [sp_helplanguage (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)  

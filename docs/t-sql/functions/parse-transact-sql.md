@@ -1,4 +1,5 @@
 ---
+description: PARSE (Transact-SQL)
 title: PARSE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/05/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6a2dbf10-f692-471b-9458-24d246963049
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 36649527ab73d15de4c811bcbe5c3234980e6a86
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7dac50281c264412e288fe3fce25fda84d99b659
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111431"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459660"
 ---
 # <a name="parse-transact-sql"></a>PARSE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,7 +50,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
  *data_type*  
  Литеральное значение, представляющее тип данных, запрошенный в качестве для результата.  
   
- *Язык и региональные параметры*  
+ *culture*  
  Дополнительная строка, идентифицирующая культуру, в которой форматируется *string_value*.  
   
  Если аргумент *culture* не указан, то используется язык текущего сеанса. Язык может быть задан неявно или явно с использованием инструкции SET LANGUAGE. Значение *culture* принимает любую культуру, поддерживаемую .NET Framework; его применение не ограничивается языками, явно поддерживаемыми [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если аргумент *culture* недопустим, то PARSE выдаст ошибку.  
@@ -57,7 +58,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Возвращает результат выражения, переведенный в требуемый тип данных.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Значения NULL, передаваемые в качестве аргументов для PARSE, рассматриваются двумя способами:  
   
 1.  Если передается константа NULL, возникает ошибка. Значение NULL не может быть преобразовано в другой тип данных с учетом культуры.  
@@ -74,7 +75,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
   
  Значения параметра *data_type* ограничиваются списком типов, приведенным в следующей таблице, включая стили. Представленные сведения о стилях позволяют определить, какие типы шаблонов разрешены. Дополнительные сведения о стилях см. в документации по платформе .NET Framework для перечислений **System.Globalization.NumberStyles** и **DateTimeStyles**.  
   
-|Категория|Тип|Тип .NET Framework|Используемые стили|  
+|Категория|Тип|Тип платформы .NET Framework|Используемые стили|  
 |--------------|----------|-------------------------|-----------------|  
 |Числовой|BIGINT|Int64|NumberStyles.Number|  
 |Числовой|INT|Int32|NumberStyles.Number|  
@@ -120,7 +121,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
 |slovenski|Словенский|1060|Sl-SI|  
 |ελληνικά|Греческий|1032|El-GR|  
 |български|Болгарский|1026|bg-BG|  
-|русский|Русский|1049|Ru-RU|  
+|русский|русском языке|1049|Ru-RU|  
 |Türkçe|Турецкий|1055|Tr-TR|  
 |British|British English|2057|en-GB|  
 |eesti|Эстонский|1061|Et-EE|  

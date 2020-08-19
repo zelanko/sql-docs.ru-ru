@@ -1,4 +1,5 @@
 ---
+description: Вызов событий в компоненте скрипта
 title: Вызов событий в компоненте скрипта | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bb389073-e1d0-4794-8d29-c8b293b6a5e3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 489806f32a35ed4ca72bd2628951e8c6d7e623b4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: aa7e77defb74e1bd606536064788c4430322a6ac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915981"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430266"
 ---
 # <a name="raising-events-in-the-script-component"></a>Вызов событий в компоненте скрипта
 
@@ -30,7 +31,7 @@ ms.locfileid: "86915981"
   
  Для формирования события задача «Скрипт» вызывает один из следующих методов интерфейса <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> свойства <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A>:  
   
-|Событие|Description|  
+|Событие|Описание|  
 |-----------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A>|Вызывает в пакете определяемое пользователем событие.|  
 |<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireError%2A>|Извещает пакет об ошибке.|  

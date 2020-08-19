@@ -1,4 +1,5 @@
 ---
+description: Свойство ConnectionString (ADO)
 title: Свойство ConnectionString (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 39eb67a98d710e27c051d77aa7843663c853b9e0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 617ceace87a7f265d3d4db901b0a586481c19e32
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762635"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444456"
 ---
 # <a name="connectionstring-property-ado"></a>Свойство ConnectionString (ADO)
 Указывает сведения, используемые для установления соединения с источником данных.  
@@ -61,10 +62,10 @@ ms.locfileid: "82762635"
 |MSDASQL<br /><br /> (Чтобы повысить удобочитаемость исходного кода, явно укажите имя поставщика в строке подключения.)|Windows 2000 (32-разрядная версия)<br /><br /> Windows XP (32-разрядная версия)<br /><br /> Windows 2003 Server (32-разрядная версия)<br /><br /> Windows Vista (32-разрядная версия)<br /><br /> Windows Vista с пакетом обновления 1 (SP1) или более поздней версии (32-разрядная и 64-разр.)<br /><br /> Версии Windows после Windows Vista (32-разрядная и 64-разр.)|  
 |Значение по умолчанию отсутствует.<br /><br /> Когда приложение ADO выполняется в следующих операционных системах и не указывает поставщик явным образом, ADO возвращает следующую ошибку: "ADODB. Соединение: поставщик не указан, и не назначен поставщик по умолчанию "|Windows 2000 (64-разрядная версия)<br /><br /> Windows XP (64-разрядная версия)<br /><br /> Windows 2003 Server (64-разрядная версия)<br /><br /> Windows Vista (64-разрядная версия)|  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойств ConnectionString, ConnectionTimeout и State (Visual Basic)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
  [Пример свойств ConnectionString, ConnectionTimeout и State (Visual c++)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
  [Приложение А. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md)

@@ -1,4 +1,5 @@
 ---
+description: TIMEFROMPARTS (Transact-SQL)
 title: TIMEFROMPARTS (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -18,12 +19,12 @@ ms.assetid: 786c65a1-2b3f-4e4b-82b6-4940d62f3801
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b22a13e149e63aa459d825b62bef4ab0145c928
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 9e68915b7a1b82f736e152a2b31cf822214fe62c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394259"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459557"
 ---
 # <a name="timefromparts-transact-sql"></a>TIMEFROMPARTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,7 +60,7 @@ TIMEFROMPARTS ( hour, minute, seconds, fractions, precision )
 ## <a name="return-types"></a>Типы возвращаемых данных  
  **time(** *precision* **)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  TIMEROMPARTS возвращает полностью инициализированное значение времени. Если аргументы недопустимы, то возникает ошибка. Если любой из параметров имеет значение NULL, возвращается NULL. Однако если аргумент *precision* равен NULL, то возникает ошибка.  
   
  Аргумент *fractions* зависит от аргумента *precision*. Например, если значение *precision* равно 7, то каждая дробная часть представляет 100 наносекунд; если значение *precision* равно 3, то каждая дробная часть представляет миллисекунду. Если значение *precision* равно нулю, то значение *fractions* также должно быть равно нулю, иначе возникает ошибка.  

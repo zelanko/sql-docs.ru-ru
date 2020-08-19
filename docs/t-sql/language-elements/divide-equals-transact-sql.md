@@ -1,4 +1,5 @@
 ---
+description: /= (Присваивание деления) (Transact-SQL)
 title: (Присваивание деления) (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 09/12/2017
@@ -21,12 +22,12 @@ ms.assetid: 9ab25d1e-5c98-4dd7-b2cd-9f49499c86e7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80b042cd4ee35bc6cc08e0b555335fbc2d2b5eba
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 2194ef6762e6c036eb8d9dd096f29607ceb5fa68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394213"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459421"
 ---
 # <a name="-division-assignment-transact-sql"></a>/= (Присваивание деления) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +51,7 @@ expression /= expression
 ## <a name="result-types"></a>Типы результата  
  Возвращает результат типа данных аргумента с более высоким приоритетом. Дополнительные сведения см. в разделе [Приоритет типов данных (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Дополнительные сведения см. в разделе [(Деление) (Transact-SQL)](../../t-sql/language-elements/divide-transact-sql.md).  
 
 ## <a name="examples"></a>Примеры  
@@ -68,7 +69,7 @@ SELECT @myVariable AS ResultVariable;
 |--- |
 |8,75 |
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Составные операторы (Transact-SQL)](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Операторы (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)  

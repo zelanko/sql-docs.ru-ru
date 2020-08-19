@@ -1,4 +1,5 @@
 ---
+description: Пример свойства Count (Visual Basic)
 title: Пример свойства Count (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 35033910-623b-449a-a57d-baff3ed5ab8f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8adf469970b6bfb75d4abe75694c99424768353b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2503065a7a8fceb590e0ad28e57f7ed0ae172589
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760230"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444346"
 ---
 # <a name="count-property-example-vb"></a>Пример свойства Count (Visual Basic)
 В этом примере показано свойство [Count](../../../ado/reference/ado-api/count-property-ado.md) с двумя коллекциями в базе данных ***Employee*** . Свойство получает количество объектов в каждой коллекции и задает верхний предел для циклов, которые перечисляют эти коллекции. Другим способом перечисления этих коллекций без использования свойства **Count** является использование `For Each...Next` инструкций.  
@@ -96,5 +97,5 @@ End Sub
 'EndCountVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство Count (ADO)](../../../ado/reference/ado-api/count-property-ado.md)

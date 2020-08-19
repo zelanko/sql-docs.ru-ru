@@ -1,4 +1,5 @@
 ---
+description: sys.pdw_replicated_table_cache_state (Transact-SQL)
 title: sys.pdw_replicated_table_cache_state (Transact-SQL)
 ms.custom: seo-dt-2019
 ms.date: 07/03/2017
@@ -11,12 +12,12 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 6fa3c064a2fb54d474afee9cbd4d20c878ff1893
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: ee5476020cfcece9bf9168bc048f3a0f3d34b635
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394039"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475371"
 ---
 # <a name="syspdw_replicated_table_cache_state-transact-sql"></a>sys.pdw_replicated_table_cache_state (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "87394039"
 |Имя столбца|Тип данных|Description|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|Идентификатор объекта для таблицы. См. статью [sys. objects &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).<br /><br /> **object_id** является ключом для этого представления.||  
-|state|**nvarchar(40)**|Состояние кэша реплицированной таблицы для этой таблицы.|"NotReady", "Ready"|  
+|Состояние|**nvarchar(40)**|Состояние кэша реплицированной таблицы для этой таблицы.|"NotReady", "Ready"|  
   
 ## <a name="example"></a>Пример
 В этом примере показано соединение sys. pdw_replicated_table_cache_state с sys. tables для получения имени таблицы и состояния кэша реплицированной таблицы.

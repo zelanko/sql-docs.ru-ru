@@ -1,4 +1,5 @@
 ---
+description: Пример свойств примеры absolutepage, PageCount и PageSize (JScript)
 title: Примеры свойств примеры absolutepage, PageCount и PageSize (JScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2db6dd3f-5a9c-438c-ae62-d09242906c98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f07855b0c99e92c18a2d54ff632fad24e1fb03ae
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 60fae0949fb3ed44da3aaa585ee8af1f529575dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747614"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451826"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-jscript"></a>Пример свойств примеры absolutepage, PageCount и PageSize (JScript)
 В этом примере демонстрируются свойства примеры absolutepage, PageCount и PageSize. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **абсолутепажежс. ASP**.  
@@ -157,7 +158,7 @@ BODY {
 <!-- EndAbsolutePageJS -->  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство примеры absolutepage (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
  [Свойство PageCount (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)   
  [Свойство PageSize (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)   

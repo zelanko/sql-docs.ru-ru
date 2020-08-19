@@ -1,4 +1,5 @@
 ---
+description: Примеры свойств ActualSize и DefinedSize (Visual Basic)
 title: Примеры свойств ActualSize и DefinedSize (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bff2c273-b535-4b32-83b3-0336a406859c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e8694873320659b69ef127a7cd3056185fc1b9f9
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 43deeca92f1809dd560cd6b1a6671aa3ceaafdb6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760673"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451656"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vb"></a>Примеры свойств ActualSize и DefinedSize (Visual Basic)
 В этом примере используются свойства [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) и [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) для вывода определенного размера и фактического размера поля.  
@@ -87,7 +88,7 @@ End Sub
 'EndActualSizeVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство ActualSize (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   
  [DefinedSize, свойство](../../../ado/reference/ado-api/definedsize-property.md)   
  [Объект Field](../../../ado/reference/ado-api/field-object.md)

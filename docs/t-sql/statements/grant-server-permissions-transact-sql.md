@@ -1,4 +1,5 @@
 ---
+description: GRANT, предоставление разрешений на сервер (Transact-SQL)
 title: GRANT, предоставление разрешений на сервер (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 08/10/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 074ee4f99b752214f8c4bf0938b9f6853316ade7
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: a208dc9a99f18a9bfad061afc9caae7f3e859add
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484405"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444659"
 ---
 # <a name="grant-server-permissions-transact-sql"></a>GRANT, предоставление разрешений на сервер (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

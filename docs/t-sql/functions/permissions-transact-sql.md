@@ -1,4 +1,5 @@
 ---
+description: PERMISSIONS (Transact-SQL)
 title: PERMISSIONS (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1985ba159951718772d6a7bc16b4ea76f59d5686
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 0681d22c6a48d8680c7b44e767558f02e2a4c251
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111911"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467945"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +52,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
 
 ## <a name="arguments"></a>Аргументы
  *objectid*  
- Идентификатор защищаемого объекта. Если аргумент *objectid* не указан, то значение битовой карты содержит разрешения на выполнение инструкций для текущего пользователя; в противном случае битовая карта содержит разрешения в отношении защищаемого объекта для текущего пользователя. Указанный защищаемый объект должен находиться в текущей базе данных. Для определения значения аргумента [objectid](../../t-sql/functions/object-id-transact-sql.md) следует использовать функцию *OBJECT_ID*.  
+ Идентификатор защищаемого объекта. Если аргумент *objectid* не указан, то значение битовой карты содержит разрешения на выполнение инструкций для текущего пользователя; в противном случае битовая карта содержит разрешения в отношении защищаемого объекта для текущего пользователя. Указанный защищаемый объект должен находиться в текущей базе данных. Для определения значения аргумента *objectid* следует использовать функцию [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md).  
   
  **'** *column* **'**  
  Необязательное имя столбца, для которого возвращаются данные о разрешениях. Имя столбца должно быть допустимым в таблице, указанной в аргументе *objectid*.  
@@ -82,7 +83,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
 |32|0x20|CREATE DEFAULT|  
 |64|0x40|BACKUP DATABASE|  
 |128|0x80|BACKUP LOG|  
-|256|0x100|Reserved|  
+|256|0x100|Зарезервировано|  
   
  В таблице ниже приведены разряды, которым соответствуют разрешения на объекты, возвращаемые, только если указан аргумент *objectid*.  
   

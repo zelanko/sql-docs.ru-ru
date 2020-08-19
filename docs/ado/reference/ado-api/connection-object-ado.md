@@ -1,4 +1,5 @@
 ---
+description: Объект Connection (ADO)
 title: Объект Connection (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ef6b1824-5b12-43db-89d7-8f3d13896d4d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 49a270f143e57c1e093ac94732b67b6424c88607
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 68b6a8dd0b0cd75f511c042981672444d9b3bcb0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760300"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444516"
 ---
 # <a name="connection-object-ado"></a>Объект Connection (ADO)
 Представляет открытое подключение к источнику данных.  
@@ -63,7 +64,7 @@ ms.locfileid: "82760300"
 >  Не используйте эту функцию (вызов именованной команды или хранимой процедуры, как если бы он был собственным методом в объекте **Connection** ) в приложении Microsoft® .NET Framework, поскольку базовая реализация функции конфликтует с тем, как .NET Framework взаимодействует с COM.  
   
 ## <a name="execute-a-command-as-a-native-method-of-a-connection-object"></a>Выполнение команды в качестве собственного метода объекта соединения  
- Чтобы выполнить команду, присвойте команде имя, используя свойство [имя](../../../ado/reference/ado-api/name-property-ado.md) объекта **команды** . Задайте для свойства **ActiveConnection** объекта **Command** значение Connection. Затем выполните инструкцию, где имя команды используется как метод для объекта **соединения** , за которым следуют все параметры и объект **Recordset** , если возвращаются какие-либо строки. Задайте свойства **набора записей** , чтобы настроить результирующий **набор записей**. Пример:  
+ Чтобы выполнить команду, присвойте команде имя, используя свойство [имя](../../../ado/reference/ado-api/name-property-ado.md) объекта **команды** . Задайте для свойства **ActiveConnection** объекта **Command** значение Connection. Затем выполните инструкцию, где имя команды используется как метод для объекта **соединения** , за которым следуют все параметры и объект **Recordset** , если возвращаются какие-либо строки. Задайте свойства **набора записей** , чтобы настроить результирующий **набор записей**. Например:  
   
 ```  
 Dim cnn As New ADODB.Connection  
@@ -79,7 +80,7 @@ cnn. "parameter", rst
 ```  
   
 ## <a name="execute-a-stored-procedure-as-a-native-method-of-a-connection-object"></a>Выполнение хранимой процедуры в качестве собственного метода объекта соединения  
- Чтобы выполнить хранимую процедуру, выполните инструкцию, где имя хранимой процедуры используется как метод в объекте **Connection** , за которым следуют все параметры. ADO выполнит «наилучшее предположение» типов параметров. Пример:  
+ Чтобы выполнить хранимую процедуру, выполните инструкцию, где имя хранимой процедуры используется как метод в объекте **Connection** , за которым следуют все параметры. ADO выполнит «наилучшее предположение» типов параметров. Например:  
   
 ```  
 Dim cnn As New ADODB.Connection  
@@ -94,7 +95,7 @@ cnn. "parameter"
   
 -   [Свойства, методы и события объекта Connection](../../../ado/reference/ado-api/connection-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Коллекция Errors (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [Коллекция Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   

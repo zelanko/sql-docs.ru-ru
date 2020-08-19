@@ -1,4 +1,5 @@
 ---
+description: CURSOR_STATUS (Transact-SQL)
 title: CURSOR_STATUS (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/24/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3a4a840e-04f8-43bd-aada-35d78c3cb6b0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 63c1513e044b825ed3ffa036b1e7014e0e4d4a6f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: ab7cbb48d371236d23d90de2347349318369f274
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112122"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459849"
 ---
 # <a name="cursor_status-transact-sql"></a>CURSOR_STATUS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,10 +54,10 @@ CURSOR_STATUS
 '*cursor_name*'  
 Имя курсора. Имя курсора должно соответствовать [требованиям, предъявляемым к идентификаторам базы данных](../../relational-databases/databases/database-identifiers.md).
   
-'global'  
+'global'   
 Задает константу, показывающую, что источник курсора — это имя глобального курсора.
   
-'variable'  
+'variable'   
 Задает константу, показывающую, что источник курсора — это локальная переменная.
   
 '*cursor_variable*'  
@@ -128,7 +129,7 @@ After Close
 -1
 ```  
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 [Функции работы с курсорами (Transact-SQL)](../../t-sql/functions/cursor-functions-transact-sql.md)  
 [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
   

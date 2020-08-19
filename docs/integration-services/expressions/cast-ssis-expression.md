@@ -1,4 +1,5 @@
 ---
+description: Приведение (выражение служб SSIS)
 title: Приведение (выражение служб SSIS) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5c10996317ce033b6d6437ff989de8d66d31f006
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9a958fcc49fb5991baa770bc1c9609ebd13876dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917195"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430636"
 ---
 # <a name="cast-ssis-expression"></a>Приведение (выражение служб SSIS)
 
@@ -60,8 +61,8 @@ ms.locfileid: "86917195"
 |DT_STR|*charcount*<br /><br /> *codepage*|Команда (DT_STR,30,1252) приводит 30 байт (или 30 символов) к значению типа DT_STR, используя кодовую страницу 1252.|  
 |DT_WSTR|*Charcount*|Команда (DT_WSTR,20) приводит 20 пар байт (или символов в формате Юникод) к значению типа DT_WSTR.|  
 |DT_BYTES|*Bytecount*|(DT_BYTES,50) приводит 50 байт к типу данных DT_BYTES.|  
-|DT_DECIMAL|*Масштабирование*|(DT_DECIMAL,2) приводит числовое значение к типу данных DT_DECIMAL, используя масштаб 2.|  
-|DT_NUMERIC|*Точность*<br /><br /> *Масштабирование*|(DT_NUMERIC,10,3) приводит числовое значение к типу данных DT_NUMERIC, используя точность 10 и масштаб 3.|  
+|DT_DECIMAL|*Масштаб*|(DT_DECIMAL,2) приводит числовое значение к типу данных DT_DECIMAL, используя масштаб 2.|  
+|DT_NUMERIC|*Точность*<br /><br /> *Масштаб*|(DT_NUMERIC,10,3) приводит числовое значение к типу данных DT_NUMERIC, используя точность 10 и масштаб 3.|  
 |DT_TEXT|*Codepage*|(DT_TEXT,1252) приводит значение к типу данных DT_TEXT, используя кодовую страницу 1252.|  
   
  При приведении строки к значению типа DT_DATE (или обратно) используется локаль преобразования. Однако дата задается в формате ISO (ГГГГ-ММ-ДД) вне зависимости от того, используется ли в локали формат ISO.  
@@ -150,6 +151,6 @@ ms.locfileid: "86917195"
  [Очередность и ассоциативность операторов](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Операторы (выражение служб SSIS)](../../integration-services/expressions/operators-ssis-expression.md)   
  [Выражения служб Integration Services (SSIS)](../../integration-services/expressions/integration-services-ssis-expressions.md)   
- [Типы данных служб Integration Services в выражениях](../../integration-services/expressions/integration-services-data-types-in-expressions.md)  
+ [Типы данных в выражениях служб Integration Services](../../integration-services/expressions/integration-services-data-types-in-expressions.md)  
   
   

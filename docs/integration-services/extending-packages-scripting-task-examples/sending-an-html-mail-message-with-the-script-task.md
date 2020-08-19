@@ -1,4 +1,5 @@
 ---
+description: Отправка почтового сообщения в формате HTML с помощью задачи «Скрипт»
 title: Отправка почтового сообщения в формате HTML с помощью задачи "Скрипт" | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: dd2b1eef-b04f-4946-87ab-7bc56bb525ce
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8df42af0f45aaff966e05c66cde7b32feaddd088
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6894402970f0d49c964553a12ec7ea5887568d50
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917143"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430376"
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>Отправка почтового сообщения в формате HTML с помощью задачи «Скрипт»
 

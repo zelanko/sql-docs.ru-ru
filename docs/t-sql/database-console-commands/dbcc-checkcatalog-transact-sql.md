@@ -1,4 +1,5 @@
 ---
+description: DBCC CHECKCATALOG (Transact-SQL)
 title: DBCC CHECKCATALOG (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 11/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 8076eb4e-f049-44bf-9a35-45cdd6ef0105
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 0a19aa7e89494d27d073c1305a75c531cf3ffda0
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 345b555a5cb69adec2c506fb6b40eafbaf3ee62d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485105"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459944"
 ---
 # <a name="dbcc-checkcatalog-transact-sql"></a>DBCC CHECKCATALOG (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -61,7 +62,7 @@ DBCC CHECKCATALOG
 ## <a name="remarks"></a>Remarks  
 После выполнения команды DBCC CATALOG в журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] записывается сообщение. При успешном выполнении команды DBCC сообщается об успешном завершении и количестве времени, затраченном на выполнение команды. Если выполнение команды DBCC прерывается до завершения проверки по причине ошибки, сообщение указывает на прерывание команды и приводит значение состояния и количество времени, затраченного на выполнение команды. В следующей таблице перечислены и описаны значения состояний, которые могут быть включены в сообщение.
   
-|Штат|Description|  
+|Состояние|Описание|  
 |-----------|-----------------|  
 |0|Возникла ошибка с номером 8930. Это указывает на повреждение метаданных, вызвавшее прекращение выполнения команды DBCC.|  
 |1|Возникла ошибка с номером 8967. Внутренняя ошибка DBCC.|  

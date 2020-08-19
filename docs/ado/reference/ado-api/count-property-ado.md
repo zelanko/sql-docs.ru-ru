@@ -1,4 +1,5 @@
 ---
+description: Свойство Count (ADO)
 title: Свойство Count (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: da9ccd1f-d402-41a2-940c-45556fc5340d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ecf53c6743e20ec3fe960d10dd16f5577a7d69f0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: cc0e15e4f5157e28eb35325f09fa5f27a1540d6d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242754"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444356"
 ---
 # <a name="count-property-ado"></a>Свойство Count (ADO)
 Указывает количество объектов в коллекции.  
@@ -65,7 +66,7 @@ ms.locfileid: "87242754"
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойства Count (Visual Basic)](../../../ado/reference/ado-api/count-property-example-vb.md)   
  [Пример свойства Count (Visual c++)](../../../ado/reference/ado-api/count-property-example-vc.md)   
  [Метод Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

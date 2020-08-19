@@ -1,4 +1,5 @@
 ---
+description: Служба курсора Майкрософт для OLE DB (компонент службы ADO)
 title: Служба курсора Майкрософт для OLE DB (компонент службы ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6b0b4a3773f0de637458384e8819a7b913da3e40
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3f83f151331fe483400edda90d7deb7c469b5574
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758510"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444556"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>Обзор службы курсоров Майкрософт для OLE DB
 Служба курсора Майкрософт для OLE DB дополняет функции поддержки курсоров поставщиками данных. В результате пользователь воспринимает относительно единую функциональность всех поставщиков данных.
@@ -63,7 +64,7 @@ Recordset1.Properties.Item("Command Time out") = 50
 |Дочерние строки кэша (DBPROP_ADC_CACHECHILDROWS)|Для наборов записей, созданных с помощью службы формирования данных, это значение указывает, хранятся ли дочерние наборы записей в кэше для последующего использования.|
 |Версия обработчика курсоров (DBPROP_ADC_CEVER)|Указывает версию используемой службы курсора.|
 |Ведение состояния изменений (DBPROP_ADC_MAINTAINCHANGESTATUS)|Указывает текст команды, используемой для повторной синхронизации одной или нескольких строк в соединении нескольких таблиц.|
-|[Оптимизация](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|Указывает, должен ли быть создан индекс. Если задано значение **true**, разрешает временное создание индексов для улучшения выполнения определенных операций.|
+|[Optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) (Оптимизация)|Указывает, должен ли быть создан индекс. Если задано значение **true**, разрешает временное создание индексов для улучшения выполнения определенных операций.|
 |[Изменить имя формы](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|Указывает имя **набора записей**. Можно ссылаться в текущих или последующих командах формирования данных.|
 |[Команда повторной синхронизации](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|Указывает пользовательскую командную строку, которая используется методом повторной [синхронизации](../../../ado/reference/ado-api/resync-method.md) , когда действует свойство [уникальной таблицы](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) .|
 |[Уникальный каталог](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Указывает имя базы данных, содержащей таблицу, на которую ссылается свойство **уникальной таблицы** .|
@@ -86,7 +87,7 @@ rs.Properties("Optimize") = True
 |-------------------|-----------------|
 |[Примеры CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Дополняет типы курсоров, доступные для **набора записей**.|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|Дополняет типы блокировок, доступные для **набора записей**. Включает пакетные обновления.|
-|[Сортировка](../../../ado/reference/ado-api/sort-property.md)|Указывает одно или несколько имен полей, по которым сортируется **набор записей** , а также сведения о том, сортируются ли каждое поле в порядке возрастания или убывания.|
+|[Sort](../../../ado/reference/ado-api/sort-property.md)|Указывает одно или несколько имен полей, по которым сортируется **набор записей** , а также сведения о том, сортируются ли каждое поле в порядке возрастания или убывания.|
 
 ## <a name="method-behavior"></a>Поведение метода
  Служба курсора для OLE DB включает или влияет на поведение метода [append](../../../ado/reference/ado-api/append-method-ado.md) объекта [field](../../../ado/reference/ado-api/field-object.md) . и методы [открытия](../../../ado/reference/ado-api/open-method-ado-recordset.md), [ресинхронизации](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)и [сохранения](../../../ado/reference/ado-api/save-method.md) объекта **Recordset** .
