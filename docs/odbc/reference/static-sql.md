@@ -1,4 +1,5 @@
 ---
+description: Статический SQL
 title: Статический SQL | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 667d92ec-fed9-4028-81d4-bb9ba867356a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 55710d8ea734cba86ae5e4daa725f75e94e65a64
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 19c4ec3454a5d5891a87203fe8c7aeaff21b239b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81279906"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428986"
 ---
 # <a name="static-sql"></a>Статический SQL
 Внедренный SQL, показанный во [внедренном примере SQL](../../odbc/reference/embedded-sql-example.md) , называется статическим SQL. Он называется статическим SQL, поскольку инструкции SQL в программе являются статическими; то есть они не изменяются каждый раз при запуске программы. Как описано в предыдущем разделе, эти инструкции компилируются при компиляции остальной части программы.  

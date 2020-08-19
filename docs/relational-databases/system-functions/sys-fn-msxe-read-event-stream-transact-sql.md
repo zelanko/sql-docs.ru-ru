@@ -1,4 +1,5 @@
 ---
+description: sys.fn_MSxe_read_event_stream (Transact-SQL)
 title: sys. fn_MSxe_read_event_stream (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 5edb1162-625a-41e0-8ec9-1edc8ab9a74a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 05be6f4b30e42ddc1213231a6d96a823dfc9f1cd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f3d88e33f814c341c5a5a96c1ec8a56362ab5887
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783100"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427786"
 ---
 # <a name="sysfn_msxe_read_event_stream-transact-sql"></a>sys.fn_MSxe_read_event_stream (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +60,7 @@ sys.fn_MSxe_read_event_stream ( session_name)
 |type|**Integer (4)**|Тип события. Не допускает значение NULL.|  
 |.|**Image (16)**|Данные образа события. Допускает значение NULL.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления расширенных событий](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
  [Представления каталога расширенных событий &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [Расширенные события](../../relational-databases/extended-events/extended-events.md)  

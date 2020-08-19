@@ -56,13 +56,13 @@
   href: connecting-to-sybase-ase-sybasetosql.md
 - name: Выбор и настройка обрабатываемых объектов
   href: selecting-and-configuring-affected-objects-sybasetosql.md
-- name: "Подключение к базе данных\_SQL Azure"
+- name: Подключение к базе данных SQL Azure
   href: connecting-to-azure-sql-db-sybasetosql.md
 - name: Управление паролями
   href: managing-passwords-sybasetosql.md
 - name: Настройка параметров проекта
   href: setting-project-options-sybasetosql.md
-- name: "Подключение к базе данных\_SQL Azure"
+- name: Подключение к Базе данных SQL Azure
   href: connect-to-azure-sql-db-sybasetosql.md
 - name: Параметры миграции данных
   href: data-migration-settings-sybasetosql.md
@@ -76,7 +76,7 @@
   href: mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md
 - name: "Установка компонентов\_SSMA в SQL\_Server"
   href: installing-ssma-components-on-sql-server-sybasetosql.md
-- name: "Миграция данных Sybase\_ASE в базу данных\_SQL Azure"
+- name: "Миграция данных Sybase\_ASE в Базу данных\_SQL Azure"
   href: migrating-sybase-ase-data-into-sql-server-azure-sql-db-sybasetosql.md
 - name: Соединение с Sybase
   href: connect-to-sybase-sybasetosql.md
@@ -124,7 +124,7 @@
       href: project-settings-type-mapping-sybasetosql.md
     - name: Синхронизация
       href: project-settings-synchronization-sybasetosql.md
-    - name: БД SQL Azure
+    - name: База данных SQL Azure
       href: project-settings-azure-sql-db-sybasetosql.md
     - name: Миграция
       href: project-settings-migration-sybasetosql.md

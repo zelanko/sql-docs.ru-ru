@@ -1,4 +1,5 @@
 ---
+description: Резервное копирование и восстановление SQL Server с помощью службы хранилища Blob-объектов Microsoft Azure
 title: Резервное копирование и восстановление с помощью хранилища BLOB-объектов Azure
 storage: Learn about SQL Server backup to and restore from Azure Blob storage, including the benefits of using Azure Blob storage to store SQL Server backups.
 ms.custom: seo-lt-2019
@@ -11,12 +12,12 @@ ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e24d91db6845d862b88457d72f2f4bc04c9062d4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 41c11b596017f9dfeab7d62cfbe517e764f733ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786467"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428926"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Резервное копирование и восстановление SQL Server с помощью службы хранилища Blob-объектов Microsoft Azure
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -62,14 +63,14 @@ ms.locfileid: "85786467"
   
  **Передача данных.** Входящие передачи данных в Microsoft Azure бесплатны. Исходящие передачи оцениваются по пропускной способности, а их стоимость высчитывается по градуированной шкале, привязанной к региону. Дополнительные сведения см. в разделе [Передача данных](https://go.microsoft.com/fwlink/?LinkId=277061) в статье «Расчет цен».  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 
 [Резервное копирование SQL Server на URL-адрес — рекомендации и устранение неполадок](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md).   
 
 [Резервное копирование и восстановление системных баз данных (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
 
-[Учебник. Использование службы хранилища больших двоичных объектов Microsoft Azure с базами данных SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)
+[Руководство. Использование службы хранилища больших двоичных объектов Microsoft Azure с базами данных SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)
 
-[Резервное копирование SQL Server в указанное расположение](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
+[Резервное копирование в SQL Server по URL-адресу](../../relational-databases/backup-restore/sql-server-backup-to-url.md)  
   
   

@@ -1,17 +1,17 @@
 ### YamlMime:Hub
 title: Документация по Microsoft SQL
-summary: Узнайте, как использовать возможности Azure SQL Services и SQL Server для эффективного управления базами данных локально и в облаке.
+summary: 'Узнайте, как использовать возможности SQL Server и SQL Azure для эффективного управления базами данных, размещаемыми как локально, так и в облаке. (Быстрая ссылка: https://aka.ms/sqldocs)'
 brand: sql
 metadata:
   title: Документация по Microsoft SQL | Документация Майкрософт
-  description: Узнайте, как использовать возможности Azure SQL Services и SQL Server для эффективного управления базами данных локально и в облаке.
+  description: 'Узнайте, как использовать возможности SQL Server и SQL Azure для эффективного управления базами данных, размещаемыми как локально, так и в облаке. (Быстрая ссылка: https://aka.ms/sqldocs)'
   ms.topic: hub-page
-  ms.openlocfilehash: c593194a2c254baaec71cf7874e6ffd2d1883740
-  ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+  ms.openlocfilehash: 5d7a6ef891d85b55c75af35e26712765f662e9c2
+  ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 04/04/2020
-  ms.locfileid: "80664352"
+  ms.lasthandoff: 08/06/2020
+  ms.locfileid: "87864545"
 highlightedContent:
   items:
   - title: Попробуйте SQL Server 2019
@@ -28,28 +28,32 @@ highlightedContent:
     url: sql-server/educational-sql-resources.yml
 productDirectory:
   items:
-  - title: SQL в Azure
-    imageSrc: media/index/azure.svg
-    links:
-    - url: https://docs.microsoft.com/azure/sql-database/
-      text: База данных SQL Azure
-    - url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
-      text: Azure Synapse Analytics (хранилище данных SQL)
   - title: SQL Server в Windows
     imageSrc: media/index/windows.svg
     links:
     - url: sql-server/index.yml
       text: В локальной среде
-    - url: https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview/
+    - url: https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/
       text: На виртуальной машине Azure
     - url: https://docs.microsoft.com/previous-versions/sql/
       text: Предыдущие версии (SQL 2005–2012)
+  - title: SQL в Azure
+    imageSrc: media/index/azure.svg
+    links:
+    - url: https://docs.microsoft.com/azure/azure-sql/database/
+      text: База данных SQL Azure
+    - url: https://docs.microsoft.com/azure/azure-sql/managed-instance/
+      text: Управляемый экземпляр SQL Azure
+    - url: https://docs.microsoft.com/azure/azure-sql-edge/overview
+      text: SQL Azure для пограничных вычислений (предварительная версия)
+    - url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
+      text: Azure Synapse Analytics (хранилище данных SQL)
   - title: SQL Server в Linux
     imageSrc: media/index/linux.svg
     links:
     - url: linux/sql-server-linux-overview.md
       text: В локальной среде
-    - url: linux/quickstart-install-connect-clouds.md
+    - url: https://docs.microsoft.com/azure/azure-sql/virtual-machines/linux/
       text: На виртуальной машине Azure
 conceptualContent:
   items:
@@ -104,7 +108,7 @@ conceptualContent:
     - text: Службы Integration Services (SSIS)
       url: integration-services/install-windows/install-integration-services.md
       itemType: deploy
-    - text: Cлужбы Reporting Services (SSRS)
+    - text: Reporting Services (SSRS)
       url: reporting-services/install-windows/install-reporting-services.md
       itemType: deploy
   - title: Миграция
@@ -141,9 +145,9 @@ additionalContent:
         url: connect/homepage-sql-connection-programming.md
       - text: DevOps с использованием SQL Server
         url: https://www.microsoft.com/sql-server/developer-get-started/sql-devops/
-      - text: Приложения базы данных SQL Azure
+      - text: Приложения баз данных SQL Azure
         url: https://docs.microsoft.com/azure/sql-database/sql-database-develop-overview
-      - text: Библиотеки подключений базы данных SQL Azure
+      - text: Библиотеки подключений к Базе данных SQL Azure
         url: https://docs.microsoft.com/azure/sql-database/sql-database-connect-query#libraries
       - text: Transact-SQL (T-SQL)
         url: t-sql/language-reference.md
@@ -175,5 +179,3 @@ additionalContent:
         url: analytics-platform-system/index.md
       - text: Службы машинного обучения SQL Server (R и Python)
         url: machine-learning/index.yml
-      - text: Машинное обучение Azure
-        url: https://docs.microsoft.com/azure/machine-learning/

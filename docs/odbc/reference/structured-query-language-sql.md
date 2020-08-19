@@ -1,4 +1,5 @@
 ---
+description: язык SQL
 title: Язык SQL (SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bebfd93e-0dc0-46b3-a531-518beb7ea976
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c669b4424271fc1a3c91dea37159474fb52b97cd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c68f14bd3e1ae5df29f52332d29393bf15c3b665
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81293394"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428976"
 ---
 # <a name="structured-query-language-sql"></a>язык SQL
 Стандартная СУБД позволяет пользователям хранить, получать доступ к данным и изменять их в организованном и эффективном порядке. Изначально пользователи СУБД были программистами. Доступ к сохраненным данным требует написания программы на языке программирования, например COBOL. Хотя эти программы часто написаны для предоставления удобного интерфейса нетехническим пользователям, доступ к самим данным требовал использования служб программиста, имеющего знания. Обычный доступ к данным был непрактичным.  

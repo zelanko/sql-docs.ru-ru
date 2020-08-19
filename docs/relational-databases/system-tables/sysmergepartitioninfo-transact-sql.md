@@ -1,4 +1,5 @@
 ---
+description: sysmergepartitioninfo (Transact-SQL)
 title: сисмержепартитионинфо (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7429ad2c-dd33-4f7d-89cc-700e083af518
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 44f44ede09eaf6eabfee9ef6b240e599c8eec744
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b987adef188e580b38f5f4df5b24b4f6ab22825b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889252"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427586"
 ---
 # <a name="sysmergepartitioninfo-transact-sql"></a>sysmergepartitioninfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,8 +49,8 @@ ms.locfileid: "85889252"
 |**logical_record_level_conflict_resolution**|**bit**|Показывает, должны ли конфликты разрешаться на уровне логических записей или на уровне строк или столбцов.<br /><br /> **0** = используется разрешение на уровне строк или столбцов.<br /><br /> **1** = в случае конфликта вся логическая запись из победителя переписывает всю логическую запись на проигравший стороне.<br /><br /> Значение **1** можно использовать как для обнаружения на уровне логической записи, так и для обнаружения на уровне строк или столбцов.|  
 |**partition_options**|**tinyint**|Определяет метод, при помощи которого производится секционирование статьи, что позволяет произвести оптимизацию производительности в случае, когда все строки принадлежат только одной секции или только одной подписке. *partition_options* может иметь одно из следующих значений.<br /><br /> **0** = фильтрация для статьи либо является статической, либо не дает уникального подмножества данных для каждой секции, т. е. перекрывающейся секции.<br /><br /> **1** = секции перекрываются, а обновления DML, выполняемые на подписчике, не могут изменить секцию, к которой принадлежит строка.<br /><br /> **2** = фильтрация для статьи дает неперекрывающиеся секции, но несколько подписчиков могут получить одну и ту же секцию.<br /><br /> **3** = фильтрация для статьи дает неперекрывающиеся секции, которые уникальны для каждой подписки.|  
   
-## <a name="see-also"></a>См. также  
- [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

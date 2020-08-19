@@ -1,4 +1,5 @@
 ---
+description: Определяемые пользователем типы данных больших значений CLR (ODBC)
 title: Большие определяемые пользователем типы данных CLR (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
@@ -14,11 +15,12 @@ ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec445a457f948c2fb75d26a6ad632633230f6fec
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3f1beb11da79f41349ef0f01bb203d969654db07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009751"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428166"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Определяемые пользователем типы данных больших значений CLR (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -135,7 +137,7 @@ ms.locfileid: "86009751"
 |SQL_C_BINARY|Поддерживается|  
 |SQL_C_CHAR|Поддерживается|  
   
- \*Двоичные данные преобразуются в шестнадцатеричную строку.  
+ \* Двоичные данные преобразуются в шестнадцатеричную строку.  
   
  Поддерживаются следующие преобразования типов данных C в типы данных SQL.  
   
@@ -145,7 +147,7 @@ ms.locfileid: "86009751"
 |SQL_C_BINARY|Поддерживается|  
 |SQL_C_CHAR|Поддерживается|  
   
- \*Выполняется преобразование шестнадцатеричной строки в двоичные данные.  
+ \* Выполняется преобразование шестнадцатеричной строки в двоичные данные.  
   
 ## <a name="sql_variant-support-for-udts"></a>Поддержка SQL_VARIANT для определяемых пользователем типов  
  Определяемые пользователем типы не поддерживаются в столбцах SQL_VARIANT.  
@@ -158,8 +160,8 @@ ms.locfileid: "86009751"
   
 |Версия сервера|SQL_SS_UDT<br /><br /> (длина не более 8 000 байт)|SQL_SS_UDT<br /><br /> (длина более 8 000 байт)|  
 |--------------------|-------------------------------------------------------------------|----------------------------------------------------------|  
-|SQL Server 2005|**БАЙТ**|**varbinary(max)**|  
-|SQL Server 2008 и более поздние версии|**БАЙТ**|**БАЙТ**|  
+|SQL Server 2005|**UDT**|**varbinary(max)**|  
+|SQL Server 2008 и более поздние версии|**UDT**|**UDT**|  
   
 ## <a name="odbc-functions-supporting-large-clr-udts"></a>Функции ODBC, поддерживающие определяемые пользователем типы больших данных CLR  
  В этом разделе обсуждаются изменения в функциях ODBC собственного клиента SQL Server, касающиеся поддержки определяемых пользователем типов больших данных CLR.  
@@ -240,7 +242,7 @@ ms.locfileid: "86009751"
 ### <a name="sqlspecialcolumns"></a>SQLSpecialColumns  
  Значения, возвращаемые для столбцов DATA_TYPE, TYPE_NAME, COLUMN_SIZE, BUFFER_LENGTH и DECIMAL_DIGTS определяемых пользователем типов, описаны в подразделе «Метаданные, возвращаемые функциями SQLColumns и SQLProcedureColumns (метаданные каталога)» ранее в этом разделе.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Большие определяемые пользователем типы данных CLR](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)  
   
   

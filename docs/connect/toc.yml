@@ -4,6 +4,8 @@
   href: ../sql-server/index.yml
 - name: Драйверы SQL Server
   href: ../connect/sql-connection-libraries.md
+- name: Матрица поддержки функций драйверами
+  href: ../connect/driver-feature-matrix.md
 - name: Журнал драйвера SQL Server
   href: ../connect/connect-history.md
 - name: Разработчик данных SQL
@@ -30,6 +32,10 @@
           href: ../connect/ado-net/introduction-microsoft-data-sqlclient-namespace.md
         - name: Скачивание поставщика данных Microsoft SqlClient для SQL Server
           href: ../connect/ado-net/download-microsoft-sqlclient-data-provider.md
+        - name: Включение трассировки событий в SqlClient
+          href: ../connect/ado-net/enable-eventsource-tracing.md
+        - name: Параметры AppContext в SqlClient
+          href: ../connect/ado-net/appcontext-switches.md
         - name: Жизненный цикл поддержки драйвера SqlClient
           href: ../connect/ado-net/sqlclient-driver-support-lifecycle.md
         - name: Поиск дополнительных сведений о драйвере SqlClient
@@ -60,7 +66,7 @@
               href: ../connect/ado-net/sql/compare-guid-uniqueidentifier-values.md
             - name: Данных типа date и time
               href: ../connect/ado-net/sql/date-time-data.md
-            - name: Большие UDT
+            - name: 'Большие, определяемые пользователем типы'
               href: ../connect/ado-net/sql/large-udts.md
             - name: Данные XML в SQL Server
               href: ../connect/ado-net/sql/xml-data-sql-server.md
@@ -92,7 +98,9 @@
                   href: ../connect/ado-net/sql/multiple-bulk-copy-operations.md
                 - name: Транзакции и операции массового копирования
                   href: ../connect/ado-net/sql/transaction-bulk-copy-operations.md
-            - name: Режим MARS
+                - name: Указания порядка для операций массового копирования
+                  href: ../connect/ado-net/sql/bulk-copy-order-hints.md
+            - name: Несколько активных результирующих наборов (MARS)
               href: ../connect/ado-net/sql/multiple-active-result-sets-mars.md
               items:
                 - name: Включение нескольких активных результирующих наборов
@@ -142,6 +150,15 @@
               href: ../connect/ado-net/sql/sqlclient-support-localdb.md
             - name: Поддержка SqlClient для Always Encrypted
               href: ../connect/ado-net/sql/sqlclient-support-always-encrypted.md
+              items:
+                - name: "Разработка приложения .NET с помощью Always\_Encrypted с безопасными анклавами"
+                  href: ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md
+                - name: Использование Azure Key Vault с Always Encrypted
+                  href: ado-net/sql/azure-key-vault-example.md
+                - name: Использование Azure Key Vault с Always Encrypted с безопасными анклавами
+                  href: ado-net/sql/azure-key-vault-enclave-example.md
+            - name: Обнаружение и классификация данных в SqlClient
+              href: ../connect/ado-net/sql/data-classification.md
 - name: JDBC
   items:
     - name: Microsoft JDBC Driver для SQL Server
@@ -2484,9 +2501,9 @@
     - name: Начало работы с драйвером JDBC
       href: ../connect/jdbc/getting-started-with-the-jdbc-driver.md
       items:
-        - name: "Шаг\_1. Настройка среды разработки для разработки на Java"
+        - name: "Шаг\_1. Настройка среды разработки для разработки на\_Java"
           href: ../connect/jdbc/step-1-configure-development-environment-for-java-development.md
-        - name: "Шаг\_2. Создание базы данных для разработки на Java"
+        - name: "Шаг\_2. Создание базы данных SQL для разработки на\_Java"
           href: ../connect/jdbc/step-2-create-a-sql-database-for-java-development.md
         - name: "Шаг\_3. Подтверждение концепции: подключение к SQL с помощью\_Java"
           href: ../connect/jdbc/step-3-proof-of-concept-connecting-to-sql-using-java.md
@@ -2631,13 +2648,13 @@
         - name: Использование функции Always Encrypted с драйвером JDBC
           href: ../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md
           items:
-            - name: Always Encrypted с безопасными анклавами.
-              href: ../connect/jdbc/always-encrypted-with-secure-enclaves.md
+            - name: Использование Always Encrypted с безопасными анклавами с драйвером JDBC
+              href: ../connect/jdbc/using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md
         - name: Статьи руководства
           items:
             - name: Использование инструкций в SQL
               href: ../connect/jdbc/using-statements-with-sql.md
-            - name: Использование инструкции SQL для изменения объектов баз данных
+            - name: 'Использование инструкции SQL для изменения объектов баз данных '
               href: ../connect/jdbc/using-an-sql-statement-to-modify-database-objects.md
             - name: Задание свойств источника данных
               href: ../connect/jdbc/setting-the-data-source-properties.md
@@ -2747,6 +2764,8 @@
               href: ../connect/jdbc/using-sql-escape-sequences.md
             - name: Использование инструкций с хранимыми процедурами
               href: ../connect/jdbc/using-statements-with-stored-procedures.md
+            - name: Проверка подлинности сертификата клиента для сценариев замыкания на себя
+              href: ../connect/jdbc/client-certification-authentication-for-loopback-scenarios.md
             - name: "Примеры для Azure Key Vault\_7.0 и более поздних версий"
               href: ../connect/jdbc/azure-key-vault-sample-version-7.0.md
               items:
@@ -2758,11 +2777,11 @@
   items:
     - name: Драйвер Node.js для SQL Server
       href: ../connect/node-js/node-js-driver-for-sql-server.md
-    - name: "Шаг\_1. Настройка среды разработки для разработки на Node.js"
+    - name: "Шаг\_1.  Настройка среды разработки для разработки на Node.js"
       href: ../connect/node-js/step-1-configure-development-environment-for-node-js-development.md
     - name: "Шаг\_2. Создание базы данных SQL для разработки на Node.js"
       href: ../connect/node-js/step-2-create-a-sql-database-for-node-js-development.md
-    - name: "Шаг\_3. Эксперимент, подразумевающий подключение к SQL с помощью Node.js"
+    - name: "Шаг\_3. Подтверждение концепции, подразумевающее подключение к SQL с помощью Node.js"
       href: ../connect/node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js.md
 - name: ODBC
   items:
@@ -2778,7 +2797,7 @@
           href: ../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md
         - name: Установка драйвера ODBC (macOS)
           href: ../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md
-        - name: Руководства по функциям
+        - name: Руководства по компонентам
           items:
             - name: Ключевые слова строки подключения и имена источников данных (DSN)
               href: ../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md
@@ -2790,14 +2809,16 @@
               href: ../connect/odbc/linux-mac/programming-guidelines.md
             - name: Инструменты
               items:
-                - name: Соединение с помощью bcpbcp.exe
+                - name: Соединение с помощью bcp
                   href: ../connect/odbc/linux-mac/connecting-with-bcp.md
-                - name: Соединение с помощью sqlcmd.exe
+                - name: Соединение с помощью sqlcmd
                   href: ../connect/odbc/linux-mac/connecting-with-sqlcmd.md
             - name: Использование встроенной проверки подлинности
               href: ../connect/odbc/linux-mac/using-integrated-authentication.md
         - name: Заметки о выпуске
           href: ../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md
+        - name: Заметки о выпуске (mssql-tools)
+          href: ../connect/odbc/linux-mac/release-notes-tools.md
         - name: Известные проблемы
           href: ../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md
         - name: Часто задаваемые вопросы об ODBC в Linux и macOS
@@ -2812,7 +2833,7 @@
           href: ../connect/odbc/windows/release-notes-odbc-sql-server-windows.md
         - name: 'Системные требования, установка и файлы драйвера'
           href: ../connect/odbc/windows/system-requirements-installation-and-driver-files.md
-        - name: Руководства по функциям
+        - name: Руководства по компонентам
           items:
             - name: Устойчивость подключения в драйвере ODBC в Windows
               href: ../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md
@@ -2832,11 +2853,11 @@
               href: ../connect/odbc/windows/dsn-wizard-4.md
             - name: 'SQL Server: диалоговое окно входа'
               href: ../connect/odbc/windows/sql-server-login-dialog.md
-    - name: Руководства по функциям
+    - name: Руководства по компонентам
       items:
         - name: Пользовательские поставщики хранилища ключей
           href: ../connect/odbc/custom-keystore-providers.md
-        - name: Ключевые слова и атрибуты строки подключения DSN
+        - name: Ключевые слова и атрибуты строки подключения и имени DSN
           href: ../connect/odbc/dsn-connection-string-attribute.md
         - name: Использование Always Encrypted
           href: ../connect/odbc/using-always-encrypted-with-the-odbc-driver.md
@@ -2924,7 +2945,7 @@
                           href: ../odbc/reference/applications.md
                         - name: Диспетчер драйверов
                           href: ../odbc/reference/the-driver-manager.md
-                        - name: Драйверы
+                        - name: 'драйверы,'
                           href: ../odbc/reference/drivers.md
                           items:
                             - name: Задачи драйвера
@@ -3153,7 +3174,7 @@
                                   href: ../odbc/reference/develop-app/quoted-identifiers.md
                                 - name: Регистр идентификатора
                                   href: ../odbc/reference/develop-app/identifier-case.md
-                                - name: Escape-последовательности
+                                - name: Escape-последовательность
                                   href: ../odbc/reference/develop-app/escape-sequences.md
                                 - name: Префиксы и суффиксы литералов
                                   href: ../odbc/reference/develop-app/literal-prefixes-and-suffixes.md
@@ -3452,7 +3473,7 @@
                           items:
                             - name: Типы параллелизма
                               href: ../odbc/reference/develop-app/concurrency-types.md
-                            - name: Оптимистический параллелизм
+                            - name: Оптимистическая блокировка
                               href: ../odbc/reference/develop-app/optimistic-concurrency.md
                     - name: Диагностика
                       href: ../odbc/reference/develop-app/diagnostics.md
@@ -3573,7 +3594,7 @@
                               href: ../odbc/reference/develop-app/unicode-data.md
                         - name: Библиотеки DLL преобразования
                           href: ../odbc/reference/develop-app/translation-dlls.md
-                        - name: Средства диагностики
+                        - name: Диагностические средства
                           href: ../odbc/reference/develop-app/diagnostic-tools.md
                           items:
                             - name: Трассировка
@@ -5111,6 +5132,8 @@
           href: ../connect/oledb/features/using-large-value-types.md
         - name: Использование режима MARS
           href: ../connect/oledb/features/using-multiple-active-result-sets-mars.md
+        - name: Использование разрешения IP-адресов прозрачной сети
+          href: ../connect/oledb/features/using-transparent-network-ip-resolution.md
         - name: Использование определяемых пользователем типов данных
           href: ../connect/oledb/features/using-user-defined-types.md
         - name: Использование типов данных XML
@@ -5142,7 +5165,7 @@
           href: ../connect/oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md
         - name: "Использование файлов библиотеки и заголовков драйвера OLE\_DB для SQL\_Server"
           href: ../connect/oledb/applications/using-the-oledb-driver-for-sql-server-header-and-library-files.md
-    - name: "Программирование OLE\_DB"
+    - name: Программирование объектов OLE DB
       href: ../connect/oledb/ole-db/oledb-driver-for-sql-server-programming.md
       items:
         - name: Конкретные аспекты
@@ -5490,17 +5513,17 @@
         - name: Подключение к серверу
           href: ../connect/php/connecting-to-the-server.md
           items:
-            - name: Практическое руководство. Подключение с использованием проверки подлинности Windows
+            - name: Руководство. Подключение с помощью проверки подлинности Windows
               href: ../connect/php/how-to-connect-using-windows-authentication.md
-            - name: 'How to: Connect Using SQL Server Authentication'
+            - name: Руководство. подключиться с использованием проверки подлинности SQL Server
               href: ../connect/php/how-to-connect-using-sql-server-authentication.md
             - name: Практическое руководство. Подключение с использованием проверки подлинности Azure Active Directory
               href: ../connect/php/azure-active-directory.md
             - name: Практическое руководство. Подключение к заданному порту
               href: ../connect/php/how-to-connect-on-a-specified-port.md
-            - name: Организация пулов соединений
+            - name: Объединение подключений в пул
               href: ../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md
-            - name: Практическое руководство. Отключение множественных активных результирующих наборов (функция MARS)
+            - name: Руководство. Отключение режима MARS
               href: ../connect/php/how-to-disable-multiple-active-resultsets-mars.md
             - name: Параметры соединения
               href: ../connect/php/connection-options.md
@@ -5555,7 +5578,7 @@
         - name: Обновление данных
           href: ../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md
           items:
-            - name: Практическое руководство. Выполнение параметризованных запросов
+            - name: Руководство. выполнять параметризованные запросы
               href: ../connect/php/how-to-perform-parameterized-queries.md
             - name: Практическое руководство. Отправка данных в виде потока
               href: ../connect/php/how-to-send-data-as-a-stream.md
@@ -5572,7 +5595,7 @@
               href: ../connect/php/how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md
             - name: Практическое руководство. Указание типов данных PHP
               href: ../connect/php/how-to-specify-php-data-types.md
-            - name: Практическое руководство. Отправка и извлечение данных UTF-8 с помощью встроенной поддержки UTF-8
+            - name: Руководство. отправлять и извлекать данные UTF-8 с помощью встроенной поддержки UTF-8
               href: ../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md
             - name: "Практическое руководство. Отправка и получение ASCII-данных в Linux и\_macOS"
               href: ../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md
@@ -5723,7 +5746,7 @@
                   href: ../connect/php/pdostatement-setattribute.md
                 - name: 'PDOStatement::setFetchMode'
                   href: ../connect/php/pdostatement-setfetchmode.md
-    - name: Соображения безопасности
+    - name: Вопросы безопасности
       href: ../connect/php/security-considerations-for-php-sql-driver.md
     - name: Примеры кода
       href: ../connect/php/code-samples-for-php-sql-driver.md
@@ -5743,7 +5766,7 @@
           href: ../connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md
         - name: "Шаг\_2. Создание базы данных SQL для разработки с помощью Python pyodbc"
           href: ../connect/python/pyodbc/step-2-create-a-sql-database-for-pyodbc-python-development.md
-        - name: "Шаг\_3. Эксперимент, подразумевающий подключение к SQL с помощью pyodbc"
+        - name: "Шаг\_3. Подтверждение концепции, подразумевающее подключение к SQL с помощью pyodbc"
           href: ../connect/python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md
     - name: "Драйвер SQL Python\_— pymssql"
       href: ../connect/python/pymssql/python-sql-driver-pymssql.md

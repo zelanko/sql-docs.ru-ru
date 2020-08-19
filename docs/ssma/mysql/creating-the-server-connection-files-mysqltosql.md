@@ -1,4 +1,5 @@
 ---
+description: Создание файлов подключения к серверу (MySQLToSQL)
 title: Создание файлов подключения к серверу (MySQLToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: df0e970c-da0b-4118-b359-c9dcbbad16d6
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: fa9505c0f5c40dcf2ff7cd84fc956240728385b3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: df3eaf968bb43b9b6e3adac1027f8fe1a49db2d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935733"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426886"
 ---
 # <a name="creating-the-server-connection-files-mysqltosql"></a>Создание файлов подключения к серверу (MySQLToSQL)
 Сведения о сервере можно указать либо в разделе Servers файла сценария, либо в отдельном файле соединения сервера. Параметр командной строки для файла соединения сервера имеет значение, `-c <serverconnectionfile>` . Если один и тот же идентификатор сервера имеется как в файле скрипта, так и в файле соединения сервера, то будет считаться определение сервера в файле скрипта.  

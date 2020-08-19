@@ -1,4 +1,5 @@
 ---
+description: Что такое ODBC?
 title: Что такое ODBC? | Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: badf3a45-f941-44ae-a31d-393116f68a18
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ea0aa81188e5e58d3a66032af38700ece2d4e5b4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 23badedad64ac836f07e3d9f7832fcfa6c33b0b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286504"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428826"
 ---
 # <a name="what-is-odbc"></a>Что такое ODBC?
 В мире вычислений есть множество непонятных концепций ODBC. Для конечного пользователя это значок на панели управления Microsoft® Windows®. Для программиста приложения это библиотека, содержащая подпрограммы доступа к данным. Ко многим другим, это ответ на все возможные проблемы доступа к базе данных.  

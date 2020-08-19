@@ -1,4 +1,5 @@
 ---
+description: Подключение к DB2 (DB2ToSQL)
 title: Подключение к DB2 (DB2ToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -9,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 9d485fd0-ab5d-402a-a59a-e9982a61b7de
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7180e78e7ec34e9c75d25dac51101e28291b1f4c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: cef31b2968ea0241b3c999e0dbd781d70974b360
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933847"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426976"
 ---
 # <a name="connect-to-db2-db2tosql"></a>Подключение к DB2 (DB2ToSQL)
 Используйте диалоговое окно **Подключение к DB2** для подключения к базе данных DB2, которую требуется перенести.  
   
 Чтобы открыть это диалоговое окно, в меню **файл** выберите **подключиться к DB2**. Если подключение было выполнено ранее, команда **повторно подключится к DB2**.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
 **Поставщик**  
 Выберите поставщик доступа к данным для подключения к базе данных DB2. Доступные поставщики — поставщик клиента DB2 и поставщик OLE DB. Значение по умолчанию — поставщик клиента DB2.  
   
@@ -61,7 +62,7 @@ ms.locfileid: "87933847"
 **Пароль**  
 Введите пароль для имени пользователя.  
   
-**Строка подключения**  
+**Строка соединения**  
 > [!IMPORTANT]  
 > Не рекомендуется использовать режим строки подключения, так как текст может содержать пароли и отправляется в виде открытого текста.  
   

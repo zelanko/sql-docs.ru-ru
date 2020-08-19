@@ -1,4 +1,5 @@
 ---
+description: Представление совместимости sys.sysfiles (Transact-SQL)
 title: sys.sysфайловых групп (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: e567fa07-31cd-43cc-b8c7-ba6108baca80
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 832521da1d7d23ed4b91c5d9c451c3ceb3b1e5b3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: de9252c9a63b419a28f61aad2401471fa5f5c778
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897125"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427906"
 ---
 # <a name="syssysfilegroups-transact-sql"></a>Представление совместимости sys.sysfiles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,12 +39,12 @@ ms.locfileid: "85897125"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**Идентификатор**|**smallint**|Уникальный для каждой базы данных идентификатор группы.|  
-|**allocpolicy**|**smallint**|Зарезервированное|  
+|**allocpolicy**|**smallint**|Зарезервировано|  
 |**status**|**int**|0x8 = только для чтения<br /><br /> 0x10 = по умолчанию|  
 |**Группа**|**sysname**|Имя файловой группы.|  
   
-## <a name="see-also"></a>См. также  
- [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Представления совместимости (Transact-SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

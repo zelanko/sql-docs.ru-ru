@@ -18,7 +18,7 @@
   href: sql-modes-mysqltosql.md
 - name: Подключение к SQL Server
   href: connect-to-sql-server-mysqltosql.md
-- name: "Подключение к базе данных\_SQL Azure"
+- name: Подключение к базе данных SQL Azure
   href: connecting-to-azure-sql-db-mysqltosql.md
 - name: Создание файлов сценария
   href: creating-script-files-mysqltosql.md
@@ -26,7 +26,7 @@
   href: loading-converted-database-objects-into-sql-server-mysqltosql.md
 - name: "Преобразование баз данных\_MySQL"
   href: converting-mysql-databases-mysqltosql.md
-- name: "Миграция в SQL\_Server\_— база данных\_SQL Azure"
+- name: "Миграция в SQL\_Server\_— База данных\_SQL Azure"
   href: migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md
 - name: "Параметры командной строки в консоли\_SSMA"
   href: command-line-options-in-ssma-console-mysqltosql.md
@@ -44,13 +44,13 @@
   href: connect-to-mysql-mysqltosql.md
 - name: "Удаление компонентов SSMA для\_MySQL"
   href: removing-the-ssma-for-mysql-components-mysqltosql.md
-- name: "Подключение к базе данных\_SQL Azure"
+- name: Подключение к Базе данных SQL Azure
   href: connect-to-azure-sql-db-mysqltosql.md
-- name: "Миграция баз данных\_MySQL в базу данных\_SQL Azure"
+- name: "Миграция баз данных\_MySQL в Базу данных\_SQL Azure"
   href: migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md
 - name: Работа с образцами файлов сценария консоли
   href: working-with-the-sample-console-script-files-mysqltosql.md
-- name: Создать проект
+- name: Создание проекта
   href: new-project-ssma-mysqltosql.md
 - name: "Установка компонентов\_SSMA в SQL\_Server"
   href: installing-ssma-components-on-sql-server-mysqltosql.md
@@ -102,7 +102,7 @@
   items:
     - name: Графический пользовательский интерфейс
       href: project-settings-gui-mysqltosql.md
-    - name: БД SQL Azure
+    - name: База данных SQL Azure
       href: project-settings-azure-sql-db-mysqltosql.md
     - name: Сопоставление типов
       href: project-settings-type-mapping-mysqltosql.md

@@ -1,4 +1,5 @@
 ---
+description: Свойство AcceptPause (класс SqlService)
 title: Свойство AcceptPause (SqlService)
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4339e903-35ee-4395-b005-ca58b3a24a84
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 80e68dada9ec917ed6c47d0ab1e38e6e608ce209
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bed06aa139a6bee919f41bd8d9f9f01817ebde3f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888427"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427266"
 ---
 # <a name="acceptpause-property-sqlservice-class"></a>Свойство AcceptPause (класс SqlService)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +42,9 @@ object.AcceptPause [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Логическое значение, определяющее, можно ли приостановить службу: **true** , если службу можно приостановить; или **false** , если службу нельзя приостановить.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

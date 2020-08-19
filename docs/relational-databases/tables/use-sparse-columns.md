@@ -1,4 +1,5 @@
 ---
+description: Использование разреженных столбцов
 title: Использование разреженных столбцов | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/22/2016
@@ -15,12 +16,12 @@ ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ee869a8bc2842bcc56fd0e8ab79c7668c28b50a1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e2b1acccba4fe2f9a9285160bfc25071d7399873
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999865"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427466"
 ---
 # <a name="use-sparse-columns"></a>Использование разреженных столбцов
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -95,10 +96,10 @@ ms.locfileid: "85999865"
 |**datetime2(0)**|6|10|57%|  
 |**datetime2(7)**|8|12|52%|  
 |**time(0)**|3|7|69%|  
-|**time(7)**|5|9|60%|  
+|**time(7)**|5|9|60 %|  
 |**datetimetoffset(0)**|8|12|52%|  
 |**datetimetoffset (7)**|10|14|49%|  
-|**decimal/numeric(1,s)**|5|9|60%|  
+|**decimal/numeric(1,s)**|5|9|60 %|  
 |**decimal/numeric(38,s)**|17|21|42%|  
 |**vardecimal(p,s)**|Используйте тип **decimal** в качестве консервативной оценки.|||  
   
@@ -107,11 +108,11 @@ ms.locfileid: "85999865"
 |Тип данных|Неразреженные байты|Разреженные байты|Процент значений NULL|  
 |---------------|---------------------|------------------|---------------------|  
 |**sql_variant**|Зависит от базового типа данных|||  
-|**varchar** или **char**|2*|4*|60%|  
-|**nvarchar** или **nchar**|2*|4*+|60%|  
-|**varbinary** или **binary**|2*|4*|60%|  
-|**xml**|2*|4*|60%|  
-|**hierarchyid**|2*|4*|60%|  
+|**varchar** или **char**|2*|4*|60 %|  
+|**nvarchar** или **nchar**|2*|4*+|60 %|  
+|**varbinary** или **binary**|2*|4*|60 %|  
+|**xml**|2*|4*|60 %|  
+|**hierarchyid**|2*|4*|60 %|  
   
  *Длина равна средней длине данных, содержащихся в типе, плюс 2 или 4 байта.  
   
@@ -236,7 +237,7 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  `1      Tire Spec 1  AXZZ217                  27`  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Использование наборов столбцов](../../relational-databases/tables/use-column-sets.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   

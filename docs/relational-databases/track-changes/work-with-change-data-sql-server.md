@@ -1,4 +1,5 @@
 ---
+description: Работа с информацией об изменениях (SQL Server)
 title: Работа с информацией об изменениях
 ms.custom: seo-dt-2019
 ms.date: 01/02/2019
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 18002782d7d34b88706b227cf8ac828f9da4976a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 90513b794e7d7125e46aa5f1d6cdb2d85ad34880
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889093"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427376"
 ---
 # <a name="work-with-change-data-sql-server"></a>Работа с информацией об изменениях (SQL Server)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -61,7 +62,7 @@ ms.locfileid: "85889093"
  Представленный ниже шаблон «Перечисление суммарных изменений с помощью TRY CATCH» показывает, как перехватить эти известные ошибки возвращающих табличные значения функций и возвратить более понятные сведения об ошибке.  
   
 > [!NOTE]  
->  Чтобы найти шаблоны системы отслеживания измененных данных в среде SQL Server Management Studio, в меню **Вид** выберите **Обозреватель шаблонов**, разверните элемент **Шаблоны SQL Server** , затем папку **Система отслеживания измененных данных** .  
+>   Чтобы найти шаблоны системы отслеживания измененных данных в среде SQL Server Management Studio, в меню **Вид** выберите **Обозреватель шаблонов**, разверните элемент **Шаблоны SQL Server** , затем разверните папку **Система отслеживания измененных данных** .  
   
 ##  <a name="query-functions"></a><a name="Functions"></a> Функции запросов  
  В зависимости от характеристик отслеживаемой исходной таблицы и конфигурации экземпляра системы отслеживания создается одна или две возвращающие табличное значение функции для выполнения запросов информации об изменениях.  

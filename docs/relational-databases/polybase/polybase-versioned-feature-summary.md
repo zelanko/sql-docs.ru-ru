@@ -1,4 +1,5 @@
 ---
+description: Возможности и ограничения PolyBase
 title: Возможности и ограничения PolyBase | Документация Майкрософт
 descriptions: This article summarizes PolyBase features available for SQL Server products and services. It lists T-SQL operators supported for pushdown and known limitations.
 ms.date: 09/24/2018
@@ -10,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1847c47622dc36bbdb92db675a90765ff6f197f6
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 4d3d6021b34f5804f33cd784bc9b7fd38c7eb1f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332153"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427996"
 ---
 # <a name="polybase-features-and-limitations"></a>Возможности и ограничения PolyBase
 
@@ -29,16 +30,16 @@ ms.locfileid: "87332153"
 
 |**Компонент** |**SQL Server 2016** |**База данных SQL Azure** |**Azure Synapse Analytics** |**Параллельное хранилище данных** |
 |---------|---------|---------|---------|---------|
-|Запрос данных Hadoop с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)]|Да|нет|нет|Да|
-|Импорт данных из Hadoop|Да|нет|нет|Да|
-|Экспорт данных в Hadoop  |Да|нет|нет| Да|
+|Запрос данных Hadoop с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)]|Да|нет|Нет|Да|
+|Импорт данных из Hadoop|Да|нет|Нет|Да|
+|Экспорт данных в Hadoop  |Да|нет|Нет| Да|
 |Запрос, импорт и экспорт данных в Azure HDInsight |нет|нет|нет|нет
-|Отправка результатов вычислений запросов в Hadoop|Да|нет|нет|Да|  
-|Импорт данных из хранилища BLOB-объектов Azure|Да|нет|Да|Да|
-|Экспорт данных в хранилище BLOB-объектов Azure|Да|нет|Да|Да|  
-|Импорт данных из хранилища Azure Data Lake Store|нет|нет|Да|нет|
-|Экспорт данных из хранилища Azure Data Lake Store|нет|нет|Да|нет|
-|Выполнение запросов PolyBase из средств бизнес-аналитики Майкрософт|Да|нет|Да|Да|
+|Отправка результатов вычислений запросов в Hadoop|Да|нет|Нет|Да|  
+|Импорт данных из хранилища BLOB-объектов Azure|Да|Нет|Да|Да|
+|Экспорт данных в хранилище BLOB-объектов Azure|Да|Нет|Да|Да|  
+|Импорт данных из хранилища Azure Data Lake Store|нет|Нет|Да|нет|
+|Экспорт данных из хранилища Azure Data Lake Store|нет|Нет|Да|нет|
+|Выполнение запросов PolyBase из средств бизнес-аналитики Майкрософт|Да|Нет|Да|Да|
 
 ## <a name="pushdown-computation-supported-by-t-sql-operators"></a>Поддержка передачи вычислений в операторах T-SQL
 
@@ -47,7 +48,7 @@ ms.locfileid: "87332153"
 |**Тип оператора** |**Отправка в Hadoop** |**Отправка в хранилище BLOB-объектов** |
 |---------|---------|---------|
 |Проекции столбцов|Да|нет|
-|Предикаты|Да|нет|
+|Предикаты|Да|Нет|
 |Статистические выражения|Частично|нет|
 |Соединения между внешними таблицами|нет|нет|
 |Соединения между внешними и локальными таблицами|нет|нет|

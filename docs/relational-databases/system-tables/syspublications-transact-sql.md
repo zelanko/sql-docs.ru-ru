@@ -1,4 +1,5 @@
 ---
+description: Таблица syspublications (Transact-SQL)
 title: syspublications (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a86eb4f5-1f7b-493e-af55-3d15cf878228
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 597365b2fe3e119a399fb6f9498ad421f4a18060
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 17791f5ee8039dc082a9de22a8dc963bda2df2ae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881319"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427556"
 ---
 # <a name="syspublications-transact-sql"></a>Таблица syspublications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85881319"
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**nописание**|**nvarchar(255)**|Запись, содержащая описание публикации.|  
+|**description**|**nvarchar(255)**|Запись, содержащая описание публикации.|  
 |**name**|**sysname**|Уникальное имя, связанное с публикацией.|  
 |**pubid**|**int**|Столбец идентификаторов, в котором содержится уникальный идентификатор публикации.|  
 |**repl_freq**|**tinyint**|Частота репликации:<br /><br /> **0** = на основе транзакций.<br /><br /> **1** = запланированное обновление таблицы.|  
@@ -74,8 +75,8 @@ ms.locfileid: "85881319"
 |**originator_id**|**smallint**|Определяет каждый узел в одноранговой топологии репликации для обнаружения конфликтов. Дополнительные сведения см. в разделе [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
   
 ## <a name="see-also"></a>См. также  
- [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Представления репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
  [sp_helppublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)  

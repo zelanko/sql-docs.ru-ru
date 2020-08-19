@@ -1,4 +1,5 @@
 ---
+description: Решение ODBC
 title: Решение ODBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 34b80790-e010-4b90-8eaa-03189f5d8986
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2b35883ff4d621f0ecc092020ad744455281dd63
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f1a1c216dc67c33eadc9a058263087978f176297
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286757"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428866"
 ---
 # <a name="the-odbc-solution"></a>Решение ODBC
 Вопрос в том, как ODBC стандартизация доступа к базе данных? Существует два требования к архитектуре:  

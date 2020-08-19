@@ -1,4 +1,5 @@
 ---
+description: ODBC API Implementation Details
 title: Сведения о реализации API ODBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
@@ -16,11 +17,12 @@ ms.assetid: dca92489-f179-4b1f-997c-adcc46aa17a3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66b4ee7d11744bd2409b2bbf174882e92bc56acb
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b80095978c3369a4aa56c8a7ab64b2c34ab716f6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012121"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428476"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API Implementation Details
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +33,7 @@ ms.locfileid: "86012121"
   
  Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствует требованиям спецификации ODBC 3.51. Для получения исчерпывающего справочника по ODBC 3,51 Скачайте пакет SDK Microsoft Data Access Components из [центра разработчиков доступа к данным и хранилища](https://go.microsoft.com/fwlink?linkid=4173)или просмотрите [Справочник программиста по ODBC](https://go.microsoft.com/fwlink/?LinkId=45250) в Интернете.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 -   [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)  
   
@@ -133,7 +135,7 @@ ms.locfileid: "86012121"
   
 -   [SQLTables](../../relational-databases/native-client-odbc-api/sqltables.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по SQL Server Native Client &#40;ODBC&#41;](https://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)   
  [Построение приложений с использованием SQL Server Native Client](../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   

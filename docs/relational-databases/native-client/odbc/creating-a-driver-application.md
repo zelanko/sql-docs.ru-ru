@@ -1,4 +1,5 @@
 ---
+description: Создание приложения драйвера
 title: Создание приложения
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,11 +25,12 @@ ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3bc45e8c1de97b5da2d393ceb3ef3794baf56595
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6bcb65baaf591267d1c40b254bb23fe19e383192
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009771"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428196"
 ---
 # <a name="creating-a-driver-application"></a>Создание приложения драйвера
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -78,19 +80,19 @@ ms.locfileid: "86009771"
   
  Многие драйверы ODBC, в том числе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] драйвер ODBC для собственного клиента, предлагают расширения ODBC для конкретного драйвера. Чтобы воспользоваться преимуществами [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] РАСШИРЕНИЙ ODBC для собственного клиента, приложение должно включать заголовочный файл sqlncli. h. Этот файл заголовка содержит следующее:  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Особые атрибуты подключения для драйвера ODBC собственного клиента.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Особые атрибуты подключения для драйвера ODBC собственного клиента.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Атрибуты инструкции, относящиеся к драйверу ODBC для собственного клиента.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Атрибуты инструкции, относящиеся к драйверу ODBC для собственного клиента.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Атрибуты столбца, относящиеся к драйверу ODBC для собственного клиента.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Атрибуты столбца, относящиеся к драйверу ODBC для собственного клиента.  
   
 -   типы данных, относящиеся к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)];  
   
 -   определяемые пользователем типы данных, относящиеся к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)];  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Типы [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md) , относящиеся к ДРАЙВЕРу ODBC для собственного клиента.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Типы [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md) , относящиеся к ДРАЙВЕРу ODBC для собственного клиента.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Поля диагностики драйвера ODBC для собственного клиента.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Поля диагностики драйвера ODBC для собственного клиента.  
   
 -   диагностические коды динамических функций, относящиеся к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)];  
   
@@ -111,13 +113,13 @@ INCLUDE=c:\Program Files\Microsoft Data Access SDK 2.8\inc;C:\Program Files\Micr
   
  На раннем этапе разработки приложения необходимо решить, будет ли приложение нуждаться в нескольких одновременных вызовах ODBC. Существует два метода поддержки нескольких одновременных вызовов ODBC. Они описаны в оставшихся разделах этой темы. Дополнительные сведения см. в [справочнике программиста по ODBC](https://go.microsoft.com/fwlink/?LinkId=45250).  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 -   [Асинхронный режим и команда SQLCancel](../../../relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel.md)  
   
 -   [Многопоточные приложения](../../../relational-databases/native-client/odbc/creating-a-driver-application-multithreaded-applications.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQL Server Native Client (ODBC)](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
   
   

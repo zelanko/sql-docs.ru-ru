@@ -1,4 +1,5 @@
 ---
+description: Использование источников данных
 title: Использование источников данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d5550619-22b2-4b16-bd08-fbabb6554c40
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: df9b09e4c5519e0fff44902bd83b8e3d92a67ca8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 162f1c2bf8d75757ac2c29d60f675ac07ba8b00d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286555"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428837"
 ---
 # <a name="using-data-sources"></a>Использование источников данных
 Источники данных обычно создаются конечным пользователем или специалистом с помощью программы, именуемой *администратором ODBC*. Администратор ODBC выдает пользователю запрос на использование драйвера, а затем вызывает этот драйвер. Драйвер отображает диалоговое окно, в котором запрашиваются сведения, необходимые для подключения к источнику данных. После того, как пользователь введет данные, драйвер сохранит его в системе.  

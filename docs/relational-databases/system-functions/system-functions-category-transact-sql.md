@@ -1,4 +1,5 @@
 ---
+description: Системные функции по категориям для Transact-SQL
 title: Системные функции по категориям
 ms.date: 11/02/2016
 ms.prod: sql
@@ -14,19 +15,19 @@ ms.assetid: 8ad860e7-e054-4186-80a2-03977e42531d
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 2c86e7920fadb2447fd0daa134370f4bd70ddc71
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2bb8db369904a011b96e3c36deef5f6e90419db5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738561"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427736"
 ---
 # <a name="system-functions-by-category-for-transact-sql"></a>Системные функции по категориям для Transact-SQL
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]предоставляет следующие группы системных функций.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет следующие группы системных функций.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Функции групп доступности Always On](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)  
  [Функции системы отслеживания измененных данных](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)  
  [Функции Отслеживание изменений](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)  

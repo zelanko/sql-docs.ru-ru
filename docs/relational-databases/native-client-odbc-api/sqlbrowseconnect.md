@@ -1,4 +1,5 @@
 ---
+description: SQLBrowseConnect
 title: SQLBrowseConnect | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,11 +15,12 @@ ms.assetid: 57faf388-c7ca-4696-9845-34e0a10cc5f7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 690e853ceb908cb85d27831c0c9a4961591158f8
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 56b505e4c4dcaf00c77c31e5e0e55617106df0fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012091"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428396"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,18 +38,18 @@ ms.locfileid: "86012091"
   
 |Ключевое слово|Возвращает список?|Является необязательным?|Описание|  
 |-------------|--------------------|---------------|-----------------|  
-|SERVER|Да|нет|Имя сервера источника данных в сети. В качестве сервера можно ввести термин «(local)»; в этом случае можно использовать локальную копию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], даже если это не сетевая версия.|  
-|ИД пользователя|нет|Да|Идентификатор входа пользователя.|  
-|PWD|нет|Да (зависит от пользователя)|Определяемый пользователем пароль.|  
-|APP|нет|Да|Имя приложения, вызывающего **SQLBrowseConnect**.|  
-|WSID|нет|Да|Идентификатор рабочей станции. Обычно это сетевое имя компьютера, на котором работает приложение.|  
+|SERVER|Да|Нет|Имя сервера источника данных в сети. В качестве сервера можно ввести термин «(local)»; в этом случае можно использовать локальную копию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], даже если это не сетевая версия.|  
+|ИД пользователя|Нет|Да|Идентификатор входа пользователя.|  
+|PWD|Нет|Да (зависит от пользователя)|Определяемый пользователем пароль.|  
+|APP|Нет|Да|Имя приложения, вызывающего **SQLBrowseConnect**.|  
+|WSID|Нет|Да|Идентификатор рабочей станции. Обычно это сетевое имя компьютера, на котором работает приложение.|  
   
 ## <a name="level-3"></a>Level 3  
   
 |Ключевое слово|Возвращает список?|Является необязательным?|Описание|  
 |-------------|--------------------|---------------|-----------------|  
 |DATABASE|Да|Да|Имя базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|LANGUAGE|Да|Да|Национальный язык, используемый [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|ЯЗЫК|Да|Да|Национальный язык, используемый [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
  **SQLBrowseConnect** игнорирует значения ключевых слов базы данных и языка, которые хранятся в определениях источников данных ODBC. Если база данных или язык, указанные в строке соединения, переданной в **SQLBrowseConnect** , являются недопустимыми, **SQLBrowseConnect** возвращает SQL_NEED_DATA и атрибуты подключения уровня 3.  
   
@@ -73,7 +75,7 @@ ms.locfileid: "86012091"
 |---------------------|  
 |Добавлена документация по SQL_COPT_SS_BROWSE_CACHE_DATA.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функция SQLBrowseConnect](https://go.microsoft.com/fwlink/?LinkId=59329)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

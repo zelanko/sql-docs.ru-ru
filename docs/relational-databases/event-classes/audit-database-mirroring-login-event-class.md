@@ -1,4 +1,5 @@
 ---
+description: Audit Database Mirroring Login, класс событий
 title: Класс событий Audit Database Mirroring Login | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: d0bd436d-aade-4208-a7e5-75cf3b5d0ce9
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 577f5522e2f393c5fe91aca45ab08452853057aa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b800c1fee12b34c17aeb28b252301bd13feef0f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756112"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428556"
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Audit Database Mirroring Login, класс событий
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -27,13 +28,13 @@ ms.locfileid: "85756112"
   
 ## <a name="audit-database-mirroring-login-event-class-data-columns"></a>Столбцы данных класса событий Audit Database Mirroring Login  
   
-|Столбец данных|Тип|Description|Номер столбца|Фильтруемый|  
+|Столбец данных|Тип|Описание|Номер столбца|Фильтруемый|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|Не используется в этом классе событий.|10|Да|  
 |**ClientProcessID**|**int**|Не используется в этом классе событий.|9|Да|  
 |**DatabaseID**|**int**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных **ServerName** захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
-|**EventClass**|**int**|Тип захваченного класса событий. Для класса событий **Audit Database Mirroring Login** всегда равен **154**.|27|нет|  
-|**EventSequence**|**int**|Порядковый номер этого события.|51|нет|  
+|**EventClass**|**int**|Тип захваченного класса событий. Для класса событий **Audit Database Mirroring Login** всегда равен **154**.|27|Нет|  
+|**EventSequence**|**int**|Порядковый номер этого события.|51|Нет|  
 |**EventSubClass**|**int**|Тип подкласса событий, предоставляющий дополнительные сведения о каждом классе события. Приведенная ниже таблица содержит список подклассов для данного класса событий.|21|Да|  
 |**FileName**|**nvarchar**|Поддерживаемый метод проверки подлинности, настроенный на удаленной конечной точке зеркального отображения базы данных. Если доступен более чем один метод, принимающая (целевая) конечная точка определяет, какой метод использовать первым. Возможны следующие значения:<br /><br /> <br /><br /> **Нет**. Не настроен ни один метод проверки подлинности.<br /><br /> **NTLM**. Требуется проверка подлинности NTLM.<br /><br /> **KERBEROS**. Требуется проверка подлинности Kerberos.<br /><br /> **NEGOTIATE**. Windows согласовывает метод проверки подлинности.<br /><br /> **CERTIFICATE**. Требуется сертификат, настроенный для конечной точки, который хранится в базе данных **master** .<br /><br /> **NTLM, CERTIFICATE**. Допустимы проверка подлинности NTLM или сертификат конечной точки.<br /><br /> **KERBEROS, CERTIFICATE**. Допустимы проверка подлинности Kerberos или сертификат конечной точки.<br /><br /> **NEGOTIATE, CERTIFICATE**. Windows согласовывает метод проверки подлинности, или же для проверки подлинности может быть использован сертификат конечной точки.<br /><br /> **CERTIFICATE, NTLM**. Допустимы сертификат конечной точки или проверка подлинности NTLM.<br /><br /> **CERTIFICATE, KERBEROS**. Допустимы сертификат конечной точки или проверка подлинности Kerberos.<br /><br /> **CERTIFICATE, NEGOTIATE**. Принимается сертификат конечной точки, или способ проверки подлинности согласовывается Windows.|36|нет|  
 |**HostName**|**nvarchar**|Не используется в этом классе событий.|8|Да|  
@@ -49,12 +50,12 @@ ms.locfileid: "85756112"
 |**SPID**|**int**|Идентификатор процесса сервера, который [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] присвоил процессу, связанному с клиентом.|12|Да|  
 |**StartTime**|**datetime**|Время начала события, если доступно.|14|Да|  
 |**Состояние**|**int**|Указывает место в исходном коде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которое вызвало это событие. Каждое место, которое может вызвать это событие, обозначается отдельным кодом состояния. Сотрудник службы технической поддержки Microsoft может использовать этот код состояния для обнаружения участка, выполнение которого привело к событию.|30|нет|  
-|**TargetUserName**|**nvarchar**|Состояние входа. Одно из двух значений:<br /><br /> **INITIAL**<br /><br /> **WAIT LOGIN NEGOTIATE**<br /><br /> **ONE ISC**<br /><br /> **ONE ASC**<br /><br /> **TWO ISC**<br /><br /> **TWO ASC**<br /><br /> **WAIT ISC Confirm**<br /><br /> **WAIT ASC Confirm**<br /><br /> **WAIT REJECT**<br /><br /> **WAIT PRE-MASTER SECRET**<br /><br /> **WAIT VALIDATION**<br /><br /> **WAIT ARBITRATION**<br /><br /> **ONLINE**<br /><br /> **ERROR**<br /><br /> <br /><br /> Примечание. ISC = Initiate Security Context (инициировать контекст безопасности). ASC = Accept Security Context (принятие контекста безопасности).|39|нет|  
+|**TargetUserName**|**nvarchar**|Состояние входа. Одно из двух значений:<br /><br /> **INITIAL**<br /><br /> **WAIT LOGIN NEGOTIATE**<br /><br /> **ONE ISC**<br /><br /> **ONE ASC**<br /><br /> **TWO ISC**<br /><br /> **TWO ASC**<br /><br /> **WAIT ISC Confirm**<br /><br /> **WAIT ASC Confirm**<br /><br /> **WAIT REJECT**<br /><br /> **WAIT PRE-MASTER SECRET**<br /><br /> **WAIT VALIDATION**<br /><br /> **WAIT ARBITRATION**<br /><br /> **ONLINE**<br /><br /> **ошибка**<br /><br /> <br /><br /> Примечание. ISC = Initiate Security Context (инициировать контекст безопасности). ASC = Accept Security Context (принятие контекста безопасности).|39|нет|  
 |**TransactionID**|**bigint**|Назначенный системой идентификатор транзакции.|4|нет|  
   
  Следующая таблица содержит список значений подклассов события для этого класса событий.  
   
-|ID|Подкласс|Description|  
+|ID|Подкласс|Описание|  
 |--------|--------------|-----------------|  
 |1|Успешный вход|Событие «Успешный вход» указывает, что обработка процесса входа в систему для зеркального отображения смежной базы данных завершилась успешно.|  
 |2|Ошибка входного протокола|Событие «Ошибка входного протокола» указывает, что имя входа для зеркального отображения базы данных получает корректное сообщение, но не соответствующее текущему состоянию процесса входа. Сообщение могло быть потеряно или отослано вне очереди.|  

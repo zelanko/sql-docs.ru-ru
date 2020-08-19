@@ -1,4 +1,5 @@
 ---
+description: sys. fn_net_changes_ &lt; capture_instance &gt; (TRANSACT-SQL)
 title: sys. fn_net_changes_ &lt; capture_instance &gt; (TRANSACT-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5f000c8d2dc4f0f2adc95814ba9ef687602403dc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 59d8214083046510d9c4d71724d1aab1c96b1e1d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898322"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427766"
 ---
 # <a name="sysfn_net_changes_ltcapture_instancegt-transact-sql"></a>sys. fn_net_changes_ &lt; capture_instance &gt; (TRANSACT-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -95,11 +96,11 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 |Имя столбца|Тип столбца|Описание|  
 |-----------------|-----------------|-----------------|  
-|\<columns from @column_list>|**различать**|Столбцы, идентифицированные в аргументе **column_list** , в sp_cdc_generate_wrapper_function при вызове для создания скрипта для создания оболочки. Если *column_list* имеет значение null, все записанные исходные столбцы будут отображаться в результирующем наборе.|  
+|\<columns from @column_list>|**непостоянно**|Столбцы, идентифицированные в аргументе **column_list** , в sp_cdc_generate_wrapper_function при вызове для создания скрипта для создания оболочки. Если *column_list* имеет значение null, все записанные исходные столбцы будут отображаться в результирующем наборе.|  
 |__CDC_OPERATION|**nvarchar (2)**|Код операции, указывающий операцию, необходимую для применения строки к целевой среде. Операция будет зависеть от значения аргумента, *row_filter_option* , переданного в следующем вызове:<br /><br /> *row_filter_option* = "все", "все с маской"<br /><br /> «D» — операция удаления<br /><br /> «I» — операция вставки<br /><br /> 'UN' — операция обновления<br /><br /> *row_filter_option* = "все с слиянием"<br /><br /> «D» — операция удаления<br /><br /> 'M' — операция вставки либо обновления|  
 |\<columns from @update_flag_list>|**bit**|Битовый флаг, имя которого образуется добавлением _uflag к имени столбца. Флаг принимает значение, не равное NULL, только если *row_filter_option* **= "все с маской"** и \_ _CDC_OPERATION **= "UN"**. Если соответствующий столбец изменялся в окне запроса, флагу присваивается значение 1. В противном случае флагу присваивается значение 0.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Функция fn_net_changes_<capture_instance> служит оболочкой для функции запроса CDC. fn_cdc_get_net_changes_<capture_instance>. Для формирования скрипта, создающего оболочку, используется хранимая процедура sys.sp_cdc_generate_wrapper.  
   
  Функции-оболочки не создаются автоматически. Чтобы создать функции-оболочки, нужно выполнить две операции:  
@@ -118,7 +119,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
  Шаблон конфигурации системы отслеживания измененных данных "Создание экземпляра оболочки CDC возвращающие табличное для схемы" показывает, как использовать хранимую процедуру sp_cdc_generate_wrapper_function, чтобы получить скрипты создания для всех функций-оболочек для функций запросов, определенных схемой. Затем шаблон создает эти скрипты. Дополнительные сведения о шаблонах см. в разделе [Обозреватель шаблонов](../../ssms/template/template-explorer.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sys. sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
  [CDC. fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)  
   

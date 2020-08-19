@@ -1,4 +1,5 @@
 ---
+description: sysmail_faileditems (Transact-SQL)
 title: sysmail_faileditems (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a31562c5-358e-4cfc-a72d-b3faccc53851
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5fa83e2f49d97c6318944251f68da18f10646c04
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 60e6e4b4411c55467aab30359ae25f07237ceb12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893220"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427896"
 ---
 # <a name="sysmail_faileditems-transact-sql"></a>sysmail_faileditems (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "85893220"
 |**пользу**|**varchar(max)**|Электронные адреса получателей сообщения.|  
 |**copy_recipients**|**varchar(max)**|Электронные адреса получателей копий сообщения.|  
 |**blind_copy_recipients**|**varchar(max)**|Электронные адреса получателей копий сообщения, чьи имена не будут отображаться в заголовке сообщения.|  
-|**Тема**|**nvarchar (510)**|Строка темы сообщения.|  
+|**subject**|**nvarchar (510)**|Строка темы сообщения.|  
 |**body**|**varchar(max)**|Тело сообщения.|  
 |**body_format**|**varchar (20)**|Формат тела сообщения. Допустимые значения — TEXT и HTML.|  
 |**importance**|**varchar (6)**|Параметр **важности** сообщения.|  
@@ -61,7 +62,7 @@ ms.locfileid: "85893220"
 |**last_mod_date**|**datetime**|Дата и время последнего изменения строки.|  
 |**last_mod_user**|**sysname**|Пользователь, внесший последнее изменение в строку.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Используйте представление **sysmail_faileditems** , чтобы узнать, какие сообщения не были отправлены Database Mail. При диагностике проблем, связанных с компонентом Database Mail, это представление может помочь определить причину проблемы, поскольку содержит атрибуты сообщений, которые не удалось отправить. Чтобы просмотреть причину сбоя, ознакомьтесь с записью для сообщения Failed в [sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md) View.  
   
 ## <a name="permissions"></a>Разрешения  

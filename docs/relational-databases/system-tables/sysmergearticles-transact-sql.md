@@ -1,4 +1,5 @@
 ---
+description: sysmergearticles (Transact-SQL)
 title: sysmergearticles (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e9b1648e-4660-4688-9f56-18b2baf7228c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6b1678b9430127452fafa9e63cc2719efed088b8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 677fc8a30daa3b9a921bb194c6f4d06635b43284
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881368"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427596"
 ---
 # <a name="sysmergearticles-transact-sql"></a>sysmergearticles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "85881368"
 |**sync_objid**|**int**|Идентификатор объекта представления, представляющего синхронизированный набор данных.|  
 |**view_type**|**tinyint**|Тип представления:<br /><br /> **0** = не представление; использовать все базовые объекты.<br /><br /> **1** = постоянное представление.<br /><br /> **2** = временное представление.|  
 |**artid**|**uniqueidentifier**|Уникальный идентификационный номер данной статьи.|  
-|**nописание**|**nvarchar(255)**|Краткое описание статьи.|  
+|**description**|**nvarchar(255)**|Краткое описание статьи.|  
 |**pre_creation_command**|**tinyint**|Действие по умолчанию при создании статьи в базе данных подписки.<br /><br /> **0 =** None — если таблица уже существует на подписчике, никакие действия не предпринимаются.<br /><br /> **1** = Drop — удаляет таблицу перед ее повторным созданием.<br /><br /> **2** = Delete — выдает удаление на основе предложения WHERE в фильтре подмножества.<br /><br /> **3** = усечение — то же, что и **2**, но вместо строк удаляются страницы. Однако предложение WHERE не используется.|  
 |**pubid**|**uniqueidentifier**|Идентификатор публикации, которой принадлежит данная статья.|  
 |**понят**|**int**|Сопоставление псевдонима для идентификатора статьи.|  
@@ -91,9 +92,9 @@ ms.locfileid: "85881368"
 |**stream_blob_columns**|**bit**|Указывает, применяется ли оптимизация потока данных при репликации столбцов с большими двоичными объектами. **1** означает, что выполняется оптимизация.|  
 |**preserve_rowguidcol**|**bit**|Показывает, использует ли репликация существующий столбец rowguid. Значение **1** означает, что используется существующий столбец ROWGUIDCOL. значение **0** означает, что репликация добавила столбец ROWGUIDCOL.|  
   
-## <a name="see-also"></a>См. также  
- [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Представления репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
  [sp_helpmergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)  

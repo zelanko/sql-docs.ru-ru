@@ -9,13 +9,13 @@ metadata:
   ms.topic: landing-page
   author: dphansen
   ms.author: davidph
-  ms.date: 04/24/2020
-  ms.openlocfilehash: 41832dfd555df827e14182900a4faa07ad22ab1e
-  ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+  ms.date: 05/27/2020
+  ms.openlocfilehash: 72f9fc36ace86dda5c38b7713376d83dbe1e8230
+  ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 05/19/2020
-  ms.locfileid: "83606828"
+  ms.lasthandoff: 07/20/2020
+  ms.locfileid: "86485305"
 landingContent:
 - title: Машинное обучение в SQL Server
   linkLists:
@@ -65,11 +65,47 @@ landingContent:
       url: tutorials/quickstart-r-train-score-model.md
   - linkListType: tutorial
     links:
-    - text: Использование R в T-SQL
-      url: tutorials/sqldev-in-database-r-for-sql-developers.md
-    - text: Использование Служб машинного обучения в средствах R
-      url: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
-- title: Машинное обучение в кластерах больших данных
+    - text: Прогнозирование проката лыж с помощью дерева принятия решений
+      url: tutorials/r-predictive-model-introduction.md
+    - text: Категоризация клиентов с помощью кластеризации методом k-средних
+      url: tutorials/r-clustering-model-introduction.md
+- title: Управляемый экземпляр SQL Azure
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Службы машинного обучения в управляемом экземпляре SQL Azure
+      url: /azure/azure-sql/managed-instance/machine-learning-services-overview
+    - text: Основные различия между Машинным обучением в Управляемом экземпляре SQL Azure и SQL Server
+      url: /azure/azure-sql/managed-instance/machine-learning-services-differences
+  - linkListType: how-to-guide
+    links:
+    - text: Развертывание и создание прогнозов с помощью модели ONNX в Управляемом экземпляре SQL Azure
+      url: /azure/azure-sql-edge/deploy-onnx?context=/azure/azure-sql/managed-instance/context/ml-context
+- title: База данных SQL Azure для пограничных вычислений
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Машинное обучение и ИИ с применением ONNX в SQL для пограничных вычислений
+      url: /azure/sql-database-edge/onnx-overview
+  - linkListType: how-to-guide
+    links:
+    - text: Развертывание и прогнозирование по модели ONNX в SQL для пограничных вычислений
+      url: /azure/sql-database-edge/deploy-onnx
+- title: Расширение "Машинное обучение" Azure Data Studio
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Что такое расширение "Машинное обучение" для Azure Data Studio?
+      url: ../azure-data-studio/machine-learning-extension.md
+  - linkListType: how-to-guide
+    links:
+    - text: Управление пакетами в базе данных
+      url: ../azure-data-studio/machine-learning-extension-manage-packages.md
+    - text: Составление прогнозов
+      url: ../azure-data-studio/machine-learning-extension-predictions.md
+    - text: Импорт или просмотр моделей
+      url: ../azure-data-studio/machine-learning-extension-import-view-models.md
+- title: Кластеры больших данных SQL Server
   linkLists:
   - linkListType: overview
     links:
@@ -87,7 +123,7 @@ landingContent:
       url: ../big-data-cluster/sparklyr-from-rstudio.md
     - text: Интеграция Spark с SQL Server
       url: ../big-data-cluster/spark-mssql-connector.md
-- title: Машинное обучение в Azure Synapse Analytics
+- title: Azure Synapse Analytics
   linkLists:
   - linkListType: overview
     links:
@@ -101,13 +137,3 @@ landingContent:
     links:
     - text: Создание, разработка и обслуживание записных книжек Azure Synapse Studio
       url: /azure/synapse-analytics/spark/apache-spark-development-using-notebooks
-- title: Машинное обучение в SQL Azure для пограничных вычислений
-  linkLists:
-  - linkListType: overview
-    links:
-    - text: Машинное обучение и ИИ с применением ONNX в SQL для пограничных вычислений
-      url: /azure/sql-database-edge/onnx-overview
-  - linkListType: how-to-guide
-    links:
-    - text: Развертывание и прогнозирование по модели ONNX в SQL для пограничных вычислений
-      url: /azure/sql-database-edge/deploy-onnx

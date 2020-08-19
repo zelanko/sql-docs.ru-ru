@@ -1,0 +1,140 @@
+- name: Документация по Azure Data Studio
+  href: ../azure-data-studio/index.yml
+- name: "Скачать Azure Data\_Studio"
+  href: download-azure-data-studio.md
+- name: Заметки о выпуске
+  href: release-notes-azure-data-studio.md
+- name: Обзор
+  items:
+    - name: Azure Data Studio
+      href: what-is.md
+- name: Краткие руководства
+  items:
+    - name: Подключение и отправка запроса к SQL Server
+      href: quickstart-sql-server.md
+    - name: Подключение и отправка запроса к базе данных SQL Azure
+      href: quickstart-sql-database.md
+    - name: Подключение и отправка запроса к хранилищу данных SQL Azure
+      href: quickstart-sql-dw.md
+    - name: "Подключение и отправка запроса\_PostgreSQL"
+      href: quickstart-postgres.md
+- name: Учебники
+  items:
+    - name: Редактор T-SQL
+      href: tutorial-sql-editor.md
+    - name: 'Пример аналитических сведений: медленные запросы'
+      href: tutorial-qds-sql-server.md
+    - name: 'Пример аналитических сведений: использование табличного пространства'
+      href: tutorial-table-space-sql-server.md
+    - name: Создание настраиваемых аналитических сведений
+      href: tutorial-build-custom-insight-sql-server.md
+    - name: Резервное копирование и восстановление
+      href: tutorial-backup-restore-sql-server.md
+- name: Основные понятия
+  items:
+    - name: Модули
+      items:
+        - name: Модули
+          href: extensions.md
+        - name: Расширение "Машинное обучение"
+          items:
+            - name: Обзор расширения "Машинное обучение"
+              href: machine-learning-extension.md
+            - name: Управление пакетами в базе данных
+              href: machine-learning-extension-manage-packages.md
+            - name: Составление прогнозов
+              href: machine-learning-extension-predictions.md
+            - name: Импорт и просмотр моделей
+              href: machine-learning-extension-import-view-models.md
+        - name: Расширение PostgreSQL
+          href: postgres-extension.md
+        - name: Расширение виртуализации данных
+          href: data-virtualization-extension.md
+        - name: Расширение проектов Баз данных SQL
+          items:
+            - name: Обзор расширения "Проекты Баз данных SQL"
+              href: sql-database-project-extension.md
+            - name: Начало работы с расширением "Проекты Баз данных SQL"
+              href: sql-database-project-extension-getting-started.md
+            - name: Сборка и публикация проекта
+              href: sql-database-project-extension-build.md
+            - name: Сборка проекта из командной строки
+              href: sql-database-project-extension-build-from-command-line.md
+        - name: "Агент SQL\_Server"
+          href: sql-server-agent-extension.md
+        - name: Расширение центральных серверов управления SQL Server
+          href: sql-server-cms-extension.md
+        - name: Расширение DACPAC-файлов SQL Server
+          href: sql-server-dacpac-extension.md
+        - name: "Импорт SQL\_Server"
+          href: sql-server-import-extension.md
+        - name: Приложение SQL Server Profiler
+          href: sql-server-profiler-extension.md
+        - name: Расширение сравнения схем
+          href: schema-compare-extension.md
+        - name: Расширение PowerShell
+          href: powershell-extension.md
+        - name: Расширение для Управляемого экземпляра
+          href: azure-sql-managed-instance-extension.md
+        - name: Расширение SandDance
+          href: sanddance-extension.md
+    - name: Разработка расширений
+      items:
+        - name: Обзор расширяемости
+          href: extensibility.md
+        - name: Разработка расширений
+          href: extension-authoring.md
+        - name: Создание расширений
+          href: tutorial-create-extension.md
+        - name: API расширяемости
+          href: extensibility-apis.md
+    - name: 'Интегрированный терминал (PowerShell, Bash)'
+      href: integrated-terminal.md
+    - name: сочетания клавиш
+      href: keyboard-shortcuts.md
+    - name: Группы серверов
+      href: server-groups.md
+    - name: Система управления версиями
+      href: source-control.md
+- name: Практические руководства
+  items:
+    - name: Записные книжки
+      items:
+        - name: Общие сведения о записных книжках
+          href: notebooks-guidance.md
+        - name: Использование ядра SQL
+          href: notebooks-tutorial-sql-kernel.md
+        - name: Использование ядра Python
+          href: notebooks-tutorial-python-kernel.md
+        - name: Расширение Kqlmagic
+          href: notebooks-kqlmagic.md
+    - name: Панели мониторинга и мини-приложения аналитических сведений
+      href: insight-widgets.md
+    - name: Фрагменты кода
+      href: code-snippets.md
+    - name: Просмотр ресурсов SQL Azure
+      href: azure-resource-explorer.md
+    - name: Сбор данных об использовании
+      href: usage-data-collection.md
+    - name: Параметры рабочей области и пользователя
+      href: settings.md
+    - name: Проверка подлинности Windows (Kerberos)
+      href: enable-kerberos.md
+    - name: Сбор данных об использовании
+      href: usage-data-collection.md
+- name: Ссылки
+  items:
+    - name: Средства SQL
+      href: ../tools/overview-sql-tools.md
+    - name: Средства для разработчиков Azure
+      href: 'https://docs.microsoft.com/azure/?product=developer-tools'
+- name: Ресурсы
+  items:
+    - name: ВОПРОСЫ И ОТВЕТЫ
+      href: faq.md
+    - name: "Репозиторий GitHub Azure\_Data\_Studio\_>"
+      href: 'https://www.github.com/Microsoft/azuredatastudio'
+    - name: "Сообщить о проблемах и внести предложения\_>"
+      href: 'https://github.com/microsoft/azuredatastudio/issues'
+    - name: "Документация по SQL Server\_>"
+      href: ../sql-server/index.yml

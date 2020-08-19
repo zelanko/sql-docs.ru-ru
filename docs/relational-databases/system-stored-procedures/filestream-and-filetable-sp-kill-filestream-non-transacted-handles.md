@@ -1,4 +1,5 @@
 ---
+description: sp_kill_filestream_non_transacted_handles (Transact-SQL)
 title: sp_kill_filestream_non_transacted_handles (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7188353e-ab29-49a0-8f25-7fb8ab122589
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fdceccb1d11ce8818e9f26e46adf6b698e493cd4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3413aa4b4601701241aeae9474d92964cd21238c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898158"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427706"
 ---
 # <a name="sp_kill_filestream_non_transacted_handles-transact-sql"></a>sp_kill_filestream_non_transacted_handles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +53,7 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] 'table_name', [[ @h
  **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-set"></a>Результирующий набор  
- Нет.  
+ Отсутствует.  
   
 ## <a name="general-remarks"></a>Общие замечания  
  *Handle_id* , необходимые **sp_kill_filestream_non_transacted_handles** , не связаны с session_id или единицей работы, используемыми в других командах **Kill** .  

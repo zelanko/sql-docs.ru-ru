@@ -1,4 +1,5 @@
 ---
+description: Обновление приложения с переходом от собственного клиента SQL Server 2005
 title: Обновление SQL 2005
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,11 +13,12 @@ ms.assetid: 1e1e570c-7f14-4e16-beab-c328e3fbdaa8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 540816610dacdd14ca47ba07c34c2752abc3dcbb
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b192f9080973c34ca5c054595b586bd9aa14f7e7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005714"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428226"
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>Обновление приложения с переходом от собственного клиента SQL Server 2005
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,10 +29,10 @@ ms.locfileid: "86005714"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 9.0 поставляется в составе [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 поставляется в составе [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  Собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 10.5 поставляется в составе [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]. Клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 поставляется в составе [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] и [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)].  
   
-|Изменения в поведении собственного клиента SQL Server, начиная с версии [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]|Описание|  
+|Изменения в поведении собственного клиента SQL Server, начиная с версии [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]|Description|  
 |------------------------------------------------------------------------------------|-----------------|  
 |OLE DB дополняет данные только до заданного масштаба.|Для преобразований, в которых преобразованные данные отправляются на сервер, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент (начиная с версии [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ) дополняет конечные нули в данных до максимальной длины значений **типа DateTime** . Собственный клиент SQL Server версии 9.0 дополнял данные до 9 разрядов.|  
-|Проверьте DBTYPE_DBTIMESTAMP для ICommandWithParameter::SetParameterInfo.|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Собственный клиент (начиная с [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ) реализует OLE DB требование для *BScale* в Икоммандвиспараметер:: SetParameterInfo для задания точности доли секунды для DBTYPE_DBTIMESTAMP.|  
+|Проверьте DBTYPE_DBTIMESTAMP для ICommandWithParameter::SetParameterInfo.|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Собственный клиент (начиная с [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ) реализует OLE DB требование для *BScale* в Икоммандвиспараметер:: SetParameterInfo для задания точности доли секунды для DBTYPE_DBTIMESTAMP.|  
 |Хранимая процедура **sp_columns** теперь возвращает значение **"NO"** вместо значения **"NO"** для столбца IS_NULLABLE.|Начиная с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента 10,0 ( [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ), **sp_columns** хранимая процедура теперь возвращает **"No** " вместо **"No"** для IS_NULLABLE столбца.|  
 |SQLSetDescRec, SQLBindParameter и SQLBindCol теперь выполняют проверку согласованности.|До [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента 10,0 установка SQL_DESC_DATA_PTR не вызывала проверку согласованности для любого типа дескриптора в SQLSetDescRec, SQLBindParameter или SQLBindCol.|  
 |Теперь Склкопидеск проверяет согласованность дескриптора.|До [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента 10,0 склкопидеск не выполнял проверку согласованности, когда поле SQL_DESC_DATA_PTR было задано для конкретной записи.|  
@@ -46,7 +48,7 @@ ms.locfileid: "86005714"
 |Более строгая проверка параметров типа SQL_C_TYPE _TIMESTAMP и DBTYPE_DBTIMESTAMP.|До [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] собственного клиента значения **DateTime** округляются в соответствии с масштабом столбцов **DateTime** и **smalldatetime** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Теперь в собственном клиенте [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (и более поздних версиях) применяются более строгие правила проверки, определенные в базовой спецификации ODBC для долей секунды. Если значение параметра не удается преобразовать в тип SQL с помощью масштаба, заданного или подразумеваемого клиентской привязкой, без усечения конечных разрядов, то возвращается ошибка.|  
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] может возвращать различные результаты при выполнении триггера.|Изменения, внесенные в [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], могут привести к тому, что приложение получит другие результаты при выполнении инструкции, вызвавшей выполнение триггера при действующем параметре **NOCOUNT OFF**. В такой ситуации в приложении может возникнуть ошибка. Чтобы устранить эту ошибку, установите параметр **NOCOUNT ON** в триггере или вызовите SQLMoreResults, чтобы перейти к следующему результату.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Программирование собственного клиента SQL Server](../../../relational-databases/native-client/sql-server-native-client-programming.md)  
   
   

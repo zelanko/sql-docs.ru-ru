@@ -1,4 +1,5 @@
 ---
+description: 'Репликация SQL Server: диалоговое окно "Настройки издателя"'
 title: Настройки издателя (SSMS) | Документация Майкрософт
 descripton: Describes the 'Publisher Settings' dialog box found in Replication Monitor within SQL Server Management Studio (SSMS).
 ms.custom: seo-lt-2019
@@ -16,16 +17,16 @@ ms.assetid: 4fb70427-082d-4179-82a1-34b235accc43
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: a6232fc78b4c9b1d68a9cc96e6fed69138e5075f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 92a2570f2d591f3eb2fb3c2c460c60809bc0f5fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85678481"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427926"
 ---
 # <a name="sql-server-replication-publisher-settings-dialog-box"></a>Репликация SQL Server: диалоговое окно "Настройки издателя"
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  Диалоговое окно **Настройки издателя** позволяет изменить настройки издателей, добавленных к левой панели монитора репликации.  
+   Диалоговое окно **Настройки издателя** позволяет изменить параметры издателей, добавленных в левую область монитора репликации.  
   
 ## <a name="options"></a>Параметры  
  **Соединение с издателем**  
@@ -46,10 +47,10 @@ ms.locfileid: "85678481"
  **Показывать этот издатель в следующей группе**  
  Выберите группу издателей из списка. Издатель отображается в свой группе в левой панели. Группы предоставляют способ упорядочить издателей и не оказывают влияние на работу репликации.  
   
- **Создать группу**  
+ **Новая группа**  
  Нажмите эту кнопку для создания новой группы издателей. Группа издателей предоставляет удобный способ упорядочить издателей в мониторе репликации. Группы не оказывают влияние на данные или связи между серверами в топологии репликации.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запуск монитора репликации](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Наблюдение за репликацией](../../relational-databases/replication/monitor/monitoring-replication.md)  
   

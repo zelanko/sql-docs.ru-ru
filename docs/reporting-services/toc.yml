@@ -38,82 +38,82 @@
         - name: Создание простого табличного отчета (учебник по службам SSRS)
           href: ../reporting-services/create-a-basic-table-report-ssrs-tutorial.md
           items:
-            - name: "Занятие\_1. Создание проекта сервера отчетов"
+            - name: Урок 1. Создание проекта сервера отчетов
               href: ../reporting-services/lesson-1-creating-a-report-server-project-reporting-services.md
-            - name: "Занятие\_2. Задание информации о соединении"
+            - name: Урок 2. Указание сведений о подключении
               href: ../reporting-services/lesson-2-specifying-connection-information-reporting-services.md
-            - name: "Занятие\_3. Определение набора данных для табличного отчета"
+            - name: Урок 3. Определение набора данных для табличного отчета
               href: ../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md
-            - name: "Занятие\_4. Добавление таблицы в отчет"
+            - name: 'Занятие 4: Добавление таблицы в отчет'
               href: ../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md
-            - name: 'Lesson 5: Formatting a Report'
+            - name: "Занятие\_5.: Форматирование отчета"
               href: ../reporting-services/lesson-5-formatting-a-report-reporting-services.md
-            - name: 'Lesson 6: Adding Grouping and Totals'
+            - name: 'Занятие 6: Добавление группирования и итогов'
               href: ../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md
         - name: Создание управляемой данными подписки (учебник по службам SSRS)
           href: ../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md
           items:
-            - name: Занятие 1. Создание образца базы данных подписчика
+            - name: Урок 1. Создание образца базы данных подписчика
               href: ../reporting-services/lesson-1-creating-a-sample-subscriber-database.md
-            - name: 'Lesson 2: Modifying the Report Data Source Properties'
+            - name: Урок 2. Изменение свойств источника данных отчета
               href: ../reporting-services/lesson-2-modifying-the-report-data-source-properties.md
-            - name: 'Lesson 3: Defining a Data-Driven Subscription'
+            - name: Урок 3. Определение управляемой данными подписки
               href: ../reporting-services/lesson-3-defining-a-data-driven-subscription.md
         - name: Создание детализированного (RDLC) отчета с параметрами с помощью ReportViewer (учебник SSRS)
           href: ../reporting-services/create-drillthrough-rdlc-report-with-parameters-reportviewer.md
           items:
-            - name: Урок 1. Создание нового веб-сайта
+            - name: Урок 1. Создание веб-сайта
               href: ../reporting-services/lesson-1-create-a-new-web-site.md
-            - name: Занятие 2. Определение подключения к данным и таблицы данных для родительского отчета
+            - name: Урок 2. Определение подключения к данным и таблицы данных для родительского отчета
               href: ../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md
-            - name: Занятие 3. Проектирование родительского отчета с использованием мастера отчетов
+            - name: Урок 3. Проектирование родительского отчета с использованием мастера отчетов
               href: ../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md
-            - name: Занятие 4. Определение подключения к данным и таблицы данных для родительского отчета
+            - name: 'Занятие 4: Определение подключения к данным и таблицы данных для дочернего отчета'
               href: ../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md
-            - name: Занятие 5. Проектирование родительского отчета с использованием мастера отчетов
+            - name: "Занятие\_5.: Проектирование дочернего отчета с использованием мастера отчетов"
               href: ../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md
-            - name: Урок 6. Добавление в приложение элемента управления ReportViewer
+            - name: 'Занятие 6: Добавление в приложение элемента управления ReportViewer'
               href: ../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md
-            - name: Занятие 7. Добавление операции детализации к родительскому отчету
+            - name: 'Занятие 7: Добавление действия детализации к родительскому отчету'
               href: ../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md
-            - name: Занятие 8. Создание фильтра данных
+            - name: "Урок\_8. Создание фильтра данных"
               href: ../reporting-services/lesson-8-create-a-data-filter.md
-            - name: 'Lesson 9: Build and Run the Application'
+            - name: "Урок\_9. Сборка и запуск приложения"
               href: ../reporting-services/lesson-9-build-and-run-the-application.md
     - name: Учебники по построителю отчетов
       href: ../reporting-services/report-builder-tutorials.md
       items:
-        - name: Учебник. Создание стандартного отчета с диаграммой в режиме "вне сети"
+        - name: Руководство по Создание стандартного отчета с диаграммой в режиме "вне сети"
           href: ../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md
         - name: Предварительные условия для использования учебников
           href: ../reporting-services/prerequisites-for-tutorials-report-builder.md
         - name: Альтернативные способы создания подключения к данным (построитель отчетов)
           href: ../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md
-        - name: Учебник. Создание простого табличного отчета
+        - name: Руководство по Создание простого табличного отчета
           href: ../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md
-        - name: Учебник. Создание матричного отчета
+        - name: Руководство по Создание матричного отчета
           href: ../reporting-services/tutorial-creating-a-matrix-report-report-builder.md
-        - name: Учебник. Создание отчета в свободной форме
+        - name: Руководство по Создание отчета в свободной форме
           href: ../reporting-services/tutorial-creating-a-free-form-report-report-builder.md
-        - name: Учебник. Форматирование текста (построитель отчетов)
+        - name: Руководство по Форматирование текста (построитель отчетов)
           href: ../reporting-services/tutorial-format-text-report-builder.md
-        - name: Учебник. Добавление гистограммы к отчету (построитель отчетов)
+        - name: Руководство по Добавление гистограммы в отчет (построитель отчетов)
           href: ../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md
-        - name: Учебник. Добавление круговой диаграммы к отчету (построитель отчетов)
+        - name: Руководство по Добавление круговой диаграммы в отчет (построитель отчетов)
           href: ../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md
-        - name: Учебник. Добавление линейчатой диаграммы к отчету (построитель отчетов)
+        - name: Руководство по Добавление линейчатой диаграммы в отчет (построитель отчетов)
           href: ../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md
-        - name: Учебник. Добавление спарклайна в отчет (построитель отчетов)
+        - name: Руководство по Добавление спарклайна в отчет (построитель отчетов)
           href: ../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md
-        - name: Учебник. Добавление в отчет ключевого показателя эффективности
+        - name: "Руководство по Добавление в отчет\_КПЭ"
           href: ../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md
-        - name: Учебник. Отчет-карта
+        - name: Руководство по Отчет-карта
           href: ../reporting-services/tutorial-map-report-report-builder.md
-        - name: Учебник. Добавление параметра к отчету (построитель отчетов)
+        - name: Руководство по Добавление параметра к отчету (построитель отчетов)
           href: ../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md
-        - name: Учебник. Создание детализированных и главных отчетов
+        - name: Руководство по Создание детализированных и главных отчетов
           href: ../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md
-        - name: Учебник. Общие сведения о выражениях
+        - name: Руководство по Знакомство с выражениями
           href: ../reporting-services/tutorial-introducing-expressions.md
 - name: Планирование
   items:
@@ -249,7 +249,7 @@
       href: ../reporting-services/working-with-paginated-reports-web-portal.md
     - name: Работа с моментальными снимками
       href: ../reporting-services/working-with-snapshots-web-portal.md
-    - name: Работа с подписками
+    - name: Использование подписок
       href: ../reporting-services/working-with-subscriptions-web-portal.md
     - name: Работа с ключевыми показателями эффективности
       href: ../reporting-services/working-with-kpis-in-reporting-services.md
@@ -466,7 +466,7 @@
       href: ../reporting-services/report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md
     - name: Диалоговое окно «Преобразование пользовательского элемента отчета»
       href: ../reporting-services/report-builder/convert-cri-dialog-box-report-builder.md
-- name: Проектирование отчетов
+- name: Создание отчетов
   items:
     - name: Скрытие элемента (построитель отчетов и службы SSRS)
       href: ../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md
@@ -1053,7 +1053,7 @@
           href: ../reporting-services/report-data/power-pivot-connection-type-ssrs.md
         - name: Тип соединения список SharePoint
           href: ../reporting-services/report-data/sharepoint-list-connection-type-ssrs.md
-        - name: Тип соединения с SQL Azure
+        - name: Тип подключения к SQL Azure
           href: ../reporting-services/report-data/sql-azure-connection-type-ssrs.md
         - name: Тип соединения OLE DB
           href: ../reporting-services/report-data/ole-db-connection-type-ssrs.md
@@ -1156,7 +1156,7 @@
       items:
         - name: Work with simulated data (Работа со смоделированными данными)
           href: ../reporting-services/mobile-reports/work-with-simulated-data-in-reporting-services-mobile-reports.md
-        - name: Get data from shared datasets
+        - name: Получение данных из общих наборов данных
           href: ../reporting-services/mobile-reports/get-data-from-shared-datasets-in-reporting-services-mobile-reports.md
         - name: Prepare data for Reporting Services mobile reports
           href: ../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md
@@ -1195,7 +1195,7 @@
           href: ../reporting-services/mobile-reports/add-a-custom-map-to-a-reporting-services-mobile-report.md
 - name: Защита и обеспечение безопасности служб Reporting Services
   items:
-    - name: безопасность
+    - name: Безопасность
       href: ../reporting-services/report-builder/security-report-builder.md
     - name: "Обзор безопасности и защиты Reporting\_Services"
       href: ../reporting-services/security/reporting-services-security-and-protection.md
@@ -1248,7 +1248,7 @@
               href: ../reporting-services/security/role-definitions-create-delete-or-modify.md
             - name: Предварительно определенные роли
               href: ../reporting-services/security/role-definitions-predefined-roles.md
-            - name: Назначения ролей
+            - name: Назначение ролей
               href: ../reporting-services/security/role-assignments.md
             - name: Изменение или удаление назначений ролей
               href: ../reporting-services/security/role-assignments-modify-or-delete.md
@@ -1904,7 +1904,7 @@
       href: ../reporting-services/custom-report-items/custom-report-item-implementation-requirements.md
     - name: Пользовательские элементы отчета
       href: ../reporting-services/custom-report-items/custom-report-items.md
-    - name: Развертывание пользовательского элемента отчета
+    - name: Руководство. Развертывание пользовательского элемента отчета
       href: ../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md
     - name: Доступ к пользовательским сборкам посредством выражений
       href: ../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md
@@ -1912,7 +1912,7 @@
       href: ../reporting-services/custom-assemblies/asserting-permissions-in-custom-assemblies.md
     - name: Развертывание пользовательской сборки
       href: ../reporting-services/custom-assemblies/deploying-a-custom-assembly.md
-    - name: Практическое руководство. Отладка пользовательских сборок
+    - name: Руководство. Отладка пользовательских сборок
       href: ../reporting-services/custom-assemblies/how-to-debug-custom-assemblies.md
     - name: Инициализация объектов пользовательских сборок
       href: ../reporting-services/custom-assemblies/initializing-custom-assembly-objects.md
@@ -1922,7 +1922,7 @@
       href: ../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md
     - name: Использование пользовательских сборок со строгими именами
       href: ../reporting-services/custom-assemblies/using-strong-named-custom-assemblies.md
-- name: Технический справочник
+- name: Техническая справочная информация
   href: ../reporting-services/technical-reference-ssrs.md
   items:
     - name: Справочник по функциям

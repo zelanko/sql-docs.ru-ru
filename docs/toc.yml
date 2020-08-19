@@ -102,10 +102,14 @@
                   href: big-data-cluster/deploy-on-aks.md
                 - name: Kubeadm
                   href: big-data-cluster/deploy-with-kubeadm.md
+                - name: OpenShift
+                  href: big-data-cluster/deploy-openshift.md
             - name: Скрипты развертывания
               items:
                 - name: Скрипт AKS на Python
                   href: big-data-cluster/quickstart-big-data-cluster-deploy.md
+                - name: Скрипт ARO на Python
+                  href: big-data-cluster/quickstart-big-data-cluster-deploy-aro.md
                 - name: Скрипт для kubeadm с одним узлом
                   href: big-data-cluster/deployment-script-single-node-kubeadm.md
                 - name: Развертывание с помощью записных книжек
@@ -128,8 +132,10 @@
           href: big-data-cluster/concept-security.md
     - name: Практические руководства
       items:
-        - name: Конфигурация
+        - name: Configure
           items:
+            - name: Кластер
+              href: big-data-cluster/configure-cluster.md
             - name: Главный экземпляр SQL Server
               href: big-data-cluster/configure-sql-server-master-instance.md
             - name: Настройка Apache Spark и Apache Hadoop
@@ -178,6 +184,116 @@
           items:
             - name: 'Использование Служб машинного обучения (Python, R)'
               href: big-data-cluster/machine-learning-services.md
+            - name: Краткие руководства по машинному обучению
+              items:
+                - name: Python
+                  items:
+                    - name: Запустить сценарии Python
+                      href: machine-learning/tutorials/quickstart-python-create-script.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: Структуры данных и объекты
+                      href: machine-learning/tutorials/quickstart-python-data-structures.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: Функции Python
+                      href: machine-learning/tutorials/quickstart-python-functions.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: Обучение и оценка модели
+                      href: machine-learning/tutorials/quickstart-python-train-score-model.md?toc=/sql/toc.json&view=sql-server-ver15
+                - name: R
+                  items:
+                    - name: Запуск сценариев R
+                      href: machine-learning/tutorials/quickstart-r-create-script.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: Типы данных и объекты
+                      href: machine-learning/tutorials/quickstart-r-data-types-and-objects.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: Функции R
+                      href: machine-learning/tutorials/quickstart-r-functions.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: Обучение и оценка модели
+                      href: machine-learning/tutorials/quickstart-r-train-score-model.md?toc=/sql/toc.json&view=sql-server-ver15
+            - name: Руководства по машинному обучению
+              items:
+                - name: Python
+                  items:
+                    - name: Прокат лыж (линейная регрессия)
+                      items:
+                        - name: 1. Введение
+                          href: machine-learning/tutorials/python-ski-rental-linear-regression.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 2. Подготовка данных
+                          href: machine-learning/tutorials/python-ski-rental-linear-regression-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 3. Обучение модели
+                          href: machine-learning/tutorials/python-ski-rental-linear-regression-train-model.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 4. Развертывание модели
+                          href: machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: Категоризация клиентов (кластеризация методом k-средних)
+                      items:
+                        - name: 1. Введение
+                          href: machine-learning/tutorials/python-clustering-model.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 2. Подготовка данных
+                          href: machine-learning/tutorials/python-clustering-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 3. Создание модели
+                          href: machine-learning/tutorials/python-clustering-model-build.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 4. Развертывание модели
+                          href: machine-learning/tutorials/python-clustering-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: Чаевые за поездку в такси в Нью-Йорке (классификация)
+                      items:
+                        - name: 1. Введение
+                          href: machine-learning/tutorials/python-taxi-classification-introduction.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 2. Исследование данных
+                          href: machine-learning/tutorials/python-taxi-classification-explore-data.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 3. Проектирование функций
+                          href: machine-learning/tutorials/python-taxi-classification-create-features.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 4. Обучение и развертывание
+                          href: machine-learning/tutorials/python-taxi-classification-train-model.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 5. Прогнозирование
+                          href: machine-learning/tutorials/python-taxi-classification-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15
+                - name: R
+                  items:
+                    - name: Прокат лыж (дерево принятия решений)
+                      items:
+                        - name: 1. Введение
+                          href: machine-learning/tutorials/r-predictive-model-introduction.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 2. Подготовка данных
+                          href: machine-learning/tutorials/r-predictive-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 3. Обучение модели
+                          href: machine-learning/tutorials/r-predictive-model-train.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 4. Развертывание модели
+                          href: machine-learning/tutorials/r-predictive-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: Категоризация клиентов (кластеризация методом k-средних)
+                      items:
+                        - name: 1. Введение
+                          href: machine-learning/tutorials/r-clustering-model-introduction.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 2. Подготовка данных
+                          href: machine-learning/tutorials/r-clustering-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 3. Создание модели
+                          href: machine-learning/tutorials/r-clustering-model-build.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 4. Развертывание модели
+                          href: machine-learning/tutorials/r-clustering-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: Чаевые за поездку в такси в Нью-Йорке (классификация)
+                      items:
+                        - name: 1. Введение
+                          href: machine-learning/tutorials/r-taxi-classification-introduction.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 2. Исследование данных
+                          href: machine-learning/tutorials/r-taxi-classification-explore-data.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 3. Проектирование функций
+                          href: machine-learning/tutorials/r-taxi-classification-create-features.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 4. Обучение и развертывание
+                          href: machine-learning/tutorials/r-taxi-classification-train-model.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 5. Прогнозирование
+                          href: machine-learning/tutorials/r-taxi-classification-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15
+            - name: 'Управление Python, пакеты R'
+              items:
+                - name: Python
+                  items:
+                    - name: Получение сведений о пакете Python
+                      href: machine-learning/package-management/python-package-information.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: Установка с sqlmlutils
+                      href: machine-learning/package-management/install-additional-python-packages-on-sql-server.md?toc=/sql/toc.json&view=sql-server-ver15
+                - name: R
+                  items:
+                    - name: Получение сведений о пакете R
+                      href: machine-learning/package-management/r-package-information.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: Установка с sqlmlutils
+                      href: machine-learning/package-management/install-additional-r-packages-on-sql-server.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: Создание репозитория miniCRAN
+                      href: machine-learning/package-management/create-a-local-package-repository-using-minicran.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: Советы по использованию пакетов R
+                      href: machine-learning/package-management/tips-for-using-r-packages.md?toc=/sql/toc.json&view=sql-server-ver15
             - name: Первичная обработка данных с помощью ускорителя кода PROSE
               href: big-data-cluster/use-prose-for-big-data-automation.md
             - name: Модели машинного обучения Spark с MLeap
@@ -198,12 +314,26 @@
               href: big-data-cluster/notebooks-manage-bdc.md
             - name: "Запуск записной книжки на базе\_Spark"
               href: big-data-cluster/notebooks-tutorial-spark.md
-            - name: Безопасность
-              items:
-                - name: Обновление AZDATA_PASSWORD
-                  href: big-data-cluster/change-azdata-password.md
-                - name: Управление доступом пользователей.
-                  href: big-data-cluster/manage-user-access.md
+        - name: Производительность
+          items:
+            - name: Руководство по настройке
+              href: big-data-cluster/performance-guidelines-tuned.md
+        - name: Безопасность
+          items:
+            - name: Kubernetes RBAC для BDC
+              href: big-data-cluster/kubernetes-rbac.md
+            - name: Обновление AZDATA_PASSWORD
+              href: big-data-cluster/change-azdata-password.md
+            - name: Управление доступом пользователей.
+              href: big-data-cluster/manage-user-access.md
+            - name: Некорневые контейнеры
+              href: big-data-cluster/non-root-containers.md
+            - name: Несколько BDC в одном домене AD
+              href: big-data-cluster/active-directory-deployment-background.md
+            - name: Автоматически создаваемые объекты AD
+              href: big-data-cluster/active-directory-objects.md
+            - name: Сверка DNS AD
+              href: big-data-cluster/active-directory-dns-reconciliation.md
         - name: Задания Spark
           items:
             - name: Отправка заданий Spark в Azure Data Studio
@@ -218,13 +348,15 @@
           items:
             - name: Устранение неполадок в Kubernetes
               href: big-data-cluster/cluster-troubleshooting-commands.md
+            - name: Устранение неполадок записной книжки pyspark
+              href: big-data-cluster/troubleshoot-pyspark-notebook.md
             - name: Область группы домена Active Directory
               href: big-data-cluster/troubleshoot-active-directory.md
-            - name: Active Directory DNS
+            - name: DNS Active Directory
               href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
             - name: Сбои при входе в Active Directory
               href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
-            - name: "Права администратора для\_HDFS"
+            - name: Разрешения администратора HDFS
               href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
     - name: Справочник
       items:
@@ -234,6 +366,12 @@
           items:
             - name: Файл конфигурации развертывания
               href: big-data-cluster/reference-deployment-config.md
+        - name: Конфигурация
+          items:
+            - name: Главный экземпляр
+              href: big-data-cluster/reference-config-master-instance.md
+            - name: Apache Spark и Apache Hadoop
+              href: big-data-cluster/reference-config-spark-hadoop.md
         - name: Справочник по azdata
           items:
             - name: azdata
@@ -1813,12 +1951,13 @@
             - name: Совместимость
               href: relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md
     - name: Триггеры
-      href: relational-databases/triggers/logon-triggers.md
       items:
-        - name: Захват данных событий триггера входа
-          href: relational-databases/triggers/capture-logon-trigger-event-data.md
-        - name: Управление безопасностью триггеров
-          href: relational-databases/triggers/manage-trigger-security.md
+        - name: Триггеры входа
+          items:
+            - name: Триггеры входа
+              href: relational-databases/triggers/logon-triggers.md
+            - name: Захват данных событий триггера входа
+              href: relational-databases/triggers/capture-logon-trigger-event-data.md
         - name: Триггеры DDL
           href: relational-databases/triggers/ddl-triggers.md
           items:
@@ -1853,6 +1992,8 @@
               href: relational-databases/triggers/get-information-about-dml-triggers.md
             - name: Удаление или отключение триггеров DML
               href: relational-databases/triggers/delete-or-disable-dml-triggers.md
+        - name: Управление безопасностью триггеров
+          href: relational-databases/triggers/manage-trigger-security.md
     - name: Определяемые пользователем функции
       href: relational-databases/user-defined-functions/user-defined-functions.md
       items:
@@ -2111,8 +2252,6 @@
     - name: Приложения уровня данных
       href: relational-databases/data-tier-applications/data-tier-applications.md
       items:
-        - name: "Поддержка приложений уровня данных для объектов и версий SQL\_Server"
-          href: relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md
         - name: DELETE
           href: relational-databases/data-tier-applications/delete-a-data-tier-application.md
         - name: Развертывание
@@ -2565,7 +2704,7 @@
             - name: Типы данных Java и SQL
               href: language-extensions/how-to/java-to-sql-data-types.md
             - name: Создание JAR-файл в Java
-              href: language-extensions/how-to/call-java-from-sql.md
+              href: language-extensions/how-to/create-a-java-jar-file-from-class-files.md
         - name: Справочник
           items:
             - name: API платформы расширений
@@ -3421,7 +3560,7 @@
               href: relational-databases/server-management-objects-smo/backward-compatibility-in-smo.md
             - name: Файлы и номера версий
               href: relational-databases/server-management-objects-smo/files-and-version-numbers.md
-            - name: 'Создание проекта SMO на языке Visual C# в среде Visual Studio .NET'
+            - name: Создание проекта SMO на языке Visual C# в среде Visual Studio .NET
               href: relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md
             - name: Диаграмма модели объектов SMO
               href: relational-databases/server-management-objects-smo/smo-object-model-diagram.md
@@ -3429,7 +3568,7 @@
               href: relational-databases/server-management-objects-smo/smo-object-model-namespaces.md
             - name: Объектная модель SMO
               href: relational-databases/server-management-objects-smo/smo-object-model.md
-            - name: 'Программирование SMO. Приступая к работе с Visual C# .NET'
+            - name: Программирование SMO. Приступая к работе с Visual C# .NET
               href: relational-databases/server-management-objects-smo/smo-programming-getting-started-in-visual-csharp-net.md
             - name: Языки программирования SMO
               href: relational-databases/server-management-objects-smo/smo-programming-languages.md
@@ -4393,6 +4532,10 @@
               href: database-engine/configure-windows/access-check-cache-server-configuration-options.md
             - name: нерегламентированные распределенные запросы
               href: database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md
+            - name: Время ожидания повторных попыток очистки ADR
+              href: database-engine/configure-windows/adr-cleaner-retry-timeout-configuration-option.md
+            - name: Коэффициент предварительного выделения ADR
+              href: database-engine/configure-windows/adr-preallocation-factor-server-configuration-option.md
             - name: affinity Input-Output mask
               href: database-engine/configure-windows/affinity-input-output-mask-server-configuration-option.md
             - name: affinity64 Input-Output mask
@@ -4403,6 +4546,8 @@
               href: database-engine/configure-windows/affinity64-mask-server-configuration-option.md
             - name: Agent XPs
               href: database-engine/configure-windows/agent-xps-server-configuration-option.md
+            - name: разрешить экспорт polybase
+              href: database-engine/configure-windows/allow-polybase-export.md
             - name: allow updates
               href: database-engine/configure-windows/allow-updates-server-configuration-option.md
             - name: 'Контрольная сумма резервной копии: значение по умолчанию'
@@ -4521,6 +4666,8 @@
               href: database-engine/configure-windows/show-advanced-options-server-configuration-option.md
             - name: Расширенные хранимые процедуры SMO и DMO
               href: database-engine/configure-windows/smo-and-dmo-xps-server-configuration-option.md
+            - name: Подавление ошибок модели восстановления
+              href: database-engine/configure-windows/suppress-recovery-model-errors-server-configuration-option.md
             - name: transform noise words
               href: database-engine/configure-windows/transform-noise-words-server-configuration-option.md
             - name: Настройка параметра two digit year cutoff
@@ -4591,6 +4738,8 @@
               href: database-engine/configure-windows/hide-an-instance-of-sql-server-database-engine.md
             - name: Настройка компонента Database Engine на прослушивание нескольких портов TCP
               href: database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md
+            - name: Включение протокола TCP с помощью SQLPS
+              href: powershell/how-to-enable-tcp-sqlps.md
             - name: Проверка наличия установленного и запущенного ядра СУБД
               href: database-engine/configure-windows/determine-whether-the-database-engine-is-installed-and-started.md
             - name: Соединение с компонентом Database Engine с использованием расширенной защиты
@@ -6232,7 +6381,7 @@
             - name: Справка F1 проводника служебной программы
               href: relational-databases/manage/utility-explorer-f1-help.md
         - name: "API Оценки\_SQL"
-          href: sql-assessment-api/sql-assessment-api-overview.md
+          href: tools/sql-assessment-api/sql-assessment-api-overview.md
     - name: Монитор
       href: relational-databases/performance/monitor-and-tune-for-performance.md
       items:
@@ -6707,7 +6856,7 @@
                   href: relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md
                 - name: 'MERGE в процедурах, скомпилированных в собственном коде'
                   href: relational-databases/in-memory-oltp/implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md
-                - name: 'SMO C# для In-Memory'
+                - name: SMO C# для In-Memory
                   href: relational-databases/in-memory-oltp/sql-server-management-objects-support-for-in-memory-oltp.md
             - name: Практические руководства
               items:
@@ -6903,9 +7052,9 @@
                   href: relational-databases/polybase/configure-scale-out-groups-windows.md
             - name: Мастер виртуализации данных
               items:
-                - name: Виртуализация реляционных данных
+                - name: Виртуализация данных
                   href: relational-databases/polybase/data-virtualization.md
-                - name: "Виртуализация данных в формате\_CSV"
+                - name: "Виртуализация файла\_CSV"
                   href: relational-databases/polybase/data-virtualization-csv.md
             - name: Диагностика
               items:
@@ -7554,6 +7703,8 @@
                   items:
                     - name: Запросы к столбцам с помощью Always Encrypted с SSMS
                       href: relational-databases/security/encryption/always-encrypted-query-columns-ssms.md
+                    - name: "Выполнение запросов к столбцам, использующим Always\_Encrypted, с помощью Azure\_Data\_Studio"
+                      href: relational-databases/security/encryption/always-encrypted-query-columns-ads.md
                 - name: 'Перенос конфиденциальных данных, защищенных с помощью Always Encrypted'
                   items:
                     - name: экспорт и импорт;
@@ -7762,118 +7913,8 @@
   items:
     - name: Обзор
       href: tools/overview-sql-tools.md
-    - name: Azure Data Studio
-      href: azure-data-studio/what-is.md
-      items:
-        - name: Установка
-          href: azure-data-studio/download-azure-data-studio.md
-        - name: Заметки о выпуске
-          href: azure-data-studio/release-notes-azure-data-studio.md
-        - name: Краткие руководства
-          items:
-            - name: Подключение и отправка запроса к SQL Server
-              href: azure-data-studio/quickstart-sql-server.md
-            - name: Подключение и отправка запроса к базе данных SQL Azure
-              href: azure-data-studio/quickstart-sql-database.md
-            - name: Подключение и отправка запроса к хранилищу данных SQL Azure
-              href: azure-data-studio/quickstart-sql-dw.md
-            - name: "Подключение и отправка запроса\_PostgreSQL"
-              href: azure-data-studio/quickstart-postgres.md
-        - name: Учебники
-          items:
-            - name: Редактор T-SQL
-              href: azure-data-studio/tutorial-sql-editor.md
-            - name: 'Пример аналитических сведений: медленные запросы'
-              href: azure-data-studio/tutorial-qds-sql-server.md
-            - name: 'Пример аналитических сведений: использование табличного пространства'
-              href: azure-data-studio/tutorial-table-space-sql-server.md
-            - name: Создание настраиваемых аналитических сведений
-              href: azure-data-studio/tutorial-build-custom-insight-sql-server.md
-            - name: Резервное копирование и восстановление
-              href: azure-data-studio/tutorial-backup-restore-sql-server.md
-        - name: Основные понятия
-          items:
-            - name: Модули
-              href: azure-data-studio/extensions.md
-              items:
-                - name: Расширение PostgreSQL
-                  href: azure-data-studio/postgres-extension.md
-                - name: Расширение виртуализации данных
-                  href: azure-data-studio/data-virtualization-extension.md
-                - name: "Агент SQL\_Server"
-                  href: azure-data-studio/sql-server-agent-extension.md
-                - name: Расширение центральных серверов управления SQL Server
-                  href: azure-data-studio/sql-server-cms-extension.md
-                - name: Расширение DACPAC-файлов SQL Server
-                  href: azure-data-studio/sql-server-dacpac-extension.md
-                - name: "Импорт SQL\_Server"
-                  href: azure-data-studio/sql-server-import-extension.md
-                - name: Приложение SQL Server Profiler
-                  href: azure-data-studio/sql-server-profiler-extension.md
-                - name: Расширение сравнения схем
-                  href: azure-data-studio/schema-compare-extension.md
-                - name: Расширение PowerShell
-                  href: azure-data-studio/powershell-extension.md
-                - name: Расширение для Управляемого экземпляра
-                  href: azure-data-studio/azure-sql-managed-instance-extension.md
-                - name: Расширение SandDance
-                  href: azure-data-studio/sanddance-extension.md
-            - name: Разработка расширений
-              items:
-                - name: Обзор расширяемости
-                  href: azure-data-studio/extensibility.md
-                - name: Разработка расширений
-                  href: azure-data-studio/extension-authoring.md
-                - name: Создание расширений
-                  href: azure-data-studio/tutorial-create-extension.md
-                - name: API расширяемости
-                  href: azure-data-studio/extensibility-apis.md
-            - name: Записные книжки
-              items:
-                - name: Общие сведения о записных книжках
-                  href: azure-data-studio/notebooks-guidance.md
-                - name: Использование ядра SQL
-                  href: azure-data-studio/notebooks-tutorial-sql-kernel.md
-                - name: Использование ядра Python
-                  href: azure-data-studio/notebooks-tutorial-python-kernel.md
-                - name: Kqlmagic
-                  href: azure-data-studio/notebooks-kql-magic.md
-                - name: Управление записной книжкой
-                  href: azure-data-studio/notebooks-manage-sql-server.md
-        - name: Практические руководства
-          items:
-            - name: Панели мониторинга и мини-приложения аналитических сведений
-              href: azure-data-studio/insight-widgets.md
-            - name: Фрагменты кода
-              href: azure-data-studio/code-snippets.md
-            - name: 'Интегрированный терминал (PowerShell, Bash)'
-              href: azure-data-studio/integrated-terminal.md
-            - name: сочетания клавиш
-              href: azure-data-studio/keyboard-shortcuts.md
-            - name: Просмотр ресурсов SQL Azure
-              href: azure-data-studio/azure-resource-explorer.md
-            - name: Группы серверов
-              href: azure-data-studio/server-groups.md
-            - name: Система управления версиями
-              href: azure-data-studio/source-control.md
-            - name: Сбор данных об использовании
-              href: azure-data-studio/usage-data-collection.md
-            - name: Параметры рабочей области и пользователя
-              href: azure-data-studio/settings.md
-            - name: Проверка подлинности Windows (Kerberos)
-              href: azure-data-studio/enable-kerberos.md
-            - name: Сбор данных об использовании
-              href: azure-data-studio/usage-data-collection.md
-        - name: Ресурсы
-          items:
-            - name: ВОПРОСЫ И ОТВЕТЫ
-              href: azure-data-studio/faq.md
-            - name: "Репозиторий GitHub Azure\_Data\_Studio\_>>"
-              href: 'https://www.github.com/Microsoft/azuredatastudio'
-            - name: "Блог по SQL\_Server\_>>"
-              href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
-            - name: "Сообщить о проблемах и внести предложения\_>>"
-              href: 'https://github.com/microsoft/azuredatastudio/issues'
+    - name: Azure Data Studio >
+      href: azure-data-studio/index.yml
     - name: Программы командной строки
       href: tools/command-prompt-utility-reference-database-engine.md
       items:
@@ -8416,6 +8457,8 @@
               href: ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md
             - name: Добавление внешнего инструмента в меню "Инструменты"
               href: ssms/add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md
+            - name: Установка расширений в SQL Server Management Studio (SSMS)
+              href: ssms/install-extensions-in-sql-server-management-studio-ssms.md
             - name: Служебная программа SSMS
               href: ssms/ssms-utility.md
             - name: Сочетания клавиш SSMS
@@ -9755,7 +9798,7 @@
     - name: Visual Studio Code
       items:
         - name: Скрипты T-SQL
-          href: visual-studio-code/sql-server-develop-use-vscode.md
+          href: tools/visual-studio-code/sql-server-develop-use-vscode.md
 - name: Учебники
   items:
     - name: "SQL\_Server"
@@ -10107,14 +10150,10 @@
   items:
     - name: Примеры баз данных
       items:
-        - name: Обзор примеров
+        - name: Обзор
           href: samples/sql-samples-where-are.md
-        - name: Все примеры с GitHub >>
-          href: 'https://github.com/Microsoft/sql-server-samples/tree/master/samples'
         - name: AdventureWorks
-          items:
-            - name: Установка и настройка
-              href: samples/adventureworks-install-configure.md
+          href: samples/adventureworks-install-configure.md
         - name: Wide World Importers
           items:
             - name: Обзор
@@ -10139,6 +10178,8 @@
               href: samples/wide-world-importers-generate-data.md
             - name: Рабочий процесс ETL
               href: samples/wide-world-importers-perform-etl.md
+        - name: Все примеры с GitHub >>
+          href: 'https://github.com/Microsoft/sql-server-samples/tree/master/samples'
     - name: Ошибки и события
       href: relational-databases/errors-events/errors-and-events-reference-database-engine.md
       items:
@@ -15434,6 +15475,8 @@
                   href: t-sql/functions/current-timestamp-transact-sql.md
                 - name: CURRENT_TIMEZONE
                   href: t-sql/functions/current-timezone-transact-sql.md
+                - name: CURRENT_TIMEZONE_ID
+                  href: t-sql/functions/current-timezone-id-transact-sql.md
                 - name: DATEADD
                   href: t-sql/functions/dateadd-transact-sql.md
                 - name: DATEDIFF
@@ -16011,7 +16054,7 @@
                       href: t-sql/language-elements/modulo-transact-sql.md
                     - name: '%= (присваивание остатка)'
                       href: t-sql/language-elements/modulo-equals-transact-sql.md
-                - name: = (присваивание)
+                - name: '= (присваивание)'
                   href: t-sql/language-elements/assignment-operator-transact-sql.md
                 - name: Побитовые
                   href: t-sql/language-elements/bitwise-operators-transact-sql.md
@@ -16033,7 +16076,7 @@
                 - name: Сравнение
                   href: t-sql/language-elements/comparison-operators-transact-sql.md
                   items:
-                    - name: = (равно)
+                    - name: '= (равно)'
                       href: t-sql/language-elements/equals-transact-sql.md
                     - name: '> (больше)'
                       href: t-sql/language-elements/greater-than-transact-sql.md
