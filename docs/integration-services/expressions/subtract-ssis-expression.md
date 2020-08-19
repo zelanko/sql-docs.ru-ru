@@ -1,4 +1,5 @@
 ---
+description: '- (вычитание) (выражение служб SSIS)'
 title: '- (вычитание) (выражение служб SSIS) | Документы Майкрософт'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b48da086-37dd-460a-8a4b-912f52c9b158
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0cfc28d52908a0578eeebe88ee7f9db749809ecd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f0615678e5c6613b5b709f711dc3f2cf9e7dfa8a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915200"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425366"
 ---
 # <a name="--subtract-ssis-expression"></a>- (вычитание) (выражение служб SSIS)
 
@@ -42,10 +43,10 @@ numeric_expression1 - numeric_expression2
 ## <a name="result-types"></a>Типы результата  
  Определяется типом данных двух аргументов. Дополнительные сведения см. в разделе [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Заключите унарное отрицательное выражение в скобки для того, чтобы выражение было вычислено в правильном порядке.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Если один из операндов равен NULL, то результатом является значение NULL.  
   
 ## <a name="expression-examples"></a>Примеры выражений  
@@ -67,7 +68,7 @@ ListPrice - StandardCost
 ListPrice - (ListPrice * @[Discount%])  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Очередность и ассоциативность операторов](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Операторы (выражение служб SSIS)](../../integration-services/expressions/operators-ssis-expression.md)  
   

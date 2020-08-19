@@ -1,4 +1,5 @@
 ---
+description: ISNULL (выражение служб SSIS)
 title: ISNULL (выражение служб SSIS) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 88dbf49e-1307-4dda-b9db-ff1632053550
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 15392de2f7a77edd0a4f43f2edc1346a52cd1a5e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e166a88cf5f1f9b1c5c3d54f80e5367efe4ee90d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914554"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425496"
 ---
 # <a name="isnull-ssis-expression"></a>ISNULL (выражение служб SSIS)
 
@@ -60,7 +61,7 @@ ISNULL(LastName)? "Unknown last name":LastName
 ISNULL(DaysToManufacture + @AddDays)  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции (выражение служб SSIS)](../../integration-services/expressions/functions-ssis-expression.md)   
  [COALESCE (Transact-SQL)](../../t-sql/language-elements/coalesce-transact-sql.md)  
   

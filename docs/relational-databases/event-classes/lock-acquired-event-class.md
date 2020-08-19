@@ -1,4 +1,5 @@
 ---
+description: Класс событий Lock:Acquired
 title: Класс событий Lock:Acquired | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: a6b1df2a-06ed-4fc3-8a84-f0becd5810d5
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 91899bddfc872487d29866c3c854563f22353827
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9bab6bfa38cb33f046bc2c96e18f359d2b31526b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85780178"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424256"
 ---
 # <a name="lockacquired-event-class"></a>Класс событий Lock:Acquired
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "85780178"
   
 ## <a name="lockacquired-event-class-data-columns"></a>Столбцы данных класса событий Lock:Acquired  
   
-|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |BigintData1|**bigint**|Идентификатор секции, если блокируемый ресурс секционирован.|52|Да|  
@@ -36,8 +37,8 @@ ms.locfileid: "85780178"
 |DatabaseID|**int**|Идентификатор базы данных, в которой запрашивается блокировка. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных ServerName захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |Duration|**bigint**|Длительность (в микросекундах) между выдачей запроса на блокировку и получением блокировки.|13|Да|  
 |EndTime|**datetime**|Время окончания события.|15|Да|  
-|EventClass|**int**|Тип события = 24.|27|нет|  
-|EventSequence|**int**|Последовательность данного события в запросе.|51|нет|  
+|EventClass|**int**|Тип события = 24.|27|Нет|  
+|EventSequence|**int**|Последовательность данного события в запросе.|51|Нет|  
 |GroupID|**int**|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |HostName|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |IntegerData2|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|55|Да|  
@@ -51,7 +52,7 @@ ms.locfileid: "85780178"
 |ObjectID2|**bigint**|Идентификатор связанного объекта или сущности, если он доступен и применим.|56|Да|  
 |OwnerID|**int**|1 = TRANSACTION<br /><br /> 2 = CURSOR<br /><br /> 3 = SESSION<br /><br /> 4 = SHARED_TRANSACTION_WORKSPACE<br /><br /> 5 = EXCLUSIVE_TRANSACTION_WORKSPACE|58|Да|  
 |RequestID|**int**|Идентификатор запроса, содержащего инструкцию.|49|Да|  
-|ServerName|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|нет|  
+|ServerName|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|Нет|  
 |SessionLoginName|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Login1 и при выполнении инструкции под именем Login2 SessionLoginName будет содержать значение Login1, а LoginName — значение Login2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |SPID|**int**|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |StartTime|**datetime**|Время начала события, если оно известно.|14|Да|  

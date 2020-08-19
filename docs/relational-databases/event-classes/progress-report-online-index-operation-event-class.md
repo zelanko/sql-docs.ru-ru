@@ -1,4 +1,5 @@
 ---
+description: 'Класс событий Progress Report: Online Index Operation'
 title: 'Класс событий Progress Report: Online Index Operation'
 ms.date: 06/03/2020
 ms.prod: sql
@@ -12,20 +13,20 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 69f03978dd362f706216d4d21cb1225ad2a8d10d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4dd043a813133a1e4d4d8e9c62b536d35e1db82a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733733"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424166"
 ---
-# <a name="progress-report-online-index-operation-event-class"></a>Класс событий Progress Report: Online Index Operation
+# <a name="progress-report-online-index-operation-event-class"></a>Progress Report: класс события Online Index Operation
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Класс событий Progress Report: класс событий Online Index Operation указывает ход операции оперативного построения индекса.  
   
 ## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Столбцы данных класса событий Progress Report: Online Index Operation  
   
-|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |BigintData1|**bigint**|Количество вставленных строк.|52|Да|  
@@ -35,8 +36,8 @@ ms.locfileid: "85733733"
 |имя_базы_данных|**nvarchar**|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
 |Duration|**bigint**|Длительность события (в микросекундах).|13|Да|  
 |EndTime|**datetime**|Время завершения операции с индексами в сети.|15|Да|  
-|EventClass|**int**|Тип события = 190.|27|нет|  
-|EventSequence|**int**|Последовательность данного события в запросе.|51|нет|  
+|EventClass|**int**|Тип события = 190.|27|Нет|  
+|EventSequence|**int**|Последовательность данного события в запросе.|51|Нет|  
 |EventSubClass|**int**|Тип подкласса события.<br /><br /> 1 = начало<br /><br /> 2 = начало выполнения этапа 1<br /><br /> 3 = этап 1. Выполнение закончилось<br /><br /> 2 = этап 2. Выполнение началось<br /><br /> 3 = этап 2. Выполнение закончилось<br /><br /> 6 = счетчик вставленных строк<br /><br /> 7 = готово<br /><br /> Этап 1 относится к базовому объекту (кластеризованному индексу или куче), или если в операции индексирования используется только один некластеризованный индекс. Этап 2 используется в случае, когда в операции построения индекса участвуют и исходное перестроение, и дополнительные некластеризованные индексы.  Например, если у объекта имеется кластеризованный индекс и несколько некластеризованных индексов, инструкция rebuild all вызовет перестроение всех индексов. При этом базовый объект (кластеризованный индекс) перестраивается на этапе 1, а все некластеризованные индексы — на этапе 2.|21|Да|  
 |GroupID|**int**|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |HostName|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
@@ -50,7 +51,7 @@ ms.locfileid: "85733733"
 |ObjectName|**nvarchar**|Имя объекта, на который указывает ссылка.|34|Да|  
 |PartitionId|**bigint**|ID формируемой секции.|65|Да|  
 |PartitionNumber|**int**|Порядковый номер формируемой секции.|25|Да|  
-|ServerName|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|нет|  
+|ServerName|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|Нет|  
 |SessionLoginName|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Login1 и при выполнении инструкции под именем Login2 SessionLoginName будет содержать значение Login1, а LoginName — значение Login2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |SPID|**int**|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |StartTime|**datetime**|Время начала события.|14|Да|  

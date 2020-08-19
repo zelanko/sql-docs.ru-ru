@@ -1,4 +1,5 @@
 ---
+description: Атрибуты соединения
 title: Атрибуты подключения | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e6d03089-30a3-4627-a642-591ba0980894
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c295ce88eedf1d4cddc4173f5dea39c44b01f83d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a7db2fb6361f114f4864436116f5b0f2f5651e79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299045"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424806"
 ---
 # <a name="connection-attributes"></a>Атрибуты соединения
 Атрибуты соединения являются характеристиками соединения. Например, поскольку транзакции выполняются на уровне соединения, уровень изоляции транзакции является атрибутом соединения. Аналогично, время ожидания входа или количество секунд ожидания при попытке подключения до истечения времени ожидания — это атрибут соединения.  

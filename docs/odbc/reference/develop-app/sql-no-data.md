@@ -1,4 +1,5 @@
 ---
+description: SQL_NO_DATA
 title: SQL_NO_DATA | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 07a4144a-a548-4578-b2be-715c3cf73bf8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9a399a270eb1cd2f3daf9449c53b1f577a6b9545
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eb81d6f1fce50a27aba203eec4b78648754010e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299794"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424576"
 ---
 # <a name="sql_no_data"></a>SQL_NO_DATA
 При использовании ODBC 3. Приложение *x* вызывает **SQLExecDirect**, **SQLExecute**или **метод SQLParamData** в ODBC 2. драйвер *x* для выполнения инструкции UPDATE или DELETE, которая не влияет на строки в источнике данных, драйвер должен возвращать SQL_SUCCESS, а не SQL_NO_DATA. При использовании ODBC 2. *x* или ODBC 3. Приложение *x* , работающее с ODBC 3. драйвер *x* вызывает **SQLExecDirect**, **SQLExecute**или **метод SQLParamData** с одним и тем же результатом, ODBC 3. драйвер *x* должен возвращать SQL_NO_DATA.

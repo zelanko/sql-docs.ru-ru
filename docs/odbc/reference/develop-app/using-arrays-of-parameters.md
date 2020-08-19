@@ -1,4 +1,5 @@
 ---
+description: Использование массивов параметров
 title: Использование массивов параметров | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5a28be88-e171-4f5b-bf4d-543c4383c869
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b584dc3d635e9fa8ce3228e4e89b0f24451fe165
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1a592131165e7dc2370ab1d22a3d9eba5f9609dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306805"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424416"
 ---
 # <a name="using-arrays-of-parameters"></a>Использование массивов параметров
 Чтобы использовать массивы параметров, приложение вызывает **SQLSetStmtAttr** с аргументом *атрибута* SQL_ATTR_PARAMSET_SIZE, чтобы указать количество наборов параметров. Он вызывает **SQLSetStmtAttr** с аргументом *атрибута* SQL_ATTR_PARAMS_PROCESSED_PTR, чтобы указать адрес переменной, в которой драйвер может вернуть количество обработанных наборов параметров, включая наборы ошибок. Он вызывает **SQLSetStmtAttr** с аргументом *атрибута* SQL_ATTR_PARAM_STATUS_PTR для указания на массив, в котором возвращаются сведения о состоянии для каждой строки значений параметров. Драйвер сохраняет эти адреса в структуре, которая поддерживается для инструкции.  

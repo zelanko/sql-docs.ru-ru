@@ -1,4 +1,5 @@
 ---
+description: Типы данных в ODBC
 title: Типы данных в ODBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7332d93e-44db-4132-9c10-988dbc13369e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a9a602c43a257dba2cd856625c1520077188bb20
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eb063050a79ff11ce40d066bb749434699f6801d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305195"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424766"
 ---
 # <a name="data-types-in-odbc"></a>Типы данных в ODBC
 ODBC использует два набора типов данных: типы данных SQL и типы данных C. Типы данных SQL используются в источнике данных, а типы данных C — в коде на языке C в приложении.  

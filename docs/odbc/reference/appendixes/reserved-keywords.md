@@ -1,4 +1,5 @@
 ---
+description: Зарезервированные слова
 title: Зарезервированные ключевые слова | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3c83df20d95b9fe968b7c1c01cd8a9031043c8ad
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: a469e48f9de46453f60cfcbb468110dfb1f5d9dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362989"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424986"
 ---
 # <a name="reserved-keywords"></a>Зарезервированные слова
 Следующие слова зарезервированы для использования в вызовах функций ODBC. Эти слова не ограничивают минимальную грамматику SQL; Однако для обеспечения совместимости с драйверами, поддерживающими основную грамматику SQL, приложения должны избегать использования этих ключевых слов. Значение #**define** SQL_ODBC_KEYWORDS содержит список этих ключевых слов с разделителями-запятыми.  
@@ -184,7 +185,7 @@ ms.locfileid: "87362989"
         ONLY  
         OPEN  
         OPTION  
-        OR  
+        ИЛИ  
         ORDER  
         OUTER  
         OUTPUT  
@@ -246,7 +247,7 @@ ms.locfileid: "87362989"
         TRANSLATE  
         TRANSLATION  
         TRIM  
-        TRUE  
+        true  
         UNION  
         UNIQUE  
         UNKNOWN  

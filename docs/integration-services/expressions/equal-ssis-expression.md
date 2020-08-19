@@ -1,4 +1,5 @@
 ---
+description: == (равно) (выражение служб SSIS)
 title: == (равно) (выражение служб SSIS) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 36fd2354-7b93-4c95-9cf3-51ee24568950
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5a8e26da00bf530052b1ae7f342d40f922a71d25
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 65ef2568a30ada4503252adf404c24b2c8b5017d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86910904"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425576"
 ---
 # <a name="-equal-ssis-expression"></a>== (равно) (выражение служб SSIS)
 
@@ -44,7 +45,7 @@ expression1 == expression2
 ## <a name="result-types"></a>Типы результата  
  DT_BOOL  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Если какое-нибудь выражение имеет значение NULL, то результат сравнения будет NULL. Если оба выражения имеют значение NULL, то результат будет NULL.  
   
  Наборы выражений *expression1* и *expression2*должны удовлетворять одному из следующих правил:  
@@ -106,7 +107,7 @@ ListPrice == 500
 @LPrice == 500  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [\!= (не равно) (выражение служб SSIS)](../../integration-services/expressions/unequal-ssis-expression.md)   
  [Очередность и ассоциативность операторов](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Операторы (выражение служб SSIS)](../../integration-services/expressions/operators-ssis-expression.md)  

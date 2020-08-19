@@ -1,4 +1,5 @@
 ---
+description: Настройка курсора
 title: Настройка курсора | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b80afb0e-ef2f-408f-86f5-a392edd99a56
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 805d8076c853513d86f9a3a92d9342d1224226c9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 307245dc403167f5bd857005f084ed22498d3ee8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299804"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424586"
 ---
 # <a name="setting-up-the-cursor"></a>Настройка курсора
 Приложение может указать тип курсора перед выполнением инструкции, которая создает результирующий набор. Это достигается с помощью атрибута оператора SQL_ATTR_CURSOR_TYPE. Если в приложении явно не указан тип, будет использоваться однонаправленный курсор. Для получения смешанного курсора приложение указывает курсор, управляемый набором ключей, но объявляет размер набора ключей меньше, чем размер результирующих наборов.  

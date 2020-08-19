@@ -1,4 +1,5 @@
 ---
+description: catalog.executions (база данных SSISDB)
 title: catalog.executions (база данных SSISDB) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 879f13b0-331d-4dee-a079-edfaca11ae5b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 33a7603502d1b43ea7cfdd1fa5f9c84720705ade
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 438d551f45447b0b03b075576af9cffb2bde8a36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912566"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425106"
 ---
 # <a name="catalogexecutions-ssisdb-database"></a>catalog.executions (база данных SSISDB)
 
@@ -29,7 +30,7 @@ ms.locfileid: "86912566"
 
   Отображает экземпляры выполнения пакета в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Пакеты, которые выполняются с помощью задачи «Выполнение пакета», запускаются в том же экземпляре выполнения, что и родительский пакет.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |execution_id|**bigint**|Уникальный идентификатор для экземпляра выполнения.|  
 |folder_name|**sysname(nvarchar(128))**|Имя папки, которая содержит проект.|  
@@ -62,7 +63,7 @@ ms.locfileid: "86912566"
 |machine_name|**nvarchar(128)**|Имя компьютера, на котором запущен экземпляр сервера.|  
 |dump_id|**uniqueidentifier**|Идентификатор дампа выполнения.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  В этом представлении отображается по одной строке для каждого экземпляра выполнения в каталоге.  
   
 ## <a name="permissions"></a>Разрешения  

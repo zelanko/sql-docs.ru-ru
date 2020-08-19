@@ -1,4 +1,5 @@
 ---
+description: Объявление версии ODBC для приложения&#39;s
 title: Объявление приложения&#39;s версии ODBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 083a1ef5-580a-4979-9cf3-50f4549a080a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ba346ed7f7a261446110c5513026d20a86fd3a19
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0ff41a7a8b56133b0a44947980805c5b46238bad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285234"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424725"
 ---
 # <a name="declaring-the-application39s-odbc-version"></a>Объявление версии ODBC для приложения&#39;s
 Прежде чем приложение выделит соединение, оно должно установить атрибут среды SQL_ATTR_ODBC_VERSION. Этот атрибут указывает, что приложение соответствует спецификации ODBC *2. x* или ODBC *3. x* при использовании следующих элементов:  

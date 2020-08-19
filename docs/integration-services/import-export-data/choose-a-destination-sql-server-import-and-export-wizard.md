@@ -1,4 +1,5 @@
 ---
+description: Выбор назначения (мастер импорта и экспорта SQL Server)
 title: Выбор назначения (мастер импорта и экспорта SQL Server) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d0b5484de65a497df68ca4d87f6a67ec3581728c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f452ba87ccb9ac1b0552f600b554f23742d909c9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923087"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425296"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>Выбор назначения (мастер импорта и экспорта SQL Server)
 
@@ -61,7 +62,7 @@ ms.locfileid: "86923087"
 -   [Подключение к неструктурированным (текстовым) файлам](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md)
 -   [Подключение к Excel](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)
 -   [Подключение к Access](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)
--   [Подключение к ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)
+-   [Подключение с помощью ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)
 -   [Подключение к хранилищу BLOB-объектов Azure](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)
 -   [Подключение к PostgreSQL](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)
 -   [Подключение к MySQL](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)

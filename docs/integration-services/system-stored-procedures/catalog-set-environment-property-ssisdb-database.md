@@ -1,4 +1,5 @@
 ---
+description: catalog.set_environment_property (база данных SSISDB)
 title: catalog.set_environment_property (база данных SSISDB) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: a345675b-d32e-4624-96cf-ec656730b114
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 71d673ddb0ebb66b22cee7651bc74bd44cf7e089
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ba69c12d93b683afa8d11669523153dc6d79d0c6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912898"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425146"
 ---
 # <a name="catalogset_environment_property-ssisdb-database"></a>catalog.set_environment_property (база данных SSISDB)
 
@@ -43,10 +44,10 @@ catalog.set_environment_property [ @folder_name = ] folder_name
  Имя среды. Параметр *environment_name* имеет тип **nvarchar(128)** .  
   
  [ @property_name = ] *property_name*  
- Имя свойства среды. Параметр *property_name* имеет тип **nvarchar(128)** .  
+ Имя свойства среды. Параметр *property_name* имеет тип **nvarchar(128)**.  
   
  [ @property_value = ] *property_value*  
- Значение свойства среды. Параметр *property_value* имеет тип **nvarchar(1024)** .  
+ Значение свойства среды. Параметр *property_value* имеет тип **nvarchar(1024)**.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение)  
@@ -72,7 +73,7 @@ catalog.set_environment_property [ @folder_name = ] folder_name
   
 -   Недопустимое имя среды  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  В этом выпуске может быть задано только свойство `Description`. Значение свойства `Description` не может иметь длину более 4000 символов.  
   
   

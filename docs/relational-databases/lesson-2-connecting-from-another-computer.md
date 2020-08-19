@@ -1,4 +1,5 @@
 ---
+description: Урок 2. Подключение с другого компьютера
 title: Урок 2. Соединение с другого компьютера | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/08/2016
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 77b0617fbaa8ea90388f40e16ed2b61cfd3bb2b8
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: b00c97499a8db987d9436e3c8a4cd703fb63c3ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396503"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424146"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Урок 2. Подключение с другого компьютера
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]

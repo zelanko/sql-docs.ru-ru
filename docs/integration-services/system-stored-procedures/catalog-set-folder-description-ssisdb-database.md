@@ -1,4 +1,5 @@
 ---
+description: catalog.set_folder_description (база данных SSISDB)
 title: catalog.set_folder_description (база данных SSISDB) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 802416f6-5177-4db5-bca5-976dec5faf53
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 16dad0ab077a475cf495b11e958fa6336c189671
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 18e7cb22f94e33328ed08968052d03b0261c73df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912820"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425066"
 ---
 # <a name="catalogset_folder_description-ssisdb-database"></a>catalog.set_folder_description (база данных SSISDB)
 
@@ -38,7 +39,7 @@ catalog.set_folder_description [ @folder_name = ] folder_name
  Имя папки. Параметр *folder_name* имеет тип **nvarchar(128)** .  
   
  [ @folder_description = ] *folder_description*  
- Описание папки. Параметр *folder_description* имеет тип **nvarchar(MAX)** .  
+ Описание папки. Параметр *folder_description* имеет тип **nvarchar(MAX)**.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
  None  

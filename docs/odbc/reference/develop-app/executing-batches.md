@@ -1,4 +1,5 @@
 ---
+description: Выполнение пакетов
 title: Исполнение пакетов | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f082c717-4f82-4820-a2fa-ba607d8fd872
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0ce0c043fcfad41a624ad129a757a047d2c87fb6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b3bb923f95dfcfb731d472aad8ead7ff35053171
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305735"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424646"
 ---
 # <a name="executing-batches"></a>Выполнение пакетов
 Перед выполнением пакета инструкций приложение должно сначала проверить, поддерживаются ли они. Для этого приложение вызывает **SQLGetInfo** с параметрами SQL_BATCH_SUPPORT, SQL_PARAM_ARRAY_ROW_COUNTS и SQL_PARAM_ARRAY_SELECTS. Первый параметр возвращает информацию о том, поддерживаются ли в явных пакетах и процедурах инструкции создания и создания результирующих наборов строк, а последние два параметра возвращают сведения о доступности количества строк и результирующих наборов в параметризованном выполнении.  

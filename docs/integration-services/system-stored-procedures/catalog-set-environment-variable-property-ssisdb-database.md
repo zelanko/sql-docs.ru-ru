@@ -1,4 +1,5 @@
 ---
+description: catalog.set_environment_variable_property (база данных SSISDB)
 title: catalog.set_environment_variable_property (база данных SSISDB) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: c1deb31e-b8d1-44ca-b355-570959bc6478
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: adb5a783c928cf9bac1f3ac9668306bff5eb8456
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f4cf7d169d9cdd3e319b243f831a76bb3fe3ab4a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912876"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425126"
 ---
 # <a name="catalogset_environment_variable_property-ssisdb-database"></a>catalog.set_environment_variable_property (база данных SSISDB)
 
@@ -44,13 +45,13 @@ catalog.set_environment_variable_property [ @folder_name = ] folder_name
  Имя среды. Параметр *environment_name* имеет тип **nvarchar(128)** .  
   
  [ @variable_name = ] *variable_name*  
- Имя переменной среды. Параметр *variable_name* имеет тип **nvarchar(128)** .  
+ Имя переменной среды. Параметр *variable_name* имеет тип **nvarchar(128)**.  
   
  [ @property_name = ] *property_name*  
- Имя свойства переменной среды. Параметр *property_name* имеет тип **nvarchar(128)** .  
+ Имя свойства переменной среды. Параметр *property_name* имеет тип **nvarchar(128)**.  
   
  [ @property_value = ] *property_value*  
- Значение свойства переменной среды. Параметр *property_value* имеет тип **nvarchar(4000)** .  
+ Значение свойства переменной среды. Параметр *property_value* имеет тип **nvarchar(4000)**.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение)  
@@ -80,7 +81,7 @@ catalog.set_environment_variable_property [ @folder_name = ] folder_name
   
 -   Пользователь не имеет соответствующих разрешений  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  В этом выпуске может быть задано только свойство `Description`. Значение свойства `Description` не может иметь длину более 4000 символов.  
   
   

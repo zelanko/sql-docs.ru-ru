@@ -1,4 +1,5 @@
 ---
+description: Подключение к источнику данных Oracle (мастер импорта и экспорта SQL Server)
 title: Подключение к источнику данных Oracle (мастер импорта и экспорта SQL Server) | Документы Майкрософт
 ms.custom: ''
 ms.date: 06/29/2020
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 202527022ccc78a4f0c89bb3cfbfe775ecde207b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 589010cedb022bfdaf22590eaeb92bea76b54420
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914141"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425276"
 ---
 # <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>Подключение к источнику данных Oracle (мастер импорта и экспорта SQL Server)
 
@@ -87,7 +88,7 @@ Driver={Microsoft ODBC for Oracle};Server=myServerAddress;Uid=myUsername;Pwd=myP
 
 `SELECT host_name FROM v$instance`
 
-или диспетчер конфигурации служб
+или
 
 `SELECT sys_context('USERENV','SERVER_HOST') FROM dual`
 

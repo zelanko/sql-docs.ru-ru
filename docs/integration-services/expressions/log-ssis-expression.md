@@ -1,4 +1,5 @@
 ---
+description: LOG (выражение служб SSIS)
 title: LOG (выражение служб SSIS) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f7fccace-c178-4e13-bde9-7dc4ef1d98fa
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 93e05e295895ad4defb59ffb4921df526dc35bd4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 211797a6291145b7f1499f23c03f255f504eaf9b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918352"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425456"
 ---
 # <a name="log-ssis-expression"></a>LOG (выражение служб SSIS)
 
@@ -41,7 +42,7 @@ LOG(numeric_expression)
 ## <a name="result-types"></a>Типы результата  
  DT_R8  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Перед вычислением логарифма аргумент *numeric_expression* приводится к типу DT_R8. Дополнительные сведения см. в разделе [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
  Если вычисленное значение *numeric_expression* является нулем или отрицательным значением, возвращается результат NULL.  
@@ -65,7 +66,7 @@ LOG(Length)
 LOG(@Length)   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [EXP (выражение служб SSIS)](../../integration-services/expressions/exp-ssis-expression.md)   
  [LN (выражение служб SSIS)](../../integration-services/expressions/ln-ssis-expression.md)   
  [Функции (выражение служб SSIS)](../../integration-services/expressions/functions-ssis-expression.md)  

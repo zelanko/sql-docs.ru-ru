@@ -1,4 +1,5 @@
 ---
+description: Общие сведения об обновлении данных
 title: Общие сведения об обновлении данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 062036a4-cda6-4aaa-9765-f1ec3e0b31b1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9972ab61f041385ae4ca616df093ae63ad7a47d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2b1755ea75426030a96ed7b349cc82f0fc7e282a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300390"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424426"
 ---
 # <a name="updating-data-overview"></a>Общие сведения об обновлении данных
 Приложения могут обновлять данные либо путем исполнения инструкций SQL, либо путем вызова **SQLSetPos** или **SQLBulkOperations**. Инструкции **Update**, **Delete**и **INSERT** действуют непосредственно в источнике данных и обычно поддерживаются драйверами. Поиск в инструкциях UPDATE и DELETE содержит спецификацию изменяемых строк. Позиционированные инструкции UPDATE и DELETE и **SQLSetPos** действуют в источнике данных с помощью курсора и менее широко поддерживаются.  

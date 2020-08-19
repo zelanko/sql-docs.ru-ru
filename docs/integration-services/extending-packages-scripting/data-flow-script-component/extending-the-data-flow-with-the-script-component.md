@@ -1,4 +1,5 @@
 ---
+description: Расширение потока данных с помощью компонента скрипта
 title: Расширение потока данных с помощью компонента скрипта | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 072bc4b8-363a-4131-87c3-240338e2fa5c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3f8818197bffefd42004dbd4d0cc4d1732d79029
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 82f34ab83935bee2972a4dbb2b007eb2632b9fba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913420"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425396"
 ---
 # <a name="extending-the-data-flow-with-the-script-component"></a>Расширение потока данных с помощью компонента скрипта
 
@@ -48,7 +49,7 @@ ms.locfileid: "86913420"
  В следующих подразделах представлены дополнительные сведения о компоненте скрипта.  
   
  [Настройка компонента скрипта в редакторе компонента скрипта](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)  
- Свойства, настраиваемые в **редакторе преобразования "Скрипт"** , влияют на возможности и производительность кода компонента скрипта.  
+ Свойства, настраиваемые в **редакторе преобразования "Скрипт"**, влияют на возможности и производительность кода компонента скрипта.  
   
  [Кодирование и отладка компонента скрипта](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)  
  Для разработки скриптов, содержащихся в компоненте скрипта, используется среда разработки на базе набора средств [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] для работы с приложениями (VSTA).  
@@ -74,7 +75,7 @@ ms.locfileid: "86913420"
  [Дополнительные примеры компонента скрипта](../../../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
  Следующие простые примеры демонстрируют несколько возможных способов использования компонента скрипта.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Компонент скрипта](../../../integration-services/data-flow/transformations/script-component.md)   
  [Сравнение задачи «Скрипт» и компонента скрипта](../../../integration-services/extending-packages-scripting/comparing-the-script-task-and-the-script-component.md)  
   

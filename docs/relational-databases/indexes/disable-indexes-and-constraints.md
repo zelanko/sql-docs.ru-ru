@@ -1,4 +1,5 @@
 ---
+description: Отключение индексов и ограничений
 title: Отключение индексов и ограничений | Документация Майкрософт
 ms.custom: ''
 ms.date: 02/17/2017
@@ -24,12 +25,12 @@ ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6a012fc4aca38401a7476b759a9a13995dad87b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 464b8069b09af65c86521878803fdf1bd7744548
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629774"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424176"
 ---
 # <a name="disable-indexes-and-constraints"></a>Отключение индексов и ограничений
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -147,15 +148,15 @@ ms.locfileid: "85629774"
   
      Операция отключения успешно завершена.  
   
--   **Ошибка**  
+-   **Error**  
   
      При отключении индекса возникла ошибка, и операция отключения не была успешно завершена.  
   
--   **Остановлено**  
+-   **Остановлена**  
   
      Отключение индекса не было завершено успешно, поскольку пользователь остановил операцию.  
   
- **Сообщение**  
+ **Message**  
  Предоставляет текст сообщений об ошибках в ходе операции отключения. Во время выполнения ошибки отображаются в виде гиперссылок. Текст гиперссылок описывает тело ошибки. Столбец **Сообщение** редко имеет ширину, достаточную для прочтения всего текстового сообщения. Есть два способа получить полный текст.  
   
 -   Переместите указатель мыши на ячейку сообщения для вызова подсказки, содержащей текст ошибки.  

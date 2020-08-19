@@ -1,4 +1,5 @@
 ---
+description: ^ (битовое исключающее ИЛИ) (выражение служб SSIS)
 title: ^ (битовое исключающее ИЛИ) (выражение служб SSIS) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 6ac53cab-29c4-4835-9f87-371b058b2f38
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 64e9e58118ab2922f73b5c4dbb1047f12ab02c7e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8887ddc1b7b7fab04a510d856f22e90723858f51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923510"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425586"
 ---
 # <a name="-bitwise-exclusive-or-ssis-expression"></a>^ (битовое исключающее ИЛИ) (выражение служб SSIS)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  Выполняет побитовую исключающую операцию ИЛИ для двух целочисленных значений. Она сравнивает каждый бит первого операнда с соответствующим битом второго операнда. Если один из битов равен 0, а второй равен 1, соответствующий бит результата устанавливается в 1. Если оба бита равны 0 или оба бита равны 1, соответствующий бит результата равен 0.  
+  Выполняет побитовую исключающую операцию ИЛИ для двух целочисленных значений. Она сравнивает каждый бит первого операнда с соответствующим битом второго операнда. Если один бит равен 0, а другой равен 1, соответствующий бит результата устанавливается равным 1. Если оба бита равны 0 или оба бита равны 1, соответствующий бит результата равен 0.  
   
  Оба условия должны относиться либо к целым числам со знаком, либо к беззнаковым целым числам.  
   
@@ -44,7 +45,7 @@ integer_expression1 ^ integer_expression2
 ## <a name="result-types"></a>Типы результата  
  Определяются типами данных обоих аргументов. Дополнительные сведения см. в разделе [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Если значение любого из условий — NULL, то результат выражения тоже будет NULL.  
   
 ## <a name="expression-examples"></a>Примеры выражений  
@@ -96,7 +97,7 @@ ReorderPoint ^ SafetyStockLevel
   
  00000110  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [&#124;&#124; (логическое ИЛИ) (выражение служб SSIS)](../../integration-services/expressions/logical-or-ssis-expression.md)   
  [&#124; (битовое включающее ИЛИ) (выражение служб SSIS)](../../integration-services/expressions/bitwise-inclusive-or-ssis-expression.md)   
  [Очередность и ассоциативность операторов](../../integration-services/expressions/operator-precedence-and-associativity.md)   

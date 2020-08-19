@@ -1,4 +1,5 @@
 ---
+description: catalog.execution_property_override_values
 title: catalog.execution_property_override_values | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 83cbdd6f-ddde-47bf-abde-36bd24272621
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bad614fef3ce0a6942803464b618b2d9d3ce98b4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 230e2057c8257a37eb96c683abaf8348307a0cba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912570"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425096"
 ---
 # <a name="catalogexecution_property_override_values"></a>catalog.execution_property_override_values 
 
@@ -26,7 +27,7 @@ ms.locfileid: "86912570"
 
   Отображает значения переопределений свойств, заданные во время выполнения пакета.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |property_id|**bigint**|Уникальный идентификатор значения переопределения свойства.|  
 |execution_id|**bigint**|Уникальный идентификатор для экземпляра исполнения.|  
@@ -34,7 +35,7 @@ ms.locfileid: "86912570"
 |property_value|**nvarchar(max)**|Значение переопределения свойства.|  
 |sensitive|**bit**|Если значение равно 1, свойство является конфиденциальным и шифруется при сохранении. Если значение равно 0, свойство не является конфиденциальным и его значение сохраняется в формате открытого текста.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Это представление отображает по строке для каждого выполнения, в котором значения свойств были переопределены с помощью раздела **Переопределения свойств** вкладки **Расширенные** диалогового окна **Выполнение пакета**. Путь к свойству извлекается из свойства **Путь к пакету** задачи пакета.  
   
 ## <a name="permissions"></a>Разрешения  

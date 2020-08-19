@@ -1,4 +1,5 @@
 ---
+description: Правила диагностической обработки
 title: Правила обработки диагностических сведений | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 74387c3a-d6b3-4c35-b209-b9612602b20a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9f7f9d19a5a369e9da0efbc0d62f8e556b0597c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3112f6db31a4369ec880e31a7bb8be6e15071bed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305845"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424666"
 ---
 # <a name="diagnostic-handling-rules"></a>Правила диагностической обработки
 Следующие правила управляют диагностической обработкой в **SQLGetDiagRec** и **SQLGetDiagField**.  

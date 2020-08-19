@@ -1,4 +1,5 @@
 ---
+description: Создание расширенных хранимых процедур
 title: Создание расширенных хранимых процедур | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9f7c0cdb-6d88-44c0-b049-29953ae75717
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a649325e99d00aff6115ec5c0039dbbb1c7edb2a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 59a83b935549d1fdf856b61a41b6bc7727b177b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723430"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424186"
 ---
 # <a name="creating-extended-stored-procedures"></a>Создание расширенных хранимых процедур
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -74,7 +75,7 @@ __declspec(dllexport) ULONG __GetXpVersion()
   
  Для отладки расширенной DLL-библиотеки хранимой процедуры скопируйте ее в каталог [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Binn. Чтобы указать исполняемый файл для сеанса отладки, введите путь и имя [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] исполняемого файла (например, C:\PROGRAM Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Sqlservr.exe). Дополнительные сведения о аргументах sqlservr см. в разделе [приложение sqlservr](../../tools/sqlservr-application.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [API srv_got_attention &#40;расширенных хранимых процедур&#41;](../../relational-databases/extended-stored-procedures-reference/srv-got-attention-extended-stored-procedure-api.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Подключение к хранилищу BLOB-объектов (мастер импорта и экспорта SQL Server)
 title: Подключение к хранилищу BLOB-объектов (мастер импорта и экспорта SQL Server) | Документы Майкрософт
 ms.custom: ''
 ms.date: 02/17/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e2e482b8-5f90-48c5-93fb-b412ed52659f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2c15c03c5041aeebb2ac46776eb65921f4725bd8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7338ef58a86667b829fc1554660b316690de451a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914114"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425266"
 ---
 # <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>Подключение к хранилищу BLOB-объектов (мастер импорта и экспорта SQL Server)
 
@@ -47,10 +48,10 @@ ms.locfileid: "86914114"
 **Ключ учетной записи**  
 Введите ключ для учетной записи хранения Azure.  
   
- **Использовать HTTPS**  
+ **Используйте протокол HTTPS.**  
  Укажите, какой протокол следует использовать для подключения к учетной записи хранения: HTTP или HTTPS.  
   
- **Использовать локальную учетную запись разработчика**  
+ **Use local developer account (Использовать локальную учетную запись разработчика)**  
  Укажите, следует ли использовать эмулятор хранения на локальном компьютере.  
   
  **Имя контейнера больших двоичных объектов**  
@@ -62,7 +63,7 @@ ms.locfileid: "86914114"
  **Знак-разделитель столбцов**  
  Если выбран текстовый формат, введите знак-разделитель столбцов.  
   
- **Использовать первую строку в качестве имен столбцов**  
+ **Use first row as column names (Использовать первую строку в качестве имен столбцов)**  
  Укажите, содержит ли первая строка данных имена столбцов.  
 
 ## <a name="see-also"></a>См. также раздел

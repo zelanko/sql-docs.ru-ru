@@ -1,4 +1,5 @@
 ---
+description: Подключение с помощью SQLBrowseConnect
 title: Подключение с помощью SQLBrowseConnect | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6c2e9f76-b766-48df-b109-246bb05ae45d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e4d738d394bb3c507f6aa08f736016b51ac4fefb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d7ad54276f54155c68fbdbe984642dda4300a7c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294664"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424826"
 ---
 # <a name="connecting-with-sqlbrowseconnect"></a>Подключение с помощью SQLBrowseConnect
 **SQLBrowseConnect**, например **SQLDriverConnect**, использует строку подключения. Однако при использовании **SQLBrowseConnect**приложение может создать полную строку подключения во время выполнения. Это позволяет приложению:  

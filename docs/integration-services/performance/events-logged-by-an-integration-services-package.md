@@ -1,4 +1,5 @@
 ---
+description: Регистрация событий в пакете служб Integration Services
 title: Регистрация событий в пакете служб Integration Services | Документы Майкрософт
 ms.custom: supportability
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cd247b193540076a1d0f922e94e752b1ea0456bb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 44f3efa30bc33bd7a8b9bc5057d2877be62f8f8a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919150"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425186"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Регистрация событий в пакете служб Integration Services
 

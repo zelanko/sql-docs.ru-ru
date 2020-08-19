@@ -1,4 +1,5 @@
 ---
+description: Затрагиваемые компоненты ODBC
 title: Затронутые компоненты ODBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 71fa6ea4-007c-4c2b-b5af-2cec6ea79b58
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8d9155fa1c9df5846f069e93a3db1b969e9219ed
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4874a22d441ec856c25e08dc20cf04e0f0be89cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306478"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424866"
 ---
 # <a name="affected-odbc-components"></a>Затрагиваемые компоненты ODBC
 Обратная совместимость. описание того, как повлияли приложения, диспетчер драйверов и драйверы на введение новой версии диспетчера драйверов. Это влияет на приложения и драйверы, если один или оба они остаются в старой версии. Поэтому следует учитывать три типа обратной совместимости, как показано в следующей таблице.  

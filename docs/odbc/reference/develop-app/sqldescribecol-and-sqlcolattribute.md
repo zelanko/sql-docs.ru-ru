@@ -1,4 +1,5 @@
 ---
+description: SQLDescribeCol и SQLColAttribute
 title: SQLDescribeCol и SQLColAttribute | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c2ca442c-03a8-4e0f-9e67-b300bb15962f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8bd21010908473e4216a02a504b2de25578d5c84
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2de375ea207e8e393fa36c9795ebf0e3ca5f428b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299764"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424506"
 ---
 # <a name="sqldescribecol-and-sqlcolattribute"></a>SQLDescribeCol и SQLColAttribute
 **SQLDescribeCol** и **SQLColAttribute** используются для получения метаданных результирующего набора. Разница между этими двумя функциями заключается в том, что **SQLDescribeCol** всегда возвращает те же пять фрагментов информации (имя столбца, тип данных, точность, масштаб и допустимость значений NULL), а **SQLColAttribute** возвращает один фрагмент информации, запрашиваемый приложением. Однако **SQLColAttribute** может возвращать более широкие возможности выбора метаданных, включая чувствительность столбца к регистру, размер отображения, возможность обновления и возможность поиска.  

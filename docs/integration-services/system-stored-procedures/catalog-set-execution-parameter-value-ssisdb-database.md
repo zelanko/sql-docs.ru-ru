@@ -1,4 +1,5 @@
 ---
+description: catalog.set_execution_parameter_value (база данных SSISDB)
 title: catalog.set_execution_parameter_value (база данных SSISDB) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: da59f45f073f579a02b84727fad0e5ffef3faec5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7cc721f7f3568303d9fbb9f9a5f0724f8548207d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912843"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425116"
 ---
 # <a name="catalogset_execution_parameter_value-ssisdb-database"></a>catalog.set_execution_parameter_value (база данных SSISDB)
 
@@ -65,19 +66,19 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
  Параметр *object_type* имеет тип **smallint**.  
   
  [ @parameter_name = ] *parameter_name*  
- Имя параметра. Параметр *parameter_name* имеет тип **nvarchar(128)** .  
+ Имя параметра. Параметр *parameter_name* имеет тип **nvarchar(128)**.  
   
  [ @parameter_value = ] *parameter_value*  
  Значение параметра. Параметр *parameter_value* имеет тип **sql_variant**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Чтобы выяснить значения параметров, использованные в ходе данного выполнения, выполните запрос к представлению catalog.execution_parameter_values.  
   
  Чтобы задать диапазон информации, регистрируемой в ходе выполнения пакета, присвойте параметру *parameter_name* значение LOGGING_LEVEL, а параметру *parameter_value* — одно из указанных ниже значений.  
   
  Присвойте параметру *object_type* значение 50.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |0|None<br /><br /> Ведение журнала выключено. Регистрируется только состояние выполнения пакета.|  
 |1|Basic<br /><br /> Записываются все события, за исключением пользовательских и диагностических событий. Это значение по умолчанию.|  
@@ -159,7 +160,7 @@ exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_EVENT_CODE'
   
 -   Тип данных значения параметра не соответствует типу данных параметра  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [catalog.execution_parameter_values (база данных SSISDB)](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md)   
  [Создание файлов дампа для выполнения пакетов](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
   

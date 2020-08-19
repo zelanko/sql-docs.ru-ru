@@ -1,4 +1,5 @@
 ---
+description: Пакеты балансировки нагрузки на удаленном сервере с использованием агента SQL Server
 title: Пакеты балансировки нагрузки на удаленном сервере с использованием агента SQL Server | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c4df8e04fc2ef1c68dd1759db2915a13e0bbaf67
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d80feda3402c1aedcc0c1016c3de903524f68f17
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919190"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425216"
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>Пакеты балансировки нагрузки на удаленном сервере с использованием агента SQL Server
 
@@ -118,7 +119,7 @@ ms.locfileid: "86919190"
  Ошибка при работе по такому сценарию может произойти только в случае неуспешного вызова удаленной задачи «Выполнение задания агента SQL Server». Единственной причиной невозможности вызвать задачу является отсутствие связи с сервером, когда агент не отвечает на запросы. Если же агент отвечает на вызов родительского пакета, тот успешно завершает свою работу.  
   
 > [!NOTE]  
->  Можно использовать задачу "Выполнение SQL", содержащую инструкцию Transact-SQL **sp_start_job N'имя_пакета'** . Дополнительные сведения см. в разделе [sp_start_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md).  
+>  Можно использовать задачу "Выполнение SQL", содержащую инструкцию Transact-SQL **sp_start_job N'имя_пакета'**. Дополнительные сведения см. в разделе [sp_start_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md).  
   
 ### <a name="debugging-environment"></a>Среда отладки  
  Во время тестирования родительского пакета запустите в конструкторе среду отладки, выбрав в меню «Отладка» команду «Начать отладку» или нажав клавишу F5. Или можно воспользоваться программой командной строки **dtexec**. Дополнительные сведения см. в статье [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  

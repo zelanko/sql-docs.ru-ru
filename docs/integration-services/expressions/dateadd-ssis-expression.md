@@ -1,4 +1,5 @@
 ---
+description: DATEADD (выражение служб SSIS)
 title: DATEADD (выражение служб SSIS) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2285a23325b91a78759d1dac26725e0e570b23fb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f6dd42e81d3b1d2db558962cbb9843488dd1ad16
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923468"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425556"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD (выражение служб SSIS)
 
@@ -48,13 +49,13 @@ DATEADD(datepart, number, date)
 ## <a name="result-types"></a>Типы результата  
  DT_DBTIMESTAMP  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  В следующей таблице перечислены части дат и сокращения, распознаваемые средством оценки выражений. Имена частей даты обрабатываются без учета регистра.  
   
 |часть_даты|Сокращения|  
 |--------------|-------------------|  
-|Год|yy, yyyy|  
-|Квартал|qq, q|  
+|Year;|yy, yyyy|  
+|Quarter|qq, q|  
 |Месяц|mm, m|  
 |День года|dy, y|  
 |День|dd, d|  
@@ -62,7 +63,7 @@ DATEADD(datepart, number, date)
 |День недели|dw, w|  
 |Час|Hh|  
 |Минута|mi, n|  
-|Секунда|ss, s|  
+|Second|ss, s|  
 |Миллисекунда|Ms|  
   
  Аргумент *number* должен быть доступен при синтаксическом анализе выражения. Он может быть константой или переменной. Нельзя использовать значения столбцов, поскольку они неизвестны при синтаксическом анализе выражения.  
@@ -94,7 +95,7 @@ DATEADD("day", 21, ModifiedDate)
 DATEADD("yyyy", 2, (DT_DBTIMESTAMP)"8/6/2003")  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [DATEDIFF (выражение служб SSIS)](../../integration-services/expressions/datediff-ssis-expression.md)   
  [DATEPART (выражение служб SSIS)](../../integration-services/expressions/datepart-ssis-expression.md)   
  [DAY (выражение служб SSIS)](../../integration-services/expressions/day-ssis-expression.md)   

@@ -1,4 +1,5 @@
 ---
+description: Класс событий Lock:Deadlock Chain
 title: Класс событий Lock:Deadlock Chain | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 9883127b-aa34-4235-88cc-c161cd2112cc
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6057c32842121f6d27649fe3f2b8e201d6c9695a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2560955610dbbd5fa47d35fcce06df5c251010ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717930"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424216"
 ---
 # <a name="lockdeadlock-chain-event-class"></a>Класс событий Lock:Deadlock Chain
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,13 +28,13 @@ ms.locfileid: "85717930"
   
 ## <a name="lockdeadlock-chain-event-class-data-columns"></a>Столбцы класса событий Lock:Deadlock Chain  
   
-|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BinaryData|**image**|Идентификатор ресурса блокировки.|2|Да|  
 |DatabaseID|**int**|Идентификатор базы данных, к которой относится ресурс. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных ServerName захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |имя_базы_данных|**nvarchar**|Имя базы данных, к которой относится ресурс.|35|Да|  
-|EventClass|**int**|Тип события = 59.|27|нет|  
-|EventSequence|**int**|Последовательность данного события в запросе.|51|нет|  
+|EventClass|**int**|Тип события = 59.|27|Нет|  
+|EventSequence|**int**|Последовательность данного события в запросе.|51|Нет|  
 |EventSubClass|**int**|Тип подкласса события.<br /><br /> 101 = блокировка типа ресурса<br /><br /> 102 = обмен типа ресурса|21|Да|  
 |IntegerData|**int**|Номер взаимоблокировки. Отсчет номеров, назначаемых взаимоблокировкам, начинается с нуля при запуске сервера; каждая новая взаимоблокировка получает больший на единицу номер.|25|Да|  
 |IntegerData2|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|55|Да|  
@@ -44,7 +45,7 @@ ms.locfileid: "85717930"
 |ObjectID2|**bigint**|Идентификатор связанного объекта или сущности, если он доступен и является применимым.|56|Да|  
 |OwnerID|**int**|1 = TRANSACTION<br /><br /> 2 = CURSOR<br /><br /> 3 = SESSION<br /><br /> 4 = SHARED_TRANSACTION_WORKSPACE<br /><br /> 5 = EXCLUSIVE_TRANSACTION_WORKSPACE|58|Да|  
 |RequestID|**int**|Идентификатор запроса, содержащего инструкцию.|49|Да|  
-|ServerName|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|нет|  
+|ServerName|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|Нет|  
 |SessionLoginName|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Login1 и при выполнении инструкции под именем Login2 SessionLoginName будет содержать значение Login1, а LoginName — значение Login2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|64|Да|  
 |SPID|**int**|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |StartTime|**datetime**|Время начала события, если оно известно.|14|Да|  

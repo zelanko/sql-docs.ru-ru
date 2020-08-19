@@ -1,4 +1,5 @@
 ---
+description: CalculationPassValue (многомерные выражения)
 title: CalculationPassValue (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ae667d2cecb65f2525aaf855d3d1b70d40a59b21
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 98d30326b709f7bd651b7941e48d412a7b875ffd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68016873"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425046"
 ---
 # <a name="calculationpassvalue-mdx"></a>CalculationPassValue (многомерные выражения)
 
@@ -54,14 +55,14 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
   
  Если задано строковое выражение, функция возвращает строковое значение, оценивая заданное МНОГОМЕРное выражение в указанном этапе вычисления и при необходимости изменяя его флагом доступа и модификатором флага доступа *.*  
   
- При автоматическом разрешении рекурсии в [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]эта функция имеет практически непрактичное использование.  
+ При автоматическом разрешении рекурсии в [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Эта функция имеет практически непрактичное использование.  
   
 > [!NOTE]  
 >  Только администраторы могут использовать функцию **CalculationPassValue** в СКРИПТе многомерных выражений. Возникнет ошибка, если скрипт многомерных выражений, содержащий данную функцию, выполняется в контексте роли, не имеющей прав администратора.  
   
 ## <a name="see-also"></a>См. также:  
- [CalculationCurrentPass &#40;&#41;многомерных выражений](../mdx/calculationcurrentpass-mdx.md)   
- [IIf &#40;&#41;многомерных выражений](../mdx/iif-mdx.md)   
+ [CalculationCurrentPass &#40;&#41;многомерных выражений ](../mdx/calculationcurrentpass-mdx.md)   
+ [IIf &#40;&#41;многомерных выражений ](../mdx/iif-mdx.md)   
  [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

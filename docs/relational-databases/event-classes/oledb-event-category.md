@@ -1,4 +1,5 @@
 ---
+description: OLEDB, категория событий
 title: Категория событий OLEDB | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: cf93e424-3dac-462d-b3da-92e7d0b064d4
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca046bacc1a0dff03ddab4d0fc64004c50dc307c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8535123c46bc7249704808762b9b5d59c773976f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726235"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424226"
 ---
 # <a name="oledb-event-category"></a>OLEDB, категория событий
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "85726235"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Класс событий OLEDB Call](../../relational-databases/event-classes/oledb-call-event-class.md)|Указывает, что [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запросил распределенные запросы и удаленные хранимые процедуры у поставщика OLE DB путем вызова, не связанного с данными, или вызова, не связанного с**QueryInterface**.|  
 |[Класс событий OLEDB DataRead](../../relational-databases/event-classes/oledb-dataread-event-class.md)|Указывает, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запросил у поставщика OLE DB распределенные запросы и удаленные хранимые процедуры.|  
@@ -35,7 +36,7 @@ ms.locfileid: "85726235"
 |[Класс событий OLEDB Provider Information](../../relational-databases/event-classes/oledb-provider-information-event-class.md)|Указывает, что распределенный запрос был выполнен и собрал сведения, соответствующие соединению поставщика.|  
 |[Класс событий OLEDB QueryInterface](../../relational-databases/event-classes/oledb-queryinterface-event-class.md)|Указывает, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запросил у поставщика OLE DB распределенные запросы и удаленные хранимые процедуры путем вызова **QueryInterface** .|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширенные события](../../relational-databases/extended-events/extended-events.md)  
   
   

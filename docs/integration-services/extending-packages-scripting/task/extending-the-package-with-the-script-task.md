@@ -1,4 +1,5 @@
 ---
+description: Расширение пакета с помощью задачи «Скрипт»
 title: Расширение пакета с помощью задачи "Скрипт" | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 911e6d26-a6fd-4fc3-a111-bf5f048e9bff
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c10db4b43ab6763d751af0eeb980979e74bf6c6e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c70136ad09aaa3cb24c04c2828e8335f96aef467
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917618"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425316"
 ---
 # <a name="extending-the-package-with-the-script-task"></a>Расширение пакета с помощью задачи «Скрипт»
 
@@ -66,7 +67,7 @@ ms.locfileid: "86917618"
  [Примеры задачи «Скрипт»](../../../integration-services/extending-packages-scripting-task-examples/script-task-examples.md)  
  Содержит примеры, в которых показано несколько возможных использований задачи «Скрипт».  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Задача "Скрипт"](../../../integration-services/control-flow/script-task.md)   
  [Сравнение задачи «Скрипт» и компонента скрипта](../../../integration-services/extending-packages-scripting/comparing-the-script-task-and-the-script-component.md)  
   

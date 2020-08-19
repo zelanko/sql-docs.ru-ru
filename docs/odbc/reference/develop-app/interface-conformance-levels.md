@@ -1,4 +1,5 @@
 ---
+description: Уровни соответствия интерфейса
 title: Уровни соответствия интерфейсов | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2c470e54-0600-4b2b-b1f3-9885cb28a01a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fff555324746fcb92641126ddf11ea91ce5e3f89
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fb77ab0e77fc8a811acd956673a4ad4fe8664828
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304604"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424626"
 ---
 # <a name="interface-conformance-levels"></a>Уровни соответствия интерфейса
 Целью выравнивания является информирование приложения о том, какие функции доступны из драйвера. Схема выравнивания, основанная на функциях, не достигает этой цели. В ODBC 3. *x*, драйверы классифицируются на основе функций, которыми они обладают. Поддержка функции может включать в себя поддержку функции. Он также может включать поддержку поля дескриптора, атрибут инструкции, значение Y для информационного типа, возвращаемого **SQLGetInfo**, и т. д.  

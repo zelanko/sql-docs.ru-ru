@@ -1,4 +1,5 @@
 ---
+description: FINDSTRING (выражение служб SSIS)
 title: FINDSTRING (выражение служб SSIS) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 765957c11bee784305ebc1a54c2de80ba7375d3d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3c4da6f54ead49d01d9d691cc081ac9b9955c693
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917035"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425476"
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING (выражение служб SSIS)
 
@@ -46,7 +47,7 @@ FINDSTRING(character_expression, searchstring, occurrence)
 ## <a name="result-types"></a>Типы результата  
  DT_I4  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Функция FINDSTRING работает только с типом данных DT_WSTR.  Аргументы*character_expression* и *searchstring* , которые являются строковыми литералами или столбцами данных, содержащими данные типа DT_STR, неявно приводятся к типу данных DT_WSTR до того, как функция FINDSTRING выполнит свою операцию. Прочие типы данных должны быть явно приведены к типу данных DT_WSTR. Дополнительные сведения см. в разделах [Типы данных служб Integration Services](../../integration-services/data-flow/integration-services-data-types.md) и [Приведение (выражение служб SSIS)](../../integration-services/expressions/cast-ssis-expression.md).  
   
  Функция FINDSTRING возвращает NULL, если или *character_expression* , или *searchstring* равен NULL.  
@@ -80,7 +81,7 @@ FINDSTRING(Name, "n", 2)
 FINDSTRING(Name,Size,1)   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [REPLACE (выражение служб SSIS)](../../integration-services/expressions/replace-ssis-expression.md)   
  [Функции (выражение служб SSIS)](../../integration-services/expressions/functions-ssis-expression.md)  
   

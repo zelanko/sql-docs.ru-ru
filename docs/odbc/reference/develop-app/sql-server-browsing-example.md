@@ -1,4 +1,5 @@
 ---
+description: Пример просмотра SQL Server
 title: Пример обзора SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e0d5fd1-ec93-4348-a77a-08f5ba738bc6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7b15aa8e3d573660a312fceb5b9100a41f0384d2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 14016832989c6fcba1dc39bc64434e72b049c18a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301985"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424566"
 ---
 # <a name="sql-server-browsing-example"></a>Пример просмотра SQL Server
 В следующем примере показано, как **SQLBrowseConnect** может использоваться для просмотра подключений, доступных в драйвере для SQL Server. Во-первых, приложение запрашивает маркер подключения:  
@@ -38,7 +39,7 @@ SQLBrowseConnect(hdbc, "DRIVER={SQL Server};", SQL_NTS, BrowseResult,
  Поскольку это первый вызов **SQLBrowseConnect**, диспетчер драйверов загружает драйвер SQL Server и вызывает функцию **SQLBrowseConnect** драйвера с теми же аргументами, которые он получил от приложения.  
   
 > [!NOTE]  
->  При подключении к поставщику источника данных, который поддерживает проверку подлинности Windows, следует `Trusted_Connection=yes` указать в строке подключения вместо сведений об идентификаторе пользователя и пароле.  
+>  При подключении к поставщику источника данных, который поддерживает проверку подлинности Windows, следует указать `Trusted_Connection=yes` в строке подключения вместо сведений об идентификаторе пользователя и пароле.  
   
  Драйвер определяет, что это первый вызов **SQLBrowseConnect** , и возвращает второй уровень атрибутов подключения: сервер, имя пользователя, пароль, имя приложения и идентификатор рабочей станции. Для атрибута Server он возвращает список допустимых имен серверов. Код возврата из **SQLBrowseConnect** — SQL_NEED_DATA. Вот строка результата обзора:  
   

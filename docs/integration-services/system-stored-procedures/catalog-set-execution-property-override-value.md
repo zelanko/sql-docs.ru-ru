@@ -1,4 +1,5 @@
 ---
+description: catalog.set_execution_property_override_value
 title: catalog.set_execution_property_override_value | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 37cb3c01-f4c0-4978-8e40-a975456def5a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3a009f23b1c6ca3520793a7c1f947afe0ff0516a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1d68015c56a6b5552ebee72f661c879c26aef4a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912830"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425086"
 ---
 # <a name="catalogset_execution_property_override_value"></a>catalog.set_execution_property_override_value 
 
@@ -40,7 +41,7 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
  Уникальный идентификатор для экземпляра выполнения. Параметр *execution_id* имеет тип **bigint**.  
   
  [ @property_path = ] *property_path*  
- Путь к свойству в пакете. Параметр *property_path* имеет тип **nvarchar(4000)** .  
+ Путь к свойству в пакете. Параметр *property_path* имеет тип **nvarchar(4000)**.  
   
  [ @property_value = ] *property_value*  
  Значение переопределения, присваиваемое свойству. Параметр *property_value* имеет тип **nvarchar(max)** .  
@@ -48,7 +49,7 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
  [ @sensitive = ] *sensitive*  
  Если значение равно 1, свойство является конфиденциальным и шифруется при сохранении. Если значение равно 0, свойство не является конфиденциальным и его значение сохраняется в формате открытого текста. Аргумент *sensitive* имеет тип **bit**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Процедура выполняет те же действия, что и раздел **Переопределения свойств** вкладки **Расширенные** в диалоговом окне **Выполнение пакета**. Путь к свойству извлекается из свойства **Путь к пакету** задачи пакета.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
@@ -68,7 +69,7 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
   
 -   Тип данных значения свойства не соответствует типу данных свойства  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [catalog.set_execution_parameter_value (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Подключение с помощью SQLConnect
 title: Подключение с помощью SQLConnect | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b16319d2-2c2c-4341-abb5-caa9e17362b4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 25c1dca7324f73f6aacf472fb225a09424c73d3a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 96667de75dfbe9c521b5f5e74ec4c1b366da725d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294654"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424836"
 ---
 # <a name="connecting-with-sqlconnect"></a>Подключение с помощью SQLConnect
 **SQLConnect** — это простейшая функция подключения. Для этого требуется имя источника данных и принимается необязательный идентификатор пользователя и пароль. Он хорошо подходит для приложений, которые жестко закодировать имя источника данных и не требует идентификатора пользователя или пароля. Кроме того, она хорошо работает для приложений, которым требуется управлять собственным «внешним видом» или без пользовательского интерфейса. Такие приложения могут создавать список источников данных с помощью **SQLDataSources**, запрашивать у пользователя источник данных, идентификатор пользователя и пароль, а затем вызывать **SQLConnect**.  

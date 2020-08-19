@@ -1,4 +1,5 @@
 ---
+description: Расширение пакетов с помощью сценариев
 title: Расширение пакетов с помощью скриптов | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 67fe18ef-f3aa-41d4-9b9d-5defd4618c4b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e7721e38ca3f9e19ecf3d8d4ee6113f1768427b4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b0c4a0b243fbb6935a0d456955e70b58f6ac1394
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915970"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425336"
 ---
 # <a name="extending-packages-with-scripting"></a>Расширение пакетов с помощью сценариев
 
@@ -42,7 +43,7 @@ ms.locfileid: "86915970"
  [Ссылки на другие сборки в решениях со сценариями](../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)  
  Рассматриваются шаги, необходимые для ссылки на внешние сборки и пространства имен и использования их в проекте скрипта.  
   
- [Расширение пакета с помощью задачи «Скрипт»](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)  
+ [Расширение пакета с помощью задачи "Скрипт"](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)  
  Рассматривается создание пользовательских задач с помощью задачи «Скрипт». Обычно задача вызывается один раз за время выполнения пакета или один раз для каждого источника данных, открытого пакетом.  
   
  [Расширение потока данных с помощью компонента скрипта](../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)  
@@ -59,7 +60,7 @@ ms.locfileid: "86915970"
  [Программное построение пакетов](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)  
  Описывает создание, настройку, запуск, загрузку и сохранение пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] программным образом, а также программное выполнение других задач управления.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   

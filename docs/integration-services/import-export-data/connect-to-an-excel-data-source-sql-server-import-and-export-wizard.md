@@ -1,4 +1,5 @@
 ---
+description: Подключение к источнику данных Excel (мастер импорта и экспорта SQL Server)
 title: Подключение к источнику данных Excel (мастер импорта и экспорта SQL Server) | Документы Майкрософт
 ms.custom: ''
 ms.date: 04/02/2018
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 43fbaca0-36d8-4583-9056-af7010209b87
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3a017d8de23da9297062e1d232ea86ad2aabb25a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 39ff753dec9f3f918fbd21dea3b04306feba307a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920000"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425306"
 ---
 # <a name="connect-to-an-excel-data-source-sql-server-import-and-export-wizard"></a>Подключение к источнику данных Excel (мастер импорта и экспорта SQL Server)
 
@@ -66,7 +67,7 @@ ms.locfileid: "86920000"
 > [!NOTE]
 > Чтобы использовать 64-разрядную версию мастера экспорта и импорта SQL Server, нужно установить SQL Server. SQL Server Data Tools (SSDT) и SQL Server Management Studio (SSMS) являются 32-разрядными приложениями и устанавливают только 32-разрядные файлы, включая 32-разрядную версию мастера.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 [Загрузка данных в приложение Excel или из него с помощью служб SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)  
 [Выбор источника данных](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [Выбор назначения](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)

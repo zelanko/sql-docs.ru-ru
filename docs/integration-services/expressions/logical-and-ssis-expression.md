@@ -1,4 +1,5 @@
 ---
+description: '&amp;&amp; (логическое И) (выражение служб SSIS)'
 title: '&amp;&amp; (логическое И) (выражение служб SSIS) | Документы Майкрософт'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a8cb3517-d5d1-4861-9f04-905c719185ff
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 01e82c8971ae89580fa9613e3e9f94de11b6b4ac
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: abb14eae98abaad9ebaaf70331abd42300ee4eee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914488"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425406"
 ---
 # <a name="ampamp-logical-and-ssis-expression"></a>&amp;&amp; (логическое И) (выражение служб SSIS)
 
@@ -42,10 +43,10 @@ boolean_expression1 && boolean_expression2
 ## <a name="result-types"></a>Типы результата  
  DT_BOOL  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Следующая таблица демонстрирует результаты выполнения оператора &&.  
   
-|Результат|Выражение|Выражение|  
+|Результат|Выражение|Expression|  
 |------------|----------------|----------------|  
 |TRUE|TRUE|TRUE|  
 |FALSE|TRUE|FALSE|  
@@ -67,7 +68,7 @@ StandardCost < 300 && ListPrice > 500
 StandardCost < @SPrice && ListPrice > @LPrice  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [& (битовое И) (выражение служб SSIS)](../../integration-services/expressions/bitwise-and-ssis-expression.md)   
  [Очередность и ассоциативность операторов](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Операторы (выражение служб SSIS)](../../integration-services/expressions/operators-ssis-expression.md)  

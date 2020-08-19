@@ -1,4 +1,5 @@
 ---
+description: EXP (выражение служб SSIS)
 title: EXP (выражение служб SSIS) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4cd96d3c-58c9-4a67-a6f6-b72758232912
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 79770c7de19581540fc92a9a7214b312b03d85be
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 09848aaee36990b8fd56e1f73cb4ba0f5c934095
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917066"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425486"
 ---
 # <a name="exp-ssis-expression"></a>EXP (выражение служб SSIS)
 
@@ -41,7 +42,7 @@ EXP(numeric_expression)
 ## <a name="result-types"></a>Типы результата  
  DT_R8  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Перед вычислением степени числовое выражение приводится к типу данных DT_R8. Дополнительные сведения см. в разделе [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
  Возвращаемый результат всегда является положительным числом.  
@@ -67,7 +68,7 @@ EXP(0)
   
  Возвращает значение 1.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [LOG (выражение служб SSIS)](../../integration-services/expressions/log-ssis-expression.md)   
  [Функции (выражение служб SSIS)](../../integration-services/expressions/functions-ssis-expression.md)  
   
