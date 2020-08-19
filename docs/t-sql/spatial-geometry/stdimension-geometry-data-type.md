@@ -1,4 +1,5 @@
 ---
+description: STDimension (тип данных geometry, метод)
 title: STDimension (тип данных geometry) | Документы Майкрософт
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4fbd27dd-317b-4916-a8ae-4df1b8a6f27c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 19df63a5bb10ad8015e4ecf25e77c113829f1f17
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: fa206e923e2b7c0b251eca657365bc0d24541806
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555049"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416940"
 ---
 # <a name="stdimension-geometry-data-type"></a>STDimension (тип данных geometry, метод)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "86555049"
   
  Тип возвращаемых данных CLR: **SqlInt32**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Метод `STDimension()` возвращает значение –1, если экземпляр **geometry** является пустым.  
   
 ## <a name="examples"></a>Примеры  

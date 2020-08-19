@@ -1,4 +1,5 @@
 ---
+description: Отчет об оценке (DB2ToSQL)
 title: Отчет об оценке (DB2ToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9e13eba0-e3cf-4205-974f-c00f982061de
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 711c2437ba26e99050b281fec957198586c1284c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: bea3b1c684457bc794d1b35d3a7985b79da41bef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937144"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418520"
 ---
 # <a name="assessment-report-db2tosql"></a>Отчет об оценке (DB2ToSQL)
 В окне «Оценка отчета» отображаются результаты преобразования объектов базы данных к [!INCLUDE[tsql](../../includes/tsql-md.md)] синтаксису, которые также могут помочь оценить сложность и стоимость проектов миграции.  

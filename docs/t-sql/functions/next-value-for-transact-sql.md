@@ -1,4 +1,5 @@
 ---
+description: NEXT VALUE FOR (Transact-SQL)
 title: NEXT VALUE FOR (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/19/2016
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: cb3fd2d18f5602030de6231a0dbbcc92a200a5fc
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 8d383cc1530835635cc4c25957c25221a653dbfa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112903"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417280"
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -64,7 +65,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Возвращает число с использованием типа последовательности.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Функция **NEXT VALUE FOR** может использоваться в хранимых процедурах и триггерах.  
   
  Когда функция **NEXT VALUE FOR** используется в запросе или ограничении по умолчанию, если один и тот же объект последовательности используется несколько раз либо если один и тот же объект последовательности используется и в инструкции, поставляющей значения, и в выполняемом ограничении по умолчанию, то для всех столбцов, ссылающихся на одну последовательность в пределах строки в результирующем наборе, возвращается одно и то же значение.  

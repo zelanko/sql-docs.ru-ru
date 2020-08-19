@@ -1,4 +1,5 @@
 ---
+description: BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)
 title: BEGIN DISTRIBUTED TRANSACTION (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 11/29/2016
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: c3bc2716-39d3-4061-8c6a-8734899231ac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e33ca36bc30cd5f2420ca67db94bba3163cc5156
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 04b4284795a48e15f56c99fee4c868e26250fd4f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923418"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417150"
 ---
 # <a name="begin-distributed-transaction-transact-sql"></a>BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +60,7 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
  @*tran_name_variable*  
  Имя пользовательской переменной, содержащей имя транзакции, которая используется для отслеживания распределенной транзакции в служебных программах координатора MS DTC. Переменная должна быть объявлена с типом данных **char**, **varchar**, **nchar** или **nvarchar**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Экземпляр компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], на котором выполняется инструкция BEGIN DISTRIBUTED TRANSACTION, является инициатором транзакции, контролирующим ее завершение. Если после этого в сеансе выполняется инструкция COMMIT TRANSACTION или ROLLBACK TRANSACTION, управляющий экземпляр передает координатору MS DTC управление распределенной транзакцией во всех экземплярах.  
   
  Изоляция моментального снимка уровня транзакции не поддерживает распределенные транзакции.  

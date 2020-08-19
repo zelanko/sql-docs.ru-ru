@@ -1,4 +1,5 @@
 ---
+description: DBCC CLONEDATABASE (Transact-SQL)
 title: DBCC CLONEDATABASE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 04/23/2019
@@ -37,12 +38,12 @@ ms.assetid: ''
 author: bluefooted
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: 453d514ba879c4567d16cca0acafc793bf721f48
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: b273762ea8218106a35a23f02f95d1b156b50ae9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485065"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417680"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -90,7 +91,7 @@ SERVICEBROKER<br>
 BACKUP_CLONEDB  
 Создает и проверяет резервную копию клонированной базы данных.  При использовании в сочетании с параметром VERIFY_CLONEDB клонированная база данных проверяется перед созданием резервной копии.  Этот параметр доступен начиная с версии [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 3 (SP3), [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] с накопительным пакетом обновления 8 (CU8).
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 Инструкция DBCC CLONEDATABASE выполняет указанные ниже проверки. Если хотя бы одна из них не пройдена, команда завершается сбоем.
 - База данных-источник должна быть пользовательской базой данных. Клонировать системные базы данных (master, msdb, tempdb, шаблон базы данных, базу данных распространителя и т. д.) нельзя.
 - База данных-источник должна находиться в режиме "в сети" и быть доступной для чтения.
@@ -253,7 +254,7 @@ DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH VERIFY_CLONEDB, B
 GO 
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)    
 [Формирование скрипта из необходимых метаданных с целью создания базы данных, включающей только статистику, в SQL Server](https://support.microsoft.com/help/914288)   
 

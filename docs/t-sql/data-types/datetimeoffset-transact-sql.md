@@ -1,4 +1,5 @@
 ---
+description: datetimeoffset (Transact-SQL)
 title: datetimeoffset (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/23/2017
@@ -23,12 +24,12 @@ ms.assetid: a0455b71-ca25-476e-a7a8-0770f1860bb7
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 274af7a5c9a1e8f12f661305e1e2d1206bf64664
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d58c0b86f5a3d46764d3be1e70444139b599172d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008043"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417670"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 
@@ -38,7 +39,7 @@ ms.locfileid: "86008043"
 
 ## <a name="datetimeoffset-description"></a>Описание типа данных datetimeoffset
   
-|Свойство|Значение|  
+|Property (Свойство)|Значение|  
 |---|---|
 |Синтаксис|**datetimeoffset** [ (*fractional seconds precision*) ]|  
 |Использование|DECLARE \@MyDatetimeoffset **datetimeoffset(7)**<br /><br /> CREATE TABLE Таблица1 ( Столбец1 **datetimeoffset(7)** )|  
@@ -55,7 +56,7 @@ ms.locfileid: "86008043"
 |Календарь|Григорианский|  
 |Определяемая пользователем точность в долях секунды|Да|  
 |Учет и сохранение смещения часового пояса|Да|  
-|Учет перехода на летнее время|нет|  
+|Учет перехода на летнее время|Нет|  
   
 |Указанный масштаб|Результат (точность, масштаб)|Длина столбца (в байтах)|Точность в долях секунды|  
 |---|---|---|---|
@@ -72,7 +73,7 @@ ms.locfileid: "86008043"
 ## <a name="supported-string-literal-formats-for-datetimeoffset"></a>Поддерживаемые форматы строковых литералов для типа данных datetimeoffset
 В приведенной ниже таблице перечислены поддерживаемые форматы строковых литералов ISO 8601 для типа данных **datetimeoffset**. Сведения об алфавитных и числовых форматах, форматах строки без разделителей и форматах времени для частей даты и времени типа **datetimeoffset** см. в статьях [date (Transact-SQL)](../../t-sql/data-types/date-transact-sql.md) и [time (Transact-SQL)](../../t-sql/data-types/time-transact-sql.md).
   
-|ISO 8601|Description|  
+|ISO 8601|Описание|  
 |---|---|
 |ГГГГ-ММ-ДДТчч:мм:сс[.ннннннн] [{+&#124;-}чч:мм]|На эти два формата не влияют настройки локали сеанса инструкций SET LANGUAGE и SET DATEFORMAT. Между частями **datetimeoffset** и **datetime** не должно быть пробелов.|  
 |ГГГГ-ММ-ДДТчч:мм:сс[.ннннннн]Z (в формате UTC)|Этот формат по определению ISO указывает, что компонент **datetime** должен выражаться во времени в формате UTC. Например, дата и время 1999-12-12 12:30:30.12345 -07:00 должны представляться как 1999-12-12 19:30:30.12345Z.|  
@@ -131,7 +132,7 @@ SELECT @datetimeoffset AS '@datetimeoffset ', @date AS 'date';
   
 ```  
   
-При преобразовании в тип **time(n)** копируются час, минута, секунда и доли секунды. Значение часового пояса усекается. Если точность значения типа **datetimeoffset(n)** больше точности значения типа **time(n)** , оно округляется в сторону увеличения. Следующий код демонстрирует результаты преобразования значения `datetimeoffset(4)` в значение `time(3)`.
+При преобразовании в тип **time(n)** копируются час, минута, секунда и доли секунды. Значение часового пояса усекается. Если точность значения типа **datetimeoffset(n)** больше точности значения типа **time(n)**, оно округляется в сторону увеличения. Следующий код демонстрирует результаты преобразования значения `datetimeoffset(4)` в значение `time(3)`.
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '12-10-25 12:32:10.1237 +01:0';  
@@ -181,7 +182,7 @@ SELECT @datetimeoffset AS '@datetimeoffset', @smalldatetime AS '@smalldatetime';
 --(1 row(s) affected)  
 ```  
   
-При преобразовании в тип **datetime2(n)** дата и время копируются в значение **datetime2**, а часовой пояс усекается. Если точность значения типа **datetime2(n)** больше точности значения типа **datetimeoffset(n)** , доли секунды усекаются. Следующий код демонстрирует результаты преобразования значения `datetimeoffset(4)` в значение `datetime2(3)`.
+При преобразовании в тип **datetime2(n)** дата и время копируются в значение **datetime2**, а часовой пояс усекается. Если точность значения типа **datetime2(n)** больше точности значения типа **datetimeoffset(n)**, доли секунды усекаются. Следующий код демонстрирует результаты преобразования значения `datetimeoffset(4)` в значение `datetime2(3)`.
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '1912-10-25 12:24:32.1277 +10:0';  
@@ -209,7 +210,7 @@ SELECT @datetimeoffset AS '@datetimeoffset', @datetime2 AS '@datetime2';
 |только TIME|Компонент DATE по умолчанию имеет значение 1900-1-1. Компонент TIMEZONE по умолчанию будет иметь значение +00:00.|  
 |только TIMEZONE|Указаны значения по умолчанию|  
 |DATE + TIME|Компонент TIMEZONE по умолчанию имеет значение +00:00.|  
-|DATE + TIMEZONE|Не разрешено|  
+|DATE + TIMEZONE|Нельзя использовать|  
 |TIME + TIMEZONE|Компонент DATE по умолчанию имеет значение 1900-1-1.|  
 |DATE + TIME + TIMEZONE|Простейший.|  
   

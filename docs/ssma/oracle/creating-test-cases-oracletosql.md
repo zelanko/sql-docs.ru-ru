@@ -1,4 +1,5 @@
 ---
+description: Создание тестовых случаев (OracleToSQL)
 title: Создание тестовых случаев (OracleToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ ms.assetid: 22f38901-ec35-4707-a911-784e6ad8dafb
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 270d904c11df5ab28062cd83672071319ca6f17f
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 4f7183089fd67f413515034a557e4b73388f950f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934957"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418390"
 ---
 # <a name="creating-test-cases-oracletosql"></a>Создание тестовых случаев (OracleToSQL)
 Используйте мастер тестовых случаев для создания теста. Этот мастер позволяет создавать тестовые случаи, выбрав проверенные и проверенные объекты и указав параметры тестирования.  

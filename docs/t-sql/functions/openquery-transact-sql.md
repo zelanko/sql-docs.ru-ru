@@ -1,4 +1,5 @@
 ---
+description: OPENQUERY (Transact-SQL)
 title: OPENQUERY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: b805e976-f025-4be1-bcb0-3a57b0c57717
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 9f4a7ce873c59268255a3ecd073e49d53877f12c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: fcabdb207b1e15994323731c30c1a3516222c899
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112873"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417220"
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -51,7 +52,7 @@ OPENQUERY ( linked_server ,'query' )
  **'** *запрос* **'**  
  Строка запроса, выполненного в связанном сервере. Максимальная длина строки 8 КБ.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  В качестве аргументов в функции OPENQUERY нельзя использовать переменные.  
   
  Функцию OPENQUERY нельзя использовать для выполнения расширенных хранимых процедур на связанном сервере. Однако расширенную хранимую процедуру можно выполнить на связанном сервере с помощью четырехкомпонентного имени. Пример:  

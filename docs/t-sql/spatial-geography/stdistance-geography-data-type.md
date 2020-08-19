@@ -1,4 +1,5 @@
 ---
+description: STDistance (географический тип данных)
 title: STDistance (тип данных geography) | Документы Майкрософт
 ms.custom: ''
 ms.date: 11/19/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 063d8722-e019-4d3d-8fcf-dbf5325823e7
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 795fa917f598ed1dd477916f42808d4abb0c8a69
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: a20279a70d2e68e1cb4b34eb36ffe7de633518a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555159"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417000"
 ---
 # <a name="stdistance-geography-data-type"></a>STDistance (географический тип данных)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "86555159"
   
  Тип возвращаемых данных CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Результат выражается в единице измерения, определенной [идентификатором пространственной ссылки (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md) пространственных данных.
 STDistance() всегда возвращает значение *NULL*, если у экземпляров **geography** не совпадают идентификаторы пространственных ссылок (SRID).  
   
@@ -68,7 +69,7 @@ SET @h = geography::STGeomFromText('POINT(-122.34900 47.65100)', 4326);
 SELECT @g.STDistance(@h);  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Методы OGC в экземплярах Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+## <a name="see-also"></a>См. также  
+ [Методы OGC, применяемые к географическим объектам](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

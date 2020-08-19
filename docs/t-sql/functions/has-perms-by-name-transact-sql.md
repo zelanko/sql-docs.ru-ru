@@ -1,4 +1,5 @@
 ---
+description: HAS_PERMS_BY_NAME (Transact-SQL)
 title: HAS_PERMS_BY_NAME (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/29/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7ca0bb9b4fb03cc3f567c6c642a3593d23963993
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e2fa743ae09dc8a09a8edbc8e4a6e3b5cf8415db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113521"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417350"
 ---
 # <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +52,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  Имя защищаемого объекта. Если защищаемым объектом является сам сервер или база данных, этому аргументу должно быть присвоено значение NULL. Аргумент *securable* является скалярным выражением типа **sysname**. Значение по умолчанию отсутствует.  
   
  *securable_class*  
- Имя класса защищаемого объекта, для которого проверяется разрешение. Аргумент *securable_class* является скалярным выражением типа **nvarchar(60)** .  
+ Имя класса защищаемого объекта, для которого проверяется разрешение. Аргумент *securable_class* является скалярным выражением типа **nvarchar(60)**.  
   
  В [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] аргумент securable_class должен быть установлен в одно из следующих значений: **DATABASE**, **OBJECT**, **ROLE**, **SCHEMA** или **USER**.  
   
@@ -62,10 +63,10 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  Необязательное скалярное выражение типа **sysname**, представляющее имя защищаемой вложенной сущности, у которой проверяется разрешение. Значение по умолчанию — NULL.  
   
 > [!NOTE]  
->  В версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и выше во вложенных защищаемых объектах не могут использоваться скобки в форме **"[** _вложенное имя_ **]"** . Используйте вместо этого форму **'** _вложенное имя_ **'** .  
+>  В версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и выше во вложенных защищаемых объектах не могут использоваться скобки в форме **"[**_вложенное имя_**]"**. Используйте вместо этого форму **'** _вложенное имя_ **'** .  
   
  *sub-securable_class*  
- Необязательное скалярное выражение типа **nvarchar(60)** , представляющее класс защищаемой вложенной сущности, для которой проверяется разрешение. Значение по умолчанию — NULL.  
+ Необязательное скалярное выражение типа **nvarchar(60)**, представляющее класс защищаемой вложенной сущности, для которой проверяется разрешение. Значение по умолчанию — NULL.  
   
  В [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] аргумент sub-securable_class является допустимым, только если аргумент securable_class имеет значение **OBJECT**. Если аргумент securable_class задан равным **OBJECT**, то аргумент sub-securable_class должен быть задан равным **COLUMN**.  
   
@@ -74,7 +75,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
   
  Возвращает значение NULL, если запрос завершается неудачей.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Эта встроенная функция проверяет, имеет ли текущий субъект определенное действующее разрешение для указанного защищаемого объекта. Функция HAS_PERMS_BY_NAME возвращает значение 1, если пользователь имеет действующее разрешение на защищаемый объект, значение 0, если пользователь не имеет действующего разрешения на защищаемый объект, либо значение NULL, если класс защищаемого объекта или разрешение недопустимы. Допустимыми являются следующие действующие разрешения.  
   
 -   Действующее разрешение, предоставленное непосредственно участнику.  
@@ -181,7 +182,7 @@ SELECT name AS column_name,
     WHERE c.object_id=object_id('T');  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Разрешения (ядро СУБД)](../../relational-databases/security/permissions-database-engine.md)   
  [Securables](../../relational-databases/security/securables.md)   
  [Иерархия разрешений (ядро СУБД)](../../relational-databases/security/permissions-hierarchy-database-engine.md)   

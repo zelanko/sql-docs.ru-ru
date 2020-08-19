@@ -1,4 +1,5 @@
 ---
+description: CREATE DIAGNOSTICS SESSION (Transact-SQL)
 title: CREATE DIAGNOSTICS SESSION (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -12,12 +13,12 @@ ms.assetid: 662d019e-f217-49df-9e2f-b5662fa0342d
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 12a6e49e477ce3e61560438a6db141bfb5aab721
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 99f0c8b66e45fafa806848efa2f979fbbb0da054
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395773"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417100"
 ---
 # <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
@@ -79,7 +80,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
  *property_name*  
  Свойство, связанное с событием.  Имена свойств могут быть частью тега записи или использоваться как часть условия фильтрации.  
   
-|Имя свойства|Description|  
+|Имя свойства|Описание|  
 |-------------------|-----------------|  
 |UserName|Имя пользователя (имя для входа).|  
 |SessionId|Идентификатор сеанса.|  
@@ -90,7 +91,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
 |Duration|Длительность события.|  
 |SPID|Идентификатор процесса службы.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Каждый пользователь может одновременно открывать до 10 сеансов диагностики. Список текущих сеансов можно получить в представлении [sys.pdw_diag_sessions](../../relational-databases/system-catalog-views/sys-pdw-diag-sessions-transact-sql.md). Ненужные сеансы можно удалить с помощью инструкции `DROP DIAGNOSTICS SESSION`.  
   
  Сеансы диагностики продолжают собирать метаданные, пока не будут удалены.  
@@ -106,7 +107,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
 ### <a name="a-creating-a-diagnostics-session"></a>A. Создание сеанса диагностики  
  В этом примере создается сеанс диагностики для записи метрик производительности ядра СУБД. В примере создается сеанс диагностики, который ожидает получения событий, связанных с выполнением и завершением запросов ядра, и события блокировки DMS. Возвращаются текст команды, имя компьютера, идентификатор запроса и сеанс, в рамках которого было создано событие.  
   
-```  
+```sql  
 CREATE DIAGNOSTICS SESSION MYDIAGSESSION AS N'  
 <Session>  
    <MaxItemCount>100</MaxItemCount>  
@@ -130,13 +131,13 @@ CREATE DIAGNOSTICS SESSION MYDIAGSESSION AS N'
   
  После создания сеанса диагностики выполните запрос.  
   
-```  
+```sql  
 SELECT COUNT(EmployeeKey) FROM AdventureWorksPDW2012..FactSalesQuota;  
 ```  
   
  Затем просмотрите результаты сеанса диагностики, выбрав его в схеме sysdiag.  
   
-```  
+```sql  
 SELECT * FROM master.sysdiag.MYDIAGSESSION;  
 ```  
   
@@ -146,14 +147,14 @@ SELECT * FROM master.sysdiag.MYDIAGSESSION;
   
  Завершив работу с сеансом диагностики, удалите его с помощью команды **DROP DIAGNOSTICS**.  
   
-```  
+```sql  
 DROP DIAGNOSTICS SESSION MYDIAGSESSION;  
 ```  
   
 ### <a name="b-alternative-diagnostic-session"></a>Б. Альтернативный сеанс диагностики  
  Во втором примере используются немного другие свойства.  
   
-```  
+```sql  
 -- Determine the session_id of your current session  
 SELECT TOP 1 session_id();  
 -- Replace \<*session_number*> in the code below with the numbers in your session_id  
@@ -184,7 +185,7 @@ CREATE DIAGNOSTICS SESSION PdwOptimizationDiagnostics AS N'
   
  Выполните запрос, например:  
   
-```  
+```sql  
 USE ssawPDW;  
 GO  
 SELECT * FROM dbo.FactFinance;  
@@ -192,7 +193,7 @@ SELECT * FROM dbo.FactFinance;
   
  Следующий запрос возвращает время авторизации:  
   
-```  
+```sql  
 SELECT *   
 FROM master.sysdiag.PdwOptimizationDiagnostics   
 ORDER BY DateTimePublished;  
@@ -200,7 +201,7 @@ ORDER BY DateTimePublished;
   
  Завершив работу с сеансом диагностики, удалите его с помощью команды **DROP DIAGNOSTICS**.  
   
-```  
+```sql  
 DROP DIAGNOSTICS SESSION PdwOptimizationDiagnostics;  
 ```  
   

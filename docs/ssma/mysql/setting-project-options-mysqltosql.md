@@ -1,4 +1,5 @@
 ---
+description: Настройка параметров проекта (MySQLToSQL)
 title: Настройка параметров проекта (MySQLToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cf8ac834b014fe49a851d3887fb36e29f59e069e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 642d6df01fc5855ece9bd06ea2860de076f754bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935132"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418430"
 ---
 # <a name="setting-project-options-mysqltosql"></a>Настройка параметров проекта (MySQLToSQL)
 Для каждого проекта SSMA можно задать параметры уровня проекта. Эти параметры определяют способ преобразования объектов, способ переноса данных и способ, которым типы исходных данных сопоставляются с целевыми типами данных.  Прежде чем преобразовывать объекты в SQL Server или SQL Azure или переносить данные в SQL Server или SQL Azure, убедитесь, что параметры конфигурации подходят для проекта.  
@@ -38,7 +39,7 @@ SSMA имеет пять наборов параметров проекта:
   
 Параметры проекта можно настроить четырьмя способами.  
   
--   Значение по умолчанию  
+-   По умолчанию  
   
 -   Optimistic  
   

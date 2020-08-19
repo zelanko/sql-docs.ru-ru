@@ -1,4 +1,5 @@
 ---
+description: Параметры проекта (сопоставление типов) (MySQLToSQL)
 title: Параметры проекта (сопоставление типов) (MySQLToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 79c86ee63638dcc520aa9bb590b8a616172cb1e4
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: a6f4bc99caceeb7011c932c86e636304941c459c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935179"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418490"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>Параметры проекта (сопоставление типов) (MySQLToSQL)
 Параметры проекта сопоставления типов позволяют задать сопоставления типов по умолчанию для проекта SSMA.  
@@ -33,7 +34,7 @@ ms.locfileid: "87935179"
 ##### <a name="target-type"></a>Тип целевого объекта  
 Тип данных целевой базы данных для указанного типа данных MySQL.  
   
-##### <a name="add"></a>Add  
+##### <a name="add"></a>Добавить  
 Нажмите, чтобы добавить тип данных в список сопоставления.  
   
 ##### <a name="edit"></a>Изменить  
@@ -98,15 +99,15 @@ ms.locfileid: "87935179"
 |FLOAT|float [24]|  
 |float [*.. 255] [ \* .. пределах|numeric [*] [ \* ]|  
 |float [*.. 53]|float [53]|  
-|int|int|  
-|int [*.. 255]|int|  
-|целое число|int|  
-|Integer [*.. 255]|int|  
+|INT|INT|  
+|int [*.. 255]|INT|  
+|integer|INT|  
+|Integer [*.. 255]|INT|  
 |longblob|varbinary(max)|  
 |longtext|nvarchar(max)|  
 |mediumblob|varbinary(max)|  
-|mediumint|int|  
-|медиуминт [*.. 255]|int|  
+|mediumint|INT|  
+|медиуминт [*.. 255]|INT|  
 |mediumtext|nvarchar(max)|  
 |Национальный знак|nchar [1]|  
 |Национальный знак [0.. 1]|nchar [1]|  
@@ -172,15 +173,15 @@ ms.locfileid: "87935179"
 |целое число без знака [*.. 255]|BIGINT|  
 |целое число без знака|BIGINT|  
 |целое число без знака [*.. 255]|BIGINT|  
-|неподписанный медиуминт|int|  
-|медиуминт без знака [*.. 255]|int|  
+|неподписанный медиуминт|INT|  
+|медиуминт без знака [*.. 255]|INT|  
 |число без знака|NUMERIC|  
 |число без знака [*.. 65]|numeric [*] [0]|  
 |число без знака [*.. 65] [ \* .. пределах|numeric [*] [ \* ]|  
 |вещественное без знака|float [53]|  
 |Вещественная сумма без знака [*.. 255 [[ \* .. пределах|numeric [*] [ \* ]|  
-|неподписанный smallint|int|  
-|неподписанный smallint [*.. 255]|int|  
+|неподписанный smallint|INT|  
+|неподписанный smallint [*.. 255]|INT|  
 |неподписанный tinyint|tinyint|  
 |неподписанный tinyint [*.. 255]|tinyint|  
 |varbinary [0.. 1]|varbinary [1]|  
@@ -193,7 +194,7 @@ ms.locfileid: "87935179"
 |год [2.. 2]|smallint|  
 |Year [4.. 4]|smallint|  
   
-##### <a name="add"></a>Add  
+##### <a name="add"></a>Добавить  
 Нажмите, чтобы добавить тип данных в список сопоставления.  
   
 ##### <a name="edit"></a>Изменить  

@@ -1,4 +1,5 @@
 ---
+description: GETANSINULL (Transact-SQL)
 title: GETANSINULL (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 189399e4-428d-4902-b3a8-94f07fdefc6a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8b464037ffb914b78dc95edbf33676820e849ca1
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: cbf0f888ba02a2e523fccadf473c675186086159
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111528"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417360"
 ---
 # <a name="getansinull-transact-sql"></a>GETANSINULL (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ GETANSINULL ( [ 'database' ] )
 
 ## <a name="arguments"></a>Аргументы
  '*database*'  
- Имя базы данных, для которой возвращается информация о допустимости значений NULL. Аргумент database имеет тип **char** или **nchar**. Если аргумент **database** имеет тип *char*, он неявно преобразуется в **nchar**.  
+ Имя базы данных, для которой возвращается информация о допустимости значений NULL. Аргумент database имеет тип **char** или **nchar**. Если аргумент *database* имеет тип **char**, он неявно преобразуется в **nchar**.  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
  **int**  
@@ -80,7 +81,7 @@ GO
 (1 row(s) affected)
  ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
   
   

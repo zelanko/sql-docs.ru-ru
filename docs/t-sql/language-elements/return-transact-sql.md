@@ -1,4 +1,5 @@
 ---
+description: RETURN (Transact-SQL)
 title: RETURN (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 1d9c8247-fd89-4544-be9c-01c95b745db0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 89ccceece9d5d84faaae9b63c6846bfbd351f666
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6ea26a56bf28b555123bf456d607f79e7e443597
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915630"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417090"
 ---
 # <a name="return-transact-sql"></a>RETURN (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +58,7 @@ RETURN [ integer_expression ]
 > [!NOTE]  
 >  Если в документации ничего не указано, все хранимые системные процедуры возвращают значение 0. Это указывает на успех, а ненулевое значение — на ошибку.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  При использовании в хранимой процедуре инструкция RETURN не может возвращать значение NULL. Если процедура пытается вернуть значение NULL (например, с помощью инструкции RETURN @status, если @status равен NULL), формируется предупредительное сообщение и возвращается значение 0.  
   
  Возвращаемое значение состояния может быть включено в последующие инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] пакета или процедуры, выполняющей текущую процедуру, но должно вводиться в следующем формате: `EXECUTE @return_status = <procedure_name>`.  

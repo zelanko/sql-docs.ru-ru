@@ -1,4 +1,5 @@
 ---
+description: INDEXPROPERTY (Transact-SQL)
 title: INDEXPROPERTY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 06/26/2019
@@ -20,12 +21,12 @@ ms.assetid: 998d5788-4871-44a8-8125-0d9390868b84
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: deeed76ed033531695b321c3e185e03dd988739c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 065b792b1e9edec5bc8e1b12859e9152797ebfb3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113445"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417370"
 ---
 # <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +48,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
  Выражение, которое содержит идентификационный номер объекта таблицы или индексированного представления, для которого предоставляются сведения о свойстве индекса. Аргумент *object_ID* имеет тип **int**.  
   
  *index_or_statistics_name*  
- Выражение, которое содержит имя индекса или статистики, для которой возвращаются сведения о свойстве. Аргумент *index_or_statistics_name* имеет тип **nvarchar(128)** .  
+ Выражение, которое содержит имя индекса или статистики, для которой возвращаются сведения о свойстве. Аргумент *index_or_statistics_name* имеет тип **nvarchar(128)**.  
   
  *property*  
  Выражение, которое содержит имя возвращаемого свойства базы данных. Аргумент *property* имеет тип **varchar(128)** и может принимать одно из указанных ниже значений.  
@@ -55,23 +56,23 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 > [!NOTE]  
 >  Если не указано иное, значение NULL возвращается в следующих случаях: если аргумент *property* не является допустимым именем свойства, если аргумент *object_ID* не является допустимым идентификатором объекта, если аргумент *object_ID* не является поддерживаемым типом объекта для указанного свойства или если вызывающий объект не имеет разрешения на просмотр метаданных объекта.  
   
-|Свойство|Description|Значение|  
+|Свойство|Описание|Значение|  
 |--------------|-----------------|-----------|  
 |**IndexDepth**|Глубина индекса.|Количество уровней индекса.<br /><br /> NULL = Неверный XML-индекс или вход.|  
 |**IndexFillFactor**|Значение коэффициента заполнения, использованное при создании индекса или при его последней перестройке.|Коэффициент заполнения.|  
 |**IndexID**|Идентификатор индекса указанной таблицы или индексированного представления.|Идентификатор индекса.|  
-|**IsAutoStatistics**|Статистики были сформированы параметром AUTO_CREATE_STATISTICS инструкции ALTER DATABASE.|1 = True<br /><br /> 0 = False или XML-индекс.|  
-|**IsClustered**|Кластеризованный индекс.|1 = True<br /><br /> 0 = False или XML-индекс.|  
-|**IsDisabled**|Индекс отключен.|1 = True<br /><br /> 0 = False.<br /><br /> NULL = Введенные значения недопустимы.|  
-|**IsFulltextKey**|Индекс является ключом для полнотекстового и семантического индексирования таблицы.|**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.<br /><br /> 1 = True<br /><br /> 0 = False или XML-индекс.<br /><br /> NULL = Введенные значения недопустимы.|  
-|**IsHypothetical**|Индекс является гипотетическим и не может использоваться напрямую в качестве пути доступа к данным. Гипотетические индексы содержат статистики уровня столбца и управляются и используются помощником по настройке ядра СУБД.|1 = True<br /><br /> 0 = False или XML-индекс.<br /><br /> NULL = Введенные значения недопустимы.|  
-|**IsPadIndex**|Индекс задает пространство, которое должно оставаться открытым на каждом внутреннем узле.|**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.<br /><br /> 1 = True<br /><br /> 0 = False или XML-индекс.|  
+|**IsAutoStatistics**|Статистики были сформированы параметром AUTO_CREATE_STATISTICS инструкции ALTER DATABASE.|1 = истина<br /><br /> 0 = False или XML-индекс.|  
+|**IsClustered**|Кластеризованный индекс.|1 = истина<br /><br /> 0 = False или XML-индекс.|  
+|**IsDisabled**|Индекс отключен.|1 = истина<br /><br /> 0 = ложь<br /><br /> NULL = Введенные значения недопустимы.|  
+|**IsFulltextKey**|Индекс является ключом для полнотекстового и семантического индексирования таблицы.|**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.<br /><br /> 1 = истина<br /><br /> 0 = False или XML-индекс.<br /><br /> NULL = Введенные значения недопустимы.|  
+|**IsHypothetical**|Индекс является гипотетическим и не может использоваться напрямую в качестве пути доступа к данным. Гипотетические индексы содержат статистики уровня столбца и управляются и используются помощником по настройке ядра СУБД.|1 = истина<br /><br /> 0 = False или XML-индекс.<br /><br /> NULL = Введенные значения недопустимы.|  
+|**IsPadIndex**|Индекс задает пространство, которое должно оставаться открытым на каждом внутреннем узле.|**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.<br /><br /> 1 = истина<br /><br /> 0 = False или XML-индекс.|  
 |**IsPageLockDisallowed**|Значение блокировки страницы, установленное параметром ALLOW_PAGE_LOCKS инструкции ALTER INDEX.|**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.<br /><br /> 1 = Блокировка страниц запрещена;<br /><br /> 0 = Блокировка страниц разрешена.<br /><br /> NULL = Введенные значения недопустимы.|  
 |**IsRowLockDisallowed**|Значение блокировки строк, установленное параметром ALLOW_ROW_LOCKS инструкции ALTER INDEX.|**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.<br /><br /> 1 = Блокировка строк запрещена;<br /><br /> 0 = Блокировка строк разрешена.<br /><br /> NULL = Введенные значения недопустимы.|  
-|**IsStatistics**|Аргумент *index_or_statistics_name* является статистикой, созданной инструкцией CREATE STATISTICS или параметром AUTO_CREATE_STATISTICS инструкции ALTER DATABASE.|1 = True<br /><br /> 0 = False или XML-индекс.|  
-|**IsUnique**|Индекс является уникальным.|1 = True<br /><br /> 0 = False или XML-индекс.|  
-|**IsColumnstore**|Оптимизированный для памяти xVelocity индекс columnstore.|**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> 1 = True<br /><br /> 0 = False.| 
-|**IsOptimizedForSequentialKey**|Индекс оптимизирован для включения операций вставки на последнюю страницу.|**Область применения**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и более поздних версий. <br><br>1 = True<br><br>0 = False.| 
+|**IsStatistics**|Аргумент *index_or_statistics_name* является статистикой, созданной инструкцией CREATE STATISTICS или параметром AUTO_CREATE_STATISTICS инструкции ALTER DATABASE.|1 = истина<br /><br /> 0 = False или XML-индекс.|  
+|**IsUnique**|Индекс является уникальным.|1 = истина<br /><br /> 0 = False или XML-индекс.|  
+|**IsColumnstore**|Оптимизированный для памяти xVelocity индекс columnstore.|**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> 1 = истина<br /><br /> 0 = ложь| 
+|**IsOptimizedForSequentialKey**|Индекс оптимизирован для включения операций вставки на последнюю страницу.|**Область применения**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и более поздних версий. <br><br>1 = истина<br><br>0 = ложь| 
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
  **int**  
@@ -121,7 +122,7 @@ INDEXPROPERTY(OBJECT_ID('dbo.FactResellerSales'),
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)   
  [Статистика](../../relational-databases/statistics/statistics.md)   
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   

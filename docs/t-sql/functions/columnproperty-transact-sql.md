@@ -1,4 +1,5 @@
 ---
+description: COLUMNPROPERTY (Transact-SQL)
 title: COLUMNPROPERTY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/24/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9d62953d88773c6f378590db64aeeb3f94d6fe22
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 360089db91ed52ba90f0566868b4f1c87eb2fd8c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111096"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417430"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +43,7 @@ COLUMNPROPERTY ( id , column , property )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Аргументы
-*идентификатор*  
+*id*  
 [Выражение](../../t-sql/language-elements/expressions-transact-sql.md), которое содержит идентификатор таблицы или процедуры.
   
 *column*  
@@ -51,7 +52,7 @@ COLUMNPROPERTY ( id , column , property )
 *property*  
 Для аргумента *id* аргумент *property* указывает тип данных, возвращаемый функцией `COLUMNPROPERTY`. Аргумент *property* может принимать следующие значения.
   
-|Значение|Description|Возвращенное значение|  
+|Значение|Описание|Возвращенное значение|  
 |---|---|---|
 |**AllowsNull**|Разрешение использовать NULL.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные.|  
 |**ColumnId**|Значение идентификатора столбца, соответствующего **sys.columns.column_id**.|Идентификатор столбца<br /><br /> **Примечание**. При запросе множества столбцов могут появиться пропуски в последовательности значений идентификаторов столбцов.|  
@@ -73,7 +74,7 @@ COLUMNPROPERTY ( id , column , property )
 |**IsSystemVerified**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] может проверять свойства детерминированности и точности столбца. Это свойство применимо только к вычисляемым столбцам и столбцам представлений.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные.|  
 |**IsXmlIndexable**|XML-столбец может быть использован в XML-индексе.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные.|  
 |**Точность**|Длина типа данных столбца или параметра.|Длина заданного типа данных столбца<br /><br /> -1: **xml** или типы больших значений<br /><br /> NULL: недопустимые входные данные.|  
-|**Масштабирование**|Масштаб для типа данных столбца или параметра.|Значение масштаба<br /><br /> NULL: недопустимые входные данные.|  
+|**Масштаб**|Масштаб для типа данных столбца или параметра.|Значение масштаба<br /><br /> NULL: недопустимые входные данные.|  
 |**StatisticalSemantics**|Столбец доступен для семантического индексирования.|1: TRUE<br /><br /> 0: FALSE|  
 |**SystemDataAccess**|Столбец, полученный из функции, которая получает данные в системных каталогах или виртуальных системных таблицах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Это свойство применимо только к вычисляемым столбцам и столбцам представлений.|1: TRUE (обозначает доступ только для чтения)<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные.|  
 |**UserDataAccess**|Столбец, полученный из функции, которая получает данные в пользовательских таблицах, включая таблицы видов и временные таблицы, хранится в локальном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Это свойство применимо только к вычисляемым столбцам и столбцам представлений.|1: TRUE (обозначает доступ только для чтения)<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные.|  
@@ -108,7 +109,7 @@ Column Length
 50
 ```  
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 [Функции метаданных (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)  
 [TYPEPROPERTY (Transact-SQL)](../../t-sql/functions/typeproperty-transact-sql.md)
   

@@ -1,4 +1,5 @@
 ---
+description: GetDescendant (компонент Database Engine)
 title: GetDescendant (ядро СУБД) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/22/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f5f39596-033e-4243-acbc-caa188b45b03
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1e6471b791a4ff1196321de649c645d8775d9308
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: c8642be92d56b2900abd4cb5c6b4d77fcac78c0f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554489"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417640"
 ---
 # <a name="getdescendant-database-engine"></a>GetDescendant (компонент Database Engine)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,7 +56,7 @@ SqlHierarchyId GetDescendant ( SqlHierarchyId child1 , SqlHierarchyId child2 )
   
 **Возвращаемый тип CLR:SqlHierarchyId**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
 Возвращает один дочерний узел, который является потомком родителя.
 -   Если родительская запись — NULL, метод возвращает значение NULL.  
 -   Если родительская запись — не NULL, а потомки child1 и child2 — NULL, метод  возвращает одного потомка данного родителя.  

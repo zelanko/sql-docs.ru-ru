@@ -1,4 +1,5 @@
 ---
+description: Зарезервированные ключевые слова (Transact-SQL)
 title: Зарезервированные ключевые слова (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: ed8b3e27-6796-40f0-aef3-0cac5e0e2418
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f963294781eea57c7957000d0daa1d149be3cd89
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 70b2e52af1ae87f4cacdb2189609c3ead2e3bc4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396367"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417110"
 ---
 # <a name="reserved-keywords-transact-sql"></a>Зарезервированные ключевые слова (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -598,7 +599,7 @@ ms.locfileid: "87396367"
         DROP
     :::column-end:::
     :::column:::
-        OR
+        ИЛИ
     :::column-end:::
     :::column:::
         VALUES
@@ -770,7 +771,7 @@ ms.locfileid: "87396367"
 :::row-end:::  
 :::row:::
     :::column:::
-        **ADD**
+        **ДОБАВИТЬ**
     :::column-end:::
     :::column:::
         **EXTERNAL**
@@ -847,7 +848,7 @@ ms.locfileid: "87396367"
 :::row-end:::  
 :::row:::
     :::column:::
-        **Службы Analysis Services**
+        **AS**
     :::column-end:::
     :::column:::
         **FOREIGN**
@@ -1436,7 +1437,7 @@ ms.locfileid: "87396367"
         **NONE**
     :::column-end:::
     :::column:::
-        **USER**
+        **Пользователь**
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -1721,7 +1722,7 @@ ms.locfileid: "87396367"
         ASSERTION
     :::column-end:::
     :::column:::
-        INTEGER
+        ЦЕЛОЕ ЧИСЛО
     :::column-end:::
     :::column:::
         SCROLL
@@ -1776,7 +1777,7 @@ ms.locfileid: "87396367"
         BINARY
     :::column-end:::
     :::column:::
-        LANGUAGE
+        ЯЗЫК
     :::column-end:::
     :::column:::
         SENSITIVE
@@ -1944,7 +1945,7 @@ ms.locfileid: "87396367"
         MATCH
     :::column-end:::
     :::column:::
-        STATE
+        СОСТОЯНИЕ
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -2175,7 +2176,7 @@ ms.locfileid: "87396367"
         OCCURRENCES_REGEX
     :::column-end:::
     :::column:::
-        TRUE
+        true
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -2469,7 +2470,7 @@ ms.locfileid: "87396367"
         FILTER
     :::column-end:::
     :::column:::
-        real
+        ВЕЩЕСТВЕННОЕ ЧИСЛО
     :::column-end:::
     :::column:::
         XMLEXISTS
@@ -2608,7 +2609,7 @@ ms.locfileid: "87396367"
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [Уровень совместимости инструкции ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   

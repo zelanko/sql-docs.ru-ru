@@ -1,4 +1,5 @@
 ---
+description: ASSEMBLYPROPERTY (Transact-SQL)
 title: ASSEMBLYPROPERTY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/24/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: cf03d1b1-724c-48bf-a8df-3fe2586b150a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 50fd500a3ce7248b60e423df662b5d9eeda2cef5
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 9e466b8d66760704ce7ee90028210dfa5dfabc22
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113136"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417480"
 ---
 # <a name="assemblyproperty-transact-sql"></a>ASSEMBLYPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +48,7 @@ ASSEMBLYPROPERTY('assembly_name', 'property_name')
 *property_name*  
 Имя свойства, о котором будут получены данные. *property_name* может иметь одно из следующих значений:
   
-|Значение|Description|  
+|Значение|Описание|  
 |---|---|
 |**CultureInfo**|Локаль сборки.|  
 |**PublicKey**|Открытый ключ или токен открытого ключа сборки.|  
@@ -72,7 +73,7 @@ GO
 SELECT ASSEMBLYPROPERTY ('HelloWorld' , 'PublicKey');  
 ```  
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 [CREATE ASSEMBLY (Transact-SQL)](../../t-sql/statements/create-assembly-transact-sql.md)  
 [DROP ASSEMBLY (Transact-SQL)](../../t-sql/statements/drop-assembly-transact-sql.md)
   

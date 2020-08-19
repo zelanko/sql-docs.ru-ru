@@ -1,4 +1,5 @@
 ---
+description: Справочник по пользовательскому интерфейсу (OracleToSQL)
 title: Справочник по пользовательскому интерфейсу (OracleToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -10,17 +11,17 @@ ms.assetid: 160d4784-d108-4705-932d-763558912804
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: f0fa992181878a185fc6ba12719f3b2edc5fa9ae
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 2d234e907cc8839219b942cc841aed02f45e3fbe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932945"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418420"
 ---
 # <a name="user-interface-reference-oracletosql"></a>Справочник по пользовательскому интерфейсу (OracleToSQL)
 В этом разделе содержатся разделы справки по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Помощник по миграции (SSMA) для Oracle.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
 В следующей таблице приводится список диалоговых окон SSMA.  
   
 |Раздел|Описание|  
@@ -36,7 +37,7 @@ ms.locfileid: "87932945"
 |[Диалоговые окна &#40;глобальных параметров&#41;  &#40;OracleToSQL&#41;](../../ssma/oracle/global-settings-dialogs-oracletosql.md)|Используйте страницу диалоговые окна диалогового окна **глобальные параметры** для настройки диалоговых окон и параметров предупреждений по умолчанию.|  
 |[Глобальные параметры &#40;ведение журнала&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/global-settings-logging-oracletosql.md)|Страница Ведение журнала диалогового окна **глобальные параметры** используется для настройки ведения журнала.|  
 |[Глобальные параметры &#40;окно вывода&#41;  &#40;OracleToSQL&#41;](../../ssma/oracle/global-settings-output-window-oracletosql.md)|Используйте диалоговое окно **глобальные параметры** , чтобы задать настройки для ПОЛЬЗОВАТЕЛЬСКОГО интерфейса SSMA для Oracle.|  
-|[&#40;"глобальные параметры"&#41; &#40;"тест-инженер"&#41;OracleToSQL](../../ssma/oracle/global-settings-tester-oracletosql.md)|Используйте страницу "тест" диалогового окна **глобалсеттингс** , чтобы указать параметры для тестера.|  
+|[&#40;"глобальные параметры"&#41; &#40;"тест-инженер"&#41;OracleToSQL ](../../ssma/oracle/global-settings-tester-oracletosql.md)|Используйте страницу "тест" диалогового окна **глобалсеттингс** , чтобы указать параметры для тестера.|  
 |[Новый проект &#40;OracleToSQL&#41;](../../ssma/oracle/new-project-oracletosql.md)|Используйте диалоговое окно **Создание проекта** для создания нового проекта SSMA для Oracle.|  
 |[Параметры проекта &#40;преобразование&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md)|Используйте страницу Преобразование диалогового окна **Параметры проекта** , чтобы указать, как SSMA для Oracle преобразует функции и глобальные переменные.|  
 |[Параметры проекта &#40;GUI&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-gui-oracletosql.md)|Используйте страницу графический интерфейс диалогового окна **Параметры проекта** , чтобы указать объем данных, отображаемых на вкладке **данные** .|  
