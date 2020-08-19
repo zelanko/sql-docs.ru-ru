@@ -1,4 +1,5 @@
 ---
+description: Преобразования типа данных datetime из SQL в C
 title: Преобразования из SQL в C | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 059431e2-a65c-4587-ba4a-9929a1611e96
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5bd8bff34cca52da2e865a020ff97211b09d9882
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: b317f23ef9e960fe407e68ef108f31ba0fcfa2c6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87331069"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420638"
 ---
 # <a name="datetime-data-type-conversions-from-sql-to-c"></a>Преобразования типа данных datetime из SQL в C
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,16 +32,16 @@ ms.locfileid: "87331069"
 | - | ---------- | ---------- | --------------- | -------------- | ------------------------ | ------------ | ---------- | ----------- |
 | **SQL_CHAR** |2, 3, 4, 5|2, 3, 6, 7, 8|2, 3, 9, 10, 11|2, 3, 6, 7|2, 3, 9, 10, 11|1|1|1|  
 | **SQL_WCHAR** |2, 3, 4, 5|2, 3, 6, 7, 8|2, 3, 9, 10, 11|2, 3, 6, 7|2, 3, 9, 10, 11|1|1|1|  
-| **SQL_TYPE_DATE** |OK|12|13|12|13, 23|14|16|16|  
-| **SQL_SS_TIME2** |12|8|15|OK|10, 23|17|16|16|  
-| **SQL_TYPE_TIMESTAMP** |18|7, 8|OK|7|23|19|16|16|  
-| **SQL_SS_TIMESTAMPOFFSET** |18, 22|7, 8, 20|20|7, 20|OK|21|16|16|  
+| **SQL_TYPE_DATE** |ОК|12|13|12|13, 23|14|16|16|  
+| **SQL_SS_TIME2** |12|8|15|ОК|10, 23|17|16|16|  
+| **SQL_TYPE_TIMESTAMP** |18|7, 8|ОК|7|23|19|16|16|  
+| **SQL_SS_TIMESTAMPOFFSET** |18, 22|7, 8, 20|20|7, 20|ОК|21|16|16|  
   
 ## <a name="key-to-symbols"></a>Расшифровка символов  
   
 |Символ|Значение|  
 |------------|-------------|  
-|OK|Проблемы преобразования отсутствуют.|  
+|ОК|Проблемы преобразования отсутствуют.|  
 |1|Применяются правила, использовавшиеся до [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
 |2|Начальные и конечные пробелы пропускаются.|  
 |3|Выполняется синтаксический анализ строки, при котором из нее извлекается дата, время, часовой пояс или смещение часового пояса, при этом допускается точность задания долей секунды до 9 десятичных знаков. Если при анализе обнаруживается смещение часового пояса, то время преобразуется к часовому поясу клиента. Если во время этого преобразования возникает ошибка, создается диагностическая запись с кодом SQLSTATE 22018 и сообщением «Переполнение поля даты и времени».|  

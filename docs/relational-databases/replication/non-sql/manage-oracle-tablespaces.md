@@ -1,4 +1,5 @@
 ---
+description: Управление табличными пространствами Oracle
 title: Управление табличными пространствами Oracle | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b8ea6c3b-01d6-4efc-bbfb-03b264530bbd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e6f969ef7b006c6ccf3f24668322fe55c00511c4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0df07b2e1ae3e519624abae0a4ee81fbc7938f91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893307"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420468"
 ---
 # <a name="manage-oracle-tablespaces"></a>Управление табличными пространствами Oracle
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -44,6 +45,6 @@ ms.locfileid: "85893307"
   
 ## <a name="see-also"></a>См. также:  
  [Настройка издателя Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
- [Объекты, создаваемые в издателе Oracle](../../../relational-databases/replication/non-sql/objects-created-on-the-oracle-publisher.md)  
+ [Objects Created on the Oracle Publisher](../../../relational-databases/replication/non-sql/objects-created-on-the-oracle-publisher.md)  
   
   

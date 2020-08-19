@@ -1,4 +1,5 @@
 ---
+description: bcp_setcolfmt
 title: bcp_setcolfmt | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,11 +19,12 @@ ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 16b5cd47a776a426ce515946794f0385eb0222e0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 01576468fb54618e34f72bbd42fbd1ae861c8520
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010037"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420538"
 ---
 # <a name="bcp_setcolfmt"></a>bcp_setcolfmt
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +57,7 @@ RETCODE bcp_setcolfmt (
  *property*  
  Одна из констант свойства. В данной таблице определены константы свойства.  
   
-|Свойство|Значение|Описание|  
+|Свойство.|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |BCP_FMT_TYPE|BYTE|Тип данных этого столбца в файле пользователя. При отличии от типа данных соответствующего столбца в таблице базы данных массовое копирование преобразует данные, если это возможно.<br /><br /> Параметр BCP_FMT_TYPE перечисляется в токенах типов данных SQL Server в файле sqlncli.h, а не в перечислении типов данных ODBC C. Например, можно указать символьную строку типа SQL_C_CHAR ODBC при помощи типа SQLCHARACTER в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Чтобы задать представление данных по умолчанию для типа данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , установите этот параметр в значение 0.<br /><br /> Для массового копирования из SQL Server в файл, когда BCP_FMT_TYPE — SQLDECIMAL или SQLNUMERIC, если исходный столбец не является **десятичным** или **числовым**, используются точность и масштаб по умолчанию. В противном случае, если исходный столбец имеет тип **Decimal** или **numeric**, используются точность и масштаб исходного столбца.|  
 |BCP_FMT_INDICATOR_LEN|INT|Задает длину признака (префикса) в байтах.<br /><br /> Задает длину в байтах для признака длины или признака NULL в данных столбца. Допустимыми значениями длины признака являются 0 (если признак не используется), 1, 2 и 4.<br /><br /> Чтобы задать для признака массового копирования использование по умолчанию, установите этот параметр в значение SQL_VARLEN_DATA.<br /><br /> Признаки располагаются в памяти непосредственно перед данными, а в файле данных — непосредственно перед данными, к которым они применяются.<br /><br /> Если для столбца файла данных используется несколько способов задания длины (например, признак и максимальная длина столбца или признак и последовательность-признак конца), то для массового копирования выбирается способ, применение которого вызовет копирование данных наименьшего объема.<br /><br /> Если пользователь не изменяет формат данных, то создаваемые при массовом копировании файлы данных содержат признаки, которые определяют, когда столбец может принимать значение NULL или его данные имеют переменную длину.|  
@@ -73,7 +75,7 @@ RETCODE bcp_setcolfmt (
 ## <a name="returns"></a>Возвращаемое значение  
  SUCCEED или FAIL.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Эта функция заменяет функцию **bcp_colfmt** . Вся функциональность **bcp_colfmt** реализована в функции **bcp_setcolfmt** . Дополнительно реализована поддержка параметров сортировки столбца. Рекомендуется устанавливать следующие атрибуты формата столбца в данной последовательности:  
   
  BCP_FMT_SERVER_COL  
@@ -111,7 +113,7 @@ RETCODE bcp_setcolfmt (
   
  Дополнительные сведения см. в разделе [улучшения даты и времени &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

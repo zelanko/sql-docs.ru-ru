@@ -1,4 +1,5 @@
 ---
+description: класс событий CPU Threshold Exceeded
 title: Класс событий CPU Threshold Exceeded | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -12,12 +13,12 @@ ms.assetid: eb106f7d-baa3-4a2b-96b2-f9fe0844057d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f4bb1db4d281574f8292ec3bd752389142b8fdb5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7573d02c1c89ed198a612f920e72b4e140ad8873
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762964"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420988"
 ---
 # <a name="cpu-threshold-exceeded-event-class"></a>класс событий CPU Threshold Exceeded
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -28,10 +29,10 @@ ms.locfileid: "85762964"
   
 ## <a name="cpu-threshold-exceeded-data-columns"></a>Столбцы данных класса событий CPU Threshold Exceeded  
   
-|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ЦП|**int**|Использование ЦП в миллисекундах.|18|Да|  
-|EventClass|**int**|214|27|нет|  
+|EventClass|**int**|214|27|Нет|  
 |EventSubClass|**int**|Нарушение ограничения ЦП.|21|Да|  
 |GroupID|**int**|Идентификатор группы, в которой произошло нарушение.|66|Да|  
 |OwnerID|**int**|Идентификатор SPID процесса, который вызвал нарушение.|58|Да|  

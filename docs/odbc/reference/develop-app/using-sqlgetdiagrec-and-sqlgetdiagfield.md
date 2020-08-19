@@ -1,4 +1,5 @@
 ---
+description: Использование SQLGetDiagRec и SQLGetDiagField
 title: Использование SQLGetDiagRec и SQLGetDiagField | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4f486bb1-fad8-4064-ac9d-61f2de85b68b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 69a17086253b40469b0ed98cb6f870f319f03f52
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 402cb326ac91e13db0d3ab5421bd5ddb097fb3db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306755"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421438"
 ---
 # <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>Использование SQLGetDiagRec и SQLGetDiagField
 Приложения вызывают **SQLGetDiagRec** или **SQLGetDiagField** для получения диагностических сведений. Эти функции принимают среду, соединение, инструкцию или дескриптор дескриптора и возвращают диагностические данные из функции, которая использовалась в последний раз. Диагностика, зарегистрированная в определенном обработчике, отбрасывается при вызове новой функции с помощью этого маркера. Если функция вернула несколько диагностических записей, приложение вызывает эти функции несколько раз. Общее число записей о состоянии извлекается путем вызова **SQLGetDiagField** для записи заголовка (запись 0) с параметром SQL_DIAG_NUMBER.  

@@ -1,4 +1,5 @@
 ---
+description: Вертикальные приложения
 title: Вертикальные приложения | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d50ea3e6-7a9e-4fb6-8cd8-1d429d2f7b3c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cc88f38fd1ffe8b2ee0033ad0a2abc4f15fd5cf3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a12be9247af3f273526dd08ee99ff7cc301af822
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300379"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421408"
 ---
 # <a name="vertical-applications"></a>Вертикальные приложения
 По вертикали приложения обычно выполняют четко определенную задачу для одной СУБД. Например, приложение для ввода заказа отслеживает заказы в компании. Общие сведения о таких типах приложений — схема базы данных, которая обычно разработана разработчиком приложения, и, в то время как приложение может работать с несколькими разными СУБД, оно работает с одной СУБД для одного клиента.  

@@ -1,4 +1,5 @@
 ---
+description: SQLGetInfo, функция
 title: Функция SQLGetInfo | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/28/2020
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 49dceccc-d816-4ada-808c-4c6138dccb64
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9a88eb1a4aff7d166a81bbf6ec64ae2b878fd5fa
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: b60dcdd90c71e1790464f24cd34dedfaa22e7c61
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363384"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421278"
 ---
 # <a name="sqlgetinfo-function"></a>SQLGetInfo, функция
 
@@ -71,7 +72,7 @@ SQLRETURN SQLGetInfo(
   
  Для всех других типов данных значение *BufferLength* игнорируется, и драйвер предполагает, что размер \* *ИНФОВАЛУЕПТР* равен склусмаллинт или SQLUINTEGER, в зависимости от *инфотипе*.  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
 
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR или SQL_INVALID_HANDLE.  
   
@@ -79,7 +80,7 @@ SQLRETURN SQLGetInfo(
 
  Если **SQLGetInfo** возвращает либо SQL_ERROR, либо SQL_SUCCESS_WITH_INFO, связанное значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с *параметром handletype* SQL_HANDLE_DBC и *маркером* *коннектионхандле*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые функцией **SQLGetInfo** , и объясняется каждый из них в контексте этой функции. Нотация "(DM)" предшествует описаниям SQLSTATE, возвращаемым диспетчером драйверов. Код возврата, связанный с каждым значением SQLSTATE, имеет SQL_ERROR, если не указано иное.  
   
-|SQLSTATE|Error|Описание|  
+|SQLSTATE|Ошибка|Описание|  
 |--------------|-----------|-----------------|  
 |01000|Общее предупреждение|Информационное сообщение для конкретного драйвера. (Функция возвращает SQL_SUCCESS_WITH_INFO.)|  
 |01004|Строковые данные, усеченные справа|Буфер \* *инфовалуептр* недостаточно велик для возврата всех запрошенных сведений. Поэтому данные были усечены. Длина запрошенной информации в неусеченной форме возвращается в **стрингленгсптр*. (Функция возвращает SQL_SUCCESS_WITH_INFO.)|  

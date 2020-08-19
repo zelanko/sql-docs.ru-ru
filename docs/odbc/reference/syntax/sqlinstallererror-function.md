@@ -1,4 +1,5 @@
 ---
+description: Функция SQLInstallerError
 title: Функция Склинсталлереррор | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e6474b79-4d55-458f-81ce-abfafe357f83
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e749237cf87c5054b8273f38531d9336d316e040
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fcc5f89a40802e6efa405771474cda3e86f4519c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302105"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421168"
 ---
 # <a name="sqlinstallererror-function"></a>Функция SQLInstallerError
 **Соответствия**  
@@ -64,7 +65,7 @@ RETCODE SQLInstallerError(
  *пкберрормсг*  
  Проверки Указатель на общее число байтов (за исключением символа завершения null), доступного для возврата в *лпсзеррормсг*. Если число возвращаемых байт больше или равно значению *кберрормсгмакс*, текст сообщения об ошибке в *лпсзеррормсг* усекается до *кберрормсгмакс* минус байты символов завершения null. Аргумент *пкберрормсг* может быть пустым указателем.  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA или SQL_ERROR.  
   
 ## <a name="diagnostics"></a>Диагностика  

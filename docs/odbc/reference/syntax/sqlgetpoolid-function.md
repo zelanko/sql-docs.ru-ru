@@ -1,4 +1,5 @@
 ---
+description: Функция SQLGetPoolID
 title: Функция Склжетпулид | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 95a8666a-ad68-4d89-bf65-f2cc797f8820
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 32cc973f4dab5bde7bcedade0365d233987dda72
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2cd38008b90a1299bdd78c4a56d7394f85876ab0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303321"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421258"
 ---
 # <a name="sqlgetpoolid-function"></a>Функция SQLGetPoolID
 **Соответствия**  
@@ -42,7 +43,7 @@ SQLRETURN  SQLGetPoolID (
  *ппулид*  
  Проверки Идентификатор пула, который используется для идентификации набора соединений, которые могут быть взаимозаменяемы (возможно, требуется дополнительный сброс).  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR или SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Диагностика  

@@ -1,4 +1,5 @@
 ---
+description: Написание приложений ODBC 3.x
 title: Создание приложений ODBC 3. x | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 19c54fc5-9dd6-49b6-8c9f-a38961b40a65
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3ba48d76babcaa5fcc49a541088f7c4cc349b569
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7df97b99df10e613ee45aaa3c01174b46160e740
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288992"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421358"
 ---
 # <a name="writing-odbc-3x-applications"></a>Написание приложений ODBC 3.x
 Когда приложение ODBC *2. x* обновляется до ODBC *3. x*, оно должно быть написано таким, что оно работает с драйверами ODBC *2. x* и *3. x* . Приложение должно включать условный код, чтобы воспользоваться всеми преимуществами функций ODBC *3. x* .  

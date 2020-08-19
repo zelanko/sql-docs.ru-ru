@@ -1,4 +1,5 @@
 ---
+description: Диагностические записи и поля
 title: Диагностические записи и поля | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
@@ -20,11 +21,12 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f6236e2744487742a3fec119b62a2a08e7594822
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5370b0730328466dbdf1c1602bb4bdb3140c040e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002378"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420568"
 ---
 # <a name="diagnostic-records-and-fields"></a>Диагностические записи и поля
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +49,7 @@ ms.locfileid: "86002378"
   
  Большинство ошибок, о которых сообщает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвер ODBC для собственного клиента, можно эффективно диагностировать, используя только сведения, возвращенные **SQLGetDiagRec**. Однако в некоторых случаях сведения, возвращаемые в специфических для драйвера диагностических полях, важны для диагностирования ошибки. При написании обработчика ошибок ODBC для приложений, использующих [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвер ODBC для собственного клиента, рекомендуется также использовать **SQLGetDiagField** для получения по крайней мере SQL_DIAG_SS_MSGSTATE и SQL_DIAG_SS_SEVERITY полей, относящихся к драйверу. Если какая-то ошибка может быть вызвана в нескольких местах кода [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], то SQL_DIAG_SS_MSGSTATE показывает сотруднику отдела службы технической поддержки корпорации Майкрософт, где именно ошибка была вызвана, и это может иногда помочь при диагностике проблемы.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обработка ошибок и сообщений](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
   

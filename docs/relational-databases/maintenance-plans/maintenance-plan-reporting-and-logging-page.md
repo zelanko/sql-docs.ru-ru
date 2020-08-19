@@ -1,4 +1,5 @@
 ---
+description: План обслуживания (страница «Отчеты и ведение журнала»)
 title: План обслуживания, страница "Отчеты и ведение журнала" | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 3a30b17a-3deb-446f-900a-62f88934a90f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: db045eeb48bc04abb415bb5ac14a7872fc805b09
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 05db1c0f8c2eacd2a30e1e1e50b08e090ca6e9c4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754537"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420868"
 ---
 # <a name="maintenance-plan-reporting-and-logging-page"></a>План обслуживания (страница «Отчеты и ведение журнала»)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,8 +28,8 @@ ms.locfileid: "85754537"
  **Сформировать текстовый файл отчета**  
  Задайте это значение, если требуется, чтобы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] записал отчет в текстовом файле.  
   
- **Создать новый файл**  
- Создайте новый файл отчета для каждого выполнения плана обслуживания. По умолчанию файлы отчетов записываются на тот компьютер, где установлен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , содержащий план обслуживания, в папку, указанную во время настройки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в качестве папки журналов по умолчанию. Чтобы указать другую папку, введите полный путь папки в поле **Папка** или нажмите кнопку "Обзор" ( **...** ) и перейдите в нужную папку.  
+ **Создание нового файла**  
+ Создайте новый файл отчета для каждого выполнения плана обслуживания. По умолчанию файлы отчетов записываются на тот компьютер, где установлен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , содержащий план обслуживания, в папку, указанную во время настройки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в качестве папки журналов по умолчанию. Чтобы указать другую папку, введите полный путь папки в поле **Папка** или нажмите кнопку "Обзор" (**...**) и перейдите в нужную папку.  
   
  **Добавить к файлу**  
  Добавлять отчет после каждого выполнения плана к файлу, заданному в текстовом поле **Имя файла** . Также можно задать файл, нажав кнопку обзора и выбрав файл из диалогового окна.  
@@ -51,7 +52,7 @@ ms.locfileid: "85754537"
  **Создать**  
  Вызывает диалоговое окно **Свойства соединения** . Используется для указания новых сведений о соединении, которые записываются в журнал плана обслуживания на удаленном сервере.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Планы обслуживания](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [Database Mail](../../relational-databases/database-mail/database-mail.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: Свойства публикации, параметры подписки
 title: Свойства публикации, параметры подписки | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: cad5a65d4988dcc942f571e58abf576d8ba8e05a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8637bafe6433893b73e3dc2a7980c43f73fe19d4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720868"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420498"
 ---
 # <a name="publication-properties-subscription-options"></a>Свойства публикации, параметры подписки
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "85720868"
  Определяет, разрешить ли подписчикам создавать подписки по запросу для данной публикации. Дополнительные сведения см. в статье [Подписка на публикации](../../relational-databases/replication/subscribe-to-publications.md).  
   
 ### <a name="schema-replication"></a>Репликация схемы  
- **Репликация изменений схемы**  
+ **Реплицировать изменения схемы**  
  Только для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий. Определяет, реплицировать ли изменения схемы (например, добавление столбца в таблицу или изменение типа данных столбца) в опубликованные объекты. Дополнительные сведения см. в статье [Внесение изменений в схемы баз данных публикации](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
 ## <a name="options-for-snapshot-and-transactional-publications"></a>Параметры для публикаций моментальных снимков и транзакций  
