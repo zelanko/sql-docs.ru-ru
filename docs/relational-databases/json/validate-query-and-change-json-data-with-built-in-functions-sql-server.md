@@ -1,4 +1,5 @@
 ---
+description: Проверка, построение запросов и изменение данных JSON с помощью встроенных функций (SQL Server)
 title: Проверка, построение запросов и изменение данных JSON с помощью встроенных функций
 ms.date: 06/03/2020
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9819b334dfa5b6c9d2b9a91fb80293a40b4a4e67
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 76644f677a03f34312e6731f5a973167313ad22a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725200"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424096"
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>Проверка, построение запросов и изменение данных JSON с помощью встроенных функций (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -194,7 +195,7 @@ FROM Families f
   
 В приведенном примере элементы "а" и "c" являются строковыми значениями, а элемент "b" — массивом. **JSON_VALUE** и **JSON_QUERY** возвращают следующие результаты:  
   
-|путь|**JSON_VALUE** возвращает|**JSON_QUERY** возвращает|  
+|Путь|**JSON_VALUE** возвращает|**JSON_QUERY** возвращает|  
 |-----------|-----------------------------|-----------------------------|  
 |**$**|NULL или ошибка|`{ "a": "[1,2]", "b": [1,2], "c":"hi"}`|  
 |**$.a**|[1,2]|NULL или ошибка|  

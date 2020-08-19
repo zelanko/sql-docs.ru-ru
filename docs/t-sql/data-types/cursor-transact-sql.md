@@ -1,4 +1,5 @@
 ---
+description: cursor (Transact-SQL)
 title: cursor (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/23/2017
@@ -14,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: fbea16ef-f2cc-4734-9149-ec2598fd3cca
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d2dcc2f69223c4d4c3a700ade7d7b6da5417f3b9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cc1f3981733712758230287c770c47dd0bf43562
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732872"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422908"
 ---
 # <a name="cursor-transact-sql"></a>cursor (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Тип данных для переменных или выходных параметров хранимых процедур, которые содержат ссылку на курсор.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
 Операции, которые могут выполняться с переменными и параметрами, имеющими тип данных **cursor**:
 -   Инструкции DECLARE *\@local_variable* и SET *\@local_variable*.  
 -   Инструкции над курсором OPEN, FETCH, CLOSE и DEALLOCATE.  

@@ -1,4 +1,5 @@
 ---
+description: Функции, принимающие строковые параметры
 title: Функции, принимающие строковые параметры | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 869b8421-f71e-4dfd-adce-691bd3012b16
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 01d0f143c72f57e946f7fe2bf52a50910d4e56aa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f634e65260332851d02d2fe67302f03529a6ff7b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286304"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421858"
 ---
 # <a name="functions-accepting-string-parameters"></a>Функции, принимающие строковые параметры
 Все функции, принимающие строковые параметры, будут преобразованы в Юникод. (Будет экспортирована форма "W" функции.) Число байтов преобразуется в число символов для соответствующих API-интерфейсов ODBC. Это относится к следующим функциям:  

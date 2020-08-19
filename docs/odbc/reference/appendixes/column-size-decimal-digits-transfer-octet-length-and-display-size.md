@@ -1,4 +1,5 @@
 ---
+description: Размер столбца, десятичные цифры, длина октета и размер дисплея — ODBC
 title: Размер столбца, десятичные цифры, длина октета, размер дисплея | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 723107a1-be08-4ea3-a8c0-b2c45d38d1aa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 55b8e9dd305764a89601e9ffd5a337e42a8d8db3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d00a23fb38bdece97ffcbde0974b7bdf893a5133
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306575"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421508"
 ---
 # <a name="column-size-decimal-digits-transfer-octet-length-and-display-size---odbc"></a>Размер столбца, десятичные цифры, длина октета и размер дисплея — ODBC
 Типы данных характеризуются размером столбца (или параметра), десятичными цифрами, длиной и отображаемым размером. Следующие функции ODBC возвращают эти атрибуты для параметра в инструкции SQL или для типа данных SQL в источнике данных. Каждая функция ODBC возвращает различные наборы этих атрибутов следующим образом.  

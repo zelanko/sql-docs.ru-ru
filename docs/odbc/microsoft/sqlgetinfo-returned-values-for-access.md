@@ -1,4 +1,5 @@
 ---
+description: Возвращаемые значения SQLGetInfo для Access
 title: SQLGetInfo вернул значения для доступа | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c551e07f-30c4-41a2-8991-6010a3511d76
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9119a87fa1f4cca25369d4dfb59a1987334c03cd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 27af9272132b2e7f2489def0d1e6720bfdeb4195
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298564"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421738"
 ---
 # <a name="sqlgetinfo-returned-values-for-access"></a>Возвращаемые значения SQLGetInfo для Access
 В следующей таблице перечислены #defines *для аргумента* языка C и соответствующие значения, возвращаемые **SQLGetInfo**. Эти сведения можно получить, передав перечисленный #defines C-Language в **SQLGetInfo** в аргументе *финфотипе* . Дополнительные сведения о значениях, возвращаемых функцией **SQLGetInfo**, см. в *справочнике программиста по ODBC*.  
@@ -81,7 +82,7 @@ ms.locfileid: "81298564"
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|DSN из ODBC. ini или "", если в ODBC. ini используется ключевое слово DRIVER|  
+|SQL_DATA_SOURCE_NAME|DSN из Odbc.ini или "", если в Odbc.ini используется ключевое слово DRIVER|  
 |SQL_DATA_SOURCE_READ_ONLY|"N"|  
 |SQL_DATABASE_NAME|Имя файла|  
 |SQL_DATETIME_LITERALS|0|  
@@ -94,7 +95,7 @@ ms.locfileid: "81298564"
 |SQL_DRIVER_HENV|Обрабатывается диспетчером драйверов.|  
 |SQL_DRIVER_HLIB|Обрабатывается диспетчером драйверов.|  
 |SQL_DRIVER_HSTMT|Обрабатывается диспетчером драйверов.|  
-|SQL_DRIVER_NAME|"OdbcJt32. dll"|  
+|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
 |SQL_DRIVER_VER|"4,00.*nnnn*" (*nnnn* указывает дату сборки)|  
 |SQL_DROP_ASSERTION|0|  
@@ -111,7 +112,7 @@ ms.locfileid: "81298564"
 |SQL_GETDATA_EXTENSIONS|Несколько значений|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (Обратная кавычка)|  
+|SQL_IDENTIFIER_QUOTE_CHAR|" \` " (Обратная кавычка)|  
 |SQL_KEYWORDS|Несколько значений|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -156,7 +157,7 @@ ms.locfileid: "81298564"
 |SQL_SCROLL_OPTIONS|Несколько значений|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
 |SQL_SERVER_NAME|ИМЕЕТ|  
-|SQL_SPECIAL_CHARACTERS|"\`@#$%^&\*~\_} {"\';:?/><,.!-+=\\ \'[] &#124; "|  
+|SQL_SPECIAL_CHARACTERS|"~ \` @#$%^& \* \_ -+= \\ } {" \' ;:?/><,.! \' [] &#124; "|  
 |SQL_STRING_FUNCTIONS|Несколько значений|  
 |SQL_SUBQUERIES|Несколько значений|  
 |SQL_SYSTEM_FUNCTIONS|0|  

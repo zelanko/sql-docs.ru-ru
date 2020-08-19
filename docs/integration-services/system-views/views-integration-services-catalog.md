@@ -1,4 +1,5 @@
 ---
+description: Представления (каталог служб Integration Services)
 title: Представления (каталог служб Integration Services) | Документы Майкрософт
 ms.custom: ''
 ms.date: 12/16/2016
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d0294d43-4852-46dc-9afa-d0c19ea9aa03
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 40d1d7e82ceb6c1654f116d289e2c201a1283c43
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d4dfe305d34435dd1b09dc825021995e1a9cb75d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915312"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421958"
 ---
 # <a name="views-integration-services-catalog"></a>Представления (каталог служб Integration Services)
 
@@ -87,7 +88,7 @@ ms.locfileid: "86915312"
  Отображает сведения о проверке правильности всех проектов и пакетов в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 [catalog.master_properties (база данных SSISDB)](../../integration-services/system-views/catalog-master-properties-ssisdb-database.md)  
-Отображает свойства мастера [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] горизонтального увеличения масштаба.
+Отображает свойства мастера [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out.
 
 [catalog.worker_agents (база данных SSISDB)](../../integration-services/system-views/catalog-worker-agents-ssisdb-database.md)  
-Отображает сведения для рабочей роли [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] горизонтального увеличения масштаба.  
+Отображает сведения для рабочей роли [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out.  

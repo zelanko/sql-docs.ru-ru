@@ -1,4 +1,5 @@
 ---
+description: catalog.revoke_permission (база данных SSISDB)
 title: catalog.revoke_permission (база данных SSISDB) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 850b9c26-5c7c-47b9-a61c-5cf9bb5948cf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7fd01336eca5b0717af288322a496c5b082b5b97
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0475b5adb825339c2c3c7a0927aabbea2bf889ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912920"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422098"
 ---
 # <a name="catalogrevoke_permission-ssisdb-database"></a>catalog.revoke_permission (база данных SSISDB)
 
@@ -79,7 +80,7 @@ catalog.revoke_permission [ @object_type = ] object_type
   
 -   Членство в роли сервера **sysadmin**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Если задан тип разрешения permission_type, хранимая процедура удаляет разрешение, явно предоставленное участнику на объект. Даже если таких экземпляров нет, процедура возвращает значение успешного выполнения (`0`). Если permission_type не задан, хранимая процедура удаляет все разрешения, явно предоставленные участнику на объект.  
   
 > [!NOTE]  
@@ -91,7 +92,7 @@ catalog.revoke_permission [ @object_type = ] object_type
 |----------------------------|---------------------|----------------------------|-----------------------------|  
 |`1`|READ|Разрешает участнику читать сведения, рассматриваемые как часть объекта, например свойства. Тем самым участнику не разрешается перечислять или читать содержимое других объектов, содержащихся в этом объекте.|Папка, проект, среда, операция|  
 |`2`|MODIFY|Разрешает участнику изменять сведения, рассматриваемые как часть объекта, например свойства. Тем самым участнику не разрешается изменять другие объекты, содержащиеся в этом объекте.|Папка, проект, среда, операция|  
-|`3`|EXECUTE|Разрешает участнику выполнять все пакеты в проекте.|Проект|  
+|`3`|EXECUTE|Разрешает участнику выполнять все пакеты в проекте.|Project|  
 |`4`|MANAGE_PERMISSIONS|Разрешает участнику назначать разрешения на объекты.|Папка, проект, среда, операция|  
 |`100`|CREATE_OBJECTS|Разрешает участнику создавать объекты в папке.|Папка|  
 |`101`|READ_OBJECTS|Разрешает участнику читать все объекты в папке.|Папка|  

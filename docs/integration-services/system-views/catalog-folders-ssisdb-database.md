@@ -1,4 +1,5 @@
 ---
+description: catalog.folders (база данных SSISDB)
 title: catalog.folders (база данных SSISDB) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 21a37c16-60aa-4b3f-8bca-ac90ad1697ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6b0a65abc9706af4156767f5ca6bed8fd5a3c69b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8ec7f8fad821c5c62d7b7ec58290050a52b0bf17
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912530"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422068"
 ---
 # <a name="catalogfolders-ssisdb-database"></a>catalog.folders (база данных SSISDB)
 
@@ -26,7 +27,7 @@ ms.locfileid: "86912530"
 
   Отображает папки в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |идентификатор|**bigint**|Уникальный идентификатор папки.|  
 |name|**sysname(nvarchar(128)**|Имя папки, уникальное в пределах каталога служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|  
@@ -35,7 +36,7 @@ ms.locfileid: "86912530"
 |created_by_name|**nvarchar(128)**|Имя пользователя, создавшего папку.|  
 |created_time|**datetimeoffset(7)**|Дата и время создания папки.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  В этом представлении отображается строка для каждой папки в каталоге.  
   
 ## <a name="permissions"></a>Разрешения  

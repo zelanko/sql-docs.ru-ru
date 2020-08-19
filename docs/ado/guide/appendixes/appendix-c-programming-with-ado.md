@@ -1,4 +1,5 @@
 ---
+description: Приложение в. Программирование с помощью ADO в средах разработки
 title: Приложение в. Программирование с помощью ADO | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 40af6e70-2a37-480f-aadc-92095d450af7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7ed57bb3087378ac6529fc5bd8c8a0aa01e06cfa
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4e2521c8c9c2f1104cde2d78d58783118ac61c0a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758530"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422238"
 ---
 # <a name="appendix-c-programming-with-ado-in-development-environments"></a>Приложение в. Программирование с помощью ADO в средах разработки
 ADO — это компонент интерфейса автоматизации COM, который можно использовать со многими языками программирования, включая Microsoft Visual Basic, VBScript, JScript и Visual C++. Версия ADO устанавливается с каждым из этих средств и других приложений, таких как Microsoft Office и Microsoft SQL Server.
 
- Библиотека для ADO — Msado15. dll, а префикс идентификатора программы (ProgID) — ADODB. Например, чтобы явно ссылаться на [набор записей](../../../ado/reference/ado-api/recordset-object-ado.md)ADO, используйте `ADODB.Recordset` .
+ Библиотека для ADO msado15.dll, а префикс идентификатора программы (ProgID) — ADODB. Например, чтобы явно ссылаться на [набор записей](../../../ado/reference/ado-api/recordset-object-ado.md)ADO, используйте `ADODB.Recordset` .
 
  Дополнительные сведения о программировании с помощью ADO в различных средах разработки см. в следующих разделах:
 

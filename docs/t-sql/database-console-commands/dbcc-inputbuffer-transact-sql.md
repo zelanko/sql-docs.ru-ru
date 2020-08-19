@@ -1,4 +1,5 @@
 ---
+description: DBCC INPUTBUFFER (Transact-SQL)
 title: DBCC INPUTBUFFER (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 04/04/2018
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 7b36dd3a0392a4054aa110e625f1ea5703f25b80
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: b8b4c308530099bb54bf7a447adb46b6faac7e5a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484279"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422858"
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -68,7 +69,7 @@ NO_INFOMSGS
 ## <a name="result-sets"></a>Результирующие наборы  
 DBCC INPUTBUFFER возвращает набор строк со следующими столбцами.
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**EventType**|**nvarchar(30)**|Тип события. Может быть **RPC Event** или **Language Event**. Если последние события не обнаружены, на выходе будет **No Event**.|  
 |**Параметры**|**smallint**|0 = Текст<br /><br /> 1- *n* = параметры|  

@@ -1,4 +1,5 @@
 ---
+description: SQLDriverConnect (драйвер для текстовых файлов)
 title: SQLDriverConnect (драйвер для текстовых файлов) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7769021-bd18-4d8e-96e0-e184a82d6ca3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2768669b7dbb2066de0acedd5711911be0eac8fa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c2eb5c35e9f6ae56caa3c6e4ca7473defe3b8bc0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307105"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421808"
 ---
 # <a name="sqldriverconnect-text-file-driver"></a>SQLDriverConnect (драйвер для текстовых файлов)
 > [!NOTE]  
@@ -35,4 +36,4 @@ ms.locfileid: "81307105"
   
 |Драйвер|Требуются ключевые слова|Примеры|  
 |------------|-----------------------|--------------|  
-|Text|Драйвер|Драйвер = {Microsoft Text Driver (*. txt;\*. CSV)}; Дефаултдир = c:\temp|
+|текст|Драйвер|Драйвер = {Microsoft Text Driver (*. txt; \* . CSV)}; Дефаултдир = c:\temp|

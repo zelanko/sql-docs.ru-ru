@@ -1,4 +1,5 @@
 ---
+description: Монитор активности заданий (настройки фильтра)
 title: Монитор активности заданий (настройки фильтра) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d143c4c52c122c159e7c80dd58d8cee847849360
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f7533366a28517fcc2fdb8ca5c2e4ad0c0dd01c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85666933"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424056"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>Монитор активности заданий (настройки фильтра)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "85666933"
 ## <a name="all-jobs"></a>Все задания  
  Эта группа критериев доступна для фильтрации в мониторе активности заданий.  
   
- **Название**  
+ **имя**;  
  Фильтрация заданий по имени.  
   
  **Следующий запуск**  
@@ -49,7 +50,7 @@ ms.locfileid: "85666933"
  **Категория**  
  Фильтрация заданий по категории задания.  
   
- **Назначено**  
+ **Назначенные**  
  Просмотр назначенных или неназначенных заданий по расписанию.  
   
  **Состояние**  
@@ -65,7 +66,7 @@ ms.locfileid: "85666933"
  **Clear**  
  Позволяет вернуть настройки фильтра к установленным по умолчанию.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Наблюдение за активностью заданий](../../ssms/agent/monitor-job-activity.md)  
   
   

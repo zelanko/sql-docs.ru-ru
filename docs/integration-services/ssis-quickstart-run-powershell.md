@@ -1,4 +1,5 @@
 ---
+description: Выполнение пакета служб SSIS с помощью PowerShell
 title: Выполнение пакета служб SSIS с помощью PowerShell | Документы Майкрософт
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3a86309c484cac3538b48c797665661341ca6648
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 659fb23619eeb8f4f74c43307a03b082dfca1919
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921890"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422178"
 ---
 # <a name="run-an-ssis-package-with-powershell"></a>Выполнение пакета служб SSIS с помощью PowerShell
 
@@ -22,7 +23,7 @@ ms.locfileid: "86921890"
 
 В этом кратком руководстве описывается применение скрипта PowerShell для подключения к серверу базы данных и запуска пакета служб SSIS.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Сервер Базы данных SQL Azure прослушивает порт 1433. Если вы пытаетесь подключиться к серверу базы данных SQL Azure изнутри корпоративного брандмауэра, для успешного подключения в этом брандмауэре должен быть открыт данный порт.
 
@@ -57,7 +58,7 @@ ms.locfileid: "86921890"
 WHERE { $_.Name -eq 'Package.dtsx' }).Execute("false", $null)
 ```
 
-## <a name="powershell-script"></a>Скрипт PowerShell
+## <a name="powershell-script"></a>Сценарий PowerShell
 Предоставьте соответствующие значения для переменных в начале следующего скрипта, а затем выполните скрипт, чтобы запустить пакет служб SSIS.
 
 > [!NOTE]

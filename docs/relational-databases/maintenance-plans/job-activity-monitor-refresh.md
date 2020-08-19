@@ -1,4 +1,5 @@
 ---
+description: Обновление монитора активности заданий
 title: Обновление монитора активности заданий | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 413a368e-fd2b-4e1f-b370-002cdbc85bab
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6343929a2f893d020d992a7bd68ba70e178ed2c3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 78141d10b6244308f075e420f1d1ea3501830286
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85666919"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424046"
 ---
 # <a name="job-activity-monitor-refresh"></a>Обновление монитора активности заданий
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85666919"
  **секунд**  
  Количество секунд между попытками автообновления. Значение по умолчанию — 60 секунд. При установке значения 5 или менее обновление будет производиться каждые 5 секунд.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Наблюдение за активностью заданий](../../ssms/agent/monitor-job-activity.md)  
   
   

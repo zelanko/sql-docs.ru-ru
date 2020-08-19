@@ -1,4 +1,5 @@
 ---
+description: catalog.object_parameters (база данных SSISDB)
 title: catalog.object_parameters (база данных SSISDB) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: d7b04903-2d61-4159-9456-475942d1f732
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7ca6cf256e00c992e492c6d1a6d1a698a739c871
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 856676c6ad5330e6039711d7a391bdd264a2b062
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912510"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422048"
 ---
 # <a name="catalogobject_parameters-ssisdb-database"></a>catalog.object_parameters (база данных SSISDB)
 
@@ -26,7 +27,7 @@ ms.locfileid: "86912510"
 
   Отображает параметры для всех пакетов и проектов в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |parameter_id|**bigint**|Уникальный идентификатор (ID) параметра.|  
 |project_id|**bigint**|Уникальный идентификатор проекта.|  

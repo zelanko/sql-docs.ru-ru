@@ -1,4 +1,5 @@
 ---
+description: catalog.set_worker_agent_property (база данных SSISDB)
 title: catalog.set_worker_agent_property (база данных SSISDB) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/02/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ddd2a534-6925-4d66-90e7-541c14f41de7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 121c39ddc217cbdc178ca8ea8221081ce33eee4b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b5981431210ba98c950b56b7621f3f9cc50586c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912800"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422118"
 ---
 # <a name="catalogset_worker_agent_property-ssisdb-database"></a>catalog.set_worker_agent_property (база данных SSISDB)
 
@@ -24,7 +25,7 @@ ms.locfileid: "86912800"
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Задает свойство рабочей роли [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] горизонтального увеличения масштаба.
+Задает свойство рабочей роли [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,15 +37,15 @@ catalog.set_worker_agent_property [ @WorkerAgentId = ] WorkerAgentId
 
 ## <a name="arguments"></a>Аргументы
 [@WorkerAgentId =] *WorkerAgentId*  
-Идентификатор агента рабочей роли для рабочей роли горизонтального увеличения масштаба. Параметр *WorkerAgentId* имеет тип **uniqueidentifier**.
+Идентификатор агента рабочей роли для рабочей роли Scale Out. Параметр *WorkerAgentId* имеет тип **uniqueidentifier**.
 
 [@PropertyName =] *PropertyName*  
-Имя свойства. Параметр *PropertyName* имеет тип **nvarchar(256)** .
+Имя свойства. Параметр *PropertyName* имеет тип **nvarchar(256)**.
 
 [@PropertyValue =] *PropertyValue*  
-Значение свойства. Параметр *PropertyValue* имеет тип **nvarchar(max)** .
+Значение свойства. Параметр *PropertyValue* имеет тип **nvarchar(max)**.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 Допустимыми именами свойств являются **DisplayName**, **Description**, **Tags**.
 
 ## <a name="return-code-value"></a>Значения кодов возврата  

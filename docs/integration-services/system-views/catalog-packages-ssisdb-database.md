@@ -1,4 +1,5 @@
 ---
+description: catalog.packages (база данных SSISDB)
 title: catalog.packages (база данных SSISDB) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a634e94d-f492-4dfd-9611-a35f545106a1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ce44ec234d17c64e357f3bd1a26de1a0c2bb6361
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 25e397e3c3b85f401857b58bd51df456b08fdb37
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912464"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422008"
 ---
 # <a name="catalogpackages-ssisdb-database"></a>catalog.packages (база данных SSISDB)
 
@@ -29,7 +30,7 @@ ms.locfileid: "86912464"
 
   Отображает подробные сведения для всех пакетов, которые появляются в каталоге служб **SSISDB**.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |package_id|**bigint**|Уникальный идентификатор (ID) пакета.|  
 |name|**nvarchar(256)**|Уникальное имя пакета.|  
@@ -42,11 +43,11 @@ ms.locfileid: "86912464"
 |version_comments|**nvarchar(1024)**|Необязательные примечания к версии пакета.|  
 |version_guid|**uniqueidentifier**|Идентификатор GUID, который уникально идентифицирует версию пакета.|  
 |project_id|**bigint**|Уникальный идентификатор проекта.|  
-|entry_point|**bit**|Значение `1` указывает, что пакет должен быть запущен непосредственно. Значение `0` указывает, что пакет должен быть запущен при помощи другого пакета с задачей «Выполнение пакета». Значение по умолчанию — `1`.|  
+|entry_point|**bit**|Значение `1` указывает, что пакет должен быть запущен непосредственно. Значение `0` указывает, что пакет должен быть запущен при помощи другого пакета с задачей «Выполнение пакета». Значение по умолчанию — `1`.|  
 |validation_status|**char(1)**|Состояние проверки.|  
 |last_validation_time|**datetimeoffset(7)**|Время последней проверки.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  В этом представлении отображается строка для каждого пакета в каталоге.  
   
 ## <a name="permissions"></a>Разрешения  

@@ -1,4 +1,5 @@
 ---
+description: 'Преобразование из C в SQL: числовые данные'
 title: 'C в SQL: numeric | Документация Майкрософт'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: af4095ff-06c3-4b04-83bf-19f9ee098dc2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bbc0a994ef95f2deca29c8a4cbb06f3167b0433f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 111d2bedf6b988255a569587fd766406b6b4176a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304735"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421518"
 ---
 # <a name="c-to-sql-numeric"></a>Преобразование из C в SQL: числовые данные
 Для числовых типов данных ODBC C используются следующие идентификаторы:  

@@ -1,4 +1,5 @@
 ---
+description: Константы (Transact-SQL)
 title: Константы (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/22/2017
@@ -32,12 +33,12 @@ ms.assetid: 58ae3ff3-b1d5-41b2-9a2f-fc7ab8c83e0e
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8a63cfeca3d5843d29c68eece832fec4f8e330bf
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: cd464b8b08948d913dc003df0b488fd85f5bdda7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999204"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422938"
 ---
 # <a name="constants-transact-sql"></a>Константы (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,7 +67,7 @@ ms.locfileid: "85999204"
 Константы символьной строки поддерживают расширенные параметры сортировки.
   
 > [!NOTE]  
->  Символьные константы длиной более 8000 байт относятся к типу данных **varchar(max)** .  
+>  Символьные константы длиной более 8000 байт относятся к типу данных **varchar(max)**.  
   
 ## <a name="unicode-strings"></a>Строки в Юникоде
 Строка Юникода имеет формат, схожий с обычной символьной строкой, но она начинается с идентификатора N (в стандарте SQL-92 идентификатор N содержит сведения о языке сообщения строки). Префикс N должен быть заглавной буквой. Например, символьная строка 'Michel' в Юникоде имеет вид N'Michel'. Константы в Юникоде рассматриваются как данные Юникода, и при их обработке кодовая страница не используется. Константы в Юникоде имеют параметры сортировки. Этот параметр сортировки в основном управляет сравнением и учетом регистра. Значения константам в Юникоде присваиваются согласно параметрам сортировки текущей базы данных. Чтобы указать другие параметры сортировки, необходимо использовать предложение COLLATE. При хранении данных Юникода каждый символ занимает 2 байта вместо 1 байта на символ в символьных данных. Дополнительные сведения см. в статье [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
@@ -74,7 +75,7 @@ ms.locfileid: "85999204"
 Константы в Юникоде поддерживают расширенные параметры сортировки.
   
 > [!NOTE]  
->  Константы в Юникоде длиной более 8000 байт относятся к типу данных **nvarchar(max)** .  
+>  Константы в Юникоде длиной более 8000 байт относятся к типу данных **nvarchar(max)**.  
   
 ## <a name="binary-constants"></a>Двоичные константы
 Двоичные константы начинаются с префикса `0x`, за которым следует строка шестнадцатеричных чисел. Двоичные константы не заключаются в кавычки.
@@ -89,7 +90,7 @@ ms.locfileid: "85999204"
 ```  
   
 > [!NOTE]  
->  Двоичные константы длиной более 8000 байт относятся к типу данных **varbinary(max)** .  
+>  Двоичные константы длиной более 8000 байт относятся к типу данных **varbinary(max)**.  
   
 ## <a name="bit-constants"></a>Константы типа bit
 Константы типа **bit** содержат последовательности нулей и единиц и в кавычки не заключаются. Все числа, больше единицы, преобразуются в единицу.
@@ -201,7 +202,7 @@ $542023.14
 ## <a name="enhanced-collations"></a>Расширенные параметры сортировки  
 SQL Server поддерживает возможность работы с символьными строками и строками в Юникоде, поддерживающими расширенные параметры сортировки. Дополнительные сведения см. в описании предложения [COLLATE (Transact-SQL)](https://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9).
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
 [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)  
 [Операторы (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)

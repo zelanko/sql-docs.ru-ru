@@ -1,4 +1,5 @@
 ---
+description: PredictTimeSeries (расширения интеллектуального анализа данных)
 title: PredictTimeSeries (расширения интеллектуального анализа данных) | Документация Майкрософт
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: bf63bb1002e1e4ae467838b84314e1cbaaf93275
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 13655aadf5f95b776b83e48791e4f423d6ccc355
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87943259"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422268"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -64,10 +65,10 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
  Эти аргументы можно использовать, только если новые данные добавляются с помощью инструкции PREDICTION JOIN. Если в запросе PREDICTION JOIN аргумент не указан, значение по умолчанию — EXTEND_MODEL_CASES.  
   
-## <a name="return-type"></a>Возвращаемый тип  
+## <a name="return-type"></a>Тип возвращаемых данных  
  Объект \<*table expression*>.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  [!INCLUDE[msCoName](../includes/msconame-md.md)]Алгоритм временных рядов не поддерживает прогнозирование с предысторией при использовании инструкции PREDICTION JOIN для добавления новых данных.  
   
  В инструкции PREDICTION JOIN процесс прогнозирования всегда начинается на временном шаге сразу после окончания первоначальной обучающей последовательности. Так происходит даже при добавлении новых данных. Таким образом, параметр *n* и значения параметра *n-start* должны быть целым числом больше 0.  
@@ -251,7 +252,7 @@ OR [Model Region] = 'M200 North America'
 > [!NOTE]  
 >  Ключевое слово FLATTENED использовалось в этом примере, чтобы представить результаты в виде таблицы, но, если поставщик поддерживает иерархические наборы строк, ключевое слово FLATTENED можно опустить. Если опустить ключевое слово FLATTENED, запрос вернет два столбца. Первый столбец будет содержать значение, идентифицирующее ряды данных `[Model Region]`, а второй столбец — вложенную таблицу со статистикой.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширения интеллектуального анализа данных &#40;Справочник по функциям DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Примеры запросов модели временных рядов](https://docs.microsoft.com/analysis-services/data-mining/time-series-model-query-examples)   
  [Predict (расширения интеллектуального анализа данных)](../dmx/predict-dmx.md)  

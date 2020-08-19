@@ -1,4 +1,5 @@
 ---
+description: WRITETEXT (Transact-SQL)
 title: WRITETEXT (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 10/23/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b264935bd4cbbeaffe9ad3228734cd7acc542476
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e55a8822677162472d9f005eec213e184003cf00
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552563"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422398"
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +63,7 @@ WRITETEXT [BULK]
  Имя обновляемой таблицы и столбца типа **text**, **ntext** или **image**. Имена таблиц и столбцов должны соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md). Указание имени базы данных и владельца необязательно.  
   
  *text_ptr*  
- Значение, в котором хранится указатель на данные типа **text**, **ntext** или **image**. Аргумент *text_ptr* должен иметь тип **binary(16)** . Для создания текстового указателя следует выполнить инструкцию [INSERT](../../t-sql/statements/insert-transact-sql.md) или [UPDATE](../../t-sql/queries/update-transact-sql.md) с ненулевыми данными для столбца типа **text**, **ntext** или **image**.  
+ Значение, в котором хранится указатель на данные типа **text**, **ntext** или **image**. Аргумент *text_ptr* должен иметь тип **binary(16)**. Для создания текстового указателя следует выполнить инструкцию [INSERT](../../t-sql/statements/insert-transact-sql.md) или [UPDATE](../../t-sql/queries/update-transact-sql.md) с ненулевыми данными для столбца типа **text**, **ntext** или **image**.  
   
  WITH LOG  
  Не учитывается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ведение журнала определяется моделью восстановления, действующей для базы данных.  
@@ -70,7 +71,7 @@ WRITETEXT [BULK]
  *data*  
  Представляет собой фактические данные **text**, **ntext** или **text** для хранения. Аргумент *data* может быть литералом или параметром. Максимальная длина текста, который можно вставить интерактивно с помощью инструкции WRITETEXT — приблизительно 120 КБ для данных типа **text**, **ntext** и **image**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Используйте WRITETEXT для замены данных типа **text**, **ntext** и **image** и UPDATETEXT для изменения данных типа **text**, **ntext** и **image**. Инструкция UPDATETEXT более гибкая, так как изменяет не весь столбец типа **text**, **ntext** или **image**, а только его часть.  
   
  Для достижения оптимальной производительности рекомендуется вставлять или обновлять данные типа **text**, **ntext** и **image** фрагментами, размер которых кратен 8040 байтам.  

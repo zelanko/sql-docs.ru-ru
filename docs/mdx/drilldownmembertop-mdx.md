@@ -1,4 +1,5 @@
 ---
+description: DrilldownMemberTop (многомерные выражения)
 title: DrilldownMemberTop (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5bed7dfcf82b7f768ba1dc1e98128424665af6bd
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: fe58cf1c2793206c3217f4a0f7ea132d13a242ae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970045"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421918"
 ---
 # <a name="drilldownmembertop-mdx"></a>DrilldownMemberTop (многомерные выражения)
 
@@ -60,7 +61,7 @@ DrillDownMemberTop(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_Exp
   
  Функция **DrilldownMemberTop** похожа на функцию [DrilldownMember](../mdx/drilldownmember-mdx.md) , но вместо включения всех дочерних элементов для каждого элемента в первом наборе, который также имеется во втором наборе, функция **DrilldownMemberTop** Возвращает самое верхнее количество дочерних элементов для каждого элемента.  
   
- Запрос свойства XMLA Мдпропмдксдриллфунктионс позволяет проверить уровень поддержки, предоставляемый сервером для функций сверления; Дополнительные сведения см. в разделе [Поддерживаемые свойства xmla &#40;&#41;XMLA](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
+ Запрос свойства XMLA Мдпропмдксдриллфунктионс позволяет проверить уровень поддержки, предоставляемый сервером для функций сверления; Дополнительные сведения см. в разделе [Поддерживаемые свойства xmla &#40;&#41;XMLA ](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
   
 ## <a name="example"></a>Пример  
  В следующем примере детализируется углублением категория одежды и возвращаются три подкатегории одежды с наибольшим числом заказов на поставку.  

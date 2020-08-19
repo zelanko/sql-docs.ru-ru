@@ -1,4 +1,5 @@
 ---
+description: catalog.operation_messages (база данных SSISDB)
 title: catalog.operation_messages (база данных SSISDB) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0b3cbe38-ce24-47ca-83ef-6538a5299d1a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6e2dddde1f4c6ac3cf058e45b0c049bd89fb76bc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c7b15cffb2f04217586e58fd53ff5b5224c66527
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912501"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422028"
 ---
 # <a name="catalogoperation_messages-ssisdb-database"></a>catalog.operation_messages (база данных SSISDB)
 
@@ -29,25 +30,25 @@ ms.locfileid: "86912501"
 
   Отображает сообщения, которые заносятся в журнал при выполнении операций в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |operation_message_id|**bigint**|Уникальный идентификатор сообщения.|  
 |operation_id|**bigint**|Уникальный идентификатор операции.|  
 |message_time|**datetimeoffset(7)**|Время создания сообщения.|  
 |message_type|**smallint**|Тип отображаемого сообщения.|  
 |message_source_type|**smallint**|Идентификатор типа источника сообщения.|  
-|message|**nvarchar(max)**|Текст сообщения.|  
+|сообщение|**nvarchar(max)**|Текст сообщения.|  
 |extended_info_id|**bigint**|Идентификатор дополнительных сведений, которые относятся к сообщению об операции и находятся в представлении [extended_operation_info](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md).|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  В этом представлении отображается по одной строке для каждого из сообщений, которые внесены в журнал во время выполнения операции в каталоге. Сообщения могут формироваться сервером, процессом выполнения пакета или подсистемой выполнения.  
   
  В этом представлении отображаются следующие типы сообщений:  
   
-|Значение **message_type**|Description|  
+|Значение **message_type**|Описание|  
 |-----------------------------|-----------------|  
 |-1|Неизвестно|  
-|120|Ошибка|  
+|120|Error|  
 |110|Предупреждение|  
 |70|Сведения|  
 |10|Предварительная проверка|  
@@ -66,7 +67,7 @@ ms.locfileid: "86912501"
   
  В этом представлении отображаются следующие типы источников сообщений.  
   
-|**message_source_type**|Description|  
+|**message_source_type**|Описание|  
 |-------------------------------|-----------------|  
 |10|Начальные API-интерфейсы, такие как T-SQL и хранимые процедуры CLR|  
 |20|Внешний процесс, используемый для запуска пакета (ISServerExec.exe)|  

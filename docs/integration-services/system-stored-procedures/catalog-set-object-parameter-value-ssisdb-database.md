@@ -1,4 +1,5 @@
 ---
+description: catalog.set_object_parameter_value (база данных SSISDB)
 title: catalog.set_object_parameter_value (база данных SSISDB) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: fb887543-f92f-404d-9495-a1dd23a6716e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3ee0158f8d04405aef6ea0fd70f6a63f942471a1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a6991d846ffd6dd4673f3faca443c1bd1578ecaf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912805"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422128"
 ---
 # <a name="catalogset_object_parameter_value-ssisdb-database"></a>catalog.set_object_parameter_value (база данных SSISDB)
 
@@ -49,16 +50,16 @@ catalog.set_object_parameter_value [ @object_type = ] object_type
  Имя проекта, в котором содержится параметр. Параметр *project_name* имеет тип **nvarchar(128)** .  
   
  [@parameter_name =] *parameter_name*  
- Имя параметра. Параметр *parameter_name* имеет тип **nvarchar(128)** .  
+ Имя параметра. Параметр *parameter_name* имеет тип **nvarchar(128)**.  
   
  [@parameter_value =] *parameter_value*  
  Значение параметра. Параметр *parameter_value* имеет тип **sql_variant**.  
   
  [@object_name =] *object_name*  
- Имя пакета. Этот аргумент обязателен, если параметр является параметром пакета. Параметр *object_name* имеет тип **nvarchar(260)** .  
+ Имя пакета. Этот аргумент обязателен, если параметр является параметром пакета. Параметр *object_name* имеет тип **nvarchar(260)**.  
   
  [@value_type =] *value_type*  
- Тип значения параметра. Символ `V` указывает, что *parameter_value* является литеральным значением, которое используется по умолчанию, если до исполнения не будет назначено других значений. Символ `R` означает, что *parameter_value* является указанным в ссылке значением и что ему было задано имя переменной среды. Этот аргумент является необязательным. По умолчанию используется символ `V`. Параметр *value_type* имеет тип **char(1)** .  
+ Тип значения параметра. Символ `V` указывает, что *parameter_value* является литеральным значением, которое используется по умолчанию, если до исполнения не будет назначено других значений. Символ `R` означает, что *parameter_value* является указанным в ссылке значением и что ему было задано имя переменной среды. Этот аргумент является необязательным. По умолчанию используется символ `V`. Параметр *value_type* имеет тип **char(1)**.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение)  
@@ -88,7 +89,7 @@ catalog.set_object_parameter_value [ @object_type = ] object_type
   
 -   Пользователь не имеет соответствующих разрешений  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
   
 -   Если никакое значение *value_type* не указано, то по умолчанию используется литеральное значение *parameter_value*. Если используется литеральное значение, параметру *value_set* в представлении [object_parameters](../../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) присваивается значение `1`. Значение NULL недопустимо.  
   

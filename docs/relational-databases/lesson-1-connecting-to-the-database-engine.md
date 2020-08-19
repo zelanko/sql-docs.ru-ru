@@ -1,4 +1,5 @@
 ---
+description: Урок 1. Подключение к ядру СУБД
 title: Урок 1. Подключение к ядру СУБД | Документация Майкрософт
 ms.custom: ''
 ms.date: 02/05/2018
@@ -10,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2f75bd6226c66b77a9933cf083123c5725f57aa5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4a3dedb6c503983cf2d916ffecbbf78e8fe1fc06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86900322"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424116"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Урок 1. Подключение к ядру СУБД
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]

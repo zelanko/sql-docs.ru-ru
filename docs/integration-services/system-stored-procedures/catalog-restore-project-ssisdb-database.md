@@ -1,4 +1,5 @@
 ---
+description: catalog.restore_project (база данных SSISDB)
 title: catalog.restore_project (база данных SSISDB) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 8adee525-579b-4d2f-b807-e2ecc07fb2e9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3996b376ef456502dff95836008e81e6c9ef1a88
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6ad50f86bc3c4f6f52262df591c1504139590cab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912957"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422108"
 ---
 # <a name="catalogrestore_project-ssisdb-database"></a>catalog.restore_project (база данных SSISDB)
 
@@ -71,7 +72,7 @@ catalog.restore_project [ @folder_name = ] folder_name
   
 -   Пользователь не имеет соответствующих разрешений  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Когда восстанавливается проект, всем параметрам присваиваются значения по умолчанию, а все ссылки на среды остаются без изменения. Максимальное количество версий проекта, хранимых в каталоге, задается свойством каталога **MAX_VERSIONS_PER_PROJECT**, как показано в представлении [catalog_property](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md).  
   
 > [!WARNING]  

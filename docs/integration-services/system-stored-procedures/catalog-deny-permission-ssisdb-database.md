@@ -1,4 +1,5 @@
 ---
+description: catalog.deny_permission (база данных SSISDB)
 title: catalog.deny_permission (база данных SSISDB) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: de310bac-2ddc-4ef9-8783-43dcb02a94f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dc1de8ae0aeaa1aa260b20649ac9b831a11e0447
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1c0ec15f671e6319f82ed069f69d590d865f6682
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913080"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422188"
 ---
 # <a name="catalogdeny_permission-ssisdb-database"></a>catalog.deny_permission (база данных SSISDB)
 
@@ -73,14 +74,14 @@ catalog.deny_permission [ @object_type = ] object_type
   
 -   Членство в роли сервера **sysadmin**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  В следующей таблице описаны хранимые процедуры, используемые для отклонения типов разрешений.  
   
 |Значение permission_type|Имя разрешения|Описание разрешения|Применимые типы объектов|  
 |----------------------------|---------------------|----------------------------|-----------------------------|  
 |`1`|READ|Разрешает участнику читать сведения, рассматриваемые как часть объекта, например свойства. Тем самым участнику не разрешается перечислять или читать содержимое других объектов, содержащихся в этом объекте.|Папка, проект, среда, операция|  
 |`2`|MODIFY|Разрешает участнику изменять сведения, рассматриваемые как часть объекта, например свойства. Тем самым участнику не разрешается изменять другие объекты, содержащиеся в этом объекте.|Папка, проект, среда, операция|  
-|`3`|EXECUTE|Разрешает участнику выполнять все пакеты в проекте.|Проект|  
+|`3`|EXECUTE|Разрешает участнику выполнять все пакеты в проекте.|Project|  
 |`4`|MANAGE_PERMISSIONS|Разрешает участнику назначать разрешения на объекты.|Папка, проект, среда, операция|  
 |`100`|CREATE_OBJECTS|Разрешает участнику создавать объекты в папке.|Папка|  
 |`101`|READ_OBJECTS|Разрешает участнику читать все объекты в папке.|Папка|  
