@@ -1,4 +1,5 @@
 ---
+description: Установка SMO
 title: Установка объектов SMO | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/06/2017
@@ -15,11 +16,12 @@ ms.assetid: 140e9971-4940-4866-89b9-5cec938e2a16
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1a0c23d91785a453bcbf7857211e524b15a4ec3f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1b98ce67e61c1fe6f9370508d34cecc8d9289a44
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008594"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420268"
 ---
 # <a name="installing-smo"></a>Установка SMO
 
@@ -42,5 +44,5 @@ ms.locfileid: "86008594"
   
 ## <a name="system-requirements"></a>Требования к системе
   
- Для работы объектов SMO требуется [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4,0 или .NET Core 2,0, поэтому все приложения, использующие его, должны обеспечивать установку этой версии или более поздней на клиентских компьютерах. Для некоторых собственных двоичных файлов, установленных с помощью библиотек SMO, также требуется установка среды выполнения VC 2013. Эта среда выполнения не включена в пакет. Вы можете скачать распространяемый файл, соответствующий целевой архитектуре, изhttps://www.microsoft.com/download/details.aspx?id=40784
+ Для работы объектов SMO требуется [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4,0 или .NET Core 2,0, поэтому все приложения, использующие его, должны обеспечивать установку этой версии или более поздней на клиентских компьютерах. Для некоторых собственных двоичных файлов, установленных с помощью библиотек SMO, также требуется установка среды выполнения VC 2013. Эта среда выполнения не включена в пакет. Вы можете скачать распространяемый файл, соответствующий целевой архитектуре, из https://www.microsoft.com/download/details.aspx?id=40784
   

@@ -1,4 +1,5 @@
 ---
+description: sys.fulltext_languages (Transact-SQL)
 title: sys. fulltext_languages (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -21,12 +22,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 545b729a5d89a258c38d7eb180ee2f3400ebd67c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ab4f793c243671edeaf2684d40b87c40cddaf8cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764712"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420168"
 ---
 # <a name="sysfulltext_languages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85764712"
 ## <a name="values-returned-for-default-languages"></a>Значения, возвращаемые для языков по умолчанию  
  В следующей таблице показаны значения для тех языков, средства разбиения по словам которых зарегистрированы по умолчанию.  
   
-|Язык|LCID|  
+|Language|LCID|  
 |--------------|----------|  
 |Арабский|1025|  
 |Bengali (India)|1093|  
@@ -74,7 +75,7 @@ ms.locfileid: "85764712"
 |Малаялам|1100|  
 |Маратхи|1102|  
 |нейтральное выражение.|0|  
-|Норвежский (букмол)|1044|  
+|Норвежский (Букмол)|1044|  
 |**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> Польский|1045|  
 |Португальский (Бразилия)|1046|  
 |Португальский (Португалия)|2070|  
@@ -83,7 +84,7 @@ ms.locfileid: "85764712"
 |русском языке|1049|  
 |Сербский (кириллица)|3098|  
 |Сербский (латиница)|2074|  
-|Китайский, упрощенное письмо|2052|  
+|Китайский (упрощенный)|2052|  
 |Словацкий|1051|  
 |Словенский|1060|  
 |Испанский|3082|  
@@ -97,13 +98,13 @@ ms.locfileid: "85764712"
 |Урду|1056|  
 |Вьетнамский|1066|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Чтобы обновить список языков, зарегистрированных в полнотекстовом поиске, используйте [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)"**update_languages**".  
   
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_fulltext_load_thesaurus_file &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)   
  [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
  [Настройка средств разбиения по словам и парадигматические модули для поиска и управление ими](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
