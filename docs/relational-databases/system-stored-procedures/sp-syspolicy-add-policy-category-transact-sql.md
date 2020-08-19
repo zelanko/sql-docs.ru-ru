@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_add_policy_category (Transact-SQL)
 title: sp_syspolicy_add_policy_category (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b682fac4-23c6-4662-8d05-c38f3b45507e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ca8eca5643fb0021111c00abdce45e6de2c09878
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2722671523f14177a92084a4d896eec3ccdd6e2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892758"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469173"
 ---
 # <a name="sp_syspolicy_add_policy_category-transact-sql"></a>sp_syspolicy_add_policy_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +42,11 @@ sp_syspolicy_add_policy_category [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @name = ] 'name'`Имя категории политики. Аргумент *Name* имеет тип **sysname**и является обязательным. *имя* не может иметь значение null или быть пустой строкой.  
+`[ @name = ] 'name'` Имя категории политики. Аргумент *Name* имеет тип **sysname**и является обязательным. *имя* не может иметь значение null или быть пустой строкой.  
   
-`[ @mandate_database_subscriptions = ] mandate_database_subscriptions`Определяет, требует ли подписка базы данных для категории политики. *mandate_database_subscriptions* является **битовым** значением и значением по умолчанию 1 (включено).  
+`[ @mandate_database_subscriptions = ] mandate_database_subscriptions` Определяет, требует ли подписка базы данных для категории политики. *mandate_database_subscriptions* является **битовым** значением и значением по умолчанию 1 (включено).  
   
-`[ @policy_category_id = ] policy_category_id`Идентификатор для категории политики. *policy_category_id* имеет **тип int**и возвращается в виде выходных данных.  
+`[ @policy_category_id = ] policy_category_id` Идентификатор для категории политики. *policy_category_id* имеет **тип int**и возвращается в виде выходных данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -74,7 +75,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Хранимые процедуры управления на основе политик &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [Хранимые процедуры управления на основе политик &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [sp_syspolicy_add_policy_category_subscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md)   
  [sp_syspolicy_delete_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-transact-sql.md)  
   

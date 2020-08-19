@@ -1,4 +1,5 @@
 ---
+description: sp_indexoption (Transact-SQL)
 title: sp_indexoption (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cc11f219d98e4b8018bc7d763345feb279790e13
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 509d58a28f768fe774c813a8235ae4c0d9cd718a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893239"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469261"
 ---
 # <a name="sp_indexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85893239"
  Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] автоматически делает выбор уровня блокировки: страница, строка, таблица. Необязательно задавать эти параметры вручную. **sp_indexoption** предоставляется экспертным пользователям, знающим, что всегда подходит определенный тип блокировки.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]Вместо этого используйте [инструкцию ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] Вместо этого используйте [инструкцию ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,9 +47,9 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @IndexNamePattern = ] 'table_or_index_name'`Полное или неполное имя определяемой пользователем таблицы или индекса. *table_or_index_name* имеет тип **nvarchar (1035)** и не имеет значения по умолчанию. Кавычки требуются, только если указан уточненный индекс или таблица. Если указано полное имя таблицы, включая имя базы данных, в качестве последнего должно использоваться имя текущей базы данных. Если имя таблицы указано без индекса, то значение указанного аргумента устанавливается во все индексы этой таблицы и в саму таблицу, если не существует кластеризованных индексов.  
+`[ @IndexNamePattern = ] 'table_or_index_name'` Полное или неполное имя определяемой пользователем таблицы или индекса. *table_or_index_name* имеет тип **nvarchar (1035)** и не имеет значения по умолчанию. Кавычки требуются, только если указан уточненный индекс или таблица. Если указано полное имя таблицы, включая имя базы данных, в качестве последнего должно использоваться имя текущей базы данных. Если имя таблицы указано без индекса, то значение указанного аргумента устанавливается во все индексы этой таблицы и в саму таблицу, если не существует кластеризованных индексов.  
   
-`[ @OptionName = ] 'option_name'`Имя параметра индекса. *option_name* имеет тип **varchar (35)** и не имеет значения по умолчанию. *option_name* может иметь одно из следующих значений.  
+`[ @OptionName = ] 'option_name'` Имя параметра индекса. *option_name* имеет тип **varchar (35)** и не имеет значения по умолчанию. *option_name* может иметь одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -57,7 +58,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 |**DisAllowRowLocks**|Если TRUE, то блокировка строк не используется. Если FALSE, то допустимы блокировки строк при доступе к индексу. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] определяет, когда используются блокировки строки.|  
 |**DisAllowPageLocks**|Если TRUE, то блокировка страниц не используется. Если FALSE, то допустимы блокировки страниц при доступе к индексу. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] определяет, когда используются блокировки страниц.|  
   
-`[ @OptionValue = ] 'value'`Указывает, включен ли параметр *option_name* (true, on, yes или 1) или отключен (false, Off, No или 0). *значение* имеет тип **varchar (12)** и не имеет значения по умолчанию.  
+`[ @OptionValue = ] 'value'` Указывает, включен ли параметр *option_name* (true, on, yes или 1) или отключен (false, Off, No или 0). *значение* имеет тип **varchar (12)** и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или больше чем 0 (неуспешное завершение)  
@@ -139,8 +140,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [INDEXPROPERTY (Transact-SQL)](../../t-sql/functions/indexproperty-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   
   

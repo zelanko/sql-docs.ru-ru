@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_set_cache_directory (Transact-SQL)
 title: sp_syscollector_set_cache_directory (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: df56d5a5-8961-494f-a745-d752ca63805a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dd2a18570770f8a7eeecc1fc9b15c7cacf3e3eb4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dd4f3a049a0433ed41c9ebb1f82f6f16f6222544
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892864"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469196"
 ---
 # <a name="sp_syscollector_set_cache_directory-transact-sql"></a>sp_syscollector_set_cache_directory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,12 +41,12 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @cache_directory = ] 'cache_directory'`Каталог в файловой системе, где собранные данные временно хранятся. *cache_directory* имеет тип **nvarchar (255)** и значение по умолчанию NULL. Если значение данного параметра не указано, для хранения временной информации используется папка [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию.  
+`[ @cache_directory = ] 'cache_directory'` Каталог в файловой системе, где собранные данные временно хранятся. *cache_directory* имеет тип **nvarchar (255)** и значение по умолчанию NULL. Если значение данного параметра не указано, для хранения временной информации используется папка [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Необходимо отключить сборщик данных перед изменением конфигурации каталога кэша. Если включен сборщик данных, эта хранимая процедура завершится с ошибкой. Дополнительные сведения см. в разделе [Включение или отключение сбора данных](../../relational-databases/data-collection/enable-or-disable-data-collection.md)и [Управление сбором данных](../../relational-databases/data-collection/manage-data-collection.md).  
   
  Указанный каталог не обязательно должен существовать во время выполнения sp_syscollector_set_cache_directory; Однако данные не могут быть успешно кэшированы и отправлены, пока каталог не будет создан. Рекомендуется создать каталог до выполнения этой хранимой процедуры.  
@@ -67,8 +68,8 @@ EXECUTE dbo.sp_syscollector_enable_collector;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Хранимые процедуры сборщика данных &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Хранимые процедуры сборщика данных (Transact-SQL)](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [sp_syscollector_set_cache_window (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-window-transact-sql.md)  
   
   

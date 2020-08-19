@@ -1,4 +1,5 @@
 ---
+description: sp_removedistpublisherdbreplication (Transact-SQL)
 title: sp_removedistpublisherdbreplication (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9bfe002a-25b5-4226-bcfb-feb2060d6b4a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6801079c3d16871712e5ba4494ca2c3dbf5bb662
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d8ecdfd856555885eb14af34451e1a939c00b233
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751667"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469218"
 ---
 # <a name="sp_removedistpublisherdbreplication-transact-sql"></a>sp_removedistpublisherdbreplication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,14 +39,14 @@ sp_removedistpublisherdbreplication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'`Имя сервера издателя. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'` Имя сервера издателя. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publisher_db = ] 'publisher_db'`Имя базы данных публикации. *publisher_db* имеет тип **sysname** и не имеет значения по умолчанию.  
+`[ @publisher_db = ] 'publisher_db'` Имя базы данных публикации. *publisher_db* имеет тип **sysname** и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_removedistpublisherdbreplication** используется репликацией транзакций и моментальными снимками.  
   
  **sp_removedistpublisherdbreplication** используется, когда опубликованная база данных должна быть создана повторно, не удаляя базу данных распространителя. Следующие метаданные будут удалены:  
@@ -61,7 +62,7 @@ sp_removedistpublisherdbreplication [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** на распространителе или члены предопределенной роли базы данных **db_owner** в базе данных распространителя могут выполнять **sp_removedistpublisherdbreplication**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Выполнение операций с массовым копированием в SQL Server Native Client
 title: Выполнение операций массового копирования | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ ms.assetid: 50d8456b-e6a1-4b25-bc7e-56946ed654a7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e5047dda28d7d1540f1c69c9c2919aa031b8206c
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 4ddb2ace735188b86761257675a496bc95489b94
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247611"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498891"
 ---
 # <a name="performing-bulk-copy-operations-in-sql-server-native-client"></a>Выполнение операций с массовым копированием в SQL Server Native Client 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -116,7 +117,7 @@ ms.locfileid: "87247611"
  [Свойства источника данных &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-data-source-objects/data-source-properties-ole-db.md)   
  [Массовый импорт и экспорт данных (SQL Server)](../../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
  [IRowsetFastLoad &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md)   
- [IBCPSession &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
+ [IBCPSession (OLE DB)](../../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [Оптимизация производительности массового импорта данных](https://msdn.microsoft.com/library/ms190421\(SQL.105\).aspx)  
   
   

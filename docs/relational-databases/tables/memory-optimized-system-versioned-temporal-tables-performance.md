@@ -1,4 +1,5 @@
 ---
+description: Вопросы производительности оптимизированных для памяти темпоральных таблиц с системным управлением версиями
 title: Вопросы производительности оптимизированных для памяти темпоральных таблиц с системным управлением версиями | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/28/2016
@@ -11,12 +12,12 @@ ms.assetid: 2e110984-7703-4806-a24b-b41e8c3018c6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bdb3feaead360c65760cb4e6ae996990c1d6bba9
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: dc57f67eae06d549ce518b57c0468b2303bcef99
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552664"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460206"
 ---
 # <a name="memory-optimized-system-versioned-temporal-tables-performance"></a>Вопросы производительности оптимизированных для памяти темпоральных таблиц с системным управлением версиями
 
@@ -33,7 +34,7 @@ ms.locfileid: "86552664"
 - Период активации для задачи записи данных на диск не настраивается, но можно принудительно выполнить этот процесс посредством вызова [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md).
 - Рассмотрите возможность использования кластеризованного columnstore для хранения таблицы журнала на диске, особенно если планируется выполнять аналитические запросы к данным журнала, использующие агрегатные или ранжирующие функций. В этом случае кластеризованный индекс columnstore будет оптимальным решением для таблицы журнала, так как он обеспечивает качественное сжатие данных и приспособлен для операций вставки, что хорошо согласуется с методом формирования данных журнала.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 - [Темпоральные таблицы с системным управлением версиями и таблицы, оптимизированные для памяти](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
 - [Создание оптимизированной для памяти темпоральной таблицы с системным управлением версиями](../../relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md)

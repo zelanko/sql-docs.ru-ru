@@ -1,4 +1,5 @@
 ---
+description: Поддержка разреженных столбцов в собственном клиенте SQL Server
 title: Поддержка разреженных столбцов
 ms.custom: ''
 ms.date: 03/17/2017
@@ -14,11 +15,12 @@ ms.assetid: aee5ed81-7e23-42e4-92d3-2da7844d9bc3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd75d0e9202ec81be1fe89c6b7f3c97a4f983432
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1bf4383d8b0f6be0d3242d91c935559f8c98ff00
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009007"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498881"
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client"></a>Поддержка разреженных столбцов в собственном клиенте SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -60,7 +62,7 @@ ms.locfileid: "86009007"
   
  Однако, если **queryout** используется для экспорта и пользователь ссылается по имени на разреженные столбцы, являющиеся элементами набора разреженных столбцов, нельзя осуществить импорт напрямую в таблицу такой же структуры. Это происходит потому, что BCP использует метаданные, согласованные с операцией **select &#42;** для импорта и не может сопоставлять столбцы **column_set** элементов с этими метаданными. Для отдельного импорта каждого столбца, входящего в набор разреженных столбцов **column_set**, необходимо определить представление для таблицы, которая ссылается на необходимые столбцы набора **column_set**, и выполнить операцию импорта с помощью этого представления.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Программирование собственного клиента SQL Server](../../../relational-databases/native-client/sql-server-native-client-programming.md)  
   
   

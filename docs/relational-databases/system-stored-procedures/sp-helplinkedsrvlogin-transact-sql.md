@@ -1,4 +1,5 @@
 ---
+description: sp_helplinkedsrvlogin (Transact-SQL)
 title: sp_helplinkedsrvlogin (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a2b1eba0-bf71-47e7-a4c7-9f55feec82a3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8aa2ba45d45ee2518102d8e2ec7d60a3299fca88
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 86a77a797d8da80746410b9f8a697b747f93242c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891689"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469284"
 ---
 # <a name="sp_helplinkedsrvlogin-transact-sql"></a>sp_helplinkedsrvlogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @rmtsrvname = ] 'rmtsrvname'`Имя связанного сервера, к которому применяется сопоставление имен входа. *рмтсрвнаме* имеет тип **sysname**и значение по умолчанию NULL. При значении NULL возвращаются все сопоставления имен входа, определенные для всех связанных серверов, определенных на локальном компьютере, где выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+`[ @rmtsrvname = ] 'rmtsrvname'` Имя связанного сервера, к которому применяется сопоставление имен входа. *рмтсрвнаме* имеет тип **sysname**и значение по умолчанию NULL. При значении NULL возвращаются все сопоставления имен входа, определенные для всех связанных серверов, определенных на локальном компьютере, где выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 `[ @locallogin = ] 'locallogin'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Имя входа на локальном сервере с сопоставлением со связанным сервером *рмтсрвнаме*. *локаллогин* имеет тип **sysname**и значение по умолчанию NULL. Значение NULL указывает, что возвращаются все сопоставления имен входа, определенные в *рмтсрвнаме* . Если значение не равно NULL, сопоставление для *локаллогин* с *рмтсрвнаме* должно уже существовать. *локаллогин* может быть [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] именем входа или пользователем Windows. В таком случае пользователь Windows должен иметь права на доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], полученные напрямую или через членство в группе Windows, имеющей такие права.  
   
@@ -125,7 +126,7 @@ Sales            Mary          0               sa
   
 ## <a name="see-also"></a>См. также  
  [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
+ [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_droplinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

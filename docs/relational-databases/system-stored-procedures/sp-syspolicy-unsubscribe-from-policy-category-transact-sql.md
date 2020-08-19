@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_unsubscribe_from_policy_category (Transact-SQL)
 title: sp_syspolicy_unsubscribe_from_policy_category (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 47abab63-e605-40e8-a54e-2241e2e01afd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c1ec70cea37a8cfcb0b017a98989d00c445860d8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4591c3b20702923d7f9ea418951b8510977dc840
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891462"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469165"
 ---
 # <a name="sp_syspolicy_unsubscribe_from_policy_category-transact-sql"></a>sp_syspolicy_unsubscribe_from_policy_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_syspolicy_unsubscribe_from_policy_category [ @policy_category = ] 'policy_cat
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @policy_category = ] 'policy_category'`— Имя подписки на категорию политики, которую необходимо удалить. Аргумент *policy_category* имеет тип **sysname**и является обязательным.  
+`[ @policy_category = ] 'policy_category'` — Имя подписки на категорию политики, которую необходимо удалить. Аргумент *policy_category* имеет тип **sysname**и является обязательным.  
   
  Чтобы получить значения для *policy_category*, запросите msdb.dbo.syspolicy_policy_categories системное представление.  
   
@@ -64,7 +65,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Хранимые процедуры управления на основе политик &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [Хранимые процедуры управления на основе политик &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [sp_syspolicy_subscribe_to_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-subscribe-to-policy-category-transact-sql.md)  
   
   

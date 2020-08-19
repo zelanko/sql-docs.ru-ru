@@ -1,4 +1,5 @@
 ---
+description: sysmail_configure_sp (Transact-SQL)
 title: sysmail_configure_sp (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: df5b364408b012a186ca090b6d3a6d7de77119cf
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 28506e30d5f2d253410cca319f22ae620a2c33a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122461"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469157"
 ---
 # <a name="sysmail_configure_sp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

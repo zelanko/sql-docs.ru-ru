@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_trigger_stats (Transact-SQL)
 title: sys. dm_exec_trigger_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/03/2019
@@ -20,12 +21,12 @@ ms.assetid: 863498b4-849c-434d-b748-837411458738
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 97f86ba0da21561604b30a2936b27fc3904c01ef
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 219706736c4377c500e79f383a140f7241b46cd8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734630"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490204"
 ---
 # <a name="sysdm_exec_trigger_stats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -73,7 +74,7 @@ ms.locfileid: "85734630"
 |**max_page_server_reads**|**bigint**|Максимальное количество операций чтения сервера, которое этот триггер выполнял во время одного выполнения.<br /><br /> Область **применения**: масштабирование базы данных SQL Azure|  
 
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Динамические административные представления в среде [!INCLUDE[ssSDS](../../includes/sssds-md.md)] не могут предоставлять информацию, которая может повлиять на автономность базы данных, или информацию о других базах данных, к которым имеет доступ пользователь. Во избежание раскрытия этой информации все строки, содержащие данные, не принадлежащие подключенному клиенту, отфильтровываются.  
 
 Статистика в представлении обновляется после завершения выполнения запроса.  
@@ -81,7 +82,7 @@ ms.locfileid: "85734630"
 ## <a name="permissions"></a>Разрешения  
 
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
+На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется  **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
   
 ## <a name="examples"></a>Примеры  
  В следующем примере возвращаются сведения о пяти первых триггерах, идентифицируемых по среднему затраченному времени.  
@@ -96,7 +97,7 @@ FROM sys.dm_exec_trigger_stats AS d
 ORDER BY [total_worker_time] DESC;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
 [sys. dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
 [sys. dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   

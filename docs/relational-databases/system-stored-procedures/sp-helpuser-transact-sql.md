@@ -1,4 +1,5 @@
 ---
+description: sp_helpuser (Transact-SQL)
 title: sp_helpuser (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 049b1183ad21e481ca47368b3dfe916d0ee41185
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: da6af8493f8646f19436501ab750455ebbe98558
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899468"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469258"
 ---
 # <a name="sp_helpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @name_in_db = ] 'security_account'`Имя пользователя базы данных или роли базы данных в текущей базе данных. *security_account* должен существовать в текущей базе данных. Аргумент *security_account* имеет тип **sysname**и значение по умолчанию NULL. Если *security_account* не указан, **sp_helpuser** возвращает сведения обо всех участниках базы данных.  
+`[ @name_in_db = ] 'security_account'` Имя пользователя базы данных или роли базы данных в текущей базе данных. *security_account* должен существовать в текущей базе данных. Аргумент *security_account* имеет тип **sysname**и значение по умолчанию NULL. Если *security_account* не указан, **sp_helpuser** возвращает сведения обо всех участниках базы данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -52,7 +53,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**Имен**|**sysname**|Пользователи текущей базы данных.|  
+|**UserName**|**sysname**|Пользователи текущей базы данных.|  
 |**RoleName**|**sysname**|Роли, к которым принадлежит **имя пользователя** .|  
 |**LoginName**|**sysname**|Имя входа **пользователя**.|  
 |**DefDBName**|**sysname**|База данных по умолчанию для **имени пользователя**.|  
@@ -109,11 +110,11 @@ EXEC sp_helpuser 'db_securityadmin';
   
 ## <a name="see-also"></a>См. также  
  [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Участники (ядро СУБД)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [sys. database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
- [sys. database_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   
- [sys. server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
+ [sys.database_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
+ [sys.database_role_members (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   
+ [sys.server_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [sys.server_role_members (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)  
   
   

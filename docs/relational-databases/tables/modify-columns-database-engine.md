@@ -1,4 +1,5 @@
 ---
+description: Изменение столбцов (компонент Database Engine)
 title: Изменение столбцов (ядро СУБД) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ ms.assetid: b67b95c5-61ef-4bd8-9a3e-1640eb7583ac
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: baf0b580ab18334fcffbbe6b16ddd9e04cf42290
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 0f306dd339ed7e91a1d54195dc32346c9139c809
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394503"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460216"
 ---
 # <a name="modify-columns-database-engine"></a>Изменение столбцов (компонент Database Engine)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -59,7 +60,7 @@ ms.locfileid: "87394503"
   
 3.  На вкладке **Свойства столбца** выберите ячейку сетки для свойства **Тип данных** и выберите новый тип данных из раскрывающегося списка.  
   
-4.  В меню **Файл** выберите пункт **Сохранить**_table name_.  
+4.  В меню **Файл** выберите команду **Сохранить**_имя_таблицы_.  
   
 > [!NOTE]  
 >  При изменении типа данных столбца конструктор таблиц применяет длину типа данных, определенную по умолчанию для выбранного типа данных, даже если была указана другая длина. Всегда устанавливайте необходимое значение длины типа данных после того, как был указан тип данных.  

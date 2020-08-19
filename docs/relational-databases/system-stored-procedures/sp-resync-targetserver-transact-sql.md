@@ -1,4 +1,5 @@
 ---
+description: sp_resync_targetserver (Transact-SQL)
 title: sp_resync_targetserver (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 40e44df7-d3e3-44ee-b149-08aba629a21f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 868e203866890c1f13405ddc7ed3949487e821da
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 858c2ffe0740c43892ff2245047823c9cecbd12a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899248"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469238"
 ---
 # <a name="sp_resync_targetserver-transact-sql"></a>sp_resync_targetserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ sp_resync_targetserver
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @server_name = ] 'server'`Имя сервера для повторной синхронизации. Аргумент*server* имеет тип **sysname**и не имеет значения по умолчанию. Если указано значение **ALL** , то повторно синхронизируются все целевые серверы.  
+`[ @server_name = ] 'server'` Имя сервера для повторной синхронизации. Аргумент*server* имеет тип **sysname**и не имеет значения по умолчанию. Если указано значение **ALL** , то повторно синхронизируются все целевые серверы.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -48,7 +49,7 @@ sp_resync_targetserver
 ## <a name="result-sets"></a>Результирующие наборы  
  Сообщает результат действий **sp_post_msx_operation** .  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  **sp_resync_targetserver** удаляет текущий набор инструкций для целевого сервера и отправляет новый набор для загрузки целевым сервером. Новый набор состоит из инструкции для удаления всех многосерверных заданий, за которой следуют вставки, по одной для каждого текущего задания для целевого сервера.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -66,7 +67,7 @@ EXEC dbo.sp_resync_targetserver
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_help_downloadlist &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql.md)   
  [sp_post_msx_operation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

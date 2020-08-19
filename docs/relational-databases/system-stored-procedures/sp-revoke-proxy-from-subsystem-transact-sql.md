@@ -1,4 +1,5 @@
 ---
+description: sp_revoke_proxy_from_subsystem (Transact-SQL)
 title: sp_revoke_proxy_from_subsystem (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b87bc8ba-3ea8-4aed-b54b-32c3d82d9d2a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5c8dc5e9a20c9a00b840ec51d3339299cc3756a3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d58ec6db017fee031a2de2e242a18281eb3b7a68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901382"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469254"
 ---
 # <a name="sp_revoke_proxy_from_subsystem-transact-sql"></a>sp_revoke_proxy_from_subsystem (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,11 +44,11 @@ sp_revoke_proxy_from_subsystem
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @proxy_id = ] id`Идентификационный номер прокси-сервера для отмены доступа. *Proxy_id* имеет **тип int**и значение по умолчанию NULL. Необходимо указать либо *proxy_id* , либо *proxy_name* , но нельзя указать оба значения.  
+`[ @proxy_id = ] id` Идентификационный номер прокси-сервера для отмены доступа. *Proxy_id* имеет **тип int**и значение по умолчанию NULL. Необходимо указать либо *proxy_id* , либо *proxy_name* , но нельзя указать оба значения.  
   
-`[ @proxy_name = ] 'proxy_name'`Имя прокси-сервера, с которого нужно отозвать доступ. Аргумент *proxy_name* имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать либо *proxy_id* , либо *proxy_name* , но нельзя указать оба значения.  
+`[ @proxy_name = ] 'proxy_name'` Имя прокси-сервера, с которого нужно отозвать доступ. Аргумент *proxy_name* имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать либо *proxy_id* , либо *proxy_name* , но нельзя указать оба значения.  
   
-`[ @subsystem_id = ] id`Идентификационный номер подсистемы, к которой нужно отозвать доступ. *Subsystem_id* имеет **тип int**и значение по умолчанию NULL. Необходимо указать либо *subsystem_id* , либо *subsystem_name* , но нельзя указать оба значения. В следующей таблице показаны значения для каждой подсистемы.  
+`[ @subsystem_id = ] id` Идентификационный номер подсистемы, к которой нужно отозвать доступ. *Subsystem_id* имеет **тип int**и значение по умолчанию NULL. Необходимо указать либо *subsystem_id* , либо *subsystem_name* , но нельзя указать оба значения. В следующей таблице показаны значения для каждой подсистемы.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -63,15 +64,15 @@ sp_revoke_proxy_from_subsystem
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] выполнение пакетов служб|  
 |**12**|Скрипт PowerShell|  
   
-`[ @subsystem_name = ] 'subsystem_name'`Имя подсистемы, к которой нужно отозвать доступ. Аргумент *subsystem_name* имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать либо *subsystem_id* , либо *subsystem_name* , но нельзя указать оба значения. В следующей таблице показаны значения для каждой подсистемы.  
+`[ @subsystem_name = ] 'subsystem_name'` Имя подсистемы, к которой нужно отозвать доступ. Аргумент *subsystem_name* имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать либо *subsystem_id* , либо *subsystem_name* , но нельзя указать оба значения. В следующей таблице показаны значения для каждой подсистемы.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
 |ActiveScripting|ActiveX-скрипт|  
 |CmdExec|Операционная система (CmdExec)|  
-|Снимок|Агент моментальных снимков репликации|  
+|Моментальный снимок|Агент моментальных снимков репликации|  
 |LogReader|Агент чтения журнала репликации|  
-|Распределение|Агент распространения репликации|  
+|Distribution|Агент распространения репликации|  
 |Объединить|Replication Merge Agent|  
 |QueueReader|Агент чтения очереди репликации|  
 |ANALYSISQUERY|Команда служб Analysis Services|  

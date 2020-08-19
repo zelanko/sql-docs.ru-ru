@@ -1,4 +1,5 @@
 ---
+description: Свойство IssuedTo (класс SecurityCertificate)
 title: Свойство IssuedTo (класс securitycertificate)
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 47a4fcc7-6e8c-4ea2-a68a-f2789151c25f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 235609e2018dfb9e8aac5f9eb017cb639d46de54
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fe913eeae76f9b069502caa55249eb0a785a86ef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880927"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460126"
 ---
 # <a name="issuedto-property-securitycertificate-class"></a>Свойство IssuedTo (класс SecurityCertificate)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ object.IssuedTo [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Строковое значение, определяющее объект, которому выдан сертификат безопасности.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

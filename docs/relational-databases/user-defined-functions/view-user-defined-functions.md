@@ -1,4 +1,5 @@
 ---
+description: Просмотр определяемых пользователем функций
 title: Просмотр определяемых пользователем функций | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
@@ -19,12 +20,12 @@ ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 081be4045a04ac665a83d8fabf8f12e6e0abc7c8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 70cb57fd62b62e10aeb1d68d708a7504265e4e97
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727062"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460198"
 ---
 # <a name="view-user-defined-functions"></a>Просмотр определяемых пользователем функций
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -87,7 +88,7 @@ ms.locfileid: "85727062"
      **Выполнить от имени**  
      Контекст выполнения для функции.  
   
-     **Название**  
+     **имя**;  
      Имя текущей функции.  
   
      **Схема**  

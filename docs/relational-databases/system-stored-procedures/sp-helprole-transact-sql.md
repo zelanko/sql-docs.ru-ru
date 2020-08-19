@@ -1,4 +1,5 @@
 ---
+description: sp_helprole (Transact-SQL)
 title: sp_helprole (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: b023103f-ccf3-44e2-b418-4be9bdd49f4a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc4cb9acc25255988d46e4e4bb5a922eb23a98fb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 36414885089de27fc06dc4029ee57ef341707912
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749298"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469280"
 ---
 # <a name="sp_helprole-transact-sql"></a>sp_helprole (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ sp_helprole [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @rolename = ] 'role'`Имя роли в текущей базе данных. Аргумент *Role* имеет тип **sysname**и значение по умолчанию NULL. *роль* должна существовать в текущей базе данных. Если параметр *Role* не указан, возвращаются сведения обо всех ролях в текущей базе данных.  
+`[ @rolename = ] 'role'` Имя роли в текущей базе данных. Аргумент *Role* имеет тип **sysname**и значение по умолчанию NULL. *роль* должна существовать в текущей базе данных. Если параметр *Role* не указан, возвращаются сведения обо всех ролях в текущей базе данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -53,7 +54,7 @@ sp_helprole [ [ @rolename = ] 'role' ]
 |**RoleId**|**smallint**|Идентификатор объекта **roleName**.|  
 |**IsAppRole**|**int**|0 = **roleName** не является ролью приложения.<br /><br /> 1 = **roleName** является ролью приложения.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Чтобы просмотреть разрешения, связанные с ролью, используйте **sp_helprotect**. Чтобы просмотреть элементы роли базы данных, используйте **sp_helprolemember**.  
   
 ## <a name="permissions"></a>Разрешения  
