@@ -1,4 +1,5 @@
 ---
+description: Свойство FetchOptions (служба удаленных рабочих столов)
 title: Свойство FetchOptions (RDS) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 448dbb4d6c669f136c1d26b3730d16af2f0e8e17
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2d00dd737f6b775d9d46bfb6af96a5ce76aa3a8e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752140"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439026"
 ---
 # <a name="fetchoptions-property-rds"></a>Свойство FetchOptions (служба удаленных рабочих столов)
 Указывает тип асинхронной выборки.  
@@ -41,10 +42,10 @@ ms.locfileid: "82752140"
 ## <a name="remarks"></a>Remarks  
  В веб-приложении обычно требуется использовать **адкфетчасинк** (значение по умолчанию), так как оно обеспечивает лучшую производительность. В скомпилированном клиентском приложении обычно требуется использовать **адкфетчбаккграунд**.  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойств Ексекутеоптионс и FetchOptions (VBScript)](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)   
  [Метод Cancel (служба удаленных рабочих столов)](../../../ado/reference/rds-api/cancel-method-rds.md)
 

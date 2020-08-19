@@ -1,4 +1,5 @@
 ---
+description: Объект DataFactory (RDSServer)
 title: Объект фактического объекта (RDSServer) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e75240c2-b749-471e-b6ea-98cae232efbe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 38b07258488539638729c55cef65770b0788a1c8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8a27d7911b00e5172941245ef5dcd587345aa1fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752616"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439106"
 ---
 # <a name="datafactory-object-rdsserver"></a>Объект DataFactory (RDSServer)
 > [!IMPORTANT]
@@ -42,7 +43,7 @@ ms.locfileid: "82752616"
   
 -   [Свойства, методы и события объекта DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Примеры объекта DataFactory, а также методов Query и CreateObject (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)
 
 

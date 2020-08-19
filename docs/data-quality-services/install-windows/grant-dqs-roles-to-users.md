@@ -1,4 +1,5 @@
 ---
+description: Предоставление ролей DQS пользователям
 title: Предоставление ролей DQS пользователям
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: afb445b5-bdbe-4bfe-844f-344766cdc2b2
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 23e87edda8602c74a981dbbecd61d84d1e1217cb
-ms.sourcegitcommit: 2e6c4104dca8680064eb64a7a79a3e15e1b4365f
+ms.openlocfilehash: f3437cc5a42bb479ed76575f5d109ab8d6c874f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2020
-ms.locfileid: "85942905"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431236"
 ---
 # <a name="grant-dqs-roles-to-users"></a>Предоставление ролей DQS пользователям
 
@@ -47,11 +48,11 @@ ms.locfileid: "85942905"
     > [!NOTE]  
     >  Если пользователю предоставляется роль **dqs_administrator** , примените изменения, а затем повторно проверьте разрешения пользователя; флажки двух других ролей DQS (**dq_kb_editor** и **dqs_kb_operator**) также должны быть установлены.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
  Выполните вход на сервер [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] с использованием учетной записи пользователя Windows, для которой только что было создано имя входа SQL Server и предоставлена роль DQS.  
   
-## <a name="see-also"></a>См. также  
- [Установка служб Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
+## <a name="see-also"></a>См. также:  
+ [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [Создание имени входа](../../relational-databases/security/authentication-access/create-a-login.md)  
   
   

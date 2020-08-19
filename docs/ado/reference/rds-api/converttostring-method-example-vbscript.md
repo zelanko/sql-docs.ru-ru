@@ -1,4 +1,5 @@
 ---
+description: Пример метода ConvertToString (VBScript)
 title: Пример метода ConvertToString (VBScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: edd0a01c-1a1b-4b91-9966-2529e244abae
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: abfaba4a4ef4a67bb4b5970bf347674814caab13
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5d30d0268d974f8ab4cac2238ec8672c9948dcaf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762685"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439185"
 ---
 # <a name="converttostring-method-example-vbscript"></a>Пример метода ConvertToString (VBScript)
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- В следующем примере показано, как преобразовать **набор записей** в строку в кодировке MIME с помощью метода **RDSServer. ConvertToString.** Затем показано, как можно преобразовать строку обратно в **набор записей**. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **ConvertToString. htm**.  
+ В следующем примере показано, как преобразовать **набор записей** в строку в кодировке MIME с помощью метода **RDSServer. ConvertToString.** Затем показано, как можно преобразовать строку обратно в **набор записей**. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **ConvertToString.htm**.  
   
 ```  
 <!-- BeginConvertToStringVBS -->  
@@ -93,7 +94,7 @@ MIME Encoded RS: <BR>
 <!-- EndConvertToStringVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод ConvertToString (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
 

@@ -1,4 +1,5 @@
 ---
+description: Примеры метода Append коллекции Keys, свойства Type объекта Key, а также примеры свойств RelatedColumn, RelatedTable и UpdateRule (Visual C++)
 title: Пример создания внешнего ключа (VC + +) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 28495b8f-18dc-482c-995d-a120f6ae2006
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 260c29c18f6d8c95cbca6e06c25ebf05fceeec64
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 078e3078f57dea91cd5f73b6cce504545771f59e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763865"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439826"
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vc"></a>Примеры метода Append коллекции Keys, свойства Type объекта Key, а также примеры свойств RelatedColumn, RelatedTable и UpdateRule (Visual C++)
 В следующем коде показано, как создать новый внешний ключ. Предполагается, что существует две таблицы (Customers и Orders).  

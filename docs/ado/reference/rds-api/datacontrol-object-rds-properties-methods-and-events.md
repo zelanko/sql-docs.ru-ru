@@ -1,4 +1,5 @@
 ---
+description: Свойства, методы и события объекта DataControl (служба удаленных рабочих столов)
 title: Свойства, методы и события объекта Controls (RDS) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9a8f9b0c-8452-4e95-a561-cfc4b7165c5e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b6dc53cd0449576fceb81556e3ae16edc0a85ff7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b811240a5e3261636650d1a3c847dc7813ac7674
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746127"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439136"
 ---
 # <a name="datacontrol-object-rds-properties-methods-and-events"></a>Свойства, методы и события объекта DataControl (служба удаленных рабочих столов)
 > [!IMPORTANT]
@@ -74,7 +75,7 @@ ms.locfileid: "82746127"
   
  [Событие onReadyStateChange (служба удаленных рабочих столов)](../../../ado/reference/rds-api/onreadystatechange-event-rds.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
 
 

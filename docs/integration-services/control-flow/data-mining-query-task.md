@@ -1,4 +1,5 @@
 ---
+description: Задача «Запрос интеллектуального анализа данных»
 title: Задача "Запрос интеллектуального анализа данных" | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e678774a8da38b8ff2e8c64adc7309828d6dffb6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 285bc5e3b2bdf9dfb1497539def56ecbaa77ccb3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919840"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431026"
 ---
 # <a name="data-mining-query-task"></a>Задача «Запрос интеллектуального анализа данных»
 
@@ -74,7 +75,7 @@ ms.locfileid: "86919840"
  Сведения об интеллектуальном анализе данных в пакетах см. в разделах [Задача "Запрос интеллектуального анализа данных"](../../integration-services/control-flow/data-mining-query-task.md) и [Решения для интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
   
 ### <a name="general-options"></a>Общие параметры  
- **имя**;  
+ **Название**  
  Задайте уникальное имя для задачи «Запрос интеллектуального анализа данных». Это имя используется в качестве метки для значка задачи.  
   
 > [!NOTE]  
@@ -87,12 +88,12 @@ ms.locfileid: "86919840"
  **Соединение**  
  Выберите из списка диспетчер соединений служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или нажмите кнопку **Создать** для создания нового диспетчера соединений.  
   
- **См. также:**  [Диспетчер подключений служб Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
+ **См. также:**  [Добавление диспетчера соединений служб Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
   
  **Создать**  
  Создает новый диспетчер соединений служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
- **См. также:** [Справочник по пользовательскому интерфейсу: диалоговое окно "Добавление диспетчера подключений служб Analysis Services"](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **См. также:** [Добавление диалогового окна "Диспетчер соединений со службами Analysis Services" в справочнике по пользовательскому интерфейсу](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **Структура интеллектуального анализа данных**  
  Выберите структуру интеллектуального анализа из данного списка.  
@@ -106,7 +107,7 @@ ms.locfileid: "86919840"
  Сведения об интеллектуальном анализе данных в пакетах см. в разделах [Задача "Запрос интеллектуального анализа данных"](../../integration-services/control-flow/data-mining-query-task.md) и [Решения для интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
   
 ### <a name="general-options"></a>Общие параметры  
- **имя**;  
+ **Название**  
  Задайте уникальное имя для задачи «Запрос интеллектуального анализа данных». Это имя используется в качестве метки для значка задачи.  
   
 > [!NOTE]  
@@ -124,7 +125,7 @@ ms.locfileid: "86919840"
  **Создать новый запрос**  
  Создать запрос интеллектуального анализа данных, используя графическое средство.  
   
- **См. также:** [Запрос интеллектуального анализа данных](../../integration-services/control-flow/data-mining-query.md)  
+ **См. также:** [Data Mining Query](../../integration-services/control-flow/data-mining-query.md)  
   
 ### <a name="parameter-mapping-tab-options"></a>Параметры вкладки «Сопоставление параметров»  
  **Имя параметра**  
@@ -162,7 +163,7 @@ ms.locfileid: "86919840"
  Сведения об интеллектуальном анализе данных в пакетах см. в разделах [Задача "Запрос интеллектуального анализа данных"](../../integration-services/control-flow/data-mining-query-task.md) и [Решения для интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
   
 ### <a name="general-options"></a>Общие параметры  
- **имя**;  
+ **Название**  
  Задайте уникальное имя для задачи «Запрос интеллектуального анализа данных». Это имя используется в качестве метки для значка задачи.  
   
 > [!NOTE]  

@@ -1,4 +1,5 @@
 ---
+description: Свойство Property (Key) (ADOX)
 title: Свойство Type (Key) (ADOX) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8ca2f1fd-eb1e-490c-a28b-67eda92e0fc7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 000169993f3aae1047369449b7df71551b52ea22
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 28c61045a301047b944447f6037f06324a49cadb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763255"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439446"
 ---
 # <a name="type-property-key-adox"></a>Свойство Property (Key) (ADOX)
 Указывает тип ключа.  
@@ -35,10 +36,10 @@ ms.locfileid: "82763255"
 ## <a name="remarks"></a>Remarks  
  Это свойство доступно только для чтения для объектов [ключей](../../../ado/reference/adox-api/key-object-adox.md) , уже добавленных в коллекцию.  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойств для добавления ключей, типа ключа, RelatedColumn, RelatedTable и UpdateRule (Visual Basic)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Свойство Type (Column) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)   
  [Свойство Type (Table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)

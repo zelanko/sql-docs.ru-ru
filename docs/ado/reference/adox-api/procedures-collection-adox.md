@@ -1,4 +1,5 @@
 ---
+description: Коллекция Procedures (ADOX)
 title: Коллекция процедур (ADOX) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: dc7a38e1-93b9-4034-9af2-ff419e8fb2a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 91ce9f74f0198c52ecce404cb0145e33b941271c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3719107d002e91880d59b0ba33c25c09596a80b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763654"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439626"
 ---
 # <a name="procedures-collection-adox"></a>Коллекция Procedures (ADOX)
 Содержит все объекты [процедур](../../../ado/reference/adox-api/procedure-object-adox.md) каталога.  
   
 ## <a name="remarks"></a>Remarks  
- Метод [append](../../../ado/reference/adox-api/append-method-adox-procedures.md) для коллекции **процедур** уникален для ADOX. Можно сделать следующее:  
+ Метод [append](../../../ado/reference/adox-api/append-method-adox-procedures.md) для коллекции **процедур** уникален для ADOX. Вы можете:  
   
 -   Добавьте новую процедуру в коллекцию с помощью метода **append** .  
   
- Остальные свойства и методы являются стандартными для коллекций ADO. Можно сделать следующее:  
+ Остальные свойства и методы являются стандартными для коллекций ADO. Вы можете:  
   
 -   Получите доступ к процедуре в коллекции со свойством [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
   
@@ -45,7 +46,7 @@ ms.locfileid: "82763654"
   
 -   [Свойства, методы и события коллекции Indexes](../../../ado/reference/adox-api/indexes-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойств Command и CommandText (Visual Basic)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
  [Коллекция Parameters, пример свойства Command (Visual Basic)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
  [Пример метода Append для процедур (Visual Basic)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   

@@ -1,4 +1,5 @@
 ---
+description: Поток данных
 title: Поток данных | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 757015f38213730973ec67c014f5b17d00fbce0b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fa3fff63528c11e57c6517393c28a5deb2acfcfe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916840"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430966"
 ---
 # <a name="data-flow"></a>Поток данных
 
@@ -101,7 +102,7 @@ ms.locfileid: "86916840"
 ### <a name="sources-available-for-download"></a>Источники, доступные для загрузки  
  В приведенной ниже таблице перечислены дополнительные источники, которые можно загрузить с веб-сайта [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-|Источник|Description|  
+|Источник|Описание|  
 |------------|-----------------|  
 |Источник Oracle|Источник Oracle — это компонент-источник соединителя для Oracle ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) от компании Attunity. Кроме того, в состав соединителя для Oracle ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) от компании Attunity входят диспетчер подключений и назначение. Дополнительные сведения см. на странице загрузки [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384)(на английском языке).|  
 |Источник SAP BI|Источник SAP BI — это компонент-источник соединителя для SAP BI ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ). Кроме того, в состав соединителя для SAP BI ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) входят диспетчер подключений и назначение. Дополнительные сведения см. на странице скачивания [Microsoft SQL Server Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)(Пакет дополнительных компонентов Microsoft SQL Server).|  
@@ -122,9 +123,9 @@ ms.locfileid: "86916840"
   
 -   [Преобразование "Производный столбец"](../../integration-services/data-flow/transformations/derived-column-transformation.md)  
   
--   [Преобразование "Нечеткое группирование"](../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)  
+-   [преобразование «Нечеткое группирование»](../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)  
   
--   [Преобразование "Нечеткий уточняющий запрос"](../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)  
+-   [преобразование «Нечеткий уточняющий запрос»](../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)  
   
 -   [Преобразование "Команда OLE DB"](../../integration-services/data-flow/transformations/ole-db-command-transformation.md)  
   
@@ -162,7 +163,7 @@ ms.locfileid: "86916840"
 ### <a name="destinations-available-for-download"></a>Назначения, доступные для загрузки  
  В следующей таблице перечислены дополнительные назначения, которые можно скачать на веб-сайте [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-|Источник|Description|  
+|Источник|Описание|  
 |------------|-----------------|  
 |Назначение Oracle|Назначение Oracle — компонент назначения соединителя для Oracle ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) от компании Attunity. Соединитель для Oracle ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) от компании Attunity также включает диспетчер подключений и источник. Дополнительные сведения см. на странице загрузки [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=789384)(на английском языке).|  
 |Назначение SAP BI|Назначение SAP BI — компонент назначения соединителя для SAP BI ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ). Соединитель для SAP BI ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) также включает диспетчер подключений и источник. Дополнительные сведения см. на странице скачивания [Microsoft SQL Server Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)(Пакет дополнительных компонентов Microsoft SQL Server).|  
@@ -178,7 +179,7 @@ ms.locfileid: "86916840"
   
  Проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] поддерживает работу в режиме «вне сети». При работе в режиме «вне сети» соединения с используемыми пакетом источниками и целевыми объектами не устанавливаются, а метаданные внешних столбцов не обновляются.  
   
-## <a name="inputs-and-outputs"></a>Входы и выходы  
+## <a name="inputs-and-outputs"></a>Входные и выходные данные  
  У источников есть выходы, у целевых объектов — входы, а у преобразований есть и входы, и выходы. Кроме того, многие компоненты потока данных могут быть настроены для использования выхода ошибок.  
   
 ### <a name="inputs"></a>Входные данные  

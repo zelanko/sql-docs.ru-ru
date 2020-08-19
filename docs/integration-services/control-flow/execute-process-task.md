@@ -1,4 +1,5 @@
 ---
+description: Задача «Выполнение процесса»
 title: Задача "Выполнение процесса" | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a47088f610dc016fe904b9b772e261b9bd2adcf0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0e34be2d218041a4c8994bf0bea5579942f444ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920690"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430986"
 ---
 # <a name="execute-process-task"></a>Задача «Выполнение процесса»
 
@@ -35,7 +36,7 @@ ms.locfileid: "86920690"
 ## <a name="custom-log-entries-available-on-the-execute-process-task"></a>Пользовательские записи журнала, доступные в задаче «Выполнение процесса»  
  В следующей таблице перечислены пользовательские записи в журнале для задачи «Выполнение процесса». Дополнительные сведения см. в разделе [Ведение журналов в службах Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md).  
   
-|Запись журнала|Описание|  
+|Запись журнала|Description|  
 |---------------|-----------------|  
 |**ExecuteProcessExecutingProcess**|Предоставляет сведения о процессе, для запуска которого настроена задача.<br /><br /> В журнале формируются две записи. Одна из них предоставляет сведения об имени и месте выполнения исполняемого объекта, на запуск которого настроена задача, другая фиксирует выход из исполняемого объекта.|  
 |**ExecuteProcessVariableRouting**|Предоставляет сведения о том, какие переменные направляются на вход и выходы исполняемого объекта. Данные журнала записываются для потоков stdin (вход), stdout (выход) и stderr (вывод ошибок на выходе).|  

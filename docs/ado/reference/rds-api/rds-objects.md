@@ -1,4 +1,5 @@
 ---
+description: Объекты службы удаленных рабочих столов
 title: Объекты RDS | Документация Майкрософт
 ms.technology: connectivity
 ms.custom: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f2ac8b3b-f968-41c4-a504-7aee3538b7c7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7ba592cd0bb0dc10c094784fbb7d41585d5b6dd6
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 477db26b27b0b6222da55585661db1dc37d64b82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942296"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438786"
 ---
 # <a name="rds-objects"></a>Объекты службы удаленных рабочих столов
 > [!IMPORTANT]
@@ -31,7 +32,7 @@ ms.locfileid: "86942296"
 |[Пространство (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)|Создает прокси на стороне клиента для пользовательских бизнес-объектов, расположенных на среднем уровне.<br /><br /> Объект **Space** является надежным для скриптов.|  
 |[Интерфейс IRDSService (служба удаленных рабочих столов)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)|Предоставляет метод [инвокесервице (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md) , который используется для возвращения указателя на запрошенный интерфейс в более поддерживающей версии объекта.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по API ADO](../../../ado/reference/rds-api/rds-api-reference.md)
 
 

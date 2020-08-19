@@ -1,4 +1,5 @@
 ---
+description: Пример свойства Handler (Visual C++)
 title: Пример свойства Handler (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d046d89c-622b-48bc-9d30-f454c3e13595
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 16e94fad7c5dfc85fcde7d835363e800ab5d3f46
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5a570727ef9bdee2ac1411a1594dae518dd4fe36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751978"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438966"
 ---
 # <a name="handler-property-example-vc"></a>Пример свойства Handler (Visual C++)
 > [!IMPORTANT]
@@ -27,7 +28,7 @@ ms.locfileid: "82751978"
   
  В этом примере демонстрируется свойство [обработчика](../../../ado/reference/rds-api/handler-property-rds.md) объектов [RDS элемента управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) . (Дополнительные сведения см. в разделе [Настройка фактов](../../../ado/guide/remote-data-service/datafactory-customization.md) .)  
   
- Предположим, что в файле параметров Мсдфмап. ini имеются следующие разделы, расположенные на сервере:  
+ Предположим, что в файле параметров, Msdfmap.ini, расположенном на сервере, есть следующие разделы:  
   
 ```  
 [connect AuthorDataBase]  
@@ -37,7 +38,7 @@ Connect="DSN=Pubs"
 SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
- Код выглядит следующим образом. Команда, назначенная свойству [SQL](../../../ado/reference/rds-api/sql-property.md) , будет соответствовать идентификатору ***аусорбид*** и будет получать строку для автора Ивана о'леари. Несмотря на то, что свойство [Connect](../../../ado/reference/rds-api/connect-property-rds.md) в коде указывает источник данных Northwind, этот источник данных будет перезаписан в раздел *Connect* мсдфмап. ini. Свойство [Recordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) объекта **элемента управления** данных назначается несвязанному объекту [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) исключительно в качестве удобства для написания кода.  
+ Код выглядит следующим образом. Команда, назначенная свойству [SQL](../../../ado/reference/rds-api/sql-property.md) , будет соответствовать идентификатору ***аусорбид*** и будет получать строку для автора Ивана о'леари. Несмотря на то, что свойство [Connect](../../../ado/reference/rds-api/connect-property-rds.md) в коде указывает источник данных Northwind, этот источник данных будет перезаписан с помощью раздела Msdfmap.ini *Connect* . Свойство [Recordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) объекта **элемента управления** данных назначается несвязанному объекту [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) исключительно в качестве удобства для написания кода.  
   
 ```  
 // BeginHandlerCpp.cpp  
@@ -128,7 +129,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект элемента управления (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Свойство Handler (служба удаленных рабочих столов)](../../../ado/reference/rds-api/handler-property-rds.md)
 

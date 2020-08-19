@@ -1,4 +1,5 @@
 ---
+description: Примеры свойств Recordset и SourceRecordset (VBScript)
 title: Пример свойств Recordset и Саурцерекордсет (VBScript) | Документация Майкрософт
 ms.technology: connectivity
 ms.custom: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 95175316-cd10-4cf7-96ba-2a226fd97701
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 64f83c8e7d8a281ff8bd9124d693d365cafd9181
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d2c047ed21662335368f85273ad8c52bf4f5e70f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751106"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438746"
 ---
 # <a name="recordset-and-sourcerecordset-properties-example-vbscript"></a>Примеры свойств Recordset и SourceRecordset (VBScript)
 > [!IMPORTANT]
@@ -28,7 +29,7 @@ ms.locfileid: "82751106"
   
  В следующем примере показано, как задать необходимые параметры бизнес-объекта [RDSServer.](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) DataObject, используемого по умолчанию во время выполнения.  
   
- Чтобы протестировать этот пример, вырежьте и вставьте этот код между \< телом> и \< /боди> тегами в обычном HTML-документе и назовите его **рекордсетвбс. ASP**. Сценарий ASP определит ваш сервер.  
+ Чтобы протестировать этот пример, вырежьте и вставьте этот код между \<Body> \</Body> тегами и в обычном HTML-документе и назовите его **рекордсетвбс. ASP**. Сценарий ASP определит ваш сервер.  
   
 ```  
 <!-- BeginRecordSetVBS -->  
@@ -127,7 +128,7 @@ CLASSID="CLSID:BD96C556-65A3-11D0-983A-00C04FC29E36">
 <!-- EndRecordsetVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект фактического объекта (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
  [Свойства Recordset и SourceRecordset (служба удаленных рабочих столов)](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)
 

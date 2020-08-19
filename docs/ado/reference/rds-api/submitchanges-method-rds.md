@@ -1,4 +1,5 @@
 ---
+description: Метод SubmitChanges (служба удаленных рабочих столов)
 title: Метод SubmitChanges (RDS) | Документация Майкрософт
 ms.technology: connectivity
 ms.custom: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 250062a4-13c4-4bed-807d-8b9ad81536d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3291b5ca72ab984ecd8487612384ece6d5b76f9a
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 0bd87e3e533168b2ff84f95fc9c6cf6275dd829e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942281"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438586"
 ---
 # <a name="submitchanges-method-rds"></a>Метод SubmitChanges (служба удаленных рабочих столов)
 Отправляет ожидающие изменения локально кэшированного и обновляемого [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) в источник данных, указанный в свойстве [Connect](../../../ado/reference/rds-api/connect-property-rds.md) или в свойстве [URL-адреса](../../../ado/reference/rds-api/url-property-rds.md) .  
@@ -40,13 +41,13 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
  *DataFactory*  
  Объектная переменная, представляющая объект [RDSServer.](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) DataObject.  
   
- *Подключение*  
+ *Соединение*  
  **Строковое** значение, представляющее соединение, созданное с помощью **RDS. **Свойство [соединения](../../../ado/reference/rds-api/connect-property-rds.md) объекта элемента управления DataObject.  
   
  *набор записей*  
  Объектная переменная, представляющая объект **набора записей** .  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Прежде чем использовать метод **SubmitChanges** с RDS, необходимо задать свойства [Connect](../../../ado/reference/rds-api/connect-property-rds.md), [Server](../../../ado/reference/rds-api/server-property-rds.md)и [SQL](../../../ado/reference/rds-api/sql-property.md) **. Объект элемента управления** .  
   
  Если метод [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) вызывается после вызова **SubmitChanges** для того же объекта **Recordset** , вызов **CancelUpdate** завершается ошибкой, поскольку изменения уже были зафиксированы.  
@@ -68,7 +69,7 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример метода SubmitChanges (VBScript)](../../../ado/reference/rds-api/submitchanges-method-example-vbscript.md)   
  [Кнопки для команд адресной книги](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   
  [Метод CancelUpdate (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   

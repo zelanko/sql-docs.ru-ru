@@ -1,4 +1,5 @@
 ---
+description: Свойства, методы и события объекта View
 title: Просмотр свойств, методов и событий объекта | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 02b5ba88-cacd-4a68-881b-974824ea4a04
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2fef8ff76af497b311cab231d77cd7dd0832ff75
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 14aec18423dbeaf4136ac1d51a08a73ebcd0ba1c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82753155"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439346"
 ---
 # <a name="view-object-properties-methods-and-events"></a>Свойства, методы и события объекта View
 ## <a name="properties"></a>Свойства  
@@ -27,10 +28,10 @@ ms.locfileid: "82753155"
   
  [DateModified, свойство](../../../ado/reference/adox-api/datemodified-property-adox.md)  
   
- [Свойство Name](../../../ado/reference/adox-api/name-property-adox.md)  
+ [Имя, свойство](../../../ado/reference/adox-api/name-property-adox.md)  
   
 ## <a name="methods"></a>Методы  
- Нет.  
+ Отсутствует.  
   
 ## <a name="events"></a>События  
  Нет.  

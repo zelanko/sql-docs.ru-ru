@@ -1,4 +1,5 @@
 ---
+description: Свойство Connect (служба удаленных рабочих столов)
 title: Свойство Connect (RDS) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dbad5e77-b213-4eb8-aecf-d60f203fdb59
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0f89e1097565c5b9841db69ac44e13c8d7138e64
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: eb3b5e535d2f4b6f6e4777c8c3ac1bbaaa3381c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755586"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439216"
 ---
 # <a name="connect-property-rds"></a>Свойство Connect (служба удаленных рабочих столов)
 Указывает имя базы данных, из которой выполняются операции запроса и обновления.  
@@ -46,10 +47,10 @@ Run time: DataControl.Connect = "ConnectionString"
  *DataControl*  
  Объектная переменная, представляющая **RDS. Объект элемента управления** .  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойства Connect (VBScript)](../../../ado/reference/rds-api/connect-property-example-vbscript.md)   
  [Метод query (RDS)](../../../ado/reference/rds-api/query-method-rds.md)   
  [Метод Refresh (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)   

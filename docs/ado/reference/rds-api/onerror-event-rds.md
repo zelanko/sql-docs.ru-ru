@@ -1,4 +1,5 @@
 ---
+description: Событие onError (служба удаленных рабочих столов)
 title: Событие OnError (RDS) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b01cbc62-fbd7-4068-b16c-8b0f80a05887
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c0e398b80af037763dce479a9fe3a26956b0e3b0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 86bdb1cd343ff0c8b3375760c843ef1c4d93c2dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751551"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438896"
 ---
 # <a name="onerror-event-rds"></a>Событие onError (служба удаленных рабочих столов)
 Событие **OnError** вызывается при возникновении ошибки во время операции.  
@@ -40,16 +41,16 @@ onError SCode, Description, Source, CancelDisplay
  *Описание*  
  **Строка** , указывающая описание ошибки.  
   
- *Источник*  
+ *Source*  
  **Строка** , указывающая запрос или команду, вызвавшую ошибку.  
   
  *канцелдисплай*  
  **Логическое** значение, которое, если установлено значение **true**, предотвращает отображение ошибки в диалоговом окне.  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример модели событий ADO (Visual c++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [Общие сведения об обработчике событий ADO](../../../ado/guide/data/ado-event-handler-summary.md)
 

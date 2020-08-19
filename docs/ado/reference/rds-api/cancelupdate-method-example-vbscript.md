@@ -1,4 +1,5 @@
 ---
+description: Пример метода CancelUpdate (VBScript)
 title: Пример метода CancelUpdate (VBScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: c23912f0-1288-4727-8fb4-f643b8811cf7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d560233efc7623a390fbd2fc63e8add5f26cd157
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 21d940642388c516ddf9c0048e255e441b9076b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746418"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439246"
 ---
 # <a name="cancelupdate-method-example-vbscript"></a>Пример метода CancelUpdate (VBScript)
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Чтобы протестировать этот пример, вырежьте и вставьте этот код между \< телом> и \< /боди> тегами в обычном HTML-документе и назовите его **канцелупдатевбс. ASP**. Сценарий ASP определит ваш Интернет сервер. Необходимо изменить имя сервера, чтобы оно отражало собственную настройку. Просто измените значение в строке подключения с MyServer на имя установки SQL Server.  
+ Чтобы протестировать этот пример, вырежьте и вставьте этот код между \<Body> \</Body> тегами и в обычном HTML-документе и назовите его **канцелупдатевбс. ASP**. Сценарий ASP определит ваш Интернет сервер. Необходимо изменить имя сервера, чтобы оно отражало собственную настройку. Просто измените значение в строке подключения с MyServer на имя установки SQL Server.  
   
 ```  
 <!-- BeginCancelUpdateVBS -->  
@@ -117,7 +118,7 @@ End Sub
 <!-- EndCancelUpdateVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод CancelUpdate (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)
 
 

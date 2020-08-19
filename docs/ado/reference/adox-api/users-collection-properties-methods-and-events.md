@@ -1,4 +1,5 @@
 ---
+description: Свойства, методы и события коллекции Users
 title: Свойства, методы и события коллекции пользователей | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1b89a12f-96bc-48b3-a88d-4da74780ea40
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5c524797d3e4c0b42ce28949187453bae66abb48
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 27c32456257208cc1dc63049a09ab6237a0d946f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82753169"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439356"
 ---
 # <a name="users-collection-properties-methods-and-events"></a>Свойства, методы и события коллекции Users
 ## <a name="properties"></a>Свойства  

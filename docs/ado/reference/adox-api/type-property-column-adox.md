@@ -1,4 +1,5 @@
 ---
+description: Свойство Type (Column) (ADOX)
 title: Свойство Type (Column) (ADOX) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5c6718b6-f728-478a-8afb-5d17b0a91d1f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c819d5b58f0153db84a624c79cef829605e54df8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 855c7aabd3ac94fff5250f4a6c1fab3d02a7ec65
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763265"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439436"
 ---
 # <a name="type-property-column-adox"></a>Свойство Type (Column) (ADOX)
 Указывает тип данных столбца.  
@@ -35,10 +36,10 @@ ms.locfileid: "82763265"
 ## <a name="remarks"></a>Remarks  
  Это свойство доступно для чтения и записи до тех пор, пока объект [столбца](../../../ado/reference/adox-api/column-object-adox.md) не будет добавлен к коллекции или другому объекту, после чего он доступен только для чтения.  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойства ParentCatalog (Visual Basic)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
  [Свойство Type (Key) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)   
  [Свойство Type (Table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)

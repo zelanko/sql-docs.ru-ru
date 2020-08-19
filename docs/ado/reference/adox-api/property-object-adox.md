@@ -1,4 +1,5 @@
 ---
+description: Объект Property (ADOX)
 title: Объект Property (ADOX) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 6a56def6-dbe6-4ccc-a491-8d076889f019
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f866b20bb8157239a6deb7fd37a1ec044e27479
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5a836b5b0778aea77732036d1951db81aa790198
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748570"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439606"
 ---
 # <a name="property-object-adox"></a>Объект Property (ADOX)
 Представляет характеристику объекта ADOX.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Объекты ADOX имеют два типа свойств: встроенные и динамические.  
   
  Встроенные свойства — это свойства, которые немедленно доступны для любого нового объекта с помощью синтаксиса MyObject. Property. Они не отображаются как объекты свойств в [коллекции свойств](../../../ado/reference/ado-api/properties-collection-ado.md)объекта, поэтому, хотя их значения можно изменять, их характеристики изменить нельзя.  

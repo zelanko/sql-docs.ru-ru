@@ -1,4 +1,5 @@
 ---
+description: Объект View (ADOX)
 title: Просмотр объекта (ADOX) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 653421ce-7b94-43d0-9bc6-4900f8f2af45
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b468ccc3edc4cc5453b4f08371cd2b4b962f0c72
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3cc635db04358417948e709a4c47605fae17669b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82753183"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439366"
 ---
 # <a name="view-object-adox"></a>Объект View (ADOX)
 Представляет отфильтрованный набор записей или виртуальную таблицу. При использовании в сочетании с объектом [команды](../../../ado/reference/ado-api/command-object-ado.md) ADO объект **View** можно использовать для добавления, удаления или изменения представлений.  
@@ -40,7 +41,7 @@ ms.locfileid: "82753183"
   
 -   [Свойства, методы и события объекта View](../../../ado/reference/adox-api/view-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример представлений и коллекций полей (Visual Basic)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
  [Пример метода Append для представлений (Visual Basic)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
  [Пример коллекции Views, свойство CommandText (Visual Basic)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   

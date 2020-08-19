@@ -1,4 +1,5 @@
 ---
+description: Метод ConvertToString (служба удаленных рабочих столов)
 title: Метод ConvertToString (RDS) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3f36bc8-6f69-49b0-83cd-2ccd3afebfbe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6eff6ae54dc5cc0b901cfb1da61244e30d963615
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 58bfb25264c15f051bfd7144bdcaf01bbd1eda05
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764845"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439196"
 ---
 # <a name="converttostring-method-rds"></a>Метод ConvertToString (служба удаленных рабочих столов)
 Преобразует [набор записей](../../../ado/reference/ado-api/recordset-object-ado.md) в строку MIME, представляющую данные набора записей.  
@@ -40,7 +41,7 @@ DataFactory.ConvertToString(Recordset)
  *набор записей*  
  Объектная переменная, представляющая объект **набора записей** .  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  С помощью файлов. ASP используйте **ConvertToString** для внедрения **набора записей** в HTML-страницу, созданную на сервере для передачи его на клиентский компьютер.  
   
  **ConvertToString** сначала загружает **набор записей** в таблицы службы курсоров, а затем создает поток в формате MIME.  
@@ -50,10 +51,10 @@ DataFactory.ConvertToString(Recordset)
 > [!NOTE]
 >  Если вы используете Active Server страницы для внедрения полученной строки MIME на клиентской HTML-странице, имейте в виду, что версии VBScript, предшествующие версии 2,0, ограничивают размер строки до 32 000. Если это ограничение превышено, возвращается ошибка. При использовании внедрения MIME с помощью файлов. ASP следует относительно малый масштаб запроса. Чтобы устранить эту проблему, скачайте последнюю версию VBScript с веб-сайта технологий Microsoft Windows Script.  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример метода ConvertToString (Visual Basic)](../../../ado/reference/ado-api/converttostring-method-example-vb.md)   
  [Пример метода ConvertToString (VBScript)](../../../ado/reference/rds-api/converttostring-method-example-vbscript.md)
 

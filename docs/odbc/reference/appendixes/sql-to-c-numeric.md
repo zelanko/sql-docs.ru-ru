@@ -1,4 +1,5 @@
 ---
+description: 'Преобразование данных из SQL в C: числовые данные'
 title: 'Из SQL в C: numeric | Документация Майкрософт'
 ms.custom: ''
 ms.date: 01/19/2019
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 76f8b5d5-4bd0-4dcb-a90a-698340e0d36e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 36b24da4023a96b686742416b83bb5790e129278
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d48706eddabc71f28c84fae5623a8c9e440d8506
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296414"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429566"
 ---
 # <a name="sql-to-c-numeric"></a>Преобразование данных из SQL в C: числовые данные
 
@@ -45,7 +46,7 @@ ms.locfileid: "81296414"
 |SQL_C_BIT|Данные равны 0 или 1 [a]<br /><br /> Данные больше 0, меньше 2 и не равны 1 [a]<br /><br /> Данные меньше 0 или больше или равны 2 [a]|Данные<br /><br /> Усеченные данные<br /><br /> Не определено.|1 [b]<br /><br /> 1 [b]<br /><br /> Не определено.|Недоступно<br /><br /> 01S07<br /><br /> 22003|  
 |SQL_C_BINARY|Длина данных в байтах <= *BufferLength*<br /><br /> Длина байта данных > *BufferLength*|Данные<br /><br /> Не определено.|Длина данных<br /><br /> Не определено.|Недоступно<br /><br /> 22003|  
 |SQL_C_INTERVAL_MONTH [c] SQL_C_INTERVAL_YEAR [c] SQL_C_INTERVAL_DAY [c] SQL_C_INTERVAL_HOUR [c] SQL_C_INTERVAL_MINUTE [c] SQL_C_INTERVAL_SECOND [c]|Данные не усечены<br /><br /> Часть долей секунды усечена<br /><br /> Целая часть числа усечена|Данные<br /><br /> Усеченные данные<br /><br /> Не определено.|Длина данных в байтах<br /><br /> Длина данных в байтах<br /><br /> Не определено.|Недоступно<br /><br /> 01S07<br /><br /> 22015|  
-|SQL_C_INTERVAL_YEAR_TO_MONTH SQL_C_INTERVAL_DAY_TO_HOUR SQL_C_INTERVAL_DAY_TO_MINUTE SQL_C_INTERVAL_DAY_TO_SECOND SQL_C_INTERVAL_HOUR_TO_MINUTE SQL_C_INTERVAL_HOUR_TO_SECOND|Целая часть числа усечена|Не определено.|Не определено.|22015|  
+|SQL_C_INTERVAL_YEAR_TO_MONTH SQL_C_INTERVAL_DAY_TO_HOUR SQL_C_INTERVAL_DAY_TO_MINUTE SQL_C_INTERVAL_DAY_TO_SECOND SQL_C_INTERVAL_HOUR_TO_MINUTE SQL_C_INTERVAL_HOUR_TO_SECOND|Целая часть числа усечена|Не определено|Не определено|22015|  
   
  [a] значение *BufferLength* игнорируется для этого преобразования. Драйвер предполагает, что размер **таржетвалуептр* — это размер типа данных C.  
   

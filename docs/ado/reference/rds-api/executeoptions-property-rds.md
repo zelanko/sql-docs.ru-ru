@@ -1,4 +1,5 @@
 ---
+description: Свойство ExecuteOptions (служба удаленных рабочих столов)
 title: Свойство Ексекутеоптионс (RDS) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 62a4fd88-afc3-4f1f-b978-40710a30c4e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 278603db9930458400c4057a3551f485fffe3fcc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: dacac570cac3525593f281e52742f4efeb8cba4b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752543"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439036"
 ---
 # <a name="executeoptions-property-rds"></a>Свойство ExecuteOptions (служба удаленных рабочих столов)
 Указывает, включено ли асинхронное выполнение.  
@@ -37,17 +38,17 @@ ms.locfileid: "82752543"
 > [!NOTE]
 >  Каждый исполняемый файл, использующий эти константы, должен предоставлять объявления для них. Вы можете вырезать и вставить объявления констант из файла Адквбс. Inc, расположенного в папке установки по умолчанию для библиотеки RDS.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Если для **ексекутеоптионс** задано значение **адцексекасинк**, то асинхронно выполняет следующий вызов **Refresh** в [RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) **Набор записей**объекта данных.  
   
- При попытке вызвать метод [Reset](../../../ado/reference/rds-api/reset-method-rds.md), [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md), [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md), [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)или [Recordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) , пока другая асинхронная операция может изменить [RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md)Выполняется **набор записей** объекта "элемент управления", возникает ошибка.  
+ При попытке вызвать метод [Reset](../../../ado/reference/rds-api/reset-method-rds.md), [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md), [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md), [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)или [Recordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) , пока другая асинхронная операция может изменить [RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) Выполняется **набор записей** объекта "элемент управления", возникает ошибка.  
   
- Если во время асинхронной операции возникает ошибка, то **RDS. **Значение свойства [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) объекта "элемент управления **адкреадистателоадед** " изменяется с " **адкреадистатекомплете**" на "", а значение "свойство **набора записей** " остается *пустым*.  
+ Если во время асинхронной операции возникает ошибка, то **RDS. ** Значение свойства [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) объекта "элемент управления **адкреадистателоадед** " изменяется с " **адкреадистатекомплете**" на "", а значение "свойство **набора записей** " остается *пустым*.  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойств Ексекутеоптионс и FetchOptions (VBScript)](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)   
  [Метод Cancel (служба удаленных рабочих столов)](../../../ado/reference/rds-api/cancel-method-rds.md)
 

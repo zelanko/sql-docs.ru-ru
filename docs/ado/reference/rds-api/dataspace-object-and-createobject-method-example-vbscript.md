@@ -1,4 +1,5 @@
 ---
+description: Примеры объекта DataSpace и метода CreateObject (VBScript)
 title: Пример объекта пространства и метода CreateObject (VBScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 12b0e160-5e5c-441f-bed7-ac0bd061e003
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 406c0b8d6782352b88ca0712ad6173045228f241
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8c3606f321ba8647e2d997b125c4c002bf7739b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752590"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439076"
 ---
 # <a name="dataspace-object-and-createobject-method-example-vbscript"></a>Примеры объекта DataSpace и метода CreateObject (VBScript)
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- В следующем примере показано, как использовать метод [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) [RDS. Пространство](../../../ado/reference/rds-api/dataspace-object-rds.md) с бизнес-объектом по умолчанию [RDSServer.](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)DataObject. Чтобы протестировать этот пример, вырежьте и вставьте этот код между \< телом> и \< /боди> тегами в обычном HTML-документе и назовите его **датаспацевбс. ASP**. Сценарий ASP определит ваш сервер.  
+ В следующем примере показано, как использовать метод [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) [RDS. Пространство](../../../ado/reference/rds-api/dataspace-object-rds.md) с бизнес-объектом по умолчанию [RDSServer.](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)DataObject. Чтобы протестировать этот пример, вырежьте и вставьте этот код между \<Body> \</Body> тегами и в обычном HTML-документе и назовите его **датаспацевбс. ASP**. Сценарий ASP определит ваш сервер.  
   
 ```  
 <!-- BeginDataSpaceVBS -->  
@@ -146,7 +147,7 @@ Sub Window_OnLoad()
 End Sub  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод CreateObject (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)   
  [Объект DataSpace (служба удаленных рабочих столов)](../../../ado/reference/rds-api/dataspace-object-rds.md)
 

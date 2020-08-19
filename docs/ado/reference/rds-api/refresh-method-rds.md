@@ -1,4 +1,5 @@
 ---
+description: Метод Refresh (служба удаленных рабочих столов)
 title: Метод Refresh (RDS) | Документация Майкрософт
 ms.technology: connectivity
 ms.custom: ''
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c90a8050-0ff4-4c83-9925-261f2f2ccfe9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3e9fa606aab5d42a7b56171ca3720742d4d119a0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 372d4a2506f5ea7d14905ffed0842ca5cf2ce6ee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751053"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438716"
 ---
 # <a name="refresh-method-rds"></a>Метод Refresh (служба удаленных рабочих столов)
 Повторно запрашивает источник данных, указанный в свойстве [Connect](../../../ado/reference/rds-api/connect-property-rds.md) , и обновляет результаты запроса.  
@@ -46,10 +47,10 @@ DataControl.Refresh
   
  Рекомендуется периодически вызывать метод **Refresh** при работе с данными. Если получить данные и оставить их на клиентском компьютере в течение определенного времени, скорее всего, они устаревают. Возможно, любые внесенные изменения будут завершаться ошибкой, так как другой пользователь мог изменить запись и отправил изменения перед вами.  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример метода Refresh (Visual Basic)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
  [Пример метода Refresh (VBScript)](../../../ado/reference/rds-api/refresh-method-example-vbscript.md)   
  [Кнопки для команд адресной книги](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   

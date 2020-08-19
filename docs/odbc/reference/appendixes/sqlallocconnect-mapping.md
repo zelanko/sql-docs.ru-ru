@@ -1,4 +1,5 @@
 ---
+description: Сопоставление SQLAllocConnect
 title: Сопоставление SQLAllocConnect | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ac89dd1f-c565-47cc-8fa3-6fa5f80b5d63
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 25e72cd3830cea8504983f4348f6c200261490f4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f89ae59ca171fbcfbb9f6b75fdad639e31ea8fe0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305525"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429526"
 ---
 # <a name="sqlallocconnect-mapping"></a>Сопоставление SQLAllocConnect
 Когда приложение вызывает **SQLAllocConnect** через ODBC 3. драйвер *x* , вызов **SQLAllocConnect**(*хенв*, *фдбк*) сопоставляется с **функцию SQLAllocHandle** следующим образом:  

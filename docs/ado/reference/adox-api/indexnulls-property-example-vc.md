@@ -1,4 +1,5 @@
 ---
+description: Пример свойства IndexNulls (Visual C++)
 title: Пример свойства IndexNulls (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee407e03-4889-4a22-b031-ca542d637c96
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cc1c58ea2b7a496dfe0b101969d18c5274e2b784
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b61f2a0ee6437ca233a60032c1b25911ad48b194
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746657"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439876"
 ---
 # <a name="indexnulls-property-example-vc"></a>Пример свойства IndexNulls (Visual C++)
 В этом примере демонстрируется свойство [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) [индекса](../../../ado/reference/adox-api/index-object-adox.md). Код создает новый индекс и задает значение **IndexNulls** на основе введенных пользователем данных. Затем **индекс** добавляется в [таблицу](../../../ado/reference/adox-api/table-object-adox.md) **Employees** в [каталоге](../../../ado/reference/adox-api/catalog-object-adox.md) *Northwind* . Новый **индекс** применяется к [набору записей](../../../ado/reference/ado-api/recordset-object-ado.md) , основанному на таблице **Employees** , и открывается **набор записей** . В таблицу **Employees** добавляется новая запись со значением **null** в индексированном поле. Отображается ли эта новая запись, зависит от значения свойства **IndexNulls** .  

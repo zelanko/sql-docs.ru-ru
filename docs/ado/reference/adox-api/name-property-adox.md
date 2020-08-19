@@ -1,4 +1,5 @@
 ---
+description: Свойство Name (ADOX)
 title: Свойство Name (ADOX) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -41,12 +42,12 @@ helpviewer_keywords:
 ms.assetid: 81b92baf-b6b9-4f4e-9f33-4503795518cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 24d86b384a1eb2916e488c17c99e4b9b5962dd1a
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: dbd0d9088ea39d604c53c462448ae1c94b3a9052
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942726"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439786"
 ---
 # <a name="name-property-adox"></a>Свойство Name (ADOX)
 Указывает имя объекта.  
@@ -54,7 +55,7 @@ ms.locfileid: "86942726"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает **строковое** значение.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Имена не обязательно должны быть уникальными в пределах коллекции.  
   
  Свойство **Name** доступно для чтения и записи в объектах [столбца](../../../ado/reference/adox-api/column-object-adox.md), [группы](../../../ado/reference/adox-api/group-object-adox.md), [ключа](../../../ado/reference/adox-api/key-object-adox.md), [индекса](../../../ado/reference/adox-api/index-object-adox.md), [таблицы](../../../ado/reference/adox-api/table-object-adox.md)и [пользователя](../../../ado/reference/adox-api/user-object-adox.md) . Свойство **Name** доступно только для чтения в объектах [каталога](../../../ado/reference/adox-api/catalog-object-adox.md), [процедуры](../../../ado/reference/adox-api/procedure-object-adox.md)и [представления](../../../ado/reference/adox-api/view-object-adox.md) .  
@@ -84,7 +85,7 @@ ms.locfileid: "86942726"
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы добавления столбцов и таблиц, пример свойства Name (Visual Basic)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [Пример свойств для добавления ключей, типа ключа, RelatedColumn, RelatedTable и UpdateRule (Visual Basic)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Пример свойства ParentCatalog (Visual Basic)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)

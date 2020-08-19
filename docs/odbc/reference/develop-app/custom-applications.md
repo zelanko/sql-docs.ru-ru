@@ -1,4 +1,5 @@
 ---
+description: Пользовательские приложения
 title: Пользовательские приложения | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f28178d9-ecd6-4e8c-9644-9bb624999dcb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: df00a748ee4d5e3a63b32c95449417a1057b58e1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56829c72264ba128554af0534e8a6bfa16254142
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305285"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429396"
 ---
 # <a name="custom-applications"></a>Пользовательские приложения
 Пользовательские приложения обычно выполняют определенную задачу для нескольких СУБД. Например, приложение может извлекать данные из одной СУБД и создавать отчеты или передавать данные между несколькими СУБД. Эти приложения обычно известны до того, как приложение записывается и вряд ли меняются в течение жизненного цикла приложения.  

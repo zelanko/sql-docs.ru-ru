@@ -1,4 +1,5 @@
 ---
+description: Свойство SQL
 title: Свойство SQL | Документация Майкрософт
 ms.technology: connectivity
 ms.custom: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eb860ed19386b73d90fc26dab8fa96f4b9672a73
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c21e12d3601f40b1749067f04ce3d655ea0c1109
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750731"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438606"
 ---
 # <a name="sql-property"></a>Свойство SQL
 Указывает строку запроса, используемую для получения [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -37,18 +38,18 @@ Run time: DataControl.SQL = "QueryString"
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *QueryString*  
+ *Строку*  
  **Строковое** значение, содержащее допустимый запрос данных SQL.  
   
  *DataControl*  
  Объектная переменная, представляющая **RDS. Объект элемента управления** .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Как правило, это инструкция SQL (с использованием диалекта сервера базы данных), например `"Select * from NewTitles"` . Чтобы гарантировать точное сопоставление и обновление записей, обновляемый запрос должен содержать поле, отличное от длинного бинарного поля или вычисленного поля.  
   
  Свойство **SQL** является необязательным, если пользовательский бизнес-объект на стороне сервера получает данные для клиента.  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>См. также  

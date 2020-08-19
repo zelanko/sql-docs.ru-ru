@@ -1,4 +1,5 @@
 ---
+description: Объект DataSpace (служба удаленных рабочих столов)
 title: Объект Space (RDS) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9194bffa-5bdf-4dff-af86-f7158c23bfa7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8e0340eb56ec2b72c0f917f33a639ed5227d2c0b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bb24cdf6acbe58891177dfc84d6c1e341699b129
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82752569"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439066"
 ---
 # <a name="dataspace-object-rds"></a>Объект DataSpace (служба удаленных рабочих столов)
 > [!IMPORTANT]
@@ -28,7 +29,7 @@ ms.locfileid: "82752569"
   
  Службе удаленных данных требуются прокси бизнес-объектов, чтобы клиентские компоненты могли взаимодействовать с бизнес-объектами, расположенными на среднем уровне. Прокси-серверы упрощают упаковку, распаковку и транспортировку (маршалирование) данных [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) приложения по границам процесса или компьютера.  
   
- Служба удаленных данных использует **RDS. **Метод [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) объекта Space для создания прокси бизнес-объектов. Прокси бизнес-объектов создается динамически всякий раз, когда создается экземпляр аналога своего бизнес-объекта среднего уровня. Служба Remote Data Service поддерживает следующие протоколы: HTTP, HTTPS (безопасные сокеты HTTP), DCOM и внутрипроцессный (клиентские компоненты и бизнес-объект находятся на одном компьютере).  
+ Служба удаленных данных использует **RDS. ** Метод [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) объекта Space для создания прокси бизнес-объектов. Прокси бизнес-объектов создается динамически всякий раз, когда создается экземпляр аналога своего бизнес-объекта среднего уровня. Служба Remote Data Service поддерживает следующие протоколы: HTTP, HTTPS (безопасные сокеты HTTP), DCOM и внутрипроцессный (клиентские компоненты и бизнес-объект находятся на одном компьютере).  
   
 > [!NOTE]
 >  Служба RDS ведет себя в режиме без отслеживания состояния, когда **RDS. Объект Space** использует протоколы HTTP или HTTPS. То есть все внутренние сведения о запросе клиента удаляются после того, как сервер возвращает ответ.  
@@ -47,7 +48,7 @@ ms.locfileid: "82752569"
   
 -   [Свойства, методы и события объекта DataSpace (служба удаленных рабочих столов)](../../../ado/reference/rds-api/dataspace-object-rds-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Примеры объекта DataSpace и метода CreateObject (VBScript)](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)
 
 

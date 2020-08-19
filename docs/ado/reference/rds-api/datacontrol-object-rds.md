@@ -1,4 +1,5 @@
 ---
+description: Объект DataControl (служба удаленных рабочих столов)
 title: Объект элемента управления (RDS) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7bc9482c6626de36d9e45b2a2968b504b0793746
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6643fe176ef6281afa39845310812f5f6981d16b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746121"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439146"
 ---
 # <a name="datacontrol-object-rds"></a>Объект DataControl (служба удаленных рабочих столов)
 Привязывает [набор записей](../../../ado/reference/ado-api/recordset-object-ado.md) запроса данных к одному или нескольким элементам управления (например, текстовому полю, элементу управления сетки или полю со списком) для вывода данных **набора записей** на веб-странице.  
@@ -40,7 +41,7 @@ ms.locfileid: "82746121"
 </OBJECT>  
 ```  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Идентификатор класса **RDS. Объект элемента управления** BD96C556-65A3-11D0-983A-00C04FC29E33.  
   
 > [!NOTE]
@@ -51,7 +52,7 @@ ms.locfileid: "82746121"
  Все свойства в **RDS. Элемент управления** "необязательный" является необязательным, так как пользовательские бизнес-объекты могут заменить их функциональность.  
   
 > [!NOTE]
->  При запросе нескольких результатов возвращается только первый [набор записей](../../../ado/reference/ado-api/recordset-object-ado.md) . Если требуется несколько результирующих наборов, присвойте каждому **элементу управления**данных. Пример запроса для нескольких результатов может быть следующим:`"Select * from Authors, Select * from Topics"`  
+>  При запросе нескольких результатов возвращается только первый [набор записей](../../../ado/reference/ado-api/recordset-object-ado.md) . Если требуется несколько результирующих наборов, присвойте каждому **элементу управления**данных. Пример запроса для нескольких результатов может быть следующим: `"Select * from Authors, Select * from Topics"`  
   
  Добавление "Дфмоде = 20;" в строку подключения при использовании **RDS. Объект «элемент управления** данными» может повысить производительность сервера при обновлении данных. При использовании этого параметра объект **фактического объекта RDSServer.** DataObject на сервере использует менее ресурсоемкий режим. Однако следующие функции недоступны в этой конфигурации:  
   
@@ -108,7 +109,7 @@ ms.locfileid: "82746121"
   
 -   [Свойства, методы и события объекта DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример объекта DataControl (VBScript)](../../../ado/reference/rds-api/datacontrol-object-example-vbscript.md)
 
 

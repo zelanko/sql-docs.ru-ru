@@ -1,4 +1,5 @@
 ---
+description: ClusterDistance (расширения интеллектуального анализа данных)
 title: ClusterDistance (расширения интеллектуального анализа данных) | Документация Майкрософт
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5a4e589455a86f4ffe47e34a6d74d0b6890a5528
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 2c87da38fb2f13c0c79dfc777b52e19139db584c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969985"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431136"
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -33,7 +34,7 @@ ClusterDistance([<ClusterID expression>])
 ## <a name="return-type"></a>Тип возвращаемых данных  
  Скалярное значение.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Функция **ClusterDistance** Возвращает расстояние между входным вариантом и кластером с наибольшей вероятностью для этого входного варианта.  
   
  В случае кластеризации методом К-средних любой вариант может принадлежать только к одному кластеру с весом членства, равным 1,0, и расстоянием от кластера, всегда равным 0. Однако при использовании метода К-средних предполагается, что каждый кластер имеет центроид. Значение центроида можно получить, выполнив запрос или просмотрев вложенную таблицу NODE_DISTRIBUTION в содержимом модели интеллектуального анализа данных. Дополнительные сведения см. в разделе [Содержимое моделей интеллектуального анализа данных для моделей кластеризации (службы Analysis Services — интеллектуальный анализ данных)](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining).  
@@ -49,7 +50,7 @@ ClusterDistance([<ClusterID expression>])
 ## <a name="related-prediction-functions"></a>Связанные прогнозирующие функции  
  Службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] имеют следующие дополнительные функции для запросов к моделям кластеризации.  
   
--   Используйте функцию [cluster &#40;&#41;расширений интеллектуального анализа данных](../dmx/cluster-dmx.md) , чтобы получить наиболее вероятный кластер.  
+-   Используйте функцию [cluster &#40;&#41;расширений интеллектуального анализа данных ](../dmx/cluster-dmx.md) , чтобы получить наиболее вероятный кластер.  
   
 -   Используйте функцию [&#41;расширений интеллектуального анализа данных ClusterProbability &#40;](../dmx/clusterprobability-dmx.md) , чтобы получить вероятность того, что вариант принадлежит конкретному кластеру. Это значение является обратным для расстояния от кластера.  
   
@@ -124,10 +125,10 @@ NATURAL PREDICTION JOIN
 |------------------------|  
 |0.97008209236394|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [&#41;расширений интеллектуального анализа данных кластера &#40;](../dmx/cluster-dmx.md)   
  [Расширения интеллектуального анализа данных &#40;Справочник по функциям DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/functions-dmx.md)   
+ [Функции &#40;&#41;расширений интеллектуального анализа данных ](../dmx/functions-dmx.md)   
  [Содержимое моделей интеллектуального анализа данных для моделей кластеризации (службы Analysis Services — интеллектуальный анализ данных)](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  
   
   

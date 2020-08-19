@@ -1,4 +1,5 @@
 ---
+description: 'Преобразование данных из SQL в C: время'
 title: 'С SQL на C: время | Документация Майкрософт'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6dc59973-7bb5-40f1-87c8-5bf68b3bf2ee
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ebd146abf650861099a40bf91b2641df768b343d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0516cc970238e9535c340c14282be1640ba78513
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296384"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429556"
 ---
 # <a name="sql-to-c-time"></a>Преобразование данных из SQL в C: время
 Идентификатор для типа данных ODBC SQL:  
@@ -30,8 +31,8 @@ ms.locfileid: "81296384"
   
 |Идентификатор типа C|Тест|**таржетвалуептр*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*BufferLength* длина байта > символов<br /><br /> *9* <= *BufferLength* <= Длина байтового символа<br /><br /> *BufferLength* < 9|Данные<br /><br /> Усеченные данные [a]<br /><br /> Не определено.|Длина данных в байтах<br /><br /> Длина данных в байтах<br /><br /> Не определено.|Недоступно<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|Длина *BufferLength* > символов<br /><br /> *9* <= *BufferLength* <= длина символов<br /><br /> *BufferLength* < 9|Данные<br /><br /> Усеченные данные [a]<br /><br /> Не определено.|Длина данных в символах<br /><br /> Длина данных в символах<br /><br /> Не определено.|Недоступно<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_CHAR|*BufferLength* длина байта > символов<br /><br /> *9*  <=  *BufferLength* <= Длина байтового символа<br /><br /> *BufferLength* < 9|Данные<br /><br /> Усеченные данные [a]<br /><br /> Не определено.|Длина данных в байтах<br /><br /> Длина данных в байтах<br /><br /> Не определено.|Недоступно<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|Длина *BufferLength* > символов<br /><br /> *9*  <=  *BufferLength* <= длина символа<br /><br /> *BufferLength* < 9|Данные<br /><br /> Усеченные данные [a]<br /><br /> Не определено.|Длина данных в символах<br /><br /> Длина данных в символах<br /><br /> Не определено.|Недоступно<br /><br /> 01004<br /><br /> 22003|  
 |SQL_C_BINARY|Длина данных в байтах <= *BufferLength*<br /><br /> Длина байта данных > *BufferLength*|Данные<br /><br /> Не определено.|Длина данных в байтах<br /><br /> Не определено.|Недоступно<br /><br /> 22003|  
 |SQL_C_TYPE_TIME|Нет [b]|Данные|6 [d]|Недоступно|  
 |SQL_C_TYPE_TIMESTAMP|Нет [b]|Данные [c]|16 [d]|Недоступно|  

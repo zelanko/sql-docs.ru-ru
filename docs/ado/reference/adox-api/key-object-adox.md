@@ -1,4 +1,5 @@
 ---
+description: Объект Key (ADOX)
 title: Ключевой объект (ADOX) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 55f116fe-4d56-4892-bffe-0cdd6fc727c9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3b1c14c19fe624de5a6b634cd1adebe018896011
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d622adac64a37d956fc71ee1399c2d147b2f993a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746649"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439866"
 ---
 # <a name="key-object-adox"></a>Объект Key (ADOX)
 Представляет первичное, внешнее или уникальное ключевое поле из таблицы базы данных.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Следующий код создает новый **ключ**:  
   
 ```  
@@ -48,7 +49,7 @@ Dim obj As New Key
   
 -   [Свойства, методы и события объекта Key](../../../ado/reference/adox-api/key-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойств для добавления ключей, типа ключа, RelatedColumn, RelatedTable и UpdateRule (Visual Basic)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Коллекция Columns (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Коллекция Keys (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)

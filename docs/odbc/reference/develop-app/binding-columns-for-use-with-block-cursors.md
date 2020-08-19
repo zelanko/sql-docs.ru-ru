@@ -1,4 +1,5 @@
 ---
+description: Привязка столбцов для использования с блочными курсорами
 title: Привязка столбцов для использования с блочными курсорами | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 231beede-cdfa-4e28-8b10-2760b983250f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bc7e527658a7d6945921510de898c648075c41fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a58e6359bd7b0ad5d44f75a3d844ef2e9872f2a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284904"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429446"
 ---
 # <a name="binding-columns-for-use-with-block-cursors"></a>Привязка столбцов для использования с блочными курсорами
 Так как блочные курсоры возвращают несколько строк, приложения, использующие их, должны привязывать массив переменных к каждому столбцу, а не к одной переменной. Эти массивы вместе называются *буферами наборов строк*. Ниже приведены два стиля привязки:  

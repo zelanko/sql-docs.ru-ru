@@ -1,4 +1,5 @@
 ---
+description: Тип буфера данных
 title: Тип буфера данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 58bea3e9-d552-447f-b3ad-ce1dab213b72
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9b98ed2ab0865b98884f6dfa1ff20142540ff314
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a1a3edf66a8f3684fdf8389d16c08f62682907ca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305250"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429356"
 ---
 # <a name="data-buffer-type"></a>Тип буфера данных
 Тип данных C буфера указывается приложением. В случае с одной переменной это происходит, когда приложение выделяет переменную. С универсальной памятью, то есть память, на которую указывает указатель типа void. это происходит, когда приложение приводит память к определенному типу. Драйвер обнаруживает этот тип двумя способами:  

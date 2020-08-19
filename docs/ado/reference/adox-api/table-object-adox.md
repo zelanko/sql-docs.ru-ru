@@ -1,4 +1,5 @@
 ---
+description: Объект Table (ADOX)
 title: Объект Table (ADOX) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a6d74000-0828-49ba-850a-63da865f8802
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bcebe14b7b989e584539dd3f92fd8ea676ebd48a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c9bbf6a33eeb76f406a6fd6dc87ef591a3d4f12a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763305"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439486"
 ---
 # <a name="table-object-adox"></a>Объект Table (ADOX)
 Представляет таблицу базы данных, включая столбцы, индексы и ключи.  
@@ -59,7 +60,7 @@ Dim obj As New Table
   
 -   [Свойства, методы и события объекта Table](../../../ado/reference/adox-api/table-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойства ActiveConnection каталога (Visual Basic)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
  [Методы добавления столбцов и таблиц, пример свойства Name (Visual Basic)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [Пример метода Close соединения, свойство типа таблицы (Visual Basic)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   

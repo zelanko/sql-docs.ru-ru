@@ -1,4 +1,5 @@
 ---
+description: Свойство NumericScale (ADOX)
 title: Свойство NumericScale (ADOX) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 573ee5d1-57c7-4a27-be79-a0e12944ad9b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a0a0090a24207e6faad1b14aa3cb5afd6091bc87
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 94b5a154bfed13485787d46c768a371e0cceb65e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763815"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439766"
 ---
 # <a name="numericscale-property-adox"></a>Свойство NumericScale (ADOX)
 Указывает Масштаб числового значения в столбце.  
@@ -37,9 +38,9 @@ ms.locfileid: "82763815"
   
  **NumericScale** доступен только для чтения для объектов [Column](../../../ado/reference/adox-api/column-object-adox.md) , уже добавленных в коллекцию.  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример кода ADOX: пример свойства NumericScale и Precision (Visual Basic)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
  [Свойство Type (Column) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)

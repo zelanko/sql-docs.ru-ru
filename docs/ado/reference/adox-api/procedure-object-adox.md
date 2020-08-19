@@ -1,4 +1,5 @@
 ---
+description: Объект Procedure (ADOX)
 title: Объект процедуры (ADOX) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 927bcf3e-32f5-4a80-98d3-600779f0732e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4a56088e47a9f794f1862ef87bf142a8d3ab12c4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ee804ac6f4668f28d5f13754109b0f038d7e1ec4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763695"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439656"
 ---
 # <a name="procedure-object-adox"></a>Объект Procedure (ADOX)
 Представляет хранимую процедуру. При использовании в сочетании с объектом [команды](../../../ado/reference/ado-api/command-object-ado.md) ADO объект **процедуры** можно использовать для добавления, удаления или изменения хранимых процедур.  
@@ -40,7 +41,7 @@ ms.locfileid: "82763695"
   
 -   [Свойства, методы и события объекта Procedure](../../../ado/reference/adox-api/procedure-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойств Command и CommandText (Visual Basic)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
  [Коллекция Parameters, пример свойства Command (Visual Basic)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
  [Пример метода Append для процедур (Visual Basic)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   

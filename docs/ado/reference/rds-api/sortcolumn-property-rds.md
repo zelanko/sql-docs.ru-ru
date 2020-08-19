@@ -1,4 +1,5 @@
 ---
+description: Свойство SortColumn (служба удаленных рабочих столов)
 title: Свойство SortColumn (RDS) | Документация Майкрософт
 ms.technology: connectivity
 ms.custom: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f6f80f67-f0fb-4e63-a5f5-8fdf312aac63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83975a46087f75d58be304c543f6e6a45b6db7e6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9e8ae929c5606de2a0f58981affb403948e81b4b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750839"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438636"
 ---
 # <a name="sortcolumn-property-rds"></a>Свойство SortColumn (служба удаленных рабочих столов)
 Указывает, по какому столбцу следует отсортировать записи.  
@@ -45,10 +46,10 @@ DataControl.SortColumn = String
   
  Чтобы выполнить сортировку по **набору записей**, необходимо сначала сохранить все ожидающие изменения. При использовании **RDS. Элемент управления**, можно использовать метод [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) . Например, если вы **RDS. Элемент управления** с именем ADC1, ваш код будет иметь вид `ADC1.SubmitChanges` . Если используется **набор записей**ADO, можно использовать его метод [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) . Использование **UpdateBatch** является рекомендуемым методом для объектов **набора записей** , созданных с помощью метода [CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md) . Например, код может быть `myRS.UpdateBatch` или `ADC1.Recordset.UpdateBatch` .  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Примеры свойств Филтерколумн, Филтеркритерион, FilterValue, SortColumn и SortDirection и метода Reset (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
  [Sort, свойство](../../../ado/reference/ado-api/sort-property.md)   
  [Свойство SortDirection (служба удаленных рабочих столов)](../../../ado/reference/rds-api/sortdirection-property-rds.md)

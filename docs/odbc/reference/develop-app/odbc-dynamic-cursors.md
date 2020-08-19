@@ -1,4 +1,5 @@
 ---
+description: Динамические курсоры ODBC
 title: Динамические курсоры ODBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: de709fd3-9eb2-44e1-a2f0-786e2b9602a6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f94b83ef1458cd9f8368d1bea3a39682bd80b1a2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 19ae15a211329e07fdab13a5b6ff40e210e97cb5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302326"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429196"
 ---
 # <a name="odbc-dynamic-cursors"></a>Динамические курсоры ODBC
 Динамический курсор — это просто: Dynamic. Он может обнаружить изменения, внесенные в членство, порядок и значения результирующего набора после открытия курсора. Например, предположим, что динамический курсор извлекает две строки, а другое приложение затем обновляет одну из них и удаляет другую. Если динамический курсор пытается повторно извлечь эти строки, то не будет найдена удаленная строка, но будут возвращены новые значения для обновленной строки.  

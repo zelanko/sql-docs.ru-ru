@@ -1,4 +1,5 @@
 ---
+description: Свойства, методы и события объекта Key
 title: Свойства, методы и события ключевого объекта | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fba47748-53dd-4a5c-8c00-72e48bbc5bb0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eab25808c08196286353206c51caacefbc75c709
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5d3b1d4dd70de6c11094990b633b0d370b348e8e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746617"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439846"
 ---
 # <a name="key-object-properties-methods-and-events"></a>Свойства, методы и события объекта Key
 ## <a name="propertiescollections"></a>Свойства и коллекции  
@@ -25,7 +26,7 @@ ms.locfileid: "82746617"
   
  [DeleteRule, свойство](../../../ado/reference/adox-api/deleterule-property-adox.md)  
   
- [Свойство Name](../../../ado/reference/adox-api/name-property-adox.md)  
+ [Имя, свойство](../../../ado/reference/adox-api/name-property-adox.md)  
   
  [RelatedTable, свойство](../../../ado/reference/adox-api/relatedtable-property-adox.md)  
   
@@ -34,7 +35,7 @@ ms.locfileid: "82746617"
  [UpdateRule, свойство](../../../ado/reference/adox-api/updaterule-property-adox.md)  
   
 ## <a name="methods"></a>Методы  
- Нет.  
+ Отсутствует.  
   
 ## <a name="events"></a>События  
  Нет.  

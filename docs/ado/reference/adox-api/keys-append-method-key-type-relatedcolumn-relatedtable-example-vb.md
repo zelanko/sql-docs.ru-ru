@@ -1,4 +1,5 @@
 ---
+description: Примеры метода Append коллекции Keys, свойства Type объекта Key, а также примеры свойств RelatedColumn, RelatedTable и UpdateRule (Visual Basic)
 title: Пример создания связи по внешнему ключу между таблицами (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 13b5b1c3-6af6-439e-bb65-976578ba6bc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 87cae622b8c25a37bb5d2de833ca98e044f36351
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ab6a3130f0c1d2d87fa5f56f7096db4aaf943037
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746627"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439836"
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vb"></a>Примеры метода Append коллекции Keys, свойства Type объекта Key, а также примеры свойств RelatedColumn, RelatedTable и UpdateRule (Visual Basic)
 В следующем коде показано, как создать связь по внешнему ключу между двумя существующими таблицами с именами **Customers** и **Orders**.  
@@ -72,7 +73,7 @@ End Sub
 ' EndCreateKeyVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод Append (столбцы ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Метод Append (ключи ADOX)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
  [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   

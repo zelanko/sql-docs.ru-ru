@@ -1,4 +1,5 @@
 ---
+description: Число строк в выборке и состояние
 title: Количество выбранных строк и состояние | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a069b979-5108-4905-932f-8ae8e7905ff2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 20e1632e8da765b0da2785bd846b67d13ebe01ed
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bc328aab77d6e59db258c463a7dae1554f7d4c11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302365"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429216"
 ---
 # <a name="number-of-rows-fetched-and-status"></a>Число строк в выборке и состояние
 Если задан атрибут инструкции SQL_ATTR_ROWS_FETCHED_PTR, он задает буфер, который возвращает количество строк, полученных вызовом **SQLFetch** или **SQLFetchScroll**, и строками ошибок. (Это число представляет собой количество всех строк, в которых отсутствует состояние SQL_ROW_NO_ROWS.) После вызова **SQLBulkOperations** или **SQLSetPos**буфер содержит количество строк, затронутых массовыми операциями, выполненными функцией. Если задан атрибут инструкции SQL_ATTR_ROW_STATUS_PTR, **SQLFetch** или **SQLFetchScroll** возвращает *массив состояний строк,* который обеспечивает состояние каждой возвращаемой строки. Оба буфера, на которые указывают эти поля, выделяются приложением и заполняются драйвером. Приложение должно убедиться, что эти указатели остаются действительными до закрытия курсора.  

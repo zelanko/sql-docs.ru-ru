@@ -1,4 +1,5 @@
 ---
+description: Многопоточность
 title: Многопоточность | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cdfebdf5-12ff-4e28-8055-41f49b77f664
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c10d1b401ac780d24184c4c2337199e99973e916
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 470a3d3a4d76ae038e3c80b9aa9b93dfd1d0ed79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302422"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429246"
 ---
 # <a name="multithreading"></a>Многопоточность
 В многопоточных операционных системах драйверы должны быть потокобезопасными. То есть приложения должны использовать один и тот же обработчик для нескольких потоков. Как это достигается в зависимости от драйвера, и, скорее всего, драйверы будут выполнять сериализацию всех попыток одновременного использования одного и того же маркера в двух разных потоках.  

@@ -1,4 +1,5 @@
 ---
+description: Коллекция Indexes (ADOX)
 title: Коллекция indexes (ADOX) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: 184cf536-455c-42be-bf1c-a5c25bade961
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: af209229519470b121e3c69ba857b145c0874e73
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 916671fdf9722c7894ee122f3d68167a8047b72c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763856"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439916"
 ---
 # <a name="indexes-collection-adox"></a>Коллекция Indexes (ADOX)
 Содержит все объекты [индекса](../../../ado/reference/adox-api/index-object-adox.md) таблицы.  
   
-## <a name="remarks"></a>Примечания  
- Метод [append](../../../ado/reference/adox-api/append-method-adox-indexes.md) для коллекции **индексов** уникален для ADOX. Можно сделать следующее:  
+## <a name="remarks"></a>Remarks  
+ Метод [append](../../../ado/reference/adox-api/append-method-adox-indexes.md) для коллекции **индексов** уникален для ADOX. Вы можете:  
   
 -   Добавьте новый индекс в коллекцию с помощью метода **append** .  
   
- Остальные свойства и методы являются стандартными для коллекций ADO. Можно сделать следующее:  
+ Остальные свойства и методы являются стандартными для коллекций ADO. Вы можете:  
   
 -   Доступ к индексу в коллекции со свойством [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
   
@@ -45,6 +46,6 @@ ms.locfileid: "82763856"
   
 -   [Свойства, методы и события коллекции Indexes](../../../ado/reference/adox-api/indexes-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример метода Append для индексов (Visual Basic)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
  [Объект Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)

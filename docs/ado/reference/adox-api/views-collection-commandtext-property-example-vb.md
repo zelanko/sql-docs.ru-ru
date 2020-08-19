@@ -1,4 +1,5 @@
 ---
+description: Примеры коллекции Views и свойства CommandText (Visual Basic)
 title: Пример коллекции Views, свойство CommandText (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a05a0190-352d-44ff-9488-0c94e9fb656e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e2c125f77f2ba93f10e8ba855a0105cfb42ca415
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 492c385252085b440c536081e569a4a732f10c32
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746530"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439296"
 ---
 # <a name="views-collection-commandtext-property-example-vb"></a>Примеры коллекции Views и свойства CommandText (Visual Basic)
 В следующем коде показано, как использовать свойство [Command](../../../ado/reference/adox-api/command-property-adox.md) для обновления текста представления.  
@@ -76,7 +77,7 @@ End Sub
 ' EndViewsCollectionVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Свойство Command (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
