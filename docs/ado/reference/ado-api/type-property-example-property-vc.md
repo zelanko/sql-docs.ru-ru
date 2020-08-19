@@ -1,4 +1,5 @@
 ---
+description: Пример свойства Type (объект Property) (Visual C++)
 title: Пример свойства Type (свойство) (VC + +) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a4e23508-fbf3-4468-be55-212e7238802b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 16f3e7152c939567b6fdcccf670a7df26334d588
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 00c0121f7418fa63280950191c445ff499dcb133
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759550"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441686"
 ---
 # <a name="type-property-example-property-vc"></a>Пример свойства Type (объект Property) (Visual C++)
 В этом примере демонстрируется свойство [Type](../../../ado/reference/ado-api/type-property-ado.md) . Это модель служебной программы для перечисления имен и типов коллекций, таких как [Свойства](../../../ado/reference/ado-api/properties-collection-ado.md), [поля](../../../ado/reference/ado-api/fields-collection-ado.md)и т. д.  
@@ -215,6 +216,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
  [Свойство Type (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

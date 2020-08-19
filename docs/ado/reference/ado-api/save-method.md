@@ -1,4 +1,5 @@
 ---
+description: Метод Save
 title: Метод Save | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db4b5d86c59e35ac3a7aa66684115668d19ead42
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 09b8ce2c2b8f6388e300a0034c0ea72b795bded1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243205"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442216"
 ---
 # <a name="save-method"></a>Метод Save
 Сохраняет [набор записей](../../../ado/reference/ado-api/recordset-object-ado.md) в объекте File или [Stream](../../../ado/reference/ado-api/stream-object-ado.md) .  
@@ -35,10 +36,10 @@ recordset.Save Destination, PersistFormat
   
 #### <a name="parameters"></a>Параметры  
  *Назначение*  
- Необязательный элемент. **Вариант** , представляющий полное имя пути к файлу, в котором сохраняется **набор записей** , или ссылку на объект **потока** .  
+ Необязательный параметр. **Вариант** , представляющий полное имя пути к файлу, в котором сохраняется **набор записей** , или ссылку на объект **потока** .  
   
  *персистформат*  
- Необязательный элемент. Значение [персистформатенум](../../../ado/reference/ado-api/persistformatenum.md) , указывающее формат, в котором сохраняется **набор записей** (XML или адтг). Значение по умолчанию — **адперсистадтг**.  
+ Необязательный параметр. Значение [персистформатенум](../../../ado/reference/ado-api/persistformatenum.md) , указывающее формат, в котором сохраняется **набор записей** (XML или адтг). Значение по умолчанию — **адперсистадтг**.  
   
 ## <a name="remarks"></a>Remarks  
  Метод [Save](../../../ado/reference/ado-api/save-method.md) можно вызвать только для открытого **набора записей**. Используйте метод [Open Method (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) для последующего восстановления **набора записей** из *места назначения*.  

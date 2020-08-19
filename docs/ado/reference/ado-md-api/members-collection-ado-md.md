@@ -1,4 +1,5 @@
 ---
+description: Коллекция Members (многомерные объекты ADO)
 title: Коллекция Members (объекты данных ActiveX (MD)) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 3a647cde-efdc-4394-b1b9-8cbb1b9d689f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e8337bfd2e7fb8ece226709f86c3b57ef746baca
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a39565e51270684a5514d499c658f950fe473a1e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765134"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440876"
 ---
 # <a name="members-collection-ado-md"></a>Коллекция Members (многомерные объекты ADO)
 Содержит объекты- [члены](../../../ado/reference/ado-md-api/member-object-ado-md.md) уровня или расположения вдоль оси.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Коллекция **Members** используется для хранения следующих типов членов:  
   
 -   Элементы, составляющие уровень в Кубе. Они содержатся в коллекции **Members** объекта [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md) . Например, используя пример из [обзора многомерных схем и данных](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md), четыре элемента уровня «страны» — это Канада, США, Великобритания и Германия.  
@@ -48,6 +49,6 @@ ms.locfileid: "82765134"
   
 -   [Свойства, методы и события](../../../ado/reference/ado-md-api/members-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример членов (VBScript)](../../../ado/reference/ado-md-api/members-example-vbscript.md)   
  [Объект Member (многомерные объекты ADO)](../../../ado/reference/ado-md-api/member-object-ado-md.md)

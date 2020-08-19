@@ -1,4 +1,5 @@
 ---
+description: Примеры методов UpdateBatch и CancelBatch (Visual C++)
 title: Примеры методов UpdateBatch и CancelBatch (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bcb1468e-18bb-41b8-8902-6ee05b786eec
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8e467e41d77012d3366ded54c7e20b01121bec8d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 848c798a92c2075cdfff04551b17a46d2d90fc76
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759470"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441626"
 ---
 # <a name="updatebatch-and-cancelbatch-methods-example-vc"></a>Примеры методов UpdateBatch и CancelBatch (Visual C++)
 В этом примере демонстрируется метод [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) в сочетании с методом [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) .  
@@ -210,6 +211,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод CancelBatch (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
  [Метод UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)

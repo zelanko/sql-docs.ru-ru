@@ -1,4 +1,5 @@
 ---
+description: Метод ReadText
 title: ReadText, метод | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: be5a409e-cf87-4859-9ea5-713401755a77
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8afabd90ee6251be650036b285de0f08a3776723
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1c36e4dde000e89b3fe19b258f5d307232b2cb69
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754236"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442536"
 ---
 # <a name="readtext-method"></a>Метод ReadText
 Считывает указанное количество символов из объекта текстового [потока](../../../ado/reference/ado-api/stream-object-ado.md) .  
@@ -35,7 +36,7 @@ String = Stream.ReadText ( NumChars)
   
 #### <a name="parameters"></a>Параметры  
  *NumChars*  
- Необязательный элемент. Значение **типа Long** , указывающее количество символов, считываемых из файла, или значение [стреамреаденум](../../../ado/reference/ado-api/streamreadenum.md) . Значение по умолчанию — **адреадалл**.  
+ Необязательный параметр. Значение **типа Long** , указывающее количество символов, считываемых из файла, или значение [стреамреаденум](../../../ado/reference/ado-api/streamreadenum.md) . Значение по умолчанию — **адреадалл**.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Метод **ReadText** считывает указанное число символов, целую строку или весь поток из объекта **потока** и возвращает результирующую строку.  
@@ -48,8 +49,8 @@ String = Stream.ReadText ( NumChars)
   
  Запросы, которые приводят к большому количеству XML-данных, возвращаемых через метод **ReadText** объекта потока данных ACTIVEX (ADO), могут занимать много времени. Если это делается в компоненте COM+, который вызывается из страницы ASP, время ожидания сеанса пользователя может истекает. ADO преобразует данные объекта потока из кодировки UTF-8 в Юникод; частое перераспределение памяти, участвующее в преобразовании такого большого количества данных за один раз, занимает много времени. Чтобы устранить эту проблему, выполните повторные вызовы метода **ReadText** объекта команды ADO и укажите меньшее количество символов. Тесты показали, что значение, эквивалентное 128 KБ (131 072), является оптимальным. Время отклика уменьшается, так как это значение уменьшается. Дополнительные сведения см. в статье базы знаний 280067, "PRB. получение очень больших XML-документов из SQL Server 2000 с помощью метода ReadText объекта потока ADO может быть медленнее", в базе знаний Майкрософт по адресу https://support.microsoft.com .  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод Read](../../../ado/reference/ado-api/read-method.md)

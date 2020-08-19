@@ -1,4 +1,5 @@
 ---
+description: Объект Dimension (многомерные объекты ADO)
 title: Объект Dimension (объекты данных ActiveX (MD)) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 66adbbd2-23a3-4c19-a91b-84c31309aa1b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2d5b475600ef211d8203a64a1a2c6d917bb99914
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fc3661ef36c0b763ca6b0f04f52e4713d59b9a19
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764305"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441116"
 ---
 # <a name="dimension-object-ado-md"></a>Объект Dimension (многомерные объекты ADO)
 Представляет одно из измерений многомерного куба, содержащего одну или несколько иерархий элементов.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  С помощью коллекций и свойств объекта **Dimension** можно выполнять следующие действия.  
   
 -   Определяет **измерение** с помощью свойств [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) и [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) .  
@@ -38,7 +39,7 @@ ms.locfileid: "82764305"
   
  Коллекция **Properties** содержит свойства, предоставляемые поставщиком. В следующей таблице перечислены свойства, которые могут быть доступны. Фактический список свойств может отличаться в зависимости от реализации поставщика. Более полный список доступных свойств см. в документации поставщика.  
   
-|name|Описание|  
+|Имя|Описание|  
 |----------|-----------------|  
 |CatalogName|Имя каталога, которому принадлежит куб.|  
 |CubeName|Имя куба.|  
@@ -47,7 +48,7 @@ ms.locfileid: "82764305"
 |дименсионкаптион|Метка или заголовок, связанный с измерением.|  
 |дименсионкардиналити|Число элементов в измерении.|  
 |дименсионгуид|Идентификатор GUID измерения.|  
-|DimensionName|Имя измерения.|  
+|DimensionName|Имя размерности.|  
 |дименсионординал|Порядковый номер измерения в группе измерений, образующих куб.|  
 |DimensionType|Тип измерения.|  
 |дименсионуникуенаме|Однозначное имя измерения.|  

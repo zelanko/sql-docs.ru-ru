@@ -1,4 +1,5 @@
 ---
+description: RecordCreateOptionsEnum
 title: Рекордкреатеоптионсенум | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6d746670-0850-4065-9cd4-168dea1d3ea9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f76d7773df443a76597184ecdabd5f27aea0bb7e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0ef305aefbd3c606f433bfd85b1b10ac2dd94db1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761912"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442476"
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
 Указывает, следует ли открыть существующую **запись** или создать новую **запись** для метода [открытия](../../../ado/reference/ado-api/open-method-ado-record.md) объекта [записи](../../../ado/reference/ado-api/record-object-ado.md) . Значения можно сочетать с оператором AND.  
@@ -37,5 +38,5 @@ ms.locfileid: "82761912"
 ## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
  Эти константы не имеют эквивалентов ADO/WFC.  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Метод Open (объект Record ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)

@@ -1,4 +1,5 @@
 ---
+description: Свойство ActiveConnection (ADOX)
 title: Свойство ActiveConnection (ADOX) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 25fff69b-7556-4a28-b6f5-600a4bb0f607
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0318fbdafea09e3728699f448c1483ac53e5e80a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6ef9ab4f077f4ec44b602a3d70d90b5b45f6b9f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764205"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440656"
 ---
 # <a name="activeconnection-property-adox"></a>Свойство ActiveConnection (ADOX)
 Указывает объект [соединения](../../../ado/reference/ado-api/connection-object-ado.md) ADO, к которому принадлежит [Каталог](../../../ado/reference/adox-api/catalog-object-adox.md) .  
@@ -34,10 +35,10 @@ ms.locfileid: "82764205"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает объект **соединения** или **строку** , содержащую определение для соединения. Возвращает активный объект **соединения** .  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Значением по умолчанию является пустая ссылка на объект.  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
   
 ## <a name="see-also"></a>См. также  

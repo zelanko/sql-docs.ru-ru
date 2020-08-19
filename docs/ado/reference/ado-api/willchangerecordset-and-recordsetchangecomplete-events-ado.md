@@ -1,4 +1,5 @@
 ---
+description: События WillChangeRecordset и RecordsetChangeComplete (ADO)
 title: События Виллчанжерекордсет и Рекордсетчанжекомплете (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d5d44659-e0d9-46d9-a297-99c43555082f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 90bfb1c947c02540d07c3cbc11e45436f8bd4a58
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fa7ec524d950a45dd11e1bc62a983810ab2550ca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764475"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441516"
 ---
 # <a name="willchangerecordset-and-recordsetchangecomplete-events-ado"></a>События WillChangeRecordset и RecordsetChangeComplete (ADO)
 Событие **виллчанжерекордсет** вызывается до того, как ожидающая операция изменяет [набор записей](../../../ado/reference/ado-api/recordset-object-ado.md). Событие **рекордсетчанжекомплете** вызывается после изменения **набора записей** .  
@@ -58,13 +59,13 @@ RecordsetChangeComplete adReason, pError, adStatus, pRecordset
  *предшнур*  
  Объект **Recordset** . **Набор записей** , для которого произошло это событие.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Событие **виллчанжерекордсет** или **рекордсетчанжекомплете** может возникать из-за методов [Requery](../../../ado/reference/ado-api/requery-method.md) или [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) **набора записей** .  
   
  Если поставщик не поддерживает закладки, уведомление о событии **рекордсетчанже** возникает каждый раз при получении новых строк от поставщика. Частота этого события зависит от свойства **рекордсеткачесизе** .  
   
  Необходимо присвоить параметру **адстатус** значение **адстатусунвантедевент** для каждого возможного значения **адреасон** , чтобы полностью отключить уведомление о событии для любого события, включающего параметр **адреасон** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример модели событий ADO (Visual c++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [Общие сведения об обработчике событий ADO](../../../ado/guide/data/ado-event-handler-summary.md)

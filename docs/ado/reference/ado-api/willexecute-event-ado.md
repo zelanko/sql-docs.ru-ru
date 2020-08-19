@@ -1,4 +1,5 @@
 ---
+description: Событие WillExecute (ADO)
 title: Событие WillExecute (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ef47b4bac626d82754ce01685504b4a48303a4b4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: dd217597018b4cb5aa4764955fdd1795371a040c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764455"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441476"
 ---
 # <a name="willexecute-event-ado"></a>Событие WillExecute (ADO)
 Событие **WillExecute** вызывается непосредственно перед выполнением ожидающей команды в соединении.  
@@ -34,7 +35,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Источник*  
+ *Source*  
  **Строка** , содержащая команду SQL или имя хранимой процедуры.  
   
  *Примеры CursorType*  
@@ -58,8 +59,8 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  *пконнектион*  
  Объект [соединения (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) , к которому относится данное уведомление о событии.  
   
-## <a name="remarks"></a>Примечания  
- Событие **WillExecute** может возникать из-за соединения.  Метод [Execute (соединение ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md), [метод Execute (команда ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)или [открытый метод (набор записей ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) . параметр *пконнектион* всегда должен содержать допустимую ссылку на объект **соединения** . Если событие вызвано **соединением. Execute** *, для параметров предустановки и* *пкомманд* задано значение **Nothing**. Если это событие связано с **набором Recordset. Open**, параметр *предшнура* будет ссылаться на объект **Recordset** , а параметр *пкомманд* имеет значение **Nothing**. Если событие вызвано **командой. Execute**, параметр *пкомманд* будет ссылаться на объект **Command** , *а параметру* предустановленного параметра — значение **Nothing**.  
+## <a name="remarks"></a>Remarks  
+ Событие **WillExecute** может возникать из-за соединения.  Метод [Execute (соединение ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md), [метод Execute (команда ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)или [открытый метод (набор записей ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) . параметр *пконнектион* всегда должен содержать допустимую ссылку на объект **соединения** . Если событие вызвано **Connection.Exeмилые** *, то параметры* предустановки и *Пкомманд* задаются как **Nothing**. Если это событие связано с **набором Recordset. Open**, параметр *предшнура* будет ссылаться на объект **Recordset** , а параметр *пкомманд* имеет значение **Nothing**. Если событие происходит из-за **Command.Exeмилые**, параметр *пкомманд* будет ссылаться на объект **Command** , *а параметру* предустановки — значение **Nothing**.  
   
  **WillExecute** позволяет проверять и изменять параметры ожидания выполнения. Это событие может возвращать запрос на отмену ожидающей команды.  
   
@@ -68,7 +69,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
   
  Если диалект новой исходной строки отличается от исходного значения свойства [диалекта](../../../ado/reference/ado-api/dialect-property.md) (соответствующего **CommandStream**), необходимо указать правильный диалект, задав свойство **диалекта** объекта Command, на который ссылается *пкомманд*.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример модели событий ADO (Visual c++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [Сводка по обработчику событий ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

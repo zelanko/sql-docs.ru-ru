@@ -1,4 +1,5 @@
 ---
+description: Метод OpenSchema
 title: Метод OpenSchema | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 716eec332690d1a6e9df1f16d67d82afc1a30985
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1b0a92e7079338e290f228603767d6d15a3a351e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762105"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442926"
 ---
 # <a name="openschema-method"></a>Метод OpenSchema
 Получает сведения о схеме базы данных от поставщика.  
@@ -41,12 +42,12 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  Любое значение [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md) , представляющее тип выполняемого запроса схемы.  
   
  *Критерии*  
- Необязательный элемент. Массив ограничений запроса для каждого параметра *QueryType* , как указано в [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md).  
+ Необязательный параметр. Массив ограничений запроса для каждого параметра *QueryType* , как указано в [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md).  
   
  *счемаид*  
  Идентификатор GUID для запроса схемы поставщика, не определяемый спецификацией OLE DB. Этот параметр является обязательным, если для *QueryType* задано значение **адсчемапровидерспеЦифик**. в противном случае он не используется.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Метод **OpenSchema** возвращает собственные описательные сведения об источнике данных, например о таблицах, которые находятся в источнике данных, столбцах в таблицах и поддерживаемых типах данных.  
   
  Аргумент *QueryType* — это идентификатор GUID, который указывает, какие столбцы (схемы) возвращены. Спецификация OLE DB содержит полный список схем.  
@@ -66,7 +67,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
 > [!NOTE]
 >  **Пользователи Visual C/C++** Если не использовать курсоры на стороне клиента, получение "ORDINAL_POSITION" схемы столбца в ADO возвращает вариант типа VT_R8 в MDAC 2,7, MDAC 2,8 и компонентах доступа к данным Windows (Windows DAC) 6,0, а тип, используемый в MDAC 2,6, был VT_I4. Программы, написанные для MDAC 2,6, которые ищут только вариант, возвращаемый типом VT_I4, будут получать ноль для каждого порядкового номера, если они работают в MDAC 2,7, MDAC 2,8 и Windows DAC 6,0 без изменения. Это изменение произошло из-за того, что тип данных, OLE DB, возвращает DBTYPE_UI4, а в типе VT_I4 со знаком не хватает места для хранения всех возможных значений без необходимости усечения и, следовательно, причиной потери данных.  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
 ## <a name="see-also"></a>См. также  

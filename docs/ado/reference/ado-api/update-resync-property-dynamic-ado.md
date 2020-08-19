@@ -1,4 +1,5 @@
 ---
+description: Свойство Update Resync (динамическое) (ADO)
 title: Свойство повторной синхронизации обновлений — Dynamic (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8a3bb608-66d7-4128-a3ef-84cb0556de0d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e9d000150cc86a8c838ac5dea827b5c376f3a79f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 43657b3dddcf53f9aa9df507c646b7f23088f0ef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759490"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441636"
 ---
 # <a name="update-resync-property-dynamic-ado"></a>Свойство Update Resync (динамическое) (ADO)
 Указывает, следует ли за методом [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) выполнить неявную операцию повторной [синхронизации](../../../ado/reference/ado-api/resync-method.md) , и если да, то область действия этой операции.  
@@ -33,5 +34,5 @@ ms.locfileid: "82759490"
   
  **Повторная синхронизация обновлений** — это динамическое свойство, добавленное к [коллекции свойств](../../../ado/reference/ado-api/properties-collection-ado.md) объекта [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) , если свойство [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) имеет значение **адусеклиент**.  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -1,4 +1,5 @@
 ---
+description: Объект Member (многомерные объекты ADO)
 title: Объект Member (объекты данных ActiveX (MD)) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d4d512d651c8162124c935ffdb260c4abe4ecb14
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6e0797a4d273c51b950e3973d1864480755a20d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82753210"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440926"
 ---
 # <a name="member-object-ado-md"></a>Объект Member (многомерные объекты ADO)
 Представляет элемент уровня в Кубе, дочерние элементы элемента уровня или элемента в положении вдоль оси набора ячеек.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Свойства **элемента** различаются в зависимости от контекста, в котором он используется. **Элемент** [уровня](../../../ado/reference/ado-md-api/level-object-ado-md.md) в [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) имеет [дочернее](../../../ado/reference/ado-md-api/children-property-ado-md.md) свойство, возвращающее **элементы** следующего нижнего уровня иерархии из текущего **элемента**. Для **элемента** в [положении](../../../ado/reference/ado-md-api/position-object-ado-md.md)коллекция **Children** всегда пуста. Кроме того, свойство [Type](../../../ado/reference/ado-md-api/type-property-ado-md.md) применяется только к **элементам** **уровня**.  
   
  **Элемент** в **положении** имеет два свойства, которые полезны при отображении набора [ячеек](../../../ado/reference/ado-md-api/cellset-object-ado-md.md): [дрилледдовн](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md) и [парентсамеаспрев](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md). Если доступ к этим свойствам осуществляется на **члене** **уровня**, возникнет ошибка.  
@@ -68,7 +69,7 @@ ms.locfileid: "82753210"
   
  Коллекция **Properties** содержит свойства, предоставляемые поставщиком. В следующей таблице перечислены свойства, которые могут быть доступны. Фактический список свойств может отличаться в зависимости от реализации поставщика. Более полный список доступных свойств см. в документации поставщика.  
   
-|name|Описание|  
+|Имя|Описание|  
 |----------|-----------------|  
 |CatalogName|Имя каталога, которому принадлежит куб.|  
 |чилдренкардиналити|Количество потомков элемента.|  

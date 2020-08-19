@@ -1,4 +1,5 @@
 ---
+description: ParameterAttributesEnum
 title: Параметераттрибутесенум | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7ef6c728-5eda-4bde-8052-02d2db1d2cfe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 174cbfc9ded88e4c5465ef640a23d17c9edb5ac6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e97ec8a7b969311cec0a535a69a259c495d93f0e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763415"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442776"
 ---
 # <a name="parameterattributesenum"></a>ParameterAttributesEnum
 Задает атрибуты объекта [параметра](../../../ado/reference/ado-api/parameter-object.md) .  
@@ -40,5 +41,5 @@ ms.locfileid: "82763415"
 |Адоенумс. Параметераттрибутес. NULLABLE|  
 |Адоенумс. Параметераттрибутес. LONG|  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Свойство Attributes (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)

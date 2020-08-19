@@ -1,4 +1,5 @@
 ---
+description: Пример свойства Source (Visual C++)
 title: Пример свойства Source (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e10d33da-ea30-4138-ae40-e9f6aa9d17d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d7d5fb516e1ec8ed5eb68f3fccdc834e0a06259
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8b92cb5f1d2ba02b58237f9c7776a4bf243d73a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759790"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442036"
 ---
 # <a name="source-property-example-vc"></a>Пример свойства Source (Visual C++)
 В этом примере показано свойство [Source](../../../ado/reference/ado-api/source-property-ado-recordset.md) , открывающее три объекта [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) на основе различных источников данных.  
@@ -156,6 +157,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Свойство Source (объект Recordset ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)

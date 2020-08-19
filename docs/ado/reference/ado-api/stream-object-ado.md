@@ -1,4 +1,5 @@
 ---
+description: Объект Stream (ADO)
 title: Объект Stream (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0514531f-009d-4519-abc3-d727014a39f1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a9812344008bc066b18328036cf36fe106e8845a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a4dc81b24afa52e16103028cd0491af452824415
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759660"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441866"
 ---
 # <a name="stream-object-ado"></a>Объект Stream (ADO)
 Представляет поток двоичных данных или текста.  
@@ -76,5 +77,5 @@ ms.locfileid: "82759660"
   
 -   [Свойства, методы и события объекта Stream](../../../ado/reference/ado-api/stream-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Записи и потоки](../../../ado/guide/data/records-and-streams.md)

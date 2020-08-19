@@ -1,4 +1,5 @@
 ---
+description: Пример свойств OriginalValue и UnderlyingValue (Visual c++)
 title: Примеры свойств OriginalValue и UnderlyingValue (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 142688ccbbd4e086592d419970a1c543e2211abc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6b4db7c5b7fdbd25687f37cc3c04101b25b9e997
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762047"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442896"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>Пример свойств OriginalValue и UnderlyingValue (Visual c++)
 Этот пример демонстрирует свойства [originalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) и [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) , отображая сообщение, если базовые данные записи изменились во время пакетного обновления [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) .  
@@ -219,7 +220,7 @@ void PrintComError(_com_error &e) {
 **Текущее значение: self_help**   
 **Исходное значение: психологии**   
 **Базовое значение: социологии**    
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство OriginalValue (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Свойство UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)

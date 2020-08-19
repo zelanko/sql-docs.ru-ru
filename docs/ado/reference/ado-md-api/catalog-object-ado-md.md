@@ -1,4 +1,5 @@
 ---
+description: Объект Catalog (многомерные объекты ADO)
 title: Объект каталога (объекты данных ActiveX (MD)) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 11f6f896-d69c-44a4-94cd-d54c93140e4a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5ef77f61703178bfe30fc4ce823d7c56be48836f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7fe8cb849b5b770f23fab92da84bc3bc58fdf55d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761822"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441276"
 ---
 # <a name="catalog-object-ado-md"></a>Объект Catalog (многомерные объекты ADO)
 Содержит сведения о многомерной схеме (то есть Кубы и базовые измерения, иерархии, уровни и элементы), относящиеся к поставщику многомерных данных (MDP).  
@@ -38,7 +39,7 @@ ms.locfileid: "82761822"
   
 -   [Свойства, методы и события](../../../ado/reference/ado-md-api/catalog-object-properties-methods-and-events-ado-md.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример каталога (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Коллекция CubeDefs (многомерные объекты ADO)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)

@@ -1,4 +1,5 @@
 ---
+description: Свойство RecordType (ADO)
 title: Свойство RecordType (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 790e46a2-13d2-451e-a8be-130bd9a206a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d215f959a921247520efeb470754e0abc5bb0d40
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 578e9a0d03382e5e0dc143e07351cfb8890f278d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756642"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442376"
 ---
 # <a name="recordtype-property-ado"></a>Свойство RecordType (ADO)
 Указывает тип объекта [записи](../../../ado/reference/ado-api/record-object-ado.md) .  
@@ -30,12 +31,12 @@ ms.locfileid: "82756642"
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение [рекордтипинум](../../../ado/reference/ado-api/recordtypeenum.md) .  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Свойство **RecordType** доступно только для чтения.  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство Type (ADO)](../../../ado/reference/ado-api/type-property-ado.md)   
  [Свойство Type (объект Stream ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)

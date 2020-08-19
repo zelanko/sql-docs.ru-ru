@@ -1,4 +1,5 @@
 ---
+description: Свойства, методы и события объекта CubeDef
 title: Свойства, методы и события объекта CubeDef | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5dac737a-b77e-47d3-9228-cd52b7a97b0a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1d800f5344939a7168656570bc96b1453e656975
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8f819834240a5dcabb245d44b110109df520f413
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764365"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441106"
 ---
 # <a name="cubedef-object-properties-methods-and-events"></a>Свойства, методы и события объекта CubeDef
 ## <a name="propertiescollections"></a>Свойства и коллекции  
@@ -25,7 +26,7 @@ ms.locfileid: "82764365"
   
  [Коллекция Dimensions](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)  
   
- [Свойство Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
+ [Имя, свойство](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
   
  [Коллекция Properties](../../../ado/reference/ado-api/properties-collection-ado.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: Примеры методов Update и CancelUpdate (Visual Basic)
 title: Примеры методов Update и CancelUpdate (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55bedd08-7440-4da4-b854-4ac9ef2fdedb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 92c65ce30010c4e1bc6943ba60dd1eee84478aa9
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 973a5f715f0a3d544e268f00f78143aab1395543
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759540"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441666"
 ---
 # <a name="update-and-cancelupdate-methods-example-vb"></a>Примеры методов Update и CancelUpdate (Visual Basic)
 В этом примере демонстрируется метод [Update](../../../ado/reference/ado-api/update-method.md) в сочетании с методом [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) .  
@@ -120,7 +121,7 @@ End Sub
 Attribute VB_Name = "Update"  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод CancelUpdate (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Метод Update](../../../ado/reference/ado-api/update-method.md)

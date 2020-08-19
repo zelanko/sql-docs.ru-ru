@@ -1,4 +1,5 @@
 ---
+description: Коллекция CubeDefs (многомерные объекты ADO)
 title: Коллекция Кубедефс (объекты данных ActiveX (MD)) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: c79a5e36-71fd-44c4-948d-d6a7a89bb3b5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c9d6834b4c6ec932ac0d25108b37df15fb778e5d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1ae1657947db345eb9b0459d6fdf3e4fc589525e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764345"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441086"
 ---
 # <a name="cubedefs-collection-ado-md"></a>Коллекция CubeDefs (многомерные объекты ADO)
 Содержит объекты [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) , представляющие куб из многомерного каталога.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **Кубедефс** — это стандартная коллекция ADO. С помощью свойств и методов коллекции можно выполнять следующие действия.  
   
 -   Получите количество объектов в коллекции со свойством [Count](../../../ado/reference/ado-api/count-property-ado.md) .  
@@ -39,7 +40,7 @@ ms.locfileid: "82764345"
   
 -   [Свойства, методы и события](../../../ado/reference/ado-md-api/cubedefs-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример каталога (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [Объект каталога (объекты данных ActiveX (MD))](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)   
  [Объект CubeDef (многомерные объекты ADO)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)

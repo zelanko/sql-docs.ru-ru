@@ -1,4 +1,5 @@
 ---
+description: Свойство Optimize (динамическое) (ADO)
 title: Свойство optimize — Dynamic (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a491c4ce-2b04-4c84-be83-3846bde8d16b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8d27195b00d1e1867f6bf037cd6c20500ec35e84
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9ce2367d550cc8e420c4a1a9bf9fd10fff9e94e7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762087"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442916"
 ---
 # <a name="optimize-property-dynamic-ado"></a>Свойство Optimize (динамическое) (ADO)
 Указывает, должен ли быть создан индекс для [поля](../../../ado/reference/ado-api/field-object.md).  
@@ -46,10 +47,10 @@ fld.Properties("Optimize") = True    'Create an index
 fld.Properties("Optimize") = False   'Delete an index  
 ```  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект Field](../../../ado/reference/ado-api/field-object.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойства optimize (Visual Basic)](../../../ado/reference/ado-api/optimize-property-example-vb.md)   
  [Пример свойства optimize (Visual c++)](../../../ado/reference/ado-api/optimize-property-example-vc.md)   
  [Свойство Filter](../../../ado/reference/ado-api/filter-property.md)   

@@ -1,4 +1,5 @@
 ---
+description: Пример объекта Axis (VBScript)
 title: Пример оси (VBScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b4647211-2566-4657-ae7b-3dd761457d7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 53e27109028204739a9de245d28909405cf939e4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9625b9e84ae9f7e4ffbe6b9134200f3dc666c9ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765195"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441325"
 ---
 # <a name="axis-example-vbscript"></a>Пример объекта Axis (VBScript)
 На этой Active Server странице отображаются данные OLAP из строки запроса многомерных выражений и записывается результирующий набор ячеек в структуру таблицы HTML.  

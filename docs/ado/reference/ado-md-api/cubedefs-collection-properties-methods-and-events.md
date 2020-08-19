@@ -1,4 +1,5 @@
 ---
+description: Свойства, методы и события коллекции CubeDefs
 title: Свойства, методы и события коллекции Кубедефс | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bf2d1108-ba3c-4830-9c49-78e833ff37b1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b55d9108f842be191ddb585f757a032629d13c3a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8aaeeaaa3ad14f15429a31f7f6c009ae5c4a1d74
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764335"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441146"
 ---
 # <a name="cubedefs-collection-properties-methods-and-events"></a>Свойства, методы и события коллекции CubeDefs
 ## <a name="properties"></a>Свойства  

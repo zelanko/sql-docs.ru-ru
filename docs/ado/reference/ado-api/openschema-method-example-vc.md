@@ -1,4 +1,5 @@
 ---
+description: Пример метода OpenSchema (Visual C++)
 title: Пример метода OpenSchema (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6f3da460-0f49-41e0-999d-a754ec1d887e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 50228f2cf6f8564be500f671de797dfbff0aa7c1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3cb43e4ac4774963e79abadc6413882e1d0bce98
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762125"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442936"
 ---
 # <a name="openschema-method-example-vc"></a>Пример метода OpenSchema (Visual C++)
 В этом примере используется метод [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) для вывода имени и типа каждой таблицы в базе данных ***pubs*** .  
@@ -193,5 +194,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод OpenSchema](../../../ado/reference/ado-api/openschema-method.md)

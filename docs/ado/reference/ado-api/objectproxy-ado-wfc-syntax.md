@@ -1,4 +1,5 @@
 ---
+description: ObjectProxy (ADO — синтаксис WFC)
 title: Обжектпрокси (ADO — синтаксис WFC) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f68f58bc-ad28-46cc-9fb3-099e1a678397
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ff9cd79b4ac787987ef44ea3f73cbd9fb102ae43
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7809c1b9ce4d090ed63465061045ea04000f47dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762323"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443036"
 ---
 # <a name="objectproxy-ado---wfc-syntax"></a>ObjectProxy (ADO — синтаксис WFC)
 Объект **обжектпрокси** представляет сервер и возвращается методом **CreateObject** объекта [пространства](../../../ado/reference/rds-api/dataspace-object-rds.md) данных. Класс Обжектпрокси имеет один метод, **Call**, который может вызывать метод на сервере и возвращать объект, полученный в результате этого вызова.  
@@ -49,4 +50,4 @@ public Object ObjectProxy.( String method, Object[] args)
  Строка, содержащая имя метода, который необходимо вызвать на сервере.  
   
  *args*  
- Необязательный элемент. Массив объектов, являющихся аргументами метода на сервере. Типы данных Java автоматически преобразуются в типы данных, подходящие для использования на сервере.
+ Необязательный параметр. Массив объектов, являющихся аргументами метода на сервере. Типы данных Java автоматически преобразуются в типы данных, подходящие для использования на сервере.

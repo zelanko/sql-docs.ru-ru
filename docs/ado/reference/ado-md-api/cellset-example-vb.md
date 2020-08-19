@@ -1,4 +1,5 @@
 ---
+description: Пример объекта Cellset (Visual Basic)
 title: Пример набора ячеек (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2666ad1c-b48e-4b2c-b269-5a9f4e4a7810
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 943e36057478cbb6acfcabc0fa2ad713b4e43ac5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f6f7b3fc6b60429783ba942b30193e72c60c6711
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761782"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441226"
 ---
 # <a name="cellset-example-vb"></a>Пример объекта Cellset (Visual Basic)
 В этом Visual Basicном проекте демонстрируются основы использования объекты данных ActiveX (MD) для доступа к данным куба. Он отображает заголовки элементов для заголовков столбцов и строк, а затем отображает отформатированные значения конкретных ячеек в наборе ячеек.  

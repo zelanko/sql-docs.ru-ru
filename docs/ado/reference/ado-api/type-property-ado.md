@@ -1,4 +1,5 @@
 ---
+description: Свойство Type (ADO)
 title: Свойство Type (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8a4c079f-9f4f-4545-801d-85983b8db71e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7bfa47120814058adbc5c2e5f3650a79b2202afb
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: de97e62a8152e7d14d1442cc1da9b5138ddc39fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243185"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441746"
 ---
 # <a name="type-property-ado"></a>Свойство Type (ADO)
 Указывает операционный тип или тип данных для [параметра](../../../ado/reference/ado-api/parameter-object.md), [поля](../../../ado/reference/ado-api/field-object.md)или объекта [Свойства](../../../ado/reference/ado-api/property-object-ado.md) .  
@@ -48,7 +49,7 @@ ms.locfileid: "87243185"
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойства Type (Field) (VB)](../../../ado/reference/ado-api/type-property-example-field-vb.md)   
  [Пример свойства Type (Property) (VC + +)](../../../ado/reference/ado-api/type-property-example-property-vc.md)   
  [Свойство RecordType (ADO)](../../../ado/reference/ado-api/recordtype-property-ado.md)   

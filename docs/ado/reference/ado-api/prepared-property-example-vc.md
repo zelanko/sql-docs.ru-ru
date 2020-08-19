@@ -1,4 +1,5 @@
 ---
+description: Пример свойства Prepared (Visual C++)
 title: Пример подготовленного свойства (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f2820f149c079a20e79297d98c1f265031a77ca7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d05e220717ad88ad52340d368a3b54a85365621d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761933"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442676"
 ---
 # <a name="prepared-property-example-vc"></a>Пример свойства Prepared (Visual C++)
 В этом примере демонстрируется [подготовленное](../../../ado/reference/ado-api/prepared-property-ado.md) свойство путем открытия двух [командных](../../../ado/reference/ado-api/command-object-ado.md) объектов — один подготовленный и еще не подготовленный.  
@@ -143,6 +144,6 @@ void PrintComError(_com_error &e) {
  **Результаты производительности:**  
 **Не подготовлено: 0,016 с**  
 **Подготовлено: 0,016 с**   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Свойство Prepared (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)

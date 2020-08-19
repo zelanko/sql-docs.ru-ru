@@ -1,4 +1,5 @@
 ---
+description: Пример свойств provider и DefaultDatabase (Visual Basic)
 title: Пример свойств provider и DefaultDatabase (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 677e1dbe-bcf6-4028-a62c-e99b1c88bf7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d1c72fd2e84bfe8c39570181a7f975c70140d91c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: db5e40a1f82f95e7b4d78f4e6e3ce7703305abb0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759930"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442596"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vb"></a>Пример свойств provider и DefaultDatabase (Visual Basic)
 В этом примере демонстрируется свойство [provider](../../../ado/reference/ado-api/provider-property-ado.md) путем открытия трех объектов [соединения](../../../ado/reference/ado-api/connection-object-ado.md) с помощью разных поставщиков. Он также использует свойство [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) , чтобы задать базу данных по умолчанию для поставщика Microsoft ODBC.  
@@ -104,7 +105,7 @@ End Sub
 'EndProviderVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [DefaultDatabase, свойство](../../../ado/reference/ado-api/defaultdatabase-property.md)   
  [Свойство Provider (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)

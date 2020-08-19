@@ -1,4 +1,5 @@
 ---
+description: Пример свойства Status (объект Field) (Visual Basic)
 title: Пример свойства Status (поле) (VB) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2263f72311111ef7f63d006e085165ec2ab492c3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 66fab5cee49adf89bffee79f5b51b13780d5d982
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759710"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441946"
 ---
 # <a name="status-property-example-field-vb"></a>Пример свойства Status (объект Field) (Visual Basic)
 В следующем примере документ открывается из папки для чтения и записи с помощью [поставщика публикации в Интернете](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Для свойства [Status](../../../ado/reference/ado-api/status-property-ado-field.md) объекта [поля](../../../ado/reference/ado-api/field-object.md) [записи](../../../ado/reference/ado-api/record-object-ado.md) сначала будет задано значение **адфиелдпендингинсерт**, а затем оно будет обновлено на **адфиелдок**.  
@@ -91,7 +92,7 @@ Attribute VB_Name = "StatusField"
 Attribute VB_Name = "StatusField"  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Field](../../../ado/reference/ado-api/field-object.md)   
  [Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Свойство Status (объект Field ADO)](../../../ado/reference/ado-api/status-property-ado-field.md)

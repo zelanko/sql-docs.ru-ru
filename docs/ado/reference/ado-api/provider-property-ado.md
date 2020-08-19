@@ -1,4 +1,5 @@
 ---
+description: Свойство Provider (ADO)
 title: Свойство Provider (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0ff70e72-0061-4ffc-90fb-e3ea23129bb2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: af95544a998963ffd81b4ebf9098089cc1a9915f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c4e8b5f57a9d6ba15a12c8da8bb4e85012b53da9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759910"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442586"
 ---
 # <a name="provider-property-ado"></a>Свойство Provider (ADO)
 Указывает имя поставщика для объекта [соединения](../../../ado/reference/ado-api/connection-object-ado.md) .  
@@ -37,10 +38,10 @@ ms.locfileid: "82759910"
   
  Свойство **provider** доступно для чтения и записи, когда соединение закрывается и доступно только для чтения, когда оно открыто. Параметр вступит в силу только после открытия объекта **соединения** или доступа к коллекции [свойств](../../../ado/reference/ado-api/properties-collection-ado.md) объекта **Connection** . Если параметр не является допустимым, возникает ошибка.  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойств provider и DefaultDatabase (Visual Basic)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
  [Пример свойств provider и DefaultDatabase (Visual Basic)](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)   
  [Поставщик OLE DB Майкрософт для ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)   

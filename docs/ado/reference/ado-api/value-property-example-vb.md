@@ -1,4 +1,5 @@
 ---
+description: Пример свойства Value (Visual Basic)
 title: Пример свойства Value (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2d4fe651-ef09-461b-8884-a70b6af4362e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ef7f31068c6ced2aab693756987ebccc1feaedca
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bb8c23168cb68438b2f8a74359f14b05795ad913
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759440"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441586"
 ---
 # <a name="value-property-example-vb"></a>Пример свойства Value (Visual Basic)
 В этом примере демонстрируется свойство [value](../../../ado/reference/ado-api/value-property-ado.md) с объектами [полей](../../../ado/reference/ado-api/field-object.md) и [свойств](../../../ado/reference/ado-api/property-object-ado.md) путем отображения значений полей и свойств для таблицы ***Employees*** .  
@@ -100,7 +101,7 @@ End Sub
 'EndValueVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Field](../../../ado/reference/ado-api/field-object.md)   
  [Объект Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
  [Свойство Value (ADO)](../../../ado/reference/ado-api/value-property-ado.md)

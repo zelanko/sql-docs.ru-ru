@@ -1,4 +1,5 @@
 ---
+description: Пример метода Refresh (Visual C++)
 title: Пример метода Refresh (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3dc3443b-a1b0-4fbd-908a-6e274dec981c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: abd6a67cdec9e330cb2f21baeedfe3518fd3b7d0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 521ed958411e2943d0f01d25cb417aee569f1912
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756531"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442336"
 ---
 # <a name="refresh-method-example-vc"></a>Пример метода Refresh (Visual C++)
 В этом примере демонстрируется использование метода [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) для обновления коллекции [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) для объекта [команды](../../../ado/reference/ado-api/command-object-ado.md) хранимой процедуры.  
@@ -233,7 +234,7 @@ Authors with 25 percent royalty
   899-46-2035, Anne Ringer  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Коллекция Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Метод Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

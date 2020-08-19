@@ -1,4 +1,5 @@
 ---
+description: Свойство Source (объект Recordset ADO)
 title: Свойство Source (набор записей ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: a05ba2c9-2821-4343-8607-4de9b764ec91
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fc7d3336b9c346a070266b4ef1d104d0e32eb042
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8306a1031600ccf03236a09249ed9b5f3d0bfc20
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759810"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442006"
 ---
 # <a name="source-property-ado-recordset"></a>Свойство Source (объект Recordset ADO)
 Указывает источник данных для объекта [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) .  
@@ -43,10 +44,10 @@ ms.locfileid: "82759810"
   
  Свойство **Source** доступно для чтения и записи закрытых объектов **Recordset** и доступно только для чтения для открытых объектов **Recordset** .  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойства Source (Visual Basic)](../../../ado/reference/ado-api/source-property-example-vb.md)   
  [Свойство Source (ошибка ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)   
  [Свойство Source (объект Record ADO)](../../../ado/reference/ado-api/source-property-ado-record.md)

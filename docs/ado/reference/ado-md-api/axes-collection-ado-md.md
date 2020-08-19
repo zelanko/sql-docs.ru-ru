@@ -1,4 +1,5 @@
 ---
+description: Коллекция Axes (многомерные объекты ADO)
 title: Коллекция осей (объекты данных ActiveX (MD)) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 072fb21a-ec0f-4b02-9022-1cef3ad4bfff
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 36c6a55b5ba59fab0fab3f873225f67b18d2d384
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: cc93e9ea8568a535067addbd51258074945200db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765215"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441324"
 ---
 # <a name="axes-collection-ado-md"></a>Коллекция Axes (многомерные объекты ADO)
 Содержит объекты [осей](../../../ado/reference/ado-md-api/axis-object-ado-md.md) , определяющие набор ячеек.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Объект набора [ячеек](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) содержит коллекцию **осей** . После открытия набора **ячеек** эта коллекция будет содержать по крайней мере одну **ось**. Более подробное описание использования объектов **Axis** см. в объекте [Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md) .  
   
 > [!NOTE]
@@ -44,6 +45,6 @@ ms.locfileid: "82765215"
   
 -   [Свойства, методы и события](../../../ado/reference/ado-md-api/axes-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример набора ячеек (Visual Basic)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Объект Axis (многомерные объекты ADO)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)

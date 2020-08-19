@@ -1,4 +1,5 @@
 ---
+description: Пример метода Seek и свойства Index (Visual Basic)
 title: Пример метода Seek и свойства Index (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 337c9eda-9ddf-49ac-94d3-b33114ba6224
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a9d82cda586f5694b9f7644ca01eff781ea3e79d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 88121d2f736d76eec80146c49c727cd0d27399b7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765425"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442146"
 ---
 # <a name="seek-method-and-index-property-example-vb"></a>Пример метода Seek и свойства Index (Visual Basic)
 В этом примере используется метод [Seek](../../../ado/reference/ado-api/seek-method.md) объекта [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) и свойство [index](../../../ado/reference/ado-api/index-property.md) в сочетании с данным ***идентификатором сотрудника***, чтобы найти имя сотрудника в таблице ***Employees*** базы данных Nwind. mdb.  
@@ -115,7 +116,7 @@ End Sub
 'EndSeekVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство index](../../../ado/reference/ado-api/index-property.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Seek, метод](../../../ado/reference/ado-api/seek-method.md)

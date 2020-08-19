@@ -1,4 +1,5 @@
 ---
+description: Объектная модель ADO MD
 title: объекты данных ActiveX (MD) объектной модели | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6242b374-091b-406f-827a-c0dcd3e1967a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 69536f73c26a51debe4e53ea123c8b73fcd0488e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: acd8895c8fa727d3be71712c575e3edaee445ec6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765275"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441376"
 ---
 # <a name="ado-md-object-model"></a>Объектная модель ADO MD
 В этом разделе описано, как объекты представлены и связаны в объекты данных ActiveX (MD).  
@@ -30,7 +31,7 @@ ms.locfileid: "82765275"
   
  У каждого объекта [оси](../../../ado/reference/ado-md-api/axis-object-ado-md.md), [ячейки](../../../ado/reference/ado-md-api/cell-object-ado-md.md), набора [ячеек](../../../ado/reference/ado-md-api/cellset-object-ado-md.md), [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md), [измерения](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [иерархии](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [уровня](../../../ado/reference/ado-md-api/level-object-ado-md.md)и [элемента](../../../ado/reference/ado-md-api/member-object-ado-md.md) есть стандартная коллекция [свойств](../../../ado/reference/ado-api/properties-collection-ado.md) ADO.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по объекты данных ActiveX (MD) API](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
  [Примеры кода объекты данных ActiveX (MD)](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
  [объекты данных ActiveX (MD) коллекции](../../../ado/reference/ado-md-api/ado-md-collections.md)   

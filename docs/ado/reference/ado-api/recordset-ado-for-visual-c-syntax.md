@@ -1,4 +1,5 @@
 ---
+description: Recordset (синтаксис ADO для Visual C++)
 title: Набор записей (синтаксис ADO для Visual C++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: affc847c-a533-4c8a-bdff-3682fdb5df5f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 13a094c5cbbc6af8e61bd221f06ff197a00d2524
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f411d7cc7856799e923fb75e7e1ca2ba6717d44c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761892"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442446"
 ---
 # <a name="recordset-ado-for-visual-c-syntax"></a>Recordset (синтаксис ADO для Visual C++)
 ## <a name="methods"></a>Методы  
@@ -118,5 +119,5 @@ WillChangeRecordset(EventReasonEnum adReason, EventStatusEnum *adStatus, _ADORec
 WillMove(EventReasonEnum adReason, EventStatusEnum *adStatus, _ADORecordset *pRecordset)  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -1,4 +1,5 @@
 ---
+description: Коллекции ADOX
 title: ADOX Collections | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0c90ba9-0471-4381-96f1-376de22fa2ee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4e6b0846433b317bb1ced7de284113377e4b4528
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: e5616b0855aa05bf8e3899df9b411f02eb7bb4a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243115"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440606"
 ---
 # <a name="adox-collections"></a>Коллекции ADOX
 
@@ -33,7 +34,7 @@ ms.locfileid: "87243115"
 |[Пользователи](../../../ado/reference/adox-api/users-collection-adox.md)|Содержит все сохраненные **пользовательские** объекты каталога или группы.|  
 |[Представления](../../../ado/reference/adox-api/views-collection-adox.md)|Содержит все объекты **представления** каталога.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API ADOX](../../../ado/reference/adox-api/adox-api-reference.md)   
  [Объектная модель ADOX](../../../ado/reference/adox-api/adox-object-model.md)   
  [Объекты ADOX](../../../ado/reference/adox-api/adox-objects.md)   

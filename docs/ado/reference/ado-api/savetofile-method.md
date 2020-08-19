@@ -1,4 +1,5 @@
 ---
+description: Метод SaveToFile
 title: Метод SaveToFile | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8a8594f2-422b-4d2e-94f8-7fe337445900
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c8434841442ee61b31d021e5f2c46f57f1d2b147
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2a46604cb33d5f52a6f889da5b3b28ef6dc38254
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755828"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442186"
 ---
 # <a name="savetofile-method"></a>Метод SaveToFile
 Сохраняет двоичное содержимое [потока](../../../ado/reference/ado-api/stream-object-ado.md) в файл.  
@@ -43,16 +44,16 @@ Stream.SaveToFile FileName, SaveOptions
 > [!NOTE]
 >  Если перезаписать существующий файл (когда **адсавекреатеоверврите** установлен), **SaveToFile** усекает все байты из исходного существующего файла, который соответствует новому [EOS](../../../ado/reference/ado-api/eos-property.md).  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **SaveToFile** может использоваться для копирования содержимого объекта **потока** в локальный файл. Содержимое или свойства объекта **Stream** не изменяются. Перед вызовом **SaveToFile**объект **потока** должен быть открытым.  
   
  Этот метод не изменяет связь объекта **потока** с базовым источником. Объект **потока** по-прежнему будет связан с исходным URL-адресом или **записью** , которая была источником при открытии.  
   
  После операции **SaveToFile** текущая координата ([положением](../../../ado/reference/ado-api/position-property-ado.md)) в потоке устанавливается в начало потока (0).  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод Open (поток ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [Метод Save](../../../ado/reference/ado-api/save-method.md)

@@ -1,4 +1,5 @@
 ---
+description: Метод SetEOS
 title: Метод Сетеос | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 707c18ca-6a56-4970-bbd6-ae1fb86a0b8a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9dbe2846674d760163fa9eb3ab78e07e68b80d0e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fd1d0418fe0c6a0a475594605acc6f28851a777e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759900"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442126"
 ---
 # <a name="seteos-method"></a>Метод SetEOS
 Задает расположение, которое является концом потока.  
@@ -41,5 +42,5 @@ Stream.SetEOS
 > [!CAUTION]
 >  Если задать для **EOS** расположение до фактического конца потока, будут потеряны все данные после новой точки **EOS** .  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

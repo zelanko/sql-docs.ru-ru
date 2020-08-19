@@ -1,4 +1,5 @@
 ---
+description: Свойства, методы и события объекта Catalog (многомерные объекты ADO)
 title: Свойства, методы и события объекта Catalog (объекты данных ActiveX (MD)) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e9566718-9122-490d-8a8e-da8f605246f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b67735643349a75d92589563766f9e446ec9c259
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a83cd7b5cf9df56432bcaf6b484617b3692c35e9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761812"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441266"
 ---
 # <a name="catalog-object-properties-methods-and-events-ado-md"></a>Свойства, методы и события объекта Catalog (многомерные объекты ADO)
 ## <a name="propertiescollections"></a>Свойства и коллекции  
@@ -25,10 +26,10 @@ ms.locfileid: "82761812"
   
  [Коллекция Кубедефс](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)  
   
- [Свойство Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
+ [Имя, свойство](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
   
 ## <a name="methods"></a>Методы  
- Нет.  
+ Отсутствует.  
   
 ## <a name="events"></a>События  
  Нет.  

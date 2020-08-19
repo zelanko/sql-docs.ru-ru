@@ -1,4 +1,5 @@
 ---
+description: Свойство OriginalValue (ADO)
 title: Свойство OriginalValue (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6e33c6ec-14d9-4b1d-ba9b-cb99862e7bac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b46b9e76a397d81b339aef231634b3b16f717ce4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 13353013575db87f5ec30ceb8cf4a5aab6a06079
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762027"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443126"
 ---
 # <a name="originalvalue-property-ado"></a>Свойство OriginalValue (ADO)
 Указывает значение [поля](../../../ado/reference/ado-api/field-object.md) , которое существовало в записи до внесения каких-либо изменений.  
@@ -38,10 +39,10 @@ ms.locfileid: "82762027"
 ## <a name="record"></a>Записей  
  Для объектов [записи](../../../ado/reference/ado-api/record-object-ado.md) свойство **originalValue** будет пустым для полей, добавленных до вызова метода [Update](../../../ado/reference/ado-api/update-method.md) .  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект Field](../../../ado/reference/ado-api/field-object.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Примеры свойств OriginalValue и UnderlyingValue (Visual Basic)](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vb.md)   
  [Пример свойств OriginalValue и UnderlyingValue (Visual c++)](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vc.md)   
  [Свойство UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)

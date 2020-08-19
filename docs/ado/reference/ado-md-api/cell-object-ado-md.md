@@ -1,4 +1,5 @@
 ---
+description: Объект Cell (многомерные объекты ADO)
 title: Объект Cell (объекты данных ActiveX (MD)) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: dcc2f044-b785-4a29-9bc5-b673f66eedf9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d309ba98c1e50d8eb6fbe47fb9452f8ea7df35ba
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a6cb4d32a4a527cce7bc69eb39f8829bbf5cf58a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761802"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441246"
 ---
 # <a name="cell-object-ado-md"></a>Объект Cell (многомерные объекты ADO)
 Представляет данные на пересечении координат осей, содержащихся в наборе ячеек.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Объект **ячейки** возвращается свойством [Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) объекта набора [ячеек](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) .  
   
  С помощью коллекций и свойств объекта **ячейки** можно выполнять следующие действия.  
@@ -42,7 +43,7 @@ ms.locfileid: "82761802"
   
  Коллекция **Properties** содержит свойства, предоставляемые поставщиком. В следующей таблице перечислены свойства, которые могут быть доступны. Фактический список свойств может отличаться в зависимости от реализации поставщика. Более полный список доступных свойств см. в документации поставщика.  
   
-|name|Описание|  
+|Имя|Описание|  
 |----------|-----------------|  
 |BackColor|Цвет фона, используемый при отображении ячейки.|  
 |FontFlags|Битовая маска, определяющая влияние на шрифт.|  

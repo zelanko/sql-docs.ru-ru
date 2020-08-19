@@ -1,4 +1,5 @@
 ---
+description: Пример свойства Type (объект Field) (Visual C++)
 title: Пример свойства Type (Field) (VC + +) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b3f957e4ed81eeb1853689162f61b1945d26730b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: eb2ad6e448f215c29c278ba3f767ad995e713d26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765335"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441716"
 ---
 # <a name="type-property-example-field-vc"></a>Пример свойства Type (объект Field) (Visual C++)
 В этом примере показано свойство [Type](../../../ado/reference/ado-api/type-property-ado.md) , в котором отображается имя константы, соответствующее значению свойства **Type** всех объектов [field](../../../ado/reference/ado-api/field-object.md) в таблице ***Employees*** . Для выполнения этой процедуры требуется функция FieldType.  

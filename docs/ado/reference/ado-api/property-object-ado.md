@@ -1,4 +1,5 @@
 ---
+description: Объект Property (ADO)
 title: Объект Property (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b2a4767c-03c7-4935-a3bc-df3e1a38a009
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d2f4a8b6cdeabcbab0802a0052ed697af70ef45a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8901f4b0f5372063b8aff88a47a7fddae13e66d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759970"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442626"
 ---
 # <a name="property-object-ado"></a>Объект Property (ADO)
 Представляет динамическую характеристику объекта ADO, определяемого поставщиком.  
@@ -48,7 +49,7 @@ ms.locfileid: "82759970"
   
 -   [Свойства, методы и события объекта Property](../../../ado/reference/ado-api/property-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Объект Field](../../../ado/reference/ado-api/field-object.md)   

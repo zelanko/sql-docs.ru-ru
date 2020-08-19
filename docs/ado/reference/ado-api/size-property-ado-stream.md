@@ -1,4 +1,5 @@
 ---
+description: Свойство Size (объект Stream ADO)
 title: Свойство Size (поток ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a487c241-d953-4c31-ae7e-6358d5cf6733
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e17bb879c63e01d8f912bb7147061099bd3e2c10
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 92b546b95c1033b6222a0acc99355c5e0906de21
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759870"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442136"
 ---
 # <a name="size-property-ado-stream"></a>Свойство Size (объект Stream ADO)
 Указывает размер потока в байтах.  
@@ -34,8 +35,8 @@ ms.locfileid: "82759870"
 > [!NOTE]
 >  Любое количество битов может храниться в объекте **потока** , ограниченном только системными ресурсами. Если **поток** содержит больше разрядов, чем может быть представлено **длинным** значением, то **Размер** усекается и, следовательно, неточно представляет длину **потока**.  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство Size (объект Parameter ADO)](../../../ado/reference/ado-api/size-property-ado-parameter.md)

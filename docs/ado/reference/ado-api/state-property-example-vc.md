@@ -1,4 +1,5 @@
 ---
+description: Пример свойства State (Visual C++)
 title: Пример свойства State (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1c38cd3b-e4f5-4754-b115-ef5e46d24ab9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 63518ccce25b9c3597b0baf45ad1a7cfd03d5031
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 90c08625fb319733f391af5d84f5de053021904c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759730"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441966"
 ---
 # <a name="state-property-example-vc"></a>Пример свойства State (Visual C++)
 В этом примере свойство [State](../../../ado/reference/ado-api/state-property-ado.md) используется для отображения сообщения, в то время как асинхронные соединения открываются и выполняются асинхронные команды.  
@@ -135,5 +136,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство State (ADO)](../../../ado/reference/ado-api/state-property-ado.md)

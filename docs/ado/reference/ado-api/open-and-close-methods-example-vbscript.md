@@ -1,4 +1,5 @@
 ---
+description: Примеры методов Open и Close (VBScript)
 title: Пример методов Open и Close (VBScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 66eca011-e258-4d8f-bd67-e017bcf0871b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 04273e3aec32e45b49e1ad9addc3cd9467579bf3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bb26a778e3d484ba024a5a38564d9e3abc0a3ef0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762272"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443006"
 ---
 # <a name="open-and-close-methods-example-vbscript"></a>Примеры методов Open и Close (VBScript)
 В этом примере используются методы [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) и [Close](../../../ado/reference/ado-api/close-method-ado.md) как для [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) , так и для объектов [соединения](../../../ado/reference/ado-api/connection-object-ado.md) , которые были открыты.  
@@ -161,7 +162,7 @@ BODY {
 <!-- EndOpenVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод Close (ADO)](../../../ado/reference/ado-api/close-method-ado.md)   
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Метод Open (подключение ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   

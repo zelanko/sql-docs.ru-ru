@@ -1,4 +1,5 @@
 ---
+description: Метод Refresh (ADO)
 title: Метод Refresh (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0688fc8b45f444ca8c711f3229623484fa2139a8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 83a6153e0017dafb0ac48c27aebc49c51c9b22d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242584"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442356"
 ---
 # <a name="refresh-method-ado"></a>Метод Refresh (ADO)
 Обновляет объекты в коллекции, чтобы отразить объекты, доступные в поставщике, и связанные с ним.  
@@ -83,7 +84,7 @@ collection.Refresh
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример метода Refresh (Visual Basic)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
  [Пример метода Refresh (Visual c++)](../../../ado/reference/ado-api/refresh-method-example-vc.md)   
  [Свойство Count (ADO)](../../../ado/reference/ado-api/count-property-ado.md)   

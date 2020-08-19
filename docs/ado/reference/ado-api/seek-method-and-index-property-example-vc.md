@@ -1,4 +1,5 @@
 ---
+description: Примеры метода Seek и свойства Index (Visual C++)
 title: Пример метода Seek и свойства Index (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 57bda520-e98b-443c-a8bc-d8430e89a383
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6176f607ea338f4686e0a5c23a824d916f501b14
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 93e4a003e2234c0ee8eb537bc8ee09cdef1869d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765415"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442266"
 ---
 # <a name="seek-method-and-index-property-example-vc"></a>Примеры метода Seek и свойства Index (Visual C++)
 В этом примере используется метод [Seek](../../../ado/reference/ado-api/seek-method.md) объекта [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) и свойство [index](../../../ado/reference/ado-api/index-property.md) в сочетании с данным ***идентификатором сотрудника***, чтобы найти имя сотрудника в таблице ***Employees*** базы данных Nwind. mdb.  
@@ -225,7 +226,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство index](../../../ado/reference/ado-api/index-property.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Seek, метод](../../../ado/reference/ado-api/seek-method.md)

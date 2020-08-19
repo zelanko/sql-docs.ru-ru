@@ -1,4 +1,5 @@
 ---
+description: Пример объекта Catalog (Visual Basic)
 title: Пример каталога (VB) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3aae1107-2f81-413c-8eda-ef96c3df1b8a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 88474aaf40fe715f6240d0519be5cec8fc06e12e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 172edf69b1840c51aac11dcc66a209b469148d3a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765155"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441256"
 ---
 # <a name="catalog-example-vb"></a>Пример объекта Catalog (Visual Basic)
 Этот Visual Basic проект создает новый куб с помощью многомерных выражений. Затем он документирует структуру куба в документе Microsoft Word.  

@@ -1,4 +1,5 @@
 ---
+description: Метод Update
 title: Метод Update | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aeeb7bcbb79231a2d6ed842459355a09e2889e4f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 906a2ffb29345a2bbefdbf5a6bde6e71cd1c5af1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243175"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441646"
 ---
 # <a name="update-method"></a>Метод Update
 Сохраняет любые изменения, внесенные в текущую строку объекта [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) , или коллекцию [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) объекта [Record](../../../ado/reference/ado-api/record-object-ado.md) .  
@@ -35,10 +36,10 @@ record.Fields.Update
   
 #### <a name="parameters"></a>Параметры  
  *Поля*  
- Необязательный элемент. **Вариант** , представляющий одно имя или массив **Variant** , представляющий имена или порядковые позиции поля или полей, которые требуется изменить.  
+ Необязательный параметр. **Вариант** , представляющий одно имя или массив **Variant** , представляющий имена или порядковые позиции поля или полей, которые требуется изменить.  
   
  *Значения*  
- Необязательный элемент. **Вариант** , представляющий одиночное значение, или массив **Variant** , представляющий значения для поля или полей в новой записи.  
+ Необязательный параметр. **Вариант** , представляющий одиночное значение, или массив **Variant** , представляющий значения для поля или полей в новой записи.  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -61,7 +62,7 @@ record.Fields.Update
   
  Текущая запись остается текущей после вызова метода **Update** .  
   
-## <a name="record"></a>Запись  
+## <a name="record"></a>Записей  
  Метод **Update** завершает Добавление, удаление и обновление полей в коллекции [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) объекта **Record** .  
   
  Например, поля, удаленные с помощью метода **Delete** , помечаются для удаления немедленно, но остаются в коллекции. Для фактического удаления этих полей из коллекции поставщика необходимо вызвать метод **Update** .  

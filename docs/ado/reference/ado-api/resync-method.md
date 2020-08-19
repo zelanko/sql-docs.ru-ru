@@ -1,4 +1,5 @@
 ---
+description: Метод Resync
 title: Повторно синхронизировать метод | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6907bfa9b83370074db9d9e2e522ed49d2c96e7e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 68ece4d9ad109defafa8a0c64dbf901fb20a87b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243215"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442276"
 ---
 # <a name="resync-method"></a>Метод Resync
 Обновляет данные в текущем объекте [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) или коллекции [полей](../../../ado/reference/ado-api/fields-collection-ado.md) объекта [записи](../../../ado/reference/ado-api/record-object-ado.md) из базовой базы данных.  
@@ -37,10 +38,10 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
   
 #### <a name="parameters"></a>Параметры  
  *аффектрекордс*  
- Необязательный элемент. Значение [аффектенум](../../../ado/reference/ado-api/affectenum.md) , определяющее количество записей, на которые будет влиять метод повторной **синхронизации** . Значение по умолчанию — **адаффекталл**. Это значение недоступно в методе **Resync** коллекции **Fields** объекта **Record** .  
+ Необязательный параметр. Значение [аффектенум](../../../ado/reference/ado-api/affectenum.md) , определяющее количество записей, на которые будет влиять метод повторной **синхронизации** . Значение по умолчанию — **адаффекталл**. Это значение недоступно в методе **Resync** коллекции **Fields** объекта **Record** .  
   
  *ресинквалуес*  
- Необязательный элемент. Значение [ресинценум](../../../ado/reference/ado-api/resyncenum.md) , указывающее, перезаписываются ли базовые значения. Значение по умолчанию — **адресинкаллвалуес**.  
+ Необязательный параметр. Значение [ресинценум](../../../ado/reference/ado-api/resyncenum.md) , указывающее, перезаписываются ли базовые значения. Значение по умолчанию — **адресинкаллвалуес**.  
   
 ## <a name="remarks"></a>Remarks  
   

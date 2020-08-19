@@ -1,4 +1,5 @@
 ---
+description: Свойство Row (ADO)
 title: Свойство Row (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 21019d89-2dd1-4a26-ac6f-384b81d66949
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9752510e51f8486f40a16f353b603a8f8e3c7596
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2bceacc215a67050142c773675a0af464ff9b9ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756228"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442246"
 ---
 # <a name="row-property-ado"></a>Свойство Row (ADO)
 Возвращает или задает объект OLE DB **строки** из объекта [интерфейса адорекордконструктион](../../../ado/reference/ado-api/adorecordconstruction-interface.md) или. При использовании **put_Row** для задания объекта **строки** строка преобразуется в объект **записи** ADO.  
@@ -46,5 +47,5 @@ HRESULT put_Row([in] IUnknown* pRow);
 ## <a name="return-values"></a>Возвращаемые значения  
  Этот метод свойства возвращает стандартные значения HRESULT, включая S_OK и E_FAIL.  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Интерфейс ADORecordConstruction](../../../ado/reference/ado-api/adorecordconstruction-interface.md)

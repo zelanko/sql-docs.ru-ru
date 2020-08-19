@@ -1,4 +1,5 @@
 ---
+description: Свойство Source (объект Record ADO)
 title: Свойство Source (запись ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2c18279e-6f35-4af0-b12e-8f1543d9ed20
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 32b329d8365370560f51503129ac2c8d85517527
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1f8fb7ece2d2046706df91814b2d098e0a900d18
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759820"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442046"
 ---
 # <a name="source-property-ado-record"></a>Свойство Source (объект Record ADO)
 Указывает источник данных или объект, представленный [записью](../../../ado/reference/ado-api/record-object-ado.md).  
@@ -33,7 +34,7 @@ ms.locfileid: "82759820"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает значение **типа Variant** , указывающее сущность, представленную **записью**.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Свойство **Source** возвращает *Исходный* аргумент метода [Open](../../../ado/reference/ado-api/open-method-ado-record.md) объекта **Record** . Он может содержать абсолютную или относительную строку URL-адреса. Абсолютный URL-адрес можно использовать без задания свойства [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) для непосредственного открытия объекта **записи** . В этом случае создается неявный объект **соединения** .  
   
  Свойство **Source** может также содержать ссылку на уже открытый **набор записей**, который открывает объект **Record** , представляющий текущую строку в **наборе записей**.  
@@ -47,9 +48,9 @@ ms.locfileid: "82759820"
 > [!NOTE]
 >  URL-адреса, использующие схему HTTP, автоматически вызывают [поставщик OLE DB Майкрософт для публикации в Интернете](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Дополнительные сведения см. в разделе [абсолютные и относительные URL-адреса](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство Source (ошибка ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)   
  [Свойство Source (объект Recordset ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)

@@ -1,4 +1,5 @@
 ---
+description: Свойство Version (ADO)
 title: Свойство Version (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: db4cb894-9bd9-422d-a58a-cef6941a5784
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3dbd13ac245ad10d4300e76a4c86d326b8b9b9ad
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d9c2a05f829ff0e9751634e9e50893cd1004db5e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758610"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441566"
 ---
 # <a name="version-property-ado"></a>Свойство Version (ADO)
 Указывает номер версии ADO.  
@@ -35,9 +36,9 @@ ms.locfileid: "82758610"
   
  Версия поставщика будет доступна как динамическое свойство в коллекции [свойств](../../../ado/reference/ado-api/properties-collection-ado.md) .  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойства Version (Visual Basic)](../../../ado/reference/ado-api/version-property-example-vb.md)   
  [Пример свойства Version (Visual C++)](../../../ado/reference/ado-api/version-property-example-vc.md)   

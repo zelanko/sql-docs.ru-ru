@@ -1,4 +1,5 @@
 ---
+description: Свойства, методы и события объекта Axis
 title: Свойства, методы и события объекта Axis | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: 89ec13b9-6324-4a95-92a7-3230d46bd02f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9dfd4bc3cca4b8ff71d58ab60fbbed45f9df2302
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1a8eedddcbd7a899c7b2abd1f2ab95197567854c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765175"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441306"
 ---
 # <a name="axis-object-properties-methods-and-events"></a>Свойства, методы и события объекта Axis
 ## <a name="propertiescollections"></a>Свойства и коллекции  
  [DimensionCount, свойство](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)  
   
- [Свойство Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
+ [Имя, свойство](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
   
  [Коллекция Positions](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)  
   
  [Коллекция Properties](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
 ## <a name="methods"></a>Методы  
- Нет.  
+ Отсутствует.  
   
 ## <a name="events"></a>События  
  Нет.  

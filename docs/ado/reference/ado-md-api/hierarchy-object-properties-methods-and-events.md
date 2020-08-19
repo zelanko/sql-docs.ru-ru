@@ -1,4 +1,5 @@
 ---
+description: Свойства, методы и события объекта Hierarchy
 title: Свойства, методы и события объекта Hierarchy | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ec0b00e-0e18-4f1b-9bbf-42168670bf5f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f60b0138abdfba0cc6bd49d509d5b43b3432e405
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7457b43a186ba30409a34cf415c5ca0889b1f96e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82753952"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440976"
 ---
 # <a name="hierarchy-object-properties-methods-and-events"></a>Свойства, методы и события объекта Hierarchy
 ## <a name="propertiescollections"></a>Свойства и коллекции  
@@ -25,14 +26,14 @@ ms.locfileid: "82753952"
   
  [Коллекция Levels](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)  
   
- [Свойство Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
+ [Имя, свойство](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
   
  [Коллекция Properties](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
  [UniqueName, свойство](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)  
   
 ## <a name="methods"></a>Методы  
- Нет.  
+ Отсутствует.  
   
 ## <a name="events"></a>События  
  Нет.  

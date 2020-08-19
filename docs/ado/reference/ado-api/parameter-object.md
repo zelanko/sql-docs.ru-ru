@@ -1,4 +1,5 @@
 ---
+description: Объект Parameter
 title: Объект Parameter | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e010e794-7f0f-4026-8b5b-37328e437d63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 22af5fadda96adbe67c1c03aaa5cde3527df1113
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ac768cf83d370a1fc60508b5d6a476f0e586d4f6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760000"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442816"
 ---
 # <a name="parameter-object"></a>Объект Parameter
 Представляет параметр или аргумент, связанный с объектом [Command](../../../ado/reference/ado-api/command-object-ado.md) на основе параметризованного запроса или хранимой процедуры.  
@@ -50,7 +51,7 @@ ms.locfileid: "82760000"
   
 -   [Свойства, методы и события объекта Parameter](../../../ado/reference/ado-api/parameter-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Метод CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Коллекция Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   

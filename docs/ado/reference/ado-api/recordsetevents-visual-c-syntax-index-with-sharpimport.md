@@ -1,4 +1,5 @@
 ---
+description: 'Рекордсетевентс (индекс синтаксиса Visual C++ с #import)'
 title: 'Рекордсетевентс (индекс синтаксиса Visual C++ с #import) | Документация Майкрософт'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b7021f11-8242-4e9f-92e9-1a4472673fb1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d398cfc8146850cca396ff386dd4215dbfbe2f8e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bef5ce7e1f7bb6410c7ed9a87570416a6217f204
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761842"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442394"
 ---
 # <a name="recordsetevents-visual-c-syntax-index-with-import"></a>Рекордсетевентс (индекс синтаксиса Visual C++ с #import)
 ## <a name="events"></a>События  

@@ -1,4 +1,5 @@
 ---
+description: Свойство UnderlyingValue
 title: UnderlyingValue, свойство | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 00a0c8b8-8b63-433f-95b8-020ab05874a0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 67dd3f7a6892d4fa139ffd14b3dc33e4231a6cb2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 12788438d7db4cf51df564ea7d262bb4e7ef693d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759530"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441706"
 ---
 # <a name="underlyingvalue-property"></a>Свойство UnderlyingValue
 Указывает текущее значение объекта [поля](../../../ado/reference/ado-api/field-object.md) в базе данных.  
@@ -40,10 +41,10 @@ ms.locfileid: "82759530"
 ## <a name="record"></a>Записей  
  Для объектов [записи](../../../ado/reference/ado-api/record-object-ado.md) это свойство будет пустым для полей, добавленных до вызова метода [Update](../../../ado/reference/ado-api/update-method.md) .  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект Field](../../../ado/reference/ado-api/field-object.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Примеры свойств OriginalValue и UnderlyingValue (Visual Basic)](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vb.md)   
  [Пример свойств OriginalValue и UnderlyingValue (Visual c++)](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vc.md)   
  [Свойство OriginalValue (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   

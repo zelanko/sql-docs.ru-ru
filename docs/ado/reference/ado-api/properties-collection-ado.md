@@ -1,4 +1,5 @@
 ---
+description: Коллекция Properties (ADO)
 title: Коллекция Properties (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1d539aa8-ce0d-4418-ab03-8d0a3c1e9d82
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9d3d6d019d00f683826a417aa73c216e8fca9565
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4b9915366d96975ffd02f6fae7ddd25ce35c81f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759990"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442656"
 ---
 # <a name="properties-collection-ado"></a>Коллекция Properties (ADO)
 Содержит все объекты [свойств](../../../ado/reference/ado-api/property-object-ado.md) для конкретного экземпляра объекта.  
@@ -39,6 +40,6 @@ ms.locfileid: "82759990"
   
 -   [Свойства, методы и события коллекции свойств](../../../ado/reference/ado-api/properties-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
  [Приложение А. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md)

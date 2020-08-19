@@ -1,4 +1,5 @@
 ---
+description: Свойство ParentURL (ADO)
 title: Свойство Парентурл (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cb0669abc03da183fc70c289631fed67bb41829d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8e8e171362e66c9809e646eb33cecfbad91f30df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761992"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442756"
 ---
 # <a name="parenturl-property-ado"></a>Свойство ParentURL (ADO)
 Указывает абсолютную строку URL-адреса, указывающую на родительскую [запись](../../../ado/reference/ado-api/record-object-ado.md) текущего объекта **Record** .  
@@ -59,5 +60,5 @@ record.Open "second"
 > [!NOTE]
 >  Если текущая запись содержит запись данных из **набора записей**ADO, то доступ к свойству **парентурл** вызывает ошибку времени выполнения, что означает, что URL-адрес невозможен.  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)

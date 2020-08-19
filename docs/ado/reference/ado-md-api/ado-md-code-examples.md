@@ -1,4 +1,5 @@
 ---
+description: Примеры кода многомерных объектов ADO
 title: объекты данных ActiveX (MD) примеры кода | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 72cf9eb3-31f6-441c-aede-5383fdfb81af
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1d6c4a4c21bd3dcb9a0d84d8bf081c57c12b2352
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2b8d0e0d5c5f0b53699f314292941dac618e5da3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765285"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441406"
 ---
 # <a name="ado-md-code-examples"></a>Примеры кода многомерных объектов ADO
 Используйте приведенные ниже примеры кода, чтобы научиться использовать объекты данных ActiveX (MD) объекты, методы и свойства. Эти примеры представляют собой подмножество примеров приложений, устанавливаемых с Microsoft SQL Server служб OLAP для SQL Server 7,0.  
@@ -28,7 +29,7 @@ ms.locfileid: "82765285"
   
 -   [Примеры кода многомерных объектов ADO на языке сценариев Visual Basic](../../../ado/reference/ado-md-api/ado-md-code-examples-in-visual-basic-scripting-edition.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по объекты данных ActiveX (MD) API](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
  [объекты данных ActiveX (MD) коллекции](../../../ado/reference/ado-md-api/ado-md-collections.md)   
  [объекты данных ActiveX (MD) перечислимые константы](../../../ado/reference/ado-md-api/ado-md-enumerated-constants.md)   

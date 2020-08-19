@@ -1,4 +1,5 @@
 ---
+description: Объект Record (ADO)
 title: Объект Record (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a6a7c3b44498dee88be8dc3f37cd713038375753
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 384b7285832cd03b1220e7b261f027c220d7f80c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754049"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442516"
 ---
 # <a name="record-object-ado"></a>Объект Record (ADO)
 Представляет строку из [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) или поставщика данных или объекта, возвращаемого частично структурированным поставщиком данных, например файла или каталога.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Объект **Record** представляет одну строку данных и имеет некоторые концептуальные сходства с однострочным **набором записей**. В зависимости от возможностей поставщика объекты **записи** могут возвращаться непосредственно от поставщика вместо однострочного **набора записей**, например при выполнении SQL-запроса, выбирающего только одну строку. Или объект **Record** можно получить непосредственно из объекта **Recordset** . Или же **запись** может возвращаться непосредственно от поставщика к частично структурированным данным, например к поставщику Microsoft Exchange OLE DB.  
   
  Поля, связанные с объектом **Record** , можно просмотреть с помощью коллекции [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) объекта **Record** . ADO допускает объектно-ориентированные столбцы, включая **набор записей**, **SAFEARRAY**и скалярные значения в коллекции **полей** объектов **Record** .  
@@ -81,7 +82,7 @@ ms.locfileid: "82754049"
   
 -   [Свойства, методы и события объекта Record](../../../ado/reference/ado-api/record-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Коллекция Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Коллекция Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Записи и потоки](../../../ado/guide/data/records-and-streams.md)   

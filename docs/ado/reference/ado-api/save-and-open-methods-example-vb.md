@@ -1,4 +1,5 @@
 ---
+description: Примеры методов Save и Open (Visual Basic)
 title: Пример методов Save и Open (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 37237094c3778fad9c45a2ccad3eebdce02a62bc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 048fbb83c8a6b9de150642f6094a1f07e0c1e11e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755929"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88442226"
 ---
 # <a name="save-and-open-methods-example-vb"></a>Примеры методов Save и Open (Visual Basic)
 В этих трех примерах показано, как можно совместно использовать методы [Save](../../../ado/reference/ado-api/save-method.md) и [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) .  
@@ -84,7 +85,7 @@ End Sub
 'EndSaveVB  
 ```  
   
- На этом этапе вы приступили к месту назначения. Вы будете обращаться к таблице ***authors*** как к локальному, отключенному **набору записей**. Необходимо иметь поставщик **мсперсист** на компьютере, который используется для доступа к сохраненному файлу, а:\пубс.ксмл.  
+ На этом этапе вы приступили к месту назначения. Вы будете обращаться к таблице ***authors*** как к локальному, отключенному **набору записей**. Необходимо иметь поставщик **мсперсист** на компьютере, который используется для доступа к сохраненному файлу, a:\Pubs.xml.  
   
 ```  
 Attribute VB_Name = "Save"  
@@ -96,7 +97,7 @@ Attribute VB_Name = "Save"
 Attribute VB_Name = "Save"  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод Open (набор записей ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Дополнительные сведения о сохраняемости в наборе записей](../../../ado/guide/data/more-about-recordset-persistence.md)   

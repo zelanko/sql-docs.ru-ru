@@ -1,4 +1,5 @@
 ---
+description: Объект CubeDef (многомерные объекты ADO)
 title: Объект CubeDef (объекты данных ActiveX (MD)) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25dd4d6a9c8a5518c8c2b637af63b39e7b992557
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: cf8de68674ee1cc33f0ba16c9a0b3604418d0332
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764355"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88441156"
 ---
 # <a name="cubedef-object-ado-md"></a>Объект CubeDef (многомерные объекты ADO)
 Представляет куб из многомерной схемы, содержащий набор связанных измерений.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  С помощью коллекций и свойств объекта **CubeDef** можно выполнять следующие действия.  
   
 -   Найдите **CubeDef** с помощью свойства [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) .  
@@ -38,7 +39,7 @@ ms.locfileid: "82764355"
   
  Коллекция **Properties** содержит свойства, предоставляемые поставщиком. В следующей таблице перечислены свойства, которые могут быть доступны. Фактический список свойств может отличаться в зависимости от реализации поставщика. Более полный список доступных свойств см. в документации поставщика.  
   
-|name|Описание|  
+|Имя|Описание|  
 |----------|-----------------|  
 |CatalogName|Имя каталога, которому принадлежит куб.|  
 |CreatedOn|Дата и время создания куба.|  
