@@ -1,4 +1,5 @@
 ---
+description: MoveRecordOptionsEnum
 title: Моверекордоптионсенум | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f53c2ce4-1021-4a45-92b8-775e8bebad99
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 849f3720d831c17b6b9d6d2829ae0b28f19992de
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 03728baab7882597cfba29d2f566d73ac98f9300
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762445"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443146"
 ---
 # <a name="moverecordoptionsenum"></a>MoveRecordOptionsEnum
 Задает поведение метода [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md) объекта [записи](../../../ado/reference/ado-api/record-object-ado.md) .  
@@ -35,5 +36,5 @@ ms.locfileid: "82762445"
 ## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
  Эти константы не имеют эквивалентов ADO/WFC.  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Метод MoveRecord (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)

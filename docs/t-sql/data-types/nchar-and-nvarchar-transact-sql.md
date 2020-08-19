@@ -1,4 +1,5 @@
 ---
+description: nchar и nvarchar (Transact-SQL)
 title: Типы nchar и nvarchar (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/19/2019
@@ -16,12 +17,12 @@ ms.assetid: 81ee5637-ee31-4c4d-96d0-56c26a742354
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63673258e2fa368544c6cc43158025770861a8f9
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 30a696079d07f0b4dc6c76ee78a712a553b10ef6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555609"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445946"
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar и nvarchar (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "86555609"
 Если вы используете **nchar** или **nvarchar**, мы рекомендуем:
 - использовать **nchar**, если размеры записей данных в столбцах одинаковые;  
 - использовать **nvarchar**, если размеры записей данных в столбцах существенно отличаются;  
-- использовать **nvarchar(max)** , если размеры записей данных в столбцах существенно отличаются и длина строки может превышать 4000 пар байтов.  
+- использовать **nvarchar(max)**, если размеры записей данных в столбцах существенно отличаются и длина строки может превышать 4000 пар байтов.  
   
 Тип **sysname** — это предоставляемый системой определяемый пользователем тип данных, который функционально эквивалентен типу **nvarchar(128)** за исключением того, что он не допускает значения NULL. Тип **sysname** используется для ссылки на имена объектов баз данных.
   

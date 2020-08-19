@@ -1,4 +1,5 @@
 ---
+description: OBJECTPROPERTY (Transact-SQL)
 title: OBJECTPROPERTY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
@@ -22,12 +23,12 @@ ms.assetid: 27569888-f8b5-4cec-a79f-6ea6d692b4ae
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 762cfe49193118072bbd165556b6b35163dee15c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: cae6d8b524e12a959ec373549a7be0af75aa16b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111441"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445755"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,66 +57,66 @@ OBJECTPROPERTY ( id , property )
   
 |Имя свойства|Тип объекта|Описание и возвращаемые значения|  
 |-------------------|-----------------|-------------------------------------|  
-|CnstIsClustKey|Ограничение|Ограничение PRIMARY KEY с кластеризованным индексом.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|CnstIsColumn|Ограничение|Ограничение CHECK, DEFAULT или FOREIGN KEY на одиночный столбец.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|CnstIsDeleteCascade|Ограничение|Ограничение FOREIGN KEY с параметром ON DELETE CASCADE.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|CnstIsDisabled|Ограничение|Отключенное ограничение.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|CnstIsNonclustKey|Ограничение|Ограничение PRIMARY KEY или UNIQUE с некластеризованным индексом.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|CnstIsNotRepl|Ограничение|Ограничение определено с помощью ключевых слов NOT FOR REPLICATION.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|CnstIsNotTrusted|Ограничение|Ограничение включено без проверки существующих строк, поэтому может быть действительным не для всех строк.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|CnstIsUpdateCascade|Ограничение|Ограничение FOREIGN KEY с параметром ON UPDATE CASCADE.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|ExecIsAfterTrigger|Триггер|Триггер AFTER.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|ExecIsAnsiNullsOn|Функция [!INCLUDE[tsql](../../includes/tsql-md.md)], процедура [!INCLUDE[tsql](../../includes/tsql-md.md)], триггер [!INCLUDE[tsql](../../includes/tsql-md.md)], представление|Установка ANSI_NULLS во время создания.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|ExecIsDeleteTrigger|Триггер|Триггер DELETE.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|ExecIsFirstDeleteTrigger|Триггер|Первый триггер, который срабатывает при применении к таблице инструкции DELETE.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|ExecIsFirstInsertTrigger|Триггер|Первый триггер, который срабатывает при применении к таблице инструкции INSERT.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|ExecIsFirstUpdateTrigger|Триггер|Первый триггер, который срабатывает при применении к таблице инструкции UPDATE.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|ExecIsInsertTrigger|Триггер|Триггер INSERT.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|ExecIsInsteadOfTrigger|Триггер|Триггер INSTEAD OF.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|ExecIsLastDeleteTrigger|Триггер|Последний триггер, сработавший при выполнении инструкции DELETE для таблицы.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|ExecIsLastInsertTrigger|Триггер|Последний триггер, сработавший при выполнении инструкции INSERT для таблицы.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|ExecIsLastUpdateTrigger|Триггер|Последний триггер, сработавший при выполнении инструкции UPDATE для таблицы.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|ExecIsQuotedIdentOn|Функция [!INCLUDE[tsql](../../includes/tsql-md.md)], процедура [!INCLUDE[tsql](../../includes/tsql-md.md)], триггер [!INCLUDE[tsql](../../includes/tsql-md.md)], представление|Значение параметра QUOTED_IDENTIFIER на момент создания.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|ExecIsStartup|Процедура|Процедура запуска.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|ExecIsTriggerDisabled|Триггер|Триггер отключен.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|ExecIsTriggerNotForRepl|Триггер|Триггер определен как NOT FOR REPLICATION.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|ExecIsUpdateTrigger|Триггер|Триггер UPDATE.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|ExecIsWithNativeCompilation|Процедура [!INCLUDE[tsql](../../includes/tsql-md.md)]|**Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.<br /><br /> Процедура компилируется в собственном коде.<br /><br /> 1 = True<br /><br /> 0 = False.<br /><br /> Базовый тип данных: **int**|  
-|HasAfterTrigger|Таблица, представление|Таблица или представление с триггером AFTER.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|HasDeleteTrigger|Таблица, представление|Таблица или представление с триггером DELETE.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|HasInsertTrigger|Таблица, представление|Таблица или представление с триггером INSERT.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|HasInsteadOfTrigger|Таблица, представление|Таблица или представление с триггером INSTEAD OF.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|HasUpdateTrigger|Таблица, представление|Таблица или представление с триггером UPDATE.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|IsAnsiNullsOn|Функция [!INCLUDE[tsql](../../includes/tsql-md.md)], процедура [!INCLUDE[tsql](../../includes/tsql-md.md)], таблица, триггер [!INCLUDE[tsql](../../includes/tsql-md.md)], представление|Указывается, что для параметра ANSI NULLS таблицы задано ON. Это означает, что результатом всех сравнений со значением NULL является UNKNOWN. Эта настройка относится ко всем выражениям в определении таблицы, включая вычисляемые столбцы и ограничения, в течение всего времени существования таблицы.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|IsCheckCnst|Любой объект области схемы|Ограничение CHECK.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|IsConstraint|Любой объект области схемы|Ограничение CHECK, DEFAULT или FOREIGN KEY единственного столбца на столбце или таблице.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|IsDefault|Любой объект области схемы|**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.<br /><br /> Привязанное значение по умолчанию:<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|IsDefaultCnst|Любой объект области схемы|Ограничение DEFAULT:<br /><br /> 1 = True<br /><br /> 0 = False.|  
+|CnstIsClustKey|Ограничение|Ограничение PRIMARY KEY с кластеризованным индексом.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|CnstIsColumn|Ограничение|Ограничение CHECK, DEFAULT или FOREIGN KEY на одиночный столбец.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|CnstIsDeleteCascade|Ограничение|Ограничение FOREIGN KEY с параметром ON DELETE CASCADE.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|CnstIsDisabled|Ограничение|Отключенное ограничение.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|CnstIsNonclustKey|Ограничение|Ограничение PRIMARY KEY или UNIQUE с некластеризованным индексом.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|CnstIsNotRepl|Ограничение|Ограничение определено с помощью ключевых слов NOT FOR REPLICATION.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|CnstIsNotTrusted|Ограничение|Ограничение включено без проверки существующих строк, поэтому может быть действительным не для всех строк.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|CnstIsUpdateCascade|Ограничение|Ограничение FOREIGN KEY с параметром ON UPDATE CASCADE.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|ExecIsAfterTrigger|Триггер|Триггер AFTER.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|ExecIsAnsiNullsOn|Функция [!INCLUDE[tsql](../../includes/tsql-md.md)], процедура [!INCLUDE[tsql](../../includes/tsql-md.md)], триггер [!INCLUDE[tsql](../../includes/tsql-md.md)], представление|Установка ANSI_NULLS во время создания.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|ExecIsDeleteTrigger|Триггер|Триггер DELETE.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|ExecIsFirstDeleteTrigger|Триггер|Первый триггер, который срабатывает при применении к таблице инструкции DELETE.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|ExecIsFirstInsertTrigger|Триггер|Первый триггер, который срабатывает при применении к таблице инструкции INSERT.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|ExecIsFirstUpdateTrigger|Триггер|Первый триггер, который срабатывает при применении к таблице инструкции UPDATE.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|ExecIsInsertTrigger|Триггер|Триггер INSERT.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|ExecIsInsteadOfTrigger|Триггер|Триггер INSTEAD OF.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|ExecIsLastDeleteTrigger|Триггер|Последний триггер, сработавший при выполнении инструкции DELETE для таблицы.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|ExecIsLastInsertTrigger|Триггер|Последний триггер, сработавший при выполнении инструкции INSERT для таблицы.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|ExecIsLastUpdateTrigger|Триггер|Последний триггер, сработавший при выполнении инструкции UPDATE для таблицы.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|ExecIsQuotedIdentOn|Функция [!INCLUDE[tsql](../../includes/tsql-md.md)], процедура [!INCLUDE[tsql](../../includes/tsql-md.md)], триггер [!INCLUDE[tsql](../../includes/tsql-md.md)], представление|Значение параметра QUOTED_IDENTIFIER на момент создания.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|ExecIsStartup|Процедура|Процедура запуска.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|ExecIsTriggerDisabled|Триггер|Триггер отключен.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|ExecIsTriggerNotForRepl|Триггер|Триггер определен как NOT FOR REPLICATION.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|ExecIsUpdateTrigger|Триггер|Триггер UPDATE.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|ExecIsWithNativeCompilation|Процедура [!INCLUDE[tsql](../../includes/tsql-md.md)]|**Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.<br /><br /> Процедура компилируется в собственном коде.<br /><br /> 1 = истина<br /><br /> 0 = ложь<br /><br /> Базовый тип данных: **int**|  
+|HasAfterTrigger|Таблица, представление|Таблица или представление с триггером AFTER.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|HasDeleteTrigger|Таблица, представление|Таблица или представление с триггером DELETE.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|HasInsertTrigger|Таблица, представление|Таблица или представление с триггером INSERT.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|HasInsteadOfTrigger|Таблица, представление|Таблица или представление с триггером INSTEAD OF.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|HasUpdateTrigger|Таблица, представление|Таблица или представление с триггером UPDATE.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|IsAnsiNullsOn|Функция [!INCLUDE[tsql](../../includes/tsql-md.md)], процедура [!INCLUDE[tsql](../../includes/tsql-md.md)], таблица, триггер [!INCLUDE[tsql](../../includes/tsql-md.md)], представление|Указывается, что для параметра ANSI NULLS таблицы задано ON. Это означает, что результатом всех сравнений со значением NULL является UNKNOWN. Эта настройка относится ко всем выражениям в определении таблицы, включая вычисляемые столбцы и ограничения, в течение всего времени существования таблицы.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|IsCheckCnst|Любой объект области схемы|Ограничение CHECK.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|IsConstraint|Любой объект области схемы|Ограничение CHECK, DEFAULT или FOREIGN KEY единственного столбца на столбце или таблице.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|IsDefault|Любой объект области схемы|**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.<br /><br /> Привязанное значение по умолчанию:<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|IsDefaultCnst|Любой объект области схемы|Ограничение DEFAULT:<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
 |IsDeterministic|Функция, представление|Свойство детерминизма функции или представления.<br /><br /> 1 = детерминированная<br /><br /> 0 = недетерминированная|  
 |IsEncrypted|Функция [!INCLUDE[tsql](../../includes/tsql-md.md)], процедура [!INCLUDE[tsql](../../includes/tsql-md.md)], таблица, триггер [!INCLUDE[tsql](../../includes/tsql-md.md)], представление|Указывает, что исходный текст инструкции модуля был преобразован в запутанный формат. Результат запутывания не виден непосредственно ни в одном представлении каталога [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Пользователи, не имеющие доступа к системным таблицам или файлам баз данных, не могут получить текст, подвергнутый запутыванию. Однако этот текст будет доступен пользователям, которые имеют либо доступ к системным таблицам через [порт DAC](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md), либо непосредственный доступ к файлам баз данных. Кроме того, пользователь, имеющий возможность подключить отладчик к серверному процессу, сможет получить исходный текст процедуры из памяти во время выполнения.<br /><br /> 1 = зашифрована<br /><br /> 0 = не зашифрована<br /><br /> Базовый тип данных: **int**|  
-|IsExecuted|Любой объект области схемы|Объект (представление, процедура, функция или триггер) может быть выполнен.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|IsExtendedProc|Любой объект области схемы|Расширенная процедура.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|IsForeignKey|Любой объект области схемы|Ограничение FOREIGN KEY.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|IsIndexed|Таблица, представление|Таблица или представление, имеющие индекс.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|IsIndexable|Таблица, представление|Таблица или представление, на которых может быть создан индекс.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|IsInlineFunction|Компонент|Встроенная функция.<br /><br /> 1 = встроенная функция<br /><br /> 0 = невстроенная функция|  
-|IsMSShipped|Любой объект области схемы|Объект, созданный во время установки сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|IsPrimaryKey|Любой объект области схемы|Ограничение PRIMARY KEY.<br /><br /> 1 = True<br /><br /> 0 = False.<br /><br /> NULL = не функция или идентификатор объекта недействителен.|  
-|IsProcedure|Любой объект области схемы|Процедура.<br /><br /> 1 = True<br /><br /> 0 = False.|  
+|IsExecuted|Любой объект области схемы|Объект (представление, процедура, функция или триггер) может быть выполнен.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|IsExtendedProc|Любой объект области схемы|Расширенная процедура.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|IsForeignKey|Любой объект области схемы|Ограничение FOREIGN KEY.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|IsIndexed|Таблица, представление|Таблица или представление, имеющие индекс.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|IsIndexable|Таблица, представление|Таблица или представление, на которых может быть создан индекс.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|IsInlineFunction|Функция|Встроенная функция.<br /><br /> 1 = встроенная функция<br /><br /> 0 = невстроенная функция|  
+|IsMSShipped|Любой объект области схемы|Объект, созданный во время установки сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|IsPrimaryKey|Любой объект области схемы|Ограничение PRIMARY KEY.<br /><br /> 1 = истина<br /><br /> 0 = ложь<br /><br /> NULL = не функция или идентификатор объекта недействителен.|  
+|IsProcedure|Любой объект области схемы|Процедура.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
 |IsQuotedIdentOn|Функция [!INCLUDE[tsql](../../includes/tsql-md.md)], процедура [!INCLUDE[tsql](../../includes/tsql-md.md)], таблица, триггер [!INCLUDE[tsql](../../includes/tsql-md.md)], представление, ограничение CHECK, определение DEFAULT|Указывается, что параметр quoted identifier для объекта имеет значение ON. Это означает, что двойные кавычки разделяют идентификаторы во всех выражениях, участвующих в определении объекта.<br /><br /> 1 = включен;<br /><br /> 0 = выключен.|  
-|IsQueue|Любой объект области схемы|Очередь компонента Service Broker<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|IsReplProc|Любой объект области схемы|Процедура репликации.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|IsRule|Любой объект области схемы|Привязанное правило.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|IsScalarFunction|Компонент|Скалярная функция.<br /><br /> 1 = скалярная функция<br /><br /> 0 = нескалярная функция|  
+|IsQueue|Любой объект области схемы|Очередь компонента Service Broker<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|IsReplProc|Любой объект области схемы|Процедура репликации.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|IsRule|Любой объект области схемы|Привязанное правило.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|IsScalarFunction|Функция|Скалярная функция.<br /><br /> 1 = скалярная функция<br /><br /> 0 = нескалярная функция|  
 |IsSchemaBound|Функция, представление|Привязанная к схеме функция или представление, созданные с помощью SCHEMABINDING.<br /><br /> 1 = привязана к схеме<br /><br /> 0 = не привязана к схеме.|  
-|IsSystemTable|Таблица|Системная таблица.<br /><br /> 1 = True<br /><br /> 0 = False.| 
-|IsSystemVerified|Объект|SQL Server может проверять свойства детерминированности и точности объекта.<br /><br /> 1 = True<br /><br /> 0 = False.| 
-|IsTable|Таблица|Таблица.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|IsTableFunction|Компонент|Функция с табличным значением.<br /><br /> 1 = функция с табличным значением<br /><br /> 0 = функция не с табличным значением|  
-|IsTrigger|Любой объект области схемы|Триггер.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|IsUniqueCnst|Любой объект области схемы|Ограничение UNIQUE.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|IsUserTable|Таблица|Пользовательская таблица.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|IsView|Представление|Представление.<br /><br /> 1 = True<br /><br /> 0 = False.|  
+|IsSystemTable|Таблица|Системная таблица.<br /><br /> 1 = истина<br /><br /> 0 = ложь| 
+|IsSystemVerified|Объект|SQL Server может проверять свойства детерминированности и точности объекта.<br /><br /> 1 = истина<br /><br /> 0 = ложь| 
+|IsTable|Таблица|Таблица.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|IsTableFunction|Функция|Функция с табличным значением.<br /><br /> 1 = функция с табличным значением<br /><br /> 0 = функция не с табличным значением|  
+|IsTrigger|Любой объект области схемы|Триггер.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|IsUniqueCnst|Любой объект области схемы|Ограничение UNIQUE.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|IsUserTable|Таблица|Пользовательская таблица.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|IsView|Просмотр|Представление.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
 |OwnerId|Любой объект области схемы|Владелец объекта.<br /><br /> **Примечание**. Владелец схемы необязательно является владельцем объекта. Например, дочерние объекты (такие, у которых аргумент *parent_object_id* не равен NULL) всегда возвращают в качестве родителя один и тот же идентификатор владельца.<br /><br /> Nonnull = идентификатор пользователя базы данных владельца объекта.|  
 |SchemaId|Любой объект области схемы| Идентификатор схемы, которой принадлежит объект.| 
 |TableDeleteTrigger|Таблица|У таблицы есть триггер DELETE.<br /><br /> >1 = идентификатор первого триггера указанного типа.|  
@@ -130,34 +131,34 @@ OBJECTPROPERTY ( id , property )
 |TableFulltextKeyColumn|Таблица|**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.<br /><br /> Идентификатор столбца, связанного с уникальным индексом одного столбца, который участвует в определении полнотекстового индекса:<br /><br /> 0 = таблица не имеет полнотекстового индекса.|  
 |TableFulltextPendingChanges|Таблица|**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.<br /><br /> Количество ожидающих отслеженных изменений к обработке.<br /><br /> 0 = Отслеживание изменений не включено.<br /><br /> NULL = Таблица не содержит полнотекстового индекса.|  
 |TableFulltextPopulateStatus|Таблица|**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.<br /><br /> 0 = Бездействует.<br /><br /> 1 = Производится полное заполнение.<br /><br /> 2 = Производится добавочное заполнение.<br /><br /> 3 = Выполняется распространение отслеженных изменений.<br /><br /> 4 = выполняется индексирование фонового обновления (например автоматическое отслеживание изменений).<br /><br /> 5 = Полнотекстовое индексирование приостановлено, или не хватает ресурсов на его выполнение.|  
-|TableHasActiveFulltextIndex|Таблица|**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.<br /><br /> Таблица имеет активный полнотекстовый индекс.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|TableHasCheckCnst|Таблица|Таблица имеет ограничение CHECK.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|TableHasClustIndex|Таблица|Таблица имеет кластеризованный индекс.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|TableHasDefaultCnst|Таблица|Таблица имеет ограничение DEFAULT.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|TableHasDeleteTrigger|Таблица|У таблицы есть триггер DELETE.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|TableHasForeignKey|Таблица|Таблица имеет ограничение FOREIGN KEY.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|TableHasForeignRef|Таблица|На таблицу есть ссылки по ограничению FOREIGN KEY.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|TableHasIdentity|Таблица|Таблица содержит столбец идентификаторов.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|TableHasIndex|Таблица|Таблица имеет индекс какого-либо типа.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|TableHasInsertTrigger|Таблица|Объект имеет триггер INSERT.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|TableHasNonclustIndex|Таблица|Таблица содержит некластеризованный индекс.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|TableHasPrimaryKey|Таблица|Таблица содержит первичный ключ.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|TableHasRowGuidCol|Таблица|Таблица содержит свойство ROWGUIDCOL для столбца **uniqueidentifier**.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|TableHasTextImage|Таблица|Таблица содержит столбец **text**, **ntext** или **image**.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|TableHasTimestamp|Таблица|Таблица содержит столбец **timestamp**.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|TableHasUniqueCnst|Таблица|Таблица имеет ограничение UNIQUE.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|TableHasUpdateTrigger|Таблица|Объект содержит триггер UPDATE.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|TableHasVarDecimalStorageFormat|Таблица|Для таблицы включен формат хранения **vardecimal**.<br /><br /> 1 = True<br /><br /> 0 = False.|  
+|TableHasActiveFulltextIndex|Таблица|**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.<br /><br /> Таблица имеет активный полнотекстовый индекс.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|TableHasCheckCnst|Таблица|Таблица имеет ограничение CHECK.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|TableHasClustIndex|Таблица|Таблица имеет кластеризованный индекс.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|TableHasDefaultCnst|Таблица|Таблица имеет ограничение DEFAULT.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|TableHasDeleteTrigger|Таблица|У таблицы есть триггер DELETE.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|TableHasForeignKey|Таблица|Таблица имеет ограничение FOREIGN KEY.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|TableHasForeignRef|Таблица|На таблицу есть ссылки по ограничению FOREIGN KEY.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|TableHasIdentity|Таблица|Таблица содержит столбец идентификаторов.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|TableHasIndex|Таблица|Таблица имеет индекс какого-либо типа.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|TableHasInsertTrigger|Таблица|Объект имеет триггер INSERT.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|TableHasNonclustIndex|Таблица|Таблица содержит некластеризованный индекс.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|TableHasPrimaryKey|Таблица|Таблица содержит первичный ключ.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|TableHasRowGuidCol|Таблица|Таблица содержит свойство ROWGUIDCOL для столбца **uniqueidentifier**.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|TableHasTextImage|Таблица|Таблица содержит столбец **text**, **ntext** или **image**.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|TableHasTimestamp|Таблица|Таблица содержит столбец **timestamp**.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|TableHasUniqueCnst|Таблица|Таблица имеет ограничение UNIQUE.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|TableHasUpdateTrigger|Таблица|Объект содержит триггер UPDATE.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|TableHasVarDecimalStorageFormat|Таблица|Для таблицы включен формат хранения **vardecimal**.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
 |TableInsertTrigger|Таблица|Таблица содержит триггер INSERT.<br /><br /> >1 = идентификатор первого триггера указанного типа.|  
 |TableInsertTriggerCount|Таблица|В таблице имеется указанное число триггеров INSERT.<br /><br /> > 0 = количество триггеров INSERT.|  
-|TableIsFake|Таблица|Таблица реально не существует. Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] материализует ее внутренним образом по запросу.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|TableIsLockedOnBulkLoad|Таблица|Таблица заблокирована в связи с **bcp** или заданием BULK INSERT.<br /><br /> 1 = True<br /><br /> 0 = False.|  
-|TableIsMemoryOptimized|Таблица|**Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.<br /><br /> Таблица, оптимизированная для памяти<br /><br /> 1 = True<br /><br /> 0 = False.<br /><br /> Базовый тип данных: **int**<br /><br /> Дополнительные сведения см. в разделе [In-Memory OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).|  
-|TableIsPinned|Таблица|Таблица закреплена для хранения в кэше данных.<br /><br /> 0 = False.<br /><br /> Эта функция не поддерживается в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и в более поздних версиях.|  
+|TableIsFake|Таблица|Таблица реально не существует. Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] материализует ее внутренним образом по запросу.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|TableIsLockedOnBulkLoad|Таблица|Таблица заблокирована в связи с **bcp** или заданием BULK INSERT.<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
+|TableIsMemoryOptimized|Таблица|**Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.<br /><br /> Таблица, оптимизированная для памяти<br /><br /> 1 = истина<br /><br /> 0 = ложь<br /><br /> Базовый тип данных: **int**<br /><br /> Дополнительные сведения см. в разделе [In-Memory OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).|  
+|TableIsPinned|Таблица|Таблица закреплена для хранения в кэше данных.<br /><br /> 0 = ложь<br /><br /> Эта функция не поддерживается в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и в более поздних версиях.|  
 |TableTextInRowLimit|Таблица|Максимальное количество байтов, допустимое для текста в строке.<br /><br /> 0, если не установлен параметр текст в строке.|  
 |TableUpdateTrigger|Таблица|Таблица содержит триггер UPDATE.<br /><br /> > 1 = идентификатор первого триггера указанного типа.|  
 |TableUpdateTriggerCount|Таблица|В таблице имеется указанное число триггеров UPDATE.<br /><br /> > 0 = количество триггеров UPDATE.|  
-|TableHasColumnSet|Таблица|Таблица содержит набор столбцов.<br /><br /> 0 = False.<br /><br /> 1 = True<br /><br /> Дополнительные сведения см. в статье [Использование наборов столбцов](../../relational-databases/tables/use-column-sets.md).|  
+|TableHasColumnSet|Таблица|Таблица содержит набор столбцов.<br /><br /> 0 = ложь<br /><br /> 1 = истина<br /><br /> Дополнительные сведения см. в статье [Использование наборов столбцов](../../relational-databases/tables/use-column-sets.md).|  
 |TableTemporalType|Таблица|**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий.<br /><br /> Задает тип таблицы:<br /><br /> 0 = нетемпоральная таблица;<br /><br /> 1 = таблица журнала для таблицы с управлением версиями;<br /><br /> 2 = темпоральная таблица с управлением версиями.|  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
@@ -168,7 +169,7 @@ OBJECTPROPERTY ( id , property )
   
  Пользователь может просматривать только метаданные защищаемых объектов, которыми он владеет или на которые пользователю были предоставлены разрешения. Это значит, что встроенные функции, создающие метаданные (например, OBJECTPROPERTY), могут возвращать значение NULL, если у пользователя нет разрешения на доступ к объекту. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] предполагает, что объект с идентификатором *object_id* находится в контексте текущей базы данных. Запрос, который ссылается на *object_id* в другой базе данных, вернет значение NULL или неверный результат. Например, в приведенном ниже запросе контекст текущий базы данных — база данных master. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] попытается вернуть значение свойства для заданного *object_id* в этой базе данных вместо базы данных, указанной в запросе. Запрос возвращает неверные результаты, потому что представление `vEmployee` не содержится в базе данных master.  
   
 ```  
@@ -247,7 +248,7 @@ ELSE
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
  [Функции метаданных (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [OBJECTPROPERTYEX (Transact-SQL)](../../t-sql/functions/objectpropertyex-transact-sql.md)   

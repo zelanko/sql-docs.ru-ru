@@ -1,4 +1,5 @@
 ---
+description: STGeometryN (тип данных geography)
 title: STGeometryN (тип данных geography) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 53755f69-cd50-475b-b3b8-a1a9157cf03a
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1deed4d716bbee62dac425a9d71780aec445602e
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 812a5e63f21de77028c1f00a08f1819c5a07be13
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555800"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445253"
 ---
 # <a name="stgeometryn-geography-data-type"></a>STGeometryN (тип данных geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

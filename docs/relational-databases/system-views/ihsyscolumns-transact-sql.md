@@ -1,4 +1,5 @@
 ---
+description: IHsyscolumns (Transact-SQL)
 title: Ихсисколумнс (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 263452f1-9708-48f0-9536-402a89e7f5bf
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 38522539230fd35aca058f9a26b53a3f4baa682b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 264aea54b51140d7d571a7312bf9947de7589eeb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889184"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446550"
 ---
 # <a name="ihsyscolumns-transact-sql"></a>IHsyscolumns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,8 +33,8 @@ ms.locfileid: "85889184"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Имя столбца или параметра процедуры.|  
-|**идентификатор**|**int**|Идентификатор объекта таблицы, к которой принадлежит столбец, или идентификатор хранимой процедуры, с которой данный параметр ассоциирован.|  
-|**xtype**|**tinyint**|Тип физического хранилища из [типовsys.sys&#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
+|**id**|**int**|Идентификатор объекта таблицы, к которой принадлежит столбец, или идентификатор хранимой процедуры, с которой данный параметр ассоциирован.|  
+|**кстипе**|**tinyint**|Тип физического хранилища из [ типовsys.sys&#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**typestat**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**tinyint**|Идентификатор расширенного определяемого пользователем типа данных.|  
 |**length**|**bigint**|Максимальная длина физического хранилища [sys.sysтипов &#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
@@ -53,7 +54,7 @@ ms.locfileid: "85889184"
 |**коллатионид**|**int**|Идентификатор параметров сортировки столбца. Значение NULL для несимвольных столбцов.|  
 |**language**|**int**|Идентификатор языка для столбца.|  
 |**status**|**int**|Битовая карта, используемая для описания свойства столбца или параметра:<br /><br /> **0x08** = столбец допускает значения NULL.<br /><br /> **0x10** = заполнение ANSI было применено при добавлении столбцов **varchar** или **varbinary** . Замыкающие пробелы сохраняются для **varchar** , а замыкающие нули сохраняются для столбцов типа **varbinary** .<br /><br /> **0x40** = параметр является выходным.<br /><br /> **0x80** = столбец является столбцом идентификаторов.|  
-|**type**|**int**|Тип физического хранилища из [типовsys.sys&#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
+|**type**|**int**|Тип физического хранилища из [ типовsys.sys&#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**usertype**|**tinyint**|Идентификатор определяемого пользователем типа данных из [sys.sysтипов &#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**printfmt**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**прек**|**int**|Степень точности для данного столбца.|  
@@ -66,8 +67,8 @@ ms.locfileid: "85889184"
   
 ## <a name="see-also"></a>См. также  
  [Разнородная репликация базы данных](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Представления репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
   
   

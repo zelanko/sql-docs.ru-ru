@@ -1,4 +1,5 @@
 ---
+description: Недетерминированное преобразование строк дат литералов в значения DATE
 title: Недетерминированное преобразование литералов даты | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/19/2018
@@ -12,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eba0e28d8f2d5587a07308a4ffcbf5f7eaedf278
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4c1d50cc58995479aa61b4c62639f9d13de6f400
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68119853"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445872"
 ---
 # <a name="nondeterministic-conversion-of-literal-date-strings-into-date-values"></a>Недетерминированное преобразование строк дат литералов в значения DATE
 
@@ -142,7 +143,7 @@ YMD-Interpretation--?--NotGuaranteed
 
 
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 - [Задание языка сеанса](../../relational-databases/collations/set-a-session-language.md)
 - [Типы данных и функции даты и времени (Transact-SQL)](../functions/date-and-time-data-types-and-functions-transact-sql.md)

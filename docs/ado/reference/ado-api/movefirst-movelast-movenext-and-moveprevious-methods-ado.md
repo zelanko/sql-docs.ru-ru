@@ -1,4 +1,5 @@
 ---
+description: Методы MoveFirst, MoveLast, MoveNext и MovePrevious (ADO)
 title: Методы MoveFirst, MoveLast, MoveNext и MovePrevious (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: a61a01a7-5b33-4150-9126-21dfa63654cb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4acdf777429e879ed22b99ea5a0f07775bc3798c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 440b2dec1ce045604456c38672c8c53e5c514df2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764505"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443206"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-ado"></a>Методы MoveFirst, MoveLast, MoveNext и MovePrevious (ADO)
 Переходит к первой, последней, следующей или предыдущей записи в указанном объекте [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) и делает запись текущей записью.  
@@ -42,7 +43,7 @@ ms.locfileid: "82764505"
 recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}  
 ```  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Используйте метод **MoveFirst** , чтобы переместить текущую запись в первую запись в **наборе записей**.  
   
  Используйте метод **MoveLast** , чтобы переместить текущую запись в последнюю запись в **наборе записей**. Объект **Recordset** должен поддерживать закладки или обратное перемещение курсора; в противном случае вызов метода выдаст ошибку.  
@@ -57,10 +58,10 @@ recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
   
  Если **набор записей** предназначен только для переадресации и требуется поддержка прямой и обратной прокрутки, можно использовать свойство [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) для создания кэша записей, который будет поддерживать обратное перемещение курсора через метод [Move](../../../ado/reference/ado-api/move-method-ado.md) . Поскольку кэшированные записи загружаются в память, следует избегать кэширования большего количества записей, чем требуется. Метод **MoveFirst** можно вызвать в объекте **набора записей** последовательного доступа. Это может привести к тому, что поставщик повторно выполнит команду, создавшую объект **набора записей** .  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Примеры методов MoveFirst, MoveLast, MoveNext и MovePrevious (Visual Basic)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vb.md)   
  [Пример методов MoveFirst, MoveLast, MoveNext и MovePrevious (VBScript)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript.md)   
  [Пример методов MoveFirst, MoveLast, MoveNext и MovePrevious (Visual c++)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vc.md)   

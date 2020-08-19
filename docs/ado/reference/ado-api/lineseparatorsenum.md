@@ -1,4 +1,5 @@
 ---
+description: LineSeparatorsEnum
 title: Линесепараторсенум | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0440b793-99c7-49a2-b3e2-ec5b1a7e3e60
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7431242fb331fd4a8f2a24e1dd9bf0d4d201595
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0c92b70fdee1fb492b55b18e613284d25277f55b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754699"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443366"
 ---
 # <a name="lineseparatorsenum"></a>LineSeparatorsEnum
 Задает символ, используемый в качестве разделителя строк в объектах текстового [потока](../../../ado/reference/ado-api/stream-object-ado.md) .  
@@ -34,5 +35,5 @@ ms.locfileid: "82754699"
 ## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
  Эти константы не имеют эквивалентов ADO/WFC.  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Свойство LineSeparator (ADO)](../../../ado/reference/ado-api/lineseparator-property-ado.md)

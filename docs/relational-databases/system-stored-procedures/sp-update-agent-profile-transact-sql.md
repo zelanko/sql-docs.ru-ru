@@ -1,4 +1,5 @@
 ---
+description: sp_update_agent_profile (Transact-SQL)
 title: sp_update_agent_profile (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cc81f227-0df3-4151-bb4d-4f45ea997b71
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a529df241a5d827c277f3a39110ae04697a13e17
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4695c5fdf07748937fdd1380170626e21942fd11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891394"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446705"
 ---
 # <a name="sp_update_agent_profile-transact-sql"></a>sp_update_agent_profile (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @agent_type = ] 'agent_type'`Тип агента. *agent_type* имеет **тип int**, не имеет значения по умолчанию и может принимать одно из следующих значений.  
+`[ @agent_type = ] 'agent_type'` Тип агента. *agent_type* имеет **тип int**, не имеет значения по умолчанию и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -47,9 +48,9 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 |**4**|Агент слияния.|  
 |**9**|Агент чтения очереди.|  
   
-`[ @agent_id = ] 'agent_id'`Идентификатор агента. *agent_id* имеет **тип int**и не имеет значения по умолчанию.  
+`[ @agent_id = ] 'agent_id'` Идентификатор агента. *agent_id* имеет **тип int**и не имеет значения по умолчанию.  
   
-`[ @profile_id = ] 'profile_id'`Идентификатор профиля, который должен использоваться агентом. *profile_id* имеет **тип int**и не имеет значения по умолчанию. Чтобы просмотреть список профилей, определенных для каждого агента, используйте [sp_help_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md). Дополнительные сведения о системных профилях см. в разделе [Профили агента репликации](../../relational-databases/replication/agents/replication-agent-profiles.md).  
+`[ @profile_id = ] 'profile_id'` Идентификатор профиля, который должен использоваться агентом. *profile_id* имеет **тип int**и не имеет значения по умолчанию. Чтобы просмотреть список профилей, определенных для каждого агента, используйте [sp_help_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md). Дополнительные сведения о системных профилях см. в разделе [Профили агента репликации](../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -60,7 +61,7 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_update_agent_profile**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Профили агента репликации](../../relational-databases/replication/agents/replication-agent-profiles.md)   
  [sp_add_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
  [sp_change_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)   

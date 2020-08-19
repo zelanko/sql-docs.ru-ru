@@ -1,4 +1,5 @@
 ---
+description: Свойство Enabled (класс ServerNetworkProtocol)
 title: Свойство Enabled (класс servernetworkprotocol)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a514822a-91f1-4aca-9175-2b96cff29700
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 755ef436a63a421fa2ee7ffaa335dee452d40d8b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0da8f0be827c4d65ee675be81116655cb42ef69e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888809"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446250"
 ---
 # <a name="enabled-property-servernetworkprotocol-class"></a>Свойство Enabled (класс ServerNetworkProtocol)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ object.Enabled [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Логическое значение, которое указывает, включен ли сетевой протокол сервера: **true** , если включен; в противном случае — **false** .  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

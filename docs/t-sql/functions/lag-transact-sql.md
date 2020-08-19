@@ -1,4 +1,5 @@
 ---
+description: Предложение LAG (Transact-SQL)
 title: LAG (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 11/09/2017
@@ -19,12 +20,12 @@ ms.assetid: a9a90bdb-3f80-4c97-baca-b7407bcdc7f0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0a331ba23c92f84615284dab9440d85a1c1f577
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 7edaea7f6e1f2e491674454aeac9b90d5e00d29e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394109"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445772"
 ---
 # <a name="lag-transact-sql"></a>Предложение LAG (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +50,7 @@ LAG (scalar_expression [,offset] [,default])
  *offset*  
  Количество строк до строки перед текущей строкой, из которой необходимо получить значение. Если значение аргумента не указано, то по умолчанию принимается 1. *offset* может быть столбцом, вложенным запросом или другим выражением, с помощью которого вычисляется целая положительная величина, или другим типом, который может быть неявно преобразован в **bigint**. *offset* не может быть отрицательным значением или аналитической функцией.  
   
- *значение по умолчанию*  
+ *default*  
  Возвращаемое значение, когда *offset* находится за пределами секции. Если значение по умолчанию не задано, то возвращается NULL. *default* может быть столбцом, вложенным запросом или другим выражением, но не может быть аналитической функцией. Аргумент *default* должен быть совместим по типу с аргументом *scalar_expression*.  
   
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
@@ -170,8 +171,8 @@ Year Quarter  SalesQuota  PrevQuota  Diff
 2002 4       154000.0000   7000.0000   84000.0000
 ```  
   
-## <a name="see-also"></a>См. также:  
- [LEAD &#40; Transact-SQL &#41;](../../t-sql/functions/lead-transact-sql.md)  
+## <a name="see-also"></a>См. также  
+ [LEAD &#40;Transact-SQL&#41;](../../t-sql/functions/lead-transact-sql.md)  
   
   
 

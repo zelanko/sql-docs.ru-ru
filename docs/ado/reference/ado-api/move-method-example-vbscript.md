@@ -1,4 +1,5 @@
 ---
+description: Пример метода Move (VBScript)
 title: Пример метода Move (VBScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 23db96e87538227691f00548c47c2f3d1858349b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d16881ba6ee448ab8efda506e506b0a7f3bde02c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762485"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443226"
 ---
 # <a name="move-method-example-vbscript"></a>Пример метода Move (VBScript)
 В этом примере метод [Move](../../../ado/reference/ado-api/move-method-ado.md) используется для размещения указателя записи на основе вводимых пользователем данных.  
@@ -182,6 +183,6 @@ End Sub
 <!-- EndMoveVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод Move (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -1,4 +1,5 @@
 ---
+description: Метод NextRecordset (ADO)
 title: Метод NextRecordset (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f6eaf12308db09c81b426b33f0002cd4664f62b8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8ec3bb3a6c5f7e4f6d6654ca059e7ace7d97d9da
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762395"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443096"
 ---
 # <a name="nextrecordset-method-ado"></a>Метод NextRecordset (ADO)
 Очищает текущий объект [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) и возвращает следующий **набор записей** путем перемещения по ряду команд.  
@@ -39,7 +40,7 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
   
 #### <a name="parameters"></a>Параметры  
  *RecordsAffected*  
- Необязательный элемент. **Длинная** переменная, к которой поставщик возвращает количество записей, затронутых текущей операцией.  
+ Необязательный параметр. **Длинная** переменная, к которой поставщик возвращает количество записей, затронутых текущей операцией.  
   
 > [!NOTE]
 >  Этот параметр возвращает только число записей, затронутых операцией. Он не возвращает число записей из инструкции SELECT, используемой для создания **набора записей**.  
@@ -59,9 +60,9 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
   
  Однако другие поставщики могут выполнить следующую команду в операторе только после вызова NextRecordset. Для этих поставщиков, если вы явно закрыли объект **Recordset** перед выполнением всех инструкций команды, ADO не выполняет оставшиеся команды.  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример метода NextRecordset (Visual Basic)](../../../ado/reference/ado-api/nextrecordset-method-example-vb.md)   
  [Пример метода NextRecordset (Visual C++)](../../../ado/reference/ado-api/nextrecordset-method-example-vc.md)   

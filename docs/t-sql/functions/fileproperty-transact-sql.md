@@ -1,4 +1,5 @@
 ---
+description: FILEPROPERTY (Transact-SQL)
 title: FILEPROPERTY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: b82244ed-d623-431f-aa06-8017349d847f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bebbaff7f4a09732705bc7168ca034f8f99a3e2c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: f05d17efce6b568d5abd2cc81f3a7954f19fb34e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111537"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445766"
 ---
 # <a name="fileproperty-transact-sql"></a>FILEPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,16 +48,16 @@ FILEPROPERTY ( file_name , property )
 
 ## <a name="arguments"></a>Аргументы
  *file_name*  
- Выражение, которое содержит имя файла, связанного с текущей базой данных, для которого нужно возвратить сведения о свойстве. Аргумент *file_name* имеет тип **nchar(128)** .  
+ Выражение, которое содержит имя файла, связанного с текущей базой данных, для которого нужно возвратить сведения о свойстве. Аргумент *file_name* имеет тип **nchar(128)**.  
   
  *property*  
  Выражение, которое содержит имя свойства файла, которое нужно возвратить. Аргумент *property* имеет тип **varchar(128)** и может принимать одно из перечисленных ниже значений.  
   
-|Значение|Description|Возвращенное значение|  
+|Значение|Описание|Возвращенное значение|  
 |-----------|-----------------|--------------------|  
-|**IsReadOnly**|Файловая группа доступна только для чтения.|1 = True<br /><br /> 0 = False.<br /><br /> NULL = Введенные значения недопустимы.|  
-|**IsPrimaryFile**|Файл является первичным файлом.|1 = True<br /><br /> 0 = False.<br /><br /> NULL = Введенные значения недопустимы.|  
-|**IsLogFile**|Файл является файлом журнала.|1 = True<br /><br /> 0 = False.<br /><br /> NULL = Введенные значения недопустимы.|  
+|**IsReadOnly**|Файловая группа доступна только для чтения.|1 = истина<br /><br /> 0 = ложь<br /><br /> NULL = Введенные значения недопустимы.|  
+|**IsPrimaryFile**|Файл является первичным файлом.|1 = истина<br /><br /> 0 = ложь<br /><br /> NULL = Введенные значения недопустимы.|  
+|**IsLogFile**|Файл является файлом журнала.|1 = истина<br /><br /> 0 = ложь<br /><br /> NULL = Введенные значения недопустимы.|  
 |**SpaceUsed**|Объем пространства, используемого указанным файлом.|Число страниц, выделенных для файла.|  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
@@ -83,7 +84,7 @@ Primary File
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [FILEGROUPPROPERTY (Transact-SQL)](../../t-sql/functions/filegroupproperty-transact-sql.md)   
  [Функции метаданных (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sp_spaceused (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   

@@ -1,4 +1,5 @@
 ---
+description: sys.sp_cdc_get_captured_columns (Transact-SQL)
 title: sys. sp_cdc_get_captured_columns (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: d9e680be-ab9b-4e0c-b63a-90658f241df8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b2726479cf082b33fddbec609321e82aeafa9633
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8fbbbd6734f3f80453ef2c3d99e7e8afb9822369
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891084"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446701"
 ---
 # <a name="syssp_cdc_get_captured_columns-transact-sql"></a>sys.sp_cdc_get_captured_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -69,7 +70,7 @@ sys.sp_cdc_get_captured_columns
 |numeric_scale|**int**|Масштаб числового столбца; в противном случае — NULL.|  
 |datetime_precision|**smallint**|Точность для столбца типа datetime; в противном случае — NULL.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Используйте представление sys. sp_cdc_get_captured_columns, чтобы получить сведения о столбцах, возвращенных запросом функций запроса экземпляра отслеживания [CDC. fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) или [cdc. fn_cdc_get_net_changes_<](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)capture_instance>. Имена, идентификаторы и положение столбцов не изменяются в течение всего времени существования экземпляра отслеживания. Изменяется только тип данных столбца, если изменяется тип данных базового исходного столбца отслеживаемой таблицы. Добавление и удаление столбцов из исходной таблицы не влияет на столбцы, обрабатываемые уже существующими экземплярами отслеживания.  
   
  Используйте представление [sys. sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md) для получения сведений о инструкциях языка описания данных DDL, примененных к исходной таблице. Результирующий набор содержит сведения обо всех изменениях DDL, изменивших структуру отслеживаемого исходного столбца.  
@@ -88,7 +89,7 @@ EXECUTE sys.sp_cdc_get_captured_columns
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sys. sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
   
   

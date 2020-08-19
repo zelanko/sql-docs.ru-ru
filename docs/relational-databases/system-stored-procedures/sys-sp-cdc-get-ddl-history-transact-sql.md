@@ -1,4 +1,5 @@
 ---
+description: sys.sp_cdc_get_ddl_history (Transact-SQL)
 title: sys. sp_cdc_get_ddl_history (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4dee5e2e-d7e5-4fea-8037-a4c05c969b3a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c72e4a325c8374c3d08ae00cc5af6898d5e206f2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f9835c61aeb1f11b57250465697187cfcc6501f8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891105"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446661"
 ---
 # <a name="syssp_cdc_get_ddl_history-transact-sql"></a>sys.sp_cdc_get_ddl_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -61,7 +62,7 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
 |ddl_lsn|**binary(10)**|Регистрационный номер транзакции в журнале (LSN), связанный с изменением DDL.|  
 |ddl_time|**datetime**|Время изменения DDL.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Изменения DDL в исходной таблице, которые изменяют структуру столбцов исходной таблицы, например добавление или удаление столбца или изменение типа данных существующего столбца, хранятся в таблице [CDC. ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) . Эти изменения доступны хранимым процедурам. Записи в таблицу «cdc.ddl_history» добавляются во время считывания процессом отслеживания транзакций DDL в журнале.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -84,7 +85,7 @@ EXECUTE sys.sp_cdc_get_ddl_history
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sys. sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
   
   

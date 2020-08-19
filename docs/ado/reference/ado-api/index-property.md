@@ -1,4 +1,5 @@
 ---
+description: Свойство Index
 title: Свойство index | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1c79e271-21ec-41a8-8163-c5e89f0001a7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2a77aa3c2e144859eaead332e71c5c4c8776608c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 80d15588279e584ec4d63d4336239952f22405cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758700"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443466"
 ---
 # <a name="index-property"></a>Свойство Index
 Указывает имя индекса, действующего в настоящий момент для объекта [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
@@ -49,10 +50,10 @@ ms.locfileid: "82758700"
   
  Встроенное свойство **индекса** не связано с динамическим свойством [optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) , хотя они работают с индексами.  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример метода Seek и свойства Index (Visual Basic)](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
  [Объект index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [Seek, метод](../../../ado/reference/ado-api/seek-method.md)

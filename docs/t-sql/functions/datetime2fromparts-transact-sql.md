@@ -1,4 +1,5 @@
 ---
+description: DATETIME2FROMPARTS (Transact-SQL)
 title: DATETIME2FROMPARTS (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/29/2017
@@ -18,12 +19,12 @@ ms.assetid: 632b757d-d2d1-43a5-b870-792a779ae204
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 97c4158d8c425a252d3bb0c09743706422761af5
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 2183bdd6d636ec7b8a63cc6bc73896de3eb69981
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396961"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445807"
 ---
 # <a name="datetime2fromparts-transact-sql"></a>DATETIME2FROMPARTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -68,7 +69,7 @@ DATETIME2FROMPARTS ( year, month, day, hour, minute, seconds, fractions, precisi
 ## <a name="return-types"></a>Типы возвращаемых данных
 **datetime2(** *precision* **)**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
 Функция `DATETIME2FROMPARTS` возвращает полностью инициализированное значение типа **datetime2**. Функция `DATETIME2FROMPARTS` вызывает ошибку, если по крайней мере один обязательный аргумент имеет недопустимое значение. Функция `DATETIME2FROMPARTS` возвращает NULL, если по крайней мере один обязательный аргумент имеет значение NULL. Однако если аргумент *precision* имеет значение NULL, функция `DATETIME2FROMPARTS` вызывает ошибку.
 
 Аргумент *fractions* зависит от аргумента *precision*. Например, если значение *precision* равно 7, то каждая дробная часть представляет 100 наносекунд; если значение *precision* равно 3, то каждая дробная часть представляет миллисекунду. Если значение *precision* равно нулю, то значение *fractions* также должно быть равно нулю. В противном случае функция `DATETIME2FROMPARTS` вызовет ошибку.
@@ -128,7 +129,7 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 [datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)
   
   

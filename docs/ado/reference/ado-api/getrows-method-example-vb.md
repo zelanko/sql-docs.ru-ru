@@ -1,4 +1,5 @@
 ---
+description: Пример метода GetRows (Visual Basic)
 title: Пример метода GetRows (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f7c78bb-7bb8-4c4f-8e5a-4d3bfc8a208f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 72c6a4755b05399605828e73f69bca7b8da632eb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3d05785a005ea6f0bbeb000d8abb74609318b741
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760020"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443526"
 ---
 # <a name="getrows-method-example-vb"></a>Пример метода GetRows (Visual Basic)
 В этом примере метод [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) используется для получения указанного числа строк из [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) и для заполнения массива результирующими данными. Метод **GetRows** возвращает меньше требуемого числа строк в двух случаях: или, если был достигнут [конец файла](../../../ado/reference/ado-api/bof-eof-properties-ado.md) , или если **GetRows** попытался получить запись, удаленную другим пользователем. Функция возвращает **значение false** только в том случае, если происходит второй вариант. Для выполнения этой процедуры требуется функция Жетровсок.  
@@ -112,6 +113,6 @@ End Sub
 'EndGetRowsVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод GetRows (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

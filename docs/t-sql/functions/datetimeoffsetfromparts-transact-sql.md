@@ -1,4 +1,5 @@
 ---
+description: DATETIMEOFFSETFROMPARTS (Transact-SQL)
 title: DATETIMEOFFSETFROMPARTS (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/29/2017
@@ -18,12 +19,12 @@ ms.assetid: 463da1f4-b4b6-45a3-9a95-ea1f99575542
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b0a383d6a9405d0aa80b8f0c1e4f3c2bc98c9667
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: bcb6fea31efdc42e95f28fba01b416b00cee7038
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396941"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445823"
 ---
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -75,9 +76,9 @@ DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, ho
 ## <a name="return-types"></a>Типы возвращаемых данных
 **datetimeoffset(** *precision* **)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
 
-Функция `DATETIMEOFFSETFROMPARTS` возвращает полностью инициализированный тип данных **datetimeoffset**. Аргументы смещения представляют смещение часового пояса. Если аргументы смещения пропущены, в `DATETIMEOFFSETFROMPARTS` предполагается, что смещение часового пояса равно `00:00`, то есть отсутствует. Если аргументы смещения указаны, `DATETIMEOFFSETFROMPARTS` требует наличия значений обоих аргументов, причем оба должны быть или положительными, или отрицательными. Если *minute_offset* указывается без значения *hour_offset*, `DATETIMEOFFSETFROMPARTS` вызывает ошибку. Если другие аргументы имеют недопустимые значения, `DATETIMEOFFSETFROMPARTS` вызывает ошибку. `NULL` возвращает `DATETIMEOFFSETFROMPARTS`, если хотя бы один обязательный аргумент имеет значение `NULL`. Но если *precision* имеет значение `NULL`, `DATETIMEOFFSETFROMPARTS` вызывает ошибку.  
+Функция `DATETIMEOFFSETFROMPARTS` возвращает полностью инициализированный тип данных **datetimeoffset**. Аргументы смещения представляют смещение часового пояса. Если аргументы смещения пропущены, в `DATETIMEOFFSETFROMPARTS` предполагается, что смещение часового пояса равно `00:00`, то есть отсутствует. Если аргументы смещения указаны, `DATETIMEOFFSETFROMPARTS` требует наличия значений обоих аргументов, причем оба должны быть или положительными, или отрицательными. Если *minute_offset* указывается без значения *hour_offset*, `DATETIMEOFFSETFROMPARTS` вызывает ошибку. Если другие аргументы имеют недопустимые значения, `DATETIMEOFFSETFROMPARTS` вызывает ошибку. `DATETIMEOFFSETFROMPARTS` возвращает `NULL`, если хотя бы один обязательный аргумент имеет значение `NULL`. Но если *precision* имеет значение `NULL`, `DATETIMEOFFSETFROMPARTS` вызывает ошибку.  
   
 Аргумент *fractions* зависит от аргумента precision. Например, если значение precision равно 7, каждая дробная часть представляет 100 наносекунд, а если значение precision равно 3, каждая дробная часть представляет миллисекунду. Если значение precision равно нулю, значение fractions также должно быть равно нулю. В противном случае `DATETIMEOFFSETFROMPARTS` вызывает ошибку.  
   
@@ -137,7 +138,7 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 [datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md)  
 [AT TIME ZONE (Transact-SQL)](../../t-sql/queries/at-time-zone-transact-sql.md)
   

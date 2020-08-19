@@ -1,4 +1,5 @@
 ---
+description: IHpublications (Transact-SQL)
 title: Ихпубликатионс (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3297f557e170a9f9cb8f67d10b9339997fa184d4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0192dc6d2d01900b58a8dcb5fde34d46384adc50
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890295"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446620"
 ---
 # <a name="ihpublications-transact-sql"></a>IHpublications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +61,7 @@ ms.locfileid: "85890295"
 |**queue_type**|**int**|Задает используемый тип очереди. Может принимать одно из следующих значений:<br /><br /> **1** = MSMQ, которая использует [!INCLUDE[msCoName](../../includes/msconame-md.md)] очередь сообщений для хранения транзакций.<br /><br /> **2** = SQL, который использует [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для хранения транзакций.<br /><br /> Этот столбец не используется издателями, отличными от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Примечание. Использование [!INCLUDE[msCoName](../../includes/msconame-md.md)] очереди сообщений устарело и больше не поддерживается.<br /><br /> *Этот столбец не поддерживается для издателей, отличных от SQL.*|  
 |**ad_guidname**|**sysname**|Указывает, опубликована ли публикация в каталоге [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Допустимый глобальный уникальный идентификатор (GUID) указывает, что публикация опубликована в [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory, а идентификатор GUID — соответствующая Active Directory **objectGUID**объекта публикации. Если это значение равно NULL, публикация в [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory не публикуется. *Не поддерживается издателями, отличными от издателей SQL.*|  
 |**backward_comp_level**|**int**|Уровень совместимости базы данных может иметь одно из следующих значений:<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .<br /><br /> *Не поддерживается издателями, отличными от издателей SQL.*|  
-|**nописание**|**nvarchar(255)**|Описание публикации.|  
+|**description**|**nvarchar(255)**|Описание публикации.|  
 |**independent_agent**|**bit**|Показывает наличие изолированного агента распространителя для этой публикации.<br /><br /> **0** = публикация использует общий агент распространения, а каждая пара базы данных издателя или подписчика имеет один общий агент.<br /><br /> **1** = для этой публикации существует изолированный агент распространения.|  
 |**immediate_sync**|**bit**|Указывает, создаются ли файлы синхронизации при каждом запуске агент моментальных снимков, где **1** означает, что они создаются каждый раз при запуске агента.|  
 |**allow_push**|**bit**|Указывает, разрешены ли принудительные подписки на публикацию, где **1** означает, что они разрешены.|  
@@ -72,13 +73,13 @@ ms.locfileid: "85890295"
 |**replicate_ddl**|**int**|Указывает, поддерживается ли для публикации репликация схемы. значение **1** указывает, что инструкции DDL, выполняемые на издателе, реплицируются, а **0** означает, что инструкции DDL не реплицируются. Дополнительные сведения см. в статье [Внесение изменений в схемы баз данных публикации](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md). *Не поддерживается издателями, отличными от издателей SQL.*|  
 |**options**|**int**|Битовая карта, указывающая дополнительные параметры публикации, со следующими необязательными значениями битов:<br /><br /> **0x1** — включается для одноранговой репликации.<br /><br /> **0x2** — публиковать только локальные изменения.<br /><br /> **0x4** — включено для подписчиков, отличных от SQL Server.|  
   
-## <a name="see-also"></a>См. также  
- [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Представления репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
- [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
- [syspublications &#40;системного представления&#41; &#40;&#41;Transact-SQL](../../relational-databases/system-views/syspublications-system-view-transact-sql.md)   
+ [sp_helppublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
+ [syspublications &#40;системного представления&#41; &#40;&#41;Transact-SQL ](../../relational-databases/system-views/syspublications-system-view-transact-sql.md)   
  [syspublications &#40;Transact-SQL&#41;](../../relational-databases/system-tables/syspublications-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_reinitpullsubscription (Transact-SQL)
 title: sp_reinitpullsubscription (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d9a581803d232f704dd27592a354c6331660ac03
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 74a3aa00a5b298639b1e643842af1d834a664d58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751707"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446854"
 ---
 # <a name="sp_reinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,16 +40,16 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'`Имя издателя. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'` Имя издателя. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publisher_db = ] 'publisher_db'`Имя базы данных издателя. Аргумент *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher_db = ] 'publisher_db'` Имя базы данных издателя. Аргумент *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию All, что помечает все подписки для повторной инициализации.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию All, что помечает все подписки для повторной инициализации.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_reinitpullsubscription** используется в репликации транзакций.  
   
  **sp_reinitpullsubscription** не поддерживается для одноранговой репликации транзакций.  
@@ -65,7 +66,7 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_reinitpullsubscription**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Повторная инициализация подписки](../../relational-databases/replication/reinitialize-a-subscription.md)   
  [Повторная инициализация подписок](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

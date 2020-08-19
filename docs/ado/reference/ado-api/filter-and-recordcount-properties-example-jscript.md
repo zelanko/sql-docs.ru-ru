@@ -1,4 +1,5 @@
 ---
+description: Пример свойств Filter и RecordCount (JScript)
 title: Пример свойств Filter и RecordCount (JScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 677fa67e-9cb9-4d7d-a786-beeb5bee5236
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 339a605e926b88dae5cee515af9579152613692c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 901fee0602957526cfa19d573161a4b9f2504900
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756796"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443706"
 ---
 # <a name="filter-and-recordcount-properties-example-jscript"></a>Пример свойств Filter и RecordCount (JScript)
 Этот пример открывает **набор записей** в таблице компании базы данных Northwind, а затем использует свойство [Filter](../../../ado/reference/ado-api/filter-property.md) для ограничения записей, видимых для тех, где поле CompanyName начинается с буквы D. вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **филтержс. ASP**.  
@@ -148,7 +149,7 @@ BODY {
 <!-- EndFilterJS -->  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство Filter](../../../ado/reference/ado-api/filter-property.md)   
  [Свойство RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

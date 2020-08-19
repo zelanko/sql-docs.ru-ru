@@ -1,4 +1,5 @@
 ---
+description: Пример метода Find (JScript)
 title: Пример метода Find (JScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: adb5c37e-7874-41db-b4ee-572c1323deff
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6194866ef1b4649e6d54af8b8777cca8bce9bf52
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3c328a3efe858c7abd9872eef0fcd28dfa1ccb36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760120"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443636"
 ---
 # <a name="find-method-example-jscript"></a>Пример метода Find (JScript)
 В этом примере используется метод [Find](../../../ado/reference/ado-api/find-method-ado.md) объекта [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) для поиска и просмотра компаний в базе данных ***Northwind*** , имя которых начинается с буквы G. вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **финджс. ASP**.  
@@ -152,6 +153,6 @@ BODY {
 <!-- EndFindJS -->  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод Find (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -1,4 +1,5 @@
 ---
+description: Свойства HelpContext и HelpFile
 title: HelpContext, свойства HelpFile | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2b9ef441-993c-44d4-8f87-fac0979dac1d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 13fb3f0b5bf55ac9acb525183eba6d8645f4de62
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 628d3c0d01cc1b62304627fb310705b093976f8c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758720"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443486"
 ---
 # <a name="helpcontext-helpfile-properties"></a>Свойства HelpContext и HelpFile
 Указывает файл справки и раздел, связанный с объектом [Error](../../../ado/reference/ado-api/error-object.md) .  
@@ -40,10 +41,10 @@ ms.locfileid: "82758720"
 ## <a name="remarks"></a>Remarks  
  Если в свойстве **HelpFile** указан файл справки, свойство **HelpContext** используется для автоматического вывода справочного раздела, который он идентифицирует. Если соответствующий раздел справки недоступен, свойство **HelpContext** возвращает нуль, а свойство **HelpFile** возвращает строку нулевой длины ("").  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект Error](../../../ado/reference/ado-api/error-object.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Примеры свойств Description, HelpContext, HelpFile, NativeError, Number, Source и SQLState (Visual Basic)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
  [Примеры свойств Description, HelpContext, HelpFile, NativeError, Number, Source и SQLState (Visual c++)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [Свойство Description](../../../ado/reference/ado-api/description-property.md)   

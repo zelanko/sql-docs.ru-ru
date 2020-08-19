@@ -1,4 +1,5 @@
 ---
+description: Field (ADO — синтаксис WFC)
 title: Field (ADO-синтаксис WFC) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7e01cb24-2338-4f92-ad46-8d97248e1a4d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a1c4167b033163c8106a31070a83d044eb8e8fe7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b9f3c2e1cd7d64255b0bae2d8085a499530e7476
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757080"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443786"
 ---
 # <a name="field-ado---wfc-syntax"></a>Field (ADO — синтаксис WFC)
 ## <a name="package-commswfcdata"></a>упаковать com. MS. WFC. Data  
@@ -98,5 +99,5 @@ public Object getObject(Class c)
 public void setObject(Object value)  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Field](../../../ado/reference/ado-api/field-object.md)

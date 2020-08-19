@@ -1,4 +1,5 @@
 ---
+description: Метод LoadFromFile (ADO)
 title: Метод Лоадфромфиле (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b18d8d38-7354-4a94-b637-6ac035faa433
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7f4b28a7d63654441d8a66730e729483596b3a8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2f07bd7bc6b04dac8c5b352cc6281ce4eb851d3d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754573"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443356"
 ---
 # <a name="loadfromfile-method-ado"></a>Метод LoadFromFile (ADO)
 Загружает содержимое существующего файла в [поток](../../../ado/reference/ado-api/stream-object-ado.md).  
@@ -47,5 +48,5 @@ Stream.LoadFromFileFileName
   
  Поскольку 2 байта можно добавить в начало потока для кодирования, размер потока может не совпадать с размером файла, из которого он был загружен.  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

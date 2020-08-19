@@ -1,4 +1,5 @@
 ---
+description: CREATE MESSAGE TYPE (Transact-SQL)
 title: CREATE MESSAGE TYPE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 04/10/2017
@@ -28,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 70cdaf07914a409e83c8fc291964d79ce706a808
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 4966690508bdc48b73471519595b3010443128b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393192"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444873"
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

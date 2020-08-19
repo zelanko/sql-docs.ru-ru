@@ -1,4 +1,5 @@
 ---
+description: CONTEXT_INFO (Transact-SQL)
 title: CONTEXT_INFO (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/24/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 571320f5-7228-4b0e-9d01-ab732d2d1eab
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9b53dab8d51f251721b205b4da4171ca91188e97
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c8b4f5b2fa72f6122f457f2b86ccfe7ec399e2bc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112525"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445886"
 ---
 # <a name="context_info--transact-sql"></a>CONTEXT_INFO (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +51,7 @@ CONTEXT_INFO()
 -   в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращается значение NULL;  
 -   в [!INCLUDE[ssSDS](../../includes/sssds-md.md)] возвращается уникальный идентификатор GUID, связанный с сеансом.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
 Множественный активный результирующий набор (функция MARS) позволяет приложениям запускать несколько пакетов или запросов одновременно, используя одно и то же подключение. Если один из пакетов подключения MARS запустит SET CONTEXT_INFO, функция `CONTEXT_INFO` вернет новое контекстное значение, когда функция `CONTEXT_INFO` запускается в том же пакете, что и инструкция SET. Если функция `CONTEXT_INFO` выполняется в одном или нескольких других пакетах подключения, `CONTEXT_FUNCTION` не возвращает новое значение, если эти пакеты не запускаются после пакета, выполнившего инструкцию SET.
   
 ## <a name="permissions"></a>Разрешения  
@@ -69,7 +70,7 @@ SELECT CONTEXT_INFO();
 GO  
 ```  
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 [SET CONTEXT_INFO (Transact-SQL)](../../t-sql/statements/set-context-info-transact-sql.md)
   
   

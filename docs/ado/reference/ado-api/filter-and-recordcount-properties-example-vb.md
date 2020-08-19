@@ -1,4 +1,5 @@
 ---
+description: Примеры свойств Filter и RecordCount (Visual Basic)
 title: Пример свойств Filter и RecordCount (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8eeb68293e7c800fda4c4dd395f840cfeeb2d572
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0f948d2f0ba3a70c1f9a7b3279b0eb9bf68b5b3a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82756771"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443696"
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>Примеры свойств Filter и RecordCount (Visual Basic)
 Этот пример открывает [набор записей](../../../ado/reference/ado-api/recordset-object-ado.md) в таблице Publishers базы данных ***pubs*** . Затем используется свойство [Filter](../../../ado/reference/ado-api/filter-property.md) , чтобы ограничить количество видимых записей для издателей в определенной стране или регионе. Свойство **RecordCount** используется для отображения разницы между отфильтрованными и неотфильтрованными наборами записей.  
@@ -114,7 +115,7 @@ End Sub
 Attribute VB_Name = "Filter"  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство Filter](../../../ado/reference/ado-api/filter-property.md)   
  [Свойство RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -1,4 +1,5 @@
 ---
+description: sp_MSchange_merge_agent_properties (Transact-SQL)
 title: sp_MSchange_merge_agent_properties (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f775fa0f-28c7-4863-89ce-7bcfa1ab8b5e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 65cb1e298293c0be44439fb732554baa2914788a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7e81812af12cf7789c48d890ced2aa06a5829ad0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893505"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446926"
 ---
 # <a name="sp_mschange_merge_agent_properties-transact-sql"></a>sp_MSchange_merge_agent_properties (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,25 +44,25 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'`Имя издателя. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'` Имя издателя. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publisher_db = ] 'publisher_db'`Имя базы данных публикации. Аргумент *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher_db = ] 'publisher_db'` Имя базы данных публикации. Аргумент *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @subscriber = ] 'subscriber'`Имя подписчика. Аргумент *Subscriber* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @subscriber = ] 'subscriber'` Имя подписчика. Аргумент *Subscriber* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @subscriber_db = ] 'subscriber_db'`Имя базы данных подписки. Аргумент *subscriber_db* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @subscriber_db = ] 'subscriber_db'` Имя базы данных подписки. Аргумент *subscriber_db* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @property = ] 'property'`Изменяемое свойство публикации. Аргумент *Property* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @property = ] 'property'` Изменяемое свойство публикации. Аргумент *Property* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @value = ] 'value'`Новое значение свойства. *value* имеет тип **nvarchar (524)** и значение по умолчанию NULL.  
+`[ @value = ] 'value'` Новое значение свойства. *value* имеет тип **nvarchar (524)** и значение по умолчанию NULL.  
   
  В данной таблице описаны свойства задания агента слияния, которые можно изменить, и ограничения на значения этих свойств.  
   
 |Свойство|Значение|Описание|  
 |--------------|-----------|-----------------|  
-|**nописание**||Краткое описание подписки.|  
+|**description**||Краткое описание подписки.|  
 |**merge_job_login**||Имя входа учетной записи [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, с которой выполняется агент.|  
 |**merge_job_password**||Пароль учетной записи Windows, под которой запускается задание агента.|  
 |**publisher_login**||Имя входа, используемое при подключении к издателю для синхронизации подписки.|  

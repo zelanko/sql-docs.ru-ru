@@ -1,4 +1,5 @@
 ---
+description: Скалярные функции ODBC (Transact-SQL)
 title: Скалярные функции ODBC (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
@@ -52,17 +53,17 @@ ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ebe21e82e6065aa28e4967b7d2f4d13f0fafe9d6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4ce160465056b18c7f6f347b0587603dd489fa06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003826"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445700"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>Скалярные функции ODBC (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  В инструкциях [ можно использовать ](https://go.microsoft.com/fwlink/?LinkID=88579)скалярные функции ODBC[!INCLUDE[tsql](../../includes/tsql-md.md)]. Эти инструкции интерпретируются средой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Они могут использоваться в хранимых процедурах и других определяемых пользователем функциях. Они включают строковые, числовые и системные функции, а также функции даты, времени и интервалов.  
+  В инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)] можно использовать [скалярные функции ODBC](https://go.microsoft.com/fwlink/?LinkID=88579). Эти инструкции интерпретируются средой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Они могут использоваться в хранимых процедурах и других определяемых пользователем функциях. Они включают строковые, числовые и системные функции, а также функции даты, времени и интервалов.  
   
 ## <a name="usage"></a>Использование  
  `SELECT {fn <function_name> [ (<argument>,....n) ] }`  
@@ -72,7 +73,7 @@ ms.locfileid: "86003826"
   
 ### <a name="string-functions"></a>Строковые функции  
   
-|Компонент|Description|  
+|Функция|Описание|  
 |--------------|-----------------|  
 |BIT_LENGTH( строковое_выражение ) (ODBC 3.0)|Возвращает длину строкового выражения в битах.<br /><br /> Возвращает внутренний размер заданного типа данных без преобразования "строкового_выражения" в строку.|  
 |CONCAT( строковое_выражение1,строковое_выражение2) (ODBC 1.0)|Возвращает символьную строку, являющуюся результатом сцепления строк строковое_выражение2 и строковое_выражение1. Полученная в результате строка зависит от СУБД. Например, если столбец, представленный строкой строковое_выражение1, объединяется со значением NULL, DB2 возвратит NULL, а [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвратит строку со значением, отличным от NULL.|  
@@ -80,13 +81,13 @@ ms.locfileid: "86003826"
   
 ### <a name="numeric-function"></a>Числовые функции  
   
-|Компонент|Description|  
+|Функция|Описание|  
 |--------------|-----------------|  
 |TRUNCATE( числовое_выражение, целое_выражение) (ODBC 2.0)|Возвращает выражение «числовое_выражение», усеченное до целого числа позиций «целое_выражение» справа от десятичной запятой. Если значение "целое_выражение" отрицательное, выражение "числовое_выражение" усекается до &#124;целое_выражение&#124; позиций слева от десятичной запятой.|  
   
 ### <a name="time-date-and-interval-functions"></a>Функции даты, времени и интервалов  
   
-|Компонент|Description|  
+|Функция|Описание|  
 |--------------|-----------------|  
 |CURRENT_DATE( ) (ODBC 3.0)|Возвращает текущую дату.|  
 |CURDATE( ) (ODBC 3.0)|Возвращает текущую дату.|  

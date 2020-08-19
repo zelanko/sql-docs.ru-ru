@@ -1,4 +1,5 @@
 ---
+description: sp_refresh_parameter_encryption (Transact-SQL)
 title: sp_refresh_parameter_encryption (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/11/2017
@@ -19,11 +20,12 @@ ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e4d6914ce4b46a7fc787b496ebf6b23036b9c21c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1af6c8584c9190bd4611eed4875ec146b6f3656b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002132"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446920"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -45,16 +47,16 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 ## <a name="arguments"></a>Аргументы
 
-`[ @name = ] 'module_name'`Имя хранимой процедуры, определяемой пользователем функции, представления, триггера DML, триггера DDL уровня базы данных или триггера DDL уровня сервера. *module_name* не может быть хранимой процедурой среды CLR или функцией CLR. *module_name* не могут быть привязаны к схеме. *module_name* имеет значение `nvarchar` и не имеет значения по умолчанию. *module_name* может быть составным идентификатором, но может ссылаться только на объекты в текущей базе данных.
+`[ @name = ] 'module_name'` Имя хранимой процедуры, определяемой пользователем функции, представления, триггера DML, триггера DDL уровня базы данных или триггера DDL уровня сервера. *module_name* не может быть хранимой процедурой среды CLR или функцией CLR. *module_name* не могут быть привязаны к схеме. *module_name* имеет значение `nvarchar` и не имеет значения по умолчанию. *module_name* может быть составным идентификатором, но может ссылаться только на объекты в текущей базе данных.
 
-`[ @namespace = ] ' < class > '`Класс указанного модуля. Если *module_name* является триггером DDL, `<class>` требуется. `<class>` — это `nvarchar(20)`. Допустимые входные значения: `DATABASE_DDL_TRIGGER` и `SERVER_DDL_TRIGGER` .    
+`[ @namespace = ] ' < class > '` Класс указанного модуля. Если *module_name* является триггером DDL, `<class>` требуется. `<class>` имеет значение `nvarchar(20)`. Допустимые входные значения: `DATABASE_DDL_TRIGGER` и `SERVER_DDL_TRIGGER` .    
 
 ## <a name="return-code-values"></a>Значения кода возврата  
 
 0 (успешное завершение) или ненулевое значение (неуспешное завершение)
 
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Remarks
 
 Метаданные шифрования для параметров модуля могут устареть, если:   
 * Свойства шифрования столбца в таблице, на которую ссылается модуль, были обновлены. Например, столбец был удален, и был добавлен новый столбец с тем же именем, но с другим типом шифрования, ключом шифрования или алгоритмом шифрования.  
@@ -62,7 +64,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 При изменении свойств шифрования таблицы `sp_refresh_parameter_encryption` должны выполняться для любых модулей прямо или косвенно ссылаться на эту таблицу. Эту хранимую процедуру можно вызывать для этих модулей в любом порядке, не требуя от пользователя сначала обновить внутренний модуль перед переходом к вызывающим его объектам.
 
-`sp_refresh_parameter_encryption`не влияет на разрешения, расширенные свойства или параметры, `SET` связанные с объектом. 
+`sp_refresh_parameter_encryption` не влияет на разрешения, расширенные свойства или параметры, `SET` связанные с объектом. 
 
 Чтобы обновить триггер DDL уровня сервера, необходимо выполнить эту хранимую процедуру в контексте любой базы данных.
 
@@ -152,7 +154,7 @@ EXEC sp_refresh_parameter_encryption [find_patient];
 GO
 ```
 
-## <a name="see-also"></a>См. также 
+## <a name="see-also"></a>См. также: 
 
 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
 [Мастер постоянного шифрования](../../relational-databases/security/encryption/always-encrypted-wizard.md)   

@@ -1,4 +1,5 @@
 ---
+description: Создание триггеров DML
 title: Создание триггеров DML | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/01/2017
@@ -19,12 +20,12 @@ ms.assetid: b2b52258-642b-462e-8e0f-18c09d2eccf4
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6248223fd2901a02e7aed494ea6a8a305e1f56ce
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: aace4785289cd041b72c98a880ac38741bf0d641
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757674"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446367"
 ---
 # <a name="create-dml-triggers"></a>Создание триггеров DML
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -61,8 +62,8 @@ ms.locfileid: "85757674"
     |---------------|-----------|  
     |Автор|*Ваше имя*|  
     |Дата создания|*Сегодняшняя дата*|  
-    |Description|Проверяет кредитоспособность поставщика, прежде чем позволить вставить новый заказ на покупку от этого поставщика.|  
-    |Имя_схемы|Приобретение|  
+    |Описание|Проверяет кредитоспособность поставщика, прежде чем позволить вставить новый заказ на покупку от этого поставщика.|  
+    |Имя_схемы|Покупка|  
     |Имя_триггера|NewPODetail2|  
     |Имя_таблицы|PurchaseOrderDetail|  
     |Команда_изменения_данных|Удаление инструкций UPDATE и DELETE из списка.|  

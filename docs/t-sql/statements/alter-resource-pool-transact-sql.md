@@ -1,4 +1,5 @@
 ---
+description: Инструкция ALTER RESOURCE POOL (Transact-SQL)
 title: ALTER RESOURCE POOL (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 05/01/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a51d04f848e86c5b8dc242cd959aef6da393aa38
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 17b7e78f6d5a57b15aa2bde0eaba68b86ae53fc5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381148"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444890"
 ---
 # <a name="alter-resource-pool-transact-sql"></a>Инструкция ALTER RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -76,7 +77,7 @@ ALTER RESOURCE POOL { pool_name | "default" }
  MAX_CPU_PERCENT =*value*  
  Указывает максимальную среднюю пропускную способность ЦП для всех запросов в пуле ресурсов при возникновении состязания за ресурсы ЦП. *value* имеет тип integer и значение по умолчанию 100. Диапазон допустимых значений для *value* — от 1 до 100.  
   
- CAP_CPU_PERCENT =*value*  
+ CAP_CPU_PERCENT = *значение*  
  **Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.  
   
  Указывает целевую максимальную емкость ЦП для запросов в пуле ресурсов. *value* имеет тип integer и значение по умолчанию 100. Диапазон допустимых значений для *value* — от 1 до 100.  
@@ -101,18 +102,18 @@ INNER JOIN sys.dm_os_schedulers AS sc
       AND sc.scheduler_id < 1048576;  
 ```  
   
- MIN_MEMORY_PERCENT =*value*  
+ MIN_MEMORY_PERCENT = *значение*  
  Указывает минимальный объем памяти, резервируемый для данного пула ресурсов, который не подлежит использованию совместно с другими пулами ресурсов. *value* имеет тип integer и значение по умолчанию 0. Диапазон допустимых значений для *value* — от 0 до 100.  
   
  MAX_MEMORY_PERCENT =*value*  
  Указывает общий объем памяти сервера, который может использоваться для запросов в данном пуле ресурсов. *value* имеет тип integer и значение по умолчанию 100. Диапазон допустимых значений для *value* — от 1 до 100.  
   
- MIN_IOPS_PER_VOLUME =*value*  
+ MIN_IOPS_PER_VOLUME = *значение*  
  **Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.  
   
  Указывает минимальный объем операций ввода-вывода в секунду (IOPS) на дисковый том, который следует резервировать для пула ресурсов. Диапазон допустимых значений для *value* — от 0 до 2^31-1 (2 147 483 647). Укажите значение 0, чтобы не указывать минимальный порог для пула.  
   
- MAX_IOPS_PER_VOLUME =*value*  
+ MAX_IOPS_PER_VOLUME = *значение*  
  **Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.  
   
  Указывает максимальный объем операций ввода-вывода в секунду (IOPS) на дисковый том, при котором поддерживается пул ресурсов. Диапазон допустимых значений для *value* — от 0 до 2^31-1 (2 147 483 647). Укажите значение 0, чтобы задать неограниченный порог для пула. Значение по умолчанию равно 0.  

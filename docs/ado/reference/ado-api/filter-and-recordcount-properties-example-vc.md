@@ -1,4 +1,5 @@
 ---
+description: Пример свойств Filter и RecordCount (Visual c++)
 title: Пример свойств Filter и RecordCount (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d079a56268d903970f7e99d987b1315d1decec44
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bb95298fbc88749acdb5058cc45694688e0c2c6e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763445"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443676"
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a>Пример свойств Filter и RecordCount (Visual c++)
 В этом примере используется свойство [Filter](../../../ado/reference/ado-api/filter-property.md) для открытия нового [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) на основе указанного условия, примененного к существующему **набору записей**. Для отображения числа записей в двух **наборах записей**используется свойство [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) . Для выполнения этой процедуры требуется функция Филтерфиелд.  
@@ -302,7 +303,7 @@ Ramona Publishers, USA
 Scootney Books, USA  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство Filter](../../../ado/reference/ado-api/filter-property.md)   
  [Свойство RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

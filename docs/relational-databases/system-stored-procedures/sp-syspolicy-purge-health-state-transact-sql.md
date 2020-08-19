@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_purge_health_state (Transact-SQL)
 title: sp_syspolicy_purge_health_state (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4ba4aa91-4c19-41c7-b70d-5fd9d0e89a5e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6c07d71e2ab4c9fe39882476eef25674718a17c7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a01ee9be75223a081d19a9b71eb4d69ec150235c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85639567"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446761"
 ---
 # <a name="sp_syspolicy_purge_health_state-transact-sql"></a>sp_syspolicy_purge_health_state (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,14 +40,14 @@ sp_syspolicy_purge_health_state [ @target_tree_root_with_id = ] 'target_tree_roo
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @target_tree_root_with_id = ] 'target_tree_root_with_id'`Представляет узел в обозревателе объектов, в котором необходимо очистить состояние работоспособности. *target_tree_root_with_id* имеет тип **nvarchar (400)** и значение по умолчанию NULL.  
+`[ @target_tree_root_with_id = ] 'target_tree_root_with_id'` Представляет узел в обозревателе объектов, в котором необходимо очистить состояние работоспособности. *target_tree_root_with_id* имеет тип **nvarchar (400)** и значение по умолчанию NULL.  
   
  Можно указывать значения из столбца target_query_expression_with_id системного представления msdb.dbo.syspolicy_system_health_state.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Процедура sp_syspolicy_purge_health_state должна выполняться в контексте системной базы данных msdb.  
   
  Если запустить эту хранимую процедуру, не указывая параметров, то состояние работоспособности системы будет удалено для всех узлов в обозревателе объектов.  
@@ -66,7 +67,7 @@ EXEC msdb.dbo.sp_syspolicy_purge_health_state @target_tree_root_with_id = 'Serve
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Хранимые процедуры управления на основе политик &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Хранимые процедуры управления на основе политик &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)  
   
   

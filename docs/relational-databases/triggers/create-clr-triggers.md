@@ -1,4 +1,5 @@
 ---
+description: Создание триггеров CLR
 title: Создание триггеров CLR | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31f41703-134d-49fc-9850-76c297351c2c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f81446e6ea56fbb16570e6b5555b8b704e7c92be
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f3d7218b9d2524fd2312ea0364268821524eb926
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889079"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446383"
 ---
 # <a name="create-clr-triggers"></a>Создание триггеров CLR
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "85889079"
   
 -   [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Триггеры DML](../../relational-databases/triggers/dml-triggers.md)   
  [Основные понятия о программировании интеграции со средой (CLR)](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)   
  [Доступ к данным из объектов среды CLR для работы с базами данных](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)  

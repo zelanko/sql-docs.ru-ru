@@ -1,4 +1,5 @@
 ---
+description: Метод Move (ADO)
 title: Метод Move (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 13fe9381-d00b-4f4a-9162-83c3f21b3837
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 527e8c4f2f4c7c18163346f76029be539d1581d2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b39078235bffe15db40cfb0f25e13f984d5c5cf3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762505"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443246"
 ---
 # <a name="move-method-ado"></a>Метод Move (ADO)
 Перемещает текущую запись в объекте [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) .  
@@ -37,8 +38,8 @@ recordset.Move NumRecords, Start
  *нумрекордс*  
  Выражение типа **Long** со знаком, указывающее количество записей, перемещаемых текущей позицией записи.  
   
- *Start*  
- Необязательный элемент. **Строковое** значение или **вариант** , результатом которого является закладка. Можно также использовать значение [букмаркенум](../../../ado/reference/ado-api/bookmarkenum.md) .  
+ *Начало*  
+ Необязательный параметр. **Строковое** значение или **вариант** , результатом которого является закладка. Можно также использовать значение [букмаркенум](../../../ado/reference/ado-api/bookmarkenum.md) .  
   
 ## <a name="remarks"></a>Remarks  
  Метод **Move** поддерживается для всех объектов **Recordset** .  
@@ -60,10 +61,10 @@ recordset.Move NumRecords, Start
 > [!NOTE]
 >  Поддержка перемещения в обратном направлении в **наборе записей** только для последовательного доступа не является прогнозируемой в зависимости от поставщика. Если текущая запись была размещена после последней записи в **наборе записей**, **Перемещение** в обратном направлении может привести к неправильному текущему положению.  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример метода Move (Visual Basic)](../../../ado/reference/ado-api/move-method-example-vb.md)   
  [Пример метода Move (VBScript)](../../../ado/reference/ado-api/move-method-example-vbscript.md)   
  [Пример метода Move (Visual c++)](../../../ado/reference/ado-api/move-method-example-vc.md)   

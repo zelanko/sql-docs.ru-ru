@@ -1,4 +1,5 @@
 ---
+description: Свойство LockType (ADO)
 title: Свойство LockType (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9920c14e-033a-4de1-8149-0ce9737a3246
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4a8d0f94d4482649030561f2ac71ed6de1374e46
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 49fe91535b674bb5dbb6c4a75425cdcea1042fa8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82754487"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443346"
 ---
 # <a name="locktype-property-ado"></a>Свойство LockType (ADO)
 Указывает тип блокировок, помещаемых в записи во время редактирования.  
@@ -40,10 +41,10 @@ ms.locfileid: "82754487"
 > [!NOTE]
 >  **Использование удаленной службы данных** При использовании объекта **набора записей** на стороне клиента свойство **LockType** может иметь только значение **адлоккбатчоптимистик**.  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Примеры свойств примеры CursorType, LockType и EditMode (Visual Basic)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)   
  [Пример свойств примеры CursorType, LockType и EditMode (Visual c++)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)   
  [Метод CancelBatch (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   

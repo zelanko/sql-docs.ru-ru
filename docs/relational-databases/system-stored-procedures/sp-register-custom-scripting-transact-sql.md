@@ -1,4 +1,5 @@
 ---
+description: Процедура sp_register_custom_scripting (Transact-SQL)
 title: sp_register_custom_scripting (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 80736db0e2356d3592744393ff8964ac6f6073c0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 35e70da9de3239fa7f147acf8ffe5a6ecc724606
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891503"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446871"
 ---
 # <a name="sp_register_custom_scripting-transact-sql"></a>Процедура sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,30 +41,30 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @type = ] 'type'`Тип регистрируемой пользовательской хранимой процедуры или скрипта. *тип* — **varchar (16)**, не имеет значения по умолчанию и может принимать одно из следующих значений.  
+`[ @type = ] 'type'` Тип регистрируемой пользовательской хранимой процедуры или скрипта. *тип* — **varchar (16)**, не имеет значения по умолчанию и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|**Вставляет**|Зарегистрированная пользовательская хранимая процедура, выполняющаяся при репликации инструкции INSERT.|  
+|**insert**|Зарегистрированная пользовательская хранимая процедура, выполняющаяся при репликации инструкции INSERT.|  
 |**update**|Зарегистрированная пользовательская хранимая процедура, выполняющаяся при репликации инструкции UPDATE.|  
 |**delete**|Зарегистрированная пользовательская хранимая процедура, выполняющаяся при репликации инструкции DELETE.|  
 |**custom_script**|Скрипт, выполняющийся в конце триггера языка DDL.|  
   
-`[ @value = ] 'value'`Имя хранимой процедуры или имени и полный путь к [!INCLUDE[tsql](../../includes/tsql-md.md)] регистрируемому файлу скрипта. *value* имеет тип **nvarchar (1024)** и не имеет значения по умолчанию.  
+`[ @value = ] 'value'` Имя хранимой процедуры или имени и полный путь к [!INCLUDE[tsql](../../includes/tsql-md.md)] регистрируемому файлу скрипта. *value* имеет тип **nvarchar (1024)** и не имеет значения по умолчанию.  
   
 > [!NOTE]  
 >  При указании значения NULL для параметра *value*будет отменена регистрация ранее зарегистрированного скрипта, который совпадает с запуском [sp_unregister_custom_scripting](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md).  
   
  Если значение *типа* — **custom_script**, ожидается имя и полный путь к [!INCLUDE[tsql](../../includes/tsql-md.md)] файлу скрипта. В противном случае *значение* должно быть именем зарегистрированной хранимой процедуры.  
   
-`[ @publication = ] 'publication'`Имя публикации, для которой регистрируется пользовательская хранимая процедура или скрипт. Аргумент *publication* имеет тип **sysname**и значение по умолчанию **null**.  
+`[ @publication = ] 'publication'` Имя публикации, для которой регистрируется пользовательская хранимая процедура или скрипт. Аргумент *publication* имеет тип **sysname**и значение по умолчанию **null**.  
   
-`[ @article = ] 'article'`Имя статьи, для которой регистрируется пользовательская хранимая процедура или скрипт. Аргумент *article* имеет тип **sysname**и значение по умолчанию **null**.  
+`[ @article = ] 'article'` Имя статьи, для которой регистрируется пользовательская хранимая процедура или скрипт. Аргумент *article* имеет тип **sysname**и значение по умолчанию **null**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  **sp_register_custom_scripting** используется в моментальных снимках и репликации транзакций.  
   
  Эта хранимая процедура должна выполняться до внесения изменений в схему реплицируемой таблицы. Дополнительные сведения об использовании этой хранимой процедуры см. [в разделе повторное создание пользовательских процедур транзакций для отражения изменений схемы](../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md).  
@@ -71,7 +72,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** , предопределенной роли базы данных **db_owner** или предопределенной роли базы данных **db_ddladmin** могут выполнять **sp_register_custom_scripting**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_unregister_custom_scripting &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: STIsValid (тип данных geography)
 title: STIsValid (тип данных geography) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1bfe787f-ddf0-4fc7-af6a-570a58faab23
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 4549b317f3b6948fd72e0c5c2856255b8a6bd507
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: a75d380ce9eed834f24eee2d8e643f3abd5748b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556131"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445208"
 ---
 # <a name="stisvalid-geography-data-type"></a>STIsValid (тип данных geography)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "86556131"
   
  Тип возвращаемых данных CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Тип OGC экземпляра **geography** можно определить с помощью метода [STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] формирует только допустимые экземпляры **geography**, однако позволяет хранить и получать недопустимые экземпляры. Допустимый экземпляр, представляющий тот же набор точек, что и недопустимый экземпляр, может быть получен с помощью метода `MakeValid()`.  

@@ -1,4 +1,5 @@
 ---
+description: sp_msx_defect (Transact-SQL)
 title: sp_msx_defect (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0dfd963a-3bc5-4b58-94f7-aec976da2883
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5968f8ae8c44f5a20ca93b10c653c950c842cadc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8ad8a12d53113f394e2df1a70456261867471ab5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893480"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446896"
 ---
 # <a name="sp_msx_defect-transact-sql"></a>sp_msx_defect (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ sp_msx_defect [@forced_defection =] forced_defection
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @forced_defection = ] forced_defection`Указывает, следует ли принудительно вызывать исключение в случае окончательного потери главного SQLServerAgent из-за необратимой поврежденной базы данных **msdb** или отсутствия резервной копии базы данных **msdb** . *forced_defection*имеет **бит**и значение по умолчанию **0**, что означает, что принудительное исключение не должно выполняться. Значение **1** вызывает исключение.  
+`[ @forced_defection = ] forced_defection` Указывает, следует ли принудительно вызывать исключение в случае окончательного потери главного SQLServerAgent из-за необратимой поврежденной базы данных **msdb** или отсутствия резервной копии базы данных **msdb** . *forced_defection*имеет **бит**и значение по умолчанию **0**, что означает, что принудительное исключение не должно выполняться. Значение **1** вызывает исключение.  
   
  После принудительного исключения путем выполнения **sp_msx_defect**член предопределенной роли сервера **sysadmin** на главном SQLServerAgent должен выполнить следующую команду, чтобы завершить исключение:  
   
@@ -62,7 +63,7 @@ EXECUTE msdb.dbo.sp_delete_targetserver @server_name = 'tsx-server', @post_defec
 ## <a name="permissions"></a>Разрешения  
  Для выполнения этой хранимой процедуры пользователь должен быть членом предопределенной роли сервера **sysadmin** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_msx_enlist &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

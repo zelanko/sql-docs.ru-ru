@@ -1,4 +1,5 @@
 ---
+description: sysmergepartitioninfoview (Transact-SQL)
 title: сисмержепартитионинфовиев (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 4b48506662283ab71516affa7665a6b0c0af9d3c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c194b2442762f2ec9373cc730cbc4835bce45983
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881238"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446526"
 ---
 # <a name="sysmergepartitioninfoview-transact-sql"></a>sysmergepartitioninfoview (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "85881238"
 |**sync_objid**|**int**|Идентификатор объекта представления, представляющего синхронизированный набор данных.|  
 |**view_type**|**tinyint**|Тип представления:<br /><br /> **0** = не представление; использовать все базовые объекты.<br /><br /> **1** = постоянное представление.<br /><br /> **2** = временное представление.|  
 |**artid**|**uniqueidentifier**|Уникальный идентификационный номер данной статьи.|  
-|**nописание**|**nvarchar(255)**|Краткое описание статьи.|  
+|**description**|**nvarchar(255)**|Краткое описание статьи.|  
 |**pre_creation_command**|**tinyint**|Действие по умолчанию при создании статьи в базе данных подписки.<br /><br /> **0** = None — если таблица уже существует на подписчике, никакие действия не предпринимаются.<br /><br /> **1** = Drop — удаляет таблицу перед ее повторной созданием.<br /><br /> **2** = Delete — выдает удаление на основе предложения WHERE в фильтре подмножества.<br /><br /> **3** = усечение — то же, что и 2, но вместо строк удаляются страницы. Однако предложение WHERE не используется.|  
 |**pubid**|**uniqueidentifier**|Идентификатор публикации, которой принадлежит данная статья.|  
 |**понят**|**int**|Сопоставление псевдонима для идентификатора статьи.|  
@@ -108,8 +109,8 @@ ms.locfileid: "85881238"
   
 ## <a name="see-also"></a>См. также  
  [Управление секциями для публикации слиянием с параметризованными фильтрами](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   
- [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Представления репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addmergepartition &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   
  [sp_helpmergepartition &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md)  
   

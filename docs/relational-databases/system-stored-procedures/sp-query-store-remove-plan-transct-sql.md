@@ -1,4 +1,5 @@
 ---
+description: sp_query_store_remove_plan (Transact-SQL)
 title: sp_query_store_remove_plan (Transct-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/29/2016
@@ -21,11 +22,12 @@ ms.assetid: 88734726-135b-4b61-9f3f-f568c1fbece6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cbc49d5c3644a71149a07946d116b2e379fab500
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f6cd042c81a54bd6b3777693214182b1ebad9f25
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012642"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446880"
 ---
 # <a name="sp_query_store_remove_plan-transct-sql"></a>sp_query_store_remove_plan (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -42,12 +44,12 @@ sp_query_store_remove_plan [ @plan_id = ] plan_id [;]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @plan_id = ] plan_id`Идентификатор удаляемого плана запроса. *plan_id* имеет тип **bigint**и не имеет значения по умолчанию.  
+`[ @plan_id = ] plan_id` Идентификатор удаляемого плана запроса. *plan_id* имеет тип **bigint**и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется разрешение **ALTER** на базу данных.
@@ -70,7 +72,7 @@ JOIN sys.query_store_query_text AS Txt
 EXEC sp_query_store_remove_plan 3;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)   
  [sp_query_store_remove_query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
  [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   

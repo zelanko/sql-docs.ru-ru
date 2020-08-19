@@ -1,4 +1,5 @@
 ---
+description: PWDCOMPARE (Transact-SQL)
 title: PWDCOMPARE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5f84ff9e-c1ec-46aa-8501-50f854ebcc3a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ad59b8d81641999da674ca73db696c2f0c3ce1ef
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c03a83ed2dbe499e9b65a07446c04f0f6466ce93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111868"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445628"
 ---
 # <a name="pwdcompare-transact-sql"></a>PWDCOMPARE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,10 +47,10 @@ PWDCOMPARE ( 'clear_text_password'
 
 ## <a name="arguments"></a>Аргументы
  **'** *clear_text_password* **'**  
- Незашифрованный пароль. Аргумент *clear_text_password* имеет тип **sysname** (**nvarchar(128)** ).  
+ Незашифрованный пароль. Аргумент *clear_text_password* имеет тип **sysname** (**nvarchar(128)**).  
   
  *password_hash*  
- Хэш шифрования пароля. Аргумент *password_hash* имеет тип **varbinary(128)** .  
+ Хэш шифрования пароля. Аргумент *password_hash* имеет тип **varbinary(128)**.  
   
  *version*  
  Устаревший параметр, который может быть установлен в значение 1, если *password_hash* представляет значение для имени входа из версии ранее [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], которое было перенесено в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более позднюю версию, но так и не было преобразовано в систему [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Аргумент *version* имеет тип **int**.  
@@ -62,7 +63,7 @@ PWDCOMPARE ( 'clear_text_password'
   
  Возвращает значение 1, если хэш параметра *clear_text_password* совпадает со значением параметра *password_hash*, или значение 0 в противном случае.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Функция PWDCOMPARE — это не угроза устойчивости хэшей паролей, потому что этот же самый тест можно было бы выполнить, если попытаться использовать для входа пароль, заданный как первый параметр.  
   
  **PWDCOMPARE** нельзя использовать с паролями пользователей автономных баз данных. Какой-либо эквивалент для автономной базы данных отсутствует.  
@@ -90,7 +91,7 @@ SELECT name FROM sys.sql_logins
 WHERE PWDCOMPARE('password', password_hash) = 1 ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [PWDENCRYPT (Transact-SQL)](../../t-sql/functions/pwdencrypt-transact-sql.md)   
  [Функции безопасности &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   

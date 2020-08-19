@@ -1,4 +1,5 @@
 ---
+description: SqlErrorLogFile, класс
 title: SqlErrorLogFile, класс
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: 2b83ae4a-c0d4-414c-b6e5-a41ec7c13159
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 186ceb700a09436ba7bc44934b28627480fa0454
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 63937cb2d7a3aaf3994712aa493097597cd26c53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442497"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446469"
 ---
 # <a name="sqlerrorlogfile-class"></a>SqlErrorLogFile, класс
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ class SQLErrorLogFile
 ## <a name="properties"></a>Свойства  
  Класс SQLErrorLogFile определяет следующие свойства.  
   
-| Свойство | Описание |
+| Свойство. | Описание |
 | -------- | ----------- |
 |арчивенумбер|Тип данных: **UInt32**<br /><br /> Тип доступа: только для чтения<br /><br /> <br /><br /> Номер архива для файла журнала.|  
 |InstanceName|Тип данных: **строка**<br /><br /> Тип доступа: только для чтения<br /><br /> Квалификаторы: ключ<br /><br /> <br /><br /> Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на котором хранится файл журнала.|  
@@ -47,7 +48,7 @@ class SQLErrorLogFile
 |LogFileSize|Тип данных: **UInt32**<br /><br /> Тип доступа: только для чтения<br /><br /> <br /><br /> Размер файла журнала в байтах.|  
 |Имя|Тип данных: **строка**<br /><br /> Тип доступа: только для чтения<br /><br /> Квалификаторы: ключ<br /><br /> <br /><br /> Имя файла журнала.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
   
 | Тип | Имя |
 | ---- | ---- |

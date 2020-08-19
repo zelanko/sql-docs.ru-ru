@@ -1,4 +1,5 @@
 ---
+description: Свойство Filter
 title: Свойство Filter | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b69826fbbc45751247ce2eba6fe74ad251189dea
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a97db427db3c0dc42e004e1b0fcd0a889c9d6c5b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242694"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443686"
 ---
 # <a name="filter-property"></a>Свойство Filter
 Указывает фильтр для данных в [наборе записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -93,15 +94,15 @@ ms.locfileid: "87242694"
 |Позволяющ|Не ключи|Один ключ|Несколько ключей|
 |-|--------------|----------------|-------------------|
 |**Не ключи**|+|+|+|
-|**Один ключ**|+|-|Н/Д|
-|**Несколько ключей**|+|Н/Д|+|
+|**Один ключ**|+|-|Недоступно|
+|**Несколько ключей**|+|Недоступно|+|
 |||||
   
 ## <a name="applies-to"></a>Применение
 
 [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Пример свойств Filter и RecordCount (Visual Basic)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md) 
  [Пример свойств Filter и RecordCount (Visual c++)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md) 

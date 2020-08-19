@@ -1,4 +1,5 @@
 ---
+description: sp_refreshview (Transact-SQL)
 title: sp_refreshview (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9ce1d07c-ee66-4a83-8c73-cd2cc104dd08
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dbc12b5e9013e8cbb5fb223f473e68c2e1cab445
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 11b605bd505a88215258afc39c24735d95e56ab6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891509"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446923"
 ---
 # <a name="sp_refreshview-transact-sql"></a>sp_refreshview (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,12 +40,12 @@ sp_refreshview [ @viewname = ] 'viewname'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @viewname = ] 'viewname'`Имя представления. *ViewName* имеет тип **nvarchar**и не имеет значения по умолчанию. *ViewName* может быть составным идентификатором, но может ссылаться только на представления в текущей базе данных.  
+`[ @viewname = ] 'viewname'` Имя представления. *ViewName* имеет тип **nvarchar**и не имеет значения по умолчанию. *ViewName* может быть составным идентификатором, но может ссылаться только на представления в текущей базе данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или ненулевое значение (неуспешное завершение)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Если представление не создано с параметром SCHEMABINDING, то **sp_refreshview** должны выполняться при внесении изменений в объекты, лежащие в основе представления, влияющие на определение представления. В противном случае результат запроса представления может быть непредвиденным.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -74,9 +75,9 @@ INNER JOIN sys.sql_expression_dependencies AS sed
 WHERE so.type = 'V' AND sed.referenced_id = OBJECT_ID('Person.Person');  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.sql_expression_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
  [sp_refreshsqlmodule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshsqlmodule-transact-sql.md)  
   

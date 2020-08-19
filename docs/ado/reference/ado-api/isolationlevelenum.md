@@ -1,4 +1,5 @@
 ---
+description: IsolationLevelEnum
 title: Исолатионлевеленум | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8e17a7bc-b8a3-4ae2-b6c9-ce088ad31fdf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 864938729153a1cd3f8f31f2e4ba04b075d2f713
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0c08da68e136d3e2cffbb492f021225a3b895a9e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758650"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443416"
 ---
 # <a name="isolationlevelenum"></a>IsolationLevelEnum
 Задает уровень изоляции транзакции для объекта [соединения](../../../ado/reference/ado-api/connection-object-ado.md) .  
@@ -52,5 +53,5 @@ ms.locfileid: "82758650"
 |Адоенумс. IsolationLevel. изоляцией|  
 |Адоенумс. IsolationLevel. SERIALIZABLE|  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Свойство IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)

@@ -1,4 +1,5 @@
 ---
+description: DATEDIFF_BIG (Transact-SQL)
 title: DATEDIFF_BIG (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dd18d79d9417dc980f2a35ced5c0fddea5d1f49b
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a50a1fe5872afad4df5f7e8811c3babd139ce354
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112035"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445877"
 ---
 # <a name="datediff_big-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Эта функция возвращает количество пересеченных границ (целое число со знаком), указанных в аргументе *datepart*, за период времени, указанный в аргументах *startdate* и *enddate*.
   
-Обзор всех типов данных и функций даты и времени в языке [ см. в статье ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)Типы данных и функции даты и времени (Transact-SQL)[!INCLUDE[tsql](../../includes/tsql-md.md)].
+Обзор всех типов данных и функций даты и времени в языке [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в статье [Типы данных и функции даты и времени (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -103,7 +104,7 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
 Если аргументы *startdate* и *enddate* имеют разные типы данных даты, но при этом один из них имеет больше частей времени или обладает более высокой точностью, `DATEDIFF_BIG` присваивает значения 0 недостающим частям другого аргумента.
   
 ## <a name="datepart-boundaries"></a>Границы, задаваемые аргументом datepart
-Приведенные ниже инструкции имеют одинаковые значения аргументов *startdate* и *enddate*. Указанные даты являются соседними, а временная разница между ними составляет одну микросекунду (0,0000001 секунды). Разница между аргументами *startdate* и *enddate* в каждой инструкции пересекает одну календарную или временную границу аргумента *datepart*. Каждое выражение возвращает значение 1. Если аргументы *startdate* и *enddate* имеют разные значения года, но одинаковые значения календарной недели, `DATEDIFF_BIG` вернет 0 для части *week* аргумента **datepart**.
+Приведенные ниже инструкции имеют одинаковые значения аргументов *startdate* и *enddate*. Указанные даты являются соседними, а временная разница между ними составляет одну микросекунду (0,0000001 секунды). Разница между аргументами *startdate* и *enddate* в каждой инструкции пересекает одну календарную или временную границу аргумента *datepart*. Каждое выражение возвращает значение 1. Если аргументы *startdate* и *enddate* имеют разные значения года, но одинаковые значения календарной недели, `DATEDIFF_BIG` вернет 0 для части **week** аргумента *datepart*.
 
 ```sql
 SELECT DATEDIFF_BIG(year,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');

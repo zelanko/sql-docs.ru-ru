@@ -1,4 +1,5 @@
 ---
+description: Метод get_OLEDBCommand
 title: Метод get_OLEDBCommand | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 23d551f5-3d5b-434b-ade6-fef15f1710e7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 043e432bfef39f90fbeb5b147487272c4d284bdb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 562b10fa67b04926e512833248c99ecb7b55a1fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760080"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443606"
 ---
 # <a name="get_oledbcommand-method"></a>Метод get_OLEDBCommand
 Возвращает базовую команду OLE DB, которая сначала распространяет все сведения о параметрах, заданные в команде ADO, в команду OLE DB.  
@@ -35,5 +36,5 @@ HRESULT get_OLEDBCommand(
  *пполедбкомманд*  
  заполняет Указатель на расположение указателя, в котором будет записан указатель IUnknown для базовой OLE DBной команды.  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [иадокоммандконструктион](https://msdn.microsoft.com/d8e54333-00eb-4b72-bf4a-ca92c7ca5f86)

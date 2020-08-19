@@ -1,4 +1,5 @@
 ---
+description: STIntersects (тип данных geometry)
 title: STIntersects (тип данных geometry) | Документы Майкрософт
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7c18f5be-5a29-422e-8ca7-d8a5f38e03f5
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: c3f4d6e606ba37283fee75da148cfe1a54d3cf00
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: af349e3d79ea8b35854e5c1654d794511b082329
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554303"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445085"
 ---
 # <a name="stintersects-geometry-data-type"></a>STIntersects (тип данных geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "86554303"
   
  Тип возвращаемых данных CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Этот метод всегда возвращает значение NULL, если у экземпляров **geometry** не совпадают идентификаторы пространственных ссылок (SRID).  
   
 ## <a name="examples"></a>Примеры  
@@ -61,7 +62,7 @@ SET @h = geometry::STGeomFromText('POINT(1 1)', 0);
 SELECT @g.STIntersects(@h);  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Общие сведения о пространственных индексах](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

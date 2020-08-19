@@ -1,4 +1,5 @@
 ---
+description: Метод SetEnable (класс ServerNetworkProtocolIPAddress)
 title: Метод SetEnable (класс servernetworkprotocolipaddress)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: baa86deb-95dd-416f-b2c7-cec1dfb91ab4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 86b90feb1a4e95d481746266380c178f6cb3f44b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 52f19e66fcb11941dadfcaf9e1bb85e8001b0b1f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880817"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446172"
 ---
 # <a name="setenable-method-servernetworkprotocolipaddress-class"></a>Метод SetEnable (класс ServerNetworkProtocolIPAddress)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ object.SetEnable()
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение **uint32** , равное 0, если служба изменена успешно, и 1, если запрос не поддерживается. Любое другое значение указывает на ошибку.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

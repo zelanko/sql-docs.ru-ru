@@ -1,4 +1,5 @@
 ---
+description: OPENDATASOURCE (Transact-SQL)
 title: OPENDATASOURCE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 09/26/2019
@@ -23,12 +24,12 @@ ms.assetid: 5510b846-9cde-4687-8798-be9a273aad31
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 0efa5662c4ba7110f9e699baf6289ed9c2789fce
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a10994ac46bc1070304823dd5ae698a5b94c017d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112880"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445656"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -60,7 +61,7 @@ OPENDATASOURCE ( 'provider_name', 'init_string' )
 |Ключевое слово|Свойство OLE DB|Допустимые значения и описание|  
 |-------------|---------------------|----------------------------------|  
 |Источник данных|DBPROP_INIT_DATASOURCE|Имя источника данных для подключения. Различные поставщики интерпретируют его по-разному. Для поставщика OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] это означает имя сервера. Для поставщика Jet OLE DB таким образом определяется полный путь к MDB-файлу или XLS-файлу.|  
-|Location|DBPROP_INIT_LOCATION|Расположение базы данных для подключения.|  
+|Расположение|DBPROP_INIT_LOCATION|Расположение базы данных для подключения.|  
 |Расширенные свойства|DBPROP_INIT_PROVIDERSTRING|Строка подключения этого поставщика.|  
 |Время ожидания подключения|DBPROP_INIT_TIMEOUT|Время, по истечении которого попытка соединения признается неудачной.|  
 |Идентификатор пользователя.|DBPROP_AUTH_USERID|Идентификатор пользователя для соединения.|  
@@ -68,7 +69,7 @@ OPENDATASOURCE ( 'provider_name', 'init_string' )
 |Каталог|DBPROP_INIT_CATALOG|Имя первоначального каталога или каталога по умолчанию при подключении к источнику данных.|  
 |Встроенные функции безопасности|DBPROP_AUTH_INTEGRATED|SSPI для указания проверки подлинности Windows|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
 `OPENROWSET` всегда наследует параметры сортировки экземпляра независимо от параметров сортировки, заданных для столбцов.
 
 Функцию `OPENDATASOURCE` можно использовать для доступа к удаленным данным из источников OLE DB только в том случае, если параметр реестра DisallowAdhocAccess явно содержит значение 0 для указанного поставщика, а также если включен расширенный параметр конфигурации Ad Hoc Distributed Queries. Если эти параметры не установлены, поведение по умолчанию запрещает нерегламентированный доступ.  

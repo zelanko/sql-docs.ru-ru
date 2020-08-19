@@ -1,4 +1,5 @@
 ---
+description: datetime2 (Transact-SQL)
 title: datetime2 (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/23/2017
@@ -22,12 +23,12 @@ ms.assetid: 868017f3-214f-43ef-8536-cc1632a2288f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9d9be8cfb561ec2e5857c2bd5699b46a5418c9df
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: cb7ef589270a5cdcd06d2eac18176ebbf529256d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008056"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446015"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
 
@@ -37,7 +38,7 @@ ms.locfileid: "86008056"
   
 ## <a name="datetime2-description"></a>Описание типа данных datetime2
   
-|Свойство|Значение|  
+|Property (Свойство)|Значение|  
 |--------------|-----------|  
 |Синтаксис|**datetime2** [ (*fractional seconds precision*) ]|  
 |Использование|DECLARE \@MyDatetime2 **datetime2(7)**<br /><br /> CREATE TABLE Таблица1 ( Столбец1 **datetime2(7)** )|  
@@ -53,8 +54,8 @@ ms.locfileid: "86008056"
 |Значение по умолчанию|1900-01-01 00:00:00|  
 |Календарь|Григорианский|  
 |Определяемая пользователем точность в долях секунды|Да|  
-|Учет и сохранение смещения часового пояса|нет|  
-|Учет перехода на летнее время|нет|  
+|Учет и сохранение смещения часового пояса|Нет|  
+|Учет перехода на летнее время|Нет|  
 
 <sup>1</sup> В первом байте значения типа **datetime2** хранится его точность. Это означает, что фактически для хранения значения типа **datetime2** требуется объем памяти, указанный в таблице, плюс еще один байт для хранения точности.  Таким образом, максимальный размер значения типа **datetime2** составляет 9 байтов: 1 байт для хранения точности и еще 8 байтов для хранения данных с максимальной точностью.
 
@@ -67,7 +68,7 @@ ms.locfileid: "86008056"
 |---|---|
 |ГГГГ-ММ-ДДТчч:мм:сс[.nnnnnnn]<br /><br /> ГГГГ-ММ-ДДТчч:мм:сс[.nnnnnnn]|На этот формат не влияют настройки локали сеанса инструкций SET LANGUAGE и SET DATEFORMAT. Символы **T**, двоеточие (:) и точка (.) включаются в строковый литерал, например "2007-05-02T19:58:47.1234567".|  
   
-|ODBC|Description|  
+|ODBC|Описание|  
 |---|---|
 |{ ts 'гггг-мм-дд чч:мм:сс[.доли секунды]' }|Зависит от API-интерфейса ODBC.<br /><br /> Можно указать от 0 до 7 знаков (100 наносекунд) справа от десятичной запятой, представляющих доли секунды.|  
   

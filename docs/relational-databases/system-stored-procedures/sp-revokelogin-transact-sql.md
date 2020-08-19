@@ -1,4 +1,5 @@
 ---
+description: Хранимая процедура sp_revokelogin (Transact-SQL)
 title: sp_revokelogin (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb1ab102-1ae0-4811-9144-9a8121ef2d7e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 95727b3cb27e5ac72af38374da01b203f1a076cc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f2ccd140079e9a585ee67ce1b7c2208b9926f963
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901338"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446779"
 ---
 # <a name="sp_revokelogin-transact-sql"></a>Хранимая процедура sp_revokelogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85901338"
   Удаляет записи входа из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для пользователя или группы Windows, созданных с помощью инструкции CREATE LOGIN, **sp_grantlogin**или **sp_denylogin**.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Вместо этого используйте [инструкцию DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте [инструкцию DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md) .  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +43,7 @@ sp_revokelogin [ @loginame= ] 'login'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @loginame = ] 'login'`Имя пользователя или группы Windows. Аргумент *Login* имеет тип **sysname**и не имеет значения по умолчанию. именем для *входа* может быть любое существующее имя пользователя или группа Windows в формате *компьютер имя* \\ *пользователь или домен* \\ *пользователь*.  
+`[ @loginame = ] 'login'` Имя пользователя или группы Windows. Аргумент *Login* имеет тип **sysname**и не имеет значения по умолчанию. именем для *входа* может быть любое существующее имя пользователя или группа Windows в формате *компьютер имя* \\ *пользователь или домен* \\ *пользователь*.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -80,7 +81,7 @@ EXEC sp_revokelogin [Corporate\MollyA];
   
 ## <a name="see-also"></a>См. также  
  [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [DROP LOGIN &#40;&#41;Transact-SQL](../../t-sql/statements/drop-login-transact-sql.md)   
+ [DROP LOGIN &#40;&#41;Transact-SQL ](../../t-sql/statements/drop-login-transact-sql.md)   
  [sp_denylogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
  [sp_droplogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
  [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   

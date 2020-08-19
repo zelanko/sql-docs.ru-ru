@@ -1,4 +1,5 @@
 ---
+description: FieldEnum
 title: Фиелденум | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: be4eda13-d4e4-4d6b-bb0d-3310b0a96fc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 24d69ac1406363458c8dbd3168e6d25309cfa2c4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b562d480cfbebefdee82703e0c953854de07d064
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762575"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443746"
 ---
 # <a name="fieldenum"></a>FieldEnum
 Задает специальные поля, на которые ссылается коллекция [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) объекта [Record](../../../ado/reference/ado-api/record-object-ado.md) .  

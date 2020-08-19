@@ -1,4 +1,5 @@
 ---
+description: NEWSEQUENTIALID (Transact-SQL)
 title: NEWSEQUENTIALID (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 08/08/2015
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e06d2cab-f1ff-42f1-8550-6aaec57be36f
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: c4daa39922e25c67479ad4f49c28fa860303e6d4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b3d0648e3e017179ff91ae7e2d951967cb7517cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784388"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445721"
 ---
 # <a name="newsequentialid-transact-sql"></a>NEWSEQUENTIALID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,15 +43,17 @@ ms.locfileid: "85784388"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
-  
+```syntaxsql
 NEWSEQUENTIALID ( )  
-```  
-  
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+
 ## <a name="return-type"></a>Тип возвращаемых данных  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Функция NEWSEQUENTIALID() может быть использована только для ограничений DEFAULT для столбцов таблицы типа **uniqueidentifier**. Пример:  
   
 ```  
@@ -71,7 +74,7 @@ CREATE TABLE myTable (ColumnA uniqueidentifier DEFAULT dbo.myfunction(NEWSEQUENT
   
  Каждый идентификатор GUID, сформированный с помощью функции NEWSEQUENTIALID, является уникальным на данном компьютере. Идентификаторы GUID, сформированные с помощью функции NEWSEQUENTIALID, становятся уникальными для нескольких компьютеров, только если в компьютере-источнике имеется сетевая плата.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [NEWID (Transact-SQL)](../../t-sql/functions/newid-transact-sql.md)   
  [Операторы сравнения (Transact-SQL)](../../t-sql/language-elements/comparison-operators-transact-sql.md)  
   

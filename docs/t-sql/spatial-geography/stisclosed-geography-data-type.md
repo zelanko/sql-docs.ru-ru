@@ -1,4 +1,5 @@
 ---
+description: STIsClosed (тип данных geography)
 title: STIsClosed (тип данных geography) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: eba1643f-07c4-4500-8643-b7e90f908147
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 06190fa6cc6a0377e49f423c50369a7ceb4b51d7
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 8c6643b37d421a5283cd8d44e3fadaf73ae69eab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555797"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445224"
 ---
 # <a name="stisclosed-geography-data-type"></a>STIsClosed (тип данных geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "86555797"
   
  Тип возвращаемых данных CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Этот метод возвращает значение 0, если среди фигур экземпляра **geography** есть точки или если экземпляр является пустым.  
   
  Метод возвращает значение true, если экземпляр **FullGlobe** имеет тип **Polygon** или является другим типом экземпляра.  

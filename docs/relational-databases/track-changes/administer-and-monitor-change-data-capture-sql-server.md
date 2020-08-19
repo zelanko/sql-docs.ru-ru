@@ -1,4 +1,5 @@
 ---
+description: Администрирование и наблюдение за отслеживанием измененных данных (SQL Server)
 title: Администрирование и наблюдение за системой отслеживания измененных данных
 ms.date: 01/02/2019
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 327adcd406e4fa79591529265acc2d6b23b3a044
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dfc040c4157cfd44a27a0b05a3bef42a1591aa2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889170"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446396"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Администрирование и наблюдение за отслеживанием измененных данных (SQL Server)
 
@@ -181,7 +182,7 @@ SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions 
 При установке накопительных обновлений или пакетов обновления для экземпляра при перезагрузке экземпляр может войти в режим обновления скрипта. В этом режиме SQL Server может выполнить шаг для анализа и обновления внутренних таблиц CDC, что может привести к повторному созданию таких объектов, как индексы на таблицах записи. В зависимости от объема тестовых данных этот шаг может занять некоторое время или вызвать использование журнала транзакций для базы данных с поддержкой CDC.
 
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 - [Отслеживание измененных данных (SQL Server)](../../relational-databases/track-changes/track-data-changes-sql-server.md)
 - [Об отслеживании измененных данных (SQL Server)](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)

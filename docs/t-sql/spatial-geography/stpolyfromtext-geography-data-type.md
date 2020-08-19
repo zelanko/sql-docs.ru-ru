@@ -1,4 +1,5 @@
 ---
+description: STPolyFromText (географический тип данных)
 title: STPolyFromText (тип данных geography) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d7e6a2bb-d301-49fb-9202-c70a9d169b4d
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a6fb63e1a853c96c972578a1be757dfcefd87751
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 154aff97ba24cf2dfd357a123e4075e78a534ecc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555382"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445171"
 ---
 # <a name="stpolyfromtext-geography-data-type"></a>STPolyFromText (географический тип данных)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STPolyFromText ( 'polygon_tagged_text' , SRID )
 
 ## <a name="arguments"></a>Аргументы
  *polygon_tagged_text*  
- Представление в формате WKT возвращаемого экземпляра **geographyPolygon**. *polygon_tagged_text* является выражением типа **nvarchar(max)** .  
+ Представление в формате WKT возвращаемого экземпляра **geographyPolygon**. *polygon_tagged_text* является выражением типа **nvarchar(max)**.  
   
  *SRID*  
  Выражение типа **int**, представляющее идентификатор пространственной ссылки (SRID) возвращаемого экземпляра **geographyPolygon**.  

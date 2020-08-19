@@ -1,4 +1,5 @@
 ---
+description: Системные таблицы (Transact-SQL)
 title: Системные таблицы (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 56b8ad51-930c-4e5c-8d99-8c939d5b70ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bcd2869c583f51b5ab9d00a7bbb68e9dd47b534d
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: bb4aba7e3ad13edd1d71266b96d6ef956a162cba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122770"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446611"
 ---
 # <a name="system-tables-transact-sql"></a>Системные таблицы (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +51,7 @@ ms.locfileid: "87122770"
   
  Эти компоненты составляют опубликованный API-интерфейс для получения системных сведений от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[msCoName](../../includes/msconame-md.md)] поддерживает совместимость этих компонентов от выпуска к выпуску. Формат системных таблиц зависит от внутренней архитектуры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и может изменяться от выпуска к выпуску. Поэтому приложениям, получающим непосредственный доступ к недокументированным столбцам системных таблиц, могут потребоваться изменения, прежде чем они смогут получить доступ к более поздней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  Подразделы о системных таблицах организованы по следующим группам функций.  
 
 :::row:::
@@ -59,18 +60,18 @@ ms.locfileid: "87122770"
 
         [Таблицы системы отслеживания измененных данных (Transact-SQL)](../../relational-databases/system-tables/change-data-capture-tables-transact-sql.md)
 
-        [Таблицы плана обслуживания базы данных &#40;&#41;Transact-SQL](../../relational-databases/system-tables/database-maintenance-plan-tables-transact-sql.md)
+        [Таблицы плана обслуживания базы данных &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/database-maintenance-plan-tables-transact-sql.md)
 
         [Таблицы расширенных событий SQL Server (Transact-SQL)](../../relational-databases/extended-events/xevents-references-system-objects.md#system-tables)
 
-        [Integration Servicesные таблицы &#40;&#41;Transact-SQL](../../relational-databases/system-tables/integration-services-tables-transact-sql.md)
+        [Integration Servicesные таблицы &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/integration-services-tables-transact-sql.md)
     :::column-end:::
     :::column:::
         [Таблицы доставки журналов (Transact-SQL)](../../relational-databases/system-tables/log-shipping-tables-transact-sql.md)
 
         [Таблицы репликации (Transact-SQL)](../../relational-databases/system-tables/replication-tables-transact-sql.md)
 
-        [Агент SQL Serverные таблицы &#40;&#41;Transact-SQL](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)
+        [Агент SQL Serverные таблицы &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)
 
         [sys.sysоледбусерс &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysoledbusers-transact-sql.md)
 

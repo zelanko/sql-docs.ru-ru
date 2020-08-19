@@ -1,4 +1,5 @@
 ---
+description: IHpublishercolumnindexes (Transact-SQL)
 title: Ихпублишерколумниндексес (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 95b95a1d-b502-4838-825f-82a456487e25
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b1a5a045bb2e1024a9ccaf953621ea0e3c926adf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0efc9145416e468756bbe861e2e3d36631cd25bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890276"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446598"
 ---
 # <a name="ihpublishercolumnindexes-transact-sql"></a>IHpublishercolumnindexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,9 +38,9 @@ ms.locfileid: "85890276"
 |**publisherindex_id**|**int**|Определяет индекс из таблицы [ихпублишериндексес](../../relational-databases/system-tables/ihpublisherindexes-transact-sql.md) , связанной со столбцом.|  
 |**столбец indid**|**int**|Указывает местоположение столбца в опубликованной таблице.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Разнородная репликация базы данных](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

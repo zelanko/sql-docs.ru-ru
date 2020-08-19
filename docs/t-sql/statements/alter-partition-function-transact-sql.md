@@ -1,4 +1,5 @@
 ---
+description: ALTER PARTITION FUNCTION (Transact-SQL)
 title: ALTER PARTITION FUNCTION (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a8751da646792fc170b017039d6e5d1465e8b5ed
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: efac16278bec7099024cb5f9e7cc2480013728cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381278"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444896"
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -70,7 +71,7 @@ SPLIT RANGE ( *boundary_value* )
 Если все секции создаются в одной файловой группе, то данная группа первоначально автоматически назначается как NEXT USED. Однако после выполнения операции разбиения выбранная файловая группа NEXT USED будет отсутствовать. Необходимо явным образом назначить файловую группу как NEXT USED с помощью ALTER PARTITION SCHEME. В противном случае предстоящая операция разбиения завершится ошибкой.  
   
 > [!NOTE]  
->  Ограничения с индексом columnstore. Если для таблицы имеется индекс columnstore, разделять можно только пустые секции. Перед выполнением этой операции необходимо удалить или отключить индекс columnstore.  
+>  Ограничения для индекса columnstore: если для таблицы имеется индекс columnstore, разделять можно только пустые секции. Перед выполнением этой операции необходимо удалить или отключить индекс columnstore.  
   
 MERGE [ RANGE ( *boundary_value*) ]  
 Удаляет секцию и объединяет все значения, существующие в секции, в оставшуюся. Аргумент RANGE (*boundary_value*) должен быть существующим пограничным значением, в которое объединяются значения из удаленной секции. Этот аргумент удаляет файловую группу, изначально содержащую аргумент *boundary_value*, из схемы секционирования, если она не используется оставшейся секцией или не помечена свойством NEXT USED. Объединенная секция существует в файловой группе, которая первоначально не содержала *boundary_value*. *boundary_value* является константным выражением, которое может ссылаться на переменные (включая переменные определяемых пользователем типов) или функции (включая определяемые пользователем). Не может ссылаться на выражение [!INCLUDE[tsql](../../includes/tsql-md.md)]. *boundary_value* должен совпадать или быть с возможностью неявного преобразования в тип данных соответствующего столбца секционирования. Вы также не можете усечь *border_value* во время неявного преобразования таким образом, чтобы размер и масштаб значения не совпадали с соответствующим ему аргументом *input_parameter_type*.  

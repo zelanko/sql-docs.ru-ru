@@ -1,4 +1,5 @@
 ---
+description: NCHAR (Transact-SQL)
 title: NCHAR (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/13/2017
@@ -19,12 +20,12 @@ ms.assetid: 68cefc68-7c4f-4326-80c1-300f90cf19db
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dcd53208afaa16fdab638b854773163a6353bc05
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c6964acd1127db3bcdb25d551116865073e43974
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111476"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445728"
 ---
 # <a name="nchar-transact-sql"></a>NCHAR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,9 +49,9 @@ NCHAR ( integer_expression )
  Если параметры сортировки базы данных поддерживают флаг дополнительных символов, используется положительное целое число от 0 до 1 114 111 (от 0 до 0x10FFFF). При указании значения вне этого диапазона возвращается значение NULL.  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
- **nchar(1)** , когда параметры сортировки базы данных по умолчанию не поддерживают дополнительные символы.  
+ **nchar(1)**, когда параметры сортировки базы данных по умолчанию не поддерживают дополнительные символы.  
   
- **nvarchar(2)** , когда параметры сортировки базы данных по умолчанию поддерживают дополнительные символы.  
+ **nvarchar(2)**, когда параметры сортировки базы данных по умолчанию поддерживают дополнительные символы.  
   
  Если параметр *integer_expression* лежит в диапазоне 0–0xFFFF, то возвращается только один символ. Для больших значений NCHAR возвращает соответствующую суррогатную пару. Не создавайте суррогатные пары с применением `NCHAR(<High surrogate>) + NCHAR(\<Low Surrogate>)`. Вместо этого используйте параметры сортировки базы данных, которые поддерживают дополнительные символы, с указанием кодовой точки в Юникоде для суррогатной пары. В следующем примере рассматривается как старый метод конструирования суррогатной пары, так и предпочтительный метод с указанием кодовой точки в Юникоде.  
   
@@ -214,7 +215,7 @@ Character # Unicode Character UNICODE Value
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ASCII (Transact-SQL)](../../t-sql/functions/ascii-transact-sql.md)  
  [CHAR (Transact-SQL)](../../t-sql/functions/char-transact-sql.md)  
  [UNICODE (Transact-SQL)](../../t-sql/functions/unicode-transact-sql.md)  

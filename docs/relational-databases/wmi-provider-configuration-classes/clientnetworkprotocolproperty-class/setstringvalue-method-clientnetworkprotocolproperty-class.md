@@ -1,4 +1,5 @@
 ---
+description: Метод SetStringValue (класс ClientNetworkProtocolProperty)
 title: Метод SetStringValue (класс clientnetworkprotocolproperty)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 88d67b22-0eea-48c9-ab73-e0b4907953df
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 60392a04607e2bc2c5c4b06edd940409d58af1a8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 81424c3ca4819c04dd70483fcaa691278a6e10da
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881035"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446267"
 ---
 # <a name="setstringvalue-method-clientnetworkprotocolproperty-class"></a>Метод SetStringValue (класс ClientNetworkProtocolProperty)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -48,9 +49,9 @@ object.SetStringValue(StrValue)
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение **uint32** , равное 0, если служба изменена успешно, и 1, если запрос не поддерживается. Любое другое значение указывает на ошибку.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
- [настройка клиентских протоколов](../../../database-engine/configure-windows/configure-client-protocols.md)  
+## <a name="see-also"></a>См. также:  
+ [Настройка клиентских протоколов](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   
