@@ -1,4 +1,5 @@
 ---
+description: CERTPRIVATEKEY (Transact-SQL)
 title: CERTPRIVATEKEY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/24/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 33e0f01e-39ac-46da-94ff-fe53b1116df4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4fd9302ae396ffd8c09dcd998e0827032b98d36b
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 8dc94ac93a79ceabef40b9972293c086bfdc3eac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111658"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88367250"
 ---
 # <a name="certprivatekey-transact-sql"></a>CERTPRIVATEKEY (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -81,9 +82,9 @@ GO
 SELECT CERTPRIVATEKEY(CERT_ID('Shipping04'), 'jklalkaa/; uia3dd');  
 ```  
   
-Пример использования функций [CERTPRIVATEKEY](../../t-sql/functions/certencoded-transact-sql.md) и **CERTENCODED** для копирования сертификата в другую базу данных см. в примере Б из статьи **CERTENCODED (Transact-SQL)** .
+Пример использования функций **CERTPRIVATEKEY** и **CERTENCODED** для копирования сертификата в другую базу данных см. в примере Б из статьи [CERTENCODED (Transact-SQL)](../../t-sql/functions/certencoded-transact-sql.md).
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 [Функции безопасности &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
 [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)
 [Функции безопасности (Transact-SQL)](../../t-sql/functions/security-functions-transact-sql.md)
