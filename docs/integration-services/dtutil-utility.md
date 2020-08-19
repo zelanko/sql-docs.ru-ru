@@ -1,4 +1,5 @@
 ---
+description: dtutil, программа
 title: Программа dtutil | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d200856e098317f3158c2ace61c8e7cbb0001e88
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ae472556993fafc52719fcf929bf88c35098e196
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917112"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88392160"
 ---
 # <a name="dtutil-utility"></a>dtutil, программа
 
@@ -120,7 +121,7 @@ dtutil /option [value] [/option [value]]...
 ## <a name="dtutil-exit-codes"></a>Коды завершения программы dtutil  
  Если обнаружены синтаксические ошибки, указаны неправильные аргументы или недопустимые сочетания параметров, программа**dtutil** возвращает код завершения, который создает соответствующие предупреждения. В противном случае программа выдает сообщение "Операция успешно завершена". В следующей таблице перечислены значения, которые программа **dtutil** может возвращать при завершении.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |0|Программа выполнена успешно.|  
 |1|Программа завершилась с ошибкой.|  

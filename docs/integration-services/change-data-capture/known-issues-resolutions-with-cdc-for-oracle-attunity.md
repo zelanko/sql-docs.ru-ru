@@ -1,4 +1,5 @@
 ---
+description: Известные ошибки и способы их устранения в Change Data Capture для Oracle от Attunity
 title: Известные ошибки и способы их устранения в Change Data Capture для Oracle от Attunity | Документация Майкрософт
 ms.date: 07/23/2019
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.technology: ''
 ms.topic: reference
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ee1e8f3ae65b4a906d42a4b00644456d89f9b900
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c6841092edcb5eac4005d0a068f31c768aedf5bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71713429"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394390"
 ---
 # <a name="known-errors-and-resolutions-with-change-data-capture-for-oracle-by-attunity"></a>Известные ошибки и способы их устранения в Change Data Capture для Oracle от Attunity
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]
@@ -79,15 +80,15 @@ ms.locfileid: "71713429"
 - Двойная ширина столбцов в SQL
     - При создании CDC для экземпляра Oracle в скриптах, выполняемых на SQL Server, длина столбца типа данных переменной ширины удваивается в таблицах SQL Server, созданных в скрипте. Например, при попытке отслеживания изменений столбца VARCHAR2(10) в таблице Oracle соответствующий столбец в таблице SQL Server имеет тип NVARCHAR(20) в скрипте развертывания. Исправлено в _накопительном обновлении 2 для SQL Server 2012 SP1_ и _накопительном обновлении 5 для SQL Server 2012_, как описано в статье KB [2769673](https://support.microsoft.com/kb/2769673). 
 - Данные DDL усечены
-    - При запуске инструкции языка описания данных DDL, размер которой превышает 4000 байт, для базы данных Oracle, содержащей символы, отличные от латинских, CDC для Oracle от Attunity завершается с ошибкой. Кроме того, отображается сообщение об ошибке `ORA-01406: fetched column value was truncated.`. Исправлено в _накопительном обновлении 4 для SQL Server 2012 с пакетом обновления 1 (SP1)_ , как описано в статье KB [2839806](https://support.microsoft.com/kb/2839806). 
+    - При запуске инструкции языка описания данных DDL, размер которой превышает 4000 байт, для базы данных Oracle, содержащей символы, отличные от латинских, CDC для Oracle от Attunity завершается с ошибкой. Кроме того, отображается сообщение об ошибке `ORA-01406: fetched column value was truncated.`. Исправлено в _накопительном обновлении 4 для SQL Server 2012 с пакетом обновления 1 (SP1)_, как описано в статье KB [2839806](https://support.microsoft.com/kb/2839806). 
 - Изменения в последних двух столбцах теряются
-    - Исправлено в _накопительном обновлении 6 для SQL Server 2012 с пакетом обновления 1 (SP1)_ , как описано в статье KB [2874879](https://support.microsoft.com/kb/2874879). 
+    - Исправлено в _накопительном обновлении 6 для SQL Server 2012 с пакетом обновления 1 (SP1)_, как описано в статье KB [2874879](https://support.microsoft.com/kb/2874879). 
 - При использовании CDC для Oracle увеличивается размер журнала транзакций SQL
      - Если настроена система отслеживания измененных данных для экземпляров Oracle, то база данных SQL, которая получает измененные данные, будет содержать зеркальные таблицы с транзакциями, помеченными для репликации. Это происходит из-за того, что CDC для Oracle использует базовые системные хранимые процедуры, аналогичные используемым в CDC для SQL Server. Однако поскольку репликация SQL CDC не используется при автономном использовании CDC для Oracle, не существует средства чтения журнала для очистки транзакций, помеченных для репликации. Поскольку транзакция не должна реплицироваться в SQL Server, можно вручную пометить транзакцию как распределенную, используя обходной путь, описанный далее в этой статье. Дополнительные сведения можно найти в статье KB [2871474](https://support.microsoft.com/kb/2871474). 
-- Ошибка `ORACDC000T: Error encountered at position to change event - SCN not found - EOF simulated`. Исправлена в _накопительном обновлении 7 для SQL Server 2012 с пакетом обновления 1 (SP1)_ , как описано в статье KB [2883524](https://support.microsoft.com/kb/2883524). 
-- Ошибка проверки метаданных для таблицы Oracle cdc.table_name. Индекс столбца column_name выходит за пределы допустимого диапазона. Исправлена в _накопительном обновлении 7 для SQL Server 2012 с пакетом обновления 1 (SP1)_ , как описано в статье KB [2883524](https://support.microsoft.com/kb/2883524).
-- Служба Oracle CDC Service отображает состояние "Прервано" при использовании CDC для Oracle от Attunity в SQL Server 2012. Исправлена в _накопительном обновлении 8 для SQL Server 2012 с пакетом обновления 1 (SP1)_ , как описано в статье KB [2923839](https://support.microsoft.com/kb/2923839).  
-- Некоторые изменения пропускаются и не реплицируются в базы данных SQL Server. Эта проблема возникает, если таблица содержит более одного символьного большого двоичного объекта (CLOB) и один из объектов имеет большое значение. Исправлена в _накопительном обновлении 8 для SQL Server 2012 с пакетом обновления 1 (SP1)_ , как описано в статье KB [2923839](https://support.microsoft.com/kb/2923839).   
+- Ошибка `ORACDC000T: Error encountered at position to change event - SCN not found - EOF simulated`. Исправлена в _накопительном обновлении 7 для SQL Server 2012 с пакетом обновления 1 (SP1)_, как описано в статье KB [2883524](https://support.microsoft.com/kb/2883524). 
+- Ошибка проверки метаданных для таблицы Oracle cdc.table_name. Индекс столбца column_name выходит за пределы допустимого диапазона. Исправлена в _накопительном обновлении 7 для SQL Server 2012 с пакетом обновления 1 (SP1)_, как описано в статье KB [2883524](https://support.microsoft.com/kb/2883524).
+- Служба Oracle CDC Service отображает состояние "Прервано" при использовании CDC для Oracle от Attunity в SQL Server 2012. Исправлена в _накопительном обновлении 8 для SQL Server 2012 с пакетом обновления 1 (SP1)_, как описано в статье KB [2923839](https://support.microsoft.com/kb/2923839).  
+- Некоторые изменения пропускаются и не реплицируются в базы данных SQL Server. Эта проблема возникает, если таблица содержит более одного символьного большого двоичного объекта (CLOB) и один из объектов имеет большое значение. Исправлена в _накопительном обновлении 8 для SQL Server 2012 с пакетом обновления 1 (SP1)_, как описано в статье KB [2923839](https://support.microsoft.com/kb/2923839).   
 - Отслеживание измененных данных для Oracle с помощью Attunity перестает работать, если таблицы Oracle имеют столбец с типом данных Long. Исправлено в _накопительном обновлении 2 для SQL Server 2012 SP3_ и _накопительном обновлении 11 для SQL 2012 SP2_, как описано в статье KB [3145983](https://support.microsoft.com/kb/3145983). 
 
 ## <a name="collect-detailed-logs"></a>Сбор подробных журналов 
@@ -156,7 +157,7 @@ ms.locfileid: "71713429"
 
 
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также  
  [Отслеживание измененных данных (SQL Server)](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [О фиксации измененных данных (SQL Server)](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Работа с информацией об изменениях (SQL Server)](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   

@@ -1,4 +1,5 @@
 ---
+description: Задача файловой системы Hadoop
 title: Задача файловой системы Hadoop | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 594aaf5d-7703-4788-897d-fb95aca798c5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 006c9d5ae0ade37cc3ecbe4d7912c49eafbf4069
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 60e2f94ab41aafe0b23af470555870ba4a93b918
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918217"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88393140"
 ---
 # <a name="hadoop-file-system-task"></a>Задача файловой системы Hadoop
 
@@ -33,7 +34,7 @@ ms.locfileid: "86918217"
 ## <a name="options"></a>Параметры  
  Настройте следующие параметры в диалоговом окне **Редактор задачи файловой системы Hadoop** .  
   
-|Поле|Description|  
+|Поле|Описание|  
 |-----------|-----------------|  
 |**Hadoop Connection (Подключение Hadoop)**|Укажите существующий диспетчер подключений Hadoop или создайте новый. Этот диспетчер подключений указывает, где размещены конечные файлы.|  
 |**Hadoop File Path (Путь к файлу Hadoop)**|Укажите путь к файлу или каталогу HDFS.|  
@@ -43,7 +44,7 @@ ms.locfileid: "86918217"
 |**Local File Connection (Локальное подключение файлов)**|Укажите существующий диспетчер подключения файлов или создайте его. Этот диспетчер подключений указывает, где размещены исходные файлы.|  
 |**С рекурсией**|Укажите, следует ли копировать вложенные папки рекурсивно.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Диспетчер подключений Hadoop](../../integration-services/connection-manager/hadoop-connection-manager.md)   
  [Диспетчер подключений файлов](../../integration-services/connection-manager/file-connection-manager.md)  
   

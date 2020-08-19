@@ -1,4 +1,5 @@
 ---
+description: Задачи служб Integration Services
 title: Задачи служб Integration Services | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b36f709ecde7aa2fb4d47b2b1f092bc92bde682c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d54d80276714bdc1427c2c01be0f9620acc32c8f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915450"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88392650"
 ---
 # <a name="integration-services-tasks"></a>Задачи служб Integration Services
 
@@ -86,6 +87,6 @@ ms.locfileid: "86915450"
  Задачи можно группировать и выполнять как одно целое либо повторять их выполнение в цикле. Дополнительные сведения см. в разделах [Foreach Loop Container](../../integration-services/control-flow/foreach-loop-container.md), [For Loop Container](../../integration-services/control-flow/for-loop-container.md)и [Sequence Container](../../integration-services/control-flow/sequence-container.md).  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- [Добавление задачи или контейнера в поток управления или удаление их из него](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+ [Добавление задачи или контейнера в поток управления или удалить их из него](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
   

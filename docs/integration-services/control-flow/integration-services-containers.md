@@ -1,4 +1,5 @@
 ---
+description: Контейнеры служб Integration Services
 title: Контейнеры служб Integration Services | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 87d8f17c8aa5b2e80939be7da8cbf81592bdd279
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cebc3b8d50578999fd59f42aa2d41f3d859cebac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915446"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88393040"
 ---
 # <a name="integration-services-containers"></a>Контейнеры служб Integration Services
 
@@ -41,12 +42,12 @@ ms.locfileid: "86915446"
 ## <a name="container-types"></a>Типы контейнеров  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] поддерживают четыре типа контейнеров для построения пакетов. В следующей таблице перечислены типы контейнеров.  
   
-|Контейнер|Description|  
+|Контейнер|Описание|  
 |---------------|-----------------|  
 |[Контейнер «цикл по каждому элементу»](../../integration-services/control-flow/foreach-loop-container.md)|Повторяет запуск потока управления для каждого элемента, используя перечислитель.|  
 |[Контейнер «цикл по элементам»](../../integration-services/control-flow/for-loop-container.md)|Повторяет запуск потока управления с проверкой условия.|  
-|[Контейнер последовательности](../../integration-services/control-flow/sequence-container.md)|Группирует задачи и контейнеры в потоки управления, являющиеся частью потока управления пакета.|  
-|[Контейнер «Сервер задач»](../../integration-services/control-flow/task-host-container.md)|Обеспечивает поддержку служб для отдельной задачи.|  
+|[контейнер последовательности](../../integration-services/control-flow/sequence-container.md)|Группирует задачи и контейнеры в потоки управления, являющиеся частью потока управления пакета.|  
+|[контейнер «Сервер задач»](../../integration-services/control-flow/task-host-container.md)|Обеспечивает поддержку служб для отдельной задачи.|  
   
  Пакеты и обработчики событий также являются типами контейнеров. Дополнительные сведения см. в разделах [Пакеты служб Integration Services (SSIS)](../../integration-services/integration-services-ssis-packages.md) and [Обработчики событий в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-event-handlers.md).  
   
@@ -55,22 +56,22 @@ ms.locfileid: "86915446"
   
 |Свойство|Description|  
 |--------------|-----------------|  
-|**DelayValidation**|Логическое значение, указывающее, откладывается ли проверка контейнера до времени выполнения. Значение этого свойства по умолчанию — **False**.<br /><br /> Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.DelayValidation%2A>.|  
-|**Описание**|Описание контейнера. Свойство содержит строку, но может быть пустым.<br /><br /> Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Description%2A>.|  
-|**Отключить**|Логическое значение, указывающее, запущен ли контейнер. Значение этого свойства по умолчанию — **False**.<br /><br /> Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Disable%2A>.|  
+|**DelayValidation**|Логическое значение, указывающее, откладывается ли проверка контейнера до времени выполнения. Значение этого свойства по умолчанию — **False**.<br /><br /> Для получения дополнительной информации см. <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.DelayValidation%2A>.|  
+|**Описание**|Описание контейнера. Свойство содержит строку, но может быть пустым.<br /><br /> Для получения дополнительной информации см. <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Description%2A>.|  
+|**Отключено**|Логическое значение, указывающее, запущен ли контейнер. Значение этого свойства по умолчанию — **False**.<br /><br /> Для получения дополнительной информации см. <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Disable%2A>.|  
 |**DisableEventHandlers**|Логическое значение, указывающее, связаны ли обработчики событий с запуском контейнера. Значение этого свойства по умолчанию — **False**.|  
-|**FailPackageOnFailure**|Логическое значение, указывающее, завершается ли работа пакета с ошибкой в случае ошибки в контейнере. Значение этого свойства по умолчанию — **False**.<br /><br /> Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailPackageOnFailure%2A>.|  
-|**FailParentOnFailure**|Логическое значение, указывающее, завершается ли работа родительского контейнера с ошибкой в случае ошибки в контейнере. Значение этого свойства по умолчанию — **False**.<br /><br /> Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailParentOnFailure%2A>.|  
-|**ForcedExecutionValue**|Если свойство **ForceExecutionValue** равно **True**, объект содержит необязательное значение выполнения для контейнера. Значение этого свойства по умолчанию равно **0**.<br /><br /> Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForcedExecutionValue%2A>.|  
+|**FailPackageOnFailure**|Логическое значение, указывающее, завершается ли работа пакета с ошибкой в случае ошибки в контейнере. Значение этого свойства по умолчанию — **False**.<br /><br /> Для получения дополнительной информации см. <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailPackageOnFailure%2A>.|  
+|**FailParentOnFailure**|Логическое значение, указывающее, завершается ли работа родительского контейнера с ошибкой в случае ошибки в контейнере. Значение этого свойства по умолчанию — **False**.<br /><br /> Для получения дополнительной информации см. <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailParentOnFailure%2A>.|  
+|**ForcedExecutionValue**|Если свойство **ForceExecutionValue** равно **True**, объект содержит необязательное значение выполнения для контейнера. Значение этого свойства по умолчанию равно **0**.<br /><br /> Для получения дополнительной информации см. <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForcedExecutionValue%2A>.|  
 |**ForcedExecutionValueType**|Тип данных **ForcedExecutionValue**. Значение по умолчанию этого свойства равно **Int32**.|  
-|**ForceExecutionResult**|Значение, определяющее вынужденный результат запуска пакета или контейнера. Допустимые значения: **None**, **Success**, **Failure**и **Completion**. Значение этого свойства по умолчанию — **None**.<br /><br /> Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionResult%2A>.|  
-|**ForceExecutionValue**|Логическое значение, указывающее, должно ли необязательное значение выполнения для контейнера содержать конкретное значение. Это свойство имеет значение по умолчанию **False**.<br /><br /> Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionValue%2A>.|  
+|**ForceExecutionResult**|Значение, определяющее вынужденный результат запуска пакета или контейнера. Допустимые значения: **None**, **Success**, **Failure**и **Completion**. Значение этого свойства по умолчанию — **None**.<br /><br /> Для получения дополнительной информации см. <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionResult%2A>.|  
+|**ForceExecutionValue**|Логическое значение, указывающее, должно ли необязательное значение выполнения для контейнера содержать конкретное значение. Это свойство имеет значение по умолчанию **False**.<br /><br /> Для получения дополнительной информации см. <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionValue%2A>.|  
 |**Идентификатор**|Идентификатор GUID контейнера, назначаемый ему при создании пакета. Это свойство доступно только для чтения.<br /><br /> <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A>.|  
-|**IsolationLevel**|Уровень изоляции транзакции контейнера. Допустимые значения — **Unspecified**, **Chaos**, **ReadUncommitted**, **ReadCommitted**, **RepeatableRead**, **Serializable**и **Snapshot**. Значение по умолчанию этого свойства равно **Serializable**. Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>.|  
-|**LocaleID**|Локаль Microsoft Win32. Значение этого свойства по умолчанию равно локали операционной системы на локальном компьютере.<br /><br /> Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LocaleID%2A>.|  
+|**IsolationLevel**|Уровень изоляции транзакции контейнера. Допустимые значения — **Unspecified**, **Chaos**, **ReadUncommitted**, **ReadCommitted**, **RepeatableRead**, **Serializable**и **Snapshot**. Значение по умолчанию этого свойства равно **Serializable**. Для получения дополнительной информации см. <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>.|  
+|**LocaleID**|Локаль Microsoft Win32. Значение этого свойства по умолчанию равно локали операционной системы на локальном компьютере.<br /><br /> Для получения дополнительной информации см. <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LocaleID%2A>.|  
 |**LoggingMode**|Значение, определяющее для контейнера режим записи в журнал. Допустимые значения — **Disabled**, **Enabled**и **UseParentSetting**. Значение по умолчанию этого свойства равно **UseParentSetting**. Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>.|  
-|**MaximumErrorCount**|Максимальное число ошибок, после достижения которого выполнение контейнера прекращается. Значение этого свойства по умолчанию равно **1**.<br /><br /> Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.MaximumErrorCount%2A>.|  
-|**Название**|Имя контейнера.<br /><br /> Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Name%2A>.|  
+|**MaximumErrorCount**|Максимальное число ошибок, после достижения которого выполнение контейнера прекращается. Значение этого свойства по умолчанию равно **1**.<br /><br /> Для получения дополнительной информации см. <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.MaximumErrorCount%2A>.|  
+|**имя**;|Имя контейнера.<br /><br /> Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Name%2A>.|  
 |**TransactionOption**|Участие контейнера в транзакции. Допустимые значения — **NotSupported**, **Supported**, **Required**. Значение по умолчанию этого свойства равно **Supported**. Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>.|  
   
  Чтобы узнать о всех свойствах, доступных для контейнеров «цикл по каждому элементу», «цикл по элементам», контейнеров последовательности и сервера задач при настройке свойств программно, см. следующие разделы по API-интерфейсу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] :  
@@ -101,7 +102,7 @@ ms.locfileid: "86915446"
 ## <a name="break-points"></a>Точки останова  
  Если задается точка останова в контейнере и условием останова является **Приостановить выполнение при получении контейнером события OnVariableValueChanged**, определите переменную в области контейнера.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Поток управления](../../integration-services/control-flow/control-flow.md)  
   
   

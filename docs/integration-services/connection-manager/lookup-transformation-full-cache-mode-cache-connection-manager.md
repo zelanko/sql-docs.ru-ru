@@ -1,4 +1,5 @@
 ---
+description: Преобразование "Уточняющий запрос" в режиме полного кэширования — диспетчер подключений кэша
 title: Преобразование "Уточняющий запрос" в режиме полного кэширования — диспетчер подключений кэша | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4e37921c8844b94c3974682ab8b088b0015c5ac6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8c4bd90a73c0723baf716b5c503f18d1f690d77e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923143"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394220"
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>Преобразование "Уточняющий запрос" в режиме полного кэширования — диспетчер подключений кэша
 
@@ -63,7 +64,7 @@ ms.locfileid: "86923143"
   
 -   [Задача «Выполнение пакета»](../../integration-services/control-flow/execute-package-task.md)  
   
--   [Контейнер последовательности](../../integration-services/control-flow/sequence-container.md)  
+-   [контейнер последовательности](../../integration-services/control-flow/sequence-container.md)  
   
  Видеоматериал, в котором показано, как реализовать преобразование "Уточняющий запрос" в режиме полного кэширования с помощью диспетчера подключений с кэшем, см. в статье [Как реализовать преобразование "Уточняющий запрос" в режиме полного кэширования (видеоматериал по SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131031).  
   
@@ -194,7 +195,7 @@ ms.locfileid: "86923143"
   
     2.  Чтобы настроить компонент, дважды щелкните источник или предыдущее преобразование.  
   
-    3.  Дважды щелкните преобразование "Уточняющий запрос", а затем выберите **Полное кэширование** на странице **Общее** окна **Редактор преобразования "Уточняющий запрос"** .  
+    3.  Дважды щелкните преобразование "Уточняющий запрос", а затем выберите **Полное кэширование** на странице **Общее** окна **Редактор преобразования "Уточняющий запрос"**.  
   
     4.  Выберите **Диспетчер соединений с кэшем** в области **Тип соединения** .  
   
@@ -283,7 +284,7 @@ ms.locfileid: "86923143"
   
 9. Запустите пакет.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Реализация преобразования "Уточняющий запрос" в режиме полного кэширования с помощью диспетчера подключений OLE DB](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
  [Реализация уточняющего запроса в режиме "Частичное кэширование" или "Без кэширования"](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Преобразования служб Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)  

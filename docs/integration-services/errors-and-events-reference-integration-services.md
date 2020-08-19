@@ -1,4 +1,5 @@
 ---
+description: Справочник по ошибкам и событиям (службы Integration Services)
 title: Справочник по ошибкам и событиям (службы Integration Services) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4a35fad106dfac49d0e2f227c506658d91c420b2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 814c5bb9915e448f97f0c769033d5fd695f76d95
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914400"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88391710"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>Справочник по ошибкам и событиям (службы Integration Services)
 
@@ -36,7 +37,7 @@ ms.locfileid: "86914400"
   
 ## <a name="error-messages"></a>сообщения об ошибках  
   
-|Символическое имя ошибки|Description|  
+|Символическое имя ошибки|Описание|  
 |----------------------------|-----------------|  
 |DTS_E_CACHELOADEDFROMFILE|Указывает, что пакет нельзя выполнить, так как преобразование «Преобразование кэша» пытается записать данные в кэш, хранимый в памяти. Однако диспетчер соединений с кэшем уже загрузил файл кэша в кэш, который находится в памяти.|  
 |DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER|Указывает, что невозможно выполнить пакет из-за ошибки указанного соединения.|  
@@ -55,7 +56,7 @@ ms.locfileid: "86914400"
 ## <a name="events-sqlispackage"></a>События (SQLISPackage)  
  Дополнительные сведения см. в статье [Регистрация событий в пакете служб Integration Services](../integration-services/performance/events-logged-by-an-integration-services-package.md).  
   
-|Событие|Description|  
+|Событие|Описание|  
 |-----------|-----------------|  
 |SQLISPackage_12288|Указывает, что пакет запущен.|  
 |SQLISPackage_12289|Указывает, что пакет завершил выполнение успешно.|  
@@ -69,7 +70,7 @@ ms.locfileid: "86914400"
 ## <a name="events-sqlisservice"></a>События (SQLISService)  
  Дополнительные сведения см. в статье [События, зарегистрированные службами Integration Services](../integration-services/service/events-logged-by-the-integration-services-service.md).  
   
-|Событие|Description|  
+|Событие|Описание|  
 |-----------|-----------------|  
 |SQLISService_256|Указывает, что служба запускается.|  
 |SQLISService_257|Указывает, что служба уже запущена.|  
@@ -80,7 +81,7 @@ ms.locfileid: "86914400"
 |SQLISService_273|Указывает, что файл конфигурации не может быть прочитан или недопустим.|  
 |SQLISService_274|Указывает, что параметр реестра, указывающий местонахождение файла конфигурации, не существует или пуст.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по сообщениям об ошибках служб Integration Services](../integration-services/integration-services-error-and-message-reference.md)  
   
   

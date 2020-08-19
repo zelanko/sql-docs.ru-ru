@@ -1,4 +1,5 @@
 ---
+description: ODBC-источник
 title: Источник ODBC | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ f1_keywords:
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7382675ca38ecaabd685d68e0dc31f09e94be6ad
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 800c3e0b8af863cd7947e6847d3c8fe2e1ccab44
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914998"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88392120"
 ---
 # <a name="odbc-source"></a>ODBC-источник
 
@@ -85,7 +86,7 @@ ms.locfileid: "86914998"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
--   [Извлечение данных с помощью источника «ODBC»](../../integration-services/data-flow/extract-data-by-using-the-odbc-source.md)  
+-   [Извлечение данных с помощью источника ODBC](../../integration-services/data-flow/extract-data-by-using-the-odbc-source.md)  
   
 -   [Пользовательские свойства источника «ODBC»](../../integration-services/data-flow/odbc-source-custom-properties.md)  
   
@@ -110,7 +111,7 @@ ms.locfileid: "86914998"
 #### <a name="data-access-mode"></a>Режим доступа к данным  
  Выберите метод выбора данных из источника. Доступные параметры показаны в следующей таблице.  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |Имя таблицы|Получение данных из таблицы или представления в источнике данных ODBC. Если выбран этот параметр, выберите значение из следующего списка.|  
 ||**Имя таблицы или представления**. Выберите доступную таблицу или представление из списка или введите регулярное выражение, определяющее таблицу.|  
@@ -120,7 +121,7 @@ ms.locfileid: "86914998"
 ||Нажмите кнопку **Обзор** , чтобы загрузить SQL-запрос из текстового файла.|  
 ||Чтобы проверить синтаксис текста запроса, нажмите кнопку **Анализ запроса** .|  
   
-#### <a name="preview"></a>Preview (Предварительный просмотр)  
+#### <a name="preview"></a>Предварительный просмотр  
  Нажмите кнопку **Просмотр** , чтобы просмотреть первые 200 строк данных, извлеченных из выбранной таблицы или представления.  
   
 ## <a name="odbc-source-editor-columns-page"></a>Редактор источника «ODBC» (страница «Столбцы»)
@@ -174,7 +175,7 @@ ms.locfileid: "86914998"
 #### <a name="truncation"></a>Усечение  
  Выберите порядок обработки усечений в потоке источником ODBC: пропустить ошибку, перенаправить строку или вызвать сбой компонента.  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Описание  
  Не используется.  
   
 #### <a name="set-this-value-to-selected-cells"></a>Присвоить указанное значение выбранным ячейкам  

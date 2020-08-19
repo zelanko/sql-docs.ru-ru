@@ -1,4 +1,5 @@
 ---
+description: Просмотр файлов и таблиц Excel с помощью контейнера "Цикл по каждому элементу"
 title: Просмотр файлов и таблиц Excel с помощью контейнера "Цикл по каждому элементу" | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/15/2018
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6bdcfd84f1b12c48e31bd9d56fe6db3e4155c543
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0eaa6b0cbe19656096cdb47a31ec73b5fd4ade7d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915430"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88392630"
 ---
 # <a name="loop-through-excel-files-and-tables-with-a-foreach-loop-container"></a>Просмотр файлов и таблиц Excel с помощью контейнера "Цикл по каждому элементу"
 
@@ -97,7 +98,7 @@ ms.locfileid: "86915430"
   
 9. Создайте задачи в контейнере «цикл по каждому элементу», которые используют диспетчер соединений Excel для выполнения одинаковых операций для каждой таблицы Excel в заданной книге. Если задача "Скрипт" используется для анализа имени перечисляемой таблицы или работы с каждой таблицей, не забудьте добавить строковую переменную к свойству ReadOnlyVariables задачи "Скрипт".  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Загрузка данных в приложение Excel или из него с помощью служб SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)  
  [Настройка контейнера "цикл по каждому элементу"](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)   
  [Добавление или изменение выражение свойства](../../integration-services/expressions/add-or-change-a-property-expression.md)   
