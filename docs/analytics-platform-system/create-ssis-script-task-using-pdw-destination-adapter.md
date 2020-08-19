@@ -1,4 +1,5 @@
 ---
+description: Создание задачи «Скрипт» с использованием адаптера назначения «Параллельное хранилище данных SSIS»
 title: Создание задачи "Скрипт" с помощью адаптера загрузки SSIS PDW
 desciption: This Integration Services (SSIS) package script code is a code example for using the SSIS PDW destination adaptor. The Integration Services Script Task allows you to perform virtually any operation that can be accomplished in a .Net application within the context of an SSIS control flow.
 author: mzaman1
@@ -9,12 +10,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4bc719d44d9a19da5706d20f16fa519352a04a6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 857dbc39906f57da39de623daecf18e5be0d28f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401221"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438526"
 ---
 # <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>Создание задачи «Скрипт» с использованием адаптера назначения «Параллельное хранилище данных SSIS»
 Этот код скрипта пакета служб SSIS представляет собой пример кода для использования адаптера назначения служб SSIS PDW.  Задача «Скрипт Integration Services» позволяет выполнять практически любую операцию, которую можно выполнить в приложении .NET в контексте потока управления служб SSIS. 
@@ -27,7 +28,7 @@ ms.locfileid: "74401221"
   
 3.  Измените скрипт, чтобы использовать приведенный ниже код. Настроили сценарий в своей среде, внеся в нее следующие изменения:  
   
-    -   Необходимо хранить пространство имен скрипта, созданного задачей «Скрипт». Запишите имя пространства имен `namespace ST_<GUID>` и измените приведенный ниже сценарий, изменив *ST_<GUID> * на исходный *идентификатор GUID* задачи «Скрипт».  
+    -   Необходимо хранить пространство имен скрипта, созданного задачей «Скрипт». Запишите имя пространства имен `namespace ST_<GUID>` и измените приведенный ниже сценарий, изменив * <GUID> ST_* на исходный *идентификатор GUID* задачи «Скрипт».  
   
     -   Замените четыре вхождения значения заполнителя *XXXXXXXX* значениями, соответствующими вашей среде, и предполагаемое действие.  
   

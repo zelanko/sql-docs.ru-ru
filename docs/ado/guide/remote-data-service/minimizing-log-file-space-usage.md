@@ -1,4 +1,5 @@
 ---
+description: Минимизация использования места в файле журнала
 title: Минимизация использования места в файле журнала | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 669662a0-e20f-483e-ab28-53f66c524c98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1eca3db07301ca45c898f21f558339e5f2ab93e1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 986d527f0d4f59053a53a8b566d28d43151c0f99
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747878"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452166"
 ---
 # <a name="minimizing-log-file-space-usage"></a>Минимизация использования места в файле журнала
 Файл журнала может быстро заполняться (таким же прерывает работу сервера), если в SQL Server базе данных имеется большой объем действий. Можно задать усечение файла журнала **на контрольную точку** , чтобы значительно продлить время существования файла журнала для базы данных.  

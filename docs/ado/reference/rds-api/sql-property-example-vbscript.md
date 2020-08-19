@@ -1,4 +1,5 @@
 ---
+description: Пример свойства SQL (VBScript)
 title: Пример свойства SQL (VBScript) | Документация Майкрософт
 ms.technology: connectivity
 ms.custom: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 32c33bcf-3320-4836-9e2e-99c8978ce581
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 759dff00a5ae540a535c51d55b51c454cd2353d9
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: bd2d1079e8718d7c863bb3d23c6ce96b28464cf1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750691"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438616"
 ---
 # <a name="sql-property-example-vbscript"></a>Пример свойства SQL (VBScript)
 > [!IMPORTANT]
@@ -174,7 +175,7 @@ End Sub
 <!-- EndSQLRuntimeVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект элемента управления (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Свойство SQL](../../../ado/reference/rds-api/sql-property.md)
 

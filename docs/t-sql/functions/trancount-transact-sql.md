@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;TRANCOUNT (Transact-SQL)'
 title: '@@TRANCOUNT (Transact-SQL) | Документы Майкрософт'
 ms.custom: ''
 ms.date: 08/29/2017
@@ -21,12 +22,12 @@ ms.assetid: b2638410-e410-4bd0-9b54-90096182b2b6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 676c9c8f5d5fd41cd37c8ea0ae1ed4914bcc08ef
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7b6447931645647185b105659943325b47f317a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111761"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459526"
 ---
 # <a name="x40x40trancount-transact-sql"></a>&#x40;&#x40;TRANCOUNT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "87111761"
 ## <a name="return-types"></a>Типы возвращаемых данных
  **integer**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Инструкция BEGIN TRANSACTION увеличивает значение @@TRANCOUNT на 1. Инструкция ROLLBACK TRANSACTION уменьшает значение @@TRANCOUNT до 0 (исключение — инструкция ROLLBACK TRANSACTION *savepoint_name*, которая не влияет на значение @@TRANCOUNT). Инструкции COMMIT TRANSACTION и COMMIT WORK уменьшают значение @@TRANCOUNT на 1.  
   
 ## <a name="examples"></a>Примеры  

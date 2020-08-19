@@ -1,4 +1,5 @@
 ---
+description: Редактор источников SAP BW (страница «Вывод ошибок»)
 title: Редактор источника SAP BW (страница "Вывод ошибок") | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,19 +13,19 @@ f1_keywords:
 ms.assetid: b6e23b0c-949a-46d1-8424-4dc3d9035e79
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9114c301168b55a09859069b6052b67fb03ec6b2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 85da6a04026b7ae9b0db9a7c22cdb926c6afbd1b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917834"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430726"
 ---
 # <a name="sap-bw-source-editor-error-output-page"></a>Редактор источников SAP BW (страница «Вывод ошибок»)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  Используйте страницу **Вывод ошибок** **Редактора источников SAP BW** для выбора параметров обработки ошибок и задания свойств выходных столбцов ошибок.  
+  Используйте страницу **Вывод ошибок****Редактора источников SAP BW** для выбора параметров обработки ошибок и задания свойств выходных столбцов ошибок.  
   
  Для получения дополнительных сведений о компоненте источника SAP BW для [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 для SAP BW см. раздел [Источник SAP BW](../../integration-services/data-flow/sap-bw-source.md).  
   
@@ -53,7 +54,7 @@ ms.locfileid: "86917834"
  **Столбец**  
  Просмотрите внешние (исходные) столбцы, выбранные на странице **Столбцы** диалогового окна **Редактор источников SAP BW** . Дополнительные сведения об этом диалоговом окне см. в разделе [Редактор источника SAP BW (страница "Столбцы")](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md).  
   
- **Ошибка**  
+ **Error**  
  Укажите действия компонента источника SAP BW при возникновении ошибки: пропустить ошибку, перенаправить строку или вызвать сбой компонента.  
   
  **Усечение**  

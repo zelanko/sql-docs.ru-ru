@@ -1,4 +1,5 @@
 ---
+description: Метод Synchronize (служба удаленных рабочих столов)
 title: Метод Synchronize (RDS) | Документация Майкрософт
 ms.technology: connectivity
 ms.custom: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 98254c2f26db08b7c5308248c596b7f70264f10c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0795131ef1765b1fd376355a46fe9cf53ba6eb66
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750572"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438576"
 ---
 # <a name="synchronize-method-rds"></a>Метод Synchronize (служба удаленных рабочих столов)
 Синхронизирует заданный набор записей с базой данных, указанной в строке подключения для использования в ADO 2,5 и более поздних версиях.  
@@ -63,10 +64,10 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
  *пинформатион*  
  Указатель на информационную ошибку, возвращенную **инструкцией EXECUTE**. Если значение равно NULL, сведения об ошибке не возвращаются.  
   
-## <a name="remarks"></a>Примечания  
- Параметр *хандлерстринг* может иметь значение null. Что происходит в этом случае, зависит от настройки сервера RDS. Строка обработчика "МСДФМАП. Handler" указывает, что следует использовать предоставляемый корпорацией Майкрософт обработчик (Мсдфмап. dll). Строка обработчика "МАСДФМАП. Handler; Sample. ini" указывает, что должен использоваться обработчик Мсдфмап. dll, а аргумент "Sample. ini" должен быть передан обработчику. Мсдфмап. dll примет аргумент в качестве направления использования файла Sample. ini для проверки соединения и строк запроса.  
+## <a name="remarks"></a>Remarks  
+ Параметр *хандлерстринг* может иметь значение null. Что происходит в этом случае, зависит от настройки сервера RDS. Строка обработчика "МСДФМАП. Handler" указывает, что следует использовать предоставляемый корпорацией Майкрософт обработчик (Msdfmap.dll). Строка обработчика "МАСДФМАП. Handler sample.ini" указывает, что следует использовать обработчик Msdfmap.dll и что аргумент "sample.ini" должен передаваться в обработчик. Msdfmap.dll будет интерпретировать аргумент как направление использования sample.ini для проверки соединения и строк запроса.  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
 
 

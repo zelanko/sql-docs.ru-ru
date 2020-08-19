@@ -1,4 +1,5 @@
 ---
+description: Функция IS_SRVROLEMEMBER (Transact-SQL)
 title: Функция IS_SRVROLEMEMBER (Transact-SQL)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: eb44adf219905a585b922fc280215f1c81465cda
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 837f0044e39548bcd442b53603a0c320b620fcbd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248524"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459770"
 ---
 # <a name="is_srvrolemember-transact-sql"></a>Функция IS_SRVROLEMEMBER (Transact-SQL)
 

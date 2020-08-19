@@ -1,4 +1,5 @@
 ---
+description: Выбор языка при создании полнотекстового индекса
 title: Выбор языка при создании полнотекстового индекса | Документация Майкрософт
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 882a7e1acfa8baf49b90e0ebda8d3cef212d511a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9f8c0860bb5ef874a6095b993478fa9cbc117fc4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726018"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475550"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Выбор языка при создании полнотекстового индекса
 
@@ -46,11 +47,11 @@ ms.locfileid: "85726018"
   
  Новые средства разбиения по словам дают следующие преимущества.  
   
--   Надежность  
+-   Устойчивость  
   
      Тестирование показало, что новые средства разбиения по словам надежно работают в средах с большой интенсивностью запросов.  
   
--   безопасность  
+-   Безопасность  
   
      Новые средства разбиения по словам по умолчанию включены в SQL Server благодаря повышению безопасности в лингвистических компонентах. Все внешние компоненты, например средства разбиения по словам и фильтры, рекомендуется подписывать. Это позволяет повысить общий уровень безопасности и надежности SQL Server. Проверку наличия подписей у данных компонентов при полнотекстовом поиске можно настроить следующим образом:  
   
@@ -116,7 +117,7 @@ ms.locfileid: "85726018"
  По умолчанию в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]полнотекстовый поиск выполняет синтаксический анализ условий запроса с использованием языка, указанного для каждого столбца, который включен в полнотекстовое предложение. Чтобы переопределить данное поведение, укажите во время создания запроса язык, отличный от языка по умолчанию. Чтобы задать язык (это должен быть поддерживаемый язык, для которого были установлены ресурсы), который будет использоваться при разбиении по словам, морфологическом поиске, при проверке по тезаурусу и обработке стоп-слов, можно использовать предложение LANGUAGE *language_term* запросов [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)или [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) .  
   
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CONTAINS (Transact-SQL)](../../t-sql/queries/contains-transact-sql.md)   
  [CONTAINSTABLE (Transact-SQL)](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   

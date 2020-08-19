@@ -1,4 +1,5 @@
 ---
+description: sys.dm_clr_appdomains (Transact-SQL)
 title: sys. dm_clr_appdomains (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c3c0351bd541738e2540cc1a0624cf0ca9836c5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2002b70dc0b949e3628f49e6b6bb9fa1fccbefb9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893986"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490050"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +52,7 @@ ms.locfileid: "85893986"
 |**total_allocated_memory_kb**|**bigint**|Общий размер (в килобайтах) всей выделенной памяти, которая была выделена в домене приложения с момента его создания (без вычета освобожденной и собранной памяти). Это эквивалентно **System. AppDomain. мониторингтоталаллокатедмеморисизе**.|  
 |**survived_memory_kb**|**bigint**|Количество килобайт, сохранившихся после последней полной, блокирующей сборки мусора, на которые заведомо существуют ссылки из текущего домена приложения. Это эквивалентно **System. AppDomain. мониторингсурвиведмеморисизе**.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Существует связь "один к одному" между **dm_clr_appdomains. appdomain_address** и **dm_clr_loaded_assemblies. appdomain_address**.  
   
  В следующих таблицах перечислены возможные значения **состояния** , их описания и время их возникновения в жизненном цикле **AppDomain** . Эти сведения можно использовать, чтобы отслеживать Lifecyle **AppDomain** и отслеживать подозрительные или повторяющиеся экземпляры **AppDomain** , не анализируя журнал событий Windows.  
@@ -74,7 +75,7 @@ ms.locfileid: "85893986"
   
 |Состояние|Описание|  
 |-----------|-----------------|  
-|E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]запросил, чтобы среда CLR выгрузить **AppDomain**, обычно потому, что сборка, содержащая объекты управляемой базы данных, была изменена или удалена.|  
+|E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запросил, чтобы среда CLR выгрузить **AppDomain**, обычно потому, что сборка, содержащая объекты управляемой базы данных, была изменена или удалена.|  
 |E_APPDOMAIN_UNLOADED|Среда CLR выгрузила **AppDomain**. Обычно это результат процедуры эскалации из-за **ThreadAbort**, **OutOfMemory**или необработанного исключения в пользовательском коде.|  
 |E_APPDOMAIN_ENQUEUE_DESTROY|**AppDomain** был выгружен в среде CLR и настроен для уничтожения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |E_APPDOMAIN_DESTROY|**AppDomain** находится в процессе уничтожения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
@@ -108,7 +109,7 @@ from sys.dm_clr_appdomains
 where appdomain_id = 15);  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sys. dm_clr_loaded_assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)   
  [Динамические административные представления, связанные со средой CLR &#40;языке Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
   

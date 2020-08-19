@@ -1,4 +1,5 @@
 ---
+description: Параметры инструкции
 title: Параметры инструкции | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58d5b166-2578-4699-a560-1f1e6d86c49a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 02327ff4bb6a1ac3ac57fbf7d3c6b09b70c11534
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7400367d4b237d2d0e22c6363d1559eb89506d7d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306825"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482897"
 ---
 # <a name="statement-parameters"></a>Параметры инструкции
 *Параметр* — это переменная в инструкции SQL. Например, предположим, что таблица Parts содержит столбцы с именами PartID, Description и Price. Чтобы добавить часть без параметров, потребуется создать инструкцию SQL, например:  

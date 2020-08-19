@@ -1,4 +1,5 @@
 ---
+description: Задача потока данных
 title: Задача потока данных | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4bc62cfc37e6a69f34faabf8a9622f5c0d79d5f8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 21ef6f741ebfdd035630a40aba431c08a1ff9341
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919870"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431036"
 ---
 # <a name="data-flow-task"></a>Задача потока данных
 
@@ -92,7 +93,7 @@ ms.locfileid: "86919870"
   
  Например, следующая таблица содержит сообщение «В качестве входных данных компоненту потока данных были предоставлены строки. :  : 1185 : выход источника OLE DB : 1180 : сортировка : 1181 : вход сортировки : 76", разделенное на столбцы. Сообщение записано событием **OnPipelineRowsSent** , когда строки были отправлены из источника «OLE DB» в преобразование «Сортировка».  
   
-|Столбец|Description|Значение|  
+|Столбец|Описание|Значение|  
 |------------|-----------------|-----------|  
 |**PathID**|Значение свойства **ID** пути между источником «OLE DB» и преобразованием «Сортировка».|1185|  
 |**PathName**|Значение свойства **Name** пути.|Выход данных источника «OLE DB»|  

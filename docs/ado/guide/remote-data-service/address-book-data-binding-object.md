@@ -1,4 +1,5 @@
 ---
+description: Объект привязки данных адресной книги
 title: Объект-привязка данных адресной книги | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71b1897830c4a5382e6903f5e05aa29d1ce37d1b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d9c9b8a4e64432b644b9d3bf66ce2f200f0c1de5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764735"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452346"
 ---
 # <a name="address-book-data-binding-object"></a>Объект привязки данных адресной книги
 Приложение адресной книги использует [RDS. Объект элемента управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) данными для привязки данных из базы данных SQL Server к визуальному объекту (в нашем примере это таблица DHTML) на HTML-странице клиента приложения. Логика программы VBScript, управляемой событиями, использует [RDS. Элемент управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) для:  

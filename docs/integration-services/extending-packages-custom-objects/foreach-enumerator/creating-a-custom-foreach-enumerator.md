@@ -1,4 +1,5 @@
 ---
+description: Создание пользовательского перечислителя по каждому элементу
 title: Создание пользовательского перечислителя по каждому элементу | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 050e8455-2ed0-4b6d-b3ea-4e80e6c28487
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 08eaa7d908f421ec3dd4e321e47985f8d7dd6c04
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d98191945b17cb1471d6e255b8f41680a03cc459
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86902392"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430546"
 ---
 # <a name="creating-a-custom-foreach-enumerator"></a>Создание пользовательского перечислителя по каждому элементу
 

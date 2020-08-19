@@ -1,4 +1,5 @@
 ---
+description: Косая черта-звездочка (блочный комментарий) (Transact-SQL)
 title: Косая черта-звездочка (блочный комментарий) (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/27/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d2407e539d30c3467c4fa6d8b87d831c190a9d00
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 481701a7d2167e1d45f5aa77f715a380a63e97af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912379"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459237"
 ---
 # <a name="slash-star-block-comment-transact-sql"></a>Косая черта-звездочка (блочный комментарий) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +52,7 @@ text_of_comment
  *text_of_comment*  
  Текст комментария. Это одна или более символьных строк.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Комментарии могут вставляться в отдельную строку или в пределах инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)]. Многострочные комментарии необходимо отмечать сочетаниями символов /* и \*/. Для многострочных комментариев часто используется следующий стиль: первую строку начинают с сочетания символов /\*, последующие строки — с сочетания символов \*\*, а заканчивают комментарий сочетанием символов \*/.  
   
  Длина комментариев не ограничена.  
@@ -103,7 +104,7 @@ JOIN Person.Address AS a ON ea.AddressID = a.AddressID;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [-- (комментарий) (Transact-SQL)](../../t-sql/language-elements/comment-transact-sql.md)   
  [Язык управления потоком (Transact-SQL)](~/t-sql/language-elements/control-of-flow.md)  
   

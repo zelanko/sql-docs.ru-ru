@@ -1,4 +1,5 @@
 ---
+description: ALTER TABLE (команда SQL)
 title: ALTER TABLE-команда SQL | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 587d721522503f9b392bb8be7433850fd7449efb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c72d03abff792ff103bf009cd12b718c74bd497d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304715"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483707"
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE (команда SQL)
 Программно изменяет структуру таблицы.  

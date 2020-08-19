@@ -1,4 +1,5 @@
 ---
+description: Свойство Server (служба удаленных рабочих столов)
 title: Свойство сервера (RDS) | Документация Майкрософт
 ms.technology: connectivity
 ms.custom: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5cd4f578a8146a8fa7d45dcfd8e2b58f795def13
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: eb7ebc994d252fc8806c133c61239cce67b693bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750854"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438656"
 ---
 # <a name="server-property-rds"></a>Свойство Server (служба удаленных рабочих столов)
 Указывает имя службы IIS (IIS) и протокол связи.  
@@ -110,19 +111,19 @@ DataControl.Server=""
  *авебсрвр*или *ComputerName*  
  **Строковое** значение, содержащее путь к Интернету или интрасети, или имя компьютера, если сервер находится на удаленном компьютере. или пустая строка, если сервер находится на локальном компьютере.  
   
- *порту*  
- Необязательный элемент. Порт, используемый для подключения к серверу, на котором выполняются службы IIS. Номер порта задается в Internet Explorer (в меню **вид** выберите пункт **Параметры**, а затем перейдите на вкладку **Подключение** ) или в IIS.  
+ *port*  
+ Необязательный параметр. Порт, используемый для подключения к серверу, на котором выполняются службы IIS. Номер порта задается в Internet Explorer (в меню **вид** выберите пункт **Параметры**, а затем перейдите на вкладку **Подключение** ) или в IIS.  
   
  *DataControl*  
  Объектная переменная, представляющая **RDS. Объект элемента управления** .  
   
 ## <a name="remarks"></a>Remarks  
- Сервер — это расположение, в котором **RDS. **Обрабатывается запрос элемента управления (т. е. запрос или обновление). По умолчанию все запросы обрабатываются объектом [RDSServer.](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) DataObject, [мсдфмап. Компонент обработчика](../../../ado/guide/remote-data-service/datafactory-customization.md) и [мсдфмап. INI](../../../ado/guide/remote-data-service/understanding-the-customization-file.md) -файл на указанном сервере. Помните, что при изменении серверов для согласования параметров в старом и новом **мсдфмап. INI** -файлы. Несовместимость может привести к сбою запросов, успешно находящегося на одном сервере, на другом. Если для свойства сервера задана пустая строка "", эти объекты будут использоваться на локальном компьютере.  
+ Сервер — это расположение, в котором **RDS. ** Обрабатывается запрос элемента управления (т. е. запрос или обновление). По умолчанию все запросы обрабатываются объектом [RDSServer.](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) DataObject, [мсдфмап. Компонент обработчика](../../../ado/guide/remote-data-service/datafactory-customization.md) и файл [MSDFMAP.INI](../../../ado/guide/remote-data-service/understanding-the-customization-file.md) на указанном сервере. Помните, что при изменении серверов для согласования параметров в старых и новых **MSDFMAP.INI** файлах. Несовместимость может привести к сбою запросов, успешно находящегося на одном сервере, на другом. Если для свойства сервера задана пустая строка "", эти объекты будут использоваться на локальном компьютере.  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойства сервера (VBScript)](../../../ado/reference/rds-api/server-property-example-vbscript.md)   
  [Свойство Connect (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)   
  [Свойство SQL](../../../ado/reference/rds-api/sql-property.md)   

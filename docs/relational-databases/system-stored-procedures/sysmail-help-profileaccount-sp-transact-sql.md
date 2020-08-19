@@ -1,4 +1,5 @@
 ---
+description: sysmail_help_profileaccount_sp (Transact-SQL)
 title: sysmail_help_profileaccount_sp (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: be5cfcdd06dfeea2215f3c65a2b672b68e28035f
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: f27384e614a929cc149d8ae48355fb75a4ce301b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122712"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469136"
 ---
 # <a name="sysmail_help_profileaccount_sp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,13 +44,13 @@ sysmail_help_profileaccount_sp
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @profile_id = ] profile_id`Идентификатор профиля для перечисления. *profile_id* имеет **тип int**и значение по умолчанию NULL. Необходимо указать либо *profile_id* , либо *profile_name* .  
+`[ @profile_id = ] profile_id` Идентификатор профиля для перечисления. *profile_id* имеет **тип int**и значение по умолчанию NULL. Необходимо указать либо *profile_id* , либо *profile_name* .  
   
-`[ @profile_name = ] 'profile_name'`Имя профиля для списка. Аргумент *profile_name* имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать либо *profile_id* , либо *profile_name* .  
+`[ @profile_name = ] 'profile_name'` Имя профиля для списка. Аргумент *profile_name* имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать либо *profile_id* , либо *profile_name* .  
   
-`[ @account_id = ] account_id`Идентификатор учетной записи для перечисления. *account_id* имеет **тип int**и значение по умолчанию NULL. Если *account_id* и *account_name* равны NULL, выводит список всех учетных записей в профиле.  
+`[ @account_id = ] account_id` Идентификатор учетной записи для перечисления. *account_id* имеет **тип int**и значение по умолчанию NULL. Если *account_id* и *account_name* равны NULL, выводит список всех учетных записей в профиле.  
   
-`[ @account_name = ] 'account_name'`Имя учетной записи для перечисления. Аргумент *account_name* имеет тип **sysname**и значение по умолчанию NULL. Если *account_id* и *account_name* равны NULL, выводит список всех учетных записей в профиле.  
+`[ @account_name = ] 'account_name'` Имя учетной записи для перечисления. Аргумент *account_name* имеет тип **sysname**и значение по умолчанию NULL. Если *account_id* и *account_name* равны NULL, выводит список всех учетных записей в профиле.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  

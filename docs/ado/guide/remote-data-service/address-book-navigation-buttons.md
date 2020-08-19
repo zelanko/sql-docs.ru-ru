@@ -1,4 +1,5 @@
 ---
+description: Кнопки навигации адресной книги
 title: Кнопки навигации адресной книги | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f0dd84c6-5c33-4ab9-82b4-4c42dfdd2277
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fcb9ef043f27cd36c57b35605c8bf8257613af5d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f1c5aee050caf603c3e1512d9098b7684a5ff917
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764715"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452326"
 ---
 # <a name="address-book-navigation-buttons"></a>Кнопки навигации адресной книги
 В приложении адресной книги отображаются кнопки навигации в нижней части веб-страницы. С помощью кнопок навигации можно перемещаться по данным в сетке HTML путем выбора первой или последней строки данных или строк, примыкающих к текущему выделению.  
@@ -61,7 +62,7 @@ Sub Last_OnClick
 End Sub  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект элемента управления (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Методы MoveFirst, MoveLast, MoveNext и MovePrevious (служба удаленных рабочих столов)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)
 

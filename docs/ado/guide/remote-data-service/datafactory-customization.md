@@ -1,4 +1,5 @@
 ---
+description: Настройка DataFactory
 title: Настройка в отношении фактов | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 86d77985-a0d0-405a-8587-c85a20540a0e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a5339af431c913af21591124960e0e59a939dc14
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b7ec3707df187e09de92fa42d7ed2b1c1b8e1130
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749654"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452226"
 ---
 # <a name="datafactory-customization"></a>Настройка DataFactory
 Служба Remote Data Service (RDS) позволяет легко выполнять доступ к данным в трехуровневой клиентской и серверной системе. Клиентский элемент управления данными задает параметры соединения и командной строки для выполнения запроса к удаленному источнику данных, а также параметры строки подключения и параметров объекта [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) для выполнения обновления.  

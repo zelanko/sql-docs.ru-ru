@@ -1,4 +1,5 @@
 ---
+description: Пример метода SubmitChanges (VBScript)
 title: Пример метода SubmitChanges (VBScript) | Документация Майкрософт
 ms.prod: sql
 ms.technology: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 619bc7fd-ad0a-44ea-9678-ad40a662c258
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a102d2894d8d989ac04762bbab60b7645e7f35d2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6f31eb54efbf1901471fc48b7499b7ab6190b680
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750592"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438596"
 ---
 # <a name="submitchanges-method-example-vbscript"></a>Пример метода SubmitChanges (VBScript)
 > [!IMPORTANT]
@@ -116,7 +117,7 @@ End Sub
 <!-- EndCancelUpdateVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект элемента управления (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Метод SubmitChanges (служба удаленных рабочих столов)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
 
