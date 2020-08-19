@@ -1,4 +1,5 @@
 ---
+description: Исправление неудавшейся установки SQL Server
 title: Исправление неудавшейся установки SQL Server | Microsoft Docs
 deescription: This article describes the scenarios where you can try a repair operation to fix failed SQL Server installation.
 ms.custom: ''
@@ -11,12 +12,12 @@ ms.assetid: 90c11b28-892b-44d6-978e-0eee48c75b7d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3ba82179f31d8e6cef2e3e318187c26f448e8219
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b350c746d498dbaeb63f952f1ca172d4ffeaefff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900316"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88395880"
 ---
 # <a name="repair-a-failed-sql-server-installation"></a>Исправление неудавшейся установки SQL Server
 
@@ -63,7 +64,7 @@ ms.locfileid: "85900316"
   
 4. Будут запущены правило поддержки установки и файлы подпрограмм, чтобы удостовериться, что в системе установлены необходимые компоненты и что компьютер отвечает правилам проверки. Для продолжения нажмите кнопку **ОК** или **Установить** . 
   
-5. На странице «Выбор экземпляра» выберите экземпляр для исправления и нажмите кнопку **Далее** для продолжения. 
+5. На странице Выбор экземпляра выберите экземпляр для исправления и нажмите кнопку **Далее** , чтобы продолжить. 
   
 6. Будут запущены правила исправления для проверки операции. Чтобы продолжить, нажмите кнопку **Далее**. 
   

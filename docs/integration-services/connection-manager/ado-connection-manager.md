@@ -1,4 +1,5 @@
 ---
+description: Диспетчер соединений ADO
 title: Диспетчер соединений ADO | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 490418bc-5ef1-41b8-a9c8-de38aa96e0f6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5c7df83ddaca4b8982e316742fd9c46fbf0cf53b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5e909c0a84ae4f57e5eb6cbd6bf7041cf2361b62
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919697"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394400"
 ---
 # <a name="ado-connection-manager"></a>Диспетчер соединений ADO
 
@@ -60,7 +61,7 @@ ms.locfileid: "86919697"
   
  Дополнительные сведения о программной настройке диспетчера подключений см. в разделах <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> и [Добавление соединений программным образом](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Соединения в службах Integration Services (SSIS)](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Создание экземпляров зеркальных таблиц и отслеживание CDC
 title: Создание экземпляров зеркальных таблиц и отслеживание CDC | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 260c1617-eecc-4007-a84d-3c5778ce46b6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f5b462a03b15042c6fbb801b121bb04a07b7966b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9f8340ef153f815d3073edaf4f9a13e99e1e9f67
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921607"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394810"
 ---
 # <a name="generate-mirror-tables-and-cdc-capture-instances"></a>Создание экземпляров зеркальных таблиц и отслеживание CDC
 
@@ -32,7 +33,7 @@ ms.locfileid: "86921607"
   
  Нажмите кнопку **Далее** , чтобы открыть страницу [Finish](../../integration-services/change-data-capture/finish.md) .  
   
-## <a name="see-also"></a>См. также:  
- [Как создать экземпляр базы данных изменений SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)  
+## <a name="see-also"></a>См. также  
+ [Как создать экземпляр изменения базы данных SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)  
   
   

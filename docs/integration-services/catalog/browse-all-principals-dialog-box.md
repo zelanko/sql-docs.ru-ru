@@ -1,4 +1,5 @@
 ---
+description: Просмотр всех участников-диалоговое окно
 title: Диалоговое окно "Обзор всех участников" | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 618f5e013e8875f13b06bcabfe8b0c1456af0aba
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f5ec280020b966a1d23b5ebb9dfb2c740692a6d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922671"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394970"
 ---
 # <a name="browse-all-principals-dialog-box"></a>Просмотр всех участников-диалоговое окно
 
@@ -59,7 +60,7 @@ ms.locfileid: "86922671"
  **Значок столбца**  
  Значок, соответствующий **типу** участника.  
   
- **Название**  
+ **имя**;  
  Имя участника.  
   
  **Тип**  

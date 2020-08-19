@@ -1,4 +1,5 @@
 ---
+description: Программная работа с переменными
 title: Программная работа с переменными | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e2eaa85cc4c4fe7a93ffe962b74527031bd7938e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8691874f1dc93371730b22f9ccaaa3d62cf84521
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922680"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88395000"
 ---
 # <a name="working-with-variables-programmatically"></a>Программная работа с переменными
 

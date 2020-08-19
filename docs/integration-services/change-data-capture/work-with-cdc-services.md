@@ -1,4 +1,5 @@
 ---
+description: Работа со службами CDC
 title: Работа со службами CDC | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/20/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6885167d84654866dcb9c1f433f5f11aaee77031
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e591992c3e03162ecdbb928b7ce41ced3037f5ac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921450"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88394500"
 ---
 # <a name="work-with-cdc-services"></a>Работа со службами CDC
 
@@ -43,7 +44,7 @@ ms.locfileid: "86921450"
   
  Откроется диалоговое окно создания новой службы Oracle CDC.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Как работать со службами CDC](../../integration-services/change-data-capture/how-to-work-with-cdc-services.md)   
  [Создание и изменение службы CDC Oracle](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
   
