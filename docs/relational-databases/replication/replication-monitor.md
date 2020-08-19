@@ -1,4 +1,5 @@
 ---
+description: монитор репликации
 title: Монитор репликации | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/20/2017
@@ -15,12 +16,12 @@ ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: ecf9c330ef81a37a70237061f039db29b17576d2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5c4d02bae3c39ce01bf894d3cdba3246eca932d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716736"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88404940"
 ---
 # <a name="replication-monitor"></a>монитор репликации
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -85,7 +86,7 @@ ms.locfileid: "85716736"
   
 -   [Сортировка столбцов](../../relational-databases/replication/sort-columns.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запуск монитора репликации](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
 
   

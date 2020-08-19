@@ -1,4 +1,5 @@
 ---
+description: Организация безопасности распространителя
 title: Организация безопасности распространителя | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: 76d78229-0ff2-4aa4-9b4e-ad97534c5296
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d8d0563741e4b1c00e7caf00639e80a1a0d98118
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0e0a8a7e42259553e2748d2e323b0322a877f01c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915157"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88405030"
 ---
 # <a name="secure-the-distributor"></a>Организация безопасности распространителя
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "86915157"
 ## <a name="snapshot-folder-security"></a>Безопасность папки моментальных снимков  
  Убедитесь в том, что учетной записи, под которой выполняется агент слияния (для репликации слиянием) или агент распространителя (для репликации моментальных снимков и репликации транзакций), предоставлен доступ к хранилищу моментальных снимков на чтение, а учетной записи, под которой выполняется агент моментальных снимков, предоставлен доступ к хранилищу моментальных снимков на запись. Дополнительные сведения о папке моментальных снимков см. в статье [Организация безопасности папки моментальных снимков](../../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Просмотр и изменение параметров безопасности репликации](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [Включение шифрования соединений в ядре СУБД (диспетчер конфигурации SQL Server)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   

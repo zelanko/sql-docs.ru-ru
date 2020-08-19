@@ -1,4 +1,5 @@
 ---
+description: Индексы вычисляемых столбцов
 title: Индексы по вычисляемым столбцам | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/19/2018
@@ -17,12 +18,12 @@ ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de2efcf3b99e21284cf964b1cd43bc85027ecaac
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ea5366a8080ccbfb4d48c8bcfda8928ed54932d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760793"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88408120"
 ---
 # <a name="indexes-on-computed-columns"></a>Индексы вычисляемых столбцов
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -95,7 +96,7 @@ ms.locfileid: "85760793"
 ## <a name="data-type-requirements"></a>требования к типам данных;
   
 -   Выражение *computed_column_expression* , заданное для вычисляемого столбца, не может определять значения типов данных **text**, **ntext**или **image** .  
--   Вычисляемые столбцы, производные от типов данных **image**, **ntext**, **text**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** и **xml** , могут индексироваться, если тип данных вычисляемого столбца допускается в качестве ключевого столбца индекса.  
+-   Вычисляемые столбцы, производные от типов данных **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** и **xml** , могут индексироваться, если тип данных вычисляемого столбца допускается в качестве ключевого столбца индекса.  
 -   Вычисляемые столбцы, производные от типов данных **image**, **ntext**и **text** , могут быть неключевыми (включенными) столбцами некластеризованного индекса, если тип данных вычисляемого столбца является допустимым в качестве неключевого индексного столбца.  
 
 

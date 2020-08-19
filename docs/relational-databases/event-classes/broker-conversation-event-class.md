@@ -1,4 +1,5 @@
 ---
+description: Broker:Conversation, класс событий
 title: Класс событий Broker:Conversation | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/24/2019
@@ -12,12 +13,12 @@ ms.assetid: 784707b5-cc67-46a3-8ae6-8f8ecf4b27c0
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0be5e9b2a86f49fdb80b36ac33cb51a6df4ddae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5167a04707739bd83b966aba28d7a2cab0003f2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85679503"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88410230"
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation, класс событий
 
@@ -27,26 +28,26 @@ ms.locfileid: "85679503"
   
 ## <a name="brokerconversation-event-class-data-columns"></a>Столбцы данных класса событий Broker:Conversation  
   
-|Столбец данных|Тип|Description|Номер столбца|Фильтруемый|  
+|Столбец данных|Тип|Описание|Номер столбца|Фильтруемый|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |**ClientProcessID**|**int**|Идентификатор, присвоенный компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент вводит идентификатор клиентского процесса.|9|Да|  
 |**DatabaseID**|**int**|Идентификатор базы данных, указанный в инструкции USE *database* . Идентификатор базы данных по умолчанию, указанный в том случае, если инструкция USE *базы данных*не выполнялась. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных **ServerName** захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию **DB_ID** .|3|Да|  
-|**EventClass**|**int**|Тип захваченного класса событий. Всегда **124** для класса событий **Broker:Conversation**.|27|нет|  
-|**EventSequence**|**int**|Порядковый номер этого события.|51|нет|  
+|**EventClass**|**int**|Тип захваченного класса событий. Всегда **124** для класса событий **Broker:Conversation**.|27|Нет|  
+|**EventSequence**|**int**|Порядковый номер этого события.|51|Нет|  
 |**EventSubClass**|**nvarchar**|Тип подкласса события. Предоставляет дополнительные сведения о каждом классе событий.|21|Да|  
 |**GUID**|**uniqueidentifier**|Идентификатор диалога. Этот идентификатор передается в составе сообщения и является общим для обоих участников диалога.|54|нет|  
 |**HostName**|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Заполнение этого столбца данных производится в том случае, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию **HOST_NAME** .|8|Да|  
 |**IsSystem**|**int**|Указывает, произошло событие в системном или в пользовательском процессе.<br /><br /> 0 = пользовательский процесс<br /><br /> 1 = системный процесс|60|нет|  
 |**LoginSid**|**image**|Идентификатор безопасности вошедшего в систему пользователя. Значение идентификатора безопасности уникально для каждого имени входа на сервере.|41|Да|  
-|**MethodName**|**nvarchar**|Группа сообщений, которой принадлежит диалог.|47|нет|  
+|**MethodName**|**nvarchar**|Группа сообщений, которой принадлежит диалог.|47|Нет|  
 |**NTDomainName**|**nvarchar**|Домен Windows, к которому принадлежит пользователь.|7|Да|  
 |**NTUserName**|**nvarchar**|Имя пользователя, которому принадлежит соединение, создавшее это событие.|6|Да|  
 |**ObjectName**|**nvarchar**|Дескриптор диалога.|34|нет|  
 |**Приоритет**|**int**|Уровень приоритета диалога|5|Да|  
 |**RoleName**|**nvarchar**|Роль дескриптора диалога. Это либо **initiator** , либо **target**.|38|нет|  
-|**ServerName**|**nvarchar**|Имя отслеживаемого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|26|нет|  
-|**Severity**|**int**|Уровень серьезности ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , если данное событие сообщает об ошибке.|29|нет|  
+|**ServerName**|**nvarchar**|Имя отслеживаемого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|26|Нет|  
+|**Уровень серьезности**|**int**|Уровень серьезности ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , если данное событие сообщает об ошибке.|29|нет|  
 |**SPID**|**int**|Идентификатор серверного процесса, который [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] присвоил процессу, связанному с клиентом.|12|Да|  
 |**StartTime**|**datetime**|Время начала события, если оно доступно.|14|Да|  
 |**TextData**|**ntext**|Текущее состояние диалога. Может иметь одно из следующих значений:|1|Да|  
@@ -61,7 +62,7 @@ ms.locfileid: "85679503"
   
  В представленной ниже таблице перечислены значения подклассов для данного класса событий.  
   
-|ID|Подкласс|Description|  
+|ID|Подкласс|Описание|  
 |--------|--------------|-----------------|  
 |1|SEND Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] формирует событие **SEND Message** , когда [!INCLUDE[ssDE](../../includes/ssde-md.md)] выполняет инструкцию SEND.|  
 |2|END CONVERSATION|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] формирует событие **END CONVERSATION** , когда [!INCLUDE[ssDE](../../includes/ssde-md.md)] выполняет инструкцию END CONVERSATION, в которую не входит предложение WITH ERROR.|  
@@ -77,7 +78,7 @@ ms.locfileid: "85679503"
 |12|Dialog Created|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создает событие **Dialog Created** , если компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] создает конечную точку для диалога. [!INCLUDE[ssSB](../../includes/sssb-md.md)] создает конечную точку каждый раз при установлении нового диалога, независимо от того, является текущая база данных инициатором или целью диалога.|  
 |13|END CONVERSATION WITH CLEANUP|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] формирует событие END CONVERSATION WITH CLEANUP, когда [!INCLUDE[ssDE](../../includes/ssde-md.md)] выполняет инструкцию END CONVERSATION, в которую входит предложение WITH CLEANUP.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Повторная инициализация подписок — одна подписка
 title: Повторная инициализация подписок — одна подписка | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ ms.assetid: 9b0cf0be-d1f1-4163-a0ca-d6f095aa707e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c7992f3b9b27c219c2a28d226136442bddb2646f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 84aeb92a82869376385f716c224b0cd0d02cf6b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767703"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88405550"
 ---
 # <a name="reinitialize-subscriptions---one-subscription"></a>Повторная инициализация подписок — одна подписка
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "85767703"
  **Пометить для повторной инициализации**  
  Щелкните, чтобы отметить подписку для повторной инициализации. После того как будет доступен моментальный снимок, при следующем запуске для подписки агента распространителя или агента слияния он применяется к подписчику.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Повторная инициализация подписок](../../relational-databases/replication/reinitialize-subscriptions.md)  
   
   

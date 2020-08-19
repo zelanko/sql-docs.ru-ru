@@ -1,4 +1,5 @@
 ---
+description: Агент чтения очереди.
 title: Агент чтения очереди | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f02d24b6-dcb5-4126-b56e-fab41cfe4337
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f39bd1423977048c36e00dfae049293c1bcab689
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1b3c11190db072518a506950bc5bf3409d1be770
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737073"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88405650"
 ---
 # <a name="queue-reader-agent"></a>Агент чтения очереди.
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "85737073"
   
 -   Не выполняется  
   
--   Запущен  
+-   Выполнение  
   
  **Start Time**  
  Время начала сеанса.  
@@ -63,7 +64,7 @@ ms.locfileid: "85737073"
  **Описание ошибки или сообщение выбранного сеанса**  
  Выводится, только если выбранный сеанс отображает значение **Ошибка** в столбце **Состояние** . Это текстовое поле отображает подробные данные об ошибке и о выполняемой во время возникновения ошибки команде. Также содержит ссылки на дополнительные данные, имеющие отношение к ошибке.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запуск монитора репликации](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Просмотр сведений и выполнение задач с помощью монитора репликации](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Наблюдение за репликацией](../../relational-databases/replication/monitor/monitoring-replication.md)   

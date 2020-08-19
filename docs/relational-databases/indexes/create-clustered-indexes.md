@@ -1,4 +1,5 @@
 ---
+description: Создание кластеризованных индексов
 title: Создание кластеризованных индексов | Документация Майкрософт
 ms.custom: ''
 ms.date: 02/17/2017
@@ -17,12 +18,12 @@ ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dd2576b845d1cb04d69f2eef2ab32b6289a14480
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5a343bbd9686856d6b8bdb27808673178336ee84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760829"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88408500"
 ---
 # <a name="create-clustered-indexes"></a>Создание кластеризованных индексов
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -99,7 +100,7 @@ ms.locfileid: "85760829"
   
 1.  В обозревателе объектов разверните базу данных, в которой необходимо создать таблицу с кластеризованным индексом.  
   
-2.  Щелкните правой кнопкой мыши папку **Таблицы** и выберите команду **Создать таблицу...** .  
+2.  Щелкните правой кнопкой мыши папку **Таблицы** и выберите команду **Создать таблицу...**.  
   
 3.  Создайте новую таблицу обычным способом. Дополнительные сведения см. в статье [Создание таблиц (компонент Database Engine)](../../relational-databases/tables/create-tables-database-engine.md).  
   
@@ -145,7 +146,7 @@ ms.locfileid: "85760829"
   
  Дополнительные сведения см. в разделе [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание первичных ключей](../../relational-databases/tables/create-primary-keys.md)   
  [Создание ограничений уникальности](../../relational-databases/tables/create-unique-constraints.md)  
   

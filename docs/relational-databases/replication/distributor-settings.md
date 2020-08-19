@@ -1,4 +1,5 @@
 ---
+description: Параметры распространителя
 title: Настройки распространителя | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,16 +16,16 @@ ms.assetid: 8276a521-bdd1-4783-bdb6-7ab43499c0ca
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 5fd12812dc7bafd03c542c8561182ff5ce82ac2b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8620cbc1dce63d4c2e14949866329d34207f7fc9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85653322"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88406410"
 ---
 # <a name="distributor-settings"></a>Параметры распространителя
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  В диалоговом окне **Настройки распространителя** можно изменить настройки распространителей, добавленных на левую панель монитора репликации.  
+   В диалоговом окне **Параметры распространителя** можно изменить параметры распространителей, добавленных в левую область монитора репликации.  
   
 ## <a name="options"></a>Параметры  
  **Соединяться автоматически, когда запускается монитор репликации**  
@@ -42,10 +43,10 @@ ms.locfileid: "85653322"
  **Показать все издатели этого распространителя в следующей группе**  
  Выберите группу издателей из списка. Издатель отображается в свой группе в левой панели. Группы являются средством упорядочения издателей и не оказывают влияния на работу репликации.  
   
- **Создать группу**  
+ **Новая группа**  
  Нажмите эту кнопку для создания новой группы издателей. Группа издателей представляет собой удобный способ упорядочения издателей в мониторе репликации. Группы не оказывают влияние на данные или связи между серверами в топологии репликации.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запуск монитора репликации](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Наблюдение за репликацией](../../relational-databases/replication/monitor/monitoring-replication.md)  
   

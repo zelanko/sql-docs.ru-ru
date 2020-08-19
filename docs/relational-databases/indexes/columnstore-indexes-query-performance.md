@@ -1,4 +1,5 @@
 ---
+description: Производительность запросов по индексам columnstore
 title: Производительность запросов по индексам columnstore | Документы Майкрософт
 ms.custom: ''
 ms.date: 01/11/2019
@@ -11,12 +12,12 @@ ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5310aa282e269e94fa394f529a680d778d662577
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f2e5fe98b5ec7d6fc141b41869e0caef7f6cb665
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007497"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88408800"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Производительность запросов по индексам columnstore
 
@@ -111,10 +112,10 @@ ms.locfileid: "86007497"
 |merge join||нет|нет|нет||    
 |многопоточные запросы||да|да|да||    
 |вложенные циклы||нет|нет|нет||    
-|однопоточные запросы, выполняемые с MAXDOP 1||нет|нет|да||    
-|однопоточные запросы с планом последовательных запросов||нет|нет|да||    
-|sort|Упорядочение по предложению в SCAN с индексом columnstore.|нет|нет|да||    
-|top sort||нет|нет|да||    
+|однопоточные запросы, выполняемые с MAXDOP 1||нет|Нет|да||    
+|однопоточные запросы с планом последовательных запросов||нет|Нет|да||    
+|sort|Упорядочение по предложению в SCAN с индексом columnstore.|нет|Нет|да||    
+|top sort||нет|Нет|да||    
 |window aggregates||Н/Д|Н/Д|да|Новый оператор в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|    
     
 <sup>1</sup>Применяется к [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], уровням [!INCLUDE[ssSDS](../../includes/sssds-md.md)] "Премиум", "Стандартный" — S3 и выше, всем уровням виртуальных ядер, а также [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].    
