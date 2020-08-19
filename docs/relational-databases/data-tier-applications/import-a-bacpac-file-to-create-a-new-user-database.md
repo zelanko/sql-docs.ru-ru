@@ -1,4 +1,5 @@
 ---
+description: Импорт файла BACPAC для создания новой пользовательской базы данных
 title: Импорт файла BACPAC для создания новой пользовательской базы данных
 ms.date: 06/03/2020
 ms.prod: sql
@@ -25,12 +26,12 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed5a14278e9114b9408406a103553280dd9e4f8f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5e02041dd6801f5ab0b819f4bffd91ca8ba38e8b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781673"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412440"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Импорт файла BACPAC для создания новой пользовательской базы данных
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,10 +55,10 @@ ms.locfileid: "85781673"
 ## <a name="limitations-and-restrictions"></a>ограничения  
  Импорт приложения уровня данных можно выполнить в среду [!INCLUDE[ssSDS](../../includes/sssds-md.md)]или в экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , запущенный в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с пакетом обновления 4 (SP4) или более поздней версии. После экспорта приложения уровня данных из более поздней версии приложение может содержать объекты, не поддерживаемые [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Невозможно развернуть данные приложения уровня данных для экземпляров [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Рекомендуется не выполнять импорт файла экспорта приложения уровня данных, полученного из неизвестных или ненадежных источников. В данных файлах может содержаться вредоносный код Transact-SQL, вызывающий выполнение непредусмотренных инструкций или появление ошибок из-за изменения схемы. Перед тем как использовать файл экспорта из неизвестного или ненадежного источника, распакуйте его и изучите код, например хранимые процедуры или другой пользовательский код. Дополнительные сведения о том, как выполнить эти проверки, см. в разделе [Validate a DAC Package](validate-a-dac-package.md).  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
  Для повышения безопасности имена входа в SQL Server хранятся в файле экспорта приложения уровня данных без пароля. При импорте файла имя входа создается как отключенное имя входа с созданным паролем. Чтобы включить имена входа, войдите в систему под учетной записью, имеющей разрешение ALTER ANY LOGIN, и с помощью команды ALTER LOGIN включите имя входа и присвойте ему новый пароль, который можно передать пользователю. Это не требуется для имен входа, использующих проверку подлинности Windows, поскольку SQL Server не управляет их паролями.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -140,9 +141,9 @@ ms.locfileid: "85781673"
 ###  <a name="results-page"></a><a name="Results"></a> Страница «Результаты»  
  На этой странице отображаются сведения об успешном или неуспешном выполнении операций импорта и создания базы данных по результатам каждого действия. Для каждого действия, в котором обнаружена ошибка, предусмотрена ссылка в столбце **Результат** . Щелкните эту ссылку, чтобы просмотреть отчет об ошибках, относящихся к данному действию.  
   
- Нажмите кнопку **Закрыть** , чтобы закрыть мастер.  
+ Нажмите кнопку **Закрыть**, чтобы завершить работу мастера.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Импорт файла BACPAC для создания новой базы данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-import/)  
  [Приложения уровня данных](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Экспорт приложения уровня данных](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)  

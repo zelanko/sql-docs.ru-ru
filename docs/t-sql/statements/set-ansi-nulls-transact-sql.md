@@ -1,4 +1,5 @@
 ---
+description: SET ANSI_NULLS (Transact-SQL)
 title: SET ANSI_NULLS (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 06/24/2020
@@ -25,12 +26,12 @@ ms.assetid: aae263ef-a3c7-4dae-80c2-cc901e48c755
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current || azuresqldb-current'
-ms.openlocfilehash: 5a00bccbb5de02e49579bf7ada5ef13e96e57ed9
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 493c92c8e49a5b341306513f7db43f5e25b9a3c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397078"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416160"
 ---
 # <a name="set-ansi_nulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +54,9 @@ SET ANSI_NULLS { ON | OFF }
 SET ANSI_NULLS ON
 ```
 
-## <a name="remarks"></a>Remarks  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>Remarks
 Если параметру ANSI_NULLS присвоено значение ON, инструкция SELECT, использующая предложение WHERE *имя_столбца* = **NULL**, не вернет ни одной строки, даже если в столбце *имя_столбца* есть значения NULL. Инструкция SELECT, использующая предложение WHERE *column_name* <> **NULL**, не вернет ни одной строки, даже если в столбце *column_name* есть значения, отличные от NULL.  
   
 Если параметр ANSI_NULLS имеет значение OFF, операторы "равно" (=) и "не равно" (<>) не следуют стандарту ISO. Инструкция SELECT, использующая предложение WHERE *column_name* = **NULL**, вернет строки, имеющие значения NULL, в столбце *column_name*. Инструкция SELECT, использующая предложение WHERE *column_name* <> **NULL**, вернет строки, имеющие значения, отличные от NULL, в столбце. Также любая инструкция SELECT, использующая предложение WHERE *column_name* <> *XYZ_value*, возвращает все строки со значениями, не равными *XYZ_value* и не равными NULL.  

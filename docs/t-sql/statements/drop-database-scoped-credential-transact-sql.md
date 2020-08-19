@@ -1,4 +1,5 @@
 ---
+description: DROP DATABASE SCOPED CREDENTIAL (Transact-SQL)
 title: DROP DATABASE SCOPED CREDENTIAL (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 02/27/2017
@@ -17,12 +18,12 @@ ms.assetid: 319d59f4-fa82-47ca-869b-3a9cd52900b0
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: bab6abe83478c0f391d37a816c52f042f72b18b2
-ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
+ms.openlocfilehash: a43fc4828b2f3c436767ff4c19508ee6b897eb58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87544397"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416260"
 ---
 # <a name="drop-database-scoped-credential-transact-sql"></a>DROP DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
@@ -42,7 +43,7 @@ DROP DATABASE SCOPED CREDENTIAL credential_name
  *credential_name*  
  Имя учетных данных для базы данных, которые необходимо удалить с сервера.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Чтобы удалить секрет, связанный с учетными данными для базы данных, не удаляя сами учетные данные, используйте [ALTER CREDENTIAL](../../t-sql/statements/alter-credential-transact-sql.md).  
   
  Дополнительные сведения об учетных данных для базы данных см. в представлении каталога [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md).  
@@ -58,7 +59,7 @@ DROP DATABASE SCOPED CREDENTIAL SalesAccess;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Учетные данные (ядро СУБД)](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
  [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)   
  [ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   

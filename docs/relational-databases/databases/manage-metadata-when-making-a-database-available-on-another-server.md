@@ -1,4 +1,5 @@
 ---
+description: Управление метаданными при предоставлении доступа к базе данных на другом сервере
 title: Управление метаданными при предоставлении доступа к базе данных на другом сервере
 ms.date: 06/03/2020
 ms.prod: sql
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - extended stored procedures [SQL Server], metadata
 - credentials [SQL Server], metadata
 - copying databases
-ms.openlocfilehash: 0d0a777b42bc601d2f656cfbf3c31d488a3732e0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3dc93671874de47f45bd26ae12fa9ded44c9a4fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726449"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88412850"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Управление метаданными при предоставлении доступа к базе данных на другом сервере
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -106,7 +107,7 @@ ms.locfileid: "85726449"
   
  Дополнительные сведения об этой функции см. в разделе [Учетные данные (компонент Database Engine)](../../relational-databases/security/authentication-access/credentials-database-engine.md).  
   
-> **ПРИМЕЧАНИЕ.** Учетные данные используются учетными записями-посредниками агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Получить идентификационный номер участника-посредника можно в системной таблице [sysproxies](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md) .  
+> **ПРИМЕЧАНИЕ.** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Получить идентификационный номер участника-посредника можно в системной таблице [sysproxies](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md) .  
   
   
 ##  <a name="cross-database-queries"></a><a name="cross_database_queries"></a> Cross-Database Queries  
@@ -129,7 +130,7 @@ ms.locfileid: "85726449"
   
  Чтобы разрешить автоматическое шифрование главного ключа базы данных на экземпляре сервера, копия этого ключа зашифровывается с использованием главного ключа службы. Эта зашифрованная копия хранится как в рабочей базе данных, так и в базе данных **master**. Как правило, копия, которая хранится в базе данных **master** , обновляется без взаимодействия с пользователем при каждом изменении главного ключа. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сначала пытается расшифровать главный ключ базы данных с использованием главного ключа службы экземпляра. Если расшифровка заканчивается неудачей, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет в хранилище учетных данных поиск учетных данных главного ключа, имеющих идентификатор GUID того же семейства, что и у базы данных, для которой нужен главный ключ. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается расшифровать главный ключ базы данных с помощью всех подходящих учетных данных, пока не удастся расшифровать ключ или пока не кончатся учетные данные. Главный ключ, который не зашифрован с помощью главного ключа службы, следует открывать с помощью инструкции OPEN MASTER KEY и пароля.  
   
- При копировании, восстановлении или присоединении зашифрованного ключа базы данных на новом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в базе данных **master** целевого сервера не содержится копия главного ключа базы данных, зашифрованного с использованием главного ключа службы. На целевом экземпляре сервера необходимо открыть главный ключ базы данных. Сделать это можно, выполнив следующую инструкцию: OPEN MASTER KEY DECRYPTION BY PASSWORD **='**_password_**'**. После этого рекомендуется выполнить следующую инструкцию, чтобы включить автоматическую расшифровку главного ключа: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Эта инструкция передает экземпляру сервера копию главного ключа базы данных, зашифрованного с использованием главного ключа службы. Дополнительные сведения см. в разделах [OPEN MASTER KEY (Transact-SQL)](../../t-sql/statements/open-master-key-transact-sql.md) и [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md).  
+ При копировании, восстановлении или присоединении зашифрованного ключа базы данных на новом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в базе данных **master** целевого сервера не содержится копия главного ключа базы данных, зашифрованного с использованием главного ключа службы. На целевом экземпляре сервера необходимо открыть главный ключ базы данных. Сделать это можно, выполнив следующую инструкцию: OPEN MASTER KEY DECRYPTION BY PASSWORD **='** _password_ **'** . После этого рекомендуется включить автоматическую расшифровку главного ключа базы данных, выполнив следующую инструкцию: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Эта инструкция передает экземпляру сервера копию главного ключа базы данных, зашифрованного с использованием главного ключа службы. Дополнительные сведения см. в разделах [OPEN MASTER KEY (Transact-SQL)](../../t-sql/statements/open-master-key-transact-sql.md) и [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md).  
   
  Сведения о включении автоматической расшифровки главного ключа базы данных в зеркальной базе данных см. в разделе [Настройка зашифрованной зеркальной базы данных](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md).  
   
@@ -242,7 +243,7 @@ ms.locfileid: "85726449"
   
 -   [sp_help_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)  
   
--   [Просмотр сведений о шаге задания](../../ssms/agent/view-job-step-information.md)  
+-   [View Job Step Information](../../ssms/agent/view-job-step-information.md)  
   
 -   [dbo.sysjobs (Transact-SQL)](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)  
   
@@ -259,7 +260,7 @@ ms.locfileid: "85726449"
   
  Для создания скрипта для нескольких или всех объектов исходной копии базы данных можно воспользоваться мастером создания скриптов и в диалоговом окне **Выбор параметров скрипта** установить значение **TRUE** для параметра **Внести в скрипт имена входа**.  
   
-> **ПРИМЕЧАНИЕ.** См. дополнительные сведения о [настройке учетных записей входа для зеркального отображения баз данных или групп доступности AlwaysOn (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) и [управлении именами входа и заданиями после переключения ролей (SQL Server)](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
+> **ПРИМЕЧАНИЕ.** Сведения о настройке имен входа для зеркально отображаемой базы данных см. в разделах [Настройка учетных записей входа для зеркального отображения баз данных или групп доступности AlwaysOn (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) и [Управление именами входа и заданиями после переключения ролей &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
   
 ##  <a name="permissions"></a><a name="permissions"></a> Permissions  

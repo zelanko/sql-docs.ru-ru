@@ -1,4 +1,5 @@
 ---
+description: DROP CONTRACT (Transact-SQL)
 title: DROP CONTRACT (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: fdd0f81e-3c22-4cdf-9416-b4977a6ac3b6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 13a7fb5a90441ab9cf3bf287634e7433308151d6
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 128a8d993345e5c78d537923e26463acbe734e2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484003"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416650"
 ---
 # <a name="drop-contract-transact-sql"></a>DROP CONTRACT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +50,7 @@ DROP CONTRACT contract_name
  *contract_name*  
  Имя удаляемого контракта. Не могут быть указаны имена сервера, базы данных и схемы.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Нельзя удалить контракт, если на него ссылаются какие-либо службы или приоритеты диалога.  
   
  При удалении контракта компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] завершает с ошибкой любой диалог, использующий этот контракт.  
@@ -65,7 +66,7 @@ DROP CONTRACT
     [//Adventure-Works.com/Expenses/ExpenseSubmission] ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ALTER BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
  [ALTER SERVICE (Transact-SQL)](../../t-sql/statements/alter-service-transact-sql.md)   
  [CREATE CONTRACT (Transact-SQL)](../../t-sql/statements/create-contract-transact-sql.md)   

@@ -1,4 +1,5 @@
 ---
+description: SET ARITHIGNORE (Transact-SQL)
 title: SET ARITHIGNORE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 12/04/2017
@@ -23,12 +24,12 @@ ms.assetid: 71b2c2a5-c83a-4dfe-8469-237987a6e503
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99e72754414674f0617956e6be2ac2711ca0f850
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7bbb9188a082f87bb05f17d5641e12b6f73c66e7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999393"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88415050"
 ---
 # <a name="set-arithignore-transact-sql"></a>SET ARITHIGNORE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,7 +52,9 @@ SET ARITHIGNORE { ON | OFF }
 SET ARITHIGNORE OFF
 ```
 
-## <a name="remarks"></a>Remarks  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>Remarks
  От параметра SET ARITHIGNORE зависит только то, будет ли возвращаться сообщение об ошибке. При возникновении переполнения или при попытке деления на ноль [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает значение NULL вне зависимости от данной настройки. Настройка SET ARITHABORT может использоваться для определения прекращения выполнения запроса. Эта настройка не влияет на ошибки, возникающие во время выполнения инструкций INSERT, UPDATE, и DELETE.  
   
  Если один из параметров SET ARITHABORT или SET ARITHIGNORE установлен в значение OFF, а параметр SET ANSI_WARNINGS — в значение ON, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает сообщение об ошибке при обнаружении ошибок деления на ноль или переполнения.  

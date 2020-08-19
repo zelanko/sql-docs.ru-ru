@@ -1,4 +1,5 @@
 ---
+description: DROP COLUMN ENCRYPTION KEY (Transact-SQL)
 title: DROP COLUMN ENCRYPTION KEY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 10/15/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 86415302-1383-4d36-9fc7-f780831a2d37
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 2575bedc4c967bb4fc3227981cd52aca115a8d75
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 5bfe3fd136b5bed09b0de6dfcd35ff07425dbb46
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110652"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416600"
 ---
 # <a name="drop-column-encryption-key-transact-sql"></a>DROP COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -45,7 +46,7 @@ DROP COLUMN ENCRYPTION KEY key_name [;]
  *key_name*  
  Имя, под которым ключ шифрования столбца будет удален из базы данных.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии
  Ключ шифрования столбца невозможно удалить, если он используется для шифрования любого столбца в базе данных. Сначала следует удалить все столбцы, использующие ключ шифрования столбца.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -61,7 +62,7 @@ DROP COLUMN ENCRYPTION KEY MyCEK;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
  [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
  [CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md)  
