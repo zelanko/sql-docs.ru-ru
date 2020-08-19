@@ -1,4 +1,5 @@
 ---
+description: FILEGROUPPROPERTY (Transact-SQL)
 title: FILEGROUPPROPERTY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: b3a930e6-df05-4034-929c-f681f5f6fc6e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 48c0d9a2a3b83256e8ae32a13d615e3a36b10ccb
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 5992e56da8ae602d2e681265b63b52f6415f9374
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111546"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468035"
 ---
 # <a name="filegroupproperty-transact-sql"></a>FILEGROUPPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,9 +48,9 @@ FILEGROUPPROPERTY ( filegroup_name, property )
 Выражение типа **sysname**, представляющее имя файловой группы, для которой `FILEGROUPPROPERTY` возвращает сведения об именованном свойстве.  
   
  *property*  
-Выражение типа **varchar(128)** , которое возвращает имя свойства файловой группы. Аргумент *property* может иметь одно из следующих значений:  
+Выражение типа **varchar(128)**, которое возвращает имя свойства файловой группы. Аргумент *property* может иметь одно из следующих значений:  
   
-|Значение|Description|Возвращенное значение|  
+|Значение|Описание|Возвращенное значение|  
 |-----------|-----------------|--------------------|  
 |**IsReadOnly**|Файловая группа доступна только для чтения.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL: недопустимые входные данные|  
 |**IsUserDefinedFG**|Файловая группа является пользовательской.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL: недопустимые входные данные|  
@@ -78,7 +79,7 @@ Default Filegroup
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [FILEGROUP_ID (Transact-SQL)](../../t-sql/functions/filegroup-id-transact-sql.md)   
  [FILEGROUP_NAME (Transact-SQL)](../../t-sql/functions/filegroup-name-transact-sql.md)   
  [Функции метаданных (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)   

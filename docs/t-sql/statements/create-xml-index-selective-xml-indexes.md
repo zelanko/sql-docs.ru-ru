@@ -1,4 +1,5 @@
 ---
+description: CREATE XML INDEX (селективные XML-индексы)
 title: CREATE XML INDEX (селективные XML-индексы) | Документы Майкрософт
 ms.custom: ''
 ms.date: 08/10/2017
@@ -12,12 +13,12 @@ dev_langs:
 ms.assetid: 1f510151-41d5-45c2-9cd0-b1ca0246fffe
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 902cebc510572b8900acf6f12666398ef9d147b1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e75a8511c8f706e8b92cbe2830b9f904f56c42b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766907"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444816"
 ---
 # <a name="create-xml-index-selective-xml-indexes"></a>CREATE XML INDEX (селективные XML-индексы)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -87,7 +88,9 @@ xmlnamespace_uri AS xmlnamespace_prefix
   
  WITH \<index_options>. Сведения о параметрах индекса см. в статье [CREATE XML INDEX](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   
-## <a name="remarks"></a>Remarks  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>Remarks
  Может быть несколько вторичных селективных XML-индексов в каждом XML-столбце базовой таблицы.  
   
 ## <a name="limitations-and-restrictions"></a>Ограничения  

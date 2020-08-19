@@ -1,4 +1,5 @@
 ---
+description: ConnectPromptEnum
 title: Коннектпромптенум | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 21026e24-62b7-4cc9-8aef-62c1fc6cba75
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 61a66866f8206f2df4cbdeb3f2144e0ac12ac695
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0ad8fe77bb3472931d3b16d5849b047001922c96
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762595"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444416"
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
 Указывает, должно ли отображаться диалоговое окно для запроса отсутствующих параметров при открытии соединения с источником данных.  
@@ -42,5 +43,5 @@ ms.locfileid: "82762595"
 |Адоенумс. Коннектпромпт. КОМПЛЕТЕРЕКУИРЕД|  
 |Адоенумс. Коннектпромпт. NEVER|  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Свойство Prompt (динамическое) (ADO)](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)

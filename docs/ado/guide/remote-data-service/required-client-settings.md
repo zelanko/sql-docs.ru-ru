@@ -1,4 +1,5 @@
 ---
+description: Требуемые параметры клиента
 title: Требуемые параметры клиента | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9ec52c594cb058ef8359c39d696d47d4cd3dd127
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8d21cf3f08b284ed2642f9567ae86909fb35579b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749389"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452026"
 ---
 # <a name="required-client-settings"></a>Требуемые параметры клиента
 > [!IMPORTANT]
@@ -31,11 +32,11 @@ ms.locfileid: "82749389"
   
 -   Укажите имя обработчика для использования в свойстве **обработчика** объекта данных [(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) или в строке соединения объекта [Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) для строки подключения "**handler**=". (Нельзя задать обработчик в строке соединения объекта **соединения** .)  
   
- RDS предоставляет обработчик по умолчанию на сервере с именем **мсдфмап. Обработчик**. (Файл настройки по умолчанию называется МСДФМАП. INI.)  
+ RDS предоставляет обработчик по умолчанию на сервере с именем **мсдфмап. Обработчик**. (Файл настройки по умолчанию называется MSDFMAP.INI.)  
   
  **Пример**  
   
- Предположим, что следующие разделы в **мсдфмап. INI** и имя источника данных адвворкс были ранее определены:  
+ Предположим, что следующие разделы в **MSDFMAP.INI** и имя источника данных адвворкс ранее были определены:  
   
 ```console
 [connect CustomerDataBase]  

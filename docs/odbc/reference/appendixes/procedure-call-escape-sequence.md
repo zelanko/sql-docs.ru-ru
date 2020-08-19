@@ -1,4 +1,5 @@
 ---
+description: Escape-последовательность вызова процедуры
 title: Escape-последовательность вызова процедуры | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 269fbab0-e5f2-4a98-86c0-2d7b647acaae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1194efe6a21c456a722ccd4352661c998f0316d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ba88f3d78edeaa1ce4f4884977656cd8a4a16062
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298224"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483227"
 ---
 # <a name="procedure-call-escape-sequence"></a>Escape-последовательность вызова процедуры
 ODBC использует escape-последовательности для вызовов процедур. Синтаксис этой escape-последовательности выглядит следующим образом:  

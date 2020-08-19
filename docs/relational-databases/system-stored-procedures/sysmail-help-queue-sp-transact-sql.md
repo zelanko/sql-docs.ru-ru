@@ -1,4 +1,5 @@
 ---
+description: sysmail_help_queue_sp (Transact-SQL)
 title: sysmail_help_queue_sp (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4f47e06875d2076e4ae9510d7cb1c5bf5f706c45
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2cda00932e9cca82ef93be1b4c00a8aabd583737
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890887"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469160"
 ---
 # <a name="sysmail_help_queue_sp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @queue_type = ] 'queue_type'`Необязательный аргумент удаляет адреса электронной почты типа, указанного в качестве *queue_type*. *queue_type* имеет тип **nvarchar (6)** и не имеет значения по умолчанию. Допустимые значения: **mail** и **Status**.  
+`[ @queue_type = ] 'queue_type'` Необязательный аргумент удаляет адреса электронной почты типа, указанного в качестве *queue_type*. *queue_type* имеет тип **nvarchar (6)** и не имеет значения по умолчанию. Допустимые значения: **mail** и **Status**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -80,7 +81,7 @@ status     0        INACTIVE           2005-10-07 21:04:47.003 2005-10-10 21:04:
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)  
   
   

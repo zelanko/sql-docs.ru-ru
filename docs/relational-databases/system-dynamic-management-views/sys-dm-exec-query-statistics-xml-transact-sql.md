@@ -1,4 +1,5 @@
 ---
+description: sys. dm_exec_query_statistics_xml (Transact-SQL)
 title: sys. dm_exec_query_statistics_xml (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/16/2016
@@ -16,11 +17,12 @@ helpviewer_keywords:
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 3b1621a89d38e8e241b69aadfb3f2016b63cdb7d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 250b97f93eb7a40fe23b44da4b760ce4681f33aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005208"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490226"
 ---
 # <a name="sysdm_exec_query_statistics_xml-transact-sql"></a>sys. dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -53,10 +55,10 @@ sys.dm_exec_query_statistics_xml(session_id)
 |plan_handle|**varbinary (64)**|Токен, однозначно определяющий план выполнения запроса для выполняемого в данный момент пакета. Допускает значение NULL.|
 |query_plan|**xml**|Содержит представление среды выполнения Showplan плана выполнения запроса, указанного в *plan_handle* содержащего частичную статистику. Представление Showplan имеет формат XML. Для каждого пакета, содержащего, например нерегламентированные инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)], вызовы хранимых процедур и вызовы определяемых пользователем функций, формируется один план. Допускает значение NULL.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Remarks
 Эта системная функция доступна начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] версии с пакетом обновления 1 (SP1). См. статью KB [3190871](https://support.microsoft.com/help/3190871)
 
-Эта системная функция работает как в **стандартной** и **упрощенной** инфраструктуре профилирования статистики выполнения запросов. Дополнительные сведения см. в разделе [инфраструктура профилирования запросов](../../relational-databases/performance/query-profiling-infrastructure.md).  
+Эта системная функция работает как в **стандартной** и **упрощенной** инфраструктуре профилирования статистики выполнения запросов. Дополнительные сведения см. в разделе [Инфраструктура профилирования запросов](../../relational-databases/performance/query-profiling-infrastructure.md).  
 
 В следующих случаях выходные данные Showplan не возвращаются в столбце **query_plan** возвращаемой таблицы для **sys. dm_exec_query_statistics_xml**.  
   
@@ -95,8 +97,8 @@ CROSS APPLY sys.dm_exec_query_statistics_xml(session_id);
 GO  
 ```   
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
   [Флаги трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
- [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Динамические административные представления, связанные с базами данных &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Динамические административные представления, связанные с базами данных &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
 

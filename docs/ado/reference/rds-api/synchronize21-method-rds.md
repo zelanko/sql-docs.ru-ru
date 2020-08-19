@@ -1,4 +1,5 @@
 ---
+description: Метод Synchronize21 (служба удаленных рабочих столов)
 title: Метод Synchronize21 (RDS) | Документация Майкрософт
 ms.technology: connectivity
 ms.custom: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6b35f136-9d9a-4bdd-8144-67decfd3c4e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 454b012b8027b86256215721bdfca17122713c75
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4627ac4b67e31861ff91cb516076a561a7a315e2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750561"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438566"
 ---
 # <a name="synchronize21-method-rds"></a>Метод Synchronize21 (служба удаленных рабочих столов)
 Синхронизирует заданный набор записей с базой данных, указанной в строке подключения для использования с ADO 2,1.  
@@ -57,13 +58,13 @@ object.Synchronize21(ConnectionString As String, HandlerString As String, lSynch
  *пстатусаррай*  
  Вариант, используемый для возврата безопасного массива состояний строк для строк, затронутых синхронизацией. Не задается, если не задан ни один из следующих параметров синхронизации: *рефрешвисупдате*, *Refresh* и *рефрешконфликтс*.  
   
-## <a name="remarks"></a>Примечания  
- Параметр *хандлерстринг* может иметь значение null. Что происходит в этом случае, зависит от настройки сервера RDS. Строка обработчика "МСДФМАП. Handler" указывает, что следует использовать предоставляемый корпорацией Майкрософт обработчик (Мсдфмап. dll). Строка обработчика "МАСДФМАП. Handler; Sample. ini" указывает, что должен использоваться обработчик Мсдфмап. dll, а аргумент "Sample. ini" должен быть передан обработчику. Мсдфмап. dll примет аргумент в качестве направления использования файла Sample. ini для проверки соединения и строк запроса.  
+## <a name="remarks"></a>Remarks  
+ Параметр *хандлерстринг* может иметь значение null. Что происходит в этом случае, зависит от настройки сервера RDS. Строка обработчика "МСДФМАП. Handler" указывает, что следует использовать предоставляемый корпорацией Майкрософт обработчик (Msdfmap.dll). Строка обработчика "МАСДФМАП. Handler sample.ini" указывает, что следует использовать обработчик Msdfmap.dll и что аргумент "sample.ini" должен передаваться в обработчик. Msdfmap.dll будет интерпретировать аргумент как направление использования sample.ini для проверки соединения и строк запроса.  
   
 > [!NOTE]
 >  Метод **Synchronize21** — это просто версия [метода Synchronize (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md). Когда необходимо использовать метод **Synchronize** для взаимодействия с ADO 2,1, вместо него можно вызвать метод **Synchronize21** . Возможности метода **Synchronize** в ADO 2,5 и более поздних версиях представляют собой надмножество возможностей, предоставляемых для того же метода в ADO 2,1.  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
 
 

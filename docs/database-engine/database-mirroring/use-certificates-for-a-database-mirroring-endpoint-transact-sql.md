@@ -1,4 +1,5 @@
 ---
+description: Использование сертификатов для конечной точки зеркального отображения базы данных (Transact-SQL)
 title: Использование сертификатов для конечной точки зеркального отображения базы данных
 descriptoin: Steps to configure the use of a certificate on both inbound and outbound connections for a SQL Server database mirroring endpoint.
 ms.custom: seo-lt-2019
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f7c23cc2-48dc-4b78-b441-89ca29a0bd9e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c3c3d611937bcdf85c05d61e6cbbc1c3033941c2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c6e225e3202e0fe7cdd33bac38b86dda5283aae0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758195"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431246"
 ---
 # <a name="use-certificates-for-a-database-mirroring-endpoint-transact-sql"></a>Использование сертификатов для конечной точки зеркального отображения базы данных (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +63,7 @@ ms.locfileid: "85758195"
   
  Дополнительные сведения см. в разделе [Включение использования сертификатов для входящих соединений в конечной точке зеркального отображения базы данных (Transact-SQL)](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md).  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
  За исключением случаев, когда сеть гарантированно защищена, рекомендуется для соединений зеркального отображения базы данных применять шифрование. Дополнительные сведения см. в разделе [Конечная точка зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md).  
   
  При копировании сертификата на другую систему используйте безопасный метод копирования. Отнеситесь с особым вниманием к хранению сертификатов в безопасном месте.  

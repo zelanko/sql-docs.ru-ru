@@ -1,4 +1,5 @@
 ---
+description: Отправка в удаленную закрытую очередь сообщений в задаче «Скрипт»
 title: Отправка в удаленную закрытую очередь сообщений в задаче "Скрипт" | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 636314fd-d099-45cd-8bb4-f730d0a06739
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 58fc117593359bf8e06b7d38a3eb0510a44de09a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5bc25b37bb4dfac2aa03795972edb56eb406aebd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921100"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430346"
 ---
 # <a name="sending-to-a-remote-private-message-queue-with-the-script-task"></a>Отправка в удаленную закрытую очередь сообщений в задаче «Скрипт»
 
@@ -33,7 +34,7 @@ ms.locfileid: "86921100"
 > [!NOTE]  
 >  Если нужно создать задачу, которую будет удобно использовать в нескольких пакетах, рекомендуется начать разработку пользовательской задачи с этого образца задачи «Скрипт». Дополнительные сведения см. в разделе [Разработка пользовательской задачи](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Описание  
  В следующем примере для отправки текста (содержащегося в переменной пакета) в удаленную закрытую очередь сообщений используется существующий диспетчер соединений MSMQ вместе с объектами и методами из пространства имен System.Messaging. Вызов метода M:Microsoft.SqlServer.Dts.ManagedConnections.MSMQConn.AcquireConnection(System.Object) диспетчера подключений MSMQ возвращает объект **MessageQueue**, метод **Send** которого выполняет эту задачу.  
   
 #### <a name="to-configure-this-script-task-example"></a>Настройка этого образца задачи «Скрипт»  
@@ -46,7 +47,7 @@ ms.locfileid: "86921100"
   
 2.  Создайте переменную служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] с именем **MessageText** типа **String**, чтобы передать текст сообщения в скрипт. Введите сообщение по умолчанию как значение переменной.  
   
-3.  Добавьте задачу «Скрипт» в область конструктора и измените ее. На вкладке **Скрипт** **редактора задачи "Скрипт"** добавьте переменную `MessageText` к свойству **ReadOnlyVariables**, чтобы сделать переменную доступной в скрипте.  
+3.  Добавьте задачу «Скрипт» в область конструктора и измените ее. На вкладке **Скрипт****редактора задачи "Скрипт"** добавьте переменную `MessageText` к свойству **ReadOnlyVariables**, чтобы сделать переменную доступной в скрипте.  
   
 4.  Нажмите кнопку **Изменить скрипт**, чтобы открыть редактор скриптов средств [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] для приложений (VSTA).  
   

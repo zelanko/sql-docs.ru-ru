@@ -1,4 +1,5 @@
 ---
+description: Разработка пользовательского регистратора
 title: Разработка пользовательского регистратора | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3f715b95-7074-4f5c-8ae2-246998052e78
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 41da6c13c50ded80c5388da1b38dad582084b3c5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e69139c38d87c1a61a61b774efdd80db49ea8181
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916435"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430496"
 ---
 # <a name="developing-a-custom-log-provider"></a>Разработка пользовательского регистратора
 
@@ -45,7 +46,7 @@ ms.locfileid: "86916435"
  [Разработка пользовательского интерфейса для пользовательского регистратора](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md)  
  Пользовательские интерфейсы для пользовательских регистраторов не поддерживаются службами [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].  
   
-## <a name="related-topics"></a>См. также  
+## <a name="related-topics"></a>Связанные разделы  
   
 ### <a name="information-common-to-all-custom-objects"></a>Общие сведения для всех пользовательских объектов  
  Сведения, общие для всех типов пользовательских объектов, которые можно создавать в службах [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], см. в следующих разделах.  

@@ -1,4 +1,5 @@
 ---
+description: Добавление поддержки отладки в пользовательскую задачу
 title: Добавление поддержки отладки в пользовательскую задачу | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cf8461adf02267d433a12543208d48fea00ff953
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 23abaf34f5bec9ecab8e506a123e9e9a1ec4f81f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916440"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430456"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>Добавление поддержки отладки в пользовательскую задачу
 

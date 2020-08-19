@@ -1,4 +1,5 @@
 ---
+description: Диспетчер подключений Oracle
 title: Диспетчер подключений Oracle | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/14/2019
@@ -9,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0df21d12c9a7d29957d004517a3a6de3e93a8221
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 428ca450371e452081d548a64e26dba2bd29b3b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915667"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430746"
 ---
 # <a name="oracle-connection-manager"></a>Диспетчер подключений Oracle
 
@@ -36,7 +37,7 @@ ms.locfileid: "86915667"
 
 Введите данные о подключении Oracle.
 
-**имя**;
+**Название**
 
 Введите имя для подключения Oracle. Имя по умолчанию — Oracle Connection Manager. 
 

@@ -1,4 +1,5 @@
 ---
+description: BottomPercent (расширения интеллектуального анализа данных)
 title: BottomPercent (расширения интеллектуального анализа данных) | Документация Майкрософт
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 647f0cdaaef28f1da7ca51157388288cfdd729dc
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 04bfd39b8b1d94ec02f12ee599bfb0a21652b15c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969966"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431166"
 ---
 # <a name="bottompercent-dmx"></a>BottomPercent (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -40,7 +41,7 @@ BottomPercent(<table expression>, <rank expression>, <percent>)
 ## <a name="result-type"></a>Тип результата  
  Таблица.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Функция **BottomPercent** возвращает нижние строки в порядке возрастания ранга. Ранг основан на вычисленном значении \<rank expression> аргумента для каждой строки, так что сумма \<rank expression> значений является по крайней мере заданным процентом, заданным \<percent> аргументом. **BottomPercent** возвращает наименьшее количество возможных элементов, при этом соблюдая указанное процентное значение.  
   
 ## <a name="examples"></a>Примеры  
@@ -112,8 +113,8 @@ NATURAL PREDICTION JOIN
 > [!WARNING]  
 >  Функции многомерных выражений для TOPPERCENT и BOTTOMPERCENT могут давать непредвиденные результаты, если значения, используемые для вычисления процентов, содержат отрицательные числа. Это не влияет на функции расширений интеллектуального анализа данных. Дополнительные сведения см. в разделе [BottomPercent &#40;многомерных выражений&#41;](../mdx/bottompercent-mdx.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширения интеллектуального анализа данных &#40;Справочник по функциям DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/functions-dmx.md)  
+ [Функции &#40;&#41;расширений интеллектуального анализа данных ](../dmx/functions-dmx.md)  
   
   

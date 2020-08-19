@@ -1,4 +1,5 @@
 ---
+description: Обеспечение достаточного места в TempDB
 title: Обеспечение достаточного пространства TempDB | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 09130db1-6248-4234-a1e5-a9c8e1622c06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a783c6b6cecbd1fb4139d0ffd3af1a960347f968
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a84bec7cbd7a79fadf4ea5b11d486e7daf6aa9ab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749577"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452196"
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>Обеспечение достаточного места в TempDB
 Если при обработке объектов [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) , требующих обработки памяти, в Microsoft SQL Server 6,5 возникли ошибки, может потребоваться увеличить размер базы данных tempdb. (Для некоторых запросов требуется временное пространство обработки; например, запрос с предложением ORDER BY требует сортировки **набора записей**, для чего требуется некоторое временное пространство.)  

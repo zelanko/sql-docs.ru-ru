@@ -1,4 +1,5 @@
 ---
+description: События ADO
 title: События ADO | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ded5ad9-8f83-4224-95af-38512783b972
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a93353be1737b38e7acb557a682e84cbb947c2a1
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 07ef1c379dcf59b386b86d5b9fce38f77c521e01
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242874"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451426"
 ---
 # <a name="ado-events"></a>События ADO
 
@@ -27,7 +28,7 @@ ms.locfileid: "87242874"
 |[бегинтранскомплете](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|Вызывается после операции **примеры BeginTrans** .|  
 |[коммиттранскомплете](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|Вызывается после операции **CommitTrans** .|  
 |[коннекткомплете](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|Вызывается после запуска соединения.|  
-|[Соедините](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|Вызывается после завершения соединения.|  
+|[Отключение](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|Вызывается после завершения соединения.|  
 |[ендофрекордсет](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|Вызывается при попытке переместиться в строку после конца **набора записей**.|  
 |[ексекутекомплете](../../../ado/reference/ado-api/executecomplete-event-ado.md)|Вызывается после завершения выполнения команды.|  
 |[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|Вызывается после того, как все записи в длинной асинхронной операции были получены в **набор записей**.|  
@@ -45,7 +46,7 @@ ms.locfileid: "87242874"
 |[WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md)|Вызывается непосредственно перед выполнением ожидающей команды в этом соединении и предоставляет пользователю возможность проверять и изменять параметры выполнения, ожидающие обработки.|  
 |[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|Событие **виллмове** вызывается *до* того, как операция ожидает изменения текущей позицией в **наборе записей**.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
  [Коллекции ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Динамические свойства ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

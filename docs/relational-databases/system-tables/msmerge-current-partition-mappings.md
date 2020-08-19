@@ -1,4 +1,5 @@
 ---
+description: MSmerge_current_partition_mappings
 title: MSmerge_current_partition_mappings | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a3088840-5a30-40f5-8e8a-aa03afc4905f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 68244a9fe6933d4bffe79591d4f6c043c5d18658
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d854b7a913ad181f744592c42fdb08861de7e0ca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889851"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469078"
 ---
 # <a name="msmerge_current_partition_mappings"></a>MSmerge_current_partition_mappings
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,11 +34,11 @@ ms.locfileid: "85889851"
 |-----------------|---------------|-----------------|  
 |**publication_number**|**smallint**|Номер публикации, который хранится в **sysmergepublications**.|  
 |**tablenick**|**int**|Псевдоним опубликованной таблицы.|  
-|**rowguid**|**uniqueidentifier**|Идентификатор данной строки.|  
+|**уникаль**|**uniqueidentifier**|Идентификатор данной строки.|  
 |**partition_id**|**int**|Идентификатор секции, к которой принадлежит строка. Значение равно-1, если изменение строки относится ко всем подписчикам.|  
   
-## <a name="see-also"></a>См. также  
- [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

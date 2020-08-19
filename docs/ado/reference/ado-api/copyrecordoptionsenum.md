@@ -1,4 +1,5 @@
 ---
+description: CopyRecordOptionsEnum
 title: Копирекордоптионсенум | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2fa4eec5-d50b-4fd3-8ae7-40af441ba12b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8dc32a3cfad89e479b2541819b7ff6ad1bb1a4ed
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8cb5b72579313f538ca763079787f2aba640d692
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760260"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444376"
 ---
 # <a name="copyrecordoptionsenum"></a>CopyRecordOptionsEnum
 Задает поведение метода [копирекорд](../../../ado/reference/ado-api/copyrecord-method-ado.md) .  
@@ -35,5 +36,5 @@ ms.locfileid: "82760260"
 ## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
  Эти константы не имеют эквивалентов ADO/WFC.  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Метод CopyRecord (ADO)](../../../ado/reference/ado-api/copyrecord-method-ado.md)

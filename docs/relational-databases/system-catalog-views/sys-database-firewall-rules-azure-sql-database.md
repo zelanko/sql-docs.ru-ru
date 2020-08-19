@@ -1,4 +1,5 @@
 ---
+description: sys.database_firewall_rules (база данных SQL Azure)
 title: sys. database_firewall_rules (база данных SQL Azure) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,17 +20,17 @@ ms.assetid: 2e821593-3b9f-43d6-a99b-1ceffe177faf
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d14ae77b15121b1344d3881f8966d6a707f71fa6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 49a48533c800093090465819610052009633839f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784993"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475476"
 ---
 # <a name="sysdatabase_firewall_rules-azure-sql-database"></a>sys.database_firewall_rules (база данных SQL Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-  Возвращает сведения о параметрах брандмауэра уровня базы данных, связанных с [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] . Параметры брандмауэра уровня базы данных особенно полезны при использовании пользователей автономной базы данных. Дополнительные сведения см. в разделе [Пользователи автономной базы данных — создание переносимой базы данных](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+  Возвращает сведения о параметрах брандмауэра уровня базы данных, связанных с [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] . Параметры брандмауэра уровня базы данных особенно полезны при использовании пользователей автономной базы данных. Дополнительные сведения см. в разделе [Пользователи автономной базы данных — создание переносимой базы данных](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
  Представление `sys.database_firewall_rules` содержит следующие столбцы.  
   
@@ -42,7 +43,7 @@ ms.locfileid: "85784993"
 |create_date|**DATETIME**|Дата и время создания параметра брандмауэра на уровне базы данных в формате UTC.|  
 |modify_date|**DATETIME**|Дата и время последнего изменения параметра брандмауэра на уровне базы данных в формате UTC.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Чтобы получить сведения о параметрах брандмауэра на уровне сервера, связанных с База данных SQL Microsoft Azure, используйте представление [sys. firewall_rules (база данных SQL Azure)](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md).  
   
 ## <a name="permissions"></a>Разрешения  
@@ -55,5 +56,5 @@ ms.locfileid: "85784993"
 [sp_delete_firewall_rule &#40;базе данных SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database.md)   
 [sys. firewall_rules &#40;базы данных SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md)  
 [Настройка брандмауэра Windows для доступа к ядро СУБД](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)     
-[Настройка брандмауэра для доступа FILESTREAM](../../relational-databases/blob/configure-a-firewall-for-filestream-access.md)  
+[Настройка брандмауэра для доступа к FILESTREAM](../../relational-databases/blob/configure-a-firewall-for-filestream-access.md)  
 [настроить брандмауэр для доступа к серверу отчетов](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  

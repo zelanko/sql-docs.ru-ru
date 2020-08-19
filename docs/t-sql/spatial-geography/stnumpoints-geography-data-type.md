@@ -1,4 +1,5 @@
 ---
+description: STNumPoints (тип данных geography)
 title: STNumPoints (тип данных geography) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 25ff7ad1-ba5f-4cfb-816a-59255ac1591d
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 372dea8b43f386795d49274ed63d62b862ecff43
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 6dbbf84ae21589d6428528d1599fe65eba7704f6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552476"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445198"
 ---
 # <a name="stnumpoints-geography-data-type"></a>STNumPoints (тип данных geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

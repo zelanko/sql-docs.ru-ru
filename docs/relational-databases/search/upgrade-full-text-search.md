@@ -1,4 +1,5 @@
 ---
+description: Обновление полнотекстового поиска
 title: Обновление полнотекстового поиска | Документация Майкрософт
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 841c5bd53f2498a6e057495e3953744784beb211
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 763184ba374d004001b33357591a89668c3dd0a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629035"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490597"
 ---
 # <a name="upgrade-full-text-search"></a>Обновление полнотекстового поиска
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -121,9 +122,9 @@ ms.locfileid: "85629035"
   
  **Изменение поведения полнотекстового обновления на экземпляре сервера**  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]: Используйте действие **upgrade\_option** хранимой процедуры [sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]: используйте действие **upgrade\_option** хранимой процедуры [sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** Используйте параметр **Режим обновления полнотекстового каталога** в диалоговом окне **Свойства сервера**. Дополнительные сведения см. в разделе [Управление и наблюдение за полнотекстовым поиском для экземпляра сервера](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** используйте параметр **Режим обновления полнотекстового каталога** в диалоговом окне **Свойства сервера** . Дополнительные сведения см. в разделе [Управление и наблюдение за полнотекстовым поиском для экземпляра сервера](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
 ##  <a name="considerations-for-restoring-a-ssversion2005-full-text-catalog-to-sscurrent"></a><a name="Considerations_for_Restore"></a> Замечания по восстановлению полнотекстового каталога [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Одним из методов обновления полнотекстовых данных базы данных [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] до версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] является восстановление полной резервной копии базы данных до версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -177,7 +178,7 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
   
  Дополнительные сведения о присоединении и отсоединении базы данных см. в разделах [Присоединение и отсоединение базы данных (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md), [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md), [sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md) и [sp_detach_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md).  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также  
  [Приступая к работе с компонентом Full-Text Search](../../relational-databases/search/get-started-with-full-text-search.md)   
  [Настройка и управление средством разбиения на слова и парадигматические модули для поиска](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Настройка и управление фильтрами для поиска](../../relational-databases/search/configure-and-manage-filters-for-search.md)  

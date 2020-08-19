@@ -1,4 +1,5 @@
 ---
+description: Свойство ActiveCommand (ADO)
 title: Свойство ActiveCommand (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fb4088d5-5968-42d6-aeaa-3955046bb4da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b89876366c80d20bde110da9e9d86414873e86bc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 38c0a0955e934b4f303937d978f739e00ac6c120
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747476"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451746"
 ---
 # <a name="activecommand-property-ado"></a>Свойство ActiveCommand (ADO)
 Указывает объект [Command](../../../ado/reference/ado-api/command-object-ado.md) , который создал связанный объект [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) .  
@@ -28,17 +29,17 @@ ms.locfileid: "82747476"
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает **значение типа Variant** , содержащее объект **Command** . По умолчанию используется пустая ссылка на объект.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Свойство **ActiveCommand** доступно только для чтения.  
   
  Если объект **команды** не использовался для создания текущего **набора записей**, возвращается ссылка на **пустой** объект.  
   
  Это свойство используется для поиска связанного объекта **Command** , если предоставлен только результирующий объект **набора записей** .  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойства ActiveCommand (Visual Basic)](../../../ado/reference/ado-api/activecommand-property-example-vb.md)   
  [Пример свойства ActiveCommand (JScript)](../../../ado/reference/ado-api/activecommand-property-example-jscript.md)   
  [Пример свойства ActiveCommand (Visual c++)](../../../ado/reference/ado-api/activecommand-property-example-vc.md)   

@@ -1,4 +1,5 @@
 ---
+description: ConnectOptionEnum
 title: Коннектоптионенум | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bff07eeb-dee3-4e4e-9b2d-d56061ea744d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fa372f05a80290e907298a0969d9eb9f14355f90
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 71142aac94003987267a6d4a6b30d2c9d17c1bfd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762605"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444426"
 ---
 # <a name="connectoptionenum"></a>ConnectOptionEnum
 Указывает, должен ли метод [открытия](../../../ado/reference/ado-api/open-method-ado-connection.md) объекта [соединения](../../../ado/reference/ado-api/connection-object-ado.md) возвращаться после установления соединения (синхронно) или до (асинхронно).  
@@ -38,5 +39,5 @@ ms.locfileid: "82762605"
 |AdoEnums.ConnectOption.ASYNCCONNECT|  
 |Адоенумс. Коннектоптион. КОННЕКТУНСПЕЦИФИЕД|  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Метод Open (объект Connection ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)

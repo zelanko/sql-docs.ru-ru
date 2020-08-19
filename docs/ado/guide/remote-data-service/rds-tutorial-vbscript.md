@@ -1,4 +1,5 @@
 ---
+description: Учебник по RDS (VBScript)
 title: Руководство по RDS (VBScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e2a48c4d-88b1-43ff-a202-9cdec54997d2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1fc60383f0862c845ee70be11a051b9da48b36a2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ea18ea1d5df16d26b47bcddcdf284e51dc0c2fcf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763575"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452086"
 ---
 # <a name="rds-tutorial-vbscript"></a>Учебник по RDS (VBScript)
 Это руководство по RDS, написанное на Microsoft Visual Basic Scripting Edition. Описание назначения этого учебника см. в [руководстве по RDS](../../../ado/guide/remote-data-service/rds-tutorial.md).  
@@ -58,7 +59,7 @@ Set DC = Server.CreateObject("RDS.DataControl")
  Однако в этом руководстве используется мнимой сервер «Йоурсервер».  
   
 > [!NOTE]
->  Обратите внимание на тип данных аргументов **ByRef** . VBScript не позволяет указать тип переменной, поэтому всегда необходимо передавать **вариант**. При использовании протокола HTTP RDS позволяет передать вариант в метод, который предполагает, что не является вариантным, если вызвать его с помощью **RDS. **Метод [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) объекта пространства на объекте. При использовании DCOM или внутрипроцессного сервера необходимо сопоставить типы параметров на стороне клиента и сервера, иначе вы получите ошибку "несоответствие типов".  
+>  Обратите внимание на тип данных аргументов **ByRef** . VBScript не позволяет указать тип переменной, поэтому всегда необходимо передавать **вариант**. При использовании протокола HTTP RDS позволяет передать вариант в метод, который предполагает, что не является вариантным, если вызвать его с помощью **RDS. ** Метод [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) объекта пространства на объекте. При использовании DCOM или внутрипроцессного сервера необходимо сопоставить типы параметров на стороне клиента и сервера, иначе вы получите ошибку "несоответствие типов".  
   
 ```vb
 Set DF1 = DS1.CreateObject("RDSServer.DataFactory", "https://yourServer")  

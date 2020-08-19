@@ -1,4 +1,5 @@
 ---
+description: Подготовка SQL Server для CDC
 title: Подготовка SQL Server для CDC | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 20b51dbf-a545-4234-87ae-4228268a0fb2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8b17436de4950b4dcda69e4c381477640821c9a2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9a98ff226c4e2e861b60d04cb50e8b201035c16a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921758"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431086"
 ---
 # <a name="prepare-sql-server-for-cdc"></a>Подготовка SQL Server для CDC
 
@@ -38,9 +39,9 @@ ms.locfileid: "86921758"
 ### <a name="authentication"></a>Аутентификация  
  Выберите один из следующих вариантов:  
   
--   **Проверка подлинности Windows.**  
+-   **Проверка подлинности Windows**  
   
--   **Аутентификация SQL Server**: если вы выберете этот вариант, необходимо будет ввести **Имя пользователя** и **Пароль** в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], к которому вы подключаетесь.  
+-   **Проверка подлинности SQL Server**. При выборе этого варианта необходимо ввести **Имя пользователя** и **Пароль** для пользователя в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , с которым устанавливается соединение.  
   
  Для подготовки экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для Oracle CDC имя входа должно иметь разрешение на запись в базе данных MSXDBCDC. Введите учетные данные для имени входа, имеющего разрешение на запись в базу данных MSXDBCDC. Это может быть член роли `sysasmin` .  
   
@@ -51,9 +52,9 @@ ms.locfileid: "86921758"
   
 -   **Время ожидания выполнения**: Введите время (в секундах), в течение которого служба Windows CDC Oracle ожидает выполнения команды. Значение по умолчанию — **30**.  
   
--   **Шифровать соединение**: выберите параметр **Шифровать соединение**, чтобы обмен данными между службой Oracle CDC Service и целевым экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполнялся по зашифрованному соединению.  
+-   **Шифрование соединения**. Выберите параметр **Шифровать соединение** , чтобы обмен данными между службой Oracle CDC Service и целевым экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполнялся по зашифрованному соединению.  
   
--   **Дополнительно**: При необходимости введите любые дополнительные свойства подключения.  
+-   **Дополнительно**. При необходимости введите любые дополнительные свойства соединения.  
   
 ### <a name="view-script"></a>Просмотреть скрипт  
  Щелкните **Просмотреть скрипт** для просмотра скрипта установки (он будет доступен только для чтения). Системный администратор [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при необходимости может скопировать этот скрипт в консоль управления SQL Server и отредактировать его. Дополнительные сведения о подготовке скрипта SQL Server см. в разделе [Подготовка SQL Server для скрипта представления CDC Oracle](../../integration-services/change-data-capture/prepare-sql-server-for-oracle-cdc-view-script.md).  

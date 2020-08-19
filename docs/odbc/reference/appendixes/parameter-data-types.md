@@ -1,4 +1,5 @@
 ---
+description: Типы данных параметров
 title: Типы данных параметров | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ ms.assetid: fd7e99d8-d26a-408c-9733-6ffccde99f75
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: ''
-ms.openlocfilehash: f29bb70937df32e03480c13c7ef739eb273f15eb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0114f0cff269d35ddf1e93c653c46bcc8d863a29
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303585"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483247"
 ---
 # <a name="parameter-data-types"></a>Типы данных параметров
 Несмотря на то, что каждый параметр, указанный с помощью **SQLBindParameter** , определяется с помощью типа данных SQL, параметры в инструкции SQL не имеют встроенного типа данных. Поэтому маркеры параметров могут включаться в инструкцию SQL, только если их типы данных могут выводиться из другого операнда в инструкции. Например, в арифметическом выражении, например? + СТОЛБЕЦ1 тип данных параметра может выводиться из типа данных именованного столбца, представленного СТОЛБЕЦ1. Приложение не может использовать маркер параметра, если тип данных не может быть определен.  

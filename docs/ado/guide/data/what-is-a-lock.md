@@ -1,4 +1,5 @@
 ---
+description: Что такое блокировка?
 title: Что такое блокировка? | Документы Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f8989555-28c6-4c17-9bf8-7f44a8a5c407
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: df46dd1ba112dfc592dee34bc37e50c5b727fed7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: db730cbda8ad0d24aa7d1400e67919ad37f987ab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762995"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452536"
 ---
 # <a name="what-is-a-lock"></a>Что такое блокировка?
 Блокировка — это процесс, с помощью которого СУБД ограничена доступом к строке в многопользовательской среде. Если строка или столбец заблокированы монопольно, другие пользователи не могут получить доступ к заблокированным данным, пока блокировка не будет снята. Это гарантирует, что два пользователя не смогут одновременно обновлять один и тот же столбец в строке.  

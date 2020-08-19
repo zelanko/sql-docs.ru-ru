@@ -1,4 +1,5 @@
 ---
+description: CRYPT_GEN_RANDOM (Transact-SQL)
 title: CRYPT_GEN_RANDOM (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/24/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b74bd9d4-758e-4b94-89a0-76dcda6d8c42
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 35fed704434a533f3c2aeddc8b2bcabcf9e6981f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: d0cdca25e14d58270185d4605287d22d1af5e0d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110498"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468182"
 ---
 # <a name="crypt_gen_random-transact-sql"></a>CRYPT_GEN_RANDOM (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +45,7 @@ CRYPT_GEN_RANDOM ( length [ , seed ] )
 Длина в байтах создаваемого `CRYPT_GEN_RANDOM` числа. Аргумент *length* имеет тип данных **int** и диапазон значений от 1 до 8000. `CRYPT_GEN_RANDOM` возвращает значение NULL для значения **int** за пределами этого диапазона. 
   
 *seed*  
-Необязательное шестнадцатеричное число для использования в качестве случайного значения seed. Длина аргумента *seed* должна совпадать со значением аргумента *length*. Аргумент *seed* имеет тип данных **varbinary(8000)** .
+Необязательное шестнадцатеричное число для использования в качестве случайного значения seed. Длина аргумента *seed* должна совпадать со значением аргумента *length*. Аргумент *seed* имеет тип данных **varbinary(8000)**.
   
 ## <a name="returned-types"></a>Возвращаемые типы  
 **varbinary(8000)**

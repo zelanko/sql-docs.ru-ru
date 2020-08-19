@@ -1,4 +1,5 @@
 ---
+description: Строковые операторы(Transact-SQL)
 title: Строковые операторы (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ee4e715d-d8f1-4d0e-81b3-04573ec9f13c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fe2fe0e18d480ec6ff094b2436e6368a47744f49
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fe780c6250f5e93292d3e54af66d5f01ebcf6bdf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85706104"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445359"
 ---
 # <a name="string-operators-transact-sql"></a>Строковые операторы(Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,11 +40,11 @@ ms.locfileid: "85706104"
   
 [+= (присваивание объединения строк)](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)  
   
-[% (подстановочный знак — символы для сопоставления)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
+[% (подстановочный знак — один или несколько символов, которые должны совпасть)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
   
-[[ ] (подстановочный знак — символы для сопоставления)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)  
+[[ ] (подстановочный знак — символы для сопоставления)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)  
   
-[[^] (подстановочный знак — символы не для сопоставления)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)  
+[&#91;^&#93; (подстановочный знак — символы не для сопоставления)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)  
   
-[_ (подстановочный знак — совпадение одного символа)](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
+[_ (подстановочный знак — сравнение одного символа)](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
   

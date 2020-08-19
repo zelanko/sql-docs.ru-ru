@@ -1,4 +1,5 @@
 ---
+description: sys. security_policies (Transact-SQL)
 title: sys. security_policies (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -21,12 +22,12 @@ ms.assetid: 35362f5b-e601-4049-9e1d-c5307e823831
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ccada998c6508d7dccfcee149f954e2e6978ff6
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: ae97e6f310561339c24e712dd3d0f07552232bf2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395270"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490154"
 ---
 # <a name="syssecurity_policies-transact-sql"></a>sys. security_policies (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -40,11 +41,11 @@ ms.locfileid: "87395270"
 |principal_id|**int**|Идентификатор владельца политики безопасности, зарегистрированный в базе данных. Значение NULL, если владелец определяется посредством схемы.|  
 |schema_id|**int**|Идентификатор схемы, в которой находится объект.|  
 |parent_object_id|**int**|Идентификатор объекта, которому принадлежит данная политика. Должно быть равно 0.|  
-|type|**вачар (2)**|Должно быть **SP**.|  
+|тип|**вачар (2)**|Должно быть **SP**.|  
 |type_desc|**nvarchar(60)**|**SECURITY_POLICY**.|  
 |create_date|**datetime**|Дата создания политики безопасности в формате UTC.|  
 |modify_date|**datetime**|Дата последнего изменения политики безопасности в формате UTC.|  
-|is_ms_shipped|**bit**|Всегда значение false.|  
+|is_ms_shipped|**bit**|Всегда имеет значение false.|  
 |is_enabled|**bit**|Состояние спецификации политики безопасности.<br /><br /> 0 = отключен<br /><br /> 1 = включен|  
 |is_not_for_replication|**bit**|Политика была создана с параметром NOT FOR REPLICATION.|  
 |uses_database_collation|**bit**|Использует те же параметры сортировки, что и база данных.|  

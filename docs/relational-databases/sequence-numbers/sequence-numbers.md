@@ -1,4 +1,5 @@
 ---
+description: Порядковые номера
 title: Порядковые номера | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0fc2167d4dc6179b760cfe03ad380b98d041f7b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 65e1196ec8ea240f2e8a9210657a60f967e4b7c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725912"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490467"
 ---
 # <a name="sequence-numbers"></a>Порядковые номера
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,7 +61,7 @@ ms.locfileid: "85725912"
  
  Порядковые номера создаются вне области текущей транзакции. Они обрабатываются, когда выполняется фиксация или откат транзакции, использующей порядковый номер. Проверка на наличие повторов происходит, только если запись целиком заполнена. В некоторых случаях, когда одно число используется для создания нескольких записей, оно позже может считаться повтором. Если это произошло и к последующим записям были применены другие значения автосчетчика, это может привести к различиям в значениях автосчетчика.
   
-## <a name="typical-use"></a>Типичное применение  
+## <a name="typical-use"></a>Типичные случаи использования  
  Чтобы создать целочисленный порядковый номер с приращением 1, меняющийся от -2 147 483 648 до 2 147 483 647, используйте следующую инструкцию.  
   
 ```  

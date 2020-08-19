@@ -1,4 +1,5 @@
 ---
+description: Соединение с экземпляром SQL Server
 title: Соединение с экземпляром SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/06/2017
@@ -16,11 +17,12 @@ ms.assetid: ad3cf354-b2e3-468b-b986-1232e375fd84
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2bcbea3415d26de6146609c1493a2c86781bc8b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 32e004da26b8cba5df8b44e4fbef3fd90967cdfc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006388"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490465"
 ---
 # <a name="connecting-to-an-instance-of-sql-server"></a>Соединение с экземпляром SQL Server
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -63,7 +65,7 @@ ms.locfileid: "86006388"
 -   До передачи соединения любому объекту программирования RMO следует вызвать метод <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A>.  
   
 ## <a name="examples"></a>Примеры  
-Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. [в статье Создание проекта Visual C&#35; SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см.  [в статье Создание проекта Visual C&#35; SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="connecting-to-the-local-instance-of-sql-server-by-using-windows-authentication-in-visual-basic"></a>Соединение с локальным экземпляром SQL Server с использованием проверки подлинности Windows на языке Visual Basic  
  Для соединения с локальным экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не нужно писать много программного кода. Вместо этого для метода проверки подлинности и сервера используются настройки по умолчанию. Первая операция, требующая получения данных, вызовет создание соединения.  
@@ -224,7 +226,7 @@ public class A {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  <xref:Microsoft.SqlServer.Management.Smo.Server>   
  <xref:Microsoft.SqlServer.Management.Common.ServerConnection>  
   

@@ -1,4 +1,5 @@
 ---
+description: Настройка раздела SQL файла
 title: Раздел файла настройки SQL | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 934b982004bf27e28a8daeed09061101886ce444
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3ceb97d4859126c2116383196db5e6c71affb77f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749879"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452246"
 ---
 # <a name="customization-file-sql-section"></a>Настройка раздела SQL файла
 Раздел **SQL** может содержать новую строку SQL, которая заменяет командную строку клиента. Если в разделе нет строки SQL, раздел будет проигнорирован.  
@@ -50,7 +51,7 @@ SQL = " "
 |**SQL**|Литеральная строка, указывающая, что это запись раздела SQL.|  
 |***sqlString***|Строка SQL, которая заменяет строку клиента.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Раздел "Подключение файла настройки"](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [Раздел журналов файлов настройки](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
  [Раздел UserList файла настройки](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   

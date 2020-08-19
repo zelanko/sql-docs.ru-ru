@@ -1,4 +1,5 @@
 ---
+description: Пример метода CreateRecordset (Visual Basic)
 title: Пример метода CreateRecordset (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2de8fd02-0f49-4d47-8bd3-397726d1c644
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7d520e58866e7092f6e11807bca8c9407c6b16ca
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e91e1c0801cb8062bca89968d0345f5bbcee1220
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760200"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444316"
 ---
 # <a name="createrecordset-method-example-vb"></a>Пример метода CreateRecordset (Visual Basic)
 Можно создать объект [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) и указать сведения о столбце. Затем можно вставить данные в объект **набора записей** . базовый набор строк помещает в буфер вставки.  

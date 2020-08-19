@@ -1,4 +1,5 @@
 ---
+description: Модель программирования RDS с объектами
 title: Модель программирования RDS с объектами | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 07ce0ef0-72f1-48f4-823d-1b65d28c0926
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5f41fd577b470493aa6a53c8ea9ad760287a3507
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2230a4082f79ea386dd02c7530e3af29c57f1b69
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747746"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452116"
 ---
 # <a name="rds-programming-model-with-objects"></a>Модель программирования RDS с объектами
 Целью RDS является получение доступа к источникам данных и их обновление через промежуточные носители, такие как IIS. Модель программирования указывает последовательность действий, необходимых для выполнения этой цели. Объектная модель определяет объекты, методы и свойства которых влияют на модель программирования.  

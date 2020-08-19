@@ -1,4 +1,5 @@
 ---
+description: Таблицы системы отслеживания измененных данных (Transact-SQL)
 title: Таблицы системы отслеживания измененных данных (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -12,19 +13,19 @@ dev_langs:
 ms.assetid: a4372d0b-50ca-4e58-80f6-2ed3cb52a84a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c61cc87f293b589f9c3726fcff5c3408774f34bf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 38f2be3efcb798897849f249e63287ed6c49e496
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890596"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469082"
 ---
 # <a name="change-data-capture-tables-transact-sql"></a>Таблицы системы отслеживания измененных данных (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Система отслеживания измененных данных позволяет отслеживать изменения в таблицах так, что изменения на языках DML и DDL, вносимые в таблицы, постепенно загружались в хранилище данных. Подразделы настоящего раздела описывают системные таблицы, которые хранят сведения, необходимые для операций системы отслеживания измененных данных.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [CDC. <capture_instance>_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)  
  Возвращает одну строку для каждого изменения, сделанного в отслеживаемом столбце в связанной исходной таблице.  
   
@@ -46,8 +47,8 @@ ms.locfileid: "85890596"
  [dbo. cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)  
  Возвращает параметры конфигурации для заданий агента системы отслеживания измененных данных.  
   
-## <a name="see-also"></a>См. также  
- [Хранимые процедуры системы отслеживания измененных данных &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Хранимые процедуры системы отслеживания измененных данных (Transact-SQL)](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
  [Функции системы отслеживания измененных данных (Transact-SQL)](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)  
   
   

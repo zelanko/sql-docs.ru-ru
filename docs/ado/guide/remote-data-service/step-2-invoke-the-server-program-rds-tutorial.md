@@ -1,4 +1,5 @@
 ---
+description: Шаг 2. Вызовите программу сервера (учебник по RDS)
 title: Шаг 2. вызов серверной программы (учебник по RDS) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5e74c2da-65ee-4de4-8b41-6eac45c3632e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c0e85b276ed8cc38419035d48357180c7952ff98
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4b864578b67eda29c703bcf4952a9a2878aafe9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764685"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451946"
 ---
 # <a name="step-2-invoke-the-server-program-rds-tutorial"></a>Шаг 2. Вызовите программу сервера (учебник по RDS)
 При вызове метода *прокси-сервера*клиента фактическая программа на сервере выполняет метод. На этом шаге вы выполните запрос на сервере.  
@@ -27,7 +28,7 @@ ms.locfileid: "82764685"
   
  **Часть A** Если вы не использовали [RDSServer.](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) в этом руководстве, самый удобный способ выполнить это действие — использовать [RDS. Объект элемента управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) . **RDS. Элемент управления** данными объединяет предыдущий этап создания учетной записи-посредника, выполняя этот шаг, выполнив запрос.  
   
- Задайте **RDS. **Свойство [сервера](../../../ado/reference/rds-api/server-property-rds.md) «элемент управления DataObject», которое определяет, где следует создать экземпляр программы сервера; Свойство [Connect](../../../ado/reference/rds-api/connect-property-rds.md) для указания строки подключения для доступа к источнику данных; и свойство [SQL](../../../ado/reference/rds-api/sql-property.md) для указания текста команды запроса. Затем выдайте метод [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md) , чтобы программа сервера подключится к источнику данных, получала строки, указанные запросом, и возвращала клиенту объект **набора записей** .  
+ Задайте **RDS. ** Свойство [сервера](../../../ado/reference/rds-api/server-property-rds.md) «элемент управления DataObject», которое определяет, где следует создать экземпляр программы сервера; Свойство [Connect](../../../ado/reference/rds-api/connect-property-rds.md) для указания строки подключения для доступа к источнику данных; и свойство [SQL](../../../ado/reference/rds-api/sql-property.md) для указания текста команды запроса. Затем выдайте метод [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md) , чтобы программа сервера подключится к источнику данных, получала строки, указанные запросом, и возвращала клиенту объект **набора записей** .  
   
  В этом руководстве не используется **RDS. Элемент управления**данным, но это будет выглядеть, если:  
   
@@ -63,6 +64,6 @@ Sub RDSTutorial2B()
 ...  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Шаг 3. сервер получает набор записей (учебник по RDS)](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)   
  [Учебник по RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

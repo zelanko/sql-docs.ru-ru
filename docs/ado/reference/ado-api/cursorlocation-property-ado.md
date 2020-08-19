@@ -1,4 +1,5 @@
 ---
+description: Свойство CursorLocation (ADO)
 title: Свойство CursorLocation (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 39c8d86e-7ee9-4182-be5e-aad5ce952f84
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9aa95b7633d5dfa3a484dd97289c15c5737af986
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 92567057acad1edb0a0571a0057a11a47a3c65d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242744"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444306"
 ---
 # <a name="cursorlocation-property-ado"></a>Свойство CursorLocation (ADO)
 Указывает расположение службы курсора.  

@@ -1,4 +1,5 @@
 ---
+description: Настройка раздела подключения файла
 title: Раздел "Подключение файла настройки" | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9dab615fd861252832abe83d4b0ae736e2189180
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 02377ff40a56c8169576a5653ac21953946aaa1d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749973"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452266"
 ---
 # <a name="customization-file-connect-section"></a>Настройка раздела подключения файла
 Поведение обработчика по умолчанию заключается в запрете всех подключений. В разделе **Connect** указываются исключения из этого поведения. Например, если все разделы **соединения** отсутствовали или пусты, то по умолчанию соединения устанавливаться не могут.  
@@ -51,7 +52,7 @@ connectionString
   
 ```  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
   
 |Часть|Описание|  
 |----------|-----------------|  

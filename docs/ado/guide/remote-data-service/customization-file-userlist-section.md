@@ -1,4 +1,5 @@
 ---
+description: Настройка раздела UserList файла
 title: Раздел UserList файла настройки | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 002bb8b92105547086ea8649a877b4a9d6f71d3b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: afdd3560de5ca7e64d8a378f1eca04f875903a06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749797"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452236"
 ---
 # <a name="customization-file-userlist-section"></a>Настройка раздела UserList файла
 Раздел **USERLIST** относится к разделу **Connect** с тем же параметром *идентификатора* раздела.  
@@ -36,7 +37,7 @@ ms.locfileid: "82749797"
   
 |Часть|Описание|  
 |----------|-----------------|  
-|*Имен*|*Имя пользователя* , использующего это подключение. Допустимые имена пользователей устанавливаются в диалоговом окне IIS **Service Manager** .|  
+|*userName*|*Имя пользователя* , использующего это подключение. Допустимые имена пользователей устанавливаются в диалоговом окне IIS **Service Manager** .|  
 |**_accessRights_**|Одно из следующих прав доступа:<br /><br /> -   Не **доступ** — пользователь не может получить доступ к источнику данных.<br />-   **Только для** чтения — пользователь может читать источник данных.<br />-   **ReadWrite** — пользователь может выполнять чтение или запись в источник данных.|  
   
 ## <a name="see-also"></a>См. также  

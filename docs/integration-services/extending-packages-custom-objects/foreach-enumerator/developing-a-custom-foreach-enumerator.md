@@ -1,4 +1,5 @@
 ---
+description: Разработка пользовательского перечислителя по каждому элементу
 title: Разработка пользовательского перечислителя по каждому элементу | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bffe26e0-1b9a-47ad-bae6-6b708cb4cf4f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5ec0861b846f3f741bbdada7d8b07d94fae1d64a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a5a46ee0c16bba35c5153032784b6ce7ccde7721
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923960"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430566"
 ---
 # <a name="developing-a-custom-foreach-enumerator"></a>Разработка пользовательского перечислителя по каждому элементу
 
@@ -42,7 +43,7 @@ ms.locfileid: "86923960"
  [Разработка пользовательского интерфейса для пользовательского перечислителя по каждому элементу](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
  Описывает, как реализовать класс пользовательского интерфейса и форму, используемую для настройки пользовательского перечислителя по каждому элементу.  
   
-## <a name="related-topics"></a>См. также  
+## <a name="related-topics"></a>Связанные разделы  
   
 ### <a name="information-common-to-all-custom-objects"></a>Общие сведения для всех пользовательских объектов  
  Сведения, общие для всех типов пользовательских объектов, которые можно создавать в службах [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], см. в следующих разделах.  

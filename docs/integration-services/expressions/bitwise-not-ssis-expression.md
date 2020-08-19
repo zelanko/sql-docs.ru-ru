@@ -1,4 +1,5 @@
 ---
+description: ~ (битовое НЕ) (выражение служб SSIS)
 title: ~ (битовое НЕ) (выражение служб SSIS) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e4413ddd-0d0e-40c3-9c76-b5ce323218ec
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c64bc1c2e2a6814450d7857480c2e0c8f094ff3e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ae8fa8bb0aae6700d1082e52385c7d162c193b84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923500"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430616"
 ---
 # <a name="-bitwise-not-ssis-expression"></a>~ (битовое НЕ) (выражение служб SSIS)
 

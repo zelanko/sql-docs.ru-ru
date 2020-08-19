@@ -1,4 +1,5 @@
 ---
+description: Создание и использование индексов в столбцах с помощью Always Encrypted с безопасными анклавами
 title: Создание и использование индексов в столбцах с помощью Always Encrypted с безопасными анклавами | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/30/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6fa36eeebc1f93ed0a2855627943d04dba8e3d7d
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 420e2bc398bbaa75c21130b2f9b8e8024d33fd83
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411420"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490507"
 ---
 # <a name="create-and-use-indexes-on-columns-using-always-encrypted-with-secure-enclaves"></a>Создание и использование индексов в столбцах с помощью Always Encrypted с безопасными анклавами
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -87,6 +88,6 @@ Always Encrypted с безопасными анклавами поддержив
 ## <a name="next-steps"></a>Next Steps
 - [Выполнение запросов к столбцам с помощью Always Encrypted с безопасными анклавами](always-encrypted-enclaves-query-columns.md)
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 - [Руководство. Creating and using indexes on enclave-enabled columns using randomized encryption](../tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md) (Руководство. Создание и использование индексов в столбцах с поддержкой анклава с помощью случайного шифрования).
 - [sp_enclave_send_keys (Transact-SQL)](../../system-stored-procedures/sp-enclave-send-keys-sql.md)

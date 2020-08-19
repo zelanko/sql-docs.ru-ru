@@ -1,4 +1,5 @@
 ---
+description: Развертывание пакетов с помощью служб SSIS
 title: Развертывание пакетов с помощью служб SSIS | Документы Майкрософт
 ms.custom: ''
 ms.date: 08/20/2018
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9d6636cbd74f31448381b1f6cb2c3dd3826324a5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4ba92220b368e1ef7ee1218d972e6113e1378d27
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916668"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430656"
 ---
 # <a name="deploy-packages-with-ssis"></a>Развертывание пакетов с помощью служб SSIS
 
@@ -51,7 +52,7 @@ ms.locfileid: "86916668"
 ## <a name="what-you-learn"></a>Что вы узнаете    
 Новые средства, элементы управления и возможности служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] лучше всего изучать на практике. С помощью данного учебника шаг за шагом создается проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , куда затем добавляются пакеты и другие необходимые файлы. Когда проект полностью завершен, пользователь создает комплект развертывания и копирует его на целевой компьютер, куда затем устанавливаются пакеты.    
     
-## <a name="prerequisites"></a>предварительные требования    
+## <a name="prerequisites"></a>Предварительные требования    
 Этот учебник предназначен для пользователей, знакомых с основными операциями файловой системы, но имеющих ограниченное представление о новых возможностях служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Для лучшего понимания основных понятий служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , с которыми знакомит этот учебник, может пригодиться предварительное изучение следующего учебника по использованию служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] : [Службы SSIS: создание пакета ETL](../integration-services/ssis-how-to-create-an-etl-package.md).    
     
 ### <a name="on-the-source-computer"></a>Исходный компьютер
@@ -66,7 +67,7 @@ ms.locfileid: "86916668"
 
 -   Нужно разрешение на создание и удаление таблиц в базе данных AdventureWorks.
     
--   [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).    
+-   [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) .    
     
 ### <a name="on-the-destination-computer"></a>Целевой компьютер
 
@@ -89,13 +90,13 @@ ms.locfileid: "86916668"
 Если развертывание пакетов предполагается на том же самом компьютере, где создается комплект развертывания, этот компьютер должен удовлетворять требованиям как компьютера-источника, так и целевого компьютера.    
         
 ## <a name="lessons-in-this-tutorial"></a>Занятия этого учебника    
-[Занятие 1. Подготовка к созданию пакета развертывания](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)    
+[Занятие 1. Подготовка к созданию пакета развертывания](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)  .  
 На этом занятии требуется развернуть ETL-решение путем создания нового проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] и добавления пакетов и других необходимых файлов.    
     
 [Занятие 2. Создание пакета развертывания в службах SSIS](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)    
 На этом занятии требуется создать программу развертывания и убедиться, что в комплекте развертывания содержатся необходимые файлы.    
     
-[Занятие 3. Установка пакетов SSIS](../integration-services/lesson-3-install-ssis-packages.md)    
+[Урок 3. Установка пакетов SSIS](../integration-services/lesson-3-install-ssis-packages.md)    
 На этом занятии требуется скопировать пакет развертывания на целевой компьютер, установить пакеты и запустить их.    
     
 
