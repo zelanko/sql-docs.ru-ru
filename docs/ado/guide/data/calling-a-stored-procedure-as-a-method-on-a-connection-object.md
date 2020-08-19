@@ -1,4 +1,5 @@
 ---
+description: Вызов хранимой процедуры в качестве метода объекта Connection
 title: Вызов хранимой процедуры в качестве метода для объекта соединения | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0bb81e82e27decadbf6d31ce9bc391023474ecba
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8e5e019760c4496b7dab769cb96fbd7b2eab4f47
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761240"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453706"
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>Вызов хранимой процедуры в качестве метода объекта Connection
 Хранимую процедуру можно вызвать, как если бы она была собственным методом для связанного открытого объекта **соединения** . Это похоже на вызов именованной команды для объекта **Connection** .  
@@ -78,5 +79,5 @@ Set objConn = Nothing
 Set objComm = Nothing  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

@@ -1,4 +1,5 @@
 ---
+description: Составление иерархических наборов записей
 title: Упорядочение иерархических наборов записей | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 105dee3121252e94b53d1d8211b94af5e6004c31
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2f418d2eb21f2cb02223234f6231efb39b232faa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758310"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453406"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>Составление иерархических наборов записей
 В следующем примере показано, как создать иерархический набор записей без базового источника данных, используя грамматику формирования данных для определения столбцов для родительских, дочерних и внучатый **наборов записей**.  
@@ -54,7 +55,7 @@ rsCustomers.Open strShape, cn, adOpenStatic, adLockOptimistic, -1
   
  Как только **набор записей** будет создан, он может быть заполнен, обработан или сохранен в файле.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Доступ к строкам в иерархическом наборе записей](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [Грамматика формальной фигуры](../../../ado/guide/data/formal-shape-grammar.md)   
  [Необходимые поставщики для формирования данных](../../../ado/guide/data/required-providers-for-data-shaping.md)   

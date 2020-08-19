@@ -1,4 +1,5 @@
 ---
+description: Курсоры ключевого набора
 title: Курсоры набора ключей | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14b51b17-6fd9-4146-af45-ca4b0fe6d48a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3df797be676961227687117e1fd7bdb748370efd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ea25d5c85969b71836fec30085dd9a626a18d40a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757750"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453176"
 ---
 # <a name="keyset-cursors"></a>Курсоры ключевого набора
 Курсор KEYSET предоставляет функциональные возможности между статическим и динамическим курсорами в возможности обнаружения изменений. Так же как статический курсор, он не всегда обнаруживает изменения, внесенные в членство и порядок элементов результирующего набора. Так же как динамический курсор, он обнаруживает изменения, внесенные в значения строк результирующего набора.  

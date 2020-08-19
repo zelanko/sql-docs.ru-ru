@@ -1,4 +1,5 @@
 ---
+description: Потоки команд
 title: Потоки команд | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0bf95d202d842a656ec4b42bc2277b8eb9a76689
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2db139f3f5ae4ff701e36179a9df7ce30eecd94e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761210"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453666"
 ---
 # <a name="command-streams"></a>Потоки команд
 ADO всегда поддерживал ввод команды в строковом формате, указанном свойством **CommandText** . В качестве альтернативы с помощью ADO 2,7 или более поздней версии можно также использовать поток данных для ввода команды, назначив поток свойству **CommandStream** . Можно назначить объект **потока** ADO или любой объект, поддерживающий интерфейс **IStream** com.  
@@ -40,7 +41,7 @@ adoStreamQuery.Open
   
  Содержимым потока запросов будет XML-запрос шаблона.  
   
- Для запроса шаблона требуется ссылка на пространство имен XML, определяемое префиксом SQL: \<> тега SQL: Query. Инструкция SQL SELECT включается в качестве содержимого XML-шаблона и присваивается строковой переменной следующим образом:  
+ Для запроса шаблона требуется ссылка на пространство имен XML, определяемое префиксом SQL: \<sql:query> тега. Инструкция SQL SELECT включается в качестве содержимого XML-шаблона и присваивается строковой переменной следующим образом:  
   
 ```  
 sQuery = "<ROOT xmlns:sql='urn:schemas-microsoft-com:xml-sql'>  

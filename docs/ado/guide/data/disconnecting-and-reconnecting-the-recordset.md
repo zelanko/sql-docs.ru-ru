@@ -1,4 +1,5 @@
 ---
+description: Отключение и повторное подключение набора записей
 title: Отключение и повторное подключение набора записей | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c5134af7-81d6-4de4-9fd1-cfe29973545e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7ef30165a05bc472bfe34cec4e7f669d545d7768
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f372951375954a4ed93213cc7cbfd7bc99ef1ecf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761060"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453486"
 ---
 # <a name="disconnecting-and-reconnecting-the-recordset"></a>Отключение и повторное подключение набора записей
 Одной из самых эффективных функций ADO является возможность открыть набор записей на стороне клиента из источника данных, а затем отключить набор записей от источника данных. После отключения набора записей подключение к источнику данных может быть закрыто, тем самым освобождая ресурсы на сервере, используемом для его обслуживания. Вы можете продолжить просмотр и изменение данных в наборе, пока он отключен, а затем повторно подключается к источнику данных и отправляет обновления в пакетном режиме.  

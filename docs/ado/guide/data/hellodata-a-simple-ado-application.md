@@ -1,4 +1,5 @@
 ---
+description: 'HelloData: простое приложение ADO'
 title: 'HelloData: простое приложение ADO | Документация Майкрософт'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 18f9f0cd227a258b1d2d9cd2d201527f614bcc49
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c2ac1d2ed987b1385c581f147431eaa208b035fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758830"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453286"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: простое приложение ADO
 Это простое приложение проходит через каждую из четырех основных операций ADO: получение, изучение, изменение и обновление данных. Эти операции выполняются с примером базы данных Northwind, входящей в состав SQL Server Microsoft®. Чтобы сосредоточиться на основных принципах работы с ADO и избежать загромождения кода, обработка ошибок в примере минимальна.  
@@ -44,17 +45,17 @@ ms.locfileid: "82758830"
   
 |Тип элемента управления|Свойство|Значение|  
 |------------------|--------------|-----------|  
-|Form|name|Form1|  
-||Высота:|6500|  
-||По ширине|6500|  
-|Microsoft DataGrid|name|grdDisplay1|  
-|TextBox|name|txtDisplay1|  
-||Multiline|true|  
-|Кнопка команды|name|кмджетдата|  
+|Form|Имя|Form1|  
+||Высота|6500|  
+||Ширина|6500|  
+|Microsoft DataGrid|Имя|grdDisplay1|  
+|TextBox|Имя|txtDisplay1|  
+||Multiline|Да|  
+|Кнопка команды|Имя|кмджетдата|  
 ||Caption|Получение данных|  
-|Кнопка команды|name|кмдексаминедата|  
+|Кнопка команды|Имя|кмдексаминедата|  
 ||Caption|Проверка данных|  
-|Кнопка команды|name|кмдедитдата|  
+|Кнопка команды|Имя|кмдедитдата|  
 ||Caption| Изменение данных|  
-|Кнопка команды|name|кмдупдатедата|  
+|Кнопка команды|Имя|кмдупдатедата|  
 ||Caption|Обновление данных|

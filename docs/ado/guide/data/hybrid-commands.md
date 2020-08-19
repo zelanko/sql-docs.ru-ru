@@ -1,4 +1,5 @@
 ---
+description: Гибридные команды
 title: Гибридные команды | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e8ca40e8-459c-40e2-8dd3-3ec6d5ee7b51
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 92add85222b12afdac27fbc3825476e30506dfe1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d3c6a852f5918a79c0fb2df5e2f60ef415cca6a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757930"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453246"
 ---
 # <a name="hybrid-commands"></a>Гибридные команды
-Гибридные команды являются частично параметризованными командами. Пример:  
+Гибридные команды являются частично параметризованными командами. Например:  
   
 ```  
 SHAPE {select * from plants}   
@@ -33,7 +34,7 @@ SHAPE {select * from plants}
   
  Поведение кэширования для гибридной команды аналогично поведению обычных параметризованных команд.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример формирования данных](../../../ado/guide/data/data-shaping-example.md)   
  [Грамматика формальной фигуры](../../../ado/guide/data/formal-shape-grammar.md)   
  [Общие сведения о командах формирования данных](../../../ado/guide/data/shape-commands-in-general.md)

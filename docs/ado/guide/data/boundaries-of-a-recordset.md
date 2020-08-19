@@ -1,4 +1,5 @@
 ---
+description: Границы набора записей
 title: Границы набора записей | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3819ba4951307a6f1ada11030fdc2808e568df0d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d89f25dc6e37c0b5c569d5db7c4f8486115ce94a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761230"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453716"
 ---
 # <a name="boundaries-of-a-recordset"></a>Границы набора записей
 **Набор записей** поддерживает свойства **BOF** и **EOF** для отделения начала и конца набора данных соответственно. **BOF** и **EOF** можно считать «фантомными» записями, расположенными в начале и в конце **набора записей**. Учитывая **BOF** и **EOF**, наш пример **набора записей** теперь будет выглядеть следующим образом:  

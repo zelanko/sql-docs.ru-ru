@@ -1,4 +1,5 @@
 ---
+description: Переход к записи
 title: Переход к записи a | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6caf6299-2eea-4d34-9b0e-b75aab07b740
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eca1d1646721ea34d4ce075a882bde95b3c407a3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4196c0be69292e7e915c5fe24ca995645133fabc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757770"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453196"
 ---
 # <a name="jumping-to-a-record"></a>Переход к записи
 Метод [Move](../../../ado/reference/ado-api/move-method-ado.md) позволяет перемещаться вперед или назад в **наборе** записей по заданному числу записей с помощью следующего синтаксиса:  
@@ -27,7 +28,7 @@ ms.locfileid: "82757770"
 oRs.Move NumRecords, Start  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Метод **Move** поддерживается для всех объектов **Recordset** .  
   
  Если аргумент *нумрекордс* больше нуля, текущее расположение записи перемещается вперед (к концу **набора записей**). Если значение *нумрекордс* меньше нуля, текущее расположение записи перемещается назад (в направлении начала **набора записей**).  

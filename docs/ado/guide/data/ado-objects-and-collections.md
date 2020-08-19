@@ -1,4 +1,5 @@
 ---
+description: Объекты и коллекции ADO
 title: Объекты и коллекции ADO | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7a745aae-9372-49b6-8dae-b9c93e5f3216
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a1d4901384a8e4b1b297bc8459e52a2f345f7ead
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: cbebf1e910fd749ff4f582c57da6c8c2656e9f61
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761290"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453766"
 ---
 # <a name="ado-objects-and-collections"></a>Объекты и коллекции ADO
 ADO состоит из следующих девяти объектов и четырех коллекций.  

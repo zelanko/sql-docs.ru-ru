@@ -1,4 +1,5 @@
 ---
+description: Управление транзакциями (ADO)
 title: Управление транзакциями (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 189240e8-3ffa-4024-81a9-c6cb5d17eee0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 36b75231cddc276a9f0889f3a569dedce2380732
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 861fe39f270a007fdd3896c4150a02a0fd905b47
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761160"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453636"
 ---
 # <a name="controlling-transactions-ado"></a>Управление транзакциями (ADO)
 ADO поддерживает обработку транзакций в соединении с помощью методов **примеры BeginTrans**, **CommitTrans**и **RollbackTrans** объекта **Connection** . Общая идея реализации обработки транзакций в ADO показана в следующем простом фрагменте кода.  

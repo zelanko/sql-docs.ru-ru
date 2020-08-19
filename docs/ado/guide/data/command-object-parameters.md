@@ -1,4 +1,5 @@
 ---
+description: Параметры объекта Command
 title: Параметры объекта команды | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 10e7ef4a-78bf-4e91-931e-cbc6c065dd4c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0935fa2b45d0ab496072f4f3a9619c821afc8383
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f2e2cd8da9522c7aead905cc0c19debe132faf4b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761190"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453676"
 ---
 # <a name="command-object-parameters"></a>Параметры объекта Command
 В предыдущем разделе обсуждалось [Создание и исполнение простой команды](../../../ado/guide/data/creating-and-executing-a-simple-command.md). Более интересное использование объекта [Command](../../../ado/reference/ado-api/command-object-ado.md) показано в следующем примере, в котором команда SQL была параметризована. Это изменение позволяет повторно использовать команду, одновременно передавая ей другое значение параметра. Так как свойство [подготовленного свойства](../../../ado/reference/ado-api/prepared-property-ado.md) для объекта **Command** имеет значение **true**, ADO потребует от поставщика компилировать команду, указанную в параметре [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) , прежде чем выполнять ее в первый раз. Она также будет хранить скомпилированную команду в памяти. Это снижает скорость выполнения команды при первом ее выполнении из-за накладных расходов, необходимых для ее подготовки, но приводит к повышению производительности при каждом вызове команды. Поэтому команды должны быть подготовлены, только если они будут использоваться более одного раза.  
