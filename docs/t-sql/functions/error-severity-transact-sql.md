@@ -1,4 +1,5 @@
 ---
+description: ERROR_SEVERITY (Transact-SQL)
 title: ERROR_SEVERITY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
@@ -22,12 +23,12 @@ ms.assetid: 50228f2f-6949-4d2e-8e43-fad11bf973ab
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72d48e01cf44a0c8e3d03bcd665ca35dc876147f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: d14ac2a7f8feb6b9d7b7fd7ceafad4d7454b4c21
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111596"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88365680"
 ---
 # <a name="error_severity-transact-sql"></a>ERROR_SEVERITY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +53,7 @@ ERROR_SEVERITY ( )
 
 Функция `ERROR_SEVERITY` возвращает значение NULL в случае вызова вне блока CATCH.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
 Функцию `ERROR_SEVERITY` можно вызывать в любом месте области действия блока CATCH.  
   
 Функция `ERROR_SEVERITY` возвращает значение серьезности ошибки независимо от количества ее выполнений или от места ее вызова в области действия блока `CATCH`. В этом ее отличие от таких функций, как @@ERROR, которые возвращают номер ошибки только в той инструкции, которая непосредственно следует за инструкцией, вызвавшей ошибку.  
