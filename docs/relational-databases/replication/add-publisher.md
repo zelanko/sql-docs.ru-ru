@@ -1,4 +1,5 @@
 ---
+description: Добавление издателя
 title: Добавление издателя | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ ms.assetid: 4b57e298-655f-42c2-82bc-25cdad94a194
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: bd972c1825deb947537473096653fc33e07a92fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1ce82548d63c88565a48d3930c3a7b9a40884413
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726093"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423628"
 ---
 # <a name="add-publisher"></a>Добавление издателя
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -65,10 +66,10 @@ ms.locfileid: "85726093"
  **Показывать этот издатель в следующей группе**  
  Выберите группу издателей из списка. Издатель отображается в свой группе в левой панели. Группы предоставляют способ упорядочить издателей и не оказывают влияние на работу репликации. Если группы не определены, для создания новой группы нажмите кнопку **Создать группу**.  
   
- **Создать группу**  
+ **Новая группа**  
  Нажмите эту кнопку для создания новой группы издателей. Группа издателей предоставляет удобный способ упорядочить издателей в мониторе репликации. Группы не оказывают влияние на данные или связи между серверами в топологии репликации.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запуск монитора репликации](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Наблюдение за репликацией](../../relational-databases/replication/monitor/monitoring-replication.md)  
   

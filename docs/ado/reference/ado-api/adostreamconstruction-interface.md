@@ -1,4 +1,5 @@
 ---
+description: Интерфейс ADOStreamConstruction
 title: Интерфейс Адостреамконструктион | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 75af8d899c4fb0b97f4ee09795888ef773999b60
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f911be2784e849c8feb271127e2a83ed1ce90c4f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242814"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451316"
 ---
 # <a name="adostreamconstruction-interface"></a>Интерфейс ADOStreamConstruction
 Интерфейс **адостреамконструктион** используется для создания объекта **потока** ADO из OLE DB объекта **IStream** в приложении C/C++.  
@@ -32,7 +33,7 @@ ms.locfileid: "87242814"
 |[Поток](../../../ado/reference/ado-api/stream-property.md)|Чтение и запись. Возвращает или задает объект OLE DB **потока** .|  
   
 ## <a name="methods"></a>Методы  
- Нет.  
+ Отсутствует.  
   
 ## <a name="events"></a>События  
  Нет.  
@@ -72,5 +73,5 @@ adoStrConstruct->put_Stream(pUnk);
   
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API ADO](../../../ado/reference/ado-api/ado-api-reference.md)

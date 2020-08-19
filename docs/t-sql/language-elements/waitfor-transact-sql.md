@@ -1,4 +1,5 @@
 ---
+description: WAITFOR (Transact-SQL)
 title: WAITFOR (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 87fc7c86277292cbce61e1a8f66b38b80b580996
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ea7d90c70b68111e6ed9f1f63986c955f7bb1055
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923003"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459209"
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -86,7 +87,7 @@ WAITFOR
 > [!IMPORTANT]  
 >  Инструкция WAITFOR с аргументом TIMEOUT применима только к сообщениям компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Дополнительные сведения см. в разделах [RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md) и [GET CONVERSATION GROUP (Transact-SQL)](../../t-sql/statements/get-conversation-group-transact-sql.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Во время выполнения инструкции WAITFOR выполняется транзакция, и другие запросы не могут быть выполнены в рамках этой транзакции.  
   
  Фактическая временная задержка может отличаться от времени, указанного в аргументах *time_to_pass*, *time_to_execute* или *timeout*, и зависит от уровня активности сервера. Счетчик времени запускается, когда запланирован поток инструкции WAITFOR. Если сервер занят, запланировать поток сразу может быть невозможно, поэтому время задержки может оказаться больше заданного.  
@@ -170,7 +171,7 @@ GO
   
  `A total time of 00:00:10, in hh:mm:ss, has elapsed. Your time is up.`  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Язык управления потоком (Transact-SQL)](~/t-sql/language-elements/control-of-flow.md)   
  [datetime (Transact-SQL)](../../t-sql/data-types/datetime-transact-sql.md)   
  [sp_who (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  

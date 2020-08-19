@@ -1,4 +1,5 @@
 ---
+description: MATCH (Transact-SQL)
 title: MATCH (SQL Graph) | Документы Майкрософт
 ms.custom: ''
 ms.date: 06/26/2019
@@ -19,12 +20,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce954aaf4bab45b359bd57fea9af7b6e94933124
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 8a98fd2557655672389f5372009f3cf0adaa3ba9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555589"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459146"
 ---
 # <a name="match-transact-sql"></a>MATCH (Transact-SQL)
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -136,7 +137,7 @@ n -  positive integer only.
 * **+** : 1 или более повторов шаблона. Действие прекращается, как только будет найден кратчайший путь.    
 * **{1,n}** : от 1 до "n" повторов шаблона. Действие прекращается, как только будет найден кратчайший путь.     
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
 Имена узлов в MATCH могут повторяться.  Другими словами, в одном запросе через узел можно проходить произвольное число раз.  
 Имя границы не может повторяться внутри MATCH.  
 Граница может указывать в любом направлении, но должна иметь явное направление.  
@@ -216,7 +217,7 @@ AND Person1.name = 'Alice';
  ```
  
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE TABLE (SQL Graph)](../../t-sql/statements/create-table-sql-graph.md)   
  [INSERT (граф SQL)](../../t-sql/statements/insert-sql-graph.md)  
  [Graph Processing with SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md) (Работа с графами в SQL Server 2017)  

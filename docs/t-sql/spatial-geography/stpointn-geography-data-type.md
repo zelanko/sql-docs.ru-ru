@@ -1,4 +1,5 @@
 ---
+description: STPointN (тип данных geography)
 title: STPointN (тип данных geography) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 47670feb-b9e0-4b4b-af83-b9bba7da66ac
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 4bc3ce2749552ee5acca1ca3f2b50ebf007599de
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 00604f3066c746057e1ffaaefc0cffb00244d57b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552473"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459007"
 ---
 # <a name="stpointn-geography-data-type"></a>STPointN (тип данных geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "86552473"
   
  Тип открытого геопространственного консорциума (OGC): **Point**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Если экземпляр **geography** создан пользователем, то метод STPointN() возвращает точку, указанную *expression* путем размещения точек в порядке, в котором они были первоначально введены.  
   
  Если экземпляр **geography** формируется системой, метод STPointN() возвращает точку, указанную *expression* путем упорядочения всех точек в той последовательности, в которой они должны быть выведены: сначала по экземпляру **geography**, затем по кольцу в пределах экземпляра (если это применимо), после чего по точкам кольца. Это порядок является детерминированным.  
@@ -67,7 +68,7 @@ SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.STPointN(2).ToString();  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Методы OGC в экземплярах Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

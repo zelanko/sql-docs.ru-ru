@@ -1,4 +1,5 @@
 ---
+description: STMLineFromWKB (географический тип данных)
 title: STMLineFromWKB (тип данных geography) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 05ca6d65-4799-4b9a-9672-cfebae95f23e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 35c2776a6749f4f087cc32daa5abf3ddd121cc9f
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 65f2b438840d113041bd14457ecad7036e184f80
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555149"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459055"
 ---
 # <a name="stmlinefromwkb-geography-data-type"></a>STMLineFromWKB (географический тип данных)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STMLineFromWKB ( 'WKB_multilinestring' , SRID )
 
 ## <a name="arguments"></a>Аргументы
  *WKB_multilinestring*  
- WKB-представление возвращаемого экземпляра **geographyMultiLineString**. *WKB_multilinestring* — это выражение типа **varbinary(max)** .  
+ WKB-представление возвращаемого экземпляра **geographyMultiLineString**. *WKB_multilinestring* — это выражение типа **varbinary(max)**.  
   
  *SRID*  
  Выражение типа **int**, представляющее идентификатор пространственной ссылки (SRID) возвращаемого экземпляра **geographyMultiLineString**.  
@@ -52,7 +53,7 @@ STMLineFromWKB ( 'WKB_multilinestring' , SRID )
   
  Тип OGC: **MultiLineString**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Если входные данные имеют неверный формат, метод вызовет исключение **FormatException**.  
   
 ## <a name="examples"></a>Примеры  

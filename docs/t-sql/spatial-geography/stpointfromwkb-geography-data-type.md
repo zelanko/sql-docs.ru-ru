@@ -1,4 +1,5 @@
 ---
+description: STPointFromWKB (географический тип данных)
 title: STPointFromWKB (тип данных geography) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b3b4e3bb-47bc-4621-99c4-c97aa60cdf8b
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 11c7ec547778eb07d1713081b55f4d8c192bb9ed
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 70eabd3b36ad564b02d16e3ce906405d83a55730
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555145"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459030"
 ---
 # <a name="stpointfromwkb-geography-data-type"></a>STPointFromWKB (географический тип данных)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STPointFromWKB ( 'WKB_point' , SRID )
 
 ## <a name="arguments"></a>Аргументы
  *WKB_point*  
- Представление в формате WKB возвращаемого экземпляра **geographyPoint**. *WKB_point* — это выражение типа **varbinary(max)** .  
+ Представление в формате WKB возвращаемого экземпляра **geographyPoint**. *WKB_point* — это выражение типа **varbinary(max)**.  
   
  *SRID*  
  Выражение типа **int**, представляющее идентификатор пространственной ссылки (SRID) возвращаемого экземпляра **geographyPoint**.  
@@ -52,7 +53,7 @@ STPointFromWKB ( 'WKB_point' , SRID )
   
  Тип OGC: **Point**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Если входные данные имеют неверный формат, метод вызовет исключение **FormatException**.  
   
 ## <a name="examples"></a>Примеры  

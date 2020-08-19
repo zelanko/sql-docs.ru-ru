@@ -1,4 +1,5 @@
 ---
+description: Определение данных многомерных выражений — CREATE SUBCUBE
 title: Инструкция CREATE CUBE (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1034d96ce0d683d38139636d53471d23581807a1
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 24f8ade9255543fcb1d2c23b7959a5def93b21dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362804"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477026"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>Определение данных многомерных выражений — CREATE SUBCUBE
 
@@ -37,7 +38,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
   
  Подробное описание синтаксиса инструкций SELECT и **НЕвизуального** предложения см. в разделе [инструкция SELECT &#40;&#41;многомерных выражений](../mdx/mdx-data-manipulation-select.md) .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Если элементы по умолчанию исключаются из определения вложенного куба, то координаты изменяются соответствующим образом. Для атрибутов, которые могут быть статистически вычислены, элемент по умолчанию перемещается в элемент [Все]. Для атрибутов, которые не могут быть статистически вычислены, элемент по умолчанию перемещается в элемент, существующий во вложенном кубе. В следующей таблице приведен пример вложенного куба и комбинаций элемента по умолчанию.  
   
 |Исходный элемент по умолчанию|Статистически вычисляемый|Подзапрос выборки|Измененный элемент по умолчанию|  
@@ -89,7 +90,7 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  Выдаются следующие результаты:  
   
-|Бизнес-тип + Категория|Все продукты|Принадлежности|Clothing|  
+|Бизнес-тип + Категория|Все продукты|Accessories|Clothing|  
 |-|-|-|-|  
 |All Resellers|$2 031 079,39|$ 506 172,45|$ 1 524 906,93|  
 |Value Added Reseller|$767 388,52|$ 175 002,81|$ 592 385,71|  
@@ -117,7 +118,7 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  Выдаются следующие различные результаты:  
   
-|Бизнес-тип + Категория|Все продукты|Принадлежности|Clothing|  
+|Бизнес-тип + Категория|Все продукты|Accessories|Clothing|  
 |-|-|-|-|  
 |All Resellers|$ 80 450 596,98|$ 571 297,93|$ 1 777 840,84|  
 |Value Added Reseller|$ 34 967 517,33|$ 175 002,81|$ 592 385,71|  
@@ -125,10 +126,10 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  [All Products] и [All Resellers], столбец и строка соответственно, содержат итоги всех элементов, а не только тех, что видимы.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основные понятия в Analysis Services &#40;многомерных выражений&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
  [Инструкции скриптов многомерных выражений &#40;многомерные выражения&#41;](../mdx/mdx-scripting-statements-mdx.md)   
- [Инструкция DROP CUBE &#40;&#41;многомерных выражений](../mdx/mdx-data-definition-drop-subcube.md)   
+ [Инструкция DROP CUBE &#40;&#41;многомерных выражений ](../mdx/mdx-data-definition-drop-subcube.md)   
  [Инструкция SELECT (многомерные выражения)](../mdx/mdx-data-manipulation-select.md)  
   
   

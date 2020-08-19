@@ -1,4 +1,5 @@
 ---
+description: Метод Execute (объект Connection ADO)
 title: Метод Execute (подключение ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c2b07bb18aab0cde13a82540226fa477c306f268
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1acbdc4966f46d5e155dab3fac059568699d4727
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755096"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443916"
 ---
 # <a name="execute-method-ado-connection"></a>Метод Execute (объект Connection ADO)
 Выполняет указанный запрос, инструкцию SQL, хранимую процедуру или специфический для поставщика текст.  
@@ -42,10 +43,10 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
  **Строковое** значение, содержащее инструкцию SQL, хранимую процедуру, URL-адрес или определяемый поставщиком текст для выполнения. **При необходимости**можно использовать имена таблиц, но только в том случае, если поставщик поддерживает SQL. Например, если используется имя таблицы «Customers», то ADO автоматически добавляет стандартный синтаксис SQL SELECT для формирования и передачи "SELECT * FROM Customers" в качестве [!INCLUDE[tsql](../../../includes/tsql-md.md)] инструкции поставщику.  
   
  *RecordsAffected*  
- Необязательный элемент. **Длинная** переменная, к которой поставщик возвращает количество записей, затронутых операцией.  
+ Необязательный параметр. **Длинная** переменная, к которой поставщик возвращает количество записей, затронутых операцией.  
   
  *Параметры*  
- Необязательный элемент. Значение **типа Long** , указывающее, как поставщик должен оценивать аргумент CommandText. Может быть битовой маской одного или нескольких значений [коммандтипинум](../../../ado/reference/ado-api/commandtypeenum.md) или [ексекутеоптионенум](../../../ado/reference/ado-api/executeoptionenum.md) .  
+ Необязательный параметр. Значение **типа Long** , указывающее, как поставщик должен оценивать аргумент CommandText. Может быть битовой маской одного или нескольких значений [коммандтипинум](../../../ado/reference/ado-api/commandtypeenum.md) или [ексекутеоптионенум](../../../ado/reference/ado-api/executeoptionenum.md) .  
   
  **Примечание** . Используйте значение **Ексекутеоптионенум** **адексекутенорекордс** для повышения производительности за счет минимизации внутренней обработки и для приложений, которые вы переносите из Visual Basic 6,0.  
   
@@ -53,7 +54,7 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
   
  Не используйте значения Коммандтипинум для Адкмдфиле или Адкмдтабледирект с Execute. Эти значения можно использовать только в качестве параметров с методами методов запроса [Open (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) и [Requery](../../../ado/reference/ado-api/requery-method.md) для **набора записей**.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  При использовании метода **EXECUTE** для объекта [соединения объект (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) выполняет любой запрос, передаваемый в метод в аргументе CommandText для указанного соединения. Если аргумент CommandText задает запрос, возвращающий строку, все результаты, формируемые выполнением, сохраняются в новом объекте **набора записей** . Если команда не должна возвращать результаты (например, запрос SQL UPDATE), поставщик возвращает **значение Nothing** , если указан параметр **адексекутенорекордс** . в противном случае Execute возвращает закрытый **набор записей**.  
   
  Возвращаемый объект **набора записей** всегда является однонаправленным курсором только для чтения. Если требуется объект **набора записей** с дополнительными функциональными возможностями, сначала создайте объект **набора записей** с параметрами требуемого свойства, а затем используйте метод объекта набора **записей** [(ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) для выполнения запроса и возврата требуемого типа курсора.  
@@ -65,5 +66,5 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
 > [!NOTE]
 >  URL-адреса, использующие схему HTTP, автоматически вызывают [поставщик OLE DB Майкрософт для публикации в Интернете](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Дополнительные сведения см. в разделе [абсолютные и относительные URL-адреса](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

@@ -1,4 +1,5 @@
 ---
+description: Глобальные параметры (окно вывода) (Акцесстоскл)
 title: Глобальные параметры (окно вывода) (Акцесстоскл) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ca64f234-38f2-4607-a9d6-d4906e48e336
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: bf18bdcee058ac913a303a04e2ff4510696724a6
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 03ed181f7cb35619b0ab114116847a32efb8c636
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938301"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422998"
 ---
 # <a name="global-settings-output-window-accesstosql"></a>Глобальные параметры (окно вывода) (Акцесстоскл)
 Используйте диалоговое окно **глобальные параметры** , чтобы указать параметры для SSMA.  

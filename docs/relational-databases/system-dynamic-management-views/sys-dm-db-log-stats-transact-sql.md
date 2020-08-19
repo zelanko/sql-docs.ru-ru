@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_log_stats (Transact-SQL)
 title: sys. dm_db_log_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/17/2017
@@ -19,12 +20,12 @@ ms.assetid: ''
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 25488898f7f8c6fb56ea75bc62480aefea171b59
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b70d0b23a55584bb866c278086bec7f437cedd2a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829493"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423278"
 ---
 # <a name="sysdm_db_log_stats-transact-sql"></a>sys.dm_db_log_stats (Transact-SQL)   
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "82829493"
 
 *database_id* | NULL | **По умолчанию**
 
-Идентификатор базы данных. Параметр `database_id` равен `int`. Допустимые входные данные — это ИДЕНТИФИКАЦИОНный номер базы данных, `NULL` или `DEFAULT` . Значение по умолчанию — `NULL`. `NULL`и `DEFAULT` являются эквивалентными значениями в контексте текущей базы данных.  
+Идентификатор базы данных. `database_id` имеет значение `int`. Допустимые входные данные — это ИДЕНТИФИКАЦИОНный номер базы данных, `NULL` или `DEFAULT` . Значение по умолчанию — `NULL`. `NULL` и `DEFAULT` являются эквивалентными значениями в контексте текущей базы данных.  
 Может быть указана встроенная функция [DB_ID](../../t-sql/functions/db-id-transact-sql.md). При использовании `DB_ID` без указания имени базы данных уровень совместимости текущей базы данных должен быть 90 или выше.
 
   
@@ -61,7 +62,7 @@ ms.locfileid: "82829493"
 |total_log_size_mb  |**float**  |   Общий размер журнала транзакций в МБ. |  
 |active_vlf_count   |**bigint** |   Общее число активных [виртуальных файлов журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) в журнале транзакций.|  
 |active_log_size_mb |**float**  |   Общий размер журнала активных транзакций в МБ.|  
-|log_truncation_holdup_reason   |**nvarchar(60)**   |   Причина усечения журнала задержки. Значение совпадает со `log_reuse_wait_desc` столбцом `sys.databases` .  (Более подробное объяснение этих значений см. [в журнале транзакций](../../relational-databases/logs/the-transaction-log-sql-server.md)). <br />Ниже перечислены возможные значения. <br />NOTHING;<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />РЕПЛИКАЦИЯ<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />ДРУГИЕ ВРЕМЕННЫЕ |  
+|log_truncation_holdup_reason   |**nvarchar(60)**   |   Причина усечения журнала задержки. Значение совпадает со  `log_reuse_wait_desc` столбцом `sys.databases` .  (Более подробное объяснение этих значений см. [в журнале транзакций](../../relational-databases/logs/the-transaction-log-sql-server.md)). <br />Ниже перечислены возможные значения. <br />NOTHING;<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />РЕПЛИКАЦИЯ<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />ДРУГИЕ ВРЕМЕННЫЕ |  
 |log_backup_time    |**datetime**   |   Время последнего резервного копирования журнала транзакций.|   
 |log_backup_lsn |**nvarchar(24)**   |   [Номер LSN](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)последней резервной копии журнала транзакций.|   
 |log_since_last_log_backup_mb   |**float**  |   Размер журнала в МБ с момента последнего резервного копирования журнала транзакций [(номер LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch).|  
@@ -72,7 +73,7 @@ ms.locfileid: "82829493"
 |recovery_vlf_count |**bigint** |   Общее число [файлов виртуального журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) для восстановления при отработке отказа или перезапуске сервера. |  
 
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 При запуске `sys.dm_db_log_stats` базы данных, участвующей в группе доступности в качестве вторичной реплики, будет возвращено только подмножество полей, описанных выше.  В настоящее время `database_id` `recovery_model` `log_backup_time` при выполнении в базе данных-получателе будут возвращаться только, и.   
 
 ## <a name="permissions"></a>Разрешения  
@@ -99,9 +100,9 @@ FROM sys.databases AS s
 CROSS APPLY sys.dm_db_log_stats(s.database_id); 
 ```
 
-## <a name="see-also"></a>См. также  
-[Динамические административные представления и функции &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[Динамические административные представления, связанные с базами данных &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
-[sys. dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+[Динамические административные представления и функции (Transact-SQL)](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+[Динамические административные представления, связанные с базами данных &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+[sys.dm_db_log_space_usage (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
 [sys.dm_db_log_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
   

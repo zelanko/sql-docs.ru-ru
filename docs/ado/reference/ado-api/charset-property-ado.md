@@ -1,4 +1,5 @@
 ---
+description: Свойство Charset (ADO)
 title: Свойство Charset (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e42507cb-9b46-4ce4-8191-2948eaf14ca2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a5750364a745cda43459ecba69ba42cbf6f3da40
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9682664c87db42920c2ae78f338103c1d8c13d64
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763145"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451006"
 ---
 # <a name="charset-property-ado"></a>Свойство Charset (ADO)
 Указывает набор символов, в который содержимое текстового [потока](../../../ado/reference/ado-api/stream-object-ado.md) должно быть переведено для хранения во внутреннем буфере объекта **потока** .  
@@ -37,5 +38,5 @@ ms.locfileid: "82763145"
   
  Пример кода см. в разделе [Шаг 4. Заполнение текстового поля сведений](../../../ado/guide/data/step-4-populate-the-details-text-box.md).  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

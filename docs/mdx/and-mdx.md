@@ -1,4 +1,5 @@
 ---
+description: AND (многомерные выражения)
 title: AND (МНОГОМЕРНЫЕ ВЫРАЖЕНИЯ) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 930fe19abe7b1d783b4c69ef54b9b2550a05d538
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: baff2f517f5fdd6dfbb23eb24ad51ed12589df52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017094"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429976"
 ---
 # <a name="and-mdx"></a>AND (многомерные выражения)
 
@@ -28,7 +29,7 @@ Expression1 AND Expression2
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Выражения*  
+ *Expression1*  
  Допустимое многомерное выражение, возвращающее числовое значение.  
   
  *Expression2*  
@@ -40,7 +41,7 @@ Expression1 AND Expression2
 ## <a name="remarks"></a>Remarks  
  Оператор **and** обрабатывает оба выражения как логические значения (ноль, 0, как **false**; в противном случае — **значение true**), прежде чем оператор выполняет логическое умножение. В следующей таблице показано, как оператор **and** выполняет логическое умножение.  
   
-|*Выражения*|*Expression2*|Возвращаемое значение|  
+|*Expression1*|*Expression2*|Возвращаемое значение|  
 |-------------------|-------------------|------------------|  
 |**true**|**true**|**true**|  
 |**true**|**false**|**false**|  
@@ -68,6 +69,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Справочник по операторам многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-operator-reference-mdx.md)  
+ [Справочник по операторам многомерных выражений &#40;&#41;многомерных выражений ](../mdx/mdx-operator-reference-mdx.md)  
   
   

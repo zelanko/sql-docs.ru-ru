@@ -1,4 +1,5 @@
 ---
+description: sp_help_job (Transact-SQL)
 title: sp_help_job (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/02/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6fe10c33c617833754ac23592528519aeabec1d5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5dcf8a6fa773497e119b73a9b623d414a1ad4d2f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893713"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486024"
 ---
 # <a name="sp_help_job-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,16 +53,16 @@ sp_help_job { [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_id = ] job_id`Идентификационный номер задания. *job_id* имеет тип **uniqueidentifier**и значение по умолчанию NULL.  
+`[ @job_id = ] job_id` Идентификационный номер задания. *job_id* имеет тип **uniqueidentifier**и значение по умолчанию NULL.  
   
-`[ @job_name = ] 'job_name'`Имя задания. Аргумент *job_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'` Имя задания. Аргумент *job_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Чтобы просмотреть конкретное задание, необходимо указать либо *job_id* , либо *job_name* .  Пропустите *job_id* и *job_name* , чтобы получить сведения обо всех заданиях.
   
-`[ @job_aspect = ] 'job_aspect'`Атрибут задания для вывода. *job_aspect* имеет тип **varchar (9)**, значение по умолчанию NULL и может принимать одно из следующих значений.  
+`[ @job_aspect = ] 'job_aspect'` Атрибут задания для вывода. *job_aspect* имеет тип **varchar (9)**, значение по умолчанию NULL и может принимать одно из следующих значений.  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**ALL**|Сведения об аспекте задания|  
 |**ДОЛЖНО**|Сведения о задании|  
@@ -69,17 +70,17 @@ sp_help_job { [ @job_id = ] job_id
 |**ВЫПОЛНЕНЫ**|Сведения об шаге задания|  
 |**ЦЕЛИ**|Сведения о цели|  
   
-`[ @job_type = ] 'job_type'`Тип заданий, включаемых в отчет. *job_type* имеет тип **varchar (12)** и значение по умолчанию NULL. *job_type* может быть **локальным** или **многосерверным**.  
+`[ @job_type = ] 'job_type'` Тип заданий, включаемых в отчет. *job_type* имеет тип **varchar (12)** и значение по умолчанию NULL. *job_type* может быть **локальным** или **многосерверным**.  
   
-`[ @owner_login_name = ] 'login_name'`Имя входа владельца задания. Аргумент *login_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @owner_login_name = ] 'login_name'` Имя входа владельца задания. Аргумент *login_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @subsystem = ] 'subsystem'`Имя подсистемы. *подсистема* имеет тип **nvarchar (40)** и значение по умолчанию NULL.  
+`[ @subsystem = ] 'subsystem'` Имя подсистемы. *подсистема* имеет тип **nvarchar (40)** и значение по умолчанию NULL.  
   
-`[ @category_name = ] 'category'`Имя категории. *Category* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @category_name = ] 'category'` Имя категории. *Category* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @enabled = ] enabled`Число, указывающее, отображаются ли сведения о включенных заданиях или отключенных заданиях. *Enabled* имеет тип **tinyint**и значение по умолчанию NULL. **1** указывает на включенные задания, а **0** означает отключенные задания.  
+`[ @enabled = ] enabled` Число, указывающее, отображаются ли сведения о включенных заданиях или отключенных заданиях. *Enabled* имеет тип **tinyint**и значение по умолчанию NULL. **1** указывает на включенные задания, а **0** означает отключенные задания.  
   
-`[ @execution_status = ] status`Состояние выполнения заданий. *Status* имеет **тип int**, значение по умолчанию NULL и может принимать одно из следующих значений.  
+`[ @execution_status = ] status` Состояние выполнения заданий. *Status* имеет **тип int**, значение по умолчанию NULL и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -91,13 +92,13 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|Приостановленные.|  
 |**7**|Выполняющие завершающие действия.|  
   
-`[ @date_comparator = ] 'date_comparison'`Оператор сравнения, используемый в сравнениях *date_created* и *date_modified*. *date_comparison* имеет **тип char (1)** и может иметь значение =, \<, or > .  
+`[ @date_comparator = ] 'date_comparison'` Оператор сравнения, используемый в сравнениях *date_created* и *date_modified*. *date_comparison* имеет **тип char (1)** и может иметь значение =, \<, or > .  
   
-`[ @date_created = ] date_created`Дата создания задания. *date_created*имеет тип **DateTime**и значение по умолчанию NULL.  
+`[ @date_created = ] date_created` Дата создания задания. *date_created*имеет тип **DateTime**и значение по умолчанию NULL.  
   
-`[ @date_last_modified = ] date_modified`Дата последнего изменения задания. *date_modified* имеет тип **DateTime**и значение по умолчанию NULL.  
+`[ @date_last_modified = ] date_modified` Дата последнего изменения задания. *date_modified* имеет тип **DateTime**и значение по умолчанию NULL.  
   
-`[ @description = ] 'description_pattern'`Описание задания. *description_pattern* имеет тип **nvarchar (512)** и значение по умолчанию NULL. *description_pattern* может включать SQL Server подстановочных знаков для сопоставления шаблонов.  
+`[ @description = ] 'description_pattern'` Описание задания. *description_pattern* имеет тип **nvarchar (512)** и значение по умолчанию NULL. *description_pattern* может включать SQL Server подстановочных знаков для сопоставления шаблонов.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -111,7 +112,7 @@ sp_help_job { [ @job_id = ] job_id
 |**originating_server**|**nvarchar(30)**|Имя сервера, от которого поступило задание.|  
 |**name**|**sysname**|Имя задания.|  
 |**доступной**|**tinyint**|Показывает, разрешено ли задание к выполнению.|  
-|**nописание**|**nvarchar(512)**|Описание задания.|  
+|**description**|**nvarchar(512)**|Описание задания.|  
 |**start_step_id**|**int**|Идентификатор шага задания, с которого должно начаться выполнение.|  
 |**category**|**sysname**|Категория задания.|  
 |**владельцев**|**sysname**|Владелец задания.|  
@@ -262,8 +263,8 @@ EXEC dbo.sp_help_job
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [sp_add_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
  [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
  [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

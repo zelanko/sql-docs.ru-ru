@@ -1,4 +1,5 @@
 ---
+description: SET DATEFIRST (Transact-SQL)
 title: SET DATEFIRST (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -25,12 +26,12 @@ ms.assetid: 6b0d0e52-8ac1-4f88-b091-f98d6fb8574a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aa66a7d6d30c355e1643ec4fce75f3cdb26465ae
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 8c46133b24b25901d2f9ac1a1982c45fdf804808
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483785"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88415530"
 ---
 # <a name="set-datefirst-transact-sql"></a>SET DATEFIRST (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -71,7 +72,7 @@ SET DATEFIRST 7 ;
 |**6**|Суббота|  
 |**7** (по умолчанию, американский английский)|Воскресенье|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Для просмотра текущего значения SET DATEFIRST используется функция [@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md).  
   
  Аргумент функции SET DATEFIRST устанавливается во время выполнения или запуска, а не во время синтаксического анализа.  
@@ -104,7 +105,7 @@ SELECT CAST('1999-1-1' AS datetime2) AS SelectDate
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

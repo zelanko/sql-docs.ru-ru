@@ -1,4 +1,5 @@
 ---
+description: Как используются метаданные?
 title: Как используются метаданные? | Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 70fb976c-9342-4edd-b066-1140696fd0fa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fbbba96fa2e99a2ccc0618f31e3b29e7d479f703
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ca61677b0001ba4c39f81f80f6e3cbce26f27910
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300174"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476636"
 ---
 # <a name="how-is-metadata-used"></a>Как используются метаданные?
 Метаданные требуются приложениям для большинства операций с результирующими наборами. Например, приложение использует тип данных столбца, чтобы определить, какую переменную привязывать к этому столбцу. Он использует длину в байтах символьного столбца, чтобы определить, сколько пространства требуется для отображения данных из этого столбца. Способ определения метаданных для столбца зависит от типа приложения.  

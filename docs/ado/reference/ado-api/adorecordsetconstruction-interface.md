@@ -1,4 +1,5 @@
 ---
+description: Интерфейс ADORecordsetConstruction
 title: Интерфейс Адорекордсетконструктион | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 23ee532329e8104d3a0e02c9547d9ca7813b42a2
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 3dd1000dce8308ada4044eb9f043097f8767a9c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242824"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451326"
 ---
 # <a name="adorecordsetconstruction-interface"></a>Интерфейс ADORecordsetConstruction
 Интерфейс **адорекордсетконструктион** используется для создания объекта **набора записей** ADO из объекта OLE DB **набора строк** в приложении C/C++.  
@@ -29,14 +30,14 @@ ms.locfileid: "87242824"
   
 ## <a name="properties"></a>Свойства  
   
-|Свойство|Описание|  
+|Свойство.|Описание|  
 |-|-|  
 |[Глава](../../../ado/reference/ado-api/chapter-property-ado.md)|Чтение и запись.<br />Получает или задает OLE DB объект **главы** от/в этом объекте ADO **Recordset** .|  
 |[ровпоситион](../../../ado/reference/ado-api/rowposition-property-ado.md)|Чтение и запись.<br />Возвращает или задает OLE DB объект **ровпоситион** из или в этом объекте ADO **Recordset** .|  
 |[Набор строк](../../../ado/reference/ado-api/rowset-property-ado.md)|Чтение и запись.<br />Возвращает или задает OLE DB объект **набора строк** из или в этом объекте ADO **Recordset** .|  
   
 ## <a name="methods"></a>Методы  
- Нет.  
+ Отсутствует.  
   
 ## <a name="events"></a>События  
  Нет.  

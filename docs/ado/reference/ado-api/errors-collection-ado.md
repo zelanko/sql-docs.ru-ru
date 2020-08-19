@@ -1,4 +1,5 @@
 ---
+description: Коллекция Errors (ADO)
 title: Коллекция Errors (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 290819e1-7b39-4e1e-a93b-801257138b00
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2c8f60951646e635d6124c9fe0fd4290c261c959
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6f4719c9dcf182b6840ad950373b35c7ea8f0361
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765495"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443956"
 ---
 # <a name="errors-collection-ado"></a>Коллекция Errors (ADO)
 Содержит все объекты [ошибок](../../../ado/reference/ado-api/error-object.md) , созданные в ответ на одну ошибку, связанную с поставщиком.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Любая операция, включающая объекты ADO, может формировать одну или несколько ошибок поставщика. При возникновении каждой ошибки в коллекцию **Errors** объекта [Connection](../../../ado/reference/ado-api/connection-object-ado.md) можно поместить один или несколько объектов **ошибок** . Если другая операция ADO создает ошибку, коллекция **Errors** удаляется, а новый набор объектов **ошибок** может быть помещен в коллекцию **Errors** .  
   
  Каждый объект **ошибки** представляет определенную ошибку поставщика, а не ошибку ADO. Ошибки ADO предоставляются механизмом обработки исключений времени выполнения. Например, в Microsoft Visual Basic возникновение ошибки, относящейся к ADO, вызывает событие [OnError](../../../ado/reference/rds-api/onerror-event-rds.md) и появляется в объекте **Err** .  
@@ -45,6 +46,6 @@ ms.locfileid: "82765495"
   
 -   [Свойства, методы и события коллекции ошибок](../../../ado/reference/ado-api/errors-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Error](../../../ado/reference/ado-api/error-object.md)   
  [Приложение А. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md)

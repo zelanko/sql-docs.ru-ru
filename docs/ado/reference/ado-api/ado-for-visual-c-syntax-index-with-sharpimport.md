@@ -1,4 +1,5 @@
 ---
+description: 'ADO для Visual C++ индекса синтаксиса с #import'
 title: 'ADO для Visual C++ индекса синтаксиса с #import | Документация Майкрософт'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 88be8dbcee4633fc8c0014088c7996f95f3e2f73
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f93ee0d10c3de2bbfe36673c6b521c0f38111ff2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747280"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451406"
 ---
 # <a name="ado-for-visual-c-syntax-index-with-import"></a>ADO для Visual C++ индекса синтаксиса с #import
 Этот индекс является перекрестной ссылкой на справочник по языку ADO на основе Microsoft Visual C++ и директивы **#import** .  

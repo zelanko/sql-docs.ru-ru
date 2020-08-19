@@ -1,4 +1,5 @@
 ---
+description: catalog.remove_data_tap
 title: catalog.remove_data_tap | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: b77db3e6-478c-441a-a838-82c4de750275
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7faaa82587b8e16037b91c2da5f1fd6977583b2b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: edf15fb4e6e9d58389ed110c3bca9db1cca147ae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912986"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430036"
 ---
 # <a name="catalogremove_data_tap"></a>catalog.remove_data_tap 
 
@@ -36,7 +37,7 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
  [ @data_tap_id = ] *data_tap_id*  
  Уникальный идентификатор отвода данных, созданного с использованием хранимой процедуры catalog.add_data_tap. Параметр *data_tap_id* имеет тип **bigint**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Если пакет содержит более одной задачи потока данных с одинаковым именем, отвод данных добавляется к первой задаче потока данных с таким именем.  
   
 ## <a name="return-codes"></a>Коды возврата  
@@ -64,7 +65,7 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
   
 -   Пользователь не имеет разрешений MODIFY.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [catalog.add_data_tap](../../integration-services/system-stored-procedures/catalog-add-data-tap.md)   
  [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: Создание коллекции (службы Master Data Services)
 title: Создание коллекции
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3d4f152c-863c-4385-bca9-a9fcd0402e1f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 112adceba92c705cf545f6f4a67771c3d31292cd
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 7a5566592be79b54d4beda1c814500aa166c2404
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812424"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495081"
 ---
 # <a name="create-a-collection-master-data-services"></a>Создание коллекции (службы Master Data Services)
 
@@ -57,7 +58,7 @@ ms.locfileid: "85812424"
   
 -   [Добавление элементов в коллекцию (службы Master Data Services)](../master-data-services/add-members-to-a-collection-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [&#40;коллекций Master Data Services&#41;](../master-data-services/collections-master-data-services.md)   
  [Удаление элемента или коллекции &#40;Master Data Services&#41;](../master-data-services/delete-a-member-or-collection-master-data-services.md)   
  [Создание явной иерархии (службы Master Data Services)](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)  

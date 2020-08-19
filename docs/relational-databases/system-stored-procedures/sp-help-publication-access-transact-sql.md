@@ -1,4 +1,5 @@
 ---
+description: sp_help_publication_access (Transact-SQL)
 title: sp_help_publication_access (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 11571a7a3fb97a164291a3f3949d30205305daf7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5a40f12ade4dcbb08609da6184fa0a96ca9926cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758801"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485988"
 ---
 # <a name="sp_help_publication_access-transact-sql"></a>sp_help_publication_access (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,13 +41,13 @@ sp_help_publication_access [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'`Имя публикации, к которой осуществляется доступ. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации, к которой осуществляется доступ. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @return_granted = ] 'return_granted'`Идентификатор входа. *return_granted* имеет **бит**и значение по умолчанию 1. Если указано значение **0** и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется проверка подлинности, то возвращаются доступные имена входа, которые отображаются на издателе, но не на распространителе. Если указано значение **0** и используется проверка подлинности Windows, то возвращаются имена входа, не запрещающие доступ на издателе или распространителе.  
+`[ @return_granted = ] 'return_granted'` Идентификатор входа. *return_granted* имеет **бит**и значение по умолчанию 1. Если указано значение **0** и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется проверка подлинности, то возвращаются доступные имена входа, которые отображаются на издателе, но не на распространителе. Если указано значение **0** и используется проверка подлинности Windows, то возвращаются имена входа, не запрещающие доступ на издателе или распространителе.  
   
-`[ @login = ] 'login'`— Это идентификатор стандартной учетной записи безопасности. Аргумент *Login* имеет тип **sysname**и значение по умолчанию **%** .  
+`[ @login = ] 'login'` — Это идентификатор стандартной учетной записи безопасности. Аргумент *Login* имеет тип **sysname**и значение по умолчанию **%** .  
   
-`[ @initial_list = ] initial_list`Указывает, следует ли возвращать всех членов с доступом к публикации или только тем, кто имел доступ до добавления новых участников в список. *initial_list* имеет бит и значение по умолчанию **0**.  
+`[ @initial_list = ] initial_list` Указывает, следует ли возвращать всех членов с доступом к публикации или только тем, кто имел доступ до добавления новых участников в список. *initial_list* имеет бит и значение по умолчанию **0**.  
   
  **1** возвращает сведения для всех членов предопределенной роли сервера **sysadmin** с действительными именами входа на распространителе, существовавшими при создании публикации, а также с текущим именем входа.  
   
@@ -63,7 +64,7 @@ sp_help_publication_access [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_help_publication_access** используется во всех типах репликации.  
   
  Если оба **иснтнаме** и **иснтграуп** в результирующем наборе равны **0**, предполагается, что имя входа является [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] именем входа.  

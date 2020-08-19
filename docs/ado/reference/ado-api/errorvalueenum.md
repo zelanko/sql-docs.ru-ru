@@ -1,4 +1,5 @@
 ---
+description: ErrorValueEnum
 title: Еррорвалуинум | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e0280faf3399c24015fd07ec2e62c688a3d8e799
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f3dfcb5e806ad67a17a5899a4b930eedab0928f1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82755231"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443936"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 Указывает тип ошибки времени выполнения ADO.  
@@ -90,8 +91,8 @@ ms.locfileid: "82755231"
 |**adErrURLNamedRowDoesNotExist**|3737 -2146824551 0x800A0E99|Запись с именем по этому URL-адресу не существует.|  
 |**адеррволуменотфаунд**|3733 -2146824555 0x800A0E95|Поставщик не может выбрать устройство хранения данных, указанное в URL-адресе. Убедитесь, что URL-адрес введен правильно.|  
 |**адеррвритефиле**|3004 -2146825284 0x800A0BBC|Ошибка записи в файл.|  
-|**адврнсекуритидиалог**|3717-2146824571 0x800A0E85|Только для внутреннего использования. Не используйте.|  
-|**адврнсекуритидиалогхеадер**|3718-2146824570 0x800A0E86|Только для внутреннего использования. Не используйте.|  
+|**адврнсекуритидиалог**|3717-2146824571 0x800A0E85|Только для внутреннего использования. Не используется.|  
+|**адврнсекуритидиалогхеадер**|3718-2146824570 0x800A0E86|Только для внутреннего использования. Не используется.|  
   
 ## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
  Пакет: **com. MS. WFC. Data**  
@@ -122,7 +123,7 @@ ms.locfileid: "82755231"
 |Адоенумс. Еррорвалуе. СТИЛЛЕКСЕКУТИНГ|  
 |Адоенумс. Еррорвалуе. УНСАФЕОПЕРАТИОН|  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Свойство Number (ADO)](../../../ado/reference/ado-api/number-property-ado.md)  
   
 ## <a name="see-also"></a>См. также  

@@ -1,4 +1,5 @@
 ---
+description: Методы BeginTrans, CommitTrans и RollbackTrans (ADO)
 title: Методы примеры BeginTrans, CommitTrans и RollbackTrans (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: d4683472-4120-4236-8640-fa9ae289e23e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a2a9f52b24ba4123db1b8e3a919b9fa25a030122
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 71dd02544e80d24e96d9cc64fa1e5947f38c685a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762900"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451196"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-ado"></a>Методы BeginTrans, CommitTrans и RollbackTrans (ADO)
 Эти методы транзакций управляют обработкой транзакций в объекте [соединения](../../../ado/reference/ado-api/connection-object-ado.md) следующим образом:  
@@ -55,7 +56,7 @@ object.RollbackTrans
  *object*  
  Объект **соединения** .  
   
-## <a name="connection"></a>Подключение  
+## <a name="connection"></a>Соединение  
  Используйте эти методы с объектом **Connection** , если нужно сохранить или отменить ряд изменений, внесенных в исходные данные в виде одного элемента. Например, чтобы переносить деньги между учетными записями, можно вычесть сумму из единицы и добавить ту же сумму в другую. В случае сбоя одного из обновлений учетные записи больше не будут сбалансированы. Внесение этих изменений в открытой транзакции гарантирует, что все изменения не проходят.  
   
 > [!NOTE]
@@ -72,7 +73,7 @@ object.RollbackTrans
 ## <a name="remote-data-service"></a>Remote Data Service  
  Методы **примеры BeginTrans**, **CommitTrans**и **RollbackTrans** недоступны для объекта **подключения** на стороне клиента.  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
 ## <a name="see-also"></a>См. также  

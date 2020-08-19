@@ -1,4 +1,5 @@
 ---
+description: Пример методов Append и CreateParameter (Visual c++)
 title: Примеры методов Append и CreateParameter (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b57d144c-0a34-49c8-94cf-e5981edfcca6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0abc0742f3313e127d3c0478d9be600b0e02d908
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 832981161e0fcc6ec297186975de33c027cc694f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746987"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451276"
 ---
 # <a name="append-and-createparameter-methods-example-vc"></a>Пример методов Append и CreateParameter (Visual c++)
 В этом примере используются методы [append](../../../ado/reference/ado-api/append-method-ado.md) и [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) для выполнения хранимой процедуры с входным параметром.  
@@ -202,6 +203,6 @@ Authors with 25 percent royalty
 899-46-2035, Anne  Ringer  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод Append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [Метод CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)

@@ -1,4 +1,5 @@
 ---
+description: IsValidDetailed (тип данных geography)
 title: IsValidDetailed (тип данных geography) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f5f0b753-c825-43ce-987d-98655d8d8702
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9022b3a86910ac8430b408de30dee3dfbcca4254
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 6e272d607592660c123a25847143a4aeff075fc7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555237"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422358"
 ---
 # <a name="isvaliddetailed-geography-data-type"></a>IsValidDetailed (тип данных geography)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,10 +44,10 @@ ms.locfileid: "86555237"
   
  Тип возвращаемых данных CLR: **string**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Возможные возвращаемые значения содержатся в следующей таблице:  
   
-|Возвращаемое значение|Description|  
+|Возвращаемое значение|Описание|  
 |------------------|-----------------|  
 |24400|Допустимо|  
 |24401|Не является допустимым, причины неизвестны.|  
@@ -67,7 +68,7 @@ ms.locfileid: "86555237"
 |24416|Не является допустимым, так как в кривой {0} ребро, которое начинается в точке {1}, является либо линией, либо измененной дугой с диаметрально противоположными конечными точками.|  
   
 ## <a name="examples"></a>Примеры  
- Следующий пример недопустимого пространственного объекта показывает, как действуют методы **IsValidDetailed()** .  
+ Следующий пример недопустимого пространственного объекта показывает, как действуют методы **IsValidDetailed()**.  
   
 ```sql  
 DECLARE @p GEOGRAPHY = 'Polygon((2 2, 4 4, 4 2, 2 4, 2 2))'  

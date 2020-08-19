@@ -1,4 +1,5 @@
 ---
+description: Группирование и разгруппирование компонентов
 title: Группирование и разгруппирование компонентов | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 34320838-c271-4f8c-90b3-1254690890bb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 244b724376c18b34ab27ae0aa9eedd24a45f9362
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a83bebf92ddbf4e14d08518283547cb35594c290
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914715"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430186"
 ---
 # <a name="group-or-ungroup-components"></a>Группирование и разгруппирование компонентов
 

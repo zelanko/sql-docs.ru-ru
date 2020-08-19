@@ -1,4 +1,5 @@
 ---
+description: Примеры свойств BOF, EOF и Bookmark (Visual Basic)
 title: Пример свойств BOF, EOF и Bookmark (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b6573c6e-fee8-4267-a722-fadaec6eafe6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6b0fafe895daecc4cfd7345299904c46ff7a1d5c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 1d38d132e4e61f7b26d97450d41cc4f291789257
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762851"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451156"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vb"></a>Примеры свойств BOF, EOF и Bookmark (Visual Basic)
 В этом примере используются свойства [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) и [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) для вывода сообщения, если пользователь пытается переместиться после первой или последней записи [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md). Он использует свойство [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md) , чтобы пользователь мог пометить запись в **наборе записей** и вернуться к ней позже.  
@@ -135,7 +136,7 @@ End Sub
 Attribute VB_Name = "BOF"  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойства BOF, EOF (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
  [Свойство Bookmark (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

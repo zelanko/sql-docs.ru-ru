@@ -1,4 +1,5 @@
 ---
+description: sp_cleanup_log_shipping_history (Transact-SQL)
 title: sp_cleanup_log_shipping_history (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 96d236a9-1d0e-4f83-a4d3-f825b7381e46
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d7b69c82e4e2043c8647ba19a8b40306d6836307
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 42edf059f077f0896cd3c62b1420658c982b3d5a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85871094"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486158"
 ---
 # <a name="sp_cleanup_log_shipping_history-transact-sql"></a>sp_cleanup_log_shipping_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +42,9 @@ sp_cleanup_log_shipping_history
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @agent_id = ] 'agent_id',`Основной идентификатор резервной копии или вторичный идентификатор для копирования или восстановления. *agent_id* имеет тип **uniqueidentifier** и не может иметь значение null.  
+`[ @agent_id = ] 'agent_id',` Основной идентификатор резервной копии или вторичный идентификатор для копирования или восстановления. *agent_id* имеет тип **uniqueidentifier** и не может иметь значение null.  
   
-`[ @agent_type = ] 'agent_type'`Тип задания доставки журналов. 0 = резервное копирование, 1 = копирование, 2 = восстановление. *agent_type* имеет тип **tinyint** и не может иметь значение null.  
+`[ @agent_type = ] 'agent_type'` Тип задания доставки журналов. 0 = резервное копирование, 1 = копирование, 2 = восстановление. *agent_type* имеет тип **tinyint** и не может иметь значение null.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -51,7 +52,7 @@ sp_cleanup_log_shipping_history
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  **sp_cleanup_log_shipping_history** должны запускаться из базы данных **master** на любом сервере доставки журналов. Эта хранимая процедура очищает локальные и удаленные копии **log_shipping_monitor_history_detail** и **log_shipping_monitor_error_detail** на основе срока хранения журнала.  
   
 ## <a name="permissions"></a>Разрешения  

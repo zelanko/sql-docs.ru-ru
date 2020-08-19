@@ -1,4 +1,5 @@
 ---
+description: catalog.move_environment (база данных SSISDB)
 title: catalog.move_environment (база данных SSISDB) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: b3fb5242-3c4c-4a87-b3e5-beb22fbab053
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 128970f410897b9c9797b27a6d1e3af28407f1f5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2c8fd91f3b37aa410ca3aa86d2825c27a78e1217
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913000"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430096"
 ---
 # <a name="catalogmove_environment-ssisdb-database"></a>catalog.move_environment (база данных SSISDB)
 
@@ -36,13 +37,13 @@ catalog.move_environment [ @source_folder = ] source_folder
   
 ## <a name="arguments"></a>Аргументы  
  [ @source_folder = ] *source_folder*  
- Имя исходной папки, в которой среда хранится до перемещения. Параметр *source_folder* имеет тип **nvarchar(128)** .  
+ Имя исходной папки, в которой среда хранится до перемещения. Параметр *source_folder* имеет тип **nvarchar(128)**.  
   
  [ @environment_name = ] *environment_name*  
  Имя перемещаемой среды. Параметр *environment_name* имеет тип **nvarchar(128)** .  
   
  [ @destination_folder = ] *destination_folder*  
- Имя целевой папки, в которой среда хранится после перемещения. Параметр *destination_folder* имеет тип **nvarchar(128)** .  
+ Имя целевой папки, в которой среда хранится после перемещения. Параметр *destination_folder* имеет тип **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение)  
@@ -68,7 +69,7 @@ catalog.move_environment [ @source_folder = ] source_folder
   
 -   Пользователь не имеет соответствующих разрешений  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Ссылки из проектов на среду не изменяются с учетом перемещения. Ссылки на среду должны обновляться соответствующим образом. Хранимая процедура будет выполнена успешно, даже если вследствие перемещения среды ссылки на нее оказались недействительными. Ссылки на среду должны обновляться после завершения этой хранимой процедуры.  
   
 > [!NOTE]  

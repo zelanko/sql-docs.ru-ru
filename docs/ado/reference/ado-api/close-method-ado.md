@@ -1,4 +1,5 @@
 ---
+description: Метод Close (ADO)
 title: Метод Close (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3cdf27d1-a180-4cff-8e42-95dec5fb1b55
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 939bf1d65c73b2aa83c54c7a5b936e3228719ba5
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 2cfdee50d0b5699e1f6eca4eb8e22375e4e5a672
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242794"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450956"
 ---
 # <a name="close-method-ado"></a>Метод Close (ADO)
 Закрывает открытый объект и все зависимые объекты.  
@@ -34,7 +35,7 @@ ms.locfileid: "87242794"
 object.Close  
 ```  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Используйте метод **Close** , чтобы закрыть [соединение](../../../ado/reference/ado-api/connection-object-ado.md), [запись](../../../ado/reference/ado-api/record-object-ado.md), [набор записей](../../../ado/reference/ado-api/recordset-object-ado.md)или объект [потока](../../../ado/reference/ado-api/stream-object-ado.md) , чтобы освободить все связанные системные ресурсы. Закрытие объекта не приводит к его удалению из памяти; можно изменить параметры свойств и открыть его позже. Чтобы полностью исключить объект из памяти, закройте объект и задайте для переменной объекта значение *Nothing* (в Visual Basic).  
   
 ## <a name="connection"></a>Соединение  

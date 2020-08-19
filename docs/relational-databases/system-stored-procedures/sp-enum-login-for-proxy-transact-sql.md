@@ -1,4 +1,5 @@
 ---
+description: sp_enum_login_for_proxy (Transact-SQL)
 title: sp_enum_login_for_proxy (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: cd65937894956ff008a08ea6f15222d6d020ba2e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7707843979bd0c741ade8e4ae6759d265eb13d06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891954"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486065"
 ---
 # <a name="sp_enum_login_for_proxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
 
@@ -42,11 +43,11 @@ sp_enum_login_for_proxy
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @name = ] 'name'`Имя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] участника, имя входа, роль сервера или роль базы данных **msdb** , для которой перечисляются учетные записи-посредники. Имя имеет тип **nvarchar (256)** и значение по умолчанию NULL.  
+`[ @name = ] 'name'` Имя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] участника, имя входа, роль сервера или роль базы данных **msdb** , для которой перечисляются учетные записи-посредники. Имя имеет тип **nvarchar (256)** и значение по умолчанию NULL.  
   
-`[ @proxy_id = ] id`Идентификационный номер прокси-сервера, для которого необходимо получить список сведений. *Proxy_id* имеет **тип int**и значение по умолчанию NULL. Можно указать либо *идентификатор* , либо *proxy_name* .  
+`[ @proxy_id = ] id` Идентификационный номер прокси-сервера, для которого необходимо получить список сведений. *Proxy_id* имеет **тип int**и значение по умолчанию NULL. Можно указать либо *идентификатор* , либо *proxy_name* .  
   
-`[ @proxy_name = ] 'proxy_name'`Имя учетной записи-посредника для получения списка сведений. Аргумент *proxy_name* имеет тип **sysname**и значение по умолчанию NULL. Можно указать либо *идентификатор* , либо *proxy_name* .  
+`[ @proxy_name = ] 'proxy_name'` Имя учетной записи-посредника для получения списка сведений. Аргумент *proxy_name* имеет тип **sysname**и значение по умолчанию NULL. Можно указать либо *идентификатор* , либо *proxy_name* .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  

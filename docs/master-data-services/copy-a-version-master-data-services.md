@@ -1,4 +1,5 @@
 ---
+description: Копирование версии (службы Master Data Services)
 title: Копирование версии
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f4678a02-bbe9-4f21-9e32-627eae053fe7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 412d86d140060aa640ed2e3c3b8b49b6f8f9e1ee
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: a0e6412b563bd9e33b513d0e70b7ed505138fcb6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85814057"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429996"
 ---
 # <a name="copy-a-version-master-data-services"></a>Копирование версии (службы Master Data Services)
 
@@ -52,7 +53,7 @@ ms.locfileid: "85814057"
   
 -   [Изменение имени версии (службы Master Data Services)](../master-data-services/change-a-version-name-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Версии (службы Master Data Services)](../master-data-services/versions-master-data-services.md)  
   
   
