@@ -1,4 +1,5 @@
 ---
+description: Использование страниц
 title: Использование страниц | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 442b08c5-ccc7-4192-a1cc-22f250867782
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6542cb23deef9f10979e3bdb90c0820d84c0f150
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 71a4c9524090c85881e3aa194f7afbb3c11f0678
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763035"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452576"
 ---
 # <a name="using-pages"></a>Использование страниц
 Используйте свойство **PageCount** , чтобы определить, сколько страниц данных находится в объекте **Recordset** . *Страницы* — это группы записей, размер которых равен значению свойства **pageSize** . Даже если последняя страница является неполной, так как число записей меньше, чем значение **pageSize** , оно считается дополнительной страницей в значении **PageCount** . Если объект **Recordset** не поддерживает это свойство, **PageCount** будет иметь значение-1, чтобы указать, что **PageCount** является недетерминированным.  

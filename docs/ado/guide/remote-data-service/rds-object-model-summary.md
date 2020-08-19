@@ -1,4 +1,5 @@
 ---
+description: Сводка объектной модели RDS
 title: Сводка объектной модели RDS | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 909f9af7-31db-4eec-ad52-650ce74dac2f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 95ddd84bfd755e044d97a6043f295014933ae18c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d7488811326dda4228ef2f458b70d5575b33b122
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763595"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452146"
 ---
 # <a name="rds-object-model-summary"></a>Сводка объектной модели RDS
 > [!IMPORTANT]
@@ -30,7 +31,7 @@ ms.locfileid: "82763595"
 |[RDSServer. факт.](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|Этот объект представляет программу сервера по умолчанию. Он выполняет получение данных RDS по умолчанию и поведение обновления.<br /><br /> Объект **фактов** не является надежным для сценариев.|  
 |[Клиент. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)|Этот объект может автоматически вызывать **RDS. Объекты Space** и **RDSServer. объект фактов** .<br /><br /> Используйте этот объект, чтобы вызвать получение данных RDS по умолчанию или поведение обновления.<br /><br /> Этот объект также предоставляет средства визуальных элементов управления для доступа к возвращенному объекту **набора записей** .<br /><br /> Объект " **элемент управления** " является надежным для сценариев.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основы RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
  [Сценарий RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [Руководство по RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   

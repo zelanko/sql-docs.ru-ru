@@ -1,4 +1,5 @@
 ---
+description: Справочник по API ODBC
 title: Справочник по API ODBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ apitype: dllExport
 ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6065db0ea99efaec11190902ec9268db63a6d255
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1627838d3f34f8092dce2806a1b1d8f885b9bf6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298938"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476185"
 ---
 # <a name="odbc-api-reference"></a>Справочник по API ODBC
 В подразделах этого раздела описывается каждая функция ODBC в алфавитном порядке. Каждая функция определена как функция языка программирования C. К описаниям относятся следующие.  

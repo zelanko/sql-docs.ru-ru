@@ -1,4 +1,5 @@
 ---
+description: Формат сохраняемости XML
 title: Формат сохраняемости XML | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eb3abca1aabccd45bc76c4ec0ee5742531c47e28
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7a014addf2d3ff6c7b02ed9abc103cdbd7b2ecb8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748316"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452516"
 ---
 # <a name="xml-persistence-format"></a>Формат сохраняемости XML
 ADO использует кодировку UTF-8 для сохраняемого XML-потока.  
   
  Формат ADO XML разбивается на два раздела — раздел схемы, за которым следует раздел данных. Ниже приведен пример XML-файла для таблицы грузоотправителей из базы данных Northwind. В этом примере рассматриваются различные части XML.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
   
 ```  
 <xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"   
@@ -68,7 +69,7 @@ xmlns:z="#RowsetSchema">
   
  Определения схемы соответствуют [спецификации W3C по XML-данным](http://www.w3.org/TR/1998/NOTE-XML-data/) и могут быть полностью проверены (хотя проверка не будет выполняться в Internet Explorer 5). В настоящее время XML-данные — это единственный поддерживаемый формат схемы для сохраняемости набора записей.  
   
- Раздел данных содержит три строки, содержащие сведения о грузоотправителях. Для пустого набора строк раздел Data может быть пустым, но \< должны присутствовать Теги RS: data>. Без данных можно написать сокращенную форму тегов, как просто \< RS: Data/>. Любой тег с префиксом RS указывает на то, что он находится в пространстве имен, определенном в наборе строк urn: schemas-microsoft-com:.  
+ Раздел данных содержит три строки, содержащие сведения о грузоотправителях. Для пустого набора строк раздел Data может быть пустым, но \<rs:data> теги должны присутствовать. Без данных можно написать краткую сокращенную форму тегов \<rs:data/> . Любой тег с префиксом RS указывает на то, что он находится в пространстве имен, определенном в наборе строк urn: schemas-microsoft-com:.  
   
 ## <a name="see-also"></a>См. также  
  [Сохранение записей в формате XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

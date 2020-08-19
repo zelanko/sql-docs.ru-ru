@@ -1,4 +1,5 @@
 ---
+description: FULLTEXTCATALOGPROPERTY (Transact-SQL)
 title: FULLTEXTCATALOGPROPERTY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f841dc79-2044-4863-aff0-56b8bb61f250
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bcf1047008c59844630aa0391f798ddf751c4e89
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c6e8c856b81bd4ff4ab03c988af1edf6a8b3ac43
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110975"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468027"
 ---
 # <a name="fulltextcatalogproperty-transact-sql"></a>FULLTEXTCATALOGPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +54,7 @@ _catalog\_name_
 _property_  
 Выражение, содержащее имя свойства полнотекстового каталога. В таблице перечислены свойства и описания возвращаемых сведений.  
   
-|Свойство|Description|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |**AccentSensitivity**|Настройка учета диакритических знаков:<br /><br /> 0 = без учета диакритических знаков;<br /><br /> 1 = с учетом диакритических знаков.|  
 |**IndexSize**|Логический размер полнотекстового каталога в мегабайтах (МБ). Включает размер индексов семантических ключевых фраз и индексов подобия документов.<br /><br /> Дополнительные сведения см. в подразделе «Примечания» далее в этом разделе.|  
@@ -73,7 +74,7 @@ _property_
   
 В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] пользователь может просматривать только метаданные защищаемых объектов. Пользователь владеет этими защищаемыми объектами или на них пользователю были предоставлены разрешения. Таким образом, встроенные функции, такие как FULLTEXTCATALOGPROPERTY, создающие метаданные, могут вернуть значение NULL, если пользователь не имеет разрешений на объект. Дополнительные сведения см. в статье [sp_help_fulltext_catalogs (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
 Функция FULLTEXTCATALOGPROPERTY (_catalog\_name_, **IndexSize**) анализирует только фрагменты с состоянием 4 или 6, указанным в представлении [sys.fulltext_index_fragments](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md). Данные фрагменты являются частью логического индекса. Таким образом, свойство **IndexSize** возвращает только логический размер индекса. 
 
 При слиянии индексов фактический размер индекса может в два раза превышать его логический размер. Чтобы определить фактический размер, который занимает полнотекстовый индекс при слиянии, используйте системную хранимую процедуру [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md). При выполнении этой процедуры анализируются все фрагменты, связанные с полнотекстовым индексом. 
@@ -94,7 +95,7 @@ SELECT fulltextcatalogproperty('Cat_Desc', 'ItemCount');
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [FULLTEXTSERVICEPROPERTY (Transact-SQL)](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)   
 [Функции метаданных (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)   
 [sp_help_fulltext_catalogs (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)  

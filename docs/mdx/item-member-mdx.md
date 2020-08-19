@@ -1,4 +1,5 @@
 ---
+description: Item (элемент) (многомерные выражения)
 title: Item (элемент) (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d7afa88f9d6239c8da7cb9c406ef11f0764f8dcf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a374d1fcc7f972828832c2f82375acf640d45fb2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905913"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483967"
 ---
 # <a name="item-member-mdx"></a>Item (элемент) (многомерные выражения)
 
@@ -31,7 +32,7 @@ Tuple_Expression.Item( Index )
  *Tuple_Expression*  
  Допустимое многомерное выражение, возвращающее кортеж.  
   
- *Индекс*  
+ *Index*  
  Допустимое числовое выражение, указывающее положение элемента внутри возвращаемого кортежа.  
   
 ## <a name="remarks"></a>Remarks  
@@ -48,7 +49,7 @@ Tuple_Expression.Item( Index )
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

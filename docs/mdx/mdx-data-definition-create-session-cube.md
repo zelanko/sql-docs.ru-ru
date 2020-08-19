@@ -1,4 +1,5 @@
 ---
+description: Определение данных многомерных выражений — CREATE SESSION CUBE
 title: Инструкция CREATE SESSION CUBE (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ac95afcebcf07a5d691db5f2599b3290b9587d44
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 33cdbc4a018245249771ff350227d13f4e0f772e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038359"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483877"
 ---
 # <a name="mdx-data-definition---create-session-cube"></a>Определение данных многомерных выражений — CREATE SESSION CUBE
 
@@ -101,13 +102,13 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
  dimension_name  
  Имя измерения в кубе сеанса.  
   
- ИЗ \<предложения dim from>  
+ FROM \<dim from clause>  
  Спецификация, допустимая только для определения производного измерения.  
   
  NOT_RELATED_TO_FACTS  
  Спецификация, допустимая только для определения производного измерения.  
   
- \<тип уровня>  
+ \<level type>  
  Спецификация, допустимая только для определения производного измерения.  
   
 ## <a name="remarks"></a>Remarks  
@@ -199,7 +200,7 @@ CREATE SESSION CUBE [Adventure Works_XL_GROUPING1]
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Инструкции определения данных многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-data-definition-statements-mdx.md)   
- [Инструкция CREATE GLOBAL CUBE &#40;&#41;многомерных выражений](../mdx/mdx-data-definition-create-global-cube.md)  
+ [Инструкции определения данных многомерных выражений &#40;&#41;многомерных выражений ](../mdx/mdx-data-definition-statements-mdx.md)   
+ [Инструкция CREATE GLOBAL CUBE &#40;&#41;многомерных выражений ](../mdx/mdx-data-definition-create-global-cube.md)  
   
   

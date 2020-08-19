@@ -1,4 +1,5 @@
 ---
+description: Перевод массового копирования с DB-Library на ODBC
 title: Преобразование из DB-Library в "групповое копирование ODBC" | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,11 +18,12 @@ ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 09726fbbbb1ba1ecd1516dc56ae084897aafff5c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ed2fce2e56d0d4bc8a1776bdc57f70446dc0919c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006601"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475781"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>Перевод массового копирования с DB-Library на ODBC
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

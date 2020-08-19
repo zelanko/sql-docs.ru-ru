@@ -1,4 +1,5 @@
 ---
+description: Определение данных многомерных выражений — CREATE MEMBER
 title: Инструкция CREATE MEMBER (многомерные выражения) | Документация Майкрософт
 ms.date: 07/22/2020
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3ca2c664246dfeab8070337a0daf818fb0a3327c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e0317d67b62efb84a0447543ca59836da6717f33
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110152"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483907"
 ---
 # <a name="mdx-data-definition---create-member"></a>Определение данных многомерных выражений — CREATE MEMBER
 
@@ -120,8 +121,8 @@ WHERE ProfitRatio
 |ASSOCIATED_MEASURE_GROUP|Имя группы мер, с которой связан элемент.|  
   
 ## <a name="see-also"></a>См. также  
- [Инструкция DROP MEMBER &#40;&#41;многомерных выражений](../mdx/mdx-data-definition-drop-member.md)   
+ [Инструкция DROP MEMBER &#40;&#41;многомерных выражений ](../mdx/mdx-data-definition-drop-member.md)   
  [Инструкция обновления элемента &#40;многомерных выражений&#41;](../mdx/mdx-data-definition-update-member.md)   
- [Инструкции определения данных многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Инструкции определения данных многомерных выражений &#40;&#41;многомерных выражений ](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

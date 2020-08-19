@@ -1,4 +1,5 @@
 ---
+description: KPITrend (многомерные выражения)
 title: KPITrend (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 26e33a84ff50fca00151dc124403bac9daa2d89d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cc672146a8f00902012f21f48cbfed460eb48690
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905863"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483917"
 ---
 # <a name="kpitrend-mdx"></a>KPITrend (многомерные выражения)
 
@@ -53,7 +54,7 @@ Descendants
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

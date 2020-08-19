@@ -1,4 +1,5 @@
 ---
+description: Сопоставление типов данных (драйвер ODBC для Oracle)
 title: Сопоставление типов данных (драйвер ODBC для Oracle) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a5d9ce12-19da-4943-8493-e3d56fa08348
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 432c21b70efcdd63ef36bfe3d26f8488ddb11d1d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3ea39a8277508422028d5794ccbcb7a62dacdb08
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302675"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483517"
 ---
 # <a name="mapping-data-types-odbc-driver-for-oracle"></a>Сопоставление типов данных (драйвер ODBC для Oracle)
 > [!IMPORTANT]  
@@ -34,7 +35,7 @@ ms.locfileid: "81302675"
 |CHAR|SQL_CHAR|  
 |DATE|SQL_TIMESTAMP|  
 |FLOAT|SQL_DOUBLE|  
-|INTEGER|SQL_DECIMAL|  
+|ЦЕЛОЕ ЧИСЛО|SQL_DECIMAL|  
 |LONG|SQL_LONGVARCHAR|  
 |LONG RAW|SQL_LONGVARBINARY|  
 |NUMBER|SQL_DECIMAL|  

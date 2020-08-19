@@ -1,4 +1,5 @@
 ---
+description: Учебник по RDS
 title: Руководство по RDS | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f646bd95e3ae9cb809f04c2ef66c47386fbde6c6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: aedb4037d4f6c37ad70086a4e2a51a6210c219c9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762985"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452076"
 ---
 # <a name="rds-tutorial"></a>Учебник по RDS
 В этом учебнике показано, как использовать модель программирования RDS для запроса и обновления источника данных. Во первых, он описывает шаги, необходимые для выполнения этой задачи. Затем этот учебник повторяется в Microsoft® Visual Basic Scripting Edition (в котором используется ADO для классов Windows Foundation (ADO/WFC)).  

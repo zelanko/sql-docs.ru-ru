@@ -1,4 +1,5 @@
 ---
+description: Объекты данных Microsoft ActiveX (ADO)
 title: Microsoft объекты данных ActiveX (ADO) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/08/2018
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 18b9a6590ce777402456c8e9f8c8f28807ec5670
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 63307b7b0074cca482befd0dfa689684504f26f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606616"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451836"
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Объекты данных Microsoft ActiveX (ADO)
 
@@ -41,7 +42,7 @@ ms.locfileid: "83606616"
  Служба Remote Data Service (RDS) — это функция ADO, с помощью которой можно перемещать данные с сервера в клиентское приложение или на веб-страницу, управлять данными на клиенте и возвращать обновления на сервер в одном цикле обработки.  
   
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в  [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="adox"></a>ADOX  
  Расширения Microsoft объекты данных ActiveX для языка описания данных и системы безопасности (ADOX) являются расширением объектов ADO и модели программирования. ADOX включает объекты для создания и изменения схем, а также для обеспечения безопасности. Поскольку это основанный на объектах подход к обработке схем, можно написать код, который будет работать с различными источниками данных независимо от различий в их синтаксисе.  

@@ -1,4 +1,5 @@
 ---
+description: Требования к системе для приложения адресной книги
 title: Требования к системе для приложения адресной книги | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: da385405-1c9a-478b-9bf6-fba70015324c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8aec1ebbb5d83829431e1045e746c99f1569dc48
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0c2eb347c7bd4b4bd39e6d85690e9646784077ae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764635"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451896"
 ---
 # <a name="system-requirements-for-the-address-book-application"></a>Требования к системе для приложения адресной книги
 Чтобы настроить пример приложения адресной книги, необходимо обеспечить соответствие следующим требованиям к программному обеспечению и базе данных:  
@@ -50,7 +51,7 @@ ms.locfileid: "82764635"
   
  Если у вас нет прав, администратору базы данных может потребоваться настроить систему и предоставить вам разрешение на доступ к базе данных или настроить базу данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выполнение скрипта SQL адресной книги](../../../ado/guide/remote-data-service/running-the-address-book-sql-script.md)   
  [Объект элемента управления (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Выполнение примера приложения адресной книги](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)

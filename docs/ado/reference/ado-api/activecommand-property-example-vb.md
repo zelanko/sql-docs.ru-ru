@@ -1,4 +1,5 @@
 ---
+description: Пример свойства ActiveCommand (Visual Basic)
 title: Пример свойства ActiveCommand (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 23b06499-62df-4f46-88eb-6da392f9b456
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c4d60f1067f060546bc85feffd9a681dd05d988b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 55f0eb77a498eba9d6fe2565a8647dc11d77897b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747352"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451726"
 ---
 # <a name="activecommand-property-example-vb"></a>Пример свойства ActiveCommand (Visual Basic)
 В этом примере демонстрируется свойство [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) .  
@@ -120,7 +121,7 @@ End Sub
 'EndActiveCommandPrintVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство ActiveCommand (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
  [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -1,4 +1,5 @@
 ---
+description: Методы ADO
 title: Методы ADO | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a08f7c896b48f6cb76c9805d3bea9910a8f5bda8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 10f9aaf7aefa87586df77dd0da5ac1be336d4f53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242864"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451386"
 ---
 # <a name="ado-methods"></a>Методы ADO
 
@@ -31,7 +32,7 @@ ms.locfileid: "87242864"
 |[Отмена](../../../ado/reference/ado-api/cancel-method-ado.md)|Отменяет выполнение ожидающего асинхронного вызова метода.|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Отменяет ожидающее пакетное обновление.|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Отменяет все изменения, внесенные в текущую или новую строку объекта **набора записей** , или коллекцию **полей** объекта **Record** перед вызовом метода **Update** .|  
-|[Очистить](../../../ado/reference/ado-api/clear-method-ado.md)|Удаляет все объекты **Error** из коллекции **ошибок** .|  
+|[Clear](../../../ado/reference/ado-api/clear-method-ado.md)|Удаляет все объекты **Error** из коллекции **ошибок** .|  
 |[Клонировать](../../../ado/reference/ado-api/clone-method-ado.md)|Создает дубликат объекта **набора записей** из существующего объекта **набора записей** . При необходимости указывает, что клон доступен только для чтения.|  
 |[Закрыть](../../../ado/reference/ado-api/close-method-ado.md)|Закрывает открытый объект и все зависимые объекты.|  
 |[CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)|Сравнивает две закладки и возвращает значение, указывающее на их относительные значения.|  

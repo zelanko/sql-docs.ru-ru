@@ -1,4 +1,5 @@
 ---
+description: Использование закладок
 title: Использование закладок | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ebf38cb9afaabef6d1af4e941cf02df1947c7b73
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 98c8f08d6d60a47da2cdf4de6459e90cee4d716e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763055"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452596"
 ---
 # <a name="using-bookmarks"></a>Использование закладок
 Часто бывает полезно возвращаться к определенной записи после перемещения по **набору записей** без необходимости прокручивать каждую запись и сравнивать значения. Например, при попытке поиска записи с помощью метода **Find** , но при поиске не возвращаются записи, вы автоматически Помещаетесь в любой конец **набора записей**. Если поставщик поддерживает их, можно использовать закладки, чтобы отметить место до использования метода **Find** , чтобы вы могли вернуться к Вашему расположению. Закладка — это значение типа **Variant** , однозначно идентифицирующее запись в объекте **набора записей** .  

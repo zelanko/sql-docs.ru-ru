@@ -1,4 +1,5 @@
 ---
+description: Сопоставление типов данных в мастере импорта и экспорта SQL Server
 title: Сопоставление типов данных в мастере импорта и экспорта SQL Server | Документы Майкрософт
 ms.custom: ''
 ms.date: 01/11/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 73c837f4bbdd8cb7c7a6060beaea6bc97eba0a02
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 946bb57a3d821186ebcca132539713cf515ab20f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922392"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484097"
 ---
 # <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>Сопоставление типов данных в мастере импорта и экспорта SQL Server
 
@@ -31,7 +32,7 @@ ms.locfileid: "86922392"
  Если существующий файл сопоставления был изменен или в папку был добавлен новый файл сопоставления, необходимо закрыть и заново открыть мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или среду [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , чтобы загрузить новые или измененные файлы.  
  
 ## <a name="you-can-change-an-existing-mapping-file"></a>Можно изменить существующий файл сопоставления
-Если требуются различные сопоставления между типами данных, можно обновить файлы сопоставлений, чтобы изменить сопоставления, используемые мастером. Например, если при передаче данных из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в DB2 необходимо сопоставить тип данных **nchar** **с типом данных**GRAPHIC**DB2, а не с типом данных**VARGRAPHIC[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DB2, то в файле сопоставления **SqlClientToIBMDB2.xml** необходимо изменить сопоставление **nchar** для использования типа **GRAPHIC** вместо **VARGRAPHIC**.  
+Если требуются различные сопоставления между типами данных, можно обновить файлы сопоставлений, чтобы изменить сопоставления, используемые мастером. Например, если при передаче данных из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в DB2 необходимо сопоставить тип данных  **nchar** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с типом данных **GRAPHIC** DB2, а не с типом данных **VARGRAPHIC** DB2, то в файле сопоставления **SqlClientToIBMDB2.xml** необходимо изменить сопоставление **nchar** для использования типа **GRAPHIC** вместо **VARGRAPHIC**.  
   
 ## <a name="you-can-add-a-new-mapping-file"></a>Можно добавить новый файл сопоставления
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] устанавливает сопоставления между многими часто используемыми комбинациями источника и назначения. Можно также добавить новые файлы сопоставления в каталог **MappingFiles** для поддержки дополнительных источников и назначений. Новые файлы сопоставления должны быть согласованы с опубликованной XSD-схемой и выполнять сопоставления между уникальными сочетаниями, источниками и назначениями. Схема для файлов сопоставления ( **DataTypeMapping.xsd**) опубликована [здесь](https://schemas.microsoft.com/sqlserver/2008/07/IntegrationServices/DataTypeMapping/DataTypeMapping.xsd).

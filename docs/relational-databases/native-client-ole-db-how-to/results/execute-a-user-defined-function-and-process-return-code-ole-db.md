@@ -1,4 +1,5 @@
 ---
+description: Выполнение SQL Server Native Client определяемой пользователем функции и кода возврата процесса (OLE DB)
 title: Определяемая пользователем функция, код возврата (OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: d96c33fd-ed17-4713-8921-bf2dc3347f78
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bda8487956d8b4017a23dc23315f6d4aa4826ab4
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: e50cdc551c609f5a30e7b70aa844cb4e46739070
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243980"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475739"
 ---
 # <a name="execute-a-sql-server-native-client-user-defined-function-and-process-return-code-ole-db"></a>Выполнение SQL Server Native Client определяемой пользователем функции и кода возврата процесса (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -366,7 +367,7 @@ drop function fn_RectangleArea
 go  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Инструкции по обработке результатов &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   
