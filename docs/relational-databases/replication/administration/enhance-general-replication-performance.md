@@ -1,4 +1,5 @@
 ---
+description: Повышение общей производительности репликации
 title: Повышение общей производительности репликации | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 47ce98ee7bb1e4cacc82b2125c0da08f5487c444
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 307d27f85d5643b837298418279e22dc9225ac67
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86902294"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423588"
 ---
 # <a name="enhance-general-replication-performance"></a>Повышение общей производительности репликации
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -82,7 +83,7 @@ ms.locfileid: "86902294"
   
 -   Ограничьте использование типов данных больших объектов.  
   
-     По сравнению с другими типами данных столбцов для хранения и обработки типа данных больших объектов требуется больше места и времени. Эти столбцы следует включать в статьи только в том случае, если они необходимы для работы приложения. Не рекомендуется использовать типы данных **text**, **ntext**и **image** . При включении больших объектов (LOB) рекомендуется использовать типы данных **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , соответственно.  
+     По сравнению с другими типами данных столбцов для хранения и обработки типа данных больших объектов требуется больше места и времени. Эти столбцы следует включать в статьи только в том случае, если они необходимы для работы приложения. Не рекомендуется использовать типы данных **text**, **ntext**и **image** . При включении больших объектов (LOB) рекомендуется использовать типы данных **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, соответственно.  
   
      Для репликации транзакций рассмотрите возможность использования профиля агента распространителя, именуемого **Профиль распространения для потока OLEDB**. Дополнительные сведения см. в статье [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   

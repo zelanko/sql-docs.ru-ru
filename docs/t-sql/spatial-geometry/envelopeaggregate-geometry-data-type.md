@@ -1,4 +1,5 @@
 ---
+description: EnvelopeAggregate (тип данных geometry)
 title: EnvelopeAggregate (тип данных geometry) | Документы Майкрософт
 ms.custom: ''
 ms.date: 08/03/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c4c15abe-0fe9-441d-9d42-6572e264869c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 3aee28aab0c847f86a247531c1529068412aa0bc
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 240df782e2175d22d9f00e38427c39a2b7115213
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552470"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459058"
 ---
 # <a name="envelopeaggregate-geometry-data-type"></a>EnvelopeAggregate (тип данных geometry)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ EnvelopeAggregate ( geometry_operand )
 ## <a name="exceptions"></a>Исключения  
  Вызывает исключение `FormatException` при наличии недопустимых входных значений. См. раздел [STIsValid (тип данных geometry)](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Метод возвращает значение **NULL**, если входные данные пусты или содержат различные идентификаторы пространственных ссылок. См. раздел [Идентификаторы пространственных ссылок (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
  Метод не обрабатывает входные значения **NULL**.  
@@ -70,7 +71,7 @@ SELECT geometry::EnvelopeAggregate(shape).ToString()
 FROM @Geom;
  ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширенные статические геометрические методы](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   

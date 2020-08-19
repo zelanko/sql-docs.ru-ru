@@ -1,4 +1,5 @@
 ---
+description: InstanceOf (тип данных geography)
 title: InstanceOf (тип данных geography) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1eaed0e4-1c72-45a9-9926-5b513335cf33
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 09d468b4f39ba50a0c195287961f3c3dc76e0ccd
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 384539d8978dd8ae169ae5cfb2b7b5abcf394686
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552929"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422388"
 ---
 # <a name="instanceof-geography-data-type"></a>InstanceOf (тип данных geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,14 +41,14 @@ ms.locfileid: "86552929"
 
 ## <a name="arguments"></a>Аргументы
 *geography_type*  
-Строка типа **nvarchar(4000)** , задающая один из 16 типов, доступных в иерархии типов **geography**.  
+Строка типа **nvarchar(4000)**, задающая один из 16 типов, доступных в иерархии типов **geography**.  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
 Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
-Тип возвращаемого значения CLR: **SqlBoolean**  
+Тип возвращаемых данных CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
 Возвращает значение 1, если тип экземпляра **geography** совпадает с указанным типом или указанный тип является предком типа экземпляра. В противном случае возвращает значение 0.  
   
 Этот метод типа данных **geography** поддерживает экземпляры **FullGlobe** или пространственные экземпляры, размер которых больше полушария.  

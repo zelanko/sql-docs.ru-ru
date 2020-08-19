@@ -1,4 +1,5 @@
 ---
+description: Свойство ActiveConnection (ADO)
 title: Свойство ActiveConnection (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 375f0a0b81f71294b67200f8137ee381a638b8ac
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 058f1e16c6bdd84978c1131c436764f584fd80c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242914"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451676"
 ---
 # <a name="activeconnection-property-ado"></a>Свойство ActiveConnection (ADO)
 Указывает, к какому объекту [соединения](../../../ado/reference/ado-api/connection-object-ado.md) в данный момент принадлежит указанная [команда](../../../ado/reference/ado-api/command-object-ado.md), [набор записей](../../../ado/reference/ado-api/recordset-object-ado.md)или объект [записи](../../../ado/reference/ado-api/record-object-ado.md) .  
@@ -30,7 +31,7 @@ ms.locfileid: "87242914"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает **строковое** значение, содержащее определение соединения, если соединение закрыто, или **вариант** , содержащий текущий объект **соединения** , если соединение открыто. По умолчанию используется пустая ссылка на объект. См. свойство [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Используйте свойство **ActiveConnection** , чтобы определить объект **соединения** , для которого будет выполняться указанный объект **команды** , или будет открыт указанный **набор записей** .  
   
 ## <a name="command"></a>Get-Help  
@@ -59,7 +60,7 @@ ms.locfileid: "87242914"
 > [!NOTE]
 >  **Использование удаленной службы данных** При использовании объекта **набора записей** на стороне клиента это свойство может быть установлено только в строку подключения или (в Microsoft Visual Basic или Visual Basic, Scripting Edition) в значение *Nothing*.  
   
-## <a name="record"></a>Запись  
+## <a name="record"></a>Записей  
  Это свойство доступно для чтения и записи при закрытии объекта **Record** и может содержать строку соединения или ссылку на открытый объект **соединения** . Это свойство доступно только для чтения, если объект **Record** открыт, и содержит ссылку на открытый объект **соединения** .  
   
  Объект **соединения** создается неявно при открытии объекта **Record** из URL-адреса. Откройте **запись** с существующим открытым объектом **соединения** , назначив этому свойству объект **соединения** или используя объект **соединения** в качестве параметра в вызове метода [Open](../../../ado/reference/ado-api/open-method-ado-record.md) . Если **запись** была открыта из существующей **записи** или [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md), то она автоматически связывается с объектом **соединения** **записи** или объекта **набора записей** .  
@@ -81,7 +82,7 @@ ms.locfileid: "87242914"
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пример свойств ActiveConnection, CommandText, CommandTimeout, CommandType, Size и Direction (Visual Basic)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
  [Пример свойств ActiveConnection, CommandText, CommandTimeout, CommandType, Size и Direction (Visual c++)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
  [Пример свойств ActiveConnection, CommandText, CommandTimeout, CommandType, Size и Direction (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   

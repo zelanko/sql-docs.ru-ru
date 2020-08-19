@@ -1,4 +1,5 @@
 ---
+description: Примеры кода ADO в Visual C++
 title: Примеры кода ADO в Visual C++ | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: af30b764-398f-4918-aaa7-3952226cf544
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ac6e639001c84142604ca54664784922da05d682
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 94821a930458d9b3a9c9deed6e9dd076243bae1d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760570"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451496"
 ---
 # <a name="ado-code-examples-in-visual-c"></a>Примеры кода ADO в Visual C++
 Используйте приведенные ниже примеры кода, чтобы научиться использовать методы, свойства и события ADO при записи в Microsoft Visual C++.  
@@ -141,7 +142,7 @@ ms.locfileid: "82760570"
   
 -   [Пример свойства Version](../../../ado/reference/ado-api/version-property-example-vc.md)  
   
-## <a name="other"></a>Другие  
+## <a name="other"></a>Другое  
   
 -   [Пример модели событий ADO](../../../ado/reference/ado-api/ado-events-model-example-vc.md)  
   

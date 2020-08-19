@@ -1,4 +1,5 @@
 ---
+description: catalog.get_parameter_values (база данных SSISDB)
 title: catalog.get_parameter_values (база данных SSISDB) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 5b1aeaf7-c938-4aef-bafc-e4d7a82eb578
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 947b8607c54e3cb2022b32be0f68bab0dc53ffee
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 349a68fa94cfb479c6c3823b2b295a3a65498692
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913020"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495435"
 ---
 # <a name="catalogget_parameter_values-ssisdb-database"></a>catalog.get_parameter_values (база данных SSISDB)
 
@@ -44,7 +45,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
  Имя проекта, где находятся параметры. Параметр *project_name* имеет тип **nvarchar(128)** .  
   
  [ @package_name = ] *package_name*  
- Имя пакета. Укажите имя пакета для извлечения всех параметров проекта и параметры из конкретного пакета. Параметр *package_name* имеет тип **nvarchar(260)** .  
+ Имя пакета. Укажите имя пакета для извлечения всех параметров проекта и параметры из конкретного пакета. Параметр *package_name* имеет тип **nvarchar(260)**.  
   
  [ @reference_id = ] *reference_id*  
  Уникальный идентификатор ссылки на среду. Это необязательный параметр. Параметр *reference_id* имеет тип **bigint**.  
@@ -55,7 +56,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
 ## <a name="result-sets"></a>Результирующие наборы  
  Возвращает таблицу следующего формата:  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |object_type|**smallint**|Тип параметра. Это значение равно `20` для параметра проекта и равно `30` для параметра пакета.|  
 |parameter_data_type|**nvarchar(128)**|Тип данных параметра.|  

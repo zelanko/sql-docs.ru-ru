@@ -1,4 +1,5 @@
 ---
+description: Свойства ADO
 title: Свойства ADO | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ef825848ee0e2c43a1a70441009a590c41ce5526
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 72a14ac3114a3b27a7570bc5961b9bd6ffff51cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242844"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451366"
 ---
 # <a name="ado-properties"></a>Свойства ADO
 
-|Свойство|Описание|  
+|Свойство.|Описание|  
 |-|-|  
 |[Примеры absolutepage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|Указывает, на какой странице находится текущая запись.|  
 |[Примеры AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|Указывает порядковый номер текущей записи объекта **набора записей** .|  
@@ -63,7 +64,7 @@ ms.locfileid: "87242844"
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|Указывает, какие записи должны быть упакованы обратно на сервер.|  
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|Указывает максимальное число записей, возвращаемых в **набор записей** из запроса.|  
 |[Режим](../../../ado/reference/ado-api/mode-property-ado.md)|Указывает доступные разрешения для изменения данных в **соединении**, **записи**или объекте **потока** .|  
-|[Имя](../../../ado/reference/ado-api/name-property-ado.md)|Указывает имя объекта.|  
+|[имя](../../../ado/reference/ado-api/name-property-ado.md);|Указывает имя объекта.|  
 |[NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md)|Указывает код ошибки конкретного поставщика для конкретного объекта **ошибки** .|  
 |[Число](../../../ado/reference/ado-api/number-property-ado.md)|Указывает число, которое однозначно определяет объект **ошибки** .|  
 |[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)|Указывает масштаб числовых значений в объекте **параметра** или **поля** .|  
@@ -90,13 +91,13 @@ ms.locfileid: "87242844"
 |[Состояние (набор записей ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Указывает состояние текущей записи, относящейся к пакетным обновлениям или другим массовым операциям.|  
 |[StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)|Указывает, изменяется ли ссылка на базовые дочерние записи (то есть *глава*) в иерархическом объекте **Recordset** при изменении позиционирования родительской строки.|  
 |[Свойство Stream](../../../ado/reference/ado-api/stream-property.md)|Возвращает или задает OLE DB объект **потока** из или в объекте **адостреамконструктион** .|  
-|[Type](../../../ado/reference/ado-api/type-property-ado.md)|Указывает операционный тип или тип данных для **параметра**, **поля**или объекта **Свойства** .|  
+|[Тип](../../../ado/reference/ado-api/type-property-ado.md)|Указывает операционный тип или тип данных для **параметра**, **поля**или объекта **Свойства** .|  
 |[Type (поток ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)|Указывает тип данных, содержащихся в **потоке** (двоичный или текстовый).|  
 |[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)|Указывает текущее значение в базе данных для объекта **поля** .|  
-|[Value](../../../ado/reference/ado-api/value-property-ado.md)|Указывает значение, присваиваемое **полю**, **параметру**или объекту **Свойства** .|  
+|[Значение](../../../ado/reference/ado-api/value-property-ado.md)|Указывает значение, присваиваемое **полю**, **параметру**или объекту **Свойства** .|  
 |[Version](../../../ado/reference/ado-api/version-property-ado.md)|Указывает номер версии ADO.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
  [Коллекции ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Динамические свойства ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

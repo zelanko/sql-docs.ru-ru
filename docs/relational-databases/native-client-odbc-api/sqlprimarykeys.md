@@ -1,4 +1,5 @@
 ---
+description: SQLPrimaryKeys
 title: SQLPrimaryKeys | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,11 +15,12 @@ ms.assetid: bc61cd5b-d2f4-4f87-abc7-743cf9ea772d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c40f10e993e5cbabbc78bce57abf2a59e06be9e5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 574532e7eee885ef7453d7bf3afa4f74883ece49
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010712"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423996"
 ---
 # <a name="sqlprimarykeys"></a>SQLPrimaryKeys
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +38,7 @@ ms.locfileid: "86010712"
   
  Дополнительные сведения о возвращающих табличное значение параметрах см. в разделе [возвращающие табличное значение параметры &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функция SQLPrimaryKeys](https://go.microsoft.com/fwlink/?LinkId=59361)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

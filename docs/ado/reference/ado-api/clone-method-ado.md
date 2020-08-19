@@ -1,4 +1,5 @@
 ---
+description: Метод Clone (ADO)
 title: Метод Clone (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c936eb8016be0851fa6d3ecff1f624eab6c895f3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 449d453ba8e1d27489fecaa8da56e76e1c85f313
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748679"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450986"
 ---
 # <a name="clone-method-ado"></a>Метод Clone (ADO)
 Создает дубликат объекта [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) из существующего объекта **набора записей** . При необходимости указывает, что клон доступен только для чтения.  
@@ -44,9 +45,9 @@ Set rstDuplicate = rstOriginal.Clone (LockType)
  Объектная переменная, определяющая объект **набора записей** для дублирования.  
   
  *LockType*  
- Необязательный элемент. Значение [локктипинум](../../../ado/reference/ado-api/locktypeenum.md) , указывающее либо тип блокировки исходного **набора записей**, либо **набор записей**только для чтения. Допустимые значения: **адлоккунспеЦифиед** или **адлоккреадонли**.  
+ Необязательный параметр. Значение [локктипинум](../../../ado/reference/ado-api/locktypeenum.md) , указывающее либо тип блокировки исходного **набора записей**, либо **набор записей**только для чтения. Допустимые значения: **адлоккунспеЦифиед** или **адлоккреадонли**.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Используйте метод **clone** для создания нескольких повторяющихся объектов **набора записей** , особенно если требуется поддерживать более одной текущей записи в заданном наборе записей. Использование метода **clone** является более эффективным, чем создание и открытие нового объекта **набора записей** , который использует то же определение, что и исходный.  
   
  Свойство [Filter](../../../ado/reference/ado-api/filter-property.md) исходного **набора записей**, если таковое имеется, не будет применено к клону. Задайте свойство **Filter** для нового **набора записей** , чтобы отфильтровать результаты. Самый простой способ скопировать любое существующее значение **фильтра** — это назначить его напрямую, как показано ниже.  
@@ -81,7 +82,7 @@ rsNew.Filter = rsOriginal.Filter
 |[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|Нет|  
 |[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|Нет|  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>См. также  

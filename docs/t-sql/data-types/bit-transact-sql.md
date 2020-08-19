@@ -1,4 +1,5 @@
 ---
+description: bit (Transact-SQL)
 title: bit (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/23/2017
@@ -18,19 +19,19 @@ ms.assetid: 40adfd08-a31c-49cb-a172-386bcaa6edee
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 167f17d793bcc8d65c1104b70a6188782543c544
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4fdedaaf6645980793bb5baf6ebe02344c3d2b7b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002531"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422968"
 ---
 # <a name="bit-transact-sql"></a>bit (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Целочисленный тип данных, который может принимать значения 1, 0 или NULL.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
 Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] оптимизирует хранение столбцов типа **bit**. Если в таблице имеется 8 или менее столбцов типа **bit**, они хранятся как 1 байт. Если имеется от 9 до 16 столбцов типа **bit**, они хранятся как 2 байта и т. д.
   
 Строковые значения TRUE и FALSE можно преобразовать в значения типа **bit**: значение TRUE преобразуется в 1, а значение FALSE преобразуется в 0.

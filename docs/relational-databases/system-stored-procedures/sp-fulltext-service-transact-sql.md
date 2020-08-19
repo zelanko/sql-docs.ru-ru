@@ -1,4 +1,5 @@
 ---
+description: sp_fulltext_service (Transact-SQL)
 title: sp_fulltext_service (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 17a91433-f9b6-4a40-88c4-8c704ec2de9f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 435d2e2a5b290e8307b322831a96a1e55847339b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 33610db3883facdc6dfb198cfe8947ef965baa82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881687"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486053"
 ---
 # <a name="sp_fulltext_service-transact-sql"></a>sp_fulltext_service (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ sp_fulltext_service [ [@action=] 'action'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @action = ] 'action'`Свойство, которое необходимо изменить или сбросить. *Action* имеет тип **nvarchar (100) и** не имеет значения по умолчанию. Список свойств в*c*, их описания и значения, которые могут быть заданы, см. в таблице под аргументом *value* . Данный аргумент возвращает следующие свойства: тип данных, текущее значение выполнения, минимальное или максимальное значение, а также состояние устаревания, если оно применимо.  
+`[ @action = ] 'action'` Свойство, которое необходимо изменить или сбросить. *Action* имеет тип **nvarchar (100) и** не имеет значения по умолчанию. Список свойств в*c*, их описания и значения, которые могут быть заданы, см. в таблице под аргументом *value* . Данный аргумент возвращает следующие свойства: тип данных, текущее значение выполнения, минимальное или максимальное значение, а также состояние устаревания, если оно применимо.  
   
-`[ @value = ] value`Значение указанного свойства. *значение* **sql_variant**и значение по умолчанию NULL. Если @value параметр имеет значение null, **sp_fulltext_service** возвращает текущее значение. В этой таблице перечислены свойства действий, их описания, а также возможные значения.  
+`[ @value = ] value` Значение указанного свойства. *значение* **sql_variant**и значение по умолчанию NULL. Если @value параметр имеет значение null, **sp_fulltext_service** возвращает текущее значение. В этой таблице перечислены свойства действий, их описания, а также возможные значения.  
   
 > [!NOTE]  
 >  Следующие действия будут удалены в следующем выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **clean_up**, **connect_timeout**, **data_timeout**и **resource_usage**. Следует избегать использования этих действий в новой разработке и запланировать изменение приложений, использующих их в настоящий момент.  
@@ -89,7 +90,7 @@ EXEC sp_fulltext_service @action='upgrade_option', @value=1;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Компонент Full-text Search](../../relational-databases/search/full-text-search.md)   
  [FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

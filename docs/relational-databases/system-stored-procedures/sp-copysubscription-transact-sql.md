@@ -1,4 +1,5 @@
 ---
+description: sp_copysubscription (Transact-SQL)
 title: sp_copysubscription (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 80927c19376e97b25c21af1f93faedd5637eb8bb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d157cd75c3443c9a74a3bab6affe8fca75fb4db8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771211"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486202"
 ---
 # <a name="sp_copysubscription-transact-sql"></a>sp_copysubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,16 +44,16 @@ sp_copysubscription [ @filename = ] 'file_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @filename = ] 'file_name'`Строка, указывающая полный путь, включая имя файла, в который сохраняется копия файла данных (MDF). *имя файла* имеет тип **nvarchar (260)** и не имеет значения по умолчанию.  
+`[ @filename = ] 'file_name'` Строка, указывающая полный путь, включая имя файла, в который сохраняется копия файла данных (MDF). *имя файла* имеет тип **nvarchar (260)** и не имеет значения по умолчанию.  
   
-`[ @temp_dir = ] 'temp_dir'`Имя каталога, содержащего временные файлы. *temp_dir* имеет тип **nvarchar (260)** и значение по умолчанию NULL. Если значение равно NULL, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет использоваться каталог данных по умолчанию. Каталог должен включать достаточно свободного места для хранения файла с размером, равным суммарному размеру всех файлов баз данных подписчика.  
+`[ @temp_dir = ] 'temp_dir'` Имя каталога, содержащего временные файлы. *temp_dir* имеет тип **nvarchar (260)** и значение по умолчанию NULL. Если значение равно NULL, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет использоваться каталог данных по умолчанию. Каталог должен включать достаточно свободного места для хранения файла с размером, равным суммарному размеру всех файлов баз данных подписчика.  
   
 `[ @overwrite_existing_file = ] 'overwrite_existing_file'`Необязательный логический флаг, указывающий, следует ли перезаписывать существующий файл с тем же именем, указанным в поле ** \@ filename**. *overwrite_existing_file*имеет **бит**и значение по умолчанию **0**. Если значение равно **1**, то файл, указанный параметром ** \@ filename**, перезаписывается, если он существует. Если значение **равно 0**, хранимая процедура завершается ошибкой, если файл существует, а файл не перезаписывается.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_copysubscription** используется во всех типах репликации для копирования базы данных подписки в файл в качестве альтернативы применению моментального снимка на подписчике. База данных должна быть настроена так, чтобы она поддерживала только подписки по запросу. Пользователи, имеющие необходимые разрешения, могут создать копии базы данных подписки, после чего отправить файл подписки (MSF-файл) по электронной почте, скопировать его или доставить другому подписчику, где этот файл можно будет подключить как подписку.  
   
  Размер копируемой базы данных подписки должен быть меньше 2 ГБ.  

@@ -1,4 +1,5 @@
 ---
+description: Перечисляемые константы ADO
 title: Перечислимые константы ADO | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c97ed131-1a93-463c-9e61-22f029b0c474
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 74d3cc347d14a1d02ae5953b7762513b252493e6
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 7d126d0783e448dab786a228b4e10a8ec7c0f840
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242884"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451446"
 ---
 # <a name="ado-enumerated-constants"></a>Перечисляемые константы ADO
 Для облегчения отладки в перечислениях ADO перечисляются значения для каждой константы. Однако это значение является исключительно рекомендацией и может изменяться от одного выпуска ADO к другому. Код должен зависеть только от имени, а не от фактического значения каждой перечислимой константы.  
@@ -77,7 +78,7 @@ ms.locfileid: "87242884"
 |[StringFormatEnum](../../../ado/reference/ado-api/stringformatenum.md)|Задает формат при извлечении **набора записей** в виде строки. Задает атрибуты транзакции для объекта **соединения** .|  
 |[XactAttributeEnum](../../../ado/reference/ado-api/xactattributeenum.md)|Задает атрибуты транзакции для объекта **соединения** .|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
  [Коллекции ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Динамические свойства ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

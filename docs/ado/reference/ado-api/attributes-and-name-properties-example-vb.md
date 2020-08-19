@@ -1,4 +1,5 @@
 ---
+description: Примеры свойств Attributes и Name (Visual Basic)
 title: Пример атрибутов и свойств имени (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 258bdce3-1819-44a2-9217-105879c789ef
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d6993ea70496673d3aae23e4a4b6c5982637a5f8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ed744b6cb39b37958de8dcd6cb4dd6dde8b2a9a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762932"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451226"
 ---
 # <a name="attributes-and-name-properties-example-vb"></a>Примеры свойств Attributes и Name (Visual Basic)
 В этом примере отображается значение свойства [Attributes](../../../ado/reference/ado-api/attributes-property-ado.md) для объектов [соединения](../../../ado/reference/ado-api/connection-object-ado.md), [поля](../../../ado/reference/ado-api/field-object.md)и [Свойства](../../../ado/reference/ado-api/property-object-ado.md) . В нем используется свойство [Name](../../../ado/reference/ado-api/name-property-ado.md) для вывода имени каждого **поля** и объекта **Свойства** .  
@@ -126,7 +127,7 @@ End Sub
 ' EndAttributesVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство Attributes (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)   
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Объект Field](../../../ado/reference/ado-api/field-object.md)   

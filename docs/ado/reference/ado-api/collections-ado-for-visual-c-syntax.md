@@ -1,4 +1,5 @@
 ---
+description: Collections (синтаксис ADO для Visual C++)
 title: Коллекции (синтаксис ADO для Visual C++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6a0109a0-f2d9-4f7c-8e1e-42763f9acaea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dc708e467c226440b861057b0498ed3bd80135d1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b3740b6ff922204d7f68f507c75011819de8ccfc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748881"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450936"
 ---
 # <a name="collections-ado-for-visual-c-syntax"></a>Collections (синтаксис ADO для Visual C++)
 ## <a name="parameters"></a>Параметры  
@@ -87,7 +88,7 @@ get_Item(VARIANT Index, ADOField **ppvObject);
   
 -   [Свойство Item (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
   
-## <a name="errors"></a>Ошибки  
+## <a name="errors"></a>ошибки  
   
 ### <a name="methods"></a>Методы  
   
@@ -140,7 +141,7 @@ get_Item(VARIANT Index, ADOProperty **ppvObject);
   
 -   [Свойство Item (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Коллекция Errors (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [Коллекция Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Коллекция Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   

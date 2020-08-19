@@ -1,4 +1,5 @@
 ---
+description: SET @local_variable (Transact-SQL)
 title: SET @local_variable (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
@@ -18,12 +19,12 @@ ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2393d6e51eb7c5b0df6ff1d710829a772b58dfd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f60866f303302b45092592124fb5cb6ff9bdb118
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918834"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459321"
 ---
 # <a name="set-local_variable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -81,7 +82,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
 Имя определяемого пользователем типа среды CLR.  
   
 `{ . | :: }`  
-Указывает метод пользовательского типа среды CLR. Для метода экземпляра (не статического) используйте точку ( **.** ). Для статического метода используйте два двоеточия ( **::** ). Для обращения к методу, свойству или полю определяемого пользователем типа среды CLR необходимо разрешение EXECUTE для этого типа.  
+Указывает метод пользовательского типа среды CLR. Для метода экземпляра (не статического) используйте точку (**.**). Для статического метода используйте два двоеточия (**::**). Для обращения к методу, свойству или полю определяемого пользователем типа среды CLR необходимо разрешение EXECUTE для этого типа.  
   
 _method_name_ **(** _argument_ [ **,** ... *n* ] **)**  
 Метод определяемого пользователем типа, который принимает один или несколько аргументов для изменения состояния экземпляра типа. Статические методы должны быть общими.  
@@ -168,9 +169,9 @@ READ ONLY
 Предотвращает внесение изменений через этот курсор. В предложении WHERE CURRENT OF нельзя помещать ссылку на курсор в инструкцию UPDATE или DELETE. Этот параметр имеет преимущество над установленной по умолчанию возможностью обновления курсора. Это ключевое слово отличается от READ_ONLY тем, что между READ и ONLY вместо подчеркивания употребляется пробел.  
   
 `UPDATE [OF column_name[ ,... n ] ]`  
-Определяет обновляемые столбцы в курсоре. Если OF *column_name* [ **,** ...*n*] определено, только перечисленные столбцы позволяют вносить изменения. Если список не предоставлен, можно обновить все столбцы, если только курсор не был определен как READ_ONLY.  
+Определяет обновляемые столбцы в курсоре. Если OF *column_name* [**,**...*n*] определено, только перечисленные столбцы позволяют вносить изменения. Если список не предоставлен, можно обновить все столбцы, если только курсор не был определен как READ_ONLY.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
 После объявления переменной она получает значение NULL. Используйте инструкцию SET, чтобы установить значение, отличное от NULL, для объявленной переменной. Инструкция SET, которая назначает значение переменной, возвращает одно значение. Если инициализируется несколько переменных, следует использовать отдельные инструкции SET для каждой локальной переменной.  
   
 Вы можете использовать переменные только в выражениях, но не вместо имен объектов или ключевых слов. Для создания динамических инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] используйте инструкцию EXECUTE.  
@@ -360,7 +361,7 @@ SET @rows = (SELECT COUNT(*) FROM dbo.DimCustomer);
 SELECT TOP 1 @rows FROM sys.tables;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Составные операторы (Transact-SQL)](../../t-sql/language-elements/compound-operators-transact-sql.md)   
 [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
 [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)   

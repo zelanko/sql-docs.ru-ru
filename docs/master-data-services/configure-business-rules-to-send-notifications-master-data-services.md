@@ -1,4 +1,5 @@
 ---
+description: Настройка в бизнес-правилах отправки уведомлений (службы Master Data Services)
 title: Настройка в бизнес-правилах отправки уведомлений
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a6c70b57cb50ae8134fa04f2bab4073dced40091
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: a387822ac4619fbb00963da245f574b6cad50708
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812029"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430026"
 ---
 # <a name="configure-business-rules-to-send-notifications-master-data-services"></a>Настройка в бизнес-правилах отправки уведомлений (службы Master Data Services)
 
@@ -74,7 +75,7 @@ ms.locfileid: "85812029"
   
     -   [Настройка уведомления электронной почты (службы Master Data Services)](../master-data-services/configure-email-notifications-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Master Data Services &#40;уведомлений&#41;](../master-data-services/notifications-master-data-services.md)   
  [Настройка уведомления электронной почты (службы Master Data Services)](../master-data-services/configure-email-notifications-master-data-services.md)  
   

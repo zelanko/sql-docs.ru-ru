@@ -1,4 +1,5 @@
 ---
+description: sp_help_log_shipping_secondary_database (Transact-SQL)
 title: sp_help_log_shipping_secondary_database (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/02/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 215ad3a4a38abd962f43756ecb4c724c625f251d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ac291d5c829c1ddc4022a7d0d59f65348daa859a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893630"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486003"
 ---
 # <a name="sp_help_log_shipping_secondary_database-transact-sql"></a>sp_help_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +44,9 @@ sp_help_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @secondary_database = ] 'secondary_database'`Имя базы данных-получателя. Аргумент *secondary_database* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @secondary_database = ] 'secondary_database'` Имя базы данных-получателя. Аргумент *secondary_database* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @secondary_id = ] 'secondary_id'`Идентификатор сервера-получателя в конфигурации доставки журналов. *secondary_id* имеет тип **uniqueidentifier** и не может иметь значение null.  
+`[ @secondary_id = ] 'secondary_id'` Идентификатор сервера-получателя в конфигурации доставки журналов. *secondary_id* имеет тип **uniqueidentifier** и не может иметь значение null.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

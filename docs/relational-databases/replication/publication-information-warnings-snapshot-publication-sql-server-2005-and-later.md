@@ -1,4 +1,5 @@
 ---
+description: Сведения о публикации, предупреждения (публикация моментального снимка, SQL Server 2005 и более поздние версии)
 title: Предупреждения (моментальные снимки — монитор репликации)
 decription: Describes the 'Warnings' tab for a Snapshot Publication in the Replication Monitor found in SQL Server Management Studio (SSMS).
 ms.custom: seo-lt-2019
@@ -14,16 +15,16 @@ ms.assetid: 7aa2eb52-b6b7-4dd3-8483-8ef00d9f0435
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e23c798722928a8374dae43002ba44ca0347c76a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a7930a4badc30f1e41f0dd5b9eb577ab19f0da95
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720929"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423448"
 ---
 # <a name="publication-information-warnings-snapshot-publication-sql-server-2005-and-later"></a>Сведения о публикации, предупреждения (публикация моментального снимка, SQL Server 2005 и более поздние версии)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  Вкладка **Предупреждения** доступна для распространителей, работающих с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздними версиями. Вкладка **Предупреждения** позволяет выполнять следующие задачи для выбранных публикаций:  
+   Вкладка **Предупреждения** доступна для распространителей, работающих с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздними версиями. Вкладка **Предупреждения** позволяет выполнять следующие задачи для выбранных публикаций:  
   
 -   включить предупреждения;  
   
@@ -58,7 +59,7 @@ ms.locfileid: "85720929"
  **Сохранить изменения**  
  Нажмите эту кнопку для сохранения всех произведенных изменений предупреждений и пороговых значений.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запуск монитора репликации](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Просмотр сведений и выполнение задач с помощью монитора репликации](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Наблюдение за репликацией](../../relational-databases/replication/monitor/monitoring-replication.md)  

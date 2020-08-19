@@ -1,4 +1,5 @@
 ---
+description: Окончание срока действия и отключение подписки
 title: Окончание срока действия и отключение подписки | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
@@ -21,12 +22,12 @@ ms.assetid: 4d03f5ab-e721-4f56-aebc-60f6a56c1e07
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 507c80dc80ca144028ad7ef928173a826b5d042a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 64fb9d21457558d2d0f3373b926f426808b9105d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729371"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423408"
 ---
 # <a name="subscription-expiration-and-deactivation"></a>Окончание срока действия и отключение подписки
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85729371"
  Чтобы задать сроки хранения, выполните действия из статей [Установка срока действия подписок](../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md), [Настройка срока хранения распространения для публикаций транзакций (SQL Server Management Studio)](../../relational-databases/replication/set-distribution-retention-period-for-transactional-publications.md) и [Настройки публикации и распространения](../../relational-databases/replication/configure-publishing-and-distribution.md).  
   
 ## <a name="transactional-replication"></a>репликация транзакций  
- Репликация транзакций использует значения максимального срока хранения для распространения (параметр `@max_distretention` процедуры [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)) и срока хранения для публикации (параметр `@retention` процедуры [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)):  
+ Репликация транзакций использует значения максимального срока хранения распространения (параметр `@max_distretention` процедуры [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)) и срока хранения публикаций (параметр `@retention` процедуры [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)):  
   
 -   Если подписка не синхронизирована в пределах максимального срока хранения распространения (по умолчанию 72 часа) и в базе данных распространителя есть изменения, которые не были доставлены подписчику, то подписка будет помечена как деактивированная заданием **Очистка распространения** , выполняемым на распространителе. Эта подписка должна быть инициализирована повторно.  
   
@@ -44,7 +45,7 @@ ms.locfileid: "85729371"
      Если истекает срок действия принудительной подписки, она полностью удаляется, а подписки по запросу не удаляются. Подписки по запросу должны удаляться на подписчике. Дополнительные сведения см. в статье [Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md).  
   
 ## <a name="merge-replication"></a>Репликация слиянием  
- Репликация слиянием использует срок хранения для публикации (параметры `@retention` и `@retention_period_unit` процедуры [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)). Когда срок действия подписки истекает, ее необходимо повторно инициализировать, потому что метаданные для этой подписки удаляются. Не инициализированные повторно подписки удаляются заданием **Очистка истекшей подписки** , выполняемым на издателе. По умолчанию это задание запускается ежедневно; оно удаляет все принудительные подписки, которые не синхронизированы для удвоения срока хранения публикации. Пример:  
+ Репликация слиянием использует срок хранения публикации (параметры `@retention` и `@retention_period_unit` процедуры [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)). Когда срок действия подписки истекает, ее необходимо повторно инициализировать, потому что метаданные для этой подписки удаляются. Не инициализированные повторно подписки удаляются заданием **Очистка истекшей подписки** , выполняемым на издателе. По умолчанию это задание запускается ежедневно; оно удаляет все принудительные подписки, которые не синхронизированы для удвоения срока хранения публикации. Пример:  
   
 -   Допустим, срок хранения публикации равен 14 дням, тогда действие подписки может истечь, если она не будет синхронизирована в течение 14 дней.  
   

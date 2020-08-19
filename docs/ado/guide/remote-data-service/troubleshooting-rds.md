@@ -1,4 +1,5 @@
 ---
+description: Устранение неполадок с RDS
 title: Устранение неполадок RDS | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 92905044-579f-4c38-bca6-f8bd5b239c20
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 446dfc15159cad3d418b00afe36e9ae6563ee084
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5674fc090a9803f6ce5249c48c65615edb2581bc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764625"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451886"
 ---
 # <a name="troubleshooting-rds"></a>Устранение неполадок с RDS
 > [!IMPORTANT]
@@ -37,7 +38,7 @@ ms.locfileid: "82764625"
   
 -   [Минимизация использования места в файле журнала](../../../ado/guide/remote-data-service/minimizing-log-file-space-usage.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основные принципы RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

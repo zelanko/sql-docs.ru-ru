@@ -1,4 +1,5 @@
 ---
+description: sp_help_targetserver (Transact-SQL)
 title: sp_help_targetserver (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a8b29b5d7698fdaceced322e30048c6c789f076e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b997402b52469342ebd8a034f6fb306dc389cee0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891673"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485978"
 ---
 # <a name="sp_help_targetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ sp_help_targetserver
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @server_name = ] 'server_name'`Имя сервера, для которого возвращаются сведения. *server_name* имеет тип **nvarchar (30)** и значение по умолчанию NULL.  
+`[ @server_name = ] 'server_name'` Имя сервера, для которого возвращаются сведения. *server_name* имеет тип **nvarchar (30)** и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  

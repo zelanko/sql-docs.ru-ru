@@ -1,4 +1,5 @@
 ---
+description: Учебник по T-SQL. Создание объектов базы данных и запросов к ним
 title: Учебник T-SQL. Создание объектов базы данных и отправка запросов к ним | Документация Майкрософт
 ms.custom: ''
 ms.date: 07/30/2018
@@ -10,12 +11,12 @@ ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5a8691ed6a84fce3eb12c8e13b2235356486c42f
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 3a489da04d7a65bf854cebf06e8103e22c1abc12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248708"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459180"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>Урок 1. Создание объектов базы данных и отправка запросов к ним
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "87248708"
   
 Чтобы выполнить инструкцию языка [!INCLUDE[tsql](../includes/tsql-md.md)] в среде [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], откройте среду [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] и соединитесь с экземпляром компонента [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].  
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 Для работы с этим руководством необходима среда SQL Server Management Studio и доступ к экземпляру SQL Server. 
 
 - Установите [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
@@ -99,9 +100,9 @@ ms.locfileid: "87248708"
  ```  
 
 ## <a name="insert-and-update-data-in-a-table"></a>Вставка данных в таблицу и их обновление
-После создания таблицы **Products** можно вставлять данные в таблицу с помощью инструкции INSERT. После вставки данных содержимое строки изменяется с помощью инструкции UPDATE. Предложение WHERE предназначено для ограничения числа строк, изменяемых в процессе выполнения инструкции UPDATE до одной строки. Чтобы ввести следующие данные, потребуется четыре инструкции.  
+ После создания таблицы **Products** в нее можно вставлять данные с помощью инструкции INSERT. После вставки данных содержимое строки изменяется с помощью инструкции UPDATE. Предложение WHERE предназначено для ограничения числа строк, изменяемых в процессе выполнения инструкции UPDATE до одной строки. Чтобы ввести следующие данные, потребуется четыре инструкции.  
   
-|ProductID|ProductName|Price|ProductDescription|  
+|ProductID|ProductName|Цена|ProductDescription|  
 |-------------|---------------|---------|----------------------|  
 |1|Clamp|12,48|Workbench clamp|  
 |50|Screwdriver|3,17|Flat head|  
@@ -240,7 +241,7 @@ ms.locfileid: "87248708"
         [Математические функции (Transact-SQL)](../t-sql/functions/mathematical-functions-transact-sql.md)
     :::column-end:::
     :::column:::
-        [Функции для работы с типами данных text и image (Transact-SQL)](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)
+        [Функции для работы с изображениями и текстом (Transact-SQL)](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)
     :::column-end:::
 :::row-end:::
 
@@ -302,7 +303,7 @@ ms.locfileid: "87248708"
 
 Дополнительные сведения см. в следующей статье:
 > [!div class="nextstepaction"]
-> [Дальнейшие действия](../t-sql/lesson-2-configuring-permissions-on-database-objects.md)
+> [Следующие шаги](../t-sql/lesson-2-configuring-permissions-on-database-objects.md)
   
   
   

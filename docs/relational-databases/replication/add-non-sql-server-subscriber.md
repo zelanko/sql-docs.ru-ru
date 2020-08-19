@@ -1,4 +1,5 @@
 ---
+description: Добавить подписчик, отличный от подписчика SQL Server
 title: Добавление подписчика, отличного от подписчика SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 21beeaa0-4b9e-48da-be63-1b9ff14e03d2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9503a9de44f26a4f005669b2bf6d27e761dab25a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b2bb31950f257054279fc9d9ad354f48b50b9ca4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726122"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423658"
 ---
 # <a name="add-non-sql-server-subscriber"></a>Добавить подписчик, отличный от подписчика SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85726122"
 > [!NOTE]
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не проверяет имя источника данных и строку подключения, пока агент распространителя не попытается инициализировать подписку.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание подписки для подписчика, отличного от подписчика SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)   
  [Подписка на публикации](../../relational-databases/replication/subscribe-to-publications.md)  

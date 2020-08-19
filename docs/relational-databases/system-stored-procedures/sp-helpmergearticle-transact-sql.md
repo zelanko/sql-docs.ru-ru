@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergearticle (Transact-SQL)
 title: sp_helpmergearticle (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 814ed354c296d1f9860b3abf92a7208cdecdacf7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ec07e77bcc2dbf3c0503e348b509848880705424
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899800"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485967"
 ---
 # <a name="sp_helpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,9 +39,9 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'`Имя публикации, сведения о которой необходимо получить. Аргумент *publication*имеет тип **sysname**и значение по умолчанию **%** , которое возвращает сведения обо всех статьях публикации слиянием, содержащихся во всех публикациях в текущей базе данных.  
+`[ @publication = ] 'publication'` Имя публикации, сведения о которой необходимо получить. Аргумент *publication*имеет тип **sysname**и значение по умолчанию **%** , которое возвращает сведения обо всех статьях публикации слиянием, содержащихся во всех публикациях в текущей базе данных.  
   
-`[ @article = ] 'article'`Имя статьи, для которой возвращаются сведения. Аргумент *article*имеет тип **sysname**и значение по умолчанию **%** , возвращающее сведения обо всех статьях публикации слиянием в заданную публикацию.  
+`[ @article = ] 'article'` Имя статьи, для которой возвращаются сведения. Аргумент *article*имеет тип **sysname**и значение по умолчанию **%** , возвращающее сведения обо всех статьях публикации слиянием в заданную публикацию.  
   
 ## <a name="result-set"></a>Результирующий набор  
   
@@ -52,7 +53,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**source_object**|**sysname**|Имя исходного объекта, из которого будет добавляться статья.|  
 |**sync_object_owner**|**sysname**|Имя владельца представления, определяющего опубликованную статью.|  
 |**sync_object**|**sysname**|Имя пользовательского объекта, который устанавливает исходные данные секции.|  
-|**nописание**|**nvarchar(255)**|Описание статьи.|  
+|**description**|**nvarchar(255)**|Описание статьи.|  
 |**status**|**tinyint**|Состояние статьи может быть одним из следующих:<br /><br /> **1** = неактивен<br /><br /> **2** = активно<br /><br /> **5** = ожидание операции языка описания данных DDL<br /><br /> **6** = операция DDL с созданным моментальным снимком<br /><br /> Примечание. при повторной инициализации статьи значения **5** и **6** изменяются на **2**.|  
 |**creation_script**|**nvarchar(255)**|Путь и имя необязательного скрипта схем статей, используемого для создания статьи в базе данных подписки.|  
 |**conflict_table**|**nvarchar (270)**|Имя таблицы, хранящей конфликты при операциях вставки или обновления.|  

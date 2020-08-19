@@ -1,4 +1,5 @@
 ---
+description: Общие сведения о файле настроек
 title: Общие сведения о файле настройки | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2edcfaaae08da97eccfe7b9a570716a2dfedfc2c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 59c0f32f7e5ba467fd1b90a348a78432a16621ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764615"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451876"
 ---
 # <a name="understanding-the-customization-file"></a>Общие сведения о файле настроек
 Каждый заголовок раздела в файле настройки состоит из квадратных скобок (**[]**), содержащих тип и параметр. Четыре типа разделов обозначаются строковыми литералами **Connect**, **SQL**, **USERLIST**или **logs**. Параметр является строкой литерала, значением по умолчанию, идентификатором, заданным пользователем, или Nothing.  

@@ -1,4 +1,5 @@
 ---
+description: catalog.environment_variables (база данных SSISDB)
 title: catalog.environment_variables (база данных SSISDB) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 45f5aacd-505a-443b-8fc2-c7929e78cff8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: de22e52f25658f467ed21952b1eb32356e4ff5af
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b76045d5f901fa1444fd016d1c7673f46170332d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912683"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495341"
 ---
 # <a name="catalogenvironment_variables-ssisdb-database"></a>catalog.environment_variables (база данных SSISDB)
 
@@ -26,7 +27,7 @@ ms.locfileid: "86912683"
 
   Отображает подробные сведения о переменных среды для всех сред в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |variable_id|**bigint**|Уникальный идентификатор переменной среды.|  
 |environment_id|**bigint**|Уникальный идентификатор среды, с которой связана переменная.|  
@@ -36,7 +37,7 @@ ms.locfileid: "86912683"
 |sensitive|**bit**|Если значение равно `1`, переменная является конфиденциальной и шифруется при сохранении. Если значение равно `0`, переменная не является конфиденциальной и ее значение сохраняется в формате открытого текста.|  
 |value|**sql_variant**|Значение переменной среды. Если значение sensitive равно `0`, отображается значение в виде открытого текста. Если значение sensitive равно `1`, отображается значение **NULL**.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  В этом представлении отображается по одной строке для каждой из переменных среды в каталоге.  
   
 ## <a name="permissions"></a>Разрешения  

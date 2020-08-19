@@ -1,4 +1,5 @@
 ---
+description: Событие EndOfRecordset (ADO)
 title: Событие Ендофрекордсет (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 475de5e2-f634-4954-9edf-0027a6ba38d6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fd7710ebc7a5af323c247860baedd4b30d91fe21
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d96d11333c47aeb190cd2842a5a65a832642eb8b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765555"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444036"
 ---
 # <a name="endofrecordset-event-ado"></a>Событие EndOfRecordset (ADO)
 Событие **ендофрекордсет** вызывается при попытке переместиться в строку после конца [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -47,11 +48,11 @@ EndOfRecordset fMoreData, adStatus, pRecordset
  *предшнур*  
  Объект **Recordset** . **Набор записей** , для которого произошло это событие.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  При сбое операции [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) может возникнуть событие **ендофрекордсет** .  
   
  Этот обработчик событий вызывается при попытке переместиться за пределы объекта **набора записей** , возможно, в результате вызова **MoveNext**. Однако в этом событии можно получить дополнительные записи из базы данных и добавить их в конец **набора записей**. В этом случае задайте для *фморедата* значение VARIANT_TRUE и вернитесь из **ендофрекордсет**. Затем снова вызовите **MoveNext** для доступа к вновь полученным записям.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример модели событий ADO (Visual c++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [Общие сведения об обработчике событий ADO](../../../ado/guide/data/ado-event-handler-summary.md)

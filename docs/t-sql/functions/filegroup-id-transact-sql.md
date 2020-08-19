@@ -1,4 +1,5 @@
 ---
+description: FILEGROUP_ID (Transact-SQL)
 title: FILEGROUP_ID (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 852a76d8-9e61-4a31-84ee-c7edb84a061c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1cd6899dfdb19dad3b1f1c95ec12ffe67ab8e9da
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 9ce3c3947ec276935d601905dc1ea7b4d0188a3e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112440"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422748"
 ---
 # <a name="filegroup_id-transact-sql"></a>FILEGROUP_ID (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -70,7 +71,7 @@ Filegroup ID
 (1 row(s) affected)
  ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [FILEGROUP_NAME (Transact-SQL)](../../t-sql/functions/filegroup-name-transact-sql.md)   
  [Функции метаданных (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sys.filegroups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)  

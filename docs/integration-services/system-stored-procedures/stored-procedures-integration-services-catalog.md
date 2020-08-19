@@ -1,4 +1,5 @@
 ---
+description: Хранимые процедуры (каталог служб Integration Services)
 title: Хранимые процедуры (каталог служб Integration Services) | Документы Майкрософт
 ms.custom: ''
 ms.date: 12/16/2016
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a6ccd884-108f-4fb6-95ad-00b9cb65d5d6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9b9169d79a724d5d4a9d79f32d611e5b6faa4f0a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c5b0f5c9dad9633950d0c0fd8698d3f658d9d390
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912720"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495349"
 ---
 # <a name="stored-procedures-integration-services-catalog"></a>Хранимые процедуры (каталог служб Integration Services)
 
@@ -146,7 +147,7 @@ ms.locfileid: "86912720"
  [catalog.set_object_parameter_value (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md)  
  Задает значение параметра в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Связывает значение с переменной среды или назначает литеральное значение, которое будет использоваться по умолчанию, если не будет назначено других значений.  
   
- [catalog.start_execution (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)  
+ [catalog.start_execution (база данных)](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)  
  Запускает экземпляр выполнения в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  [catalog.startup](../../integration-services/system-stored-procedures/catalog-startup.md)  
@@ -162,12 +163,12 @@ ms.locfileid: "86912720"
  Асинхронно проверяет проект в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 [catalog.add_execution_worker (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-add-execution-worker-ssisdb-database.md)   
-Добавляет рабочую роль [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] горизонтального увеличения масштаба в экземпляр выполнения в развертывании с горизонтальным увеличением масштаба.
+Добавляет рабочую роль [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out в экземпляр выполнения в Scale Out.
 
 [catalog.enable_worker_agent (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-enable-worker-agent-ssisdb-database.md)   
-Включает рабочую роль горизонтального увеличения масштаба для мастера горизонтального увеличения масштаба, работающего с этим каталогом [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].
+Включает рабочую роль Scale Out для мастера Scale Out, работающего с этим каталогом [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].
 
 [catalog.disable_worker_agent (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-disable-worker-agent-ssisdb-database.md)   
-Отключает рабочую роль горизонтального увеличения масштаба для мастера горизонтального увеличения масштаба, работающего с этим каталогом [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].
+Отключает рабочую роль Scale Out для мастера Scale Out, работающего с этим каталогом [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].
 
 

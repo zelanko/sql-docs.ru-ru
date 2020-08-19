@@ -1,4 +1,5 @@
 ---
+description: catalog.delete_project (база данных SSISDB)
 title: catalog.delete_project (база данных SSISDB) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: f3431445-8dd2-443b-813e-b99db893977e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f23b9eb8b082b69486130e147d92bc16b63e13c2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 40e9a9a404c17b1a86b48fef45cdc32bf399ace3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913087"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495452"
 ---
 # <a name="catalogdelete_project-ssisdb-database"></a>catalog.delete_project (база данных SSISDB)
 
@@ -34,10 +35,10 @@ catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] proj
   
 ## <a name="arguments"></a>Аргументы  
  [ @folder_name = ] *folder_name*  
- Имя папки, которая содержит проект. Параметр *folder_name* имеет тип **nvarchar(128)** .  
+ Имя папки, которая содержит проект. Параметр *folder_name* имеет тип **nvarchar(128)**.  
   
  [ @project_name = ] *project_name*  
- Имя удаляемого проекта. Параметр *project_name* имеет тип **nvarchar(128)** .  
+ Имя удаляемого проекта. Параметр *project_name* имеет тип **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение)  
@@ -63,7 +64,7 @@ catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] proj
   
 -   Пользователь не имеет соответствующих разрешений  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Все объекты и ссылки на среду удаляются вместе с соответствующим проектом. Однако, версии проекта и значимые записи об операциях сохраняются до следующего запуска задания очистки операций.  
   
   

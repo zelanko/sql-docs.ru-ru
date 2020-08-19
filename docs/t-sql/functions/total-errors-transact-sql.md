@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;TOTAL_ERRORS (Transact-SQL)'
 title: '@@TOTAL_ERRORS (Transact-SQL) | Документы Майкрософт'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 09e62428-ee0e-4ef5-b969-da9d255f1199
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 9fd94216bcb95eaa4a21a3d96a949d3a6ea67318
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 946ae7898322ec80c237fdf52ac86489bad93eff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110726"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422578"
 ---
 # <a name="x40x40total_errors-transact-sql"></a>&#x40;&#x40;TOTAL_ERRORS (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "87110726"
 ## <a name="return-types"></a>Типы возвращаемых данных
  **integer**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Не все ошибки записи, обнаруженные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], учитываются данной функцией. Случайные устранимые ошибки записи исправляются самим сервером и не учитываются. Для отображения отчета, содержащего статистику по нескольким параметрам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], включая общее количество ошибок, выполните процедуру **sp_monitor**.  
   
 ## <a name="examples"></a>Примеры  
@@ -66,7 +67,7 @@ Errors      As of
 0           3/28/2003 12:32:11 PM   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_monitor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
  [Системные статистические функции (Transact-SQL)](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   

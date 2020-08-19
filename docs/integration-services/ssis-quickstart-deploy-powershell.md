@@ -1,4 +1,5 @@
 ---
+description: Развертывание проекта служб SSIS с помощью PowerShell
 title: Развертывание проекта служб SSIS с помощью PowerShell | Документы Майкрософт
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e2d9a8e6cc8d071ee6f4c4d7557a437d7806f3d1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fba08ada042e526f4f6321f328d67a55dd149b2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921952"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495497"
 ---
 # <a name="deploy-an-ssis-project-with-powershell"></a>Развертывание проекта служб SSIS с помощью PowerShell
 
@@ -22,7 +23,7 @@ ms.locfileid: "86921952"
 
 Это краткое руководство описывает применение скрипта PowerShell для подключения к серверу базы данных и развертывания проекта служб SSIS в каталоге SSIS.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Сервер Базы данных SQL Azure прослушивает порт 1433. Если вы пытаетесь подключиться к серверу базы данных SQL Azure изнутри корпоративного брандмауэра, для успешного подключения в этом брандмауэре должен быть открыт данный порт.
 
@@ -81,7 +82,7 @@ dir "$($catalog.PSPath)\Folders\$TargetFolderName\Projects\$ProjectName\Packages
 SELECT Name, DisplayName, PackageId
 ```
 
-## <a name="powershell-script"></a>Скрипт PowerShell
+## <a name="powershell-script"></a>Сценарий PowerShell
 Предоставьте соответствующие значения для переменных в начале следующего скрипта, а затем выполните скрипт, чтобы развернуть проект служб SSIS.
 
 > [!NOTE]

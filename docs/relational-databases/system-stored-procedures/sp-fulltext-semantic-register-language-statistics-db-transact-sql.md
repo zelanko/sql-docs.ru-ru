@@ -1,4 +1,5 @@
 ---
+description: sp_fulltext_semantic_register_language_statistics_db (Transact-SQL)
 title: sp_fulltext_semantic_register_language_statistics_db (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bef1b104-5a44-4327-9ae4-45eae3000f7e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0f95ba436a40bc6bf864c6be9a8f4b944e688b5b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7bca458ae688762c45d365a2d65b92106288952a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881704"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486058"
 ---
 # <a name="sp_fulltext_semantic_register_language_statistics_db-transact-sql"></a>sp_fulltext_semantic_register_language_statistics_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ EXEC sp_fulltext_semantic_register_language_statistics_db
 GO  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>Даваемых  
+##  <a name="arguments"></a><a name="Arguments"></a> Аргументы  
  [ @dbname =] "*database_name*"  
  Имя базы данных семантической статистики языка, регистрируемой в текущем экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. База данных должна быть уже присоединена. Аргумент *database_name* имеет тип **sysname**и не может иметь значение null.  
   
@@ -49,7 +50,7 @@ GO
  **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-set"></a>Результирующий набор  
- Нет.  
+ Отсутствует.  
   
 ## <a name="general-remarks"></a>Общие замечания  
  База данных семантической статистики языка содержит статистическую информацию, связанную с языком и необходимую для семантической обработки текстового содержимого.  

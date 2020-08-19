@@ -1,4 +1,5 @@
 ---
+description: Запуск тестовых случаев (SybaseToSQL)
 title: Выполнение тестовых случаев (SybaseToSQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d828142d83f21cf38663241d593fe197b9715592
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: ea2b250f59a29a16bc77ad23e28b0823461a8ace
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87930505"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468758"
 ---
 # <a name="running-test-cases-sybasetosql"></a>Запуск тестовых случаев (SybaseToSQL)
 Когда тест-инженер SSMA выполняет тестовый случай, он выполняет объекты, выбранные для тестирования, и создает отчет о результатах проверки. Если результаты идентичны на обеих платформах, проверка прошла успешно. Соответствие объектов между Sybase и определяется в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствии с параметрами сопоставления схемы для текущего проекта SSMA.  
@@ -69,7 +70,7 @@ ms.locfileid: "87930505"
 ## <a name="next-step"></a>Следующий шаг  
 [Просмотр отчетов о тестовых случаях &#40;SybaseToSQL&#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Выбор и настройка объектов для тестирования &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md)  
 [Выбор и настройка затронутых объектов &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
 [Тестирование перенесенных объектов базы данных &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  

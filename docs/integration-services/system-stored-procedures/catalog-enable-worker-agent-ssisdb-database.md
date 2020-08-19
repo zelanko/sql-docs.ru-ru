@@ -1,4 +1,5 @@
 ---
+description: catalog.enable_worker_agent (база данных SSISDB)
 title: catalog.enable_worker_agent (база данных SSISDB) | Документы Майкрософт
 ms.custom: ''
 ms.date: 12/16/2016
@@ -10,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: c6e5266b-c32d-49ff-aa69-f09664009fb4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 18ae5a5f9dd36f8ee39ae431bbb20c07dcb78a2d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ddacc7a5599344f330779fad11f647b8e153ccfb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913038"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430056"
 ---
 # <a name="catalogenable_worker_agent-ssisdb-database"></a>catalog.enable_worker_agent (база данных SSISDB)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
-Включает рабочую роль горизонтального увеличения масштаба для мастера горизонтального увеличения масштаба, работающего с этим каталогом [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].
+Включает рабочую роль Scale Out для мастера Scale Out, работающего с этим каталогом [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,10 +30,10 @@ ms.locfileid: "86913038"
 catalog.enable_worker_agent [ @WorkerAgentId = ] WorkerAgentId
 ```
 ## <a name="arguments"></a>Аргументы
-[@WorkerAgentId =] *WorkerAgentId* Идентификатор агента рабочей роли для рабочей роли горизонтального увеличения масштаба. Параметр *WorkerAgentId* имеет тип **uniqueidentifier**.
+[@WorkerAgentId =] *WorkerAgentId* Идентификатор агента рабочей роли для рабочей роли Scale Out. Параметр *WorkerAgentId* имеет тип **uniqueidentifier**.
 
 ## <a name="example"></a>Пример
-В этом примере рабочая роль горизонтального увеличения масштаба включается на компьютере MachineA.
+В этом примере рабочая роль масштабного развертывания включается на компьютере MachineA.
 
 ```sql
 SELECT WorkerAgentId, MachineName FROM [catalog].[worker_agents]

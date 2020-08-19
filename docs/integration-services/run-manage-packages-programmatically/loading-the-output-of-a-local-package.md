@@ -1,4 +1,5 @@
 ---
+description: Загрузка выхода локального пакета
 title: Загрузка выхода локального пакета | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 98699c4297907a5a05710af231d065f5a42fd94d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f53a5bc1707e8f806d766a611b7792ab056d6f54
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913350"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495570"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>Загрузка выхода локального пакета
 
@@ -43,7 +44,7 @@ ms.locfileid: "86913350"
   
 1.  В пакете настройте назначение DataReader для получения выхода, который необходимо считать в клиентском приложении. Дайте назначению DataReader описательное имя, поскольку оно понадобится в дальнейшем для использования в клиентском приложении. Запомните имя назначения DataReader.  
   
-2.  В проекте разработки установите ссылку на пространство имен **Microsoft.SqlServer.Dts.DtsClient**, найдя сборку **Microsoft.SqlServer.Dts.DtsClient.dll**. По умолчанию эта сборка устанавливается в **C:\Program Files\Microsoft SQL Server\100\DTS\Binn**. Импортируйте это пространство имен с помощью инструкции **Using** языка C# или инструкции **Imports** языка [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
+2.  В проекте разработки установите ссылку на пространство имен **Microsoft.SqlServer.Dts.DtsClient**, найдя сборку **Microsoft.SqlServer.Dts.DtsClient.dll**. По умолчанию эта сборка устанавливается в **C:\Program Files\Microsoft SQL Server\100\DTS\Binn**. Импортируйте это пространство имен с помощью инструкции **Using** языка C# или инструкции [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **Imports** языка .  
   
 3.  В коде создайте объект типа **DtsClient.DtsConnection** со строкой подключения, содержащей параметры командной строки, которые необходимы для **dtexec.exe**, чтобы выполнить пакет. Дополнительные сведения см. в статье [dtexec Utility](../../integration-services/packages/dtexec-utility.md). Затем откройте соединение с помощью этой строки подключения. Можно также использовать программу **dtexecui** для создания необходимой строки подключения в визуальном режиме.  
   
@@ -300,7 +301,7 @@ namespace DtsClientWParamCS
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основные сведения об отличиях между локальным и удаленным выполнением](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
  [Программная загрузка и запуск локального пакета](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
  [Программная загрузка и запуск удаленного пакета](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)  

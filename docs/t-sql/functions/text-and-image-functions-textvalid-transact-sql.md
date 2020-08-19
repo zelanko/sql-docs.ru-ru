@@ -1,4 +1,5 @@
 ---
+description: Функции для работы с изображениями и текстом — TEXTVALID (Transact-SQL)
 title: TEXTVALID (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 9411c349-b59b-4740-a270-92f91d81ad23
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 808e0c57888cfdb7daa64ca5ec70c9068e1d12c0
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: b82f9cd337a28801d7daf352e370652ce37cde1d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112623"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422558"
 ---
 # <a name="text-and-image-functions---textvalid-transact-sql"></a>Функции для работы с изображениями и текстом — TEXTVALID (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -66,7 +67,7 @@ TEXTVALID ( 'table.column' ,text_ ptr )
   
  Приведенные ниже функции и инструкции также будут полезны при работе с данными типов **text**, **ntext** и **image**.  
   
-|Функция или инструкция|Description|  
+|Функция или инструкция|Описание|  
 |---------------------------|-----------------|  
 |PATINDEX **(** ' _%pattern%_ ' **,** _expression_ **)**|Возвращает позицию символа указанной символьной строки в столбцах **text** и **ntext**.|  
 |DATALENGTH **(** _expression_ **)**|Возвращает длину данных в столбцах **text**, **ntext** и **image**.|  
@@ -105,7 +106,7 @@ pub_id Valid (if 1) Text data
 (8 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [DATALENGTH (Transact-SQL)](../../t-sql/functions/datalength-transact-sql.md)   
  [PATINDEX (Transact-SQL)](../../t-sql/functions/patindex-transact-sql.md)   
  [SET TEXTSIZE (Transact-SQL)](../../t-sql/statements/set-textsize-transact-sql.md)   

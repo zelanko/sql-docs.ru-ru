@@ -1,4 +1,5 @@
 ---
+description: Field (синтаксис ADO для Visual C++)
 title: Field (синтаксис ADO для Visual C++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04631b08-3937-440b-ac09-cd166f239908
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 732181ecdeb50d8201e1b6d07e3b1c6d8116408b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9d403adf47ea25f1248b22db03013d0c8b9eb1e2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757100"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443806"
 ---
 # <a name="field-ado-for-visual-c-syntax"></a>Field (синтаксис ADO для Visual C++)
 ## <a name="methods"></a>Методы  
@@ -53,5 +54,5 @@ get_Value(VARIANT *pvar)
 put_Value(VARIANT Val)  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Field](../../../ado/reference/ado-api/field-object.md)

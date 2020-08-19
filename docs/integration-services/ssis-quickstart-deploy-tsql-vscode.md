@@ -1,4 +1,5 @@
 ---
+description: Развертывание проекта служб SSIS из Visual Studio Code с помощью Transact-SQL
 title: Развертывание проекта служб SSIS с помощью Transact-SQL (Visual Studio Code) | Документы Майкрософт
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: af19358906b70cad15103913eebf45507f449410
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dec289a898c25900afb7f5dd30ec2aa2fe9e34f1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921883"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495429"
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>Развертывание проекта служб SSIS из Visual Studio Code с помощью Transact-SQL
 
@@ -24,7 +25,7 @@ ms.locfileid: "86921883"
 
 Visual Studio Code — это редактор кода для Windows, macOS и Linux, который поддерживает расширения, в том числе расширение `mssql` для подключения к Microsoft SQL Server, базе данных SQL Azure или хранилищу данных SQL Azure. Дополнительные сведения о Visual Studio Code см. на странице [Visual Studio Code](https://code.visualstudio.com/).
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Прежде чем приступить к работе, нужно установить последнюю версию Visual Studio Code и загрузить расширение `mssql`. Скачать эти средства можно на следующих страницах:
 -   [Скачать Visual Studio Code](https://code.visualstudio.com/Download)
@@ -70,7 +71,7 @@ Visual Studio Code — это редактор кода для Windows, macOS и
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Имя сервера** | Полное имя сервера |  |
    | **Имя базы данных** | **SSISDB** | Имя базы данных, с которой необходимо установить соединение. |
-   | **Аутентификация** | Имя входа SQL | |
+   | **Аутентификация** | Имя для входа SQL | |
    | **User name** | Учетная запись администратора сервера | Это учетная запись, которая была указана при создании сервера. |
    | **Пароль (имя входа SQL)** | Пароль для учетной записи администратора сервера | Это пароль, который был указан при создании сервера. |
    | **Сохранить пароль?** | "Да" или "Нет". | Чтобы каждый раз вводить пароль, выберите "Да". |

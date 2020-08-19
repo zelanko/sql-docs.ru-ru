@@ -1,4 +1,5 @@
 ---
+description: '| (Побитовое ИЛИ) (Transact-SQL)'
 title: '| (побитовое ИЛИ) (Transact-SQL) | Документы Майкрософт'
 ms.custom: ''
 ms.date: 01/10/2017
@@ -23,12 +24,12 @@ ms.assetid: 86a3b87f-9688-4eaf-a552-29f1b01d880a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 97bc42320852484c81959dc7530c53c79104cab3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5dce8843b20df446172db47a8d07fdb0ecf4b296
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923788"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459448"
 ---
 # <a name="-bitwise-or-transact-sql"></a>| (Побитовое ИЛИ) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +56,7 @@ expression | expression
 ## <a name="result-types"></a>Типы результата  
  Возвращает значение типа **int**, если входные значения имеют тип **int**, значение типа **smallint**, если входные значения имеют тип **smallint**, или значение типа **tinyint**, если входные значения имеют тип **tinyint**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Побитовый оператор «|» выполняет логическую операцию OR над двумя выражениями, получая из них результат поразрядно. Каждый бит результата устанавливаются в 1, если хотя бы один из исходных битов равен 1. Если оба исходных бита равны 0, бит результата будет равен нулю.  
   
  Если левое и правое выражения принадлежат к различным целочисленным типам данных (например, левое выражение *expression* — к типу **smallint**, а правое выражение *expression* — к типу **int**), аргумент более короткого типа данных преобразовывается в более длинный тип данных. В этом примере **smallint**_expression_ преобразовывается в тип **int**.  
@@ -99,7 +100,7 @@ GO
 0000 0000 1110 1011  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Операторы (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
  [Побитовые операторы (Transact-SQL)](../../t-sql/language-elements/bitwise-operators-transact-sql.md)   
  [&#124;= (присваивание побитового ИЛИ) (Transact-SQL)](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)   

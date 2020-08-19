@@ -1,4 +1,5 @@
 ---
+description: Пример свойства ActiveCommand (Visual C++)
 title: Пример свойства ActiveCommand (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8269ea29-912a-4d20-9360-f48b3746081f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f0f0b39b26fb349222a3ad04cd1414d9cf3ddafe
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c36744944fb88be4da22642246b54908809145cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760770"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451716"
 ---
 # <a name="activecommand-property-example-vc"></a>Пример свойства ActiveCommand (Visual C++)
 В этом примере демонстрируется свойство [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) .  
@@ -220,6 +221,6 @@ Parameter = 'Ringer'
 Name = 'Anne  Ringer'  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство ActiveCommand (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
