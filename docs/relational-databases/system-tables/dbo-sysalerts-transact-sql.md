@@ -1,4 +1,5 @@
 ---
+description: dbo.sysalerts (Transact-SQL)
 title: Оповещения dbo.sys(Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/24/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6113a7d05c7128df4b7691bd7f72d09ba8f0548b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 509e401f70aadc8f4dc2eb625fb5b9cf1dcda5d8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890531"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419248"
 ---
 # <a name="dbosysalerts-transact-sql"></a>dbo.sysalerts (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,8 +37,8 @@ ms.locfileid: "85890531"
 |**идентификатор**|**int**|Идентификатор предупреждения.|  
 |**name**|**sysname**|Имя предупреждения.|  
 |**event_source**|**nvarchar (100)**|Источник события: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**event_category_id**|**int**|Зарезервировано для последующего использования.|  
-|**event_id**|**int**|Зарезервировано для последующего использования.|  
+|**event_category_id**|**int**|Зарезервировано для будущего использования.|  
+|**event_id**|**int**|Зарезервировано для будущего использования.|  
 |**message_id**|**int**|Определяемый пользователем идентификатор сообщения или ссылка на сообщение **sysmessages** , которое запускает это оповещение.|  
 |**severity**|**int**|Серьезность события, вызвавшего это предупреждение.|  
 |**доступной**|**tinyint**|Состояние предупреждения:<br /><br /> **0** = отключено.<br /><br /> **1** = включено.|  
@@ -59,7 +60,7 @@ ms.locfileid: "85890531"
 |**performance_condition**|**nvarchar(512)**|Зарезервировано.|  
 |**category_id**|**int**|Зарезервировано.|  
   
- ## <a name="remarks"></a>Комментарии
+ ## <a name="remarks"></a>Remarks
 
 В следующей таблице показаны значения битовой маски include_event_description. Десятичное значение возвращается dbo.sysпредупреждениях. 
 

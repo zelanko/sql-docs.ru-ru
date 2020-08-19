@@ -1,4 +1,5 @@
 ---
+description: Подключение к SQL Server (Акцесстоскл)
 title: Подключение к SQL Server (Акцесстоскл) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ceb77a97-d6d5-4a92-90a6-342e97d12b54
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e35c73855e88c05a5c98743371ba5de88a1f86ee
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 06a305d705e404a2045525e584faddf6b9530cb3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87939155"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418600"
 ---
 # <a name="connect-to-sql-server-accesstosql"></a>Подключение к SQL Server (Акцесстоскл)
 Используйте диалоговое окно **Подключение к SQL Server** , чтобы подключиться к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на который требуется выполнить миграцию. Чтобы открыть диалоговое окно **Подключение к SQL Server** , в меню **файл** выберите пункт **подключиться к SQL Server**.  

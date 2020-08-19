@@ -1,4 +1,5 @@
 ---
+description: sys.dm_database_copies (база данных SQL Azure)
 title: sys. dm_database_copies (база данных SQL Azure) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ ms.assetid: d03d4657-86d1-4496-97e6-cc3bc292e0b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d4371de1240e64aa5465f6f2d58f5e2eef029acf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e4dd3890969a1820bd38712d9533c68f6fd9d0d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754268"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419778"
 ---
 # <a name="sysdm_database_copies-azure-sql-database"></a>sys.dm_database_copies (база данных SQL Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "85754268"
 |**start_date**|**datetimeoffset**|Время начала копирования базы данных в формате UTC в региональном центре обработки данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
 |**modify_date**|**datetimeoffset**|Время завершения копирования базы данных в формате UTC в региональном центре обработки данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. После копирования новая база данных транзакционно согласована с базой данных-источником. Сведения о завершении обновляются каждые 1 минуту.<br /><br />Время в формате UTC, отражающее Последнее обновление поля percent_complete.|  
 |**percent_complete**|**real**|Процентное соотношение скопированных данных в байтах. Допустимы значения от 0 до 100. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] может автоматически восстановиться после некоторых ошибок, например отработки отказа, и перезапустить копирование базы данных. В этом случае percent_complete перезапустится при значении 0.|  
-|**error_code**|**int**|Если значение больше 0, это код ошибки, возникшей при копировании. Значение равно 0, если ошибки не возникли.|  
+|**Error_Code**|**int**|Если значение больше 0, это код ошибки, возникшей при копировании. Значение равно 0, если ошибки не возникли.|  
 |**error_desc**|**nvarchar (4096)**|Описание ошибки, возникшей при копировании.|  
 |**error_severity**|**int**|Возвращает 16, если во время копирования базы данных произошла ошибка.|  
 |**error_state**|**int**|Возвращает значение 1, если при копировании возникла ошибка.|  
@@ -58,7 +59,7 @@ ms.locfileid: "85754268"
 ## <a name="permissions"></a>Разрешения  
  Это представление доступно в базе данных **master** только для входа субъекта уровня сервера.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Представление **sys. dm_database_copies** можно использовать в базе данных **master** исходного или целевого [!INCLUDE[ssSDS](../../includes/sssds-md.md)] сервера. Когда копирование базы данных завершается успешно и новая база данных переходит в режим «в сети», строка в представлении **sys. dm_database_copies** удаляется автоматически.  
   
   

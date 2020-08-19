@@ -1,4 +1,5 @@
 ---
+description: sysmail_allitems (Transact-SQL)
 title: sysmail_allitems (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 21fb8432-7677-4435-902f-64a58bba4cbb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4ba169522f0deac50dd840a5eeceff63c9eb178e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0c5a41e6f0c150638eeed8e1c7cdd4fbb3c6bf2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891959"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419918"
 ---
 # <a name="sysmail_allitems-transact-sql"></a>sysmail_allitems (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "85891959"
 |**пользу**|**varchar(max)**|Электронные адреса получателей сообщения.|  
 |**copy_recipients**|**varchar(max)**|Электронные адреса получателей копий сообщения.|  
 |**blind_copy_recipients**|**varchar(max)**|Электронные адреса получателей копий сообщения, чьи имена не будут отображаться в заголовке сообщения.|  
-|**Тема**|**nvarchar (510)**|Строка темы сообщения.|  
+|**subject**|**nvarchar (510)**|Строка темы сообщения.|  
 |**body**|**varchar(max)**|Тело сообщения.|  
 |**body_format**|**varchar (20)**|Формат тела сообщения. Допустимые значения — TEXT и HTML.|  
 |**importance**|**varchar (6)**|Параметр **важности** сообщения.|  
@@ -61,7 +62,7 @@ ms.locfileid: "85891959"
 |**last_mod_date**|**datetime**|Дата и время последнего изменения строки.|  
 |**last_mod_user**|**sysname**|Пользователь, внесший последнее изменение в строку.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Используйте представление **sysmail_allitems** , чтобы просмотреть состояние всех сообщений, обрабатываемых Database Mail. Это представление может быть полезным при выявлении неполадок в работе компонента Database Mail. Оно помогает выявлять сущность проблемы, отображая атрибуты отправленных сообщений в сравнении с атрибутами неотправленных сообщений.  
   
  Системные таблицы, представленные в этом представлении, содержат все сообщения и могут привести к увеличению размера базы данных **msdb** . Чтобы уменьшить размеры таблиц, регулярно удаляйте из этого представления старые сообщения. Дополнительные сведения см. в разделе [создание агент SQL Server задания для архивации Database Mail сообщений и журналов событий](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md).  

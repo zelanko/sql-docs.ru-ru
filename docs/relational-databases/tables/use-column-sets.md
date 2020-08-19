@@ -1,4 +1,5 @@
 ---
+description: Использование наборов столбцов
 title: Использование наборов столбцов | Документация Майкрософт
 ms.custom: ''
 ms.date: 07/30/2015
@@ -14,12 +15,12 @@ ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a45bfb98fa5b8d5a9ce5c640d07c3c13ab7d5284
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 6082c8ffbdf2a2eaba1d24f64a85cfcbed393984
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396180"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418978"
 ---
 # <a name="use-column-sets"></a>Использование наборов столбцов
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -128,7 +129,7 @@ GO
   
  ** Неприменимо — во время операции выбора из набора столбцов нет никаких выходных значений для этих атрибутов. Формируется ошибка, если в XML-представлении, предоставленном для набора столбцов в операции вставки или обновления, вызывающий указал значение для этого атрибута.  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
  Модель безопасности набора столбцов работает схожим образом с моделью безопасности между таблицами и столбцами. Наборы столбцов могут быть визуализированы как минитаблица; операции выбора для данной минитаблицы имеют вид SELECT *. Однако связь между набором столбцов и разреженными столбцами — это связь группирования, а не просто контейнер. Модель безопасности проверяет безопасность столбцов в наборе столбцов и выполняет операции DENY над базовыми разреженными столбцами. Далее приводятся дополнительные характеристики модели безопасности.  
   
 -   Права доступа могут быть предоставлены и отменены на столбец в наборе столбцов так же, как и на любой другой столбец в таблице.  
@@ -257,7 +258,7 @@ WHERE DocID = 3 ;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Использование разреженных столбцов](../../relational-databases/tables/use-sparse-columns.md)  
   
   

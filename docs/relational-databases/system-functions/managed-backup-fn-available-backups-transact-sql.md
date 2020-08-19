@@ -1,4 +1,5 @@
 ---
+description: managed_backup. fn_available_backups (Transact-SQL)
 title: managed_backup. fn_available_backups (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,11 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7aa84474-16e5-49bd-a703-c8d1408ef107
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8c9cbad2124420f62f50c8497fcc5baa21720634
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 23c7f7cb176bf91494b41cf8b81435b287d261fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052892"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419538"
 ---
 # <a name="managed_backupfn_available_backups-transact-sql"></a>managed_backup. fn_available_backups (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -39,7 +41,7 @@ ms.locfileid: "86052892"
 managed_backup.fn_available_backups ([@database_name = ] 'database name')  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>Даваемых  
+##  <a name="arguments"></a><a name="Arguments"></a> Аргументы  
  @database_name  
  Имя базы данных. Значение типа @database_name — nvarchar (512).  
   
@@ -81,7 +83,7 @@ FROM msdb.managed_backup.fn_available_backups ('MyDB')
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQL Server управляемого резервного копирования Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)   
  [Восстановление из резервных копий в Microsoft Azure](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  
   

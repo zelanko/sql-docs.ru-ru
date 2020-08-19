@@ -1,4 +1,5 @@
 ---
+description: managed_backup. fn_get_health_status (Transact-SQL)
 title: managed_backup. fn_get_health_status (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,11 +21,12 @@ helpviewer_keywords:
 ms.assetid: b376711d-444a-4b5e-b483-8df323b4e31f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f5f155837f1e5dd9057c376152ceae56bce33d74
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 4aa10efc95af42c7793fb37b49a72061353b0ee0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053440"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419558"
 ---
 # <a name="managed_backupfn_get_health_status-transact-sql"></a>managed_backup. fn_get_health_status (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -42,7 +44,7 @@ ms.locfileid: "86053440"
 managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 'time_2')  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>Даваемых  
+##  <a name="arguments"></a><a name="Arguments"></a> Аргументы  
  [@begin_time]  
  Начало периода времени, для которого вычисляется общее количество ошибок.  @begin_timeПараметр имеет тип DateTime. Значение по умолчанию — NULL. Если значение равно NULL, функция будет обрабатывать все события, возникшие за 30 минут до текущего времени.  
   
@@ -61,7 +63,7 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
 |number_of_backup_loops|INT|Число сканирований агентом резервного копирования всех баз данных, настроенных с помощью [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |number_of_retention_loops|INT|Количество сканирований баз данных, выполняемых для оценки заданного срока хранения.|  
   
-## <a name="best-practices"></a>Рекомендации  
+## <a name="best-practices"></a>Советы и рекомендации  
  Эти суммарные значения можно использовать для контроля состояния работоспособности системы. Например, если столбец number_of_retention_loops получает значение 0 за 30 минут, то, возможно, управление хранением работает слишком долго или неправильно. Ненулевые столбцы ошибок могут означать неполадки, и для обнаружения проблемы следует ознакомиться с журналами расширенных событий. Кроме того, можно использовать хранимую процедуру **managed_backup. sp_get_backup_diagnostics** , чтобы получить список расширенных событий, чтобы найти подробные сведения об ошибке.  
   
 ## <a name="security"></a>Безопасность  

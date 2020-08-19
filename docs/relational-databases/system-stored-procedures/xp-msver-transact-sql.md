@@ -1,4 +1,5 @@
 ---
+description: xp_msver (Transact-SQL)
 title: xp_msver (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9264cf8c-92ba-45ad-b2d6-15d26d805a16
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 995668cb4b36e7086c2777d9cb7cd663e7d33ef4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 93223f6d7c63402161e48b0359bf735b14593c9d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890755"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419228"
 ---
 # <a name="xp_msver-transact-sql"></a>xp_msver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,10 +50,10 @@ xp_msver [ optname ]
 |**Язык**|Языковая версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Платформа**|Имя операционной системы, имя производителя и имя семейства чипов для компьютера, на котором работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Комментарии**|Различные сведения об [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**Название**|Имя компании, производящей [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; например [!INCLUDE[msCoName](../../includes/msconame-md.md)] Corporation.|  
+|**CompanyName**|Имя компании, производящей [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; например [!INCLUDE[msCoName](../../includes/msconame-md.md)] Corporation.|  
 |**FileDescription**|Операционная система.|  
 |**FileVersion**|Версия исполняемого файла [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**InternalName**|[!INCLUDE[msCoName](../../includes/msconame-md.md)]внутреннее имя для, например [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLSERVR.|  
+|**InternalName**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] внутреннее имя для, например [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLSERVR.|  
 |**LegalCopyright**|Сведения о законных авторских правах, требуемые для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; например Copyright© [!INCLUDE[msCoName](../../includes/msconame-md.md)] Corp. 1988-2005.|  
 |**LegalTrademarks**|Сведения о зарегистрированном товарном знаке, требуемые для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Например, [!INCLUDE[msCoName](../../includes/msconame-md.md)] является охраняемым товарным знаком [!INCLUDE[msCoName](../../includes/msconame-md.md)] корпорации Майкрософт.|  
 |**OriginalFilename**|Имя файла, выполняемого при запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; например Sqlservr.exe.|  
@@ -74,9 +75,9 @@ xp_msver [ optname ]
 ## <a name="permissions"></a>Разрешения  
  Необходимо быть членом роли **public**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Общие расширенные хранимые процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [@@VERSION &#40;Transact-SQL&#41;](../../t-sql/functions/version-transact-sql-configuration-functions.md)  
   

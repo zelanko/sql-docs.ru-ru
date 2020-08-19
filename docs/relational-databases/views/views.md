@@ -1,4 +1,5 @@
 ---
+description: Представления
 title: Представления | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: ada83c28-e8b7-45d9-b53c-b3d67c8820c8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ef24d6eeb1739d40fb88eccd2fb18220ef6fea9
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: dda5e49aa6f51382beb390ae48a544565e2703d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395713"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418928"
 ---
 # <a name="views"></a>Представления
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +54,7 @@ ms.locfileid: "87395713"
 |Описывает, как получить сведения о представлении, например его определение.|[Получение сведений о представлении](../../relational-databases/views/get-information-about-a-view.md)|  
 |Описывает, как переименовать представление.|[Переименование представлений](../../relational-databases/views/rename-views.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание представлений для столбцов XML](../../relational-databases/xml/create-views-over-xml-columns.md)   
  [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md)  
   

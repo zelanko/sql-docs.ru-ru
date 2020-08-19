@@ -1,4 +1,5 @@
 ---
+description: sys.dm_io_cluster_valid_path_names (Transact-SQL)
 title: sys. dm_io_cluster_valid_path_names (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 5bc8a0e5-6c72-425b-8c58-f276eb9add2c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a47313e1fb9a97207f02abcc89bdb66bb791f9ea
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 0f81bd26a6ec2a43e9f063466bfa77c793ac4d8b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442543"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419658"
 ---
 # <a name="sysdm_io_cluster_valid_path_names-transact-sql"></a>sys.dm_io_cluster_valid_path_names (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -40,11 +41,11 @@ ms.locfileid: "87442543"
 |**cluster_owner_node**|**Nvarchar (64)**|Текущий владелец диска. Для кластеризованных общих томов (CSV) ― это владелец узла, на котором размещен сервер метаданных. Не допускает значение NULL.|  
 |**is_cluster_shared_volume**|**Версий**|Возвращает значение 1, если диск, на котором находится этот путь, является общим томом кластера. В противном случае возвращается значение 0.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Для хранения файлов баз данных и журналов экземпляр отказоустойчивого кластера SQL Server (FCI) должен использовать хранилище, которое является общим для всех узлов отказоустойчивого кластера. В данном представлении приведен список дисков из группы кластерных ресурсов, связанной с этим экземпляром. Только эти диски можно использовать для хранения файлов данных и журналов.  
   
 > [!NOTE]  
->  В следующем выпуске в этом представлении будет заменено представление [sys. dm_io_cluster_shared_drives &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md) .  
+>  В следующем выпуске в этом представлении будет заменено представление [sys. dm_io_cluster_shared_drives &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md) .  
   
 ## <a name="permissions"></a>Разрешения  
  Пользователь должен иметь на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] разрешение VIEW SERVER STATE.  

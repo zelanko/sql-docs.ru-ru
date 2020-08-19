@@ -1,4 +1,5 @@
 ---
+description: sysmail_delete_profile_sp (Transact-SQL)
 title: sysmail_delete_profile_sp (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 71998653-4a02-446d-b6f7-50646a29e8a2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7662330df991745bf46126beb9ce5b7964353246
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 58139a6b9f0471d499c1419f33be28e6a8bbc5f3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890944"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419428"
 ---
 # <a name="sysmail_delete_profile_sp-transact-sql"></a>sysmail_delete_profile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,9 +40,9 @@ sysmail_delete_profile_sp  { [ @profile_id = ] profile_id | [ @profile_name = ] 
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @profile_id = ] profile_id`Идентификатор профиля удаляемого профиля. *profile_id* имеет **тип int**и значение по умолчанию NULL. Необходимо указать либо *profile_id* , либо *profile_name* .  
+`[ @profile_id = ] profile_id` Идентификатор профиля удаляемого профиля. *profile_id* имеет **тип int**и значение по умолчанию NULL. Необходимо указать либо *profile_id* , либо *profile_name* .  
   
-`[ @profile_name = ] 'profile_name'`Имя удаляемого профиля. Аргумент *profile_name* имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать либо *profile_id* , либо *profile_name* .  
+`[ @profile_name = ] 'profile_name'` Имя удаляемого профиля. Аргумент *profile_name* имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать либо *profile_id* , либо *profile_name* .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -67,7 +68,7 @@ EXECUTE msdb.dbo.sysmail_delete_profile_sp
     @profile_name = 'AdventureWorks Administrator' ;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [Database Mail объекты конфигурации](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
  [Database Mail хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  

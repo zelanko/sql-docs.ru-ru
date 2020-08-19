@@ -1,4 +1,5 @@
 ---
+description: Параметры проекта (база данных SQL Azure) (Акцесстоскл)
 title: Параметры проекта (база данных SQL Azure) (Акцесстоскл) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bbb8a204-d0e4-4f0b-9709-271feb1f136e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3dd47039f6bbfaa15eb16776487191a66a17db59
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 9954fe012158526e87bd30512b13eca0314bc00e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937583"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418550"
 ---
 # <a name="project-settings-azure-sql-database-accesstosql"></a>Параметры проекта (база данных SQL Azure) (Акцесстоскл)
 Параметры проекта SQL Azure позволяют настроить суффикс базы данных SQL Azure для добавления в диалоговом окне подключения, а также разрешить использование механизма пульса в SQL Azure подключении.  

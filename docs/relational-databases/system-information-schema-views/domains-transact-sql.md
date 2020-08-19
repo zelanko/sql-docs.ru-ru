@@ -1,4 +1,5 @@
 ---
+description: DOMAINS (Transact-SQL)
 title: ДОМЕны (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
@@ -19,12 +20,12 @@ ms.assetid: f0b734d5-816f-4b10-a60c-615931b515c2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c47c9e1f03436923332a6f3beee49a0b4a6ef43
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4ae71f473dfce95d78b8ec4be60c31e73ea4f0d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85647474"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419378"
 ---
 # <a name="domains-transact-sql"></a>DOMAINS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,12 +54,12 @@ ms.locfileid: "85647474"
 |**DATETIME_PRECISION**|**smallint**|Код подтипа для **DateTime** и типа данных **интервала** ISO. Для других типов данных этот столбец возвращает значение NULL.|  
 |**DOMAIN_DEFAULT**|**nvarchar (** 4000 **)**|Действительный текст определения инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
   
-## <a name="see-also"></a>См. также  
- [Системные представления &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
- [Представления информационной схемы &#40;&#41;Transact-SQL](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Системные представления &#40;&#41;Transact-SQL ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [Представления информационной схемы &#40;&#41;Transact-SQL ](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.sysнаборов символов &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syscharsets-transact-sql.md)   
  [sys.sql_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
- [sys.configуратионс &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
+ [sys.configurations (Transact-SQL)](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
  [sys.types (Transact-SQL)](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)  
   
   

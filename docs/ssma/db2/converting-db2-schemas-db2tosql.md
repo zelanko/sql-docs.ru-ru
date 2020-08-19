@@ -1,4 +1,5 @@
 ---
+description: Преобразование схем DB2 (DB2ToSQL)
 title: Преобразование схем DB2 (DB2ToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 13afcabf85515b211d8493990a59950dc97d72f5
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 9dbf89c8027737a02d4eded9dc2e743e683b65e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933938"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418560"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>Преобразование схем DB2 (DB2ToSQL)
 После подключения к DB2, подключения к и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настройки параметров проекта и сопоставления данных можно преобразовать объекты базы данных DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объекты базы данных.  

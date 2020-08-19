@@ -1,4 +1,5 @@
 ---
+description: sys.fulltext_semantic_language_statistics_database (Transact-SQL)
 title: sys. fulltext_semantic_language_statistics_database (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ ms.assetid: 32e95614-ed88-4068-8c37-1e21544717bc
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 0decfac8cf28727a3ba3f4bf5ad54e8f9ff8bee9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5c9ec62588251c908b32c4f51d72cc1b8efee4eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902186"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420118"
 ---
 # <a name="sysfulltext_semantic_language_statistics_database-transact-sql"></a>sys.fulltext_semantic_language_statistics_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "85902186"
   
 ||||  
 |-|-|-|  
-|**Имя столбца**|**Type**|**Описание**|  
+|**Имя столбца**|**Тип**|**Описание**|  
 |**database_id**|**int**|Идентификатор базы данных, уникальный внутри экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**register_date**|**datetime**|Дата регистрации базы данных для семантической обработки.|  
 |**registered_by**|**int**|Идентификатор участника на уровне сервера, зарегистрировавшего базу данных для семантической обработки.|  
@@ -61,7 +62,7 @@ SELECT * FROM sys.fulltext_semantic_language_statistics_database;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Установка и настройка семантического поиска](../../relational-databases/search/install-and-configure-semantic-search.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sys.server_assembly_modules (Transact-SQL)
 title: sys. server_assembly_modules (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: af799e38-2d16-49b2-bcf5-6f9199af899e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cfbeafd7ef52674adbd8fc6898baf663373b91a9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a1ba39407b55520c91b6a7714ec587a2fc886460
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887887"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419968"
 ---
 # <a name="sysserver_assembly_modules-transact-sql"></a>sys.server_assembly_modules (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,8 +43,8 @@ ms.locfileid: "85887887"
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также  
- [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Представления каталога объектов (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
   
   

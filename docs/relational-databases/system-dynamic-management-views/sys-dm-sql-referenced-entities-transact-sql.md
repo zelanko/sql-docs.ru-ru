@@ -1,4 +1,5 @@
 ---
+description: Функция динамического управления sys.dm_sql_referenced_entities (Transact-SQL)
 title: sys. dm_sql_referenced_entities (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/01/2019
@@ -20,12 +21,12 @@ ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5acf2b0afd2285025112d6e3f224a5f44241a0b8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f219091eb016dddbf0f38932146a57cbd0a0a7b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634934"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419608"
 ---
 # <a name="sysdm_sql_referenced_entities-transact-sql"></a>Функция динамического управления sys.dm_sql_referenced_entities (Transact-SQL)
 
@@ -114,7 +115,7 @@ sys.dm_sql_referenced_entities (
   
  Возвращает ошибку 2020, когда не удается разрешить зависимости столбца. Эта ошибка не препятствует возврату запросом зависимостей на уровне объектов.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Данная функция может выполняться в контексте любой базы данных и осуществляет отображение списка сущностей, ссылающихся на триггер DDL уровня сервера.  
   
  В следующей таблице перечислены типы сущностей, для которых созданы и обновляются данные о зависимостях. Данные о зависимостях не создаются и не обновляются для правил, значений по умолчанию, временных таблиц, временных хранимых процедур и системных объектов.  
@@ -122,7 +123,7 @@ sys.dm_sql_referenced_entities (
 |Тип сущности|Ссылающаяся сущность|Упоминаемая сущность|  
 |-----------------|------------------------|-----------------------|  
 |Таблица|Да*|Да|  
-|Просмотр|Да|Да|  
+|Представление|Да|Да|  
 |Хранимая процедура [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Да|Да|  
 |Хранимая процедура CLR|Нет|Да|  
 |Определяемая пользователем функция [!INCLUDE[tsql](../../includes/tsql-md.md)]|Да|Да|  
@@ -139,7 +140,7 @@ sys.dm_sql_referenced_entities (
 |Функция секционирования|Нет|Да|  
 | &nbsp; | &nbsp; | &nbsp; |
 
- \*Таблица обрабатывается как ссылающаяся сущность, только если она ссылается на [!INCLUDE[tsql](../../includes/tsql-md.md)] модуль, определяемый пользователем тип или коллекцию схем XML в определении вычисляемого столбца, проверочного ограничения или ограничения по умолчанию.  
+ \* Таблица обрабатывается как ссылающаяся сущность, только если она ссылается на [!INCLUDE[tsql](../../includes/tsql-md.md)] модуль, определяемый пользователем тип или коллекцию схем XML в определении вычисляемого столбца, проверочного ограничения или ограничения по умолчанию.  
   
  ** Пронумерованные хранимые процедуры с целочисленным значением больше 1 не отслеживаются в качестве ссылающихся или упоминаемых сущностей.  
   
@@ -334,7 +335,7 @@ SELECT
  Employee      Gender              0           1          0
  ```
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sys.dm_sql_referencing_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)   
  [sys.sql_expression_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: IHarticles (Transact-SQL)
 title: Ихартиклес (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 773ef9b7-c993-4629-9516-70c47b9dcf65
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 252b68ea2f6512f2acbc9bbb7555eae172a641ef
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1ef51387b774f8961cb7abe30f2af4615adc0973
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890331"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419238"
 ---
 # <a name="iharticles-transact-sql"></a>IHarticles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +54,7 @@ ms.locfileid: "85890331"
 |**tablespace_name**|**nvarchar(255)**|Определяет табличное пространство, используемое регистрирующей таблицей для статьи.|  
 |**objid**|**int**|Этот столбец не используется и включается только для того, чтобы представление [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) таблицы **ихартиклес** , совместимое с представлением [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) , которое используется для SQL Serverных статей ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)).|  
 |**sync_objid**|**int**|Этот столбец не используется и включается только для того, чтобы представление [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) таблицы **ихартиклес** , совместимое с представлением [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) , которое используется для SQL Serverных статей ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)).|  
-|**nописание**|**nvarchar(255)**|Описание статьи.|  
+|**description**|**nvarchar(255)**|Описание статьи.|  
 |**publisher_status**|**int**|Используется для указания, определено ли представление, определяющее опубликованную статью, путем вызова [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md).<br /><br /> значение **0**  =  вызвана [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) .<br /><br /> **1**  =  [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) не был вызван.|  
 |**article_view_owner**|**nvarchar(255)**|Владелец объекта синхронизации на издателе, используемого агентом чтения журнала.|  
 |**article_view**|**nvarchar(255)**|Объект синхронизации на издателе, используемый агентом чтения журнала.|  
@@ -65,10 +66,10 @@ ms.locfileid: "85890331"
 |**instance_id**|**int**|Определяет текущий экземпляр журнала статьи для опубликованной таблицы.|  
 |**use_default_datatypes**|**bit**|Указывает, использует ли статья сопоставления типов данных по умолчанию; значение **1** указывает, что используются сопоставления типов данных по умолчанию.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Разнородная репликация базы данных](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Представления репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_changearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)  
   

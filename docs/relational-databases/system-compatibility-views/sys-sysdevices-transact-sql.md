@@ -1,4 +1,5 @@
 ---
+description: sys.sysdevices (Transact-SQL)
 title: Устройства sys.sys(Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ac5bcaf4-8fb6-4855-8856-d7643f469361
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 56196f6a9e4ce1929bd7fd9b65a9853d3794da4d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6bcc481e595dc2c061d736a6bee12da6d918b7e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883747"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419798"
 ---
 # <a name="syssysdevices-transact-sql"></a>sys.sysdevices (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,8 +46,8 @@ ms.locfileid: "85883747"
 |**cntrltype**|**smallint**|Тип контроллера:<br /><br /> 0 = файл базы данных не на компакт-диске;<br /><br /> 2 = дисковый файл резервной копии;<br /><br /> 3 — 4 = файл резервной копии на дискете;<br /><br /> 5 = файл резервной копии на ленточном накопителе;<br /><br /> 6 = файл с доступом через именованные каналы.|  
 |**phyname**|**nvarchar(260)**|Имя физического файла.|  
   
-## <a name="see-also"></a>См. также  
- [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Представления совместимости (Transact-SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sys.dm_io_backup_tapes (Transact-SQL)
 title: sys. dm_io_backup_tapes (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5f20a55b0203486abd8fd67657ce91ccfc16ce74
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 13c44e5a65f351661d2d3b642beb7e08fe0604c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898812"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419708"
 ---
 # <a name="sysdm_io_backup_tapes-transact-sql"></a>sys.dm_io_backup_tapes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85898812"
 |**mount_request_time**|**datetime**|Время запроса на подключение. NULL, если подключение не ожидается (**состояние! = 2**). Допускает значение NULL.|  
 |**mount_expiration_time**|**datetime**|Время действия запроса на подключение (тайм-аут). NULL, если подключение не ожидается (**состояние! = 2**). Допускает значение NULL.|  
 |**database_name**|**nvarchar(256)**|База данных, резервная копия которой будет размещена на этом устройстве. Допускает значение NULL.|  
-|**интерфейс**|**int**|Идентификатор сеанса. Определяет пользователя ленты. Допускает значение NULL.|  
+|**spid**|**int**|Идентификатор сеанса. Определяет пользователя ленты. Допускает значение NULL.|  
 |**command**|**int**|Команда, с помощью которой выполняется резервное копирование. Допускает значение NULL.|  
 |**command_desc**|**nvarchar(120)**|Описание команды. Допускает значение NULL.|  
 |**media_family_id**|**int**|Индекс семейства носителей (1...* n*), *n* — число семейств носителей в наборе носителей. Допускает значение NULL.|  
@@ -54,9 +55,9 @@ ms.locfileid: "85898812"
 ## <a name="permissions"></a>Разрешения  
  Пользователь должен иметь разрешение VIEW SERVER STATE на этом сервере.  
   
-## <a name="see-also"></a>См. также  
- [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Динамические административные представления и функции, связанные с вводом-выводом &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Динамические административные представления и функции, связанные с вводом-выводом &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

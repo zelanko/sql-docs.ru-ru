@@ -1,4 +1,5 @@
 ---
+description: Мониторинг оптимизированных для памяти темпоральных таблиц с системным управлением версиями
 title: Мониторинг оптимизированных для памяти темпоральных таблиц с системным управлением версиями | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/28/2016
@@ -11,12 +12,12 @@ ms.assetid: 7a06785d-dbcb-44de-b95c-26b131471bee
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6e00ccde6b0b0788c9007a26cb922ccfcecdc21
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 57ef17e8580246a56ce0582e4a0fa69a013de2d5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555899"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418988"
 ---
 # <a name="monitoring-memory-optimized-system-versioned-temporal-tables"></a>Мониторинг оптимизированных для памяти темпоральных таблиц с системным управлением версиями
 
@@ -99,12 +100,12 @@ GROUP BY TemporalTableSchema, TemporalTableName
 ;
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 - [Темпоральные таблицы с системным управлением версиями и таблицы, оптимизированные для памяти](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
 - [Создание оптимизированной для памяти темпоральной таблицы с системным управлением версиями](../../relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md)
 - [Работа с оптимизированными для памяти темпоральными таблицами с системным управлением версиями](../../relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md)
-- [Вопросы производительности оптимизированных для памяти темпоральных таблиц с системным управлением версиями](../../relational-databases/tables/memory-optimized-system-versioned-temporal-tables-performance.md)
+- [Вопросы производительности темпоральных таблиц с системным управлением версиями, оптимизированных для памяти](../../relational-databases/tables/memory-optimized-system-versioned-temporal-tables-performance.md)
 - [Темпоральные таблицы](../../relational-databases/tables/temporal-tables.md)
 - [Проверка согласованности системной темпоральной таблицы](../../relational-databases/tables/temporal-table-system-consistency-checks.md)
 - [Управление хранением данных журнала в темпоральных таблицах с системным управлением версиями](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)

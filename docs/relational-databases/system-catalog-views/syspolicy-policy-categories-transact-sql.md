@@ -1,4 +1,5 @@
 ---
+description: syspolicy_policy_categories (Transact-SQL)
 title: syspolicy_policy_categories (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 65f080c7-771f-4cf6-a7a0-88882c637f8d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 766aa7e2d60a19c5f6b6093dc72685175d8fbc3b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d7d5a115beb4f3f4ec543a8ae4861462cf750648
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900591"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419858"
 ---
 # <a name="syspolicy_policy_categories-transact-sql"></a>syspolicy_policy_categories (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,13 +37,13 @@ ms.locfileid: "85900591"
 |name|**sysname**|Имя категории политики.|  
 |mandate_database_subscriptions|**bit**|Указывает, применима ли категория политики ко всем базам данных в экземпляре без явной подписки (1), или категория политики должна быть применена к базе данных с помощью явной подписки (0).|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Выводит список групп политик управления на основе политик.  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в роли PolicyAdministratorRole базы данных msdb.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Администрирование серверов с помощью управления на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [Административные представления на основе политик (Transact-SQL)](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   

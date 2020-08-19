@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_loaded_modules (Transact-SQL)
 title: sys. dm_os_loaded_modules (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/18/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 56c7743a-b568-4943-bd3b-73c57d9d641c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ecf9858f1cc37290cf9079470498d3ad1ecbdc84
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d5678c74d6fbbb703e6f6fd0a93b205bc2903059
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898768"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419688"
 ---
 # <a name="sysdm_os_loaded_modules-transact-sql"></a>sys.dm_os_loaded_modules (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,15 +46,15 @@ ms.locfileid: "85898768"
 |**special_build**|**bit**|1 = Модуль является специальной сборкой загруженного модуля.|  
 |**language**|**int**|Язык сведений о версии модуля.|  
 |**во**|**nvarchar(256)**|Имя компании, создавшей модуль.|  
-|**nописание**|**nvarchar(256)**|Описание модуля.|  
+|**description**|**nvarchar(256)**|Описание модуля.|  
 |**name**|**nvarchar(255)**|Имя модуля. Включает полный путь к модулю.|  
 |**pdw_node_id**|**int**|**Область применения**: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
   
 ## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
-## <a name="see-also"></a>См. также  
- [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [SQL Server динамические административные представления, связанные с операционной системой &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [SQL Server динамические административные представления, связанные с операционной системой &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   

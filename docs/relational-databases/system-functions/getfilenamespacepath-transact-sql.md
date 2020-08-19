@@ -1,4 +1,5 @@
 ---
+description: GetFileNamespacePath (Transact-SQL)
 title: GetFileNamespacePath (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 43b89ff4421f7e015ae2320aca94b0c19d5dde52
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 046ff4071ae4ac45338d45916afeb9d2491d2d6d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760263"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419578"
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "85760263"
  *is_full_path*  
  Целочисленное выражение, указывающее, какой путь возвращать: относительный или абсолютный. *is_full_path* может иметь одно из следующих значений:  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**0**|Возвращает относительный путь внутри каталога уровня базы данных.<br /><br /> Это значение по умолчанию.|  
 |**1**|Возвращает полный путь UNC, начиная с `\\computer_name`.|  
@@ -53,7 +54,7 @@ ms.locfileid: "85760263"
  *\@функцию*  
  Целочисленное выражение, определяющее способ форматирования серверных компонентов пути. * \@ параметр* может иметь одно из следующих значений:  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**0**|Возвращает имя сервера, преобразованное в формат NetBIOS, например<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> Это значение по умолчанию.|  
 |**1**|Возвращает имя сервера без преобразования, например:<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
@@ -73,7 +74,7 @@ ms.locfileid: "85760263"
   
  Этот логический путь не соответствует физическому пути NTFS. Он преобразуется в физический путь с помощью драйвера фильтра файловой системы FILESTREAM и агента FILESTREAM. Возможность отделить логический путь от физического позволяет [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] реорганизовать внутренние данные таким образом, чтобы пути остались действительными.  
   
-## <a name="best-practices"></a>Рекомендации  
+## <a name="best-practices"></a>Советы и рекомендации  
  Чтобы код и приложения были независимы от текущего компьютера и базы данных, следует избегать создания кода с использованием абсолютных путей. Вместо этого получите полный путь к файлу во время выполнения, используя функции **FileTableRootPath** и **GetFileNamespacePath** вместе, как показано в следующем примере. По умолчанию функция **GetFileNamespacePath** возвращает относительный путь к файлу, находящемуся внутри корневого пути к базе данных.  
   
 ```sql  
@@ -86,7 +87,7 @@ SELECT @fullPath = @root + file_stream.GetFileNamespacePath() FROM DocumentStore
 WHERE Name = N'document.docx';  
 ```  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>Примеры  
  В следующих примерах показано, как вызвать функцию **GetFileNamespacePath** , чтобы получить UNC-путь для файла или каталога в таблице FileTable.  
@@ -101,7 +102,7 @@ SELECT file_stream.GetFileNamespacePath(1, Null) AS FilePath FROM DocumentStore
 WHERE Name = N'document.docx';  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Работа с каталогами и путями в таблицах FileTable](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
   
   

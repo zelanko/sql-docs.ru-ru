@@ -1,4 +1,5 @@
 ---
+description: managed_backup. fn_backup_instance_config (Transact-SQL)
 title: managed_backup. fn_backup_instance_config (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,11 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2382a547-c0c9-4e1d-87c9-d8526192eb5a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ec61c7797a707b3c0d6dd41c0d2e36fb4cc0a945
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: a65649b7b565475eebd69bcadf4ac28bef707d7b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052790"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419568"
 ---
 # <a name="managed_backupfn_backup_instance_config-transact-sql"></a>managed_backup. fn_backup_instance_config (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -42,8 +44,8 @@ ms.locfileid: "86052790"
 managed_backup.fn_backup_db_config ()  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>Даваемых  
- Отсутствуют  
+##  <a name="arguments"></a><a name="Arguments"></a> Аргументы  
+ Нет  
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   

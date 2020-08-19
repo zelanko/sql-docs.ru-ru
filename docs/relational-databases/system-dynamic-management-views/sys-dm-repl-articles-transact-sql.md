@@ -1,4 +1,5 @@
 ---
+description: sys.dm_repl_articles (Transact-SQL)
 title: sys. dm_repl_articles (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f0ce51d16ac8d7892c164f1b2e9912a94c8e393e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: eb3ffe05eaf97206dc4285778b239c3ef10e051f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898698"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419618"
 ---
 # <a name="sysdm_repl_articles-transact-sql"></a>sys.dm_repl_articles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,12 +68,12 @@ ms.locfileid: "85898698"
 ## <a name="permissions"></a>Разрешения  
  Для вызова **dm_repl_articles**требуется разрешение на просмотр состояния базы данных публикации.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Возвращаются сведения только по реплицируемым объектам базы данных, которые загружены в кэш статей репликации.  
   
-## <a name="see-also"></a>См. также  
- [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Динамические административные представления, связанные с репликацией &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Динамические административные представления, связанные с репликацией &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
   
   
 

@@ -1,4 +1,5 @@
 ---
+description: xp_logevent (Transact-SQL)
 title: xp_logevent (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7b379ad0-5b12-4d2e-9c52-62465df1fdbd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 08fbf39390a7a81fc3ce3e8563c3699ba77b833c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7001b9d29a96dd192e044ddfe779b8f39a581a94
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890761"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419278"
 ---
 # <a name="xp_logevent-transact-sql"></a>xp_logevent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +57,7 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
   
  `The command(s) completed successfully.`  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  При отправке сообщений из [!INCLUDE[tsql](../../includes/tsql-md.md)] процедур, триггеров, пакетов и т. д. Используйте инструкцию RAISERROR вместо xp_logevent. xp_logevent не вызывает обработчик сообщений клиента или Set @ @ERROR . Чтобы записывать сообщения в средство просмотра событий Windows и в файл журнала ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] внутри экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], следует выполнить инструкцию RAISERROR.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -76,10 +77,10 @@ USE master;
 EXEC xp_logevent 60000, @@MESSAGE, informational;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [PRINT (Transact-SQL)](../../t-sql/language-elements/print-transact-sql.md)   
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Общие расширенные хранимые процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
   
   

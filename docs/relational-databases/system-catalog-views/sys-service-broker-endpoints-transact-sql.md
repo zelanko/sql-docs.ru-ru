@@ -1,4 +1,5 @@
 ---
+description: sys.service_broker_endpoints (Transact-SQL)
 title: sys. service_broker_endpoints (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6979ec9b-0043-411e-aafb-0226fa26c5ba
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 86a7fb5a83fe8e12f6721328e69c45e40e57eb46
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1fd6a01ea9b6936edc90a64e70a2c310750d2b85
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897899"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419958"
 ---
 # <a name="sysservice_broker_endpoints-transact-sql"></a>sys.service_broker_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85897899"
 |**encryption_algorithm**|**tinyint**|Алгоритм шифрования. Ниже приведены возможные значения с описаниями и соответствующими параметрами DDL.<br /><br /> **0** : нет. Соответствующий параметр DDL: отключен.<br /><br /> **1** : RC4. Соответствующий параметр DDL: {required &#124; требуемый алгоритм RC4}.<br /><br /> **2** : AES. Соответствующий параметр DDL: требуется алгоритм AES.<br /><br /> **3** : нет, RC4. Соответствующий параметр DDL: {Supported &#124; поддерживаемый алгоритм RC4}.<br /><br /> **4** : нет, AES. Соответствующий параметр DDL: поддерживаемый алгоритм AES.<br /><br /> **5** : RC4, AES. Соответствующий параметр DDL: требуется алгоритм RC4 AES.<br /><br /> **6** : AES, RC4. Соответствующий параметр DDL: требуется алгоритм AES RC4.<br /><br /> **7** : нет, RC4, AES. Соответствующий параметр DDL: поддерживаемый алгоритм RC4 AES.<br /><br /> **8** : нет, AES, RC4. Соответствующий параметр DDL: поддерживаемый алгоритм AES RC4.<br /><br /> Не допускает значения NULL.|  
 |**encryption_algorithm_desc**|**nvarchar(60)**|Описание алгоритма шифрования. Ниже перечислены возможные значения и соответствующие параметры DDL.<br /><br /> Нет: отключено<br /><br /> RC4: {требуется &#124; требуемый алгоритм RC4}<br /><br /> AES: требуемый алгоритм AES<br /><br /> НЕТ, RC4: {Supported &#124; поддерживаемый алгоритм RC4}<br /><br /> НЕТ, AES: поддерживаемый алгоритм AES<br /><br /> RC4, AES: требуемый алгоритм RC4 AES<br /><br /> AES, RC4: требуемый алгоритм AES RC4<br /><br /> НЕТ, RC4, AES: поддерживаемый алгоритм RC4 AES<br /><br /> NONE, AES, RC4: поддерживаемый алгоритм AES RC4<br /><br /> Допускает значение NULL.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
   
 > [!NOTE]  
 >  Алгоритм RC4 поддерживается только в целях обратной совместимости. Когда база данных имеет уровень совместимости 90 или 100, новые материалы могут шифроваться только с помощью алгоритмов RC4 или RC4_128. (Не рекомендуется.) Используйте вместо этого более новые алгоритмы, например AES. В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версиях материалы, зашифрованные с помощью алгоритмов RC4 или RC4_128, могут быть расшифрованы на любом уровне совместимости.  
@@ -50,7 +51,7 @@ ms.locfileid: "85897899"
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [ALTER ENDPOINT (Transact-SQL)](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)  
   

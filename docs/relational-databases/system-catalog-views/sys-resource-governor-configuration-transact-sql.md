@@ -1,4 +1,5 @@
 ---
+description: sys.resource_governor_configuration (Transact-SQL)
 title: sys. resource_governor_configuration (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 89099668-1dc6-4b07-9d8b-49bc95c7bfc0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c0fa22e199415b19049e3db2beb0637218af3692
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9cb9b9654f0b9b3e6093746b52f0008f74e85a3b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897509"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419988"
 ---
 # <a name="sysresource_governor_configuration-transact-sql"></a>sys.resource_governor_configuration (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "85897509"
 |is_enabled|**bit**|Отображает текущее состояние регулятора ресурсов:<br /><br /> 0 = Resource Governor не включена.<br /><br /> 1 = Resource Governor включен.<br /><br /> Не допускает значение NULL.|  
 |max_outstanding_io_per_volume|**int**|**Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.<br /><br /> Максимальное число невыполненных операций ввода-вывода в расчете на том.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Представление каталога отображает конфигурацию регулятора ресурсов в том виде, в каком она хранится в метаданных. Для просмотра конфигурации, хранимой в памяти, используйте соответствующее динамическое административное представление.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -65,9 +66,9 @@ sys.dm_resource_governor_configuration;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Resource Governor представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
- [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Resource Governor представления каталога &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
+ [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys. dm_resource_governor_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md)   
  [Регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)  
   

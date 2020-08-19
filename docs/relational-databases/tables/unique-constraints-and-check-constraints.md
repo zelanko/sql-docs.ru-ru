@@ -1,4 +1,5 @@
 ---
+description: Ограничения уникальности и проверочные ограничения
 title: Ограничения уникальности и проверочные ограничения | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/27/2017
@@ -14,19 +15,19 @@ ms.assetid: 637098af-2567-48f8-90f4-b41df059833e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6339bdedffb2f2ee2f8379f63e123ab2e1d71c15
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: efd7fb070a81715b88d6949fac47c972bdd0643d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727114"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418968"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>Ограничения уникальности и проверочные ограничения
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Ограничения UNIQUE и CHECK — это два типа ограничений, которые могут использоваться для обеспечения целостности данных в таблицах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Это важные объекты базы данных.  
   
- Эта тема описана в следующих разделах.  
+ В этом разделе содержатся следующие подразделы.  
   
  [Ограничения UNIQUE](#Unique)  
   
@@ -99,8 +100,8 @@ DELETE CheckTbl WHERE col1 = 10;
 |Описывает, как удалить ограничение уникальности.|[Удаление ограничений уникальности](../../relational-databases/tables/delete-unique-constraints.md)|  
 |Описывает, как отключить проверочное ограничение при добавлении или обновлении агентом репликации данных в таблице.|[Отключение проверочных ограничений для репликации](../../relational-databases/tables/disable-check-constraints-for-replication.md)|  
 |Описывает, как отключить проверочное ограничение при добавлении, обновлении или удалении данных из таблицы.|[Отключение проверочных ограничений в инструкциях INSERT и UPDATE](../../relational-databases/tables/disable-check-constraints-with-insert-and-update-statements.md)|  
-|Описывает, как изменить выражение ограничения или параметры, которые включают или отключают ограничение применительно к определенным условиям.|[Изменение проверочных ограничений](../../relational-databases/tables/modify-check-constraints.md)|  
-|Описывает, как удалить проверочное ограничение.|[Удаление проверочных ограничений](../../relational-databases/tables/delete-check-constraints.md)|  
+|Описывает, как изменить выражение ограничения или параметры, которые включают или отключают ограничение применительно к определенным условиям.|[Изменение проверочного ограничения](../../relational-databases/tables/modify-check-constraints.md)|  
+|Описывает, как удалить проверочное ограничение.|[Удаление проверочного ограничения](../../relational-databases/tables/delete-check-constraints.md)|  
 |Описывает, как просматривать свойства проверочного ограничения.|[Ограничения уникальности и проверочные ограничения](../../relational-databases/tables/unique-constraints-and-check-constraints.md)|  
   
   

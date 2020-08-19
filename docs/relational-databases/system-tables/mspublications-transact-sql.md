@@ -1,4 +1,5 @@
 ---
+description: MSpublications (Transact-SQL)
 title: Мспубликатионс (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7a0b3457-7265-4f24-a255-7f055d908f20
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b26ba7da6099f402aa8902a6ce2dafda8a4d2d71
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 99cf9a95cb61cc0efcd40c29019c038248b6102d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889584"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419138"
 ---
 # <a name="mspublications-transact-sql"></a>MSpublications (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85889584"
 |**allow_push**|**bit**|Указывает, могут ли быть созданы для данной публикации принудительные подписки.|  
 |**allow_pull**|**bit**|Указывает, могут ли быть созданы для данной публикации подписки по запросу.|  
 |**allow_anonymous**|**bit**|Указывает, могут ли быть созданы для данной публикации анонимные подписки.|  
-|**nописание**|**nvarchar(255)**|Описание публикации.|  
+|**description**|**nvarchar(255)**|Описание публикации.|  
 |**vendor_name**|**nvarchar (100)**|Имя поставщика, если издатель не является [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базой данных.|  
 |**хранения**|**int**|Срок хранения публикации в часах.|  
 |**sync_method**|**int**|Метод синхронизации.<br /><br /> **0** = Native (создает в собственном режиме выходные данные полного копирования всех таблиц).<br /><br /> **1** = символ (создает выходные данные полного копирования в символьном режиме для всех таблиц).<br /><br /> **3** = одновременные (создает в собственном режиме выходные данные полного копирования всех таблиц, но не блокирует таблицу во время создания моментального снимка).<br /><br /> **4** = Concurrent_c (создает выходное копирование в символьном режиме для всех таблиц, но не блокирует таблицу во время создания моментального снимка).<br /><br /> Значения **3** и **4** доступны для репликации транзакций и репликации слиянием, но не для репликации моментальных снимков.|  
@@ -51,8 +52,8 @@ ms.locfileid: "85889584"
 |**allow_queued_tran**|**bit**|Определяет, позволяет ли обновление публикация посредством очередей:<br /><br /> **0 =** Публикация не находится в очереди.<br /><br /> **1** = публикация поставлена в очередь.|  
 |**options**|**int**|Сведения для данного выпуска отсутствуют.|  
   
-## <a name="see-also"></a>См. также  
- [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: xp_logininfo (Transact-SQL)
 title: xp_logininfo (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b5a1a7067e1ebda150d0236020288514eb90a8fc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 44b76081c7ec5fdd3496b670b1884347d1a84d1f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890728"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88419218"
 ---
 # <a name="xp_logininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,12 +42,12 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @acctname = ] 'account_name'`Имя пользователя или группы Windows, которым предоставлен доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *account_name* имеет тип **sysname**и значение по умолчанию NULL. Если *account_name* не указан, то выводятся все группы Windows и пользователи Windows, которым было явно предоставлено разрешение на вход. *account_name* должны быть полными. Например, 'ADVWKS4\macraes' или 'BUILTIN\Administrators'.  
+`[ @acctname = ] 'account_name'` Имя пользователя или группы Windows, которым предоставлен доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *account_name* имеет тип **sysname**и значение по умолчанию NULL. Если *account_name* не указан, то выводятся все группы Windows и пользователи Windows, которым было явно предоставлено разрешение на вход. *account_name* должны быть полными. Например, 'ADVWKS4\macraes' или 'BUILTIN\Administrators'.  
   
  **"все"**  |  **"Members"**  
  Указывает, следует ли доставлять данные обо всех путях разрешений для данной учетной записи или только сведения о членах группы Windows. ** \@ параметр имеет тип** **varchar (10)** и значение по умолчанию NULL. Если не указано значение **ALL** , то отображается только первый путь разрешения.  
   
-`[ @privilege = ] variable_name`Выходной параметр, возвращающий уровень привилегий указанной учетной записи Windows. *variable_name* имеет тип **varchar (10)** и значение по умолчанию "не требуется". Возвращенный уровень привилегий — **User**, **Admin**или **null**.  
+`[ @privilege = ] variable_name` Выходной параметр, возвращающий уровень привилегий указанной учетной записи Windows. *variable_name* имеет тип **varchar (10)** и значение по умолчанию "не требуется". Возвращенный уровень привилегий — **User**, **Admin**или **null**.  
   
  OUTPUT  
  Если указан, помещает *variable_name* в выходной параметр.  
@@ -64,7 +65,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 |**mapped login name**|**sysname**|Для учетных записей пользователей, имеющих привилегии пользователя, **сопоставленное имя входа** показывает сопоставленное имя входа, которое [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается использовать при входе с помощью этой учетной записи, используя сопоставленные правила с именем домена, добавленным перед ним.|  
 |**путь разрешения**|**sysname**|Членство в группе, разрешающее доступ к учетной записи.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Если указано *account_name* , **xp_logininfo** сообщает наивысший уровень прав доступа для указанного пользователя или группы Windows. Если пользователь Windows имеет права системного администратора и пользователя домена, он будет выступать в качестве системного администратора. Если пользователь является членом нескольких групп Windows одного уровня прав доступа, группа, которая первой предоставила доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], будет отражена.  
   
  Если *account_name* является допустимым пользователем или группой Windows, не связанными с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] именем входа, возвращается пустой результирующий набор. Если *account_name* не может быть идентифицирован как допустимый пользователь или группа Windows, возвращается сообщение об ошибке.  
@@ -85,11 +86,11 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 EXEC xp_logininfo 'BUILTIN\Administrators';  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_denylogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
  [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Общие расширенные хранимые процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
   
   
