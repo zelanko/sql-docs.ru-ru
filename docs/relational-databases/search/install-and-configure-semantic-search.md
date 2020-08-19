@@ -1,4 +1,5 @@
 ---
+description: Установка и настройка семантического поиска
 title: Установка и настройка семантического поиска | Документация Майкрософт
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 50686881f950d16fb0fc7b5f8bb2dc5a3c63c1c1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 089d8f5a3c39cd29e04a342e19c29bfbafc7b712
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629384"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88404080"
 ---
 # <a name="install-and-configure-semantic-search"></a>Установка и настройка семантического поиска
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -91,7 +92,7 @@ GO
   
  В этих образцах кода предполагается, что вы переместили базу данных из расположения по умолчанию в новое место хранения.  
   
- **3. Зарегистрируйте базу данных семантической статистики языка.** 
+ **3. Зарегистрируйте базу данных статистики семантики языка.** 
   
  Вызовите хранимую процедуру [sp_fulltext_semantic_register_language_statistics_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql.md) и укажите имя, присвоенное базе данных при присоединении.  
   

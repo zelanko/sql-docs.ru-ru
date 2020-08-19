@@ -1,4 +1,5 @@
 ---
+description: Пространственные данные (SQL Server)
 title: Пространственные данные (SQL Server) | Документация Майкрософт
 ms.date: 10/11/2019
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: 41a132a1-09e2-4426-b9df-225270cb8e15
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32014323cf9921cdbff9db6235e6625b4dc431ec
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 38df38923b69bf24432cf4d5d162187c0962fcfc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725867"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88403350"
 ---
 # <a name="spatial-data-sql-server"></a>Пространственные данные (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,13 +40,13 @@ ms.locfileid: "85725867"
  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]оба эти типа данных реализованы как типы данных среды CLR платформы .NET.  
   
 ##  <a name="related-tasks"></a><a name="reltasks"></a> Связанные задачи  
- [Создание и конструирование геометрических экземпляров и отправка запросов к ним](../../relational-databases/spatial/create-construct-and-query-geometry-instances.md)  
+ [Создание, конструирование и запрос экземпляров geometry](../../relational-databases/spatial/create-construct-and-query-geometry-instances.md)  
  Описывает методы, которые можно использовать с экземплярами типа данных geometry.  
   
- [Создание и конструирование географических экземпляров и отправка запросов к ним](../../relational-databases/spatial/create-construct-and-query-geography-instances.md)  
+ [Создание, проектирование и создание запросов к экземплярам типа данных geography](../../relational-databases/spatial/create-construct-and-query-geography-instances.md)  
  Описывает методы, которые можно использовать с экземплярами типа данных geography.  
   
- [Запросы к пространственным данным для поиска ближайшего соседа](../../relational-databases/spatial/query-spatial-data-for-nearest-neighbor.md)  
+ [Запросы пространственных данных для ближайшего соседа](../../relational-databases/spatial/query-spatial-data-for-nearest-neighbor.md)  
  Описывает общий шаблон запроса, используемый для поиска пространственных объектов, расположенных ближе всего к указанному пространственному объекту.  
   
  [Создание, изменение и удаление пространственных индексов](../../relational-databases/spatial/create-modify-and-drop-spatial-indexes.md)  

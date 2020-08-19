@@ -1,4 +1,5 @@
 ---
+description: Заполнение полнотекстовых индексов
 title: Заполнение полнотекстовых индексов | Документация Майкрософт
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,12 +25,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90224fd31bcb4592055ca22890dd63996eadba34
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 77e6331623da6672b0b39ec7ca432201cd9a482b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629265"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88404140"
 ---
 # <a name="populate-full-text-indexes"></a>Заполнение полнотекстовых индексов
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -217,7 +218,7 @@ ALTER FULLTEXT INDEX ON Production.Document
   
 Ниже перечислены переменные части в именах файла журнала сканирования.
 -   <**DatabaseID**> — идентификатор базы данных. \<**dbid**> является пятизначным числом с нулем в начале.  
--   <**FullTextCatalogID**> — идентификатор полнотекстового каталога. \<**catid**> является пятизначным числом с нулем в начале.  
+-   <**FullTextCatalogID**> — идентификатор полнотекстового каталога. \<**catid**> – пятизначное число с нулями в начале.  
 -   <**n**> — целое число, свидетельствующее о существовании одного или нескольких журналов сканирования одного полнотекстового каталога.  
   
  Например, `SQLFT0000500008.2` является файлом журнала сканирования для базы данных с идентификатором базы данных 5 и идентификатором полнотекстового каталога 8. Двойка в конце имени файла показывает, что этой паре базы данных и каталога соответствуют два файла журналов сканирования.  

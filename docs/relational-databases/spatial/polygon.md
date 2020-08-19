@@ -1,4 +1,5 @@
 ---
+description: Многоугольник
 title: Многоугольник | Документация Майкрософт
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3522345ce61af05d3934bff0fb240f8b5100987a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 61062aae61a7653ea226ee56ecca51f0d99bb11a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85666899"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88403180"
 ---
 # <a name="polygon"></a>Многоугольник
 
@@ -155,7 +156,7 @@ SELECT @g.ToString()
   
 Экземпляр geometry, возвращаемый выше, — это `Point(1 3)`.  Если задан экземпляр `Polygon``POLYGON((1 3, 1 5, 1 3, 1 3))` , функция `MakeValid()` вернет `LINESTRING(1 3, 1 5)`.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [STArea (тип данных geometry)](../../t-sql/spatial-geometry/starea-geometry-data-type.md)   
  [STExteriorRing (тип данных geometry)](../../t-sql/spatial-geometry/stexteriorring-geometry-data-type.md)   
  [STNumInteriorRing (тип данных geometry)](../../t-sql/spatial-geometry/stnuminteriorring-geometry-data-type.md)   
