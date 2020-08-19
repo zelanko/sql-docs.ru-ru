@@ -1,4 +1,5 @@
 ---
+description: Потоки и сохраняемость
 title: Потоки и сохраняемость | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3e7c47c668bc2b64a511e316396da913d5dcb930
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 869c5ef7380c315b60d2cbf6ad11f0cf638a0d7f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760760"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452776"
 ---
 # <a name="streams-and-persistence"></a>Потоки и сохраняемость
 Метод [сохранения](../../../ado/reference/ado-api/save-method.md) объекта [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) сохраняет или сохраняет **набор записей** в *файле, а*метод [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) восстанавливает **набор записей** из этого файла.  
@@ -104,7 +105,7 @@ Set rs = nothing
   
  Новое свойство в [элементе управления](../../../ado/reference/rds-api/datacontrol-object-rds.md)RDS ( [URL](../../../ado/reference/rds-api/url-property-rds.md)) указывает на страницу. ASP, создающую **набор записей**. Это означает, что объект **набора записей** можно получить без RDS, используя объект [факта](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) на стороне сервера или пользователь, записывающий бизнес-объект. Это значительно упрощает модель программирования RDS.  
   
- Код на стороне сервера с именемhttps://server/directory/recordset.asp:  
+ Код на стороне сервера с именем https://server/directory/recordset.asp:  
   
 ```  
 <%  
@@ -160,7 +161,7 @@ function GetRs()
 ...  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод Open (набор записей ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Метод Save](../../../ado/reference/ado-api/save-method.md)

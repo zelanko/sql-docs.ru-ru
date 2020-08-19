@@ -1,4 +1,5 @@
 ---
+description: Основные принципы RDS
 title: Основы RDS | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a676f0a7-7d17-45db-87c1-3fc78627465f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c164ea2b4f54f78a416eea4ae5ca282f6c390484
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a6263acd1a51aa73ab004103eb6a7315626335ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764725"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452136"
 ---
 # <a name="rds-fundamentals"></a>Основные принципы RDS
 > [!IMPORTANT]
@@ -36,7 +37,7 @@ ms.locfileid: "82764725"
   
 -   [Сводка по объектной модели RDS](../../../ado/guide/remote-data-service/rds-object-model-summary.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Решения для удаленного доступа к данным](../../../ado/guide/remote-data-service/solutions-for-remote-data-access.md)   
  [Сценарий RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [Руководство по RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   

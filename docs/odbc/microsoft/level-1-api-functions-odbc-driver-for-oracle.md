@@ -1,4 +1,5 @@
 ---
+description: Функции API уровня 1 (драйвер ODBC для Oracle)
 title: Функции API уровня 1 (драйвер ODBC для Oracle) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 98cced6f-41b8-43c1-a3cd-f4ea1615c0af
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 37305ee75ebeb0686bafe039f1102cb3c6e18674
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0c82ab0f481fbc60d0308895640371e84886e77e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299954"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483547"
 ---
 # <a name="level-1-api-functions-odbc-driver-for-oracle"></a>Функции API уровня 1 (драйвер ODBC для Oracle)
 > [!IMPORTANT]  
@@ -36,7 +37,7 @@ ms.locfileid: "81299954"
 |**SQLGetConnectOption**|Возвращает текущее значение параметра соединения. Эта функция поддерживается частично. Драйвер поддерживает все значения аргумента *параметром fOption* , но не поддерживает некоторые значения *впарам* для аргумента *параметром fOption* [SQL_TXN_ISOLATION](../../odbc/microsoft/connect-options.md). Дополнительные сведения см. в разделе [Параметры подключения](../../odbc/microsoft/connect-options.md).|  
 |**SQLGetData**|Получает значение одного поля в текущей записи заданного результирующего набора.|  
 |**SQLGetFunctions**|Возвращает значение TRUE для всех поддерживаемых функций. Реализуется диспетчером драйверов.|  
-|**SQLGetInfo**|Возвращает сведения, включая СКЛХДБК, СКЛУСМАЛЛИНТ, СКЛПОИНТЕР, SQLSMALLINT и SQLSMALLINT \*, о драйвере ODBC для Oracle и источнике данных, связанном с маркером подключения, *хдбк*.|  
+|**SQLGetInfo**|Возвращает сведения, включая СКЛХДБК, СКЛУСМАЛЛИНТ, СКЛПОИНТЕР, SQLSMALLINT и SQLSMALLINT \* , о драйвере ODBC для Oracle и источнике данных, связанном с маркером подключения, *хдбк*.|  
 |**SQLGetStmtOption**|Возвращает текущее значение параметра инструкции. Дополнительные сведения см. в разделе [Параметры инструкции](../../odbc/microsoft/statement-options.md).|  
 |**SQLGetTypeInfo**|Возвращает сведения о типах данных, поддерживаемых источником данных. Драйвер возвращает сведения в результирующем наборе SQL.|  
 |**SQLParamData**|Используется в сочетании с **SQLPutData** для указания данных параметра во время выполнения инструкции.|  

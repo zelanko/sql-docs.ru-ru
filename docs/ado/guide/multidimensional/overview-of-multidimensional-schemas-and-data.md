@@ -1,4 +1,5 @@
 ---
+description: Общие сведения о многомерных схемах и данных
 title: Общие сведения о многомерных схемах и данных | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4a2f6dbd2c5d075bb888e61bb01e1094c8ef5c0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 449bfe5056cdf96f86b5371731c2d1c0b00ba31e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748090"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452426"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>Общие сведения о многомерных схемах и данных
 ## <a name="understanding-multidimensional-schemas"></a>Основные сведения о многомерных схемах  
@@ -58,15 +59,15 @@ Hamburg, Munich, Stuttgart}
   
  Каждый уровень имеет набор элементов следующим образом:  
   
--   Мир`= {All}`  
+-   Мир `= {All}`  
   
--   Континентов`= {North America, Europe}`  
+-   Континентов `= {North America, Europe}`  
   
--   Таких`= {Canada, USA, UK, Germany}`  
+-   Таких `= {Canada, USA, UK, Germany}`  
   
--   Регионах`= {Canada-East, Canada-West, USA-NE, USA-NW, USA-SE, USA-SW, England, Ireland, Scotland, Wales, Germany-North, Germany-South}`  
+-   Регионах `= {Canada-East, Canada-West, USA-NE, USA-NW, USA-SE, USA-SW, England, Ireland, Scotland, Wales, Germany-North, Germany-South}`  
   
--   Городов`= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
+-   Городов `= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
   
 ### <a name="members"></a>Элементы  
  Элементы на конечном уровне иерархии не имеют дочерних элементов, а элементы на корневом уровне не имеют родителя. Все остальные члены имеют по крайней мере один родительский элемент и хотя бы один дочерний элемент. Например, частичный обход дерева иерархии в измерении Geography дает следующие связи типа «родители-потомки»:  

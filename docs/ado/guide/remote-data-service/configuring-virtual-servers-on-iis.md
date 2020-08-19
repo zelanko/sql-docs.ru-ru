@@ -1,4 +1,5 @@
 ---
+description: Настройка виртуальных серверов в IIS
 title: Настройка виртуальных серверов в IIS | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,24 +13,24 @@ helpviewer_keywords:
 ms.assetid: 2b4786c6-40c4-4ce1-9ad4-03df436e0aff
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fded1c66de5cd6c64d8663964de510e9d2f982f9
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f4e09c5775d87d3339a4965b587828c613ed89fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749998"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452276"
 ---
 # <a name="configuring-virtual-servers-on-iis"></a>Настройка виртуальных серверов в IIS
 При создании виртуальных серверов в службы IIS 4,0 необходимо выполнить следующие два дополнительных действия, чтобы настроить виртуальный сервер для работы с RDS:  
   
 1.  При настройке сервера установите флажок "разрешить выполнение доступа".  
   
-2.  Переместите мсадкс. dll в *VRoot*\мсадк, где *VRoot* — это корневой каталог виртуального сервера.  
+2.  Переместите msadcs.dll в *VRoot*\мсадк, где *VRoot* — это корневой каталог виртуального сервера.  
   
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основные принципы RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

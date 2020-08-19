@@ -1,4 +1,5 @@
 ---
+description: Служба Remote Data Service (RDS)
 title: Удаленная служба данных (RDS) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 63a5f26b-e7ca-47d9-a004-59eaad6052b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3b8df2482c4040c157c962178fdfddd8ead5bb84
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c367d9e8926d04852bde756a430116f25bfc3b31
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747652"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452036"
 ---
 # <a name="remote-data-service-rds"></a>Служба Remote Data Service (RDS)
 Служба Remote Data Service (RDS) — это функция ADO, с помощью которой можно перемещать данные с сервера в клиентское приложение или на веб-страницу, управлять данными на клиенте и возвращать обновления на сервер в одном цикле обработки.  

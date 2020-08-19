@@ -1,4 +1,5 @@
 ---
+description: Работа с многомерными данными
 title: Работа с многомерными данными | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dcd4839fc984dacddc79f54b350a98cdbe53355b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7c37f18f8bcaa3d0c1f78b3ddb8d0c6413fe7277
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747994"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452396"
 ---
 # <a name="working-with-multidimensional-data"></a>Работа с многомерными данными
 Набор *ячеек* является результатом запроса к многомерным данным. Он состоит из набора осей, обычно не более четырех осей и обычно двух или трех. *Ось* — это коллекция элементов из одного или нескольких измерений, которые используются для нахождение или фильтрации конкретных значений в Кубе.  
@@ -30,7 +31,7 @@ ms.locfileid: "82747994"
   
  Например, куб имеет следующие шесть измерений (Обратите внимание, что эта схема куба немного отличается от примера, приведенного в разделе [Общие сведения о многомерных схемах и данных](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)).  
   
--   Продавец  
+-   Salesperson  
   
 -   Geography (естественная иерархия) — континенты, страны, Штаты и т. д.  
   

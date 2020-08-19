@@ -1,4 +1,5 @@
 ---
+description: Типы курсоров (ADO)
 title: Типы курсоров (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4953b0509cade52a8badd8d578c9fa13f0c2b42b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ea996827565f0cc6d593078e7772c336699260bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759050"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452716"
 ---
 # <a name="types-of-cursors-ado"></a>Типы курсоров (ADO)
 Как правило, приложение должно использовать простейший курсор, который предоставляет необходимый доступ к данным. Каждая дополнительная характеристика курсора за пределами основ (последовательное, только для чтения, статическая, прокрутка, без буферизации) имеет цену за память клиента, сетевую нагрузку или производительность. Во многих случаях параметры курсора по умолчанию создают более сложный курсор, чем действительно требуется приложению.  
@@ -44,7 +45,7 @@ ms.locfileid: "82759050"
   
 -   [Динамические курсоры](../../../ado/guide/data/dynamic-cursors.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Однопроходные курсоры](../../../ado/guide/data/forward-only-cursors.md)   
  [Статические курсоры](../../../ado/guide/data/static-cursors.md)   
  [Курсоры набора ключей](../../../ado/guide/data/keyset-cursors.md)   

@@ -1,4 +1,5 @@
 ---
+description: Обработка транзакций
 title: Обработка транзакций | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 74ab6706-e2dc-42cb-af77-dbc58a9cf4ce
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 33e78f7a278623c5990a22a638c5a8e693b9a3e1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5b4d8e959cab799c5436b1c1357ae1e734d3d5a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759080"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452706"
 ---
 # <a name="transaction-processing"></a>Обработка транзакций
 *Транзакция* разделяет начало и конец последовательности операций доступа к данным, выполняемых по соединению. В соответствии с транзакционными возможностями источника данных объект **Connection** также позволяет создавать транзакции и управлять ими. Например, используя поставщик OLE DB Майкрософт для SQL Server для доступа к базе данных на Microsoft SQL Server, можно создать несколько вложенных транзакций для выполняемых команд.  
