@@ -1,4 +1,5 @@
 ---
+description: Источник OData
 title: Источник OData | Документы Майкрософт
 ms.date: 09/17/2018
 ms.prod: sql
@@ -15,12 +16,12 @@ f1_keywords:
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e06cb4ec3bbc74779ad2fcb4f36d6e75a4e7cb55
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8f74fa8478953c4c1353d35f49250896ab2a7ab8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916223"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425826"
 ---
 # <a name="odata-source"></a>Источник OData
 
@@ -64,7 +65,7 @@ ms.locfileid: "86916223"
   
 ## <a name="related-topics-in-this-section"></a>Связанные подразделы в этом разделе  
   
--   [Руководство. Использование источника OData](../../integration-services/data-flow/tutorial-using-the-odata-source.md)  
+-   [Руководство по Использование источника OData](../../integration-services/data-flow/tutorial-using-the-odata-source.md)  
   
 -   [Изменение запроса источника OData во время выполнения](../../integration-services/data-flow/modify-odata-source-query-at-runtime.md)  
   
@@ -107,7 +108,7 @@ ms.locfileid: "86916223"
   
 #### <a name="use-collection-or-resource-path--resource-path"></a>Использование пути к коллекции или ресурсу = путь к ресурсу  
  **Resource path**  
- Введите путь к ресурсу. Пример: Employees  
+ Введите путь к ресурсу. Например: Employees  
   
 ## <a name="odata-source-editor-columns-page"></a>Редактор источника OData (страница «Столбцы»)
   На странице **Столбцы** диалогового окна **Редактор источника OData** можно выбрать внешние (исходные) столбцы, которые должны быть включены в выходные данные, и сопоставить их с выходными столбцами.  
@@ -150,6 +151,6 @@ ms.locfileid: "86916223"
  Применить параметр обработки ошибок к выбранным ячейкам.  
   
 ## <a name="see-also"></a>См. также:  
- [Диспетчер подключений OData](../../integration-services/connection-manager/odata-connection-manager.md)  
+ [Диспетчер соединений OData](../../integration-services/connection-manager/odata-connection-manager.md)  
   
   

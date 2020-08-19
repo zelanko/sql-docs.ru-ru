@@ -1,5 +1,6 @@
 ---
-title: Руководство по Использование источника OData | Документация Майкрософт
+description: Руководство по Использование источника OData
+title: Учебник. Использование источника OData | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 616a19e5c6af2c3818e3d9737e72b0f7cd7486e8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e12fe80482b6b6ffd96fe6e56e6dfad1a92362fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916686"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425676"
 ---
 # <a name="tutorial-using-the-odata-source"></a>Руководство по Использование источника OData
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  Этот учебник содержит процедуру извлечения коллекции **Employees** из образца **Northwind** службы OData (https://services.odata.org/V3/Northwind/Northwind.svc/) ) и последующей ее загрузки в неструктурированный файл.  
+  Этот учебник содержит процедуру извлечения коллекции **Employees** из образца **Northwind** службы OData (https://services.odata.org/V3/Northwind/Northwind.svc/)) и последующей ее загрузки в неструктурированный файл.  
   
 ## <a name="1-create-an-integration-services-project"></a>1. Создание проекта служб Integration Services  
   
@@ -46,7 +47,7 @@ ms.locfileid: "86916686"
   
 4.  Дважды щелкните компонент **Источник OData**, чтобы открыть диалоговое окно **Редактор источника OData**.  
   
-5.  Щелкните **Создать…** , чтобы добавить новый диспетчера соединений OData.  
+5.  Щелкните **Создать…**, чтобы добавить новый диспетчера соединений OData.  
   
 6.  Введите URL-адрес службы OData в поле **Расположение сервисного документа**. Это может быть URL-адрес сервисного документа либо определенный веб-канал или сущность. В целях этого учебника введите URL-адрес сервисного документа: [https://services.odata.org/V3/Northwind/Northwind.svc/](https://services.odata.org/V3/Northwind/Northwind.svc/).  
   
@@ -74,7 +75,7 @@ ms.locfileid: "86916686"
   
 2.  Подключите компонент **Источник OData** к компоненту **Назначение «Неструктурированный файл»** с помощью синей стрелки.  
   
-3.  Дважды щелкните **Назначение "Неструктурированный файл"** . Отобразится диалоговое окно **Редактор назначения «Неструктурированный файл»** .  
+3.  Дважды щелкните **Назначение "Неструктурированный файл"**. Отобразится диалоговое окно **Редактор назначения «Неструктурированный файл»** .  
   
 4.  В диалоговом окне **Редактор назначения «Неструктурированный файл»** щелкните **Создать** , чтобы создать новый диспетчер соединений с неструктурированными файлами.  
   

@@ -1,4 +1,5 @@
 ---
+description: Имя параметров сортировки Windows (Transact-SQL)
 title: Имя параметров сортировки Windows (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2019
@@ -18,12 +19,12 @@ ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfe6578107f87eddb62f5f31efd93778f8c2af96
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 2a95152ded1edc82ea153c40b6f9df68c1d3dea7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484065"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426526"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Имя параметров сортировки Windows (Transact-SQL)
 
@@ -74,12 +75,12 @@ CollationDesignator_<ComparisonStyle>
 Пропуск этого параметра означает, что ширина символов не учитывается, **WS** означает, что ширина символов учитывается.
 
 *VariationSelectorSensitivity*  
-- **Применимо к**: начиная с [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
+- **Область применения**: Начиная с [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
 
 - Пропуск этого параметра означает, что знаки выбора варианта не учитываются, **VSS** означает, что знаки выбора варианта учитываются.
 
 **UTF8**  
-- **Применимо к**: начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
+- **Область применения**: Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
 
 - Указывает кодировку UTF-8, используемую для допустимых типов данных. Дополнительные сведения см. в статье [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
 
@@ -89,7 +90,7 @@ CollationDesignator_<ComparisonStyle>
 **BIN2**  
 Определяет двоичный порядок сортировки, использующий семантику сравнения кодовых точек.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 В зависимости от версии параметров сортировки для некоторых кодовых точек могут быть не определены веса сортировки или соответствия прописных и строчных букв. Например, сравните выходные данные функции `LOWER`, когда в нее передается один и тот же символ, но в разных версиях параметров сортировки:
 
 ```sql

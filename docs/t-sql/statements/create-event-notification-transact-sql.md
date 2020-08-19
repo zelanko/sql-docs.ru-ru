@@ -1,4 +1,5 @@
 ---
+description: CREATE EVENT NOTIFICATION (Transact-SQL)
 title: CREATE EVENT NOTIFICATION (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7e5b1db8f48e6d4f336d47e8ce6dc09a1659be7f
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 3c13c9635537ead88d8cb0f140a65cdf2dd82c35
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392752"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426766"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -97,7 +98,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
  Диалог остается открытым до удаления уведомления о событии. Некоторые ошибки могут привести к досрочному завершению диалогов. Явное завершение всех или некоторых диалогов может помешать конечной службе получать новые сообщения.  
   
  { **'** _broker\_instance\_specifier_ **'**  |  **'current database'** }  
- Указывает экземпляр компонента Service Broker, на котором выполняется *broker_service*. Значение для определенного компонента Service Broker может быть получено путем запроса столбца **service_broker_guid** представления каталога **sys.databases**. Чтобы указать экземпляр компонента Service Broker в текущей базе данных, используйте **'current database'** . **'current database'** — это нечувствительный к регистру строковый литерал.  
+ Указывает экземпляр компонента Service Broker, на котором выполняется *broker_service*. Значение для определенного компонента Service Broker может быть получено путем запроса столбца **service_broker_guid** представления каталога **sys.databases**. Чтобы указать экземпляр компонента Service Broker в текущей базе данных, используйте **'current database'**. **'current database'** — это нечувствительный к регистру строковый литерал.  
   
 > [!NOTE]  
 >  Этот параметр недоступен в автономной базе данных.  

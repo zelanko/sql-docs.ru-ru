@@ -1,4 +1,5 @@
 ---
+description: Задача «Скрипт»
 title: Задача "Скрипт" | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 18ff96f3fd227507d57051cec69f5704b7b64749
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 506b99d81a47df7a88a2ef33ea91815b99e165fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921162"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425886"
 ---
 # <a name="script-task"></a>Задача «Скрипт»
 
@@ -99,7 +100,7 @@ ms.locfileid: "86921162"
  Дополнительные сведения о задаче «Скрипт» см. в разделах [Script Task](../../integration-services/control-flow/script-task.md) и [Настройка задачи «Скрипт» в редакторе задачи «Скрипт»](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Дополнительные сведения о программировании задачи «Скрипт» см. в разделе [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
   
 ### <a name="options"></a>Параметры  
- **Название**  
+ **имя**;  
  Задайте уникальное имя для задачи «Скрипт». Это имя используется в качестве метки для значка задачи.  
   
 > [!NOTE]  
@@ -130,13 +131,13 @@ ms.locfileid: "86921162"
  Для изменения имени метода в проекте VSTA следует поменять значение свойства **EntryPoint** .  
   
  **ReadOnlyVariables**  
- Введите через запятую список переменных "только для чтения", которые доступны для скрипта, или нажмите кнопку с многоточием ( **...** ) и выберите переменные в диалоговом окне **Выбор переменных**.  
+ Введите через запятую список переменных "только для чтения", которые доступны для скрипта, или нажмите кнопку с многоточием (**...**) и выберите переменные в диалоговом окне **Выбор переменных**.  
   
 > [!NOTE]  
 >  В именах переменных учитывается регистр.  
   
  **ReadWriteVariables**  
- Введите через запятую список переменных "для чтения и записи", которые доступны для скрипта, или нажмите кнопку с многоточием ( **...** ) и выберите переменные в диалоговом окне **Выбор переменных**.  
+ Введите через запятую список переменных "для чтения и записи", которые доступны для скрипта, или нажмите кнопку с многоточием (**...**) и выберите переменные в диалоговом окне **Выбор переменных**.  
   
 > [!NOTE]  
 >  В именах переменных учитывается регистр.  

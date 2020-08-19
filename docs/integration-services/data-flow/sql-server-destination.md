@@ -1,4 +1,5 @@
 ---
+description: назначение «SQL Server»
 title: Назначение SQL Server | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 278cfb16ddc6c00fba9570d7912a6d5fa3a31727
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dbd48bf2dee8268fa87209ab3d4283938961c918
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917770"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425806"
 ---
 # <a name="sql-server-destination"></a>назначение «SQL Server»
 
@@ -68,7 +69,7 @@ ms.locfileid: "86917770"
   
  Дополнительные сведения о параметрах массовой загрузки см. в разделе [BULK INSERT (Transact-SQL)](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
-#### <a name="performance-improvements"></a>Повышение производительности  
+#### <a name="performance-improvements"></a>Улучшения производительности  
  Чтобы повысить производительность массовой вставки и доступа к таблице данных во время операции массовой вставки, необходимо изменить параметры по умолчанию следующим образом:  
   
 -   Не проверять ограничения целевых таблиц или представлений во время операции массового импорта.  

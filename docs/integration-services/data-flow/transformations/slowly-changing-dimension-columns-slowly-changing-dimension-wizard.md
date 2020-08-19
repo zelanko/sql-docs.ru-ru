@@ -1,4 +1,5 @@
 ---
+description: Столбцы медленно меняющихся измерений (мастер медленно изменяющихся измерений)
 title: Столбцы медленно изменяющихся измерений (мастер медленно изменяющихся измерений) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 36de99d5-5368-48e0-b876-17e9c6862c6c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 92ae77d412ad318a01b437382b6d4557811c2b33
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8b27c9c0e575775449d2f3a25c5a20bd6667b5cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919494"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425726"
 ---
 # <a name="slowly-changing-dimension-columns-slowly-changing-dimension-wizard"></a>Столбцы медленно меняющихся измерений (мастер медленно изменяющихся измерений)
 
@@ -39,6 +40,6 @@ ms.locfileid: "86919494"
  Выберите столбец измерения и удалите его из списка сопоставленных столбцов, нажав кнопку **Удалить**.  
   
 ## <a name="see-also"></a>См. также:  
- [Настройка выходов с помощью мастера медленно изменяющихся измерений](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
+ [Настройка выходов при помощи мастера медленно изменяющихся измерений](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

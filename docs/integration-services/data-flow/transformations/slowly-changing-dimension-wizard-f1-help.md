@@ -1,4 +1,5 @@
 ---
+description: Справка F1 мастера медленно меняющихся измерений
 title: Справка F1 мастера медленно меняющихся измерений | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e4d62b73-77c5-4b26-9b6d-d5f245768fc8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d4147da3260a2b8620d880e2d20c3ed4fd610d05
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d97c2228226b86a2f1700311743b99039c781025
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919467"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425736"
 ---
 # <a name="slowly-changing-dimension-wizard-f1-help"></a>Справка F1 мастера медленно меняющихся измерений
 
@@ -28,7 +29,7 @@ ms.locfileid: "86919467"
   
  Дополнительные сведения о работе этого мастера см. в разделе [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md).  
   
- [Приветствие мастера медленно изменяющихся измерений](../../../integration-services/data-flow/transformations/welcome-to-the-slowly-changing-dimension-wizard.md)  
+ [Приветствие мастера медленно меняющихся измерений](../../../integration-services/data-flow/transformations/welcome-to-the-slowly-changing-dimension-wizard.md)  
  Приветствие мастера медленно изменяющихся измерений.  
   
  [Выбор таблицы измерения и ключей (мастер медленно изменяющихся измерений)](../../../integration-services/data-flow/transformations/select-a-dimension-table-and-keys-slowly-changing-dimension-wizard.md)  
@@ -46,11 +47,11 @@ ms.locfileid: "86919467"
  [Выводимые элементы измерения (мастер медленно изменяющихся измерений)](../../../integration-services/data-flow/transformations/inferred-dimension-members-slowly-changing-dimension-wizard.md)  
  Укажите параметры для элементов выводимых элементов измерения.  
   
- [Завершение работы мастера медленно изменяющихся измерений](../../../integration-services/data-flow/transformations/finish-the-slowly-changing-dimension-wizard.md)  
+ [Завершение работы мастера медленно меняющихся измерений](../../../integration-services/data-flow/transformations/finish-the-slowly-changing-dimension-wizard.md)  
  Отображает параметры конфигурации, выбранные пользователем.  
   
 ## <a name="see-also"></a>См. также:  
  [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)   
- [Настройка выходов с помощью мастера медленно изменяющихся измерений](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
+ [Настройка выходов при помощи мастера медленно изменяющихся измерений](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

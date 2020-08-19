@@ -1,7 +1,8 @@
 ---
+description: ALTER SERVER ROLE (Transact-SQL)
 title: ALTER SERVER ROLE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 09/06/2016
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: pdw, sql-database
 ms.reviewer: ''
@@ -19,12 +20,12 @@ ms.assetid: 7a4db7bb-c442-4e12-9a8a-114da5bc7710
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2307a80d3a40599aed4762077b188baac0533967
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c79b8ad73bc939354d3b9078c9486531ec8b01ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68070274"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426816"
 ---
 # <a name="alter-server-role-transact-sql"></a>ALTER SERVER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "68070274"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server  
   
 ALTER SERVER ROLE server_role_name   
@@ -46,7 +47,7 @@ ALTER SERVER ROLE server_role_name
 } [ ; ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Parallel Data Warehouse  
   
 ALTER SERVER ROLE  server_role_name  ADD MEMBER login;  
@@ -98,7 +99,7 @@ WITH NAME **=** _new_server_role_name_
 ### <a name="a-changing-the-name-of-a-server-role"></a>A. Изменение имени роли сервера  
 В следующем примере создается роль сервера с именем `Product`, затем имя роли сервера изменяется на `Production`.  
   
-```  
+```sql
 CREATE SERVER ROLE Product ;  
 ALTER SERVER ROLE Product WITH NAME = Production ;  
 GO  
@@ -107,14 +108,14 @@ GO
 ### <a name="b-adding-a-domain-account-to-a-server-role"></a>Б. Добавление учетной записи домена к роли сервера  
 В следующем примере к определяемой пользователем роли сервера с именем `Production` добавляется учетная запись домена с именем `adventure-works\roberto0`.  
   
-```  
+```sql
 ALTER SERVER ROLE Production ADD MEMBER [adventure-works\roberto0] ;  
 ```  
   
 ### <a name="c-adding-a-sql-server-login-to-a-server-role"></a>В. Добавление имени входа SQL Server к роли сервера  
 В следующем примере к предопределенной роли сервера `diskadmin` добавляется имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`Ted`.  
   
-```  
+```sql
 ALTER SERVER ROLE diskadmin ADD MEMBER Ted ;  
 GO  
 ```  
@@ -122,14 +123,14 @@ GO
 ### <a name="d-removing-a-domain-account-from-a-server-role"></a>Г. Удаление учетной записи домена из роли сервера  
 В следующем примере учетная запись домена с именем `adventure-works\roberto0` удаляется из определяемой пользователем роли сервера с именем `Production`.  
   
-```  
+```sql
 ALTER SERVER ROLE Production DROP MEMBER [adventure-works\roberto0] ;  
 ```  
   
 ### <a name="e-removing-a-sql-server-login-from-a-server-role"></a>Д. Удаление имени входа SQL Server из роли сервера  
 В следующем примере имя входа `Ted`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] удаляется из предопределенной роли сервера `diskadmin`.  
   
-```  
+```sql
 ALTER SERVER ROLE Production DROP MEMBER Ted ;  
 GO  
 ```  
@@ -137,7 +138,7 @@ GO
 ### <a name="f-granting-a-login-the-permission-to-add-logins-to-a-user-defined-server-role"></a>Е. Предоставление имени входа разрешения на добавление имен входа к определяемой пользователем роли сервера  
 В следующем примере пользователь `Ted` получает разрешение добавлять другие имена входа к определяемой пользователем роли сервера с именем `Production`.  
   
-```  
+```sql
 GRANT ALTER ON SERVER ROLE::Production TO Ted ;  
 GO  
 ```  
@@ -145,7 +146,7 @@ GO
 ### <a name="g-to-view-role-membership"></a>Ж. Просмотр членства в роли  
 Чтобы просмотреть членство в роли, воспользуйтесь страницей **Роль сервера (Члены)** в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или выполните следующий запрос:  
   
-```  
+```sql
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   
 SRM.member_principal_id, SP2.name  AS Member_Name  
 FROM sys.server_role_members AS SRM  
@@ -161,14 +162,14 @@ ORDER BY  SP.name,  SP2.name
 ### <a name="h-basic-syntax"></a>З. Базовый синтаксис  
 В следующем примере к роли сервера `LargeRC` добавляется имя входа `Anna`.  
   
-```  
+```sql
 ALTER SERVER ROLE LargeRC ADD MEMBER Anna;  
 ```  
   
 ### <a name="i-remove-a-login-from-a-resource-class"></a>И. Удаление имени входа из класса ресурсов.  
 В следующем примере удаляется членство Анны из роли сервера `LargeRC`.  
   
-```  
+```sql
 ALTER SERVER ROLE LargeRC DROP MEMBER Anna;  
 ```  
   

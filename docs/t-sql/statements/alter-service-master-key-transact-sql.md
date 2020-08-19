@@ -1,4 +1,5 @@
 ---
+description: ALTER SERVICE MASTER KEY (Transact-SQL)
 title: ALTER SERVICE MASTER KEY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9cc3706e371f1c9c4fcc031fd4665459e65937ca
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 53526aa2ba6a59b623382aa1c47b11443759756b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381118"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426826"
 ---
 # <a name="alter-service-master-key-transact-sql"></a>ALTER SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,25 +69,25 @@ ALTER SERVICE MASTER KEY
  Указывает имя старой учетной записи службы Windows.  
   
 > [!WARNING]  
->  Данный параметр является устаревшим. Не используйте. Взамен используйте диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  Данный параметр является устаревшим. Не используется. Взамен используйте диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  OLD_PASSWORD **='***password***'**  
  Указывает пароль старой учетной записи службы Windows.  
   
 > [!WARNING]  
->  Данный параметр является устаревшим. Не используйте. Взамен используйте диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  Данный параметр является устаревшим. Не используется. Взамен используйте диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  NEW_ACCOUNT **='***account_name***'**  
  Указывает имя новой учетной записи службы Windows.  
   
 > [!WARNING]  
->  Данный параметр является устаревшим. Не используйте. Взамен используйте диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  Данный параметр является устаревшим. Не используется. Взамен используйте диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  NEW_PASSWORD **='***password***'**  
  Указывает пароль новой учетной записи службы Windows.  
   
 > [!WARNING]  
->  Данный параметр является устаревшим. Не используйте. Взамен используйте диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  Данный параметр является устаревшим. Не используется. Взамен используйте диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="remarks"></a>Remarks  
  Главный ключ службы автоматически создается в первый раз, когда он требуется для шифрования пароля связанного сервера, учетных данных или главного ключа базы данных. Главный ключ службы шифруется с помощью ключа локального компьютера или интерфейса API защиты данных Windows. Этот API использует ключ, получаемый из учетных данных Windows, которые соответствуют учетной записи службы для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

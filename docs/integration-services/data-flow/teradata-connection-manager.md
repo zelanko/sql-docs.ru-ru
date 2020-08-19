@@ -1,4 +1,5 @@
 ---
+description: Использование диспетчера подключений Teradata
 title: Использование диспетчера подключений Teradata | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/22/2019
@@ -9,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a0aa51c868ae89062320640015ad01ef79134e8d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e0181cb68a68e7788d59f70d25c9b6935478f248
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917761"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425816"
 ---
 # <a name="use-the-teradata-connection-manager"></a>Использование диспетчера подключений Teradata
 
@@ -48,11 +49,11 @@ ms.locfileid: "86917761"
 1. (Необязательно) В раскрывающемся списке **База данных по умолчанию** выберите базу данных Teradata для подключения. Если это разрешение на доступ к базе данных недействительно, выводится сообщение об ошибке, после чего можно вручную ввести имя базы данных.
 
 1. (Необязательно) В поле **Учетная запись** введите имя учетной записи, которая соответствует имени пользователя. Если это значение не задано, используется учетная запись для непосредственного владельца базы данных.
-1. Нажмите кнопку **ОК**.
+1. Щелкните **ОК**.
 
 ## <a name="custom-property"></a>Пользовательское свойство
 
-Пользовательское свойство `UseUTF8CharSet` указывает, используется ли кодировка UTF-8. Значение по умолчанию ― *True*.
+Пользовательское свойство `UseUTF8CharSet` указывает, используется ли кодировка UTF-8. По умолчанию используется значение *True*.
 
 Чтобы задать свойство:
 
@@ -67,5 +68,5 @@ ms.locfileid: "86917761"
 ## <a name="next-steps"></a>Дальнейшие действия
 
 - Настройка [источника Teradata](teradata-source.md).
-- Настройка [Назначения Teradata](teradata-destination.md).
+- Настройка [назначения Teradata](teradata-destination.md).
 - Если у вас возникнут вопросы, посетите страницу [технического сообщества](https://aka.ms/AA5u35j).

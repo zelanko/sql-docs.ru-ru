@@ -1,4 +1,5 @@
 ---
+description: Учетные данные Oracle для выполнения скрипта
 title: Учетные данные Oracle для выполнения скрипта | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4a301cb0-2f5b-41ba-81bf-46b41d07f137
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d6e7cd34cbbccded9d8b92a9013e988980d8622f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ba5959cec249da89655d1edb4df8ef8ca225a416
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917180"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426016"
 ---
 # <a name="oracle-credentials-for-running-script"></a>Учетные данные Oracle для выполнения скрипта
 

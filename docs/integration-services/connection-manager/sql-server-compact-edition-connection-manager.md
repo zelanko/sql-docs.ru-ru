@@ -1,4 +1,5 @@
 ---
+description: Диспетчер соединений SQL Server Compact Edition
 title: Диспетчер подключений SQL Server Compact Edition | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ba627d4d-41f4-49fc-a921-f534cde67770
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 777c360fd17082c06ff9aa4b0356ff3a95cbd332
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ae61fcfcec740ee26a7fc2a57c0e03b0141e6e10
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917210"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425946"
 ---
 # <a name="sql-server-compact-edition-connection-manager"></a>Диспетчер соединений SQL Server Compact Edition
 
@@ -100,11 +101,11 @@ ms.locfileid: "86917210"
   
  Параметр «Режим» имеет четыре значения, описанные в следующей таблице.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
-|**Только для чтения**|Определяет доступ к базе данных только для чтения.|  
+|**Только чтение**|Определяет доступ к базе данных только для чтения.|  
 |**Чтение и запись**|Назначает разрешения на чтение и запись базы данных.|  
-|**Монопольно**|Задает монопольный доступ к базе данных.|  
+|**Монопольный доступ**|Задает монопольный доступ к базе данных.|  
 |**Общий доступ на чтение**|Определяет возможность одновременного чтения базы данных другими пользователями.|  
   
  **Persist Security Info**  

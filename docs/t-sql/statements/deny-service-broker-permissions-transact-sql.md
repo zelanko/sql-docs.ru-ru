@@ -1,4 +1,5 @@
 ---
+description: DENY, запрет разрешений компонента Service Broker (Transact-SQL)
 title: DENY, запрет разрешений для компонента Service Broker (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 06/09/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 360c83ddf14139665c6ab1132c84b4e3b608e735
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 8043eb95855e463c63bf4667209d47b293a492e7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483828"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426606"
 ---
 # <a name="deny-service-broker-permissions-transact-sql"></a>DENY, запрет разрешений компонента Service Broker (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,19 +60,19 @@ DENY permission  [ ,...n ] ON
  *permission*  
  Указывает разрешение, которое может быть запрещено для защищаемых элементов компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
- CONTRACT **::** _contract_name_  
+ CONTRACT **::**_contract_name_  
  Указывает контракт, для которого запрещено разрешение. Квалификатор области **::** является обязательным.  
   
- MESSAGE TYPE **::** _message_type_name_  
+ MESSAGE TYPE **::**_message_type_name_  
  Указывает тип сообщений, для которого запрещено разрешение. Квалификатор области **::** является обязательным.  
   
- REMOTE SERVICE BINDING **::** _remote_binding_name_  
+ REMOTE SERVICE BINDING **::**_remote_binding_name_  
  Указывает привязку удаленной службы, для которой запрещено разрешение. Квалификатор области **::** является обязательным.  
   
- ROUTE **::** _route_name_  
+ ROUTE **::**_route_name_  
  Указывает маршрут, для которого запрещено разрешение. Квалификатор области **::** является обязательным.  
   
- SERVICE **::** _message_type_name_  
+ SERVICE **::**_message_type_name_  
  Указывает службу, для которой запрещено разрешение. Квалификатор области **::** является обязательным.  
   
  *database_principal*  

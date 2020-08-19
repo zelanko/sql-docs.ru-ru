@@ -1,4 +1,5 @@
 ---
+description: GRANT, предоставление разрешений на тип (Transact-SQL)
 title: GRANT, предоставление разрешений для типа (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 08/10/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 14bd2fb3-1446-49c0-be87-c6a670317ed0
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4e03489c066d4ed25f5d3b15ba30e0ac24a4623b
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 1b9130d9da029cdd759a672de680270f0e2fb27b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484505"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426566"
 ---
 # <a name="grant-type-permissions-transact-sql"></a>GRANT, предоставление разрешений на тип (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -65,7 +66,7 @@ GRANT permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  WITH GRANT OPTION  
  Показывает, что участнику будет дана возможность предоставлять указанное разрешение другим участникам.  
   
- AS \<database_principal> Указывает субъект, от которого субъект, выполняющий данный запрос, наследует право на предоставление разрешения.  
+ AS \<database_principal>. Указывает субъект, от которого субъект, выполняющий данный запрос, наследует право на предоставление разрешения.  
   
  *Database_user*  
  Указывает пользователя базы данных.  
