@@ -1,4 +1,5 @@
 ---
+description: GET CONVERSATION GROUP (Transact-SQL)
 title: GET CONVERSATION GROUP (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/26/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 58d29c1979dc97b43dd6ccb82c5bad4c875995e6
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: c6dc77084c32b88d507cf8216cf901359268252f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484915"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88415760"
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -76,10 +77,10 @@ ms.locfileid: "86484915"
  TIMEOUT *timeout*  
  Указывает продолжительность времени (в миллисекундах), в течение которого компонент Service Broker ожидает поступления сообщения в очередь. Это предложение может быть использовано только вместе с предложением WAITFOR. Если инструкция, использующая WAITFOR, не включает в себя этого предложения или значение *timeout* равно –1, то время ожидания не ограничено. Если время ожидания истекает, GET CONVERSATION GROUP присваивает переменной *\@conversation_group_id* значение NULL.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
   
 > [!IMPORTANT]  
->  Если инструкция GET CONVERSATION GROUP не является первой инструкцией в пакете или хранимой процедуре, предыдущая инструкция должна заканчиваться точкой с запятой ( **;** ) — разделителем инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+>  Если инструкция GET CONVERSATION GROUP не является первой инструкцией в пакете или хранимой процедуре, предыдущая инструкция должна заканчиваться точкой с запятой (**;**) — разделителем инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Если очередь, указанная в инструкции GET CONVERSATION GROUP, недоступна, инструкция выдает ошибку языка [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -136,7 +137,7 @@ GET CONVERSATION GROUP @conversation_group_id
 FROM AdventureWorks.dbo.ExpenseQueue ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [BEGIN DIALOG CONVERSATION (Transact-SQL)](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [MOVE CONVERSATION (Transact-SQL)](../../t-sql/statements/move-conversation-transact-sql.md)  
   

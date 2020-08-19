@@ -1,4 +1,5 @@
 ---
+description: Свойства BOF и EOF (ADO)
 title: Свойства BOF, EOF (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9496a4e2115cb686764981e8a5fae3ecfe59401e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a10ef4731db0e469743d09d9e3b35463d03e7020
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748735"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451135"
 ---
 # <a name="bof-eof-properties-ado"></a>Свойства BOF и EOF (ADO)
 -   **BOF** Указывает, что текущая запись находится перед первой записью в объекте [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) .  
@@ -32,7 +33,7 @@ ms.locfileid: "82748735"
 ## <a name="return-value"></a>Возвращаемое значение  
  Свойства **BOF** и **EOF** возвращают **логические** значения.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Используйте свойства **BOF** и **EOF** , чтобы определить, содержит ли объект **набора** записей записи или выходят за пределы объекта **набора записей** при переходе от записи к записи.  
   
  Свойство **BOF** возвращает **значение true** (-1), если текущая запись находится перед первой записью, и **false** (0), если текущая запись находится в положении или после первой записи.  
@@ -49,7 +50,7 @@ ms.locfileid: "82748735"
   
 ||MoveFirst<br /><br /> MoveLast|MovePrevious<br /><br /> Переместить < 0|Переместить 0|Метод<br /><br /> Переместить > 0|  
 |------|-----------------------------|---------------------------------|------------|-----------------------------|  
-|**BOF** = **True**, **EOF**— = **false**|Разрешено|Error|Error|Разрешено|  
+|**BOF** = **True**, **EOF**— = **false**|Допускается|Error|Error|Допускается|  
 |**BOF** = **False**, **EOF**— = **true**|Разрешено|Разрешено|Error|Error|  
 |Оба значения **true**|Error|Error|Error|Error|  
 |Оба значения **false**|Разрешено|Разрешено|Разрешено|Разрешено|  
@@ -65,7 +66,7 @@ ms.locfileid: "82748735"
 |**MovePrevious**, **Перемещение** < 0|Задайте значение **true**|Без изменения.|  
 |**MoveNext**, **Move** > 0|Без изменения.|Задайте значение **true**|  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>См. также  

@@ -1,4 +1,5 @@
 ---
+description: Фиксация версии (службы Master Data Services)
 title: Фиксация версии
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6b967a39-b333-4b84-9e5f-4fb07e156826
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d5cb3ebca4ab30fdf17b40774d50f44942cba093
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 27564141f1f0f4c90a08449cbd9cffd7cea9dae0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812442"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430076"
 ---
 # <a name="commit-a-version-master-data-services"></a>Фиксация версии (службы Master Data Services)
 
@@ -59,7 +60,7 @@ ms.locfileid: "85812442"
   
 -   [Копирование версии (службы Master Data Services)](../master-data-services/copy-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Версии (службы Master Data Services)](../master-data-services/versions-master-data-services.md)  
   
   

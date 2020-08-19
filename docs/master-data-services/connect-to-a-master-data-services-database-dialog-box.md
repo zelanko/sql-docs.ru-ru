@@ -1,4 +1,5 @@
 ---
+description: Диалоговое окно «Подключение к базе данных служб Master Data Services»
 title: Диалоговое окно «Подключение к базе данных MDS»
 ms.custom: seo-lt-2019
 ms.date: 03/20/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: b2f8c9b9-c31e-4f0d-9095-978709423190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f6791a728c13a5e33b2557243d70563177465e08
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 3d1186c3d0a5309886bf21082ac794ae1def5a01
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811859"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430006"
 ---
 # <a name="connect-to-a-master-data-services-database-dialog-box"></a>Диалоговое окно «Подключение к базе данных служб Master Data Services»
 
@@ -43,7 +44,7 @@ ms.locfileid: "85811859"
 |**Подключить**|Подключение к экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с указанными учетными данными.|  
 |**База данных Master Data Services**|Отображает базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] в указанном экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на основании следующих критериев.<br /><br /> Если пользователь входит в роль сервера **sysadmin** для этого экземпляра, отображаются все базы данных этого экземпляра [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .<br /><br /> Если пользователь входит в роль **db_owner** каких-либо баз данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] этого экземпляра, отображаются эти базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .<br /><br/> Дополнительные сведения о ролях SQL Server см. в разделах [Роли уровня сервера](../relational-databases/security/authentication-access/server-level-roles.md) и [Роли уровня базы данных](../relational-databases/security/authentication-access/database-level-roles.md).|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Страница "Конфигурация базы данных" (диспетчер конфигурации служб Master Data Services)](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
 
 [Установка и настройка служб Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)

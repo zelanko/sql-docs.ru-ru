@@ -1,4 +1,5 @@
 ---
+description: catalog.validate_project (база данных SSISDB)
 title: catalog.validate_project (база данных SSISDB) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 5270689a-46d4-4847-b41f-3bed1899e955
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8dfda68b04a898efc7aa87e5a821e79717113544
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c491a8914fb11da815d0887ae5b2248f1e2a7c19
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912730"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495361"
 ---
 # <a name="catalogvalidate_project-ssisdb-database"></a>catalog.validate_project (база данных SSISDB)
 
@@ -46,7 +47,7 @@ catalog.validate_project [ @folder_name = ] folder_name
  Имя проекта. Параметр *project_name* имеет тип **nvarchar(128)** .  
   
  [ @validate_type = ] *validate_type*  
- Указывает тип выполняемой проверки. Используйте символ `F` для выполнения полной проверки. Этот параметр является необязательным. По умолчанию будет использоваться символ `F`. Параметр *validate_type* имеет тип **char(1)** .  
+ Указывает тип выполняемой проверки. Используйте символ `F` для выполнения полной проверки. Этот параметр является необязательным. По умолчанию будет использоваться символ `F`. Параметр *validate_type* имеет тип **char(1)**.  
   
  [ @validation_id = ] *validation_id*  
  Возвращает уникальный идентификатор (ID) проверки. Параметр *validation_id* имеет тип **bigint**.  
@@ -88,7 +89,7 @@ catalog.validate_project [ @folder_name = ] folder_name
   
 -   Пользователь не имеет соответствующих разрешений  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Проверка помогает выявить проблемы, которые помешают пакету в проекте правильно выполняться. Используйте представления [catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md) или [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) для контроля состояния проверки.  
   
  В проверке могут задействоваться только доступные пользователю среды. Выходные данные проверки отправляются клиенту в форме результирующего набора.  

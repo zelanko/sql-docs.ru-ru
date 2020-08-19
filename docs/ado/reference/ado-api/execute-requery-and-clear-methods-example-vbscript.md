@@ -1,4 +1,5 @@
 ---
+description: Пример методов Execute, Requery и Clear (VBScript)
 title: Пример методов Execute, Requery и Clear (VBScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3a7bbf07-2fca-4892-95f4-eec93f2d5e91
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a0785e3e91c6d01f446e1d49b34a41beef052c48
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 683b4303c3144916de9f974b7715df6480fee9fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760160"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443866"
 ---
 # <a name="execute-requery-and-clear-methods-example-vbscript"></a>Пример методов Execute, Requery и Clear (VBScript)
 В этом примере демонстрируется метод **EXECUTE** при запуске из объекта [команды](../../../ado/reference/ado-api/command-object-ado.md) и объекта [соединения](../../../ado/reference/ado-api/connection-object-ado.md) . Он также использует метод [Requery](../../../ado/reference/ado-api/requery-method.md) для получения текущих данных в [наборе записей](../../../ado/reference/ado-api/recordset-object-ado.md)и метод [clear](../../../ado/reference/ado-api/clear-method-ado.md) для очистки содержимого коллекции [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) . Для выполнения этой процедуры требуются процедуры ExecuteCommand и Принтаутпут.  
@@ -177,7 +178,7 @@ BODY {
 <!-- EndExecuteVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод Clear (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
  [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   

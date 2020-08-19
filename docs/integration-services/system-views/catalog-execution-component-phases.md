@@ -1,4 +1,5 @@
 ---
+description: catalog.execution_component_phases
 title: catalog.execution_component_phases | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 07a9a163-4787-40f7-b371-ac5c6cb4b095
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9ec0b655aa3289ff23abd56d618f9ca0cc9be67d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e307babfd703b83758a6d1d3c7de3e6f62b00119
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912610"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495244"
 ---
 # <a name="catalogexecution_component_phases"></a>catalog.execution_component_phases 
 
@@ -26,7 +27,7 @@ ms.locfileid: "86912610"
 
   Отображает время, затраченное компонентом потока данных на каждом этапе выполнения.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |phase_stats_id|**bigint**|Уникальный идентификатор (ID) этапа.|  
 |execution_id|**bigint**|Уникальный идентификатор для экземпляра исполнения.|  
@@ -38,7 +39,7 @@ ms.locfileid: "86912610"
 |end_time|**datetimeoffset(7)**|Время окончания этапа.|  
 |execution_path|**nvarchar(max)**|Путь выполнения задачи потока данных.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Это представление отображает строку для каждого этапа выполнения компонента потока данных, такого как Validate, Pre-Execute, Post-Execute, PrimeOutput и ProcessInput. Каждая строка отображает время начала и окончания для конкретного этапа выполнения.  
   
 ## <a name="example"></a>Пример  

@@ -1,4 +1,5 @@
 ---
+description: Настройка параметров трассировки
 title: Настройка параметров трассировки | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44404a79-b716-4bc1-9ffb-70cd8239d237
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 21bee5d903459423a134389e62db844f5f63c9c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 72e3805eded00b1bfa0c984d5ff0ace1ae1494fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307204"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476956"
 ---
 # <a name="setting-tracing-options"></a>Настройка параметров трассировки
 Вкладка **Трассировка** диалогового окна **Администратор источников данных ODBC** позволяет настроить способ трассировки вызовов функций ODBC.  
@@ -42,7 +43,7 @@ ms.locfileid: "81307204"
   
 2.  В меню Администрирование откройте Администратор источников данных ODBC.  
   
-3.  Перейдите на вкладку **Трассировка** .  
+3.  Щелкните вкладку **Трассировка**.  
   
 4.  Настройте режим трассировки, используя **трассировку на уровне компьютера для всех удостоверений пользователей** :  
   

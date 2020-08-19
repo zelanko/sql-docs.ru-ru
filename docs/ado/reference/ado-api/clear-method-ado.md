@@ -1,4 +1,5 @@
 ---
+description: Метод Clear (ADO)
 title: Метод Clear (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0a61ba7a-20b8-426a-91a0-9040e7c5a98a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 187000a648ca2e5e28ba09f10e3dfe55fea51b1d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 502592df71938e31ff50462878659df52c95f127
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763135"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450996"
 ---
 # <a name="clear-method-ado"></a>Метод Clear (ADO)
 Удаляет все объекты [Error](../../../ado/reference/ado-api/error-object.md) из коллекции [ошибок](../../../ado/reference/ado-api/errors-collection-ado.md) .  
@@ -38,7 +39,7 @@ Errors.Clear
   
  Некоторые свойства и методы возвращают предупреждения, которые отображаются как объекты **ошибок** в коллекции **ошибок** , но не приводят к остановке выполнения программы. Перед вызовом методов [Resync](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)или [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) для объекта [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) ; метод [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) для объекта [Connection](../../../ado/reference/ado-api/connection-object-ado.md) ; или задайте свойство [Filter](../../../ado/reference/ado-api/filter-property.md) для объекта **набора записей** , вызовите метод **clear** для коллекции **Errors** . Таким образом, можно прочитать свойство [Count](../../../ado/reference/ado-api/count-property-ado.md) коллекции **Errors** , чтобы проверить наличие возвращаемых предупреждений.  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Коллекция Errors (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)  
   
 ## <a name="see-also"></a>См. также  

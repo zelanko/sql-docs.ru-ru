@@ -1,4 +1,5 @@
 ---
+description: STContains (тип данных geography)
 title: STContains (тип данных geography) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b10e8f0a-2926-449a-82ea-be42543420ca
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 0c1b1aa4526479675ec6153ad34b3a1e98671ade
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: d3e9b03eac0107792b9b0cdb59359f5ad70b5474
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554743"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459095"
 ---
 # <a name="stcontains--geography-data-type"></a>STContains (тип данных geography)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "86554743"
   
  Тип возвращаемых данных CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Возвращает значение 1, если пространство вызывающего экземпляра **geography** содержит экземпляр **geography**, переданный в метод. В противном случае возвращает значение 0. Возвращает **null**, если идентификаторы пространственных ссылок (SRID) двух экземпляров **geography** не совпадают.  
   
 ## <a name="examples"></a>Примеры  

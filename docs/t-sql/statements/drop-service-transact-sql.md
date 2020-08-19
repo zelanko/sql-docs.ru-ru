@@ -1,4 +1,5 @@
 ---
+description: DROP SERVICE (Transact-SQL)
 title: DROP SERVICE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2351bba7-0f2a-4cda-b3b2-6a88b8747c53
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 47639c92df2144ec22ded9a15f42df876e8a0b67
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 0c44273578fff67bed075dea4f60fc6314902dcc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484912"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88415810"
 ---
 # <a name="drop-service-transact-sql"></a>DROP SERVICE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -49,7 +50,7 @@ DROP SERVICE service_name
  *service_name*  
  Имя удаляемой службы. Не могут быть указаны имена сервера, базы данных и схемы.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Нельзя удалить службу, если на нее ссылаются какие-либо приоритеты диалогов.  
   
  При завершении работы службы из очереди, используемой службой, удаляются все сообщения, относящиеся к этой службе. Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] отправляет сообщение об ошибке на удаленную сторону всех открытых диалогов, которые используют службу.  
@@ -64,7 +65,7 @@ DROP SERVICE service_name
 DROP SERVICE [//Adventure-Works.com/Expenses] ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ALTER BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
  [ALTER SERVICE (Transact-SQL)](../../t-sql/statements/alter-service-transact-sql.md)   
  [CREATE SERVICE (Transact-SQL)](../../t-sql/statements/create-service-transact-sql.md)   

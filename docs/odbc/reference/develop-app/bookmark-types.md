@@ -1,4 +1,5 @@
 ---
+description: Типы закладок
 title: Типы закладок | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cb2e7443-0260-4d1a-930f-0154db447979
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 26d0297cd9dc57e9f30945a9248b235ae469da3e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e85d50a5fe3c21707a78ac2572d8a96166745319
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306335"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476816"
 ---
 # <a name="bookmark-types"></a>Типы закладок
 Все закладки в ODBC *3. x* — это закладки с переменной длиной. Это позволяет использовать в качестве закладки первичный ключ или уникальный индекс, связанный с таблицей. Закладка также может быть 32-битным значением, как использовалось в ODBC *2. x*. Чтобы указать, что закладка используется с курсором, приложение ODBC *3. x* задает для атрибута SQL_ATTR_USE_BOOKMARK инструкции значение SQL_UB_VARIABLE. Закладка переменной длины используется автоматически.  

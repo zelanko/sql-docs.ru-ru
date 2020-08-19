@@ -1,4 +1,5 @@
 ---
+description: Создание отчетов (DB2ToSQL)
 title: Создание отчетов (DB2ToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 69ef5fd9-190d-4c58-8199-b3f77d5e1883
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1ae04ceabe7a2063f8b9806894ff8e4d55c577fd
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 75ed10de8af160939689fdaa883c6d7d9dc7915d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933803"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468867"
 ---
 # <a name="generating-reports-db2tosql"></a>Создание отчетов (DB2ToSQL)
 Отчеты о определенных действиях, выполняемых с помощью команд, создаются в консоли SSMA на уровне дерева объектов.  
@@ -133,6 +134,6 @@ ms.locfileid: "87933803"
   
 -   сценарий Fail  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Выполнение команд консоли SSMA](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
   

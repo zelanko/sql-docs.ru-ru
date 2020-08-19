@@ -1,4 +1,5 @@
 ---
+description: Свойство EditMode
 title: EditMode, свойство | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a1b04bb2-8c8b-47f9-8477-bfd0368b6f68
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1cbe93a06eb6521b2210edc08cdca421cd5de982
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e330e1bbe559940324962cfde772258d3345594b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765575"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444066"
 ---
 # <a name="editmode-property"></a>Свойство EditMode
 Указывает состояние редактирования текущей записи.  
@@ -28,7 +29,7 @@ ms.locfileid: "82765575"
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение [едитмодинум](../../../ado/reference/ado-api/editmodeenum.md) .  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  ADO поддерживает буфер редактирования, связанный с текущей записью. Это свойство указывает, были ли внесены изменения в этот буфер или создана ли новая запись. Чтобы определить состояние редактирования текущей записи, используйте свойство **EditMode** . Вы можете проверить наличие ожидающих изменений в случае, если процесс редактирования был прерван, и определить, нужно ли использовать метод [Update](../../../ado/reference/ado-api/update-method.md) или [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) .  
   
  В *режиме немедленного обновления* свойство **EditMode** сбрасывается в **адедитноне** после вызова успешного вызова метода **Update** . Если при вызове [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) не удается удалить записи или записи в источнике данных (например, из-за нарушений ссылочной целостности), [набор записей](../../../ado/reference/ado-api/recordset-object-ado.md) остается в режиме редактирования (**EditMode**  =  **адедитинпрогресс**). Поэтому **CancelUpdate** должен вызываться перед переходом от текущей записи (например, с [Move](../../../ado/reference/ado-api/move-method-ado.md), [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)или [Close](../../../ado/reference/ado-api/close-method-ado.md) ).  
@@ -38,10 +39,10 @@ ms.locfileid: "82765575"
 > [!NOTE]
 >  **EditMode** может возвращать допустимое значение только при наличии текущей записи. **EditMode** вернет ошибку, если [BOF или EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) имеет значение true, или если текущая запись была удалена.  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Примеры свойств примеры CursorType, LockType и EditMode (Visual Basic)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)   
  [Пример свойств примеры CursorType, LockType и EditMode (Visual c++)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)   
  [Метод AddNew (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   

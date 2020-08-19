@@ -1,4 +1,5 @@
 ---
+description: Файлы заголовков
 title: Файлы заголовков | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b4a03273-5e30-4d7b-826e-02f8f28ba078
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 62364d828e7b1f1ed8c70cae7ae1fc7dc3bc33fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ec8eede80f88f10e0b1ca43696e75dddec121ffe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300194"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476656"
 ---
 # <a name="header-files"></a>Файлы заголовков
 Файл заголовка SQL. h содержит прототипы функций и функций в базовом уровне соответствия интерфейсов ODBC. Файл заголовка Sqlext. h содержит прототипы функций и функций уровней соответствия API уровня 1 и уровня 2. Файл заголовка SqlTypes. h содержит определения типов и индикаторы для типов данных SQL.  

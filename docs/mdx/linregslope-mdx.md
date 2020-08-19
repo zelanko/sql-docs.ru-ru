@@ -1,4 +1,5 @@
 ---
+description: LinRegSlope (многомерные выражения)
 title: LinRegSlope (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6d43d2ccc961e465c5430c525fd6178d74e29ca9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5443718e83084285983f3d22ff99d5931f82bad9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905538"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429816"
 ---
 # <a name="linregslope-mdx"></a>LinRegSlope (многомерные выражения)
 
@@ -56,7 +57,7 @@ LinRegSlope(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] )
 LinRegSlope(LastPeriods(10),[Measures].[Unit Sales],[Measures].[Store Sales])  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

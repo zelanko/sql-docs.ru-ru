@@ -1,4 +1,5 @@
 ---
+description: sp_changesubscription (Transact-SQL)
 title: sp_changesubscription (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/28/2015
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b33103bc84e6354e99ac04e73fa20a0f99725a6a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 57844d95977ed2a56324698037fb576678b0f8fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771384"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486256"
 ---
 # <a name="sp_changesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,19 +49,19 @@ sp_changesubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'`Имя изменяемой публикации. Аргумент *publication*имеет тип **sysname**и не имеет значения по умолчанию  
+`[ @publication = ] 'publication'` Имя изменяемой публикации. Аргумент *publication*имеет тип **sysname**и не имеет значения по умолчанию  
   
-`[ @article = ] 'article'`Имя статьи, которую необходимо изменить. Аргумент *article* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @article = ] 'article'` Имя статьи, которую необходимо изменить. Аргумент *article* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @subscriber = ] 'subscriber'`Имя подписчика. Аргумент *Subscriber* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @subscriber = ] 'subscriber'` Имя подписчика. Аргумент *Subscriber* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @destination_db = ] 'destination_db'`Имя базы данных подписки. Аргумент *destination_db* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @destination_db = ] 'destination_db'` Имя базы данных подписки. Аргумент *destination_db* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @property = ] 'property'`Свойство, которое необходимо изменить для данной подписки. *свойство* имеет тип **nvarchar (30)** и может быть одним из значений в таблице.  
+`[ @property = ] 'property'` Свойство, которое необходимо изменить для данной подписки. *свойство* имеет тип **nvarchar (30)** и может быть одним из значений в таблице.  
   
-`[ @value = ] 'value'`Новое значение для указанного *Свойства*. *value* имеет тип **nvarchar (4000)** и может быть одним из значений в таблице.  
+`[ @value = ] 'value'` Новое значение для указанного *Свойства*. *value* имеет тип **nvarchar (4000)** и может быть одним из значений в таблице.  
   
-|Свойство.|Применение|Описание|  
+|Свойство|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||Имя входа учетной записи [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, с которой выполняется агент.|  
 |**distrib_job_password**||Пароль учетной записи Windows, от имени которой выполняется агент.|  
@@ -78,7 +79,7 @@ sp_changesubscription [ @publication = ] 'publication'
 ||**3**|Поставщик OLE DB|  
 |**memory_optimized**|**bit**|Указывает, что подписка поддерживает оптимизированные для памяти таблицы. *memory_optimized* является **битом**, где 1 равно true (подписка поддерживает оптимизированные для памяти таблицы).|  
   
-`[ @publisher = ] 'publisher'`Указывает издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'` Указывает издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  для издателя не следует указывать *издателя* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -86,7 +87,7 @@ sp_changesubscription [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_changesubscription** используется в моментальных снимках и репликации транзакций.  
   
  **sp_changesubscription** можно использовать только для изменения свойств принудительных подписок или подписок по запросу, участвующих в обновлении репликации транзакций посредством очередей. Чтобы изменить свойства всех других типов подписок по запросу, используйте [sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md).  

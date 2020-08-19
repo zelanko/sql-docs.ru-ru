@@ -1,4 +1,5 @@
 ---
+description: Удаление строк в наборе строк с помощью SQLSetPos
 title: Удаление строк из набора строк с помощью функции SQLSetPos | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3117a47d-e179-4f76-89d0-656582f1c9bb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 940bcc3e2ee6a042394797d6038028cce64862f1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 42b61aa9af15526420b6f2d4ef7e8c945e0da105
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305955"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476776"
 ---
 # <a name="deleting-rows-in-the-rowset-with-sqlsetpos"></a>Удаление строк в наборе строк с помощью SQLSetPos
 Операция удаления функции **SQLSetPos** позволяет источнику данных удалить одну или несколько выбранных строк таблицы. Чтобы удалить строки с помощью функции **SQLSetPos**, приложение вызывает функцию **SQLSetPos** с набором *операций* SQL_DELETE, а функция *RowNumber* задает номер удаляемой строки. Если параметр *RowNumber* имеет значение 0, все строки в наборе строк удаляются.  

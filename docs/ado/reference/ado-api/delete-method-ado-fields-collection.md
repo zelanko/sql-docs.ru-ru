@@ -1,4 +1,5 @@
 ---
+description: Метод Delete (коллекция Fields ADO)
 title: Метод Delete (коллекция полей ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 25bedc25-c51c-4cab-96ce-930b959965d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 691ad580825e4d22cef8bea4f30c737415cfc6b3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fb60cea6ef2e741103e94f38955bb2afc688e228
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757390"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444176"
 ---
 # <a name="delete-method-ado-fields-collection"></a>Метод Delete (коллекция Fields ADO)
 Удаляет объект из коллекции [полей](../../../ado/reference/ado-api/fields-collection-ado.md) .  
@@ -37,13 +38,13 @@ Fields.Delete Field
  *Поле*  
  **Вариант** , обозначающий объект [поля](../../../ado/reference/ado-api/field-object.md) для удаления. Этот параметр может быть именем объекта **поля** или порядком расположения самого объекта **поля** .  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Вызов метода **Fields. Delete** для открытого [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) приводит к ошибке времени выполнения.  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Коллекция Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод Delete (Коллекция параметров ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
  [Метод Delete (набор записей ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [Метод DeleteRecord (ADO)](../../../ado/reference/ado-api/deleterecord-method-ado.md)

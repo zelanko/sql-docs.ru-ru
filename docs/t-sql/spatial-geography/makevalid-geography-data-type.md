@@ -1,4 +1,5 @@
 ---
+description: MakeValid (тип данных geography)
 title: MakeValid (тип данных geography) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f67038e3-4f62-4465-994e-e95ac27d8ada
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 86fb119dfaac7f8069aba96402b5f2a0bab31a88
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 7a3ca43dea611fb3fb74167032bd72f045e39b41
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86556173"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422418"
 ---
 # <a name="makevalid-geography-data-type"></a>MakeValid (тип данных geography)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

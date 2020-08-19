@@ -1,5 +1,6 @@
 ---
-title: COLUMNS_UPDATED (Transact-SQL) | Документы Майкрософт
+description: COLUMNS_UPDATED (Transact-SQL)
+title: COLUMNS_UPDATED (Transact-SQL)
 ms.custom: ''
 ms.date: 07/25/2017
 ms.prod: sql
@@ -20,14 +21,15 @@ helpviewer_keywords:
 ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5f0eca52b39980b3b4f97276be3dcd2289a0e527
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: af91c04f85eae26326ab05e2deb83030267cc7fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732616"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422828"
 ---
 # <a name="columns_updated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Эта функция возвращает битовый шаблон **varbinary**, который показывает, какие столбцы таблицы или представления добавлялись или изменялись. `COLUMNS_UPDATED` используется в любом месте внутри тела триггера INSERT или UPDATE [!INCLUDE[tsql](../../includes/tsql-md.md)], чтобы проверить необходимость выполнения определенных действий.
@@ -39,7 +41,9 @@ ms.locfileid: "85732616"
 ```sql
 COLUMNS_UPDATED ( )   
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="return-types"></a>Типы возвращаемых данных
 **varbinary**
   
@@ -206,7 +210,7 @@ UPDATE Person.Person
 GO  
 ```  
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 [Побитовые операторы (Transact-SQL)](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
 [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)  
 [UPDATE() (Transact-SQL)](../../t-sql/functions/update-trigger-functions-transact-sql.md)

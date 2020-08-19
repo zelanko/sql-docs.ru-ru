@@ -1,4 +1,5 @@
 ---
+description: Lag (многомерные выражения)
 title: Запаздывание (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c7e95af96249b64f86bb1466283e8a1a38a32d90
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bc9beb8215d8d690f2d4ccdf43c3aaf03096b9d8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905780"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477046"
 ---
 # <a name="lag-mdx"></a>Lag (многомерные выражения)
 
@@ -31,17 +32,17 @@ Member_Expression.Lag(Index)
  *Member_Expression*  
  Допустимое многомерное выражение, возвращающее элемент.  
   
- *Индекс*  
+ *Index*  
  Допустимое числовое выражение, указывающее количество позиций между элементами.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Позиции элементов на уровне определяются естественным порядком иерархии атрибутов. Нумерация позиций начинается с нуля.  
   
  Если заданная задержка равна нулю, функция **Lag** возвращает сам указанный элемент.  
   
  Если заданная задержка отрицательна, функция **Lag** возвращает последующий элемент.  
   
- `Lag(1)`функция эквивалентна функции [PrevMember](../mdx/prevmember-mdx.md) . `Lag(-1)`функция эквивалентна функции [NextMember](../mdx/nextmember-mdx.md) .  
+ `Lag(1)` функция эквивалентна функции [PrevMember](../mdx/prevmember-mdx.md) . `Lag(-1)` функция эквивалентна функции [NextMember](../mdx/nextmember-mdx.md) .  
   
  Функция **Lag** аналогична функции [Lead](../mdx/lead-mdx.md) , за исключением того, что функция **Lead** ищет в обратном направлении функцию **Lag** . Таким образом, вызов `Lag(n)` эквивалентен вызову `Lead(-n)`.  
   

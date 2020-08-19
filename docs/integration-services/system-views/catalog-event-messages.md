@@ -1,4 +1,5 @@
 ---
+description: catalog.event_messages
 title: catalog.event_messages | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: a31a654f-31e9-4da1-aabf-182b07848e36
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2e19ca7fac23979ecd691ed6cab45fa2cfec9564
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 29fcb7e924f444b44435b6c46dcdf76a88ebeec5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912636"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495267"
 ---
 # <a name="catalogevent_messages"></a>catalog.event_messages 
 
@@ -26,14 +27,14 @@ ms.locfileid: "86912636"
 
   Показывает сведения о сообщениях, которые были зарегистрированы в ходе операций.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |Event_message_ID|BIGINT|Уникальный идентификатор сообщения о событии.|  
 |Operation_id|BIGINT|Тип операции.<br /><br /> Список типов операций см. в разделе [catalog.operations (база данных SSISDB)](../../integration-services/system-views/catalog-operations-ssisdb-database.md).|  
 |Message_time|datetimeoffset(7)|Время создания сообщения.|  
 |Message_type|smallint|Тип отображаемого сообщения. Дополнительные сведения о типах сообщений см. в разделе [catalog.operation_messages &#40;база данных SSISDB&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md).|  
 |Message_source_type|smallint|Источник сообщения.|  
-|message|nvarchar(max)|Текст сообщения.|  
+|сообщение|nvarchar(max)|Текст сообщения.|  
 |Extended_info_id|BIGINT|Идентификатор дополнительных сведений, которые относятся к сообщению об операции и находятся в представлении [catalog.extended_operation_info &#40;база данных SSISDB&#41;](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md).|  
 |Package_name|nvarchar(260)|Имя файла пакета.|  
 |Event_name|nvarchar(1024)|Событие времени выполнения, связанное с сообщением.|  
@@ -45,10 +46,10 @@ ms.locfileid: "86912636"
 |threadID|INT|Идентификатор потока, который выполняется при регистрации сообщения.|  
 |Message_code|INT|Код, связанный с этим сообщением.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  В этом представлении отображаются следующие типы источников сообщений.  
   
-|**message_source_type**|Description|  
+|**message_source_type**|Описание|  
 |-------------------------------|-----------------|  
 |10|Начальные API-интерфейсы, такие как T-SQL и хранимые процедуры CLR|  
 |20|Внешний процесс, используемый для запуска пакета (ISServerExec.exe)|  
@@ -66,7 +67,7 @@ ms.locfileid: "86912636"
   
 -   Членство в роли сервера **sysadmin**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [catalog.event_message_context](../../integration-services/system-views/catalog-event-message-context.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_help (Transact-SQL)
 title: sp_help (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/24/2016
@@ -18,12 +19,12 @@ ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57a435db1aca6c2ab9f093792e26f7e88dcbf21a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 85fd7be3a9f82b43c19e344602a85e1adf06c68a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727181"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486067"
 ---
 # <a name="sp_help-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +42,7 @@ sp_help [ [ @objname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @objname = ] 'name'`Имя любого объекта, в **sysobjects** или любого определяемого пользователем типа данных в таблице **systypes** . *Name* имеет тип **nvarchar (** 776 **)** и значение по умолчанию NULL. Имена баз данных неприемлемы.  Имена из двух или трех частей должны содержать разделители, например "<Человек>.<Тип_адреса>" или [<Человек>.<Тип_адреса>].   
+`[ @objname = ] 'name'` Имя любого объекта, в **sysobjects** или любого определяемого пользователем типа данных в таблице **systypes** . *Name* имеет тип **nvarchar (** 776 **)** и значение по умолчанию NULL. Имена баз данных неприемлемы.  Имена из двух или трех частей должны содержать разделители, например "<Человек>.<Тип_адреса>" или [<Человек>.<Тип_адреса>].   
    
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -54,7 +55,7 @@ sp_help [ [ @objname = ] 'name' ]
   
     |Имя столбца|Тип данных|Описание|  
     |-----------------|---------------|-----------------|  
-    |**Name**|**nvarchar (** 128 **)**|Имя объекта|  
+    |**имя**;|**nvarchar (** 128 **)**|Имя объекта|  
     |**Владелец**|**nvarchar (** 128 **)**|Владелец объекта (участник базы данных, владеющий объектом, по умолчанию совпадает с владельцем схемы, содержащей объект).|  
     |**Object_type**|**nvarchar (** 31 **)**|Тип объекта|  
   
@@ -76,9 +77,9 @@ sp_help [ [ @objname = ] 'name' ]
 
     |Имя столбца|Тип данных|Описание|  
     |-----------------|---------------|-----------------|  
-    |**Name**|**nvarchar (** 128 **)**|Имя таблицы|  
+    |**имя**;|**nvarchar (** 128 **)**|Имя таблицы|  
     |**Владелец**|**nvarchar (** 128 **)**|Владелец таблицы|  
-    |**Type**|**nvarchar (** 31 **)**|Тип таблицы|  
+    |**Тип**|**nvarchar (** 31 **)**|Тип таблицы|  
     |**Created_datetime**|**datetime**|Дата создания таблицы|  
   
      В зависимости от указанного объекта базы данных **sp_help** Возвращает дополнительные результирующие наборы.  
@@ -90,7 +91,7 @@ sp_help [ [ @objname = ] 'name' ]
         |Имя столбца|Тип данных|Описание|  
         |-----------------|---------------|-----------------|  
         |**Column_name**|**nvarchar (** 128 **)**|Имя столбца.|  
-        |**Type**|**nvarchar (** 128 **)**|Тип данных столбца.|  
+        |**Тип**|**nvarchar (** 128 **)**|Тип данных столбца.|  
         |**Вычисляемый**|**varchar (** 35 **)**|Указывает, вычисляются ли значения в столбце: Да или нет.|  
         |**Длина**|**int**|Длина столбца в байтах.<br /><br /> Примечание. Если тип данных столбца имеет тип больших значений (**varchar (max)**, **nvarchar (max)**, **varbinary (max)** или **XML**), то значение будет отображаться как-1.|  
         |**прек**|**char (** 5 **)**|Точность столбца.|  
@@ -105,8 +106,8 @@ sp_help [ [ @objname = ] 'name' ]
         |Имя столбца|Тип данных|Описание|  
         |-----------------|---------------|-----------------|  
         |**Удостоверение**|**nvarchar (** 128 **)**|Имя столбца, чей тип данных объявлен удостоверением.|  
-        |**Seed**|**numeric**|Стартовое значение для столбца идентификаторов.|  
-        |**Производим**|**numeric**|Шаг прироста, который следует использовать для значений в этом столбце.|  
+        |**Инициализировать**|**numeric**|Стартовое значение для столбца идентификаторов.|  
+        |**Приращение**|**numeric**|Шаг прироста, который следует использовать для значений в этом столбце.|  
         |**Не для репликации**|**int**|Свойство IDENTITY не применяется принудительно, если имя входа репликации, например **склрепл**, вставляет данные в таблицу:<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
   
     -   Дополнительный результирующий набор, возвращаемый для столбцов:  
@@ -152,13 +153,13 @@ sp_help [ [ @objname = ] 'name' ]
         |Имя столбца|Тип данных|Описание|  
         |-----------------|---------------|-----------------|  
         |**Parameter_name**|**nvarchar (** 128 **)**|Имя аргумента хранимой процедуры.|  
-        |**Type**|**nvarchar (** 128 **)**|Тип данных аргумента хранимой процедуры.|  
+        |**Тип**|**nvarchar (** 128 **)**|Тип данных аргумента хранимой процедуры.|  
         |**Длина**|**smallint**|Максимальная физическая длина хранилища, в байтах.|  
         |**прек**|**int**|Точность или общее количество знаков.|  
         |**Масштаб**|**int**|Число цифр справа от десятичной запятой.|  
         |**Param_order**|**smallint**|Порядок аргумента.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Процедура **sp_help** выполняет поиск объекта только в текущей базе данных.  
   
  Если параметр *Name* не указан, **sp_help** перечисляет имена объектов, владельцев и типы объектов для всех объектов в текущей базе данных. **sp_helptrigger** предоставляет сведения о триггерах.  
@@ -193,11 +194,11 @@ GO
 ## <a name="see-also"></a>См. также  
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_helpindex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
- [sp_helprotect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
- [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helprotect (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
+ [sp_helpserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_helptrigger (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
  [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys.sysные объекты &#40;&#41;Transact-SQL](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [sys.sysные объекты &#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
   
   

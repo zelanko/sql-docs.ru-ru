@@ -1,4 +1,5 @@
 ---
+description: Операции с данными многомерных выражений — UPDATE CUBE
 title: Инструкция UPDATE CUBE (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f52dd59b67b42ad430df9bb1e9d00dce7ad6d697
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9958fa6e7efe7b3bc42dd04aebc295f1ee2d0944
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68003527"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476996"
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>Операции с данными многомерных выражений — UPDATE CUBE
 
@@ -52,7 +53,7 @@ UPDATE [ CUBE ] Cube_Name
  *Weight_Expression*  
  Допустимое числовое многомерное выражение, возвращающее десятичное значение от 0 до 1.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Можно обновить значение указанной конечной или неконечной ячейки куба, по желанию размещая значение для указанной неконечной ячейки в зависимых конечных ячейках. Ячейка, указанная кортежным выражением, может представлять любую ячейку многомерного пространства (другими словами, ячейка необязательно должна быть конечной). Однако ячейка должна быть агрегирована с помощью статистической функции [Sum](../mdx/sum-mdx.md) и не должна содержать вычисляемый элемент в кортеже, который используется для его обнаружения.  
   
  Может оказаться полезным рассматривать инструкцию **Update Cube** как подпрограммы, которая автоматически создает ряд отдельных операций обратной записи в ячейках для конечных и неконечных ячеек, которые будут сведены в указанную сумму.  
@@ -106,7 +107,7 @@ Weight_Expression = <leaf cell value> / <existing value>
 > [!IMPORTANT]  
 >  Если обновленные ячейки не пересекаются, свойство строки подключения **Update Isolation Level** может быть использовано для повышения производительности инструкции UPDATE CUBE.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
  [Инструкции обработки данных многомерных выражений &#40;многомерные выражения&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
   

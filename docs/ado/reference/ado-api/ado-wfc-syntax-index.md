@@ -1,4 +1,5 @@
 ---
+description: ADO — индекс синтаксиса WFC
 title: ADO — индекс синтаксиса WFC | Документация Майкрософт
 ms.technology: connectivity
 ms.custom: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a14bbc36-87ec-409d-97b3-393b66b1b8e3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2ae2ddf07e2e687aec0b507b9ff9f2640087ef74
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b6e5c4fd54b5784e76067231096752a68dd52a6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764545"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451346"
 ---
 # <a name="ado---wfc-syntax-index"></a>ADO — индекс синтаксиса WFC
 В справочнике по языку ADO для иллюстрации синтаксиса методов и свойств ADO используется язык программирования Microsoft Visual Basic. Этот индекс является перекрестной ссылкой на разделы справочника по языку ADO, основанные на ADO для классов Windows Foundation (ADO/WFC). При возникновении различий в синтаксисе используйте сигнатуры функций в этом индексе, в отличие от списков синтаксиса в разделе справочника по языку.  

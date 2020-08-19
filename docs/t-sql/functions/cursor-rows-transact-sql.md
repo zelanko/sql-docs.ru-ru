@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;CURSOR_ROWS (Transact-SQL)'
 title: '@@CURSOR_ROWS (Transact-SQL) | Документы Майкрософт'
 ms.custom: ''
 ms.date: 08/18/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 31bd7a97-7f28-42a8-ba24-24d16d22973d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a35f2e2e75b29a28ed56fc7c5cdaa3e9c2244d6d
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: ea10c7ada51794a26fd08cf265bfa78953856abc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112076"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422808"
 ---
 # <a name="x40x40cursor_rows-transact-sql"></a>&#x40;&#x40;CURSOR_ROWS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,14 +48,14 @@ ms.locfileid: "87112076"
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
-|Возвращаемое значение|Description|  
+|Возвращаемое значение|Описание|  
 |---|---|
 |-*m*|Курсор заполняется асинхронно. Возвращаемое значение (–*m*) является текущим числом строк в наборе ключей.|  
 |-1|Курсор является динамическим. Так как динамический курсор отражает все изменения, количество строк для курсора постоянно изменяется. Курсор не обязательно извлекает все определенные строки.|  
 |0|Ни один курсор не был открыт, не было строк для последнего открытого курсора или последний открытый курсор закрыт или освобожден.|  
 |*n*|Курсор полностью заполнен. Возвращенное значение (*n*) является общим количеством строк в курсоре.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
 `@@CURSOR_ROWS` возвращает отрицательное число, если последний курсор был открыт асинхронно. Управляемые набором ключей или статические курсоры открываются асинхронно, если значение параметра cursor threshold процедуры sp_configure больше 0, а количество строк в результирующем наборе курсора больше, чем пороговое значение курсора.
   
 ## <a name="examples"></a>Примеры  
@@ -92,7 +93,7 @@ Sanchez
 -1
 ```  
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 [Функции работы с курсорами (Transact-SQL)](../../t-sql/functions/cursor-functions-transact-sql.md)  
 [OPEN (Transact-SQL)](../../t-sql/language-elements/open-transact-sql.md)
   

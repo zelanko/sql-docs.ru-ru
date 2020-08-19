@@ -1,5 +1,6 @@
 ---
-title: GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL) | Документы Майкрософт
+description: GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
+title: GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 459e6b79-4420-41e6-85bf-89d90f43b4f1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fcb526d6737624aee12e900f3b9b7db1f2e7f69e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 329fdde13e276726f616a7d7fe56893d28172b38
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898990"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422758"
 ---
 # <a name="get_filestream_transaction_context-transact-sql"></a>GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,18 +34,20 @@ ms.locfileid: "85898990"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```syntaxsql
   
 GET_FILESTREAM_TRANSACTION_CONTEXT ()  
-```  
-  
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="return-type"></a>Тип возвращаемых данных  
  **varbinary(max)**  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращается значение NULL, если транзакция не была запущена, а также, если она отменена или зафиксирована.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Транзакция должна быть явной. Используйте инструкцию BEGIN TRANSACTION, за которой следует инструкция COMMIT TRANSACTION или ROLLBACK TRANSACTION.  
   
  Если вызывается функция GET_FILESTREAM_TRANSACTION_CONTEXT, участнику предоставляется доступ к файловой системе для транзакции в течение транзакции. Чтобы разрешить доступ другому пользователю к транзакции через файловую систему, используйте инструкцию EXECUTE AS для запуска функции GET_FILESTREAM_TRANSACTION_CONTEXT от имени другого пользователя.  
@@ -275,7 +278,7 @@ Namespace ConsoleApplication
 End Namespace  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [PathName (Transact-SQL)](../../relational-databases/system-functions/pathname-transact-sql.md)   
  [Данные большого двоичного объекта (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: Выбор и настройка обрабатываемых объектов (SybaseToSQL)
 title: Выбор и настройка затронутых объектов (SybaseToSQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c9efc329f80e880a58ec9926db677c4a71604e2c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 793430d548053b8d4c1cbf8dd07dd4e7d691c6d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87930455"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468748"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>Выбор и настройка обрабатываемых объектов (SybaseToSQL)
 На этой странице можно выбрать таблицы и внешние ключи, изменения, в которых следует сравнивать, когда SSMA проверяет результаты выполнения для объектов, выбранных на предыдущем шаге. Кроме того, можно настроить параметры проверки.  
@@ -39,7 +40,7 @@ ms.locfileid: "87930455"
   
 -   Правило  
   
--   Значение по умолчанию  
+-   По умолчанию  
   
 -   Идентификация  
   
@@ -117,7 +118,7 @@ ms.locfileid: "87930455"
 ## <a name="next-step"></a>Следующий шаг  
 [Настройка порядка вызовов &#40;SybaseToSQL&#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Выполнение тестовых случаев &#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
 [Тестирование перенесенных объектов базы данных &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

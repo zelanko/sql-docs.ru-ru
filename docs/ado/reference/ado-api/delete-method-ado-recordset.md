@@ -1,4 +1,5 @@
 ---
+description: Метод Delete (объект Recordset ADO)
 title: Метод Delete (набор записей ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1eb9209c-602c-4507-b0c2-6527a599b67d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c5747704601e5e325624c79ce853526e36f6cbe1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b494885b6dafc7b91b76c37ac1817ac198335360
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765605"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444156"
 ---
 # <a name="delete-method-ado-recordset"></a>Метод Delete (объект Recordset ADO)
 Удаляет текущую запись или группу записей.  
@@ -40,7 +41,7 @@ recordset.Delete AffectRecords
 > [!NOTE]
 >  **адаффекталл** и **адаффекталлчаптерс** не являются допустимыми аргументами для **удаления**.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Использование метода **Delete** помечает текущую запись или группу записей в объекте [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) для удаления. Если объект **набора записей** не допускает удаления записей, возникает ошибка. Если вы используете режим немедленного обновления, немедленное удаление происходит в базе данных. Если запись не может быть успешно удалена (например, из-за нарушений целостности базы данных), после вызова метода [Update](../../../ado/reference/ado-api/update-method.md)запись остается в режиме редактирования. Это означает, что необходимо отменить обновление с помощью [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) , прежде чем перемещаться по текущей записи (например, с помощью [закрытия](../../../ado/reference/ado-api/close-method-ado.md), [перемещения](../../../ado/reference/ado-api/move-method-ado.md)или [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  
   
  Если вы используете режим пакетного обновления, записи помечаются для удаления из кэша, а фактическое удаление происходит при вызове метода [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) . Используйте свойство [Filter](../../../ado/reference/ado-api/filter-property.md) для просмотра удаленных записей.  
@@ -53,10 +54,10 @@ recordset.Delete AffectRecords
   
  Если задано динамическое свойство [уникальной таблицы](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) , а **набор записей** является результатом выполнения операции объединения нескольких таблиц, то метод **Delete** удаляет только строки из таблицы с именем в свойстве [уникальной таблицы](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) .  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример метода Delete (Visual Basic)](../../../ado/reference/ado-api/delete-method-example-vb.md)   
  [Пример метода Delete (VBScript)](../../../ado/reference/ado-api/delete-method-example-vbscript.md)   
  [Пример метода Delete (Visual c++)](../../../ado/reference/ado-api/delete-method-example-vc.md)   

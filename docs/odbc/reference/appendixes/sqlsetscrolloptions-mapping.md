@@ -1,4 +1,5 @@
 ---
+description: Сопоставление SQLSetScrollOptions
 title: Сопоставление SQLSetScrollOptions | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a0fa4510-8891-4a61-a867-b2555bc35f05
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 77050df283b10abd17ba62a48bd366d6c1b3f601
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 111fb84cd584e23b18d889634893556de86311a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300504"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476926"
 ---
 # <a name="sqlsetscrolloptions-mapping"></a>Сопоставление SQLSetScrollOptions
 Когда приложение вызывает **SQLSetScrollOptions** через драйвер ODBC *3. x* , а драйвер не поддерживает **SQLSetScrollOptions**, вызов  
@@ -64,7 +65,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_CURSOR_TYPE, ValuePtr, 0)  
     ```  
   
-     Если для * \*ValuePtr* задано одно из значений, приведенных в следующей таблице, в соответствии со значением аргумента *кэйсетсизе* в **SQLSetScrollOptions**.  
+     Если для * \* ValuePtr* задано одно из значений, приведенных в следующей таблице, в соответствии со значением аргумента *кэйсетсизе* в **SQLSetScrollOptions**.  
   
     |*Кэйсетсизе* , аргумент|*\*ValuePtr*|  
     |---------------------------|------------------|  
@@ -80,7 +81,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_CONCURRENCY, ValuePtr, 0)  
     ```  
   
-     Если для * \*ValuePtr* задан аргумент *Concurrency* в **SQLSetScrollOptions**.  
+     Если для * \* ValuePtr* задан аргумент *Concurrency* в **SQLSetScrollOptions**.  
   
 -   Если аргумент *кэйсетсизе* в вызове **SQLSetScrollOptions** является положительным, вызывается метод  
   
@@ -88,7 +89,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_KEYSET_SIZE, ValuePtr, 0)  
     ```  
   
-     Если для * \*ValuePtr* задан аргумент *кэйсетсизе* в **SQLSetScrollOptions**.  
+     Если для * \* ValuePtr* задан аргумент *кэйсетсизе* в **SQLSetScrollOptions**.  
   
 -   Вызов метода  
   
@@ -96,7 +97,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ROWSET_SIZE, ValuePtr, 0)  
     ```  
   
-     Если для * \*ValuePtr* задан аргумент *ровсетсизе* в **SQLSetScrollOptions**.  
+     Если для * \* ValuePtr* задан аргумент *ровсетсизе* в **SQLSetScrollOptions**.  
   
     > [!NOTE]  
     >  Когда диспетчер драйверов сопоставляет **SQLSetScrollOptions** для приложения, работающего с драйвером ODBC *3. x* , который не поддерживает **SQLSetScrollOptions**, диспетчер драйверов устанавливает параметр инструкции SQL_ROWSET_SIZE, а не атрибут SQL_ATTR_ROW_ARRAY_SIZE инструкции, в аргумент *ровсетсизе* в **склсетскроллоптион**. В результате **SQLSetScrollOptions** не может использоваться приложением при выборке нескольких строк путем вызова **SQLFetch** или **SQLFetchScroll**. Его можно использовать только при выборке нескольких строк путем вызова **SQLExtendedFetch**.

@@ -1,4 +1,5 @@
 ---
+description: Автоматическое заполнение IPD
 title: Автоматическое заполнение IPD | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1184a7d8-d557-4140-843b-6633ae6deacc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1998ea1992ee7f14d87d01e348d955b017166088
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 73c0456f1c78ccc19f1ff55a1ab288baedae2e14
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285074"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476886"
 ---
 # <a name="automatic-population-of-the-ipd"></a>Автоматическое заполнение IPD
 Некоторые драйверы могут задавать поля IPD после подготовки параметризованного запроса. Поля дескриптора автоматически заполняются сведениями о параметре, включая тип данных, точность, масштаб и другие характеристики. Это эквивалентно поддержке **SQLDescribeParam**. Эта информация может быть особенно полезной для приложения, если у него нет другого способа обнаружить его, например при выполнении нерегламентированного запроса с параметрами, о которых приложение не знает.  

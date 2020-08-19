@@ -1,4 +1,5 @@
 ---
+description: Блокировка версии (службы Master Data Services)
 title: Блокировка версии
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7bb62a84-12d8-4b29-9b6e-6aa25410618e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b98dff0acf3b2d7a8c3eed5d79e284bfca8f92fd
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 7f72b98acb33d906adc979313826f234812a8a4b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813280"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495102"
 ---
 # <a name="lock-a-version-master-data-services"></a>Блокировка версии (службы Master Data Services)
 
@@ -54,7 +55,7 @@ ms.locfileid: "85813280"
   
 -   [Фиксация версии (службы Master Data Services)](../master-data-services/commit-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Версии &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
  [Разблокировка версии (службы Master Data Services)](../master-data-services/unlock-a-version-master-data-services.md)  
   

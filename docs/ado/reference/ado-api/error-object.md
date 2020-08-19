@@ -1,4 +1,5 @@
 ---
+description: Объект Error
 title: Объект Error | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a175d453-fa55-4f49-9ede-a26d83177919
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 717a3af4bec62725cc4cf5da8621163f24c2ab3f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0f243fba25a185025c51fb53c030a360a062ef78
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764535"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443976"
 ---
 # <a name="error-object"></a>Объект Error
 Содержит сведения об ошибках доступа к данным, относящихся к одной операции, включающей в себя поставщик.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Любая операция, включающая объекты ADO, может формировать одну или несколько ошибок поставщика. При возникновении каждой ошибки в коллекцию [ошибок](../../../ado/reference/ado-api/errors-collection-ado.md) объекта [Connection](../../../ado/reference/ado-api/connection-object-ado.md) помещаются один или несколько объектов **ошибок** . Если другая операция ADO создает ошибку, коллекция **Errors** удаляется, а новый набор объектов **ошибок** помещается в коллекцию **Errors** .  
   
 > [!NOTE]
@@ -56,7 +57,7 @@ ms.locfileid: "82764535"
   
 -   [Свойства, методы и события объекта Error](../../../ado/reference/ado-api/error-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Примеры свойств Description, HelpContext, HelpFile, NativeError, Number, Source и SQLState (Visual Basic)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
  [Примеры свойств Description, HelpContext, HelpFile, NativeError, Number, Source и SQLState (Visual c++)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   

@@ -1,4 +1,5 @@
 ---
+description: sp_clean_db_free_space (Transact-SQL)
 title: sp_clean_db_free_space (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: faa96f7e-be92-47b1-8bc5-4dbba5331655
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1c434dda6a19a6090c9ba3c670ce33e673d7abf7
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 763697cbdf0ea842fb469ee781511e90266bf8b7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122364"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486164"
 ---
 # <a name="sp_clean_db_free_space-transact-sql"></a>sp_clean_db_free_space (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,10 +42,10 @@ sp_clean_db_free_space
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- @dbname= '*database_name*'  
+ @dbname = '*database_name*'  
  Имя очищаемой базы данных. Аргумент *dbname* имеет тип **sysname** и не может иметь значение null.  
   
- @cleaning_delay= '*delay_in_seconds*'  
+ @cleaning_delay = '*delay_in_seconds*'  
  Интервал задержки между операциями очистки страниц. Применение задержки помогает уменьшить нагрузку на систему ввода-вывода. *delay_in_seconds* имеет **тип int** и значение по умолчанию 0.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  

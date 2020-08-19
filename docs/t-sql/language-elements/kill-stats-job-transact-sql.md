@@ -1,4 +1,5 @@
 ---
+description: KILL STATS JOB (Transact-SQL)
 title: KILL STATS JOB (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/27/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 55a8f9f1-3259-45c0-8ab9-60b9c088b4b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 97992969506b030047089a973e412cdadc703416
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 439ca52d7678372ee6bf3adecccc99444631a311
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919600"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459337"
 ---
 # <a name="kill-stats-job-transact-sql"></a>KILL STATS JOB (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +50,7 @@ KILL STATS JOB job_id
  *job_id*  
  Аргумент job_id, возвращаемый динамическим административным представлением sys.dm_exec_background_job_queue для этого задания.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Аргумент job_id не имеет отношения к идентификатору сеанса (session_id) или другим единицам работы, используемым в разных формах оператора KILL.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -65,7 +66,7 @@ KILL STATS JOB 53;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md)   
  [KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL)](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)   
  [sys.dm_exec_background_job_queue (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-background-job-queue-transact-sql.md)   

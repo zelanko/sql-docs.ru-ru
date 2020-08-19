@@ -1,4 +1,5 @@
 ---
+description: sp_addsrvrolemember (Transact-SQL)
 title: sp_addsrvrolemember (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/20/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 777f0e09-8ee5-4cb2-a3ac-939d02c3cd22
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3077ba01cb982a5f4a3517f5d73b5d9e4436484b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d7a782c8a29758eb78547219d40b4fcdc99bfec8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85876439"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486277"
 ---
 # <a name="sp_addsrvrolemember-transact-sql"></a>sp_addsrvrolemember (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85876439"
   Добавляет имя входа в качестве члена предопределенной роли сервера.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Вместо этого используйте [инструкцию ALTER Server Role](../../t-sql/statements/alter-server-role-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте [инструкцию ALTER Server Role](../../t-sql/statements/alter-server-role-transact-sql.md) .  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -92,9 +93,9 @@ GO
  [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sp_dropsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Функции безопасности &#40;&#41;Transact-SQL](../../t-sql/functions/security-functions-transact-sql.md)   
- [Создание роли сервера &#40;&#41;Transact-SQL](../../t-sql/statements/create-server-role-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Функции безопасности (Transact-SQL)](../../t-sql/functions/security-functions-transact-sql.md)   
+ [Создание роли сервера &#40;&#41;Transact-SQL ](../../t-sql/statements/create-server-role-transact-sql.md)   
  [DROP SERVER ROLE (Transact-SQL)](../../t-sql/statements/drop-server-role-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: IN (Transact-SQL)
 title: IN (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 08/29/2016
@@ -23,12 +24,12 @@ ms.assetid: 4419de73-96b1-4dfe-8500-f4507915db04
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 207043037a5f75e71f4d385abec42dd296ea4528
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a642ad617c1c466306f5beb3f11d41f9181b8458
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920660"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459390"
 ---
 # <a name="in-transact-sql"></a>IN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +55,7 @@ test_expression [ NOT ] IN
  *subquery*  
  Вложенный запрос, содержащий результирующий набор, состоящий из одного столбца. Этот столбец должен иметь тот же тип данных, что и аргумент *test_expression*.  
   
- *expression*[ **,** ... *n* ]  
+ *expression*[ **,**... *n* ]  
  Список выражений для поиска совпадения. Все выражения должны иметь тот же тип, что и аргумент *test_expression*.  
   
 ## <a name="result-types"></a>Типы результата  
@@ -68,7 +69,7 @@ test_expression [ NOT ] IN
 > [!CAUTION]  
 >  Для любых значений NULL, возвращаемых в *subquery* или *expression*, которые сравниваются со значением *test_expression* с помощью предложения IN или NOT IN, возвращается результат UNKNOWN. Использование значений NULL с предложениями IN или NOT IN может привести к непредвиденным результатам.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Явное включение очень большого количества значений (много тысяч значений, разделенных запятыми) в круглые скобки в предложение IN может привести к интенсивному расходованию ресурсов и возврату ошибки 8623 или 8632. Чтобы избежать этой проблемы, храните элементы списка IN в таблице и используйте вложенный запрос SELECT в предложении IN.  
   
  Ошибка 8623.  

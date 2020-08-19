@@ -1,4 +1,5 @@
 ---
+description: CursorTypeEnum
 title: Курсортипинум | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ffc6e245-4471-42ae-84dd-e85bddfce983
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0af12cbad09990add1e5f42c05a68a0d249377fa
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: beb6afdd93d69ea920acee3840dc6c0bc44d181e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763495"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444246"
 ---
 # <a name="cursortypeenum"></a>CursorTypeEnum
 Указывает тип курсора, используемого в объекте [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) .  
@@ -44,5 +45,5 @@ ms.locfileid: "82763495"
 |Адоенумс. примеры CursorType. STATIC|  
 |Адоенумс. примеры CursorType. не указано|  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Свойство CursorType (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)

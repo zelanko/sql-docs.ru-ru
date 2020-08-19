@@ -1,4 +1,5 @@
 ---
+description: Head (многомерные выражения)
 title: Head (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6e6d8da7a5813f7e99c022e19f18de2800598885
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51a832bf38d3834c44f9b31f5bbfd27833d6d691
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67906006"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429926"
 ---
 # <a name="head-mdx"></a>Head (многомерные выражения)
 
@@ -54,11 +55,11 @@ Head
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>См. также  
- [&#41;&#40;с хвостовиком хвоста](../mdx/tail-mdx.md)   
+## <a name="see-also"></a>См. также:  
+ [&#41;&#40;с хвостовиком хвоста ](../mdx/tail-mdx.md)   
  [Элемент &#40;кортежа&#41; &#40;многомерных выражений&#41;](../mdx/item-tuple-mdx.md)   
  [Элемент &#40;элемента&#41; &#40;многомерных выражений&#41;](../mdx/item-member-mdx.md)   
- [Ранжирование &#40;&#41;многомерных выражений](../mdx/rank-mdx.md)   
+ [Ранжирование &#40;&#41;многомерных выражений ](../mdx/rank-mdx.md)   
  [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

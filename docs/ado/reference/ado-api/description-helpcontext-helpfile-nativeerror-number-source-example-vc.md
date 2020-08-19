@@ -1,4 +1,5 @@
 ---
+description: Примеры свойств Description, HelpContext, HelpFile, NativeError, Number, Source и SQLState (Visual c++)
 title: Пример свойств объекта Error (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 5321fc0f-cd0c-4e2a-a5bc-0008fba86b59
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6f85085070d7b7abab22508094a4d50d9deec443
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6423ff1e0b8ba5d5c274efee7f0dfe83b70f545b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757270"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444086"
 ---
 # <a name="description-helpcontext-helpfile-nativeerror-number-source-and-sqlstate-properties-example-vc"></a>Примеры свойств Description, HelpContext, HelpFile, NativeError, Number, Source и SQLState (Visual c++)
 В этом примере вызывается ошибка, ловушка и отображаются свойства [Description](../../../ado/reference/ado-api/description-property.md), [HelpContext](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md), [HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md), [NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md), [Number](../../../ado/reference/ado-api/number-property-ado.md), [Source](../../../ado/reference/ado-api/source-property-ado-error.md)и [SQLSTATE](../../../ado/reference/ado-api/sqlstate-property.md) результирующего объекта [Error](../../../ado/reference/ado-api/error-object.md) .  
@@ -123,7 +124,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство Description](../../../ado/reference/ado-api/description-property.md)   
  [Объект Error](../../../ado/reference/ado-api/error-object.md)   
  [Свойства HelpContext, HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   

@@ -1,4 +1,5 @@
 ---
+description: ISJSON (Transact-SQL)
 title: TOP (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 06/03/2020
@@ -16,12 +17,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: cdf9f8c9f79ec7bf286eb1d29a9274baf9a1887f
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 5504e67b20a4e4cdb0afdacb779234e56dd9c8d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395369"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422668"
 ---
 # <a name="isjson-transact-sql"></a>ISJSON (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -36,8 +37,6 @@ ms.locfileid: "87395369"
 ISJSON ( expression )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## <a name="arguments"></a>Аргументы
  *expression*  
  Строка для проверки.  
@@ -47,7 +46,7 @@ ISJSON ( expression )
   
  Не возвращает ошибок.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  **ISJSON** не проверяет уникальность ключей на том же уровне.  
   
 ## <a name="examples"></a>Примеры  
@@ -74,7 +73,7 @@ FROM tab1
 WHERE ISJSON(json_col) > 0 
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Данные JSON (SQL Server)](../../relational-databases/json/json-data-sql-server.md)  
   
   

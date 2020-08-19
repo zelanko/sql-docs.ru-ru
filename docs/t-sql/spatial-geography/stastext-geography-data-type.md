@@ -1,4 +1,5 @@
 ---
+description: STAsText (тип данных geography)
 title: STAsText (тип данных geography) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d3d2635d-ca6c-4205-9d6c-eb939ee314fd
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 17a7d957b5c85ef21889af21de03f6cc2154ac62
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: f89f2c2889d880388f74b563abc9aefe1eb28c82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555184"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422318"
 ---
 # <a name="stastext-geography-data-type"></a>STAsText (тип данных geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "86555184"
   
  Тип возвращаемых данных CLR: **SqlChars**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Тип OGC экземпляра **geography** можно определить с помощью метода [STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md).  
   
  В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] набор возможных результатов, возвращаемый на сервер, был пополнен экземплярами **FullGlobe**.  
@@ -59,7 +60,7 @@ SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.STAsText();  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Методы OGC в экземплярах Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+## <a name="see-also"></a>См. также  
+ [Методы OGC, применяемые к географическим объектам](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

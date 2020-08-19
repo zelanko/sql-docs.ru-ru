@@ -1,4 +1,5 @@
 ---
+description: = (равно) (Transact-SQL)
 title: = (равно) (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 12/06/2016
@@ -21,12 +22,12 @@ ms.assetid: 18885245-5f55-4831-8f0b-7f2a3e82e246
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 140545235928e356d143aa2a5164c0b054adf0f9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6acac2a2a67974945c6e934994c7823fc3d75bde
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918987"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422518"
 ---
 # <a name="-equals-transact-sql"></a>= (равно) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,9 +49,9 @@ expression = expression
  Любое допустимое выражение [expression](../../t-sql/language-elements/expressions-transact-sql.md). Если выражения имеют разные типы данных, должна быть возможность неявно преобразовать тип данных одного выражения в тип данных другого выражения. Преобразование основано на правилах [приоритетов типов данных](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
 ## <a name="result-types"></a>Типы результата  
- Логическое  
+ Логическое значение  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  При сравнении с помощью выражения NULL результат зависит от параметра `ANSI_NULLS`.  
   
 -   Если параметр `ANSI_NULLS` имеет значение ON, результатом любого сравнения со значением NULL является UNKNOWN в соответствии со стандартом ANSI, когда NULL является неизвестным значением и не может сравниваться с любым другим значением, включая другие значения NULL.  

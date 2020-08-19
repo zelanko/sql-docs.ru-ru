@@ -1,4 +1,5 @@
 ---
+description: SHUTDOWN (Transact-SQL)
 title: SHUTDOWN (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db543ba464af2c71ba3390cb4574797713b8c764
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8d3d0bc74e2d928b81e00947095aa992669bcb54
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918783"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459264"
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,9 +47,9 @@ SHUTDOWN [ WITH NOWAIT ]
 
 ## <a name="arguments"></a>Аргументы
  WITH NOWAIT  
- Необязательный параметр. Закрывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], не выполнив контрольные точки в каждой базе данных. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] осуществляет выход после попытки завершить все пользовательские процессы. При перезапуске сервера ко всем незавершенным транзакциям применяется откат.  
+ Необязательный элемент. Закрывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], не выполнив контрольные точки в каждой базе данных. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] осуществляет выход после попытки завершить все пользовательские процессы. При перезапуске сервера ко всем незавершенным транзакциям применяется откат.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Если не используется параметр WITHNOWAIT, SHUTDOWN завершает работу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] указанным ниже образом.  
   
 1.  Отключает имена входа (за исключением членов предопределенных ролей сервера **sysadmin** и **serveradmin**).  
@@ -66,7 +67,7 @@ SHUTDOWN [ WITH NOWAIT ]
   
 -   с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)];  
   
--   запустив команду **net stop mssqlserver** из командной строки для экземпляра по умолчанию или запустив команду **net stop mssql$** _instancename_ из командной строки для именованного экземпляра;  
+-   запустив команду **net stop mssqlserver** из командной строки для экземпляра по умолчанию или запустив команду **net stop mssql$**_instancename_ из командной строки для именованного экземпляра;  
   
 -   с помощью служб на панели управления.  
   

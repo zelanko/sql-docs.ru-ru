@@ -1,4 +1,5 @@
 ---
+description: Операции с данными многомерных выражений — SELECT
 title: Инструкция SELECT (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f56d5cbbc8e6653b4844e1b5e48b08911307395a
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 623d798a3794da7577cf036cb8a32b2cf9cd7b84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362794"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477016"
 ---
 # <a name="mdx-data-manipulation---select"></a>Операции с данными многомерных выражений — SELECT
 
@@ -88,7 +89,7 @@ FROM
  *Set_Expression*  
  Допустимое многомерное выражение, возвращающее набор.  
   
- *Integer*  
+ *Целое число*  
  Целое число между 0 и 127.  
   
  *Cube_Name*  
@@ -109,7 +110,7 @@ FROM
  *MemberProperty_Name*  
  Допустимая строка, представляющая свойство элемента.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  В выражении `<SELECT slicer axis clause>` должны содержаться элементы измерений и иерархий, отличающиеся от указанных в заданных выражениях `<SELECT query axis clause>`.  
   
  Если в заданных выражениях `<SELECT query axis clause>` и значении `<SELECT slicer axis clause>` атрибут куба пропущен, то к оси среза неявно добавляется элемент атрибута по умолчанию.  
@@ -393,7 +394,7 @@ WHERE
   
  Она выдает следующие результаты.  
   
-|Бизнес-тип + Категория|Все продукты|Принадлежности|Clothing|  
+|Бизнес-тип + Категория|Все продукты|Accessories|Clothing|  
 |-|-|-|-|  
 |**All Resellers**|**$ 80 450 596,98**|**$ 571 297,93**|**$ 1 777 840,84**|  
 |**Value Added Reseller**|**$ 34 967 517,33**|**$ 175 002,81**|**$ 592 385,71**|  
@@ -419,7 +420,7 @@ WHERE
   
  Этот запрос выдаст следующий результат.  
   
-|Бизнес-тип + Категория|Все продукты|Принадлежности|Clothing|  
+|Бизнес-тип + Категория|Все продукты|Accessories|Clothing|  
 |-|-|-|-|  
 |All Resellers|$ 73 694 430,80|$ 506 172,45|$ 1 524 906,93|  
 |Value Added Reseller|$ 34 967 517,33|$ 175 002,81|$ 592 385,71|  
@@ -453,7 +454,7 @@ WHERE
 |-|-|-|-|  
 |$ 80 450 596,98|$79 980 114,38|$470 482,60|0,58%|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основные понятия в Analysis Services &#40;многомерных выражений&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
  [Инструкции обработки данных многомерных выражений &#40;многомерные выражения&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
  [Ограничение запроса с помощью осей запроса и среза (многомерные выражения)](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  

@@ -1,4 +1,5 @@
 ---
+description: Создание файлов переменных значений (OracleToSQL)
 title: Создание файлов переменных значений (OracleToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -13,12 +14,12 @@ ms.assetid: f583d81a-8e34-41b1-8100-ee3a6a82213b
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 763785b09adf1a562d497d4c1b448ec03d502bfc
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 766bbd6b8908983726a18d5d66bf9700600e66e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934931"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468805"
 ---
 # <a name="creating-variable-value-files-oracletosql"></a>Создание файлов переменных значений (OracleToSQL)
 Файл значения переменной — это XML-файл, состоящий из значений параметров таких команд, как, имя исходного или целевого сервера, которое часто меняются при миграции с одного сервера на другой. При выполнении большого количества миграций базы данных создается несколько переменных файлов для хранения значений каждого исходного сервера и на них указывают ссылки в файле главного сценария с помощью параметра **-v** в командной строке. Это помогает поддерживать статические значения в нескольких файлах скриптов с переменными значениями в нескольких файлах переменных.  

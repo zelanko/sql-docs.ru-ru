@@ -1,4 +1,5 @@
 ---
+description: Объекты и интерфейсы ADO
 title: Объекты и интерфейсы ADO | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6deb8166c775fcdcfe8fb0975662dda0be3b3581
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 80a47336bb6453033a28b2d62eeda3700431594a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242854"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451376"
 ---
 # <a name="ado-objects-and-interfaces"></a>Объекты и интерфейсы ADO
 Связи между этими объектами представлены в [объектной модели ADO](../../../ado/reference/ado-api/ado-object-model.md).  
