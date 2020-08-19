@@ -1,4 +1,5 @@
 ---
+description: 'Преобразование из C в SQL: отметки времени'
 title: 'C в SQL: timestamp | Документация Майкрософт'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0e08bfff-68f9-4648-9558-09b57fea08ad
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3102e5043527a1aa9463980c9dd546839cb92f37
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e51d82e8acd59c8b4e6f5a8385720b0bd38eba4c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283754"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449036"
 ---
 # <a name="c-to-sql-timestamp"></a>Преобразование из C в SQL: отметки времени
 Идентификатором для типа данных ODBC C timestamp является:  
@@ -40,6 +41,6 @@ ms.locfileid: "81283754"
   
  Сведения о том, какие значения допустимы в структуре SQL_C_TIMESTAMP, см. в разделе [типы данных C](../../../odbc/reference/appendixes/c-data-types.md)ранее в этом приложении.  
   
- Когда данные timestamp C преобразуются в символьные данные SQL, полученные символьные данные находятся в формате "*гггг*-*мм*-*дд* *чч*:*мм*:*СС*[.* f...*] " формат.  
+ Когда данные timestamp C преобразуются в символьные данные SQL, полученные символьные данные находятся в формате "*гггг* - *мм* - *дд* *чч*:*мм*:*СС*[.* f...*] " формат.  
   
  Драйвер игнорирует значение длины или индикатора при преобразовании данных из типа данных timestamp C и предполагает, что размер буфера данных равен размеру типа данных timestamp C. Значение length/индикатора передается в аргументе *StrLen_Or_Ind* в **SQLPutData** и в буфере, указанном аргументом *StrLen_or_IndPtr* в **SQLBindParameter**. Буфер данных указывается с помощью аргумента *датаптр* в **SQLPutData** и аргумента *параметервалуептр* в **SQLBindParameter**.

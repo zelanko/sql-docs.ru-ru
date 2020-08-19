@@ -1,4 +1,5 @@
 ---
+description: Класс событий Lock:Released
 title: Класс событий Lock:Released | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: a150c300-72fa-4231-8f41-f1abd550a429
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3aed52bbb5af28a012f80bb185ccf7b386a94247
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4d79a3367fb115c775d51ac5badc7e399e667ded
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85642291"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448659"
 ---
 # <a name="lockreleased-event-class"></a>Класс событий Lock:Released
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,14 +28,14 @@ ms.locfileid: "85642291"
   
 ## <a name="lock-released-event-class-data-columns"></a>Столбцы данных класса событий Lock:Released  
   
-|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |BinaryData|**image**|Идентификатор ресурса блокировки.|2|Да|  
 |ClientProcessID|**int**|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент предоставляет идентификатор клиентского процесса.|9|Да|  
 |DatabaseID|**int**|Идентификатор базы данных, в которой запрашивается блокировка. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных ServerName захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
-|EventClass|**int**|Тип события = 23.|27|нет|  
-|EventSequence|**int**|Последовательность данного события в запросе.|51|нет|  
+|EventClass|**int**|Тип события = 23.|27|Нет|  
+|EventSequence|**int**|Последовательность данного события в запросе.|51|Нет|  
 |GroupID|**int**|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |HostName|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |IntegerData2|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|55|Да|  
@@ -48,7 +49,7 @@ ms.locfileid: "85642291"
 |ObjectID2|**bigint**|Идентификатор связанного объекта или сущности, если он доступен и применим.|56|Да|  
 |OwnerID|**int**|1 = TRANSACTION<br /><br /> 2 = CURSOR<br /><br /> 3 = SESSION<br /><br /> 4 = SHARED_TRANSACTION_WORKSPACE<br /><br /> 5 = EXCLUSIVE_TRANSACTION_WORKSPACE|58|Да|  
 |RequestID|**int**|Идентификатор запроса, содержащего инструкцию.|49|Да|  
-|ServerName|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|нет|  
+|ServerName|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|Нет|  
 |SessionLoginName|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Login1 и при выполнении инструкции под именем Login2 SessionLoginName будет содержать значение Login1, а LoginName — значение Login2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |SPID|**int**|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |StartTime|**datetime**|Время начала события, если оно известно.|14|Да|  

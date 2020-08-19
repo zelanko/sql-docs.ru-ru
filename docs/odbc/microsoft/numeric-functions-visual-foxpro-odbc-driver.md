@@ -1,4 +1,5 @@
 ---
+description: Числовые функции (драйвер ODBC для Visual FoxPro)
 title: Числовые функции (драйвер ODBC для Visual FoxPro) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7caab48e-cbb5-4bbc-a09b-5cf902e5bc45
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d3993a9a1b2412cb15229f2763c7c3b38f6b7862
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c8728446decd8a0ad04f08d88475ae08a7c69c5f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298164"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449376"
 ---
 # <a name="numeric-functions-visual-foxpro-odbc-driver"></a>Числовые функции (драйвер ODBC для Visual FoxPro)
 В следующей таблице описаны числовые функции ODBC, поддерживаемые драйвером ODBC для Visual FoxPro. Если грамматика Visual FoxPro для той же функции отличается от синтаксиса ODBC, в списке отображается эквивалент Visual FoxPro.  

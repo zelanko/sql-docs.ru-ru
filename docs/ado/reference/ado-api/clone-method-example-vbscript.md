@@ -1,4 +1,5 @@
 ---
+description: Пример метода Clone (VBScript)
 title: Пример метода Clone (VBScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8382abfb78b67f900101ec27c33abeba988800e8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e56e93f851d2f5f0dac7df2339dec37c0b6a1ac2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748992"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450946"
 ---
 # <a name="clone-method-example-vbscript"></a>Пример метода Clone (VBScript)
 В этом примере используется метод [clone](../../../ado/reference/ado-api/clone-method-ado.md) для создания копий [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) , а затем пользователь помещает указатель записи каждой копии независимо друг от друга.  
@@ -117,6 +118,6 @@ ms.locfileid: "82748992"
 <!-- EndCloneVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод Clone (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

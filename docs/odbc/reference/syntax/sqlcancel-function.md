@@ -1,4 +1,5 @@
 ---
+description: Функция SQLCancel
 title: Функция SQLCancel | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ac0b5972-627f-4440-8c5a-0e8da728726d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fcc2afce495a1481692ba1f20162a2df5d9a9458
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 040cd9034a8f754a26f577b7efd6e1307e4c90c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301314"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448876"
 ---
 # <a name="sqlcancel-function"></a>Функция SQLCancel
 **Соответствия**  
@@ -47,16 +48,16 @@ SQLRETURN SQLCancel(
  *статеменсандле*  
  Входной Маркер инструкции.  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR или SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLCancel** возвращает SQL_ERROR или SQL_SUCCESS_WITH_INFO, связанное значение SQLSTATE может быть получено путем вызова **SQLGetDiagRec** с *параметром handletype* SQL_HANDLE_STMT и *маркером* *статеменсандле*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые функцией **SQLCancel** , и объясняется каждый из них в контексте этой функции. Нотация "(DM)" предшествует описаниям SQLSTATE, возвращаемым диспетчером драйверов. Код возврата, связанный с каждым значением SQLSTATE, имеет SQL_ERROR, если не указано иное.  
   
-|SQLSTATE|Error|Описание|  
+|SQLSTATE|Ошибка|Описание|  
 |--------------|-----------|-----------------|  
 |01000|Общее предупреждение|Информационное сообщение для конкретного драйвера. (Функция возвращает SQL_SUCCESS_WITH_INFO.)|  
-|HY000|Общая ошибка|Произошла ошибка, для которой нет определенного SQLSTATE и для которого не определен SQLSTATE для конкретной реализации. Сообщение об ошибке, возвращенное функцией [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) в буфере * \*MessageText* , описывает ошибку и ее причину.|  
+|HY000|Общая ошибка|Произошла ошибка, для которой нет определенного SQLSTATE и для которого не определен SQLSTATE для конкретной реализации. Сообщение об ошибке, возвращенное функцией [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) в буфере * \* MessageText* , описывает ошибку и ее причину.|  
 |HY001|Ошибка выделения памяти|Драйверу не удалось выделить память, необходимую для поддержки выполнения или завершения функции.|  
 |HY010|Ошибка последовательности функций|(DM) вызвана асинхронно исполняемая функция для маркера соединения, связанного с *статеменсандле*. Эта асинхронная функция все еще выполнялась при вызове функции **SQLCancel** .<br /><br /> Не удалось выполнить операцию отмены (DM), так как выполняется асинхронная операция над маркером соединения, связанным с *статеменсандле*.|  
 |HY013|Ошибка управления памятью|Не удалось обработать вызов функции, так как не удалось получить доступ к базовым объектам памяти, возможно, из-за нехватки памяти.|  
@@ -116,6 +117,6 @@ SQLRETURN SQLCancel(
 |Отправка данных параметров во время выполнения|[Функция SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)|  
 |Размещение курсора в наборе строк, обновление данных в наборе строк, обновление или удаление данных в результирующем наборе|[Функция SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)

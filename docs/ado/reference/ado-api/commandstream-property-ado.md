@@ -1,4 +1,5 @@
 ---
+description: Свойство CommandStream (ADO)
 title: Свойство CommandStream (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f78f61b6-87e0-48dc-961e-83d0e20da58e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 20d2cb62b51a73066da242b3446a4d991f3bc79b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 07a16b00a4ec4381dc1dfa07fc57c2b599ed5ba1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760417"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450846"
 ---
 # <a name="commandstream-property-ado"></a>Свойство CommandStream (ADO)
 Указывает поток, используемый в качестве входных данных для объекта [команды](../../../ado/reference/ado-api/command-object-ado.md) .  
@@ -37,10 +38,10 @@ ms.locfileid: "82760417"
   
  При использовании потока команд (как указано в **CommandStream**) единственными допустимыми значениями [Коммандтипинум](../../../ado/reference/ado-api/commandtypeenum.md) для свойства [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) являются **адкмдтекст** и **адкмдункновн**. Любое другое значение приводит к возникновению ошибки.  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство CommandText (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
  [Свойство диалекта](../../../ado/reference/ado-api/dialect-property.md)   
  [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)

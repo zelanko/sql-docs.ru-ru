@@ -1,4 +1,5 @@
 ---
+description: 'IBCPSession:: BCPDone (поставщик собственного клиента OLE DB)'
 title: 'IBCPSession:: BCPDone (поставщик собственного клиента OLE DB) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: 19cd6e55-432a-450e-a15c-54d50eb53dee
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6198a144513c68c6ebe939f92f8c144186117835
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d4cb691b8271e0903fb31253b3ab6cbcdc7007ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247769"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448411"
 ---
 # <a name="ibcpsessionbcpdone-native-client-ole-db-provider"></a>IBCPSession:: BCPDone (поставщик собственного клиента OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -464,7 +465,7 @@ void wmain() {
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
+ [IBCPSession (OLE DB)](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [Выполнение операций массового копирования](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   
   

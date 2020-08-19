@@ -1,4 +1,5 @@
 ---
+description: Драйвер ODBC для Oracle
 title: Драйвер ODBC для Oracle | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 937e0662-8b1d-44f7-b077-4015c6605b2c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 093cb7352a7f509b0afcc061e2691311bb183169
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a561539ff960dfa6691d26496b1b62d2ee8ae763
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298134"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449336"
 ---
 # <a name="odbc-driver-for-oracle"></a>Драйвер ODBC для Oracle
 > [!IMPORTANT]  

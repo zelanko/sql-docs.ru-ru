@@ -1,4 +1,5 @@
 ---
+description: Сохранение отфильтрованных и иерархических наборов записей
 title: Сохранение отфильтрованных и иерархических наборов записей | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d01aeb4d-4e43-450b-b3f2-0c27eaaf9f86
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5fa3fdd55fb78f16629907c174b08aab64ceb86e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a69b491f4bb5834331b9cfa582b6f72d248ba317
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763115"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453066"
 ---
 # <a name="persisting-filtered-and-hierarchical-recordsets"></a>Сохранение отфильтрованных и иерархических наборов записей
 Если свойство [фильтра](../../../ado/reference/ado-api/filter-property.md) действует для **набора записей**, сохраняются только те строки, которые доступны в фильтре. Если **набор записей** является иерархическим, текущий дочерний **набор записей** и его дочерние элементы сохраняются, включая родительский **набор записей**. Если вызывается метод **Save** дочернего **набора записей** , дочерний элемент и все его дочерние элементы сохраняются, но родительский элемент не является. Дополнительные сведения о иерархических **наборах записей**см. в разделе [формирование данных](../../../ado/guide/data/data-shaping.md).  

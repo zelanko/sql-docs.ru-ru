@@ -1,4 +1,5 @@
 ---
+description: Пакеты служб Integration Services (SSIS)
 title: Пакеты служб Integration Services (SSIS) | Документы Майкрософт
 ms.custom: ''
 ms.date: 08/31/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 34da25ac87cbcfbeb815b4053d60c390a9140f5d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 666e61788f402d405354f21bf583aa3f2e0b8286
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917522"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449828"
 ---
 # <a name="integration-services-ssis-packages"></a>Пакеты служб Integration Services (SSIS)
 

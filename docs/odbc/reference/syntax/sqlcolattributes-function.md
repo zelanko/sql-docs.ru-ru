@@ -1,4 +1,5 @@
 ---
+description: Функция SQLColAttributes
 title: Функция SQLColAttributes | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3ece37af-db56-47fc-bc9d-6a7d0d8a00ec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ef2dc0b9007542d5bf71f06a742cc58c0ae5f4ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0c404a4f8ef1dd9bef246e811e200eed3d431c29
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301284"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448800"
 ---
 # <a name="sqlcolattributes-function"></a>Функция SQLColAttributes
 **Соответствия**  
@@ -38,6 +39,6 @@ ms.locfileid: "81301284"
   
  Если приложение будет работать в 64-разрядной операционной системе, см. [сведения о ODBC 64-bit](../../../odbc/reference/odbc-64-bit-information.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)

@@ -1,4 +1,5 @@
 ---
+description: Занятие 3. Установка пакетов SSIS
 title: Занятие 3. Установка пакетов SSIS | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 87bc4d82-39d8-424f-886f-98cf1e4bb07a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4db3158c378d32dd472a9845e785be95130780b6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a56687640190b5f129071c6ad2836b3013ae2ac0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922181"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449724"
 ---
 # <a name="lesson-3-install-ssis-packages"></a>Занятие 3. Установка пакетов SSIS
 
@@ -26,7 +27,7 @@ ms.locfileid: "86922181"
   
 На этом занятии вы скопируете пакет развертывания на другой компьютер и запустите мастер установки пакета, чтобы установить пакеты, зависимости пакетов и вспомогательные файлы. Пакеты будут установлены в базу данных **msdb**[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , а остальные элементы будут установлены в файловую систему. После установки пакета вы проверите развертывание, выполнив пакеты из среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] при помощи программы выполнения пакетов.  
   
-**Предполагаемое время выполнения данного занятия:** 30 минут  
+**Предполагаемое время выполнения данного урока:** 30 минут  
   
 ## <a name="lesson-tasks"></a>Задачи занятия  
 Это занятие содержит следующие задачи.  

@@ -1,4 +1,5 @@
 ---
+description: Audit Broker Login, класс событий
 title: Класс событий Audit Broker Login | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: af9b1153-2791-40ef-a95c-50923cd0cc97
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9b78ae1ad6fafcf4be86cd2d32e936d2ef018ed8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d6c94dd09b37a0648f65f1d74d0b95abbb518a96
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85693639"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448697"
 ---
 # <a name="audit-broker-login-event-class"></a>Audit Broker Login, класс событий
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -30,8 +31,8 @@ ms.locfileid: "85693639"
 |**ApplicationName**|**nvarchar**|Не используется в этом классе событий.|10|Да|  
 |**ClientProcessID**|**int**|Не используется в этом классе событий.|9|Да|  
 |**DatabaseID**|**int**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных **ServerName** захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
-|**EventClass**|**int**|Тип захваченного класса событий. В случае класса событий **Audit Broker Login** это значение всегда равно **159**.|27|нет|  
-|**EventSequence**|**int**|Порядковый номер этого события.|51|нет|  
+|**EventClass**|**int**|Тип захваченного класса событий. В случае класса событий **Audit Broker Login** это значение всегда равно **159**.|27|Нет|  
+|**EventSequence**|**int**|Порядковый номер этого события.|51|Нет|  
 |**EventSubClass**|**int**|Тип подкласса событий, предоставляющий дополнительные сведения о каждом классе события. Приведенная ниже таблица содержит список подклассов для данного класса событий.|21|Да|  
 |**FileName**|**nvarchar**|Уровень проверки подлинности удаленного брокера. Поддерживаемый метод проверки подлинности конфигурируется на конечной точке удаленного брокера. Если доступен более чем один метод, принимающая (целевая) конечная точка определяет, какой метод использовать первым. Возможны следующие значения:<br /><br /> **Нет**. Не настроен ни один метод проверки подлинности.<br /><br /> **NTLM**. Требуется проверка подлинности NTLM.<br /><br /> **KERBEROS**. Требуется проверка подлинности Kerberos.<br /><br /> **NEGOTIATE**. Windows согласовывает метод проверки подлинности.<br /><br /> **CERTIFICATE**. Требуется сертификат, настроенный для конечной точки, который хранится в базе данных **master** .<br /><br /> **NTLM, CERTIFICATE**. Допустимы проверка подлинности NTLM или сертификат TLS/SSL.<br /><br /> **KERBEROS, CERTIFICATE**. Допустимы проверка подлинности Kerberos или сертификат конечной точки.<br /><br /> **NEGOTIATE, CERTIFICATE**. Windows согласовывает метод проверки подлинности, или же для проверки подлинности может быть использован сертификат конечной точки.<br /><br /> **CERTIFICATE, NTLM**. Допустимы сертификат конечной точки или проверка подлинности NTLM.<br /><br /> **CERTIFICATE, KERBEROS**. Допустимы сертификат конечной точки или проверка подлинности Kerberos.<br /><br /> **CERTIFICATE, NEGOTIATE**. Принимается сертификат конечной точки для проверки подлинности, или Windows согласовывает метод проверки подлинности.|36|нет|  
 |**HostName**|**nvarchar**|Не используется в этом классе событий.|8|Да|  

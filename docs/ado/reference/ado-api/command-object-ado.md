@@ -1,4 +1,5 @@
 ---
+description: Объект Command (ADO)
 title: Объект Command (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a02c22fb-542d-465e-a629-30fd59dcbebf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6f6b2e68947959ecd497645d2290bb7acaa03f86
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b53f70c5f9a0da139346865b67df57a069b03e80
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760416"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450886"
 ---
 # <a name="command-object-ado"></a>Объект Command (ADO)
 Определяет конкретную команду, которую необходимо выполнить для источника данных.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Используйте объект **Command** , чтобы запрашивать базу данных и возвращать записи в объекте [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) , выполнять групповые операции или управлять структурой базы данных. В зависимости от функциональных возможностей поставщика некоторые коллекции **команд** , методы или свойства могут вызвать ошибку при ссылке.  
   
  С помощью коллекций, методов и свойств объекта **Command** можно выполнять следующие действия.  

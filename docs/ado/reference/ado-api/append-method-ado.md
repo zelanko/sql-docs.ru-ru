@@ -1,4 +1,5 @@
 ---
+description: Метод Append (ADO)
 title: Метод Append (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4d0d94cf40a397ca030a9ea975a02962d6ab9489
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: dd3ee907aa2a7081ca7204dcc1b0b3b069581832
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746911"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451266"
 ---
 # <a name="append-method-ado"></a>Метод Append (ADO)
 Добавляет объект в коллекцию. Если коллекция является [полями](../../../ado/reference/ado-api/fields-collection-ado.md), то перед добавлением в коллекцию можно создать новый объект [поля](../../../ado/reference/ado-api/field-object.md) .  
@@ -43,22 +44,22 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *object*  
  Объектная переменная, представляющая объект, который необходимо добавить.  
   
- *Name*  
+ *имя*;  
  **Строковое** значение, содержащее имя нового объекта **field** и не должно совпадать с именем любого другого объекта в *полях*.  
   
- *Type*  
+ *Тип*  
  Значение [дататипинум](../../../ado/reference/ado-api/datatypeenum.md) , значение по умолчанию которого равно **адемпти**, которое указывает тип данных нового поля. Следующие типы данных не поддерживаются ADO и не должны использоваться при добавлении новых полей в [объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md): **адидиспатч**, **адиункновн**, **адвариант**.  
   
  *DefinedSize*  
- Необязательный элемент. Значение **типа Long** , представляющее определенный размер (в символах или байтах) нового поля. Значение по умолчанию для этого параметра является производным от *типа*. Поля с *DefinedSize* размером более 255 байт рассматриваются как столбцы переменной длины. Значение по умолчанию для *DefinedSize* не указано.  
+ Необязательный параметр. Значение **типа Long** , представляющее определенный размер (в символах или байтах) нового поля. Значение по умолчанию для этого параметра является производным от *типа*. Поля с *DefinedSize* размером более 255 байт рассматриваются как столбцы переменной длины. Значение по умолчанию для *DefinedSize* не указано.  
   
  *Атрибуты*  
- Необязательный элемент. Значение [фиелдаттрибутинум](../../../ado/reference/ado-api/fieldattributeenum.md) , для которого значение по умолчанию — **адфлддефаулт**, определяющее атрибуты для нового поля. Если это значение не указано, поле будет содержать атрибуты, производные от *типа*.  
+ Необязательный параметр. Значение [фиелдаттрибутинум](../../../ado/reference/ado-api/fieldattributeenum.md) , для которого значение по умолчанию — **адфлддефаулт**, определяющее атрибуты для нового поля. Если это значение не указано, поле будет содержать атрибуты, производные от *типа*.  
   
  *FieldValue*  
- Необязательный элемент. **Вариант** , представляющий значение для нового поля. Если не указано, то поле добавляется со значением NULL.  
+ Необязательный параметр. **Вариант** , представляющий значение для нового поля. Если не указано, то поле добавляется со значением NULL.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
   
 ## <a name="parameters-collection"></a>Коллекция Parameters  
  Необходимо задать свойство [Type](../../../ado/reference/ado-api/type-property-ado.md) объекта [Parameter](../../../ado/reference/ado-api/parameter-object.md) , прежде чем добавлять его в коллекцию [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) . Если выбран тип данных переменной длины, необходимо также задать для свойства [size](../../../ado/reference/ado-api/size-property-ado-parameter.md) значение больше нуля.  
@@ -85,7 +86,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
   
  После добавления **поля** в коллекцию **Fields** объекта **Record** вызовите метод **Update** коллекции **Fields** , чтобы сохранить изменения.  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
   
 - [Коллекция Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
 - [Коллекция Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)  

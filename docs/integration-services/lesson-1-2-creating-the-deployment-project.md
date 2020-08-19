@@ -1,4 +1,5 @@
 ---
+description: Занятие 1–2. Создание проекта развертывания
 title: Шаг 2. Создание проекта развертывания | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 59990fe2-7036-4e9c-8efc-6ece9e66eda7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e202a3b3429057418456618a08d7333994199a36
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 025e601dfb6f062246d1edcb1799c1daf2b69886
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917427"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449706"
 ---
 # <a name="lesson-1-2---creating-the-deployment-project"></a>Занятие 1–2. Создание проекта развертывания
 
@@ -45,7 +46,7 @@ ms.locfileid: "86917427"
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
 [Шаг 3. Добавление пакетов и других файлов](../integration-services/lesson-1-3-adding-packages-and-other-files.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Проекты служб Integration Services (SSIS)](~/integration-services/integration-services-ssis-projects-and-solutions.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Проекты и решения служб Integration Services (SSIS)
 title: Проекты и решения служб Integration Services (SSIS) | Документы Майкрософт
 ms.custom: ''
 ms.date: 09/20/2019
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e10adad56ee8a27555d6ac4d5bd3cdfbf31e9abf
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 623c423b50d589ce9e7964b436cba604dcb3203d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917517"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449846"
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>Проекты и решения служб Integration Services (SSIS)
 
@@ -68,12 +69,12 @@ ms.locfileid: "86917517"
   
  В следующей таблице описаны папки, появляющиеся в проекте служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
-|Папка|Description|  
+|Папка|Описание|  
 |------------|-----------------|
 |Диспетчеры соединений|Содержит диспетчеры соединений проектов. Дополнительные сведения см. в статье [Соединения служб Integration Services (SSIS)](../integration-services/connection-manager/integration-services-ssis-connections.md).|
 |[!INCLUDE[ssIS](../includes/ssis-md.md)] Пакеты|Содержит пакеты. Дополнительные сведения см. в разделе [Пакеты служб Integration Services (SSIS)](../integration-services/integration-services-ssis-packages.md).|  
 |Части пакета|Содержит части пакета, которые могут быть повторно использованы или импортированы. Дополнительные сведения см. в разделе [Повторное использование потока управления для нескольких пакетов с помощью частей пакета потока управления](reuse-control-flow-across-packages-by-using-control-flow-package-parts.md).
-|Разное|Содержит файлы, не являющиеся файлами пакетов.|  
+|Прочее|Содержит файлы, не являющиеся файлами пакетов.|  
   
 ## <a name="files-in-integration-services-projects"></a>Файлы в проектах служб Integration Services  
  При добавлении в решение нового или существующего проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] среда [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] создает файлы проекта, имеющие расширения .dtproj, .dtproj.user, .database, Project.params. 
@@ -187,7 +188,7 @@ ms.locfileid: "86917517"
   
 2.  В обозревателе решений щелкните правой кнопкой мыши проект и выберите команду **Выгрузить проект**.  
   
-3.  Чтобы подтвердить удаление, нажмите кнопку **ОК** .  
+3.  Нажмите кнопку **ОК** для подтверждения удаления.  
 
 ## <a name="add-an-item-to-a-project"></a>Добавление элемента в проект  
   

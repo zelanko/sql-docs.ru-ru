@@ -1,4 +1,5 @@
 ---
+description: Поддержка правил, триггеров, значений по умолчанию и хранимых процедур (драйвер ODBC для Visual FoxPro)
 title: Поддержка правил, триггеров, значений по умолчанию и хранимых процедур | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -28,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a02aeea8f33e3a4d87fc771a7b0fa7b1a0067b6d
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 56b1a2e50f26da8ce5ef581f8eda7c6a96afd741
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363364"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449116"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Поддержка правил, триггеров, значений по умолчанию и хранимых процедур (драйвер ODBC для Visual FoxPro)
 С помощью драйвера ODBC для Visual FoxPro нельзя создавать правила и триггеры Visual FoxPro, а также значения по умолчанию или хранимые процедуры. Однако приложение может взаимодействовать с существующими правилами, триггерами, значениями по умолчанию или хранимыми процедурами при вставке, обновлении или удалении данных Visual FoxPro, хранящихся в базе данных.  
@@ -373,7 +374,7 @@ ms.locfileid: "87363364"
     :::column-end:::
 :::row-end:::
 
-## <a name="n"></a>N  
+## <a name="n"></a>Нет  
 
 :::row:::
     :::column:::

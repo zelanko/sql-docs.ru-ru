@@ -1,4 +1,5 @@
 ---
+description: Справочник по драйверу ODBC для программистов Oracle&#39;
 title: Справочник по драйверу ODBC для программистов Oracle&#39;s | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: d70e79a1-6403-49ad-8713-eda6e8aa287e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 763c9892836b262f308b82ef96794a03dc33fd12
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b409446da085e0d35b9f3580ba7da8df22ef6f03
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298124"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449346"
 ---
 # <a name="odbc-driver-for-oracle-programmer39s-reference"></a>Справочник по драйверу ODBC для программистов Oracle&#39;
 > [!IMPORTANT]  
 >  Эта функция будет удалена в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Вместо этого используйте драйвер ODBC, предоставляемый Oracle.  
   
- В этом разделе рассматриваются следующие темы:  
+ Этот раздел содержит следующие подразделы:  
   
 -   [Формат и атрибуты строки подключения](../../odbc/microsoft/connection-string-format-and-attributes.md)  
   

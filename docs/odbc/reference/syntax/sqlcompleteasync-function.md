@@ -1,4 +1,5 @@
 ---
+description: Функция SQLCompleteAsync
 title: Функция Склкомплетеасинк | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1b97c46a-d2e5-4540-8239-9d975e5321c6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f56def542b71906d1e9432d724fdab8143ccb346
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: bb5ec8ff7c0aa96e37ce66cabb1e18c9993e95f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279592"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448765"
 ---
 # <a name="sqlcompleteasync-function"></a>Функция SQLCompleteAsync
 **Соответствия**  
@@ -56,7 +57,7 @@ SQLRETURN SQLCompleteAsync(
  *асинкреткодептр*  
  Проверки Указатель на буфер, который будет содержать код возврата асинхронного API. Если *асинкреткодептр* имеет значение null, **склкомплетеасинк** возвращает SQL_ERROR.  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  SQL_SUCCESS, SQL_ERROR, SQL_NO_DATA или SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Диагностика  
@@ -70,8 +71,8 @@ SQLRETURN SQLCompleteAsync(
   
 -   SQL_NO_DATA: в режиме уведомления асинхронная операция не выполняется или диспетчер драйверов не уведомил приложение. В режиме опроса асинхронная операция не выполняется.  
   
-## <a name="comments"></a>Примечания  
+## <a name="comments"></a>Комментарии  
  В режиме асинхронной обработки на основе опроса *асинкреткодептр* может быть SQL_STILL_EXECUTING, когда **склкомплетеасинк** возвращает SQL_SUCCESS. Приложение должно выполнять опрос до тех пор, пока *асинкреткодептр* не SQL_STILL_EXECUTING. В режиме асинхронной обработки на основе уведомлений *асинкреткодептр* никогда не будет SQL_STILL_EXECUTING.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Асинхронное выполнение (метод опроса)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

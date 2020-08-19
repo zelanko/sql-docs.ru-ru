@@ -1,4 +1,5 @@
 ---
+description: Audit Change Audit, класс событий
 title: Класс событий Audit Change Audit | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 8cfacc82-cee8-4199-a69e-acedecfc0b3b
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 28009f6a84ef11668b84ae5fd8ff5c6f08a6a9aa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7255e91ed01ed5800053a274831e43aebaf8e1e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85693327"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448692"
 ---
 # <a name="audit-change-audit-event-class"></a>Audit Change Audit, класс событий
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "85693327"
   
 ## <a name="audit-change-audit-event-class-data-columns"></a>Столбцы данных класса событий Audit Change Audit  
   
-|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |**ClientProcessID**|**int**|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент предоставляет идентификатор клиентского процесса.|9|Да|  
@@ -33,8 +34,8 @@ ms.locfileid: "85693327"
 |**DatabaseID**|**int**|Идентификатор базы данных, указанной в инструкции USE *database* , или базы данных по умолчанию, если для данного экземпляра инструкция USE *database* не выполнялась. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных **ServerName** захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |**DatabaseName**|**nvarchar**|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
 |**DBUserName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|40|Да|  
-|**EventClass**|**int**|Тип события = 117.|27|нет|  
-|**EventSequence**|**int**|Последовательность данного события в запросе.|51|нет|  
+|**EventClass**|**int**|Тип события = 117.|27|Нет|  
+|**EventSequence**|**int**|Последовательность данного события в запросе.|51|Нет|  
 |**EventSubClass**|**int**|Тип подкласса события.<br /><br /> 1 = начало аудита,<br /><br /> 2 = завершение аудита,<br /><br /> 3 = режим C2 включен (ON),<br /><br /> 4 = режим C2 выключен (OFF).|21|Да|  
 |**HostName**|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |**IsSystem**|**int**|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  
@@ -45,8 +46,8 @@ ms.locfileid: "85693327"
 |**NTUserName**|**nvarchar**|Имя пользователя Windows.|6|Да|  
 |**OwnerName**|**nvarchar**|Имя пользователя базы данных, владеющего объектом.|37|Да|  
 |**RequestID**|**int**|Идентификатор запроса, содержащего инструкцию.|49|Да|  
-|**ServerName**|**nvarchar**|Имя экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], для которого производится трассировка.|26|нет|  
-|**SessionLoginName**|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при подключении к [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по имени "Имя_входа1" и при выполнении инструкции под именем "Имя_входа2" **SessionLoginName** содержит значение "Имя_входа1", а **LoginName** — значение "Имя_входа2". В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
+|**ServerName**|**nvarchar**|Имя экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|Нет|  
+|**SessionLoginName**|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при подключении к [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по имени "Имя_входа1" и при выполнении инструкции под именем "Имя_входа2" **SessionLoginName** содержит значение "Имя_входа1", а **LoginName** — значение "Имя_входа2". В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |**SPID**|**int**|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |**StartTime**|**datetime**|Время начала события, если оно известно.|14|Да|  
 |**Успешно**|**int**|1 = успешное завершение. 0 = неуспешное завершение. Например, значение 1 означает успешную проверку разрешений, а значение 0 означает, что эта проверка не пройдена.|23|Да|  

@@ -1,4 +1,5 @@
 ---
+description: Стандартный шлюз
 title: Стандартный шлюз | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b8341492-2141-4bab-80bd-f2752223079e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 67551845c0dd8c6a28c0c4bc1c50f54ee8232df1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 687097813d01b27ac49e657f11a2b763e2ca1214
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81280077"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448904"
 ---
 # <a name="standard-gateway"></a>Стандартный шлюз
 *Шлюз* — это часть программного обеспечения, которая приводит к тому, что одна СУБД выглядит как другая. То есть шлюз принимает программный интерфейс, грамматику SQL и протокол потока данных для одной СУБД и преобразует его в интерфейс программирования, грамматику SQL и протокол потока данных для скрытой СУБД. Например, приложения, разработанные для использования Microsoft® SQL Server™ также могут получать доступ к данным DB2 через шлюз Micro ДеЦисионваре DB2. Этот продукт приводит к тому, что DB2 будет выглядеть так, как SQL Server. При использовании шлюзов для каждой целевой базы данных должен быть записан отдельный шлюз.  

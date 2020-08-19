@@ -1,4 +1,5 @@
 ---
+description: Пример свойства CacheSize (Visual Basic)
 title: Пример свойства CacheSize (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a237ffdb-6e5b-47c6-9901-d5cdbe8625f3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 166f18abc1adac56640374ef6e0ce5405e7fdc54
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fab0cc27720b6f5cff48441eef047dd219311c93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758900"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451086"
 ---
 # <a name="cachesize-property-example-vb"></a>Пример свойства CacheSize (Visual Basic)
 В этом примере используется свойство [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) , чтобы продемонстрировать разницу в производительности для операции, выполняемой с 30-записывающим кэшем и без него.  
@@ -119,6 +120,6 @@ End Sub
 'EndCacheSizeVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство CacheSize (ADO)](../../../ado/reference/ado-api/cachesize-property-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

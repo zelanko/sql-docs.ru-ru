@@ -1,4 +1,5 @@
 ---
+description: Урок 1-4. Добавление задачи потока данных к пакету
 title: Шаг 4. Добавление задачи потока данных в пакет | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7ba3ef8fe03b0f3057dbb443dfbf5ab257a70983
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4d920b5f78d2d3e6dd3e557cbac4e50ad7952884
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917390"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449692"
 ---
 # <a name="lesson-1-4-add-a-data-flow-task-to-the-package"></a>Урок 1-4. Добавление задачи потока данных к пакету
 
@@ -41,12 +42,12 @@ ms.locfileid: "86917390"
   
     Каждый компонент, который вы добавляете в область конструктора, должен иметь уникальное имя. Для удобства работы и обслуживания эти имена должны хорошо описывать функции компонентов. Следование этим правилам именования обеспечивает самодокументируемость пакетов служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Другим способом документирования пакетов является использование примечаний. Дополнительные сведения о заметках см. в разделе [Использование заметок в пакетах](../integration-services/use-annotations-in-packages.md).  
   
-4.  Щелкните правой кнопкой мыши задачу потока данных, выберите пункт **Свойства** и в окне "Свойства" убедитесь в том, что свойство **LocaleID** установлено в значение **Английский (США)** .  
+4.  Щелкните правой кнопкой мыши задачу потока данных, выберите пункт **Свойства** и в окне "Свойства" убедитесь в том, что свойство **LocaleID** установлено в значение **Английский (США)**.  
   
 ## <a name="go-to-next-task"></a>Переход к следующей задаче
 [Шаг 5. Добавление и настройка источника неструктурированных файлов](../integration-services/lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также  
 [Задача потока данных](../integration-services/control-flow/data-flow-task.md)  
   
   

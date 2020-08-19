@@ -1,4 +1,5 @@
 ---
+description: Изменение значений домена
 title: Изменение значений домена
 ms.date: 11/08/2011
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: b07dd7b8d121d1be70a6522e716fc304bbf3d9f1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: eb96c88be0b92752e514eb34ac59233d4fae36a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901113"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450046"
 ---
 # <a name="change-domain-values"></a>Изменение значений домена
 
@@ -44,7 +45,7 @@ ms.locfileid: "85901113"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для изменения значений домена необходимо иметь роль dqs_kb_editor или dqs_administrator в базе данных DQS_MAIN.  
   
-##  <a name="change-domain-values"></a><a name="Change"></a>Изменение значений домена  
+##  <a name="change-domain-values"></a><a name="Change"></a> Изменение значений домена  
  В таблице **Значение** отображаются знания, добавленные в базу знаний для отдельного домена. В любое время вы можете выбрать другой домен в списке доменов для отображения значений для данного домена. Поле содержит следующие столбцы.  
   
 -   Столбец **Значение** отображает все значения, добавленные процессом обнаружения к выбранному домену из поля в образце данных. Любое значение, рассматриваемое как ошибочное, будет показано в качестве синонима для значения, рассматриваемого как верное.  

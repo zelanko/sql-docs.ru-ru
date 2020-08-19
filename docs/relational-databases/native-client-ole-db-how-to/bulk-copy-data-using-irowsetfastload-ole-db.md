@@ -1,4 +1,5 @@
 ---
+description: Групповое Копирование данных использование IRowsetFastLoad (OLE DB) в SQL Server Native Client
 title: Массовые копирование данных с помощью IRowsetFastLoad (поставщик собственного клиента OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: 0b8908d1-fd6d-47a9-9e30-514cee8f60c8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6a898f45d80a266b0d385b73832312e9046b157b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 1a2586a6f3a741f81cb30756006c5a2b4ae84b02
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247917"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448502"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db-in--sql-server-native-client"></a>Групповое Копирование данных использование IRowsetFastLoad (OLE DB) в SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "87247917"
   
  Потребитель уведомляет SQLOLEDB о необходимости массового копирования путем установки зависящего от поставщика SQLOLEDB свойства SSPROP_ENABLEFASTLOAD в значение VARIANT_TRUE. Установив на источнике данных это свойство, потребитель создает сеанс SQLOLEDB. Новый сеанс позволяет потребителю получить доступ к интерфейсу **IRowsetFastLoad**.  
   
- Имеется полный образец, иллюстрирующий применение интерфейса **IRowsetFastLoad** для массового копирования записей в таблицу. В этом образце в таблицу **IRFLTable** добавляется 10 записей. Необходимо создать таблицу **ирфлтабле** в базе данных.  
+ Имеется полный образец, иллюстрирующий применение интерфейса **IRowsetFastLoad** для массового копирования записей в таблицу. В этом образце в таблицу **IRFLTable** добавляется 10 записей. Необходимо создать в базе данных таблицу **IRFLTable**.  
   
  Образцу требуется образец базы данных AdventureWorks, который можно загрузить с домашней страницы [Образцы кода и проекты сообщества Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) (возможно, на английском языке).  
   

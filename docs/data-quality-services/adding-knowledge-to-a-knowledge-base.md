@@ -1,4 +1,5 @@
 ---
+description: Добавление знаний в базу знаний
 title: Добавление знаний в базу знаний
 ms.date: 06/04/2013
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 69785485b74333e5ebe3aa37ce6a23abf89cf612
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 393d9d10fd882f1dedfbaac012b2dbd0ec200a3b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896227"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450021"
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>Добавление знаний в базу знаний
 
@@ -38,36 +39,36 @@ ms.locfileid: "85896227"
   
 -   [Использование базы знаний DQS по умолчанию](#Default)  
   
-##  <a name="perform-knowledge-discovery"></a><a name="Discovery"></a>Выполнить обнаружение знаний  
+##  <a name="perform-knowledge-discovery"></a><a name="Discovery"></a> Выполнить обнаружение знаний  
  В процессе обнаружения знаний образец данных анализируется на соответствие критериям DQS, затем полученные знания добавляются в базу знаний. Это изменяющий данные автоматизированный процесс, при котором обнаруживаются несоответствия и синтаксические ошибки в данных. Действие по обнаружению знаний выполняется мастером, который представляет собой страницу для интерактивного управления значениями домена.  
   
 -   Дополнительные сведения в документации см. в разделе [Perform Knowledge Discovery](../data-quality-services/perform-knowledge-discovery.md).  
   
 -   Чтобы просмотреть видео, в котором показано обнаружение знаний, щелкните [здесь](https://msdn.microsoft.com/sqlserver/hh323825.aspx).  
   
-##  <a name="manage-data-values-in-a-domain"></a><a name="ManageDomain"></a>Управление значениями данных в домене  
+##  <a name="manage-data-values-in-a-domain"></a><a name="ManageDomain"></a> Управление значениями данных в домене  
  В службах DQS предусмотрено интерактивное изменение и пополнение метаданных, создаваемых в процессе автоматизированного обнаружения знаний. Это выполняется в действии «Управление доменами», когда изменение можно применить к конкретному значению данных.  
   
 -   Дополнительные сведения в документации см. в разделе [Change Domain Values](../data-quality-services/change-domain-values.md).  
   
 -   Чтобы просмотреть видео, в котором показано управление доменами, щелкните [здесь](https://msdn.microsoft.com/sqlserver/hh323825.aspx). Обратите внимание, что в этом видео значения домена изменяются на странице «Управление значениями домена» в мастере «Обнаружение знаний». Кроме того, эти шаги можно выполнить на странице «Значения домена» действия «Управление доменами».  
   
-##  <a name="import-knowledge-from-a-dqs-file"></a><a name="DQSFile"></a>Импорт набора знаний из файла. DQS  
+##  <a name="import-knowledge-from-a-dqs-file"></a><a name="DQSFile"></a> Импорт набора знаний из файла. DQS  
  Вы можете как импортировать домен из файла .dqs в существующую базу знаний, так и импортировать базу знаний целиком из файла .dqs в новую базу знаний. Для этого нужно сначала экспортировать существующий домен или базу знаний в файл .dqs. Файл .dqs с доменом содержит все данные этого домена. Файл .dqs с базой знаний содержит все сведения из этой базы знаний, в том числе домены и политику сопоставления.  
   
 -   Дополнительные сведения см. в документации [Импорт домена из файла DQS](../data-quality-services/import-a-domain-from-a-dqs-file.md) или [Импорт базы знаний из файла DQS](../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md).  
   
-##  <a name="import-knowledge-from-an-excel-file"></a><a name="Excel"></a>Импорт набора знаний из файла Excel  
+##  <a name="import-knowledge-from-an-excel-file"></a><a name="Excel"></a> Импорт набора знаний из файла Excel  
  Вы можете импортировать значения домена из файла электронной таблицы Excel в существующий домен или базу знаний. Для этого необходимо сначала создать электронную таблицу Excel со значениями домена для импорта, затем убедиться в наличии установленной программы Excel на компьютере с [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , куда планируется импортировать значения с помощью [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Нельзя экспортировать значения домена из домена или базы знаний в файл Excel.  
   
 -   Дополнительные сведения см. в документации [Импорт значений в домен из файла Excel](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md) или [Импорт доменов из файла Excel в службу обнаружения знаний](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md).  
   
-##  <a name="import-knowledge-from-a-project-back-into-the-knowledge-base"></a><a name="Project"></a>Импорт набора знаний из проекта обратно в базу знаний  
+##  <a name="import-knowledge-from-a-project-back-into-the-knowledge-base"></a><a name="Project"></a> Импорт набора знаний из проекта обратно в базу знаний  
  После выполнения очистки или сопоставления в проекте DQS с использованием базы знаний можно импортировать знания, полученные во время проверки или сопоставления, обратно в базу. Это позволяет сохранять набор знаний, полученные в ходе осуществления проекта, а также постоянно накапливать наборы знаний в базе знаний.  
   
 -   Дополнительные сведения см. в документации [Импорт значений проекта очистки в домен](../data-quality-services/import-cleansing-project-values-into-a-domain.md).  
   
-##  <a name="use-the-default-dqs-knowledge-base"></a><a name="Default"></a>Использование базы знаний DQS по умолчанию  
+##  <a name="use-the-default-dqs-knowledge-base"></a><a name="Default"></a> Использование базы знаний DQS по умолчанию  
  Службы DQS поставляются с предварительно созданной базой знаний, известной как «Данные служб DQS», содержащей домены для данных о компаниях и адресах США. С помощью этой базы знаний можно быстро начать проект, не создавая новую базу знаний. База знаний «Данные служб DQS» доступна только для чтения, но на ее основе диспетчер данных может создать новую базу знаний.  
   
 -   Дополнительные сведения в документации см. в разделе [Using the DQS Default Knowledge Base](../data-quality-services/using-the-dqs-default-knowledge-base.md).  

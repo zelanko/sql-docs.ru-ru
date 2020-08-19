@@ -1,4 +1,5 @@
 ---
+description: 'Отправка обновлений: метод UpdateBatch'
 title: 'Отправка обновлений: метод UpdateBatch | Документация Майкрософт'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 87123797-831f-48e0-94b5-f669f9ca194a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: abb0051ef336a145b2da75906831d7adc168e6e3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8b5378cad96bc2827badc2e15a23d7f48f683381
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760890"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452886"
 ---
 # <a name="sending-the-updates-updatebatch-method"></a>Отправка обновлений: метод UpdateBatch
 Следующий код открывает набор записей в пакетном режиме, устанавливая для свойства LockType значение Адлоккбатчоптимистик, а CursorLocation — Адусеклиент. Он добавляет две новые записи и изменяет значение поля в существующей записи, сохраняет исходные значения, а затем вызывает UpdateBatch, чтобы отправить изменения обратно в источник данных.  
@@ -54,5 +55,5 @@ ms.locfileid: "82760890"
   
  Если вы изменяете текущую запись или добавляете новую запись при вызове метода UpdateBatch, ADO автоматически вызывает метод Update, чтобы сохранить все ожидающие изменения в текущей записи перед передачей пакетных изменений поставщику.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пакетный режим](../../../ado/guide/data/batch-mode.md)

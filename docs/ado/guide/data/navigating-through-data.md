@@ -1,4 +1,5 @@
 ---
+description: Переход между записями данных
 title: Навигация по данным | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8d88c9aa-8ec8-4969-8fa1-1663fd29bfc4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 66079842d950e108a3cdc4e6ad52ad1feff6ab2a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 93ea157cd3982046ccc44d10e4fbb8d712c80d7c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748444"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453136"
 ---
 # <a name="navigating-through-data"></a>Переход между записями данных
 **Набор записей** поддерживает различные методы и свойства для навигации по результирующему набору данных. Мы рассмотрим эту функцию, выполнив несколько сценариев с примерами объектов **Recordset** .  

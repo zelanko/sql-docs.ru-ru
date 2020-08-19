@@ -1,4 +1,5 @@
 ---
+description: 'Компонент Database Mail: Письмо в очереди не доставлено'
 title: 'Компонент Database Mail: Письмо в очереди не доставлено | Документация Майкрософт'
 ms.custom: ''
 ms.date: 04/22/2019
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8b35c244e086c32cf62882a5e3f09b8fcc410b23
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8e70b32c2cee28acf4b886f0bf738f4ed8857619
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726521"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448892"
 ---
 # <a name="database-mail-mail-queued-not-delivered"></a>Компонент Database Mail: Письмо в очереди не доставлено 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

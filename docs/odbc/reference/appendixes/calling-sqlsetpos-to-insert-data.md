@@ -1,4 +1,5 @@
 ---
+description: Вызов SQLSetPos для вставки данных
 title: Вызов функции SQLSetPos для вставки данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 03e5c4d0-2bb3-4649-9781-89cab73f78eb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cb374b2506d55b400207c8f60bdf42bb6bb4065e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 215d02e9b5bd92f6a22f7e45c8c29c7c5a0a6a4c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306605"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449016"
 ---
 # <a name="calling-sqlsetpos-to-insert-data"></a>Вызов SQLSetPos для вставки данных
 Когда приложение ODBC *2. x* , работающее с драйвером ODBC *3. x* , вызывает функцию **SQLSetPos** с аргументом *операции* SQL_ADD, диспетчер драйверов не сопоставляет этот вызов с **SQLBulkOperations**. Если драйвер ODBC *3. x* должен работать с приложением, которое вызывает функцию **SQLSetPos** с SQL_ADD, драйвер должен поддерживать эту операцию.  

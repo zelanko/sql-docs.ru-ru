@@ -1,4 +1,5 @@
 ---
+description: Пример набора записей для проверки данных
 title: Пример набора записей для проверки данных | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e770e626-68b1-4ddf-a217-d7b30311e2ee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f0f712c6c1604f96d5d66d5ded712ae6efe54edb
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f4c989667d5b4a5ceb3fb0c4f4d929e49be92e00
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760920"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452916"
 ---
 # <a name="sample-recordset-for-examining-data"></a>Пример набора записей для проверки данных
 Сначала рассмотрим объект **Recordset** , возвращенный с помощью следующего запроса SQL, выполненного для базы данных "Northwind Sample Data" в Microsoft SQL Server.  

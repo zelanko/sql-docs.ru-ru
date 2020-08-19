@@ -1,4 +1,5 @@
 ---
+description: Занятие 1–1. Создание рабочих папок и переменных среды
 title: Шаг 1. Создание рабочих папок и переменных среды | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 32e0f638af3978a0bf9b938b7131b7e86431f6a6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c91be2fffde29a362dd73da41159b4a4658bce3e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917450"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449752"
 ---
 # <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>Занятие 1–1. Создание рабочих папок и переменных среды
 
@@ -36,9 +37,9 @@ ms.locfileid: "86917450"
   
 1.  Щелкните правой кнопкой мыши меню «Пуск» и выберите «Проводник».  
   
-2.  Щелкните **Локальный диск (С:)** .  
+2.  Щелкните **Локальный диск (С:)**.  
   
-3.  В меню **Файл** наведите указатель на пункт **Создать**, а затем выберите пункт **Папка**.  
+3.  В меню **Файл** выберите пункт **Создать**, затем выберите пункт **Папку**.  
   
 4.  Переименуйте новую папку в **DeploymentTutorial**.  
   

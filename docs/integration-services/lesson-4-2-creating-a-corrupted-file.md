@@ -1,4 +1,5 @@
 ---
+description: Занятие 4-2. Создание поврежденного файла
 title: Шаг 2. Создание поврежденного файла | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/07/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7ae6a1109ce6c2631f4adabd6d828794a1a21869
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 81bee95c84aabe02f2964f41849051a7c8c7052a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922218"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449649"
 ---
 # <a name="lesson-4-2-create-a-corrupted-file"></a>Занятие 4-2. Создание поврежденного файла
 
@@ -42,7 +43,7 @@ ms.locfileid: "86922218"
   
 ## <a name="verify-that-an-error-occurs-during-run-time"></a>Проверка факта возникновения ошибки во время выполнения  
   
-1.  В меню **Отладка** выберите команду **Начать отладку**.  
+1.  В меню **Отладка** выберите пункт **Начать отладку**.  
   
     При третьем проходе потока данных в преобразовании "Поиск ключа валюты" предпринимается попытка обработать файл **Currency_BAD.txt**, и происходит ошибка преобразования. Ошибка преобразования вызывает отказ работы всего пакета.  
   

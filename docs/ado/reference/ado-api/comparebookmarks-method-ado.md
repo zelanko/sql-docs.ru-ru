@@ -1,4 +1,5 @@
 ---
+description: Метод CompareBookmarks (ADO)
 title: Метод CompareBookmarks (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d0b64286-2cc4-4a22-8f1d-9aefeebbcbc6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aa4be74086e4d35af70ac52aa9db0066f4279e3e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4729574b92b841da48f7cf6de6f1dcabc369b4a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760370"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450806"
 ---
 # <a name="comparebookmarks-method-ado"></a>Метод CompareBookmarks (ADO)
 Сравнивает две закладки и возвращает значение, указывающее на их относительные значения.  
@@ -44,7 +45,7 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
  *Bookmark2*  
  Закладка второй строки.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Закладки должны применяться к одному и тому же объекту [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) , а также к объекту **Recordset** и его [клону](../../../ado/reference/ado-api/clone-method-ado.md). Вы не можете надежно сравнивать закладки из различных объектов **набора записей** , даже если они были созданы из одного и того же источника или команды. Также можно сравнивать закладки для объекта **набора записей** , базовый поставщик которого не поддерживает сравнения.  
   
  Закладка однозначно определяет строку в объекте **набора записей** . Чтобы получить закладку, используйте свойство [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md) текущей строки.  
@@ -55,7 +56,7 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
   
  Недопустимая или неправильно сформированная закладка приведет к ошибке.  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>См. также  

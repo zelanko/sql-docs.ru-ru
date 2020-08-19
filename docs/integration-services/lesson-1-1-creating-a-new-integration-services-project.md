@@ -1,4 +1,5 @@
 ---
+description: Урок 1-1. Создание нового проекта служб Integration Services
 title: Шаг 1. Создание нового проекта служб Integration Services | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 235d3682f7955201d6699e70197c2879ba0832b6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 575353cd2cf770ed42d439fd31647ccaef3e01bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917461"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449759"
 ---
 # <a name="lesson-1-1-create-a-new-integration-services-project"></a>Урок 1-1. Создание нового проекта служб Integration Services
 
@@ -25,7 +26,7 @@ ms.locfileid: "86917461"
 
 Первым шагом создания пакета в службах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] будет создание проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Этот пример проекта содержит шаблоны для источников данных, представлений источников данных и пакетов, которые составляют решение для преобразования данных.  
   
-Пакеты, которые вы создадите в этом учебнике по службам [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], преобразуют значения данных, зависящих от языковых стандартов. Если компьютер не настроен на использование регионального параметра **Английский (США)** , необходимо настроить в пакете дополнительные свойства. 
+Пакеты, которые вы создадите в этом учебнике по службам [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], преобразуют значения данных, зависящих от языковых стандартов. Если компьютер не настроен на использование регионального параметра **Английский (США)**, необходимо настроить в пакете дополнительные свойства. 
 
 Для уроков со 2-го по 6-й применяются копии того пакета, который вы создадите в этом занятии.  
   
@@ -34,7 +35,7 @@ ms.locfileid: "86917461"
 
 ## <a name="create-a-new-integration-services-project"></a>Создание нового проекта служб Integration Services  
   
-1.  В меню **Пуск** Windows найдите и выберите элемент **Visual Studio (SSDT)** .  
+1.  В меню **Пуск** Windows найдите и выберите элемент **Visual Studio (SSDT)**.  
   
 2.  В Visual Studio последовательно выберите **Файл** > **Новый** > **Проект**, чтобы создать новый проект [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   

@@ -1,4 +1,5 @@
 ---
+description: Ошибки ODBC
 title: Ошибки ODBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 33542afe-4dc7-4db8-b625-fec51a4718d3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 06ef8558ce8e4266cdd77736bdceae210658b14b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c711c1365b18468ec299a5484132dbab81ef1ffe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298094"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449306"
 ---
 # <a name="odbc-errors"></a>Ошибки ODBC
 При возникновении ошибки драйверы базы данных Microsoft ODBC для настольных систем возвращают собственный номер ошибки, SQLSTATE (код ошибки ODBC) и сообщение об ошибке.  
@@ -28,6 +29,6 @@ ms.locfileid: "81298094"
   
 -   [SQLSTATE](../../odbc/microsoft/sqlstate.md)  
   
--   [Сообщения об ошибках](../../odbc/microsoft/odbc-jet-error-messages.md)  
+-   [сообщения об ошибках](../../odbc/microsoft/odbc-jet-error-messages.md)  
   
 -   [Ошибки арифметических действий](../../odbc/microsoft/arithmetic-errors.md)

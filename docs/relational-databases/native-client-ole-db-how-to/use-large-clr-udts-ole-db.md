@@ -1,4 +1,5 @@
 ---
+description: Использование больших определяемых пользователем типов CLR в SQL Server Native Client (OLE DB)
 title: Использование больших определяемых пользователем типов CLR (собственный клиент OLE DB поставщика)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,17 +12,17 @@ ms.assetid: 30f59c11-3bca-41be-8bd7-0d1efaf1f0be
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 60f8978fa0dedfe40a3d48b7796bc4d0fb1359c7
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 6cec1e6076820e8d41feb077db417b168e80b05c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396893"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448482"
 ---
 # <a name="use-large-clr-udts--in-sql-server-native-client-ole-db"></a>Использование больших определяемых пользователем типов CLR в SQL Server Native Client (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  В этом образце показывается выборка строк с большими, определяемыми пользователем типами из результирующего набора. Дополнительные сведения об определяемых пользователем типах данных CLR см. в [этой статье](../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md). Данный образец работает с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздней версией.  
+  В этом образце показывается выборка строк с большими, определяемыми пользователем типами из результирующего набора. См. сведения об [больших пользовательских типах CLR (OLE DB)](../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md). Данный образец работает с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздней версией.  
   
 ## <a name="example"></a>Пример  
  В этом образце содержится два проекта. Один проект создает сборку (библиотеку DLL) из исходного кода на C#. Эта сборка содержит тип CLR. В базу данных будет добавлена таблица. Столбец в таблице будет иметь тип, определенный в сборке. По умолчанию в этом образце будет использоваться база данных master. Второй проект является собственным приложением C, которое считывает данные из таблицы.  
@@ -30,7 +31,7 @@ ms.locfileid: "87396893"
   
  Выполните второй листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]), чтобы добавить сборку в базу данных master.  
   
- Скомпилируйте с библиотеками ole32.lib и oleaut32.lib и выполните третий листинг кода (C++). Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы подключиться к именованному экземпляру, измените строку подключения с L "(local)" на L "(local) \\ \наме", где name — это именованный экземпляр. По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
+ Скомпилируйте с библиотеками ole32.lib и oleaut32.lib и выполните третий листинг кода (C++). Это приложение соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. В некоторых операционных системах Windows придется заменить (localhost) или (local) на имя своего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы подключиться к именованному экземпляру, измените строку подключения с L"(local)" на L"(local)\\\<имя>", где <имя> — это именованный экземпляр. По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express устанавливается на именованный экземпляр. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
   
  Выполните четвертый листинг кода ([!INCLUDE[tsql](../../includes/tsql-md.md)]), чтобы удалить сборку из базы данных master.  
   

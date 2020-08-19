@@ -1,4 +1,5 @@
 ---
+description: Обработчики событий в службах Integration Services (SSIS)
 title: Обработчики событий в службах Integration Services (SSIS) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7e70c3119d7c5058cf62a3194bc2c6a83f62c022
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7e2c7fb36708d615bd19dfb2c5854748081a9dbb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917544"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449850"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Обработчики событий в службах Integration Services (SSIS)
 

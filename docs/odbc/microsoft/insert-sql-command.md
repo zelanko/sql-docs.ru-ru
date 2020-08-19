@@ -1,4 +1,5 @@
 ---
+description: INSERT (команда SQL)
 title: Команда INSERT-SQL | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9b648198-349f-46f6-b869-13d129945971
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ce00005fb1aa0ca9732fc5e9cfeacd6faf6ef9e1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 92c4b2068149164716d52fd3693e56164ab788ab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300013"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449506"
 ---
 # <a name="insert---sql-command"></a>INSERT (команда SQL)
 Добавляет запись в конец таблицы, содержащей указанные значения полей.  

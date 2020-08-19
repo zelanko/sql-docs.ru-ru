@@ -1,4 +1,5 @@
 ---
+description: Настройка степеней серьезности для файлов журнала DQS
 title: Настройка степеней серьезности для файлов журнала DQS
 ms.date: 03/01/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 068ae31abe61fac86d740fe3e03787fd32dde465
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6a23806f7b7def561d7cecc8e1592772c5675f58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894218"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449916"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>Настройка степеней серьезности для файлов журнала DQS
 
@@ -49,7 +50,7 @@ ms.locfileid: "85894218"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для настройки параметров серьезности для записи в журнал необходимо иметь роль dqs_administrator в базе данных DQS_MAIN.  
   
-##  <a name="configure-severity-levels-at-activity-level"></a><a name="ConfigureActivity"></a>Настройка степени серьезности на уровне действия  
+##  <a name="configure-severity-levels-at-activity-level"></a><a name="ConfigureActivity"></a> Настройка степени серьезности на уровне действия  
  Можно настроить параметры серьезности записи в журнал для следующих операций в DQS: управление доменами, обнаружение знаний, политика сопоставления, очистка данных, сопоставление данных и службы ссылочных данных. Для этого сделайте следующее:  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Запустите приложение Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
@@ -65,7 +66,7 @@ ms.locfileid: "85894218"
   
 5.  Щелкните **Закрыть**.  
   
-##  <a name="configure-severity-levels-at-module-level-advanced"></a><a name="ConfigureModule"></a>Настройка степени серьезности на уровне модуля (дополнительно)  
+##  <a name="configure-severity-levels-at-module-level-advanced"></a><a name="ConfigureModule"></a> Настройка степени серьезности на уровне модуля (дополнительно)  
  Выполнить настройку параметров серьезности записи в журнал на уровне модуля можно в разделе **Дополнительно** на вкладке **Параметры журнала** . Модули являются системными сборками DQS, которые реализуют различные функциональные возможности в функции DQS. Например, операция управления доменами содержит различные функциональные возможности такие, как правила определения доменов, условия определения правил, правила определения нескольких доменов для составных доменов и т. д.  
   
  Иногда недостаточно уровня гранулярности на уровне активности. Может появиться необходимость исследования проблемы, возникающей в конкретном модуле операции. Что дает возможность настройки параметров серьезности для записи в журнал на уровне модуля в целях более точной локализации и отслеживания проблемы.  
@@ -90,7 +91,7 @@ ms.locfileid: "85894218"
   
 5.  Щелкните **Закрыть**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Configure Advanced Settings for DQS Log Files](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)  
   
   

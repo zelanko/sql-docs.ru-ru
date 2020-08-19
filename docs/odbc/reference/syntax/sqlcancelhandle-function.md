@@ -1,4 +1,5 @@
 ---
+description: Функция SQLCancelHandle
 title: Функция Склканцелхандле | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 16049b5b-22a7-4640-9897-c25dd0f19d21
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b3f9dcb6ccdef290b937b1317271758dddc0e848
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 3f466f63d6da9aa9a96b9e929ea2b59a3e43491d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279604"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448854"
 ---
 # <a name="sqlcancelhandle-function"></a>Функция SQLCancelHandle
 **Соответствия**  
@@ -48,7 +49,7 @@ SQLRETURN SQLCancelHandle(
   
  Если *Handle* не является допустимым маркером типа, указанного параметром *параметром handletype*, **склканцелхандле** возвращает SQL_INVALID_HANDLE.  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR или SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Диагностика  
@@ -70,7 +71,7 @@ SQLRETURN SQLCancelHandle(
   
  Если **склканцелхандле** вызывается с параметром *параметром handletype* , для которого задано значение SQL_HANDLE_STMT, он может вернуть любые значения SQLSTATE, которые могут возвращаться функцией **SQLCancel**.  
   
-## <a name="comments"></a>Примечания  
+## <a name="comments"></a>Комментарии  
  Эта функция похожа на **SQLCancel** , но в качестве параметра может принимать либо соединение, либо обработчик инструкции, а не только маркер инструкции. Диспетчер драйверов сопоставляет вызов **склканцелхандле** с вызовом **SQLCancel** , когда *параметром handletype* SQL_HANDLE_STMT. Это позволяет приложениям использовать **склканцелхандле** для отмены операций с инструкциями, даже если драйвер не реализует **склканцелхандле**.  
   
  Дополнительные сведения об отмене операции с инструкцией см. в разделе [функция SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md).  
@@ -104,7 +105,7 @@ SQLRETURN SQLCancelHandle(
 |---------------------------|---------|  
 |Отмена функции, выполняющейся асинхронно, в обработчике инструкции, Отмена функции в инструкции, которой требуются данные, или Отмена функции, выполняющейся в операторе другого потока.|[Функция SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Асинхронное выполнение (метод опроса)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

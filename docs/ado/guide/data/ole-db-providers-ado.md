@@ -1,4 +1,5 @@
 ---
+description: Поставщики OLE DB (ADO)
 title: Поставщики OLE DB (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6e0488c3-934d-4976-99dc-65c580dc7a3c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1a50ad68f7a4b40d008bd6d60b6d24e1984428e1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 227c3ead2744c475a54f129078b5674587ae3849
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759140"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453126"
 ---
 # <a name="ole-db-providers-ado"></a>Поставщики OLE DB (ADO)
 OLE DB определяет набор COM-интерфейсов для предоставления приложениям унифицированного доступа к данным, хранящимся в различных источниках данных. Такой подход позволяет источнику данных совместно использовать свои данные через интерфейсы, которые поддерживают количество функций СУБД, соответствующих источнику данных. Высокопроизводительная архитектура OLE DB основана на использовании гибкой модели служб на основе компонентов. Вместо того чтобы иметь предписанное количество промежуточных уровней между приложением и данными, OLE DB требуется только столько компонентов, сколько требуется для выполнения определенной задачи.  

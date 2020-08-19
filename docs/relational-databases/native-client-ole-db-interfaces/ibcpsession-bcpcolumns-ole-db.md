@@ -1,4 +1,5 @@
 ---
+description: 'IBCPSession:: BCPColumns (поставщик собственного клиента OLE DB)'
 title: 'IBCPSession:: BCPColumns (поставщик собственного клиента OLE DB) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: c338abe8-9e30-4853-a7c6-b1a6c00095e1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2dab7a561c9b3b087075cc04962ec26039ce086
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: e20c3dfc32bdb14aa4f012b3ba986ee8c9d91017
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87948069"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448426"
 ---
 # <a name="ibcpsessionbcpcolumns-native-client-ole-db-provider"></a>IBCPSession:: BCPColumns (поставщик собственного клиента OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +41,7 @@ HRESULT BCPColumns(
  Этот метод совершает внутренний вызов метода [IBCPSession::BCPColFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) для установки значений по умолчанию для полей данных. Эти значения по умолчанию получаются из информации о столбце SQL Server, которую внутренним образом возвращает поставщик, когда имя таблицы указывается через [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md).  
   
 > [!NOTE]  
->   Данный метод можно вызывать только после того, как вызван метод **BCPInit** с допустимым именем файла.  
+>  Данный метод можно вызывать только после того, как вызван метод **BCPInit** с допустимым именем файла.  
   
  Этот метод следует вызывать только в случае, когда планируется использовать нестандартный формат пользовательского файла. Дополнительную информацию об описании стандартного формата пользовательского файла см. в справке по методу **BCPInit** .  
   
@@ -55,7 +56,7 @@ HRESULT BCPColumns(
  Метод выполнен успешно.  
   
  E_FAIL  
- Произошла ошибка конкретного поставщика; для получения дополнительных сведений используйте интерфейс [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) .  
+ Произошла ошибка, связанная с поставщиком. Подробные сведения можно получить при помощи интерфейса [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15).  
   
  E_UNEXPECTED  
  Непредвиденный вызов метода. Например, перед вызовом этого метода не был вызван метод **BCPInit** . Это значение возвращается также, если данный метод был вызван несколько раз для операции массового копирования.  

@@ -1,4 +1,5 @@
 ---
+description: Обязательные поставщики для формирования данных
 title: Необходимые поставщики для формирования данных | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d49d48d2-ac2d-4c11-895c-5a149b444620
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: abda9d7a275ce100636efa58430009dd430fac0b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e17ebe5f5e8deab776b88ce66df8636a28212394
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760950"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452946"
 ---
 # <a name="required-providers-for-data-shaping"></a>Обязательные поставщики для формирования данных
 Для формирования данных обычно требуется два поставщика. Поставщик услуг, [Служба формирования данных для OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md), предоставляет функциональные возможности формирования данных и поставщик данных, например поставщик OLE DB для SQL Server, предоставляет строки данных для заполнения [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md)в форме.  

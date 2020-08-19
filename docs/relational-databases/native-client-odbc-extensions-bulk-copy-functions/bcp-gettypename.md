@@ -1,4 +1,5 @@
 ---
+description: bcp_gettypename
 title: bcp_gettypename | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -18,11 +19,12 @@ ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b443a3ecd3e96740939a1cbef3f2a732a129d9a8
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d8956677e62c3f4a824e704c0905c7970cf9e913
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010096"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448590"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -79,11 +81,11 @@ RETCODE bcp_gettypename (
 |**SQLDATETIMN**|Можно использовать|**datetime-null**|  
 |**SQLMONEYN**|Можно использовать|**money-null**|  
 |**SQLFLTN**|Можно использовать|**float-null**|  
-|**склаопсум**|Можно использовать|**Функции**|  
-|**склаопавг**|Можно использовать|**Обращения**|  
-|**склаопкнт**|Можно использовать|**Количество**|  
-|**склаопмин**|Можно использовать|**Минимум**|  
-|**склаопмакс**|Можно использовать|**Максимальной**|  
+|**склаопсум**|Можно использовать|**Sum**|  
+|**склаопавг**|Можно использовать|**Avg**|  
+|**склаопкнт**|Можно использовать|**Count**|  
+|**склаопмин**|Можно использовать|**Min**|  
+|**склаопмакс**|Можно использовать|**Max**|  
 |**SQLDATETIM4**|Можно использовать|**smalldatetime**|  
 |**SQLMONEY4**|Можно использовать|**Smallmoney**|  
 |**SQLFLT4**|Можно использовать|**Real**|  
@@ -103,7 +105,7 @@ RETCODE bcp_gettypename (
 |**SQLVARBINARY**|Да|**varbinary(max)**|  
 |**SQLNCHAR**|Да|**nvarchar(max)**|  
 |**SQLNVARCHAR**|Да|**nvarchar(max)**|  
-|**SQLXML**|Да|**Код**|  
+|**SQLXML**|Да|**Xml**|  
 |**SQLUDT**|Можно использовать|**Байт**|  
   
 ## <a name="bcp_gettypename-support-for-enhanced-date-and-time-features"></a>Поддержка функцией bcp_getcolfmt улучшенных возможностей работы с датой и временем  
