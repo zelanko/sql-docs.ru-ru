@@ -1,4 +1,5 @@
 ---
+description: DBCC FREEPROCCACHE (Transact-SQL)
 title: DBCC FREEPROCCACHE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 10/13/2017
@@ -25,12 +26,12 @@ ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 84f0dd9a38f118d71ca7417e2a241a03426e6753
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: d8b3b9733500dc56f4994dd13fd42939b0885a02
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483545"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88367790"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,13 +62,13 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 
 ## <a name="arguments"></a>Аргументы
  ( { *plan_handle* | *sql_handle* | *pool_name* } )  
-*plan_handle* уникально идентифицирует план запроса для запущенного пакета, план которого хранится в кэше планов. Аргумент *plan_handle* имеет тип **varbinary(64)** , и его можно получить из следующих объектов DMO:  
+*plan_handle* уникально идентифицирует план запроса для запущенного пакета, план которого хранится в кэше планов. Аргумент *plan_handle* имеет тип **varbinary(64)**, и его можно получить из следующих объектов DMO:  
  -   [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
  -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
  -   [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
  -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
 
-*sql_handle* представляет дескриптор SQL очищаемого пакета. Аргумент *sql_handle* имеет тип **varbinary(64)** , и его можно получить из следующих объектов DMO:  
+*sql_handle* представляет дескриптор SQL очищаемого пакета. Аргумент *sql_handle* имеет тип **varbinary(64)**, и его можно получить из следующих объектов DMO:  
  -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
  -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
  -   [sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)  
@@ -90,12 +91,12 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 > [!NOTE]
 > Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], для очистки кэша процедур (планов) для базы данных в области действия служит инструкция `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE`.
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
 Инструкция DBCC FREEPROCCACHE используется для аккуратной очистки кэша планов. Очистка кэша процедур (планов) приводит к исключению всех планов. В результате при выполнении входящих запросов будет компилироваться новый план, а не использоваться существующий план из кэша. 
 
 Это может стать причиной внезапного временного снижения производительности обработки запросов из-за увеличения числа компиляций. Для каждого удаленного хранилища кэша в кэше планов журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит следующее информационное сообщение: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обнаружил %d экземпляров, сброшенных на диск хранилищ кэша для хранилища кэша "%s" (части кэша планов) в результате операций DBCC FREEPROCCACHE или DBCC FREESYSTEMCACHE". Это сообщение добавляется в журнал каждые пять минут при сбросе кэша в течение этого интервала времени.
 
-Следующие операции по перенастройке также очищают кэш процедур:
+Следующие операции по перенастройке также очищают кэш процедур:  
 -   доступ к счетчику контейнеров проверки кэша  
 -   доступ к квоте кэша проверки  
 -   clr enabled  

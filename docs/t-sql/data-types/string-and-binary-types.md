@@ -1,4 +1,5 @@
 ---
+description: Строковые и двоичные типы
 title: Строковые и двоичные типы | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/23/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fe8ee5b6-7392-4aae-a551-973bae02de8d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ce8cc33718724e45f4005c9beb896d6ae518b60d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 960bbb08549e3fecbad07040e7727a02e2ee489f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901146"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88368130"
 ---
 # <a name="string-and-binary-types"></a>Строковые и двоичные типы
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
