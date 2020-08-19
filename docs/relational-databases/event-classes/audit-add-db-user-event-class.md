@@ -1,4 +1,5 @@
 ---
+description: Audit Add DB User, класс событий
 title: Класс событий Audit Add DB User | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,24 +13,24 @@ ms.assetid: ac9ed573-c84d-444c-81fb-923a6240c1ef
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 752361d6ebf7d8171a2a40551932db5beed69a71
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b953d49716cb6a99879ebc94c750fc1e765916e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85635744"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88385340"
 ---
 # <a name="audit-add-db-user-event-class"></a>Audit Add DB User, класс событий
 
 [!INCLUDE [sql-asdb.md](../../includes/applies-to-version/sql-asdb.md)]
 
-  События класса **Audit Add DB User** происходят, когда имя входа добавляется в базу данных как пользователь базы данных или удаляется из нее. Этот класс событий используется для хранимых процедур **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser**и **sp_dropuser** .  
+   Класс событий **Audit Add DB User** возникает, когда имя входа добавляется в базу данных или удаляется из нее в качестве пользователя базы данных. Этот класс событий используется для хранимых процедур **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser**и **sp_dropuser** .  
   
  В будущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]этот класс событий может быть удален. Вместо него рекомендуется использовать класс событий **Audit Database Principal Management** .  
   
 ## <a name="audit-add-db-user-event-class-data-columns"></a>Столбцы данных класса событий Audit Add DB User  
   
-|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |**ClientProcessID**|**int**|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент вводит идентификатор клиентского процесса.|9|Да|  
@@ -37,8 +38,8 @@ ms.locfileid: "85635744"
 |**DatabaseID**|**int**|Идентификатор базы данных, указанной в инструкции USE *database* , или базы данных по умолчанию, если для данного экземпляра инструкция USE *database* не выполнялась. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных **ServerName** захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |**DatabaseName**|**nvarchar**|Имя базы данных, в которую было добавлено или из которой было удалено имя пользователя.|35|Да|  
 |**DBUserName**|**nvarchar**|Имя поставщика в базе данных.|40|Да|  
-|**EventClass**|**int**|Тип события = 109.|27|нет|  
-|**EventSequence**|**int**|Последовательность данного события в запросе.|51|нет|  
+|**EventClass**|**int**|Тип события = 109.|27|Нет|  
+|**EventSequence**|**int**|Последовательность данного события в запросе.|51|Нет|  
 |**EventSubClass**|**int**|Тип подкласса события.<br /><br /> 1 = добавление<br /><br /> 2 = удаление<br /><br /> 3 = предоставление доступа к базе данных,<br /><br /> 4 = отмена доступа к базе данных.|21|Да|  
 |**HostName**|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Заполнение этого столбца данных производится в том случае, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |**IsSystem**|**int**|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  

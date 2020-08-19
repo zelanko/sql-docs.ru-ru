@@ -1,4 +1,5 @@
 ---
+description: Создание учетной записи компонента Database Mail
 title: Создание учетной записи компонента Database Mail | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: c07abbc6-fc6a-470b-8fa3-532f2e06b16a
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6a35d325e976d0fc7ec75f348efb53c39b7bc51c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e80df479a6fbd13e51e69ebddff5634ce7a0c3b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737617"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88385740"
 ---
 # <a name="create-a-database-mail-account"></a>Создание учетной записи компонента Database Mail
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  Для создания учетной записи компонента Database Mail применяется **мастер настройки компонента Database Mail** или [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+   Для создания учетной записи компонента Database Mail применяется **мастер настройки компонента Database Mail** или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
--   **Перед началом работы**  [Предварительные требования](#Prerequisites)  
+-   **Перед началом работы выполните следующие действия.**  [Предварительные требования](#Prerequisites)  
   
--   **Создание учетной записи компонента Database Mail с использованием:**  [мастера настройки компонента Database Mail](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Создание учетной записи компонента Database Mail с использованием следующих средств:**  [мастер настройки компонента Database Mail](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
--   **Дальнейшие действия.**  [Следующие действия по настройке компонента Database Mail](#FollowUp)  
+-   **Дальнейшие действия.**  [Следующие шаги настройки компонента Database Mail](#FollowUp)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
