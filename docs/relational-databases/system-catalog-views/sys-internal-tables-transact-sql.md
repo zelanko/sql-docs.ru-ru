@@ -1,4 +1,5 @@
 ---
+description: sys.internal_tables (Transact-SQL)
 title: sys. internal_tables (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 58e6166060c5e2099051403361b2eb2c51ad4c18
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 73be0af1fd81cfc415417ff2ff233bbfa5e6ca41
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898910"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447944"
 ---
 # <a name="sysinternal_tables-transact-sql"></a>sys.internal_tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "85898910"
 |**parent_id**|**int**|Идентификатор родителя, независимо от того, находится он в пределах области видимости схемы или нет. Принимает значение 0, если родитель отсутствует.<br /><br /> **queue_messages**  =  **object_id** очереди<br /><br /> **xml_index_nodes**  =  **object_id** XML-индекса<br /><br /> **fulltext_catalog_freelist**  =  **fulltext_catalog_id** полнотекстового каталога<br /><br /> **fulltext_index_map**  =  **object_id** полнотекстового индекса<br /><br /> **query_notification**или **service_broker_map** = 0<br /><br /> **extended_indexes**  =  **object_id** расширенного индекса, например пространственного индекса<br /><br /> **object_id** таблицы, для которой включено отслеживание таблиц = **CHANGE_TRACKING**|  
 |**parent_minor_id**|**int**|Вспомогательный идентификатор родителя.<br /><br /> **xml_index_nodes**  =  **index_id** XML-индекса<br /><br /> **extended_indexes**  =  **index_id** расширенного индекса, например пространственного индекса<br /><br /> 0 = **queue_messages**, **fulltext_catalog_freelist**, **fulltext_index_map**, **query_notification**, **service_broker_map**или **CHANGE_TRACKING**|  
 |**lob_data_space_id**|**int**|Ненулевое значение — идентификатор пространства данных (файловая группа или схема секционирования), хранящего данные больших объектов (LOB) для этой таблицы.|  
-|**filestream_data_space_id**|**int**|Зарезервировано для последующего использования.|  
+|**filestream_data_space_id**|**int**|Зарезервировано для будущего использования.|  
   
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
@@ -174,7 +175,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Представления каталога объектов (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
   
   

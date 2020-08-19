@@ -1,4 +1,5 @@
 ---
+description: sp_change_agent_profile (Transact-SQL)
 title: sp_change_agent_profile (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: e73acf8d-0be8-4197-ba11-fe798d0e2820
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b0084338c2629b8ffeb208edc5ac7532105e1271
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 752cbdcb0e1908ace200ae769e7c42d85ad6d044
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715938"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447377"
 ---
 # <a name="sp_change_agent_profile-transact-sql"></a>sp_change_agent_profile (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  Изменяет параметр профиля агента репликации, хранящегося в [MSagent_profiles &#40;таблице&#41;Transact-SQL](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) . Эта хранимая процедура выполняется на распространителе в любой базе данных.  
+  Изменяет параметр профиля агента репликации, хранящегося в [MSagent_profiles &#40;таблице&#41;Transact-SQL ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) . Эта хранимая процедура выполняется на распространителе в любой базе данных.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,22 +40,22 @@ sp_change_agent_profile [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @profile_id = ] profile_id`Идентификатор профиля. *profile_id* имеет **тип int**и не имеет значения по умолчанию.  
+`[ @profile_id = ] profile_id` Идентификатор профиля. *profile_id* имеет **тип int**и не имеет значения по умолчанию.  
   
-`[ @property = ] 'property'`Имя свойства. Аргумент *Property* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @property = ] 'property'` Имя свойства. Аргумент *Property* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @value = ] 'value'`Новое значение свойства. *value* имеет тип **nvarchar (3000)** и не имеет значения по умолчанию.  
+`[ @value = ] 'value'` Новое значение свойства. *value* имеет тип **nvarchar (3000)** и не имеет значения по умолчанию.  
   
  В приведенной ниже таблице описаны изменяемые свойства.  
   
-|Свойство.|Описание|  
+|Свойство|Описание|  
 |--------------|-----------------|  
-|**nописание**|Описание профиля.|  
+|**description**|Описание профиля.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_change_agent_profile** используется во всех типах репликации.  
   
 ## <a name="permissions"></a>Разрешения  

@@ -1,4 +1,5 @@
 ---
+description: sp_link_publication (Transact-SQL)
 title: sp_link_publication (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9c3c414507b0dfe58cc4b13bc18c992e3a46bea9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c1df8b2f62ce305b89b061526415c73e07a18511
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899418"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446962"
 ---
 # <a name="sp_link_publication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,13 +50,13 @@ sp_link_publication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'`Имя издателя для связи. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'` Имя издателя для связи. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publisher_db = ] 'publisher_db'`Имя базы данных издателя для связи. Аргумент *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher_db = ] 'publisher_db'` Имя базы данных издателя для связи. Аргумент *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publication = ] 'publication'`Имя публикации, с которой необходимо создать ссылку. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации, с которой необходимо создать ссылку. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @security_mode = ] security_mode`Режим безопасности, используемый подписчиком для подключения к удаленному издателю для немедленного обновления. *security_mode* имеет **тип int**и может принимать одно из следующих значений. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @security_mode = ] security_mode` Режим безопасности, используемый подписчиком для подключения к удаленному издателю для немедленного обновления. *security_mode* имеет **тип int**и может принимать одно из следующих значений. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -63,21 +64,21 @@ sp_link_publication [ @publisher = ] 'publisher'
 |**1**|Использует контекст безопасности (проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или Windows) пользователя, редактирующего подписчика.<br /><br /> Примечание. Эта учетная запись также должна существовать у издателя с достаточными привилегиями. В случае использования проверки подлинности Windows должно поддерживаться делегирование учетной записи безопасности.|  
 |**2**|Использует существующее, определяемое пользователем имя входа для связанного сервера, созданное с помощью **sp_link_publication**.|  
   
-`[ @login = ] 'login'`Имя входа. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL. Этот параметр должен быть указан, если *security_mode* равен **0**.  
+`[ @login = ] 'login'` Имя входа. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL. Этот параметр должен быть указан, если *security_mode* равен **0**.  
   
-`[ @password = ] 'password'`Пароль. Аргумент *Password* имеет тип **sysname**и значение по умолчанию NULL. Этот параметр должен быть указан, если *security_mode* равен **0**.  
+`[ @password = ] 'password'` Пароль. Аргумент *Password* имеет тип **sysname**и значение по умолчанию NULL. Этот параметр должен быть указан, если *security_mode* равен **0**.  
   
-`[ @distributor = ] 'distributor'`Имя распространителя. Аргумент *распространитель* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @distributor = ] 'distributor'` Имя распространителя. Аргумент *распространитель* имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  **sp_link_publication** используется немедленно обновляемыми подписками в репликации транзакций.  
   
- **sp_link_publication** можно использовать как для принудительной подписки, так и для подписок по запросу. Ее можно вызывать как до, так и после создания подписки. Запись вставляется или обновляется в MSsubscription_properties &#40;в системной таблице [&#41;Transact-SQL](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) .  
+ **sp_link_publication** можно использовать как для принудительной подписки, так и для подписок по запросу. Ее можно вызывать как до, так и после создания подписки. Запись вставляется или обновляется в MSsubscription_properties &#40;в системной таблице [&#41;Transact-SQL ](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) .  
   
- Для принудительных подписок запись может быть очищена с помощью [sp_subscription_cleanup &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md). Для подписок по запросу запись может быть очищена с помощью [sp_droppullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md) или [sp_subscription_cleanup &#40;transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md). Можно также вызвать **sp_link_publication** с ПАРОЛем null, чтобы очистить запись в [MSsubscription_properties &#40;системной таблице&#41;Transact-SQL](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) для обеспечения безопасности.  
+ Для принудительных подписок запись может быть очищена с помощью [sp_subscription_cleanup &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md). Для подписок по запросу запись может быть очищена с помощью [sp_droppullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md) или [sp_subscription_cleanup &#40;transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md). Можно также вызвать **sp_link_publication** с ПАРОЛем null, чтобы очистить запись в [MSsubscription_properties &#40;системной таблице&#41;Transact-SQL ](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) для обеспечения безопасности.  
   
  Режим по умолчанию, применяемый для немедленного обновления подписчика при соединении с издателем, не позволяет устанавливать соединение с проверкой подлинности Windows. Для подключения в режиме с проверкой подлинности Windows на издателе должен быть настроен связанный сервер, и это соединение должно применяться для немедленного обновления подписчика. Для этого необходимо, чтобы **sp_link_publication** был запущен с *security_mode*  =  **2**. В случае использования проверки подлинности Windows должно поддерживаться делегирование учетной записи безопасности.  
   
@@ -87,7 +88,7 @@ sp_link_publication [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_link_publication**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
  [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)   
  [sp_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)   

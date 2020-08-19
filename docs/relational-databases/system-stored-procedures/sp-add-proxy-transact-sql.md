@@ -1,4 +1,5 @@
 ---
+description: Хранимая процедура sp_add_proxy (Transact-SQL)
 title: sp_add_proxy (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: cb59df37-f103-439b-bec1-2871fb669a8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 61b77197c46025974391b39dcf8114ec5a51eaef
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 67b7ec7a5ccb1e4a1ba022995f4912b77afc93ee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85878610"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447493"
 ---
 # <a name="sp_add_proxy-transact-sql"></a>Хранимая процедура sp_add_proxy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,17 +47,17 @@ sp_add_proxy
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @proxy_name = ] 'proxy_name'`Имя создаваемого прокси-сервера. Аргумент *proxy_name* имеет тип **sysname**и значение по умолчанию NULL. Если *proxy_name* имеет значение null или является пустой строкой, имя прокси-сервера по умолчанию принимает значение *user_name* .  
+`[ @proxy_name = ] 'proxy_name'` Имя создаваемого прокси-сервера. Аргумент *proxy_name* имеет тип **sysname**и значение по умолчанию NULL. Если *proxy_name* имеет значение null или является пустой строкой, имя прокси-сервера по умолчанию принимает значение *user_name* .  
   
-`[ @enabled = ] is_enabled`Указывает, включен ли прокси-сервер. Флаг *is_enabled* имеет тип **tinyint**и значение по умолчанию 1. Если значение *is_enabled* равно **0**, то прокси-сервер не включен и не может использоваться шагом задания.  
+`[ @enabled = ] is_enabled` Указывает, включен ли прокси-сервер. Флаг *is_enabled* имеет тип **tinyint**и значение по умолчанию 1. Если значение *is_enabled* равно **0**, то прокси-сервер не включен и не может использоваться шагом задания.  
   
-`[ @description = ] 'description'`Описание прокси-сервера. Описание имеет тип **nvarchar (512)** и значение по умолчанию NULL. Описание позволяет документировать учетную запись-посредника, но оно не используется агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для других целей. Поэтому этот аргумент необязателен.  
+`[ @description = ] 'description'` Описание прокси-сервера. Описание имеет тип **nvarchar (512)** и значение по умолчанию NULL. Описание позволяет документировать учетную запись-посредника, но оно не используется агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для других целей. Поэтому этот аргумент необязателен.  
   
-`[ @credential_name = ] 'credential_name'`Имя учетных данных для прокси-сервера. Аргумент *credential_name* имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать либо *credential_name* , либо *credential_id* .  
+`[ @credential_name = ] 'credential_name'` Имя учетных данных для прокси-сервера. Аргумент *credential_name* имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать либо *credential_name* , либо *credential_id* .  
   
-`[ @credential_id = ] credential_id`Идентификационный номер учетных данных для прокси-сервера. *Credential_id* имеет **тип int**и значение по умолчанию NULL. Необходимо указать либо *credential_name* , либо *credential_id* .  
+`[ @credential_id = ] credential_id` Идентификационный номер учетных данных для прокси-сервера. *Credential_id* имеет **тип int**и значение по умолчанию NULL. Необходимо указать либо *credential_name* , либо *credential_id* .  
   
-`[ @proxy_id = ] id OUTPUT`Идентификационный номер, назначенный прокси-серверу при успешном создании.  
+`[ @proxy_id = ] id OUTPUT` Идентификационный номер, назначенный прокси-серверу при успешном создании.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -72,7 +73,7 @@ sp_add_proxy
 ## <a name="permissions"></a>Разрешения  
  Эту процедуру могут выполнять только члены предопределенной роли безопасности **sysadmin** .  
   
- Члены предопределенной роли безопасности **sysadmin** могут создавать шаги задания, использующие любой прокси-сервер. Используйте хранимую процедуру [sp_grant_login_to_proxy &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md) , чтобы предоставить другим пользователям доступ к учетной записи-посреднику.  
+ Члены предопределенной роли безопасности **sysadmin** могут создавать шаги задания, использующие любой прокси-сервер. Используйте хранимую процедуру [sp_grant_login_to_proxy &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md) , чтобы предоставить другим пользователям доступ к учетной записи-посреднику.  
   
 ## <a name="examples"></a>Примеры  
  В этом примере создается учетная запись-посредник для учетных данных `CatalogApplicationCredential`. Предполагается, что эти учетные данные уже существуют. Дополнительные сведения об учетных данных см. в статье [Создание учетных данных &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md).  
@@ -89,8 +90,8 @@ EXEC dbo.sp_add_proxy
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Создание УЧЕТных данных &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [CREATE CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-credential-transact-sql.md)   
  [sp_grant_login_to_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
  [sp_revoke_login_from_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
   

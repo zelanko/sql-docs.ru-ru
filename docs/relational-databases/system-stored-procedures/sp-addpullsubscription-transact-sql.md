@@ -1,4 +1,5 @@
 ---
+description: sp_addpullsubscription (Transact-SQL)
 title: sp_addpullsubscription (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/09/2020
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 98c966ecb91bebb4f11db49028ecf53a885cc888
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 93efe6b64ade77e8a9761bf5efbbcb8454d75df4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786203"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447432"
 ---
 # <a name="sp_addpullsubscription-transact-sql"></a>sp_addpullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,24 +45,24 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'`Имя издателя. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'` Имя издателя. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
 
 > [!NOTE]
 > Имя сервера можно указать как `<Hostname>,<PortNumber>` . Может потребоваться указать номер порта для подключения, если SQL Server развертывается в Linux или Windows с помощью настраиваемого порта, а служба браузера отключена.
   
-`[ @publisher_db = ] 'publisher_db'`Имя базы данных издателя. Аргумент *publisher_db* имеет тип **sysname**и значение по умолчанию NULL. *publisher_db* не учитываются издателями Oracle.  
+`[ @publisher_db = ] 'publisher_db'` Имя базы данных издателя. Аргумент *publisher_db* имеет тип **sysname**и значение по умолчанию NULL. *publisher_db* не учитываются издателями Oracle.  
   
-`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @independent_agent = ] 'independent_agent'`Указывает, существует ли изолированная агент распространения для этой публикации. *independent_agent* имеет тип **nvarchar (5)** и значение по умолчанию true. Если **значение — true**, то для этой публикации существует изолированный агент распространения. Если **значение равно false**, то для каждой пары базы данных издателя или подписчика существует один агент распространения. *independent_agent* является свойством публикации и должно иметь то же значение, что и на издателе.  
+`[ @independent_agent = ] 'independent_agent'` Указывает, существует ли изолированная агент распространения для этой публикации. *independent_agent* имеет тип **nvarchar (5)** и значение по умолчанию true. Если **значение — true**, то для этой публикации существует изолированный агент распространения. Если **значение равно false**, то для каждой пары базы данных издателя или подписчика существует один агент распространения. *independent_agent* является свойством публикации и должно иметь то же значение, что и на издателе.  
   
-`[ @subscription_type = ] 'subscription_type'`Тип подписки. *subscription_type* имеет тип **nvarchar (9)** и значение по умолчанию **anonymous**. Необходимо указать значение **Pull** для *subscription_type*, если не требуется создавать подписку без регистрации подписки на издателе. В этом случае необходимо указать значение **anonymous**. Это необходимо в тех случаях, когда невозможно установить соединение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с издателем в момент настройки подписки.  
+`[ @subscription_type = ] 'subscription_type'` Тип подписки. *subscription_type* имеет тип **nvarchar (9)** и значение по умолчанию **anonymous**. Необходимо указать значение **Pull** для *subscription_type*, если не требуется создавать подписку без регистрации подписки на издателе. В этом случае необходимо указать значение **anonymous**. Это необходимо в тех случаях, когда невозможно установить соединение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с издателем в момент настройки подписки.  
   
-`[ @description = ] 'description'`Описание публикации. *Description* имеет тип **nvarchar (100)** и значение по умолчанию NULL.  
+`[ @description = ] 'description'` Описание публикации. *Description* имеет тип **nvarchar (100)** и значение по умолчанию NULL.  
   
-`[ @update_mode = ] 'update_mode'`Тип обновления. *update_mode* имеет тип **nvarchar (30)** и может принимать одно из следующих значений.  
+`[ @update_mode = ] 'update_mode'` Тип обновления. *update_mode* имеет тип **nvarchar (30)** и может принимать одно из следующих значений.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**только для чтения** (по умолчанию)|Подписка только для чтения. Никакие изменения на подписчике не передаются на издатель. Используется в том случае, когда данные на подписчике изменяться не будут.|  
 |**синктран**|Включает поддержку немедленно обновляемых подписок.|  
@@ -69,18 +70,18 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 |**Перемещение**|Включает для подписки немедленное обновление с обновлением по очереди при переходе на другой ресурс в случае отработки отказа. Изменение данных можно выполнять на подписчике и немедленно передавать издателю. Если пропало соединение между издателем и подписчиком, изменения данных, выполненные на подписчике, сохраняются в очереди, пока связь не будет восстановлена.|  
 |**queued failover**|Включает подписку с обновлением по очереди в качестве обновляемой посредством очередей подписки, при этом поддерживает возможность переключения в режим немедленного обновления. Изменение данных можно выполнять у подписчика и сохранять в очереди до установления соединения между подписчиком и издателем. При установлении постоянного соединения можно переключиться в режим немедленного обновления. *Не поддерживается для издателей Oracle*.|  
   
-`[ @immediate_sync = ] immediate_sync`Указывает, создаются или повторно создаются файлы синхронизации при каждом запуске агент моментальных снимков. *immediate_sync* имеет **бит** со значением по умолчанию 1 и должен иметь то же значение, что и *immediate_sync* в **sp_addpublication**. *immediate_sync* является свойством публикации и должно иметь то же значение, что и на издателе.  
+`[ @immediate_sync = ] immediate_sync` Указывает, создаются или повторно создаются файлы синхронизации при каждом запуске агент моментальных снимков. *immediate_sync* имеет **бит** со значением по умолчанию 1 и должен иметь то же значение, что и *immediate_sync* в **sp_addpublication**. *immediate_sync* является свойством публикации и должно иметь то же значение, что и на издателе.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_addpullsubscription** используется в репликации моментальных снимков и репликации транзакций.  
   
 > [!IMPORTANT]  
 >  Для обновляемых посредством очередей подписок при соединении с подписчиками используйте проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], указывая для каждого из подписчиков различные учетные записи. При создании подписки по запросу, поддерживающей обновление посредством очередей, репликация всегда устанавливает соединение с использованием проверки подлинности Windows (так как для подписок по запросу репликация не сможет получить доступ к метаданным на подписчике, необходимым для выполнения проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). В этом случае следует выполнить [sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md) , чтобы изменить подключение для использования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности после настройки подписки.  
   
- Если [MSreplication_subscriptions &#40;таблицы&#41;Transact-SQL](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) не существует на подписчике, **sp_addpullsubscription** создает ее. Она также добавляет строку в [MSreplication_subscriptions &#40;таблице&#41;Transact-SQL](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) . Для подписок по запросу [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) должны быть вызваны на издателе первыми.  
+ Если [MSreplication_subscriptions &#40;таблицы&#41;Transact-SQL ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) не существует на подписчике, **sp_addpullsubscription** создает ее. Она также добавляет строку в [MSreplication_subscriptions &#40;таблице&#41;Transact-SQL ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) . Для подписок по запросу [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) должны быть вызваны на издателе первыми.  
   
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_addtranpullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addpullsubscription-t_1.sql)]  

@@ -1,4 +1,5 @@
 ---
+description: sp_execute_remote (база данных SQL Azure)
 title: sp_execute_remote (база данных SQL Azure) | Документация Майкрософт
 ms.custom: ''
 ms.date: 02/01/2017
@@ -15,12 +16,12 @@ ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 9d257f5b52c6dfea82868b69570f2655675bb7ca
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1642baedb44cc6eab4474616d03abd2f429f4276
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720288"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447169"
 ---
 # <a name="sp_execute_remote-azure-sql-database"></a>sp_execute_remote (база данных SQL Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -50,7 +51,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
  Строка в Юникоде, содержащая [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкцию или пакет. \@значение stmt должно быть константой Юникода или переменной Юникода. Более сложные выражения Юникода, например объединение двух строк с помощью оператора +, недопустимы. Символьные константы недопустимы. Если константа Юникода указана, она должна иметь префикс **N**. Например, константа в Юникоде **N "sp_who"** допустима, но символьная константа **"sp_who"** не является. Размер строки ограничивается только доступной серверу баз данных памятью. На 64-разрядных серверах размер строки ограничен 2 ГБ, максимальный размер — **nvarchar (max)**.  
   
 > [!NOTE]  
->  \@stmt может содержать параметры, имеющие ту же форму, что и имя переменной, например:`N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
+>  \@stmt может содержать параметры, имеющие ту же форму, что и имя переменной, например: `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
   
  Каждый параметр, входящий в \@ stmt, должен иметь соответствующую запись в \@ списке определений параметров params и в списке значений параметров.  
   
@@ -72,14 +73,14 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ## <a name="permissions"></a>Разрешения  
  Требуется разрешение `ALTER ANY EXTERNAL DATA SOURCE`.  
   
-## <a name="remarks"></a>Примечания  
- `sp_execute_remote`параметры должны быть указаны в определенном порядке, как описано в разделе синтаксис выше. Если параметры вводятся не в этом порядке, будет выдано сообщение об ошибке.  
+## <a name="remarks"></a>Комментарии  
+ `sp_execute_remote` параметры должны быть указаны в определенном порядке, как описано в разделе синтаксис выше. Если параметры вводятся не в этом порядке, будет выдано сообщение об ошибке.  
   
- `sp_execute_remote`поведение аналогично [выполнению &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md) в отношении пакетов и области имен. Инструкция или пакет Transact-SQL в параметре sp_execute_remote * \@ stmt* не компилируются до тех пор, пока не будет выполнена инструкция sp_execute_remote.  
+ `sp_execute_remote` поведение аналогично [выполнению &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md) в отношении пакетов и области имен. Инструкция или пакет Transact-SQL в параметре sp_execute_remote * \@ stmt* не компилируются до тех пор, пока не будет выполнена инструкция sp_execute_remote.  
   
- `sp_execute_remote`добавляет дополнительный столбец к результирующему набору с именем "$ShardName", который содержит имя удаленной базы данных, которая создала строку.  
+ `sp_execute_remote` добавляет дополнительный столбец к результирующему набору с именем "$ShardName", который содержит имя удаленной базы данных, которая создала строку.  
   
- `sp_execute_remote`может использоваться аналогично [sp_executesql &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md).  
+ `sp_execute_remote` может использоваться аналогично [sp_executesql &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md).  
   
 ## <a name="examples"></a>Примеры  
 ### <a name="simple-example"></a>Простой пример  

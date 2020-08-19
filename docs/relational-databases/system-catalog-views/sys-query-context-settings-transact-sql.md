@@ -1,4 +1,5 @@
 ---
+description: sys. query_context_settings (Transact-SQL)
 title: sys. query_context_settings (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/29/2018
@@ -20,12 +21,12 @@ ms.assetid: 3c1887df-6bd8-491e-82fc-d25ad9589faf
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2413e629e969fb0aa7dff93dc2959f1b7a007b10
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: fff1697d8452bac65f3af00dab1e373103f97f13
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394026"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447906"
 ---
 # <a name="sysquery_context_settings-transact-sql"></a>sys. query_context_settings (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "87394026"
 |-----------------|---------------|-----------------|  
 |**context_settings_id**|**bigint**|Первичный ключ. Это значение предоставляется в инструкциях Showplan XML для запросов.|  
 |**set_options**|**varbinary(8)**|Битовая маска, отражающая состояние нескольких параметров SET. Дополнительные сведения см. в разделе [sys. dm_exec_plan_attributes &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md).|  
-|**language_id**|**smallint**|Идентификатор языка. Дополнительные сведения см. в разделе [языкиsys.sys&#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
+|**language_id**|**smallint**|Идентификатор языка. Дополнительные сведения см. в разделе [ языкиsys.sys&#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
 |**date_format**|**smallint**|Формат даты. Дополнительные сведения см. в разделе [SET DATEFORMAT (Transact-SQL)](../../t-sql/statements/set-dateformat-transact-sql.md).|  
 |**date_first**|**tinyint**|Первое значение даты. Дополнительные сведения см. в разделе [SET DATEFIRST (Transact-SQL)](../../t-sql/statements/set-datefirst-transact-sql.md).|  
 |**status**|**varbinary (2)**|Поле битовой маски, указывающее тип запроса или контекста, в котором был выполнен запрос. <br />Значение столбца может быть сочетанием нескольких флагов (выраженное в шестнадцатеричном формате):<br /><br /> 0x0 — обычный запрос (без специальных флагов)<br /><br /> 0x1 — запрос, выполненный с помощью одной из хранимых процедур API курсоров<br /><br /> 0x2 — запрос на уведомление<br /><br /> 0x4 — внутренний запрос<br /><br /> 0x8 — автоматический параметризованный запрос без универсальной параметризации<br /><br /> 0x10 — запрос на обновление выборки курсора<br /><br /> 0x20 — запрос, используемый в запросах на обновление курсора<br /><br /> 0x40 — начальный результирующий набор возвращается при открытии курсора (автоматическая выборка курсора)<br /><br /> 0x80-зашифрованный запрос<br /><br /> 0x100 — запрос в контексте предиката безопасности на уровне строк|  

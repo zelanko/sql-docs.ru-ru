@@ -1,4 +1,5 @@
 ---
+description: sys.resource_stats (база данных SQL Azure)
 title: sys. resource_stats (база данных SQL Azure) | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/13/2018
@@ -19,12 +20,12 @@ ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: be336780f5bbfd45660ea376c0d689b577f052da
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 29862abf480aa5470314a531558839154886cc04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87822936"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447864"
 ---
 # <a name="sysresource_stats-azure-sql-database"></a>sys.resource_stats (база данных SQL Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -61,7 +62,7 @@ ms.locfileid: "87822936"
 ## <a name="permissions"></a>Разрешения  
  Это представление доступно для всех ролей пользователей с разрешениями на подключение к виртуальной базе данных **master** .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Данные, возвращаемые **sys. resource_stats** , выражаются в процентах от максимально допустимого уровня обслуживания и производительности, который вы используете.  
   
  Если база данных является членом эластичного пула, то статистика ресурсов, представленная в виде процентных значений, выражается в процентах от максимального предела для баз данных, как указано в конфигурации эластичного пула.  
@@ -83,7 +84,7 @@ GROUP BY database_name
 HAVING AVG(avg_cpu_percent) >= 80  
 ```  
     
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Уровни служб](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
  [Возможности и ограничения уровней служб](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
   

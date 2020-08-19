@@ -1,4 +1,5 @@
 ---
+description: sys. query_store_wait_stats (Transact-SQL)
 title: sys. query_store_wait_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/19/2019
@@ -19,12 +20,12 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5af0f04d9fce1fbcb455590d0e68a79bd98bdd73
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 41f66150a3a5c604889dc29d96abaea6d0418c6f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717624"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447851"
 ---
 # <a name="sysquery_store_wait_stats-transact-sql"></a>sys. query_store_wait_stats (Transact-SQL)
 
@@ -46,7 +47,7 @@ ms.locfileid: "85717624"
 |**last_query_wait_time_ms**|**bigint**|Длительность последнего ожидания для плана запроса в пределах интервала агрегирования и категории ожидания (отображается в миллисекундах).|
 |**min_query_wait_time_ms**|**bigint**|Минимальное `CPU wait` время для плана запроса в пределах интервала агрегирования и категории ожидания (отображается в миллисекундах).|
 |**max_query_wait_time_ms**|**bigint**|Максимальное `CPU wait` время для плана запроса в пределах интервала агрегирования и категории ожидания (отображается в миллисекундах).|
-|**stdev_query_wait_time_ms**|**float**|`Query wait`стандартное отклонение длительности для плана запроса в пределах интервала агрегирования и категории ожидания (отображается в миллисекундах).|
+|**stdev_query_wait_time_ms**|**float**|`Query wait` стандартное отклонение длительности для плана запроса в пределах интервала агрегирования и категории ожидания (отображается в миллисекундах).|
 
 ## <a name="wait-categories-mapping-table"></a>Таблица сопоставления категорий ожидания
 
@@ -54,7 +55,7 @@ ms.locfileid: "85717624"
   
 |Целочисленное значение|Категория ожидания|Типы ожидания включают в категорию|  
 |-----------------|---------------|-----------------|  
-|**0**|**Неизвестно**|Неизвестно |  
+|**0**|**Unknown**|Неизвестно |  
 |**1**|**ЦП**|SOS_SCHEDULER_YIELD|
 |**2**|**Рабочий поток**|THREADPOOL|
 |**3**|**Блокировка**|LCK_M_%|
@@ -63,14 +64,14 @@ ms.locfileid: "85717624"
 |**6**|**Операции ввода-вывода буфера**|PAGEIOLATCH_%|
 |**7**|**Компиляции***|RESOURCE_SEMAPHORE_QUERY_COMPILE|
 |**8**|**SQL CLR**|CLR%, SQLCLR%|
-|**9**|**Зеркального**|ДБМИРРОР%|
+|**9**|**Зеркальное отображение**|ДБМИРРОР%|
 |**10**|**Операции**|ТРАНЗАКЦИИ%, DTC%, TRAN_MARKLATCH_%, MSQL_XACT_%, TRANSACTION_MUTEX|
 |**11**|**Бездействие**|SLEEP_%, LAZYWRITER_SLEEP, SQLTRACE_BUFFER_FLUSH, SQLTRACE_INCREMENTAL_FLUSH_SLEEP, SQLTRACE_WAIT_ENTRIES, FT_IFTS_SCHEDULER_IDLE_WAIT, XE_DISPATCHER_WAIT, REQUEST_FOR_DEADLOCK_SEARCH, LOGMGR_QUEUE, ONDEMAND_TASK_QUEUE, CHECKPOINT_QUEUE, XE_TIMER_EVENT|
 |**12**|**PreEmptive**|PREEMPTIVE_%|
 |**13**|**Service Broker**|BROKER_% **(но не BROKER_RECEIVE_WAITFOR)**|
 |**14**|**Ввод-вывод журнала транзакций**|LOGMGR, ЛОГБУФФЕР, LOGMGR_RESERVE_APPEND, LOGMGR_FLUSH, LOGMGR_PMM_LOG, CHKPT, WRITELOG|
 |**15**|**Сетевые операции ввода-вывода**|ASYNC_NETWORK_IO, NET_WAITFOR_PACKET, PROXY_NETWORK_IO, EXTERNAL_SCRIPT_NETWORK_IOF|
-|**16**|**Параллелизма**|CXPACKET, EXCHANGE, HT%, BMP%, BP%|
+|**16**|**Parallelism**|CXPACKET, EXCHANGE, HT%, BMP%, BP%|
 |**17**|**Память**|RESOURCE_SEMAPHORE, КМЕМСРЕАД, КМЕМПАРТИТИОНЕД, EE_PMOLOCK, MEMORY_ALLOCATION_EXT, RESERVED_MEMORY_ALLOCATION_EXT, MEMORY_GRANT_UPDATE|
 |**стр**|**Ожидание пользователя**|WAITFOR, WAIT_FOR_RESULTS, BROKER_RECEIVE_WAITFOR|
 |**стр**|**Трассировка**|ТРАЦЕВРИТЕ, SQLTRACE_LOCK, SQLTRACE_FILE_BUFFER, SQLTRACE_FILE_WRITE_IO_COMPLETION, SQLTRACE_FILE_READ_IO_COMPLETION, SQLTRACE_PENDING_BUFFER_WRITERS, SQLTRACE_SHUTDOWN, QUERY_TRACEOUT, TRACE_EVTNOTIFF|

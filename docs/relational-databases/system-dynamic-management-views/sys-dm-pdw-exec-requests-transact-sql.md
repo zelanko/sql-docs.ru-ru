@@ -1,4 +1,5 @@
 ---
+description: sys. dm_pdw_exec_requests (Transact-SQL)
 title: sys. dm_pdw_exec_requests (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/05/2019
@@ -12,12 +13,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a377c33424ae589fa796b6f382e936426ead006d
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 2892e881434cad1fca2686b6522938584b221045
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197066"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447475"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys. dm_pdw_exec_requests (Transact-SQL)
 
@@ -25,7 +26,7 @@ ms.locfileid: "86197066"
 
   Содержит сведения обо всех текущих или недавно активных запросах в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] . В нем отображается одна строка для каждого запроса или запроса.  
   
-|Имя столбца|Тип данных|Описание|Диапазон|  
+|Имя столбца|Тип данных|Description|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|Ключ для этого представления. Уникальный числовой идентификатор, связанный с запросом.|Уникальный для всех запросов в системе.|  
 |session_id|**nvarchar(32)**|Уникальный числовой идентификатор, связанный с сеансом, в котором выполнялся этот запрос. См. раздел [sys. dm_pdw_exec_sessions &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).||  
@@ -35,7 +36,7 @@ ms.locfileid: "86197066"
 |end_compile_time|**datetime**|Время, когда обработчик завершил компиляцию запроса.|Значение NULL для запросов, которые еще не были скомпилированы; в противном случае допустимое значение **DateTime** меньше start_time и меньше или равно текущему времени.|
 |end_time|**datetime**|Время, когда выполнение запроса завершилось, завершилось сбоем или было отменено.|Значение NULL для очереди или активных запросов; в противном случае допустимое **значение DateTime** меньше или равно текущему времени.|  
 |total_elapsed_time|**int**|Время, затраченное на выполнение с момента запуска запроса, в миллисекундах.|Между 0 и разностью между submit_time и end_time.</br></br> Если total_elapsed_time превышает максимальное значение для целого числа, total_elapsed_time будет продолжать быть максимальным значением. Это условие выдаст предупреждение "превышено максимальное значение".</br></br> Максимальное значение в миллисекундах равно 24,8 дням.|  
-|label|**nvarchar(255)**|Необязательная строка метки, связанная с некоторыми инструкциями запроса SELECT.|Любая строка, содержащая "a-z", "A-Z", "0-9", "_".|  
+|метка|**nvarchar(255)**|Необязательная строка метки, связанная с некоторыми инструкциями запроса SELECT.|Любая строка, содержащая "a-z", "A-Z", "0-9", "_".|  
 |error_id|**nvarchar (36)**|Уникальный идентификатор ошибки, связанной с запросом, если он есть.|См [. раздел sys. dm_pdw_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md). Если ошибка не возникала, задайте значение NULL.|  
 |database_id|**int**|Идентификатор базы данных, используемой явным контекстом (например, DB_X).|См. раздел ID в [представлении sys. databases &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |.|**nvarchar(4000)**|Содержит полный текст запроса, отправленный пользователем.|Любой допустимый запрос или текст запроса. Запросы, длина которых превышает 4000 байт, усекаются.|  
@@ -76,6 +77,6 @@ ms.locfileid: "86197066"
 >[!WARNING]  
 >Злоумышленник может использовать sys. dm_pdw_exec_requests для получения сведений о конкретных объектах базы данных, просто выполняя разрешение VIEW SERVER STATE и не требуя разрешения для конкретной базы данных.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
  [Динамические административные представления хранилища данных SQL и параллельного хранилища данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)

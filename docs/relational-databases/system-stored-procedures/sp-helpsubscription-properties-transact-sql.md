@@ -1,4 +1,5 @@
 ---
+description: sp_helpsubscription_properties (Transact-SQL)
 title: sp_helpsubscription_properties (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ebef567c36028f63317be3e00ea4c8078a765b6f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fa2eb1c4389c6dd5f3f30b42967aa7cec82808d4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719480"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446993"
 ---
 # <a name="sp_helpsubscription_properties-transact-sql"></a>sp_helpsubscription_properties (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,15 +41,15 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'`Имя издателя. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию **%** , которое возвращает сведения обо всех издателях.  
+`[ @publisher = ] 'publisher'` Имя издателя. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию **%** , которое возвращает сведения обо всех издателях.  
   
-`[ @publisher_db = ] 'publisher_db'`Имя базы данных издателя. Аргумент *publisher_db* имеет тип **sysname**и значение по умолчанию **%** , которое возвращает сведения обо всех базах данных издателя.  
+`[ @publisher_db = ] 'publisher_db'` Имя базы данных издателя. Аргумент *publisher_db* имеет тип **sysname**и значение по умолчанию **%** , которое возвращает сведения обо всех базах данных издателя.  
   
-`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию **%** , которое возвращает сведения обо всех публикациях.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию **%** , которое возвращает сведения обо всех публикациях.  
   
-`[ @publication_type = ] publication_type`Тип публикации. *publication_type* имеет **тип int**и значение по умолчанию NULL. Если указано, *publication_type* должны иметь одно из следующих значений:  
+`[ @publication_type = ] publication_type` Тип публикации. *publication_type* имеет **тип int**и значение по умолчанию NULL. Если указано, *publication_type* должны иметь одно из следующих значений:  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**0**|Публикация транзакций|  
 |**1**|Публикация моментальных снимков|  
@@ -76,9 +77,9 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 |**alt_snapshot_folder**|**nvarchar(255)**|Указывает местоположение альтернативной папки для моментального снимка.|  
 |**working_directory**|**nvarchar(255)**|Имя рабочего каталога, используемого для хранения файлов данных и схемы.|  
 |**use_ftp**|**bit**|Указывает использование протокола FTP вместо обычного протокола для получения моментальных снимков. Если значение равно **1**, используется протокол FTP.|  
-|**dts_package_name**|**сисаме**|Указывает имя пакета служб DTS.|  
-|**dts_package_password**|**nvarchar (524)**|Задает пароль для пакета, если он имеется.|  
-|**dts_package_location**|**int**|Местоположение, где хранится пакет служб DTS.<br /><br /> **0** = расположение пакета находится на распространителе.<br /><br /> **1** = расположение пакета находится на подписчике.|  
+|**dts_package_name**;|**сисаме**|Указывает имя пакета служб DTS.|  
+|**dts_package_password**;|**nvarchar (524)**|Задает пароль для пакета, если он имеется.|  
+|**dts_package_location**.|**int**|Местоположение, где хранится пакет служб DTS.<br /><br /> **0** = расположение пакета находится на распространителе.<br /><br /> **1** = расположение пакета находится на подписчике.|  
 |**offload_agent**|**bit**|Указывает, может ли агент быть активирован удаленно. Если значение **равно 0**, агент не может быть активирован удаленно.|  
 |**offload_server**|**sysname**|Указывает сетевое имя сервера, используемого для удаленной активации.|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|Указывает путь к папке, в которой сохраняются файлы моментальных снимков.|  
@@ -93,7 +94,7 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_helpsubscription_properties** используется в репликации моментальных снимков, репликации транзакций и репликации слиянием.  
   
 ## <a name="permissions"></a>Разрешения  

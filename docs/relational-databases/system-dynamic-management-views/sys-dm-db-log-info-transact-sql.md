@@ -1,4 +1,5 @@
 ---
+description: sys. dm_db_log_info (Transact-SQL)
 title: sys. dm_db_log_info (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/24/2018
@@ -20,12 +21,12 @@ author: savjani
 ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7cb87d2d5677085edc8e6bd998f20c3c45013823
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: aba965d4a0289db9ef7def58b90f15a1479cb485
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262081"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447666"
 ---
 # <a name="sysdm_db_log_info-transact-sql"></a>sys. dm_db_log_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -60,10 +61,10 @@ sys.dm_db_log_info ( database_id )
 |vlf_parity|**tinyint** |Четность [виртуального файла журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). Используется внутренне для определения конца журнала в VLF.|
 |vlf_first_lsn|**nvarchar (48)** |Регистрационный [номер транзакции в журнале (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) первой записи журнала в [виртуальном файле журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
 |vlf_create_lsn|**nvarchar (48)** |Регистрационный [номер транзакции в журнале (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) для записи журнала, создавшей [виртуальный файл журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
-|vlf_encryptor_thumbprint|**varbinary(20)**| **Относится к** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> Показывает отпечаток шифратора VLF, если VLF шифруется с помощью [прозрачное шифрование данных](../../relational-databases/security/encryption/transparent-data-encryption.md), в противном случае — null. |
+|vlf_encryptor_thumbprint|**varbinary(20)**| **Применимо к:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> Показывает отпечаток шифратора VLF, если VLF шифруется с помощью [прозрачное шифрование данных](../../relational-databases/security/encryption/transparent-data-encryption.md), в противном случае — null. |
 
-## <a name="remarks"></a>Remarks
-Функция `sys.dm_db_log_info` динамического управления заменяет `DBCC LOGINFO` инструкцию.    
+## <a name="remarks"></a>Комментарии
+`sys.dm_db_log_info`Функция динамического управления заменяет `DBCC LOGINFO` инструкцию.    
  
 ## <a name="permissions"></a>Разрешения  
 Требуется `VIEW DATABASE STATE` разрешение в базе данных.  
@@ -81,7 +82,7 @@ GROUP BY [name]
 HAVING COUNT(l.database_id) > 100
 ```
 
-### <a name="b-determing-the-position-of-the-last-vlf-in-transaction-log-before-shrinking-the-log-file"></a>Б) Расположение последнего `VLF` в журнале транзакций до сжатия файла журнала
+### <a name="b-determing-the-position-of-the-last-vlf-in-transaction-log-before-shrinking-the-log-file"></a>Б. Расположение последнего `VLF` в журнале транзакций до сжатия файла журнала
 
 Следующий запрос можно использовать для определения расположения последнего активного VLF перед выполнением команды SHRINKFILE в журнале транзакций, чтобы определить, может ли журнал транзакций сжиматься.
 
@@ -109,9 +110,9 @@ FROM cte_vlf_cnt
 GO
 ```
 
-## <a name="see-also"></a>См. также:  
-[Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[Динамические административные представления, связанные с базами данных &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
-[sys. dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+[Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+[Динамические административные представления, связанные с базами данных &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+[sys.dm_db_log_space_usage (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
 [sys.dm_db_log_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
 

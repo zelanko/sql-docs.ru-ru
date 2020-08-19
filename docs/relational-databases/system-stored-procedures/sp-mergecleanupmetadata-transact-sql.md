@@ -1,4 +1,5 @@
 ---
+description: sp_mergecleanupmetadata (Transact-SQL)
 title: sp_mergecleanupmetadata (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 385176695fe9600250eaa5b6a839ebd833910618
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 356c0aefb862d37d4c87af995e3b8d676a33e8a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891621"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446950"
 ---
 # <a name="sp_mergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,9 +39,9 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию **%** , что очищает метаданные для всех публикаций. При явном указании публикации она должна существовать.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию **%** , что очищает метаданные для всех публикаций. При явном указании публикации она должна существовать.  
   
-`[ @reinitialize_subscriber = ] 'subscriber'`Указывает, следует ли повторно инициализировать подписчик. *Subscriber* имеет тип **nvarchar (5)**, может иметь **значение true** или **false**и значение по умолчанию **true**. Если **значение равно true**, подписки помечены для повторной инициализации. Если **значение равно false**, подписки не отмечены для повторной инициализации.  
+`[ @reinitialize_subscriber = ] 'subscriber'` Указывает, следует ли повторно инициализировать подписчик. *Subscriber* имеет тип **nvarchar (5)**, может иметь **значение true** или **false**и значение по умолчанию **true**. Если **значение равно true**, подписки помечены для повторной инициализации. Если **значение равно false**, подписки не отмечены для повторной инициализации.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -100,7 +101,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
     EXEC central..sp_changemergepublication @publication = 'dynpart_pubn', @property = 'status', @value = 'inactive'  
     ```  
   
- После завершения шага 3 выполнения **sp_mergecleanupmetadata**возобновите непрерывный режим слияния в зависимости от того, как вы их остановили. Одно из двух:  
+ После завершения шага 3 выполнения **sp_mergecleanupmetadata**возобновите непрерывный режим слияния в зависимости от того, как вы их остановили. Любое из следующих:  
   
 -   Добавьте параметр **-Continuous** обратно для агент слияния.  
   

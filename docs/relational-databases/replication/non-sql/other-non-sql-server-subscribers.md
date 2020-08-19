@@ -1,4 +1,5 @@
 ---
+description: Другие подписчики, отличные от SQL Server
 title: Другие подписчики, отличные от подписчиков SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/08/2016
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 96b8beb9-38e8-4ce4-97ca-c0f8656b73b4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d7f6a8e580d89b9364d6c141dbacac8a405a0667
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e593b228d39cc84c35647e72135805e2994b305a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892224"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448146"
 ---
 # <a name="other-non-sql-server-subscribers"></a>Другие подписчики, отличные от SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -114,7 +115,7 @@ ms.locfileid: "85892224"
   
  Дополнительные сведения о поставщике OLE DB см. в документации, поставляемой с используемым поставщиком OLE DB.  
   
-## <a name="see-also"></a>См. также:  
- [Подписчики, отличные от SQL Server](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)  
+## <a name="see-also"></a>См. также  
+ [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)  
   
   

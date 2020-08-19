@@ -1,4 +1,5 @@
 ---
+description: sp_migrate_user_to_contained (Transact-SQL)
 title: sp_migrate_user_to_contained (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/11/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d3faf15999e0c157859e3d2eee9c4119ab344844
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 95bd2aa7491b15b2e16172b0761c6dccc8eb5818
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727147"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446939"
 ---
 # <a name="sp_migrate_user_to_contained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +55,7 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_migrate_user_to_contained** создает пользователя автономной базы данных с паролем независимо от свойств или разрешений имени входа. Например, процедура может быть выполнена, если имя входа отключено или если пользователю отказано **в** доступе к базе данных.  
   
  **sp_migrate_user_to_contained** имеет следующие ограничения.  
@@ -117,7 +118,7 @@ DEALLOCATE user_cursor ;
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Миграция в частично автономную базу данных](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
+ [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
  [Автономные базы данных](../../relational-databases/databases/contained-databases.md)  
   
   

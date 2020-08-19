@@ -1,4 +1,5 @@
 ---
+description: Написание сценариев
 title: Написание скриптов | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/06/2017
@@ -14,13 +15,14 @@ ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c6da1b1cb2188d96f6e9bf733d83ecb3e394a78d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d36bbbe1f52ffb6ff7b020b339e136e2482d1aa3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005967"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448064"
 ---
-# <a name="scripting"></a>Скрипты
+# <a name="scripting"></a>Написание сценариев
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Скрипты в объектах SMO управляются <xref:Microsoft.SqlServer.Management.Smo.Scripter> объектом и его дочерними объектами или методом **скрипта** для отдельных объектов. <xref:Microsoft.SqlServer.Management.Smo.Scripter>Объект управляет сопоставлением из отношений зависимости для объектов в экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  

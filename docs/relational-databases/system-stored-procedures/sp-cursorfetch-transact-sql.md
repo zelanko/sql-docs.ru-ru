@@ -1,4 +1,5 @@
 ---
+description: sp_cursorfetch (Transact-SQL)
 title: sp_cursorfetch (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f3729587261ab090548ad93f5a1000f621239557
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7d68223e7ed12477b446934f01b600b840b6651a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85868958"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447365"
 ---
 # <a name="sp_cursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +56,7 @@ sp_cursorfetch cursor
 |0x10|ABSOLUTE|Извлекает буфер строк *nrows* , начиная со строки *rownum* .<br /><br /> Примечание. Использование ABSOLUTE для динамического курсора или курсора FORWARD_ONLY возвращает сообщение об ошибке, поскольку FORWARD_ONLY поддерживает только прокрутку в одном направлении.|  
 |0x20|RELATIVE|Извлекает буфер строк *nrows* , начиная со строки, которая указана как *rownum* значение строк из первой строки в текущем блоке. В этом случае *rownum* может быть отрицательным числом.<br /><br /> Примечание. использование метода RELATIVE для FORWARD_ONLYного курсора возвращает сообщение об ошибке, так как FORWARD_ONLY поддерживает только прокрутку в одном направлении.|  
 |0x80|REFRESH|Перезаполняет буфер из базовых таблиц.|  
-|0x100|ИНФОРМАЦИЯ|Извлекает сведения о курсоре. Эти сведения возвращаются с помощью параметров *rownum* и *nrows* . Поэтому, когда указаны сведения, *rownum* и *nrows* становятся выходными параметрами.|  
+|0x100|INFO|Извлекает сведения о курсоре. Эти сведения возвращаются с помощью параметров *rownum* и *nrows* . Поэтому, когда указаны сведения, *rownum* и *nrows* становятся выходными параметрами.|  
 |0x200|PREV_NOADJUST|Используется как PREV. Но если вершина результирующего набора встретилась преждевременно, результаты могут отличаться.|  
 |0x400|SKIP_UPDT_CNCY|Должен использоваться с одним из других значений *fetchtype* , за исключением info.|  
   
@@ -96,7 +97,7 @@ sp_cursorfetch cursor
 |Для курсоров KEYSET и STATIC|Обычно размер текущего набора ключей.<br /><br /> **-m** , если курсор находится в асинхронном создании с *m* строками, найденными до этого момента.|  
 |Для курсоров DYNAMIC|-1|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="cursor-parameter"></a>Параметр cursor  
  Перед началом операций выборки по умолчанию позиция курсора находится перед первой строкой результирующего набора.  
@@ -191,7 +192,7 @@ row2 contents
 row3 contents   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

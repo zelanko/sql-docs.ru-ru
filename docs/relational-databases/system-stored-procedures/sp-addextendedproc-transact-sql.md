@@ -1,4 +1,5 @@
 ---
+description: sp_addextendedproc (Transact-SQL)
 title: sp_addextendedproc (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 28711f289e86309baf6f2b54cf6c037d04d54d4d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a64b9b173b6b76429723c47bcf55fab4257b073c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85878005"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447415"
 ---
 # <a name="sp_addextendedproc-transact-sql"></a>sp_addextendedproc (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85878005"
   Регистрирует имя новой расширенной хранимой процедуры в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Вместо этого используйте [интеграцию со средой CLR](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте [интеграцию со средой CLR](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) .  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,9 +44,9 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @functname = ] 'procedure'`Имя функции для вызова в библиотеке динамической компоновки (DLL). *процедура* имеет тип **nvarchar (517)** и не имеет значения по умолчанию. При *необходимости можно* включить имя владельца в форму *owner. function*.  
+`[ @functname = ] 'procedure'` Имя функции для вызова в библиотеке динамической компоновки (DLL). *процедура* имеет тип **nvarchar (517)** и не имеет значения по умолчанию. При *необходимости можно* включить имя владельца в форму *owner. function*.  
   
-`[ @dllname = ] 'dll'`Имя библиотеки DLL, содержащей функцию. *DLL* имеет тип **varchar (255)** и не имеет значения по умолчанию. Рекомендуется указывать полный путь DLL.  
+`[ @dllname = ] 'dll'` Имя библиотеки DLL, содержащей функцию. *DLL* имеет тип **varchar (255)** и не имеет значения по умолчанию. Рекомендуется указывать полный путь DLL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -77,8 +78,8 @@ EXEC sp_addextendedproc xp_hello, 'c:\xp_hello.dll';
   
 ## <a name="see-also"></a>См. также:  
  [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)   
- [ПРЕДОСТАВЛЕНИЕ &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
- [ОТОЗВАТЬ &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
+ [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   
+ [REVOKE (Transact-SQL)](../../t-sql/statements/revoke-transact-sql.md)   
  [sp_dropextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)   
  [sp_helpextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

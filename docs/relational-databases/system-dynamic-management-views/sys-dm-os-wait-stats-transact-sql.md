@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_wait_stats (Transact-SQL)
 title: sys. dm_os_wait_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/19/2019
@@ -20,11 +21,12 @@ ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4a381c891c7cab2f4c14baaf87e9c5108cea714
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: a10193722529fabd7cce09569107520fe1b6410d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091548"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447592"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,14 +43,14 @@ ms.locfileid: "86091548"
 |wait_time_ms|**bigint**|Общее время ожидания данного типа в миллисекундах. Это время включает в себя время signal_wait_time_ms.|  
 |max_wait_time_ms|**bigint**|Максимальное время ожидания данного типа.|  
 |signal_wait_time_ms|**bigint**|Разница между временем сигнализации ожидающего потока и временем начала его выполнения.|  
-|pdw_node_id|**int**|Идентификатор узла, на котором находится данное распределение. <br/> **Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
+|pdw_node_id|**int**|Идентификатор узла, на котором находится данное распределение. <br/> **Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
   
 ## <a name="permissions"></a>Разрешения
 
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
+На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется  **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
 
-##  <a name="types-of-waits"></a><a name="WaitTypes"></a>Типы ожиданий  
+##  <a name="types-of-waits"></a><a name="WaitTypes"></a> Типы ожиданий  
  **Ожиданий ресурсов** Ожидание ресурсов происходит, когда Рабочая роль запрашивает доступ к ресурсу, который недоступен из-за того, что ресурс используется другим исполнителем или пока недоступен. Примерами ожидания ресурсов являются блокировки, кратковременные блокировки, сетевые ожидания и ожидания дискового ввода-вывода. Ожидания блокировок и кратковременных блокировок представляют собой ожидания объектов синхронизации.  
   
 **Ожидания очередей**  
@@ -87,7 +89,7 @@ GO
   
  В следующей таблице перечислены типы ожиданий, с которыми могут сталкиваться задачи.  
 
-|тип |Описание:| 
+|type |Описание| 
 |-------------------------- |--------------------------| 
 |ABR |Указано только в ознакомительных целях. Не поддерживается. Совместимость с будущими версиями не гарантируется.| | 
 |AM_INDBUILD_ALLOCATION |Только для внутреннего применения. <br />**Область применения**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] и более поздних версий.| 
@@ -166,8 +168,8 @@ GO
 |CONNECTION_ENDPOINT_LOCK |Только для внутреннего применения. <br /> **Область применения**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] и более поздних версий.| 
 |каунтрековеримгр |Только для внутреннего применения. <br /> **Область применения**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] и более поздних версий.| 
 |CREATE_DATINISERVICE |Только для внутреннего применения. <br /> **Область применения**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] и более поздних версий.| 
-|кксконсумер<a name="cxconsumer"></a>|Имеет место при параллельных планах запросов, когда поток-потребитель (родительский объект) ожидает передачи строк потоком производителя. Ожидания ККСКОНСУМЕР вызываются итератором Exchange, который выходит за пределы строк из своего потока производителя. Это обычная часть параллельного выполнения запроса. <br /> **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пакетом обновления 2 (SP2 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ), CU3),[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
-|CXPACKET<a name="cxpacket"></a>|Происходит с параллельными планами запросов при синхронизации итератора обмена обработчиком запросов, а также при создании и использовании строк. Если ожидание чрезмерно и не может быть уменьшено путем настройки запроса (например, добавления индексов), рассмотрите возможность настройки порогового значения затрат для параллелизма или снижения максимальной степени параллелизма (MaxDOP).<br /> **Примечание.** Начиная с с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пакетом обновления 2 (SP2), [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 и [!INCLUDE[ssSDS](../../includes/sssds-md.md)] CXPACKET относится только к синхронизации итератора обмена обработчика запросов и при создании строк. Если потоки-потребители слишком медленные, буфер итератора Exchange может стать переполненным и вызвать CXPACKET ожидания. Потоки-потребители отправляются отдельно в типе ожидания ККСКОНСУМЕР.| 
+|кксконсумер <a name="cxconsumer"></a>|Имеет место при параллельных планах запросов, когда поток-потребитель (родительский объект) ожидает передачи строк потоком производителя. Ожидания ККСКОНСУМЕР вызываются итератором Exchange, который выходит за пределы строк из своего потока производителя. Это обычная часть параллельного выполнения запроса. <br /> **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пакетом обновления 2 (SP2 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ), CU3), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXPACKET <a name="cxpacket"></a>|Происходит с параллельными планами запросов при синхронизации итератора обмена обработчиком запросов, а также при создании и использовании строк. Если ожидание чрезмерно и не может быть уменьшено путем настройки запроса (например, добавления индексов), рассмотрите возможность настройки порогового значения затрат для параллелизма или снижения максимальной степени параллелизма (MaxDOP).<br /> **Примечание.** Начиная с с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пакетом обновления 2 (SP2), [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 и [!INCLUDE[ssSDS](../../includes/sssds-md.md)] CXPACKET относится только к синхронизации итератора обмена обработчика запросов и при создании строк. Если потоки-потребители слишком медленные, буфер итератора Exchange может стать переполненным и вызвать CXPACKET ожидания. Потоки-потребители отправляются отдельно в типе ожидания ККСКОНСУМЕР.| 
 |CXROWSET_SYNC |Имеет место при параллельном просмотре диапазона.| 
 |DAC_INIT |Имеет место при инициализации выделенного административного соединения.| 
 |DBCC_SCALE_OUT_EXPR_CACHE |Только для внутреннего применения. <br /> **Область применения**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] и более поздних версий.| 
@@ -943,7 +945,7 @@ GO
 |WAIT_XTP_CKPT_CLOSE |Имеет место при ожидании завершения контрольной точки. <br /> **Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.| 
 |WAIT_XTP_CKPT_ENABLED |Происходит при отключении контрольных точек и ожидании включения контрольных точек. <br /> **Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.| 
 |WAIT_XTP_CKPT_STATE_LOCK |Происходит при синхронизации проверки состояния контрольной точки. <br /> **Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.| 
-|WAIT_XTP_COMPILE_WAIT |Только для внутреннего применения. <br /> **Применимо к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и более поздним версиям.| 
+|WAIT_XTP_COMPILE_WAIT |Только для внутреннего применения. <br /> **Применимо к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и выше.| 
 |WAIT_XTP_GUEST |Происходит, когда механизму выделения памяти базы данных необходимо отключить получение уведомлений о нехватке памяти. <br /> **Область применения**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] и более поздних версий.| 
 |WAIT_XTP_HOST_WAIT |Происходит, когда ядро СУБД инициирует ожидания и реализуется узлом. <br /> **Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.| 
 |WAIT_XTP_OFFLINE_CKPT_BEFORE_REDO |Только для внутреннего применения. <br /> **Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.| 
@@ -1024,9 +1026,9 @@ GO
   
  Сведения о матрице совместимости блокировок см. в разделе [sys. dm_tran_locks &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
     
- [SQL Server динамические административные представления, связанные с операционной системой &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
+ [SQL Server динамические административные представления, связанные с операционной системой &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys. dm_exec_session_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
  [sys. dm_db_wait_stats &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
   

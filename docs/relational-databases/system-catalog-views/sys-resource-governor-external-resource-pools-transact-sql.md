@@ -1,4 +1,5 @@
 ---
+description: sys. resource_governor_external_resource_pools (Transact-SQL)
 title: sys. resource_governor_external_resource_pools (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/13/2017
@@ -18,11 +19,12 @@ helpviewer_keywords:
 ms.assetid: 75063e36-a91b-496f-9936-88f3d57bd447
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 65fcc8dc4054c3aa7b55a543acb1aeebc9bd3bcd
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 6e75047b9f65136a4b41f248ee948555fdb526e9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052906"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447871"
 ---
 # <a name="sysresource_governor_external_resource_pools-transact-sql"></a>sys. resource_governor_external_resource_pools (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -43,11 +45,11 @@ ms.locfileid: "86052906"
 
 Необходимо разрешение VIEW SERVER STATE.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Управление ресурсами для машинного обучения в SQL Server](../../machine-learning/administration/resource-governor.md)
 
-[Resource Governor представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)
+[Resource Governor представления каталога &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)
 
 [sys.dm_resource_governor_resource_pools (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)
 
