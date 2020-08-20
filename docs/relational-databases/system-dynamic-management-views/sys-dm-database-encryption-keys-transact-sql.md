@@ -1,4 +1,5 @@
 ---
+description: sys.dm_database_encryption_keys (Transact-SQL)
 title: sys. dm_database_encryption_keys (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/27/2019
@@ -20,12 +21,12 @@ ms.assetid: 56fee8f3-06eb-4fff-969e-abeaa0c4b8e4
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3d42cc2873c1e3e03e2af3e0a01080cdb18c349a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c2a1aee58c8cde21161b84721c61adc0b367ac39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754279"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460496"
 ---
 # <a name="sysdm_database_encryption_keys-transact-sql"></a>sys.dm_database_encryption_keys (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,28 +45,28 @@ ms.locfileid: "85754279"
 |key_algorithm|**nvarchar(32)**|Отображает алгоритм, используемый для ключа.|  
 |key_length|**int**|Отображает длину ключа.|  
 |encryptor_thumbprint|**varbinary(20)**|Показывает отпечаток шифратора.|  
-|encryptor_type|**nvarchar(32)**|**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> Описывает шифратор.|  
+|encryptor_type|**nvarchar(32)**|**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> Описывает шифратор.|  
 |percent_complete|**real**|Процент выполнения шифрования базы данных. Значение 0, если изменения состояния не было.|
-|encryption_state_desc|**nvarchar(32)**|**Область применения**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и более поздних версий.<br><br> Строка, указывающая, является ли база данных зашифрованной или не зашифрованной.<br><br>NONE<br><br>НЕЗАШИФРОВАННЫЕ<br><br>Шифрование<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
+|encryption_state_desc|**nvarchar(32)**|**Область применения**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и более поздних версий.<br><br> Строка, указывающая, является ли база данных зашифрованной или не зашифрованной.<br><br>None<br><br>НЕЗАШИФРОВАННЫЕ<br><br>Шифрование<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
 |encryption_scan_state|**int**|**Область применения**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и более поздних версий.<br><br>Указывает текущее состояние сканирования шифрования. <br><br>0 = проверка не инициирована, TDE не включен<br><br>1 = выполняется сканирование.<br><br>2 = Проверка выполняется, но приостановлена, пользователь может возобновить работу.<br><br>3 = сканирование было прервано по какой-то причине, требуется вмешательство вручную. Для получения дополнительной помощи обратитесь в служба поддержки Майкрософт.<br><br>4 = сканирование успешно завершено, TDE включен и шифрование завершено.|
-|encryption_scan_state_desc|**nvarchar(32)**|**Область применения**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и более поздних версий.<br><br>Строка, указывающая текущее состояние сканирования шифрования.<br><br> NONE<br><br>RUNNING<br><br>SUSPENDED<br><br>ABORTED<br><br>ЗАВЕРШЕНИЯ|
+|encryption_scan_state_desc|**nvarchar(32)**|**Область применения**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и более поздних версий.<br><br>Строка, указывающая текущее состояние сканирования шифрования.<br><br> None<br><br>RUNNING<br><br>SUSPENDED<br><br>ABORTED<br><br>ЗАВЕРШЕНИЯ|
 |encryption_scan_modify_date|**datetime**|**Область применения**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и более поздних версий.<br><br> Отображает дату (в формате UTC) последнего изменения состояния проверки шифрования.|
   
 ## <a name="permissions"></a>Разрешения
 
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
+На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется  **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
 
 ## <a name="see-also"></a>См. также  
 
- [Динамические административные представления и функции, связанные с безопасностью &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)   
- [Прозрачное шифрование данных &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)   
+ [Динамические административные представления и функции, связанные с безопасностью (Transact-SQL)](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [Прозрачное шифрование данных (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)   
  [Шифрование SQL Server](../../relational-databases/security/encryption/sql-server-encryption.md)   
- [SQL Server и ключи шифрования базы данных &#40;ядро СУБД&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
- [Иерархия шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)   
+ [Ключи шифрования базы данных и SQL Server (ядро СУБД)](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
+ [Иерархия средств шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [Параметры ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [Создание ключа шифрования базы данных &#40;&#41;Transact-SQL](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
- [&#40;&#41;Transact-SQL в инструкции ALTER DATABASE ENCRYPTION KEY](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
+ [CREATE DATABASE ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
+ [ALTER DATABASE ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
  [DROP DATABASE ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sys.server_event_sessions (Transact-SQL)
 title: sys. server_event_sessions (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 796f3093-6a3e-4d67-8da6-b9810ae9ef5b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a5821e5a64670bec6f9129ee98bd343f176048db
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c98eece7a34af4ceb0693007690ec1499d91cef4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885985"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460602"
 ---
 # <a name="sysserver_event_sessions-transact-sql"></a>sys.server_event_sessions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "85885985"
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|Уникальный идентификатор сеанса событий. Не допускает значение NULL.|  
 |name|**sysname**|Определяемое пользователем имя, идентифицирующее сеанс событий. имя является уникальным. Не допускает значение NULL.|  
-|event_retention_mode|**nchar (1)**|Определяет способ обработки потери события. Значение по умолчанию — S. Не допускает значения NULL. Принимает одно из следующих значений.<br /><br /> S. Сопоставляется event_retention_mode_desc = ALLOW_SINGLE_EVENT_LOSS<br /><br /> Н. Сопоставляется event_retention_mode_desc = ALLOW_MULTIPLE_EVENT_LOSS<br /><br /> О. Сопоставляется event_retention_mode_desc = NO_EVENT_LOSS|  
+|event_retention_mode|**nchar (1)**|Определяет способ обработки потери события. Значение по умолчанию — S. Не допускает значения NULL. Принимает одно из следующих значений.<br /><br /> Х. Сопоставляется event_retention_mode_desc = ALLOW_SINGLE_EVENT_LOSS<br /><br /> Н. Сопоставляется event_retention_mode_desc = ALLOW_MULTIPLE_EVENT_LOSS<br /><br /> О. Сопоставляется event_retention_mode_desc = NO_EVENT_LOSS|  
 |event_retention_mode_desc|**sysname**|Описывает способ обработки потери события. Значение по умолчанию ALLOW_SINGLE_EVENT_LOSS. Не допускает значение NULL. Принимает одно из следующих значений.<br /><br /> ALLOW_SINGLE_EVENT_LOSS. Возможна потеря событий в сеансе. Одиночные события удаляются только в том случае, если все буферы событий полны. Потеря одиночных событий при заполнении буферов событий обеспечивает приемлемые характеристики производительности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], одновременно уменьшая до минимума потери данных в потоке обработанных событий.<br /><br /> ALLOW_MULTIPLE_EVENT_LOSS. Возможна потеря полных буферов событий в сеансе. Число потерянных событий зависит от размера памяти, выделенной для сеанса, способа секционирования памяти и размера событий в буфере. Этот параметр уменьшает влияние быстрого заполнения буферов событий на производительность сервера. Однако возможна потеря большого числа событий в сеансе.<br /><br /> NO_EVENT_LOSS. Потеря событий не разрешена. Этот параметр обеспечивает сохранение всех произошедших событий. При использовании этого параметра все задачи, которые инициируют события, должны ждать освобождения пространства в буфере событий. Это может привести к заметному снижению производительности во время активного сеанса событий.|  
 |max_dispatch_latency|**int**|Промежуток времени в миллисекундах, в течение которого события находятся в буферной памяти перед отправкой целям сеанса. Допустимые значения: от 0 до 2147483648 и 0. Значение 0 указывает, что задержка диспетчеризации бесконечно. Допускает значение NULL.|  
 |max_memory|**int**|Объем памяти, выделенной в сеансе для буферов событий. Значение по умолчанию — 4 МБ. Допускает значение NULL.|  
@@ -49,8 +50,8 @@ ms.locfileid: "85885985"
 ## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
-## <a name="see-also"></a>См. также  
- [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Представления каталога расширенных событий &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [Расширенные события](../../relational-databases/extended-events/extended-events.md)  
   

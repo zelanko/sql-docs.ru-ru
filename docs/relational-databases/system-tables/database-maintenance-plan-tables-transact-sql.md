@@ -1,4 +1,5 @@
 ---
+description: Таблицы плана обслуживания базы данных (Transact-SQL)
 title: Таблицы планов обслуживания базы данных (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f264554c-5514-4df2-aadb-6dcdc2dfcfea
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4a561a2b6a00c87d213a08390ef3f12ab596d0c6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3c29bede925a84fda9d538c7f474ad6cebdf7c83
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762616"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460397"
 ---
 # <a name="database-maintenance-plan-tables-transact-sql"></a>Таблицы плана обслуживания базы данных (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85762616"
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [sysdbmaintplan_databases](../../relational-databases/system-tables/sysdbmaintplan-databases-transact-sql.md)  
  Содержит по одной строке для каждой базы данных, которая имеет соответствующий обновленный план обслуживания базы данных.  
   
@@ -44,7 +45,7 @@ ms.locfileid: "85762616"
  [sysdbmaintplans](../../relational-databases/system-tables/sysdbmaintplans-transact-sql.md)  
  Содержит по одной строке для каждого обновленного плана обслуживания базы данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Планы обслуживания](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   

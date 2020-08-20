@@ -1,4 +1,5 @@
 ---
+description: sys.database_event_session_targets (база данных SQL Azure)
 title: sys. database_event_session_targets (база данных SQL Azure) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -11,12 +12,12 @@ ms.assetid: 38d775ee-1fe1-4820-88c6-02b2f875a66b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 67bb763d2896ef2156c442d82c29440d2cf4451b
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 68b6b8bab06f78e3e04991b5f89cc34b6f497fc6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472645"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460689"
 ---
 # <a name="sysdatabase_event_session_targets-azure-sql-database"></a>sys.database_event_session_targets (база данных SQL Azure)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "87472645"
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение VIEW DATABASE STATE на сервере.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Это представление имеет следующее количество элементов связей.  
   
 |От|Кому|Связь|  

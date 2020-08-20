@@ -37,7 +37,7 @@ ms.locfileid: "88460607"
 
 Необходимо разрешение VIEW DATABASE STATE.
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Настройка производительности с материализованным представлением](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
 [CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   
