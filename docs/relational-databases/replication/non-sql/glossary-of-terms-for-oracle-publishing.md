@@ -1,4 +1,5 @@
 ---
+description: Глоссарий терминов публикации Oracle
 title: Глоссарий терминов по публикации Oracle | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e21dfa4b-6144-4be7-9cbf-ca2709b2bd9f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 259ddd0128350fef480d4d25429808571d23ef11
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2dae5a66a762e53a4748bf43732aed70c5c0edfc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892441"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465160"
 ---
 # <a name="glossary-of-terms-for-oracle-publishing"></a>Глоссарий терминов публикации Oracle
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85892441"
 #### <a name="rowid"></a>ROWID  
  Указатель расположения определенной строки базы данных. Поскольку извлечение строк с использованием ROWID происходит быстрее, чем при использовании просмотра таблицы или индекса, репликация использует ROWID в течение периода обработки опубликованных изменений таблицы.  
   
-#### <a name="sequence"></a>Последовательность  
+#### <a name="sequence"></a>Sequence  
  Объект базы данных, который используется для формирования уникальных чисел. Репликация использует последовательности дл упорядочивания изменений, произведенных в опубликованных таблицах.  
   
 #### <a name="sqlplus"></a>SQL\*Plus  

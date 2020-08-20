@@ -1,4 +1,5 @@
 ---
+description: Обновление данных с помощью SQLBulkOperations
 title: Обновление данных с помощью SQLBulkOperations | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7645a704-341e-4267-adbe-061a9fda225b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9b96e3a43b8385910e4260cf51dea7e4ff508200
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6c8626a0925d0f30792ed92332c0f96efd23f62e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298488"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465538"
 ---
 # <a name="updating-data-with-sqlbulkoperations"></a>Обновление данных с помощью SQLBulkOperations
 Приложения могут выполнять операции полного обновления, удаления, выборки или вставки в базовой таблице в источнике данных с помощью вызова **SQLBulkOperations**. Вызов **SQLBulkOperations** является удобной альтернативой созданию и выполнению инструкции SQL. Он позволяет драйверу ODBC поддерживать позиционированные обновления, даже если источник данных не поддерживает позиционированные инструкции SQL. Он является частью парадигмы достижения полного доступа к базе данных с помощью вызовов функций.  

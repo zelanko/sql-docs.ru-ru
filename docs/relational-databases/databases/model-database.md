@@ -1,4 +1,5 @@
 ---
+description: База данных model
 title: База данных model | Документация Майкрософт
 ms.custom: ''
 ms.date: 07/22/2020
@@ -14,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: dd0390e7e6b781d5ca5d2b0f5685aeb8fc95c88f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 0e1af46a47e6e0e09c8e538fed06ecd1eb1ccc41
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87108338"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465427"
 ---
 # <a name="model-database"></a>База данных model
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  База данных **model** используется в качестве шаблона для всех баз данных, созданных для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Так как база данных **tempdb** создается при каждом запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , база данных **model** всегда должна существовать в системе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Содержимое базы данных **model** (включая параметры базы данных) полностью копируется в новую базу данных. Некоторые параметры базы данных **model** используются также при создании новой базы данных **tempdb** во время загрузки, поэтому наличие базы данных **model** в системе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обязательно.  
+   База данных **model** используется в качестве шаблона для всех баз данных, создаваемых в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Так как база данных **tempdb** создается при каждом запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , база данных **model** всегда должна существовать в системе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Содержимое базы данных **model** (включая параметры базы данных) полностью копируется в новую базу данных. Некоторые параметры базы данных **model** используются также при создании новой базы данных **tempdb** во время загрузки, поэтому наличие базы данных **model** в системе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обязательно.  
   
  Вновь созданные пользовательские базы данных используют ту же [модель восстановления](../../relational-databases/backup-restore/recovery-models-sql-server.md) , что и база данных model. Пользователь может настроить значение по умолчанию. Дополнительные сведения о текущей модели восстановления см. в разделе [Просмотр или изменение модели восстановления базы данных (SQL Server)](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
   

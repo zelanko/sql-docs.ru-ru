@@ -1,4 +1,5 @@
 ---
+description: Построение инструкций SQL с поддержкой взаимодействия
 title: Построение взаимодействующих инструкций SQL | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dee6f7e2-bcc4-4c74-8c7c-12aeda8a90eb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1eccdef63b7d06a456a07f5f1a9ccad987d2de29
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: acdb0f360242c4c9953804cb768214b0a78251dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282523"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465886"
 ---
 # <a name="constructing-interoperable-sql-statements"></a>Построение инструкций SQL с поддержкой взаимодействия
 Как упоминалось в предыдущих разделах, взаимодействующие приложения должны использовать грамматику ODBC SQL. Однако, помимо использования этой грамматики, некоторые дополнительные проблемы возникают из-за взаимодействующих приложений. Например, что делает приложение, если оно хочет использовать функцию, например внешние объединения, которые не поддерживаются всеми источниками данных?  

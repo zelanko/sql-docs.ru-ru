@@ -1,4 +1,5 @@
 ---
+description: Маркеры
 title: Дескрипторы | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f663101e-a4cc-402b-b9d7-84d5e975be71
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 713c2a71ec195b75d682b97239413e98d07b5861
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6e9d2445dbbd676e8d48be519c1649d550fd89c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300214"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465766"
 ---
 # <a name="handles"></a>Маркеры
 Дескрипторы — это непрозрачные, 32-разрядные значения, которые определяют конкретный элемент. в ODBC этот элемент может быть средой, соединением, инструкцией или дескриптором. Когда приложение вызывает **функцию SQLAllocHandle**, диспетчер драйверов или драйвер создает новый элемент указанного типа и возвращает его обработчик приложению. В дальнейшем приложение использует этот обработчик для обнаружения этого элемента при вызове функций ODBC. Диспетчер драйверов и драйвер используют этот маркер для нахождение сведений об элементе.  

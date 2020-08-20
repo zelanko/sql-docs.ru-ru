@@ -1,4 +1,5 @@
 ---
+description: Привязка на уровне строки
 title: Привязка на уровне строк | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f622cf4-0603-47a1-a48b-944c4ef46364
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3a63565590bbafc6f3a8740dd7cf7d4acbfd4f80
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b30d2426a8fb2a2bd0f0cb89c2de5bc326b67dfa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304275"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465624"
 ---
 # <a name="row-wise-binding"></a>Привязка на уровне строки
 При использовании привязки на уровне строки приложение определяет структуру, содержащую один или два, или в некоторых случаях три элемента для каждого столбца, для которого возвращаются данные. Первый элемент содержит значение данных, а второй элемент содержит буфер длины или индикатора. Индикаторы и значения длины могут храниться в отдельных буферах путем установки полей SQL_DESC_INDICATOR_PTR и SQL_DESC_OCTET_LENGTH_PTR дескрипторов в различные значения. Если это сделано, структура содержит третий элемент. Затем приложение выделяет массив этих структур, содержащий столько элементов, сколько строк в наборе строк.  

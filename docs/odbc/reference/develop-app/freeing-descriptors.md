@@ -1,4 +1,5 @@
 ---
+description: Освобождение дескрипторов
 title: Освобождение дескрипторов | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 317213f4-0ebb-4bf8-a37a-4d6b1313823f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: af30ceb29e032764b89aa2069086aa898a7d35db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 95c87b7ac70369509a72ff539c63ac888e5f3262
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305605"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465806"
 ---
 # <a name="freeing-descriptors"></a>Освобождение дескрипторов
 Явно выделенные дескрипторы можно освободить явно, вызвав **SQLFreeHandle** с *параметром handletype* SQL_HANDLE_DESC или неявно, при освобождении дескриптора соединения. При освобождении явно выделенного дескриптора все дескрипторы инструкций, к которым применяется освобожденный дескриптор, автоматически возвращаются к дескрипторам, неявно выделенным для них.  

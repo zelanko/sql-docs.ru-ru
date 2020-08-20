@@ -1,4 +1,5 @@
 ---
+description: Включение семантического поиска на таблицы и столбцы
 title: Включение семантического поиска по таблицам и столбцам | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 49691cea038a121ac27bdea729e3646e3375889f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c891b2089225de1560a8371440524846b7a96163
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730202"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465023"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Включение семантического поиска на таблицы и столбцы
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -263,7 +264,7 @@ GO
 |Французский|1036|  
 |Итальянский|1040|  
 |Португальский (Бразилия)|1046|  
-|Русский|1049|  
+|русском языке|1049|  
 |Шведский|1053|  
 |Английский (Великобритания)|2057|  
 |Португальский (Португалия)|2070|  
@@ -274,7 +275,7 @@ GO
   
  Если тип документа, который необходимо проиндексировать, отсутствует в списке поддерживаемых типов, то может потребоваться поиск, загрузка и установка дополнительных фильтров. Дополнительные сведения см. в статье [Просмотр или изменение зарегистрированных фильтры и разделители слов](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).  
   
-##  <a name="best-practice-consider-creating-a-separate-filegroup-for-the-full-text-and-semantic-indexes"></a><a name="BestPracticeFilegroup"></a> Рекомендации. Создание отдельной файловой группы для полнотекстового и семантического индексов  
+##  <a name="best-practice-consider-creating-a-separate-filegroup-for-the-full-text-and-semantic-indexes"></a><a name="BestPracticeFilegroup"></a> Рекомендация. Создайте отдельную файловую группу для полнотекстового и семантического индексов  
  Если выделение места на диске является серьезной проблемой, рассмотрите возможность создания отдельных файловых групп для полнотекстового и семантического индексов. Семантические индексы создаются в той же файловой группе, что и полнотекстовый индекс. Полностью заполненный семантический индекс может содержать большой объем данных.  
  
 ##  <a name="issue-searching-on-specific-column-returns-no-results"></a><a name="IssueNoResults"></a> Проблема. Поиск по определенному столбцу не возвращает результатов  

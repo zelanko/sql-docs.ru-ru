@@ -1,4 +1,5 @@
 ---
+description: Использование базы знаний DQS по умолчанию
 title: Использование базы знаний DQS по умолчанию
 ms.custom: ''
 ms.date: 07/31/2012
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b36af13b-9fcc-4168-bb92-214d600b1c93
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: ef5ed9dc991d91c2f5be790ea6cc49948f237ed5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1954d4d732e239c4506f92ca3a5411201717e09a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883275"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466588"
 ---
 # <a name="using-the-dqs-default-knowledge-base"></a>Использование базы знаний DQS по умолчанию
 
@@ -44,13 +45,13 @@ ms.locfileid: "85883275"
   
 -   Быстро запустить и внедрить проект по качеству данных с помощью базы знаний по умолчанию, не создавая новую базу знаний служб DQS.  
   
--   Выполнять действия по управлению доменами и обнаружению знаний, а также действия, связанные с политикой сопоставления, в базе данных по умолчанию. Для этого нажмите кнопку **Открыть базу знаний** на экране [Data Quality Client Home Screen](../data-quality-services/data-quality-client-home-screen.md), выберите базу знаний **DQS Data** на экране **Открыть базу знаний** и выберите нужное действие в области **Выбрать действие** . Чтобы продолжить, нажмите кнопку **Далее**.  
+-   Выполнять действия по управлению доменами и обнаружению знаний, а также действия, связанные с политикой сопоставления, в базе данных по умолчанию. Для этого нажмите кнопку **Открыть базу знаний** на экране [Data Quality Client Home Screen](../data-quality-services/data-quality-client-home-screen.md), выберите базу знаний **DQS Data** на экране **Открыть базу знаний** и выберите нужное действие в области **Выбрать действие** . Чтобы продолжить, нажмите кнопку **Далее** .  
   
 -   Создать новую базу знаний с помощью базы знаний по умолчанию. Сведения о создании базы знаний на основе существующей базы знаний см. в разделе [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md).  
   
 -   Использовать базу знаний по умолчанию можно в [компоненте DQS Cleansing  в службах Integration Services](https://go.microsoft.com/fwlink/?LinkId=238830) , а также в [надстройке Master Data Services для Excel](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Базы знаний и домены DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
   

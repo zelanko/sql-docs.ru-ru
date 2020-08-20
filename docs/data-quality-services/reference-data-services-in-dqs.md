@@ -1,4 +1,5 @@
 ---
+description: Службы эталонных данных в DQS
 title: Службы эталонных данных в DQS
 ms.date: 10/01/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: ecae6543a0a83084bbabb141339464d56b36c753
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e382be5f109efff9a0a08eb434017334fe54d2c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883365"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466757"
 ---
 # <a name="reference-data-services-in-dqs"></a>Службы эталонных данных в DQS
 
@@ -32,7 +33,7 @@ ms.locfileid: "85883365"
   
 -   Поддерживает использование эталонных данных из Azure Marketplace, а также непосредственно от сторонних поставщиков ссылочных данных.  
   
-##  <a name="using-reference-data-from-azure-marketplace"></a><a name="Marketplace"></a>Использование эталонных данных из Azure Marketplace  
+##  <a name="using-reference-data-from-azure-marketplace"></a><a name="Marketplace"></a> Использование эталонных данных из Azure Marketplace  
  DQS поддерживает использование эталонных данных из Azure Marketplace, чтобы предоставить поставщикам содержимого возможность предоставлять службы эталонных данных через Marketplace. Marketplace — это служба Microsoft, которая предоставляет отдельный рынок и канал доставки для высококачественных данных и приложений в виде облачных служб. Дополнительные сведения о Marketplace см. в разделе [сведения о Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/about) ( https://azuremarketplace.microsoft.com/about) .
   
  Органичная интеграция между Marketplace и DQS упрощает шаги, связанные с обнаружением, исследованием и получением информации для проектов служб DQS из среды служб DQS. Данные из DQS обрабатываются, что помогает пользователям DQS обеспечивать высокое качество данных за счет нового подхода — использования DQS, Marketplace и поставщиков служб ссылочных данных вместе друг с другом.  

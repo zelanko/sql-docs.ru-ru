@@ -1,4 +1,5 @@
 ---
+description: Запрос с полнотекстовым поиском
 title: Запрос с полнотекстовым поиском | Документация Майкрософт
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 59e3c8713aac6648d7419e405d424b8b4080030a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: abc6f54441e4cf4baaaede6cf9e4766daac607a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629250"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464997"
 ---
 # <a name="query-with-full-text-search"></a>Запрос с полнотекстовым поиском
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -335,11 +336,11 @@ GO
 
 После применения сочетания заданного средства разбивки текста на слова, тезауруса и списка стоп-слов в запросе итоговый результат разметки полнотекстового поиска можно просмотреть с помощью динамического административного представления **sys.dm_fts_parser**. Дополнительные сведения см. в разделе [sys.dm_fts_parser (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CONTAINS (Transact-SQL)](../../t-sql/queries/contains-transact-sql.md)   
  [CONTAINSTABLE (Transact-SQL)](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [FREETEXT (Transact-SQL)](../../t-sql/queries/freetext-transact-sql.md)   
  [FREETEXTTABLE (Transact-SQL)](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
  [Создание запросов полнотекстового поиска (визуальные инструменты для баз данных)](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
- [Повышение производительности полнотекстовых запросов](../../relational-databases/search/improve-the-performance-of-full-text-queries.md)
+ [Улучшение производительности полнотекстовых запросов](../../relational-databases/search/improve-the-performance-of-full-text-queries.md)
  

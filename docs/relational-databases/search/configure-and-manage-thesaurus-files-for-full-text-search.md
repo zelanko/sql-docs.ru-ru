@@ -1,4 +1,5 @@
 ---
+description: Настройка и управление файлами тезауруса для полнотекстового поиска
 title: Настройка и управление файлами тезауруса для полнотекстового поиска
 ms.date: 07/01/2020
 ms.prod: sql
@@ -14,16 +15,16 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 8d97b66622254ad911cb7bf557c1a7368b4f3d40
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d713b4eb49a527f2cbbbf871cce9d01d4449443d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897990"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465076"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Настройка и управление файлами тезауруса для полнотекстового поиска
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] полнотекстовые запросы могут выполнять поиск синонимов для заданных пользователем терминов с помощью *тезауруса* полнотекстового поиска. Каждый тезаурус определяет набор синонимов для указанного языка. Подготовив тезаурус, ориентированный на пользовательские полнотекстовые данные, можно эффективно расширить область полнотекстовых запросов к этим данным.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]В  полнотекстовые запросы могут выполнять поиск синонимов для заданных пользователем терминов с помощью *тезауруса* полнотекстового поиска. Каждый тезаурус определяет набор синонимов для указанного языка. Подготовив тезаурус, ориентированный на пользовательские полнотекстовые данные, можно эффективно расширить область полнотекстовых запросов к этим данным.
 
 Сопоставление с тезаурусом выполняется для всех запросов [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) и [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) и для любых запросов [CONTAINS](../../t-sql/queries/contains-transact-sql.md) и [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), которые указывают предложение `FORMSOF THESAURUS`.
   
@@ -224,7 +225,7 @@ ms.locfileid: "85897990"
   
 -   Тезаурус не должен содержать повторяющихся элементов среди элементов `<sub>` расширяющих наборов и элементов `<pat>` заменяющих наборов.  
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CONTAINS (Transact-SQL)](../../t-sql/queries/contains-transact-sql.md)   
  [CONTAINSTABLE (Transact-SQL)](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [FREETEXT (Transact-SQL)](../../t-sql/queries/freetext-transact-sql.md)   

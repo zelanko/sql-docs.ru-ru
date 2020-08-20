@@ -1,4 +1,5 @@
 ---
+description: Запуск клиентского приложения DQS
 title: Запуск клиентского приложения DQS
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 0b2aa202-7ab2-4c9d-b0f1-802588053a1e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 7125dd10e16b8013fccc1f584115550c026cc627
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ed5b6449ea470a63e27a1d23a057ed6507c2ed2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883337"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466680"
 ---
 # <a name="run-the-data-quality-client-application"></a>Запуск клиентского приложения DQS
 
@@ -35,12 +36,12 @@ ms.locfileid: "85883337"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для входа на сервер [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]необходимо иметь одну из трех ролей DQS (dqs_adminstrator, dqs_kb_editor или dqs_kb_operator) в базе данных DQS_MAIN.  
   
-##  <a name="run-data-quality-client"></a><a name="Run"></a>Запустить Data Quality Client  
+##  <a name="run-data-quality-client"></a><a name="Run"></a> Запустить Data Quality Client  
  Чтобы запустить [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] на компьютере, где он установлен, выполните следующие действия:  
   
 1.  Нажмите кнопку **Пуск**, выберите **Все программы**, затем **[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**, затем **Службы Data Quality Services**, затем **Data Quality Client**.  
   
-2.  В диалоговом окне **Соединение с сервером** выполните следующие действия:  
+2.  В диалоговом окне **Подключение к серверу** выполните указанные ниже действия.  
   
     1.  Укажите сервер, к которому требуется подключить приложение [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Выберите **(LOCAL)** для подключения к [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] на локальном компьютере. Можно также щелкнуть стрелку вниз и выбрать **\<Browse network for more servers>** для подключения к другому серверу (или для подключения к локальному серверу по имени). Открывается диалоговое окно **Обзор серверов** . Вы можете выбрать сервер на вкладках **Локальные серверы** или **Сетевые серверы** .  
   

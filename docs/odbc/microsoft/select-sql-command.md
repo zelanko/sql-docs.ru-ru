@@ -1,4 +1,5 @@
 ---
+description: SELECT (команда SQL)
 title: SELECT-SQL, команда | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 640189a5a31d0c21642b037e906bd6361690a9a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2b5fb0e3d38a2e5594cacf77b116844bcce219d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300944"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466426"
 ---
 # <a name="select---sql-command"></a>SELECT (команда SQL)
 Извлекает данные из одной или нескольких таблиц.  
@@ -113,7 +114,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
 -   Если включить в запрос две таблицы и не указать условие соединения, каждая запись в первой таблице присоединяется к каждой записи во второй таблице при условии, что условия фильтра выполнены. Такой запрос может привести к созданию длительных результатов.  
   
--   Будьте внимательны при соединении таблиц с пустыми полями, так как Visual FoxPro соответствует пустым полям. Например, если вы присоединяетесь к клиенту. ZIP и INVOICE. ZIP и если клиент содержит 100 пустых почтовых индексов, а счет содержит 400 пустых почтовых индексов, выходные данные запроса содержат 40 000 лишние записи, полученные из пустых полей. Используйте функцию **Empty ()** для исключения пустых записей из выходных данных запроса.  
+-   Будьте внимательны при соединении таблиц с пустыми полями, так как Visual FoxPro соответствует пустым полям. Например, если вы присоединяетесь к CUSTOMER.ZIP и INVOICE.ZIP и если клиент содержит 100 пустых почтовых индексов, а счет содержит 400 пустых почтовых индексов, то выходные данные запроса содержат 40 000 лишние записи, полученные в результате пустых полей. Используйте функцию **Empty ()** для исключения пустых записей из выходных данных запроса.  
   
 -   Для подключения нескольких условий соединения необходимо использовать оператор AND. Каждое условие объединения имеет следующий вид:  
   
@@ -271,7 +272,7 @@ WHERE customer.cust_id NOT IN ;
   
  Результаты запроса отображаются неупорядоченными, если порядок не указан с помощью предложения ORDER BY.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  SELECT — это команда SQL, встроенная в Visual FoxPro, как и любая другая команда Visual FoxPro. При использовании SELECT для представления запроса Visual FoxPro интерпретирует запрос и извлекает указанные данные из таблиц. Запрос SELECT можно создать либо в окне командной строки, либо в программе Visual FoxPro (как и в любой другой команде Visual FoxPro).  
   
 > [!NOTE]  
@@ -280,7 +281,7 @@ WHERE customer.cust_id NOT IN ;
 ## <a name="driver-remarks"></a>Примечания к драйверам  
  Когда приложение отправляет инструкцию ODBC SQL SELECT в источник данных, драйвер ODBC для Visual FoxPro преобразует команду в команду Visual FoxPro SELECT без преобразования, если команда не содержит escape-последовательность ODBC. Элементы, заключенные в escape-последовательность ODBC, преобразуются в синтаксис Visual FoxPro. Дополнительные сведения об использовании escape-последовательностей ODBC см. в разделе [функции времени и даты](../../odbc/microsoft/time-and-date-functions-visual-foxpro-odbc-driver.md) , а также в *справочнике программиста Microsoft ODBC*см. [в разделе Escape-последовательности в ODBC](../../odbc/reference/develop-app/escape-sequences-in-odbc.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE TABLE-SQL](../../odbc/microsoft/create-table-sql-command.md)   
  [INSERT-SQL](../../odbc/microsoft/insert-sql-command.md)   
  [ЗАДАТЬ ANSI](../../odbc/microsoft/set-ansi-command.md)   

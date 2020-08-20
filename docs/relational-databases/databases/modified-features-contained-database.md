@@ -1,4 +1,5 @@
 ---
+description: Измененные функции (автономная база данных)
 title: Измененные функции (автономная база данных) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 2ac376cdb7fd57506470b03facdc16b415098b7a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5726487c9582a7f99b26154bdb92fa61647b1190
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726400"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465416"
 ---
 # <a name="modified-features-contained-database"></a>Измененные функции (автономная база данных)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +52,7 @@ ms.locfileid: "85726400"
 ## <a name="user-options"></a>Пользовательские параметры  
  При включении поддержки автономных баз данных необходимо установить [параметр «пользовательские параметры»](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) в значение 0 для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Параметры сортировки автономной базы данных](../../relational-databases/databases/contained-database-collations.md)   
  [Автономные базы данных](../../relational-databases/databases/contained-databases.md)  
   

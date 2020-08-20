@@ -1,4 +1,5 @@
 ---
+description: Переопределение заданных по умолчанию точности и шкалы для числовых типов данных
 title: Переопределение точности и масштаба по умолчанию для числовых типов данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 84292334-0e33-4a1b-84de-8c018dd787f3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 365c5f69d21dd3a4ad8e89805d81f1b3b0c9dcba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 798e607ff6584bde27791a29e4b20aeb1d7bb3cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303595"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466086"
 ---
 # <a name="overriding-default-precision-and-scale-for-numeric-data-types"></a>Переопределение заданных по умолчанию точности и шкалы для числовых типов данных
 Если поле SQL_DESC_TYPE в АРД имеет значение SQL_C_NUMERIC, вызывая либо **SQLBindCol** , либо **SQLSetDescField**, поле SQL_DESC_SCALE в АРД имеет значение 0, а в поле SQL_DESC_PRECISION задана точность по умолчанию, определенная драйвером. Это также справедливо, если поле SQL_DESC_TYPE в APD имеет значение SQL_C_NUMERIC, вызывая либо **SQLBindParameter** , либо **SQLSetDescField**. Это справедливо для входных, входных и выходных параметров.  

@@ -1,4 +1,5 @@
 ---
+description: semantickeyphrasetable (Transact-SQL)
 title: SEMANTICKEYPHRASETABLE (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3782b8139b84d87a30ac575476f5535173cdc66a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8026760d93132e3a18b51145bc1802e416bc0934
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85662578"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464824"
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ SEMANTICKEYPHRASETABLE
     )  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>Даваемых  
+##  <a name="arguments"></a><a name="Arguments"></a> Аргументы  
  **table**  
  Имя таблицы с включенным полнотекстовым и семантическим индексированием.  
   
@@ -91,7 +92,7 @@ SEMANTICKEYPHRASETABLE
   
 ## <a name="examples"></a>Примеры  
   
-###  <a name="example-1-find-the-top-key-phrases-in-a-specific-document"></a><a name="HowToTopPhrases"></a>Пример 1. Поиск наиболее важных ключевых фраз в определенном документе  
+###  <a name="example-1-find-the-top-key-phrases-in-a-specific-document"></a><a name="HowToTopPhrases"></a> Пример 1. Поиск наиболее важных ключевых фраз в определенном документе  
  В следующем примере извлекаются 10 первых ключевых фраз из документа, указанного в переменной @DocumentId в столбце Document таблицы Production.Document в тестовой базе данных AdventureWorks. Переменная @DocumentId представляет значение из ключевого столбца полнотекстового индекса. Функция **SEMANTICKEYPHRASETABLE** эффективно извлекает эти результаты поиском по индексу, а не путем просмотра таблицы. В этом примере предполагается, что в столбце настроено семантическое и полнотекстовое индексирование.  
   
 ```sql  
@@ -106,7 +107,7 @@ ORDER BY KEYP_TBL.score DESC;
   
 ```  
   
-###  <a name="example-2-find-the-top-documents-that-contain-a-specific-key-phrase"></a><a name="HowToTopDocuments"></a>Пример 2. Поиск лучших документов, содержащих определенную ключевую фразу  
+###  <a name="example-2-find-the-top-documents-that-contain-a-specific-key-phrase"></a><a name="HowToTopDocuments"></a> Пример 2. Поиск лучших документов, содержащих определенную ключевую фразу  
  В следующем примере извлекаются 25 первых документов, содержащих ключевую фразу Bracket в столбце Document таблицы Production.Document примера базы данных AdventureWorks. В этом примере предполагается, что в столбце настроено семантическое и полнотекстовое индексирование.  
   
 ```sql  

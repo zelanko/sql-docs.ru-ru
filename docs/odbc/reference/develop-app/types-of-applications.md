@@ -1,4 +1,5 @@
 ---
+description: Типы приложений
 title: Типы приложений | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d346a64e-a32c-4153-a40f-5b53c2f57ef2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f14326c9cec1eb89e431154c91b680e4688fcdfa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 54056a6111924fb584ac35a65d6f74e8dab1ba6c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305535"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465554"
 ---
 # <a name="types-of-applications"></a>Типы приложений
 Приложения ODBC можно классифицировать следующим образом:  
@@ -41,7 +42,7 @@ ms.locfileid: "81305535"
 -   **Чистый ODBC 2.**  
      **_x_ Unicode приложение** A чисто ODBC 2. перекомпилированное приложение *x* , совместимое с Юникодом, и использует тип данных SQL_WCHAR.  
   
--   **Чистые открытые и**-**совместимые с ISO приложения ODBC** — 32-разрядное приложение, которое:  
+-   **Чистая открытая группа и ISO** - **совместимое приложение ODBC** 32-разрядное приложение, которое:  
   
     -   Вызывает функции, определенные в стандартах Open Group или ISO CLI. (Эти функции могут включать устаревшие функции 3,0.)  
   

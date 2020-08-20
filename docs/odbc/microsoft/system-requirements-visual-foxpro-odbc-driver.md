@@ -1,4 +1,5 @@
 ---
+description: Требования к системе (драйвер ODBC для Visual FoxPro)
 title: Требования к системе (драйвер ODBC для Visual FoxPro) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: fb4d5157-9a3e-43bf-97b5-7a614558652c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d02681709edb3a22144469df7c9abbda34e6e083
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d48f5ddf105d8ecc315387c0c42c3cb84c104bda
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301445"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466326"
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>Требования к системе (драйвер ODBC для Visual FoxPro)
 Требования к системе для установки включают минимальную операционную систему и дисковое пространство, необходимое для успешной установки драйвера. После установки драйвера можно выбрать конкретное программное обеспечение приложения, которое будет использоваться для доступа к данным Visual FoxPro.  

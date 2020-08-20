@@ -1,4 +1,5 @@
 ---
+description: Массив статусов строк
 title: Массив состояний строк | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4b69f189-2722-4314-8a02-f4ffecd6dabd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 60dead23fe0051c05698e094f37ddad96b2b337d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8067aaf8724a6634d165d53743cbd0ef2015f6bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304295"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465637"
 ---
 # <a name="row-status-array"></a>Массив статусов строк
 Помимо данных, **SQLFetch** и **SQLFetchScroll** могут возвращать массив, который предоставляет состояние каждой строки в наборе строк. Этот массив задается с помощью атрибута инструкции SQL_ATTR_ROW_STATUS_PTR. Этот массив выделяется приложением и должен иметь столько же элементов, сколько указано в атрибуте инструкции SQL_ATTR_ROW_ARRAY_SIZE. Значения в массиве задаются с помощью **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**и **SQLSetPos.** Значения описывают состояние строки и значение, указывающее, изменилось ли это состояние со времени последней выборки.  

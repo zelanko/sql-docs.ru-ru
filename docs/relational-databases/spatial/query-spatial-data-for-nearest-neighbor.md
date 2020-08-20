@@ -1,4 +1,5 @@
 ---
+description: Запросы пространственных данных для ближайшего соседа
 title: Запросы к пространственным данным для поиска ближайшего соседа | Документация Майкрософт
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.assetid: 7af4ad5d-484e-45b4-aa16-83c33b358bb6
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 97e87d6590e9a8a79575e51d0a35f5e882ea21a5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e53b816b25c991e7dafb891a0006b256979cb298
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725895"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464951"
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>Запросы пространственных данных для ближайшего соседа
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -71,7 +72,7 @@ SELECT TOP ( number )
 7.  Все строки, для которых `STDistance` возвращает **NULL** , должны исключаться фильтром.  
   
 > [!WARNING]  
->  Методы, принимающие в качестве аргументов типы данных **geography** или **geometry** , возвращают значение **NULL** , если идентификаторы SRID для типов не совпадают.  
+>   Методы, принимающие в качестве аргументов типы данных **geography** или **geometry** , возвращают значение **NULL** , если идентификаторы SRID для типов не совпадают.  
   
  В запросах ближайшего соседа рекомендуется использовать новые тесселяции пространственных индексов. Дополнительные сведения о тесселяциях пространственных индексов см. в разделе [Пространственные данные (SQL Server)](../../relational-databases/spatial/spatial-data-sql-server.md).  
   
@@ -102,7 +103,7 @@ ORDER BY SpatialLocation.STDistance(@g);
   
  В запросе отсутствует предложение **WHERE** , использующее `STDistance()` указанным в разделе синтаксиса образом, поэтому данный запрос не может использовать пространственный индекс.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пространственные данные (SQL Server)](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   

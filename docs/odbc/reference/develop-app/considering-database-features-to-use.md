@@ -1,4 +1,5 @@
 ---
+description: Оценка возможности использования функций базы данных
 title: Использование функций базы данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 59760114-508e-46c5-81d2-8f2498c0d778
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a9d966781def1c3eab6a9568eab07ab591326171
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2abaed3806514a161c5c506d8bad89b4d3b75153
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299014"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465896"
 ---
 # <a name="considering-database-features-to-use"></a>Оценка возможности использования функций базы данных
 После того как базовый уровень взаимодействия известен, необходимо учитывать функции базы данных, используемые приложением. Например, какие инструкции SQL будет выполнять приложение? Приложение будет использовать прокручиваемые курсоры? Провод? Описано? Данные длиннее? Идеи о том, какие функции могут не поддерживаться всеми СУБД, см. в описании функций [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)и [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) , а также в [приложении C: грамматика SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md). Функции, необходимые для приложения, могут исключить некоторые СУБД из списка целевых СУБД. Они также могут продемонстрировать, что приложение может легко ориентироваться на множество СУБД.  

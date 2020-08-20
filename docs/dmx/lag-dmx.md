@@ -1,4 +1,5 @@
 ---
+description: Lag (расширения интеллектуального анализа данных)
 title: Запаздывание (расширения интеллектуального анализа данных) | Документация Майкрософт
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e011fc48b63aa653cd63e11678b84d8356370bd0
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 4e7aa504c3afd236ddd748a7ee81cbbb6cf90b7c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86969355"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466582"
 ---
 # <a name="lag-dmx"></a>Lag (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -30,7 +31,7 @@ Lag()
 ## <a name="return-type"></a>Тип возвращаемых данных  
  Скалярное значение целочисленного типа.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Если функция **Lag** используется в модели, где ключевой столбец времени находится внутри вложенной таблицы, функция должна находиться внутри подзапроса инструкции.  
   
 ## <a name="examples"></a>Примеры  
@@ -41,9 +42,9 @@ SELECT * FROM [Forecasting].CASES
 WHERE Lag() < 12  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширения интеллектуального анализа данных &#40;Справочник по функциям DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/functions-dmx.md)   
- [Общие прогнозирующие функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/general-prediction-functions-dmx.md)  
+ [Функции &#40;&#41;расширений интеллектуального анализа данных ](../dmx/functions-dmx.md)   
+ [Общие прогнозирующие функции &#40;&#41;расширений интеллектуального анализа данных ](../dmx/general-prediction-functions-dmx.md)  
   
   

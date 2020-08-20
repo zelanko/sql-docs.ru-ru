@@ -1,4 +1,5 @@
 ---
+description: Подготовленное выполнение ODBC
 title: Подготовленное выполнение ODBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f08c8a98-31ee-48b2-9dbf-6f31c2166dbb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 147ca85b21296575ff55afbe66ab286cc4824fae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6141af2cde7106419ab1eb68f86d5817f055aab2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282314"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465746"
 ---
 # <a name="prepared-execution-odbc"></a>Подготовленное выполнение ODBC
 Подготовленное выполнение является эффективным способом выполнения инструкции более одного раза. Инструкция сначала компилируется или *подготовлена* в план доступа. Затем план доступа выполняется один или несколько раз позже. Дополнительные сведения о планах доступа см. [в разделе Обработка инструкции SQL](../../../odbc/reference/processing-a-sql-statement.md).  

@@ -1,4 +1,5 @@
 ---
+description: Копирование дескрипторов
 title: Копирование дескрипторов | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 949a860d-6579-4218-882e-8c061688dd87
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2e2e5897afc3673a21396e256df04d25008c8cdf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 90f3acb5ccb479ba5c1d1eb4c405a486f7032f3f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301673"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465874"
 ---
 # <a name="copying-descriptors"></a>Копирование дескрипторов
 Функция **склкопидеск** вызывается для копирования полей одного дескриптора в другой дескриптор. Поля можно копировать только в дескриптор приложения или IPD, но не в IRD. Поля можно копировать из любого типа дескриптора. Копируются только те поля, которые определены как для исходного, так и для целевого дескрипторов. **Склкопидеск** не копирует поле SQL_DESC_ALLOC_TYPE, так как тип распределения дескриптора не может быть изменен. Скопированные поля перезапишут существующие поля.  

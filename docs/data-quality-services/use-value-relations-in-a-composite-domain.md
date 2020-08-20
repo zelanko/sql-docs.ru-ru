@@ -1,4 +1,5 @@
 ---
+description: Использование связей значений в составном домене
 title: Использование связей значений в составном домене
 ms.date: 11/22/2011
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 5ee468f0-8538-4620-90e8-63f466c9000e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: e9876e5a232174c387fb46cf4f3b2012f1435dc2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 67d6d4743fc373afd0ac008a72c7d97751b8ac29
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883302"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466602"
 ---
 # <a name="use-value-relations-in-a-composite-domain"></a>Использование связей значений в составном домене
 
@@ -34,7 +35,7 @@ ms.locfileid: "85883302"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для просмотра связей значений в составном домене необходимо иметь роль dqs_kb_editor или dqs_administrator в базе данных DQS_MAIN.  
   
-##  <a name="view-value-relations"></a><a name="Use"></a>Просмотр связей значений  
+##  <a name="view-value-relations"></a><a name="Use"></a> Просмотр связей значений  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Запустите приложение Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -51,7 +52,7 @@ ms.locfileid: "85883302"
   
 6.  Изменить какие-либо значения в этой таблице нельзя. Если вы выполнили другие операции, нажмите кнопку **Готово** для завершения действия по управлению доменами. В противном случае нажмите кнопку **Отмена**.  
   
-##  <a name="follow-up-after-viewing-value-relations"></a><a name="FollowUp"></a>Дальнейшие действия. После просмотра связей значений  
+##  <a name="follow-up-after-viewing-value-relations"></a><a name="FollowUp"></a> Дальнейшие действия. После просмотра связей значений  
  После просмотра связей значений в домене можно выполнить другие задачи по управлению доменами, произвести обнаружение знаний для добавления набора знаний в домен или добавить в домен политику сопоставления. Дополнительные сведения см. в разделах [Обнаружение набора знаний](../data-quality-services/perform-knowledge-discovery.md), [Управление доменом](../data-quality-services/managing-a-domain.md) и [Создание политики сопоставления](../data-quality-services/create-a-matching-policy.md).  
   
   

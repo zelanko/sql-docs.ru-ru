@@ -1,4 +1,5 @@
 ---
+description: Ограничения инструкции SELECT
 title: Ограничения инструкции SELECT | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c6b05955-f8fd-4706-a1a7-a8dbd74870c2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d91e93076a67287cbbd2b64b2ad0d6414a0aea6d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 601c9a2fcd07d0c89003d9aa4d1b631e07ecbf90
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300924"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466416"
 ---
 # <a name="select-statement-limitations"></a>Ограничения инструкции SELECT
 Столбец агрегатной функции не может смешиваться со столбцом, не являющимся статистическим выражением, в инструкции SELECT.  

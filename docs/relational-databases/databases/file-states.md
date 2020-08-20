@@ -1,4 +1,5 @@
 ---
+description: Состояния файла
 title: Состояния файла | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -29,12 +30,12 @@ ms.assetid: b426474d-8954-4df0-b78b-887becfbe8d6
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1a58f92ebb7e6c59d80277cc17457927cff01ff8
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a698fe18323a91a5ec4b82aa2ba220e41a4e680e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002954"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465494"
 ---
 # <a name="file-states"></a>Состояния файла
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "86002954"
 ## <a name="file-state-definitions"></a>Определения состояний файлов  
  Состояния файлов определяются в следующей таблице.  
   
-|Штат|Определение|  
+|Состояние|Определение|  
 |-----------|----------------|  
 |ONLINE|Файл доступен для всех операций. Если база данных находится в режиме в сети, то файлы первичной файловой группы всегда находятся в режиме в сети. Если файл первичной файловой группы не находится в режиме в сети, то база данных тоже не находится в режиме в сети, и состояния файлов во вторичной файловой группе не определены.|  
 |OFFLINE|Файл недоступен и, возможно, отсутствует на диске. Файлы переходят в режим вне сети с помощью явного указания пользователя и остаются в режиме вне  сети до тех пор, пока пользователем не будет предпринято дополнительное действие.<br /><br /> **\*\* Внимание! \*\*** Состояние файла можно задать как недоступное только в том случае, если он поврежден, но может быть восстановлен. Файл, который установлен в режим вне сети, может быть установлен в режим в сети только путем восстановления файла из резервной копии. Дополнительные сведения о восстановлении одного файла см. в разделе [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md). <br /><br /> Файл базы данных также устанавливается в режим OFFLINE, если для базы данных используется модель полного восстановления или восстановления с неполным протоколированием и файл отбрасывается. Запись в sys.master_files сохраняется до усечения журнала транзакций после значения drop_lsn. Дополнительные сведения: [Усечение журнала транзакций](../../relational-databases/logs/the-transaction-log-sql-server.md#Truncation). |  

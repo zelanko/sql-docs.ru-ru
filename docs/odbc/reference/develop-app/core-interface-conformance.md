@@ -1,4 +1,5 @@
 ---
+description: Соответствие основного интерфейса
 title: Соответствие базового интерфейса | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aaaa864a-6477-45ff-a50a-96d8db66a252
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 886ded1cd79b35488c0d47df3dbd8055dc6a8016
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1ca38e2b616c39839cfe813dad984f7eba3796a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302136"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465846"
 ---
 # <a name="core-interface-conformance"></a>Соответствие основного интерфейса
 Все драйверы ODBC должны иметь по крайней мере соответствие интерфейсу уровня ядра. Так как функции уровня ядра являются обязательными для большинства универсальных взаимодействующих приложений, драйвер может работать с такими приложениями. Функции на уровне ядра также соответствуют функциям, определенным в спецификации интерфейса командной строки ISO, и к невариантным функциям, определенным в спецификации Open Group CLI. Драйвер ODBC, поддерживающий интерфейс на уровне ядра, позволяет приложению выполнять следующие действия:  

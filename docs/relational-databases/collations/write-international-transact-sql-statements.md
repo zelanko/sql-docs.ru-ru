@@ -1,4 +1,5 @@
 ---
+description: Написание инструкций Transact-SQL, адаптированных к международному использованию
 title: Написание инструкций Transact-SQL, адаптированных к международному использованию | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/24/2019
@@ -18,12 +19,12 @@ ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72b2d6056d3a48d21804d02677867a9757f4f671
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8192fcd7d657c5842dfd60fcca36fec3e945413d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003930"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465542"
 ---
 # <a name="write-international-transact-sql-statements"></a>Написание инструкций Transact-SQL, адаптированных к международному использованию
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,10 +36,10 @@ ms.locfileid: "86003930"
 
     Это позволяет избежать проблемы преобразования кодовых страниц. См. подробнее о [различиях в хранении для символов UTF-8 и UTF-16](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences).  
 
--   Вплоть до [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] все элементы с типами данных **char**, **varchar** и **text** замените элементами с типами данных **nchar**, **nvarchar** и **nvarchar(max)** . При использовании параметров сортировки с поддержкой [дополнительных символов](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) данные кодируются с помощью UTF-16. Использование параметров сортировки, не поддерживающих дополнительные символы, приводит к кодированию данных с использованием UCS-2. Это позволяет избежать проблемы преобразования кодовых страниц. Дополнительные сведения см. в статье [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). 
+-   Вплоть до [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] все элементы с типами данных **char**, **varchar** и** text** замените элементами с типами данных **nchar**, **nvarchar** и **nvarchar(max)**. При использовании параметров сортировки с поддержкой [дополнительных символов](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) данные кодируются с помощью UTF-16. Использование параметров сортировки, не поддерживающих дополнительные символы, приводит к кодированию данных с использованием UCS-2. Это позволяет избежать проблемы преобразования кодовых страниц. Дополнительные сведения см. в статье [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). 
 
     > [!IMPORTANT]
-    > Тип данных **text** является устаревшим, и его не следует использовать в новых разработках. Запланируйте преобразование данных типа **text** в **varchar(max)** .
+    > Тип данных **text** является устаревшим, и его не следует использовать в новых разработках. Запланируйте преобразование данных типа **text** в **varchar(max)**.
   
 -   При выполнении сравнения и других операций со значениями месяцев и дней недели следует использовать числовые эквиваленты вместо строковых имен. При различных языковых настройках возвращаются различные названия месяцев и дней недели. Например, `DATENAME(MONTH,GETDATE())` возвращает `May` при языковой настройке "Английский (США)", возвращает `Mai` для немецкого и `mai` — для французского. Вместо нее следует использовать функцию наподобие [DATEPART](../../t-sql/functions/datepart-transact-sql.md), в которой вместо названия месяца используется его номер. При выводе результирующих наборов пользователю лучше использовать названия из функции DATEPART(), так как они зачастую более информативны, чем числовое представление даты. Однако не следует кодировать какую-либо логику, зависящую от отображаемых названий на том или ином языке.  
   
@@ -48,7 +49,7 @@ ms.locfileid: "86003930"
   
          **{ ts'** _yyyy_ **-** _mm_ **-** _dd_ _hh_ **:** _mm_ **:** _ss_ [ **.** _fff_] **'}** , например: **{ ts'1998-09-24 10:02:20'}**  
   
-         **{ d'** _yyyy_ **-** _mm_ **-** _dd_ **'}** , например: **{ d'1998-09-24'}**
+         **{ d'** _yyyy_ **-** _mm_ **-** _dd_ **'}**, например: **{ d'1998-09-24'}**
   
          **{ t'** _hh_ **:** _mm_ **:** _ss_ **'}** , например: **{ t'10:02:20'}**  
   
@@ -62,7 +63,7 @@ ms.locfileid: "86003930"
         WHERE OrderDate = CONVERT(DATETIME, '20060719', 101)  
         ```  
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)     
 [DATEPART (Transact-SQL)](../../t-sql/functions/datepart-transact-sql.md)        
 [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md)      

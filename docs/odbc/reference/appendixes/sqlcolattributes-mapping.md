@@ -1,4 +1,5 @@
 ---
+description: Сопоставление SQLColAttributes
 title: Сопоставление SQLColAttributes | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 30e25719-176b-4c48-97d4-920766b22412
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5c2c8386d6771141eaa0145a5d5964d70d6084d2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 864f81877e548de9bbb0478e9313c2cd38dd3838
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305420"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466046"
 ---
 # <a name="sqlcolattributes-mapping"></a>Сопоставление SQLColAttributes
 Когда приложение вызывает **SQLColAttributes** через драйвер ODBC *3. x* , вызов **SQLColAttributes** сопоставляется с **SQLColAttribute** следующим образом:  

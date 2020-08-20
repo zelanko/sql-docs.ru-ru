@@ -1,4 +1,5 @@
 ---
+description: Пример диагностики шлюзов
 title: Пример диагностики шлюзов | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e0695fac-4593-4b3d-8675-cb8f73dab966
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b18fd78be7be2eb79316339cbdf3d315deb194fb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 17e32f0ccdc1b2fbbebb1969083e216ed3371688
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305575"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465786"
 ---
 # <a name="gateways-diagnostic-example"></a>Пример диагностики шлюзов
 В архитектуре шлюза драйвер отправляет запросы на шлюз, поддерживающий ODBC. Шлюз отправляет запросы СУБД. Поскольку это компонент, который взаимодействует с диспетчером драйверов, драйвер форматирует и возвращает аргументы для **SQLGetDiagRec**.  

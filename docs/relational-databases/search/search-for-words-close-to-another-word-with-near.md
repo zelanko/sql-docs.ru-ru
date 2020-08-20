@@ -1,4 +1,5 @@
 ---
+description: Поиск слов близких к другим с использованием оператора NEAR
 title: Поиск слов близких к другим с использованием оператора NEAR | Документация Майкрософт
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 401be9b8f231704dc5fd44860d03208cc1fa7a5f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6fb4746b2dda07cfcc4872f3bc987df3276f8859
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629185"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465017"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Поиск слов близких к другим с использованием оператора NEAR
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -121,7 +122,7 @@ GO
   
 -   CONTAINS('NEAR((*выражение1*, *выражение2*),5) OR NEAR((*выражение3*, *выражение4*),2, TRUE)')  
   
- Например,  
+ Например, примененная к объекту директива  
   
 ```  
 CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')  
@@ -154,7 +155,7 @@ CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')
   
      Значение параметра **transform noise words** влияет на обработку в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] стоп-слов, указанных в поисковых запросах с учетом расположения. Дополнительные сведения см. в разделе [transform noise words Server Configuration Option](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md).   
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CONTAINS (Transact-SQL)](../../t-sql/queries/contains-transact-sql.md)  
  [CONTAINSTABLE (Transact-SQL)](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [Запросы с полнотекстовым поиском](../../relational-databases/search/query-with-full-text-search.md)   

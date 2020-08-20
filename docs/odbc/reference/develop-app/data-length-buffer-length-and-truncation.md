@@ -1,4 +1,5 @@
 ---
+description: Длина данных, длина буфера и усечение
 title: Длина данных, длина буфера и усечение | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2825c6e7-b9ff-42fe-84fc-7fb39728ac5d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b2e7b8d1e60cd83594509c2ab5cbc24e04546eca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c9a9651f39c1ff4d2c6dc9b691453fb5354c9e1a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305237"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465836"
 ---
 # <a name="data-length-buffer-length-and-truncation"></a>Длина данных, длина буфера и усечение
 *Длина данных* — это длина в байтах данных, которая будет храниться в буфере данных приложения, а не в том виде, в котором они хранятся в источнике данных. Это различие важно, поскольку данные часто хранятся в разных типах буфера данных, чем в источнике данных. Таким образом, для передачи данных в источник данных это длина байта данных перед преобразованием в тип источника данных. Для данных, извлекаемых из источника данных, это длина байта данных после преобразования в тип буфера данных и до выполнения каких-либо усечений.  
