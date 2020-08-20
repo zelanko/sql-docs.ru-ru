@@ -1,4 +1,5 @@
 ---
+description: ALTER ASYMMETRIC KEY (Transact-SQL)
 title: ALTER ASYMMETRIC KEY (Transact-SQL) | Документы Майкрософт
 ms.date: 04/12/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 958e95d6-fbe6-43e8-abbd-ccedbac2dbac
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 596002d6c5440ec9896c5122aa78da4ca085506d
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 0e911a6680545e1b9d1b018e257bf191abd0edd0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301899"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472366"
 ---
 # <a name="alter-asymmetric-key-transact-sql"></a>ALTER ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -68,7 +69,7 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
  DECRYPTION BY PASSWORD **='***oldPassword***'**  
  Указывает старый пароль, которым в данный момент защищен закрытый ключ. Этот аргумент не требуется, если закрытый ключ защищается главным ключом базы данных.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Если главного ключа базы данных не существует, необходимо указать параметр ENCRYPTION BY PASSWORD, а если пароль не указан, операция завершится неуспешно. Дополнительные сведения о создании главного ключа базы данных см. в разделе [CREATE MASTER KEY (Transact-SQL)](../../t-sql/statements/create-master-key-transact-sql.md).  
   
  Инструкция ALTER ASYMMETRIC KEY позволяет изменить защиту закрытого ключа с помощью параметров PRIVATE KEY так, как показано в следующей таблице.  
@@ -117,7 +118,7 @@ ALTER ASYMMETRIC KEY PacificSales09 WITH PRIVATE KEY (
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [DROP ASYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)   
  [Ключи шифрования базы данных и SQL Server (ядро СУБД)](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   

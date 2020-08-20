@@ -1,4 +1,5 @@
 ---
+description: sp_lookupcustomresolver (Transact-SQL)
 title: sp_lookupcustomresolver (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fafdcdd2d0fea423ddf44058e7615aff7241565e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 75f030013417d3cb5f68f8349d36cb26f9971a88
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899374"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473957"
 ---
 # <a name="sp_lookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,17 +43,17 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @article_resolver = ] 'article_resolver'`Указывает имя пользовательской бизнес-логики, для которой отменяется регистрация. *article_resolver* имеет тип **nvarchar (255)** и не имеет значения по умолчанию. Если удаляемая бизнес-логика является компонентом COM, то этим аргументом является понятное имя компонента. Если бизнес-логика представляет собой сборку [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, то этим аргументом является имя сборки.  
+`[ @article_resolver = ] 'article_resolver'` Указывает имя пользовательской бизнес-логики, для которой отменяется регистрация. *article_resolver* имеет тип **nvarchar (255)** и не имеет значения по умолчанию. Если удаляемая бизнес-логика является компонентом COM, то этим аргументом является понятное имя компонента. Если бизнес-логика представляет собой сборку [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, то этим аргументом является имя сборки.  
   
-`[ @resolver_clsid = ] 'resolver_clsid' OUTPUT`Значение CLSID объекта COM, связанного с именем пользовательской бизнес-логики, указанной в параметре *article_resolver* . *resolver_clsid* имеет тип **nvarchar (50)** и значение по умолчанию NULL.  
+`[ @resolver_clsid = ] 'resolver_clsid' OUTPUT` Значение CLSID объекта COM, связанного с именем пользовательской бизнес-логики, указанной в параметре *article_resolver* . *resolver_clsid* имеет тип **nvarchar (50)** и значение по умолчанию NULL.  
   
-`[ @is_dotnet_assembly = ] 'is_dotnet_assembly' OUTPUT`Указывает тип регистрируемой пользовательской бизнес-логики. *is_dotnet_assembly* имеет **бит**и значение по умолчанию 0. значение **1** указывает, что регистрируемая настраиваемая бизнес-логика является сборкой обработчика бизнес-логики. значение **0** указывает, что это COM-компонент.  
+`[ @is_dotnet_assembly = ] 'is_dotnet_assembly' OUTPUT` Указывает тип регистрируемой пользовательской бизнес-логики. *is_dotnet_assembly* имеет **бит**и значение по умолчанию 0. значение **1** указывает, что регистрируемая настраиваемая бизнес-логика является сборкой обработчика бизнес-логики. значение **0** указывает, что это COM-компонент.  
   
-`[ @dotnet_assembly_name = ] 'dotnet_assembly_name' OUTPUT`Имя сборки, реализующей обработчик бизнес-логики. *dotnet_assembly_name* имеет тип **nvarchar (255)** и значение по умолчанию NULL.  
+`[ @dotnet_assembly_name = ] 'dotnet_assembly_name' OUTPUT` Имя сборки, реализующей обработчик бизнес-логики. *dotnet_assembly_name* имеет тип **nvarchar (255)** и значение по умолчанию NULL.  
   
-`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT`Имя класса, переопределяющего <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> для реализации обработчика бизнес-логики. *dotnet_class_name* имеет тип **nvarchar (255)** и значение по умолчанию NULL.  
+`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT` Имя класса, переопределяющего <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> для реализации обработчика бизнес-логики. *dotnet_class_name* имеет тип **nvarchar (255)** и значение по умолчанию NULL.  
   
-`[ @publisher = ] 'publisher'`Имя издателя. параметр *Publisher* имеет тип **sysname**и значение по умолчанию NULL. Используйте данный аргумент, если хранимая процедура не вызвана из издателя. Если этот аргумент не указан, то издателем считается локальный сервер.  
+`[ @publisher = ] 'publisher'` Имя издателя. параметр *Publisher* имеет тип **sysname**и значение по умолчанию NULL. Используйте данный аргумент, если хранимая процедура не вызвана из издателя. Если этот аргумент не указан, то издателем считается локальный сервер.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -67,8 +68,8 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли базы данных **db_owner** в базе данных публикации могут выполнять **sp_lookupcustomresolver**.  
   
-## <a name="see-also"></a>См. также  
- [Расширенное обнаружение и разрешение конфликтов при репликации слиянием](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+## <a name="see-also"></a>См. также:  
+ [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Выполнение бизнес-логики во время синхронизации слиянием](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)   
  [Реализация обработчика бизнес-логики для статьи публикации слиянием](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
  [Указание арбитра статей публикации слиянием](../../relational-databases/replication/publish/specify-a-merge-article-resolver.md)   

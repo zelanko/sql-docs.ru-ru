@@ -1,4 +1,5 @@
 ---
+description: Занятие 3–2. Запуск мастера установки пакета
 title: Шаг 2. Запуск мастера установки пакета | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ea753e6d74ae5073936cbb98bc0eed716f224dd7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f30bc07edc2d6d513eb9078e1758caf99a2822cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922220"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472066"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>Занятие 3–2. Запуск мастера установки пакета
 
@@ -50,7 +51,7 @@ ms.locfileid: "86922220"
   
 9. На странице "Выбор папки для установки" нажмите кнопку **Обзор**.  
   
-10. В диалоговом окне **Выбор папки** разверните **Мой компьютер** и щелкните **Локальный диск (C:)** .  
+10. В диалоговом окне **Выбор папки** разверните **Мой компьютер** и щелкните **Локальный диск (C:)**.  
   
 11. Щелкните **Создать папку** и замените имя по умолчанию для новой папки ( **Новая папка**) на **DeploymentTutorialInstall**.  
   
@@ -69,14 +70,14 @@ ms.locfileid: "86922220"
   
 16. В списке **Файл конфигурации** щелкните **datatransferconfig.dtsconfig**, разверните "Свойство" в столбце **Путь** поля **Конфигурации** и обновите столбец **Значение** указанными ниже значениями.  
   
-    |Свойство|Значение|Обновленное значение|  
+    |Property (Свойство)|Значение|Обновленное значение|  
     |------------|---------|-----------------|  
     |\Package.Connections[Deployment Tutorial Log].Properties[ConnectionString]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Completed Packages\Deployment Tutorial Log|C:\DeploymentTutorialInstall\Deployment Tutorial Log|  
     |\Package.Connections[NewCustomers].Properties[ConnectionString]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\NewCustomers.txt|C:\DeploymentTutorialInstall\NewCustomers.txt|  
   
 17. В списке **Файл конфигурации** щелкните loadxmldataconfig.dtsconfig, разверните "Свойство" в столбце **Путь** поля **Конфигурации** и обновите столбец **Значение** указанными ниже значениями.  
   
-    |Свойство|Значение|Обновленное значение|  
+    |Property (Свойство)|Значение|Обновленное значение|  
     |------------|---------|-----------------|  
     |\Package.LoadXMLData.Properties[[XML Source].[XMLData]]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\orders.xml|C:\DeploymentTutorialInstall\orders.xml|  
     |\Package.LoadXMLData.Properties[[XML Source].[XMLSchemaDefinition]]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\orders.xsd|C:\DeploymentTutorialInstall\orders.xsd|  

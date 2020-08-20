@@ -1,4 +1,5 @@
 ---
+description: GRANT, предоставления разрешения на схему (Transact-SQL)
 title: GRANT, предоставления разрешения на схему (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 06/19/2017
@@ -18,12 +19,12 @@ ms.assetid: b2aa1fc8-e7af-45d2-9f80-737543c8aa95
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed1c5c45e9ad2ffe46a836708c5686097c61227f
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 25d81e7dae5f3c02311ec47148a855c0ad3304d8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484373"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472295"
 ---
 # <a name="grant-schema-permissions-transact-sql"></a>GRANT, предоставления разрешения на схему (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -80,7 +81,7 @@ AS *granting_principal*
 ## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  Сочетание разрешений ALTER и REFERENCE в некоторых случаях может позволить просматривать данные или выполнять несанкционированные функции. Пример. Пользователь с разрешением ALTER на таблицу и разрешением REFERENCE на функцию может создавать вычисляемый столбец на основе функции и в результате выполнять ее. В этом случае пользователю также требуется разрешение SELECT на вычисляемый столбец.  
+>  Сочетание разрешений ALTER и REFERENCE в некоторых случаях может позволить просматривать данные или выполнять несанкционированные функции. Пример: Пользователь с разрешением ALTER на таблицу и разрешением REFERENCE на функцию может создавать вычисляемый столбец на основе функции и в результате — выполнять ее. В этом случае пользователю также требуется разрешение SELECT на вычисляемый столбец.  
   
  Схема является защищаемым объектом уровня базы данных, содержащимся в базе данных, которая является материнской по отношению к нему в иерархии разрешений. Ниже перечислены наиболее специфичные и ограниченные разрешения (вместе с наиболее общими разрешениями, из которых они вытекают), которые могут быть предоставлены для схемы.  
   
@@ -144,7 +145,7 @@ GRANT INSERT ON SCHEMA :: HumanResources TO guest;
 GRANT SELECT ON SCHEMA :: Person TO WilJo WITH GRANT OPTION;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [DENY, запрет разрешений на схему (Transact-SQL)](../../t-sql/statements/deny-schema-permissions-transact-sql.md)   
  [REVOKE, отмена разрешений на схему (Transact-SQL)](../../t-sql/statements/revoke-schema-permissions-transact-sql.md)   
  [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md)   

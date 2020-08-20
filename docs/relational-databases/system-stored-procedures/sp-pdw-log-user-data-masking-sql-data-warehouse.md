@@ -1,4 +1,5 @@
 ---
+description: sp_pdw_log_user_data_masking (хранилище данных SQL)
 title: sp_pdw_log_user_data_masking (хранилище данных SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,12 +12,12 @@ ms.assetid: 43c63b42-03cb-4fb5-8362-ec3b7e22a590
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ea363af9a4f9362e7aa9d09ab29b8a5a9e1a2b5c
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 0857ffe4bae954efdbad4e1e692069a2b3eeab60
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173213"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473992"
 ---
 # <a name="sp_pdw_log_user_data_masking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (хранилище данных SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -49,7 +50,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
   
  При **sp_pdw_ log_user_data_masking** без параметров возвращается текущее состояние маскировки данных пользователя журнала TDE на устройстве в качестве скалярного результирующего набора.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Маскирование данных пользователя в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] журналах действий позволяет заменить литералы предопределенными константными значениями в инструкциях **SELECT** и DML, так как они могут содержать пользовательские данные. Установка *masking_mode* в значение 1 не маскирует метаданные, такие как имена столбцов или имена таблиц. Если присвоить параметру *masking_mode* значение 2, то инструкции с метаданными, например имена столбцов или имена таблиц, удаляются.  
   
  Маскирование данных пользователя в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] журналах действий реализуется следующим образом:  
@@ -72,7 +73,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
 EXEC sp_pdw_log_user_data_masking 1;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_pdw_database_encryption хранилища данных SQL &#40;&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)   
  [sp_pdw_database_encryption_regenerate_system_keys хранилища данных SQL &#40;&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  
   

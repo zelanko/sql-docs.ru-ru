@@ -1,4 +1,5 @@
 ---
+description: sysmail_add_account_sp (Transact-SQL)
 title: sysmail_add_account_sp (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 65e15e2e-107c-49c3-b12c-f4edf0eb1617
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f3b97b134e424cb46b98b09001a86f66bb5e8c4d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 810e0f32b5a77fa60e2c32c4b9b7259d60fc51d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891047"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473379"
 ---
 # <a name="sysmail_add_account_sp-transact-sql"></a>sysmail_add_account_sp (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -51,31 +52,31 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @account_name = ] 'account_name'`Имя добавляемой учетной записи. Аргумент *account_name* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @account_name = ] 'account_name'` Имя добавляемой учетной записи. Аргумент *account_name* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @email_address = ] 'email_address'`Адрес электронной почты, с которого отправляется сообщение. Этот адрес должен быть адресом электронной почты Интернета. *email_address* имеет тип **nvarchar (128)** и не имеет значения по умолчанию. Например, учетная запись [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента может отправить сообщение электронной почты с адреса ** \@ Adventure-Works.com**.  
+`[ @email_address = ] 'email_address'` Адрес электронной почты, с которого отправляется сообщение. Этот адрес должен быть адресом электронной почты Интернета. *email_address* имеет тип **nvarchar (128)** и не имеет значения по умолчанию. Например, учетная запись [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента может отправить сообщение электронной почты с адреса ** \@ Adventure-Works.com**.  
   
-`[ @display_name = ] 'display_name'`Отображаемое имя, используемое для сообщений электронной почты из этой учетной записи. *display_name* имеет тип **nvarchar (128)** и значение по умолчанию NULL. Например, учетная запись [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента может отображать имя **Агент SQL Server автоматизированной почте** для сообщений электронной почты.  
+`[ @display_name = ] 'display_name'` Отображаемое имя, используемое для сообщений электронной почты из этой учетной записи. *display_name* имеет тип **nvarchar (128)** и значение по умолчанию NULL. Например, учетная запись [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента может отображать имя **Агент SQL Server автоматизированной почте** для сообщений электронной почты.  
   
-`[ @replyto_address = ] 'replyto_address'`Адрес, на который отправляются ответы на сообщения от этой учетной записи. *replyto_address* имеет тип **nvarchar (128)** и значение по умолчанию NULL. Например, ответы на учетную запись [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента могут быть отправлены администратору базы данных **данв \@ Adventure-Works.com**.  
+`[ @replyto_address = ] 'replyto_address'` Адрес, на который отправляются ответы на сообщения от этой учетной записи. *replyto_address* имеет тип **nvarchar (128)** и значение по умолчанию NULL. Например, ответы на учетную запись [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента могут быть отправлены администратору базы данных **данв \@ Adventure-Works.com**.  
   
-`[ @description = ] 'description'`Описание учетной записи. *Description* имеет тип **nvarchar (256)** и значение по умолчанию NULL.  
+`[ @description = ] 'description'` Описание учетной записи. *Description* имеет тип **nvarchar (256)** и значение по умолчанию NULL.  
   
-`[ @mailserver_name = ] 'server_name'`Имя или IP-адрес почтового SMTP-сервера, который будет использоваться для этой учетной записи. Компьютер, на котором выполняется, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен иметь возможность разрешить *server_name* IP-адресу. Аргумент *server_name* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @mailserver_name = ] 'server_name'` Имя или IP-адрес почтового SMTP-сервера, который будет использоваться для этой учетной записи. Компьютер, на котором выполняется, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен иметь возможность разрешить *server_name* IP-адресу. Аргумент *server_name* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @mailserver_type = ] 'server_type'`Тип почтового сервера. Аргумент *server_type* имеет тип **sysname**и значение по умолчанию **"SMTP"**.  
+`[ @mailserver_type = ] 'server_type'` Тип почтового сервера. Аргумент *server_type* имеет тип **sysname**и значение по умолчанию **"SMTP"**.  
   
-`[ @port = ] port_number`Номер порта для почтового сервера. *port_number* имеет **тип int**и значение по умолчанию 25.  
+`[ @port = ] port_number` Номер порта для почтового сервера. *port_number* имеет **тип int**и значение по умолчанию 25.  
   
-`[ @username = ] 'username'`Имя пользователя, используемое для входа на сервер электронной почты. *username* имеет тип **nvarchar (128)** и значение по умолчанию NULL. Если этот параметр установлен в NULL, компонент Database Mail не использует проверку подлинности для этой учетной записи. Если почтовый сервер не требует проверки подлинности, используйте NULL в качестве имени пользователя.  
+`[ @username = ] 'username'` Имя пользователя, используемое для входа на сервер электронной почты. *username* имеет тип **nvarchar (128)** и значение по умолчанию NULL. Если этот параметр установлен в NULL, компонент Database Mail не использует проверку подлинности для этой учетной записи. Если почтовый сервер не требует проверки подлинности, используйте NULL в качестве имени пользователя.  
   
-`[ @password = ] 'password'`Пароль, используемый для входа на сервер электронной почты. *Password* имеет тип **nvarchar (128)** и значение по умолчанию NULL. Нет необходимости указывать пароль, если не указано имя пользователя.  
+`[ @password = ] 'password'` Пароль, используемый для входа на сервер электронной почты. *Password* имеет тип **nvarchar (128)** и значение по умолчанию NULL. Нет необходимости указывать пароль, если не указано имя пользователя.  
   
-`[ @use_default_credentials = ] use_default_credentials`Указывает, следует ли отправлять почту на SMTP-сервер, используя учетные данные [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . **use_default_credentials** имеет бит и значение по умолчанию 0. Если этот аргумент равен 1, компонент Database Mail использует учетные данные компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Если этот параметр равен 0, Database Mail отправляет параметры ** \@ имени пользователя** и ** \@ пароля** , если они есть, в противном случае отправляет почту без параметров ** \@ имени пользователя** и ** \@ пароля** .  
+`[ @use_default_credentials = ] use_default_credentials` Указывает, следует ли отправлять почту на SMTP-сервер, используя учетные данные [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . **use_default_credentials** имеет бит и значение по умолчанию 0. Если этот аргумент равен 1, компонент Database Mail использует учетные данные компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Если этот параметр равен 0, Database Mail отправляет параметры ** \@ имени пользователя** и ** \@ пароля** , если они есть, в противном случае отправляет почту без параметров ** \@ имени пользователя** и ** \@ пароля** .  
   
-`[ @enable_ssl = ] enable_ssl`Указывает, шифрует ли Database Mail связь с помощью SSL. **Enable_ssl** имеет бит и значение по умолчанию 0.  
+`[ @enable_ssl = ] enable_ssl` Указывает, шифрует ли Database Mail связь с помощью SSL. **Enable_ssl** имеет бит и значение по умолчанию 0.  
   
-`[ @account_id = ] account_id OUTPUT`Возвращает идентификатор учетной записи для новой учетной записи. *account_id* имеет **тип int**и значение по умолчанию NULL.  
+`[ @account_id = ] account_id OUTPUT` Возвращает идентификатор учетной записи для новой учетной записи. *account_id* имеет **тип int**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  

@@ -1,4 +1,5 @@
 ---
+description: STIsSimple (тип данных geometry)
 title: STIsSimple (тип данных geometry) | Документы Майкрософт
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: da8f45d4-4f9c-405d-b883-760eb5344a71
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 24f50da4302c152588ddf573368054cc58b995c9
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 51e9f38a40b26ab4ff50c371519ed50e85ae984d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555570"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472468"
 ---
 # <a name="stissimple-geometry-data-type"></a>STIsSimple (тип данных geometry)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "86555570"
   
  Тип возвращаемых данных CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Чтобы быть простым, экземпляр **geometry** должен отвечать следующим требованиям:  
   
 -   Каждая фигура экземпляра не должна пересекать саму себя, за исключением конечных точек.  

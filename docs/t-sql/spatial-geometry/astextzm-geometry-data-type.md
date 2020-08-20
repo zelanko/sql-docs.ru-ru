@@ -1,4 +1,5 @@
 ---
+description: AsTextZM (тип данных geometry)
 title: AsTextZM (тип данных geometry) | Документы Майкрософт
 ms.custom: ''
 ms.date: 08/03/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 08ac8aa0-aff7-4b22-87e0-1a1d55dcbc04
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: d3a321893f6764eb2d6d8de97cf2d3d1dc5fbc65
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 46f2f296289263a5ad8e4d315f5aa778792b1639
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555709"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472626"
 ---
 # <a name="astextzm-geometry-data-type"></a>AsTextZM (тип данных geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +58,7 @@ SELECT @g.STAsText();
 SELECT @g.AsTextZM();  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширенные методы экземпляров Geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
  [M (тип данных geometry)](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
  [Z (тип данных geometry)](../../t-sql/spatial-geometry/z-geometry-data-type.md)  

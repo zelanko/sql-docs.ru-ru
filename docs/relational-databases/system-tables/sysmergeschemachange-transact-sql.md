@@ -1,4 +1,5 @@
 ---
+description: sysmergeschemachange (Transact-SQL)
 title: sysmergeschemachange (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ae9ce16e-6ee9-4c7c-8210-a9bf2c7efdf0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7740982430f03aed138a578dc12113eb7caf1764
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d5453a7b8802177e338a008af6df1a7ce2779374
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881352"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473135"
 ---
 # <a name="sysmergeschemachange-transact-sql"></a>sysmergeschemachange (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85881352"
 |**schemasubtype**|**int**|Подтип изменения схемы:<br /><br /> **1** = ADDCOLUMN<br /><br /> **2** = DROPCOLUMN<br /><br /> **3** = алтерколумн<br /><br /> **4** = аддпримарикэй<br /><br /> **5** = аддуникуе<br /><br /> **6** = ADDREFERENCE<br /><br /> **7** = дропконстраинт<br /><br /> **8** = адддефаулт<br /><br /> **9** = аддчекк<br /><br /> **10** = дисаблетригжер<br /><br /> **11** = енаблетригжер<br /><br /> **12** = дисаблетригжер<br /><br /> **13** = енаблетригжер<br /><br /> **14** = енаблеконстраинт<br /><br /> **15** = дисаблеконстраинт<br /><br /> **16** = енаблеконстраинт<br /><br /> **17** = дисаблеконстраинт|  
   
 ## <a name="see-also"></a>См. также  
- [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

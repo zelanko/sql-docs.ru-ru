@@ -1,4 +1,5 @@
 ---
+description: Хранимая процедура sp_setreplfailovermode (Transact-SQL)
 title: sp_setreplfailovermode (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ca98a4c3-bea4-4130-88d7-79e0fd1e85f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cf4ad48531567972d8fc9b1916d6c5f56bb28f68
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1b5f75b17d54b5e119970af1bad9e12eaecf067d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881515"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473854"
 ---
 # <a name="sp_setreplfailovermode-transact-sql"></a>Хранимая процедура sp_setreplfailovermode (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,13 +42,13 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'`Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию. Публикация уже должна существовать.  
+`[ @publisher = ] 'publisher'` Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию. Публикация уже должна существовать.  
   
-`[ @publisher_db = ] 'publisher_db'`Имя базы данных публикации. Аргумент *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher_db = ] 'publisher_db'` Имя базы данных публикации. Аргумент *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @failover_mode = ] 'failover_mode'`Режим отработки отказа для подписки. *FAILOVER_MODE* имеет тип **nvarchar (10)** и может принимать одно из следующих значений.  
+`[ @failover_mode = ] 'failover_mode'` Режим отработки отказа для подписки. *FAILOVER_MODE* имеет тип **nvarchar (10)** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -55,9 +56,9 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 |**в очереди**|Изменения данных хранятся в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] очереди.|  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)]Очередь сообщений устарела и больше не поддерживается.  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Очередь сообщений устарела и больше не поддерживается.  
   
-`[ @override = ] override`Только для внутреннего использования.  
+`[ @override = ] override` Только для внутреннего использования.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  

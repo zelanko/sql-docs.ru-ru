@@ -1,4 +1,5 @@
 ---
+description: Загрузка преобразованных объектов базы данных в SQL Server (Акцесстоскл)
 title: Загрузка преобразованных объектов базы данных в SQL Server (Акцесстоскл) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -29,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 4e854eee-b10c-4f0b-9d9e-d92416e6f2ba
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 0f4517c58cf748cb3832b0718ac7891c2a309df0
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 41a1613a879579e809c8fd6a85d5c9b58c7b2b9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938526"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472581"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-accesstosql"></a>Загрузка преобразованных объектов базы данных в SQL Server (Акцесстоскл)
 После преобразования объектов базы данных Access в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure можно загрузить результирующие объекты базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure. Можно либо создать объекты SSMA, либо создавать сценарии для объектов и выполнять сценарии самостоятельно. Кроме того, SSMA позволяет обновлять целевые метаданные фактическим содержимым [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базой данных SQL Azure.  
@@ -139,6 +140,6 @@ ms.locfileid: "87938526"
 ## <a name="next-step"></a>Следующий шаг  
 Следующий шаг процесса миграции — [Перенос данных в SQL Server](migrating-access-data-into-sql-server-azure-sql-db-accesstosql.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Миграция баз данных Access в SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

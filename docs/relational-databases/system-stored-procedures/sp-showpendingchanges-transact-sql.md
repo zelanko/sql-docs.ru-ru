@@ -1,4 +1,5 @@
 ---
+description: sp_showpendingchanges (Transact-SQL)
 title: sp_showpendingchanges (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2f6d22fb18989022676eb06751d583383a14d783
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 324f3d5b8b1e70d41e276fd0b0f909b27a937e81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881502"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473775"
 ---
 # <a name="sp_showpendingchanges-transact-sql"></a>sp_showpendingchanges (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,13 +44,13 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @destination_server = ] 'destination_server'`Имя сервера, на котором применяются реплицированные изменения. Аргумент *destination_server* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @destination_server = ] 'destination_server'` Имя сервера, на котором применяются реплицированные изменения. Аргумент *destination_server* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию NULL. Если указан параметр *publication* , результаты ограничиваются только указанной публикацией.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию NULL. Если указан параметр *publication* , результаты ограничиваются только указанной публикацией.  
   
-`[ @article = ] 'article'`Имя статьи. Аргумент *article* имеет тип **sysname**и значение по умолчанию NULL. Если указана *статья* , результаты ограничиваются только указанной статьей.  
+`[ @article = ] 'article'` Имя статьи. Аргумент *article* имеет тип **sysname**и значение по умолчанию NULL. Если указана *статья* , результаты ограничиваются только указанной статьей.  
   
-`[ @show_rows = ] 'show_rows'`Указывает, содержит ли результирующий набор более конкретные сведения о ожидающих изменениях, со значением по умолчанию **0**. Если указано значение **1** , то результирующий набор содержит столбцы is_delete и ROWGUID.  
+`[ @show_rows = ] 'show_rows'` Указывает, содержит ли результирующий набор более конкретные сведения о ожидающих изменениях, со значением по умолчанию **0**. Если указано значение **1** , то результирующий набор содержит столбцы is_delete и ROWGUID.  
   
 ## <a name="result-set"></a>Результирующий набор  
   

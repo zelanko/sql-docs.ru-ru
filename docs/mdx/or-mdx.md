@@ -1,4 +1,5 @@
 ---
+description: OR (многомерные выражения)
 title: OR (МНОГОМЕРНЫЕ ВЫРАЖЕНИЯ) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 45063e9f2aca6a924289d4d52434535d16c9a08e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d5ea3e65dd9bad768ef829858d42d6e4adea7a72
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055708"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471756"
 ---
 # <a name="or-mdx"></a>OR (многомерные выражения)
 
@@ -37,10 +38,10 @@ Expression1 OR Expression2
 ## <a name="return-value"></a>Возвращаемое значение  
  Логическое значение, которое возвращает **true** , если один или оба аргумента имеют **значение true**; в противном случае — **значение false**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Оператор **или** обрабатывает оба аргумента как логические значения (ноль, 0, как **false**; в противном случае — **значение true**), прежде чем оператор выполняет логическое сложение. В следующей таблице показано, как оператор **or** выполняет логическое сложение.  
   
-|*Выражения*|*Expression2*|Возвращаемое значение|  
+|*Expression1*|*Expression2*|Возвращаемое значение|  
 |-------------------|-------------------|------------------|  
 |**true**|**true**|**true**|  
 |**true**|**false**|**true**|  
@@ -65,7 +66,7 @@ FROM [Adventure Works]
 WHERE(MEASURES.ORDEMO)  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Справочник по операторам многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Справочник по операторам многомерных выражений &#40;&#41;многомерных выражений ](../mdx/mdx-operator-reference-mdx.md)  
   
   

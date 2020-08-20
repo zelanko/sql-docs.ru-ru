@@ -1,4 +1,5 @@
 ---
+description: GRANT, предоставление разрешения на компонент Service Broker (Transact-SQL)
 title: GRANT, предоставление разрешений для компонента Service Broker (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 72cc7e6fa6d87afe2fcce8ea6c695117d140af79
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 350787ea11245db4bbd720c9bbbcc97403c90231
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484355"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472214"
 ---
 # <a name="grant-service-broker-permissions-transact-sql"></a>GRANT, предоставление разрешения на компонент Service Broker (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,19 +58,19 @@ GRANT permission  [ ,...n ] ON
  *permission*  
  Указывает разрешение, которое может быть предоставлено на защищаемый объект компонента Service Broker.  Перечислены ниже.  
   
- CONTRACT **::** _contract_name_  
+ CONTRACT **::**_contract_name_  
  Указывает контракт, на который предоставляется разрешение. Квалификатор области "::" является обязательным.  
   
- MESSAGE TYPE **::** _message_type_name_  
+ MESSAGE TYPE **::**_message_type_name_  
  Указывает тип сообщений, на которые предоставляется разрешение. Квалификатор области "::" является обязательным.  
   
- REMOTE SERVICE BINDING **::** _remote_binding_name_  
+ REMOTE SERVICE BINDING **::**_remote_binding_name_  
  Указывает привязку удаленной службы, на которую предоставляется разрешение. Квалификатор области "::" является обязательным.  
   
- ROUTE **::** _route_name_  
+ ROUTE **::**_route_name_  
  Указывает маршрут, на который предоставляется разрешение. Квалификатор области "::" является обязательным.  
   
- SERVICE **::** _имя_службы_  
+ SERVICE **::**_имя_службы_  
  Указывает службу, на которую предоставляется разрешение. Квалификатор области "::" является обязательным.  
   
  *database_principal*  

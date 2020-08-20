@@ -1,4 +1,5 @@
 ---
+description: sp_startpublication_snapshot (Transact-SQL)
 title: sp_startpublication_snapshot (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2cf568ee-0679-4d19-a394-27210bff61e5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4138757f6be1d20c11e9b65111ef28b1b1d93119
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c41f52def223dbaf8d1a580e310022cdcd92af81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892998"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473710"
 ---
 # <a name="sp_startpublication_snapshot-transact-sql"></a>sp_startpublication_snapshot (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,14 +39,14 @@ sp_startpublication_snapshot [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publisher = ] 'publisher'`Имя издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . параметр *Publisher* имеет тип **sysname**и значение по умолчанию NULL. Для издателя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот аргумент указывать не следует.  
+`[ @publisher = ] 'publisher'` Имя издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . параметр *Publisher* имеет тип **sysname**и значение по умолчанию NULL. Для издателя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот аргумент указывать не следует.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  **sp_startpublication_snapshot** используется со всеми типами репликации.  
   
  Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя, не являющегося издателем, эта хранимая процедура выполняется на распространителе в базе данных распространителя.  
@@ -53,7 +54,7 @@ sp_startpublication_snapshot [ @publication = ] 'publication'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_startpublication_snapshot**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание и применение исходного моментального снимка](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
  [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
  [sp_changepublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)  

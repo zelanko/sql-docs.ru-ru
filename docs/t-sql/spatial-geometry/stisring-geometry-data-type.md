@@ -1,4 +1,5 @@
 ---
+description: STIsRing (тип данных geometry)
 title: STIsRing (тип данных geometry) | Документы Майкрософт
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ea0063be-1c74-4cc4-ac6f-b65321ddfa54
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ad91e97b30f5cc0e232437dcc8ae775253801abc
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 06702731a47683c44d6096b354c3ec2f773aefaf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555981"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472500"
 ---
 # <a name="stisring-geometry-data-type"></a>STIsRing (тип данных geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "86555981"
   
  Тип возвращаемых данных CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Этот метод возвращает значение NULL, если экземпляр не является **LineString**.  
   
 ## <a name="examples"></a>Примеры  
@@ -61,7 +62,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0, 0 0)', 0);
 SELECT @g.STIsRing();  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [STIsClosed (тип данных geometry)](../../t-sql/spatial-geometry/stisclosed-geometry-data-type.md)   
  [STGeometryType (тип данных geometry)](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md)   
  [STIsSimple (тип данных geometry)](../../t-sql/spatial-geometry/stissimple-geometry-data-type.md)   

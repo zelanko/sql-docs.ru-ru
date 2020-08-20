@@ -1,4 +1,5 @@
 ---
+description: SET STATISTICS IO (Transact-SQL)
 title: SET STATISTICS IO (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 11/10/2016
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 84d113230152bdade11192db086f44911028a474
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 25b6b222e68325e75d4be8ae10cae6e95ff408e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765695"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472218"
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +47,9 @@ ms.locfileid: "85765695"
 SET STATISTICS IO { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>Remarks
  Если параметру STATISTICS IO задано значение ON, отображаются статистические сведения, а если OFF, то они не отображаются.   
   
  Если этот параметр имеет значение ON, будут возвращаться статистические сведения обо всех инструкциях языка [!INCLUDE[tsql](../../includes/tsql-md.md)], пока параметру не будет задано значение OFF.  
@@ -60,9 +63,9 @@ SET STATISTICS IO { ON | OFF }
 |**логические операции чтения**|Число страниц, считанных из кэша данных.|  
 |**физические операции чтения**|Число страниц, считанных с диска.|  
 |**операции упреждающего чтения**|Число страниц, помещенных в кэш для запроса.|  
-|**lob логических чтений**|Число страниц, считанных из кэша данных. Включает **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** или страницы индекса columnstore.|  
-|**физические операции чтения lob**|Число страниц, считанных с диска. Включает **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** или страницы индекса columnstore.|  
-|**lob упреждающих чтений**|Число страниц, помещенных в кэш для запроса. Включает **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** или страницы индекса columnstore.|
+|**lob логических чтений**|Число страниц, считанных из кэша данных. Включает **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** или страницы индекса columnstore.|  
+|**физические операции чтения lob**|Число страниц, считанных с диска. Включает **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** или страницы индекса columnstore.|  
+|**lob упреждающих чтений**|Число страниц, помещенных в кэш для запроса. Включает **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** или страницы индекса columnstore.|
 
  Параметр настройки SET STATISTICS IO устанавливается во время запуска или выполнения, но не во время синтаксического анализа.
 

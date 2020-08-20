@@ -1,4 +1,5 @@
 ---
+description: sysmail_delete_log_sp (Transact-SQL)
 title: sysmail_delete_log_sp (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: db6f15fe8ce2f515bf79211e6db49a135eb6fb3f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ae70fc03530ac80596ead5fe6e2e1927e323c5c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890972"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473382"
 ---
 # <a name="sysmail_delete_log_sp-transact-sql"></a>sysmail_delete_log_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +42,9 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @logged_before = ] 'logged_before'`Удаляет записи вплоть до даты и времени, указанных аргументом *logged_before* . *logged_before* имеет тип **DateTime** со значением NULL по умолчанию. Значение NULL соответствует всем датам.  
+`[ @logged_before = ] 'logged_before'` Удаляет записи вплоть до даты и времени, указанных аргументом *logged_before* . *logged_before* имеет тип **DateTime** со значением NULL по умолчанию. Значение NULL соответствует всем датам.  
   
-`[ @event_type = ] 'event_type'`Удаляет записи журнала типа, указанного в качестве *event_type*. *event_type* имеет тип **varchar (15)** и не имеет значения по умолчанию. Допустимые записи: **Success**, **warning**, **Error**и **информационный**. NULL соответствует всем типам событий.  
+`[ @event_type = ] 'event_type'` Удаляет записи журнала типа, указанного в качестве *event_type*. *event_type* имеет тип **varchar (15)** и не имеет значения по умолчанию. Допустимые записи: **Success**, **warning**, **Error**и **информационный**. NULL соответствует всем типам событий.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -87,6 +88,6 @@ GO
 ## <a name="see-also"></a>См. также  
  [sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
  [sysmail_delete_mailitems_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)   
- [Создание задания агента SQL Server по архивации сообщений компонента Database Mail и журналов событий базы данных](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
+ [Создание задания агента SQL Server по архивации сообщений и журналов событий компонента Database Mail](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
   
   

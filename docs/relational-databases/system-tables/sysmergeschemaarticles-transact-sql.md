@@ -45,7 +45,7 @@ ms.locfileid: "88473140"
 |**destination_object**|**sysname**|Имя целевого объекта в базе данных подписки. Это значение применяется только к статьям со схемой, таким как хранимые процедуры, представления и пользовательские функции.|  
 |**destination_owner**|**sysname**|Владелец объекта в базе данных подписки, если он не является **dbo**.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

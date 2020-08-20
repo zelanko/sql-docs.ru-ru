@@ -1,4 +1,5 @@
 ---
+description: Занятие 3–3. Тестирование развернутых пакетов
 title: Шаг 3. Тестирование развернутых пакетов | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6fb3889d57052bcd305056a6468a2fa42d79d5c4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f6c7fed5c20d9025be9ad9bce060d6fa83de378a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922212"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472043"
 ---
 # <a name="lesson-3-3---testing-the-deployed-packages"></a>Занятие 3–3. Тестирование развернутых пакетов
 
@@ -107,7 +108,7 @@ ms.locfileid: "86922212"
   
     Запрос возвращает 21 строку. Возвращаемый результат состоит из строк XML-файла данных, "orders.xml". Каждая строка является сводкой по стране или региону; в строке присутствуют данные про название страны или региона, про число заказов для каждой страны или региона и даты последнего и первого заказов.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Программа dtexec](../integration-services/packages/dtexec-utility.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_configure (Transact-SQL)
 title: sp_syspolicy_configure (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 70c10922-9345-4190-ba69-808a43f760da
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bd11fa935dadc2ed7332275f3f6c66613cc831af
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 820952e0829014efc3669759dabf5d1dfc208d91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892757"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473597"
 ---
 # <a name="sp_syspolicy_configure-transact-sql"></a>sp_syspolicy_configure (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ sp_syspolicy_configure [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @name = ] 'name'`— Это имя параметра, который необходимо настроить. Аргумент *Name* имеет тип **sysname**, является обязательным и не может быть пустой СТРОКОЙ или иметь значение null.  
+`[ @name = ] 'name'` — Это имя параметра, который необходимо настроить. Аргумент *Name* имеет тип **sysname**, является обязательным и не может быть пустой СТРОКОЙ или иметь значение null.  
   
  *имя* может иметь любое из следующих значений:  
   
@@ -50,7 +51,7 @@ sp_syspolicy_configure [ @name = ] 'name'
   
 -   LogOnSuccess — указывает, заносится ли успешное выполнение политик в журнал управления на основе политик.  
   
-`[ @value = ] value`Значение, связанное с указанным значением для *Name*. *значение* равно **sql_variant**и является обязательным.  
+`[ @value = ] value` Значение, связанное с указанным значением для *Name*. *значение* равно **sql_variant**и является обязательным.  
   
 -   Если для параметра *имя*указано значение Enabled, можно использовать любое из следующих значений.  
   
@@ -109,7 +110,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Хранимые процедуры управления на основе политик &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [Хранимые процедуры управления на основе политик &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [sp_syspolicy_set_config_enabled &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-enabled-transact-sql.md)   
  [sp_syspolicy_set_config_history_retention &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
  [sp_syspolicy_set_log_on_success &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-log-on-success-transact-sql.md)  

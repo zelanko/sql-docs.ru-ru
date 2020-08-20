@@ -1,4 +1,5 @@
 ---
+description: CurrentMember (многомерные выражения)
 title: CurrentMember (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 374a38d07c3174e799d01199e20e822f85deed13
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e04dd1146bc55d8d68475770a9077fc8d962b56d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892921"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471876"
 ---
 # <a name="currentmember-mdx"></a>CurrentMember (многомерные выражения)
 

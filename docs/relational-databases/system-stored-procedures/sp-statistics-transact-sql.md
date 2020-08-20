@@ -1,4 +1,5 @@
 ---
+description: sp_statistics (Transact-SQL)
 title: sp_statistics (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 34d4b7763fd35b2012a90240a4d27fa27018f828
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: bd5a7fa747241cfbfa767219894ba937a63ce7c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173110"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473731"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,19 +47,19 @@ sp_statistics [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @table_name = ] 'table_name'`Указывает таблицу, используемую для возврата сведений о каталоге. Аргумент *table_name* имеет тип **sysname**и не имеет значения по умолчанию. Сопоставление по шаблону не поддерживается.  
+`[ @table_name = ] 'table_name'` Указывает таблицу, используемую для возврата сведений о каталоге. Аргумент *table_name* имеет тип **sysname**и не имеет значения по умолчанию. Сопоставление по шаблону не поддерживается.  
   
-`[ @table_owner = ] 'owner'`Имя владельца таблицы, используемой для возврата сведений о каталоге. Аргумент *table_owner* имеет тип **sysname**и значение по умолчанию NULL. Сопоставление по шаблону не поддерживается. Если параметр *owner* не указан, применяются правила видимости таблиц по умолчанию базовой СУБД.  
+`[ @table_owner = ] 'owner'` Имя владельца таблицы, используемой для возврата сведений о каталоге. Аргумент *table_owner* имеет тип **sysname**и значение по умолчанию NULL. Сопоставление по шаблону не поддерживается. Если параметр *owner* не указан, применяются правила видимости таблиц по умолчанию базовой СУБД.  
   
  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если текущий пользователь является владельцем таблицы с указанным именем, возвращаются индексы таблицы. Если *владелец* не указан и текущий пользователь не владеет таблицей с указанным *именем*, эта процедура ищет таблицу с указанным *именем* , принадлежащую владельцу базы данных. Если владелец существует, возвращаются индексы этой таблицы.  
   
-`[ @table_qualifier = ] 'qualifier'`Имя квалификатора таблицы. *квалификатор* имеет тип **sysname**и значение по умолчанию NULL. Различные продукты СУБД поддерживают имена таблиц (_Квалификаторы_**,** состоящие из трех частей). _владелец_**.** _имя_). В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот аргумент представляет имя базы данных. В некоторых СУБД он представляет имя сервера в среде базы данных, где находится таблица.  
+`[ @table_qualifier = ] 'qualifier'` Имя квалификатора таблицы. *квалификатор* имеет тип **sysname**и значение по умолчанию NULL. Различные продукты СУБД поддерживают имена таблиц (_Квалификаторы_**,** состоящие из трех частей). _владелец_**.** _имя_). В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот аргумент представляет имя базы данных. В некоторых СУБД он представляет имя сервера в среде базы данных, где находится таблица.  
   
-`[ @index_name = ] 'index_name'`Имя индекса. Аргумент *index_name* имеет тип **sysname**и значение по умолчанию%. Поиск совпадений по шаблону поддерживается.  
+`[ @index_name = ] 'index_name'` Имя индекса. Аргумент *index_name* имеет тип **sysname**и значение по умолчанию%. Поиск совпадений по шаблону поддерживается.  
   
-`[ @is_unique = ] 'is_unique'`Указывает, должны ли возвращаться только уникальные индексы (если **Y**). *is_unique* имеет **тип char (1)** и значение по умолчанию **N**.  
+`[ @is_unique = ] 'is_unique'` Указывает, должны ли возвращаться только уникальные индексы (если **Y**). *is_unique* имеет **тип char (1)** и значение по умолчанию **N**.  
   
-`[ @accuracy = ] 'accuracy'`Уровень количества элементов и точность страниц для статистики. *точность* имеет **тип char (1)** и значение по умолчанию **Q**. Укажите значение **E** , чтобы обеспечить обновление статистики таким образом, чтобы количество элементов и страниц было точным.  
+`[ @accuracy = ] 'accuracy'` Уровень количества элементов и точность страниц для статистики. *точность* имеет **тип char (1)** и значение по умолчанию **Q**. Укажите значение **E** , чтобы обеспечить обновление статистики таким образом, чтобы количество элементов и страниц было точным.  
   
  Значение **E** (SQL_ENSURE) запрашивает драйвер для безусловного получения статистики.  
   
@@ -97,7 +98,7 @@ sp_statistics [ @table_name = ] 'table_name'
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение SELECT для схемы.  
   
-## <a name="example-sssdwfull-and-sspdw"></a>Пример: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="example-sssdwfull-and-sspdw"></a>Пример: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  В следующем примере возвращаются сведения о `DimEmployee` таблице.  
   
 ```sql  
@@ -106,7 +107,7 @@ sp_statistics [ @table_name = ] 'table_name'
 EXEC sp_statistics DimEmployee;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры каталога &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

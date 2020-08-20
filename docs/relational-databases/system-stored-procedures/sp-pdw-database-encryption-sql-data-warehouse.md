@@ -1,4 +1,5 @@
 ---
+description: sp_pdw_database_encryption (хранилище данных SQL)
 title: sp_pdw_database_encryption (хранилище данных SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
@@ -11,12 +12,12 @@ ms.assetid: f5ccb424-7a95-4557-b774-c69de33c1545
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7bb76c27edcd7ae81423857db8effb7232e46895
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 930cc3f0c9f50637ea1937f2d4d8dde563413471
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173191"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473897"
 ---
 # <a name="sp_pdw_database_encryption-sql-data-warehouse"></a>sp_pdw_database_encryption (хранилище данных SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -32,7 +33,7 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
 ```  
   
 #### <a name="parameters"></a>Параметры  
-`[ @enabled = ] enabled`Определяет, включено ли прозрачное шифрование данных. *Enabled* имеет **тип int**и может принимать одно из следующих значений:  
+`[ @enabled = ] enabled` Определяет, включено ли прозрачное шифрование данных. *Enabled* имеет **тип int**и может принимать одно из следующих значений:  
   
 -   0 = отключено  
   
@@ -43,7 +44,7 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Если TDE включен с помощью **sp_pdw_database_encryption**, база данных tempdb удаляется, создается повторно и шифруется. По этой причине TDE нельзя включить на устройстве, пока имеются другие активные сеансы, использующие базу данных tempdb. Включение или отключение TDE на устройстве — это действие, которое изменяет состояние устройства. в большинстве случаев ожидается, что оно будет выполняться один раз в течение времени существования устройства и должно выполняться при отсутствии трафика на устройстве.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -56,7 +57,7 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
 EXEC sys.sp_pdw_database_encryption 1;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_pdw_database_encryption_regenerate_system_keys хранилища данных SQL &#40;&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)   
  [sp_pdw_log_user_data_masking хранилища данных SQL &#40;&#41;](../../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
   

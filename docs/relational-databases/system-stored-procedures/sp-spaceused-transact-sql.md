@@ -1,4 +1,5 @@
 ---
+description: sp_spaceused (Transact-SQL)
 title: sp_spaceused (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/14/2017
@@ -18,12 +19,12 @@ ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91b38115cfcd9f688187fc7663e3da8c90d3d457
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 4b07a4f8ece975662127797f6f25ecd19ecc759c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173095"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473816"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,11 +53,11 @@ sp_spaceused [[ @objname = ] 'objname' ]
 Если значение *objname* не задано, возвращаются результаты для всей базы данных.  
 *objname* имеет тип **nvarchar (776)** и значение по умолчанию NULL.  
 > [!NOTE]  
-> [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)]и [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] поддерживают только объекты базы данных и таблицы.
+> [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] и [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] поддерживают только объекты базы данных и таблицы.
   
-`[ @updateusage = ] 'updateusage'`Указывает, что для обновления сведений об использовании пространства следует запустить DBCC UPDATEUSAGE. Если параметр *objname* не указан, инструкция выполняется для всей базы данных. в противном случае инструкция выполняется в *objname*. Могут принимать значения **true** или **false**. параметр *updateusage* имеет тип **varchar (5)** и значение по умолчанию **false**.  
+`[ @updateusage = ] 'updateusage'` Указывает, что для обновления сведений об использовании пространства следует запустить DBCC UPDATEUSAGE. Если параметр *objname* не указан, инструкция выполняется для всей базы данных. в противном случае инструкция выполняется в *objname*. Могут принимать значения **true** или **false**. параметр *updateusage* имеет тип **varchar (5)** и значение по умолчанию **false**.  
   
-`[ @mode = ] 'mode'`Указывает область результатов. Для растянутой таблицы или базы данных параметр *mode* позволяет включить или исключить удаленную часть объекта. Дополнительные сведения см. в разделе [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
+`[ @mode = ] 'mode'` Указывает область результатов. Для растянутой таблицы или базы данных параметр *mode* позволяет включить или исключить удаленную часть объекта. Дополнительные сведения см. в разделе [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
   
  Аргумент *mode* может иметь следующие значения:  
   
@@ -68,7 +69,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
  *mode* имеет тип **varchar (11)** и значение по умолчанию **N'ALL**.  
   
-`[ @oneresultset = ] oneresultset`Указывает, следует ли возвращать один результирующий набор. Аргумент *онересултсет* может иметь следующие значения:  
+`[ @oneresultset = ] oneresultset` Указывает, следует ли возвращать один результирующий набор. Аргумент *онересултсет* может иметь следующие значения:  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -164,7 +165,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**xtp_used**|**varchar (18)**|Общий размер файлов контрольных точек с состояниями в разделе Создание, активный и целевой объект слияния, в КБ. Это место на диске, активно используемое для данных в оптимизированных для памяти таблицах. Возвращает значение NULL, если база данных не имеет memory_optimized_data файловой группы, имеющей по крайней мере один контейнер. *Этот столбец включается, только если @include_total_xtp_storage = 1*.| 
 |**xtp_pending_truncation**|**varchar (18)**|Общий размер файлов контрольных точек с WAITING_FOR_LOG_TRUNCATION состояния, в КБ. Это место на диске, используемое для файлов контрольных точек, ожидающих очистки, после усечения журнала. Возвращает значение NULL, если база данных не имеет memory_optimized_data файловой группы, имеющей по крайней мере один контейнер. Этот столбец включается только в том случае `@include_total_xtp_storage=1` , если.|
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  **database_size** обычно превышает сумму **зарезервированного**  +  **нераспределенного пространства** , так как она включает размер файлов журнала, но **зарезервированные** и **unallocated_space** рассматривайте только страницы данных. В некоторых случаях с помощью Azure синапсе Analytics эта инструкция может оказаться недействительной. 
   
  Страницы, используемые XML-индексами и полнотекстовыми индексами, включаются в **index_size** обоих результирующих наборов. Если задано значение *objname* , страницы для XML-индексов и полнотекстовых индексов для объекта также учитываются в общем количестве **зарезервированных** и **index_sizeных** результатов.  
@@ -244,7 +245,7 @@ EXEC sp_spaceused
 GO
 ```  
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [DBCC UPDATEUSAGE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   
@@ -252,8 +253,8 @@ GO
  [sys.allocation_units (Transact-SQL)](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
- [sys. Objects &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys. partitions &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+ [sys. Objects &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys. partitions &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_resetsnapshotdeliveryprogress (Transact-SQL)
 title: sp_resetsnapshotdeliveryprogress (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5df7d86b-d343-4d9b-88b1-74429ed092e6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 918bd98410de1c82de9098dab5f6e74c32ebf7f1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8a6a4c0114077910f34f548db1f2b0b26d652f4a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901392"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473849"
 ---
 # <a name="sp_resetsnapshotdeliveryprogress-transact-sql"></a>sp_resetsnapshotdeliveryprogress (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,9 +39,9 @@ sp_resetsnapshotdeliveryprogress [ [ @verbose_level = ] verbose_level ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @verbose_level = ] verbose_level`Указывает объем возвращаемых сведений. *verbose_level*имеет **тип int**и значение по умолчанию **1**. Значение **1** означает, что если необходимые блокировки не удается получить в таблице **MSsnapshotdeliveryprogress** , то возвращается ошибка, а **0** означает, что ошибка не возвращается.  
+`[ @verbose_level = ] verbose_level` Указывает объем возвращаемых сведений. *verbose_level*имеет **тип int**и значение по умолчанию **1**. Значение **1** означает, что если необходимые блокировки не удается получить в таблице **MSsnapshotdeliveryprogress** , то возвращается ошибка, а **0** означает, что ошибка не возвращается.  
   
-`[ @drop_table = ] 'drop_table'`Указывает, следует ли удалить или усечь таблицу, содержащую сведения о ходе выполнения моментального снимка. *DROP_TABLE* имеет тип **nvarchar (5)** и значение по умолчанию **false**. FALSE означает, что таблица усекается, а TRUE означает, что таблица удаляется.  
+`[ @drop_table = ] 'drop_table'` Указывает, следует ли удалить или усечь таблицу, содержащую сведения о ходе выполнения моментального снимка. *DROP_TABLE* имеет тип **nvarchar (5)** и значение по умолчанию **false**. FALSE означает, что таблица усекается, а TRUE означает, что таблица удаляется.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  

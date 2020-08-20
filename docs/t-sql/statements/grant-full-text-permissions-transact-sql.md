@@ -1,4 +1,5 @@
 ---
+description: GRANT, предоставление разрешений на полнотекстовые объекты (Transact-SQL)
 title: GRANT, предоставление разрешений на полнотекстовые объекты (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 06/17/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: fdb64e09-222a-47fe-b08b-999264ca261d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: aa4de06e0e860fd88d682a582110d6b46527414d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: e466840015f0b5d82a8e6430434239db6655ee81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484499"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472242"
 ---
 # <a name="grant-full-text-permissions-transact-sql"></a>GRANT, предоставление разрешений на полнотекстовые объекты (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,10 +56,10 @@ GRANT permission [ ,...n ] ON
  *permission*  
  Имя разрешения. Допустимые сопоставления разрешений на защищаемые объекты описаны далее в подразделе «Примечания».  
   
- ON FULLTEXT CATALOG **::** _full-text_catalog_name_  
+ ON FULLTEXT CATALOG **::**_full-text_catalog_name_  
  Указывает полнотекстовый каталог, на который предоставляется разрешение. Квалификатор области **::** является обязательным.  
   
- ON FULLTEXT STOPLIST **::** _full-text_stoplist_name_  
+ ON FULLTEXT STOPLIST **::**_full-text_stoplist_name_  
  Указывает список полнотекстовых стоп-слов, на который предоставляется разрешение. Квалификатор области **::** является обязательным.  
   
  *database_principal*  
@@ -152,7 +153,7 @@ GRANT VIEW DEFINITION
     TO Mary ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE APPLICATION ROLE (Transact-SQL)](../../t-sql/statements/create-application-role-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)   

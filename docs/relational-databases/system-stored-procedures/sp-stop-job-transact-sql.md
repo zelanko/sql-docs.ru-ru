@@ -1,4 +1,5 @@
 ---
+description: sp_stop_job (Transact-SQL)
 title: sp_stop_job (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/01/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7be2717c1f98291c0ce60b25e4290c20d23a86ae
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2314cec4cbb66893eb77ed6c8b025355c319de71
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892990"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473692"
 ---
 # <a name="sp_stop_job-transact-sql"></a>sp_stop_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,16 +45,16 @@ sp_stop_job
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_name = ] 'job_name'`Имя останавливаемого задания. Аргумент *job_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'` Имя останавливаемого задания. Аргумент *job_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @job_id = ] job_id`Идентификационный номер останавливаемого задания. *job_id* имеет тип **uniqueidentifier**и значение по умолчанию NULL.  
+`[ @job_id = ] job_id` Идентификационный номер останавливаемого задания. *job_id* имеет тип **uniqueidentifier**и значение по умолчанию NULL.  
   
-`[ @originating_server = ] 'master_server'`Имя главного сервера. Если указано, останавливаются все многосерверные задания. *master_server* имеет тип **nvarchar (128)** и значение по умолчанию NULL. Этот параметр следует указывать только при вызове **sp_stop_job** на целевом сервере.  
+`[ @originating_server = ] 'master_server'` Имя главного сервера. Если указано, останавливаются все многосерверные задания. *master_server* имеет тип **nvarchar (128)** и значение по умолчанию NULL. Этот параметр следует указывать только при вызове **sp_stop_job** на целевом сервере.  
   
 > [!NOTE]  
 >  Может быть задан только один из первых трех аргументов.  
   
-`[ @server_name = ] 'target_server'`Имя конкретного целевого сервера, на котором необходимо отключить многосерверное задание. *target_server* имеет тип **nvarchar (128)** и значение по умолчанию NULL. Этот параметр следует указывать только при вызове **sp_stop_job** на главном сервере для многосерверного задания.  
+`[ @server_name = ] 'target_server'` Имя конкретного целевого сервера, на котором необходимо отключить многосерверное задание. *target_server* имеет тип **nvarchar (128)** и значение по умолчанию NULL. Этот параметр следует указывать только при вызове **sp_stop_job** на главном сервере для многосерверного задания.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  

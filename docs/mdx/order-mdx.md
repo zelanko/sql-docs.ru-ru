@@ -1,4 +1,5 @@
 ---
+description: Order (многомерные выражения)
 title: Order (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d540b299fd08aa78576b19040a4cfafb9046ae7c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4db745ea01a56d68fe259ebb2fffb5aae250abd4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055679"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471746"
 ---
 # <a name="order-mdx"></a>Order (многомерные выражения)
 
@@ -44,7 +45,7 @@ Order(Set_Expression, String_Expression
  *String_Expression*  
  Допустимое строковое выражение (обычно многомерное выражение над координатами ячейки), возвращающее число, представленное в виде строки.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Функция **Order** может быть иерархической (как указано с помощью флага **ASC** или **DESC** ) или неиерархического (как указано с помощью флага **Basc** или **BDESC** ; **B** означает «разбить иерархию»). Если указано **ASC** или **DESC** , функция **Order** сначала упорядочивает элементы в соответствии с их позицией в иерархии, а затем упорядочивает каждый уровень. Если указано **Basc** или **BDESC** , функция **Order** упорядочивает элементы в наборе без учета иерархии. Если флаг не указан, по умолчанию используется значение **ASC** .  
   
  Если функция **Order** используется с набором, в котором перекрестно Соединенных две или более иерархии, и используется флаг **DESC** , упорядочиваются только элементы последней иерархии в наборе. В этом заключается отличие от версии служб Analysis Services 2000, где сортировались все иерархии в наборе.  
@@ -210,7 +211,7 @@ ON 1
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

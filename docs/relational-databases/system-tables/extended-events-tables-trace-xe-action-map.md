@@ -1,4 +1,5 @@
 ---
+description: Таблицы расширенных событий — trace_xe_action_map
 title: trace_xe_action_map (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 208a1413-ce7f-4521-b765-d74723627302
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 835ca342cabc37826c4425391e531820c8600b11
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: efc717f2112cf72d4b73648ff66491eae67a9e26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750206"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473286"
 ---
 # <a name="extended-events-tables---trace_xe_action_map"></a>Таблицы расширенных событий — trace_xe_action_map
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "85750206"
 |package_name|**nvarchar(60)**|Имя пакета расширенных событий, в котором находится сопоставленное действие.|  
 |xe_action_name|**nvarchar(60)**|Имя действия расширенных событий, которое сопоставлено со столбцом трассировки SQL.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Чтобы выявить действия расширенных событий, эквивалентные столбцам трассировки SQL, можно использовать следующий запрос.  
   
 ```  
@@ -49,7 +50,7 @@ INNER JOIN sys.trace_xe_action_map AS am
   
  Столбцы трассировки SQL, которые не соответствуют действиям, не включаются в таблицу.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [trace_xe_event_map (Transact-SQL)](../../relational-databases/system-tables/extended-events-tables-trace-xe-event-map.md)  
   
   

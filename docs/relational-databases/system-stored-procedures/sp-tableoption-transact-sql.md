@@ -1,4 +1,5 @@
 ---
+description: sp_tableoption (Transact-SQL)
 title: sp_tableoption (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/11/2017
@@ -18,12 +19,12 @@ ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84e6c530b4887502346b69adcf2590bce9d0e8fc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 06655c8dd684ca89d6e67b065d3943ee57f752fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718690"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473566"
 ---
 # <a name="sp_tableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +53,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
  [ @OptionName =] "*option_name*"  
  Название параметра таблицы. *option_name* имеет тип **varchar (35)** и не имеет значения по умолчанию NULL. *option_name* может иметь одно из следующих значений.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |table lock on bulk load|Если отключено (по умолчанию), то процесс массовой загрузки в пользовательских таблицах получает блокировку строк. Если включено, то процесс массовой загрузки в пользовательских таблицах получает блокировку массовых обновлений.|  
 |блокировка вставки строк|Больше не поддерживается.<br /><br /> Этот параметр не влияет на свойства блокировки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и включается только для совместимости существующих скриптов и процедур.|  
@@ -68,7 +69,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или номер ошибки (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Процедура sp_tableoption может использоваться только для установки значений параметра для пользовательских таблиц. Чтобы отобразить свойства таблицы, используйте OBJECTPROPERTY или запрос sys. Tables.  
   
  Параметр text in row процедуры sp_tableoption может быть включен или выключен только на таблицах, содержащих текстовые столбцы. Если таблица не содержит текстового столбца, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] происходит ошибка.  
@@ -79,7 +80,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
   
 -   text in row доступен;  
   
--   Длина строки короче предела, указанного в@OptionValue  
+-   Длина строки короче предела, указанного в @OptionValue  
   
 -   в строке данных достаточно места.  
   
@@ -134,9 +135,9 @@ EXEC sp_tableoption 'Production.WorkOrderRouting',
 ```  
   
 ## <a name="see-also"></a>См. также  
- [sys. Tables &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
- [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [sys.tables (Transact-SQL)](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
+ [OBJECTPROPERTY (Transact-SQL)](../../t-sql/functions/objectproperty-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

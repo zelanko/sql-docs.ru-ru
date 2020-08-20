@@ -1,4 +1,5 @@
 ---
+description: sp_revoke_login_from_proxy (Transact-SQL)
 title: sp_revoke_login_from_proxy (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e4546c13-9fba-4bab-8b42-d6f18b33ec25
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0819dbe8c2b4f76e638c09861d83ddb37e76da31
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 39857bce8c0fc50c1773709d70e7e477b669b282
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899236"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473864"
 ---
 # <a name="sp_revoke_login_from_proxy-transact-sql"></a>sp_revoke_login_from_proxy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,11 +43,11 @@ sp_revoke_login_from_proxy
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @name = ] 'name'`Имя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа, роль сервера или роль базы данных **msdb** , для которой необходимо удалить доступ. *имя* имеет тип **nvarchar (256)** и не имеет значения по умолчанию.  
+`[ @name = ] 'name'` Имя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа, роль сервера или роль базы данных **msdb** , для которой необходимо удалить доступ. *имя* имеет тип **nvarchar (256)** и не имеет значения по умолчанию.  
   
-`[ @proxy_id = ] id`Идентификатор прокси-сервера, для которого необходимо удалить доступ. Необходимо указать *идентификатор* или *proxy_name* , но не указывать оба значения. *Идентификатор* имеет **тип int**и значение по умолчанию NULL.  
+`[ @proxy_id = ] id` Идентификатор прокси-сервера, для которого необходимо удалить доступ. Необходимо указать *идентификатор* или *proxy_name* , но не указывать оба значения. *Идентификатор* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @proxy_name = ] 'proxy_name'`Имя прокси-сервера, для которого необходимо удалить доступ. Необходимо указать *идентификатор* или *proxy_name* , но не указывать оба значения. Аргумент *proxy_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @proxy_name = ] 'proxy_name'` Имя прокси-сервера, для которого необходимо удалить доступ. Необходимо указать *идентификатор* или *proxy_name* , но не указывать оба значения. Аргумент *proxy_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  

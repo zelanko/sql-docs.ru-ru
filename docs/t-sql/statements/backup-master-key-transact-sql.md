@@ -1,4 +1,5 @@
 ---
+description: BACKUP MASTER KEY (Transact-SQL)
 title: BACKUP MASTER KEY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 0e25fe22-2536-4d7e-ba4a-1921e880f367
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 536195389a6a2015fd365f4ec5c33e724655707d
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 5a2a36dab320bac556c5847f74049d2af6524457
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380927"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472399"
 ---
 # <a name="backup-master-key-transact-sql"></a>BACKUP MASTER KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +56,7 @@ BACKUP MASTER KEY TO FILE = 'path_to_file'
  PASSWORD ='*password*'  
  Пароль, используемый для шифрования главного ключа базы данных в файле. Пароль проходит проверку сложности. Дополнительные сведения см. в разделе [Политика паролей](../../relational-databases/security/password-policy.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Главный ключ должен быть открыт и, таким образом, расшифрован, прежде чем производится его резервное копирование. Если он зашифрован главным ключом службы, то его не нужно открывать явным образом. Но если главный ключ зашифрован только паролем, его явное открытие обязательно.  
   
  Рекомендуется создать резервную копию главного ключа сразу же после его создания и затем сохранить в надежном месте.  
@@ -74,7 +75,7 @@ BACKUP MASTER KEY TO FILE = 'c:\temp\exportedmasterkey'
 GO   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE MASTER KEY (Transact-SQL)](../../t-sql/statements/create-master-key-transact-sql.md)   
  [OPEN MASTER KEY (Transact-SQL)](../../t-sql/statements/open-master-key-transact-sql.md)   
  [CLOSE MASTER KEY (Transact-SQL)](../../t-sql/statements/close-master-key-transact-sql.md)   

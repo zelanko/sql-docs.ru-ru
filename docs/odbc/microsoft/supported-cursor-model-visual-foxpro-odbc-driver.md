@@ -1,4 +1,5 @@
 ---
+description: Поддерживаемая модель курсоров (драйвер ODBC для Visual FoxPro)
 title: Поддерживаемая модель курсора (драйвер ODBC для Visual FoxPro) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: be95bbb2-6886-491e-a5a7-f58028d19c1e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cf3400f24e20a8fa864404612bf07ea44efce49e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 789d55a894e66c87fc5773856375757947835b35
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301130"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471536"
 ---
 # <a name="supported-cursor-model-visual-foxpro-odbc-driver"></a>Поддерживаемая модель курсоров (драйвер ODBC для Visual FoxPro)
 Драйвер ODBC для Visual FoxPro поддерживает как *блок* (*набор строк*), так и *статические* курсоры. Статические курсоры поддерживаются для любого драйвера, который соответствует требованиям ODBC уровня 1. Драйвер не поддерживает динамические курсоры, управляемые набором ключей или смешанные (с ключевым набором ключей и динамические).  

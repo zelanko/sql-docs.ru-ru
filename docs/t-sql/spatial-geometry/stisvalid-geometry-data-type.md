@@ -1,4 +1,5 @@
 ---
+description: STIsValid (тип данных geometry)
 title: STIsValid (тип данных geometry) | Документы Майкрософт
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6da39bea-0f67-4660-98fc-d7214f9b2138
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 6068ed19c1f531104127402fddfa75ab30210932
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 65e86550626b1461cb8b0abc5e7fb354e6b4e3a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554659"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472436"
 ---
 # <a name="stisvalid-geometry-data-type"></a>STIsValid (тип данных geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "86554659"
   
  Тип возвращаемых данных CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Тип OGC экземпляра **geometry** можно определить с помощью метода [STGeometryType()](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] формирует только допустимые экземпляры **geometry**, однако позволяет хранить и получать недопустимые экземпляры. Допустимый экземпляр, представляющий тот же набор точек, что и любой недопустимый экземпляр, может быть получен с помощью метода `MakeValid()`.  

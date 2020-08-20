@@ -1,4 +1,5 @@
 ---
+description: sp_update_jobstep (Transact-SQL)
 title: sp_update_jobstep (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a81a0f6b79cdf2f2975372dc4bbefc02ae6c4cbe
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0a7161fd475b1fdac439e1c14e59034de2d7bbfe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891315"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473542"
 ---
 # <a name="sp_update_jobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -61,23 +62,23 @@ sp_update_jobstep
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_id = ] job_id`Идентификационный номер задания, которому принадлежит шаг. *job_id*имеет тип **uniqueidentifier**и значение по умолчанию NULL. Необходимо указать либо *job_id* , либо *job_name* , но не указывать оба значения.  
+`[ @job_id = ] job_id` Идентификационный номер задания, которому принадлежит шаг. *job_id*имеет тип **uniqueidentifier**и значение по умолчанию NULL. Необходимо указать либо *job_id* , либо *job_name* , но не указывать оба значения.  
   
-`[ @job_name = ] 'job_name'`Имя задания, к которому относится шаг. Аргумент *job_name*имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать либо *job_id* , либо *job_name* , но не указывать оба значения.  
+`[ @job_name = ] 'job_name'` Имя задания, к которому относится шаг. Аргумент *job_name*имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать либо *job_id* , либо *job_name* , но не указывать оба значения.  
   
-`[ @step_id = ] step_id`Идентификационный номер изменяемого шага задания. Этот номер не может быть изменен. *step_id*имеет **тип int**и не имеет значения по умолчанию.  
+`[ @step_id = ] step_id` Идентификационный номер изменяемого шага задания. Этот номер не может быть изменен. *step_id*имеет **тип int**и не имеет значения по умолчанию.  
   
-`[ @step_name = ] 'step_name'`Новое имя для шага. Аргумент *step_name*имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @step_name = ] 'step_name'` Новое имя для шага. Аргумент *step_name*имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @subsystem = ] 'subsystem'`Подсистема, используемая агентом Microsoft SQL Server для выполнения *команды*. *подсистема* имеет тип **nvarchar (40)** и значение по умолчанию NULL.  
+`[ @subsystem = ] 'subsystem'` Подсистема, используемая агентом Microsoft SQL Server для выполнения *команды*. *подсистема* имеет тип **nvarchar (40)** и значение по умолчанию NULL.  
   
-`[ @command = ] 'command'`Команды, выполняемые через *подсистему*. *команда* имеет тип **nvarchar (max)** и значение по умолчанию NULL.  
+`[ @command = ] 'command'` Команды, выполняемые через *подсистему*. *команда* имеет тип **nvarchar (max)** и значение по умолчанию NULL.  
   
 `[ @additional_parameters = ] 'parameters'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @cmdexec_success_code = ] success_code`Значение, возвращаемое командой подсистемы **CmdExec** , чтобы указать, что *команда* выполнена успешно. *success_code* имеет **тип int**и значение по умолчанию NULL.  
+`[ @cmdexec_success_code = ] success_code` Значение, возвращаемое командой подсистемы **CmdExec** , чтобы указать, что *команда* выполнена успешно. *success_code* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @on_success_action = ] success_action`Действие, выполняемое, если шаг выполнен. *success_action* имеет тип **tinyint**, значение по умолчанию NULL и может принимать одно из следующих значений.  
+`[ @on_success_action = ] success_action` Действие, выполняемое, если шаг выполнен. *success_action* имеет тип **tinyint**, значение по умолчанию NULL и может принимать одно из следующих значений.  
   
 |Значение|Описание (действие)|  
 |-----------|----------------------------|  
@@ -86,9 +87,9 @@ sp_update_jobstep
 |**3**|Перейти к следующему шагу.|  
 |**4**|Перейдите к шагу *success_step_id.*|  
   
-`[ @on_success_step_id = ] success_step_id`Идентификационный номер шага в этом задании, который будет выполнен, если шаг выполнен, а *success_action* — **4**. *success_step_id* имеет **тип int**и значение по умолчанию NULL.  
+`[ @on_success_step_id = ] success_step_id` Идентификационный номер шага в этом задании, который будет выполнен, если шаг выполнен, а *success_action* — **4**. *success_step_id* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @on_fail_action = ] fail_action`Действие, выполняемое в случае сбоя шага. *fail_action* имеет тип **tinyint**, значение по умолчанию NULL и может иметь одно из следующих значений.  
+`[ @on_fail_action = ] fail_action` Действие, выполняемое в случае сбоя шага. *fail_action* имеет тип **tinyint**, значение по умолчанию NULL и может иметь одно из следующих значений.  
   
 |Значение|Описание (действие)|  
 |-----------|----------------------------|  
@@ -97,27 +98,27 @@ sp_update_jobstep
 |**3**|Перейти к следующему шагу.|  
 |**4**|Перейдите к шагу *fail_step_id * *.*|  
   
-`[ @on_fail_step_id = ] fail_step_id`Идентификационный номер шага в этом задании, которое должно быть выполнено, если шаг завершается ошибкой, а *fail_action* — **4**. *fail_step_id* имеет **тип int**и значение по умолчанию NULL.  
+`[ @on_fail_step_id = ] fail_step_id` Идентификационный номер шага в этом задании, которое должно быть выполнено, если шаг завершается ошибкой, а *fail_action* — **4**. *fail_step_id* имеет **тип int**и значение по умолчанию NULL.  
   
 `[ @server = ] 'server'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *Server* имеет тип **nvarchar (128)** и значение по умолчанию NULL.  
   
-`[ @database_name = ] 'database'`Имя базы данных, в которой будет выполняться [!INCLUDE[tsql](../../includes/tsql-md.md)] шаг. *база данных*имеет тип **sysname**. Символы, заключенные в квадратные скобки ([ ]), являются недопустимыми. Значение по умолчанию — NULL.  
+`[ @database_name = ] 'database'` Имя базы данных, в которой будет выполняться [!INCLUDE[tsql](../../includes/tsql-md.md)] шаг. *база данных*имеет тип **sysname**. Символы, заключенные в квадратные скобки ([ ]), являются недопустимыми. Значение по умолчанию — NULL.  
   
-`[ @database_user_name = ] 'user'`Имя учетной записи пользователя, используемой при выполнении [!INCLUDE[tsql](../../includes/tsql-md.md)] шага. Аргумент *User*имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @database_user_name = ] 'user'` Имя учетной записи пользователя, используемой при выполнении [!INCLUDE[tsql](../../includes/tsql-md.md)] шага. Аргумент *User*имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @retry_attempts = ] retry_attempts`Количество повторных попыток использования в случае сбоя этого шага. *retry_attempts*имеет **тип int**и значение по умолчанию NULL.  
+`[ @retry_attempts = ] retry_attempts` Количество повторных попыток использования в случае сбоя этого шага. *retry_attempts*имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @retry_interval = ] retry_interval`Количество времени в минутах между повторными попытками. *retry_interval* имеет **тип int**и значение по умолчанию NULL.  
+`[ @retry_interval = ] retry_interval` Количество времени в минутах между повторными попытками. *retry_interval* имеет **тип int**и значение по умолчанию NULL.  
   
 `[ @os_run_priority = ] run_priority` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @output_file_name = ] 'file_name'`Имя файла, в котором сохраняется выходные данные этого шага. *file_name* имеет тип **nvarchar (200)** и значение по умолчанию NULL. Данный аргумент действителен только с командами, запущенными в подсистемах [!INCLUDE[tsql](../../includes/tsql-md.md)] или CmdExec.  
+`[ @output_file_name = ] 'file_name'` Имя файла, в котором сохраняется выходные данные этого шага. *file_name* имеет тип **nvarchar (200)** и значение по умолчанию NULL. Данный аргумент действителен только с командами, запущенными в подсистемах [!INCLUDE[tsql](../../includes/tsql-md.md)] или CmdExec.  
   
  Чтобы присвоить output_file_name значение NULL, необходимо присвоить параметру *output_file_name* пустую строку ("") или строку пустых символов, но нельзя использовать функцию **char (32)** . Например, установление данного аргумента равным пустой строке производится следующим образом:  
   
- **@output_file_name= ' '**  
+ **@output_file_name = ' '**  
   
-`[ @flags = ] flags`Параметр, управляющий поведением. *Флаги* имеют **тип int**и могут принимать одно из следующих значений.  
+`[ @flags = ] flags` Параметр, управляющий поведением. *Флаги* имеют **тип int**и могут принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -127,14 +128,14 @@ sp_update_jobstep
 |**8**|Записать журнал в таблицу (переписать существующий журнал).|  
 |**16**|Записать журнал в таблицу (добавить к существующему журналу).|  
   
-`[ @proxy_id = ] proxy_id`ИДЕНТИФИКАЦИОНный номер учетной записи-посредника, от имени которой выполняется шаг задания. *proxy_id* имеет тип **int**и значение по умолчанию NULL. Если *proxy_id* не указано, *proxy_name* не указана и *user_name* не указана, шаг задания выполняется как учетная запись службы для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента.  
+`[ @proxy_id = ] proxy_id` ИДЕНТИФИКАЦИОНный номер учетной записи-посредника, от имени которой выполняется шаг задания. *proxy_id* имеет тип **int**и значение по умолчанию NULL. Если *proxy_id* не указано, *proxy_name* не указана и *user_name* не указана, шаг задания выполняется как учетная запись службы для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента.  
   
-`[ @proxy_name = ] 'proxy_name'`Имя учетной записи-посредника, от имени которой выполняется шаг задания. *proxy_name* имеет тип **sysname**и значение по умолчанию NULL. Если *proxy_id* не указано, *proxy_name* не указана и *user_name* не указана, шаг задания выполняется как учетная запись службы для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента.  
+`[ @proxy_name = ] 'proxy_name'` Имя учетной записи-посредника, от имени которой выполняется шаг задания. *proxy_name* имеет тип **sysname**и значение по умолчанию NULL. Если *proxy_id* не указано, *proxy_name* не указана и *user_name* не указана, шаг задания выполняется как учетная запись службы для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  **sp_update_jobstep** должны запускаться из базы данных **msdb** .  
   
  Обновление шага задания увеличивает номер версии задания.  
@@ -168,7 +169,7 @@ EXEC dbo.sp_update_jobstep
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Просмотр или изменение заданий](../../ssms/agent/view-or-modify-jobs.md)   
  [sp_delete_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
  [sp_help_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   

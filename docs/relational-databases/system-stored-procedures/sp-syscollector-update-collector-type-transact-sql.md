@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_update_collector_type (Transact-SQL)
 title: sp_syscollector_update_collector_type (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f315b95b100315691d1ace30a3fe3bb2e9788d27
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 477fb448d91939933cea7132ad8b532de7a162e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892792"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473594"
 ---
 # <a name="sp_syscollector_update_collector_type-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,15 +45,15 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @collector_type_uid = ] 'collector_type_uid'`Идентификатор GUID для типа сборщика. *collector_type_uid* имеет тип **uniqueidentifier**, и, если он равен null, он будет автоматически создан и возвращен в качестве выходных данных.  
+`[ @collector_type_uid = ] 'collector_type_uid'` Идентификатор GUID для типа сборщика. *collector_type_uid* имеет тип **uniqueidentifier**, и, если он равен null, он будет автоматически создан и возвращен в качестве выходных данных.  
   
-`[ @name = ] 'name'`Имя типа сборщика. Аргумент *Name* имеет тип **sysname** и должен быть указан.  
+`[ @name = ] 'name'` Имя типа сборщика. Аргумент *Name* имеет тип **sysname** и должен быть указан.  
   
-`[ @parameter_schema = ] 'parameter_schema'`XML-схема для этого типа сборщика. *parameter_schema* является **XML** и может потребоваться для некоторых типов сборщиков. Если этот аргумент не задан, он может принимать значение NULL.  
+`[ @parameter_schema = ] 'parameter_schema'` XML-схема для этого типа сборщика. *parameter_schema* является **XML** и может потребоваться для некоторых типов сборщиков. Если этот аргумент не задан, он может принимать значение NULL.  
   
-`[ @collection_package_id = ] collection_package_id`Локальный уникальный идентификатор, указывающий на [!INCLUDE[ssIS](../../includes/ssis-md.md)] пакет сбора, используемый набором сбора. *collection_package_id* является **уникуеидентифер** и является обязательным. Чтобы получить значение для *collection_package_id*, запросите системное представление dbo.syscollector_collector_types в базе данных msdb.  
+`[ @collection_package_id = ] collection_package_id` Локальный уникальный идентификатор, указывающий на [!INCLUDE[ssIS](../../includes/ssis-md.md)] пакет сбора, используемый набором сбора. *collection_package_id* является **уникуеидентифер** и является обязательным. Чтобы получить значение для *collection_package_id*, запросите системное представление dbo.syscollector_collector_types в базе данных msdb.  
   
-`[ @upload_package_id = ] upload_package_id`Локальный уникальный идентификатор, указывающий на [!INCLUDE[ssIS](../../includes/ssis-md.md)] пакет отправки, используемый набором сбора. *upload_package_id* имеет тип **uniqueidentifier** и является обязательным. Чтобы получить значение для *upload_package_id*, запросите системное представление dbo.syscollector_collector_types в базе данных msdb.  
+`[ @upload_package_id = ] upload_package_id` Локальный уникальный идентификатор, указывающий на [!INCLUDE[ssIS](../../includes/ssis-md.md)] пакет отправки, используемый набором сбора. *upload_package_id* имеет тип **uniqueidentifier** и является обязательным. Чтобы получить значение для *upload_package_id*, запросите системное представление dbo.syscollector_collector_types в базе данных msdb.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -101,7 +102,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Сбор данных](../../relational-databases/data-collection/data-collection.md)  
   
   

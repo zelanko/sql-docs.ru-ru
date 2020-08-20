@@ -1,4 +1,5 @@
 ---
+description: sys. sp_cleanup_temporal_history (Transact-SQL)
 title: sys. sp_cleanup_temporal_history | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -9,12 +10,12 @@ ms.assetid: 6eff30b4-b261-4f1f-b93c-1f69d754298d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a9cd5efaf70a915b6a31dced0f79498a01dd7ef5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 30e689666336bfc76c7ec5e5f5df363363801baf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783601"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473316"
 ---
 # <a name="syssp_cleanup_temporal_history-transact-sql"></a>sys. sp_cleanup_temporal_history (Transact-SQL)
 
@@ -44,7 +45,7 @@ sp_cleanup_temporal_history [@schema_name = ] schema_name, [@table_name = ] tabl
 
 Выходной параметр, возвращающий число удаленных строк. Если таблица журнала имеет кластеризованный индекс columnstore, этот параметр возвратит значение всегда 0.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Эта хранимая процедура может использоваться только с временными таблицами, для которых указан конечный срок хранения.
 Используйте эту хранимую процедуру только в том случае, если необходимо немедленно очистить все устаревшие строки из таблицы журнала. Следует иметь в курсе, что он может оказать значительное влияние на журнал базы данных и подсистему ввода-вывода, так как он удаляет все подходящие строки в рамках одной транзакции.
@@ -63,6 +64,6 @@ EXEC sys.sp_cleanup_temporal_history 'dbo', 'Department', @rowcnt output
 select @rowcnt
 ```
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Политика хранения временных таблиц](https://docs.microsoft.com/azure/sql-database/sql-database-temporal-tables-retention-policy)

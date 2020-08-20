@@ -1,4 +1,5 @@
 ---
+description: sysmail_stop_sp (Transact-SQL)
 title: sysmail_stop_sp (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 045ee36f-5bf0-4626-b5ee-e84db06ce16f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e503667d51da42f5d103ae479dba3b4a1cba7fce
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6630ddcb05645422ba2049636637a3e480e543c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890861"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473354"
 ---
 # <a name="sysmail_stop_sp-transact-sql"></a>sysmail_stop_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sysmail_stop_sp
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- None  
+ Нет  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  

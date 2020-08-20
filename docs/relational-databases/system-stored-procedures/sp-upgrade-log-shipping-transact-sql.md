@@ -1,4 +1,5 @@
 ---
+description: sp_upgrade_log_shipping (Transact-SQL)
 title: sp_upgrade_log_shipping (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ee01092f-9caf-4e88-888b-ec7b84223705
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8afb57d3660f9c69c3ded45f55ed393531a044c4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a51d0e021b5c62c935c2c32f4ed10a09f39616c9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891250"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473506"
 ---
 # <a name="sp_upgrade_log_shipping-transact-sql"></a>sp_upgrade_log_shipping (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +48,7 @@ sp_upgrade_log_shipping
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Эта хранимая процедура вызывается автоматически во время обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в целях обновления метаданных для доставки журналов. Процедуру следует запустить отдельно явным образом, только если во время обновления возникают проблемы с метаданными.  
   
  Процедура sp_upgrade_log_shipping должна выполняться в базе данных master на сервере-источнике, сервере-получателе или сервере мониторинга.  

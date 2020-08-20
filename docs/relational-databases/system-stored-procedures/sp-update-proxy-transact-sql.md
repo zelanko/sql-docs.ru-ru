@@ -1,4 +1,5 @@
 ---
+description: sp_update_proxy (Transact-SQL)
 title: sp_update_proxy (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 864fd0e6-9d61-4f07-92ef-145318d2f881
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: eb6af87e40c663ae6e1d7465919abb2f14f85979
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 052f78652c02b7486d930dbb7071a6b2a981074b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891287"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473504"
 ---
 # <a name="sp_update_proxy-transact-sql"></a>sp_update_proxy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,19 +48,19 @@ sp_update_proxy
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @proxy_id = ] id`Идентификационный номер прокси-сервера, который необходимо изменить. *Proxy_id* имеет **тип int**и значение по умолчанию NULL.  
+`[ @proxy_id = ] id` Идентификационный номер прокси-сервера, который необходимо изменить. *Proxy_id* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @proxy_name = ] 'proxy_name'`Имя изменяемого прокси-сервера. Аргумент *proxy_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @proxy_name = ] 'proxy_name'` Имя изменяемого прокси-сервера. Аргумент *proxy_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @credential_name = ] 'credential_name'`Имя новых учетных данных для учетной записи-посредника. Аргумент *credential_name* имеет тип **sysname**и значение по умолчанию NULL. Можно указать либо *credential_name* , либо *credential_id* .  
+`[ @credential_name = ] 'credential_name'` Имя новых учетных данных для учетной записи-посредника. Аргумент *credential_name* имеет тип **sysname**и значение по умолчанию NULL. Можно указать либо *credential_name* , либо *credential_id* .  
   
-`[ @credential_id = ] credential_id`Идентификационный номер новых учетных данных для учетной записи-посредника. *Credential_id* имеет **тип int**и значение по умолчанию NULL. Можно указать либо *credential_name* , либо *credential_id* .  
+`[ @credential_id = ] credential_id` Идентификационный номер новых учетных данных для учетной записи-посредника. *Credential_id* имеет **тип int**и значение по умолчанию NULL. Можно указать либо *credential_name* , либо *credential_id* .  
   
-`[ @new_name = ] 'new_name'`Новое имя учетной записи-посредника. Аргумент *new_name* имеет тип **sysname**и значение по умолчанию NULL. При указании процедура изменяет имя прокси-сервера на *new_name*. Если этот аргумент равен NULL, имя учетной записи-посредника остается неизменным.  
+`[ @new_name = ] 'new_name'` Новое имя учетной записи-посредника. Аргумент *new_name* имеет тип **sysname**и значение по умолчанию NULL. При указании процедура изменяет имя прокси-сервера на *new_name*. Если этот аргумент равен NULL, имя учетной записи-посредника остается неизменным.  
   
-`[ @enabled = ] is_enabled`Указывает, включен ли прокси-сервер. Флаг *is_enabled* имеет тип **tinyint**и значение по умолчанию NULL. Если значение *is_enabled* равно **0**, то прокси-сервер не включен и не может использоваться шагом задания. Если этот аргумент равен NULL, состояние учетной записи-посредника остается неизменным.  
+`[ @enabled = ] is_enabled` Указывает, включен ли прокси-сервер. Флаг *is_enabled* имеет тип **tinyint**и значение по умолчанию NULL. Если значение *is_enabled* равно **0**, то прокси-сервер не включен и не может использоваться шагом задания. Если этот аргумент равен NULL, состояние учетной записи-посредника остается неизменным.  
   
-`[ @description = ] 'description'`Новое описание прокси-сервера. *Описание* имеет тип **nvarchar (512)** и значение по умолчанию NULL. Если этот аргумент равен NULL, описание учетной записи-посредника остается неизменным.  
+`[ @description = ] 'description'` Новое описание прокси-сервера. *Описание* имеет тип **nvarchar (512)** и значение по умолчанию NULL. Если этот аргумент равен NULL, описание учетной записи-посредника остается неизменным.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  

@@ -1,4 +1,5 @@
 ---
+description: sp_showrowreplicainfo (Transact-SQL)
 title: sp_showrowreplicainfo (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a734045bc253e71e8663314f785b8630b32b383a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 09ab29ef7e164aa89d99d4e34ffd1e71fc4a18a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893047"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473763"
 ---
 # <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +41,13 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @ownername = ] 'ownername'`Имя владельца таблицы. *ownerName* имеет тип **sysname**и значение по умолчанию NULL. Этот аргумент полезен для различения таблиц, если база данных содержит несколько таблиц с одним и тем же именем, у каждой из которых свой владелец.  
+`[ @ownername = ] 'ownername'` Имя владельца таблицы. *ownerName* имеет тип **sysname**и значение по умолчанию NULL. Этот аргумент полезен для различения таблиц, если база данных содержит несколько таблиц с одним и тем же именем, у каждой из которых свой владелец.  
   
-`[ @tablename = ] 'tablename'`Имя таблицы, содержащей строку, для которой возвращаются сведения. *TableName* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @tablename = ] 'tablename'` Имя таблицы, содержащей строку, для которой возвращаются сведения. *TableName* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @rowguid = ] rowguid`Уникальный идентификатор строки. *rowguid* имеет тип **uniqueidentifier**и не имеет значения по умолчанию.  
+`[ @rowguid = ] rowguid` Уникальный идентификатор строки. *rowguid* имеет тип **uniqueidentifier**и не имеет значения по умолчанию.  
   
-`[ @show = ] 'show'`Определяет объем данных, возвращаемых в результирующем наборе. параметр *Показывать* имеет тип **nvarchar (20)** и значение по умолчанию. Если **строка**, возвращаются только сведения о версии строки. Если **столбцы**, возвращаются только сведения о версии столбца. Если **оба**значения, возвращаются как сведения о строках, так и о столбцах.  
+`[ @show = ] 'show'` Определяет объем данных, возвращаемых в результирующем наборе. параметр *Показывать* имеет тип **nvarchar (20)** и значение по умолчанию. Если **строка**, возвращаются только сведения о версии строки. Если **столбцы**, возвращаются только сведения о версии столбца. Если **оба**значения, возвращаются как сведения о строках, так и о столбцах.  
   
 ## <a name="result-sets-for-row-information"></a>Результирующие наборы сведений о строках  
   
@@ -56,7 +57,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_name**|**sysname**|Имя базы данных, содержащей данную запись.|  
 |**db_nickname**|**двоичный (6)**|Псевдоним базы данных, содержащей данную запись.|  
 |**version**|**int**|Версия записи.|  
-|**current_state**|**nvarchar (9)**|Возвращает сведения о текущем состоянии строки.<br /><br /> **y** -строка Data представляет текущее состояние строки.<br /><br /> **n** -строковые данные не представляют текущее состояние строки.<br /><br /> **\<n/a>**— Неприменимо.<br /><br /> **\<unknown>**-Не удается определить текущее состояние.|  
+|**current_state**|**nvarchar (9)**|Возвращает сведения о текущем состоянии строки.<br /><br /> **y** -строка Data представляет текущее состояние строки.<br /><br /> **n** -строковые данные не представляют текущее состояние строки.<br /><br /> **\<n/a>** — Неприменимо.<br /><br /> **\<unknown>** -Не удается определить текущее состояние.|  
 |**rowversion_table**|**nchar (17)**|Указывает, хранятся ли версии строк в таблице [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) или в [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) таблице.|  
 |**comment**|**nvarchar(255)**|Дополнительные сведения о данной записи версии строки. Обычно это поле не заполнено.|  
   

@@ -1,4 +1,5 @@
 ---
+description: sp_OAStop (Transact-SQL)
 title: sp_OAStop (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: aa9eab66-c4f7-4ec7-9f0d-5d24d16da654
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1abb0f8f6407fe2674002821484e58cdbdd183b1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1ec53c344fc3b69351c8b7e5d8165db1120471c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901456"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473949"
 ---
 # <a name="sp_oastop-transact-sql"></a>sp_OAStop (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,11 +44,11 @@ sp_OAStop
   
  Дополнительные сведения о кодах возврата HRESULT см. в разделе [коды возврата OLE Automation и сведения об ошибке](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Единая среда выполнения совместно используется всеми клиентами хранимых процедур OLE-автоматизации. Если один клиент вызывает **sp_OAStop** общая среда выполнения будет остановлена для всех клиентов. После остановки среды выполнения любой вызов **sp_OACreate** перезапускает среду выполнения.  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется членство в предопределенной роли сервера **sysadmin** или разрешение EXECUTE непосредственно в этой хранимой процедуре. `Ole Automation Procedures`для использования любой системной процедуры, связанной с OLE Automation, необходимо **включить** конфигурацию.  
+ Требуется членство в предопределенной роли сервера **sysadmin** или разрешение EXECUTE непосредственно в этой хранимой процедуре. `Ole Automation Procedures` для использования любой системной процедуры, связанной с OLE Automation, необходимо **включить** конфигурацию.  
   
 ## <a name="examples"></a>Примеры  
  Следующий пример продемонстрирует остановку общей среды выполнения OLE-автоматизации.  
@@ -57,8 +58,8 @@ EXEC sp_OAStop;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Хранимые процедуры OLE-автоматизации &#40;&#41;Transact — SQL](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Хранимые процедуры OLE-автоматизации &#40;&#41;Transact — SQL ](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [Пример скрипта OLE-автоматизации](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_update_targetservergroup (Transact-SQL)
 title: sp_update_targetservergroup (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4ac65ed6-e07e-40e4-a282-13bfd92dfa41
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 16cd7c339a476875ee3f3a7319ddaf57f0d69711
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6aa33876376560cfc90cbf7ab03a69fcf94fa6a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891275"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473551"
 ---
 # <a name="sp_update_targetservergroup-transact-sql"></a>sp_update_targetservergroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +42,9 @@ sp_update_targetservergroup
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @name = ] 'current_name'`Имя группы целевых серверов. Аргумент *current_name* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @name = ] 'current_name'` Имя группы целевых серверов. Аргумент *current_name* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @new_name = ] 'new_name'`Новое имя группы целевых серверов. Аргумент *new_name* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @new_name = ] 'new_name'` Новое имя группы целевых серверов. Аргумент *new_name* имеет тип **sysname**и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  

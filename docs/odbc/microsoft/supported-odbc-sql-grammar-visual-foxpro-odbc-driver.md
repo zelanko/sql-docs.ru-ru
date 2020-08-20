@@ -1,4 +1,5 @@
 ---
+description: Поддерживаемая грамматика SQL для ODBC (драйвер ODBC для Visual FoxPro)
 title: Поддерживаемые грамматики ODBC SQL (драйвер ODBC для Visual FoxPro) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f41a38c2-e22e-4c65-a32e-9a6777435160
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f72548d0708a63f887f7d6da4d4f5988500f0eef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3057520e5aca5277a68971513ef28427f27208ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304087"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471506"
 ---
 # <a name="supported-odbc-sql-grammar-visual-foxpro-odbc-driver"></a>Поддерживаемая грамматика SQL для ODBC (драйвер ODBC для Visual FoxPro)
 Драйвер ODBC для Microsoft Visual FoxPro поддерживает следующие действия:  
@@ -43,11 +44,11 @@ ms.locfileid: "81304087"
   
  Помимо поддерживаемой грамматики ODBC SQL, драйвер ODBC для Visual FoxPro поддерживает полный собственный синтаксис языка Visual FoxPro для следующих команд Visual FoxPro:  
   
- [ИЗМЕНЕНИЕ ТАБЛИЦЫ](../../odbc/microsoft/alter-table-sql-command.md)  
+ [ALTER TABLE](../../odbc/microsoft/alter-table-sql-command.md)  
   
  [CREATE TABLE](../../odbc/microsoft/create-table-sql-command.md)  
   
- [УДАЛЕН](../../odbc/microsoft/delete-sql-command.md)  
+ [DELETE](../../odbc/microsoft/delete-sql-command.md)  
   
  [УДАЛИТЬ ТЕГ](../../odbc/microsoft/delete-tag-command.md)  
   
@@ -55,8 +56,8 @@ ms.locfileid: "81304087"
   
  [НОМЕР](../../odbc/microsoft/index-command.md)  
   
- [ВСТАВЛЯЕТ](../../odbc/microsoft/insert-sql-command.md)  
+ [INSERT](../../odbc/microsoft/insert-sql-command.md)  
   
- [МЕТЬТЕ](../../odbc/microsoft/select-sql-command.md)  
+ [SELECT](../../odbc/microsoft/select-sql-command.md)  
   
- [ОБНОВЛЯЮТ](../../odbc/microsoft/update-sql-command.md)
+ [UPDATE](../../odbc/microsoft/update-sql-command.md)

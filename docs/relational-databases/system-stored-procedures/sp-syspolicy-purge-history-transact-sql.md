@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_purge_history (Transact-SQL)
 title: sp_syspolicy_purge_history (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6db414e7-4946-4bd2-8264-6b490810b306
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 298c819fb88885afb0533fff77b2a5d055317fc0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7aa5971a86ef26125a59feae58815f63c03d36f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892684"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473600"
 ---
 # <a name="sp_syspolicy_purge_history-transact-sql"></a>sp_syspolicy_purge_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ sp_syspolicy_purge_history
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Процедура sp_syspolicy_purge_history должна выполняться в контексте системной базы данных msdb.  
   
  Чтобы просмотреть интервал хранения журнала, можно использовать следующий запрос:  
@@ -74,8 +75,8 @@ EXEC msdb.dbo.sp_syspolicy_purge_history;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Хранимые процедуры управления на основе политик &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Хранимые процедуры управления на основе политик &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [sp_syspolicy_set_config_history_retention &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
  [sp_syspolicy_delete_policy_execution_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-execution-history-transact-sql.md)  
   

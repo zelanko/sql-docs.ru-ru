@@ -1,4 +1,5 @@
 ---
+description: sp_validatelogins (Transact-SQL)
 title: sp_validatelogins (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6ac52e21-e20d-469b-ad40-5aa091e06b61
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8299e334ff3219c41a3a4adfcc29f238d0ed81b3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b3237ed7a7d585e128b678772ec6d3a010fe3d00
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891259"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473448"
 ---
 # <a name="sp_validatelogins-transact-sql"></a>sp_validatelogins (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,10 +66,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [Удаление пользователя &#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
- [DROP LOGIN &#40;&#41;Transact-SQL](../../t-sql/statements/drop-login-transact-sql.md)   
+ [DROP USER (Transact-SQL)](../../t-sql/statements/drop-user-transact-sql.md)   
+ [DROP LOGIN &#40;&#41;Transact-SQL ](../../t-sql/statements/drop-login-transact-sql.md)   
  [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md)  
   
   

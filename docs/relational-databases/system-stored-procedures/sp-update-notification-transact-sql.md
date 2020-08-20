@@ -1,4 +1,5 @@
 ---
+description: sp_update_notification (Transact-SQL)
 title: sp_update_notification (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2b3018d982558f5d023d25695a541c8b109c015f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 32ddc8e2afae79b458d39f577d75176ba6f9dec1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891341"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473538"
 ---
 # <a name="sp_update_notification-transact-sql"></a>sp_update_notification (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,11 +44,11 @@ sp_update_notification
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @alert_name = ] 'alert'`Имя предупреждения, связанного с этим уведомлением. Аргумент *Alert* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @alert_name = ] 'alert'` Имя предупреждения, связанного с этим уведомлением. Аргумент *Alert* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @operator_name = ] 'operator'`Оператор, который будет получать уведомления при возникновении предупреждения. Аргумент *operator* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @operator_name = ] 'operator'` Оператор, который будет получать уведомления при возникновении предупреждения. Аргумент *operator* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @notification_method = ] notification`Метод, по которому оператор получает уведомления. *уведомление*имеет тип **tinyint**, не имеет значения по умолчанию и может быть одним или несколькими из этих значений.  
+`[ @notification_method = ] notification` Метод, по которому оператор получает уведомления. *уведомление*имеет тип **tinyint**, не имеет значения по умолчанию и может быть одним или несколькими из этих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  

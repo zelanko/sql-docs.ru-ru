@@ -1,4 +1,5 @@
 ---
+description: DENY, запрет разрешений на системные объекты (Transact-SQL)
 title: DENY, запрет разрешений на системные объекты (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4e43f954-0982-470b-a239-08a13c61563a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e4e866d6cc2c117599f276b51569321cc2ba6107
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 5d3e39d3a9533a75089c3126503abdd338c25ca1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484165"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472339"
 ---
 # <a name="deny-system-object-permissions-transact-sql"></a>DENY, запрет разрешений на системные объекты (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +42,7 @@ DENY { SELECT | EXECUTE } ON [ sys.]system_object TO principal
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Аргументы
- [ **sys.** ]  
+ [ **sys.**]  
  Квалификатор **sys** требуется только тогда, когда имеется ссылка на представления каталога и динамические административные представления.  
   
  *system_object*  
@@ -50,7 +51,7 @@ DENY { SELECT | EXECUTE } ON [ sys.]system_object TO principal
  *principal*  
  Задает участника, у которого отменяется разрешение.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Эта инструкция может быть использована, чтобы запретить разрешения для определенных хранимых процедур, расширенных хранимых процедур, функций с табличным значением, скалярных функций, представлений, представлений каталога, представлений совместимости, представлений INFORMATION_SCHEMA, динамических административных представлений и системных таблиц, установленных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Каждый из этих системных объектов существует в виде уникальной записи в базе данных ресурсов (**mssqlsystemresource**). Она доступна только для чтения. Ссылка на объект представлена в виде записи в схеме **sys** каждой базы данных.  
   
  Разрешение имен по умолчанию устраняет проблему неправомочных имен процедур в базе данных ресурсов. Следовательно, квалификатор **sys** требуется только при указании представлений каталога и динамических административных представлений.  
@@ -85,7 +86,7 @@ DENY EXECUTE ON sys.xp_cmdshell TO public;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Синтаксические обозначения в Transact-SQL (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)   
  [sys.database_permissions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
  [GRANT, предоставление разрешения на системный объект (Transact-SQL)](../../t-sql/statements/grant-system-object-permissions-transact-sql.md)   

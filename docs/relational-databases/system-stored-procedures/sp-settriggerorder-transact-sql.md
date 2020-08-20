@@ -1,4 +1,5 @@
 ---
+description: sp_settriggerorder (Transact-SQL)
 title: sp_settriggerorder (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2f222261c21ecb96f3599b20917a441898e3325e
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 564e38166cd26ea1fff2bc5154fea115e21b3131
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977731"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473814"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,20 +44,20 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @triggername = ] '[ _triggerschema.] _triggername'`Имя триггера и схема, к которой он принадлежит (если применимо), порядок которого должен быть установлен или изменен. [_тригжерсчема_**.**] *triggername* имеет тип **sysname**. Если имя не соответствует триггеру или соответствует триггеру INSTEAD OF, процедура возвращает ошибку. *тригжерсчема* нельзя указывать для триггеров DDL и logon.  
+`[ @triggername = ] '[ _triggerschema.] _triggername'` Имя триггера и схема, к которой он принадлежит (если применимо), порядок которого должен быть установлен или изменен. [_тригжерсчема_**.**] *triggername* имеет тип **sysname**. Если имя не соответствует триггеру или соответствует триггеру INSTEAD OF, процедура возвращает ошибку. *тригжерсчема* нельзя указывать для триггеров DDL и logon.  
   
-`[ @order = ] 'value'`Параметр для нового порядка триггера. *value* имеет тип **varchar (10)** и может принимать одно из следующих значений.  
+`[ @order = ] 'value'` Параметр для нового порядка триггера. *value* имеет тип **varchar (10)** и может принимать одно из следующих значений.  
   
 > [!IMPORTANT]  
 >  **Первый** и **последний** триггеры должны быть двумя разными триггерами.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|**First**|Триггер срабатывает первым.|  
+|**Первая**|Триггер срабатывает первым.|  
 |**Последняя**|Триггер срабатывает последним.|  
-|**Нет**|Порядок срабатывания триггера не определен.|  
+|**None**|Порядок срабатывания триггера не определен.|  
   
-`[ @stmttype = ] 'statement_type'`Указывает инструкцию SQL, которая запускает триггер. *statement_type* имеет тип **varchar (50)** и может использоваться для вставки, обновления, удаления, входа в систему или любого [!INCLUDE[tsql](../../includes/tsql-md.md)] события инструкции, указанного в [DDL-событиях](../../relational-databases/triggers/ddl-events.md). Группы событий задавать нельзя.  
+`[ @stmttype = ] 'statement_type'` Указывает инструкцию SQL, которая запускает триггер. *statement_type* имеет тип **varchar (50)** и может использоваться для вставки, обновления, удаления, входа в систему или любого [!INCLUDE[tsql](../../includes/tsql-md.md)] события инструкции, указанного в [DDL-событиях](../../relational-databases/triggers/ddl-events.md). Группы событий задавать нельзя.  
   
  Триггер можно назначить **первым** или **последним** триггером для типа инструкции только после того, как триггер был определен как триггер для этого типа инструкции. Например, триггер **TR1** может быть назначен **первым** для инструкции INSERT в таблице **T1** , если **TR1** определен как триггер INSERT. [!INCLUDE[ssDE](../../includes/ssde-md.md)]Функция возвращает ошибку, если **TR1**, который был определен только как триггер INSERT, устанавливается в качестве **первого**или **последнего**триггера для инструкции UPDATE. Дополнительные сведения см. в разделе «Примечания».  
   
@@ -124,8 +125,8 @@ GO
 sp_settriggerorder @triggername= 'ddlDatabaseTriggerLog', @order='First', @stmttype = 'ALTER_TABLE', @namespace = 'DATABASE';  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TRIGGER (Transact-SQL)](../../t-sql/statements/alter-trigger-transact-sql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: BufferWithTolerance (тип данных geometry)
 title: BufferWithTolerance (тип данных geometry) | Документы Майкрософт
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ea306ec0acca8cdb2a21a1ecbeff2c5efe5bf56b
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: fc0cfc790f933935de0f9aee96dd7c6e7b66425f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555147"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472556"
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance (тип данных geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,7 +64,7 @@ ms.locfileid: "86555147"
 > [!NOTE]  
 >  Так как параметр *tolerance* имеет тип **float**, то может возникнуть исключение `System.Runtime.InteropServices.COMException`, если значение, заданное в качестве погрешности, слишком мало, из-за особенностей округления типов с плавающей запятой.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Когда *distance* > 0, возвращается экземпляр **Polygon** или **MultiPolygon**.  
   
 > [!NOTE]  
@@ -93,7 +94,7 @@ SET @g = geometry::STGeomFromText('POINT(3 3)', 0);
 SELECT @g.BufferWithTolerance(1, .5, 0).ToString();  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [STBuffer (тип данных geometry)](../../t-sql/spatial-geometry/stbuffer-geometry-data-type.md)   
  [Расширенные методы экземпляров Geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   

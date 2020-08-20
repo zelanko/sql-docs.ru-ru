@@ -1,4 +1,5 @@
 ---
+description: sp_special_columns (Transact-SQL)
 title: sp_special_columns (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 0b0993f8-73e0-402b-8c6c-1b0963956f5d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: da90b05f11c4cc379d77742f0eab0e70dada3f66
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 307ca2d017adddef6583098088a441f887f4d900
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85645072"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473798"
 ---
 # <a name="sp_special_columns-transact-sql"></a>sp_special_columns (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -70,13 +71,13 @@ sp_special_columns [ @table_name = ] 'table_name'
  Используемая версия ODBC. *Одбквер* имеет **тип int (** 4 **)** и значение по умолчанию 2. Это значение соответствует версии ODBC 2.0. Дополнительные сведения о различиях между ODBC 2.0 и ODBC 3.0 см. в спецификации ODBC SQLSpecialColumns для ODBC 3.0.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- Отсутствуют  
+ Нет  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|SCOPE|**smallint**|Фактическая область идентификатора строки. Возможны следующие варианты: 0, 1 или 2. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]всегда возвращает значение 0. Это поле всегда возвращает значение.<br /><br /> 0 = SQL_SCOPE_CURROW. Идентификатор строки гарантированно действителен до тех пор, пока он расположен на этой строке. Проведенная позднее повторная выборка с использованием идентификатора строки может не вернуть строку, если строка была обновлена или удалена другой транзакцией.<br /><br /> 1 = SQL_SCOPE_TRANSACTION. Идентификатор строки гарантированно действителен в течение текущей транзакции.<br /><br /> 2 = SQL_SCOPE_SESSION. Идентификатор строки гарантированно действителен на протяжении сеанса (несмотря на границы транзакций).|  
+|SCOPE|**smallint**|Фактическая область идентификатора строки. Возможны следующие варианты: 0, 1 или 2. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] всегда возвращает значение 0. Это поле всегда возвращает значение.<br /><br /> 0 = SQL_SCOPE_CURROW. Идентификатор строки гарантированно действителен до тех пор, пока он расположен на этой строке. Проведенная позднее повторная выборка с использованием идентификатора строки может не вернуть строку, если строка была обновлена или удалена другой транзакцией.<br /><br /> 1 = SQL_SCOPE_TRANSACTION. Идентификатор строки гарантированно действителен в течение текущей транзакции.<br /><br /> 2 = SQL_SCOPE_SESSION. Идентификатор строки гарантированно действителен на протяжении сеанса (несмотря на границы транзакций).|  
 |COLUMN_NAME|**sysname**|Имя столбца для каждого столбца возвращаемой *таблицы*. Это поле всегда возвращает значение.|  
 |DATA_TYPE|**smallint**|Тип данных ODBC SQL.|  
 |TYPE_NAME|**sysname**|Имя типа данных, зависящее от источника данных; Например, **char**, **varchar**, **money**или **Text**.|  
@@ -85,7 +86,7 @@ sp_special_columns [ @table_name = ] 'table_name'
 |SCALE|**smallint**|Масштаб столбца в источнике данных. Для тех типов данных, для которых масштаб не применим, возвращается значение NULL.|  
 |PSEUDO_COLUMN|**smallint**|Указывает, является ли столбец псевдостолбцом. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] всегда возвращает 1:<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  В ODBC sp_special_columns эквивалентно SQLSpecialColumns. Возвращенные результаты сортируются по столбцу SCOPE.  
   
 ## <a name="permissions"></a>Разрешения  

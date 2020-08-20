@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_start_collection_set (Transact-SQL)
 title: sp_syscollector_start_collection_set (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d8357180-f51e-4681-99f9-0596fe2d2b53
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 56fa6b114d58512f9cdec9c3da2575539af0d03b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 949b62ea945a287e710b416f27de7f5fbfd2abca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892838"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473636"
 ---
 # <a name="sp_syscollector_start_collection_set-transact-sql"></a>sp_syscollector_start_collection_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +44,9 @@ sp_syscollector_start_collection_set
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @collection_set_id = ] collection_set_id`Уникальный локальный идентификатор набора сбора. *collection_set_id* имеет **тип int** и значение по умолчанию NULL. *collection_set_id* должны иметь значение, если *Name* имеет значение null.  
+`[ @collection_set_id = ] collection_set_id` Уникальный локальный идентификатор набора сбора. *collection_set_id* имеет **тип int** и значение по умолчанию NULL. *collection_set_id* должны иметь значение, если *Name* имеет значение null.  
   
-`[ @name = ] 'name'`Имя набора элементов сбора. Аргумент *Name* имеет тип **sysname** и значение по умолчанию NULL. *имя* должно иметь значение, если *collection_set_id* имеет значение null.  
+`[ @name = ] 'name'` Имя набора элементов сбора. Аргумент *Name* имеет тип **sysname** и значение по умолчанию NULL. *имя* должно иметь значение, если *collection_set_id* имеет значение null.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -72,7 +73,7 @@ EXEC sp_syscollector_start_collection_set @collection_set_id = 1;
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Хранимые процедуры сборщика данных &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [Хранимые процедуры сборщика данных (Transact-SQL)](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Сбор данных](../../relational-databases/data-collection/data-collection.md)   
  [syscollector_collection_sets (Transact-SQL)](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
   

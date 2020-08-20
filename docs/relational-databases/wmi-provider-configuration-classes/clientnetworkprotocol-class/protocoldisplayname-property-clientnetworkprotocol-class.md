@@ -1,4 +1,5 @@
 ---
+description: Свойство ProtocolDisplayName (класс ClientNetworkProtocol)
 title: Свойство ProtocolDisplayName (класс clientnetworkprotocol)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: af194304-5600-48b5-9e93-c2fa95594909
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 52981676cb367d2b8693443ef534652f371edc8e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c78af16cb184b3e759e5a6292518669dcee68347
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889022"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472972"
 ---
 # <a name="protocoldisplayname-property-clientnetworkprotocol-class"></a>Свойство ProtocolDisplayName (класс ClientNetworkProtocol)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ object.ProtocolDisplayName [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Строковое значение, определяющее отображаемое имя сетевого протокола клиента.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка сетевых протоколов клиента и сетевых библиотек](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

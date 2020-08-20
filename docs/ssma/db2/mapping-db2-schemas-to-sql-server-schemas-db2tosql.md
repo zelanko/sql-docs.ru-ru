@@ -1,4 +1,5 @@
 ---
+description: Сопоставление схем DB2 с SQL Server схемами (DB2ToSQL)
 title: Сопоставление схем DB2 с SQL Server схемами (DB2ToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 05ff7bd4-e60b-4f48-a893-bc2346aa9a8a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ed1535a9e8af398b9cac7742ab955822cb6034d0
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: a5c60984f9f1ed8da7238c254ac8b939dc1a9dee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936887"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472514"
 ---
 # <a name="mapping-db2-schemas-to-sql-server-schemas-db2tosql"></a>Сопоставление схем DB2 с SQL Server схемами (DB2ToSQL)
 В DB2 каждая база данных имеет одну или несколько схем. По умолчанию SSMA переносит все объекты в схеме DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базу данных, указанную для схемы. Однако можно настроить сопоставление между схемами DB2 и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базами данных.  

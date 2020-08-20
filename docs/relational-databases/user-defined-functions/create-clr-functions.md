@@ -1,4 +1,5 @@
 ---
+description: Создание функций CLR
 title: Создание функций CLR | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a82df075-2243-4e19-bfe1-ae6d65dabd0f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dd0860bc09c4b4ee1d1a67130f58a75c86dd0625
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 97cbd5543bd73001f599a25eaa9a79f493f40f58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053600"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472923"
 ---
 # <a name="create-clr-functions"></a>Создание функций CLR
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -57,7 +58,7 @@ ms.locfileid: "86053600"
 ## <a name="accessing-native-code"></a>Доступ к машинному коду  
  Функции CLR можно использовать для доступа к собственному (неуправляемому) коду, например написанному на C или C++, посредством использования средства PInvoke из управляемого кода (подробнее см. в разделе [Вызов собственных функций из управляемого кода](https://go.microsoft.com/fwlink/?LinkID=181929) ). Это даст возможность повторно использовать устаревший код в виде определяемых пользователем функций CLR или писать критичные к производительности функции в собственном коде. Для этого потребуется использование сборки UNSAFE. Предупреждения, касающиеся использования сборок UNSAFE, см. в разделе [CLR Integration Code Access Security](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md) .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание определяемых пользователем функций (компонент Database Engine)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   
  [Создание определяемых пользователем агрегатных функций](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)   
  [Выполнение определяемых пользователем функций](../../relational-databases/user-defined-functions/execute-user-defined-functions.md)   

@@ -1,4 +1,5 @@
 ---
+description: sys.sp_xtp_control_query_exec_stats (Transact-SQL)
 title: sys. sp_xtp_control_query_exec_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/13/2015
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4838125d-ad1e-479e-b7d2-42655e8f4f02
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7f451e3d6083a32db87c7e453413cf6b318e739f
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 0963985b2f6f83d9be8c19be35fd16b0451dda8a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442662"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473424"
 ---
 # <a name="syssp_xtp_control_query_exec_stats-transact-sql"></a>sys.sp_xtp_control_query_exec_stats (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -43,17 +44,17 @@ sp_xtp_control_query_exec_stats [ [ @new_collection_value = ] collection_value ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- @new_collection_value= *значение*  
+ @new_collection_value = *значение*  
  Определяет, включен (1) или выключен (0) сбор статистики на уровне процедуры.  
   
- @new_collection_valueПри запуске присваивается значение 0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ @new_collection_value При запуске присваивается значение 0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- @database_id= = *database_id*, @xtp_object_id = *procedure_id*  
+ @database_id = = *database_id*, @xtp_object_id = *procedure_id*  
  Идентификатор базы данных и идентификатор объекта для скомпилированной в собственном коде хранимой процедуры. Если сбор статистики включен для экземпляра ([sys. sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)), выполняется сбор статистики по хранимой процедуре, скомпилированной в собственном режиме. При отключении сбора статистики для экземпляра сбор статистики для отдельных, скомпилированных в собственном коде хранимых процедур не отключается.  
   
  Используйте представление [sys. databases &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md), [sys. Procedures &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md), [DB_ID &#40;transact-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)или [object_id &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md) , чтобы получить идентификаторы для базы данных и хранимой процедуры.  
   
- @old_collection_value= *значение*  
+ @old_collection_value = *значение*  
  Возвращает текущее состояние.  
   
 ## <a name="return-code"></a>Код возврата  
@@ -83,7 +84,7 @@ SELECT @c AS 'collection status';
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Выполняющаяся в памяти OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

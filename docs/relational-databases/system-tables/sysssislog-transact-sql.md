@@ -1,4 +1,5 @@
 ---
+description: sysssislog (Transact-SQL)
 title: sysssislog (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7fa288a1-81e3-42a0-82f6-8a59019693d0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 264f6495c12a350983af22c1bef325278238a514
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9aef51cb3297cd83b68fa42c71dcd993fb418830
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889266"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473112"
 ---
 # <a name="sysssislog-transact-sql"></a>sysssislog (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85889266"
   Содержит по одной строке для каждой записи журнала, сформированной пакетами или их задачами и контейнерами во время выполнения. Эта таблица создается в базе данных msdb при установке [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Если ведение журнала настроено таким образом, что записи вносятся в журнал другой базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], то в указанной базе данных создается таблица sysssislog следующего формата.  
   
 > [!NOTE]  
->  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]записывает записи журнала в эту таблицу **только** в том случае, если пакеты используют [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] регистратор.  
+>  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] записывает записи журнала в эту таблицу **только** в том случае, если пакеты используют [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] регистратор.  
   
   
 |Имя столбца|Тип данных|Описание|  
@@ -45,8 +46,8 @@ ms.locfileid: "85889266"
 |starttime|**datetime**|Время начала выполнения пакета.|  
 |endtime|**datetime**|Время завершения выполнения пакета.<br /><br /> Эта функция не реализована. Значение в столбце endtime всегда равно значению в столбце starttime.|  
 |datacode|**int**|Необязательное целочисленное значение, которое обычно указывает на результат выполнения контейнера или задачи.|  
-|databytes|**изображение**|Необязательный байтовый массив для хранения дополнительной информации.|  
-|message|**nvarchar**|Описание события и сведения, связанные с событием.|  
+|databytes|**image**|Необязательный байтовый массив для хранения дополнительной информации.|  
+|сообщение|**nvarchar**|Описание события и сведения, связанные с событием.|  
   
 ## <a name="see-also"></a>См. также:  
  [Ведение журналов в службах Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md)   

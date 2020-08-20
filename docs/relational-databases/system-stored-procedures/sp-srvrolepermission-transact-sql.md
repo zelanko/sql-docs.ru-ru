@@ -1,4 +1,5 @@
 ---
+description: sp_srvrolepermission (Transact-SQL)
 title: sp_srvrolepermission (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/20/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5709667f-e3e4-48a2-93ec-af5e22a2ac58
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 930b5ae195ab917faf5425bd2084314a633318b3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fb7a553adf516002a61f54ef900fd579f9d15856
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893037"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473717"
 ---
 # <a name="sp_srvrolepermission-transact-sql"></a>sp_srvrolepermission (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @srvrolename = ] 'role'`Имя предопределенной роли сервера, для которой возвращаются разрешения. Аргумент *Role* имеет тип **sysname**и значение по умолчанию NULL. Если роль не указана, возвращаются разрешения для всех предопределенных ролей сервера. *роль* может иметь одно из следующих значений.  
+`[ @srvrolename = ] 'role'` Имя предопределенной роли сервера, для которой возвращаются разрешения. Аргумент *Role* имеет тип **sysname**и значение по умолчанию NULL. Если роль не указана, возвращаются разрешения для всех предопределенных ролей сервера. *роль* может иметь одно из следующих значений.  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**sysadmin**|Системные администраторы|  
 |**securityadmin**|Администраторы безопасности.|  

@@ -1,4 +1,5 @@
 ---
+description: Управление паролями (DB2ToSQL)
 title: Управление паролями (DB2ToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 56d546e3-8747-4169-aace-693302667e94
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: af41c1a9eed355d75d5bd3e48886845b9a3069d1
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 25a6063863355fe40f36ab00bf7473d5d3d690d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936682"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472483"
 ---
 # <a name="managing-passwords-db2tosql"></a>Управление паролями (DB2ToSQL)
 В этом разделе описывается защита паролей базы данных и процедура импорта или экспорта на серверах:  
@@ -137,6 +138,6 @@ _Функция импорта_ считывает идентификатор с
 
 8. Подтверждение пароля: XXXXXXXX
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Выполнение команд консоли SSMA](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
   

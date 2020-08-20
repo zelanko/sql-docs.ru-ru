@@ -1,4 +1,5 @@
 ---
+description: DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)
 title: DROP DATABASE AUDIT SPECIFICATION (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3c387c6e-9a67-4daa-b64a-c87f6b3c9c4f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ebf969293f515a38c1721abb4f08c94c8ac7eb32
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: e4abd76d2f2fb4b2036036e165ec8f075003fc21
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484145"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472307"
 ---
 # <a name="drop-database-audit-specification-transact-sql"></a>DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +47,7 @@ DROP DATABASE AUDIT SPECIFICATION audit_specification_name
  *audit_specification_name*  
  Имя существующего объекта спецификации аудита.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Инструкция DROP DATABASE AUDIT SPECIFICATION удаляет метаданные спецификации аудита, но не удаляет данные аудита, собранные до вызова команды DROP. Чтобы удалить спецификацию аудита базы данных, ее состояние необходимо установить в положение OFF при помощи инструкции `ALTER DATABASE AUDIT SPECIFICATION`.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -64,7 +65,7 @@ GO
   
  Полный пример создания аудита см. в разделе [Подсистема аудита SQL Server (ядро СУБД)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE SERVER AUDIT (Transact-SQL)](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT (Transact-SQL)](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT (Transact-SQL)](../../t-sql/statements/drop-server-audit-transact-sql.md)   

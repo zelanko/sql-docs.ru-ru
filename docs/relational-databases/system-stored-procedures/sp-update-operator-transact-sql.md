@@ -1,4 +1,5 @@
 ---
+description: sp_update_operator (Transact-SQL)
 title: sp_update_operator (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8966e5d423a24be8c7d7329f270368ea20e9ef7b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 26c34a2af11f50ed8d9a22bada95525cfdca6499
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891306"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473558"
 ---
 # <a name="sp_update_operator-transact-sql"></a>sp_update_operator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

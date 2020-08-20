@@ -1,4 +1,5 @@
 ---
+description: sp_setsubscriptionxactseqno (Transact-SQL)
 title: sp_setsubscriptionxactseqno (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d17675f8443db2a726ceb72237d184d665f9d7e8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fc63f645fe2c825e0c8dac27cbf5aeb138123c0b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881536"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473803"
 ---
 # <a name="sp_setsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,13 +44,13 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'`Имя издателя. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'` Имя издателя. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publisher_db = ] 'publisher_db'`Имя базы данных публикации. Аргумент *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию. Для издателя, не являющегося SQL Server, *publisher_db* является именем базы данных распространителя.  
+`[ @publisher_db = ] 'publisher_db'` Имя базы данных публикации. Аргумент *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию. Для издателя, не являющегося SQL Server, *publisher_db* является именем базы данных распространителя.  
   
-`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию. Если агент распространения совместно используется несколькими публикациями, необходимо указать значение ALL для параметра *publication*.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию. Если агент распространения совместно используется несколькими публикациями, необходимо указать значение ALL для параметра *publication*.  
   
-`[ @xact_seqno = ] xact_seqno`Номер LSN следующей транзакции на распространителе, применяемой на подписчике. *xact_seqno* имеет тип **varbinary (16)** и не имеет значения по умолчанию.  
+`[ @xact_seqno = ] xact_seqno` Номер LSN следующей транзакции на распространителе, применяемой на подписчике. *xact_seqno* имеет тип **varbinary (16)** и не имеет значения по умолчанию.  
   
 ## <a name="result-set"></a>Результирующий набор  
   
