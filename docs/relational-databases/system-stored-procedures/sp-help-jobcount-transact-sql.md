@@ -1,4 +1,5 @@
 ---
+description: sp_help_jobcount (Transact-SQL)
 title: sp_help_jobcount (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ae8ef851-646c-4889-bc11-c8ec78762572
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a697489367d085714fd9ab1ab5c6245ca04b9ee1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 86d4c7ebeac06589e7f80f0a01adb0b996a1d3bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893681"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474199"
 ---
 # <a name="sp_help_jobcount-transact-sql"></a>sp_help_jobcount (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +42,9 @@ sp_help_jobcount
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @schedule_id = ] schedule_id`Идентификатор расписания для перечисления. *schedule_id* имеет **тип int**и не имеет значения по умолчанию. Можно указать либо *schedule_id* , либо *schedule_name* .  
+`[ @schedule_id = ] schedule_id` Идентификатор расписания для перечисления. *schedule_id* имеет **тип int**и не имеет значения по умолчанию. Можно указать либо *schedule_id* , либо *schedule_name* .  
   
-`[ @schedule_name = ] 'schedule_name'`Имя расписания для перечисления. Аргумент *schedule_name* имеет тип **sysname**и не имеет значения по умолчанию. Можно указать либо *schedule_id* , либо *schedule_name* .  
+`[ @schedule_name = ] 'schedule_name'` Имя расписания для перечисления. Аргумент *schedule_name* имеет тип **sysname**и не имеет значения по умолчанию. Можно указать либо *schedule_id* , либо *schedule_name* .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  

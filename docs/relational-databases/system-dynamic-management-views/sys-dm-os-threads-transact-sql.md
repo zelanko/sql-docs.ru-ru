@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_threads (Transact-SQL)
 title: sys. dm_os_threads (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/13/2017
@@ -20,11 +21,12 @@ ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 53957ed65247124927e248c4e9aad104362ec84e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 80986f9bce91034d8950915f5048e3f4ee895f57
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008565"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474848"
 ---
 # <a name="sysdm_os_threads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +52,7 @@ ms.locfileid: "86008565"
 |stack_bytes_used|**int**|Число байтов, используемых потоком в данный момент.|  
 |affinity|**bigint**|Маска ЦП, на которой выполняется данный поток. Это зависит от значения, настроенного инструкцией **ALTER Server Configuration Set Process сходства** . Может отличаться от планировщика в случае мягкой привязки.|  
 |Приоритет|**int**|Приоритет данного потока.|  
-|Языковой стандарт|**int**|Кэшированное значение идентификатора локали (LCID) для данного потока.|  
+|Локаль|**int**|Кэшированное значение идентификатора локали (LCID) для данного потока.|  
 |Токен|**varbinary(8)**|Кэшированный дескриптор токена олицетворения для данного потока.|  
 |is_impersonating|**int**|Указывает, использует ли данный поток олицетворение Win32:<br /><br /> 1 = поток использует учетные данные для обеспечения безопасности, отличающиеся от данных для процесса по умолчанию. Это значит, что поток олицетворяет сущность, отличную от созданной процессом.|  
 |is_waiting_on_loader_lock|**int**|Состояние операционной системы, указывающее, ожидает ли поток завершения блокировки загрузчика.|  
@@ -62,12 +64,12 @@ ms.locfileid: "86008565"
 |fiber_context_address|**varbinary(8)**|Адрес контекста внутреннего волокна. Применимо только в случае, если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроен для использования упрощенных пулов.|  
 |self_address|**varbinary(8)**|Указатель для обеспечения внутренней согласованности.|  
 |processor_group|**smallint**|**Область применения**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] и более поздних версий.<br /><br /> Идентификатор Processor_group.|  
-|pdw_node_id|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
+|pdw_node_id|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
   
 ## <a name="permissions"></a>Разрешения
 
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
+На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется  **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
 
 ## <a name="notes-on-linux-version"></a>Заметки о версии Linux
 
@@ -87,9 +89,9 @@ SELECT *
   WHERE started_by_sqlservr = 0;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
   [sys. dm_os_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)   
- [SQL Server динамические административные представления, связанные с операционной системой &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [SQL Server динамические административные представления, связанные с операционной системой &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

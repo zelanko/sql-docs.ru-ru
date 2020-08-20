@@ -1,4 +1,5 @@
 ---
+description: sys. dm_exec_query_plan_stats (Transact-SQL)
 title: sys. dm_exec_query_plan_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/22/2019
@@ -17,12 +18,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 3bd7aa786466f3bde9aa42d75437d2406ef1e808
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6c76005fefffdbce76309762b1d2a1cd81d83537
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734751"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474979"
 ---
 # <a name="sysdm_exec_query_plan_stats-transact-sql"></a>sys. dm_exec_query_plan_stats (Transact-SQL)
 [!INCLUDE[SQL Server 2019](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
@@ -61,12 +62,12 @@ sys.dm_exec_query_plan_stats(plan_handle)
 |**Шифрование**|**bit**|Указывает, зашифрована ли соответствующая хранимая процедура.<br /><br /> 0 = не зашифрована<br /><br /> 1 = зашифрована<br /><br /> Столбец не может содержать значение NULL.|  
 |**query_plan**|**xml**|Содержит Последнее известное представление среды выполнения Showplan о фактическом плане выполнения запроса, указанном с помощью *plan_handle*. Представление Showplan имеет формат XML. Для каждого пакета, содержащего, например нерегламентированные инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)], вызовы хранимых процедур и вызовы определяемых пользователем функций, формируется один план.<br /><br /> Столбец может содержать значение NULL.| 
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 Эта системная функция доступна начиная с версии [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2,4.
 
 Эта функция активируется явным образом и требует включения [флага трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451. Начиная с версии [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5 эта задача выполняется на уровне базы данных в соответствии с инструкциями, которые можно найти в описании параметра LAST_QUERY_PLAN_STATS в статье [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
-Эта системная функция работает в инфраструктуре профилирования статистики выполнения **упрощенных** запросов. Дополнительные сведения см. в разделе [инфраструктура профилирования запросов](../../relational-databases/performance/query-profiling-infrastructure.md).  
+Эта системная функция работает в инфраструктуре профилирования статистики выполнения **упрощенных** запросов. Дополнительные сведения см. в разделе [Инфраструктура профилирования запросов](../../relational-databases/performance/query-profiling-infrastructure.md).  
 
 Выходные данные инструкции Showplan с помощью sys. dm_exec_query_plan_stats содержат следующие сведения:
 -  Все сведения времени компиляции, найденные в кэшированном плане
@@ -148,6 +149,6 @@ GO
 
 ## <a name="see-also"></a>См. также
   [Флаги трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
- [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Динамические административные представления, связанные с выполнением &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Динамические административные представления, связанные с выполнением &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 

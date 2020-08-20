@@ -1,4 +1,5 @@
 ---
+description: sp_help_jobserver (Transact-SQL)
 title: sp_help_jobserver (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 93511eedfe434419270cccf6c5b4c3c685a8eeef
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8f0093529c27d8dae022e005f92eeaf4f84e99b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893677"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474184"
 ---
 # <a name="sp_help_jobserver-transact-sql"></a>sp_help_jobserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,14 +43,14 @@ sp_help_jobserver
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_id = ] job_id`Идентификационный номер задания, для которого возвращаются сведения. *job_id* имеет тип **uniqueidentifier**и значение по умолчанию NULL.  
+`[ @job_id = ] job_id` Идентификационный номер задания, для которого возвращаются сведения. *job_id* имеет тип **uniqueidentifier**и значение по умолчанию NULL.  
   
-`[ @job_name = ] 'job_name'`Имя задания, для которого возвращаются сведения. Аргумент *job_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'` Имя задания, для которого возвращаются сведения. Аргумент *job_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Необходимо указать либо *job_id* , либо *job_name* , но нельзя указать оба значения.  
   
-`[ @show_last_run_details = ] show_last_run_details`Указывает, является ли информация о выполнении последнего запуска частью результирующего набора. *show_last_run_details* имеет тип **tinyint**и значение по умолчанию **0**. **0** не включает сведения о последнем запуске, а **1** —.  
+`[ @show_last_run_details = ] show_last_run_details` Указывает, является ли информация о выполнении последнего запуска частью результирующего набора. *show_last_run_details* имеет тип **tinyint**и значение по умолчанию **0**. **0** не включает сведения о последнем запуске, а **1** —.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

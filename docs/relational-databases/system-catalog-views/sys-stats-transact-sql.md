@@ -1,4 +1,5 @@
 ---
+description: sys.stats (Transact-SQL)
 title: sys. stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/18/2017
@@ -20,18 +21,19 @@ ms.assetid: 42605c80-126f-460a-befb-a0b7482fae6a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 19a338aa9f5d20dd9a6d089cdf4b56bcf1a4b541
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 18c6900c0eae313b77e796a99666dd1176d9f2df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012911"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475239"
 ---
 # <a name="sysstats-transact-sql"></a>sys.stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Содержит по одной строке для каждого объекта статистики, существующего для таблиц, индексов и индексированных представлений в базе данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Каждый индекс будет иметь соответствующую строку статистики с тем же именем и идентификатором (**index_id**  =  **stats_id**), но не каждая строка статистики имеет соответствующий индекс.  
   
- Представление каталога [sys. stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) предоставляет статистические данные для каждого столбца в базе данных. Дополнительные сведения о статистике см. в разделе [Статистика](../../relational-databases/statistics/statistics.md).  
+ Представление каталога [sys. stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) предоставляет статистические данные для каждого столбца в базе данных. Дополнительные сведения о статистике см. в статье [Статистика](../../relational-databases/statistics/statistics.md).  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -66,14 +68,14 @@ INNER JOIN sys.columns AS c
 WHERE s.object_id = OBJECT_ID('HumanResources.Employee');  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Представления каталога объектов &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Представления каталога объектов (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Запросы к системному каталогу SQL Server вопросы и ответы](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
- [Статистически](../../relational-databases/statistics/statistics.md)    
- [sys. dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
+ [Статистика](../../relational-databases/statistics/statistics.md)    
+ [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
  [sys. dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
- [sys.stats_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)
+ [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)
  
 
  

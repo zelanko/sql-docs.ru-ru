@@ -1,4 +1,5 @@
 ---
+description: Хранимая процедура sp_autostats (Transact-SQL)
 title: sp_autostats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: d1df8c15-ee73-49eb-9d13-6e98943c3e38
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef219cd00c8603fce6c03e92bb5f540bd954e81a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 113b17db3bd06b8855b91bea2b67b96831b42ac1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716167"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474479"
 ---
 # <a name="sp_autostats-transact-sql"></a>Хранимая процедура sp_autostats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,9 +45,9 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @tblname = ] 'table_or_indexed_view_name'`Имя таблицы или индексированного представления для отображения параметра AUTO_UPDATE_STATISTICS. *table_or_indexed_view_name* имеет тип **nvarchar (776)** и не имеет значения по умолчанию.  
+`[ @tblname = ] 'table_or_indexed_view_name'` Имя таблицы или индексированного представления для отображения параметра AUTO_UPDATE_STATISTICS. *table_or_indexed_view_name* имеет тип **nvarchar (776)** и не имеет значения по умолчанию.  
   
-`[ @flagc = ] 'stats_flag'`Обновляет параметр AUTO_UPDATE_STATISTICS одним из следующих значений:  
+`[ @flagc = ] 'stats_flag'` Обновляет параметр AUTO_UPDATE_STATISTICS одним из следующих значений:  
   
  **вкл** . = вкл.  
   
@@ -54,7 +55,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  Если параметр *stats_flag* не указан, отобразится текущее значение параметра AUTO_UPDATE_STATISTICS. *stats_flag* имеет тип **varchar (10)** и значение по умолчанию NULL.  
   
-`[ @indname = ] 'statistics_name'`Имя статистики для вывода или обновления параметра AUTO_UPDATE_STATISTICS в. Чтобы отобразить статистику для индекса, можно использовать имя индекса. Имя индекса совпадает с именем соответствующего объекта статистики.  
+`[ @indname = ] 'statistics_name'` Имя статистики для вывода или обновления параметра AUTO_UPDATE_STATISTICS в. Чтобы отобразить статистику для индекса, можно использовать имя индекса. Имя индекса совпадает с именем соответствующего объекта статистики.  
   
  Аргумент *statistics_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
@@ -74,7 +75,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  Результирующий набор для таблицы или индексированного представления включает статистику, созданную для индексов, статистику по отдельным столбцам, созданную с параметром AUTO_CREATE_STATISTICS и статистикой, созданной с помощью инструкции [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) .  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Если указанный индекс отключен или указанная таблица имеет отключенный кластеризованный индекс, выводится сообщение об ошибке.  
   
  Параметр AUTO_UPDATE_STATISTICS всегда имеет значение OFF для таблиц с оптимизацией памяти.  
@@ -114,15 +115,15 @@ EXEC sp_autostats 'Production.Product', 'OFF', AK_Product_Name;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Статистически](../../relational-databases/statistics/statistics.md)   
+## <a name="see-also"></a>См. также:  
+ [Статистика](../../relational-databases/statistics/statistics.md)   
  [Параметры ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Создание статистики &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
- [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [Удаление статистики &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
+ [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)   
+ [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
+ [DROP STATISTICS (Transact-SQL)](../../t-sql/statements/drop-statistics-transact-sql.md)   
  [sp_createstats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
- [Обновление статистики &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
+ [UPDATE STATISTICS (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

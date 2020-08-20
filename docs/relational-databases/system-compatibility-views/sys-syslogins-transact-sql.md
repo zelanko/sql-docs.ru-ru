@@ -1,4 +1,5 @@
 ---
+description: sys.syslogins (Transact-SQL)
 title: sys.sysимена входа (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/08/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4cb34f17-a4bb-469f-a218-71f074e6308f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eb1fd5b8dcf9867cb61452534a742cc929a41396
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 075e78b9f8e765cad359a136e643f594ce6638b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891941"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475124"
 ---
 # <a name="syssyslogins-transact-sql"></a>sys.syslogins (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85891941"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -69,7 +70,7 @@ ms.locfileid: "85891941"
 |**LoginName**|**nvarchar(128)**|Имя входа пользователя. Предоставляется для обратной совместимости.|  
   
 ## <a name="see-also"></a>См. также  
- [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Представления совместимости (Transact-SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sys.soap_endpoints (Transact-SQL)
 title: sys. soap_endpoints (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f50dcbfc-02ed-4a19-9c07-c78a5a1b3224
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 46f42c185a1be2cbf8742a14cc7d897f19430ca1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 051af6e1baa05698f7bc86c63a72c5e0cd6b1f0c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901174"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475271"
 ---
 # <a name="syssoap_endpoints-transact-sql"></a>sys.soap_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85901174"
 |**default_database**|**sysname**|Имя базы данных по умолчанию, заданное в параметре DATABASE.<br /><br /> NULL = указан параметр DEFAULT.|  
 |**default_namespace**|**nvarchar (384)**|Пространство имен по умолчанию, указанное в параметре NAMESPACE =, или `https://tempuri.org` значение, если вместо него был указан аргумент Default.|  
 |**default_result_schema**|**tinyint**|Значение по умолчанию для параметра SCHEMA:<br /><br /> 0 = нет<br /><br /> 1 = STANDARD|  
-|**default_result_schema_desc**|**nvarchar(60)**|Описание значения по умолчанию параметра SCHEMA:<br /><br /> NONE<br /><br /> STANDARD|  
+|**default_result_schema_desc**|**nvarchar(60)**|Описание значения по умолчанию параметра SCHEMA:<br /><br /> None<br /><br /> STANDARD|  
 |**is_xml_charset_enforced**|**bit**|0 = указан параметр CHARACTER_SET = SQL.<br /><br /> 1 = указан параметр CHARACTER_SET = XML.|  
 |**is_session_enabled**|**bit**|0 = указан параметр SESSION = DISABLE.<br /><br /> 1 = указан параметр SESSION = ENABLED.|  
 |**session_timeout**|**int**|Значение, указанное параметром SESSION_TIMEOUT.|  
@@ -52,8 +53,8 @@ ms.locfileid: "85901174"
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также  
- [Представления каталога конечных точек &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Представления каталога конечных точек (Transact-SQL)](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

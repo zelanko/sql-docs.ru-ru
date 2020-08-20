@@ -1,4 +1,5 @@
 ---
+description: sp_helptracertokenhistory (Transact-SQL)
 title: sp_helptracertokenhistory (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 96910d1c-be76-43eb-9c93-4477e6761749
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9242f547d8f44e09341183a30a49afef4d2c4f52
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f6db181cfddbbde9730fba0ac9b0ddfc7264d433
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736925"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474044"
 ---
 # <a name="sp_helptracertokenhistory-transact-sql"></a>sp_helptracertokenhistory (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,16 +41,16 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'`Имя публикации, в которую был вставлен трассировочный токен. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации, в которую был вставлен трассировочный токен. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @tracer_id = ] tracer_id`Идентификатор трассировочного токена в [MStracer_tokens &#40;таблице&#41;Transact-SQL](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) , для которой возвращаются данные журнала. *tracer_id* имеет **тип int**и не имеет значения по умолчанию.  
+`[ @tracer_id = ] tracer_id` Идентификатор трассировочного токена в [MStracer_tokens &#40;таблице&#41;Transact-SQL ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) , для которой возвращаются данные журнала. *tracer_id* имеет **тип int**и не имеет значения по умолчанию.  
   
-`[ @publisher = ] 'publisher'`Имя издателя. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'` Имя издателя. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]
 >  Этот параметр следует указывать только для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей, не являющихся.  
   
-`[ @publisher_db = ] 'publisher_db'`Имя базы данных публикации. Аргумент *publisher_db* имеет тип **sysname**и значение по умолчанию NULL. Этот параметр не учитывается, если хранимая процедура выполняется на издателе.  
+`[ @publisher_db = ] 'publisher_db'` Имя базы данных публикации. Аргумент *publisher_db* имеет тип **sysname**и значение по умолчанию NULL. Этот параметр не учитывается, если хранимая процедура выполняется на издателе.  
   
 ## <a name="result-set"></a>Результирующий набор  
   
@@ -64,7 +65,7 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_helptracertokenhistory** используется в репликации транзакций.  
   
  Выполните [sp_helptracertokens &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) , чтобы получить список трассировочных токенов для публикации.  

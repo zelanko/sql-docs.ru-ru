@@ -1,4 +1,5 @@
 ---
+description: Динамические административные представления, относящиеся к операционной системе SQL Server (Transact-SQL)
 title: SQL Server динамические административные представления, связанные с операционной системой (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 04/17/2018
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3030c86a-0a74-4fed-ac0f-392e244cb965
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0ca96f4134e58a129ed14129431f5d8caceae31d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 2b95dc736e02dd274723686429907fbccf4fea2a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243805"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475063"
 ---
 # <a name="sql-server-operating-system-related-dynamic-management-views-transact-sql"></a>Динамические административные представления, относящиеся к операционной системе SQL Server (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +66,7 @@ ms.locfileid: "87243805"
 |**sys.dm_os_memory_allocations**|**sys.dm_os_sublatches**|  
 |**sys.dm_os_worker_local_storage**||  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

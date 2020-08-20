@@ -1,4 +1,5 @@
 ---
+description: Класс событий Audit Database Object Management
 title: Класс событий Audit Database Object Management | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,29 +13,29 @@ ms.assetid: bc5c0be2-990b-4032-a5e6-41ce98661698
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a09428b2554e240e0caef03077ff357c02bb48ae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7222928fabac19df648cea9d059d6657e8bd3c9a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85630441"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475998"
 ---
 # <a name="audit-database-object-management-event-class"></a>Класс событий Audit Database Object Management
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  События класса **Audit Database Object Management** происходят при выполнении инструкций CREATE, ALTER или DROP над объектами базы данных, например схемами.  
+   Класс событий **Database Object Management** возникает при выполнении инструкций CREATE, ALTER или DROP над объектами базы данных, например схемами.  
   
 > [!NOTE]  
 >  Для действий, связанных с открытым ключом, аудит не проводится.  
   
 ## <a name="audit-database-object-management-event-class-data-columns"></a>Столбцы данных класса событий Audit Database Object Management  
   
-|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |**DatabaseID**|**int**|Идентификатор базы данных, указанной в инструкции USE *database* , или базы данных по умолчанию, если для данного экземпляра инструкция USE *database* не выполнялась. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных **ServerName** захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |**DatabaseName**|**nvarchar**|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
 |**DBUserName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|40|Да|  
-|**EventSequence**|**int**|Последовательность данного события в запросе.|51|нет|  
+|**EventSequence**|**int**|Последовательность данного события в запросе.|51|Нет|  
 |**EventSubClass**|**int**|Тип подкласса события.<br /><br /> 1 = создать<br /><br /> 2 = изменить<br /><br /> 3 = удалить<br /><br /> 4 = создать дамп<br /><br /> 10 = открыть<br /><br /> 11 = загрузить<br /><br /> 12 = доступ|21|Да|  
 |**HostName**|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |**IsSystem**|**int**|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  
@@ -46,7 +47,7 @@ ms.locfileid: "85630441"
 |**ObjectType**|**int**|Значение, представляющее тип объекта, связанного с событием. Это значение соответствует столбцу типа в представлении каталога **sys.objects** . Значения см. в разделе [Столбец события ObjectType Trace](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Да|  
 |**OwnerName**|**nvarchar**|Имя пользователя базы данных, владеющего объектом.|37|Да|  
 |**RequestID**|**int**|Идентификатор запроса, содержащего инструкцию.|49|Да|  
-|**ServerName**|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|нет|  
+|**ServerName**|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|Нет|  
 |**SessionLoginName**|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по имени "Имя_входа1" и при выполнении инструкции под именем "Имя_входа2" **SessionLoginName** содержит значение "Имя_входа1", а **LoginName** — значение "Имя_входа2". В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |**SPID**|**int**|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |**StartTime**|**datetime**|Время начала события, если оно известно.|14|Да|  

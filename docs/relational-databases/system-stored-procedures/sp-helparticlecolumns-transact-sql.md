@@ -1,4 +1,5 @@
 ---
+description: sp_helparticlecolumns (Transact-SQL)
 title: sp_helparticlecolumns (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4ab8250e12f5b553a9c2c080b0a1e4efe9eb1657
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eed4538f2ffe43faf6ef83685ba3b5984198663c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786188"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474186"
 ---
 # <a name="sp_helparticlecolumns-transact-sql"></a>sp_helparticlecolumns (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,11 +40,11 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'`Имя публикации, содержащей статью. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации, содержащей статью. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @article = ] 'article'`Имя статьи, для которой возвращены столбцы. Аргумент *article* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @article = ] 'article'` Имя статьи, для которой возвращены столбцы. Аргумент *article* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publisher = ] 'publisher'`Указывает издателя, отличного от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'` Указывает издателя, отличного от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  не следует указывать *Издатель* , если запрошенная статья опубликована [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателем.  
@@ -57,11 +58,11 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 |-----------------|---------------|-----------------|  
 |**Идентификатор столбца**|**int**|Идентификатор столбца.|  
 |**column**|**sysname**|Имя столбца.|  
-|**выпущен**|**bit**|Опубликован ли столбец:<br /><br /> **0** = нет<br /><br /> **1** = да|  
+|**выпущен**|**bit**|Опубликован ли столбец:<br /><br /> **0** = Нет<br /><br /> **1** = Да|  
 |**тип издателя**|**sysname**|Тип данных столбца на издателе.|  
 |**Тип подписчика**|**sysname**|Тип данных столбца на подписчике.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_helparticlecolumns** используется в моментальных снимках и репликации транзакций.  
   
  **sp_helparticlecolumns** удобно использовать для проверки вертикальной секции.  

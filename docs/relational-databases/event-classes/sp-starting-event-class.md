@@ -1,4 +1,5 @@
 ---
+description: SP:Starting, класс событий
 title: Класс событий SP:Starting | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: ef55e579-080d-4650-a7fc-4dd03ed8e391
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2450f77d60dfdb16d8d0e6e82fb363c8c7678f87
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bf2ea6a8e30180b4931d466effd52bb1f484f2cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85780154"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475941"
 ---
 # <a name="spstarting-event-class"></a>SP:Starting, класс событий
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -25,14 +26,14 @@ ms.locfileid: "85780154"
   
 ## <a name="spstarting-event-class-data-columns"></a>Столбцы данных класса событий SP:Starting  
   
-|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |ClientProcessID|**int**|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент предоставляет идентификатор клиентского процесса.|9|Да|  
 |DatabaseID|**int**|Идентификатор базы данных, в которой выполняется хранимая процедура. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |имя_базы_данных|**nvarchar**|Имя базы данных, в которой выполняется хранимая процедура.|35|Да|  
-|EventClass|**int**|Тип события = 42.|27|нет|  
-|EventSequence|**int**|Последовательность данного события в запросе.|51|нет|  
+|EventClass|**int**|Тип события = 42.|27|Нет|  
+|EventSequence|**int**|Последовательность данного события в запросе.|51|Нет|  
 |GroupID|**int**|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |HostName|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |IsSystem|**int**|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  
@@ -46,7 +47,7 @@ ms.locfileid: "85780154"
 |ObjectName|**nvarchar**|Имя хранимой процедуры, выполнение которой началось.|34|Да|  
 |ObjectType|**int**|Тип хранимой процедуры, выполнение которой началось. Это значение соответствует столбцу типа в представлении каталога sys.objects. Значения см. в разделе [Столбец события ObjectType Trace](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Да|  
 |RequestID|**int**|Идентификатор запроса, содержащего инструкцию.|49|Да|  
-|ServerName|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|нет|  
+|ServerName|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|Нет|  
 |SessionLoginName|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Login1 и при выполнении инструкции под именем Login2 SessionLoginName будет содержать значение Login1, а LoginName — значение Login2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |SourceDatabaseID|**int**|Идентификатор базы данных, в которой находится объект.|62|Да|  
 |SPID|**int**|Идентификатор сеанса, в котором произошло событие.|12|Да|  

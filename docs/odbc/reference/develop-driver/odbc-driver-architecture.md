@@ -1,4 +1,5 @@
 ---
+description: Архитектура драйвера ODBC
 title: Архитектура драйвера ODBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 21a62c7c-192e-4718-a16e-aa12b0de4419
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 712de6a7a3f80ce1cd3ca854a88765dbfa531356
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1789d5799ed9eb15ace7ea263d1a5804c8e86e74
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294562"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476250"
 ---
 # <a name="odbc-driver-architecture"></a>Архитектура драйвера ODBC
 Модули записи драйверов должны знать, что архитектура драйвера может повлиять на то, может ли приложение использовать специфический для СУБД SQL.  
@@ -54,5 +55,5 @@ ms.locfileid: "81294562"
 |Включение пулов соединений|[Объединение соединений ODBC](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md)|[Подключение к источнику данных или драйверу](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md), Справочник программиста по ODBC|  
 |Проблемы с подключением и драйверами Юникода/ANSI|[Драйверы Юникода](../../../odbc/reference/develop-app/unicode-drivers.md)|[Рекомендации по программированию](../../../odbc/reference/develop-app/programming-considerations.md)в справочнике программиста по ODBC|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Разработка драйвера ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)

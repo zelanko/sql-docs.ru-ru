@@ -1,4 +1,5 @@
 ---
+description: sp_delete_operator (Transact-SQL)
 title: sp_delete_operator (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ff6c2c4b-e9fe-4d0c-bbc2-a2ddcc1acb95
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c584dceb9306d6a74575b548bfd9d8548acb47a5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 22fcae3edb3d882826e80bdb7a359726eac930fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85862476"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474331"
 ---
 # <a name="sp_delete_operator-transact-sql"></a>sp_delete_operator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +41,9 @@ sp_delete_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @name = ] 'name'`Имя удаляемого оператора. Аргумент *Name* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @name = ] 'name'` Имя удаляемого оператора. Аргумент *Name* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @reassign_to_operator = ] 'reassign_operator'`Имя оператора, которому могут быть переназначены предупреждения указанного оператора. Аргумент *reassign_operator* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @reassign_to_operator = ] 'reassign_operator'` Имя оператора, которому могут быть переназначены предупреждения указанного оператора. Аргумент *reassign_operator* имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -67,7 +68,7 @@ EXEC sp_delete_operator @name = 'François Ajenstat' ;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
  [sp_update_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   

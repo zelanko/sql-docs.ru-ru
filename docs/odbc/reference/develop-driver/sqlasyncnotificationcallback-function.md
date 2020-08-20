@@ -1,4 +1,5 @@
 ---
+description: Функция SQLAsyncNotificationCallback
 title: Функция Скласинкнотификатионкаллбакк | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c56aedc9-f7f7-4641-b605-f0f98ed4400c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e6c182c48b8e5ddb70204ddd3a94d9651f97595d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b9d03e8a3fa7e62c19dd09a210dca3a56348c692
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294541"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476233"
 ---
 # <a name="sqlasyncnotificationcallback-function"></a>Функция SQLAsyncNotificationCallback
 **Соответствия**  
@@ -47,16 +48,16 @@ typedef SQLRETURN (SQL_API *SQL_ASYNC_NOTIFICATION_CALLBACK)(
   
  Если *Handle* не является допустимым маркером типа, указанного параметром *параметром handletype*, **склканцелхандле** возвращает SQL_INVALID_HANDLE.  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  SQL_SUCCESS или SQL_ERROR.  
   
 ## <a name="diagnostics"></a>Диагностика  
  **Скласинкнотификатионкаллбакк** может возвращать SQL_ERROR в следующих двух ситуациях (они указывают на проблему реализации в драйвере или диспетчере драйверов.  
   
-|Error|Описание|  
+|Ошибка|Описание|  
 |-----------|-----------------|  
 |Соединение или инструкция не запрашивают уведомление.||  
 |Недопустимый *Handle*|Драйвер передал недопустимый обработчик, который не прошел проверку внутреннего диспетчера драйверов.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Асинхронное выполнение (метод опроса)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

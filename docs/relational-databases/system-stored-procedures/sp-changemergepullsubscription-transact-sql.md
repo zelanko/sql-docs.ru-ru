@@ -1,4 +1,5 @@
 ---
+description: sp_changemergepullsubscription (Transact-SQL)
 title: sp_changemergepullsubscription (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 349fecb1324d0af0e6d6d7b099064781e6f8aeb1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 904db034372ce3be7b4f3bf3e1f7dc4a95d8383d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85872543"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474438"
 ---
 # <a name="sp_changemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,20 +42,20 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию%.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию%.  
   
-`[ @publisher = ] 'publisher'`Имя издателя. Аргумент *Publisher*имеет тип **sysname**и значение по умолчанию%.  
+`[ @publisher = ] 'publisher'` Имя издателя. Аргумент *Publisher*имеет тип **sysname**и значение по умолчанию%.  
   
-`[ @publisher_db = ] 'publisher_db'`Имя базы данных издателя. Аргумент *publisher_db*имеет тип **sysname**и значение по умолчанию%.  
+`[ @publisher_db = ] 'publisher_db'` Имя базы данных издателя. Аргумент *publisher_db*имеет тип **sysname**и значение по умолчанию%.  
   
-`[ @property = ] 'property'`Имя изменяемого свойства. Аргумент *Property* имеет тип **sysname**и может принимать одно из значений в таблице.  
+`[ @property = ] 'property'` Имя изменяемого свойства. Аргумент *Property* имеет тип **sysname**и может принимать одно из значений в таблице.  
   
-`[ @value = ] 'value'`Новое значение для указанного свойства. *значение*равно **nvarchar (255)** и может быть одним из значений в таблице.  
+`[ @value = ] 'value'` Новое значение для указанного свойства. *значение*равно **nvarchar (255)** и может быть одним из значений в таблице.  
   
 |Свойство|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||Местоположение папки моментальных снимков, если оно отлично от местоположения по умолчанию или дополняет его.|  
-|**nописание**||Описание подписки слиянием по запросу.|  
+|**description**||Описание подписки слиянием по запросу.|  
 |**распространение**||Имя распространителя.|  
 |**distributor_login**||Идентификатор входа, используемый на стороне распространителя для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**distributor_password**||Пароль (шифрованный), используемый на распространителе для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -74,7 +75,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**internet_url**||UR-адрес, который представляет собой адрес средства прослушивания репликации для веб-синхронизации.|  
 |**merge_job_login**||Имя входа учетной записи Windows, от имени которой выполняется агент.|  
 |**merge_job_password**||Пароль учетной записи Windows, от имени которой выполняется агент.|  
-|**priority**||Доступен только для обратной совместимости; Вместо этого для изменения приоритета подписки запустите [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) на издателе.|  
+|**приоритеты**||Доступен только для обратной совместимости; Вместо этого для изменения приоритета подписки запустите [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) на издателе.|  
 |**publisher_login**||Идентификатор входа, используемый на издателе для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**publisher_password**||Пароль (шифрованный), используемый на издателе для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**publisher_security_mode**|**0**|При подключении к издателю используется проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -104,7 +105,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_changemergepullsubscription**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Просмотр и изменение свойств подписки по запросу](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
  [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
  [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   

@@ -1,4 +1,5 @@
 ---
+description: sp_helpsrvrole (Transact-SQL)
 title: sp_helpsrvrole (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/20/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c7f39f3-c261-4f70-8beb-08242d4ac242
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9319cc35d3059bc1efafa3c4640b164c39d8bbfa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9686de531821bc5b143caac7f756f9cae5af8ac0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899485"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474034"
 ---
 # <a name="sp_helpsrvrole-transact-sql"></a>sp_helpsrvrole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @srvrolename = ] 'role'`Имя предопределенной роли сервера. Аргумент *Role* имеет тип **sysname**и значение по умолчанию NULL. *роль* может иметь одно из следующих значений.  
+`[ @srvrolename = ] 'role'` Имя предопределенной роли сервера. Аргумент *Role* имеет тип **sysname**и значение по умолчанию NULL. *роль* может иметь одно из следующих значений.  
   
 |Предопределенная роль сервера|Описание|  
 |-----------------------|-----------------|  
@@ -62,7 +63,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 |ServerRole|**sysname**|Имя роли сервера|  
 |Описание|**sysname**|Описание ServerRole|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Предопределенные роли сервера определены на уровне сервера и имеют разрешения на выполнение специальных административных действий на уровне сервера. Предопределенные роли сервера не могут быть добавлены, удалены или изменены.  
   
  Сведения о добавлении или удалении членов из ролей сервера см. в разделе [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
@@ -97,7 +98,7 @@ SELECT * FROM sys.server_principals WHERE type = 'R' ;
 sp_helpsrvrole 'diskadmin' ;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Роли уровня сервера](../../relational-databases/security/authentication-access/server-level-roles.md)   
  [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   

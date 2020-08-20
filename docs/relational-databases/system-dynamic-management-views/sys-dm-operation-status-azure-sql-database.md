@@ -1,4 +1,5 @@
 ---
+description: sys.dm_operation_status
 title: sys. dm_operation_status | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/05/2017
@@ -19,12 +20,12 @@ ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 080d12cdcf945fe34a2c8f1ab9ea7414e714da8c
-ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
+ms.openlocfilehash: ef9d5634a9520ce0d71fce1c866c32f46c5b3793
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87544387"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474851"
 ---
 # <a name="sysdm_operation_status"></a>sys.dm_operation_status
 
@@ -39,11 +40,11 @@ ms.locfileid: "87544387"
 |resource_type_desc|**nvarchar (2048)**|Описание типа ресурса, в котором выполняется операция. В текущем выпуске это представление отслеживает операции, выполняемые только в [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
 |major_resource_id|**sql_variant**|Имя ресурса [!INCLUDE[ssSDS](../../includes/sssds-md.md)], в котором выполняется операция. Не равно NULL.|  
 |minor_resource_id|**sql_variant**|Только для внутреннего использования. Не равно NULL.|  
-|операции|**nvarchar(60)**|Операции, выполняемые на [!INCLUDE[ssSDS](../../includes/sssds-md.md)], такие как CREATE или ALTER.|  
-|state|**tinyint**|Состояние операции.<br /><br /> 0 = Ожидает согласования<br />1 = выполняется<br />2 = завершена<br />3 = ошибка<br />4 = отмена|  
+|Операция|**nvarchar(60)**|Операции, выполняемые на [!INCLUDE[ssSDS](../../includes/sssds-md.md)], такие как CREATE или ALTER.|  
+|Состояние|**tinyint**|Состояние операции.<br /><br /> 0 = Ожидает согласования<br />1 = выполняется<br />2 = завершена<br />3 = ошибка<br />4 = отмена|  
 |state_desc|**nvarchar(120)**|PENDING = операция ожидает доступности ресурсов или квоты.<br /><br /> IN_PROGRESS = операция запущена и выполняется.<br /><br /> COMPLETED = операция успешно завершена.<br /><br /> FAILED = ошибка операции. Дополнительные сведения см. в столбце **error_desc** .<br /><br /> CANCELLED = выполнение операции остановлено по запросу пользователя.|  
 |percent_complete|**int**|Процент завершения выполнения операции. Значения не являются непрерывными, а допустимые значения перечислены ниже. Не равно NULL.<br/><br/>0 = операция не запущена<br/>50 = выполняется операция<br/>100 = операция завершена|  
-|error_code|**int**|Код ошибки, возникшей при неудачном выполнении операции. Если значение равно 0, операция завершилась успешно.|  
+|Error_Code|**int**|Код ошибки, возникшей при неудачном выполнении операции. Если значение равно 0, операция завершилась успешно.|  
 |error_desc|**nvarchar (2048)**|Описание ошибки, которая возникла во время неудачного выполнения операции.|  
 |error_severity|**int**|Степень серьезности ошибки, которая возникла во время неудачного выполнения операции. Дополнительные сведения о серьезности ошибок см. в разделе [ядро СУБД серьезности ошибок](https://go.microsoft.com/fwlink/?LinkId=251052).|  
 |error_state|**int**|Зарезервировано для будущего использования. Совместимость с будущими версиями не гарантируется.|  
@@ -53,7 +54,7 @@ ms.locfileid: "87544387"
 ## <a name="permissions"></a>Разрешения  
  Это представление доступно в базе данных **master** только для входа субъекта уровня сервера.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Чтобы использовать это представление, необходимо подключиться к базе данных **master** . Используйте `sys.dm_operation_status` представление в базе данных **master** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] сервера для наблюдения за состоянием следующих операций, выполняемых над [!INCLUDE[ssSDS](../../includes/sssds-md.md)] :  
   
 -   Создание базы данных  
@@ -85,7 +86,7 @@ SELECT * FROM sys.dm_operation_status
    ORDER BY start_time DESC;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции георепликации &#40;базе данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
  [sys. dm_geo_replication_link_status &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
  [sys. geo_replication_links &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   

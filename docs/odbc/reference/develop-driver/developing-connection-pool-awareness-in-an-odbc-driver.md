@@ -1,4 +1,5 @@
 ---
+description: Разработка драйвера ODBC с поддержкой пула подключений
 title: Разработка осведомленности о пуле подключений в драйвере ODBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f77fea1d8439ac9ce7374b7dd47db5665686cfbc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 519a2b64f6a5330b8c8fde458323c6c900941025
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283434"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476276"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>Разработка драйвера ODBC с поддержкой пула подключений
 В этом разделе обсуждаются сведения о разработке драйвера ODBC, который содержит сведения о том, как драйвер должен предоставлять службы пулов подключений.  
@@ -138,13 +139,13 @@ ms.locfileid: "81283434"
 ## <a name="sequence-diagram"></a>Диаграмма последовательностей  
  На этой схеме последовательностей показан базовый механизм пулов, описанный в этом разделе. Он показывает только использование [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) , но регистр [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) аналогичен.  
   
- ![Диаграмма последовательностей](../../../odbc/reference/develop-driver/media/odbc_seq_dia.gif "odbc_seq_dia")  
+ ![Схема последовательностей](../../../odbc/reference/develop-driver/media/odbc_seq_dia.gif "odbc_seq_dia")  
   
 ## <a name="state-diagram"></a>Диаграмма состояния  
  На этой схеме состояния показан объект маркера сведений о соединении, описанный в этом разделе. На схеме показан только [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) , но регистр [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) похож. Поскольку диспетчеру драйверов может потребоваться выполнить обработку ошибок в любое время, диспетчер драйверов может вызвать [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md) для любого состояния.  
   
  ![Диаграмма состояний](../../../odbc/reference/develop-driver/media/odbc_state_diagram.gif "odbc_state_diagram")  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Организация пулов соединений с учетом драйверов](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [Справочник по интерфейсу службы доступа (SPI) ODBC](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)

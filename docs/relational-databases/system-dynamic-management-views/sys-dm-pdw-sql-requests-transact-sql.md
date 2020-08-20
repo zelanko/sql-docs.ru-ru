@@ -1,4 +1,5 @@
 ---
+description: sys. dm_pdw_sql_requests (Transact-SQL)
 title: sys. dm_pdw_sql_requests (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -12,19 +13,19 @@ ms.assetid: 44e19609-902c-46cf-acdf-19ea75011365
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 455ccc47d4150211001b0cf715d67827c04376bc
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 9d6ec963b5e46578e8fb543169ef897533b26ca4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196827"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474684"
 ---
 # <a name="sysdm_pdw_sql_requests-transact-sql"></a>sys. dm_pdw_sql_requests (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Содержит сведения обо всех SQL Server распределениях запросов в рамках шага SQL в запросе.  
   
-|Имя столбца|Тип данных|Описание|Диапазон|  
+|Имя столбца|Тип данных|Description|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|Уникальный идентификатор запроса, которому принадлежит данное распределение SQL запроса.<br /><br /> request_id, step_index и distribution_id образуют ключ для этого представления.|См. раздел request_id в [sys. dm_pdw_exec_requests &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |step_index|**int**|Индекс шага запроса, частью которого является это распространение.<br /><br /> request_id, step_index и distribution_id образуют ключ для этого представления.|См. раздел step_index в [sys. dm_pdw_request_steps &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  

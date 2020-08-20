@@ -1,4 +1,5 @@
 ---
+description: sp_helptrigger (Transact-SQL)
 title: sp_helptrigger (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: e486d39b-771d-488d-a786-7136433a2203
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 546e980aeb021f57a0267d1f668f7acd181b4dcf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5e79a0a06b812fedd98ed558c17f00d026bae8ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719279"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473977"
 ---
 # <a name="sp_helptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,11 +42,11 @@ sp_helptrigger [ @tabname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @tabname = ] 'table'`Имя таблицы в текущей базе данных, для которой возвращаются сведения о триггере. *Table* имеет тип **nvarchar (776)** и не имеет значения по умолчанию.  
+`[ @tabname = ] 'table'` Имя таблицы в текущей базе данных, для которой возвращаются сведения о триггере. *Table* имеет тип **nvarchar (776)** и не имеет значения по умолчанию.  
   
-`[ @triggertype = ] 'type'`Тип триггера DML, о котором возвращаются сведения. *Type имеет тип* **char (6)**, значение по умолчанию NULL и может принимать одно из следующих значений.  
+`[ @triggertype = ] 'type'` Тип триггера DML, о котором возвращаются сведения. *Type имеет тип* **char (6)**, значение по умолчанию NULL и может принимать одно из следующих значений.  
   
-|Применение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**DELETE**|Возвращает сведения о триггере DELETE.|  
 |**INSERT**|Возвращает сведения о триггере INSERT.|  

@@ -1,4 +1,5 @@
 ---
+description: sp_dropmergepullsubscription (Transact-SQL)
 title: sp_dropmergepullsubscription (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9301dd80-72f7-4adb-9b13-87e7f9114248
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 84fbed9341d01c8fe7d1c2d4e57df16aa027711a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1dab181e38d9c072f5e25dc8db490a7538bbe615
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881797"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474263"
 ---
 # <a name="sp_dropmergepullsubscription-transact-sql"></a>sp_dropmergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +41,13 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию NULL. Это обязательный параметр. Укажите значение **ALL** , чтобы удалить подписки на все публикации  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию NULL. Это обязательный параметр. Укажите значение **ALL** , чтобы удалить подписки на все публикации  
   
-`[ @publisher = ] 'publisher'`Имя издателя. Аргумент *Publisher*имеет тип **sysname**и значение по умолчанию NULL. Это обязательный параметр.  
+`[ @publisher = ] 'publisher'` Имя издателя. Аргумент *Publisher*имеет тип **sysname**и значение по умолчанию NULL. Это обязательный параметр.  
   
-`[ @publisher_db = ] 'publisher_db'`Имя базы данных издателя. Аргумент *publisher_db*имеет тип **sysname**и значение по умолчанию NULL. Это обязательный параметр.  
+`[ @publisher_db = ] 'publisher_db'` Имя базы данных издателя. Аргумент *publisher_db*имеет тип **sysname**и значение по умолчанию NULL. Это обязательный параметр.  
   
-`[ @reserved = ] 'reserved'`Зарезервировано для будущего использования. параметр *reserved* имеет значение **bit**и значение по умолчанию **0**.  
+`[ @reserved = ] 'reserved'` Зарезервировано для будущего использования. параметр *reserved* имеет значение **bit**и значение по умолчанию **0**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  

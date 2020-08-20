@@ -1,4 +1,5 @@
 ---
+description: sp_addmergealternatepublisher (Transact-SQL)
 title: sp_addmergealternatepublisher (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: de46e0b1-d946-4021-bff6-2d8e3187656d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e6ef8e5152fb715172f6c04854e342c46b759f25
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 11e06e0dacb97d7c52b34874d90a1398561cc7dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757970"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474536"
 ---
 # <a name="sp_addmergealternatepublisher-transact-sql"></a>sp_addmergealternatepublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,28 +46,28 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'`Имя издателя. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'` Имя издателя. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publisher_db = ] 'publisher_db'`Имя базы данных публикации. Аргумент *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher_db = ] 'publisher_db'` Имя базы данных публикации. Аргумент *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @alternate_publisher = ] 'alternate_synchronization_partner'`Имя альтернативного издателя. Аргумент *alternate_synchronization_partner* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @alternate_publisher = ] 'alternate_synchronization_partner'` Имя альтернативного издателя. Аргумент *alternate_synchronization_partner* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @alternate_publisher_db = ] 'alternate_publisher_db'`Имя базы данных публикации на альтернативном издателе. Аргумент *alternate_publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @alternate_publisher_db = ] 'alternate_publisher_db'` Имя базы данных публикации на альтернативном издателе. Аргумент *alternate_publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @alternate_publication = ] 'alternate_synchronization_partner'`Имя публикации на альтернативном участнике синхронизации. Аргумент *alternate_synchronization_partner* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @alternate_publication = ] 'alternate_synchronization_partner'` Имя публикации на альтернативном участнике синхронизации. Аргумент *alternate_synchronization_partner* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @alternate_distributor = ] 'alternate_distributor'`Имя распространителя для альтернативного участника синхронизации. Аргумент *alternate_distributor* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @alternate_distributor = ] 'alternate_distributor'` Имя распространителя для альтернативного участника синхронизации. Аргумент *alternate_distributor* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @friendly_name = ] 'friendly_name'`Отображаемое имя, по которому может быть идентифицирована Ассоциация издателя, публикации и распространителя, которая состоит из альтернативного участника синхронизации. *friendly_name* имеет тип **nvarchar (255)** и значение по умолчанию NULL.  
+`[ @friendly_name = ] 'friendly_name'` Отображаемое имя, по которому может быть идентифицирована Ассоциация издателя, публикации и распространителя, которая состоит из альтернативного участника синхронизации. *friendly_name* имеет тип **nvarchar (255)** и значение по умолчанию NULL.  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_addmergealternatepublisher** используется в репликации слиянием.  
   
 ## <a name="permissions"></a>Разрешения  

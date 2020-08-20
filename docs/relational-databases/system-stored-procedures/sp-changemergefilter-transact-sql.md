@@ -1,4 +1,5 @@
 ---
+description: sp_changemergefilter (Transact-SQL)
 title: sp_changemergefilter (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5b5ea4ccea0f314e17cfa5dca8a4f3db6d2c9c1a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 64922bb6150d7d3b637984a740abbb9e9f825854
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85872499"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474446"
 ---
 # <a name="sp_changemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,15 +44,15 @@ sp_changemergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @article = ] 'article'`Имя статьи. Аргумент *article* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @article = ] 'article'` Имя статьи. Аргумент *article* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @filtername = ] 'filtername'`Текущее имя фильтра. *filtername* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @filtername = ] 'filtername'` Текущее имя фильтра. *filtername* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @property = ] 'property'`Имя изменяемого свойства. Аргумент *Property* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @property = ] 'property'` Имя изменяемого свойства. Аргумент *Property* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @value = ] 'value'`Новое значение для указанного свойства. *value*имеет тип **nvarchar (1000)** и не имеет значения по умолчанию.  
+`[ @value = ] 'value'` Новое значение для указанного свойства. *value*имеет тип **nvarchar (1000)** и не имеет значения по умолчанию.  
   
  Эта таблица описывает свойства статей и значения этих свойств.  
   
@@ -66,13 +67,13 @@ sp_changemergefilter [ @publication= ] 'publication'
 |**join_unique_key**|**true**|Соединение находится в уникальном ключе.|  
 ||**false**|Соединение не находится в уникальном ключе.|  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Подтверждает, что действие, выполняемое этой хранимой процедурой, может сделать существующий моментальный снимок недействительным. *force_invalidate_snapshot* является **битом**и имеет значение по умолчанию **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Подтверждает, что действие, выполняемое этой хранимой процедурой, может сделать существующий моментальный снимок недействительным. *force_invalidate_snapshot* является **битом**и имеет значение по умолчанию **0**.  
   
  **0** указывает, что изменения в статье слияния не приводят к недействительности моментального снимка. Если хранимая процедура определяет, что изменение требует создания нового моментального снимка, возникает ошибка и изменения не выполняются.  
   
  **1** означает, что изменения в статье слияния могут привести к недействительности моментального снимка, и если существуют подписки, требующие создания нового моментального снимка, предоставляет разрешение на пометку существующего моментального снимка как устаревшего и создание нового моментального снимка.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription`Подтверждает, что действие, выполняемое этой хранимой процедурой, может потребовать повторной инициализации существующих подписок. *force_reinit_subscription* является **битом** со значением по умолчанию **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Подтверждает, что действие, выполняемое этой хранимой процедурой, может потребовать повторной инициализации существующих подписок. *force_reinit_subscription* является **битом** со значением по умолчанию **0**.  
   
  **0** указывает, что изменения в статье слияния не приводят к повторной инициализации подписки. Если хранимая процедура определяет, что изменения потребуют повторной инициализации подписок, возникает ошибка, и изменения не выполняются.  
   
@@ -91,7 +92,7 @@ sp_changemergefilter [ @publication= ] 'publication'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_changemergefilter**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Изменение свойств публикации и статьи](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
  [sp_dropmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   

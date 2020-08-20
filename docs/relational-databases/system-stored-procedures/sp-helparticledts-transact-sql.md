@@ -1,4 +1,5 @@
 ---
+description: sp_helparticledts (Transact-SQL)
 title: sp_helparticledts (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cd1aed60-e056-4ff3-86ee-62b19433d890
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cfacdd363e66401bc9cfbf494f6cb64ab12446fe
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6340460ff9bc1c8d0454d7ad0e4f05637df772bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634534"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474156"
 ---
 # <a name="sp_helparticledts-transact-sql"></a>sp_helparticledts (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,9 +38,9 @@ sp_helparticledts [ @publication = ] 'publication', [ @article = ] 'article'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @article = ] 'article'`Имя статьи в публикации. Аргумент *article* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @article = ] 'article'` Имя статьи в публикации. Аргумент *article* имеет тип **sysname**и не имеет значения по умолчанию.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -54,7 +55,7 @@ sp_helparticledts [ @publication = ] 'publication', [ @article = ] 'article'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_helparticledts** используется в репликации моментальных снимков и репликации транзакций.  
   
  При именовании задач в программе репликации служб DTS должны соблюдаться соглашения по именованию, необходимые агентам репликации. Для пользовательских задач, таких как задача «Выполнение SQL», именем является объединенная строка, состоящая из имени статьи, префикса и необязательной части. При написании кода, если нет уверенности в верности имен задач, результирующий набор дает имена задач, которые должны использоваться.  

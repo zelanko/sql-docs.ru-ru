@@ -1,4 +1,5 @@
 ---
+description: sp_helpdbfixedrole (Transact-SQL)
 title: sp_helpdbfixedrole (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ad87e9a0-b901-4e37-9950-aa517d680fc3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8b029430388e1f58a725e5eb15795fa47380eda7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9f7d2518a14ba15a7cd91ea4c9a41d6710d9572e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899543"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474090"
 ---
 # <a name="sp_helpdbfixedrole-transact-sql"></a>sp_helpdbfixedrole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @rolename = ] 'role'`Имя предопределенной роли базы данных. Аргумент *Role* имеет тип **sysname**и значение по умолчанию NULL. Если указан параметр *Role* , возвращаются только сведения об этой роли. в противном случае возвращается список и описание всех предопределенных ролей базы данных.  
+`[ @rolename = ] 'role'` Имя предопределенной роли базы данных. Аргумент *Role* имеет тип **sysname**и значение по умолчанию NULL. Если указан параметр *Role* , возвращаются только сведения об этой роли. в противном случае возвращается список и описание всех предопределенных ролей базы данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

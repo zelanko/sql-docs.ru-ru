@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergepartition (Transact-SQL)
 title: sp_helpmergepartition (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 184188cc-f519-445d-97ce-aae38f1eb550
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 276e1a886a999858585533ee35b6c5f3cf109657
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e7824eb6e547b8bacec2cae297e5f236376d0aa0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881529"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474041"
 ---
 # <a name="sp_helpmergepartition-transact-sql"></a>sp_helpmergepartition (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,14 +40,14 @@ sp_helpmergepartition [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @suser_sname = ] 'suser_sname'`Значение SUSER_SNAME, используемое для определения секции. Аргумент *SUSER_SNAME* имеет тип **sysname**и значение по умолчанию NULL. Введите этот аргумент для ограничения результирующего набора. При этом будут отображаться только те секции, в которых SUSER_SNAME разрешается в указанное значение.  
+`[ @suser_sname = ] 'suser_sname'` Значение SUSER_SNAME, используемое для определения секции. Аргумент *SUSER_SNAME* имеет тип **sysname**и значение по умолчанию NULL. Введите этот аргумент для ограничения результирующего набора. При этом будут отображаться только те секции, в которых SUSER_SNAME разрешается в указанное значение.  
   
 > [!NOTE]  
 >  При указании *suser_sname* *HOST_NAME* должен иметь значение null.  
   
-`[ @host_name = ] 'host_name'`Значение HOST_NAME, используемое для определения секции. Аргумент *HOST_NAME* имеет тип **sysname**и значение по умолчанию NULL. Введите этот аргумент для ограничения результирующего набора. При этом будут отображаться только те секции, в которых HOST_NAME разрешается в указанное значение.  
+`[ @host_name = ] 'host_name'` Значение HOST_NAME, используемое для определения секции. Аргумент *HOST_NAME* имеет тип **sysname**и значение по умолчанию NULL. Введите этот аргумент для ограничения результирующего набора. При этом будут отображаться только те секции, в которых HOST_NAME разрешается в указанное значение.  
   
 > [!NOTE]  
 >  При указании *suser_sname* *HOST_NAME* должен иметь значение null.  

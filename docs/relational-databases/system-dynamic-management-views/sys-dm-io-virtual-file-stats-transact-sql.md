@@ -1,4 +1,5 @@
 ---
+description: sys.dm_io_virtual_file_stats (Transact-SQL)
 title: sys. dm_io_virtual_file_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/11/2017
@@ -20,12 +21,12 @@ ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2110eea5c008f06f7bdd6637dda7222ad5f50d2
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 71cdc5b88a525e88e79ccebd0b61f20d2c391c6d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396296"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474881"
 ---
 # <a name="sysdm_io_virtual_file_stats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -78,7 +79,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |**database_name**|**sysname**|имя базы данных.</br></br>Для хранилища данных SQL это имя базы данных, хранящейся на узле, который определяется pdw_node_id. Каждый узел имеет одну базу данных tempdb с 13 файлами. Каждый узел также имеет одну базу данных для каждого распределения, и каждая база данных распространителя имеет 5 файлов. Например, если каждый узел содержит 4 распределения, в результатах отобразится 20 файлов базы данных распространителя на pdw_node_id. 
 |**database_id**|**smallint**|Идентификатор базы данных.|  
 |**file_id**|**smallint**|Идентификатор файла.|  
-|**sample_ms**|**bigint**|Число миллисекунд, прошедших со времени запуска компьютера. Этот столбец может быть использован для сравнения различных вариантов выполнения этой функции.</br></br>Тип данных — **int** для [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|**sample_ms**|**bigint**|Число миллисекунд, прошедших со времени запуска компьютера. Этот столбец может быть использован для сравнения различных вариантов выполнения этой функции.</br></br>Тип данных — **int** для [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |**num_of_reads**|**bigint**|Количество считываний для этого файла.|  
 |**num_of_bytes_read**|**bigint**|Общее число байтов, считанных из этого файла.|  
 |**io_stall_read_ms**|**bigint**|Общее время задержек считывания файла, в миллисекундах.|  
@@ -92,7 +93,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |**io_stall_queued_write_ms**|**bigint**|**Не применяется к:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] с до [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] .<br /><br />  Общая задержка ввода-вывода, созданная регулированием ресурсов ввода-вывода для записи. Не допускает значение NULL.|
 |**pdw_node_id**|**int**|**Применимо к:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Идентификатор узла для распределения.
  
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 При запуске службы SQL Server (MSSQLSERVER) счетчики инициализируются пустыми.
   
 ## <a name="permissions"></a>Разрешения  
@@ -111,7 +112,7 @@ SELECT * FROM sys.dm_io_virtual_file_stats(DB_ID(N'AdventureWorks2012'), 2);
 GO  
 ```  
   
-### <a name="b-return-statistics-for-file-in-tempdb"></a>Б) Возврат статистики для файла в базе данных tempdb
+### <a name="b-return-statistics-for-file-in-tempdb"></a>Б. Возврат статистики для файла в базе данных tempdb
 
 **Применимо к:** Хранилище данных SQL Azure
 

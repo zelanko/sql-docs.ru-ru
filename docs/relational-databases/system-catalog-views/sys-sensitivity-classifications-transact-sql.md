@@ -1,4 +1,5 @@
 ---
+description: sys.sensitivity_classifications (Transact-SQL)
 title: sys. sensitivity_classifications (Transact-SQL) | Документация Майкрософт
 ms.date: 03/25/2019
 ms.reviewer: ''
@@ -23,11 +24,12 @@ helpviewer_keywords:
 - information types
 - rank
 monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9962a7fbcb3b308862db7e8813ee2733155950ed
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5f1dfa43dba7848732e57acf4abf8cfa915be255
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004784"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475324"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -48,7 +50,7 @@ ms.locfileid: "86004784"
 |**rank_desc**|**sysname**|Текстовое представление ранга:  <br><br>НЕТ, НИЗКИЙ, СРЕДНИЙ, ВЫСОКИЙ, КРИТИЧЕСКИЙ|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Комментарии  
 
 - Это представление позволяет видеть состояние классификации базы данных. Его можно использовать для управления классификациями баз данных, а также для создания отчетов.
 - В настоящее время поддерживается только классификация столбцов базы данных.

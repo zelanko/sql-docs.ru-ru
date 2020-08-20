@@ -1,4 +1,5 @@
 ---
+description: SHORTEST_PATH (Transact-SQL)
 title: КРАТЧАЙШий путь (SQL Graph) | Документация Майкрософт
 ms.custom: ''
 ms.date: 07/01/2020
@@ -18,11 +19,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
-ms.openlocfilehash: 334b4ee83df73284abe7d20cdff66675d42039d5
-ms.sourcegitcommit: e6c260a139326f5a400a57ece812d39ef8b820bd
+ms.openlocfilehash: a77835335aa2fe3e9b5d4436dcac07556e9a3c26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86032573"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475850"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-SQL 19-SQL DB-SQL MI](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi.md)]
@@ -86,7 +88,7 @@ ms.locfileid: "86032573"
 
 **Последний узел**. последний узел ссылается на узел, который отображается последним в пути, независимо от направления стрелки в предикате Match. Например: `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`. Здесь последний узел в пути будет последним посещенным узлом P. 
 
-В то время как последний узел — это последний n-й узел в пути выходного графа для этого шаблона:`MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
+В то время как последний узел — это последний n-й узел в пути выходного графа для этого шаблона: `MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
 
 ### <a name="sum"></a>SUM
 Эта функция возвращает сумму указанных значений атрибутов node/ребра или выражение, которое отображалось в пути обхода.
@@ -107,7 +109,7 @@ ms.locfileid: "86032573"
 ### <a name="max"></a>MAX
 Возвращает максимальное значение из указанных значений атрибута node/ребра или выражение, которое отображалось в пути обхода.
 
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Комментарии  
 Функция shortest_path может использоваться только внутри MATCH.     
 LAST_NODE поддерживается только в shortest_path.     
 Поиск взвешенного кратчайшего пути, все пути или все короткие пути не поддерживаются.         

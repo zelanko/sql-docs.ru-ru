@@ -1,4 +1,5 @@
 ---
+description: sys.remote_logins (Transact-SQL)
 title: sys. remote_logins (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 38477e91-d084-4df7-b1de-b930c5580189
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 587e117ce58ca0beff93adc8be864bcf6777b416
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9c1dc75f4a790d93d13a998e56fb32cf2ad5ddfb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880007"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475314"
 ---
 # <a name="sysremote_logins-transact-sql"></a>sys.remote_logins (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85880007"
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Представления каталога связанных серверов &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: fn_syscollector_get_execution_details (Transact-SQL)
 title: fn_syscollector_get_execution_details (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2442148dbb8f9db45f5b80ba8b2a4fdd90ef5c29
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 615dd195f9553242b92b8830462036ab6384b665
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898467"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474678"
 ---
 # <a name="fn_syscollector_get_execution_details-transact-sql"></a>fn_syscollector_get_execution_details (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,13 +57,13 @@ fn_syscollector_get_execution_details ( log_id )
 |starttime|**datetime**|Время начала выполнения пакета.|  
 |endtime|**datetime**|Время завершения выполнения пакета.|  
 |datacode|**int**|Целочисленное значение, которое указывает на событие, связанное с записью журнала. Значение 0 указывает, что событие не передало идентификатор.|  
-|databytes|**изображение**|Массив байтов, который указывает на возвращаемое значение.|  
-|message|**nvarchar**|Описание события и сведения, связанные с событием.|  
+|databytes|**image**|Массив байтов, который указывает на возвращаемое значение.|  
+|сообщение|**nvarchar**|Описание события и сведения, связанные с событием.|  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется разрешение SELECT для **dc_operator**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Включение ведения журнала пакетов в SQL Server Data Tools](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)   
  [Сбор данных](../../relational-databases/data-collection/data-collection.md)  
   

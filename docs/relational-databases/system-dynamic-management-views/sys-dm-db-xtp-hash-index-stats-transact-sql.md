@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_xtp_hash_index_stats (Transact-SQL)
 title: sys. dm_db_xtp_hash_index_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/29/2016
@@ -20,12 +21,12 @@ ms.assetid: 45969884-cd61-48e8-aee5-c725c78e3e4c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d27f44c0d0bcec96d6d4c0d5f4da63038485a1f7
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 219fc6e3624e3a305481d661748a0f1a5ff87d6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442556"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475050"
 ---
 # <a name="sysdm_db_xtp_hash_index_stats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -89,7 +90,7 @@ ms.locfileid: "87442556"
 
 Дополнительные сведения о том, как интерпретировать результаты этого запроса, см. в разделе [Устранение неполадок хэш-индексов для оптимизированных для памяти таблиц](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) .  
 
-### <a name="b-hash-index-statistics-for-internal-tables"></a>Б) Статистика хэш-индекса для внутренних таблиц
+### <a name="b-hash-index-statistics-for-internal-tables"></a>Б. Статистика хэш-индекса для внутренних таблиц
 
 Некоторые функции используют внутренние таблицы, использующие хэш-индексы, например индексы columnstore в таблицах, оптимизированных для памяти. Следующий запрос возвращает статистику для хэш-индексов во внутренних таблицах, связанных с пользовательскими таблицами.
 

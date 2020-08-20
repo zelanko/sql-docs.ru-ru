@@ -1,4 +1,5 @@
 ---
+description: Хранимая процедура sp_helpmergefilter (Transact-SQL)
 title: sp_helpmergefilter (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dc32ca9d211ea818c8a0febdd5dda2e46b1b7fcf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7051213a6543a1dc964fe011f95f48d15cd788ce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893582"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474024"
 ---
 # <a name="sp_helpmergefilter-transact-sql"></a>Хранимая процедура sp_helpmergefilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,11 +40,11 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @article = ] 'article'`Имя статьи. Аргумент *article* имеет тип **sysname**и значение по умолчанию **%** , которое возвращает имена всех статей.  
+`[ @article = ] 'article'` Имя статьи. Аргумент *article* имеет тип **sysname**и значение по умолчанию **%** , которое возвращает имена всех статей.  
   
-`[ @filtername = ] 'filtername'`Имя фильтра, сведения о котором возвращаются. *filtername* имеет тип **sysname**и значение по умолчанию **%** , которое возвращает сведения обо всех фильтрах, определенных для статьи или публикации.  
+`[ @filtername = ] 'filtername'` Имя фильтра, сведения о котором возвращаются. *filtername* имеет тип **sysname**и значение по умолчанию **%** , которое возвращает сведения обо всех фильтрах, определенных для статьи или публикации.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   

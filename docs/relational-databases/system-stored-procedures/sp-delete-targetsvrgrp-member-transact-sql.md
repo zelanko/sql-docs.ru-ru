@@ -1,4 +1,5 @@
 ---
+description: sp_delete_targetsvrgrp_member (Transact-SQL)
 title: sp_delete_targetsvrgrp_member (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 178a38d9-9b19-4648-95d7-e1397110d14c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 51846fabc42e99ab82bd3a9d6312ba6316c9c651
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2b5bfbe079f5004f7d0da8b42093068ebb57ea74
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85861909"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474324"
 ---
 # <a name="sp_delete_targetsvrgrp_member-transact-sql"></a>sp_delete_targetsvrgrp_member (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,9 +40,9 @@ sp_delete_targetsvrgrp_member [ @group_name = ] 'group_name' , [ server_name = ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @group_name = ] 'group_name'`Имя группы. Аргумент *group_name* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @group_name = ] 'group_name'` Имя группы. Аргумент *group_name* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @server_name = ] 'server_name'`Имя сервера, удаляемого из указанной группы. *server_name* имеет тип **nvarchar (30)** и не имеет значения по умолчанию.  
+`[ @server_name = ] 'server_name'` Имя сервера, удаляемого из указанной группы. *server_name* имеет тип **nvarchar (30)** и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  

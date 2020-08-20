@@ -1,4 +1,5 @@
 ---
+description: sp_helpdb (Transact-SQL)
 title: sp_helpdb (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3fda6aba2ce361e814a0196db6138b38f13ce359
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c94db417a7257d38f5b607854beeeb5663c30ea7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899571"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474139"
 ---
 # <a name="sp_helpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @dbname = ] 'name'`Имя базы данных, для которой сообщается информация. Аргумент *Name* имеет тип **sysname**и не имеет значения по умолчанию. Если параметр *Name* не указан, **sp_helpdb** отчеты по всем базам данных в представлении каталога **sys. databases** .  
+`[ @dbname = ] 'name'` Имя базы данных, для которой сообщается информация. Аргумент *Name* имеет тип **sysname**и не имеет значения по умолчанию. Если параметр *Name* не указан, **sp_helpdb** отчеты по всем базам данных в представлении каталога **sys. databases** .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -53,7 +54,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**владельцев**|**sysname**|Владелец базы данных, например **SA**.|  
 |**DBID**|**smallint**|Идентификатор базы данных.|  
 |**created**|**nvarchar(11)**|Дата создания базы данных.|  
-|**status**|**nvarchar (600)**|Разделенный запятыми список значений параметров базы данных, которые в данный момент установлены для базы данных.<br /><br /> Перечислены только включенные параметры с логическими значениями. Параметры, не являющиеся логическими, перечислены с соответствующими значениями в виде *option_name* = *значения*.<br /><br /> Дополнительные сведения см. в разделе [ALTER database &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
+|**status**|**nvarchar (600)**|Разделенный запятыми список значений параметров базы данных, которые в данный момент установлены для базы данных.<br /><br /> Перечислены только включенные параметры с логическими значениями. Параметры, не являющиеся логическими, перечислены с соответствующими значениями в виде *option_name* = *значения*.<br /><br /> Дополнительные сведения см. в разделе [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).|  
 |**compatibility_level**|**tinyint**|Уровень совместимости базы данных: 60, 65, 70, 80 или 90.|  
   
  Если указано *имя* , то существует дополнительный результирующий набор, который показывает размещение файлов для указанной базы данных.  
@@ -63,10 +64,10 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**name**|**nchar (128)**|Логическое имя файла.|  
 |**ИД**|**smallint**|Идентификатор файла.|  
 |**filename**|**nchar (260)**|Имя файла в операционной системе (физическое имя файла).|  
-|**filegroup**|**nvarchar(128)**|Файловая группа, к которой принадлежит файл.<br /><br /> NULL = файл является файлом журнала. Такой файл никогда не является частью файловой группы.|  
+|**файловой группы**|**nvarchar(128)**|Файловая группа, к которой принадлежит файл.<br /><br /> NULL = файл является файлом журнала. Такой файл никогда не является частью файловой группы.|  
 |**size**|**nvarchar (18)**|Размер файла в мегабайтах.|  
 |**MAXSIZE**|**nvarchar (18)**|Определяет максимальный размер, до которого может вырасти файл. Значение UNLIMITED в этом поле означает, что файл может расти, пока диск не будет заполнен.|  
-|**growth**|**nvarchar (18)**|Значение прироста размера файла. Размер пространства, добавляемого в файл каждый раз, когда требуется новое пространство.|  
+|**квот**|**nvarchar (18)**|Значение прироста размера файла. Размер пространства, добавляемого в файл каждый раз, когда требуется новое пространство.|  
 |**Загрузка**|**varchar (9)**|Применение файла. Для файла данных значением является **"только данные"** , а для файла журнала — **"только журнал"**.|  
   
 ## <a name="remarks"></a>Комментарии  
@@ -99,8 +100,8 @@ GO
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys. database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
- [sys. FILEGROUP &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+ [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [sys.filegroups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
  [sys. master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

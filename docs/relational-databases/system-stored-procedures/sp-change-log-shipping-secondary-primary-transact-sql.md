@@ -1,4 +1,5 @@
 ---
+description: sp_change_log_shipping_secondary_primary (Transact-SQL)
 title: sp_change_log_shipping_secondary_primary (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5bcb4df7-6df3-4f2b-9207-b97b5addf2a6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 94ee2f67f0f496a5dffc515c0145de127e823863
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7b17019380bc65d1b3d2fcdb16352fe32477c6bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85872656"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474522"
 ---
 # <a name="sp_change_log_shipping_secondary_primary-transact-sql"></a>sp_change_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,25 +48,25 @@ sp_change_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @primary_server = ] 'primary_server'`Имя основного экземпляра в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] конфигурации доставки журналов. *primary_server* имеет тип **sysname** и не может иметь значение null.  
+`[ @primary_server = ] 'primary_server'` Имя основного экземпляра в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] конфигурации доставки журналов. *primary_server* имеет тип **sysname** и не может иметь значение null.  
   
-`[ @primary_database = ] 'primary_database'`Имя базы данных на сервере-источнике. Аргумент *primary_database* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @primary_database = ] 'primary_database'` Имя базы данных на сервере-источнике. Аргумент *primary_database* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @backup_source_directory = ] 'backup_source_directory'`Каталог, в котором хранятся файлы резервных копий журналов транзакций с сервера источника. *backup_source_directory* имеет тип **nvarchar (500)** и не может иметь значение null.  
+`[ @backup_source_directory = ] 'backup_source_directory'` Каталог, в котором хранятся файлы резервных копий журналов транзакций с сервера источника. *backup_source_directory* имеет тип **nvarchar (500)** и не может иметь значение null.  
   
-`[ @backup_destination_directory = ] 'backup_destination_directory'`Каталог на сервере-получателе, куда копируются файлы резервных копий. *backup_destination_directory* имеет тип **nvarchar (500)** и не может иметь значение null.  
+`[ @backup_destination_directory = ] 'backup_destination_directory'` Каталог на сервере-получателе, куда копируются файлы резервных копий. *backup_destination_directory* имеет тип **nvarchar (500)** и не может иметь значение null.  
   
-`[ @file_retention_period = ] 'file_retention_period'`Продолжительность времени в минутах, в течение которого будет храниться журнал. *history_retention_period* имеет **тип int**и значение по умолчанию NULL. Если ничего не указано, подразумевается значение 14420.  
+`[ @file_retention_period = ] 'file_retention_period'` Продолжительность времени в минутах, в течение которого будет храниться журнал. *history_retention_period* имеет **тип int**и значение по умолчанию NULL. Если ничего не указано, подразумевается значение 14420.  
   
-`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'`Режим безопасности, используемый для подключения к серверу мониторинга.  
+`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` Режим безопасности, используемый для подключения к серверу мониторинга.  
   
  1 = проверка подлинности Windows.  
   
  0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Проверка подлинности. *monitor_server_security_mode* имеет **бит** и не может иметь значение null.  
   
-`[ @monitor_server_login = ] 'monitor_server_login'`Имя пользователя учетной записи, используемой для доступа к серверу мониторинга.  
+`[ @monitor_server_login = ] 'monitor_server_login'` Имя пользователя учетной записи, используемой для доступа к серверу мониторинга.  
   
-`[ @monitor_server_password = ] 'monitor_server_password'`Пароль учетной записи, используемой для доступа к серверу мониторинга.  
+`[ @monitor_server_password = ] 'monitor_server_password'` Пароль учетной записи, используемой для доступа к серверу мониторинга.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

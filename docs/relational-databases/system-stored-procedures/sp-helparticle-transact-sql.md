@@ -1,4 +1,5 @@
 ---
+description: sp_helparticle (Transact-SQL)
 title: sp_helparticle (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e863c10b3f2086d6318d6c53b599c7ad186572c6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ca400eb6fc015acff452ca4ae6a7658a05145f8a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634226"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474168"
 ---
 # <a name="sp_helparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,18 +42,18 @@ sp_helparticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @article = ] 'article'`Имя статьи в публикации. Аргумент *article* имеет тип **sysname**и значение по умолчанию **%** . Если *статья* не указана, возвращаются сведения обо всех статьях для указанной публикации.  
+`[ @article = ] 'article'` Имя статьи в публикации. Аргумент *article* имеет тип **sysname**и значение по умолчанию **%** . Если *статья* не указана, возвращаются сведения обо всех статьях для указанной публикации.  
   
-`[ @returnfilter = ] returnfilter`Указывает, должно ли возвращаться предложение фильтра. *ретурнфилтер* имеет **бит**и значение по умолчанию **1**, которое возвращает предложение фильтра.  
+`[ @returnfilter = ] returnfilter` Указывает, должно ли возвращаться предложение фильтра. *ретурнфилтер* имеет **бит**и значение по умолчанию **1**, которое возвращает предложение фильтра.  
   
-`[ @publisher = ] 'publisher'`Указывает издателя, отличного от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'` Указывает издателя, отличного от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  не следует указывать *Издатель* при запросе сведений о статье, опубликованной [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателем.  
   
-`[ @found = ] found OUTPUT`Только для внутреннего использования.  
+`[ @found = ] found OUTPUT` Только для внутреннего использования.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -66,7 +67,7 @@ sp_helparticle [ @publication = ] 'publication'
 |**type**|**smallint**|Тип статьи:<br /><br /> **1** = на основе журнала.<br /><br /> **3** = журнал на основе журнала с ручным фильтром.<br /><br /> **5** = Журнал основан на представлении, выполняемом вручную.<br /><br /> **7** = на основе журнала с ручным фильтром и с ручным просмотром.<br /><br /> **8** = выполнение хранимой процедуры.<br /><br /> **24** = выполнение сериализуемых хранимых процедур.<br /><br /> **32** = хранимая процедура (только схема).<br /><br /> **64** = представление (только схема).<br /><br /> **96** = агрегатная функция (только схема).<br /><br /> **128** = функция (только схема).<br /><br /> **257** = индексированное представление на основе журнала.<br /><br /> **259** = индексированное представление на основе журнала с ручным фильтром.<br /><br /> **261** = индексированное представление на основе журнала с ручным представлением.<br /><br /> **263** = индексированное представление на основе журнала с ручным фильтром и ручным представлением.<br /><br /> **320** = индексированное представление (только схема).<br /><br />|  
 |**status**|**tinyint**|Может быть результатом [& (побитовое и)](../../t-sql/language-elements/bitwise-and-transact-sql.md) для одного или нескольких или следующих свойств статьи:<br /><br /> **0x00** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **0x01** = статья активна.<br /><br /> **0x08** = включить имя столбца в инструкции INSERT.<br /><br /> **0x16** = использовать параметризованные инструкции.<br /><br /> **0x32** = использовать параметризованные инструкции и включать имя столбца в инструкции INSERT.|  
 |**Фильтрация**|**nvarchar (257)**|Хранимая процедура, используемая для горизонтальной фильтрации таблиц. Данная хранимая процедура должна быть создана с помощью предложения FOR REPLICATION.|  
-|**nописание**|**nvarchar(255)**|Описание статьи.|  
+|**description**|**nvarchar(255)**|Описание статьи.|  
 |**insert_command**|**nvarchar(255)**|Тип команды репликации, используемый при репликационной вставке в статьи таблицы. Дополнительные сведения см. в статье [Указание способа распространения изменений для статей транзакций](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
 |**update_command**|**nvarchar(255)**|Тип команды репликации, используемый при репликационном обновлении статей таблицы. Дополнительные сведения см. в статье [Указание способа распространения изменений для статей транзакций](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
 |**delete_command**|**nvarchar(255)**|Тип команды репликации, используемый при репликационном удалении в статьях таблицы. Дополнительные сведения см. в статье [Указание способа распространения изменений для статей транзакций](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
@@ -92,7 +93,7 @@ sp_helparticle [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_helparticle** используется в репликации моментальных снимков и репликации транзакций.  
   
 ## <a name="permissions"></a>Разрешения  

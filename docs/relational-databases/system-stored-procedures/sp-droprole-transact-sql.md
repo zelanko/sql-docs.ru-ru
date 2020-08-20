@@ -1,4 +1,5 @@
 ---
+description: sp_droprole (Transact-SQL)
 title: sp_droprole (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 889ee074-00f8-40a9-bddb-d7d3ef0cbc19
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0a3d30a00c08dd90cf98e565eff46cfa58928c72
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a909a672680428cd5cca761945a0443ae5a1630c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881771"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474283"
 ---
 # <a name="sp_droprole-transact-sql"></a>sp_droprole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ sp_droprole [ @rolename= ] 'role'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @rolename = ] 'role'`Имя роли базы данных, удаляемой из текущей базы данных. *Role* имеет тип **sysname**и не имеет значения по умолчанию. *роль* уже должна существовать в текущей базе данных.  
+`[ @rolename = ] 'role'` Имя роли базы данных, удаляемой из текущей базы данных. *Role* имеет тип **sysname**и не имеет значения по умолчанию. *роль* уже должна существовать в текущей базе данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -73,7 +74,7 @@ GO
  [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
  [УДАЛИТЬ роль &#40;Transact-SQL&#41;](../../t-sql/statements/drop-role-transact-sql.md)   
- [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md)   
  [sp_dropapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropapprole-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

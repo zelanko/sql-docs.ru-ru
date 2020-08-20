@@ -1,4 +1,5 @@
 ---
+description: sp_help_schedule (Transact-SQL)
 title: sp_help_schedule (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b2fc4ce1-0a8e-44d2-b206-7dc7b258d8c9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5f0539e4281d58744b18a4f9ca522c52952032c0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 516314123b6555f7e079471b88384e586bdc5cba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893595"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474208"
 ---
 # <a name="sp_help_schedule-transact-sql"></a>sp_help_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,13 +44,13 @@ sp_help_schedule
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @schedule_id = ] id`Идентификатор расписания для перечисления. *schedule_name* имеет **тип int**и не имеет значения по умолчанию. Можно указать либо *schedule_id* , либо *schedule_name* .  
+`[ @schedule_id = ] id` Идентификатор расписания для перечисления. *schedule_name* имеет **тип int**и не имеет значения по умолчанию. Можно указать либо *schedule_id* , либо *schedule_name* .  
   
-`[ @schedule_name = ] 'schedule_name'`Имя расписания для перечисления. Аргумент *schedule_name* имеет тип **sysname**и не имеет значения по умолчанию. Можно указать либо *schedule_id* , либо *schedule_name* .  
+`[ @schedule_name = ] 'schedule_name'` Имя расписания для перечисления. Аргумент *schedule_name* имеет тип **sysname**и не имеет значения по умолчанию. Можно указать либо *schedule_id* , либо *schedule_name* .  
   
-`[ @attached_schedules_only = ] attached_schedules_only ]`Указывает, следует ли отображать только расписания, к которым присоединено задание. *attached_schedules_only* имеет **бит**и значение по умолчанию **0**. Если значение *attached_schedules_only* равно **0**, отображаются все расписания. Если *attached_schedules_only* равен **1**, результирующий набор содержит только те расписания, которые присоединены к заданию.  
+`[ @attached_schedules_only = ] attached_schedules_only ]` Указывает, следует ли отображать только расписания, к которым присоединено задание. *attached_schedules_only* имеет **бит**и значение по умолчанию **0**. Если значение *attached_schedules_only* равно **0**, отображаются все расписания. Если *attached_schedules_only* равен **1**, результирующий набор содержит только те расписания, которые присоединены к заданию.  
   
-`[ @include_description = ] include_description`Указывает, следует ли включать описания в результирующий набор. *include_description* имеет **бит**и значение по умолчанию **0**. Если значение *include_description* равно **0**, столбец *schedule_description* результирующего набора содержит заполнитель. Если *include_description* равен **1**, описание расписания включается в результирующий набор.  
+`[ @include_description = ] include_description` Указывает, следует ли включать описания в результирующий набор. *include_description* имеет **бит**и значение по умолчанию **0**. Если значение *include_description* равно **0**, столбец *schedule_description* результирующего набора содержит заполнитель. Если *include_description* равен **1**, описание расписания включается в результирующий набор.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  

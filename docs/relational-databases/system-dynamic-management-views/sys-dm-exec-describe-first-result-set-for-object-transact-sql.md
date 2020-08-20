@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
 title: sys. dm_exec_describe_first_result_set_for_object (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ ms.assetid: 63b0fde7-95d7-4ad7-a219-a9feacf1bd89
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d0c08c6e0d41781783cf7aaffd1f26d6e7b4e417
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 42f85ed4083c03184efe3a642b4c9578ee53955e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85676761"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475005"
 ---
 # <a name="sysdm_exec_describe_first_result_set_for_object-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ sys.dm_exec_describe_first_result_set_for_object
  @object_id [!INCLUDE[tsql](../../includes/tsql-md.md)] Хранимой процедуры или [!INCLUDE[tsql](../../includes/tsql-md.md)] триггера. @object_id имеет тип **int**.  
   
  *\@include_browse_information*  
- @include_browse_informationявляется **битом**типа. Если имеет значение 1, то каждый запрос анализируется так, как будто он имеет параметр FOR BROWSE для запроса. Возвращает дополнительные ключевые столбцы и сведения об исходной таблице.  
+ @include_browse_information является **битом**типа. Если имеет значение 1, то каждый запрос анализируется так, как будто он имеет параметр FOR BROWSE для запроса. Возвращает дополнительные ключевые столбцы и сведения об исходной таблице.  
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
  Эти общие метаданные возвращаются в виде результирующего набора с одной строкой для каждого столбца в результирующих метаданных. Каждая строка описывает тип и допустимость значений NULL в столбце в формате, описанном в следующем разделе. Если первая инструкция не существует для каждого пути управления, возвращается результирующий набор с нулем строк.  
@@ -96,7 +97,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |**error_type**|**int**|Содержит целое число, представляющее возвращаемую ошибку. Соответствует error_type_desc. См. список под замечаниями.|  
 |**error_type_desc**|**nvarchar(60)**|Содержит короткую строку в верхнем регистре, представляющую возвращаемую ошибку. Сопоставляется с error_type. См. список под замечаниями.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  В этой функции используется тот же алгоритм, что и в процедуре **sp_describe_first_result_set**. Дополнительные сведения см. в разделе [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
   
  В следующей таблице содержится список типов ошибок и их описания  

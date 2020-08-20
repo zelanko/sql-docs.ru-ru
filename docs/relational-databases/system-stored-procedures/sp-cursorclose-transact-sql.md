@@ -1,4 +1,5 @@
 ---
+description: sp_cursorclose (Transact-SQL)
 title: sp_cursorclose (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d9b7b44d-cdff-456e-97df-7031a3b9beb6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ede7644f143fbec8a013e6db879f869562b33e84
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 94676fe60a7c5b5143a014fc12647b3f93d8fd63
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85869566"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474410"
 ---
 # <a name="sp_cursorclose-transact-sql"></a>sp_cursorclose (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,14 +46,14 @@ sp_cursorclose cursor
 > [!NOTE]  
 >  Входное значение -1 относится ко всем курсорам в текущем соединении.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  *курсор* возвратит сообщения об ошибках, если процедура была выполнена после закрытия курсора или если указан недопустимый маркер.  
   
  Состояние RPC обозначает общий успех или общий неуспех.  
   
  Счетчик строк DONE всегда равен 0.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

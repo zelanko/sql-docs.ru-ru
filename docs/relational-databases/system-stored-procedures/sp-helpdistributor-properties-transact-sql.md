@@ -1,4 +1,5 @@
 ---
+description: Хранимая процедура sp_helpdistributor_properties (Transact-SQL)
 title: sp_helpdistributor_properties (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ee267724-3244-49eb-84c9-f38dbefdd639
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eca0c3f3c03438c9bcc6a715bf06b4aa58f8690a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5760625f8316eeddaa9cf1d3dd429e91932e0d4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733245"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474066"
 ---
 # <a name="sp_helpdistributor_properties-transact-sql"></a>Хранимая процедура sp_helpdistributor_properties (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,13 +46,13 @@ sp_helpdistributor_properties
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_helpdistributor_properties** используется со всеми типами репликации.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** , члены предопределенной роли базы данных **db_owner** или **replmonitor** в базе данных распространителя и пользователи из списка доступа к публикации (PAL) для публикации, использующей этот распространитель, могут выполнять **sp_helpdistributor_properties**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_changedistributor_property &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)  
   
   

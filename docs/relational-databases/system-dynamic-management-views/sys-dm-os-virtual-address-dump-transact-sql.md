@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_virtual_address_dump (Transact-SQL)
 title: sys. dm_os_virtual_address_dump (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ ms.assetid: 7b24ea55-3873-42fd-a86c-441c92eb6175
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e261a40797bbcdeaaa2226c3bd127a3ff03e7d43
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 67dc917d123659fd71106500f47595c4af64dc2a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396733"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474891"
 ---
 # <a name="sysdm_os_virtual_address_dump-transact-sql"></a>sys.dm_os_virtual_address_dump (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -47,14 +48,14 @@ ms.locfileid: "87396733"
 |**region_state**|**varbinary(8)**|Текущее состояние области. Возможны следующие варианты.<br /><br /> — MEM_COMMIT<br />— MEM_RESERVE<br />— MEM_FREE<br /><br /> Не допускает значение NULL.|  
 |**region_current_protection**|**varbinary(8)**|Атрибуты защиты. Значение может быть одним из следующих:<br /><br /> — PAGE_READONLY<br />— PAGE_READWRITE<br />— PAGE_NOACCESS<br />— PAGE_WRITECOPY<br />— PAGE_EXECUTE<br />— PAGE_EXECUTE_READ<br />— PAGE_EXECUTE_READWRITE<br />— PAGE_EXECUTE_WRITECOPY<br />— PAGE_GUARD<br />— PAGE_NOCACHE<br /><br /> Не допускает значение NULL.|  
 |**region_type**|**varbinary(8)**|Определяет типы страниц в области. Он может иметь одно из следующих значений:<br /><br /> — MEM_PRIVATE<br />— MEM_MAPPED<br />— MEM_IMAGE<br /><br /> Не допускает значение NULL.|  
-|**pdw_node_id**|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
+|**pdw_node_id**|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
   
 ## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
 ## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [SQL Server динамические административные представления, связанные с операционной системой &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [SQL Server динамические административные представления, связанные с операционной системой &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

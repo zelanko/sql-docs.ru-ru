@@ -1,4 +1,5 @@
 ---
+description: FREETEXTTABLE (Transact-SQL)
 title: FREETEXTTABLE (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -22,12 +23,12 @@ ms.assetid: 4523ae15-4260-40a7-a53c-8df15e1fee79
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ae1f88ba7694f99546382d9b1450aea4c555f4d9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 76829bf7e49fe198dd6d1dd022aaad5a6a5e1ac2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734381"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474668"
 ---
 # <a name="freetexttable-transact-sql"></a>FREETEXTTABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -84,14 +85,14 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
   
  Если аргумент *language_term* указан как строка, он соответствует значению столбца **alias** в представлении совместимости [sys.languages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) (Transact-SQ).  Строка должна быть заключена в одиночные кавычки: '*language_term*'. Если значением аргумента *language_term* является целое число, оно представляет собой действительный код языка. Если значение *language_term* задано в шестнадцатеричной форме, то после символов "0x" должна следовать шестнадцатеричная запись кода языка. Шестнадцатеричное значение не может иметь более восьми знаков, включая начальные нули.  
   
- Если значение находится в формате двухбайтовой кодировки (DBCS), [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] преобразует его в Юникод.  
+ Если значение указано в двухбайтовой кодировке (DBCS), [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] преобразует его в Юникод.  
   
  Если указанный язык является недопустимым или связанные с ним ресурсы не установлены, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает сообщение об ошибке. Для использования нейтральных языковых ресурсов следует указать 0x0 в качестве значения аргумента *language_term*.  
   
  *top_n_by_rank*  
  Указывает, что возвращаются только *n*соответствий с наивысшим рангом в порядке убывания. Применяется только в том случае, если указано целочисленное значение *n*. Если параметр *top_n_by_rank* скомбинирован с другими параметрами, то запрос может вернуть меньше строк, чем фактически соответствует всем предикатам. *top_n_by_rank* позволяет повысить производительность запросов, вызвав только наиболее актуальные попадания.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Полнотекстовые предикаты и функции работают в одной таблице, что следует из наличия предиката FROM. Для поиска в нескольких таблицах используйте в предложении FROM соединенную таблицу, чтобы выполнять поиск в результирующем наборе, который получен в результате соединения нескольких таблиц.  
   
  Функция FREETEXTTABLE использует те же условия поиска, что и предикат FREETEXT.  
@@ -172,10 +173,10 @@ GO
  [Создание и управление полнотекстовыми индексами](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
  [Запрос с полнотекстовым поиском](../../relational-databases/search/query-with-full-text-search.md)   
  [Создание запросов полнотекстового поиска (визуальные инструменты для баз данных)](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
- [СОДЕРЖИТ &#40;&#41;Transact-SQL](../../t-sql/queries/contains-transact-sql.md)   
+ [CONTAINS (Transact-SQL)](../../t-sql/queries/contains-transact-sql.md)   
  [CONTAINSTABLE (Transact-SQL)](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [FREETEXT (Transact-SQL)](../../t-sql/queries/freetext-transact-sql.md)   
- [Функции наборов строк &#40;&#41;Transact-SQL](../../t-sql/functions/rowset-functions-transact-sql.md)   
+ [Функции наборов строк &#40;&#41;Transact-SQL ](../../t-sql/functions/rowset-functions-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [WHERE (Transact-SQL)](../../t-sql/queries/where-transact-sql.md)   
  [Параметр конфигурации сервера «precompute rank»](../../database-engine/configure-windows/precompute-rank-server-configuration-option.md)  

@@ -1,4 +1,5 @@
 ---
+description: sp_helpdevice (Transact-SQL)
 title: sp_helpdevice (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1a5eafa7-384e-4691-ba05-978eb73bbefb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cda03415378577a061bb308c0b19e7fcd0659d49
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0da4ef24647edd8de4bda1c412afb1410f9d3c14
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893600"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474129"
 ---
 # <a name="sp_helpdevice-transact-sql"></a>sp_helpdevice (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @devname = ] 'name'`Имя устройства резервного копирования, для которого сообщается информация. Значение *Name* всегда имеет тип **sysname**.  
+`[ @devname = ] 'name'` Имя устройства резервного копирования, для которого сообщается информация. Значение *Name* всегда имеет тип **sysname**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -53,7 +54,7 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**device_name**|**sysname**|Имя логического устройства.|  
 |**physical_name**|**nvarchar(260)**|Физическое имя файла.|  
-|**nописание**|**nvarchar(255)**|Описание устройства.|  
+|**description**|**nvarchar(255)**|Описание устройства.|  
 |**status**|**int**|Число, соответствующее описанию состояния в столбце **Описание** .|  
 |**cntrltype**|**smallint**|Тип контроллера устройства.<br /><br /> 2 = дисковое устройство.<br /><br /> 5 = ленточное устройство.|  
 |**size**|**int**|Размер устройства в 2-килобайтовых страницах.|  

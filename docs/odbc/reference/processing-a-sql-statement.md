@@ -1,4 +1,5 @@
 ---
+description: Обработка инструкции SQL
 title: Обработка инструкции SQL | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 96270c4f-2efd-4dc1-a985-ed7fd5658db2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 349a62034d598c1bfb44b891b91359d5ff184b7e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b4ce614f6dcf4c1fe0ab1e1c806b966b4267e7fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81280524"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476221"
 ---
 # <a name="processing-a-sql-statement"></a>Обработка инструкции SQL
 Прежде чем обсуждать методики использования SQL программным способом, необходимо обсудить обработку инструкции SQL. Эти шаги являются общими для всех трех методов, хотя каждый метод выполняет их в разное время. На следующем рисунке показаны этапы обработки инструкции SQL, которые обсуждаются в оставшейся части этого раздела.  

@@ -1,4 +1,5 @@
 ---
+description: sp_detach_db (Transact-SQL)
 title: sp_detach_db (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/30/2015
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ee5261834a0eeb11b4f7f6a21ab5110c0d42fd48
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 66f3e4543e3090d3a2bb0fee7179abaf2e017503
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85861114"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474306"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,13 +46,13 @@ sp_detach_db [ @dbname= ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @dbname = ] 'database_name'`Имя базы данных, подсоединяемой. *database_name* имеет значение типа **sysname** и значение по умолчанию NULL.  
+`[ @dbname = ] 'database_name'` Имя базы данных, подсоединяемой. *database_name* имеет значение типа **sysname** и значение по умолчанию NULL.  
   
-`[ @skipchecks = ] 'skipchecks'`Указывает, следует ли пропустить или выполнить обновление статистики. *параметром skipchecks установленным* — это значение типа **nvarchar (10)** со ЗНАЧЕНИЕМ по умолчанию NULL. Чтобы пропустить СТАТИСТИКУ обновления, укажите **значение true**. Чтобы явно выполнить обновление статистики, укажите **значение false**.  
+`[ @skipchecks = ] 'skipchecks'` Указывает, следует ли пропустить или выполнить обновление статистики. *параметром skipchecks установленным* — это значение типа **nvarchar (10)** со ЗНАЧЕНИЕМ по умолчанию NULL. Чтобы пропустить СТАТИСТИКУ обновления, укажите **значение true**. Чтобы явно выполнить обновление статистики, укажите **значение false**.  
   
  По умолчанию инструкция UPDATE STATISTICS запускается для обновления информации о данных в таблицах и индексах. Выполнение UPDATE STATISTICS имеет смысл для тех баз данных, которые планируется переместить на постоянные носители информации.  
   
-`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'`Указывает, что файл полнотекстового индекса, связанный с отсоединяемой базой данных, не будет удален во время операции отсоединения базы данных. *KeepFulltextIndexFile* — это значение типа **nvarchar (10)** со значением по умолчанию **true**. Если *KeepFulltextIndexFile* имеет **значение false**, все файлы полнотекстовых индексов, связанные с базой данных, и метаданные полнотекстового индекса удаляются, если только база данных не доступна только для чтения. Если задано значение NULL или **true**, метаданные, связанные с полнотекстовым текстом, сохраняются.  
+`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` Указывает, что файл полнотекстового индекса, связанный с отсоединяемой базой данных, не будет удален во время операции отсоединения базы данных. *KeepFulltextIndexFile* — это значение типа **nvarchar (10)** со значением по умолчанию **true**. Если *KeepFulltextIndexFile* имеет **значение false**, все файлы полнотекстовых индексов, связанные с базой данных, и метаданные полнотекстового индекса удаляются, если только база данных не доступна только для чтения. Если задано значение NULL или **true**, метаданные, связанные с полнотекстовым текстом, сохраняются.  
   
 > [!IMPORTANT]
 >  Параметр ** \@ KeepFulltextIndexFile** будет удален в следующей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Не используйте его при работе над новыми приложениями и как можно быстрее измените приложения, в которых он в настоящее время используется.  
@@ -112,7 +113,7 @@ GO
 ```  
   
 > [!NOTE]  
->  Для принудительной установки текущих пользователей из базы данных немедленно или в течение заданного количества секунд также используйте параметр ROLLBACK: ALTER DATABASE *database_name* Set SINGLE_USER WITH ROLLBACK *rollback_option*. Дополнительные сведения см. в разделе [ALTER database &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+>  Для принудительной установки текущих пользователей из базы данных немедленно или в течение заданного количества секунд также используйте параметр ROLLBACK: ALTER DATABASE *database_name* Set SINGLE_USER WITH ROLLBACK *rollback_option*. Дополнительные сведения см. в разделе [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).  
   
 ## <a name="reattaching-a-database"></a>Повторное присоединение базы данных  
  Отсоединенные файлы останутся на диске и могут быть повторно подсоединены с помощью вызова CREATE DATABASE (с параметрами FOR ATTACH или FOR ATTACH_REBUILD_LOG). Файлы можно также переместить на другой сервер и подсоединить там.  

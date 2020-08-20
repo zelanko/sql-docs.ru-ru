@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergearticleconflicts (Transact-SQL)
 title: sp_helpmergearticleconflicts (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4678a2b9-9a5f-4193-a20d-2e11fc896c3a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 776f46d1f2e61c0f866352ee9c373e4619a2e282
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9a2e2272713266ea0dbae5d4bc8da76bff87b919
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893566"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474061"
 ---
 # <a name="sp_helpmergearticleconflicts-transact-sql"></a>sp_helpmergearticleconflicts (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,11 +40,11 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'`Имя публикации слиянием. Аргумент *publication* имеет тип **sysname**и значение по умолчанию **%** , которое возвращает все статьи в базе данных с конфликтами.  
+`[ @publication = ] 'publication'` Имя публикации слиянием. Аргумент *publication* имеет тип **sysname**и значение по умолчанию **%** , которое возвращает все статьи в базе данных с конфликтами.  
   
-`[ @publisher = ] 'publisher'`Имя издателя. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'` Имя издателя. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @publisher_db = ] 'publisher_db'`Имя базы данных издателя. Аргумент *publisher_db* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher_db = ] 'publisher_db'` Имя базы данных издателя. Аргумент *publisher_db* имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -61,13 +62,13 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  **sp_helpmergearticleconflicts** используется в репликации слиянием.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** и **db_owner** предопределенной роли базы данных могут выполнять **sp_helpmergearticleconflicts**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

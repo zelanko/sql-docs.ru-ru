@@ -1,4 +1,5 @@
 ---
+description: sys.dm_fts_index_population (Transact-SQL)
 title: sys. dm_fts_index_population (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/29/2017
@@ -20,12 +21,12 @@ ms.assetid: 82d1c102-efcc-4b60-9a5e-3eee299bcb2b
 author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0326d5117371f23cd446caf2c17e0d832ea5cf4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1fd871a3f0de84d5a6a36eff7262f71062ace3a9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734530"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474968"
 ---
 # <a name="sysdm_fts_index_population-transact-sql"></a>sys.dm_fts_index_population (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,27 +55,27 @@ ms.locfileid: "85734530"
 |**start_time**|**datetime**|Время начала заполнения.|  
 |**incremental_timestamp**|**timestamp**|Для полного заполнения содержит отметку времени его начала. Для остальных типов заполнения содержит последнюю зафиксированную контрольную точку (это значение отражает процесс заполнения).|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Если в дополнение к полнотекстовому индексированию включено статистическое семантическое индексирование, то выделение и заполнение семантических ключевых фраз, а также извлечение данных о подобии документов происходит одновременно с полнотекстовым индексированием. Заполнение индекса подобия документов выполняется позже, на втором этапе. Дополнительные сведения см. в разделе [Управление семантическим поиском и наблюдение за](../../relational-databases/search/manage-and-monitor-semantic-search.md)ним.  
   
 ## <a name="permissions"></a>Разрешения  
 
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
+На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется  **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
   
 ## <a name="physical-joins"></a>Физические соединения  
  ![Существенные соединения данного динамического административного представления](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-index-population-1.gif "Существенные соединения данного динамического административного представления")  
   
 ## <a name="relationship-cardinalities"></a>Количество элементов связей  
   
-|Исходный тип|Кому|Связь|  
+|От|Кому|Связь|  
 |----------|--------|------------------|  
 |dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|Один к одному|  
 |dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|Один к одному|  
 |dm_fts_population_ranges.parent_memory_address|dm_fts_index_population.memory_address|«многие к одному»|  
   
-## <a name="see-also"></a>См. также  
- [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+## <a name="see-also"></a>См. также:  
+ [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции полнотекстового поиска и семантического поиска &#40;языке Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   
   

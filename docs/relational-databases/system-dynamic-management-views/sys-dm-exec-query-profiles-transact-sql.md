@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_query_profiles (Transact-SQL)
 title: sys. dm_exec_query_profiles (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/25/2019
@@ -20,12 +21,12 @@ ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 51dd6f1d831931fcd8e14e38a3ca94ae440dae1a
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 4cbb0c5bb226842aeb9767fd4ac9c3a8122dc790
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865372"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474986"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -79,18 +80,18 @@ ms.locfileid: "87865372"
   
  Счетчики, связанные с вводом-выводом, о которых сообщает это динамическое административное представление, более детализированы по сравнению с отчетами, предоставленными `SET STATISTICS IO` следующими двумя способами.  
   
--   `SET STATISTICS IO`группирует счетчики для всех операций ввода-вывода в указанную таблицу. Это динамическое административное представление получит отдельные счетчики для каждого узла в плане запроса, который выполняет операции ввода-вывода в таблице.  
+-   `SET STATISTICS IO` группирует счетчики для всех операций ввода-вывода в указанную таблицу. Это динамическое административное представление получит отдельные счетчики для каждого узла в плане запроса, который выполняет операции ввода-вывода в таблице.  
   
 -   Если есть параллельное сканирование, данное динамическое административное представление выдает счетчики для каждого из параллельных потоков, выполняющих сканирование.
  
-Начиная с с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пакетом обновления 1 (SP1) *Стандартная инфраструктура профилирования статистики выполнения запросов* существует параллельно с *инфраструктурой профилирования статистики выполнения упрощенных запросов*. `SET STATISTICS XML ON`и `SET STATISTICS PROFILE ON` всегда используйте *стандартную инфраструктуру профилирования статистики выполнения запросов*. Для `sys.dm_exec_query_profiles` заполнения необходимо включить одну из инфраструктур профилирования запросов. Дополнительные сведения см. в разделе [Инфраструктура профилирования запросов](../../relational-databases/performance/query-profiling-infrastructure.md).    
+Начиная с с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пакетом обновления 1 (SP1) *Стандартная инфраструктура профилирования статистики выполнения запросов* существует параллельно с *инфраструктурой профилирования статистики выполнения упрощенных запросов*. `SET STATISTICS XML ON` и `SET STATISTICS PROFILE ON` всегда используйте *стандартную инфраструктуру профилирования статистики выполнения запросов*. Для `sys.dm_exec_query_profiles` заполнения необходимо включить одну из инфраструктур профилирования запросов. Дополнительные сведения см. в разделе [Инфраструктура профилирования запросов](../../relational-databases/performance/query-profiling-infrastructure.md).    
 
 >[!NOTE]
 > Запрос в процессе расследования должен начаться **после** включения инфраструктуры профилирования запросов, после того как запрос не будет давать результаты в `sys.dm_exec_query_profiles` . Дополнительные сведения о том, как включить инфраструктуру профилирования запросов, см. в разделе [инфраструктура профилирования запросов](../../relational-databases/performance/query-profiling-infrastructure.md).
 
 ## <a name="permissions"></a>Разрешения  
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] и управляемый экземпляр Azure SQL необходимо `VIEW DATABASE STATE` разрешение и членство в `db_owner` роли базы данных.   
-На [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
+На [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] уровнях Standard и Basic требуется  **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
    
 ## <a name="examples"></a>Примеры  
  Шаг 1. Войдите в сеанс, в котором планируется выполнить запрос, который будет анализироваться с помощью `sys.dm_exec_query_profiles` . Настройка запроса для использования профилирования `SET STATISTICS PROFILE ON` . Выполните ваш запрос в данном сеансе.  
@@ -123,7 +124,7 @@ GROUP BY node_id,physical_operator_name
 ORDER BY node_id;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции, связанные с выполнением (Transact-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
  

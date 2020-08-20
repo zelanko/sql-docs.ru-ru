@@ -1,4 +1,5 @@
 ---
+description: sys.server_event_session_fields (Transact-SQL)
 title: sys. server_event_session_fields (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7109f9fb-8a1f-432c-92d1-6f8af3e96af1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3b87440f9f5e1afc6ea1ede20054e4f34db8087d
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: ffead368e1c89d9e2d963eb4fb3f806c4bde327a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442467"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475303"
 ---
 # <a name="sysserver_event_session_fields-transact-sql"></a>sys.server_event_session_fields (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "87442467"
 ## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Это представление имеет следующее количество элементов связей.  
   
 | От | Кому | Связь |

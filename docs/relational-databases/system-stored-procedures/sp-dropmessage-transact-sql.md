@@ -1,4 +1,5 @@
 ---
+description: sp_dropmessage (Transact-SQL)
 title: sp_dropmessage (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c8c9ac233cdc71d8886224182c2c3b91cd871450
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 46c95708903063b4fade98e3d45e29e184e93efd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881786"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474248"
 ---
 # <a name="sp_dropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,15 +41,15 @@ sp_dropmessage [ @msgnum = ] message_number
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @msgnum = ] message_number`Номер сообщения для удаления. *message_number* должно быть определяемым пользователем сообщением, имеющим номер сообщения, превышающий 50000. *message_number* имеет **тип int**и значение по умолчанию NULL.  
+`[ @msgnum = ] message_number` Номер сообщения для удаления. *message_number* должно быть определяемым пользователем сообщением, имеющим номер сообщения, превышающий 50000. *message_number* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @lang = ] 'language'`Язык сообщения для удаления. Если указано значение **ALL** , то все языковые версии *message_number* удаляются. *Language* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @lang = ] 'language'` Язык сообщения для удаления. Если указано значение **ALL** , то все языковые версии *message_number* удаляются. *Language* имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет.  
+ Отсутствует.  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в предопределенных ролях сервера **sysadmin** и **serveradmin** .  

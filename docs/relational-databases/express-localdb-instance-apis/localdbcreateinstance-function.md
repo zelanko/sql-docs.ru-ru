@@ -1,4 +1,5 @@
 ---
+description: Функция LocalDBCreateInstance
 title: Функция LocalDBCreateInstance | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ apitype: DLLExport
 ms.assetid: 3eebb485-8a53-4a79-82a9-57b8de9f8e84
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7e06c3c309b29f52d68b765210999469973331ce
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9bf1d0f11ce3030ead3adb012211460227b8c17e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789512"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475929"
 ---
 # <a name="localdbcreateinstance-function"></a>Функция LocalDBCreateInstance
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -97,14 +98,14 @@ HRESULT LocalDBCreateInstance(
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
  Произошла непредвиденная ошибка. Подробные сведения см. в журнале событий.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Если существует полностью функциональный экземпляр LocalDB с указанным именем и его версия равна или выше запрошенной, возвращается результат S_OK.  
   
  В случае, если существующий экземпляр поврежден, последующие вызовы метода API **LocalDBCreateInstance** завершатся с ошибкой. Поврежденный экземпляр необходимо исправить вручную или явно удалить, чтобы его можно было использовать снова.  
   
  Образец кода, использующего API LocalDB, см. в разделе [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Заголовок и сведения о версии SQL Server Express LocalDB](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
   
   

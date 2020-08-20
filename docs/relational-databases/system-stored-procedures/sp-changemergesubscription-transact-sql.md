@@ -1,4 +1,5 @@
 ---
+description: sp_changemergesubscription (Transact-SQL)
 title: sp_changemergesubscription (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a51ae948e546d616e6fd17a5b37501f112907560
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 388d33f9d812534ecee54dac41cfe7ad852e139d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85871860"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474475"
 ---
 # <a name="sp_changemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,20 +43,20 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'`Имя изменяемой публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию NULL. Публикация уже должна существовать и соответствовать правилам для идентификаторов.  
+`[ @publication = ] 'publication'` Имя изменяемой публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию NULL. Публикация уже должна существовать и соответствовать правилам для идентификаторов.  
   
-`[ @subscriber = ] 'subscriber'`Имя подписчика. Аргумент *Subscriber* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @subscriber = ] 'subscriber'` Имя подписчика. Аргумент *Subscriber* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @subscriber_db = ] 'subscriber_db'`Имя базы данных подписки. Аргумент *subscriber_db*имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @subscriber_db = ] 'subscriber_db'` Имя базы данных подписки. Аргумент *subscriber_db*имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @property = ] 'property'`Свойство, которое необходимо изменить для данной публикации. Аргумент *Property* имеет тип **sysname**и может принимать одно из значений в таблице.  
+`[ @property = ] 'property'` Свойство, которое необходимо изменить для данной публикации. Аргумент *Property* имеет тип **sysname**и может принимать одно из значений в таблице.  
   
-`[ @value = ] 'value'`Новое значение для указанного *Свойства*. *значение* равно **nvarchar (255)** и может быть одним из значений в таблице.  
+`[ @value = ] 'value'` Новое значение для указанного *Свойства*. *значение* равно **nvarchar (255)** и может быть одним из значений в таблице.  
   
 |Свойство|Значение|Описание|  
 |--------------|-----------|-----------------|  
-|**nописание**||Описание этой подписки слиянием.|  
-|**priority**||Приоритет подписки. При обнаружении конфликтов применяемый по умолчанию сопоставитель выбирает победителя исходя из приоритетов.|  
+|**description**||Описание этой подписки слиянием.|  
+|**приоритеты**||Приоритет подписки. При обнаружении конфликтов применяемый по умолчанию сопоставитель выбирает победителя исходя из приоритетов.|  
 |**merge_job_login**||Имя входа учетной записи [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, с которой выполняется агент.|  
 |**merge_job_password**||Пароль учетной записи Windows, от имени которой выполняется агент.|  
 |**publisher_security_mode**|**1**|При подключении к подписчику используется проверка подлинности Windows.|  

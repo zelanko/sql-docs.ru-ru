@@ -1,4 +1,5 @@
 ---
+description: sys.trigger_event_types (Transact-SQL)
 title: sys. trigger_event_types (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 054aed54-7151-4760-934a-149fa434f1ae
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 81fb3ac8d7bf843b9d64e4f0f10cff6abd83b042
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 03fe8a341d9ee1541eac716d94603cc2b2b209cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897693"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475210"
 ---
 # <a name="systrigger_event_types-transact-sql"></a>sys.trigger_event_types (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,8 +41,8 @@ ms.locfileid: "85897693"
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также  
- [Представления каталога объектов &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Представления каталога объектов (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_add_maintenance_plan_db (Transact-SQL)
 title: sp_add_maintenance_plan_db (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 76f4fefa-5b99-4deb-beed-e198987a45a9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8b3f28d23925e76383b30a82e907394e05b2b7ed
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5d8369e3cdd8ad7d7c943e715361cbd26d99bb00
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879744"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474640"
 ---
 # <a name="sp_add_maintenance_plan_db-transact-sql"></a>sp_add_maintenance_plan_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,9 +46,9 @@ sp_add_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @plan_id = ] 'plan_id'`Указывает идентификатор плана плана обслуживания. *plan_id* имеет тип **uniqueidentifier**и должен быть допустимым идентификатором.  
+`[ @plan_id = ] 'plan_id'` Указывает идентификатор плана плана обслуживания. *plan_id* имеет тип **uniqueidentifier**и должен быть допустимым идентификатором.  
   
-`[ @db_name = ] 'database_name'`Указывает имя базы данных, добавляемой в план обслуживания. База данных должна быть создана или уже существовать до добавления в план. Аргумент *database_name* имеет тип **sysname**.  
+`[ @db_name = ] 'database_name'` Указывает имя базы данных, добавляемой в план обслуживания. База данных должна быть создана или уже существовать до добавления в план. Аргумент *database_name* имеет тип **sysname**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

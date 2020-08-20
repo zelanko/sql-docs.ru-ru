@@ -1,4 +1,5 @@
 ---
+description: sys.sysmessages (Transact-SQL)
 title: Сообщения sys.sys(Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 44bee7d9-7517-4071-99be-8b36f979c7cc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25d1e3624dcaacd78325ba359cfb559a24eff3f6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c54d1cd0db8de1753a6dd81bfbde71c6944df6e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882054"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475152"
 ---
 # <a name="syssysmessages-transact-sql"></a>sys.sysmessages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,11 +41,11 @@ ms.locfileid: "85882054"
 |**error**|**int**|Уникальный номер ошибки.|  
 |**severity**|**tinyint**|Степень серьезности ошибки.|  
 |**dlevel**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**nописание**|**nvarchar(255)**|Объяснение ошибки с заполнителями для параметров.|  
+|**description**|**nvarchar(255)**|Объяснение ошибки с заполнителями для параметров.|  
 |**msglangid**|**smallint**|Идентификатор группы системного сообщения.|  
   
-## <a name="see-also"></a>См. также  
- [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Представления совместимости (Transact-SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

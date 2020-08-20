@@ -1,4 +1,5 @@
 ---
+description: sp_changemergepublication (Transact-SQL)
 title: sp_changemergepublication (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ba7a6785952152632a9435269bc7b4a9b236ad38
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 46fef8eff54b4a27957191e2456df90ff77f72c4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85872515"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474499"
 ---
 # <a name="sp_changemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +42,11 @@ sp_changemergepublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @property = ] 'property'`Свойство, которое необходимо изменить для данной публикации. *свойство* имеет тип **sysname**и может быть одним из значений, перечисленных в следующей таблице.  
+`[ @property = ] 'property'` Свойство, которое необходимо изменить для данной публикации. *свойство* имеет тип **sysname**и может быть одним из значений, перечисленных в следующей таблице.  
   
-`[ @value = ] 'value'`Новое значение для указанного свойства. *value* имеет тип **nvarchar (255)** и может быть одним из значений, перечисленных в следующей таблице.  
+`[ @value = ] 'value'` Новое значение для указанного свойства. *value* имеет тип **nvarchar (255)** и может быть одним из значений, перечисленных в следующей таблице.  
   
  В данной таблице описаны свойства публикации, доступные для изменения, а также ограничения на значения этих свойств.  
   
@@ -53,7 +54,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|Анонимные подписки разрешены.|  
 ||**false**|Анонимные подписки запрещены.|  
-|**allow_partition_realignment**|**true**|Операции удаления отправляются на подписчик для отражения результатов изменений секции путем удаления данных, которые больше не являются частью секции подписчика. Это поведение установлено по умолчанию.|  
+|**allow_partition_realignment**|**true**|Операции удаления отправляются на подписчик для отражения результатов изменений секции путем удаления данных, которые больше не являются частью секции подписчика. Это поведение по умолчанию.|  
 ||**false**|Данные из старой секции остаются на подписчике, а изменения данных, произведенные на издателе, на этот подписчик не реплицируются. Вместо этого изменения в подписчике реплицируются на издатель. Такой метод применяется для сохранения в подписке данных из старой секции, чтобы обеспечить доступ к архивным данным.|  
 |**allow_pull**|**true**|Подписки по запросу на данную публикацию разрешены.|  
 ||**false**|Подписки по запросу на данную публикацию не разрешены.|  
@@ -78,7 +79,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**абонент**|Конфликтующие записи хранятся на подписчике, вызвавшем конфликт. Не поддерживается для [!INCLUDE[ssEW](../../includes/ssew-md.md)] подписчиков *.*|  
 ||**как**|Конфликтующие записи хранятся одновременно на издателе и на подписчике.|  
 |**conflict_retention**||Значение **типа int** , указывающее срок хранения (в днях), в течение которого сохраняются конфликты. Если задать для параметра *conflict_retention* значение **0** , очистка конфликтов не требуется.|  
-|**nописание**||Описание публикации.|  
+|**description**||Описание публикации.|  
 |**dynamic_filters**|**true**|Публикация фильтруется на основе динамического предложения.|  
 ||**false**|Публикация не фильтруется динамически.|  
 |**enabled_for_internet**|**true**|Публикация через Интернет разрешена. Для передачи файлов моментальных снимков на подписчик можно использовать протокол FTP. Файлы синхронизации для публикации размещаются в каталоге «C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\ftp».|  
@@ -120,7 +121,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**web_synchronization_url**||Значение по умолчанию URL-адреса в Интернете для веб-синхронизации.|  
 |NULL (по умолчанию)||Возвращает список поддерживаемых значений для *Свойства*.|  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Подтверждает, что действие, выполняемое этой хранимой процедурой, может сделать недействительным существующий моментальный снимок. *force_invalidate_snapshot* является **битом**и имеет значение по умолчанию **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Подтверждает, что действие, выполняемое этой хранимой процедурой, может сделать недействительным существующий моментальный снимок. *force_invalidate_snapshot* является **битом**и имеет значение по умолчанию **0**.  
   
  **0** указывает, что изменение публикации не сделает моментальный снимок недействительным. Если хранимая процедура определяет, что изменение требует создания нового моментального снимка, возникает ошибка и изменения не выполняются.  
   
@@ -128,7 +129,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
  Сведения о свойствах, которые при их изменении требуют создания нового моментального снимка, см. в разделе «Примечания».  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription`Подтверждает, что действие, выполняемое этой хранимой процедурой, может потребовать повторной инициализации существующих подписок. *force_reinit_subscription* является **битом** со значением по умолчанию **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Подтверждает, что действие, выполняемое этой хранимой процедурой, может потребовать повторной инициализации существующих подписок. *force_reinit_subscription* является **битом** со значением по умолчанию **0**.  
   
  значение **0** указывает, что изменение публикации не требует повторной инициализации подписок. Если хранимая процедура определяет, что изменения потребуют повторной инициализации подписок, возникает ошибка, и изменения не выполняются.  
   
@@ -186,12 +187,12 @@ sp_changemergepublication [ @publication= ] 'publication'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_changemergepublication**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Просмотр и изменение свойств публикации](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Изменение свойств публикации и статьи](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [sp_dropmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)   
- [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
+ [sp_helpmergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

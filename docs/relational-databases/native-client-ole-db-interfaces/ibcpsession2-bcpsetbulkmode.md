@@ -1,4 +1,5 @@
 ---
+description: 'Метода IBCPSession2:: BCPSetBulkMode (поставщик собственного клиента OLE DB)'
 title: 'Метода IBCPSession2:: BCPSetBulkMode (поставщик собственного клиента OLE DB) | Документация Майкрософт'
 ms.custom: ''
 ms.date: 03/16/2017
@@ -13,12 +14,12 @@ ms.assetid: babba19f-e67b-450c-b0e6-523a0f9d23ab
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc8b48c6a9dab071df8fa3df1977f62afb91659d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 001eae4473b25c440dc3db54a5936e351f5566c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247711"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475725"
 ---
 # <a name="ibcpsession2bcpsetbulkmode-native-client-ole-db-provider"></a>Метода IBCPSession2:: BCPSetBulkMode (поставщик собственного клиента OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -72,7 +73,7 @@ HRESULT BCPSetBulkMode (
   
  В следующей таблице перечислены константы для параметра *property* .  
   
-|Свойство|Описание|  
+|Свойство|Description|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|Указывает символьный режим вывода.<br /><br /> Соответствует параметру -c в BCP.EXE и в методе IBCPSession::BCPColFmt со свойством *eUserDataType*, имеющим значение **BCP_TYPE_SQLCHARACTER**.|  
 |BCP_OUT_WIDE_CHARACTER_MODE|Указывает режим вывода в Юникоде.<br /><br /> Соответствует параметру -w в BCP.EXE и в методе IBCPSession::BCPColFmt со свойством *eUserDataType*, имеющим значение **BCP_TYPE_SQLNCHAR**.|  
