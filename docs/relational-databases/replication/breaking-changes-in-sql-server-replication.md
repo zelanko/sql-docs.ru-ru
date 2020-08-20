@@ -1,4 +1,5 @@
 ---
+description: Критические изменения репликации в SQL Server
 title: Критические изменения репликации в SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/22/2016
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 449a2f57-fcbd-4478-8f21-2c646d801699
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cc4feef3b7860dff9fa231cdb5e674443c0ee801
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ace6d2d6812fe319ef61fcebfeb88333fd74a950
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790772"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482452"
 ---
 # <a name="breaking-changes-in-sql-server-replication"></a>Критические изменения репликации в SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "85790772"
 ## <a name="breaking-changes-made-in-sssql15"></a>Критические изменения в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] не поддерживает репликацию данных с клиента или на [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или [!INCLUDE[ssEW](../../includes/ssew-md.md)].  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обратная совместимость репликации](../../relational-databases/replication/replication-backward-compatibility.md)  
   
   

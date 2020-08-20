@@ -1,4 +1,5 @@
 ---
+description: Конструктор системы отслеживания измененных данных для Oracle компании Attunity
 title: Конструктор системы отслеживания измененных данных для Oracle компании Attunity | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a4b2bcc1153aa1e90d38a7aedf83d176d34294cd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b8f93db32602579feaff3a3230739f6fa2621fd6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918690"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484723"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Конструктор системы отслеживания измененных данных для Oracle компании Attunity
 
@@ -46,9 +47,9 @@ ms.locfileid: "86918690"
   
 -   [Базы данных CDC Oracle](../../integration-services/change-data-capture/the-oracle-cdc-databases.md)  
   
--   [Справка F1 по конструктору системы отслеживания информации об изменениях данных для Oracle компании Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-f1-help-reference.md)  
+-   [Справка F1 конструктора системы отслеживания измененных данных для Oracle компании Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-f1-help-reference.md)  
   
--   [Руководство по конструктору системы отслеживания информации об изменениях данных для Oracle компании Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-how-to-guide.md)  
+-   [Руководство по конструктору системы отслеживания измененных данных для Oracle компании Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-how-to-guide.md)  
   
 -   [Соединение с SQL Server для создания экземпляров](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)  
   

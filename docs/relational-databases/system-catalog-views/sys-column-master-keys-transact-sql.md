@@ -1,4 +1,5 @@
 ---
+description: sys.column_master_keys (Transact-SQL)
 title: sys. column_master_keys (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/15/2019
@@ -25,11 +26,12 @@ ms.assetid: fbec2efa-5fe9-4121-9b34-60497b0b2aca
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e28fae709bc81a10c6ad23228d12532172841488
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8a0192fd9a323e750a2fd8f635da93f4c4f549ca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003076"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482150"
 ---
 # <a name="syscolumn_master_keys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -43,7 +45,7 @@ ms.locfileid: "86003076"
 |**create_date**|**datetime**|Дата создания главного ключа столбца.|  
 |**modify_date**|**datetime**|Дата последнего изменения главного ключа столбца.|  
 |**key_store_provider_name**|**sysname**|Имя поставщика для хранилища главных ключей столбцов, содержащего CMK. Допустимыми значениями являются:<br /><br /> MSSQL_CERTIFICATE_STORE — если хранилищем главных ключей столбцов является хранилище сертификатов.<br /><br /> Определяемое пользователем значение, если хранилище главных ключей столбцов имеет настраиваемый тип.|  
-|**key_path**|**nvarchar(4000)**|Путь к главному столбцу главного ключа, относящийся к ключу. Формат пути зависит от типа хранилища главных ключей столбцов. Пример.<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> Для пользовательского хранилища главного ключа столбца разработчик несет ответственность за определение пути к ключу для пользовательского хранилища главного ключа столбца.|  
+|**key_path**|**nvarchar(4000)**|Путь к главному столбцу главного ключа, относящийся к ключу. Формат пути зависит от типа хранилища главных ключей столбцов. Пример<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> Для пользовательского хранилища главного ключа столбца разработчик несет ответственность за определение пути к ключу для пользовательского хранилища главного ключа столбца.|  
 |**allow_enclave_computations**|**bit**|Указывает, можно ли использовать главный ключ столбца анклава (если ключи шифрования столбца, зашифрованные с помощью этого главного ключа, могут использоваться для вычислений в защищенном енклавес на стороне сервера). Дополнительные сведения см. в статье [Always Encrypted с безопасными анклавами](../../relational-databases/security/encryption/always-encrypted-enclaves.md).|  
 |**подпись**|**varbinary(max)**|Цифровая подпись **key_path** и **allow_enclave_computations**, созданная с помощью главного ключа столбца, на которую ссылается **key_path**.|
 
@@ -55,8 +57,8 @@ ms.locfileid: "86003076"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>См. также  
- [Создание главного ключа СТОЛБЦА &#40;&#41;Transact-SQL](../../t-sql/statements/create-column-master-key-transact-sql.md)   
- [Представления каталога безопасности &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [Создание главного ключа СТОЛБЦА &#40;&#41;Transact-SQL ](../../t-sql/statements/create-column-master-key-transact-sql.md)   
+ [Представления каталога безопасности (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)  
  [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [Общие сведения об управлении ключами для Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   

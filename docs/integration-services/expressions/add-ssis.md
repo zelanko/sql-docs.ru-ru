@@ -1,4 +1,5 @@
 ---
+description: + (сложение) (службы SSIS)
 title: + (сложение) (службы SSIS) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44df4154-fed5-4e7f-9995-e703a0164f6a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c08a7b40d0bc6f83a8b1ffb7adeaf882841a82a3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7b2d71a9f059276d654ccf0cd5776532c86e3fb1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923528"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484454"
 ---
 # <a name="-add-ssis"></a>+ (Сложение) (службы SSIS)
 
@@ -43,7 +44,7 @@ numeric_expression1 + numeric_expression2
 ## <a name="result-types"></a>Типы результата  
  Определяются типами данных обоих аргументов. Дополнительные сведения см. в разделе [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Если один из операндов равен NULL, то результатом является значение NULL.  
   
 ## <a name="expression-examples"></a>Примеры выражений  
@@ -65,7 +66,7 @@ VacationHours + SickLeaveHours
 StandardCost + (StandardCost * @[Profit%])  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Очередность и ассоциативность операторов](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Операторы (выражение служб SSIS)](../../integration-services/expressions/operators-ssis-expression.md)  
   

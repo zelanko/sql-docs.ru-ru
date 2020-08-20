@@ -1,4 +1,5 @@
 ---
+description: Мастер управления секциями
 title: Мастер управления секциями
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 4328e0ae41a5d830cae37544bec972936ff39b53
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e49dc9ad226d9a9a1bd3cc277a1944f7b5b6622e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787557"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482526"
 ---
 # <a name="manage-partition-wizard"></a>Мастер управления секциями 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

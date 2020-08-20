@@ -1,4 +1,5 @@
 ---
+description: Деление — Справочник по операторам многомерных выражений
 title: Деление (МНОГОМЕРНЫЕ ВЫРАЖЕНИЯ) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8dd20a0b60e105ac48a54d533055717e3f07a006
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a0d6947e1e0b4dc45d56980b734c2de98d8ad24c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68049323"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484027"
 ---
 # <a name="divide---mdx-operator-reference"></a>Деление — Справочник по операторам многомерных выражений
 
@@ -31,7 +32,7 @@ Dividend / Divisor
  *Дивиденд*  
  Допустимое многомерное выражение, возвращающее числовое значение.  
   
- *Делитель*  
+ *Равн*  
  Допустимое многомерное выражение, возвращающее числовое значение.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
@@ -99,7 +100,7 @@ WHERE
  `WHERE([Date].[Calendar].[Calendar Year].&[2001])`  
   
 ## <a name="see-also"></a>См. также:  
- [IIf &#40;&#41;многомерных выражений](../mdx/iif-mdx.md)   
- [Справочник по операторам многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-operator-reference-mdx.md)  
+ [IIf &#40;&#41;многомерных выражений ](../mdx/iif-mdx.md)   
+ [Справочник по операторам многомерных выражений &#40;&#41;многомерных выражений ](../mdx/mdx-operator-reference-mdx.md)  
   
   

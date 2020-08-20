@@ -1,4 +1,5 @@
 ---
+description: Разработка пользовательского интерфейса для компонента потока данных
 title: Разработка пользовательского интерфейса для компонента потока данных | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: da478b08a23550735c5a93d192a39fe741c91a5e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 047cbf40a98c2d513c23865dc2b45e00b1fa17b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916215"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484224"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>Разработка пользовательского интерфейса для компонента потока данных
 
@@ -49,7 +50,7 @@ ms.locfileid: "86916215"
   
 -   Версия файла  
   
--   Язык и региональные параметры  
+-   Культура  
   
 -   Токен открытого ключа  
   
@@ -93,7 +94,7 @@ End Class
 ### <a name="using-the-services-of-the-ssis-designer"></a>Использование служб конструктора служб SSIS  
  Параметр **IServiceProvider** метода <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> предоставляет доступ к следующим службам конструктора служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)]:  
   
-|Служба|Description|  
+|Служба|Описание|  
 |-------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Design.IDtsClipboardService>|Используется для определения, был ли компонент создан в ходе операции копирования и вставки или вырезания и вставки.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionService>|Используется для доступа к существующим соединениям или для создания новых соединений в пакете.|  
@@ -285,7 +286,7 @@ Namespace Microsoft.Samples.SqlServer.Dts
 End Namespace  
 ```
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание пользовательского компонента потока данных](../../../integration-services/extending-packages-custom-objects/data-flow/creating-a-custom-data-flow-component.md)  
   
   

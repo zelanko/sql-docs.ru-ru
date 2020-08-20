@@ -1,4 +1,5 @@
 ---
+description: Создание и запуск скрипта дополнительного журналирования
 title: Создание и запуск скрипта дополнительного журналирования | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 6e940d93-12c6-4cda-9333-5489b245f0e4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6b78ee09c6ecdbbdb18cd48ef7d765841e3d8a60
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6a54fc6cab8ea15556aec82f810e2b678f1c78c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921616"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484701"
 ---
 # <a name="generate-and-run-the-supplemental-logging-script"></a>Создание и запуск скрипта дополнительного журналирования
 

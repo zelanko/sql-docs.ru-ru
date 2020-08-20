@@ -1,4 +1,5 @@
 ---
+description: Добавление таблиц в экземпляр CDC
 title: Добавление таблиц в экземпляр CDC | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: ad260e19-c021-4035-9311-c02fc96ceaea
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ca9d1f6fbc9c238dae9682552cb02153d8a89fbb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e025963ad981e05696af4676155efe642ee49893
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914920"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484880"
 ---
 # <a name="add-tables-to-a-cdc-instance"></a>Добавление таблиц в экземпляр CDC
 
@@ -51,7 +52,7 @@ ms.locfileid: "86914920"
 > [!NOTE]  
 >  Список таблиц можно просматривать в средстве просмотра. При использовании средства просмотра отображаемые в нем данные доступны только для чтения. В средстве просмотра отображается также список отслеживаемых столбцов из таблицы. Дополнительные сведения о доступе к средству просмотра см. в разделе [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Как изменить свойства экземпляра CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
  [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
  [Выбор таблиц Oracle для отслеживания изменений](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)  

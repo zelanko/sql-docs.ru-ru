@@ -1,4 +1,5 @@
 ---
+description: задача «Уведомление оператора»
 title: Задача "Уведомление оператора" | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6c816c68-c6d6-44e4-bb34-c8e060a958a1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0c23d46735f469680aa60d5667725b06c8e03536
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5b65b2c71fa8901a4a2aa36ad2b1879433ae94ef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915256"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484594"
 ---
 # <a name="notify-operator-task"></a>задача «Уведомление оператора»
 
@@ -35,7 +36,7 @@ ms.locfileid: "86915256"
  Задача «Уведомление оператора» является единственной задачей обслуживания базы данных, которая не содержит инструкции Transact-SQL или команды DBCC.  
   
 ## <a name="configuration-of-the-notify-operator-task"></a>Настройка задачи «Уведомление оператора»  
- Свойства задаются с помощью конструктора служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Эта задача находится в разделе **Задачи плана обслуживания** **области элементов** в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+ Свойства задаются с помощью конструктора служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Эта задача находится в разделе **Задачи плана обслуживания****области элементов** в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующем разделе:  
   

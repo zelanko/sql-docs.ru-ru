@@ -1,4 +1,5 @@
 ---
+description: sysmergeextendedarticlesview (Transact-SQL)
 title: сисмержеекстендедартиклесвиев (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bd5c8414-5292-41fd-80aa-b55a50ced7e2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c0a45eec2d5acc20d52bdc8d5a7f8a185e6c9d8c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f5f400a8e08d242427ca5101461ccb9dacd58310
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881249"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485457"
 ---
 # <a name="sysmergeextendedarticlesview-transact-sql"></a>sysmergeextendedarticlesview (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "85881249"
 |**sync_objid**|**int**|Идентификатор представления, представляющего синхронизированный набор данных.|  
 |**view_type**|**tinyint**|Тип представления:<br /><br /> **0** = не представление; использовать все базовые объекты.<br /><br /> **1** = постоянное представление.<br /><br /> **2** = временное представление.|  
 |**artid**|**uniqueidentifier**|Уникальный идентификационный номер данной статьи.|  
-|**nописание**|**nvarchar(255)**|Краткое описание статьи.|  
+|**description**|**nvarchar(255)**|Краткое описание статьи.|  
 |**pre_creation_command**|**tinyint**|Действие по умолчанию при создании статьи в базе данных подписки.<br /><br /> **0** = None — если таблица уже существует на подписчике, никакие действия не предпринимаются.<br /><br /> **1** = Drop — удаляет таблицу перед ее повторным созданием.<br /><br /> **2** = Delete — выдает удаление на основе предложения WHERE в фильтре подмножества.<br /><br /> **3** = усечение — то же, что и 2, но вместо строк удаляются страницы. Однако предложение WHERE не используется.|  
 |**pubid**|**uniqueidentifier**|Идентификатор публикации, которой принадлежит данная статья.|  
 |**понят**|**int**|Сопоставление псевдонима для идентификатора статьи.|  
@@ -89,11 +90,11 @@ ms.locfileid: "85881249"
 |**preserve_rowguidcol**|**bit**|Указывает, будет ли репликация пользоваться существующим столбцом глобального идентификатора строки. Значение **1** означает, что используется существующий столбец ROWGUIDCOL. значение **0** означает, что репликация добавила столбец ROWGUIDCOL.|  
   
 ## <a name="see-also"></a>См. также  
- [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Представления репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
- [sp_helpmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
+ [sp_helpmergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [sysmergearticles &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysmergearticles-transact-sql.md)  
   
   

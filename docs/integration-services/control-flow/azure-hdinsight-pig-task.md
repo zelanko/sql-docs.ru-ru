@@ -1,4 +1,5 @@
 ---
+description: Задача Pig для Azure HDInsight
 title: Задача Pig для Azure HDInsight | Документы Майкрософт
 ms.custom: ''
 ms.date: 02/28/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 26f34f64-f344-486e-9190-acf71aef29a8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c38e669cc39a2dc0d1f4c6426ff9cc307e7a007c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a7e5d57d54bc54cf6e905d66bf7d6687c737e070
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913868"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484672"
 ---
 # <a name="azure-hdinsight-pig-task"></a>Задача Pig для Azure HDInsight
 

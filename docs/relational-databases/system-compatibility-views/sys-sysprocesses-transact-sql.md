@@ -1,4 +1,5 @@
 ---
+description: sys.sysprocesses (Transact-SQL)
 title: Процессы sys.sys(Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0f195a452ffde16d7de821841367e259a686578f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 89e9bf9ab596e24148851f68ffa30515079fb51f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899778"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482086"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +54,7 @@ ms.locfileid: "85899778"
 |last_batch|**datetime**|Время последнего вызова удаленной хранимой процедуры или инструкции EXECUTE клиентским процессом.|  
 |ecid|**smallint**|Идентификатор контекста выполнения используется с целью идентифицировать подпроцессы, действующие от имени одного процесса, уникальным образом.|  
 |open_tran|**smallint**|Количество транзакций, открытых для данного процесса.|  
-|status|**nchar (30)**|Состояние идентификатора процесса. Вы можете выбрать<br /><br /> **Неактивный**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] переустанавливает сеанс.<br /><br /> **работает** — в сеансе выполняются один или несколько пакетов. Если включен режим MARS, в сеансе может выполняться несколько пакетов. Дополнительные сведения см. [в разделе Использование нескольких активных результирующих наборов &#40;режиме MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **Background** = сеанс выполняет фоновую задачу, например обнаружение взаимоблокировки.<br /><br /> **ROLLBACK** = в ходе сеанса выполняется откат транзакций.<br /><br /> **Pending** — сеанс ожидает, пока рабочий поток не станет доступным.<br /><br /> **готов к запуску** — задача в сеансе находится в очереди готовности планировщика в ожидании получения кванта времени.<br /><br /> **спинлуп** = задача в сеансе ожидает освобождения спин-блокировки.<br /><br /> **suspended** — сеанс ожидает завершения события, например ввода-вывода.|  
+|status|**nchar (30)**|Состояние идентификатора процесса. Допустимые значения:<br /><br /> **Неактивный**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] переустанавливает сеанс.<br /><br /> **работает** — в сеансе выполняются один или несколько пакетов. Если включен режим MARS, в сеансе может выполняться несколько пакетов. Дополнительные сведения см. в статье [Использование множественных активных результирующих наборов &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **Background** = сеанс выполняет фоновую задачу, например обнаружение взаимоблокировки.<br /><br /> **ROLLBACK** = в ходе сеанса выполняется откат транзакций.<br /><br /> **Pending** — сеанс ожидает, пока рабочий поток не станет доступным.<br /><br /> **готов к запуску** — задача в сеансе находится в очереди готовности планировщика в ожидании получения кванта времени.<br /><br /> **спинлуп** = задача в сеансе ожидает освобождения спин-блокировки.<br /><br /> **suspended** — сеанс ожидает завершения события, например ввода-вывода.|  
 |sid|**двоичный (86)**|Идентификатор GUID для этого пользователя.|  
 |hostname|**nchar (128)**|Имя рабочей станции.|  
 |program_name|**nchar (128)**|Имя приложения.|  
@@ -76,7 +77,7 @@ ms.locfileid: "85899778"
   
 ## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Представления совместимости (Transact-SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

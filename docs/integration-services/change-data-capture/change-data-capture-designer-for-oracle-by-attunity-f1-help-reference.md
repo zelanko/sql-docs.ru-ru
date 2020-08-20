@@ -1,4 +1,5 @@
 ---
+description: Справка F1 конструктора системы отслеживания измененных данных для Oracle компании Attunity
 title: Справка F1 по конструктору системы отслеживания информации об изменениях данных для Oracle компании Attunity | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: aa2ec095-6a32-44a8-9069-41759d087162
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1e9140f7e805842a1a85705965558a5111af803b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9ee897f941602065b9a345676ff3cc14f89b619a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920348"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484753"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity-f1-help-reference"></a>Справка F1 конструктора системы отслеживания измененных данных для Oracle компании Attunity
 
@@ -36,13 +37,13 @@ ms.locfileid: "86920348"
   
 -   [Использование мастера создания экземпляра](../../integration-services/change-data-capture/use-the-new-instance-wizard.md) (или сразу перейдите к одной из следующих задач)  
   
-    -   [Создание базы данных изменений SQL Server](../../integration-services/change-data-capture/create-the-sql-server-change-database.md)  
+    -   [Создание базы данных изменения SQL Server](../../integration-services/change-data-capture/create-the-sql-server-change-database.md)  
   
     -   [Соединение с базой данных-источником Oracle](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md)  
   
     -   [Соединение с Oracle](../../integration-services/change-data-capture/connect-to-oracle.md)  
   
-    -   [Выбор таблиц и столбцов Oracle](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)  
+    -   [Выберите столбцы и таблицы Oracle](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)  
   
     -   [Выбор таблиц Oracle для отслеживания изменений](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)  
   

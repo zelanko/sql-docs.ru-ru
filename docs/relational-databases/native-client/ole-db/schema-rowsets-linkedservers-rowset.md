@@ -1,4 +1,5 @@
 ---
+description: Наборы строк схемы — набор строк LINKEDSERVERS в SQL Server Native Client
 title: Набор строк LINKEDSERVERS (OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: 2633fd8a-65e7-498d-9aed-8e4b1cca2381
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a0889b7a7dd7dd3c8f3afc1d61ee95acfcfb9fd5
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 38644be1cbb9c9df785926534ef8b224cd539277
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247153"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482591"
 ---
 # <a name="schema-rowsets---linkedservers-rowset-in-sql-server-native-client"></a>Наборы строк схемы — набор строк LINKEDSERVERS в SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "87247153"
   
  Набор строк **LINKEDSERVERS** содержит следующие столбцы.  
   
-|Имя столбца|Индикатор типа|Описание|  
+|Имя столбца|Индикатор типа|Description|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|Имя связанного сервера.|  
 |SVR_PRODUCT|DBTYPE_WSTR|Имя производителя или другое имя, задающее тип хранилища данных, представленного именем связанного сервера.|  
@@ -39,7 +40,7 @@ ms.locfileid: "87247153"
   
  Набор строк сортируется по столбцу SRV_NAME, и единственное ограничение поддерживается для столбца SRV_NAME.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Поддержка набора строк схемы &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowset-support-ole-db.md)  
   
   

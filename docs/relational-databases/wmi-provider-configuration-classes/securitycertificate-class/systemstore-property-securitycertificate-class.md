@@ -1,4 +1,5 @@
 ---
+description: Свойство SystemStore (класс SecurityCertificate)
 title: Свойство SystemStore (класс securitycertificate)
 ms.custom: seo-lt-2019
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5d2a6ee2-d975-4fd6-adb5-ed43d0cc7fdd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 03f4f97606177e615bab3d3f494e37cf1dd17a24
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cdb3022ce2125a5960f068c596f2be38b2eea1df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888776"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485219"
 ---
 # <a name="systemstore-property-securitycertificate-class"></a>Свойство SystemStore (класс SecurityCertificate)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ object.SystemStore [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Строковое значение, определяющее системное хранилище для сертификата безопасности.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

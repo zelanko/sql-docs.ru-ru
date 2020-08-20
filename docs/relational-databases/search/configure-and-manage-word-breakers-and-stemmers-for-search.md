@@ -1,4 +1,5 @@
 ---
+description: Настройка средств разбиения текста на слова и парадигматических модулей и управление ими для поиска (SQL Server)
 title: Настройка средств разбиения текста на слова и парадигматических модулей и управление ими для поиска
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,12 +22,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 8ae5dbc9652ed690edc6964db38cc8e0d5536625
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7a33d02cb6ca1cbc100a458d254cf962d2d0d34b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629531"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482312"
 ---
 # <a name="configure--manage-word-breakers--stemmers-for-search-sql-server"></a>Настройка средств разбиения текста на слова и парадигматических модулей и управление ими для поиска (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -95,7 +96,7 @@ SELECT language_id AS 'LCID' FROM sys.fulltext_index_columns;
 
 ### <a name="info-about-the-mssqlserver_30053-error"></a>Сведения об ошибке MSSQLSERVER_30053
   
-|Свойство|Значение|
+|Property (Свойство)|Значение|
 |-|-|
 |Название продукта|SQL Server|  
 |Идентификатор события|30053|  
@@ -135,8 +136,8 @@ SELECT language_id AS 'LCID' FROM sys.fulltext_index_columns;
  
 Это важно, если полнотекстовый каталог был импортирован при обновлении базы данных до текущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Один или несколько языков, используемых полнотекстовыми индексами в полнотекстовом каталоге, могут быть связаны с новыми средствами разбиения по словам. Дополнительные сведения см. в разделе [Обновление полнотекстового поиска](../../relational-databases/search/upgrade-full-text-search.md).  
  
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/create-fulltext-index-transact-sql.md)    
  [ALTER FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
- [Настройка стоп-слов, списков стоп-слов и управление ими для полнотекстового поиска](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
+ [Настройка и управление стоп-словами и списками стоп-слов для полнотекстового поиска](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
 

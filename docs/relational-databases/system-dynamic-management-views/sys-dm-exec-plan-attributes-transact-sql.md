@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_plan_attributes (Transact-SQL)
 title: sys. dm_exec_plan_attributes (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/20/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9b616e6186e9d5e19f353df1053d479e0d0afdd6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 46c41c4bf06082e36df1ea48165520afbc4a3210
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898894"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481987"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,14 +53,14 @@ sys.dm_exec_plan_attributes ( plan_handle )
 
 В приведенной выше таблице **атрибут** может иметь следующие значения:
 
-|Атрибут|Тип данных|Описание|  
+|attribute|Тип данных|Описание|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|Показывает значения параметров, с использованием которых был скомпилирован план.|  
 |objectid|**int**|Одно из основных ключевых слов, используемое для поиска объекта в кэш-памяти. Это идентификатор объекта, хранящийся в [представлении sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) для объектов базы данных (процедуры, представления, триггеры и т. д.). Для планов типа «Нерегламентированный» или «Подготовленный» — это внутренний хэш текста пакета.|  
 |dbid|**int**|Идентификатор базы данных, содержащей сущность, к которой относится план.<br /><br /> Для нерегламентированных и подготовленных планов это идентификатор базы данных, из которой выполняется пакет.|  
 |dbid_execute|**int**|Для системных объектов, хранящихся в базе данных **Resource** , это идентификатор базы данных, из которой выполняется кэшированный план. Во всех остальных случаях это значение равно 0.|  
 |user_id|**int**|Значение «-2» означает, что представленный пакет не зависит от неявного разрешения имен и может совместно использоваться разными пользователями. Это является предпочтительным методом. Любое другое значение обозначает идентификатор пользователя, отправившего запрос к базе данных.| 
-|language_id|**smallint**|Идентификатор языка соединения, в результате которого был создан объект кэша. Дополнительные сведения см. в разделе [языкиsys.sys&#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
+|language_id|**smallint**|Идентификатор языка соединения, в результате которого был создан объект кэша. Дополнительные сведения см. в разделе [ языкиsys.sys&#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
 |date_format|**smallint**|Формат даты соединения, во время которого был создан объект кэша. Дополнительные сведения см. в разделе [SET DATEFORMAT (Transact-SQL)](../../t-sql/statements/set-dateformat-transact-sql.md).|  
 |date_first|**tinyint**|Значение первой даты. Дополнительные сведения см. в разделе [SET DATEFIRST (Transact-SQL)](../../t-sql/statements/set-datefirst-transact-sql.md).|  
 |status|**int**|Биты внутреннего состояния, являющиеся частью ключа уточняющего запроса к кэшу.|  
@@ -81,9 +82,9 @@ sys.dm_exec_plan_attributes ( plan_handle )
 ## <a name="permissions"></a>Разрешения  
 
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
+На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется  **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
 
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="set-options"></a>Параметры SET  
  Копии одного и того же скомпилированного плана могут отличаться только значением столбца **set_options** . Это указывает на то, что разные соединения используют разные наборы параметров SET для одного запроса. Использование разных наборов параметров, как правило, нежелательно, поскольку приводит к дополнительным компиляциям, меньшему повторному использованию планов и расширению кэша планов по причине размещения нескольких копий планов в кэш-памяти.  
@@ -111,7 +112,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |DATEFORMAT|32768|  
 |LanguageID|65536|  
 |UPON<br /><br /> Указывает, что параметру базы данных PARAMETERIZATION присвоено значение FORCED при компиляции плана.|131072|  
-|ROWCOUNT|**Применимо к:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Кому[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
+|ROWCOUNT|**Применимо к:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Кому [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
   
 ## <a name="cursors"></a>Курсоры  
  Неактивные курсоры кэшируются в скомпилированном плане так, чтобы одновременно работающие пользователи курсоров могли повторно использовать память, использованную для хранения курсора. Предположим, что пакет объявляет и использует курсор без его освобождения. Если два пользователя выполняют один и тот же пакет, то будет два активных курсора. После освобождения курсоров (потенциально в разных пакетах), память, используемая для хранения курсора, кэшируется и не освобождается. Этот список неактивных курсоров хранится в скомпилированном плане. При следующем выполнении пакета пользователем память кэшированного курсора будет использоваться повторно и инициализироваться соответствующим образом, как для активного курсора.  
@@ -166,10 +167,10 @@ PIVOT (MAX(ecpa.value) FOR ecpa.attribute IN ("set_options", "sql_handle")) AS p
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+## <a name="see-also"></a>См. также:  
+ [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys. dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [sys.dm_exec_cached_plans (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   

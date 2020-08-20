@@ -1,4 +1,5 @@
 ---
+description: Создание определяемых пользователем функций (компонент Database Engine)
 title: Создание пользовательских функций (ядро СУБД) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/09/2017
@@ -19,12 +20,12 @@ ms.assetid: f0d5dd10-73fd-4e05-9177-07f56552bdf7
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1cd1d720f5f5e9a9896e341a31d604405ae7d0d3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9739c1c5476b189cce41d14190165c9b82587f93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722883"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485353"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>Создание определяемых пользователем функций (компонент Database Engine)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -105,7 +106,7 @@ WHERE ProductModelID BETWEEN 75 and 80;
 > Дополнительные сведения см. в разделе [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md). 
 
 ##  <a name="table-valued-functions"></a><a name="TVF"></a> Функции с табличными значениями  
-Результатом следующего примера является **встроенная функция, возвращающая табличное значение (TVF)** , в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Функция имеет один входной параметр — идентификатор клиента (магазина) — и возвращает столбцы `ProductID`, `Name`и столбец `YTD Total` со сведениями о продажах продукта за текущий год.  
+Результатом следующего примера является **встроенная функция, возвращающая табличное значение (TVF)**, в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Функция имеет один входной параметр — идентификатор клиента (магазина) — и возвращает столбцы `ProductID`, `Name`и столбец `YTD Total` со сведениями о продажах продукта за текущий год.  
   
 ```sql  
 IF OBJECT_ID (N'Sales.ufn_SalesByStore', N'IF') IS NOT NULL  
@@ -132,7 +133,7 @@ RETURN
 SELECT * FROM Sales.ufn_SalesByStore (602);  
 ```  
   
-Результатом следующего примера является **многооператорная встроенная функция, возвращающая табличное значение (MSTVF)** , в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Функция имеет один входной параметр `EmployeeID` и возвращает список всех сотрудников, которые напрямую или косвенно отчитываются перед заданным сотрудником. Затем функция вызывается с указанием идентификатора сотрудника 109.  
+Результатом следующего примера является **многооператорная встроенная функция, возвращающая табличное значение (MSTVF)**, в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Функция имеет один входной параметр `EmployeeID` и возвращает список всех сотрудников, которые напрямую или косвенно отчитываются перед заданным сотрудником. Затем функция вызывается с указанием идентификатора сотрудника 109.  
   
 ```sql  
 IF OBJECT_ID (N'dbo.ufn_FindReports', N'TF') IS NOT NULL  
@@ -204,7 +205,7 @@ FROM dbo.ufn_FindReports(1);
 > [!NOTE]  
 > Параметры ANSI_WARNINGS не годятся для передачи в хранимые процедуры, пользовательские функции и при объявлении и установке переменных в пакетных инструкциях. Например, если объявить переменную как **char(3)** , а затем присвоить ей значение длиннее трех символов, данные будут усечены до размера переменной, а инструкция `INSERT` или `UPDATE` завершится без ошибок.
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Определяемые пользователем функции](../../relational-databases/user-defined-functions/user-defined-functions.md)     
  [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md)    
  [ALTER FUNCTION (Transact-SQL)](../../tools/sql-server-profiler/start-sql-server-profiler.md)    

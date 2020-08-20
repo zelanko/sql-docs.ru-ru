@@ -1,4 +1,5 @@
 ---
+description: Свойства &lt;AgentProfileName&gt;
 title: Свойства &lt;AgentProfileName&gt; | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,19 +16,19 @@ ms.assetid: 01a992d2-e4ff-417c-93f0-dc43ab2d1624
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 3bd2ac7f6c9670c9c1b193c7b9687b0d4e4ba4ea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 92d6f1e266dfee1964eca8d260cbf9b7ed5d998c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716836"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482518"
 ---
 # <a name="ltagentprofilenamegt-properties"></a>Свойства &lt;AgentProfileName&gt;
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  Диалоговое окно **Свойства профиля агента** позволяет просматривать значения всех параметров агента, указанных в профиле, и изменять эти значения для пользовательских профилей.  
+   Диалоговое окно **Свойства профиля агента** позволяет просматривать значения всех параметров агента, указанных в профиле, и изменять эти значения для пользовательских профилей.  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **имя**;  
  Имя профиля.  
   
  **Описание**  
@@ -49,7 +50,7 @@ ms.locfileid: "85716836"
  **Значение по умолчанию**  
  Значение по умолчанию для каждого параметра агента.  
   
- **Value**  
+ **Значение**  
  Значение, заданное для данного параметра в профиле. Для пользовательских профилей это поле можно изменять.  
   
  **Показывать только параметры, используемые в этом профиле**  

@@ -1,4 +1,5 @@
 ---
+description: Сопоставления столбцов (мастер импорта и экспорта SQL Server)
 title: Сопоставления столбцов (мастер импорта и экспорта SQL Server) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 144476d52d8577d59691a42b12a276f5cfc080b2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9b74aaec705f3de493f105218adedffb173090ac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913370"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484144"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>Сопоставления столбцов (мастер импорта и экспорта SQL Server)
 
@@ -108,15 +109,15 @@ ms.locfileid: "86913370"
 -    **Точность**  
     Укажите точность числовых данных в конечном столбце, то есть количество разрядов (если применимо).  
   
- -   **Масштабирование**  
+ -   **Масштаб**  
     Укажите масштаб числовых данных в конечном столбце, то есть количество знаков после запятой (если применимо).  
   
 ## <a name="whats-next"></a>Дальнейшие действия  
- После того как вы проверите и настроите конечные столбцы для приема скопированных данных из исходных столбцов и нажмете кнопку **ОК**, диалоговое окно **Сопоставления столбцов** вернет вас на страницу **Выбор исходных таблиц и представлений** или на страницу **Настройка назначения "Неструктурированный файл"** . Дополнительные сведения см. в разделах [Выбор исходных таблиц и представлений](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md) или [Настройка назначения "Неструктурированный файл"](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md).  
+ После того как вы проверите и настроите конечные столбцы для приема скопированных данных из исходных столбцов и нажмете кнопку **ОК**, диалоговое окно **Сопоставления столбцов** вернет вас на страницу **Выбор исходных таблиц и представлений** или на страницу **Настройка назначения "Неструктурированный файл"**. Дополнительные сведения см. в разделах [Выбор исходных таблиц и представлений](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md) или [Настройка назначения "Неструктурированный файл"](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md).  
   
  Если заданное сопоставление не добавится в список **Сопоставления** , диалоговое окно **Сопоставления столбцов** переадресует вас на страницу **Просмотр сопоставления типов данных** . На этой странице вы можете просмотреть предупреждения, настроить параметры преобразования и указать способ обработки ошибок. Дополнительные сведения см. в разделе [Просмотр сопоставления типов данных](../../integration-services/import-export-data/review-data-type-mapping-sql-server-import-and-export-wizard.md).  
  
- ## <a name="see-also"></a>См. также раздел
+ ## <a name="see-also"></a>См. также
 [Сопоставление типов данных в мастере импорта и экспорта SQL Server](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)  
 [Приступая к работе с простым примером мастера импорта и экспорта](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 

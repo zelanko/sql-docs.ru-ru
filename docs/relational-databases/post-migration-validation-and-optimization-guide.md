@@ -1,4 +1,5 @@
 ---
+description: Руководство по оптимизации и проверке после миграции
 title: Руководство по оптимизации и проверке после миграции | Документация Microsoft
 ms.date: 01/09/2019
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-ms.openlocfilehash: 72af408a25ecc085d60fd18e25243cd71c42c337
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6af3d91a76dd1964b7ef2e929392f85eb4b9245c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914455"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482497"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Руководство по оптимизации и проверке после миграции
 
@@ -29,9 +30,9 @@ ms.locfileid: "86914455"
 
 Ниже представлены некоторые типовые сценарии производительности, которые встречаются после миграции на платформу [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], а также способы устранения связанных с ними проблем. К ним относятся сценарии, связанные с миграцией с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (переход на более новые версии), а также с миграцией с внешней платформы (например, Oracle, DB2, MySQL и Sybase) на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
-## <a name="query-regressions-due-to-change-in-ce-version"></a><a name="CEUpgrade"></a> Замедление запросов из-за изменения в версии CE
+## <a name="query-regressions-due-to-change-in-ce-version"></a><a name="CEUpgrade"></a> Регрессии запросов из-за изменения в версии CE
 
-**Область применения:** миграция с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+**Область применения: миграция с ** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 При миграции со старых версий [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] или более новые версии и при обновлении [уровня совместимости базы данных](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) до последнего доступного выполнение рабочей нагрузки может замедляться.
 

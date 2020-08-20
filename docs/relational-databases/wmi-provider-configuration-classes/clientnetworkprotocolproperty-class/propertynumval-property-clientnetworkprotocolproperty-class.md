@@ -1,4 +1,5 @@
 ---
+description: Свойство PropertyNumVal (класс ClientNetworkProtocolProperty)
 title: Свойство PropertyNumVal (класс clientnetworkprotocolproperty)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 12b02d97-702b-434f-baf6-e49a6b2cd4de
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d07e1efb01dd9109b130dc194929e60f8915c31a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b11713099134c61df82edda603796b2080494bb0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888977"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485249"
 ---
 # <a name="propertynumval-property-clientnetworkprotocolproperty-class"></a>Свойство PropertyNumVal (класс ClientNetworkProtocolProperty)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,5 +43,5 @@ object.PropertyNumVal [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение u**int32** , задающее числовое значение текущего свойства.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
   

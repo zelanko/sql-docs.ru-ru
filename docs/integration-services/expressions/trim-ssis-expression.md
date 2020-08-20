@@ -1,4 +1,5 @@
 ---
+description: TRIM (выражение служб SSIS)
 title: TRIM (выражение служб SSIS) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7dd9081d-a3d4-483a-bf7e-bf2bd7692d39
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 76cbc9a1f6b491ee285053641d5a87bd33727264
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d725f4cc6921a1f468bf36ae64d202a31b384e80
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913463"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484387"
 ---
 # <a name="trim-ssis-expression"></a>TRIM (выражение служб SSIS)
 
@@ -63,7 +64,7 @@ TRIM("   New York   ")
 TRIM(FirstName + " "+ LastName)  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [LTRIM (выражение служб SSIS)](../../integration-services/expressions/ltrim-ssis-expression.md)   
  [RTRIM (выражение служб SSIS)](../../integration-services/expressions/rtrim-ssis-expression.md)   
  [Функции (выражение служб SSIS)](../../integration-services/expressions/functions-ssis-expression.md)  

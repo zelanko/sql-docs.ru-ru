@@ -1,4 +1,5 @@
 ---
+description: Работа со службой CDC Oracle
 title: Работа со службой CDC Oracle | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cc7afe35c99a12e8e92111d05e62d9d0a5dd9c9c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a4734ab0b63605fbf6c8f8f59580789858a1a757
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922805"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484699"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Работа со службой CDC Oracle
 

@@ -1,4 +1,5 @@
 ---
+description: Экспорт домена в файл .dqs
 title: Экспорт домена в файл .dqs
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: eba10d3d-b5c4-447b-8a30-fa07996cb28e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: f9e672685a2135fd494da4adb8a1844a25243f6f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d3e37309a430b92e12493c178eeaf7a117a41552
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895351"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484892"
 ---
 # <a name="export-a-domain-to-a-dqs-file"></a>Экспорт домена в файл .dqs
 
@@ -38,7 +39,7 @@ ms.locfileid: "85895351"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для экспорта домена в файл данных .dqs необходимы роли dqs_kb_editor или dqs_administrator в базе данных DQS_MAIN.  
   
-##  <a name="export-a-domain-to-a-dqs-file"></a><a name="Export"></a>Экспорт домена в файл DQS  
+##  <a name="export-a-domain-to-a-dqs-file"></a><a name="Export"></a> Экспорт домена в файл DQS  
  Можно выполнить экспорт с любой страницы «Управление доменами». Команда экспорта доступна как в виде элемента управления в пользовательском интерфейсе, так и в виде команды контекстного меню на панели «Список доменов».  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Запустите приложение Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
@@ -53,7 +54,7 @@ ms.locfileid: "85895351"
   
 6.  В диалоговом окне **Экспортировать домен** убедитесь, что в строке состояния диалогового окна отобразилось сообщение о завершении экспорта. Нажмите кнопку **ОК**.  
   
-##  <a name="follow-up-after-exporting-a-domain-to-a-dqs-file"></a><a name="FollowUp"></a>Дальнейшие действия. После экспорта домена в файл DQS  
+##  <a name="follow-up-after-exporting-a-domain-to-a-dqs-file"></a><a name="FollowUp"></a> Дальнейшие действия. После экспорта домена в файл DQS  
  После экспорта домена в файл DQS можно импортировать домен в другую базу знаний.  
   
   

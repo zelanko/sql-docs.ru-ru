@@ -1,4 +1,5 @@
 ---
+description: Разработка пользовательского компонента потока данных
 title: Разработка пользовательского компонента потока данных | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: be126913-2a9a-41c9-9bf5-a7b0a0aea2f8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d29e650bb3dc812b4b64f3bb0c336d094adf1e8d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e47c1f8efed8920a32eac7625ab15deb6e9c167b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921240"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484235"
 ---
 # <a name="developing-a-custom-data-flow-component"></a>Разработка пользовательского компонента потока данных
 
@@ -114,7 +115,7 @@ ms.locfileid: "86921240"
  [Разработка пользовательского перечислителя по каждому элементу](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-custom-foreach-enumerator.md)  
  Описывает вопросы программирования пользовательских перечислителей.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширение потока данных с помощью компонента скрипта](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)   
  [Сравнение решений со сценариями и пользовательских объектов](../../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)  
   

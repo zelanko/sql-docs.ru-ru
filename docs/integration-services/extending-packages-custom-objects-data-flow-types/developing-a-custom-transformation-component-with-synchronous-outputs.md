@@ -1,4 +1,5 @@
 ---
+description: Разработка пользовательского компонента преобразования с синхронными выходами
 title: Разработка пользовательского компонента преобразования с синхронными выходами | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b694d21f-9919-402d-9192-666c6449b0b7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0b4c465ddb7efab8c5e2398facc51e89425389cb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 755fdbcd3ecf01e0b76548f728d77c66ebe011a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920220"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484319"
 ---
 # <a name="developing-a-custom-transformation-component-with-synchronous-outputs"></a>Разработка пользовательского компонента преобразования с синхронными выходами
 

@@ -1,4 +1,5 @@
 ---
+description: Использование блочных курсоров
 title: Использование блочных курсоров | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2aad7d6b-216e-47e7-b3cb-f95ad096f21a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f5c487bd8b60a83c709399cb9673dc0b015bd79d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 67cad7220641e9c3800e89675825cf2c0b1e334d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306795"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482867"
 ---
 # <a name="using-block-cursors"></a>Использование блочных курсоров
 Поддержка блочных курсоров встроена в ODBC 3. *x*. **SQLFetch** можно использовать только для выборки многострочные при вызове в ODBC 3. *x*; Если ODBC 2. Приложение *x* вызывает **SQLFetch**, при этом будет открыт только однострочный курсор. При использовании ODBC 3. Приложение *x* вызывает **SQLFetch** в ODBC 2. драйвер *x* , он возвращает одну строку, если драйвер не поддерживает **SQLExtendedFetch**. Дополнительные сведения см. в разделе [блочные курсоры, прокручиваемые курсоры и обратная совместимость](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) в приложении G: рекомендации по драйверам для обеспечения обратной совместимости.  

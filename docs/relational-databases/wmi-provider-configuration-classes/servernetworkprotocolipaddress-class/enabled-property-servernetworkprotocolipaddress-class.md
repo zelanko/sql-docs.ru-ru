@@ -1,4 +1,5 @@
 ---
+description: Свойство Enabled (класс ServerNetworkProtocolIPAddress)
 title: Свойство Enabled (класс servernetworkprotocolipaddress)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 870fd4d0-6c77-462a-b480-d42eb044b2e7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 55dec08596dab429fad1b283b37697ca1c4896d6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 585601724ebc34139c554bde6c85d14028e5e05e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888697"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485224"
 ---
 # <a name="enabled-property-servernetworkprotocolipaddress-class"></a>Свойство Enabled (класс ServerNetworkProtocolIPAddress)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ object.Enabled [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Логическое значение, указывающее, включен ли IP-адрес: **true** , если включен; в противном случае — **false** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

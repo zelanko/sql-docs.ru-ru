@@ -1,4 +1,5 @@
 ---
+description: Инструкция SQL Create Table (мастер импорта и экспорта SQL Server)
 title: Инструкция SQL Create Table (мастер импорта и экспорта SQL Server) | Документы Майкрософт
 ms.custom: ''
 ms.date: 02/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 0d6f6b3b-d023-4770-a8a9-65b2977c8d05
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b877689bbccb0ea4ab206e403b54d15ce189fb79
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7854a8121c16d263da900ffc3f8475a4fe4dddff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922401"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484146"
 ---
 # <a name="create-table-sql-statement-sql-server-import-and-export-wizard"></a>Инструкция SQL Create Table (мастер импорта и экспорта SQL Server)
 

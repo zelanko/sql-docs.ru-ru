@@ -1,4 +1,5 @@
 ---
+description: DATEDIFF (выражение служб SSIS)
 title: DATEDIFF (выражение служб SSIS) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2f869de30e8f6b6c65d01cc3189d9e63abfb57e7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3e7133fffcea2afe188e00f2c80aa51d6825386c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914743"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484440"
 ---
 # <a name="datediff-ssis-expression"></a>DATEDIFF (выражение служб SSIS)
 
@@ -47,13 +48,13 @@ DATEDIFF(datepart, startdate, endate)
 ## <a name="result-types"></a>Типы результата  
  DT_I4  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  В следующей таблице перечислены части дат и сокращения, распознаваемые средством оценки выражений.  
   
 |часть_даты|Сокращения|  
 |--------------|-------------------|  
-|Год|yy, yyyy|  
-|Квартал|qq, q|  
+|Year;|yy, yyyy|  
+|Quarter|qq, q|  
 |Месяц|mm, m|  
 |День года|dy, y|  
 |День|dd, d|  
@@ -61,7 +62,7 @@ DATEDIFF(datepart, startdate, endate)
 |День недели|dw, w|  
 |Час|Hh|  
 |Минута|mi, n|  
-|Секунда|ss, s|  
+|Second|ss, s|  
 |Миллисекунда|Ms|  
   
  DATEDIFF возвращает NULL, если хотя бы один аргумент имеет значение NULL.  
@@ -91,7 +92,7 @@ DATEDIFF("mm", (DT_DBTIMESTAMP)"8/1/2003",GETDATE())
 DATEDIFF("Week", ModifiedDate,@YearEndDate)  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [DATEADD (выражение служб SSIS)](../../integration-services/expressions/dateadd-ssis-expression.md)   
  [DATEPART (выражение служб SSIS)](../../integration-services/expressions/datepart-ssis-expression.md)   
  [DAY (выражение служб SSIS)](../../integration-services/expressions/day-ssis-expression.md)   

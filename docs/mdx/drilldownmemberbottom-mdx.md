@@ -1,4 +1,5 @@
 ---
+description: DrilldownMemberBottom (многомерные выражения)
 title: Дриллдовнмемберботтом (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 442f9c57124e06236d50d60f0e5db1de3ebbe731
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: b55b71a77a8513619edfde723da0e9d761af3d19
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971502"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483987"
 ---
 # <a name="drilldownmemberbottom-mdx"></a>DrilldownMemberBottom (многомерные выражения)
 
@@ -49,7 +50,7 @@ DrillDownMemberBottom(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_
  *Include_Calc_Members*  
  Ключевое слово, позволяющее включать вычисляемые элементы в результаты углубленной детализации.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Если числовое выражение указано, функция **дриллдовнмемберботтом** сортирует в возрастающем порядке дочерние элементы каждого элемента в первом наборе в соответствии со значением числового выражения, вычисленным по набору дочерних элементов. Если числовое выражение не указано, функция сортирует потомков каждого элемента в первом наборе в порядке возрастания согласно значениям ячеек, представленных набором дочерних элементов, как определено контекстом запроса. Это поведение аналогично функциям многомерных выражений BottomCount и Tail, которые возвращают набор элементов в естественном порядке без какой-либо сортировки.  
   
  После сортировки функция **дриллдовнмемберботтом** возвращает набор, содержащий родительские элементы и количество дочерних элементов, указанное в *Count,* с наименьшим значением и содержащиеся в обоих наборах.  
@@ -60,7 +61,7 @@ DrillDownMemberBottom(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_
   
  Функция **дриллдовнмемберботтом** похожа на функцию [DrilldownMember](../mdx/drilldownmember-mdx.md) , но вместо включения всех дочерних элементов для каждого элемента в первом наборе, который также имеется во втором наборе, функция **дриллдовнмемберботтом** Возвращает самое нижнее количество дочерних элементов для каждого элемента.  
   
- Запрос свойства XMLA Мдпропмдксдриллфунктионс позволяет проверить уровень поддержки, предоставляемый сервером для функций сверления; Дополнительные сведения см. в разделе [Поддерживаемые свойства xmla &#40;&#41;XMLA](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
+ Запрос свойства XMLA Мдпропмдксдриллфунктионс позволяет проверить уровень поддержки, предоставляемый сервером для функций сверления; Дополнительные сведения см. в разделе [Поддерживаемые свойства xmla &#40;&#41;XMLA ](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
   
 ## <a name="see-also"></a>См. также:  
  [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  

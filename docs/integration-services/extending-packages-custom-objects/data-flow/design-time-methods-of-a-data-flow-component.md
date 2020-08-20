@@ -1,4 +1,5 @@
 ---
+description: Методы времени разработки для компонента потока данных
 title: Методы времени разработки для компонента потока данных | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b5a121a1-b87c-441b-a42c-2cec628dc81c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3a180e4d2e8deab28e0b41dc9067d571251c9bab
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6eaaacea73d119961f7db31e75ba7089387674c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914475"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484257"
 ---
 # <a name="design-time-methods-of-a-data-flow-component"></a>Методы времени разработки для компонента потока данных
 
@@ -140,7 +141,7 @@ customProperty.UITypeEditor = GetType(MyCustomTypeEditor).AssemblyQualifiedName
   
  Дополнительные сведения см. в разделе "Реализация редактора типов пользовательских интерфейсов" [библиотеки MSDN](https://go.microsoft.com/fwlink/?LinkId=7022).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Методы времени выполнения для компонента потока данных](../../../integration-services/extending-packages-custom-objects/data-flow/run-time-methods-of-a-data-flow-component.md)  
   
   

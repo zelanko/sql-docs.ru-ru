@@ -1,4 +1,5 @@
 ---
+description: DistinctCount (многомерные выражения)
 title: DistinctCount (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a5364b32aeb69019f7438b2c6d0e8f5ab716e39f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 286debd54299942ad6f885d918390e2ece53fc0e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68077257"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484047"
 ---
 # <a name="distinctcount-mdx"></a>DistinctCount (многомерные выражения)
 
@@ -32,7 +33,7 @@ DistinctCount(Set_Expression)
  Допустимое многомерное выражение, возвращающее набор.  
   
 ## <a name="remarks"></a>Remarks  
- Функция **DistinctCount** эквивалентна `Count(Distinct(Set_Expression), EXCLUDEEMPTY)`.  
+ Функция **DistinctCount** эквивалентна `Count(Distinct(Set_Expression), EXCLUDEEMPTY)` .  
   
 ## <a name="examples"></a>Примеры  
  В следующем запросе показано использование функции DistinctCount:  

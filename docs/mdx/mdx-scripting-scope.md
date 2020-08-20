@@ -1,4 +1,5 @@
 ---
+description: Инструкция SCOPE (многомерные выражения)
 title: SCOPE, инструкция (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2f355842999b505a97c3387ab9e51d3b651c3b7c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4c9f6738b2d7e0764e750b25f09001b7e9d3864a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68138283"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483867"
 ---
 # <a name="mdx-scripting---scope"></a>Сценарии многомерных выражений — SCOPE
 
@@ -72,7 +73,7 @@ Limited_Set ::=
  *single_tuple*  
  Один кортеж.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Инструкция SCOPE определяет вложенный куб, на который будет распространяться действие одной или нескольких инструкций многомерных выражений. Если инструкция многомерных выражений не ограничена инструкцией SCOPE, то неявной областью инструкции является весь куб.  
   
 > [!NOTE]  
@@ -113,7 +114,7 @@ Scope
 End Scope ;     
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Инструкции для создания скриптов многомерных выражений (многомерные выражения)](../mdx/mdx-scripting-statements-mdx.md)  
   
   

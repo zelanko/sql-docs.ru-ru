@@ -1,4 +1,5 @@
 ---
+description: Использование сокращенных функций
 title: Использование функций лаконичны | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 31ac070f-8c59-4fd5-bd5a-466bb27dbca0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 63313e3dfaec8dbcd91f3bb084bbaab46da40c6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b0dcd16c1380c95921d5e4bb58831e2dd939ecf1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306785"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482800"
 ---
 # <a name="using-concise-functions"></a>Использование сокращенных функций
 Некоторые функции ODBC получают неявный доступ к дескрипторам. Средства записи приложений могут оказаться более удобными, чем вызов **SQLSetDescField** или **SQLGetDescField**. Эти функции называются *лаконичными* функциями, так как они выполняют ряд функций, включая задание или получение полей дескриптора. Некоторые краткие функции позволяют приложению задать или получить несколько связанных полей дескриптора в одном вызове функции.  
