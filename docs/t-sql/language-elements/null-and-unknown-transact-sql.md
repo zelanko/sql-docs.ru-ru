@@ -1,4 +1,5 @@
 ---
+description: NULL и UNKNOWN (Transact-SQL)
 title: NULL и UNKNOWN (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -12,12 +13,12 @@ ms.assetid: 9d491846-4730-4740-a680-77c69fae4a58
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3dba918d0993426111a71785223d0fedd0aba0be
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bb30710b35b1e82fafbc50dd7535b99be02ce5ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68091785"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467563"
 ---
 # <a name="null-and-unknown-transact-sql"></a>NULL и UNKNOWN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "68091785"
   
 |Выражение 1|Выражение 2|Результат|  
 |---------------|---------------|------------|  
-|TRUE|UNKNOWN|UNKNOWN|  
+|true|UNKNOWN|UNKNOWN|  
 |UNKNOWN|UNKNOWN|UNKNOWN|  
 |FALSE|UNKNOWN|FALSE|  
   
@@ -48,11 +49,11 @@ ms.locfileid: "68091785"
   
 |Выражение 1|Выражение 2|Результат|  
 |---------------|---------------|------------|  
-|TRUE|UNKNOWN|TRUE|  
+|true|UNKNOWN|true|  
 |UNKNOWN|UNKNOWN|UNKNOWN|  
 |FALSE|UNKNOWN|UNKNOWN|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [AND (Transact-SQL)](../../t-sql/language-elements/and-transact-sql.md)   
  [OR (Transact-SQL)](../../t-sql/language-elements/or-transact-sql.md)   
  [NOT (Transact-SQL)](../../t-sql/language-elements/not-transact-sql.md)   

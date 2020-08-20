@@ -1,4 +1,5 @@
 ---
+description: OPEN (Transact-SQL)
 title: OPEN (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: fd1c5e3b-6045-4a42-b646-3fca76e874c1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 73199a9dba314f845c8dbb4268da0cc4fd0f4af4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 478c8c846f075c6d9a9705e978a53236a65e3536
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919922"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467599"
 ---
 # <a name="open-transact-sql"></a>OPEN (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +55,7 @@ OPEN { { [ GLOBAL ] cursor_name } | cursor_variable_name }
  *cursor_variable_name*  
  Имя переменной курсора, которая ссылается на курсор.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Если курсор объявлен с параметром INSENSITIVE или STATIC, инструкция OPEN создает временную таблицу для хранения результирующего набора. Инструкция OPEN завершается ошибкой в случае, если размер любой строки в результирующем наборе превышает максимальный разрешенный размер строки для таблиц [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если курсор объявлен с параметром KEYSET, инструкция OPEN создает временную таблицу для хранения набора ключей. Временные таблицы хранятся в базе данных tempdb.  
   
  После того как курсор открыт, используйте функцию @@CURSOR_ROWS для получения количества выбранных строк в последнем открытом курсоре.  
@@ -83,7 +84,7 @@ CLOSE Employee_Cursor;
 DEALLOCATE Employee_Cursor;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CLOSE (Transact-SQL)](../../t-sql/language-elements/close-transact-sql.md)   
  [@@CURSOR_ROWS (Transact-SQL)](../../t-sql/functions/cursor-rows-transact-sql.md)   
  [DEALLOCATE (Transact-SQL)](../../t-sql/language-elements/deallocate-transact-sql.md)   
