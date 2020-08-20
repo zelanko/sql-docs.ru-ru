@@ -1,4 +1,5 @@
 ---
+description: Изменение типа журнала транзакций сущности (Master Data Services)
 title: Изменение типа журнала транзакций сущности
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 75250b32-3384-43c2-9b5c-1607cc3aa7b3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: af42a3c638155ab07b77a2c21fff95ba87cc265b
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 693311dcf687c4df6c138f7b881923c05f59da77
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811854"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500745"
 ---
 # <a name="change-the-entity-transaction-log-type-master-data-services"></a>Изменение типа журнала транзакций сущности (Master Data Services)
 
@@ -25,9 +26,9 @@ ms.locfileid: "85811854"
   
 |Тип журнала транзакций|Описание|  
 |--------------------------|-----------------|  
-|Атрибут|Журналы изменений сущности сохраняются на уровне атрибутов.<br /><br /> Журнал транзакций сохраняется как и для [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].|  
+|attribute|Журналы изменений сущности сохраняются на уровне атрибутов.<br /><br /> Журнал транзакций сохраняется как и для [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].|  
 |Участник|Журналы изменений сущности сохраняются на уровне строк.<br /><br /> Любое изменение атрибута инициирует новую версию строк.<br /><br /> При использовании журнала транзакций уровня строк сущность сохраняется как медленно меняющееся измерение типа 4. Поддерживаются представления подписки типов 2 и 4 (журнал). Дополнительные сведения см. в разделе [Форматы представления подписки (Master Data Services)](../master-data-services/subscription-view-formats-master-data-services.md).<br /><br /> Обеспечивается лучшая производительность.|  
-|Отсутствуют|Журналы изменений не сохраняются.<br /><br /> Обеспечивается наилучшая производительность.|  
+|Нет|Журналы изменений не сохраняются.<br /><br /> Обеспечивается наилучшая производительность.|  
   
 ## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  

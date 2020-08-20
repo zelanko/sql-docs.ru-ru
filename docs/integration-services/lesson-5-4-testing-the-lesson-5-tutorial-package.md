@@ -1,4 +1,5 @@
 ---
+description: Занятие 5-4. Тестирование пакета занятия 5
 title: Шаг 4. Тестирование пакета, созданного на занятии 5 | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/08/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cc02e55b0079ec10e8335168ce754c77dfdc3ad0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 57bad9d0d13f85ae52858005e3fb6acc6f9532f0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918132"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500829"
 ---
 # <a name="lesson-5-4-test-the-lesson-5-package"></a>Занятие 5-4. Тестирование пакета занятия 5
 
@@ -40,12 +41,12 @@ ms.locfileid: "86918132"
   
 ## <a name="test-the-lesson-5-package"></a>Тестирование пакета занятия 5  
   
-1.  В меню **Отладка** выберите команду **Начать отладку**.  
+1.  В меню **Отладка** выберите пункт **Начать отладку**.  
   
 2.  После окончания работы пакета выберите в меню **Отладка** пункт **Остановить отладку**.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
-[Занятие 6. Использование параметров в модели развертывания проекта в службах SSIS](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
+[Занятие 6: Использование параметров в модели развертывания проекта в службах SQL Server Integration Services](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
   
   
   

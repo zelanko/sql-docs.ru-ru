@@ -1,4 +1,5 @@
 ---
+description: 'Преобразование из C в SQL: даты'
 title: 'C в SQL: Date | Документация Майкрософт'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bea087d3-911f-418b-b483-d2b5b334da19
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fa3df8aaee03472076b3241cb9bb60e2a307e28b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f9d8bed4b16ee1c63134cdb9e1ae0b8303b0deb5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298852"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500007"
 ---
 # <a name="c-to-sql-date"></a>Преобразование из C в SQL: даты
 Идентификатор для типа данных Date ODBC C:  
@@ -39,6 +40,6 @@ ms.locfileid: "81298852"
   
  Сведения о том, какие значения допустимы в структуре SQL_C_TYPE_DATE, см. в разделе [типы данных C](../../../odbc/reference/appendixes/c-data-types.md)ранее в этом приложении.  
   
- Когда данные даты C преобразуются в символьные данные SQL, полученные символьные данные имеют формат "*гггг*-*мм*-*дд*".  
+ Когда данные даты C преобразуются в символьные данные SQL, полученные символьные данные имеют формат "*гггг* - *мм* - *дд*".  
   
  Драйвер не учитывает значение длины и индикатора при преобразовании данных из типа данных даты C и предполагает, что размер буфера данных равен размеру данных типа "Дата C". Значение length/индикатора передается в аргументе *StrLen_Or_Ind* в **SQLPutData** и в буфере, указанном аргументом *StrLen_or_IndPtr* в **SQLBindParameter**. Буфер данных указывается с помощью аргумента *датаптр* в **SQLPutData** и аргумента *параметервалуептр* в **SQLBindParameter**.

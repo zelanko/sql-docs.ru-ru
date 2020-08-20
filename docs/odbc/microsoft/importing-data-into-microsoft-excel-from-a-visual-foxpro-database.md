@@ -1,4 +1,5 @@
 ---
+description: Импорт данных из базы данных Visual FoxPro в Microsoft Excel
 title: Импорт данных в Microsoft Excel из базы данных Visual FoxPro | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3085bc4c-00a7-40e5-bffb-c3962cd3d509
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1bfd86233e5a0a406febcb30bf7a4fae595e53d2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9a4bd1cf7983ed0a552de4f9d0f491960b48f0d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81287674"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500297"
 ---
 # <a name="importing-data-into-microsoft-excel-from-a-visual-foxpro-database"></a>Импорт данных из базы данных Visual FoxPro в Microsoft Excel
 Вы можете импортировать данные Visual FoxPro в лист Microsoft Excel, если для него определен источник данных. Сведения о создании источника данных Visual FoxPro см. в разделе [доступ к источнику данных Visual FoxPro из Microsoft Excel](../../odbc/microsoft/accessing-a-visual-foxpro-data-source-from-microsoft-excel.md).  

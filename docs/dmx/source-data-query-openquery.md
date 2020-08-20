@@ -1,4 +1,5 @@
 ---
+description: '&lt;запрос источника данных &gt; — OPENQUERY'
 title: OPENQUERY (РАСШИРЕНИЯ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ) | Документация Майкрософт
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a075f314af0eb8ea2eb0bc941ada0bc38e22fec3
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: fd654bf63cfbb961b6aaa3c6369358db25371846
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970434"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500888"
 ---
 # <a name="ltsource-data-querygt---openquery"></a>&lt;запрос источника данных &gt; — OPENQUERY
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]

@@ -1,4 +1,5 @@
 ---
+description: SQLGetTypeInfo (драйвер ODBC для Visual FoxPro)
 title: SQLGetTypeInfo (драйвер ODBC для Visual FoxPro) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5f25e20b-a4ef-42da-aeb6-00e0510fb1cc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 23db0350f0f7271f85e2bc5c6a9e6c8767443a85
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e24f506f1134e9191e370971795a23bbbb3bd380
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "81299524"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500183"
 ---
 # <a name="sqlgettypeinfo-visual-foxpro-odbc-driver"></a>SQLGetTypeInfo (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
@@ -32,7 +33,7 @@ ms.locfileid: "81299524"
 |Тип ODBC|Тип Visual FoxPro|  
 |---------------|------------------------|  
 |SQL_BIGINT|Не поддерживается. Отсутствует 64-разрядный тип Visual FoxPro.|  
-|SQL_BIT|Логические|  
+|SQL_BIT|Логический|  
 |SQL_CHAR|Символ|  
 |SQL_DATE|Дата|  
 |SQL_DECIMAL|Числовой|  

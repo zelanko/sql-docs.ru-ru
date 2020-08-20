@@ -1,4 +1,5 @@
 ---
+description: Удаление модели (службы Master Data Services)
 title: Удаление модели
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f0ad3cc4-aed7-47c8-94bc-2971fe9fe871
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7badbd43fd526ff66b599f04e6aeb36443cd3684
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: cdd631bd3a37722a6f87709931b2f45046c81e24
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811549"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500622"
 ---
 # <a name="delete-a-model-master-data-services"></a>Удаление модели (службы Master Data Services)
 
@@ -50,9 +51,9 @@ ms.locfileid: "85811549"
   
 6.  В дополнительном диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
- В столбце **Состояние** в сетке отображается состояние операции с моделью. При нажатии кнопки **сохранить модель** отображается изображение ![обновления](../master-data-services/media/mds-model-status-updating.png "Обновление") , которое указывает на то, что модель обновляется. При возникновении ошибок при создании или изменении модели отображается изображение ![ошибки](../master-data-services/media/mds-model-status-error.png "Ошибка") . В противном случае отображается состояние "ОК" и появляется изображение ![ОК](../master-data-services/media/mds-model-status-ok.png "OK") .  
+ В столбце **Состояние** в сетке отображается состояние операции с моделью. При нажатии кнопки **сохранить модель** отображается изображение ![обновления](../master-data-services/media/mds-model-status-updating.png "Обновление") , которое указывает на то, что модель обновляется. При возникновении ошибок при создании или изменении модели отображается изображение ![ошибки](../master-data-services/media/mds-model-status-error.png "Ошибка") . В противном случае отображается состояние "ОК" и появляется изображение ![ОК](../master-data-services/media/mds-model-status-ok.png "ОК") .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Модели &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)   
  [Создание модели (службы Master Data Services)](../master-data-services/create-a-model-master-data-services.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: Привязка параметров (ODBC)
 title: Параметры привязки ODBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7538a82b-b08b-4c8f-9809-e4ccea16db11
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6e314bb9e3a1a979976a450e2a45a286ec54dfe7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9893d6611ad2bfc7107df1cd2d4ffe72dbf32fad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306385"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499957"
 ---
 # <a name="binding-parameters-odbc"></a>Привязка параметров (ODBC)
 Каждый параметр в инструкции SQL должен быть связан или *привязан* к переменной в приложении перед выполнением инструкции. Когда приложение привязывает переменную к параметру, оно описывает этот тип данных переменной-Address, C и так далее в драйвере. Он также описывает сам параметр — тип данных SQL, точность и т. д. Драйвер сохраняет эти сведения в структуре, которая поддерживается для этой инструкции, и использует эти сведения для получения значения из переменной при выполнении инструкции.  

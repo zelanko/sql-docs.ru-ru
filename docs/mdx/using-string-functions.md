@@ -1,4 +1,5 @@
 ---
+description: Использование строковых функций
 title: Использование строковых функций | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 74eec478baad335cb5be6a78ec1faea2d15030ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2160662a5e8fe9e89e133e053cca820fc60a66e9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037992"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500487"
 ---
 # <a name="using-string-functions"></a>Использование строковых функций
 
@@ -100,13 +101,13 @@ ms.locfileid: "68037992"
 > [!NOTE]  
 >  Функции **StrToMember** и **StrToSet** следует использовать с осторожностью. Их использование в определениях вычислений может привести к снижению производительности запросов.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание &#40;многомерных выражений&#41;](../mdx/generate-mdx.md)   
- [Имя &#40;&#41;многомерных выражений](../mdx/name-mdx.md)   
- [Уникальное &#40;&#41;многомерных выражений](../mdx/uniquename-mdx.md)   
+ [Имя &#40;&#41;многомерных выражений ](../mdx/name-mdx.md)   
+ [Уникальное &#40;&#41;многомерных выражений ](../mdx/uniquename-mdx.md)   
  [Функции &#40;синтаксиса многомерных выражений&#41;](../mdx/functions-mdx-syntax.md)   
- [Использование хранимых процедур &#40;&#41;многомерных выражений](../mdx/using-stored-procedures-mdx.md)   
- [StrToMember &#40;&#41;многомерных выражений](../mdx/strtomember-mdx.md)   
- [StrToSet &#40;&#41;многомерных выражений](../mdx/strtoset-mdx.md)  
+ [Использование хранимых процедур &#40;&#41;многомерных выражений ](../mdx/using-stored-procedures-mdx.md)   
+ [StrToMember &#40;&#41;многомерных выражений ](../mdx/strtomember-mdx.md)   
+ [StrToSet &#40;&#41;многомерных выражений ](../mdx/strtoset-mdx.md)  
   
   

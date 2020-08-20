@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 46c41c4bf06082e36df1ea48165520afbc4a3210
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ddfa137e0efd93bfad2a59a4fc2c8da2c189cdc3
+ms.sourcegitcommit: a0245fdae1ff9045f587a3a67b72f34405d35a4f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481987"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88618111"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -84,7 +84,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
 На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется  **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
   
 ## <a name="set-options"></a>Параметры SET  
  Копии одного и того же скомпилированного плана могут отличаться только значением столбца **set_options** . Это указывает на то, что разные соединения используют разные наборы параметров SET для одного запроса. Использование разных наборов параметров, как правило, нежелательно, поскольку приводит к дополнительным компиляциям, меньшему повторному использованию планов и расширению кэша планов по причине размещения нескольких копий планов в кэш-памяти.  
@@ -95,7 +95,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |Параметр|Значение|  
 |------------|-----------|  
 |ANSI_PADDING|1|  
-|Parallel Plan|2|  
+|параллелплан<br /><br /> Указывает, что параметры параллелизма плана изменились.|2|  
 |FORCEPLAN|4|  
 |CONCAT_NULL_YIELDS_NULL|8|  
 |ANSI_WARNINGS|16|  
@@ -167,7 +167,7 @@ PIVOT (MAX(ecpa.value) FOR ecpa.attribute IN ("set_options", "sql_handle")) AS p
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_cached_plans (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   

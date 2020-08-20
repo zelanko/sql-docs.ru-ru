@@ -1,4 +1,5 @@
 ---
+description: Создание атрибута ссылки (службы Master Data Services)
 title: Создание атрибута ссылки
 ms.custom: ''
 ms.date: 03/15/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8b22b60f005ab7e982491685db0ff59dd2c73346
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 129cfe3eec5b99bc486e5a47cd7f90ac0733d13e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813100"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500688"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>Создание атрибута ссылки (службы Master Data Services)
 
@@ -44,7 +45,7 @@ ms.locfileid: "85813100"
 |Столбец|Описание|  
 |------------|-----------------|  
 |Состояние|Состояние атрибута.<br /><br /> При нажатии кнопки сохранить отображается ![значок для обновления состояния](../master-data-services/media/mds-statusicon-updating.png "Значок обновления состояния") , указывающий на то, что атрибут обновляется.<br /><br /> Если при создании или изменении атрибута возникли ошибки, отображается ![значок изображение состояния ошибки](../master-data-services/media/mds-statusicon-error.png "Значок состояния ошибки") .<br /><br /> В противном случае отображается состояние ОК, а ![для значка состояния ОК](../master-data-services/media/mds-statusicon-ok.png "Значок состояния "ОК"") — изображение.|  
-|name|Имя атрибута.|  
+|Имя|Имя атрибута.|  
 |Отображаемое имя|Отображаемое имя атрибута.|  
 |Описание|Описание атрибута.|  
 |Ширина отображаемой области (в пикселях)|Ширина атрибута.|  
@@ -95,7 +96,7 @@ ms.locfileid: "85813100"
   
 13. Выберите команду **Сохранить**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Master Data Services &#40;атрибутов&#41;](../master-data-services/attributes-master-data-services.md)   
  [Измените имя атрибута и тип данных &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
  [Создание атрибута на основе домена &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   

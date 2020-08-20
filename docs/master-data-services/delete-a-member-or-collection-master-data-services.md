@@ -1,4 +1,5 @@
 ---
+description: Удаление элемента или коллекции (службы Master Data Services)
 title: Удаление элемента или коллекции
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 613fa319c00ab100e52835faab1eafc33c07c9be
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: c7245b06b114c62b7fd0dde543f8a7a2859bd842
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811558"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500647"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>Удаление элемента или коллекции (службы Master Data Services)
 
@@ -65,7 +66,7 @@ ms.locfileid: "85811558"
   
 8.  В диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Повторная активация элемента или коллекции &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
  [Master Data Services &#40;членов&#41;](../master-data-services/members-master-data-services.md)   
  [Коллекции (службы Master Data Services)](../master-data-services/collections-master-data-services.md)  

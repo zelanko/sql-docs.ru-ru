@@ -1,4 +1,5 @@
 ---
+description: Удаление группы атрибутов (службы Master Data Services)
 title: Удаление группы атрибутов
 ms.custom: ''
 ms.date: 03/15/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: bcc9a263a8bb6ebb015c715930ebd601747ea25f
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 91abdbbec357c5d5b7b629c5619b221c14bc0d15
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812393"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500604"
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>Удаление группы атрибутов (службы Master Data Services)
 
@@ -53,7 +54,7 @@ ms.locfileid: "85812393"
   
 8.  В диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Группы атрибутов &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)   
  [Создание группы атрибутов (службы Master Data Services)](../master-data-services/create-an-attribute-group-master-data-services.md)  
   

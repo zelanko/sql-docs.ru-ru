@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 54d79e59ac779efdb1a347531b7f536a074e9686
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d2d59cad60855c670f7c7e2b189ad3c97a3027b9
+ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424446"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564042"
 ---
 # <a name="unicode-function-arguments"></a>Аргументы функции Юникода
 Диспетчер драйверов ODBC 3,5 (или более поздней версии) поддерживает версии ANSI и Юникод всех функций, которые принимают указатели на символьные строки или СКЛПОИНТЕР в своих аргументах. Функции Юникода реализуются как функции (с суффиксом *W*), а не как макросы. Функции ANSI (которые могут вызываться с суффиксом или без *него) идентичны*текущим ФУНКЦИЯМ API ODBC.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Для функций Юникода, которые всегда возвращают или принимают строки или аргументы длины, аргументы передаются как количество символов. Для функций, возвращающих сведения о длине данных сервера, размер и точность отображения описаны в разделе число символов. Если длина (размер перемещения данных) может ссылаться на строковые или нестроковые данные, длина описана в октетах. Например, **склжетинфов** будет по-прежнему иметь длину в виде количества байт, но **склексекдиректв** будет использовать количество символов.  
   
  Количество символов — это число байтов (октетов) для функций ANSI и число WCHAR (16-разрядных слов) для функций Юникода. В частности, двойная последовательность символов (DBCS) или многобайтовая кодировка (MBCS) может состоять из нескольких байтов. Последовательность символов Юникода UTF-16 может состоять из нескольких Вчарс.  
@@ -37,7 +37,7 @@ ms.locfileid: "88424446"
 |**SQLColAttribute**|**SQLGetInfo**|  
 |**SQLColAttributes**|**SQLGetStmtAttr**|  
 |**SQLColumnPrivileges**|**SQLGetTypeInfo**|  
-|**SQLColumns**|**SQLNativeSQL**|  
+|**SQLColumns**|**SQLNativeSql**|  
 |**SQLConnect**|**SQLPrepare**|  
 |**SQLDataSources**|**SQLPrimaryKeys**|  
 |**SQLDescribeCol**|**SQLProcedureColumns**|  

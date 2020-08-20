@@ -1,4 +1,5 @@
 ---
+description: StructureColumn (расширения интеллектуального анализа данных)
 title: StructureColumn (расширения интеллектуального анализа данных) | Документация Майкрософт
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cb07dd463ddbbc15942ca6f62c4ccb708a8c5efd
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 43e02efd8594497ad4f3c02679a475531489141c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970321"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500799"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -137,7 +138,7 @@ WHERE EXISTS (SELECT * FROM Products WHERE StructureColumn('Quantity')>1)
   
 ## <a name="see-also"></a>См. также  
  [Расширения интеллектуального анализа данных &#40;Справочник по функциям DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/functions-dmx.md)   
- [Общие прогнозирующие функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/general-prediction-functions-dmx.md)  
+ [Функции &#40;&#41;расширений интеллектуального анализа данных ](../dmx/functions-dmx.md)   
+ [Общие прогнозирующие функции &#40;&#41;расширений интеллектуального анализа данных ](../dmx/general-prediction-functions-dmx.md)  
   
   

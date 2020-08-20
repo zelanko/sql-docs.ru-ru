@@ -1,4 +1,5 @@
 ---
+description: Обновление Power Pivot для SharePoint
 title: Обновление Power Pivot для SharePoint | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,12 +12,12 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 69c4ab82bf6fc29464bf689c53358d11e9b0a428
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 98fdd14f73f64dd23df2a8766a49f4adbc7ffc2f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87952754"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500925"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Обновление Power Pivot для SharePoint
 
@@ -356,7 +357,7 @@ Get-PowerPivotSystemService
   
  Дополнительные сведения о настройке параметров и функций [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] см. в разделе [Администрирование и конфигурация сервера Power Pivot в центре администрирования](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration).  
   
- Пошаговые инструкции по выполнению всех задач по настройке системы после установки см. в разделе [Первоначальная настройка (Power Pivot для SharePoint)](https://msdn.microsoft.com/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146).  
+ Пошаговые инструкции по выполнению всех задач по настройке системы после установки см. в разделе [Первоначальная настройка (Power Pivot для SharePoint)](https://docs.microsoft.com/sharepoint/administration/configure-power-pivot-for-sharepoint-2013).  
   
 ## <a name="see-also"></a>См. также:  
  [Возможности, поддерживаемые различными выпусками SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)   

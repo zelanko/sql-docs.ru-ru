@@ -1,4 +1,5 @@
 ---
+description: '&lt;запрос источника данных&gt;'
 title: '&lt;запрос источника данных &gt; | Документация Майкрософт'
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7117409372fcbcbc6ef3662a2355f063b2a99d98
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: fedb3472755a8147e10aef046c7a7fc435b356cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970296"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500794"
 ---
 # <a name="ltsource-data-querygt"></a>&lt;запрос источника данных&gt;
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "86970296"
  [OPENROWSET &#40;DMX&#41;](../dmx/source-data-query-openrowset.md)  
  Эта инструкция запрашивает данные, являющиеся внешними для экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], при помощи существующего источника данных.  
   
- [SHAPE &#40;&#41;РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ](../dmx/source-data-query-shape.md)  
+ [SHAPE &#40;&#41;РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ ](../dmx/source-data-query-shape.md)  
  Эта инструкция запрашивает несколько источников данных для создания вложенной таблицы. С помощью **Shape**можно объединять данные из нескольких источников в одну иерархическую таблицу. Это позволит использовать возможность экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] вкладывать таблицы друг в друга.  
   
  Для указания источника данных можно также использовать следующие данные:  

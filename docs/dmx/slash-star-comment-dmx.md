@@ -1,4 +1,5 @@
 ---
+description: Косая черта (комментарий) (расширения интеллектуального анализа данных)
 title: Косая черта (комментарий) (расширения интеллектуального анализа данных) | Документация Майкрософт
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f09533b68ab6dc3c771a09b70faf71087ed69a62
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 011d72bfcb0b72d1b73579e81dc6f82e4d50da69
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970432"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500876"
 ---
 # <a name="slash-star-comment-dmx"></a>Косая черта (комментарий) (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -42,6 +43,6 @@ ms.locfileid: "86970432"
  [Двойная косая черта &#40;комментарий&#41; &#40;DMX&#41;](../dmx/double-slash-comment-dmx.md)   
  [--&#40;комментарий&#41; &#40;&#41; сводные данные расширений интеллектуального анализа данных](../dmx/comment-dmx-summary.md)   
  [Ссылки на операторы расширений интеллектуального анализа данных &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Операторы &#40;&#41;расширений интеллектуального анализа данных](../dmx/operators-dmx.md)  
+ [Операторы &#40;&#41;расширений интеллектуального анализа данных ](../dmx/operators-dmx.md)  
   
   

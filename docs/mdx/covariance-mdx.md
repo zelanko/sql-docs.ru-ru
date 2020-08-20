@@ -1,4 +1,5 @@
 ---
+description: Covariance (многомерные выражения)
 title: Ковариация (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ea3755fb103362b797735d74c9cbe67523aace59
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 32471a48f0a669f7b72b5946f07403d6851dfb74
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68047188"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500537"
 ---
 # <a name="covariance-mdx"></a>Covariance (многомерные выражения)
 

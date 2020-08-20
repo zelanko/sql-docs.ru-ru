@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c6ad5bdd6b8fbf294a1c4f45a825910ec6a82af2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f746b454b18de7d88ca4c42d049eb058f671ba8e
+ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452806"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512300"
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>Шаг 2. Инициализация главного списка
 Для объявления глобальных записей и объектов Recordset вставьте следующий код в (Общие) (объявления) для Form1:  
@@ -46,7 +46,7 @@ Private Sub Form_Load()
 End Sub  
 ```  
   
- Этот код создает экземпляры глобальной записи и объектов набора записей. Объект Record `grec` открыт с URL-адресом, указанным в качестве ActiveConnection. Если URL-адрес существует, он открывается; Если он еще не существует, он будет создан. Обратите внимание, что необходимо заменить " <https://servername/foldername/> " допустимым URL-адресом из вашей среды.  
+ Этот код создает экземпляры глобальной записи и объектов набора записей. Объект Record `grec` открыт с URL-адресом, указанным в качестве ActiveConnection. Если URL-адрес существует, он открывается; Если он еще не существует, он будет создан. Обратите внимание, что необходимо заменить `https://servername/foldername/` допустимым URL-адресом из вашей среды.  
   
  Объект набора записей, `grs` , открывается на дочерних элементах записи, `grec` . Затем `lstMain` заполняются имена файлов ресурсов, опубликованных по URL-адресу.  
   

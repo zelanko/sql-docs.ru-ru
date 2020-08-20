@@ -1,4 +1,5 @@
 ---
+description: Структура и методы использования прогнозирующих запросов расширений интеллектуального анализа данных
 title: Структура и использование прогнозирующих запросов расширений интеллектуального анализа данных | Документация Майкрософт
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e2aaeedff9eb0d22d6a7175641177f803379adaa
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 242e86a0ac74dacd8682825f25adab4a847a82e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970292"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500796"
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>Структура и методы использования прогнозирующих запросов расширений интеллектуального анализа данных
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -68,14 +69,14 @@ ms.locfileid: "86970292"
   
  Дополнительные сведения о синтаксисе инструкции PREDICTION см. в разделе [SELECT FROM &#60;model&#62; PREDICTION JOIN &#40;расширений интеллектуального анализа данных&#41;](../dmx/select-from-model-prediction-join-dmx.md) и [выберите &#60;модель&#62; &#40;DMX&#41;](../dmx/select-from-model-dmx.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширения интеллектуального анализа данных &#40;Справочник по DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
  [Расширения интеллектуального анализа данных &#40;Справочник по функциям DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Ссылки на операторы расширений интеллектуального анализа данных &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Расширения интеллектуального анализа данных &#40;Справочник по инструкции DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)   
  [Расширения интеллектуального анализа данных &#40;синтаксические обозначения&#41; DMX](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Расширения интеллектуального анализа данных &#40;синтаксические&#41; DMX-элементы](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Общие прогнозирующие функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/general-prediction-functions-dmx.md)   
+ [Общие прогнозирующие функции &#40;&#41;расширений интеллектуального анализа данных ](../dmx/general-prediction-functions-dmx.md)   
  [Общие сведения об инструкции расширения интеллектуального анализа данных SELECT](../dmx/understanding-the-dmx-select-statement.md)  
   
   

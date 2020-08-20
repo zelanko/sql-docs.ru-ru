@@ -1,4 +1,5 @@
 ---
+description: Удаление представления подписки (службы Master Data Services)
 title: Удаление представления подписки
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14b09c81-1297-48b0-8fe5-991414b930e0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 44ee02d2397f0f17573e48ccf056b3e768b15240
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 4dea51dd78f69c7906ec149dcefd52aa3f9e5dfb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811573"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500645"
 ---
 # <a name="delete-a-subscription-view-master-data-services"></a>Удаление представления подписки (службы Master Data Services)
 
@@ -45,7 +46,7 @@ ms.locfileid: "85811573"
   
 5.  В диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание представления подписки для экспорта &#40;данных Master Data Services&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)   
  [Обзор. Экспорт данных (службы Master Data Services)](../master-data-services/overview-exporting-data-master-data-services.md)  
   

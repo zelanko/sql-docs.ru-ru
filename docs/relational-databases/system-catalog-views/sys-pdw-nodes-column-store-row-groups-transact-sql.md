@@ -13,12 +13,12 @@ ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8f323ccec312a1d2e11d72b582d1b574c923591f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9cabbcd9a47bbea4eaaf2d01bca1044c66ff9112
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447888"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646032"
 ---
 # <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys. pdw_nodes_column_store_row_groups (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -107,6 +107,8 @@ FROM sys.pdw_nodes_column_store_row_groups rg
 GROUP BY s.name, t.name, rg.partition_number
 ORDER BY 1, 2
 ```
+>[!TIP]
+> Для повышения производительности в синапсе SQL рассмотрите возможность использования представления **sys. pdw_permanent_table_mappings** вместо **sys. pdw_table_mappings** в постоянных пользовательских таблицах. Дополнительные сведения см. в разделе **[sys. pdw_permanent_table_mappings &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-permanent-table-mappings-transact-sql.md)** .
   
 ## <a name="see-also"></a>См. также  
  [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  (Представления каталога в службе "Хранилище данных SQL" и Parallel Data Warehouse)  

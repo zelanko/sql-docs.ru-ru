@@ -1,4 +1,5 @@
 ---
+description: 'Преобразование из C в SQL: интервалы времени дня'
 title: 'C в SQL: день — интервалы времени | Документация Майкрософт'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f9ee1ddb-dec7-4f78-b6e2-5ba34e7d6f59
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1c3f7efb443b442d44a94cfd43629cdaedd6195b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: aba5bb40a34f100cf33d5c07fb6e796b227904dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81291924"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499997"
 ---
 # <a name="c-to-sql-day-time-intervals"></a>Преобразование из C в SQL: интервалы времени дня
 Идентификаторы для типов данных ODBC C в течение дня времени:  

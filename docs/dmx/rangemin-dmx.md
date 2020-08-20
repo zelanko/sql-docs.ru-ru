@@ -1,4 +1,5 @@
 ---
+description: RangeMin (расширения интеллектуального анализа данных)
 title: RangeMin (расширения интеллектуального анализа данных) | Документация Майкрософт
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 47365778d51ba9b7ee857f9a634b3b0b25616d60
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 529a669b20719db93ddb702a2b4cff629f53c8db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970659"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500904"
 ---
 # <a name="rangemin-dmx"></a>RangeMin (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -51,8 +52,8 @@ FROM [TM Decision Tree]
   
 ## <a name="see-also"></a>См. также  
  [Расширения интеллектуального анализа данных &#40;Справочник по функциям DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/functions-dmx.md)   
- [Общие прогнозирующие функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/general-prediction-functions-dmx.md)   
+ [Функции &#40;&#41;расширений интеллектуального анализа данных ](../dmx/functions-dmx.md)   
+ [Общие прогнозирующие функции &#40;&#41;расширений интеллектуального анализа данных ](../dmx/general-prediction-functions-dmx.md)   
  [RangeMax &#40;расширений интеллектуального анализа данных&#41;](../dmx/rangemax-dmx.md)   
  [RangeMid &#40;расширений интеллектуального анализа данных&#41;](../dmx/rangemid-dmx.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: 'Преобразование из C в SQL: битовые данные'
 title: 'C в SQL: bit | Документация Майкрософт'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 267c9fa9-599e-4ee6-b51b-0cae43f09183
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a96982573d83cf01947f82dc2014ee2c470931e3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b62f85ddb3a89d27e078f316560cec466043743a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292047"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500037"
 ---
 # <a name="c-to-sql-bit"></a>Преобразование из C в SQL: битовые данные
 В качестве идентификатора для битового типа данных ODBC C используется:  
@@ -30,8 +31,8 @@ ms.locfileid: "81292047"
   
 |Идентификатор типа SQL|Тест|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR<br /><br /> SQL_WCHAR SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|None|Недоступно|  
-|SQL_DECIMAL SQL_NUMERIC<br /><br /> SQL_TINYINT SQL_SMALLINT<br /><br /> SQL_INTEGER SQL_BIGINT<br /><br /> SQL_REAL SQL_FLOAT<br /><br /> SQL_DOUBLE|None|Недоступно|  
-|SQL_BIT|None|Недоступно|  
+|SQL_CHAR SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR<br /><br /> SQL_WCHAR SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Нет|Недоступно|  
+|SQL_DECIMAL SQL_NUMERIC<br /><br /> SQL_TINYINT SQL_SMALLINT<br /><br /> SQL_INTEGER SQL_BIGINT<br /><br /> SQL_REAL SQL_FLOAT<br /><br /> SQL_DOUBLE|Нет|Недоступно|  
+|SQL_BIT|Нет|Недоступно|  
   
  Драйвер игнорирует значение длины или индикатора при преобразовании данных из типа данных bit C и предполагает, что размер буфера данных равен размеру битового типа данных C. Значение length/индикатора передается в аргументе *StrLen_Or_Ind* в **SQLPutData** и в буфере, указанном аргументом *StrLen_or_IndPtr* в **SQLBindParameter**. Буфер данных указывается с помощью аргумента *датаптр* в **SQLPutData** и аргумента *параметервалуептр* в **SQLBindParameter**.
