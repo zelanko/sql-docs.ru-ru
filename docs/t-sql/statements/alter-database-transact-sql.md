@@ -1,4 +1,5 @@
 ---
+description: ALTER DATABASE (Transact-SQL)
 title: ALTER DATABASE (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 07/21/2020
@@ -26,12 +27,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0c45877355d5cb47b8c9ba4ee86784c17d30a816
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 553d84c62dfb9de6bc1bd18cde7b09965bfdf0d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988290"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467336"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -452,7 +453,7 @@ MODIFY (MAXSIZE **=** [100 MB \| 500 MB \| 1 \| 1024...4096] GB) — указы
 |500 ГБ|Недоступно|√|√|√ (D)|√|
 |750 ГБ|Недоступно|√|√|√|√|
 |1024 ГБ|Недоступно|√|√|√|√ (D)|
-|От 1024 до 4096 ГБ с шагом приращения 256 ГБ *|Н/Д|Н/Д|Н/Д|Недоступно|√|
+|От 1024 до 4096 ГБ с шагом приращения 256 ГБ *|Н/Д|Н/Д|Недоступно|Недоступно|√|
 
 \* P11 и P15 позволяют задавать параметру MAXSIZE значение до 4 ТБ, при этом размер по умолчанию — 1024 ГБ. P11 и P15 могут использовать до 4 ТБ включенного объема хранилища без дополнительной платы. На уровне Premium использование MAXSIZE со значением более 1 ТБ сейчас доступно в следующих регионах: восточная часть США 2, западная часть США, US Gov (Вирджиния), Западная Европа, Центральная Германия, Юго-Восточная Азия, Восточная Япония, Восточная Австралия, Центральная Канада и Восточная Канада. Дополнительные сведения об ограничениях по ресурсам для модели DTU см. в разделе [Пределы для ресурсов DTU](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
 

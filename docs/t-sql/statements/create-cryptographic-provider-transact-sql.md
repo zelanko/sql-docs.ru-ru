@@ -1,4 +1,5 @@
 ---
+description: CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 title: CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Документы Майкрософт
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 059a39a6-9d32-4d3f-965b-0a1ce75229c7
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 10d3716351aecc982ad060cd9795c029401a48a3
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: b1a12f2c53409148854b806f1141bf46acad8a4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392822"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467272"
 ---
 # <a name="create-cryptographic-provider-transact-sql"></a>CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +54,7 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
  *path_of_DLL*  
  Путь к DLL-библиотеке, реализующей интерфейс расширенного управления ключами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При использовании **соединителя SQL Server для Microsoft Azure Key Vault** расположением по умолчанию является **C:\Program Files\Microsoft SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Все ключи, созданные поставщиком, ссылаются на поставщик по его идентификатору GUID. Идентификатор GUID сохраняются во всех версиях DLL-библиотеки.  
   
  Библиотека, реализующая интерфейс SQLEKM, должна быть подписана цифровой подписью с использованием любого сертификата. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполнит проверку подписи. При этом проверяется цепочка сертификатов, корень которой должен быть установлен в расположение **Trusted Root Cert Authorities** системной папки Windows. Если проверка подписи не выполнена должным образом, выполнение инструкции CREATE CRYPTOGRAPHIC PROVIDER оканчивается неудачей. Дополнительные сведения о сертификатах и цепочках сертификатов см. в разделе [Сертификаты SQL Server и асимметричные ключи](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  

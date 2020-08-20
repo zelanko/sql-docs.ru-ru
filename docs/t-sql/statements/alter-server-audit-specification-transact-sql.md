@@ -1,4 +1,5 @@
 ---
+description: ALTER SERVER AUDIT SPECIFICATION (Transact-SQL)
 title: ALTER SERVER AUDIT SPECIFICATION (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 05/01/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9cac288b-940e-4c16-88d6-de06aeed2b47
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3b955c95df0af36bac4f249aab547310d46a6220
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: fd2163114fb0b2ad6d21ca2ed827db160819c8ff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381208"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467285"
 ---
 # <a name="alter-server-audit-specification-transact-sql"></a>ALTER SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -62,7 +63,7 @@ ALTER SERVER AUDIT SPECIFICATION audit_specification_name
  WITH **(** STATE **=** { ON | OFF } **)**  
  Включает или отключает сбор записей для этой спецификации аудита.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Чтобы внести изменения в спецификацию аудита, необходимо установить состояние аудита в режим OFF. Если инструкция ALTER SERVER AUDIT SPECIFICATION выполняется при включенной спецификации аудита с любым параметром (кроме STATE=OFF), будет получено сообщение об ошибке.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -85,7 +86,7 @@ GO
  Полный пример создания аудита см. в разделе [Аудит SQL Server (ядро СУБД)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE SERVER AUDIT (Transact-SQL)](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT (Transact-SQL)](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT (Transact-SQL)](../../t-sql/statements/drop-server-audit-transact-sql.md)   

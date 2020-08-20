@@ -1,4 +1,5 @@
 ---
+description: STDistance (тип данных geometry)
 title: STDistance (тип данных geometry) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ac815bc7-5342-4cc4-af40-c80a1c4c8b68
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5bcb10fc64d6bac02b8ecc6faba0c8d7662b0adc
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 48ae04bdc272bcb7513fe4c2ac1d474406b4ba04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555041"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467381"
 ---
 # <a name="stdistance-geometry-data-type"></a>STDistance (тип данных geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "86555041"
   
  Тип возвращаемых данных CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Метод `STDistance()` всегда возвращает значение NULL, если идентификаторы пространственных ссылок (SRID) экземпляров **geometry** не совпадают.  
   
 ## <a name="examples"></a>Примеры  
@@ -60,7 +61,7 @@ SET @h = geometry::STGeomFromText('POINT(10 10)', 0);
 SELECT @g.STDistance(@h);  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Общие сведения о пространственных индексах](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

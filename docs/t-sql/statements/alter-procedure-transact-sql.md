@@ -1,4 +1,5 @@
 ---
+description: ALTER PROCEDURE (Transact-SQL)
 title: ALTER PROCEDURE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 05/01/2017
@@ -23,12 +24,12 @@ ms.assetid: ed9b2f76-11ec-498d-a95e-75b490a75733
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 676696f50495ab042bbaf38bf9b6fd1ce374d3a7
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: dab3f3be63f0430a776fcaeb2d1c0d65f117f511
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381268"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467427"
 ---
 # <a name="alter-procedure-transact-sql"></a>ALTER PROCEDURE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "86381268"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server and Azure SQL Database
   
 ALTER { PROC | PROCEDURE } [schema_name.] procedure_name [ ; number ]   
@@ -57,7 +58,7 @@ AS { [ BEGIN ] sql_statement [;] [ ...n ] [ END ] }
     [ EXECUTE AS Clause ]  
 ```  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server CLR Stored Procedure  
   
 ALTER { PROC | PROCEDURE } [schema_name.] procedure_name [ ; number ]   
@@ -69,7 +70,7 @@ AS { EXTERNAL NAME assembly_name.class_name.method_name }
 [;]  
 ```  
   
-```sql  
+```syntaxsql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 ALTER { PROC | PROCEDURE } [schema_name.] procedure_name  
@@ -105,7 +106,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  VARYING  
  Указывает результирующий набор, поддерживаемый в качестве выходного параметра. Этот параметр формируется динамически хранимой процедурой, и его содержимое может меняться. Область применения — только аргументы курсора. Этот параметр недопустим для процедур CLR.  
   
- *значение по умолчанию*  
+ *default*  
  Значение по умолчанию для аргумента.  
   
  OUT | OUTPUT  
@@ -148,7 +149,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  EXTERNAL NAME _assembly\_name_ **.** _class\_name_ **.** _method\_name_  
  **Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  
   
- Указывает метод сборки [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] для хранимой процедуры CLR, на которую создается ссылка. Аргумент *class_name* должен быть допустимым идентификатором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и существовать как класс в сборке. Если для класса через точку ( **.** ) указано пространство имен, имя класса должно быть выделено квадратными скобками ( **[]** ) или кавычками ( **""** ). Указанный метод класса должен быть статическим.  
+ Указывает метод сборки [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] для хранимой процедуры CLR, на которую создается ссылка. Аргумент *class_name* должен быть допустимым идентификатором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и существовать как класс в сборке. Если для класса через точку (**.**) указано пространство имен, имя класса должно быть выделено квадратными скобками (**[]**) или кавычками (**""**). Указанный метод класса должен быть статическим.  
   
  По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не производит выполнение кода CLR. Можно создавать, изменять и удалять объекты базы данных со ссылками на модули среды CLR, но [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не выполняет их до тех пор, пока не будет включен параметр [clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md). Для включения параметра используйте хранимую процедуру [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
@@ -172,8 +173,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
 ## <a name="examples"></a>Примеры  
  В следующем примере создается хранимая процедура `uspVendorAllInfo`. Эта хранимая процедура возвращает имена всех поставщиков, которые содержатся в базе данных [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)], товары, которые они производят, оценку кредитоспособности и доступность. После создания процедура изменяется и возвращает другой результирующий набор.  
   
-```  
-  
+```sql
 IF OBJECT_ID ( 'Purchasing.uspVendorAllInfo', 'P' ) IS NOT NULL   
     DROP PROCEDURE Purchasing.uspVendorAllInfo;  
 GO  
@@ -190,17 +190,16 @@ AS
     INNER JOIN Production.Product p  
       ON pv.ProductID = p.ProductID   
     ORDER BY v.Name ASC;  
-GO  
-  
+GO    
 ```  
   
  В следующем примере изменяется хранимая процедура `uspVendorAllInfo`. Здесь удаляется предложение EXECUTE AS CALLER и изменяется текст процедуры, чтобы возвращать только поставщиков, предлагающих указанный товар. Содержимое результирующего набора определяется при помощи функций `LEFT` и `CASE`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER PROCEDURE Purchasing.uspVendorAllInfo  
-    @Product varchar(25)   
+    @Product VARCHAR(25)   
 AS  
     SET NOCOUNT ON;  
     SELECT LEFT(v.Name, 25) AS Vendor, LEFT(p.Name, 25) AS 'Product name',   
@@ -224,7 +223,6 @@ AS
     WHERE p.Name LIKE @Product  
     ORDER BY v.Name ASC;  
 GO  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -237,7 +235,7 @@ Vision Cycles, Inc.  LL Crankarm   Superior  Yes
 (2 row(s) affected)`  
 ```  
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)   
  [DROP PROCEDURE (Transact-SQL)](../../t-sql/statements/drop-procedure-transact-sql.md)   
  [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)   

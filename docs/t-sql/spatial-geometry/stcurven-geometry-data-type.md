@@ -1,4 +1,5 @@
 ---
+description: STCurveN (тип данных geometry)
 title: STCurveN (тип данных geometry) | Документы Майкрософт
 ms.custom: ''
 ms.date: 08/03/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 64adf1a1-3a41-41fb-b7d1-44390c3e4ea9
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 7905da990bf06b79641f19823f954abe201139ad
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e182b7c5670bd86e0d684d1d8caaea563a2ff456
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555075"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467398"
 ---
 # <a name="stcurven-geometry-data-type"></a>STCurveN (тип данных geometry)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "86555075"
 ## <a name="exceptions"></a>Исключения  
  Если *curve_index* < 1, вызывается исключение `ArgumentOutOfRangeException`.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Значение **NULL** возвращается при выполнении любого из указанных ниже условий.  
   
 -   Экземпляр **geometry** объявлен, но не создан.  
@@ -112,7 +113,7 @@ ms.locfileid: "86555075"
  END
  ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [STNumCurves (тип данных geometry)](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)   
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: ALTER PARTITION SCHEME (Transact-SQL)
 title: ALTER PARTITION SCHEME (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f01d6880-9800-4cfb-8d11-d4be21efc8ca
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3baca278dfaa94c51dfddff84a8a5c760c1275ae
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: c6bd938d1dfcf4cf1506d1b8eb35cade61458f58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381258"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467353"
 ---
 # <a name="alter-partition-scheme-transact-sql"></a>ALTER PARTITION SCHEME (Transact-SQL)
 
@@ -63,7 +64,7 @@ NEXT USED [ filegroup_name ] [ ; ]
   
  Если аргумент *filegroup_name* не указан и ни одна файловая группа не отмечена как NEXT USED, инструкция ALTER PARTITION SCHEME возвращает предупреждение.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Все файловые группы, на которые действует инструкция ALTER PARTITION SCHEME, должны быть в режиме "в сети".  
   
 ## <a name="permissions"></a>Разрешения  
@@ -85,7 +86,7 @@ NEXT USED test5fg;
   
  Файловая группа `test5fg` получает любые дополнительные секции из секционированной таблицы или индекс как результат выполнения инструкции ALTER PARTITION FUNCTION.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE PARTITION SCHEME (Transact-SQL)](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
  [DROP PARTITION SCHEME (Transact-SQL)](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   
  [CREATE PARTITION FUNCTION (Transact-SQL)](../../t-sql/statements/create-partition-function-transact-sql.md)   

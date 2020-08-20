@@ -1,4 +1,5 @@
 ---
+description: ALTER SECURITY POLICY (Transact-SQL)
 title: ALTER SECURITY POLICY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 05/01/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0696b96e83aac5ca66b43d38c11adceab702c10f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: d8267b7583827dce34e46c8f3605912fe72ea72b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112566"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467296"
 ---
 # <a name="alter-security-policy-transact-sql"></a>ALTER SECURITY POLICY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -88,7 +89,7 @@ NOT FOR REPLICATION
 table_schema_name.table_name  
 Является целевой таблицей для примененного предиката безопасности. Для одной таблицы могут быть предназначены несколько отключенных политик безопасности, но только одна может быть включена в любой момент времени.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Remarks
 Инструкция ALTER SECURITY POLICY относится к области транзакции. Если выполняется откат транзакции, происходит также откат этой инструкции.  
   
 При использовании функций предикатов с таблицами, оптимизированными для памяти, политики безопасности должны включать параметр **SCHEMABINDING** и использовать указание компиляции **WITH NATIVE_COMPILATION**. Аргумент SCHEMABINDING невозможно изменить с помощью инструкции ALTER, так как он применяется ко всем предикатам. Чтобы изменить привязку к схеме, необходимо удалить и заново создать политику безопасности.  

@@ -1,4 +1,5 @@
 ---
+description: ALTER SEARCH PROPERTY LIST (Transact-SQL)
 title: ALTER SEARCH PROPERTY LIST (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 05/10/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 0436e4a8-ca26-4d23-93f1-e31e2a1c8bfb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 840ae1f66eb9bbc8d578a677f743df679d08eb83
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: b4a16ec827c742bd99cbc543c57c4e3c7b13c247
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380997"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467317"
 ---
 # <a name="alter-search-property-list-transact-sql"></a>ALTER SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -109,7 +110,7 @@ SELECT property_int_id FROM sys.registered_search_properties;
  DROP  
  Удаляет указанное свойство из списка свойств, указанного параметром *list_name*. Удаление свойства отменяет его регистрацию, поэтому оно становится недоступным для поиска.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Каждый полнотекстовый индекс может иметь только один список свойств поиска.  
   
  Чтобы разрешить запросы по данному свойству поиска, необходимо добавить его в список свойств поиска полнотекстового индекса, а затем повторно заполнить индекс.  
@@ -212,13 +213,13 @@ ALTER SEARCH PROPERTY LIST DocumentPropertyList
 DROP 'Comments' ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE SEARCH PROPERTY LIST (Transact-SQL)](../../t-sql/statements/create-search-property-list-transact-sql.md)   
  [DROP SEARCH PROPERTY LIST (Transact-SQL)](../../t-sql/statements/drop-search-property-list-transact-sql.md)   
  [sys.registered_search_properties (Transact-SQL)](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)   
  [sys.registered_search_property_lists (Transact-SQL)](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)   
  [sys.dm_fts_index_keywords_by_property (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)   
  [Поиск свойств документа с использованием списков свойств поиска](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
- [Поиск идентификаторов GUID для наборов свойств и целочисленных идентификаторов свойств для свойств поиска](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)  
+ [Поиск идентификаторов GUID наборов свойств и целочисленных идентификаторов свойств для свойств поиска](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)  
   
   

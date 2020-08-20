@@ -1,4 +1,5 @@
 ---
+description: STNumPoints (тип данных geometry)
 title: STNumPoints (тип данных geometry) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a19520fc-7f91-4a2c-856f-4d8b99a7e496
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 32770e46a7df18e588d5afe9de17a63e2eee4b91
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 60c48dd009ed98e4faf5229f9f005f3bd5fb6ad9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552811"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467396"
 ---
 # <a name="stnumpoints-geometry-data-type"></a>STNumPoints (тип данных geometry)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "86552811"
   
  Тип возвращаемых данных CLR: **SqlInt32**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Этот метод подсчитывает число точек в описании экземпляра **geometry**. Повторяющиеся точки учитываются. Если этот экземпляр принадлежит к типу **collection**, то метод возвращает сумму точек в каждом из его элементов.  
   
 ## <a name="examples"></a>Примеры  
