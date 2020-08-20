@@ -1,4 +1,5 @@
 ---
+description: sys.event_log (база данных SQL Azure)
 title: sys. event_log (база данных SQL Azure) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/28/2019
@@ -20,12 +21,12 @@ ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 52bc643e1af6f09c0f1ab8e90021ae949310968c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fd3db96c34d6a6ca8f6f08fc76fac73a4c4d79a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784933"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486407"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (база данных SQL Azure)
 
@@ -41,7 +42,7 @@ ms.locfileid: "85784933"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Имя базы данных. Если подключение завершилось ошибкой и пользователь не указал имя базы данных, то этот столбец остается пустым.|  
-|**start_time**|**datetime2**|Дата и время начала интервала статистической обработки в формате UTC. Для статистических событий время всегда кратно 5 минутам. Пример:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
+|**start_time**|**datetime2**|Дата и время начала интервала статистической обработки в формате UTC. Для статистических событий время всегда кратно 5 минутам. Например:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|Дата и время окончания интервала статистической обработки в формате UTC. Для агрегированных событий **End_time** всегда находится в течение 5 минут позже, чем соответствующее **start_time** в той же строке. Для событий, которые не являются статистическими, **start_time** и **end_time** равны фактической дате и времени события в формате UTC.|  
 |**event_category**|**nvarchar (64)**|Высокоуровневый компонент, вызвавший данное событие.<br /><br /> Список возможных значений см. в разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) .|  
 |**event_type**|**nvarchar (64)**|Тип события.<br /><br /> Список возможных значений см. в разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) .|  
@@ -49,10 +50,10 @@ ms.locfileid: "85784933"
 |**event_subtype_desc**|**nvarchar (64)**|Описание подтипа события.<br /><br /> Список возможных значений см. в разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) .|  
 |**severity**|**int**|Степень серьезности ошибки. Возможны следующие значения:<br /><br /> 0 = информационные<br />1 = предупреждение<br />2 = ошибка|  
 |**event_count**|**int**|Количество раз, которое произошло это событие для указанной базы данных в течение указанного интервала времени (**start_time** и **end_time**).|  
-|**nописание**|**nvarchar(max)**|Подробное описание события.<br /><br /> Список возможных значений см. в разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) .|  
+|**description**|**nvarchar(max)**|Подробное описание события.<br /><br /> Список возможных значений см. в разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) .|  
 |**additional_data**|**XML**|*Примечание. это значение всегда равно NULL для базы данных SQL Azure версии 12. Дополнительные сведения о получении событий взаимоблокировок для версии 12 см. в разделе " [примеры](#Deadlock) ".*<br /><br /> Для событий **взаимоблокировок** этот столбец содержит граф взаимоблокировок. Этот столбец содержит значение NULL для других типов событий. |  
   
-##  <a name="event-types"></a><a name="EventTypes"></a>Типы событий
+##  <a name="event-types"></a><a name="EventTypes"></a> Типы событий
 
  События, регистрируемые каждой строкой в этом представлении, идентифицируются по категории (**event_category**), типу события (**event_type**) и подтипу (**event_subtype**). В следующей таблице перечислены типы событий, собираемых в этом представлении.  
   
@@ -61,7 +62,7 @@ ms.locfileid: "85784933"
 > [!NOTE]  
 > Это представление включает не все возможные события базы данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)], которые могут возникнуть, а только события перечисленные ниже. Дополнительные категории, типы событий и подтипы могут быть добавлены в будущих версиях [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**nописание**|  
+|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**description**|  
 |-------------------------|---------------------|------------------------|------------------------------|------------------|---------------------|  
 |**установлен**|**connection_successful**|0|**connection_successful**|0|Успешное подключение к базе данных.|  
 |**установлен**|**connection_failed**|0|**invalid_login_name**|2|Имя входа не является допустимым именем входа в данной версии SQL Server.|  
@@ -88,7 +89,7 @@ ms.locfileid: "85784933"
 
  Пользователи с разрешением на доступ к базе данных **master** имеют доступ только для чтения к этому представлению.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
   
 ### <a name="event-aggregation"></a>Статистическая обработка событий
 
@@ -99,7 +100,7 @@ ms.locfileid: "85784933"
   
  Например, если пользователю не удается подключиться к базе данных Database1 из-за недопустимого имени входа 7 раз с 11:00 до 11:05 5 февраля 2012 г. (UTC), эти сведения доступны в одной строке в следующем представлении:  
   
-|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**event_count**|**nописание**|**additional_data**|  
+|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**event_count**|**description**|**additional_data**|  
 |------------------------|---------------------|-------------------|-------------------------|---------------------|------------------------|------------------------------|------------------|----------------------|---------------------|--------------------------|  
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`connectivity`|`connection_failed`|`4`|`login_failed_for_user`|`2`|`7`|`Login failed for user.`|`NULL`|  
   
@@ -148,7 +149,7 @@ WHERE event_type = 'deadlock'
     AND database_name = 'Database1';  
 ```
 
-<a name="Deadlock"></a>Следующий запрос возвращает все события взаимоблокировки для базы данных Database1 (применяется только к базе данных SQL Azure версии 12).  
+<a name="Deadlock"></a> Следующий запрос возвращает все события взаимоблокировки для базы данных Database1 (применяется только к базе данных SQL Azure версии 12).  
 
 ```sql
 WITH CTE AS (  

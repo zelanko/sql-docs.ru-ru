@@ -1,4 +1,5 @@
 ---
+description: sp_addscriptexec (Transact-SQL)
 title: sp_addscriptexec (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7907f085cedfeb6a5dfc8be70c9a7eff67dc37b0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a133709a8fbaaabd58a9ad00d7298bf34317b0cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85876553"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486367"
 ---
 # <a name="sp_addscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,17 +41,17 @@ sp_addscriptexec [ @publication = ] publication
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @scriptfile = ] 'scriptfile'`Полный путь к файлу скрипта SQL. *scriptfile* имеет тип **nvarchar (4000)** и не имеет значения по умолчанию.  
+`[ @scriptfile = ] 'scriptfile'` Полный путь к файлу скрипта SQL. *scriptfile* имеет тип **nvarchar (4000)** и не имеет значения по умолчанию.  
   
-`[ @skiperror = ] 'skiperror'`Указывает, должна ли агент распространения или агент слияния останавливаться при возникновении ошибки во время обработки скрипта. *SkipError* имеет **бит**и значение по умолчанию 0.  
+`[ @skiperror = ] 'skiperror'` Указывает, должна ли агент распространения или агент слияния останавливаться при возникновении ошибки во время обработки скрипта. *SkipError* имеет **бит**и значение по умолчанию 0.  
   
  **0** = агент будет останавливаться.  
   
  **1** = агент продолжит выполнение скрипта и игнорирует ошибку.  
   
-`[ @publisher = ] 'publisher'`Указывает издателя, отличного от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'` Указывает издателя, отличного от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  При публикации с издателя не следует использовать *Издатель* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

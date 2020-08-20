@@ -1,4 +1,5 @@
 ---
+description: sp_replcmds (Transact-SQL)
 title: sp_replcmds (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c11132450e88326740af485a7293dd5a27b8326b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dde94b7383bd6d043972bc8ad496e0b40165e206
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85645645"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485785"
 ---
 # <a name="sp_replcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,7 +41,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @maxtrans = ] maxtrans`Число транзакций, о которых возвращаются сведения. *maxtrans* имеет **тип int**и значение по умолчанию **1**, которое указывает следующую транзакцию, ожидающую распространения.  
+`[ @maxtrans = ] maxtrans` Число транзакций, о которых возвращаются сведения. *maxtrans* имеет **тип int**и значение по умолчанию **1**, которое указывает следующую транзакцию, ожидающую распространения.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -61,7 +62,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**originator_db_version**|**int**|Версия базы данных, в которой началась транзакция.|  
 |**originator_lsn**|**varbinary (16)**|Указывает регистрационный номер транзакции в журнале (номер LSN) для команды в порождающей публикации.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_replcmds** используется процессом чтения журнала в репликации транзакций.  
   
  Репликация обрабатывает первый клиент, выполняющий **sp_replcmds** в заданной базе данных как средство чтения журнала.  

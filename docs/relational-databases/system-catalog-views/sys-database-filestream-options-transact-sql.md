@@ -1,4 +1,5 @@
 ---
+description: sys.database_filestream_options (Transact-SQL)
 title: sys. database_filestream_options (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3383c607-0bbc-456a-ab37-7230f4cbf0e9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2cb185c2cec6bd2a7104384b3b75e14e2de4167f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e52c737798c6aff82194d74808edb1e37a9f8531
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887934"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486425"
 ---
 # <a name="sysdatabase_filestream_options-transact-sql"></a>sys.database_filestream_options (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

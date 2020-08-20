@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_add_policy_category_subscription (Transact-SQL)
 title: sp_syspolicy_add_policy_category_subscription (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4284f550-9a3f-4726-8181-15e407fbf08f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 99e27db247ca38897b65ef73c38e3eb48e1f1358
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ba22b7025aa30216d94804440fec2c86eea5fc09
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892772"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485692"
 ---
 # <a name="sp_syspolicy_add_policy_category_subscription-transact-sql"></a>sp_syspolicy_add_policy_category_subscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,15 +43,15 @@ sp_syspolicy_add_policy_category_subscription [ @target_type = ] 'target_type'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @target_type = ] 'target_type'`Тип целевого объекта подписки на категорию. Аргумент *target_type* имеет тип **sysname**, является обязательным и должен иметь значение "Database".  
+`[ @target_type = ] 'target_type'` Тип целевого объекта подписки на категорию. Аргумент *target_type* имеет тип **sysname**, является обязательным и должен иметь значение "Database".  
   
-`[ @target_object = ] 'target_object'`Имя базы данных, которая будет подписываться на категорию. Аргумент *target_object* имеет тип **sysname**и является обязательным.  
+`[ @target_object = ] 'target_object'` Имя базы данных, которая будет подписываться на категорию. Аргумент *target_object* имеет тип **sysname**и является обязательным.  
   
-`[ @policy_category = ] 'policy_category'`Имя категории политики для подписки. Аргумент *policy_category* имеет тип **sysname**и является обязательным.  
+`[ @policy_category = ] 'policy_category'` Имя категории политики для подписки. Аргумент *policy_category* имеет тип **sysname**и является обязательным.  
   
  Чтобы получить значения для *policy_category*, запросите msdb.dbo.syspolicy_policy_categories системное представление.  
   
-`[ @policy_category_subscription_id = ] policy_category_subscription_id`Идентификатор подписки на категорию. *policy_category_subscription_id* имеет **тип int**и возвращается в виде выходных данных.  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id` Идентификатор подписки на категорию. *policy_category_subscription_id* имеет **тип int**и возвращается в виде выходных данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -75,7 +76,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Хранимые процедуры управления на основе политик &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [Хранимые процедуры управления на основе политик &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [sp_syspolicy_update_policy_category_subscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)   
  [sp_syspolicy_unsubscribe_from_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-unsubscribe-from-policy-category-transact-sql.md)  
   

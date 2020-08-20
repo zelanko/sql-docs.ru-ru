@@ -1,4 +1,5 @@
 ---
+description: sp_procoption (Transact-SQL)
 title: sp_procoption (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8a7a4942e3109ec244cb7a16f4ef6a513b1cdcff
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 161f819ba4d9cea76b6cf904b28236f6e6f9fefc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901440"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485859"
 ---
 # <a name="sp_procoption-transact-sql"></a>sp_procoption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +42,11 @@ sp_procoption [ @ProcName = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @ProcName = ] 'procedure'`Имя процедуры, для которой задается параметр. *процедура* имеет тип **nvarchar (776)** и не имеет значения по умолчанию.  
+`[ @ProcName = ] 'procedure'` Имя процедуры, для которой задается параметр. *процедура* имеет тип **nvarchar (776)** и не имеет значения по умолчанию.  
   
-`[ @OptionName = ] 'option'`Имя устанавливаемого параметра. Единственное значение *параметра* — **Startup**.  
+`[ @OptionName = ] 'option'` Имя устанавливаемого параметра. Единственное значение *параметра* — **Startup**.  
   
-`[ @OptionValue = ] 'value'`Указывает, следует ли устанавливать параметр ON (**true** или **On**) или OFF (**false** или **Off**). *значение* имеет тип **varchar (12)** и не имеет значения по умолчанию.  
+`[ @OptionValue = ] 'value'` Указывает, следует ли устанавливать параметр ON (**true** или **On**) или OFF (**false** или **Off**). *значение* имеет тип **varchar (12)** и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или номер ошибки (неуспешное завершение)  

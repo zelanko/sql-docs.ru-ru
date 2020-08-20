@@ -1,4 +1,5 @@
 ---
+description: managed_backup. sp_backup_config_schedule (Transact-SQL)
 title: managed_backup. sp_backup_config_schedule (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 02/20/2020
@@ -20,11 +21,12 @@ helpviewer_keywords:
 ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 04e152b8ae15e4e0a810fb5ed945b4c8c69afe5b
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 23f1f96ff6d41412e8606e67aacfdc42d9afabc4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053470"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486309"
 ---
 # <a name="managed_backupsp_backup_config_schedule-transact-sql"></a>managed_backup. sp_backup_config_schedule (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -46,7 +48,7 @@ EXEC managed_backup.sp_backup_config_schedule
     ,[@log_backup_freq = ] 'frequency of log backup'  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>Даваемых  
+##  <a name="arguments"></a><a name="Arguments"></a> Аргументы  
  @database_name  
  Имя базы данных для включения управляемого резервного копирования в определенной базе данных. Если задано значение NULL или *, то эта управляемая резервная копия применяется ко всем базам данных на сервере.  
   
@@ -66,7 +68,7 @@ EXEC managed_backup.sp_backup_config_schedule
  Длительность периода резервного копирования. Обратите внимание на то, что резервные копии не будут завершены в течение временного окна, определенного в @backup_begin_time и @backup_duration . Операции резервного копирования, запущенные в этом временном окне, но превышающие длительность окна, не будут отменены.  
   
  @log_backup_freq  
- Это определяет частоту резервного копирования журналов транзакций. Эти резервные копии выполняются через регулярные интервалы, а не по расписанию, заданному для резервных копий базы данных. @log_backup_freqможет быть в минутах или часах и `0:00` является допустимым, что означает отсутствие резервных копий журнала. Отключение резервных копий журналов будет уместно только для баз данных с простой моделью восстановления.  
+ Это определяет частоту резервного копирования журналов транзакций. Эти резервные копии выполняются через регулярные интервалы, а не по расписанию, заданному для резервных копий базы данных. @log_backup_freq может быть в минутах или часах и `0:00` является допустимым, что означает отсутствие резервных копий журнала. Отключение резервных копий журналов будет уместно только для баз данных с простой моделью восстановления.  
   
 > [!NOTE]  
 >  Если модель восстановления изменяется с Simple на Full, необходимо перенастроить log_backup_freq с `0:00` ненулевым значением.  

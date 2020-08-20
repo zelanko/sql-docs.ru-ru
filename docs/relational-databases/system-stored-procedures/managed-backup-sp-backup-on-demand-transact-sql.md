@@ -1,4 +1,5 @@
 ---
+description: managed_backup. sp_backup_on_demand (Transact-SQL)
 title: managed_backup. sp_backup_on_demand (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,11 +21,12 @@ helpviewer_keywords:
 ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5b2ee41dcc94e0bc84b6a5347ba84609b73e3335
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 4357cc8cc214f610ef1f61c27dd8e05be3e3d56b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053531"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486297"
 ---
 # <a name="managed_backupsp_backup_on_demand-transact-sql"></a>managed_backup. sp_backup_on_demand (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -47,7 +49,7 @@ EXEC managed_backup.sp_backup_on_demand
   
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>Даваемых  
+##  <a name="arguments"></a><a name="Arguments"></a> Аргументы  
  @database_name  
  Имя базы данных, для которой будет выполняться резервное копирование. @database_nameАргумент имеет тип **sysname**.  
   

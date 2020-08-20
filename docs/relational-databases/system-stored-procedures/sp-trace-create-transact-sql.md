@@ -1,4 +1,5 @@
 ---
+description: Хранимая процедура sp_trace_create (Transact-SQL)
 title: sp_trace_create (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a8327dc8beafb5d4e219cdaf25c44c75af3e85e5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8818beb7c8ec4a0ff688f43fe6c3fe3794a573be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892602"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485608"
 ---
 # <a name="sp_trace_create-transact-sql"></a>Хранимая процедура sp_trace_create (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,9 +48,9 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @traceid = ] trace_id`Номер, присвоенный [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] новой трассировке. Любое значение, предложенное пользователем, не будет учитываться. *trace_id* имеет **тип int**и значение по умолчанию NULL. Пользователь использует *trace_id* значение для определения, изменения и управления трассировкой, определенной этой хранимой процедурой.  
+`[ @traceid = ] trace_id` Номер, присвоенный [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] новой трассировке. Любое значение, предложенное пользователем, не будет учитываться. *trace_id* имеет **тип int**и значение по умолчанию NULL. Пользователь использует *trace_id* значение для определения, изменения и управления трассировкой, определенной этой хранимой процедурой.  
   
-`[ @options = ] option_value`Задает параметры, заданные для трассировки. *option_value* имеет **тип int**и не имеет значения по умолчанию. Пользователи могут выбирать сочетания этих параметров путем указания их суммарного значения. Например, чтобы включить параметры TRACE_FILE_ROLLOVER и SHUTDOWN_ON_ERROR, укажите значение **6** для *option_value*.  
+`[ @options = ] option_value` Задает параметры, заданные для трассировки. *option_value* имеет **тип int**и не имеет значения по умолчанию. Пользователи могут выбирать сочетания этих параметров путем указания их суммарного значения. Например, чтобы включить параметры TRACE_FILE_ROLLOVER и SHUTDOWN_ON_ERROR, укажите значение **6** для *option_value*.  
   
  В следующей таблице содержится список параметров, их значений и описаний.  
   
@@ -59,13 +60,13 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 |SHUTDOWN_ON_ERROR|**4**|Указывает, что если трассировка не может быть записана в файл по какой-либо причине, SQL Server останавливается. Этот параметр полезен в случае проведения трассировок по проверке безопасности.|  
 |TRACE_PRODUCE_BLACKBOX|**8**|Указывает, что запись последних 5 МБ трассировочных сведений, формируемых сервером, будет сохранена на сервере. Значение параметра TRACE_PRODUCE_BLACKBOX несовместимо со всеми другими.|  
   
-`[ @tracefile = ] 'trace_file'`Указывает расположение и имя файла, в который будет записана трассировка. *trace_file* имеет тип **nvarchar (245)** и не имеет значения по умолчанию. *trace_file* может быть локальным каталогом (например, N ' C:\MSSQL\Trace\trace.trc ') или UNC-именем к общей папке или пути (N ' \\ \\ *имя_сервера* \\ *имя_общего_ресурса* \\ *Directory*\trace.trc ').  
+`[ @tracefile = ] 'trace_file'` Указывает расположение и имя файла, в который будет записана трассировка. *trace_file* имеет тип **nvarchar (245)** и не имеет значения по умолчанию. *trace_file* может быть локальным каталогом (например, N ' C:\MSSQL\Trace\trace.trc ') или UNC-именем к общей папке или пути (N ' \\ \\ *имя_сервера* \\ *имя_общего_ресурса* \\ *Directory*\trace.trc ').  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]добавит расширение **TRC** ко всем именам файлов трассировки. Если указаны параметр TRACE_FILE_ROLLOVER и *max_file_size* , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создает новый файл трассировки, когда размер исходного файла трассировки увеличивается до максимального размера. Новый файл имеет то же имя, что и исходный файл, но добавляется _*n* для обозначения последовательности, начиная с **1**. Например, если первый файл трассировки имеет имя **filename. trc**, второй файл трассировки называется **filename_1. trc**.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] добавит расширение **TRC** ко всем именам файлов трассировки. Если указаны параметр TRACE_FILE_ROLLOVER и *max_file_size* , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создает новый файл трассировки, когда размер исходного файла трассировки увеличивается до максимального размера. Новый файл имеет то же имя, что и исходный файл, но добавляется _*n* для обозначения последовательности, начиная с **1**. Например, если первый файл трассировки имеет имя **filename. trc**, второй файл трассировки называется **filename_1. trc**.  
   
  Если используется параметр TRACE_FILE_ROLLOVER, рекомендуется не использовать в имени исходного файла трассировки символы подчеркивания. Если используются символы подчеркивания, выполняются следующие действия.  
   
--   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]не загружает автоматически или не предлагает загрузить файлы продолжения (если настроен любой из этих параметров переключения на файл продолжения).  
+-   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] не загружает автоматически или не предлагает загрузить файлы продолжения (если настроен любой из этих параметров переключения на файл продолжения).  
   
 -   Функция fn_trace_gettable не загружает файлы продолжения (при указании с помощью аргумента *number_files* ), где исходное имя файла заканчивается символом подчеркивания и числовым значением. (Это не относится к подчеркиваниям и числам, которые автоматически добавляются, когда выполняется переключение на файл продолжения.)  
   
@@ -74,15 +75,15 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
  невозможно указать *trace_file* , если используется параметр TRACE_PRODUCE_BLACKBOX.  
   
-`[ @maxfilesize = ] max_file_size`Указывает максимальный размер файла трассировки в мегабайтах (МБ). *max_file_size* имеет тип **bigint**и значение по умолчанию **5**.  
+`[ @maxfilesize = ] max_file_size` Указывает максимальный размер файла трассировки в мегабайтах (МБ). *max_file_size* имеет тип **bigint**и значение по умолчанию **5**.  
   
  Если этот параметр указан без параметра TRACE_FILE_ROLLOVER, трассировка прекратит запись в файл, если используемое дисковое пространство превышает объем, указанный в *max_file_size*.  
   
-`[ @stoptime = ] 'stop_time'`Указывает дату и время, когда трассировка будет остановлена. *stop_time* имеет тип **DateTime**и значение по умолчанию NULL. Если указано значение NULL, трассировка будет работать до тех пор, пока не будет остановлена вручную или пока не остановится сервер.  
+`[ @stoptime = ] 'stop_time'` Указывает дату и время, когда трассировка будет остановлена. *stop_time* имеет тип **DateTime**и значение по умолчанию NULL. Если указано значение NULL, трассировка будет работать до тех пор, пока не будет остановлена вручную или пока не остановится сервер.  
   
  Если указаны и *stop_time* , и *max_file_size* , а TRACE_FILE_ROLLOVER не указаны, то верхние значения трассировки при достижении указанного времени окончания или максимального размера файла. Если указаны *stop_time*, *max_file_size*и TRACE_FILE_ROLLOVER, трассировка останавливается в указанное время остановки, предполагая, что трассировка не заполняет диск.  
   
-`[ @filecount = ] 'max_rollover_files'`Указывает максимальное количество файлов трассировки, которые должны поддерживаться с одним и тем же базовым именем файла. *MAX_ROLLOVER_FILES* имеет **тип int**, больше единицы. Этот аргумент имеет смысл только в случае, если указан параметр TRACE_FILE_ROLLOVER. Если указан *MAX_ROLLOVER_FILES* , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается поддерживать не более *MAX_ROLLOVER_FILES* файлов трассировки путем удаления самого старого файла трассировки перед открытием нового файла трассировки. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отслеживает возраст файлов трассировки, добавляя число в конец базового имени файла.  
+`[ @filecount = ] 'max_rollover_files'` Указывает максимальное количество файлов трассировки, которые должны поддерживаться с одним и тем же базовым именем файла. *MAX_ROLLOVER_FILES* имеет **тип int**, больше единицы. Этот аргумент имеет смысл только в случае, если указан параметр TRACE_FILE_ROLLOVER. Если указан *MAX_ROLLOVER_FILES* , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается поддерживать не более *MAX_ROLLOVER_FILES* файлов трассировки путем удаления самого старого файла трассировки перед открытием нового файла трассировки. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отслеживает возраст файлов трассировки, добавляя число в конец базового имени файла.  
   
  Например, если параметр *trace_file* указан как "к:\митраце", файл с именем "c:\ mytrace_123. trc" старше, чем файл с именем "c:\ mytrace_124. trc". Если *MAX_ROLLOVER_FILES* имеет значение 2, то SQL Server удаляет файл "c:\ mytrace_123. trc" перед созданием файла трассировки "c:\ mytrace_125. trc".  
   
@@ -137,7 +138,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
     -   **Exception**  
   
-    -   **Внимание**  
+    -   **Обратит**  
   
 -   События или столбцы нельзя добавить или удалить из данной трассировки.  
   
@@ -148,7 +149,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
 ## <a name="see-also"></a>См. также  
  [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [Хранимая процедура sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
  [Трассировка SQL](../../relational-databases/sql-trace/sql-trace.md)  

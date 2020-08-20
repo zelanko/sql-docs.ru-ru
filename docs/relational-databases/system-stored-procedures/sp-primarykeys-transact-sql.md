@@ -1,4 +1,5 @@
 ---
+description: sp_primarykeys (Transact-SQL)
 title: sp_primarykeys (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0f76dd31-5b7b-4209-9e2e-b9ed5cac164d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5b9277918b8ed869e121e3cf1fe3389bf402b2a0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 35d9639416ffa551997f5c658148f19682bb3b8c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901461"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485862"
 ---
 # <a name="sp_primarykeys-transact-sql"></a>sp_primarykeys (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,16 +43,16 @@ sp_primarykeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @table_server = ] 'table_server'_`Имя связанного сервера, с которого возвращаются сведения о первичном ключе. Аргумент *table_server* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @table_server = ] 'table_server'_` Имя связанного сервера, с которого возвращаются сведения о первичном ключе. Аргумент *table_server* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @table_name = ] 'table_name'`Имя таблицы, для которой необходимо предоставить сведения о первичном ключе. Аргумент *table_name*имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @table_name = ] 'table_name'` Имя таблицы, для которой необходимо предоставить сведения о первичном ключе. Аргумент *table_name*имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @table_schema = ] 'table_schema'`Схема таблицы. Аргумент *table_schema* имеет тип **sysname**и значение по умолчанию NULL. В среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствует владельцу таблицы.  
+`[ @table_schema = ] 'table_schema'` Схема таблицы. Аргумент *table_schema* имеет тип **sysname**и значение по умолчанию NULL. В среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствует владельцу таблицы.  
   
-`[ @table_catalog = ] 'table_catalog'`Имя каталога, в котором находится заданный *table_name* . В среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствует имени базы данных. Аргумент *table_catalog* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @table_catalog = ] 'table_catalog'` Имя каталога, в котором находится заданный *table_name* . В среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствует имени базы данных. Аргумент *table_catalog* имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- None  
+ Нет  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -88,7 +89,7 @@ EXEC sp_primarykeys @table_server = N'LONDON1',
  [sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
  [sp_foreignkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
  [sp_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
- [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_linkedservers (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
  [sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
  [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -1,4 +1,5 @@
 ---
+description: sp_manage_jobs_by_login (Transact-SQL)
 title: sp_manage_jobs_by_login (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e810bf996f7dbaa8624c6a0e834011d759aa9348
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fb7d27bab8fd7593b92f52d33fd847facab4ee0c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899384"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485906"
 ---
 # <a name="sp_manage_jobs_by_login-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,11 +43,11 @@ sp_manage_jobs_by_login
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @action = ] 'action'`Действие, предпринимаемое для указанного имени входа. *Action* имеет тип **varchar (10)** и не имеет значения по умолчанию. При **удалении** *действия* **sp_manage_jobs_by_login** удаляет все задания, принадлежащие *current_owner_login_name*. При **ПЕРЕназначении** *действия* всем заданиям назначаются *new_owner_login_name*.  
+`[ @action = ] 'action'` Действие, предпринимаемое для указанного имени входа. *Action* имеет тип **varchar (10)** и не имеет значения по умолчанию. При **удалении** *действия* **sp_manage_jobs_by_login** удаляет все задания, принадлежащие *current_owner_login_name*. При **ПЕРЕназначении** *действия* всем заданиям назначаются *new_owner_login_name*.  
   
-`[ @current_owner_login_name = ] 'current_owner_login_name'`Имя входа текущего владельца задания. Аргумент *current_owner_login_name* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @current_owner_login_name = ] 'current_owner_login_name'` Имя входа текущего владельца задания. Аргумент *current_owner_login_name* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @new_owner_login_name = ] 'new_owner_login_name'`Имя входа нового владельца задания. Используйте этот параметр, только *action* если действие **переназначено**. Аргумент *new_owner_login_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @new_owner_login_name = ] 'new_owner_login_name'` Имя входа нового владельца задания. Используйте этот параметр, только *action* если действие **переназначено**. Аргумент *new_owner_login_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  

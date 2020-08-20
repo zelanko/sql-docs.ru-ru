@@ -1,4 +1,5 @@
 ---
+description: sp_change_log_shipping_secondary_database (Transact-SQL)
 title: sp_change_log_shipping_secondary_database (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3ebcf2f1-980f-4543-a84b-fbaeea54eeac
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 086e914f9d05ada8985cdd8f017ef4a47003d1ae
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5fc10c705564c88fe157860d00a61fa5ea682cc0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85872687"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486287"
 ---
 # <a name="sp_change_log_shipping_secondary_database-transact-sql"></a>sp_change_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,11 +52,11 @@ sp_change_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @restore_delay = ] 'restore_delay'`Время в минутах, в течение которого сервер-получатель ждет перед восстановлением заданного файла резервной копии. *restore_delay* имеет **тип int** и не может иметь значение null. Значение по умолчанию — 0.  
+`[ @restore_delay = ] 'restore_delay'` Время в минутах, в течение которого сервер-получатель ждет перед восстановлением заданного файла резервной копии. *restore_delay* имеет **тип int** и не может иметь значение null. Значение по умолчанию — 0.  
   
-`[ @restore_all = ] 'restore_all'`Если задано значение 1, сервер-получатель восстанавливает все доступные резервные копии журналов транзакций при выполнении задания восстановления. В противном случае восстанавливается один файл. *restore_all* имеет **бит** и не может иметь значение null.  
+`[ @restore_all = ] 'restore_all'` Если задано значение 1, сервер-получатель восстанавливает все доступные резервные копии журналов транзакций при выполнении задания восстановления. В противном случае восстанавливается один файл. *restore_all* имеет **бит** и не может иметь значение null.  
   
-`[ @restore_mode = ] 'restore_mode'`Режим восстановления для базы данных-получателя.  
+`[ @restore_mode = ] 'restore_mode'` Режим восстановления для базы данных-получателя.  
   
  0 = восстановить журнал с аргументом NORECOVERY;  
   
@@ -63,21 +64,21 @@ sp_change_log_shipping_secondary_database
   
  значение *RESTORE* **bit** и не может быть равно null.  
   
-`[ @disconnect_users = ] 'disconnect_users'`Если задано значение 1, то при выполнении операции восстановления пользователи отключаются от базы данных-получателя. По умолчанию равно 0. *disconnect_users* имеет **бит** и не может иметь значение null.  
+`[ @disconnect_users = ] 'disconnect_users'` Если задано значение 1, то при выполнении операции восстановления пользователи отключаются от базы данных-получателя. По умолчанию равно 0. *disconnect_users* имеет **бит** и не может иметь значение null.  
   
-`[ @block_size = ] 'block_size'`Размер в байтах, используемый в качестве размера блока для устройства резервного копирования. *block_size* имеет **тип int** и значение по умолчанию-1.  
+`[ @block_size = ] 'block_size'` Размер в байтах, используемый в качестве размера блока для устройства резервного копирования. *block_size* имеет **тип int** и значение по умолчанию-1.  
   
-`[ @buffer_count = ] 'buffer_count'`Общее число буферов, используемых операцией резервного копирования или восстановления. *buffer_count* имеет **тип int** и значение по умолчанию-1.  
+`[ @buffer_count = ] 'buffer_count'` Общее число буферов, используемых операцией резервного копирования или восстановления. *buffer_count* имеет **тип int** и значение по умолчанию-1.  
   
-`[ @max_transfer_size = ] 'max_transfer_size'`Размер (в байтах) максимального запроса ввода или вывода, выданного [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устройством резервного копирования. *max_transfersize* имеет **тип int** и может иметь значение null.  
+`[ @max_transfer_size = ] 'max_transfer_size'` Размер (в байтах) максимального запроса ввода или вывода, выданного [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устройством резервного копирования. *max_transfersize* имеет **тип int** и может иметь значение null.  
   
-`[ @restore_threshold = ] 'restore_threshold'`Количество минут между операциями восстановления до создания предупреждения. *restore_threshold* имеет **тип int** и не может иметь значение null.  
+`[ @restore_threshold = ] 'restore_threshold'` Количество минут между операциями восстановления до создания предупреждения. *restore_threshold* имеет **тип int** и не может иметь значение null.  
   
-`[ @threshold_alert = ] 'threshold_alert'`Предупреждение, создаваемое при превышении порогового значения восстановления. *threshold_alert* имеет **тип int**и значение по умолчанию 14420.  
+`[ @threshold_alert = ] 'threshold_alert'` Предупреждение, создаваемое при превышении порогового значения восстановления. *threshold_alert* имеет **тип int**и значение по умолчанию 14420.  
   
-`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'`Указывает, будет ли создаваться предупреждение при превышении *restore_threshold*. 1 = включены; 0 = отключены. *threshold_alert_enabled* имеет **бит** и не может иметь значение null.  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` Указывает, будет ли создаваться предупреждение при превышении *restore_threshold*. 1 = включены; 0 = отключены. *threshold_alert_enabled* имеет **бит** и не может иметь значение null.  
   
-`[ @history_retention_period = ] 'history_retention_period'`Продолжительность времени в минутах, в течение которого будет храниться журнал. *history_retention_period* имеет **тип int**. Если не указано, будет использоваться значение 1440.  
+`[ @history_retention_period = ] 'history_retention_period'` Продолжительность времени в минутах, в течение которого будет храниться журнал. *history_retention_period* имеет **тип int**. Если не указано, будет использоваться значение 1440.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

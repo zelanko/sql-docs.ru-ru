@@ -1,4 +1,5 @@
 ---
+description: sys. fn_all_changes_ &lt; capture_instance &gt; (TRANSACT-SQL)
 title: sys. fn_all_changes_ &lt; capture_instance &gt; (TRANSACT-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/02/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4a412ac614037a79e033636b20c21e2464c427ad
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e091db783b29a767a5f1f762dbbc037a878ce8a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898471"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486347"
 ---
 # <a name="sysfn_all_changes_ltcapture_instancegt-transact-sql"></a>sys. fn_all_changes_ &lt; capture_instance &gt; (TRANSACT-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -87,7 +88,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
 |-----------------|-----------------|-----------------|  
 |__CDC_STARTLSN|**binary(10)**|Номер LSN-фиксации транзакции, связанный с этим изменением. Все изменения, зафиксированные в одной транзакции, имеют общий номер LSN-фиксации.|  
 |__CDC_SEQVAL|**binary(10)**|Значение последовательности, используемое для упорядочивания изменений строк в пределах транзакции.|  
-|\<columns from @column_list>|**различать**|Столбцы, определенные в аргументе *column_list* , для sp_cdc_generate_wrapper_function при вызове для создания скрипта, создающего функцию-оболочку.|  
+|\<columns from @column_list>|**непостоянно**|Столбцы, определенные в аргументе *column_list* , для sp_cdc_generate_wrapper_function при вызове для создания скрипта, создающего функцию-оболочку.|  
 |__CDC_OPERATION|**nvarchar (2)**|Код операции, указывающий операцию, необходимую для применения строки к целевой среде. Он будет изменяться в зависимости от значения аргумента *row_filter_option* , переданного в вызове:<br /><br /> *row_filter_option* = ' ALL '<br /><br /> «D» — операция удаления<br /><br /> «I» — операция вставки<br /><br /> «UN» — новые значения операции обновления<br /><br /> *row_filter_option* = "все обновление Old"<br /><br /> «D» — операция удаления<br /><br /> «I» — операция вставки<br /><br /> «UN» — новые значения операции обновления<br /><br /> «UO» — старые значения операции обновления|  
 |\<columns from @update_flag_list>|**bit**|Битовый флаг, имя которого образуется добавлением «_uflag» к имени столбца. Флаг всегда имеет значение NULL, если \_ _CDC_OPERATION равно "," I ", из" «UO» ". Если значение \_ _CDC_OPERATION "UN", оно устанавливается в значение 1, если обновление вызвало изменение в соответствующем столбце. В противном случае флагу присваивается значение 0.|  
   

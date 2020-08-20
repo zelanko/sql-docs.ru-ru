@@ -1,4 +1,5 @@
 ---
+description: sp_helppeerrequests (Transact-SQL)
 title: sp_helppeerrequests (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 37bd503e-46c4-47c6-996e-be7ffe636fe8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8f4b6dd66c3903b4503e37166ba8f3ae29439b30
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b16e7c25ebc47ccdb97950658de11d738a0d1666
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893519"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485956"
 ---
 # <a name="sp_helppeerrequests-transact-sql"></a>sp_helppeerrequests (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,9 +39,9 @@ sp_helppeerrequests [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'`Имя публикации в одноранговой топологии, для которой были отправлены запросы состояния. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации в одноранговой топологии, для которой были отправлены запросы состояния. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @description = ] 'description'`Значение, которое может быть использовано для определения отдельных запросов состояния, что позволяет фильтровать возвращенные ответы на основе определяемых пользователем сведений, полученных при вызове [sp_requestpeerresponse &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md). *Description* имеет тип **nvarchar (4000)** и значение по умолчанию **%** . По умолчанию возвращается информация обо всех запросах состояния публикации. Этот параметр используется для возврата только запросов состояния с описанием, совпадающим со значением, указанным в *описании*, где символьные строки сопоставляются с помощью предложения [Like &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md) .  
+`[ @description = ] 'description'` Значение, которое может быть использовано для определения отдельных запросов состояния, что позволяет фильтровать возвращенные ответы на основе определяемых пользователем сведений, полученных при вызове [sp_requestpeerresponse &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md). *Description* имеет тип **nvarchar (4000)** и значение по умолчанию **%** . По умолчанию возвращается информация обо всех запросах состояния публикации. Этот параметр используется для возврата только запросов состояния с описанием, совпадающим со значением, указанным в *описании*, где символьные строки сопоставляются с помощью предложения [Like &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md) .  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -49,7 +50,7 @@ sp_helppeerrequests [ @publication = ] 'publication'
 |**идентификатор**|**int**|Идентификатор запроса.|  
 |**публикации**|**sysname**|Имя публикации, запрос состояния которой был отправлен.|  
 |**sent_date**|**datetime**|Дата и время отправления запроса состояния.|  
-|**nописание**|**nvarchar(4000)**|Пользовательская информация, которую можно использовать для идентификации запросов состояния.|  
+|**description**|**nvarchar(4000)**|Пользовательская информация, которую можно использовать для идентификации запросов состояния.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  

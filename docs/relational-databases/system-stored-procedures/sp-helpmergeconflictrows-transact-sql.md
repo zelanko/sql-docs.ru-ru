@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergeconflictrows (Transact-SQL)
 title: sp_helpmergeconflictrows (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 85a5ad519f836288a98dd6327fc7ca8a15c0cf70
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4c66dc9c8ac6cc21d74cbf2a6474ad74a2cffba1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893570"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485961"
 ---
 # <a name="sp_helpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,15 +42,15 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию **%** . Если указана публикация, возвращаются все конфликты, определенные этой публикацией. Например, если таблица **MSmerge_conflict_Customers** содержит конфликтующие строки для публикаций **WA** и **CA** , передача имени публикации **ЦС** извлекает конфликты, относящиеся к публикации **ЦС** .  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию **%** . Если указана публикация, возвращаются все конфликты, определенные этой публикацией. Например, если таблица **MSmerge_conflict_Customers** содержит конфликтующие строки для публикаций **WA** и **CA** , передача имени публикации **ЦС** извлекает конфликты, относящиеся к публикации **ЦС** .  
   
-`[ @conflict_table = ] 'conflict_table'`Имя таблицы конфликтов. Аргумент *conflict_table* имеет тип **sysname**и не имеет значения по умолчанию. В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версиях таблицы с конфликтами именуются с помощью **MSmerge_conflict \_ _публикации \_ _** с одной таблицей для каждой опубликованной статьи.  
+`[ @conflict_table = ] 'conflict_table'` Имя таблицы конфликтов. Аргумент *conflict_table* имеет тип **sysname**и не имеет значения по умолчанию. В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версиях таблицы с конфликтами именуются с помощью **MSmerge_conflict \_ _публикации \_ _** с одной таблицей для каждой опубликованной статьи.  
   
-`[ @publisher = ] 'publisher'`Имя издателя. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'` Имя издателя. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @publisher_db = ] 'publisher_db'`Имя базы данных издателя. Аргумент *publisher_db* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher_db = ] 'publisher_db'` Имя базы данных издателя. Аргумент *publisher_db* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @logical_record_conflicts = ] logical_record_conflicts`Указывает, содержит ли результирующий набор сведения о конфликтах логических записей. *logical_record_conflicts* имеет **тип int**и значение по умолчанию 0. **1** означает, что возвращаются сведения о конфликте логических записей.  
+`[ @logical_record_conflicts = ] logical_record_conflicts` Указывает, содержит ли результирующий набор сведения о конфликтах логических записей. *logical_record_conflicts* имеет **тип int**и значение по умолчанию 0. **1** означает, что возвращаются сведения о конфликте логических записей.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  **sp_helpmergeconflictrows** возвращает результирующий набор, состоящий из базовой структуры таблицы и этих дополнительных столбцов.  

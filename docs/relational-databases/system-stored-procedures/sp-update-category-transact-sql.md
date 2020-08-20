@@ -1,4 +1,5 @@
 ---
+description: sp_update_category (Transact-SQL)
 title: sp_update_category (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3c738d918c43764048cd0c67ade2fccc9be961c7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f4eaf2fe7fd4b1ee613bec30dbf6967eaeab8b51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891352"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485600"
 ---
 # <a name="sp_update_category-transact-sql"></a>sp_update_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ sp_update_category
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @class = ] 'class'`Класс обновляемой категории. *класс*имеет тип **varchar (8)**, не имеет значения по умолчанию и может принимать одно из следующих значений.  
+`[ @class = ] 'class'` Класс обновляемой категории. *класс*имеет тип **varchar (8)**, не имеет значения по умолчанию и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -50,9 +51,9 @@ sp_update_category
 |**ДОЛЖНО**|Обновляет категорию заданий.|  
 |**СТАНЦИИ**|Обновляет категорию операторов.|  
   
-`[ @name = ] 'old_name'`Текущее имя категории. Аргумент *old_name*имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @name = ] 'old_name'` Текущее имя категории. Аргумент *old_name*имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @new_name = ] 'new_name'`Новое имя категории. Аргумент *new_name*имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @new_name = ] 'new_name'` Новое имя категории. Аргумент *new_name*имеет тип **sysname**и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  

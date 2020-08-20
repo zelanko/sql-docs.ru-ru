@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_update_collection_set (Transact-SQL)
 title: sp_syscollector_update_collection_set (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8ed9fe58317d1dbe1cb3de59b11f556bc96b1d9f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 00285e7f1e170a671cd38149098e485c90f710db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892820"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485707"
 ---
 # <a name="sp_syscollector_update_collection_set-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,15 +56,15 @@ sp_syscollector_update_collection_set
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @collection_set_id = ] collection_set_id`Уникальный локальный идентификатор набора сбора. *collection_set_id* имеет **тип int** и должен иметь значение, если *Name* имеет значение null.  
+`[ @collection_set_id = ] collection_set_id` Уникальный локальный идентификатор набора сбора. *collection_set_id* имеет **тип int** и должен иметь значение, если *Name* имеет значение null.  
   
-`[ @name = ] 'name'`Имя набора элементов сбора. Аргумент *Name* имеет тип **sysname** и должен иметь значение, если *collection_set_id* имеет значение null.  
+`[ @name = ] 'name'` Имя набора элементов сбора. Аргумент *Name* имеет тип **sysname** и должен иметь значение, если *collection_set_id* имеет значение null.  
   
-`[ @new_name = ] 'new_name'`Новое имя набора сбора. Аргумент *new_name* имеет тип **sysname**и, если он используется, не может быть пустой строкой. *new_name* должны быть уникальными. Чтобы получить список имен текущего набора сбора, выполните запрос системного представления syscollector_collection_sets.  
+`[ @new_name = ] 'new_name'` Новое имя набора сбора. Аргумент *new_name* имеет тип **sysname**и, если он используется, не может быть пустой строкой. *new_name* должны быть уникальными. Чтобы получить список имен текущего набора сбора, выполните запрос системного представления syscollector_collection_sets.  
   
-`[ @target = ] 'target'`Зарезервировано для будущего использования.  
+`[ @target = ] 'target'` Зарезервировано для будущего использования.  
   
-`[ @collection_mode = ] collection_mode`Тип используемой коллекции данных. *collection_mode* имеет значение **smallint** и может иметь одно из следующих значений:  
+`[ @collection_mode = ] collection_mode` Тип используемой коллекции данных. *collection_mode* имеет значение **smallint** и может иметь одно из следующих значений:  
   
  0 — режим с кэшированием. Сбор и передача данных выполняются по отдельным расписаниям. Укажите кэшированный режим для непрерывного сбора.  
   
@@ -71,21 +72,21 @@ sp_syscollector_update_collection_set
   
  При переходе от режима без кэширования в режим кэширования (0) необходимо также указать либо *schedule_uid* , либо *schedule_name*.  
   
-`[ @days_until_expiration = ] days_until_expiration`Число дней, в течение которых собранные данные сохраняются в хранилище данных управления. *days_until_expiration* имеет **smallint**. *days_until_expiration* должно быть равно 0 или быть положительным целым числом.  
+`[ @days_until_expiration = ] days_until_expiration` Число дней, в течение которых собранные данные сохраняются в хранилище данных управления. *days_until_expiration* имеет **smallint**. *days_until_expiration* должно быть равно 0 или быть положительным целым числом.  
   
-`[ @proxy_id = ] proxy_id`Уникальный идентификатор [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетной записи-посредника агента. *proxy_id* имеет **тип int**.  
+`[ @proxy_id = ] proxy_id` Уникальный идентификатор [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетной записи-посредника агента. *proxy_id* имеет **тип int**.  
   
-`[ @proxy_name = ] 'proxy_name'`Имя прокси-сервера. *proxy_name* имеет тип **sysname** и допускает значение null.  
+`[ @proxy_name = ] 'proxy_name'` Имя прокси-сервера. *proxy_name* имеет тип **sysname** и допускает значение null.  
   
-`[ @schedule_uid = ] 'schedule_uid'`Идентификатор GUID, указывающий на расписание. *schedule_uid* имеет тип **uniqueidentifier**.  
+`[ @schedule_uid = ] 'schedule_uid'` Идентификатор GUID, указывающий на расписание. *schedule_uid* имеет тип **uniqueidentifier**.  
   
  Чтобы получить *schedule_uid*, запросите системную таблицу sysschedules.  
   
  Если *collection_mode* имеет значение 0, необходимо указать *schedule_uid* или *schedule_name* . Если параметр *collection_mode* имеет значение 1, *schedule_uid* или *schedule_name* игнорируется, если он указан.  
   
-`[ @schedule_name = ] 'schedule_name'`Имя расписания. *schedule_name* имеет тип **sysname** и допускает значение null. Если указано, *schedule_uid* должны иметь значение null. Чтобы получить *schedule_name*, запросите системную таблицу sysschedules.  
+`[ @schedule_name = ] 'schedule_name'` Имя расписания. *schedule_name* имеет тип **sysname** и допускает значение null. Если указано, *schedule_uid* должны иметь значение null. Чтобы получить *schedule_name*, запросите системную таблицу sysschedules.  
   
-`[ @logging_level = ] logging_level`Уровень ведения журнала. *LOGGING_LEVEL* имеет значение **smallint** с одним из следующих значений:  
+`[ @logging_level = ] logging_level` Уровень ведения журнала. *LOGGING_LEVEL* имеет значение **smallint** с одним из следующих значений:  
   
  0 - Регистрировать сведения о выполнении и события служб [!INCLUDE[ssIS](../../includes/ssis-md.md)], которые отслеживают:  
   
@@ -107,7 +108,7 @@ sp_syscollector_update_collection_set
   
  Значение по умолчанию для *LOGGING_LEVEL* равно 1.  
   
-`[ @description = ] 'description'`Описание набора элементов сбора. *Описание* — **nvarchar (4000)**.  
+`[ @description = ] 'description'` Описание набора элементов сбора. *Описание* — **nvarchar (4000)**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -179,9 +180,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Сбор данных](../../relational-databases/data-collection/data-collection.md)   
  [syscollector_collection_sets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   
- [dbo.sysрасписания &#40;&#41;Transact-SQL](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
+ [dbo.sysрасписания &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
   
   

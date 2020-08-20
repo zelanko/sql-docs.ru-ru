@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_delete_policy_execution_history (Transact-SQL)
 title: sp_syspolicy_delete_policy_execution_history (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fe651af9-267e-45ec-b4e7-4b0698fb1be3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cbee07cd02ca423a633133546130615bcb1d60c1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 99a17425f74b1ae2f5db7c4a6002e27ca7780f21
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892713"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485633"
 ---
 # <a name="sp_syspolicy_delete_policy_execution_history-transact-sql"></a>sp_syspolicy_delete_policy_execution_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +41,9 @@ sp_syspolicy_delete_policy_execution_history [ @policy_id = ] policy_id ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @policy_id = ] policy_id`Идентификатор политики, для которой необходимо удалить журнал выполнения. *policy_id* имеет **тип int**и является обязательным. Может иметь значение NULL.  
+`[ @policy_id = ] policy_id` Идентификатор политики, для которой необходимо удалить журнал выполнения. *policy_id* имеет **тип int**и является обязательным. Может иметь значение NULL.  
   
-`[ @oldest_date = ] 'oldest_date'`Самая старая Дата, для которой необходимо синхронизировать журнал выполнения политик. Все данные журнала выполнения до этой даты удаляются. *oldest_date* имеет тип **DateTime**и является обязательным. Может иметь значение NULL.  
+`[ @oldest_date = ] 'oldest_date'` Самая старая Дата, для которой необходимо синхронизировать журнал выполнения политик. Все данные журнала выполнения до этой даты удаляются. *oldest_date* имеет тип **DateTime**и является обязательным. Может иметь значение NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -86,7 +87,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Хранимые процедуры управления на основе политик &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [Хранимые процедуры управления на основе политик &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [sp_syspolicy_set_config_history_retention &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-set-config-history-retention-transact-sql.md)   
  [sp_syspolicy_purge_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-purge-history-transact-sql.md)  
   

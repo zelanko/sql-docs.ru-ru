@@ -1,4 +1,5 @@
 ---
+description: sp_server_diagnostics (Transact-SQL)
 title: sp_server_diagnostics (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6524de89a96f64d2eed6a9f01b38b492ffb0fc04
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d2bd308f79e9ef4a49e91509400e8d4938cd4473
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783740"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485686"
 ---
 # <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @repeat_interval = ] 'repeat_interval_in_seconds'`Указывает интервал времени, в течение которого хранимая процедура будет запускаться повторно для отправки сведений о работоспособности.  
+`[ @repeat_interval = ] 'repeat_interval_in_seconds'` Указывает интервал времени, в течение которого хранимая процедура будет запускаться повторно для отправки сведений о работоспособности.  
   
  *repeat_interval_in_seconds* имеет **тип int** и значение по умолчанию 0. Допустимыми значениями для параметра являются 0 и любые значения, которые больше или равны 5. Чтобы вернуть полные данные, хранимая процедура должна работать не менее 5 секунд. Минимальное значение для выполнения хранимой процедуры в режиме повтора равно 5 секундам.  
   
@@ -59,11 +60,11 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 |Столбец|Тип данных|Описание|  
 |------------|---------------|-----------------|  
 |**create_time**|**datetime**|Указывает отметку времени создания строки. Все строки в одном наборе данных имеют одинаковые отметки времени.|  
-|**component_type**|**sysname**|Указывает, содержит ли строка сведения для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компонента уровня экземпляра или для Always on группы доступности:<br /><br /> instance<br /><br /> Always On: AvailabilityGroup|  
+|**component_type**|**sysname**|Указывает, содержит ли строка сведения для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компонента уровня экземпляра или для Always on группы доступности:<br /><br /> экземпляр<br /><br /> Always On: AvailabilityGroup|  
 |**component_name**|**sysname**|Указывает имя компонента или имя группы доступности:<br /><br /> система<br /><br /> ресурс<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> события<br /><br /> *\<name of the availability group>*|  
 |**state**|**int**|Указывает состояние работоспособности компонента:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|Описывает столбец state. Далее представлены описания, соответствующие значениям в столбце state:<br /><br /> 0. Неизвестно<br /><br /> 1: чистая очистка<br /><br /> 2: предупреждение<br /><br /> 3: ошибка|  
-|**данные**|**varchar (max)**|Указывает данные, свойственные данному компоненту.|  
+|**data**|**varchar (max)**|Указывает данные, свойственные данному компоненту.|  
   
  Далее даны описания пяти компонентов.  
   
@@ -79,12 +80,12 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **\<name of the availability group>**: Собирает данные для указанной группы доступности (если component_type = "Always On: AvailabilityGroup").  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
 Компоненты system, resource и query_processing используются для обнаружения ошибок, а компоненты io_subsystem и events используются только для диагностики.  
   
 В следующей таблице представлены компоненты и связанные с ними состояния работоспособности.  
   
-|Components|Удовлетворительно (1)|Предупреждение (2)|Ошибка (3)|Неизвестно (0)|  
+|Компоненты|Удовлетворительно (1)|Предупреждение (2)|Ошибка (3)|Неизвестно (0)|  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
 |система|x|x|x||  
 |ресурс|x|x|x||  
@@ -240,7 +241,7 @@ where component_name like 'events'
 go  
 ``` 
   
-## <a name="see-also"></a>См. также  
- [Политика отработки отказа для экземпляров отказоустойчивого кластера](../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
+## <a name="see-also"></a>См. также:  
+ [Failover Policy for Failover Cluster Instances](../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_replmonitorhelpmergesession (Transact-SQL)
 title: sp_replmonitorhelpmergesession (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 305b7a0e2c9d83fe33a6d571198b205f7452ba44
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5fe48c8ed194434fa71ce3fd01f2a8db93ecac74
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725687"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485705"
 ---
 # <a name="sp_replmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,28 +43,28 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @agent_name = ] 'agent_name'`Имя агента. *agent_name* имеет тип **nvarchar (100)** и не имеет значения по умолчанию.  
+`[ @agent_name = ] 'agent_name'` Имя агента. *agent_name* имеет тип **nvarchar (100)** и не имеет значения по умолчанию.  
   
-`[ @hours = ] hours`Интервал времени (в часах), в течение которого возвращаются данные сеанса агента с предысторией. *часы* — это **int**, который может быть одним из следующих диапазонов.  
+`[ @hours = ] hours` Интервал времени (в часах), в течение которого возвращаются данные сеанса агента с предысторией. *часы* — это **int**, который может быть одним из следующих диапазонов.  
   
-|Применение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |< **0,0**|Возвращает сведения о последних запусках агента, максимум до 100 раз.|  
 |**0** (по умолчанию)|Возвращает сведения обо всех последних запусках агента.|  
 |> **0,0**|Возвращает сведения о запусках агента, произошедших за последние *часы* (в часах).|  
   
-`[ @session_type = ] session_type`Фильтрует результирующий набор на основе конечного результата сеанса. *session_type* имеет **тип int**и может принимать одно из следующих значений.  
+`[ @session_type = ] session_type` Фильтрует результирующий набор на основе конечного результата сеанса. *session_type* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Применение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**1** (по умолчанию)|Сеанс агента с успешным результатом или с требованием повторения.|  
 |**0**|Сеанс агента с неудачным результатом.|  
   
-`[ @publisher = ] 'publisher'`Имя издателя. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL. Этот параметр используется при выполнении **sp_replmonitorhelpmergesession** на подписчике.  
+`[ @publisher = ] 'publisher'` Имя издателя. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL. Этот параметр используется при выполнении **sp_replmonitorhelpmergesession** на подписчике.  
   
-`[ @publisher_db = ] 'publisher_db'`Имя базы данных публикации. Аргумент *publisher_db* имеет тип **sysname**и значение по умолчанию NULL. Этот параметр используется при выполнении **sp_replmonitorhelpmergesession** на подписчике.  
+`[ @publisher_db = ] 'publisher_db'` Имя базы данных публикации. Аргумент *publisher_db* имеет тип **sysname**и значение по умолчанию NULL. Этот параметр используется при выполнении **sp_replmonitorhelpmergesession** на подписчике.  
   
-`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию NULL. Этот параметр используется при выполнении **sp_replmonitorhelpmergesession** на подписчике.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию NULL. Этот параметр используется при выполнении **sp_replmonitorhelpmergesession** на подписчике.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -86,7 +87,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_replmonitorhelpmergesession** используется для наблюдения за репликацией слиянием.  
   
  При выполнении на подписчике **sp_replmonitorhelpmergesession** возвращает сведения только о последних пяти сеансах агент слияния.  
@@ -95,6 +96,6 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
  Только члены предопределенной роли базы данных **db_owner** или **replmonitor** в базе данных распространителя на распространителе или в базе данных подписки на подписчике могут выполнять **sp_replmonitorhelpmergesession**.  
   
 ## <a name="see-also"></a>См. также  
- [Программный мониторинг репликации](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
+ [Наблюдение за репликацией программным образом](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

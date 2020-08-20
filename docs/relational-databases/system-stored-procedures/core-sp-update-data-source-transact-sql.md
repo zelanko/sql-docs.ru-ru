@@ -1,4 +1,5 @@
 ---
+description: core.sp_update_data_source (Transact-SQL)
 title: Core. sp_update_data_source (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6b25dfb47c49bd53a4544649d8e10e4c092d04de
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 19644668bc9daf054aeb8907be5ca8ff29a7bb84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898209"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486397"
 ---
 # <a name="coresp_update_data_source-transact-sql"></a>core.sp_update_data_source (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -93,8 +94,8 @@ EXEC core.sp_update_data_source
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Хранимые процедуры сборщика данных &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [хранилище данных управления](../../relational-databases/data-collection/management-data-warehouse.md)  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Хранимые процедуры сборщика данных (Transact-SQL)](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [Хранилище данных управления](../../relational-databases/data-collection/management-data-warehouse.md)  
   
   

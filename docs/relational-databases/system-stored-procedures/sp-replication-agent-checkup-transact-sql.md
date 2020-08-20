@@ -1,4 +1,5 @@
 ---
+description: sp_replication_agent_checkup (Transact-SQL)
 title: sp_replication_agent_checkup (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 50357c2e-71aa-4e13-9e2e-0977a3655cc9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 25daf9098c1c4da74d8c5adfdac062016f68ce96
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5bcd42ae639fad4b50feb6aac829a39abc9a1cad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725708"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485742"
 ---
 # <a name="sp_replication_agent_checkup-transact-sql"></a>sp_replication_agent_checkup (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,12 +38,12 @@ sp_replication_agent_checkup [ [ @heartbeat_interval = ] heartbeat_interval ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @heartbeat_interval = ] 'heartbeat_interval'`Максимальное количество минут, в течение которых агент может пройти без записи сообщения о ходе выполнения. *heartbeat_interval* имеет **тип int**и значение по умолчанию 10 минут.  
+`[ @heartbeat_interval = ] 'heartbeat_interval'` Максимальное количество минут, в течение которых агент может пройти без записи сообщения о ходе выполнения. *heartbeat_interval* имеет **тип int**и значение по умолчанию 10 минут.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **sp_replication_agent_checkup** вызывает ошибку 14151 для каждого агента, который обнаруживается как подозрительное. Она также записывает сообщение об агентах в журнал ошибок.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_replication_agent_checkup** используется в репликации моментальных снимков, репликации транзакций и репликации слиянием.  
   
 ## <a name="permissions"></a>Разрешения  
