@@ -1,4 +1,5 @@
 ---
+description: Рекомендации по операциям с индексами в режиме "в сети"
 title: Рекомендации по операциям с индексами | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/12/2019
@@ -18,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4dde42d927732e0209fed114e6d8d50451ab6379
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ce049f8c597526187ccce8ba7fdb498d8280cf1f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629616"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455958"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Рекомендации по операциям с индексами в режиме "в сети"
 
@@ -130,7 +131,7 @@ ms.locfileid: "85629616"
 
 ## <a name="related-content"></a>См. также
 
-- [Об операциях с индексами в сети](../../relational-databases/indexes/how-online-index-operations-work.md)  
+- [Об операциях с индексом в сети](../../relational-databases/indexes/how-online-index-operations-work.md)  
 - [Выполнение операций с индексами в оперативном режиме](../../relational-databases/indexes/perform-index-operations-online.md)  
 - [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)  
 - [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)  

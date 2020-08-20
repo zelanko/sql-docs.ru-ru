@@ -1,4 +1,5 @@
 ---
+description: PreConnect:Completed, класс событий
 title: Класс событий PreConnect:Completed | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ ms.assetid: 7ed2f620-6511-4985-9961-d2927c2b1759
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bc4b65a9ffe3873401271d0bfcf0cf669a82c0b9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 207bdcf6240b4b24b9d051045e0334e4a074f033
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733767"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455973"
 ---
 # <a name="preconnectcompleted-event-class"></a>PreConnect:Completed, класс событий
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -25,9 +26,9 @@ ms.locfileid: "85733767"
   
 ## <a name="preconnectcompleted-event-class-data-columns"></a>Столбцы данных класса событий PreConnect:Completed  
   
-|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|EventClass|**int**|216|27|нет|  
+|EventClass|**int**|216|27|Нет|  
 |SPID|**int**|Идентификатор процесса сервера, создающего это событие.|12|Да|  
 |EventSubClass|**int**|1 для определяемой пользователем функции-классификатора.|21|Да|  
 |StartTime|**datetime**|Время начала выполнения определяемой пользователем функции-классификатора.|14|Да|  
@@ -38,8 +39,8 @@ ms.locfileid: "85733767"
 |Операции чтения|**int**|Количество операций логического считывания.|16|Да|  
 |Запись|**int**|Количество операций логической записи.|17|Да|  
 |GroupID|**int**|Идентификатор классифицированной группы рабочей нагрузки.|66|Да|  
-|Ошибка|**int**|Номер последней ошибки в случае, если выполнение определяемой пользователем функции-классификатора завершилось с ошибкой.|31|Да|  
-|Штат|**int**|Состояние последней ошибки.|30|Да|  
+|Error|**int**|Номер последней ошибки в случае, если выполнение определяемой пользователем функции-классификатора завершилось с ошибкой.|31|Да|  
+|Состояние|**int**|Состояние последней ошибки.|30|Да|  
 |TargetUserName|**sysname**|Возвращаемое значение (имя группы рабочей нагрузки) для определяемой пользователем функции-классификатора, если системе не удается найти соответствующую активную группу. В противном случае этот столбец содержит значение NULL.|39|Да|  
 |ObjectName|**nvarchar(256)**|Двухкомпонентное имя определяемой пользователем функции-классификатора. Например, dbo.classifier.|34|Да|  
   

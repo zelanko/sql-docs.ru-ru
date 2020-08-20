@@ -1,4 +1,5 @@
 ---
+description: Массовое копирование из переменных приложения
 title: Групповое копирование из переменных программы | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,11 +20,12 @@ ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 543d14bf67cfc4587c315090533c1066646493c7
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 50b1177e65ad2ef082335fa29a180ddd8f489adf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012336"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455981"
 ---
 # <a name="bulk-copying-from-program-variables"></a>Массовое копирование из переменных приложения
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -84,7 +86,7 @@ ms.locfileid: "86012336"
 |SQL_GUID|SQL_C_GUID|SQLUNIQUEID|**uniqueidentifier**|  
 |SQL_INTERVAL_|SQL_C_CHAR|SQLCHARACTER|**char**|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]не имеет подписанного типа данных **tinyint**, без знака **smallint** **или целых чисел** без знака. Для предотвращения потери значений данных при миграции этих типов данных создайте таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] со следующим наибольшим типом данных integer. Для предотвращения последующего добавления пользователями значений, находящихся за пределами диапазона, разрешенного исходными типом данных, примените к столбцу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] правило ограничения разрешенных значений до диапазона, поддерживаемого типом данных в исходном источнике:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не имеет подписанного типа данных **tinyint**, без знака **smallint** **или целых чисел** без знака. Для предотвращения потери значений данных при миграции этих типов данных создайте таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] со следующим наибольшим типом данных integer. Для предотвращения последующего добавления пользователями значений, находящихся за пределами диапазона, разрешенного исходными типом данных, примените к столбцу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] правило ограничения разрешенных значений до диапазона, поддерживаемого типом данных в исходном источнике:  
   
 ```  
 CREATE TABLE Sample_Ints(STinyIntCol   SMALLINT,  
@@ -112,7 +114,7 @@ GO
   
  С помощью операции массового копирования нельзя считать данные из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в переменные программы. Она не похожа на функцию «bcp_readrow». Отправлять данные можно только от приложения на сервер.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выполнение операций с массовым копированием &#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   

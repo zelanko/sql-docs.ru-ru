@@ -1,4 +1,5 @@
 ---
+description: Категория событий Broker
 title: Категория событий Broker | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/24/2019
@@ -14,22 +15,22 @@ ms.assetid: 470dc93c-0dda-4d89-829b-937738d59b31
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 924959b2c5c5b9782a1e73e404644299ba5bd5d8
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: ab93bbb94022f25206154e94531754315ef21c34
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971522"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456030"
 ---
 # <a name="broker-event-category"></a>Категория событий Broker
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-Категория событий **Broker** содержит общие события компонента Service Broker.  
+ Категория событий **Broker** содержит общие события компонента Service Broker.  
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Класс событий Broker:Activation](../../relational-databases/event-classes/broker-activation-event-class.md)|Событие, формируемое при запуске монитором очереди хранимой процедуры активации.|  
 |[Класс событий Broker:Connection](../../relational-databases/event-classes/broker-connection-event-class.md)|Событие, формируемое для передачи данных о состоянии транспортного соединения, которым управляет компонент Service Broker.|  
@@ -44,7 +45,7 @@ ms.locfileid: "86971522"
   
  Также компонент Service Broker поддерживает два события аудита безопасности. Дополнительные сведения об этих событиях см. в статьях [Класс событий Audit Broker Login](../../relational-databases/event-classes/audit-broker-login-event-class.md) и [Класс событий Audit Broker Conversation](../../relational-databases/event-classes/audit-broker-conversation-event-class.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Категория событий «Аудит безопасности»](https://docs.microsoft.com/analysis-services/trace-events/security-audit-event-category)  
   
   
