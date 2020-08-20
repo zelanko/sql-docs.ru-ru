@@ -1,4 +1,5 @@
 ---
+description: sp_add_log_shipping_secondary_database (Transact-SQL)
 title: sp_add_log_shipping_secondary_database (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d29e1c24-3a3c-47a4-a726-4584afa6038a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: de65ab447394d17c6400f77c58986e111839e9b4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 384884e2b2b076b20cb9c679c3494a7c292f77a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879837"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464674"
 ---
 # <a name="sp_add_log_shipping_secondary_database-transact-sql"></a>sp_add_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,17 +54,17 @@ sp_add_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @secondary_database = ] 'secondary_database'`Имя базы данных-получателя. Аргумент *secondary_database* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @secondary_database = ] 'secondary_database'` Имя базы данных-получателя. Аргумент *secondary_database* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @primary_server = ] 'primary_server'`Имя основного экземпляра в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] конфигурации доставки журналов. *primary_server* имеет тип **sysname** и не может иметь значение null.  
+`[ @primary_server = ] 'primary_server'` Имя основного экземпляра в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] конфигурации доставки журналов. *primary_server* имеет тип **sysname** и не может иметь значение null.  
   
-`[ @primary_database = ] 'primary_database'`Имя базы данных на сервере-источнике. Аргумент *primary_database* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @primary_database = ] 'primary_database'` Имя базы данных на сервере-источнике. Аргумент *primary_database* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @restore_delay = ] 'restore_delay'`Время в минутах, в течение которого сервер-получатель ждет перед восстановлением заданного файла резервной копии. *restore_delay* имеет **тип int** и не может иметь значение null. Значение по умолчанию — 0.  
+`[ @restore_delay = ] 'restore_delay'` Время в минутах, в течение которого сервер-получатель ждет перед восстановлением заданного файла резервной копии. *restore_delay* имеет **тип int** и не может иметь значение null. Значение по умолчанию — 0.  
   
-`[ @restore_all = ] 'restore_all'`Если задано значение 1, сервер-получатель восстанавливает все доступные резервные копии журналов транзакций при выполнении задания восстановления. В противном случае он останавливается после восстановления одного файла. *restore_all* имеет **бит** и не может иметь значение null.  
+`[ @restore_all = ] 'restore_all'` Если задано значение 1, сервер-получатель восстанавливает все доступные резервные копии журналов транзакций при выполнении задания восстановления. В противном случае он останавливается после восстановления одного файла. *restore_all* имеет **бит** и не может иметь значение null.  
   
-`[ @restore_mode = ] 'restore_mode'`Режим восстановления для базы данных-получателя.  
+`[ @restore_mode = ] 'restore_mode'` Режим восстановления для базы данных-получателя.  
   
  0 = восстановление журнала с аргументом NORECOVERY.  
   
@@ -71,21 +72,21 @@ sp_add_log_shipping_secondary_database
   
  значение *RESTORE* **bit** и не может быть равно null.  
   
-`[ @disconnect_users = ] 'disconnect_users'`Если задано значение 1, то при выполнении операции восстановления пользователи отключаются от базы данных-получателя. По умолчанию равно 0. *Отключение* пользователей имеет **бит** и не может иметь значение null.  
+`[ @disconnect_users = ] 'disconnect_users'` Если задано значение 1, то при выполнении операции восстановления пользователи отключаются от базы данных-получателя. По умолчанию равно 0. *Отключение* пользователей имеет **бит** и не может иметь значение null.  
   
-`[ @block_size = ] 'block_size'`Размер в байтах, используемый в качестве размера блока для устройства резервного копирования. *block_size* имеет **тип int** и значение по умолчанию-1.  
+`[ @block_size = ] 'block_size'` Размер в байтах, используемый в качестве размера блока для устройства резервного копирования. *block_size* имеет **тип int** и значение по умолчанию-1.  
   
-`[ @buffer_count = ] 'buffer_count'`Общее число буферов, используемых операцией резервного копирования или восстановления. *buffer_count* имеет **тип int** и значение по умолчанию-1.  
+`[ @buffer_count = ] 'buffer_count'` Общее число буферов, используемых операцией резервного копирования или восстановления. *buffer_count* имеет **тип int** и значение по умолчанию-1.  
   
-`[ @max_transfer_size = ] 'max_transfer_size'`Размер (в байтах) максимального запроса ввода или вывода, выданного [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устройством резервного копирования. *max_transfersize* имеет **тип int** и может иметь значение null.  
+`[ @max_transfer_size = ] 'max_transfer_size'` Размер (в байтах) максимального запроса ввода или вывода, выданного [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устройством резервного копирования. *max_transfersize* имеет **тип int** и может иметь значение null.  
   
-`[ @restore_threshold = ] 'restore_threshold'`Количество минут между операциями восстановления до создания предупреждения. *restore_threshold* имеет **тип int** и не может иметь значение null.  
+`[ @restore_threshold = ] 'restore_threshold'` Количество минут между операциями восстановления до создания предупреждения. *restore_threshold* имеет **тип int** и не может иметь значение null.  
   
-`[ @threshold_alert = ] 'threshold_alert'`Предупреждение, создаваемое при превышении порогового значения резервного копирования. *threshold_alert* имеет **тип int**и значение по умолчанию 14 420.  
+`[ @threshold_alert = ] 'threshold_alert'` Предупреждение, создаваемое при превышении порогового значения резервного копирования. *threshold_alert* имеет **тип int**и значение по умолчанию 14 420.  
   
-`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'`Указывает, возникает ли предупреждение при превышении *backup_threshold* . При значении, равном единице (1), устанавливаемом по умолчанию, предупреждение будет инициировано. *threshold_alert_enabled* имеет **бит**.  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` Указывает, возникает ли предупреждение при превышении *backup_threshold* . При значении, равном единице (1), устанавливаемом по умолчанию, предупреждение будет инициировано. *threshold_alert_enabled* имеет **бит**.  
   
-`[ @history_retention_period = ] 'history_retention_period'`Продолжительность времени в минутах, в течение которого сохраняется журнал. *history_retention_period* имеет **тип int**и значение по умолчанию NULL. Если ничего не указано, используется значение 14 420.  
+`[ @history_retention_period = ] 'history_retention_period'` Продолжительность времени в минутах, в течение которого сохраняется журнал. *history_retention_period* имеет **тип int**и значение по умолчанию NULL. Если ничего не указано, используется значение 14 420.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

@@ -1,4 +1,5 @@
 ---
+description: Глобальные параметры (диалоговые окна) (MySQLToSQL)
 title: Глобальные параметры (диалоговые окна) (MySQLToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -9,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 6df20fbb-e92d-475f-a94d-aaf70b06eb9b
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 60629e8fda61af000f633f8f7ede714e48517f7c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: e902927b90ff868e8766b3eb1fe9839938dd8ece
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935463"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463419"
 ---
 # <a name="global-settings-dialogs-mysqltosql"></a>Глобальные параметры (диалоговые окна) (MySQLToSQL)
 Используйте страницу диалоговые окна диалогового окна **глобальные параметры** , чтобы указать параметры действия пользователя и предупреждения по умолчанию для SSMA.  
   
 Для доступа к параметрам диалогового окна в меню **Сервис** выберите **глобальные параметры**, щелкните **графический интерфейс** в нижней части левой панели, а затем выберите **диалоговые окна**.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
 **Предупреждать перед перезаписью объектов**  
 Когда SSMA преобразует объекты в SQL Server, некоторые объекты уже могут существовать в метаданных SQL Server проекта. Эти объекты могли быть уже преобразованы, или объекты могут просто иметь то же имя в целевой схеме, что и объекты, которые вы собираетесь преобразовать.  
   

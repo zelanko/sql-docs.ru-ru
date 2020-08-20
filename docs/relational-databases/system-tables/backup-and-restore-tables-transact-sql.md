@@ -1,4 +1,5 @@
 ---
+description: Таблицы резервного копирования и восстановления (Transact-SQL)
 title: Таблицы резервного копирования и восстановления (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: aa615add-54e6-40f5-8b55-3728b26884ee
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8b3a8bf99bb51e5b2c4e9979266bd7252790315c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a1d5e0638338cdf53d33eed310d23f1a124a7415
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750390"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463920"
 ---
 # <a name="backup-and-restore-tables-transact-sql"></a>Таблицы резервного копирования и восстановления (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Подразделы данного раздела описывают системные таблицы, которые хранят сведения, необходимые для операций резервного копирования и восстановления базы данных.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [backupfile;](../../relational-databases/system-tables/backupfile-transact-sql.md)  
  Содержит по одной строке для всех данных или файла журнала базы данных.  
   

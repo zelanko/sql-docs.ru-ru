@@ -1,4 +1,5 @@
 ---
+description: sp_apply_job_to_targets (Transact-SQL)
 title: sp_apply_job_to_targets (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dbefdf6a045dce468365aa585b7efad775709c2c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1f821418b5e6a75aa51264abb0d265f907b8957d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85874928"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464563"
 ---
 # <a name="sp_apply_job_to_targets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,18 +43,18 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_id = ] job_id`Идентификационный номер задания, применяемого к указанным целевым серверам или группам целевых серверов. *job_id* имеет тип **uniqueidentifier**и значение по умолчанию NULL.  
+`[ @job_id = ] job_id` Идентификационный номер задания, применяемого к указанным целевым серверам или группам целевых серверов. *job_id* имеет тип **uniqueidentifier**и значение по умолчанию NULL.  
   
-`[ @job_name = ] 'job_name'`Имя задания, применяемого к указанным целевым серверам или группам целевых серверов. Аргумент *job_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'` Имя задания, применяемого к указанным целевым серверам или группам целевых серверов. Аргумент *job_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Необходимо указать либо *job_id* , либо *job_name* , но нельзя указать оба значения.  
   
-`[ @target_server_groups = ] 'target_server_groups'`Разделенный запятыми список групп целевых серверов, к которым должно применяться указанное задание. *target_server_groups* имеет тип **nvarchar (2048)** и значение по умолчанию NULL.  
+`[ @target_server_groups = ] 'target_server_groups'` Разделенный запятыми список групп целевых серверов, к которым должно применяться указанное задание. *target_server_groups* имеет тип **nvarchar (2048)** и значение по умолчанию NULL.  
   
-`[ @target_servers = ] 'target_servers'`Разделенный запятыми список целевых серверов, к которым будет применено указанное задание. *target_servers*имеет тип **nvarchar (2048)** и значение по умолчанию NULL.  
+`[ @target_servers = ] 'target_servers'` Разделенный запятыми список целевых серверов, к которым будет применено указанное задание. *target_servers*имеет тип **nvarchar (2048)** и значение по умолчанию NULL.  
   
-`[ @operation = ] 'operation'`Указывает, должно ли указанное задание быть применено или удалено из указанных целевых серверов или групп целевых серверов. *Операция*имеет тип **varchar (7)** и значение по умолчанию Apply. Допустимые операции: **Apply** и **Remove**.  
+`[ @operation = ] 'operation'` Указывает, должно ли указанное задание быть применено или удалено из указанных целевых серверов или групп целевых серверов. *Операция*имеет тип **varchar (7)** и значение по умолчанию Apply. Допустимые операции: **Apply** и **Remove**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  

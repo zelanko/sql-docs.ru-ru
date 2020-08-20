@@ -1,4 +1,5 @@
 ---
+description: sp_approlepassword (Transact-SQL)
 title: sp_approlepassword (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7967dc0b-bee2-4c63-b8e9-1c3ce2f5db2a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0d6fb44101952c5fe5fe28ba9764c43658a6208a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b375dac904decdaa096cfe0e0b1839cc0c3d2d8c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85874861"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464550"
 ---
 # <a name="sp_approlepassword-transact-sql"></a>sp_approlepassword (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85874861"
   Изменяет пароль роли приложения в текущей базе данных.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Вместо этого используйте [ALTER Application Role](../../t-sql/statements/alter-application-role-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте [ALTER Application Role](../../t-sql/statements/alter-application-role-transact-sql.md) .  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,9 +43,9 @@ sp_approlepassword [ @rolename= ] 'role' , [ @newpwd = ] 'password'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @rolename = ] 'role'`Имя роли приложения. Аргумент *Role* имеет тип **sysname**и не имеет значения по умолчанию. *роль* должна существовать в текущей базе данных.  
+`[ @rolename = ] 'role'` Имя роли приложения. Аргумент *Role* имеет тип **sysname**и не имеет значения по умолчанию. *роль* должна существовать в текущей базе данных.  
   
-`[ @newpwd = ] 'password'`Новый пароль для роли приложения. Аргумент *Password* имеет тип **sysname**и не имеет значения по умолчанию. *пароль* не может иметь значение null.  
+`[ @newpwd = ] 'password'` Новый пароль для роли приложения. Аргумент *Password* имеет тип **sysname**и не имеет значения по умолчанию. *пароль* не может иметь значение null.  
   
 > [!IMPORTANT]  
 >  Не используйте пароль со значением NULL. Выбирайте надежные пароли. Дополнительные сведения см. в разделе [Strong Passwords](../../relational-databases/security/strong-passwords.md).  

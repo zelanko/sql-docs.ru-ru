@@ -1,4 +1,5 @@
 ---
+description: sp_refresh_log_shipping_monitor (Transact-SQL)
 title: sp_refresh_log_shipping_monitor (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 93abffe797a4507c9d3329f864e09753ca1f1da0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6125ac4a916ff9d19777644a9db5fd853c045290
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891527"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464079"
 ---
 # <a name="sp_refresh_log_shipping_monitor-transact-sql"></a>sp_refresh_log_shipping_monitor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +44,9 @@ sp_refresh_log_shipping_monitor
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @agent_id = ] 'agent_id'`Основной идентификатор резервной копии или вторичный идентификатор для копирования или восстановления. *agent_id* имеет тип **uniqueidentifier** и не может иметь значение null.  
+`[ @agent_id = ] 'agent_id'` Основной идентификатор резервной копии или вторичный идентификатор для копирования или восстановления. *agent_id* имеет тип **uniqueidentifier** и не может иметь значение null.  
   
-`[ @agent_type = ] 'agent_type'`Тип задания доставки журналов.  
+`[ @agent_type = ] 'agent_type'` Тип задания доставки журналов.  
   
  0 = резервирование;  
   
@@ -55,9 +56,9 @@ sp_refresh_log_shipping_monitor
   
  *agent_type* имеет тип **tinyint** и не может иметь значение null.  
   
-`[ @database = ] 'database'`Первичная или вторичная база данных, используемая для ведения журнала агентами резервного копирования или восстановления.  
+`[ @database = ] 'database'` Первичная или вторичная база данных, используемая для ведения журнала агентами резервного копирования или восстановления.  
   
-`[ @mode ] n`Указывает, следует ли обновлять данные монитора или очищать их. Тип данных *m* — tinyint, а поддерживаемые значения:  
+`[ @mode ] n` Указывает, следует ли обновлять данные монитора или очищать их. Тип данных *m* — tinyint, а поддерживаемые значения:  
   
  1 = обновление (значение по умолчанию);  
   
@@ -69,7 +70,7 @@ sp_refresh_log_shipping_monitor
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  **sp_refresh_log_shipping_monitor** обновляет таблицы **log_shipping_monitor_primary**, **log_shipping_monitor_secondary**, **log_shipping_monitor_history_detail**и **log_shipping_monitor_error_detail** с использованием сведений о сеансе, которые еще не были переданы. Это позволяет синхронизировать сервер мониторинга с сервером-источником или сервером-получателем, если в течение некоторого времени синхронизация не выполнялась. В дополнение к этому в случае необходимости разрешается очистка контрольных данных на сервере мониторинга.  
   
  **sp_refresh_log_shipping_monitor** должны запускаться из базы данных **master** на основном или вторичном сервере.  

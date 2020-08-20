@@ -1,4 +1,5 @@
 ---
+description: sp_OAGetErrorInfo (Transact-SQL)
 title: sp_OAGetErrorInfo (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d190bf442b7c6e629058f6679291ff75ca64e5ed
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7336be191ea34fcf36b8221b2a1698ae179fa980
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893410"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464114"
 ---
 # <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -71,8 +72,8 @@ sp_OAGetErrorInfo [ objecttoken ]
   
 |Имена столбцов|Тип данных|Описание|  
 |------------------|---------------|-----------------|  
-|**Ошибка**|**двоичный (4)**|Двоичное представление номера ошибки.|  
-|**Источник**|**nvarchar (NN)**|Источник ошибки.|  
+|**Error**|**двоичный (4)**|Двоичное представление номера ошибки.|  
+|**Source**|**nvarchar (NN)**|Источник ошибки.|  
 |**Описание**|**nvarchar (NN)**|Описание ошибки.|  
 |**HelpFile**|**nvarchar (NN)**|Файл справки для источника.|  
 |**Идентификатор справки**|**int**|Идентификатор контекста справки в исходном файле справки.|  
@@ -95,7 +96,7 @@ sp_OAGetErrorInfo [ objecttoken ]
  Дополнительные сведения об обработке кодов возврата HRESULT см. в разделе [коды возврата OLE Automation и сведения об ошибке](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется членство в предопределенной роли сервера **sysadmin** или разрешение EXECUTE непосредственно в этой хранимой процедуре. `Ole Automation Procedures`для использования любой системной процедуры, связанной с OLE Automation, необходимо **включить** конфигурацию.  
+ Требуется членство в предопределенной роли сервера **sysadmin** или разрешение EXECUTE непосредственно в этой хранимой процедуре. `Ole Automation Procedures` для использования любой системной процедуры, связанной с OLE Automation, необходимо **включить** конфигурацию.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере отображаются сведения об ошибке OLE-автоматизации.  
@@ -122,7 +123,7 @@ END;
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Хранимые процедуры OLE-автоматизации &#40;&#41;Transact — SQL](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [Хранимые процедуры OLE-автоматизации &#40;&#41;Transact — SQL ](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [Пример скрипта OLE-автоматизации](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

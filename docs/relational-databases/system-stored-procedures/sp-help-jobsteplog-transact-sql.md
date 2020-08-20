@@ -1,4 +1,5 @@
 ---
+description: sp_help_jobsteplog (Transact-SQL)
 title: sp_help_jobsteplog (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1a0be7b1-8f31-4b4c-aadb-586c0e00ed04
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7ef843202631d632b2a3712554cf67c9eca0878e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3c3659e9f82da6d735bb8d5c53d6a182d4fa14d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891806"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464263"
 ---
 # <a name="sp_help_jobsteplog-transact-sql"></a>sp_help_jobsteplog (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,16 +43,16 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_id = ] 'job_id'`Идентификационный номер задания, для которого возвращаются сведения журнала шагов задания. *job_id* имеет **тип int**и значение по умолчанию NULL.  
+`[ @job_id = ] 'job_id'` Идентификационный номер задания, для которого возвращаются сведения журнала шагов задания. *job_id* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @job_name = ] 'job_name'`Имя задания. Аргумент *job_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'` Имя задания. Аргумент *job_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Необходимо указать либо *job_id* , либо *job_name* , но нельзя указать оба значения.  
   
-`[ @step_id = ] step_id`Идентификационный номер этапа в задании. Если не указан, включаются все этапы задания. *step_id* имеет **тип int**и значение по умолчанию NULL.  
+`[ @step_id = ] step_id` Идентификационный номер этапа в задании. Если не указан, включаются все этапы задания. *step_id* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @step_name = ] 'step_name'`Имя шага в задании. Аргумент *step_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @step_name = ] 'step_name'` Имя шага в задании. Аргумент *step_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

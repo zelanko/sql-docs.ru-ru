@@ -1,4 +1,5 @@
 ---
+description: sp_changedistributor_password (Transact-SQL)
 title: sp_changedistributor_password (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4a496e60-414a-4026-ba7a-3e89391d39b7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 52fcf5c739ad5312aef89586e78454652df93f2f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1709bdbb673dcf88ffc9646ded291abb5702412d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771543"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464498"
 ---
 # <a name="sp_changedistributor_password-transact-sql"></a>sp_changedistributor_password (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,12 +38,12 @@ sp_changedistributor_password [ @password= ] 'password'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @password = ] 'password'`Новый пароль. Аргумент *Password* имеет тип **sysname**и не имеет значения по умолчанию. Если распространитель является локальным, пароль **distributor_admin** системного имени входа изменяется.  
+`[ @password = ] 'password'` Новый пароль. Аргумент *Password* имеет тип **sysname**и не имеет значения по умолчанию. Если распространитель является локальным, пароль **distributor_admin** системного имени входа изменяется.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_changedistributor_password** используется во всех типах репликации.  
   
 ## <a name="example"></a>Пример  

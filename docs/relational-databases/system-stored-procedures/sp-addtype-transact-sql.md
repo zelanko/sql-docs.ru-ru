@@ -1,4 +1,5 @@
 ---
+description: sp_addtype (Transact-SQL)
 title: sp_addtype (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a1b4d469d8afd6946b35cce503efd6db6cdfcb3a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e924e286c036f7d26e93d88c18105696835d2f5e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85876224"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464654"
 ---
 # <a name="sp_addtype-transact-sql"></a>sp_addtype (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85876224"
   Создает псевдоним типа данных.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Вместо этого используйте [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md) .  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,15 +45,15 @@ sp_addtype [ @typename = ] type,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @typename = ] type`Имя псевдонима типа данных. Имена типов данных псевдонима должны соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md) и должны быть уникальными в каждой базе данных. Аргумент *Type имеет тип* **sysname**и не имеет значения по умолчанию.  
+`[ @typename = ] type` Имя псевдонима типа данных. Имена типов данных псевдонима должны соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md) и должны быть уникальными в каждой базе данных. Аргумент *Type имеет тип* **sysname**и не имеет значения по умолчанию.  
   
-`[ @phystype = ] system_data_type`Физический (или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) тип данных, на котором основан псевдоним типа данных.* аргумент system_data_type* имеет тип **sysname**, не имеет значения по умолчанию и может принимать одно из следующих значений:  
+`[ @phystype = ] system_data_type` Физический (или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) тип данных, на котором основан псевдоним типа данных.* аргумент system_data_type* имеет тип **sysname**, не имеет значения по умолчанию и может принимать одно из следующих значений:  
   
 ||||  
 |-|-|-|  
 |**bigint**|**binary(n)**|**bit**|  
 |**char(n)**|**datetime**|**decimal**|  
-|**float**|**изображение**|**int**|  
+|**float**|**image**|**int**|  
 |**money**|**nchar (n)**|**ntext**|  
 |**numeric**|**nvarchar (n)**|**real**|  
 |**smalldatetime**|**smallint**|**smallmoney**|  
@@ -70,7 +71,7 @@ sp_addtype [ @typename = ] type,
  *#d0*  
  Неотрицательное целое число, показывающее максимальное количество десятичных разрядов числа (справа от десятичного разделителя), которое не должно превышать точность. Дополнительные сведения см. в разделе [decimal и numeric (Transact-SQL)](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
-`[ @nulltype = ] 'null_type'`Указывает способ обработки значений NULL в псевдониме типа данных. *null_type* имеет тип **varchar (** 8 **)**, значение по умолчанию NULL и должен заключаться в одинарные кавычки ("null", "NOT NULL" или "null"). Если *null_type* явно не определен с помощью **sp_addtype**, ему присваивается текущая допустимость значений NULL по умолчанию. Для определения текущего значения параметра возможности по умолчанию иметь значения NULL используйте системную функцию NULLGETANSINULL. Его можно настраивать с помощью инструкции SET или ALTER DATABASE. Возможность иметь значения NULL необходимо задавать в явной форме. Если ** \@ фистипе** имеет значение **bit**, а ** \@ nulltype** не указан, по умолчанию используется значение NOT NULL.  
+`[ @nulltype = ] 'null_type'` Указывает способ обработки значений NULL в псевдониме типа данных. *null_type* имеет тип **varchar (** 8 **)**, значение по умолчанию NULL и должен заключаться в одинарные кавычки ("null", "NOT NULL" или "null"). Если *null_type* явно не определен с помощью **sp_addtype**, ему присваивается текущая допустимость значений NULL по умолчанию. Для определения текущего значения параметра возможности по умолчанию иметь значения NULL используйте системную функцию NULLGETANSINULL. Его можно настраивать с помощью инструкции SET или ALTER DATABASE. Возможность иметь значения NULL необходимо задавать в явной форме. Если ** \@ фистипе** имеет значение **bit**, а ** \@ nulltype** не указан, по умолчанию используется значение NOT NULL.  
   
 > [!NOTE]  
 >  Параметр *null_type* определяет допустимость значений NULL по умолчанию для этого типа данных. Если возможность иметь значения NULL явно указывается для типа данных псевдонима при создании таблицы, эта настройка имеет приоритет над возможностью по умолчанию иметь значения NULL. Дополнительные сведения см. в статьях [ALTER table &#40;Transact-sql&#41;](../../t-sql/statements/alter-table-transact-sql.md) и [CREATE TABLE &#40;transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
@@ -133,7 +134,7 @@ GO
   
 ## <a name="see-also"></a>См. также  
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Создание типа &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
+ [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md)   
  [CREATE DEFAULT (Transact-SQL)](../../t-sql/statements/create-default-transact-sql.md)   
  [CREATE RULE (Transact-SQL)](../../t-sql/statements/create-rule-transact-sql.md)   
  [sp_bindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   

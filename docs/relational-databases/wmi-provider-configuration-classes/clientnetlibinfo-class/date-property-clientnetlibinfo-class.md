@@ -1,4 +1,5 @@
 ---
+description: Свойство Date (класс ClientNetLibInfo)
 title: Свойство Date (класс ClientNetLibInfo)
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4ca7e569-f097-49f7-b83c-795b0f1319ec
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 02d556ea93328a6a162be5e53358b20824c64d5c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9e3e2cc272cb233e110d331ac5c607e9332954f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881174"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463706"
 ---
 # <a name="date-property-clientnetlibinfo-class"></a>Свойство Date (класс ClientNetLibInfo)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ object.Date [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение uint32, определяющее дату файла сетевой библиотеки клиента.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
- [настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx)  
+## <a name="see-also"></a>См. также:  
+ [Настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

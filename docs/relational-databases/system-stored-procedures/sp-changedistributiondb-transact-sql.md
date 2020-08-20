@@ -1,4 +1,5 @@
 ---
+description: sp_changedistributiondb (Transact-SQL)
 title: sp_changedistributiondb (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b9bd4367a4af33195ffdb3e233980f46205ca39a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fb52176989ef6e90eb132da21abcd299444aec8d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760202"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464473"
 ---
 # <a name="sp_changedistributiondb-transact-sql"></a>sp_changedistributiondb (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,23 +40,23 @@ sp_changedistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @database = ] 'database'`Имя базы данных распространителя. Аргумент *Database* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @database = ] 'database'` Имя базы данных распространителя. Аргумент *Database* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @property = ] 'property'`Свойство, которое необходимо изменить для данной базы данных. Аргумент *Property* имеет тип **sysname**и может принимать одно из следующих значений.  
+`[ @property = ] 'property'` Свойство, которое необходимо изменить для данной базы данных. Аргумент *Property* имеет тип **sysname**и может принимать одно из следующих значений.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**history_retention**|Срок хранения таблицы журнала.|  
 |**max_distretention**|Максимальный срок хранения распространения.|  
 |**min_distretention**|Минимальный срок хранения распространения.|  
 |NULL (по умолчанию)|Выводятся все доступные значения *свойств* .|  
   
-`[ @value = ] 'value'`Новое значение для указанного свойства. *value* имеет тип **nvarchar (255)** и значение по умолчанию NULL.  
+`[ @value = ] 'value'` Новое значение для указанного свойства. *value* имеет тип **nvarchar (255)** и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_changedistributiondb** используется во всех типах репликации.  
   
 ## <a name="example"></a>Пример  
@@ -65,10 +66,10 @@ sp_changedistributiondb [ @database= ] 'database'
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_changedistributiondb**.  
   
 ## <a name="see-also"></a>См. также  
- [Просмотр и изменение свойств распространителя и издателя](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
+ [Просмотр и изменение свойств издателя и распространителя](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
  [sp_dropdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
- [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
+ [sp_helpdistributiondb (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
  [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

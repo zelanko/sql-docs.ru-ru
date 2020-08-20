@@ -1,4 +1,5 @@
 ---
+description: sp_adduser (Transact-SQL)
 title: sp_adduser (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5c917889a4ed435e59e7d165841234b80390dc7e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 05aa08ee4d2b518b804db93d5a2408f690b56bbc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85875418"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464606"
 ---
 # <a name="sp_adduser-transact-sql"></a>sp_adduser (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85875418"
   Добавляет нового пользователя в текущую базу данных.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Вместо этого используйте [CREATE USER](../../t-sql/statements/create-user-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте [CREATE USER](../../t-sql/statements/create-user-transact-sql.md) .  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,11 +45,11 @@ sp_adduser [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @loginame = ] 'login'`Имя входа или имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows. *имя входа* имеет тип **sysname**и не имеет значения по умолчанию. *имя входа* должно быть существующим [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] именем входа или именем входа Windows.  
+`[ @loginame = ] 'login'` Имя входа или имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows. *имя входа* имеет тип **sysname**и не имеет значения по умолчанию. *имя входа* должно быть существующим [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] именем входа или именем входа Windows.  
   
-`[ @name_in_db = ] 'user'`Имя нового пользователя базы данных. *User* имеет тип **sysname**и значение по умолчанию NULL. Если *пользователь* не указан, имя новой базы данных по умолчанию принимает имя *входа* в систему. При указании параметра *пользователь* присваивает новому пользователю имя в базе данных, отличное от имени входа на уровне сервера.  
+`[ @name_in_db = ] 'user'` Имя нового пользователя базы данных. *User* имеет тип **sysname**и значение по умолчанию NULL. Если *пользователь* не указан, имя новой базы данных по умолчанию принимает имя *входа* в систему. При указании параметра *пользователь* присваивает новому пользователю имя в базе данных, отличное от имени входа на уровне сервера.  
   
-`[ @grpname = ] 'role'`Роль базы данных, членом которой становится новый пользователь. Аргумент *Role* имеет тип **sysname**и значение по умолчанию NULL. *роль* должна быть допустимой ролью базы данных в текущей базе данных.  
+`[ @grpname = ] 'role'` Роль базы данных, членом которой становится новый пользователь. Аргумент *Role* имеет тип **sysname**и значение по умолчанию NULL. *роль* должна быть допустимой ролью базы данных в текущей базе данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -101,10 +102,10 @@ EXEC sp_adduser 'BjornR', 'Bjorn', 'Production';
   
 ## <a name="see-also"></a>См. также  
  [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sys. server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
+ [sys.server_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [sp_addrole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
- [Создание ПОЛЬЗОВАТЕЛЬСКОГО &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
- [sp_dropuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
+ [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)   
+ [sp_dropuser (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
  [sp_grantdbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
  [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -1,4 +1,5 @@
 ---
+description: Свойство Clustered (класс SqlService)
 title: Свойство Clustered (SqlService)
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f714e7f5-c2db-45c6-9536-6ca2cb5b42aa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 084ade8f77570a04c1f11e3183a2a6102d0388bc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 40b62cbdc3d3e2e7bcdd67c8c07a7794a1e70885
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880661"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463564"
 ---
 # <a name="clustered-property-sqlservice-class"></a>Свойство Clustered (класс SqlService)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +42,9 @@ object.Clustered [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Логическое значение, определяющее, участвует ли служба в кластеризованном экземпляре: **true** , если участвует; в противном случае — **false** .  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

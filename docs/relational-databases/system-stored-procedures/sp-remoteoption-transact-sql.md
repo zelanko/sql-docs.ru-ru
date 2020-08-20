@@ -1,4 +1,5 @@
 ---
+description: Хранимая процедура sp_remoteoption (Transact-SQL)
 title: sp_remoteoption (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c9a7309b-eab7-4192-a414-e282581af4e5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 01f87d00c1f0a8cc9ff7ca492092738a96f98c06
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8bd92e5335b04dd7fca13dfa7fb64a867cee4b3c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901411"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464082"
 ---
 # <a name="sp_remoteoption-transact-sql"></a>Хранимая процедура sp_remoteoption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,12 +46,12 @@ sp_remoteoption [ [ @remoteserver = ] 'remoteserver' ]
      [ , [ @optvalue = ] 'optvalue' ]  
 ```  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Эта хранимая процедура возвращает следующее сообщение об ошибке:  
   
  `The trusted option in remote login mapping is no longer supported.`  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Связанные серверы (компонент Database Engine)](../../relational-databases/linked-servers/linked-servers-database-engine.md)  
   
   

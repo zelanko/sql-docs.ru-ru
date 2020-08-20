@@ -1,4 +1,5 @@
 ---
+description: sp_dropmergearticle (Transact-SQL)
 title: sp_dropmergearticle (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/02/2016
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4445c622027e4e639c7748010daf97d535a29624
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 77762c318d06d1a9c872405a9965e7b018f3eb85
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881845"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464324"
 ---
 # <a name="sp_dropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,27 +44,27 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'`Имя публикации, из которой удаляется статья. Аргумент *publication*имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации, из которой удаляется статья. Аргумент *publication*имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @article = ] 'article'`Имя статьи, которую нужно удалить из данной публикации. Аргумент *article*имеет тип **sysname**и не имеет значения по умолчанию. В случае **всех**существующих статей в указанной публикации слиянием удаляются все существующие статьи. Даже если *статья* **все**же, публикация все равно должна быть удалена отдельно от статьи.  
+`[ @article = ] 'article'` Имя статьи, которую нужно удалить из данной публикации. Аргумент *article*имеет тип **sysname**и не имеет значения по умолчанию. В случае **всех**существующих статей в указанной публикации слиянием удаляются все существующие статьи. Даже если *статья* **все**же, публикация все равно должна быть удалена отдельно от статьи.  
   
-`[ @ignore_distributor = ] ignore_distributor`Указывает, выполняется ли эта хранимая процедура без соединения с распространителем. *ignore_distributor* имеет **бит**и значение по умолчанию **0**.  
+`[ @ignore_distributor = ] ignore_distributor` Указывает, выполняется ли эта хранимая процедура без соединения с распространителем. *ignore_distributor* имеет **бит**и значение по умолчанию **0**.  
   
-`[ @reserved = ] reserved`Зарезервировано для будущего использования. *reserved* имеет тип **nvarchar (20)** и значение по умолчанию NULL.  
+`[ @reserved = ] reserved` Зарезервировано для будущего использования. *reserved* имеет тип **nvarchar (20)** и значение по умолчанию NULL.  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Включает или отключает возможность недействительности моментального снимка. *force_invalidate_snapshot* является **битом**и имеет значение по умолчанию **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Включает или отключает возможность недействительности моментального снимка. *force_invalidate_snapshot* является **битом**и имеет значение по умолчанию **0**.  
   
  **0** указывает, что изменения в статье слияния не приводят к недействительности моментального снимка.  
   
  **1** означает, что изменения в статье слияния могут привести к недействительности моментального снимка, и, если это так, значение **1** дает разрешение на создание нового моментального снимка.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription`Подтверждает, что удаление статьи требует повторной инициализации существующих подписок. *force_reinit_subscription* является **битом**и имеет значение по умолчанию **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Подтверждает, что удаление статьи требует повторной инициализации существующих подписок. *force_reinit_subscription* является **битом**и имеет значение по умолчанию **0**.  
   
  **0** указывает, что удаление статьи не приводит к повторной инициализации подписки.  
   
  **1** означает, что удаление статьи приводит к повторной инициализации существующих подписок и предоставляет разрешение на повторную инициализацию подписки.  
   
-`[ @ignore_merge_metadata = ] ignore_merge_metadata`Только для внутреннего использования.  
+`[ @ignore_merge_metadata = ] ignore_merge_metadata` Только для внутреннего использования.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -159,7 +160,7 @@ GO
  [Добавление и удаление статей в существующих публикациях](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
  [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
- [sp_helpmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
+ [sp_helpmergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

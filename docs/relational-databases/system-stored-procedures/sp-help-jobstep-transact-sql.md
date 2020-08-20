@@ -1,4 +1,5 @@
 ---
+description: sp_help_jobstep (Transact-SQL)
 title: sp_help_jobstep (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 560ab640738ef89d22917bf03e8d6553029eb646
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5ef8fab59553fd203129852961ac33d59498467d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891794"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464280"
 ---
 # <a name="sp_help_jobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,18 +43,18 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_id = ] 'job_id'`Идентификационный номер задания, для которого возвращаются сведения о задании. *job_id* имеет тип **uniqueidentifier**и значение по умолчанию NULL.  
+`[ @job_id = ] 'job_id'` Идентификационный номер задания, для которого возвращаются сведения о задании. *job_id* имеет тип **uniqueidentifier**и значение по умолчанию NULL.  
   
-`[ @job_name = ] 'job_name'`Имя задания. Аргумент *job_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'` Имя задания. Аргумент *job_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Необходимо указать либо *job_id* , либо *job_name* , но нельзя указать оба значения.  
   
-`[ @step_id = ] step_id`Идентификационный номер этапа в задании. Если не указан, включаются все этапы задания. *step_id* имеет **тип int**и значение по умолчанию NULL.  
+`[ @step_id = ] step_id` Идентификационный номер этапа в задании. Если не указан, включаются все этапы задания. *step_id* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @step_name = ] 'step_name'`Имя шага в задании. Аргумент *step_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @step_name = ] 'step_name'` Имя шага в задании. Аргумент *step_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @suffix = ] suffix`Флаг, указывающий, добавляется ли текстовое описание к столбцу **flags** в выходных данных. *суффикс*имеет **битовую**длину и значение по умолчанию **0**. Если *суффикс* имеет значение **1**, добавляется описание.  
+`[ @suffix = ] suffix` Флаг, указывающий, добавляется ли текстовое описание к столбцу **flags** в выходных данных. *суффикс*имеет **битовую**длину и значение по умолчанию **0**. Если *суффикс* имеет значение **1**, добавляется описание.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -86,7 +87,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**last_run_time**|**int**|Время начала последнего выполнения этапа.|  
 |**proxy_id**|**int**|Учетная запись-посредник для шага задания.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  **sp_help_jobstep** находится в базе данных **msdb** .  
   
 ## <a name="permissions"></a>Разрешения  
@@ -129,7 +130,7 @@ EXEC dbo.sp_help_jobstep
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
  [sp_delete_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
  [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   

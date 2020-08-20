@@ -1,4 +1,5 @@
 ---
+description: IHextendedArticleView (Transact-SQL)
 title: IHextendedArticleView (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 19ef0a12-3214-4bb0-9c25-a665897e65a2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: e15bb478ba04a95fa3c4d358477fe8073f50d007
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8a56d2e7b96464866f0216e1f93ef6eb3d1066df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889211"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463876"
 ---
 # <a name="ihextendedarticleview-transact-sql"></a>IHextendedArticleView (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "85889211"
 |**destination_object**|**sysname**|Имя объекта, опубликованного на стороне подписчика.|  
 |**source_owner**|**sysname**|Владелец объекта, опубликованного на стороне издателя.|  
 |**source_object**|**sysname**|Имя объекта, опубликованного на стороне издателя.|  
-|**nописание**|**nvarchar(255)**|Описание статьи.|  
+|**description**|**nvarchar(255)**|Описание статьи.|  
 |**creation_script**|**nvarchar(255)**|Скрипт создания схемы для статьи.|  
 |**del_cmd**|**nvarchar(255)**|Команда, выполняемая для инструкции DELETE.|  
 |**Фильтрация**|**int**|Идентификатор хранимой процедуры, с помощью которого определяется горизонтальная секция.|  
@@ -52,7 +53,7 @@ ms.locfileid: "85889211"
   
 ## <a name="see-also"></a>См. также  
  [Разнородная репликация базы данных](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

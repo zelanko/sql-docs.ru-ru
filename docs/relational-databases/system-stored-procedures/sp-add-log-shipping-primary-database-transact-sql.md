@@ -1,4 +1,5 @@
 ---
+description: sp_add_log_shipping_primary_database (Transact-SQL)
 title: sp_add_log_shipping_primary_database (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 188a7d3b98021255074ccaf6b954b4c9b2100fd0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0ed823f2b6564593388893db74866931bc1c0c93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879941"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464672"
 ---
 # <a name="sp_add_log_shipping_primary_database-transact-sql"></a>sp_add_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,41 +56,41 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @database = ] 'database'`Имя базы данных-источника доставки журналов. *база данных* имеет тип **sysname**, не имеет значения по умолчанию и не может иметь значение null.  
+`[ @database = ] 'database'` Имя базы данных-источника доставки журналов. *база данных* имеет тип **sysname**, не имеет значения по умолчанию и не может иметь значение null.  
   
-`[ @backup_directory = ] 'backup_directory'`Путь к папке резервного копирования на сервере-источнике. *backup_directory* имеет тип **nvarchar (500)**, не имеет значения по умолчанию и не может иметь значение null.  
+`[ @backup_directory = ] 'backup_directory'` Путь к папке резервного копирования на сервере-источнике. *backup_directory* имеет тип **nvarchar (500)**, не имеет значения по умолчанию и не может иметь значение null.  
   
-`[ @backup_share = ] 'backup_share'`Сетевой путь к каталогу резервного копирования на сервере-источнике. *backup_share* имеет тип **nvarchar (500)**, не имеет значения по умолчанию и не может иметь значение null.  
+`[ @backup_share = ] 'backup_share'` Сетевой путь к каталогу резервного копирования на сервере-источнике. *backup_share* имеет тип **nvarchar (500)**, не имеет значения по умолчанию и не может иметь значение null.  
   
-`[ @backup_job_name = ] 'backup_job_name'`Имя задания агент SQL Server на сервере-источнике, который копирует резервную копию в папку резервного копирования. *backup_job_name* имеет тип **sysname** и не может иметь значение null.  
+`[ @backup_job_name = ] 'backup_job_name'` Имя задания агент SQL Server на сервере-источнике, который копирует резервную копию в папку резервного копирования. *backup_job_name* имеет тип **sysname** и не может иметь значение null.  
   
-`[ @backup_retention_period = ] backup_retention_period`Продолжительность времени в минутах, в течение которого файл резервной копии журнала сохраняется в каталоге резервного копирования на сервере-источнике. *backup_retention_period* имеет **тип int**, не имеет значения по умолчанию и не может иметь значение null.  
+`[ @backup_retention_period = ] backup_retention_period` Продолжительность времени в минутах, в течение которого файл резервной копии журнала сохраняется в каталоге резервного копирования на сервере-источнике. *backup_retention_period* имеет **тип int**, не имеет значения по умолчанию и не может иметь значение null.  
   
-`[ @monitor_server = ] 'monitor_server'`Имя сервера мониторинга. Аргумент *Monitor_server* имеет тип **sysname**, не имеет значения по умолчанию и не может иметь значение null.  
+`[ @monitor_server = ] 'monitor_server'` Имя сервера мониторинга. Аргумент *Monitor_server* имеет тип **sysname**, не имеет значения по умолчанию и не может иметь значение null.  
   
-`[ @monitor_server_security_mode = ] monitor_server_security_mode`Режим безопасности, используемый для подключения к серверу мониторинга.  
+`[ @monitor_server_security_mode = ] monitor_server_security_mode` Режим безопасности, используемый для подключения к серверу мониторинга.  
   
  1 = проверка подлинности Windows.  
   
  0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Проверка подлинности. *monitor_server_security_mode* имеет **бит** и не может иметь значение null.  
   
-`[ @monitor_server_login = ] 'monitor_server_login'`Имя пользователя учетной записи, используемой для доступа к серверу мониторинга.  
+`[ @monitor_server_login = ] 'monitor_server_login'` Имя пользователя учетной записи, используемой для доступа к серверу мониторинга.  
   
-`[ @monitor_server_password = ] 'monitor_server_password'`Пароль учетной записи, используемой для доступа к серверу мониторинга.  
+`[ @monitor_server_password = ] 'monitor_server_password'` Пароль учетной записи, используемой для доступа к серверу мониторинга.  
   
-`[ @backup_threshold = ] backup_threshold`Продолжительность времени (в минутах) после создания последней резервной копии до возникновения ошибки *threshold_alert* . *backup_threshold* имеет **тип int**и значение по умолчанию 60 минут.  
+`[ @backup_threshold = ] backup_threshold` Продолжительность времени (в минутах) после создания последней резервной копии до возникновения ошибки *threshold_alert* . *backup_threshold* имеет **тип int**и значение по умолчанию 60 минут.  
   
-`[ @threshold_alert = ] threshold_alert`Предупреждение, создаваемое при превышении порогового значения резервного копирования. *threshold_alert* имеет **тип int**и значение по умолчанию 14 420.  
+`[ @threshold_alert = ] threshold_alert` Предупреждение, создаваемое при превышении порогового значения резервного копирования. *threshold_alert* имеет **тип int**и значение по умолчанию 14 420.  
   
-`[ @threshold_alert_enabled = ] threshold_alert_enabled`Указывает, будет ли создаваться предупреждение при превышении *backup_threshold* . Значение по умолчанию (0) указывает, что это предупреждение отключено и не будет активизироваться. *threshold_alert_enabled* имеет **бит**.  
+`[ @threshold_alert_enabled = ] threshold_alert_enabled` Указывает, будет ли создаваться предупреждение при превышении *backup_threshold* . Значение по умолчанию (0) указывает, что это предупреждение отключено и не будет активизироваться. *threshold_alert_enabled* имеет **бит**.  
   
-`[ @history_retention_period = ] history_retention_period`Продолжительность времени в минутах, в течение которого будет храниться журнал. *history_retention_period* имеет **тип int**и значение по умолчанию NULL. Если ничего не указано, подразумевается значение 14420.  
+`[ @history_retention_period = ] history_retention_period` Продолжительность времени в минутах, в течение которого будет храниться журнал. *history_retention_period* имеет **тип int**и значение по умолчанию NULL. Если ничего не указано, подразумевается значение 14420.  
   
 `[ @backup_job_id = ] backup_job_id OUTPUT`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Идентификатор задания агента, связанного с заданием резервного копирования на сервере источника. *backup_job_id* имеет тип **uniqueidentifier** и не может иметь значение null.  
   
-`[ @primary_id = ] primary_id OUTPUT`Идентификатор базы данных источника для конфигурации доставки журналов. *primary_id* имеет тип **uniqueidentifier** и не может иметь значение null.  
+`[ @primary_id = ] primary_id OUTPUT` Идентификатор базы данных источника для конфигурации доставки журналов. *primary_id* имеет тип **uniqueidentifier** и не может иметь значение null.  
   
-`[ @backup_compression = ] backup_compression_option`Указывает, использует ли конфигурация доставки журналов [Сжатие резервных копий](../../relational-databases/backup-restore/backup-compression-sql-server.md). Этот параметр поддерживается только в [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (или более поздней версии).  
+`[ @backup_compression = ] backup_compression_option` Указывает, использует ли конфигурация доставки журналов [Сжатие резервных копий](../../relational-databases/backup-restore/backup-compression-sql-server.md). Этот параметр поддерживается только в [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (или более поздней версии).  
   
  0 = отключено. Не сжимать резервные копии журналов.  
   

@@ -1,4 +1,5 @@
 ---
+description: Управление отслеживанием изменений (SQL Server)
 title: Управление отслеживанием изменений
 ms.custom: seo-dt-2019
 ms.date: 08/08/2016
@@ -16,12 +17,12 @@ ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58093593dc2824d67e4b04cb6a02e52a1422555a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4c965816a7eca3d0a512f87cdf556b4f194b20e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725359"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463794"
 ---
 # <a name="manage-change-tracking-sql-server"></a>Управление отслеживанием изменений (SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "85725359"
   
  Кроме того, представление каталога [sys.internal_tables](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) отражает внутренние таблицы, созданные при включении отслеживания изменений для пользовательской таблицы.  
   
-### <a name="security"></a>безопасность  
+### <a name="security"></a>Безопасность  
  Для доступа к данным отслеживания изменений с помощью [функций отслеживания изменений](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)участник должен иметь следующие разрешения.  
   
 -   Разрешение SELECT как минимум для первичных ключевых столбцов отслеживаемой таблицы, для которой выполняется запрос.  

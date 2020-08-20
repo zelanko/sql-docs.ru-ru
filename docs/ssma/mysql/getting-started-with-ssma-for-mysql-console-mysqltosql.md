@@ -1,4 +1,5 @@
 ---
+description: Начало работы с консолью SSMA для MySQL (MySQLToSQL)
 title: Начало работы с SSMA для консоли MySQL (MySQLToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 218d502c-059f-4d48-9aea-61e553d74303
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: a5ade295e64415f50e4887fa971f20d8fe5b7f6a
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 9eba640bc529487772510e06a7c66210be3e43a9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935523"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463443"
 ---
 # <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>Начало работы с консолью SSMA для MySQL (MySQLToSQL)
 В этом разделе описывается процедура запуска и начала работы с консольным приложением MySQL. Здесь также перечислены соглашения, используемые в типичном окне вывода консоли SSMA.  
@@ -64,6 +65,6 @@ ms.locfileid: "87935523"
 |Зеленый|Запрос на ввод данных пользователем|  
 |Цвет|Начало, окончание и результат операции|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Установка SSMA для MySQL](installing-ssma-for-mysql-mysqltosql.md)  
   

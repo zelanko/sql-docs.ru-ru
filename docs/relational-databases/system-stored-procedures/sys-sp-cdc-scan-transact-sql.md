@@ -1,4 +1,5 @@
 ---
+description: sys.sp_cdc_scan (Transact-SQL)
 title: sys. sp_cdc_scan (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 46e4294c-97b8-47d6-9ed9-b436a9929353
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 558a2fd9ff62baa3448609eb42e5f31883fbac53
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0ad39bba5f8a3fbee5bcecde3e41ad9a7f7f4442
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891063"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463951"
 ---
 # <a name="syssp_cdc_scan-transact-sql"></a>sys.sp_cdc_scan (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,13 +45,13 @@ sys.sp_cdc_scan [ [ @maxtrans = ] max_trans ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @maxtrans = ] max_trans`Максимальное количество транзакций, обрабатываемых в каждом цикле просмотра. *max_trans* имеет **тип int** и значение по умолчанию 500.  
+`[ @maxtrans = ] max_trans` Максимальное количество транзакций, обрабатываемых в каждом цикле просмотра. *max_trans* имеет **тип int** и значение по умолчанию 500.  
   
-`[ @maxscans = ] max_scans`Максимальное число циклов просмотра, которое необходимо выполнить для извлечения всех строк из журнала. *max_scans* имеет **тип int** и значение по умолчанию 10.  
+`[ @maxscans = ] max_scans` Максимальное число циклов просмотра, которое необходимо выполнить для извлечения всех строк из журнала. *max_scans* имеет **тип int** и значение по умолчанию 10.  
   
-`[ @continuous = ] continuous`Указывает, должна ли хранимая процедура заканчиваться после выполнения одного цикла просмотра (0) или непрерывно работать, приостанавливаясь к времени, заданному *polling_interval* до повторного выполнения цикла просмотра (1). параметр *Continuous* имеет тип **tinyint** и значение по умолчанию 0.  
+`[ @continuous = ] continuous` Указывает, должна ли хранимая процедура заканчиваться после выполнения одного цикла просмотра (0) или непрерывно работать, приостанавливаясь к времени, заданному *polling_interval* до повторного выполнения цикла просмотра (1). параметр *Continuous* имеет тип **tinyint** и значение по умолчанию 0.  
   
-`[ @pollinginterval = ] polling_interval`Количество секунд между циклами просмотра журнала. *polling_interval* имеет тип **bigint** и значение по умолчанию 0.  
+`[ @pollinginterval = ] polling_interval` Количество секунд между циклами просмотра журнала. *polling_interval* имеет тип **bigint** и значение по умолчанию 0.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -64,7 +65,7 @@ sys.sp_cdc_scan [ [ @maxtrans = ] max_trans ]
 ## <a name="permissions"></a>Разрешения  
  Необходимо членство в предопределенной роли базы данных db_owner.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [dbo. cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)  
   
   

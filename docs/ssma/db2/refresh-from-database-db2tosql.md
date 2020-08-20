@@ -1,4 +1,5 @@
 ---
+description: Обновление из базы данных (DB2ToSQL)
 title: Обновление из базы данных (DB2ToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 613a8368-b372-443f-8252-fb6dc31a003d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2efc0667bd69e43cfe3d3246c0622fad18ff21e3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 973f3aae444b27be93b675d16c9b9a73d8fac518
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933365"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463481"
 ---
 # <a name="refresh-from-database-db2tosql"></a>Обновление из базы данных (DB2ToSQL)
 Диалоговое окно **обновление из базы данных** позволяет выбрать объекты для обновления из базы данных DB2. Строки в диалоговом окне имеют цветовую кодировку в зависимости от состояния метаданных.  
@@ -31,7 +32,7 @@ ms.locfileid: "87933365"
   
 Чтобы открыть диалоговое окно **обновление из базы данных** , щелкните правой кнопкой мыши объект в ОБОЗРЕВАТЕЛЕ метаданных DB2 и выберите команду **Обновить из базы данных**.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
 **Свернуть (-)**  
 Сверните все группы объектов, чтобы скрыть отдельные объекты.  
   

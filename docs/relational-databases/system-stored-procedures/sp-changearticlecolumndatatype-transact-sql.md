@@ -1,4 +1,5 @@
 ---
+description: sp_changearticlecolumndatatype (Transact-SQL)
 title: sp_changearticlecolumndatatype (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 98680c9e00fcb5a693ac257eaf6dd1265c3c3d62
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fe96b4e0135bc7d1ca7cc3c2987f8f02da0a4475
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85872811"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464510"
 ---
 # <a name="sp_changearticlecolumndatatype-transact-sql"></a>sp_changearticlecolumndatatype (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,19 +48,19 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'`Имя публикации Oracle. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации Oracle. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @article = ] 'article'`Имя статьи. Аргумент *article* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @article = ] 'article'` Имя статьи. Аргумент *article* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @column = ] 'column'`Имя столбца, для которого необходимо изменить сопоставление типов данных. *столбец* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @column = ] 'column'` Имя столбца, для которого необходимо изменить сопоставление типов данных. *столбец* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @type = ] 'type'`Имя [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типа данных в целевом столбце. Аргумент *Type имеет тип* **sysname**и значение по умолчанию NULL.  
+`[ @type = ] 'type'` Имя [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типа данных в целевом столбце. Аргумент *Type имеет тип* **sysname**и значение по умолчанию NULL.  
   
-`[ @length = ] length`Длина [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типа данных в целевом столбце. *length* имеет тип **bigint**и значение по умолчанию NULL.  
+`[ @length = ] length` Длина [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типа данных в целевом столбце. *length* имеет тип **bigint**и значение по умолчанию NULL.  
   
-`[ @precision = ] precision`Точность [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типа данных в целевом столбце. *точность* имеет тип **bigint**и значение по умолчанию NULL.  
+`[ @precision = ] precision` Точность [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типа данных в целевом столбце. *точность* имеет тип **bigint**и значение по умолчанию NULL.  
   
-`[ @publisher = ] 'publisher'`Указывает издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'` Указывает издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -74,9 +75,9 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_changearticlecolumndatatype**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Изменение свойств публикации и статьи](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [Сопоставление типов данных для издателей Oracle](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
+ [Data Type Mapping for Oracle Publishers](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
  [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

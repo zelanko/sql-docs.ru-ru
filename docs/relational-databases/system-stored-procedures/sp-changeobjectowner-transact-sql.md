@@ -1,4 +1,5 @@
 ---
+description: sp_changeobjectowner (Transact-SQL)
 title: sp_changeobjectowner (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 45b3dc1c-1cde-45b7-a248-5195c12973e9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: df232018259055697bb6624ee96a8fc980b3bef3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e96c93be7b21deb0966e0a48f5fde3258501ac6c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85871748"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464432"
 ---
 # <a name="sp_changeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85871748"
   Изменяет владельца объекта в текущей базе данных.  
   
 > [!IMPORTANT]
->  Эта хранимая процедура работает только с объектами, доступными в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] . [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Вместо этого используйте [ALTER SCHEMA](../../t-sql/statements/alter-schema-transact-sql.md) или [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) . **sp_changeobjectowner** изменяет как схему, так и владельца. Для сохранения совместимости с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] эта хранимая процедура изменит только владельцев объекта, если и текущий владелец, и новый владелец владеют схемами, которые имеют такое же имя, как и имена пользователей базы данных.  
+>  Эта хранимая процедура работает только с объектами, доступными в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] . [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте [ALTER SCHEMA](../../t-sql/statements/alter-schema-transact-sql.md) или [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) . **sp_changeobjectowner** изменяет как схему, так и владельца. Для сохранения совместимости с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] эта хранимая процедура изменит только владельцев объекта, если и текущий владелец, и новый владелец владеют схемами, которые имеют такое же имя, как и имена пользователей базы данных.  
 > 
 > [!IMPORTANT]
 >  К этой хранимой процедуре было добавлено требование новых разрешений.  
@@ -45,9 +46,9 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @objname = ] 'object'`Имя существующей таблицы, представления, определяемой пользователем функции или хранимой процедуры в текущей базе данных. *объект* имеет тип **nvarchar (776)** и не имеет значения по умолчанию. *объект* можно уточнить с помощью владельца существующего объекта в форме _existing_owner_**.** _объект_ , если схема и ее владелец имеют одинаковые имена.  
+`[ @objname = ] 'object'` Имя существующей таблицы, представления, определяемой пользователем функции или хранимой процедуры в текущей базе данных. *объект* имеет тип **nvarchar (776)** и не имеет значения по умолчанию. *объект* можно уточнить с помощью владельца существующего объекта в форме _existing_owner_**.** _объект_ , если схема и ее владелец имеют одинаковые имена.  
   
-`[ @newowner = ] 'owner_ '`Имя учетной записи безопасности, которая будет новым владельцем объекта. Аргумент *owner* имеет тип **sysname**и не имеет значения по умолчанию. *владельцем* должен быть допустимый пользователь базы данных, роль сервера, [!INCLUDE[msCoName](../../includes/msconame-md.md)] имя входа Windows или группа Windows с доступом к текущей базе данных. Если владелец является пользователем Windows или членом группы Windows, для которой нет соответствующего участника уровня базы данных, пользователь базы данных будет создан.  
+`[ @newowner = ] 'owner_ '` Имя учетной записи безопасности, которая будет новым владельцем объекта. Аргумент *owner* имеет тип **sysname**и не имеет значения по умолчанию. *владельцем* должен быть допустимый пользователь базы данных, роль сервера, [!INCLUDE[msCoName](../../includes/msconame-md.md)] имя входа Windows или группа Windows с доступом к текущей базе данных. Если владелец является пользователем Windows или членом группы Windows, для которой нет соответствующего участника уровня базы данных, пользователь базы данных будет создан.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -68,11 +69,11 @@ EXEC sp_changeobjectowner 'authors', 'Corporate\GeorgeW';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [ALTER SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/alter-schema-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [ALTER SCHEMA (Transact-SQL)](../../t-sql/statements/alter-schema-transact-sql.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
- [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [sp_changedbowner &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
+ [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [sp_changedbowner (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

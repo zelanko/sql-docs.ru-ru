@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_delete_collector_type (Transact-SQL)
 title: sp_syscollector_delete_collector_type (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3f32905e-0005-42cb-aef1-7bd04c51fbac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c24011a274b362a6b8267b7559d2641a4f1c6aa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a5e24b7cce5992df21e11edf5aff4202abb67f0b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892927"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464029"
 ---
 # <a name="sp_syscollector_delete_collector_type-transact-sql"></a>sp_syscollector_delete_collector_type (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,14 +42,14 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @collector_type_uid = ] 'collector_type_uid'`Идентификатор GUID для типа сборщика. *collector_type_uid* имеет тип **uniqueidentifier** и должен иметь значение, если *Name* имеет значение null.  
+`[ @collector_type_uid = ] 'collector_type_uid'` Идентификатор GUID для типа сборщика. *collector_type_uid* имеет тип **uniqueidentifier** и должен иметь значение, если *Name* имеет значение null.  
   
-`[ @name = ] 'name'`Имя типа сборщика. Аргумент *Name* имеет тип **sysname** и должен иметь значение, если *collector_type_uid* имеет значение null.  
+`[ @name = ] 'name'` Имя типа сборщика. Аргумент *Name* имеет тип **sysname** и должен иметь значение, если *collector_type_uid* имеет значение null.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Либо *collector_type_uid* , либо *имя* должны иметь значение, которое не может быть null.  
   
  Эта процедура вызовет ошибку, если существуют элементы сбора этого типа сборщика.  
@@ -65,8 +66,8 @@ GO
 EXEC sp_syscollector_delete_collector_type @collector_type_uid = '302E93D1-3424-4be7-AA8E-84813ECF2419';  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Сбор данных](../../relational-databases/data-collection/data-collection.md)  
   
   

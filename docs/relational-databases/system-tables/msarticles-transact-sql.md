@@ -1,4 +1,5 @@
 ---
+description: MSarticles (Transact-SQL)
 title: Мсартиклес (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1acd79a5-b3e2-4161-9592-7acc2a41ba38
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d6272b8370b461db0a7a2259be3de4d584ea8498
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f6a33127f1ba95fb17daff02ddcfaf64232cf94c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890049"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463907"
 ---
 # <a name="msarticles-transact-sql"></a>MSarticles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,11 +40,11 @@ ms.locfileid: "85890049"
 |**destination_object**|**sysname**|Имя таблицы, созданной на стороне подписчика.|  
 |**source_owner**|**sysname**|Имя владельца схемы исходной таблицы на стороне издателя.|  
 |**source_object**|**sysname**|Имя исходного объекта, из которого добавляется статья.|  
-|**nописание**|**nvarchar(255)**|Описание статьи.|  
+|**description**|**nvarchar(255)**|Описание статьи.|  
 |**destination_owner**|**sysname**|Имя владельца схемы таблицы, созданной на стороне подписчика.|  
   
-## <a name="see-also"></a>См. также  
- [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

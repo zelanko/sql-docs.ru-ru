@@ -1,4 +1,5 @@
 ---
+description: sp_attach_schedule (Transact-SQL)
 title: sp_attach_schedule (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 80c80eaf-cf23-4ed8-b8dd-65fe59830dd1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6bc01db6ae019694cbff4082c394fd8c736b9a5a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8108bdad26c02b02ae2e88b1780fada126e2c797
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85874363"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464494"
 ---
 # <a name="sp_attach_schedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,16 +43,16 @@ sp_attach_schedule
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_id = ] job_id`Идентификационный номер задания, к которому добавляется расписание. *job_id*имеет тип **uniqueidentifier**и значение по умолчанию NULL.  
+`[ @job_id = ] job_id` Идентификационный номер задания, к которому добавляется расписание. *job_id*имеет тип **uniqueidentifier**и значение по умолчанию NULL.  
   
-`[ @job_name = ] 'job_name'`Имя задания, к которому добавляется расписание. Аргумент *job_name*имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'` Имя задания, к которому добавляется расписание. Аргумент *job_name*имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Необходимо указать либо *job_id* , либо *job_name* , но нельзя указать оба значения.  
   
-`[ @schedule_id = ] schedule_id`Идентификационный номер расписания, который необходимо задать для задания. *schedule_id*имеет **тип int**и значение по умолчанию NULL.  
+`[ @schedule_id = ] schedule_id` Идентификационный номер расписания, который необходимо задать для задания. *schedule_id*имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @schedule_name = ] 'schedule_name'`Имя расписания, которое необходимо задать для задания. Аргумент *schedule_name*имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @schedule_name = ] 'schedule_name'` Имя расписания, которое необходимо задать для задания. Аргумент *schedule_name*имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Необходимо указать либо *schedule_id* , либо *schedule_name* , но нельзя указать оба значения.  

@@ -1,4 +1,5 @@
 ---
+description: sp_xml_preparedocument (Transact-SQL)
 title: sp_xml_preparedocument (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1232f5eb7917606d7f7e88c912be163d13de33ba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 48a414d4987d5b10349c6c4b2babe2d964875cb4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767489"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463964"
 ---
 # <a name="sp_xml_preparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -66,7 +67,7 @@ OUTPUT
  Исходный XML-документ. Средство синтаксического анализа MSXML анализирует этот XML-документ. *xmltext* — это текстовый параметр: **char**, **nchar**, **varchar**, **nvarchar**, **Text**, **ntext** или **XML**. Значение по умолчанию равно NULL. В этом случае создается внутреннее представление пустого XML-документа.  
   
 > [!NOTE]  
->  **sp_xml_preparedocument** может обрабатывать только текст или нетипизированный XML. Если значение экземпляра, передающееся в качестве входного параметра, уже является типизированным XML, его сначала необходимо привести к новому нетипизированному экземпляру XML или к строке, после чего его можно передавать в качестве входного параметра. Дополнительные сведения см. [в разделе Сравнение типизированного XML с нетипизированным XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
+>  **sp_xml_preparedocument** может обрабатывать только текст или нетипизированный XML. Если значение экземпляра, передающееся в качестве входного параметра, уже является типизированным XML, его сначала необходимо привести к новому нетипизированному экземпляру XML или к строке, после чего его можно передавать в качестве входного параметра. Дополнительные сведения см. в статье [Сравнение типизированного и нетипизированного XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
  [ *xpath_namespaces* ]  
  Указывает объявления пространств имен, которые используются в выражениях XPath строк и столбцов в OPENXML. *xpath_namespaces* — текстовый параметр: **char**, **nchar**, **varchar**, **nvarchar**, **Text**, **ntext** или **XML**.  

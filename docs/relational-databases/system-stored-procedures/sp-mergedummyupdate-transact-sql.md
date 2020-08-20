@@ -1,4 +1,5 @@
 ---
+description: sp_mergedummyupdate (Transact-SQL)
 title: sp_mergedummyupdate (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b834f7f6-9588-4d59-a3e2-83d8e8e722e1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5502b64da269639d99fe54d4930f7f3b7b145d73
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dbacf385842d226c733c5c1baec9859f26e140d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899364"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464139"
 ---
 # <a name="sp_mergedummyupdate-transact-sql"></a>sp_mergedummyupdate (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,9 +38,9 @@ sp_mergedummyupdate [ @source_object =] 'source_object', [ @rowguid =] 'rowguid'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @source_object = ] 'source_object'`Имя исходного объекта. *source_object*имеет тип **nvarchar (386)** и не имеет значения по умолчанию.  
+`[ @source_object = ] 'source_object'` Имя исходного объекта. *source_object*имеет тип **nvarchar (386)** и не имеет значения по умолчанию.  
   
-`[ @rowguid = ] 'rowguid'`Идентификатор строки. *rowguid* имеет тип **uniqueidentifier**и не имеет значения по умолчанию.  
+`[ @rowguid = ] 'rowguid'` Идентификатор строки. *rowguid* имеет тип **uniqueidentifier**и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  

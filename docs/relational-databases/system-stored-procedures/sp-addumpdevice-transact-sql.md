@@ -1,4 +1,5 @@
 ---
+description: sp_addumpdevice (Transact-SQL)
 title: sp_addumpdevice (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 840214a807ff37eedcc024125fc4902587afa05c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 91343fe93ad66b4e89e1e0190f5a46be23142f6c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85875903"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464686"
 ---
 # <a name="sp_addumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
 
 Добавляет в экземпляр компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устройство резервного копирования.  
   
@@ -47,16 +48,16 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @devtype = ] 'device_type'`— Это тип устройства резервного копирования. *device_type* имеет тип **varchar (20)**, не имеет значения по умолчанию и может принимать одно из следующих значений.  
+`[ @devtype = ] 'device_type'` — Это тип устройства резервного копирования. *device_type* имеет тип **varchar (20)**, не имеет значения по умолчанию и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
 |**свободного**|Файл на жестком диске в качестве устройства резервного копирования.|  
 |**аудиокассет**|Любое ленточное устройство, поддерживаемое [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.<br /><br /> Примечание. Поддержка ленточных устройств резервного копирования будет удалена в одной из будущих версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется.|  
   
-`[ @logicalname = ] 'logical_name'`Логическое имя устройства резервного копирования, используемое в инструкциях BACKUP и RESTORE. Аргумент *logical_name* имеет тип **sysname**, не имеет значения по умолчанию и не может иметь значение null.  
+`[ @logicalname = ] 'logical_name'` Логическое имя устройства резервного копирования, используемое в инструкциях BACKUP и RESTORE. Аргумент *logical_name* имеет тип **sysname**, не имеет значения по умолчанию и не может иметь значение null.  
   
-`[ @physicalname = ] 'physical_name'`Физическое имя устройства резервного копирования. Физические имена должны соответствовать правилам для имен файлов операционной системы или формату UNC для сетевых устройств и должны содержать полный путь. *physical_name* имеет тип **nvarchar (260)**, не имеет значения по умолчанию и не может иметь значение null.  
+`[ @physicalname = ] 'physical_name'` Физическое имя устройства резервного копирования. Физические имена должны соответствовать правилам для имен файлов операционной системы или формату UNC для сетевых устройств и должны содержать полный путь. *physical_name* имеет тип **nvarchar (260)**, не имеет значения по умолчанию и не может иметь значение null.  
   
  При создании устройства резервного копирования в удаленном сетевом каталоге убедитесь, что имя входа, под которым запущен компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)], имеет на удаленном компьютере необходимые права на запись.  
   
@@ -65,9 +66,9 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 > [!NOTE]  
 >  Эта процедура вносит указанное физическое имя в каталог. Она не пытается создать это устройство или произвести доступ к нему.  
   
-`[ @cntrltype = ] 'controller_type'`Устаревшие. Если указан — не обрабатывается. Поддерживается исключительно в целях обратной совместимости. Новые варианты использования **sp_addumpdevice** должны опускать этот параметр.  
+`[ @cntrltype = ] 'controller_type'` Устаревшие. Если указан — не обрабатывается. Поддерживается исключительно в целях обратной совместимости. Новые варианты использования **sp_addumpdevice** должны опускать этот параметр.  
   
-`[ @devstatus = ] 'device_status'`Устаревшие. Если указан — не обрабатывается. Поддерживается исключительно в целях обратной совместимости. Новые варианты использования **sp_addumpdevice** должны опускать этот параметр.  
+`[ @devstatus = ] 'device_status'` Устаревшие. Если указан — не обрабатывается. Поддерживается исключительно в целях обратной совместимости. Новые варианты использования **sp_addumpdevice** должны опускать этот параметр.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

@@ -1,4 +1,5 @@
 ---
+description: sp_dropmergepublication (Transact-SQL)
 title: sp_dropmergepublication (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9e1cb96e-5889-4f97-88cd-f60cf313ce68
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e9b2b36484d34396ed573f4b06bd1feb5b0f83b1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0a28a81d897f9319495963b0f9d049502fe8c7d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881830"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464367"
 ---
 # <a name="sp_dropmergepublication-transact-sql"></a>sp_dropmergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +41,13 @@ sp_dropmergepublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'`Имя публикации, которую нужно удалить. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию. Если **все**существующие публикации слиянием удалены, а также связанное с ними задание агент моментальных снимков. Если указать конкретное значение для параметра *publication*, то удаляются только эта публикация и связанное с ним задание агент моментальных снимков.  
+`[ @publication = ] 'publication'` Имя публикации, которую нужно удалить. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию. Если **все**существующие публикации слиянием удалены, а также связанное с ними задание агент моментальных снимков. Если указать конкретное значение для параметра *publication*, то удаляются только эта публикация и связанное с ним задание агент моментальных снимков.  
   
-`[ @ignore_distributor = ] ignore_distributor`Используется для удаления публикации без выполнения задач очистки на распространителе. *ignore_distributor* имеет **бит**и значение по умолчанию **0**. Данный аргумент также используется при переустановке распространителя.  
+`[ @ignore_distributor = ] ignore_distributor` Используется для удаления публикации без выполнения задач очистки на распространителе. *ignore_distributor* имеет **бит**и значение по умолчанию **0**. Данный аргумент также используется при переустановке распространителя.  
   
-`[ @reserved = ] reserved`Зарезервировано для будущего использования. параметр *reserved* имеет значение **bit**и значение по умолчанию **0**.  
+`[ @reserved = ] reserved` Зарезервировано для будущего использования. параметр *reserved* имеет значение **bit**и значение по умолчанию **0**.  
   
-`[ @ignore_merge_metadata = ] ignore_merge_metadata`Только для внутреннего использования.  
+`[ @ignore_merge_metadata = ] ignore_merge_metadata` Только для внутреннего использования.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -68,7 +69,7 @@ sp_dropmergepublication [ @publication= ] 'publication'
  [Удаление публикации](../../relational-databases/replication/publish/delete-a-publication.md)   
  [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
- [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
+ [sp_helpmergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

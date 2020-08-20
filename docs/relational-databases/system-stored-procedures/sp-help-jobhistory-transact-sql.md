@@ -1,4 +1,5 @@
 ---
+description: sp_help_jobhistory (Transact-SQL)
 title: sp_help_jobhistory (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a04d651467b8ccff057d3dcec0cb824edae73b12
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bf0766388b50fabfe3a0571b5cf4e86ab7e15520
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893691"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464289"
 ---
 # <a name="sp_help_jobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,44 +54,44 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_id = ] job_id`Идентификационный номер задания. *job_id* имеет тип **uniqueidentifier**и значение по умолчанию NULL.  
+`[ @job_id = ] job_id` Идентификационный номер задания. *job_id* имеет тип **uniqueidentifier**и значение по умолчанию NULL.  
   
-`[ @job_name = ] 'job_name'`Имя задания. Аргумент *job_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'` Имя задания. Аргумент *job_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @step_id = ] step_id`Идентификационный номер шага. *step_id* имеет **тип int**и значение по умолчанию NULL.  
+`[ @step_id = ] step_id` Идентификационный номер шага. *step_id* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @sql_message_id = ] sql_message_id`Идентификационный номер сообщения об ошибке, возвращенного Microsoft SQL Server при выполнении задания. *sql_message_id* имеет **тип int**и значение по умолчанию NULL.  
+`[ @sql_message_id = ] sql_message_id` Идентификационный номер сообщения об ошибке, возвращенного Microsoft SQL Server при выполнении задания. *sql_message_id* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @sql_severity = ] sql_severity`Степень серьезности сообщения об ошибке, возвращаемого SQL Server при выполнении задания. *sql_severity* имеет **тип int**и значение по умолчанию NULL.  
+`[ @sql_severity = ] sql_severity` Степень серьезности сообщения об ошибке, возвращаемого SQL Server при выполнении задания. *sql_severity* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @start_run_date = ] start_run_date`Дата запуска задания. *start_run_date*имеет **тип int**и значение по умолчанию NULL. *start_run_date* должны быть указаны в формате ГГГГММДД, где YYYY — год из четырех символов, mm — имя месяца из двух символов, а дд — двузначное имя дня.  
+`[ @start_run_date = ] start_run_date` Дата запуска задания. *start_run_date*имеет **тип int**и значение по умолчанию NULL. *start_run_date* должны быть указаны в формате ГГГГММДД, где YYYY — год из четырех символов, mm — имя месяца из двух символов, а дд — двузначное имя дня.  
   
-`[ @end_run_date = ] end_run_date`Дата завершения задания. *end_run_date* имеет **тип int**и значение по умолчанию NULL. *end_run_date*необходимо указать в формате ГГГГММДД, где гггг — это четырехзначный год, а mm — имя месяца из двух символов, а дд — двузначное имя дня.  
+`[ @end_run_date = ] end_run_date` Дата завершения задания. *end_run_date* имеет **тип int**и значение по умолчанию NULL. *end_run_date*необходимо указать в формате ГГГГММДД, где гггг — это четырехзначный год, а mm — имя месяца из двух символов, а дд — двузначное имя дня.  
   
-`[ @start_run_time = ] start_run_time`Время запуска задания. *start_run_time* имеет **тип int**и значение по умолчанию NULL. *start_run_time*должны быть указаны в формате ЧЧММСС, где ЧЧ — 2-символьный час дня, mm — это две минуты дня, а SS — двузначное значение дня.  
+`[ @start_run_time = ] start_run_time` Время запуска задания. *start_run_time* имеет **тип int**и значение по умолчанию NULL. *start_run_time*должны быть указаны в формате ЧЧММСС, где ЧЧ — 2-символьный час дня, mm — это две минуты дня, а SS — двузначное значение дня.  
   
-`[ @end_run_time = ] end_run_time`Время завершения выполнения задания. *end_run_time* имеет **тип int**и значение по умолчанию NULL. *end_run_time*должны быть указаны в формате ЧЧММСС, где ЧЧ — 2-символьный час дня, mm — это две минуты дня, а SS — двузначное значение дня.  
+`[ @end_run_time = ] end_run_time` Время завершения выполнения задания. *end_run_time* имеет **тип int**и значение по умолчанию NULL. *end_run_time*должны быть указаны в формате ЧЧММСС, где ЧЧ — 2-символьный час дня, mm — это две минуты дня, а SS — двузначное значение дня.  
   
-`[ @minimum_run_duration = ] minimum_run_duration`Минимальный период времени для завершения задания. *minimum_run_duration* имеет **тип int**и значение по умолчанию NULL. *minimum_run_duration*должны быть указаны в формате ЧЧММСС, где ЧЧ — 2-символьный час дня, mm — это две минуты дня, а SS — двузначное значение дня.  
+`[ @minimum_run_duration = ] minimum_run_duration` Минимальный период времени для завершения задания. *minimum_run_duration* имеет **тип int**и значение по умолчанию NULL. *minimum_run_duration*должны быть указаны в формате ЧЧММСС, где ЧЧ — 2-символьный час дня, mm — это две минуты дня, а SS — двузначное значение дня.  
   
-`[ @run_status = ] run_status`Состояние выполнения задания. *run_status* имеет **тип int**, значение по умолчанию NULL и может принимать одно из следующих значений.  
+`[ @run_status = ] run_status` Состояние выполнения задания. *run_status* имеет **тип int**, значение по умолчанию NULL и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|**0**|Ошибка|  
-|**1**|Успешно|  
+|**0**|Сбой|  
+|**1**|Выполнено|  
 |**2**|Повторить (только для этапа)|  
 |**3**|Отменено|  
 |**4**|Сообщение о проценте выполнения|  
 |**5**|Неизвестно|  
   
-`[ @minimum_retries = ] minimum_retries`Минимальное число повторных попыток выполнения задания. *minimum_retries* имеет **тип int**и значение по умолчанию NULL.  
+`[ @minimum_retries = ] minimum_retries` Минимальное число повторных попыток выполнения задания. *minimum_retries* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @oldest_first = ] oldest_first`Указывает, следует ли выводить выходные данные сначала с самыми старыми заданиями. *oldest_first* имеет **тип int**и значение по умолчанию **0**, которое сначала представляет последние задания. **1** в первую очередь представляет самые старые задания.  
+`[ @oldest_first = ] oldest_first` Указывает, следует ли выводить выходные данные сначала с самыми старыми заданиями. *oldest_first* имеет **тип int**и значение по умолчанию **0**, которое сначала представляет последние задания. **1** в первую очередь представляет самые старые задания.  
   
-`[ @server = ] 'server'`Имя сервера, на котором было выполнено задание. *Server* имеет тип **nvarchar (30)** и значение по умолчанию NULL.  
+`[ @server = ] 'server'` Имя сервера, на котором было выполнено задание. *Server* имеет тип **nvarchar (30)** и значение по умолчанию NULL.  
   
-`[ @mode = ] 'mode'`Определяет, будет ли SQL Server печатать все столбцы в результирующем наборе (**полная**) или сводку по столбцам. *mode* имеет тип **varchar (7)** и значение по умолчанию **Summary**.  
+`[ @mode = ] 'mode'` Определяет, будет ли SQL Server печатать все столбцы в результирующем наборе (**полная**) или сводку по столбцам. *mode* имеет тип **varchar (7)** и значение по умолчанию **Summary**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -163,8 +164,8 @@ EXEC dbo.sp_help_jobhistory
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [sp_purge_jobhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [sp_purge_jobhistory (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

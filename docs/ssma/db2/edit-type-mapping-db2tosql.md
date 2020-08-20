@@ -1,4 +1,5 @@
 ---
+description: Изменение сопоставления типов (DB2ToSQL)
 title: Изменение сопоставления типов (DB2ToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f93c4b7d-74fc-4856-bf42-035289918e83
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 5dc6cd8939dbc7d5d42417b06c938c9ae8d3f7e8
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 3e31f1422415a14c4e1fb497ff56806feeb9439e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937295"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463541"
 ---
 # <a name="edit-type-mapping-db2tosql"></a>Изменение сопоставления типов (DB2ToSQL)
 Диалоговое окно **Изменение сопоставления типов** позволяет указать, как типы сопоставляются между исходным и целевым объектами базы данных.  
@@ -27,7 +28,7 @@ ms.locfileid: "87937295"
   
 Сопоставления типов, связанных с таблицами, переопределяют сопоставления типов базы данных и проекта. Сопоставления, зависящие от базы данных, переопределяют сопоставления проектов.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
 **Тип источника**  
 Выберите исходный тип данных для соотнесения с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типом данных.  
   
@@ -44,6 +45,6 @@ ms.locfileid: "87937295"
   
 Если тип данных имеет переменную длину, в разделе **целевой тип**появится следующее поле:  
   
-**Заменить на**  
+**Replace with**  
 Укажите целевую длину для этого сопоставления. Например, для типа данных **nvarchar** можно ввести значение 20, чтобы указать, что указанный исходный тип данных должен быть сопоставлен с типом **nvarchar (20)**.  
   
