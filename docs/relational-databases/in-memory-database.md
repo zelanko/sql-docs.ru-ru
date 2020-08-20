@@ -1,4 +1,5 @@
 ---
+description: Системы и технологии баз данных в памяти
 title: Функции и технологии систем баз данных в памяти
 ms.date: 10/30/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: briancarrig
 ms.author: brcarrig
-ms.openlocfilehash: 1ac71b9cf171e66486c40310bfd8be0e7bc6ae91
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 88f965eadf0defbd75c859fa2308dd255f5c1486
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86911614"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470454"
 ---
 # <a name="in-memory-database-systems-and-technologies"></a>Системы и технологии баз данных в памяти
 
@@ -56,7 +57,7 @@ ms.locfileid: "86911614"
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-В статье [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] описано, как настроить энергонезависимую память (PMEM) с помощью служебной программы `ndctl` [энергонезависимая память](../linux/sql-server-linux-configure-pmem.md).
+В статье [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] описано, как настроить энергонезависимую память (PMEM) с помощью служебной программы `ndctl`[энергонезависимая память](../linux/sql-server-linux-configure-pmem.md).
 
 ## <a name="persisted-log-buffer"></a>Буфер сохраненного журнала
 

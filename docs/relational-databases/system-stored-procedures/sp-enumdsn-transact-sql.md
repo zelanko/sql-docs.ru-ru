@@ -1,4 +1,5 @@
 ---
+description: sp_enumdsn (Transact-SQL)
 title: sp_enumdsn (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 171cbc7d-7406-4cb0-8602-9405243bfd1d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 092866e2f8efd69ad0baccc73984dcf8a7db051c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: afc6b97a969aa833e96bd4d8c2ad1a35ae35d14b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891892"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469486"
 ---
 # <a name="sp_enumdsn-transact-sql"></a>sp_enumdsn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +46,7 @@ sp_enumdsn
 |-----------------|---------------|-----------------|  
 |**Имя источника данных**|**sysname**|Имя источника данных.|  
 |**Описание**|**varchar (255)**|Описание источника данных.|  
-|**Type**|**int**|Тип источника данных:<br /><br /> **1** = ODBC DSN<br /><br /> **3** = источник данных OLE DB|  
+|**Тип**|**int**|Тип источника данных:<br /><br /> **1** = ODBC DSN<br /><br /> **3** = источник данных OLE DB|  
 |**Имя поставщика**|**varchar (255)**|Имя поставщика OLE DB. Для ODBC DSN возвращается значение NULL.|  
   
 ## <a name="remarks"></a>Комментарии  

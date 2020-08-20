@@ -1,4 +1,5 @@
 ---
+description: sp_column_privileges_ex (Transact-SQL)
 title: sp_column_privileges_ex (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 98cb6e58-4007-40fc-b048-449fb2e7e6be
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ec17e4482a07d90ccf65e98f6697cc6b12e5fac1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d9d6eee0a85444171ae24d7ac991fb90a451f5d5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85871024"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469776"
 ---
 # <a name="sp_column_privileges_ex-transact-sql"></a>sp_column_privileges_ex (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,15 +44,15 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @table_server = ] 'table_server'`Имя связанного сервера, для которого возвращаются сведения. Аргумент *table_server* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @table_server = ] 'table_server'` Имя связанного сервера, для которого возвращаются сведения. Аргумент *table_server* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @table_name = ] 'table_name'`Имя таблицы, содержащей указанный столбец. Аргумент *table_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @table_name = ] 'table_name'` Имя таблицы, содержащей указанный столбец. Аргумент *table_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @table_schema = ] 'table_schema'`Схема таблицы. Аргумент *table_schema* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @table_schema = ] 'table_schema'` Схема таблицы. Аргумент *table_schema* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @table_catalog = ] 'table_catalog'`Имя базы данных, в которой находится указанный *table_name* . Аргумент *table_catalog* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @table_catalog = ] 'table_catalog'` Имя базы данных, в которой находится указанный *table_name* . Аргумент *table_catalog* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @column_name = ] 'column_name'`Имя столбца, для которого необходимо предоставить сведения о правах доступа. Аргумент *column_name* имеет тип **sysname**и значение по умолчанию NULL (все общие).  
+`[ @column_name = ] 'column_name'` Имя столбца, для которого необходимо предоставить сведения о правах доступа. Аргумент *column_name* имеет тип **sysname**и значение по умолчанию NULL (все общие).  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  Следующая таблица показывает столбцы результирующего набора. Возвращаемые результаты упорядочиваются по **TABLE_QUALIFIER**, **table_owner**, **table_name**, **column_name**и **привилегии**.  

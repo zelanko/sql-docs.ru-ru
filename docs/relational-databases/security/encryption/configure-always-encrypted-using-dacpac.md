@@ -1,4 +1,5 @@
 ---
+description: Настройка шифрования столбцов с помощью Always Encrypted с пакетом приложения уровня данных
 title: Настройка шифрования столбцов с помощью Always Encrypted с пакетом приложения уровня данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/26/2019
@@ -12,12 +13,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc10c556999d843456728289acb72bddb3b0784e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4bb90c0f00087f0d2b0b76b3fa66b8cca2f4707c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765131"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470116"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-a-dac-package"></a>Настройка шифрования столбцов с помощью Always Encrypted с пакетом приложения уровня данных 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]

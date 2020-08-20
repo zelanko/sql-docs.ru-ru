@@ -1,4 +1,5 @@
 ---
+description: Фильтрация опубликованных данных для репликации слиянием
 title: Фильтрация опубликованных данных для репликации слиянием | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 46c5023d-7a3b-4455-becc-e159fcb5d6c4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fdfd7525ade2500ee144bb57c030350a532ded64
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7b84aeb4deba329f9bd4cfb4a96e5a728ab21253
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901253"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470276"
 ---
 # <a name="filter-published-data-for-merge-replication"></a>Фильтрация опубликованных данных для репликации слиянием
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85901253"
   
  Фильтр не должен включать столбец **rowguidcol** , который используется в процессе репликации для идентификации строк. По умолчанию этот столбец добавляется в момент настройки репликации слиянием и называется **rowguid**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Публикация данных и объектов базы данных](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Перемещение существующего индекса в другую файловую группу
 title: Перемещение существующего индекса в другую файловую группу | Документация Майкрософт
 ms.custom: ''
 ms.date: 02/17/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 01b7f9191c34e9c83c472abfb560c365e9e5f9b0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: abbd77be3e20cc69bc12cd69f07fa82ec99d95db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771708"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470474"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>Перемещение существующего индекса в другую файловую группу
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: Изменение свойств публикации и статьи
 title: Изменение свойств публикации и статьи | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
@@ -17,12 +18,12 @@ ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8d2da3afadaf9dc56a7003b007be28cf6c3f1c63
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b11e768bac90b70174c736ae828c39a9a78b3bb9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914453"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470178"
 ---
 # <a name="change-publication-and-article-properties"></a>Изменение свойств публикации и статьи
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "86914453"
   
 ## <a name="publication-properties-for-snapshot-and-transactional-replication"></a>Свойства публикации для репликации моментальных снимков и репликации транзакций.  
   
-|Description|Хранимая процедура|Свойства|Требования|  
+|Описание|Хранимая процедура|Свойства|Требования|  
 |-----------------|----------------------|----------------|------------------|  
 |Изменение формата моментального снимка.|**sp_changepublication**|**sync_method**|Создание моментального снимка.|  
 |Изменение расположения моментального снимка.|**sp_changepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|Создание моментального снимка.|  
@@ -44,7 +45,7 @@ ms.locfileid: "86914453"
   
 ## <a name="article-properties-for-snapshot-and-transactional-replication"></a>Свойства статьи для репликации моментальных снимков и репликации транзакций.  
   
-|Description|Хранимая процедура|Свойства|Требования|  
+|Описание|Хранимая процедура|Свойства|Требования|  
 |-----------------|----------------------|----------------|------------------|  
 |Удаление статьи|**sp_droparticle**|Все параметры.|Статьи могут быть удалены до создания подписок. С помощью хранимых процедур можно удалить подписку на статью. При использовании [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]вся подписка должна быть удалена, создана повторно и синхронизирована. Дополнительные сведения см. в статье [Добавление и удаление статей в существующих публикациях](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).|  
 |Изменение фильтра столбцов.|**sp_articlecolumn**|`@column`<br /><br /> `@operation`|Создание моментального снимка.<br /><br /> Повторная инициализация подписок.|  
@@ -62,7 +63,7 @@ ms.locfileid: "86914453"
   
 ## <a name="publication-properties-for-merge-replication"></a>Свойства публикации для репликации слиянием  
   
-|Description|Хранимая процедура|Свойства|Требования|  
+|Описание|Хранимая процедура|Свойства|Требования|  
 |-----------------|----------------------|----------------|------------------|  
 |Изменение формата моментального снимка|**sp_changemergepublication**|**sync_mode**|Создание моментального снимка.|  
 |Изменение расположения моментального снимка.|**sp_changemergepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|Создание моментального снимка.|  
@@ -81,7 +82,7 @@ ms.locfileid: "86914453"
   
 ## <a name="article-properties-for-merge-replication"></a>Свойства статьи для репликации слиянием  
   
-|Description|Хранимая процедура|Свойства|Требования|  
+|Описание|Хранимая процедура|Свойства|Требования|  
 |-----------------|----------------------|----------------|------------------|  
 |Удаление статьи с последним параметризованным фильтром в публикации.|**sp_dropmergearticle**|Все параметры|Создание моментального снимка.<br /><br /> Повторная инициализация подписок.|  
 |Удаление статьи, являющейся родителем в фильтре соединения или в логической записи (это побочный эффект удаления соединения).|**sp_dropmergearticle**|Все параметры|Создание моментального снимка.<br /><br /> Повторная инициализация подписок.|  

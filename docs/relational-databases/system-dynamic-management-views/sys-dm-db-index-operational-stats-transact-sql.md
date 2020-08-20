@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_index_operational_stats (Transact-SQL)
 title: sys. dm_db_index_operational_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b2bc0b80ec19865c89376ac53dd333624524d18
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: b45f7ae858a9769c1563d34397119b75273e3edc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394779"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469906"
 ---
 # <a name="sysdm_db_index_operational_stats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -188,7 +189,7 @@ sys.dm_db_index_operational_stats (
 |**page_compression_attempt_count**|**bigint**|Количество страниц, которые были оценены как пригодные для сжатия на уровне страницы для конкретных секций таблицы, индекса или индексированного представления. Включает несжатые страницы, поскольку это не привело бы к значительной экономии. Всегда 0 для индекса columnstore.|    
 |**page_compression_success_count**|**bigint**|Количество страниц данных, которые были сжаты с помощью сжатия PAGE для конкретной секции таблицы, индекса или индексированного представления. Всегда 0 для индекса columnstore.|    
     
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>Комментарии    
  Этот объект DMO не принимает коррелированные параметры из CROSS APPLY и OUTER APPLY.    
     
  Для отслеживания продолжительности ожидания пользователями считывания из таблицы, индекса или секции и записи в таблицу, индекс или секцию, а также для определения таблиц или индексов, в которых наблюдается значительная интенсивность операций ввода-вывода или присутствуют перегруженные участки, можно использовать представление **sys.dm_db_index_operational_stats**.    
@@ -286,7 +287,7 @@ GO
     
 ```    
     
-### <a name="b-returning-information-for-all-tables-and-indexes"></a>Б) Возвращение сведений для всех таблиц и индексов    
+### <a name="b-returning-information-for-all-tables-and-indexes"></a>Б. Возвращение сведений для всех таблиц и индексов    
  В следующем примере возвращаются сведения по всем таблицам и индексам в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Выполнение этого запроса требует разрешения VIEW SERVER STATE.    
     
 ```    

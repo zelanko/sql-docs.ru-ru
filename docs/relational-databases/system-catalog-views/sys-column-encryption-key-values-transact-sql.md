@@ -1,4 +1,5 @@
 ---
+description: sys. column_encryption_key_values (Transact-SQL)
 title: sys. column_encryption_key_values (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/15/2019
@@ -20,12 +21,12 @@ ms.assetid: 440875ab-b0e9-4966-8c16-01503558fedd
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c9c17ef0384d1b4ef1bc5534ffeffa8b2ba3d598
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: aee9c14d1b59055cc968e9b51fa2e07005ae94bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718882"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470020"
 ---
 # <a name="syscolumn_encryption_key_values-transact-sql"></a>sys. column_encryption_key_values (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "85718882"
 |**column_encryption_key_id**|**int**|Идентификатор CEK в базе данных.|  
 |**column_master_key_id**|**int**|Идентификатор главного ключа столбца, который использовался для шифрования значения CEK.|  
 |**encrypted_value**|**varbinary(8000)**|Значение CEK, зашифрованное с помощью CMK, указанного в column_master_key_id.|  
-|**encryption_algorithm_name**|**sysname**|Имя алгоритма, используемого для шифрования значения CEK.<br /><br /> Имя алгоритма шифрования значения. Алгоритм для системных поставщиков должен быть **RSA_OAEP**.|  
+|**encryption_algorithm_name**|**sysname**|Имя алгоритма, используемого для шифрования значения CEK.<br /><br /> Имя алгоритма шифрования значения. Алгоритм для системных поставщиков должен быть  **RSA_OAEP**.|  
   
 ## <a name="permissions"></a>Разрешения  
  Требует разрешения на **Просмотр любого столбца с ключом шифрования** .  
@@ -45,14 +46,14 @@ ms.locfileid: "85718882"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>См. также  
- [Создание ключа шифрования СТОЛБЦА &#40;&#41;Transact-SQL](../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
+ [Создание ключа шифрования СТОЛБЦА &#40;&#41;Transact-SQL ](../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
  [ИЗМЕНЕНИЕ ключа шифрования СТОЛБЦА &#40;языке Transact-SQL&#41;](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
- [УДАЛИТЬ ключ шифрования СТОЛБЦА &#40;&#41;Transact-SQL](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
- [Создание главного ключа СТОЛБЦА &#40;&#41;Transact-SQL](../../t-sql/statements/create-column-master-key-transact-sql.md)   
- [Представления каталога безопасности &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [УДАЛИТЬ ключ шифрования СТОЛБЦА &#40;&#41;Transact-SQL ](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
+ [Создание главного ключа СТОЛБЦА &#40;&#41;Transact-SQL ](../../t-sql/statements/create-column-master-key-transact-sql.md)   
+ [Представления каталога безопасности (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [sys. column_encryption_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   
  [sys. column_master_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)   
- [sys. Columns &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+ [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [Always Encrypted с безопасным енклавес](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
  [Общие сведения об управлении ключами для Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   

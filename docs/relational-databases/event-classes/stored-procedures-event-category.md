@@ -1,4 +1,5 @@
 ---
+description: Категория событий Stored Procedures
 title: Категория событий Stored Procedures | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,20 +15,20 @@ ms.assetid: 71bebaa3-a05a-4695-b349-078cecd0949a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 766ea798faa2df28520fa93c852add32e6778c80
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c75ae77c338f7c0d8374a2ca35e947d68f4482c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790974"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470696"
 ---
 # <a name="stored-procedures-event-category"></a>Категория событий Stored Procedures
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  Категория событий **Stored Procedures** содержит общие события хранимых процедур.  
+   Категория событий **Stored Procedures** содержит общие события хранимых процедур.  
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Класс событий RPC:Completed](../../relational-databases/event-classes/rpc-completed-event-class.md)|Указывает на завершение удаленного вызова процедуры (RPC).|  
 |[Класс событий PreConnect:Completed](../../relational-databases/event-classes/preconnect-completed-event-class.md)|Указывает, что функция-классификатор регулятора ресурсов завершает выполнение.|  

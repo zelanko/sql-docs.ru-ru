@@ -1,4 +1,5 @@
 ---
+description: Поддержка SQLGetInfo
 title: Поддержка SQLGetInfo | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 57326f57-daba-46b6-b0be-6c97213b9ef1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a21c035a14814f51d4344894ef253b2cc844f4c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cff18a23c7d8c4526fc86904d75375ed5aaaf5a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307805"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471235"
 ---
 # <a name="sqlgetinfo-support"></a>Поддержка SQLGetInfo
 При использовании ODBC 2. Приложение *x* вызывает **SQLGETINFO** для драйвера ODBC 3 *. x* , поэтому должны поддерживаться аргументы *инфотипе* в следующей таблице.  
   
-|*инфотипе*|Результаты|  
+|*инфотипе*|Возвращаемое значение|  
 |----------------|-------------|  
-|SQL_ALTER_TABLE (ODBC 2,0) **Примечание.** этот тип данных не является устаревшим; битовые маски в столбце справа являются устаревшими.|Битовая маска SQLINTEGER, перечисление предложений в инструкции **ALTER TABLE** , поддерживаемой источником данных.<br /><br /> Для определения поддерживаемых предложений используются следующие битовые маски:<br /><br /> SQL_AT_DROP_COLUMN = возможность удаления столбцов поддерживается. Указывает, является ли это действием каскадом или ограничением, определяемым драйвером. (ODBC 2,0)<br /><br /> SQL_AT_ADD_COLUMN = возможность добавления нескольких столбцов в одной инструкции ALTER TABLE поддерживается. Этот бит не сочетается с другими SQL_AT_ADD_COLUMN_XXX битами или SQL_AT_CONSTRAINT_XXX битами. (ODBC 2,0)|  
+|SQL_ALTER_TABLE (ODBC 2,0) **Примечание.**  этот тип данных не является устаревшим; битовые маски в столбце справа являются устаревшими.|Битовая маска SQLINTEGER, перечисление предложений в инструкции **ALTER TABLE** , поддерживаемой источником данных.<br /><br /> Для определения поддерживаемых предложений используются следующие битовые маски:<br /><br /> SQL_AT_DROP_COLUMN = возможность удаления столбцов поддерживается. Указывает, является ли это действием каскадом или ограничением, определяемым драйвером. (ODBC 2,0)<br /><br /> SQL_AT_ADD_COLUMN = возможность добавления нескольких столбцов в одной инструкции ALTER TABLE поддерживается. Этот бит не сочетается с другими SQL_AT_ADD_COLUMN_XXX битами или SQL_AT_CONSTRAINT_XXX битами. (ODBC 2,0)|  
 |SQL_FETCH_DIRECTION (ODBC 1,0)<br /><br /> Этот тип информации появился в ODBC 1,0; Каждая битовая маска помечается версией, в которой она была представлена.|Битовая маска SQLINTEGER, перечисление поддерживаемых параметров направления выборки.<br /><br /> Следующие битовые маски используются вместе с флагом для определения поддерживаемых параметров:<br /><br /> SQL_FD_FETCH_NEXT (ODBC 1,0) SQL_FD_FETCH_FIRST (ODBC 1,0) SQL_FD_FETCH_LAST (ODBC 1,0) SQL_FD_FETCH_PRIOR (ODBC 1,0) SQL_FD_FETCH_ABSOLUTE (ODBC 1,0) SQL_FD_FETCH_RELATIVE (ODBC 1,0)|  
 |SQL_LOCK_TYPES (ODBC 2,0)|Битовая маска SQLINTEGER, перечисление поддерживаемых типов блокировки для аргумента *флокк* в **SQLSetPos**.<br /><br /> Следующие битовые маски используются вместе с флагом для определения поддерживаемых типов блокировки:<br /><br /> SQL_LCK_NO_CHANGE SQL_LCK_EXCLUSIVE SQL_LCK_UNLOCK|  
 |SQL_ODBC_API_CONFORMANCE (ODBC 1,0)|Значение SQLSMALLINT, указывающее уровень соответствия ODBC.<br /><br /> SQL_OAC_NONE = нет<br /><br /> SQL_OAC_LEVEL1 = поддерживаемый уровень 1<br /><br /> SQL_OAC_LEVEL2 = поддерживаемый уровень 2|  

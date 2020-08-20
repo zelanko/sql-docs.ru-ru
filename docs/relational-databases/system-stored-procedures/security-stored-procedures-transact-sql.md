@@ -1,4 +1,5 @@
 ---
+description: Хранимые процедуры безопасности (Transact-SQL)
 title: Хранимые процедуры безопасности (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2019
@@ -17,18 +18,18 @@ ms.assetid: 62b72907-7e95-4c97-9891-0c45d5b678ce
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ded4d62aa64ad6c45657924e187a859bfa91b61
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 5050644389090e826f7c86593e9c68aea4cc4863
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245591"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469811"
 ---
 # <a name="security-stored-procedures-transact-sql"></a>Хранимые процедуры безопасности (Transact-SQL)
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]поддерживает следующие системные хранимые процедуры, используемые для управления безопасностью. Некоторые из этих хранимых процедур являются устаревшими, но остаются доступными для обратной совместимости. Разделы для устаревших процедур содержат их замену.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает следующие системные хранимые процедуры, используемые для управления безопасностью. Некоторые из этих хранимых процедур являются устаревшими, но остаются доступными для обратной совместимости. Разделы для устаревших процедур содержат их замену.  
 
 :::row:::
     :::column:::
@@ -276,8 +277,8 @@ ms.locfileid: "87245591"
     :::column-end:::
 :::row-end:::
   
-## <a name="see-also"></a>См. также:  
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Функции безопасности &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   
   

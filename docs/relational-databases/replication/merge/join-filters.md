@@ -1,4 +1,5 @@
 ---
+description: фильтры соединения
 title: Фильтры соединения | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e6c68c2b2b2af6f32bcec900211b9185004caaa8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a667c6055a43886239102bd9985d06fa714a24d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882473"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470270"
 ---
 # <a name="join-filters"></a>фильтры соединения
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -87,7 +88,7 @@ SalesOrderHeader.SalesOrderID = SalesOrderDetail.SalesOrderID
   
      Настоятельно рекомендуется такую логику выражать в фильтре соединения, а не во вложенном запросе. Если приложение требует, чтобы фильтр строк использовал вложенный запрос, убедитесь, что вложенный запрос обращается только к поисковым данным, которые не изменяются.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Фильтрация опубликованных данных для репликации слиянием](../../../relational-databases/replication/merge/filter-published-data-for-merge-replication.md)   
  [Параметризованные фильтры строк](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   

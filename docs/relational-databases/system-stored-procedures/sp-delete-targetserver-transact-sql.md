@@ -1,4 +1,5 @@
 ---
+description: sp_delete_targetserver (Transact-SQL)
 title: sp_delete_targetserver (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4489e34ec83bd3981e464e72cb8e72885fcc994f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 290da3e982e98287305e2e9f277037fea0e8f86a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85862188"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469614"
 ---
 # <a name="sp_delete_targetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +42,11 @@ sp_delete_targetserver [ @server_name = ] 'server'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @server_name = ] 'server'`Имя сервера, который необходимо удалить в качестве доступного целевого сервера. *Server* имеет тип **nvarchar (30)** и не имеет значения по умолчанию.  
+`[ @server_name = ] 'server'` Имя сервера, который необходимо удалить в качестве доступного целевого сервера. *Server* имеет тип **nvarchar (30)** и не имеет значения по умолчанию.  
   
-`[ @clear_downloadlist = ] clear_downloadlist`Указывает, следует ли очистить список загрузки для целевого сервера. *clear_downloadlist* имеет тип **bit**и значение по умолчанию **1**. Если *clear_downloadlist* равен **1**, процедура очищает список загрузки для сервера перед удалением сервера. Если значение *clear_downloadlist* равно **0**, список загрузки не удаляется.  
+`[ @clear_downloadlist = ] clear_downloadlist` Указывает, следует ли очистить список загрузки для целевого сервера. *clear_downloadlist* имеет тип **bit**и значение по умолчанию **1**. Если *clear_downloadlist* равен **1**, процедура очищает список загрузки для сервера перед удалением сервера. Если значение *clear_downloadlist* равно **0**, список загрузки не удаляется.  
   
-`[ @post_defection = ] post_defection`Указывает, следует ли отправлять инструкцию по исключению на целевой сервер. *post_defection* имеет тип **bit**и значение по умолчанию 1. Если *post_defection* равен **1**, процедура отправляет инструкцию по исключению на целевой сервер перед удалением сервера. Если *post_defection* равен **0**, процедура не выполняет инструкцию по исключению на целевом сервере.  
+`[ @post_defection = ] post_defection` Указывает, следует ли отправлять инструкцию по исключению на целевой сервер. *post_defection* имеет тип **bit**и значение по умолчанию 1. Если *post_defection* равен **1**, процедура отправляет инструкцию по исключению на целевой сервер перед удалением сервера. Если *post_defection* равен **0**, процедура не выполняет инструкцию по исключению на целевом сервере.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -71,7 +72,7 @@ EXEC dbo.sp_delete_targetserver
 GO  
 ```  
   
-## <a name="see-also"></a>Дополнительно  
+## <a name="see-also"></a>См. также  
  [sp_help_targetserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)   
  [sp_msx_defect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

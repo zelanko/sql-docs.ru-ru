@@ -1,4 +1,5 @@
 ---
+description: sp_describe_parameter_encryption (Transact-SQL)
 title: sp_describe_parameter_encryption (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 07/27/2016
@@ -18,11 +19,12 @@ ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ccba808ada0276933608b9297b6c416c11cdb194
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d3f4b5dd2d6c63688046eda4a8b752bc10b9c943
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998954"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469586"
 ---
 # <a name="sp_describe_parameter_encryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -64,7 +66,7 @@ sp_describe_parameter_encryption
 |**column_encryption_key_ordinal**|**int**|Идентификатор строки в результирующем наборе.|  
 |**database_id**|**int**|Идентификатор базы данных.|  
 |**column_encryption_key_id**|**int**|Идентификатор ключа шифрования столбца. Примечание. Этот идентификатор обозначает строку в представлении каталога [sys. column_encryption_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) .|  
-|**column_encryption_key_version**|**int**|Зарезервировано для последующего использования. В настоящее время всегда содержит 1.|  
+|**column_encryption_key_version**|**int**|Зарезервировано для будущего использования. В настоящее время всегда содержит 1.|  
 |**column_encryption_key_metadata_version**|**Binary (8)**|Отметка времени, представляющая время создания ключа шифрования столбца.|  
 |**column_encryption_key_encrypted_value**|**varbinary (4000)**|Зашифрованное значение ключа шифрования столбца.|  
 |**column_master_key_store_provider_name**|**sysname**|Имя поставщика для хранилища ключей, содержащего главный ключ столбца, который был использован для создания зашифрованного значения ключа шифрования столбца.|  
@@ -82,7 +84,7 @@ sp_describe_parameter_encryption
 |**column_encryption_key_ordinal**|**int**|Код строки в первом результирующем наборе. Строка, на которую указывает ссылка, описывает ключ шифрования столбца, настроенный для столбца, параметр соответствует.|  
 |**column_encryption_normalization_rule_version**|**tinyint**|Номер версии алгоритма нормализации типа.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Комментарии  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Драйвер клиента, поддерживающий Always encrypted, автоматически вызывает **sp_describe_parameter_encryption** для получения метаданных шифрования для параметризованных запросов, выданных приложением. Впоследствии драйвер использует метаданные шифрования для шифрования значений параметров, которые соответствуют столбцам базы данных, защищенным с помощью Always Encrypted, и заменяет значения параметров в виде открытого текста, переданные приложением, на значения зашифрованных параметров перед отправкой запроса ядру СУБД.  
   
 ## <a name="permissions"></a>Разрешения  

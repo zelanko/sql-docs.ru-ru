@@ -1,4 +1,5 @@
 ---
+description: Переименование базы данных
 title: Переименование базы данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/02/2018
@@ -14,12 +15,12 @@ ms.assetid: 44c69d35-abcb-4da3-9370-5e0bc9a28496
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ff09925b3fd51debbdeda647cd1ae7255f5fa0d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0d6131b3481be154cda88aee47bd226ce293613e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728395"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471188"
 ---
 # <a name="rename-a-database"></a>Переименование базы данных
 
@@ -40,7 +41,7 @@ ms.locfileid: "85728395"
   
      [Transact-SQL](#rename-a-database-using-transact-sql)  
   
-- **Дальнейшие действия.**  [После переименования базы данных](#backup-after-renaming-a-database)  
+- **Follow Up:**  [After renaming a database](#backup-after-renaming-a-database)  
 
 > [!NOTE]
 > Чтобы переименовать базу данных в хранилище данных SQL Azure или в Parallel Data Warehouse, используйте инструкцию [RENAME (Transact-SQL)](../../t-sql/statements/rename-transact-sql.md).
@@ -128,7 +129,7 @@ GO
 ```
 
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
 - [Идентификаторы баз данных](../../relational-databases/databases/database-identifiers.md)  

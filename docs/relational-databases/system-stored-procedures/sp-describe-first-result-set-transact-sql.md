@@ -1,4 +1,5 @@
 ---
+description: sp_describe_first_result_set (Transact-SQL)
 title: sp_describe_first_result_set (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/17/2018
@@ -18,12 +19,12 @@ ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8e3696f537cc538e011d3d037e82e54ed892da35
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 451884c5055ee0be3ceeb95f4fe3c9dddb388bc0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394388"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469625"
 ---
 # <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,13 +43,13 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ \@tsql = ] 'Transact-SQL_batch'`Одна или несколько [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций. *Transact-SQL_batch* может иметь тип **nvarchar (***n***)** или **nvarchar (max)**.  
+`[ \@tsql = ] 'Transact-SQL_batch'` Одна или несколько [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций. *Transact-SQL_batch* может иметь тип **nvarchar (***n***)** или **nvarchar (max)**.  
   
 `[ \@params = ] N'parameters'`\@params предоставляет строку объявления для параметров [!INCLUDE[tsql](../../includes/tsql-md.md)] пакета, что аналогично sp_executesql. Параметры могут быть **nvarchar (n)** или **nvarchar (max)**.  
   
  — Одна строка, содержащая определения всех параметров, внедренных в [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. Строка должна представлять собой константу в Юникоде либо переменную в этом же формате. Определение каждого параметра состоит из имени параметра и типа данных. *n* — это заполнитель, указывающий дополнительные определения параметров. Каждый параметр, указанный в инструкции, должен быть определен в \@ параметре params. Если [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкция или пакет в инструкции не содержит параметров, \@ параметр params не требуется. Значением по умолчанию для этого аргумента является NULL.  
   
-`[ \@browse_information_mode = ] tinyint`Указывает, возвращаются ли дополнительные ключевые столбцы и сведения об исходной таблице. Если он имеет значение 1, то каждый запрос анализируется аналогично анализу запроса с параметром FOR BROWSE. Возвращаются дополнительные ключевые столбцы и сведения об исходной таблице.  
+`[ \@browse_information_mode = ] tinyint` Указывает, возвращаются ли дополнительные ключевые столбцы и сведения об исходной таблице. Если он имеет значение 1, то каждый запрос анализируется аналогично анализу запроса с параметром FOR BROWSE. Возвращаются дополнительные ключевые столбцы и сведения об исходной таблице.  
   
 -   Если задано значение 0, то данные не возвращаются.  
   
@@ -104,7 +105,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**tds_collation_id**|**int NULL**|Для внутреннего использования.|  
 |**tds_collation_sort_id**|**tinyint NULL**|Для внутреннего использования.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  **sp_describe_first_result_set** гарантирует, что если процедура возвращает первые метаданные результирующего набора для (гипотетического) пакета а и, если впоследствии выполняется пакет (a), пакет будет либо (1) выдаст ошибку времени оптимизации, (2) вызывает ошибку времени выполнения, (3) не возвращает результирующий набор или (4) возвращает первый результирующий набор с теми же метаданными, описанными **sp_describe_first_result_set**.  
   
  Имя, допустимость значений NULL и тип данных могут различаться. Если **sp_describe_first_result_set** возвращает пустой результирующий набор, то гарантируется, что пакетное выполнение вернет не результирующие наборы.  
@@ -158,7 +159,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
 ### <a name="typical-examples"></a>Наиболее распространенные примеры  
   
-#### <a name="a-simple-example"></a>А) Простой пример  
+#### <a name="a-simple-example"></a>A. Простой пример  
  В следующем примере описывается результирующий набор, возвращаемый одним запросом.  
   
 ```  
@@ -175,7 +176,7 @@ WHERE object_id = @id1'
 , @params = N'@id1 int'  
 ```  
   
-#### <a name="b-browse-mode-examples"></a>Б) Примеры режима просмотра  
+#### <a name="b-browse-mode-examples"></a>Б. Примеры режима просмотра  
  В следующих трех примерах показаны ключевые различия между разными режимами просмотра сведений. В результаты запроса включены только столбцы, относящиеся к теме.  
   
  В примере используется значение 0, которое указывает, что возврата сведений не происходит.  
@@ -398,7 +399,7 @@ N'
   
  Result: **int NULL** , так как dbo. T1. a и S1. T1. a имеют тип **int** и разную допустимость значений NULL.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
  [sys. dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
  [sys. dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  

@@ -1,4 +1,5 @@
 ---
+description: Устранение неполадок (драйвер ODBC для Visual FoxPro)
 title: Устранение неполадок (драйвер ODBC для Visual FoxPro) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: fd478dd8-666a-4f0a-a2d6-b94e81cbbe4b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 70b035069c0be88d05a3aa5e17b96af991c27405
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 73f98f66a09b0ff17987186103b38643047f1762
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303035"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471437"
 ---
 # <a name="troubleshooting-visual-foxpro-odbc-driver"></a>Устранение неполадок (драйвер ODBC для Visual FoxPro)
 В следующих разделах рассматриваются способы повышения производительности и решения проблем, которые могут возникнуть при использовании драйвера ODBC для Visual FoxPro.  

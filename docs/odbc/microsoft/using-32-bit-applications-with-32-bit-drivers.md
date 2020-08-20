@@ -1,4 +1,5 @@
 ---
+description: Использование 32-разрядных приложений с 32-разрядными драйверами
 title: Использование 32-разрядных приложений с 32-разрядными драйверами | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0cdd5788-5642-4280-8d53-b4ec461aafa1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 31512f9339b9d46225bb4f1198cb617a48509acb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 69005071c83047471e76f38160265bc35cdccd4b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307605"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471368"
 ---
 # <a name="using-32-bit-applications-with-32-bit-drivers"></a>Использование 32-разрядных приложений с 32-разрядными драйверами
 Вы можете запускать 32-разрядные приложения с 32-разрядными драйверами. 32-разрядные приложения и 32-разрядные драйверы используют API® Win32.  
@@ -39,8 +40,8 @@ ms.locfileid: "81307605"
   
 |Имя файла|Описание|  
 |---------------|-----------------|  
-|Библиотеками odbc32. dll|32-разрядный диспетчер драйверов|  
-|Odbccp32. dll|32-разрядная библиотека DLL установщика|  
-|Файла odbcad32. exe|32-разрядная программа администрирования ODBC|  
+|Odbc32.dll|32-разрядный диспетчер драйверов|  
+|Odbccp32.dll|32-разрядная библиотека DLL установщика|  
+|Odbcad32.exe|32-разрядная программа администрирования ODBC|  
 |Odbcinst. hlp|Файл справки установщика|  
-|Msvcrt40. dll|Библиотека времени выполнения C|
+|Msvcrt40.dll|Библиотека времени выполнения C|

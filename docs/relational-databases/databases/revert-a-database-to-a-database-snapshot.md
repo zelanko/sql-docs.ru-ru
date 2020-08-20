@@ -1,4 +1,5 @@
 ---
+description: Восстановление базы данных до состояния, сохраненного в моментальном снимке
 title: Восстановление базы данных из моментального снимка | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/09/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 1a9c34408dd1f7731579830802fd8ac62d1f0bae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0d4551044d0db95cfa8abaf177d683626c666dcf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759037"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471159"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Восстановление базы данных до состояния, сохраненного в моментальном снимке
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85759037"
   
      [Безопасность](#Security)  
   
--   **Восстановление базы данных из моментального снимка с помощью**:  [Transact-SQL](#TsqlProcedure)  
+-   **To Revert a Database to a Database Snapshot, using:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
@@ -100,7 +101,7 @@ ms.locfileid: "85759037"
   
      Чтобы выполнить операцию восстановления базы данных-источника, необходимо обладать разрешением RESTORE DATABASE. Чтобы восстановить базу данных, необходимо ввести следующую инструкцию Transact-SQL.  
   
-     RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=** _database_snapshot_name_  
+     RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=**_database_snapshot_name_  
   
      где *database_name* — это база данных-источник, а *database_snapshot_name* — имя моментального снимка, к состоянию на момент создания которого необходимо восстановить базу данных. Обратите внимание, что в данной инструкции необходимо задавать имя моментального снимка, а не устройство резервного копирования.  
   

@@ -1,4 +1,5 @@
 ---
+description: sp_addtabletocontents (Transact-SQL)
 title: sp_addtabletocontents (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2ea27001-74f4-463e-bf1b-b6b5a86b9219
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 928d601fe544432b669b84b8d8a819405bcfbc7e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d0363795187e586a7a37481505240b74690aa425
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85876044"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469773"
 ---
 # <a name="sp_addtabletocontents-transact-sql"></a>sp_addtabletocontents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,16 +40,16 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @table_name = ] 'table_name'`Имя таблицы. Аргумент *table_name* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @table_name = ] 'table_name'` Имя таблицы. Аргумент *table_name* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @owner_name = ] 'owner_name'`Имя владельца таблицы. Аргумент *owner_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @owner_name = ] 'owner_name'` Имя владельца таблицы. Аргумент *owner_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @filter_clause = ] 'filter_clause'`Указывает предложение фильтра, которое управляет тем, какие строки недавно загруженных данных должны быть добавлены в таблицы отслеживания слияния. *filter_clause* имеет тип **nvarchar (4000)** и значение по умолчанию NULL. Если *filter_clause* имеет **значение NULL**, добавляются все строки с множественной загрузкой.  
+`[ @filter_clause = ] 'filter_clause'` Указывает предложение фильтра, которое управляет тем, какие строки недавно загруженных данных должны быть добавлены в таблицы отслеживания слияния. *filter_clause* имеет тип **nvarchar (4000)** и значение по умолчанию NULL. Если *filter_clause* имеет **значение NULL**, добавляются все строки с множественной загрузкой.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  **sp_addtabletocontents** используется только в репликации слиянием.  
   
  Строки в *table_name* называются их **ROWGUIDCOL** , а ссылки добавляются в таблицы отслеживания слияния. **sp_addtabletocontents** следует использовать после выполнения операции с массовым копированием данных в таблицу, опубликованную с помощью репликации слиянием. Хранимая процедура инициирует отслеживание строк, которые были скопированы, и обеспечивает их участие в следующей синхронизации.  
@@ -56,7 +57,7 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_addtabletocontents**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

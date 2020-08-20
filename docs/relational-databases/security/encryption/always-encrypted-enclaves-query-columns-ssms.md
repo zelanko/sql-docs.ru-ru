@@ -1,4 +1,5 @@
 ---
+description: Выполнение запросов к столбцам с помощью Always Encrypted с безопасными анклавами с использованием SSMS
 title: Выполнение запросов к столбцам с помощью Always Encrypted с безопасными анклавами с использованием SSMS | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/31/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 50f44a01383a307ac462c0f4fcb3e9e3f67d66fa
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 74149cdcf8dd12280103c592c5a8662dddf4e750
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411510"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470096"
 ---
 # <a name="query-columns-using-always-encrypted-with-secure-enclaves-with-ssms"></a>Выполнение запросов к столбцам с помощью Always Encrypted с безопасными анклавами с использованием SSMS
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "87411510"
 ## <a name="next-steps"></a>Next Steps
 - [Разработка приложений с помощью Always Encrypted с безопасными анклавами](always-encrypted-enclaves-client-development.md)
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 - [Руководство. Начало работы с Always Encrypted с безопасными анклавами с использованием SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md)
 - [Настройка шифрования столбцов на месте с помощью Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql.md)
 - [Создание и использование индексов в столбцах с помощью Always Encrypted с безопасными анклавами](always-encrypted-enclaves-create-use-indexes.md)

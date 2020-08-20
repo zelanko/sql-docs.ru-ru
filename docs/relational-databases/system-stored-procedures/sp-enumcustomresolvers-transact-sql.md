@@ -1,4 +1,5 @@
 ---
+description: sp_enumcustomresolvers (Transact-SQL)
 title: sp_enumcustomresolvers (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 81bd0d3a-48dc-42b1-b662-c630f61fc630
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ecff860e5dc101cc02b3e5fd7b97569510a8cf68
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2579e1d099d0543b1ed8d14bccef877bb892c64e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891904"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469520"
 ---
 # <a name="sp_enumcustomresolvers-transact-sql"></a>sp_enumcustomresolvers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @distributor = ] 'distributor'`Имя распространителя, в котором находится пользовательский сопоставитель. Аргумент *распространитель* имеет тип **sysname**и значение по умолчанию NULL. *Этот аргумент является устаревшим и будет удален в следующем выпуске.*  
+`[ @distributor = ] 'distributor'` Имя распространителя, в котором находится пользовательский сопоставитель. Аргумент *распространитель* имеет тип **sysname**и значение по умолчанию NULL. *Этот аргумент является устаревшим и будет удален в следующем выпуске.*  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -58,7 +59,7 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** и **db_owner** предопределенной роли базы данных могут выполнять **sp_enumcustomresolvers**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Реализация обработчика бизнес-логики для статьи публикации слиянием](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
  [Реализация пользовательского сопоставителя конфликтов для статьи публикации слиянием](../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)   
  [sp_lookupcustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lookupcustomresolver-transact-sql.md)   

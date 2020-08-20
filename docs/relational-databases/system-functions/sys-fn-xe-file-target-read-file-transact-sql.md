@@ -1,4 +1,5 @@
 ---
+description: sys.fn_xe_file_target_read_file (Transact-SQL)
 title: sys. fn_xe_file_target_read_file (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/22/2017
@@ -22,12 +23,12 @@ ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6b4ee24b0ee74540a967c713579365c68aa849dd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9edd7d5181979beb5bbbc0e4069aac31d9b302bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738573"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469854"
 ---
 # <a name="sysfn_xe_file_target_read_file-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85738573"
   Читает файлы, создаваемые асинхронным целевым файловым объектом расширенных событий. Возвращается одно событие в каждой строке в формате XML.  
   
 > [!WARNING]  
->  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]и [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] принимают результаты трассировки, созданные в формате XEL-и XEM. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Расширенные события поддерживают только результаты трассировки в формате XEL-. Для чтения результатов трассировки в формате XEL рекомендуется использовать SQL Server Management Studio.    
+>  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] принимают результаты трассировки, созданные в формате XEL-и XEM. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Расширенные события поддерживают только результаты трассировки в формате XEL-. Для чтения результатов трассировки в формате XEL рекомендуется использовать SQL Server Management Studio.    
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,14 +48,14 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *path*  
+ *путь*  
  Путь к файлам для чтения. *путь* может содержать подстановочные знаки и включает имя файла. *путь* имеет тип **nvarchar (260)**. Значение по умолчанию отсутствует. В контексте базы данных SQL Azure это значение является URL-адресом HTTP для файла в службе хранилища Azure.
   
  *мдпас*  
  Путь к файлу метаданных, который соответствует файлу или файлам, указанным в аргументе *path* . *мдпас* имеет тип **nvarchar (260)**. Значение по умолчанию отсутствует. Начиная с SQL Server 2016, этот параметр может быть задан как null.
   
 > [!NOTE]  
->  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]не требуется параметр *мдпас* . Однако он используется для поддержки обратной совместимости фалов журналов, сформированных в предыдущих версиях SQL Server.  
+>  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] не требуется параметр *мдпас* . Однако он используется для поддержки обратной совместимости фалов журналов, сформированных в предыдущих версиях SQL Server.  
   
  *initial_file_name*  
  Первый файл для чтения из *пути*. *initial_file_name* имеет тип **nvarchar (260)**. Значение по умолчанию отсутствует. Если в качестве аргумента указано **значение NULL** , считываются все файлы, найденные в *пути* .  
@@ -78,7 +79,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |timestamp_utc|**datetime2**|**Применимо к**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />Дата и время (часовой пояс UTC) события. Не допускает значение NULL.|  
 
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Чтение больших результирующих наборов путем исполнения **sys. fn_xe_file_target_read_file** в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] может привести к ошибке. Используйте **результаты в файловый** режим (**CTRL + SHIFT + F**), чтобы экспортировать большие результирующие наборы в файл и прочитать файл с помощью другого средства.  
   
 ## <a name="permissions"></a>Разрешения  

@@ -1,4 +1,5 @@
 ---
+description: sp_dropsrvrolemember (Transact-SQL)
 title: sp_dropsrvrolemember (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/20/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7be99181-d221-49d0-9cb2-c930d8c044a0
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 213b8301a471e00107ce7d3ac6bf493e6aea87c4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 55199532fc86d48914bea690125a1afb55a255cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85662465"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469535"
 ---
 # <a name="sp_dropsrvrolemember-transact-sql"></a>sp_dropsrvrolemember (Transact-SQL)
 
@@ -31,7 +32,7 @@ ms.locfileid: "85662465"
 Удаляет из предопределенной роли сервера имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] либо пользователя или группу Windows.
 
 > [!IMPORTANT]
-> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Вместо этого используйте [инструкцию ALTER Server Role](../../t-sql/statements/alter-server-role-transact-sql.md) .
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте [инструкцию ALTER Server Role](../../t-sql/statements/alter-server-role-transact-sql.md) .
 
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -68,7 +69,7 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Для удаления имени входа из предопределенной роли сервера может использоваться только хранимая процедура sp_dropsrvrolemember. Для удаления члена из роли базы данных следует использовать хранимую процедуру sp_droprolemember.  
   
  Имя входа sa нельзя удалить ни из какой предопределенной роли сервера.  
@@ -86,10 +87,10 @@ EXEC sp_dropsrvrolemember 'JackO', 'sysadmin';
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Создание роли сервера &#40;&#41;Transact-SQL](../../t-sql/statements/create-server-role-transact-sql.md)   
- [УДАЛИТЬ роль сервера &#40;&#41;Transact-SQL](../../t-sql/statements/drop-server-role-transact-sql.md)   
+ [Создание роли сервера &#40;&#41;Transact-SQL ](../../t-sql/statements/create-server-role-transact-sql.md)   
+ [УДАЛИТЬ роль сервера &#40;&#41;Transact-SQL ](../../t-sql/statements/drop-server-role-transact-sql.md)   
  [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
  [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Функции безопасности &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  

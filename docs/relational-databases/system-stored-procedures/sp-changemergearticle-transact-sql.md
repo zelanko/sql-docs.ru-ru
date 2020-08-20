@@ -1,4 +1,5 @@
 ---
+description: sp_changemergearticle (Transact-SQL)
 title: sp_changemergearticle (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/09/2015
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5e5533d228030349992dc9b6aa56812ada87872f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8775928ede4fd92072bd91e39bc9652bb7db53a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85872391"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469743"
 ---
 # <a name="sp_changemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,13 +43,13 @@ sp_changemergearticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'`Имя публикации, в которой находится статья. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации, в которой находится статья. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @article = ] 'article'`Имя статьи, которую необходимо изменить. Аргумент *article* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @article = ] 'article'` Имя статьи, которую необходимо изменить. Аргумент *article* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @property = ] 'property'`Свойство, которое необходимо изменить для данной статьи и публикации. *свойство* имеет тип **nvarchar (30)** и может быть одним из значений, перечисленных в таблице.  
+`[ @property = ] 'property'` Свойство, которое необходимо изменить для данной статьи и публикации. *свойство* имеет тип **nvarchar (30)** и может быть одним из значений, перечисленных в таблице.  
   
-`[ @value = ] 'value'`Новое значение для указанного свойства. *значение* равно **nvarchar (1000)** и может быть одним из значений, перечисленных в таблице.  
+`[ @value = ] 'value'` Новое значение для указанного свойства. *значение* равно **nvarchar (1000)** и может быть одним из значений, перечисленных в таблице.  
   
  Эта таблица описывает свойства статей и значения этих свойств.  
   
@@ -68,7 +69,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**creation_script**||Путь и имя необязательного скрипта схем статей, используемого для создания статьи в базе данных подписки.|  
 |**delete_tracking**|**true**|Выполняется репликация инструкций DELETE, что является значением по умолчанию.|  
 ||**false**|Репликация инструкций DELETE не выполняется.<br /><br /> **delete_tracking** ** \* \* \* Важность \* ** параметра delete_tracking **значение false** приводит к неконвергенции, а удаленные строки необходимо удалить вручную.|  
-|**nописание**||Описание статьи.|  
+|**description**||Описание статьи.|  
 |**destination_owner**||Имя владельца объекта в базе данных подписки, если не является **dbo**.|  
 |**identity_range**||значение типа **bigint** , указывающее размер диапазона, используемый при назначении новых значений идентификаторов, если в статье **identityrangemanagementoption** задано значение **Auto** или **auto_identity_range** установлено значение **true**. Применяется только к статье таблицы. Дополнительные сведения см. в подразделе «репликация слиянием» статьи « [Репликация столбцов идентификаторов](../../relational-databases/replication/publish/replicate-identity-columns.md)».|  
 |**identityrangemanagementoption**|**Вручную**|Запрещает автоматическое управление диапазонами идентификаторов. Помечает столбцы идентификаторов как NOT FOR REPLICATION, чтобы разрешить ручное управление диапазонами идентификаторов. Дополнительные сведения см. в статье [Репликация столбцов идентификаторов](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
@@ -83,7 +84,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**3**|Фильтрация для статьи дает неперекрывающиеся секции, уникальные для каждой из подписок.<br /><br /> Примечание. Если для **partition_options**указано значение **3** , для каждой секции данных в этой статье может существовать только одна подписка. Если создается вторая подписка, в которой условие фильтрации сводится к той же секции, что и в существующей подписке, то существующая подписка удаляется.|  
 |**pre_creation_command**|**Нет**|Если таблица на подписчике уже существует, не выполняется никаких действий.|  
 ||**delete**|Выполняет удаление, используя предложение WHERE, указанное в фильтре подмножества.|  
-||**тени**|Удаляет таблицу перед ее повторным созданием.|  
+||**drop**|Удаляет таблицу перед ее повторным созданием.|  
 ||**TRUNCATE**|Усекает целевую таблицу.|  
 |**processing_order**||**целое** число, указывающее порядок обработки статей в публикации слиянием.|  
 |**pub_identity_range**||значение типа **bigint** , указывающее размер диапазона, выделенного подписчику с серверной подпиской, если для статьи параметр **identityrangemanagementoption** имеет значение **Auto** или **auto_identity_range** установлен в **значение true**. Этот диапазон идентификаторов резервируется переиздающему подписчику для выделения собственным подписчикам. Применяется только к статье таблицы. Дополнительные сведения см. в подразделе «репликация слиянием» статьи « [Репликация столбцов идентификаторов](../../relational-databases/replication/publish/replicate-identity-columns.md)».|  
@@ -144,7 +145,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0**|Для пользовательского сопоставителя цифровая подпись, подтверждающая, что он получен из надежного источника, не проверяется.|  
 |NULL (по умолчанию)||Возвращает список поддерживаемых значений для *Свойства*.|  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Подтверждает, что действие, выполняемое этой хранимой процедурой, может сделать существующий моментальный снимок недействительным. *force_invalidate_snapshot* является **битом**и имеет значение по умолчанию **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Подтверждает, что действие, выполняемое этой хранимой процедурой, может сделать существующий моментальный снимок недействительным. *force_invalidate_snapshot* является **битом**и имеет значение по умолчанию **0**.  
   
  **0** указывает, что изменения в статье слияния не приводят к недействительности моментального снимка. Если хранимая процедура определяет, что изменение требует создания нового моментального снимка, возникает ошибка и изменения не выполняются.  
   
@@ -152,7 +153,7 @@ sp_changemergearticle [ @publication = ] 'publication'
   
  Сведения о свойствах, при изменении которых требуется формирование нового моментального снимка, см. в разделе «Примечания».  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription`Подтверждает, что действие, выполняемое этой хранимой процедурой, может потребовать повторной инициализации существующих подписок. *force_reinit_subscription* является **битом**и имеет значение по умолчанию **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Подтверждает, что действие, выполняемое этой хранимой процедурой, может потребовать повторной инициализации существующих подписок. *force_reinit_subscription* является **битом**и имеет значение по умолчанию **0**.  
   
  **0** указывает, что изменения в статье слияния не приводят к повторной инициализации подписки. Если хранимая процедура определяет, что изменения потребуют повторной инициализации подписок, возникает ошибка, и изменения не выполняются.  
   
@@ -241,7 +242,7 @@ sp_changemergearticle [ @publication = ] 'publication'
  [Изменение свойств публикации и статьи](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [sp_dropmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
- [sp_helpmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
+ [sp_helpmergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

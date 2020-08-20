@@ -1,4 +1,5 @@
 ---
+description: sp_addqueued_artinfo (Transact-SQL)
 title: sp_addqueued_artinfo (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: de7f206aea8b536c86333698dd5a557e2f50b84b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 22c1c38828ab6f1857d64136a402752b110a214e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716440"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469824"
 ---
 # <a name="sp_addqueued_artinfo-transact-sql"></a>sp_addqueued_artinfo (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -49,27 +50,27 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @artid = ] 'artid'`Имя идентификатора статьи. *artid* имеет **тип int**и не имеет значения по умолчанию  
+`[ @artid = ] 'artid'` Имя идентификатора статьи. *artid* имеет **тип int**и не имеет значения по умолчанию  
   
-`[ @article = ] 'article'`Имя статьи, для которой создается скрипт. Аргумент *article* имеет тип **sysname**и не имеет значения по умолчанию  
+`[ @article = ] 'article'` Имя статьи, для которой создается скрипт. Аргумент *article* имеет тип **sysname**и не имеет значения по умолчанию  
   
-`[ @publisher = ] 'publisher'`Имя сервера издателя. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'` Имя сервера издателя. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publisher_db = ] 'publisher_db'`Имя базы данных издателя. Аргумент *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher_db = ] 'publisher_db'` Имя базы данных издателя. Аргумент *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publication = ] 'publication'`Имя публикации, для которой создается скрипт. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации, для которой создается скрипт. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @dest_table = ] _'dest_table'`Имя целевой таблицы. Аргумент *dest_table* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @dest_table = ] _'dest_table'` Имя целевой таблицы. Аргумент *dest_table* имеет тип **sysname**и не имеет значения по умолчанию.  
   
  [** @owner =** ] **"**_владелец_**"**  
  Владелец подписки. Аргумент *owner* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @cft_table = ] 'cft_table'`Имя таблицы конфликтов обновления посредством очередей для этой статьи. Аргумент *cft_table*имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @cft_table = ] 'cft_table'` Имя таблицы конфликтов обновления посредством очередей для этой статьи. Аргумент *cft_table*имеет тип **sysname**и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_addqueued_artinfo** используется агент распространения как часть инициализации подписки. Эта хранимая процедура, как правило, не запускается пользователями, но может быть полезна в случае, когда необходимо вручную установить подписку.  
   
  [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) вместо **sp_addqueued_artinfo**.  
@@ -77,8 +78,8 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_addqueued_artinfo**.  
   
-## <a name="see-also"></a>См. также  
- [Обновляемые подписки для репликации транзакций](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
+## <a name="see-also"></a>См. также:  
+ [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [sp_script_synctran_commands &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
  [MSsubscription_articles &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mssubscription-articles-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
