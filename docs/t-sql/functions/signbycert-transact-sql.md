@@ -1,4 +1,5 @@
 ---
+description: SIGNBYCERT (Transact-SQL)
 title: SIGNBYCERT (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: b4c6bced-4473-4bae-85b9-56deced495f9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e1c0705a6057842b80f7e9bf59412f0a64af30ae
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 32fa18577753641583ff5b6c12d864da0f0e36af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112307"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467886"
 ---
 # <a name="signbycert-transact-sql"></a>SIGNBYCERT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,12 +55,12 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
  Переменная типа **nvarchar**, **char**, **varchar** или **nchar**, содержащая данные, которые будут подписаны.  
   
  **'** *password* **'**  
- Пароль, при помощи которого был зашифрован закрытый ключ сертификата. Аргумент *password* имеет тип **nvarchar(128)** .  
+ Пароль, при помощи которого был зашифрован закрытый ключ сертификата. Аргумент *password* имеет тип **nvarchar(128)**.  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Переменная типа **varbinary** с максимальным размером 8000 байт.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Требует разрешения CONTROL для сертификата.  
   
 ## <a name="examples"></a>Примеры  
@@ -76,7 +77,7 @@ INSERT INTO [SignedData04]
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [VERIFYSIGNEDBYCERT (Transact-SQL)](../../t-sql/functions/verifysignedbycert-transact-sql.md)   
  [CERT_ID (Transact-SQL)](../../t-sql/functions/cert-id-transact-sql.md)   
  [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)   

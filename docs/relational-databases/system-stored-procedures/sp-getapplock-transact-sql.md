@@ -1,4 +1,5 @@
 ---
+description: sp_getapplock (Transact-SQL)
 title: sp_getapplock (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7f1072cf996bf32c9511586c24cd6eb8dbb920f6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 03531efe84a3443089922d5f7cfd5b2bc43e5241
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752817"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469466"
 ---
 # <a name="sp_getapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -78,7 +79,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 |–3|Запрос блокировки был выбран как жертва взаимоблокировки.|  
 |— 999|Указывает ошибку при проверке параметра или другую ошибку вызова.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Блокировки, помещенные на ресурс, связаны либо с текущей транзакцией, либо с текущим сеансом. Блокировки, связанные с текущей транзакцией, снимаются, когда транзакция фиксируется или откатывается. Блокировки, связанные с сеансом, освобождаются при выходе из сеанса. Когда сервер завершает работу по какой либо причине, освобождаются все блокировки.  
   
  Ресурс блокировки, созданный процедурой sp_getapplock, создается в текущей базе данных сеанса. Каждый ресурс блокировки определяется объединенными значениями следующих аргументов.  
@@ -111,7 +112,7 @@ GO
   
  Взаимоблокировка с блокировкой приложения не откатывает транзакцию, запросившую блокировку приложения. Любой откат, который может потребоваться как результат возвращаемого значения, должен быть сделан вручную. Следовательно, рекомендуется включить в код проверку на ошибки с тем, чтобы в случае возврата определенного значения (например -3) могла быть запущена инструкция ROLLBACK TRANSACTION или предпринято другое действие.  
   
- Например:  
+ Пример:  
   
 ```  
 USE AdventureWorks2012;  

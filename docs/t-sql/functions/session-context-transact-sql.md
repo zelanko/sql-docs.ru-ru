@@ -1,4 +1,5 @@
 ---
+description: SESSION_CONTEXT (Transact-SQL)
 title: SESSION_CONTEXT (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 05/14/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b6bdbc54-331a-43cc-ab3d-3872d6a12100
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 00056403e2b2ef00862b7552c76fd98b851cabe5
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: ae64d9e63d6c6a6c77642144275af00a8418a8d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394770"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467910"
 ---
 # <a name="session_context-transact-sql"></a>SESSION_CONTEXT (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -37,8 +38,6 @@ ms.locfileid: "87394770"
 SESSION_CONTEXT(N'key')  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## <a name="arguments"></a>Аргументы
  'key'  
  Ключ (типа sysname) извлекаемого значения.  
@@ -52,7 +51,7 @@ SESSION_CONTEXT(N'key')
 ## <a name="permissions"></a>Разрешения  
  Любой пользователь может считывать контекст своего сеанса.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Поведение функции MARS для SESSION_CONTEXT аналогично ее поведению для CONTEXT_INFO. Если пакет MARS задает пару "ключ-значение", новое значение не будет возвращаться в других пакетах MARS по тому же соединению, если они были запущены до того, как завершилось выполнение пакета, задавшего это значение. Если в соединении имеется несколько активных пакетов MARS, значения не могут устанавливаться как доступные только для чтения. Это позволяет избежать состояний гонки и неопределенности в отношении того, какое значение является победителем.  
   
 ## <a name="examples"></a>Примеры  
@@ -63,7 +62,7 @@ EXEC sp_set_session_context 'user_id', 4;
 SELECT SESSION_CONTEXT(N'user_id');  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_set_session_context (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md)   
  [CURRENT_TRANSACTION_ID (Transact-SQL)](../../t-sql/functions/current-transaction-id-transact-sql.md)   
  [Безопасность на уровне строк](../../relational-databases/security/row-level-security.md)   

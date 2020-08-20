@@ -1,4 +1,5 @@
 ---
+description: GOTO (Transact-SQL)
 title: GOTO (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 589b6f8e-dc80-416f-9e74-48bed5337f58
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: baa535b194e592c86c1f20dd1377e69c4e80ade6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5e35af299576306b5fd4bcc390c6ccc9d97089db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923367"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467670"
 ---
 # <a name="goto-transact-sql"></a>GOTO (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +52,7 @@ GOTO label
  *label*  
  Точка, с которой начинается обработка инструкций после перехода на текущую метку с помощью инструкции GOTO. Метки должны соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md). Метка может применяться без инструкции GOTO как метод комментирования.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Инструкция GOTO может существовать внутри условных инструкций, управляющих потоком, блоков инструкций или процедур, однако не может ссылаться на метку, расположенную вне этого пакета. Инструкция GOTO может ссылаться на метку, расположенную как до нее, так и после.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -79,7 +80,7 @@ Branch_Three:
     SELECT 'Jumping To Branch Three.';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Язык управления потоком (Transact-SQL)](~/t-sql/language-elements/control-of-flow.md)   
  [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
  [BREAK (Transact-SQL)](../../t-sql/language-elements/break-transact-sql.md)   

@@ -1,4 +1,5 @@
 ---
+description: TRY_PARSE (Transact-SQL)
 title: TRY_PARSE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 292bac1d-edd8-468c-8ff1-8c7de625bc55
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 184cebde63a58c399f5719c3d07c0846a3163f9a
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: f8df055fa3d40a8d31d25ad9917d86a86363335c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87523136"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467749"
 ---
 # <a name="try_parse-transact-sql"></a>TRY_PARSE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -50,7 +51,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
  *data_type*  
  Литерал, представляющий тип данных, запрошенный в качестве результата.  
   
- *Язык и региональные параметры*  
+ *culture*  
  Дополнительная строка, идентифицирующая культуру, в которой форматируется *string_value*.  
   
  Если аргумент *culture* не указан, то используется язык текущего сеанса. Язык может быть задан неявно или явно с использованием инструкции SET LANGUAGE. Значение *culture* принимает любую культуру, поддерживаемую .NET Framework; его применение не ограничивается языками, явно поддерживаемыми [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если аргумент *culture* недопустим, то PARSE выдаст ошибку.  
@@ -58,7 +59,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Возвращает результат выражения, преобразованный в запрошенный тип данных, или значение NULL, если привести тип не удается.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Используйте инструкцию TRY_PARSE только для преобразования данных из строкового типа в типы даты или времени и числовые типы. Для общих преобразований типов данных продолжайте использовать CAST и CONVERT. Следует учитывать, что разбор строкового значения приводит к некоторой потере производительности.  
   
  Для выполнения инструкции TRY_PARSE требуется среда CLR платформы .NET Framework.  
@@ -115,7 +116,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 |slovenski|Словенский|1060|Sl-SI|  
 |ελληνικά|Греческий|1032|El-GR|  
 |български|Болгарский|1026|bg-BG|  
-|русский|Русский|1049|Ru-RU|  
+|русский|русском языке|1049|Ru-RU|  
 |Türkçe|Турецкий|1055|Tr-TR|  
 |British|British English|2057|en-GB|  
 |eesti|Эстонский|1061|Et-EE|  
@@ -185,7 +186,7 @@ False
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [PARSE (Transact-SQL)](../../t-sql/functions/parse-transact-sql.md)   
  [Функции преобразования (Transact-SQL)](../../t-sql/functions/conversion-functions-transact-sql.md)   
  [TRY_CONVERT (Transact-SQL)](../../t-sql/functions/try-convert-transact-sql.md)   

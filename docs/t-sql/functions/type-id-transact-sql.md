@@ -1,4 +1,5 @@
 ---
+description: TYPE_ID (Transact-SQL)
 title: TYPE_ID (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ ms.assetid: 647d17ef-b878-4922-b446-56642322ebad
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 675240db58ea6c46978987adb39696a8370639bf
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 9fa18e7fd00b50597068695f9b1f20a947289ca3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112791"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467746"
 ---
 # <a name="type_id-transact-sql"></a>TYPE_ID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +56,7 @@ TYPE_ID ( [ schema_name ] type_name )
   
  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пользователь может просматривать только метаданные защищаемых объектов, которыми он владеет или на которые ему были предоставлены разрешения. Это означает, что встроенные функции, создающие метаданные, такие как TYPE_ID могут вернуть значение NULL в случае, если пользователь не имеет разрешений на объект. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Функция TYPE_ID возвращает NULL, если имя типа неверно или если вызывающий не имеет необходимых разрешений на использование этого типа.  
   
 ## <a name="examples"></a>Примеры  
@@ -96,7 +97,7 @@ SELECT TYPE_NAME(TYPE_ID('datetime')) AS typeName,
     TYPE_ID('datetime') AS typeID FROM table1;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [TYPE_NAME (Transact-SQL)](../../t-sql/functions/type-name-transact-sql.md)   
  [TYPEPROPERTY (Transact-SQL)](../../t-sql/functions/typeproperty-transact-sql.md)   
  [sys.types (Transact-SQL)](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)   

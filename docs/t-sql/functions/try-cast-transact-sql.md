@@ -1,4 +1,5 @@
 ---
+description: TRY_CAST (Transact-SQL)
 title: TRY_CAST (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -18,12 +19,12 @@ ms.assetid: ea3a16de-995b-415c-b5f0-9355cf7bb401
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-2017||= sqlallproducts-allversions||>= aps-pdw-2016||= azure-sqldw-latest
-ms.openlocfilehash: 0cac60f2b6f60ab8f4e52df8d32d178d29b8e3f1
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: bd5c7d9ee466ba52d2cc82429e92f9ce6fec6ab2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396815"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467786"
 ---
 # <a name="try_cast-transact-sql"></a>TRY_CAST (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,7 +57,7 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Возвращает значение, приведенное к указанному типу, если приведение проходит успешно; в противном случае возвращает NULL.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  **TRY_CAST** принимает переданное значение и пытается привести его к указанному типу *data_type*. Если приведение выполнено успешно, то **TRY_CAST** возвращает значение согласно указанному типу *data_type*; если возникла ошибка, возвращается значение NULL. Однако в случае, если будет запрошено явно запрещенное преобразование, функция **TRY_CAST** вернет ошибку.  
   
  **TRY_CAST** не является новым зарезервированным ключевым словом и доступно на любом уровне совместимости. При установлении соединения с удаленными серверами **TRY_CAST** имеет ту же семантику, что и **TRY_CONVERT**.  
@@ -136,7 +137,7 @@ Result
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [TRY_CONVERT (Transact-SQL)](../../t-sql/functions/try-convert-transact-sql.md)   
  [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   

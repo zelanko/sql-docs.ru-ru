@@ -1,4 +1,5 @@
 ---
+description: sp_help_downloadlist (Transact-SQL)
 title: sp_help_downloadlist (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bc658776dddbf79362e3ab4c90ba052abb193e63
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fb53702ec86f30c81802b95b77c61b71037b402e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901502"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469404"
 ---
 # <a name="sp_help_downloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,16 +47,16 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_id = ] job_id`Идентификационный номер задания, для которого возвращаются сведения. *job_id* имеет тип **uniqueidentifier**и значение по умолчанию NULL.  
+`[ @job_id = ] job_id` Идентификационный номер задания, для которого возвращаются сведения. *job_id* имеет тип **uniqueidentifier**и значение по умолчанию NULL.  
   
-`[ @job_name = ] 'job_name'`Имя задания. Аргумент *job_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'` Имя задания. Аргумент *job_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Необходимо указать либо *job_id* , либо *job_name* , но нельзя указать оба значения.  
   
-`[ @operation = ] 'operation'`Допустимая операция для указанного задания. *Операция* имеет тип **varchar (64)**, значение по умолчанию NULL и может принимать одно из следующих значений.  
+`[ @operation = ] 'operation'` Допустимая операция для указанного задания. *Операция* имеет тип **varchar (64)**, значение по умолчанию NULL и может принимать одно из следующих значений.  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**ОШИБК**|Серверная операция, которая запрашивает у целевого сервера исключение из службы Master **SQLServerAgent** .|  
 |**DELETE**|Операция задания, удаляющая все задание.|  
@@ -67,17 +68,17 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**SYNC-TIME**|Серверная операция, вызывающая синхронизацию системных часов целевого сервера с многосерверным доменом. Это дорогостоящая операция, поэтому ее не стоит выполнять регулярно.|  
 |**UPDATE**|Операция задания, которая обновляет только данные **sysjobs** для задания, а не шаги задания или расписания. Автоматически вызывается **sp_update_job**.|  
   
-`[ @object_type = ] 'object_type'`Тип объекта для указанного задания. *object_type* имеет тип **varchar (64)** и значение по умолчанию NULL. *object_type* может быть либо заданием, либо сервером. Дополнительные сведения о допустимых значениях *object_type*см. в разделе [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
+`[ @object_type = ] 'object_type'` Тип объекта для указанного задания. *object_type* имеет тип **varchar (64)** и значение по умолчанию NULL. *object_type* может быть либо заданием, либо сервером. Дополнительные сведения о допустимых значениях *object_type*см. в разделе [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
   
-`[ @object_name = ] 'object_name'`Имя объекта. Аргумент *object_name* имеет тип **sysname**и значение по умолчанию NULL. Если *object_type* является заданием, *object_name*является именем задания. Если *object_type*является сервером, *object_name*является именем сервера.  
+`[ @object_name = ] 'object_name'` Имя объекта. Аргумент *object_name* имеет тип **sysname**и значение по умолчанию NULL. Если *object_type* является заданием, *object_name*является именем задания. Если *object_type*является сервером, *object_name*является именем сервера.  
   
-`[ @target_server = ] 'target_server'`Имя целевого сервера. *target_server* имеет тип **nvarchar (128)** и значение по умолчанию NULL.  
+`[ @target_server = ] 'target_server'` Имя целевого сервера. *target_server* имеет тип **nvarchar (128)** и значение по умолчанию NULL.  
   
-`[ @has_error = ] has_error`Указывает, должно ли задание подтверждать ошибки. *has_error* имеет тип **tinyint**и значение по умолчанию NULL, которое указывает, что ошибки не должны быть подтверждены. **1** означает, что все ошибки должны быть подтверждены.  
+`[ @has_error = ] has_error` Указывает, должно ли задание подтверждать ошибки. *has_error* имеет тип **tinyint**и значение по умолчанию NULL, которое указывает, что ошибки не должны быть подтверждены. **1** означает, что все ошибки должны быть подтверждены.  
   
-`[ @status = ] status`Состояние задания. *состояние* имеет тип **tinyint**и значение по умолчанию NULL.  
+`[ @status = ] status` Состояние задания. *состояние* имеет тип **tinyint**и значение по умолчанию NULL.  
   
-`[ @date_posted = ] date_posted`Дата и время, для которых в результирующий набор должны быть включены все записи, созданные в или после указанной даты и времени. *date_posted* имеет тип **DateTime**и значение по умолчанию NULL.  
+`[ @date_posted = ] date_posted` Дата и время, для которых в результирующий набор должны быть включены все записи, созданные в или после указанной даты и времени. *date_posted* имеет тип **DateTime**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  

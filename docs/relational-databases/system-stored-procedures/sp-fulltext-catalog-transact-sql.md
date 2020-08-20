@@ -1,4 +1,5 @@
 ---
+description: sp_fulltext_catalog (Transact-SQL)
 title: sp_fulltext_catalog (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: e49b98e4-d1f1-42b2-b16f-eb2fc7aa1cf5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 42985c60b7057904291bbf196e3faae27e77ae68
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 892b0e24bb76625b5d245a7314d368c0e0dc0cf2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771079"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469554"
 ---
 # <a name="sp_fulltext_catalog-transact-sql"></a>sp_fulltext_catalog (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85771079"
   Создает и удаляет полнотекстовый каталог, запускает и останавливает действие индексирования для каталога. Для каждой базы данных можно создать несколько полнотекстовых каталогов.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Вместо этого используйте инструкцию [CREATE FULLTEXT Catalog](../../t-sql/statements/create-fulltext-catalog-transact-sql.md), [ALTER FULLTEXT Catalog](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)и [DROP FULLTEXT Catalog](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте инструкцию [CREATE FULLTEXT Catalog](../../t-sql/statements/create-fulltext-catalog-transact-sql.md), [ALTER FULLTEXT Catalog](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)и [DROP FULLTEXT Catalog](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md) .  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,14 +46,14 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @ftcat = ] 'fulltext_catalog_name'`Имя полнотекстового каталога. Имена каталогов должны быть уникальными для каждой базы данных. *fulltext_catalog_name* имеет тип **sysname**.  
+`[ @ftcat = ] 'fulltext_catalog_name'` Имя полнотекстового каталога. Имена каталогов должны быть уникальными для каждой базы данных. *fulltext_catalog_name* имеет тип **sysname**.  
   
-`[ @action = ] 'action'`Действие, которое необходимо выполнить. *Action* имеет тип **varchar (20)** и может принимать одно из следующих значений.  
+`[ @action = ] 'action'` Действие, которое необходимо выполнить. *Action* имеет тип **varchar (20)** и может принимать одно из следующих значений.  
   
 > [!NOTE]  
 >  Полнотекстовые каталоги можно создавать, удалять или изменять по мере необходимости. Однако не следует изменять схемы нескольких каталогов одновременно. Эти действия можно выполнить с помощью хранимой процедуры **sp_fulltext_table** , которая является рекомендуемым способом.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**Создание**|Создает пустой полнотекстовый каталог в файловой системе и добавляет связанную строку в **таблицы sysfulltextcatalogs** с *fulltext_catalog_name* и *root_directory*, если она есть, значения. *fulltext_catalog_name* должны быть уникальными в пределах базы данных.|  
 |**Тени**|Удаляет *fulltext_catalog_name* , удаляя его из файловой системы и удаляя связанную строку в **таблицы sysfulltextcatalogs**. Действие не будет выполнено, если каталог содержит индексы для одной или нескольких таблиц. **sp_fulltext_table** для удаления таблиц из каталога необходимо выполнить "*table_name*", "Drop".<br /><br /> Если каталог не существует, появится сообщение об ошибке.|  
@@ -61,7 +62,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 |**Остановить**|Останавливает заполнение индекса для *fulltext_catalog_name*. Если каталог не существует, появится сообщение об ошибке. Если заполнение уже остановлено, предупреждение не отображается.|  
 |**Перестроение**|Перестраивает *fulltext_catalog_name*. Во время перестроения каталога существующий каталог удаляется, а на его месте создается новый каталог. Все таблицы, содержащие ссылки полнотекстового индексирования, сопоставляются с новым каталогом. Перестроение сбрасывает полнотекстовые метаданные в системных таблицах базы данных.<br /><br /> Если отслеживание изменений отключено, то перестроение не приводит к повторному заполнению вновь созданного полнотекстового каталога. В этом случае для повторного заполнения выполните **sp_fulltext_catalog** с действием **start_full** или **start_incremental** .|  
   
-`[ @path = ] 'root_directory'`Корневой каталог (а не полный физический путь) для действия **создания** . *root_directory* имеет тип **nvarchar (100)** и имеет значение по умолчанию NULL, которое указывает на использование расположения по умолчанию, указанного при установке. Это подкаталог FTDATA в каталоге MSSQL; Например, C:\Program Files\Microsoft SQL Server\MSSQL13. мссклсервер\мсскл\фтдата. Указанный каталог должен находиться на локальном диске, его имя не может состоять только из одной буквы диска, и путь к этому каталогу не может быть относительным. Сетевые, съемные, гибкие диски и UNC-пути не поддерживаются. Полнотекстовые каталоги можно создавать на локальных жестких дисках, связанных с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+`[ @path = ] 'root_directory'` Корневой каталог (а не полный физический путь) для действия **создания** . *root_directory* имеет тип **nvarchar (100)** и имеет значение по умолчанию NULL, которое указывает на использование расположения по умолчанию, указанного при установке. Это подкаталог FTDATA в каталоге MSSQL; Например, C:\Program Files\Microsoft SQL Server\MSSQL13. мссклсервер\мсскл\фтдата. Указанный каталог должен находиться на локальном диске, его имя не может состоять только из одной буквы диска, и путь к этому каталогу не может быть относительным. Сетевые, съемные, гибкие диски и UNC-пути не поддерживаются. Полнотекстовые каталоги можно создавать на локальных жестких дисках, связанных с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  ** \@ путь** допустим только при создании *действия* . **create** Для действий, отличных от **CREATE** (**останавливаться**, **REBUILD**и т. д.), ** \@ путь** должен иметь значение null или быть пропущен.  
   
@@ -138,7 +139,7 @@ GO
  [sp_fulltext_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql.md)   
  [sp_help_fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)   
  [sp_help_fulltext_catalogs_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Полнотекстовый поиск](../../relational-databases/search/full-text-search.md)  
   
   

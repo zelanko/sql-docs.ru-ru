@@ -1,4 +1,5 @@
 ---
+description: TYPEPROPERTY (Transact-SQL)
 title: TYPEPROPERTY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ ms.assetid: bc311c80-bac5-46ab-a5c8-68b1c6bbf24a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a504fb547e89a348d1fe6b5f6168f81fd0d7656
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 455f736f73d2b4ba6c5e798b3cd9d8376ee4217b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110717"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467731"
 ---
 # <a name="typeproperty-transact-sql"></a>TYPEPROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,13 +50,13 @@ TYPEPROPERTY (type , property)
  *property*  
  Тип возвращаемых сведений по этому типу данных. Аргумент *property* может иметь одно из перечисленных ниже значений.  
   
-|Свойство|Description|Возвращенное значение|  
+|Свойство|Описание|Возвращенное значение|  
 |--------------|-----------------|--------------------|  
-|**AllowsNull**|Тип данных допускает значения NULL.|1 = True<br /><br /> 0 = False.<br /><br /> NULL = не удалось найти тип данных.|  
+|**AllowsNull**|Тип данных допускает значения NULL.|1 = истина<br /><br /> 0 = ложь<br /><br /> NULL = не удалось найти тип данных.|  
 |**OwnerId**|Владелец типа.<br /><br /> Примечание. Владелец схемы может не быть владельцем типа.|Не равен NULL = идентификатор пользователя базы данных владельца типа.<br /><br /> NULL = неподдерживаемый тип или идентификатор типа недопустим.|  
 |**Точность**|Точность типа данных.|Число цифр или символов.<br /><br /> –1 = **xml** или тип данных с большим значением<br /><br /> NULL = не удалось найти тип данных.|  
-|**Масштабирование**|Масштаб типа данных.|Число символов после запятой для типа данных.<br /><br /> NULL = тип данных не **числовой**, или не удалось найти тип данных.|  
-|**UsesAnsiTrim**|При создании типа данных параметр дополнения символами ANSI был установлен в состояние ON.|1 = True<br /><br /> 0 = False.<br /><br /> NULL = тип данных не обнаружен или не принадлежит к двоичному или строковому типу данных.|  
+|**Масштаб**|Масштаб типа данных.|Число символов после запятой для типа данных.<br /><br /> NULL = тип данных не **числовой**, или не удалось найти тип данных.|  
+|**UsesAnsiTrim**|При создании типа данных параметр дополнения символами ANSI был установлен в состояние ON.|1 = истина<br /><br /> 0 = ложь<br /><br /> NULL = тип данных не обнаружен или не принадлежит к двоичному или строковому типу данных.|  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
  **int**  
@@ -82,7 +83,7 @@ FROM sys.types;
 SELECT TYPEPROPERTY( 'tinyint', 'PRECISION');  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [TYPE_ID (Transact-SQL)](../../t-sql/functions/type-id-transact-sql.md)   
  [TYPE_NAME (Transact-SQL)](../../t-sql/functions/type-name-transact-sql.md)   
  [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)   

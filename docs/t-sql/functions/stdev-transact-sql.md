@@ -1,4 +1,5 @@
 ---
+description: STDEV (Transact-SQL)
 title: STDEV (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/13/2017
@@ -20,12 +21,12 @@ ms.assetid: ff41b4fc-4f71-4f18-bf78-96614ea908cc
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ecd6622a3b61002aaa153f80b1f88485f4c42556
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a2aecf91c7df7c434e476d2fee835217c1db0718
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113312"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467822"
 ---
 # <a name="stdev-transact-sql"></a>STDEV (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,7 +63,7 @@ STDEV ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ## <a name="return-types"></a>Типы возвращаемых данных  
  **float**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Если функция STDEV используется для всех элементов в инструкции SELECT, то в вычисление включается каждое значение результирующего набора. Функцию STDEV можно использовать только для числовых столбцов. Значения NULL пропускаются.  
   
  STDEV — это детерминированная функция, если она используется без предложений OVER и ORDER BY. Она не детерминирована при использовании с предложениями OVER и ORDER BY. Дополнительные сведения см. в разделе [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  

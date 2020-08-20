@@ -1,4 +1,5 @@
 ---
+description: SUSER_SID (Transact-SQL)
 title: SUSER_SID (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/29/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 338df319b792f0ceb7e7494bd3bd2201e86dae19
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 40c6b6dcb0d424c8b92f1534423bf0acf667da78
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110765"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467781"
 ---
 # <a name="suser_sid-transact-sql"></a>SUSER_SID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -61,7 +62,7 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
 ## <a name="return-types"></a>Типы возвращаемых данных  
  **varbinary(85)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Функция SUSER_SID может использоваться в качестве ограничения DEFAULT в инструкциях ALTER TABLE и CREATE TABLE. Функцию SUSER_SID можно использовать в списке выбора, в предложении WHERE, а также в любом месте, где разрешено использование выражений. После функции SUSER_SID всегда должны следовать скобки, даже если не задано ни одного параметра.  
   
  Если функция SUSER_SID вызывается без аргументов, она возвращает идентификатор SID текущего контекста безопасности. Если функция SUSER_SID вызывается без аргументов в пакете, в котором был переключен контекст с помощью инструкции EXECUTE AS, функция возвращает идентификатор SID олицетворенного контекста. При вызове из олицетворенного контекста функция SUSER_SID(ORIGINAL_LOGIN()) возвращает SID оригинального контекста.  
@@ -70,7 +71,7 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
   
  `Windows NT user or group '%s' not found. Check the name again.`  
   
-## <a name="sssdsfull-remarks"></a>[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Замечания  
+## <a name="sssdsfull-remarks"></a>[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Замечания  
  SUSER_SID всегда возвращает идентификатор безопасности для текущего контекста безопасности. Используйте [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md), чтобы получить идентификатор безопасности другого имени входа.
   
  Инструкция SUSER_SID не поддерживает выполнение с помощью олицетворенного контекста безопасности посредством инструкции EXECUTE AS.  
@@ -131,7 +132,7 @@ GO
 SELECT SUSER_SNAME(SUSER_SID('TestComputer\User', 0));  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ORIGINAL_LOGIN (Transact-SQL)](../../t-sql/functions/original-login-transact-sql.md)   
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [binary и varbinary (Transact-SQL)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)   

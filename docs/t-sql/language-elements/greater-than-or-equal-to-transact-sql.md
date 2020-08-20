@@ -1,4 +1,5 @@
 ---
+description: '&gt;= (больше или равно) (Transact-SQL)'
 title: '&gt;= (больше или равно) (Transact-SQL) | Документы Майкрософт'
 ms.custom: ''
 ms.date: 03/13/2017
@@ -24,12 +25,12 @@ ms.assetid: 641ee28d-7536-46dd-a48a-6c63c2d59278
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f76874ea201a280386091f4d827b0a2a19332a9a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d8774e928cb7487cd05132242aad0d678e8d6240
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923352"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467668"
 ---
 # <a name="gt-greater-than-or-equal-to-transact-sql"></a>&gt;= (больше или равно) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,9 +52,9 @@ expression >= expression
  Любое допустимое выражение [expression](../../t-sql/language-elements/expressions-transact-sql.md). Оба выражения должны иметь типы данных, допускающие неявное преобразование. Преобразование зависит от правил [приоритетов типов данных](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
 ## <a name="result-types"></a>Типы результата  
- Логическое  
+ Логическое значение  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  При сравнении выражений, чьи значения отличны от NULL, результат будет равен TRUE, если левый операнд имеет значение, большее или равное значению правого операнда; иначе результат равен FALSE.  
   
  В отличие от оператора сравнения = (равенство) результат сравнения >= двух значений, равных NULL, не зависит от свойства ANSI_NULLS.  

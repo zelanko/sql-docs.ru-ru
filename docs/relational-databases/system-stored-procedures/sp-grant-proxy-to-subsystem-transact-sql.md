@@ -1,4 +1,5 @@
 ---
+description: sp_grant_proxy_to_subsystem (Transact-SQL)
 title: sp_grant_proxy_to_subsystem (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2d772c66af8dfbab805124e4a07d26243865330a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 964bab1ac95d80d05f16fa8b538f1ecd5f15352c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891855"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469407"
 ---
 # <a name="sp_grant_proxy_to_subsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
 
@@ -41,11 +42,11 @@ sp_grant_proxy_to_subsystem
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @proxy_id = ] id`Идентификационный номер прокси-сервера, для которого предоставляется доступ. *Proxy_id* имеет **тип int**и значение по умолчанию NULL. Необходимо указать либо *proxy_id* , либо *proxy_name* , но нельзя указать оба значения.  
+`[ @proxy_id = ] id` Идентификационный номер прокси-сервера, для которого предоставляется доступ. *Proxy_id* имеет **тип int**и значение по умолчанию NULL. Необходимо указать либо *proxy_id* , либо *proxy_name* , но нельзя указать оба значения.  
   
-`[ @proxy_name = ] 'proxy_name'`Имя учетной записи-посредника, для которой предоставляется доступ. Аргумент *proxy_name* имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать либо *proxy_id* , либо *proxy_name* , но нельзя указать оба значения.  
+`[ @proxy_name = ] 'proxy_name'` Имя учетной записи-посредника, для которой предоставляется доступ. Аргумент *proxy_name* имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать либо *proxy_id* , либо *proxy_name* , но нельзя указать оба значения.  
   
-`[ @subsystem_id = ] id`Идентификационный номер подсистемы, к которой предоставляется доступ. *Subsystem_id* имеет **тип int**и значение по умолчанию NULL. Необходимо указать либо *subsystem_id* , либо *subsystem_name* , но нельзя указать оба значения. В следующей таблице показаны значения для каждой подсистемы.  
+`[ @subsystem_id = ] id` Идентификационный номер подсистемы, к которой предоставляется доступ. *Subsystem_id* имеет **тип int**и значение по умолчанию NULL. Необходимо указать либо *subsystem_id* , либо *subsystem_name* , но нельзя указать оба значения. В следующей таблице показаны значения для каждой подсистемы.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -62,7 +63,7 @@ sp_grant_proxy_to_subsystem
 |**12**|Скрипт PowerShell|  
 | &nbsp; | &nbsp; |
   
-`[ @subsystem_name = ] 'subsystem_name'`Имя подсистемы, к которой предоставляется доступ. Аргумент **subsystem_name** имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать либо *subsystem_id* , либо *subsystem_name* , но нельзя указать оба значения. В следующей таблице показаны значения для каждой подсистемы.  
+`[ @subsystem_name = ] 'subsystem_name'` Имя подсистемы, к которой предоставляется доступ. Аргумент **subsystem_name** имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать либо *subsystem_id* , либо *subsystem_name* , но нельзя указать оба значения. В следующей таблице показаны значения для каждой подсистемы.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -70,12 +71,12 @@ sp_grant_proxy_to_subsystem
 |**CmdExec**|Операционная система (**CmdExec**)|  
 |**Моментальный снимок**|Агент моментальных снимков репликации|  
 |**LogReader**|Агент чтения журнала репликации|  
-|**Распределение**|агент распространения репликации|  
+|**Distribution**|агент распространения репликации|  
 |**Объединить**|Replication Merge Agent|  
 |**QueueReader**|Агент чтения очереди репликации|  
 |**ANALYSISQUERY**|Запрос служб Analysis Services|  
 |**ANALYSISCOMMAND**|Команда служб Analysis Services|  
-|**Через**|Выполнение пакетов служб SSIS|  
+|**Dts**|Выполнение пакетов служб SSIS|  
 |**PowerShell**|Скрипт PowerShell|  
 | &nbsp; | &nbsp; |
   

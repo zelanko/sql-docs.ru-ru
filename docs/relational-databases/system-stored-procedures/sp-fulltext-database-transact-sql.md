@@ -1,4 +1,5 @@
 ---
+description: sp_fulltext_database (Transact-SQL)
 title: sp_fulltext_database (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: eeb1e151-eb00-484c-8fd1-5641e621ffc6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ee0918a0b190b7b058f38eac4152dfb952f214bb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cf5f89d295dae9bb993f8ee28627c6cecf3073c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771059"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469558"
 ---
 # <a name="sp_fulltext_database-transact-sql"></a>sp_fulltext_database (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,9 +44,9 @@ sp_fulltext_database [@action=] 'action'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @action = ] 'action'`Действие, которое необходимо выполнить. **Action** имеет тип **varchar (20)** и может принимать одно из следующих значений.  
+`[ @action = ] 'action'` Действие, которое необходимо выполнить. **Action** имеет тип **varchar (20)** и может принимать одно из следующих значений.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**enable**|Поддерживается только для обеспечения обратной совместимости. Не действует на полнотекстовые каталоги в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версиях.|  
 |**disable**|Поддерживается только для обеспечения обратной совместимости. Не действует на полнотекстовые каталоги в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версиях.|  
@@ -62,8 +63,8 @@ sp_fulltext_database [@action=] 'action'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** и **db_owner** предопределенной роли базы данных могут выполнять **sp_fulltext_database**.  
   
-## <a name="see-also"></a>См. также  
- [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [DATABASEPROPERTYEX (Transact-SQL)](../../t-sql/functions/databasepropertyex-transact-sql.md)   
  [FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

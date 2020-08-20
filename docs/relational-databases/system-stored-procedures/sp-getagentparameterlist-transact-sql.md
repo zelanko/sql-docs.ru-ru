@@ -1,4 +1,5 @@
 ---
+description: sp_getagentparameterlist (Transact-SQL)
 title: sp_getagentparameterlist (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 50d3d3c1-b9a1-417c-bad4-674089c9c60d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9b4239fafd6ec4ecbda7d89dd143b70a4dccb7eb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 111ced1495557fdbfe151ee54bec20786df5d685
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881626"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469461"
 ---
 # <a name="sp_getagentparameterlist-transact-sql"></a>sp_getagentparameterlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,13 +38,13 @@ sp_getagentparameterlist [ @agent_type = ] 'agent_type'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @agent_type = ] 'agent_type'`Агент репликации, для которого добавляется параметр. *agent_type* имеет **тип int**и может принимать одно из следующих значений:  
+`[ @agent_type = ] 'agent_type'` Агент репликации, для которого добавляется параметр. *agent_type* имеет **тип int**и может принимать одно из следующих значений:  
   
 |Значение|Агент|  
 |-----------|-----------|  
-|**1**|Снимок|  
+|**1**|Моментальный снимок|  
 |**2**|Чтение журнала|  
-|**3**|Распределение|  
+|**3**|Distribution|  
 |**4**|Объединить|  
 |**9**|Чтение очереди|  
   

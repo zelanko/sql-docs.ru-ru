@@ -1,4 +1,5 @@
 ---
+description: sp_help_alert (Transact-SQL)
 title: sp_help_alert (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cca6c1730343a038b24e17d6aaa0156cb99c13b1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ce66505585fa7e7ed49919c5cb54b94ffd205500
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901537"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469349"
 ---
 # <a name="sp_help_alert-transact-sql"></a>sp_help_alert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,15 +44,15 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @alert_name = ] 'alert_name'`Имя оповещения. *alert_name* имеет тип **nvarchar (128)**. Если параметр *alert_name* не указан, возвращаются сведения обо всех оповещениях.  
+`[ @alert_name = ] 'alert_name'` Имя оповещения. *alert_name* имеет тип **nvarchar (128)**. Если параметр *alert_name* не указан, возвращаются сведения обо всех оповещениях.  
   
-`[ @order_by = ] 'order_by'`Порядок сортировки, используемый для создания результатов. Аргумент *order_by*имеет тип **sysname**и значение по умолчанию N "*Name*".  
+`[ @order_by = ] 'order_by'` Порядок сортировки, используемый для создания результатов. Аргумент *order_by*имеет тип **sysname**и значение по умолчанию N "*Name*".  
   
-`[ @alert_id = ] alert_id`Идентификационный номер предупреждения для передачи сведений о. *alert_id*имеет **тип int**и значение по умолчанию NULL.  
+`[ @alert_id = ] alert_id` Идентификационный номер предупреждения для передачи сведений о. *alert_id*имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @category_name = ] 'category'`Категория оповещения. *Category* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @category_name = ] 'category'` Категория оповещения. *Category* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @legacy_format = ] legacy_format`Указывает, следует ли создавать результирующий набор прежних версий. *legacy_format* имеет **бит**и значение по умолчанию **0**. Если *legacy_format* равен **1**, **sp_help_alert** возвращает результирующий набор, возвращенный **sp_help_alert** в Microsoft SQL Server 2000.  
+`[ @legacy_format = ] legacy_format` Указывает, следует ли создавать результирующий набор прежних версий. *legacy_format* имеет **бит**и значение по умолчанию **0**. Если *legacy_format* равен **1**, **sp_help_alert** возвращает результирующий набор, возвращенный **sp_help_alert** в Microsoft SQL Server 2000.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -120,7 +121,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**has_notification**|**int**|Ненулевое значение, если один или более операторов уведомлены данным предупреждением. Значение является результатом логической операции OR над одним или несколькими следующими значениями:<br /><br /> **1**= имеется уведомление по электронной почте<br /><br /> **2**= имеется уведомление на пейджер<br /><br /> **4**= содержит уведомление **net send** .|  
 |**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].|  
 |**performance_condition**|**nvarchar(512)**|Если **тип** имеет значение **2**, в этом столбце отображается определение условия производительности. Если **тип** — **3**, в этом столбце отображается запрос для события WMI. В противном случае столбец содержит значение NULL.|  
-|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]Всегда будет иметь "**[без категории]**" для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0.|  
+|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Всегда будет иметь "**[без категории]**" для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0.|  
 |**type**|**int**|Тип предупреждения:<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оповещение о событии 1<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предупреждение о производительности<br /><br /> **3** = предупреждение о событии WMI|  
   
 ## <a name="remarks"></a>Комментарии  
@@ -142,8 +143,8 @@ EXEC sp_help_alert @alert_name = 'Demo: Sev. 25 Errors';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [sp_add_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [sp_add_alert (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
  [sp_update_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

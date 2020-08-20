@@ -1,4 +1,5 @@
 ---
+description: sp_help_fulltext_columns_cursor (Transact-SQL)
 title: sp_help_fulltext_columns_cursor (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 26054e76-53b7-4004-8d48-92ba3435e9d7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1ed545d31cd5f05fa8360d2cf73a88787f98df45
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dff9f4ea5fb2eda11da2144114cde959197c3723
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901476"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469390"
 ---
 # <a name="sp_help_fulltext_columns_cursor-transact-sql"></a>sp_help_fulltext_columns_cursor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85901476"
   Использует курсор для возврата столбцов, назначенных для полнотекстового индексирования.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Вместо этого используйте представление каталога [sys. fulltext_index_columns](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте представление каталога [sys. fulltext_index_columns](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md) .  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,11 +45,11 @@ sp_help_fulltext_columns_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @cursor_return = ] @cursor_variable OUTPUT`Выходная переменная типа **cursor**. Этот результирующий курсор является динамическим, прокручиваемым и только для чтения.  
+`[ @cursor_return = ] @cursor_variable OUTPUT` Выходная переменная типа **cursor**. Этот результирующий курсор является динамическим, прокручиваемым и только для чтения.  
   
-`[ @table_name = ] 'table_name'`Имя таблицы из одной или двух частей, для которой запрашиваются сведения о полнотекстовом индексе. *table_name* имеет тип **nvarchar (517)** и значение по умолчанию NULL. Если аргумент *table_name* опущен, данные столбца полнотекстового индекса извлекаются для каждой таблицы с полнотекстовым индексом.  
+`[ @table_name = ] 'table_name'` Имя таблицы из одной или двух частей, для которой запрашиваются сведения о полнотекстовом индексе. *table_name* имеет тип **nvarchar (517)** и значение по умолчанию NULL. Если аргумент *table_name* опущен, данные столбца полнотекстового индекса извлекаются для каждой таблицы с полнотекстовым индексом.  
   
-`[ @column_name = ] 'column_name'`Имя столбца, для которого требуются метаданные полнотекстового индекса. *column_name* имеет тип **sysname** и значение по умолчанию NULL. Если параметр *column_name* опущен или имеет значение null, возвращаются сведения о полнотекстовом столбце для каждого столбца с полнотекстовым индексом для *table_name*. Если *table_name* также опущен или имеет значение null, возвращаются сведения о столбцах полнотекстового индекса для каждого столбца с полнотекстовым индексом для всех таблиц в базе данных.  
+`[ @column_name = ] 'column_name'` Имя столбца, для которого требуются метаданные полнотекстового индекса. *column_name* имеет тип **sysname** и значение по умолчанию NULL. Если параметр *column_name* опущен или имеет значение null, возвращаются сведения о полнотекстовом столбце для каждого столбца с полнотекстовым индексом для *table_name*. Если *table_name* также опущен или имеет значение null, возвращаются сведения о столбцах полнотекстового индекса для каждого столбца с полнотекстовым индексом для всех таблиц в базе данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
