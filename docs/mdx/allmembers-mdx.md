@@ -1,4 +1,5 @@
 ---
+description: AllMembers (многомерные выражения)
 title: AllMembers (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 770d66941af9b42be3c7b26f7e04a60d2a95cac2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ba70d4ad8b301cbd8af2fd76ce058f2dab2e4a4c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017148"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461676"
 ---
 # <a name="allmembers-mdx"></a>AllMembers (многомерные выражения)
 
@@ -48,7 +49,7 @@ Level_Expression.AllMembers
 >  Функция **AllMembers** семантически похожа на функцию [AddCalculatedMembers (многомерные выражения)](../mdx/addcalculatedmembers-mdx.md) .  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере возвращаются все элементы в иерархии атрибутов`Date].[Calendar Year]` [на оси столбцов, включая вычисляемые элементы, а также набор всех дочерних элементов иерархии `[Product].[Model Name]` атрибута на оси строк из куба **Adventure Works** .  
+ В следующем примере возвращаются все элементы в `Date].[Calendar Year]` иерархии атрибутов [на оси столбцов, включая вычисляемые элементы, а также набор всех дочерних элементов `[Product].[Model Name]` иерархии атрибута на оси строк из куба **Adventure Works** .  
   
 ```  
 SELECT  
@@ -58,7 +59,7 @@ FROM
    [Adventure Works]  
 ```  
   
- В следующем примере возвращаются все элементы в измерении **Measures** на оси столбцов, включая все Вычисляемые элементы, а также набор всех дочерних элементов иерархии `[Product].[Model Name]` атрибута на оси строк из куба **Adventure Works** .  
+ В следующем примере возвращаются все элементы в измерении **Measures** на оси столбцов, включая все Вычисляемые элементы, а также набор всех дочерних элементов `[Product].[Model Name]` иерархии атрибута на оси строк из куба **Adventure Works** .  
   
 ```  
 SELECT  
@@ -69,8 +70,8 @@ FROM
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [AddCalculatedMembers &#40;&#41;многомерных выражений](../mdx/addcalculatedmembers-mdx.md)   
- [Дочерние &#40;&#41;многомерных выражений](../mdx/children-mdx.md)   
+ [AddCalculatedMembers &#40;&#41;многомерных выражений ](../mdx/addcalculatedmembers-mdx.md)   
+ [Дочерние &#40;&#41;многомерных выражений ](../mdx/children-mdx.md)   
  [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

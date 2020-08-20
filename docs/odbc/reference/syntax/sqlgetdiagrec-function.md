@@ -1,4 +1,5 @@
 ---
+description: Функция SQLGetDiagRec
 title: Функция SQLGetDiagRec | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 39069526e254903509ddfef00b7bd4844f3d9e10
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7f141891292fb80d53ba06e03329b66cbc8b826e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285384"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461017"
 ---
 # <a name="sqlgetdiagrec-function"></a>Функция SQLGetDiagRec
 **Соответствия**  
@@ -85,9 +86,9 @@ SQLRETURN SQLGetDiagRec(
  Входной Длина буфера **MessageText* в символах. Отсутствует максимальная длина текста диагностического сообщения.  
   
  *текстленгсптр*  
- Проверки Указатель на буфер, в котором возвращается общее число символов (за исключением числа символов, необходимых для завершающего символа null), доступных для возврата в * \*MessageText*. Если число возвращаемых символов больше *BufferLength*, текст диагностического сообщения в * \*MessageText* усекается до *BufferLength* минус длину символа завершения null.  
+ Проверки Указатель на буфер, в котором возвращается общее число символов (за исключением числа символов, необходимых для завершающего символа null), доступных для возврата в * \* MessageText*. Если число возвращаемых символов больше *BufferLength*, текст диагностического сообщения в * \* MessageText* усекается до *BufferLength* минус длину символа завершения null.  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR или SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Диагностика  
@@ -95,7 +96,7 @@ SQLRETURN SQLGetDiagRec(
   
 -   SQL_SUCCESS: функция успешно вернула диагностические сведения.  
   
--   SQL_SUCCESS_WITH_INFO: \*буфер *MessageText* слишком мал для размещения запрошенного диагностического сообщения. Диагностические записи не были созданы. Чтобы определить, что произошло усечение, приложение должно сравнить *BufferLength* с фактическим числом доступных байтов, которое записывается в **стрингленгсптр*.  
+-   SQL_SUCCESS_WITH_INFO: буфер \* *MessageText* слишком мал для размещения запрошенного диагностического сообщения. Диагностические записи не были созданы. Чтобы определить, что произошло усечение, приложение должно сравнить *BufferLength* с фактическим числом доступных байтов, которое записывается в **стрингленгсптр*.  
   
 -   SQL_INVALID_HANDLE: маркер, указанный *параметром handletype* и *Handle* , не является допустимым маркером.  
   
@@ -135,7 +136,7 @@ SQLRETURN SQLGetDiagRec(
 |---------------------------|---------|  
 |Получение поля диагностической записи или поля заголовка диагностики|[Функция SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Образец программы ODBC](../../../odbc/reference/sample-odbc-program.md)

@@ -1,4 +1,5 @@
 ---
+description: Ancestors (многомерные выражения)
 title: Предки (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8551e6fdac54b3eb4c20f13f6722936df1c92feb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d92f15f20c872fbe63db09a55356b5d1e35ff0d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017101"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461686"
 ---
 # <a name="ancestors-mdx"></a>Ancestors (многомерные выражения)
 
 
-  Функция, возвращающая набор предков заданного элемента на заданном уровне или заданном расстоянии от элемента. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]В службах возвращаемый набор всегда будет состоять из одного члена [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] — не поддерживает несколько родителей для одного элемента.  
+  Функция, возвращающая набор предков заданного элемента на заданном уровне или заданном расстоянии от элемента. В службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] возвращаемый набор всегда будет состоять из одного члена — не [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] поддерживает несколько родителей для одного элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,7 +39,7 @@ Ancestors(Member_Expression, Distance)
  *Level_Expression*  
  Допустимое многомерное выражение, возвращающее уровень.  
   
- *Distance*  
+ *Друг*  
  Допустимое числовое выражение, указывающее расстояние от заданного элемента.  
   
 ## <a name="remarks"></a>Remarks  

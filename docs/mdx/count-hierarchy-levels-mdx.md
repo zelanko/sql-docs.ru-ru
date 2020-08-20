@@ -1,4 +1,5 @@
 ---
+description: Count (уровни иерархии) (многомерные выражения)
 title: Count (уровни иерархии) (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 17fe804de8bf2c20581ca5c00bee3a28dbce4d55
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a5ebf525df144b0fd1dd81ba5b223045b2ecfd88
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68045199"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461646"
 ---
 # <a name="count-hierarchy-levels-mdx"></a>Count (уровни иерархии) (многомерные выражения)
 
@@ -48,7 +49,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Счетчик &#40;измерение&#41; &#40;&#41;многомерных выражений](../mdx/count-dimension-mdx.md)   
+ [Счетчик &#40;измерение&#41; &#40;&#41;многомерных выражений ](../mdx/count-dimension-mdx.md)   
  [Счетчик &#40;кортеж&#41; &#40;многомерных выражений&#41;](../mdx/count-tuple-mdx.md)   
  [Count &#40;Set&#41; &#40;многомерных выражений&#41;](../mdx/count-set-mdx.md)   
  [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  

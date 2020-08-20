@@ -1,4 +1,5 @@
 ---
+description: Aggregate (многомерные выражения)
 title: Aggregate (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6c75ab71456dc8b7ffc3efdf6bd157693de14881
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1e3f00ffbf662422f162d493a585d3972518431
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017169"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461697"
 ---
 # <a name="aggregate-mdx"></a>Aggregate (многомерные выражения)
 
@@ -42,7 +43,7 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
 |Статистический оператор|Результат|  
 |--------------------------|------------|  
 |SUM|Возвращает сумму значений в наборе.|  
-|Count|Возвращает количество значений в наборе.|  
+|Количество|Возвращает количество значений в наборе.|  
 |Max|Возвращает максимальное значение в наборе.|  
 |Min|Возвращает минимальное значение в наборе.|  
 |Полуаддитивные статистические функции|Вычисляет полуаддитивные статистические функции над набором после проецирования формы на ось времени.|  
@@ -122,15 +123,15 @@ WHERE ([Geography].[State-Province].x,
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [PeriodsToDate &#40;&#41;многомерных выражений](../mdx/periodstodate-mdx.md)   
- [Дочерние &#40;&#41;многомерных выражений](../mdx/children-mdx.md)   
- [Hierarchize &#40;&#41;многомерных выражений](../mdx/hierarchize-mdx.md)   
+ [PeriodsToDate &#40;&#41;многомерных выражений ](../mdx/periodstodate-mdx.md)   
+ [Дочерние &#40;&#41;многомерных выражений ](../mdx/children-mdx.md)   
+ [Hierarchize &#40;&#41;многомерных выражений ](../mdx/hierarchize-mdx.md)   
  [Count &#40;Set&#41; &#40;многомерных выражений&#41;](../mdx/count-set-mdx.md)   
- [Фильтрация &#40;&#41;многомерных выражений](../mdx/filter-mdx.md)   
- [AddCalculatedMembers &#40;&#41;многомерных выражений](../mdx/addcalculatedmembers-mdx.md)   
- [DrilldownLevel &#40;&#41;многомерных выражений](../mdx/drilldownlevel-mdx.md)   
- [Свойства &#40;&#41;многомерных выражений](../mdx/properties-mdx.md)   
- [PrevMember &#40;&#41;многомерных выражений](../mdx/prevmember-mdx.md)   
+ [Фильтрация &#40;&#41;многомерных выражений ](../mdx/filter-mdx.md)   
+ [AddCalculatedMembers &#40;&#41;многомерных выражений ](../mdx/addcalculatedmembers-mdx.md)   
+ [DrilldownLevel &#40;&#41;многомерных выражений ](../mdx/drilldownlevel-mdx.md)   
+ [Свойства &#40;&#41;многомерных выражений ](../mdx/properties-mdx.md)   
+ [PrevMember &#40;&#41;многомерных выражений ](../mdx/prevmember-mdx.md)   
  [Справочник по функциям многомерных выражений (многомерные выражения)](../mdx/mdx-function-reference-mdx.md)  
   
   

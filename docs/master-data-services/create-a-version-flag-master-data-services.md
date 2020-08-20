@@ -1,4 +1,5 @@
 ---
+description: Создание флага версии (службы Master Data Services)
 title: Создание флага версии
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3067e1e3-05b7-4f11-9206-c612ef4e7e42
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 373e915a2a0a2c75894698df943b0d8a3df955c9
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 6720191a37230042f3b1fa85ec3018d0508b0fba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812753"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461869"
 ---
 # <a name="create-a-version-flag-master-data-services"></a>Создание флага версии (службы Master Data Services)
 
@@ -58,7 +59,7 @@ ms.locfileid: "85812753"
   
 -   [Назначение флага версии (службы Master Data Services)](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Версии &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
  [Изменение имени флага версии (службы Master Data Services)](../master-data-services/change-a-version-flag-name-master-data-services.md)  
   

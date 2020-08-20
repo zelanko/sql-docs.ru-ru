@@ -1,4 +1,5 @@
 ---
+description: Начало работы с консолью SSMA для Oracle (OracleToSQL)
 title: Начало работы с SSMA для консоли Oracle (OracleToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -13,12 +14,12 @@ ms.assetid: 667a5e4a-6848-4973-a72d-1287f64718ac
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 57170c17538ccd997c5bc4d2e12ab53914b3727c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: a403f515c057349c9717422f99b6de15aede566f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934897"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463270"
 ---
 # <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>Начало работы с консолью SSMA для Oracle (OracleToSQL)
 В этом разделе описывается процедура запуска и начала работы с консольным приложением Oracle. Здесь также перечислены соглашения, используемые в типичном окне вывода консоли SSMA.  
@@ -65,6 +66,6 @@ ms.locfileid: "87934897"
 |Зеленый|Запрос на ввод данных пользователем|  
 |Цвет|Начало, окончание и результат операции|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Установка SSMA для Oracle](installing-ssma-for-oracle-oracletosql.md)  
   

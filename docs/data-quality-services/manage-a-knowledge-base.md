@@ -1,4 +1,5 @@
 ---
+description: Управление базой знаний
 title: Управление базой знаний
 ms.date: 06/04/2013
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 2f445f4c076497db3c41947e3105440de9025175
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5676a182615dfa7ddf23dcda1841a6530467a8c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882747"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462089"
 ---
 # <a name="manage-a-knowledge-base"></a>Управление базой знаний
 
@@ -32,7 +33,7 @@ ms.locfileid: "85882747"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для открытия базы знаний необходима роль dqs_kb_editor или dqs_administrator в базе данных DQS_MAIN.  
   
-##  <a name="manage-a-knowledge-base"></a><a name="Manage"></a>Управление базой знаний  
+##  <a name="manage-a-knowledge-base"></a><a name="Manage"></a> Управление базой знаний  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Запустите приложение Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -70,7 +71,7 @@ ms.locfileid: "85882747"
   
         8.  **Дата создания**: дата создания базы знаний.  
   
-##  <a name="follow-up-after-managing-a-knowledge-base"></a><a name="FollowUp"></a>Дальнейшие действия. после управления базой знаний  
+##  <a name="follow-up-after-managing-a-knowledge-base"></a><a name="FollowUp"></a> Дальнейшие действия. после управления базой знаний  
  После проведения управления базой знаний следующий шаг зависит от того, какое действие вы выполнили с базой знаний:  
   
 -   Если вы открыли базу знаний, вы будете продолжать выбранное действие.  

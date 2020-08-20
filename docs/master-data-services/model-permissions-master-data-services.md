@@ -1,4 +1,5 @@
 ---
+description: Разрешения модели (службы Master Data Services)
 title: Разрешения модели
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 36e2b4cacd6636b2580aff1d8c27ea5a3a444906
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: e195c4f2db244fa5cf647c19c0713f24840c3441
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813255"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461761"
 ---
 # <a name="model-permissions-master-data-services"></a>Разрешения модели (службы Master Data Services)
 
@@ -33,14 +34,14 @@ ms.locfileid: "85813255"
 |----------------|-----------------|  
 |**Чтение**|Пользователь может просматривать элементы, атрибуты, членство в иерархии или коллекциях.|  
 |**Создание**|Пользователь может создавать элементы и назначать значения атрибутов во время создания.|  
-|**Update**|Пользователь может обновлять элементы, атрибуты, членство в иерархии или коллекциях.|  
-|**Удалить**|Пользователь может удалять элементы.|  
+|**Обновление**|Пользователь может обновлять элементы, атрибуты, членство в иерархии или коллекциях.|  
+|**Удаление**|Пользователь может удалять элементы.|  
 |**Запретить**|Запрет любого доступа к сущности.|  
 |**Администратор**|Административные разрешения для модели. Административные разрешения доступны только на уровне модели.|  
   
  Разрешения на чтение, создание, обновление и удаление можно использовать в различных комбинациях. Когда назначаются разрешения на создание, обновление и удаление, автоматически добавляется и разрешение на чтение.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Назначение разрешений объекта модели &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [Разрешения объекта модели &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
  [Разрешения сущности &#40;Master Data Services&#41;](../master-data-services/entity-permissions-master-data-services.md)   

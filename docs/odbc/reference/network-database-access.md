@@ -1,4 +1,5 @@
 ---
+description: Сетевой доступ к базе данных
 title: Доступ к базе данных сети | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f31dd938-e992-436b-b613-145c23973064
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2237c725d6fe3696d1f28d80c09f22183f718de8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 025959072b7ebadc96fd1d1a628bdfaf5d449940
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81295587"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461326"
 ---
 # <a name="network-database-access"></a>Сетевой доступ к базе данных
 Для доступа к базе данных по сети требуется ряд компонентов, каждый из которых не зависит от и находится под интерфейсом программирования. Эти компоненты показаны на следующем рисунке.  

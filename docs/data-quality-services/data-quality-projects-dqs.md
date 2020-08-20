@@ -1,4 +1,5 @@
 ---
+description: Проекты служб Data Quality Services (DQS)
 title: Проекты служб Data Quality Services (DQS)
 ms.date: 10/01/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 8cc17bac7bca3907ffecc0e39e454889194f7a93
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6dfb68d73ba01f343660cef328f8cb8b4dbbd3b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899107"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462269"
 ---
 # <a name="data-quality-projects-dqs"></a>Проекты служб Data Quality Services (DQS)
 
@@ -30,7 +31,7 @@ ms.locfileid: "85899107"
   
 -   Предоставляет мастер, помогающий выполнить операции очистки и сопоставления данных, и экспорт данных в базу данных SQL Server или файл CSV по выбору пользователя. Администратор данных использует проект служб DQS для запуска автоматических и интерактивных шагов очистки и сопоставления данных и для управления ими.  
   
-##  <a name="data-quality-project-cleansing-activity"></a><a name="Cleansing"></a>Проект качества данных: действие очистки  
+##  <a name="data-quality-project-cleansing-activity"></a><a name="Cleansing"></a> Проект качества данных: действие очистки  
  Проект очистки данных позволяет очистить исходные данные на основе базы знаний. Операция очистки данных в службах DQS представляет собой двухэтапный процесс.  
   
 1.  *Автоматический* процесс очистки данных, который анализирует исходные данные, сравнивая их со знаниями в базе знаний, и предлагает изменения. Обработанные данные разбиваются службами DQS на категории (предложенные, новые, недопустимые, исправленные и правильные) и выдаются пользователю для дальнейшей обработки.  
@@ -61,7 +62,7 @@ ms.locfileid: "85899107"
 |Описывает, как открывать, разблокировать, переименовывать и удалять проекты служб DQS.|[Открытие, разблокировка, переименование и удаление проекта качества данных](open-unlock-rename-and-delete-a-data-quality-project.md)|  
 |Описывает, как открыть проект служб Integration Services в [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].|[Открытие проектов служб Integration Services в клиенте DQS](../data-quality-services/open-integration-services-projects-in-data-quality-client.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Базы знаний и домены DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
   

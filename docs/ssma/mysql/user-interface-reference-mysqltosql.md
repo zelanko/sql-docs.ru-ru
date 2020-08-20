@@ -1,4 +1,5 @@
 ---
+description: Справочник по пользовательскому интерфейсу (MySQLToSQL)
 title: Справочник по пользовательскому интерфейсу (MySQLToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -9,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: 2fad3fa2-5729-4b96-99d4-2c6edfab0a54
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2f1b7a495f9962c35f805eec7518c25c50709b68
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 76eb6b52b988fc0a4c0f62e4c295b36beeab0078
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935081"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463304"
 ---
 # <a name="user-interface-reference-mysqltosql"></a>Справочник по пользовательскому интерфейсу (MySQLToSQL)
 В этом разделе содержатся разделы справки по Помощник по миграции SQL Server (SSMA) для MySQL.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
 В следующей таблице приводится список диалоговых окон SSMA.  
   
 |Раздел|Описание|  
@@ -47,7 +48,7 @@ ms.locfileid: "87935081"
 |[Обновление из базы данных &#40;MySQLToSQL&#41;](../../ssma/mysql/refresh-from-database-mysqltosql.md)|Используйте диалоговое окно **обновление из базы данных** , чтобы выбрать объекты для обновления из базы данных MySQL.|  
 |[Сохранить метаданные &#40;MySQLToSQL&#41;](../../ssma/mysql/save-metadata-mysqltosql.md)|Диалоговое окно **Сохранение метаданных** появляется при сохранении проекта, в котором отсутствуют метаданные.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Начало работы с SSMA для MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)  
 [Перенос баз данных MySQL в SQL Server базы данных SQL Azure &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: Основные понятия служб Data Quality Services
 title: Основные понятия служб Data Quality Services
 ms.date: 01/01/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: fe7f6c957bb1781528c0bad06de41063c41ca3cc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 15fc90d3437ff4cf9f24a482201ba64ce38560d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887956"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462218"
 ---
 # <a name="data-quality-services-concepts"></a>Основные понятия служб Data Quality Services
 
@@ -46,7 +47,7 @@ ms.locfileid: "85887956"
 ##  <a name="data-quality-project-concepts"></a><a name="Projects"></a> Основные понятия проекта служб DQS  
  Диспетчер данных выполняет операции повышения качества данных (очистки и сопоставления) с использованием проекта качества данных в приложении [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
   
- **Data Cleansing**  
+ **Очистка данных**  
   
  Очистка данных в DQS выполняется на основе знаний, хранящихся в базе знаний DQS. Очистка данных в DQS представляет собой двухэтапный процесс.  
   
@@ -91,7 +92,7 @@ ms.locfileid: "85887956"
   
  Дополнительные сведения об администрировании DQS см. в разделе [DQS Administration](../data-quality-services/dqs-administration.md).  
   
-## <a name="see-also"></a>См. также  
- [Data Quality Services](../data-quality-services/data-quality-services.md)  
+## <a name="see-also"></a>См. также:  
+ [Службы Data Quality Services](../data-quality-services/data-quality-services.md)  
   
   

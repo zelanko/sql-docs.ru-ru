@@ -1,4 +1,5 @@
 ---
+description: Изменения в поведении
 title: Изменения поведения | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a17ae701-6ab6-4eaf-9e46-d3b9cd0a3a67
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3e4a433531d90eb0f89d9a5e446464b13fd02526
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6fb5501d362cb46f3616e58c5a4994bab86e00ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283444"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461626"
 ---
 # <a name="behavioral-changes"></a>Изменения в поведении
 Изменения поведения — это изменения, для которых *синтаксис* интерфейса остается прежним, но *семантика* изменилась. Для этих изменений функции, используемые в ODBC 2. *x* ведет себя иначе, чем те же функциональные возможности ODBC 3. *x*.  

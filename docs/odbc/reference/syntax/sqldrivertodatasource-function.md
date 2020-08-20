@@ -1,4 +1,5 @@
 ---
+description: Функция SQLDriverToDataSource
 title: Функция Склдривертодатасаурце | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0de28eb5-8aa9-43e4-a87f-7dbcafe800dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 89e7db7e4b20a35e047dca94cb72d8a6888fb670
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da885e3be81a7a7de04a58bbb92725317477e80e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302755"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461145"
 ---
 # <a name="sqldrivertodatasource-function"></a>Функция SQLDriverToDataSource
 **Склдривертодатасаурце** поддерживает переводы для драйверов ODBC. Эта функция не вызывается приложениями, поддерживающими ODBC; приложения запрашивают преобразование через **SQLSetConnectAttr**. Драйвер, связанный с *коннектионхандле* , указанным в **SQLSetConnectAttr** , вызывает указанную библиотеку DLL для выполнения переводов всех данных, передаваемых из драйвера в источник данных. В файле инициализации ODBC можно указать библиотеку DLL для перевода по умолчанию.  
@@ -86,7 +87,7 @@ BOOL SQLDriverToDataSource(
  *пкберрормсг*  
  Проверки Указатель на общее число байтов (за исключением байта завершения null), доступного для возврата в *сзеррормсг*. Если это значение больше или равно *кберрормсг*, то данные в *Сзеррормсг* усекаются до *кберрормсгмакс* минус символ завершения null. Аргумент *пкберрормсг* может быть пустым указателем.  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  Значение TRUE, если перевод выполнен успешно, значение FALSE, если преобразование выполнить не удалось.  
   
 ## <a name="comments"></a>Комментарии  

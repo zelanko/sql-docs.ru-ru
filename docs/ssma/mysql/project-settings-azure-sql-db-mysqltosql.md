@@ -1,4 +1,5 @@
 ---
+description: Параметры проекта (база данных SQL Azure) (MySQLToSQL)
 title: Параметры проекта (база данных SQL Azure) (MySQLToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8c06420a-533b-4de0-948d-a0c6b368c544
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 9deb8a87399f1934f1d105ad31a2c51540acddd9
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d20a43e6e0ea677737079f3077d7aa47b1dc870b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935235"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463331"
 ---
 # <a name="project-settings-azure-sql-database-mysqltosql"></a>Параметры проекта (база данных SQL Azure) (MySQLToSQL)
 Параметры проекта SQL Azure позволяют настроить суффикс базы данных SQL Azure для добавления в диалоговом окне подключения, а также разрешить использование механизма пульса в SQL Azure подключении.  
@@ -25,7 +26,7 @@ ms.locfileid: "87935235"
   
 -   Используйте диалоговое окно Параметры проекта по умолчанию, чтобы задать параметры конфигурации для всех проектов. Чтобы получить доступ к параметрам SQL Azure, в меню **Сервис** выберите пункт **Параметры**, в раскрывающемся списке **версия целевого объекта миграции** выберите тип проекта миграции, SQL Azure а для доступа к параметрам на панели SQL Azure щелкните **Общие** в нижней части левой панели, а затем выберите **SQL Azure**.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
   
 ## <a name="connectivity"></a>Соединение  
 **Интервал пульса**  

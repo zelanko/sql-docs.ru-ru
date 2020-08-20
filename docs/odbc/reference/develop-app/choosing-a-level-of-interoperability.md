@@ -1,4 +1,5 @@
 ---
+description: Выбор уровня взаимодействия
 title: Выбор уровня взаимодействия | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1f915832-a7c1-41cd-8c4f-bf6d976951b0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: aa04eea9821b024f9e8dadc8ad09f449d4fb14b5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4d46f2bdb37e909e9bae0d3d5a7811f464e33bd7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303360"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461596"
 ---
 # <a name="choosing-a-level-of-interoperability"></a>Выбор уровня взаимодействия
 Если приложение будет использовать ODBC, следующим шагом будет определение того, какой уровень взаимодействия требуется. Базовый уровень взаимодействия обычно является функцией типа приложения: пользовательские приложения, как правило, не являются взаимодействующими, поэтому вертикальные приложения, как правило, взаимодействуют с ограниченным числом СУБД, и универсальные приложения, как правило, взаимодействуют между всеми СУБД.  

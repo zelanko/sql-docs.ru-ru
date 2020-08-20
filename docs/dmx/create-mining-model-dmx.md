@@ -1,4 +1,5 @@
 ---
+description: CREATE MINING MODEL (расширения интеллектуального анализа данных)
 title: СОЗДАНИЕ МОДЕЛИ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ (DMX) | Документация Майкрософт
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 440256a7349d7c77581c4369e901ce0da9c3212f
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 76cddca642fd25bb7e67ec7817c3fe3d1d9da9d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971832"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462052"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -50,7 +51,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 >  Список алгоритмов, поддерживаемых текущим поставщиком, можно получить с помощью [DMSCHEMA_MINING_SERVICES набора строк](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126251(v=sql.110)). Сведения о алгоритмах, поддерживаемых в текущем экземпляре [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , см. в разделе [Свойства интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
   
  *список параметров*  
- Необязательный элемент. Список параметров, определенных поставщиком для алгоритма и разделенный запятыми.  
+ Необязательный параметр. Список параметров, определенных поставщиком для алгоритма и разделенный запятыми.  
   
  *строка XML*  
  (Только для расширенного использования.) Модель в формате XML (PMML). Строка должна быть заключена в одиночные кавычки (').  
@@ -68,7 +69,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 -   Тип данных (обязательно)  
   
--   Дистрибутив  
+-   Distribution  
   
 -   Список флагов моделирования  
   
@@ -102,7 +103,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 -   [Флаги моделирования (интеллектуальный анализ данных)](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
   
- К инструкции можно добавить предложение, описывающее связь между двумя столбцами. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]поддерживает использование следующего \<Column relationship> предложения.  
+ К инструкции можно добавить предложение, описывающее связь между двумя столбцами. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] поддерживает использование следующего \<Column relationship> предложения.  
   
  **СВЯЗАНО**  
  Эта форма указывает на иерархию значений. Назначением столбца RELATED TO может быть ключевой столбец вложенной таблицы, столбец с дискретными значениями из строки вариантов или какой-либо другой столбец с предложением RELATED TO, указывающим на более глубокий уровень иерархии.  

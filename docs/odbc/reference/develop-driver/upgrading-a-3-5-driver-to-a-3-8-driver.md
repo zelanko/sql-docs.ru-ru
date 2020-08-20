@@ -1,4 +1,5 @@
 ---
+description: Обновление драйвера с версии 3.5 до 3.8
 title: Обновление драйвера 3,5 до драйвера 3,8 | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ffba36ac-d22e-40b9-911a-973fa9e10bd3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dcd01d050e806b733d75c54058945d367a33d6a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac140c92b4042df1b4754d3a56237a6aa4b3afaf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294435"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461336"
 ---
 # <a name="upgrading-a-35-driver-to-a-38-driver"></a>Обновление драйвера с версии 3.5 до 3.8
 В этом разделе приводятся рекомендации и рекомендации по обновлению драйвера ODBC 3,5 до драйвера ODBC 3,8.  
@@ -72,7 +73,7 @@ SQL_DRIVER_C_TYPE_BASE+0, SQL_DRIVER_C_TYPE_BASE+1
 ##### <a name="asynchronous-execution-notification-method"></a>Асинхронное выполнение (метод уведомления)  
  ODBC 3,8 поддерживает метод уведомления для асинхронных операций, доступный начиная с Windows 8. Дополнительные сведения см. в разделе [асинхронное выполнение (метод уведомления)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Разработка драйвера ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
  [Драйверы ODBC, предоставляемые корпорацией Майкрософт](../../../odbc/microsoft/microsoft-supplied-odbc-drivers.md)   
  [Новые возможности ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md)

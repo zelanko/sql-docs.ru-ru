@@ -1,4 +1,5 @@
 ---
+description: Создание тестовых случаев (SybaseToSQL)
 title: Создание тестовых случаев (SybaseToSQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b52dfd93-95af-4299-bc8f-83f2a7a6a518
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 146e6975dd8880f750e7bb449e8d42ca3e6a4e62
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: fb3fe4816faeb050a1c4321def0e7dd4e6937bdb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931918"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463156"
 ---
 # <a name="creating-test-cases-sybasetosql"></a>Создание тестовых случаев (SybaseToSQL)
 Используйте мастер тестовых случаев для создания теста. Этот мастер позволяет создавать тестовые случаи, выбрав проверенные и проверенные объекты и указав параметры тестирования.  
@@ -41,6 +42,6 @@ ms.locfileid: "87931918"
   
 5.  [Завершение подготовки тестового случая &#40;&#41;SybaseToSQL ](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Тестирование перенесенных объектов базы данных &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

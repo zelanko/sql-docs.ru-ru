@@ -1,4 +1,5 @@
 ---
+description: Получение выходных параметров с помощью метода SQLGetData
 title: Получение выходных параметров с помощью SQLGetData | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7a8c298a-2160-491d-a300-d36f45568d9c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8c96a3f9fc81d081ce16fe8e75746aafe8962fd0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a31cb6baa015e2a90977d0112e770ce66fa8e62f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294594"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461386"
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>Получение выходных параметров с помощью метода SQLGetData
 До ODBC 3,8 приложение может получить только выходные параметры запроса с привязанным выходным буфером. Однако очень сложно выделить очень большой буфер, если размер значения параметра очень большой (например, большое изображение). В ODBC 3,8 появился новый способ получения выходных параметров в частях. Приложение теперь может вызвать **SQLGetData** с небольшим буфером несколько раз, чтобы получить значение большого значения параметра. Это похоже на получение данных больших столбцов.  
@@ -37,7 +38,7 @@ ms.locfileid: "81294594"
   
 3.  Вызовите **метод SQLParamData** , чтобы получить параметр, доступный для извлечения. **Метод SQLParamData** возвратит SQL_PARAM_DATA_AVAILABLE с маркером первого доступного параметра, который задан в **SQLBindParameter** (шаг 1). Токен возвращается в буфере, на который указывает *валуептрптр* .  
   
-4.  Вызовите **SQLGetData** с аргументом *Col*_or\_*Param_Num* задайте порядковый номер параметра, чтобы получить данные первого доступного параметра. Если **SQLGetData** возвращает SQL_SUCCESS_WITH_INFO и SQLSTATE 01004 (усечение данных), а тип имеет переменную длину как на клиенте, так и на сервере, то дополнительные данные можно получить из первого доступного параметра. Вы можете по-прежнему вызывать **SQLGetData** , пока не вернет SQL_SUCCESS или SQL_SUCCESS_WITH_INFO с другим **SQLSTATE**.  
+4.  Вызовите **SQLGetData** с аргументом *Col*_or \_ *Param_Num* задайте порядковый номер параметра, чтобы получить данные первого доступного параметра. Если **SQLGetData** возвращает SQL_SUCCESS_WITH_INFO и SQLSTATE 01004 (усечение данных), а тип имеет переменную длину как на клиенте, так и на сервере, то дополнительные данные можно получить из первого доступного параметра. Вы можете по-прежнему вызывать **SQLGetData** , пока не вернет SQL_SUCCESS или SQL_SUCCESS_WITH_INFO с другим **SQLSTATE**.  
   
 5.  Повторите шаги 3 и 4, чтобы получить текущий параметр.  
   
@@ -75,13 +76,13 @@ ms.locfileid: "81294594"
   
  После того как **SQLExecute**, **SQLExecDirect**или **SQLMoreResults** возвращает SQL_PARAM_DATA_AVAILABLE, ошибка последовательности функций будет вызвана тем, что приложение вызывает функцию, которая отсутствует в следующем списке:  
   
--   **Функцию SQLAllocHandle** / **склаллочандлестд**  
+-   **Функцию SQLAllocHandle**  /  **Склаллочандлестд**  
   
--   **SQLDataSources** / **SQLDrivers**  
+-   **SQLDataSources**  /  **SQLDrivers**  
   
--   **SQLGetInfo** / **SQLGetFunctions**  
+-   **SQLGetInfo**  /  **SQLGetFunctions**  
   
--   **SQLGetConnectAttr** / **SQLGetEnvAttr**SQLGetEnvAttr / **SQLGetDescField**SQLGetDescField / **SQLGetDescRec**  
+-   **SQLGetConnectAttr**  /  **SQLGetEnvAttr**  /  **SQLGetDescField**  /  **SQLGetDescRec**  
   
 -   **SQLNumParams**  
   
@@ -93,7 +94,7 @@ ms.locfileid: "81294594"
   
 -   **SQLMoreResults**  
   
--   **SQLGetDiagField** / **SQLGetDiagRec**  
+-   **SQLGetDiagField**  /  **SQLGetDiagRec**  
   
 -   **SQLCancel**  
   

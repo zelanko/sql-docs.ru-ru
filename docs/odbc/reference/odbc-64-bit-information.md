@@ -1,4 +1,5 @@
 ---
+description: Сведения о 64-разрядном интерфейсе ODBC
 title: ODBC 64-разрядная информация | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ed9851ce-44ee-4c8e-b626-1d0b52da30fe
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b9cb8e3fc42d0ad71ac83f1432c165f243f39012
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 791bb54481ae5844061852f5321bdf07fc027b1a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298304"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461286"
 ---
 # <a name="odbc-64-bit-information"></a>Сведения о 64-разрядном интерфейсе ODBC
 Начиная с Windows Server 2003, операционные системы Майкрософт поддерживали 64-разрядные библиотеки ODBC. Заголовки и библиотеки ODBC, впервые поставляемые с пакетом SDK для MDAC 2,7, содержат изменения, позволяющие программистам легко писать код для новых 64 разрядных платформ. Убедившись, что в коде используются указанные ниже типы ODBC, можно компилировать один и тот же исходный код как для 64-разрядных, так и для 32-разрядных платформ на основе **_WIN64** или макросов **Win32** .  
@@ -496,5 +497,5 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ROWSET_SIZE  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Введение в ODBC](../../odbc/reference/introduction-to-odbc.md)

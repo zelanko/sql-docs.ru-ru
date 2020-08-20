@@ -1,4 +1,5 @@
 ---
+description: Завершение подготовки тестовых случаев (OracleToSQL)
 title: Завершение подготовки тестовых случаев (OracleToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 32f38713-7ae4-48d3-980d-74cadc8545a0
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 0cd80ee10d70b31f06c22e064d199c98cc1820b3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: a0498953c28a90498aa3e15439840180efdd25f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934872"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463229"
 ---
 # <a name="finishing-test-case-preparation-oracletosql"></a>Завершение подготовки тестовых случаев (OracleToSQL)
 На последней странице мастера отображается описание тестового случая и сведения об объектах, участвующих в тестировании. Кроме того, на этой странице можно задать параметры выполнения теста.  
@@ -56,7 +57,7 @@ ms.locfileid: "87934872"
   
 Нажмите кнопку **"Готово"** , чтобы сохранить подготовленный тестовый случай в [репозитории тестов (OracleToSQL)](https://msdn.microsoft.com/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Использование репозиториев тестов &#40;OracleToSQL&#41;](../../ssma/oracle/using-test-repositories-oracletosql.md)  
 [Выполнение тестовых случаев &#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
 [Тестирование перенесенных объектов базы данных &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  

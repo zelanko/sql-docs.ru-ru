@@ -1,4 +1,5 @@
 ---
+description: Дескрипторы среды
 title: Дескрипторы окружения | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 917f1b0c-272b-4e37-a1f5-87cd24b9fa21
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b504995e99dfad032598485e370b4d5a6681ae81
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1aa22a89288f4dd5a8400484078f57b60fc135fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300444"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461506"
 ---
 # <a name="environment-handles"></a>Дескрипторы среды
 *Среда* — это глобальный контекст для доступа к данным; связанный с средой — любая глобальная информация по природе, например:  

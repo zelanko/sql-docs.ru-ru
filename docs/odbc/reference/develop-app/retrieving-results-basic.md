@@ -1,4 +1,5 @@
 ---
+description: Извлечение результатов (базовые возможности)
 title: Получение результатов (базовый) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 052870e3-3f3f-4f07-91da-b649348225f4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3f7d01bf92fcee07940e449a2fb4bbac4f0fe6ac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a43064703e7ee448de89396135fa610e972e2679
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304335"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461366"
 ---
 # <a name="retrieving-results-basic"></a>Извлечение результатов (базовые возможности)
 *Результирующий набор* — это набор строк в источнике данных, соответствующих определенным условиям. Это концептуальная таблица, полученная из запроса и доступная для приложения в табличной форме. Инструкции **SELECT** , функции каталогизации и некоторые процедуры создают результирующие наборы. В следующем примере первая инструкция SQL создает результирующий набор, содержащий все строки и все столбцы в таблице Orders, а вторая инструкция SQL создает результирующий набор, содержащий столбцы OrderID, SalesPerson и состояние для строк в таблице Orders, в которой состояние открыто:  
@@ -47,6 +48,6 @@ SELECT * FROM Orders WHERE 1 = 2
   
 -   [Привязка столбцов](../../../odbc/reference/develop-app/binding-columns.md)  
   
--   [Выборка данных](../../../odbc/reference/develop-app/fetching-data.md)  
+-   [Получение данных](../../../odbc/reference/develop-app/fetching-data.md)  
   
 -   [Закрытие курсора](../../../odbc/reference/develop-app/closing-the-cursor.md)

@@ -1,4 +1,5 @@
 ---
+description: Извлечение результатов (расширенные возможности)
 title: Получение результатов (дополнительно) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bc00c379-71a7-407a-975c-898243f39bb6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ca02b4ff911c8edff06b38d5341eeaa288cc194c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 12f5c2ddd1e04b1aef96b7ef1544db9b58a9a58e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294644"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461376"
 ---
 # <a name="retrieving-results-advanced"></a>Извлечение результатов (расширенные возможности)
 Приложение может указать, что смещение добавляется к связанным адресам буфера данных и соответствующим адресам буфера длины или индикатора при вызове **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**или **SQLSetPos** . Результаты этих дополнений определяют адреса, используемые в этих операциях.  

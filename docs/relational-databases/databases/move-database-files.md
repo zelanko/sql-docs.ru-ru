@@ -1,4 +1,5 @@
 ---
+description: Перемещение файлов базы данных
 title: Перемещение файлов баз данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,16 +25,16 @@ helpviewer_keywords:
 ms.assetid: 89f01b10-5fae-4ed8-b0fb-a4b9f540fd28
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0b34df711bbe1a80f62bd307ac26e0eee4fa2cbb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 07064f2650ba2aa4aaf21dec0dc448715b873cbe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726382"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461033"
 ---
 # <a name="move-database-files"></a>Перемещение файлов базы данных
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]можно перемещать системные и пользовательские базы данных, задав в предложении FILENAME инструкции [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) новое местоположение файла. Таким образом могут быть перемещены файлы данных, журналов и полнотекстовых каталогов. Это может быть полезно в следующих ситуациях.  
+   В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно перемещать системные и пользовательские базы данных, задав в предложении FILENAME инструкции [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) новое расположение файла. Таким образом могут быть перемещены файлы данных, журналов и полнотекстовых каталогов. Это может быть полезно в следующих ситуациях.  
   
 -   Восстановление после сбоя. Например, база данных находится в подозрительном режиме, или ее работа была прекращена из-за сбоя оборудования.  
   
@@ -43,7 +44,7 @@ ms.locfileid: "85726382"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Перемещение пользовательских баз данных](../../relational-databases/databases/move-user-databases.md)|Описывает процедуры перемещения файлов пользовательской базы данных и файлов полнотекстовых каталогов в другое местоположение.|  
 |[Перемещение системных баз данных](../../relational-databases/databases/move-system-databases.md)|Описывает процедуры перемещения файлов системной базы данных в другое местоположение.|  

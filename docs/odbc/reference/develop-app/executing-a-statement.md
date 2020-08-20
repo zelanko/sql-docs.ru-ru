@@ -1,4 +1,5 @@
 ---
+description: Выполнение инструкции
 title: Исполнение инструкции | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e5f0d2ee-0453-4faf-b007-12978dd300a1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c3ce09809c896a4d1d9333da00367f972655f96b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4ce060c91e2500b016e824e733d8189c99334e1b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305745"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461476"
 ---
 # <a name="executing-a-statement"></a>Выполнение инструкции
 Существует четыре способа выполнения инструкции, в зависимости от того, когда они компилируются (подготавливаются) ядром СУБД и кто их определяет:  

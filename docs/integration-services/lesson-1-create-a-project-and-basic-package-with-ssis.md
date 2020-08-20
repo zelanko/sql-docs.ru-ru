@@ -1,4 +1,5 @@
 ---
+description: Урок 1. Создание проекта и простого пакета с помощью служб SSIS
 title: Урок 1. Создание проекта и простого пакета с помощью служб SSIS | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aeeac3c8033bfde5a528dd791e7b23b4f9973e1f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 428295430a2abb50738742db088b9573a7bf35a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917320"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461998"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Урок 1. Создание проекта и простого пакета с помощью служб SSIS
 

@@ -1,4 +1,5 @@
 ---
+description: Аргументы идентификатора
 title: Аргументы идентификатора | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b9de003f-cb49-4dec-b528-14a5b8ff12bd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6831eab30daebe37baecebe3ed7053537d7de8f8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 24efb295c9c27dbfc5edc2b1d7a46d6ca166e2c9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300164"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461456"
 ---
 # <a name="identifier-arguments"></a>Аргументы идентификатора
 Если строка в аргументе идентификатора заключена в кавычки, драйвер удаляет начальные и конечные пробелы и обрабатывает ее буквально в кавычках. Если строка не заключена в кавычки, драйвер удаляет замыкающие пробелы и складывает строку в верхний регистр. Присвоение аргументу идентификатора пустого указателя возвращает SQL_ERROR и SQLSTATE HY009 (недопустимое использование пустого указателя), если только аргумент не является именем каталога и каталоги не поддерживаются.  

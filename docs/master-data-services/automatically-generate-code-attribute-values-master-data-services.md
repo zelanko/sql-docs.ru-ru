@@ -1,4 +1,5 @@
 ---
+description: Автоматическое формирование значений атрибута Code (службы Master Data Services)
 title: Автоматическое формирование значений атрибута Code
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 19b354ee-2906-4cc7-ba2f-32b4543bddcf
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ab9a9fbaac8875be535354a5f6f9122eb5089a0c
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: a2028a0cc9911308bfe8462be4b826e53e328103
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813729"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461967"
 ---
 # <a name="automatically-generate-code-attribute-values-master-data-services"></a>Автоматическое формирование значений атрибута Code (службы Master Data Services)
 
@@ -46,7 +47,7 @@ ms.locfileid: "85813729"
   
 6.  Выберите команду **Сохранить**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Автоматическое создание кода &#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)   
  [Автоматическое формирование значений атрибута, отличного от Code (службы Master Data Services)](../master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)  
   

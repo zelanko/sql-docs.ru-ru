@@ -1,4 +1,5 @@
 ---
+description: Матрица совместимости
 title: Таблица совместимости | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0690b463-15a1-48fa-9d0b-9cc9e5bf7fc6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0406599e1657a900d1669861572ff13834cec670
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bafe3d85e1f4dc1c18acb057fe8c00e4ca0b36d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307457"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461566"
 ---
 # <a name="compatibility-matrix"></a>Матрица совместимости
 В следующей таблице описывается совместимость типов приложений и драйверов, определенных ранее в этом разделе.  
@@ -68,5 +69,5 @@ ms.locfileid: "81307457"
 ## <a name="using-sqlcancelhandle-in-an-application-compatible-with-all-driver-managers"></a>Использование Склканцелхандле в приложении, совместимом со всеми диспетчерами драйверов  
  Так как [функция склканцелхандле](../../../odbc/reference/syntax/sqlcancelhandle-function.md) не поддерживается в диспетчерах драйверов, выпущенных до Windows 7, приложение не может быть загружено в более ранние версии Windows, если оно вызывает **склканцелхандле** напрямую. Для работы со всеми версиями диспетчеров драйверов и использования **склканцелхандле** в новых версиях Windows приложение должно вызывать **склканцелхандле** косвенно с помощью **LoadLibrary** и **GetProcAddress.**  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Новые возможности ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md)

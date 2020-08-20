@@ -1,4 +1,5 @@
 ---
+description: Выбор грамматики SQL
 title: Выбор грамматики SQL | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e0d189b-e407-47e0-92a9-f9982230dd0e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2ca9911d3c88f2f540ff1332d77a2e1ebc6a4942
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7936631c830d65d58e69d6cd77a728dfd8e664b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299164"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461586"
 ---
 # <a name="choosing-an-sql-grammar"></a>Выбор грамматики SQL
 Первое решение, которое следует принять при построении инструкций SQL, — какую грамматику использовать. Помимо грамматики, доступной из различных основных стандартов, таких как Open Group, ANSI и ISO, практически каждый поставщик СУБД определяет собственную грамматику, каждая из которых немного отличается от стандартной.  

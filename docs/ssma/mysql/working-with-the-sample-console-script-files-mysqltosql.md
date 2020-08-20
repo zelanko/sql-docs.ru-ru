@@ -1,4 +1,5 @@
 ---
+description: Работа с примерами файлов сценариев консоли (MySQLToSQL)
 title: Работа с примерами файлов сценариев консоли (MySQLToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7e6aaa8a-5f5c-414d-9fb8-21e56b9ffaef
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 35041f234a28100c19baa9091e127b35f2a8364d
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 6c60c48b2c22dfb414710e305986b16d3ee31e17
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935050"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463293"
 ---
 # <a name="working-with-the-sample-console-script-files-mysqltosql"></a>Работа с примерами файлов сценариев консоли (MySQLToSQL)
 Несколько примеров файлов предоставлены вместе с продуктом для ссылки и использования пользователя. В этом разделе описывается, как с легкостью настроить эти сценарии в соответствии с потребностями конечного пользователя.  
@@ -79,9 +80,9 @@ ms.locfileid: "87935050"
   
     Сопоставление схемы базы данных источника с целевой схемой.  
   
-    **Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))  
+    **Attribute**  
   
-    -   `source-schema:`Указывает базу данных источника, которую необходимо преобразовать.  
+    -   `source-schema:` Указывает базу данных источника, которую необходимо преобразовать.  
   
     -   `sql-server-schema`: Указывает целевую базу данных, в которую будет выполнена миграция  
   
@@ -93,9 +94,9 @@ ms.locfileid: "87935050"
   
     2.  Если пользователь должен оценить несколько объектов или баз данных, он может указать несколько `metabase-object` узлов, как показано в `convert-schema` примере 4 примера файла сценария консоли.  
   
-    **Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))  
+    **Attribute**  
   
-    `object-name`: Укажите имя базы данных-источника или объект, который необходимо преобразовать. Убедитесь, что соответствующие `object-type` изменения основаны на типе объекта, который указан в`object-name`  
+    `object-name`: Укажите имя базы данных-источника или объект, который необходимо преобразовать. Убедитесь, что соответствующие `object-type` изменения основаны на типе объекта, который указан в `object-name`  
   
     **Имя команды**  
   
@@ -105,9 +106,9 @@ ms.locfileid: "87935050"
   
     2.  Если пользователь должен оценить несколько объектов или баз данных, он может указать несколько `metabase-object` узлов, как показано в `synchronize-target` примере 3 примера файла сценария консоли.  
   
-    **Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))  
+    **Attribute**  
   
-    `object-name:`Укажите имя базы данных или объекта SQL Server, который необходимо создать. Убедитесь, что соответствующие `object-type` изменения основаны на типе объекта, который указан в`object-name`  
+    `object-name:` Укажите имя базы данных или объекта SQL Server, который необходимо создать. Убедитесь, что соответствующие `object-type` изменения основаны на типе объекта, который указан в `object-name`  
   
     **Имя команды**  
   
@@ -117,11 +118,11 @@ ms.locfileid: "87935050"
   
     2.  Если пользователь должен оценить несколько объектов или баз данных, он может указать несколько `metabase-object` узлов, как показано в `migrate-data` примере 2 примера файла сценария консоли.  
   
-    **Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))  
+    **Attribute**  
   
-    `object-name:`Указывает имя базы данных-источника или таблицы, которые необходимо перенести. Убедитесь, что соответствующие `object-type` изменения основаны на типе объекта, который указан в`object-name`  
+    `object-name:` Указывает имя базы данных-источника или таблицы, которые необходимо перенести. Убедитесь, что соответствующие `object-type` изменения основаны на типе объекта, который указан в `object-name`  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Создание файлов переменных значений &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  
 [Создание файлов подключения к серверу &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
 [Создание отчетов &#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md)  

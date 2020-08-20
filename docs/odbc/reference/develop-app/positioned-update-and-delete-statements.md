@@ -1,4 +1,5 @@
 ---
+description: Инструкции позиционированного обновления и удаления
 title: Операторы позиционированного обновления и удаления | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0eafba50-02c7-46ca-a439-ef3307b935dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6e5316bee7057b30eace326b3ca82b30b75741fb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bd100ac674aedf8dfd652c3d48e0f2dea1226019
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282365"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461396"
 ---
 # <a name="positioned-update-and-delete-statements"></a>Инструкции позиционированного обновления и удаления
 Приложения могут обновлять или удалять текущую строку в результирующем наборе с помощью инструкции позиционированного обновления или удаления. Инструкции позиционированного обновления и удаления поддерживаются некоторыми источниками данных, но не всеми из них. Чтобы определить, поддерживает ли источник данных инструкции по позиционированию обновлений и удаления, приложение вызывает **SQLGetInfo** с SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ATTRIBUTES1 или SQL_STATIC_CURSOR_ATTRIBUTES1 *инфотипе* (в зависимости от типа курсора). Обратите внимание, что библиотека курсоров ODBC моделирует позиционированные инструкции UPDATE и DELETE.  
@@ -39,9 +40,9 @@ ms.locfileid: "81282365"
   
  **Обновить** *таблицу-имя*  
   
- **Задать** *идентификатор* **=** столбца {*выражение* &#124; **null**}  
+ **Задать** *идентификатор столбца* **=** {*выражение* &#124; **null**}  
   
- [**,** *столбец-Идентификатор* **=** {*выражение* &#124; **null**}]...  
+ [**,** *столбец-Идентификатор* **=** {*expression* &#124; **null**}] ...  
   
  **Где текущее** *имя курсора*  
   

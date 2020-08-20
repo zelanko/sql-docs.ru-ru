@@ -1,4 +1,5 @@
 ---
+description: Занятие 1-7. Добавление и настройка назначения OLE DB
 title: Шаг 7. Добавление и настройка назначения OLE DB | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c72ac0393733511f63844ae50b20a40e4c12ea4a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ebfca5c6b25f16bb4f86ca692b09bbc5d0beaaa9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917349"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462070"
 ---
 # <a name="lesson-1-7-add-and-configure-the-ole-db-destination"></a>Занятие 1-7. Добавление и настройка назначения OLE DB
 
@@ -41,7 +42,7 @@ ms.locfileid: "86917349"
   
 6.  Убедитесь в том, что в диалоговом окне **Редактор назначения OLE DB** в поле **Диспетчер соединений OLE DB** выбрано значение **localhost.AdventureWorksDW2012**.  
   
-7.  В поле **Имя таблицы или представления** введите или выберите значение **[dbo].[FactCurrencyRate]** .  
+7.  В поле **Имя таблицы или представления** введите или выберите значение **[dbo].[FactCurrencyRate]**.  
   
 8.  Чтобы создать таблицу, нажмите кнопку **Создать**.  Измените имя таблицы с **Образец назначения OLE DB** на **NewFactCurrencyRate**.  Щелкните **ОК**.  
   
@@ -55,12 +56,12 @@ ms.locfileid: "86917349"
   
 13. Щелкните правой кнопкой мыши назначение **Образец назначения OLE DB** и выберите пункт **Свойства**.  
   
-14. В окне **Свойства** убедитесь в том, что свойство **LocaleID** установлено в значение **Английский (США)** , а свойство **DefaultCodePage** установлено в значение **1252**.  
+14. В окне **Свойства** убедитесь в том, что свойство **LocaleID** установлено в значение **Английский (США)**, а свойство **DefaultCodePage** установлено в значение **1252**.  
   
 ## <a name="go-to-next-task"></a>Переход к следующей задаче
 [Шаг 8. Добавление заметок и форматирование пакета занятия 1](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также  
 [Назначение OLE DB](../integration-services/data-flow/ole-db-destination.md)  
   
   

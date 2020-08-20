@@ -1,4 +1,5 @@
 ---
+description: Создание индекса (Master Data Services)
 title: Создание индекса
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: da814796cb4f03008857b20d6f8f7d00b70a8b4a
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 48d78cffb116996848035e3675e707994226f080
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813086"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461852"
 ---
 # <a name="create-an-index-master-data-services"></a>Создание индекса (Master Data Services)
 
@@ -53,7 +54,7 @@ ms.locfileid: "85813086"
 |Имя столбца|Описание|  
 |-----------------|-----------------|  
 |Состояние|Состояние индекса.<br /><br /> При нажатии кнопки **сохранить**отображается ![значок обновления состояния](../master-data-services/media/mds-statusicon-updating.png "Значок обновления состояния") , указывающий, что индекс обновляется.<br /><br /> При возникновении ошибок при создании или изменении индекса отображается изображение ![состояния ошибки значок](../master-data-services/media/mds-statusicon-error.png "Значок состояния ошибки") .<br /><br /> В противном случае отображается состояние ОК, а ![для значка состояния ОК](../master-data-services/media/mds-statusicon-ok.png "Значок состояния "ОК"") — изображение.|  
-|name|Имя индекса.|  
+|Имя|Имя индекса.|  
 |Уникальный|Указывает, является ли индекс уникальным.|  
 |On Attributes|Показывает отображаемые имена атрибутов, для которых определен индекс.|  
   
@@ -70,7 +71,7 @@ ms.locfileid: "85813086"
 ## <a name="next-steps"></a>Next Steps  
  [Изменение и удаление индекса (Master Data Services)](../master-data-services/edit-and-delete-an-index-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пользовательский индекс (Master Data Services)](../master-data-services/custom-index-master-data-services.md)  
   
   
