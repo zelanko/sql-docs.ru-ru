@@ -1,4 +1,5 @@
 ---
+description: Импорт документов JSON на SQL Server
 title: Импорт документов JSON
 ms.date: 06/03/2020
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed2924ae8b839bd414f036b389bf1298d51ed452
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 342af018f28b52909adf59f830737036637ab589
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755770"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499305"
 ---
 # <a name="import-json-documents-into-sql-server"></a>Импорт документов JSON на SQL Server
 
@@ -27,7 +28,7 @@ ms.locfileid: "85755770"
 
 **OPENROWSET(BULK)** представляет собой функцию с табличным значением, с помощью которой можно считывать данные из любого файла на локальном диске или в локальной сети при условии, что у SQL Server есть доступ на чтение в этом расположении. Эта функция возвращает таблицу с одним столбцом, включающим содержимое файла. Функцию OPENROWSET(BULK) можно использовать с различными параметрами, например с разделителями. В самом простом случае вы можете просто загрузить все содержимое файла как текстовое значение. (Это единое большое значение известно как единый большой символьный объект или SINGLE_CLOB.) 
 
-Ниже приведен пример функции **OPENROWSET(BULK)** , с помощью которой содержимое файла JSON сначала считывается, а затем возвращается к пользователю в виде отдельного значения.
+Ниже приведен пример функции **OPENROWSET(BULK)**, с помощью которой содержимое файла JSON сначала считывается, а затем возвращается к пользователю в виде отдельного значения.
 
 ```sql
 SELECT BulkColumn

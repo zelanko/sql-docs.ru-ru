@@ -1,4 +1,5 @@
 ---
+description: Отправка данных в виде возвращающего табличное значение параметра со всеми значениями в памяти (ODBC)
 title: Возвращающий табличное значение параметр, значения в памяти (ODBC)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,11 +14,12 @@ ms.assetid: 8b96282f-00d5-4e28-8111-0a87ae6d7781
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 569c730b85a91ae9232758a2a1847cb1dbccba56
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 676d0c40ca7c064945284d5a486ec0cda698688d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998381"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499093"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>Отправка данных в виде возвращающего табличное значение параметра со всеми значениями в памяти (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -127,7 +129,7 @@ from @Items
     r = SQLExecDirect(hstmt, (SQLCHAR *) "{call TVPOrderEntry(?, ?, ?, ?)}",SQL_NTS);  
     ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Примеры программирования с использованием возвращающих табличное значение параметров ODBC](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
   
   

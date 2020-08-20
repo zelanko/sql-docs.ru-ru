@@ -1,4 +1,5 @@
 ---
+description: Категория событий Performance
 title: Категория событий Performance | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: 708f3585-d8be-4980-bbff-672d7c59397e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5c9db194a87092fb9d24ed9ae1c1bb80e664af40
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b652324f42375bd1de7161ac596f13be13891475
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85791029"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499439"
 ---
 # <a name="performance-event-category"></a>Категория событий Performance
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "85791029"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Класс событий Auto Stats](../../relational-databases/event-classes/auto-stats-event-class.md)|Указывает, что произошло автоматическое обновление статистики индекса и столбца.|  
 |[Класс событий Degree of Parallelism (7.0 Insert)](../../relational-databases/event-classes/degree-of-parallelism-7-0-insert-event-class.md)|Указывает, что в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] инструкции SELECT, INSERT, UPDATE или DELETE были выполнены с использованием последовательного или параллельного плана. В отчет также включается количество ЦП, использованных для выполнения операции.|  
@@ -39,10 +40,10 @@ ms.locfileid: "85791029"
 |[Класс событий Showplan XML for Query Compile](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md)|Отображает данные компиляции для операторов **Showplan** в формате XML.|  
 |[Класс событий Showplan XML Statistics Profile](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md)|Идентифицирует операторы **Showplan** , связанные с инструкцией SQL. Выходом является XML-документ.|  
 |[Класс событий SQL:FullTextQuery](../../relational-databases/event-classes/sql-fulltextquery-event-class.md)|Указывает на то, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] завершил выполнение полнотекстового запроса.|  
-|[Класс событий Plan Guide Successful](../../relational-databases/event-classes/plan-guide-successful-event-class.md)|Указывает, что в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] успешно создан план выполнения для запроса или пакета, в котором содержится структура плана.|  
-|[Класс событий Plan Guide Unsuccessful](../../relational-databases/event-classes/plan-guide-unsuccessful-event-class.md)|Указывает, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не удалось создать план выполнения для запроса или пакета, в котором содержится структура плана.|  
+|[Plan Guide Successful, класс событий](../../relational-databases/event-classes/plan-guide-successful-event-class.md)|Указывает, что в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] успешно создан план выполнения для запроса или пакета, в котором содержится структура плана.|  
+|[Plan Guide Unsuccessful, класс событий](../../relational-databases/event-classes/plan-guide-unsuccessful-event-class.md)|Указывает, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не удалось создать план выполнения для запроса или пакета, в котором содержится структура плана.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширенные события](../../relational-databases/extended-events/extended-events.md)  
   
   

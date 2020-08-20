@@ -1,4 +1,5 @@
 ---
+description: Database Suspect Data Page, класс событий
 title: Класс событий Database Suspect Data Page | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
@@ -15,12 +16,12 @@ ms.assetid: 098e1443-a8a0-425c-9311-0a479b1370ed
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e56cfe4b959eb651af297e7dfb113a93b89b1db1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0b7553122a89b7410b9d58cbab35320d23cf96e7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765275"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499442"
 ---
 # <a name="database-suspect-data-page-event-class"></a>Database Suspect Data Page, класс событий
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,16 +34,16 @@ ms.locfileid: "85765275"
   
 ## <a name="database-suspect-data-page-event-class-data-columns"></a>Столбцы данных класса событий Database Suspect Data Page  
   
-|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|Идентификатор базы данных, для которой возникло событие подозрительной страницы. Это то же самое, что столбец **database_id** таблицы **suspect_pages** .|3|Да|  
-|**EventClass**|**int**|Событие имеет тип 213.|27|нет|  
+|**EventClass**|**int**|Событие имеет тип 213.|27|Нет|  
 |**EventSequence**|**int**|Порядковый номер класса событий в пакете.|51|нет|  
 |**SPID**|**int**|Идентификатор задачи [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , при выполнении которой возникла подозрительная страница.|12|Да|  
 |**StartTime**|**datetime**|Время возникновения события.|14|Да|  
 |**ObjectID**|**int**|Идентификатор файла базы данных, содержащего подозрительную страницу. Это то же самое, что столбец **file_id** таблицы **suspect_pages** .|22|Да|  
 |**ObjectID2**|**int**|Идентификатор подозрительной страницы в файле. Это то же самое, что столбец **page_id** таблицы **suspect_pages** .|56|Да|  
-|**Ошибка**|**int**|Тип происшедшей ошибки. Это значение такое же, как и значение **event_type** для страницы таблицы **suspect_pages** .|31|Да|  
+|**Error**|**int**|Тип происшедшей ошибки. Это значение такое же, как и значение **event_type** для страницы таблицы **suspect_pages** .|31|Да|  
   
 ## <a name="see-also"></a>См. также:  
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   

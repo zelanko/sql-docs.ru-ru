@@ -1,4 +1,5 @@
 ---
+description: Выборка строки данных
 title: Выборка строки данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 16d4a380-0d83-456b-aeee-f10738944e86
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a702f561b756d5305020df9f015d3ea4b444caa6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 71ced7d7df30f1bb4f784317b76f7b42553951df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305675"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499894"
 ---
 # <a name="fetching-a-row-of-data"></a>Выборка строки данных
 Чтобы получить строку данных, приложение вызывает **SQLFetch**. **SQLFetch** можно вызывать с любым видом курсора, но он перемещает только курсор набора строк только в прямом направлении. **SQLFetch** перемещает курсор к следующей строке и возвращает данные для всех столбцов, которые были привязаны к вызовам **SQLBindCol**. Когда курсор достигает конца результирующего набора, **SQLFetch** возвращает SQL_NO_DATA. Примеры вызова **SQLFetch**см. в разделе [Использование SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md).  

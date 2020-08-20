@@ -1,4 +1,5 @@
 ---
+description: bcp_columns
 title: bcp_columns | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,11 +19,12 @@ ms.assetid: 5376f6fe-9508-439a-8c66-778d77f19ac3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63217ba5d69e66ce328ed4c05d7af4d12b0090c4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9b8e0798ce0b00256923d7740cb450e2949b20ff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009098"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499292"
 ---
 # <a name="bcp_columns"></a>bcp_columns
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +50,7 @@ RETCODE bcp_columns (
 ## <a name="returns"></a>Возвращаемое значение  
  SUCCEED или FAIL.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Комментарии  
  Эту функцию можно вызвать только после вызова [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) с допустимым именем файла.  
   
  Эту функцию следует вызывать только в том случае, если планируется использовать формат файла пользователя, отличный от формата по умолчанию. Дополнительные сведения об описании формата пользовательских файлов по умолчанию см. в разделе **bcp_init**.  

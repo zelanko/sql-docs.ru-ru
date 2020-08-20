@@ -1,4 +1,5 @@
 ---
+description: Класс событий Audit Fulltext
 title: Класс событий Audit Fulltext | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.assetid: 95e4c5fd-e16f-446e-b42b-105495a8f39a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b8bab0dc383ba6d427656cddf14b0ab253d6b313
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 51cc9e52574085e6d751098bac6f545e88cac467
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85630029"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499510"
 ---
 # <a name="audit-fulltext-event-class"></a>Класс событий Audit Fulltext
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -23,10 +24,10 @@ ms.locfileid: "85630029"
   
 ## <a name="audit-fulltext-event-class-data-columns"></a>Столбцы данных класса событий Audit Fulltext  
   
-|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|**Ошибка**|**int**|Код ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , если событие сигнализирует об ошибке.|31|Да|  
-|**EventSequence**|**int**|Порядковый номер данного события в запросе.|51|нет|  
+|**Error**|**int**|Код ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , если событие сигнализирует об ошибке.|31|Да|  
+|**EventSequence**|**int**|Порядковый номер данного события в запросе.|51|Нет|  
 |**EventSubClass**|**int**|Тип соединения, используемого для входа. 1 = без пула, 2 = в пуле.|21|Да|  
 |**IsSystem**|**int**|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  
 |**SessionLoginName**|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по имени "Имя_входа1" и при выполнении инструкции под именем "Имя_входа2" **SessionLoginName** содержит значение "Имя_входа1", а **LoginName** — значение "Имя_входа2". В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  

@@ -1,4 +1,5 @@
 ---
+description: Функция SQLRowCount
 title: Функция SQLRowCount | Документация Майкрософт
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 61e00a8a-9b3b-45b9-b397-7fe818822416
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2cbca03e7c3e381b803196a1bf7bb227ebeea03b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 666351fcd4758170baaf62fbd80cd45a554ab92a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81293374"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499597"
 ---
 # <a name="sqlrowcount-function"></a>Функция SQLRowCount
 **Соответствия**  
@@ -57,16 +58,16 @@ SQLRETURN SQLRowCount(
 > [!NOTE]  
 >  Многие источники данных не могут возвращать количество строк в результирующем наборе перед их получением; для обеспечения максимальной совместимости приложения не должны полагаться на такое поведение.  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR или SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLRowCount** возвращает SQL_ERROR или SQL_SUCCESS_WITH_INFO, связанное значение SQLSTATE может быть получено путем вызова **SQLGetDiagRec** с *параметром handletype* SQL_HANDLE_STMT и *маркером* *статеменсандле*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые функцией **SQLRowCount** , и объясняется каждый из них в контексте этой функции. Нотация "(DM)" предшествует описаниям SQLSTATE, возвращаемым диспетчером драйверов. Код возврата, связанный с каждым значением SQLSTATE, имеет SQL_ERROR, если не указано иное.  
   
-|SQLSTATE|Error|Описание|  
+|SQLSTATE|Ошибка|Описание|  
 |--------------|-----------|-----------------|  
 |01000|Общее предупреждение|Информационное сообщение для конкретного драйвера. (Функция возвращает SQL_SUCCESS_WITH_INFO.)|  
-|HY000|Общая ошибка|Произошла ошибка, для которой нет определенного SQLSTATE и для которого не определен SQLSTATE для конкретной реализации. Сообщение об ошибке, возвращаемое функцией **SQLGetDiagRec** в буфере * \*MessageText* , описывает ошибку и ее причину.|  
+|HY000|Общая ошибка|Произошла ошибка, для которой нет определенного SQLSTATE и для которого не определен SQLSTATE для конкретной реализации. Сообщение об ошибке, возвращаемое функцией **SQLGetDiagRec** в буфере * \* MessageText* , описывает ошибку и ее причину.|  
 |HY001|Ошибка выделения памяти|Драйверу не удалось выделить память, необходимую для поддержки выполнения или завершения функции.|  
 |HY010|Ошибка последовательности функций|(DM) вызвана асинхронно исполняемая функция для маркера соединения, связанного с *статеменсандле*. Эта асинхронная функция все еще выполнялась при вызове функции **SQLRowCount** .<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**или **SQLMoreResults** были вызваны для *статеменсандле* и возвращены SQL_PARAM_DATA_AVAILABLE. Эта функция была вызвана до получения данных для всех потоковых параметров.<br /><br /> (DM) функция была вызвана до вызова **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**или **SQLSetPos** для *статеменсандле*.<br /><br /> (DM) была вызвана асинхронно исполняемая функция для *статеменсандле* и все еще выполнялась при вызове этой функции.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**или **SQLSetPos** были вызваны для *статеменсандле* и возвращены SQL_NEED_DATA. Эта функция была вызвана перед отправкой данных для всех параметров или столбцов данных, выполняемых во время выполнения.|  
 |HY013|Ошибка управления памятью|Не удалось обработать вызов функции, так как не удалось получить доступ к базовым объектам памяти, возможно, из-за нехватки памяти.|  
@@ -84,6 +85,6 @@ SQLRETURN SQLRowCount(
 |Исполнение инструкции SQL|[Функция SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
 |Исполнение подготовленной инструкции SQL|[Функция SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)

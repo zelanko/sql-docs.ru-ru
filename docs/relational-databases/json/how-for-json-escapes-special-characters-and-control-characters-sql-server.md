@@ -1,4 +1,5 @@
 ---
+description: Как FOR JSON экранирует специальные и управляющие символы (SQL Server)
 title: Как FOR JSON экранирует специальные и управляющие символы
 ms.date: 06/03/2020
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 939e9d4782fec818df387844841f58e9e45f0da6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c96ae7e539a4a5783d238d71ff94d9e04f179251
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722247"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499261"
 ---
 # <a name="how-for-json-escapes-special-characters-and-control-characters-sql-server"></a>Как FOR JSON экранирует специальные и управляющие символы (SQL Server)
 
@@ -37,7 +38,7 @@ ms.locfileid: "85722247"
 |Обратная косая черта (\\)|\\\\|  
 |Косая черта (/)|\\/|  
 |Отмена|\b|  
-|Подача страницы|\f|  
+|Перевод страницы|\f|  
 |Новая строка|\n|  
 |Возврат каретки|\r|  
 |Горизонтальная табуляция|\t|  

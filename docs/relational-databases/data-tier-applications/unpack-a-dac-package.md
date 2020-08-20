@@ -1,4 +1,5 @@
 ---
+description: Распаковка пакета DAC
 title: Распаковка пакета DAC | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3cecfc696bda97e046acd80eb3e285e8da2a04de
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dee530c223890a51ab255d319db9a7772e0ce686
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781640"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499927"
 ---
 # <a name="unpack-a-dac-package"></a>Распаковка пакета DAC
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "85781640"
   
 1.  **Перед началом работы**  [Безопасность](#Security)  
   
-2.  **Распаковка приложения уровня данных с использованием:**  [диалогового окна распаковки приложения уровня данных](#UnpackDACDial), [изучения содержимого пакета приложения уровня данных](#ExamDACPack)  
+2.  **Распаковка приложения уровня данных с использованием следующих средств**  [диалоговое окно распаковки приложения уровня данных](#UnpackDACDial), [изучение содержимого пакета приложения уровня данных](#ExamDACPack)  
 
 ##  <a name="security"></a><a name="Security"></a> безопасность  
  Рекомендуется не выполнять развертывание пакетов DAC, полученных из неизвестных или ненадежных источников. В этих пакетах может содержаться вредоносный код, вызывающий выполнение непредусмотренных инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] или появление ошибок из-за изменения схемы. Перед тем как использовать приложение уровня данных, полученное из неизвестного или ненадежного источника, разверните его на изолированном тестовом экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], распакуйте приложение уровня данных и изучите его код, например хранимые процедуры или другой определенный пользователем код.  

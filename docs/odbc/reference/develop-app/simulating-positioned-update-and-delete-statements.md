@@ -1,4 +1,5 @@
 ---
+description: Моделирование инструкций позиционированного обновления и удаления
 title: Имитация позиционированных инструкций UPDATE и DELETE | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b24ed59f-f25b-4646-a135-5f3596abc1a4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e1eb498a99180d145147e67c8955eeb7a0027024
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 06f6faad1b5b6cb83616575ea8732cac98b88ed0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301995"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499817"
 ---
 # <a name="simulating-positioned-update-and-delete-statements"></a>Моделирование инструкций позиционированного обновления и удаления
 Если источник данных не поддерживает инструкции позиционированного обновления и удаления, драйвер может имитировать их. Например, Библиотека курсоров ODBC моделирует позиционированные инструкции UPDATE и DELETE. Общая стратегия моделирования позиционированных инструкций UPDATE и DELETE заключается в преобразовании позиционированных операторов в поиск. Это делается путем замены предложения **WHERE CURRENT of** оператором поиска **WHERE** , определяющим текущую строку.  

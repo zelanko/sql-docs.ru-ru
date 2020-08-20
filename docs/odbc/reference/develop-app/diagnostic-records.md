@@ -1,4 +1,5 @@
 ---
+description: Диагностические записи
 title: Диагностические записи | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 92c73f9b-3ed7-410d-9cec-2771004aae60
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b564f2837bc76e04011170e191d00c08d10c119d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1b407ef1f8664191a16f54942f42f4088824517c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305185"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499925"
 ---
 # <a name="diagnostic-records"></a>Диагностические записи
 С каждой средой, соединением, инструкцией и дескриптором дескрипторов относятся *диагностические записи*. Эти записи содержат диагностические сведения о последней функции с именем, которая использовала определенный обработчик. Записи заменяются только в том случае, если другая функция вызывается с помощью этого маркера. Количество диагностических записей, которые могут храниться в любой момент времени, не ограничено.  

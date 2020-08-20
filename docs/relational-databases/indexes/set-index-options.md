@@ -1,4 +1,5 @@
 ---
+description: Установка параметров индекса
 title: Установка параметров индекса | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/26/2019
@@ -25,12 +26,12 @@ ms.assetid: 7969af33-e94c-41f7-ab89-9d9a2747cd5c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7f365e59f615c532ae168bacafe690d66501eea4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1427a47837063db4fd617c8489d99a3ab7927d15
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85659357"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499395"
 ---
 # <a name="set-index-options"></a>Установка параметров индекса
 
@@ -57,7 +58,7 @@ ms.locfileid: "85659357"
 ### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения
 
 - К индексу с помощью предложения SET в инструкции ALTER INDEX можно немедленно применить следующие параметры: ALLOW_PAGE_LOCKS, ALLOW_ROW_LOCKS, OPTIMIZE_FOR_SEQUENTIAL_KEY, IGNORE_DUP_KEY и STATISTICS_NORECOMPUTE.
-- Следующие параметры индекса можно установить при перестройке индекса с помощью инструкции ALTER INDEX REBUILD или CREATE INDEX WITH DROP_EXISTING: PAD_INDEX, FILLFACTOR, SORT_IN_TEMPDB, IGNORE_DUP_KEY, STATISTICS_NORECOMPUTE, ONLINE, ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, MAXDOP и DROP_EXISTING (только для CREATE INDEX).
+- Следующие параметры можно установить при перестройке индекса с помощью инструкции ALTER INDEX REBUILD или CREATE INDEX WITH DROP_EXISTING: PAD_INDEX, FILLFACTOR, SORT_IN_TEMPDB, IGNORE_DUP_KEY, STATISTICS_NORECOMPUTE, ONLINE, ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, MAXDOP и DROP_EXISTING (только CREATE INDEX).
 
 ### <a name="security"></a><a name="Security"></a> безопасность
 
@@ -87,7 +88,7 @@ ms.locfileid: "85659357"
 5. Щелкните правой кнопкой мыши индекс, свойства которого требуется изменить, и выберите пункт **Свойства**.
 6. В разделе **Выбор страницы**щелкните **Параметры**.
 7. Измените значения любого или всех свойств, чтобы внести изменения в индекс.
-8. Чтобы добавить столбец индекса, удалить или изменить его позицию, выберите страницу **Общие** в диалоговом окне **Свойства индекса ―**  _имя_индекса_. Дополнительные сведения см. в разделе [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md).
+8. Чтобы добавить столбец индекса, удалить или изменить его позицию, выберите страницу **Общие** в диалоговом окне **Свойства индекса ― ** _имя_индекса_. Дополнительные сведения см. в разделе [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md).
 
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL
 
