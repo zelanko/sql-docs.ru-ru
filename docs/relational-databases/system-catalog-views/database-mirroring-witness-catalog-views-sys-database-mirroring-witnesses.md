@@ -1,4 +1,5 @@
 ---
+description: Представления каталога следящего сервера зеркального отображения базы данных — sys. database_mirroring_witnesses
 title: sys. database_mirroring_witnesses (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 0dd5b794-733b-4a3c-b5a4-62f9f1f0f22d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 303fe8085ae4d103ede7715dcbb46e456db8f01f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6c27dc5a6caacf7a1cde44a54fe6383fc36ea516
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752946"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455309"
 ---
 # <a name="database-mirroring-witness-catalog-views---sysdatabase_mirroring_witnesses"></a>Представления каталога следящего сервера зеркального отображения базы данных — sys. database_mirroring_witnesses
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,10 +55,10 @@ ms.locfileid: "85752946"
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также  
- [Следящий сервер зеркального отображения базы данных](../../database-engine/database-mirroring/database-mirroring-witness.md)   
+## <a name="see-also"></a>См. также:  
+ [Database Mirroring Witness](../../database-engine/database-mirroring/database-mirroring-witness.md)   
  [sys. database_mirroring &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)   
- [sys. database_mirroring_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
+ [sys.database_mirroring_endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
  [Часто задаваемые вопросы о запросах к системному каталогу сервера SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

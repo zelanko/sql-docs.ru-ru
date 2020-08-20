@@ -1,4 +1,5 @@
 ---
+description: Поставщик сохраняемости Microsoft OLE DB (поставщик служб ADO)
 title: Поставщик сохраняемости Microsoft OLE DB (поставщик служб ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cc8c8f099e703433f57e9d8ff463e229213503be
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9a1211a84bf42afdb406c085e57f5bb36f48a168
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758470"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454116"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Общие сведения о поставщике сохраняемости Microsoft OLE DB
 Поставщик сохраняемости Microsoft OLE DB позволяет сохранить объект [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) в файл, а затем восстановить этот объект **набора записей** из файла. Сведения о схеме, данные и ожидающие изменения сохраняются.
@@ -33,7 +34,7 @@ ms.locfileid: "82758470"
 "Provider=MSPersist"
 ```
 
-## <a name="errors"></a>Ошибки
+## <a name="errors"></a>ошибки
  Следующие ошибки, выданные поставщиком, могут быть обнаружены в приложении.
 
 |Константа|Описание|
@@ -41,7 +42,7 @@ ms.locfileid: "82758470"
 |E_BADSTREAM|Открытый файл имеет недопустимый формат (то есть формат не АДТГ или XML).|
 |E_CANTPERSISTROWSET|Сохраненный объект **набора записей** имеет характеристики, которые не позволяют сохранить его.|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
  Поставщик сохраняемости Microsoft OLE DB не предоставляет динамические свойства.
 
  В настоящее время невозможно сохранить только параметризованные иерархические объекты **Recordset** .

@@ -1,4 +1,5 @@
 ---
+description: sysmail_update_profile_sp (Transact-SQL)
 title: sysmail_update_profile_sp (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: eaedf7ce-a8d5-4ab9-99e0-d77d5be19e90
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c795b604538a26fc7602ea245bd4d1d8c9c52d33
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 78a123514e990499f191cbc6742870647adebc5e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890817"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454762"
 ---
 # <a name="sysmail_update_profile_sp-transact-sql"></a>sysmail_update_profile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,11 +41,11 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @profile_id = ] profile_id`Идентификатор обновляемого профиля. *profile_id* имеет **тип int**и значение по умолчанию NULL. Необходимо указать хотя бы один *profile_id* или *profile_name* . Если заданы оба параметра, процедура изменяет имя профиля.  
+`[ @profile_id = ] profile_id` Идентификатор обновляемого профиля. *profile_id* имеет **тип int**и значение по умолчанию NULL. Необходимо указать хотя бы один *profile_id* или *profile_name* . Если заданы оба параметра, процедура изменяет имя профиля.  
   
-`[ @profile_name = ] 'profile_name'`Имя обновляемого профиля или новое имя профиля. Аргумент *profile_name* имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать хотя бы один *profile_id* или *profile_name* . Если заданы оба параметра, процедура изменяет имя профиля.  
+`[ @profile_name = ] 'profile_name'` Имя обновляемого профиля или новое имя профиля. Аргумент *profile_name* имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать хотя бы один *profile_id* или *profile_name* . Если заданы оба параметра, процедура изменяет имя профиля.  
   
-`[ @description = ] 'description'`Новое описание профиля. *Description* имеет тип **nvarchar (256)** и значение по умолчанию NULL.  
+`[ @description = ] 'description'` Новое описание профиля. *Description* имеет тип **nvarchar (256)** и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  

@@ -1,4 +1,5 @@
 ---
+description: CDC. &lt; &gt;_CT capture_instance (Transact-SQL)
 title: CDC. &lt; capture_instance &gt; _CT (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/01/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ce584b558be168a81e21da0762f6ea26ed798b05
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c6f91c8064316c8d1fa94b88a4a5c123a652cb5f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890651"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454778"
 ---
 # <a name="cdcltcapture_instancegt_ct-transact-sql"></a>CDC. &lt; &gt;_CT capture_instance (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Таблица изменений, созданная при включении системы отслеживания измененных данных в исходной таблице. Эта таблица содержит по одной строке для каждой операции вставки и удаления в исходной таблице и по две строки для каждой операции обновления в исходной таблице. Если имя таблицы изменений не задано при включении исходной таблицы, создается производное имя. Имя имеет формат CDC. *capture_instance*_CT, где *capture_instance* — имя схемы исходной таблицы и имя исходной таблицы в формате *schema_table*. Например, если таблица **Person. адрес** в образце базы данных **AdventureWorks** включена для отслеживания измененных данных, то производное имя таблицы изменений будет храниться в **CDC. Person_Address_CT**.  
   
- Рекомендуется **не выполнять запросы к системным таблицам напрямую**. Вместо этого выполните функции [CDC. fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) и [cdc. fn_cdc_get_net_changes_<capture_instance](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)>.  
+ Рекомендуется **не выполнять запросы к системным таблицам напрямую**. Вместо этого выполните функции [CDC. fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) и [cdc. fn_cdc_get_net_changes_<capture_instance ](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)>.  
   
 
   
@@ -38,7 +39,7 @@ ms.locfileid: "85890651"
 |**__$start_lsn**|**binary(10)**|Регистрационный номер транзакции в журнале (LSN), связанный с фиксацией транзакции изменения.<br /><br /> Все изменения, зафиксированные в одной транзакции, имеют общий номер LSN фиксации. Например, если операция удаления в исходной таблице удаляет две строки, таблица изменений будет содержать две строки с одинаковым значением **__ $ start_lsn** .|  
 |**__ $ end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] этот столбец всегда имеет значение NULL.|  
 |**__$seqval**|**binary(10)**|Значение последовательности, используемое для упорядочивания изменений строк в пределах транзакции.|  
-|**__ $ operation**|**int**|Определяет операцию языка обработки данных (DML), связанную с изменением. Может применяться один из перечисленных ниже типов.<br /><br /> 1 = удаление<br /><br /> 2 = вставка<br /><br /> 3 = обновление (старые значения)<br /><br /> Перед выполнением инструкции обновления в данных столбца содержатся эти значения строк.<br /><br /> 4 = обновление (новые значения)<br /><br /> После выполнения инструкции обновления в данных столбца содержатся эти значения строк.|  
+|**__$operation**|**int**|Определяет операцию языка обработки данных (DML), связанную с изменением. Может применяться один из перечисленных ниже типов.<br /><br /> 1 = удаление<br /><br /> 2 = вставка<br /><br /> 3 = обновление (старые значения)<br /><br /> Перед выполнением инструкции обновления в данных столбца содержатся эти значения строк.<br /><br /> 4 = обновление (новые значения)<br /><br /> После выполнения инструкции обновления в данных столбца содержатся эти значения строк.|  
 |**__$update_mask**|**varbinary(128)**|Битовая маска, основанная на порядковых номерах измененных столбцов в таблице изменений.|  
 |*\<captured source table columns>*|непостоянно|Остальные столбцы в таблице изменений — это столбцы из исходной таблицы, определенные, как отслеживаемые при создании экземпляра отслеживания. Если в списке отслеживаемых столбцов не указано ни одного столбца, в эту таблицу включаются все столбцы из исходной таблицы.|  
 |**__ $ command_id** |**int** |Отслеживает порядок операций в рамках транзакции. |  

@@ -1,4 +1,5 @@
 ---
+description: sys.sysfiles (Transact-SQL)
 title: Файлы sys.sys(Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3b47f38d-1cff-404d-89d3-9342c451c802
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eff8f4bcb5b14c0099c6d9d907a978f96fe1536e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dfc6430023a4123e029ebdec4f2fca56491b3632
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883766"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455118"
 ---
 # <a name="syssysfiles-transact-sql"></a>sys.sysfiles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,14 +42,14 @@ ms.locfileid: "85883766"
 |**Идентификатор**|**smallint**|Идентификационный номер файловой группы.|  
 |**size**|**int**|Размер файла в страницах по 8 КБ.|  
 |**MAXSIZE**|**int**|Максимальный размер файла, в страницах по 8 КБ.<br /><br /> 0 = не возрастает.<br /><br /> -1 = размер файла может увеличиваться до полного заполнения диска.<br /><br /> 268435456 = файл журнала может увеличиваться до 2 ТБ.<br /><br /> Примечание. базы данных, которые были обновлены с неограниченным размером файла журнала, будут сообщать-1 о максимальном размере файла журнала.|  
-|**growth**|**int**|Предельный размер базы данных. Может быть либо числом страниц, либо процентом размера файла в зависимости от значения **Status**.<br /><br /> 0 = не возрастает.|  
+|**квот**|**int**|Предельный размер базы данных. Может быть либо числом страниц, либо процентом размера файла в зависимости от значения **Status**.<br /><br /> 0 = не возрастает.|  
 |**status**|**int**|Биты состояния для значения **роста** в мегабайтах (МБ) или килобайтах (КБ).<br /><br /> 0x2 = дисковый файл.<br /><br /> 0x40 = файл журнала.<br /><br /> 0x100000 = масштаб увеличения базы данных. Это значение определяет увеличение в процентах, а не в количестве страниц.|  
 |**Счетчик**|**int**|Зарезервировано.|  
 |**name**|**sysname**|Логическое имя файла.|  
 |**filename**|**nvarchar(260)**|Имя физического устройства. Включает полный путь к файлу.|  
   
-## <a name="see-also"></a>См. также  
- [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Представления совместимости (Transact-SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

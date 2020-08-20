@@ -1,4 +1,5 @@
 ---
+description: sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
 title: sys. dm_tran_active_snapshot_database_transactions (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,11 +21,12 @@ ms.assetid: 55b83f9c-da10-4e65-9846-f4ef3c0c0f36
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 79f609de2cc683656eb7c6b1b2db27962246bbf2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 67fc1004da354aca3eebb446300d284c85b944e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009377"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454868"
 ---
 # <a name="sysdm_tran_active_snapshot_database_transactions-transact-sql"></a>sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -68,14 +70,14 @@ sys.dm_tran_active_snapshot_database_transactions
 |**max_version_chain_traversed**|**int**|Максимальная длина цепочки версий, пройденной в поисках транзакционно согласованной версии.|  
 |**average_version_chain_traversed**|**real**|Среднее число версий строк по всем пройденным цепочкам версий.|  
 |**elapsed_time_seconds**|**bigint**|Время, истекшее с момента, когда транзакция получила свой порядковый номер.|  
-|**pdw_node_id**|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
+|**pdw_node_id**|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
   
 ## <a name="permissions"></a>Разрешения
 
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
+На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется  **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
 
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Комментарии  
  **sys. dm_tran_active_snapshot_database_transactions** сообщает транзакции, которым назначен последовательный номер транзакции (XSN). Порядковый номер XSN назначается при первом доступе транзакции к хранилищу версий. В следующих примерах показано, как в базе данных, для которой включена изоляция моментальных снимков или READ COMMITTED с использованием управления версиями строк, транзакции назначается номер XSN.  
   
 -   Если транзакция выполняется на упорядочиваемом уровне изоляции, номер XSN назначается при первом выполнении транзакцией какой-либо инструкции, например операции UPDATE, в ходе которой создается версия строки.  
@@ -153,8 +155,8 @@ elapsed_time_seconds
 -   XSN-60: это вторая транзакция, выполняемая при изоляции моментального снимка. Вывод содержит такие же сведения, что и для транзакции XSN-59.  
   
 ## <a name="see-also"></a>См. также  
- [Задание уровня изоляции транзакции &#40;&#41;Transact-SQL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
- [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Задание уровня изоляции транзакции &#40;&#41;Transact-SQL ](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
+ [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции, связанные с транзакциями (Transact-SQL)](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

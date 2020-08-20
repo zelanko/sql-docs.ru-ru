@@ -1,4 +1,5 @@
 ---
+description: 'Создание экземпляра события ADO: ADO и WFC'
 title: 'Создание экземпляра события ADO: ADO и WFC | Документация Майкрософт'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 86c48e9cb3d34eb4ac499ff5f58df77367faeec0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e006add96d3bcb21c652ce33f7aab749b2bc8d54
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761360"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453836"
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>Создание экземпляра события ADO: ADO и WFC
 Объекты ADO для классов Windows Foundation (ADO/WFC) построены на модели событий ADO и представляют упрощенный прикладной программный интерфейс. Как правило, ADO/WFC перехватывает события ADO, объединяет параметры событий в один класс событий, а затем вызывает обработчик событий.  
@@ -60,7 +61,7 @@ ms.locfileid: "82761360"
   
 7.  После завершения обработки удалите обработчик из списка обработчиков событий ADO/WFC. Используйте метод с именем, например **removeOn**_EventName_(*handler*).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сводка по обработчику событий ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
  [ADO — индекс синтаксиса WFC](../../../ado/reference/ado-api/ado-wfc-syntax-index.md)   
  [Параметры события](../../../ado/guide/data/event-parameters.md)   

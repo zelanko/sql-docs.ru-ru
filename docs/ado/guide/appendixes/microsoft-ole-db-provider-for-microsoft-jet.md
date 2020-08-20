@@ -1,4 +1,5 @@
 ---
+description: Обзор поставщика Microsoft OLE DB для Microsoft Jet
 title: Поставщик OLE DB Майкрософт для Microsoft Jet | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 204aca25a330dd912e1a9354adc92bbb7c58f847
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 822c9f6ef6aebe5e32bb37e4c89a9bb4e6d7db68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763215"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454076"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Обзор поставщика Microsoft OLE DB для Microsoft Jet
 Поставщик OLE DB для Microsoft Jet позволяет ADO получать доступ к базам данных Microsoft Jet.
@@ -131,7 +132,7 @@ Microsoft.Jet.OLEDB.4.0
 |Термин каталога|DBPROP_CATALOGTERM|
 |Определение столбца|DBPROP_COLUMNDEFINITION|
 |Текущий каталог|DBPROP_CURRENTCATALOG|
-|источника данных|DBPROP_INIT_DATASOURCE|
+|Источник данных|DBPROP_INIT_DATASOURCE|
 |Имя базы данных-источника|DBPROP_DATASOURCENAME|
 |Потоковая модель объекта источника данных|DBPROP_DSOTHREADMODEL|
 |Имя СУБД|DBPROP_DBMSNAME|

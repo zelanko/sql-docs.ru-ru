@@ -1,4 +1,5 @@
 ---
+description: MSdynamicsnapshotjobs (Transact-SQL)
 title: Мсдинамикснапшотжобс (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4f36a325-0e3c-46c4-aeeb-416346cce0bc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b391da6a409043949453b1ce0b6ce0029d0ca95a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3d9e7a86050d2bdf7f30c896ad2567f390955b5b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889939"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454675"
 ---
 # <a name="msdynamicsnapshotjobs-transact-sql"></a>MSdynamicsnapshotjobs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85889939"
 |**dynamic_snapshot_location**|**nvarchar(255)**|Путь к папке, откуда будут считываться файлы моментального снимка, если используется моментальный снимок отфильтрованных данных.|  
 |**partition_id**|**int**|Идентификатор секции данных, которой принадлежит задание.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Таблицы репликации (Transact-SQL)](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

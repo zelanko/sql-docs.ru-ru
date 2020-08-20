@@ -1,4 +1,5 @@
 ---
+description: sys.dm_resource_governor_workload_groups (Transact-SQL)
 title: sys. dm_resource_governor_workload_groups (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/15/2020
@@ -20,12 +21,12 @@ ms.assetid: f63c4914-1272-43ef-b135-fe1aabd953e0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1940c42143eb2a1b4112eb2dea789196938e18ed
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: dfcbcaceeb4e60a88f1ba00fa7a116629945c7e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397150"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454886"
 ---
 # <a name="sysdm_resource_governor_workload_groups-transact-sql"></a>sys.dm_resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,17 +67,17 @@ ms.locfileid: "87397150"
 |effective_max_dop|**int**|**Применимо к**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .<br /><br />Эффективная максимальная степень параллелизма для группы рабочей нагрузки. Не допускает значение NULL.| 
 |total_cpu_usage_preemptive_ms|**bigint**|**Применимо к**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .<br /><br />Общее время ЦП, используемое в планировщике в режиме с вытеснением для группы рабочей нагрузки, измеряется в мс. Не допускает значение NULL.<br /><br />Чтобы выполнить код, внешний по отношению к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (например, расширенную хранимую процедуру или распределенный запрос), поток должен выйти из-под управления планировщика, работающего в режиме без вытеснения. Для этого исполнитель переходит в режим с вытеснением.| 
 |request_max_memory_grant_percent_numeric|**float**|**Применимо к**: начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] .<br /><br />Текущее значение параметра максимального объема предоставляемой памяти, в процентах, для отдельного запроса. Не допускает значение NULL.| 
-|pdw_node_id|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
+|pdw_node_id|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
   
 ## <a name="remarks"></a>Remarks  
- Данное динамическое административное представление отображает конфигурацию, хранимую в памяти. Чтобы просмотреть метаданные сохраненной конфигурации, используйте представление каталога [&#41;инструкции sys. resource_governor_workload_groups &#40;Transact-SQL](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md) .  
+ Данное динамическое административное представление отображает конфигурацию, хранимую в памяти. Чтобы просмотреть метаданные сохраненной конфигурации, используйте представление каталога [&#41;инструкции sys. resource_governor_workload_groups &#40;Transact-SQL ](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md) .  
   
  При `ALTER RESOURCE GOVERNOR RESET STATISTICS` успешном выполнении следующие счетчики сбрасываются: `statistics_start_time` , `total_request_count` ,, `total_queued_request_count` , `total_cpu_limit_violation_count` `total_cpu_usage_ms` , `max_request_cpu_time_ms` , `total_lock_wait_count` , `total_lock_wait_time_ms` , `total_query_optimization_count` , `total_suboptimal_plan_generation_count` , `total_reduced_memgrant_count` и `max_request_grant_memory_kb` . Счетчику `statistics_start_time` присваивается значение текущей системной даты и времени, а другим счетчикам присваивается нулевое значение (0).  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется разрешение `VIEW SERVER STATE`.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [sys. dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)   
  [sys. resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)   

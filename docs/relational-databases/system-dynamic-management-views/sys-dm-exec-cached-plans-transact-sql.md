@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_cached_plans (Transact-SQL)
 title: sys. dm_exec_cached_plans (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/18/2017
@@ -20,12 +21,12 @@ ms.assetid: 95b707d3-3a93-407f-8e88-4515d4f2039d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 214c5aed0447fe63b941e32a13a4306b1a0209a3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 378d6c50e6842c2bd954427a2583b2c016393231
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85676848"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454966"
 ---
 # <a name="sysdm_exec_cached_plans-transact-sql"></a>sys.dm_exec_cached_plans (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,14 +49,14 @@ ms.locfileid: "85676848"
 |objtype|**nvarchar (16)**|Тип объекта. Ниже приведены возможные значения и соответствующие им описания.<br /><br /> Proc: хранимая процедура<br />Подготовлено: подготовленная инструкция<br />Прямое соединение: нерегламентированный запрос. Относится к [!INCLUDE[tsql](../../includes/tsql-md.md)] отправке как события языка с помощью программы **osql** или **sqlcmd** , а не как удаленных вызовов процедур.<br />Реплпрок: процедура-фильтр репликации<br />Триггер: триггер<br />Представление: Просмотр<br />По умолчанию: по умолчанию<br />Усртаб: пользовательская таблица<br />Систаб: системная таблица<br />Проверка: ПРОВЕРОЧное ограничение<br />Правило: правило|  
 |plan_handle|**varbinary (64)**|Идентификатор плана в оперативной памяти. Этот идентификатор является временным и константным, только пока план сохраняется в кэше. Это значение можно использовать со следующими функциями динамического управления:<br /><br /> [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)<br /><br /> [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)<br /><br /> [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)|  
 |pool_id|**int**|Идентификатор пула ресурсов, для которого подсчитывается использование памяти для плана.|  
-|pdw_node_id|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
+|pdw_node_id|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
   
  <sup>1</sup>  
   
 ## <a name="permissions"></a>Разрешения
 
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
+На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется  **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
 
 ## <a name="examples"></a>Примеры  
   
@@ -112,7 +113,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys. dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
  [sys. dm_exec_plan_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)   

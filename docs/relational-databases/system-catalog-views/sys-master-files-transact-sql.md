@@ -1,4 +1,5 @@
 ---
+description: sys.master_files (Transact-SQL)
 title: sys. master_files (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/10/2016
@@ -20,11 +21,12 @@ ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c30a4bba2eed0e8709b7d99d745dd51607080b9
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 52cbf9cab6e8a9d77e7bdb0d079f5c3341ec0fed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091818"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455276"
 ---
 # <a name="sysmaster_files-transact-sql"></a>sys.master_files (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -36,12 +38,12 @@ ms.locfileid: "86091818"
 |database_id|**int**|Идентификатор базы данных, которому принадлежит данный файл. Masterdatabase_id всегда имеет значение 1.|  
 |file_id|**int**|Идентификатор файла в базе данных. Параметр file_id первичного файла всегда имеет значение 1.|  
 |file_guid|**uniqueidentifier**|Уникальный идентификатор файла.<br /><br /> NULL = база данных была обновлена с более ранней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (допустима для SQL Server 2005 и более ранних версий).|  
-|тип|**tinyint**|Тип файла:<br /><br /> 0 = строки.<br /><br /> 1 = журнал.<br /><br /> 2 = FILESTREAM.<br /><br /> 3 =[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = полнотекстовый каталог (полнотекстовые каталоги в версии, предшествующей [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]; полнотекстовые каталоги, которые обновлены до версии или созданы в версии [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и последующих, сообщают о типе файла 0).|  
+|type|**tinyint**|Тип файла:<br /><br /> 0 = строки.<br /><br /> 1 = журнал.<br /><br /> 2 = FILESTREAM.<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = полнотекстовый каталог (полнотекстовые каталоги в версии, предшествующей [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]; полнотекстовые каталоги, которые обновлены до версии или созданы в версии [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и последующих, сообщают о типе файла 0).|  
 |type_desc|**nvarchar(60)**|Описание типа файла:<br /><br /> ROWS<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT (полнотекстовые каталоги в версии, предшествующей [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]).|  
 |data_space_id|**int**|Идентификатор пространства данных, которому принадлежит этот файл. Пространство данных является файловой группой.<br /><br /> 0 = файлы журнала|  
 |name|**sysname**|Логическое имя файла в базе данных.|  
 |physical_name|**nvarchar(260)**|Имя файла в операционной системе.|  
-|state|**tinyint**|Состояние файла:<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
+|Состояние|**tinyint**|Состояние файла:<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
 |state_desc|**nvarchar(60)**|Описание состояния файла:<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> Дополнительные сведения см. в разделе [Состояния файлов](../../relational-databases/databases/file-states.md).|  
 |размер;|**int**|Текущий размер файла, в 8 КБ страницах. Для моментального снимка базы данных аргумент size отражает максимальное пространство, которое моментальный снимок может использовать только для файла.<br /><br /> Примечание. это поле заполняется нулевым числом контейнеров FILESTREAM. Запросите представление каталога *sys. database_files* , чтобы получить фактический размер контейнеров FILESTREAM.|  
 |max_size|**int**|Максимальный размер файла в страницах по 8 КБ:<br /><br /> 0 = Увеличение размера запрещено.<br /><br /> -1 = размер файла может увеличиваться до полного заполнения диска.<br /><br /> 268435456 = файл журнала может увеличиваться до 2 ТБ.<br /><br /> Примечание. базы данных, которые были обновлены с неограниченным размером файла журнала, будут сообщать-1 о максимальном размере файла журнала.|  
@@ -71,11 +73,11 @@ ms.locfileid: "86091818"
 ## <a name="permissions"></a>Разрешения  
  Минимальные разрешения, необходимые для просмотра соответствующих строк — CREATE DATABASE, ALTER ANY DATABASE или VIEW ANY DEFINITION.  
   
-## <a name="see-also"></a>См. также  
- [Представления каталога баз данных и файлов &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Представления каталогов баз данных и файлов (Transact-SQL)](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [Состояния файлов](../../relational-databases/databases/file-states.md)   
  [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys. database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [Файлы и файловые группы базы данных](../../relational-databases/databases/database-files-and-filegroups.md)  
   
   

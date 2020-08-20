@@ -1,4 +1,5 @@
 ---
+description: CurvePolygon
 title: CurvePolygon | Документация Майкрософт
 ms.date: 03/03/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3789ee478e1c77518c7ce1992ed4a5134c886498
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 69aaa7667e0aa1576dc1ec2744e1f07a402ccdf0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751099"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455444"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -173,7 +174,7 @@ SELECT @g1.STIsValid() AS G1, @g2.STIsValid() AS G2;
   
  И в `@g1`, и в `@g2` используется одинаковое внешнее ограничивающее кольцо: круг с радиусом 5, а в качестве внутреннего кольца в обоих экземплярах используется квадрат.  Но при этом экземпляр `@g1` является допустимым, а `@g2` ― нет. Недопустимость @g2 вызвана тем, что внутреннее кольцо делит внутреннее пространство, ограниченное внешним кольцом, на четыре отдельные области. На следующем чертеже показано, что произошло.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Polygon](../../relational-databases/spatial/polygon.md)   
  [CircularString](../../relational-databases/spatial/circularstring.md)   
  [CompoundCurve](../../relational-databases/spatial/compoundcurve.md)   

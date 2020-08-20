@@ -1,4 +1,5 @@
 ---
+description: MSmerge_agents (Transact-SQL)
 title: MSmerge_agents (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 639d2ebb-2c37-4fe0-b14b-1637bc5fc221
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8ffc2075f3994ec24339cc74e0d87085679e379c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: adf07725fb2d2403d8b07c4f41f865e70ebc611f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889900"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454647"
 ---
 # <a name="msmerge_agents-transact-sql"></a>MSmerge_agents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +57,7 @@ ms.locfileid: "85889900"
 |**job_step_uid**|**uniqueidentifier**|Уникальный идентификатор шага задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на котором запущен агент.|  
   
 ## <a name="see-also"></a>См. также  
- [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

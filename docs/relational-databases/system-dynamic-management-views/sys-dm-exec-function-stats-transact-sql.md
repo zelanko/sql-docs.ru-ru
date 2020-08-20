@@ -1,4 +1,5 @@
 ---
+description: sys. dm_exec_function_stats (Transact-SQL)
 title: sys. dm_exec_function_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/30/2019
@@ -18,12 +19,12 @@ ms.assetid: 4c3d6a02-08e4-414b-90be-36b89a0e5a3a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 25ec8e19343d707fefdda9049428280b1dfddb80
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: baa8bd4e62d66812d6f2ba32e4c94bc1b80da99f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396793"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454947"
 ---
 # <a name="sysdm_exec_function_stats-transact-sql"></a>sys. dm_exec_function_stats (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "87396793"
  Динамические административные представления в среде [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] не могут предоставлять информацию, которая может повлиять на автономность базы данных, или информацию о других базах данных, к которым имеет доступ пользователь. Во избежание раскрытия этой информации все строки, содержащие данные, не принадлежащие подключенному клиенту, отфильтровываются.  
   
 > [!NOTE]
-> Результаты **sys. dm_exec_function_stats** могут различаться при каждом выполнении, так как данные отражают только завершенные запросы, а не по-прежнему в полете. 
+> Результаты **sys. dm_exec_function_stats**  могут различаться при каждом выполнении, так как данные отражают только завершенные запросы, а не по-прежнему в полете. 
 
   
 |Имя столбца|Тип данных|Описание|  
@@ -75,7 +76,7 @@ ms.locfileid: "87396793"
 ## <a name="permissions"></a>Разрешения  
 
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
+На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется  **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
   
 ## <a name="examples"></a>Примеры  
  В следующем примере возвращаются сведения о первых десяти функциях, идентифицируемых по среднему затраченному времени.  

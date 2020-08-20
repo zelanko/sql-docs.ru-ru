@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_stats_properties (Transact-SQL)
 title: sys. dm_db_stats_properties (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/18/2017
@@ -20,12 +21,12 @@ ms.assetid: 8a54889d-e263-4881-9fcb-b1db410a9453
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f7a88ef6865575d8e5c505cd563b463637dd8070
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 241fe5283d5d843bbfb84bec4809dbe5d2c5dc62
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738695"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455072"
 ---
 # <a name="sysdm_db_stats_properties-transact-sql"></a>sys.dm_db_stats_properties (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,9 +58,9 @@ sys.dm_db_stats_properties (object_id, stats_id)
 |steps|**int**|Число шагов в гистограмме. Дополнительные сведения см. в статье [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).|  
 |unfiltered_rows|**bigint**|Общее количество строк в таблице до применения критерия фильтра (для отфильтрованной статистики). Если статистика не отфильтрована, то unfiltered_rows равно значению, которое возвращается в столбце rows.|  
 |modification_counter|**bigint**|Общее количество изменений в начальном столбце статистики (на основе которого строится гистограмма) с момента последнего обновления статистики.<br /><br /> Оптимизированные для памяти таблицы: начиная [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с и в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] этом столбце содержатся: общее число изменений таблицы с момента последнего обновления статистики или перезапуска базы данных.|  
-|persisted_sample_percent|**float**|Процент материализованной выборки используется для обновлений статистики, где явно не указан процент выборки. Если значение равно нулю, процент материализованной выборки не устанавливается для этой статистики.<br /><br /> **Применимо к:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4|  
+|persisted_sample_percent|**float**|Процент материализованной выборки используется для обновлений статистики, где явно не указан процент выборки. Если значение равно нулю, процент материализованной выборки не устанавливается для этой статистики.<br /><br /> **Применимо к:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1) и накопительным обновлением 4|  
   
-## <a name="remarks"></a><a name="Remarks"></a>. Замечания  
+## <a name="remarks"></a><a name="Remarks"></a> Замечания  
  **sys. dm_db_stats_properties** возвращает пустой набор строк при любом из следующих условий:  
   
 -   **object_id** или **stats_id** имеет значение null.    
@@ -104,9 +105,9 @@ CROSS APPLY sys.dm_db_stats_properties(stat.object_id, stat.stats_id) AS sp
 WHERE modification_counter > 1000;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [sys. stats &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
+ [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
  [Динамические административные представления и функции, связанные с объектом, &#40;языке Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)   
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
  [sys.dm_db_incremental_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md)  

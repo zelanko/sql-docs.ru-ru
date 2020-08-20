@@ -1,4 +1,5 @@
 ---
+description: Основные принципы ADO
 title: Основы ADO | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e6571ee28b9b069613ecb6aa9df991751118ca74
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 02574be8fc8333e357e31fe1e1425d6e237871a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761300"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453776"
 ---
 # <a name="ado-fundamentals"></a>Основные принципы ADO
 ADO предоставляет разработчикам мощную, логическую объектную модель для программного доступа, редактирования и обновления данных из разнообразных источников данных с помощью OLE DB системных интерфейсов. Наиболее распространенным применением ADO является запрос таблицы или таблиц в реляционной базе данных, получение и отображение результатов в приложении и, возможно, предоставление пользователям доступа и сохранение изменений в данных. К другим задачам относятся следующие.  

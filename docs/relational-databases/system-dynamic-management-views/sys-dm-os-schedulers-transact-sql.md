@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_schedulers (Transact-SQL)
 title: sys. dm_os_schedulers (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/13/2017
@@ -20,11 +21,12 @@ ms.assetid: 3a09d81b-55d5-416f-9cda-1a3a5492abe0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8ee5f6aca36766edd915b4b1b53c54a83c6b5a63
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2d89c460dd3e69e3fe0020463be750e9528de951
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012046"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454933"
 ---
 # <a name="sysdm_os_schedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,8 +41,8 @@ ms.locfileid: "86012046"
 |scheduler_address|**varbinary(8)**|Адрес памяти планировщика. Не допускает значение NULL.|  
 |parent_node_id|**int**|Идентификатор узла, к которому относится планировщик; этот узел еще называют родительским. Он является узлом с неоднородным доступом к памяти (NUMA). Не допускает значение NULL.|  
 |scheduler_id|**int**|Идентификатор планировщика. Все планировщики, используемые для выполнения обычных запросов, имеют идентификаторы меньше 1048576. Планировщики с идентификаторами, равными 255 или превышающими это значение, используются внутренними механизмами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], такими как планировщик выделенных административных соединений. Не допускает значение NULL.|  
-|cpu_id|**smallint**|Идентификатор ЦП, присвоенный планировщику.<br /><br /> Не допускает значение NULL.<br /><br /> **Примечание.** 255 не указывает сходство, которое было в нем [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Дополнительные сведения о сходстве см. в разделе [sys. dm_os_threads &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md) .|  
-|status|**nvarchar(60)**|Указывает состояние планировщика. Может использоваться одно из следующих значений:<br /><br /> — СКРЫТО В СЕТИ<br />-СКРЫТО В АВТОНОМНОМ РЕЖИМЕ<br />— ВИДИМЫЙ В СЕТИ<br />— ВИДИМЫЙ ВНЕ СЕТИ<br />— ВИДИМЫЙ В СЕТИ (DAC)<br />— HOT_ADDED<br /><br /> Не допускает значение NULL.<br /><br /> Планировщики с состоянием HIDDEN используются для обработки внутренних запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Планировщики с состоянием VISIBLE — для обработки пользовательских запросов.<br /><br /> Планировщики с состоянием OFFLINE соответствуют процессорам, находящимся в маске схожести в режиме вне сети и поэтому не используемым для обработки запросов. Планировщики с состоянием ONLINE соответствуют процессорам, находящимся в маске схожести в режиме в сети и поэтому доступным для обработки потоков.<br /><br /> Состояние DAC указывает на то, что планировщик выполняется через выделенное административное соединение.<br /><br /> Состояние HOT ADDED указывает, что планировщики были добавлены в ответ на событие ЦП с поддержкой горячей замены.|  
+|cpu_id|**smallint**|Идентификатор ЦП, присвоенный планировщику.<br /><br /> Не допускает значение NULL.<br /><br /> **Примечание.** 255 не указывает сходство, которое было в нем [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Дополнительные сведения о сходстве см. в разделе [sys. dm_os_threads &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md) .|  
+|status|**nvarchar(60)**|Указывает состояние планировщика. Может иметь одно из следующих значений:<br /><br /> — СКРЫТО В СЕТИ<br />-СКРЫТО В АВТОНОМНОМ РЕЖИМЕ<br />— ВИДИМЫЙ В СЕТИ<br />— ВИДИМЫЙ ВНЕ СЕТИ<br />— ВИДИМЫЙ В СЕТИ (DAC)<br />— HOT_ADDED<br /><br /> Не допускает значение NULL.<br /><br /> Планировщики с состоянием HIDDEN используются для обработки внутренних запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Планировщики с состоянием VISIBLE — для обработки пользовательских запросов.<br /><br /> Планировщики с состоянием OFFLINE соответствуют процессорам, находящимся в маске схожести в режиме вне сети и поэтому не используемым для обработки запросов. Планировщики с состоянием ONLINE соответствуют процессорам, находящимся в маске схожести в режиме в сети и поэтому доступным для обработки потоков.<br /><br /> Состояние DAC указывает на то, что планировщик выполняется через выделенное административное соединение.<br /><br /> Состояние HOT ADDED указывает, что планировщики были добавлены в ответ на событие ЦП с поддержкой горячей замены.|  
 |is_online|**bit**|Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроен на использование лишь некоторых доступных на сервере процессоров, некоторые планировщики могут быть сопоставлены с процессорами, не указанными в маске схожести. Если это так, то этот столбец вернет 0. Это значение означает, что планировщик не используется для обработки запросов или пакетов.<br /><br /> Не допускает значение NULL.|  
 |is_idle|**bit**|1 = планировщик находится в состоянии простоя. В настоящий момент не запущен ни один из исполнителей. Не допускает значение NULL.|  
 |preemptive_switches_count|**int**|Число переключений в режим с вытеснением исполнителей, обслуживаемых данным планировщиком.<br /><br /> Чтобы выполнить код, внешний по отношению к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (например, расширенную хранимую процедуру или распределенный запрос), поток должен выйти из-под управления планировщика, работающего в режиме без вытеснения. Для этого исполнитель переходит в режим с вытеснением.|  
@@ -60,15 +62,15 @@ ms.locfileid: "86012046"
 |memory_object_address|**varbinary(8)**|Адрес объекта памяти планировщика. Не допускает значения NULL.|  
 |task_memory_object_address|**varbinary(8)**|Адрес объекта памяти задачи. Не допускает значение NULL. Дополнительные сведения см. в разделе [sys. dm_os_memory_objects &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
 |quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Отображает такт планировщика, используемый SQLOS.|  
-| total_cpu_usage_ms |**bigint**|**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздним версиям <br><br> Общая нагрузка на ЦП, потребляемая этим планировщиком, о которых сообщает работники, не использующие прерывание. Не допускает значение NULL.|
-|total_cpu_idle_capped_ms|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]Указывает, что регулирование на основе [цели уровня обслуживания](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective)всегда будет равно 0 для версий, отличных от Azure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Допускает значение NULL.|
-|total_scheduler_delay_ms|**bigint**|**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздним версиям <br><br> Время между одним исполнителем и другим переключением в. Может быть вызвано тем, что работники с вытеснением задерживает планирование следующей неприоритетной рабочей роли или из-за потоков планирования ОС из других процессов. Не допускает значение NULL.|
-|ideal_workers_limit|**int**|**Применимо к**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и более поздним версиям <br><br> Количество рабочих ролей в идеале должно быть в планировщике. Если текущие работники превышают предел из-за несбалансированной загрузки задачи, то после того, как они станут неактивными, они будут обрезаны. Не допускает значение NULL.|
-|pdw_node_id|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
+| total_cpu_usage_ms |**bigint**|**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий <br><br> Общая нагрузка на ЦП, потребляемая этим планировщиком, о которых сообщает работники, не использующие прерывание. Не допускает значение NULL.|
+|total_cpu_idle_capped_ms|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Указывает, что регулирование на основе [цели уровня обслуживания](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective)всегда будет равно 0 для версий, отличных от Azure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Допускает значение NULL.|
+|total_scheduler_delay_ms|**bigint**|**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий <br><br> Время между одним исполнителем и другим переключением в. Может быть вызвано тем, что работники с вытеснением задерживает планирование следующей неприоритетной рабочей роли или из-за потоков планирования ОС из других процессов. Не допускает значение NULL.|
+|ideal_workers_limit|**int**|**Область применения**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и более поздних версий <br><br> Количество рабочих ролей в идеале должно быть в планировщике. Если текущие работники превышают предел из-за несбалансированной загрузки задачи, то после того, как они станут неактивными, они будут обрезаны. Не допускает значение NULL.|
+|pdw_node_id|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
   
 ## <a name="permissions"></a>Разрешения
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
+На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется  **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
 
 ## <a name="examples"></a>Примеры  
   
@@ -136,7 +138,7 @@ active_workers_count work_queue_count
   
 -   С планировщиком `255`, представляющим выделенное административное соединение (DAC), связано `3` исполнителя. Эти исполнители выделяются при запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и не изменяются. Они используются только для обработки запросов выделенного административного соединения (DAC) . Две задачи этого планировщика представляют собой диспетчер соединений и простаивающий исполнитель.  
   
--   `active_workers_count`представляет всех рабочих ролей, которые имеют связанные задачи и выполняются в режиме без вытеснений. Некоторые задачи, например средства прослушивания сети, запускаются планировщиком в режиме с вытеснением.  
+-   `active_workers_count` представляет всех рабочих ролей, которые имеют связанные задачи и выполняются в режиме без вытеснений. Некоторые задачи, например средства прослушивания сети, запускаются планировщиком в режиме с вытеснением.  
   
 -   Скрытые планировщики не обрабатывают стандартные запросы пользователей. Исключением является планировщик выделенного административного соединения (DAC). Этот планировщик имеет один поток для обработки запросов.  
   
@@ -190,4 +192,4 @@ current_workers_count active_workers_count work_queue_count
 ```  
   
 ## <a name="see-also"></a>См. также  
- [SQL Server динамические административные представления, связанные с операционной системой &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [SQL Server динамические административные представления, связанные с операционной системой &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  

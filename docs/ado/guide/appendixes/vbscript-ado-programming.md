@@ -1,4 +1,5 @@
 ---
+description: Программирование объектов ADO с использованием VBScript
 title: Программирование на языке сценариев VBScript | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6aaaf6d0-1376-4473-bea6-b81f2645a9ac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2029b6d661e520a4ed18631c611ed9e283e4aa7c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8bea576e55537d2b4ee75fb8e7a0fcdebea4847e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761542"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453966"
 ---
 # <a name="vbscript-ado-programming"></a>Программирование объектов ADO с использованием VBScript
 ## <a name="creating-an-ado-project"></a>Создание проекта ADO  
@@ -81,6 +82,6 @@ Response.Write("Success!")
   
 -   VBScript поддерживает только тип данных Variant, который может содержать различные типы данных. Вы можете хранить нужные данные в типе данных Variant, и данные будут работать надлежащим образом из-за приведения, выполняемого VBScript. Он распознает тип, необходимый для ADO, и соответствующим образом преобразует значение в варианте.  
   
--   Нельзя использовать **On Error GoTo \< Label>** в VBScript.  
+-   Нельзя использовать **On Error GoTo \<label> ** в VBScript.  
   
 -   VBScript поддерживает некоторые встроенные функции Visual Basic, такие как **MsgBox**, **Date**и **ISNUMERIC**. Однако поскольку VBScript является подмножеством Visual Basic, поддерживаются не все встроенные функции. Например, VBScript не поддерживает функцию **Format** и функции файлового ввода-вывода.

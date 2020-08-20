@@ -1,4 +1,5 @@
 ---
+description: Использование объектов ADO с языками сценариев
 title: Использование ADO с языками сценариев | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71057caed6d28a2923e1c3735e10d20fccc9217d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6decee7fddc4748a7d0931ab671f66b11161cc9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761572"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453996"
 ---
 # <a name="using-ado-with-scripting-languages"></a>Использование объектов ADO с языками сценариев
 В среде выполнения сценариев ADO позволяет предоставлять данные с помощью сценариев на стороне сервера. В этом сценарии ADO, базовый поставщик OLE DB, который он использует, и любые другие компоненты, необходимые для ссылки на данное хранилище данных, устанавливаются на сервере, на котором выполняется службы IIS (IIS). С помощью Active Server страниц (ASP) ADO — это компонент, на который ссылается скрипт, который может создавать HTML, например. Это содержимое HTML может передаваться через HTTP в веб-браузер клиента. С помощью сценариев веб-страница может отправить действия обратно на серверный сценарий, что позволяет обновлять, просматривать и просмотреть определенные данные.  
@@ -44,7 +45,7 @@ ms.locfileid: "82761572"
   
 |Поставщик|Уверены в безопасности сценариев?|  
 |--------------|-------------------------|  
-|Фигура|Да|  
+|Фигурная|Да|  
 |Сохранить|Да|  
 |Удаленный доступ|Да|  
 |Поставщик OLE DB для SQL Server (SQLOLEDB)|Нет|  
@@ -65,7 +66,7 @@ ms.locfileid: "82761572"
   
 -   [Программирование объектов ADO с использованием JScript](../../../ado/guide/appendixes/jscript-ado-programming.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Microsoft объекты данных ActiveX (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [Использование ADO с Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
  [Использование объектов ADO с Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   

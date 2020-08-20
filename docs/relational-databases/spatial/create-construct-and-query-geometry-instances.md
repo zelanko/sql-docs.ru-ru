@@ -1,4 +1,5 @@
 ---
+description: Создание, конструирование и запрос экземпляров geometry
 title: Создание и конструирование геометрических экземпляров и отправка запросов к ним | Документация Майкрософт
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,16 +14,16 @@ ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed268a5b8097b637c8a7e51eecf2e088aad58e04
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6d6a82ad07670a714cb701498224cb20d0207862
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751121"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455442"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>Создание, конструирование и запрос экземпляров geometry
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  Планарный пространственный тип данных **geometry**представляет данные в евклидовой (плоской) системе координат. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]этот тип реализован как тип данных среды CLR.  
+   Плоский пространственный тип данных **geometry** представляет данные в евклидовой (плоской) системе координат. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]этот тип реализован как тип данных среды CLR.  
   
  Тип **geometry** является стандартным и доступен в каждой базе данных. В таблице можно создать столбцы типа **geometry** и обращаться с данными **geometry** так же, как и с данными других типов среды CLR.  
   
@@ -379,7 +380,7 @@ SELECT @result = @geom1.STIntersection(@geom2);
 SELECT @result.STAsText();  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пространственные данные (SQL Server)](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   

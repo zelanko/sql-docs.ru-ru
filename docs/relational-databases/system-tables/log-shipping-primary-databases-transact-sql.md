@@ -1,4 +1,5 @@
 ---
+description: log_shipping_primary_databases (Transact-SQL)
 title: log_shipping_primary_databases (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 56888756-a798-42be-9b5e-0f9aa05a2cc6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d8e30d848b640db73f4402f8a887381de524e4bf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bf0c1f654514ba0fb29bf7a4081b98753af7e441
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890154"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454718"
 ---
 # <a name="log_shipping_primary_databases-transact-sql"></a>log_shipping_primary_databases (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

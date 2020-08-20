@@ -1,4 +1,5 @@
 ---
+description: Обзор поставщик OLE DB для Oracle (Майкрософт)
 title: поставщик OLE DB для Oracle (Майкрософт) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e956ca5486485c3dde8079f6b9067a8fef7e2f3a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5a81f8b3e8acbe09fed0bac975158a9d5ef26a9e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761642"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454056"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Обзор поставщик OLE DB для Oracle (Майкрософт)
 > [!IMPORTANT]
@@ -70,5 +71,5 @@ MSDAORA
 |**Командная строка**.|Указывает, следует ли запрашивать пользователя во время установки соединения.|
 |**Расширенные свойства**|Строка, содержащая сведения о расширенном соединении, зависящие от поставщика. Это свойство используется только для специфичных для поставщика сведений о соединении, которые не могут быть описаны с помощью механизма свойств.|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
  Property ( [ADO) свойство](../../../ado/reference/ado-api/connectionstring-property-ado.md) [поставщика](../../../ado/reference/ado-api/provider-property-ado.md) (ADO) [объект Recordset Object (](../../../ado/reference/ado-api/recordset-object-ado.md) ADO)

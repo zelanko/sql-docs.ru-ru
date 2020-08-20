@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_background_job_queue_stats (Transact-SQL)
 title: sys. dm_exec_background_job_queue_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,11 +21,12 @@ ms.assetid: 27f62ab5-46c4-417e-814d-8d6437034d1c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad3250caed9493543ad76f7f7843c18daac1fde1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8bde6022faebc6efb2baaa0bc08daeb491f72a57
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011620"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455001"
 ---
 # <a name="sysdm_exec_background_job_queue_stats-transact-sql"></a>sys.dm_exec_background_job_queue_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,15 +49,15 @@ ms.locfileid: "86011620"
 |**enqueue_failed_duplicate_count**|**int**|Количество дублированных попыток постановки в очередь.|  
 |**elapsed_avg_ms**|**int**|Среднее время с момента начала выполнения запроса (в миллисекундах).|  
 |**elapsed_max_ms**|**int**|Время с момента начала выполнения самого длинного запроса (в миллисекундах).|  
-|**pdw_node_id**|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
+|**pdw_node_id**|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Это представление возвращает сведения только для заданий асинхронного обновления статистики. Дополнительные сведения о асинхронном обновлении статистики см. в разделе [Statistics](../../relational-databases/statistics/statistics.md).  
   
 ## <a name="permissions"></a>Разрешения
 
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
+На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется  **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
 
 ## <a name="examples"></a>Примеры  
   
@@ -85,8 +87,8 @@ FROM sys.dm_exec_background_job_queue_stats;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+## <a name="see-also"></a>См. также:  
+ [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции, связанные с выполнением (Transact-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Сеансы (поставщик собственного клиента OLE DB)
 title: Сеансы (поставщик собственного клиента OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: 3a980816-675c-4fba-acc9-429297d85bbd
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f75c9fec32105561ce3c07ba29aeec9b4779324
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ce9c18021d474bfcb4af0e1418e432d779b9376a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245976"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455740"
 ---
 # <a name="sessions-native-client-ole-db-provider"></a>Сеансы (поставщик собственного клиента OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -181,7 +182,7 @@ EXIT:
 }  
 ```  
   
- Подключение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объектов сеанса поставщика собственного клиента OLE DB к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может создать значительные издержки для приложений, которые постоянно создают и освобождают объекты сеанса. Накладные расходы можно сократить, управляя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объектами сеанса поставщика собственного клиента OLE DB эффективно. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Приложения поставщика собственного клиента OLE DB могут поддерживать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подключение объекта сеанса в активном состоянии, сохраняя ссылку по крайней мере на один интерфейс объекта.  
+ Подключение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объектов сеанса поставщика собственного клиента OLE DB к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может создать значительные издержки для приложений, которые постоянно создают и освобождают объекты сеанса. Накладные расходы можно сократить, управляя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объектами сеанса поставщика собственного клиента OLE DB эффективно. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Приложения поставщика собственного клиента OLE DB могут поддерживать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подключение объекта сеанса в активном состоянии, сохраняя ссылку по крайней мере на один интерфейс объекта.  
   
  Например, поддержание пула ссылок на объект создания команды сохраняет активными соединения для этих объектов сеанса в пуле. Когда требуются объекты сеанса, код обслуживания пула передает действительный указатель интерфейса **IDBCreateCommand** методу приложения, которому требуется сеанс. Когда сеанс более не требуется методу приложения, метод возвращает указатель интерфейса коду обслуживания пула, а не освобождает ссылку приложения на объект создания команды.  
   

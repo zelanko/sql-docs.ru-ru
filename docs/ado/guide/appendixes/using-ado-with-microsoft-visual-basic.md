@@ -1,4 +1,5 @@
 ---
+description: Использование ADO с Microsoft Visual Basic и Visual Basic для приложений
 title: Использование ADO с Microsoft Visual Basic | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9dfb6784-037d-4f9d-bb7f-b506b4498573
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e86bc925313a24a390dffc8f4e2d9e91e4db1c61
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b4e8304204a6eaebf6b64d5cb9ad44e5fa1602da
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761592"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454016"
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>Использование ADO с Microsoft Visual Basic и Visual Basic для приложений
 Настройка проекта ADO и написание кода ADO похожи на то, используется ли Visual Basic или Visual Basic для приложений. В этом разделе рассматривается использование ADO с Visual Basic и Visual Basic для приложений и примечаниями.
@@ -98,7 +99,7 @@ Dim conn1
 Set conn1 = CreateObject("ADODB.Connection") As Object
 ```
 
- Объекты, созданные с помощью **CreateObject** , имеют позднюю привязку, что означает, что они не являются строго типизированными, а завершение командной строки отключено. Однако он позволяет пропустить ссылку на библиотеку ADO из проекта и позволяет создавать экземпляры конкретных версий объектов. Пример:
+ Объекты, созданные с помощью **CreateObject** , имеют позднюю привязку, что означает, что они не являются строго типизированными, а завершение командной строки отключено. Однако он позволяет пропустить ссылку на библиотеку ADO из проекта и позволяет создавать экземпляры конкретных версий объектов. Например:
 
 ```
 Set conn1 = CreateObject("ADODB.Connection.2.0") As Object
@@ -114,5 +115,5 @@ Set conn1 = CreateObject("ADODB.Connection.2.0") As Object
 ## <a name="visual-basic-examples"></a>Примеры Visual Basic
  Многие примеры Visual Basic включены в документацию по ADO. Дополнительные сведения см. [в статье примеры кода ADO в Microsoft Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
  [Microsoft объекты данных ActiveX (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) с [помощью ADO и Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md) [Использование ADO с языками сценариев](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)

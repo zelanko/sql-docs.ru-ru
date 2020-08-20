@@ -1,4 +1,5 @@
 ---
+description: Подключение к базе данных SQL Azure (MySQLToSQL)
 title: Подключение к базе данных SQL Azure (MySQLToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -9,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7180e123572016661fa4de4a2b38a12f8480d89c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: cf3112f6b431fae9149df76464ed576f89a51dd1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935993"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454136"
 ---
 # <a name="connect-to-azure-sql-database-mysqltosql"></a>Подключение к базе данных SQL Azure (MySQLToSQL)
 Используйте диалоговое окно Подключение к SQL Azure для подключения к базе данных в базе данных SQL Azure, которую требуется перенести.  
   
 Чтобы открыть это диалоговое окно, в меню **файл** выберите **подключиться к SQL Azure**. Если подключение было выполнено ранее, команда **повторно подключится к SQL Azure.**  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
 **Имя сервера**  
   
 Выберите или введите имя сервера для подключения к SQL Azure.  

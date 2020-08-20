@@ -1,4 +1,5 @@
 ---
+description: Поставщик OLE DB Майкрософт для службы Microsoft Active Directory
 title: Поставщик OLE DB Майкрософт для службы Microsoft Active Directory | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 837f5fbcbb6c7730cdfcbe08e532a73c5faad06f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f5a2513d8440adedaa0faecae2b544c9ea99bef0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758330"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454126"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Поставщик OLE DB Майкрософт для службы Microsoft Active Directory
 Поставщик интерфейсов служб Active Directory (ADSI) позволяет ADO подключаться к разнородным службам каталогов через ADSI. Это дает приложениям ADO доступ только для чтения к службам каталогов Microsoft Windows NT 4,0 и Microsoft Windows 2000 в дополнение к любым LDAP-совместимым службам каталогов и службами каталогов Novell. Интерфейсы ADSI основаны на модели поставщика, поэтому при наличии нового поставщика, предоставляющего доступ к другому каталогу, приложение ADO будет иметь доступ к нему без проблем. Поставщик ADSI бесплатен и поддерживает Юникод.  
@@ -64,9 +65,9 @@ ADSDSOObject
 |*Корневой*|Указывает **путь** к объекту, с которого начинается поиск (то есть корневой элемент поиска).|  
 |*Filter*|Указывает фильтр поиска в формате RFC 1960.|  
 |*Атрибуты*|Указывает разделенный запятыми список атрибутов, которые должны быть возвращены.|  
-|*Область*|Необязательный элемент. **Строка** , указывающая область поиска. Может принимать следующие значения:<br /><br /> -Base — Поиск только базового объекта (корень поиска).<br />-Одноуровневой — Поиск только на одном уровне.<br />-Subtree — Поиск по всему поддереву.|  
+|*Область действия*|Необязательный параметр. **Строка** , указывающая область поиска. Может применяться один из перечисленных ниже типов.<br /><br /> -Base — Поиск только базового объекта (корень поиска).<br />-Одноуровневой — Поиск только на одном уровне.<br />-Subtree — Поиск по всему поддереву.|  
   
- Пример:  
+ Например:  
   
 ```vb
 "<LDAP://DC=ArcadiaBay,DC=COM>;(objectClass=*);sn, givenName; subtree"  
@@ -108,7 +109,7 @@ objectClass='user' AND objectCategory='Person'"
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|Только для чтения|  
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|чтение/запись|  
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|Только для чтения|  
-|[Источник](../../../ado/reference/ado-api/source-property-ado-recordset.md)|чтение/запись|  
+|[Source](../../../ado/reference/ado-api/source-property-ado-recordset.md)|чтение/запись|  
 |[Состояние](../../../ado/reference/ado-api/state-property-ado.md)|Только для чтения|  
 |[Состояние](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Только для чтения|  
   
@@ -120,9 +121,9 @@ objectClass='user' AND objectCategory='Person'"
 |[Отмена](../../../ado/reference/ado-api/cancel-method-ado.md)|Нет|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Нет|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Нет|  
-|[Clone](../../../ado/reference/ado-api/clone-method-ado.md) (Клонировать)|Да|  
+|[Клонировать](../../../ado/reference/ado-api/clone-method-ado.md)|Да|  
 |[Закрыть](../../../ado/reference/ado-api/close-method-ado.md)|Да|  
-|[Удалить](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Нет|  
+|[Удаление](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Нет|  
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Да|  
 |[Перемещение](../../../ado/reference/ado-api/move-method-ado.md)|Да|  
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Да|  

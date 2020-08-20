@@ -1,4 +1,5 @@
 ---
+description: Сохранение результатов трассировки в файл
 title: Сохранение результатов трассировки в файл | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 74f80667-62f3-4e14-bb1a-f0c2b6ef3402
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 056c31859fcd9eb70bb0ccf7d3ec86c3ffdcc070
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b5b60bea4633abcef041ad516aef972875884282
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750954"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455360"
 ---
 # <a name="save-trace-results-to-a-file"></a>Сохранение результатов трассировки в файл
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "85750954"
   
  Дополнительные сведения о сохранении результатов трассировки см. в разделах [Сохранить результаты трассировки в таблицу (приложение SQL Server Profiler)](../../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md) и [Сохранить результаты трассировки в файл (приложение SQL Server Profiler)](../../tools/sql-server-profiler/save-trace-results-to-a-file-sql-server-profiler.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимая процедура sp_trace_create (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
  [Создание трассировки (Transact-SQL)](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)   
  [Создание трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  

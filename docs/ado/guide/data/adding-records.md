@@ -1,4 +1,5 @@
 ---
+description: Добавление записей в набор записей
 title: Добавление записей | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dd34669e-6f06-403b-9241-1c85c82aecc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c3dbcdf4ab089968741a4d0b08b7b02d1324f26d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2394cf5612dab45ccd2e0f3cc6e2204b6d451142
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761400"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453886"
 ---
 # <a name="adding-records-to-a-recordset"></a>Добавление записей в набор записей
 Используйте метод **AddNew** для создания и инициализации новой записи в существующем **наборе записей**. Можно использовать метод **поддерживает** со значением **курсороптионенум** , равным **ададднев** , чтобы проверить, можно ли добавлять записи в текущий объект **Recordset** .

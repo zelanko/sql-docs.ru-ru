@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_xtp_transactions (Transact-SQL)
 title: sys. dm_db_xtp_transactions (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/29/2016
@@ -20,12 +21,12 @@ ms.assetid: 5c1a0a7a-e851-4b6f-8dfd-c9655fbf5a51
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b5bfd506f1baa20a4edd36701e37c78847881089
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: b1769cb338c75329b56c440b7278ca648ef8c4f3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442869"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454996"
 ---
 # <a name="sysdm_db_xtp_transactions-transact-sql"></a>sys.dm_db_xtp_transactions (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -41,10 +42,10 @@ ms.locfileid: "87442869"
 |session_id|**smallint**|Идентификатор сеанса, в котором выполняется данная транзакция. Соединения с sys.dm_exec_sessions.|  
 |begin_tsn|**bigint**|Начальный серийный номер транзакции.|  
 |end_tsn|**bigint**|Конечный серийный номер транзакции.|  
-|state|**int**|Состояние транзакции:<br /><br /> 0=ACTIVE<br /><br /> 1=COMMITTED<br /><br /> 2=ABORTED<br /><br /> 3=VALIDATING|  
+|Состояние|**int**|Состояние транзакции:<br /><br /> 0=ACTIVE<br /><br /> 1=COMMITTED<br /><br /> 2=ABORTED<br /><br /> 3=VALIDATING|  
 |state_desc|**nvarchar**|Описание состояния транзакции.|  
-|result|**int**|Результат транзакции. Допустимы следующие значения:<br /><br /> 0 — ВЫПОЛНЯЕТСЯ<br /><br /> 1 — УСПЕШНОЕ ЗАВЕРШЕНИЕ<br /><br /> 2 — ОШИБКА<br /><br /> 3 — ЗАВИСИМОСТЬ ФИКСАЦИИ<br /><br /> 4 — ПРОВЕРКА ЗАВЕРШЕНА С ОШИБКОЙ (RR)<br /><br /> 5 — ПРОВЕРКА НЕ ПРОЙДЕНА (SR)<br /><br /> 6 — ОТКАТ|  
-|result_desc|**nvarchar**|Результат транзакции. Допустимы следующие значения:<br /><br /> ВЫПОЛНЯЕТСЯ<br /><br /> УСПЕШНОЕ ЗАВЕРШЕНИЕ<br /><br /> ошибка<br /><br /> ЗАВИСИМОСТЬ ФИКСАЦИИ<br /><br /> ПРОВЕРКА НЕ ПРОЙДЕНА (RR)<br /><br /> ПРОВЕРКА НЕ ПРОЙДЕНА (SR)<br /><br /> ROLLBACK|  
+|набор по|**int**|Результат транзакции. Допустимы следующие значения:<br /><br /> 0 — ВЫПОЛНЯЕТСЯ<br /><br /> 1 — УСПЕШНОЕ ЗАВЕРШЕНИЕ<br /><br /> 2 — ОШИБКА<br /><br /> 3 — ЗАВИСИМОСТЬ ФИКСАЦИИ<br /><br /> 4 — ПРОВЕРКА ЗАВЕРШЕНА С ОШИБКОЙ (RR)<br /><br /> 5 — ПРОВЕРКА НЕ ПРОЙДЕНА (SR)<br /><br /> 6 — ОТКАТ|  
+|result_desc|**nvarchar**|Результат транзакции. Допустимы следующие значения:<br /><br /> ВЫПОЛНЯЕТСЯ<br /><br /> УСПЕШНОЕ ЗАВЕРШЕНИЕ<br /><br /> ОШИБКА<br /><br /> ЗАВИСИМОСТЬ ФИКСАЦИИ<br /><br /> ПРОВЕРКА НЕ ПРОЙДЕНА (RR)<br /><br /> ПРОВЕРКА НЕ ПРОЙДЕНА (SR)<br /><br /> ROLLBACK|  
 |last_error|**int**|Только для внутреннего применения|  
 |is_speculative|**bit**|Только для внутреннего применения|  
 |is_prepared|**bit**|Только для внутреннего применения|  
@@ -64,7 +65,7 @@ ms.locfileid: "87442869"
 |commit_dependency_total_attempt_count|**int**|Только для внутреннего применения|  
 |scan_area|**int**|Только для внутреннего применения|  
 |scan_area_desc|**nvarchar**|Только для внутреннего применения|  
-|scan_location|**int**|Только для внутреннего использования.|  
+|scan_location|**int**|Только для внутреннего применения.|  
 |dependent_1_address|**varbinary(8)**|Только для внутреннего применения|  
 |dependent_2_address|**varbinary(8)**|Только для внутреннего применения|  
 |dependent_3_address|**varbinary(8)**|Только для внутреннего применения|  

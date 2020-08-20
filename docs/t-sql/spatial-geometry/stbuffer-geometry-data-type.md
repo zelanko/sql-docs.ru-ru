@@ -1,4 +1,5 @@
 ---
+description: STBuffer (тип данных geometry)
 title: STBuffer (тип данных geometry) | Документы Майкрософт
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: b461b711ba7e91e4c29a362523b3ebb4a1228004
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: c916977259dc82638117b800e5fc6c2d306edf04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552841"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454286"
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer (тип данных geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -164,7 +165,7 @@ ms.locfileid: "86552841"
   
  Первые две инструкции **SELECT** возвращают экземпляр `MultiPolygon`, поскольку параметр *distance* меньше или равен 1/2 расстояния между двумя точками (1 1) и (1 4). Третья инструкция **SELECT** возвращает экземпляр `Polygon`, поскольку находящиеся в буферной памяти экземпляры двух точек (1 1) и (1 4) перекрываются.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [BufferWithTolerance (тип данных geometry)](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)   
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

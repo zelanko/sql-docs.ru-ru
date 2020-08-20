@@ -1,4 +1,5 @@
 ---
+description: MSreplmonthresholdmetrics (Transact-SQL)
 title: Мсреплмонсрешолдметрикс (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0cc9b40a-36ce-485b-9bc2-d4abd5aa6727
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ad67ea6744256e3bcc041c736fbe6fe516773b11
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c58ed139f1ff0b35b190593c14ca360e065061f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889411"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454617"
 ---
 # <a name="msreplmonthresholdmetrics-transact-sql"></a>MSreplmonthresholdmetrics (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,13 +36,13 @@ ms.locfileid: "85889411"
 |**title**|**sysname**|Имя метрики производительности репликации.|  
 |**warningbitstatus**|**int**|Битовый идентификатор, используемый для предупреждения о нарушении порога одной из следующих метрик.<br /><br /> **1** = истечение срока действия — подписка на публикацию транзакций превысила срок хранения более допустимого порога в процентах от срока хранения.<br /><br /> **2** = задержка — время, затраченное на репликацию данных от издателя транзакций подписчику, превышает пороговое значение в секундах.<br /><br /> **4** = mergeexpiration — подписка на публикацию слиянием превысила срок хранения, превышающий допустимый порог, в процентах от срока хранения.<br /><br /> **8** = mergefastrunduration — время, затраченное на выполнение синхронизации подписки на публикацию слиянием, превышает пороговое значение (в секундах) при быстром сетевом подключении.<br /><br /> **16** = mergeslowrunduration — время, затраченное на выполнение синхронизации подписки на публикацию слиянием, превышает пороговое значение (в секундах) при низком или коммутируемом сетевом подключении.<br /><br /> **32** = mergefastrunspeed — скорость доставки строк во время синхронизации подписки на публикацию слиянием не смогла поддерживать пороговое значение скорости (в строках в секунду) при быстром сетевом подключении.<br /><br /> **64** = mergefastrunspeed — скорость доставки строк во время синхронизации подписки на публикацию слиянием не смогла поддерживать пороговое значение скорости (в строках в секунду) по отношению к низкому или коммутируемому сетевому соединению.|  
 |**alertmessageid**|**int**|Идентификатор сообщения об ошибке, отображаемого при появлении условий предупреждения о нарушении порогового значения.|  
-|**nописание**|**nvarchar (3000)**|Описание метрики производительности репликации.|  
+|**description**|**nvarchar (3000)**|Описание метрики производительности репликации.|  
 |**default_value**|**sql_variant**|Значение по умолчанию метрики производительности репликации.|  
 |**min_value**|**sql_variant**|Минимальное значение связанной метрики производительности репликации.|  
 |**max_value**|**sql_variant**|Максимальное значение связанной метрики производительности репликации.|  
   
 ## <a name="see-also"></a>См. также  
- [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

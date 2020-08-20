@@ -1,4 +1,5 @@
 ---
+description: sys.servers (Transact-SQL)
 title: sys. Servers (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/16/2020
@@ -20,12 +21,12 @@ ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: c4ebbcdb8fa1f13d7c0d40c4ac66ac1d3453dffb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f588f0c472432cc4dc68819d32ee57cf65a59358
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894929"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455198"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -70,11 +71,11 @@ ms.locfileid: "85894929"
   
  Если сопоставление удалено, только те пользователи, которые добавлены явно со связанным или удаленным именем входа, могут просматривать связанные или удаленные сервера соответственно.  Следующие разрешения необходимы для просмотра всех связанных и удаленных серверов после сопоставления имени входа по умолчанию:  
   
-- `ALTER ANY LINKED SERVER` или `ALTER ANY LOGIN ON SERVER`  
+- `ALTER ANY LINKED SERVER` либо `ALTER ANY LOGIN ON SERVER`  
 - Членство в предопределенных ролях сервера **setupadmin** или **sysadmin**  
   
 ## <a name="see-also"></a>См. также  
- [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Представления каталога связанных серверов &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addremotelogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  

@@ -1,4 +1,5 @@
 ---
+description: sys.sysforeignkeys (Transact-SQL)
 title: sys.sysфореигнкэйс (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 41544236-1c46-4501-be88-18c06963b6e8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fff6be675a0433b3e51df74086fba59b8772b8d7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 15a02ec0dc5b6b1e5b376876b18e36863468e59e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901064"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455107"
 ---
 # <a name="syssysforeignkeys-transact-sql"></a>sys.sysforeignkeys (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,8 +45,8 @@ ms.locfileid: "85901064"
 |**rkey**|**smallint**|Идентификатор столбца, на который указывает ссылка.|  
 |**keyno**|**smallint**|Положение столбца в списке ссылочных столбцов.|  
   
-## <a name="see-also"></a>См. также  
- [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Представления совместимости (Transact-SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

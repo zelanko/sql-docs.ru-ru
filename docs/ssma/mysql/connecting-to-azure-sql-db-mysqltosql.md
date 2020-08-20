@@ -1,4 +1,5 @@
 ---
+description: Подключение к базе данных SQL Azure (MySQLToSQL)
 title: Подключение к базе данных SQL Azure (MySQLToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d0b6f16a-1880-459d-a0c7-28b7ef15c56a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8e288b91c92d8d086d5b066f95868fa0fa733bb9
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0f02c136251a45e27267ca89292d6bb5b39ffc75
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935963"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454146"
 ---
 # <a name="connecting-to-azure-sql-database-mysqltosql"></a>Подключение к базе данных SQL Azure (MySQLToSQL)
 Чтобы перенести базы данных MySQL в SQL Azure, необходимо подключиться к целевому экземпляру SQL Azure. При подключении SSMA получает метаданные обо всех базах данных в экземпляре SQL Azure и отображает метаданные базы данных в обозревателе метаданных SQL Azure. SSMA хранит сведения об экземпляре SQL Azure, к которому вы подключены, но не хранят пароли.  
@@ -57,7 +58,7 @@ ms.locfileid: "87935963"
   
 6.  SSMA рекомендует зашифрованное подключение к SQL Azure.  
   
-7.  Нажмите кнопку **Подключиться**.  
+7.  Нажмите кнопку **Соединить**.  
   
 > [!IMPORTANT]  
 > SSMA для MySQL не поддерживает подключение к базе данных **master** в SQL Azure.  
@@ -86,6 +87,6 @@ ms.locfileid: "87935963"
   
 -   Если не нужно выполнять какие – либо из этих задач, можно преобразовать определения объектов базы данных MySQL в определения объектов SQL Azure. Дополнительные сведения см. в статье [Преобразование баз данных MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Перенос баз данных MySQL в SQL Server базы данных SQL Azure &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

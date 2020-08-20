@@ -1,4 +1,5 @@
 ---
+description: STTouches (тип данных geometry)
 title: STTouches (тип данных geometry) | Документы Майкрософт
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: af3650b4-26da-4600-9cc2-1be71dd76a14
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 40363a9c7f3f7a59f5da35930990c16eedf753f8
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 792ea213b39a8b38787c1ed674aa03fc084ea591
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554607"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454320"
 ---
 # <a name="sttouches-geometry-data-type"></a>STTouches (тип данных geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "86554607"
   
  Тип возвращаемых данных CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Два экземпляра **geometry** контактируют, если пересекаются их наборы точек, но не внутренние области.  
   
  Этот метод всегда возвращает значение NULL, если у экземпляров **geometry** не совпадают идентификаторы пространственных ссылок (SRID).  
@@ -63,7 +64,7 @@ SET @h = geometry::STGeomFromText('POINT(1 1)', 0);
 SELECT @g.STTouches(@h);  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Общие сведения о пространственных индексах](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: Работа с проектами SSMA (DB2ToSQL)
 title: Работа с проектами SSMA (DB2ToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 07abef8a-28e8-4a66-927c-c9a5b8c938ef
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d3835e8988a04082d0f4666e0564029de3f767a9
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 2454ec9d594977a89ddf867645bc7e2d8fe26e57
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933515"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454156"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>Работа с проектами SSMA (DB2ToSQL)
 Чтобы перенести базы данных DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , сначала необходимо создать проект SSMA. Проект представляет собой файл, содержащий следующие сведения:  
@@ -23,7 +24,7 @@ ms.locfileid: "87933515"
   
 -   Метаданные о целевом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который будет принимать перенесенные объекты и данные.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]сведения о соединении.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сведения о соединении.  
   
 -   Параметры проекта.  
   
@@ -61,7 +62,7 @@ SSMA содержит несколько параметров для преоб�
   
 1.  В меню **Файл** выберите пункт **Создать проект**.  
   
-    Откроется диалоговое окно **Новый проект** .  
+    Откроется диалоговое окно **Создание проекта** .  
   
 2.  В поле **Name** введите имя проекта.  
   
@@ -71,7 +72,7 @@ SSMA содержит несколько параметров для преоб�
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
@@ -117,7 +118,7 @@ SSMA содержит несколько параметров для преоб�
 ## <a name="next-step"></a>Следующий шаг  
 Следующим шагом процесса миграции является [Подключение к базе данных DB2](https://msdn.microsoft.com/5eb5801d-f0c3-4127-97c0-0b1ef49f4844).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Перенос баз данных DB2 в SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
 [Подключение к базе данных DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
 [Подключение к SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  

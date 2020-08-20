@@ -1,4 +1,5 @@
 ---
+description: sys.trace_events (Transact-SQL)
 title: sys. trace_events (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e7d2c5df-0e17-4e94-9d41-d36c7ee60662
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 269a41d74092a9cc1e5d69b6f8b515bee6bbf94b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 04a7adfc55929bc6f460f7cfbcc71f62d6a4ff66
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894773"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455140"
 ---
 # <a name="systrace_events-transact-sql"></a>sys.trace_events (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,9 +46,9 @@ ms.locfileid: "85894773"
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Дополнительно  
- [Представления каталога объектов &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [sys. traces &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-traces-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [Представления каталога объектов (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [sys. traces &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-traces-transact-sql.md)   
  [sys. trace_categories &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-trace-categories-transact-sql.md)   
  [sys. trace_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-trace-columns-transact-sql.md)   
  [sys. trace_event_bindings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-trace-event-bindings-transact-sql.md)   

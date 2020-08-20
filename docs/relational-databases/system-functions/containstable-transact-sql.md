@@ -1,4 +1,5 @@
 ---
+description: CONTAINSTABLE (Transact-SQL)
 title: CONTAINSTABLE (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 07/24/2015
@@ -33,12 +34,12 @@ ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3107dbb5771731fd15bb1432b2a180af612c86fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ae9077610031075f71564eb5938b2a1415842827
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790451"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454803"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -132,9 +133,9 @@ CONTAINSTABLE
   
  Если в одном столбце хранятся документы на различных языках в виде больших двоичных объектов, то идентификатор локали заданного документа определяет, какой язык должен использоваться для индексирования его содержимого. Указание аргумента *LANGUAGE**language_term* при запросе к такому столбцу может повысить вероятность хорошего соответствия.  
   
- Если указано в виде строки, *language_term* соответствует значению столбца **Alias** в представлении совместимости [языковsys.sys](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) .  Строка должна быть заключена в одиночные кавычки: '*language_term*'. Если значением аргумента *language_term* является целое число, оно представляет собой действительный код языка. Если значение *language_term* задано в шестнадцатеричной форме, то после символов "0x" должна следовать шестнадцатеричная запись кода языка. Шестнадцатеричное значение не может иметь более восьми знаков, включая начальные нули.  
+ Если указано в виде строки, *language_term* соответствует значению столбца **Alias** в представлении совместимости [ языковsys.sys](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) .  Строка должна быть заключена в одиночные кавычки: '*language_term*'. Если значением аргумента *language_term* является целое число, оно представляет собой действительный код языка. Если значение *language_term* задано в шестнадцатеричной форме, то после символов "0x" должна следовать шестнадцатеричная запись кода языка. Шестнадцатеричное значение не может иметь более восьми знаков, включая начальные нули.  
   
- Если значение находится в формате двухбайтовой кодировки (DBCS), [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] преобразует его в Юникод.  
+ Если значение указано в двухбайтовой кодировке (DBCS), [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] преобразует его в Юникод.  
   
  Если указанный язык является недопустимым или связанные с ним ресурсы не установлены, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает сообщение об ошибке. Для использования нейтральных языковых ресурсов следует указать 0x0 в качестве значения аргумента *language_term*.  
   
@@ -144,7 +145,7 @@ CONTAINSTABLE
  <contains_search_condition>  
  Текст, который необходимо найти в столбце *column_name*, и условия соответствия. Дополнительные сведения об условиях поиска см. в разделе [CONTAINS &#40;&#41;Transact-SQL ](../../t-sql/queries/contains-transact-sql.md).  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Полнотекстовые предикаты и функции работают в одной таблице, что следует из наличия предиката FROM. Для поиска в нескольких таблицах используйте в предложении FROM соединенную таблицу, чтобы выполнять поиск в результирующем наборе, который получен в результате соединения нескольких таблиц.  
   
  Возвращаемая таблица содержит столбец с именем **Key** , содержащий значения полнотекстовых ключей. Каждая таблица с полнотекстовым индексом содержит столбец, значения которого гарантированно уникальны, а значения, возвращаемые в **ключевом** столбце, являются значениями полнотекстового ключа строк, соответствующих условию выбора, указанному в условии поиска CONTAINS. Свойство **TableFulltextKeyColumn** , полученное из функции OBJECTPROPERTYEX, предоставляет идентификатор этого уникального ключевого столбца. Чтобы получить идентификатор столбца, связанного с полнотекстовым ключом полнотекстового индекса, используйте представление **sys. fulltext_indexes**. Дополнительные сведения см. в разделе [sys. fulltext_indexes &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
@@ -280,11 +281,11 @@ GO
 > [!NOTE]  
 >  Аргумент LANGUAGE *language_term* не требуется для использования *top_n_by_rank.*  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Ограничение результатов поиска по РАНГу](../../relational-databases/search/limit-search-results-with-rank.md)   
  [Запрос с полнотекстовым поиском](../../relational-databases/search/query-with-full-text-search.md)   
  [Создание запросов полнотекстового поиска (визуальные инструменты для баз данных)](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
- [СОДЕРЖИТ &#40;&#41;Transact-SQL](../../t-sql/queries/contains-transact-sql.md)   
+ [CONTAINS (Transact-SQL)](../../t-sql/queries/contains-transact-sql.md)   
  [Запрос с полнотекстовым поиском](../../relational-databases/search/query-with-full-text-search.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)  

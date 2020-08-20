@@ -1,4 +1,5 @@
 ---
+description: MSdistribution_agents (Transact-SQL)
 title: MSdistribution_agents (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/28/2015
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 04f9019a77638d11572c11a097cd290ed5406ef4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9802c60aed31ec8e5cb04f7d053761382e5f90df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889989"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454686"
 ---
 # <a name="msdistribution_agents-transact-sql"></a>MSdistribution_agents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "85889989"
 |**local_job**|**bit**|Указывает, имеется ли задание агента SQL Server на локальном распространителе.|  
 |**job_id**|**двоичный (16)**|Идентификационный номер задания.|  
 |**subscription_guid**|**двоичный (16)**|Идентификатор подписок данного агента.|  
-|**profile_id**|**int**|Идентификатор конфигурации из [MSagent_profiles &#40;таблице&#41;Transact-SQL](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) .|  
+|**profile_id**|**int**|Идентификатор конфигурации из [MSagent_profiles &#40;таблице&#41;Transact-SQL ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) .|  
 |**anonymous_subid**|**uniqueidentifier**|Идентификатор анонимного агента.|  
 |**subscriber_name**|**sysname**|Имя подписчика, указывается только для анонимных агентов.|  
 |**virtual_agent_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -53,9 +54,9 @@ ms.locfileid: "85889989"
 |**queue_status**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offload_enabled**|**bit**|Указывает, может ли агент быть активизирован удаленно.<br /><br /> значение **0** указывает, что агент не может быть активирован удаленно.<br /><br /> значение **1** указывает, что агент будет активирован удаленно и на удаленном компьютере, указанном в свойстве *offload_server* .|  
 |**offload_server**|**sysname**|Сетевое имя сервера для удаленной активации.|  
-|**dts_package_name**|**sysname**|Имя пакета служб DTS. Например, для пакета с именем **DTSPub_Package**укажите `@dts_package_name = N'DTSPub_Package'` .|  
-|**dts_package_password**|**nvarchar (524)**|Пароль пакета.|  
-|**dts_package_location**|**int**|Местонахождение пакета. Расположение пакета может быть **распространителем** или **подписчиком**.|  
+|**dts_package_name**;|**sysname**|Имя пакета служб DTS. Например, для пакета с именем **DTSPub_Package**укажите `@dts_package_name = N'DTSPub_Package'` .|  
+|**dts_package_password**;|**nvarchar (524)**|Пароль пакета.|  
+|**dts_package_location**.|**int**|Местонахождение пакета. Расположение пакета может быть **распространителем** или **подписчиком**.|  
 |**sid**|**varbinary(85)**|Идентификатор безопасности (SID) агента распространителя или агента слияния при первом выполнении.|  
 |**queue_server**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**subscriber_security_mode**|**smallint**|Режим безопасности, используемый агентом при подключении к подписчику. Предусмотрены следующие режимы:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server проверка подлинности<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Проверка подлинности Windows.|  

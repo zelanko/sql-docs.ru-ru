@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_query_optimizer_info (Transact-SQL)
 title: sys. dm_exec_query_optimizer_info (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,11 +21,12 @@ ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6febd2233e15794bd72874bd92aab6e31c0266f1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6ca14221b1d7c8555c03cfc2a976cd09ec562687
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005225"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455008"
 ---
 # <a name="sysdm_exec_query_optimizer_info-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,17 +38,17 @@ ms.locfileid: "86005225"
   
 |Имя|Тип данных|Описание|  
 |----------|---------------|-----------------|  
-|**Счетчик**|**nvarchar(4000)**|Имя события статистики оптимизатора.|  
+|**подписан**|**nvarchar(4000)**|Имя события статистики оптимизатора.|  
 |**occurrence**|**bigint**|Количество вхождений события оптимизации для этого счетчика.|  
 |**value**|**float**|Среднее значение свойства для вхождения события.|  
-|**pdw_node_id**|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
+|**pdw_node_id**|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
   
 ## <a name="permissions"></a>Разрешения  
 
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
+На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется  **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
     
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **sys. dm_exec_query_optimizer_info** содержит следующие свойства (счетчики). Все значения частотности рассматриваются совокупно и при перезапуске системы устанавливаются в 0. Все значения полей значений при перезапуске системы устанавливаются в NULL. Все значения значимых столбцов, по которым определяется среднее, используют значение частотности из той же строки, что и знаменатель в вычислении среднего. Все оптимизации запросов измеряются, когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяет изменения в **dm_exec_query_optimizer_info**, включая запросы, создаваемые пользователями и системой. Выполнение уже кэшированного плана не изменяет значения в **dm_exec_query_optimizer_info**, учитываются только оптимизации.  
   
 |Счетчик|Наличие|Значение|  
@@ -75,7 +77,7 @@ ms.locfileid: "86005225"
 |инструкции update|Количество операций оптимизации для инструкций UPDATE.|Неприменимо|  
 |содержащие вложенный запрос|Количество операций оптимизации для запросов, содержащих как минимум один вложенный запрос.|Неприменимо|  
 |сбой устранения вложенности|Только для внутреннего использования.|Только для внутреннего использования.|  
-|таблицы|Общее число операций оптимизации.|Среднее число таблиц, на которые ссылается оптимизированный запрос.|  
+|В таблицах|Общее число операций оптимизации.|Среднее число таблиц, на которые ссылается оптимизированный запрос.|  
 |указания|Количество раз, когда было задано указание. Подсчитанные подсказки включают в себя указания запросов соединения, ГРУППИРОВАНия, объединения и ПРИНУДИТЕЛЬного УПОРЯДОЧЕНия, параметр ПРИНУДИТЕЛЬного задания плана и указания соединения.|Неприменимо|  
 |указание упорядочивания|Количество раз, когда было задано указание принудительного упорядочивания.|Неприменимо|  
 |указание соединения|Количество раз, когда по указанию соединения принудительно вызывался алгоритм соединения.|Неприменимо|  
@@ -126,8 +128,8 @@ SELECT (SELECT CAST (occurrence AS float) FROM sys.dm_exec_query_optimizer_info 
         AS ContainsSubqueryFraction;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+## <a name="see-also"></a>См. также:  
+ [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции, связанные с выполнением (Transact-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

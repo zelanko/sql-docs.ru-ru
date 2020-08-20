@@ -1,4 +1,5 @@
 ---
+description: Уведомления о запросах — sys. dm_qn_subscriptions
 title: sys. dm_qn_subscriptions (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c83d70ad2bb534d9d17104316aecd40a4b21fe05
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2d19178ff8e4b684fbc32fb80d23ee057fb55db7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894696"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455121"
 ---
 # <a name="query-notifications---sysdm_qn_subscriptions"></a>Уведомления о запросах — sys. dm_qn_subscriptions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85894696"
   
 ## <a name="relationship-cardinalities"></a>Количество элементов связей  
   
-|Исходный тип|Кому|Включено|Тип|  
+|От|Кому|Включено|Тип|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|«многие к одному»|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|«многие к одному»|  
@@ -56,7 +57,7 @@ ms.locfileid: "85894696"
 |----------|------------------|----------|  
 |65798|Подписка сработала из-за изменения данных|Подписка сработала из-за операции вставки|  
 |65799|Подписка сработала из-за изменения данных|Удалить|  
-|65800|Подписка сработала из-за изменения данных|Обновление|  
+|65800|Подписка сработала из-за изменения данных|Update|  
 |65801|Подписка сработала из-за изменения данных|Объединить|  
 |65802|Подписка сработала из-за изменения данных|Усечение таблицы|  
 |66048|Подписка сработала из-за изменения времени ожидания|Неопределенный режим INFO|  
@@ -131,7 +132,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления, связанные с уведомлениями о запросах &#40;языке Transact-SQL&#41;](https://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
  [KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL)](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
   

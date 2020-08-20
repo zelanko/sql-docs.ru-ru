@@ -1,4 +1,5 @@
 ---
+description: Настройка топологии (одноранговая репликация)
 title: Настройка топологии (одноранговая репликация) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e06e271f8f75fea1cf98c9d8f9697cbfe49c412e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 632cdd88b0f56b0518789f1887b13facaed07e1f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773979"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455645"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>Настройка топологии (одноранговая репликация)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "85773979"
 ## <a name="options"></a>Параметры  
  Страница **Настройка топологии** содержит элементы интерфейса и параметры, доступные при щелчке правой кнопкой мыши. В следующей таблице содержатся описания всех элементов интерфейса.  
   
-|Элемент интерфейса|Description|  
+|Элемент интерфейса|Описание|  
 |-----------------------|-----------------|  
 |Область конструктора|Отображает другие элементы интерфейса. Для добавления элементов щелкните правой кнопкой область конструктора.|  
 |![Первый узел в топологии](../../relational-databases/replication/media/p2pwizard-firstnode.gif "Первый узел в топологии")|Исходный узел в топологии. Новые узлы инициализируются с помощью копии базы данных публикации исходного узла.|  

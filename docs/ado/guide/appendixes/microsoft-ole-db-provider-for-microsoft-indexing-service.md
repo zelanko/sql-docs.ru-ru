@@ -1,4 +1,5 @@
 ---
+description: Обзор службы Microsoft OLE DB Provider для Microsoft Indexing Service
 title: Поставщик Microsoft OLE DB для службы индексирования (Майкрософт) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e4bc6669f961e712ced994a590348604e7bd3274
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: dd6e4c3a60cd0c052fec7b474154684ef6c03127
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760480"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454086"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Обзор службы Microsoft OLE DB Provider для Microsoft Indexing Service
 Поставщик Microsoft OLE DB для службы индексирования Майкрософт предоставляет программный доступ только для чтения к файловой системе и веб-данным, индексированным службой индексирования Майкрософт. Приложения ADO могут выдавать SQL запросы для получения сведений о содержимом и свойствах файла.
@@ -85,7 +86,7 @@ MSIDXS
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|Только для чтения|
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|чтение/запись|
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|Только для чтения|
-|[Источник](../../../ado/reference/ado-api/source-property-ado-recordset.md)|чтение/запись|
+|[Source](../../../ado/reference/ado-api/source-property-ado-recordset.md)|чтение/запись|
 |[Состояние](../../../ado/reference/ado-api/state-property-ado.md)|Только для чтения|
 |[Состояние](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Только для чтения|
 
@@ -99,9 +100,9 @@ MSIDXS
 |[Отмена](../../../ado/reference/ado-api/cancel-method-ado.md)|Да|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Нет|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Нет|
-|[Clone](../../../ado/reference/ado-api/clone-method-ado.md) (Клонировать)|Да|
+|[Клонировать](../../../ado/reference/ado-api/clone-method-ado.md)|Да|
 |[Закрыть](../../../ado/reference/ado-api/close-method-ado.md)|Да|
-|[Удалить](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Нет|
+|[Удаление](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Нет|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Да|
 |[Перемещение](../../../ado/reference/ado-api/move-method-ado.md)|Да|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Да|

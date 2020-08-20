@@ -1,4 +1,5 @@
 ---
+description: Начало работы с SSMA для консоли DB2 (DB2ToSQL)
 title: Начало работы с SSMA для консоли DB2 (DB2ToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f245c017-023e-4880-8721-8908d339525e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 17798a2ccc0099210874a4bebb4fd05074c43639
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: cb55f49a063ba58b526cccafbd2f400f4f889f17
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933875"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454288"
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>Начало работы с SSMA для консоли DB2 (DB2ToSQL)
 В этом разделе описывается процедура запуска и начала работы с консольным приложением DB2. Здесь также перечислены соглашения, используемые в типичном окне вывода консоли SSMA.  
@@ -61,6 +62,6 @@ ms.locfileid: "87933875"
 |Зеленый|Запрос на ввод данных пользователем|  
 |Цвет|Начало, окончание и результат операции|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Установка SSMA для DB2](https://msdn.microsoft.com/79fbe8ea-471b-407a-be2a-4100d9b57c61)  
   

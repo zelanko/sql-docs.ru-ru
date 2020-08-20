@@ -1,4 +1,5 @@
 ---
+description: sys.dm_fts_active_catalogs (Transact-SQL)
 title: sys. dm_fts_active_catalogs (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/29/2017
@@ -20,12 +21,12 @@ ms.assetid: 40ab5453-040c-4d2e-bb49-e340cf90c3ee
 author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3a7b691103a32b49ab7ef017a9820500b7ab0526
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4545e37733448d1c26b19567c05463b014482d10
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734579"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454940"
 ---
 # <a name="sysdm_fts_active_catalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,20 +56,20 @@ ms.locfileid: "85734579"
 |**row_count_in_thousands**|**int**|Оценка числа строк (в тысячах) в полнотекстовых индексах этого полнотекстового каталога.|  
 |**is_importing**|**bit**|Указывает, выполняется ли в настоящее время импорт полнотекстового каталога:<br /><br /> 1 = выполняется импорт каталога.<br /><br /> 2 = импорт каталога не выполняется.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Столбец is_importing был впервые добавлен в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .  
   
 ## <a name="permissions"></a>Разрешения  
 
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
+На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется  **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
    
 ## <a name="physical-joins"></a>Физические соединения  
  ![Существенные соединения данного динамического административного представления](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-active-catalogs-1.gif "Существенные соединения данного динамического административного представления")  
   
 ## <a name="relationship-cardinalities"></a>Количество элементов связей  
   
-|Исходный тип|Кому|Связь|  
+|От|Кому|Связь|  
 |----------|--------|------------------|  
 |dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|Один к одному|  
 |dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|Один к одному|  
@@ -91,7 +92,7 @@ AND catalog.database_id = (SELECT dbid FROM sys.sysdatabases WHERE name = DB_NAM
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  
  [Динамические административные представления и функции полнотекстового поиска и семантического поиска &#40;языке Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   

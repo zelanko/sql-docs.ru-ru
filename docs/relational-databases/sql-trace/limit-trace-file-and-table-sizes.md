@@ -1,4 +1,5 @@
 ---
+description: Ограничение размеров файла и таблицы трассировки
 title: Ограничение размеров файла и таблицы трассировки | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 88c31b02-f44c-4a14-be8b-437f2097de12
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fe7c390f650a505ff79eb0be5bdfdac2eb9d9186
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2c455930e6adf93419dcb0d0934ca6ac7608c4c4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750975"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455386"
 ---
 # <a name="limit-trace-file-and-table-sizes"></a>Ограничение размеров файла и таблицы трассировки
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +55,7 @@ ms.locfileid: "85750975"
   
  [Установка максимального размера для таблицы трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/set-a-maximum-table-size-for-a-trace-table-sql-server-profiler.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимая процедура sp_trace_create (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)  
   
   

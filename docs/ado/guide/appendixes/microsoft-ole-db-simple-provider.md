@@ -1,4 +1,5 @@
 ---
+description: Обзор простого поставщика Microsoft OLE DB
 title: Простой поставщик Microsoft OLE DB | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6e36648fe42024502316d65e3cf27412b907ffc2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9ed83809ec1bf3fd4ba55552f4ecac1d55cfb8d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761602"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454026"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Обзор простого поставщика Microsoft OLE DB
 Microsoft OLE DB Simple Provider (ОБЕЩАНие) позволяет ADO получать доступ к любым данным, для которых поставщик был написан с помощью [набора средств OLE DB простого поставщика (обещание)](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6). Простые поставщики предназначены для доступа к источникам данных, которым требуется только фундаментальная OLE DBная поддержка, например массивы в памяти или XML-документы.
@@ -50,9 +51,9 @@ MSDAOSP
 |**Источник данных**|Указывает имя сервера.|
 
 ## <a name="xml-document-example"></a>Пример XML-документа
- OLE DB простой поставщик (ОБЕЩАНие) в MDAC 2,7 или более поздней версии и компоненты доступа к данным Windows (Windows DAC) были улучшены для поддержки открытия иерархических **наборов записей** ADO для ПРОИЗВОЛЬНЫХ XML-файлов. Эти XML-файлы могут содержать схему сохраняемости XML-данных ADO, но это необязательно. Это реализовано путем подключения ОБЕЩАНий к **Msxml2. dll**; Поэтому требуется **Msxml2. dll** или более поздней версии.
+ OLE DB простой поставщик (ОБЕЩАНие) в MDAC 2,7 или более поздней версии и компоненты доступа к данным Windows (Windows DAC) были улучшены для поддержки открытия иерархических **наборов записей** ADO для ПРОИЗВОЛЬНЫХ XML-файлов. Эти XML-файлы могут содержать схему сохраняемости XML-данных ADO, но это необязательно. Это реализовано путем подключения ОБЕЩАНий к **MSXML2.DLL**; Поэтому требуется **MSXML2.DLL** или более поздней версии.
 
- Файл **Portfolio. XML** , используемый в следующем примере, содержит следующее дерево:
+ Файл **portfolio.xml** , используемый в следующем примере, содержит следующее дерево:
 
 ```console
 Portfolio

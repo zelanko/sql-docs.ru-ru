@@ -1,4 +1,5 @@
 ---
+description: SQL Server Native Client объектов источника данных (OLE DB)
 title: Объекты источника данных (поставщик собственного клиента OLE DB) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
@@ -19,21 +20,21 @@ ms.assetid: c1d4ed20-ad3b-4e33-a26b-38d7517237b7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d0fb6b31376118fca3f2458c21b61c35beec618
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: abcad20ac1866e33f07d3b65f3a804949da9e2fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242270"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455795"
 ---
 #  <a name="sql-server-native-client-data-source-objects-ole-db"></a>SQL Server Native Client объектов источника данных (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Собственный клиент использует термин источник данных для набора OLE DB интерфейсов, используемых для установления связи с хранилищем данных, например [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Создание экземпляра объекта источника данных поставщика является первой задачей [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] потребителя собственного клиента.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Собственный клиент использует термин источник данных для набора OLE DB интерфейсов, используемых для установления связи с хранилищем данных, например [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Создание экземпляра объекта источника данных поставщика является первой задачей [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] потребителя собственного клиента.  
   
  Каждый поставщик OLE DB объявляет свой идентификатор класса (CLSID). Идентификатором CLSID для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика собственного клиента OLE DB является GUID C/C++, CLSID_SQLNCLI10 (символ SQLNCLI_CLSID будет разрешаться в правильный идентификатор ProgID в файле sqlncli. h, на который вы ссылаетесь). Используя CLSID, потребитель может вызвать функцию OLE **CoCreateInstance** для создания экземпляра объекта источника данных.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Собственный клиент — это внутрипроцессный сервер. Экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объектов поставщика собственного клиента OLE DB создаются с помощью макроса CLSCTX_INPROC_SERVER для указания контекста исполняемого файла.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Собственный клиент — это внутрипроцессный сервер. Экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объектов поставщика собственного клиента OLE DB создаются с помощью макроса CLSCTX_INPROC_SERVER для указания контекста исполняемого файла.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Объект источника данных поставщика собственного клиента OLE DB предоставляет интерфейсы инициализации OLE DB, позволяющие потребителю подключаться к существующим [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базам данных.  
   
@@ -84,13 +85,13 @@ else
   
 -   [Свойства инициализации и авторизации](../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)  
   
--   [Активных](../../relational-databases/native-client-ole-db-data-source-objects/sessions.md)  
+-   [Сеансы](../../relational-databases/native-client-ole-db-data-source-objects/sessions.md)  
   
 -   [Свойства сеанса — поставщик OLE DB для SQL Server Native Client](../../relational-databases/native-client-ole-db-data-source-objects/session-properties-sql-server-native-client-ole-db-provider.md)  
   
--   [Материализованные данные исходного объекта](../../relational-databases/native-client-ole-db-data-source-objects/persisted-data-source-objects.md)  
+-   [Материализованные объекты источника данных](../../relational-databases/native-client-ole-db-data-source-objects/persisted-data-source-objects.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQL Server Native Client (OLE DB)](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

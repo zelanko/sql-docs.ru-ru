@@ -1,4 +1,5 @@
 ---
+description: Разделы руководства по обработке результатов (собственный клиент OLE DB поставщик)
 title: Разделы руководства по обработке результатов (собственный клиент OLE DB поставщик)
 ms.custom: ''
 ms.date: 03/07/2017
@@ -13,12 +14,12 @@ ms.assetid: 23cc2688-6080-497e-8151-712d10da5fef
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 558ff0ae2d1ad83392a1b7b94a779c1a2b099636
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 0934e5392f6e41f3b6e7f8722eca082b4ae74731
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246995"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455676"
 ---
 # <a name="processing-results-how-to-topics-native-client-ole-db-provider"></a>Разделы руководства по обработке результатов (собственный клиент OLE DB поставщик)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "87246995"
   
 -   [Выборка строк из результирующего набора &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/fetch-rows-from-a-result-set-ole-db.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Инструкции по OLE DB](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   
