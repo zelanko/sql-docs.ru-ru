@@ -1,4 +1,5 @@
 ---
+description: IsNull (тип данных geometry)
 title: IsNull (тип данных geometry) | Документы Майкрософт
 ms.custom: ''
 ms.date: 09/12/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f95813a5-26c0-48aa-bfb8-56d2a0980788
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 7cb1cccba4c880fd2e92d707e51c8c4e324fba9c
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 02e8775089f6e8112452ff2a0ff780bc9a848f31
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555689"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497060"
 ---
 # <a name="isnull-geometry-data-type"></a>IsNull (тип данных geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "86555689"
   
  Тип CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Метод `IsNull` позволяет проверить, имеет ли экземпляр **geometry** значение NULL. `IsNull` возвращает 0, если экземпляр не имеет значение NULL, но возвращает NULL, если экземпляр имеет значение NULL.  
   
  Этот метод в основном используется инфраструктурой SQL Server; не рекомендуется использовать `IsNull`, чтобы проверить, имеет ли экземпляр значение NULL.  

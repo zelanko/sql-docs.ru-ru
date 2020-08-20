@@ -1,4 +1,5 @@
 ---
+description: Редактор источников SAP BW (страница «Дополнительно»)
 title: Редактор источника SAP BW (страница "Дополнительно") | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,19 +13,19 @@ f1_keywords:
 ms.assetid: 44f3c991-9e8f-4126-a9a2-2d9da779fb11
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8cdc189849f501558500d1910bf1950aaf45e9be
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 433698b83ed1148f473062658b95d99e9657e6ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923710"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495763"
 ---
 # <a name="sap-bw-source-editor-advanced-page"></a>Редактор источников SAP BW (страница «Дополнительно»)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  Используйте страницу **Дополнительно** **Редактора источников SAP BW** , чтобы указать правило преобразования строк и время ожидания, а также сбросить состояние запроса с определенным идентификатором.  
+  Используйте страницу **Дополнительно****Редактора источников SAP BW** , чтобы указать правило преобразования строк и время ожидания, а также сбросить состояние запроса с определенным идентификатором.  
   
  Для получения дополнительных сведений о компоненте источника SAP BW для [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 для SAP BW см. раздел [Источник SAP BW](../../integration-services/data-flow/sap-bw-source.md).  
   
@@ -50,7 +51,7 @@ ms.locfileid: "86923710"
  **Преобразование строк**  
  Укажите правило для преобразования строк.  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |**Автоматическое преобразование строк**|Преобразовать все строки в **nvarchar** , если система SAP Netweaver BW поддерживает Юникод. В противном случае все строки преобразуются в **varchar**.|  
 |**Преобразование строк в varchar**|Все строки преобразуются в **varchar**.|  

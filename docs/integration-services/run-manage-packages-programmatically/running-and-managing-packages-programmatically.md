@@ -1,4 +1,5 @@
 ---
+description: Выполнение пакетов и управление пакетами программным образом
 title: Выполнение пакетов и управление пакетами программным образом | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6d1b837a2271a74cb577ebd318a815eeb632dd66
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dbee736c5f74a2fa4258e6271e5ddce98a7fc626
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913291"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495537"
 ---
 # <a name="running-and-managing-packages-programmatically"></a>Выполнение пакетов и управление пакетами программным образом
 
@@ -80,7 +81,7 @@ ms.locfileid: "86913291"
  [Программное построение пакетов](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)  
  Описывается создание, настройка и сохранение пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] программным способом.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   

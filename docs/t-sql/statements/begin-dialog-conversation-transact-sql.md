@@ -1,4 +1,5 @@
 ---
+description: BEGIN DIALOG CONVERSATION (Transact-SQL)
 title: BEGIN DIALOG CONVERSATION (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/26/2017
@@ -30,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6ae198ad14426a71c8c86838c15e60ce0464cebf
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 980563b7aa2b8a169f271a40f97f1f49295e7a84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380847"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496973"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -71,12 +72,12 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
  Указывает службу стороны, вызывающей диалог. Указанное имя должно быть именем службы в текущей базе данных. Очередь, указанная для вызывающей службы, получает сообщения, возвращенные целевой службой, и сообщения, созданные компонентом Service Broker для данного диалога.  
   
  TO SERVICE **'** _target_service_name_ **'**  
- Указывает целевую службу, с которой необходимо начать диалог. *target_service_name* имеет тип **nvarchar(256)** . Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] производит побайтовое сравнение при поиске соответствия строке *target_service_name*. Другими словами, сравнение чувствительно к регистру и не использует текущие параметры сортировки.  
+ Указывает целевую службу, с которой необходимо начать диалог. *target_service_name* имеет тип **nvarchar(256)**. Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] производит побайтовое сравнение при поиске соответствия строке *target_service_name*. Другими словами, сравнение чувствительно к регистру и не использует текущие параметры сортировки.  
   
  *service_broker_guid*  
  Указывает базу данных, в которой расположена целевая служба. Если несколько баз данных содержат экземпляр целевой службы, можно передавать данные определенной базе данных, задав аргумент *service_broker_guid*.  
   
- *service_broker_guid* имеет тип **nvarchar(128)** . Чтобы найти *service_broker_guid* для базы данных, выполните следующий запрос в базе данных:  
+ *service_broker_guid* имеет тип **nvarchar(128)**. Чтобы найти *service_broker_guid* для базы данных, выполните следующий запрос в базе данных:  
   
 ```  
 SELECT service_broker_guid  
@@ -108,7 +109,7 @@ WHERE database_id = DB_ID() ;
 > [!NOTE]  
 >  Сообщения, которыми обмениваются службы в одном и том же экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], никогда не шифруются. Однако главный ключ базы данных и сертификаты на шифрование все еще требуются для диалогов, использующих шифрование, если службы, для которых создается диалог, находятся в разных базах данных. Благодаря чему диалоги могут быть продолжены, когда в процессе диалога одна из баз данных перемещается в другой экземпляр.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Все сообщения являются частью диалога. Следовательно, перед отправкой сообщения целевой службе служба вызывающей стороны должна начать с ней диалог. Данные, указанные в инструкции BEGIN DIALOG CONVERSATION, аналогичны адресу письма. Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] использует эти данные для отправки сообщений правильной службе. Указанная в предложении TO SERVICE служба — это адрес, по которому отправляются сообщения. Служба, указанная в предложении FROM SERVICE, является обратным адресом, используемым для ответных сообщений.  
   
  Целевой службе диалога не обязательно вызывать BEGIN DIALOG CONVERSATION. Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] создает диалог в целевой базе данных, когда от инициатора диалога поступает первое сообщение.  
@@ -212,7 +213,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
    WITH ENCRYPTION = OFF ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [BEGIN CONVERSATION TIMER (Transact-SQL)](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
  [END CONVERSATION (Transact-SQL)](../../t-sql/statements/end-conversation-transact-sql.md)   
  [MOVE CONVERSATION (Transact-SQL)](../../t-sql/statements/move-conversation-transact-sql.md)   

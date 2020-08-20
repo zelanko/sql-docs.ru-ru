@@ -1,4 +1,5 @@
 ---
+description: Сопоставление типов данных DB2 и SQL Server (DB2ToSQL)
 title: Сопоставление типов данных DB2 и SQL Server (DB2ToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e7e939a8-5e76-4509-beaf-5acd1cab505e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 50320d85d957e71d317f263d820d4fca5a079547
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0579a5c477b9933b9937c1f003d3c7bbc056eae6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936943"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497797"
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>Сопоставление типов данных DB2 и SQL Server (DB2ToSQL)
 Типы баз данных DB2 отличаются от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов баз данных. При преобразовании объектов базы данных DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объекты необходимо указать, как сопоставлять типы данных из DB2 с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Можно принять сопоставления типов данных по умолчанию или настроить сопоставления, как показано в следующих разделах.  
@@ -74,7 +75,7 @@ SSMA имеет набор сопоставлений типов данных п
   
     4.  В разделе **тип целевого объекта**выберите целевой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных.  
   
-        Для некоторых типов требуется длина целевого типа данных. Если это необходимо, введите новую длину данных в поле **заменить на** , а затем[!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+        Для некоторых типов требуется длина целевого типа данных. Если это необходимо, введите новую длину данных в поле **заменить на** , а затем [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 4.  Чтобы удалить пользовательское сопоставление типа данных, выполните следующие действия.  
   
@@ -87,6 +88,6 @@ SSMA имеет набор сопоставлений типов данных п
 ## <a name="next-steps"></a>Next Steps  
 Следующим шагом процесса миграции является либо [отчет по оценке &#40;DB2ToSQL&#41;](../../ssma/db2/assessment-report-db2tosql.md) , либо [преобразование схем DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md). При создании отчета об оценке объекты DB2 автоматически преобразуются во время оценки.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Перенос баз данных DB2 в SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

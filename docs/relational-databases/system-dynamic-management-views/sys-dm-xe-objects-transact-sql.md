@@ -1,4 +1,5 @@
 ---
+description: Динамическое административное представление sys.dm_xe_objects (Transact-SQL)
 title: sys. dm_xe_objects (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4f4e4a404c2bc2ac49ad9916cef668e1eb1656ab
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d01fb234585c5d4d95e80a3d0b1c5a356b589b2c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898582"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498317"
 ---
 # <a name="sysdm_xe_objects-transact-sql"></a>Динамическое административное представление sys.dm_xe_objects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "85898582"
  |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(60)**|Имя объекта. имя уникально в пределах пакета для конкретного типа объекта. Не допускает значение NULL.|  
-|object_type|**nvarchar(60)**|Тип объекта. object_type является одним из следующих:<br /><br /> event<br /><br /> action<br /><br /> target<br /><br /> pred_source;<br /><br /> pred_compare;<br /><br /> тип<br /><br /> Не допускает значение NULL.|  
+|object_type|**nvarchar(60)**|Тип объекта. object_type является одним из следующих:<br /><br /> event<br /><br /> action<br /><br /> target<br /><br /> pred_source;<br /><br /> pred_compare;<br /><br /> type<br /><br /> Не допускает значение NULL.|  
 |package_guid|**uniqueidentifier**|Идентификатор GUID пакета, который представляет это действие. Обеспечивает связь «многие к одному» со столбцом sys.dm_xe_packages.package_id. Не допускает значение NULL.|  
 |description|**nvarchar(256)**|Описание действия. Описание задается автором пакета. Не допускает значение NULL.|  
 |capabilities|**int**|Битовая карта, описывающая возможности объекта. Допускает значение NULL.|  
@@ -58,11 +59,11 @@ ms.locfileid: "85898582"
   
 ### <a name="relationship-cardinalities"></a>Количество элементов связей  
   
-|Исходный тип|Кому|Связь|  
+|От|Кому|Связь|  
 |----------|--------|------------------|  
 |sys.dm_xe_objects.package_guid|sys.dm_xe_packages.guid|«многие к одному»|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

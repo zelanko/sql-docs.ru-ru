@@ -1,4 +1,5 @@
 ---
+description: Определение готовности информации об  изменениях данных
 title: Определение готовности информации об изменениях данных | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c396f85d05203a9a2c01825adb94bd0cd2ae910e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 95a2a3a5ec29f8b467cbd637e13be3aced203f41
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921713"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496254"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>Определение готовности информации об  изменениях данных
 
@@ -201,11 +202,11 @@ ms.locfileid: "86921713"
         ```  
   
         > [!NOTE]  
-        >  Метод **Thread.Sleep** ожидает аргумент, указанный в миллисекундах.  
+        >   Метод **Thread.Sleep** ожидает аргумент, указанный в миллисекундах.  
   
 7.  Оставьте без изменений создаваемую по умолчанию строку кода, которая возвращает **DtsExecResult.Success** в результате выполнения скрипта.  
   
-8.  Закройте среду разработки скриптов и **Редактор задачи «Скрипт»** .  
+8.  Закройте среду разработки скриптов и **Редактор задачи «Скрипт»**.  
   
 #### <a name="to-implement-a-delay-by-using-an-execute-sql-task"></a>Реализация задержки с помощью задачи «Выполнение SQL»  
   
@@ -333,11 +334,11 @@ ms.locfileid: "86921713"
   
     ```  
   
-8.  Закройте среду разработки скриптов и **Редактор задачи «Скрипт»** .  
+8.  Закройте среду разработки скриптов и **Редактор задачи «Скрипт»**.  
   
 ## <a name="next-step"></a>Следующий шаг  
  Убедившись, что информация об изменениях готова, выполните следующий шаг — подготовьте запрос для получения измененных данных.  
   
- **Следующая статья:** [Подготовка к запросу информации об изменениях данных](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
+ **Следующий раздел:** [Подготовка к запросу информации об изменениях](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
   
   

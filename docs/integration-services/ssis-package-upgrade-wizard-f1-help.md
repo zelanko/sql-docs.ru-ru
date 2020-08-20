@@ -1,4 +1,5 @@
 ---
+description: Справка F1 мастера обновления пакетов служб SSIS
 title: Справка F1 по мастеру обновления пакетов служб SSIS | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ f1_keywords:
 ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0bd61166df6d257c6088b1e62c2c5b262207f958
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9e47bae183dc2d0e790a6f0cb6be207d30cd4834
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921987"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495550"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>Справка F1 мастера обновления пакетов служб SSIS
 
@@ -34,7 +35,7 @@ ms.locfileid: "86921987"
   
  **Запуск мастера обновления пакетов служб SSIS**  
   
--   [Обновление пакетов служб Integration Services с помощью мастера обновления пакетов служб SSIS](../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
+-   [обновить пакеты служб Integration Services с помощью мастера обновления пакетов служб SSIS](../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
 
 ## <a name="ssis-upgrade-wizard"></a>Мастер обновления SSIS
   
@@ -52,7 +53,7 @@ ms.locfileid: "86921987"
  **Источник пакета**  
  Укажите место хранения, содержащее обновляемые пакеты. Все возможные значения этого параметра приведены в следующей таблице.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**Файловая система**|Указывает, что пакеты, подлежащие обновлению, находятся в папке на локальном компьютере.<br /><br /> Чтобы мастер создавал резервные копии исходных пакетов перед их обновлением, исходные пакеты должны храниться в файловой системе. Дополнительные сведения см. в разделе «Как».|  
 |**Хранилище пакетов служб SSIS**|Указывает, что обновляемые пакеты находятся в хранилище пакетов. Хранилище пакетов представляет собой набор папок в файловой системе, управляемый службой Windows служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Дополнительные сведения см. в разделе [Управление пакетами (службы SSIS)](../integration-services/service/package-management-ssis-service.md).<br /><br /> При выборе этого значения отображается соответствующий динамический параметр **Источник пакета** .|  
@@ -104,7 +105,7 @@ ms.locfileid: "86921987"
  **Источник пакета**  
  Позволяет указать, где будут храниться обновленные пакеты. Все возможные значения этого параметра приведены в следующей таблице.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**Файловая система**|Указывает, что обновленные пакеты должны быть сохранены в папку на локальном компьютере.|  
 |**Хранилище пакетов служб SSIS**|Указывает, что обновленные пакеты должны быть сохранены в хранилище пакетов служб Integration Services. Хранилище пакетов представляет собой набор папок в файловой системе, управляемый службами Integration Services. Дополнительные сведения см. в разделе [Управление пакетами (службы SSIS)](../integration-services/service/package-management-ssis-service.md).<br /><br /> При выборе этого значения отображаются соответствующие динамические параметры **Источник пакета** .|  
@@ -143,7 +144,7 @@ ms.locfileid: "86921987"
   
  **Запуск мастера обновления пакетов служб SSIS**  
   
--   [Обновление пакетов служб Integration Services с помощью мастера обновления пакетов служб SSIS](../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
+-   [обновить пакеты служб Integration Services с помощью мастера обновления пакетов служб SSIS](../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
 ### <a name="options"></a>Параметры  
  **Обновить строки соединения для использования новых имен поставщиков**  
@@ -230,7 +231,7 @@ ms.locfileid: "86921987"
  **Состояние**  
  Просмотр результатов каждого действия.  
   
- **Сообщение**  
+ **Message**  
  Просмотр сообщений об ошибках, которые формируются каждым действием.  
   
  **Остановить**  
@@ -256,7 +257,7 @@ ms.locfileid: "86921987"
   
 В обозревателе решений среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , а затем разверните узел **Пакеты служб SSIS** , чтобы увидеть обновленные пакеты.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обновление пакетов служб Integration Services](../integration-services/install-windows/upgrade-integration-services-packages.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Типы данных служб Integration Services
 title: Типы данных служб Integration Services | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ffa03bda518d3b30119cca0534a070f2140712fc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 504c89f7c3c150451e9bf59e1f6c0b7984eb1a1c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86904983"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495877"
 ---
 # <a name="integration-services-data-types"></a>Типы данных служб Integration Services
 
@@ -36,7 +37,7 @@ ms.locfileid: "86904983"
   
  В следующей таблице перечислены типы данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . К некоторым из типов данных в таблице применяются сведения о масштабе и точности. Сведения о точности и масштабе см. в разделе [Точность, масштаб и длина (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
-|Тип данных|Description|  
+|Тип данных|Описание|  
 |---------------|-----------------|  
 |DT_BOOL|Значение типа Boolean.|  
 |DT_BYTES|Значение двоичных данных. Длину можно изменять. Максимальная длина составляет 8000 байт.|  
@@ -56,7 +57,7 @@ ms.locfileid: "86904983"
 |DT_I4|Четырехбайтовое целое число со знаком.|  
 |DT_I8|Восьмибайтовое целое число со знаком.|  
 |DT_NUMERIC|Точное числовое значение с заданной точностью и масштабом. Этот тип данных является 16-байтовым беззнаковым целым числом с отдельным знаком, масштабом от 0 до 38 и максимальной точностью 38.|  
-|DT_R4|Значение с плавающей точкой одиночной точности.|  
+|DT_R4|Значение с плавающей точкой одинарной точности.|  
 |DT_R8|Значение с плавающей точкой двойной точности.|  
 |DT_STR|Строка кодировки [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/многобайтной кодировки (MBCS), заканчивающаяся нулевым байтом, с максимальной длиной 8000 символов. (Если значение столбца содержит дополнительные символы конца строки, строка усекается в месте вхождения первого такого символа).|  
 |DT_UI1|Однобайтовое беззнаковое целое число.|  
@@ -113,7 +114,7 @@ ms.locfileid: "86904983"
   
 |Преобразование типа данных DT_FILETIME в|Результат|  
 |-----------------------------|------------|  
-|DT_FILETIME|Без изменения.|  
+|DT_FILETIME|Без изменений.|  
 |DT_DATE|Преобразует тип данных.|  
 |DT_DBDATE|Удаляет значение времени.|  
 |DT_DBTIME|Удаляет значение даты.<br /><br /> Удаляет значение доли секунды в том случае, если ее масштаб больше числа десятичных знаков, которое может содержать тип данных DT_DBTIME. После удаления долей секунд формируется отчет об усечении данных. Дополнительные сведения см. в разделе [Обработка ошибок в данных](../../integration-services/data-flow/error-handling-in-data.md).|  
@@ -127,7 +128,7 @@ ms.locfileid: "86904983"
 |Преобразовать тип данных DT_DATE в|Результат|  
 |-------------------------|------------|  
 |DT_FILETIME|Преобразует тип данных.|  
-|DT_DATE|Без изменения.|  
+|DT_DATE|Без изменений.|  
 |DT_DBDATE|Удаляет значение времени, представленное типом данных DT_DATA.|  
 |DT_DBTIME|Удаляет значение даты, представленное типом данных DT_DATE.|  
 |DT_DBTIME2|Удаляет значение даты, представленное типом данных DT_DATE.|  
@@ -141,7 +142,7 @@ ms.locfileid: "86904983"
 |---------------------------|------------|  
 |DT_FILETIME|Устанавливает поля времени для типа данных DT_FILETIME в нулевое значение.|  
 |DT_DATE|Устанавливает поля времени для типа данных DT_DATE в нулевое значение.|  
-|DT_DBDATE|Без изменения.|  
+|DT_DBDATE|Без изменений.|  
 |DT_DBTIME|Устанавливает поля времени для типа данных DT_DBTIME в нулевое значение.|  
 |DT_DBTIME2|Устанавливает поля времени для типа данных DT_DBTIME2 в нулевое значение.|  
 |DT_DBTIMESTAMP|Устанавливает поля времени для типа данных DT_DBTIMESTAMP в нулевое значение.|  
@@ -155,7 +156,7 @@ ms.locfileid: "86904983"
 |DT_FILETIME|Устанавливает поля даты для типа данных DT_FILETIME в значения, соответствующие текущей дате.|  
 |DT_DATE|Устанавливает поля даты для типа данных DT_DATE в значения, соответствующие текущей дате.|  
 |DT_DBDATE|Устанавливает поля даты для типа данных DT_DBDATE в значения, соответствующие текущей дате.|  
-|DT_DBTIME|Без изменения.|  
+|DT_DBTIME|Без изменений.|  
 |DT_DBTIME2|Преобразует тип данных.|  
 |DT_DBTIMESTAMP|Устанавливает поля даты для типа данных DT_DBTIMESTAMP в значения, соответствующие текущей дате.|  
 |DT_DBTIMESTAMP2|Устанавливает поля даты для типа данных DT_DBTIMESTAMP2 в значения, соответствующие текущей дате.|  
@@ -183,7 +184,7 @@ ms.locfileid: "86904983"
 |DT_DBDATE|Удаляет значение времени, представленное типом данных DT_DBTIMESTAMP.|  
 |DT_DBTIME|Удаляет значение даты, представленное типом данных DT_DBTIMESTAMP.<br /><br /> Удаляет значение долей секунд, если его масштаб больше числа разрядов, предусмотренного для типа данных DT_DBTIME. После удаления долей секунд формируется отчет об усечении данных. Дополнительные сведения см. в разделе [Обработка ошибок в данных](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIME2|Удаляет значение даты, представленное типом данных DT_DBTIMESTAMP.<br /><br /> Удаляет значение для долей секунд, если его масштаб больше числа разрядов, предусмотренного для типа данных DT_DBTIME2. После удаления долей секунд формируется отчет об усечении данных. Дополнительные сведения см. в разделе [Обработка ошибок в данных](../../integration-services/data-flow/error-handling-in-data.md).|  
-|DT_DBTIMESTAMP|Без изменения.|  
+|DT_DBTIMESTAMP|Без изменений.|  
 |DT_DBTIMESTAMP2|Удаляет значение для долей секунды, если его масштаб больше числа разрядов, предусмотренного для типа данных DT_DBTIMESTAMP2. После удаления долей секунд формируется отчет об усечении данных. Дополнительные сведения см. в разделе [Обработка ошибок в данных](../../integration-services/data-flow/error-handling-in-data.md).|  
 |DT_DBTIMESTAMPOFFSET|Устанавливает поле часового пояса для типа данных DT_DBTIMESTAMPOFFSET в нулевое значение.<br /><br /> Удаляет значение долей секунд, если его масштаб больше числа разрядов, предусмотренного для типа данных DT_DBTIMESTAMPOFFSET. После удаления долей секунд формируется отчет об усечении данных. Дополнительные сведения см. в разделе [Обработка ошибок в данных](../../integration-services/data-flow/error-handling-in-data.md).|  
   
@@ -236,13 +237,13 @@ ms.locfileid: "86904983"
 |DT_DBTIMESTAMPOFFSET|[datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)(p)|[datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md) (p)||timestampoffset|timestamp,<br /><br /> varchar|timestamp,<br /><br /> varchar|  
 |DT_DECIMAL|||||||  
 |DT_FILETIME|||||||  
-|DT_GUID|UNIQUEIDENTIFIER|UNIQUEIDENTIFIER|GUID||||  
+|DT_GUID|UNIQUEIDENTIFIER|UNIQUEIDENTIFIER|Код GUID||||  
 |DT_I1|||||||  
 |DT_I2|smallint|smallint|Short||SMALLINT|SMALLINT|  
-|DT_I4|INT|INT|Long||INTEGER|INTEGER|  
+|DT_I4|INT|INT|Long||INTEGER|ЦЕЛОЕ ЧИСЛО|  
 |DT_I8|BIGINT|BIGINT|||bigint|bigint|  
 |DT_NUMERIC|decimal, numeric|decimal, numeric|Decimal|NUMBER, INT|decimal, numeric|decimal, numeric|  
-|DT_R4|real|real|Один||real|real|  
+|DT_R4|real|real|Single||real|ВЕЩЕСТВЕННОЕ ЧИСЛО|  
 |DT_R8|FLOAT|FLOAT|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
 |DT_STR|char, varchar||VarChar||char, varchar|char, varchar|  
 |DT_UI1|tinyint|tinyint|Byte||||  
@@ -250,9 +251,9 @@ ms.locfileid: "86904983"
 |DT_UI4|||||||  
 |DT_UI8|||||||  
 |DT_WSTR|nchar, nvarchar, sql_variant, xml|char, varchar, nchar, nvarchar, sql_variant, xml|LongText|CHAR, ROWID, VARCHAR2, NVARCHAR2, NCHAR|GRAPHIC, VARGRAPHIC|GRAPHIC, VARGRAPHIC|  
-|DT_IMAGE|image|image|LongBinary|LONG RAW, BLOB, LOBLOCATOR, BFILE, VARGRAPHIC, LONG VARGRAPHIC, пользовательский|CHAR () FOR BIT DATA, VARCHAR () FOR BIT DATA|CHAR () FOR BIT DATA, VARCHAR () FOR BIT DATA, BLOB|  
+|DT_IMAGE|image|Изображение|LongBinary|LONG RAW, BLOB, LOBLOCATOR, BFILE, VARGRAPHIC, LONG VARGRAPHIC, пользовательский|CHAR () FOR BIT DATA, VARCHAR () FOR BIT DATA|CHAR () FOR BIT DATA, VARCHAR () FOR BIT DATA, BLOB|  
 |DT_NTEXT|ntext|text, ntext||LONG, CLOB, NCLOB, NVARCHAR, TEXT|LONG VARCHAR, NCHAR, NVARCHAR, TEXT|LONG VARCHAR, DBCLOB, NCHAR, NVARCHAR, TEXT|  
-|DT_TEXT|text||||LONG VARCHAR FOR BIT DATA|LONG VARCHAR FOR BIT DATA, CLOB|  
+|DT_TEXT|текст||||LONG VARCHAR FOR BIT DATA|LONG VARCHAR FOR BIT DATA, CLOB|  
   
  Сведения о сопоставлении типов данных в потоке данных см. в разделе [Работа с типами данных в потоке данных](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
   

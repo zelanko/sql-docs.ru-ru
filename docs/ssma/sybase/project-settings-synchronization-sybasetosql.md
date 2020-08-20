@@ -1,4 +1,5 @@
 ---
+description: Параметры проекта (синхронизация) (SybaseToSQL)
 title: Параметры проекта (синхронизация) (SybaseToSQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2cd6bc01-b8e5-4312-83a4-eac66dc1d460
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: b2237d2226644799b7360c53948ae2ecd9445cfa
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 505df97bc8acbc0d3f55ef9c816ed4fb0c9bd569
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87930743"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497654"
 ---
 # <a name="project-settings-synchronization-sybasetosql"></a>Параметры проекта (синхронизация) (SybaseToSQL)
 Страница синхронизация диалогового окна **Параметры проекта** содержит параметры, которые настраивают, как SSMA загружает объекты базы данных, такие как таблицы и хранимые процедуры, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure.  
@@ -25,7 +26,7 @@ ms.locfileid: "87930743"
   
 -   Чтобы указать параметры для текущего проекта, в меню **Сервис** выберите **Параметры проекта**, а затем щелкните **Синхронизация** в нижней части левой панели.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
 **Ошибок**  
 Указывает число попыток, которые SSMA должны выполнить при загрузке объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Объекты, которые не загружаются [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в текущей попытке, будут предприняты повторно, пока SSMA не достигнет максимального числа попыток в текущем процессе синхронизации.  
   

@@ -1,4 +1,5 @@
 ---
+description: Соединение с SQL Server для удаления
 title: Соединение с SQL Server для удаления | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 030b10c2-6b88-4c2c-bf67-22994be25a60
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c2db76002be78fba04d324036b3eb5af1b81585a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1688ed8c1e95edabfea6b022b605a18a0e99d690
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916290"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496307"
 ---
 # <a name="connection-to-sql-server-for-delete"></a>Соединение с SQL Server для удаления
 
@@ -34,7 +35,7 @@ ms.locfileid: "86916290"
  **Аутентификация**  
  Выберите один из следующих вариантов:  
   
--   **Проверка подлинности Windows.**  
+-   **Проверка подлинности Windows**  
   
 -   **Проверка подлинности SQL Server**. При выборе этого варианта необходимо ввести **Имя** и **Пароль** для пользователя в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , с которым устанавливается соединение.  
   
@@ -47,7 +48,7 @@ ms.locfileid: "86916290"
   
 -   **Шифрование подключения**: выберите **Шифрование подключения** , чтобы устанавливаемое подключение к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] шифровалось для обеспечения конфиденциальности.  
   
--   **Дополнительно**: нажмите кнопку **Дополнительно** и при необходимости введите любые дополнительные свойства подключения в диалоговом окне "Дополнительные свойства подключения".  
+-   **Дополнительно**: Нажмите кнопку **Дополнительно** и при необходимости введите любые дополнительные свойства подключения в диалоговом окне "Дополнительные свойства подключения".  
   
 ## <a name="see-also"></a>См. также:  
  [Разрешения, необходимые службе CDC для соединения с SQL Server](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-service.md)  

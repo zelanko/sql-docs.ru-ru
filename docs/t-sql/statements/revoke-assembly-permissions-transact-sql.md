@@ -1,4 +1,5 @@
 ---
+description: REVOKE, отмена разрешений на сборку (Transact-SQL)
 title: REVOKE, отмена разрешений на сборку (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/26/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f88e9da1-2c0b-4bdd-9ec5-44467707cb46
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 40a79e0c59c3e392d5d36a341b663b41ed8678c2
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: d76b3e534226c2c8f9271bbcc4690e0900eea2df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485393"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496643"
 ---
 # <a name="revoke-assembly-permissions-transact-sql"></a>REVOKE, отмена разрешений на сборку (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

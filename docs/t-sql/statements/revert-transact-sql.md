@@ -1,4 +1,5 @@
 ---
+description: REVERT (Transact-SQL)
 title: REVERT (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/26/2017
@@ -23,12 +24,12 @@ ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 82fe397e6709617af5aa7f92db170e25ccd9b8d9
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 1ac73076f7528b8c7fcb329540211cce9eee891e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485405"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496699"
 ---
 # <a name="revert-transact-sql"></a>REVERT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]   
@@ -51,7 +52,7 @@ REVERT
  WITH COOKIE = @*varbinary_variable*  
  Задает файл cookie, который был создан в соответствующей изолированной инструкции [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md). *\@varbinary_variable* — это **varbinary(100)** .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Инструкцию REVERT можно указывать внутри модуля, такого как хранимая процедура или определяемая пользователем функция, или в качестве изолированной инструкции. При указании внутри модуля инструкция REVERT применима только к инструкциям EXECUTE AS, определенным в модуле. Например, следующая хранимая процедура выполняет инструкцию `EXECUTE AS`, за которой следует инструкция `REVERT`.  
   
 ```  
@@ -155,7 +156,7 @@ SELECT SUSER_NAME(), USER_NAME();
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [EXECUTE AS (Transact-SQL)](../../t-sql/statements/execute-as-transact-sql.md)   
  [Предложение EXECUTE AS (Transact-SQL)](../../t-sql/statements/execute-as-clause-transact-sql.md)   
  [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)   

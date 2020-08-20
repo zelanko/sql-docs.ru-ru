@@ -1,4 +1,5 @@
 ---
+description: Сопоставление исходных и целевых типов данных (Акцесстоскл)
 title: Сопоставление исходных и целевых типов данных (Акцесстоскл) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c67cb826d5a5dce7c142cba3ded468b851cef337
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d95c7b5d429aeba2425c9deb63af1df4ab0f6ac8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938303"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497852"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>Сопоставление исходных и целевых типов данных (Акцесстоскл)
 Типы баз данных Access отличаются от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов баз данных. При преобразовании объектов базы данных Access в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объекты необходимо указать, как сопоставлять типы данных из Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Можно принять сопоставления типов данных по умолчанию или настроить сопоставления, как показано в следующих процедурах.  
@@ -90,6 +91,6 @@ SSMA имеет набор сопоставлений типов данных п
 ## <a name="next-steps"></a>Next Steps  
 Следующим шагом процесса миграции является [Преобразование объектов базы данных Access в объекты SQL Server](converting-access-database-objects-accesstosql.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Миграция баз данных Access в SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: Развертывание проекта служб SSIS из командной строки с помощью ISDeploymentWizard.exe
 title: Развертывание проекта служб SSIS из командной строки | Документы Майкрософт
 ms.date: 05/21/2018
 ms.topic: conceptual
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 949a073a9e31afd0e203dc4c9f3b497c2551504b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 127df7b347f1c421d3714fc8be2f92dfc6f05e52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921973"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495491"
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>Развертывание проекта служб SSIS из командной строки с помощью ISDeploymentWizard.exe
 
@@ -24,7 +25,7 @@ ms.locfileid: "86921973"
 
 Дополнительные сведения о мастере развертывания служб Integration Services см. в [этом разделе](packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard).
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Проверка развертывания в базу данных SQL Azure, описанная в этой статье, производится с помощью SQL Server Data Tools (SSDT) версии 17.4 или более поздней версии. Чтобы получить последнюю версию SSDT, [скачайте SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).
 
@@ -82,7 +83,7 @@ ms.locfileid: "86921973"
 
 6.  После завершения развертывания появится страница **Результаты**. На ней отображается состояние выполнения каждого действия.
     -   Если действие не выполнено, нажмите кнопку **Ошибка** в столбце **Результат** для отображения описания ошибки.
-    -   Чтобы сохранить результаты в XML-файл при необходимости, нажмите кнопку **Сохранить отчет...** .
+    -   Чтобы сохранить результаты в XML-файл при необходимости, нажмите кнопку **Сохранить отчет...**.
     -   Нажмите кнопку **Закрыть**, чтобы выйти из мастера.
 
 ## <a name="next-steps"></a>Дальнейшие действия

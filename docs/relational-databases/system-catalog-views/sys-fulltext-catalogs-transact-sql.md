@@ -1,4 +1,5 @@
 ---
+description: sys.fulltext_catalogs (Transact-SQL)
 title: sys. fulltext_catalogs (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ ms.assetid: cf1489ff-4819-41fa-a62a-4ed797a16207
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 87aac3b3791a46e7522993c6909643a75c196f98
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 886f8d99e286fd026e5e4435c8daa9192d22ce99
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882138"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498406"
 ---
 # <a name="sysfulltext_catalogs-transact-sql"></a>sys.fulltext_catalogs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "85882138"
 |-----------------|---------------|-----------------|  
 |fulltext_catalog_id|**int**|Идентификатор полнотекстового каталога. Уникален в полнотекстовых каталогах базы данных.|  
 |name|**sysname**|Имя каталога. Уникален в пределах базы данных.|  
-|путь|**nvarchar(260)**|Имя папки в файловой системе, где располагается полнотекстовый каталог.|  
+|path|**nvarchar(260)**|Имя папки в файловой системе, где располагается полнотекстовый каталог.|  
 |is_default|**bit**|Является ли полнотекстовый каталог каталогом по умолчанию.<br /><br /> True = по умолчанию.<br /><br /> False = не по умолчанию.|  
 |is_accent_sensitivity_on|**bit**|Учитывает ли каталог диакритические знаки.<br /><br /> True = диакритические знаки учитываются.<br /><br /> False = диакритические знаки не учитываются.|  
 |data_space_id|**int**|Файловая группа, в которой был создан каталог.|  
@@ -49,10 +50,10 @@ ms.locfileid: "85882138"
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [CREATE FULLTEXT CATALOG (Transact-SQL)](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
- [&#41;Transact-SQL &#40;инструкции ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
+ [&#41;Transact-SQL &#40;инструкции ALTER FULLTEXT CATALOG ](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
  [DROP FULLTEXT CATALOG (Transact-SQL)](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)  
   
   

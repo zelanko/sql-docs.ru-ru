@@ -1,4 +1,5 @@
 ---
+description: Улучшения SQL Server Native Client даты и времени
 title: Улучшения функций даты и времени | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.assetid: 9b1d0d9d-1f6e-4399-8f61-e23f9a486a7a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 47faf3970acd56bdc02c790c835837c1d2055dd5
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d95150bfc204607b4a89449b66cc8b89b433b1b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245799"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499034"
 ---
 # <a name="sql-server-native-client-date-and-time-improvements"></a>Улучшения SQL Server Native Client даты и времени
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "87245799"
  Некоторым приложениям, например приложениям для управления производством и процессами, необходима возможность обработки времени с точностью до 100 наносекунд. Эту возможность обеспечивают новые типы DBTYPE_DBTIME2 (OLE DB) и SQL_SS_TIME2 (ODBC).  
   
 ### <a name="use-datetime-with-extended-fractional-seconds-precision"></a>Использование Datetime как отдельного типа данных с расширенной точностью до долей секунд  
- В OLE DB уже имеется определение типа с точностью до 1 наносекунды. Этот тип применяется в существующих приложениях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , однако ожидаемая точность таких приложений составляет лишь 1/300 секунды. Новый тип **datetime2(3)** несовместим напрямую с существующим типом datetime. Если есть риск, что он повлияет на работу приложения, необходимо при определении фактического типа на сервере пользоваться новым флагом DBCOLUMN.  
+ В OLE DB уже имеется определение типа с точностью до 1 наносекунды. Этот тип применяется в существующих приложениях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , однако ожидаемая точность таких приложений составляет лишь 1/300 секунды. Новый тип **datetime2 (3)** не совместим непосредственно с существующим типом DateTime. Если есть риск, что он повлияет на работу приложения, необходимо при определении фактического типа на сервере пользоваться новым флагом DBCOLUMN.  
   
  ODBC также определяет тип с точностью до 1 наносекунды. Этот тип применяется в существующих приложениях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , однако ожидаемая точность таких приложений составляет всего 3 миллисекунды. Новый тип **datetime2(3)** несовместим напрямую с существующим типом данных **datetime** . Тип**datetime2(3)** имеет точность до одной миллисекунды, а **datetime** — 1/300 секунды. В ODBC приложение имеет возможность выяснить тип данных сервера по полю дескриптора SQL_DESC_TYPE_NAME. Поэтому существующий тип SQL_TYPE_TIMESTAMP (SQL_TIMESTAMP для приложений ODBC 2.0) может использоваться для обоих типов.  
   

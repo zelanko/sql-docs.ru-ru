@@ -1,4 +1,5 @@
 ---
+description: Задача «Передача главных хранимых процедур»
 title: Задача "Передача главных хранимых процедур" | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fc3b10cd913f0cf2d270fd228ad4729f12ec0f53
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: db0b4fccce21cd319049a4e313c27da6c4202a72
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916100"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495970"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Задача «Передача главных хранимых процедур»
 
@@ -126,7 +127,7 @@ ms.locfileid: "86916100"
  **TransferAllStoredProcedures**  
  Укажите, все ли пользовательские хранимые процедуры в базе данных **master** на исходном сервере следует копировать на целевой сервер.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**True**|Копировать все пользовательские хранимые процедуры базы данных **master** .|  
 |**False**|Копировать только указанные хранимые процедуры.|  

@@ -1,4 +1,5 @@
 ---
+description: REVOKE, отмена разрешений сервера (Transact-SQL)
 title: REVOKE, отмена разрешений сервера (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 08/10/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7b9a56b3-face-452e-a655-147dac306ba1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 72bec030fbfe5ba8f5419aef1afcf8229f5c4b66
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: ea48c8b1c996e34fc9753bb277aec39e556b2d69
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485382"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496556"
 ---
 # <a name="revoke-server-permissions-transact-sql"></a>REVOKE, отмена разрешений сервера (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

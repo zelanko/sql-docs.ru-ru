@@ -1,4 +1,5 @@
 ---
+description: Задача создания кластера Azure HDInsight
 title: Задача создания кластера Azure HDInsight | Документы Майкрософт
 ms.custom: ''
 ms.date: 02/28/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3fff08c4259424319621127d3e91762beaa46885
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: f86a35316de80caa1a6db487518f0080f6097a17
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472430"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496092"
 ---
 # <a name="azure-hdinsight-create-cluster-task"></a>Задача создания кластера Azure HDInsight
 
@@ -43,7 +44,7 @@ ms.locfileid: "87472430"
 |AzureStorageConnection|Выберите существующий диспетчер подключений службы хранилища Azure или создайте диспетчер подключений, который ссылается на учетную запись хранения Azure, которая будет связана с кластером HDInsight.|
 |SubscriptionId|Укажите идентификатор подписки, где будет создан кластер HDInsight.|
 |ResourceGroup|Укажите группу ресурсов Azure, где будет создан кластер HDInsight.|
-|Location|Определите расположение кластера HDInsight. Кластер нужно создавать в том же расположении, где находится указанная учетная запись службы хранилища Azure.|  
+|Расположение|Определите расположение кластера HDInsight. Кластер нужно создавать в том же расположении, где находится указанная учетная запись службы хранилища Azure.|  
 |ClusterName|Укажите имя для создаваемого кластера HDInsight.|  
 |clusterSize (размер кластера)|Укажите число узлов, которые нужно создать в кластере.|  
 |BlobContainer|Укажите имя контейнера хранилища по умолчанию, связываемого с кластером HDInsight.|  

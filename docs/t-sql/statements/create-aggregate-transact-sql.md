@@ -1,4 +1,5 @@
 ---
+description: CREATE AGGREGATE (Transact-SQL)
 title: CREATE AGGREGATE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2235751cc4c198a39a3e3c368f4d07f5451dedd7
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 46cca1e2e955b96a11d9be648f3f7ac7f042995b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380817"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496907"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -83,7 +84,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  *assembly_name* [ **.** _class_name_ ]  
  Указывает сборку, с которой связывается определяемая пользователем агрегатная функция и, при необходимости, имя схемы, к которой принадлежит сборка, и имя класса в сборке, реализующего определяемую пользователем статистическую функцию. Сборка уже должна быть создана в базе данных с помощью инструкции CREATE ASSEMBLY. Параметр *class_name* должен быть допустимым идентификатором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и совпадать с именем класса, существующим в сборке. Аргумент *class_name* может быть именем, указанным в пространстве имен, если в языке программирования, использовавшемся для написания класса, применяются пространства имен, например C#. Если аргумент *class_name* не задан, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] считает, что его значение равно значению аргумента *aggregate_name*.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  По умолчанию возможность [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запускать код CLR отключена. Можно создавать, изменять и удалять объекты базы данных, которые ссылаются на модули управляемого кода, но код в этих модулях не будет выполняться в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], пока параметр [clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) не будет включен с помощью хранимой процедуры [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
  Класс сборки, указанной в аргументе *assembly_name*, и его методы должны соответствовать всем требованиям к реализации определяемых пользователем агрегатных функций в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в статье [Пользовательские агрегатные функции среды CLR](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md).  
@@ -117,7 +118,7 @@ EXTERNAL NAME [StringUtilities].[Microsoft.Samples.SqlServer.Concatenate];
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [DROP AGGREGATE (Transact-SQL)](../../t-sql/statements/drop-aggregate-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: COLLATE (Transact-SQL)
 title: COLLATE (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/30/2019
@@ -19,12 +20,12 @@ ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab4b79abe293e01ac0087ea68363f7378d180a07
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: e6f5df8b371ded189d63095c86baeb417afe4ca4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380877"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496949"
 ---
 # <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
 
@@ -54,9 +55,9 @@ COLLATE { <collation_name> | database_default }
 
 **database_default** — заставляет предложение COLLATE наследовать параметры сортировки текущей базы данных.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 
-Предложение COLLATE можно указывать на нескольких уровнях. следующие основные параметры.
+Предложение COLLATE можно указывать на нескольких уровнях. В их числе можно назвать следующие:
 
 1. Создание или изменение базы данных.
 
@@ -152,7 +153,7 @@ Chiapas
 
 ### <a name="b-additional-examples"></a>Б. Дополнительные примеры
 
-Дополнительные примеры, в которых используется **COLLATE**, приведены в разделе [Ж. Создание базы данных и назначение имени и параметров сортировки](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017#examples) статьи **CREATE DATABASE** и в разделе [Ф. Изменение параметров сортировки столбца](../../t-sql/statements/alter-table-transact-sql.md#alter_column) статьи **ALTER TABLE**.
+Дополнительные примеры, в которых используется **COLLATE**, приведены в разделе **Ж. Создание базы данных и назначение имени и параметров сортировки** статьи [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017#examples) и в разделе **Ф. Изменение параметров сортировки столбца** статьи [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column).
 
 ## <a name="see-also"></a>См. также:
 
@@ -163,4 +164,4 @@ Chiapas
 - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
 - [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)
 - [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)
-- [Тип данных Table](../../t-sql/data-types/table-transact-sql.md)
+- [Тип табличных данных](../../t-sql/data-types/table-transact-sql.md)

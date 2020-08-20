@@ -1,4 +1,5 @@
 ---
+description: Назначение SAP BW
 title: Назначение SAP BW | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 79523f9e589ff24c909442024430317dd531c2e4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1b1398c6884fd154d4f142f10a6d14844a3e7875
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917861"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495801"
 ---
 # <a name="sap-bw-destination"></a>Назначение SAP BW
 
@@ -45,9 +46,9 @@ ms.locfileid: "86917861"
   
 1.  Создайте новую исходную систему.  
   
-    1.  Выберите тип **"Сторонние/промежуточные BAPI"** .  
+    1.  Выберите тип **"Сторонние/промежуточные BAPI"**.  
   
-    2.  Для параметра **Тип связи с целевой системой**выберите **Не Юникод (неактивные настройки MDMP)** .  
+    2.  Для параметра **Тип связи с целевой системой**выберите **Не Юникод (неактивные настройки MDMP)**.  
   
     3.  Назначьте соответствующий идентификатор программы.  
   
@@ -116,9 +117,9 @@ ms.locfileid: "86917861"
   
 -   [Создание InfoSource для основных данных](../../integration-services/data-flow/create-infosource-for-master-data.md)  
   
--   [Создание InfoPackage](../../integration-services/data-flow/create-infopackage.md)  
+-   [Создать InfoPackage](../../integration-services/data-flow/create-infopackage.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Компоненты Microsoft Connector для SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: GRANT, предоставление разрешений на системный объект (Transact-SQL)
 title: GRANT, предоставление разрешений на системный объект (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/26/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9d4e89f4-478f-419a-8b50-b096771e3880
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 329ff28afd0aa96ba7fde0058c4cdfb179d61db3
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 0f3df51eec3f0b2e1c084a1fb373c8b1595f8c15
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485421"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496717"
 ---
 # <a name="grant-system-object-permissions-transact-sql"></a>GRANT, предоставление разрешений на системный объект (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +50,7 @@ GRANT { SELECT | EXECUTE } ON [ sys.]system_object TO principal
  *principal*  
  Участник, которому предоставляется разрешение.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Данная инструкция может быть использована для предоставления разрешений на доступ к определенным хранимым процедурам, расширенным хранимым процедурам, функциям с табличным значением, скалярным функциям, представлениям, представлениям каталогов и совместимостей, представлениям INFORMATION_SCHEMA, динамическим административным представлениям, а также системным таблицам, установленным [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Каждый из этих системных объектов существует в виде уникальной записи в базе данных ресурсов сервера (mssqlsystemresource). Она доступна только для чтения. Ссылка на объект представляется в виде записи в схеме sys для каждой базы данных. Разрешение на выполнение или выбор системного объекта может быть предоставлено, запрещено или отозвано.  
   
  Предоставление разрешения на выполнение или выбор объекта не подразумевает обязательного наличия других разрешений на использование данного объекта. В большинстве случаев для действий над объектами необходимо обладать дополнительными разрешениями. Например, пользователь, обладающий разрешением EXECUTE на процедуру sp_addlinkedserver, но при этом не являющийся членом предопределенной роли сервера sysadmin, не имеет права создавать связанные серверы.  
@@ -95,7 +96,7 @@ GRANT EXECUTE ON xp_readmail TO Sylvester1;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sys.system_objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)   
  [sys.database_permissions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
  [REVOKE, отмена разрешений на системный объект (Transact-SQL)](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md)   

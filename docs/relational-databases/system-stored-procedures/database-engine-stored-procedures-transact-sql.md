@@ -1,4 +1,5 @@
 ---
+description: Хранимые процедуры ядра СУБД (Transact-SQL)
 title: Ядро СУБД хранимых процедур (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/02/2015
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2ce018e9-1a3b-4530-a87d-842456a555ad
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a9436e6c72b94a8b76f007151518934b1e335f46
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 7fd231b651fc6f222923ae38ca199635de274027
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977595"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498134"
 ---
 # <a name="database-engine-stored-procedures-transact-sql"></a>Хранимые процедуры ядра СУБД (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -229,7 +230,7 @@ ms.locfileid: "86977595"
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

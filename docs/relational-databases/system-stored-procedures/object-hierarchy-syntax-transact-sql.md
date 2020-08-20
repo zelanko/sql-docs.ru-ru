@@ -1,4 +1,5 @@
 ---
+description: Синтаксис иерархии объектов (Transact-SQL)
 title: Синтаксис иерархии объектов (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7ed8df86-9fd2-4e09-96bc-5381fec85f65
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f5cd7b04ebf16ce11791bf1d7caeb0d1012c5d9e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: be02e82ef4ba1718f15bd083e3ffc3b86058a24b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783053"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498113"
 ---
 # <a name="object-hierarchy-syntax-transact-sql"></a>Синтаксис иерархии объектов (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +57,7 @@ ms.locfileid: "85783053"
   
  Следует обязательно использовать двойные кавычки ("). Все именованные параметры должны указываться после указания всех позиционных параметров.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Если *траверседобжект* не указан, требуется *пропертйормесод* .  
   
  Если *пропертйормесод* не указан, *траверседобжект* возвращается в качестве выходного параметра токена объекта из хранимой процедуры OLE-автоматизации. Если указан параметр *пропертйормесод* , вызывается свойство или метод *траверседобжект* , а значение свойства или возвращаемое значение метода возвращается в виде выходного параметра из хранимой процедуры OLE-автоматизации.  

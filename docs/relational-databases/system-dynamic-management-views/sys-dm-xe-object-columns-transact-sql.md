@@ -1,4 +1,5 @@
 ---
+description: sys.dm_xe_object_columns (Transact-SQL)
 title: sys. dm_xe_object_columns (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d96a14f3-4284-45ff-b1fe-4858e540a013
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 005455742f1fbb782e663672c0cc104bd1cb28f9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c8d615d2c2de89262c0c760c56431e77b6e06086
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898601"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498307"
 ---
 # <a name="sysdm_xe_object_columns-transact-sql"></a>sys.dm_xe_object_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85898601"
 |object_package_guid|**uniqueidentifier**|Идентификатор GUID пакета, в котором содержится объект. Не допускает значение NULL.|  
 |type_name|**nvarchar(256)**|Имя типа для этого столбца. Не допускает значение NULL.|  
 |type_package_guid|**uniqueidentifier**|Идентификатор GUID пакета, в котором содержится тип данных столбца. Не допускает значение NULL.|  
-|column_type|**nvarchar(60)**|Показывает, как используется этот столбец. Не допускает значение NULL. column_type может быть одним из следующих:<br /><br /> readonly. Столбец содержит статическое значение, которое нельзя изменить.<br /><br /> data. Столбец содержит данные времени выполнения, представленные объектом.<br /><br /> customizable. Столбец содержит значение, которое можно изменить.<br /><br /> Примечание. изменение этого значения может изменить поведение объекта.|  
+|column_type|**nvarchar(60)**|Показывает, как используется этот столбец. Не допускает значение NULL. column_type может быть одним из следующих:<br /><br /> readonly. Столбец содержит статическое значение, которое нельзя изменить.<br /><br /> данных. Столбец содержит данные времени выполнения, представленные объектом.<br /><br /> customizable. Столбец содержит значение, которое можно изменить.<br /><br /> Примечание. изменение этого значения может изменить поведение объекта.|  
 |column_value|**nvarchar(256)**|Отображает статические значения, связанные со столбцом объекта. Допускает значение NULL.|  
 |capabilities|**int**|Битовая карта, описывающая возможности столбца. Допускает значение NULL.|  
 |capabilities_desc|**nvarchar(256)**|Описание возможностей этого столбца объекта. Значение может быть одним из следующих.<br /><br /> Mandatory. Значение должно быть задано при привязывании родительского объекта к сеансу событий.<br /><br /> Допускает значение NULL.|  
@@ -53,12 +54,12 @@ ms.locfileid: "85898601"
   
 ### <a name="relationship-cardinalities"></a>Количество элементов связей  
   
-|Исходный тип|Кому|Связь|  
+|От|Кому|Связь|  
 |----------|--------|------------------|  
 |sys.dm_xe_object_columns.object_name, sys.dm_xe_object_columns.object_package_guid|sys.dm_xe_objects.name,<br /><br /> sys.dm_xe_objects.package_guid|«многие к одному»|  
 |sys.dm_xe_object_columns.type_name<br /><br /> sys.dm_xe_object_columns.type_package_guid|sys.dm_xe_objects.name<br /><br /> sys.dm_xe_objects.package_guid|«многие к одному»|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

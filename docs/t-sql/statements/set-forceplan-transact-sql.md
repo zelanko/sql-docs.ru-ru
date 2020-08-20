@@ -1,4 +1,5 @@
 ---
+description: SET FORCEPLAN (Transact-SQL)
 title: SET FORCEPLAN (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/26/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: b6c0b08f-2060-4696-9e12-50cb7e674321
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 02ed9e434ad527fa9e9c6c6ec34b464a522be7ce
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 88d97ef1c5f56a6329e59bdf6c29b8d89bc696e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765802"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496451"
 ---
 # <a name="set-forceplan-transact-sql"></a>SET FORCEPLAN (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +45,9 @@ ms.locfileid: "85765802"
 SET FORCEPLAN { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Remarks  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>Remarks
  Инструкция SET FORCEPLAN, в сущности, переопределяет логику, используемую в оптимизаторе запросов для обработки инструкции SELECT языка [!INCLUDE[tsql](../../includes/tsql-md.md)]. Данные, возвращаемые инструкцией SELECT, не зависят от этого параметра. Единственное различие — способ обработки таблиц в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], применяемый для выполнения запроса.  
   
  Подсказки оптимизатора запросов могут быть использованы в запросах для изменения способа обработки инструкции SELECT в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_objects_impacted_on_version_change (база данных SQL Azure)
 title: sys.dm_db_objects_impacted_on_version_change
 titleSuffix: Azure SQL Database
 ms.date: 03/03/2017
@@ -20,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: c0b26edb80b254ca6c7d3b161e618d2a6ad5849f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 804b9828ae2a1359075cce2db4077918b0294b59
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718782"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498337"
 ---
 # <a name="sysdm_db_objects_impacted_on_version_change-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (база данных SQL Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -60,14 +61,14 @@ class  class_desc        major_id    minor_id    dependency
 1      OBJECT_OR_COLUMN  101575400   NULL        geometry     
 ```  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
   
 ### <a name="how-to-update-impacted-objects"></a>Обновление затрагиваемых объектов  
  Далее описывается порядок действий по исправлению после обновления набора исправлений, которое будет доступно в июне.  
   
-|Номер|Затрагиваемый объект|Действие по исправлению|  
+|Порядок|Затрагиваемый объект|Действие по исправлению|  
 |-----------|---------------------|-----------------------|  
-|1|**Индексы**|Перестройте любой индекс, идентифицируемый **sys. dm_db_objects_impacted_on_version_change** например:`ALTER INDEX ALL ON <table> REBUILD`<br />or<br />`ALTER TABLE <table> REBUILD`|  
+|1|**Индексы**|Перестройте любой индекс, идентифицируемый **sys. dm_db_objects_impacted_on_version_change** например:  `ALTER INDEX ALL ON <table> REBUILD`<br />или<br />`ALTER TABLE <table> REBUILD`|  
 |2|**Объект**|Все ограничения, обозначенные как **sys.dm_db_objects_impacted_on_version_change**, должны быть еще раз проверены после повторного вычисления данных типа Geometry и Geography в базовой таблице. Для ограничений выполните проверку с помощью инструкции ALTER TABLE. <br />Пример: <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />или диспетчер конфигурации служб<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
   
   

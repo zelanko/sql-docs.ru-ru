@@ -1,4 +1,5 @@
 ---
+description: BEGIN CONVERSATION TIMER (Transact-SQL)
 title: BEGIN CONVERSATION TIMER (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -32,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7143f1aee0047f00c0b21507f8b25290866f3faf
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: c7f0d19062bd164c44481082ab5885f0c40572be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380907"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496989"
 ---
 # <a name="begin-conversation-timer-transact-sql"></a>BEGIN CONVERSATION TIMER (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -64,7 +65,7 @@ BEGIN CONVERSATION TIMER ( conversation_handle )
  TIMEOUT  
  Указывает время ожидания (в секундах) перед добавлением сообщения в очередь.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Таймер диалога предоставляет приложению способ получения сообщения в диалоге по истечении заданного времени. Вызов BEGIN CONVERSATION TIMER в диалоге до истечения времени ожидания устанавливает новое значение времени ожидания. В отличие от времени жизни диалога у каждой стороны диалога имеется свой таймер диалога. Сообщение **DialogTimer** появляется в локальной очереди, не оказывая влияния на удаленную сторону диалога. Поэтому приложение может использовать сообщение таймера для любых нужд.  
   
  Например, можно использовать таймер диалога для предотвращения слишком долгого ожидания приложением запоздалого отклика. Если завершение диалога ожидается в течение 30 секунд, то можно установить таймер для этого диалога на 60 секунд (30 секунд плюс 30 секунд допустимой задержки). Если диалог все еще открыт по истечении 60 секунд, приложение получит в очереди этого диалога сообщение об истечении времени ожидания.  
@@ -87,7 +88,7 @@ BEGIN CONVERSATION TIMER (@dialog_handle)
 TIMEOUT = 120 ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [BEGIN DIALOG CONVERSATION (Transact-SQL)](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [END CONVERSATION (Transact-SQL)](../../t-sql/statements/end-conversation-transact-sql.md)   
  [RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)  

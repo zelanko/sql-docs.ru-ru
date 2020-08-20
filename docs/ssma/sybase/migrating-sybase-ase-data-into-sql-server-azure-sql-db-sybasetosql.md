@@ -1,4 +1,5 @@
 ---
+description: Миграция данных Sybase ASE в SQL Server — база данных SQL Azure (SybaseToSQL)
 title: Перенос данных Sybase ASE в SQL Server в базе данных SQL Azure | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 54a39f5e-9250-4387-a3ae-eae47c799811
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 5bac0e5437a4700c6bfb4b349e1a5ca9cf421901
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 89603e61a51ebac9ccf8d834e493bbd463645a02
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934703"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497684"
 ---
 # <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-database--sybasetosql"></a>Миграция данных Sybase ASE в SQL Server — база данных SQL Azure (SybaseToSQL)
 После успешной загрузки объектов базы данных адаптивного сервера предприятия (ASE) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базе данных SQL Azure можно перенести данные из ASE в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базу данных SQL Azure.  
@@ -107,6 +108,6 @@ ms.locfileid: "87934703"
 > [!NOTE]  
 > Если в качестве целевой базы данных используется SQL Express Edition, то разрешена только миграция данных на стороне клиента, а миграция данных на стороне сервера не поддерживается.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Миграция баз данных Sybase ASE в SQL Server — база данных SQL Azure &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

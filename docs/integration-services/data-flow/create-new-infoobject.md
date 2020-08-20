@@ -1,4 +1,5 @@
 ---
+description: Создание InfoObject
 title: Создание InfoObject | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7a67dd66c18fc5700ee964a2e321bd50fef09092
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9cb9336b7999373b1f6af5bb5327a35f77fdbe7e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86900540"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495890"
 ---
 # <a name="create-new-infoobject"></a>Создание InfoObject
 
@@ -24,7 +25,7 @@ ms.locfileid: "86900540"
 
   Используйте диалоговое окно **Создание нового InfoObject** для создания нового InfoObject в системе SAP Netweaver BW.  
   
- Диалоговое окно **Создать InfoObject** можно открыть на странице **Диспетчер соединений** **Редактора назначений SAP BW**. Дополнительные сведения о назначении SAP BW см. в статье [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
+ Диалоговое окно **Создать InfoObject** можно открыть на странице **Диспетчер соединений****Редактора назначений SAP BW**. Дополнительные сведения о назначении SAP BW см. в статье [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
   
 > [!IMPORTANT]  
 >  Документация по Microsoft Connector 1.1 для SAP BW предполагает, что читатель знаком со средой SAP Netweaver BW. Дополнительные сведения о SAP Netweaver BW или сведения о настройке объектов и процессов SAP Netweaver BW см. в документации SAP.  
@@ -75,7 +76,7 @@ ms.locfileid: "86900540"
  Указывает, что InfoObject содержит основные данные в форме атрибутов, текстов или иерархий.  
   
 > [!NOTE]  
->  Выберите этот параметр, если InfoObject представляет данные измерений и выбран параметр **Характеристика** .  
+>   Выберите этот параметр, если InfoObject представляет данные измерений и выбран параметр **Характеристика** .  
   
  **Разрешить символы в нижнем регистре**  
  Разрешить символы в нижнем регистре для данных InfoObject.  
@@ -133,11 +134,11 @@ ms.locfileid: "86900540"
  **Тип InfoObject**  
  Просмотрите тип InfoObject. В следующей таблице приводятся возможные значения типа.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |CHA|Характеристики|  
 |KYF|Ключевые цифры|  
-|UNI|Units|  
+|UNI|единиц(ы)|  
 |TIM|Характеристики времени|  
   
 ### <a name="attributes-options"></a>Параметры атрибутов  

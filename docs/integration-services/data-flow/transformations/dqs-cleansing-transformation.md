@@ -1,4 +1,5 @@
 ---
+description: Преобразование «Очистка DQS»
 title: Преобразование "Очистка DQS" | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2d02041dfedd882502a0440909b52fab86337b22
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ce6e3f36d8216f08493933798cdab558274e0cb5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919384"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495712"
 ---
 # <a name="dqs-cleansing-transformation"></a>Преобразование «Очистка DQS»
 
@@ -38,7 +39,7 @@ ms.locfileid: "86919384"
   
 -   Столбец сопоставлен с доменом, имеющим совместимый тип данных.  
   
- Преобразование также включает вывод ошибок, настроенный пользователем для обработки ошибок на уровне строк. Чтобы настроить вывод ошибок, запустите **Редактор преобразования «Очистка DQS»** .  
+ Преобразование также включает вывод ошибок, настроенный пользователем для обработки ошибок на уровне строк. Чтобы настроить вывод ошибок, запустите **Редактор преобразования «Очистка DQS»**.  
   
  В поток данных можно включить [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md) для определения строк данных, которые, вероятнее всего, будут повторяться.  
   
@@ -55,7 +56,7 @@ ms.locfileid: "86919384"
   
 ## <a name="related-content"></a>См. также  
   
--   [Открытие, разблокировка, переименование и удаление проекта служб DQS](../../../data-quality-services/open-unlock-rename-and-delete-a-data-quality-project.md)  
+-   [Открытие, разблокировка, переименование и удаление проекта качества данных](../../../data-quality-services/open-unlock-rename-and-delete-a-data-quality-project.md)  
   
 -   Статья [Очистка сложных данных с использованием составных доменов](https://social.technet.microsoft.com/wiki/contents/articles/13324.using-dqs-cleansing-complex-data-using-composite-domains.aspx)на сайте social.technet.microsoft.com.  
   
@@ -127,7 +128,7 @@ ms.locfileid: "86919384"
  Щелкните в этом поле, чтобы изменить имя столбца.  
   
  **Псевдоним вывода**  
- Показывает столбец, который выводится **преобразованием "Очистка DQS"** . Это столбец содержит исходное значение столбца или исправленное значение.  
+ Показывает столбец, который выводится **преобразованием "Очистка DQS"**. Это столбец содержит исходное значение столбца или исправленное значение.  
   
  Щелкните в этом поле, чтобы изменить имя столбца.  
   

@@ -1,4 +1,5 @@
 ---
+description: Подключение к источнику данных PostgreSQL (мастер импорта и экспорта SQL Server)
 title: Подключение к источнику данных PostgreSQL (мастер импорта и экспорта SQL Server) | Документы Майкрософт
 ms.custom: ''
 ms.date: 06/29/2020
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b7a75a72-b267-444f-9eb8-d23eb333fc35
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5fdb7545f2dc8bf5d27b26e54bf76b0307aad235
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 023c791e27fba3c26ac3ccd9778f0beee44536b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921425"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495599"
 ---
 # <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>Подключение к источнику данных PostgreSQL (мастер импорта и экспорта SQL Server)
 
@@ -54,12 +55,12 @@ ms.locfileid: "86921425"
 > Вы можете получить помощь в построении строки подключения. Кроме того, вместо указания строки подключения вы можете предоставить существующее имя DSN (имя источника данных) или создать новое. Дополнительные сведения об этих возможностях см. в разделе [Подключение к источнику данных ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md).
 
 **Драйвер**  
-Имя драйвера ODBC — **PostgreSQL ODBC Driver(UNICODE)** или **PostgreSQL ODBC Driver(ANSI)** .
+Имя драйвера ODBC — **PostgreSQL ODBC Driver(UNICODE)** или **PostgreSQL ODBC Driver(ANSI)**.
 
 **Server**  
 Имя сервера PostgreSQL. 
 
-**Порт**  
+**порт**.  
 Порт, используемый для подключения к серверу PostgreSQL.
 
 **База данных**  

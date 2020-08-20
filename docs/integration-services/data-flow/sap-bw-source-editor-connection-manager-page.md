@@ -1,4 +1,5 @@
 ---
+description: Редактор источников SAP BW (страница «Диспетчер соединений»)
 title: Редактор источника SAP BW (страница "Диспетчер соединений")
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 52972f7b21a9eb7ff2fa0059e8d52848e8cc9ab4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: aa56c3788e690aae63d292ac1a71fad3a4fc6b67
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917848"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495750"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>Редактор источников SAP BW (страница «Диспетчер соединений»)
 
@@ -61,7 +62,7 @@ ms.locfileid: "86917848"
  **Режим выполнения**  
  Укажите метод извлечения данных из источника.  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |**P – запустить цепочку процесса**|Запустите цепочку процессов. В этом случае пакет [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] запустит процесс извлечения.|  
 |**W – ждать уведомления**|Подождите уведомления системы SAP Netweaver BW перед тем, как начать извлечение данных. В этом случае система SAP Netweaver BW запустит процесс извлечения.|  
@@ -127,7 +128,7 @@ ms.locfileid: "86917848"
  **Идентификатор запроса**  
  Введите идентификатор запроса, связанный с извлечением.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Редактор источника SAP BW (страница "Столбцы")](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
  [Редактор источника SAP BW (страница "Вывод ошибок")](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
  [Редактор источника SAP BW (страница "Дополнительно")](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   

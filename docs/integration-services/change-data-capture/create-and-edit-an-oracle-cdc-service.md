@@ -1,4 +1,5 @@
 ---
+description: Создание и изменение службы CDC Oracle
 title: Создание и изменение Oracle CDC Service​ | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/20/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 18aa250838107e9b28fc5a1a2ad7646e5dccf072
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: bcccb89d1af55f990388b389087c16c003d12c39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916230"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496281"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Создание и изменение службы CDC Oracle
 
@@ -65,9 +66,9 @@ ms.locfileid: "86916230"
  **Аутентификация**  
  Выберите один из следующих вариантов:  
   
--   **Проверка подлинности Windows**. В этом случае служба Oracle CDC будет подключаться к целевому экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], используя учетную запись службы. Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает на другом компьютере, проверку подлинности Windows необходимо использовать с учетными записями домена.  
+-   **Проверка подлинности Windows**. В этом случае служба Oracle CDC будет подключаться к целевому экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , используя удостоверение учетной записи службы. Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает на другом компьютере, проверку подлинности Windows необходимо использовать с учетными записями домена.  
   
--   **Аутентификация SQL Server**: при выборе этого варианта необходимо будет ввести **Имя пользователя** и **Пароль** для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которое вы хотите использовать. Служба Oracle CDC использует эти учетные данные при подключении к целевому экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+-   **Проверка подлинности SQL Server**. Если выбрать этот вариант, то необходимо будет ввести **Имя пользователя** и **Пароль** имени для входа в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которое нужно использовать. Служба Oracle CDC использует эти учетные данные при подключении к целевому экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , используемому службой Oracle CDC Service, достаточно быть членом предопределенной роли сервера public. Других разрешений не требуется. Когда добавляются новые экземпляры Oracle CDC, это имя входа получает доступ **db_owner** к соответствующим базам данных CDC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -82,9 +83,9 @@ ms.locfileid: "86916230"
   
 -   **Время ожидания выполнения**: Введите время (в секундах), в течение которого служба Windows CDC Oracle ожидает выполнения команды. Значение по умолчанию — **30**.  
   
--   **Шифровать соединение**: выберите параметр **Шифровать соединение**, чтобы обмен данными между службой Oracle CDC Service и целевым экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполнялся по зашифрованному соединению.  
+-   **Шифрование соединения**. Выберите параметр **Шифровать соединение** , чтобы обмен данными между службой Oracle CDC Service и целевым экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполнялся по зашифрованному соединению.  
   
--   **Дополнительно**: При необходимости введите любые дополнительные свойства подключения.  
+-   **Дополнительно**. При необходимости введите любые дополнительные свойства соединения.  
   
  **Главный пароль**  
  Введите пароль, который будет использоваться службой Windows Oracle CDC для защиты учетных данных средства интеллектуального анализа журнала.  

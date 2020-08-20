@@ -1,4 +1,5 @@
 ---
+description: REVOKE (Transact-SQL)
 title: REVOKE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/26/2017
@@ -29,12 +30,12 @@ ms.assetid: 9d31d3e7-0883-45cd-bf0e-f0361bbb0956
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80d1eeb52c557fc1966a70e62dcfb37b9759369d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: cb01b06486996a43eba3401644c34663eb05b800
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485135"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496584"
 ---
 # <a name="revoke-transact-sql"></a>REVOKE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -169,7 +170,7 @@ AS в данной инструкции не дает возможность о�
 |Роль приложения|[REVOKE, отмена разрешений на субъекта базы данных (Transact-SQL)](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
 |Сборка|[REVOKE, отмена разрешений на сборку (Transact-SQL)](../../t-sql/statements/revoke-assembly-permissions-transact-sql.md)|  
 |Асимметричный ключ|[REVOKE, отмена разрешений на асимметричный ключ (Transact-SQL)](../../t-sql/statements/revoke-asymmetric-key-permissions-transact-sql.md)|  
-|Группа доступности|[REVOKE, отмена разрешений на группу доступности (Transact-SQL)](../../t-sql/statements/revoke-availability-group-permissions-transact-sql.md)|  
+|Группа доступности|[REVOKE, отзыв разрешений на группу доступности (Transact-SQL)](../../t-sql/statements/revoke-availability-group-permissions-transact-sql.md)|  
 |Сертификат|[REVOKE, отмена разрешений на сертификат (Transact-SQL)](../../t-sql/statements/revoke-certificate-permissions-transact-sql.md)|  
 |Контракт|[REVOKE, запрет разрешений на Service Broker (Transact-SQL)](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
 |База данных|[REVOKE, отмена разрешений на Service Broker (Transact-SQL)](../../t-sql/statements/revoke-database-permissions-transact-sql.md)|  
@@ -177,8 +178,8 @@ AS в данной инструкции не дает возможность о�
 |Учетные данные для базы данных|[REVOKE, отмена учетных данных для базы данных (Transact-SQL)](../../t-sql/statements/revoke-database-scoped-credential-transact-sql.md)|  
 |Полнотекстовый каталог|[REVOKE, отмена разрешений на полнотекстовые объекты (Transact-SQL)](../../t-sql/statements/revoke-full-text-permissions-transact-sql.md)|  
 |Полнотекстовый список стоп-слов|[REVOKE, отмена разрешений на полнотекстовые объекты (Transact-SQL)](../../t-sql/statements/revoke-full-text-permissions-transact-sql.md)|  
-|Компонент|[REVOKE, отмена разрешений на объект (Transact-SQL)](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
-|Имя входа|[REVOKE, отмена разрешений участника на уровне сервера (Transact-SQL)](../../t-sql/statements/revoke-server-principal-permissions-transact-sql.md)|  
+|Функция|[REVOKE, отмена разрешений на объект (Transact-SQL)](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|Вход|[REVOKE, отмена разрешений участника на уровне сервера (Transact-SQL)](../../t-sql/statements/revoke-server-principal-permissions-transact-sql.md)|  
 |Тип сообщений|[REVOKE, запрет разрешений на Service Broker (Transact-SQL)](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
 |Объект|[REVOKE, отмена разрешений на объект (Transact-SQL)](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |Очередь|[REVOKE, отмена разрешений на объект (Transact-SQL)](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
@@ -187,7 +188,7 @@ AS в данной инструкции не дает возможность о�
 |Маршрут|[REVOKE, запрет разрешений на Service Broker (Transact-SQL)](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
 |схема|[REVOKE, отмена разрешений на схему (Transact-SQL)](../../t-sql/statements/revoke-schema-permissions-transact-sql.md)|  
 |Список свойств поиска|[REVOKE, отмена разрешений на список свойств поиска (Transact-SQL)](../../t-sql/statements/revoke-search-property-list-permissions-transact-sql.md)|  
-|Сервер|[REVOKE, отмена разрешений на сервер (Transact-SQL)](../../t-sql/statements/revoke-server-permissions-transact-sql.md)|  
+|Сервер|[REVOKE, отмена разрешений на сервере (Transact-SQL)](../../t-sql/statements/revoke-server-permissions-transact-sql.md)|  
 |Служба|[REVOKE, запрет разрешений на Service Broker (Transact-SQL)](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
 |Хранимая процедура|[REVOKE, отмена разрешений на объект (Transact-SQL)](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |Симметричный ключ|[REVOKE, отмена разрешений на симметричный ключ (Transact-SQL)](../../t-sql/statements/revoke-symmetric-key-permissions-transact-sql.md)|  
@@ -196,7 +197,7 @@ AS в данной инструкции не дает возможность о�
 |Таблица|[REVOKE, отмена разрешений на объект (Transact-SQL)](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |Тип|[REVOKE, отмена разрешений на тип (Transact-SQL)](../../t-sql/statements/revoke-type-permissions-transact-sql.md)|  
 |Пользователь|[REVOKE, отмена разрешений на субъекта базы данных (Transact-SQL)](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
-|Представление|[REVOKE, отмена разрешений на объект (Transact-SQL)](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|Просмотр|[REVOKE, отмена разрешений на объект (Transact-SQL)](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |Коллекция схем XML|[REVOKE, отмена разрешений на коллекцию XML-схем (Transact-SQL)](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)|  
   
 ## <a name="see-also"></a>См. также:  

@@ -1,4 +1,5 @@
 ---
+description: managed_backup. sp_set_parameter (Transact-SQL)
 title: managed_backup. sp_set_parameter (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,11 +21,12 @@ helpviewer_keywords:
 ms.assetid: bd8ae5fd-1337-4b7f-b0a4-153cbca9fa5f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3eab417e1d959c990e53aca3119546a73a3e1aad
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 8341c09305f6e02317d5b49a9e8239d18213b242
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052920"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498081"
 ---
 # <a name="managed_backupsp_set_parameter-transact-sql"></a>managed_backup. sp_set_parameter (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -44,27 +46,27 @@ EXEC managed_backup.sp_set_parameter
     ,[@parameter_value = ] 'parameter_value'  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>Даваемых  
+##  <a name="arguments"></a><a name="Arguments"></a> Аргументы  
  @parameter_name  
- Имя параметра, для которого требуется установить значение. @parameter_nameимеет тип NVARCHAR (128). Допустимые имена параметров: **SSMBackup2WANotificationEmailIds**, **SSMBackup2WADebugXevent**, **SSMBackup2WAEnableUserDefinedPolicy**, **филеретентиондебугксевент**и **сторажеоператиондебугксевент**.  
+ Имя параметра, для которого требуется установить значение. @parameter_name имеет тип NVARCHAR (128). Допустимые имена параметров: **SSMBackup2WANotificationEmailIds**, **SSMBackup2WADebugXevent**, **SSMBackup2WAEnableUserDefinedPolicy**, **филеретентиондебугксевент**и **сторажеоператиондебугксевент**.  
   
  @parameter_value  
- Задаваемое значение параметра. @parameterзначение равно NVARCHAR (128).  Ниже приведены разрешенные пары имен и значений параметров.  
+ Задаваемое значение параметра. @parameter значение равно NVARCHAR (128).  Ниже приведены разрешенные пары имен и значений параметров.  
   
--   @parameter_name= ' SSMBackup2WANotificationEmailIds ': @parameter_value = ' Email '  
+-   @parameter_name = ' SSMBackup2WANotificationEmailIds ': @parameter_value  = ' Email '  
   
--   @parameter_name= ' SSMBackup2WAEnableUserDefinedPolicy ': @parameter_value = {' true ' | "false"}  
+-   @parameter_name = ' SSMBackup2WAEnableUserDefinedPolicy ': @parameter_value  = {' true ' | "false"}  
   
--   @parameter_name= ' SSMBackup2WADebugXevent ': @parameter_value = {' true ' | "false"}  
+-   @parameter_name = ' SSMBackup2WADebugXevent ': @parameter_value  = {' true ' | "false"}  
   
--   @parameter_name= ' Филеретентиондебугксевент ': @parameter_value = {' true ' | "false"}  
+-   @parameter_name = ' Филеретентиондебугксевент ': @parameter_value  = {' true ' | "false"}  
   
--   @parameter_name= ' Сторажеоператиондебугксевент ' = {' true ' | "false"}  
+-   @parameter_name = ' Сторажеоператиондебугксевент ' = {' true ' | "false"}  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="best-practices"></a>Рекомендации  
+## <a name="best-practices"></a>Советы и рекомендации  
  Необязательный раздел, описывающий рекомендации по выполнению инструкции или процедуры.  
   
 ## <a name="security"></a>Безопасность  

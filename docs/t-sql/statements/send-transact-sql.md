@@ -1,4 +1,5 @@
 ---
+description: SEND (Transact-SQL)
 title: SEND (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/26/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: b6e66aeb-1714-4c2b-b7c2-d386d77b0d46
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 56352f68927d82e1c7df0110168a6a4aff14d0c7
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: bed4098228eb381f4785da87bf8d7fc2c2c4095b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484053"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496537"
 ---
 # <a name="send-transact-sql"></a>SEND (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -59,9 +60,9 @@ MESSAGE TYPE *message_type_name*
 Указывает тип отправляемого сообщения. Этот тип сообщений должен входить в контракты служб, используемых этими диалогами. Эти контракты должны позволять отправить сообщение данного типа с этой стороны диалога. Например, целевые службы диалогов могут отправлять только сообщения, отмеченные в контракте как SENT BY TARGET или SENT BY ANY. Если это предложение пропущено, то сообщение принадлежит к типу сообщений DEFAULT.  
   
 *message_body_expression*  
-Содержит выражение, представляющее тело сообщения. Выражение *message_body_expression* является необязательным. Однако если аргумент *message_body_expression* указан, то выражение должно иметь тип, преобразуемый в тип **varbinary(max)** . Выражение не может иметь значение NULL. Если это предложение не указано, то тело сообщения пустое.  
+Содержит выражение, представляющее тело сообщения. Выражение *message_body_expression* является необязательным. Однако если аргумент *message_body_expression* указан, то выражение должно иметь тип, преобразуемый в тип **varbinary(max)**. Выражение не может иметь значение NULL. Если это предложение не указано, то тело сообщения пустое.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
   
 > [!IMPORTANT]  
 >  Если инструкция SEND не является первой в пакете или хранимой процедуре, предшествующая ей инструкция должна заканчиваться точкой с запятой (;).  
@@ -98,7 +99,7 @@ SEND — это атомарная инструкция. Если с помощ
 Для отправки сообщения у текущего пользователя должно быть разрешение RECEIVE для очереди в каждой из служб, которые отправляют сообщение.  
   
 ## <a name="examples"></a>Примеры  
-В этом примере инициируется диалог и отправляется XML-сообщение. Чтобы отправить сообщение, в примере выполняется преобразование XML-объекта в тип **varbinary(max)** .  
+В этом примере инициируется диалог и отправляется XML-сообщение. Чтобы отправить сообщение, в примере выполняется преобразование XML-объекта в тип **varbinary(max)**.  
   
 ```sql
 DECLARE @dialog_handle UNIQUEIDENTIFIER,  
@@ -146,7 +147,7 @@ SEND ON CONVERSATION (@dialog_handle1, @dialog_handle2, @dialog_handle3)
     (@OrderMsg) ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [BEGIN DIALOG CONVERSATION (Transact-SQL)](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
 [END CONVERSATION (Transact-SQL)](../../t-sql/statements/end-conversation-transact-sql.md)   
 [RECEIVE (Transact-SQL)](../../t-sql/statements/receive-transact-sql.md)   
