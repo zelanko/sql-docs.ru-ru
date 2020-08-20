@@ -1,4 +1,5 @@
 ---
+description: LTRIM (выражение служб SSIS)
 title: LTRIM (выражение служб SSIS) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d082f42a-d7e7-49f5-a503-ac44ba630832
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2eb27d666478719acc41b2ca4078be233cea013f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f4d74cabfb5fb724d1d032cd6041b2576f1f31e2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915496"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457242"
 ---
 # <a name="ltrim-ssis-expression"></a>LTRIM (выражение служб SSIS)
 
@@ -68,7 +69,7 @@ LTRIM(FirstName)
 LTRIM(@FirstName)  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [RTRIM (выражение служб SSIS)](../../integration-services/expressions/rtrim-ssis-expression.md)   
  [TRIM (выражение служб SSIS)](../../integration-services/expressions/trim-ssis-expression.md)   
  [Функции (выражение служб SSIS)](../../integration-services/expressions/functions-ssis-expression.md)  

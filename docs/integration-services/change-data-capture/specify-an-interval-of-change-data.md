@@ -1,4 +1,5 @@
 ---
+description: Задание интервала для информации об изменениях данных
 title: Задание интервала для информации об изменениях данных | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/13/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ad9785a9cddc36d368a01ec507fe0c7b3909794b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7f82a0fe161a12f4a7d20b24218bd0347cdf6187
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921294"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457654"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Задание интервала для информации об изменениях данных
 
@@ -101,7 +102,7 @@ ms.locfileid: "86921294"
   
         ```  
   
-3.  На странице **Результирующий набор** **Редактора задачи «Выполнение SQL»** сопоставьте результат ExtractStartTime с переменной ExtractStartTime пакета, а результат ExtractEndTime — с переменной ExtractEndTime пакета.  
+3.  На странице **Результирующий набор****Редактора задачи «Выполнение SQL»** сопоставьте результат ExtractStartTime с переменной ExtractStartTime пакета, а результат ExtractEndTime — с переменной ExtractEndTime пакета.  
   
     > [!NOTE]  
     >  Если для установки значения переменной служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] используется выражение, это выражение вычисляется при каждом обращении к значению переменной.  
@@ -109,9 +110,9 @@ ms.locfileid: "86921294"
 ## <a name="next-step"></a>Следующий шаг  
  После вычисления начальной и конечной точек диапазона изменений необходимо определить, готовы ли измененные данные.  
   
- **Следующая статья:** [Определение готовности информации об изменениях данных](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
+ **Следующий раздел:** [Определение готовности информации об изменениях данных](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Использование переменных в пакетах](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
  [Выражения служб Integration Services (SSIS)](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [Задача "Выполнение SQL"](../../integration-services/control-flow/execute-sql-task.md)   

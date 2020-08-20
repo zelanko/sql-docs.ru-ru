@@ -1,4 +1,5 @@
 ---
+description: Разделитель CDC
 title: Разделитель CDC | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2015303f77a3ae7ba4f77758432f51bd84f0b811
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 38ecdd11aa4527fee14b558deb05dcfe578f4d84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917156"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457421"
 ---
 # <a name="cdc-splitter"></a>Разделитель CDC
 
@@ -26,14 +27,14 @@ ms.locfileid: "86917156"
 
   Разделитель CDC разбивает один поток строк изменений из потока исходных данных CDC на различные потоки данных, относящиеся к операциям Insert, Update и Delete. Разбиение потока данных осуществляется на основе обязательного столбца `__$operation` и его стандартных значений в таблицах изменений [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
-|Значение операции|Выходные данные|Description|  
+|Значение операции|Выходные данные|Описание|  
 |------------------------|------------|-----------------|  
 |1|DELETE|Удаленная строка|  
 |2|Вставить|Вставленная строка (недоступно при использовании режима CDC **Суммарные со слиянием** )|  
 |3|Update|Строка перед обновлением (доступно только при использовании режима CDC **Все со старыми значениями** )|  
 |4|Update|Строка после обновления (следует за строкой, которая имела место перед обновлением)|  
 |5|Update|Строка слияния (доступно только при использовании режима CDC **Суммарные со слиянием** )|  
-|Другие|Ошибка||  
+|Другое|Error||  
   
  Разделитель вы можете использовать для подключения к стандартным выводам INSERT, DELETE и UPDATE в целях дальнейшей обработки.  
   
@@ -61,7 +62,7 @@ ms.locfileid: "86917156"
   
 -   На экране **Поток данных** вашего проекта [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] щелкните правой кнопкой мыши разделитель CDC и выберите элемент **Показать расширенный редактор**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выбор направления потока CDC в соответствии с типом изменения](../../integration-services/data-flow/direct-the-cdc-stream-according-to-the-type-of-change.md)  
   
   

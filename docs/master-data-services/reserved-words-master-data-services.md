@@ -1,4 +1,5 @@
 ---
+description: Зарезервированные слова (службы Master Data Services)
 title: Зарезервированные слова
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 78dcf9320312f93dd08495f21bf0f6cc1b71516b
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 5eff7f5f2db1d1b155b94818083ddad11f23890e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811469"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456720"
 ---
 # <a name="reserved-words-master-data-services"></a>Зарезервированные слова (службы Master Data Services)
 
@@ -29,7 +30,7 @@ ms.locfileid: "85811469"
 > [!NOTE]  
 >  Кроме того, следует ограничить использование специальных знаков (особых символов, знаков переноса и т. п.).  
   
--   [Модели](../master-data-services/reserved-words-master-data-services.md#models)  
+-   [Models](../master-data-services/reserved-words-master-data-services.md#models)  
   
 -   [Сущности](../master-data-services/reserved-words-master-data-services.md#entities)  
   
@@ -37,18 +38,18 @@ ms.locfileid: "85811469"
   
 -   [Атрибуты](../master-data-services/reserved-words-master-data-services.md#attributes)  
   
--   [Члены](../master-data-services/reserved-words-master-data-services.md#members)  
+-   [Участники](../master-data-services/reserved-words-master-data-services.md#members)  
   
-##  <a name="models"></a><a name="models"></a>Моделью  
+##  <a name="models"></a><a name="models"></a> Моделью  
  Если модель создается с именем **Name** или **Code**, не выбирайте **Создать сущность с именем модели** , поскольку **Name** или **Code** нельзя использовать в качестве имени сущности.  
   
-##  <a name="entities"></a><a name="entities"></a>Объектах  
+##  <a name="entities"></a><a name="entities"></a> Объектах  
  В качестве имен сущностей нельзя указывать **Name** и **Code**.  
   
-##  <a name="explicit-hierarchies"></a><a name="exhierarchies"></a>Явные иерархии  
+##  <a name="explicit-hierarchies"></a><a name="exhierarchies"></a> Явные иерархии  
  В качестве имен явных иерархий нельзя указывать **Name** и **Code**.  
   
-##  <a name="attributes"></a><a name="attributes"></a>Атрибута  
+##  <a name="attributes"></a><a name="attributes"></a> Атрибута  
   
 -   **ID**  
   
@@ -58,7 +59,7 @@ ms.locfileid: "85811469"
   
 -   **LastChgUserName**  
   
--   **Name**  
+-   **имя**;  
   
 -   **EnterDTM**  
   
@@ -76,7 +77,7 @@ ms.locfileid: "85811469"
   
 -   **Version_ID**  
   
-##  <a name="members"></a><a name="members"></a>Участниками  
+##  <a name="members"></a><a name="members"></a> Участниками  
  Для элементов нельзя использовать **MDMMemberStatus**, **MDMUnused**или **ROOT** в качестве значения атрибута **Code** .  
   
 ## <a name="see-also"></a>См. также  

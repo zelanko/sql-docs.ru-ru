@@ -1,4 +1,5 @@
 ---
+description: CREATE FULLTEXT INDEX (Transact-SQL)
 title: CREATE FULLTEXT INDEX (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 04/05/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0b385e3c69156bf7be9d806fa73ece30b2433f3a
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 134f2c83a7564ab8132d5078650aaac030a13a11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392902"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458784"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -73,7 +74,7 @@ CREATE FULLTEXT INDEX ON table_name
 Имя таблицы или индексированного представления, содержащего столбец или столбцы, включенные в полнотекстовый индекс.  
   
 *column_name*       
-Имя столбца, включенного в полнотекстовый индекс. Для полнотекстового поиска можно индексировать только столбцы типа **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml** и **varbinary(max)** . Чтобы задать несколько столбцов, предложение *column_name* повторяется следующим образом:  
+Имя столбца, включенного в полнотекстовый индекс. Для полнотекстового поиска можно индексировать только столбцы типа **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml** и **varbinary(max)**. Чтобы задать несколько столбцов, предложение *column_name* повторяется следующим образом:  
   
 CREATE FULLTEXT INDEX ON *table_name* (*column_name1* [...], *column_name2* [...]) ...  
   
@@ -155,7 +156,7 @@ OFF
 *property_list_name*       
 Задает имя списка свойств поиска, который будет связан с полнотекстовым индексом.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
 Дополнительные сведения о полнотекстовых индексах см. в разделе [Создание полнотекстовых индексов и управление ими](../../relational-databases/search/create-and-manage-full-text-indexes.md).  
   
 Для столбцов **xml** можно создать полнотекстовый индекс, который индексирует содержимое XML-элементов, но пропускает XML-разметку. К значениям атрибута, если они не являются числовыми значениями, применяется полнотекстовый индекс. Теги элементов используются в качестве границ токенов. Поддерживаются XML- или HTML-документы и фрагменты правильного формата, содержащие несколько языков. Дополнительные сведения см. в разделе [Использование полнотекстового поиска со столбцами XML](../../relational-databases/xml/use-full-text-search-with-xml-columns.md).  
@@ -246,7 +247,7 @@ ALTER FULLTEXT INDEX ON Production.Document SET CHANGE_TRACKING AUTO;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Создание и управление полнотекстовыми индексами](../../relational-databases/search/create-and-manage-full-text-indexes.md)       
 [ALTER FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/alter-fulltext-index-transact-sql.md)       
 [DROP FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/drop-fulltext-index-transact-sql.md)       

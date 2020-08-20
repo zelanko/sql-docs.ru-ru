@@ -1,4 +1,5 @@
 ---
+description: Экспорт базы знаний в файл .dqs
 title: Экспорт базы знаний в файл .dqs
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a324ead5-c8aa-4e26-abe3-ef415add00f8
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 1ebfecaead83e845bc95dd9e8fa32316e1d2e9c1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 946b1192b314c5303cd529c176e93ebf1fb0204f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895332"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457967"
 ---
 # <a name="export-a-knowledge-base-to-a-dqs-file"></a>Экспорт базы знаний в файл .dqs
 
@@ -36,7 +37,7 @@ ms.locfileid: "85895332"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для экспорта базы знаний в файл данных DQS необходимо быть членом роли dqs_kb_editor или dqs_administrator в базе данных DQS_MAIN.  
   
-##  <a name="export-a-knowledge-base-to-a-dqs-file"></a><a name="Export"></a>Экспорт базы знаний в файл DQS  
+##  <a name="export-a-knowledge-base-to-a-dqs-file"></a><a name="Export"></a> Экспорт базы знаний в файл DQS  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Запустите приложение Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -48,7 +49,7 @@ ms.locfileid: "85895332"
   
 5.  В диалоговом окне **Экспортировать базу знаний** убедитесь, что в строке состояния сообщается о завершении экспорта. Нажмите кнопку **ОК**.  
   
-##  <a name="follow-up-after-exporting-a-domain-to-a-dqs-file"></a><a name="FollowUp"></a>Дальнейшие действия. После экспорта домена в файл DQS  
+##  <a name="follow-up-after-exporting-a-domain-to-a-dqs-file"></a><a name="FollowUp"></a> Дальнейшие действия. После экспорта домена в файл DQS  
  После экспорта базы знаний в файл DQS можно импортировать базу знаний на тот же сервер [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] (с новым именем) или на другой сервер [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)].  
   
   

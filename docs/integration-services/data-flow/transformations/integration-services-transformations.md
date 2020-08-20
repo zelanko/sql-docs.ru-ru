@@ -1,4 +1,5 @@
 ---
+description: Преобразования служб Integration Services
 title: Преобразования служб Integration Services | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ff200828c1204d15f648ec783fe720d86ac22dd1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1952a15280f2e1779ddc0c53828dd0801acb3827
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919250"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457271"
 ---
 # <a name="integration-services-transformations"></a>Преобразования служб Integration Services
 
@@ -38,11 +39,11 @@ ms.locfileid: "86919250"
 ## <a name="business-intelligence-transformations"></a>Преобразования бизнес-аналитики  
  Следующие преобразования реализуют такие операции бизнес-аналитики, как очистка данных, выполнение интеллектуального анализа текста и выполнение запросов прогнозов интеллектуального анализа данных.  
   
-|Преобразование|Description|  
+|Преобразование|Описание|  
 |--------------------|-----------------|  
 |[Преобразование "Медленно изменяющееся измерение"](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)|Преобразование, которое настраивает обновление медленно изменяющегося измерения.|  
-|[Преобразование "Нечеткое группирование"](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)|Преобразование, стандартизирующее значения данных столбца.|  
-|[Преобразование "Нечеткий уточняющий запрос"](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)|Преобразование, выполняющее поиск значений в ссылочной таблице при помощи нечеткого соответствия.|  
+|[преобразование «Нечеткое группирование»](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)|Преобразование, стандартизирующее значения данных столбца.|  
+|[Преобразование «Нечеткий уточняющий запрос»](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)|Преобразование, выполняющее поиск значений в ссылочной таблице при помощи нечеткого соответствия.|  
 |[Преобразование "Извлечение терминов"](../../../integration-services/data-flow/transformations/term-extraction-transformation.md)|Преобразование, извлекающее термины из текста.|  
 |[Преобразование "Уточняющий запрос термина"](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)|Преобразование, которое ищет термины в ссылочной таблице и подсчитывает термины, извлеченные из текста.|  
 |[Преобразование "Запрос интеллектуального анализа данных"](../../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|Преобразование, которое выполняет запросы прогноза интеллектуального анализа данных.|  
@@ -51,7 +52,7 @@ ms.locfileid: "86919250"
 ## <a name="row-transformations"></a>Преобразования строк  
  Следующие преобразования обновляют значения столбцов и создают новые столбцы. Преобразование применяется к каждой входной строке преобразования.  
   
-|Преобразование|Description|  
+|Преобразование|Описание|  
 |--------------------|-----------------|  
 |[Преобразование "Таблица символов"](../../../integration-services/data-flow/transformations/character-map-transformation.md)|Преобразование, которое применяет строковые функции к символьным данным.|  
 |[Преобразование "Копирование столбца"](../../../integration-services/data-flow/transformations/copy-column-transformation.md)|Преобразование, которое добавляет копии входных столбцов к выходу преобразования.|  
@@ -65,7 +66,7 @@ ms.locfileid: "86919250"
 ## <a name="rowset-transformations"></a>Преобразования набора строк  
  Следующие преобразования создают новые наборы строк. Набор строк может включать в себя значения статистических функций и сортировки, образцы наборов строк или несведенные наборы строк.  
   
-|Преобразование|Description|  
+|Преобразование|Описание|  
 |--------------------|-----------------|  
 |[Преобразование "Статистическая обработка"](../../../integration-services/data-flow/transformations/aggregate-transformation.md)|Преобразование, которое выполняет статистические функции, такие как AVERAGE, SUM и COUNT.|  
 |[Преобразование "Сортировка"](../../../integration-services/data-flow/transformations/sort-transformation.md)|Преобразование, которое сортирует данные.|  
@@ -77,7 +78,7 @@ ms.locfileid: "86919250"
 ## <a name="split-and-join-transformations"></a>Преобразования «Разбиение» и «Соединение»  
  Следующие преобразования распределяют строки по различным выходам, создают копии входных данных преобразования, соединяют несколько входов в один выход и выполняют операции поиска.  
   
-|Преобразование|Description|  
+|Преобразование|Описание|  
 |--------------------|-----------------|  
 |[Преобразование "Условное разбиение"](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)|Преобразование, направляющее строки данных по различным выходам.|  
 |[Преобразование "Многоадресная рассылка"](../../../integration-services/data-flow/transformations/multicast-transformation.md)|Преобразование, распределяющее наборы данных по различным выходам.|  
@@ -91,7 +92,7 @@ ms.locfileid: "86919250"
 ## <a name="auditing-transformations"></a>Преобразования аудита  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] включают следующие преобразования для добавления данных аудита и подсчета количества строк.  
   
-|Преобразование|Description|  
+|Преобразование|Описание|  
 |--------------------|-----------------|  
 |[Преобразование "Аудит"](../../../integration-services/data-flow/transformations/audit-transformation.md)|Преобразование, которое формирует информацию о среде, доступной потоку данных в пакете.|  
 |[Преобразование "Подсчет строк"](../../../integration-services/data-flow/transformations/row-count-transformation.md)|Преобразование, подсчитывающее строки в процессе их прохождения через преобразование и сохраняющее результат подсчета в переменной.|  

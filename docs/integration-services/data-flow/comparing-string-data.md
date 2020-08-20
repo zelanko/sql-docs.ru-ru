@@ -1,4 +1,5 @@
 ---
+description: сравнение строковых данных
 title: Сравнение строковых данных | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 76f3cdcde9b84b5e1bed3c421045f1a38742f1c6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7aa3d507527ea18e9d9296ee9b9cd10989932d5a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920037"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457388"
 ---
 # <a name="comparing-string-data"></a>сравнение строковых данных
 
@@ -71,7 +72,7 @@ ms.locfileid: "86920037"
   
  В приведенной ниже таблице описаны параметры сравнения и стиль сортировки.  
   
-|Параметр сравнения|Description|  
+|Параметр сравнения|Описание|  
 |-----------------------|-----------------|  
 |Игнорировать регистр|Указывает, следует ли при сравнении различать символы в верхнем и нижнем регистре. Если параметр задан, то строковое сравнение игнорирует регистр. Например, «ABC» при сравнении не отличается от «abc».|  
 |Игнорируется тип японской азбуки|Указывает, следует ли различать при сравнении два типа символов японской азбуки: хирагана и катакана. Если параметр задан, то строковое сравнение игнорирует тип японской азбуки.|  
@@ -87,6 +88,6 @@ ms.locfileid: "86920037"
 ## <a name="see-also"></a>См. также:  
  [Типы данных служб Integration Services](../../integration-services/data-flow/integration-services-data-types.md)   
  [Быстрый синтаксический анализ](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   
- [Стандартный синтаксический анализ](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)  
+ [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)  
   
   

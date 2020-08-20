@@ -1,4 +1,5 @@
 ---
+description: Получение и интерпретация измененных данных
 title: Получение и интерпретация измененных данных | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: af366697-6942-42bb-aea5-18fdef018965
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9ee6e9fa54a7050f2ef529749aa53019ca507fd8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f8c9a326ab700be3ebef26db7160323314f4af43
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923927"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457674"
 ---
 # <a name="retrieve-and-understand-the-change-data"></a>Получение и интерпретация измененных данных
 
@@ -61,6 +62,6 @@ ms.locfileid: "86923927"
 ## <a name="next-step"></a>Следующий шаг  
  После настройки источника OLE DB для получения измененных данных начинается проектирование потока данных в пакете.  
   
- **Следующая статья:** [Обработка операций вставки, обновления и удаления](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md)  
+ **Следующий раздел:** [Обработка операций вставки, обновления и удаления](../../integration-services/change-data-capture/process-inserts-updates-and-deletes.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 'Преобразование данных из SQL в C: даты'
 title: 'SQL в C: Дата | Документация Майкрософт'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 703c7960-9cf4-4d7a-9920-53b29c184f97
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fe9656c0c02c0ff5a10029525da3d38280530cc3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a5bab301c7a4bc55289006df1c9df5498629f317
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81296534"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456520"
 ---
 # <a name="sql-to-c-date"></a>Преобразование данных из SQL в C: даты
 Идентификатор для типа данных ODBC SQL:  
@@ -42,4 +43,4 @@ ms.locfileid: "81296534"
   
  [c] это размер соответствующего типа данных C.  
   
- Когда дата SQL преобразуется в символьные данные C, результирующая строка находится в формате "*гггг*-*мм*-*дд*". На этот формат не влияет параметр Windows® Country.
+ Когда дата SQL преобразуется в символьные данные C, результирующая строка находится в формате "*гггг* - *мм* - *дд*". На этот формат не влияет параметр Windows® Country.

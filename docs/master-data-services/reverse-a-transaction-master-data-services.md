@@ -1,4 +1,5 @@
 ---
+description: Отмена транзакции (службы Master Data Services)
 title: Отмена транзакции
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6f7c3f07-0f64-4283-8c9c-93facd00a046
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a4228f34fea725d2be8cdaff94613fa734771ce2
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: eb92a6d663fa37efa718b88ed04a842e46389e2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811454"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456709"
 ---
 # <a name="reverse-a-transaction-master-data-services"></a>Отмена транзакции (службы Master Data Services)
 
@@ -47,7 +48,7 @@ ms.locfileid: "85811454"
   
 7.  В диалоговом окне подтверждения нажмите кнопку **ОК**. В сетку добавляется еще одна транзакция, соответствующая отмененной транзакции.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Master Data Services &#40;транзакций&#41;](../master-data-services/transactions-master-data-services.md)   
  [Повторная активация элемента или коллекции (службы Master Data Services)](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
  [Откат журнала изменений элемента](../master-data-services/rollback-member-revision-history-master-data-services.md)

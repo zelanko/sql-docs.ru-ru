@@ -1,4 +1,5 @@
 ---
+description: Выберите столбцы и таблицы Oracle
 title: Выбор таблиц и столбцов Oracle | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 042536288541a1c019772d97c3fd19a4e659c4dc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d418e3d9f8b323c5f0c7905dad8c2ec636f1a3e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923910"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457656"
 ---
 # <a name="select-oracle-tables-and-columns"></a>Выберите столбцы и таблицы Oracle
 

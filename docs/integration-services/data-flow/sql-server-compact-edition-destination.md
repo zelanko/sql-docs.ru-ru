@@ -1,4 +1,5 @@
 ---
+description: Назначение «SQL Server Compact Edition»
 title: Назначение "SQL Server Compact Edition" | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 697742ba-cc14-414d-8187-1845ad0dd99b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 79d7d1fe2884d202125c545088b714a5f93cfb7f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 345d470be5b7ea6ba0cce3c0ad907e38a60059dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916030"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457342"
 ---
 # <a name="sql-server-compact-edition-destination"></a>Назначение «SQL Server Compact Edition»
 
@@ -53,7 +54,7 @@ ms.locfileid: "86916030"
 ## <a name="related-tasks"></a>Связанные задачи  
  Дополнительные сведения о настройке свойств компонента см. в разделе [Установление свойств компонента потока данных](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Поток данных](../../integration-services/data-flow/data-flow.md)  
   
   

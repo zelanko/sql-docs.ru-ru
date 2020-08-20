@@ -1,4 +1,5 @@
 ---
+description: Создание InfoCube для данных транзакции
 title: Создание InfoCube для данных транзакции | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 673cea01-a260-4fce-a1a0-f73839289805
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7cc7e124f0220a5d7dcd1a146479a82801f83a3d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 18d7f3f10a2d7179d31e08e5a8e255df7295ca67
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923580"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457402"
 ---
 # <a name="create-infocube-for-transaction-data"></a>Создание InfoCube для данных транзакции
 
@@ -24,7 +25,7 @@ ms.locfileid: "86923580"
 
   Используйте диалоговое окно **Создание InfoCube для данных транзакции** , чтобы создать новый InfoCube для данных транзакции в системе SAP Netweaver BW.  
   
- Можно открыть диалоговое окно **Создание InfoCube для данных транзакции** на странице **Диспетчер соединений** **Редактора назначений SAP BW**. Дополнительные сведения о назначении SAP BW см. в статье [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
+ Можно открыть диалоговое окно **Создание InfoCube для данных транзакции** на странице **Диспетчер соединений****Редактора назначений SAP BW**. Дополнительные сведения о назначении SAP BW см. в статье [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
   
 > [!IMPORTANT]  
 >  Документация по Microsoft Connector 1.1 для SAP BW предполагает, что читатель знаком со средой SAP Netweaver BW. Дополнительные сведения о SAP Netweaver BW или сведения о настройке объектов и процессов SAP Netweaver BW см. в документации SAP.  
@@ -64,10 +65,10 @@ ms.locfileid: "86923580"
  **Тип**  
  Отображает тип InfoObject, связанный со столбцом потока данных. В следующей таблице приводятся возможные значения типа.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |CHA|Характеристики|  
-|UNI|Units|  
+|UNI|единиц(ы)|  
 |KYF|Ключевые цифры|  
 |TIM|Характеристики времени|  
   

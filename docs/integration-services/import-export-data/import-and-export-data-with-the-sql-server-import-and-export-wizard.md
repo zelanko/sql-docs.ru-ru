@@ -1,4 +1,5 @@
 ---
+description: Импорт и экспорт данных с помощью мастера импорта и экспорта SQL Server
 title: Импорт и экспорт данных с помощью мастера импорта и экспорта SQL Server | Документы Майкрософт
 ms.custom: ''
 ms.date: 10/17/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 40ea51fdaaadc7d6a3d9505e2f972c9f26a78471
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cdb761ce5ea9b0a64b21880ef2945c0ff85876ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86909660"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457201"
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>Импорт и экспорт данных с помощью мастера импорта и экспорта SQL Server
 
@@ -50,7 +51,7 @@ ms.locfileid: "86909660"
  
 | Источник данных | Нужно ли скачивать дополнительные файлы? |
 |-------------|-----------------------------------------|
-|**Базы данных корпоративного класса**<br/>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, DB2 и др.|SQL Server или SQL Server Data Tools (SSDT) устанавливает файлы, необходимые для подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Тем не менее SSDT не устанавливает все файлы, необходимые для подключения к другим корпоративным базам данных, таким как Oracle или IBM DB2.<br/><br/>Чтобы подключиться к корпоративной базе данных, обычно требуется два компонента:<br/><br/>1. **Клиентское программное обеспечение**. Если для корпоративной системы баз данных уже установлено клиентское программное обеспечение, то, как правило, у вас есть все необходимое для установки соединения. Если клиентское программное обеспечение не установлено, обратитесь к администратору базы данных по поводу установки лицензионной копии.<br/><br/>2. **Драйверы и поставщики**. Майкрософт устанавливает драйверы и поставщики для подключения к Oracle. Для подключения к IBM DB2 вам потребуется поставщик Microsoft® OLEDB для DB2 v5.0 для Microsoft SQL Server, который присутствует в [пакете дополнительных компонентов Microsoft SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=52676).<br/><br/>Дополнительные сведения см. в разделах [Подключение к источнику данных SQL Server](connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md) и [Подключение к источнику данных Oracle](connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md).|
+|**Базы данных предприятия**<br/>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, DB2 и др.|SQL Server или SQL Server Data Tools (SSDT) устанавливает файлы, необходимые для подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Тем не менее SSDT не устанавливает все файлы, необходимые для подключения к другим корпоративным базам данных, таким как Oracle или IBM DB2.<br/><br/>Чтобы подключиться к корпоративной базе данных, обычно требуется два компонента:<br/><br/>1. **Клиентское программное обеспечение**. Если для корпоративной системы баз данных уже установлено клиентское программное обеспечение, то, как правило, у вас есть все необходимое для установки соединения. Если клиентское программное обеспечение не установлено, обратитесь к администратору базы данных по поводу установки лицензионной копии.<br/><br/>2. **Драйверы и поставщики**. Майкрософт устанавливает драйверы и поставщики для подключения к Oracle. Для подключения к IBM DB2 вам потребуется поставщик Microsoft® OLEDB для DB2 v5.0 для Microsoft SQL Server, который присутствует в [пакете дополнительных компонентов Microsoft SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=52676).<br/><br/>Дополнительные сведения см. в разделах [Подключение к источнику данных SQL Server](connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md) и [Подключение к источнику данных Oracle](connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md).|
 |**Текстовые** (неструктурированные) файлы|Никакие дополнительные файлы не требуются.<br/><br/>Дополнительные сведения см. в разделе [Подключение к источнику данных на основе неструктурированного файла](connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md).|
 |**Файлы Microsoft Excel и Microsoft Access**|Microsoft Office не устанавливает все файлы, необходимые для подключения к файлам Excel и Access в качестве источников данных. Скачайте [распространяемый компонент ядра СУБД Microsoft Access 2016](https://www.microsoft.com/download/details.aspx?id=54920).<br/><br/>Дополнительные сведения см. в разделах [Подключение к источнику данных Excel](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md) и [Подключение к источнику данных Access](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md).|
 |**Источники данных Azure**<br/>В настоящее время доступно только хранилище BLOB-объектов Azure.|Решение SQL Server Data Tools не устанавливает файлы, необходимые для подключения к хранилищу BLOB-объектов Azure как к источнику данных. Скачайте [пакет дополнительных компонентов служб SQL Server Integration Services 2016 для Azure](https://www.microsoft.com/download/details.aspx?id=49492).<br/><br/>Дополнительные сведения см. в разделе [Подключение к хранилищу BLOB-объектов Azure](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md).|
@@ -65,7 +66,7 @@ ms.locfileid: "86909660"
 -   [Подключение к Excel](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)
 -   [Подключение к Access](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)
 -   [Подключение к хранилищу BLOB-объектов Azure](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)
--   [Подключение к ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)
+-   [Подключение с помощью ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)
 -   [Подключение к PostgreSQL](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)
 -   [Подключение к MySQL](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)
 

@@ -1,4 +1,5 @@
 ---
+description: Создание функции для получения информации об изменениях
 title: Создание функции для получения информации об изменениях | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ca74bc7970cb54264b2e8043ad02c8b36d520f93
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7dd92c7868c2de189e57b2b718199ed8d1503927
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918763"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457754"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Создание функции для получения информации об изменениях
 

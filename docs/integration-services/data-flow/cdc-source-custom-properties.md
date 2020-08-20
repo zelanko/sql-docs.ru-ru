@@ -1,4 +1,5 @@
 ---
+description: Пользовательские свойства источника «CDC»
 title: Пользовательские свойства источника "CDC" | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 744e9357-94a9-4202-abe8-1d3d202697e9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 187e05e82f3f7452a1a4d542188ab9e96073adac
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 05315d64b3edfdc994141f6480f81960af39ed01
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915489"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457456"
 ---
 # <a name="cdc-source-custom-properties"></a>Пользовательские свойства источника «CDC»
 
@@ -24,7 +25,7 @@ ms.locfileid: "86915489"
 
   В следующей таблице описаны пользовательские свойства источника «CDC». Все свойства доступны для чтения и записи.  
   
-|Имя свойства|Тип данных|Description|  
+|Имя свойства|Тип данных|Описание|  
 |-------------------|---------------|-----------------|  
 |Соединение|Соединение ADO.Net|Соединение ADO.NET с базой данных CDC [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] для доступа к таблицам изменений.|  
 |StateVariable|String|Строковая переменная пакета служб SSIS, которая поддерживает состояние CDC текущего прогона CDC.|  

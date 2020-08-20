@@ -1,4 +1,5 @@
 ---
+description: Обработка операций вставки, обновления и удаления
 title: Обработка операций вставки, обновления и удаления | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 13a84d21-2623-4efe-b442-4125a7a2d690
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 940e3e9d4ab622ee9913eee4a0c62356542ed8d6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2f4fddbdaa770c79008d4c4c1cd481a0c6c6eeb2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921750"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457678"
 ---
 # <a name="process-inserts-updates-and-deletes"></a>Обработка операций вставки, обновления и удаления
 
@@ -33,7 +34,7 @@ ms.locfileid: "86921750"
  В приведенном примере извлечения измененных данных функция **cdc.fn_cdc_get_net_changes_<экземпляр_отслеживания>** возвращает только столбец метаданных с именем **__$operation**. Этот столбец метаданных содержит порядковое значение, которое указывает операцию, вызвавшую изменение.  
   
 > [!NOTE]  
->  Дополнительные сведения о запросе, использующем вызовы функции **cdc.fn_cdc_get_net_changes_<экземпляр_отслеживания>** , см. в статье [Создание функции для получения информации об изменениях](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md).  
+>  Дополнительные сведения о запросе, использующем вызовы функции **cdc.fn_cdc_get_net_changes_<экземпляр_отслеживания>**, см. в статье [Создание функции для получения информации об изменениях](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md).  
   
  Связать порядковое значение с соответствующей операцией сложнее, чем использовать мнемонический код операции. Например, «D» может представлять операцию удаления, а «I» — операцию вставки. В примере запроса, созданном в разделе [Создание функции для получения измененных данных](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md), порядковое значение преобразуется в понятное строковое значение, которое возвращается в новом столбце. Это преобразование показано в следующем сегменте кода:  
   
@@ -71,10 +72,10 @@ select
 ## <a name="next-step"></a>Следующий шаг  
  Когда строки разбиты для обработки, следующим шагом является применение изменений к назначению.  
   
- **Следующая статья:** [Применение изменений в назначении](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
+ **Следующий раздел:** [Применение изменений в назначении](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Conditional Split Transformation](../../integration-services/data-flow/transformations/conditional-split-transformation.md)   
- [Разбиение набора данных с помощью преобразования "Условное разбиение"](../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
+ [Разбиение набора данных с помощью преобразования «Условное разбиение»](../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Минимальная грамматика SQL
 title: Минимальная грамматика SQL | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f36d785-104f-4fec-93be-f201203bc7c7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 20eee34feadb8e3140f25019ec6b0d036ff02e14
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 07adcbb100fa28a941be4fdac6efabb445ffb9ca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304995"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456567"
 ---
 # <a name="sql-minimum-grammar"></a>Минимальная грамматика SQL
 В этом разделе описывается минимальный синтаксис SQL, который должен поддерживать драйвер ODBC. Синтаксис, описанный в этом разделе, является подмножеством синтаксиса начального уровня SQL-92.  

@@ -1,4 +1,5 @@
 ---
+description: Новые возможности служб Integration Services в SQL Server 2016
 title: Новые возможности служб Integration Services в SQL Server 2016 | Документы Майкрософт
 ms.custom:
 - SQL2016_New_Updated
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a715409dddf2c2de19624f2f5f0b770e0202c9b8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 386e58e63ee0f629baf5c9ad3009c678a1a966d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922330"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456876"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Новые возможности служб Integration Services в SQL Server 2016
 
@@ -51,9 +52,9 @@ ms.locfileid: "86922330"
   
         -   [Добавочное развертывание пакетов](#IncrementalDeployment)  
   
-        -   [Поддержка Always Encrypted в каталоге служб SSIS](#encrypted)  
+        -   [Поддержка постоянного шифрования в каталоге SSIS](#encrypted)  
   
-    -   Улучшенная отладка  
+    -   Более эффективный способ отладки  
   
         -   [Новая роль ssis_logreader уровня базы данных в каталоге служб SSIS](#LogReader)  
   
@@ -63,7 +64,7 @@ ms.locfileid: "86922330"
   
         -   [Имена столбцов для ошибок в потоке данных](#ErrorColumn)  
   
-        -   [Расширенная поддержка для имен столбцов ошибок](#getidstring)  
+        -   [Расширенная поддержка для имена столбцов ошибок](#getidstring)  
   
         -   [Поддержка для серверного уровня ведения журнала по умолчанию](#ServerLogLevel)  
   
@@ -91,7 +92,7 @@ ms.locfileid: "86922330"
   
         -   [Расширенная поддержка Hadoop и HDFS](#more_hadoop)  
   
-        -   [HDFS-файлы в качестве назначения теперь поддерживают формат файлов ORC](#hdfsORC)  
+        -   [Назначение файлов HDFS теперь поддерживает формат файлов ORC.](#hdfsORC)  
   
         -   [Обновление компонентов ODBC для SQL Server 2016](#odbc2016)  
   
@@ -117,7 +118,7 @@ ms.locfileid: "86922330"
   
     -   Улучшенная процедура установки  
   
-        -   [Блокировка обновления, когда база данных SSISDB состоит в группе доступности ](#Upgrade)  
+        -   [Блокировка обновления, когда база данных SSISDB относится к группе доступности](#Upgrade)  
   
     -   Улучшенная процедура разработки  
   
@@ -143,7 +144,7 @@ ms.locfileid: "86922330"
   
         -   [Обновление задачи "Выполнение DDL службами Analysis Services"](#ASDDL)  
   
-        -   [Задачи служб Analysis Services поддерживают табличные модели.](#ssasrc0)  
+        -   [Задачи служб Analysis Services поддерживают табличные модели](#ssasrc0)  
   
         -   [Поддержка встроенных служб R](#builtinR)  
   
@@ -187,11 +188,11 @@ ms.locfileid: "86922330"
 ####  <a name="support-for-always-encrypted-in-the-ssis-catalog"></a><a name="encrypted"></a> Поддержка Always Encrypted в каталоге служб SSIS  
  Службы SSIS уже поддерживают функцию постоянного шифрования в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Дополнительные сведения см. в следующих записях блога:  
   
--   [SSIS with Always Encrypted](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-with-always-encrypted/ba-p/388272) (Службы SSIS с Always Encrypted)  
+-   [SSIS with Always Encrypted (Службы SSIS с постоянным шифрованием)](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-with-always-encrypted/ba-p/388272)  
   
--   [Lookup transformation with Always Encrypted](https://techcommunity.microsoft.com/t5/sql-server-integration-services/lookup-transformation-with-always-encrypted/ba-p/388282) (Преобразование "Уточняющий запрос" с Always Encrypted)  
+-   [Lookup transformation with Always Encrypted (Преобразование "Уточняющий запрос" с постоянным шифрованием)](https://techcommunity.microsoft.com/t5/sql-server-integration-services/lookup-transformation-with-always-encrypted/ba-p/388282)  
 
-### <a name="better-debugging"></a>Улучшенная отладка
+### <a name="better-debugging"></a>Более эффективный способ отладки
 
 ####  <a name="new-ssis_logreader-database-level-role-in-the-ssis-catalog"></a><a name="LogReader"></a> Новая роль ssis_logreader уровня базы данных в каталоге служб SSIS  
  В предыдущих версиях каталога служб SSIS доступ к представлениям, содержащим выходные данные журнала, могли получить только пользователи с ролью **ssis_admin** . Теперь доступна новая роль уровня базы данных **ssis_logreader** , с помощью которой можно предоставлять разрешения на доступ к представлениям, содержащим выходные данные журнала, пользователям без прав администратора.  
@@ -225,7 +226,7 @@ ms.locfileid: "86922330"
   
  Метод GetIdentificationStringByLineageID был переименован в <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A>. Дополнительные сведения см. в разделе [Имена столбцов для ошибок в потоке данных](#ErrorColumn).  
   
- Дополнительные сведения об этом изменении, а также об усовершенствовании столбца ошибок см. в следующей обновленной записи блога: [Error Column Improvements for SSIS Data Flow (Updated for CTP3.3)](https://techcommunity.microsoft.com/t5/sql-server-integration-services/error-column-improvements-for-ssis-data-flow-updated-for-rc2/ba-p/388253) (Улучшения для столбцов ошибок в потоке данных SSIS, обновлено для CTP3.3)  
+ Дополнительные сведения об этом изменении, а также об усовершенствовании столбца ошибок см. в следующей обновленной записи блога: [Усовершенствования столбца ошибок для потока данных служб SSIS (обновлено для CTP 3.3) (Error Column Improvements for SSIS Data Flow (Updated for CTP3.3))](https://techcommunity.microsoft.com/t5/sql-server-integration-services/error-column-improvements-for-ssis-data-flow-updated-for-rc2/ba-p/388253)  
   
 > [!NOTE]  
 >  (В RC0 этот метод был перемещен в новый интерфейс <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> . Дополнительные сведения см. в разделе [Новый интерфейс IDTSComponentMetaData130 в API](#CMD130).)  

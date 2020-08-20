@@ -1,4 +1,5 @@
 ---
+description: Программное перечисление доступных пакетов
 title: Программное перечисление доступных пакетов | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 254ec7ee-d3ff-4361-8995-46e9b9c4dc95
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 86e30dcb8043d18d82e742666c8c36043f86c5a2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c07dc512de0c5d12fa06e49ba185db9c9ec25c4b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920135"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457059"
 ---
 # <a name="enumerating-available-packages-programmatically"></a>Программное перечисление доступных пакетов
 
@@ -43,7 +44,7 @@ ms.locfileid: "86920135"
 |Хранилище пакетов служб SSIS|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnDtsServer%2A>|    
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|<xref:Microsoft.SqlServer.Dts.Runtime.Application.FolderExistsOnSqlServer%2A>|    
     
- [Вверх](#top)    
+ [К началу](#top)    
     
 ##  <a name="enumerating-available-packages"></a><a name="listing"></a> Перечисление доступных пакетов    
  Чтобы получить программным путем список сохраненных пакетов, вызовите один из следующих методов.    
@@ -159,7 +160,7 @@ namespace EnumeratePackagesSSIS_CS
 }    
 ```    
     
- [Вверх](#top)    
+ [К началу](#top)    
     
 ###  <a name="example-sql-server"></a><a name="listing_sql"></a> Пример (SQL Server)    
  Используйте метод <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetPackageInfos%2A> для перечисления пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], хранящихся в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
@@ -240,9 +241,9 @@ namespace EnumeratePackagesSql_CS
 }    
 ```    
     
- [Вверх](#top)    
+ [К началу](#top)    
    
-## <a name="see-also"></a>См. также:    
+## <a name="see-also"></a>См. также    
  [Управление пакетами (службы SSIS)](../../integration-services/service/package-management-ssis-service.md)    
     
   

@@ -1,4 +1,5 @@
 ---
+description: Подготовка к запросу информации об изменениях
 title: Подготовка к запросу информации об изменениях данных | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f2ab217d81620b28ced334842dcff3643f686a98
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b0b2f12bf0ad4b5166e7a206b30264782992f144
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921761"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457696"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>Подготовка к запросу информации об изменениях
 
@@ -130,7 +131,7 @@ ms.locfileid: "86921761"
   
 5.  Оставьте без изменений создаваемую по умолчанию строку кода, которая возвращает **DtsExecResult.Success** в результате выполнения скрипта.  
   
-6.  Закройте среду разработки скриптов и **Редактор задачи «Скрипт»** .  
+6.  Закройте среду разработки скриптов и **Редактор задачи «Скрипт»**.  
   
 #### <a name="to-use-an-execute-sql-task-to-concatenate-the-query-string"></a>Использование задачи «Выполнение SQL» для объединения строки запроса  
   
@@ -202,6 +203,6 @@ ms.locfileid: "86921761"
 ## <a name="next-step"></a>Следующий шаг  
  Завершив подготовку строки запроса и настройку задачи потока данных, приступайте к следующему шагу — созданию функции с табличным значением для получения измененных данных из базы данных.  
   
- **Следующая статья:** [Создание функции для получения информации об изменениях данных](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)  
+ **Следующий раздел:** [Создание функции для получения измененных данных](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)  
   
   

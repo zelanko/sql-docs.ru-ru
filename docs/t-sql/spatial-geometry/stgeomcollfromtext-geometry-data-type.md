@@ -1,4 +1,5 @@
 ---
+description: STGeomCollFromText (тип данных geometry)
 title: STGeomCollFromText (тип данных geometry) | Документы Майкрософт
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 19e757b3-cb2e-4852-87b9-40a815ab707e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 0fd31568d26945bf27e73850f6dccfbd45df1701
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 8e9333f71bb601629b13b025fb0fdb9f81af58d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554308"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458980"
 ---
 # <a name="stgeomcollfromtext-geometry-data-type"></a>STGeomCollFromText (тип данных geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
 
 ## <a name="arguments"></a>Аргументы
  *geometrycollection_tagged_text*  
- WKT-представление возвращаемого экземпляра **geometry**. *geometry_tagged_text* является выражением типа **nvarchar(max)** .  
+ WKT-представление возвращаемого экземпляра **geometry**. *geometry_tagged_text* является выражением типа **nvarchar(max)**.  
   
  *SRID*  
  Выражение типа **int**, представляющее идентификатор пространственной ссылки (SRID) возвращаемого экземпляра **geometry**.  
@@ -50,7 +51,7 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
   
  Тип возвращаемых данных CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Тип OGC экземпляра **geometry**, возвращаемый методом `STGeomCollFromText()`, получает значение в зависимости от соответствующих входных данных WKT.  
   
  Этот метод вызывает исключение, если входные данные не являются допустимыми.  

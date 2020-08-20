@@ -1,4 +1,5 @@
 ---
+description: CREATE ROLE (Transact-SQL)
 title: CREATE ROLE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 04/10/2017
@@ -27,12 +28,12 @@ ms.assetid: b0cd54ad-e81d-4d71-acec-8a6d7261ca08
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 234fe7a9d26c91bc5b390997f56c9dcb050561aa
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: e0ca6f481b84cfd1453359e3b77d47bb5a6b52b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392862"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458809"
 ---
 # <a name="create-role-transact-sql"></a>CREATE ROLE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,7 +57,7 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
  AUTHORIZATION *owner_name*  
  Пользователь (или роль) базы данных, который станет владельцем новой роли. Если пользователь не указан, владельцем роли станет пользователь, выполнивший инструкцию CREATE ROLE. Владелец роли или любой элемент роли-владельца может добавлять или удалять элементы роли.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Роли — это сущности, защищаемые на уровне базы данных. После создания роли необходимо настроить для нее разрешения уровня базы данных при помощи инструкций GRANT, DENY и REVOKE. Для добавления членов в роль базы данных следует использовать инструкцию [ALTER ROLE (Transact-SQL)](../../t-sql/statements/alter-role-transact-sql.md). Дополнительные сведения см. в статье [Роли уровня базы данных](../../relational-databases/security/authentication-access/database-level-roles.md).  
   
  Роли базы данных видны в представлениях каталога sys.database_role_members и sys.database_principals.  

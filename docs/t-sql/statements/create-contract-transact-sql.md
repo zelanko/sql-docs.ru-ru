@@ -1,4 +1,5 @@
 ---
+description: Инструкция CREATE CONTRACT (Transact-SQL)
 title: CREATE CONTRACT (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c6fef1834b3e5b6afeda1df4c67e3403a6dd6d79
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 6f4b7360fa3429a621e364c27776c4f6a8f0a946
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391729"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458753"
 ---
 # <a name="create-contract-transact-sql"></a>Инструкция CREATE CONTRACT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +52,7 @@ CREATE CONTRACT contract_name
 
 ## <a name="arguments"></a>Аргументы
  *contract_name*  
- Имя создаваемого контракта. Новый контракт создается в текущей базе данных и передается во владение участнику, указанному в предложении AUTHORIZATION. Не могут быть указаны имена сервера, базы данных и схемы. Имя *contract_name* может содержать не более 128 символов.  
+ Имя создаваемого контракта. Новый контракт создается в текущей базе данных и передается во владение участнику, указанному в предложении AUTHORIZATION.  Не могут быть указаны имена сервера, базы данных и схемы. Имя *contract_name* может содержать не более 128 символов.  
   
 > [!NOTE]  
 >  Не создавайте контракт, использующий ключевое слово ANY для аргумента *contract_name*. При указании ключевого слова ANY для имени контракта в инструкции CREATE BROKER PRIORITY приоритет применяется ко всем контрактам. Его применение не ограничивается контрактом с именем ANY.  
@@ -75,9 +76,9 @@ CREATE CONTRACT contract_name
  Указывает на то, что сообщения этого типа могут посылаться как инициатором, так и целью.  
   
  [ DEFAULT ]  
- Указывает на то, что данный контракт поддерживает сообщения с установленным по умолчанию типом сообщений. По умолчанию во всех базах данных содержится тип сообщений с названием DEFAULT. Этот тип данных использует проверку типа NONE. В контексте данного предложения слово DEFAULT не является ключевым словом и должно быть отделено как идентификатор. Microsoft SQL Server также предоставляет контракт DEFAULT, указывающий тип сообщения DEFAULT.  
+ Указывает на то, что данный контракт поддерживает сообщения с установленным по умолчанию типом сообщений. По умолчанию во всех базах данных содержится тип сообщений с названием DEFAULT. Этот тип данных использует проверку типа NONE.  В контексте данного предложения слово DEFAULT не является ключевым словом и должно быть отделено как идентификатор. Microsoft SQL Server также предоставляет контракт DEFAULT, указывающий тип сообщения DEFAULT.   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Порядок типов сообщений в контракте не важен. После того, как цель получает первое сообщение, компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] позволяет каждому участнику диалога в любое время посылать любые сообщения, разрешенные для этого участника. Например, если инициатор диалога может посылать сообщения типа **//Adventure-Works.com/Expenses/SubmitExpense**, [!INCLUDE[ssSB](../../includes/sssb-md.md)] позволяет инициатору посылать произвольное количество сообщений **SubmitExpense** в течение диалога.  
   
  Типы и направление сообщений в контракте не могут быть изменены. Чтобы изменить параметр AUTHORIZATION для контракта, следует воспользоваться инструкцией ALTER AUTHORIZATION.  
@@ -96,7 +97,7 @@ CREATE CONTRACT contract_name
  Пользователь, выполняющий инструкцию CREATE CONTRACT, должен обладать разрешением REFERENCES на все указанные типы сообщений.  
   
 ## <a name="examples"></a>Примеры  
- **А. Создание контракта**  
+ **A. Создание контракта**  
   
  В следующем примере создается контракт компенсации расходов, основанный на трех типах сообщений.  
   
@@ -124,7 +125,7 @@ CREATE CONTRACT
     ) ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [DROP CONTRACT (Transact-SQL)](../../t-sql/statements/drop-contract-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   

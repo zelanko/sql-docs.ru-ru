@@ -1,4 +1,5 @@
 ---
+description: Занятие 4-3. Добавление перенаправления потока ошибок
 title: Шаг 3. Добавление перенаправления потока ошибок | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/07/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 852a614576780e27512e5fb234fd0905ef41a9ca
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: daade3348f7384ed83365923bf94af7b211d6422
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922167"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457140"
 ---
 # <a name="lesson-4-3-add-error-flow-redirection"></a>Занятие 4-3. Добавление перенаправления потока ошибок
 
@@ -51,9 +52,9 @@ ms.locfileid: "86922167"
   
 8.  На странице **Входы и выходы** разверните **Выход 0**, выберите **Выходные столбцы** и нажмите кнопку **Добавить столбец**.  
   
-9. Для свойства **Name** введите *ErrorDescription* и задайте для свойства **DataType** значение **Unicode string [DT_WSTR]** .  
+9. Для свойства **Name** введите *ErrorDescription* и задайте для свойства **DataType** значение **Unicode string [DT_WSTR]**.  
   
-10. На странице **Скрипт** убедитесь в том, что свойство **LocaleID** имеет значение **Английский (США)** .
+10. На странице **Скрипт** убедитесь в том, что свойство **LocaleID** имеет значение **Английский (США)**.
   
 11. Нажмите кнопку **Изменить скрипт**, чтобы открыть среду [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA). В методе **Input0_ProcessInputRow** введите или вставьте следующий код:  
   
@@ -96,7 +97,7 @@ ms.locfileid: "86922167"
   
 12. В меню **Сборка** выберите команду **Построить решение**, чтобы создать скрипт и сохранить изменения, а затем закройте средства VSTA.  
   
-13. Нажмите кнопку **ОК**, чтобы закрыть диалоговое окно **Редактор преобразования "Скрипт"** .  
+13. Нажмите кнопку **ОК**, чтобы закрыть диалоговое окно **Редактор преобразования "Скрипт"**.  
   
 ## <a name="go-to-next-task"></a>Переход к следующей задаче
 [Шаг 4. Добавление назначения "Неструктурированный файл"](../integration-services/lesson-4-4-adding-a-flat-file-destination.md)  

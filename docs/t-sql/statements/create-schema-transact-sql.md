@@ -1,4 +1,5 @@
 ---
+description: CREATE SCHEMA (Transact-SQL)
 title: CREATE SCHEMA (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 12/01/2016
@@ -24,12 +25,12 @@ ms.assetid: df74fc36-20da-4efa-b412-c4e191786695
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f06c3e2b95fa571b26404a69653471738d7648ee
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: eef5bd9a0cd3c1a42797c9ca334f9efc4745f824
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393002"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458806"
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -146,7 +147,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
 ### <a name="a-creating-a-schema-and-granting-permissions"></a>A. Создание схемы и предоставление разрешений  
  В следующем примере создается схема `Sprockets`, принадлежащая `Annik`, которая содержит таблицу `NineProngs`. Инструкция предоставляет разрешение `SELECT` для `Mandar` и запрещает `SELECT` для `Prasanna`. Обратите внимание на то, что `Sprockets` и `NineProngs` создаются в одной инструкции.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE SCHEMA Sprockets AUTHORIZATION Annik  
@@ -161,13 +162,13 @@ GO
 ### <a name="b-creating-a-schema-and-a-table-in-the-schema"></a>Б. Создание схемы и таблицы в схеме  
  В следующем примере создается схема `Sales`, а затем таблица `Sales.Region`.  
   
-```  
+```sql  
 CREATE SCHEMA Sales;  
 GO
   
 CREATE TABLE Sales.Region   
-(Region_id int NOT NULL,  
-Region_Name char(5) NOT NULL)  
+(Region_id INT NOT NULL,  
+Region_Name CHAR(5) NOT NULL)  
 WITH (DISTRIBUTION = REPLICATE);  
 GO  
 ```  
@@ -175,7 +176,7 @@ GO
 ### <a name="c-setting-the-owner-of-a-schema"></a>В. Задание владельца схемы  
  В следующем примере создается схема `Production`, принадлежащая `Mary`.  
   
-```  
+```sql  
 CREATE SCHEMA Production AUTHORIZATION [Contoso\Mary];  
 GO  
 ```  

@@ -1,4 +1,5 @@
 ---
+description: Компоненты потока CDC
 title: Компоненты потока CDC | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0dc246a311a8c5488d78067adb6772bd0b399988
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 65836425e0f6cfa1533dfe28db8f8df483c74465
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915531"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457445"
 ---
 # <a name="cdc-flow-components"></a>Компоненты потока CDC
 
@@ -32,11 +33,11 @@ ms.locfileid: "86915531"
   
  **Компонент потока управления CDC**.  
   
- [Задача управления CDC](../../integration-services/control-flow/cdc-control-task.md)  
+ [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)  
   
  **Компоненты потока данных CDC**.  
   
- [Источник «CDC»](../../integration-services/data-flow/cdc-source.md)  
+ [CDC-источник](../../integration-services/data-flow/cdc-source.md)  
   
  [Разделитель CDC](../../integration-services/data-flow/cdc-splitter.md)  
   
@@ -101,7 +102,7 @@ ms.locfileid: "86915531"
   
  Дополнительные сведения об источнике CDC см. в разделе  
   
- [Источник «CDC»](../../integration-services/data-flow/cdc-source.md)  
+ [CDC-источник](../../integration-services/data-flow/cdc-source.md)  
   
  [Редактор источника "CDC" (страница "Диспетчер соединений")](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
   
@@ -137,7 +138,7 @@ ms.locfileid: "86915531"
   
  Значение переменной состояния CDC должно храниться в постоянном хранилище. Оно должно считываться перед началом обработки CDC и сохраняться с текущим состоянием после завершения обработки. Задача загрузки и сохранения состояния CDC может выполняться разработчиком служб SSIS, но компонент управления CDC может автоматизировать эту задачу, сохраняя значение состояния CDC в таблице базы данных.  
   
-## <a name="security-considerations"></a>Соображения безопасности  
+## <a name="security-considerations"></a>Вопросы безопасности  
  В этом разделе перечислены некоторые соображения по безопасности, связанные с использованием компонентов CDC в службах SSIS.  
   
 ### <a name="access-authorization-to-change-data"></a>Авторизация доступа к информации об изменениях  
@@ -173,7 +174,7 @@ ms.locfileid: "86915531"
 ## <a name="cdc-state"></a>CDC State  
  С каждой группой CDC связано состояние, которое представляется строкой особого формата. Дополнительные сведения см. в разделе [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md). В следующей таблице показаны возможные значения состояния CDC.  
   
-|Штат|Description|  
+|Состояние|Описание|  
 |-----------|-----------------|  
 |0-(INITIAL)|Состояние, которое имеет место до выполнения пакетов в текущей группе CDC. Это состояние также имеет место, если состояние CDC пусто.<br /><br /> Дополнительные сведения об операциях задачи «Управление CDC» см. в разделе [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).|  
 |1-ILSTART (начало начальной загрузки)|Это состояние, которое имеет место при запуске пакета начальной загрузки. Это происходит после вызова операции **MarkInitialLoadStart** в задаче «Управление CDC».<br /><br /> Дополнительные сведения об операциях задачи «Управление CDC» см. в разделе [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md).|  
@@ -194,7 +195,7 @@ ms.locfileid: "86915531"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
--   [Источник «CDC»](../../integration-services/data-flow/cdc-source.md)  
+-   [CDC-источник](../../integration-services/data-flow/cdc-source.md)  
   
 -   [Разделитель CDC](../../integration-services/data-flow/cdc-splitter.md)  
   
@@ -218,7 +219,7 @@ ms.locfileid: "86915531"
   
 -   Видеоролик [CDC для баз данных Oracle, использующих службы SQL Server Integration Services 2012 (видео по SQL Server)](https://technet.microsoft.com/sqlserver/jj218898)на сайте technet.microsoft.com.  
   
-## <a name="see-also"></a>См. также:  
- [Задача управления CDC](../../integration-services/control-flow/cdc-control-task.md)  
+## <a name="see-also"></a>См. также  
+ [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)  
   
   

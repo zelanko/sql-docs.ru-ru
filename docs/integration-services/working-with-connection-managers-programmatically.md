@@ -1,4 +1,5 @@
 ---
+description: Работа с диспетчерами соединений программным образом
 title: Работа с диспетчерами соединений программным образом | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 14318e122888c4baa89a3919c08456545690cfa0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cf6262e6ec178514db6741d5ed53963ef2a1bfce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922293"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456869"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>Работа с диспетчерами соединений программным образом
 
@@ -69,7 +70,7 @@ ms.locfileid: "86922293"
 |WMI|Диспетчер WMI-соединений|**System.Management.ManagementScope**||  
 |SQLMOBILE|Диспетчер соединений SQL Server Compact|**System.Data.SqlServerCe.SqlCeConnection**||  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Соединение с источниками данных в задаче "Скрипт"](../integration-services/extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)   
  [Соединение с источниками данных в компоненте скрипта](../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)   
  [Соединение с источниками данных в пользовательской задаче](../integration-services/extending-packages-custom-objects/task/connecting-to-data-sources-in-a-custom-task.md)  

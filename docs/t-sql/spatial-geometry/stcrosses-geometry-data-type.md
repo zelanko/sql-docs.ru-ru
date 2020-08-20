@@ -1,4 +1,5 @@
 ---
+description: STCrosses (тип данных geometry)
 title: STCrosses (тип данных geometry) | Документы Майкрософт
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3e3fc065-555a-4bee-8b71-e92f3dc62a4f
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ec1a8795b6f54a9c4380ab42ddc2bfc341775556
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: b7294db9b86f9a356fa7834b89642ec0b1653866
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554347"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458945"
 ---
 # <a name="stcrosses-geometry-data-type"></a>STCrosses (тип данных geometry)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "86554347"
   
  Тип возвращаемых данных CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Два экземпляра **geometry** пересекаются, если выполняются два указанных ниже условия.  
   
 -   Пересечение двух экземпляров **geometry** приводит к созданию геометрической формы, измерения которой меньше максимального измерения исходных экземпляров **geometry**.  
@@ -67,7 +68,7 @@ SET @h = geometry::STGeomFromText('LINESTRING(0 0, 2 2)', 0);
 SELECT @g.STCrosses(@h);  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

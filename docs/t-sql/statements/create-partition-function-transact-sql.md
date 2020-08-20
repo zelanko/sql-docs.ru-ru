@@ -1,4 +1,5 @@
 ---
+description: CREATE PARTITION FUNCTION (Transact-SQL)
 title: CREATE PARTITION FUNCTION (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 11/19/2018
@@ -27,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 55269acfdb6f739c398a8f71712d34d7cb62f816
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 73e9ea60c35fd82d6927901e719aedb2e1745d34
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392702"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458764"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +58,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  Имя функции секционирования. Имена функций секционирования должны быть уникальными внутри базы данных и соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md).  
   
  *input_parameter_type*  
- Тип данных столбца, используемого для секционирования. В качестве столбцов секционирования могут использоваться данные любого типа, кроме **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , псевдонимов типов данных, а также определяемых пользователем типов данных CLR.  
+ Тип данных столбца, используемого для секционирования. В качестве столбцов секционирования могут использоваться данные любого типа, кроме **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, псевдонимов типов данных, а также определяемых пользователем типов данных CLR.  
   
  Столбец секционирования задается с помощью инструкции CREATE TABLE или CREATE INDEX.  
   
@@ -77,7 +78,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  **LEFT** | RIGHT  
  Указывает, к какой области интервала значений принадлежит аргумент *boundary_value* [ **,** _...n_ ] (к левой или правой) для случая, когда значения интервалов были отсортированы компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)] по возрастанию слева направо. Если значение не задано, то по умолчанию используется значение LEFT.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Область действия функции секционирования ограничена базой данных, в которой она была создана. Функции секционирования располагаются в отдельном от других функций пространстве имен внутри базы данных.  
   
  Все строки, которым соответствуют значения NULL столбца секционирования, располагаются в самой левой секции, кроме случая, когда задано пустое граничное значение и параметр RIGHT. В данном случае самая левая секция является пустой, и в нее помещаются значения NULL.  
@@ -189,7 +190,7 @@ EXEC sp_executesql @DatePartitionFunction;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Секционированные таблицы и индексы](../../relational-databases/partitions/partitioned-tables-and-indexes.md)   
  [$PARTITION (Transact-SQL)](../../t-sql/functions/partition-transact-sql.md)   
  [ALTER PARTITION FUNCTION (Transact-SQL)](../../t-sql/statements/alter-partition-function-transact-sql.md)   

@@ -1,4 +1,5 @@
 ---
+description: Добавление соединений программным образом
 title: Добавление соединений программным образом | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: d90716d1-4c65-466c-b82c-4aabbee1e3e5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7240ac7e24b2b9b6ca697809b3d06dc0da3d055f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 571037e357f6d4d99a0e1f0139c72bb2a8645be5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916121"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457866"
 ---
 # <a name="adding-connections-programmatically"></a>Добавление соединений программным образом
 
@@ -49,7 +50,7 @@ ms.locfileid: "86916121"
   
  В следующей таблице перечислены диспетчеры соединений, входящие в состав служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. и строка, которая используется в инструкции `package.Connections.Add("xxx")`. Список всех диспетчеров подключений см. в разделе [Соединения в службах Integration Services (SSIS)](../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
-|String|Диспетчер соединений|  
+|Строка|Диспетчер соединений|  
 |------------|------------------------|  
 |OLEDB|Диспетчер соединений для соединений OLE DB.|  
 |ODBC|Диспетчер соединений для соединений ODBC.|  
@@ -213,7 +214,7 @@ End Class
 ## <a name="external-resources"></a>Внешние ресурсы  
  Техническая статья [Строки подключения](https://go.microsoft.com/fwlink/?LinkId=220743) на сайте carlprothman.net.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Соединения в службах Integration Services (SSIS)](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
  [Создание диспетчеров соединений](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
   

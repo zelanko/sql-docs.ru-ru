@@ -1,4 +1,5 @@
 ---
+description: Выделение дескриптора подключения ODBC
 title: Выделение памяти для обработчика соединений ODBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: c99a8159-7693-4f97-8dcf-401336550e77
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 12e9f65ee81612e269c1f86ebabd049588443cb8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c6c17003ed3746f2953eb167f2dc3d944659e352
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288524"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456440"
 ---
 # <a name="allocating-a-connection-handle-odbc"></a>Выделение дескриптора подключения ODBC
 Прежде чем приложение сможет подключиться к источнику данных или драйверу, оно должно выделить маркер подключения следующим образом:  
   
-1.  Приложение объявляет переменную типа СКЛХДБК. Затем он вызывает **функцию SQLAllocHandle** и передает адрес этой переменной, маркер среды, в которой выделяется соединение, и параметр SQL_HANDLE_DBC. Пример:  
+1.  Приложение объявляет переменную типа СКЛХДБК. Затем он вызывает **функцию SQLAllocHandle** и передает адрес этой переменной, маркер среды, в которой выделяется соединение, и параметр SQL_HANDLE_DBC. Например:  
   
     ```  
     SQLHDBC hdbc1;  

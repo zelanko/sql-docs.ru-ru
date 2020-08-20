@@ -1,4 +1,5 @@
 ---
+description: catalog.create_environment_variable (база данных SSISDB)
 title: catalog.create_environment_variable (база данных SSISDB Database) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 91ed017b-6567-4bf2-b9f1-e2b5c70a5343
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3875650317c76b0b54608272eef0c56a7e11987d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 367f16f137bdb09de610ce8b0b8a2ab125ce25ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921405"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456976"
 ---
 # <a name="catalogcreate_environment_variable-ssisdb-database"></a>catalog.create_environment_variable (база данных SSISDB)
 
@@ -46,10 +47,10 @@ catalog.create_environment_variable [ @folder_name = ] folder_name
  Имя среды. Параметр *environment_name* имеет тип **nvarchar(128)** .  
   
  [@variable_name =] *variable_name*  
- Имя переменной среды. Параметр *variable_name* имеет тип **nvarchar(128)** .  
+ Имя переменной среды. Параметр *variable_name* имеет тип **nvarchar(128)**.  
   
  [@data_type =] *data_type*  
- Тип данных переменной. Поддерживаемые типы данных переменной среды: **Boolean**, **Byte**, **DateTime**, **Double**, **Int16**, **Int32**, **Int64**, **Single**, **String**, **UInt32** и **UInt64**. Следующие типы данных в переменной среды не поддерживаются: **Char**, **DBNull**, **Object** и **Sbyte**. Параметр *data_type* имеет тип данных **nvarchar(128)** .  
+ Тип данных переменной. Поддерживаемые типы данных переменной среды: **Boolean**, **Byte**, **DateTime**, **Double**, **Int16**, **Int32**, **Int64**, **Single**, **String**, **UInt32** и **UInt64**. Следующие типы данных в переменной среды не поддерживаются: **Char**, **DBNull**, **Object** и **Sbyte**. Параметр *data_type* имеет тип данных **nvarchar(128)**.  
   
  [@sensitive =] *sensitive*  
  Указывает, содержит переменная конфиденциальное значение или нет. Значение `1` указывает, что значение переменной среды является конфиденциальным, а значение `0` — что оно таковым не является. Конфиденциальное значение шифруется при его сохранении. Неконфиденциальное значение хранится в виде обычного текста. Параметр *Sensitive* имеет тип **bit**.  
@@ -58,7 +59,7 @@ catalog.create_environment_variable [ @folder_name = ] folder_name
  Значение переменной среды. Параметр *value* имеет тип **sql_variant**.  
   
  [@description =] *description*  
- Описание переменной среды. Параметр *value* имеет тип **nvarchar(1024)** .  
+ Описание переменной среды. Параметр *value* имеет тип **nvarchar(1024)**.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение)  
@@ -103,7 +104,7 @@ catalog.create_environment_variable [ @folder_name = ] folder_name
 |**Int16**|**smallint**|  
 |**Int32**|**int**|  
 |**Int64**|**bigint**|  
-|**Один**|Точное числовое значение: **decimal**, **numeric**; приблизительное числовое значение: **float**, **real**|  
+|**Single**|Точное числовое значение: **decimal**, **numeric**; приблизительное числовое значение: **float**, **real**|  
 |**String**|**varchar**, **nvarchar**, **char**|  
 |**UInt32**|**int** (**int** — это наиболее близкое доступное сопоставление с **Uint32**.)|  
 |**UInt64**|**bigint** (**int** — это наиболее близкое доступное сопоставление с **Uint64**.)|  

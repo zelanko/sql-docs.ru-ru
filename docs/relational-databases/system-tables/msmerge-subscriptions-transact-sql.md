@@ -1,4 +1,5 @@
 ---
+description: MSmerge_subscriptions (Transact-SQL)
 title: MSmerge_subscriptions (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cafd954a-92f8-44cb-a5d0-dce9aafa5ee1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eb31a5a858bb93c8ca503ba5e72687306c8750e7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e5648de8dd4d93e2f1fe1ed9290b9942f66cfe02
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889682"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460420"
 ---
 # <a name="msmerge_subscriptions-transact-sql"></a>MSmerge_subscriptions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,8 +42,8 @@ ms.locfileid: "85889682"
 |**status**|**tinyint**|Состояние подписки.|  
 |**subscription_time**|**datetime**|Время добавления подписки.|  
   
-## <a name="see-also"></a>См. также  
- [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

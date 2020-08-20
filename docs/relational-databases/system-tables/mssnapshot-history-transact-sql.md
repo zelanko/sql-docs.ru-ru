@@ -1,4 +1,5 @@
 ---
+description: MSsnapshot_history (Transact-SQL)
 title: MSsnapshot_history (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 56bf4128-1689-4963-9343-432dd0898d31
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fedcf6dd9d4b30b92a6a98d97f49c0b3361f38ca
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7dcc8a6e5a35ca9062bf97dd4dece2afca078fb2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889403"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460333"
 ---
 # <a name="mssnapshot_history-transact-sql"></a>MSsnapshot_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,12 +40,12 @@ ms.locfileid: "85889403"
 |**обсуждения**|**nvarchar(255)**|Текст сообщения.|  
 |**delivered_transactions**|**int**|Общее число транзакций, доставленных в течение сеанса.|  
 |**delivered_commands**|**int**|Число доставленных команд в секунду.|  
-|**delivery_rate**|**float (53)**|Среднее число доставленных команд в секунду.|  
+|**delivery_rate**|**float(53)**|Среднее число доставленных команд в секунду.|  
 |**error_id**|**int**|Идентификатор ошибки в системной таблице [MSrepl_errors](../../relational-databases/system-tables/msrepl-errors-transact-sql.md) .|  
 |**timestamp**|**timestamp**|Столбец отметок времени этой таблицы.|  
   
 ## <a name="see-also"></a>См. также  
- [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

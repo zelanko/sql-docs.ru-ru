@@ -1,4 +1,5 @@
 ---
+description: Программное построение пакетов
 title: Программное построение пакетов | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 18b1405699a93380447535a9f0f5f7ab7f94113a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c6b35aa78b98a681ae7312db2bd9a7b1fb18f482
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86905614"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457810"
 ---
 # <a name="building-packages-programmatically"></a>Программное построение пакетов
 
@@ -99,7 +100,7 @@ ms.locfileid: "86905614"
   
 -   Запись в блоге [Профилирование производительности пользовательских расширений](https://go.microsoft.com/fwlink/?LinkId=238831)на сайте blogs.msdn.com.  
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   

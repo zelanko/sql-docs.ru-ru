@@ -1,4 +1,5 @@
 ---
+description: ALTER MATERIALIZED VIEW (Transact-SQL)
 title: ALTER MATERIALIZED VIEW (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 07/03/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c9c9ae639a3dce3e697eded9f55af3485118506c
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: bc7f7f07656f2dc187de013fcb56eada5a997b52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395389"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458874"
 ---
 # <a name="alter-materialized-view-transact-sql"></a>ALTER MATERIALIZED VIEW (Transact-SQL)  
 
@@ -57,7 +58,7 @@ ALTER MATERIALIZED VIEW [ schema_name . ] view_name
 Возобновляет работу материализованного представления.
 
 *DISABLE*   
-Приостанавливает сохранение в материализованное представление. Метаданные и разрешения остаются без изменений.  Все запросы к материализованному представлению в отключенном состоянии отправляются к базовым таблицам.
+Приостанавливает сохранение в материализованное представление. Метаданные и разрешения остаются без изменений.Все запросы к материализованному представлению в отключенном состоянии отправляются к базовым таблицам.
   
 ## <a name="permissions"></a>Разрешения
 
@@ -77,7 +78,7 @@ ALTER MATERIALIZED VIEW My_Indexed_View DISABLE;
 ALTER MATERIALIZED VIEW My_Indexed_View REBUILD;  
 ```  
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Настройка производительности с помощью материализованного представления](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
 [CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   

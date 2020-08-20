@@ -1,4 +1,5 @@
 ---
+description: Изменение свойств таблицы
 title: Изменение свойств таблицы | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 95ea72ba-8e40-4177-a963-0fb4d10c56e3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 75854b88a3041def807b621b3e9f4caf6cf3b1c3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cfc848859ebbeeace4d07349d57cacad5808d5b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921663"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457706"
 ---
 # <a name="edit-the-table-properties"></a>Изменение свойств таблицы
 
@@ -54,7 +55,7 @@ ms.locfileid: "86921663"
   
  После окончания ввода данных в этом диалоговом окне нажмите кнопку **ОК** , чтобы принять изменения.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Как изменить свойства экземпляра CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
  [Внесение изменений в выбранные для отслеживания изменений таблицы](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)  
   
