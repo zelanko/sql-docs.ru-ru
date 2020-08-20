@@ -1,4 +1,5 @@
 ---
+description: Создание отчетов (Акцесстоскл)
 title: Создание отчетов (Акцесстоскл) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: abb4264a-622e-4215-af5b-14e309b8a399
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3701cac59619634b314e138e11eae5af79b8a462
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: b0c97c84282952f8f33aa900a394820830ae8bd5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938537"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488302"
 ---
 # <a name="generating-reports-accesstosql"></a>Создание отчетов (Акцесстоскл)
 Отчеты о определенных действиях, выполняемых с помощью команд, создаются в консоли SSMA на уровне дерева объектов.  
@@ -138,6 +139,6 @@ ms.locfileid: "87938537"
   
 -   сценарий Fail  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Запуск консоли SSMA (доступ)](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   
