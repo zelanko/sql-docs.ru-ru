@@ -1,4 +1,5 @@
 ---
+description: DBCC SHRINKFILE (Transact-SQL)
 title: DBCC SHRINKFILE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 11/14/2017
@@ -29,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 32ce225096e6a232c824a9fc360cb2c3a282f4b2
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 203b53928ee41dcc75194cef6171959cdc08dd71
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484249"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479799"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -95,10 +96,10 @@ TRUNCATEONLY
 WITH NO_INFOMSGS  
 Подавляет вывод всех информационных сообщений.
   
-## <a name="result-sets"></a>Результирующие наборы  
+## <a name="result-sets"></a>Наборы результатов  
 В приведенной ниже таблице описаны столбцы результирующего набора.
   
-|Имя столбца|Description|  
+|Имя столбца|Описание|  
 |---|---|
 |**DbId**|Идентификатор базы данных, файл которой компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] пытался сжать.|  
 |**FileId**|Идентификационный номер файла, сжатие которого было предпринято компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
@@ -107,7 +108,7 @@ WITH NO_INFOMSGS
 |**UsedPages**|Количество 8-килобайтных страниц, используемых файлом в настоящее время.|  
 |**EstimatedPages**|Количество 8-килобайтных страниц, до которого можно было бы сжать файл по оценке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
 Инструкция DBCC SHRINKFILE применяется к файлам в текущей базе данных. Дополнительные сведения об изменении текущей базы данных см. в статье [USE (Transact-SQL)](../../t-sql/language-elements/use-transact-sql.md).
   
 Вы можете в любой момент остановить операцию DBCC SHRINKFILE, и вся выполненная работа сохранится. Если вы отмените операцию, для которой указан параметр EMPTYFILE, маркировка файла, предотвращающая добавление новых данных, не устанавливается.

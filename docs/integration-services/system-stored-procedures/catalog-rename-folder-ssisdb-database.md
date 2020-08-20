@@ -1,4 +1,5 @@
 ---
+description: catalog.rename_folder (база данных SSISDB)
 title: catalog.rename_folder (база данных SSISDB) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 336ab467-c32f-4d2e-a79c-174dc6fab75e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e37cbc4e6d0faa35b72e3f4bdc809d41bb39f586
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 65b913576b68e5c84037eac57205b23b81d53f95
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912940"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477143"
 ---
 # <a name="catalogrename_folder-ssisdb-database"></a>catalog.rename_folder (база данных SSISDB)
 
@@ -34,10 +35,10 @@ catalog.rename_folder [ @old_name = ] old_name , [ @new_name = ] new_name
   
 ## <a name="arguments"></a>Аргументы  
  [ @old_name = ] *old_name*  
- Исходное имя папки. Параметр *old_name* имеет тип **nvarchar(128)** .  
+ Исходное имя папки. Параметр *old_name* имеет тип **nvarchar(128)**.  
   
  [ @new_name = ] *new_name*  
- Новое имя папки. Параметр *new_name* имеет тип **nvarchar(128)** .  
+ Новое имя папки. Параметр *new_name* имеет тип **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
  None  

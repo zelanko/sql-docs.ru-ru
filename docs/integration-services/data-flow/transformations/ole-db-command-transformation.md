@@ -1,4 +1,5 @@
 ---
+description: преобразование «Команда OLE DB»
 title: Преобразование "Команда OLE DB" | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3e85168ae32063ba938205f2612c5af6a95eed4d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5cde3dc6eb7805f412ed7e820fb4946cf0c20c1a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919555"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477651"
 ---
 # <a name="ole-db-command-transformation"></a>преобразование «Команда OLE DB»
 
@@ -47,7 +48,7 @@ ms.locfileid: "86919555"
   
  Это преобразование содержит один вход, один обычный вывод и один вывод ошибок.  
   
-## <a name="logging"></a>Logging  
+## <a name="logging"></a>Ведение журнала  
  В журнал можно записывать вызовы, сделанные преобразованием «Команда OLE DB» к внешним источникам данных. Эта возможность протоколирования может быть использована для устранения неполадок соединений и выполнения команд для внешних источников данных, которые выполняются преобразованием «Команда OLE DB». Для протоколирования вызовов, которые преобразование «Команда OLE DB» совершает к внешним поставщикам данных, необходимо разрешить ведение журнала пакета и выбрать событие **Диагностика** на уровне пакета. Дополнительные сведения см. в разделе [Инструменты устранения неполадок при выполнении пакетов](../../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).  
   
 ## <a name="related-tasks"></a>Связанные задачи  

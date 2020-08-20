@@ -1,4 +1,5 @@
 ---
+description: Выбор направления потока CDC в соответствии с типом изменения
 title: Выбор направления потока CDC в соответствии с типом изменения | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3afa531e-f425-40a4-a1bf-1c3e1727287e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d0a8a8f712f25f452bbe5bcdd24470998e995ad0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fc9b1025bc4b3d4399203d12253a1aa9caa38883
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915930"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477891"
 ---
 # <a name="direct-the-cdc-stream-according-to-the-type-of-change"></a>Выбор направления потока CDC в соответствии с типом изменения
 
@@ -56,7 +57,7 @@ ms.locfileid: "86915930"
   
      Дополнительные сведения об использовании разделителя CDC см. в разделе «Компоненты CDC для служб Microsoft SQL Server Integration Services».  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Разделитель CDC](../../integration-services/data-flow/cdc-splitter.md)  
   
   

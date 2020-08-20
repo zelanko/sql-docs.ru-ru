@@ -1,4 +1,5 @@
 ---
+description: ALTER FULLTEXT INDEX (Transact-SQL)
 title: ALTER FULLTEXT INDEX (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 04/27/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fa8594033c004bed2f37204d9de96a75bcfb83f3
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 0f8b215f3e90822fe285b93274b7d93a7e1ee8b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301857"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479146"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -92,7 +93,7 @@ ALTER FULLTEXT INDEX ON table_name
  Указывает, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не будет вести списка изменений в индексированных данных.  
   
  ADD | DROP *column_name*  
- Указывает столбцы, добавляемые или удаляемые из полнотекстового индекса. Столбец или столбцы должны иметь тип **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** или **varbinary(max)** .  
+ Указывает столбцы, добавляемые или удаляемые из полнотекстового индекса. Столбец или столбцы должны иметь тип **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** или **varbinary(max)**.  
   
  Предложение DROP используется только для столбцов, ранее включенных для полнотекстового индексирования.  
   
@@ -349,7 +350,7 @@ ALTER FULLTEXT INDEX ON HumanResources.JobCandidate
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sys.fulltext_indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)   
  [CREATE FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [DROP FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/drop-fulltext-index-transact-sql.md)   

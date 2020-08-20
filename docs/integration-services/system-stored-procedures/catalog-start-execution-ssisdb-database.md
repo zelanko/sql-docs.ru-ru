@@ -1,4 +1,5 @@
 ---
+description: catalog.start_execution (база данных SSISDB)
 title: catalog.start_execution (база данных SSISDB) | Документы Майкрософт
 ms.custom: ''
 ms.date: 12/16/2016
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: f8663ff3-aa98-4dd8-b850-b21efada0b87
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3a8c645595d7ce8a6fd8506952b47cfd9d7139a4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f1a69ba2746d688f1d134546370514f826f9cee3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912787"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477149"
 ---
 # <a name="catalogstart_execution-ssisdb-database"></a>catalog.start_execution (база данных SSISDB)
 
@@ -39,7 +40,7 @@ catalog.start_execution [ @execution_id = ] execution_id [, [ @retry_count = ] r
  [@retry_count =] *retry_count*  
  Число повторных попыток при сбое выполнения. Применяется только при выполнении в развертывании с горизонтальным увеличением масштаба. Это необязательный параметр. Если параметр не задан, используется значение 0. Параметр *retry_count* имеет тип **int**.
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Выполнение применяется для задания значений параметров, которые используются пакетом в течение одного экземпляра выполнения пакета. После создания экземпляра исполнения и до его начала соответствующий проект должен быть повторно развернут. В этом случае экземпляр исполнения ссылается на устаревший проект. Эта недопустимая ссылка приводит к сбою хранимой процедуры.  
   
 > [!NOTE]  

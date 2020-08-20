@@ -1,4 +1,5 @@
 ---
+description: Назначение "Гибкая работа с файлами"
 title: Назначение "Гибкая работа с файлами" | Документы Майкрософт
 ms.custom: ''
 ms.date: 05/22/2019
@@ -12,12 +13,12 @@ f1_keywords:
 - sql14.dts.designer.afpextfiledest.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9c5e53ba85af16c65161857d9f93c50e5105fa50
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 72bc4d08685f411cb07194234e37f20e5bdbaac4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915003"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477837"
 ---
 # <a name="flexible-file-destination"></a>Назначение "Гибкая работа с файлами"
 
@@ -34,7 +35,7 @@ ms.locfileid: "86915003"
   
 Назначение **Гибкая работа с файлами** входит в состав [пакета дополнительных компонентов SQL Server Integration Services (SSIS) для Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
 
-Доступны следующие свойства **редактора назначения "Гибкая работа с файлами"** .
+Доступны следующие свойства **редактора назначения "Гибкая работа с файлами"**.
 
 - **Тип диспетчера соединений с файлами**. Определяет тип диспетчера подключений к источникам. Затем выберите один из указанных типов или создайте новый.
 - **Путь к папке**. Указывает путь к папке назначения.

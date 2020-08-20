@@ -1,4 +1,5 @@
 ---
+description: Операторы (выражение служб SSIS)
 title: Операторы (выражение служб SSIS) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 33df3a3d-1f5c-429b-a3b9-52b7d8689089
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cce2d53a48a55dad2f8d8120e8a7fd091b062ebe
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f2c4ddb9dad3a1b6c922201906628ad3b6d25f94
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921130"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477494"
 ---
 # <a name="operators-ssis-expression"></a>Операторы (выражение служб SSIS)
 
@@ -31,7 +32,7 @@ ms.locfileid: "86921130"
   
  В следующей таблице содержится список разделов, посвященных операторам.  
   
-|Оператор|Description|  
+|Оператор|Описание|  
 |--------------|-----------------|  
 |[Приведение (выражение служб SSIS)](../../integration-services/expressions/cast-ssis-expression.md)|Преобразует выражение одного типа данных в другой тип данных.|  
 |[() (скобки) (выражение служб SSIS)](../../integration-services/expressions/parentheses-ssis-expression.md)|Определяет порядок вычисления выражений.|  
@@ -59,7 +60,7 @@ ms.locfileid: "86921130"
   
  Сведения о размещении каждого оператора в иерархии приоритета см. в разделе [Operator Precedence and Associativity](../../integration-services/expressions/operator-precedence-and-associativity.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции (выражение служб SSIS)](../../integration-services/expressions/functions-ssis-expression.md)   
  [Примеры расширенных выражений служб Integration Services](../../integration-services/expressions/examples-of-advanced-integration-services-expressions.md)   
  [Выражения служб Integration Services (SSIS)](../../integration-services/expressions/integration-services-ssis-expressions.md)  

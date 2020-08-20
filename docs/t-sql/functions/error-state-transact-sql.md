@@ -1,5 +1,6 @@
 ---
-title: ERROR_STATE (Transact-SQL) | Документы Майкрософт
+description: ERROR_STATE (Transact-SQL)
+title: ERROR_STATE (Transact-SQL)
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,14 +24,15 @@ ms.assetid: 6059af00-83fe-409f-ab7c-daad111bc671
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56e08b872179ba09c130326b957f2c86b4b8c0db
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 9426f7d3717a32a473628ea82e789c4e8fd580fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87393997"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479779"
 ---
 # <a name="error_state-transact-sql"></a>ERROR_STATE (Transact-SQL)
+
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   Возвращает номер состояния для ошибки, вызвавшей запуск блока CATCH в конструкции TRY…CATCH.  
@@ -43,7 +45,9 @@ ms.locfileid: "87393997"
 ERROR_STATE ( )  
 ```  
   
-## <a name="return-types"></a>Типы возвращаемых данных  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>Типы возвращаемых данных
  **int**  
   
 ## <a name="return-value"></a>Возвращаемое значение  
@@ -51,7 +55,7 @@ ERROR_STATE ( )
   
  Возвращает значение NULL в случае вызова вне блока CATCH.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Некоторые сообщения об ошибках могут возникнуть в нескольких точках кода компонента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Например, в нескольких различных ситуациях может возникнуть ошибка «1105». Каждому определенному условию, вызывающему ошибку, назначен уникальный код состояния.  
   
  При просмотре баз данных известных проблем, например базы знаний [!INCLUDE[msCoName](../../includes/msconame-md.md)], можно по номеру состояния выяснить, соответствует ли запись о проблеме той ошибке, которая возникла. Например, если в статье базы знаний рассматривается сообщение об ошибке 1105 с состоянием 2, а полученное сообщение об ошибке 1105 имеет состояние 3, то в этом случае ошибка произошла по иной причине, чем ошибка, описанная в статье.  

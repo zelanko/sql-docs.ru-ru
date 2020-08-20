@@ -1,4 +1,5 @@
 ---
+description: catalog.stop_operation (база данных SSISDB)
 title: catalog.stop_operation (база данных SSISDB) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 97fd9d22-03dd-4eda-8f6c-ba8b67acec68
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2ab0e358eef9ec7739b8cb9ed20c28f4fdb5a498
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c77113417a108632aab150e75011399f9ad3a752
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912810"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477120"
 ---
 # <a name="catalogstop_operation-ssisdb-database"></a>catalog.stop_operation (база данных SSISDB)
 
@@ -60,7 +61,7 @@ catalog.stop_operation [ @operation_id = ] operation_id
   
 -   Операция уже остановлена  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Только один пользователь за раз должен останавливать операцию в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Если несколько пользователей попытаются остановить операцию, хранимая процедура возвратит код успешного завершения при первой попытке (значение `0`), но последующие попытки будут приводить к ошибкам.  
   
   

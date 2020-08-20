@@ -1,4 +1,5 @@
 ---
+description: Создание пользовательской задачи
 title: Создание пользовательской задачи | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 42965c09-1782-4cdb-9ce1-216af4c23e0a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c408e2fb45011e8493c57a360921839d7ae5342c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c7f6f2892210371837bb2940e56266582e729e99
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916373"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477408"
 ---
 # <a name="creating-a-custom-task"></a>Создание пользовательской задачи
 

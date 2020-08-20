@@ -1,4 +1,5 @@
 ---
+description: STIntersection (тип данных geometry)
 title: STIntersection (тип данных geometry) | Документы Майкрософт
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 354843f5-cc14-478c-974a-04f363f9530f
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: bbb66fd5a2436b8852172db17612330e4a1ccf07
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 6365d94822d8d291951de3e59c7c71fbed487163
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555686"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479256"
 ---
 # <a name="stintersection-geometry-data-type"></a>STIntersection (тип данных geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "86555686"
   
  Тип возвращаемых данных CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Метод `STIntersection()` всегда возвращает значение NULL, если идентификаторы пространственных ссылок (SRID) экземпляров **geometry** не совпадают. Результат может содержать сегменты дуги только в том случае, если они содержатся во входном экземпляре.  
   
 ## <a name="examples"></a>Примеры  
@@ -72,7 +73,7 @@ SELECT @g.STIntersection(@h).ToString();
  SELECT @h.STIntersection(@g).ToString();
  ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

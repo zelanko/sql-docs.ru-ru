@@ -1,4 +1,5 @@
 ---
+description: LOGINPROPERTY (Transact-SQL)
 title: LOGINPROPERTY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -32,12 +33,12 @@ helpviewer_keywords:
 ms.assetid: b34df777-79b0-49a5-88db-b99998479a5d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 20b67d4b1913cd896d3c4473b0c0f161b833154f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c3014a8d57602dc80b7faeec26dbc85d43f91c44
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111904"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479623"
 ---
 # <a name="loginproperty-transact-sql"></a>LOGINPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +63,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
  *propertyname*  
  Выражение, содержащее сведения о свойстве, возвращаемые для имени входа. *propertyname* может иметь одно из указанных ниже значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**BadPasswordCount**|Возвращает число последовательных попыток входа в систему с неверным паролем.|  
 |**BadPasswordTime**|Возвращает время последней попытки входа в систему с неверным паролем.|  
@@ -78,7 +79,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 |**PasswordLastSetTime**|Возвращает дату установки текущего пароля.|  
 |**PasswordHashAlgorithm**|Возвращает алгоритм, используемый для хэширования пароля.|  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  Тип данных зависит от запрошенного значения.  
   
  Аргументы **IsLocked**, **IsExpired** и **IsMustChange** имеют тип **int**.  
@@ -113,7 +114,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
   
 -   NULL, если имя входа не является допустимым именем входа SQL Server.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Эта встроенная функция возвращает сведения о настройках политики паролей для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В именах свойств регистр не учитывается, поэтому имена **BadPasswordCount** и **badpasswordcount** эквивалентны. Значения свойств **PasswordHash, PasswordHashAlgorithm** и **PasswordLastSetTime** доступны во всех поддерживаемых конфигурациях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но другие свойства доступны, только если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает под управлением [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] при включенных параметрах CHECK_POLICY и CHECK_EXPIRATION. Дополнительные сведения см. в разделе [Политика паролей](../../relational-databases/security/password-policy.md).  
   
 ## <a name="permissions"></a>Разрешения  

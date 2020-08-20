@@ -1,4 +1,5 @@
 ---
+description: REPLACE (выражение служб SSIS)
 title: REPLACE (выражение служб SSIS) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a6837043-ea70-4c6a-9c7a-6868b02b2adc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8ef16c9c83419d6b404affc49e7200a739ab65f7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fe1fae03a09aace19069d3aaeba55f0fbb4b36ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919071"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477499"
 ---
 # <a name="replace-ssis-expression"></a>REPLACE (выражение служб SSIS)
 
@@ -80,7 +81,7 @@ REPLACE(Product, "Bike","")
 REPLACE((DT_WSTR,8)DaysToManufacture,"6","5")  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SUBSTRING (выражение служб SSIS)](../../integration-services/expressions/substring-ssis-expression.md)   
  [Функции (выражение служб SSIS)](../../integration-services/expressions/functions-ssis-expression.md)  
   

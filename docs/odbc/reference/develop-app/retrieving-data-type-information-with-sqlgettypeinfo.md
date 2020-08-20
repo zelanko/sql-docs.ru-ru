@@ -1,4 +1,5 @@
 ---
+description: Получение сведений о типе данных с помощью SQLGetTypeInfo
 title: Получение сведений о типах данных с помощью SQLGetTypeInfo | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d4f8b152-ab9e-4d05-a720-d10a08a6df81
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4ec2bbba824eaf3d74133cf9754eca2593c9fb79
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d7135a6d149646c43eb93218d2ce8952930748c6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300064"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476526"
 ---
 # <a name="retrieving-data-type-information-with-sqlgettypeinfo"></a>Получение сведений о типе данных с помощью SQLGetTypeInfo
 Поскольку сопоставления между базовыми типами данных SQL и идентификаторами типов ODBC являются приблизительными, ODBC предоставляет функцию (**SQLGetTypeInfo**), с помощью которой драйвер может полностью описать каждый тип данных SQL в источнике данных. Эта функция возвращает результирующий набор, каждая строка которого описывает характеристики одного типа данных, такие как имя, идентификатор типа, точность, масштаб и допустимость значений NULL.  

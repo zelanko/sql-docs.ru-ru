@@ -1,4 +1,5 @@
 ---
+description: catalog.rename_environment (база данных SSISDB)
 title: catalog.rename_environment (база данных SSISDB) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: c73d7452-31c5-4f4e-afcc-e9eca760c826
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 400b93128b19ca12550816889c732793c0e9e5d0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6641ff60f49534a303d3f60110dbdd63aab2ed29
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912942"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477156"
 ---
 # <a name="catalogrename_environment-ssisdb-database"></a>catalog.rename_environment (база данных SSISDB)
 
@@ -42,7 +43,7 @@ catalog.rename_environment [ @folder_name = ] folder_name
  Исходное имя среды. Параметр *environment_name* имеет тип **nvarchar(128)** .  
   
  [ @new_environment_name = ] *new_environment_name*  
- Новое имя среды. Параметр *new_environment_name* имеет тип **nvarchar(128)** .  
+ Новое имя среды. Параметр *new_environment_name* имеет тип **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение)  
@@ -66,7 +67,7 @@ catalog.rename_environment [ @folder_name = ] folder_name
   
 -   Новое имя уже использовано в существующей среде  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Ссылки из проектов на среду не обновляются автоматически при переименовании среды. Ссылки на среду должны обновляться соответствующим образом. Хранимая процедура будет выполнена успешно, даже если вследствие изменения имени среды ссылки на нее оказались недействительными. Ссылки на среду должны обновляться после завершения этой хранимой процедуры.  
   
 > [!NOTE]  

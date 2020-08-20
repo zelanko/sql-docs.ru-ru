@@ -1,4 +1,5 @@
 ---
+description: FILEPROPERTYEX (Transact-SQL)
 title: FILEPROPERTYEX (Transact-SQL) | Документация Майкрософт
 ms.date: 07/23/2019
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - file names [SQL Server], FILEPROPERTYEX
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d0eb763436bc4dd26815879c33c9a8461d9a38d7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4fca1a10c6e0fce286854b96ac673e602744cdb6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732317"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479670"
 ---
 # <a name="filepropertyex-transact-sql"></a>FILEPROPERTYEX (Transact-SQL)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -41,14 +42,14 @@ FILEPROPERTYEX ( name , property )
   
 ## <a name="arguments"></a>Аргументы  
  *name*  
- Выражение, которое содержит имя файла, связанного с текущей базой данных, для которого нужно возвратить сведения о свойстве. Аргумент *file_name* имеет тип **nchar(128)** .  
+ Выражение, которое содержит имя файла, связанного с текущей базой данных, для которого нужно возвратить сведения о свойстве. Аргумент *file_name* имеет тип **nchar(128)**.  
   
  *property*  
  Выражение, которое содержит имя свойства файла, которое нужно возвратить. Аргумент *property* имеет тип **varchar(128)** и может принимать одно из перечисленных ниже значений.  
 
 
   
-|Значение|Description|
+|Значение|Описание|
 |-----------|-----------------|  
 |**BlobTier**|Уровень целевого страничного BLOB-объекта Azure. Применяется только к базам данных категорий "Стандартный" или "Общего назначения", использующим хранилище страничных BLOB-объектов Azure.|
 |**AccountType**|Тип учетной записи хранения, указывающий, является ли она учетной записью хранения BLOB-объектов или файлов, а также является ли она учетной записью хранения класса Premium или Standard.|
@@ -86,7 +87,7 @@ file_id  type_desc  name  BlobTier  AccountType  IsInferredTier  IsPageBlob
 (2 rows affected)
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [FILEGROUPPROPERTY (Transact-SQL)](../../t-sql/functions/filegroupproperty-transact-sql.md)   
  [Функции метаданных (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sp_spaceused (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   

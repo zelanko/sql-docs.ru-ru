@@ -1,4 +1,5 @@
 ---
+description: ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
 title: ALTER COLUMN ENCRYPTION KEY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 10/15/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 2296050c41b774e2180532c79b816d112c6e2a7c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 4fcda824e7d64bc5eb769f1f1e322430f7f2bb91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110258"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479183"
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -60,8 +61,8 @@ ALTER COLUMN ENCRYPTION KEY key_name
   
 > [!WARNING]  
 >  Никогда не передавайте значения ключа шифрования столбца в виде открытого текста в этой инструкции. Это является преимуществом этой функции.  
-  
-## <a name="remarks"></a>Remarks  
+
+## <a name="remarks"></a>Комментарии
 Как правило, ключ шифрования столбца создается со всего одним зашифрованным значением. Когда требуется сменить главный ключ столбца (заменить текущий главный ключ столбца новым), можно добавить новое значение ключа шифрования столбца, зашифрованное с помощью нового главного ключа столбца. Этот рабочий процесс позволяет удостовериться, что клиентские приложения смогут обращаться к данным, зашифрованным с помощью ключа шифрования, тогда как новый главный ключ столбца будет доступен для клиентских приложений. Драйвер с поддержкой Always Encrypted в клиентском приложении, не имеющем доступа к новому главному ключу, сможет использовать значение ключа шифрования столбца, зашифрованное с помощью старого главного ключа столбца, для доступа к конфиденциальным данным. Для алгоритмов шифрования, поддерживаемых функцией Always Encrypted, требуется значение открытого текста размером 256 бит. 
  
 Для смены главных ключей столбцов рекомендуется использовать такие средства, как SQL Server Management Studio (SSMS) или PowerShell. См. статьи [Смена ключей Always Encrypted с помощью SQL Server Management Studio](../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-ssms.md) и [Смена ключей Always Encrypted с помощью PowerShell](../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md).
@@ -107,7 +108,7 @@ DROP VALUE
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
  [DROP COLUMN ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
  [CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md)   

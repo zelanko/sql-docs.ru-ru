@@ -1,4 +1,5 @@
 ---
+description: преобразование «Конвертация данных»
 title: Преобразование "Конвертация данных" | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e43b29fadf9c4fe36775616a8ddf7a82a29eae4e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cdd281be64879d56ec8c81eacc52ea3631fe0867
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912322"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477716"
 ---
 # <a name="data-conversion-transformation"></a>преобразование «Конвертация данных»
 
@@ -33,7 +34,7 @@ ms.locfileid: "86912322"
   
  С помощью этой функции пакет может выполнять следующие типы преобразований данных:  
   
--   Изменить тип данных. Дополнительные сведения см. в разделе [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
+-   изменить тип данных; Дополнительные сведения см. в разделе [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
   
     > [!NOTE]  
     >  Если данные преобразуются в тип данных даты или даты и времени, дата в выходном столбце имеет формат ISO, хотя специфические локали могут задавать другой формат.  
@@ -59,7 +60,7 @@ ms.locfileid: "86912322"
   Используйте диалоговое окно **Редактор преобразования «Конвертация данных»** , чтобы выбрать столбцы, подлежащие преобразованию, выбрать тип данных, в который должен быть преобразован столбец, и установить атрибуты преобразования.  
   
 > [!NOTE]  
->  Свойства **FastParse** выходных столбцов при преобразовании «Конвертация данных» недоступны в **Редакторе преобразования «Конвертация данных»** , но могут быть настроены при помощи **Расширенного редактора**. Дополнительные сведения о данном свойстве см. в подразделе «Преобразование "Конвертация данных"» раздела [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
+>  Свойства **FastParse** выходных столбцов при преобразовании «Конвертация данных» недоступны в **Редакторе преобразования «Конвертация данных»**, но могут быть настроены при помощи **Расширенного редактора**. Дополнительные сведения о данном свойстве см. в подразделе «Преобразование "Конвертация данных"» раздела [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
   
 ### <a name="options"></a>Параметры  
  **Доступные входные столбцы**  
@@ -80,7 +81,7 @@ ms.locfileid: "86912322"
  **Точность**  
  Установите точность для числовых данных.  
   
- **Масштабирование**  
+ **Масштаб**  
  Установите масштаб для числовых данных.  
   
  **Кодовая страница**  
@@ -89,7 +90,7 @@ ms.locfileid: "86912322"
  **Настройка вывода ошибок**  
  Укажите способ обработки ошибок уровня строк в диалоговом окне [Настройка вывода ошибок](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Быстрый синтаксический анализ](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   
  [Поток данных](../../../integration-services/data-flow/data-flow.md)   
  [Преобразования служб Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

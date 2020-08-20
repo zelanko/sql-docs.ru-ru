@@ -1,4 +1,5 @@
 ---
+description: CREATE BROKER PRIORITY (Transact-SQL)
 title: CREATE BROKER PRIORITY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: adcf67cf64888101f2a5a7d704cbe91785791133
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: c753f9dc977f94064161ee340ebced685dd9f6c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393162"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478987"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +60,7 @@ FOR CONVERSATION
 
 ## <a name="arguments"></a>Аргументы
  *ConversationPriorityName*  
- Задает имя данного приоритета диалога. Имя должно быть уникальным внутри текущей базы данных и должно соответствовать правилам для [!INCLUDE[ssDE](../../includes/ssde-md.md)]идентификаторов[ компонента ](../../relational-databases/databases/database-identifiers.md).  
+ Задает имя данного приоритета диалога. Имя должно быть уникальным внутри текущей базы данных и должно соответствовать правилам для  [идентификаторов](../../relational-databases/databases/database-identifiers.md) компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
  SET  
  Задает критерий для определения применимости приоритета к заданному диалогу. Если указано, SET должен содержать хотя бы один критерий: CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME или PRIORITY_LEVEL. Если аргумент SET не указан, устанавливаются значения по умолчанию для всех трех критериев.  
@@ -95,7 +96,7 @@ FOR CONVERSATION
  REMOTE_SERVICE_NAME = {'*RemoteServiceName*' | **ANY**}  
  Указывает имя службы, которая будет использоваться в качестве критерия для определения применимости приоритета к конечной точке диалога.  
   
- *RemoteServiceName* — это литерал типа **nvarchar(256)** . Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] производит побайтовое сравнение при поиске соответствия строке *RemoteServiceName*. При сравнении учитывается регистр и не применяются текущие параметры сортировки. Целевая служба может располагаться в текущем экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] или в удаленном экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+ *RemoteServiceName* — это литерал типа **nvarchar(256)**. Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] производит побайтовое сравнение при поиске соответствия строке *RemoteServiceName*. При сравнении учитывается регистр и не применяются текущие параметры сортировки. Целевая служба может располагаться в текущем экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] или в удаленном экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
  '*RemoteServiceName*'  
  Указывает, что объектом применения приоритета диалога может быть:  
@@ -112,7 +113,7 @@ FOR CONVERSATION
  PRIORITY_LEVEL = { *PriorityValue* | **DEFAULT** }  
  Указывает приоритет, который назначается любой конечной точке диалога, использующей контракты и службы, указанные в приоритете диалога. Аргумент *PriorityValue* должен быть целочисленным литералом в диапазоне от 1 (наименьший приоритет) до 10 (наибольший приоритет). Значение по умолчанию — 5.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] назначает уровни приоритета конечным точкам диалога. Уровни приоритета управляют приоритетом операций, связанных с конечной точкой. У каждого диалога есть две конечные точки:  
   
 -   Конечная точка — инициатор диалога связывает одну сторону диалога со службой и очередью инициатора. Конечная — точка-инициатор диалога создается во время выполнения инструкции BEGIN DIALOG. С конечной точкой — инициатором диалога связаны следующие операции:  
@@ -285,7 +286,7 @@ CREATE BROKER PRIORITY BronzePriority
          PRIORITY_LEVEL = 2);  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ALTER BROKER PRIORITY (Transact-SQL)](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
  [BEGIN DIALOG CONVERSATION (Transact-SQL)](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [CREATE CONTRACT (Transact-SQL)](../../t-sql/statements/create-contract-transact-sql.md)   

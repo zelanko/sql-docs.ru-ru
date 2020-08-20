@@ -1,4 +1,5 @@
 ---
+description: Расширение вывода ошибок с помощью компонента скрипта
 title: Расширение вывода ошибок с помощью компонента скрипта | Документы Майкрософт
 ms.custom: ''
 ms.date: 01/04/2019
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 163e6e4876d99e36ed4a3590f8210b258cfd7630
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e6150c8b80b29575cbb08c4cd88ebe342a55da79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916325"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477311"
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>Расширение вывода ошибок с помощью компонента скрипта
 
@@ -61,7 +62,7 @@ ms.locfileid: "86916325"
   
     -   Добавьте еще один новый выходной столбец типа **String** с именем **ColumnName**. Увеличьте длину нового столбца по умолчанию до 255 для поддержки длинных значений.  
   
-9. Закройте **редактор преобразования "Скрипт"** .  
+9. Закройте **редактор преобразования "Скрипт"**.  
   
 10. Соедините выход компонента скрипта с подходящим назначением. Назначение «Неструктурированный файл» проще всего при настройке в случае нерегламентированной отладки.  
   
@@ -123,7 +124,7 @@ public class ScriptMain:      // C#
 }
 ```
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обработка ошибок в данных](../../integration-services/data-flow/error-handling-in-data.md)   
  [Использование выводов ошибок в компоненте потока данных](../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)   
  [Создание синхронного преобразования с помощью компонента скрипта](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)   

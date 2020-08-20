@@ -1,4 +1,5 @@
 ---
+description: catalog.cleanup_server_log
 title: catalog.cleanup_server_log | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 0dedb685-d3a6-4bd6-8afd-58d98853deee
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c97ebcdca436e05488e85e84565cece028a8d7a9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0942fa73c29b14ba5b07b305126e4ba70bfa0cb1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86904896"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477193"
 ---
 # <a name="catalogcleanup_server_log"></a>catalog.cleanup_server_log 
 
@@ -57,7 +58,7 @@ catalog.cleanup_server_log
   
 -   База данных SSISDB не находится в однопользовательском режиме.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  В SQL Server 2012 с пакетом обновления 2 (SP2) в таблицу **internal.catalog_properties** добавлено свойство SERVER_OPERATION_ENCRYPTION_LEVEL. Оно имеет два возможных значения.  
   
 -   **PER_EXECUTION (1)** — сертификат и симметричный ключ, используемые для защиты важных параметров выполнения и журналов выполнения, создаются для каждого выполнения. Из-за создания сертификата и ключей для каждого выполнения в рабочей среде могут возникнуть проблемы с производительностью (взаимоблокировки, сбои заданий обслуживания и т. д.). Однако это значение обеспечивает более высокий уровень безопасности, чем другое (2).  

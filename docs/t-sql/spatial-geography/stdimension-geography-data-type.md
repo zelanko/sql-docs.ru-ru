@@ -1,4 +1,5 @@
 ---
+description: Метод STDimension (тип данных geography)
 title: STDimension (тип данных geography) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4368b0f6-0678-4ade-87dc-b43d8b2e8d92
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 7dfd48621e2d587d985a695d00f4f091877c4814
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e7cd207272093ab77aea443737f27bd99a35e2e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552879"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479305"
 ---
 # <a name="stdimension-geography-data-type"></a>Метод STDimension (тип данных geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "86552879"
   
  Тип возвращаемых данных CLR: **SqlInt32**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  STDimension() возвращает значение –1, если экземпляр **geography** пуст.  
   
 ## <a name="examples"></a>Примеры  

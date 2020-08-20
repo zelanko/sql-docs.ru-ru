@@ -1,4 +1,5 @@
 ---
+description: SET TEXTSIZE (Transact-SQL)
 title: SET TEXTSIZE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 04/12/2016
@@ -24,20 +25,20 @@ ms.assetid: 787154a6-39a6-4dd6-a6d0-67b4364f95d5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0d2bc5f425655b7c1163648c1331c51efb0730c0
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 55de9c8c10e1827797d730736db6d0fe99704622
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484865"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478724"
 ---
 # <a name="set-textsize-transact-sql"></a>SET TEXTSIZE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Указывает размер данных типа **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **text**, **ntext** и **image**, возвращаемых инструкцией SELECT.  
+  Указывает размер данных типа **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **text**, **ntext** и **image**, возвращаемых инструкцией SELECT.  
   
 > [!IMPORTANT]
->  Типы данных **ntext**, **text** и **image** будут исключены в следующей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Следует избегать использования этих типов данных при новой разработке и запланировать изменение приложений, использующих их в настоящий момент. Вместо них следует использовать типы данных **nvarchar(max)** , **varchar(max)** и **varbinary(max)** .  
+>  Типы данных **ntext**, **text** и **image** будут исключены в следующей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Следует избегать использования этих типов данных при новой разработке и запланировать изменение приложений, использующих их в настоящий момент. Вместо них следует использовать типы данных **nvarchar(max)**, **varchar(max)** и **varbinary(max)** .  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,13 +52,13 @@ SET TEXTSIZE { number }
 
 ## <a name="arguments"></a>Аргументы
  *number*  
- Размер данных типа **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **text**, **ntext** или **image** в байтах. *number* должно быть целым числом не более 2 147 483 647 (2 ГБ).  Значение –1 означает неограниченный размер. Значение 0 устанавливает размер в 4 КБ, принятый по умолчанию.  
+ Размер данных типа **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **text**, **ntext** или **image** в байтах. *number* должно быть целым числом не более 2 147 483 647 (2 ГБ).  Значение –1 означает неограниченный размер. Значение 0 устанавливает размер в 4 КБ, принятый по умолчанию.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (10.0 и выше ) и драйвер ODBC для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически указывают `-1` (неограниченно) при подключении.  
   
- **Драйверы до [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвер ODBC для Native Client и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB для Native Client (версия 9) для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически устанавливают для параметра TEXTSIZE значение 2147483647 при подключении.  
+ **Драйверы до [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008:**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвер ODBC для Native Client и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB для Native Client (версия 9) для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически устанавливают для параметра TEXTSIZE значение 2147483647 при подключении.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Установка SET TEXTSIZE влияет на работу функции @@TEXTSIZE.  
   
  Значение TEXTSIZE устанавливается во время выполнения, а не во время синтаксического анализа.  

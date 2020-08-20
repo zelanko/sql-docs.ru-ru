@@ -1,4 +1,5 @@
 ---
+description: RIGHT (выражение служб SSIS)
 title: RIGHT (выражение служб SSIS) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 83e70e75-4be5-4783-a8cf-032f82afe16e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 46614c3875226936b9fa555351dcd6da2dcb26e5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dbf49e07dd37e621ed5a733e8f1ad22e5d057b1f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913520"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477436"
 ---
 # <a name="right-ssis-expression"></a>RIGHT (выражение служб SSIS)
 
@@ -75,7 +76,7 @@ RIGHT(Name, @Times)
 RIGHT(Name, (DT_I2)@Times))  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [LEFT (выражение SSIS)](../../integration-services/expressions/left-ssis-expression.md)   
  [Функции (выражение служб SSIS)](../../integration-services/expressions/functions-ssis-expression.md)  
   

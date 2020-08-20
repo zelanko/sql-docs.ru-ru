@@ -1,4 +1,5 @@
 ---
+description: CREATE SECURITY POLICY (Transact-SQL)
 title: CREATE SECURITY POLICY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 08/10/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: de5ab7ebb06a6ba51241b06a3ee6f618378bc635
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: da7b906f774bb3cf56acdb8c60587146fa98ae50
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110677"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478976"
 ---
 # <a name="create-security-policy-transact-sql"></a>CREATE SECURITY POLICY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -88,7 +89,8 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
  [*table_schema_name*.] *table_name*  
  Представляет целевую таблицу, к которой будет применяться предикат безопасности. Для одной таблицы могут быть предназначены несколько отключенных политик безопасности, но только одна может быть включена в любой момент времени.  
   
-## <a name="remarks"></a>Remarks  
+
+## <a name="remarks"></a>Remarks
  При использовании функций предикатов с таблицами, оптимизированными для памяти, необходимо включить параметр **SCHEMABINDING** и использовать указание компиляции **WITH NATIVE_COMPILATION**.  
   
  Предикаты блокировки вычисляются после выполнения соответствующей операции DML. Таким образом, запросу READ UNCOMMITTED будут доступны временные значения, для которых будет выполнен откат.  

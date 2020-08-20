@@ -1,4 +1,5 @@
 ---
+description: Констант-перечислителей в выражениях свойств
 title: Перечислимые константы в выражениях свойств | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c233d75beabca847937f85977acfd0e2230dc7c2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 692e2e19b86b5d47d207c32c3024365675603c07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922788"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477590"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Констант-перечислителей в выражениях свойств
 
@@ -75,7 +76,7 @@ ms.locfileid: "86922788"
 |---------------------------------------|-------------------|  
 |По умолчанию|0|  
 |AboveNormal|1|  
-|Нормальный|2|  
+|Норм.|2|  
 |BelowNormal|3|  
 |Бездействие|4|  
   
@@ -105,7 +106,7 @@ ms.locfileid: "86922788"
 |Понятное имя|Числовое значение|  
 |-------------------|-------------------|  
 |Успешно|0|  
-|Failure|1|  
+|Сбой|1|  
 |Completion|2|  
 |Отменено|3|  
   
@@ -207,7 +208,7 @@ ms.locfileid: "86922788"
   
 |Понятное имя в перечислении DTSFileSystemAttributes|Числовое значение|  
 |----------------------------------------------|-------------------|  
-|Нормальный|0|  
+|Норм.|0|  
 |Архив|1|  
 |Скрытый|2|  
 |ReadOnly|4|  
@@ -267,7 +268,7 @@ ms.locfileid: "86922788"
 |Понятное имя в перечислении MailPriority|Числовое значение|  
 |-----------------------------------|-------------------|  
 |Высокий|1|  
-|Нормальный|3|  
+|Норм.|3|  
 |Низкий|5|  
   
 ### <a name="transfer-database-task"></a>Задача «Передача базы данных»  
@@ -292,7 +293,7 @@ ms.locfileid: "86922788"
 |-------------------------------------|-------------------|  
 |FailTask|0|  
 |Overwrite|1|  
-|Skip|2|  
+|Пропустить|2|  
   
 ### <a name="transfer-jobs-task"></a>Задача «Передача заданий»  
  Свойство **IfObjectExists** устанавливается с помощью значений перечисления **IfObjectExists**.  
@@ -301,7 +302,7 @@ ms.locfileid: "86922788"
 |-------------------------------------|-------------------|  
 |FailTask|0|  
 |Overwrite|1|  
-|Skip|2|  
+|Пропустить|2|  
   
 ### <a name="transfer-logins-task"></a>Задача «Передача имен входа»  
  Свойство **IfObjectExists** устанавливается с помощью значений перечисления **IfObjectExists**.  
@@ -310,7 +311,7 @@ ms.locfileid: "86922788"
 |-------------------------------------|-------------------|  
 |FailTask|0|  
 |Overwrite|1|  
-|Skip|2|  
+|Пропустить|2|  
   
  Свойство **LoginsToTransfer** устанавливается с помощью значений перечисления **LoginsToTransfer**.  
   
@@ -327,7 +328,7 @@ ms.locfileid: "86922788"
 |-------------------------------------|-------------------|  
 |FailTask|0|  
 |Overwrite|1|  
-|Skip|2|  
+|Пропустить|2|  
   
 ### <a name="transfer-sql-server-objects-task"></a>Задача «Передача объектов SQL Server»  
  Свойство **ExistingData** устанавливается с помощью значений перечисления **ExistingData**.  
@@ -335,7 +336,7 @@ ms.locfileid: "86922788"
 |Понятное имя в перечислении ExistingData|Числовое значение|  
 |-----------------------------------|-------------------|  
 |Заменить|0|  
-|Append|1|  
+|Добавление|1|  
   
 ### <a name="web-service-task"></a>Задача «Веб-служба»  
  Свойство **OutputType** устанавливается с помощью значений перечисления **DTSOutputType**.  
@@ -423,7 +424,7 @@ ms.locfileid: "86922788"
 |Проверить|0|  
 |XSLT|1|  
 |XPATH|2|  
-|Объединить|3|  
+|Объединение|3|  
 |Поиск различий|4|  
 |Обновление|5|  
   
@@ -475,9 +476,9 @@ ms.locfileid: "86922788"
   
 |Понятное имя в перечислении DTSXMLDiffAlgorithm|Числовое значение|  
 |------------------------------------------|-------------------|  
-|Auto|0|  
+|Auto (Автоматически)|0|  
 |быстрый;|1|  
-|Точный|2|  
+|Точная|2|  
   
 ##  <a name="maintenance-plan-tasks"></a><a name="MaintenancePlanTasks"></a> Задачи плана обслуживания  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включают в себя набор задач, выполняющих задачи SQL Server для использования в планах обслуживания, и пакеты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -492,7 +493,7 @@ ms.locfileid: "86922788"
 |Понятное имя в перечислении DatabaseSelection|Числовое значение|  
 |----------------------------------------|-------------------|  
 |None|0|  
-|All|1|  
+|Все|1|  
 |Система|2|  
 |Пользователь|3|  
 |Specific|4|  
@@ -502,7 +503,7 @@ ms.locfileid: "86922788"
 |Понятное имя в перечислении TableSelection|Числовое значение|  
 |-------------------------------------|-------------------|  
 |None|0|  
-|All|1|  
+|Все|1|  
 |Specific|2|  
   
  Свойство **ObjectTypeSelection** устанавливается с помощью значений перечисления **ObjectType**.  
@@ -510,7 +511,7 @@ ms.locfileid: "86922788"
 |Понятное имя в перечислении ObjectType|Числовое значение|  
 |---------------------------------|-------------------|  
 |Таблица|0|  
-|Представление|1|  
+|Просмотр|1|  
 |TableView|2|  
   
 ### <a name="back-up-database-task"></a>Задача «Создание резервной копии базы данных»  
@@ -518,14 +519,14 @@ ms.locfileid: "86922788"
   
 |Понятное имя в перечислении DestinationType|Числовое значение|  
 |--------------------------------------|-------------------|  
-|Auto|0|  
+|Auto (Автоматически)|0|  
 |Вручную|1|  
   
  Свойство **ExistingBackupsAction** устанавливается с помощью значений перечисления **ActionForExistingBackups**.  
   
 |Понятное имя в перечислении ActionForExistingBackups|Числовое значение|  
 |-----------------------------------------------|-------------------|  
-|Append|0|  
+|Добавление|0|  
 |Overwrite|1|  
   
  Свойство **BackupAction** устанавливается с помощью значений перечисления **BackupTaskType**. Это свойство работает совместно со свойством **BackupIsIncremental** для определения типа резервной копии, которую создает задача.  
@@ -543,7 +544,7 @@ ms.locfileid: "86922788"
 |LogicalDevice|0|  
 |Лента|1|  
 |Файл|2|  
-|Pipe|3|  
+|канал|3|  
 |VirtualDevice|4|  
   
 ### <a name="maintenance-cleanup-task"></a>задача «Очистка после обслуживания»  
@@ -561,7 +562,7 @@ ms.locfileid: "86922788"
 |День|0|  
 |Неделя|1|  
 |Месяц|2|  
-|Год|3|  
+|Year;|3|  
   
 ### <a name="update-statistics-task"></a>Задача «Обновление статистики»  
  Свойство **UpdateType** устанавливается с помощью значений перечисления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объектов управления **StatisticsTarget** (SMO).  
@@ -570,7 +571,7 @@ ms.locfileid: "86922788"
 |---------------------------------------|-------------------|  
 |Столбец|1|  
 |Индекс|2|  
-|All|3|  
+|Все|3|  
   
 ##  <a name="common-properties"></a><a name="CommonProperties"></a> Общие свойства  
  Пакеты, задачи, а также контейнеры последовательности, «цикл по каждому элементу» и «цикл по элементам» могут использовать следующие перечисления для задания специфических свойств.  
@@ -581,7 +582,7 @@ ms.locfileid: "86922788"
 |------------------------------------------|-------------------|  
 |None|-1|  
 |Успешно|0|  
-|Failure|1|  
+|Сбой|1|  
 |Completion|2|  
   
  Свойство **IsolationLevel** устанавливается перечислением **IsolationLevel** платформы .NET Framework. Дополнительные сведения см. в документации по библиотеке классов платформы .NET Framework в [Библиотеке MSDN](https://go.microsoft.com/fwlink?LinkId=17313).  
@@ -605,7 +606,7 @@ ms.locfileid: "86922788"
 ## <a name="related-tasks"></a>Связанные задачи  
  [Добавление или изменение выражение свойства](../../integration-services/expressions/add-or-change-a-property-expression.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Использование выражений свойств в пакетах](../../integration-services/expressions/use-property-expressions-in-packages.md)   
  [Пакеты служб Integration Services (SSIS)](../../integration-services/integration-services-ssis-packages.md)   
  [Контейнеры служб Integration Services](../../integration-services/control-flow/integration-services-containers.md)   

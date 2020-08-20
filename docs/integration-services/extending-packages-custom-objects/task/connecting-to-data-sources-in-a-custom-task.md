@@ -1,4 +1,5 @@
 ---
+description: Соединение с источниками данных в пользовательской задаче
 title: Соединение с источниками данных в пользовательской задаче | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 9f0b3a43-3eaa-4b3c-bb08-29b630c11306
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0aae0f18eae8d982adb933cf3d7d720e26ece9ab
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1382e18c79b0ae6e2414c9cdc1c6c180746042f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916377"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477364"
 ---
 # <a name="connecting-to-data-sources-in-a-custom-task"></a>Соединение с источниками данных в пользовательской задаче
 
@@ -139,7 +140,7 @@ Public Overrides Function Execute( _
 End Function  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Соединения в службах Integration Services (SSIS)](../../../integration-services/connection-manager/integration-services-ssis-connections.md)   
  [Создание диспетчеров соединений](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
   

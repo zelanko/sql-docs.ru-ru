@@ -1,4 +1,5 @@
 ---
+description: Имитация вывода ошибок для компонента скрипта
 title: Имитация вывода ошибок для компонента скрипта | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f8b6ecff-ac99-4231-a0e7-7ce4ad76bad0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: db88defad5962fb6a71b6705d7055abfb93c52c5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3e81c953fa5c4b1f98c2badd87942ca436f72105
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914930"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477298"
 ---
 # <a name="simulating-an-error-output-for-the-script-component"></a>Имитация вывода ошибок для компонента скрипта
 
@@ -56,7 +57,7 @@ ms.locfileid: "86914930"
   
 10. Запишите значение идентификатора входного столбца или столбцов, которые должны проверяться компонентом скрипта на наличие ошибок. В этом примере идентификатор столбца используется для заполнения значений в столбце ErrorColumn.  
   
-11. Закройте **редактор преобразования "Скрипт"** .  
+11. Закройте **редактор преобразования "Скрипт"**.  
   
 12. Соедините выходы компонента скрипта с подходящими назначениями. Назначение «Неструктурированный файл» проще всего для настройки тестирования в нерегламентированных случаях.  
   
@@ -103,7 +104,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обработка ошибок в данных](../../integration-services/data-flow/error-handling-in-data.md)   
  [Использование выводов ошибок в компоненте потока данных](../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)   
  [Создание синхронного преобразования с помощью компонента скрипта](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  

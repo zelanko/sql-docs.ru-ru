@@ -1,4 +1,5 @@
 ---
+description: Продолжительность цикла продукта
 title: Длина цикла продукта | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d08d886-6d8b-40fd-8544-13032f4bf6c7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3d235146ffe1b4699f0064c5772407bcf40ae962
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1484079a09d10864e0563db95208e926a959d6d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306197"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476586"
 ---
 # <a name="length-of-the-product-cycle"></a>Продолжительность цикла продукта
 Последний вопрос о взаимодействии — время. Разработка взаимодействующего приложения обычно занимает больше времени, чем разработка нонинтероперабле. Причина заключается в том, что приложение должно проверять возможности СУБД, выполнять одни и те же задачи по-разному для разных СУБД, обойти функции, поддерживаемые некоторыми СУБД, но не другими, и т. д.  

@@ -1,4 +1,5 @@
 ---
+description: Filter (тип данных geography)
 title: Filter (тип данных geography) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 82a8f54a-3a47-4e20-b13a-b148029c5448
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: feb6c65ca3263e1ca5c26db21a1350285539d785
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 4a5e5ff41504184bd8c1aa0805267f38566b5162
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555217"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479365"
 ---
 # <a name="filter-geography-data-type"></a>Filter (тип данных geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "86555217"
   
  Возвращает значение 1, если экземпляр **geography** потенциально пересекается с другим экземпляром **geography**. В результате этого метода может появиться ложный положительный результат, а точный результат может зависеть от плана. Возвращает точное значение 0 (истинный отрицательный результат), если пересечение экземпляров **geography** не обнаружено.  
   
- Если индекс недоступен или не используется, этот метод возвращает те же значения, что и метод **STIntersects()** , при вызове с одинаковыми параметрами.  
+ Если индекс недоступен или не используется, этот метод возвращает те же значения, что и метод **STIntersects()**, при вызове с одинаковыми параметрами.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -52,7 +53,7 @@ ms.locfileid: "86555217"
   
  Тип возвращаемых данных CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Этот метод не является детерминированным или точным.  
   
 ## <a name="examples"></a>Примеры  
@@ -74,7 +75,7 @@ WHERE g.Filter(geography::Parse(
    'POLYGON((-120.1 44.9, -119.9 44.9, -119.9 45.1, -120.1 45.1, -120.1 44.9))')) = 1;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширенные методы в экземплярах Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [STIntersects (тип данных geography)](../../t-sql/spatial-geography/stintersects-geography-data-type.md)  
   

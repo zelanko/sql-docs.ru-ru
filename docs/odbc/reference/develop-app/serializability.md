@@ -1,4 +1,5 @@
 ---
+description: Возможность сериализации
 title: Возможности сериализации | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 142e4ac0-2977-4a2b-96ae-c9e5bd2c448a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0557e011578d313765614c05a2a9cf1b975bbc08
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b627d24b16e0bae4a117dba38de8cc1755feadac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304165"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476446"
 ---
 # <a name="serializability"></a>Возможность сериализации
 В идеале транзакции должны быть *сериализуемыми*. Транзакции называются сериализуемыми, если результаты выполняющихся транзакций совпадают с результатами их выполнения последовательно, то есть один за другим. Неважно, какая транзакция выполняется первой, только что результат не отражает никакой смешивания транзакций.  

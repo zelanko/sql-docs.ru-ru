@@ -1,4 +1,5 @@
 ---
+description: Отправка данных типа Long
 title: Отправка длинных данных | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ea989084-a8e6-4737-892e-9ec99dd49caf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: aeeeb716aa2f9a72338f3aeb586dffce86f84069
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f6a0ec1a7e8dc703d3e7a3ed5332d20e6539eafe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304185"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476466"
 ---
 # <a name="sending-long-data"></a>Отправка данных типа Long
 СУБД определяет *длинные данные* как любые символьные или двоичные данные определенного размера, например 254 символов. Сохранение в памяти всего элемента длинных данных может оказаться невозможным, например, когда элемент представляет длинный текстовый документ или точечный рисунок. Так как такие данные не могут храниться в одном буфере, источник данных отправляет его драйверу в частях с **SQLPutData** при выполнении инструкции. Параметры, для которых данные отправляются во время выполнения, называются *параметрами выполнения*.  

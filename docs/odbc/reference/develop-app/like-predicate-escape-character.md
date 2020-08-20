@@ -1,4 +1,5 @@
 ---
+description: Escape-символ предиката LIKE
 title: Escape-символ предиката LIKE | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 185d6109-48cf-4981-bc40-ec2a4a90cafc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2e4f04b12911145eede3354532736cb92f1ae413
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5304068e21dd6faf0e737a94add0cce177c4dabc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306155"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476556"
 ---
 # <a name="like-predicate-escape-character"></a>Escape-символ предиката LIKE
 В предикате **Like** знак процента (%) соответствует нулю или нескольким символам, а символ подчеркивания (_) соответствует любому символу. Чтобы сопоставить фактический знак процента или символ подчеркивания в предикате **Like** , перед знаком процента или символом подчеркивания должна быть escape-последовательность. Escape-символ предиката LIKE, который определяет **подобную** последовательность:  

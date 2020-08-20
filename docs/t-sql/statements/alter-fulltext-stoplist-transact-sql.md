@@ -1,4 +1,5 @@
 ---
+description: ALTER FULLTEXT STOPLIST (Transact-SQL)
 title: ALTER FULLTEXT STOPLIST (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f6ad87d5-6a34-435a-8456-8244947c5c83
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e22cb4fcd9d87c68b54d071d5877f564a2c72540
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 8a7105e0f5360144594d215063b6a2f91590e54c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301852"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479123"
 ---
 # <a name="alter-fulltext-stoplist-transact-sql"></a>ALTER FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -65,9 +66,9 @@ ALTER FULLTEXT STOPLIST stoplist_name
   
  Аргумент *language_term* может быть указан как строка, целое или шестнадцатеричное значение, соответствующее коду локали (LCID) следующим образом.  
   
-|Формат|Description|  
+|Формат|Описание|  
 |------------|-----------------|  
-|String|Аргумент *language_term* соответствует значению столбца **alias** в представлении совместимости [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). Строка должна быть заключена в одиночные кавычки: **'***language_term***'** .|  
+|Строка|Аргумент *language_term* соответствует значению столбца **alias** в представлении совместимости [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). Строка должна быть заключена в одиночные кавычки: **'***language_term***'** .|  
 |Целое число|Аргумент *language_term* представляет собой код языка.|  
 |Шестнадцатеричный|Аргумент *language_term* состоит из 0x со следующим шестнадцатеричным значением кода языка. Шестнадцатеричное значение не может иметь более восьми знаков, включая начальные нули. Если значение указано в формате двухбайтовой кодировки (DBCS), SQL Server преобразует его в Юникод.|  
   
@@ -88,7 +89,7 @@ ALTER FULLTEXT STOPLIST stoplist_name
  ALL  
  Удаляет все стоп-слова из списка стоп-слов.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Инструкция CREATE FULLTEXT STOPLIST поддерживается только для уровня совместимости 100 и выше. Для уровней совместимости 80 и 90 системный список стоп-слов всегда назначается базе данных.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -102,12 +103,12 @@ ALTER FULLTEXT STOPLIST CombinedFunctionWordList ADD 'en' LANGUAGE 'Spanish';
 ALTER FULLTEXT STOPLIST CombinedFunctionWordList ADD 'en' LANGUAGE 'French';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE FULLTEXT STOPLIST (Transact-SQL)](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
  [DROP FULLTEXT STOPLIST (Transact-SQL)](../../t-sql/statements/drop-fulltext-stoplist-transact-sql.md)   
  [Настройка стоп-слов, списков стоп-слов и управление ими для полнотекстового поиска](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
  [sys.fulltext_stoplists (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
  [sys.fulltext_stopwords (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)   
- [Настройка стоп-слов, списков стоп-слов и управление ими для полнотекстового поиска](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)  
+ [Настройка и управление стоп-словами и списками стоп-слов для полнотекстового поиска](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)  
   
   

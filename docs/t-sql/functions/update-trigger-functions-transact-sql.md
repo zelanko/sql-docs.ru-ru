@@ -1,4 +1,5 @@
 ---
+description: Функции триггера — UPDATE (Transact-SQL)
 title: UPDATE() (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 528f02ccc8e341700b64cc0a73e0e3185d16a8ee
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e9764fc038eba85f9f31a68bd101c2f079d75069
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113260"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479554"
 ---
 # <a name="update---trigger-functions-transact-sql"></a>Функции триггера — UPDATE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,9 +54,9 @@ UPDATE ( column )
  Это имя столбца для проверки на действие INSERT или UPDATE. Так как имя столбца указано в предложении триггера ON, не ставьте имя таблицы перед именем столбца. Столбец может иметь любой [тип данных](../../t-sql/data-types/data-types-transact-sql.md), поддерживаемый [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Однако вычисляемые столбцы не могут использоваться в данном контексте.  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
- Логическое  
+ Логическое значение  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Функция UPDATE() возвращает TRUE независимо от того, была ли попытка применить операторы INSERT или UPDATE удачной.  
   
  Чтобы проверить действие операторов INSERT или UPDATE для нескольких столбцов, укажите отдельно предложение UPDATE(*column*), следующее за первым предложением. Несколько столбцов также могут быть проверены на действие INSERT или UPDATE при помощи COLUMNS_UPDATED. В результате возвращается битовый шаблон, который указывает на то, какие столбцы были вставлены или обновлены.  
@@ -95,7 +96,7 @@ WHERE PostalCode = '12345';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [COLUMNS_UPDATED (Transact-SQL)](../../t-sql/functions/columns-updated-transact-sql.md)   
  [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)  
   

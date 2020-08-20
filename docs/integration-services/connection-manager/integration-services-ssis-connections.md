@@ -1,4 +1,5 @@
 ---
+description: Соединения в службах Integration Services (SSIS)
 title: Соединения служб Integration Services (SSIS) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 29ecedb74759b3290ff5fb391b95048aeaba5e8d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 07b2ffa19412e46b555c9ef8b77372f1b401ea57
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923160"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477952"
 ---
 # <a name="integration-services-ssis-connections"></a>Соединения в службах Integration Services (SSIS)
 
@@ -83,7 +84,7 @@ ms.locfileid: "86923160"
 ### <a name="built-in-connection-managers"></a>Встроенные диспетчеры соединений  
  В следующей таблице перечислены типы диспетчеров соединений, предоставляемые службами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Тип|Description|Раздел|  
+|Тип|Описание|Раздел|  
 |----------|-----------------|-----------|  
 |ADO|Подключается к объектам данных ActiveX (ADO).|[Диспетчер подключений объектов данных ActiveX](../../integration-services/connection-manager/ado-connection-manager.md)|  
 |ADO.NET|Подключается к источнику данных при помощи поставщика .NET.|[Диспетчер подключений ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md)|  
@@ -111,7 +112,7 @@ ms.locfileid: "86923160"
 > [!IMPORTANT]  
 >  Перечисленные в следующей таблице диспетчеры соединений работают только с выпусками [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] и [!INCLUDE[ssDeveloperEd11](../../includes/ssdevelopered11-md.md)].  
   
-|Тип|Description|Раздел|  
+|Тип|Описание|Раздел|  
 |----------|-----------------|-----------|  
 |ORACLE|Подключение к серверу Oracle \<version info\>.|Диспетчер соединений Oracle — это компонент диспетчера соединений соединителя для Oracle [!INCLUDE[msCoName](../../includes/msconame-md.md)] компании Attunity. Кроме того, в состав соединителя для Oracle [!INCLUDE[msCoName](../../includes/msconame-md.md)] компании Attunity входят источник и назначение. Дополнительные сведения см. на странице загрузки [Microsoft Connectors for Oracle and Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=55179)(на английском языке).|  
 |SAPBI|Подключается к системе SAP NetWeaver BI версии 7.|Диспетчер соединений SAP BI — это компонент диспетчера соединений соединителя для SAP BI [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Кроме того, в состав соединителя для SAP BI [!INCLUDE[msCoName](../../includes/msconame-md.md)] входят источник и назначение. Дополнительные сведения см. на странице загрузки [Microsoft SQL Server 2008 Feature Pack](https://www.microsoft.com/download/details.aspx?id=30440)(на английском языке).|  

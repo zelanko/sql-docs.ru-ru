@@ -1,4 +1,5 @@
 ---
+description: DROP PARTITION FUNCTION (Transact-SQL)
 title: DROP PARTITION FUNCTION (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: a4bb055a-a538-4db9-a6fb-550d1eabfa18
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ae5aa5282e80b251f3a52479f8a7dc3437fd9a52
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: ea740dbe07a8700baa9ae8db8b188cf9854cd58a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483977"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478857"
 ---
 # <a name="drop-partition-function-transact-sql"></a>DROP PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +49,7 @@ DROP PARTITION FUNCTION partition_function_name [ ; ]
  *partition_function_name*  
  Имя функции секционирования, которую необходимо удалить.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Функцию секционирования можно удалить лишь в том случае, когда ни одна из схем секционирования на момент удаления не использует эту функцию. Если схемы секционирования используют функцию секционирования, инструкция DROP PARTITION FUNCTION возвратит ошибку.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -67,7 +68,7 @@ DROP PARTITION FUNCTION partition_function_name [ ; ]
 DROP PARTITION FUNCTION myRangePF;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE PARTITION FUNCTION (Transact-SQL)](../../t-sql/statements/create-partition-function-transact-sql.md)   
  [ALTER PARTITION FUNCTION (Transact-SQL)](../../t-sql/statements/alter-partition-function-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   

@@ -1,4 +1,5 @@
 ---
+description: DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)
 title: DECRYPTBYKEYAUTOASYMKEY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 09/09/2015
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5521d4cf-740c-4ede-98b6-4ba90b84e32d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 48e2f2c50c06c429b07bb67380b3c43509b82ccc
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7ceee96130e9ec4fef0f50b493944f71d68e6eff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111632"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479699"
 ---
 # <a name="decryptbykeyautoasymkey-transact-sql"></a>DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -136,7 +137,7 @@ SELECT NationalIDNumber, EncryptedNationalIDNumber2
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [OPEN SYMMETRIC KEY (Transact-SQL)](../../t-sql/statements/open-symmetric-key-transact-sql.md)   
  [ENCRYPTBYKEY (Transact-SQL)](../../t-sql/functions/encryptbykey-transact-sql.md)   
  [DECRYPTBYKEY (Transact-SQL)](../../t-sql/functions/decryptbykey-transact-sql.md)   

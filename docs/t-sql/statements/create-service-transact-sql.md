@@ -1,4 +1,5 @@
 ---
+description: CREATE SERVICE (Transact-SQL)
 title: CREATE SERVICE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5fb4e378dcba2a125c569d8fa96a1d279e88d724
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 9ceb3cfbae19670789d7dc8776805b14b463a059
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484558"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478925"
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -57,7 +58,7 @@ CREATE SERVICE service_name
  AUTHORIZATION *owner_name*  
  Определяет в качестве владельца службы указанного пользователя или роль базы данных. Если текущим пользователем является **dbo** или **sa**, то аргумент *owner_name* может быть именем любого допустимого пользователя или роли. В противном случае аргумент *owner_name* должен быть именем текущего пользователя, именем пользователя, для которого у текущего пользователя есть разрешение IMPERSONATE, или именем роли, которой принадлежит текущий пользователь.  
   
- ON QUEUE [ _schema_name_ **.** ] *queue_name*  
+ ON QUEUE [ _schema_name_**.** ] *queue_name*  
  Указывает очередь, в которую поступают сообщения для службы. Очередь должна существовать в той же самой базе данных, что и служба. Если имя схемы *schema_name* не указано, используется схема по умолчанию пользователя, выполняющего инструкцию.  
   
  *contract_name*  
@@ -66,7 +67,7 @@ CREATE SERVICE service_name
  **[** DEFAULT **]**  
  Указывает, что служба может быть целью для диалогов, которые следуют контракту DEFAULT. В контексте данного предложения слово DEFAULT не является ключевым словом и должно быть отделено как идентификатор. Контракт DEFAULT разрешает обеим сторонам диалога отправлять сообщения с типом сообщения DEFAULT. Тип сообщений DEFAULT не использует проверку.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Служба раскрывает функциональность, обеспечиваемую контрактами, с которыми она связана, так что они могут быть использованы другими службами. Инструкция `CREATE SERVICE` указывает контракты, для которых эта служба является целью. Службы могут быть целью только для диалогов, которые используют контракты, указанные службой. Служба, для которой не указаны контракты, не раскрывает функциональность другим службам.  
   
  Диалоги, инициированные такой службой, могут использовать любой контракт. Если служба только инициирует диалоги, ее можно создавать без определения контрактов.  
@@ -107,7 +108,7 @@ CREATE SERVICE [//Adventure-Works.com/Expenses] ON QUEUE ExpenseQueue
 CREATE SERVICE [//Adventure-Works.com/Expenses] ON QUEUE ExpenseQueue ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ALTER SERVICE (Transact-SQL)](../../t-sql/statements/alter-service-transact-sql.md)   
  [DROP SERVICE (Transact-SQL)](../../t-sql/statements/drop-service-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  

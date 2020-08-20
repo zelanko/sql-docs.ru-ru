@@ -1,4 +1,5 @@
 ---
+description: FILE_NAME (Transact-SQL)
 title: FILE_NAME (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 68b298aa-ce47-4af5-b59f-9a1b46d48326
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8f47e9c58921cbbf473295e62cc78f9bbd99f714
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 4f6a8a9625582bd40b988f787bfdd6201bb2b747
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112455"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479706"
 ---
 # <a name="file_name-transact-sql"></a>FILE_NAME (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +55,7 @@ FILE_NAME ( file_id )
 ## <a name="return-types"></a>Типы возвращаемых данных  
 **nvarchar(128)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
 *file_ID* соответствует столбцу file_id в представлениях каталога sys.master_files или sys.database_files.  
   
 ## <a name="examples"></a>Примеры  
@@ -75,7 +76,7 @@ AdventureWorks2012_Data    AdventureWorks2012_Log
 (1 row(s) affected)
 ``` 
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [FILE_IDEX (Transact-SQL)](../../t-sql/functions/file-idex-transact-sql.md)   
  [Функции метаданных (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   

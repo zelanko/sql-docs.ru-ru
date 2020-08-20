@@ -1,4 +1,5 @@
 ---
+description: Инструкции RESTORE — FILELISTONLY (Transact-SQL)
 title: RESTORE FILELISTONLY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/30/2018
@@ -22,12 +23,12 @@ ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a81543096bb698bfba3ab7561ca65de73914692d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: f72bc6a3a67f73fc7ab44e94514f7db7b6a905a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635730"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478768"
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>Инструкции RESTORE — FILELISTONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -86,9 +87,9 @@ FROM <backup_device>
 ## <a name="result-sets"></a>Результирующие наборы  
  Клиент может использовать RESTORE FILELISTONLY для получения списка файлов, содержащихся в резервном наборе данных. Эти данные возвращаются как результирующий набор, содержащий одну строку для каждого файла.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-|-|-|  
-|LogicalName|**nvarchar(128)**|Логическое имя файла.|  
+|ЛогическоеИмя|**nvarchar(128)**|Логическое имя файла.|  
 |PhysicalName|**nvarchar(260)**|Физическое имя или имя файла в операционной системе.|  
 |Тип|**char(1)**|Тип файла:<br /><br /> **L** = файл журнала Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **D** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] файл данных<br /><br /> **F** = полнотекстовый каталог<br /><br /> **S** = файловый поток, FileTable или контейнер [!INCLUDE[hek_2](../../includes/hek-2-md.md)]|  
 |FileGroupName|**nvarchar(128)** NULL|Имя файловой группы, в которую входит файл.|  
@@ -111,7 +112,7 @@ FROM <backup_device>
 |TDEThumbprint|**varbinary(32)** NULL|Показывает отпечаток ключа шифрования базы данных. Отпечатком шифратора является хэш SHA-1 сертификата, с которым шифруется ключ. Дополнительные сведения о шифровании баз данных см. в статье [Прозрачное шифрование данных (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md).|  
 |SnapshotURL|**nvarchar(360)** NULL|URL-адрес моментального снимка Azure файла базы данных, содержащегося в резервной копии FILE_SNAPSHOT. Возвращает значение NULL, если резервная копия FILE_SNAPSHOT отсутствует.|  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
  В операции создания резервной копии могут дополнительно указываться пароли для набора носителей, резервного набора данных или и того и другого. Если для набора носителей или резервного набора данных установлен пароль, то в инструкции RESTORE необходимо указывать правильные пароли. Эти пароли предотвращают несанкционированные операции восстановления и присоединения резервных наборов данных к носителю при помощи инструментов [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Однако пароль не запрещает перезапись носителей с помощью параметра FORMAT инструкции BACKUP.  
   
 > [!IMPORTANT]  

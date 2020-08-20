@@ -1,4 +1,5 @@
 ---
+description: Настройка выходов при помощи мастера медленно изменяющихся измерений
 title: Настройка выходов с помощью мастера медленно изменяющихся измерений | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7120a86d04a21f448d423719fa7d963658a2774a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 09e71583c11366ca4aa7356b923b8d0f576081f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922470"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477780"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>Настройка выходов при помощи мастера медленно изменяющихся измерений
 
@@ -83,7 +84,7 @@ ms.locfileid: "86922470"
 ## <a name="updating-slowly-changing-dimension-outputs"></a>Обновление выходов медленно изменяющегося измерения  
  Чтобы обновить конфигурацию выходов преобразования «Медленно изменяющиеся измерения», вернитесь в мастер медленно изменяющихся измерений и измените свойства на его страницах. Также преобразование «Медленно изменяющееся измерение» можно обновить с помощью диалогового окна **Расширенный редактор** или программно.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Преобразование "Медленно изменяющееся измерение"](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
   
   

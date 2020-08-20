@@ -1,4 +1,5 @@
 ---
+description: Управляемые ключевым набором курсоры
 title: Курсоры, управляемые набором ключей | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 01769f43-1d9c-4685-84fa-15a6465335e9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 814fca7d48f50aab51b6b4f7e34835be8c412e9c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7c34432481eeafd6bed938dcd1275e33583d33cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306209"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476596"
 ---
 # <a name="keyset-driven-cursors"></a>Управляемые ключевым набором курсоры
 Курсор, управляемый набором ключей, находится между статическим и динамическим курсором в возможности обнаружения изменений. Так же как статический курсор, он не всегда обнаруживает изменения, внесенные в членство и порядок элементов результирующего набора. Как и динамический курсор, он обнаруживает изменения значений строк в результирующем наборе (в зависимости от уровня изоляции транзакции, заданного атрибутом подключения SQL_ATTR_TXN_ISOLATION).  

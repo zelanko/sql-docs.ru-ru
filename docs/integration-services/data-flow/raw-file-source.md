@@ -1,4 +1,5 @@
 ---
+description: источник «Необработанный файл»
 title: Источник "Необработанный файл" | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cd61425f63f4124951c8c0c90c6c599292602c23
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b19fb7a9ab60f5f89a12ab3311c39f0611d233f8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916047"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477876"
 ---
 # <a name="raw-file-source"></a>источник «Необработанный файл»
 
@@ -63,7 +64,7 @@ ms.locfileid: "86916047"
   Источник «Необработанный файл» считывает необработанные данные из файла. Поскольку данные представлены в собственном формате источника, их преобразование не требуется. Также практически не требуется синтаксический анализ.   
 ## <a name="raw-file-source-editor-columns-page"></a>Редактор источника «Необработанный файл»  (страница "Столбцы")
   Источник «Необработанный файл» считывает необработанные данные из файла. Поскольку данные представлены в собственном формате источника, их преобразование не требуется. Также практически не требуется синтаксический анализ.   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Raw File Destination](../../integration-services/data-flow/raw-file-destination.md)   
  [Поток данных](../../integration-services/data-flow/data-flow.md)  
   

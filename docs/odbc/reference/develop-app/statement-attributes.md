@@ -1,4 +1,5 @@
 ---
+description: Атрибуты инструкции
 title: Атрибуты инструкции | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4c59cd8e-a713-4095-9065-20d5bdeafe43
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ec24cc43e8c57e47ddda9f20fac1807f42453e84
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8e2106a952bfdd7945d5d11ddde39138d0c82a14
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299647"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476356"
 ---
 # <a name="statement-attributes"></a>Атрибуты инструкции
 Атрибуты инструкции являются характеристиками инструкции. Например, следует ли использовать закладки и какой тип курсора будет использоваться с результирующим набором инструкции, это атрибуты инструкции.  

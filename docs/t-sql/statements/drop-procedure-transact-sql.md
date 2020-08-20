@@ -1,4 +1,5 @@
 ---
+description: DROP PROCEDURE (Transact-SQL)
 title: DROP PROCEDURE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 05/11/2017
@@ -25,12 +26,12 @@ ms.assetid: 1c2d7235-7b9b-4336-8f17-429e7d82c2c3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c97f61aa00ba7242f6d02920fda91949adbff1c6
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: a47efce8d5daf789088b8beca4ad9576e1651958
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484132"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478872"
 ---
 # <a name="drop-procedure-transact-sql"></a>DROP PROCEDURE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -73,7 +74,7 @@ DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }
 ## <a name="metadata"></a>Метаданные  
  Для отображения списка существующих процедур запросите представление каталога **sys.objects**. Для отображения определения процедуры выполните запрос к представлению каталога **sys.sql_modules**.  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  Необходимо разрешение **CONTROL** для процедуры, разрешение **ALTER** для схемы, которой принадлежит процедура, либо членство в предопределенной роли сервера **db_ddladmin**.  
@@ -81,20 +82,20 @@ DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }
 ## <a name="examples"></a>Примеры  
  В следующем примере хранимая процедура `dbo.uspMyProc` удаляется из текущей базы данных.  
   
-```  
+```sql  
 DROP PROCEDURE dbo.uspMyProc;  
 GO  
 ```  
   
  В следующем примере из текущей базы данных удаляются несколько хранимых процедур.  
   
-```  
+```sql  
 DROP PROCEDURE dbo.uspGetSalesbyMonth, dbo.uspUpdateSalesQuotes, dbo.uspGetSalesByYear;  
 ```  
   
  В приведенном ниже примере удаляется хранимая процедура `dbo.uspMyProc`, если она существует, но если она не существует, ошибка не возникает. Этот синтаксис является новым в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   
-```  
+```sql  
 DROP PROCEDURE IF EXISTS dbo.uspMyProc;  
 GO  
 ```  

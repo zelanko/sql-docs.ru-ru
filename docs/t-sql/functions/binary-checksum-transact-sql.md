@@ -1,4 +1,5 @@
 ---
+description: BINARY_CHECKSUM (Transact-SQL)
 title: BINARY_CHECKSUM (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/24/2017
@@ -19,12 +20,12 @@ ms.assetid: 07fece4d-58e3-446e-a3b5-92fe24d2d1fb
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dbf7006b435dc9012fc98fcd103a88e03471d65f
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 922f1da9e2988f5bf6a316101bad175dbe46b2b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87397128"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479745"
 ---
 # <a name="binary_checksum--transact-sql"></a>BINARY_CHECKSUM (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -72,13 +73,13 @@ BINARY_CHECKSUM ( * | expression [ ,...n ] )
 * **nvarchar**  
 * **varchar**  
 
-или диспетчер конфигурации служб  
+или  
 
 * **sql_variant** (если базовым типом для **sql_variant** является строковый тип данных).  
   
 Например, для строк McCavity и Mccavity функция `BINARY_CHECKSUM` возвращает разные значения. Однако при использовании функции `CHECKSUM` на сервере, нечувствительном к регистру, значения контрольных сумм для данных строк совпадают. Следует избегать сравнения значения `CHECKSUM` со значением `BINARY_CHECKSUM`.
  
-Функция `BINARY_CHECKSUM` поддерживает любую длину типа **varbinary(max)** и до 255 символов типа **nvarchar(max)** .
+Функция `BINARY_CHECKSUM` поддерживает любую длину типа **varbinary(max)** и до 255 символов типа **nvarchar(max)**.
   
 ## <a name="examples"></a>Примеры  
 В этом примере для выявления изменений в строке таблицы используется функция `BINARY_CHECKSUM`.
@@ -98,7 +99,7 @@ SELECT BINARY_CHECKSUM(*) from myTable;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 [Агрегатные функции (Transact-SQL)](../../t-sql/functions/aggregate-functions-transact-sql.md)  
 [CHECKSUM_AGG (Transact-SQL)](../../t-sql/functions/checksum-agg-transact-sql.md)  
 [CHECKSUM (Transact-SQL)](../../t-sql/functions/checksum-transact-sql.md)  

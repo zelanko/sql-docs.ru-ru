@@ -1,4 +1,5 @@
 ---
+description: Переходы состояния
 title: Переходы состояния | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fc741611-6535-43cc-8156-6d897d04664e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3a480b7ff8953ef94f0efc4886a09731730a61b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 947be49fc0a77f94c1641bb7c735db3276b49f58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299697"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476366"
 ---
 # <a name="state-transitions"></a>Переходы состояния
 ODBC определяет дискретные *состояния* для каждой среды, каждого соединения и каждой инструкции. Например, у среды есть три возможных состояния: не распределено (в которых не выделяется среда), выделяется (в котором выделяется среда, но не выделяются подключения) и подключение (в котором выделяется среда и одно или несколько подключений). Подключения имеют семь состояний; инструкции имеют 13 возможных состояний.  

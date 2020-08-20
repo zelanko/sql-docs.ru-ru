@@ -1,4 +1,5 @@
 ---
+description: Преобразование «Уточняющий запрос»
 title: Преобразование "Уточняющий запрос" | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b1c65cf892c36f04ac0669d5e011c6c54c434c09
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6c37948d8af3aac4b78055f50e29aeb88f238bab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919290"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477708"
 ---
 # <a name="lookup-transformation"></a>Преобразование «Уточняющий запрос»
 
@@ -90,7 +91,7 @@ ms.locfileid: "86919290"
   
  Сохранение кэша в файл имеет следующие преимущества.  
   
--   ***Совместное использование файла кэша несколькими пакетами. Дополнительные сведения см в разделе***  [Реализация преобразования "Уточняющий запрос" в режиме полного кэширования с помощью преобразования диспетчера соединений с кэшем](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md) ***.***  
+-   ***Совместное использование файла кэша несколькими пакетами. Дополнительные сведения см в разделе***  [Реализация преобразования "Уточняющий запрос" в режиме полного кэширования с помощью преобразования диспетчера соединений с кэшем](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***.***  
   
 -   Развертывание кэш-файла с пакетом. ***Затем эти данные можно использовать на нескольких компьютерах.*** Дополнительные сведения см. в разделе [Создание или развертывание кэша для преобразования "Уточняющий запрос"](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md).  
   
@@ -124,21 +125,21 @@ ms.locfileid: "86919290"
 ## <a name="related-tasks"></a>Связанные задачи  
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../../includes/ssis-md.md)] или программными средствами. Дополнительные сведения см. в следующих разделах.  
   
--   [Реализация уточняющего запроса в режиме "Частичное кэширование" или "Без кэширования"](../../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
+-   [Реализация уточняющего запроса в режиме «Частичное кэширование» или «Без кэширования»](../../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
   
--   [Реализация преобразования "Уточняющий запрос" в режиме полного кэширования с помощью преобразования диспетчера подключений с кэшем](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
+-   [Реализация преобразования "Уточняющий запрос" в режиме полного кэширования с помощью преобразования диспетчера соединений с кэшем](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
--   [Реализация преобразования "Уточняющий запрос" в режиме полного кэширования с помощью диспетчера соединений OLE DB](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
+-   [Реализация преобразования «Уточняющий запрос» в режиме полного кэширования с помощью диспетчера соединений OLE DB](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
   
 -   [Установление свойств компонента потока данных](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>См. также  
   
--   Видео с руководством по [ реализации преобразования "Уточняющий запрос" в режиме полного кэширования](https://go.microsoft.com/fwlink/?LinkId=131031) на сайте msdn.microsoft.com.  
+-   Видеоролик [Как реализовать преобразование «Уточняющий запрос» в режиме полного кэширования](https://go.microsoft.com/fwlink/?LinkId=131031)на сайте msdn.microsoft.com  
   
 -   Запись в блоге, [Рекомендации по использованию режимов кэширования для преобразования «Уточняющий запрос»](https://go.microsoft.com/fwlink/?LinkId=146623), на сайте blogs.msdn.com  
   
--   Запись в блоге [Lookup Pattern: Case Insensitive](https://go.microsoft.com/fwlink/?LinkId=157782) (Шаблон уточняющего запроса: без учета регистра символов) на сайте blogs.msdn.com.  
+-   Запись в блоге [Шаблон уточняющего запроса: без учета регистра символов](https://go.microsoft.com/fwlink/?LinkId=157782)на сайте blogs.msdn.com  
   
 -   Образец, [Преобразование «Уточняющий запрос»](https://go.microsoft.com/fwlink/?LinkId=267528), на сайте msftisprodsamples.codeplex.com.  
   
@@ -197,7 +198,7 @@ ms.locfileid: "86919290"
  Выберите существующую таблицу или представление из списка или создайте новую таблицу, выбрав пункт **Создать**.  
   
 > [!NOTE]  
->  Если на странице **Дополнительно** **Редактора преобразования «Уточняющий запрос»** задать инструкцию SQL, то эта инструкция принудительно переопределит имя таблицы, выбранное там. Дополнительные сведения см. в разделе [Редактор преобразования "Уточняющий запрос" (страница "Дополнительно")](../../../integration-services/data-flow/transformations/lookup-transformation-editor-advanced-page.md).  
+>  Если на странице **Дополнительно****Редактора преобразования «Уточняющий запрос»** задать инструкцию SQL, то эта инструкция принудительно переопределит имя таблицы, выбранное там. Дополнительные сведения см. в разделе [Редактор преобразования "Уточняющий запрос" (страница "Дополнительно")](../../../integration-services/data-flow/transformations/lookup-transformation-editor-advanced-page.md).  
   
  **Создать**  
  Создайте новую таблицу с помощью диалогового окна **Создание таблицы** .  
@@ -269,7 +270,7 @@ ms.locfileid: "86919290"
  Изменить инструкцию SQL, которая используется для формирования эталонного набора данных.  
   
 > [!NOTE]  
->  Дополнительная инструкция SQL, которую можно указать на этой странице, заменяет имя таблицы, указанное на странице **Соединение** **Редактора преобразования «Уточняющий запрос»** . Дополнительные сведения см. в разделе [Редактор преобразования "Уточняющий запрос" (страница "Соединение")](../../../integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md).  
+>  Дополнительная инструкция SQL, которую можно указать на этой странице, заменяет имя таблицы, указанное на странице **Соединение****Редактора преобразования «Уточняющий запрос»**. Дополнительные сведения см. в разделе [Редактор преобразования "Уточняющий запрос" (страница "Соединение")](../../../integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md).  
   
  **Задать параметры**  
  Сопоставить входные столбцы с параметрами, используя диалоговое окно **Установка параметров запроса** .  
@@ -277,7 +278,7 @@ ms.locfileid: "86919290"
 ### <a name="external-resources"></a>Внешние ресурсы  
  Запись в блоге [Режимы кэша уточняющих запросов](https://go.microsoft.com/fwlink/?LinkId=219518) на сайте blogs.msdn.com  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Преобразование «Нечеткий уточняющий запрос»](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
  [Преобразование "Уточняющий запрос термина"](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)   
  [Поток данных](../../../integration-services/data-flow/data-flow.md)   

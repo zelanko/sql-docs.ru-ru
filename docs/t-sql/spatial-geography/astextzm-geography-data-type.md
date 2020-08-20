@@ -1,4 +1,5 @@
 ---
+description: AsTextZM (тип данных geography)
 title: AsTextZM (тип данных geography) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e9dc27f6-e945-4457-8498-7644db34008e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 20bcc248f04e5f432cb99ba83640f34e436fb3c5
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 49857a94c95240386893854408d2b26cba533815
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555526"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479426"
 ---
 # <a name="astextzm-geography-data-type"></a>AsTextZM (тип данных geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +58,7 @@ SELECT @g.STAsText();
 SELECT @g.AsTextZM();  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширенные методы в экземплярах Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [M (тип данных geography)](../../t-sql/spatial-geography/m-geography-data-type.md)   
  [Z (тип данных geography)](../../t-sql/spatial-geography/z-geography-data-type.md)  

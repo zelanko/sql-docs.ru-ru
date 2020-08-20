@@ -1,4 +1,5 @@
 ---
+description: TRIM (Transact-SQL)
 title: TRIM (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/27/2019
@@ -18,12 +19,12 @@ ms.assetid: a00245aa-32c7-4ad4-a0d1-64f3d6841153
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azure-sqldw-latest||=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3d17b3012e68e08af24ea1fe2b93cb02f206a69a
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 8d0f81ad846185978a73bfcc1de75f33b83c5ca0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113298"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479510"
 ---
 # <a name="trim-transact-sql"></a>TRIM (Transact-SQL)
 
@@ -55,7 +56,7 @@ string — выражение любого символьного типа (`nva
 
 Возвращает символьное выражение с типом аргумента string, в котором символ пробела `char(32)` или другие заданные символы удалены с обеих сторон. Возвращает `NULL`, если входная строка равна `NULL`.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 
 По умолчанию функция `TRIM` удаляет символ пробела как в начале, так и в конце строки. Такая реакция на событие эквивалентна `LTRIM(RTRIM(@string))`.
 

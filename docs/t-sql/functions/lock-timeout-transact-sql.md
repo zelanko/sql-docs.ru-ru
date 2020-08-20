@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;LOCK_TIMEOUT (Transact-SQL)'
 title: '@@LOCK_TIMEOUT (Transact-SQL) | Документы Майкрософт'
 ms.custom: ''
 ms.date: 09/19/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6bf8bf97-60b8-40c1-b89d-8f5a00bcae2e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aa8f92f7820954a6bc59e3843f2ba62f80ffe9b0
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 9e52cf67e220c6ff9a1b15b837ad037e2be83679
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110888"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479652"
 ---
 # <a name="x40x40lock_timeout-transact-sql"></a>&#x40;&#x40;LOCK_TIMEOUT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "87110888"
 ## <a name="return-types"></a>Типы возвращаемых данных
  **integer**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Инструкция SET LOCK_TIMEOUT позволяет установить в приложении максимальное время ожидания заблокированного ресурса. Если ожидание длится дольше значения LOCK_TIMEOUT, инструкция автоматически отменяется, а приложению возвращается сообщение об ошибке.  
   
  Функция @@LOCK_TIMEOUT возвращает значение –1 в случае, если в текущем сеансе этот параметр еще не был задан с помощью вызова SET LOCK_TIMEOUT.  
@@ -82,7 +83,7 @@ Lock Timeout
 1800          
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции настройки (Transact-SQL)](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [SET LOCK_TIMEOUT (Transact-SQL)](../../t-sql/statements/set-lock-timeout-transact-sql.md)  
   

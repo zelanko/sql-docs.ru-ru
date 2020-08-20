@@ -1,4 +1,5 @@
 ---
+description: ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 title: ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 04/20/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 876b6348-fb29-49e1-befc-4217979f6416
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bf3324633d8c30af7a8174438efddbd0bb78d146
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: efef9df2254c9f0c27e23733e24afaddf23f4435
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301995"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479215"
 ---
 # <a name="alter-cryptographic-provider-transact-sql"></a>ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +55,7 @@ ALTER CRYPTOGRAPHIC PROVIDER provider_name
  ENABLE | DISABLE  
  Включает или отключает поставщик.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Если поставщик изменяет DLL-файл, используемый для реализации расширенного управления ключами в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], нужно использовать инструкцию ALTER CRYPTOGRAPHIC PROVIDER.  
   
  Если путь к DLL-файлу обновляется инструкцией ALTER CRYPTOGRAPHIC PROVIDER, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет следующие действия.  

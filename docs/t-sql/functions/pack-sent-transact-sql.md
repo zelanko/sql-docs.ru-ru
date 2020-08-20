@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;PACK_SENT (Transact-SQL)'
 title: '@@PACK_SENT (Transact-SQL) | Документы Майкрософт'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 8a322162-24c9-48e9-bfa4-c060e4e11dba
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: da77f0255a67c175537dd6ba5ea6030555f31c68
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 7e25d074aa561b81d5b6ea981787964eebbac189
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110850"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479627"
 ---
 # <a name="x40x40pack_sent-transact-sql"></a>&#x40;&#x40;PACK_SENT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "87110850"
 ## <a name="return-types"></a>Типы возвращаемых данных
  **integer**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Для отображения отчета, содержащего статистику по нескольким экземплярам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], включая перечень полученных и переданных пакетов, выполните процедуру **sp_monitor**.  
   
 ## <a name="examples"></a>Примеры  

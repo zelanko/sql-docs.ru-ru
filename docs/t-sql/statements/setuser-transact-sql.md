@@ -1,4 +1,5 @@
 ---
+description: SETUSER (Transact-SQL)
 title: SETUSER (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/26/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7acfac5c-9ad6-4226-b874-7add36c4ea43
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 78e081b5f684751e23efab27acac38e5413f9845
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: e542bb0ef16017744c7f5f61d7358ec66149e1e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483907"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478676"
 ---
 # <a name="setuser-transact-sql"></a>SETUSER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +54,7 @@ SETUSER [ 'username' [ WITH NORESET ] ]
  WITH NORESET  
  Указывает, что последующие инструкции SETUSER (без указания аргумента *username*) не должны восстанавливать вместо учетных данных пользователя учетные данные системного администратора или владельца базы данных.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Инструкция SETUSER может быть использована членом предопределенной роли сервера **sysadmin** или владельцем базы данных для использования учетных данных одного пользователя с целью проверки разрешений другого. Членства в предопределенной роли базы данных db_owner недостаточно.  
   
  Инструкцию SETUSER следует использовать только с пользователями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. SETUSER не поддерживается с пользователями Windows. Когда инструкция SETUSER используется для использования идентификатора другого пользователя, то все объекты, созданные олицетворяющим пользователем, переходят во владение пользователя, олицетворение которого выполняется. Например, если владелец базы данных использует идентификатор пользователя **Margaret** и создает таблицу с названием **orders**, то владельцем таблицы **orders** будет пользователь **Margaret**, а не системный администратор.  

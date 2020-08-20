@@ -1,4 +1,5 @@
 ---
+description: Пользовательские свойства назначения «Набор записей»
 title: Пользовательские свойства назначения "Набор записей" | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 1568ed6a-022c-4839-b73e-4eb49558bbc2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3cc9691c3ed3f894a5231e76870f8075d6d08f4b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2d8494479e14516ac9448498e8ec09301c6493aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916022"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477874"
 ---
 # <a name="recordset-destination-custom-properties"></a>Пользовательские свойства назначения «Набор записей»
 
@@ -26,15 +27,15 @@ ms.locfileid: "86916022"
   
  В следующей таблице описаны пользовательские свойства назначения «Набор записей». Все свойства доступны для чтения и записи.  
   
-|Имя свойства|Тип данных|Description|  
+|Имя свойства|Тип данных|Описание|  
 |-------------------|---------------|-----------------|  
-|VariableName|String|Имя переменной, содержащей набор записей ADO.|  
+|VariableName|Строка|Имя переменной, содержащей набор записей ADO.|  
   
  У ввода и входных столбцов назначения «Набор записей» нет пользовательских свойств.  
   
  Дополнительные сведения см. в статье [Recordset Destination](../../integration-services/data-flow/recordset-destination.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Общие свойства](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

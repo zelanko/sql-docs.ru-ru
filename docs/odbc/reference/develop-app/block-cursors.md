@@ -1,4 +1,5 @@
 ---
+description: Блочные курсоры
 title: Блокировать курсоры | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1a92b5d8-7c6e-4ce5-8c99-600a387026aa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fa35888ef93da9648fe6422bdc35ebf9da3a0525
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5dece0e3ecfc5ef4f3116361a202cfa2d10863ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306355"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476826"
 ---
 # <a name="block-cursors"></a>Блочные курсоры
 Многие приложения тратят значительное количество времени на перенос данных по сети. Часть этого времени посвящена переносу данных по сети, и ее часть занимается сетевыми издержками, например вызовом, сделанным драйвером для запроса строки данных. Последнее время можно уменьшить, если приложение эффективно использует *блок* или *FAT* *, которые могут* возвращать более одной строки за раз.  

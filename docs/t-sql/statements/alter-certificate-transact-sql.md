@@ -1,4 +1,5 @@
 ---
+description: ALTER CERTIFICATE (Transact-SQL)
 title: ALTER CERTIFICATE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 04/22/2019
@@ -23,12 +24,12 @@ ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest'
-ms.openlocfilehash: e983b85c4017ab282988142010770cc3f1e16378
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 20e92d37c2476663bfe203a5b83a1ca7b8a0f536
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381228"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479222"
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE (Transact-SQL)
 
@@ -107,7 +108,7 @@ ALTER CERTIFICATE certificate_name
  ACTIVE FOR BEGIN_DIALOG **=** { ON | OFF }  
  Делает сертификат доступным для инициатора диалога с компонентом [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Закрытый ключ должен соответствовать открытому ключу, заданному аргументом *certificate_name*.  
   
  Предложение DECRYPTION BY PASSWORD может быть опущено, если пароль в файле защищен паролем, равным NULL.  
@@ -164,7 +165,7 @@ ALTER CERTIFICATE Shipping15
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)  
  [DROP CERTIFICATE (Transact-SQL)](../../t-sql/statements/drop-certificate-transact-sql.md)  
  [BACKUP CERTIFICATE (Transact-SQL)](../../t-sql/statements/backup-certificate-transact-sql.md)  

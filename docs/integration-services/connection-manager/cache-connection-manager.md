@@ -1,4 +1,5 @@
 ---
+description: диспетчер соединений с кэшем
 title: Диспетчер подключения кэша | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 21cc4725f69d35043734da6d9210bac0a6b65e4d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c546eee3e6dfe71d3e554f28c467407fc5baea16
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920830"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477955"
 ---
 # <a name="cache-connection-manager"></a>диспетчер соединений с кэшем
 
@@ -124,13 +125,13 @@ ms.locfileid: "86920830"
  **Точность**  
  Задает точность для определенных типов данных столбца. Точность представляет собой количество цифр в числе. Параметр **Precision**можно изменить, если он применим к типу данных.  
   
- **Масштабирование**  
+ **Масштаб**  
  Задает масштаб для определенных типов данных столбца. Масштаб представляет собой количество цифр справа от десятичной запятой в числе. Параметр **Scale**можно изменить, если он применим к типу данных.  
   
  **Кодовая страница**  
  Задает кодовую страницу для столбца этого типа. Параметр **Code Page**можно изменить, если он применим к типу данных.  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- [Реализация преобразования "Уточняющий запрос" в режиме полного кэширования с помощью преобразования диспетчера подключений с кэшем](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
+ [Реализация преобразования "Уточняющий запрос" в режиме полного кэширования с помощью преобразования диспетчера соединений с кэшем](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
   

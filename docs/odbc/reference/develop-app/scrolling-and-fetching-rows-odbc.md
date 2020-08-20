@@ -1,4 +1,5 @@
 ---
+description: Прокрутка и выборка строк (ODBC)
 title: Прокрутка и выборка строк (ODBC) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c43764cb-5841-4b89-9dc0-984a7488b3c1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 72d262bf73e69388f65ff281e62235d2d831669e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b6fcdd2cd635a7da66a5d81c4beb24088f96382b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304205"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476496"
 ---
 # <a name="scrolling-and-fetching-rows-odbc"></a>Прокрутка и выборка строк (ODBC)
 При использовании прокручиваемого курсора приложения вызывают **SQLFetchScroll** для позиционирования курсора и выборки строк. **SQLFetchScroll** поддерживает относительную прокрутку (следующую, предыдущую и относительную *n* строк), абсолютную прокрутку (первую, последнюю и строку *n*) и позиционирование по закладке. Аргументы *фетчориентатион* и *фетчоффсет* в **SQLFetchScroll** указывают набор строк для выборки, как показано на следующих схемах.  

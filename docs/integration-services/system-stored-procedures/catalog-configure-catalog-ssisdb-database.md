@@ -1,4 +1,5 @@
 ---
+description: catalog.configure_catalog (база данных SSISDB)
 title: catalog.configure_catalog (база данных SSISDB) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 72690c61-f462-4c25-9fce-08a687b0bd41
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d2fedf409343225343bb03f61a8345a27eb68b0e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4506270730f8681315501e76ad1a338ff65b18c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86904330"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477158"
 ---
 # <a name="catalogconfigure_catalog-ssisdb-database"></a>catalog.configure_catalog (база данных SSISDB)
 
@@ -34,10 +35,10 @@ catalog.configure_catalog [ @property_name = ] property_name , [ @property_value
   
 ## <a name="arguments"></a>Аргументы  
  [ @property_name = ] *property_name*  
- Имя свойства каталога. Параметр *property_name* имеет тип **nvarchar(255)** . Дополнительные сведения о доступных свойствах см. в разделе [catalog.catalog_properties (база данных SSISDB)](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md).  
+ Имя свойства каталога. Параметр *property_name* имеет тип **nvarchar(255)**. Дополнительные сведения о доступных свойствах см. в разделе [catalog.catalog_properties (база данных SSISDB)](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md).  
   
  [ @property_value = ] *property_value*  
- Значение свойства каталога. Параметр *property_value* имеет тип **nvarchar(255)** . Дополнительные сведения о значениях свойств см. в разделе [catalog.catalog_properties (база данных SSISDB)](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)  
+ Значение свойства каталога. Параметр *property_value* имеет тип **nvarchar(255)**. Дополнительные сведения о значениях свойств см. в разделе [catalog.catalog_properties (база данных SSISDB)](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md)  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

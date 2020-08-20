@@ -1,4 +1,5 @@
 ---
+description: Инструкции RESTORE — LABELONLY (Transact-SQL)
 title: RESTORE LABELONLY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/30/2018
@@ -21,12 +22,12 @@ ms.assetid: 7cf0641e-0d55-4ffb-9500-ecd6ede85ae5
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: d91954b0533a2af86a8afefdf54ea16ada28286d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 4bb66a3711bcb2a5a309c4b712470c4fb3b16bb9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81625831"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478720"
 ---
 # <a name="restore-statements---labelonly-transact-sql"></a>Инструкции RESTORE — LABELONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -78,7 +79,7 @@ FROM <backup_device>
 ## <a name="result-sets"></a>Результирующие наборы  
  Результирующий набор инструкции RESTORE LABELONLY состоит из единственной строки со следующими сведениями.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**MediaName**|**nvarchar(128)**|Имя носителя.|  
 |**MediaSetId**|**uniqueidentifier**|Уникальный идентификационный номер набора носителей.|  
@@ -100,7 +101,7 @@ FROM <backup_device>
 ## <a name="general-remarks"></a>Общие замечания  
  Выполнение инструкции RESTORE LABELONLY является быстрым способом узнать, что содержит носитель резервной копии. Поскольку инструкция RESTORE LABELONLY считывает только заголовок носителя, она завершается быстро даже при использовании ленточных устройств большой емкости.  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
  Операция резервного копирования может указывать пароль для набора носителей. Если для набора носителей установлен пароль, то в инструкции RESTORE необходимо указать правильный пароль. Пароль предотвращает несанкционированные операции восстановления и присоединения резервных наборов данных к носителю при помощи инструментов [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Однако пароль не запрещает перезапись носителей с помощью параметра FORMAT инструкции BACKUP.  
   
 > [!IMPORTANT]  

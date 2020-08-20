@@ -1,4 +1,5 @@
 ---
+description: Выполнение пакета служб SSIS с кодом C# в приложении .NET
 title: Выполнение проекта SSIS с кодом .NET (C#) | Документы Майкрософт
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dbc0cfc7a5ef22487a22ade0f65cbf76ac78645c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 03be806b29fa46c04b38bab822c848f96a0c516d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921877"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477221"
 ---
 # <a name="run-an-ssis-package-with-c-code-in-a-net-app"></a>Выполнение пакета служб SSIS с кодом C# в приложении .NET
 
@@ -44,7 +45,7 @@ ms.locfileid: "86921877"
 ## <a name="create-a-new-visual-studio-project"></a>Создание проекта Visual Studio
 
 1. В Visual Studio выберите **Файл**, **Создать**, **Проект**. 
-2. В диалоговом окне **Создание проекта** разверните узел **Visual C#** .
+2. В диалоговом окне **Создание проекта** разверните узел **Visual C#**.
 3. Выберите **Консольное приложение** и введите *run_ssis_project* в качестве имени проекта.
 4. Нажмите кнопку **ОК**, чтобы создать и открыть проект в Visual Studio.
 
@@ -60,7 +61,7 @@ ms.locfileid: "86921877"
 7. Нажмите кнопку **ОК**, чтобы закрыть диалоговое окно **Диспетчер ссылок** и добавить три ссылки. Чтобы убедиться, что ссылки на месте, проверьте список **Ссылки** в обозревателе решений.
 
 ## <a name="add-the-c-code"></a>Добавление кода C# 
-1. Откройте **Program.cs**.
+1. Откройте файл **Program.cs**.
 
 2. Замените содержимое **Program.cs** приведенным ниже кодом. Добавьте соответствующие значения для сервера, базы данных, пользователя и пароля.
 

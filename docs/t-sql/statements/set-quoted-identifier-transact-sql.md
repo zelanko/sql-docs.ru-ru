@@ -1,4 +1,5 @@
 ---
+description: SET QUOTED_IDENTIFIER (Transact-SQL)
 title: SET QUOTED_IDENTIFIER (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 02/21/2019
@@ -25,12 +26,12 @@ ms.assetid: 10f66b71-9241-4a3a-9292-455ae7252565
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8933c07f0cfcc70131738ba2936b4262fb7ae249
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f216887909893d91384fa91479820588dfdae1a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002430"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478754"
 ---
 # <a name="set-quoted_identifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
 
@@ -53,6 +54,8 @@ SET QUOTED_IDENTIFIER { ON | OFF }
 
 SET QUOTED_IDENTIFIER ON
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="remarks"></a>Remarks
 Когда `SET QUOTED_IDENTIFIER` включен (ON) (по умолчанию), идентификаторы можно отделять двойными кавычками (" "), а литералы должны быть отделены одинарными кавычками (' '). Все строки, находящиеся в двойных кавычках, интерпретируются как идентификаторы объектов. Такие образом, заключенные в кавычки идентификаторы не должны удовлетворять правилам языка [!INCLUDE[tsql](../../includes/tsql-md.md)] для идентификаторов. Они могут быть зарезервированными ключевыми словами, а также могут содержать символы, обычно запрещенные для идентификаторов языка [!INCLUDE[tsql](../../includes/tsql-md.md)]. Выражения со строками-литералами нельзя заключать в двойные кавычки; для этих целей необходимо использовать одинарные кавычки. Если одинарная кавычка (') является частью строки литерала, то она может быть представлена двумя одинарными кавычками (''). Если в именах объектов базы данных используются зарезервированные ключевые слова, то параметру `SET QUOTED_IDENTIFIER` должно быть присвоено значение ON.

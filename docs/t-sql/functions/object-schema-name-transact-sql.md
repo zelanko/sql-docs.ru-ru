@@ -1,4 +1,5 @@
 ---
+description: OBJECT_SCHEMA_NAME (Transact-SQL)
 title: OBJECT_SCHEMA_NAME (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 06/25/2018
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 5ba90bb9-d045-4164-963e-e9e96c0b1e8b
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 5453bfb7efb79b2b60a3855d28e195b0bcedb81f
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: f68dea4c08218aeafd60c8cb4d951b60c8e1cdfa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394814"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479679"
 ---
 # <a name="object_schema_name-transact-sql"></a>OBJECT_SCHEMA_NAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -62,7 +63,7 @@ OBJECT_SCHEMA_NAME ( object_id [, database_id ] )
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение ANY на данный объект. Чтобы указать идентификатор базы данных, также требуется разрешение CONNECT на базу данных или необходимо включить гостевую учетную запись.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Системные функции можно использовать в списке выбора, в предложении WHERE и в любом месте, где разрешается использование выражений. Дополнительные сведения см. в разделах [Выражения](../../t-sql/language-elements/expressions-transact-sql.md) и [WHERE](../../t-sql/queries/where-transact-sql.md).  
   
  Результирующий набор, возвращенный системной функцией, использует порядок сортировки текущей базы данных.  
@@ -113,7 +114,7 @@ FROM sys.dm_db_index_operational_stats(null, null, null, null);
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции метаданных (Transact-SQL)](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [OBJECT_DEFINITION (Transact-SQL)](../../t-sql/functions/object-definition-transact-sql.md)   
  [OBJECT_ID (Transact-SQL)](../../t-sql/functions/object-id-transact-sql.md)   

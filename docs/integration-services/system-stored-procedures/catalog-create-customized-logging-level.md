@@ -1,4 +1,5 @@
 ---
+description: catalog.create_customized_logging_level
 title: catalog.create_customized_logging_level  | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 20b3ba0a-126f-49bf-b70f-61b2a0fcb750
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7a3bff065a7a89a1e0708fc5a1d782979652cbd3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7aaf0fb0ccdd285944e5fceaba561bd626317121
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917120"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477151"
 ---
 # <a name="catalogcreate_customized_logging_level"></a>catalog.create_customized_logging_level 
 
@@ -39,12 +40,12 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
  [ @level_name = ] *level_name*  
  Название нового существующего настроенного уровня ведения журнала.  
   
- Параметр *level_name* имеет тип **nvarchar(128)** .  
+ Параметр *level_name* имеет тип **nvarchar(128)**.  
   
  [ @level_description = ] *level_description*  
  Описание нового существующего настроенного уровня ведения журнала.  
   
- Параметр *level_description* имеет тип **nvarchar(max)** .  
+ Параметр *level_description* имеет тип **nvarchar(max)**.  
   
  [ @profile_value = ] *profile_value*  
  Статистические данные, которые будут включаться в новый настроенный уровень ведения журнала.  
@@ -75,7 +76,7 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
   
  Параметр *level_id* имеет тип **bigint**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Чтобы объединить несколько значений в Transact-SQL для аргумента *profile_value* или *events_value*, воспользуйтесь следующим примером. Чтобы записать события OnError (8) и DiagnosticEx (15), необходимо использовать следующую формулу для расчета *events_value*: `2^8 + 2^15 = 33024`.  
   
 ## <a name="return-codes"></a>Коды возврата  
