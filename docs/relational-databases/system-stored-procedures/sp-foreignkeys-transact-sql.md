@@ -1,4 +1,5 @@
 ---
+description: sp_foreignkeys (Transact-SQL)
 title: sp_foreignkeys (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 04df50dc8378dc346079c807f8e517f1e6bbecdd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8f7d3fe93965bcfcb516e79452b6725940c1e68c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891881"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481295"
 ---
 # <a name="sp_foreignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,22 +46,22 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @table_server = ] 'table_server'`Имя связанного сервера, для которого возвращаются сведения о таблице. Аргумент *table_server* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @table_server = ] 'table_server'` Имя связанного сервера, для которого возвращаются сведения о таблице. Аргумент *table_server* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @pktab_name = ] 'pktab_name'`Имя таблицы с первичным ключом. Аргумент *pktab_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @pktab_name = ] 'pktab_name'` Имя таблицы с первичным ключом. Аргумент *pktab_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @pktab_schema = ] 'pktab_schema'`Имя схемы с первичным ключом. Аргумент *pktab_schema*имеет тип **sysname**и значение по умолчанию NULL. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] здесь содержится имя владельца.  
+`[ @pktab_schema = ] 'pktab_schema'` Имя схемы с первичным ключом. Аргумент *pktab_schema*имеет тип **sysname**и значение по умолчанию NULL. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] здесь содержится имя владельца.  
   
-`[ @pktab_catalog = ] 'pktab_catalog'`Имя каталога с первичным ключом. Аргумент *pktab_catalog*имеет тип **sysname**и значение по умолчанию NULL. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] здесь содержится имя базы данных.  
+`[ @pktab_catalog = ] 'pktab_catalog'` Имя каталога с первичным ключом. Аргумент *pktab_catalog*имеет тип **sysname**и значение по умолчанию NULL. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] здесь содержится имя базы данных.  
   
-`[ @fktab_name = ] 'fktab_name'`Имя таблицы с внешним ключом. Аргумент *fktab_name*имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @fktab_name = ] 'fktab_name'` Имя таблицы с внешним ключом. Аргумент *fktab_name*имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @fktab_schema = ] 'fktab_schema'`Имя схемы с внешним ключом. Аргумент *fktab_schema*имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @fktab_schema = ] 'fktab_schema'` Имя схемы с внешним ключом. Аргумент *fktab_schema*имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @fktab_catalog = ] 'fktab_catalog'`Имя каталога с внешним ключом. Аргумент *fktab_catalog*имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @fktab_catalog = ] 'fktab_catalog'` Имя каталога с внешним ключом. Аргумент *fktab_catalog*имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- None  
+ Нет  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  Различные продукты СУБД поддерживают имена таблиц, состоящие из трех частей (_Catalog_)**.** _схема_**.** _Table_), представленного в результирующем наборе.  
@@ -103,7 +104,7 @@ EXEC sp_foreignkeys @table_server = N'Seattle1',
  [sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
  [sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
  [sp_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
- [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_linkedservers (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
  [sp_primarykeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
  [sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
  [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   

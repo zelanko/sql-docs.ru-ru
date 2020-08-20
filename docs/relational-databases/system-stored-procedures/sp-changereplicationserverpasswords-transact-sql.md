@@ -1,4 +1,5 @@
 ---
+description: sp_changereplicationserverpasswords (Transact-SQL)
 title: sp_changereplicationserverpasswords (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d3f992fefc04de89fcfa9e077d01641fa538ea40
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0d0e07afbf3837768ac2b57e3dfaa7d0c8c0d0af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771411"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481486"
 ---
 # <a name="sp_changereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,22 +41,22 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @login_type = ] login_type`Тип проверки подлинности для предоставленных учетных данных. *LOGIN_TYPE* имеет тип **tinyint**и не имеет значения по умолчанию.  
+`[ @login_type = ] login_type` Тип проверки подлинности для предоставленных учетных данных. *LOGIN_TYPE* имеет тип **tinyint**и не имеет значения по умолчанию.  
   
  **1** = встроенная проверка подлинности Windows  
   
  **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Проверка подлинности  
   
-`[ @login = ] 'login'`Имя изменяемой учетной записи Windows или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя входа. *имя для входа* — **nvarchar (257)**, без значения по умолчанию  
+`[ @login = ] 'login'` Имя изменяемой учетной записи Windows или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя входа. *имя для входа* — **nvarchar (257)**, без значения по умолчанию  
   
-`[ @password = ] 'password'`Новый пароль, который будет сохранен для указанного *имени входа*. Аргумент *Password* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @password = ] 'password'` Новый пароль, который будет сохранен для указанного *имени входа*. Аргумент *Password* имеет тип **sysname**и не имеет значения по умолчанию.  
   
 > [!NOTE]  
 >  После изменения пароля репликации необходимо остановить и перезапустить каждый агент, пользующийся этим паролем, прежде чем изменение вступит в силу для этого агента.  
   
-`[ @server = ] 'server'`Соединение с сервером, для которого изменяется сохраненный пароль. *Server* имеет тип **sysname**и может принимать одно из следующих значений:  
+`[ @server = ] 'server'` Соединение с сервером, для которого изменяется сохраненный пароль. *Server* имеет тип **sysname**и может принимать одно из следующих значений:  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**распространение**|Все соединения агентов с распространителем.|  
 |**publisher**|Все соединения агентов с издателем.|  
@@ -65,7 +66,7 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_changereplicationserverpasswords** используется со всеми типами репликации.  
   
 ## <a name="permissions"></a>Разрешения  

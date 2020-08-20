@@ -1,4 +1,5 @@
 ---
+description: MSsubscription_properties (Transact-SQL)
 title: MSsubscription_properties (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f96fc1ae-b798-4b05-82a7-564ae6ef23b8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d63855b5619392ba2c2bd7c286e4aec7b10a43db
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5c19b5f70df96e4288a3d5e68dd5f2309e115a93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889339"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480789"
 ---
 # <a name="mssubscription_properties-transact-sql"></a>MSsubscription_properties (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,9 +50,9 @@ ms.locfileid: "85889339"
 |**alt_snapshot_folder**|**nvarchar(255)**|Указывает местоположение альтернативной папки для моментального снимка.|  
 |**working_directory**|**nvarchar(255)**|Имя рабочего каталога, используемого для хранения данных и файлов схем.|  
 |**use_ftp**|**bit**|Указывает использование протокола FTP вместо обычного протокола для получения моментальных снимков. Если значение равно **1**, используется протокол FTP.|  
-|**dts_package_name**|**sysname**|Указывает имя пакета служб DTS.|  
-|**dts_package_password**|**nvarchar (524)**|Указывает пароль на пакет.|  
-|**dts_package_location**|**int**|Местоположение, где хранится пакет служб DTS.|  
+|**dts_package_name**;|**sysname**|Указывает имя пакета служб DTS.|  
+|**dts_package_password**;|**nvarchar (524)**|Указывает пароль на пакет.|  
+|**dts_package_location**.|**int**|Местоположение, где хранится пакет служб DTS.|  
 |**enabled_for_syncmgr**|**bit**|Устанавливает, может ли быть подписка синхронизирована посредством диспетчера синхронизации [!INCLUDE[msCoName](../../includes/msconame-md.md)].<br /><br /> **0** = подписка не зарегистрирована в диспетчере синхронизации.<br /><br /> **1** = подписка зарегистрирована в диспетчере синхронизации и может быть синхронизирована без запуска [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .|  
 |**offload_agent**|**bit**|Указывает, может ли агент быть активирован удаленно. Если значение **равно 0**, агент не может быть активирован удаленно.|  
 |**offload_server**|**sysname**|Указывает сетевое имя сервера, используемого для удаленной активации.|  
@@ -65,8 +66,8 @@ ms.locfileid: "85889339"
 |**hostname**|**sysname**|Задает значение для **HOST_NAME** , когда эта функция используется в предложении **WHERE** фильтра соединений или связи логических записей.|  
   
 ## <a name="see-also"></a>См. также  
- [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Представления репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_helppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
  [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
  [sp_helpsubscription_properties (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  

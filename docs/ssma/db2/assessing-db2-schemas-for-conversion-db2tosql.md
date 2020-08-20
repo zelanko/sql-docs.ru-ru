@@ -1,4 +1,5 @@
 ---
+description: Оценка схем DB2 для преобразования (DB2ToSQL)
 title: Оценка схем DB2 для преобразования (DB2ToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8892f5a4-72ba-4406-8649-7a9d67f4c1d9
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: b889b896a70fa43ee3909ff251a3d91125e878b8
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 7516b8abce9e5a3d147796ec0acb101a92fc18f0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937473"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480533"
 ---
 # <a name="assessing-db2-schemas-for-conversion-db2tosql"></a>Оценка схем DB2 для преобразования (DB2ToSQL)
 Перед загрузкой объектов и переносом данных в необходимо [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определить, насколько сложна миграция и сколько времени займет миграция. SSMA может создать отчет об оценке, который показывает процент объектов, которые будут успешно преобразованы. SSMA также позволяет просматривать конкретные проблемы, вызывающие сбои при преобразовании.  
@@ -79,6 +80,6 @@ ms.locfileid: "87937473"
 ## <a name="next-step"></a>Следующий шаг  
 [Преобразование схем DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Перенос баз данных DB2 в SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

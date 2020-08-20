@@ -1,4 +1,5 @@
 ---
+description: sp_trace_setfilter (Transact-SQL)
 title: sp_trace_setfilter (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 36cb1003bcb0884bce069a7f41b3264d045e86e1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: cf2b3eb0d8d71ce85ac7a5de4fddcd5a34ae97a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891452"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480992"
 ---
 # <a name="sp_trace_setfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Применяет фильтр к трассировке. **sp_trace_setfilter** может выполняться только для существующих трассировок, которые остановлены (*Status* имеет значение **0**). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Возвращает ошибку, если эта хранимая процедура выполняется для трассировки, которая не существует или имеет *состояние* , не равное **0**.  
+  Применяет фильтр к трассировке. **sp_trace_setfilter** может выполняться только для существующих трассировок, которые остановлены (*Status* имеет значение **0**). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Возвращает ошибку, если эта хранимая процедура выполняется для трассировки, которая не существует или имеет *состояние* , не равное **0**.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте расширенные события.  
@@ -46,13 +47,13 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @traceid = ] trace_id`Идентификатор трассировки, для которой задан фильтр. *trace_id* имеет **тип int**и не имеет значения по умолчанию. Пользователь использует это *trace_id* значение для выявления, изменения и управления трассировкой.  
+`[ @traceid = ] trace_id` Идентификатор трассировки, для которой задан фильтр. *trace_id* имеет **тип int**и не имеет значения по умолчанию. Пользователь использует это *trace_id* значение для выявления, изменения и управления трассировкой.  
   
-`[ @columnid = ] column_id`Идентификатор столбца, к которому применяется фильтр. *column_id* имеет **тип int**и не имеет значения по умолчанию. Если *column_id* имеет значение null, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] очищает все фильтры для указанной трассировки.  
+`[ @columnid = ] column_id` Идентификатор столбца, к которому применяется фильтр. *column_id* имеет **тип int**и не имеет значения по умолчанию. Если *column_id* имеет значение null, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] очищает все фильтры для указанной трассировки.  
   
-`[ @logical_operator = ] logical_operator`Указывает, применяется ли оператор AND (**0**) или OR (**1**). *logical_operator* имеет **тип int**и не имеет значения по умолчанию.  
+`[ @logical_operator = ] logical_operator` Указывает, применяется ли оператор AND (**0**) или OR (**1**). *logical_operator* имеет **тип int**и не имеет значения по умолчанию.  
   
-`[ @comparison_operator = ] comparison_operator`Указывает тип выполняемого сравнения. *comparison_operator* имеет **тип int**и не имеет значения по умолчанию. В таблице содержатся операторы сравнения и представляющие их значения.  
+`[ @comparison_operator = ] comparison_operator` Указывает тип выполняемого сравнения. *comparison_operator* имеет **тип int**и не имеет значения по умолчанию. В таблице содержатся операторы сравнения и представляющие их значения.  
   
 |Значение|Оператор сравнения|  
 |-----------|-------------------------|  
@@ -65,7 +66,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |**6**|LIKE|  
 |**7**|Не похоже|  
   
-`[ @value = ] value`Задает значение для фильтрации. Тип данных *значения* должен соответствовать типу данных фильтруемого столбца. Например, если фильтр установлен для столбца идентификатора объекта, который является типом данных **int** , то *значение* должно быть **int**. Если *значение value* равно **nvarchar** или **varbinary**, оно может иметь максимальную длину 8000.  
+`[ @value = ] value` Задает значение для фильтрации. Тип данных *значения* должен соответствовать типу данных фильтруемого столбца. Например, если фильтр установлен для столбца идентификатора объекта, который является типом данных **int** , то *значение* должно быть **int**. Если *значение value* равно **nvarchar** или **varbinary**, оно может иметь максимальную длину 8000.  
   
  Когда оператором сравнения является LIKE или NOT LIKE, то логический оператор может содержать «%» или другой фильтр, подходящий для операции LIKE.  
   
@@ -112,7 +113,7 @@ sp_trace_setfilter  1, 11, 0, 0, N'joe';
   
 ## <a name="see-also"></a>См. также  
  [sys. fn_trace_getfilterinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
- [sys. fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
+ [sys.fn_trace_getinfo (Transact-SQL)](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [Трассировка SQL](../../relational-databases/sql-trace/sql-trace.md)  
   
   

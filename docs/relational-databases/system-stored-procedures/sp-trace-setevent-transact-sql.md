@@ -1,4 +1,5 @@
 ---
+description: Хранимая процедура sp_trace_setevent (Transact-SQL)
 title: sp_trace_setevent (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f96efdec6878691c4c3b3a3efbeb1cd2d6324f3d
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 9f176957bb975ee08ac6ef508a187b189a6123b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472670"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480967"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>Хранимая процедура sp_trace_setevent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,13 +46,13 @@ sp_trace_setevent [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @traceid = ] trace_id`Идентификатор изменяемой трассировки. *trace_id* имеет **тип int**и не имеет значения по умолчанию. Пользователь использует это *trace_id* значение для выявления, изменения и управления трассировкой.  
+`[ @traceid = ] trace_id` Идентификатор изменяемой трассировки. *trace_id* имеет **тип int**и не имеет значения по умолчанию. Пользователь использует это *trace_id* значение для выявления, изменения и управления трассировкой.  
   
-`[ @eventid = ] event_id`Идентификатор события, которое необходимо включить. *event_id* имеет **тип int**и не имеет значения по умолчанию.  
+`[ @eventid = ] event_id` Идентификатор события, которое необходимо включить. *event_id* имеет **тип int**и не имеет значения по умолчанию.  
   
  Эта таблица содержит список событий, которые можно добавить или удалить из трассировки.  
   
-|Номер события|Имя события.|Описание|  
+|Номер события|Имя события|Описание|  
 |------------------|----------------|-----------------|  
 |0-9|Зарезервировано|Зарезервировано|  
 |10|RPC:Completed|Возникает при завершении удаленного вызова процедуры (RPC).|  
@@ -236,7 +237,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |218|Plan Guide Unsuccessful|Указывает, что SQL Server не удалось создать план выполнения для запроса или пакета, в котором содержится структура плана. SQL Server выполнил попытку создать план выполнения для этого запроса или пакета без применения структуры плана. Эту проблему могла вызвать недопустимая структура плана. Структуры планов можно проверить при помощи системной функции sys.fn_validate_plan_guide.|  
 |235|Audit Fulltext||  
   
-`[ @columnid = ] column_id`Идентификатор столбца, добавляемого для события. *column_id* имеет **тип int**и не имеет значения по умолчанию.  
+`[ @columnid = ] column_id` Идентификатор столбца, добавляемого для события. *column_id* имеет **тип int**и не имеет значения по умолчанию.  
   
  В следующей таблице приводится список столбцов, которые могут добавляться для события.  
   
@@ -356,9 +357,9 @@ sp_trace_setevent [ @traceid = ] trace_id
 ## <a name="permissions"></a>Разрешения  
  Пользователь должен иметь разрешение ALTER TRACE.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sys. fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
- [sys. fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
+ [sys.fn_trace_getinfo (Transact-SQL)](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [Справочник по классам событий SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [Трассировка SQL](../../relational-databases/sql-trace/sql-trace.md)  

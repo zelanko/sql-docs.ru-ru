@@ -1,4 +1,5 @@
 ---
+description: sp_notify_operator (Transact-SQL)
 title: sp_notify_operator (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c440f5c9-9884-4196-b07c-55d87afb17c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 07f18ad85f759340d43825ce8c6a95c11696d2f0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c6a1c623ec7172a7cab48c49491619184d618ebf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893443"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481120"
 ---
 # <a name="sp_notify_operator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,21 +48,21 @@ sp_notify_operator
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @profile_name = ] 'profilename'`Имя профиля Database Mail, используемого для отправки сообщения. *filename* имеет тип **nvarchar (128)**. Если параметр *filename* не указан, используется профиль Database Mail по умолчанию.  
+`[ @profile_name = ] 'profilename'` Имя профиля Database Mail, используемого для отправки сообщения. *filename* имеет тип **nvarchar (128)**. Если параметр *filename* не указан, используется профиль Database Mail по умолчанию.  
   
-`[ @id = ] id`Идентификатор оператора, которому отправляется сообщение. *ID* имеет **тип int**и значение по умолчанию NULL. Необходимо указать один из *идентификаторов* или *имя* .  
+`[ @id = ] id` Идентификатор оператора, которому отправляется сообщение. *ID* имеет **тип int**и значение по умолчанию NULL. Необходимо указать один из *идентификаторов* или *имя* .  
   
-`[ @name = ] 'name'`Имя оператора, которому отправляется сообщение. *имя* имеет тип **nvarchar (128)** и значение по умолчанию NULL. Необходимо указать один из *идентификаторов* или *имя* .  
+`[ @name = ] 'name'` Имя оператора, которому отправляется сообщение. *имя* имеет тип **nvarchar (128)** и значение по умолчанию NULL. Необходимо указать один из *идентификаторов* или *имя* .  
   
 > **Примечание.** Перед получением сообщений необходимо определить адрес электронной почты оператора.  
   
-`[ @subject = ] 'subject'`Тема сообщения электронной почты. *subject* имеет тип **nvarchar (256)** и не имеет значения по умолчанию.  
+`[ @subject = ] 'subject'` Тема сообщения электронной почты. *subject* имеет тип **nvarchar (256)** и не имеет значения по умолчанию.  
   
-`[ @body = ] 'message'`Текст сообщения электронной почты. *Message* имеет тип **nvarchar (max)** и не имеет значения по умолчанию.  
+`[ @body = ] 'message'` Текст сообщения электронной почты. *Message* имеет тип **nvarchar (max)** и не имеет значения по умолчанию.  
   
-`[ @file_attachments = ] 'attachment'`Имя файла, который необходимо присоединить к сообщению электронной почты. *вложение* имеет тип **nvarchar (512)** и не имеет значения по умолчанию.  
+`[ @file_attachments = ] 'attachment'` Имя файла, который необходимо присоединить к сообщению электронной почты. *вложение* имеет тип **nvarchar (512)** и не имеет значения по умолчанию.  
   
-`[ @mail_database = ] 'mail_host_database'`Указывает имя базы данных обслуживания почты. *mail_host_database* имеет тип **nvarchar (128)**. Если *mail_host_database* не указано, по умолчанию используется база данных **msdb** .  
+`[ @mail_database = ] 'mail_host_database'` Указывает имя базы данных обслуживания почты. *mail_host_database* имеет тип **nvarchar (128)**. Если *mail_host_database* не указано, по умолчанию используется база данных **msdb** .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -97,7 +98,7 @@ EXEC dbo.sp_notify_operator
 GO  
 ```  
   
-## <a name="see-also"></a>Дополнительно  
+## <a name="see-also"></a>См. также  
  [Агент SQL Server хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   

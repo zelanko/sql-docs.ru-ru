@@ -1,4 +1,5 @@
 ---
+description: sp_tables_ex (Transact-SQL)
 title: sp_tables_ex (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3e986d5d998864a343eab31e238a8f7df56a5d0c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c195e3fa5e932bd1eb844ca5231d67747bc67486
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892627"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480990"
 ---
 # <a name="sp_tables_ex-transact-sql"></a>sp_tables_ex (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,31 +45,31 @@ sp_tables_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @table_server = ] 'table_server'`Имя связанного сервера, для которого возвращаются сведения о таблице. Аргумент *table_server* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @table_server = ] 'table_server'` Имя связанного сервера, для которого возвращаются сведения о таблице. Аргумент *table_server* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-``[ , [ @table_name = ] 'table_name']``Имя таблицы, для которой возвращаются сведения о типе данных. Аргумент *table_name*имеет тип **sysname**и значение по умолчанию NULL.  
+``[ , [ @table_name = ] 'table_name']`` Имя таблицы, для которой возвращаются сведения о типе данных. Аргумент *table_name*имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @table_schema = ] 'table_schema']`Схема таблицы. Аргумент *table_schema*имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @table_schema = ] 'table_schema']` Схема таблицы. Аргумент *table_schema*имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @table_catalog = ] 'table_catalog'`Имя базы данных, в которой находится указанный *table_name* . Аргумент *table_catalog* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @table_catalog = ] 'table_catalog'` Имя базы данных, в которой находится указанный *table_name* . Аргумент *table_catalog* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @table_type = ] 'table_type'`Тип возвращаемой таблицы. Аргумент *TABLE_TYPE* имеет тип **sysname**, значение по умолчанию NULL и может иметь одно из следующих значений.  
+`[ @table_type = ] 'table_type'` Тип возвращаемой таблицы. Аргумент *TABLE_TYPE* имеет тип **sysname**, значение по умолчанию NULL и может иметь одно из следующих значений.  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**ПСЕВДОНИМ**|Имя псевдонима.|  
 |**GLOBAL TEMPORARY**|Имя временной таблицы, доступной в пределах системы.|  
 |**LOCAL TEMPORARY**|Имя временной таблицы, доступной только для текущего задания.|  
-|**SYNONYM**|Имя синонима.|  
+|**ТЕРМИН**|Имя синонима.|  
 |**СИСТЕМНАЯ ТАБЛИЦА**|Имя системной таблицы.|  
 |**СИСТЕМНОЕ ПРЕДСТАВЛЕНИЕ**|Имя системного представления.|  
 |**Таблица**|Имя пользовательской таблицы.|  
 |**РЕЖИМЕ**|Имя представления.|  
   
-`[ @fUsePattern = ] 'fUsePattern'`Определяет, будут ли символы **_**, **%** , **[** и **]** интерпретироваться как подстановочные знаки. Допустимые значения: 0 (сопоставление с шаблоном отключено) и 1 (сопоставление с шаблоном включено). *фусепаттерн* имеет **бит**и значение по умолчанию 1.  
+`[ @fUsePattern = ] 'fUsePattern'` Определяет, будут ли символы **_**, **%** , **[** и **]** интерпретироваться как подстановочные знаки. Допустимые значения: 0 (сопоставление с шаблоном отключено) и 1 (сопоставление с шаблоном включено). *фусепаттерн* имеет **бит**и значение по умолчанию 1.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- None  
+ Нет  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -105,7 +106,7 @@ EXEC sp_tables_ex @table_server = 'LONDON2',
  [sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
  [sp_foreignkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
  [sp_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
- [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_linkedservers (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
  [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

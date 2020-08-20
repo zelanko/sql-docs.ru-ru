@@ -1,4 +1,5 @@
 ---
+description: sp_helppullsubscription (Transact-SQL)
 title: sp_helppullsubscription (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3b12ffb31836bfde3cb29cf240dbfc5d9da66eac
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 163cd14235fd5364f42c8e9a722341c96a03290f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729207"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481168"
 ---
 # <a name="sp_helppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,13 +41,13 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'`Имя удаленного сервера. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию **%** , которое возвращает сведения для всех издателей.  
+`[ @publisher = ] 'publisher'` Имя удаленного сервера. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию **%** , которое возвращает сведения для всех издателей.  
   
-`[ @publisher_db = ] 'publisher_db'`Имя базы данных издателя. Аргумент *publisher_db* имеет тип **sysname**и значение по умолчанию **%** , которое возвращает все базы данных издателя.  
+`[ @publisher_db = ] 'publisher_db'` Имя базы данных издателя. Аргумент *publisher_db* имеет тип **sysname**и значение по умолчанию **%** , которое возвращает все базы данных издателя.  
   
-`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию **%** , которое возвращает все публикации. Если этот параметр равен ALL, возвращаются только подписки по запросу с independent_agent = **0** .  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию **%** , которое возвращает все публикации. Если этот параметр равен ALL, возвращаются только подписки по запросу с independent_agent = **0** .  
   
-`[ @show_push = ] 'show_push'`Указывает, должны ли возвращаться все принудительные подписки. *show_push*имеет тип **nvarchar (5)** и значение по умолчанию false, которое не возвращает принудительные подписки.  
+`[ @show_push = ] 'show_push'` Указывает, должны ли возвращаться все принудительные подписки. *show_push*имеет тип **nvarchar (5)** и значение по умолчанию false, которое не возвращает принудительные подписки.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -83,8 +84,8 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**working_directory**|**nvarchar(255)**|Абсолютный путь к каталогу, куда были переданы файлы моментального снимка с использованием FTP, если эта установка включена.|  
 |**use_ftp**|**bit**|Подписка на публикацию осуществляется через Интернет. При этом настроены параметры адресации через FTP. Если значение **равно 0**, то подписка не использует протокол FTP. Если значение равно **1**, то подписка использует протокол FTP.|  
 |**publication_type**|**int**|Задает тип репликации для публикации:<br /><br /> **0** = репликация транзакций<br /><br /> **1** = репликация моментальных снимков<br /><br /> **2** = репликация слиянием|  
-|**dts_package_name**|**sysname**|Указывает имя пакета служб DTS.|  
-|**dts_package_location**|**int**|Местоположение, где хранится пакет служб DTS:<br /><br /> **0** = распространитель<br /><br /> **1** = подписчик|  
+|**dts_package_name**;|**sysname**|Указывает имя пакета служб DTS.|  
+|**dts_package_location**.|**int**|Местоположение, где хранится пакет служб DTS:<br /><br /> **0** = распространитель<br /><br /> **1** = подписчик|  
 |**offload_agent**|**bit**|Указывает, может ли агент быть активирован удаленно. Если значение **равно 0**, агент не может быть активирован удаленно.|  
 |**offload_server**|**sysname**|Указывает сетевое имя сервера, используемого для удаленной активации.|  
 |**last_sync_status**|**int**|Состояние подписки:<br /><br /> **0** = все задания ожидают запуска<br /><br /> **1** = одно или несколько заданий запускаются<br /><br /> **2** = все задания выполнены успешно<br /><br /> **3** = по крайней мере одно задание исполняется<br /><br /> **4** = все задания запланированы и бездействуют<br /><br /> **5** = по крайней мере одно задание пытается выполнить после предыдущего сбоя<br /><br /> **6** = не удалось успешно выполнить по крайней мере одно задание|  
@@ -96,7 +97,7 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_helppullsubscription** используется в моментальных снимках и репликации транзакций.  
   
 ## <a name="permissions"></a>Разрешения  

@@ -1,4 +1,5 @@
 ---
+description: sp_schemafilter (Transact-SQL)
 title: sp_schemafilter (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 116dde1f0fd62f96e31a164ff06472de5b527938
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ad023dd248b3849e4bb900e1891bd655087a51f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901348"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481107"
 ---
 # <a name="sp_schemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,16 +40,16 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'`Имя издателя, не являющегося [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателем. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'` Имя издателя, не являющегося [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателем. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @schema = ] 'schema'`Имя схемы. *Schema* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @schema = ] 'schema'` Имя схемы. *Schema* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @operation = ] 'operation'`Действие, выполняемое с этой схемой. *Операция* имеет тип **nvarchar (4)** и может принимать одно из следующих значений.  
+`[ @operation = ] 'operation'` Действие, выполняемое с этой схемой. *Операция* имеет тип **nvarchar (4)** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
 |**add**|Добавляет указанную схему в список схем, не подходящих для публикации.|  
-|**тени**|Удаляет указанную схему из списка схем, не подходящих для публикации.|  
+|**drop**|Удаляет указанную схему из списка схем, не подходящих для публикации.|  
 |**help**|Возвращает список схем, которые не подходят для публикации.|  
   
 ## <a name="result-sets"></a>Результирующие наборы  

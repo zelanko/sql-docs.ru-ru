@@ -1,4 +1,5 @@
 ---
+description: GetReparentedValue (компонент Database Engine)
 title: GetReparentedValue (ядро СУБД) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/22/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f47f8e25-08ef-498b-84f4-a317aca1f358
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5a1b6700c10a73a2b3f0ab59dbad7f0a5d2c435c
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: b0381cc90ff6a69c8d8cd91d9ce141e8a13707c4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554484"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479897"
 ---
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue (компонент Database Engine)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,7 +56,7 @@ _newRoot_
   
 **Возвращаемый тип CLR:SqlHierarchyId**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
 Используется для изменения дерева путем перемещения узлов из _oldRoot_ в _newRoot_. Метод GetReparentedValue используется для перемещения узла иерархии в новое расположение в иерархии. Тип данных **hierarchyid** представляет иерархическую структуру, но не обеспечивает ее соблюдение. Пользователям необходимо убедиться в том, что структура идентификатора иерархии пригодна для нового местоположения. Уникальный индекс с типом данных **hierarchyid** позволяет избежать повторения записей. Пример перемещения поддерева целиком см. в статье [Иерархические данные (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md).
   
 ## <a name="examples"></a>Примеры  

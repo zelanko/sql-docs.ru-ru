@@ -1,4 +1,5 @@
 ---
+description: MSqreader_history (Transact-SQL)
 title: MSqreader_history (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c5c91d39-513c-4a77-870b-c8ef74a1cd6b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8ee889df3e29f486c12393870858fa0af2ea6546
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 64e6041c37c70359c645f1a0f6027503b185772c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889550"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480796"
 ---
 # <a name="msqreader_history-transact-sql"></a>MSqreader_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,15 +43,15 @@ ms.locfileid: "85889550"
 |**transaction_status**|**int**|Состояние транзакции.|  
 |**transactions_processed**|**int**|Совокупное число транзакций, обработанных за время сеанса.|  
 |**commands_processed**|**int**|Совокупное число команд, обработанных за время сеанса.|  
-|**delivery_rate**|**float (53)**|Среднее число доставленных команд в секунду.|  
-|**transaction_rate**|**float (53)**|Скорость обработки транзакций.|  
+|**delivery_rate**|**float(53)**|Среднее число доставленных команд в секунду.|  
+|**transaction_rate**|**float(53)**|Скорость обработки транзакций.|  
 |**абонент**|**sysname**|Имя подписчика.|  
 |**SubscriberDB**|**sysname**|Имя базы данных подписки.|  
 |**error_id**|**int**|Если не равен нулю, то число представляет [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сообщение об ошибке.|  
 |**timestamp**|**timestamp**|Столбец отметок времени для данной таблицы.|  
   
 ## <a name="see-also"></a>См. также  
- [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sysmail_add_profile_sp (Transact-SQL)
 title: sysmail_add_profile_sp (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a828e55c-633a-41cf-9769-a0698b446e6c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2ae569ea3623c81e99bac6dd5a163393c07c0301
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f78f4ea075f04c4deb447ad9b68e3707b4e19ffb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891016"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480876"
 ---
 # <a name="sysmail_add_profile_sp-transact-sql"></a>sysmail_add_profile_sp (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,14 +42,14 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @profile_name = ] 'profile\_name'`Имя нового профиля. Аргумент *profile_name* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @profile_name = ] 'profile\_name'` Имя нового профиля. Аргумент *profile_name* имеет тип **sysname**и не имеет значения по умолчанию.  
  
    > [!NOTE]
    > Имя профиля, использующего SQL Управляемый экземпляр агента SQL Azure, должно быть вызвано **AzureManagedInstance_dbmail_profile**
   
-`[ @description = ] 'description'`Необязательное описание нового профиля. *Description* имеет тип **nvarchar (256)** и не имеет значения по умолчанию.  
+`[ @description = ] 'description'` Необязательное описание нового профиля. *Description* имеет тип **nvarchar (256)** и не имеет значения по умолчанию.  
   
-`[ @profile_id = ] _new\_profile\_id OUTPUT`Возвращает идентификатор нового профиля. *new_profile_id* имеет **тип int**и значение по умолчанию NULL.  
+`[ @profile_id = ] _new\_profile\_id OUTPUT` Возвращает идентификатор нового профиля. *new_profile_id* имеет **тип int**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  

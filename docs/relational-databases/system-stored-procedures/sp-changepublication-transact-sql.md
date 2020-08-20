@@ -1,4 +1,5 @@
 ---
+description: sp_changepublication (Transact-SQL)
 title: sp_changepublication (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/29/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1b2fb1031c3090046bc509acc3c0cd1779db1836
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3bf49c2e7b09e7c0ac3bcaaaf7692889f684875b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771423"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481534"
 ---
 # <a name="sp_changepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,15 +42,15 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @property = ] 'property'`Изменяемое свойство публикации. *свойство* имеет тип **nvarchar (255)**.  
+`[ @property = ] 'property'` Изменяемое свойство публикации. *свойство* имеет тип **nvarchar (255)**.  
   
-`[ @value = ] 'value'`Новое значение свойства. *value* имеет тип **nvarchar (255)** и значение по умолчанию NULL.  
+`[ @value = ] 'value'` Новое значение свойства. *value* имеет тип **nvarchar (255)** и значение по умолчанию NULL.  
   
  В данной таблице описаны свойства публикации, доступные для изменения, а также ограничения на значения этих свойств.  
   
-|Свойство.|Применение|Описание|  
+|Свойство|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|Для данной публикации можно создать анонимные подписки, а *immediate_sync* также должны иметь **значение true**. Невозможно изменить для одноранговых публикаций.|  
 ||**false**|На данную публикацию нельзя создавать анонимные подписки. Невозможно изменить для одноранговых публикаций.|  
@@ -72,7 +73,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**sub reinit**|Для обновления подписчиков. Если происходит конфликт, подписку необходимо инициализировать повторно. Это свойство можно изменить только при отсутствии активных подписок. Не поддерживается для издателей Oracle.|  
 ||**sub wins**|Политика устранения конфликтов, возникающих при обновлении подписчиков, при которой преимущество имеет подписчик. Это свойство можно изменить только при отсутствии активных подписок. Не поддерживается для издателей Oracle.|  
 |**conflict_retention**||**целое** число, указывающее срок хранения конфликтов в днях. Значение по умолчанию — 14 суток. значение **0** означает, что очистка конфликтов не требуется. Не поддерживается для издателей Oracle.|  
-|**nописание**||Необязательная запись описания публикации.|  
+|**description**||Необязательная запись описания публикации.|  
 |**enabled_for_het_sub**|**true**|Позволяет публикации поддерживать подписчиков, не являющихся подписчиками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **enabled_for_het_sub** нельзя изменить при наличии подписок на публикацию. Возможно, потребуется выполнить [хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) , чтобы обеспечить соблюдение следующих требований перед установкой **enabled_for_het_sub** в значение true:<br /> - значение **allow_queued_tran** должно быть **равно false**.<br /> - значение **allow_sync_tran** должно быть **равно false**.<br /> Изменение значения **enabled_for_het_sub** на **true** может привести к изменению существующих параметров публикации. Дополнительные сведения см. в статье [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md). Это свойство невозможно изменить для публикаций, не являющихся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 ||**false**|Публикация не поддерживает подписчиков, не являющихся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Это свойство невозможно изменить для публикаций, не являющихся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**enabled_for_internet**|**true**|Публикация через Интернет разрешена, поэтому для передачи файлов моментальных снимков подписчику может быть использован протокол FTP. Файлы синхронизации для публикации помещаются в следующий каталог: C:\Program Files\Microsoft SQL Сервер\мсскл\реплдата\фтп. *ftp_address* не может иметь значение null. Это свойство невозможно изменить для публикаций, не являющихся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -115,7 +116,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**false**|Отключает `DROP TABLE` поддержку библиотек DLL для статей, которые являются частью репликации транзакций. Это значение **по умолчанию** для этого свойства.|
 |**Null** (по умолчанию)||Возвращает список поддерживаемых значений для *Свойства*.|  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Подтверждает, что действие, выполняемое этой хранимой процедурой, может сделать существующий моментальный снимок недействительным. *force_invalidate_snapshot* является **битом**и имеет значение по умолчанию **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Подтверждает, что действие, выполняемое этой хранимой процедурой, может сделать существующий моментальный снимок недействительным. *force_invalidate_snapshot* является **битом**и имеет значение по умолчанию **0**.  
   - **0** указывает, что изменения в статье не приводят к недействительности моментального снимка. Если хранимая процедура определяет, что изменение требует создания нового моментального снимка, возникает ошибка и изменения не выполняются.  
   - **1** указывает, что изменения в статье могут привести к недействительности моментального снимка. Если имеются подписки, требующие нового моментального снимка, это значение дает разрешение пометить существующий моментальный снимок как устаревший и сформировать новый моментальный снимок.   
 Сведения о свойствах, при изменении которых требуется формирование нового моментального снимка, см. в разделе «Примечания».  
@@ -125,7 +126,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   - **0** указывает, что изменения в статье не приводят к повторной инициализации подписки. Если хранимая процедура определяет, что изменения потребуют повторной инициализации подписок, возникает ошибка, и изменения не выполняются.  
   - **1** указывает, что изменения в статье приводят к повторной инициализации существующей подписки и предоставляют разрешение на повторную инициализацию подписки.  
   
-`[ @publisher = ] 'publisher'`Указывает издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'` Указывает издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
   
   > [!NOTE]  
   >  При изменении свойств статьи издателя не следует использовать *Издатель* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -133,7 +134,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_changepublication** используется в репликации моментальных снимков и репликации транзакций.  
   
  После изменения любого из следующих свойств необходимо создать новый моментальный снимок, а для параметра *force_invalidate_snapshot* необходимо указать значение **1** .  
@@ -163,12 +164,12 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_changepublication**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Просмотр и изменение свойств публикации](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Изменение свойств публикации и статьи](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_droppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
- [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
+ [sp_helppublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)   
  [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

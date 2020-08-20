@@ -1,4 +1,5 @@
 ---
+description: Управление паролями (SybaseToSQL)
 title: Управление паролями (SybaseToSQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 07/07/2020
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9b6a70f9-6840-4140-a059-bb7bd7ccc67c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2d32e4d6129aa566d34c566f11cb7dde735f3783
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 81a31e8aa6b7c395fc623357a2bc56ebb5a037da
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931062"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480379"
 ---
 # <a name="managing-passwords-sybasetosql"></a>Управление паролями (SybaseToSQL)
 В этом разделе описывается защита паролей базы данных и процедура импорта или экспорта на серверах.
@@ -130,6 +131,6 @@ SSMA позволяет защитить пароль базы данных.
     
 8. Подтвердите пароль: XXXXXXXX.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Запуск консоли SSMA (Sybase)](https://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
   

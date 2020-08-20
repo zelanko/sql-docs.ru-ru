@@ -1,4 +1,5 @@
 ---
+description: log_shipping_secondary (Transact-SQL)
 title: log_shipping_secondary (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69723419-4544-49c6-a517-adb30ffa5741
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0e3a7d488944905525e77d219c89916d4facdb27
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5a65cd7182bf43fd996732479377543b84a7e551
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890131"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480832"
 ---
 # <a name="log_shipping_secondary-transact-sql"></a>log_shipping_secondary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "85890131"
 |**last_copied_file**|**nvarchar (500)**|Имя последнего файла резервной копии, скопированного на сервер-получатель.|  
 |**last_copied_date**|**datetime**|Дата и время последней операции копирования на сервер-получатель.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Несколько баз данных-получателей на одном вторичном сервере для данной основной базы данных имеют некоторые параметры в таблице **log_shipping_secondary** . Если общий параметр изменяется для одной из них, он изменяется и для всех остальных таких же баз данных.  
   
 ## <a name="see-also"></a>См. также:  

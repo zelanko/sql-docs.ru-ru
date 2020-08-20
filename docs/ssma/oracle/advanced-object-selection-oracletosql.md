@@ -1,4 +1,5 @@
 ---
+description: Расширенный выбор объектов (OracleToSQL)
 title: Расширенный выбор объектов (OracleToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: c978fba4-c953-4ed0-a21d-1b38e7225552
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 0dd1d8f5f5006760145d132a11db1df60dedddd7
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: b42b166d9f7eaa358878bad8c87ae997c2cfe691
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935026"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480486"
 ---
 # <a name="advanced-object-selection--oracletosql"></a>Расширенный выбор объектов (OracleToSQL)
 Диалоговое окно " **Расширенный раздел объекта** " позволяет фильтровать объекты базы данных с помощью строк и подстрок в имени объекта, а затем выбирать или отменять выбор этих объектов. SSMA выполняет операции преобразования и миграции для выбранных объектов.  
@@ -26,7 +27,7 @@ ms.locfileid: "87935026"
   
 Перед использованием этого диалогового окна может потребоваться принудительно загрузить все метаданные с помощью SSMA, либо путем преобразования схем, либо путем сохранения проекта.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
 **Проверить все элементы**  
 Добавляет галочку рядом со всеми элементами. Эти элементы будут сразу же выбраны в обозревателе метаданных.  
   

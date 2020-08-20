@@ -1,4 +1,5 @@
 ---
+description: sp_changesubscriptiondtsinfo (Transact-SQL)
 title: sp_changesubscriptiondtsinfo (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d721bf729d99a60a32693ddbe609cfcee01ba701
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 296eb0e4d6cb9aa838c32851d29125358bde0e29
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771369"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481480"
 ---
 # <a name="sp_changesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,21 +41,21 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_id = ] job_id`Идентификатор задания агент распространения принудительной подписки. *job_id* имеет тип **varbinary (16)** и не имеет значения по умолчанию. Чтобы найти идентификатор задания распространения, выполните **sp_helpsubscription** или **sp_helppullsubscription**.  
+`[ @job_id = ] job_id` Идентификатор задания агент распространения принудительной подписки. *job_id* имеет тип **varbinary (16)** и не имеет значения по умолчанию. Чтобы найти идентификатор задания распространения, выполните **sp_helpsubscription** или **sp_helppullsubscription**.  
   
-`[ @dts_package_name = ] 'dts_package_name'`Указывает имя пакета служб DTS. *dts_package_name* имеет тип **sysname**и значение по умолчанию NULL. Например, чтобы указать пакет с именем **DTSPub_Package**, необходимо указать `@dts_package_name = N'DTSPub_Package'` .  
+`[ @dts_package_name = ] 'dts_package_name'` Указывает имя пакета служб DTS. *dts_package_name* имеет тип **sysname**и значение по умолчанию NULL. Например, чтобы указать пакет с именем **DTSPub_Package**, необходимо указать `@dts_package_name = N'DTSPub_Package'` .  
   
-`[ @dts_package_password = ] 'dts_package_password'`Указывает пароль для пакета. Аргумент *dts_package_password* имеет тип **sysname** и значение по умолчанию NULL, которое указывает, что свойство Password должно остаться без изменений.  
+`[ @dts_package_password = ] 'dts_package_password'` Указывает пароль для пакета. Аргумент *dts_package_password* имеет тип **sysname** и значение по умолчанию NULL, которое указывает, что свойство Password должно остаться без изменений.  
   
 > [!NOTE]  
 >  У пакета служб DTS должен быть пароль.  
   
-`[ @dts_package_location = ] 'dts_package_location'`Указывает расположение пакета. *dts_package_location* имеет тип **nvarchar (12)** и значение по умолчанию NULL, которое указывает, что расположение пакета должно остаться без изменений. Расположение пакета можно изменить на **распространитель** или на **подписчик**.  
+`[ @dts_package_location = ] 'dts_package_location'` Указывает расположение пакета. *dts_package_location* имеет тип **nvarchar (12)** и значение по умолчанию NULL, которое указывает, что расположение пакета должно остаться без изменений. Расположение пакета можно изменить на **распространитель** или на **подписчик**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_changesubscriptiondtsinfo** используется для репликации моментальных снимков и репликации транзакций, которые являются принудительными подписками.  
   
 ## <a name="permissions"></a>Разрешения  

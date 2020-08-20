@@ -1,4 +1,5 @@
 ---
+description: sp_deletemergeconflictrow (Transact-SQL)
 title: sp_deletemergeconflictrow (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 64cf1186-28b8-4cd9-88f1-a7808a9c8d60
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9ab3528c496722877310c13d073158bd20969bc4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d65a0b2b039d94ca425bb6e93a067e8fcc0ddd2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85861774"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481349"
 ---
 # <a name="sp_deletemergeconflictrow-transact-sql"></a>sp_deletemergeconflictrow (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Удаляет строки из таблицы конфликтов или [MSmerge_conflicts_info &#40;таблицы&#41;Transact-SQL](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) . Эта хранимая процедура выполняется на компьютере, где хранится таблица конфликта, в любой базе данных.  
+  Удаляет строки из таблицы конфликтов или [MSmerge_conflicts_info &#40;таблицы&#41;Transact-SQL ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) . Эта хранимая процедура выполняется на компьютере, где хранится таблица конфликта, в любой базе данных.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,15 +42,15 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @conflict_table = ] 'conflict_table'`Имя таблицы конфликтов. Аргумент *conflict_table* имеет тип **sysname**и значение по умолчанию **%** . Если *conflict_table* указан как null или **%** , конфликт предполагается как конфликт удаления, а строка, соответствующая *rowguid* и *origin_datasource* , и *Source_object* удаляется из [&#40;таблицы MSmerge_conflicts_info&#41;Transact-SQL](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) .  
+`[ @conflict_table = ] 'conflict_table'` Имя таблицы конфликтов. Аргумент *conflict_table* имеет тип **sysname**и значение по умолчанию **%** . Если *conflict_table* указан как null или **%** , конфликт предполагается как конфликт удаления, а строка, соответствующая *rowguid* и *origin_datasource* , и *Source_object* удаляется из [&#40;таблицы MSmerge_conflicts_info&#41;Transact-SQL ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) .  
   
-`[ @source_object = ] 'source_object'`Имя исходной таблицы. *source_object* имеет тип **nvarchar (386)** и значение по умолчанию NULL.  
+`[ @source_object = ] 'source_object'` Имя исходной таблицы. *source_object* имеет тип **nvarchar (386)** и значение по умолчанию NULL.  
   
-`[ @rowguid = ] 'rowguid'`Идентификатор строки для конфликта удаления. *rowguid* имеет тип **uniqueidentifier**и не имеет значения по умолчанию.  
+`[ @rowguid = ] 'rowguid'` Идентификатор строки для конфликта удаления. *rowguid* имеет тип **uniqueidentifier**и не имеет значения по умолчанию.  
   
-`[ @origin_datasource = ] 'origin_datasource'`Источник конфликта. *origin_datasource* имеет тип **varchar (255)** и не имеет значения по умолчанию.  
+`[ @origin_datasource = ] 'origin_datasource'` Источник конфликта. *origin_datasource* имеет тип **varchar (255)** и не имеет значения по умолчанию.  
   
-`[ @drop_table_if_empty = ] 'drop_table_if_empty'`Флаг, указывающий, что *conflict_table* должен быть удален, если пуст. *drop_table_if_empty* имеет тип **varchar (10)** и значение по умолчанию false.  
+`[ @drop_table_if_empty = ] 'drop_table_if_empty'` Флаг, указывающий, что *conflict_table* должен быть удален, если пуст. *drop_table_if_empty* имеет тип **varchar (10)** и значение по умолчанию false.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -57,7 +58,7 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
 ## <a name="remarks"></a>Комментарии  
  **sp_deletemergeconflictrow** используется в репликации слиянием.  
   
- [MSmerge_conflicts_info &#40;Transact-SQL&#41;ная](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) таблица является системной таблицей и не удаляется из базы данных, даже если она пуста.  
+ [MSmerge_conflicts_info &#40;Transact-SQL&#41;ная ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) таблица является системной таблицей и не удаляется из базы данных, даже если она пуста.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_deletemergeconflictrow**.  

@@ -1,4 +1,5 @@
 ---
+description: Хранимая процедура sp_help_operator (Transact-SQL)
 title: sp_help_operator (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/01/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a8ce38772655172a9c5e22d3dfdba9cb7fd8f4b5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d86d691c33fdfc09ce60d3ef7059c823527f9494
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891727"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481216"
 ---
 # <a name="sp_help_operator-transact-sql"></a>Хранимая процедура sp_help_operator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ sp_help_operator
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @operator_name = ] 'operator_name'`Имя оператора. *operator_name* имеет тип **sysname**. Если параметр *operator_name* не указан, возвращаются сведения обо всех операторах.  
+`[ @operator_name = ] 'operator_name'` Имя оператора. *operator_name* имеет тип **sysname**. Если параметр *operator_name* не указан, возвращаются сведения обо всех операторах.  
   
-`[ @operator_id = ] operator_id`Идентификационный номер оператора, для которого запрашиваются сведения. *operator_id*имеет **тип int**и значение по умолчанию NULL.  
+`[ @operator_id = ] operator_id` Идентификационный номер оператора, для которого запрашиваются сведения. *operator_id*имеет **тип int**и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Необходимо указать либо *operator_id* , либо *operator_name* , но нельзя указать оба значения.  
@@ -58,7 +59,7 @@ sp_help_operator
 |-----------------|---------------|-----------------|  
 |**идентификатор**|**int**|Идентификационный номер оператора.|  
 |**name**|**sysname**|Имя оператора.|  
-|**доступной**|**tinyint**|Доступность оператора для получения уведомлений:<br /><br /> **1** = да<br /><br /> **0** = нет|  
+|**доступной**|**tinyint**|Доступность оператора для получения уведомлений:<br /><br /> **1** = Да<br /><br /> **0** = Нет|  
 |**email_address**|**nvarchar (100)**|Адрес электронной почты оператора.|  
 |**last_email_date**|**int**|Дата, когда оператор получил последнее уведомление по электронной почте.|  
 |**last_email_time**|**int**|Время, когда оператор получил последнее уведомление по электронной почте.|  
@@ -103,7 +104,7 @@ EXEC dbo.sp_help_operator
 GO  
 ```  
   
-## <a name="see-also"></a>Дополнительно  
+## <a name="see-also"></a>См. также  
  [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
  [sp_update_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   

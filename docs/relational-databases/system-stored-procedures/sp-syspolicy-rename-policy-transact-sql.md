@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_rename_policy (Transact-SQL)
 title: sp_syspolicy_rename_policy (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ce2b07f5-23b1-4f49-8e7b-c18cf3f3d45b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e157090ba5fb9b6c3c9da7fb88d0aa0612d2f727
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 782128b1d41f94c63f4e9de22e618378c4ec6e6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892697"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481030"
 ---
 # <a name="sp_syspolicy_rename_policy-transact-sql"></a>sp_syspolicy_rename_policy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +42,11 @@ sp_syspolicy_rename_policy { [ @name = ] 'name' | [ @policy_id = ] policy_id }
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @name = ] 'name'`— Имя политики, которую необходимо переименовать. Аргумент *Name* имеет тип **sysname**и должен быть указан, если *policy_id* имеет значение null.  
+`[ @name = ] 'name'` — Имя политики, которую необходимо переименовать. Аргумент *Name* имеет тип **sysname**и должен быть указан, если *policy_id* имеет значение null.  
   
-`[ @policy_id = ] policy_id`Идентификатор политики, которую необходимо переименовать. *policy_id* имеет **тип int**и должен быть указан, если *Name* имеет значение null.  
+`[ @policy_id = ] policy_id` Идентификатор политики, которую необходимо переименовать. *policy_id* имеет **тип int**и должен быть указан, если *Name* имеет значение null.  
   
-`[ @new_name = ] 'new_name'`Новое имя политики. Аргумент *new_name* имеет тип **sysname**и является обязательным. Не может быть пустой строкой и не может принимать значение NULL.  
+`[ @new_name = ] 'new_name'` Новое имя политики. Аргумент *new_name* имеет тип **sysname**и является обязательным. Не может быть пустой строкой и не может принимать значение NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -72,6 +73,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Хранимые процедуры управления на основе политик &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)  
+ [Хранимые процедуры управления на основе политик &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)  
   
   

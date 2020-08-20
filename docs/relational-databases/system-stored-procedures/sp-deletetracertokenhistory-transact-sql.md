@@ -1,4 +1,5 @@
 ---
+description: sp_deletetracertokenhistory (Transact-SQL)
 title: sp_deletetracertokenhistory (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 26a9c4a3001d2a5b4f5709311e23c0023307ce92
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4912611e79e4d6d3431cce7facb04af06a206211
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85692801"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481357"
 ---
 # <a name="sp_deletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory (Transact-SQL)
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-Удаляет записи трассировочного токена из [MStracer_tokens &#40;Transact-sql&#41;](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) и [MStracer_history &#40;системных таблиц&#41;Transact-SQL](../../relational-databases/system-tables/mstracer-history-transact-sql.md) . Эта хранимая процедура выполняется на издателе в базе данных публикации или на распространителе в базе данных распространителя.
+Удаляет записи трассировочного токена из [MStracer_tokens &#40;Transact-sql&#41;](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) и [MStracer_history &#40;системных таблиц&#41;Transact-SQL ](../../relational-databases/system-tables/mstracer-history-transact-sql.md) . Эта хранимая процедура выполняется на издателе в базе данных публикации или на распространителе в базе данных распространителя.
 
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -67,7 +68,7 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
 
 **0** (успешное завершение) или **1** (сбой)
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 **sp_deletetracertokenhistory** используется в репликации транзакций.  
 
@@ -75,7 +76,7 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
 
 Если не выполнить **sp_deletetracertokenhistory** для удаления метаданных трассировочного токена, информация будет удалена при регулярном запланированном очистке журнала.
 
-Идентификаторы трассировочных токенов можно определить, выполнив [sp_helptracertokens &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) или выполнив запрос к &#40;системной таблице [&#41;transact-SQL MStracer_tokens](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) .
+Идентификаторы трассировочных токенов можно определить, выполнив [sp_helptracertokens &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) или выполнив запрос к &#40;системной таблице [&#41;transact-SQL MStracer_tokens ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) .
 
 ## <a name="permissions"></a>Разрешения
 

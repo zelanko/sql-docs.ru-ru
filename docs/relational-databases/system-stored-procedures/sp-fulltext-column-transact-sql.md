@@ -1,4 +1,5 @@
 ---
+description: sp_fulltext_column (Transact-SQL)
 title: sp_fulltext_column (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ ms.assetid: a84cc45d-1b50-44af-85df-2ea033b8a6a9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 724c3b71012014d6858554614fbed9239bbfeddc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 544854219f8fbc26a06b80280c6f36f64fe726c6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820460"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481250"
 ---
 # <a name="sp_fulltext_column-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "82820460"
   Определяет, должен ли конкретный столбец таблицы использоваться в полнотекстовом индексировании.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Используйте вместо него [инструкцию ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте вместо него [инструкцию ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) .  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,26 +48,26 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @tabname = ] 'qualified_table_name'`Имя таблицы из одной или двух частей. Таблица должна существовать в текущей базе данных. Таблица должна содержать полнотекстовый индекс. *qualified_table_name* имеет тип **nvarchar (517)** и не имеет значения по умолчанию.  
+`[ @tabname = ] 'qualified_table_name'` Имя таблицы из одной или двух частей. Таблица должна существовать в текущей базе данных. Таблица должна содержать полнотекстовый индекс. *qualified_table_name* имеет тип **nvarchar (517)** и не имеет значения по умолчанию.  
   
-`[ @colname = ] 'column_name'`Имя столбца в *qualified_table_name*. Столбец должен быть столбцом типа character, **varbinary (max)** или **Image** и не может быть вычисляемым столбцом. Аргумент *column_name* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @colname = ] 'column_name'` Имя столбца в *qualified_table_name*. Столбец должен быть столбцом типа character, **varbinary (max)** или **Image** и не может быть вычисляемым столбцом. Аргумент *column_name* имеет тип **sysname**и не имеет значения по умолчанию.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]может создавать полнотекстовые индексы текстовых данных, хранящихся в столбцах, имеющих тип данных **varbinary (max)** или **Image** . Изображения и рисунки не индексируются.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может создавать полнотекстовые индексы текстовых данных, хранящихся в столбцах, имеющих тип данных **varbinary (max)** или **Image** . Изображения и рисунки не индексируются.  
   
-`[ @action = ] 'action'`Действие, которое необходимо выполнить. *Action* имеет тип **varchar (20)**, не имеет значения по умолчанию и может принимать одно из следующих значений.  
+`[ @action = ] 'action'` Действие, которое необходимо выполнить. *Action* имеет тип **varchar (20)**, не имеет значения по умолчанию и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|**добавление**|Добавляет *column_name* *qualified_table_name* в неактивный полнотекстовый индекс таблицы. Это действие активирует полнотекстовое индексирование столбца.|  
-|**тени**|Удаляет *column_name* *qualified_table_name* из неактивного полнотекстового индекса таблицы.|  
+|**add**|Добавляет *column_name* *qualified_table_name* в неактивный полнотекстовый индекс таблицы. Это действие активирует полнотекстовое индексирование столбца.|  
+|**drop**|Удаляет *column_name* *qualified_table_name* из неактивного полнотекстового индекса таблицы.|  
   
-`[ @language = ] 'language_term'`Язык данных, хранящихся в столбце. Список языков, входящих в состав [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , см. в разделе [sys. fulltext_languages &#40;&#41;TRANSACT-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
+`[ @language = ] 'language_term'` Язык данных, хранящихся в столбце. Список языков, входящих в состав [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , см. в разделе [sys. fulltext_languages &#40;&#41;TRANSACT-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
   
 > [!NOTE]  
 >  Указывайте значение «Neutral», если столбец содержит данные на нескольких языках или на языке, который не поддерживается. Значение по умолчанию задается параметром конфигурации «default full-text language».  
   
-`[ @type_colname = ] 'type_column_name'`Имя столбца в *qualified_table_name* , содержащего тип документа *column_name*. Этот столбец должен иметь **тип char**, **nchar**, **varchar**или **nvarchar**. Он используется только в том случае, если тип данных *column_name* имеет тип **varbinary (max)** или **Image**. Аргумент *type_column_name* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @type_colname = ] 'type_column_name'` Имя столбца в *qualified_table_name* , содержащего тип документа *column_name*. Этот столбец должен иметь **тип char**, **nchar**, **varchar**или **nvarchar**. Он используется только в том случае, если тип данных *column_name* имеет тип **varbinary (max)** или **Image**. Аргумент *type_column_name* имеет тип **sysname**и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -112,13 +113,13 @@ WHERE CONTAINS(spanishCol, 'formsof(inflectional, trabajar)')
 > [!NOTE]  
 >  Все столбцы, перечисленные в одной функции предложения полнотекстового запроса, должны быть на одном языке.  
   
-## <a name="see-also"></a>См. также  
- [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [OBJECTPROPERTY (Transact-SQL)](../../t-sql/functions/objectproperty-transact-sql.md)   
  [sp_help_fulltext_columns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-transact-sql.md)   
  [sp_help_fulltext_columns_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-cursor-transact-sql.md)   
  [sp_help_fulltext_tables &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
  [sp_help_fulltext_tables_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Хранимые процедуры полнотекстового поиска и семантического поиска &#40;языке Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

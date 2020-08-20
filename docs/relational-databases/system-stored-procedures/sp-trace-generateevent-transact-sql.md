@@ -1,4 +1,5 @@
 ---
+description: sp_trace_generateevent (Transact-SQL)
 title: sp_trace_generateevent (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 00952b8059aed7325fdeab449bbb29e302a0373f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ebb89cf26de4d5f9dd8020c71d0870f038242b98
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891425"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481013"
 ---
 # <a name="sp_trace_generateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,11 +45,11 @@ sp_trace_generateevent [ @eventid = ] event_id
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @eventid = ] event_id`Идентификатор события, которое необходимо включить. *event_id* имеет **тип int**и не имеет значения по умолчанию. Идентификатор должен быть одним из номеров событий от 82 до 91, которые представляют определяемые пользователем события, заданные с помощью [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
+`[ @eventid = ] event_id` Идентификатор события, которое необходимо включить. *event_id* имеет **тип int**и не имеет значения по умолчанию. Идентификатор должен быть одним из номеров событий от 82 до 91, которые представляют определяемые пользователем события, заданные с помощью [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
-`[ @userinfo = ] 'user_info'`Необязательная определяемая пользователем строка, идентифицирующая причину события. *user_info* имеет тип **nvarchar (128)** и значение по умолчанию NULL.  
+`[ @userinfo = ] 'user_info'` Необязательная определяемая пользователем строка, идентифицирующая причину события. *user_info* имеет тип **nvarchar (128)** и значение по умолчанию NULL.  
   
-`[ @userdata = ] user_data`Необязательные определяемые пользователем данные для события. *user_data* имеет тип **varbinary (8000)** и значение по умолчанию NULL.  
+`[ @userdata = ] user_data` Необязательные определяемые пользователем данные для события. *user_data* имеет тип **varbinary (8000)** и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  В следующей таблице описаны значения кодов, которые могут быть возвращены пользователю при завершении хранимой процедуры.  
@@ -94,9 +95,9 @@ you were capturing the event id=82, you will see it in the Profiler output.
 INSERT INTO user_config_test VALUES(1, 'abc');  
 ```  
   
-## <a name="see-also"></a>Дополнительно  
+## <a name="see-also"></a>См. также  
  [sys. fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [Хранимая процедура sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Трассировка SQL](../../relational-databases/sql-trace/sql-trace.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_help_proxy (Transact-SQL)
 title: sp_help_proxy (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 051f41139627420e825feffb292a02905917705d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ab6a1a976dd70e991b36f51429a96d0be425b152
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891706"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481192"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,21 +44,21 @@ sp_help_proxy
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @proxy_id = ] id`Идентификационный номер прокси-сервера, для которого необходимо получить список сведений. *Proxy_id* имеет **тип int**и значение по умолчанию NULL. Можно указать либо *идентификатор* , либо *proxy_name* .  
+`[ @proxy_id = ] id` Идентификационный номер прокси-сервера, для которого необходимо получить список сведений. *Proxy_id* имеет **тип int**и значение по умолчанию NULL. Можно указать либо *идентификатор* , либо *proxy_name* .  
   
-`[ @proxy_name = ] 'proxy_name'`Имя учетной записи-посредника для получения списка сведений. Аргумент *proxy_name* имеет тип **sysname**и значение по умолчанию NULL. Можно указать либо *идентификатор* , либо *proxy_name* .  
+`[ @proxy_name = ] 'proxy_name'` Имя учетной записи-посредника для получения списка сведений. Аргумент *proxy_name* имеет тип **sysname**и значение по умолчанию NULL. Можно указать либо *идентификатор* , либо *proxy_name* .  
   
-`[ @subsystem_name = ] 'subsystem_name'`Имя подсистемы, для которой перечисляются прокси-серверы. Аргумент *subsystem_name* имеет тип **sysname**и значение по умолчанию NULL. Если указано *subsystem_name* , необходимо также указать *Name* .  
+`[ @subsystem_name = ] 'subsystem_name'` Имя подсистемы, для которой перечисляются прокси-серверы. Аргумент *subsystem_name* имеет тип **sysname**и значение по умолчанию NULL. Если указано *subsystem_name* , необходимо также указать *Name* .  
   
  В следующей таблице показаны значения для каждой подсистемы.  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |ActiveScripting|ActiveX-скрипт|  
 |CmdExec|Операционная система (CmdExec)|  
-|Снимок|Агент моментальных снимков репликации|  
+|Моментальный снимок|Агент моментальных снимков репликации|  
 |LogReader|Агент чтения журнала репликации|  
-|Распределение|агент распространения репликации|  
+|Distribution|агент распространения репликации|  
 |Объединить|Replication Merge Agent|  
 |QueueReader|Агент чтения очереди репликации|  
 |ANALYSISQUERY|Команда служб Analysis Services|  
@@ -65,7 +66,7 @@ sp_help_proxy
 |Dts|Выполнение пакетов служб SSIS|  
 |PowerShell|Скрипт PowerShell|  
   
-`[ @name = ] 'name'`Имя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа, для которого перечисляются учетные записи-посредники. Имя имеет тип **nvarchar (256)** и значение по умолчанию NULL. Если указано *имя* , необходимо также указать *subsystem_name* .  
+`[ @name = ] 'name'` Имя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа, для которого перечисляются учетные записи-посредники. Имя имеет тип **nvarchar (256)** и значение по умолчанию NULL. Если указано *имя* , необходимо также указать *subsystem_name* .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -78,7 +79,7 @@ sp_help_proxy
 |**name**|**sysname**|Имя учетной записи-посредника.|  
 |**credential_identity**|**sysname**|Имя домена и имя пользователя Microsoft Windows для учетных данных, относящихся к учетной записи-посреднику.|  
 |**доступной**|**tinyint**|Указывает, включена ли учетная запись-посредник. { **0** = не включено, **1** = включено}|  
-|**nописание**|**nvarchar(1024)**|Описание этой учетной записи-посредника.|  
+|**description**|**nvarchar(1024)**|Описание этой учетной записи-посредника.|  
 |**user_sid**|**varbinary(85)**|Идентификатор безопасности Windows для пользователя Windows, соответствующего этой учетной записи-посреднику.|  
 |**credential_id**|**int**|Идентификатор учетных данных, связанных с учетной записью-посредником.|  
 |**credential_identity_exists**|**int**|Указывает, существует ли столбец credential_identity. { 0 = не существует, 1 = существует }|  

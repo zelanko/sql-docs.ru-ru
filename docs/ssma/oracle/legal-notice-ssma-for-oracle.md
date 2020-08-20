@@ -1,4 +1,5 @@
 ---
+description: Юридическая информация (SSMA для Oracle)
 title: Юридическая информация (SSMA для Oracle) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: 12f7b46f-9228-46d8-9877-cc6a7948c64b
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 913ca29a043d6422d818221f5d13dea3029a21e8
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 93ef937ac81df75eebc0845381383c7a2d0a4cdd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934743"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480476"
 ---
 # <a name="legal-notice-ssma-for-oracle"></a>Юридическая информация (SSMA для Oracle)
 Настоящий документ, в том числе содержащиеся в нем образцы приложений, предоставляется исключительно в ознакомительных целях без каких-либо явных или подразумеваемых гарантий. Данные, содержащиеся в этой документации, включая URL-адреса, а также ссылки на другие веб-сайты, могут меняться без предварительного уведомления. Всю ответственность за использование документации, а также за результаты ее использования несет исключительно пользователь.  

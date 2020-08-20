@@ -1,4 +1,5 @@
 ---
+description: sp_help_jobschedule (Transact-SQL)
 title: sp_help_jobschedule (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 07a07efac0a8908d0916049df594c273594ed4d4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 002534c38b5060dca0457d0c704194db037b93b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893665"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481299"
 ---
 # <a name="sp_help_jobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,18 +44,18 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_id = ] job_id`Идентификационный номер задания. *job_id*имеет тип **uniqueidentifier**и значение по умолчанию NULL.  
+`[ @job_id = ] job_id` Идентификационный номер задания. *job_id*имеет тип **uniqueidentifier**и значение по умолчанию NULL.  
   
-`[ @job_name = ] 'job_name'`Имя задания. Аргумент *job_name*имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'` Имя задания. Аргумент *job_name*имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]
 > Необходимо указать либо *job_id* , либо *job_name* , но нельзя указать оба значения.
 
-`[ @schedule_name = ] 'schedule_name'`Имя элемента расписания для задания. Аргумент *schedule_name*имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @schedule_name = ] 'schedule_name'` Имя элемента расписания для задания. Аргумент *schedule_name*имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @schedule_id = ] schedule_id`Идентификационный номер элемента расписания для задания. *schedule_id*имеет **тип int**и значение по умолчанию NULL.  
+`[ @schedule_id = ] schedule_id` Идентификационный номер элемента расписания для задания. *schedule_id*имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @include_description = ] include_description`Указывает, следует ли включать описание расписания в результирующий набор. *include_description* имеет **бит**и значение по умолчанию **0**. Если *include_description* равен **0**, описание расписания не включается в результирующий набор. Если *include_description* равен **1**, описание расписания включается в результирующий набор.  
+`[ @include_description = ] include_description` Указывает, следует ли включать описание расписания в результирующий набор. *include_description* имеет **бит**и значение по умолчанию **0**. Если *include_description* равен **0**, описание расписания не включается в результирующий набор. Если *include_description* равен **1**, описание расписания включается в результирующий набор.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
