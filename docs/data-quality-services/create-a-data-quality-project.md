@@ -1,4 +1,5 @@
 ---
+description: Создание проекта служб DQS
 title: Создание проекта служб DQS
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 19c52d2b-d28e-4449-ab59-5fe0dc326cd9
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 33e719fb9db8f51df9b79569df778429e3051984
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 62dd18cb55aa57b95ab325b3e48d1ec618bd75c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900468"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487982"
 ---
 # <a name="create-a-data-quality-project"></a>Создание проекта служб DQS
 
@@ -37,7 +38,7 @@ ms.locfileid: "85900468"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для создания проекта служб DQS необходимо иметь роль dqs_kb_editor или dqs_kb_operator в базе данных DQS_MAIN.  
   
-##  <a name="create-a-data-quality-project"></a><a name="Create"></a>Создание проекта качества данных  
+##  <a name="create-a-data-quality-project"></a><a name="Create"></a> Создание проекта качества данных  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Запустите приложение Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -59,7 +60,7 @@ ms.locfileid: "85900468"
   
 4.  Нажмите **Создать** , чтобы создать проект служб DQS.  
   
-##  <a name="follow-up-after-creating-a-data-quality-project"></a><a name="FollowUp"></a>Дальнейшие действия. После создания проекта качества данных  
+##  <a name="follow-up-after-creating-a-data-quality-project"></a><a name="FollowUp"></a> Дальнейшие действия. После создания проекта качества данных  
  После того как проект качества данных создан, откроется мастер для выполнения выбранного действия: очистки или сопоставления. Дополнительные сведения о действиях по очистке и сопоставлению см. в разделах [Очистка данных](../data-quality-services/data-cleansing.md) и [Сопоставление данных](../data-quality-services/data-matching.md).  
   
   

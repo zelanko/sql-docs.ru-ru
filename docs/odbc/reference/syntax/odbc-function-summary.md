@@ -1,4 +1,5 @@
 ---
+description: Сводка по функциям ODBC
 title: Сводка функций ODBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7aa635da-e6b7-439f-8e9b-c3860e24de5e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c10cc7880cf941a1490f963e21e8b44bc91db215
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 50a0b9146acd71f87b4dd65bbdd34c67725e9948
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298925"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487377"
 ---
 # <a name="odbc-function-summary"></a>Сводка по функциям ODBC
 В следующей таблице перечислены функции ODBC, сгруппированные по типам задач, а также указано обозначение соответствия и краткое описание назначения каждой функции. Дополнительные сведения о соотношении соответствия см. [в разделе ODBC и стандартную CLI](../../../odbc/reference/odbc-and-the-standard-cli.md). Дополнительные сведения о синтаксисе и семантике для каждой функции см. в [справочнике по API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md).  

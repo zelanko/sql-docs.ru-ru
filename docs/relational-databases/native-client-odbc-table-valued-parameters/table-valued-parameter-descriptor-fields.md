@@ -1,4 +1,5 @@
 ---
+description: Поля дескрипторов возвращающего табличное значение параметра
 title: Поля дескриптора возвращающего табличное значение параметра | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,18 +14,19 @@ ms.assetid: 4e009eff-c156-4d63-abcf-082ddd304de2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 868e99a34febf86f5750e374fb408e87134b8e85
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e5e8f06fc25aceda016398b414c895c349804008
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998342"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486757"
 ---
 # <a name="table-valued-parameter-descriptor-fields"></a>Поля дескрипторов возвращающего табличное значение параметра
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Поддержка возвращающих табличное значение параметров включает новые поля в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-дескрипторах параметра ODBC-приложения и дескрипторах параметра реализации.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 |Имя|Расположение|Тип|Описание|  
 |----------|--------------|----------|-----------------|  
@@ -52,7 +54,7 @@ ms.locfileid: "85998342"
   
  Атрибуты SQL_CA_SS_TYPE_CATALOG_NAME и SQL_CA_SS_TYPE_SCHEMA_NAME могут также использоваться для получения каталога и схемы, связанных с параметрами определяемых пользователем типов данных CLR. Это альтернатива для существующих атрибутов схемы каталога, зависящих от типа, для этих типов.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Возвращающие табличное значение параметры &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

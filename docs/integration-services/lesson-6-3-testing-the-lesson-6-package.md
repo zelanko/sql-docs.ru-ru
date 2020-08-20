@@ -1,4 +1,5 @@
 ---
+description: Занятие 6-3. Тестирование пакета занятия 6
 title: Шаг 3. Тестирование пакета, созданного на занятии 6 | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/11/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dec02c9a17a2eb1db3411c9b359ad55a83ac4fa5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6fc7b150f94d0f857244587140fd54b8fe7d38c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922374"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487745"
 ---
 # <a name="lesson-6-3-test-the-lesson-6-package"></a>Занятие 6-3. Тестирование пакета занятия 6
 
@@ -39,7 +40,7 @@ ms.locfileid: "86922374"
   
 ## <a name="test-the-lesson-6-package"></a>Тестирование пакета занятия 6  
   
-1.  В меню **Отладка** выберите команду **Начать отладку**.  
+1.  В меню **Отладка** выберите пункт **Начать отладку**.  
   
 2.  После окончания работы пакета выберите в меню **Отладка** пункт **Остановить отладку**.  
   

@@ -1,4 +1,5 @@
 ---
+description: Двойная косая черта многомерных выражений
 title: Метки (МНОГОМЕРНЫЕ ВЫРАЖЕНИЯ) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6eb4b54df98cfbf297e6347dac336aa7405d1347
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 17f6a0d4220982007e7f742c11f197cb7b8b4dd6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006293"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487617"
 ---
 # <a name="comment-mdx-double-slash"></a>Двойная косая черта многомерных выражений
 
@@ -55,8 +56,8 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Комментарий &#40;&#41;многомерных выражений](../mdx/comment-mdx.md)   
- [--&#40;комментарий&#41; &#40;многомерных выражениях&#41;](../mdx/comment-mdx-operator-reference.md)   
- [Справочник по операторам многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-operator-reference-mdx.md)  
+ [Комментарий (MDX)](../mdx/comment-mdx.md)   
+ [-- (Комментарий) (MDX)](../mdx/comment-mdx-operator-reference.md)   
+ [Справочник по операторам многомерных выражений &#40;&#41;многомерных выражений ](../mdx/mdx-operator-reference-mdx.md)  
   
   

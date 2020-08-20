@@ -1,4 +1,5 @@
 ---
+description: Создание домена
 title: Создание домена
 ms.date: 11/08/2011
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 529f0233f95a4f2ee123b2cc3c6974e4f5e6faf4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c3a97b28ed41f71fe73c1184bdea28870beecd1f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887997"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487909"
 ---
 # <a name="create-a-domain"></a>Создание домена
 
@@ -48,7 +49,7 @@ ms.locfileid: "85887997"
   
 5.  В таблице **Сопоставления** выберите исходный столбец из раскрывающегося списка для столбца **Исходный столбец** пустой строки. Если соответствующий домен не существует, щелкните значок **Создать домен** .  
   
-##  <a name="create-a-domain-in-the-domain-management-activity"></a><a name="DomainManagement"></a>Создание домена в действии "Управление доменами"  
+##  <a name="create-a-domain-in-the-domain-management-activity"></a><a name="DomainManagement"></a> Создание домена в действии "Управление доменами"  
   
 1.  На главной странице [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] нажмите кнопку **Открыть базу знаний** и выберите базу знаний или нажмите кнопку **Создать базу знаний** и введите свойства новой базы знаний.  
   
@@ -56,7 +57,7 @@ ms.locfileid: "85887997"
   
 3.  На странице **Управление доменами** щелкните значок **Создать домен** над списком доменов.  
   
-##  <a name="set-domain-properties"></a><a name="Properties"></a>Задание свойств домена  
+##  <a name="set-domain-properties"></a><a name="Properties"></a> Задание свойств домена  
   
 1.  В диалоговом окне **Создание домена** введите имя, уникальное в базе знаний, и описание длиной не более 256 символов.  
   

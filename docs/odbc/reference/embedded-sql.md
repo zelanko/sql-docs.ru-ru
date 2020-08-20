@@ -1,4 +1,5 @@
 ---
+description: Embedded SQL
 title: Внедренный SQL | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8eee3527-f225-4aa2-bd18-a16bd3ab0fb7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9ad6fd2753d026f026d72a7aa8f68d5d48ce03cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7b52c5a87d1df03460a833a27fcb5523b80cd1f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306677"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487417"
 ---
 # <a name="embedded-sql"></a>Embedded SQL
 Первым методом отправки инструкций SQL в СУБД является внедренный SQL. Поскольку в SQL не используются переменные и инструкции управления потоком, они часто используются в качестве подязыка базы данных, который можно добавить в программу, написанную на традиционном языке программирования, например C или COBOL. Это центральная идея внедренного SQL: помещение инструкций SQL в программу, написанную на языке программирования узла. Вкратце, для внедрения инструкций SQL на основном языке используются следующие методы:  

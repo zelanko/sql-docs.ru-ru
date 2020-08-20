@@ -1,4 +1,5 @@
 ---
+description: Общие сведения о безопасности (службы Integration Services)
 title: Общие сведения о безопасности (службы Integration Services) | Документы Майкрософт
 ms.custom: security
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b4abc0de87f8dc11fbbd1d66b32b2eb9a0f6f2b9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9e45f6fc97531038c7d1d16c34eb18fc19d189cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922042"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487689"
 ---
 # <a name="security-overview-integration-services"></a>Общие сведения о безопасности (службы Integration Services)
 
@@ -109,11 +110,11 @@ ms.locfileid: "86922042"
 ## <a name="access-to-files-used-by-packages"></a><a name="files"></a> Доступ к файлам, используемым пакетами
   Уровень защиты пакета не способен защитить файлы, хранимые вне пределов пакета. Эти файлы включают в себя:  
   
--   Файлы конфигурации  
+-   Файлы конфигурации.  
   
 -   файлы контрольных точек  
   
--   Файлы журналов  
+-   Файлы журнала  
   
  Эти файлы должны быть защищены отдельно, особенно если они содержат конфиденциальные сведения.  
   
@@ -125,7 +126,7 @@ ms.locfileid: "86922042"
 ### <a name="checkpoint-files"></a>файлы контрольных точек  
  Таким же образом, если используемый пакетом файл контрольных точек содержит конфиденциальные сведения, то следует использовать список управления доступом (ACL) для защиты расположения или папки, где хранится этот файл. Файлы контрольных точек сохраняют данные как о текущем состоянии пакета, так и о текущих значениях переменных. Например, пакет может включать в себя пользовательскую переменную, содержащую номер телефона. Дополнительные сведения см. в разделе [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
-### <a name="log-files"></a>Файлы журналов  
+### <a name="log-files"></a>Файлы журнала  
  Записи журнала, сохраненные в файловой системе, также должны быть защищены с использованием списка управления доступом (ACL). Записи журнала также могут храниться в таблицах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и быть защищены системой безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Записи журнала могут содержать конфиденциальные сведения, например если пакет содержит задачу «Выполнение SQL», которая создает инструкцию SQL, ссылающуюся на номер телефона, то запись журнала для инструкции SQL содержит и номер телефона. Инструкция SQL также может раскрыть закрытые данные об именах таблиц и столбцов данных. Дополнительные сведения см. в разделе [Ведение журналов в службах Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md).  
 
 ## <a name="access-to-the-integration-services-service"></a><a name="service"></a> Доступ к службам Integration Services

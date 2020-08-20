@@ -1,4 +1,5 @@
 ---
+description: Создание связанного домена
 title: Создание связанного домена
 ms.date: 11/08/2011
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 68c8fe492dfe05945b670b137b0d2f427d82d486
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b2fb5b1a57b39a91735e213385c7756a7bb05984
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887963"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487883"
 ---
 # <a name="create-a-linked-domain"></a>Создание связанного домена
 
@@ -45,7 +46,7 @@ ms.locfileid: "85887963"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Для создания связанного домена необходимо быть членом роли dqs_kb_editor или dqs_administrator в базе данных DQS_MAIN.  
   
-##  <a name="create-a-linked-domain"></a><a name="Create"></a>Создание связанного домена  
+##  <a name="create-a-linked-domain"></a><a name="Create"></a> Создание связанного домена  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Запустите приложение Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -64,7 +65,7 @@ ms.locfileid: "85887963"
   
 7.  Нажмите кнопку **Готово** , чтобы завершить операцию управления доменами, как описано в разделе [Завершение операции по управлению доменами](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
-##  <a name="map-two-fields-to-linked-domains"></a><a name="Map"></a>Сопоставьте два поля со связанными доменами  
+##  <a name="map-two-fields-to-linked-domains"></a><a name="Map"></a> Сопоставьте два поля со связанными доменами  
   
 1.  Откройте базу знаний для операции обнаружения знаний и сопоставьте базу знаний с базой данных и таблицей или представлением.  
   
@@ -74,10 +75,10 @@ ms.locfileid: "85887963"
   
 4.  В диалоговом окне «Создание домена» введите имя домена и описание, а затем нажмите кнопку «ОК».  
   
-##  <a name="follow-up-after-creating-a-linked-domain"></a><a name="FollowUp"></a>Дальнейшие действия. После создания связанного домена  
+##  <a name="follow-up-after-creating-a-linked-domain"></a><a name="FollowUp"></a> Дальнейшие действия. После создания связанного домена  
  После создания связанного домена можно выполнить другие задачи управления для этого домена, провести обнаружение знаний с целью добавить набор знаний в домен или добавить в домен политику сопоставления. Дополнительные сведения см. в разделах [Обнаружение набора знаний](../data-quality-services/perform-knowledge-discovery.md), [Управление доменом](../data-quality-services/managing-a-domain.md) и [Создание политики сопоставления](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="behavior-of-a-linked-domain"></a><a name="Behavior"></a>Поведение связанного домена  
+##  <a name="behavior-of-a-linked-domain"></a><a name="Behavior"></a> Поведение связанного домена  
  Параметры связанного домена вы можете изменить следующим образом.  
   
 -   Вы можете изменить имя и описание связанного домена.  

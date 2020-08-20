@@ -1,4 +1,5 @@
 ---
+description: Просмотр отчета о наборе элементов сбора (среда SQL Server Management Studio)
 title: Просмотр отчета о наборе элементов сбора (SSMS)
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c3b1e791-9aa1-4bba-9622-4954568e1820
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 161fbacb2edc8d73d69bbc501e255ce657f6208c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5132dc4b782cb9af8e5e096ae35f57d8266a27c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715523"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487232"
 ---
 # <a name="view-a-collection-set-report-sql-server-management-studio"></a>Просмотр отчета о наборе элементов сбора (среда SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "85715523"
  Введите начальное время данных отчета или укажите его, нажимая стрелки.  
   
  **Длительность**  
- Выберите временной диапазон для включения в отчет. Значение по умолчанию составляет 240 минут. Возможные значения для выбора составляют 15 мин, 60 мин, 240 мин (4 часа), 720 мин (12 часов) и 1440 мин (24 часа).  
+ Выберите временной диапазон для включения в отчет. Значение по умолчанию — 240 минут. Возможные значения для выбора составляют 15 мин, 60 мин, 240 мин (4 часа), 720 мин (12 часов) и 1440 мин (24 часа).  
   
 ## <a name="see-also"></a>См. также:  
  [Сбор данных](../../relational-databases/data-collection/data-collection.md)   

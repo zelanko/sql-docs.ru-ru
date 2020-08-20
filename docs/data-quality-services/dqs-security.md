@@ -1,4 +1,5 @@
 ---
+description: Безопасность DQS
 title: Безопасность DQS
 ms.date: 10/01/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 921927f5-1b1e-452a-a79e-c691829fd826
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 55eb89febb9d4db79946a13b7d876d3391ab2516
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dd320306e757a969b684bd6654a6cc0431cb717c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895366"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487798"
 ---
 # <a name="dqs-security"></a>Безопасность DQS
 

@@ -1,4 +1,5 @@
 ---
+description: Comment-Справочник по операторам многомерных выражений
 title: --(Comment) (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c848277505dde5fabb10247641ee6b7f955d84e0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2ef1ba2fda9cd5eb6a82ea3d437c8e663c442cf5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006281"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487607"
 ---
 # <a name="comment---mdx-operator-reference"></a>Comment-Справочник по операторам многомерных выражений
 
@@ -55,8 +56,8 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Комментарий &#40;&#41;многомерных выражений](../mdx/comment-mdx.md)   
- [&#40;комментарий&#41; &#40;&#41;многомерных выражений](../mdx/comment-mdx-double-slash.md)   
- [Справочник по операторам многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-operator-reference-mdx.md)  
+ [Комментарий (MDX)](../mdx/comment-mdx.md)   
+ [&#40;комментарий&#41; &#40;&#41;многомерных выражений ](../mdx/comment-mdx-double-slash.md)   
+ [Справочник по операторам многомерных выражений &#40;&#41;многомерных выражений ](../mdx/mdx-operator-reference-mdx.md)  
   
   

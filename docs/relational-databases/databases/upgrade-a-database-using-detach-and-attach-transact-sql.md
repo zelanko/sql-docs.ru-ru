@@ -1,4 +1,5 @@
 ---
+description: Обновление базы данных при помощи отсоединения и присоединения (Transact-SQL)
 title: Обновление базы данных при помощи отсоединения и присоединения (Transact-SQL)
 ms.date: 06/03/2020
 ms.prod: sql
@@ -16,18 +17,18 @@ ms.assetid: 99f66ed9-3a75-4e38-ad7d-6c27cc3529a9
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: cbaa67dbde197e1e59df92380945a0d969180add
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a3bb3afe218c4087e09b8227bbcbf8c60798a3b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85694725"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487115"
 ---
 # <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>Обновление базы данных при помощи отсоединения и присоединения (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 В этой теме описывается использование операции отсоединения и присоединения для обновления базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. После присоединения к [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]база данных сразу становится доступной, после чего автоматически обновляется. Это исключает возможность использования базы данных с более старой версией [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Тем не менее обновление метаданных не влияет на [режим совместимости базы данных](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md). Дополнительные сведения см. в разделе [уровень базы данных совместимости после обновления](#dbcompat) далее в этой статье.  
   
- **В этом разделе**  
+ **Содержание раздела**  
   
 -   **Перед началом работы**  
   
@@ -106,7 +107,7 @@ ms.locfileid: "85694725"
   
     В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]только что присоединенная база данных отображается в обозревателе объектов не сразу. Чтобы отобразить базу данных, щелкните в обозревателе объектов пункт **Вид** , а затем **Обновить**. Теперь, раскрыв в обозревателе объектов узел **Базы данных** , можно увидеть в списке присоединенную базу данных.  
   
-##  <a name="follow-up-after-upgrading-a-sql-server-database"></a><a name="FollowUp"></a> Продолжение: после обновления базы данных SQL Server  
+##  <a name="follow-up-after-upgrading-a-sql-server-database"></a><a name="FollowUp"></a> Дальнейшие действия. После обновления базы данных SQL Server  
 Если база данных содержит полнотекстовые индексы, то в процессе обновления будет произведен их импорт, сброс или перестроение в зависимости от установленного значения свойства сервера **upgrade_option** . Если при обновлении выбран режим импорта (**upgrade_option** = 2) или перестроения (**upgrade_option** = 0), полнотекстовые индексы во время обновления будут недоступны. В зависимости от объема индексируемых данных процесс импорта может занять несколько часов, а перестроение — в несколько (до десяти) раз больше. Обратите внимание, что если для обновления выбран режим «Импортировать», а полнотекстовый каталог недоступен, то связанные с ним полнотекстовые индексы будут перестроены. Чтобы изменить значение свойства сервера **upgrade_option** , следует использовать процедуру [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
   
 ### <a name="database-compatibility-level-after-upgrade"></a><a name="dbcompat"></a> Уровень совместимости баз данных после обновления  

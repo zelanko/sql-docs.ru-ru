@@ -1,4 +1,5 @@
 ---
+description: Data Cleansing
 title: Data Cleansing
 ms.date: 10/01/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 5a45acafea032b6a0815d975f91b64f5612b2e43
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d54722c2a8cf6e5364cc25d35621957164d3b9a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899138"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487847"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
 
@@ -105,7 +106,7 @@ ms.locfileid: "85899138"
 |Описывает очистку данных с использованием знаний, полученных от службы эталонных данных.|[Очистка данных с использованием набора знаний об эталонных данных &#40;внешних&#41;](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
 |Описывает очистку составного домена.|[Очистка данных в составном домене](../data-quality-services/cleanse-data-in-a-composite-domain.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Проекты служб Data Quality &#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)   
  [Сопоставление данных](../data-quality-services/data-matching.md)  
   

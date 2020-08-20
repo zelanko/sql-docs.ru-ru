@@ -1,4 +1,5 @@
 ---
+description: ClosingPeriod (многомерные выражения)
 title: ClosingPeriod (многомерные выражения) | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 102485ede0e52389d43bdb64742a2564aaa71419
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f457a941c8967ce6f3c6700760ff95d5c2999d0f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68016791"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487637"
 ---
 # <a name="closingperiod-mdx"></a>ClosingPeriod (многомерные выражения)
 
@@ -34,7 +35,7 @@ ClosingPeriod( [ Level_Expression [ ,Member_Expression ] ] )
  *Member_Expression*  
  Допустимое многомерное выражение, возвращающее элемент.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Эта функция прежде всего предназначена для использования в измерении времени, но может быть использована и для других измерений.  
   
 -   Если выражение уровня задано, функция **ClosingPeriod** использует измерение, которое содержит указанный уровень, и возвращает последний элемент среди потомков элемента по умолчанию на заданном уровне.  
@@ -79,9 +80,9 @@ SELECT ClosingPeriod ([Date].[Fiscal].[Month],[Date].[Fiscal].[Fiscal Year].&[20
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [OpeningPeriod &#40;&#41;многомерных выражений](../mdx/openingperiod-mdx.md)   
- [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений](../mdx/mdx-function-reference-mdx.md)   
- [LastSibling &#40;&#41;многомерных выражений](../mdx/lastsibling-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [OpeningPeriod &#40;&#41;многомерных выражений ](../mdx/openingperiod-mdx.md)   
+ [Ссылка на функцию многомерных выражений &#40;&#41;многомерных выражений ](../mdx/mdx-function-reference-mdx.md)   
+ [LastSibling &#40;&#41;многомерных выражений ](../mdx/lastsibling-mdx.md)  
   
   

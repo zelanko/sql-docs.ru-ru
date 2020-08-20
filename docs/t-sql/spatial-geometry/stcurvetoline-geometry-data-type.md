@@ -1,4 +1,5 @@
 ---
+description: STCurveToLine (тип данных geometry)
 title: STCurveToLine (тип данных geometry) | Документы Майкрософт
 ms.custom: ''
 ms.date: 08/03/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: abc80b32-4152-4e10-b816-798b901e0ac5
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 68129b88cbd7bfa0f168f901952e9f8a40643a51
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e4eb3aa1d61d49b70a9526f352807a1569dfb7e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555062"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488108"
 ---
 # <a name="stcurvetoline-geometry-data-type"></a>STCurveToLine (тип данных geometry)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "86555062"
   
  Тип возвращаемых данных CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Возвращает пустой экземпляр **GeometryCollection** для пустых переменных экземпляра **geometry** и возвращает значение **NULL** для неинициализированных переменных **geometry**.  
   
  Приближение из многоугольников, возвращаемое методом, зависит от экземпляра **geometry**, с помощью которого был вызван метод:  

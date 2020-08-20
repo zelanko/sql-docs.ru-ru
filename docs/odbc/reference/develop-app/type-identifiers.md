@@ -1,4 +1,5 @@
 ---
+description: Идентификаторы типов
 title: Идентификаторы типов | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1d9fdfa2-e378-44fe-ac66-9743d9bbdd5a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a274a19eaa0a2fdf98bcaa9ef42406ee8a6b6461
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4ed41716cd351631578d01027663aa9e0f028c7d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306435"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487447"
 ---
 # <a name="type-identifiers"></a>Идентификаторы типов
 Для описания типов данных SQL и C ODBC определяет два набора *идентификаторов типов*. Идентификатор типа описывает тип столбца SQL или буфера C. Это **#define** значение, которое обычно передается в качестве аргумента функции или возвращается в метаданных.  

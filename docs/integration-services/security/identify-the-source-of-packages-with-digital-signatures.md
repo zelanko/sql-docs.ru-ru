@@ -1,4 +1,5 @@
 ---
+description: Определение источника пакетов с помощью цифровых подписей
 title: Определение источника пакетов с помощью цифровых подписей | Документы Майкрософт
 ms.custom: security
 ms.date: 08/24/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 84922b21e074cbef8afe233e41746a51dfd13d20
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d1d5d09d0c41de51d545ca68aa4509f8a6b240f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922073"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487785"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>Определение источника пакетов с помощью цифровых подписей
 
@@ -45,7 +46,7 @@ ms.locfileid: "86922073"
 ## <a name="set-a-registry-value-to-check-package-signature"></a>Задание значения реестра для проверки подписи пакета  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] также поддерживают необязательное значение реестра **BlockedSignatureStates**, которое позволяет управлять политикой организации в отношении загрузки подписанных и неподписанных пакетов. Этот параметр препятствует загрузке пакетов, которые не подписаны либо имеют неверную или ненадежную подпись. Дополнительные сведения о задании этого значения реестра см. в разделе [Реализация политики подписывания путем задания параметра реестра](#registry).  
   
-> **ПРИМЕЧАНИЕ.** Дополнительное значение реестра **BlockedSignatureStates** может задавать настройку, накладывающую более строгое ограничение, чем параметр цифровой подписи, задаваемый в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] или программе командной строки **dtexec** . В этом случае значение в реестре переопределяет другие параметры.  
+> **ПРИМЕЧАНИЕ.** Дополнительный раздел реестра **BlockedSignatureStates** может задавать значение, накладывающее более строгое ограничение, чем параметр цифровой подписи, задаваемый в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] или программе командной строки **dtexec** . В этом случае значение в реестре переопределяет другие параметры.  
 
 ## <a name="implement-a-signing-policy-by-setting-a-registry-value"></a><a name="registry"></a> Реализация политики подписывания путем задания параметра реестра
   Для управления организационной политикой при загрузке подписанных и неподписанных пакетов можно использовать необязательный параметр реестра. При использовании данного параметра реестра его необходимо создать на каждом компьютере, где будут выполняться пакеты [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и где требуется принудительное выполнение этой политики. После задания такого параметра реестра службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] будут проверять наличие и верность подписи перед загрузкой пакетов.  
@@ -62,7 +63,7 @@ ms.locfileid: "86922073"
   
  Следующая таблица перечисляет допустимые значения параметра типа DWORD и связанные с ними политики.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |0|Нет административного ограничения.|  
 |1|Заблокировать недопустимые подписи.<br /><br /> Этот параметр не блокирует неподписанные пакеты.|  
@@ -149,7 +150,7 @@ ms.locfileid: "86922073"
  **Удалить**  
  Щелкните, чтобы удалить цифровую подпись.  
 
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также  
  [Пакеты служб Integration Services (SSIS)](../../integration-services/integration-services-ssis-packages.md)   
  [Общие сведения о безопасности (службы Integration Services)](../../integration-services/security/security-overview-integration-services.md)  
   

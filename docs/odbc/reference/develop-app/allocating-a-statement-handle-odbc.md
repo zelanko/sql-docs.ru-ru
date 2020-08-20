@@ -1,4 +1,5 @@
 ---
+description: Выделение дескриптора инструкции (ODBC)
 title: Выделение обработчика операторов ODBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 4ce3b446-34ab-46dc-96e5-f40ec95c267e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bf9a15bc4622b15afa9838327edd90383a812270
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 624490beee55c7fa37346087fc85b560904f6b93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288434"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487547"
 ---
 # <a name="allocating-a-statement-handle-odbc"></a>Выделение дескриптора инструкции (ODBC)
 Прежде чем приложение сможет выполнить инструкцию, оно должно выделить маркер инструкции следующим образом:  
   
-1.  Приложение объявляет переменную типа ХСТМТ. Затем он вызывает **функцию SQLAllocHandle** и передает адрес этой переменной, маркер соединения, в котором выделяется инструкция, и параметр SQL_HANDLE_STMT. Пример:  
+1.  Приложение объявляет переменную типа ХСТМТ. Затем он вызывает **функцию SQLAllocHandle** и передает адрес этой переменной, маркер соединения, в котором выделяется инструкция, и параметр SQL_HANDLE_STMT. Например:  
   
     ```  
     SQLHSTMT hstmt1;  

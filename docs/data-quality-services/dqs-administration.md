@@ -1,4 +1,5 @@
 ---
+description: администрирование DQS
 title: администрирование DQS
 ms.date: 10/01/2012
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 3ad4fb8f24ca51741c21fead975a1c745f661b87
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1874867b02aea521e44ff6ee0af4d8cfdfb57298
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888099"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487795"
 ---
 # <a name="dqs-administration"></a>администрирование DQS
 
@@ -42,13 +43,13 @@ ms.locfileid: "85888099"
   
 -   Настраивает ведение журнала в зависимости от степени серьезности событий.  
   
-##  <a name="administration-activities-by-using-data-quality-client"></a><a name="AdminUsingClent"></a>Действия администрирования с помощью Data Quality Client  
+##  <a name="administration-activities-by-using-data-quality-client"></a><a name="AdminUsingClent"></a> Действия администрирования с помощью Data Quality Client  
  Эти действия выполняются в компоненте **Администрирование** клиента [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].  
   
 ### <a name="activity-monitoring"></a>Мониторинг активности  
  Экран **Мониторинг активности** в клиенте [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] показывает подробные сведения о каждой операции, выполняемой на сервере [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]. Этот экран рассчитан в основном на диспетчеров данных и предназначен для высокоуровневого мониторинга всех действий, выполняемых на сервере [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] , к которому подключено приложение [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Он не предоставляет средств мониторинга на системном уровне. Кроме того, этот экран позволяет администраторам DQS управлять операцией или входящим в нее процессом, завершая выполняющуюся операцию или останавливая выполняющийся процесс в случае необходимости. Отображаются данные для обнаружения знаний, управления доменами, политики сопоставления, очистки, сопоставления и очистки на основе служб SQL Server Integration Services (SSIS).  
   
-### <a name="configuration"></a>Параметр Configuration  
+### <a name="configuration"></a>Конфигурация  
  Экран **Конфигурация** в клиенте [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] позволяет администратору DQS выполнять следующие действия.  
   
 -   **Ссылочные данные**: Настройте поставщики служб ссылочных данных: Azure Marketplace или прямые поставщики служб ссылочных данных. После настройки поставщиков служб ссылочных данных вы можете сопоставить домен или составной домен с эталонными данными в рамках операции управления доменами в базе знаний, а затем использовать эту же базу знаний для операции очистки в проекте качества данных. Он также позволяет указать параметры прокси-сервера для подключения к Интернету для использования Azure Marketplace.  
@@ -60,7 +61,7 @@ ms.locfileid: "85888099"
 > [!NOTE]  
 >  Экран **Конфигурация** доступен только пользователям, входящим в роль dqs_administrator в базе данных DQS_MAIN.  
   
-##  <a name="administration-activities-outside-of-data-quality-client"></a><a name="AdminOutsideClient"></a>Действия администрирования за пределами Data Quality Client  
+##  <a name="administration-activities-outside-of-data-quality-client"></a><a name="AdminOutsideClient"></a> Действия администрирования за пределами Data Quality Client  
  Эти действия выполняются за пределами клиента DQS:  
   
 -   **Базы данных резервного копирования и восстановления.** Резервное копирование и восстановление баз данных DQS из копии выполняются так же, как для любой базы данных SQL Server, с учетом некоторых особенностей DQS.  

@@ -1,4 +1,5 @@
 ---
+description: sys.configurations (Transact-SQL)
 title: sys.configуратионс (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bfe45a28ba06da888b5b28bbd3c5c404acde2dca
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1b041e0bb17e0c290225ecb951fe26d95ab07770
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896321"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486464"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,10 +37,10 @@ ms.locfileid: "85896321"
 |**configuration_id**|**int**|Уникальный идентификатор значения конфигурации.|  
 |**name**|**nvarchar(35)**|Имя параметра конфигурации.|  
 |**value**|**sql_variant**|Установленное значение параметра.|  
-|**минимальное**|**sql_variant**|Минимальное значение параметра конфигурации.|  
-|**выше**|**sql_variant**|Максимальное значение параметра конфигурации.|  
+|**minimum**|**sql_variant**|Минимальное значение параметра конфигурации.|  
+|**maximum**|**sql_variant**|Максимальное значение параметра конфигурации.|  
 |**value_in_use**|**sql_variant**|Текущее значение параметра.|  
-|**nописание**|**nvarchar(255)**|Описание параметра конфигурации.|  
+|**description**|**nvarchar(255)**|Описание параметра конфигурации.|  
 |**is_dynamic**|**bit**|1 = переменная, вступающая в силу после выполнения инструкции RECONFIGURE.|  
 |**is_advanced**|**bit**|1 = переменная отображается, только если задан параметр **Показать адванцедоптион** .|  
   
@@ -62,7 +63,7 @@ select * from sys.configurations where value != value_in_use
 
 Если значение соответствует измененному параметру конфигурации, но **value_in_use** не совпадает, то либо команда RECONFIGURE не была выполнена, либо произошел сбой, либо необходимо перезапустить ядро сервера.
 
-Существуют параметры конфигурации, в которых значения и value_in_use могут отличаться, и это ожидаемое поведение. Пример:
+Существуют параметры конфигурации, в которых значения и value_in_use могут отличаться, и это ожидаемое поведение. Например:
 
 "max server memory (МБ)" — значение по умолчанию 0 будет отображаться как value_in_use = 2147483647 "min server memory (МБ)" — значение по умолчанию, равное 0, может отображаться как value_in_use = 8 (32-разрядное) или 16 (64-разрядное). 
 
@@ -77,7 +78,7 @@ select * from sys.configurations where value != value_in_use
  Необходимо быть членом роли **public**. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>См. также  
- [Представления каталога конфигурации на уровне сервера &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)   
+ [Представления каталога конфигурации на уровне сервера &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)   
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

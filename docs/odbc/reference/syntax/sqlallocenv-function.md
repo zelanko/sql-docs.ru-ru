@@ -1,4 +1,5 @@
 ---
+description: Функция SQLAllocEnv
 title: Функция SQLAllocEnv | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 00bac0c1-346b-4e48-901a-06ba4557b944
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4384ccb3bb16ec564f5eb180d91db2f23dad5c8e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9929677402ec11b164a6bee165ea5ac37e77c5e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81290439"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487307"
 ---
 # <a name="sqlallocenv-function"></a>Функция SQLAllocEnv
 **Соответствия**  
@@ -36,6 +37,6 @@ ms.locfileid: "81290439"
 > [!NOTE]  
 >  Дополнительные сведения о том, что диспетчер драйверов сопоставляет эту функцию при использовании ODBC 2. Приложение *x* работает с ODBC 3. драйвер *x* см. в разделе [сопоставление устаревших функций](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) в приложении G: рекомендации по драйверу для обеспечения обратной совместимости.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)

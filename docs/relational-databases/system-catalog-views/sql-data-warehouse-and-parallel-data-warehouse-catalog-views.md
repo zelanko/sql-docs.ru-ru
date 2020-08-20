@@ -1,4 +1,5 @@
 ---
+description: SQL Data Warehouse and Parallel Data Warehouse Catalog Views (Представления каталога в службе "Хранилище данных SQL" и Parallel Data Warehouse)
 title: Представления каталога
 titleSuffix: Azure SQL Data Warehouse and Parallel Data Warehouse
 ms.date: 10/29/2019
@@ -12,12 +13,12 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 258c08acbccc80a90a03b70f5f586960aa763f02
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 8682f7d5549389ff98d20862ce86f6d177b3116e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197297"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486519"
 ---
 # <a name="sql-data-warehouse-and-parallel-data-warehouse-catalog-views"></a>SQL Data Warehouse and Parallel Data Warehouse Catalog Views (Представления каталога в службе "Хранилище данных SQL" и Parallel Data Warehouse)
 
@@ -60,7 +61,7 @@ ms.locfileid: "86197297"
   
  [sys. pdw_table_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md) 
 
-## <a name="sssdw-catalog-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]Представления каталога
+## <a name="sssdw-catalog-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Представления каталога
 
  Следующие представления каталога применимы [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] только к:
 
@@ -68,7 +69,7 @@ ms.locfileid: "86197297"
 
  [sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest) 
 
- [sys. pdw_materialized_view_mappings &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql?view=azure-sqldw-latest) (Предварительная версия)
+ [sys. pdw_materialized_view_mappings &#40;&#41;Transact-SQL ](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql?view=azure-sqldw-latest) (Предварительная версия)
 
  [sys. workload_management_workload_classifier_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md)
   
@@ -77,7 +78,7 @@ ms.locfileid: "86197297"
  [sys. workload_management_workload_groups &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql?view=azure-sqldw-latest) 
 
 
-## <a name="sspdw-catalog-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]Представления каталога
+## <a name="sspdw-catalog-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Представления каталога
 
  Следующие представления каталога применимы [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] только к:
 

@@ -1,4 +1,5 @@
 ---
+description: Инструкции UPDATE, DELETE и INSERT
 title: Инструкции UPDATE, DELETE и INSERT | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f12682a5d012d6981afce0085e9c920ed2f2ffbc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8b01582594bb54f8feafef3f98118d3e17286fae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284264"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487427"
 ---
 # <a name="update-delete-and-insert-statements"></a>Инструкции UPDATE, DELETE и INSERT
 Приложения на основе SQL делают изменения в таблицах, выполняя инструкции **Update**, **Delete**и **INSERT** . Эти инструкции являются частью минимального уровня соответствия грамматики SQL и должны поддерживаться всеми драйверами и источниками данных.  
@@ -30,9 +31,9 @@ ms.locfileid: "81284264"
   
  **Обновить** _таблицу-имя_  
   
- **Задать** _идентификатор_ **=** столбца {*выражение* &#124; **null**}  
+ **Задать** _идентификатор столбца_ **=** {*выражение* &#124; **null**}  
   
- [**,** _столбец-Идентификатор_ **=** {*выражение* &#124; **null**}]...  
+ [**,** _столбец-Идентификатор_ **=** {*expression* &#124; **null**}] ...  
   
  [**Где** _Искать-условие_]  
   
