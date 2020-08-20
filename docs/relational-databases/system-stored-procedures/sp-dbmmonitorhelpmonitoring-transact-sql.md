@@ -1,4 +1,5 @@
 ---
+description: sp_dbmmonitorhelpmonitoring (Transact-SQL)
 title: sp_dbmmonitorhelpmonitoring (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a085cf87-269f-454a-a146-21f80a113b72
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 19e8530d1cef60be0193865972b6a19e3c91a49c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f6c01cf610764cc02f77ac1f035319fb1598687b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85865779"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493373"
 ---
 # <a name="sp_dbmmonitorhelpmonitoring-transact-sql"></a>sp_dbmmonitorhelpmonitoring (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,10 +41,10 @@ sp_dbmmonitorhelpmonitoring
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- None  
+ Нет  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- None  
+ Нет  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  Возвращает текущий интервал обновления, т.е. число минут между обновлениями таблицы состояний зеркального отображения баз данных. Значение лежит в диапазоне от 1 до 120 минут.  
@@ -58,8 +59,8 @@ sp_dbmmonitorhelpmonitoring
 EXEC sp_dbmmonitorhelpmonitoring;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Мониторинг &#40;SQL Server зеркального отображения базы данных&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
+## <a name="see-also"></a>См. также:  
+ [Мониторинг зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [sp_dbmmonitorresults (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)  
   
   

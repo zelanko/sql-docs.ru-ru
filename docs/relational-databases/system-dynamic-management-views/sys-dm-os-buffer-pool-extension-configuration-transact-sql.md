@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)
 title: sys. dm_os_buffer_pool_extension_configuration (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/09/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d52cc481-4d29-4f33-b63d-231ec35d092f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0654796ace5d5026539fc50f514b0407362633fc
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 463ca3dcf57856a2dae6fff308dba857e40fcd7c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442737"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493658"
 ---
 # <a name="sysdm_os_buffer_pool_extension_configuration-transact-sql"></a>sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)
 
@@ -37,7 +38,7 @@ ms.locfileid: "87442737"
 | :---------- | :-------- | :---------- |
 |path|**nvarchar**(256)|Путь и имя файла кэша расширения буферного пула. Допускает значение NULL.|  
 |file_id|**int**|Идентификатор файла расширения буферного пула. Не допускает значение NULL.|  
-|state|**int**|Состояние расширения буферного пула. Не допускает значение NULL.<br /><br /> 0 = расширение буферного пула выключено<br /><br /> 1 = отключение расширения буферного пула<br /><br /> 2 — зарезервировано для будущего использования<br /><br /> 3 = включение расширения буферного пула<br /><br /> 4 = зарезервировано для использования в будущем<br /><br /> 5 = расширение буферного пула включено|  
+|Состояние|**int**|Состояние расширения буферного пула. Не допускает значение NULL.<br /><br /> 0 = расширение буферного пула выключено<br /><br /> 1 = отключение расширения буферного пула<br /><br /> 2 — зарезервировано для будущего использования<br /><br /> 3 = включение расширения буферного пула<br /><br /> 4 = зарезервировано для использования в будущем<br /><br /> 5 = расширение буферного пула включено|  
 |state_description|**nvarchar**(60)|Описывает состояние расширения буферного пула. Допускает значение NULL.<br /><br /> 0 = РАСШИРЕНИЕ БУФЕРНОГО ПУЛА ВЫКЛЮЧЕНО<br /><br /> 5 = РАСШИРЕНИЕ БУФЕРНОГО ПУЛА ВКЛЮЧЕНО|
 |current_size_in_kb|**bigint**|Текущий размер файла расширения буферного пула. Не допускает значение NULL.|
 | &nbsp; | &nbsp; | &nbsp; |
@@ -55,7 +56,7 @@ SELECT path, file_id, state, state_description, current_size_in_kb
 FROM sys.dm_os_buffer_pool_extension_configuration;  
 ```  
   
-### <a name="b-returning-the-number-of-cached-pages-in-the-buffer-pool-extension-file"></a>Б) Возвращает число кэшированных страниц в файле расширения буферного пула.  
+### <a name="b-returning-the-number-of-cached-pages-in-the-buffer-pool-extension-file"></a>Б. Возвращает число кэшированных страниц в файле расширения буферного пула.  
  В следующем примере возвращается количество кэшированных страниц в каждом файле расширения буферного пула.  
   
 ```sql  
@@ -65,7 +66,7 @@ WHERE is_in_bpool_extension <> 0
 ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширение буферного пула](../../database-engine/configure-windows/buffer-pool-extension.md)   
  [sys.dm_os_buffer_descriptors (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)  
   

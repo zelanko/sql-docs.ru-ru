@@ -1,4 +1,5 @@
 ---
+description: sp_browsereplcmds (Transact-SQL)
 title: sp_browsereplcmds (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 695a45248185fe2c064cf94a9cf616efce475ecf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a3e84bf24563d8d22728cb0b09f348829f6c0e02
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716057"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493477"
 ---
 # <a name="sp_browsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,21 +45,21 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @xact_seqno_start = ] 'xact_seqno_start'`Указывает самый точный порядковый номер, который необходимо вернуть. *xact_seqno_start* имеет тип **nchar (22)** и значение по умолчанию 0x00000000000000000000.  
+`[ @xact_seqno_start = ] 'xact_seqno_start'` Указывает самый точный порядковый номер, который необходимо вернуть. *xact_seqno_start* имеет тип **nchar (22)** и значение по умолчанию 0x00000000000000000000.  
   
-`[ @xact_seqno_end = ] 'xact_seqno_end'`Задает наибольший точный порядковый номер для возврата. *xact_seqno_end* имеет тип **nchar (22)** и значение по умолчанию 0xFFFFFFFFFFFFFFFFFFFF.  
+`[ @xact_seqno_end = ] 'xact_seqno_end'` Задает наибольший точный порядковый номер для возврата. *xact_seqno_end* имеет тип **nchar (22)** и значение по умолчанию 0xFFFFFFFFFFFFFFFFFFFF.  
   
-`[ @originator_id = ] 'originator_id'`Указывает, возвращаются ли команды с указанным *originator_id* . *originator_id* имеет **тип int**и значение по умолчанию NULL.  
+`[ @originator_id = ] 'originator_id'` Указывает, возвращаются ли команды с указанным *originator_id* . *originator_id* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @publisher_database_id = ] 'publisher_database_id'`Указывает, возвращаются ли команды с указанным *publisher_database_id* . *publisher_database_id* имеет **тип int**и значение по умолчанию NULL.  
+`[ @publisher_database_id = ] 'publisher_database_id'` Указывает, возвращаются ли команды с указанным *publisher_database_id* . *publisher_database_id* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @article_id = ] 'article_id'`Указывает, возвращаются ли команды с указанным *article_id* . *article_id* имеет **тип int**и значение по умолчанию NULL.  
+`[ @article_id = ] 'article_id'` Указывает, возвращаются ли команды с указанным *article_id* . *article_id* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @command_id = ] command_id`— Это расположение команды в MSrepl_commands &#40;декодировании [&#41;Transact-SQL](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) . *command_id* имеет **тип int**и значение по умолчанию NULL. Если указано, необходимо также указать все остальные параметры, а *xact_seqno_start*должны быть идентичны *xact_seqno_end*.  
+`[ @command_id = ] command_id` — Это расположение команды в MSrepl_commands &#40;декодировании [&#41;Transact-SQL ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) . *command_id* имеет **тип int**и значение по умолчанию NULL. Если указано, необходимо также указать все остальные параметры, а *xact_seqno_start*должны быть идентичны *xact_seqno_end*.  
   
-`[ @agent_id = ] agent_id`Указывает, что возвращаются только команды для конкретного агента репликации. *agent_id* имеет **тип int**и значение по умолчанию NULL.  
+`[ @agent_id = ] agent_id` Указывает, что возвращаются только команды для конкретного агента репликации. *agent_id* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @compatibility_level = ] compatibility_level`Версия, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в которой *COMPATIBILITY_LEVEL* имеет **тип int**и значение по умолчанию 9000000.  
+`[ @compatibility_level = ] compatibility_level` Версия, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в которой *COMPATIBILITY_LEVEL* имеет **тип int**и значение по умолчанию 9000000.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -82,14 +83,14 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
   
  Длинные команды в результирующих наборах могут быть разбиты на несколько строк.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_browsereplcmds** используется в репликации транзакций.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или члены предопределенных ролей базы данных **db_owner** или **replmonitor** в базе данных распространителя могут выполнять **sp_browsereplcmds**.  
   
 ## <a name="see-also"></a>См. также  
- [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
+ [sp_replcmds (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
  [sp_replshowcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

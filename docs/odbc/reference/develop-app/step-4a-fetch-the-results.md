@@ -1,4 +1,5 @@
 ---
+description: Шаг 4а. Выборка результатов
 title: Шаг 4A. получение результатов | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 77d30142-c774-473c-96fb-b364bb92ac60
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c4f810e5c42b54ec871c233ab498936abae610dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 91a81809d07faafac6511bb5ec96c97d4f59d654
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302975"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491361"
 ---
 # <a name="step-4a-fetch-the-results"></a>Шаг 4а. Выборка результатов
 Следующим шагом является выборка результатов, как показано на следующем рисунке.  

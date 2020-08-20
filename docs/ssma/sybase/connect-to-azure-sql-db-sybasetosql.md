@@ -1,4 +1,5 @@
 ---
+description: Подключение к базе данных SQL Azure (SybaseToSQL)
 title: Подключение к базе данных SQL Azure (SybaseToSQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 96538007-1099-40c8-9902-edd07c5620ee
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 50f130969949abd6f863c1a7d63c4a4e2d27decc
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 3717cce895ca602a550d47ea5c569af4c80963a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932125"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492317"
 ---
 # <a name="connect-to-azure-sql-database--sybasetosql"></a>Подключение к базе данных SQL Azure (SybaseToSQL)
 Используйте диалоговое окно Подключение к базе данных SQL Azure для подключения к базе данных SQL Azure, которую необходимо перенести.  
   
 Чтобы открыть это диалоговое окно, в меню **файл** выберите **подключиться к базе данных SQL Azure**. Если подключение было выполнено ранее, команда **повторно подключится к базе данных SQL Azure.**  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
 **Имя сервера**  
   
 Выберите или введите имя сервера для подключения к базе данных SQL Azure.  

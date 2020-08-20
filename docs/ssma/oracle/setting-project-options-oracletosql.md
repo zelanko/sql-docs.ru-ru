@@ -1,4 +1,5 @@
 ---
+description: Настройка параметров проекта (OracleToSQL)
 title: Настройка параметров проекта (OracleToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ ms.assetid: a324d07d-cfdf-43bd-98a0-acf332c5a4db
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: e104c2ed456567074b796d68d5a82769ac67e5ac
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 89460a8efb6278d8e4aaa4def6310d6dec687429
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932965"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492370"
 ---
 # <a name="setting-project-options-oracletosql"></a>Настройка параметров проекта (OracleToSQL)
 Для каждого проекта SSMA можно задать параметры уровня проекта. Эти параметры указывают на преобразование объектов, загрузку объектов, Пользовательский интерфейс и параметры переноса данных. Перед преобразованием объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или их миграции в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Убедитесь, что параметры конфигурации подходят для проекта.  
@@ -39,7 +40,7 @@ SSMA имеет пять наборов параметров проекта:
   
 Он также имеет четыре режима для настройки этих параметров:  
   
--   Значение по умолчанию  
+-   По умолчанию  
   
 -   Optimistic  
   
@@ -99,6 +100,6 @@ SSMA имеет пять наборов параметров проекта:
   
 -   В противном случае определения объектов базы данных Oracle можно преобразовать в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определения объектов. Дополнительные сведения см. в разделе [Преобразование схем Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Сопоставление типов данных Oracle и SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: sp_addserver (Transact-SQL)
 title: sp_addserver (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 160a6b29-5e80-44ab-80ec-77d4280f627c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8d6040c3806723d07396fe7af3a0d50f49bb7e9a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9483b0629ca0a58b6583bee369987eb7d85a91f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85876330"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493516"
 ---
 # <a name="sp_addserver-transact-sql"></a>sp_addserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,17 +45,17 @@ sp_addserver [ @server = ] 'server' ,
 ```
 
 ## <a name="arguments"></a>Аргументы
-`[ @server = ] 'server'`Имя сервера. Имена серверов должны быть уникальными и соответствовать правилам именования [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, за исключением того, что пробелы не допускаются. Аргумент*server* имеет тип **sysname**и не имеет значения по умолчанию.
+`[ @server = ] 'server'` Имя сервера. Имена серверов должны быть уникальными и соответствовать правилам именования [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, за исключением того, что пробелы не допускаются. Аргумент*server* имеет тип **sysname**и не имеет значения по умолчанию.
 
  Если на одном компьютере установлено несколько экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , то каждый экземпляр работает, как на отдельном сервере. Укажите именованный экземпляр, обратившись к *серверу* как *servername\instancename*.
 
-`[ @local = ] 'LOCAL'`Указывает, что сервер добавляется в качестве локального сервера. ** \@ Local** имеет тип **varchar (10)** и значение по умолчанию NULL. Указание ** \@ Local** в **качестве локального определяет** ** \@ сервер** как имя локального сервера и приводит к тому, что @SERVERNAME функция @ возвращает значение *Server*.
+`[ @local = ] 'LOCAL'` Указывает, что сервер добавляется в качестве локального сервера. ** \@ Local** имеет тип **varchar (10)** и значение по умолчанию NULL. Указание ** \@ Local** в **качестве локального определяет** ** \@ сервер** как имя локального сервера и приводит к тому, что @SERVERNAME функция @ возвращает значение *Server*.
 
  Программа настройки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] во время установки присваивает этой переменной в качестве значения имя компьютера. По умолчанию при подключении пользователей к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется имя компьютера, и никакая дополнительная настройка не требуется.
 
  Локальное переопределение вступает в силу только после перезагрузки компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] . На каждом экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]может быть определен только один локальный сервер.
 
-`[ @duplicate_ok = ] 'duplicate_OK'`Указывает, разрешено ли повторяющееся имя сервера. ** \@ duplicate_OK** имеет тип **varchar (13)** и значение по умолчанию NULL. ** \@ duplicate_OK** может иметь только значение **duplicate_OK** или null. Если указано **duplicate_OK** и добавляемое имя сервера уже существует, ошибка не возникает. Если именованные параметры не используются, необходимо указать ** \@ Local** .
+`[ @duplicate_ok = ] 'duplicate_OK'` Указывает, разрешено ли повторяющееся имя сервера. ** \@ duplicate_OK** имеет тип **varchar (13)** и значение по умолчанию NULL. ** \@ duplicate_OK** может иметь только значение **duplicate_OK** или null. Если указано **duplicate_OK** и добавляемое имя сервера уже существует, ошибка не возникает. Если именованные параметры не используются, необходимо указать ** \@ Local** .
 
 ## <a name="return-code-values"></a>Значения кода возврата
  0 (успешное завершение) или 1 (неуспешное завершение)

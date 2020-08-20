@@ -1,4 +1,5 @@
 ---
+description: sp_replsetoriginator (Transact-SQL)
 title: sp_replsetoriginator (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 030e5226-0585-439f-b8cd-36f48367d86d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1811a523e23de9726517bfabd1ddf8417aa3c5fc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0c75f590fc0482319783d1fb94f516d43581dd39
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85626739"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493119"
 ---
 # <a name="sp_replsetoriginator-transact-sql"></a>sp_replsetoriginator (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,14 +39,14 @@ sp_replsetoriginator [ @server_name= ] 'server_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @server_name = ] 'server_name'`Имя сервера, к которому применяется транзакция. Аргумент *originating_server* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @server_name = ] 'server_name'` Имя сервера, к которому применяется транзакция. Аргумент *originating_server* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @database_name = ] 'database_name'`Имя базы данных, к которой применяется транзакция. Аргумент *originating_db* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @database_name = ] 'database_name'` Имя базы данных, к которой применяется транзакция. Аргумент *originating_db* имеет тип **sysname**и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_replsetoriginator** выполняется агент распространения для записи источника транзакций, применяемых репликацией. Данные сведения используются для запуска механизма распознавания замыкания на себя для двунаправленных транзакционных подписок, которые имеют набор свойств обратной связи.  
   
 ## <a name="permissions"></a>Разрешения  

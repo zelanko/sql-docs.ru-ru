@@ -1,4 +1,5 @@
 ---
+description: Параметры проекта (преобразование) (MySQLToSQL)
 title: Параметры проекта (преобразование) (MySQLToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7ad5fe44-6445-4ba8-a457-5af792631f11
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 378bc98dd24eff758e6f4e368f4e97e211d1f2a8
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 4c2c4c093fec21723584538dfb5585a74e15c8fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935223"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492437"
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>Параметры проекта (преобразование) (MySQLToSQL)
 На странице преобразование диалогового окна **Параметры проекта** содержатся параметры, которые позволяют настроить, как SSMA преобразует синтаксис MySQL в SQL Server или SQL Azure синтаксис.  
@@ -89,7 +90,7 @@ ms.locfileid: "87935223"
 |**Ограничивающий прямоугольник по умолчанию {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} для пространственных индексов**|Определяет значение по умолчанию для параметра {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} ограничивающего прямоугольника, используемого в пространственных индексах.<br /><br />**Режим по умолчанию**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**Оптимистичный режим**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**Полный режим**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
 |**Плотность сетки по умолчанию для пространственных индексов**|Определяет значение по умолчанию для LEVEL_1, LEVEL_2, LEVEL_3 и LEVEL_4 плотность сетки, используемой в пространственных индексах.<br /><br />**Режим по умолчанию**<br /><br />LEVEL_1: по умолчанию<br /><br />LEVEL_2: по умолчанию<br /><br />LEVEL_3: по умолчанию<br /><br />LEVEL_4: по умолчанию<br /><br />**Оптимистичный режим**<br /><br />LEVEL_1: по умолчанию<br /><br />LEVEL_2: по умолчанию<br /><br />LEVEL_3: по умолчанию<br /><br />LEVEL_4: по умолчанию<br /><br />**Полный режим**<br /><br />LEVEL_1: по умолчанию<br /><br />LEVEL_2: по умолчанию<br /><br />LEVEL_3: по умолчанию<br /><br />LEVEL_4: по умолчанию|  
   
-### <a name="transactions"></a>Транзакции  
+### <a name="transactions"></a>Transactions  
   
 |||  
 |-|-|  

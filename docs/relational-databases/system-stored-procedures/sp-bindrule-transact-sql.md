@@ -1,4 +1,5 @@
 ---
+description: sp_bindrule (Transact-SQL)
 title: sp_bindrule (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/25/2015
@@ -18,12 +19,12 @@ ms.assetid: 2606073e-c52f-498d-a923-5026b9d97e67
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f2d068c18f692009f29ee7e8d6450c4f013c6906
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c06a99b6c4e5f248df477e147f45b10c7f566f04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716130"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493511"
 ---
 # <a name="sp_bindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85716130"
   Привязывает правило к столбцу или к псевдониму типа данных.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Вместо этого используйте ограничения[UNIQUE и Check](../../relational-databases/tables/unique-constraints-and-check-constraints.md) . ПРОВЕРОЧные ограничения создаются с помощью ключевого слова CHECK в инструкциях [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) или [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Вместо этого используйте ограничения[UNIQUE и Check](../../relational-databases/tables/unique-constraints-and-check-constraints.md) . ПРОВЕРОЧные ограничения создаются с помощью ключевого слова CHECK в инструкциях [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) или [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) .  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,9 +46,9 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @rulename = ] 'rule'`Имя правила, созданного инструкцией CREATE RULE. *rule* имеет тип **nvarchar (776)** и не имеет значения по умолчанию.  
+`[ @rulename = ] 'rule'` Имя правила, созданного инструкцией CREATE RULE. *rule* имеет тип **nvarchar (776)** и не имеет значения по умолчанию.  
   
-`[ @objname = ] 'object_name'`Таблица и столбец или псевдоним типа данных, к которому должно быть привязано правило. Правило не может быть привязано к **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, определяемому пользователем типу CLR или столбцу **timestamp**. Правило не может быть привязано к вычисляемому столбцу.  
+`[ @objname = ] 'object_name'` Таблица и столбец или псевдоним типа данных, к которому должно быть привязано правило. Правило не может быть привязано к **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, определяемому пользователем типу CLR или столбцу **timestamp**. Правило не может быть привязано к вычисляемому столбцу.  
   
  *object_name* имеет тип **nvarchar (776)** и не имеет значения по умолчанию. Если *object_name* является именем, сопоставленным с одним компонентом, оно разрешается как псевдоним типа данных. Если имя двух- или трехкомпонентное, оно рассматривается как таблица и столбец; в случае неудачи разрешения имя рассматривается как псевдоним типа данных. По умолчанию существующие столбцы типа данных псевдонима наследуют *правило* , если только правило не привязано непосредственно к столбцу.  
   
@@ -57,12 +58,12 @@ sp_bindrule [ @rulename = ] 'rule' ,
 > [!NOTE]  
 >  Правила, созданные на основе выражений, которые используют псевдоним типов данных, могут быть привязаны к столбцам или типам данных псевдонима, но не могут быть скомпилированы, если на них ссылаются. Избегайте использования правил, созданных на основе псевдонима типов данных.  
   
-`[ @futureonly = ] 'futureonly_flag'`Используется только при привязке правила к псевдониму типа данных. *future_only_flag* имеет тип **varchar (15)** и значение по умолчанию NULL. Этот параметр при задании значения **futureonly** предотвращает наследование нового правила существующими столбцами псевдонима типа данных. Если *futureonly_flag* имеет значение null, новое правило привязывается к любому столбцу псевдонима типа данных, который в настоящее время не имеет правила или который использует существующее правило типа данных псевдонима.  
+`[ @futureonly = ] 'futureonly_flag'` Используется только при привязке правила к псевдониму типа данных. *future_only_flag* имеет тип **varchar (15)** и значение по умолчанию NULL. Этот параметр при задании значения **futureonly** предотвращает наследование нового правила существующими столбцами псевдонима типа данных. Если *futureonly_flag* имеет значение null, новое правило привязывается к любому столбцу псевдонима типа данных, который в настоящее время не имеет правила или который использует существующее правило типа данных псевдонима.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  К столбцу можно привязать новое правило (хотя рекомендуется использовать ПРОВЕРОЧное ограничение) или псевдоним типа данных с **sp_bindrule** без отмены привязки существующего правила. Старое правило замещается. Если правило привязано к столбцу с существующим ограничением CHECK, вычисляются все ограничения. Нельзя привязать правило к типу данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Правило создается принудительно при выполнении инструкции INSERT, а не путем привязки. Символьное правило можно привязать к столбцу **числовых** типов данных, хотя такая операция вставки недопустима.  
@@ -118,7 +119,7 @@ EXEC sp_bindrule rule1, '[t.2].c1' ;
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE RULE (Transact-SQL)](../../t-sql/statements/create-rule-transact-sql.md)   
  [УДАЛИТЬ правило &#40;Transact-SQL&#41;](../../t-sql/statements/drop-rule-transact-sql.md)   

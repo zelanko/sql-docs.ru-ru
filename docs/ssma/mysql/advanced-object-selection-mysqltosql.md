@@ -1,4 +1,5 @@
 ---
+description: Расширенный выбор объектов (MySQLToSQL)
 title: Расширенный выбор объектов (MySQLToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 390ef0c2-107c-4443-9495-80f35f22d168
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 02dd86ea36cc06529e5bce9c36924e40204bfbe3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 58f322d0e5be41a41c38b84c76cf7bb77ae1618f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936220"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492480"
 ---
 # <a name="advanced-object-selection--mysqltosql"></a>Расширенный выбор объектов (MySQLToSQL)
 Диалоговое окно " **Расширенный раздел объекта** " позволяет фильтровать объекты базы данных с помощью строк и подстрок в имени объекта, а затем выбирать или отменять выбор этих объектов. SSMA выполняет операции преобразования и миграции для выбранных объектов.  
@@ -25,7 +26,7 @@ ms.locfileid: "87936220"
   
 Перед использованием этого диалогового окна может потребоваться принудительно загрузить все метаданные с помощью SSMA, либо путем преобразования схем, либо путем сохранения проекта.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
 **Проверить все элементы**  
 Добавляет галочку рядом со всеми элементами. Эти элементы будут сразу же выбраны в обозревателе метаданных.  
   

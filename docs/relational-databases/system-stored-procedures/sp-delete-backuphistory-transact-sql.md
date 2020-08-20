@@ -1,4 +1,5 @@
 ---
+description: sp_delete_backuphistory (Transact-SQL)
 title: sp_delete_backuphistory (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bdb56834-616e-47e4-b942-e895d2325e97
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 172d50a126ff0c12d55e9566e5bb7b9213c38fe8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: be5b2d16d3a6131d6c579a7f4f3c422ac003da73
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85865018"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493389"
 ---
 # <a name="sp_delete_backuphistory-transact-sql"></a>sp_delete_backuphistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @oldest_date = ] 'oldest\_date'`Самая старая Дата, сохраняемая в таблицах журнала резервного копирования и восстановления. *oldest_date* имеет тип **DateTime**и не имеет значения по умолчанию.  
+`[ @oldest_date = ] 'oldest\_date'` Самая старая Дата, сохраняемая в таблицах журнала резервного копирования и восстановления. *oldest_date* имеет тип **DateTime**и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -83,7 +84,7 @@ GO
 EXEC sp_delete_backuphistory @oldest_date = '01/14/2010';  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_delete_database_backuphistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-backuphistory-transact-sql.md)   
  [Журнал и сведения о заголовке резервной копии (SQL Server)](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   

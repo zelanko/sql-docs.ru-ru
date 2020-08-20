@@ -1,4 +1,5 @@
 ---
+description: sys.sp_cdc_disable_table (Transact-SQL)
 title: sys. sp_cdc_disable_table (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9d8f258662f9dddb4f1a0ecdb1c375666fc18cb4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e1dcc5dffd4c9a718227c85ce8f421b8cb45bbd8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891163"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492851"
 ---
 # <a name="syssp_cdc_disable_table-transact-sql"></a>sys.sp_cdc_disable_table (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,15 +47,15 @@ sys.sp_cdc_disable_table
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @source_schema = ] 'source\_schema'`Имя схемы, в которой содержится исходная таблица. Аргумент *source_schema* имеет тип **sysname**, не имеет значения по умолчанию и не может иметь значение null.  
+`[ @source_schema = ] 'source\_schema'` Имя схемы, в которой содержится исходная таблица. Аргумент *source_schema* имеет тип **sysname**, не имеет значения по умолчанию и не может иметь значение null.  
   
  *source_schema* должен существовать в текущей базе данных.  
   
-`[ @source_name = ] 'source\_name'`Имя исходной таблицы, из которой система отслеживания измененных данных должна быть отключена. Аргумент *source_name* имеет тип **sysname**, не имеет значения по умолчанию и не может иметь значение null.  
+`[ @source_name = ] 'source\_name'` Имя исходной таблицы, из которой система отслеживания измененных данных должна быть отключена. Аргумент *source_name* имеет тип **sysname**, не имеет значения по умолчанию и не может иметь значение null.  
   
  *source_name* должен существовать в текущей базе данных.  
   
-`[ @capture_instance = ] 'capture\_instance' | 'all'`Имя экземпляра отслеживания, который необходимо отключить для указанной исходной таблицы. *capture_instance* имеет тип **sysname** и не может иметь значение null.  
+`[ @capture_instance = ] 'capture\_instance' | 'all'` Имя экземпляра отслеживания, который необходимо отключить для указанной исходной таблицы. *capture_instance* имеет тип **sysname** и не может иметь значение null.  
   
  Если указан параметр "ALL", все экземпляры отслеживания, определенные для *source_name* , отключаются.  
   

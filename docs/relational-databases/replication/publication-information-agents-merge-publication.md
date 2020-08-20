@@ -1,4 +1,5 @@
 ---
+description: Сведения о публикации, агенты (публикация слиянием)
 title: Сведения о публикации, вкладка "Агенты" (публикация слиянием) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
@@ -12,16 +13,16 @@ f1_keywords:
 ms.assetid: 73ff590a-20da-4f10-b592-c60b7226d22b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2aa581588367a96036c62704c47f6ac6924fef5c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ce84b55a553b26e6fe9141601987f1e743584699
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720993"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493905"
 ---
 # <a name="publication-information-agents-merge-publication"></a>Сведения о публикации, агенты (публикация слиянием)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Вкладка **Агенты** отображает общие сведения об агенте моментальных снимков для выбранной публикации.  
+   Вкладка **Агенты** содержит общие сведения об агенте моментальных снимков для выбранной публикации.  
   
 ## <a name="options"></a>Параметры  
  Для получения более подробных сведений и задач, относящихся к агенту моментальных снимков, щелкните правой кнопкой мыши строку этого агента и выберите параметр в контекстном меню. Чтобы изменить способ отображения данных в сетке, щелкните правой кнопкой мыши сетку, а затем один из следующих параметров.  
@@ -59,7 +60,7 @@ ms.locfileid: "85720993"
  **Последнее действие**  
  Последнее действие выполнено во время самого последнего выполнения агента.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запуск монитора репликации](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Наблюдение за репликацией](../../relational-databases/replication/monitor/monitoring-replication.md)  
  [Просмотр сведений и выполнение задач с помощью монитора репликации](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)

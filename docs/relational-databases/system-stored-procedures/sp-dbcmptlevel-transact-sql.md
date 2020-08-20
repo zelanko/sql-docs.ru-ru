@@ -1,4 +1,5 @@
 ---
+description: sp_dbcmptlevel (Transact-SQL)
 title: sp_dbcmptlevel (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c5200a785b533a4d013f7e9b24eed2fac863ba7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b1571beb279f20cd5f887589b11c8fc72bec41a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85867256"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493410"
 ---
 # <a name="sp_dbcmptlevel-transact-sql"></a>sp_dbcmptlevel (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85867256"
   Определяет поведение конкретных баз данных для совместимости с указанной версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Используйте вместо него [уровень совместимости ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте вместо него [уровень совместимости ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,9 +44,9 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @dbname = ] name`Имя базы данных, для которой необходимо изменить уровень совместимости. Имена баз данных должны соответствовать правилам для идентификаторов. Аргумент *Name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @dbname = ] name` Имя базы данных, для которой необходимо изменить уровень совместимости. Имена баз данных должны соответствовать правилам для идентификаторов. Аргумент *Name* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @new_cmptlevel = ] version`Версия, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с которой должна быть совместима база данных. *версия* имеет тип **tinyint**и значение по умолчанию NULL. Это должно быть одно из следующих значений.  
+`[ @new_cmptlevel = ] version` Версия, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с которой должна быть совместима база данных. *версия* имеет тип **tinyint**и значение по умолчанию NULL. Это должно быть одно из следующих значений.  
   
  **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
   

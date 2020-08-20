@@ -1,4 +1,5 @@
 ---
+description: sp_batch_params (Transact-SQL)
 title: sp_batch_params (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 135937bbdac930d3ee90259c7e5b0f4faaab098f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ceb162fa058f1dd46eea196929586b8e31f4152c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85874137"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493486"
 ---
 # <a name="sp_batch_params-transact-sql"></a>sp_batch_params (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,10 +40,10 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @tsqlbatch = ] 'tsqlbatch'`Строка в Юникоде, содержащая [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкцию или пакет, для которых требуются сведения о параметрах. *тсклбатч* имеет тип **nvarchar (max)** или неявно преобразуется в **nvarchar (max)**.  
+`[ @tsqlbatch = ] 'tsqlbatch'` Строка в Юникоде, содержащая [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкцию или пакет, для которых требуются сведения о параметрах. *тсклбатч* имеет тип **nvarchar (max)** или неявно преобразуется в **nvarchar (max)**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- None  
+ Нет  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -52,12 +53,12 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 |**COLUMN_TYPE**|**smallint**|Это поле возвращает одно из следующих значений:<br /><br /> 0 = SQL_PARAM_TYPE_UNKNOWN<br /><br /> 1 = SQL_PARAM_TYPE_INPUT<br /><br /> 2 = SQL_PARAM_TYPE_OUTPUT<br /><br /> 3 = SQL_RESULT_COL<br /><br /> 4 = SQL_PARAM_OUTPUT<br /><br /> 5 = SQL_RETURN_VALUE<br /><br /> Этот столбец всегда содержит значение 0.|  
 |**DATA_TYPE**|**smallint**|Тип данных параметра (целочисленный код для типа данных ODBC). Если этот тип данных нельзя сопоставить с типом ISO, то значением будет NULL. Имя собственного типа данных возвращается в столбец **TYPE_NAME** . Это значение всегда равно NULL.|  
 |**TYPE_NAME**|**sysname**|Строковое представление типа данных, как оно представляется в базовой СУБД. Значение NULL.|  
-|**ОБЕСПЕЧИВАЮТ**|**int**|Количество значащих цифр. Возвращаемое значение для столбца **точности** находится в базовом 10.|  
+|**PRECISION**|**int**|Количество значащих цифр. Возвращаемое значение для столбца **точности** находится в базовом 10.|  
 |**LENGTH**|**int**|Размер передаваемых данных. Значение NULL.|  
 |**Измените**|**smallint**|Число цифр справа от десятичной запятой. Значение NULL.|  
-|**ОСНОВАНИЕ системы СЧИСЛЕНИЯ**|**smallint**|Основание системы счисления для числовых типов. Значение NULL.|  
+|**RADIX**|**smallint**|Основание системы счисления для числовых типов. Значение NULL.|  
 |**ОБНУЛЯЕМОГО**|**smallint**|Определяет допустимость значений NULL:<br /><br /> 1 = тип данных параметра может быть создан со значением NULL.<br /><br /> 0 = значения NULL недопустимы.<br /><br /> Значение NULL.|  
-|**SQL_DATA_TYPE**|**smallint**|Значение системного типа данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], как оно показано в поле TYPE дескриптора. Этот столбец аналогичен столбцу **data_type** , за исключением типов данных **даты** **и времени ISO** . Этот столбец всегда возвращает значение. Значение NULL.|  
+|**SQL_DATA_TYPE**|**smallint**|Значение системного типа данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], как оно показано в поле TYPE дескриптора. Этот столбец содержит то же значение, что и столбец **DATA_TYPE**, за исключением типов данных **datetime** и ISO **interval**. Этот столбец всегда возвращает значение. Значение NULL.|  
 |**SQL_DATETIME_SUB**|**smallint**|Код **интервала** **DateTime** или ISO, если значение **SQL_DATA_TYPE** равно SQL_DATETIME или SQL_INTERVAL. Для типов данных, отличных от **datetime** и **interval** в стандарте ISO, это поле имеет значение NULL. Значение NULL.|  
 |**CHAR_OCTET_LENGTH**|**int**|Максимальная длина в байтах для параметра **символьного** или **двоичного** типа данных. Для всех других типов данных этот столбец возвращает значение NULL. Это значение всегда равно NULL.|  
 |**ORDINAL_POSITION**|**int**|Положение по порядку параметра в пакете. Если имя параметра повторяется несколько раз, то этот столбец содержит порядковый номер первого вхождения. Первый параметр имеет порядковый номер 1. Этот столбец всегда возвращает значение.|  

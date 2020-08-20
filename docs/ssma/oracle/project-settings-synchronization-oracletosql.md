@@ -1,4 +1,5 @@
 ---
+description: Параметры проекта (синхронизация) (OracleToSQL)
 title: Параметры проекта (синхронизация) (OracleToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: e223fb7d-05ec-4fa5-8973-d845c33a23dd
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 697bf746f438d45731e78c0c39d28677c3be6ddd
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 6b27143bca2e5b2a2ef9d844fc5f2fc8208734a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933208"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492396"
 ---
 # <a name="project-settingssynchronization-oracletosql"></a>Параметры проекта (синхронизация) (OracleToSQL)
 Страница синхронизация диалогового окна **Параметры проекта** содержит параметры, которые настраивают, как SSMA загружает и обновляет объекты базы данных, такие как таблицы и хранимые процедуры, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

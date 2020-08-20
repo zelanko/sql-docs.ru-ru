@@ -1,4 +1,5 @@
 ---
+description: Выбор и настройка объектов для тестирования (SybaseToSQL)
 title: Выбор и настройка объектов для тестирования (SybaseToSQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 89c23aad-bfee-4917-bc16-175288390ac0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 31cc868cfe2d6fa7cc87e3fc6f89c868c43d17c3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: c6bcddffdbb524e10a0686e6e9a82f4abcd30db8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934643"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492148"
 ---
 # <a name="selecting-and-configuring-objects-to-test-sybasetosql"></a>Выбор и настройка объектов для тестирования (SybaseToSQL)
 На этом шаге вы выберете объекты для тестирования и настроите параметры для сравнения выходных параметров процедур и функций, а также возвращаемых значений функций.  
@@ -35,7 +36,7 @@ ms.locfileid: "87934643"
 ### <a name="use-during-comparisons"></a>Использовать во время сравнения  
 Включение использования выбранного параметра в сравнении результатов теста.  
   
--   При выборе значения **true**SSMA будет сравнивать выходное значение этого параметра после выполнения процедуры в Sybase с соответствующим значением в[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+-   При выборе значения **true**SSMA будет сравнивать выходное значение этого параметра после выполнения процедуры в Sybase с соответствующим значением в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   При выборе значения**false**параметр будет исключен из проверки результатов.  
   
@@ -82,6 +83,6 @@ ms.locfileid: "87934643"
 ## <a name="next-step"></a>Следующий шаг  
 [Выбор и настройка затронутых объектов &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Тестирование перенесенных объектов базы данных &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

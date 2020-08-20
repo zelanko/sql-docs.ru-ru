@@ -1,4 +1,5 @@
 ---
+description: Глобальные параметры (средство тестирования) (SybaseToSQL)
 title: Глобальные параметры (Tester) (SybaseToSQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,25 +10,25 @@ ms.topic: conceptual
 ms.assetid: 6f0b9cea-5a24-4e42-8bbf-c4516b00da23
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: f1ebf6d1122db6b28b13c33320dabef520a40f5a
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: c03a52c837d2f07e5a6027b181a2047a5f53add6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931291"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492180"
 ---
 # <a name="global-settings-tester-sybasetosql"></a>Глобальные параметры (средство тестирования) (SybaseToSQL)
 Страница «испытатель» диалогового окна « **глобальные параметры** » используется для указания параметров для тестера SSMA.  
   
 Чтобы получить доступ к параметрам тестера, в меню **Сервис** выберите **глобальные параметры**и щелкните **Тестер** в нижней части левой панели.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
 **Тестовый анализ объектов**  
 Этот параметр указывает, следует ли выполнять анализ тестируемых объектов. Выберите **Да** , если вы хотите, чтобы тест-инженер SSMA проанализировал и автоматически проверит зависимые объекты. Параметр по умолчанию имеет значение **Да**.  
   
 Для этого параметра доступны следующие параметры:  
   
-1.  да  
+1.  Да  
   
 2.  Нет  
   
@@ -49,7 +50,7 @@ ms.locfileid: "87931291"
   
 Для этого параметра доступны следующие параметры:  
   
-1.  да  
+1.  Да  
   
 2.  Нет  
   
@@ -58,10 +59,10 @@ ms.locfileid: "87931291"
   
 Для этого параметра доступны следующие параметры:  
   
-1.  да  
+1.  Да  
   
 2.  Нет  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Завершение подготовки тестового случая &#40;SybaseToSQL&#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)  
   

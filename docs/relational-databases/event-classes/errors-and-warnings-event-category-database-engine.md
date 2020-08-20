@@ -1,4 +1,5 @@
 ---
+description: Категория событий Errors and Warnings (компонент Database Engine)
 title: Категория событий «Ошибки и предупреждения»
 ms.date: 06/03/2020
 ms.prod: sql
@@ -14,24 +15,24 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: d31361a5512a93620d6ae2fbab34ff918a0837ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8243110252460d8838897139903f306937caf57f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716932"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491120"
 ---
 # <a name="errors-and-warnings-event-category-database-engine"></a>Категория событий Errors and Warnings (компонент Database Engine)
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  В категорию событий **Ошибки и предупреждения** входят общие события ошибок и предупреждений.  
+   В категорию событий **Ошибки и предупреждения** входят общие события ошибок и предупреждений.  
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Класс событий Attention](../../relational-databases/event-classes/attention-event-class.md)|Указывает, что произошло событие **Внимание** .|  
 |[Класс событий Background Job Error](../../relational-databases/event-classes/background-job-error-event-class.md)|Указывает, что фоновое задание завершилось ненормально.|  
-|[Класс событий Bitmap Warning](../../relational-databases/event-classes/bitmap-warning-event-class.md)|Указывает, что в запросе отключена фильтрация по битовым картам.|  
+|[Bitmap Warning, класс событий](../../relational-databases/event-classes/bitmap-warning-event-class.md)|Указывает, что в запросе отключена фильтрация по битовым картам.|  
 |[Класс событий Blocked Process Report](../../relational-databases/event-classes/blocked-process-report-event-class.md)|Указывает, что задача заблокирована дольше указанного времени.|  
 |[Класс событий CPU Threshold Exceeded](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)|Указывает, что регулятор ресурсов обнаружил запрос, превышающий заданное пороговое значение загрузки ЦП.|  
 |[Класс событий ErrorLog](../../relational-databases/event-classes/errorlog-event-class.md)|Показывает, что связанные с ошибками события были записаны в журнал ошибок сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  

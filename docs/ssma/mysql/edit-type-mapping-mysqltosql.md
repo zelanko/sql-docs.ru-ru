@@ -1,4 +1,5 @@
 ---
+description: Изменение сопоставления типов (MySQLToSQL)
 title: Изменение сопоставления типов (MySQLToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 184f7ab2-725f-491e-a15b-b889f2fb6a68
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 20c0eda313a16ac1f896a1382b8d7ad3546144f1
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 7dc968e4e9bd2d33c4a15de625f5abd12a3696a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935589"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492456"
 ---
 # <a name="edit-type-mapping-mysqltosql"></a>Изменение сопоставления типов (MySQLToSQL)
 Диалоговое окно **Изменение сопоставления типов** позволяет указать, как типы сопоставляются между исходным и целевым объектами базы данных.  
@@ -34,7 +35,7 @@ ms.locfileid: "87935589"
   
 Если тип данных имеет переменную длину, в разделе **sourceType**будут отображаться следующие поля:  
   
-##### <a name="from"></a>Исходный тип  
+##### <a name="from"></a>От  
 Укажите минимальную длину для этого сопоставления. Например, для типа данных **nchar** можно ввести значение 10, чтобы указать, что это сопоставление предназначено для диапазона, начиная с **nchar (10).**  
   
 ##### <a name="to"></a>Кому  

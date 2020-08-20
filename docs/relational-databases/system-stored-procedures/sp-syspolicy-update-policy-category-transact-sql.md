@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_update_policy_category (Transact-SQL)
 title: sp_syspolicy_update_policy_category (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6b6413c2-7a3b-4eff-91d9-5db2011869d6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 097b18fcaa15d0e6581c3e50389eb0c48b983ba5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 911dfde6ac3cb10ec67e788f7d8937e44ca6727e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891437"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492982"
 ---
 # <a name="sp_syspolicy_update_policy_category-transact-sql"></a>sp_syspolicy_update_policy_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,11 +41,11 @@ sp_syspolicy_update_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @name = ] 'name'`Имя категории политики. Аргумент *Name* имеет тип **sysname**и должен быть указан, если *policy_category_id* имеет значение null.  
+`[ @name = ] 'name'` Имя категории политики. Аргумент *Name* имеет тип **sysname**и должен быть указан, если *policy_category_id* имеет значение null.  
   
-`[ @policy_category_id = ] policy_category_id`Идентификатор для категории политики. *policy_category_id* имеет **тип int**и должен быть указан, если *Name* имеет значение null.  
+`[ @policy_category_id = ] policy_category_id` Идентификатор для категории политики. *policy_category_id* имеет **тип int**и должен быть указан, если *Name* имеет значение null.  
   
-`[ @mandate_database_subscriptions = ] mandate_database_subscriptions`Определяет, требует ли подписка базы данных для категории политики. *mandate_database_subscriptions* является **битовым** значением и ЗНАЧЕНИЕМ по умолчанию NULL. Можно использовать одно из следующих значений:  
+`[ @mandate_database_subscriptions = ] mandate_database_subscriptions` Определяет, требует ли подписка базы данных для категории политики. *mandate_database_subscriptions* является **битовым** значением и ЗНАЧЕНИЕМ по умолчанию NULL. Можно использовать одно из следующих значений:  
   
 -   0 = необязательна;  
   
@@ -53,7 +54,7 @@ sp_syspolicy_update_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Процедура sp_syspolicy_update_policy_category должна выполняться в контексте системной базы данных msdb.  
   
  Необходимо указать значение либо для *имени* , либо для *policy_category_id*. Они не могут одновременно иметь значения NULL. Чтобы получить эти значения, запросите системное представление msdb.dbo.syspolicy_policy_categories.  
@@ -74,8 +75,8 @@ EXEC msdb.dbo.sp_syspolicy_update_policy_category @name = N'Finance'
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Хранимые процедуры управления на основе политик &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Хранимые процедуры управления на основе политик &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [sp_syspolicy_add_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-transact-sql.md)   
  [sp_syspolicy_delete_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-transact-sql.md)   
  [sp_syspolicy_rename_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-rename-policy-category-transact-sql.md)  

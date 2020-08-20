@@ -1,4 +1,5 @@
 ---
+description: Выражения наборов
 title: Использование выражений набора | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1588d955e728830da4417160591a5c2b6c231473
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d47372f2e90f96aca99eb05bd6a2565c08567611
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893507"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491388"
 ---
 # <a name="using-set-expressions"></a>Выражения наборов
 
@@ -22,7 +23,7 @@ ms.locfileid: "68893507"
   
  Полное выражение набора состоит из нуля или нескольких явно заданных кортежей, заключенных в фигурные скобки.  
   
- {[{ *Tuple_expression* | *Member_expression* } [, { *Tuple_expression* | *Member_expression* }]...]}  
+ {[{ *Tuple_expression*  |  *Member_expression* } [, { *Tuple_expression*  |  *Member_expression* }]...]}  
   
  Выражения элементов, указанные в выражении набора, преобразуются в выражения одноэлементных кортежей.  
   
@@ -59,7 +60,7 @@ ms.locfileid: "68893507"
   
  Примеры функций, которые возвращают наборы, см. [в разделе Работа с элементами, кортежами и наборами &#40;&#41;многомерных выражений ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
   
-## <a name="see-also"></a>См. также:  
- [Выражения &#40;&#41;многомерных выражений](../mdx/expressions-mdx.md)  
+## <a name="see-also"></a>См. также  
+ [Выражения &#40;&#41;многомерных выражений ](../mdx/expressions-mdx.md)  
   
   

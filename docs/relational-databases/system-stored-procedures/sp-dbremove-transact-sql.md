@@ -1,4 +1,5 @@
 ---
+description: sp_dbremove (Transact-SQL)
 title: sp_dbremove (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a8513f4a-c025-49c8-99c3-4c83cb7f51ed
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ea4bc440b6a06c8133fe2ebd618f4838478322f4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ac926a35cb7e1c15460bdb5afa7bee3ad3bbc205
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85865408"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493407"
 ---
 # <a name="sp_dbremove-transact-sql"></a>sp_dbremove (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85865408"
   Удаляет базу данных и все связанные с ней файлы.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Вместо этого рекомендуется использовать [инструкцию DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого рекомендуется использовать [инструкцию DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md) .  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,9 +43,9 @@ sp_dbremove [ @dbname = ] 'database' [ , [ @dropdev = ] 'dropdev' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @dbname = ] 'database'`Имя удаляемой базы данных. Аргумент *Database* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @dbname = ] 'database'` Имя удаляемой базы данных. Аргумент *Database* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @dropdev = ] 'dropdev'`Флаг, предоставленный только для обратной совместимости, в настоящий момент игнорируется. *dropdev* имеет значение **dropdev**.  
+`[ @dropdev = ] 'dropdev'` Флаг, предоставленный только для обратной совместимости, в настоящий момент игнорируется. *dropdev* имеет значение **dropdev**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

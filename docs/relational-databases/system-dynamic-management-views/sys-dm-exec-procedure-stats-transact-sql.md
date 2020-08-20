@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_procedure_stats (Transact-SQL)
 title: sys. dm_exec_procedure_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/03/2019
@@ -20,11 +21,12 @@ ms.assetid: ab8ddde8-1cea-4b41-a7e4-697e6ddd785a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 60b42cfd1fe3e8c57849b4a8501667c7f6ee96d2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 116196bf58c37c63fe64ce9566dd21d3191c022b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000259"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493794"
 ---
 # <a name="sysdm_exec_procedure_stats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +36,7 @@ ms.locfileid: "86000259"
  Динамические административные представления в среде [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] не могут предоставлять информацию, которая может повлиять на автономность базы данных, или информацию о других базах данных, к которым имеет доступ пользователь. Во избежание раскрытия этой информации все строки, содержащие данные, не принадлежащие подключенному клиенту, отфильтровываются.  
   
 > [!NOTE]
-> Результаты **sys. dm_exec_procedure_stats** могут различаться при каждом выполнении, так как данные отражают только завершенные запросы, а не по-прежнему в полете.
+> Результаты **sys. dm_exec_procedure_stats**  могут различаться при каждом выполнении, так как данные отражают только завершенные запросы, а не по-прежнему в полете.
 > Чтобы вызвать эту функцию из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , используйте имя **sys. dm_pdw_nodes_exec_procedure_stats**. 
 
   
@@ -73,7 +75,7 @@ ms.locfileid: "86000259"
 |**last_spills**|**bigint**|Количество страниц, сброшенных при последнем выполнении хранимой процедуры.<br /><br /> Область **применения**: начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**min_spills**|**bigint**|Минимальное число страниц, которые эта хранимая процедура когда-либо заблокировала во время одного выполнения.<br /><br /> Область **применения**: начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**max_spills**|**bigint**|Максимальное число страниц, которые когда-либо были сброшены этой хранимой процедурой во время одного выполнения.<br /><br /> Область **применения**: начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**pdw_node_id**|**int**|Идентификатор узла, на котором находится данное распределение.<br /><br />**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|**pdw_node_id**|**int**|Идентификатор узла, на котором находится данное распределение.<br /><br />**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
 |**total_page_server_reads**|**bigint**|Общее число операций чтения на сервере страниц, выполненных с момента компиляции этой хранимой процедуры.<br /><br /> Область **применения**: масштабирование базы данных SQL Azure|  
 |**last_page_server_reads**|**bigint**|Число операций чтения сервера, выполненных при последнем выполнении хранимой процедуры.<br /><br /> Область **применения**: масштабирование базы данных SQL Azure|  
 |**min_page_server_reads**|**bigint**|Минимальное число серверных страниц считывает, что эта хранимая процедура когда-либо выполнялась во время одного выполнения.<br /><br /> Область **применения**: масштабирование базы данных SQL Azure|  
@@ -84,9 +86,9 @@ ms.locfileid: "86000259"
 ## <a name="permissions"></a>Разрешения  
 
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
-На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
+На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется  **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
    
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Статистика в представлении обновляется после завершения выполнения хранимой процедуры.  
   
 ## <a name="examples"></a>Примеры  
@@ -101,7 +103,7 @@ FROM sys.dm_exec_procedure_stats AS d
 ORDER BY [total_worker_time] DESC;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
 [sys. dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
 [sys. dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    

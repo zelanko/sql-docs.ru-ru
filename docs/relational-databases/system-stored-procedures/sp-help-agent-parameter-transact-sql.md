@@ -1,4 +1,5 @@
 ---
+description: sp_help_agent_parameter (Transact-SQL)
 title: sp_help_agent_parameter (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 8fb4a9c3-19af-4a34-8004-572729ba3d15
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 638706d8d49088d381fbefe54610b11486100226
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cfb61e7c3bbfcbb3bd1c93bff3d650912f7ebd01
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757865"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493252"
 ---
 # <a name="sp_help_agent_parameter-transact-sql"></a>sp_help_agent_parameter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  Возвращает все параметры профиля из MSagent_parameters &#40;системной таблицы [&#41;Transact-SQL](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) . Эта хранимая процедура выполняется на распространителе в любой базе данных с запущенным агентом.  
+  Возвращает все параметры профиля из MSagent_parameters &#40;системной таблицы [&#41;Transact-SQL ](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) . Эта хранимая процедура выполняется на распространителе в любой базе данных с запущенным агентом.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -37,7 +38,7 @@ sp_help_agent_parameter [ [ @profile_id = ] profile_id ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @profile_id = ] profile_id`Идентификатор профиля из [MSagent_parameters &#40;таблицы&#41;Transact-SQL](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) . *profile_id* имеет **тип int**и значение по умолчанию **-1**, которое возвращает все параметры.  
+`[ @profile_id = ] profile_id` Идентификатор профиля из [MSagent_parameters &#40;таблицы&#41;Transact-SQL ](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) . *profile_id* имеет **тип int**и значение по умолчанию **-1**, которое возвращает все параметры.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -50,13 +51,13 @@ sp_help_agent_parameter [ [ @profile_id = ] profile_id ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_help_agent_parameter** используется во всех типах репликации.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **replmonitor** могут выполнять **sp_help_agent_parameter**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Работа с профилями агента репликации](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
  [sp_add_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
  [sp_drop_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   

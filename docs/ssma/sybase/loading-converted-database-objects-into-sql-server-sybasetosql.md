@@ -1,4 +1,5 @@
 ---
+description: Загрузка преобразованных объектов базы данных в SQL Server (SybaseToSQL)
 title: Загрузка преобразованных объектов базы данных в SQL Server (SybaseToSQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4c59256f-99a8-4351-9559-a455813dbd06
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: a6eccefe78840973f0275bd8453872a675e2d9ae
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 8cf1c6af1a526efe771ccbd3b0f02f35670a1130
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931690"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492184"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-sybasetosql"></a>Загрузка преобразованных объектов базы данных в SQL Server (SybaseToSQL)
 После преобразования объектов базы данных «адаптивный сервер предприятия» (ASE) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure можно загрузить результирующие объекты базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure. Можно либо создать объекты SSMA, либо создавать сценарии для объектов и выполнять сценарии самостоятельно. Кроме того, SSMA позволяет обновлять целевые метаданные фактическим содержимым [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базой данных SQL Azure.  
@@ -44,7 +45,7 @@ ms.locfileid: "87931690"
   
 3.  Выбрав объекты для обработки в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure обозревателе метаданных, щелкните правой кнопкой мыши **базы данных**и выберите команду **синхронизировать с базой данных**.  
   
-    Можно также синхронизировать отдельные объекты или категории объектов, щелкнув правой кнопкой мыши объект или его родительскую папку, а затем выбрав команду **синхронизировать с базой данных**.  
+    Можно также синхронизировать отдельные объекты или категории объектов, щелкнув правой кнопкой мыши объект или его родительскую папку, а затем выбрав команду  **синхронизировать с базой данных**.  
   
     После этого SSMA отобразит диалоговое окно **Синхронизация с базой данных** , в котором можно увидеть две группы элементов. В левой части SSMA показывает выбранные объекты базы данных, представленные в дереве. С правой стороны можно увидеть дерево, представляющее те же объекты в метаданных SSMA. Вы можете развернуть дерево, нажав правую кнопку "+" или находящуюся слева. Направление синхронизации отображается в столбце действие, размещенном между двумя деревьями.  
   
@@ -109,6 +110,6 @@ ms.locfileid: "87931690"
 ## <a name="next-step"></a>Следующий шаг  
 Следующим шагом процесса миграции является [Перенос данных SYBASE ASE в SQL Server или SQL Azure (SybaseToSQL)](https://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Миграция баз данных Sybase ASE в SQL Server — база данных SQL Azure &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

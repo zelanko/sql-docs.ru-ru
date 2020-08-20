@@ -1,4 +1,5 @@
 ---
+description: Функция SQLDescribeParam
 title: Функция SQLDescribeParam | Документация Майкрософт
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 1f5b63c4-2f3e-44da-b155-876405302281
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c55668bb565bd383d170e7bf331630bf8b6adef1
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 0e6209f4e3145e55dfd94a9ff1375013ae5c7a85
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246603"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491317"
 ---
 # <a name="sqldescribeparam-function"></a>Функция SQLDescribeParam
 **Соответствия**  
@@ -84,7 +85,7 @@ SQLRETURN SQLDescribeParam(
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLDescribeParam** возвращает SQL_ERROR или SQL_SUCCESS_WITH_INFO, связанное значение SQLSTATE может быть получено путем вызова **SQLGetDiagRec** с *параметром handletype* SQL_HANDLE_STMT и *маркером* *статеменсандле*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые функцией **SQLDescribeParam** , и объясняется каждый из них в контексте этой функции. Нотация "(DM)" предшествует описаниям SQLSTATE, возвращаемым диспетчером драйверов. Код возврата, связанный с каждым значением SQLSTATE, имеет SQL_ERROR, если не указано иное.  
   
-|SQLSTATE|Error|Описание|  
+|SQLSTATE|Ошибка|Описание|  
 |--------------|-----------|-----------------|  
 |01000|Общее предупреждение|Информационное сообщение для конкретного драйвера. (Функция возвращает SQL_SUCCESS_WITH_INFO.)|  
 |07009|Недопустимый индекс дескриптора|(DM) значение, указанное для аргумента *параметернумбер* , меньше 1.<br /><br /> Значение, указанное для аргумента *параметернумбер* , больше числа параметров в связанной инструкции SQL.<br /><br /> Маркер параметра был частью инструкции языка, отличной от DML.<br /><br /> Маркер параметра был частью списка **выбора** .|  

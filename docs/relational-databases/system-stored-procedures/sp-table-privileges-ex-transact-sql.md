@@ -1,4 +1,5 @@
 ---
+description: sp_table_privileges_ex (Transact-SQL)
 title: sp_table_privileges_ex (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b58d4a07-5c40-4f17-b66e-6d6b17188dda
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3e8529a1a3be2bed8ddbea1ff475b21801a34424
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2e748ece19ff0d4dadaf966529ed40e0ac9a69be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892643"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492972"
 ---
 # <a name="sp_table_privileges_ex-transact-sql"></a>sp_table_privileges_ex (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,18 +44,18 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @table_server = ] 'table_server'`Имя связанного сервера, для которого возвращаются сведения. Аргумент *table_server* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @table_server = ] 'table_server'` Имя связанного сервера, для которого возвращаются сведения. Аргумент *table_server* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @table_name = ] 'table_name']`Имя таблицы, для которой предоставляются сведения о правах доступа к таблице. Аргумент *table_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @table_name = ] 'table_name']` Имя таблицы, для которой предоставляются сведения о правах доступа к таблице. Аргумент *table_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @table_schema = ] 'table_schema'`Схема таблицы. В некоторых средах СУБД является владельцем таблицы. Аргумент *table_schema* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @table_schema = ] 'table_schema'` Схема таблицы. В некоторых средах СУБД является владельцем таблицы. Аргумент *table_schema* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @table_catalog = ] 'table_catalog'`Имя базы данных, в которой находится указанный *table_name* . Аргумент *table_catalog* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @table_catalog = ] 'table_catalog'` Имя базы данных, в которой находится указанный *table_name* . Аргумент *table_catalog* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @fUsePattern = ] 'fUsePattern'`Определяет, должны ли символы "_", "%", "[" и "]" интерпретироваться как подстановочные знаки. Допустимые значения: 0 (сопоставление с шаблоном отключено) и 1 (сопоставление с шаблоном включено). *фусепаттерн* имеет **бит**и значение по умолчанию 1.  
+`[ @fUsePattern = ] 'fUsePattern'` Определяет, должны ли символы "_", "%", "[" и "]" интерпретироваться как подстановочные знаки. Допустимые значения: 0 (сопоставление с шаблоном отключено) и 1 (сопоставление с шаблоном включено). *фусепаттерн* имеет **бит**и значение по умолчанию 1.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- None  
+ Нет  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -86,7 +87,7 @@ EXEC sp_table_privileges_ex @table_server = 'Seattle1',
   
 ## <a name="see-also"></a>См. также  
  [sp_column_privileges_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-ex-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Хранимые процедуры распределенных запросов &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_setdefaultdatatypemapping (Transact-SQL)
 title: sp_setdefaultdatatypemapping (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7394e8ca-4ce1-4e99-a784-205007c2c248
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 96e4959ffa88e96d6236b460d515353d6817f656
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d31d4f44d7b1b60c527a5fa8abcf1e9736b1f674
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901313"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493027"
 ---
 # <a name="sp_setdefaultdatatypemapping-transact-sql"></a>sp_setdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,9 +55,9 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @mapping_id = ] mapping_id`Определяет сопоставление существующего типа данных.  *mapping_id* имеет **тип int**и значение по умолчанию NULL. Если указать *mapping_id*, остальные параметры не требуются.  
+`[ @mapping_id = ] mapping_id` Определяет сопоставление существующего типа данных.  *mapping_id* имеет **тип int**и значение по умолчанию NULL. Если указать *mapping_id*, остальные параметры не требуются.  
   
-`[ @source_dbms = ] 'source_dbms'`Имя СУБД, с которой сопоставляются типы данных. Аргумент *source_dbms* имеет тип **sysname**и может принимать одно из следующих значений.  
+`[ @source_dbms = ] 'source_dbms'` Имя СУБД, с которой сопоставляются типы данных. Аргумент *source_dbms* имеет тип **sysname**и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -66,25 +67,25 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
   
  Этот параметр необходимо указать, если *mapping_id* имеет значение null.  
   
-`[ @source_version = ] 'source_version'`Номер версии исходной СУБД. *source_version* имеет тип **varchar (10)** и значение по умолчанию NULL.  
+`[ @source_version = ] 'source_version'` Номер версии исходной СУБД. *source_version* имеет тип **varchar (10)** и значение по умолчанию NULL.  
   
-`[ @source_type = ] 'source_type'`Тип данных в исходной СУБД. *source_type* имеет тип **sysname**. Этот параметр необходимо указать, если *mapping_id* имеет значение null.  
+`[ @source_type = ] 'source_type'` Тип данных в исходной СУБД. *source_type* имеет тип **sysname**. Этот параметр необходимо указать, если *mapping_id* имеет значение null.  
   
-`[ @source_length_min = ] source_length_min`Минимальная длина типа данных в исходной СУБД. *source_length_min* имеет тип **bigint**и значение по умолчанию NULL.  
+`[ @source_length_min = ] source_length_min` Минимальная длина типа данных в исходной СУБД. *source_length_min* имеет тип **bigint**и значение по умолчанию NULL.  
   
-`[ @source_length_max = ] source_length_max`Максимальная длина типа данных в исходной СУБД. *source_length_max* имеет тип **bigint**и значение по умолчанию NULL.  
+`[ @source_length_max = ] source_length_max` Максимальная длина типа данных в исходной СУБД. *source_length_max* имеет тип **bigint**и значение по умолчанию NULL.  
   
-`[ @source_precision_min = ] source_precision_min`Минимальная точность типа данных в исходной СУБД. *source_precision_min* имеет тип **bigint**и значение по умолчанию NULL.  
+`[ @source_precision_min = ] source_precision_min` Минимальная точность типа данных в исходной СУБД. *source_precision_min* имеет тип **bigint**и значение по умолчанию NULL.  
   
-`[ @source_precision_max = ] source_precision_max`Максимальная точность типа данных в исходной СУБД. *source_precision_max* имеет тип **bigint**и значение по умолчанию NULL.  
+`[ @source_precision_max = ] source_precision_max` Максимальная точность типа данных в исходной СУБД. *source_precision_max* имеет тип **bigint**и значение по умолчанию NULL.  
   
-`[ @source_scale_min = ] source_scale_min`Минимальный масштаб типа данных в исходной СУБД. *source_scale_min* имеет **тип int**и значение по умолчанию NULL.  
+`[ @source_scale_min = ] source_scale_min` Минимальный масштаб типа данных в исходной СУБД. *source_scale_min* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @source_scale_max = ] source_scale_max`Максимальный масштаб типа данных в исходной СУБД. *source_scale_max* имеет **тип int**и значение по умолчанию NULL.  
+`[ @source_scale_max = ] source_scale_max` Максимальный масштаб типа данных в исходной СУБД. *source_scale_max* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @source_nullable = ] source_nullable`Если тип данных в исходной СУБД поддерживает значение NULL. *source_nullable* имеет **бит**и значение по умолчанию NULL. **1** означает, что значения NULL поддерживаются.  
+`[ @source_nullable = ] source_nullable` Если тип данных в исходной СУБД поддерживает значение NULL. *source_nullable* имеет **бит**и значение по умолчанию NULL. **1** означает, что значения NULL поддерживаются.  
   
-`[ @destination_dbms = ] 'destination_dbms'`Имя целевой СУБД. Аргумент *destination_dbms* имеет тип **sysname**и может принимать одно из следующих значений.  
+`[ @destination_dbms = ] 'destination_dbms'` Имя целевой СУБД. Аргумент *destination_dbms* имеет тип **sysname**и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -94,17 +95,17 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
 |**SYBASE**|Целевой является база данных Sybase.|  
 |NULL (по умолчанию)||  
   
-`[ @destination_version = ] 'destination_version'`Версия продукта целевой СУБД. *destination_version* имеет тип **varchar (10)** и значение по умолчанию NULL.  
+`[ @destination_version = ] 'destination_version'` Версия продукта целевой СУБД. *destination_version* имеет тип **varchar (10)** и значение по умолчанию NULL.  
   
-`[ @destination_type = ] 'destination_type'`Тип данных, указанный в целевой СУБД. Аргумент *destination_type* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @destination_type = ] 'destination_type'` Тип данных, указанный в целевой СУБД. Аргумент *destination_type* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @destination_length = ] destination_length`Длина типа данных в целевой СУБД. *destination_length* имеет тип **bigint**и значение по умолчанию NULL.  
+`[ @destination_length = ] destination_length` Длина типа данных в целевой СУБД. *destination_length* имеет тип **bigint**и значение по умолчанию NULL.  
   
-`[ @destination_precision = ] destination_precision`Точность типа данных в целевой СУБД. *destination_precision* имеет тип **bigint**и значение по умолчанию NULL.  
+`[ @destination_precision = ] destination_precision` Точность типа данных в целевой СУБД. *destination_precision* имеет тип **bigint**и значение по умолчанию NULL.  
   
-`[ @destination_scale = ] destination_scale`Масштаб типа данных в целевой СУБД. *destination_scale* имеет **тип int**и значение по умолчанию NULL.  
+`[ @destination_scale = ] destination_scale` Масштаб типа данных в целевой СУБД. *destination_scale* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @destination_nullable = ] destination_nullable`Если тип данных в целевой СУБД поддерживает значение NULL. *destination_nullable* имеет **бит**и значение по умолчанию NULL. **1** означает, что значения NULL поддерживаются.  
+`[ @destination_nullable = ] destination_nullable` Если тип данных в целевой СУБД поддерживает значение NULL. *destination_nullable* имеет **бит**и значение по умолчанию NULL. **1** означает, что значения NULL поддерживаются.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  

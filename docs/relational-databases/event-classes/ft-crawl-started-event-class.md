@@ -1,4 +1,5 @@
 ---
+description: Класс событий FT:Crawl Started
 title: Класс событий FT:Crawl Started | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,24 +13,24 @@ ms.assetid: 2535b856-97e8-4fb2-8ba0-5d5446355fa6
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 258b2de1778476482a2939f8ef7f4e4f464b923d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d1e069b4fca1f7fb675f802a3d009d59962444af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737369"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491087"
 ---
 # <a name="ftcrawl-started-event-class"></a>Класс событий FT:Crawl Started
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  Класс событий **FT:Crawl Started** показывает, что запущен процесс полнотекстового сканирования (или заполнения). Данный класс событий используется для определения наличия среди выполняемых задач запроса на сканирование.  
+   Класс событий **FT:Crawl Started** указывает на то, что запущен процесс полнотекстового сканирования (заполнения). Данный класс событий используется для определения наличия среди выполняемых задач запроса на сканирование.  
   
 ## <a name="ft-crawl-started-event-class-data-columns"></a>Столбцы с данными класса событий FT:Crawl Started  
   
-|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|Идентификатор базы данных, в которой запущено полнотекстовое сканирование. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |**EventClass**|**int**|Тип события = 155.|27|нет|  
-|**EventSequence**|**int**|Последовательность данного события в запросе.|51|нет|  
+|**EventSequence**|**int**|Последовательность данного события в запросе.|51|Нет|  
 |**IsSystem**|**int**|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  
 |**ObjectID**|**int**|Идентификатор объекта, назначенный системой. Процесс полнотекстового сканирования запущен в полнотекстовых индексах объекта.|22|Да|  
 |**SessionLoginName**|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по имени "Имя_входа1" и при выполнении инструкции под именем "Имя_входа2" **SessionLoginName** содержит значение "Имя_входа1", а **LoginName** — значение "Имя_входа2". В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|64|Да|  

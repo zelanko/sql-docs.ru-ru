@@ -1,4 +1,5 @@
 ---
+description: sp_sequence_get_range (Transact-SQL)
 title: sp_sequence_get_range (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/08/2015
@@ -19,12 +20,12 @@ ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8a534a32e23c09d4e6cc41dc6bd22c9fc44c4c7f
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 95e08552d65f6e14d24e8dad2116667574a5c5d8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87523456"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493127"
 ---
 # <a name="sp_sequence_get_range-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -51,26 +52,26 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @sequence_name = ] N'sequence'`Имя объекта последовательности. Схема является необязательной. *sequence_name* имеет тип **nvarchar (776)**.  
+`[ @sequence_name = ] N'sequence'` Имя объекта последовательности. Схема является необязательной. *sequence_name* имеет тип **nvarchar (776)**.  
   
-`[ @range_size = ] range_size`Число значений для выборки из последовательности. ** \@ range_size** имеет тип **bigint**.  
+`[ @range_size = ] range_size` Число значений для выборки из последовательности. ** \@ range_size** имеет тип **bigint**.  
   
-`[ @range_first_value = ] range_first_value`Параметр OUTPUT возвращает первое (минимальное или максимальное) значение объекта последовательности, используемого для вычисления запрошенного диапазона. ** \@ range_first_value** **sql_variant** с тем же базовым типом, что и у объекта последовательности, используемого в запросе.  
+`[ @range_first_value = ] range_first_value` Параметр OUTPUT возвращает первое (минимальное или максимальное) значение объекта последовательности, используемого для вычисления запрошенного диапазона. ** \@ range_first_value** **sql_variant** с тем же базовым типом, что и у объекта последовательности, используемого в запросе.  
   
-`[ @range_last_value = ] range_last_value`Необязательный выходной параметр возвращает последнее значение запрошенного диапазона. ** \@ range_last_value** **sql_variant** с тем же базовым типом, что и у объекта последовательности, используемого в запросе.  
+`[ @range_last_value = ] range_last_value` Необязательный выходной параметр возвращает последнее значение запрошенного диапазона. ** \@ range_last_value** **sql_variant** с тем же базовым типом, что и у объекта последовательности, используемого в запросе.  
   
-`[ @range_cycle_count = ] range_cycle_count`Необязательный выходной параметр возвращает количество раз, когда объект последовательности был циклическим для возврата запрошенного диапазона. ** \@ range_cycle_count** имеет **тип int**.  
+`[ @range_cycle_count = ] range_cycle_count` Необязательный выходной параметр возвращает количество раз, когда объект последовательности был циклическим для возврата запрошенного диапазона. ** \@ range_cycle_count** имеет **тип int**.  
   
-`[ @sequence_increment = ] sequence_increment`Необязательный выходной параметр возвращает приращение объекта последовательности, используемого для вычисления запрошенного диапазона. ** \@ sequence_increment** **sql_variant** с тем же базовым типом, что и у объекта последовательности, используемого в запросе.  
+`[ @sequence_increment = ] sequence_increment` Необязательный выходной параметр возвращает приращение объекта последовательности, используемого для вычисления запрошенного диапазона. ** \@ sequence_increment** **sql_variant** с тем же базовым типом, что и у объекта последовательности, используемого в запросе.  
   
-`[ @sequence_min_value = ] sequence_min_value`Необязательный выходной параметр возвращает минимальное значение объекта последовательности. ** \@ sequence_min_value** **sql_variant** с тем же базовым типом, что и у объекта последовательности, используемого в запросе.  
+`[ @sequence_min_value = ] sequence_min_value` Необязательный выходной параметр возвращает минимальное значение объекта последовательности. ** \@ sequence_min_value** **sql_variant** с тем же базовым типом, что и у объекта последовательности, используемого в запросе.  
   
-`[ @sequence_max_value = ] sequence_max_value`Необязательный выходной параметр возвращает максимальное значение объекта последовательности. ** \@ sequence_max_value** **sql_variant** с тем же базовым типом, что и у объекта последовательности, используемого в запросе.  
+`[ @sequence_max_value = ] sequence_max_value` Необязательный выходной параметр возвращает максимальное значение объекта последовательности. ** \@ sequence_max_value** **sql_variant** с тем же базовым типом, что и у объекта последовательности, используемого в запросе.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  sp_sequence_get_rangeis в представлении sys. на схему и можно ссылаться как на sys. sp_sequence_get_range.  
   
 ### <a name="cycling-sequences"></a>Циклические последовательности  

@@ -1,4 +1,5 @@
 ---
+description: sys.sp_cdc_add_job (Transact-SQL)
 title: sys. sp_cdc_add_job (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 53bc390e3e95ac49554826ad6ed96b8c4138ca10
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: e301fe1ef2251a5c5814074864ccf566791ccc8b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88172903"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492924"
 ---
 # <a name="syssp_cdc_add_job-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,19 +49,19 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_type = ] 'job\_type'`Тип добавляемого задания. *job_type* имеет тип **nvarchar (20)** и не может иметь значение null. Допустимые входные данные: **"Capture"** и **"Cleanup"**.  
+`[ @job_type = ] 'job\_type'` Тип добавляемого задания. *job_type* имеет тип **nvarchar (20)** и не может иметь значение null. Допустимые входные данные: **"Capture"** и **"Cleanup"**.  
   
-`[ @start_job = ] start_job`Флаг, указывающий, следует ли запускать задание сразу после его добавления. *start_job* имеет **бит** со значением по умолчанию 1.  
+`[ @start_job = ] start_job` Флаг, указывающий, следует ли запускать задание сразу после его добавления. *start_job* имеет **бит** со значением по умолчанию 1.  
   
-`[ @maxtrans ] = max_trans`Максимальное количество транзакций, обрабатываемых в каждом цикле просмотра. *max_trans* имеет **тип int** и значение по умолчанию 500. Указываемое значение должно быть положительным целым числом.  
+`[ @maxtrans ] = max_trans` Максимальное количество транзакций, обрабатываемых в каждом цикле просмотра. *max_trans* имеет **тип int** и значение по умолчанию 500. Указываемое значение должно быть положительным целым числом.  
   
  *max_trans* допустимы только для заданий отслеживания.  
   
-`[ @maxscans ] = max\_scans_`Максимальное число циклов просмотра, которое необходимо выполнить для извлечения всех строк из журнала. *max_scans* имеет **тип int** и значение по умолчанию 10.  
+`[ @maxscans ] = max\_scans_` Максимальное число циклов просмотра, которое необходимо выполнить для извлечения всех строк из журнала. *max_scans* имеет **тип int** и значение по умолчанию 10.  
   
  *max_scan* допустимы только для заданий отслеживания.  
   
-`[ @continuous ] = continuous_`Указывает, должно ли задание отслеживания выполняться непрерывно (1) или выполняться только один раз (0). параметр *Continuous* имеет **бит** и значение по умолчанию 1.  
+`[ @continuous ] = continuous_` Указывает, должно ли задание отслеживания выполняться непрерывно (1) или выполняться только один раз (0). параметр *Continuous* имеет **бит** и значение по умолчанию 1.  
   
  Если *Continuous* = 1, задание [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) сканирует журнал и обрабатывает транзакции до (*max_trans* \* *max_scans*). Затем он ожидает число секунд, указанное в *polling_interval* , перед началом следующего просмотра журнала.  
   
@@ -68,15 +69,15 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  *Непрерывная* допустима только для заданий отслеживания.  
   
-`[ @pollinginterval ] = polling\_interval_`Количество секунд между циклами просмотра журнала. *polling_interval* имеет тип **bigint** и значение по умолчанию 5.  
+`[ @pollinginterval ] = polling\_interval_` Количество секунд между циклами просмотра журнала. *polling_interval* имеет тип **bigint** и значение по умолчанию 5.  
   
  *polling_interval* является допустимым только для заданий отслеживания, если параметр *Continuous* установлен в значение 1. Если значение указано, оно должно быть больше или равно 0 и меньше 24 часов (максимум: 86399 секунд). Если указано значение 0, то пауза между операциями просмотра журналов отсутствует.  
   
-`[ @retention ] = retention_`Количество минут, в течение которых строки данных изменения должны храниться в таблицах изменений. параметр *retention* имеет тип **bigint** и значение по умолчанию 4320 (72 часов). Максимальное значение составляет 52494800 (100 лет). Указываемое значение должно быть положительным целым числом.  
+`[ @retention ] = retention_` Количество минут, в течение которых строки данных изменения должны храниться в таблицах изменений. параметр *retention* имеет тип **bigint** и значение по умолчанию 4320 (72 часов). Максимальное значение составляет 52494800 (100 лет). Указываемое значение должно быть положительным целым числом.  
   
  *Хранение* допустимо только для заданий очистки.  
   
-`[ @threshold = ] 'delete\_threshold'`Максимальное число записей удаления, которые могут быть удалены с помощью одной инструкции при очистке. *delete_threshold* имеет тип **bigint** и значение по умолчанию 5000.  
+`[ @threshold = ] 'delete\_threshold'` Максимальное число записей удаления, которые могут быть удалены с помощью одной инструкции при очистке. *delete_threshold* имеет тип **bigint** и значение по умолчанию 5000.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -120,9 +121,9 @@ EXEC sys.sp_cdc_add_job
     ,@retention = 5760;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [dbo. cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
  [sys. sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
- [О фиксации измененных данных (SQL Server)](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
+ [Об отслеживании измененных данных (SQL Server)](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
   

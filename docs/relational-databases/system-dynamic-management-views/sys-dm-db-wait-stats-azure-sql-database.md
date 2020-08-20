@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_wait_stats (база данных SQL Azure)
 title: sys. dm_db_wait_stats (база данных SQL Azure) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 7b770e22ccf2da14d0ad88d6f93725ef93410c84
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c8932754b69fab7086f0eb6a98d979e93669daff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85677587"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493784"
 ---
 # <a name="sysdm_db_wait_stats-azure-sql-database"></a>sys.dm_db_wait_stats (база данных SQL Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85677587"
 |max_wait_time_ms|**bigint**|Максимальное время ожидания данного типа.|  
 |signal_wait_time_ms|**bigint**|Разница между временем сигнализации ожидающего потока и временем начала его выполнения.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
 -   В этом динамическом административном представлении отображаются данные только для текущей базы данных.  
   
@@ -62,7 +63,7 @@ ms.locfileid: "85677587"
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение VIEW DATABASE STATE на сервере.  
   
-##  <a name="types-of-waits"></a><a name="WaitTypes"></a>Типы ожиданий  
+##  <a name="types-of-waits"></a><a name="WaitTypes"></a> Типы ожиданий  
  Ожидания ресурсов  
  Ожидание ресурсов имеет место, когда исполнитель запрашивает доступ к ресурсу, который недоступен по причине его использования другим исполнителем или пока еще недоступен. Примерами ожидания ресурсов являются блокировки, кратковременные блокировки, сетевые ожидания и ожидания дискового ввода-вывода. Ожидания блокировок и кратковременных блокировок представляют собой ожидания объектов синхронизации.  
   
@@ -255,7 +256,7 @@ ms.locfileid: "85677587"
 |PREEMPTIVE_STRESSDRIVER|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_TESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_XETESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|PRINT_ROLLBACK_PROGRESS|Применяется при ожидании завершения пользовательских процессов в базе данных, измененной с помощью заключительного предложения ALTER DATABASE. Дополнительные сведения см. в разделе [ALTER database &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
+|PRINT_ROLLBACK_PROGRESS|Применяется при ожидании завершения пользовательских процессов в базе данных, измененной с помощью заключительного предложения ALTER DATABASE. Дополнительные сведения см. в разделе [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).|  
 |PWAIT_HADR_CHANGE_NOTIFIER_TERMINATION_SYNC|Возникает, когда фоновая задача ожидает завершения фоновой задачи, которая получает уведомления WSFC (путем опроса).  Только для внутреннего применения.|  
 |PWAIT_HADR_CLUSTER_INTEGRATION|Операция добавления, замены и (или) удаления ожидает захвата блокировки записи на Always On внутренний список (например, список сетей, сетевых адресов или прослушивателей групп доступности).  Только для внутреннего применения.|  
 |PWAIT_HADR_OFFLINE_COMPLETED|Операция удаления группы доступности Always On ожидает перехода целевой группы доступности в режим «вне сети» перед уничтожением объектов отказоустойчивой кластеризации Windows Server.|  

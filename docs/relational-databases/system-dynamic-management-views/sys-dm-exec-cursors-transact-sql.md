@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_cursors (Transact-SQL)
 title: sys. dm_exec_cursors (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f2482e9af7451463c03bb5deb2e63c7261ec5361
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4243bd6395095a586ceffab1c4b00f8cf99a220b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882041"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493722"
 ---
 # <a name="sysdm_exec_cursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,33 +65,33 @@ dm_exec_cursors (session_id | 0 )
 |**fetch_buffer_start**|**int**|Для курсоров типа FAST_FORWARD и DYNAMIC возвращается значение 0, если курсор не отрыт или установлен перед первой строкой. Иначе возвращается значение -1.<br /><br /> Для курсоров типа STATIC и KEYSET возвращается значение 0, если курсор не открыт, и значение -1, если курсор установлен за последней строкой.<br /><br /> В противном случае возвращается номер строки, в которой установлен курсор.|  
 |**ansi_position**|**int**|Позиция курсора внутри буфера выборки.|  
 |**worker_time**|**bigint**|Время в миллисекундах, потраченное на обработку данного курсора.|  
-|**reads**|**bigint**|Количество операций чтения, выполненных курсором.|  
-|**writes**|**bigint**|Количество операций записи, выполненных курсором.|  
+|**буферизует**|**bigint**|Количество операций чтения, выполненных курсором.|  
+|**дает**|**bigint**|Количество операций записи, выполненных курсором.|  
 |**dormant_duration**|**bigint**|Количество миллисекунд, прошедшее с момента запуска последнего запроса на открытие или на выборку.|  
   
 ## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Следующая таблица содержит сведения об интерфейсе объявления курсора и возможные значения для столбца свойств.  
   
-|Свойство|Описание:|  
+|Свойство.|Описание|  
 |--------------|-----------------|  
 |API|Курсор был объявлен с помощью одной из API-функций для доступа к данным (ODBC, OLEDB).|  
 |TSQL|Курсор был объявлен с помощью инструкции DECLARE_CURSOR языка Transact-SQL.|  
   
  Следующая таблица содержит сведения о типе курсора и возможные значения для столбца свойств.  
   
-|Тип|Описание:|  
+|Тип|Описание|  
 |----------|-----------------|  
 |Keyset|Курсор был объявлен с типом Keyset.|  
 |Динамический|Курсор был объявлен с типом Dynamic.|  
-|Снимок|Курсор был объявлен с типом Snapshot или Static.|  
+|Моментальный снимок|Курсор был объявлен с типом Snapshot или Static.|  
 |Fast_Forward|Курсор был объявлен с типом Fast Forward.|  
   
  Следующая таблица содержит сведения о параллелизме курсоров и возможные значения для столбца свойств.  
   
-|параллелизм|Описание|  
+|Параллелизм|Описание|  
 |-----------------|-----------------|  
 |Только для чтения|Курсор был объявлен в режиме только для чтения.|  
 |Scroll Locks|Курсор использует блокирование прокрутки.|  
@@ -100,7 +101,7 @@ dm_exec_cursors (session_id | 0 )
   
 |Область|Описание|  
 |-----------|-----------------|  
-|Local|Указывает, что курсор является локальным по отношению к пакету, хранимой процедуре или триггеру, в котором он был создан.|  
+|Локальная|Указывает, что курсор является локальным по отношению к пакету, хранимой процедуре или триггеру, в котором он был создан.|  
 |Глобальный|Указывает, что курсор является глобальным по отношению к соединению.|  
   
 ## <a name="examples"></a>Примеры  
@@ -116,8 +117,8 @@ WHERE DATEDIFF(hh, c.creation_time, GETDATE()) > 36;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+## <a name="see-also"></a>См. также:  
+ [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_sessions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)  
   

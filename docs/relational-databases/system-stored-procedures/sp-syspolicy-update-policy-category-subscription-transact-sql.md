@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_update_policy_category_subscription (Transact-SQL)
 title: sp_syspolicy_update_policy_category_subscription (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d0769566-8f5c-4c8a-84d3-ee17ea6e0cb4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fde97529258f8f413a50db1933a95c1842f20c1a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 78f2b47d687c695c50710d045e99494ac61598b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891438"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493003"
 ---
 # <a name="sp_syspolicy_update_policy_category_subscription-transact-sql"></a>sp_syspolicy_update_policy_category_subscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,20 +43,20 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @policy_category_subscription_id = ] policy_category_subscription_id`— Это идентификатор подписки на категорию политики, которую необходимо обновить. *policy_category_subscription_id* имеет **тип int**и является обязательным.  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id` — Это идентификатор подписки на категорию политики, которую необходимо обновить. *policy_category_subscription_id* имеет **тип int**и является обязательным.  
   
-`[ @target_type = ] 'target_type'`Тип целевого объекта подписки на категорию. Аргумент *target_type* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @target_type = ] 'target_type'` Тип целевого объекта подписки на категорию. Аргумент *target_type* имеет тип **sysname**и значение по умолчанию NULL.  
   
  При указании *target_type*значение должно быть равно "Database".  
   
-`[ @target_object = ] 'target_object'`Имя базы данных, которая будет подписываться на категорию политики. Аргумент *target_object* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @target_object = ] 'target_object'` Имя базы данных, которая будет подписываться на категорию политики. Аргумент *target_object* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @policy_category = ] 'policy_category'`Имя категории политики, на которую должна подписываться база данных. Аргумент *policy_category* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @policy_category = ] 'policy_category'` Имя категории политики, на которую должна подписываться база данных. Аргумент *policy_category* имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Процедура sp_syspolicy_update_policy_category_subscription должна выполняться в контексте системной базы данных msdb.  
   
  Чтобы получить значения для *policy_category_subscription_id* и для *policy_category*, можно использовать следующий запрос:  
@@ -85,8 +86,8 @@ EXEC msdb.dbo.sp_syspolicy_update_policy_category_subscription @policy_category_
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Хранимые процедуры управления на основе политик &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Хранимые процедуры управления на основе политик &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [sp_syspolicy_add_policy_category_subscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-add-policy-category-subscription-transact-sql.md)   
  [sp_syspolicy_delete_policy_category_subscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-delete-policy-category-subscription-transact-sql.md)  
   

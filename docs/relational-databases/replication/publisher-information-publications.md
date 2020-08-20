@@ -1,4 +1,5 @@
 ---
+description: Данные об издателе, вкладка «Публикации»
 title: Данные об издателе, вкладка "Публикации" | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: 0b2e3d4e-03b7-4c31-8f96-48648d750010
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f5d897beb238b53e632044aee838f5ee6295ef48
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8d321f41871469284b3ce8dd3402cc16eee385d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719539"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493889"
 ---
 # <a name="publisher-information-publications"></a>Данные об издателе, вкладка «Публикации»
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -72,19 +73,19 @@ ms.locfileid: "85719539"
   
  Рейтинг производительности может иметь одно из следующих значений.  
   
--   Высокая  
+-   Отлично  
   
--   Хорошая.  
+-   Хорошо  
   
--   удовлетворительная  
+-   Ниже среднего  
   
--   Низкая  
+-   Плохо  
   
--   Critical  
+-   Критически важно  
   
  Дополнительные сведения об определении оценки производительности и установке пороговых значений см. в статье [Наблюдение за производительностью с помощью монитора репликации](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запуск монитора репликации](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Просмотр сведений и выполнение задач для издателя (монитор репликации)](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Наблюдение за репликацией](../../relational-databases/replication/monitor/monitoring-replication.md)  

@@ -1,4 +1,5 @@
 ---
+description: Работа с SSMA для консоли Access (Акцесстоскл)
 title: Работа с SSMA для консоли Access (Акцесстоскл) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: ef94e843-9f88-45a2-86c4-a0af268738c4
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: d46435bcf975036fc92926f50651dd5eff7c8080
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 2bab82a2fe9cc10b100cc49a4f18c1aa0bfaacff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937306"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492507"
 ---
 # <a name="working-with-ssma-for-access-console-accesstosql"></a>Работа с SSMA для консоли Access (Акцесстоскл)
 Помощник по миграции Microsoft SQL Server (SSMA) для доступа теперь доступен через консольное приложение в командной строке. Файлы скрипта образуют входные данные для приложения для выполнения команд. Как консольное приложение, SSMA обеспечивает взаимодействие на уровне сценариев, сокращает цикл миграции и масштабирует усилия по миграции.  
@@ -37,6 +38,6 @@ ms.locfileid: "87937306"
 |[Создание отчетов &#40;Акцесстоскл&#41;](../../ssma/access/generating-reports-accesstosql.md)|Список команд для создания отчетов.|  
 |[Устранение неполадок &#40;Акцесстоскл&#41;](../../ssma/access/troubleshooting-accesstosql.md)|Содержит краткие сведения об устранении проблем с миграцией.|  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также  
 [начало работы с SSMA для консоли Access](getting-started-with-ssma-for-access-console-accesstosql.md)  
   

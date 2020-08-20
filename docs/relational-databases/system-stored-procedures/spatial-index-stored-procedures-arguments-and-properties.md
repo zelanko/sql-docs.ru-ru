@@ -1,4 +1,5 @@
 ---
+description: Аргументы и свойства хранимых процедур пространственного индекса
 title: Аргументы и свойства хранимых процедур пространственного индекса | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3001731959da3b253ee10f43c333b0c2a8b85380
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9525434eb17f33700f819ef45a8be4392bbfd69a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85626584"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492899"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>Хранимые процедуры пространственного индекса — аргументы и свойства
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +41,13 @@ ms.locfileid: "85626584"
 -   [sp_help_spatial_geography_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @tabname = ] 'tabname'`Полное или неполное имя таблицы, для которой был указан пространственный индекс.  
+`[ @tabname = ] 'tabname'` Полное или неполное имя таблицы, для которой был указан пространственный индекс.  
   
  Кавычки требуются, только если определяется уточненная таблица. Если предоставлено полное имя таблицы, включая имя базы данных, в качестве последнего должно использоваться имя текущей базы данных. *табнаме* имеет тип **nvarchar**(776) и не имеет значения по умолчанию.  
   
-`[ @indexname = ] 'indexname'`Имя указанного пространственного индекса. *IndexName* имеет тип **sysname** и не имеет значения по умолчанию.  
+`[ @indexname = ] 'indexname'` Имя указанного пространственного индекса. *IndexName* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @verboseoutput = ] 'verboseoutput'`Диапазон возвращаемых имен и значений свойств.  
+`[ @verboseoutput = ] 'verboseoutput'` Диапазон возвращаемых имен и значений свойств.  
   
  0 = основные свойства  
   
@@ -54,9 +55,9 @@ ms.locfileid: "85626584"
   
  *verboseoutput* имеет тип **tinyint** и не имеет значения по умолчанию.  
   
-`[ @query_sample = ] 'query_sample'`Представляет собой репрезентативный пример запроса, который можно использовать для проверки полезности индекса. Это может быть репрезентативный объект или окно запроса. *query_sample* является **геометрическим объектом** и не имеет значения по умолчанию.  
+`[ @query_sample = ] 'query_sample'` Представляет собой репрезентативный пример запроса, который можно использовать для проверки полезности индекса. Это может быть репрезентативный объект или окно запроса. *query_sample* является **геометрическим объектом** и не имеет значения по умолчанию.  
   
-`[ @xml_output = ] 'xml_output'`Выходной параметр, возвращающий результирующий набор в XML-фрагменте. *xml_output* имеет **Формат XML** и не имеет значения по умолчанию.  
+`[ @xml_output = ] 'xml_output'` Выходной параметр, возвращающий результирующий набор в XML-фрагменте. *xml_output* имеет **Формат XML** и не имеет значения по умолчанию.  
   
 ## <a name="properties"></a>Свойства  
  Задайте ** \@ verboseoutput** = 0, чтобы возвращать основные свойства, как показано в таблице ниже. ** \@ verboseoutput** > 0, чтобы получить все свойства пространственного индекса.  
@@ -300,7 +301,7 @@ ms.locfileid: "85626584"
 ## <a name="permissions"></a>Разрешения  
  Пользователь должен быть членом роли **Public** . Необходимо разрешение READ ACCESS на сервере и объекте. Это относится ко всем хранимым процедурам пространственного индекса.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Свойства, которые содержат значения NULL, не включаются в набор возвращаемых значений.  
   
 ## <a name="examples"></a>Примеры  
@@ -316,7 +317,7 @@ ms.locfileid: "85626584"
   
 ## <a name="requirements"></a>Требования  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Хранимые процедуры пространственного индекса &#40;языке Transact-SQL&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geometry_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
  [Общие сведения о пространственных индексах](../../relational-databases/spatial/spatial-indexes-overview.md)   

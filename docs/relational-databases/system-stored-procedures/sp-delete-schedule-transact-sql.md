@@ -1,4 +1,5 @@
 ---
+description: sp_delete_schedule (Transact-SQL)
 title: sp_delete_schedule (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8fe6f851ffb3ab15781d5a2ffbbcaca3bf15829f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0746a5039d27cb03edd379b5dee9b69525125156
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85862799"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493311"
 ---
 # <a name="sp_delete_schedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,15 +41,15 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @schedule_id = ] schedule_id`Идентификационный номер расписания для удаления. *schedule_id* имеет **тип int**и значение по умолчанию NULL.  
+`[ @schedule_id = ] schedule_id` Идентификационный номер расписания для удаления. *schedule_id* имеет **тип int**и значение по умолчанию NULL.  
   
 > **Примечание.** Необходимо указать либо *schedule_id* , либо *schedule_name* , но нельзя указать оба значения.  
   
-`[ @schedule_name = ] 'schedule_name'`Имя удаляемого расписания. Аргумент *schedule_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @schedule_name = ] 'schedule_name'` Имя удаляемого расписания. Аргумент *schedule_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > **Примечание.** Необходимо указать либо *schedule_id* , либо *schedule_name* , но нельзя указать оба значения.  
   
-`[ @force_delete = ] force_delete`Указывает, должна ли процедура завершаться ошибкой, если расписание присоединено к заданию. *Force_delete* имеет бит и значение по умолчанию **0**. Если *force_delete* равен **0**, хранимая процедура завершается ошибкой, если расписание присоединено к заданию. Если *force_delete* равен **1**, расписание удаляется независимо от того, присоединено ли к заданию расписание.  
+`[ @force_delete = ] force_delete` Указывает, должна ли процедура завершаться ошибкой, если расписание присоединено к заданию. *Force_delete* имеет бит и значение по умолчанию **0**. Если *force_delete* равен **0**, хранимая процедура завершается ошибкой, если расписание присоединено к заданию. Если *force_delete* равен **1**, расписание удаляется независимо от того, присоединено ли к заданию расписание.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -101,7 +102,7 @@ EXEC dbo.sp_delete_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Реализация заданий](../../ssms/agent/implement-jobs.md)   
  [sp_add_schedule (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)  
   

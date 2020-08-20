@@ -1,4 +1,5 @@
 ---
+description: sp_query_store_force_plan (Transact-SQL)
 title: sp_query_store_force_plan (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/29/2016
@@ -21,12 +22,12 @@ ms.assetid: 0068f258-b998-4e4e-b47b-e375157c8213
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6aeea1c726e190945095b478e960266908019e0b
-ms.sourcegitcommit: 95be98587f6a3730ca75a77676dd952c45e4f53a
+ms.openlocfilehash: 3aa708d4af93449e2efe3d26cb9b92496c497942
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88046810"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493068"
 ---
 # <a name="sp_query_store_force_plan-transact-sql"></a>sp_query_store_force_plan (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -44,14 +45,14 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @query_id = ] query_id`Идентификатор запроса. *query_id* имеет тип **bigint**и не имеет значения по умолчанию.  
+`[ @query_id = ] query_id` Идентификатор запроса. *query_id* имеет тип **bigint**и не имеет значения по умолчанию.  
   
-`[ @plan_id = ] plan_id`Идентификатор плана запроса, который необходимо принудительно применить. *plan_id* имеет тип **bigint**и не имеет значения по умолчанию.  
+`[ @plan_id = ] plan_id` Идентификатор плана запроса, который необходимо принудительно применить. *plan_id* имеет тип **bigint**и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется разрешение **ALTER** на базу данных.
@@ -74,7 +75,7 @@ JOIN sys.query_store_query_text AS Txt
 EXEC sp_query_store_force_plan 3, 3;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_query_store_remove_plan &#40;Transct-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
  [sp_query_store_remove_query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
  [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   

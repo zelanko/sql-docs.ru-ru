@@ -1,4 +1,5 @@
 ---
+description: sp_bindefault (Transact-SQL)
 title: sp_bindefault (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/25/2015
@@ -18,12 +19,12 @@ ms.assetid: 3da70c10-68d0-4c16-94a5-9e84c4a520f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e886acbd91ff2882c7dd304227ae0b7f1d6afd9d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5f72269bbeef0954cff5a312909c55797d82b8f8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716120"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493479"
 ---
 # <a name="sp_bindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85716120"
   Привязывает значение по умолчанию к столбцу или псевдониму типа данных.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Рекомендуется создавать определения по умолчанию с помощью ключевого слова DEFAULT инструкции [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) или [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Рекомендуется создавать определения по умолчанию с помощью ключевого слова DEFAULT инструкции [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) или [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) .  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,21 +46,21 @@ sp_bindefault [ @defname = ] 'default' ,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @defname = ] 'default'`Имя по умолчанию, созданное по УМОЛЧАНИю. *значение по умолчанию* — **nvarchar (776)** и не имеет значения по умолчанию.  
+`[ @defname = ] 'default'` Имя по умолчанию, созданное по УМОЛЧАНИю. *значение по умолчанию* — **nvarchar (776)** и не имеет значения по умолчанию.  
   
-`[ @objname = ] 'object_name'`Имя таблицы, столбца или псевдонима типа данных, к которому должна быть привязана привязка по умолчанию. *object_name* имеет тип **nvarchar (776)** и не имеет значения по умолчанию. *object_name* не могут быть определены с определяемыми пользователем типами **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML**или CLR.  
+`[ @objname = ] 'object_name'` Имя таблицы, столбца или псевдонима типа данных, к которому должна быть привязана привязка по умолчанию. *object_name* имеет тип **nvarchar (776)** и не имеет значения по умолчанию. *object_name* не могут быть определены с определяемыми пользователем типами **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML**или CLR.  
   
  Если *object_name* является именем, сопоставленным с одним компонентом, оно разрешается как псевдоним типа данных. Если оно двух- или трехкомпонентное, предпринимается попытка рассмотреть его как таблицу и столбец; в случае неудачи имя рассматривается как псевдоним типа данных. По умолчанию существующие столбцы псевдонима типа данных наследуют *значение по умолчанию*, если только значение по умолчанию не привязывается непосредственно к столбцу. Значение по умолчанию не может быть привязано к столбцу **Text**, **ntext**, **Image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML**, **timestamp**или определяемому пользователем типу данных CLR, столбцу со свойством Identity, вычисляемому столбцу или столбцу, у которого уже есть ограничение по умолчанию.  
   
 > [!NOTE]  
 >  *object_name* могут содержать квадратные скобки **[]** в качестве идентификаторов с разделителями. Дополнительные сведения см. в разделе [Идентификаторы баз данных](../../relational-databases/databases/database-identifiers.md).  
   
-`[ @futureonly = ] 'futureonly_flag'`Используется только при привязке значения по умолчанию к псевдониму типа данных. *futureonly_flag* имеет тип **varchar (15)** и значение по умолчанию NULL. Если этот параметр имеет значение **futureonly**, существующие столбцы этого типа данных не могут наследовать новое значение по умолчанию. Этот аргумент никогда не используется при привязке значения по умолчанию к столбцу. Если *futureonly_flag* имеет значение null, новое значение по умолчанию привязывается к любому столбцу псевдонима типа данных, который в настоящее время не имеет значения по умолчанию, или на основе существующего значения по умолчанию псевдонима типа данных.  
+`[ @futureonly = ] 'futureonly_flag'` Используется только при привязке значения по умолчанию к псевдониму типа данных. *futureonly_flag* имеет тип **varchar (15)** и значение по умолчанию NULL. Если этот параметр имеет значение **futureonly**, существующие столбцы этого типа данных не могут наследовать новое значение по умолчанию. Этот аргумент никогда не используется при привязке значения по умолчанию к столбцу. Если *futureonly_flag* имеет значение null, новое значение по умолчанию привязывается к любому столбцу псевдонима типа данных, который в настоящее время не имеет значения по умолчанию, или на основе существующего значения по умолчанию псевдонима типа данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **Sp_bindefault** можно использовать для привязки нового значения по умолчанию к столбцу, хотя рекомендуется использовать ограничение по умолчанию или псевдоним типа данных без отмены привязки к существующему по умолчанию. Старое значение по умолчанию переопределяется. Нельзя привязать значение по умолчанию к системному типу данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или определяемого пользователем типу данных среды CLR. Если значение по умолчанию несовместимо со столбцом, к которому оно привязано, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] возвращает сообщение об ошибке при вставке значения по умолчанию, а не при его привязке.  
   
  Существующие столбцы типа данных псевдонима наследуют новое значение по умолчанию, если только к ним не привязано значение по умолчанию или *futureonly_flag* указан как **futureonly**. Новые столбцы с псевдонимом типа данных всегда наследуют значение по умолчанию.  
@@ -115,7 +116,7 @@ EXEC sp_bindefault 'default1', '[t.1].c1' ;
 ## <a name="see-also"></a>См. также  
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE DEFAULT (Transact-SQL)](../../t-sql/statements/create-default-transact-sql.md)   
- [DROP &#40;по УМОЛЧАНИю&#41;Transact-SQL](../../t-sql/statements/drop-default-transact-sql.md)   
+ [DROP &#40;по УМОЛЧАНИю&#41;Transact-SQL ](../../t-sql/statements/drop-default-transact-sql.md)   
  [sp_unbindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
