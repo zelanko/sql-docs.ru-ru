@@ -1,4 +1,5 @@
 ---
+description: sysmail_help_principalprofile_sp (Transact-SQL)
 title: sysmail_help_principalprofile_sp (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/02/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9f4d5af37675811b978e444e40e730ad59fd823b
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 8325480c2869f9b3e35caab51935eba36d888afb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122750"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488968"
 ---
 # <a name="sysmail_help_principalprofile_sp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,13 +42,13 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @principal_id = ] principal_id`Идентификатор пользователя или роли базы данных в базе данных **msdb** для списка взаимосвязей. *principal_id* имеет **тип int**и значение по умолчанию NULL. Можно указать либо *principal_id* , либо *principal_name* .  
+`[ @principal_id = ] principal_id` Идентификатор пользователя или роли базы данных в базе данных **msdb** для списка взаимосвязей. *principal_id* имеет **тип int**и значение по умолчанию NULL. Можно указать либо *principal_id* , либо *principal_name* .  
   
-`[ @principal_name = ] 'principal_name'`Имя пользователя или роли базы данных в базе данных **msdb** для списка взаимосвязей. Аргумент *principal_name* имеет тип **sysname**и значение по умолчанию NULL. Можно указать либо *principal_id* , либо *principal_name* .  
+`[ @principal_name = ] 'principal_name'` Имя пользователя или роли базы данных в базе данных **msdb** для списка взаимосвязей. Аргумент *principal_name* имеет тип **sysname**и значение по умолчанию NULL. Можно указать либо *principal_id* , либо *principal_name* .  
   
-`[ @profile_id = ] profile_id`Идентификатор профиля для списка взаимосвязей. *profile_id* имеет **тип int**и значение по умолчанию NULL. Можно указать либо *profile_id* , либо *profile_name* .  
+`[ @profile_id = ] profile_id` Идентификатор профиля для списка взаимосвязей. *profile_id* имеет **тип int**и значение по умолчанию NULL. Можно указать либо *profile_id* , либо *profile_name* .  
   
-`[ @profile_name = ] 'profile_name'`Имя профиля для списка взаимосвязей. Аргумент *profile_name* имеет тип **sysname**и значение по умолчанию NULL. Можно указать либо *profile_id* , либо *profile_name* .  
+`[ @profile_name = ] 'profile_name'` Имя профиля для списка взаимосвязей. Аргумент *profile_name* имеет тип **sysname**и значение по умолчанию NULL. Можно указать либо *profile_id* , либо *profile_name* .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  

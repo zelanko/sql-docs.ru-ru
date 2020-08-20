@@ -1,4 +1,5 @@
 ---
+description: sys. dm_pdw_network_credentials (Transact-SQL)
 title: sys. dm_pdw_network_credentials (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/07/2017
@@ -12,12 +13,12 @@ ms.assetid: d4fee3ad-6285-4ea5-8513-5e6eb617abb0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8be0dde15dea7c02cda9fb59cdc71680ec494178
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 922c1ec6594f01488515bc1e9f18efa07a53e884
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395963"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489807"
 ---
 # <a name="sysdm_pdw_network_credentials-transact-sql"></a>sys. dm_pdw_network_credentials (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]

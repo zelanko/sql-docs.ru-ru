@@ -1,4 +1,5 @@
 ---
+description: Таблицы агента SQL Server (Transact-SQL)
 title: Таблицы агент SQL Server (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 6cb39bfd-079e-4be4-9c42-2fa234c65ce1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a677a563666acff5c18f84a3f133b03b616072ce
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f5635cd863017ad389178cd3d0954854472eb5c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753871"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488688"
 ---
 # <a name="sql-server-agent-tables-transact-sql"></a>Таблицы агента SQL Server (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   В подразделах данного раздела описаны системные таблицы, в которых хранятся данные агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Все таблицы находятся в схеме dbo в базе данных msdb.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [dbo.sysalerts](../../relational-databases/system-tables/dbo-sysalerts-transact-sql.md)  
  Содержит одну строку для каждого предупреждения.  
   

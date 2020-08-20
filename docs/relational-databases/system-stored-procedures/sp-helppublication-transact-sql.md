@@ -1,4 +1,5 @@
 ---
+description: sp_helppublication (Transact-SQL)
 title: sp_helppublication (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/18/2019
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b4c5d3157c6683a793f30eccd878aa9e691c7023
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dd5452439cc3467cc840ac11dd9ce3cf880a4ce8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729223"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489312"
 ---
 # <a name="sp_helppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,11 +40,11 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'`Имя просматриваемой публикации. Аргумент *publication* имеет тип sysname и значение по умолчанию **%** , которое возвращает сведения обо всех публикациях.  
+`[ @publication = ] 'publication'` Имя просматриваемой публикации. Аргумент *publication* имеет тип sysname и значение по умолчанию **%** , которое возвращает сведения обо всех публикациях.  
   
-`[ @found = ] 'found' OUTPUT`Флаг, указывающий возвращаемые строки. Аргумент *Found*имеет **тип int** и выходной параметр и значение по умолчанию **23456**. **1** указывает, что публикация найдена. значение **0** указывает, что публикация не найдена.  
+`[ @found = ] 'found' OUTPUT` Флаг, указывающий возвращаемые строки. Аргумент *Found*имеет **тип int** и выходной параметр и значение по умолчанию **23456**. **1** указывает, что публикация найдена. значение **0** указывает, что публикация не найдена.  
   
-`[ @publisher = ] 'publisher'`Указывает издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип sysname и значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'` Указывает издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип sysname и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  не следует указывать *Издатель* при запросе сведений о публикации от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя.  
@@ -104,7 +105,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Процедура sp_helppublication используется при репликации моментальных снимков и транзакций.  
   
  Процедура sp_helppublication возвращает сведения обо всех публикациях, которые принадлежат пользователю, выполняющему эту процедуру.  
@@ -117,7 +118,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
   
  Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя, не являющегося издателем, только члены предопределенной роли сервера sysadmin на распространителе или члены предопределенной роли базы данных db_owner в базе данных распространителя или пользователи в списке доступа к публикации могут выполнять sp_helppublication.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Просмотр и изменение свойств публикации](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   

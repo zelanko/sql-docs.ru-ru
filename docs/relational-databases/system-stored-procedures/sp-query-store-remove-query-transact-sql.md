@@ -1,4 +1,5 @@
 ---
+description: sp_query_store_remove_query (Transact-SQL)
 title: sp_query_store_remove_query (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/29/2016
@@ -21,11 +22,12 @@ ms.assetid: cc39ca92-3cba-478e-beef-65560aa84007
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1751940417d7bf95d2745f46c9acb7f1eb8839a7
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4aff0b1ce7544474899793e7f1cc7344021cb157
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012635"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489186"
 ---
 # <a name="sp_query_store_remove_query-transact-sql"></a>sp_query_store_remove_query (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -42,12 +44,12 @@ sp_query_store_remove_query [ @query_id = ] query_id [;]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @query_id = ] query_id`Идентификатор запроса, удаляемого из хранилища запросов. *query_id* имеет тип **bigint**и не имеет значения по умолчанию.  
+`[ @query_id = ] query_id` Идентификатор запроса, удаляемого из хранилища запросов. *query_id* имеет тип **bigint**и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Комментарии  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется разрешение **ALTER** на базу данных.

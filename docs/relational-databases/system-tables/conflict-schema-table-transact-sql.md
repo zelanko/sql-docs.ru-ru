@@ -1,4 +1,5 @@
 ---
+description: conflict_ &lt; Schema &gt; _ &lt; Table &gt; (Transact-SQL)
 title: conflict_ &lt; Schema &gt; _ &lt; Table &gt; (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/15/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 72e364d451a78726c1ac98c42659db9c8f6034b0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a4a378eeef86204f87ce8eaa13a442752636c066
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890584"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488919"
 ---
 # <a name="conflict_ltschemagt_lttablegt-transact-sql"></a>conflict_ &lt; Schema &gt; _ &lt; Table &gt; (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,8 +40,8 @@ ms.locfileid: "85890584"
 |__$conflict_type|**int**|Тип конфликта, который может принимать одно из следующих значений:<br /><br /> 1: не удалось выполнить обновление, так как локальная строка была изменена другим обновлением, или она была удалена, а затем вновь вставлена.<br /><br /> 2: не удалось выполнить обновление, так как локальная строка уже удалена.<br /><br /> 3: произошел сбой удаления, так как локальная строка была изменена другим обновлением или была удалена, а затем вновь вставлена.<br /><br /> 4: не удалось выполнить удаление, так как локальная строка уже удалена.<br /><br /> 5: не удалось выполнить вставку, так как локальная строка уже вставлена или была вставлена, а затем обновлена.|  
 |__$is_winner|**bit**|Указывает, была ли строка в этой таблице победителем конфликта, что означает, что она была применена к локальному узлу.|  
 |__$pre_version|**varbinary (32)**|Версия базы данных, из которой было произведено изменение, вызвавшее конфликт.|  
-|__$reason_code|**int**|Код разрешения конфликта. Может использоваться одно из следующих значений:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> Дополнительные сведения см. в разделе **__ $ reason_text**.|  
-|__$reason_text|**nvarchar (720)**|Разрешение конфликта. Может использоваться одно из следующих значений:<br /><br /> 1 = Разрешен<br /><br /> 2 = Не разрешен<br /><br /> 0 = Неизвестно|  
+|__$reason_code|**int**|Код разрешения конфликта. Может иметь одно из следующих значений:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> Дополнительные сведения см. в разделе **__ $ reason_text**.|  
+|__$reason_text|**nvarchar (720)**|Разрешение конфликта. Может иметь одно из следующих значений:<br /><br /> 1 = Разрешен<br /><br /> 2 = Не разрешен<br /><br /> 0 = Неизвестно|  
 |__$update_bitmap|**varbinary (** *n* **)**. Размер зависит от содержимого.|Битовая карта, указывающая столбцы, которые были обновлены в случае конфликта «обновление-обновление».|  
 |__$inserted_date|**datetime**|Дата и время вставки конфликтующей строки в эту таблицу.|  
 |__$row_id|**timestamp**|Версия строки, которая связана со строкой, вызвавшей конфликт.|  
@@ -48,7 +49,7 @@ ms.locfileid: "85890584"
 |\<base table column names>|\<base table column types>|Конфликтующая строка содержит один столбец для каждого из столбцов базовой таблицы.|  
   
 ## <a name="see-also"></a>См. также  
- [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

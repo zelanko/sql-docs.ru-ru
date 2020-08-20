@@ -1,4 +1,5 @@
 ---
+description: sysmail_delete_mailitems_sp (Transact-SQL)
 title: sysmail_delete_mailitems_sp (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 052e97d1d744656c223e000adca7028fd11b7e0d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ebfd972849ff27ca0f0b6b73117a786c146e610b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890967"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489008"
 ---
 # <a name="sysmail_delete_mailitems_sp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +41,9 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ \@sent_before = ] 'sent_before'`Удаляет сообщения электронной почты вплоть до даты и времени, указанных в качестве аргумента *sent_before* . *sent_before* имеет тип **DateTime** со значением NULL по умолчанию. Значение NULL соответствует всем датам.  
+`[ \@sent_before = ] 'sent_before'` Удаляет сообщения электронной почты вплоть до даты и времени, указанных в качестве аргумента *sent_before* . *sent_before* имеет тип **DateTime** со значением NULL по умолчанию. Значение NULL соответствует всем датам.  
   
-`[ \@sent_status = ] 'sent_status'`Удаляет сообщения электронной почты типа, указанного *sent_status*. *sent_status* имеет тип **varchar (8)** и не имеет значения по умолчанию. Допустимые записи: **отправлены**, **неотправленные**, **повторные попытки**и **сбой**. Значение NULL соответствует всем состояниям.  
+`[ \@sent_status = ] 'sent_status'` Удаляет сообщения электронной почты типа, указанного *sent_status*. *sent_status* имеет тип **varchar (8)** и не имеет значения по умолчанию. Допустимые записи: **отправлены**, **неотправленные**, **повторные попытки**и **сбой**. Значение NULL соответствует всем состояниям.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -89,6 +90,6 @@ GO
  [sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
  [sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
  [sysmail_mailattachments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)   
- [Создание задания агента SQL Server по архивации сообщений компонента Database Mail и журналов событий базы данных](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
+ [Создание задания агента SQL Server по архивации сообщений и журналов событий компонента Database Mail](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: MSsnapshot_agents (Transact-SQL)
 title: MSsnapshot_agents (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: aeae0a2e-4c21-4c45-be65-1e426fa52bdd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 20394d5204059b7ec55c09b9feb6092415ccda12
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4ab0908d8ef5ba3a3bb24e1a518c8195174603cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889428"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488717"
 ---
 # <a name="mssnapshot_agents-transact-sql"></a>MSsnapshot_agents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,9 +40,9 @@ ms.locfileid: "85889428"
 |**publication_type**|**int**|Тип публикации:<br /><br /> **0** = транзакционная.<br /><br /> **1** = моментальный снимок.<br /><br /> **2** = слияние.|  
 |**local_job**|**bit**|Показывает, есть ли задание агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на локальном распространителе.|  
 |**job_id**|**двоичный (16)**|Идентификационный номер задания.|  
-|**profile_id**|**int**|Идентификатор конфигурации из [MSagent_profiles &#40;таблице&#41;Transact-SQL](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) .|  
-|**dynamic_filter_login**|**sysname**|Значение, используемое для вычисления [SUSER_SNAME &#40;функции&#41;Transact-SQL](../../t-sql/functions/suser-sname-transact-sql.md) в параметризованных фильтрах, определяющих секцию. Столбец используется для секционированного моментального снимка.|  
-|**dynamic_filter_hostname**|**sysname**|Значение, используемое для вычисления [HOST_NAME &#40;функции&#41;Transact-SQL](../../t-sql/functions/host-name-transact-sql.md) в параметризованных фильтрах, определяющих секцию. Столбец используется для секционированного моментального снимка.|  
+|**profile_id**|**int**|Идентификатор конфигурации из [MSagent_profiles &#40;таблице&#41;Transact-SQL ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) .|  
+|**dynamic_filter_login**|**sysname**|Значение, используемое для вычисления [SUSER_SNAME &#40;функции&#41;Transact-SQL ](../../t-sql/functions/suser-sname-transact-sql.md) в параметризованных фильтрах, определяющих секцию. Столбец используется для секционированного моментального снимка.|  
+|**dynamic_filter_hostname**|**sysname**|Значение, используемое для вычисления [HOST_NAME &#40;функции&#41;Transact-SQL ](../../t-sql/functions/host-name-transact-sql.md) в параметризованных фильтрах, определяющих секцию. Столбец используется для секционированного моментального снимка.|  
 |**publisher_security_mode**|**smallint**|Режим безопасности, используемый агентом при подключении к издателю, может принимать одно из следующих значений:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Проверка подлинности<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Проверка подлинности Windows.|  
 |**publisher_login**|**sysname**|Имя входа, используемое для соединения с издателем.|  
 |**publisher_password**|**nvarchar (524)**|Зашифрованное значение пароля, используемое для соединения с издателем.|  
@@ -50,7 +51,7 @@ ms.locfileid: "85889428"
 |**job_password**|**nvarchar (524)**||  
   
 ## <a name="see-also"></a>См. также  
- [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

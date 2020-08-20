@@ -1,4 +1,5 @@
 ---
+description: sp_create_removable (Transact-SQL)
 title: sp_create_removable (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 454b077e39a8ff1c17c3a742bb7acd00e8e719f8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b004ff5c004d51bcd0af402fc081f96745d9b9ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85869873"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489515"
 ---
 # <a name="sp_create_removable-transact-sql"></a>sp_create_removable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85869873"
   Создает базу данных съемных носителей. Создает три или более файлов (один для таблиц системных каталогов, один для журнала транзакций, а также один или более для таблиц данных) и размещает в них базу данных.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Вместо этого рекомендуется использовать [Create Database](../../t-sql/statements/create-database-sql-server-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого рекомендуется использовать [Create Database](../../t-sql/statements/create-database-sql-server-transact-sql.md) .  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,27 +56,27 @@ sp_create_removable
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @dbname = ] 'dbname'`Имя базы данных, создаваемой для использования на съемных носителях. Аргумент *dbname* имеет тип **sysname**.  
+`[ @dbname = ] 'dbname'` Имя базы данных, создаваемой для использования на съемных носителях. Аргумент *dbname* имеет тип **sysname**.  
   
-`[ @syslogical = ] 'syslogical'`Логическое имя файла, содержащего таблицы системных каталогов. *сислогикал* имеет тип **sysname**.  
+`[ @syslogical = ] 'syslogical'` Логическое имя файла, содержащего таблицы системных каталогов. *сислогикал* имеет тип **sysname**.  
   
-`[ @sysphysical = ] 'sysphysical'`Физическое имя. Включает в себя полный путь к файлу, содержащему таблицы системных каталогов. *сисфисикал* имеет тип **nvarchar (260)**.  
+`[ @sysphysical = ] 'sysphysical'` Физическое имя. Включает в себя полный путь к файлу, содержащему таблицы системных каталогов. *сисфисикал* имеет тип **nvarchar (260)**.  
   
-`[ @syssize = ] syssize`Размер файла, содержащего таблицы системного каталога, в мегабайтах. *сиссизе* имеет **тип int**. Минимальное значение *сиссизе* — 1.  
+`[ @syssize = ] syssize` Размер файла, содержащего таблицы системного каталога, в мегабайтах. *сиссизе* имеет **тип int**. Минимальное значение *сиссизе* — 1.  
   
-`[ @loglogical = ] 'loglogical'`Логическое имя файла, содержащего журнал транзакций. *логлогикал* имеет тип **sysname**.  
+`[ @loglogical = ] 'loglogical'` Логическое имя файла, содержащего журнал транзакций. *логлогикал* имеет тип **sysname**.  
   
-`[ @logphysical = ] 'logphysical'`Физическое имя. Включает в себя полный путь к файлу, содержащему журнал транзакций. *логфисикал* имеет тип **nvarchar (260)**.  
+`[ @logphysical = ] 'logphysical'` Физическое имя. Включает в себя полный путь к файлу, содержащему журнал транзакций. *логфисикал* имеет тип **nvarchar (260)**.  
   
-`[ @logsize = ] logsize`Размер файла, содержащего журнал транзакций (в мегабайтах). *logsize* имеет **тип int**. Минимальное значение *logsize* — 1.  
+`[ @logsize = ] logsize` Размер файла, содержащего журнал транзакций (в мегабайтах). *logsize* имеет **тип int**. Минимальное значение *logsize* — 1.  
   
-`[ @datalogical1 = ] 'datalogical'`Логическое имя файла, содержащего таблицы данных. значение *Logic* имеет тип **sysname**.  
+`[ @datalogical1 = ] 'datalogical'` Логическое имя файла, содержащего таблицы данных. значение *Logic* имеет тип **sysname**.  
   
  Можно создать от 1 до 16 файлов данных. Обычно создание более одного файла данных требуется для больших баз данных, распространяемых на нескольких дисках.  
   
-`[ @dataphysical1 = ] 'dataphysical'`Физическое имя. Включает в себя полный путь к файлу, содержащему таблицы данных. *Physical* имеет тип **nvarchar (260)**.  
+`[ @dataphysical1 = ] 'dataphysical'` Физическое имя. Включает в себя полный путь к файлу, содержащему таблицы данных. *Physical* имеет тип **nvarchar (260)**.  
   
-`[ @datasize1 = ] 'datasize'`Размер файла, содержащего таблицы данных, в мегабайтах. *DataSize* имеет **тип int**. Минимальный *Размер* 1.  
+`[ @datasize1 = ] 'datasize'` Размер файла, содержащего таблицы данных, в мегабайтах. *DataSize* имеет **тип int**. Минимальный *Размер* 1.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -96,7 +97,7 @@ sp_create_removable
   
 |Операция с базой данных|Разрешения, задаваемые для файлов|  
 |---------------------------|------------------------------|  
-|Изменение для добавления нового файла|Создано|  
+|Изменение для добавления нового файла|Создание|  
 |Создание резервной копии|Присоединение|  
 |Восстановление|Отсоединен|  
   
@@ -118,7 +119,7 @@ EXEC sp_create_removable 'inventory',
 10;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Присоединение и отсоединение базы данных (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [sp_certify_removable &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-certify-removable-transact-sql.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   

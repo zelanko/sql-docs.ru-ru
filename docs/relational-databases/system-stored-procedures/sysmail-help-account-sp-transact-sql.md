@@ -1,4 +1,5 @@
 ---
+description: sysmail_help_account_sp (Transact-SQL)
 title: sysmail_help_account_sp (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 11242eae3f17e24c428aac3a6f344d937f15dd33
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 9f6995ca068efacff419ddad4f99435234d3228b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122709"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488994"
 ---
 # <a name="sysmail_help_account_sp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,9 +40,9 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @account_id = ] account_id`Идентификатор учетной записи, для которой необходимо получить список сведений. *account_id* имеет **тип int**и значение по умолчанию NULL.  
+`[ @account_id = ] account_id` Идентификатор учетной записи, для которой необходимо получить список сведений. *account_id* имеет **тип int**и значение по умолчанию NULL.  
   
-`[ @account_name = ] 'account_name'`Имя учетной записи для вывода сведений о. Аргумент *account_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @account_name = ] 'account_name'` Имя учетной записи для вывода сведений о. Аргумент *account_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -53,7 +54,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 | ----------- | --------- | ----------- |
 |**account_id**|**int**|Идентификатор учетной записи.|  
 |**name**|**sysname**|Имя учетной записи.|  
-|**Описание**|**nvarchar(256)**|Описание учетной записи.|  
+|**description**|**nvarchar(256)**|Описание учетной записи.|  
 |**email_address**|**nvarchar(128)**|Адрес электронной почты для отправки сообщений.|  
 |**display_name**|**nvarchar(128)**|Отображаемое имя учетной записи.|  
 |**replyto_address**|**nvarchar(128)**|Адрес, на который посылаются ответы на сообщения данной учетной записи.|  

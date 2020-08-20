@@ -1,4 +1,5 @@
 ---
+description: sp_enum_proxy_for_subsystem (Transact-SQL)
 title: sp_enum_proxy_for_subsystem (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 21df62ff7ab60933281ca0dce0e7bc2bc2b3b7c1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f484764e05a23594c32494934a9c366154e02aeb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891925"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489449"
 ---
 # <a name="sp_enum_proxy_for_subsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-SQL)
 
@@ -43,13 +44,13 @@ sp_enum_proxy_for_subsystem
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @proxy_id = ] proxy_id`Идентификационный номер учетной записи-посредника для получения списка сведений. *Proxy_id* имеет **тип int**и значение по умолчанию NULL. Можно указать либо *идентификатор* , либо *proxy_name* .  
+`[ @proxy_id = ] proxy_id` Идентификационный номер учетной записи-посредника для получения списка сведений. *Proxy_id* имеет **тип int**и значение по умолчанию NULL. Можно указать либо *идентификатор* , либо *proxy_name* .  
   
-`[ @proxy_name = ] 'proxy_name'`Имя учетной записи-посредника для получения списка сведений. Аргумент *proxy_name* имеет тип **sysname**и значение по умолчанию NULL. Можно указать либо *идентификатор* , либо *proxy_name* .  
+`[ @proxy_name = ] 'proxy_name'` Имя учетной записи-посредника для получения списка сведений. Аргумент *proxy_name* имеет тип **sysname**и значение по умолчанию NULL. Можно указать либо *идентификатор* , либо *proxy_name* .  
   
-`[ @subsystem_id = ] subsystem_id`Идентификационный номер подсистемы, для которой необходимо вывести сведения. *Subsystem_id* имеет **тип int**и значение по умолчанию NULL. Можно указать либо *subsystem_id* , либо *subsystem_name* .  
+`[ @subsystem_id = ] subsystem_id` Идентификационный номер подсистемы, для которой необходимо вывести сведения. *Subsystem_id* имеет **тип int**и значение по умолчанию NULL. Можно указать либо *subsystem_id* , либо *subsystem_name* .  
   
-`[ @subsystem_name = ] 'subsystem_name'`Имя подсистемы, для которой необходимо вывести сведения. Аргумент *subsystem_name* имеет тип **sysname**и значение по умолчанию NULL. Можно указать либо *subsystem_id* , либо *subsystem_name* .  
+`[ @subsystem_name = ] 'subsystem_name'` Имя подсистемы, для которой необходимо вывести сведения. Аргумент *subsystem_name* имеет тип **sysname**и значение по умолчанию NULL. Можно указать либо *subsystem_id* , либо *subsystem_name* .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  

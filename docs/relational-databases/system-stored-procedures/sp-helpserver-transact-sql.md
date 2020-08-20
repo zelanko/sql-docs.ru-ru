@@ -1,4 +1,5 @@
 ---
+description: sp_helpserver (Transact-SQL)
 title: sp_helpserver (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fe5e3bd8d7d5ce0046a908f16ae860bc68386054
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1870b2e58871eacde9a65fa42bf75285b2630311
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899472"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489281"
 ---
 # <a name="sp_helpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,11 +42,11 @@ sp_helpserver [ [ @server = ] 'server' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @server = ] 'server'`— Это сервер, о котором сообщается информация. Если параметр *Server* не указан, отчеты обо всех серверах в **master.sys. Servers**. *Server* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @server = ] 'server'` — Это сервер, о котором сообщается информация. Если параметр *Server* не указан, отчеты обо всех серверах в **master.sys. Servers**. *Server* имеет тип **sysname**и значение по умолчанию NULL.  
   
-`[ @optname = ] 'option'`Параметр, описывающий сервер. *параметр имеет тип* **varchar (** 35 **)** и значение по умолчанию NULL и должен иметь одно из следующих значений.  
+`[ @optname = ] 'option'` Параметр, описывающий сервер. *параметр имеет тип* **varchar (** 35 **)** и значение по умолчанию NULL и должен иметь одно из следующих значений.  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**совместимые параметры сортировки**|Влияет на выполнение распределенных запросов на связанных серверах. Если значение этого параметра равно true.|  
 |**доступ к данным**|Разрешает и запрещает доступ распределенных запросов к связанному серверу.|  
@@ -59,7 +60,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**система**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**использовать удаленные параметры сортировки**|Применение параметров сортировки удаленного столбца вместо параметров сортировки локального сервера.|  
   
-`[ @show_topology = ] 'show_topology'`Связь указанного сервера с другими серверами. *show_topology* имеет тип **varchar (** 1 **)** и значение по умолчанию NULL. Если *show_topology* не равно **t** или имеет значение null, **sp_helpserver** возвращает столбцы, перечисленные в разделе результирующие наборы. Если *show_topology* равно **t**, то в дополнение к столбцам, перечисленным в результирующих наборах, **sp_helpserver** также возвращает сведения о **топкс** и **топи** .  
+`[ @show_topology = ] 'show_topology'` Связь указанного сервера с другими серверами. *show_topology* имеет тип **varchar (** 1 **)** и значение по умолчанию NULL. Если *show_topology* не равно **t** или имеет значение null, **sp_helpserver** возвращает столбцы, перечисленные в разделе результирующие наборы. Если *show_topology* равно **t**, то в дополнение к столбцам, перечисленным в результирующих наборах, **sp_helpserver** также возвращает сведения о **топкс** и **топи** .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -71,7 +72,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**name**|**sysname**|Имя сервера.|  
 |**network_name**|**sysname**|Сетевое имя сервера.|  
 |**status**|**varchar (** 70 **)**|Состояние сервера.|  
-|**идентификатор**|**char (** 4 **)**|Идентификационный номер сервера.|  
+|**id**|**char (** 4 **)**|Идентификационный номер сервера.|  
 |**collation_name**|**sysname**|Параметры сортировки сервера.|  
 |**connect_timeout**|**int**|Значение времени ожидания для подключения к связанному серверу.|  
 |**query_timeout**|**int**|Значение времени ожидания для запросов к связанному серверу.|  
@@ -110,9 +111,9 @@ EXEC sp_helpserver 'SEATTLE2';
  [sp_changesubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
  [sp_dropserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
  [sp_dropsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
- [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
+ [sp_helpdistributor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [sp_helpremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
- [sp_helpsubscriberinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
+ [sp_helpsubscriberinfo (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)   
  [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

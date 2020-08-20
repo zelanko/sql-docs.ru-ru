@@ -1,4 +1,5 @@
 ---
+description: sp_cursorprepare (Transact-SQL)
 title: sp_cursorprepare (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 130446e1f92fd735c3ab83a8f515fcf36fb63948
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8a2b001c3e08c9d68be113e351bcf0482205e196
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85868815"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489453"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -112,7 +113,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 |Значение|Описание|  
 |-----------|-----------------|  
 |0|Успех|  
-|0x0001|Failure|  
+|0x0001|Сбой|  
 |1FF6|Невозможно вернуть метаданные.<br /><br /> Примечание. Причина в том, что инструкция не создает результирующий набор; Например, это инструкция INSERT или DDL.|  
   
 ## <a name="examples"></a>Примеры  

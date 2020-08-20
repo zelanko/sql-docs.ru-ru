@@ -1,4 +1,5 @@
 ---
+description: sp_addpublication_snapshot (Transact-SQL)
 title: sp_addpublication_snapshot (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/15/2018
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d8b5f827126afca81baeafe5f5c35e3d94666fcc
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 764147434455852ef09fa70768b3b71d68cc913c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865262"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489625"
 ---
 # <a name="sp_addpublication_snapshot-transact-sql"></a>sp_addpublication_snapshot (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -57,9 +58,9 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @frequency_type = ] frequency_type`Частота, с которой выполняется агент моментальных снимков. *frequency_type* имеет **тип int**и может принимать одно из следующих значений.  
+`[ @frequency_type = ] frequency_type` Частота, с которой выполняется агент моментальных снимков. *frequency_type* имеет **тип int**и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -71,7 +72,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |**64**|При запуске агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**128**|Запускать, когда компьютер простаивает|  
   
-`[ @frequency_interval = ] frequency_interval`Значение, применяемое к частоте, установленной *frequency_type*. *frequency_interval* имеет **тип int**и может принимать одно из следующих значений.  
+`[ @frequency_interval = ] frequency_interval` Значение, применяемое к частоте, установленной *frequency_type*. *frequency_interval* имеет **тип int**и может принимать одно из следующих значений.  
   
 |Значение аргумента frequency_type|Воздействие на аргумент frequency_interval|  
 |------------------------------|-----------------------------------|  
@@ -83,51 +84,51 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |**64**|*frequency_interval* не используется.|  
 |**128**|*frequency_interval* не используется.|  
   
-`[ @frequency_subday = ] frequency_subday`Единица измерения для *freq_subday_interval*. *frequency_subday* имеет **тип int**и может принимать одно из следующих значений.  
+`[ @frequency_subday = ] frequency_subday` Единица измерения для *freq_subday_interval*. *frequency_subday* имеет **тип int**и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
 |**1**|Однократно|  
-|**2**|Секунда|  
+|**2**|Second|  
 |**4** (по умолчанию)|Минута|  
 |**8**|Час|  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval`Интервал для *frequency_subday*. *frequency_subday_interval* имеет **тип int**и значение по умолчанию 5, что означает каждые 5 минут.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Интервал для *frequency_subday*. *frequency_subday_interval* имеет **тип int**и значение по умолчанию 5, что означает каждые 5 минут.  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval`Дата выполнения агент моментальных снимков. *frequency_relative_interval* имеет **тип int**и значение по умолчанию 1.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` Дата выполнения агент моментальных снимков. *frequency_relative_interval* имеет **тип int**и значение по умолчанию 1.  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Коэффициент повторения, используемый *frequency_type*. *frequency_recurrence_factor* имеет **тип int**и значение по умолчанию 0.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Коэффициент повторения, используемый *frequency_type*. *frequency_recurrence_factor* имеет **тип int**и значение по умолчанию 0.  
   
-`[ @active_start_date = ] active_start_date`Дата первого запланированного запуска агент моментальных снимков в формате ГГГГММДД. *active_start_date* имеет **тип int**и значение по умолчанию 0.  
+`[ @active_start_date = ] active_start_date` Дата первого запланированного запуска агент моментальных снимков в формате ГГГГММДД. *active_start_date* имеет **тип int**и значение по умолчанию 0.  
   
-`[ @active_end_date = ] active_end_date`Дата прекращения расписания агент моментальных снимков в формате ГГГГММДД. *active_end_date* имеет **тип int**и значение по умолчанию 99991231, что означает 31 декабря 9999.  
+`[ @active_end_date = ] active_end_date` Дата прекращения расписания агент моментальных снимков в формате ГГГГММДД. *active_end_date* имеет **тип int**и значение по умолчанию 99991231, что означает 31 декабря 9999.  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day`Время первого запланированного агент моментальных снимков в формате ЧЧММСС. *active_start_time_of_day* имеет **тип int**и значение по умолчанию 0.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Время первого запланированного агент моментальных снимков в формате ЧЧММСС. *active_start_time_of_day* имеет **тип int**и значение по умолчанию 0.  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day`Время суток, когда запланировать агент моментальных снимков прекращается в формате ЧЧММСС. *active_end_time_of_day* имеет **тип int**и значение по умолчанию 235959, то есть 11:59:59 P.M. в 24-часовом формате.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` Время суток, когда запланировать агент моментальных снимков прекращается в формате ЧЧММСС. *active_end_time_of_day* имеет **тип int**и значение по умолчанию 235959, то есть 11:59:59 P.M. в 24-часовом формате.  
   
-`[ @snapshot_job_name = ] 'snapshot_agent_name'`Имя существующего агент моментальных снимков имени задания, если используется существующее задание. *snapshot_agent_name* имеет тип **nvarchar (100)** и значение по умолчанию NULL. Этот параметр предназначен для внутреннего использования и не указывается при создании новой публикации. Если указан *snapshot_agent_name* , *job_login* и *job_password* должны иметь значение null.  
+`[ @snapshot_job_name = ] 'snapshot_agent_name'` Имя существующего агент моментальных снимков имени задания, если используется существующее задание. *snapshot_agent_name* имеет тип **nvarchar (100)** и значение по умолчанию NULL. Этот параметр предназначен для внутреннего использования и не указывается при создании новой публикации. Если указан *snapshot_agent_name* , *job_login* и *job_password* должны иметь значение null.  
   
-`[ @publisher_security_mode = ] publisher_security_mode`Режим безопасности, используемый агентом при соединении с издателем. *publisher_security_mode* имеет значение **smallint**и значение по умолчанию 1. **0** — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Проверка подлинности, а **1** — проверка подлинности Windows. Значение **0** должно быть указано для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей, отличных от. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @publisher_security_mode = ] publisher_security_mode` Режим безопасности, используемый агентом при соединении с издателем. *publisher_security_mode* имеет значение **smallint**и значение по умолчанию 1. **0** — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Проверка подлинности, а **1** — проверка подлинности Windows. Значение **0** должно быть указано для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей, отличных от. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-`[ @publisher_login = ] 'publisher_login'`Имя входа, используемое при соединении с издателем. Аргумент *publisher_login* имеет тип **sysname**и значение по умолчанию NULL. необходимо указать *publisher_login* , если *publisher_security_mode* равен **0**. Если *publisher_login* имеет значение null, а *publisher_security_mode* равен **1**, то при соединении с издателем будет использоваться учетная запись, указанная в *job_login* .  
+`[ @publisher_login = ] 'publisher_login'` Имя входа, используемое при соединении с издателем. Аргумент *publisher_login* имеет тип **sysname**и значение по умолчанию NULL. необходимо указать *publisher_login* , если *publisher_security_mode* равен **0**. Если *publisher_login* имеет значение null, а *publisher_security_mode* равен **1**, то при соединении с издателем будет использоваться учетная запись, указанная в *job_login* .  
   
-`[ @publisher_password = ] 'publisher_password'`Пароль, используемый при соединении с издателем. Аргумент *publisher_password* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher_password = ] 'publisher_password'` Пароль, используемый при соединении с издателем. Аргумент *publisher_password* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!IMPORTANT]  
 >  Не храните данные проверки подлинности в файлах скриптов. В целях повышения безопасности рекомендуется вводить имена входа и пароли во время выполнения.  
   
-`[ @job_login = ] 'job_login'`Имя входа для учетной записи, под которой выполняется агент. В Управляемый экземпляр Azure SQL используйте учетную запись SQL Server. *job_login* имеет тип **nvarchar (257)** и значение по умолчанию NULL. Эта учетная запись всегда используется для соединений агента с распространителем. Необходимо указывать этот аргумент при создании нового задания агента моментальных снимков.  
+`[ @job_login = ] 'job_login'` Имя входа для учетной записи, под которой выполняется агент. В Управляемый экземпляр Azure SQL используйте учетную запись SQL Server. *job_login* имеет тип **nvarchar (257)** и значение по умолчанию NULL. Эта учетная запись всегда используется для соединений агента с распространителем. Необходимо указывать этот аргумент при создании нового задания агента моментальных снимков.  
   
 > [!NOTE]
 >  Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей, отличных от, это должно быть одно и то же имя входа, указанное в [Sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  
   
-`[ @job_password = ] 'job_password'`Пароль для учетной записи Windows, под которой запускается агент. Аргумент *job_password* имеет тип **sysname**и не имеет значения по умолчанию. Необходимо указывать этот аргумент при создании нового задания агента моментальных снимков.  
+`[ @job_password = ] 'job_password'` Пароль для учетной записи Windows, под которой запускается агент. Аргумент *job_password* имеет тип **sysname**и не имеет значения по умолчанию. Необходимо указывать этот аргумент при создании нового задания агента моментальных снимков.  
   
 > [!IMPORTANT]  
 >  Не храните данные проверки подлинности в файлах скриптов. В целях повышения безопасности рекомендуется вводить имена входа и пароли во время выполнения.  
   
-`[ @publisher = ] 'publisher'`Указывает издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'` Указывает издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  При создании агент моментальных снимков на издателе не следует использовать *Издатель* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

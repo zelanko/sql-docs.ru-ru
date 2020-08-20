@@ -1,4 +1,5 @@
 ---
+description: sp_markpendingschemachange (Transact-SQL)
 title: sp_markpendingschemachange (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 01100309-7bef-4154-85bf-f18489577e37
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cea2f7c8f9ce6040f4335428e2c5e97b52a3e591
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b9e62684057772d18a78694de67928073bc10c8a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899350"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489235"
 ---
 # <a name="sp_markpendingschemachange-transact-sql"></a>sp_markpendingschemachange (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,11 +41,11 @@ sp_markpendingschemachange [@publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @schemaversion = ] schemaversion`Определяет ожидающее изменение схемы. *schemaVersion* имеет **тип int**и значение по умолчанию **0**. Используйте [sp_enumeratependingschemachanges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md) , чтобы вывести список ожидающих изменений схемы для публикации.  
+`[ @schemaversion = ] schemaversion` Определяет ожидающее изменение схемы. *schemaVersion* имеет **тип int**и значение по умолчанию **0**. Используйте [sp_enumeratependingschemachanges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md) , чтобы вывести список ожидающих изменений схемы для публикации.  
   
-`[ @status = ] 'status'`Указывает, будет ли пропущено ожидающее изменение схемы. *состояние* — **nvarchar (10)** со значением по умолчанию **Active**. Если значение *Status* **пропущено**, то выбранное изменение схемы не будет реплицировано.  
+`[ @status = ] 'status'` Указывает, будет ли пропущено ожидающее изменение схемы. *состояние* — **nvarchar (10)** со значением по умолчанию **Active**. Если значение *Status* **пропущено**, то выбранное изменение схемы не будет реплицировано.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  

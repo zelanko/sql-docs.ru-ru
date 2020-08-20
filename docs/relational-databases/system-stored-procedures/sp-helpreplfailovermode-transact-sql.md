@@ -1,4 +1,5 @@
 ---
+description: Хранимая процедура sp_helpreplfailovermode (Transact-SQL)
 title: sp_helpreplfailovermode (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 846057680d9f97d5fc1e1bb2683a720a63f71585
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5503291dc5011366ab6fe3b4a2d60b0a1310ba79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899798"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489296"
 ---
 # <a name="sp_helpreplfailovermode-transact-sql"></a>Хранимая процедура sp_helpreplfailovermode (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,15 +42,15 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'`Имя издателя, участвующего в обновлении этого подписчика. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию. Издатель уже должен быть настроен для публикации.  
+`[ @publisher = ] 'publisher'` Имя издателя, участвующего в обновлении этого подписчика. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию. Издатель уже должен быть настроен для публикации.  
   
-`[ @publisher_db = ] 'publisher_db'`Имя базы данных публикации. Аргумент *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher_db = ] 'publisher_db'` Имя базы данных публикации. Аргумент *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @publication = ] 'publication'`Имя публикации, участвующей в обновлении этого подписчика. Аргумент *publication*имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации, участвующей в обновлении этого подписчика. Аргумент *publication*имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @failover_mode_id = ] 'failover_mode_id' OUTPUT`Возвращает целочисленное значение режима отработки отказа и является **выходным** параметром. *failover_mode_id* имеет тип **tinyint** и значение по умолчанию **0**. Он возвращает **0** для немедленного обновления и **1** для обновления посредством очередей.  
+`[ @failover_mode_id = ] 'failover_mode_id' OUTPUT` Возвращает целочисленное значение режима отработки отказа и является **выходным** параметром. *failover_mode_id* имеет тип **tinyint** и значение по умолчанию **0**. Он возвращает **0** для немедленного обновления и **1** для обновления посредством очередей.  
   
-`[ @failover_mode = ] 'failover_mode' OUTPUT`Возвращает режим, в котором изменения данных выполняются на подписчике. *FAILOVER_MODE* имеет тип **nvarchar (10)** и значение по умолчанию NULL. Параметр является **выходным** .  
+`[ @failover_mode = ] 'failover_mode' OUTPUT` Возвращает режим, в котором изменения данных выполняются на подписчике. *FAILOVER_MODE* имеет тип **nvarchar (10)** и значение по умолчанию NULL. Параметр является **выходным** .  
   
 |Значение|Описание|  
 |-----------|-----------------|  

@@ -1,4 +1,5 @@
 ---
+description: sp_server_info (Transact-SQL)
 title: sp_server_info (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a711624214b262560766f49e8294b36291ad9d91
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 09a7f0e7b0496d3f38ca31bc4a1df369133bb548
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783726"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489157"
 ---
 # <a name="sp_server_info-transact-sql"></a>sp_server_info (Transact-SQL)
 
@@ -40,10 +41,10 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @attribute_id = ] 'attribute_id'`Целочисленный идентификатор атрибута. *attribute_id* имеет **тип int**и значение по умолчанию NULL.  
+`[ @attribute_id = ] 'attribute_id'` Целочисленный идентификатор атрибута. *attribute_id* имеет **тип int**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- Отсутствуют  
+ Нет  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -53,7 +54,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**ATTRIBUTE_NAME**|**varchar (** 60 **)**|Имя атрибута.|  
 |**ATTRIBUTE_VALUE**|**varchar (** 255 **)**|Текущее значение атрибута.|  
   
- В следующей таблице перечислены атрибуты. [!INCLUDE[msCoName](../../includes/msconame-md.md)]Клиентские библиотеки ODBC в настоящий момент используют атрибуты **1**, **2**, **18**, **22**и **500** во время подключения.  
+ В следующей таблице перечислены атрибуты. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Клиентские библиотеки ODBC в настоящий момент используют атрибуты **1**, **2**, **18**, **22**и **500** во время подключения.  
   
 |ATTRIBUTE_ID|ATTRIBUTE_NAME, описание|ATTRIBUTE_VALUE|  
 |-------------------|---------------------------------|----------------------|  
@@ -87,7 +88,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**113**|REMOTE_SPROC<br /><br /> Определяет, возможно ли выполнение хранимых процедур через функции работы с удаленными хранимыми процедурами из DB-Library.|Да|  
 |**500**|SYS_SPROC_VERSION<br /><br /> Определяет версию хранимых процедур каталога, реализованных на данный момент.|Номер текущей версии|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_server_info** возвращает подмножество сведений, предоставляемых **SQLGetInfo** в ODBC.  
   
 ## <a name="permissions"></a>Разрешения  

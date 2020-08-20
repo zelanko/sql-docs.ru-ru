@@ -1,4 +1,5 @@
 ---
+description: sys. dm_os_host_info (Transact-SQL)
 title: sys. dm_os_host_info (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 02/10/2017
@@ -19,12 +20,12 @@ ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a504416014d9e3a0cb25972ab624fc720a26bef3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eb99e12c75a3f10ca88dc7668d194840f360be2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754162"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489827"
 ---
 # <a name="sysdm_os_host_info-transact-sql"></a>sys. dm_os_host_info (Transact-SQL)
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "85754162"
 |**host_sku**|**int**|Идентификатор Windows SKU. Список идентификаторов SKU и их описание см. в разделе [функция жетпродуктинфо](https://msdn.microsoft.com/library/ms724358.aspx). Допускает значение NULL. <br> Для Linux возвращает значение NULL. |  
 |**os_language_version**|**int**|Идентификатор локали (LCID) операционной системы Windows. Список значений и описаний LCID см. в разделе [идентификаторы языков, назначенные корпорацией Майкрософт](https://go.microsoft.com/fwlink/?LinkId=208080). Не может иметь значение null.|  
 
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
 Это представление похоже на [sys. dm_os_windows_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md), добавляя столбцы для различения Windows и Linux.
   
 ## <a name="security"></a>Безопасность  

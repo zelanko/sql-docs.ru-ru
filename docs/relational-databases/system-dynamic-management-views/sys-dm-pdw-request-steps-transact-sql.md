@@ -1,4 +1,5 @@
 ---
+description: sys. dm_pdw_request_steps (Transact-SQL)
 title: sys. dm_pdw_request_steps (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/19/2020
@@ -12,19 +13,19 @@ ms.assetid: cc563e88-0d34-436e-b914-b60d6ee0d50b
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d1e9dd970cebd1f25b953e7a5fe21c8ea8c60bde
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 4144e068354d43e2e8a5f9ea5bd6af7ad40a0e6d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196221"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489767"
 ---
 # <a name="sysdm_pdw_request_steps-transact-sql"></a>sys. dm_pdw_request_steps (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Содержит сведения обо всех шагах, составляющих данный запрос или запрос в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] . В нем отображается одна строка для каждого шага запроса.  
   
-|Имя столбца|Тип данных|Описание|Диапазон|  
+|Имя столбца|Тип данных|Description|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|request_id и step_index сделать ключ для этого представления.<br /><br /> Уникальный числовой идентификатор, связанный с запросом.|См. раздел request_id в [sys. dm_pdw_exec_requests &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |step_index|**int**|request_id и step_index сделать ключ для этого представления.<br /><br /> Расположение этого шага в последовательности шагов, составляющих запрос.|от 0 до (n – 1) для запроса с n шагами.|  

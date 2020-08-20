@@ -1,4 +1,5 @@
 ---
+description: sysmail_add_profileaccount_sp (Transact-SQL)
 title: sysmail_add_profileaccount_sp (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7cbf430f-1997-45ea-9707-0086184de744
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3de6a0b8ed5cbabd37cfa18f3b107c90121fe459
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a393c3902d8ee9c5af45a10358fbb9fa371af18e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891006"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489017"
 ---
 # <a name="sysmail_add_profileaccount_sp-transact-sql"></a>sysmail_add_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,15 +42,15 @@ sysmail_add_profileaccount_sp { [ @profile_id = ] profile_id | [ @profile_name =
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @profile_id = ] profile_id`Идентификатор профиля, в который добавляется учетная запись. *profile_id* имеет **тип int**и значение по умолчанию NULL. Необходимо указать либо *profile_id* , либо *profile_name* .  
+`[ @profile_id = ] profile_id` Идентификатор профиля, в который добавляется учетная запись. *profile_id* имеет **тип int**и значение по умолчанию NULL. Необходимо указать либо *profile_id* , либо *profile_name* .  
   
-`[ @profile_name = ] 'profile_name'`Имя профиля, в который добавляется учетная запись. Аргумент *profile_name* имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать либо *profile_id* , либо *profile_name* .  
+`[ @profile_name = ] 'profile_name'` Имя профиля, в который добавляется учетная запись. Аргумент *profile_name* имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать либо *profile_id* , либо *profile_name* .  
   
-`[ @account_id = ] account_id`Идентификатор учетной записи для добавления в профиль. *account_id* имеет **тип int**и значение по умолчанию NULL. Необходимо указать либо *account_id* , либо *account_name* .  
+`[ @account_id = ] account_id` Идентификатор учетной записи для добавления в профиль. *account_id* имеет **тип int**и значение по умолчанию NULL. Необходимо указать либо *account_id* , либо *account_name* .  
   
-`[ @account_name = ] 'account_name'`Имя учетной записи, добавляемой к профилю. Аргумент *account_name* имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать либо *account_id* , либо *account_name* .  
+`[ @account_name = ] 'account_name'` Имя учетной записи, добавляемой к профилю. Аргумент *account_name* имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать либо *account_id* , либо *account_name* .  
   
-`[ @sequence_number = ] sequence_number`Порядковый номер учетной записи в профиле. *sequence_number* имеет **тип int**и не имеет значения по умолчанию. Порядковый номер определяет порядок, в соответствии с которым учетные записи используются в профиле.  
+`[ @sequence_number = ] sequence_number` Порядковый номер учетной записи в профиле. *sequence_number* имеет **тип int**и не имеет значения по умолчанию. Порядковый номер определяет порядок, в соответствии с которым учетные записи используются в профиле.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  

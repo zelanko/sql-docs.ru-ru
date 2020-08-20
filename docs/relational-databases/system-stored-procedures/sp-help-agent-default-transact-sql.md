@@ -1,4 +1,5 @@
 ---
+description: sp_help_agent_default (Transact-SQL)
 title: sp_help_agent_default (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7ba55e39-05dd-43c7-b5da-b268ed8426dd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f92f64fe005bb49dd919f77e25931d5af025a8ea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ad0ae89b2cc2b09222fea863a008104e43ccfd15
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757870"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489485"
 ---
 # <a name="sp_help_agent_default-transact-sql"></a>sp_help_agent_default (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,11 +39,11 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @profile_id = ] _profile_idOUTPUT`Идентификатор конфигурации по умолчанию для типа агента. *profile_id* имеет **тип int**и не имеет значения по умолчанию. *profile_id* также является выходным параметром и возвращает идентификатор конфигурации по умолчанию для типа агента.  
+`[ @profile_id = ] _profile_idOUTPUT` Идентификатор конфигурации по умолчанию для типа агента. *profile_id* имеет **тип int**и не имеет значения по умолчанию. *profile_id* также является выходным параметром и возвращает идентификатор конфигурации по умолчанию для типа агента.  
   
-`[ @agent_type = ] 'agent_type'`Тип агента. *agent_type* имеет **тип int**, не имеет значения по умолчанию и может принимать одно из следующих значений.  
+`[ @agent_type = ] 'agent_type'` Тип агента. *agent_type* имеет **тип int**, не имеет значения по умолчанию и может принимать одно из следующих значений.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**1**|Агент моментальных снимков.|  
 |**2**|Агент чтения журнала.|  
@@ -53,7 +54,7 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_help_agent_default** используется во всех типах репликации.  
   
 ## <a name="permissions"></a>Разрешения  

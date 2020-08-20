@@ -1,4 +1,5 @@
 ---
+description: Replication Management Objects Concepts
 title: Основные понятия объектов RMO | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/08/2017
@@ -21,12 +22,12 @@ ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8a2e6f065c29956873d48ada5e7add52a0528784
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 95b4db25e874d4afe51ea47d5def4b316990c056
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915842"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490658"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "86915842"
  [Подписка на публикации](../../../relational-databases/replication/subscribe-to-publications.md)  
  В подразделах этого раздела показано, как использовать объекты RMO для создания, удаления и изменения подписок.  
   
- [Secure a Replication Topology](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md) (Защита топологии репликации)  
+ [Защита топологии репликации](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  
  В подразделах этого раздела показано, как использовать объекты RMO для просмотра и изменения параметров безопасности.  
   
  [Synchronize Subscriptions (Replication)](../../../relational-databases/replication/synchronize-data.md) (Синхронизация подписок (репликация))  
@@ -68,7 +69,7 @@ ms.locfileid: "86915842"
   
 2.  В меню **Файл** выберите пункт **Создать проект**. Откроется диалоговое окно **Создание проекта** .  
   
-3.  В диалоговом окне **Типы проектов** выберите **Проекты Visual C#** . На панели **Шаблоны** выберите пункт **Приложение Windows**.  
+3.  В диалоговом окне **Типы проектов** выберите **Проекты Visual C#**. На панели **Шаблоны** выберите пункт **Приложение Windows**.  
   
 4.  В поле **Имя** введите имя нового приложения (необязательно).  
   

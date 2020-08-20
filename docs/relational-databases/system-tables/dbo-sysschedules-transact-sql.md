@@ -1,4 +1,5 @@
 ---
+description: dbo.sysschedules (Transact-SQL)
 title: Расписания dbo.sys(Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 397fecaadad721529671a69daaf1c704e28268ea
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 16e51513c6d2b678798d0f4bde3b5a9cb1de69a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890390"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488897"
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "85890390"
 |**freq_interval**|**int**|Дни, в которые выполняется задание. Зависит от значения **freq_type**. Значение по умолчанию — **0**, что означает, что **freq_interval** не используется. Возможные значения и их последствия см. в таблице ниже.|  
 |**freq_subday_type**|**int**|Единицы для **freq_subday_interval**. Ниже приведены возможные значения и их описания.<br /><br /> <br /><br /> **1** : в указанное время<br /><br /> **2** : секунды<br /><br /> **4** : минуты<br /><br /> **8** : Часы|  
 |**freq_subday_interval**|**int**|Число периодов **freq_subday_type** , которые должны быть выполнены между выполнением задания.|  
-|**freq_relative_interval**|**int**|Когда **freq_interval** встречается в каждый месяц, если **freq_type** — **32** (ежемесячное относительное значение). Может использоваться одно из следующих значений:<br /><br /> значение **0**  =  **freq_relative_interval** не используется<br /><br /> **1** = сначала<br /><br /> **2** = секунда<br /><br /> **4** = третий<br /><br /> **8** = четвертый<br /><br /> **16** = Последняя|  
+|**freq_relative_interval**|**int**|Когда **freq_interval** встречается в каждый месяц, если **freq_type** — **32** (ежемесячное относительное значение). Может иметь одно из следующих значений:<br /><br /> значение **0**  =  **freq_relative_interval** не используется<br /><br /> **1** = сначала<br /><br /> **2** = секунда<br /><br /> **4** = третий<br /><br /> **8** = четвертый<br /><br /> **16** = Последняя|  
 |**freq_recurrence_**<br /><br /> **многофакторной**|**int**|Число недель или месяцев между запланированными выполнениями задания. **freq_recurrence_factor** используется только в том случае, если **freq_type** имеет значение **8**, **16**или **32**. Если этот столбец содержит значение **0**, **freq_recurrence_factor** не используется.|  
 |**active_start_date**|**int**|Дата, когда может начаться выполнение задания. Формат даты: ГГГГMMДД. Значение NULL указывает на сегодняшнюю дату.|  
 |**active_end_date**|**int**|Дата, когда может быть остановлено выполнение задания. Формат даты установлен как: ГГГГMMДД.|  
@@ -64,7 +65,7 @@ ms.locfileid: "85890390"
 |**64** (запускается при запуске службы агент SQL Server)|**freq_interval** не используется (**0**)|  
 |**128** (выполняется при простое компьютера)|**freq_interval** не используется (**0**)|  
   
-## <a name="see-also"></a>Дополнительно  
+## <a name="see-also"></a>См. также  
  [dbo.sysжобсчедулес &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
   
   

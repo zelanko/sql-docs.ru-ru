@@ -1,4 +1,5 @@
 ---
+description: SP:Recompile, класс событий
 title: Класс событий SP:Recompile | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 526c8eae-a07b-4d0e-b91e-8e537835d77d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d25f529ddc0bb4e7bc3add5189a5ee9aadccad2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6eb30e4ac6db44a2eb66fa24df09c7f65860fdbd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749565"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491049"
 ---
 # <a name="sprecompile-event-class"></a>SP:Recompile, класс событий
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -27,14 +28,14 @@ ms.locfileid: "85749565"
   
 ## <a name="sprecompile-event-class-data-columns"></a>Столбцы данных класса событий SP:Recompile  
   
-|Имя столбца данных|**Data type**|Description|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|**Data type**|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|-------------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |ClientProcessID|**int**|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Заполнение этого столбца данных производится в том случае, если клиент предоставляет идентификатор процесса.|9|Да|  
 |DatabaseID|**int**|Идентификатор базы данных, в которой выполняется хранимая процедура. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |имя_базы_данных|**nvarchar**|Имя базы данных, в которой выполняется хранимая процедура.|35|Да|  
-|EventClass|**int**|Тип события = 37.|27|нет|  
-|EventSequence|**int**|Порядковый номер данного события в запросе.|51|нет|  
+|EventClass|**int**|Тип события = 37.|27|Нет|  
+|EventSequence|**int**|Порядковый номер данного события в запросе.|51|Нет|  
 |EventSubClass|**int**|Тип подкласса события. Указывает причину перекомпиляции.<br /><br /> 1 = изменение схемы<br /><br /> 2 = изменение статистики<br /><br /> 3 = перекомпиляция с разрешением имен<br /><br /> 4 = изменение установленного параметра<br /><br /> 5 = изменение временной таблицы<br /><br /> 6 = изменение удаленного набора строк<br /><br /> 7 = изменение разрешений на обзор<br /><br /> 8 = изменение среды уведомлений о запросах<br /><br /> 9 = изменение представления MPI<br /><br /> 10 = изменение параметров курсора<br /><br /> 11 = по значению параметра перекомпиляции|21|Да|  
 |GroupID|**int**|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |HostName|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
@@ -50,7 +51,7 @@ ms.locfileid: "85749565"
 |ObjectType|**int**|Значение, представляющее тип объекта, связанного с событием. Дополнительные сведения см. в статье [ObjectType Trace Event Column](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Да|  
 |Offset|**int**|Начальное смещение инструкции внутри хранимой процедуры или пакета, вызвавшего повторную компиляцию.|61|Да|  
 |RequestID|**int**|Идентификатор запроса, содержащего инструкцию.|49|Да|  
-|ServerName|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|нет|  
+|ServerName|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|Нет|  
 |SessionLoginName|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Login1 и при выполнении инструкции под именем Login2 SessionLoginName будет содержать значение Login1, а LoginName — значение Login2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |SPID|**int**|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |SqlHandle|**varbinary**|64-разрядная версия хэша, основанная на тексте нерегламентированного запроса или базы данных и на идентификаторе объекта SQL. Это значение может быть передано в функцию sys.dm_exec_sql_text, чтобы получить связанный SQL-текст.|63|Да|  

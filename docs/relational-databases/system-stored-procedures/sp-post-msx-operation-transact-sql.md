@@ -1,4 +1,5 @@
 ---
+description: sp_post_msx_operation (Transact-SQL)
 title: sp_post_msx_operation (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 36759d2c90e29c0a019d8bd294a0c7e621c8d468
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: da3d1e8bd762f31a7592d90957c3a8680c29dbfb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891552"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489212"
 ---
 # <a name="sp_post_msx_operation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +46,7 @@ sp_post_msx_operation
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @operation = ] 'operation'`Тип операции для опубликованной операции. *Операция*имеет тип **varchar (64)** и не имеет значения по умолчанию. Допустимые операции зависят от *object_type*.  
+`[ @operation = ] 'operation'` Тип операции для опубликованной операции. *Операция*имеет тип **varchar (64)** и не имеет значения по умолчанию. Допустимые операции зависят от *object_type*.  
   
 |Тип объекта|Операция|  
 |-----------------|---------------|  
@@ -53,15 +54,15 @@ sp_post_msx_operation
 |**СЕРВЕРОМ**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
 |**Расписание**|INSERT<br /><br /> UPDATE<br /><br /> DELETE|  
   
-`[ @object_type = ] 'object'`Тип объекта, для которого необходимо опубликовать операцию. Допустимые типы: **Job**, **Server**и **Schedule**. *объект* имеет тип **varchar (64)** и значение по умолчанию **Job**.  
+`[ @object_type = ] 'object'` Тип объекта, для которого необходимо опубликовать операцию. Допустимые типы: **Job**, **Server**и **Schedule**. *объект* имеет тип **varchar (64)** и значение по умолчанию **Job**.  
   
-`[ @job_id = ] job_id`Идентификационный номер задания, к которому применяется операция. *job_id* имеет тип **uniqueidentifier**и не имеет значения по умолчанию. **0x00** означает все задания. Если *объект* является **сервером**, *job_id*не требуется.  
+`[ @job_id = ] job_id` Идентификационный номер задания, к которому применяется операция. *job_id* имеет тип **uniqueidentifier**и не имеет значения по умолчанию. **0x00** означает все задания. Если *объект* является **сервером**, *job_id*не требуется.  
   
-`[ @specific_target_server = ] 'target_server'`Имя целевого сервера, к которому применяется указанная операция. Если указан параметр *job_id* , но *target_server* не указаны, операции публикуются для всех серверов заданий задания. *target_server* имеет тип **nvarchar (30)** и значение по умолчанию NULL.  
+`[ @specific_target_server = ] 'target_server'` Имя целевого сервера, к которому применяется указанная операция. Если указан параметр *job_id* , но *target_server* не указаны, операции публикуются для всех серверов заданий задания. *target_server* имеет тип **nvarchar (30)** и значение по умолчанию NULL.  
   
-`[ @value = ] value`Интервал опроса в секундах. Аргумент*value* имеет тип **int**и значение по умолчанию NULL. Этот параметр следует указывать только в том случае, если для параметра *Operation* задано **значение poll**.  
+`[ @value = ] value` Интервал опроса в секундах. Аргумент*value* имеет тип **int**и значение по умолчанию NULL. Этот параметр следует указывать только в том случае, если для параметра *Operation* задано **значение poll**.  
   
-`[ @schedule_uid = ] schedule_uid`Уникальный идентификатор расписания, к которому применяется операция. *schedule_uid* имеет тип **uniqueidentifier**и не имеет значения по умолчанию.  
+`[ @schedule_uid = ] schedule_uid` Уникальный идентификатор расписания, к которому применяется операция. *schedule_uid* имеет тип **uniqueidentifier**и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  

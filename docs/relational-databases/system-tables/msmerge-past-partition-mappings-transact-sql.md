@@ -1,4 +1,5 @@
 ---
+description: MSmerge_past_partition_mappings (Transact-SQL)
 title: MSmerge_past_partition_mappings (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 06d54ff5-4d29-4eeb-b8be-64d032e53134
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2895684bc8769a16120d4831ccc9b0dc9a6f2391
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c61039aa752dc27bb493d27c7062ee80b7e26278
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889764"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488755"
 ---
 # <a name="msmerge_past_partition_mappings-transact-sql"></a>MSmerge_past_partition_mappings (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,13 +34,13 @@ ms.locfileid: "85889764"
 |-----------------|---------------|-----------------|  
 |**publication_number**|**smallint**|Номер публикации, который хранится в **sysmergepublications**.|  
 |**tablenick**|**int**|Псевдоним опубликованной таблицы.|  
-|**rowguid**|**uniqueidentifier**|Идентификатор данной строки.|  
+|**уникаль**|**uniqueidentifier**|Идентификатор данной строки.|  
 |**partition_id**|**int**|Идентификатор секции, к которой принадлежит строка. Значение равно-1, если изменение строки относится ко всем подписчикам.|  
 |**поколения**|**bigint**|Этап создания, на котором произошло изменение секции.|  
 |**reason**|**tinyint**|Только для внутреннего использования.|  
   
-## <a name="see-also"></a>См. также  
- [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

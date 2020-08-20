@@ -1,4 +1,5 @@
 ---
+description: sp_cursorprepexec (Transact-SQL)
 title: sp_cursorprepexec (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/20/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8094fa90-35b5-4cf4-8012-0570cb2ba1e6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e82a82df5f532df05ad0f04a14c95b24850484bd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d1a6cbd32485e006ead529f4d8b1afeca3e0e7af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831675"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489397"
 ---
 # <a name="sp_cursorprepexec-transact-sql"></a>sp_cursorprepexec (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +54,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 > [!NOTE]  
 >  Используйте строку **ntext** в качестве входного значения при параметризованной инструкции *stmt* и значения *scrollopt* PARAMETERIZED_STMT.  
   
- *statement*  
+ *инструкция*  
  Определяет результирующий набор курсора. Параметр *инструкции* является обязательным и вызывает для входного значения **ntext**, **nchar**или **nvarchar** .  
   
 > [!NOTE]  
@@ -86,7 +87,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 |0x80000|STATIC_ACCEPTABLE|  
 |0x100000|FAST_FORWARD_ACCEPTABLE|  
   
- Из-за вероятности того, что запрошенный параметр не подходит для курсора, определенного с помощью * \< stmt>*, этот параметр служит как входными, так и выходными. В таких случаях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] назначает соответствующий тип и изменяет это значение.  
+ Из-за вероятности того, что запрашиваемый параметр не подходит для курсора, определенного параметром *\<stmt>* , он служит как входным, так и выходным. В таких случаях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] назначает соответствующий тип и изменяет это значение.  
   
  *ccopt*  
  Параметр управления параллелизмом. *ccopt* — это необязательный параметр, для которого требуется одно из следующих входных значений **int** .  

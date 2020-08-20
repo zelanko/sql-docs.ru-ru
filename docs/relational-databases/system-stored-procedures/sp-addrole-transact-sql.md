@@ -1,4 +1,5 @@
 ---
+description: sp_addrole (Transact-SQL)
 title: sp_addrole (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e8a21642-8440-419a-8585-93d3d9d44f00
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f364de4eb2760c5beeae17360fb84ffd52fd7181
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 245e617a9756e276bc06907a6f1592ec5383e69e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85876737"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489580"
 ---
 # <a name="sp_addrole-transact-sql"></a>sp_addrole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +43,9 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @rolename = ] 'role'`Имя новой роли базы данных. *Role* имеет тип **sysname**и не имеет значения по умолчанию. *роль* должна быть допустимым идентификатором (ID) и не должна существовать в текущей базе данных.  
+`[ @rolename = ] 'role'` Имя новой роли базы данных. *Role* имеет тип **sysname**и не имеет значения по умолчанию. *роль* должна быть допустимым идентификатором (ID) и не должна существовать в текущей базе данных.  
   
-`[ @ownername = ] 'owner'`Владелец новой роли базы данных. *owner* имеет тип **sysname**и значение по умолчанию текущего выполняемого пользователя. *владелец* должен быть пользователем базы данных или ролью базы данных в текущей базе данных.  
+`[ @ownername = ] 'owner'` Владелец новой роли базы данных. *owner* имеет тип **sysname**и значение по умолчанию текущего выполняемого пользователя. *владелец* должен быть пользователем базы данных или ролью базы данных в текущей базе данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -70,7 +71,7 @@ EXEC sp_addrole 'Managers';
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)  
   

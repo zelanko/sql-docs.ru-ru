@@ -1,4 +1,5 @@
 ---
+description: Диалоговое окно «Экспортировать как политику»
 title: Диалоговое окно "Экспорт в виде политики" | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: f19a8450-2a28-40a6-8a7d-9f4eaea0447d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 40fe56e0cd726ca9dd3c129bd46dabd38c4aecfa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a866e30681ec9d224af77e19cbf74909c6b8f104
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749409"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490660"
 ---
 # <a name="export-as-policy-dialog-box"></a>Диалоговое окно «Экспортировать как политику»
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,9 +35,9 @@ ms.locfileid: "85749409"
  Выберите, чтобы сохранить политику на экземпляре локального сервера.  
   
  **В файл**  
- Чтобы сохранить политику в XML-файл, следует ввести путь и имя файла либо нажать кнопку обзора ( **...** ).  
+ Чтобы сохранить политику в XML-файл, следует ввести путь и имя файла либо нажать кнопку обзора (**...**).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Администрирование серверов с помощью управления на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

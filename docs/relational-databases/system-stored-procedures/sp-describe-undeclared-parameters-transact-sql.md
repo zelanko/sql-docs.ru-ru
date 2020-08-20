@@ -1,4 +1,5 @@
 ---
+description: sp_describe_undeclared_parameters (Transact-SQL)
 title: sp_describe_undeclared_parameters (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/24/2018
@@ -18,12 +19,12 @@ ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 2c40ef34ffcde3f7a1d02f6ba45963bd83df841a
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: b93ecf05c0a4b48417240db1b9bf22e1104149a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522548"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489457"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)] 
@@ -45,7 +46,7 @@ sp_describe_undeclared_parameters
 > Чтобы использовать эту хранимую процедуру в Azure синапсе Analytics (прежнее название — SQL DW), уровень совместимости базы данных должен быть больше 10. 
 
 ## <a name="arguments"></a>Аргументы  
-`[ \@tsql = ] 'Transact-SQL\_batch'`Одна или несколько [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций. *Transact-SQL_batch* может иметь тип **nvarchar (**_n_**)** или **nvarchar (max)**.  
+`[ \@tsql = ] 'Transact-SQL\_batch'` Одна или несколько [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций. *Transact-SQL_batch* может иметь тип **nvarchar (**_n_**)** или **nvarchar (max)**.  
   
 `[ \@params = ] N'parameters'`\@params предоставляет строку объявления для параметров [!INCLUDE[tsql](../../includes/tsql-md.md)] пакета, аналогично тому, как sp_executesql работает. *Параметры* могут быть **nvarchar (**_n_**)** или **nvarchar (max)**.  
   
@@ -87,7 +88,7 @@ sp_describe_undeclared_parameters
 |**suggested_tds_type_id**|**int NOT NULL**|Для внутреннего использования.|  
 |**suggested_tds_length**|**int NOT NULL**|Для внутреннего использования.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_describe_undeclared_parameters** всегда возвращает состояние возврата, равное нулю.  
   
  Чаще всего она применяется, когда приложению передается инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)], которая может содержать параметры и должна некоторым образом их обрабатывать. Примером является пользовательский интерфейс (такой как ODBCTest или RowsetViewer), где пользователь передает запрос с синтаксисом параметров ODBC. Приложение должно динамически обнаруживать число параметров и запрашивать каждый параметр у пользователя.  
@@ -169,7 +170,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 -   Простое определение  
   
-     Если параметр E ( \@ p) = \@ p и TT ( \@ p) существует, т. е. Если \@ p является прямым аргументом для одного из выражений, перечисленных в начале шага 2, алгоритм выведения типа выводит тип данных \@ p в значение TT ( \@ p). Пример:  
+     Если параметр E ( \@ p) = \@ p и TT ( \@ p) существует, т. е. Если \@ p является прямым аргументом для одного из выражений, перечисленных в начале шага 2, алгоритм выведения типа выводит тип данных \@ p в значение TT ( \@ p). Например:  
   
     ```sql
     SELECT * FROM t WHERE c1 = @p1 AND @p2 = dbo.tbl(@p3)  
@@ -217,7 +218,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 1.  Выбран тип данных, который создает наименьшее число неявных преобразований в E ( \@ p). Если определенный тип данных создает тип данных для E ( \@ p), отличный от TT ( \@ p), алгоритм выведения типа считает это дополнительным неявным преобразованием из типа данных E ( \@ p) в TT ( \@ p).  
   
-     Пример:  
+     Например:  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_Int + @p  
@@ -225,7 +226,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      В этом случае E ( \@ p) имеет Col_Int + \@ p, а TT ( \@ p) — **int**. **int** выбирается для \@ p, так как не создает неявных преобразований. Любой другой выбор типа данных требует не меньше одного неявного преобразования.  
   
-2.  Если несколько типов данных имеют минимальное число преобразований, то используется тип данных с максимальным приоритетом. Пример  
+2.  Если несколько типов данных имеют минимальное число преобразований, то используется тип данных с максимальным приоритетом. Например.  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  
@@ -276,7 +277,7 @@ WHERE object_id = @id OR NAME = @name',
   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
  [sys. dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
  [sys. dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)

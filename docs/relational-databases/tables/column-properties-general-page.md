@@ -1,4 +1,5 @@
 ---
+description: Свойства столбцов (страница «Общие»)
 title: Свойства столбца (страница "Общие") | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ ms.assetid: a745890b-994e-4c23-8028-5c83751e60c4
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48c1c009106bb4beb956b049e7acab43b187d082
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 5f70e0d563760cf0e511b673ea7f838f6aabdde4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395126"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488686"
 ---
 # <a name="column-properties-general-page"></a>Свойства столбцов (страница «Общие»)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "87395126"
  Сведения на этой странице предназначены только для чтения. Для изменения этого столбца закройте диалоговое окно **Свойства столбца** , разверните в обозревателе объектов таблицу и столбцы, щелкните правой кнопкой мыши столбец и выберите пункт **Создать**.  
   
 ## <a name="options"></a>Параметры  
- **Название**  
+ **имя**;  
  Имя столбца.  
   
  **Тип данных**  
@@ -52,7 +53,7 @@ ms.locfileid: "87395126"
  **Удостоверение**  
  Указывает, является ли данный столбец столбцом идентификаторов для таблицы. Допустимые значения — **True** и **False**.  
   
- **начальному значению идентификатора**  
+ **Начальное значение идентификатора**  
  Указывает начальное значение строки для столбца идентификаторов.  
   
  **Шаг приращения идентификатора**  

@@ -1,4 +1,5 @@
 ---
+description: Переименование определяемых пользователем функций
 title: Переименование определяемых пользователем функций | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
@@ -11,12 +12,12 @@ ms.assetid: c2695a5c-9cc5-4b18-8771-53027ca9a9af
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c80d1d948f24c212c547c9367f05802c8570fe01
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3af6036a3bc6cf2b751eed6a1df173fca2c9a117
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85768310"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488599"
 ---
 # <a name="rename-user-defined-functions"></a>Переименование определяемых пользователем функций
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -78,7 +79,7 @@ ms.locfileid: "85768310"
   
  Дополнительные сведения см. в разделах [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md) и [DROP FUNCTION (Transact-SQL)](../../t-sql/statements/drop-function-transact-sql.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sys.sql_expression_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
  [Просмотр пользовательских функций](../../relational-databases/user-defined-functions/view-user-defined-functions.md)  
   

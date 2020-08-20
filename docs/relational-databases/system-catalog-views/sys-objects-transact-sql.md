@@ -1,4 +1,5 @@
 ---
+description: sys.objects (Transact-SQL)
 title: sys. Objects (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/20/2020
@@ -23,11 +24,12 @@ ms.assetid: f8d6163a-2474-410c-a794-997639f31b3b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c1f639331b352b6781d90cb0c87833684e3f636
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 547063527803280d8cbb2ed17a771eb5b05afe33
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004826"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490338"
 ---
 # <a name="sysobjects-transact-sql"></a>sys.objects (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +56,7 @@ ms.locfileid: "86004826"
 |is_published|**bit**|Объект опубликован.|  
 |is_schema_published|**bit**|Опубликована только схема объекта.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Комментарии  
  К объектам, отображаемым в представлении sys. Objects, можно применить встроенные функции [object_id](../../t-sql/functions/object-id-transact-sql.md), [object_name](../../t-sql/functions/object-name-transact-sql.md)и [OBJECTPROPERTY](../../t-sql/functions/objectproperty-transact-sql.md)().  
   
  Существует версия этого представления с той же схемой, которая называется [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md), которая показывает системные объекты. Существует другое представление [sys. all_objects](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md) , которое показывает как системные, так и пользовательские объекты. Все три представления каталогов имеют одну и ту же структуру.  
@@ -160,11 +162,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys. all_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md)   
  [sys.system_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)   
  [sys.triggers (Transact-SQL)](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)   
- [Представления каталога объектов &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Представления каталога объектов (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Запросы к системному каталогу SQL Server вопросы и ответы](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys. internal_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: Хранимые процедуры распределенных запросов (Transact-SQL)
 title: Хранимые процедуры распределенных запросов (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0fbf2846-885e-4de2-b552-f6453c3ca136
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 788140d9936b0e90f7f6e0ad5ea2f5aa6f04e239
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 7766180a9b93a8e6fd4af5eaf0855a8de182a063
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977577"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489790"
 ---
 # <a name="distributed-queries-stored-procedures-transact-sql"></a>Хранимые процедуры распределенных запросов (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +63,7 @@ ms.locfileid: "86977577"
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

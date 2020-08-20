@@ -1,4 +1,5 @@
 ---
+description: sp_helpqreader_agent (Transact-SQL)
 title: sp_helpqreader_agent (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2e969e33c42348aabcd46f1c51d56c1329669820
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c638e7895d95518f59627643deb0b0070a19fa70
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729205"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489298"
 ---
 # <a name="sp_helpqreader_agent-transact-sql"></a>sp_helpqreader_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,7 +38,7 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @frompublisher = ] frompublisher`Указывает, вызывается ли хранимая процедура на издателе или на распространителе. *фромпублишер* имеет бит и значение по умолчанию 0. **1** означает, что хранимая процедура вызывается из издателя, а значение **0** означает, что хранимая процедура вызывается из распространителя.  
+`[ @frompublisher = ] frompublisher` Указывает, вызывается ли хранимая процедура на издателе или на распространителе. *фромпублишер* имеет бит и значение по умолчанию 0. **1** означает, что хранимая процедура вызывается из издателя, а значение **0** означает, что хранимая процедура вызывается из распространителя.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -52,13 +53,13 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_helpqreader_agent** используется в репликации транзакций.  
   
 ## <a name="permissions"></a>Разрешения  
  Если значение *фромпублишер* равно **1**, только члены предопределенной роли сервера **sysadmin** на издателе или члены предопределенной роли базы данных **db_owner** в базе данных публикации могут выполнять **sp_helpqreader_agent**. В противном случае только члены предопределенной роли сервера **sysadmin** на распространителе или члены предопределенной роли базы данных **db_owner** в базе данных распространителя могут выполнять **sp_helpqreader_agent**.  
   
-## <a name="see-also"></a>См. также  
- [Включение обновляемых подписок для публикаций транзакций](../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
+## <a name="see-also"></a>См. также:  
+ [Включение обновляемых подписок для публикации транзакций](../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
   

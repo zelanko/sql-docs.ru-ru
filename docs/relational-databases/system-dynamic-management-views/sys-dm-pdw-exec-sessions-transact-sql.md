@@ -1,4 +1,5 @@
 ---
+description: sys. dm_pdw_exec_sessions (Transact-SQL)
 title: sys. dm_pdw_exec_sessions (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/22/2019
@@ -12,19 +13,19 @@ ms.assetid: 31c262b3-7e4d-44c4-af71-aaef0fd1a980
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 3e5e3982f0e8a2470878e06cded3f814871cc0aa
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 5801b3e1b4cf57aef3b465a6190b3093480e6ca0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197090"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489804"
 ---
 # <a name="sysdm_pdw_exec_sessions-transact-sql"></a>sys. dm_pdw_exec_sessions (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Содержит сведения обо всех сеансах, которые в настоящее время или недавно открыты на устройстве. В нем отображается по одной строке за сеанс.  
   
-|Имя столбца|Тип данных|Описание|Диапазон|  
+|Имя столбца|Тип данных|Description|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
 |session_id|**nvarchar(32)**|Идентификатор текущего запроса или последнего выполнения запроса (если сеанс завершен, а запрос выполнялся во время завершения). Ключ для этого представления.|Уникальный для всех сеансов в системе.|  
 |status|**nvarchar (10)**|Для текущих сеансов определяет, активен ли сеанс в данный момент. Для прошлых сеансов состояние сеанса может отображаться как закрытое или уничтоженное (если сеанс был принудительно закрыт).|"ACTIVE", "CLOSED", "IDLE", "TERMINATE"|  

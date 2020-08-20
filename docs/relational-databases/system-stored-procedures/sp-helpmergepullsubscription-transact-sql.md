@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergepullsubscription (Transact-SQL)
 title: sp_helpmergepullsubscription (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: db4ae46a9436ceb960a32764a95467116ce537e0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fde1ffb997d476cc114b7bac3f3a6d32ad208dd2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899527"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489338"
 ---
 # <a name="sp_helpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +41,13 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="argument"></a>Аргумент  
-`[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию **%** . Если параметр *publication* имеет значение **%** , то возвращаются сведения обо всех публикациях слиянием и подписках в текущей базе данных.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию **%** . Если параметр *publication* имеет значение **%** , то возвращаются сведения обо всех публикациях слиянием и подписках в текущей базе данных.  
   
-`[ @publisher = ] 'publisher'`Имя издателя. Аргумент *Publisher*имеет тип **sysname**и значение по умолчанию **%** .  
+`[ @publisher = ] 'publisher'` Имя издателя. Аргумент *Publisher*имеет тип **sysname**и значение по умолчанию **%** .  
   
-`[ @publisher_db = ] 'publisher_db'`Имя базы данных издателя. Аргумент *publisher_db*имеет тип **sysname**и значение по умолчанию **%** .  
+`[ @publisher_db = ] 'publisher_db'` Имя базы данных издателя. Аргумент *publisher_db*имеет тип **sysname**и значение по умолчанию **%** .  
   
-`[ @subscription_type = ] 'subscription_type'`Указывает, следует ли отображать подписки по запросу. *subscription_type*имеет тип **nvarchar (10)** и значение по умолчанию **"Pull"**. Допустимые значения: **"Push"**, **"Pull**" или **"both"**.  
+`[ @subscription_type = ] 'subscription_type'` Указывает, следует ли отображать подписки по запросу. *subscription_type*имеет тип **nvarchar (10)** и значение по умолчанию **"Pull"**. Допустимые значения: **"Push"**, **"Pull**" или **"both"**.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -61,9 +62,9 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**status**|**int**|Состояние подписки:<br /><br /> **0** = неактивная подписка<br /><br /> **1** = активная подписка<br /><br /> **2** = удаленная подписка<br /><br /> **3** = отсоединенная подписка<br /><br /> **4** = подключенная подписка<br /><br /> **5** = подписка помечена для повторной инициализации с передачей<br /><br /> **6** = не удалось присоединить подписку.<br /><br /> **7** = подписка восстановлена из резервной копии|  
 |**subscriber_type**|**int**|Тип подписчика:<br /><br /> **1** = глобальный<br /><br /> **2** = локальный<br /><br /> **3** = анонимный|  
 |**subscription_type**|**int**|Тип подписки:<br /><br /> **0** = принудительная отправка<br /><br /> **1** = по запросу<br /><br /> **2** = анонимный|  
-|**priority**|**float (8)**|Приоритет подписки. Значение должно быть меньше **100,00**.|  
+|**приоритеты**|**float (8)**|Приоритет подписки. Значение должно быть меньше **100,00**.|  
 |**sync_type**|**tinyint**|Тип синхронизации подписки:<br /><br /> **1** = автоматический<br /><br /> **2** = моментальный снимок не используется.|  
-|**nописание**|**nvarchar(255)**|Краткое описание подписки по запросу.|  
+|**description**|**nvarchar(255)**|Краткое описание подписки по запросу.|  
 |**merge_jobid**|**двоичный (16)**|Идентификатор задания агента слияния.|  
 |**enabled_for_syncmgr**|**int**|Можно ли синхронизировать подписку с помощью [!INCLUDE[msCoName](../../includes/msconame-md.md)] диспетчера синхронизации.|  
 |**last_updated**|**nvarchar (26)**|Время последней успешной синхронизации подписки агентом слияния.|  

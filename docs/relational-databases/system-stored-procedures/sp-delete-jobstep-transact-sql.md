@@ -1,4 +1,5 @@
 ---
+description: sp_delete_jobstep (Transact-SQL)
 title: sp_delete_jobstep (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 421ede8e-ad57-474a-9fb9-92f70a3e77e3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 77557dee97475ef713c88c969de98a241d955eea
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7fc21ae11a1ade4780b99a86d03b7c9948c05663
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85863912"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489433"
 ---
 # <a name="sp_delete_jobstep-transact-sql"></a>sp_delete_jobstep (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,13 +42,13 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_id = ] job_id`Идентификационный номер задания, из которого будет удален шаг. *job_id*имеет тип **uniqueidentifier**и значение по умолчанию NULL.  
+`[ @job_id = ] job_id` Идентификационный номер задания, из которого будет удален шаг. *job_id*имеет тип **uniqueidentifier**и значение по умолчанию NULL.  
   
-`[ @job_name = ] 'job_name'`Имя задания, из которого будет удален шаг. Аргумент *job_name*имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'` Имя задания, из которого будет удален шаг. Аргумент *job_name*имеет тип **sysname**и значение по умолчанию NULL.  
   
 > **Примечание.** Необходимо указать либо *job_id* , либо *job_name* . нельзя указывать оба значения.  
   
-`[ @step_id = ] step_id`Идентификационный номер удаляемого шага. *step_id*имеет **тип int**и не имеет значения по умолчанию.  
+`[ @step_id = ] step_id` Идентификационный номер удаляемого шага. *step_id*имеет **тип int**и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  

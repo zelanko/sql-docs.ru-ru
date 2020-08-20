@@ -1,4 +1,5 @@
 ---
+description: sp_create_plan_guide (Transact-SQL)
 title: sp_create_plan_guide (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bc0818b0406aaa322a9fc28563f54c06b88c732c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0595885b12cc70d5634058eeb9650ee323921ba5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771162"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489543"
 ---
 # <a name="sp_create_plan_guide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,7 +57,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  [ \@ stmt =] N '*statement_text*'  
  Инструкция языка [!INCLUDE[tsql](../../includes/tsql-md.md)], для которой создается структура плана. Когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оптимизатор запросов распознает запрос, соответствующий *statement_text*, *plan_guide_name* вступает в силу. Для успешности создания структуры плана *statement_text* должны присутствовать в контексте, заданном \@ параметрами Type, \@ module_or_batch и \@ params.  
   
- *statement_text* должны быть предоставлены способом, который позволяет оптимизатору запросов сопоставлять его с соответствующей инструкцией, указанной в пакете или модуле, идентифицируемом \@ module_or_batch и \@ params. Дополнительные сведения см. в разделе «Примечания». Размер *statement_text* ограничивается только объемом доступной памяти сервера.  
+ *statement_text* должны быть предоставлены способом, который позволяет оптимизатору запросов сопоставлять его с соответствующей инструкцией, указанной в пакете или модуле, идентифицируемом \@ module_or_batch и \@ params. Дополнительные сведения см. в разделе "Замечания". Размер *statement_text* ограничивается только объемом доступной памяти сервера.  
   
  [ \@ Type =] N ' {Object | SQL | ШАБЛОН} "  
  Тип сущности, в которой отображается *statement_text* . Указывает контекст для сопоставления *statement_text* *plan_guide_name*.  
@@ -65,7 +66,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  Указывает, *statement_text* отображается в контексте [!INCLUDE[tsql](../../includes/tsql-md.md)] хранимой процедуры, скалярной функции, функции с табличным значением из множественных инструкций или [!INCLUDE[tsql](../../includes/tsql-md.md)] триггера DML в текущей базе данных.  
   
  SQL  
- Указывает, *statement_text* появляется в контексте изолированной инструкции или пакета, который может быть передан [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] любым механизмом. [!INCLUDE[tsql](../../includes/tsql-md.md)]инструкции, отправленные объектами среды CLR или расширенными хранимыми процедурами или с помощью EXEC N '*sql_string*', обрабатываются на сервере как пакеты и, следовательно, должны быть идентифицированы как \@ тип **=** "SQL". Если задано значение SQL, то указание запроса с ПАРАМЕТРом {FORCED | SIMPLE} нельзя указывать в \@ параметре указания.  
+ Указывает, *statement_text* появляется в контексте изолированной инструкции или пакета, который может быть передан [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] любым механизмом. [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции, отправленные объектами среды CLR или расширенными хранимыми процедурами или с помощью EXEC N '*sql_string*', обрабатываются на сервере как пакеты и, следовательно, должны быть идентифицированы как \@ тип **=** "SQL". Если задано значение SQL, то указание запроса с ПАРАМЕТРом {FORCED | SIMPLE} нельзя указывать в \@ параметре указания.  
   
  TEMPLATE  
  Указывает, что структура плана применяется к любому запросу, который параметризуются в форму, указанную в *statement_text*. Если указан шаблон, только параметризация {FORCED | В параметре hints можно указать указание запроса SIMPLE} \@ . Дополнительные сведения о структурах планов шаблонов см. в разделе [Определение поведения параметризации запросов с помощью структур планов](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).  
@@ -98,7 +99,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  NULL  
  Указывает, что любое существующее указание, заданное в предложении OPTION запроса, не применяется к запросу. Дополнительные сведения см. в разделе [предложение OPTION &#40;&#41;Transact-SQL ](../../t-sql/queries/option-clause-transact-sql.md).  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Аргументы процедуры sp_create_plan_guide должны задаваться в указанном порядке. При задании значений параметрам процедуры **sp_create_plan_guide**все имена параметров необходимо указывать явно или вообще не указывать. Например, если указано ** \@ Name =** , то необходимо также указать ** \@ stmt =** , ** \@ Type =** и т. д. Аналогично, если ** \@ имя =** опущено и указано только значение параметра, остальные имена параметров также необходимо опустить и указать только их значения. Имена аргументов приводятся исключительно в целях описания, чтобы помочь разобраться с синтаксисом. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не проверяет соответствие указанных имен параметров их позициям.  
   
  Можно создать несколько структур планов OBJECT или SQL для одного и того же запроса и пакета либо модуля. Однако только одна структура плана может быть включена в данный момент времени.  
@@ -326,14 +327,14 @@ GO
   
 ## <a name="see-also"></a>См. также  
  [Структуры планов](../../relational-databases/performance/plan-guides.md)   
- [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)   
- [sys. plan_guides &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
+ [sp_control_plan_guide (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)   
+ [sys.plan_guides (Transact-SQL)](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Системные хранимые процедуры &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys. dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
- [sys. dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [sys.dm_exec_cached_plans (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys. dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
- [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)   
+ [sp_create_plan_guide_from_handle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)   
  [sys. fn_validate_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql.md)   
  [sp_get_query_template &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-query-template-transact-sql.md)  
   

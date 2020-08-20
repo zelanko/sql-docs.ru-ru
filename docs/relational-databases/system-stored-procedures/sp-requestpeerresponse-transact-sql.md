@@ -1,4 +1,5 @@
 ---
+description: sp_requestpeerresponse (Transact-SQL)
 title: sp_requestpeerresponse (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: adcf5709bc3bf086123324095a796e024a08911e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b2114460ca878b45bb0b850c066e1fd9356504a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899285"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489210"
 ---
 # <a name="sp_requestpeerresponse-transact-sql"></a>sp_requestpeerresponse (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,11 +40,11 @@ sp_requestpeerresponse [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'`Имя публикации в одноранговой топологии, для которой проверяется состояние. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации в одноранговой топологии, для которой проверяется состояние. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @description = ] 'description'`Определяемые пользователем данные, которые можно использовать для определения отдельных запросов состояния. *Description* имеет тип **nvarchar (4000)** и значение по умолчанию NULL.  
+`[ @description = ] 'description'` Определяемые пользователем данные, которые можно использовать для определения отдельных запросов состояния. *Description* имеет тип **nvarchar (4000)** и значение по умолчанию NULL.  
   
-`[ @request_id = ] request_id`Возвращает идентификатор нового запроса. *request_id* имеет **тип int** и является выходным параметром. Это значение можно использовать при выполнении [sp_helppeerresponses &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) для просмотра всех ответов на запрос состояния.  
+`[ @request_id = ] request_id` Возвращает идентификатор нового запроса. *request_id* имеет **тип int** и является выходным параметром. Это значение можно использовать при выполнении [sp_helppeerresponses &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) для просмотра всех ответов на запрос состояния.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
