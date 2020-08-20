@@ -1,4 +1,5 @@
 ---
+description: STMPointFromWKB (географический тип данных)
 title: STMPointFromWKB (тип данных geography) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: eeb7d806-3cbb-405d-8199-8b82282c53df
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 8056e60488ee156e86ca0462dfb436ad6d22bd7a
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: d8580b97571feb2b93c88d5e229a86490a08cd02
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555791"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467424"
 ---
 # <a name="stmpointfromwkb-geography-data-type"></a>STMPointFromWKB (географический тип данных)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STMPointFromWKB ( 'WKB_multipoint' , SRID )
 
 ## <a name="arguments"></a>Аргументы
  *WKB_multipoint*  
- WKB-представление возвращаемого экземпляра **geographyMultiPoint**. *WKB_multipoint* — это выражение типа **varbinary(max)** .  
+ WKB-представление возвращаемого экземпляра **geographyMultiPoint**. *WKB_multipoint* — это выражение типа **varbinary(max)**.  
   
  *SRID*  
  Выражение типа **int**, представляющее идентификатор пространственной ссылки (SRID) возвращаемого экземпляра **geographyMultiPoint**.  
@@ -52,7 +53,7 @@ STMPointFromWKB ( 'WKB_multipoint' , SRID )
   
  Тип OGC: **MultiPoint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Если входные данные имеют неверный формат, метод вызовет исключение **FormatException**.  
   
 ## <a name="examples"></a>Примеры  

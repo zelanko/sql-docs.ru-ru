@@ -1,4 +1,5 @@
 ---
+description: Методы OGC в экземплярах Geometry
 title: Методы OGC в экземплярах Geometry | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ ms.assetid: c0c0f441-bf33-410c-9df0-544e3d05b944
 author: MladjoA
 ms.author: mlandzic
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc00359c93dbe7430b95126c15bb5fb8e77e603a
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 8b15d1a9dc75f62ab7b1f5a5bb0239af47830774
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394838"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467448"
 ---
 # <a name="ogc-methods-on-geometry-instances"></a>Методы OGC в экземплярах Geometry
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -127,7 +128,7 @@ ms.locfileid: "87394838"
   
 -   [STY](../../t-sql/spatial-geometry/sty-geometry-data-type.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширенные методы экземпляров Geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
  [Статические геометрические методы OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)   
  [Расширенные статические геометрические методы](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  

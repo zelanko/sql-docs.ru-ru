@@ -1,4 +1,5 @@
 ---
+description: EnvelopeAggregate (тип данных geography)
 title: EnvelopeAggregate (тип данных geography) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4947797f-edb8-490f-beca-37df9ec06954
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5e90ae8b7716c3ede90a2a80f5c904f0d02216a5
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 9b14db5a616f41049b5cabc845cd822356e34522
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555469"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467539"
 ---
 # <a name="envelopeaggregate-geography-data-type"></a>EnvelopeAggregate (тип данных geography)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ EnvelopeAggregate ( geography_operand )
 ## <a name="return-types"></a>Типы возвращаемых данных  
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Если итоговый ограничивающий объект больше полушария, то возвращается объект **FullGlobe**. Этот метод не является точным.  
   
  Метод возвращает значение **NULL**, если во входных данных содержатся различные идентификаторы пространственных ссылок. См. раздел [Идентификаторы пространственных ссылок (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  

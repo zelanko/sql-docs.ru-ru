@@ -1,4 +1,5 @@
 ---
+description: STDisjoint (тип данных geography)
 title: STDisjoint (тип данных geography) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 98328a02-e018-47d6-aa93-de162b8aef62
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: fb82d9ff68f8de003d08c8d88caf8e0d06d42b52
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 14dcdd0581f88897f10160d2be70eb01bbd2b018
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555180"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467476"
 ---
 # <a name="stdisjoint-geography-data-type"></a>STDisjoint (тип данных geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "86555180"
   
  Тип возвращаемых данных CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Два экземпляра **geography** не имеют перекрывающегося пространственного перекрытия, если пересечение их наборов точек является пустым.  
   
  Этот метод всегда возвращает значение NULL, если у экземпляров **geography** не совпадают идентификаторы пространственных ссылок (SRID).  

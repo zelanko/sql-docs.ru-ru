@@ -1,4 +1,5 @@
 ---
+description: Статические географические методы OGC
 title: Статические географические методы OGC | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ dev_langs:
 ms.assetid: f5c79546-7f99-46a2-bf92-bd4ac8a50bf8
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 6f06565e0c49d9ae677dc9a063efa4ef746c0ecc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b51ee7e3c8f8d81186ce2b78253cea35bb44a2ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85705857"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467516"
 ---
 # <a name="ogc-static-geography-methods"></a>Статические географические методы OGC
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -64,7 +65,7 @@ ms.locfileid: "85705857"
   
 -   [STMPolyFromWKB](../../t-sql/spatial-geography/stmpolyfromwkb-geography-data-type.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Методы OGC в экземплярах Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
  [Расширенные методы в экземплярах Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [Расширенные статические географические методы](../../t-sql/spatial-geography/extended-static-geography-methods.md)  

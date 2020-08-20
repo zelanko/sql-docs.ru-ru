@@ -1,4 +1,5 @@
 ---
+description: Уровни изоляции транзакций
 title: Уровни изоляции транзакций | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 02bb71fa-1e92-4782-a9cf-6e256cc1f3ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f1532197e46e0ad6ea314ec83acb46b841ed7b72
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f9c3d400f67f42f206c9b6924f3d2ea90445d023
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731379"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467566"
 ---
 # <a name="transaction-isolation-levels"></a>Уровни изоляции транзакций
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,10 +51,10 @@ ms.locfileid: "85731379"
   
 |Уровень изоляции|Поддерживается|Соблюдается|  
 |---------------------|---------------|-------------|  
-|READ UNCOMMITTED|нет|Не гарантируется|  
+|READ UNCOMMITTED|Нет|Не гарантируется|  
 |READ COMMITTED|Да|Да|  
-|REPEATABLE READ|нет|нет|  
-|SNAPSHOT ISOLATION|нет|нет|  
-|SERIALIZABLE|нет|нет|  
+|REPEATABLE READ|нет|Нет|  
+|SNAPSHOT ISOLATION|нет|Нет|  
+|SERIALIZABLE|нет|Нет|  
   
   
