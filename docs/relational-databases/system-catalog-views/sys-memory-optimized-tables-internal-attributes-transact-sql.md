@@ -21,15 +21,16 @@ ms.assetid: 78ef5807-0504-4de8-9a01-ede6c03c7ff1
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc11ec8d075d52643f06eb91f0a55a1b6948c88c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 23a58092954d1026071a469676e3fbfcc6628158
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455255"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646358"
 ---
 # <a name="sysmemory_optimized_tables_internal_attributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 Содержит строку для каждой внутренней оптимизированной для памяти таблицы, которая используются для хранения пользовательских таблиц, оптимизированных для памяти. Каждая пользовательская таблица соответствует одной или нескольким внутренним таблицам. Одна таблица используется для хранения основных данных. Дополнительные внутренние таблицы используются для поддержки таких функций, как темпоральные таблицы, индекс columnstore и хранилище (LOB) "вне строки" для таблиц, оптимизированных для памяти.
  
