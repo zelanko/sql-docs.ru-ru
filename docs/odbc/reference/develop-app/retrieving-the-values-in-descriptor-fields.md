@@ -1,4 +1,5 @@
 ---
+description: Получение значений в полях дескриптора
 title: Получение значений в полях дескриптора | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c05b180f-c2b0-437b-8d1c-ce7f4da93287
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 43467d19f3f2e576efa0402c4ba513e23da59390
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a2118efe58b076287dd75192de679bdb74299435
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304325"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494652"
 ---
 # <a name="retrieving-the-values-in-descriptor-fields"></a>Получение значений в полях дескриптора
 Приложение может вызвать **SQLGetDescField** для получения одного поля записи дескриптора. **SQLGetDescField** предоставляет приложению доступ ко всем полям дескрипторов, определенным в ODBC, а также к полям, определяемым драйвером.  

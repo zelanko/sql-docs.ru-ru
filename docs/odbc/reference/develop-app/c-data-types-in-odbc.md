@@ -1,4 +1,5 @@
 ---
+description: Типы данных C в ODBC
 title: Типы данных C в ODBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c91bef31-3794-4736-966a-d50997b2233c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5e1efba2187e2c1f2d813d43640fc9259ad4f2b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 395f60860dd3179326687a6c2fb10bbaf027ca3a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306299"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494764"
 ---
 # <a name="c-data-types-in-odbc"></a>Типы данных C в ODBC
 ODBC определяет типы данных C, используемые переменными приложения и соответствующими идентификаторами типов. Они используются буферами, которые привязаны к столбцам результирующего набора и параметрам инструкции. Например, предположим, что приложению требуется получить данные из столбца результирующего набора в символьном формате. Он объявляет переменную с типом данных SQLCHAR * и привязывает эту переменную к столбцу результирующего набора с идентификатором типа SQL_C_CHAR. Полный список типов данных C и идентификаторов типов см. в разделе [Приложение D. типы данных](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
@@ -50,5 +51,5 @@ ODBC определяет типы данных C, используемые пе
   
  Дополнительные сведения о ODBC 3,8 см. [в разделе новые возможности odbc 3,8](../../../odbc/reference/what-s-new-in-odbc-3-8.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Типы данных C](../../../odbc/reference/appendixes/c-data-types.md)

@@ -1,4 +1,5 @@
 ---
+description: Выражения элементов
 title: Использование выражений элементов | Документация Майкрософт
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,19 +9,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8d40d6a3b6cacb65cf1463b0eeb8b29e59e079e4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e833d8d579841a3fc15aad89612a1d25b71fd0f6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893514"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494832"
 ---
 # <a name="using-member-expressions"></a>Выражения элементов
 
 
   Выражение элемента включает в себя идентификатор элемента, функцию элемента либо выражение, которое может быть преобразовано в элемент.  
   
- Идентификаторы элементов могут иметь много различных форматов. Самая простая форма идентификатора элемента состоит из имени элемента. Пример:  
+ Идентификаторы элементов могут иметь много различных форматов. Самая простая форма идентификатора элемента состоит из имени элемента. Например:  
   
 ```  
 SELECT Amount ON 0  
@@ -62,6 +63,6 @@ Dimension_Name
 >  Дополнительные сведения об именах членов и ключах элементов см. в разделах [Работа с элементами, кортежами и наборами &#40;&#41;многомерных выражений ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
   
 ## <a name="see-also"></a>См. также:  
- [Выражения &#40;&#41;многомерных выражений](../mdx/expressions-mdx.md)  
+ [Выражения &#40;&#41;многомерных выражений ](../mdx/expressions-mdx.md)  
   
   

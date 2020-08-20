@@ -1,4 +1,5 @@
 ---
+description: catalog.environments (база данных SSISDB)
 title: catalog.environments (база данных SSISDB) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 7014c0e3-65dc-4a46-842e-4decf3737748
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e7bc0ca536d0420b52439adceb0e01ff663e1ac2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 426199180acf6aafc609250638d00d1deb9231ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912661"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495294"
 ---
 # <a name="catalogenvironments-ssisdb-database"></a>catalog.environments (база данных SSISDB)
 
@@ -26,7 +27,7 @@ ms.locfileid: "86912661"
 
   Отображает подробные сведения о среде для всех сред в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Среды содержат переменные, на которые могут ссылаться проекты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |environment_id|**bigint**|Уникальный идентификатор среды.|  
 |name|**sysname**|Имя среды.|  
@@ -36,7 +37,7 @@ ms.locfileid: "86912661"
 |created_by_name|**nvarchar(128)**|Имя пользователя, создавшего среду.|  
 |created_time|**datetimeoffset**|Дата и время создания среды.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  В этом представлении отображается строка для каждой среды в каталоге. Имена сред уникальны только в пределах папки, где они находятся. Например, среда с именем `E1` может существовать в нескольких папках в каталоге, но в каждой папке может быть только одна среда с именем `E1`.  
   
 ## <a name="permissions"></a>Разрешения  

@@ -1,4 +1,5 @@
 ---
+description: Обработка графов в SQL Server и Базы данных SQL Azure
 title: Обработка Graph
 titleSuffix: SQL Server and Azure SQL Database
 ms.date: 06/26/2019
@@ -15,17 +16,17 @@ author: shkale-msft
 ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dbe223d890d443508cd32f6ab73c039848c4372a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 40acaf67fedc76495f52aced7b7d0f61b76cb530
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85776466"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494206"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Обработка графов в SQL Server и Базы данных SQL Azure
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]предоставляет возможности баз данных Graph для моделирования связей "многие ко многим". Связи графов интегрированы в [!INCLUDE[tsql-md](../../includes/tsql-md.md)] и получают преимущества использования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в качестве базовой системы управления базами данных.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет возможности баз данных Graph для моделирования связей "многие ко многим". Связи графов интегрированы в [!INCLUDE[tsql-md](../../includes/tsql-md.md)] и получают преимущества использования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в качестве базовой системы управления базами данных.
 
 
 ## <a name="what-is-a-graph-database"></a>Что такое графовая база данных?  
@@ -42,12 +43,12 @@ ms.locfileid: "85776466"
 -    Приложение имеет сложные связи "многие ко многим". по мере развития приложения добавляются новые связи.
 -    Вам необходимо анализировать взаимосвязанные данные и связи.
 
-## <a name="graph-features-introduced-in-sssqlv14"></a>Функции Graph, появившиеся в[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
+## <a name="graph-features-introduced-in-sssqlv14"></a>Функции Graph, появившиеся в [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
 Мы начинаем добавлять расширения графа в SQL Server, чтобы упростить хранение и запрос данных графов. В первом выпуске представлены следующие функции. 
 
 
 ### <a name="create-graph-objects"></a>Создание объектов Graph
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)]расширения позволяют пользователям создавать таблицы node или ребра. С этими узлами и краями могут быть связаны свойства. Поскольку узлы и грани хранятся в виде таблиц, все операции, поддерживаемые реляционными таблицами, поддерживаются в таблице node или EDGE. Например:  
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)] расширения позволяют пользователям создавать таблицы node или ребра. С этими узлами и краями могут быть связаны свойства. Поскольку узлы и грани хранятся в виде таблиц, все операции, поддерживаемые реляционными таблицами, поддерживаются в таблице node или EDGE. Пример:  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;
@@ -58,7 +59,7 @@ CREATE TABLE friends (StartDate date) AS EDGE;
 Узлы и грани хранятся в виде таблиц.  
 
 ### <a name="query-language-extensions"></a>Расширения языка запросов  
-`MATCH`Введено предложение New для поддержки сопоставления шаблонов и навигации с несколькими прыжками через граф. `MATCH`Функция использует синтаксис стиля ASCII для сопоставления шаблонов. Пример:  
+`MATCH`Введено предложение New для поддержки сопоставления шаблонов и навигации с несколькими прыжками через граф. `MATCH`Функция использует синтаксис стиля ASCII для сопоставления шаблонов. Например:  
 
 ```   
 -- Find friends of John
@@ -88,7 +89,7 @@ AND Person1.Name = 'John';
 ## <a name="shortest-path"></a>Кратчайший путь
 Функция [SHORTEST_PATH](./sql-graph-shortest-path.md) находит кратчайший путь между любыми двумя узлами в графе или начиная с заданного узла и до всех остальных узлов графа. Кратчайший путь можно также использовать для поиска транзитивное замыкания или для произвольного обхода длины в графе. 
 
- ## <a name="next-steps"></a>Следующие шаги  
+ ## <a name="next-steps"></a>Дальнейшие действия  
 Ознакомьтесь с [архитектурой базы данных SQL Graph](./sql-graph-architecture.md)
    
 

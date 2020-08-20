@@ -1,4 +1,5 @@
 ---
+description: Объекты обмена сообщениями компонента Database Mail
 title: Объекты обмена сообщениями компонента Database Mail | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9df112777d7005479e515082859375d95d62839c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e627bd6505d43737061d8fab34cc819d52c22106
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726476"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494587"
 ---
 # <a name="database-mail-messaging-objects"></a>Объекты обмена сообщениями компонента Database Mail
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85726476"
   
  Эти объекты являются интерфейсом для компонента Database Mail в рамках базы данных обслуживания почты. Остальные установленные объекты предназначены для реализации выполнения функций, предоставляемых перечисленными выше объектами. Тем не менее они зарезервированы для внутреннего использования.  
   
-|Имя|Тип|Description|  
+|Имя|Тип|Описание|  
 |----------|----------|-----------------|  
 |[sysmail_allitems (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)|**View** (Вид)|Содержит список сообщений, полученных компонентом Database Mail.|  
 |[sysmail_event_log (Transact-SQL)](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)|**View** (Вид)|Содержит список сообщений, касающихся работы [Database Mail External Program](../../relational-databases/database-mail/database-mail-external-program.md).|  
@@ -49,7 +50,7 @@ ms.locfileid: "85726476"
 |[sysmail_stop_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)|**Хранимая процедура**|Останавливает объекты компонента Service Broker, используемые внешней программой.|  
   
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   

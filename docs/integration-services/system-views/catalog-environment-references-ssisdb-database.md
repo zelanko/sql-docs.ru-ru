@@ -1,4 +1,5 @@
 ---
+description: catalog.environment_references (база данных SSISDB)
 title: catalog.environment_references (база данных SSISDB) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: efec53ef-3e5a-4b76-b71d-a0cf9e11ac00
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6fa2bd05cbd1c2d492a49e074705fdfdb546ddc5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c0eb92cb3370343345a487b16852ec05dddf338a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912700"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495304"
 ---
 # <a name="catalogenvironment_references-ssisdb-database"></a>catalog.environment_references (база данных SSISDB)
 
@@ -26,7 +27,7 @@ ms.locfileid: "86912700"
 
   Отображает ссылки на среду для всех проектов в каталоге **SSISDB**.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |reference_id|**bigint**|Уникальный идентификатор (ID) ссылки.|  
 |project_id|**bigint**|Уникальный идентификатор проекта.|  
@@ -36,7 +37,7 @@ ms.locfileid: "86912700"
 |validation_status|**char(1)**|Состояние проверки.|  
 |last_validation_time|**datatimeoffset(7)**|Время последней проверки.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  В этом представлении отображается строка для каждой ссылки на среду в каталоге.  
   
 ## <a name="permissions"></a>Разрешения  

@@ -1,4 +1,5 @@
 ---
+description: Основные сведения о синхронных и асинхронных преобразованиях
 title: Основные сведения о синхронных и асинхронных преобразованиях | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/17/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1c2748384a8ea4901a21ffa94498da5405043227
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 849f01ba00bddd67ca2de2c16b6953cff9b06c36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913720"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495175"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>Основные сведения о синхронных и асинхронных преобразованиях
 
@@ -52,7 +53,7 @@ ms.locfileid: "86913720"
   
  Также можно создать асинхронное преобразование, имитирующее синхронное преобразование, путем явного копирования каждой входной строки в выходные данные. С помощью этого подхода можно переименовывать столбцы или преобразовывать типы или форматы данных. Однако этот подход снижает производительность. Можно получить те же результаты с более высокой производительностью, используя встроенные компоненты служб Integration Services, такие как «Копирование столбца» или «Конвертация данных».  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание синхронного преобразования с помощью компонента скрипта](../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)   
  [Создание асинхронного преобразования с помощью компонента скрипта](../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)   
  [Разработка пользовательского компонента преобразования с синхронными выходами](../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)   

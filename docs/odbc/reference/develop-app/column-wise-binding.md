@@ -1,4 +1,5 @@
 ---
+description: Привязка на уровне столбца
 title: Привязка на уровне столбца | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 86d37637-3a25-455d-9c82-a0d7bff8d70d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 538f225de2e08adcd7fea8a27edea35dc4b4e17f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b9c2793695dce4487a58ee138a0a620f3bc05550
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299154"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494684"
 ---
 # <a name="column-wise-binding"></a>Привязка на уровне столбца
 При использовании привязки на уровне столбца приложение привязывает один или два или в некоторых случаях три массива к каждому столбцу, для которого возвращаются данные. Первый массив содержит значения данных, а второй массив содержит буферы длины или индикатора. Индикаторы и значения длины могут храниться в отдельных буферах путем установки полей SQL_DESC_INDICATOR_PTR и SQL_DESC_OCTET_LENGTH_PTR дескрипторов в различные значения. в этом случае привязывается Третий массив. Каждый массив содержит столько элементов, сколько строк в наборе строк.  

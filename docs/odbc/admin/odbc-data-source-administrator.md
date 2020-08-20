@@ -1,4 +1,5 @@
 ---
+description: Администратор источников данных ODBC
 title: Администратор источников данных ODBC | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a2f66b4c-a4ac-401b-8e95-d8f96332e0b5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 09a78c9aa5c7fd2c982cd2fb60b2e6b42ec89aa0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 85c24fa7acc66a824e47a8ce0c8139a1ae23cc61
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307185"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494817"
 ---
 # <a name="odbc-data-source-administrator"></a>Администратор источников данных ODBC
 Администратор источников данных Microsoft® ODBC управляет драйверами баз данных и источниками данных. Это приложение находится в панели управления Windows в разделе " **Администрирование**". Начиная с Windows 8, значок называется **Источники данных ODBC**, а в 64-разрядных операционных системах существует 32-и 64-разрядная версия.  

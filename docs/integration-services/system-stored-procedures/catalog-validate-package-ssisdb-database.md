@@ -1,4 +1,5 @@
 ---
+description: catalog.validate_package (база данных SSISDB)
 title: catalog.validate_package (база данных SSISDB) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0dc03df1-b793-408f-af4c-c11188729abf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 34a5d09a65238ff469877138bf3de5e23cf46836
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 632a0039692cbb6d22dba736f268bffff9be6f74
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912741"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495407"
 ---
 # <a name="catalogvalidate_package-ssisdb-database"></a>catalog.validate_package (база данных SSISDB)
 
@@ -49,7 +50,7 @@ catalog.validate_package [ @folder_name = ] folder_name
  Имя проекта, в котором содержится пакет. Параметр *project_name* имеет тип **nvarchar(128)** .  
   
  [ @package_name = ] *package_name*  
- Имя пакета. Параметр *package_name* имеет тип **nvarchar(260)** .  
+ Имя пакета. Параметр *package_name* имеет тип **nvarchar(260)**.  
   
  [ @validation_id = ] *validation_id*  
  Возвращает уникальный идентификатор (ID) проверки. Параметр *validation_id* имеет тип **bigint**.  
@@ -95,7 +96,7 @@ catalog.validate_package [ @folder_name = ] folder_name
   
 -   Параметры пакета ссылаются на переменные, но в проверку не включены ссылочные среды  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Проверка помогает выявить проблемы, которые могут помешать пакету правильно выполняться. Используйте представления [catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md) или [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) для контроля состояния проверки.  
   
   

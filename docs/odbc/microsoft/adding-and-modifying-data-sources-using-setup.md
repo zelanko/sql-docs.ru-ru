@@ -1,4 +1,5 @@
 ---
+description: Добавление и изменение источников данных с использованием программы установки
 title: Добавление и изменение источников данных с помощью программы установки | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 54b2d61d-6ce5-45af-a776-e03180470ecf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ae76abc902e4687e5d9891871d7d5d60598b3abc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8592c01897e691cdb6702c4efdfca6054655a793
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281414"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494744"
 ---
 # <a name="adding-and-modifying-data-sources-using-setup"></a>Добавление и изменение источников данных с использованием программы установки
 > [!IMPORTANT]  
@@ -57,7 +58,7 @@ ms.locfileid: "81281414"
   
 1.  Щелкните параметры Дополнительные спецификации драйвера ODBC для Oracle Setup:  
   
-    -   **Преобразование** . Щелкните выбрать, чтобы выбрать загруженный транслятор данных. По умолчанию \<транслятор не>.  
+    -   **Преобразование** . Щелкните выбрать, чтобы выбрать загруженный транслятор данных. Значение по умолчанию — \<No Translator>.  
   
     -   **Производительность** — флажок Включить примечания в функциях каталога указывает, будет ли драйвер возвращать столбцы примечаний для результирующего набора [SQLColumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) . Драйвер ODBC для Oracle обеспечивает более быстрый доступ, если это значение не задано.  
   

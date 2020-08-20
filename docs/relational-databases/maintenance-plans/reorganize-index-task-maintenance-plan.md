@@ -1,4 +1,5 @@
 ---
+description: Задача «Реорганизация индекса» (план обслуживания)
 title: Задача "Реорганизация индекса" (план обслуживания) | Документация Майкрософт
 ms.custom: ''
 ms.date: 07/21/2017
@@ -14,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: e9cbebbd-f36f-4176-9832-382a46ac946c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c6615df0fafc2190eece4aa74c7bf36e57a2d80a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3af62a68c6aeb36f6527afc66744ad8c2f66947f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715362"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494189"
 ---
 # <a name="reorganize-index-task-maintenance-plan"></a>Задача «Реорганизация индекса» (план обслуживания)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Используйте диалоговое окно **Задача ReorganizeIndex** для изменения порядка страниц индекса в целях повышения эффективности поиска. Эта задача использует инструкцию `ALTER INDEX REORGANIZE` с базами данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
+   Используйте диалоговое окно **Задача "Реорганизация индекса"** для изменения порядка страниц индекса в целях повышения эффективности поиска. Эта задача использует инструкцию `ALTER INDEX REORGANIZE` с базами данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
 ## <a name="options"></a>Параметры  
  **Соединение**  

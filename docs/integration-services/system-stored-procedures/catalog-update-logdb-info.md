@@ -1,4 +1,5 @@
 ---
+description: catalog.update_logdb_info (база данных SSISDB)
 title: catalog.update_logdb_info (база данных SSISDB) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/18/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 author: haoqian
 ms.author: haoqian
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: d887660fae681eb7cdceeb674a6762a1060688be
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 78a720f0ac29337dd7752fc72fe93ea3a3f91018
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912773"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495379"
 ---
 # <a name="catalogupdate_logdb_info-ssisdb-database"></a>catalog.update_logdb_info (база данных SSISDB)
 
@@ -24,7 +25,7 @@ ms.locfileid: "86912773"
 
 [!INCLUDE[sqlserver2017](../../includes/applies-to-version/sqlserver2017.md)]
 
-Обновление сведений о ведении журнала развертывания [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] с горизонтальным увеличением масштаба.
+Обновление сведений о ведении журнала [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,10 +35,10 @@ catalog.update_logdb_info [ @server_name = ] server_name, [ @connection_string =
 
 ## <a name="arguments"></a>Аргументы
 [ @server_name = ] *server_name*  
- SQL Server, используемый для ведения журнала развертывания с горизонтальным увеличением масштаба. Параметр *server_name* имеет тип **nvarchar**.  
+ SQL Server, используемый для ведения журнала Scale Out. Параметр *server_name* имеет тип **nvarchar**.  
 
  [ @connection_string = ] *connection_string*  
- Строка подключения, используемая для ведения журнала развертывания с горизонтальным увеличением масштаба. Параметр *connection_string* имеет тип **nvarchar**.
+ Строка подключения, используемая для ведения журнала Scale Out. Параметр *connection_string* имеет тип **nvarchar**.
 
  ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение)  

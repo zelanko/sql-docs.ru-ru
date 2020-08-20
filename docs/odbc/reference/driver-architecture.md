@@ -1,4 +1,5 @@
 ---
+description: Архитектура драйвера
 title: Архитектура драйвера | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c5003413-0cc1-4f41-b877-a64e2f5ab118
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ffe2023f028357468700b9bd995d22129ba06817
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 530940cef233b8a6b6a3f5c0575dd154998126cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294224"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494617"
 ---
 # <a name="driver-architecture"></a>Архитектура драйвера
 Архитектура драйвера делится на две категории, в зависимости от того, какое программное обеспечение обрабатывает инструкции SQL:  

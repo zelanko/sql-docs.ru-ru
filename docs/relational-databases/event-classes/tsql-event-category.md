@@ -1,4 +1,5 @@
 ---
+description: Категория событий TSQL
 title: Категория событий TSQL | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: 215f8747-64b5-4bf3-9845-d476b10cda3a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca72015d0d10ff33b250a96c539f36c85f1a5cef
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 585e69e546489f4130e7200f819244f89620492b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789527"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494264"
 ---
 # <a name="tsql-event-category"></a>Категория событий TSQL
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "85789527"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Класс событий Exec Prepared SQL](../../relational-databases/event-classes/exec-prepared-sql-event-class.md)|Указывает, что SqlClient, ODBC, OLE DB или DB-Library выполнили подготовленные инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
 |[Класс событий Prepare SQL](../../relational-databases/event-classes/prepare-sql-event-class.md)|Указывает, что SqlClient, ODBC, OLE DB или DB-Library подготовили для использования инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
@@ -39,7 +40,7 @@ ms.locfileid: "85789527"
 |[Класс событий Unprepare SQL](../../relational-databases/event-classes/unprepare-sql-event-class.md)|Указывает, что SqlClient, ODBC, OLE DB или DB-Library удалили подготовленные инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
 |[Класс событий XQuery Static Type](../../relational-databases/event-classes/xquery-static-type-event-class.md)|Возникает, если сервер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет выражение XQuery.|  
   
-## <a name="see-also"></a>См. также:  
- [Справочник по Transact-SQL (компонент Database Engine)](../../t-sql/transact-sql-reference-database-engine.md)  
+## <a name="see-also"></a>См. также  
+ [Справочник по Transact-SQL &#40;ядро СУБД&#41;](../../t-sql/transact-sql-reference-database-engine.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: catalog.execution_data_statistics
 title: catalog.execution_data_statistics | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 6f51407e-0e4e-4b44-af33-db14c9d40ded
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 50eef5fd9e9f5d48960329c6a747ac0997d9c256
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 24452ceffc1660e57b087395ded3923e47802314
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912600"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495230"
 ---
 # <a name="catalogexecution_data_statistics"></a>catalog.execution_data_statistics 
 
@@ -26,7 +27,7 @@ ms.locfileid: "86912600"
 
   Это представление отображает строку каждый раз, когда компонент потока данных передает данные в компонент, находящийся ниже в иерархии, для выполнения данного пакета. Данные в этом представлении могут быть использованы для расчета пропускной способности данных для компонента.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |data_stats_id|**bigint**|Уникальный идентификатор данных.|  
 |execution_id|**bigint**|Уникальный идентификатор для экземпляра исполнения.|  
@@ -40,7 +41,7 @@ ms.locfileid: "86912600"
 |created_time|**datatimeoffset(7)**|Время, когда были получены значения.|  
 |execution_path|**nvarchar(max)**|Путь выполнения компонента.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
   
 -   Если существует несколько выходов из компонента, добавляется строка для каждого выхода.  
   

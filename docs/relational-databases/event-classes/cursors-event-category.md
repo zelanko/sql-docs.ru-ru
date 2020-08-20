@@ -1,4 +1,5 @@
 ---
+description: Категория событий Cursors
 title: Категория событий Cursors | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: 752e0695-b464-4720-93be-5b9b53b7ab21
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e845b69f6093507898e674ab8f3d87bdea5a3b41
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 37c73c51856643b346a176f9a0a8b5b3c41cc47a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719876"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494413"
 ---
 # <a name="cursors-event-category"></a>Категория событий Cursors
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "85719876"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Класс событий CursorClose](../../relational-databases/event-classes/cursorclose-event-class.md)|Описывает события закрытия курсора, возникающие в API-курсорах.|  
 |[Класс событий CursorExecute](../../relational-databases/event-classes/cursorexecute-event-class.md)|Описывает события выполнения курсоров, возникающие в API-курсорах.|  
@@ -37,7 +38,7 @@ ms.locfileid: "85719876"
 |[Класс событий CursorRecompile](../../relational-databases/event-classes/cursorrecompile-event-class.md)|Описывает события перекомпиляции курсоров, возникающие в API-курсорах.|  
 |[Класс событий CursorUnprepare](../../relational-databases/event-classes/cursorunprepare-event-class.md)|Описывает аннулирующие курсор события, возникающие в API-курсорах.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширенные события](../../relational-databases/extended-events/extended-events.md)  
   
   

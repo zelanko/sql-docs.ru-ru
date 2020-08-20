@@ -1,4 +1,5 @@
 ---
+description: Организация пулов соединений с учетом драйвера
 title: Организация пулов соединений с учетом драйверов | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 53e7e3f7-edab-4d0b-8943-45442ba3ebc9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 70b70c841f37bd69179137c807c0dadcfd932d2b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ed2fa29a68095be9cfcc7d4192c6dc2e15f3eac7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81287604"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494662"
 ---
 # <a name="driver-aware-connection-pooling"></a>Организация пулов соединений с учетом драйвера
 Создание пулов соединений с учетом драйвера — это новая функция диспетчера драйверов в Windows 8. Пул соединений с учетом драйвера позволяет модулям записи драйверов настраивать поведение пула подключений в драйвере ODBC.  
@@ -37,5 +38,5 @@ ms.locfileid: "81287604"
 ## <a name="how-to-enable-driver-aware-connection-pooling"></a>Включение пулов соединений с учетом драйверов  
  Приложение может использовать сведения о пуле соединений с драйвером, присвоив атрибуту SQL_ATTR_CONNECTION_POOLING значение SQL_CP_DRIVER_AWARE с [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md). Если драйвер не поддерживает сведения о пуле подключений, будет использоваться пул подключений диспетчера драйверов (то же, что указано SQL_CP_ONE_PER_HENV, а не SQL_CP_DRIVER_AWARE). Приложения ODBC 2. x и 3. x могут включать эту функцию.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Разработка драйвера ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)
