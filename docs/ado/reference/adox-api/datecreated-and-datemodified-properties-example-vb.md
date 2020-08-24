@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d608ea35-6e68-402f-8184-a5041e408678
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 51400e11416ff7a8e7a336a815e4a11d8033d316
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1bab3ba9d4cff5036e6024c7c13c3ba8404a7987
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440186"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770773"
 ---
 # <a name="datecreated-and-datemodified-properties-example-vb"></a>Примеры свойств DateCreated и DateModified (Visual Basic)
-В этом примере демонстрируется использование свойств [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) и [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) путем добавления нового [столбца](../../../ado/reference/adox-api/column-object-adox.md) к существующей [таблице](../../../ado/reference/adox-api/table-object-adox.md) и создания новой **таблицы**. Для выполнения этого примера требуется процедура Датеаутпут.  
+В этом примере демонстрируется использование свойств [DateCreated](./datecreated-property-adox.md) и [DateModified](./datemodified-property-adox.md) путем добавления нового [столбца](./column-object-adox.md) к существующей [таблице](./table-object-adox.md) и создания новой **таблицы**. Для выполнения этого примера требуется процедура Датеаутпут.  
   
 ```  
 ' BeginDateCreatedVB  
@@ -95,10 +95,10 @@ End Sub
 ' EndDateCreatedVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Свойство DateCreated (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)   
- [Свойство DateModified (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)   
- [Объект процедуры (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
- [Коллекция процедур (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
- [Объект View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
- [Коллекция Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+## <a name="see-also"></a>См. также  
+ [Свойство DateCreated (ADOX)](./datecreated-property-adox.md)   
+ [Свойство DateModified (ADOX)](./datemodified-property-adox.md)   
+ [Объект процедуры (ADOX)](./procedure-object-adox.md)   
+ [Коллекция процедур (ADOX)](./procedures-collection-adox.md)   
+ [Объект View (ADOX)](./view-object-adox.md)   
+ [Коллекция Views (ADOX)](./views-collection-adox.md)

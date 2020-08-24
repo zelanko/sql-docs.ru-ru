@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1cd30769-c8af-43e7-be27-12ed0434daa1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 647fe236ad7a616cbce54986f6a3ce3aba0db163
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1992c8c5796052e46719c34ecbc43d6b94553b6e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440356"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771143"
 ---
 # <a name="clustered-property-example-vb"></a>Пример свойства Clustered (Visual Basic)
-В этом примере демонстрируется свойство [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) [индекса](../../../ado/reference/adox-api/index-object-adox.md). Обратите внимание, что базы данных Microsoft Jet не поддерживают кластеризованные индексы, поэтому в этом примере будет возвращено **значение false** для свойства **Clustered** всех индексов в базе данных **Northwind** .  
+В этом примере демонстрируется свойство [Clustered](./clustered-property-adox.md) [индекса](./index-object-adox.md). Обратите внимание, что базы данных Microsoft Jet не поддерживают кластеризованные индексы, поэтому в этом примере будет возвращено **значение false** для свойства **Clustered** всех индексов в базе данных **Northwind** .  
   
 ```  
 ' BeginClusteredVB  
@@ -73,8 +73,8 @@ End Sub
 ' EndClusteredVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Свойство Clustered (ADOX)](../../../ado/reference/adox-api/clustered-property-adox.md)   
- [Объект index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
- [Объект Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
+## <a name="see-also"></a>См. также  
+ [Объект каталога (ADOX)](./catalog-object-adox.md)   
+ [Свойство Clustered (ADOX)](./clustered-property-adox.md)   
+ [Объект index (ADOX)](./index-object-adox.md)   
+ [Объект Table (ADOX)](./table-object-adox.md)

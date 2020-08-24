@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ef37e858-c05f-4f52-a65f-3ce6037e0d03
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db965e76f8d62bc90f0f6a5640e8ca4e7752bfd6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 73ab5507d755fed32fa54b36a82f9ca915a8e194
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452296"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758644"
 ---
 # <a name="configuring-rds-on-windows-2000"></a>Настройка RDS в Windows 2000
 Если после обновления до Windows 2000 возникают проблемы при получении правильной работы RDS, выполните следующие действия, чтобы устранить проблему.  
@@ -40,7 +40,5 @@ ms.locfileid: "88452296"
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565). Начиная с Windows 8 и Windows Server 2012 компоненты RDS Server больше не включены в операционную систему Windows. Перенос приложений, использующих RDS, в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
-## <a name="see-also"></a>См. также:  
- [Основные принципы RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
+## <a name="see-also"></a>См. также  
+ [Основные принципы RDS](./rds-fundamentals.md)

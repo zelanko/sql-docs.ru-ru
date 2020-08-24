@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c0ed8195-09af-42c8-99c7-038ecc8a5c9f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3d1067f47d50b344731c0f270671861f381a3242
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7907572a282835e8d56150dbd034d530dd646b8a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440436"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771333"
 ---
 # <a name="attributes-property-example-vb"></a>Пример свойства Attributes (Visual Basic)
-В этом примере демонстрируется свойство [Attributes](../../../ado/reference/adox-api/attributes-property-adox.md) [столбца](../../../ado/reference/adox-api/column-object-adox.md). Задание значения **адколнуллабле** позволяет пользователю задать значение [поля](../../../ado/reference/ado-api/field-object.md) [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) в виде пустой строки. В этом случае пользователь может различать записи, в которых данные не известны, и запись, в которой данные не применяются.  
+В этом примере демонстрируется свойство [Attributes](./attributes-property-adox.md) [столбца](./column-object-adox.md). Задание значения **адколнуллабле** позволяет пользователю задать значение [поля](../ado-api/field-object.md) [набора записей](../ado-api/recordset-object-ado.md) в виде пустой строки. В этом случае пользователь может различать записи, в которых данные не известны, и запись, в которой данные не применяются.  
   
 ```  
 ' BeginAttributesVB  
@@ -126,7 +126,7 @@ End Sub
 ' EndAttributesVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Свойство Attributes (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)   
- [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)
+## <a name="see-also"></a>См. также  
+ [Свойство Attributes (ADOX)](./attributes-property-adox.md)   
+ [Объект каталога (ADOX)](./catalog-object-adox.md)   
+ [Объект Column (ADOX)](./column-object-adox.md)

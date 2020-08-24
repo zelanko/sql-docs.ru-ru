@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 194ce221-49bd-4474-ba34-91453d329381
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ad20679059706d9349fd6e4fd37dd6c6b5a8ea2d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a060f6fb7ac635368e92651d2e286d68c0f299eb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441906"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777283"
 ---
 # <a name="status-property-example-vc"></a>Пример свойства Status (Visual C++)
-В этом примере свойство [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) используется для вывода сведений о том, какие записи были изменены в пакетной операции до того, как произошло пакетное обновление.  
+В этом примере свойство [Status](./status-property-ado-recordset.md) используется для вывода сведений о том, какие записи были изменены в пакетной операции до того, как произошло пакетное обновление.  
   
 ```  
 // BeginStatusCpp.cpp  
@@ -187,5 +187,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Свойство Status (объект Recordset ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)
+## <a name="see-also"></a>См. также  
+ [Свойство Status (объект Recordset ADO)](./status-property-ado-recordset.md)

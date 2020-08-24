@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7c37f18f8bcaa3d0c1f78b3ddb8d0c6413fe7277
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3804925eb893b656d555419ab81753ff464f41bd
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452396"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758774"
 ---
 # <a name="working-with-multidimensional-data"></a>Работа с многомерными данными
 Набор *ячеек* является результатом запроса к многомерным данным. Он состоит из набора осей, обычно не более четырех осей и обычно двух или трех. *Ось* — это коллекция элементов из одного или нескольких измерений, которые используются для нахождение или фильтрации конкретных значений в Кубе.  
@@ -29,7 +29,7 @@ ms.locfileid: "88452396"
   
  *Ячейка* — это объект, расположенный на пересечении координат оси. С каждой ячейкой связано несколько элементов, включая сами данные, форматированную строку (отображаемую форму данных ячейки) и порядковый номер ячейки. (Каждая ячейка является уникальным порядковым значением в наборе ячеек. Порядковое значение первой ячейки в наборе ячеек равно нулю, а крайняя левая ячейка во второй строке набора ячеек с восемью столбцами будет иметь порядковое значение восемь.)  
   
- Например, куб имеет следующие шесть измерений (Обратите внимание, что эта схема куба немного отличается от примера, приведенного в разделе [Общие сведения о многомерных схемах и данных](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)).  
+ Например, куб имеет следующие шесть измерений (Обратите внимание, что эта схема куба немного отличается от примера, приведенного в разделе [Общие сведения о многомерных схемах и данных](./overview-of-multidimensional-schemas-and-data.md)).  
   
 -   Salesperson  
   
@@ -76,11 +76,11 @@ ms.locfileid: "88452396"
 Jan, Feb, Mar, Qtr2, Qtr3, Oct, Nov, Dec  
 ```  
   
- Наборы ячеек, ячейки, оси и положения представлены в объекты данных ActiveX (MD) соответствующих объектов: набор [ячеек](../../../ado/reference/ado-md-api/cellset-object-ado-md.md), [Ячейка](../../../ado/reference/ado-md-api/cell-object-ado-md.md), [ось](../../../ado/reference/ado-md-api/axis-object-ado-md.md)и [позиция](../../../ado/reference/ado-md-api/position-object-ado-md.md).  
+ Наборы ячеек, ячейки, оси и положения представлены в объекты данных ActiveX (MD) соответствующих объектов: набор [ячеек](../../reference/ado-md-api/cellset-object-ado-md.md), [Ячейка](../../reference/ado-md-api/cell-object-ado-md.md), [ось](../../reference/ado-md-api/axis-object-ado-md.md)и [позиция](../../reference/ado-md-api/position-object-ado-md.md).  
   
 ## <a name="see-also"></a>См. также  
- [Объектная модель объекты данных ActiveX (MD)](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
- [ADO (многомерные) (объекты данных ActiveX (MD))](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
- [Общие сведения о многомерных схемах и данных](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
- [Программирование с помощью объекты данных ActiveX (MD)](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
- [Использование ADO с объектами данных ActiveX (MD)](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)
+ [Объектная модель объекты данных ActiveX (MD)](../../reference/ado-md-api/ado-md-object-model.md)   
+ [ADO (многомерные) (объекты данных ActiveX (MD))](./ado-multidimensional-ado-md.md)   
+ [Общие сведения о многомерных схемах и данных](./overview-of-multidimensional-schemas-and-data.md)   
+ [Программирование с помощью объекты данных ActiveX (MD)](./programming-with-ado-md.md)   
+ [Использование ADO с объектами данных ActiveX (MD)](./using-ado-with-ado-md.md)

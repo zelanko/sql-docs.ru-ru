@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dddcceef-9296-4fb3-8eca-94b17d0148de
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 032987bbf7f1b8b0e4780f94ba5794f7f661f85b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5999be06b7227035e7f1aa16dc9738303ffc3c9f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441876"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777243"
 ---
 # <a name="stream-ado-for-visual-c-syntax"></a>Stream (синтаксис ADO для Visual C++)
 ## <a name="methods"></a>Методы  
@@ -60,5 +60,5 @@ get_Type(StreamTypeEnum *pType)
 put_Type(StreamTypeEnum Type)  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
+## <a name="see-also"></a>См. также  
+ [Объект Stream (ADO)](./stream-object-ado.md)

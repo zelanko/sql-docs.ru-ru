@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3a5db5f0-094b-46e1-939b-d9fa9417a406
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 20145847731b831bcfb21ca27c0229b064e33286
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 36d5deae232c609473b2cd81b203559343df2d00
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441896"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777263"
 ---
 # <a name="stayinsync-property-example-vc"></a>Пример свойства StayInSync (Visual C++)
-В этом примере показано, как свойство [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) упрощает доступ к строкам в иерархическом [наборе записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
+В этом примере показано, как свойство [StayInSync](./stayinsync-property.md) упрощает доступ к строкам в иерархическом [наборе записей](./recordset-object-ado.md).  
   
- Внешний цикл отображает имя и фамилию каждого автора, состояние и идентификацию. Добавленный **набор записей** для каждой строки извлекается из коллекции [полей](../../../ado/reference/ado-api/fields-collection-ado.md) и автоматически назначается **рсттитлеаусор** свойством **StayInSync** каждый раз, когда родительский **набор записей** перемещается в новую строку. Внутренний цикл отображает четыре поля из каждой строки в присоединенном наборе записей.  
+ Внешний цикл отображает имя и фамилию каждого автора, состояние и идентификацию. Добавленный **набор записей** для каждой строки извлекается из коллекции [полей](./fields-collection-ado.md) и автоматически назначается **рсттитлеаусор** свойством **StayInSync** каждый раз, когда родительский **набор записей** перемещается в новую строку. Внутренний цикл отображает четыре поля из каждой строки в присоединенном наборе записей.  
   
 ```  
 // BeginStayInSyncCpp.cpp  
@@ -144,7 +144,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Коллекция Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Свойство StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)
+## <a name="see-also"></a>См. также  
+ [Коллекция Fields (ADO)](./fields-collection-ado.md)   
+ [Объект Recordset (ADO)](./recordset-object-ado.md)   
+ [Свойство StayInSync](./stayinsync-property.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f0dd84c6-5c33-4ab9-82b4-4c42dfdd2277
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f1c5aee050caf603c3e1512d9098b7684a5ff917
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 03959b22d0b64f2932326c42f5bb0117441b9051
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452326"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758654"
 ---
 # <a name="address-book-navigation-buttons"></a>Кнопки навигации адресной книги
 В приложении адресной книги отображаются кнопки навигации в нижней части веб-страницы. С помощью кнопок навигации можно перемещаться по данным в сетке HTML путем выбора первой или последней строки данных или строк, примыкающих к текущему выделению.  
@@ -30,7 +30,7 @@ ms.locfileid: "88452326"
 ## <a name="navigation-sub-procedures"></a>Процедуры навигации  
  Приложение адресной книги содержит несколько процедур, которые позволяют пользователям щелкать **первую**, **следующую**, **предыдущую**и **последнюю** кнопки для перемещения по данным.  
   
- Например, при нажатии **первой** кнопки активируется процедура VBScript First_OnClick. Процедура выполняет метод [MoveFirst](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) , который делает первую строку данных текущей выделенной областью. При нажатии **последней** кнопки активируется процедура Last_OnClick, которая вызывает метод [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) , делая последнюю строку данных текущей выделенной областью. Остальные кнопки навигации работают аналогичным образом.  
+ Например, при нажатии **первой** кнопки активируется процедура VBScript First_OnClick. Процедура выполняет метод [MoveFirst](../../reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) , который делает первую строку данных текущей выделенной областью. При нажатии **последней** кнопки активируется процедура Last_OnClick, которая вызывает метод [MoveLast](../../reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) , делая последнюю строку данных текущей выделенной областью. Остальные кнопки навигации работают аналогичным образом.  
   
 ```vb
 ' Move to the first record in the bound Recordset.  
@@ -62,9 +62,6 @@ Sub Last_OnClick
 End Sub  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект элемента управления (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Методы MoveFirst, MoveLast, MoveNext и MovePrevious (служба удаленных рабочих столов)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)
-
-
-
+## <a name="see-also"></a>См. также  
+ [Объект элемента управления (RDS)](../../reference/rds-api/datacontrol-object-rds.md)   
+ [Методы MoveFirst, MoveLast, MoveNext и MovePrevious (служба удаленных рабочих столов)](../../reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)

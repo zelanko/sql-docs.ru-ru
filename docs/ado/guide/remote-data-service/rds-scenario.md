@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f5a1058b23c92160b039d2cb439d429b46bfcb98
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7baed4eff98c8286c1c84bd346826b4c49e4fa75
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452096"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759564"
 ---
 # <a name="rds-scenario"></a>Сценарий RDS
 > [!IMPORTANT]
@@ -50,22 +50,20 @@ ms.locfileid: "88452096"
   
  Этот сценарий содержит следующие разделы.  
   
--   [Требования к системе для приложения адресной книги](../../../ado/guide/remote-data-service/system-requirements-for-the-address-book-application.md)  
+-   [Требования к системе для приложения адресной книги](./system-requirements-for-the-address-book-application.md)  
   
--   [Запуск сценария SQL адресной книги](../../../ado/guide/remote-data-service/running-the-address-book-sql-script.md)  
+-   [Запуск сценария SQL адресной книги](./running-the-address-book-sql-script.md)  
   
--   [Выполнение примера приложения адресной книги](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)  
+-   [Выполнение примера приложения адресной книги](./running-the-address-book-sample-application.md)  
   
--   [Объект привязки данных адресной книги](../../../ado/guide/remote-data-service/address-book-data-binding-object.md)  
+-   [Объект привязки данных адресной книги](./address-book-data-binding-object.md)  
   
--   [Кнопки команд адресной книги](../../../ado/guide/remote-data-service/address-book-command-buttons.md)  
+-   [Кнопки команд адресной книги](./address-book-command-buttons.md)  
   
--   [Кнопки навигации адресной книги](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)  
+-   [Кнопки навигации адресной книги](./address-book-navigation-buttons.md)  
   
 ## <a name="see-also"></a>См. также  
- [Требования к системе для приложения адресной книги](../../../ado/guide/remote-data-service/system-requirements-for-the-address-book-application.md)   
- [Microsoft объекты данных ActiveX (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
- [Основы RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
- [Учебник по RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)
-
-
+ [Требования к системе для приложения адресной книги](./system-requirements-for-the-address-book-application.md)   
+ [Microsoft объекты данных ActiveX (ADO)](../../microsoft-activex-data-objects-ado.md)   
+ [Основы RDS](./rds-fundamentals.md)   
+ [Учебник по RDS](./rds-tutorial.md)

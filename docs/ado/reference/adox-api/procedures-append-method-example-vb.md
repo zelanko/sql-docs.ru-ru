@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ce83b966-474b-4f57-8eb9-370996dfc5c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 85b13a87e09d7c95ecad8b6ed283b8d8066b22f2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b8b9b58c50a1e3c77a6239c73222ea7a1656b882
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439636"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769643"
 ---
 # <a name="procedures-append-method-example-vb"></a>Пример метода Append коллекции Procedures (Visual Basic)
-В следующем коде показано, как использовать объект [Command](../../../ado/reference/ado-api/command-object-ado.md) и метод [append](../../../ado/reference/adox-api/append-method-adox-procedures.md) коллекции [процедур](../../../ado/reference/adox-api/procedures-collection-adox.md) для создания новой процедуры в базовом источнике данных.  
+В следующем коде показано, как использовать объект [Command](../ado-api/command-object-ado.md) и метод [append](./append-method-adox-procedures.md) коллекции [процедур](./procedures-collection-adox.md) для создания новой процедуры в базовом источнике данных.  
   
 ```  
 ' BeginCreateProcedureVB  
@@ -74,9 +74,9 @@ End Sub
 ' EndCreateProcedureVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Свойство ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Метод Append (процедуры ADOX)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Объект процедуры (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
- [Коллекция Procedures (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)
+## <a name="see-also"></a>См. также  
+ [Свойство ActiveConnection (ADOX)](./activeconnection-property-adox.md)   
+ [Метод Append (процедуры ADOX)](./append-method-adox-procedures.md)   
+ [Объект каталога (ADOX)](./catalog-object-adox.md)   
+ [Объект процедуры (ADOX)](./procedure-object-adox.md)   
+ [Коллекция Procedures (ADOX)](./procedures-collection-adox.md)

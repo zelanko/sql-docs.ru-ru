@@ -17,25 +17,25 @@ helpviewer_keywords:
 ms.assetid: 41d70d89-880f-4850-9d17-19d9790cc8eb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7869ff91269d033b14a7f77e014da70962a1c1d5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cea09babfd2dacf35705adc71cddcdee99aad544
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441936"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777303"
 ---
 # <a name="status-property-ado-recordset"></a>Свойство Status (объект Recordset ADO)
 Указывает состояние текущей записи по отношению к пакетным обновлениям или другим массовым операциям.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает сумму одного или нескольких значений [рекордстатусенум](../../../ado/reference/ado-api/recordstatusenum.md) .  
+ Возвращает сумму одного или нескольких значений [рекордстатусенум](./recordstatusenum.md) .  
   
 ## <a name="remarks"></a>Remarks  
- Используйте свойство **Status** , чтобы узнать, какие изменения ожидаются для записей, измененных во время пакетного обновления. Свойство **Status** можно также использовать для просмотра состояния записей, которые не удалось выполнить в ходе выполнения операций с массовыми операциями, например при вызове методов [Resync](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)или [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) для объекта [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) или при установке свойства [фильтра](../../../ado/reference/ado-api/filter-property.md) для объекта **набора записей** в массив закладок. С помощью этого свойства можно определить, каким образом заданная запись не удалась, и устранить ее соответствующим образом.  
+ Используйте свойство **Status** , чтобы узнать, какие изменения ожидаются для записей, измененных во время пакетного обновления. Свойство **Status** можно также использовать для просмотра состояния записей, которые не удалось выполнить в ходе выполнения операций с массовыми операциями, например при вызове методов [Resync](./resync-method.md), [UpdateBatch](./updatebatch-method.md)или [CancelBatch](./cancelbatch-method-ado.md) для объекта [набора записей](./recordset-object-ado.md) или при установке свойства [фильтра](./filter-property.md) для объекта **набора записей** в массив закладок. С помощью этого свойства можно определить, каким образом заданная запись не удалась, и устранить ее соответствующим образом.  
   
 ## <a name="applies-to"></a>Применение  
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Объект Recordset (ADO)](./recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
- [Пример свойства Status (набор записей) (VB)](../../../ado/reference/ado-api/status-property-example-recordset-vb.md)   
- [Пример свойства Status (Visual C++)](../../../ado/reference/ado-api/status-property-example-vc.md)   
+## <a name="see-also"></a>См. также  
+ [Пример свойства Status (набор записей) (VB)](./status-property-example-recordset-vb.md)   
+ [Пример свойства Status (Visual C++)](./status-property-example-vc.md)

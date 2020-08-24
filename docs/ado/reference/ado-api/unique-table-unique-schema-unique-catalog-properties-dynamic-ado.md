@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5c3f5bdb8a52f686ae336aa51986591788669979
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2bd5979526e453e33674441ebd4e433f2a7ad6f3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441676"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777043"
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>Уникальная таблица, уникальная схема, свойства уникального каталога — Dynamic (ADO)
-Позволяет точно управлять изменениями в определенной базовой таблице в [наборе записей](../../../ado/reference/ado-api/recordset-object-ado.md) , сформированном операцией Join над несколькими базовыми таблицами.  
+Позволяет точно управлять изменениями в определенной базовой таблице в [наборе записей](./recordset-object-ado.md) , сформированном операцией Join над несколькими базовыми таблицами.  
   
 -   **Уникальная таблица** указывает имя базовой таблицы, в которой разрешены обновления, вставки и удаления.  
   
@@ -40,16 +40,16 @@ ms.locfileid: "88441676"
   
  Первичный ключ **уникальной таблицы** рассматривается как первичный ключ всего **набора записей**. Это ключ, используемый для любого метода, для которого необходим первичный ключ.  
   
- Если задана **уникальная таблица** , метод [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) влияет только на именованную таблицу. Методы [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md), [Resync](../../../ado/reference/ado-api/resync-method.md), [Update](../../../ado/reference/ado-api/update-method.md)и [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) влияют на все соответствующие базовые таблицы **набора записей**.  
+ Если задана **уникальная таблица** , метод [Delete](./delete-method-ado-recordset.md) влияет только на именованную таблицу. Методы [AddNew](./addnew-method-ado.md), [Resync](./resync-method.md), [Update](./update-method.md)и [UpdateBatch](./updatebatch-method.md) влияют на все соответствующие базовые таблицы **набора записей**.  
   
- Перед выполнением пользовательских повторных синхронизаций необходимо указать **уникальную таблицу** . Если не указана **уникальная таблица** , то свойство [Command](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md) повторной синхронизации не будет действовать.  
+ Перед выполнением пользовательских повторных синхронизаций необходимо указать **уникальную таблицу** . Если не указана **уникальная таблица** , то свойство [Command](./resync-command-property-dynamic-ado.md) повторной синхронизации не будет действовать.  
   
  Если не удается найти уникальную базовую таблицу, возникает ошибка во время выполнения.  
   
- Эти динамические свойства добавляются к коллекции [свойств](../../../ado/reference/ado-api/properties-collection-ado.md) объекта **Recordset** , если свойство [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) имеет значение **адусеклиент**.  
+ Эти динамические свойства добавляются к коллекции [свойств](./properties-collection-ado.md) объекта **Recordset** , если свойство [CursorLocation](./cursorlocation-property-ado.md) имеет значение **адусеклиент**.  
   
 ## <a name="applies-to"></a>Применение  
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Объект Recordset (ADO)](./recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+## <a name="see-also"></a>См. также  
+ [Объект Recordset (ADO)](./recordset-object-ado.md)

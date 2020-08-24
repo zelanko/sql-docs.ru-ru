@@ -17,25 +17,25 @@ helpviewer_keywords:
 ms.assetid: 5c06451e-06ec-4da6-9a87-2d043469248a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 99509ff8d72a8ad5ec587674b6c35f96a674e4db
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ba8b3469d017b79027670cb4de9f8b3761c8dcc7
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441026"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778133"
 ---
 # <a name="formattedvalue-property-ado-md"></a>Свойство FormattedValue (многомерные объекты ADO)
-Указывает отформатированное отображение значения [ячейки](../../../ado/reference/ado-md-api/cell-object-ado-md.md) .  
+Указывает отформатированное отображение значения [ячейки](./cell-object-ado-md.md) .  
   
 ## <a name="return-values"></a>Возвращаемые значения  
  Возвращает **строку** и доступна только для чтения.  
   
 ## <a name="remarks"></a>Remarks  
- Используйте свойство **FormattedValue** для получения форматированного отображаемого значения свойства [value](../../../ado/reference/ado-md-api/value-property-ado-md.md) объекта [ячейки](../../../ado/reference/ado-md-api/cell-object-ado-md.md) . Например, если значение ячейки 1056,87, а это значение представляло собой сумму в долларах, **FormattedValue** будет $1 056,87.  
+ Используйте свойство **FormattedValue** для получения форматированного отображаемого значения свойства [value](./value-property-ado-md.md) объекта [ячейки](./cell-object-ado-md.md) . Например, если значение ячейки 1056,87, а это значение представляло собой сумму в долларах, **FormattedValue** будет $1 056,87.  
   
 ## <a name="applies-to"></a>Применение  
- [Объект Cell (многомерные объекты ADO)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)  
+ [Объект Cell (многомерные объекты ADO)](./cell-object-ado-md.md)  
   
-## <a name="see-also"></a>См. также:  
- [Пример набора ячеек (Visual Basic)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
- [Свойство Value (многомерные объекты ADO)](../../../ado/reference/ado-md-api/value-property-ado-md.md)
+## <a name="see-also"></a>См. также  
+ [Пример набора ячеек (Visual Basic)](./cellset-example-vb.md)   
+ [Свойство Value (многомерные объекты ADO)](./value-property-ado-md.md)

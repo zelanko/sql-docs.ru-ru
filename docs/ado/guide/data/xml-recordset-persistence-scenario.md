@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2c61663a1fc88f4e8efe464da0220df22133bdc2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 42fbc8670320761697caf4c956c1f9b64bda5c24
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452506"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758424"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>Сценарий сохраняемости набора записей XML
 В этом сценарии вы создадите приложение Active Server страниц (ASP), которое сохраняет содержимое объекта набора записей непосредственно в объекте ответа ASP.  
@@ -26,7 +26,7 @@ ms.locfileid: "88452506"
 > [!NOTE]
 >  В этом сценарии требуется, чтобы на сервере был установлен Internet Information Server 5,0 (IIS) или более поздней версии.  
   
- Возвращенный набор записей отображается в Internet Explorer с помощью [объекта элемента управления (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md).  
+ Возвращенный набор записей отображается в Internet Explorer с помощью [объекта элемента управления (RDS)](../../reference/rds-api/datacontrol-object-rds.md).  
   
  Для создания этого сценария необходимо выполнить следующие действия.  
   
@@ -85,12 +85,12 @@ ms.locfileid: "88452506"
 %>  
 ```  
   
- Обратите внимание, что в качестве места назначения для [метода Save](../../../ado/reference/ado-api/save-method.md)набора записей указан объект ответа ASP. Назначением метода Save может быть любой объект, поддерживающий интерфейс IStream, например [объект потока ADO (ADO)](../../../ado/reference/ado-api/stream-object-ado.md), или имя файла, включающее полный путь, по которому будет сохранен набор записей.  
+ Обратите внимание, что в качестве места назначения для [метода Save](../../reference/ado-api/save-method.md)набора записей указан объект ответа ASP. Назначением метода Save может быть любой объект, поддерживающий интерфейс IStream, например [объект потока ADO (ADO)](../../reference/ado-api/stream-object-ado.md), или имя файла, включающее полный путь, по которому будет сохранен набор записей.  
   
  Сохраните и закройте Ксмлреспонсе. ASP перед переходом к следующему шагу. Также скопируйте файл адовбс. Inc из папки установки по умолчанию библиотеки ADO в ту же папку, где был сохранен файл Ксмлреспонсе. ASP.  
   
 ## <a name="step-4-receive-and-display-the-data"></a>Шаг 4. получение и отображение данных  
- На этом шаге вы создадите HTML-файл с внедренным объектом [элемента управления данными (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) , который указывает на файл ксмлреспонсе. ASP, который будет получать набор записей. Откройте default.htm с помощью текстового редактора, например Блокнота, и добавьте следующий код. Замените "SQLServer" в URL-адресе именем сервера.  
+ На этом шаге вы создадите HTML-файл с внедренным объектом [элемента управления данными (RDS)](../../reference/rds-api/datacontrol-object-rds.md) , который указывает на файл ксмлреспонсе. ASP, который будет получать набор записей. Откройте default.htm с помощью текстового редактора, например Блокнота, и добавьте следующий код. Замените "SQLServer" в URL-адресе именем сервера.  
   
 ```  
 <HTML>  
@@ -114,5 +114,5 @@ ms.locfileid: "88452506"
  Закройте файл default.htm и сохраните его в той же папке, где сохранен Ксмлреспонсе. ASP. В Internet Explorer 4,0 или более поздней версии откройте URL-адрес https://*SQLServer*/ксмлперсист/default.htm и просмотрите результаты. Данные отображаются в связанной таблице DHTML. Теперь откройте URL-адрес https:// *SQLServer* /ксмлперсист/ксмлреспонсе.АСП и просмотрите результаты. Отобразится XML.  
   
 ## <a name="see-also"></a>См. также  
- [Метод Save](../../../ado/reference/ado-api/save-method.md)   
- [Сохранение записей в формате XML](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [Метод Save](../../reference/ado-api/save-method.md)   
+ [Сохранение записей в формате XML](./persisting-records-in-xml-format.md)

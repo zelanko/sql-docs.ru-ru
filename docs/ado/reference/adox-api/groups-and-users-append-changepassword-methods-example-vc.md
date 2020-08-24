@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 7e7067d0-6405-4c09-bff3-b1c2f2d783e0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 51601cc45aa0c595b3df617848ce66f114e1df63
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c6776783df8ae47cdd15eb1a6a116f25ff038277
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439976"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770353"
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vc"></a>Примеры методов Append коллекций Groups и Users, а также пример метода ChangePassword (Visual C++)
-В этом примере демонстрируется метод [append](../../../ado/reference/adox-api/append-method-adox-groups.md) [групп](../../../ado/reference/adox-api/groups-collection-adox.md), а также метод [добавления](../../../ado/reference/adox-api/append-method-adox-users.md) [пользователей](../../../ado/reference/adox-api/users-collection-adox.md) путем добавления новой [группы](../../../ado/reference/adox-api/group-object-adox.md) и нового [пользователя](../../../ado/reference/adox-api/user-object-adox.md) в систему. Новая **Группа** добавляется в коллекцию **Groups** нового **пользователя**. Таким образом, новый **пользователь** добавляется в **группу**. Кроме того, метод [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) используется для указания пароля **пользователя** .  
+В этом примере демонстрируется метод [append](./append-method-adox-groups.md) [групп](./groups-collection-adox.md), а также метод [добавления](./append-method-adox-users.md) [пользователей](./users-collection-adox.md) путем добавления новой [группы](./group-object-adox.md) и нового [пользователя](./user-object-adox.md) в систему. Новая **Группа** добавляется в коллекцию **Groups** нового **пользователя**. Таким образом, новый **пользователь** добавляется в **группу**. Кроме того, метод [ChangePassword](./changepassword-method-adox.md) используется для указания пароля **пользователя** .  
   
 > [!NOTE]
 >  При подключении к поставщику источника данных, который поддерживает проверку подлинности Windows, следует указать **Trusted_Connection = Yes** или **Integrated Security = SSPI** вместо сведений об идентификаторе пользователя и пароле в строке подключения.  

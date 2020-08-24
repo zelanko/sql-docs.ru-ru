@@ -21,36 +21,36 @@ helpviewer_keywords:
 ms.assetid: 2c18279e-6f35-4af0-b12e-8f1543d9ed20
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1f8fb7ece2d2046706df91814b2d098e0a900d18
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0e755fb4a34e170efea760428021b540a182156c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442046"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777413"
 ---
 # <a name="source-property-ado-record"></a>Свойство Source (объект Record ADO)
-Указывает источник данных или объект, представленный [записью](../../../ado/reference/ado-api/record-object-ado.md).  
+Указывает источник данных или объект, представленный [записью](./record-object-ado.md).  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает значение **типа Variant** , указывающее сущность, представленную **записью**.  
   
 ## <a name="remarks"></a>Remarks  
- Свойство **Source** возвращает *Исходный* аргумент метода [Open](../../../ado/reference/ado-api/open-method-ado-record.md) объекта **Record** . Он может содержать абсолютную или относительную строку URL-адреса. Абсолютный URL-адрес можно использовать без задания свойства [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) для непосредственного открытия объекта **записи** . В этом случае создается неявный объект **соединения** .  
+ Свойство **Source** возвращает *Исходный* аргумент метода [Open](./open-method-ado-record.md) объекта **Record** . Он может содержать абсолютную или относительную строку URL-адреса. Абсолютный URL-адрес можно использовать без задания свойства [ActiveConnection](./activeconnection-property-ado.md) для непосредственного открытия объекта **записи** . В этом случае создается неявный объект **соединения** .  
   
  Свойство **Source** может также содержать ссылку на уже открытый **набор записей**, который открывает объект **Record** , представляющий текущую строку в **наборе записей**.  
   
- Свойство **Source** может также содержать ссылку на объект [Command](../../../ado/reference/ado-api/command-object-ado.md) , который возвращает одну строку данных от поставщика.  
+ Свойство **Source** может также содержать ссылку на объект [Command](./command-object-ado.md) , который возвращает одну строку данных от поставщика.  
   
  Если свойство **ActiveConnection** также задано, то свойство **Source** должно указывать на некоторый объект, существующий в области этого соединения. Например, в пространствах имен, структурированных в виде дерева, если свойство **Source** содержит абсолютный URL-адрес, оно должно указывать на узел, который существует внутри области узла, определяемого URL-адресом в строке подключения. Если свойство **Source** содержит относительный URL-адрес, то он проверяется в контексте, заданном свойством **ActiveConnection** .  
   
  Свойство **Source** доступно для чтения и записи, пока объект **Record** закрыт и доступен только для чтения, пока открыт объект **записи** .  
   
 > [!NOTE]
->  URL-адреса, использующие схему HTTP, автоматически вызывают [поставщик OLE DB Майкрософт для публикации в Интернете](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Дополнительные сведения см. в разделе [абсолютные и относительные URL-адреса](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  URL-адреса, использующие схему HTTP, автоматически вызывают [поставщик OLE DB Майкрософт для публикации в Интернете](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Дополнительные сведения см. в разделе [абсолютные и относительные URL-адреса](../../guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="applies-to"></a>Применение  
- [Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+ [Объект Record (ADO)](./record-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
- [Свойство Source (ошибка ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)   
- [Свойство Source (объект Recordset ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)
+## <a name="see-also"></a>См. также  
+ [Свойство Source (ошибка ADO)](./source-property-ado-error.md)   
+ [Свойство Source (объект Recordset ADO)](./source-property-ado-recordset.md)

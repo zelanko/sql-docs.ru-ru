@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 36b754b4-6b17-4dd1-a925-bca46938b7c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 19af2bf0e7058a8f483da25c0db926ebc19807c6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b0a54b02cf748d8ff1144e50e3531295dbfe8c55
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441016"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778123"
 ---
 # <a name="getschemaobject-method-ado-md"></a>Метод GetSchemaObject (многомерные объекты ADO)
-Извлекает объект схемы объекты данных ActiveX (MD) ([измерение](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [иерархию](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [уровень](../../../ado/reference/ado-md-api/level-object-ado-md.md)или [элемент](../../../ado/reference/ado-md-api/member-object-ado-md.md)) по его свойству [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md).  
+Извлекает объект схемы объекты данных ActiveX (MD) ([измерение](./dimension-object-ado-md.md), [иерархию](./hierarchy-object-ado-md.md), [уровень](./level-object-ado-md.md)или [элемент](./member-object-ado-md.md)) по его свойству [UniqueName](./uniquename-property-ado-md.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,7 +36,7 @@ Set object = CubeDef.GetSchemaObject (ObjType, UniqueName)
   
 #### <a name="parameters"></a>Параметры  
  *ObjType*  
- Значение [счемаобжекттипинум](../../../ado/reference/ado-md-api/schemaobjecttypeenum.md) , указывающее тип объекта схемы (измерения, иерархии, уровня или элемента), который требуется получить.  
+ Значение [счемаобжекттипинум](./schemaobjecttypeenum.md) , указывающее тип объекта схемы (измерения, иерархии, уровня или элемента), который требуется получить.  
   
  *UniqueName*  
  **Строка** , указывающая значение свойства **UniqueName** получаемого объекта.  
@@ -45,7 +45,7 @@ Set object = CubeDef.GetSchemaObject (ObjType, UniqueName)
  **Жетсчемаобжект** извлекает объекты, используя их уникальные имена, как указано в свойстве **UniqueName** . Имена родительских объектов не обязательно должны быть известны, а для получения объекта схемы не нужно заполнять родительские коллекции.  
   
 ## <a name="applies-to"></a>Применение  
- [Объект CubeDef (многомерные объекты ADO)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)  
+ [Объект CubeDef (многомерные объекты ADO)](./cubedef-object-ado-md.md)  
   
-## <a name="see-also"></a>См. также:  
- [Объект CubeDef (многомерные объекты ADO)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)
+## <a name="see-also"></a>См. также  
+ [Объект CubeDef (многомерные объекты ADO)](./cubedef-object-ado-md.md)

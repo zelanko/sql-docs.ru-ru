@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e5b43cfa-da8d-430d-a2ab-5443dda47a16
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 970c9c09946cebe74684e6aecc997e56213b1a97
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8daeb97bd4bcb8a01556f6ece38e977f1cf0068f
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452176"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759745"
 ---
 # <a name="internet-server-error-access-denied"></a>Ошибка сервера Интернета: доступ запрещен
 Если возникает эта ошибка, обычно это означает, что Microsoft службы IIS (IIS) вернул следующее состояние:  
@@ -30,9 +30,5 @@ ms.locfileid: "88452176"
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
-## <a name="see-also"></a>См. также:  
- [Основные принципы RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
-
-
+## <a name="see-also"></a>См. также  
+ [Основные принципы RDS](./rds-fundamentals.md)

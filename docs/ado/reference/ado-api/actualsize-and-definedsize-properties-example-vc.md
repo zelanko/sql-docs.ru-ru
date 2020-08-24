@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 05f7cc97-b806-41d2-939d-a955d10844c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b8a69e5ad4f31891ec93e84e835a6c0d1ffdcdce
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 95755659875371a04511b1e48b4967ad07d6b93b
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451646"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760301"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vc"></a>Пример свойств ActualSize и DefinedSize (Visual c++)
-В этом примере используются свойства [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) и [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) для вывода определенного размера и фактического размера поля.  
+В этом примере используются свойства [ActualSize](./actualsize-property-ado.md) и [DefinedSize](./definedsize-property.md) для вывода определенного размера и фактического размера поля.  
   
 ## <a name="example"></a>Пример  
   
@@ -148,5 +148,5 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 **Определенный размер: 40**  
 **Фактический размер: 8**   
 ## <a name="see-also"></a>См. также  
- [Свойство ActualSize (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   
- [Свойство DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)
+ [Свойство ActualSize (ADO)](./actualsize-property-ado.md)   
+ [Свойство DefinedSize](./definedsize-property.md)

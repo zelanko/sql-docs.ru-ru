@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 58199284-747b-4312-b97f-797ee7bd4435
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ad4474e72485e8b69cc4c9f40f790e11fc6145d0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 091c79539472cc46c31f508dea560636dac37cc0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442076"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777443"
 ---
 # <a name="sort-property-example-vc"></a>Пример свойства Sort (Visual C++)
-В этом примере используется свойство [Sort](../../../ado/reference/ado-api/sort-property.md) объекта [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) для изменения порядка строк **набора записей** , производного от таблицы ***authors*** базы данных **pubs** . Вторичная служебная программа выводит каждую строку.  
+В этом примере используется свойство [Sort](./sort-property.md) объекта [Recordset](./recordset-object-ado.md) для изменения порядка строк **набора записей** , производного от таблицы ***authors*** базы данных **pubs** . Вторичная служебная программа выводит каждую строку.  
   
 ```  
 // SortPropertyExample.cpp  
@@ -133,6 +133,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Свойство Sort](../../../ado/reference/ado-api/sort-property.md)
+## <a name="see-also"></a>См. также  
+ [Объект Recordset (ADO)](./recordset-object-ado.md)   
+ [Свойство Sort](./sort-property.md)

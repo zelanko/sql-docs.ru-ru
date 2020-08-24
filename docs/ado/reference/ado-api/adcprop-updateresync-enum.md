@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: bc9e1a37-e969-47e9-8382-0bbfffa2034f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 81d1ff4bf67f103b613cb925a590b4d00e54482a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b4097bcdeb5460776017ce7a120ff43aa7a4420f
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451596"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760248"
 ---
 # <a name="adcprop_updateresync_enum"></a>ADCPROP_UPDATERESYNC_ENUM
-Указывает, следует ли за методом [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) выполнить неявную операцию повторной [синхронизации](../../../ado/reference/ado-api/resync-method.md) и, если да, область действия этой операции.  
+Указывает, следует ли за методом [UpdateBatch](./updatebatch-method.md) выполнить неявную операцию повторной [синхронизации](./resync-method.md) и, если да, область действия этой операции.  
   
 |Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
@@ -36,4 +36,4 @@ ms.locfileid: "88451596"
 |**адресинкупдатес**|4|Вызывает **повторную синхронизацию** для всех успешно обновленных строк.|  
   
 ## <a name="applies-to"></a>Применение  
- [Свойство Update Resync (динамическое) (ADO)](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md)
+ [Свойство Update Resync (динамическое) (ADO)](./update-resync-property-dynamic-ado.md)

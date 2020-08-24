@@ -13,36 +13,36 @@ helpviewer_keywords:
 ms.assetid: 90a05168-87d0-45e8-8b32-0b64fec74ad2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3b1496230281d7199774475437c0d12be67e7cfe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b54985a01911e7e8fce9082c424c5da86340395b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440406"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771183"
 ---
 # <a name="catalog-object-properties-methods-and-events"></a>Свойства, методы и события объекта Catalog
 ## <a name="propertiescollections"></a>Свойства и коллекции  
- [ActiveConnection, свойство](../../../ado/reference/adox-api/activeconnection-property-adox.md)  
+ [ActiveConnection, свойство](./activeconnection-property-adox.md)  
   
- [Коллекция Groups](../../../ado/reference/adox-api/groups-collection-adox.md)  
+ [Коллекция Groups](./groups-collection-adox.md)  
   
- [Коллекция процедур](../../../ado/reference/adox-api/procedures-collection-adox.md)  
+ [Коллекция процедур](./procedures-collection-adox.md)  
   
- [Коллекция таблиц](../../../ado/reference/adox-api/tables-collection-adox.md)  
+ [Коллекция таблиц](./tables-collection-adox.md)  
   
- [Коллекция пользователей](../../../ado/reference/adox-api/users-collection-adox.md)  
+ [Коллекция пользователей](./users-collection-adox.md)  
   
- [Коллекция представлений](../../../ado/reference/adox-api/views-collection-adox.md)  
+ [Коллекция представлений](./views-collection-adox.md)  
   
 ## <a name="methods"></a>Методы  
- [Создать метод](../../../ado/reference/adox-api/create-method-adox.md)  
+ [Создать метод](./create-method-adox.md)  
   
- [Метод примеры методов getobjectowner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)  
+ [Метод примеры методов getobjectowner](./getobjectowner-method-adox.md)  
   
- [Метод SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)  
+ [Метод SetObjectOwner](./setobjectowner-method.md)  
   
 ## <a name="events"></a>События  
  Нет.  
   
 ## <a name="see-also"></a>См. также:  
- [Объект Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)
+ [Объект Catalog (ADOX)](./catalog-object-adox.md)

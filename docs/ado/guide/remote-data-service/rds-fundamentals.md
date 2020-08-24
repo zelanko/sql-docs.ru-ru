@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a676f0a7-7d17-45db-87c1-3fc78627465f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a6263acd1a51aa73ab004103eb6a7315626335ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21f8333c0fd8b4d290f2d76aa35ef8cfea73b35d
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452136"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759684"
 ---
 # <a name="rds-fundamentals"></a>Основные принципы RDS
 > [!IMPORTANT]
@@ -27,20 +27,18 @@ ms.locfileid: "88452136"
   
  В следующих разделах описывается RDS.  
   
--   [Решения для удаленного доступа к данным](../../../ado/guide/remote-data-service/solutions-for-remote-data-access.md)  
+-   [Решения для удаленного доступа к данным](./solutions-for-remote-data-access.md)  
   
--   [Основная модель программирования RDS](../../../ado/guide/remote-data-service/basic-rds-programming-model.md)  
+-   [Основная модель программирования RDS](./basic-rds-programming-model.md)  
   
--   [Подробные сведения о модели программирования RDS](../../../ado/guide/remote-data-service/rds-programming-model-in-detail.md)  
+-   [Подробные сведения о модели программирования RDS](./rds-programming-model-in-detail.md)  
   
--   [Модель программирования RDS с объектами](../../../ado/guide/remote-data-service/rds-programming-model-with-objects.md)  
+-   [Модель программирования RDS с объектами](./rds-programming-model-with-objects.md)  
   
--   [Сводка по объектной модели RDS](../../../ado/guide/remote-data-service/rds-object-model-summary.md)  
+-   [Сводка по объектной модели RDS](./rds-object-model-summary.md)  
   
-## <a name="see-also"></a>См. также:  
- [Решения для удаленного доступа к данным](../../../ado/guide/remote-data-service/solutions-for-remote-data-access.md)   
- [Сценарий RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [Руководство по RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [Использование RDS и безопасность](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
-
+## <a name="see-also"></a>См. также  
+ [Решения для удаленного доступа к данным](./solutions-for-remote-data-access.md)   
+ [Сценарий RDS](./rds-scenario.md)   
+ [Руководство по RDS](./rds-tutorial.md)   
+ [Использование RDS и безопасность](./rds-usage-and-security.md)

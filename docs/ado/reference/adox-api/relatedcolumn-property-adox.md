@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 2f2ca019-c785-4c08-beb1-3a2d3b47823e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d59969ed52f7b26e1b104a8ee40ff3e16a49c4a1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 003d3e1fb3ff13c7608e5629c23d5eda8dc3bf05
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439576"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769503"
 ---
 # <a name="relatedcolumn-property-adox"></a>Свойство RelatedColumn (ADOX)
-Указывает имя связанного [объекта столбца (ADOX)](../../../ado/reference/adox-api/column-object-adox.md) в связанной таблице (только ключевые столбцы).  
+Указывает имя связанного [объекта столбца (ADOX)](./column-object-adox.md) в связанной таблице (только ключевые столбцы).  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает и возвращает **строковое** значение, которое является именем связанного столбца в связанной таблице.  
@@ -36,11 +36,11 @@ ms.locfileid: "88439576"
 ## <a name="remarks"></a>Remarks  
  Значение по умолчанию — пустая строка.  
   
- Это свойство доступно только для чтения для объектов [столбцов](../../../ado/reference/adox-api/column-object-adox.md) , уже добавленных в коллекцию.  
+ Это свойство доступно только для чтения для объектов [столбцов](./column-object-adox.md) , уже добавленных в коллекцию.  
   
 ## <a name="applies-to"></a>Применение  
- [Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
+ [Объект Column (ADOX)](./column-object-adox.md)  
   
-## <a name="see-also"></a>См. также:  
- [Пример свойств для добавления ключей, типа ключа, RelatedColumn, RelatedTable и UpdateRule (Visual Basic)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [Объект Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)
+## <a name="see-also"></a>См. также  
+ [Пример свойств для добавления ключей, типа ключа, RelatedColumn, RelatedTable и UpdateRule (Visual Basic)](./keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Объект Key (ADOX)](./key-object-adox.md)

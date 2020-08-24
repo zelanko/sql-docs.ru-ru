@@ -13,24 +13,24 @@ helpviewer_keywords:
 ms.assetid: c45d795b-3272-4df4-a54c-7cd4fcb187fd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb2a3fd6f848b43de981d1239657ebc5097202fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 45644a1b295f7a4e83c2fed7d45daa5291744f65
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441236"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778323"
 ---
 # <a name="cell-object-properties-methods-and-events"></a>Свойства, методы и события объекта Cell
 ## <a name="propertiescollections"></a>Свойства и коллекции  
- [FormattedValue, свойство](../../../ado/reference/ado-md-api/formattedvalue-property-ado-md.md)  
+ [FormattedValue, свойство](./formattedvalue-property-ado-md.md)  
   
- [Свойство Ordinal (ячейка)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md)  
+ [Свойство Ordinal (ячейка)](./ordinal-property-ado-md-cell.md)  
   
- [Коллекция Positions](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)  
+ [Коллекция Positions](./positions-collection-ado-md.md)  
   
- [Коллекция Properties](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Коллекция Properties](../ado-api/properties-collection-ado.md)  
   
- [Value, свойство](../../../ado/reference/ado-md-api/value-property-ado-md.md)  
+ [Value, свойство](./value-property-ado-md.md)  
   
 ## <a name="methods"></a>Методы  
  Отсутствует.  
@@ -39,4 +39,4 @@ ms.locfileid: "88441236"
  Нет.  
   
 ## <a name="see-also"></a>См. также:  
- [Объект Cell (многомерные объекты ADO)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)
+ [Объект Cell (многомерные объекты ADO)](./cell-object-ado-md.md)

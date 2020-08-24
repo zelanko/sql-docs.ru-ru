@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 678e5546-df5d-4cd0-bfe9-6cf13cb385c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8877bc3e17dfb38be273bd0782643d7fad00f53c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0a62e610ae47243e8200a9422639569e91ce2c4c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440306"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771053"
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vb"></a>Примеры методов Append для коллекций Columns и Tables, а также пример свойства Name (Visual Basic)
 В следующем коде показано, как создать новую таблицу.  
@@ -67,11 +67,11 @@ End Sub
 ' EndCreateTableVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Метод Append (столбцы ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Метод Append (таблицы ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [Коллекция Columns (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Свойство Name (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
- [Объект Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
- [Коллекция Tables (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)
+## <a name="see-also"></a>См. также  
+ [Метод Append (столбцы ADOX)](./append-method-adox-columns.md)   
+ [Метод Append (таблицы ADOX)](./append-method-adox-tables.md)   
+ [Объект Column (ADOX)](./column-object-adox.md)   
+ [Коллекция Columns (ADOX)](./columns-collection-adox.md)   
+ [Свойство Name (ADOX)](./name-property-adox.md)   
+ [Объект Table (ADOX)](./table-object-adox.md)   
+ [Коллекция Tables (ADOX)](./tables-collection-adox.md)

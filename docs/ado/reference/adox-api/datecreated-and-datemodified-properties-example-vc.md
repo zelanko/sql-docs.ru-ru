@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b964beee-83c7-4f91-8255-3ba864c9adfd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 19f8f15f35cae97d4c6882df90889513ce0eb430
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c403ed5112bf2957b0bf09028091a05d54d16aa3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440196"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770763"
 ---
 # <a name="datecreated-and-datemodified-properties-example-vc"></a>Примеры свойств DateCreated и DateModified (Visual C++)
-В этом примере демонстрируется использование свойств [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) и [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) путем добавления нового [столбца](../../../ado/reference/adox-api/column-object-adox.md) к существующей [таблице](../../../ado/reference/adox-api/table-object-adox.md) и создания новой **таблицы**. Для выполнения этого примера требуется процедура Датеаутпут.  
+В этом примере демонстрируется использование свойств [DateCreated](./datecreated-property-adox.md) и [DateModified](./datemodified-property-adox.md) путем добавления нового [столбца](./column-object-adox.md) к существующей [таблице](./table-object-adox.md) и создания новой **таблицы**. Для выполнения этого примера требуется процедура Датеаутпут.  
   
 ```  
 // BeginDateCreatedCpp.cpp  
@@ -115,8 +115,8 @@ void DateOutPut(_bstr_t strTemp , _TablePtr tblTemp) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [Свойство DateCreated (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)   
- [Свойство DateModified (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)   
- [Объект Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
+## <a name="see-also"></a>См. также  
+ [Объект Column (ADOX)](./column-object-adox.md)   
+ [Свойство DateCreated (ADOX)](./datecreated-property-adox.md)   
+ [Свойство DateModified (ADOX)](./datemodified-property-adox.md)   
+ [Объект Table (ADOX)](./table-object-adox.md)

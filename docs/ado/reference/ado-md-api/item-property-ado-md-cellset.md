@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 92f81199f52323e1e317c27b5206ebe69e674879
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 12df2a7d592be4fa42d8cc0df779a375ab987cb2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440966"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778073"
 ---
 # <a name="item-property-ado-md-cellset"></a>Свойство Item (многомерный объект ADO Cellset)
-Извлекает ячейку из набора [ячеек](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) , используя ее координаты.  
+Извлекает ячейку из набора [ячеек](./cellset-object-ado-md.md) , используя ее координаты.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,8 +45,8 @@ Cell = Cellset.Item ( Positions)
   
 -   Порядковый номер  
   
-## <a name="remarks"></a>Комментарии  
- Свойство **Item** используется для возвращения объекта [ячейки](../../../ado/reference/ado-md-api/cell-object-ado-md.md) в объекте набора [ячеек](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) . Если свойству **Item** не удается найти ячейку, соответствующую аргументу *Positions* , возникает ошибка.  
+## <a name="remarks"></a>Remarks  
+ Свойство **Item** используется для возвращения объекта [ячейки](./cell-object-ado-md.md) в объекте набора [ячеек](./cellset-object-ado-md.md) . Если свойству **Item** не удается найти ячейку, соответствующую аргументу *Positions* , возникает ошибка.  
   
  Свойство **Item** является свойством по умолчанию для объекта набора **ячеек** . Следующие формы синтаксиса взаимозаменяемы:  
   
@@ -55,7 +55,7 @@ Cell = Cellset.Item ( Positions)
 Cellset.Item ( Positions )Cellset ( Positions )  
 ```  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Аргумент *Positions* указывает, какая ячейка должна быть возвращена. Можно указать ячейку по порядковому номеру или по положению вдоль каждой оси. При указании ячейки по положению вдоль каждой оси можно указать числовое значение расположения или имена элементов для каждой из них.  
   
  Порядковый номер — это число, однозначно идентифицирующее одну ячейку в наборе **ячеек**. По сути, ячейки нумеруются в наборе **ячеек** , как если бы набор **ячеек** был многомерным *p*массивом, где *p* — это число осей. Адресация ячеек осуществляется по строкам. Ниже приведена формула для вычисления порядкового номера ячейки.  
@@ -66,8 +66,8 @@ Cellset.Item ( Positions )Cellset ( Positions )
 >  Получение ячеек по имени элемента может не поддерживаться поставщиком данных. Дополнительные сведения см. в документации для поставщика.  
   
 ## <a name="applies-to"></a>Применение  
- [Объект Cellset (многомерные объекты ADO)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
+ [Объект Cellset (многомерные объекты ADO)](./cellset-object-ado-md.md)  
   
 ## <a name="see-also"></a>См. также  
- [Объект Cell (объекты данных ActiveX (MD))](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
- [Объект Cellset (многомерные объекты ADO)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)
+ [Объект Cell (объекты данных ActiveX (MD))](./cell-object-ado-md.md)   
+ [Объект Cellset (многомерные объекты ADO)](./cellset-object-ado-md.md)

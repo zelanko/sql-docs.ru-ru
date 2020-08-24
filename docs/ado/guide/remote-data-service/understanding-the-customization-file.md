@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59c0f32f7e5ba467fd1b90a348a78432a16621ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 18c7d09707a69967560765f880a3c6563de1506e
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451876"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759872"
 ---
 # <a name="understanding-the-customization-file"></a>Общие сведения о файле настроек
 Каждый заголовок раздела в файле настройки состоит из квадратных скобок (**[]**), содержащих тип и параметр. Четыре типа разделов обозначаются строковыми литералами **Connect**, **SQL**, **USERLIST**или **logs**. Параметр является строкой литерала, значением по умолчанию, идентификатором, заданным пользователем, или Nothing.  
@@ -45,7 +45,7 @@ identifier
 |Часть|Описание|  
 |----------|-----------------|  
 |**connect**;|Литеральная строка, которая изменяет строку подключения.|  
-|**SQL**|Литеральная строка, которая изменяет командную строку.|  
+|**sql**|Литеральная строка, которая изменяет командную строку.|  
 |**USERLIST**|Литеральная строка, которая изменяет права доступа конкретного пользователя.|  
 |**журналы**|Литеральная строка, указывающая, что в файле журнала регистрируются операционные ошибки.|  
 |**default**|Литеральная строка, используемая, если идентификатор не указан или не найден.|  
@@ -68,11 +68,10 @@ identifier
 -   Раздел **logs** **используется при** каждом выполнении операции.  
   
 ## <a name="see-also"></a>См. также  
- [Раздел "Подключение файла настройки"](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [Раздел журналов файлов настройки](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [Раздел файла настройки SQL](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [Раздел UserList файла настройки](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [Настройка в отношении фактов](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Требуемые параметры клиента](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [Создание собственного настраиваемого обработчика](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
+ [Раздел "Подключение файла настройки"](./customization-file-connect-section.md)   
+ [Раздел журналов файлов настройки](./customization-file-logs-section.md)   
+ [Раздел файла настройки SQL](./customization-file-sql-section.md)   
+ [Раздел UserList файла настройки](./customization-file-userlist-section.md)   
+ [Настройка в отношении фактов](./datafactory-customization.md)   
+ [Требуемые параметры клиента](./required-client-settings.md)   
+ [Создание собственного настраиваемого обработчика](./writing-your-own-customized-handler.md)
