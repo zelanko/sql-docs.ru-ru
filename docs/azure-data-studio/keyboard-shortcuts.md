@@ -2,19 +2,19 @@
 title: Создание и настройка сочетаний клавиш
 description: Узнайте, как просматривать, редактировать и создавать сочетания клавиш в Azure Data Studio, используя возможности на основе Visual Studio Code.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 008c44e8e0ca61d4b2e84ba9e25863d4ffa78fa7
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: e8f5e60d0a8f5c578e27dfb283459882d58a0195
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411075"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88746124"
 ---
 # <a name="keyboard-shortcuts-in-azure-data-studio"></a>Сочетания клавиш в Azure Data Studio
 

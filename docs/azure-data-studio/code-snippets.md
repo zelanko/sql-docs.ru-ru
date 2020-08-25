@@ -2,19 +2,19 @@
 title: Создание многократно используемых фрагментов кода
 description: Узнайте, как создавать и использовать фрагменты кода SQL в Azure Data Studio, чтобы упростить создание баз данных и объектов баз данных.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: a8ef725a83a0800dbe5027e4d76bc8f7f51f7f3b
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 95b0385178a5e2bd25f8b64be5f910d4f885e34b
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411170"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88746094"
 ---
 # <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-azure-data-studio"></a>Создание и использование фрагментов кода для быстрого создания скриптов Transact-SQL (T-SQL) в Azure Data Studio
 

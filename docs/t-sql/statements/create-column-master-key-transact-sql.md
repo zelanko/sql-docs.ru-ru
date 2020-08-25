@@ -27,15 +27,16 @@ helpviewer_keywords:
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 3e6b80b2737517e0d78a5ca4adbd1c66e619fc8a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a92d256d376b9931924a7bf6672769bcd19917f4
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488073"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645961"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 Создает объект метаданных главного ключа столбца в базе данных. Элемент метаданных главного ключа столбца представляет ключ, хранящийся во внешнем хранилище ключей. Ключ защищает (шифрует) ключи шифрования столбцов, когда вы используете [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) или [Always Encrypted с безопасными анклавами](../../relational-databases/security/encryption/always-encrypted-enclaves.md). Использование нескольких главных ключей столбца позволяет регулярно сменять их для повышения безопасности. Создайте главный ключ столбца в хранилище ключей и связанный с ним объект метаданных в базе данных с помощью обозревателя объектов в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или с помощью PowerShell. Подробные сведения см. в статье [Общие сведения об управлении ключами для постоянного шифрования](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).  
   

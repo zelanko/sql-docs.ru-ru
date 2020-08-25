@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 8/12/2020
-ms.openlocfilehash: a92bc4b19adc4322852f19ddabe3d98e20174e40
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: bacfbe7df36b9222a4297ced95a0ffed2733fed6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88746064"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778463"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Скачивание и установка Azure Data Studio
 
@@ -31,7 +31,7 @@ Azure Data Studio выполняется в Windows, macOS и Linux.
 | macOS | [ZIP](https://go.microsoft.com/fwlink/?linkid=2138609) | 12 августа 2020 г. | 1.21.0 |
 | Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2138508)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2138507)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2138706) | 12 августа 2020 г.| 1.21.0 |
 
-Подробнее см. в [заметках о выпуске](release-notes.md).
+Подробнее см. в [заметках о выпуске](./release-notes-azure-data-studio.md?view=sql-server-ver15).
 
 ## <a name="get-azure-data-studio-for-windows"></a>Получение Azure Data Studio для Windows
 

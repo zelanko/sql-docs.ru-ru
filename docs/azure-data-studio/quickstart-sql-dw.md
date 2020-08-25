@@ -2,19 +2,19 @@
 title: Подключение и отправка запроса к хранилищу данных SQL Azure
 description: В этом кратком руководстве показано, как использовать Azure Data Studio для подключения к Хранилищу данных SQL Azure и выполнения запроса.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.reviewer: alayu, maghan, sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: f9a8213dacb3a7f221d3a3c3e51f0ed94bb6990a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e9c0ba08445eb1f9712b00b84cc07ac7eae310f1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728014"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766373"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Краткое руководство. Подключение к хранилищу данных SQL Azure и запрос данных с помощью Azure Data Studio
 
@@ -23,9 +23,9 @@ ms.locfileid: "85728014"
 ## <a name="prerequisites"></a>Предварительные требования
 Для работы с этим кратким руководством потребуется Azure Data Studio и хранилище данных SQL Azure.
 
-- [Установите Azure Data Studio](download.md).
+- [Установите Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15).
 
-Если у вас еще нет хранилища данных SQL, см. статью [Создание Хранилища данных SQL](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
+Если у вас еще нет хранилища данных SQL, см. статью [Создание Хранилища данных SQL](/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
 
 Запомните имя сервера и учетные данные для входа.
 
@@ -52,7 +52,7 @@ ms.locfileid: "85728014"
 
    ![Значок нового подключения](media/quickstart-sql-dw/new-connection-screen.png) 
 
-3. Если на сервере не настроено правило брандмауэра, разрешающее подключение Azure Data Studio, откроется форма **Создание нового правила брандмауэра**. Заполните форму, чтобы создать правило брандмауэра. Подробные сведения см. в разделе [Правила брандмауэра](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
+3. Если на сервере не настроено правило брандмауэра, разрешающее подключение Azure Data Studio, откроется форма **Создание нового правила брандмауэра**. Заполните форму, чтобы создать правило брандмауэра. Подробные сведения см. в разделе [Правила брандмауэра](/azure/sql-database/sql-database-firewall-configure).
 
    ![Новое правило брандмауэра](media/quickstart-sql-dw/firewall.png)  
 
@@ -140,7 +140,7 @@ ms.locfileid: "85728014"
 ## <a name="clean-up-resources"></a>Очистка ресурсов
 
 Другие статьи данной серии основаны на этом кратком руководстве. Если вы собираетесь изучать их, не удаляйте ресурсы, созданные в этом кратком руководстве. Если вы не собираетесь продолжать работу, выполните приведенные ниже действия, чтобы удалить ресурсы, созданные в этом кратком руководстве, на портале Azure.
-Очистите ресурсы, удалив группы ресурсов, которые больше не нужны. Подробные сведения см. в разделе [Очистка ресурсов](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
+Очистите ресурсы, удалив группы ресурсов, которые больше не нужны. Подробные сведения см. в разделе [Очистка ресурсов](/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
 
 
 ## <a name="next-steps"></a>Дальнейшие действия

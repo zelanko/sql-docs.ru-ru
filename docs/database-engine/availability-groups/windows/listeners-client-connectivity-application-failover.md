@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c60b0dbb40c41a7d41971bffc0f44b89ad77eaaa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 25b22aa23d773765f98cf3610d57bb041ba2205b
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882728"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88746184"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Подключение к прослушивателю группы доступности Always On 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -184,10 +184,10 @@ SAN: Win2019.contoso.com,Listener1.contoso.com,Listener2.contoso.com,Listener3.c
 
 Администратор домена должен настроить имя субъекта-службы (SPN) в Active Directory для каждого прослушивателя группы доступности, чтобы включить протокол Kerberos для клиентских подключений к прослушивателю. При регистрации имени субъекта-службы необходимо использовать учетную запись службы экземпляра сервера, на котором размещена реплика доступности. Для обеспечения работы SPN во всех репликах необходимо использовать одну учетную запись службы для всех экземпляров из кластера WSFC, на которых размещается группа доступности.  
   
- Для задания SPN используйте программу командной строки Windows **setspn** .  Пример настройки SPN для группы доступности `AG1listener.Adventure-Works.com` , размещенной на наборе экземпляров SQL Server, работающих под учетной записью домена `corp/svclogin2`.  
+ Для задания SPN используйте программу командной строки Windows **setspn** .  Пример настройки SPN для группы доступности `AG1listener.Adventure-Works.com` , размещенной на наборе экземпляров SQL Server, работающих под учетной записью домена `corp\svclogin2`.  
   
 ```  
-setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2  
+setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp\svclogin2  
 ```  
   
  Дополнительные сведения о ручной регистрации SPN для SQL Server см. в разделе [Регистрация имени участника-службы для соединений Kerberos](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  

@@ -19,28 +19,29 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: babdda8ca6ced94eba21788028d8bf6e6e7eeaae
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: fef5768f72f45bf388ccd5878d56dc480371aecd
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012455"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646064"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Примеры массового импорта и экспорта XML-документов (SQL Server)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-    
-##  <a name="top"></a>
- Можно выполнить массовый импорт XML-документов в базу данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или осуществить массовый экспорт XML-документов из базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В этом разделе приведены примеры и того, и другого.  
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
+## <a name="top"></a>
+
+Можно выполнить массовый импорт XML-документов в базу данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или осуществить массовый экспорт XML-документов из базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В этом разделе приведены примеры и того, и другого.
+
+Для выполнения массового импорта данных из файла в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или несекционированное представление могут использоваться следующие средства.  
   
- Для выполнения массового импорта данных из файла в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или несекционированное представление могут использоваться следующие средства.  
+- Программа**bcp**  
+   Программа **bcp** может выполнять экспорт везде в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , где работает инструкция SELECT, включая секционированные представления.  
+
+- BULK INSERT  
   
--   Программа**bcp**  
-    Программа **bcp** может выполнять экспорт везде в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , где работает инструкция SELECT, включая секционированные представления.  
-  
--   BULK INSERT  
-  
--   Инструкции INSERT ... SELECT * FROM OPENROWSET(BULK...).  
+- Инструкции INSERT ... SELECT * FROM OPENROWSET(BULK...).  
 
 Дополнительные сведения см. в следующих разделах:
 - [Массовый импорт и экспорт данных с использованием программы bcp (SQL Server)](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)

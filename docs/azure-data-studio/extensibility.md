@@ -2,19 +2,19 @@
 title: Добавление функциональных возможностей с помощью расширяемости
 description: Сведения о модели расширяемости и основных областях расширяемости для добавления функциональных возможностей в Azure Data Studio
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 3595c9aac3b0b8a0419780cdeaf9b5547bfa97d1
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: a8866c438b446715f7e804688f50881e0b0eb167
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483862"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778443"
 ---
 # <a name="azure-data-studio-extensibility"></a>Расширяемость Azure Data Studio
 
@@ -111,7 +111,7 @@ ms.locfileid: "86483862"
 
 `dashboard.insights`
 
-Вы можете регистрировать аналитические мини-приложения с помощью элемента dashboard.insights. Это аналогично процедуре, описываемой в статье [Руководство. Создание настраиваемого аналитического мини-приложения](https://docs.microsoft.com/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server).
+Вы можете регистрировать аналитические мини-приложения с помощью элемента dashboard.insights. Это аналогично процедуре, описываемой в статье [Руководство. Создание настраиваемого аналитического мини-приложения](./tutorial-build-custom-insight-sql-server.md?view=sql-server-ver15).
 
 ```json
 "dashboard.insights": {

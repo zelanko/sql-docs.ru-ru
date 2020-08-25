@@ -5,22 +5,22 @@ ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: cac73bebca185f40deb1b1bac4a77c6ceb20264e
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 9ecee71588cb54cb23c813cf5009b92159cf94d6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522458"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765923"
 ---
 # <a name="sql-server-import-extension-preview"></a>Расширение "Импорт SQL Server" (предварительная версия)
 
 Расширение "Импорт SQL Server" (предварительная версия) преобразует файлы TXT и CSV в таблицы SQL. Этот мастер использует платформу Microsoft Research под названием [Program Synthesis using Examples (PROSE)](https://microsoft.github.io/prose/) для интеллектуального анализа файлов с минимальным вмешательством пользователя. Это эффективная платформа для первичной обработки данных, которая также применяется для мгновенного заполнения в Microsoft Excel
 
-Дополнительные сведения о версии этой функции для SSMS см. в [этой статье](https://docs.microsoft.com/sql/relational-databases/import-export/import-flat-file-wizard).
+Дополнительные сведения о версии этой функции для SSMS см. в [этой статье](../relational-databases/import-export/import-flat-file-wizard.md).
 
 
 ## <a name="install-the-sql-server-import-extension"></a>Установка расширения "Импорт SQL Server"

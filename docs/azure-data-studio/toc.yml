@@ -1,5 +1,5 @@
 - name: Документация по Azure Data Studio
-  href: ../azure-data-studio/index.yml
+  href: ./index.yml
 - name: "Скачать Azure Data\_Studio"
   href: download-azure-data-studio.md
 - name: Заметки о выпуске
@@ -127,7 +127,7 @@
     - name: Средства SQL
       href: ../tools/overview-sql-tools.md
     - name: Средства для разработчиков Azure
-      href: 'https://docs.microsoft.com/azure/?product=developer-tools'
+      href: /azure/?product=developer-tools
 - name: Ресурсы
   items:
     - name: ВОПРОСЫ И ОТВЕТЫ

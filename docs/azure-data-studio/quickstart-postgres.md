@@ -4,17 +4,17 @@ description: Выполните краткое руководство, в кот
 ms.custom: seodec18
 ms.date: 09/18/2019
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.reviewer: alayu, maghan, sstein
 ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
-ms.openlocfilehash: e2ba0f0123faeacd0f431a72ef35add40ee48e19
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 99e52735f317a538c9a11d3c048c513b153d5da7
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411310"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766553"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-postgresql"></a>Краткое руководство. Использование Azure Data Studio для подключения и запросов к PostgreSQL
 
@@ -24,9 +24,9 @@ ms.locfileid: "87411310"
 
 Для работы с этим кратким руководством вам потребуется Azure Data Studio, расширение PostgreSQL для Azure Data Studio, а также доступ к серверу PostgreSQL.
 
-- [Установите Azure Data Studio](download.md).
+- [Установите Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15).
 - [Установите расширение PostgreSQL для Azure Data Studio](postgres-extension.md).
-- [Установите PostgreSQL](https://www.postgresql.org/download/). (Кроме того, вы можете создать базу данных Postgres в облаке с помощью команды [az postgres up](https://docs.microsoft.com/azure/postgresql/quickstart-create-server-up-azure-cli).) 
+- [Установите PostgreSQL](https://www.postgresql.org/download/). (Кроме того, вы можете создать базу данных Postgres в облаке с помощью команды [az postgres up](/azure/postgresql/quickstart-create-server-up-azure-cli).) 
 
 ## <a name="connect-to-postgresql"></a>Подключение к PostgreSQL
 
@@ -133,4 +133,4 @@ ms.locfileid: "87411310"
 
 ## <a name="next-steps"></a>Next Steps
 
-См. сведения о [сценариях, доступных для Postgres в Azure Data Studio](postgres-extension.md). 
+См. сведения о [сценариях, доступных для Postgres в Azure Data Studio](postgres-extension.md).

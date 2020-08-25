@@ -2,19 +2,19 @@
 title: Резервное копирование и восстановление базы данных
 description: Из этого руководства вы узнаете, как выполнять резервное копирование и восстановление баз данных с помощью Azure Data Studio.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 11/04/2019
-ms.openlocfilehash: 5e276a830f5fa6abc9b1fcf70c540d4cb955d5af
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 8594178dc6817cc8b826268c3fd0aebce59af2ec
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522428"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765803"
 ---
 # <a name="backup-and-restore-databases-using-azure-data-studio"></a>Резервное копирование и восстановление баз данных с помощью Azure Data Studio
 
@@ -32,7 +32,7 @@ ms.locfileid: "87522428"
 
 * [Подключение и отправка запроса к SQL Server с помощью [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 
-Для работы с этим руководством требуется подключение к базе данных SQL Server. База данных SQL Azure обеспечивает автоматическое резервное копирование, поэтому Azure Data Studio не выполняет резервное копирование и восстановление базы данных SQL Azure. Подробные сведения см. в статье [Автоматическое резервное копирование базы данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups).
+Для работы с этим руководством требуется подключение к базе данных SQL Server. База данных SQL Azure обеспечивает автоматическое резервное копирование, поэтому Azure Data Studio не выполняет резервное копирование и восстановление базы данных SQL Azure. Подробные сведения см. в статье [Автоматическое резервное копирование базы данных SQL](/azure/sql-database/sql-database-automated-backups).
 
 ## <a name="back-up-a-database"></a>Резервное копирование базы данных
 

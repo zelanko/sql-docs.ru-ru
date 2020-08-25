@@ -2,19 +2,19 @@
 title: Краткое руководство. Подключение и отправка запроса к SQL Server
 description: Выполните краткое руководство, в котором вы используете Azure Data Studio для подключения к SQL Server, а затем с помощью инструкций Transact-SQL (T-SQL) создадите базу данных.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 08/02/2019
-ms.openlocfilehash: 532e210d239f8c55b99bd34828fafe160e1fb78b
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: f49d322e664bce35f7d9a47ab5c8f3b197468377
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411290"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766363"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-sql-server"></a>Краткое руководство. Использование Azure Data Studio для подключения и запросов к SQL Server
 
@@ -24,13 +24,13 @@ ms.locfileid: "87411290"
 
 Для работы с этим кратким руководством требуется Azure Data Studio и доступ к SQL Server.
 
-- [Установите Azure Data Studio](download.md).
+- [Установите Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15).
 
 Если у вас нет доступа к SQL Server, выберите платформу по следующим ссылкам (обязательно запомните имя для входа и пароль SQL):
 
 - [Windows — скачать выпуск SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)
-- [macOS — скачать SQL Server 2017 с Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
-- [Linux — скачать выпуск SQL Server 2017 Developer Edition](https://docs.microsoft.com/sql/linux/sql-server-linux-overview#install). Необходимо выполнить действия только до этапа *создания и отправки запроса к данным*.
+- [macOS — скачать SQL Server 2017 с Docker](../linux/quickstart-install-connect-docker.md)
+- [Linux — скачать выпуск SQL Server 2017 Developer Edition](../linux/sql-server-linux-overview.md#install). Необходимо выполнить действия только до этапа *создания и отправки запроса к данным*.
 
 ## <a name="connect-to-a-sql-server"></a>Подключение к SQL Server
 

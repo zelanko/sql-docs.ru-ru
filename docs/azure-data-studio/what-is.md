@@ -2,19 +2,19 @@
 title: Что такое Azure Data Studio
 description: Azure Data Studio — это бесплатное упрощенное средство, которое работает в Windows, macOS и Linux и предназначено для управления SQL Server, базой данных SQL Azure и хранилищем данных SQL Azure.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: overview
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 01/15/2020
-ms.openlocfilehash: 05819f1bafef5095ac9d3534b0293817f3841f96
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b58a54e99c269db113bdd1e1821ba55ce3d83ff5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771924"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765513"
 ---
 # <a name="what-is-azure-data-studio"></a>Что такое Azure Data Studio?
 
@@ -24,7 +24,7 @@ Azure Data Studio предлагает современный редактор �
 
 Исходный код Azure Data Studio и используемых поставщиков данных доступен на сайте GitHub на условиях лицензионного соглашения в отношении исходного кода. Это соглашение предоставляет права на изменение и использование программного обеспечения, но не на его распространение или размещение в облачной службе. Дополнительные сведения см. в статье [Вопросы и ответы по Azure Data Studio](faq.md).
 
-**[Скачивание и установка Azure Data Studio](download.md)**
+**[Скачивание и установка Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15)**
 
 ## <a name="sql-code-editor-with-intellisense"></a>Редактор кода SQL с технологией IntelliSense
 
@@ -165,7 +165,7 @@ Azure Data Studio также предоставляет возможности �
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-- [Скачивание и установка Azure Data Studio](download.md)
+- [Скачивание и установка Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15)
 - [Подключение и отправка запроса к SQL Server](quickstart-sql-server.md)
 - [Подключение и отправка запроса к базе данных SQL Azure](quickstart-sql-database.md)
 

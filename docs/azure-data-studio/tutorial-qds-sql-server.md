@@ -2,19 +2,19 @@
 title: Включение примера мини-приложения "Пять самых медленных запросов"
 description: В этом руководстве показано, как включить пример мини-приложения "Пять самых медленных запросов" на панели мониторинга базы данных.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 06/01/2020
-ms.openlocfilehash: f4e8e76583a90ce64a9f99ef3c94875b2c1fc6dd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 678d985daf2ca3130fbf7eb3b052718c3cc898ab
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774539"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88746194"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Руководство по Добавление примера мини-приложения *Пять самых медленных запросов* на панель мониторинга базы данных
 

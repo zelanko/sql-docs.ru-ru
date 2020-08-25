@@ -2,19 +2,19 @@
 title: Подключение к SQL Server с использованием проверки подлинности Windows (Kerberos)
 description: Узнайте, как подключить Azure Data Studio к SQL Server с помощью встроенной проверки подлинности Microsoft Kerberos.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 325d066ec88045380c45dc2784e6766a4f549757
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 573f78b3edace44695f73d79fba9679ba5fd4e00
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411160"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778433"
 ---
 # <a name="connect-azure-data-studio-to-your-sql-server-using-windows-authentication---kerberos"></a>Подключение Azure Data Studio к своему SQL Server с использованием проверки подлинности Windows — Kerberos
 
@@ -25,7 +25,7 @@ Azure Data Studio поддерживает подключение к SQL Server 
 ## <a name="prerequisites"></a>Предварительные требования
 
 - Доступ к компьютеру, присоединенному к домену Windows, для запроса контроллера домена Kerberos.
-- SQL Server должен быть настроен для разрешения проверки подлинности Kerberos. Для драйвера клиента, работающего в Unix, встроенная проверка подлинности поддерживается только с помощью Kerberos. Дополнительные сведения см. в статье [Использовании встроенной проверки подлинности Kerberos для подключения к SQL Server](../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md). Для каждого экземпляра SQL Server, к которому вы пытаетесь подключиться, должны быть зарегистрированы имена субъектов-служб. Дополнительные сведения см. в разделе [Регистрация имени участника-службы](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats).
+- SQL Server должен быть настроен для разрешения проверки подлинности Kerberos. Для драйвера клиента, работающего в Unix, встроенная проверка подлинности поддерживается только с помощью Kerberos. Дополнительные сведения см. в статье [Использовании встроенной проверки подлинности Kerberos для подключения к SQL Server](../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md). Для каждого экземпляра SQL Server, к которому вы пытаетесь подключиться, должны быть зарегистрированы имена субъектов-служб. Дополнительные сведения см. в разделе [Регистрация имени участника-службы](/previous-versions/sql/sql-server-2008-r2/ms191153(v=sql.105)#SPN%20Formats).
 
 
 ## <a name="checking-if-sql-server-has-kerberos-setup"></a>Проверка наличия настройки Kerberos в SQL Server

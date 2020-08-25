@@ -21,15 +21,16 @@ helpviewer_keywords:
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 4fcda824e7d64bc5eb769f1f1e322430f7f2bb91
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a90e0e787abdaedb4cde1a3461349fcd521c6cf9
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479183"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646394"
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   Изменяет ключ шифрования столбца в базе данных, добавляя или удаляя зашифрованное значение. У ключа шифрования столбцов может быть до двух значений, что позволяет менять соответствующий главный ключ столбца. Ключ шифрования столбцов используется при шифровании столбцов с помощью [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) или [Always Encrypted с безопасными анклавами](../../relational-databases/security/encryption/always-encrypted-enclaves.md). Перед добавлением значения ключа шифрования столбцов необходимо определить главный ключ столбца, который использовался для шифрования значения, с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или инструкции [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md).  
   

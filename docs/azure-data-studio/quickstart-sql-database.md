@@ -2,19 +2,19 @@
 title: Подключение и отправка запроса к базе данных SQL Azure
 description: Выполните краткое руководство, в котором вы используете Azure Data Studio для подключения к серверу базы данных SQL Azure, а затем создадите базу данных и отправите к ней запрос.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.reviewer: alayu; maghan; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
 ms.date: 05/14/2019
-ms.openlocfilehash: f7ceb73d25d69e1d8e8f33b2c6a23b0ff7bff636
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: fc3ff2a1edea509318040edd90e693b8eaf839df
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411300"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766443"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-azure-sql-database"></a>Краткое руководство. Использование Azure Data Studio для подключения и обращения к базе данных SQL Azure
 
@@ -24,13 +24,13 @@ ms.locfileid: "87411300"
 
 Для работы с этим кратким руководством потребуется Azure Data Studio и сервер Базы данных SQL Azure.
 
-- [Установите Azure Data Studio](download.md).
+- [Установите Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15).
 
 Если у вас нет сервера SQL Azure, выполните одно из следующих кратких руководств по базе данных SQL Azure. Запомните полное имя сервера и учетные данные для входа для последующих шагов.
 
-- [Создание базы данных — портал](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
-- [Создание базы данных — CLI](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-cli)
-- [Создание базы данных — PowerShell](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-powershell)
+- [Создание базы данных — портал](/azure/sql-database/sql-database-get-started-portal)
+- [Создание базы данных — CLI](/azure/sql-database/sql-database-get-started-cli)
+- [Создание базы данных — PowerShell](/azure/sql-database/sql-database-get-started-powershell)
 
 
 ## <a name="connect-to-your-azure-sql-database-server"></a>Подключение к серверу базы данных SQL Azure
@@ -57,7 +57,7 @@ ms.locfileid: "87411300"
 
 3. Выберите **Подключиться**.
 
-4. Если на сервере не настроено правило брандмауэра, разрешающее подключение Azure Data Studio, откроется форма **Создание нового правила брандмауэра**. Заполните форму, чтобы создать правило брандмауэра. Подробные сведения см. в разделе [Правила брандмауэра](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
+4. Если на сервере не настроено правило брандмауэра, разрешающее подключение Azure Data Studio, откроется форма **Создание нового правила брандмауэра**. Заполните форму, чтобы создать правило брандмауэра. Подробные сведения см. в разделе [Правила брандмауэра](/azure/sql-database/sql-database-firewall-configure).
 
    ![Новое правило брандмауэра](media/quickstart-sql-database/firewall.png)  
 
@@ -150,7 +150,7 @@ ms.locfileid: "87411300"
 
 ## <a name="clean-up-resources"></a>Очистка ресурсов
 
-Последующие статьи краткого руководства основываются на созданных здесь ресурсах. Если вы планируете работать с этими статьями, не удаляйте эти ресурсы. В противном случае удалите ненужные ресурсы на портале Azure. Подробные сведения см. в разделе [Очистка ресурсов](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
+Последующие статьи краткого руководства основываются на созданных здесь ресурсах. Если вы планируете работать с этими статьями, не удаляйте эти ресурсы. В противном случае удалите ненужные ресурсы на портале Azure. Подробные сведения см. в разделе [Очистка ресурсов](/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
