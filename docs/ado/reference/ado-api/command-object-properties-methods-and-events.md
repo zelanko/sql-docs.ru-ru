@@ -13,48 +13,48 @@ helpviewer_keywords:
 ms.assetid: 0389f21c-06da-4090-9da1-28d912f888d7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ffdbe71126c4574da16b0e9244e2632efcf03f43
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7840a0853dd3279f06971db098e50951ccc99d1b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450876"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776143"
 ---
 # <a name="command-object-properties-methods-and-events"></a>Свойства, методы и события объекта Command
 ## <a name="propertiescollections"></a>Свойства и коллекции  
- [ActiveConnection, свойство](../../../ado/reference/ado-api/activeconnection-property-ado.md)  
+ [ActiveConnection, свойство](./activeconnection-property-ado.md)  
   
- [CommandStream, свойство](../../../ado/reference/ado-api/commandstream-property-ado.md)  
+ [CommandStream, свойство](./commandstream-property-ado.md)  
   
- [CommandText, свойство](../../../ado/reference/ado-api/commandtext-property-ado.md)  
+ [CommandText, свойство](./commandtext-property-ado.md)  
   
- [CommandTimeout, свойство](../../../ado/reference/ado-api/commandtimeout-property-ado.md)  
+ [CommandTimeout, свойство](./commandtimeout-property-ado.md)  
   
- [CommandType, свойство](../../../ado/reference/ado-api/commandtype-property-ado.md)  
+ [CommandType, свойство](./commandtype-property-ado.md)  
   
- [Свойство Dialect](../../../ado/reference/ado-api/dialect-property.md)  
+ [Свойство Dialect](./dialect-property.md)  
   
- [Имя, свойство](../../../ado/reference/ado-api/name-property-ado.md)  
+ [Свойство Name](./name-property-ado.md)  
   
- [NamedParameters, свойство](../../../ado/reference/ado-api/namedparameters-property-ado.md)  
+ [NamedParameters, свойство](./namedparameters-property-ado.md)  
   
- [Коллекция Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)  
+ [Коллекция Parameters](./parameters-collection-ado.md)  
   
- [Подготовленное свойство](../../../ado/reference/ado-api/prepared-property-ado.md)  
+ [Подготовленное свойство](./prepared-property-ado.md)  
   
- [Коллекция Properties](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Коллекция Properties](./properties-collection-ado.md)  
   
- [Свойство State](../../../ado/reference/ado-api/state-property-ado.md)  
+ [Свойство State](./state-property-ado.md)  
   
 ## <a name="methods"></a>Методы  
- [Метод Cancel](../../../ado/reference/ado-api/cancel-method-ado.md)  
+ [Метод Cancel](./cancel-method-ado.md)  
   
- [Метод CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)  
+ [Метод CreateParameter](./createparameter-method-ado.md)  
   
- [Метод Execute (объект Command ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)  
+ [Метод Execute (объект Command ADO)](./execute-method-ado-command.md)  
   
 ## <a name="events"></a>События  
  Нет.  
   
 ## <a name="see-also"></a>См. также:  
- [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)
+ [Объект Command (ADO)](./command-object-ado.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2bdb668584a0a725add4decc0bd64217d5dacbb5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d19743fb8434ddfb75025ae47da079a8256f270f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451436"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776703"
 ---
 # <a name="ado-events-model-example-vc"></a>Пример модели событий ADO (Visual C ++)
-В Visual C++ разделе [Создание экземпляра события ADO по языку](../../../ado/guide/data/ado-event-instantiation-by-language.md) дается общее описание того, как создать экземпляр модели событий ADO. Ниже приведен конкретный пример создания модели событий в среде, созданной директивой **#import** .  
+В Visual C++ разделе [Создание экземпляра события ADO по языку](../../guide/data/ado-event-instantiation-by-language.md) дается общее описание того, как создать экземпляр модели событий ADO. Ниже приведен конкретный пример создания модели событий в среде, созданной директивой **#import** .  
   
  Общее описание использует **адоинт. h** в качестве ссылки для сигнатур методов. Однако некоторые сведения в общем описании меняются немного в результате использования директивы **#import** .  
   

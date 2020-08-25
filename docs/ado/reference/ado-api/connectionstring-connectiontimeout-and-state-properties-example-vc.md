@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c6bd2609-4c49-462f-a1aa-7bee0f615adb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4b0281b569a6bfaf4f28d6958011ab3efacb4221
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7efad01088e4151d37dea9d71c1662a228e0c822
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444466"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775933"
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vc"></a>Пример свойств ConnectionString, ConnectionTimeout и State (Visual c++)
-В этом примере демонстрируются различные способы использования свойства [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) для открытия объекта [соединения](../../../ado/reference/ado-api/connection-object-ado.md) . Он также использует свойство [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) для установки времени ожидания соединения, а свойство [State](../../../ado/reference/ado-api/state-property-ado.md) — для проверки состояния соединений. Для выполнения этой процедуры требуется функция-состояние.  
+В этом примере демонстрируются различные способы использования свойства [ConnectionString](./connectionstring-property-ado.md) для открытия объекта [соединения](./connection-object-ado.md) . Он также использует свойство [ConnectionTimeout](./connectiontimeout-property-ado.md) для установки времени ожидания соединения, а свойство [State](./state-property-ado.md) — для проверки состояния соединений. Для выполнения этой процедуры требуется функция-состояние.  
   
 > [!NOTE]
 >  При подключении к поставщику источника данных, который поддерживает проверку подлинности Windows, следует указать **Trusted_Connection = Yes** или **Integrated Security = SSPI** вместо сведений об идентификаторе пользователя и пароле в строке подключения.  
@@ -167,8 +167,8 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Свойство ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
- [Свойство ConnectionTimeout (ADO)](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)   
- [Свойство State (ADO)](../../../ado/reference/ado-api/state-property-ado.md)
+## <a name="see-also"></a>См. также  
+ [Объект Connection (ADO)](./connection-object-ado.md)   
+ [Свойство ConnectionString (ADO)](./connectionstring-property-ado.md)   
+ [Свойство ConnectionTimeout (ADO)](./connectiontimeout-property-ado.md)   
+ [Свойство State (ADO)](./state-property-ado.md)

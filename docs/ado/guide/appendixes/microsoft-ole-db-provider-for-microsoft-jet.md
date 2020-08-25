@@ -15,24 +15,24 @@ helpviewer_keywords:
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 822c9f6ef6aebe5e32bb37e4c89a9bb4e6d7db68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1747f01b554e8df45a7835e2cb2006adcdb3079a
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454076"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806619"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Обзор поставщика Microsoft OLE DB для Microsoft Jet
 Поставщик OLE DB для Microsoft Jet позволяет ADO получать доступ к базам данных Microsoft Jet.
 
 ## <a name="connection-string-parameters"></a>Параметры строки соединения
- Чтобы подключиться к этому поставщику, задайте для аргумента *поставщика* свойства [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) следующее значение:
+ Чтобы подключиться к этому поставщику, задайте для аргумента *поставщика* свойства [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md) следующее свойство:
 
 ```vb
 Microsoft.Jet.OLEDB.4.0
 ```
 
- При чтении свойства [поставщика](../../../ado/reference/ado-api/provider-property-ado.md) также будет возвращена эта строка.
+ При чтении свойства [поставщика](../../reference/ado-api/provider-property-ado.md) также будет возвращена эта строка.
 
 ## <a name="typical-connection-string"></a>Типичная строка подключения
  Типичная строка подключения для этого поставщика:
@@ -69,7 +69,7 @@ Microsoft.Jet.OLEDB.4.0
 |Jet OLEDB: шифрование базы данных (DBPROP_JETOLEDB_ENCRYPTDATABASE)|Указывает, следует ли шифровать сжатую базу данных. Если это свойство не задано, сжатая база данных будет зашифрована, если исходная база данных также была зашифрована.|
 |Jet OLEDB: тип подсистемы (DBPROP_JETOLEDB_ENGINE)|Указывает подсистему хранилища, используемую для доступа к текущему хранилищу данных.|
 |Jet OLEDB: эксклюзивная асинхронная задержка (DBPROP_JETOLEDB_EXCLUSIVEASYNCDELAY)|Указывает максимальный интервал времени в миллисекундах, в течение которого Jet может задержать асинхронную запись на диск, когда база данных открыта в монопольном режиме.<br /><br /> Это свойство игнорируется, если **Jet OLEDB: время ожидания транзакции сброса** данных равно 0.|
-|Jet OLEDB: время ожидания очистки транзакций (DBPROP_JETOLEDB_FLUSHTRANSACTIONTIMEOUT)|Указывает время ожидания, по истечении которого данные, хранящиеся в кэше для асинхронной записи, фактически записываются на диск. Этот параметр переопределяет значения для **Jet OLEDB: Shared Async Delay** и **Jet OLEDB: эксклюзивная асинхронная задержка**.|
+|Jet OLEDB: время ожидания очистки транзакций (DBPROP_JETOLEDB_FLUSHTRANSACTIONTIMEOUT)|Указывает время ожидания, по истечении которого данные, хранящиеся в кэше для асинхронной записи, записываются на диск. Этот параметр переопределяет значения для **Jet OLEDB: Shared Async Delay** и **Jet OLEDB: эксклюзивная асинхронная задержка**.|
 |Jet OLEDB: глобальные групповые транзакции (DBPROP_JETOLEDB_GLOBALBULKNOTRANSACTIONS)|Указывает, являются ли транзакции с массовыми SQL транзакционными.|
 |Jet OLEDB: глобальные частичные операции без операций (DBPROP_JETOLEDB_GLOBALBULKPARTIAL)|Указывает пароль, используемый для открытия базы данных.|
 |Jet OLEDB: Неявная синхронизация фиксации (DBPROP_JETOLEDB_IMPLICITCOMMITSYNC)|Указывает, записываются ли изменения, внесенные во внутренние неявные транзакции, в синхронном или асинхронном режиме.|
@@ -106,16 +106,16 @@ Microsoft.Jet.OLEDB.4.0
 |Jet OLEDB: сохраненный запрос (DBPROP_JETOLEDB_STOREDQUERY)|Указывает, следует ли интерпретировать текст команды как хранимый запрос вместо команды SQL.|
 |Jet OLEDB: Проверка правил в наборе (DBPROP_JETOLEDB_VALIDATEONSET)|Указывает, оцениваются ли правила проверки Jet при установке данных столбца или при фиксации изменений в базе данных.|
 
- По умолчанию поставщик OLE DB для Microsoft Jet открывает базы данных Microsoft Jet в режиме чтения и записи. Чтобы открыть базу данных в режиме только для чтения, установите свойство [mode](../../../ado/reference/ado-api/mode-property-ado.md) объекта **соединения** ADO в значение **адмодереад**.
+ По умолчанию поставщик OLE DB для Microsoft Jet открывает базы данных Microsoft Jet в режиме чтения и записи. Чтобы открыть базу данных в режиме только для чтения, установите свойство [mode](../../reference/ado-api/mode-property-ado.md) объекта **соединения** ADO в значение **адмодереад**.
 
 ## <a name="command-object-usage"></a>Использование объекта команды
- Текст команды в объекте [Command](../../../ado/reference/ado-api/command-object-ado.md) использует диалект Microsoft Jet SQL. В тексте команды можно указать запросы, возвращающие строки, запросы действий и имена таблиц. Однако хранимые процедуры не поддерживаются, и их не следует указывать.
+ Текст команды в объекте [Command](../../reference/ado-api/command-object-ado.md) использует диалект Microsoft Jet SQL. В тексте команды можно указать запросы, возвращающие строки, запросы действий и имена таблиц. Однако хранимые процедуры не поддерживаются, и их не следует указывать.
 
 ## <a name="recordset-behavior"></a>Поведение набора записей
- Ядро СУБД Microsoft Jet не поддерживает динамические курсоры. Таким образом, поставщик OLE DB для Microsoft Jet не поддерживает тип курсора **адлоккдинамик** . При запросе динамического курсора поставщик возвращает курсор KEYSET и сбрасывает свойство [примеры CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) , чтобы указать тип возвращаемого [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) . Кроме того, если запрашивается обновляемый **набор записей** (**LockType** — **adLockOptimistic**, **адлоккбатчоптимистик**или **адлоккпессимистик**), поставщик также возвращает курсор KEYSET и сбрасывает свойство **примеры CursorType** .
+ Ядро СУБД Microsoft Jet не поддерживает динамические курсоры. Таким образом, поставщик OLE DB для Microsoft Jet не поддерживает тип курсора **адлоккдинамик** . При запросе динамического курсора поставщик возвращает курсор KEYSET и сбрасывает свойство [примеры CursorType](../../reference/ado-api/cursortype-property-ado.md) , чтобы указать тип возвращаемого [набора записей](../../reference/ado-api/recordset-object-ado.md) . Кроме того, если запрашивается обновляемый **набор записей** (**LockType** — **adLockOptimistic**, **адлоккбатчоптимистик**или **адлоккпессимистик**), поставщик также возвращает курсор KEYSET и сбрасывает свойство **примеры CursorType** .
 
 ## <a name="dynamic-properties"></a>Динамические свойства
- Поставщик OLE DB для Microsoft Jet вставляет несколько динамических свойств в коллекцию **свойств** неоткрытыго [соединения](../../../ado/reference/ado-api/connection-object-ado.md), [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md)и [командных](../../../ado/reference/ado-api/command-object-ado.md) объектов.
+ Поставщик OLE DB для Microsoft Jet вставляет несколько динамических свойств в коллекцию **свойств** неоткрытыго [соединения](../../reference/ado-api/connection-object-ado.md), [набора записей](../../reference/ado-api/recordset-object-ado.md)и [командных](../../reference/ado-api/command-object-ado.md) объектов.
 
  В следующих таблицах приведены перекрестные индексы имен ADO и OLE DB для каждого динамического свойства. Ссылка на OLE DB программиста ссылается на имя свойства ADO по термину «Description». Дополнительные сведения об этих свойствах можно найти в справочнике по программисту OLE DB.
 
@@ -336,4 +336,4 @@ Microsoft.Jet.OLEDB.4.0
 |Updatability|DBPROP_UPDATABILITY|
 |Использование закладок|DBPROP_BOOKMARKS|
 
- Сведения о конкретных особенностях реализации и сведения о поставщике OLE DB для Microsoft Jet см. в документации по [службам Jet](https://msdn.microsoft.com/library/windows/desktop/ms722791.aspx) в OLE DB.
+ Сведения о конкретных особенностях реализации и сведения о поставщике OLE DB для Microsoft Jet см. в документации по [службам Jet](/previous-versions/windows/desktop/ms722791(v=vs.85)) в OLE DB.

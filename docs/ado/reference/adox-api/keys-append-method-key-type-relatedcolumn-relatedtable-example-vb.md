@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 13b5b1c3-6af6-439e-bb65-976578ba6bc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ab6a3130f0c1d2d87fa5f56f7096db4aaf943037
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a96894fc9842de991647e7d25b728c5f7a663566
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439836"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770093"
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vb"></a>Примеры метода Append коллекции Keys, свойства Type объекта Key, а также примеры свойств RelatedColumn, RelatedTable и UpdateRule (Visual Basic)
 В следующем коде показано, как создать связь по внешнему ключу между двумя существующими таблицами с именами **Customers** и **Orders**.  
@@ -73,18 +73,18 @@ End Sub
 ' EndCreateKeyVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Метод Append (столбцы ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Метод Append (ключи ADOX)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [Коллекция Columns (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Ключевой объект (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)   
- [Коллекция Keys (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)   
- [Свойство Name (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
- [Свойство RelatedColumn (ADOX)](../../../ado/reference/adox-api/relatedcolumn-property-adox.md)   
- [Свойство RelatedTable (ADOX)](../../../ado/reference/adox-api/relatedtable-property-adox.md)   
- [Объект Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
- [Коллекция Tables (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
- [Свойство Type (Key) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)   
- [Свойство UpdateRule (ADOX)](../../../ado/reference/adox-api/updaterule-property-adox.md)
+## <a name="see-also"></a>См. также  
+ [Метод Append (столбцы ADOX)](./append-method-adox-columns.md)   
+ [Метод Append (ключи ADOX)](./append-method-adox-keys.md)   
+ [Объект каталога (ADOX)](./catalog-object-adox.md)   
+ [Объект Column (ADOX)](./column-object-adox.md)   
+ [Коллекция Columns (ADOX)](./columns-collection-adox.md)   
+ [Ключевой объект (ADOX)](./key-object-adox.md)   
+ [Коллекция Keys (ADOX)](./keys-collection-adox.md)   
+ [Свойство Name (ADOX)](./name-property-adox.md)   
+ [Свойство RelatedColumn (ADOX)](./relatedcolumn-property-adox.md)   
+ [Свойство RelatedTable (ADOX)](./relatedtable-property-adox.md)   
+ [Объект Table (ADOX)](./table-object-adox.md)   
+ [Коллекция Tables (ADOX)](./tables-collection-adox.md)   
+ [Свойство Type (Key) (ADOX)](./type-property-key-adox.md)   
+ [Свойство UpdateRule (ADOX)](./updaterule-property-adox.md)

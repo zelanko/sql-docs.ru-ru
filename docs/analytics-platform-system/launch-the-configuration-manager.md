@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 421265abcf3731ed48ff34a6b199ba5cd3c6af5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74401056"
 ---
 # <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>Запуск Configuration Manager в системе аналитики платформы
@@ -29,7 +29,7 @@ ms.locfileid: "74401056"
   
 #### <a name="to-launch-from-a-browser-window"></a>Запуск из окна браузера  
   
-1.  Откройте браузер и перейдите в каталог `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`.  
+1.  Откройте браузер и перейдите в каталог `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100` .  
   
 2.  Правой кнопкой мыши щелкните `dwconfig.exe` и выберите пункт **Запуск от имени администратора**.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "74401056"
   
 1.  На рабочем столе откройте меню **Пуск** , выберите пункт **программы**, затем **стандартные**, щелкните правой кнопкой мыши пункт **Командная строка** и выберите команду **Запуск от имени администратора**.  
   
-2.  В командной строке введите следующую команду, чтобы изменить каталоги: `cd /d "C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100"`.  
+2.  В командной строке введите следующую команду, чтобы изменить каталоги: `cd /d "C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100"` .  
   
 3.  В командной строке введите `dwconfig.exe`.  
   
@@ -47,6 +47,6 @@ ms.locfileid: "74401056"
   
 ![SQL_Server_PDW_DWConfig_ApplTop](./media/launch-the-configuration-manager/SQL_Server_PDW_DWConfig_ApplTop.png "SQL_Server_PDW_DWConfig_ApplTop")  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Мониторинг устройства с помощью консоли администрирования &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   

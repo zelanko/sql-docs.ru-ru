@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0e08af60-f668-4092-8b6a-9e8b6db90448
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4b37c4ef22e44f1b7686d7b0313b07531f85540a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f273fb32b41b54e696544719df5f7c50a32f4acb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443216"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774283"
 ---
 # <a name="move-method-example-vc"></a>Пример метода Move (Visual C++)
-В этом примере метод [Move](../../../ado/reference/ado-api/move-method-ado.md) используется для позиционирования указателя записи на основе вводимых пользователем данных.  
+В этом примере метод [Move](./move-method-ado.md) используется для позиционирования указателя записи на основе вводимых пользователем данных.  
   
 ## <a name="example"></a>Пример  
   
@@ -258,5 +258,5 @@ Enter number of records to Move
 (positive or negative, Enter to quit):  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Метод Move (ADO)](../../../ado/reference/ado-api/move-method-ado.md)
+## <a name="see-also"></a>См. также  
+ [Метод Move (ADO)](./move-method-ado.md)

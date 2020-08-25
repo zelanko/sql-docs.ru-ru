@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7df1089e-69b7-476e-9244-19947c087351
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c82fc6388f1a7ad6582cc91ab2589afda2912f6a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e7bfbf83c3b10a97593810e5160f585f61e2fdec
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439746"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769893"
 ---
 # <a name="parameters-collection-command-property-example-vb"></a>Примеры коллекции Parameters и свойства Command (Visual Basic)
-В следующем коде показано, как использовать свойство [Command](../../../ado/reference/adox-api/command-property-adox.md) с объектом [Command](../../../ado/reference/ado-api/command-object-ado.md) для получения сведений о параметрах для процедуры.  
+В следующем коде показано, как использовать свойство [Command](./command-property-adox.md) с объектом [Command](../ado-api/command-object-ado.md) для получения сведений о параметрах для процедуры.  
   
 ```  
 ' BeginParametersVB  
@@ -76,9 +76,9 @@ End Sub
 ' EndParametersVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Свойство ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Свойство Command (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
- [Объект процедуры (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
- [Коллекция Procedures (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)
+## <a name="see-also"></a>См. также  
+ [Свойство ActiveConnection (ADOX)](./activeconnection-property-adox.md)   
+ [Объект каталога (ADOX)](./catalog-object-adox.md)   
+ [Свойство Command (ADOX)](./command-property-adox.md)   
+ [Объект процедуры (ADOX)](./procedure-object-adox.md)   
+ [Коллекция Procedures (ADOX)](./procedures-collection-adox.md)

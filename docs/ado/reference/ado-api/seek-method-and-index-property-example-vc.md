@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 57bda520-e98b-443c-a8bc-d8430e89a383
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 93e4a003e2234c0ee8eb537bc8ee09cdef1869d7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f8d13a3d1ce8db32e01e20608dd1d7b3b3fb5be6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442266"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777513"
 ---
 # <a name="seek-method-and-index-property-example-vc"></a>Примеры метода Seek и свойства Index (Visual C++)
-В этом примере используется метод [Seek](../../../ado/reference/ado-api/seek-method.md) объекта [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) и свойство [index](../../../ado/reference/ado-api/index-property.md) в сочетании с данным ***идентификатором сотрудника***, чтобы найти имя сотрудника в таблице ***Employees*** базы данных Nwind. mdb.  
+В этом примере используется метод [Seek](./seek-method.md) объекта [Recordset](./recordset-object-ado.md) и свойство [index](./index-property.md) в сочетании с данным ***идентификатором сотрудника***, чтобы найти имя сотрудника в таблице ***Employees*** базы данных Nwind. mdb.  
   
 ```  
 // BeginSeekCpp.cpp  
@@ -226,7 +226,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Свойство index](../../../ado/reference/ado-api/index-property.md)   
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Seek, метод](../../../ado/reference/ado-api/seek-method.md)
+## <a name="see-also"></a>См. также  
+ [Свойство index](./index-property.md)   
+ [Объект Recordset (ADO)](./recordset-object-ado.md)   
+ [Метод Seek](./seek-method.md)

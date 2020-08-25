@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 55d91ba8-4d80-4df6-af8e-060a19ddc138
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ba9487a8fb3db896a69664d8ea0075627ba457c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8927b2c74b72020485719b9d52e391919e39794c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443046"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773983"
 ---
 # <a name="numericscale-and-precision-properties-example-vc"></a>Примеры свойств NumericScale и Precision (Visual C++)
-В этом примере используются свойства [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) и [Precision](../../../ado/reference/ado-api/precision-property-ado.md) для просмотра числа и точности полей в таблице ***скидок*** базы данных ***pubs*** .  
+В этом примере используются свойства [NumericScale](./numericscale-property-ado.md) и [Precision](./precision-property-ado.md) для просмотра числа и точности полей в таблице ***скидок*** базы данных ***pubs*** .  
   
 ```cpp
 // BeginNumericScaleCpp.cpp  
@@ -134,6 +134,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Свойство NumericScale (ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)   
- [Свойство Precision (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)
+## <a name="see-also"></a>См. также  
+ [Свойство NumericScale (ADO)](./numericscale-property-ado.md)   
+ [Свойство Precision (ADO)](./precision-property-ado.md)

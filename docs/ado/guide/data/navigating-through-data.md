@@ -16,24 +16,24 @@ helpviewer_keywords:
 ms.assetid: 8d88c9aa-8ec8-4969-8fa1-1663fd29bfc4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 93ea157cd3982046ccc44d10e4fbb8d712c80d7c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7edf60d503e93dbd95fe6f998fe9dd70df903238
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453136"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805707"
 ---
 # <a name="navigating-through-data"></a>Переход между записями данных
 **Набор записей** поддерживает различные методы и свойства для навигации по результирующему набору данных. Мы рассмотрим эту функцию, выполнив несколько сценариев с примерами объектов **Recordset** .  
   
  Этот раздел содержит следующие подразделы.  
   
--   [Переход к записи](../../../ado/guide/data/jumping-to-a-record.md)  
+-   [Переход к записи](./jumping-to-a-record.md)  
   
--   [Дополнительные способы перемещения в наборе записей](../../../ado/guide/data/more-ways-to-move-in-a-recordset.md)  
+-   [Дополнительные способы перемещения в наборе записей](./more-ways-to-move-in-a-recordset.md)  
   
--   [Использование закладок](../../../ado/guide/data/using-bookmarks.md)  
+-   [Использование закладок](./using-bookmarks.md)  
   
--   [Использование страниц](../../../ado/guide/data/using-pages.md)  
+-   [Использование страниц](./using-pages.md)  
   
--   [Позиционирование в наборе записей](../../../ado/guide/data/recordset-positioning.md)
+-   [Позиционирование в наборе записей](./recordset-positioning.md)

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 9157db745b999711966f0019747ba1d61823569e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400915"
 ---
 # <a name="monitoring-active-queries---parallel-data-warehouse"></a>Мониторинг активных запросов — Параллельное хранилище данных
@@ -47,7 +47,7 @@ WHERE command
 LIKE '%SELECT * FROM db1..memberAddresses%';  
 ```  
   
-`request_id` После определения запроса используйте другие сведения в `dm_pdw_exec_requests` таблице, чтобы узнать об обработке запроса, или используйте [sys. dm_pdw_request_steps](../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md) , чтобы просмотреть состояние отдельных шагов запроса для выполнения запроса.  
+После `request_id` определения запроса используйте другие сведения в `dm_pdw_exec_requests` таблице, чтобы узнать об обработке запроса, или используйте [sys. dm_pdw_request_steps](../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md) , чтобы просмотреть состояние отдельных шагов запроса для выполнения запроса.  
   
 <!-- MISSING LINKS 
 ## See Also  

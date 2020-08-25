@@ -14,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f83f151331fe483400edda90d7deb7c469b5574
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4e1f1e1ecfef6725cfb15640486d7aeb63e348af
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444556"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806594"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>Обзор службы курсоров Майкрософт для OLE DB
 Служба курсора Майкрософт для OLE DB дополняет функции поддержки курсоров поставщиками данных. В результате пользователь воспринимает относительно единую функциональность всех поставщиков данных.
 
- Служба курсора делает динамические свойства доступными и улучшает поведение определенных методов. Например, динамическое свойство [optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) позволяет создавать временные индексы для упрощения определенных операций, таких как метод [Find](../../../ado/reference/ado-api/find-method-ado.md) .
+ Служба курсора делает динамические свойства доступными и улучшает поведение определенных методов. Например, динамическое свойство [optimize](../../reference/ado-api/optimize-property-dynamic-ado.md) позволяет создавать временные индексы для упрощения определенных операций, таких как метод [Find](../../reference/ado-api/find-method-ado.md) .
 
  Служба курсоров включает поддержку пакетного обновления во всех случаях. Он также имитирует более производительные типы курсоров, такие как динамические курсоры, когда поставщик данных может предоставлять только менее производительные курсоры, например статические курсоры.
 
 ## <a name="keyword"></a>Ключевое слово
- Чтобы вызвать этот компонент службы, задайте для свойства [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) или объекта [соединения](../../../ado/reference/ado-api/connection-object-ado.md) значение **адусеклиент**.
+ Чтобы вызвать этот компонент службы, задайте для свойства [CursorLocation](../../reference/ado-api/cursorlocation-property-ado.md) [набора записей](../../reference/ado-api/recordset-object-ado.md) или объекта [соединения](../../reference/ado-api/connection-object-ado.md) значение **адусеклиент**.
 
 ```vb
 connection.CursorLocation=adUseClient
@@ -37,7 +37,7 @@ recordset.CursorLocation=adUseClient
 ```
 
 ## <a name="dynamic-properties"></a>Динамические свойства
- При вызове службы курсора для OLE DB в коллекцию [свойств](../../../ado/reference/ado-api/properties-collection-ado.md) объекта **набора записей** добавляются следующие динамические свойства. Полный список динамических свойств **соединения** и объекта **набора записей** содержится в [индексе динамического свойства ADO](../../../ado/reference/ado-api/ado-dynamic-property-index.md). Связанные OLE DB имена свойств, где это необходимо, включаются в круглые скобки после имени свойства ADO.
+ При вызове службы курсора для OLE DB в коллекцию [свойств](../../reference/ado-api/properties-collection-ado.md) объекта **набора записей** добавляются следующие динамические свойства. Полный список динамических свойств **соединения** и объекта **набора записей** содержится в [индексе динамического свойства ADO](../../reference/ado-api/ado-dynamic-property-index.md). Связанные OLE DB имена свойств, где это необходимо, включаются в круглые скобки после имени свойства ADO.
 
  Изменения некоторых динамических свойств не видны базовому источнику данных после вызова службы курсора. Например, установка свойства *времени ожидания команды* в **наборе записей** не будет видна базовому поставщику данных.
 
@@ -64,16 +64,16 @@ Recordset1.Properties.Item("Command Time out") = 50
 |Дочерние строки кэша (DBPROP_ADC_CACHECHILDROWS)|Для наборов записей, созданных с помощью службы формирования данных, это значение указывает, хранятся ли дочерние наборы записей в кэше для последующего использования.|
 |Версия обработчика курсоров (DBPROP_ADC_CEVER)|Указывает версию используемой службы курсора.|
 |Ведение состояния изменений (DBPROP_ADC_MAINTAINCHANGESTATUS)|Указывает текст команды, используемой для повторной синхронизации одной или нескольких строк в соединении нескольких таблиц.|
-|[Optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) (Оптимизация)|Указывает, должен ли быть создан индекс. Если задано значение **true**, разрешает временное создание индексов для улучшения выполнения определенных операций.|
-|[Изменить имя формы](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|Указывает имя **набора записей**. Можно ссылаться в текущих или последующих командах формирования данных.|
-|[Команда повторной синхронизации](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|Указывает пользовательскую командную строку, которая используется методом повторной [синхронизации](../../../ado/reference/ado-api/resync-method.md) , когда действует свойство [уникальной таблицы](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) .|
-|[Уникальный каталог](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Указывает имя базы данных, содержащей таблицу, на которую ссылается свойство **уникальной таблицы** .|
-|[Уникальная схема](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Указывает имя владельца таблицы, на которую ссылается свойство **уникальной таблицы** .|
-|[уникальная таблица](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Указывает имя таблицы в **наборе записей** , созданном из нескольких таблиц, которые могут быть изменены операциями вставки, обновления или удаления.|
+|[Optimize](../../reference/ado-api/optimize-property-dynamic-ado.md) (Оптимизация)|Указывает, должен ли быть создан индекс. Если задано значение **true**, разрешает временное создание индексов для улучшения выполнения определенных операций.|
+|[Изменить имя формы](../../reference/ado-api/reshape-name-property-dynamic-ado.md)|Указывает имя **набора записей**. Можно ссылаться в текущих или последующих командах формирования данных.|
+|[Команда повторной синхронизации](../../reference/ado-api/resync-command-property-dynamic-ado.md)|Указывает пользовательскую командную строку, которая используется методом повторной [синхронизации](../../reference/ado-api/resync-method.md) , когда действует свойство [уникальной таблицы](../../reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) .|
+|[Уникальный каталог](../../reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Указывает имя базы данных, содержащей таблицу, на которую ссылается свойство **уникальной таблицы** .|
+|[Уникальная схема](../../reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Указывает имя владельца таблицы, на которую ссылается свойство **уникальной таблицы** .|
+|[уникальная таблица](../../reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|Указывает имя таблицы в **наборе записей** , созданном из нескольких таблиц, которые могут быть изменены операциями вставки, обновления или удаления.|
 |Критерии обновления (DBPROP_ADC_UPDATECRITERIA)|Указывает, какие поля в предложении **WHERE** используются для обработки конфликтов, происходящих во время обновления.|
-|[Повторная синхронизация обновления](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md) (DBPROP_ADC_UPDATERESYNC)|Указывает, вызывается ли метод **Resync** неявно после метода [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) (и его поведения), когда действует свойство **уникальной таблицы** .|
+|[Повторная синхронизация обновления](../../reference/ado-api/update-resync-property-dynamic-ado.md) (DBPROP_ADC_UPDATERESYNC)|Указывает, вызывается ли метод **Resync** неявно после метода [UpdateBatch](../../reference/ado-api/updatebatch-method.md) (и его поведения), когда действует свойство **уникальной таблицы** .|
 
- Можно также задать или получить динамическое свойство, указав его имя в качестве индекса для коллекции **свойств** . Например, можно получить и напечатать текущее значение динамического свойства [optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) , а затем задать новое значение следующим образом:
+ Можно также задать или получить динамическое свойство, указав его имя в качестве индекса для коллекции **свойств** . Например, можно получить и напечатать текущее значение динамического свойства [optimize](../../reference/ado-api/optimize-property-dynamic-ado.md) , а затем задать новое значение следующим образом:
 
 ```vb
 Debug.Print rs.Properties("Optimize")
@@ -85,9 +85,9 @@ rs.Properties("Optimize") = True
 
 |Имя свойства|Описание|
 |-------------------|-----------------|
-|[Примеры CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Дополняет типы курсоров, доступные для **набора записей**.|
-|[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|Дополняет типы блокировок, доступные для **набора записей**. Включает пакетные обновления.|
-|[Sort](../../../ado/reference/ado-api/sort-property.md)|Указывает одно или несколько имен полей, по которым сортируется **набор записей** , а также сведения о том, сортируются ли каждое поле в порядке возрастания или убывания.|
+|[Примеры CursorType](../../reference/ado-api/cursortype-property-ado.md)|Дополняет типы курсоров, доступные для **набора записей**.|
+|[LockType](../../reference/ado-api/locktype-property-ado.md)|Дополняет типы блокировок, доступные для **набора записей**. Включает пакетные обновления.|
+|[Sort](../../reference/ado-api/sort-property.md)|Указывает одно или несколько имен полей, по которым сортируется **набор записей** , а также сведения о том, сортируются ли каждое поле в порядке возрастания или убывания.|
 
 ## <a name="method-behavior"></a>Поведение метода
- Служба курсора для OLE DB включает или влияет на поведение метода [append](../../../ado/reference/ado-api/append-method-ado.md) объекта [field](../../../ado/reference/ado-api/field-object.md) . и методы [открытия](../../../ado/reference/ado-api/open-method-ado-recordset.md), [ресинхронизации](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)и [сохранения](../../../ado/reference/ado-api/save-method.md) объекта **Recordset** .
+ Служба курсора для OLE DB включает или влияет на поведение метода [append](../../reference/ado-api/append-method-ado.md) объекта [field](../../reference/ado-api/field-object.md) . и методы [открытия](../../reference/ado-api/open-method-ado-recordset.md), [ресинхронизации](../../reference/ado-api/resync-method.md), [UpdateBatch](../../reference/ado-api/updatebatch-method.md)и [сохранения](../../reference/ado-api/save-method.md) объекта **Recordset** .

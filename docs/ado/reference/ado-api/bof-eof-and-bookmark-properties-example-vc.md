@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 33bd0bf737b6c586c0cb97072b28650898e86696
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: be80fc6c09279920a992b25bb91ee7621aabf5a1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451146"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776593"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vc"></a>Пример свойств BOF, EOF и Bookmark (Visual c++)
-Первая функция в этом примере использует свойства [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) и [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) для вывода сообщения, если пользователь пытается переместиться после первой или последней записи [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md). Он использует свойство [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md) , чтобы пользователь мог пометить запись в **наборе записей** и вернуться к ней позже.  
+Первая функция в этом примере использует свойства [BOF](./bof-eof-properties-ado.md) и [EOF](./bof-eof-properties-ado.md) для вывода сообщения, если пользователь пытается переместиться после первой или последней записи [набора записей](./recordset-object-ado.md). Он использует свойство [Bookmark](./bookmark-property-ado.md) , чтобы пользователь мог пометить запись в **наборе записей** и вернуться к ней позже.  
   
  Вторая функция использует свойство Bookmark для размещения **закладки** каждой другой записи из **набора записей** в массив, а затем фильтрует набор записей с помощью массива.  
   
@@ -206,7 +206,7 @@ Authors with 25 percent royalty
 899-46-2035, Anne  Ringer  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Свойства BOF, EOF (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
- [Свойство Bookmark (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+## <a name="see-also"></a>См. также  
+ [Свойства BOF, EOF (ADO)](./bof-eof-properties-ado.md)   
+ [Свойство Bookmark (ADO)](./bookmark-property-ado.md)   
+ [Объект Recordset (ADO)](./recordset-object-ado.md)

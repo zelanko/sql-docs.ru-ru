@@ -14,46 +14,46 @@ helpviewer_keywords:
 ms.assetid: 0ded5ad9-8f83-4224-95af-38512783b972
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 07ef1c379dcf59b386b86d5b9fce38f77c521e01
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4644596d216bd459b19778607e309cb7713d6fc4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451426"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776663"
 ---
 # <a name="ado-events"></a>События ADO
 
 |Событие|Описание|  
 |-|-|  
-|[бегинтранскомплете](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|Вызывается после операции **примеры BeginTrans** .|  
-|[коммиттранскомплете](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|Вызывается после операции **CommitTrans** .|  
-|[коннекткомплете](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|Вызывается после запуска соединения.|  
-|[Отключение](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|Вызывается после завершения соединения.|  
-|[ендофрекордсет](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|Вызывается при попытке переместиться в строку после конца **набора записей**.|  
-|[ексекутекомплете](../../../ado/reference/ado-api/executecomplete-event-ado.md)|Вызывается после завершения выполнения команды.|  
-|[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|Вызывается после того, как все записи в длинной асинхронной операции были получены в **набор записей**.|  
-|[фетчпрогресс](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|Вызывается периодически во время длительной асинхронной операции, чтобы сообщить, сколько строк в данный момент было извлечено в **набор записей**.|  
-|[FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Вызывается после изменения значения одного или нескольких объектов **полей** .|  
-|[InfoMessage](../../../ado/reference/ado-api/infomessage-event-ado.md)|Вызывается всякий раз, когда возникает предупреждение во время операции **коннектионевент** .|  
-|[мовекомплете](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|Вызывается после изменения текущей позицией в **наборе записей** .|  
-|[RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Вызывается после изменения одной или нескольких записей.|  
-|[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|Вызывается после изменения **набора записей** .|  
-|[роллбакктранскомплете](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|Вызывается после операции **RollbackTrans** .|  
-|[WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Вызывается перед тем, как ожидающая операция изменяет значение одного или нескольких объектов **field** в **наборе записей**.|  
-|[WillChangeRecord](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Вызывается до того, как одна или несколько записей (строк) изменяются в **наборе записей** .|  
-|[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|Вызывается до того, как ожидающая операция изменяет **набор записей**.|  
-|[WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md)|Вызывается перед началом соединения.|  
-|[WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md)|Вызывается непосредственно перед выполнением ожидающей команды в этом соединении и предоставляет пользователю возможность проверять и изменять параметры выполнения, ожидающие обработки.|  
-|[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|Событие **виллмове** вызывается *до* того, как операция ожидает изменения текущей позицией в **наборе записей**.|  
+|[бегинтранскомплете](./begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|Вызывается после операции **примеры BeginTrans** .|  
+|[коммиттранскомплете](./begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|Вызывается после операции **CommitTrans** .|  
+|[коннекткомплете](./connectcomplete-and-disconnect-events-ado.md)|Вызывается после запуска соединения.|  
+|[Соедините](./connectcomplete-and-disconnect-events-ado.md)|Вызывается после завершения соединения.|  
+|[ендофрекордсет](./endofrecordset-event-ado.md)|Вызывается при попытке переместиться в строку после конца **набора записей**.|  
+|[ексекутекомплете](./executecomplete-event-ado.md)|Вызывается после завершения выполнения команды.|  
+|[FetchComplete](./fetchcomplete-event-ado.md)|Вызывается после того, как все записи в длинной асинхронной операции были получены в **набор записей**.|  
+|[фетчпрогресс](./fetchprogress-event-ado.md)|Вызывается периодически во время длительной асинхронной операции, чтобы сообщить, сколько строк в данный момент было извлечено в **набор записей**.|  
+|[FieldChangeComplete](./willchangefield-and-fieldchangecomplete-events-ado.md)|Вызывается после изменения значения одного или нескольких объектов **полей** .|  
+|[InfoMessage](./infomessage-event-ado.md)|Вызывается всякий раз, когда возникает предупреждение во время операции **коннектионевент** .|  
+|[мовекомплете](./willmove-and-movecomplete-events-ado.md)|Вызывается после изменения текущей позицией в **наборе записей** .|  
+|[RecordChangeComplete](./willchangerecord-and-recordchangecomplete-events-ado.md)|Вызывается после изменения одной или нескольких записей.|  
+|[RecordsetChangeComplete](./willchangerecordset-and-recordsetchangecomplete-events-ado.md)|Вызывается после изменения **набора записей** .|  
+|[роллбакктранскомплете](./begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|Вызывается после операции **RollbackTrans** .|  
+|[WillChangeField](./willchangefield-and-fieldchangecomplete-events-ado.md)|Вызывается перед тем, как ожидающая операция изменяет значение одного или нескольких объектов **field** в **наборе записей**.|  
+|[WillChangeRecord](./willchangerecord-and-recordchangecomplete-events-ado.md)|Вызывается до того, как одна или несколько записей (строк) изменяются в **наборе записей** .|  
+|[WillChangeRecordset](./willchangerecordset-and-recordsetchangecomplete-events-ado.md)|Вызывается до того, как ожидающая операция изменяет **набор записей**.|  
+|[WillConnect](./willconnect-event-ado.md)|Вызывается перед началом соединения.|  
+|[WillExecute](./willexecute-event-ado.md)|Вызывается непосредственно перед выполнением ожидающей команды в этом соединении и предоставляет пользователю возможность проверять и изменять параметры выполнения, ожидающие обработки.|  
+|[WillMove](./willmove-and-movecomplete-events-ado.md)|Событие **виллмове** вызывается *до* того, как операция ожидает изменения текущей позицией в **наборе записей**.|  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
- [Коллекции ADO](../../../ado/reference/ado-api/ado-collections.md)   
- [Динамические свойства ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
- [Перечислимые константы ADO](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [Приложение б. ошибки ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
- [Обработка событий ADO](../../../ado/guide/data/handling-ado-events.md)   
- [Методы ADO](../../../ado/reference/ado-api/ado-methods.md)   
- [Объектная модель ADO](../../../ado/reference/ado-api/ado-object-model.md)   
- [Объекты и интерфейсы ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
- [Свойства ADO](../../../ado/reference/ado-api/ado-properties.md)
+ [Справочник по API ADO](./ado-api-reference.md)   
+ [Коллекции ADO](./ado-collections.md)   
+ [Динамические свойства ADO](./ado-dynamic-properties.md)   
+ [Перечислимые константы ADO](./ado-enumerated-constants.md)   
+ [Приложение б. ошибки ADO](../../guide/appendixes/appendix-b-ado-errors.md)   
+ [Обработка событий ADO](../../guide/data/handling-ado-events.md)   
+ [Методы ADO](./ado-methods.md)   
+ [Объектная модель ADO](./ado-object-model.md)   
+ [Объекты и интерфейсы ADO](./ado-objects-and-interfaces.md)   
+ [Свойства ADO](./ado-properties.md)

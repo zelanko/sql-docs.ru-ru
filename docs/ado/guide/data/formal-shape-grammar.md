@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6a8d92abc3a1b0d7e6d39ac4149c186c5a2fc2eb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 75cfedbafa7bc0c1b954f8bbdea29ec92d45c07f
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453376"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806828"
 ---
 # <a name="formal-shape-grammar"></a>Грамматика формального формирования данных
 Это формальное грамматика для создания любой команды Shape:  
@@ -69,10 +69,10 @@ ms.locfileid: "88453376"
 |\<expression>|Visual Basic для приложений выражение, операнды которого являются другими столбцами, не являющимися ВЫЧИСЛЯЕМыми в одной строке.|  
   
 ## <a name="see-also"></a>См. также  
- [Доступ к строкам в иерархическом наборе записей](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
- [Общие сведения о формировании данных](../../../ado/guide/data/data-shaping-overview.md)   
- [Необходимые поставщики для формирования данных](../../../ado/guide/data/required-providers-for-data-shaping.md)   
- [Предложение APPEND для фигур](../../../ado/guide/data/shape-append-clause.md)   
- [Общие команды формы](../../../ado/guide/data/shape-commands-in-general.md)   
- [Предложение вычислений Shape](../../../ado/guide/data/shape-compute-clause.md)   
- [Функции Visual Basic для приложений](../../../ado/guide/data/visual-basic-for-applications-functions.md)
+ [Доступ к строкам в иерархическом наборе записей](./accessing-rows-in-a-hierarchical-recordset.md)   
+ [Общие сведения о формировании данных](./data-shaping-overview.md)   
+ [Необходимые поставщики для формирования данных](./required-providers-for-data-shaping.md)   
+ [Предложение APPEND для фигур](./shape-append-clause.md)   
+ [Общие команды формы](./shape-commands-in-general.md)   
+ [Предложение вычислений Shape](./shape-compute-clause.md)   
+ [Функции Visual Basic для приложений](./visual-basic-for-applications-functions.md)

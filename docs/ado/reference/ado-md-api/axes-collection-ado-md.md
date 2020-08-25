@@ -17,34 +17,34 @@ helpviewer_keywords:
 ms.assetid: 072fb21a-ec0f-4b02-9022-1cef3ad4bfff
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cc93e9ea8568a535067addbd51258074945200db
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 33839c31745976cc6df89e02b728a25ae8624fa5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441324"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776712"
 ---
 # <a name="axes-collection-ado-md"></a>Коллекция Axes (многомерные объекты ADO)
-Содержит объекты [осей](../../../ado/reference/ado-md-api/axis-object-ado-md.md) , определяющие набор ячеек.  
+Содержит объекты [осей](./axis-object-ado-md.md) , определяющие набор ячеек.  
   
 ## <a name="remarks"></a>Remarks  
- Объект набора [ячеек](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) содержит коллекцию **осей** . После открытия набора **ячеек** эта коллекция будет содержать по крайней мере одну **ось**. Более подробное описание использования объектов **Axis** см. в объекте [Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md) .  
+ Объект набора [ячеек](./cellset-object-ado-md.md) содержит коллекцию **осей** . После открытия набора **ячеек** эта коллекция будет содержать по крайней мере одну **ось**. Более подробное описание использования объектов **Axis** см. в объекте [Axis](./axis-object-ado-md.md) .  
   
 > [!NOTE]
->  Ось фильтра набора **ячеек** не содержится в коллекции **осей** . Дополнительные сведения см. в свойстве [филтераксис](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md) .  
+>  Ось фильтра набора **ячеек** не содержится в коллекции **осей** . Дополнительные сведения см. в свойстве [филтераксис](./filteraxis-property-ado-md.md) .  
   
  **Оси** — это стандартная коллекция ADO. С помощью свойств и методов коллекции можно выполнять следующие действия.  
   
--   Получите количество объектов в коллекции со свойством [Count](../../../ado/reference/ado-api/count-property-ado.md) .  
+-   Получите количество объектов в коллекции со свойством [Count](../ado-api/count-property-ado.md) .  
   
--   Возврат объекта из коллекции со свойством [элемента](../../../ado/reference/ado-api/item-property-ado.md) по умолчанию.  
+-   Возврат объекта из коллекции со свойством [элемента](../ado-api/item-property-ado.md) по умолчанию.  
   
--   Обновите объекты в коллекции от поставщика с помощью метода [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) .  
+-   Обновите объекты в коллекции от поставщика с помощью метода [Refresh](../ado-api/refresh-method-ado.md) .  
   
  Этот раздел содержит следующий раздел.  
   
--   [Свойства, методы и события](../../../ado/reference/ado-md-api/axes-collection-properties-methods-and-events.md)  
+-   [Свойства, методы и события](./axes-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
- [Пример набора ячеек (Visual Basic)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
- [Объект Axis (многомерные объекты ADO)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)
+## <a name="see-also"></a>См. также  
+ [Пример набора ячеек (Visual Basic)](./cellset-example-vb.md)   
+ [Объект Axis (многомерные объекты ADO)](./axis-object-ado-md.md)

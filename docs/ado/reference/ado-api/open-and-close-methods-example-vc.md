@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f74a81fd-cbcc-4143-b9f8-774c88dd4fad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cabdbee513ab42111710520358a66f5f42122f77
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 151802a801afe8d9b8b4ca9d46301f738d79fa1a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442996"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773823"
 ---
 # <a name="open-and-close-methods-example-vc"></a>Примеры методов Open и Close (Visual C++)
-В этом примере используются методы **Open** и [Close](../../../ado/reference/ado-api/close-method-ado.md) как для [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) , так и для объектов [соединения](../../../ado/reference/ado-api/connection-object-ado.md) , которые были открыты.  
+В этом примере используются методы **Open** и [Close](./close-method-ado.md) как для [набора записей](./recordset-object-ado.md) , так и для объектов [соединения](./connection-object-ado.md) , которые были открыты.  
   
 ```  
 // Open_Close_Methods.cpp  
@@ -206,9 +206,9 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Метод Close (ADO)](../../../ado/reference/ado-api/close-method-ado.md)   
- [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Метод Open (подключение ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Метод Open (набор записей ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+## <a name="see-also"></a>См. также  
+ [Метод Close (ADO)](./close-method-ado.md)   
+ [Объект Connection (ADO)](./connection-object-ado.md)   
+ [Метод Open (подключение ADO)](./open-method-ado-connection.md)   
+ [Метод Open (набор записей ADO)](./open-method-ado-recordset.md)   
+ [Объект Recordset (ADO)](./recordset-object-ado.md)

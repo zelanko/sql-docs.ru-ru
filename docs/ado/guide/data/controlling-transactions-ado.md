@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 189240e8-3ffa-4024-81a9-c6cb5d17eee0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 861fe39f270a007fdd3896c4150a02a0fd905b47
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 279c77e7bbd5d676ab3f5f53b41e9e3172ab0d57
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453636"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806290"
 ---
 # <a name="controlling-transactions-ado"></a>Управление транзакциями (ADO)
 ADO поддерживает обработку транзакций в соединении с помощью методов **примеры BeginTrans**, **CommitTrans**и **RollbackTrans** объекта **Connection** . Общая идея реализации обработки транзакций в ADO показана в следующем простом фрагменте кода.  
@@ -80,4 +80,4 @@ oConn.Close
   
  В этом случае обработка транзакций используется для того, чтобы гарантировать, что две записи обновляются как одна единица операции, и что эти два названия продуктов либо взаимозаменяемы, либо вообще не меняются.  
   
- Подробное обсуждение обработки транзакций см. в разделе [обновление и сохранение данных](../../../ado/guide/data/updating-and-persisting-data.md).
+ Подробное обсуждение обработки транзакций см. в разделе [обновление и сохранение данных](./updating-and-persisting-data.md).

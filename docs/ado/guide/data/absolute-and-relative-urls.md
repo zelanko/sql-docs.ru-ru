@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 43fc1a32428f54682b8fde5dea0f0140568c482e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 285fba254c025268abc9ea93f6d6e53e39a87aca
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453916"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806732"
 ---
 # <a name="absolute-and-relative-urls"></a>Абсолютные и относительные URL-адреса
 URL-адрес указывает расположение целевого объекта, хранящегося на локальном или сетевом компьютере. Целевым объектом может быть файл, каталог, HTML-страница, изображение, программа и т. д.  
@@ -46,22 +46,22 @@ URL-адрес указывает расположение целевого об
  Если параметр включен, *ресурс* является целевым, а обычно — именем файла. Это может быть *простой файл,* содержащий один двоичный поток байтов, или *структурированный документ,* содержащий одно или несколько хранилищ и двоичных потоков байтов.  
   
 ## <a name="url-scheme-registration"></a>Регистрация схемы URL-адресов  
- Если поставщик поддерживает URL-адреса, поставщик будет регистрировать одну или несколько схем URL-адресов. Регистрация означает, что любые URL-адреса, использующие схему, будут автоматически вызывать зарегистрированного поставщика. Например, схема *http* регистрируется в [поставщике OLE DB Майкрософт для публикации в Интернете](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). В ADO предполагается, что все URL-адреса с префиксом "http" представляют собой веб-папки или файлы, которые будут использоваться поставщиком публикации в Интернете. Сведения о схемах, зарегистрированных поставщиком, см. в документации поставщика.  
+ Если поставщик поддерживает URL-адреса, поставщик будет регистрировать одну или несколько схем URL-адресов. Регистрация означает, что любые URL-адреса, использующие схему, будут автоматически вызывать зарегистрированного поставщика. Например, схема *http* регистрируется в [поставщике OLE DB Майкрософт для публикации в Интернете](../appendixes/microsoft-ole-db-provider-for-internet-publishing.md). В ADO предполагается, что все URL-адреса с префиксом "http" представляют собой веб-папки или файлы, которые будут использоваться поставщиком публикации в Интернете. Сведения о схемах, зарегистрированных поставщиком, см. в документации поставщика.  
   
 ## <a name="defining-context-with-a-url"></a>Определение контекста с URL-адресом  
- Одной из функций открытого соединения, представленного объектом [Connection](../../../ado/reference/ado-api/connection-object-ado.md) , является ограничение последующих операций для источника данных, представленного этим соединением. Это означает, что соединение определяет контекст для последующих операций.  
+ Одной из функций открытого соединения, представленного объектом [Connection](../../reference/ado-api/connection-object-ado.md) , является ограничение последующих операций для источника данных, представленного этим соединением. Это означает, что соединение определяет контекст для последующих операций.  
   
- При использовании ADO 2,7 или более поздней версии абсолютный URL-адрес также может определять контекст. Например, при открытии объекта [записи](../../../ado/reference/ado-api/record-object-ado.md) с абсолютным URL-адресом объект **соединения** неявно создается для представления ресурса, указанного URL-адресом.  
+ При использовании ADO 2,7 или более поздней версии абсолютный URL-адрес также может определять контекст. Например, при открытии объекта [записи](../../reference/ado-api/record-object-ado.md) с абсолютным URL-адресом объект **соединения** неявно создается для представления ресурса, указанного URL-адресом.  
   
- Абсолютный URL-адрес, определяющий контекст, можно указать в параметре *ActiveConnection* метода [Open](../../../ado/reference/ado-api/open-method-ado-record.md) объекта **Record** . Абсолютный URL-адрес также может быть указан в качестве значения ключевого слова "URL =" в параметре метода *ConnectionString* [объекта](../../../ado/reference/ado-api/open-method-ado-recordset.md) **Connection** и параметра *ActiveConnection* [объекта](../../../ado/reference/ado-api/open-method-ado-connection.md) [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
+ Абсолютный URL-адрес, определяющий контекст, можно указать в параметре *ActiveConnection* метода [Open](../../reference/ado-api/open-method-ado-record.md) объекта **Record** . Абсолютный URL-адрес также может быть указан в качестве значения ключевого слова "URL =" в параметре метода *ConnectionString* [объекта](../../reference/ado-api/open-method-ado-recordset.md) **Connection** и параметра *ActiveConnection* [объекта](../../reference/ado-api/open-method-ado-connection.md) [Recordset](../../reference/ado-api/recordset-object-ado.md) .  
   
  Контекст можно также определить, открыв **запись** или объект **набора записей** , представляющий каталог, так как у этих объектов уже есть неявно или явно объявленный объект **соединения** , указывающий контекст.  
   
 ## <a name="scoped-operations"></a>Операции с областью действия  
- Контекст также определяет область, то есть каталог и его подкаталоги, которые могут участвовать в последующих операциях. Объект **Record** имеет несколько методов с областью действия, которые работают с каталогом и всеми его подкаталогами. К этим методам относятся [копирекорд](../../../ado/reference/ado-api/copyrecord-method-ado.md), [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)и [делетерекорд](../../../ado/reference/ado-api/deleterecord-method-ado.md).  
+ Контекст также определяет область, то есть каталог и его подкаталоги, которые могут участвовать в последующих операциях. Объект **Record** имеет несколько методов с областью действия, которые работают с каталогом и всеми его подкаталогами. К этим методам относятся [копирекорд](../../reference/ado-api/copyrecord-method-ado.md), [MoveRecord](../../reference/ado-api/moverecord-method-ado.md)и [делетерекорд](../../reference/ado-api/deleterecord-method-ado.md).  
   
 ## <a name="relative-urls-as-command-text"></a>Относительные URL-адреса в качестве текста команды  
- Можно указать команду для выполнения в источнике данных, введя строку в параметре *CommandText* метода [EXECUTE](../../../ado/reference/ado-api/execute-method-ado-connection.md) объекта **Connection** и в параметре *Source* метода [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) объекта **Recordset** .  
+ Можно указать команду для выполнения в источнике данных, введя строку в параметре *CommandText* метода [EXECUTE](../../reference/ado-api/execute-method-ado-connection.md) объекта **Connection** и в параметре *Source* метода [Open](../../reference/ado-api/open-method-ado-recordset.md) объекта **Recordset** .  
   
  Относительный URL-адрес можно указать в параметре *CommandText* или *Source* . Относительный URL-адрес фактически не представляет команду, например команду SQL; Он просто задает параметры. Контекст активного соединения должен быть абсолютным URL-адресом, а параметр *Option* должен иметь значение **адкмдтабледирект**.  
   
@@ -86,9 +86,9 @@ recordset.Open "", "URL=https://YourServer/Winnt/",,,adCmdTableDirect
 ## <a name="ole-db-provider-supplied-url-schemes"></a>Схемы URL-адресов, предоставляемые поставщиком OLE DB  
  Начальная часть полного URL-адреса — это *схема* , используемая для доступа к ресурсу, определяемому оставшейся частью URL-адреса. Примеры: HTTP (протокол гипертекста) и FTP (протокол FTP).  
   
- ADO поддерживает поставщики OLE DB, которые распознают собственные схемы URL-адресов. Например, [поставщик Microsoft OLE DB для публикации в Интернете](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)*,* который обращается к опубликованным файлам Windows 2000, распознает существующую схему HTTP.  
+ ADO поддерживает поставщики OLE DB, которые распознают собственные схемы URL-адресов. Например, [поставщик Microsoft OLE DB для публикации в Интернете](../appendixes/microsoft-ole-db-provider-for-internet-publishing.md)*,* который обращается к опубликованным файлам Windows 2000, распознает существующую схему HTTP.  
   
 ## <a name="see-also"></a>См. также  
- [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Объект Connection (ADO)](../../reference/ado-api/connection-object-ado.md)   
+ [Объект Record (ADO)](../../reference/ado-api/record-object-ado.md)   
+ [Объект Recordset (ADO)](../../reference/ado-api/recordset-object-ado.md)

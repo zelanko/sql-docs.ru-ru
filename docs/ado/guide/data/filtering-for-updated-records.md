@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4a798921-d7bb-47c9-a252-550fd9463ec9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a0c3a33b9c45afacfdb790606da22713a0a82478
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cf6bae32e9ed966939d5589f779bdb1d4d6d6f4b
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453386"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806837"
 ---
 # <a name="filtering-for-updated-records"></a>Фильтрация обновленных записей
 Перед вызовом UpdateBatch можно использовать свойство фильтра набора записей для просмотра только тех записей, которые были изменены с момента открытия набора записей, или последнего вызова UpdateBatch. Для этого установите фильтр равное Адфилтерпендингрекордс, чтобы определить, сколько записей будет Обновлено, как показано в примере кода в следующем разделе.  
@@ -55,5 +55,5 @@ ms.locfileid: "88453386"
 'EndFilterPend  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Пакетный режим](../../../ado/guide/data/batch-mode.md)
+## <a name="see-also"></a>См. также  
+ [Пакетный режим](./batch-mode.md)

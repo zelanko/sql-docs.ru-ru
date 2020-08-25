@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2f418d2eb21f2cb02223234f6231efb39b232faa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e1bf51c8d7d6db2ac898787c3a649a0ecb0610cb
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453406"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806849"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>Составление иерархических наборов записей
 В следующем примере показано, как создать иерархический набор записей без базового источника данных, используя грамматику формирования данных для определения столбцов для родительских, дочерних и внучатый **наборов записей**.  
   
- Для формирования иерархического **набора записей**необходимо указать [службу формирования данных Майкрософт для OLE DB (поставщик служб ADO)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (мсдаташапе), а в параметре строки подключения метода [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) объекта [Connection](../../../ado/reference/ado-api/connection-object-ado.md) можно указать значение None для поставщика данных. Дополнительные сведения см. в разделе [необходимые поставщики для формирования данных](../../../ado/guide/data/required-providers-for-data-shaping.md).  
+ Для формирования иерархического **набора записей**необходимо указать [службу формирования данных Майкрософт для OLE DB (поставщик служб ADO)](../appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (мсдаташапе), а в параметре строки подключения метода [Open](../../reference/ado-api/open-method-ado-connection.md) объекта [Connection](../../reference/ado-api/connection-object-ado.md) можно указать значение None для поставщика данных. Дополнительные сведения см. в разделе [необходимые поставщики для формирования данных](./required-providers-for-data-shaping.md).  
   
 ```  
 Dim cn As New ADODB.Connection  
@@ -55,9 +55,9 @@ rsCustomers.Open strShape, cn, adOpenStatic, adLockOptimistic, -1
   
  Как только **набор записей** будет создан, он может быть заполнен, обработан или сохранен в файле.  
   
-## <a name="see-also"></a>См. также:  
- [Доступ к строкам в иерархическом наборе записей](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
- [Грамматика формальной фигуры](../../../ado/guide/data/formal-shape-grammar.md)   
- [Необходимые поставщики для формирования данных](../../../ado/guide/data/required-providers-for-data-shaping.md)   
- [Предложение APPEND для фигур](../../../ado/guide/data/shape-append-clause.md)   
- [Общие сведения о командах формирования данных](../../../ado/guide/data/shape-commands-in-general.md)
+## <a name="see-also"></a>См. также  
+ [Доступ к строкам в иерархическом наборе записей](./accessing-rows-in-a-hierarchical-recordset.md)   
+ [Грамматика формальной фигуры](./formal-shape-grammar.md)   
+ [Необходимые поставщики для формирования данных](./required-providers-for-data-shaping.md)   
+ [Предложение APPEND для фигур](./shape-append-clause.md)   
+ [Общие сведения о командах формирования данных](./shape-commands-in-general.md)

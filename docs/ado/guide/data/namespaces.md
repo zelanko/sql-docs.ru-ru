@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4ab26dd8f767315a3392a2434689561fdb391d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4973bd2e822d3ec56b4e8cb4aa9b7a359e07b977
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453146"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805780"
 ---
 # <a name="namespaces"></a>Пространства имен
 Формат сохраняемости XML в ADO использует следующие четыре пространства имен.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Формат сохраняемости XML в ADO использует следующие четыре пространства имен.  
   
 |Prefix|Описание|  
@@ -47,4 +47,4 @@ xmlns:rs="urn:schemas-microsoft-com:rowset"
  Пользователь может определить его как любое имя, если это имя постоянно используется во всем документе XML. ADO всегда записывает "s", "RS", "DT" и "z", но эти имена префиксов не жестко закодированы в компоненте загрузки.  
   
 ## <a name="see-also"></a>См. также  
- [Сохранение записей в формате XML](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [Сохранение записей в формате XML](./persisting-records-in-xml-format.md)

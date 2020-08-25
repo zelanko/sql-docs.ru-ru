@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 2789c8b74420a56a32d08a0339d4ee6d3cc112d1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400853"
 ---
 # <a name="parallel-data-warehouse-services-status-for-analytics-platform-system"></a>Состояние служб параллельного хранилища данных для системы аналитики
@@ -32,6 +32,6 @@ ms.locfileid: "74400853"
 > [!NOTE]  
 > Остановка региона PDW также останавливает работу агента PDW (склдважент) на узлах. Агенту PDW требуется узел элемента управления PDW, чтобы сообщить о мониторинге работоспособности.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Включите или отключите устройство APS &#40;ную систему платформы аналитики&#41;](power-the-aps-appliance-on-or-off.md)  
   

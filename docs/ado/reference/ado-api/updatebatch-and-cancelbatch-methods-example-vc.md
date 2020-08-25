@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: bcb1468e-18bb-41b8-8902-6ee05b786eec
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 848c798a92c2075cdfff04551b17a46d2d90fc76
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 98130e528428817f6bd43323f47d2ef4e1191dc0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441626"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776982"
 ---
 # <a name="updatebatch-and-cancelbatch-methods-example-vc"></a>Примеры методов UpdateBatch и CancelBatch (Visual C++)
-В этом примере демонстрируется метод [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) в сочетании с методом [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) .  
+В этом примере демонстрируется метод [UpdateBatch](./updatebatch-method.md) в сочетании с методом [CancelBatch](./cancelbatch-method-ado.md) .  
   
 ```  
 // BeginUpdateBatchCpp.cpp  
@@ -211,6 +211,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Метод CancelBatch (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
- [Метод UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)
+## <a name="see-also"></a>См. также  
+ [Метод CancelBatch (ADO)](./cancelbatch-method-ado.md)   
+ [Метод UpdateBatch](./updatebatch-method.md)

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a97db427db3c0dc42e004e1b0fcd0a889c9d6c5b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0e5927c2c3b32540ebfe54307203e0425600e2f2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443686"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775323"
 ---
 # <a name="filter-property"></a>Свойство Filter
-Указывает фильтр для данных в [наборе записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Указывает фильтр для данных в [наборе записей](./recordset-object-ado.md).  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения
 
@@ -34,11 +34,11 @@ ms.locfileid: "88443686"
   
 -   **Массив закладок:** Массив уникальных значений закладок, указывающих на записи в объекте **Recordset** .  
   
--   Значение [филтерграупенум](../../../ado/reference/ado-api/filtergroupenum.md) .  
+-   Значение [филтерграупенум](./filtergroupenum.md) .  
   
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Remarks
 
-Используйте свойство **Filter** для выборочного отображения записей в объекте **набора записей** . Отфильтрованный **набор записей** станет текущим курсором. Затрагиваются другие свойства, возвращающие значения, основанные на текущем **курсоре** , такие как [свойство примеры AbsolutePosition (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md), [свойство примеры absolutepage (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md), [свойство RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)и [свойство PageCount (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md). Если задать для свойства **фильтра** определенное новое значение, текущая запись перемещается в первую запись, удовлетворяющую новому значению.
+Используйте свойство **Filter** для выборочного отображения записей в объекте **набора записей** . Отфильтрованный **набор записей** станет текущим курсором. Затрагиваются другие свойства, возвращающие значения, основанные на текущем **курсоре** , такие как [свойство примеры AbsolutePosition (ADO)](./absoluteposition-property-ado.md), [свойство примеры absolutepage (ADO)](./absolutepage-property-ado.md), [свойство RecordCount (ADO)](./recordcount-property-ado.md)и [свойство PageCount (ADO)](./pagecount-property-ado.md). Если задать для свойства **фильтра** определенное новое значение, текущая запись перемещается в первую запись, удовлетворяющую новому значению.
   
 Строка критериев состоит из предложений в формате « *fieldname-operator-значение* » (например, `"LastName = 'Smith'"` ). Составные предложения можно создавать путем сцепления отдельных предложений с **and** (например, `"LastName = 'Smith' AND FirstName = 'John'"` ) или **or** (например, `"LastName = 'Smith' OR LastName = 'Jones'"` ). Для строк критериев используйте следующие рекомендации.
 
@@ -59,9 +59,9 @@ ms.locfileid: "88443686"
   
 -   В предложении **Like** можно использовать подстановочный знак в начале и в конце шаблона. Например, можно использовать `LastName Like '*mit*'`. Или, **как** и, можно использовать подстановочный знак только в конце шаблона. Например, `LastName Like 'Smit*'`.  
   
- Константы фильтра упрощают устранение конфликтов отдельных записей в режиме пакетного обновления, позволяя просматривать, например, только те записи, которые были затронуты во время последнего вызова метода [метода UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) .  
+ Константы фильтра упрощают устранение конфликтов отдельных записей в режиме пакетного обновления, позволяя просматривать, например, только те записи, которые были затронуты во время последнего вызова метода [метода UpdateBatch](./updatebatch-method.md) .  
   
-Установка свойства **фильтра** может завершиться ошибкой из-за конфликта с базовыми данными. Например, эта ошибка может произойти, если запись уже была удалена другим пользователем. В этом случае поставщик возвращает предупреждения в коллекцию [Errors Collection (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md) , но не останавливает выполнение программы. Ошибка во время выполнения возникает только в случае возникновения конфликтов во всех запрошенных записях. Свойство [Status (набор записей ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md) используется для обнаружения записей с конфликтами.  
+Установка свойства **фильтра** может завершиться ошибкой из-за конфликта с базовыми данными. Например, эта ошибка может произойти, если запись уже была удалена другим пользователем. В этом случае поставщик возвращает предупреждения в коллекцию [Errors Collection (ADO)](./errors-collection-ado.md) , но не останавливает выполнение программы. Ошибка во время выполнения возникает только в случае возникновения конфликтов во всех запрошенных записях. Свойство [Status (набор записей ADO)](./status-property-ado-recordset.md) используется для обнаружения записей с конфликтами.  
   
 Установка свойства **фильтра** в виде строки нулевой длины ("") оказывает тот же результат, что и при использовании константы **адфилтерноне** .
   
@@ -74,7 +74,7 @@ ms.locfileid: "88443686"
 
 Эта конфигурация выдает ошибку во время выполнения. Однако `rs.Filter = "C=2"` при применении к тому же полю не будет возникать никаких ошибок. И поле отфильтровано из текущего набора записей.
 
-Описание значений закладок, из которых можно создать массив для использования со свойством Filter, см. в свойстве [Bookmark свойство (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md) .
+Описание значений закладок, из которых можно создать массив для использования со свойством Filter, см. в свойстве [Bookmark свойство (ADO)](./bookmark-property-ado.md) .
 
 Только фильтры в форме строк критериев влияют на содержимое сохраненного **набора записей**. Пример строки условий: `OrderDate > '12/31/1999'` . Фильтры, созданные с помощью массива закладок или значения из **филтерграупенум**, не влияют на содержимое сохраненного **набора записей**. Эти правила применяются к наборам записей, созданным с помощью курсоров на стороне клиента или на стороне сервера.
   
@@ -100,11 +100,11 @@ ms.locfileid: "88443686"
   
 ## <a name="applies-to"></a>Применение
 
-[Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+[Объект Recordset (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>См. также
 
-[Пример свойств Filter и RecordCount (Visual Basic)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md) 
- [Пример свойств Filter и RecordCount (Visual c++)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md) 
- [Метод Clear (ADO)](../../../ado/reference/ado-api/clear-method-ado.md) 
- [Свойство optimize — Dynamic (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)
+[Пример свойств Filter и RecordCount (Visual Basic)](./filter-and-recordcount-properties-example-vb.md) 
+ [Пример свойств Filter и RecordCount (Visual c++)](./filter-and-recordcount-properties-example-vc.md) 
+ [Метод Clear (ADO)](./clear-method-ado.md) 
+ [Свойство optimize — Dynamic (ADO)](./optimize-property-dynamic-ado.md)

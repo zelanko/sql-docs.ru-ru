@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d8304849-3f80-4cf3-9425-529d2a8ebedd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 30be1e48aca9a942b0a98d0f119f1f8e8218144b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5cbf00fc32364c1077be44ebb791708f361ec4da
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439336"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768983"
 ---
 # <a name="views-and-fields-collections-example-vb"></a>Примеры коллекций Views и Fields (Visual Basic)
-В следующем коде показано, как использовать свойство [Command](../../../ado/reference/adox-api/command-property-adox.md) и объект [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) для получения сведений о поле для представления.  
+В следующем коде показано, как использовать свойство [Command](./command-property-adox.md) и объект [Recordset](../ado-api/recordset-object-ado.md) для получения сведений о поле для представления.  
   
 ```  
 ' BeginViewFieldsVB  
@@ -78,9 +78,9 @@ End Sub
 ' EndViewFieldsVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Свойство ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Свойство Command (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
- [Объект View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
- [Коллекция Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+## <a name="see-also"></a>См. также  
+ [Свойство ActiveConnection (ADOX)](./activeconnection-property-adox.md)   
+ [Объект каталога (ADOX)](./catalog-object-adox.md)   
+ [Свойство Command (ADOX)](./command-property-adox.md)   
+ [Объект View (ADOX)](./view-object-adox.md)   
+ [Коллекция Views (ADOX)](./views-collection-adox.md)

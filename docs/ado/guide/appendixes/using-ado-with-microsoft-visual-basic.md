@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9dfb6784-037d-4f9d-bb7f-b506b4498573
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b4e8304204a6eaebf6b64d5cb9ad44e5fa1602da
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: efb206f3c0fbbeb0fbc700f8e714ddd1d5ee5a8c
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454016"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806522"
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>Использование ADO с Microsoft Visual Basic и Visual Basic для приложений
 Настройка проекта ADO и написание кода ADO похожи на то, используется ли Visual Basic или Visual Basic для приложений. В этом разделе рассматривается использование ADO с Visual Basic и Visual Basic для приложений и примечаниями.
@@ -43,7 +43,7 @@ ms.locfileid: "88454016"
 
     -   OLE-автоматизация
 
-3.  Нажмите кнопку **ОК**.
+3.  Щелкните **ОК**.
 
  ADO можно использовать так же просто, как Visual Basic для приложений с помощью Microsoft Access, например.
 
@@ -61,7 +61,7 @@ ms.locfileid: "88454016"
 
     -   Библиотека объектов Microsoft DAO 3,5 (или более поздней версии)
 
-4.  Нажмите кнопку **ОК**.
+4.  Щелкните **ОК**.
 
 ## <a name="creating-ado-objects-in-visual-basic"></a>Создание объектов ADO в Visual Basic
  Чтобы создать переменную автоматизации и экземпляр объекта для этой переменной, можно использовать два метода: **Dim** или **CreateObject**.
@@ -99,7 +99,7 @@ Dim conn1
 Set conn1 = CreateObject("ADODB.Connection") As Object
 ```
 
- Объекты, созданные с помощью **CreateObject** , имеют позднюю привязку, что означает, что они не являются строго типизированными, а завершение командной строки отключено. Однако он позволяет пропустить ссылку на библиотеку ADO из проекта и позволяет создавать экземпляры конкретных версий объектов. Например:
+ Объекты, созданные с помощью **CreateObject** , имеют позднюю привязку, что означает, что они не являются строго типизированными, а завершение командной строки отключено. Однако он позволяет пропустить ссылку на библиотеку ADO из проекта и позволяет создавать экземпляры конкретных версий объектов. Пример:
 
 ```
 Set conn1 = CreateObject("ADODB.Connection.2.0") As Object
@@ -110,10 +110,10 @@ Set conn1 = CreateObject("ADODB.Connection.2.0") As Object
  Создание экземпляров объектов с помощью метода **CreateObject** обычно выполняется медленнее, чем при использовании оператора **Dim** .
 
 ## <a name="handling-events"></a>Обработка событий
- Чтобы обеспечить обработку событий ADO в Microsoft Visual Basic, необходимо объявить переменную уровня модуля с помощью ключевого слова **WithEvents** . Переменная может быть объявлена только как часть модуля класса и должна быть объявлена на уровне модуля. Более подробное описание обработки событий ADO см. в разделе [Обработка событий ADO](../../../ado/guide/data/handling-ado-events.md).
+ Чтобы обеспечить обработку событий ADO в Microsoft Visual Basic, необходимо объявить переменную уровня модуля с помощью ключевого слова **WithEvents** . Переменная может быть объявлена только как часть модуля класса и должна быть объявлена на уровне модуля. Более подробное описание обработки событий ADO см. в разделе [Обработка событий ADO](../data/handling-ado-events.md).
 
 ## <a name="visual-basic-examples"></a>Примеры Visual Basic
- Многие примеры Visual Basic включены в документацию по ADO. Дополнительные сведения см. [в статье примеры кода ADO в Microsoft Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md).
+ Многие примеры Visual Basic включены в документацию по ADO. Дополнительные сведения см. [в статье примеры кода ADO в Microsoft Visual Basic](../../reference/ado-api/ado-code-examples-in-visual-basic.md).
 
-## <a name="see-also"></a>См. также:
- [Microsoft объекты данных ActiveX (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) с [помощью ADO и Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md) [Использование ADO с языками сценариев](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)
+## <a name="see-also"></a>См. также
+ [Microsoft объекты данных ActiveX (ADO)](../../microsoft-activex-data-objects-ado.md) с [помощью ADO и Microsoft Visual C++](./using-ado-with-microsoft-visual-c.md) [Использование ADO с языками сценариев](./using-ado-with-scripting-languages.md)

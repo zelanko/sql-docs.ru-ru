@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cc752ae4-58c4-4a7b-bfb2-0454e90fe2e7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f4d2f7ef20e5fb67450dccee7e7fb29b32d46286
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 92926461a9ec7f3e8efcff5edad8950d791b7d25
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440126"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770693"
 ---
 # <a name="definedsize-property-example-vc"></a>Пример свойства DefinedSize (Visual C++)
-В этом примере демонстрируется свойство [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) [столбца](../../../ado/reference/adox-api/column-object-adox.md). Код переопределит размер столбца FirstName таблицы **Employees** базы данных *Northwind* . Затем отображается изменение значений [поля](../../../ado/reference/ado-api/field-object.md) FirstName [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) , основанного на таблице **Employees** . Обратите внимание, что по умолчанию поле FirstName заполняется пробелами после переопределения свойства **DefinedSize** .  
+В этом примере демонстрируется свойство [DefinedSize](./definedsize-property-adox.md) [столбца](./column-object-adox.md). Код переопределит размер столбца FirstName таблицы **Employees** базы данных *Northwind* . Затем отображается изменение значений [поля](../ado-api/field-object.md) FirstName [набора записей](../ado-api/recordset-object-ado.md) , основанного на таблице **Employees** . Обратите внимание, что по умолчанию поле FirstName заполняется пробелами после переопределения свойства **DefinedSize** .  
   
 ```  
 // BeginDefinedSizeCpp.cpp  
@@ -163,6 +163,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [Свойство DefinedSize (ADOX)](../../../ado/reference/adox-api/definedsize-property-adox.md)
+## <a name="see-also"></a>См. также  
+ [Объект Column (ADOX)](./column-object-adox.md)   
+ [Свойство DefinedSize (ADOX)](./definedsize-property-adox.md)

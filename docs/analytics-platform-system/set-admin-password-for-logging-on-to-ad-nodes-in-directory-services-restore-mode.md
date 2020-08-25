@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6bbbf42106602a25b03072a9c9abfb04f04d3c49
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400334"
 ---
 # <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm---analytics-platform-system"></a>Настройка пароля администратора для входа на узлы AD в режиме восстановления служб каталогов (DSRM) — система платформы аналитики
@@ -25,9 +25,9 @@ ms.locfileid: "74400334"
   
 2.  В командной строке введите `ntdsutil`.  
   
-3.  В командной строке **ntdsutil** введите `set dsrm password`.  
+3.  В командной строке **ntdsutil** введите `set dsrm password` .  
   
-4.  В командной строке **Сброс пароля администратора:** введите `reset password on server null`.  
+4.  В командной строке **Сброс пароля администратора:** введите `reset password on server null` .  
   
 5.  В командной строке введите новый пароль.  
   
@@ -39,6 +39,6 @@ ms.locfileid: "74400334"
 > [!NOTE]  
 > Если службы домен Active Directory или виртуальная машина повреждены для конкретной виртуальной машины AD, то рекомендуется выполнить действия по исправлению, запустив **реплацевм** для затронутой ВИРТУАЛЬНОЙ машины AD. Обратитесь в службу поддержки пользователей.  
   
-## <a name="see-also"></a>См. также:  
-[&#40;&#41;системы аналитики для сброса пароля](password-reset.md)  
+## <a name="see-also"></a>См. также  
+[&#40;&#41;системы аналитики для сброса пароля ](password-reset.md)  
   

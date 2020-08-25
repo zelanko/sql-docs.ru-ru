@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 59339100-6e29-48d1-aea3-6873796d186b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 27284d84bb89c0e742c5166589a60fdc949e7b2e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: edac11f61b003307703ec13daed8022b8af31bae
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442196"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777563"
 ---
 # <a name="saveoptionsenum"></a>SaveOptionsEnum
-Указывает, следует ли создавать или перезаписывать файл при сохранении из объекта [потока](../../../ado/reference/ado-api/stream-object-ado.md) . Значения могут быть **адсавекреатенотексист** или **адсавекреатеоверврите**.  
+Указывает, следует ли создавать или перезаписывать файл при сохранении из объекта [потока](./stream-object-ado.md) . Значения могут быть **адсавекреатенотексист** или **адсавекреатеоверврите**.  
   
-|Константа|Значение|Описание|  
+|Константа|Значение|Описание:|  
 |--------------|-----------|-----------------|  
 |**adSaveCreateNotExist**|1|По умолчанию. Создает новый файл, если файл, указанный в параметре *filename* , еще не существует.|  
 |**adSaveCreateOverWrite**|2|Перезаписывает файл данными из текущего открытого объекта **потока** , если файл, указанный параметром *filename* , уже существует. Если файл, указанный параметром *filename* , не существует, создается новый файл.|  
@@ -35,4 +35,4 @@ ms.locfileid: "88442196"
  Эти константы не имеют эквивалентов ADO/WFC.  
   
 ## <a name="applies-to"></a>Применение  
- [Метод SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)
+ [Метод SaveToFile](./savetofile-method.md)

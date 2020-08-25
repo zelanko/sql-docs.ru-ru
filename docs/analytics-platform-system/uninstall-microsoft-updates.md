@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: a5ebe1ee911f7500505cdbd1962d28c35461a635
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74399463"
 ---
 # <a name="uninstall-microsoft-updates-in-analytics-platform-system"></a>Удаление обновлений Майкрософт в системе аналитики платформы
@@ -26,11 +26,11 @@ ms.locfileid: "74399463"
   
 -   Вход в систему платформы аналитики с разрешениями на доступ к консоли администрирования для мониторинга устройства.  
   
--   Сведения об учетной записи администратора домена <em> <Fabric Domain> </em>структуры для входа на узел **-HST01** .  
+-   Сведения об учетной записи администратора домена структуры для входа на <em> <Fabric Domain> </em> узел **-HST01** .  
   
 ## <a name="to-uninstall-microsoft-updates"></a><a name="HowToUninstallMSFT"></a>Удаление обновлений Майкрософт  
   
-1.  Войдите на <em> <Fabric Domain> </em>узел **-HST01** в качестве администратора домена структуры.  
+1.  Войдите на <em> <Fabric Domain> </em> узел **-HST01** в качестве администратора домена структуры.  
   
 2.  Чтобы удалить все обновления, утвержденные для удаления WSUS, откройте окно командной строки и введите следующую команду. Замените элементы заполнителя *<  >* соответствующими сведениями.  
   
@@ -39,8 +39,8 @@ ms.locfileid: "74399463"
     ```  
   
 ## <a name="next-steps"></a>Дальнейшие действия
-Дополнительные сведения можно найти в разделе
-- [Загрузите и примените обновления Майкрософт &#40;&#41;платформы аналитики](download-and-apply-microsoft-updates.md) 
+Дополнительные сведения см. в разделе:
+- [Загрузите и примените обновления Майкрософт &#40;&#41;платформы аналитики ](download-and-apply-microsoft-updates.md) 
 - [Применить исправления системы аналитики к системе &#40;Analytics Platform&#41;](apply-analytics-platform-system-hotfixes.md)  
 - [Удаление исправлений системы аналитики &#40;Analytics Platform System&#41;](uninstall-analytics-platform-system-hotfixes.md)  
 - [Система обслуживания программного обеспечения &#40;Analytics Platform&#41;](software-servicing.md)  

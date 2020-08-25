@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 455a02f0-8143-4562-8648-8fb45ffd334c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ede3bc72d9270e1a74fa0ced3abc5cd519452187
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e3c576f5cd06b5fe075ca60a06ad1cc8877c49b4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442946"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773753"
 ---
 # <a name="openschema-method-example-vb"></a>Пример метода OpenSchema (Visual Basic)
-В этом примере используется метод [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) для вывода имени и типа каждой таблицы в базе данных ***pubs*** .  
+В этом примере используется метод [OpenSchema](./openschema-method.md) для вывода имени и типа каждой таблицы в базе данных ***pubs*** .  
   
 ```  
 'BeginOpenSchemaVB  
@@ -85,6 +85,6 @@ End Sub
 Attribute VB_Name = "OpenSchema"  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Метод OpenSchema](../../../ado/reference/ado-api/openschema-method.md)   
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+## <a name="see-also"></a>См. также  
+ [Метод OpenSchema](./openschema-method.md)   
+ [Объект Recordset (ADO)](./recordset-object-ado.md)

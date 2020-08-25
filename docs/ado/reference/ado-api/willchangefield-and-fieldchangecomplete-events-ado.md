@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 3e49fb89-c45b-4d39-823e-3cc887c59b37
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: be000a8ff9154c79c2b98c9bc57f79f3537743c9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 84c861c2a344276a80ea8e8fd98f84aeb2bb7cbc
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441536"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776903"
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>События WillChangeField и FieldChangeComplete (ADO)
-Событие **виллчанжефиелд** вызывается до того, как ожидающая операция изменяет значение одного или нескольких объектов [field](../../../ado/reference/ado-api/field-object.md) в [наборе записей](../../../ado/reference/ado-api/recordset-object-ado.md). Событие **фиелдчанжекомплете** вызывается после изменения значения одного или нескольких объектов **field** .  
+Событие **виллчанжефиелд** вызывается до того, как ожидающая операция изменяет значение одного или нескольких объектов [field](./field-object.md) в [наборе записей](./recordset-object-ado.md). Событие **фиелдчанжекомплете** вызывается после изменения значения одного или нескольких объектов **field** .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,10 +46,10 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
  Для **виллчанжефиелд**параметр *Fields* является массивом **вариантов** , содержащих объекты **полей** с исходными значениями. Для **фиелдчанжекомплете**параметр *Fields* является массивом **вариантов** , содержащих объекты **полей** с измененными значениями.  
   
  *pError*  
- Объект [ошибки](../../../ado/reference/ado-api/error-object.md) . Она описывает ошибку, которая возникла, если значение *адстатус* равно **адстатусеррорсоккурред**; в противном случае он не задан.  
+ Объект [ошибки](./error-object.md) . Она описывает ошибку, которая возникла, если значение *адстатус* равно **адстатусеррорсоккурред**; в противном случае он не задан.  
   
  *адстатус*  
- Значение состояния [евентстатусенум](../../../ado/reference/ado-api/eventstatusenum.md) .  
+ Значение состояния [евентстатусенум](./eventstatusenum.md) .  
   
  При вызове **виллчанжефиелд** этот параметр имеет значение **адстатусок** , если операция, вызвавшая событие, прошла успешно. Он имеет значение **адстатускантдени** , если это событие не может запросить отмену ожидающей операции.  
   
@@ -63,8 +63,8 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
  Объект **Recordset** . **Набор записей** , для которого произошло это событие.  
   
 ## <a name="remarks"></a>Remarks  
- Событие **виллчанжефиелд** или **фиелдчанжекомплете** может возникнуть при установке свойства [value](../../../ado/reference/ado-api/value-property-ado.md) и вызове метода [Update](../../../ado/reference/ado-api/update-method.md) с параметрами массива полей и значений.  
+ Событие **виллчанжефиелд** или **фиелдчанжекомплете** может возникнуть при установке свойства [value](./value-property-ado.md) и вызове метода [Update](./update-method.md) с параметрами массива полей и значений.  
   
-## <a name="see-also"></a>См. также:  
- [Пример модели событий ADO (Visual c++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [Общие сведения об обработчике событий ADO](../../../ado/guide/data/ado-event-handler-summary.md)
+## <a name="see-also"></a>См. также  
+ [Пример модели событий ADO (Visual c++)](./ado-events-model-example-vc.md)   
+ [Общие сведения об обработчике событий ADO](../../guide/data/ado-event-handler-summary.md)

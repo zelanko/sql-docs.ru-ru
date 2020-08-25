@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9739c278-582c-402b-a158-7f68a1b2c293
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 06e7ca7204d673ac5888962f3d4f5095e9fe5a9d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ae7eaab32f14ce653d766cfe38408118cc37b763
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453946"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806775"
 ---
 # <a name="visual-c-extensions-example"></a>Образец расширения Visual C++
 Эта программа показывает, как значения извлекаются из полей и преобразуются в переменные C/C++.  
@@ -110,6 +110,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Использование расширений Visual C++](../../../ado/guide/appendixes/using-visual-c-extensions.md)   
- [Заголовок расширений Visual C++](../../../ado/guide/appendixes/visual-c-extensions-header.md)
+## <a name="see-also"></a>См. также  
+ [Использование расширений Visual C++](./using-visual-c-extensions.md)   
+ [Заголовок расширений Visual C++](./visual-c-extensions-header.md)

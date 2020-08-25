@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 02574be8fc8333e357e31fe1e1425d6e237871a1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d3f76cca88b2be94973b2271c81279b76b2706bc
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453776"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806428"
 ---
 # <a name="ado-fundamentals"></a>Основные принципы ADO
 ADO предоставляет разработчикам мощную, логическую объектную модель для программного доступа, редактирования и обновления данных из разнообразных источников данных с помощью OLE DB системных интерфейсов. Наиболее распространенным применением ADO является запрос таблицы или таблиц в реляционной базе данных, получение и отображение результатов в приложении и, возможно, предоставление пользователям доступа и сохранение изменений в данных. К другим задачам относятся следующие.  
@@ -57,10 +57,10 @@ ADO предоставляет разработчикам мощную, логи
   
  Тем не менее, прежде чем обсуждать эти детали, мы представим обзор объектной модели ADO и простого приложения ADO, написанного на® Microsoft Visual Basic® и выполняющего каждую из четырех основных операций ADO:  
   
--   [Объекты и коллекции ADO](../../../ado/guide/data/ado-objects-and-collections.md)  
+-   [Объекты и коллекции ADO](./ado-objects-and-collections.md)  
   
--   [HelloData: простое приложение ADO](../../../ado/guide/data/hellodata-a-simple-ado-application.md)  
+-   [HelloData: простое приложение ADO](./hellodata-a-simple-ado-application.md)  
   
--   [Поставщики OLE DB](../../../ado/guide/data/ole-db-providers-ado.md)  
+-   [Поставщики OLE DB](./ole-db-providers-ado.md)  
   
--   [ошибки](../../../ado/guide/data/errors-ado.md)
+-   [ошибки](./errors-ado.md)
