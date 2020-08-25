@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 753a4a3d-0fba-40b8-86e7-50b34182ca69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b241eb84e4ea7766d209a61542562c2522a80849
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 277226353ad9e06aed7774f9195d429940165c26
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439046"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768343"
 ---
 # <a name="executeoptions-and-fetchoptions-properties-example-vbscript"></a>Примеры свойств ExecuteOptions и FetchOptions (VBScript)
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- В следующем коде показано, как задать свойства [ексекутеоптионс](../../../ado/reference/rds-api/executeoptions-property-rds.md) и [FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md) во время разработки. Если оставить это значение неопределенным, **ексекутеоптионс** по умолчанию будет **адцексексинк**. Этот параметр указывает, что при использовании **RDS. ** Вызывается метод Refresh, который будет выполняться в текущем вызывающем потоке, т. е. синхронно. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **ексекутеоптионсдесигнвбс. ASP**.  
+ В следующем коде показано, как задать свойства [ексекутеоптионс](./executeoptions-property-rds.md) и [FetchOptions](./fetchoptions-property-rds.md) во время разработки. Если оставить это значение неопределенным, **ексекутеоптионс** по умолчанию будет **адцексексинк**. Этот параметр указывает, что при использовании **RDS. ** Вызывается метод Refresh, который будет выполняться в текущем вызывающем потоке, т. е. синхронно. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **ексекутеоптионсдесигнвбс. ASP**.  
   
 ```  
 <!-- BeginExecuteOptionsDesignVBS -->  
@@ -95,7 +95,7 @@ body {
 <!-- EndExecuteOptionsDesignVBS -->  
 ```  
   
- В следующем примере показано, как задать свойства **ексекутеоптионс** и **FetchOptions** во время выполнения в коде VBScript. Рабочий пример этих свойств см. в описании метода [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md) . Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **ексекутеоптионсрунтимевбс. ASP**.  
+ В следующем примере показано, как задать свойства **ексекутеоптионс** и **FetchOptions** во время выполнения в коде VBScript. Рабочий пример этих свойств см. в описании метода [Refresh](./refresh-method-rds.md) . Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **ексекутеоптионсрунтимевбс. ASP**.  
   
 ```  
 <!-- BeginExecuteOptionsRuntimeVBS -->  
@@ -170,9 +170,6 @@ End Sub
 <!-- EndExecuteOptionsRuntimeVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Свойство Ексекутеоптионс (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)   
- [Свойство FetchOptions (служба удаленных рабочих столов)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)
-
-
-
+## <a name="see-also"></a>См. также  
+ [Свойство Ексекутеоптионс (RDS)](./executeoptions-property-rds.md)   
+ [Свойство FetchOptions (служба удаленных рабочих столов)](./fetchoptions-property-rds.md)

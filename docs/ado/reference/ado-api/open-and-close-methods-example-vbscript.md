@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 66eca011-e258-4d8f-bd67-e017bcf0871b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb26a778e3d484ba024a5a38564d9e3abc0a3ef0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3847fb3f9beaba4abe7820dae16cd57eba1cedd3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443006"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773833"
 ---
 # <a name="open-and-close-methods-example-vbscript"></a>Примеры методов Open и Close (VBScript)
-В этом примере используются методы [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) и [Close](../../../ado/reference/ado-api/close-method-ado.md) как для [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) , так и для объектов [соединения](../../../ado/reference/ado-api/connection-object-ado.md) , которые были открыты.  
+В этом примере используются методы [Open](./open-method-ado-recordset.md) и [Close](./close-method-ado.md) как для [набора записей](./recordset-object-ado.md) , так и для объектов [соединения](./connection-object-ado.md) , которые были открыты.  
   
  Используйте следующий пример на странице Active Server (ASP). Используйте **Find** для поиска файла адовбс. Inc и поместите его в каталог, который планируется использовать. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **опенвбс. ASP**. Результат можно просмотреть в любом браузере.  
   
@@ -162,9 +162,9 @@ BODY {
 <!-- EndOpenVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Метод Close (ADO)](../../../ado/reference/ado-api/close-method-ado.md)   
- [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Метод Open (подключение ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Метод Open (набор записей ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+## <a name="see-also"></a>См. также  
+ [Метод Close (ADO)](./close-method-ado.md)   
+ [Объект Connection (ADO)](./connection-object-ado.md)   
+ [Метод Open (подключение ADO)](./open-method-ado-connection.md)   
+ [Метод Open (набор записей ADO)](./open-method-ado-recordset.md)   
+ [Объект Recordset (ADO)](./recordset-object-ado.md)

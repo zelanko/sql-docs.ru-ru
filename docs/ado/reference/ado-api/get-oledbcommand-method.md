@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 23d551f5-3d5b-434b-ade6-fef15f1710e7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 562b10fa67b04926e512833248c99ecb7b55a1fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 56148afcd3c7d3e18e856c6e50a44f35aaa1bc64
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443606"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775133"
 ---
 # <a name="get_oledbcommand-method"></a>Метод get_OLEDBCommand
 Возвращает базовую команду OLE DB, которая сначала распространяет все сведения о параметрах, заданные в команде ADO, в команду OLE DB.  
@@ -37,4 +37,4 @@ HRESULT get_OLEDBCommand(
  заполняет Указатель на расположение указателя, в котором будет записан указатель IUnknown для базовой OLE DBной команды.  
   
 ## <a name="applies-to"></a>Применение  
- [иадокоммандконструктион](https://msdn.microsoft.com/d8e54333-00eb-4b72-bf4a-ca92c7ca5f86)
+ [иадокоммандконструктион](/previous-versions/windows/desktop/aa965677(v=vs.85))

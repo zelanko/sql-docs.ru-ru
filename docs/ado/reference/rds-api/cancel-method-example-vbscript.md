@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4ade106d-063d-486e-bc4d-a1a6b6e0bea9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ad6b7e95f654482e7026e288420d2ad10f36ab71
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 364f8ac8d799e8d354b43f5902eff5f3b46f4b59
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439266"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768833"
 ---
 # <a name="cancel-method-example-vbscript"></a>Пример метода Cancel (VBScript)
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- В следующем примере показано, как считать метод [Cancel](../../../ado/reference/ado-api/cancel-method-ado.md) во время выполнения. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как Канцелвбс. ASP. Результат можно просмотреть в любом клиентском браузере.  
+ В следующем примере показано, как считать метод [Cancel](../ado-api/cancel-method-ado.md) во время выполнения. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как Канцелвбс. ASP. Результат можно просмотреть в любом клиентском браузере.  
   
 ```  
 <!-- BeginCancelVBS -->  
@@ -69,7 +69,5 @@ End Sub
 <!-- EndCancelVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Метод Cancel (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)
-
-
+## <a name="see-also"></a>См. также  
+ [Метод Cancel (ADO)](../ado-api/cancel-method-ado.md)

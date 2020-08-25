@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 32c33bcf-3320-4836-9e2e-99c8978ce581
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bd2d1079e8718d7c863bb3d23c6ce96b28464cf1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8b9c17b11fce3d99f49b682d035214c95e7d3e91
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438616"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767453"
 ---
 # <a name="sql-property-example-vbscript"></a>Пример свойства SQL (VBScript)
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- В следующем примере кода показано, как задать [RDS. Параметр управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) данными SQL во время разработки и привязывает его к элементу управления, поддерживающему данные, используя базу данных с именем *pubs*, которая поставляется с Microsoft SQL Server. Чтобы протестировать пример, скопируйте приведенный ниже код в стандартный ASP-документ с именем **склдесигнвбс. ASP** .  
+ В следующем примере кода показано, как задать [RDS. Параметр управления](./datacontrol-object-rds.md) данными SQL во время разработки и привязывает его к элементу управления, поддерживающему данные, используя базу данных с именем *pubs*, которая поставляется с Microsoft SQL Server. Чтобы протестировать пример, скопируйте приведенный ниже код в стандартный ASP-документ с именем **склдесигнвбс. ASP** .  
   
 ```  
 <!-- BeginSQLDesignVBS -->  
@@ -175,9 +175,6 @@ End Sub
 <!-- EndSQLRuntimeVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект элемента управления (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Свойство SQL](../../../ado/reference/rds-api/sql-property.md)
-
-
-
+## <a name="see-also"></a>См. также  
+ [Объект элемента управления (RDS)](./datacontrol-object-rds.md)   
+ [Свойство SQL](./sql-property.md)

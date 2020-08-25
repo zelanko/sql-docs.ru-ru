@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: f53c2ce4-1021-4a45-92b8-775e8bebad99
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 03728baab7882597cfba29d2f566d73ac98f9300
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ceba3183cf400556524b5f424a2703fafefc74bd
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443146"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774183"
 ---
 # <a name="moverecordoptionsenum"></a>MoveRecordOptionsEnum
-Задает поведение метода [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md) объекта [записи](../../../ado/reference/ado-api/record-object-ado.md) .  
+Задает поведение метода [MoveRecord](./moverecord-method-ado.md) объекта [записи](./record-object-ado.md) .  
   
-|Константа|Значение|Описание|  
+|Константа|Значение|Описание:|  
 |--------------|-----------|-----------------|  
 |**adMoveUnspecified**|-1|По умолчанию. Выполняет операцию перемещения по умолчанию: операция завершается ошибкой, если целевой файл или каталог уже существует, а операция обновляет гипертекстовые ссылки.|  
 |**adMoveOverWrite**|1|Перезаписывает целевой файл или каталог, даже если он уже существует.|  
@@ -37,4 +37,4 @@ ms.locfileid: "88443146"
  Эти константы не имеют эквивалентов ADO/WFC.  
   
 ## <a name="applies-to"></a>Применение  
- [Метод MoveRecord (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)
+ [Метод MoveRecord (ADO)](./moverecord-method-ado.md)

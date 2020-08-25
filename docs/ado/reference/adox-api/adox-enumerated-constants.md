@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 555c1a83946cdb764f77085b31e83935e4fa2a2d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 553924a51845c7ac49bfb76bab27f75c7d4e4742
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440596"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771613"
 ---
 # <a name="adox-enumerated-constants"></a>ADOX Enumerated Constants
 Для помощи в отладке перечисляемые константы ADOX список значений для каждой константы. Однако это значение является исключительно рекомендацией и может изменяться от одного выпуска ADOX к другому. Код должен зависеть только от имени перечисленных констант, а не от фактического значения.  
@@ -27,17 +27,17 @@ ms.locfileid: "88440596"
   
 |Перечисление|Описание|  
 |-----------------|-----------------|  
-|[ActionEnum](../../../ado/reference/adox-api/actionenum.md)|Указывает тип действия, выполняемого при вызове **SetPermissions** .|  
-|[AllowNullsEnum](../../../ado/reference/adox-api/allownullsenum.md)|Указывает, индексируются ли записи со значениями NULL.|  
-|[ColumnAttributesEnum](../../../ado/reference/adox-api/columnattributesenum.md)|Задает характеристики **столбца**.|  
-|[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)|Указывает тип данных **поля**, **параметра**или **Свойства**.|  
-|[InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md)|Указывает, как объекты наследуют разрешения, заданные с помощью **SetPermissions**.|  
-|[KeyTypeEnum](../../../ado/reference/adox-api/keytypeenum.md)|Указывает тип **ключа**: первичный, внешний или уникальный.|  
-|[ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md)|Указывает тип объекта базы данных, для которого задаются разрешения или владение.|  
-|[RightsEnum](../../../ado/reference/adox-api/rightsenum.md)|Задает права или разрешения для группы или пользователя на объекте.|  
-|[RuleEnum](../../../ado/reference/adox-api/ruleenum.md)|Указывает правило, которое следует выполнить при удалении **ключа** .|  
-|[SortOrderEnum](../../../ado/reference/adox-api/sortorderenum.md)|Задает последовательность сортировки для индексированного столбца.|  
+|[ActionEnum](./actionenum.md)|Указывает тип действия, выполняемого при вызове **SetPermissions** .|  
+|[AllowNullsEnum](./allownullsenum.md)|Указывает, индексируются ли записи со значениями NULL.|  
+|[ColumnAttributesEnum](./columnattributesenum.md)|Задает характеристики **столбца**.|  
+|[DataTypeEnum](../ado-api/datatypeenum.md)|Указывает тип данных **поля**, **параметра**или **Свойства**.|  
+|[InheritTypeEnum](./inherittypeenum.md)|Указывает, как объекты наследуют разрешения, заданные с помощью **SetPermissions**.|  
+|[KeyTypeEnum](./keytypeenum.md)|Указывает тип **ключа**: первичный, внешний или уникальный.|  
+|[ObjectTypeEnum](./objecttypeenum.md)|Указывает тип объекта базы данных, для которого задаются разрешения или владение.|  
+|[RightsEnum](./rightsenum.md)|Задает права или разрешения для группы или пользователя на объекте.|  
+|[RuleEnum](./ruleenum.md)|Указывает правило, которое следует выполнить при удалении **ключа** .|  
+|[SortOrderEnum](./sortorderenum.md)|Задает последовательность сортировки для индексированного столбца.|  
   
-## <a name="see-also"></a>См. также:  
- [Справочник по API ADOX](../../../ado/reference/adox-api/adox-api-reference.md)   
- [Расширения ADO для языка описания данных и безопасности (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
+## <a name="see-also"></a>См. также  
+ [Справочник по API ADOX](./adox-object-model.md?view=sql-server-ver15)   
+ [Расширения ADO для языка описания данных и безопасности (ADOX)](../../guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fe41da71-b607-4329-94da-60964b8efcdc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b4fd33dedfaa68b77cfb1dcb71e8931f3b8f496f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 45962629fef38bc456138114eec38393c093a945
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442406"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772143"
 ---
 # <a name="recordset-visual-c-syntax-index-with-import"></a>Набор записей (Visual C++ индекс синтаксиса с #import)
 ## <a name="methods"></a>Методы  
@@ -204,5 +204,5 @@ __declspec(property(get=GetStayInSync,put=PutStayInSync)) VARIANT_BOOL
     StayInSync;  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+## <a name="see-also"></a>См. также  
+ [Объект Recordset (ADO)](./recordset-object-ado.md)

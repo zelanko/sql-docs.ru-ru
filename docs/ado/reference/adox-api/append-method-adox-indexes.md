@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6695769f-275b-4b70-81bd-1a5f7d74926c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b13115a657f3bc25ae79cf3ba92a7fe339492536
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 28e396e85dc68a3d622a173dad440c5dff68dea1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440546"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771463"
 ---
 # <a name="append-method-adox-indexes"></a>Метод Append (коллекция Indexes ADOX)
-Добавляет новый объект [index](../../../ado/reference/adox-api/index-object-adox.md) в коллекцию [индексов](../../../ado/reference/adox-api/indexes-collection-adox.md) .  
+Добавляет новый объект [index](./index-object-adox.md) в коллекцию [индексов](./indexes-collection-adox.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,7 +38,7 @@ Indexes.Append Index [,Columns]
  Добавляемый объект **index** или имя создаваемого и добавляемого индекса.  
   
  *Столбцы*  
- Необязательный параметр. Значение **типа Variant** , указывающее имена столбцов, которые будут индексироваться. Параметр *Columns* соответствует значениям свойства [Name](../../../ado/reference/adox-api/name-property-adox.md) объекта [Column](../../../ado/reference/adox-api/column-object-adox.md) или объектов.  
+ Необязательный элемент. Значение **типа Variant** , указывающее имена столбцов, которые будут индексироваться. Параметр *Columns* соответствует значениям свойства [Name](./name-property-adox.md) объекта [Column](./column-object-adox.md) или объектов.  
   
 ## <a name="remarks"></a>Remarks  
  Параметр *Columns* может принимать либо имя столбца, либо массив имен столбцов.  
@@ -46,14 +46,14 @@ Indexes.Append Index [,Columns]
  Если поставщик не поддерживает создание индексов, возникнет ошибка.  
   
 ## <a name="applies-to"></a>Применение  
- [Коллекция Indexes (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)  
+ [Коллекция Indexes (ADOX)](./indexes-collection-adox.md)  
   
-## <a name="see-also"></a>См. также:  
- [Пример метода Append для индексов (Visual Basic)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
- [Метод Append (столбцы ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Метод Append (группы ADOX)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
- [Метод Append (ключи ADOX)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [Метод Append (процедуры ADOX)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Метод Append (таблицы ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Метод Append (пользователи ADOX)](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Метод Append (коллекция Views ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)
+## <a name="see-also"></a>См. также  
+ [Пример метода Append для индексов (Visual Basic)](./indexes-append-method-example-vb.md)   
+ [Метод Append (столбцы ADOX)](./append-method-adox-columns.md)   
+ [Метод Append (группы ADOX)](./append-method-adox-groups.md)   
+ [Метод Append (ключи ADOX)](./append-method-adox-keys.md)   
+ [Метод Append (процедуры ADOX)](./append-method-adox-procedures.md)   
+ [Метод Append (таблицы ADOX)](./append-method-adox-tables.md)   
+ [Метод Append (пользователи ADOX)](./append-method-adox-users.md)   
+ [Метод Append (коллекция Views ADOX)](./append-method-adox-views.md)

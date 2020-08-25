@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 380264da-e6bb-418c-b4af-3c22d35644b8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 122e6dc070565116bb6140464b33fdafdf4dc489
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b5d39885ccc6640bb40c3e369c050fd00fb4c12d
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438826"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767853"
 ---
 # <a name="rds-code-examples-in-visual-c"></a>Примеры кода службы удаленных рабочих столов в Visual C++
 Используйте приведенные ниже примеры кода, чтобы узнать, как использовать свойства RDS при записи в Microsoft Visual C++.  
@@ -32,8 +32,6 @@ ms.locfileid: "88438826"
 > [!NOTE]
 >  Вставьте весь пример кода из начала в конец в редакторе кода. Пример может работать неправильно, если используются частичные примеры или если форматирование абзаца потеряно.  
   
--   [Пример свойства Handler](../../../ado/reference/rds-api/handler-property-example-vc.md)  
+-   [Пример свойства Handler](./handler-property-example-vc.md)  
   
--   [Пример свойства InternetTimeout](../../../ado/reference/rds-api/internettimeout-property-example-vc.md)
-
-
+-   [Пример свойства InternetTimeout](./internettimeout-property-example-vc.md)

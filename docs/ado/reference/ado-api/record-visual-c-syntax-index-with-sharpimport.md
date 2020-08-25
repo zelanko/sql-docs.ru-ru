@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ba6dd186-9552-4b6c-960b-3ee6cd589afd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cb26996552d636f7d1da2252d33bfafd57459681
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 695d32db5bb25d62767686cd4dbf739443afef5d
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442496"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772493"
 ---
 # <a name="record-visual-c-syntax-index-with-import"></a>Запись (Visual C++ индекс синтаксиса с #import)
 ## <a name="methods"></a>Методы  
@@ -78,5 +78,5 @@ enum ObjectStateEnum GetState( );
 __declspec(property(get=GetState)) enum ObjectStateEnum State;  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)
+## <a name="see-also"></a>См. также  
+ [Объект Record (ADO)](./record-object-ado.md)

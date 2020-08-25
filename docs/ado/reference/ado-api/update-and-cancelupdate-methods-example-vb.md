@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 55bedd08-7440-4da4-b854-4ac9ef2fdedb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 973a5f715f0a3d544e268f00f78143aab1395543
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 71ce20eb1c1fc76643d4650080afdbb956cfe882
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441666"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777033"
 ---
 # <a name="update-and-cancelupdate-methods-example-vb"></a>Примеры методов Update и CancelUpdate (Visual Basic)
-В этом примере демонстрируется метод [Update](../../../ado/reference/ado-api/update-method.md) в сочетании с методом [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) .  
+В этом примере демонстрируется метод [Update](./update-method.md) в сочетании с методом [CancelUpdate](./cancelupdate-method-ado.md) .  
   
 ```  
 'BeginUpdateVB  
@@ -115,13 +115,13 @@ End Sub
 ' EndUpdateVB  
 ```  
   
- В этом примере демонстрируется метод **Update** в сочетании с методом [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) .  
+ В этом примере демонстрируется метод **Update** в сочетании с методом [AddNew](./addnew-method-ado.md) .  
   
 ```  
 Attribute VB_Name = "Update"  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Метод CancelUpdate (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Метод Update](../../../ado/reference/ado-api/update-method.md)
+## <a name="see-also"></a>См. также  
+ [Метод CancelUpdate (ADO)](./cancelupdate-method-ado.md)   
+ [Объект Recordset (ADO)](./recordset-object-ado.md)   
+ [Метод Update](./update-method.md)

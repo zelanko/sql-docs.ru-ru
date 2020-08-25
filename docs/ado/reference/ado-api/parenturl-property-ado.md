@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8e8e171362e66c9809e646eb33cecfbad91f30df
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8254dd1e47d6f6d3042e88365bd3c6ad0ea4301f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442756"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773243"
 ---
 # <a name="parenturl-property-ado"></a>Свойство ParentURL (ADO)
-Указывает абсолютную строку URL-адреса, указывающую на родительскую [запись](../../../ado/reference/ado-api/record-object-ado.md) текущего объекта **Record** .  
+Указывает абсолютную строку URL-адреса, указывающую на родительскую [запись](./record-object-ado.md) текущего объекта **Record** .  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает **строковое** значение, указывающее URL-адрес родительской **записи**.  
   
 ## <a name="remarks"></a>Remarks  
- Свойство **парентурл** зависит от источника, используемого для открытия объекта **Record** . Например, **запись** может быть открыта с источником, содержащим относительный путь к каталогу, на который ссылается свойство [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) .  
+ Свойство **парентурл** зависит от источника, используемого для открытия объекта **Record** . Например, **запись** может быть открыта с источником, содержащим относительный путь к каталогу, на который ссылается свойство [ActiveConnection](./activeconnection-property-ado.md) .  
   
  Предположим, "вторая" — это папка, которая находится в разделе "First". Откройте объект **Record** , используя следующий синтаксис:  
   
@@ -52,13 +52,13 @@ record.Open "second"
  Это свойство доступно только для чтения.  
   
 > [!NOTE]
->  Это свойство поддерживается только поставщиками источников документов, такими как [поставщик OLE DB Майкрософт для публикации в Интернете](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Дополнительные сведения см. в разделе [записи и предоставляемые поставщиком поля](../../../ado/guide/data/records-and-provider-supplied-fields.md).  
+>  Это свойство поддерживается только поставщиками источников документов, такими как [поставщик OLE DB Майкрософт для публикации в Интернете](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Дополнительные сведения см. в разделе [записи и предоставляемые поставщиком поля](../../guide/data/records-and-provider-supplied-fields.md).  
   
 > [!NOTE]
->  URL-адреса, использующие схему HTTP, автоматически вызывают [поставщик OLE DB Майкрософт для публикации в Интернете](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Дополнительные сведения см. в разделе [абсолютные и относительные URL-адреса](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  URL-адреса, использующие схему HTTP, автоматически вызывают [поставщик OLE DB Майкрософт для публикации в Интернете](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Дополнительные сведения см. в разделе [абсолютные и относительные URL-адреса](../../guide/data/absolute-and-relative-urls.md).  
   
 > [!NOTE]
 >  Если текущая запись содержит запись данных из **набора записей**ADO, то доступ к свойству **парентурл** вызывает ошибку времени выполнения, что означает, что URL-адрес невозможен.  
   
 ## <a name="applies-to"></a>Применение  
- [Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)
+ [Объект Record (ADO)](./record-object-ado.md)

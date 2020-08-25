@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 9c1e2322-c225-49d1-a120-a343f23cea73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0fdeaafe1a6f4362eb6a4bc912ce9267d179fe9c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3f4e5407d013e567c09dbb659f5b5e6617e0042c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443066"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773993"
 ---
 # <a name="numericscale-and-precision-properties-example-vb"></a>Примеры свойств NumericScale и Precision (VB)
-В этом примере используются свойства [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) и [Precision](../../../ado/reference/ado-api/precision-property-ado.md) для просмотра числа и точности полей в таблице ***скидок*** базы данных ***pubs*** .  
+В этом примере используются свойства [NumericScale](./numericscale-property-ado.md) и [Precision](./precision-property-ado.md) для просмотра числа и точности полей в таблице ***скидок*** базы данных ***pubs*** .  
   
 ```  
 'BeginNumericScaleVB  
@@ -74,8 +74,8 @@ End Sub
 'EndNumericScaleVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект Field](../../../ado/reference/ado-api/field-object.md)   
- [Свойство NumericScale (ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)   
- [Объект Parameter](../../../ado/reference/ado-api/parameter-object.md)   
- [Свойство Precision (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)
+## <a name="see-also"></a>См. также  
+ [Объект Field](./field-object.md)   
+ [Свойство NumericScale (ADO)](./numericscale-property-ado.md)   
+ [Объект Parameter](./parameter-object.md)   
+ [Свойство Precision (ADO)](./precision-property-ado.md)

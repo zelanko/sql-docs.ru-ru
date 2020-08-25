@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2440b6ff-2536-497c-a5f4-41db0cf1945e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7ddac29da277027f1cc89a8c078ac4d072c369b6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5cf9b819d57a6ad0808c498e2492863c685b13ba
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441546"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776913"
 ---
 # <a name="version-property-example-vc"></a>Пример свойства Version (Visual C++)
-В этом примере свойство [Version](../../../ado/reference/ado-api/version-property-ado.md) объекта [Connection](../../../ado/reference/ado-api/connection-object-ado.md) используется для вывода текущей версии ADO. Он также использует несколько динамических свойств для отображения:  
+В этом примере свойство [Version](./version-property-ado.md) объекта [Connection](./connection-object-ado.md) используется для вывода текущей версии ADO. Он также использует несколько динамических свойств для отображения:  
   
 -   Текущее имя и версия СУБД.  
   
@@ -136,5 +136,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Свойство Version (ADO)](../../../ado/reference/ado-api/version-property-ado.md)
+ [Объект Connection (ADO)](./connection-object-ado.md)   
+ [Свойство Version (ADO)](./version-property-ado.md)

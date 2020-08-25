@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6b4db7c5b7fdbd25687f37cc3c04101b25b9e997
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6f230bc40d310570ab717eee06a454fb3ef2b52b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442896"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773583"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>Пример свойств OriginalValue и UnderlyingValue (Visual c++)
-Этот пример демонстрирует свойства [originalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) и [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) , отображая сообщение, если базовые данные записи изменились во время пакетного обновления [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) .  
+Этот пример демонстрирует свойства [originalValue](./originalvalue-property-ado.md) и [UnderlyingValue](./underlyingvalue-property.md) , отображая сообщение, если базовые данные записи изменились во время пакетного обновления [набора записей](./recordset-object-ado.md) .  
   
 ## <a name="example"></a>Пример  
   
@@ -220,7 +220,7 @@ void PrintComError(_com_error &e) {
 **Текущее значение: self_help**   
 **Исходное значение: психологии**   
 **Базовое значение: социологии**    
-## <a name="see-also"></a>См. также:  
- [Свойство OriginalValue (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Свойство UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)
+## <a name="see-also"></a>См. также  
+ [Свойство OriginalValue (ADO)](./originalvalue-property-ado.md)   
+ [Объект Recordset (ADO)](./recordset-object-ado.md)   
+ [Свойство UnderlyingValue](./underlyingvalue-property.md)

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 481dcc93-487b-490e-ac58-a1e9b2ebfd43
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b3ab83bb44bca7598074eb81d832ca9ed9b954d2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2966868bc8f2cf9d706b4c9f2352c4f8ac5ef583
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451116"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776393"
 ---
 # <a name="bookmark-property-ado"></a>Свойство Bookmark (ADO)
-Указывает закладку, которая уникально идентифицирует текущую запись в объекте [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) или устанавливает текущую запись в объекте **набора записей** в запись, определяемую допустимой закладкой.  
+Указывает закладку, которая уникально идентифицирует текущую запись в объекте [набора записей](./recordset-object-ado.md) или устанавливает текущую запись в объекте **набора записей** в запись, определяемую допустимой закладкой.  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает выражение **типа Variant** , результатом которого является допустимая закладка.  
@@ -36,15 +36,15 @@ ms.locfileid: "88451116"
   
  Возможно, пользователь не сможет просмотреть значение закладки. Кроме того, пользователи не должны предполагать, что закладки напрямую сравнимы, так как две закладки, которые ссылаются на одну и ту же запись, могут иметь разные значения.  
   
- Если для создания копии объекта **набора записей** используется метод [clone](../../../ado/reference/ado-api/clone-method-ado.md) , то параметры свойств **закладки** для исходного и повторяющегося объектов **набора записей** идентичны, и их можно использовать взаимозаменяемыми. Однако нельзя использовать закладки из разных объектов **набора записей** , даже если они были созданы из одного и того же источника или команды.  
+ Если для создания копии объекта **набора записей** используется метод [clone](./clone-method-ado.md) , то параметры свойств **закладки** для исходного и повторяющегося объектов **набора записей** идентичны, и их можно использовать взаимозаменяемыми. Однако нельзя использовать закладки из разных объектов **набора записей** , даже если они были созданы из одного и того же источника или команды.  
   
 > [!NOTE]
 >  **Использование удаленной службы данных** При использовании объекта **набора записей** на стороне клиента свойство **Bookmark** всегда доступно.  
   
 ## <a name="applies-to"></a>Применение  
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Объект Recordset (ADO)](./recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
- [Пример свойств BOF, EOF и Bookmark (Visual Basic)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
- [Пример свойств BOF, EOF и Bookmark (Visual c++)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   
- [Метод Supports](../../../ado/reference/ado-api/supports-method.md)
+## <a name="see-also"></a>См. также  
+ [Пример свойств BOF, EOF и Bookmark (Visual Basic)](./bof-eof-and-bookmark-properties-example-vb.md)   
+ [Пример свойств BOF, EOF и Bookmark (Visual c++)](./bof-eof-and-bookmark-properties-example-vc.md)   
+ [Метод Supports](./supports-method.md)

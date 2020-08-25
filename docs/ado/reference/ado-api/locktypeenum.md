@@ -16,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 52a6e4af75ac8887c23dd245a58981b1bbfb7eb2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7ba912f082cbd621d2d2205c6505e8c2be309bec
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443336"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774553"
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
 Указывает тип блокировки, помещаемой в записи во время редактирования.  
   
-|Константа|Значение|Описание|  
+|Константа|Значение|Описание:|  
 |--------------|-----------|-----------------|  
 |**адлоккбатчоптимистик**|4|Обозначает обновления оптимистических пакетов. Требуется для режима пакетного обновления.|  
-|**adLockOptimistic**|3|Обозначает оптимистичную блокировку, запись по записям. Поставщик использует оптимистичную блокировку, блокируя записи только при вызове метода [Update](../../../ado/reference/ado-api/update-method.md) .|  
+|**adLockOptimistic**|3|Обозначает оптимистичную блокировку, запись по записям. Поставщик использует оптимистичную блокировку, блокируя записи только при вызове метода [Update](./update-method.md) .|  
 |**адлоккпессимистик**|2|Указывает пессимистическую блокировку, запись по записям. Поставщик выполняет необходимые действия, чтобы обеспечить успешное редактирование записей, обычно путем блокировки записей в источнике данных сразу после редактирования.|  
 |**адлоккреадонли**|1|Указывает записи, которые доступны только для чтения. Изменить данные нельзя.|  
 |**адлоккунспеЦифиед**|-1|Не указывает тип блокировки. Для клонов создается клон с тем же типом блокировки, что и у оригинала.|  
@@ -49,11 +49,11 @@ ms.locfileid: "88443336"
 
 :::row:::
     :::column:::
-        [Метод Clone (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)  
-        [Свойство LockType (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)  
+        [Метод Clone (ADO)](./clone-method-ado.md)  
+        [Свойство LockType (ADO)](./locktype-property-ado.md)  
     :::column-end:::
     :::column:::
-        [Метод Open (объект Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
-        [Событие WillExecute (ADO)](../../../ado/reference/ado-api/willexecute-event-ado.md)  
+        [Метод Open (объект Recordset ADO)](./open-method-ado-recordset.md)  
+        [Событие WillExecute (ADO)](./willexecute-event-ado.md)  
     :::column-end:::
 :::row-end:::

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4daa93aa-9727-4d1c-886a-e9d22017a1ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7a70c445858b24dfe8cffc44c2dea70e9d007ab9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 004a875656b9dc772985f965ec8c2c2910b127ec
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443496"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774883"
 ---
 # <a name="getstring-method-example-vc"></a>Пример метода GetString (Visual C++)
-В этом примере показан метод [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) .  
+В этом примере показан метод [GetString](./getstring-method-ado.md) .  
   
- Предположим, что выполняется отладка проблемы доступа к данным и требуется быстрый и простой способ печати текущего содержимого небольшого [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
+ Предположим, что выполняется отладка проблемы доступа к данным и требуется быстрый и простой способ печати текущего содержимого небольшого [набора записей](./recordset-object-ado.md).  
   
 ## <a name="example"></a>Пример  
   
@@ -184,6 +184,6 @@ Name            Address            City
 Sylvia   Panteley   1956 Arlington Pl.   Rockville  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Метод GetString (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)   
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+## <a name="see-also"></a>См. также  
+ [Метод GetString (ADO)](./getstring-method-ado.md)   
+ [Объект Recordset (ADO)](./recordset-object-ado.md)

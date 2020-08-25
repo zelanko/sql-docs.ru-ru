@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: acc15d40-68a6-4ba9-85bd-12d331aecaa6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 43f374429d38cb4d3cb4516d640b6d05ef8e3efb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 99c4e9be5c998b8abc1a5b609bbdeb249fa6c7b8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451206"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776453"
 ---
 # <a name="attributes-property-ado"></a>Свойство Attributes (ADO)
 Указывает одну или несколько характеристик объекта.  
@@ -31,13 +31,13 @@ ms.locfileid: "88451206"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает значение **типа Long** .  
   
- Для объекта [соединения](../../../ado/reference/ado-api/connection-object-ado.md) свойство **Attributes** доступно для чтения и записи, а его значение может быть суммой одного или нескольких значений [ксактаттрибутинум](../../../ado/reference/ado-api/xactattributeenum.md) . Значение по умолчанию равно нулю (0).  
+ Для объекта [соединения](./connection-object-ado.md) свойство **Attributes** доступно для чтения и записи, а его значение может быть суммой одного или нескольких значений [ксактаттрибутинум](./xactattributeenum.md) . Значение по умолчанию равно нулю (0).  
   
- Для объекта [параметра](../../../ado/reference/ado-api/parameter-object.md) свойство **Attributes** доступно для чтения и записи, а его значение может быть суммой любого одного или нескольких значений [параметераттрибутесенум](../../../ado/reference/ado-api/parameterattributesenum.md) . Значение по умолчанию — **адпарамсигнед**.  
+ Для объекта [параметра](./parameter-object.md) свойство **Attributes** доступно для чтения и записи, а его значение может быть суммой любого одного или нескольких значений [параметераттрибутесенум](./parameterattributesenum.md) . Значение по умолчанию — **адпарамсигнед**.  
   
- Для объекта [field](../../../ado/reference/ado-api/field-object.md) свойство **Attributes** может быть суммой одного или нескольких значений [фиелдаттрибутинум](../../../ado/reference/ado-api/fieldattributeenum.md) . Обычно он доступен только для чтения. Однако для новых объектов **field** , добавленных к коллекции [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) [записи](../../../ado/reference/ado-api/record-object-ado.md), **атрибуты** доступны только для чтения и записи только после того, как было указано свойство [value](../../../ado/reference/ado-api/value-property-ado.md) для **поля** и новое **поле** было успешно добавлено поставщиком данных путем вызова метода [Update](../../../ado/reference/ado-api/update-method.md) коллекции **Fields** .  
+ Для объекта [field](./field-object.md) свойство **Attributes** может быть суммой одного или нескольких значений [фиелдаттрибутинум](./fieldattributeenum.md) . Обычно он доступен только для чтения. Однако для новых объектов **field** , добавленных к коллекции [Fields](./fields-collection-ado.md) [записи](./record-object-ado.md), **атрибуты** доступны только для чтения и записи только после того, как было указано свойство [value](./value-property-ado.md) для **поля** и новое **поле** было успешно добавлено поставщиком данных путем вызова метода [Update](./update-method.md) коллекции **Fields** .  
   
- Для объекта [Property](../../../ado/reference/ado-api/property-object-ado.md) свойство **Attributes** доступно только для чтения, а его значение может быть суммой любого одного или нескольких значений [пропертяттрибутесенум](../../../ado/reference/ado-api/propertyattributesenum.md) .  
+ Для объекта [Property](./property-object-ado.md) свойство **Attributes** доступно только для чтения, а его значение может быть суммой любого одного или нескольких значений [пропертяттрибутесенум](./propertyattributesenum.md) .  
   
 ## <a name="remarks"></a>Remarks  
  Свойство **Attributes** используется для задания или возвращения характеристик объектов **соединения** , объектов **параметров** , объектов **полей** или объектов **свойств** .  
@@ -51,18 +51,18 @@ ms.locfileid: "88451206"
 
 :::row:::
     :::column:::
-        [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
-        [Объект Field](../../../ado/reference/ado-api/field-object.md)  
+        [Объект Connection (ADO)](./connection-object-ado.md)  
+        [Объект Field](./field-object.md)  
     :::column-end:::
     :::column:::
-        [Объект Parameter](../../../ado/reference/ado-api/parameter-object.md)  
-        [Объект Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+        [Объект Parameter](./parameter-object.md)  
+        [Объект Property (ADO)](./property-object-ado.md)  
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>См. также:  
- [Пример атрибутов и свойств имени (Visual Basic)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
- [Пример атрибутов и свойств имени (Visual c++)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   
- [Метод AppendChunk (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
- [Методы примеры BeginTrans, CommitTrans и RollbackTrans (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
- [Метод GetChunk (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)
+## <a name="see-also"></a>См. также  
+ [Пример атрибутов и свойств имени (Visual Basic)](./attributes-and-name-properties-example-vb.md)   
+ [Пример атрибутов и свойств имени (Visual c++)](./attributes-and-name-properties-example-vc.md)   
+ [Метод AppendChunk (ADO)](./appendchunk-method-ado.md)   
+ [Методы примеры BeginTrans, CommitTrans и RollbackTrans (ADO)](./begintrans-committrans-and-rollbacktrans-methods-ado.md)   
+ [Метод GetChunk (ADO)](./getchunk-method-ado.md)

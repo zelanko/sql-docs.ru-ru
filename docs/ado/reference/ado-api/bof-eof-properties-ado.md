@@ -18,22 +18,22 @@ helpviewer_keywords:
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a10ef4731db0e469743d09d9e3b35463d03e7020
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4f6d27831c9215a66580cce32baa0d6d602d2813
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451135"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776403"
 ---
 # <a name="bof-eof-properties-ado"></a>Свойства BOF и EOF (ADO)
--   **BOF** Указывает, что текущая запись находится перед первой записью в объекте [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) .  
+-   **BOF** Указывает, что текущая запись находится перед первой записью в объекте [набора записей](./recordset-object-ado.md) .  
   
 -   **Конец файла** Указывает, что текущее расположение записи находится после последней записи в объекте **набора записей** .  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Свойства **BOF** и **EOF** возвращают **логические** значения.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Используйте свойства **BOF** и **EOF** , чтобы определить, содержит ли объект **набора** записей записи или выходят за пределы объекта **набора записей** при переходе от записи к записи.  
   
  Свойство **BOF** возвращает **значение true** (-1), если текущая запись находится перед первой записью, и **false** (0), если текущая запись находится в положении или после первой записи.  
@@ -42,7 +42,7 @@ ms.locfileid: "88451135"
   
  Если свойство **BOF** или **EOF** имеет **значение true**, текущая запись отсутствует.  
   
- При открытии объекта **Recordset** , не содержащего записей, свойства **BOF** и **EOF** устанавливаются в **значение true** (Дополнительные сведения об этом состоянии **набора записей**см. в свойстве [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) ). При открытии объекта **набора записей** , содержащего хотя бы одну запись, первая запись является текущей, а свойства **BOF** и **EOF** — **false**.  
+ При открытии объекта **Recordset** , не содержащего записей, свойства **BOF** и **EOF** устанавливаются в **значение true** (Дополнительные сведения об этом состоянии **набора записей**см. в свойстве [RecordCount](./recordcount-property-ado.md) ). При открытии объекта **набора записей** , содержащего хотя бы одну запись, первая запись является текущей, а свойства **BOF** и **EOF** — **false**.  
   
  Если удалить последнюю оставшуюся запись в объекте **Recordset** , то свойства **BOF** и **EOF** могут остаться **ложными** , пока вы не попытаетесь изменить расположение текущей записи.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "88451135"
   
 ||MoveFirst<br /><br /> MoveLast|MovePrevious<br /><br /> Переместить < 0|Переместить 0|Метод<br /><br /> Переместить > 0|  
 |------|-----------------------------|---------------------------------|------------|-----------------------------|  
-|**BOF** = **True**, **EOF**— = **false**|Допускается|Error|Error|Допускается|  
+|**BOF** = **True**, **EOF**— = **false**|Разрешено|Error|Error|Разрешено|  
 |**BOF** = **False**, **EOF**— = **true**|Разрешено|Разрешено|Error|Error|  
 |Оба значения **true**|Error|Error|Error|Error|  
 |Оба значения **false**|Разрешено|Разрешено|Разрешено|Разрешено|  
@@ -67,8 +67,8 @@ ms.locfileid: "88451135"
 |**MoveNext**, **Move** > 0|Без изменения.|Задайте значение **true**|  
   
 ## <a name="applies-to"></a>Применение  
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Объект Recordset (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>См. также  
- [Пример свойств BOF, EOF и Bookmark (Visual Basic)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
- [Пример свойств BOF, EOF и Bookmark (Visual c++)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   
+ [Пример свойств BOF, EOF и Bookmark (Visual Basic)](./bof-eof-and-bookmark-properties-example-vb.md)   
+ [Пример свойств BOF, EOF и Bookmark (Visual c++)](./bof-eof-and-bookmark-properties-example-vc.md)

@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 334ae655-8cac-48e6-8d00-1d28f3436e1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e7de7de37cf298005e7a8bdf58d1712d8cb46919
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3feab164032044d954a0ff90f909c210dc851743
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442206"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777593"
 ---
 # <a name="save-and-open-methods-example-vc"></a>Пример методов Save и Open (Visual c++)
-В этих трех примерах показано, как можно совместно использовать методы [Save](../../../ado/reference/ado-api/save-method.md) и **Open** .  
+В этих трех примерах показано, как можно совместно использовать методы [Save](./save-method.md) и **Open** .  
   
- Предположим, что вы собираетесь в командировку и хотите взять таблицу из базы данных. Прежде чем перейти, вы получите доступ к данным в качестве [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) и сохраните их в переносимой форме. Когда вы приступите к назначению, вы получите доступ к **набору записей** как к локальному, отключенному **набору записей**. Вы вносите изменения в **набор записей**, а затем сохраняете его снова. Наконец, когда вы вернетесь домой, вы снова подключитесь к базе данных и обновите ее, внеся изменения, внесенные в дороге.  
+ Предположим, что вы собираетесь в командировку и хотите взять таблицу из базы данных. Прежде чем перейти, вы получите доступ к данным в качестве [набора записей](./recordset-object-ado.md) и сохраните их в переносимой форме. Когда вы приступите к назначению, вы получите доступ к **набору записей** как к локальному, отключенному **набору записей**. Вы вносите изменения в **набор записей**, а затем сохраняете его снова. Наконец, когда вы вернетесь домой, вы снова подключитесь к базе данных и обновите ее, внеся изменения, внесенные в дороге.  
   
 ```  
 // BeginSaveCpp.cpp  
@@ -261,7 +261,7 @@ bool FileExists() {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Метод Open (набор записей ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Метод Save](../../../ado/reference/ado-api/save-method.md)
+## <a name="see-also"></a>См. также  
+ [Метод Open (набор записей ADO)](./open-method-ado-recordset.md)   
+ [Объект Recordset (ADO)](./recordset-object-ado.md)   
+ [Метод Save](./save-method.md)

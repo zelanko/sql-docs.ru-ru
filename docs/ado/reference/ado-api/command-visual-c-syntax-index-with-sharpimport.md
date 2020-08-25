@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ccb6ffbc-7303-4124-8a0c-f6356f2c82d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 45f999fce96969331ddd8e235b120532919c22b5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 02ba483a38f554455d1b30546a9308aeec3921ed
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450866"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776133"
 ---
 # <a name="command-visual-c-syntax-index-with-import"></a>Команда (Visual C++ индекс синтаксиса с #import)
 ## <a name="methods"></a>Методы  
@@ -60,5 +60,5 @@ long GetState( );
 __declspec(property(get=GetState)) long State;  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)
+## <a name="see-also"></a>См. также  
+ [Объект Command (ADO)](./command-object-ado.md)

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 24ab3f3a-29c5-4ee1-942e-2634c02d0778
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca1a9f62d293e3be0c7c27ce8dec8bc58e7d5c43
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 921fccf29a823be169f16a0144aa0cdb0cabe232
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450776"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776053"
 ---
 # <a name="comparebookmarks-method-example-vc"></a>Пример метода CompareBookmarks (Visual C++)
-В этом примере демонстрируется метод [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) . Относительное значение закладок редко требуется, если конкретная закладка не является каким-либо специальным.  
+В этом примере демонстрируется метод [CompareBookmarks](./comparebookmarks-method-ado.md) . Относительное значение закладок редко требуется, если конкретная закладка не является каким-либо специальным.  
   
- Назначьте случайную строку [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) , производного от таблицы ***authors*** , в качестве цели поиска. Затем отобразить расположение каждой строки относительно этого целевого объекта.  
+ Назначьте случайную строку [набора записей](./recordset-object-ado.md) , производного от таблицы ***authors*** , в качестве цели поиска. Затем отобразить расположение каждой строки относительно этого целевого объекта.  
   
 ```  
 // BeginCompareBookmarksCpp.cpp  
@@ -170,6 +170,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Метод CompareBookmarks (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)   
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+## <a name="see-also"></a>См. также  
+ [Метод CompareBookmarks (ADO)](./comparebookmarks-method-ado.md)   
+ [Объект Recordset (ADO)](./recordset-object-ado.md)

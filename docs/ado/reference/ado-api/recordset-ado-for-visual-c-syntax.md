@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: affc847c-a533-4c8a-bdff-3682fdb5df5f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f411d7cc7856799e923fb75e7e1ca2ba6717d44c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7348cf06348ee9fc4588c599c584e09808bf690a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442446"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772323"
 ---
 # <a name="recordset-ado-for-visual-c-syntax"></a>Recordset (синтаксис ADO для Visual C++)
 ## <a name="methods"></a>Методы  
@@ -119,5 +119,5 @@ WillChangeRecordset(EventReasonEnum adReason, EventStatusEnum *adStatus, _ADORec
 WillMove(EventReasonEnum adReason, EventStatusEnum *adStatus, _ADORecordset *pRecordset)  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+## <a name="see-also"></a>См. также  
+ [Объект Recordset (ADO)](./recordset-object-ado.md)

@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: bff07eeb-dee3-4e4e-9b2d-d56061ea744d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71142aac94003987267a6d4a6b30d2c9d17c1bfd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 73fb0218b9a4a9437dbe8c103c8496f0a209e9b1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444426"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775813"
 ---
 # <a name="connectoptionenum"></a>ConnectOptionEnum
-Указывает, должен ли метод [открытия](../../../ado/reference/ado-api/open-method-ado-connection.md) объекта [соединения](../../../ado/reference/ado-api/connection-object-ado.md) возвращаться после установления соединения (синхронно) или до (асинхронно).  
+Указывает, должен ли метод [открытия](./open-method-ado-connection.md) объекта [соединения](./connection-object-ado.md) возвращаться после установления соединения (синхронно) или до (асинхронно).  
   
-|Константа|Значение|Описание|  
+|Константа|Значение|Описание:|  
 |--------------|-----------|-----------------|  
-|**adAsyncConnect**|16|Асинхронно открывает подключение. Для определения доступности подключения можно использовать событие [коннекткомплете](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md) .|  
+|**adAsyncConnect**|16|Асинхронно открывает подключение. Для определения доступности подключения можно использовать событие [коннекткомплете](./connectcomplete-and-disconnect-events-ado.md) .|  
 |**adConnectUnspecified**|-1|По умолчанию. Синхронно открывает подключение.|  
   
 ## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
@@ -40,4 +40,4 @@ ms.locfileid: "88444426"
 |Адоенумс. Коннектоптион. КОННЕКТУНСПЕЦИФИЕД|  
   
 ## <a name="applies-to"></a>Применение  
- [Метод Open (объект Connection ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)
+ [Метод Open (объект Connection ADO)](./open-method-ado-connection.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ab95315c-fe15-458c-9e0c-937ae5596592
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fb942aac538e73697435d94c77530ed1531a7325
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7f7bbad7f16191b6ff9d1c3b5c497995733ab10b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442296"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777673"
 ---
 # <a name="resync-method-example-vb"></a>Пример метода Resync (Visual Basic)
-В этом примере демонстрируется использование метода [Resync](../../../ado/reference/ado-api/resync-method.md) для обновления данных в статическом наборе записей.  
+В этом примере демонстрируется использование метода [Resync](./resync-method.md) для обновления данных в статическом наборе записей.  
   
 ```  
 'BeginResyncVB  
@@ -104,6 +104,6 @@ End Sub
 'EndResyncVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Метод Resync](../../../ado/reference/ado-api/resync-method.md)
+## <a name="see-also"></a>См. также  
+ [Объект Recordset (ADO)](./recordset-object-ado.md)   
+ [Метод Resync](./resync-method.md)

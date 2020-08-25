@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4ac19647-73e7-4edf-9913-25c8fd927e36
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 56f3a7551a94fa9f079aa56d24de9c1d7a072480
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5203cc9a896e42a18f2c3eedcbfbcb41d4f6ec4a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451176"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776443"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vc"></a>Примеры методов примеры BeginTrans, CommitTrans и RollbackTrans (Visual c++)
-В этом примере изменяется тип книги всех книг психологии в таблице ***titles*** базы данных. После того как метод [примеры BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) запускает транзакцию, которая изолирует все изменения, внесенные в таблицу ***titles*** , метод [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) сохраняет изменения. Метод [ROLLBACK](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) можно использовать для отмены изменений, сохраненных с помощью метода [Update](../../../ado/reference/ado-api/update-method.md) .  
+В этом примере изменяется тип книги всех книг психологии в таблице ***titles*** базы данных. После того как метод [примеры BeginTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) запускает транзакцию, которая изолирует все изменения, внесенные в таблицу ***titles*** , метод [CommitTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) сохраняет изменения. Метод [ROLLBACK](./begintrans-committrans-and-rollbacktrans-methods-ado.md) можно использовать для отмены изменений, сохраненных с помощью метода [Update](./update-method.md) .  
   
 ## <a name="example"></a>Пример  
   
@@ -268,5 +268,5 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Методы примеры BeginTrans, CommitTrans и RollbackTrans (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
- [Метод Update](../../../ado/reference/ado-api/update-method.md)
+ [Методы примеры BeginTrans, CommitTrans и RollbackTrans (ADO)](./begintrans-committrans-and-rollbacktrans-methods-ado.md)   
+ [Метод Update](./update-method.md)

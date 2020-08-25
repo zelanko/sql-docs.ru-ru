@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d05e220717ad88ad52340d368a3b54a85365621d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 003f3f80e9a544e5b33929cf434f6b39855ca49d
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442676"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773063"
 ---
 # <a name="prepared-property-example-vc"></a>Пример свойства Prepared (Visual C++)
-В этом примере демонстрируется [подготовленное](../../../ado/reference/ado-api/prepared-property-ado.md) свойство путем открытия двух [командных](../../../ado/reference/ado-api/command-object-ado.md) объектов — один подготовленный и еще не подготовленный.  
+В этом примере демонстрируется [подготовленное](./prepared-property-ado.md) свойство путем открытия двух [командных](./command-object-ado.md) объектов — один подготовленный и еще не подготовленный.  
   
 ## <a name="example"></a>Пример  
   
@@ -144,6 +144,6 @@ void PrintComError(_com_error &e) {
  **Результаты производительности:**  
 **Не подготовлено: 0,016 с**  
 **Подготовлено: 0,016 с**   
-## <a name="see-also"></a>См. также:  
- [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Свойство Prepared (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)
+## <a name="see-also"></a>См. также  
+ [Объект Command (ADO)](./command-object-ado.md)   
+ [Свойство Prepared (ADO)](./prepared-property-ado.md)

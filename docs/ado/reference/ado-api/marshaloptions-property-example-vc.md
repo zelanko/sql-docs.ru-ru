@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a3b6fc09-ce21-450d-9063-bac505208d31
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2e591ca4524bbbdd13ccd934434c743e49c0b2c4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4e29b5d53b46248ba9ba4017692f51f2c01cbc8b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443306"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774473"
 ---
 # <a name="marshaloptions-property-example-vc"></a>Пример свойства MarshalOptions (Visual C++)
-В этом примере свойство [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) используется для указания того, какие строки отправляются обратно на сервер — все строки или только измененные строки.  
+В этом примере свойство [MarshalOptions](./marshaloptions-property-ado.md) используется для указания того, какие строки отправляются обратно на сервер — все строки или только измененные строки.  
   
 ```  
 // BeginMarshalOptionsCpp.cpp  
@@ -245,5 +245,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Свойство MarshalOptions (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)
+## <a name="see-also"></a>См. также  
+ [Свойство MarshalOptions (ADO)](./marshaloptions-property-ado.md)

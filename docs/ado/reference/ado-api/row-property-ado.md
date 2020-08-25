@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 21019d89-2dd1-4a26-ac6f-384b81d66949
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2bceacc215a67050142c773675a0af464ff9b9ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3048bf470ed27adb3fb3ceaaef3c7658c1fb93fb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442246"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777633"
 ---
 # <a name="row-property-ado"></a>Свойство Row (ADO)
-Возвращает или задает объект OLE DB **строки** из объекта [интерфейса адорекордконструктион](../../../ado/reference/ado-api/adorecordconstruction-interface.md) или. При использовании **put_Row** для задания объекта **строки** строка преобразуется в объект **записи** ADO.  
+Возвращает или задает объект OLE DB **строки** из объекта [интерфейса адорекордконструктион](./adorecordconstruction-interface.md) или. При использовании **put_Row** для задания объекта **строки** строка преобразуется в объект **записи** ADO.  
   
 ## <a name="readwritesyntax"></a>Чтение и запись. Syntax  
   
@@ -48,4 +48,4 @@ HRESULT put_Row([in] IUnknown* pRow);
  Этот метод свойства возвращает стандартные значения HRESULT, включая S_OK и E_FAIL.  
   
 ## <a name="applies-to"></a>Применение  
- [Интерфейс ADORecordConstruction](../../../ado/reference/ado-api/adorecordconstruction-interface.md)
+ [Интерфейс ADORecordConstruction](./adorecordconstruction-interface.md)

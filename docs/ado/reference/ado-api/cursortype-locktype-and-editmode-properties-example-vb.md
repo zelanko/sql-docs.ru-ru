@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2cb4a304-f40a-4897-8b93-82c2d8e93500
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3d9b0ae19ce5fbac150a86fc7db3d08b16840fbd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 859fca56653250ee1070981db048aafeb2e4011a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444286"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775513"
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>Примеры свойств примеры CursorType, LockType и EditMode (Visual Basic)
-В этом примере показано задание свойств [примеры CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) и [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) перед открытием [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md). Он также показывает значение свойства [EditMode](../../../ado/reference/ado-api/editmode-property.md) в различных условиях. Для выполнения этой процедуры требуется функция Едитмодеаутпут.  
+В этом примере показано задание свойств [примеры CursorType](./cursortype-property-ado.md) и [LockType](./locktype-property-ado.md) перед открытием [набора записей](./recordset-object-ado.md). Он также показывает значение свойства [EditMode](./editmode-property.md) в различных условиях. Для выполнения этой процедуры требуется функция Едитмодеаутпут.  
   
 ```  
 'BeginEditModeVB  
@@ -124,10 +124,10 @@ End Function
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Свойство примеры CursorType (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
- [курсортипинум](../../../ado/reference/ado-api/cursortypeenum.md)   
- [EditMode, свойство](../../../ado/reference/ado-api/editmode-property.md)   
- [едитмодинум](../../../ado/reference/ado-api/editmodeenum.md)   
- [Свойство LockType (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
- [локктипинум](../../../ado/reference/ado-api/locktypeenum.md)   
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Свойство примеры CursorType (ADO)](./cursortype-property-ado.md)   
+ [курсортипинум](./cursortypeenum.md)   
+ [EditMode, свойство](./editmode-property.md)   
+ [едитмодинум](./editmodeenum.md)   
+ [Свойство LockType (ADO)](./locktype-property-ado.md)   
+ [локктипинум](./locktypeenum.md)   
+ [Объект Recordset (ADO)](./recordset-object-ado.md)

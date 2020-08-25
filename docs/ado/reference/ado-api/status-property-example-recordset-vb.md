@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e37b4d46-380d-4615-b4bb-e1a7b0851771
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83ee7fc06923a4e0010fab835ea05e00768cbb94
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: da0a6641ff98848e3cfd2173ecd19711bf41fa4e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441926"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777313"
 ---
 # <a name="status-property-example-recordset-vb"></a>Пример свойства Status (объект Recordset) (Visual Basic)
-В этом примере свойство [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) используется для вывода сведений о том, какие записи были изменены в пакетной операции до того, как произошло пакетное обновление.  
+В этом примере свойство [Status](./status-property-ado-recordset.md) используется для вывода сведений о том, какие записи были изменены в пакетной операции до того, как произошло пакетное обновление.  
   
 ```  
 'BeginStatusRecordsetVB  
@@ -98,5 +98,5 @@ End Sub
 'EndStatusRecordsetVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Свойство Status (объект Recordset ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)
+## <a name="see-also"></a>См. также  
+ [Свойство Status (объект Recordset ADO)](./status-property-ado-recordset.md)

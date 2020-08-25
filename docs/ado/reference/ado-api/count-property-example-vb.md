@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 35033910-623b-449a-a57d-baff3ed5ab8f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2503065a7a8fceb590e0ad28e57f7ed0ae172589
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 665ad3516143696c7b286b90e70b42ce1c7b5dd6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444346"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775663"
 ---
 # <a name="count-property-example-vb"></a>Пример свойства Count (Visual Basic)
-В этом примере показано свойство [Count](../../../ado/reference/ado-api/count-property-ado.md) с двумя коллекциями в базе данных ***Employee*** . Свойство получает количество объектов в каждой коллекции и задает верхний предел для циклов, которые перечисляют эти коллекции. Другим способом перечисления этих коллекций без использования свойства **Count** является использование `For Each...Next` инструкций.  
+В этом примере показано свойство [Count](./count-property-ado.md) с двумя коллекциями в базе данных ***Employee*** . Свойство получает количество объектов в каждой коллекции и задает верхний предел для циклов, которые перечисляют эти коллекции. Другим способом перечисления этих коллекций без использования свойства **Count** является использование `For Each...Next` инструкций.  
   
 ```  
 'BeginCountVB  
@@ -97,5 +97,5 @@ End Sub
 'EndCountVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Свойство Count (ADO)](../../../ado/reference/ado-api/count-property-ado.md)
+## <a name="see-also"></a>См. также  
+ [Свойство Count (ADO)](./count-property-ado.md)

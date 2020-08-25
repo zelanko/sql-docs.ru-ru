@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: a4e23508-fbf3-4468-be55-212e7238802b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 00c0121f7418fa63280950191c445ff499dcb133
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 10da6786a5a41e6329b8af6c7a745a00fa0a4cbe
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441686"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777063"
 ---
 # <a name="type-property-example-property-vc"></a>Пример свойства Type (объект Property) (Visual C++)
-В этом примере демонстрируется свойство [Type](../../../ado/reference/ado-api/type-property-ado.md) . Это модель служебной программы для перечисления имен и типов коллекций, таких как [Свойства](../../../ado/reference/ado-api/properties-collection-ado.md), [поля](../../../ado/reference/ado-api/fields-collection-ado.md)и т. д.  
+В этом примере демонстрируется свойство [Type](./type-property-ado.md) . Это модель служебной программы для перечисления имен и типов коллекций, таких как [Свойства](./properties-collection-ado.md), [поля](./fields-collection-ado.md)и т. д.  
   
- Для доступа к коллекции **свойств** не нужно открывать [набор записей](../../../ado/reference/ado-api/recordset-object-ado.md) . они прибывают к существованию при создании экземпляра объекта **Recordset** . Однако при присвоении свойству [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) значения **Адусеклиент** в коллекцию **свойств** объекта **набора записей** добавляются несколько динамических свойств, что делает пример более интересным. Для наглядности мы явно используем свойство [Item](../../../ado/reference/ado-api/item-property-ado.md) для доступа к каждому объекту [свойства](../../../ado/reference/ado-api/property-object-ado.md) .  
+ Для доступа к коллекции **свойств** не нужно открывать [набор записей](./recordset-object-ado.md) . они прибывают к существованию при создании экземпляра объекта **Recordset** . Однако при присвоении свойству [CursorLocation](./cursorlocation-property-ado.md) значения **Адусеклиент** в коллекцию **свойств** объекта **набора записей** добавляются несколько динамических свойств, что делает пример более интересным. Для наглядности мы явно используем свойство [Item](./item-property-ado.md) для доступа к каждому объекту [свойства](./property-object-ado.md) .  
   
 ```  
 // BeginTypePropertyCpp.cpp  
@@ -216,6 +216,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
- [Свойство Type (ADO)](../../../ado/reference/ado-api/type-property-ado.md)
+## <a name="see-also"></a>См. также  
+ [Объект Property (ADO)](./property-object-ado.md)   
+ [Свойство Type (ADO)](./type-property-ado.md)

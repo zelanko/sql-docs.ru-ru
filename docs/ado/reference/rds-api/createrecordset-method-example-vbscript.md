@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: cce0d8b5-e87b-4f7b-a8a0-37d5025a1f5d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c6fc0eca4668aeaff00b8add8532ce633517eb64
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9648445435cc1f26a28c43110584fb6280739f64
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439177"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768633"
 ---
 # <a name="createrecordset-method-example-vbscript"></a>Пример метода CreateRecordset (VBScript)
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Этот пример кода создает [набор записей](../../../ado/reference/ado-api/recordset-object-ado.md) на стороне сервера. В нем есть два столбца с четырьмя строками. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **креатерекордсетвбс. ASP**.  
+ Этот пример кода создает [набор записей](../ado-api/recordset-object-ado.md) на стороне сервера. В нем есть два столбца с четырьмя строками. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **креатерекордсетвбс. ASP**.  
   
 ```  
 <!-- BeginCreateRecordsetVBS -->  
@@ -168,8 +168,6 @@ End Sub
 <!-- EndCreateRecordsetVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Метод CreateRecordset (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)   
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
-
+## <a name="see-also"></a>См. также  
+ [Метод CreateRecordset (RDS)](./createrecordset-method-rds.md)   
+ [Объект Recordset (ADO)](../ado-api/recordset-object-ado.md)

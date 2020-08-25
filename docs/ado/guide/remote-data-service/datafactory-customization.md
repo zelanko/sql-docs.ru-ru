@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 86d77985-a0d0-405a-8587-c85a20540a0e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7ec3707df187e09de92fa42d7ed2b1c1b8e1130
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c34ae14feda7c0a6847d638f35bf84c6b9cd0fd5
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452226"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759808"
 ---
 # <a name="datafactory-customization"></a>Настройка DataFactory
-Служба Remote Data Service (RDS) позволяет легко выполнять доступ к данным в трехуровневой клиентской и серверной системе. Клиентский элемент управления данными задает параметры соединения и командной строки для выполнения запроса к удаленному источнику данных, а также параметры строки подключения и параметров объекта [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) для выполнения обновления.  
+Служба Remote Data Service (RDS) позволяет легко выполнять доступ к данным в трехуровневой клиентской и серверной системе. Клиентский элемент управления данными задает параметры соединения и командной строки для выполнения запроса к удаленному источнику данных, а также параметры строки подключения и параметров объекта [набора записей](../../reference/ado-api/recordset-object-ado.md) для выполнения обновления.  
   
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Параметры передаются в серверную программу, которая выполняет операцию доступа к данным в удаленном источнике данных. RDS предоставляет серверную программу по умолчанию, именуемую объектом [факта RDSServer.](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) DataObject. Объект **RDSServer.** DataObject возвращает любой объект **набора записей** , созданный запросом к клиенту.  
+ Параметры передаются в серверную программу, которая выполняет операцию доступа к данным в удаленном источнике данных. RDS предоставляет серверную программу по умолчанию, именуемую объектом [факта RDSServer.](../../reference/rds-api/datafactory-object-rdsserver.md) DataObject. Объект **RDSServer.** DataObject возвращает любой объект **набора записей** , созданный запросом к клиенту.  
   
  Однако **RDSServer.. факты** ограничены выполнением запросов и обновлений. Он не может выполнять проверку или обработку строк соединения или команд.  
   
@@ -36,18 +36,16 @@ ms.locfileid: "88452226"
   
  В следующих разделах содержатся дополнительные сведения о настройке объекта **фактов** .  
   
--   [Общие сведения о файле настроек](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)  
+-   [Общие сведения о файле настроек](./understanding-the-customization-file.md)  
   
--   [Настройка раздела подключения файла](../../../ado/guide/remote-data-service/customization-file-connect-section.md)  
+-   [Настройка раздела подключения файла](./customization-file-connect-section.md)  
   
--   [Настройка раздела SQL файла](../../../ado/guide/remote-data-service/customization-file-sql-section.md)  
+-   [Настройка раздела SQL файла](./customization-file-sql-section.md)  
   
--   [Настройка раздела UserList файла](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)  
+-   [Настройка раздела UserList файла](./customization-file-userlist-section.md)  
   
--   [Настройка раздела журналов файла](../../../ado/guide/remote-data-service/customization-file-logs-section.md)  
+-   [Настройка раздела журналов файла](./customization-file-logs-section.md)  
   
--   [Требуемые параметры клиента](../../../ado/guide/remote-data-service/required-client-settings.md)  
+-   [Требуемые параметры клиента](./required-client-settings.md)  
   
--   [Создание собственного настраиваемого обработчика](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
-
+-   [Создание собственного настраиваемого обработчика](./writing-your-own-customized-handler.md)
