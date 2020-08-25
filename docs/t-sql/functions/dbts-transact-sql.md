@@ -1,5 +1,6 @@
 ---
-title: '@@DBTS (Transact-SQL) | Документы Майкрософт'
+description: '&#x40;&#x40;DBTS (Transact-SQL)'
+title: DBTS (Transact-SQL)
 ms.custom: ''
 ms.date: 09/18/2017
 ms.prod: sql
@@ -18,14 +19,15 @@ helpviewer_keywords:
 ms.assetid: 91842ddd-91c0-4445-a03f-116f6bc991d0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5493589b7a87af2ea856a63e81c3b366eb410d9e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1f11adca5f8a3fe72a0365e84a746cdec2d5e049
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85682948"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417410"
 ---
 # <a name="x40x40dbts-transact-sql"></a>&#x40;&#x40;DBTS (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Эта функция возвращает значение текущего типа данных **timestamp** для текущей базы данных. У текущей базы данных будет гарантированно уникальное значение отметки времени.
@@ -34,10 +36,12 @@ ms.locfileid: "85682948"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```
+```syntaxsql
 @@DBTS  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="return-types"></a>Типы возвращаемых данных
 **varbinary**
   
@@ -55,7 +59,7 @@ GO
 SELECT @@DBTS;  
 ```  
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 [Функции настройки (Transact-SQL)](../../t-sql/functions/configuration-functions-transact-sql.md)  
 [Параллелизм курсоров (ODBC)](../../relational-databases/native-client-odbc-cursors/properties/cursor-concurrency-odbc.md)  
 [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  

@@ -1,4 +1,5 @@
 ---
+description: Индексы columnstore. Руководство по загрузке данных
 title: Индексы columnstore. Руководство по загрузке данных | Документы Майкрософт
 ms.custom: ''
 ms.date: 12/03/2017
@@ -11,12 +12,12 @@ ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9113071199d8561f2f4521bd8563e7cab275fc34
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6b057d193af0cea47e1dc19c58c508d45786b940
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007538"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482744"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>Индексы columnstore. Руководство по загрузке данных
 
@@ -52,6 +53,8 @@ ms.locfileid: "86007538"
 -   **Оптимизация блокировки.** Блокировка X автоматически применяется к группе строк при загрузке данных в сжатую группу строк. Однако при массовой загрузке в разностную группу строк устанавливается блокировка X для группы строк, но [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по-прежнему блокирует СТРАНИЦУ или ЭКСТЕНТ, так как блокировка X группы строк не является частью иерархии блокировки.  
   
 Если имеется некластеризованный индекс сбалансированного дерева для индекса columnstore, оптимизация блокировки или ведения журнала для самого индекса невозможна, но оптимизация кластеризованного индекса columnstore, как описано выше, возможна.  
+
+Обратите внимание, что операции DML (вставка, удаление, обновление) не являются операциями пакетного режима, так как они не выполняются параллельно.
   
 ## <a name="plan-bulk-load-sizes-to-minimize-delta-rowgroups"></a>Планирование размеров массовых загрузок для уменьшения числа разностных групп строк
 Индексы columnstore наиболее эффективны, когда большинство строк не находятся в разностных группах строк, а сжаты в columnstore. Лучше всего изменить размер загрузок, чтобы строки сразу отправлялись в columnstore, обходя deltastore.

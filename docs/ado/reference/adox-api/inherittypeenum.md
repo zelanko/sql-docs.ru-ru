@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: c2f6ce79-c4b3-4d40-ac95-21025208f991
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dfa4d6c15cc7d26dbfe964947bd09a04e2f75128
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d1fed614d90bbf53fdb2198e3ddd657a1e44acd1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439856"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770123"
 ---
 # <a name="inherittypeenum"></a>InheritTypeEnum
-Указывает, как объекты наследуют разрешения, заданные с помощью [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md).  
+Указывает, как объекты наследуют разрешения, заданные с помощью [SetPermissions](./setpermissions-method-adox.md).  
   
-|Константа|Значение|Описание|  
+|Константа|Значение|Описание:|  
 |--------------|-----------|-----------------|  
 |**adInheritBoth**|3|Элементы и другие контейнеры, содержащиеся в первичном объекте, наследуют эту запись.|  
 |**адинхеритконтаинерс**|2|Другие контейнеры, содержащиеся в первичном объекте, наследуют эту запись.|  
@@ -35,4 +35,4 @@ ms.locfileid: "88439856"
 |**адинхеритобжектс**|1|Объекты, не являющиеся контейнерами в контейнере, наследуют разрешения.|  
   
 ## <a name="applies-to"></a>Применение  
- [Метод SetPermissions (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)
+ [Метод SetPermissions (ADOX)](./setpermissions-method-adox.md)

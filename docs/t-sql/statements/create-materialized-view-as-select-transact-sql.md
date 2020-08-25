@@ -1,4 +1,5 @@
 ---
+description: CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)
 title: CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2020
@@ -37,12 +38,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 221b26f59feb3c51ade10fd4923f30e1ade91fbf
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 8d9dce220699fcdc2448ac19727d34ddd1bdad67
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394644"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444851"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
@@ -108,7 +109,7 @@ CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
   
 ## <a name="remarks"></a>Remarks
 
-Материализованное представление в хранилище данных Azure похоже на индексированное представление SQL Server.  Оно имеет практически те же ограничения, что и индексированное представление (подробности см. в статье [Создание индексированных представлений](/sql/relational-databases/views/create-indexed-views)) за исключением того, что материализованное представление поддерживает агрегатные функции.   
+Материализованное представление в хранилище данных Azure похоже на индексированное представление SQL Server.Оно имеет практически те же ограничения, что и индексированное представление (подробности см. в статье [Создание индексированных представлений](/sql/relational-databases/views/create-indexed-views)) за исключением того, что материализованное представление поддерживает агрегатные функции.   
 
 Материализованное представление поддерживает только кластеризованный индекс columnstore. 
 
@@ -122,7 +123,7 @@ CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
  
 Таблицы, связанные с материализованными представлениями, не поддерживают инструкцию ALTER TABLE SWITCH. Перед использованием инструкции ALTER TABLE SWITCH отключите или удалите все материализованные представления. Ниже приведены сценарии, в которых для создания материализованного представления в него нужно добавить новые столбцы.
 
-|Сценарий|Новые столбцы, добавляемые к материализованному представлению|Комментарий|  
+|Сценарий|Новые столбцы, добавляемые к материализованному представлению|Комментировать|  
 |-----------------|---------------|-----------------|
 |COUNT_BIG() отсутствует в списке SELECT определения материализованного представления| COUNT_BIG (*) |Автоматически добавляется во время создания материализованного представления.  Вмешательство пользователя не требуется.|
 |Пользователь указал функцию SUM(a) в списке SELECT определения материализованного представления, где "a" — это выражение, допускающее значение NULL |COUNT_BIG (a) |Пользователям необходимо добавить выражение "a" вручную в определении материализованного представления.|
@@ -142,7 +143,8 @@ CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
 
 ## <a name="permissions"></a>Разрешения
 
-Для выполнения этой инструкции требуется разрешение CREATE VIEW в отношении базы данных и разрешение ALTER в отношении схемы, в которой создается представление. 
+Для выполнения этой инструкции требуется 1) разрешение REFERENCES и CREATE VIEW или 2) разрешение CONTROL в отношении схемы, в которой создается представление. 
+
   
 ## <a name="see-also"></a>См. также раздел
 

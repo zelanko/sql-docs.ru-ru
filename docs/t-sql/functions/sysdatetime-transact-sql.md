@@ -1,4 +1,5 @@
 ---
+description: SYSDATETIME (Transact-SQL)
 title: SYSDATETIME (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -29,36 +30,40 @@ ms.assetid: cba4999e-a9d4-4742-abc9-4a4f109206b6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df48e260beebcbd4e2a846cd3324f89d912fa0eb
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 95a36c889059488d20e5cfdf3f1c954d6c403d87
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85994025"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459655"
 ---
 # <a name="sysdatetime-transact-sql"></a>SYSDATETIME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Возвращает значение типа **datetime2(7)** , которое содержит дату и время компьютера, на котором запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Возвращает значение типа **datetime2(7)**, которое содержит дату и время компьютера, на котором запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 >  SYSDATETIME и SYSUTCDATETIME имеют большую точность в долях секунды, чем GETDATE и GETUTCDATE. SYSDATETIMEOFFSET включает смещение часового пояса, заданное в системе. SYSDATETIME, SYSUTCDATETIME и SYSDATETIMEOFFSET можно присваивать переменным любого типа даты и времени.  
   
+База данных SQL Azure (за исключением Управляемого экземпляра SQL Azure) и Azure Synapse Analytics используют время в формате UTC. Если необходимо интерпретировать сведения о дате и времени в часовом поясе, отличном от UTC, используйте [AT TIME ZONE](../../t-sql/queries/at-time-zone-transact-sql.md) в Базе данных SQL Azure или Azure Synapse Analytics.
+
  Обзор всех типов данных и функций даты и времени в языке [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в статье [Типы данных и функции даты и времени &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```syntaxsql
 SYSDATETIME ( )  
-```  
-  
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="return-type"></a>Тип возвращаемых данных  
  **datetime2(7)**  
   
-## <a name="remarks"></a>Remarks  
- Функция SYSDATETIME может использоваться в инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)] везде, где допустимо использование выражения **datetime2(7)** .  
+## <a name="remarks"></a>Комментарии  
+ Функция SYSDATETIME может использоваться в инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)] везде, где допустимо использование выражения **datetime2(7)**.  
   
  Функция SYSDATETIME является недетерминированной. Невозможно проиндексировать представления и выражения, ссылающиеся на эту функцию в столбце.  
   
@@ -135,7 +140,7 @@ SELECT SYSDATETIME();
 7/20/2013 2:49:59 PM
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [Типы данных и функции даты и времени (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
   

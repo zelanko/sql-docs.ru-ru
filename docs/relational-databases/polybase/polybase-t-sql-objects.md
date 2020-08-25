@@ -13,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: a282ceacba0c767ce2130cd3e7f8708e244bf473
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 40763d6caadc420a3bb1794a4759c848d579007c
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914463"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173385"
 ---
 # <a name="polybase-transact-sql-reference"></a>Справочник по PolyBase Transact-SQL
 
@@ -221,22 +221,35 @@ WITH
 ;
 ```  
 
-**2. Создание внешнего источника данных**  
+**2. Создайте внешний источник данных для ссылки на Azure Data Lake Store 1-го или 2-го поколения.**  
 
 ```sql  
--- TYPE: HADOOP - PolyBase uses Hadoop APIs to access data in Azure Data Lake Store.
--- LOCATION: Provide Azure storage account name and blob container name.
+-- For Gen 1 - Create an external data source
+-- TYPE: HADOOP - PolyBase uses Hadoop APIs to access data in Azure Data Lake Storage.
+-- LOCATION: Provide Data Lake Storage Gen 1 account name and URI
 -- CREDENTIAL: Provide the credential created in the previous step.
 
 CREATE EXTERNAL DATA SOURCE AzureDataLakeStore
 WITH (
     TYPE = HADOOP,
-    LOCATION = 'adl://<AzureDataLake account_name>.azuredatalake.net,
+    LOCATION = 'adl://<AzureDataLake account_name>.azuredatalakestore.net',
     CREDENTIAL = AzureStorageCredential
 );
+
+-- For Gen 2 - Create an external data source
+-- TYPE: HADOOP - PolyBase uses Hadoop APIs to access data in Azure Data Lake Storage.
+-- LOCATION: Provide Data Lake Storage Gen 2 account name and URI
+-- CREDENTIAL: Provide the credential created in the previous step
+CREATE EXTERNAL DATA SOURCE AzureDataLakeStore
+WITH
+  -- Please note the abfss endpoint when your account has secure transfer enabled
+  ( LOCATION = 'abfss://<file-system-name>@<storage-account-name>.dfs.core.windows.net/' , 
+    CREDENTIAL = ADLS_credential ,
+    TYPE = HADOOP
+  ) ;
 ```  
 
-**3. Создание формата внешнего файла**  
+**3. Создайте формат внешнего файла.**  
 
 ```sql  
 -- FIELD_TERMINATOR: Marks the end of each field (column) in a delimited text file
@@ -255,7 +268,7 @@ WITH
 );
 ```  
 
-**4. Создание внешней таблицы**  
+**4. Создайте внешнюю таблицу.**  
 
 ```sql  
 -- LOCATION: Folder under the ADLS root folder.
@@ -289,7 +302,7 @@ CREATE STATISTICS StatsForProduct on DimProduct_external(ProductKey)
 
 ## <a name="create-external-tables-for-sql-server"></a>Создание внешних таблиц для SQL Server
 
-**1. Создание учетных данных области базы данных**  
+**1. Создайте учетные данные области базы данных.**  
 
 ```sql
      -- Create a Master Key
@@ -303,7 +316,7 @@ CREATE STATISTICS StatsForProduct on DimProduct_external(ProductKey)
      WITH IDENTITY = 'username', Secret = 'password';
 ```
 
-**2. Создание внешнего источника данных**
+**2. Создайте внешний источник данных.**
 
 ```sql
     /*  LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
@@ -325,7 +338,7 @@ CREATE STATISTICS StatsForProduct on DimProduct_external(ProductKey)
      GO
 ```
 
-**4. Создание внешней таблицы**  
+**4. Создайте внешнюю таблицу.**  
  
 ```sql
      /*  LOCATION: sql server table/view in 'database_name.schema_name.object_name' format
@@ -355,7 +368,7 @@ CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WI
 
 ## <a name="create-external-tables-for-oracle"></a>Создание внешних таблиц для Oracle
 
-**1. Создание учетных данных области базы данных**  
+**1. Создайте учетные данные области базы данных.**  
 
  ```sql
   -- Create a Master Key
@@ -370,7 +383,7 @@ CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WI
    WITH IDENTITY = 'username', Secret = 'password';
 ```
 
-**2. Создание внешнего источника данных**
+**2. Создайте внешний источник данных.**
 
   ```sql
    /* 
@@ -419,7 +432,7 @@ CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WI
    ```
 ## <a name="create-external-tables-for-teradata"></a>Создание внешних таблиц для Teradata
 
-**1. Создание учетных данных области базы данных**  
+**1. Создайте учетные данные области базы данных.**  
 
  ```sql
   -- Create a Master Key
@@ -434,7 +447,7 @@ CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WI
    WITH IDENTITY = 'username', Secret = 'password';
 ```
 
-**2. Создание внешнего источника данных**
+**2. Создайте внешний источник данных.**
 
 ```sql
     /*  LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
@@ -490,7 +503,7 @@ CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WI
 ```
 ## <a name="create-external-tables-for-mongodb"></a>Создание внешних таблиц для MongoDB
 
-**1. Создание учетных данных области базы данных**  
+**1. Создайте учетные данные области базы данных.**  
 
  ```sql
   -- Create a Master Key
@@ -505,7 +518,7 @@ CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WI
    WITH IDENTITY = 'username', Secret = 'password';
 ```
 
-**2. Создание внешнего источника данных**
+**2. Создайте внешний источник данных.**
 
 ```sql
      /*  LOCATION: Location string should be of format '<type>://<server>[:<port>]'.
@@ -553,6 +566,6 @@ CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WI
 ## <a name="next-steps"></a>Дальнейшие действия  
 Примеры запросов см. в разделе [Запросы PolyBase](../../relational-databases/polybase/polybase-queries.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Приступая к работе с PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
 [Руководство по PolyBase](../../relational-databases/polybase/polybase-guide.md)

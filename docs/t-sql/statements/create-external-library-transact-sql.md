@@ -1,4 +1,5 @@
 ---
+description: CREATE EXTERNAL LIBRARY (Transact-SQL) — SQL Server
 title: CREATE EXTERNAL LIBRARY (Transact-SQL) — SQL Server | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2020
@@ -19,15 +20,15 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 56b15b96bf6f54ea2d58569afedacb9027e3b367
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a625b369deeeae69475c94350b30f68b4cc8e5cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735830"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426716"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
 Отправляет файлы пакетов R, Python или Java в базу данных из указанного байтового потока или пути к файлу. Эта инструкция служит универсальным механизмом для администратора базы данных, с помощью которого он может отправлять артефакты, необходимые для любой новой внешней языковой среды выполнения и платформы операционной системы, поддерживаемой [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. 
@@ -208,6 +209,8 @@ WITH ( LANGUAGE = <language> )
 
 Задает язык пакета. Значением может быть `R`, `Python` или название внешнего языка (см. раздел [CREATE EXTERNAL LANGUAGE](create-external-language-transact-sql.md)).
 ::: moniker-end
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="remarks"></a>Remarks
 

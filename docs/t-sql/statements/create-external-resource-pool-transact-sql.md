@@ -1,7 +1,8 @@
 ---
+description: CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
 title: CREATE EXTERNAL RESOURCE POOL (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 08/07/2019
+ms.date: 08/06/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning-services
@@ -21,24 +22,24 @@ ms.assetid: 8cc798ad-c395-461c-b7ff-8c561c098808
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4ffb59b95b555196aa72662dd2b7111eca488872
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 64294b819d05e46077fd6a94008d64fc60eb717f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915373"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426726"
 ---
 # <a name="create-external-resource-pool-transact-sql"></a>CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Создает внешний пул, используемый для определения ресурсов для внешних процессов. Пул ресурсов представляет подмножество физических ресурсов (память и ЦП) экземпляра ядра СУБД. Регулятор ресурсов позволяет администратору базы данных распределять ресурсы сервера по пулам ресурсов, используя до 64 пулов.
+Создает внешний пул для определения ресурсов для внешних процессов. Пул ресурсов представляет подмножество физических ресурсов (память и ЦП) экземпляра ядра СУБД. Resource Governor может распределять ресурсы сервера по пулам ресурсов, используя до 64 пулов.
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Для [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] в [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] внешний пул управляет `rterm.exe`, `BxlServer.exe` и другими сформированными процессами.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Для [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] внешний пул управляет `rterm.exe`, `python.exe`, `BxlServer.exe` и другими сформированными процессами.
 ::: moniker-end
   
@@ -68,25 +69,28 @@ CREATE EXTERNAL RESOURCE POOL pool_name
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
+> [!NOTE]
+> Службы машинного обучения SQL 2019 для Linux не поддерживают возможность задать сходство ЦП.
+
 ## <a name="arguments"></a>Аргументы
 
 *pool_name*  
 Определяемое пользователем имя внешнего пула ресурсов. *pool_name* является буквенно-цифровым и может содержать до 128 символов. Этот аргумент должен быть уникальным внутри экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и должен соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md).  
 
 MAX_CPU_PERCENT =*value*  
-Указывает максимальную среднюю пропускную способность ЦП для всех запросов во внешнем пуле ресурсов при возникновении состязания за ресурсы ЦП. *value* — целое число. Диапазон допустимых значений для *value* — от 1 до 100.
+Максимальная средняя пропускная способность ЦП для всех запросов во внешнем пуле ресурсов при возникновении состязания за ресурсы ЦП. *value* — целое число. Диапазон допустимых значений для *value* — от 1 до 100.
 
-AFFINITY {CPU = AUTO | ( \<CPU_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)} Подключает внешний пул ресурсов к конкретным ЦП.
+AFFINITY {CPU = AUTO | ( <CPU_range_spec>) | NUMANODE = (\<NUMA_node_range_spec>)} подключает внешний пул ресурсов к конкретным ЦП.
 
-AFFINITY CPU = **(** \<CPU_range_spec> **)** сопоставляет внешний пул ресурсов с ЦП [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], заданными с помощью CPU_ID.
+AFFINITY CPU = **(** <CPU_range_spec> **)** сопоставляет внешний пул ресурсов с ЦП [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], заданными с помощью CPU_ID.
 
-При использовании AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)** внешний пул ресурсов сопоставляется с физическими процессорами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], соответствующими данному узлу NUMA или диапазону узлов. 
+При использовании AFFINITY NUMANODE = **(\<NUMA_node_range_spec> **)** внешний пул ресурсов сопоставляется с физическими ЦП [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], соответствующими данными узлу NUMA или диапазону узлов. 
 
 MAX_MEMORY_PERCENT =*value*  
 Указывает общий объем памяти сервера, который может использоваться для запросов в данном внешнем пуле ресурсов. *value* — целое число. Диапазон допустимых значений для *value* — от 1 до 100.
 
 MAX_PROCESSES =*value*  
-Указывает максимально допустимое количество процессов для внешнего пула ресурсов. Укажите 0, чтобы задать неограниченный порог для пула, который впоследствии ограничивается только ресурсами компьютера.
+Максимально допустимое количество процессов для внешнего пула ресурсов. Укажите 0, чтобы задать неограниченный порог для пула, который впоследствии ограничивается только ресурсами компьютера.
 
 ## <a name="remarks"></a>Remarks
 
@@ -102,7 +106,7 @@ MAX_PROCESSES =*value*
 
 ## <a name="examples"></a>Примеры
 
-Следующая инструкция определяет внешний пул, который ограничивает загрузку ЦП до 75 процентов. Инструкция также определяет максимальный объем памяти — 30 процентов доступной памяти на компьютере.
+Для внешнего пула использование ЦП ограничено 75 процентами. Максимальный объем памяти — 30 процентов доступной памяти на компьютере.
 
 ```sql
 CREATE EXTERNAL RESOURCE POOL ep_1

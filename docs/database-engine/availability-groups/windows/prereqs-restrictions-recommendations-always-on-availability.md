@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0ffcf45a0126e3443b1a5b3ac43cf9a0bdf7d6a1
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 8a2a54ac42cef552fa24af5d10171eda899163e5
+ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363007"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88092012"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Предварительные требования, ограничения и рекомендации для групп доступности Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,12 +34,12 @@ ms.locfileid: "87363007"
 > [!IMPORTANT]  
 >  Перед началом развертывания [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]настоятельно рекомендуется ознакомиться со всеми подразделами данного раздела.  
     
-##  <a name="net-hotfixes-that-support-availability-groups"></a><a name="DotNetHotfixes"></a> Исправления .Net, поддерживающие группы доступности  
- Возможно, потребуется установка дополнительных исправлений .Net, в зависимости от того, какие компоненты и возможности [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] будут использоваться вместе с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Исправления приведены в следующей таблице. Исправления можно устанавливать в любом порядке.  
+##  <a name="net-hotfixes-that-support-availability-groups"></a><a name="DotNetHotfixes"></a> Исправления .NET, поддерживающие группы доступности  
+ Возможно, потребуется установка дополнительных исправлений .NET, в зависимости от того, какие компоненты и возможности [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] будут использоваться вместе с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Исправления приведены в следующей таблице. Исправления можно устанавливать в любом порядке.  
   
 |Зависимый компонент|Исправление|Ссылка|  
 |-----------------------|------------|----------|  
-|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|Исправление для .Net 3.5 с пакетом обновления 1 (SP1) добавляет в клиент SQL поддержку функций AlwaysOn: Read-intent, readonly и multisubnetfailover. Это исправление необходимо установить на каждом сервере отчетов служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .|Статья базы знаний 2654347. [Исправление для .NET 3.5 с пакетом обновления 1 (SP1), добавляющее поддержку функций Always On](https://go.microsoft.com/fwlink/?LinkId=242896)|  
+|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|Исправление для .NET 3.5 с пакетом обновления 1 (SP1) добавляет в клиент SQL поддержку функций AlwaysOn: Read-intent, readonly и multisubnetfailover. Это исправление необходимо установить на каждом сервере отчетов служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .|Статья базы знаний 2654347. [Исправление для .NET 3.5 с пакетом обновления 1 (SP1), добавляющее поддержку функций Always On](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 
 ###  <a name="checklist-requirements-windows-system"></a><a name="SystemRequirements"></a> Контрольный список. Требования (ОС Windows)  
@@ -162,7 +162,9 @@ ms.locfileid: "87363007"
   
     -   Каждая первичная реплика использует по одному потоку для записи журнала в каждой базе данных-источнике. Кроме того, она использует по одному потоку для отправки журнала в каждой из баз данных-получателей. Потоки отправки журнала освобождаются примерно через 15 секунд неактивности.    
   
-    -   Резервное копирование на вторичной реплике удерживает поток на первичной реплике на время операции резервного копирования.  
+    -   Резервное копирование на вторичной реплике удерживает поток на первичной реплике на время операции резервного копирования. 
+
+-  В SQL Server 2019 реализована параллельная операция повтора для баз данных группы доступности, оптимизированных для памяти. В SQL Server 2016 и 2017 таблицы на диске не используют параллельную операцию повтора, если база данных в группе доступности также оптимизирована для памяти. 
   
  Дополнительные сведения см. в разделе [Обучающая серия Always On — HADRON: использование рабочих пулов для баз данных с HADRON](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/) (блог инженеров CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
   

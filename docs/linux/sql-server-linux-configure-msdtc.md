@@ -1,18 +1,18 @@
 ---
 title: Настройка MSDTC в Linux
-description: В этой статье представлено пошаговое руководство по настройке MSDTC в Linux.
+description: В этой статье описывается, как настроить координатор распределенных транзакций Майкрософт (MSDTC) в Linux.
 author: VanMSFT
 ms.author: vanto
-ms.date: 08/01/2019
+ms.date: 08/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5f2e8502956b808556c0ac6ddb83f95a61cbe5c9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 77df45c3eb4cded79e4485e8c93262a6b5ed43fc
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900118"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180023"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>Сведения о настройке координатора распределенных транзакций (Майкрософт) (MSDTC) в Linux
 
@@ -36,15 +36,17 @@ ms.locfileid: "85900118"
 
 Дополнительные сведения об этих параметрах и других параметрах, связанных с MSDTC, см. в статье [Настройка SQL Server на Linux с помощью средства mssql-conf](sql-server-linux-configure-mssql-conf.md).
 
-## <a name="supported-msdtc-configurations"></a>Поддерживаемые конфигурации MSDTC
+## <a name="supported-transaction-standards"></a>Поддерживаемые стандарты транзакций
 
 Поддерживаются следующие конфигурации MSDTC.
 
-- Распределенные транзакции OLE-TX относительно SQL Server на базе Linux для поставщиков ODBC.
+| Стандарт транзакции | Источники данных | Драйвер ODBC | Драйвер JDBC|
+|---|---|---|---|
+| Транзакции OLE-TX | SQL Server в Linux | Да | Нет|
+| Распределенные транзакции XA | SQL Server, другие источники данных ODBC и JDBC, которые поддерживают XA | Да (требуется версия 17.3 или более поздняя) | Да |
+| Распределенные транзакции на связанном сервере | SQL Server | Да | Нет
 
-- Распределенные транзакции XA относительно SQL Server на базе Linux с использованием поставщиков ODBC и JDBC. Для транзакций XA, выполняемых с помощью поставщика ODBC, нужно использовать Microsoft ODBC Driver for SQL Server версии 17.3 или более поздней. Дополнительные сведения см. в статье [Основные сведения о транзакциях XA](../connect/jdbc/understanding-xa-transactions.md#configuration-instructions).
-
-- Распределенные транзакции на связанном сервере.
+Дополнительные сведения см. в статье [Основные сведения о транзакциях XA](../connect/jdbc/understanding-xa-transactions.md#configuration-instructions).
 
 ## <a name="msdtc-configuration-steps"></a>Шаги настройки MSDTC
 
@@ -165,7 +167,7 @@ sudo firewall-cmd --reload
 sudo netstat -tulpn | grep sqlservr
 ```
 
-Выходные данные должны иметь следующий вид.
+Вы должны увидеть результат, аналогичный приведенному ниже:
 
 ```bash
 tcp 0 0 0.0.0.0:1433 0.0.0.0:* LISTEN 13911/sqlservr
@@ -184,11 +186,11 @@ tcp6 0 0 :::51999 :::* LISTEN 13911/sqlservr
 
 По умолчанию MSDTC для SQL Server на Linux не использует проверку подлинности для RPC-взаимодействия. Однако если хост-компьютер присоединен к домену Active Directory (AD), можно настроить MSDTC для использования RPC-взаимодействия с проверкой подлинности, используя следующие параметры **mssql-conf**.
 
-| Параметр | Description |
+| Параметр | Описание |
 |---|---|
-| **distributedtransaction.allowonlysecurerpccalls**          | Настройка только безопасных удаленных вызовов процедур (RPC) для распределенных транзакций. Значение по умолчанию — 0. |
-| **distributedtransaction.fallbacktounsecurerpcifnecessary** | Настройка только безопасных удаленных вызовов процедур (RPC) для распределенных транзакций. Значение по умолчанию — 0. |
-| **distributedtransaction.turnoffrpcsecurity**               | Включение или отключение безопасности RPC для распределенных транзакций. Значение по умолчанию — 0. |
+| **distributedtransaction.allowonlysecurerpccalls**          | Настройка только безопасных удаленных вызовов процедур (RPC) для распределенных транзакций. По умолчанию установлено значение 0. |
+| **distributedtransaction.fallbacktounsecurerpcifnecessary** | Настройка только безопасных удаленных вызовов процедур (RPC) для распределенных транзакций. По умолчанию установлено значение 0. |
+| **distributedtransaction.turnoffrpcsecurity**               | Включение или отключение безопасности RPC для распределенных транзакций. По умолчанию установлено значение 0. |
 
 ## <a name="additional-guidance"></a>Дополнительные рекомендации
 
@@ -203,7 +205,7 @@ tcp6 0 0 :::51999 :::* LISTEN 13911/sqlservr
 | Операционная система | Минимальная версия | Сборка ОС |
 |---|---|---|
 | [Windows Server](https://docs.microsoft.com/windows-server/get-started/windows-server-release-info) | 1903 | 18362.30.190401-1528 |
-| [Windows 10](https://docs.microsoft.com/windows/release-information/) | 1903 | 18362.267 |
+| [Windows 10](https://docs.microsoft.com/windows/release-information/) | 1903 | 18362.267 |
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

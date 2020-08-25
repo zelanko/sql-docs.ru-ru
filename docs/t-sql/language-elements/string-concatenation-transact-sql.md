@@ -1,4 +1,5 @@
 ---
+description: + (Объединение строк) (Transact-SQL)
 title: + (объединение строк) (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 12/06/2016
@@ -21,12 +22,12 @@ ms.assetid: 35cb3d7a-48f5-4b13-926c-a9d369e20ed7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9a3124a8e66e8ac60acc78381431181ff224d00e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fa1c1cb27204fc6da21fa3841a2a32ba530c808c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920636"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422468"
 ---
 # <a name="-string-concatenation-transact-sql"></a>+ (объединение строк) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -69,7 +70,7 @@ SELECT CAST(@mybin1 AS varchar(5)) + ' '
 ## <a name="result-types"></a>Типы результата  
  Возвращает тип данных аргумента с самым высоким приоритетом. Дополнительные сведения см. в разделе [Приоритет типов данных (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  При работе с пустыми строками нулевой длины оператор + (объединение строк) ведет себя иначе, чем при работе со значениями NULL или с неизвестными значениями. Символьная строка символа нулевой длины может быть указана в виде двух одинарных кавычек без каких-либо символов между ними. Двоичная строка нулевой длины может быть указана как 0x без указания каких-либо байтовых значений в шестнадцатеричной константе. При сцеплении строки нулевой длины всегда сцепляются две указанные строки. При работе со строками со значением NULL результат объединения зависит от настроек сеанса. При присоединении нулевого значения к известному значению результатом будет неизвестное значение, объединение строк с нулевым значением также дает нулевое значение, как и в арифметических действиях с нулевыми значениями. Однако можно изменить данное поведение, поменяв значение `CONCAT_NULL_YIELDS_NULL` для текущего сеанса. Дополнительные сведения см. в разделе [SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md).  
   
  Если результат объединения строк превышает предел в 8 000 байт, то он усекается. Однако усечения не произойдет, если хотя бы одна из сцепляемых строк принадлежит к типу больших значений.  
@@ -179,7 +180,7 @@ Hamilton, J.       Vice President of Production
 Welcker, B.        Vice President of Sales  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [+= (присваивание объединения строк) (Transact-SQL)](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)   

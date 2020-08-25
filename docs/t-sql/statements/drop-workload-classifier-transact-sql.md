@@ -1,4 +1,5 @@
 ---
+description: Классификатор DROP WORKLOAD (Transact-SQL)
 title: Классификатор DROP WORKLOAD (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2019
@@ -19,12 +20,12 @@ helpviewer_keywords:
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 244166a9aefb08c5fe037776d47cf5a578c50481
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 3382c3b63180cbccb091442820ed99d7882382d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394469"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496747"
 ---
 # <a name="drop-workload-classifier-transact-sql"></a>Классификатор DROP WORKLOAD (Transact-SQL)
 
@@ -36,7 +37,7 @@ ms.locfileid: "87394469"
   
 ## <a name="syntax"></a>Синтаксис  
 
-```
+```syntaxsql
 DROP WORKLOAD CLASSIFIER classifier_name;
 ```
 
@@ -60,7 +61,7 @@ DROP WORKLOAD CLASSIFIER wgcELTRole;
 > [!NOTE]
 > Запрос, отправленный без соответствующего классификатора, классифицируется в группу рабочей нагрузки по умолчанию.  Группа рабочей нагрузки по умолчанию — класс ресурсов smallrc.
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [CREATE WORKLOAD CLASSIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-classifier-transact-sql.md)</br>
 [Классификация рабочих нагрузок хранилища данных SQL](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)

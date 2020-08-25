@@ -1,6 +1,6 @@
 ---
 title: Устранение неполадок в SQL Server на Linux
-description: Советы по устранению неполадок в SQL Server на Linux.
+description: Сведения об устранении неполадок в Microsoft SQL Server, работающем в Linux или контейнере Docker. Также из этой статьи вы узнаете, где найти сведения о поддерживаемых функциях и известных ограничениях.
 author: VanMSFT
 ms.author: vanto
 ms.date: 05/01/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 7c2c191fa05f1c584c9e45e88cd5bd5b0e3b7851
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 99ac4b9fbd0ce616cebc707026eff1d5eb15895f
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897221"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088760"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Устранение неполадок в SQL Server на Linux
 

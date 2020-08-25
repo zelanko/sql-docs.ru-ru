@@ -1,4 +1,5 @@
 ---
+description: CREATE ASSEMBLY (Transact-SQL)
 title: CREATE ASSEMBLY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 09/07/2018
@@ -23,12 +24,12 @@ ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f7de8aed89c10e434ed8ef451a5e49f604d01995
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 556cab50de2e8207eb78d829f18373213ee171b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807911"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496871"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -64,12 +65,12 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
  Указывает имя пользователя или роли в качестве владельца сборки. Аргумент *owner_name* должен быть именем роли, членом которой является текущий пользователь, или текущий пользователь должен иметь разрешение IMPERSONATE для *owner_name*. Если атрибут не указан, владельцем становится текущий пользователь.  
   
  \<client_assembly_specifier>  
-Задает локальный путь или местоположение в сети, где расположена передаваемая сборка, а также имя файла манифеста, соответствующее сборке.  Аргумент \<client_assembly_specifier> можно задать в виде фиксированной строки или выражения с переменными, в результате подстановки значений которых получается фиксированная строка. Инструкция CREATE ASSEMBLY не поддерживает загрузку многомодульных сборок. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] также ищет любые зависимые сборки данной сборки в том же месте и передает их с тем же владельцем в качестве сборки корневого уровня. Если зависимые сборки не найдены и если они уже не загружены в текущую базу данных, CREATE ASSEMBLY завершается неудачно. Если зависимые сборки уже загружены в текущую базу данных, владелец этих сборок должен быть тот же, что и у только что созданной сборки.
+Задает локальный путь или местоположение в сети, где расположена передаваемая сборка, а также имя файла манифеста, соответствующее сборке.  \<client_assembly_specifier> можно задать в виде фиксированной строки или выражения с переменными, в результате подстановки значений которых получается фиксированная строка. Инструкция CREATE ASSEMBLY не поддерживает загрузку многомодульных сборок. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] также ищет любые зависимые сборки данной сборки в том же месте и передает их с тем же владельцем в качестве сборки корневого уровня. Если зависимые сборки не найдены и если они уже не загружены в текущую базу данных, CREATE ASSEMBLY завершается неудачно. Если зависимые сборки уже загружены в текущую базу данных, владелец этих сборок должен быть тот же, что и у только что созданной сборки.
 
 > [!IMPORTANT]
 > База данных SQL Azure не поддерживает создание сборки на основе файла.
   
- \<client_assembly_specifier> не может быть задано, если у пользователя, совершившего вход, заимствуются права.  
+ \<client_assembly_specifier> не может быть задано, если для пользователя, совершившего вход, выполняется олицетворение.  
   
  \<assembly_bits>  
  Список двоичных значений, которые составляют сборку и ее зависимые сборки. Первое значение в списке считается сборкой корневого уровня. Значения, соответствующие зависимым сборкам, могут быть заданы в любом порядке. Любые значения, которые не соответствует зависимостям корневой сборки, не учитываются.  
@@ -110,7 +111,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
  Дополнительные сведения о наборах разрешений сборки см. в разделе [Проектирование сборок](../../relational-databases/clr-integration/assemblies-designing.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  CREATE ASSEMBLY передает сборку, предварительно скомпилированную в виде файла DLL из управляемого кода для использования внутри экземпляра SQL Server.  
  
 Если параметр `PERMISSION_SET` включен, операторы `CREATE ASSEMBLY` и `ALTER ASSEMBLY` игнорируются во время выполнения, а параметры `PERMISSION_SET` сохраняются в метаданных. Игнорирование параметра минимизирует сбои в выполнении имеющихся в коде операторов.
@@ -194,7 +195,7 @@ CREATE ASSEMBLY HelloWorld
 WITH PERMISSION_SET = SAFE;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ALTER ASSEMBLY (Transact-SQL)](../../t-sql/statements/alter-assembly-transact-sql.md)   
  [DROP ASSEMBLY (Transact-SQL)](../../t-sql/statements/drop-assembly-transact-sql.md)   
  [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md)   

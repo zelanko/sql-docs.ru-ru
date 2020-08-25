@@ -1,5 +1,6 @@
 ---
-title: '@@CPU_BUSY (Transact-SQL) | Документы Майкрософт'
+description: '&#x40;&#x40;CPU_BUSY (Transact-SQL)'
+title: CPU_BUSY (Transact-SQL)
 ms.custom: ''
 ms.date: 09/18/2017
 ms.prod: sql
@@ -23,14 +24,15 @@ helpviewer_keywords:
 ms.assetid: 81ae0e64-79fa-4a74-9aa5-37045c4cd211
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5f763ac74b32fd641791a45d1805b95a99230fbb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ec94c40f39d2fe0dedfeef6d0b1edd37f40af5c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895817"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88366480"
 ---
 # <a name="x40x40cpu_busy-transact-sql"></a>&#x40;&#x40;CPU_BUSY (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Эта функция возвращает время, которое [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тратит на выполнение активной операции с момента последнего запуска. `@@CPU_BUSY` возвращает результат, измеряемый в приращениях времени ЦП или тактах. Это значение определяется совокупно для всех ЦП, поэтому может превышать действительное истекшее время. Умножьте его на значение [@@TIMETICKS](./timeticks-transact-sql.md), чтобы преобразовать в микросекунды.
@@ -42,14 +44,17 @@ ms.locfileid: "85895817"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```
+```syntaxsql
 @@CPU_BUSY  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+
 ## <a name="return-types"></a>Типы возвращаемых данных
 **integer**
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
 Чтобы отобразить отчет, содержащий ряд статистических данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], включая активность ЦП, необходимо выполнить хранимую процедуру [sp_monitor](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md).
   
 ## <a name="examples"></a>Примеры  
@@ -68,7 +73,7 @@ CPU microseconds As of
 18406250         2006-12-05 17:00:50.600
 ```
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 [sys.dm_os_sys_info (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)  
 [@@IDLE &#40;Transact-SQL&#41;](../../t-sql/functions/idle-transact-sql.md)  
 [@@IO_BUSY &#40;Transact-SQL&#41;](../../t-sql/functions/io-busy-transact-sql.md)  

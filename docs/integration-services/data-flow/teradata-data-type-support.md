@@ -1,4 +1,5 @@
 ---
+description: Поддержка типов данных Teradata
 title: Поддержка типов данных Teradata | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/22/2019
@@ -9,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4670d6cba5438a6e33afcd6bbfd87a230712bf7c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b6c628128423d835d90845a4ef85db28c8275ec3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86910151"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425786"
 ---
 # <a name="data-type-support"></a>Поддержка типов данных
 
@@ -35,7 +36,7 @@ ms.locfileid: "86910151"
 |DECIMAL, NUMERIC|DT_NUMERIC|
 |BYTEINT|DT_I1|
 |SMALLINT|DT_I2|
-|INTEGER|DT_I4|
+|ЦЕЛОЕ ЧИСЛО|DT_I4|
 |FLOAT, REAL, DOUBLE PRECISION|DT_R8|
 |DATE|DT_DBDATE|
 |TIME<br>TIME(n)|DT_STR|

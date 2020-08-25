@@ -1,4 +1,5 @@
 ---
+description: catalog.move_project (база данных SSISDB)
 title: catalog.move_project (база данных SSISDB) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: ef3b0325-d8e9-472b-bf11-7d3efa6312ff
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 57e63a057c99c7f2e8f24b5d02a20a55da92f0db
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d1c9e003b76cfbf6e563fc41a47e4b9aabfeecf0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912988"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430066"
 ---
 # <a name="catalogmove_project---ssisdb-database"></a>catalog.move_project — база данных SSISDB
 
@@ -36,13 +37,13 @@ catalog.move_project [ @source_folder = ] source_folder
   
 ## <a name="arguments"></a>Аргументы  
  [ @source_folder = ] *source_folder*  
- Имя исходной папки, в которой проект хранится до перемещения. Параметр *source_folder* имеет тип **nvarchar(128)** .  
+ Имя исходной папки, в которой проект хранится до перемещения. Параметр *source_folder* имеет тип **nvarchar(128)**.  
   
  [ @project_name = ] *project_name*  
  Имя перемещаемого проекта. Параметр *project_name* имеет тип **nvarchar(128)** .  
   
  [ @destination_folder = ] *destination_folder*  
- Имя целевой папки, в которой проект хранится после перемещения. Параметр *destination_folder* имеет тип **nvarchar(128)** .  
+ Имя целевой папки, в которой проект хранится после перемещения. Параметр *destination_folder* имеет тип **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение)  
@@ -70,7 +71,7 @@ catalog.move_project [ @source_folder = ] source_folder
   
 -   Пользователь не имеет соответствующих разрешений  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  При перемещении проекта из исходной папки в целевую этот проект и все соответствующие ссылки на среду удаляются из исходной папки. В целевой папке создается аналогичные проект и ссылки на среду. Относительные ссылки на среду после перемещения будут указывать на другую папку. Абсолютные ссылки на среду после перемещения будут указывать на ту же папку.  
   
 > [!NOTE]  

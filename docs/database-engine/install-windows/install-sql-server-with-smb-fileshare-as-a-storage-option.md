@@ -11,12 +11,12 @@ ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ff25352a7aefe716c66cb01a4abafcfb9742e6ca
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 98a7fefe85c953cfb186951ff69e287288fa0ac0
+ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883511"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88091988"
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>Установка SQL Server с общей папкой SMB в качестве хранилища
 
@@ -111,7 +111,7 @@ ms.locfileid: "85883511"
   
 ## <a name="known-issues"></a>Известные проблемы  
   
--   После отсоединения базы данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , которая находится в хранилище, подключенном к сети, при попытке повторного присоединения базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возможны проблемы с разрешением доступа к базе данных. Эта проблема описывается в [этой статье базы знаний](https://go.microsoft.com/fwlink/?LinkId=237321) (https://go.microsoft.com/fwlink/?LinkId=237321). Информацию о решении этой проблемы см. в разделе **Дополнительные сведения** статьи из базы знаний.  
+-   После отсоединения базы данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , которая находится в хранилище, подключенном к сети, при попытке повторного присоединения базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возможны проблемы с разрешением доступа к базе данных. Дополнительные сведения см. в статье [Ошибка 5120](../../relational-databases/errors-events/mssqlserver-5120-database-engine-error.md).
   
 -   Если общая папка SMB используется в качестве хранилища для кластеризованного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], то по умолчанию журнал диагностики отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не может быть записан в общий файловый ресурс, так как у библиотеки ресурсов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] нет разрешения на чтение и запись в общий файловый ресурс. Чтобы устранить эту проблему, попробуйте один из следующих методов.  
   

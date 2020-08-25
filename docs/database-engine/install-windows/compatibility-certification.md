@@ -19,12 +19,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433856
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b1505d27dfa186999d1730eece740b711d87ae0e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 40d7c10127efa14000a3f91f2cf003bf52d95b2c
+ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85659665"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88200964"
 ---
 # <a name="compatibility-certification"></a>Сертификация на совместимость
 
@@ -100,6 +100,7 @@ ms.locfileid: "85659665"
 >
 > - Новая (конечная) версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает на оборудовании, сопоставимом с оборудованием, на котором работала предыдущая (исходная) версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 > - Один и тот же [поддерживаемый уровень совместимости базы данных](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#supported-dbcompats) используется как в конечной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], так и в исходной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+> - **Одна** база данных и рабочая нагрузка используются в целевой системе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и в исходной системе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 >
 > Любая регрессия формы плана запроса (по сравнению с исходной версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) в описанных выше ситуациях требует принятия мер. Обратитесь в службу поддержки клиентов Майкрософт.
   

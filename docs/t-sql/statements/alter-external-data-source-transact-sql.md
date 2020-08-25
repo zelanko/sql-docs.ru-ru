@@ -1,4 +1,5 @@
 ---
+description: ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 title: ALTER EXTERNAL DATA SOURCE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 07/26/2019
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: db7f3f6456543af06a32f27e2e3258597e062906
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 4d963edaaea4225fa969afd7694b9970d07135d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669942"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444880"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -63,7 +64,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 
  LOCATION = '<prefix>://<path>[:<port>]'. Предоставляет протокол, путь и порт для подключения к внешнему источнику данных. Допустимые параметры расположения см. в разделе [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](create-external-data-source-transact-sql.md#location--prefixpathport).
 
- RESOURCE_MANAGER_LOCATION = '\<IP address;Port>' (неприменимо к Хранилищу данных SQL Azure) — указывает расположение диспетчера ресурсов Hadoop. Если аргумент указан, оптимизатор запросов может выбрать предварительную обработку данных для запросов PolyBase с помощью вычислительных мощностей Hadoop. Это решение, принимаемое на основе стоимости. Оно называется передачей предиката и может значительно сократить объем данных, передаваемых между Hadoop и SQL, повышая производительность запросов.
+ RESOURCE_MANAGER_LOCATION = '\<IP address;Port>' (неприменимо к Хранилищу данных SQL Azure) — указывает расположение диспетчера ресурсов Hadoop. Если аргумент указан, оптимизатор запросов может выбрать предварительную обработку данных для запросов PolyBase с помощью вычислительных мощностей Hadoop. Это решение, принимаемое на основе стоимости. Оно называется передачей предиката и может значительно сократить объем данных, передаваемых между Hadoop и SQL, повышая производительность запросов.
 
  CREDENTIAL = Credential_Name Указывает именованные учетные данные. См. раздел [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 

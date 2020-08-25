@@ -1,4 +1,5 @@
 ---
+description: + (Сложение) (Transact-SQL)
 title: + (сложение) (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
@@ -24,12 +25,12 @@ ms.assetid: 4ba8baac-5f07-432c-87c5-d23e7011da55
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 261c22abe760ae720c4bc691f0549ccc5491e3e9
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 12b531d2f8615e9ff2cb9bbfc33973e6aab5d33f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396812"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88361880"
 ---
 # <a name="-addition-transact-sql"></a>+ (сложение) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -125,7 +126,7 @@ FROM DimEmployee
 ORDER BY TotalHoursAway ASC;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Операторы (Transact-SQL)](../../t-sql/language-elements/operators-transact-sql.md)   
  [Составные операторы (Transact-SQL)](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [+= (присваивание сложения) (Transact-SQL)](../../t-sql/language-elements/add-equals-transact-sql.md)   

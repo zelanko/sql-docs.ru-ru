@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: 90c7c7863228ce210e56e76ab3e12c77e7ccc902
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: 0933f493ee71fe589842f8636e7364f79a432de0
+ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80408031"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88122321"
 ---
 Каждая группа доступности имеет только одну первичную реплику. Первичная реплика позволяет выполнять операции чтения и записи. Чтобы изменить первичную реплику, можно выполнить переход на другой ресурс. В группе доступности для обеспечения высокой доступности диспетчер кластеров автоматизирует процесс перехода на другой ресурс. В группе доступности с типом кластера NONE принудительная отработка отказа выполняется вручную. 
 
@@ -51,7 +51,7 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
         WITH (AVAILABILITY_MODE = SYNCHRONOUS_COMMIT);
    ```
 
-2. Чтобы определить, что активные транзакции фиксируются в первичной реплике и по меньшей мере в одной синхронной вторичной реплике, выполните следующий запрос: 
+1. Чтобы определить, что активные транзакции фиксируются в первичной реплике и по меньшей мере в одной синхронной вторичной реплике, выполните следующий запрос: 
 
    ```SQL
    SELECT ag.name, 
@@ -66,7 +66,7 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
 
    Вторичная реплика синхронизируется, если `synchronization_state_desc` имеет значение `SYNCHRONIZED`.
 
-3. Обновите `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` до 1.
+1. Обновите `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` до 1.
 
    Следующий скрипт задает для `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` значение 1 в группе доступности `ag1`. Перед запуском скрипта замените `ag1` именем группы доступности.
 
@@ -79,18 +79,18 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
    >[!NOTE]
    >Этот параметр не относится к отработке отказа и должен быть задан в зависимости от требований среды.
    
-4. Переведите первичную реплику в автономный режим при подготовке к изменениям роли.
+1. Переведите первичную реплику в автономный режим при подготовке к изменениям роли.
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] OFFLINE
    ```
 
-5. Повысьте уровень целевой вторичной реплики до первичной. 
+1. Повысьте уровень целевой вторичной реплики до первичной. 
 
    ```SQL
    ALTER AVAILABILITY GROUP ag1 FORCE_FAILOVER_ALLOW_DATA_LOSS; 
    ``` 
 
-6. Чтобы изменить роль предыдущей первичной реплики на `SECONDARY`, выполните на экземпляре SQL Server, где размещена первичная реплика, следующую команду:
+1. Чтобы изменить роль предыдущей первичной реплики на `SECONDARY`, выполните на экземпляре SQL Server, где размещена первичная реплика, следующую команду:
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -99,3 +99,10 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
 
    > [!NOTE] 
    > Для удаления группы доступности используйте [DROP AVAILABILITY GROUP](https://docs.microsoft.com/sql/t-sql/statements/drop-availability-group-transact-sql). Для группы доступности, созданной с типом кластера NONE или EXTERNAL, выполните команду на всех репликах, входящих в группу доступности.
+
+1. Возобновите перемещение данных, выполните следующую команду для каждой базы данных в группе доступности на экземпляре SQL Server, на котором размещена первичная реплика: 
+
+   ```sql
+   ALTER DATABASE [db1]
+        SET HADR RESUME
+   ```

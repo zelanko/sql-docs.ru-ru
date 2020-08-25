@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL) (предварительная версия)
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: Использование инструкции COPY в хранилище данных SQL Azure для загрузки данных из внешних учетных записей хранения.
-ms.date: 06/19/2020
+ms.date: 08/05/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 9bbc4017411c457638ac93aac147ab63b44dbcab
-ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
+ms.openlocfilehash: 52096dc3c4996537b36082bb9bb215405e097a68
+ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87807507"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88091966"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (предварительная версия)
 
@@ -102,7 +102,7 @@ WITH
 - *Внешнее расположение* для ADLS 2-го поколения: https://<account>. dfs.core.windows.net/<container>/<path>
 
 > [!NOTE]  
-> Конечная точка BLOB-объекта доступна для ADLS 2-го поколения и предназначена только для обеспечения обратной совместимости. Для оптимальной производительности используйте конечную точку **dfs** для ADLS 2-го поколения.
+> Конечная точка BLOB-объекта доступна для ADLS 2-го поколения и предназначена для обеспечения обратной совместимости. Для лучшей производительности используйте конечную точку **BLOB-объекта**.
 
 - *Account* — имя учетной записи хранения.
 
@@ -139,10 +139,12 @@ WITH
 *CREDENTIAL (IDENTITY = ", SECRET = ")*</br>
 *CREDENTIAL* задает механизм проверки подлинности для доступа к внешней учетной записи хранения. Ниже приведены методы проверки подлинности.
 
-|                          |                CSV                |              Parquet              |                ORC                |
-| :----------------------: | :-------------------------------: | :-------------------------------: | :-------------------------------: |
-|  **Хранилище BLOB-объектов Azure**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |              SAS/KEY              |              SAS/KEY              |
-| **Azure Data Lake 2-го поколения** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |
+|                          |                CSV                |              Parquet               |                ORC                 |
+| :----------------------: | :-------------------------------: | :-------------------------------:  | :-------------------------------:  |
+|  **Хранилище BLOB-объектов Azure**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |              SAS/KEY               |              SAS/KEY               |
+| **Azure Data Lake 2-го поколения** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS*/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS*/MSI/SERVICE PRINCIPAL/KEY/AAD |
+
+*Поддерживается только с конечной точкой BLOB-объекта.
 
 При проверке подлинности в AAD или общедоступной учетной записи хранения указывать CREDENTIAL не требуется. 
 
@@ -429,7 +431,7 @@ WITH (
 Команда COPY станет общедоступной в конце этого календарного года (2020). 
 
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>Есть ли ограничения на число или размер файлов?
-Размер файлов должен быть не менее 4 МБ.
+Ограничение на количество или размер файлов отсутствует, но для лучшей производительности мы рекомендуем использовать файлы размером не менее 4 МБ.
 
 
 Отзывы и сообщения о проблемах направляйте на следующий адрес списка рассылки: sqldwcopypreview@service.microsoft.com

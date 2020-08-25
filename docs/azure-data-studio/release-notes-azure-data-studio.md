@@ -8,17 +8,31 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 07/17/2020
-ms.openlocfilehash: 4a8f50b7a6558974c79f01f3d157715890beeb82
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.date: 08/12/2020
+ms.openlocfilehash: e4a431e798069a639f72c3d4fa6761d3b18131f7
+ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988566"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88147205"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Заметки о выпуске для Azure Data Studio
 
 **[Скачайте и установите последний выпуск.](download.md)**
+
+## <a name="august-2020"></a>Август 2020 г.
+
+12 августа 2020 г. &nbsp; / &nbsp; версия: 1.21.0
+
+&nbsp;
+
+| Изменение | Сведения |
+| :----- | :------ |
+| Новые функции записной книжки | &bull; &nbsp; Перемещение расположений ячеек. <br/> &bull; &nbsp; Преобразование ячеек в текстовые ячейки или ячейки с кодом.
+| Средство выбора книг Jupyter | Пользователи теперь могут выбирать книги Jupyter в выпусках Github и с легкостью открывать их в Azure Data Studio. |
+| В представление записных книжек добавлен поиск | Пользователи могут легко выполнять поиск по содержимому в записных книжках и в книгах Jupyter. |
+| Устраненные ошибки и проблемы | Полный список исправлений см. на странице [ошибок и проблем в GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22August+2020+Release%22+is%3Aclosed). |
+| &nbsp; | &nbsp; |
 
 ## <a name="july-2020-hotfix"></a>Июль 2020 г. (исправление)
 

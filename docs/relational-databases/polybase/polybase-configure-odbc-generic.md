@@ -1,7 +1,7 @@
 ---
 title: 'Доступ к внешним данным: универсальные типы ODBC — PolyBase'
 description: PolyBase в SQL Server позволяет подключаться к совместимым источникам данных через соединитель ODBC. Установите драйвер ODBC и создайте внешние таблицы.
-ms.date: 02/19/2020
+ms.date: 07/16/2020
 ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
@@ -10,33 +10,33 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: c8bf01e39fb68d2315df2a441f7b2b4fefa81872
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 51dbde0144f26171994638d50659192ca31400ee
+ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246533"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88216688"
 ---
 # <a name="configure-polybase-to-access-external-data-with-odbc-generic-types"></a>Настройка доступа к внешним данным в PolyBase с помощью универсальных типов ODBC
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-PolyBase в SQL Server 2019 позволяет подключаться к совместимым источникам данных ODBC через соединитель ODBC.
+PolyBase в SQL Server 2019 позволяет подключаться к источникам данных, совместимым с ODBC, с помощью соединителя ODBC.
 
-В этой статье приводятся некоторые примеры использования драйвера ODBC. Для получения конкретных примеров обратитесь к поставщику ODBC. Чтобы определить подходящие параметры строки подключения, обратитесь к документации по драйверу ODBC для источника данных. Примеры, приведенные в этой статье, могут не применяться к конкретному драйверу ODBC.
+В этой статье содержатся сведения о том, как создать конфигурацию подключения с помощью источника данных ODBC. В качестве примера в руководстве используется один конкретный драйвер ODBC. Для получения конкретных примеров обратитесь к поставщику ODBC. Чтобы определить подходящие параметры строки подключения, обратитесь к документации по драйверу ODBC для источника данных. Примеры, приведенные в этой статье, могут не применяться к конкретному драйверу ODBC.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
 >[!NOTE]
 >Для использования этой функции требуется SQL Server в Windows.
 
-* [Установка PolyBase](polybase-installation.md).
+* PolyВase нужно установить и включить для [установки PolyВase](polybase-installation.md) для экземпляра SQL Server.
 
 * [Главный ключ](../../t-sql/statements/create-master-key-transact-sql.md) необходимо создать перед созданием учетных данных для базы данных.
 
 ## <a name="install-the-odbc-driver"></a>Установка драйвера ODBC
 
-Сначала скачайте и установите на всех узлах PolyBase драйвер ODBC источника данных, к которому нужно подключиться. После установки драйвера вы можете просмотреть и протестировать его в разделе **Администратор источников данных ODBC**.
+Скачайте и установите драйвер ODBC источника данных, к которому нужно подключиться, на каждом узле PolyBase. После установки драйвера вы можете просмотреть и протестировать его в разделе **Администратор источников данных ODBC**.
 
 ![Масштабируемые группы PolyBase](../../relational-databases/polybase/media/polybase-odbc-admin.png) 
 
@@ -45,15 +45,14 @@ PolyBase в SQL Server 2019 позволяет подключаться к со
 > [!IMPORTANT]
 > Чтобы повысить производительность запросов, включите пулы соединений. Это можно сделать в разделе **Администратор источников данных ODBC**.
 
-## <a name="create-an-external-table"></a>Создание внешней таблицы
+## <a name="create-dependent-objects-in-sql-server"></a>Создание зависимых объектов в SQL Server
 
-Чтобы запросить данные из источника ODBC, нужно создать внешние таблицы, позволяющие ссылаться на внешние данные. Этот раздел содержит пример кода для создания внешних таблиц.
+Чтобы использовать источник данных ODBC, сначала необходимо создать несколько объектов для завершения настройки.
 
 В рамках этого раздела используются следующие команды Transact-SQL:
 
 * [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)
 * [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md) 
-* [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
 
 1. Создайте учетные данные в области базы данных для доступа к источнику ODBC.
 
@@ -94,18 +93,44 @@ PolyBase в SQL Server 2019 позволяет подключаться к со
     PUSHDOWN = ON,
     CREDENTIAL = credential_name );
     ```
+    
+## <a name="create-an-external-table"></a>Создание внешней таблицы
+
+После того как вы создали зависимые объекты, можно создать внешние таблицы с помощью T-SQL. 
+
+В рамках этого раздела используются следующие команды Transact-SQL:
+* [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md)
+* [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
+
+1. Создайте одну или несколько внешних таблиц.
+
+   Создайте внешнюю таблицу. Вам нужно обратиться ко внешнему источнику данных, созданному выше с помощью аргумента `DATA_SOURCE`, и указать исходную таблицу в качестве `LOCATION`. Ссылаться на все столбцы не нужно, однако стоит убедиться, что типы сопоставлены должным образом.  
+
+   ```sql
+     CREATE EXTERNAL TABLE <your_table_name>
+     (
+     <col1_name>     DECIMAL(38) NOT NULL,
+     <col2_name>     DECIMAL(38) NOT NULL,
+     <col3_name>     CHAR COLLATE Latin1_General_BIN NOT NULL
+     )
+     WITH (
+     LOCATION='<sap_table_name>',
+     DATA_SOURCE= <external_data_source_name>
+     )
+     ;
+   ```
+
+   > [!NOTE]
+   > Обратите внимание, что с помощью внешнего источника данных можно повторно использовать зависимые объекты для всех внешних таблиц.
 
 1. **Необязательно**. Создайте статистику внешней таблицы.
 
     Чтобы обеспечить оптимальную производительность запросов, мы советуем создать статистику столбцов внешней таблицы, особенно тех, которые используются для объединения, применения фильтров и статистических выражений.
 
     ```sql
-    CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
+    CREATE STATISTICS statistics_name ON contact (FirstName) WITH FULLSCAN; 
     ```
-
->[!IMPORTANT]
->После создания внешнего источника данных можно использовать команду [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md), чтобы создать таблицу с поддержкой запросов к этому источнику.
-
+    
 ## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения о PolyBase см. в статье [Руководство по PolyBase](polybase-guide.md).

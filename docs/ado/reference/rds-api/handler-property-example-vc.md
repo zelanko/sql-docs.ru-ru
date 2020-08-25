@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: d046d89c-622b-48bc-9d30-f454c3e13595
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5a570727ef9bdee2ac1411a1594dae518dd4fe36
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d57c984912b46e03f8e07c85d028680196cc67cb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438966"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768163"
 ---
 # <a name="handler-property-example-vc"></a>Пример свойства Handler (Visual C++)
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- В этом примере демонстрируется свойство [обработчика](../../../ado/reference/rds-api/handler-property-rds.md) объектов [RDS элемента управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) . (Дополнительные сведения см. в разделе [Настройка фактов](../../../ado/guide/remote-data-service/datafactory-customization.md) .)  
+ В этом примере демонстрируется свойство [обработчика](./handler-property-rds.md) объектов [RDS элемента управления](./datacontrol-object-rds.md) . (Дополнительные сведения см. в разделе [Настройка фактов](../../guide/remote-data-service/datafactory-customization.md) .)  
   
  Предположим, что в файле параметров, Msdfmap.ini, расположенном на сервере, есть следующие разделы:  
   
@@ -38,7 +38,7 @@ Connect="DSN=Pubs"
 SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
- Код выглядит следующим образом. Команда, назначенная свойству [SQL](../../../ado/reference/rds-api/sql-property.md) , будет соответствовать идентификатору ***аусорбид*** и будет получать строку для автора Ивана о'леари. Несмотря на то, что свойство [Connect](../../../ado/reference/rds-api/connect-property-rds.md) в коде указывает источник данных Northwind, этот источник данных будет перезаписан с помощью раздела Msdfmap.ini *Connect* . Свойство [Recordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) объекта **элемента управления** данных назначается несвязанному объекту [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) исключительно в качестве удобства для написания кода.  
+ Код выглядит следующим образом. Команда, назначенная свойству [SQL](./sql-property.md) , будет соответствовать идентификатору ***аусорбид*** и будет получать строку для автора Ивана о'леари. Несмотря на то, что свойство [Connect](./connect-property-rds.md) в коде указывает источник данных Northwind, этот источник данных будет перезаписан с помощью раздела Msdfmap.ini *Connect* . Свойство [Recordset](./recordset-sourcerecordset-properties-rds.md) объекта **элемента управления** данных назначается несвязанному объекту [Recordset](../ado-api/recordset-object-ado.md) исключительно в качестве удобства для написания кода.  
   
 ```  
 // BeginHandlerCpp.cpp  
@@ -129,28 +129,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект элемента управления (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Свойство Handler (служба удаленных рабочих столов)](../../../ado/reference/rds-api/handler-property-rds.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## <a name="see-also"></a>См. также  
+ [Объект элемента управления (RDS)](./datacontrol-object-rds.md)   
+ [Свойство Handler (служба удаленных рабочих столов)](./handler-property-rds.md)

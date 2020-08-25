@@ -2,7 +2,7 @@
 title: Запуск SQL Server в однопользовательском режиме | Документы Майкрософт
 description: Сведения о однопользовательском режиме в SQL Server. Узнайте, когда это полезно, и как использовать параметр запуска -m для запуска экземпляра SQL Server в этом режиме.
 ms.custom: ''
-ms.date: 09/20/2017
+ms.date: 08/11/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 31b0075dfa6b3f4fa380e8b43054d0c98ebd8d81
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8651bcaa4aebf69eae9622031b49fb562b7be9f6
+ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764007"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88147305"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>Запуск SQL Server в однопользовательском режиме
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,13 @@ ms.locfileid: "85764007"
   
 > [!IMPORTANT]  
 >  Не используйте этот параметр как средство безопасности. Клиентское приложение предоставляет имя клиентского приложения и может указать ложное имя в составе строки подключения.  
-  
+
+Следующий пример запускает экземпляр SQL Server в однопользовательском режиме и разрешает подключение только через редактор запросов среды SQL Server Management Studio.
+
+```console
+net start "SQL Server (MSSQLSERVER)" -m"Microsoft SQL Server Management Studio - Query"
+```
+
 ## <a name="note-for-clustered-installations"></a>Примечание для кластеризованной установки  
  Когда при установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в кластерной среде выполняется запуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в однопользовательском режиме, DLL-библиотека ресурсов кластера использует доступное соединение, блокируя тем самым любые другие подключения к серверу. В таком состоянии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] попытка перевести ресурс агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в режим «в сети», может привести к переходу ресурса SQL на другой узел, если этот ресурс настроен с учетом группы.  
   

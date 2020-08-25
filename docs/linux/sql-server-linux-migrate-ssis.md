@@ -1,6 +1,6 @@
 ---
 title: Извлечение, преобразование и загрузка данных в Linux с помощью служб SSIS
-description: В этой статье содержаться сведения о службах SQL Server Integration Services (SSIS) для компьютеров Linux.
+description: Сведения по запуску пакетов служб SQL Server Integration Services (SSIS) в Linux. Также из этой статьи вы узнаете, где найти дополнительные сведения о возможностях служб SSIS.
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
@@ -8,12 +8,12 @@ ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 72ad1ca9c97834ad38b579b904f29db71cf0686d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a459924450582e57ff17af2cc8f48c9156ab8bb2
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882719"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088874"
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>Извлечение, преобразование и загрузка данных в Linux с помощью служб SSIS
 
@@ -25,7 +25,7 @@ ms.locfileid: "85882719"
 
 Дополнительные сведения о возможностях служб SSIS см. в статье [Службы SQL Server Integration Services](../integration-services/sql-server-integration-services.md).
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Для запуска пакетов SSIS на компьютере Linux сначала необходимо установить службы SQL Server Integration Services. Службы SSIS не входят в состав установки SQL Server для компьютеров Linux. Инструкции по установке см. в статье [Установка служб SQL Server Integration Services](sql-server-linux-setup-ssis.md).
 
@@ -114,4 +114,4 @@ ms.locfileid: "85882719"
 -   [Установка служб SQL Server Integration Services (SSIS) в Linux](sql-server-linux-setup-ssis.md)
 -   [Настройка SQL Server Integration Services в Linux с помощью ssis-conf](sql-server-linux-configure-ssis.md)
 -   [Ограничения и известные проблемы для служб SSIS в Linux](sql-server-linux-ssis-known-issues.md)
--   [Планирование выполнения пакетов SQL Server Integration Services в Linux с помощью cron](sql-server-linux-schedule-ssis-packages.md)
+-   [Планирование выполнения пакетов SQL Server Integration Services в Linux с помощью cron](sql-server-linux-schedule-ssis-packages.md)

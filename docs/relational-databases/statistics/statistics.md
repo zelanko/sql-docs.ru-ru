@@ -24,12 +24,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae25071d2740306c8ff6156a51cc380101046ba8
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 3b2a5d4a4e88e1d0cb3a342395ebb3642d5d2dd8
+ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457020"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88147745"
 ---
 # <a name="statistics"></a>Статистика
 
@@ -116,13 +116,22 @@ ORDER BY s.name;
 * Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и при [уровне совместимости базы данных](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется пороговое значение для динамического обновления статистических данных по убыванию. Значение изменяется в зависимости от числа строк в таблице. Оно вычисляется как квадратный корень из произведения текущего значения кратности в таблице и 1000. Например, если таблица содержит 2 миллиона строк, значение вычисляется как квадратный корень из (1000 * 2000000) = 44721,359. Благодаря этому изменению статистика для больших таблиц будет обновляться чаще. Но если уровень совместимости для базы данных ниже 130, применяется пороговое значение [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. ?
 
 > [!IMPORTANT]
-> Начиная с версии [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] и до [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше при [уровне совместимости базы данных](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) ниже 130 применяется [флаг трассировки 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), а [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует пороговое значение для динамического обновления статистических данных по убыванию. Значение изменяется в зависимости от числа строк в таблице.
+> В [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] до [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий в категории [уровень совместимости базы данных](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 120 и ниже включите [флаг трассировки 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), чтобы служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использовала пороговое значение динамического обновления статистики, которое понижается.
+
+Вы можете использовать следующее руководство для включения флага трассировки 2371 в среде до [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].
+
+ - Если вы не заметили проблем с производительностью из-за устаревшей статистики, этот флаг трассировки можно не включать.
+ - Если вы используете системы SAP, включите этот флаг трассировки.  Дополнительные сведения см. в этом [блоге](https://docs.microsoft.com/archive/blogs/saponsqlserver/changes-to-automatic-update-statistics-in-sql-server-traceflag-2371).
+ - Если обновление статистики происходит в ночное время, так как текущее автоматическое обновление запускается недостаточно часто, рассмотрите возможность включения флага трассировки 2371 для снижения порога.
   
 Оптимизатор запросов проверяет наличие устаревшей статистики перед компиляцией запроса и до выполнения кэшированного плана запроса. Перед компиляцией запроса оптимизатор запросов с помощью столбцов, таблиц и индексированных представлений в предикате запроса определяет статистические данные, которые могли устареть. Перед выполнением кэшированного плана запроса компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] проверяет, ссылается ли план запроса на актуальную статистику.  
   
 Параметр AUTO_UPDATE_STATISTICS применяется к объектам статистики, создаваемым для индексов, отдельных столбцов в предикатах запросов, и к статистике, создаваемой инструкцией [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) . Этот параметр также применяется к отфильтрованной статистике.  
  
-Дополнительные сведения см. в разделе об [управлении поведением Autostat (AUTO_UPDATE_STATISTICS) в SQL Server](https://support.microsoft.com/help/2754171).
+Вы можете использовать [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) для точного отслеживания количества строк, измененных в таблице, и принятия решения о возможности обновления статистики вручную.
+
+
+
   
 #### <a name="auto_update_statistics_async"></a>AUTO_UPDATE_STATISTICS_ASYNC  
  Параметр [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async) (асинхронное обновление статистики) определяет, какой режим обновления статистики использует оптимизатор запросов: синхронный или асинхронный. По умолчанию параметр асинхронного обновления статистики отключен, и оптимизатор запросов обновляет статистику синхронно. Параметр AUTO_UPDATE_STATISTICS_ASYNC применяется к объектам статистики, создаваемым для индексов, отдельных столбцов в предикатах запросов, и к статистике, создаваемой инструкцией [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) .  

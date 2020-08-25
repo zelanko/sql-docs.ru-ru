@@ -1,4 +1,5 @@
 ---
+description: Соединитель с Oracle (Microsoft)
 title: Соединитель с Oracle (Microsoft) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/14/2019
@@ -9,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1ef8ccdfc30c772548cff4caa816ef1a582c8823
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a5bb5631a398e398b45b84a0ee70b51f49c90988
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913800"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430756"
 ---
 # <a name="microsoft-connector-for-oracle"></a>Соединитель с Oracle (Microsoft)
 
@@ -55,6 +56,10 @@ Oracle Database поддерживается всеми операционным
 - [SQL Server 2016: соединитель с Oracle (Microsoft) от Attunity версии 4.0](https://www.microsoft.com/download/details.aspx?id=52950)
 - [SQL Server 2014: соединитель с Oracle (Microsoft) от Attunity версии 3.0](https://www.microsoft.com/download/details.aspx?id=44582)
 - [SQL Server 2012: соединитель с Oracle (Microsoft) от Attunity версии 2.0](https://www.microsoft.com/download/details.aspx?id=29283)
+
+## <a name="limitations-and-known-issues"></a>Ограничения и известные проблемы
+
+- Представления не указаны в списке источников Oracle *Имя таблицы или представления*. В качестве временного решения используйте команду SQL и выполните действие по выбору * из представления или по заданию имени представления для свойства [Oracle Source].[TableName] в расширенном редакторе.
 
 ## <a name="uninstallation"></a>Удаление
 

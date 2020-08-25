@@ -1,6 +1,6 @@
 ---
 title: Ручная отработка отказа экземпляра отказоустойчивого кластера — SQL Server на Linux
-description: Узнайте, как вручную отработать отказ экземпляра отказоустойчивого кластера на SQL Server на Linux.
+description: Сведения о том, как вручную отработать отказ экземпляра отказоустойчивого кластера на SQL Server на Linux, в особенности Red Hat Linux Enterprise, Ubuntu и Suse Linux Enterprise Server.
 ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 58c30fc1e88ec3b7e90549f28b13f91e3330675d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2be454ad7d2ca85f1648ba7f98ea503627d6c437
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897251"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088762"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>Работа экземпляра отказоустойчивого кластера — SQL Server на Linux
 

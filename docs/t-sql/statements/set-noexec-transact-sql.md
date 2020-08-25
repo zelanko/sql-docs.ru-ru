@@ -1,4 +1,5 @@
 ---
+description: SET NOEXEC (Transact-SQL)
 title: SET NOEXEC (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: ba56fba1-af9b-4459-b6e4-5d7e71a7630b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7495f0eb68df1cf64320aee14276d33ff7641db5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4e32f168c04aba303dc33e1e3db8c268e163ef82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765775"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88356630"
 ---
 # <a name="set-noexec-transact-sql"></a>SET NOEXEC (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,8 +44,10 @@ ms.locfileid: "85765775"
 SET NOEXEC { ON | OFF }  
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="remarks"></a>Remarks  
- Если выполняется инструкция SET NOEXEC ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компилирует каждый пакет инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)], но не выполняет их. Если выполняется инструкция SET NOEXEC OFF, то все пакеты выполняются после компиляции.  
+ Если выполняется инструкция SET NOEXEC ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] анализирует и компилирует каждый пакет инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)], но не выполняет их. Если выполняется инструкция SET NOEXEC OFF, то все пакеты выполняются после компиляции.  NOEXEC поддерживает отложенное разрешение имен; если один или несколько объектов в пакете, на которые имеются ссылки, не существуют, ошибки не будут возникать.
   
  Выполнение инструкций в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] происходит в два этапа: компиляция и собственно выполнение. Этот параметр полезен для проверки синтаксиса и имен объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в исходном коде языка [!INCLUDE[tsql](../../includes/tsql-md.md)] при выполнении. Он также полезен для инструкций отладки, которые, как правило, являются частью более крупного пакета инструкций.  
   

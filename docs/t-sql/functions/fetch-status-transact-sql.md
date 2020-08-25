@@ -1,5 +1,6 @@
 ---
-title: '@@FETCH_STATUS (Transact-SQL) | Документы Майкрософт'
+description: '&#x40;&#x40;FETCH_STATUS (Transact-SQL)'
+title: FETCH_STATUS (Transact-SQL)
 ms.custom: ''
 ms.date: 09/18/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 93659193-e4ff-4dfb-9043-0c4114921b91
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 73c5802df5988c323efb7ae1c5554b4835063e4c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2b8e44321611a4e814a1102a0cec233ede45eb2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85631721"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88310110"
 ---
 # <a name="x40x40fetch_status-transact-sql"></a>&#x40;&#x40;FETCH_STATUS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,23 +36,25 @@ ms.locfileid: "85631721"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```syntaxsql
 @@FETCH_STATUS  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="return-type"></a>Тип возвращаемых данных  
  **integer**  
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
-|Возвращаемое значение|Description|  
+|Возвращаемое значение|Описание|  
 |------------------|-----------------|  
 |&nbsp;0|Инструкция FETCH была выполнена успешно.|  
 |-1|Выполнение инструкции FETCH завершилось неудачно или строка оказалась вне пределов результирующего набора.|  
 |-2|Выбранная строка отсутствует.|
 |–9|Курсор не выполняет операцию выборки.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
 Глобальный статус `@@FETCH_STATUS` для всех курсоров в рамках подключения предполагает внимательное использование. После выполнения инструкции FETCH следует выполнить тест для `@@FETCH_STATUS`, прежде чем любая другая инструкция FETCH будет выполнена применительно к другому курсору. `@@FETCH_STATUS` не определяется до выполнения выборки в рамках подключения.  
   
 Например, пользователь выполняет инструкцию FETCH из одного курсора, а затем вызывает хранимую процедуру, которая открывает и обрабатывает результаты из другого курсора. Когда управление возвращается от вызванной хранимой процедуры, `@@FETCH_STATUS` отражает результаты последней инструкции FETCH, выполненной в хранимой процедуре, а не результаты инструкции FETCH, выполненной до вызова хранимой процедуры.  
@@ -76,7 +79,7 @@ DEALLOCATE Employee_Cursor;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции работы с курсорами (Transact-SQL)](../../t-sql/functions/cursor-functions-transact-sql.md)   
  [FETCH (Transact-SQL)](../../t-sql/language-elements/fetch-transact-sql.md)  
   

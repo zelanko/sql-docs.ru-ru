@@ -1,6 +1,6 @@
 ---
 title: Настройка группы доступности Always On SQL Server в Windows и Linux
-description: Настройка группы доступности SQL Server с использованием реплик в Windows и Linux.
+description: Сведения о том, как создать группу доступности Always On в SQL Server с одной репликой на сервере Windows и другой репликой на сервере Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2eec1f7f24f8465fb5d2bd4406de4c11aef8a518
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9d38aed51796609a9fb97c2f6d06a7383fba9dde
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773596"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088961"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Настройка группы доступности Always On SQL Server в Windows и Linux (кроссплатформенная конфигурация)
 

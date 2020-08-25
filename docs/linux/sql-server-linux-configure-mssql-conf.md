@@ -3,17 +3,17 @@ title: Настройка параметров SQL Server на Linux
 description: В этой статье описывается настройка параметров SQL Server на Linux с помощью средства mssql-conf.
 author: VanMSFT
 ms.author: vanto
-ms.date: 07/30/2019
+ms.date: 08/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: fe93023bfbcd285d8d50a90bb11ea532eb066f2c
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 2e21b8f811af5887147ddb71b211e3a876b728d2
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472190"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180016"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Настройка SQL Server на Linux с помощью средства mssql-conf
 
@@ -42,6 +42,8 @@ ms.locfileid: "87472190"
 | [Каталог локального аудита](#localaudit) | Указание каталога для добавления файлов локального аудита. |
 | [Локаль](#lcid) | Указание языкового стандарта для SQL Server. |
 | [Предельный объем памяти](#memorylimit) | Указание предельного объема памяти для SQL Server. |
+| [Параметры сети](#network) | Дополнительные параметры сети для SQL Server. |
+| [Координатор распределенных транзакций Майкрософт](#msdtc) | Настройка координатора распределенных транзакций Майкрософт на платформе Linux. |
 | [TCP-порт](#tcpport) | Изменение порта, через который SQL Server ожидает передачи данных. |
 | [TLS](#tls) | Настройка протокола TLS. |
 | [Флаги трассировки](#traceflags) | Установка флагов трассировки, которые будет использовать служба. |
@@ -72,6 +74,7 @@ ms.locfileid: "87472190"
 | [Предельный объем памяти](#memorylimit) | Указание предельного объема памяти для SQL Server. |
 | [Координатор распределенных транзакций Майкрософт](#msdtc) | Настройка координатора распределенных транзакций Майкрософт на платформе Linux. |
 | [Лицензионные соглашения MLServices](#mlservices-eula) | Принятие лицензионных соглашений R и Python для пакетов mlservices. Применимо только к SQL Server 2019.|
+| [Параметры сети](#network) | Дополнительные параметры сети для SQL Server. |
 | [outboundnetworkaccess](#mlservices-outbound-access) |Включение исходящего сетевого доступа для расширений R, Python и Java служб [mlservices](sql-server-linux-setup-machine-learning.md).|
 | [TCP-порт](#tcpport) | Изменение порта, через который SQL Server ожидает передачи данных. |
 | [TLS](#tls) | Настройка протокола TLS. |
@@ -107,6 +110,34 @@ ms.locfileid: "87472190"
    ```bash
    sudo systemctl restart mssql-server
    ```
+
+### <a name="set-the-default-database-mail-profile-for-sql-server-on-linux"></a><a id="dbmail"></a> Настройка профиля Database Mail по умолчанию для SQL Server на Linux
+
+Параметр **sqlpagent.databasemailprofile** позволяет задать профиль DB Mail по умолчанию для оповещений по электронной почте.
+
+```bash
+sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
+```
+
+### <a name="sql-agent-error-logs"></a><a id="agenterrorlog"></a> Журналы ошибок Агента SQL
+
+Параметры **sqlpagent.errorlog file** и **sqlpagent.errorlogginglevel** позволяют задать путь к файлу журнала Агента SQL и соответственно уровень ведения журнала. 
+
+```bash
+sudo /opt/mssql/bin/mssql-conf set sqlagent.errorfile <path>
+```
+
+Уровни ведения журнала Агента SQL — это значения битовой маски, которые равны:
+
+- 1 = ошибки;
+- 2 = предупреждения;
+- 4 = сведения.
+
+Если вы хотите захватить все уровни, используйте в качестве значения `7`.
+
+```bash
+sudo /opt/mssql/bin/mssql-conf set sqlagent.errorlogginglevel <level>
+```
 
 ## <a name="change-the-sql-server-collation"></a><a id="collation"></a> Изменение параметров сортировки SQL Server
 
@@ -335,6 +366,7 @@ ms.locfileid: "87472190"
    sudo systemctl restart mssql-server
    ```
 
+Параметр `errorlog.numerrorlogs` позволяет указать число журналов ошибок, которые будут сохраняться перед запуском журнала в цикличном режиме.
 
 ## <a name="change-the-default-backup-directory-location"></a><a id="backupdir"></a> Изменение каталога резервного копирования по умолчанию
 
@@ -400,13 +432,6 @@ ms.locfileid: "87472190"
     | **filtered** | Тип filtered основан на механизме исключения: в дамп включается вся память процесса, кроме явно исключенной. Он поддерживает внутренние процессы SQLPAL и среды размещения, причем из дампа исключаются определенные области.
     | **full** | Full — это полный дамп процесса, который содержит все области, имеющиеся в **/proc/$pid/maps**. Параметр **coredump.captureminiandfull** в этом случае не действует. |
 
-## <a name="set-the-default-database-mail-profile-for-sql-server-on-linux"></a><a id="dbmail"></a> Настройка профиля Database Mail по умолчанию для SQL Server на Linux
-
-Параметр **sqlpagent.databasemailprofile** позволяет задать профиль DB Mail по умолчанию для оповещений по электронной почте.
-
-```bash
-sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
-```
 ## <a name="high-availability"></a><a id="hadr"></a> Высокий уровень доступности
 
 Параметр **hadr.hadrenabled** включает группы доступности в экземпляре SQL Server. Приведенная ниже команда включает группы доступности путем присвоения параметру **hadr.hadrenabled** значения 1. Чтобы этот параметр вступил в силу, необходимо перезапустить SQL Server.
@@ -485,7 +510,14 @@ sudo systemctl restart mssql-server
    sudo systemctl restart mssql-server
    ```
 
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+### <a name="additional-memory-settings"></a>Дополнительные параметры памяти
+
+В параметрах памяти доступны следующие пункты.
+
+|Параметр |Описание |
+|--- |--- |
+| memory.disablememorypressure | Отключение нехватки памяти для SQL Server. Возможные значения: `true` или `false`. |
+| memory.memory_optimized | Включение или выключение функций SQL Server, оптимизированных для операций в памяти, — постоянный компонент паравиртуализации файлов памяти, защита памяти. Возможные значения: `true` или `false`. |
 
 ## <a name="configure-msdtc"></a><a id="msdtc"></a> Настройка координатора распределенных транзакций Майкрософт
 
@@ -527,7 +559,6 @@ sudo systemctl restart mssql-server
 | distributedtransaction.tracefilepath | Папка, в которой должны храниться файлы трассировки |
 | distributedtransaction.turnoffrpcsecurity | Включение или отключение безопасности RPC для распределенных транзакций |
 
-::: moniker-end
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 ## <a name="accept-mlservices-eulas"></a><a id="mlservices-eula"></a> Принятие лицензионных соглашений MLServices
@@ -624,6 +655,22 @@ outboundnetworkaccess = 1
 
 Пример использования параметров TLS см. в статье [Шифрование подключений к SQL Server на Linux](sql-server-linux-encrypted-connections.md).
 
+## <a name="network-settings"></a><a id="network"></a>Параметры сети
+
+См. [Учебник. Использование проверки подлинности Active Directory с SQL Server на Linux](sql-server-linux-active-directory-authentication.md) для получения дополнительных сведений.
+
+Следующие пункты относятся к дополнительным параметрам сети, которые можно настроить с помощью `mssql-conf`.
+
+|Параметр |Описание |
+|--- |--- |
+| network.disablesssd | Отключение запросов SSSD для получения информации об учетных записях AD и использование вызовов по протоколу LDAP по умолчанию. Возможные значения: `true` или `false`. |
+| network.enablekdcfromkrb5conf | Включение поиска сведений KDC из krb5.conf. Возможные значения: `true` или `false`. |
+| network.forcesecureldap | Принудительное использование протокола LDAPS для связи с контроллером домена. Возможные значения: `true` или `false`. |
+| network.ipaddress | IP-адрес для входящих подключений. |
+| network.kerberoscredupdatefrequency | Время в секундах между проверками учетных данных Kerberos, которые необходимо обновить. Значение — целое число.|
+| network.privilegedadaccount | Привилегированный пользователь AD, используемый для проверки подлинности AD. Значение — `<username>`. Дополнительные сведения см. в статье [Учебник. Использование проверки подлинности Azure Active Directory с SQL Server на Linux](sql-server-linux-active-directory-authentication.md#spn)|
+| uncmapping | Сопоставляет UNC-путь с локальным путем. Например, `sudo /opt/mssql/bin/mssql-conf set uncmapping //servername/sharename /tmp/folder`. |
+
 ## <a name="enabledisable-traceflags"></a><a id="traceflags"></a> Включение и отключение флагов трассировки
 
 Параметр **traceflag** позволяет включить или отключить флаги трассировки при запуске службы SQL Server. Чтобы включить или отключить флаг трассировки, выполните приведенные ниже команды.
@@ -676,7 +723,7 @@ outboundnetworkaccess = 1
 sudo cat /var/opt/mssql/mssql.conf
 ```
 
-Обратите внимание на то, что параметры, отсутствующие в этом файле, имеют значения по умолчанию. В следующем разделе приводится пример файла **mssql.conf**.
+Некоторые параметры, отсутствующие в этом файле, имеют значения по умолчанию. В следующем разделе приводится пример файла **mssql.conf**.
 
 
 ## <a name="mssqlconf-format"></a><a id="mssql-conf-format"></a> Формат файла mssql.conf

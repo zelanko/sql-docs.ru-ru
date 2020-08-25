@@ -1,4 +1,5 @@
 ---
+description: Шаг 5. Тестирование учебного пакета занятия 4
 title: Шаг 5. Проверка учебного пакета, созданного на занятии 4 | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/07/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 5f18df92-0248-4858-836b-c8b02f0e0439
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c209aea67a04d7f602ec2015bdb3e7535c9bc8dd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ccd458d09c43a97693c620b9498ad1d593751905
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916883"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457146"
 ---
 # <a name="lesson-4-5-test-the-lesson-4-package"></a>Занятие 4-5. Тестирование пакета занятия 4
 
@@ -43,7 +44,7 @@ ms.locfileid: "86916883"
   
 ## <a name="run-the-lesson-4-tutorial-package"></a>Выполнение учебного пакета занятия 4  
   
-1.  В меню **Отладка** выберите команду **Начать отладку**.  
+1.  В меню **Отладка** выберите пункт **Начать отладку**.  
   
 2.  После окончания работы пакета выберите в меню **Отладка** пункт **Остановить отладку**.  
   

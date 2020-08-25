@@ -1,6 +1,6 @@
 ---
 title: Управление SQL Server на Linux с помощью PowerShell Core
-description: В этой статье приводятся общие сведения об использовании PowerShell Core для работы с SQL Server на Linux.
+description: Узнайте больше о SQL Server PowerShell, изучив несколько примеров по использованию SQL Server PowerShell с PowerShell Core (PS Core) в macOS и Linux.
 ms.date: 04/22/2019
 ms.prod: sql
 ms.technology: linux
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 ms.reviewer: vanto
-ms.openlocfilehash: 3f70d69e58d513abcba8f27bbda53ab09d5e00ab
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: fed5ca919a78f3051ba7677f46f786b7c62f9b27
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807658"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088857"
 ---
 # <a name="manage-sql-server-on-linux-with-powershell-core"></a>Управление SQL Server на Linux с помощью PowerShell Core
 

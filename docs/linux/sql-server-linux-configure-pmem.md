@@ -1,6 +1,6 @@
 ---
 title: Настройка энергонезависимой памяти (PMEM)
-description: В этой статье представлено пошаговое руководство по настройке PMEM в Linux.
+description: Сведения о том, как настроить энергонезависимую память (PMEM) для SQL Server в Linux, а также о том, как создать пространства имен для устройств PMEM.
 ms.custom: seo-lt-2019
 author: briancarrig
 ms.author: brcarrig
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: d0222b763ea7898a18443175a88012b5fb5aed42
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 146ab5788e29045a55e6251be01e061f52d7bbb8
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901518"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088941"
 ---
 # <a name="configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Настройка энергонезависимой памяти (PMEM) для SQL Server на Linux
 

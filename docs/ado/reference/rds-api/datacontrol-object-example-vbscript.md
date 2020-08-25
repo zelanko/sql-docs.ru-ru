@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4f306a51-d5a4-4785-b426-487639cda164
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c237a4259838beca54f0016b8a34f191e169d0ad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 181415874cfc6ede5f274fbdc5961b8275e13763
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439166"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768579"
 ---
 # <a name="datacontrol-object-example-vbscript"></a>Пример объекта DataControl (VBScript)
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- В следующем примере кода показано, как задать [RDS. Параметры элементов управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) данными во время разработки и привязывать их к элементу управления, поддерживающему данные. Вырежьте и вставьте этот код между \<Body> \</Body> тегами и в обычном HTML-документе и назовите его **датаконтролдесигнвбс. ASP**. Сценарий ASP определит ваш сервер.  
+ В следующем примере кода показано, как задать [RDS. Параметры элементов управления](./datacontrol-object-rds.md) данными во время разработки и привязывать их к элементу управления, поддерживающему данные. Вырежьте и вставьте этот код между \<Body> \</Body> тегами и в обычном HTML-документе и назовите его **датаконтролдесигнвбс. ASP**. Сценарий ASP определит ваш сервер.  
   
 ```  
 <!-- BeginDataControlDesignVBS -->  
@@ -183,7 +183,5 @@ End Sub
 <!-- EndDataControlRuntimeVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
-
-
+## <a name="see-also"></a>См. также  
+ [Объект DataControl (служба удаленных рабочих столов)](./datacontrol-object-rds.md)

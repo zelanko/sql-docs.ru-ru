@@ -1,4 +1,5 @@
 ---
+description: Назначение «OLE DB»
 title: Назначение OLE DB | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 046e23f3861af9e1a1b6877036d90f249bb04723
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 91f2323a61440792654b341364efb79506c5cdd3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86908473"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477796"
 ---
 # <a name="ole-db-destination"></a>Назначение «OLE DB»
 
@@ -129,6 +130,8 @@ ms.locfileid: "86908473"
   
 > [!NOTE]  
 >  Свойство **CommandTimeout** назначения «OLE DB» недоступно в **Редакторе назначения «OLE DB»** , однако может быть задано в **Расширенном редакторе**. Кроме того, некоторые параметры быстрой загрузки доступны только в **Расширенном редакторе**. Дополнительные сведения об этих свойствах см. в подразделе «Назначение "OLE DB"» раздела [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md).  
+> 
+>  Свойство **CommandTimeout** вступает в силу только тогда, когда действует режим доступа **Команда SQL**.
   
 ### <a name="static-options"></a>Статические параметры  
  **Диспетчер соединений OLE DB**  

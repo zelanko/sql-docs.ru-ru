@@ -1,8 +1,6 @@
 ---
-title: Изменение режима проверки подлинности сервера | Документы Майкрософт
+title: Изменение режима проверки подлинности сервера
 description: Сведения об изменении режима проверки подлинности сервера в SQL Server. Для этого вы можете использовать SQL Server Management Studio или Transact-SQL.
-ms.custom: ''
-ms.date: 02/18/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -16,23 +14,26 @@ helpviewer_keywords:
 ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 67fe4768a07460ebac0b533b6e886ab565d82029
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.custom: ''
+ms.date: 02/18/2020
+ms.openlocfilehash: 79dc463039be1100f265e6bb44561a6e2dc71c93
+ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759221"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88200954"
 ---
 # <a name="change-server-authentication-mode"></a>Изменение режима проверки подлинности сервера
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
 В этом разделе описывается, как изменить режим проверки подлинности сервера в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. В процессе установки компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] настраивается на использование **режима проверки подлинности Windows** или **режима проверки подлинности SQL Server и Windows**. После установки вы можете изменить режим проверки подлинности в любое время.
 
 Если во время установки был выбран **Режим проверки подлинности Windows** , то имя входа sa отключено, а пароль присваивается программой установки. Если впоследствии изменить режим проверки подлинности на **проверку подлинности SQL Server и Windows**, то имя входа sa останется отключенным. Чтобы можно было пользоваться именем входа sa, включите его и присвойте ему новый пароль с помощью инструкции ALTER LOGIN. Имя входа sa может подключаться к серверу только с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
 
 ## <a name="before-you-begin"></a>Перед началом
 
-Учетная запись sa — хорошо известная учетная запись [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и часто становится мишенью злоумышленников. Не включайте учетную запись sa, если это не требуется для работы приложения. Для имени входа sa очень важно использовать надежный пароль.
+Учетная запись sa — хорошо известная учетная запись [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и часто становится мишенью злоумышленников. Не включайте учетную запись sa, если это не требуется для работы приложения. Для имени входа sa очень важно использовать надежный пароль.
 
 ## <a name="change-authentication-mode-with-ssms"></a>Изменение режима проверки подлинности с помощью SSMS
 
@@ -83,7 +84,12 @@ EXEC xp_instance_regwrite N'HKEY_LOCAL_MACHINE',
 GO
 ```
 
-## <a name="see-also"></a>См. также раздел
+> [!Note]
+> Для изменения режима аутентификации необходимы разрешения [системного администратора](../../relational-databases/security/authentication-access/server-level-roles.md#fixed-server-level-roles) или [сервера контроля](../../relational-databases/security/permissions-database-engine.md)
 
- [Надежные пароли](../../relational-databases/security/strong-passwords.md)   
- [Вопросы безопасности при установке SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md) [ALTER LOGIN (Transact-SQL)](../../t-sql/statements/alter-login-transact-sql.md) [Подключение к SQL Server в случае, если доступ системных администраторов заблокирован](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)
+## <a name="see-also"></a>См. также
+
+- [Надежные пароли](../../relational-databases/security/strong-passwords.md)
+- [Вопросы безопасности при установке SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)
+- [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)
+- [Подключение к SQL Server в случае, если доступ системных администраторов заблокирован](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)

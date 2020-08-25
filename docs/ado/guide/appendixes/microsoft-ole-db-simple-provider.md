@@ -15,24 +15,24 @@ helpviewer_keywords:
 ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9ed83809ec1bf3fd4ba55552f4ecac1d55cfb8d7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 81d60f33e0e9e055e086d990a681efb74cc943cc
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454026"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806524"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Обзор простого поставщика Microsoft OLE DB
-Microsoft OLE DB Simple Provider (ОБЕЩАНие) позволяет ADO получать доступ к любым данным, для которых поставщик был написан с помощью [набора средств OLE DB простого поставщика (обещание)](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6). Простые поставщики предназначены для доступа к источникам данных, которым требуется только фундаментальная OLE DBная поддержка, например массивы в памяти или XML-документы.
+Microsoft OLE DB Simple Provider (ОБЕЩАНие) позволяет ADO получать доступ к любым данным, для которых поставщик был написан с помощью [набора средств OLE DB простого поставщика (обещание)](/previous-versions/windows/desktop/ms715822(v=vs.85)). Простые поставщики предназначены для доступа к источникам данных, которым требуется только фундаментальная OLE DBная поддержка, например массивы в памяти или XML-документы.
 
 ## <a name="connection-string-parameters"></a>Параметры строки соединения
- Чтобы подключиться к библиотеке DLL простого поставщика OLE DB, задайте для аргумента *поставщика* в качестве значения свойства [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) значение:
+ Чтобы подключиться к библиотеке DLL простого поставщика OLE DB, задайте для аргумента *поставщика* в качестве значения свойства [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md) значение:
 
 ```vb
 MSDAOSP
 ```
 
- Это значение также может быть задано или считано с помощью свойства [provider](../../../ado/reference/ado-api/provider-property-ado.md) .
+ Это значение также может быть задано или считано с помощью свойства [provider](../../reference/ado-api/provider-property-ado.md) .
 
  Вы можете подключиться к простым поставщикам, зарегистрированным в качестве полных поставщиков OLE DB, используя зарегистрированное имя поставщика, определяемое модулем записи поставщика.
 
@@ -137,7 +137,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
 
 -   КСМЛДСО добавляет дополнительный столбец данных ($Text) к каждому **набору записей** в иерархии.
 
- Дополнительные сведения о OLE DB простого поставщика см. в разделе [Создание простого поставщика](https://msdn.microsoft.com/b31a6cba-58ae-4ee8-9039-700973d354d6).
+ Дополнительные сведения о OLE DB простого поставщика см. в разделе [Создание простого поставщика](/previous-versions/windows/desktop/ms721067(v=vs.85)).
 
 ## <a name="code-example"></a>Пример кода
  В следующем Visual Basic коде демонстрируется открытие произвольного XML-файла, создание иерархического **набора записей**и рекурсивное написание каждой записи каждого **набора записей** в окне отладки.

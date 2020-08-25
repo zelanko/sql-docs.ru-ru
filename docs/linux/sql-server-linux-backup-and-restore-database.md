@@ -1,6 +1,6 @@
 ---
 title: Резервное копирование и восстановление баз данных SQL Server в Linux
-description: Сведения о резервном копировании и восстановлении баз данных SQL Server в Linux.
+description: Сведения о резервном копировании и восстановлении баз данных SQL Server в Linux. Кроме того, из этой статьи вы узнаете, как выполнять резервное копирование и восстановление с помощью SQL Server Management Studio (SSMS).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: f90d612eb9064025db8b9ac942dd7f664cedb67e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 637a4c7d5eef6b40008a2903d4840783dcb48b12
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882342"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088975"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Резервное копирование и восстановление баз данных SQL Server в Linux
 
@@ -107,9 +107,9 @@ SQL Server завершает резервное копирование базы
 
 1. SQL Server восстанавливает базу данных. 
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 * [Создание полной резервной копии базы данных (SQL Server)](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)
 * [Создание резервной копии журнала транзакций (SQL Server)](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)
 * [BACKUP (Transact-SQL)](../t-sql/statements/backup-transact-sql.md)
-* [Резервное копирование SQL Server в указанное расположение](../relational-databases/backup-restore/sql-server-backup-to-url.md).
+* [Резервное копирование в SQL Server по URL-адресу](../relational-databases/backup-restore/sql-server-backup-to-url.md)

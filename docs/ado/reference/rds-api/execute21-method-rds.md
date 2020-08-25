@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 412401ba2b1d5a676b5f5172c59c6e4ffc5cce7e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9ee73221460a177e24317c9c3d7ff9ab5c06dec9
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439056"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768403"
 ---
 # <a name="execute21-method-rds"></a>Метод Execute21 (служба удаленных рабочих столов)
 Выполняет запрос и создает набор записей ADO для использования в ADO 2,1.  
@@ -74,9 +74,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  Параметр *хандлерстринг* может иметь значение null. Что происходит в этом случае, зависит от настройки сервера RDS. Строка обработчика "МСДФМАП. Handler" указывает, что следует использовать предоставляемый корпорацией Майкрософт обработчик (Msdfmap.dll). Строка обработчика "МАСДФМАП. Handler sample.ini" указывает, что следует использовать обработчик Msdfmap.dll и что аргумент "sample.ini" должен передаваться в обработчик. MSDFMAP.dll будет интерпретировать аргумент как направление использования sample.ini для проверки соединения и строк запроса.  
   
 > [!NOTE]
->  Метод **Execute21** является версией [метода Execute (RDS)](../../../ado/reference/rds-api/execute-method-rds.md). Когда необходимо использовать метод **EXECUTE** для взаимодействия с ADO 2,1, вместо него можно вызвать метод **Execute21** . Возможности метода **EXECUTE** в ADO 2,5 и более поздних версий представляют собой надмножество возможностей, предоставляемых для того же метода в ADO 2,1.  
+>  Метод **Execute21** является версией [метода Execute (RDS)](./execute-method-rds.md). Когда необходимо использовать метод **EXECUTE** для взаимодействия с ADO 2,1, вместо него можно вызвать метод **Execute21** . Возможности метода **EXECUTE** в ADO 2,5 и более поздних версий представляют собой надмножество возможностей, предоставляемых для того же метода в ADO 2,1.  
   
 ## <a name="applies-to"></a>Применение  
- [Объект DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
-
+ [Объект DataFactory (RDSServer)](./datafactory-object-rdsserver.md)

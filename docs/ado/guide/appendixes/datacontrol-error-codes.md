@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 057bd0f7a1023e32ef8bc9fd4da6aeca56e36a97
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b145e538ea44d5f007f800f70df84b8eed0b116
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422198"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806661"
 ---
 # <a name="datacontrol-object-error-codes"></a>Коды ошибок объектов элементов управления
-В следующей таблице перечислены службы [RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) Коды ошибок объектов элементов управления. Положительное десятичное преобразование двух младших байтов, отрицательное десятичное преобразование полного кода ошибки и шестнадцатеричные значения.
+В следующей таблице перечислены службы [RDS. ](../../reference/rds-api/datacontrol-object-rds.md) Коды ошибок объектов элементов управления. Положительное десятичное преобразование двух младших байтов, отрицательное десятичное преобразование полного кода ошибки и шестнадцатеричные значения.
 
-|Клиент. Коды ошибок элементов управления|Number|Описание|
+|Клиент. Коды ошибок элементов управления|Number|Описание:|
 |---------------------------------|------------|-----------------|
 |**IDS_AsyncPending**|4107 -2146824175 0x800A1011|Невозможно выполнить операцию, пока ожидается асинхронная операция.|
 |**IDS_BadInlineTablegram**|4105 -2146824183 0x800A1009|Недопустимый встроенный таблеграм.|
@@ -48,4 +48,4 @@ ms.locfileid: "88422198"
 |**IDS_URLMONNotFound**|4119 -2146824169 0x800A1017|Для свойства " **URL-адрес** элемента управления" требуется системный файл Urlmon.dll, который не удается найти.|
 
 ## <a name="see-also"></a>См. также
- [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
+ [Объект DataControl (служба удаленных рабочих столов)](../../reference/rds-api/datacontrol-object-rds.md)

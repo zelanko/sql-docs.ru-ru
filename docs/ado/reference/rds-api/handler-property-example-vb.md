@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 9664f9a6-65fc-4e7f-be3d-3e4b501b558a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d00626b04c4107ffdbf15cd24b104b17602fc6e3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3a4667b6524cef6694340d917dad04fad04ad3f8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438976"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768143"
 ---
 # <a name="handler-property-example-vb"></a>Пример свойства Handler (Visual Basic)
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- В этом примере демонстрируется свойство [обработчика](../../../ado/reference/rds-api/handler-property-rds.md) объектов [RDS элемента управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) . (Дополнительные сведения см. в разделе [Настройка фактов](../../../ado/guide/remote-data-service/datafactory-customization.md) .)  
+ В этом примере демонстрируется свойство [обработчика](./handler-property-rds.md) объектов [RDS элемента управления](./datacontrol-object-rds.md) . (Дополнительные сведения см. в разделе [Настройка фактов](../../guide/remote-data-service/datafactory-customization.md) .)  
   
  Предположим, что следующие разделы в файле параметров, Msdfmap.ini, расположены на сервере:  
   
@@ -38,7 +38,7 @@ Connect="DSN=Pubs"
 SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
- Код выглядит следующим образом. Команда, назначенная свойству [SQL](../../../ado/reference/rds-api/sql-property.md) , будет соответствовать идентификатору ***аусорбид*** и будет получать строку для автора Ивана о'леари. Свойство **Recordset** объекта **элемента управления** данных назначается несвязанному объекту [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) исключительно в качестве удобства для написания кода.  
+ Код выглядит следующим образом. Команда, назначенная свойству [SQL](./sql-property.md) , будет соответствовать идентификатору ***аусорбид*** и будет получать строку для автора Ивана о'леари. Свойство **Recordset** объекта **элемента управления** данных назначается несвязанному объекту [Recordset](../ado-api/recordset-object-ado.md) исключительно в качестве удобства для написания кода.  
   
 ```  
 'BeginHandlerVB  
@@ -79,8 +79,6 @@ End Sub
 'EndHandlerVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект элемента управления (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Свойство Handler (служба удаленных рабочих столов)](../../../ado/reference/rds-api/handler-property-rds.md)
-
-
+## <a name="see-also"></a>См. также  
+ [Объект элемента управления (RDS)](./datacontrol-object-rds.md)   
+ [Свойство Handler (служба удаленных рабочих столов)](./handler-property-rds.md)

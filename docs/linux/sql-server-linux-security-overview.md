@@ -1,6 +1,6 @@
 ---
 title: Ограничения системы безопасности для SQL Server на Linux
-description: В этой статье описываются ограничения SQL Server на Linux.
+description: Сведения об ограничениях SQL Server на Linux, в том числе о том, что использование ключей, хранящихся в Azure Key Vault, и расширенное управление ключами не поддерживаются.
 author: VanMSFT
 ms.author: vanto
 ms.date: 09/12/2019
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 64da74cc-14bf-4636-a55e-8cc1fce2aaff
-ms.openlocfilehash: f1820b54532a820a47babdaf79e28d1baa0f096b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 611afe6c02e979c7c9672d7d94f84844b8932cf6
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895307"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088807"
 ---
 # <a name="security-limitations-for-sql-server-on-linux"></a>Ограничения системы безопасности для SQL Server на Linux
 

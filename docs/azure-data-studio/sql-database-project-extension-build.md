@@ -9,12 +9,12 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: dzsquared
 ms.author: drskwier
-ms.openlocfilehash: 4348f117b57c9b13a70f4a6db39ab6710eafd0ef
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 191b10fd32d7c49c3f4a4e81c109e52fb2a1a81c
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85519193"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88171373"
 ---
 # <a name="build-and-publish-a-project"></a>Сборка и публикация проекта
 
@@ -32,7 +32,6 @@ ms.locfileid: "85519193"
 
  ``` ... exited with code: 0 ```
 
-
 ## <a name="publish-a-database-project"></a>Публикация проекта базы данных
 
 После успешной компиляции проекта с помощью процесса сборки базу данных можно опубликовать в экземпляре SQL Server. Чтобы опубликовать проект базы данных, в мини-приложении **Проекты** **Обозревателя** щелкните правой кнопкой мыши корневой узел *.sqlproj* и выберите **Опубликовать**.
@@ -42,6 +41,4 @@ ms.locfileid: "85519193"
 ## <a name="next-steps"></a>Дальнейшие действия
 
 - [Расширение проектов баз данных SQL для Azure Data Studio](sql-database-project-extension.md)
-- [Приложения уровня данных](../relational-databases/data-tier-applications/data-tier-applications.md)
-
-
+- [Создание проектов баз данных SQL из командной строки](sql-database-project-extension-build-from-command-line.md)

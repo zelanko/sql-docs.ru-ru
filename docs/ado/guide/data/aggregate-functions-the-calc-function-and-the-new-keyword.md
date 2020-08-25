@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ad6bf4b041fbae0f30e327bd32dd067c1e9c429a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f3ef1ae1b6b5d60774e220cc4594cd54eda291e7
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453756"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806960"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>Агрегатные функции, функция CALC и ключевое слово NEW
 Функция формирования данных поддерживает следующие функции. Имя, присвоенное главе, содержащей столбец для обработки, является *псевдонимом главы*.  
@@ -40,7 +40,7 @@ ms.locfileid: "88453756"
   
 |Вычисляемое выражение|Описание|  
 |---------------------------|-----------------|  
-|CALC (*выражение*)|Вычисляет произвольное выражение, но только для строки **набора записей** , содержащего функцию Calc. Любое выражение, использующее эти [функции Visual Basic для приложений (VBA)](../../../ado/guide/data/visual-basic-for-applications-functions.md) , разрешено.|  
+|CALC (*выражение*)|Вычисляет произвольное выражение, но только для строки **набора записей** , содержащего функцию Calc. Любое выражение, использующее эти [функции Visual Basic для приложений (VBA)](./visual-basic-for-applications-functions.md) , разрешено.|  
   
 |СОЗДАТЬ ключевое слово|Описание|  
 |-----------------|-----------------|  
@@ -74,6 +74,6 @@ ms.locfileid: "88453756"
  Если новое поле имеет тип Decimal (в OLE DB, DBTYPE_DECIMAL или в ADO, АддеЦимал), необходимо указать значения точности и масштаба.  
   
 ## <a name="see-also"></a>См. также  
- [Пример формирования данных](../../../ado/guide/data/data-shaping-example.md)   
- [Грамматика формальной фигуры](../../../ado/guide/data/formal-shape-grammar.md)   
- [Общие сведения о командах формирования данных](../../../ado/guide/data/shape-commands-in-general.md)
+ [Пример формирования данных](./data-shaping-example.md)   
+ [Грамматика формальной фигуры](./formal-shape-grammar.md)   
+ [Общие сведения о командах формирования данных](./shape-commands-in-general.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0795131ef1765b1fd376355a46fe9cf53ba6eb66
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d58e5a65b2566aa77b74d69479f310a2d4f6e05b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438576"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767333"
 ---
 # <a name="synchronize-method-rds"></a>Метод Synchronize (служба удаленных рабочих столов)
 Синхронизирует заданный набор записей с базой данных, указанной в строке подключения для использования в ADO 2,5 и более поздних версиях.  
@@ -68,6 +68,4 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
  Параметр *хандлерстринг* может иметь значение null. Что происходит в этом случае, зависит от настройки сервера RDS. Строка обработчика "МСДФМАП. Handler" указывает, что следует использовать предоставляемый корпорацией Майкрософт обработчик (Msdfmap.dll). Строка обработчика "МАСДФМАП. Handler sample.ini" указывает, что следует использовать обработчик Msdfmap.dll и что аргумент "sample.ini" должен передаваться в обработчик. Msdfmap.dll будет интерпретировать аргумент как направление использования sample.ini для проверки соединения и строк запроса.  
   
 ## <a name="applies-to"></a>Применение  
- [Объект DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
-
+ [Объект DataFactory (RDSServer)](./datafactory-object-rdsserver.md)

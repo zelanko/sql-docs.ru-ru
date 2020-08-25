@@ -1,6 +1,6 @@
 ---
 title: Установка полнотекстового поиска SQL Server в Linux
-description: В этой статье описывается установка SQL Server Full-Text Search в Linux.
+description: Сведения о том, как установить полнотекстовый поиск SQL Server в Linux. Полнотекстовый поиск позволяет выполнять полнотекстовые запросы к символьным данным в таблицах SQL Server.
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: 781730767836eab18f613c9c1e99e0279635f7b3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 054de1a7f4213a7a8c23ff44bab021d2b64c9f35
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895286"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088790"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Установка полнотекстового поиска SQL Server в Linux
 
@@ -125,7 +125,7 @@ sudo zypper update mssql-server-fts
 | Португальский | 2070 |
 | Панджаби | 1094 |
 | Румынский | 1048 |
-| Русский | 1049 |
+| русском языке | 1049 |
 | Сербский (кириллица) | 3098 |
 | Сербский (латиница) | 2074 |
 | Китайский (упрощенный) | 2052 |
@@ -146,7 +146,7 @@ sudo zypper update mssql-server-fts
 
 Полнотекстовый поиск также работает с текстом, хранящимся в двоичных файлах. Но в этом случае для обработки файла требуется установленный фильтр. Дополнительные сведения о фильтрах см. в статье [Настройка поисковых фильтров и управление ими](../relational-databases/search/configure-and-manage-filters-for-search.md).
 
-Чтобы просмотреть список установленных фильтров, вызовите **sp_help_fulltext_system_components 'filter'** . Для SQL Server установлены указанные далее фильтры.
+Чтобы просмотреть список установленных фильтров, вызовите **sp_help_fulltext_system_components 'filter'**. Для SQL Server установлены указанные далее фильтры.
 
 | Название компонента | Идентификатор класса | Версия |
 |---|---|---|

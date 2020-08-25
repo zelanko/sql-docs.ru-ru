@@ -1,6 +1,6 @@
 ---
 title: Установка служб SQL Server Integration Services в Linux
-description: Эта статья описывает установку служб SQL Server Integration Services (SSIS) в Linux.
+description: Эта статья описывает установку служб SQL Server Integration Services (SSIS) в Linux. Вы можете установить SSIS в Ubuntu 16.04 и Red Hat Enterprise Linux.
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
@@ -8,12 +8,12 @@ ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 681ba70f94819d9e7d4f129cfaf409a968e80bca
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a8ec33ad6d3c2bfc9c8f3adab2acad2fdb74ce0d
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882518"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088776"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Установка служб SQL Server Integration Services (SSIS) в Linux
 
@@ -23,7 +23,7 @@ ms.locfileid: "85882518"
 
 Установка служб SQL Server Integration Services в Linux доступна на следующих платформах.
 
-- [Ubuntu 16.04](#ubuntu)
+- [Ubuntu 16.04](#ubuntu)
 - [Red Hat Enterprise Linux](#RHEL)
 
 ## <a name="install-ssis-on-ubuntu"></a><a name="ubuntu"></a> Установка SSIS в Ubuntu
@@ -214,7 +214,7 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 
 ### <a name="environment-variables-for-unattended-installation"></a>Переменные среды для автоматической установки
 
-| Переменная среды | Description |
+| Переменная среды | Описание |
 |---|---|
 | ACCEPT_EULA | Принимает условия лицензионного соглашения SQL Server при задании любого значения (например, "Y").|
 | SSIS_PID | Указывает выпуск SQL Server или ключ продукта. Возможные значения<ul><li>Ознакомительная версия</li><li>Разработчик</li><li>Express</li><li>Интернет</li><li>Standard</li><li>Enterprise</li><li>Ключ продукта</li></ul>Если указывается ключ продукта, он должен иметь форму *#####* - *#####* - *#####* - *#####* - *#####* , где *#*  — буква или цифра.  |
@@ -231,4 +231,4 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 - [Извлечение, преобразование и загрузка данных в Linux с помощью служб SSIS](sql-server-linux-migrate-ssis.md)
 - [Настройка SQL Server Integration Services в Linux с помощью ssis-conf](sql-server-linux-configure-ssis.md)
 - [Ограничения и известные проблемы для служб SSIS в Linux](sql-server-linux-ssis-known-issues.md)
-- [Планирование выполнения пакетов SQL Server Integration Services в Linux с помощью cron](sql-server-linux-schedule-ssis-packages.md)
+- [Планирование выполнения пакетов SQL Server Integration Services в Linux с помощью cron](sql-server-linux-schedule-ssis-packages.md)
