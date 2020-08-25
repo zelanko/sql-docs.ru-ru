@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 954476fc-5f72-4ada-ace5-d9acb27d18f8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 74b7f3a17bddb068d82f4e05b13a28abff219c2c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fa7a703f9790ef49961e3324b26c32d757682e4a
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452466"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758814"
 ---
 # <a name="adox-fundamentals"></a>Основные принципы ADOX
 Microsoft® ActiveX® расширения объектов данных для языка описания данных и системы безопасности (ADOX) — это расширение объектов ADO и модели программирования. ADOX включает объекты для создания и изменения схем, а также для обеспечения безопасности. Поскольку это основанный на объектах подход к обработке схем, можно написать код, который будет работать с различными источниками данных независимо от различий в их синтаксисе.  
@@ -29,28 +29,28 @@ Microsoft® ActiveX® расширения объектов данных для 
   
  Поставщик Microsoft OLE DB для Microsoft Jet ядро СУБД полностью поддерживает ADOX. Некоторые функции ADOX могут не поддерживаться в зависимости от поставщика данных.  
   
- В этом документе предполагается, что опыт работы с языком программирования Microsoft® Visual Basic® и общие знания ADO. Дополнительные сведения об ADO см. в документации [по программисту ADO](../../../ado/guide/ado-programmer-s-guide.md). Дополнительные сведения о ADOX см. в следующих разделах:  
+ В этом документе предполагается, что опыт работы с языком программирования Microsoft® Visual Basic® и общие знания ADO. Дополнительные сведения об ADO см. в документации [по программисту ADO](../ado-programmer-s-guide.md). Дополнительные сведения о ADOX см. в следующих разделах:  
   
--   [Объектная модель ADOX](../../../ado/reference/adox-api/adox-object-model.md)  
+-   [Объектная модель ADOX](../../reference/adox-api/adox-object-model.md)  
   
--   [Объекты ADOX](../../../ado/reference/adox-api/adox-objects.md)  
+-   [Объекты ADOX](../../reference/adox-api/adox-objects.md)  
   
--   [Коллекции ADOX](../../../ado/reference/adox-api/adox-collections.md)  
+-   [Коллекции ADOX](../../reference/adox-api/adox-collections.md)  
   
--   [Свойства ADOX](../../../ado/reference/adox-api/adox-properties.md)  
+-   [Свойства ADOX](../../reference/adox-api/adox-properties.md)  
   
--   [Методы ADOX](../../../ado/reference/adox-api/adox-methods.md)  
+-   [Методы ADOX](../../reference/adox-api/adox-methods.md)  
   
--   [Примеры ADOX](../../../ado/reference/adox-api/adox-code-examples.md)  
+-   [Примеры ADOX](../../reference/adox-api/adox-code-examples.md)  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по API ADOX](../../../ado/reference/adox-api/adox-api-reference.md)   
- [Примеры кода ADOX](../../../ado/reference/adox-api/adox-code-examples.md)   
- [ADOX коллекции](../../../ado/reference/adox-api/adox-collections.md)   
- [ADOX перечислимые константы](../../../ado/reference/adox-api/adox-enumerated-constants.md)   
- [Методы ADOX](../../../ado/reference/adox-api/adox-methods.md)   
- [Объектная модель ADOX](../../../ado/reference/adox-api/adox-object-model.md)   
- [Объекты ADOX](../../../ado/reference/adox-api/adox-objects.md)   
- [Свойства ADOX](../../../ado/reference/adox-api/adox-properties.md)   
- [ADO (многомерные) (объекты данных ActiveX (MD))](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
- [Руководство по программированию объектов ADO](../../../ado/guide/ado-programmer-s-guide.md)
+ [Справочник по API ADOX](../../reference/adox-api/adox-object-model.md?view=sql-server-ver15)   
+ [Примеры кода ADOX](../../reference/adox-api/adox-code-examples.md)   
+ [ADOX коллекции](../../reference/adox-api/adox-collections.md)   
+ [ADOX перечислимые константы](../../reference/adox-api/adox-enumerated-constants.md)   
+ [Методы ADOX](../../reference/adox-api/adox-methods.md)   
+ [Объектная модель ADOX](../../reference/adox-api/adox-object-model.md)   
+ [Объекты ADOX](../../reference/adox-api/adox-objects.md)   
+ [Свойства ADOX](../../reference/adox-api/adox-properties.md)   
+ [ADO (многомерные) (объекты данных ActiveX (MD))](../multidimensional/ado-multidimensional-ado-md.md)   
+ [Руководство по программированию объектов ADO](../ado-programmer-s-guide.md)

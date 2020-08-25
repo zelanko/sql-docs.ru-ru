@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 64234ce5-dc46-4c8a-a316-61956b6b9abb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f18a02557783f972203a05019bb96d11ce50c744
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 286c2b199c83feca11a69e8d4d137ad5691f5362
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452456"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758804"
 ---
 # <a name="provider-support-for-adox-ado"></a>Поддержка поставщика для ADOX (ADO)
-Некоторые функции ADOX не поддерживаются в зависимости от поставщика данных OLE DB. ADOX полностью поддерживается [поставщиком OLE DB для Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md). В следующих таблицах перечислены неподдерживаемые функции [поставщика microsoft OLE DB для SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), [поставщика Microsoft OLE DB для ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)или [поставщик OLE DB для Oracle (Майкрософт)](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) . ADOX не поддерживается другими поставщиками OLE DB Майкрософт.  
+Некоторые функции ADOX не поддерживаются в зависимости от поставщика данных OLE DB. ADOX полностью поддерживается [поставщиком OLE DB для Microsoft Jet](../appendixes/microsoft-ole-db-provider-for-microsoft-jet.md). В следующих таблицах перечислены неподдерживаемые функции [поставщика microsoft OLE DB для SQL Server](../appendixes/microsoft-ole-db-provider-for-sql-server.md), [поставщика Microsoft OLE DB для ODBC](../appendixes/microsoft-ole-db-provider-for-odbc.md)или [поставщик OLE DB для Oracle (Майкрософт)](../appendixes/microsoft-ole-db-provider-for-oracle.md) . ADOX не поддерживается другими поставщиками OLE DB Майкрософт.  
   
 ## <a name="microsoft-ole-db-provider-for-sql-server"></a>Поставщик Microsoft OLE DB для SQL Server  
   

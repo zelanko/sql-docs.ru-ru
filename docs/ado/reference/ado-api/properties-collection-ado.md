@@ -18,28 +18,28 @@ helpviewer_keywords:
 ms.assetid: 1d539aa8-ce0d-4418-ab03-8d0a3c1e9d82
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4b9915366d96975ffd02f6fae7ddd25ce35c81f4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8e1526ceeb62b8205a8c0d40af39a72731d17634
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442656"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772993"
 ---
 # <a name="properties-collection-ado"></a>Коллекция Properties (ADO)
-Содержит все объекты [свойств](../../../ado/reference/ado-api/property-object-ado.md) для конкретного экземпляра объекта.  
+Содержит все объекты [свойств](./property-object-ado.md) для конкретного экземпляра объекта.  
   
 ## <a name="remarks"></a>Remarks  
  Некоторые объекты ADO имеют коллекцию **свойств** , состоящие из объектов **свойств** . Каждый объект **Свойства** соответствует характеристике объекта ADO, относящегося к поставщику.  
   
 > [!NOTE]
->  Более подробное описание использования объектов **свойств** см. в разделе объект [Свойства](../../../ado/reference/ado-api/property-object-ado.md) .  
+>  Более подробное описание использования объектов **свойств** см. в разделе объект [Свойства](./property-object-ado.md) .  
   
  **Динамические свойства** объекта **Recordset** выходят за пределы области видимости (становятся недоступными) при закрытии **набора записей** .  
   
  Этот раздел содержит следующие подразделы.  
   
--   [Свойства, методы и события коллекции свойств](../../../ado/reference/ado-api/properties-collection-properties-methods-and-events.md)  
+-   [Свойства, методы и события коллекции свойств](./properties-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
- [Объект Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
- [Приложение А. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md)
+## <a name="see-also"></a>См. также  
+ [Объект Property (ADO)](./property-object-ado.md)   
+ [Приложение А. Поставщики](../../guide/appendixes/appendix-a-providers.md)

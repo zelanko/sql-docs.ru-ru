@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: dcdcaf0a-b9b0-4d81-8728-43c38c4c853b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 74734bd5518f7691107fff873379879b2edd2fa8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c6d402470724cfaaaa4a27e2c0d2d3843b7904c2
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451556"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760206"
 ---
 # <a name="addnew-method-example-vbscript"></a>Пример метода AddNew (VBScript)
-В этом примере используется метод [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) для создания новой записи с указанным именем.  
+В этом примере используется метод [AddNew](./addnew-method-ado.md) для создания новой записи с указанным именем.  
   
  Используйте следующий пример на странице Active Server (ASP). Используйте **Find** для поиска файла адовбс. Inc и поместите его в каталог, который планируется использовать. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **аддневвбс. ASP**. Результат можно просмотреть в любом клиентском браузере.  
   
- Чтобы выполнить пример, добавьте новую запись в HTML-форму. Щелкните **Добавить новый**. Чтобы удалить ненужные записи, см. [пример метода Delete](../../../ado/reference/ado-api/delete-method-example-vbscript.md) .  
+ Чтобы выполнить пример, добавьте новую запись в HTML-форму. Щелкните **Добавить новый**. Чтобы удалить ненужные записи, см. [пример метода Delete](./delete-method-example-vbscript.md) .  
   
 ```  
 <!-- BeginAddNewVBS -->  
@@ -213,6 +213,6 @@ End Sub
 <!-- EndAddNewVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Метод AddNew (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+## <a name="see-also"></a>См. также  
+ [Метод AddNew (ADO)](./addnew-method-ado.md)   
+ [Объект Recordset (ADO)](./recordset-object-ado.md)

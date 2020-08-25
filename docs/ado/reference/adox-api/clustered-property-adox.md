@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9b62fb35-de43-425a-83ca-77af4e33fea9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b3c915fcaf1a3661e606f5e1c2cf9a04bafd91fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a102b63db62d6eba40e23bad99adeb3bdfa63b01
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440366"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771163"
 ---
 # <a name="clustered-property-adox"></a>Свойство Clustered (ADOX)
 Указывает, является ли индекс кластеризованным.  
@@ -36,10 +36,10 @@ ms.locfileid: "88440366"
 ## <a name="remarks"></a>Remarks  
  Значение по умолчанию равно **False**.  
   
- Это свойство доступно только для чтения в объектах [индекса](../../../ado/reference/adox-api/index-object-adox.md) , которые уже были добавлены в коллекцию.  
+ Это свойство доступно только для чтения в объектах [индекса](./index-object-adox.md) , которые уже были добавлены в коллекцию.  
   
 ## <a name="applies-to"></a>Применение  
- [Объект Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
+ [Объект Index (ADOX)](./index-object-adox.md)  
   
-## <a name="see-also"></a>См. также:  
- [Пример свойства Clustered (Visual Basic)](../../../ado/reference/adox-api/clustered-property-example-vb.md)
+## <a name="see-also"></a>См. также  
+ [Пример свойства Clustered (Visual Basic)](./clustered-property-example-vb.md)

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: bff98617-a6ba-4f41-9c5f-915161e3ea31
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8e1840f567cf4d1285aa7257081f9dfc9d48a4bd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1fcad0360e9ae15263860c45b9f9c4a96c4d36bc
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451786"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759984"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-jscript"></a>Примеры свойств примеры AbsolutePosition и CursorLocation (JScript)
-В этом примере показано, как свойство [примеры AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) может отслеживать ход выполнения цикла, который перечисляет все записи [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md). Свойство [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) используется для включения свойства **примеры AbsolutePosition** путем установки курсора на клиентский курсор. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **абсолутепоситионжс. ASP**.  
+В этом примере показано, как свойство [примеры AbsolutePosition](./absoluteposition-property-ado.md) может отслеживать ход выполнения цикла, который перечисляет все записи [набора записей](./recordset-object-ado.md). Свойство [CursorLocation](./cursorlocation-property-ado.md) используется для включения свойства **примеры AbsolutePosition** путем установки курсора на клиентский курсор. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **абсолутепоситионжс. ASP**.  
   
 ```  
 <!-- BeginAbsolutePositionJS -->  
@@ -128,7 +128,7 @@ BODY {
 <!-- EndAbsolutePositionJS -->  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Свойство примеры AbsolutePosition (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
- [Свойство CursorLocation (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md)   
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+## <a name="see-also"></a>См. также  
+ [Свойство примеры AbsolutePosition (ADO)](./absoluteposition-property-ado.md)   
+ [Свойство CursorLocation (ADO)](./cursorlocation-property-ado.md)   
+ [Объект Recordset (ADO)](./recordset-object-ado.md)

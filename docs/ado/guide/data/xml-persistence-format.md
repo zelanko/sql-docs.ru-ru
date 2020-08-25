@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7a014addf2d3ff6c7b02ed9abc103cdbd7b2ecb8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 081ba6f2b82e6369d2871a2c9c7352c7335bc0d4
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452516"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758984"
 ---
 # <a name="xml-persistence-format"></a>Формат сохраняемости XML
 ADO использует кодировку UTF-8 для сохраняемого XML-потока.  
   
  Формат ADO XML разбивается на два раздела — раздел схемы, за которым следует раздел данных. Ниже приведен пример XML-файла для таблицы грузоотправителей из базы данных Northwind. В этом примере рассматриваются различные части XML.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
   
 ```  
 <xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"   
@@ -72,4 +72,4 @@ xmlns:z="#RowsetSchema">
  Раздел данных содержит три строки, содержащие сведения о грузоотправителях. Для пустого набора строк раздел Data может быть пустым, но \<rs:data> теги должны присутствовать. Без данных можно написать краткую сокращенную форму тегов \<rs:data/> . Любой тег с префиксом RS указывает на то, что он находится в пространстве имен, определенном в наборе строк urn: schemas-microsoft-com:.  
   
 ## <a name="see-also"></a>См. также  
- [Сохранение записей в формате XML](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [Сохранение записей в формате XML](./persisting-records-in-xml-format.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 73e71438b7f49472dff8c3f4732c541222598b08
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bfddb0a5cbc1691a8013528abd4c1547f29e1504
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451846"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760074"
 ---
 # <a name="writing-your-own-customized-handler"></a>Создание собственного настраиваемого обработчика
 Если вы являетесь администратором сервера IIS, которому требуется поддержка RDS по умолчанию, вам может потребоваться написать собственный обработчик, но лучше контролировать запросы пользователей и права доступа.  
@@ -30,12 +30,12 @@ ms.locfileid: "88451846"
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="idatafactoryhandler-interface"></a>Интерфейс Идатафакторихандлер  
- Этот интерфейс имеет два **метода: "," и "** **Повторное соединение**". Для обоих методов требуется, чтобы свойство [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) было установлено в значение **адусеклиент**.  
+ Этот интерфейс имеет два **метода: "," и "** **Повторное соединение**". Для обоих методов требуется, чтобы свойство [CursorLocation](../../reference/ado-api/cursorlocation-property-ado.md) было установлено в значение **адусеклиент**.  
   
  Оба метода принимают аргументы, которые отображаются после первой запятой в ключевом слове**handler =**. Например, `"Handler=progid,arg1,arg2;"` передает строку аргумента `"arg1,arg2"` и `"Handler=progid"` передает аргумент NULL.  
   
 ## <a name="getrecordset-method"></a>Метод WebMethod  
- Этот метод запрашивает источник данных и создает новый объект [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) с помощью предоставленных аргументов. **Набор записей** должен быть открыт с помощью **адлоккбатчоптимистик** и не должен быть открыт асинхронно.  
+ Этот метод запрашивает источник данных и создает новый объект [набора записей](../../reference/ado-api/recordset-object-ado.md) с помощью предоставленных аргументов. **Набор записей** должен быть открыт с помощью **адлоккбатчоптимистик** и не должен быть открыт асинхронно.  
   
 ### <a name="arguments"></a>Аргументы  
  ***conn***  Строка подключения.  
@@ -47,7 +47,7 @@ ms.locfileid: "88451846"
  ***ППРС***  Указатель, по которому должен возвращаться **набор записей** .  
   
 ## <a name="reconnect-method"></a>Повторно подключить метод  
- Этот метод обновляет источник данных. Он создает новый объект [соединения](../../../ado/reference/ado-api/connection-object-ado.md) и присоединяет заданный **набор записей**.  
+ Этот метод обновляет источник данных. Он создает новый объект [соединения](../../reference/ado-api/connection-object-ado.md) и присоединяет заданный **набор записей**.  
   
 ### <a name="arguments"></a>Аргументы  
  ***conn***  Строка подключения.  
@@ -101,12 +101,10 @@ HRESULT _stdcall GetRecordset(
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Раздел "Подключение файла настройки"](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [Раздел журналов файлов настройки](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [Раздел файла настройки SQL](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [Раздел UserList файла настройки](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [Настройка в отношении фактов](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Требуемые параметры клиента](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [Общие сведения о файле настроек](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)
-
-
+ [Раздел "Подключение файла настройки"](./customization-file-connect-section.md)   
+ [Раздел журналов файлов настройки](./customization-file-logs-section.md)   
+ [Раздел файла настройки SQL](./customization-file-sql-section.md)   
+ [Раздел UserList файла настройки](./customization-file-userlist-section.md)   
+ [Настройка в отношении фактов](./datafactory-customization.md)   
+ [Требуемые параметры клиента](./required-client-settings.md)   
+ [Общие сведения о файле настроек](./understanding-the-customization-file.md)

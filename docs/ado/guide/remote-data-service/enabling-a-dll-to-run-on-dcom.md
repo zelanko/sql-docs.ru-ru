@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5f1c2205-191c-4fb4-9bd9-84c878ea46ed
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d685e03834b1c8390ddd51a8e590f25cd6307efe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e0c68a6e438f44bedae3134253c72fe49521b44e
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452206"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759787"
 ---
 # <a name="enabling-a-dll-to-run-on-dcom"></a>Разрешение запуска библиотеки DLL в DCOM
 > [!IMPORTANT]
@@ -36,12 +36,10 @@ ms.locfileid: "88452206"
   
      -или-  
   
-     Импортируйте объект [RDSServer.](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) DataObject в пакет.  
+     Импортируйте объект [RDSServer.](../../reference/rds-api/datafactory-object-rdsserver.md) DataObject в пакет.  
   
 3.  Установите атрибут активации для пакета **в в процессе создателя** (приложение библиотеки).  
   
      Чтобы сделать библиотеку DLL доступной через DCOM и службы IIS на том же компьютере, необходимо задать атрибут активации компонента в оснастке MMC "службы компонентов". После присвоения атрибуту значения **в процессе создателя**вы заметите, что был добавлен ключ сервера **INPROC** в реестр, указывающий на суррогатную библиотеку служб компонентов.  
   
  Дополнительные сведения о службах компонентов (или Microsoft Transaction Service, если используется Windows NT) и о том, как выполнить эти действия, см. на веб-сайте Microsoft Transaction Server.
-
-

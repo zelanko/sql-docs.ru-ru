@@ -13,24 +13,24 @@ helpviewer_keywords:
 ms.assetid: 8ec0b00e-0e18-4f1b-9bbf-42168670bf5f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7457b43a186ba30409a34cf415c5ca0889b1f96e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c643870386988ee22d729c1352dfe3683571fac5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440976"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778083"
 ---
 # <a name="hierarchy-object-properties-methods-and-events"></a>Свойства, методы и события объекта Hierarchy
 ## <a name="propertiescollections"></a>Свойства и коллекции  
- [Свойство Description](../../../ado/reference/ado-md-api/description-property-ado-md.md)  
+ [Свойство Description](./description-property-ado-md.md)  
   
- [Коллекция Levels](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)  
+ [Коллекция Levels](./levels-collection-ado-md.md)  
   
- [Имя, свойство](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
+ [Свойство Name](./name-property-ado-md.md)  
   
- [Коллекция Properties](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Коллекция Properties](../ado-api/properties-collection-ado.md)  
   
- [UniqueName, свойство](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)  
+ [UniqueName, свойство](./uniquename-property-ado-md.md)  
   
 ## <a name="methods"></a>Методы  
  Отсутствует.  
@@ -39,4 +39,4 @@ ms.locfileid: "88440976"
  Нет.  
   
 ## <a name="see-also"></a>См. также:  
- [Объект Hierarchy (многомерные объекты ADO)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)
+ [Объект Hierarchy (многомерные объекты ADO)](./hierarchy-object-ado-md.md)

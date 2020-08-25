@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: f948febd-c885-4621-823b-421e116fec4e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 78c931cdbc37d73942baa72b41d8c8071f107c8d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2c9032dfdb3394e582541f60afce7b930751a5c0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440666"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777783"
 ---
 # <a name="actionenum"></a>ActionEnum
-Указывает тип действия, выполняемого при вызове [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) .  
+Указывает тип действия, выполняемого при вызове [SetPermissions](./setpermissions-method-adox.md) .  
   
-|Константа|Значение|Описание|  
+|Константа|Значение|Описание:|  
 |--------------|-----------|-----------------|  
 |**adAccessDeny**|3|Группе или пользователю будут запрещены указанные разрешения.|  
 |**adAccessGrant**|1|Группа или пользователь будут иметь по крайней мере запрошенные разрешения.|  

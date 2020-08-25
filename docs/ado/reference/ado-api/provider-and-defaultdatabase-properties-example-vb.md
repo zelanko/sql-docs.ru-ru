@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 677e1dbe-bcf6-4028-a62c-e99b1c88bf7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db5e40a1f82f95e7b4d78f4e6e3ce7703305abb0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d3a438a3be7e7a046f36b0038cae8dcf24b6725c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442596"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772833"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vb"></a>Пример свойств provider и DefaultDatabase (Visual Basic)
-В этом примере демонстрируется свойство [provider](../../../ado/reference/ado-api/provider-property-ado.md) путем открытия трех объектов [соединения](../../../ado/reference/ado-api/connection-object-ado.md) с помощью разных поставщиков. Он также использует свойство [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) , чтобы задать базу данных по умолчанию для поставщика Microsoft ODBC.  
+В этом примере демонстрируется свойство [provider](./provider-property-ado.md) путем открытия трех объектов [соединения](./connection-object-ado.md) с помощью разных поставщиков. Он также использует свойство [DefaultDatabase](./defaultdatabase-property.md) , чтобы задать базу данных по умолчанию для поставщика Microsoft ODBC.  
   
 > [!NOTE]
 >  При подключении к поставщику источника данных, который поддерживает проверку подлинности Windows, следует указать **Trusted_Connection = Yes** или **Integrated Security = SSPI** вместо сведений об идентификаторе пользователя и пароле в строке подключения.  
@@ -105,7 +105,7 @@ End Sub
 'EndProviderVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [DefaultDatabase, свойство](../../../ado/reference/ado-api/defaultdatabase-property.md)   
- [Свойство Provider (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)
+## <a name="see-also"></a>См. также  
+ [Объект Connection (ADO)](./connection-object-ado.md)   
+ [DefaultDatabase, свойство](./defaultdatabase-property.md)   
+ [Свойство Provider (ADO)](./provider-property-ado.md)

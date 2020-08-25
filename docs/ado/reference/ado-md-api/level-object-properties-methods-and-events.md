@@ -13,28 +13,28 @@ helpviewer_keywords:
 ms.assetid: fdff70b0-95d0-447f-9359-97b8d159420d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ec04416433339fcec45da199fb3291154fce330a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: db4847a6ada52d051a13068dcd2d50f9a7448504
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440936"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778043"
 ---
 # <a name="level-object-properties-methods-and-events"></a>Свойства, методы и события объекта Level
 ## <a name="propertiescollections"></a>Свойства и коллекции  
- [Свойство Caption](../../../ado/reference/ado-md-api/caption-property-ado-md.md)  
+ [Свойство Caption](./caption-property-ado-md.md)  
   
- [Свойство Depth](../../../ado/reference/ado-md-api/depth-property-ado-md.md)  
+ [Свойство Depth](./depth-property-ado-md.md)  
   
- [Свойство Description](../../../ado/reference/ado-md-api/description-property-ado-md.md)  
+ [Свойство Description](./description-property-ado-md.md)  
   
- [Коллекция members](../../../ado/reference/ado-md-api/members-collection-ado-md.md)  
+ [Коллекция members](./members-collection-ado-md.md)  
   
- [Имя, свойство](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
+ [Свойство Name](./name-property-ado-md.md)  
   
- [Коллекция Properties](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Коллекция Properties](../ado-api/properties-collection-ado.md)  
   
- [UniqueName, свойство](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)  
+ [UniqueName, свойство](./uniquename-property-ado-md.md)  
   
 ## <a name="methods"></a>Методы  
  Отсутствует.  
@@ -43,4 +43,4 @@ ms.locfileid: "88440936"
  Нет.  
   
 ## <a name="see-also"></a>См. также:  
- [Объект Level (многомерные объекты ADO)](../../../ado/reference/ado-md-api/level-object-ado-md.md)
+ [Объект Level (многомерные объекты ADO)](./level-object-ado-md.md)

@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 9028aba4-90fc-4dfc-88e4-fa8a7b6fedee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dbddab9f7536c311d55f83fc9c6ea443c3757fa3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 25d3c1fce0fd227a609da49d54bd55762fa1c4a2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442456"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772313"
 ---
 # <a name="recordopenoptionsenum"></a>RecordOpenOptionsEnum
-Задает параметры для открытия [записи](../../../ado/reference/ado-api/record-object-ado.md). Эти значения можно комбинировать с помощью или.  
+Задает параметры для открытия [записи](./record-object-ado.md). Эти значения можно комбинировать с помощью или.  
   
-|Константа|Значение|Описание|  
+|Константа|Значение|Описание:|  
 |--------------|-----------|-----------------|  
 |**адделайфетчфиелдс**|0x8000|Указывает поставщику, что поля, связанные с **записью** , не должны извлекаться изначально, но могут быть получены при первой попытке доступа к полю. Поведение по умолчанию, обозначенное отсутствием этого флага, заключается в получении всех полей объекта **Record** .|  
 |**adDelayFetchStream**|0x4000|Указывает поставщику, что поток по умолчанию, связанный с **записью** , не должен извлекаться изначально. Поведение по умолчанию, обозначенное отсутствием этого флага, заключается в получении потока по умолчанию, связанного с объектом **Record** .|  
@@ -39,4 +39,4 @@ ms.locfileid: "88442456"
  Эти константы не имеют эквивалентов ADO/WFC.  
   
 ## <a name="applies-to"></a>Применение  
- [Метод Open (объект Record ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)
+ [Метод Open (объект Record ADO)](./open-method-ado-record.md)

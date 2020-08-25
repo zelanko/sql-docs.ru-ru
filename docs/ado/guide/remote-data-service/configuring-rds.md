@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5dd48483-858a-48c2-98ce-f2359abe1f59
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 223822bf6921ce63eb0893fe9db3024c46dfb628
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 23110157445da6c776de7582682992ab55a97ac8
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452286"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759882"
 ---
 # <a name="configuring-rds"></a>Настройка RDS
 > [!IMPORTANT]
@@ -26,27 +26,25 @@ ms.locfileid: "88452286"
   
  Чтобы обеспечить эффективную реализацию RDS, убедитесь, что вы знакомы с различными конфигурациями, доступными для вас. В этом разделе содержатся важные сведения о безопасности и масштабируемости в реализации RDS. Сведения о настройке компьютеров для использования RDS см. в следующих разделах.  
   
--   [Предоставление прав гостя для компьютера веб-сервера](../../../ado/guide/remote-data-service/granting-guest-privileges-to-a-web-server-computer.md)  
+-   [Предоставление прав гостя для компьютера веб-сервера](./granting-guest-privileges-to-a-web-server-computer.md)  
   
--   [Регистрация пользовательского бизнес-объекта](../../../ado/guide/remote-data-service/registering-a-custom-business-object.md)  
+-   [Регистрация пользовательского бизнес-объекта](./registering-a-custom-business-object.md)  
   
--   [Отметка бизнес-объектов как безопасных для скриптов](../../../ado/guide/remote-data-service/marking-business-objects-as-safe-for-scripting.md)  
+-   [Отметка бизнес-объектов как безопасных для скриптов](./marking-business-objects-as-safe-for-scripting.md)  
   
--   [Регистрация бизнес-объектов в клиенте для использования с DCOM](../../../ado/guide/remote-data-service/registering-business-objects-on-the-client-for-use-with-dcom.md)  
+-   [Регистрация бизнес-объектов в клиенте для использования с DCOM](./registering-business-objects-on-the-client-for-use-with-dcom.md)  
   
--   [Настройка формата маршалинга потока DCOM](../../../ado/guide/remote-data-service/setting-dcom-stream-marshaling-format.md)  
+-   [Настройка формата маршалинга потока DCOM](./setting-dcom-stream-marshaling-format.md)  
   
--   [Разрешение запуска библиотеки DLL в DCOM](../../../ado/guide/remote-data-service/enabling-a-dll-to-run-on-dcom.md)  
+-   [Разрешение запуска библиотеки DLL в DCOM](./enabling-a-dll-to-run-on-dcom.md)  
   
--   [Настройка виртуальных серверов в IIS](../../../ado/guide/remote-data-service/configuring-virtual-servers-on-iis.md)  
+-   [Настройка виртуальных серверов в IIS](./configuring-virtual-servers-on-iis.md)  
   
--   [Защита приложений RDS](../../../ado/guide/remote-data-service/securing-rds-applications.md)  
+-   [Защита приложений RDS](./securing-rds-applications.md)  
   
--   [Настройка безопасного или неограниченного режимов в DataFactory](../../../ado/guide/remote-data-service/configuring-datafactory-for-safe-or-unrestricted-modes.md)  
+-   [Настройка безопасного или неограниченного режимов в DataFactory](./configuring-datafactory-for-safe-or-unrestricted-modes.md)  
   
-## <a name="see-also"></a>См. также:  
- [Использование связанных технологий с RDS](../../../ado/guide/remote-data-service/using-related-technologies-with-rds.md)   
- [Настройка в отношении фактов](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Устранение неполадок с RDS](../../../ado/guide/remote-data-service/troubleshooting-rds.md)
-
-
+## <a name="see-also"></a>См. также  
+ [Использование связанных технологий с RDS](./using-related-technologies-with-rds.md)   
+ [Настройка в отношении фактов](./datafactory-customization.md)   
+ [Устранение неполадок с RDS](./troubleshooting-rds.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 92905044-579f-4c38-bca6-f8bd5b239c20
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5674fc090a9803f6ce5249c48c65615edb2581bc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 67dd2ac9820167c92b16d11b056e02f796e56f5f
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451886"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759892"
 ---
 # <a name="troubleshooting-rds"></a>Устранение неполадок с RDS
 > [!IMPORTANT]
@@ -26,19 +26,17 @@ ms.locfileid: "88451886"
   
  Ознакомьтесь с этим разделом, чтобы найти решения по конкретным ошибкам или проблемам с RDS. Этот раздел содержит следующие подразделы.  
   
--   [Настройка RDS в Windows 2000](../../../ado/guide/remote-data-service/configuring-rds-on-windows-2000.md)  
+-   [Настройка RDS в Windows 2000](./configuring-rds-on-windows-2000.md)  
   
--   ["Ошибка в Интернете: доступ запрещен"](../../../ado/guide/remote-data-service/internet-server-error-access-denied.md)  
+-   ["Ошибка в Интернете: доступ запрещен"](./internet-server-error-access-denied.md)  
   
--   [RDS возвращает ошибку "Поток не прочитан"](../../../ado/guide/remote-data-service/rds-returns-stream-not-read-error.md)  
+-   [RDS возвращает ошибку "Поток не прочитан"](./rds-returns-stream-not-read-error.md)  
   
--   [Взаимоблокировки с уровнем изоляции read REPEATABLE](../../../ado/guide/remote-data-service/deadlocks-with-read-repeatable-isolation-level.md)  
+-   [Взаимоблокировки с уровнем изоляции read REPEATABLE](./deadlocks-with-read-repeatable-isolation-level.md)  
   
--   [Обеспечение достаточного места в TempDB](../../../ado/guide/remote-data-service/ensuring-sufficient-tempdb-space.md)  
+-   [Обеспечение достаточного места в TempDB](./ensuring-sufficient-tempdb-space.md)  
   
--   [Минимизация использования места в файле журнала](../../../ado/guide/remote-data-service/minimizing-log-file-space-usage.md)  
+-   [Минимизация использования места в файле журнала](./minimizing-log-file-space-usage.md)  
   
-## <a name="see-also"></a>См. также:  
- [Основные принципы RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
+## <a name="see-also"></a>См. также  
+ [Основные принципы RDS](./rds-fundamentals.md)

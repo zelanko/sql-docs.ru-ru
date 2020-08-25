@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 07ce0ef0-72f1-48f4-823d-1b65d28c0926
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2230a4082f79ea386dd02c7530e3af29c57f1b69
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9ce5e13641afa757f2c0ccea4ec760c4fa70b3ff
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452116"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759644"
 ---
 # <a name="rds-programming-model-with-objects"></a>Модель программирования RDS с объектами
 Целью RDS является получение доступа к источникам данных и их обновление через промежуточные носители, такие как IIS. Модель программирования указывает последовательность действий, необходимых для выполнения этой цели. Объектная модель определяет объекты, методы и свойства которых влияют на модель программирования.  
@@ -29,11 +29,11 @@ ms.locfileid: "88452116"
   
  RDS предоставляет средства для выполнения следующей последовательности действий:  
   
--   Укажите программу, которая будет вызываться на сервере, и получите способ (прокси) для ссылки на него из клиента ([RDS. Пространство](../../../ado/reference/rds-api/dataspace-object-rds.md).  
+-   Укажите программу, которая будет вызываться на сервере, и получите способ (прокси) для ссылки на него из клиента ([RDS. Пространство](../../reference/rds-api/dataspace-object-rds.md).  
   
--   Вызов серверной программы. Передайте в серверную программу параметры, определяющие источник данных, и выдаваемый командой (прокси-сервер или [RDS). Элемент управления](../../../ado/reference/rds-api/datacontrol-object-rds.md).  
+-   Вызов серверной программы. Передайте в серверную программу параметры, определяющие источник данных, и выдаваемый командой (прокси-сервер или [RDS). Элемент управления](../../reference/rds-api/datacontrol-object-rds.md).  
   
--   Серверная программа получает объект [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) из источника данных, обычно с помощью ADO. При необходимости объект **набора записей** обрабатывается на сервере ([RDSServer.](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)DataObject).  
+-   Серверная программа получает объект [набора записей](../../reference/ado-api/recordset-object-ado.md) из источника данных, обычно с помощью ADO. При необходимости объект **набора записей** обрабатывается на сервере ([RDSServer.](../../reference/rds-api/datafactory-object-rdsserver.md)DataObject).  
   
 -   Серверная программа возвращает последний объект **набора записей** в клиентское приложение (прокси).  
   
@@ -42,13 +42,11 @@ ms.locfileid: "88452116"
 -   Изменения объекта **набора записей** отправляются обратно на сервер и используются для обновления источника данных (**RDS. Элемент управления** или **RDSServer. факт**.  
   
 ## <a name="see-also"></a>См. также  
- [Сводка объектной модели RDS](../../../ado/guide/remote-data-service/rds-object-model-summary.md)   
- [Объект элемента управления (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Объект фактического объекта (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
- [Объект Space (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
- [Сценарий RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [Руководство по RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Использование RDS и безопасность](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
-
+ [Сводка объектной модели RDS](./rds-object-model-summary.md)   
+ [Объект элемента управления (RDS)](../../reference/rds-api/datacontrol-object-rds.md)   
+ [Объект фактического объекта (RDSServer)](../../reference/rds-api/datafactory-object-rdsserver.md)   
+ [Объект Space (RDS)](../../reference/rds-api/dataspace-object-rds.md)   
+ [Сценарий RDS](./rds-scenario.md)   
+ [Руководство по RDS](./rds-tutorial.md)   
+ [Объект Recordset (ADO)](../../reference/ado-api/recordset-object-ado.md)   
+ [Использование RDS и безопасность](./rds-usage-and-security.md)

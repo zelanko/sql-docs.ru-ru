@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 23b06499-62df-4f46-88eb-6da392f9b456
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 55f0eb77a498eba9d6fe2565a8647dc11d77897b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4c2cd1df656d07b274fe000c427dd3eae07da76b
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451726"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759914"
 ---
 # <a name="activecommand-property-example-vb"></a>Пример свойства ActiveCommand (Visual Basic)
-В этом примере демонстрируется свойство [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) .  
+В этом примере демонстрируется свойство [ActiveCommand](./activecommand-property-ado.md) .  
   
- Подподпрограмме присваивается объект [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) , свойство **ActiveCommand** которого используется для вывода текста команды и параметра, создавшего **набор записей**.  
+ Подподпрограмме присваивается объект [Recordset](./recordset-object-ado.md) , свойство **ActiveCommand** которого используется для вывода текста команды и параметра, создавшего **набор записей**.  
   
 ```  
 'BeginActiveCommandVB  
@@ -91,9 +91,9 @@ End Sub
 'EndActiveCommandVB  
 ```  
   
- Подпрограммы **активекоммандкспринт** получают только объект **Recordset** , однако он должен распечатать текст команды и параметр, который создал **набор записей**. Это можно сделать, так как свойство **ActiveCommand** объекта **Recordset** возвращает связанный объект [команды](../../../ado/reference/ado-api/command-object-ado.md) .  
+ Подпрограммы **активекоммандкспринт** получают только объект **Recordset** , однако он должен распечатать текст команды и параметр, который создал **набор записей**. Это можно сделать, так как свойство **ActiveCommand** объекта **Recordset** возвращает связанный объект [команды](./command-object-ado.md) .  
   
- Свойство [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) объекта **Command** выдает параметризованную команду, которая создала **набор записей**. Коллекция [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) объекта **Command** возвращает значение, которое было заменено заполнителем параметра команды ("**?**").  
+ Свойство [CommandText](./commandtext-property-ado.md) объекта **Command** выдает параметризованную команду, которая создала **набор записей**. Коллекция [Parameters](./parameters-collection-ado.md) объекта **Command** возвращает значение, которое было заменено заполнителем параметра команды ("**?**").  
   
  Наконец, выводятся сообщение об ошибке или имя и идентификатор автора.  
   
@@ -121,7 +121,7 @@ End Sub
 'EndActiveCommandPrintVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Свойство ActiveCommand (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
- [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+## <a name="see-also"></a>См. также  
+ [Свойство ActiveCommand (ADO)](./activecommand-property-ado.md)   
+ [Объект Command (ADO)](./command-object-ado.md)   
+ [Объект Recordset (ADO)](./recordset-object-ado.md)

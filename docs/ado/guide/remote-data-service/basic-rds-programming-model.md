@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0bdd236b-edff-4aac-94c3-93e1465ca6c5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5c29bb00ed7cf8ff914373f026d252880d6bdbb5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ba02a22b987384e48a750705fa3c2baf6965f920
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452316"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758754"
 ---
 # <a name="basic-rds-programming-model"></a>Основная модель программирования RDS
 > [!IMPORTANT]
@@ -30,7 +30,7 @@ ms.locfileid: "88452316"
   
 -   Вызов серверной программы. Передайте параметры в серверную программу, которая определяет источник данных, и выдаваемый командой. (Серверная программа фактически использует ADO для получения доступа к источнику данных. ADO устанавливает соединение с одним из заданных параметров, а затем выдает команду, указанную в параметре other.)  
   
--   Серверная программа получает объект [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) из источника данных. При необходимости объект **набора записей** обрабатывается на сервере.  
+-   Серверная программа получает объект [набора записей](../../reference/ado-api/recordset-object-ado.md) из источника данных. При необходимости объект **набора записей** обрабатывается на сервере.  
   
 -   Серверная программа возвращает последний объект **набора записей** в клиентское приложение.  
   
@@ -45,10 +45,8 @@ ms.locfileid: "88452316"
  И, наконец, если между ними есть свои нужды, ADO теперь поддерживает настройку поведения серверной программы по умолчанию.  
   
 ## <a name="see-also"></a>См. также  
- [Подробное описание модели программирования RDS](../../../ado/guide/remote-data-service/rds-programming-model-in-detail.md)   
- [Сценарий RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [Руководство по RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Использование RDS и безопасность](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
-
+ [Подробное описание модели программирования RDS](./rds-programming-model-in-detail.md)   
+ [Сценарий RDS](./rds-scenario.md)   
+ [Руководство по RDS](./rds-tutorial.md)   
+ [Объект Recordset (ADO)](../../reference/ado-api/recordset-object-ado.md)   
+ [Использование RDS и безопасность](./rds-usage-and-security.md)

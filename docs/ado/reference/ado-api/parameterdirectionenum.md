@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8c586b4e7ce2e18411d147e8aafb4eb144e01e6f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cdd0e393c7fc5214866142150c7ff497e48e7122
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442786"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773333"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
-Указывает, представляет ли [параметр](../../../ado/reference/ado-api/parameter-object.md) входной параметр, выходной параметр, как входной, так и выходной параметр, или возвращаемое значение из хранимой процедуры.  
+Указывает, представляет ли [параметр](./parameter-object.md) входной параметр, выходной параметр, как входной, так и выходной параметр, или возвращаемое значение из хранимой процедуры.  
   
-|Константа|Значение|Описание|  
+|Константа|Значение|Описание:|  
 |--------------|-----------|-----------------|  
 |**адпараминпут**|1|По умолчанию. Указывает, что параметр представляет входной параметр.|  
 |**адпараминпутаутпут**|3|Указывает, что параметр представляет как входной, так и выходной параметр.|  
@@ -49,9 +49,9 @@ ms.locfileid: "88442786"
 
 :::row:::
     :::column:::
-        [Метод CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)  
+        [Метод CreateParameter (ADO)](./createparameter-method-ado.md)  
     :::column-end:::
     :::column:::
-        [Свойство Direction](../../../ado/reference/ado-api/direction-property.md)  
+        [Свойство Direction](./direction-property.md)  
     :::column-end:::
 :::row-end:::

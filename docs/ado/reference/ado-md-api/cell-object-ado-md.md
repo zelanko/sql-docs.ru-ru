@@ -16,34 +16,34 @@ helpviewer_keywords:
 ms.assetid: dcc2f044-b785-4a29-9bc5-b673f66eedf9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a6cb4d32a4a527cce7bc69eb39f8829bbf5cf58a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 28058d792b0525aafe8850158a71afcc4423b38f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441246"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778333"
 ---
 # <a name="cell-object-ado-md"></a>Объект Cell (многомерные объекты ADO)
 Представляет данные на пересечении координат осей, содержащихся в наборе ячеек.  
   
-## <a name="remarks"></a>Комментарии  
- Объект **ячейки** возвращается свойством [Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) объекта набора [ячеек](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) .  
+## <a name="remarks"></a>Remarks  
+ Объект **ячейки** возвращается свойством [Item](./item-property-ado-md-cellset.md) объекта набора [ячеек](./cellset-object-ado-md.md) .  
   
  С помощью коллекций и свойств объекта **ячейки** можно выполнять следующие действия.  
   
--   Возврат данных в **ячейке** со свойством [value](../../../ado/reference/ado-md-api/value-property-ado-md.md) .  
+-   Возврат данных в **ячейке** со свойством [value](./value-property-ado-md.md) .  
   
--   Возвращает строку, представляющую отформатированный вывод свойства **value** со свойством [FormattedValue](../../../ado/reference/ado-md-api/formattedvalue-property-ado-md.md) .  
+-   Возвращает строку, представляющую отформатированный вывод свойства **value** со свойством [FormattedValue](./formattedvalue-property-ado-md.md) .  
   
--   Возврат порядкового значения **ячейки** в наборе **ячеек** с помощью свойства [Ordinal](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md) .  
+-   Возврат порядкового значения **ячейки** в наборе **ячеек** с помощью свойства [Ordinal](./ordinal-property-ado-md-cell.md) .  
   
--   Определите позицию **ячейки** в [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) с коллекцией [Positions](../../../ado/reference/ado-md-api/positions-collection-ado-md.md) .  
+-   Определите позицию **ячейки** в [CubeDef](./cubedef-object-ado-md.md) с коллекцией [Positions](./positions-collection-ado-md.md) .  
   
--   Получите другие сведения о **ячейке** со стандартной коллекцией [свойств](../../../ado/reference/ado-api/properties-collection-ado.md) ADO.  
+-   Получите другие сведения о **ячейке** со стандартной коллекцией [свойств](../ado-api/properties-collection-ado.md) ADO.  
   
  Коллекция **Properties** содержит свойства, предоставляемые поставщиком. В следующей таблице перечислены свойства, которые могут быть доступны. Фактический список свойств может отличаться в зависимости от реализации поставщика. Более полный список доступных свойств см. в документации поставщика.  
   
-|Имя|Описание|  
+|Название|Описание:|  
 |----------|-----------------|  
 |BackColor|Цвет фона, используемый при отображении ячейки.|  
 |FontFlags|Битовая маска, определяющая влияние на шрифт.|  
@@ -54,10 +54,10 @@ ms.locfileid: "88441246"
   
  Этот раздел содержит следующий раздел.  
   
--   [Свойства, методы и события](../../../ado/reference/ado-md-api/cell-object-properties-methods-and-events.md)  
+-   [Свойства, методы и события](./cell-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>См. также  
- [Пример оси (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
- [Объект набора ячеек (объекты данных ActiveX (MD))](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)   
- [Коллекция Positions (объекты данных ActiveX (MD))](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   
- [Коллекция Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [Пример оси (VBScript)](./axis-example-vbscript.md)   
+ [Объект набора ячеек (объекты данных ActiveX (MD))](./cellset-object-ado-md.md)   
+ [Коллекция Positions (объекты данных ActiveX (MD))](./positions-collection-ado-md.md)   
+ [Коллекция Properties (ADO)](../ado-api/properties-collection-ado.md)

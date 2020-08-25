@@ -13,24 +13,24 @@ helpviewer_keywords:
 ms.assetid: 326dc32a-30e5-4f91-85ab-84663db41279
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a376fadab993daa556265db7146c7823b1db5249
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2a18d7aecb619afa2d820f2ce2d70ac9b6e6f38e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440996"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778103"
 ---
 # <a name="hierarchies-collection-properties-methods-and-events"></a>Свойства, методы и события коллекции Hierarchies
 ## <a name="properties"></a>Свойства  
- [Count, свойство](../../../ado/reference/ado-api/count-property-ado.md)  
+ [Count, свойство](../ado-api/count-property-ado.md)  
   
- [Свойство элемента](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Свойство элемента](../ado-api/item-property-ado.md)  
   
 ## <a name="methods"></a>Методы  
- [Метод Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Метод Refresh](../ado-api/refresh-method-ado.md)  
   
 ## <a name="events"></a>События  
  Нет.  
   
 ## <a name="see-also"></a>См. также:  
- [Коллекция Hierarchies (многомерные объекты ADO)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)
+ [Коллекция Hierarchies (многомерные объекты ADO)](./hierarchies-collection-ado-md.md)

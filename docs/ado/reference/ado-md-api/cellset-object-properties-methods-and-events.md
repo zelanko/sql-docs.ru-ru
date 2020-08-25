@@ -13,36 +13,36 @@ helpviewer_keywords:
 ms.assetid: fb303e33-5a85-4e4e-81db-acaaa6f53799
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 40c897057efa549ba88d876b5ef923a89fb886f3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1893237b985cc5dc7ef83b43e42007ba8cdd6512
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441196"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778303"
 ---
 # <a name="cellset-object-properties-methods-and-events"></a>Свойства, методы и события объекта Cellset
 ## <a name="propertiescollections"></a>Свойства и коллекции  
- [ActiveConnection, свойство](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)  
+ [ActiveConnection, свойство](./activeconnection-property-ado-md.md)  
   
- [Коллекция осей](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)  
+ [Коллекция осей](./axes-collection-ado-md.md)  
   
- [Филтераксис, свойство](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md)  
+ [Филтераксис, свойство](./filteraxis-property-ado-md.md)  
   
- [Свойство Item (набор ячеек)](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)  
+ [Свойство Item (набор ячеек)](./item-property-ado-md-cellset.md)  
   
- [Коллекция Properties](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Коллекция Properties](../ado-api/properties-collection-ado.md)  
   
- [Свойство Source](../../../ado/reference/ado-md-api/source-property-ado-md.md)  
+ [Свойство Source](./source-property-ado-md.md)  
   
- [Свойство State](../../../ado/reference/ado-md-api/state-property-ado-md.md)  
+ [Свойство State](./state-property-ado-md.md)  
   
 ## <a name="methods"></a>Методы  
- [Метод Close](../../../ado/reference/ado-md-api/close-method-ado-md.md)  
+ [Метод Close](./close-method-ado-md.md)  
   
- [Метод Open](../../../ado/reference/ado-md-api/open-method-ado-md.md)  
+ [Метод Open](./open-method-ado-md.md)  
   
 ## <a name="events"></a>События  
  Нет.  
   
 ## <a name="see-also"></a>См. также:  
- [Объект Cellset (многомерные объекты ADO)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)
+ [Объект Cellset (многомерные объекты ADO)](./cellset-object-ado-md.md)

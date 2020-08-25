@@ -18,31 +18,31 @@ helpviewer_keywords:
 ms.assetid: 5b9e7545-cf30-464d-80ef-5c99c8306bab
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 80e1e50fbfa6697f3f05a8cc9cf7a9ada98b9031
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3d52b99182f34b5cefec46d210821dbcfb18388c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440706"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777883"
 ---
 # <a name="positions-collection-ado-md"></a>Коллекция Positions (многомерные объекты ADO)
-Содержит объекты [позиции](../../../ado/reference/ado-md-api/position-object-ado-md.md) , определяющие точку на оси.  
+Содержит объекты [позиции](./position-object-ado-md.md) , определяющие точку на оси.  
   
 ## <a name="remarks"></a>Remarks  
  **Positions** — это стандартная коллекция ADO. С помощью свойств и методов коллекции можно выполнять следующие действия.  
   
--   Получите количество объектов в коллекции со свойством [Count](../../../ado/reference/ado-api/count-property-ado.md) .  
+-   Получите количество объектов в коллекции со свойством [Count](../ado-api/count-property-ado.md) .  
   
--   Возврат объекта из коллекции со свойством [элемента](../../../ado/reference/ado-api/item-property-ado.md) по умолчанию.  
+-   Возврат объекта из коллекции со свойством [элемента](../ado-api/item-property-ado.md) по умолчанию.  
   
--   Обновите объекты в коллекции от поставщика с помощью метода [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) .  
+-   Обновите объекты в коллекции от поставщика с помощью метода [Refresh](../ado-api/refresh-method-ado.md) .  
   
  Этот раздел содержит следующий раздел.  
   
--   [Свойства, методы и события](../../../ado/reference/ado-md-api/positions-collection-properties-methods-and-events.md)  
+-   [Свойства, методы и события](./positions-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
- [Пример набора ячеек (Visual Basic)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
- [Объект Axis (объекты данных ActiveX (MD))](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
- [Объект Cell (объекты данных ActiveX (MD))](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
- [Объект Position (многомерные объекты ADO)](../../../ado/reference/ado-md-api/position-object-ado-md.md)
+## <a name="see-also"></a>См. также  
+ [Пример набора ячеек (Visual Basic)](./cellset-example-vb.md)   
+ [Объект Axis (объекты данных ActiveX (MD))](./axis-object-ado-md.md)   
+ [Объект Cell (объекты данных ActiveX (MD))](./cell-object-ado-md.md)   
+ [Объект Position (многомерные объекты ADO)](./position-object-ado-md.md)

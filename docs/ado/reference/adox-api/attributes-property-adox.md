@@ -20,22 +20,22 @@ helpviewer_keywords:
 ms.assetid: e3abb359-79a3-4c22-b3a8-2900817e0d23
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eade69c5a19e3ffc8d6b6d933b9d4f8453b4b6f4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b2fca7e2cf9bce25d1993d16d4ec6a44bf53ef67
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440446"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771353"
 ---
 # <a name="attributes-property-adox"></a>Свойство Attributes (ADOX)
 Описывает характеристики столбцов.  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
- Задает или возвращает значение **типа Long** . Значение определяет характеристики таблицы, представленной объектом [Column](../../../ado/reference/adox-api/column-object-adox.md) . Значение может быть сочетанием констант [колумнаттрибутесенум](../../../ado/reference/adox-api/columnattributesenum.md) . Значение по умолчанию равно нулю (**0**), которое не является ни **Адколфиксед** , ни **адколнуллабле**.  
+ Задает или возвращает значение **типа Long** . Значение определяет характеристики таблицы, представленной объектом [Column](./column-object-adox.md) . Значение может быть сочетанием констант [колумнаттрибутесенум](./columnattributesenum.md) . Значение по умолчанию равно нулю (**0**), которое не является ни **Адколфиксед** , ни **адколнуллабле**.  
   
 ## <a name="applies-to"></a>Применение  
   
-- [Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
+- [Объект Column (ADOX)](./column-object-adox.md)  
   
-## <a name="see-also"></a>См. также:  
- [Пример свойства Attributes (Visual Basic)](../../../ado/reference/adox-api/attributes-property-example-vb.md)
+## <a name="see-also"></a>См. также  
+ [Пример свойства Attributes (Visual Basic)](./attributes-property-example-vb.md)

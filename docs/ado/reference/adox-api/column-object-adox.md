@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6e772783-1bc8-4ea7-94b2-7d7a52ea5c47
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 582014342380ed5ec77c8a6f0e2adacba52bbdcc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f620dd4c8c8c5b3e00c8875b18686259d71429d7
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440346"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771123"
 ---
 # <a name="column-object-adox"></a>Объект Column (ADOX)
 Представляет столбец из таблицы, индекса или ключа.  
@@ -33,25 +33,25 @@ ms.locfileid: "88440346"
   
  Свойства и коллекции объекта **Column** позволяют:  
   
--   Найдите столбец с помощью свойства [Name (ADOX)](../../../ado/reference/adox-api/name-property-adox.md) .  
+-   Найдите столбец с помощью свойства [Name (ADOX)](./name-property-adox.md) .  
   
--   Укажите тип данных столбца с помощью свойства [свойства Type (Key) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md) .  
+-   Укажите тип данных столбца с помощью свойства [свойства Type (Key) (ADOX)](./type-property-key-adox.md) .  
   
--   Определите, имеет ли столбец фиксированную длину или может ли он содержать значения NULL со свойством [Attributes (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md) .  
+-   Определите, имеет ли столбец фиксированную длину или может ли он содержать значения NULL со свойством [Attributes (ADOX)](./attributes-property-adox.md) .  
   
--   Укажите максимальный размер столбца с помощью свойства [DefinedSize (ADOX)](../../../ado/reference/adox-api/definedsize-property-adox.md) .  
+-   Укажите максимальный размер столбца с помощью свойства [DefinedSize (ADOX)](./definedsize-property-adox.md) .  
   
--   Для числовых значений данных укажите масштаб с помощью свойства [NumericScale (ADOX)](../../../ado/reference/adox-api/numericscale-property-adox.md) .  
+-   Для числовых значений данных укажите масштаб с помощью свойства [NumericScale (ADOX)](./numericscale-property-adox.md) .  
   
--   Для значения числовых данных укажите максимальную точность с помощью свойства [Precision (ADOX)](../../../ado/reference/adox-api/precision-property-adox.md) .  
+-   Для значения числовых данных укажите максимальную точность с помощью свойства [Precision (ADOX)](./precision-property-adox.md) .  
   
--   Укажите [объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md) , которому принадлежит столбец со свойством [ParentCatalog (ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md) .  
+-   Укажите [объект каталога (ADOX)](./catalog-object-adox.md) , которому принадлежит столбец со свойством [ParentCatalog (ADOX)](./parentcatalog-property-adox.md) .  
   
--   Для ключевых столбцов укажите имя связанного столбца в связанной таблице со свойством [RelatedColumn (ADOX)](../../../ado/reference/adox-api/relatedcolumn-property-adox.md) .  
+-   Для ключевых столбцов укажите имя связанного столбца в связанной таблице со свойством [RelatedColumn (ADOX)](./relatedcolumn-property-adox.md) .  
   
--   Для столбцов индекса укажите, будет ли порядок сортировки по возрастанию или убыванию со свойством [SortOrder (ADOX)](../../../ado/reference/adox-api/sortorder-property-adox.md) .  
+-   Для столбцов индекса укажите, будет ли порядок сортировки по возрастанию или убыванию со свойством [SortOrder (ADOX)](./sortorder-property-adox.md) .  
   
--   Доступ к свойствам, зависящим от поставщика, с коллекцией [коллекций свойств (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) .  
+-   Доступ к свойствам, зависящим от поставщика, с коллекцией [коллекций свойств (ADO)](../ado-api/properties-collection-ado.md) .  
   
 > [!NOTE]
 >  Поставщик данных может поддерживать не все свойства объектов **Column** . Если задано значение для свойства, которое не поддерживается поставщиком, возникнет ошибка. Для новых объектов **столбцов** ошибка возникает при добавлении объекта в коллекцию. Для существующих объектов при задании свойства возникнет ошибка.  
@@ -60,14 +60,14 @@ ms.locfileid: "88440346"
   
  Этот раздел содержит следующий раздел.  
   
--   [Свойства, методы и события объекта Column](../../../ado/reference/adox-api/column-object-properties-methods-and-events.md)  
+-   [Свойства, методы и события объекта Column](./column-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
- [Методы добавления столбцов и таблиц, пример свойства Name (Visual Basic)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [Пример метода Close соединения, свойство типа таблицы (Visual Basic)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
- [Пример свойств для добавления ключей, типа ключа, RelatedColumn, RelatedTable и UpdateRule (Visual Basic)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [Пример кода ADOX: пример свойства NumericScale и Precision (Visual Basic)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
- [Пример свойства ParentCatalog (Visual Basic)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
- [Пример свойства SortOrder (Visual Basic)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
- [Коллекция Columns (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Коллекция Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+## <a name="see-also"></a>См. также  
+ [Методы добавления столбцов и таблиц, пример свойства Name (Visual Basic)](./columns-and-tables-append-methods-name-property-example-vb.md)   
+ [Пример метода Close соединения, свойство типа таблицы (Visual Basic)](./connection-close-method-table-type-property-example-vb.md)   
+ [Пример свойств для добавления ключей, типа ключа, RelatedColumn, RelatedTable и UpdateRule (Visual Basic)](./keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Пример кода ADOX: пример свойства NumericScale и Precision (Visual Basic)](./adox-code-example-numericscale-and-precision-properties-example-vb.md)   
+ [Пример свойства ParentCatalog (Visual Basic)](./parentcatalog-property-example-vb.md)   
+ [Пример свойства SortOrder (Visual Basic)](./sortorder-property-example-vb.md)   
+ [Коллекция Columns (ADOX)](./columns-collection-adox.md)   
+ [Коллекция Properties (ADO)](../ado-api/properties-collection-ado.md)

@@ -13,40 +13,40 @@ helpviewer_keywords:
 ms.assetid: dadd6e7e-b5b4-4ede-8747-ae67ec917d90
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cb4b686c0fd2366b0bd229603414fb70c2d60ba1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b12131ae069b9be362aebb93c90272d81de1d036
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440896"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777993"
 ---
 # <a name="member-object-properties-methods-and-events"></a>Свойства, методы и события объекта Member
 ## <a name="propertiescollections"></a>Свойства и коллекции  
- [Свойство Caption](../../../ado/reference/ado-md-api/caption-property-ado-md.md)  
+ [Свойство Caption](./caption-property-ado-md.md)  
   
- [ChildCount, свойство](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)  
+ [ChildCount, свойство](./childcount-property-ado-md.md)  
   
- [Свойство Children](../../../ado/reference/ado-md-api/children-property-ado-md.md)  
+ [Свойство Children](./children-property-ado-md.md)  
   
- [Свойство Description](../../../ado/reference/ado-md-api/description-property-ado-md.md)  
+ [Свойство Description](./description-property-ado-md.md)  
   
- [Дрилледдовн, свойство](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)  
+ [Дрилледдовн, свойство](./drilleddown-property-ado-md.md)  
   
- [LevelDepth, свойство](../../../ado/reference/ado-md-api/leveldepth-property-ado-md.md)  
+ [LevelDepth, свойство](./leveldepth-property-ado-md.md)  
   
- [LevelName, свойство](../../../ado/reference/ado-md-api/levelname-property-ado-md.md)  
+ [LevelName, свойство](./levelname-property-ado-md.md)  
   
- [Имя, свойство](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
+ [Свойство Name](./name-property-ado-md.md)  
   
- [Родительское свойство](../../../ado/reference/ado-md-api/parent-property-ado-md.md)  
+ [Родительское свойство](./parent-property-ado-md.md)  
   
- [Парентсамеаспрев, свойство](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)  
+ [Парентсамеаспрев, свойство](./parentsameasprev-property-ado-md.md)  
   
- [Коллекция Properties](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Коллекция Properties](../ado-api/properties-collection-ado.md)  
   
- [Свойство Type](../../../ado/reference/ado-md-api/type-property-ado-md.md)  
+ [Свойство Type](./type-property-ado-md.md)  
   
- [UniqueName, свойство](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)  
+ [UniqueName, свойство](./uniquename-property-ado-md.md)  
   
 ## <a name="methods"></a>Методы  
  Отсутствует.  
@@ -55,4 +55,4 @@ ms.locfileid: "88440896"
  Нет.  
   
 ## <a name="see-also"></a>См. также:  
- [Объект Member (многомерные объекты ADO)](../../../ado/reference/ado-md-api/member-object-ado-md.md)
+ [Объект Member (многомерные объекты ADO)](./member-object-ado-md.md)
