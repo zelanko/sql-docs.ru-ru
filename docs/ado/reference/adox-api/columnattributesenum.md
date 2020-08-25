@@ -16,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: cd0db27a-1080-40af-a491-3893e7bef9cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f9ab23767ccac617694468f5ff1502b8c60f14e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ff4747f86f2bcca6acdfa0d472db3eb59506a14e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440316"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771043"
 ---
 # <a name="columnattributesenum"></a>ColumnAttributesEnum
-Задает характеристики [столбца](../../../ado/reference/adox-api/column-object-adox.md).  
+Задает характеристики [столбца](./column-object-adox.md).  
   
-|Константа|Значение|Описание|  
+|Константа|Значение|Описание:|  
 |--------------|-----------|-----------------|  
 |**adColFixed**|1|Столбец имеет фиксированную длину.|  
 |**adColNullable**|2|Столбец может содержать значения NULL.|  
   
 ## <a name="applies-to"></a>Применение  
- [Свойство Attributes (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)
+ [Свойство Attributes (ADOX)](./attributes-property-adox.md)

@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: cafef8a5b702b6df4475d34e9395bb12bc9461fb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7bf3928bfb21d34d0f60e6c52be8dae43621e4bd
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74400978"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766743"
 ---
 # <a name="master-database---parallel-data-warehouse"></a>База данных master — Параллельное хранилище данных
 База данных SQL Server PDW Master хранит сведения для входа на уровне устройства и каталог базы данных. Это база данных SQL Server master, которая находится на узле управления. Таким образом, он предоставляет аналогичные функции для SQL Server PDW, как главный предоставляет SQL Server.  
@@ -44,7 +44,7 @@ ms.locfileid: "74400978"
   
 |Задача|Описание|  
 |--------|---------------|  
-|Создайте полную резервную копию главной реплики.|Пример.<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />Дополнительные сведения см. в разделе [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md).|  
+|Создайте полную резервную копию главной реплики.|Пример<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />Дополнительные сведения см. в разделе [BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016).|  
 |Восстановление базы данных master|Чтобы восстановить базу данных master, воспользуйтесь страницей [Восстановление базы данных master](restore-the-master-database.md) в средстве Configuration Manager.|  
 |Просмотр сведений о каталоге базы данных.|`SELECT * FROM master.sys.databases;`|  
 |Просмотр имени входа и сведений о разрешениях на уровне системы.|`SELECT * FROM master.sys.server_permissions;`<br /><br />`SELECT * FROM master.sys.server_principals;`<br /><br />`SELECT * FROM master.sys.sql_logins;`|  
@@ -53,4 +53,3 @@ ms.locfileid: "74400978"
 ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
 -->
-  

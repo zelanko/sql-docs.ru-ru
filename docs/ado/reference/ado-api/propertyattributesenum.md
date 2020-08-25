@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 96a01955-a6b4-4cbf-9c73-52bcd1e9fb25
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bac29c74bf70e29828fe8ec238839cd64e78fd7a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 823505aae912c64c2fd7d3375b3426cb6428bcdd
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442566"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772873"
 ---
 # <a name="propertyattributesenum"></a>PropertyAttributesEnum
-Задает атрибуты объекта [Property](../../../ado/reference/ado-api/property-object-ado.md) .  
+Задает атрибуты объекта [Property](./property-object-ado.md) .  
   
-|Константа|Значение|Описание|  
+|Константа|Значение|Описание:|  
 |--------------|-----------|-----------------|  
 |**адпропнотсуппортед**|0|Указывает, что свойство не поддерживается поставщиком.|  
 |**адпропрекуиред**|1|Указывает, что пользователь должен указать значение этого свойства перед инициализацией источника данных.|  
@@ -46,4 +46,4 @@ ms.locfileid: "88442566"
 |Адоенумс. Пропертяттрибутес. WRITE|  
   
 ## <a name="applies-to"></a>Применение  
- [Свойство Attributes (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)
+ [Свойство Attributes (ADO)](./attributes-property-ado.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b8ac3739-05d3-4818-8201-a763795fb8b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9bdcecf462476b7f2fecfea48f174e0b4b2c499e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 686d3caeb7835d05a4e2eff0c588a4fb2ca18cf4
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452066"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759494"
 ---
 # <a name="rds-usage-and-security"></a>Использование RDS и безопасность
 Используйте сведения в этом разделе, чтобы настроить сервер и быстро использовать RDS. В этом разделе приводятся конкретные действия по настройке, которые могут потребоваться при реализации RDS, описаны некоторые ключевые связи между RDS и другими технологиями, а также приведены решения проблем, которые могут возникнуть при настройке решения RDS.  
@@ -29,17 +29,15 @@ ms.locfileid: "88452066"
   
  Этот раздел содержит следующие подразделы.  
   
--   [Настройка RDS](../../../ado/guide/remote-data-service/configuring-rds.md)  
+-   [Настройка RDS](./configuring-rds.md)  
   
--   [Использование связанных технологий в RDS](../../../ado/guide/remote-data-service/using-related-technologies-with-rds.md)  
+-   [Использование связанных технологий в RDS](./using-related-technologies-with-rds.md)  
   
--   [Настройка DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)  
+-   [Настройка DataFactory](./datafactory-customization.md)  
   
--   [Устранение неполадок с RDS](../../../ado/guide/remote-data-service/troubleshooting-rds.md)  
+-   [Устранение неполадок с RDS](./troubleshooting-rds.md)  
   
-## <a name="see-also"></a>См. также:  
- [Основы RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
- [Сценарий RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [Учебник по RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)
-
-
+## <a name="see-also"></a>См. также  
+ [Основы RDS](./rds-fundamentals.md)   
+ [Сценарий RDS](./rds-scenario.md)   
+ [Учебник по RDS](./rds-tutorial.md)

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a362ed51-314c-4783-9598-538dbf755f3d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6069b3d99e021be01d8fd2d724b7c25868167bd3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2f54f1491327b9b0294dec1332a3fb9ff8b2c69c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440476"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771393"
 ---
 # <a name="append-method-adox-tables"></a>Метод Append (коллекция Tables ADOX)
-Добавляет новый объект [Table](../../../ado/reference/adox-api/table-object-adox.md) в коллекцию [Tables](../../../ado/reference/adox-api/tables-collection-adox.md) .  
+Добавляет новый объект [Table](./table-object-adox.md) в коллекцию [Tables](./tables-collection-adox.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,15 +42,15 @@ Tables.Append Table
  Если поставщик не поддерживает создание таблиц, возникнет ошибка.  
   
 ## <a name="applies-to"></a>Применение  
- [Коллекция Tables (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)  
+ [Коллекция Tables (ADOX)](./tables-collection-adox.md)  
   
-## <a name="see-also"></a>См. также:  
- [Методы добавления столбцов и таблиц, пример свойства Name (Visual Basic)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [Пример свойства ParentCatalog (Visual Basic)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
- [Метод Append (столбцы ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Метод Append (группы ADOX)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
- [Метод Append (индексы ADOX)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
- [Метод Append (ключи ADOX)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [Метод Append (процедуры ADOX)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Метод Append (пользователи ADOX)](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Метод Append (коллекция Views ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)
+## <a name="see-also"></a>См. также  
+ [Методы добавления столбцов и таблиц, пример свойства Name (Visual Basic)](./columns-and-tables-append-methods-name-property-example-vb.md)   
+ [Пример свойства ParentCatalog (Visual Basic)](./parentcatalog-property-example-vb.md)   
+ [Метод Append (столбцы ADOX)](./append-method-adox-columns.md)   
+ [Метод Append (группы ADOX)](./append-method-adox-groups.md)   
+ [Метод Append (индексы ADOX)](./append-method-adox-indexes.md)   
+ [Метод Append (ключи ADOX)](./append-method-adox-keys.md)   
+ [Метод Append (процедуры ADOX)](./append-method-adox-procedures.md)   
+ [Метод Append (пользователи ADOX)](./append-method-adox-users.md)   
+ [Метод Append (коллекция Views ADOX)](./append-method-adox-views.md)

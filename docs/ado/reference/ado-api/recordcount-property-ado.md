@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 834f0121-394a-44d4-ad7d-999b43a6fe63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5c7615a61622be136b0be951b71a1788d5f45bab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b307a4116731016858ce4cc74f37bdcfbd258f3a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442486"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772483"
 ---
 # <a name="recordcount-property-ado"></a>Свойство RecordCount (ADO)
 
-Указывает количество записей в объекте [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) .
+Указывает количество записей в объекте [набора записей](./recordset-object-ado.md) .
   
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -53,11 +53,11 @@ ms.locfileid: "88442486"
   
 ## <a name="applies-to"></a>Применение
 
-[Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+[Объект Recordset (ADO)](./recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-[Пример свойств Filter и RecordCount (Visual Basic)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)   
-[Пример свойств Filter и RecordCount (Visual c++)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)   
-[Свойство примеры AbsolutePosition (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
-[Свойство PageCount (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)
+[Пример свойств Filter и RecordCount (Visual Basic)](./filter-and-recordcount-properties-example-vb.md)   
+[Пример свойств Filter и RecordCount (Visual c++)](./filter-and-recordcount-properties-example-vc.md)   
+[Свойство примеры AbsolutePosition (ADO)](./absoluteposition-property-ado.md)   
+[Свойство PageCount (ADO)](./pagecount-property-ado.md)

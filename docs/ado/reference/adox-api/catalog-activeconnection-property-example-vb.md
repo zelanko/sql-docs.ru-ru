@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: bb3274b1-764d-43a7-a49f-ef55680ecd26
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4895f1ec08a0f10c93335fc36954f3a9098ffce4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ee63f567e3bb9c1f389ada4bf2e76ed6f3b39929
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440416"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771253"
 ---
 # <a name="catalog-activeconnection-property-example-vb"></a>Пример свойства ActiveConnection объекта Catalog (Visual Basic)
-Если задать для свойства [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) допустимое, открытое соединение, каталог будет открыт. Из открытого каталога можно получить доступ к объектам схемы, содержащимся в этом каталоге.  
+Если задать для свойства [ActiveConnection](./activeconnection-property-adox.md) допустимое, открытое соединение, каталог будет открыт. Из открытого каталога можно получить доступ к объектам схемы, содержащимся в этом каталоге.  
   
 ```  
 ' BeginOpenConnectionVB  
@@ -66,9 +66,9 @@ End Sub
 Attribute VB_Name = "Catalog"  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Свойство ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Объект Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
- [Коллекция Tables (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
- [Свойство Type (Table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)
+## <a name="see-also"></a>См. также  
+ [Свойство ActiveConnection (ADOX)](./activeconnection-property-adox.md)   
+ [Объект каталога (ADOX)](./catalog-object-adox.md)   
+ [Объект Table (ADOX)](./table-object-adox.md)   
+ [Коллекция Tables (ADOX)](./tables-collection-adox.md)   
+ [Свойство Type (Table) (ADOX)](./type-property-table-adox.md)

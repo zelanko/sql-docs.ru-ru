@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 56b94fc6-7ef0-4e4a-82a3-033b94c46036
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2dc46d1c0d44ec175b442df943ce72a38ec2b761
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 14900e34ef93f2ad738779b0cf7478372ab59179
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440496"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771483"
 ---
 # <a name="append-method-adox-groups"></a>Метод Append (коллекция Groups ADOX)
-Добавляет новый объект [группы](../../../ado/reference/adox-api/group-object-adox.md) в коллекцию [Groups](../../../ado/reference/adox-api/groups-collection-adox.md) .  
+Добавляет новый объект [группы](./group-object-adox.md) в коллекцию [Groups](./groups-collection-adox.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,22 +39,22 @@ Groups.Append Group
  Добавляемый объект **группы** или имя группы для создания и добавления.  
   
 ## <a name="remarks"></a>Remarks  
- Коллекция **Groups** [каталога](../../../ado/reference/adox-api/catalog-object-adox.md) представляет все учетные записи групп каталога. Коллекция **Groups** для [пользователя](../../../ado/reference/adox-api/user-object-adox.md) представляет только группу, к которой принадлежит пользователь.  
+ Коллекция **Groups** [каталога](./catalog-object-adox.md) представляет все учетные записи групп каталога. Коллекция **Groups** для [пользователя](./user-object-adox.md) представляет только группу, к которой принадлежит пользователь.  
   
  Если поставщик не поддерживает создание групп, возникнет ошибка.  
   
 > [!NOTE]
->  Перед добавлением объекта **группы** в коллекцию **Groups** объекта **пользователя** объект **группы** с тем же [именем](../../../ado/reference/adox-api/name-property-adox.md) , что и один из добавляемых, должен уже существовать в коллекции **Groups** **каталога**.  
+>  Перед добавлением объекта **группы** в коллекцию **Groups** объекта **пользователя** объект **группы** с тем же [именем](./name-property-adox.md) , что и один из добавляемых, должен уже существовать в коллекции **Groups** **каталога**.  
   
 ## <a name="applies-to"></a>Применение  
- [Коллекция Groups (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)  
+ [Коллекция Groups (ADOX)](./groups-collection-adox.md)  
   
-## <a name="see-also"></a>См. также:  
- [Пример добавления групп и пользователей, методы ChangePassword (Visual Basic)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)   
- [Метод Append (столбцы ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Метод Append (индексы ADOX)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
- [Метод Append (ключи ADOX)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [Метод Append (процедуры ADOX)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Метод Append (таблицы ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Метод Append (пользователи ADOX)](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Метод Append (коллекция Views ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)
+## <a name="see-also"></a>См. также  
+ [Пример добавления групп и пользователей, методы ChangePassword (Visual Basic)](./groups-and-users-append-changepassword-methods-example-vb.md)   
+ [Метод Append (столбцы ADOX)](./append-method-adox-columns.md)   
+ [Метод Append (индексы ADOX)](./append-method-adox-indexes.md)   
+ [Метод Append (ключи ADOX)](./append-method-adox-keys.md)   
+ [Метод Append (процедуры ADOX)](./append-method-adox-procedures.md)   
+ [Метод Append (таблицы ADOX)](./append-method-adox-tables.md)   
+ [Метод Append (пользователи ADOX)](./append-method-adox-users.md)   
+ [Метод Append (коллекция Views ADOX)](./append-method-adox-views.md)

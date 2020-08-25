@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c21e12d3601f40b1749067f04ce3d655ea0c1109
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d5c87c5374a0e631b08d355e5f1fc0d7c0862d23
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438606"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767413"
 ---
 # <a name="sql-property"></a>Свойство SQL
-Указывает строку запроса, используемую для получения [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Указывает строку запроса, используемую для получения [набора записей](../ado-api/recordset-object-ado.md).  
   
- Свойство **SQL** можно задать во время разработки в [RDS. Теги объекта элемента управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) DataObject или во время выполнения в коде скрипта.  
+ Свойство **SQL** можно задать во время разработки в [RDS. Теги объекта элемента управления](./datacontrol-object-rds.md) DataObject или во время выполнения в коде скрипта.  
   
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
@@ -44,19 +44,17 @@ Run time: DataControl.SQL = "QueryString"
  *DataControl*  
  Объектная переменная, представляющая **RDS. Объект элемента управления** .  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Как правило, это инструкция SQL (с использованием диалекта сервера базы данных), например `"Select * from NewTitles"` . Чтобы гарантировать точное сопоставление и обновление записей, обновляемый запрос должен содержать поле, отличное от длинного бинарного поля или вычисленного поля.  
   
  Свойство **SQL** является необязательным, если пользовательский бизнес-объект на стороне сервера получает данные для клиента.  
   
 ## <a name="applies-to"></a>Применение  
- [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [Объект DataControl (служба удаленных рабочих столов)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>См. также  
- [Пример свойства SQL (VBScript)](../../../ado/reference/rds-api/sql-property-example-vbscript.md)   
- [Свойство Connect (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)   
- [Метод query (RDS)](../../../ado/reference/rds-api/query-method-rds.md)   
- [Метод Refresh (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)   
- [Метод SubmitChanges (служба удаленных рабочих столов)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
-
-
+ [Пример свойства SQL (VBScript)](./sql-property-example-vbscript.md)   
+ [Свойство Connect (RDS)](./connect-property-rds.md)   
+ [Метод query (RDS)](./query-method-rds.md)   
+ [Метод Refresh (RDS)](./refresh-method-rds.md)   
+ [Метод SubmitChanges (служба удаленных рабочих столов)](./submitchanges-method-rds.md)

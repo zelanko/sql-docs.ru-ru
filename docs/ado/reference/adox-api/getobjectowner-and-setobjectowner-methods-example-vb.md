@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e44ec3d4-42ae-447d-aaed-bdea53cb0cca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 502bad9d142df67096f23bf89f60184a958de55a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dc9a111b3315c7737229ec0240e5ee4ed6e406b9
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440086"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770553"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vb"></a>Примеры методов GetObjectOwner и SetObjectOwner (Visual Basic)
-В этом примере демонстрируются методы [примеры методов getobjectowner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) и [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) . В этом коде предполагается наличие учетной записи группы (см. Дополнительные сведения о добавлении этой группы в систему в разделе [группы и пользователи добавим, метод ChangePassword (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md) ). Владелец таблицы Categories имеет значение Accounting.  
+В этом примере демонстрируются методы [примеры методов getobjectowner](./getobjectowner-method-adox.md) и [SetObjectOwner](./setobjectowner-method.md) . В этом коде предполагается наличие учетной записи группы (см. Дополнительные сведения о добавлении этой группы в систему в разделе [группы и пользователи добавим, метод ChangePassword (VB)](./groups-and-users-append-changepassword-methods-example-vb.md) ). Владелец таблицы Categories имеет значение Accounting.  
   
 ```  
 ' BeginOwnersVB  
@@ -62,7 +62,7 @@ End Sub
 ' EndOwnersVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Метод примеры методов getobjectowner (ADOX)](../../../ado/reference/adox-api/getobjectowner-method-adox.md)   
- [Метод SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)
+## <a name="see-also"></a>См. также  
+ [Объект каталога (ADOX)](./catalog-object-adox.md)   
+ [Метод примеры методов getobjectowner (ADOX)](./getobjectowner-method-adox.md)   
+ [Метод SetObjectOwner](./setobjectowner-method.md)

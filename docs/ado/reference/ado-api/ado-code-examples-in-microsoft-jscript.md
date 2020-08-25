@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 228b978d-eef1-4e30-928a-005b2f77ef14
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4bc7e233b109266a7918576dadb24631cbb210d5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 85915249832be8ab6ee6a5db318f8dcfdda78b3e
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451526"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760174"
 ---
 # <a name="ado-code-examples-in-microsoft-jscript"></a>Примеры кода ADO в Microsoft JScript
 Используйте приведенные ниже примеры кода, чтобы научиться использовать методы, свойства и события ADO при написании на языке JScript.  
@@ -30,34 +30,34 @@ ms.locfileid: "88451526"
   
 ## <a name="methods"></a>Методы  
   
--   [Пример метода AddNew](../../../ado/reference/ado-api/addnew-method-example-jscript.md)  
+-   [Пример метода AddNew](./addnew-method-example-jscript.md)  
   
--   [Примеры методов Append и CreateParameter](../../../ado/reference/ado-api/append-and-createparameter-methods-example-jscript.md)  
+-   [Примеры методов Append и CreateParameter](./append-and-createparameter-methods-example-jscript.md)  
   
--   [Пример методов Execute, Requery и Clear](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-jscript.md)  
+-   [Пример методов Execute, Requery и Clear](./execute-requery-and-clear-methods-example-jscript.md)  
   
--   [Пример метода Find](../../../ado/reference/ado-api/find-method-example-jscript.md)  
+-   [Пример метода Find](./find-method-example-jscript.md)  
   
--   [Пример метода GetRows](../../../ado/reference/ado-api/getrows-method-example-vb.md)  
+-   [Пример метода GetRows](./getrows-method-example-vb.md)  
   
 ## <a name="properties"></a>Свойства  
   
--   [Пример свойств примеры absolutepage, PageCount и PageSize](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-jscript.md)  
+-   [Пример свойств примеры absolutepage, PageCount и PageSize](./absolutepage-pagecount-and-pagesize-properties-example-jscript.md)  
   
--   [Пример свойств примеры AbsolutePosition и CursorLocation](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-jscript.md)  
+-   [Пример свойств примеры AbsolutePosition и CursorLocation](./absoluteposition-and-cursorlocation-properties-example-jscript.md)  
   
--   [Пример свойства ActiveCommand](../../../ado/reference/ado-api/activecommand-property-example-jscript.md)  
+-   [Пример свойства ActiveCommand](./activecommand-property-example-jscript.md)  
   
--   [Пример свойств ActiveConnection, CommandText, CommandTimeout, CommandType, Size и Direction](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)  
+-   [Пример свойств ActiveConnection, CommandText, CommandTimeout, CommandType, Size и Direction](./activeconnection-commandtext-timeout-type-size-example-jscript.md)  
   
--   [Пример свойств ActualSize и DefinedSize](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-jscript.md)  
+-   [Пример свойств ActualSize и DefinedSize](./actualsize-and-definedsize-properties-example-jscript.md)  
   
--   [Пример свойства CacheSize](../../../ado/reference/ado-api/cachesize-property-example-jscript.md)  
+-   [Пример свойства CacheSize](./cachesize-property-example-jscript.md)  
   
--   [Пример свойств Filter и RecordCount](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-jscript.md)  
+-   [Пример свойств Filter и RecordCount](./filter-and-recordcount-properties-example-jscript.md)  
   
 ## <a name="see-also"></a>См. также  
- [Примеры кода ADO в Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
- [Примеры кода ADO VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
- [Примеры кода ADO в Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
- [Приложение Г. Образцы объектов ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
+ [Примеры кода ADO в Visual Basic](./ado-code-examples-in-visual-basic.md)   
+ [Примеры кода ADO VBScript](./ado-code-examples-vbscript.md)   
+ [Примеры кода ADO в Visual C++](./ado-code-examples-in-visual-c.md)   
+ [Приложение Г. Образцы объектов ADO](../../guide/appendixes/appendix-d-ado-samples.md)

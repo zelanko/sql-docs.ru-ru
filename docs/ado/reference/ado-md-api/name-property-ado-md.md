@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 4a04380b-51dc-4aaf-8d25-123cdd589641
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 957afb5eaff886824c53069ad42721d5013adf25
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 83207cd13db790d645bea146b2a031604e598256
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440846"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777953"
 ---
 # <a name="name-property-ado-md"></a>Свойство Name (многомерные объекты ADO)
 Указывает имя объекта.  
@@ -37,28 +37,28 @@ ms.locfileid: "88440846"
  Возвращает **строку** и доступна только для чтения.  
   
 ## <a name="remarks"></a>Remarks  
- Свойство **Name** объекта можно получить по порядковому номеру, после чего можно будет ссылаться на объект непосредственно по имени. Например, если `cdf.CubeDefs(0).Name` выдает "bobs Video Store", можно ссылаться на этот [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) как `cdf.CubeDefs("Bobs Video Store")` .  
+ Свойство **Name** объекта можно получить по порядковому номеру, после чего можно будет ссылаться на объект непосредственно по имени. Например, если `cdf.CubeDefs(0).Name` выдает "bobs Video Store", можно ссылаться на этот [CubeDef](./cubedef-object-ado-md.md) как `cdf.CubeDefs("Bobs Video Store")` .  
   
 ## <a name="applies-to"></a>Применение  
 
 :::row:::
     :::column:::
-        [Объект Axis (многомерные объекты ADO)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)  
-        [Объект Catalog (многомерные объекты ADO)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)  
-        [Объект CubeDef (многомерные объекты ADO)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)  
+        [Объект Axis (многомерные объекты ADO)](./axis-object-ado-md.md)  
+        [Объект Catalog (многомерные объекты ADO)](./catalog-object-ado-md.md)  
+        [Объект CubeDef (многомерные объекты ADO)](./cubedef-object-ado-md.md)  
     :::column-end:::
     :::column:::
-        [Объект Dimension (многомерные объекты ADO)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)  
-        [Объект Hierarchy (многомерные объекты ADO)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)  
+        [Объект Dimension (многомерные объекты ADO)](./dimension-object-ado-md.md)  
+        [Объект Hierarchy (многомерные объекты ADO)](./hierarchy-object-ado-md.md)  
     :::column-end:::
     :::column:::
-        [Объект Level (многомерные объекты ADO)](../../../ado/reference/ado-md-api/level-object-ado-md.md)  
-        [Объект Member (многомерные объекты ADO)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
+        [Объект Level (многомерные объекты ADO)](./level-object-ado-md.md)  
+        [Объект Member (многомерные объекты ADO)](./member-object-ado-md.md)  
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>См. также:  
- [Пример каталога (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
- [Свойство Caption (объекты данных ActiveX (MD))](../../../ado/reference/ado-md-api/caption-property-ado-md.md)   
- [Свойство Description (объекты данных ActiveX (MD))](../../../ado/reference/ado-md-api/description-property-ado-md.md)   
- [Свойство UniqueName (многомерные объекты ADO)](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)
+## <a name="see-also"></a>См. также  
+ [Пример каталога (VB)](./catalog-example-vb.md)   
+ [Свойство Caption (объекты данных ActiveX (MD))](./caption-property-ado-md.md)   
+ [Свойство Description (объекты данных ActiveX (MD))](./description-property-ado-md.md)   
+ [Свойство UniqueName (многомерные объекты ADO)](./uniquename-property-ado-md.md)

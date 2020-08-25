@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fed09266-1547-4bda-9088-c254d81cc738
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7ee921e1865530356e1fd88c97489b63a81a02ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 02bb55cddb1e9496893ee30448a2b479d2311d01
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440156"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770713"
 ---
 # <a name="datemodified-property-adox"></a>Свойство DateModified (ADOX)
 Указывает дату последнего изменения объекта.  
@@ -32,22 +32,22 @@ ms.locfileid: "88440156"
  Возвращает значение **типа Variant** , указывающее дату изменения. Значение равно null, если **DateModified** не поддерживается поставщиком.  
   
 ## <a name="remarks"></a>Remarks  
- Для вновь добавляемых объектов свойство **DateModified** имеет значение null. После добавления нового [представления](../../../ado/reference/adox-api/view-object-adox.md) или [процедуры](../../../ado/reference/adox-api/procedure-object-adox.md)необходимо вызвать метод [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) коллекции [представлений](../../../ado/reference/adox-api/views-collection-adox.md) или [процедур](../../../ado/reference/adox-api/procedures-collection-adox.md) , чтобы получить значения для свойства **DateModified** .  
+ Для вновь добавляемых объектов свойство **DateModified** имеет значение null. После добавления нового [представления](./view-object-adox.md) или [процедуры](./procedure-object-adox.md)необходимо вызвать метод [Refresh](../ado-api/refresh-method-ado.md) коллекции [представлений](./views-collection-adox.md) или [процедур](./procedures-collection-adox.md) , чтобы получить значения для свойства **DateModified** .  
   
 ## <a name="applies-to"></a>Применение  
 
 :::row:::
     :::column:::
-        [Объект Procedure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)  
+        [Объект Procedure (ADOX)](./procedure-object-adox.md)  
     :::column-end:::
     :::column:::
-        [Объект Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)  
+        [Объект Table (ADOX)](./table-object-adox.md)  
     :::column-end:::
     :::column:::
-        [Объект View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)  
+        [Объект View (ADOX)](./view-object-adox.md)  
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>См. также:  
- [Примеры свойств DateCreated и DateModified (Visual Basic)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vb.md)   
- [Свойство DateCreated (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)
+## <a name="see-also"></a>См. также  
+ [Примеры свойств DateCreated и DateModified (Visual Basic)](./datecreated-and-datemodified-properties-example-vb.md)   
+ [Свойство DateCreated (ADOX)](./datecreated-property-adox.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: af30b764-398f-4918-aaa7-3952226cf544
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 94821a930458d9b3a9c9deed6e9dd076243bae1d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4606711bff277cc5e04e72d1c018ae22c4af292a
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451496"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760154"
 ---
 # <a name="ado-code-examples-in-visual-c"></a>Примеры кода ADO в Visual C++
 Используйте приведенные ниже примеры кода, чтобы научиться использовать методы, свойства и события ADO при записи в Microsoft Visual C++.  
@@ -30,123 +30,123 @@ ms.locfileid: "88451496"
   
 ## <a name="methods"></a>Методы  
   
--   [Пример метода AddNew](../../../ado/reference/ado-api/addnew-method-example-vc.md)  
+-   [Пример метода AddNew](./addnew-method-example-vc.md)  
   
--   [Примеры методов Append и CreateParameter](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vc.md)  
+-   [Примеры методов Append и CreateParameter](./append-and-createparameter-methods-example-vc.md)  
   
--   [Примеры методов AppendChunk и Method](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vc.md)  
+-   [Примеры методов AppendChunk и Method](./appendchunk-and-getchunk-methods-example-vc.md)  
   
--   [Примеры методов примеры BeginTrans, CommitTrans и RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vc.md)  
+-   [Примеры методов примеры BeginTrans, CommitTrans и RollbackTrans](./begintrans-committrans-and-rollbacktrans-methods-example-vc.md)  
   
--   [Пример метода Cancel](../../../ado/reference/ado-api/cancel-method-example-vc.md)  
+-   [Пример метода Cancel](./cancel-method-example-vc.md)  
   
--   [Пример метода Clone](../../../ado/reference/ado-api/clone-method-example-vc.md)  
+-   [Пример метода Clone](./clone-method-example-vc.md)  
   
--   [Пример метода CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-example-vc.md)  
+-   [Пример метода CompareBookmarks](./comparebookmarks-method-example-vc.md)  
   
--   [Пример метода Delete](../../../ado/reference/ado-api/delete-method-example-vc.md)  
+-   [Пример метода Delete](./delete-method-example-vc.md)  
   
--   [Пример методов Execute, Requery и Clear](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vc.md)  
+-   [Пример методов Execute, Requery и Clear](./execute-requery-and-clear-methods-example-vc.md)  
   
--   [Пример метода Find](../../../ado/reference/ado-api/find-method-example-vc.md)  
+-   [Пример метода Find](./find-method-example-vc.md)  
   
--   [Пример метода GetRows](../../../ado/reference/ado-api/getrows-method-example-vc.md)  
+-   [Пример метода GetRows](./getrows-method-example-vc.md)  
   
--   [Пример метода GetString](../../../ado/reference/ado-api/getstring-method-example-vc.md)  
+-   [Пример метода GetString](./getstring-method-example-vc.md)  
   
--   [Пример методов MoveFirst, MoveLast, MoveNext и MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vc.md)  
+-   [Пример методов MoveFirst, MoveLast, MoveNext и MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-example-vc.md)  
   
--   [Пример метода NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-example-vc.md)  
+-   [Пример метода NextRecordset](./nextrecordset-method-example-vc.md)  
   
--   [Примеры методов Open и Close](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)  
+-   [Примеры методов Open и Close](./open-and-close-methods-example-vc.md)  
   
--   [Пример метода OpenSchema](../../../ado/reference/ado-api/openschema-method-example-vc.md)  
+-   [Пример метода OpenSchema](./openschema-method-example-vc.md)  
   
--   [Пример метода Refresh](../../../ado/reference/ado-api/refresh-method-example-vc.md)  
+-   [Пример метода Refresh](./refresh-method-example-vc.md)  
   
--   [Пример метода повторной синхронизации](../../../ado/reference/ado-api/resync-method-example-vc.md)  
+-   [Пример метода повторной синхронизации](./resync-method-example-vc.md)  
   
--   [Пример методов Save и Open](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)  
+-   [Пример методов Save и Open](./save-and-open-methods-example-vc.md)  
   
--   [Пример метода Seek и свойства index](../../../ado/reference/ado-api/seek-method-and-index-property-example-vc.md)  
+-   [Пример метода Seek и свойства index](./seek-method-and-index-property-example-vc.md)  
   
--   [Пример метода поддержки](../../../ado/reference/ado-api/supports-method-example-vc.md)  
+-   [Пример метода поддержки](./supports-method-example-vc.md)  
   
--   [Примеры методов Update и CancelUpdate](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)  
+-   [Примеры методов Update и CancelUpdate](./update-and-cancelupdate-methods-example-vc.md)  
   
--   [Примеры методов UpdateBatch и CancelBatch](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vc.md)  
+-   [Примеры методов UpdateBatch и CancelBatch](./updatebatch-and-cancelbatch-methods-example-vc.md)  
   
 ## <a name="properties"></a>Свойства  
   
--   [Пример свойств примеры absolutepage, PageCount и PageSize](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)  
+-   [Пример свойств примеры absolutepage, PageCount и PageSize](./absolutepage-pagecount-and-pagesize-properties-example-vc.md)  
   
--   [Пример свойств примеры AbsolutePosition и CursorLocation](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vc.md)  
+-   [Пример свойств примеры AbsolutePosition и CursorLocation](./absoluteposition-and-cursorlocation-properties-example-vc.md)  
   
--   [Пример свойства ActiveCommand](../../../ado/reference/ado-api/activecommand-property-example-vc.md)  
+-   [Пример свойства ActiveCommand](./activecommand-property-example-vc.md)  
   
--   [Пример свойств ActiveConnection, CommandText, CommandTimeout, CommandType, Size и Direction](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)  
+-   [Пример свойств ActiveConnection, CommandText, CommandTimeout, CommandType, Size и Direction](./activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)  
   
--   [Пример свойств ActualSize и DefinedSize](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vc.md)  
+-   [Пример свойств ActualSize и DefinedSize](./actualsize-and-definedsize-properties-example-vc.md)  
   
--   [Пример атрибутов и свойств имени](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)  
+-   [Пример атрибутов и свойств имени](./attributes-and-name-properties-example-vc.md)  
   
--   [Пример свойств BOF, EOF и Bookmark](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)  
+-   [Пример свойств BOF, EOF и Bookmark](./bof-eof-and-bookmark-properties-example-vc.md)  
   
--   [Пример свойства CacheSize](../../../ado/reference/ado-api/cachesize-property-example-vc.md)  
+-   [Пример свойства CacheSize](./cachesize-property-example-vc.md)  
   
--   [Пример свойств ConnectionString, ConnectionTimeout и State](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)  
+-   [Пример свойств ConnectionString, ConnectionTimeout и State](./connectionstring-connectiontimeout-and-state-properties-example-vc.md)  
   
--   [Пример свойства Count](../../../ado/reference/ado-api/count-property-example-vc.md)  
+-   [Пример свойства Count](./count-property-example-vc.md)  
   
--   [Пример свойств примеры CursorType, LockType и EditMode](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)  
+-   [Пример свойств примеры CursorType, LockType и EditMode](./cursortype-locktype-and-editmode-properties-example-vc.md)  
   
--   [Пример свойств Description, HelpContext, HelpFile, NativeError, Number, Source и SQLState](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)  
+-   [Пример свойств Description, HelpContext, HelpFile, NativeError, Number, Source и SQLState](./description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)  
   
--   [Пример свойств Filter и RecordCount](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)  
+-   [Пример свойств Filter и RecordCount](./filter-and-recordcount-properties-example-vc.md)  
   
--   [Пример свойства index и метода Seek](../../../ado/reference/ado-api/seek-method-and-index-property-example-vc.md)  
+-   [Пример свойства index и метода Seek](./seek-method-and-index-property-example-vc.md)  
   
--   [Пример свойств IsolationLevel и Mode](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)  
+-   [Пример свойств IsolationLevel и Mode](./isolationlevel-and-mode-properties-example-vc.md)  
   
--   [Пример свойства Item](../../../ado/reference/ado-api/item-property-example-vc.md)  
+-   [Пример свойства Item](./item-property-example-vc.md)  
   
--   [Пример свойства MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-example-vc.md)  
+-   [Пример свойства MarshalOptions](./marshaloptions-property-example-vc.md)  
   
--   [Пример свойства MaxRecords](../../../ado/reference/ado-api/maxrecords-property-example-vc.md)  
+-   [Пример свойства MaxRecords](./maxrecords-property-example-vc.md)  
   
--   [Пример свойств NumericScale и Precision](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)  
+-   [Пример свойств NumericScale и Precision](./numericscale-and-precision-properties-example-vc.md)  
   
--   [Пример свойства OPTIMIZE](../../../ado/reference/ado-api/optimize-property-example-vc.md)  
+-   [Пример свойства OPTIMIZE](./optimize-property-example-vc.md)  
   
--   [Пример свойств OriginalValue и UnderlyingValue](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vc.md)  
+-   [Пример свойств OriginalValue и UnderlyingValue](./originalvalue-and-underlyingvalue-properties-example-vc.md)  
   
--   [Пример подготовленного свойства](../../../ado/reference/ado-api/prepared-property-example-vc.md)  
+-   [Пример подготовленного свойства](./prepared-property-example-vc.md)  
   
--   [Пример свойств provider и DefaultDatabase](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vc.md)  
+-   [Пример свойств provider и DefaultDatabase](./provider-and-defaultdatabase-properties-example-vc.md)  
   
--   [Пример свойства Sort](../../../ado/reference/ado-api/sort-property-example-vc.md)  
+-   [Пример свойства Sort](./sort-property-example-vc.md)  
   
--   [Пример свойства Source](../../../ado/reference/ado-api/source-property-example-vc.md)  
+-   [Пример свойства Source](./source-property-example-vc.md)  
   
--   [Пример свойства State](../../../ado/reference/ado-api/state-property-example-vc.md)  
+-   [Пример свойства State](./state-property-example-vc.md)  
   
--   [Пример свойства Status](../../../ado/reference/ado-api/status-property-example-vc.md)  
+-   [Пример свойства Status](./status-property-example-vc.md)  
   
--   [Пример свойства StayInSync](../../../ado/reference/ado-api/stayinsync-property-example-vc.md)  
+-   [Пример свойства StayInSync](./stayinsync-property-example-vc.md)  
   
--   [Пример свойства Type (поля)](../../../ado/reference/ado-api/status-property-example-vc.md)  
+-   [Пример свойства Type (поля)](./status-property-example-vc.md)  
   
--   [Пример свойства Type (свойство)](../../../ado/reference/ado-api/type-property-example-property-vc.md)  
+-   [Пример свойства Type (свойство)](./type-property-example-property-vc.md)  
   
--   [Пример свойства Value](../../../ado/reference/ado-api/value-property-example-vc.md)  
+-   [Пример свойства Value](./value-property-example-vc.md)  
   
--   [Пример свойства Version](../../../ado/reference/ado-api/version-property-example-vc.md)  
+-   [Пример свойства Version](./version-property-example-vc.md)  
   
-## <a name="other"></a>Другое  
+## <a name="other"></a>другой  
   
--   [Пример модели событий ADO](../../../ado/reference/ado-api/ado-events-model-example-vc.md)  
+-   [Пример модели событий ADO](./ado-events-model-example-vc.md)  
   
 ## <a name="see-also"></a>См. также  
- [Примеры кода ADO в Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
- [Примеры кода ADO VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
- [Приложение Г. Образцы объектов ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
+ [Примеры кода ADO в Visual Basic](./ado-code-examples-in-visual-basic.md)   
+ [Примеры кода ADO VBScript](./ado-code-examples-vbscript.md)   
+ [Приложение Г. Образцы объектов ADO](../../guide/appendixes/appendix-d-ado-samples.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d439e097-65f3-471d-8799-5a1263beb3c1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0f2f61a78102fa4905f80cf9706ed31930eab982
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 581f05f696a0a5076d6f06fc4a1816cffddb73ef
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451566"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760216"
 ---
 # <a name="addnew-method-example-vb"></a>Пример метода AddNew (Visual Basic)
-В этом примере используется метод [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) для создания новой записи с указанным именем.  
+В этом примере используется метод [AddNew](./addnew-method-ado.md) для создания новой записи с указанным именем.  
   
 ```  
 'BeginAddNewVB  
@@ -108,6 +108,6 @@ End Sub
 'EndAddNewVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Метод AddNew (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+## <a name="see-also"></a>См. также  
+ [Метод AddNew (ADO)](./addnew-method-ado.md)   
+ [Объект Recordset (ADO)](./recordset-object-ado.md)

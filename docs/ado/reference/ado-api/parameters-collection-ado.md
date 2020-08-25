@@ -18,24 +18,24 @@ helpviewer_keywords:
 ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70a3554ed1ef0c94965e340f303cc3208c1962fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 06020bb66a8fd986d3fbf38bda59b98e29e66386
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442766"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773343"
 ---
 # <a name="parameters-collection-ado"></a>Коллекция Parameters (ADO)
-Содержит все объекты [параметров](../../../ado/reference/ado-api/parameter-object.md) объекта [Command](../../../ado/reference/ado-api/command-object-ado.md) .  
+Содержит все объекты [параметров](./parameter-object.md) объекта [Command](./command-object-ado.md) .  
   
 ## <a name="remarks"></a>Remarks  
  Объект **Command** содержит коллекцию **Parameters** , состоящие из объектов **параметров** .  
   
- При использовании метода [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) в коллекции **Parameters** объекта **Command** извлекаются сведения о параметрах поставщика для хранимой процедуры или параметризованного запроса, указанного в объекте **Command** . Некоторые поставщики не поддерживают вызовы хранимых процедур или параметризованные запросы; вызов метода **Refresh** для коллекции **Parameters** при использовании такого поставщика возвратит ошибку.  
+ При использовании метода [Refresh](./refresh-method-ado.md) в коллекции **Parameters** объекта **Command** извлекаются сведения о параметрах поставщика для хранимой процедуры или параметризованного запроса, указанного в объекте **Command** . Некоторые поставщики не поддерживают вызовы хранимых процедур или параметризованные запросы; вызов метода **Refresh** для коллекции **Parameters** при использовании такого поставщика возвратит ошибку.  
   
  Если вы не определили собственные объекты **параметров** и хотите получить доступ к коллекции **Parameters** перед вызовом метода **Refresh** , ADO автоматически вызовет метод и заполнит коллекцию.  
   
- Можно уменьшить число вызовов поставщика, чтобы повысить производительность, если известно, какие свойства параметров связаны с хранимой процедурой или параметризованным запросом, который необходимо вызвать. Используйте метод [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) для создания объектов **параметров** с соответствующими параметрами свойств и используйте метод [append](../../../ado/reference/ado-api/append-method-ado.md) , чтобы добавить их в коллекцию **Parameters** . Это позволяет задавать и возвращать значения параметров без вызова поставщика для сведений о параметрах. При записи в поставщик, который не предоставляет сведения о параметрах, необходимо вручную заполнить коллекцию **Parameters** с помощью этого метода, чтобы иметь возможность использовать параметры вообще. При необходимости удалите объекты **параметров** из коллекции **Parameters** с помощью метода [Delete](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md) .  
+ Можно уменьшить число вызовов поставщика, чтобы повысить производительность, если известно, какие свойства параметров связаны с хранимой процедурой или параметризованным запросом, который необходимо вызвать. Используйте метод [CreateParameter](./createparameter-method-ado.md) для создания объектов **параметров** с соответствующими параметрами свойств и используйте метод [append](./append-method-ado.md) , чтобы добавить их в коллекцию **Parameters** . Это позволяет задавать и возвращать значения параметров без вызова поставщика для сведений о параметрах. При записи в поставщик, который не предоставляет сведения о параметрах, необходимо вручную заполнить коллекцию **Parameters** с помощью этого метода, чтобы иметь возможность использовать параметры вообще. При необходимости удалите объекты **параметров** из коллекции **Parameters** с помощью метода [Delete](./delete-method-ado-parameters-collection.md) .  
   
  Объекты в коллекции **Parameters** **набора записей** выходят за пределы области действия (поэтому становятся недоступными) при закрытии **набора записей** .  
   
@@ -83,9 +83,9 @@ ms.locfileid: "88442766"
   
  Этот раздел содержит следующий раздел.  
   
--   [Свойства, методы и события коллекции Parameters](../../../ado/reference/ado-api/parameters-collection-properties-methods-and-events.md)  
+-   [Свойства, методы и события коллекции Parameters](./parameters-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
- [Метод Append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
- [Метод CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
- [Объект Parameter](../../../ado/reference/ado-api/parameter-object.md)
+## <a name="see-also"></a>См. также  
+ [Метод Append (ADO)](./append-method-ado.md)   
+ [Метод CreateParameter (ADO)](./createparameter-method-ado.md)   
+ [Объект Parameter](./parameter-object.md)

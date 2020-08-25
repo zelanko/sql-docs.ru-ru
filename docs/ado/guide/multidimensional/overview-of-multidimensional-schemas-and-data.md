@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 449bfe5056cdf96f86b5371731c2d1c0b00ba31e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c7fc8cd189534a217468f71188479a8df100fed6
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452426"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758364"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>Общие сведения о многомерных схемах и данных
 ## <a name="understanding-multidimensional-schemas"></a>Основные сведения о многомерных схемах  
@@ -32,7 +32,7 @@ ms.locfileid: "88452426"
   
  Элемент *— это* элемент данных в измерении. Как правило, вы создаете заголовок или описываете меру базы данных с помощью элементов.  
   
- Кубы представлены объектами [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) в объекты данных ActiveX (MD). Измерения, иерархии, уровни и элементы также представлены соответствующими объекты данных ActiveX (MD) объектами: [измерение](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [Иерархия](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [уровень](../../../ado/reference/ado-md-api/level-object-ado-md.md)и [элемент](../../../ado/reference/ado-md-api/member-object-ado-md.md).  
+ Кубы представлены объектами [CubeDef](../../reference/ado-md-api/cubedef-object-ado-md.md) в объекты данных ActiveX (MD). Измерения, иерархии, уровни и элементы также представлены соответствующими объекты данных ActiveX (MD) объектами: [измерение](../../reference/ado-md-api/dimension-object-ado-md.md), [Иерархия](../../reference/ado-md-api/hierarchy-object-ado-md.md), [уровень](../../reference/ado-md-api/level-object-ado-md.md)и [элемент](../../reference/ado-md-api/member-object-ado-md.md).  
   
 ### <a name="dimensions"></a>Измерения  
  Измерения куба зависят от бизнес-сущностей и типов данных, которые должны быть смоделированы в базе данных. Как правило, каждое измерение является независимой точкой входа или механизмом для выбора данных.  
@@ -69,7 +69,7 @@ Hamburg, Munich, Stuttgart}
   
 -   Городов `= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
   
-### <a name="members"></a>Элементы  
+### <a name="members"></a>Члены  
  Элементы на конечном уровне иерархии не имеют дочерних элементов, а элементы на корневом уровне не имеют родителя. Все остальные члены имеют по крайней мере один родительский элемент и хотя бы один дочерний элемент. Например, частичный обход дерева иерархии в измерении Geography дает следующие связи типа «родители-потомки»:  
   
 -   `{All} (parent of) {Europe, North America}`  
@@ -85,8 +85,8 @@ Hamburg, Munich, Stuttgart}
  В этом примере также иллюстрируется другая характеристика: некоторые элементы уровня «неделя» в иерархии «год-неделя» не отображаются ни на одном уровне иерархии «год-квартал». Таким же иерархия не должна включать все элементы измерения.  
   
 ## <a name="see-also"></a>См. также  
- [Объектная модель объекты данных ActiveX (MD)](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
- [ADO (многомерные) (объекты данных ActiveX (MD))](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
- [Программирование с помощью объекты данных ActiveX (MD)](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
- [Использование ADO с объекты данных ActiveX (MD)](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)   
- [Работа с многомерными данными](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)
+ [Объектная модель объекты данных ActiveX (MD)](../../reference/ado-md-api/ado-md-object-model.md)   
+ [ADO (многомерные) (объекты данных ActiveX (MD))](./ado-multidimensional-ado-md.md)   
+ [Программирование с помощью объекты данных ActiveX (MD)](./programming-with-ado-md.md)   
+ [Использование ADO с объекты данных ActiveX (MD)](./using-ado-with-ado-md.md)   
+ [Работа с многомерными данными](./working-with-multidimensional-data.md)

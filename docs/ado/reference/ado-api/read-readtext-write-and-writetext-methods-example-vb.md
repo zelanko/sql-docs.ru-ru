@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 699b73f7-04f9-4d46-94b2-6cb12be6de56
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: de640c5348b43fa7da5ad7e10b2dfa404f9ff4b9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 32bc949827c943352808cb4981ef4f436e1b27d2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442546"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772663"
 ---
 # <a name="read-readtext-write-and-writetext-methods-example-vb"></a>Примеры методов Read, ReadText, Write и WriteText (Visual Basic)
-В этом примере показано, как считать содержимое текстового поля в текстовый [поток](../../../ado/reference/ado-api/stream-object-ado.md) и в двоичный **поток**. К другим свойствам и методам относятся " [Расположение](../../../ado/reference/ado-api/position-property-ado.md)", " [Размер](../../../ado/reference/ado-api/size-property-ado-parameter.md)", "набор [символов](../../../ado/reference/ado-api/charset-property-ado.md)" и " [сетеос](../../../ado/reference/ado-api/seteos-method.md)".  
+В этом примере показано, как считать содержимое текстового поля в текстовый [поток](./stream-object-ado.md) и в двоичный **поток**. К другим свойствам и методам относятся " [Расположение](./position-property-ado.md)", " [Размер](./size-property-ado-parameter.md)", "набор [символов](./charset-property-ado.md)" и " [сетеос](./seteos-method.md)".  
   
 ```  
 'BeginReadVB  
@@ -112,12 +112,12 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Свойство Charset (ADO)](../../../ado/reference/ado-api/charset-property-ado.md)   
- [Свойство «позиционирование» (ADO)](../../../ado/reference/ado-api/position-property-ado.md)   
- [Метод Read](../../../ado/reference/ado-api/read-method.md)   
- [ReadText, метод](../../../ado/reference/ado-api/readtext-method.md)   
- [Метод Сетеос](../../../ado/reference/ado-api/seteos-method.md)   
- [Свойство Size (поток ADO)](../../../ado/reference/ado-api/size-property-ado-stream.md)   
- [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
- [Метод Write](../../../ado/reference/ado-api/write-method.md)   
- [Метод WriteText](../../../ado/reference/ado-api/writetext-method.md)
+ [Свойство Charset (ADO)](./charset-property-ado.md)   
+ [Свойство «позиционирование» (ADO)](./position-property-ado.md)   
+ [Метод Read](./read-method.md)   
+ [ReadText, метод](./readtext-method.md)   
+ [Метод Сетеос](./seteos-method.md)   
+ [Свойство Size (поток ADO)](./size-property-ado-stream.md)   
+ [Объект Stream (ADO)](./stream-object-ado.md)   
+ [Метод Write](./write-method.md)   
+ [Метод WriteText](./writetext-method.md)

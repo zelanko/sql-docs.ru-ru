@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5ea8029b-eda4-490b-ae84-2ad036fb582f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b81fc704c78b620c1319aa592336aba0489a3d37
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d7924a27a8b04e430eb1d9d68d5de6e4d19c51a8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442746"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773273"
 ---
 # <a name="parentrow-property-ado"></a>Свойство ParentRow (ADO)
 Задает контейнер объекта OLE DB **строки** для объекта **адорекордконструктион** , чтобы родительский элемент строки был включен в объект **записи** ADO.  
@@ -44,4 +44,4 @@ HRESULT put_ParentRow([in] IUnknown* pParent);
  Этот метод свойства возвращает стандартные значения HRESULT, включая S_OK и E_FAIL.  
   
 ## <a name="applies-to"></a>Применение  
- [Интерфейс ADORecordConstruction](../../../ado/reference/ado-api/adorecordconstruction-interface.md)
+ [Интерфейс ADORecordConstruction](./adorecordconstruction-interface.md)

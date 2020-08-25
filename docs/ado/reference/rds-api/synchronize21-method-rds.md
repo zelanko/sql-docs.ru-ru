@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6b35f136-9d9a-4bdd-8144-67decfd3c4e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4627ac4b67e31861ff91cb516076a561a7a315e2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b09994dba988d94c2e0f0f7cd9f68eef5790dde0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438566"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767323"
 ---
 # <a name="synchronize21-method-rds"></a>Метод Synchronize21 (служба удаленных рабочих столов)
 Синхронизирует заданный набор записей с базой данных, указанной в строке подключения для использования с ADO 2,1.  
@@ -62,9 +62,7 @@ object.Synchronize21(ConnectionString As String, HandlerString As String, lSynch
  Параметр *хандлерстринг* может иметь значение null. Что происходит в этом случае, зависит от настройки сервера RDS. Строка обработчика "МСДФМАП. Handler" указывает, что следует использовать предоставляемый корпорацией Майкрософт обработчик (Msdfmap.dll). Строка обработчика "МАСДФМАП. Handler sample.ini" указывает, что следует использовать обработчик Msdfmap.dll и что аргумент "sample.ini" должен передаваться в обработчик. Msdfmap.dll будет интерпретировать аргумент как направление использования sample.ini для проверки соединения и строк запроса.  
   
 > [!NOTE]
->  Метод **Synchronize21** — это просто версия [метода Synchronize (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md). Когда необходимо использовать метод **Synchronize** для взаимодействия с ADO 2,1, вместо него можно вызвать метод **Synchronize21** . Возможности метода **Synchronize** в ADO 2,5 и более поздних версиях представляют собой надмножество возможностей, предоставляемых для того же метода в ADO 2,1.  
+>  Метод **Synchronize21** — это просто версия [метода Synchronize (RDS)](./synchronize-method-rds.md). Когда необходимо использовать метод **Synchronize** для взаимодействия с ADO 2,1, вместо него можно вызвать метод **Synchronize21** . Возможности метода **Synchronize** в ADO 2,5 и более поздних версиях представляют собой надмножество возможностей, предоставляемых для того же метода в ADO 2,1.  
   
 ## <a name="applies-to"></a>Применение  
- [Объект DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
-
+ [Объект DataFactory (RDSServer)](./datafactory-object-rdsserver.md)

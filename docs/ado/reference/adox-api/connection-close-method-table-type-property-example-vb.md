@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f88e7a3b-19ed-46e2-b2ce-3b611d9b8166
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a77ff78be14566f472af277459b2bdaa52aad748
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0b651389b4badd57e6a76b3b38c47c34cc814706
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440236"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770913"
 ---
 # <a name="connection-close-method-table-type-property-example-vb"></a>Примеры метода Close для объекта Connection и свойства Type для объекта Table (Visual Basic)
-Если задать для свойства [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) значение **Nothing** , соединение с каталогом должно быть закрыто. Связанные коллекции будут пустыми. Все объекты, созданные из объектов схемы в каталоге, будут потеряны. Все свойства этих объектов, которые были кэшированы, будут по-прежнему доступны, но попытка чтения свойств, требующих вызова поставщика, завершится ошибкой.  
+Если задать для свойства [ActiveConnection](./activeconnection-property-adox.md) значение **Nothing** , соединение с каталогом должно быть закрыто. Связанные коллекции будут пустыми. Все объекты, созданные из объектов схемы в каталоге, будут потеряны. Все свойства этих объектов, которые были кэшированы, будут по-прежнему доступны, но попытка чтения свойств, требующих вызова поставщика, завершится ошибкой.  
   
 ```  
 ' BeginCloseConnectionVB  
@@ -67,17 +67,17 @@ End Sub
 ' EndCloseConnectionVB  
 ```  
   
- Закрытие объекта [соединения](../../../ado/reference/ado-api/connection-object-ado.md) , который использовался для открытия каталога, должно иметь тот же результат, что и установка свойства **ActiveConnection** в значение **Nothing**.  
+ Закрытие объекта [соединения](../ado-api/connection-object-ado.md) , который использовался для открытия каталога, должно иметь тот же результат, что и установка свойства **ActiveConnection** в значение **Nothing**.  
   
 ```  
 Attribute VB_Name = "Connection"  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Свойство ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [Коллекция Columns (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Объект Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
- [Коллекция Tables (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
- [Свойство Type (Table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)
+## <a name="see-also"></a>См. также  
+ [Свойство ActiveConnection (ADOX)](./activeconnection-property-adox.md)   
+ [Объект каталога (ADOX)](./catalog-object-adox.md)   
+ [Объект Column (ADOX)](./column-object-adox.md)   
+ [Коллекция Columns (ADOX)](./columns-collection-adox.md)   
+ [Объект Table (ADOX)](./table-object-adox.md)   
+ [Коллекция Tables (ADOX)](./tables-collection-adox.md)   
+ [Свойство Type (Table) (ADOX)](./type-property-table-adox.md)

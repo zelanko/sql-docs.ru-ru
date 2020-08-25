@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed5c4a24-9804-4c85-817e-317652acb9b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 18365d26c9b46fb651d68291dc5fa026f23e3bfb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 616b82b397694e4db41f709080dc4beafd945878
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451916"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759024"
 ---
 # <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>Шаг 5. DataControl теперь можно использовать (учебник по RDS)
 Возвращаемый объект **набора записей** доступен для использования. Вы можете просматривать, перемещать или изменять его так же, как любой другой **набор записей**. Действия, которые можно выполнять с **набором записей** , зависят от среды. Visual Basic и Visual C++ имеют визуальные элементы управления, которые могут напрямую или косвенно использовать **набор записей** с помощью включения элемента управления данными.  
@@ -26,7 +26,7 @@ ms.locfileid: "88451916"
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Например, при отображении веб-страницы в Microsoft Internet Explorer может потребоваться отобразить данные объекта **набора записей** в визуальном элементе управления. Визуальные элементы управления на веб-странице не могут напрямую обращаться к объекту **Recordset** . Однако они могут получить доступ к объекту **Recordset** через [RDS. Элемент управления](../../../ado/reference/rds-api/datacontrol-object-rds.md). **RDS. Элемент управления** данных может использоваться визуальным элементом управления, если его свойство [саурцерекордсет](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) имеет значение Object **Recordset** .  
+ Например, при отображении веб-страницы в Microsoft Internet Explorer может потребоваться отобразить данные объекта **набора записей** в визуальном элементе управления. Визуальные элементы управления на веб-странице не могут напрямую обращаться к объекту **Recordset** . Однако они могут получить доступ к объекту **Recordset** через [RDS. Элемент управления](../../reference/rds-api/datacontrol-object-rds.md). **RDS. Элемент управления** данных может использоваться визуальным элементом управления, если его свойство [саурцерекордсет](../../reference/rds-api/recordset-sourcerecordset-properties-rds.md) имеет значение Object **Recordset** .  
   
  Для объекта визуального элемента управления параметр **DATASRC** должен иметь значение **RDS. Элемент управления**данных и его свойство **DATAFLD** , установленное в поле объекта **набора записей** (столбец).  
   
@@ -44,6 +44,6 @@ Sub RDSTutorial5()
 ...  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Шаг 6. изменения, отправляемые на сервер (учебник по RDS)](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)   
- [Учебник по RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
+## <a name="see-also"></a>См. также  
+ [Шаг 6. изменения, отправляемые на сервер (учебник по RDS)](./step-6-changes-are-sent-to-the-server-rds-tutorial.md)   
+ [Учебник по RDS (VBScript)](./rds-tutorial-vbscript.md)

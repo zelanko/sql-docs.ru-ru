@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: b35d2f4a-449c-4170-aab6-9ff88c890043
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0b2d5e2b34c5a82d222ee7018d0751cb7ec5f092
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0cb6a0695405bc8a3d8a96045b67efcadff308b3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438946"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768113"
 ---
 # <a name="internettimeout-property-example-vb"></a>Пример свойства InternetTimeout (Visual Basic)
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- В этом примере демонстрируется свойство [InternetTimeout](../../../ado/reference/rds-api/internettimeout-property-rds.md) , которое существует в объектах « [элемент управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) данным» и « [пространство](../../../ado/reference/rds-api/dataspace-object-rds.md) ». В этом примере используется объект **элемента управления** DataObject и устанавливается время ожидания равным 20 секундам.  
+ В этом примере демонстрируется свойство [InternetTimeout](./internettimeout-property-rds.md) , которое существует в объектах « [элемент управления](./datacontrol-object-rds.md) данным» и « [пространство](./dataspace-object-rds.md) ». В этом примере используется объект **элемента управления** DataObject и устанавливается время ожидания равным 20 секундам.  
   
 ```  
 'BeginInternetTimeoutVB  
@@ -76,9 +76,7 @@ End Sub
 'EndInternetTimeoutVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект элемента управления (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Объект Space (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
- [Свойство InternetTimeout (служба удаленных рабочих столов)](../../../ado/reference/rds-api/internettimeout-property-rds.md)
-
-
+## <a name="see-also"></a>См. также  
+ [Объект элемента управления (RDS)](./datacontrol-object-rds.md)   
+ [Объект Space (RDS)](./dataspace-object-rds.md)   
+ [Свойство InternetTimeout (служба удаленных рабочих столов)](./internettimeout-property-rds.md)

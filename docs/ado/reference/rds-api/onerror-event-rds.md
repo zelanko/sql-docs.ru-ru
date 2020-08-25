@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b01cbc62-fbd7-4068-b16c-8b0f80a05887
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 86bdb1cd343ff0c8b3375760c843ef1c4d93c2dc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fb9ab9b7b97875ee62fe96a39ff8d34591810560
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438896"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767953"
 ---
 # <a name="onerror-event-rds"></a>Событие onError (служба удаленных рабочих столов)
 Событие **OnError** вызывается при возникновении ошибки во время операции.  
@@ -48,10 +48,8 @@ onError SCode, Description, Source, CancelDisplay
  **Логическое** значение, которое, если установлено значение **true**, предотвращает отображение ошибки в диалоговом окне.  
   
 ## <a name="applies-to"></a>Применение  
- [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [Объект DataControl (служба удаленных рабочих столов)](./datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>См. также:  
- [Пример модели событий ADO (Visual c++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [Общие сведения об обработчике событий ADO](../../../ado/guide/data/ado-event-handler-summary.md)
-
-
+## <a name="see-also"></a>См. также  
+ [Пример модели событий ADO (Visual c++)](../ado-api/ado-events-model-example-vc.md)   
+ [Общие сведения об обработчике событий ADO](../../guide/data/ado-event-handler-summary.md)
