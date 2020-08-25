@@ -4,17 +4,17 @@ description: В этом руководстве показано, как соз�
 ms.custom: seodec18
 ms.date: 12/10/2019
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.reviewer: alayu, maghan, sstein
 ms.topic: tutorial
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 668e2f4292fb20a85329bbb0716e6945d44e8e02
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d84cba412c4f05cb6247da6aae4afbc2975f5661
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719044"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88745699"
 ---
 # <a name="tutorial-create-an-azure-data-studio-extension"></a>Руководство по Создание расширения Azure Data Studio
 

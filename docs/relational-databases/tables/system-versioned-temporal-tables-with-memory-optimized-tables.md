@@ -12,16 +12,18 @@ ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 198cb23fdd7fe76b7777bc22b63ace4f1dedcc2b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f8aaedc07aef085f7245346adc5a8e04302be909
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473049"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646640"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>темпоральные таблицы с системным управлением версиями и таблицы с оптимизацией памяти
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 Темпоральные таблицы с системным управлением версиями для [таблиц, оптимизированных для памяти](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) — это экономичное решение для сценариев, в которых требуется [аудит и анализ на момент времени данных](https://msdn.microsoft.com/library/mt631669.aspx) для данных, собранных из рабочих нагрузок In-Memory OLTP. Они обеспечивают высокую скорость обработки транзакций, параллелизм без блокировки и в то же время возможность хранения большого объема данных журнала, которые легко можно запросить.
 

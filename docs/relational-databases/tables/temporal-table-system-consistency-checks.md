@@ -12,16 +12,18 @@ ms.assetid: ec081d42-57e4-43c7-9e1c-317ba8f23437
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8eac6400caf5a1d94e3b23aee4f59db252619eab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c5fb93aa131d856f0a1aeaad3f6da1265b649357
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473035"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646004"
 ---
 # <a name="temporal-table-system-consistency-checks"></a>Проверка согласованности системной темпоральной таблицы
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 При использовании темпоральных таблиц система выполняет ряд проверок согласованности. Они необходимы для обеспечения соответствия схемы требованиям, чтобы данные в таблице были и оставались согласованными. Кроме того, проверки темпоральных таблиц были добавлены в инструкцию **DBCC CHECKCONSTRAINTS** .
 

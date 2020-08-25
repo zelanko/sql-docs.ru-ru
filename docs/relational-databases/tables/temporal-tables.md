@@ -12,16 +12,18 @@ ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3543738d8987beaeb6eafc69a446ab63e9b0c27
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a12607d7279b8a7789d6365c11825608f57ad628
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463757"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646084"
 ---
 # <a name="temporal-tables"></a>Темпоральные таблицы
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 В SQL Server 2016 добавлена поддержка темпоральных таблиц (темпоральных таблиц с системным управлением версиями). Являясь встроенным компонентом базы данных, эти таблицы предоставляют сведения о хранящихся в них данных на любой, а не только на текущий момент времени. Темпоральные функции базы данных впервые появились в ANSI SQL 2011.
 

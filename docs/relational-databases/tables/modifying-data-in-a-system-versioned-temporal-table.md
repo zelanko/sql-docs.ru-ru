@@ -12,16 +12,18 @@ ms.assetid: 5f398470-c531-47b5-84d5-7c67c27df6e5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 654648ba7206c3d5ce01a715a0ee24eae2d3212b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 79ae1efd305215d0e64287e6c0a7ad7aa9a70a36
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419008"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646457"
 ---
 # <a name="modifying-data-in-a-system-versioned-temporal-table"></a>Изменение данных в темпоральной таблице с системным управлением версиями
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 Данные в темпоральной таблице с системным управлением версиями изменяются с помощью инструкций DML. Но нужно помнить об одном важном отличии: данные в столбце периода нельзя изменять напрямую. Когда данные изменяются, они версионируются (предыдущая версия каждой измененной строки добавляется в таблицу журнала). При удалении данных используется логическое удаление — из текущей таблицы строка перемещается в таблицу журнала (строка не удаляется безвозвратно).
 

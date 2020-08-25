@@ -12,16 +12,18 @@ ms.assetid: 1c1fc682-bf5b-4096-a0ff-3235d71c205a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 432c61f69e8d03126d78113989c83172b8ac2e3d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 83a7cdd151b958a7840696c09af12dcf2b64d319
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473074"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645855"
 ---
 # <a name="creating-a-memory-optimized-system-versioned-temporal-table"></a>Создание оптимизированной для памяти темпоральной таблицы с системным управлением версиями
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 Подобно созданию таблицы журнала на диске, можно создать темпоральную таблицу, оптимизированную для памяти, несколькими способами.
 

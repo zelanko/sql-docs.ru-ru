@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6082c8ffbdf2a2eaba1d24f64a85cfcbed393984
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 79625148ed44c2003c74d393502129fe15a112f5
+ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418978"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564644"
 ---
 # <a name="use-column-sets"></a>Использование наборов столбцов
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   В таблицах, использующих разреженные столбцы, можно назначить набор столбцов, который будет возвращать все разреженные столбцы в таблице. Набор столбцов — это нетипизированное XML-представление, которое объединяет на выходе все разреженные столбцы таблицы в структурированном виде. Набор столбцов похож на вычисляемые столбцы тем, что набор столбцов физически не хранится в таблице. Набор столбцов отличается от вычисляемого столбца тем, что он может быть напрямую обновлен.  
   
@@ -258,7 +258,7 @@ WHERE DocID = 3 ;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование разреженных столбцов](../../relational-databases/tables/use-sparse-columns.md)  
   
   
