@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ee70338b5a46ec60d808e489d982fd80692c5d1d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400624"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Включение или выключение устройства для аналитики системы платформы
@@ -27,7 +27,7 @@ ms.locfileid: "74400624"
   
 ## <a name="power-off-the-appliance"></a><a name="PowerOff"></a>Выключение устройства  
   
-### <a name="before-you-begin"></a>Перед началом  
+### <a name="before-you-begin"></a>Подготовка к работе  
 Перед выключением устройства необходимо завершить все действия на устройстве. Чтобы завершить все действия:  
   
 -   Используйте страницу **сеансы** консоли администрирования для обнаружения текущих пользователей. Свяжитесь с ними и попросите их выйти из системы.  
@@ -41,7 +41,7 @@ ms.locfileid: "74400624"
   
 1.  Подключитесь к узлу управления PDW (**_PDW_region_-CTL01** ) и войдите в систему с учетной записью администратора домена устройства аналитики.  
   
-2.  Выполните `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe` команду, чтобы открыть **Configuration Manager**.  
+2.  Выполните команду, `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe` чтобы открыть **Configuration Manager**.  
   
 3.  В Configuration Manager в меню **топологии параллельного хранилища данных** перейдите на вкладку **состояние служб** и нажмите кнопку **Отключить регион** , чтобы отключить службы PDW.   
   
@@ -107,6 +107,6 @@ ms.locfileid: "74400624"
 ### <a name="to-verify-the-appliance-health"></a>Проверка работоспособности устройства  
 После запуска устройства откройте **консоль администрирования** и проверьте на странице работоспособности наличие предупреждений, которые могут указывать на состояние сбоя. Дополнительные сведения см. [в разделе мониторинг устройства с помощью консоли администрирования &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md).  
   
-## <a name="see-also"></a>См. также:  
-[Задачи управления устройством &#40;&#41;платформы аналитики](appliance-management-tasks.md)  
+## <a name="see-also"></a>См. также  
+[Задачи управления устройством &#40;&#41;платформы аналитики ](appliance-management-tasks.md)  
   

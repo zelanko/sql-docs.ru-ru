@@ -22,21 +22,21 @@ helpviewer_keywords:
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8ec5c6812e2800825677cd844756d1dd9325729
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a7cfeeb8d91420ec25cd6dd196b260ad8222c086
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442066"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777423"
 ---
 # <a name="sort-property"></a>Свойство Sort
-Указывает одно или несколько имен полей, в которых сортируется [набор записей](../../../ado/reference/ado-api/recordset-object-ado.md) , а также сведения о том, сортируются ли каждое поле в порядке возрастания или убывания.  
+Указывает одно или несколько имен полей, в которых сортируется [набор записей](./recordset-object-ado.md) , а также сведения о том, сортируются ли каждое поле в порядке возрастания или убывания.  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает **строковое** значение, указывающее имена полей в **наборе записей** , по которому выполняется сортировка. Каждое имя разделяются запятыми, и при необходимости следует указать пустое значение и ключевое слово **ASC**, которое сортирует поле в возрастающем порядке или **DESC**, что сортирует поле в убывающем порядке. По умолчанию, если ключевое слово не указано, поле сортируется в возрастающем порядке.  
   
 ## <a name="remarks"></a>Remarks  
- Для этого свойства необходимо, чтобы свойство [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) было установлено в значение **адусеклиент**. Для каждого поля, указанного в свойстве **Sort** , будет создан временный индекс, если индекс еще не существует.  
+ Для этого свойства необходимо, чтобы свойство [CursorLocation](./cursorlocation-property-ado.md) было установлено в значение **адусеклиент**. Для каждого поля, указанного в свойстве **Sort** , будет создан временный индекс, если индекс еще не существует.  
   
  Операция сортировки эффективна, поскольку данные физически не переупорядочиваются, но доступ к ним осуществляется в порядке, указанном индексом.  
   
@@ -51,11 +51,11 @@ ms.locfileid: "88442066"
  Ни одно поле не может называться "ASC" или "DESC", так как эти имена конфликтуют с ключевыми словами **ASC** и **DESC**. Можно создать псевдоним для поля с конфликтующим именем с помощью ключевого слова **as** в запросе, возвращающем **набор записей**.  
   
 ## <a name="applies-to"></a>Применение  
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Объект Recordset (ADO)](./recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
- [Пример свойства Sort (Visual Basic)](../../../ado/reference/ado-api/sort-property-example-vb.md)   
- [Пример свойства Sort (Visual c++)](../../../ado/reference/ado-api/sort-property-example-vc.md)   
- [Свойство optimize — Dynamic (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
- [Свойство SortColumn (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)   
- [Свойство SortDirection (служба удаленных рабочих столов)](../../../ado/reference/rds-api/sortdirection-property-rds.md)
+## <a name="see-also"></a>См. также  
+ [Пример свойства Sort (Visual Basic)](./sort-property-example-vb.md)   
+ [Пример свойства Sort (Visual c++)](./sort-property-example-vc.md)   
+ [Свойство optimize — Dynamic (ADO)](./optimize-property-dynamic-ado.md)   
+ [Свойство SortColumn (RDS)](../rds-api/sortcolumn-property-rds.md)   
+ [Свойство SortDirection (служба удаленных рабочих столов)](../rds-api/sortdirection-property-rds.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5a81f8b3e8acbe09fed0bac975158a9d5ef26a9e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d8633a6dd9ef94ff525c99b838de6dcec937d292
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454056"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806554"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Обзор поставщик OLE DB для Oracle (Майкрософт)
 > [!IMPORTANT]
@@ -29,13 +29,13 @@ ms.locfileid: "88454056"
  Поставщик OLE DB для Oracle (Майкрософт) позволяет ADO получать доступ к базам данных Oracle.
 
 ## <a name="connection-string-parameters"></a>Параметры строки соединения
- Чтобы подключиться к поставщику, задайте для аргумента *поставщика* свойства [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) значение:
+ Чтобы подключиться к поставщику, задайте для аргумента *поставщика* свойства [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md) значение:
 
 ```vb
 MSDAORA
 ```
 
- При чтении свойства [поставщика](../../../ado/reference/ado-api/provider-property-ado.md) также будет возвращена эта строка.
+ При чтении свойства [поставщика](../../reference/ado-api/provider-property-ado.md) также будет возвращена эта строка.
 
  Если запрос на соединение с набором ключей или динамическим курсором выполняется в базе данных Oracle, возникает ошибка. Oracle поддерживает только статический курсор только для чтения.
 
@@ -59,9 +59,9 @@ MSDAORA
 >  При подключении к поставщику источника данных, который поддерживает проверку подлинности Windows, следует указать **Trusted_Connection = Yes** или **Integrated Security = SSPI** вместо сведений об идентификаторе пользователя и пароле в строке подключения.
 
 ## <a name="provider-specific-connection-parameters"></a>Параметры подключения, зависящие от поставщика
- Поставщик поддерживает несколько параметров соединения, зависящих от поставщика, помимо тех, которые определены в ADO. Как и в случае со свойствами соединения ADO, эти свойства, зависящие от поставщика, можно задать через коллекцию [свойств](../../../ado/reference/ado-api/properties-collection-ado.md) [соединения](../../../ado/reference/ado-api/connection-object-ado.md) или как часть **ConnectionString**.
+ Поставщик поддерживает несколько параметров соединения, зависящих от поставщика, помимо тех, которые определены в ADO. Как и в случае со свойствами соединения ADO, эти свойства, зависящие от поставщика, можно задать через коллекцию [свойств](../../reference/ado-api/properties-collection-ado.md) [соединения](../../reference/ado-api/connection-object-ado.md) или как часть **ConnectionString**.
 
- Эти параметры полностью описаны в [справочнике по программисту OLE DB](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8). [Индекс динамического свойства ADO](../../../ado/reference/ado-api/ado-dynamic-property-index.md) обеспечивает перекрестную ссылку между этими именами параметров и соответствующими свойствами OLE DB.
+ Эти параметры полностью описаны в [справочнике по программисту OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85)). [Индекс динамического свойства ADO](../../reference/ado-api/ado-dynamic-property-index.md) обеспечивает перекрестную ссылку между этими именами параметров и соответствующими свойствами OLE DB.
 
 |Параметр|Описание|
 |---------------|-----------------|
@@ -71,5 +71,5 @@ MSDAORA
 |**Командная строка**.|Указывает, следует ли запрашивать пользователя во время установки соединения.|
 |**Расширенные свойства**|Строка, содержащая сведения о расширенном соединении, зависящие от поставщика. Это свойство используется только для специфичных для поставщика сведений о соединении, которые не могут быть описаны с помощью механизма свойств.|
 
-## <a name="see-also"></a>См. также:
- Property ( [ADO) свойство](../../../ado/reference/ado-api/connectionstring-property-ado.md) [поставщика](../../../ado/reference/ado-api/provider-property-ado.md) (ADO) [объект Recordset Object (](../../../ado/reference/ado-api/recordset-object-ado.md) ADO)
+## <a name="see-also"></a>См. также
+ Property ( [ADO) свойство](../../reference/ado-api/connectionstring-property-ado.md) [поставщика](../../reference/ado-api/provider-property-ado.md) (ADO) [объект Recordset Object (](../../reference/ado-api/recordset-object-ado.md) ADO)

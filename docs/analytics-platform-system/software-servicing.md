@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4325dfa9c16edba12c2bba694b47c1b0875c7c6f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400316"
 ---
 # <a name="software-servicing-in-analytics-platform-system"></a>Обслуживание программного обеспечения в системе аналитики платформы
@@ -31,7 +31,7 @@ ms.locfileid: "74400316"
 ## <a name="software-servicing-topics"></a>Разделы по обслуживанию программного обеспечения  
 В следующих разделах описывается управление обслуживанием программного обеспечения на устройстве.  
   
--   [Загрузите и примените обновления Майкрософт &#40;&#41;платформы аналитики](download-and-apply-microsoft-updates.md)  
+-   [Загрузите и примените обновления Майкрософт &#40;&#41;платформы аналитики ](download-and-apply-microsoft-updates.md)  
   
 -   [Удаление центра обновления Майкрософт &#40;система аналитики&#41;](uninstall-microsoft-updates.md)  
   

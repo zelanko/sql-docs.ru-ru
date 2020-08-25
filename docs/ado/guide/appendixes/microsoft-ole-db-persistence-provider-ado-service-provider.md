@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9a1211a84bf42afdb406c085e57f5bb36f48a168
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7010c2dc4be6207397ee5e57fc999c3cacbba0b7
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454116"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806608"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Общие сведения о поставщике сохраняемости Microsoft OLE DB
-Поставщик сохраняемости Microsoft OLE DB позволяет сохранить объект [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) в файл, а затем восстановить этот объект **набора записей** из файла. Сведения о схеме, данные и ожидающие изменения сохраняются.
+Поставщик сохраняемости Microsoft OLE DB позволяет сохранить объект [набора записей](../../reference/ado-api/recordset-object-ado.md) в файл, а затем восстановить этот объект **набора записей** из файла. Сведения о схеме, данные и ожидающие изменения сохраняются.
 
  **Набор записей** можно сохранить в формате собственного расширенной таблицы данных (адтг) или в формате Open язык XML (XML).
 
@@ -42,14 +42,14 @@ ms.locfileid: "88454116"
 |E_BADSTREAM|Открытый файл имеет недопустимый формат (то есть формат не АДТГ или XML).|
 |E_CANTPERSISTROWSET|Сохраненный объект **набора записей** имеет характеристики, которые не позволяют сохранить его.|
 
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Remarks
  Поставщик сохраняемости Microsoft OLE DB не предоставляет динамические свойства.
 
  В настоящее время невозможно сохранить только параметризованные иерархические объекты **Recordset** .
 
- Дополнительные сведения о постоянном хранении объектов **набора записей** см. в разделе [Сохранение набора записей](../../../ado/guide/data/more-about-recordset-persistence.md).
+ Дополнительные сведения о постоянном хранении объектов **набора записей** см. в разделе [Сохранение набора записей](../data/more-about-recordset-persistence.md).
 
  Если для открытия **набора записей** используется поток, не должны быть заданы параметры, отличные от *исходного* параметра метода **Open** .
 
 ## <a name="see-also"></a>См. также
-[Поставщик сохраняемости Microsoft OLE DB (поставщик служб ADO)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)
+[Поставщик сохраняемости Microsoft OLE DB (поставщик служб ADO)]()

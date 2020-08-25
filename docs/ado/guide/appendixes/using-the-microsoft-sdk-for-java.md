@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e6119433c1a5c52e07035d97878155123d787e26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 302cca77222454ac6fa73c69683c641e841acdda
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453976"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806489"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>Использование пакета Microsoft SDK для Java
 
@@ -32,7 +32,7 @@ ms.locfileid: "88453976"
   
  Этот механизм считывает библиотеку типов ADO и создает классы, которые можно создать в приложении. Он создает эти классы в следующем расположении: \\<каталог Windows \> \Java\trustlib\msado15.  
   
- Создание приложения ADO в Java с помощью пакета Microsoft SDK для Java является принципиально идентичным с точки зрения исходного кода с помощью мастера библиотеки типов Java. Пример кода см. в разделе [оболочки классов ADO Java](../../../ado/guide/appendixes/ado-java-class-wrappers.md). Единственная реальная разница заключается в том, как создать классы-оболочки в первую очередь, как показано в следующих шагах.  
+ Создание приложения ADO в Java с помощью пакета Microsoft SDK для Java является принципиально идентичным с точки зрения исходного кода с помощью мастера библиотеки типов Java. Пример кода см. в разделе [оболочки классов ADO Java](./ado-java-class-wrappers.md). Единственная реальная разница заключается в том, как создать классы-оболочки в первую очередь, как показано в следующих шагах.  
   
 ### <a name="to-create-an-ado-project-with-the-microsoft-sdk-for-java"></a>Создание проекта ADO с помощью пакета Microsoft SDK для Java  
   
@@ -50,5 +50,5 @@ ms.locfileid: "88453976"
   
 3.  Чтобы использовать эти файлы, откройте проект в Visual J++. В меню **проект** выберите команду **Добавить в проект**. Выберите **файлы**и добавьте все. Файлы JAVA, созданные в каталоге trustlib\msado15 для вашего проекта.  
   
-## <a name="see-also"></a>См. также:  
- [Классы-оболочки Java для объектов ADO](../../../ado/guide/appendixes/ado-java-class-wrappers.md)   
+## <a name="see-also"></a>См. также  
+ [Классы-оболочки Java для объектов ADO](./ado-java-class-wrappers.md)

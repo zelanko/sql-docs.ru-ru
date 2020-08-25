@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5cbed66f53189668518e04848002ae69adb8c614
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400920"
 ---
 # <a name="appliance-physical-components---analytics-platform-system"></a>Физические компоненты устройства — системная платформа аналитики
@@ -79,8 +79,8 @@ Virtual Machine Manager (VMM) выполняется на виртуальной
 *appliance_domain*-DAS01 с помощью *appliance_domain*-DAS03  
 Это непосредственно подключенное хранилище, подключенное к вычисленным узлам. Компания HP имеет один DAS для каждого из двух Вычисленийных узлов. В Dell и тактах имеется один DAS для каждого из трех вычислений.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 <!-- MISSING LINKS [Hardware Configurations &#40;Analytics Platform System&#41;](../architecture/hardware-configurations.md)  -->  
-[Конфигурация устройства &#40;&#41;платформа системы аналитики](appliance-configuration.md)  
-[Задачи управления устройством &#40;&#41;платформы аналитики](appliance-management-tasks.md)  
+[Конфигурация устройства &#40;&#41;платформа системы аналитики ](appliance-configuration.md)  
+[Задачи управления устройством &#40;&#41;платформы аналитики ](appliance-management-tasks.md)  
   

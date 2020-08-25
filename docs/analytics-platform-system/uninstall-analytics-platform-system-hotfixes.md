@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ef6929aeb06c9472eb3ff210de016117a9636ded
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74399764"
 ---
 # <a name="uninstall-analytics-platform-system-hotfixes"></a>Удаление исправлений для системы аналитики платформы 
@@ -36,7 +36,7 @@ ms.locfileid: "74399764"
   
 2.  Чтобы открыть командную строку, используйте команду Запуск от имени администратора.  
   
-3.  Перейдите в `C:\PDWINST\Patches\<kbarticle>\media` каталог, *<kbarticle>* где — номер статьи базы знаний для удаляемого исправления.  
+3.  Перейдите в каталог, `C:\PDWINST\Patches\<kbarticle>\media` где *<kbarticle>* — номер статьи базы знаний для удаляемого исправления.  
   
     ```  
     cd /d c:\PDWINST\Patches\<kbarticle>\media  
@@ -48,8 +48,8 @@ ms.locfileid: "74399764"
     setup.exe /action="removepatch" /DomainAdminPassword="<password>"  
     ```  
   
-## <a name="see-also"></a>См. также:  
-[Загрузите и примените обновления Майкрософт &#40;&#41;платформы аналитики](download-and-apply-microsoft-updates.md)  
+## <a name="see-also"></a>См. также  
+[Загрузите и примените обновления Майкрософт &#40;&#41;платформы аналитики ](download-and-apply-microsoft-updates.md)  
 [Удаление центра обновления Майкрософт &#40;система аналитики&#41;](uninstall-microsoft-updates.md)  
 [Применить исправления системы аналитики к системе &#40;Analytics Platform&#41;](apply-analytics-platform-system-hotfixes.md)  
 [Система обслуживания программного обеспечения &#40;Analytics Platform&#41;](software-servicing.md)  

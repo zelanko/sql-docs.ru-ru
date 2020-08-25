@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e006add96d3bcb21c652ce33f7aab749b2bc8d54
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 98719e10e837b83ac522743e120f037b1fedbd99
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453836"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806444"
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>Создание экземпляра события ADO: ADO и WFC
 Объекты ADO для классов Windows Foundation (ADO/WFC) построены на модели событий ADO и представляют упрощенный прикладной программный интерфейс. Как правило, ADO/WFC перехватывает события ADO, объединяет параметры событий в один класс событий, а затем вызывает обработчик событий.  
@@ -53,7 +53,7 @@ ms.locfileid: "88453836"
     public void onConnectComplete(Object sender,ConnectionEvent e)  
     ```  
   
-     Первый аргумент — это тип объекта, который отправил событие ([соединение](../../../ado/reference/ado-api/connection-object-ado.md) или [набор записей](../../../ado/reference/ado-api/recordset-object-ado.md)), а второй аргумент — объект события ADO/WFC (**коннектионевент** или **рекордсетевент**).  
+     Первый аргумент — это тип объекта, который отправил событие ([соединение](../../reference/ado-api/connection-object-ado.md) или [набор записей](../../reference/ado-api/recordset-object-ado.md)), а второй аргумент — объект события ADO/WFC (**коннектионевент** или **рекордсетевент**).  
   
      Сигнатура обработчика событий проще, чем событие ADO. Тем не менее необходимо понимать модель событий ADO, чтобы узнать, какие параметры применяются к событию, и как реагировать на него.  
   
@@ -61,9 +61,9 @@ ms.locfileid: "88453836"
   
 7.  После завершения обработки удалите обработчик из списка обработчиков событий ADO/WFC. Используйте метод с именем, например **removeOn**_EventName_(*handler*).  
   
-## <a name="see-also"></a>См. также:  
- [Сводка по обработчику событий ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
- [ADO — индекс синтаксиса WFC](../../../ado/reference/ado-api/ado-wfc-syntax-index.md)   
- [Параметры события](../../../ado/guide/data/event-parameters.md)   
- [Совместная работа обработчиков событий](../../../ado/guide/data/how-event-handlers-work-together.md)   
- [Типы событий](../../../ado/guide/data/types-of-events.md)
+## <a name="see-also"></a>См. также  
+ [Сводка по обработчику событий ADO](./ado-event-handler-summary.md)   
+ [ADO — индекс синтаксиса WFC](../../reference/ado-api/ado-wfc-syntax-index.md)   
+ [Параметры события](./event-parameters.md)   
+ [Совместная работа обработчиков событий](./how-event-handlers-work-together.md)   
+ [Типы событий](./types-of-events.md)

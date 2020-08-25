@@ -16,23 +16,23 @@ helpviewer_keywords:
 ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ceeb9abb3b14441e6f0e8194d07836cf5d482492
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dbdc0b724d96cf541eedb7e26f8b652a280e829a
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453186"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805837"
 ---
 # <a name="more-about-recordset-persistence"></a>Дополнительные сведения о сохраняемости набора записей
-Объект ADO Recordset поддерживает хранение содержимого объекта **набора записей** в файле с помощью метода [Save](../../../ado/reference/ado-api/save-method.md) . Сохраняемый файл может находиться на локальном диске, сервере или в качестве URL-адреса на веб – сайте. Позднее файл можно восстановить с помощью метода [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) объекта **Recordset** или метода [EXECUTE](../../../ado/reference/ado-api/execute-method-ado-connection.md) объекта [Connection](../../../ado/reference/ado-api/connection-object-ado.md) .  
+Объект ADO Recordset поддерживает хранение содержимого объекта **набора записей** в файле с помощью метода [Save](../../reference/ado-api/save-method.md) . Сохраняемый файл может находиться на локальном диске, сервере или в качестве URL-адреса на веб – сайте. Позднее файл можно восстановить с помощью метода [Open](../../reference/ado-api/open-method-ado-recordset.md) объекта **Recordset** или метода [EXECUTE](../../reference/ado-api/execute-method-ado-connection.md) объекта [Connection](../../reference/ado-api/connection-object-ado.md) .  
   
- Кроме того, метод [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) преобразует объект **набора записей** в форму, в которой столбцы и строки разделяются заданными символами.  
+ Кроме того, метод [GetString](../../reference/ado-api/getstring-method-ado.md) преобразует объект **набора записей** в форму, в которой столбцы и строки разделяются заданными символами.  
   
- Чтобы сохранить **набор записей**, начните с преобразования его в форму, которая может храниться в файле. Объекты **набора записей** могут храниться в собственном формате Advanced Data ТАБЛЕГРАМ (адтг) или в формате Open язык XML (XML). Примеры АДТГ приведены в следующем разделе. Дополнительные сведения о сохраняемости XML см. [в разделе Сохранение записей в формате XML](../../../ado/guide/data/persisting-records-in-xml-format.md).  
+ Чтобы сохранить **набор записей**, начните с преобразования его в форму, которая может храниться в файле. Объекты **набора записей** могут храниться в собственном формате Advanced Data ТАБЛЕГРАМ (адтг) или в формате Open язык XML (XML). Примеры АДТГ приведены в следующем разделе. Дополнительные сведения о сохраняемости XML см. [в разделе Сохранение записей в формате XML](./persisting-records-in-xml-format.md).  
   
  Сохраните все ожидающие изменения в материализованном файле. Это позволяет выдать запрос, возвращающий объект **Recordset** , изменяя **набор записей**, сохраняя его и ожидающие изменения, позднее восстанавливает **набор записей**, а затем обновляет источник данных с помощью сохраненных ожидающих изменений.  
   
- Сведения о постоянном хранении объектов **потока** см. в разделе [потоки и сохраняемость](../../../ado/guide/data/streams-and-persistence.md).  
+ Сведения о постоянном хранении объектов **потока** см. в разделе [потоки и сохраняемость](./streams-and-persistence.md).  
   
  Пример сохраняемости **набора записей** см. в разделе сценарий сохраняемости в XML-наборе записей.  
   
@@ -78,8 +78,8 @@ dc.SQL = "c:\yourFile.adtg"
 dc.Refresh  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Метод GetString (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)   
- [Поставщик сохраняемости Microsoft OLE DB (поставщик служб ADO)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)   
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Потоки и сохраняемость](../../../ado/guide/data/streams-and-persistence.md)
+## <a name="see-also"></a>См. также  
+ [Метод GetString (ADO)](../../reference/ado-api/getstring-method-ado.md)   
+ [Поставщик сохраняемости Microsoft OLE DB (поставщик служб ADO)](../appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)   
+ [Объект Recordset (ADO)](../../reference/ado-api/recordset-object-ado.md)   
+ [Потоки и сохраняемость](./streams-and-persistence.md)

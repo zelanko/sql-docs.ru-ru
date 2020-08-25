@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ec2dbf3dfb24fc484368f3fa2e2c2e950dbd20ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b0f425deb87e831547d24a4b81f7d1a601e344a
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453116"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805663"
 ---
 # <a name="operation-of-non-parameterized-commands"></a>Использование непараметризованных команд
 Для непараметризованных команд выполняются все команды поставщика, а также **наборы записей** , создаваемые во время выполнения команды. Если команда выполняется синхронно, все **наборы записей** будут заполнены полностью. Если выбран режим асинхронного заполнения, заполненное состояние **наборов записей** будет зависеть от режима заполнения и размера **наборов записей**.  
@@ -38,11 +38,11 @@ SHAPE {SELECT * FROM Customers}
   
  При доступе к ссылке в столбце «глава» ADO автоматически извлекает **набор записей** , представленный ссылкой. Обратите внимание, что в непараметризованной команде несмотря на то, что получен весь дочерний **набор записей** , в главе представлено подмножество строк.  
   
- Если в присоединенном столбце нет *псевдонима Chapter*, для него автоматически создается имя. Объект [поля](../../../ado/reference/ado-api/field-object.md) для столбца будет добавлен в коллекцию [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) объекта **Recordset** , и его тип данных будет **адчаптер**.  
+ Если в присоединенном столбце нет *псевдонима Chapter*, для него автоматически создается имя. Объект [поля](../../reference/ado-api/field-object.md) для столбца будет добавлен в коллекцию [Fields](../../reference/ado-api/fields-collection-ado.md) объекта **Recordset** , и его тип данных будет **адчаптер**.  
   
- Сведения о навигации по иерархическим **наборам записей**см. [в разделе доступ к строкам в иерархическом наборе записей](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
+ Сведения о навигации по иерархическим **наборам записей**см. [в разделе доступ к строкам в иерархическом наборе записей](./accessing-rows-in-a-hierarchical-recordset.md).  
   
 ## <a name="see-also"></a>См. также  
- [Пример формирования данных](../../../ado/guide/data/data-shaping-example.md)   
- [Грамматика формальной фигуры](../../../ado/guide/data/formal-shape-grammar.md)   
- [Общие сведения о командах формирования данных](../../../ado/guide/data/shape-commands-in-general.md)
+ [Пример формирования данных](./data-shaping-example.md)   
+ [Грамматика формальной фигуры](./formal-shape-grammar.md)   
+ [Общие сведения о командах формирования данных](./shape-commands-in-general.md)

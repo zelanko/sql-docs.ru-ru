@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 337c9eda-9ddf-49ac-94d3-b33114ba6224
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 88121d2f736d76eec80146c49c727cd0d27399b7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6e2fe55a8aa34c6249edd2eee9666e9558a52027
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442146"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777573"
 ---
 # <a name="seek-method-and-index-property-example-vb"></a>Пример метода Seek и свойства Index (Visual Basic)
-В этом примере используется метод [Seek](../../../ado/reference/ado-api/seek-method.md) объекта [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) и свойство [index](../../../ado/reference/ado-api/index-property.md) в сочетании с данным ***идентификатором сотрудника***, чтобы найти имя сотрудника в таблице ***Employees*** базы данных Nwind. mdb.  
+В этом примере используется метод [Seek](./seek-method.md) объекта [Recordset](./recordset-object-ado.md) и свойство [index](./index-property.md) в сочетании с данным ***идентификатором сотрудника***, чтобы найти имя сотрудника в таблице ***Employees*** базы данных Nwind. mdb.  
   
 ```  
 'BeginSeekVB  
@@ -116,7 +116,7 @@ End Sub
 'EndSeekVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Свойство index](../../../ado/reference/ado-api/index-property.md)   
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Seek, метод](../../../ado/reference/ado-api/seek-method.md)
+## <a name="see-also"></a>См. также  
+ [Свойство index](./index-property.md)   
+ [Объект Recordset (ADO)](./recordset-object-ado.md)   
+ [Метод Seek](./seek-method.md)
