@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2c2c3b0880a940b0f3388aced46c0cd9c888b786
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0abdb36a7ff51bdf0b01e21957c10ca8b9f995e4
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452336"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758614"
 ---
 # <a name="address-book-command-buttons"></a>Кнопки команд адресной книги
 Приложение адресной книги содержит следующие командные кнопки:  
@@ -52,7 +52,7 @@ Select FirstName, LastName, Title, Email, Building, Room, Phone from Employee wh
  Если запрос выполнен успешно, все лица с фамилией, содержащими текст «Берже» (например, «Берже» и «Бергер») и с заголовком, содержащим слова «руководитель программы» (например, «руководитель программы», «дополнительные технологии»), отображаются в сетке данных HTML.  
   
 ## <a name="preparing-and-sending-the-query"></a>Подготовка и отправка запроса  
- Последняя часть процедуры Find_OnClick состоит из двух операторов. Первая инструкция присваивает свойство [SQL](../../../ado/reference/rds-api/sql-property.md) [RDS. Объект элемента управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) , равный динамически созданному SQL Query. Вторая инструкция вызывает **RDS. Объект элемента управления** ( `DC1` ) для запроса к базе данных, а затем отображение новых результатов запроса в сетке.  
+ Последняя часть процедуры Find_OnClick состоит из двух операторов. Первая инструкция присваивает свойство [SQL](../../reference/rds-api/sql-property.md) [RDS. Объект элемента управления](../../reference/rds-api/datacontrol-object-rds.md) , равный динамически созданному SQL Query. Вторая инструкция вызывает **RDS. Объект элемента управления** ( `DC1` ) для запроса к базе данных, а затем отображение новых результатов запроса в сетке.  
   
 ```vb
 Sub Find_OnClick  
@@ -63,7 +63,7 @@ End Sub
 ```  
   
 ## <a name="update-profile-button"></a>Кнопка обновления профиля  
- Нажатие кнопки **Обновить профиль** активирует процедуру VBScript Update_OnClick, которая выполняет [RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) `DC1` Методы [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) и [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md) объекта элемента управления DataObject.  
+ Нажатие кнопки **Обновить профиль** активирует процедуру VBScript Update_OnClick, которая выполняет [RDS. ](../../reference/rds-api/datacontrol-object-rds.md) `DC1` Методы [SubmitChanges](../../reference/rds-api/submitchanges-method-rds.md) и [Refresh](../../reference/rds-api/refresh-method-rds.md) объекта элемента управления DataObject.  
   
 ```vb
 Sub Update_OnClick  
@@ -75,7 +75,7 @@ End Sub
  Когда `DC1.SubmitChanges` исполняется, служба удаленных данных упаковывает все сведения об обновлении и отправляет их на сервер по протоколу HTTP. Обновление — ALL или-Nothing; Если часть обновления завершается неудачно, никакие изменения не вносятся и возвращается сообщение о состоянии. `DC1.Refresh` не требуется после **SubmitChanges** с удаленной службой данных, но гарантирует актуальность данных.  
   
 ## <a name="cancel-changes-button"></a>Кнопка отмены изменений  
- Нажатие кнопки **Отмена изменений** активирует процедуру VBScript Cancel_OnClick, которая выполняет [RDS. Объект элемента управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) `DC1)` [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) (метод.  
+ Нажатие кнопки **Отмена изменений** активирует процедуру VBScript Cancel_OnClick, которая выполняет [RDS. Объект элемента управления](../../reference/rds-api/datacontrol-object-rds.md) `DC1)` [CancelUpdate](../../reference/rds-api/cancelupdate-method-rds.md) (метод.  
   
 ```vb
 Sub Cancel_OnClick  
@@ -86,7 +86,5 @@ End Sub
  При `DC1.CancelUpdate` выполнении он отменяет любые изменения, внесенные пользователем в запись сотрудника в сетке данных с момента последнего запроса или обновления. Он восстанавливает исходные значения.  
   
 ## <a name="see-also"></a>См. также  
- [Кнопки навигации адресной книги](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)   
- [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
-
-
+ [Кнопки навигации адресной книги](./address-book-navigation-buttons.md)   
+ [Объект DataControl (служба удаленных рабочих столов)](../../reference/rds-api/datacontrol-object-rds.md)

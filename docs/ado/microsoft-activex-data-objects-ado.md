@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 63307b7b0074cca482befd0dfa689684504f26f5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3f170bbc7144e624ea6788c844fb817014e178d0
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451836"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760034"
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Объекты данных Microsoft ActiveX (ADO)
 
@@ -50,21 +50,19 @@ ms.locfileid: "88451836"
  ADOX — это вспомогательная библиотека для основных объектов ADO. Он предоставляет дополнительные объекты для создания, изменения и удаления объектов схемы, таких как таблицы и процедуры. Он также включает объекты безопасности для обслуживания пользователей и групп и предоставления и отзыва разрешений на объекты.  
   
 ## <a name="documentation"></a>Документация  
- [Проблемы проектирования, связанные с безопасностью объектов ADO](../ado/guide/ado-security-design-issues.md)  
+ [Проблемы проектирования, связанные с безопасностью объектов ADO](./guide/ado-security-design-issues.md)  
   
- [Руководство по программированию объектов ADO](../ado/guide/ado-programmer-s-guide.md)  
+ [Руководство по программированию объектов ADO](./guide/ado-programmer-s-guide.md)  
   
  Общие сведения об использовании ADO, RDS, объекты данных ActiveX (MD) и ADOX.  
   
- [Справочник по программированию объектов ADO](../ado/reference/ado-programmer-s-reference.md)  
+ [Справочник по программированию объектов ADO](./reference/ado-programmer-s-reference.md)  
   
  В этом разделе документации по ADO содержатся разделы по каждому объекту ADO, RDS, объекты данных ActiveX (MD) и ADOX, коллекции, свойству, динамическому свойству, методу, событию и перечислению.  
   
- [Глоссарий по объектам ADO](../ado/ado-glossary.md)  
+ [Глоссарий по объектам ADO](./ado-glossary.md)  
   
 ## <a name="support"></a>Поддержка  
  Для получения бесплатной помощи по проблемам с ADO попробуйте опубликовать их в общедоступной группе новостей по ADO. Эта группа новостей отслеживается специалистами службы технической поддержки Майкрософт (PSS), которые охватывают ADO и другими опытными разработчиками ADO.  
   
  Дополнительные сведения о вариантах поддержки можно найти на веб-сайте справки и поддержки Майкрософт.
-
-

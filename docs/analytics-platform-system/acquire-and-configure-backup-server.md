@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e160c606b19933934ec844b477ffec08475307d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b1d817bae593d4083f3e4873d626e147e58d5c28
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401494"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767163"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>Получение и Настройка резервного сервера для параллельного хранилища данных
 В этой статье описывается, как настроить систему Windows, не поддерживающую устройства, в качестве сервера резервного копирования для использования с функциями резервного копирования и восстановления в системе аналитики (ТД) и Parallel Data Warehouse (PDW).  
@@ -50,7 +50,7 @@ ms.locfileid: "74401494"
   
 -   Получите выигрыш в производительности при предварительном выделении файлов по протоколу SMB.  
   
--   Используйте мгновенную инициализацию файлов (IFI) для операций резервного копирования. ИТ – специалисты управляют этим параметром на резервном сервере. Configuration Manager PDW (dwconfig. exe) не устанавливает и не контролирует IFI на резервном сервере. В предыдущих версиях Windows нет IFI, но их также можно использовать в качестве резервных серверов.  
+-   Используйте мгновенную инициализацию файлов (IFI) для операций резервного копирования. ИТ – специалисты управляют этим параметром на резервном сервере. Configuration Manager PDW (dwconfig.exe) не устанавливает и не контролирует IFI на резервном сервере. В предыдущих версиях Windows нет IFI, но их также можно использовать в качестве резервных серверов.  
   
 ### <a name="networking-requirements"></a>Требования к сети  
 Для резервных серверов рекомендуется использовать значение InfiniBand, хотя это и не обязательно. Чтобы подготовиться к подключению сервера загрузки к сети InfiniBand устройства, выполните следующие действия.  
@@ -118,11 +118,11 @@ RESTORE DATABASE Invoices2013Full
 FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'  
 ```  
   
-Дополнительные сведения можно найти в разделе 
+Дополнительные сведения см. в разделе: 
   
--   [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)   
+-   [BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016)   
   
--   [RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)  
+-   [ВОССТАНОВЛЕНИЕ БАЗЫ ДАННЫХ](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016)  
   
 ## <a name="security-notices"></a><a name="Security"></a>Уведомления о безопасности  
 Сервер архивации не присоединен к частному домену для устройства. Он находится в вашей сети и не имеет отношения доверия между доменом и частным доменом устройства.  
@@ -149,6 +149,5 @@ FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'
 - Требовать вход в соединение. 
 - На сервере загрузки установите следующий параметр групповой политики в области политики безопасности \ локальные параметры: Клиент сети Microsoft: Цифровая подпись (всегда): включена.  
   
-## <a name="see-also"></a>См. также:  
-[Резервное копирование и восстановление](backup-and-restore-overview.md)  
-  
+## <a name="see-also"></a>См. также  
+[Архивация и восстановление](backup-and-restore-overview.md)  

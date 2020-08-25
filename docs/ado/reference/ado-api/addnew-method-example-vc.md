@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9cc8774b-6711-4837-b442-959eaf79343e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 02a439fbe6c5ce483c3a3391421fdfcf7766a579
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 199a60ca21f7109ce1fdd181d8fa9dfcd7c70341
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451546"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760184"
 ---
 # <a name="addnew-method-example-vc"></a>Пример метода AddNew (Visual C++)
-В этом примере используется метод [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) для создания новой записи с указанным именем.  
+В этом примере используется метод [AddNew](./addnew-method-ado.md) для создания новой записи с указанным именем.  
   
 ```  
 // BeginAddNewCpp.cpp  
@@ -214,6 +214,6 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Метод AddNew (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+## <a name="see-also"></a>См. также  
+ [Метод AddNew (ADO)](./addnew-method-ado.md)   
+ [Объект Recordset (ADO)](./recordset-object-ado.md)

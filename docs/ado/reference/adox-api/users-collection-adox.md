@@ -18,41 +18,41 @@ helpviewer_keywords:
 ms.assetid: 0a30fa74-6f10-4410-bd70-882e7c43cd46
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e69ecbf642982d6465c12e225f45199a0c1b33e0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0d452075b3659d3ad01ba28540217b8447950084
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439376"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769043"
 ---
 # <a name="users-collection-adox"></a>Коллекция Users (ADOX)
-Содержит все сохраненные [пользовательские](../../../ado/reference/adox-api/user-object-adox.md) объекты [каталога](../../../ado/reference/adox-api/catalog-object-adox.md) или [группы](../../../ado/reference/adox-api/group-object-adox.md).  
+Содержит все сохраненные [пользовательские](./user-object-adox.md) объекты [каталога](./catalog-object-adox.md) или [группы](./group-object-adox.md).  
   
 ## <a name="remarks"></a>Remarks  
- Коллекция **пользователей** [каталога](../../../ado/reference/adox-api/catalog-object-adox.md) представляет всех пользователей каталога. Коллекция **пользователей** для [группы](../../../ado/reference/adox-api/group-object-adox.md) представляет только тех пользователей, которые имеют членство в определенной группе.  
+ Коллекция **пользователей** [каталога](./catalog-object-adox.md) представляет всех пользователей каталога. Коллекция **пользователей** для [группы](./group-object-adox.md) представляет только тех пользователей, которые имеют членство в определенной группе.  
   
- Метод [append](../../../ado/reference/adox-api/append-method-adox-users.md) для коллекции **пользователей** уникален для ADOX. Вы можете:  
+ Метод [append](./append-method-adox-users.md) для коллекции **пользователей** уникален для ADOX. Вы можете:  
   
 -   Добавьте нового пользователя в коллекцию с помощью метода **append** .  
   
  Остальные свойства и методы являются стандартными для коллекций ADO. Вы можете:  
   
--   Доступ к пользователю в коллекции со свойством [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
+-   Доступ к пользователю в коллекции со свойством [Item](../ado-api/item-property-ado.md) .  
   
--   Возвращает число пользователей, содержащихся в коллекции, с помощью свойства [Count](../../../ado/reference/ado-api/count-property-ado.md) .  
+-   Возвращает число пользователей, содержащихся в коллекции, с помощью свойства [Count](../ado-api/count-property-ado.md) .  
   
--   Удалите пользователя из коллекции с помощью метода [Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md) .  
+-   Удалите пользователя из коллекции с помощью метода [Delete](./delete-method-adox-collections.md) .  
   
--   Обновите объекты в коллекции, чтобы отразить схему текущей базы данных методом [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) .  
+-   Обновите объекты в коллекции, чтобы отразить схему текущей базы данных методом [Refresh](../ado-api/refresh-method-ado.md) .  
   
 > [!NOTE]
->  Перед добавлением объекта **пользователя** в коллекцию **Users** объекта **Group** объект **пользователя** с тем же [именем](../../../ado/reference/adox-api/name-property-adox.md) , что и у добавляемого, должен уже существовать в коллекции **пользователей** **каталога**.  
+>  Перед добавлением объекта **пользователя** в коллекцию **Users** объекта **Group** объект **пользователя** с тем же [именем](./name-property-adox.md) , что и у добавляемого, должен уже существовать в коллекции **пользователей** **каталога**.  
   
  Этот раздел содержит следующий раздел.  
   
--   [Свойства, методы и события коллекции Users](../../../ado/reference/adox-api/users-collection-properties-methods-and-events.md)  
+-   [Свойства, методы и события коллекции Users](./users-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
- [Примеры методов SetPermissions и Methods (Visual Basic)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
- [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Объект User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)
+## <a name="see-also"></a>См. также  
+ [Примеры методов SetPermissions и Methods (Visual Basic)](./getpermissions-and-setpermissions-methods-example-vb.md)   
+ [Объект каталога (ADOX)](./catalog-object-adox.md)   
+ [Объект User (ADOX)](./user-object-adox.md)

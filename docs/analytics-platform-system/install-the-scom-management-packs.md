@@ -9,25 +9,25 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f3652b767f4628b61f5dd363999838418ff933aa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0db3a588dfabf290f2e095adafcd3331187af957
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401073"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766983"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>Установка пакетов управления SQL Server Operations Manager (SCOM) для Analytics Platform System
 Выполните следующие действия, чтобы скачать и установить пакеты управления System Center Operations Manager (SCOM) для SQL Server PDW. Пакеты управления необходимы для отслеживания SQL Server PDW из SCOM.  
   
 ## <a name="before-you-begin"></a><a name="BeforeBegin"></a>Перед началом  
-**Предварительные условия**  
+**Предварительные требования**  
   
 Необходимо установить и запустить System Center Operations Manager. Для SQL Server PDW 2012 требуется System Center Operations Manager 2007 R2, System Center Operations Manager 2012 или System Center Operations Manager 2012 с пакетом обновления 1 (SP1).  
   
 ## <a name="step-1-download-the-management-packs"></a><a name="Step1"></a>Шаг 1. Скачивание пакетов управления  
 В рабочей нагрузке APS PDW Скачайте [пакет управления System Center для Microsoft Analytics Platform System](https://go.microsoft.com/fwlink/?LinkId=396857).  
   
-Для управления устройством Скачайте [базовый пакет управления для устройства SQL Server](https://docs.microsoft.com/previous-versions/system-center/packs/gg602398(v=technet.10)).  
+Для управления устройством Скачайте [базовый пакет управления для устройства SQL Server](/previous-versions/system-center/packs/gg602398(v=technet.10)).  
   
 Для более старых версий PDW без ТД Скачайте[Пакет мониторинга System Center для Microsoft SQL Server 2012 параллельного хранилища данных](https://go.microsoft.com/fwlink/p/?LinkId=282661).  
   
@@ -80,4 +80,3 @@ ms.locfileid: "74401073"
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-  

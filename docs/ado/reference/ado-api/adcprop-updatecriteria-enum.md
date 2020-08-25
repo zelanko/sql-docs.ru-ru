@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 33fd7b65-2ec8-4f62-91a7-630b5dab1aa2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 31205bbe32dd3c09d70fe4baeb41261be985096c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2b0e2a308d9a83c936abe8f5f39b29dac86795ec
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451606"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760258"
 ---
 # <a name="adcprop_updatecriteria_enum"></a>ADCPROP_UPDATECRITERIA_ENUM
-Указывает, какие поля могут использоваться для обнаружения конфликтов во время оптимистического обновления строки источника данных с объектом [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
+Указывает, какие поля могут использоваться для обнаружения конфликтов во время оптимистического обновления строки источника данных с объектом [Recordset](./recordset-object-ado.md) .  
   
- Используйте эти константы с динамическим свойством "**условие обновления**" **набора записей** , на которое есть ссылка в [индексе динамического свойства ADO](../../../ado/reference/ado-api/ado-dynamic-property-index.md) и описанном в документации [службы курсоров Майкрософт для OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) .  
+ Используйте эти константы с динамическим свойством "**условие обновления**" **набора записей** , на которое есть ссылка в [индексе динамического свойства ADO](./ado-dynamic-property-index.md) и описанном в документации [службы курсоров Майкрософт для OLE DB](../../guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) .  
   
 |Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 09130db1-6248-4234-a1e5-a9c8e1622c06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a84bec7cbd7a79fadf4ea5b11d486e7daf6aa9ab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c0554bb48a7995e00f0a5c138cc4409ad4d0fd71
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452196"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759777"
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>Обеспечение достаточного места в TempDB
-Если при обработке объектов [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) , требующих обработки памяти, в Microsoft SQL Server 6,5 возникли ошибки, может потребоваться увеличить размер базы данных tempdb. (Для некоторых запросов требуется временное пространство обработки; например, запрос с предложением ORDER BY требует сортировки **набора записей**, для чего требуется некоторое временное пространство.)  
+Если при обработке объектов [Recordset](../../reference/ado-api/recordset-object-ado.md) , требующих обработки памяти, в Microsoft SQL Server 6,5 возникли ошибки, может потребоваться увеличить размер базы данных tempdb. (Для некоторых запросов требуется временное пространство обработки; например, запрос с предложением ORDER BY требует сортировки **набора записей**, для чего требуется некоторое временное пространство.)  
   
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
@@ -57,6 +57,4 @@ ms.locfileid: "88452196"
  Для получения дополнительных сведений об этом разделе выполните поиск в файле справки по Microsoft SQL Server Enterprise Manager в диалоговом окне "развертывание базы данных".  
   
 ## <a name="see-also"></a>См. также  
- [Основные принципы RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
+ [Основные принципы RDS](./rds-fundamentals.md)

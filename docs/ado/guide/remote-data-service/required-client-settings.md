@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8d21cf3f08b284ed2642f9567ae86909fb35579b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5263da344d39b828b431efd99a4171f74d2552db
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452026"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759384"
 ---
 # <a name="required-client-settings"></a>Требуемые параметры клиента
 > [!IMPORTANT]
@@ -26,11 +26,11 @@ ms.locfileid: "88452026"
   
  Чтобы использовать пользовательский обработчик **фактов** , укажите следующие параметры.  
   
--   Укажите "Provider = MS Remote" [в свойстве](../../../ado/reference/ado-api/provider-property-ado.md) [объекта соединения (](../../../ado/reference/ado-api/connection-object-ado.md) ADO) или в строке подключения объекта **соединения** "**provider**=".  
+-   Укажите "Provider = MS Remote" [в свойстве](../../reference/ado-api/provider-property-ado.md) [объекта соединения (](../../reference/ado-api/connection-object-ado.md) ADO) или в строке подключения объекта **соединения** "**provider**=".  
   
--   Задайте для свойства [CursorLocation (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md) значение **адусеклиент**.  
+-   Задайте для свойства [CursorLocation (ADO)](../../reference/ado-api/cursorlocation-property-ado.md) значение **адусеклиент**.  
   
--   Укажите имя обработчика для использования в свойстве **обработчика** объекта данных [(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) или в строке соединения объекта [Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) для строки подключения "**handler**=". (Нельзя задать обработчик в строке соединения объекта **соединения** .)  
+-   Укажите имя обработчика для использования в свойстве **обработчика** объекта данных [(RDS)](../../reference/rds-api/datacontrol-object-rds.md) или в строке соединения объекта [Recordset (ADO)](../../reference/ado-api/recordset-object-ado.md) для строки подключения "**handler**=". (Нельзя задать обработчик в строке соединения объекта **соединения** .)  
   
  RDS предоставляет обработчик по умолчанию на сервере с именем **мсдфмап. Обработчик**. (Файл настройки по умолчанию называется MSDFMAP.INI.)  
   
@@ -67,7 +67,7 @@ Dim rs as New ADODB.Recordset
 rs.CursorLocation = adUseClient  
 ```  
   
- Укажите свойство [обработчика (RDS)](../../../ado/reference/rds-api/handler-property-rds.md) или ключевое слово. Свойство [поставщика (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) или ключевое слово; и идентификаторы *кустомербид* и *кустомердатабасе* . Затем откройте объект **Recordset**  
+ Укажите свойство [обработчика (RDS)](../../reference/rds-api/handler-property-rds.md) или ключевое слово. Свойство [поставщика (ADO)](../../reference/ado-api/provider-property-ado.md) или ключевое слово; и идентификаторы *кустомербид* и *кустомердатабасе* . Затем откройте объект **Recordset**  
   
  стандарт. Откройте "Кустомербид (4)", "handler = МСДФМАП. Обработчик; "& _  
   
@@ -77,11 +77,10 @@ rs.CursorLocation = adUseClient
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Раздел "Подключение файла настройки"](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [Раздел файла настройки SQL](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [Раздел UserList файла настройки](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [Настройка в отношении фактов](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Требуемые параметры клиента](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [Общие сведения о файле настройки](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
- [Создание собственного настраиваемого обработчика](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
+ [Раздел "Подключение файла настройки"](./customization-file-connect-section.md)   
+ [Раздел файла настройки SQL](./customization-file-sql-section.md)   
+ [Раздел UserList файла настройки](./customization-file-userlist-section.md)   
+ [Настройка в отношении фактов](./datafactory-customization.md)   
+ [Требуемые параметры клиента]()   
+ [Общие сведения о файле настройки](./understanding-the-customization-file.md)   
+ [Создание собственного настраиваемого обработчика](./writing-your-own-customized-handler.md)

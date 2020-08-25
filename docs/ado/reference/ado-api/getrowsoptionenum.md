@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: adc109b9-79f4-4946-a5eb-658e22e9a8a5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 76926e0190ad8cfe1d7451d89182a365a6c59993
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c071ba19a974f1ac63a31c8d01a4ed42f56804a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443546"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774943"
 ---
 # <a name="getrowsoptionenum"></a>GetRowsOptionEnum
-Указывает, сколько записей необходимо извлечь из [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Указывает, сколько записей необходимо извлечь из [набора записей](./recordset-object-ado.md).  
   
-|Константа|Значение|Описание|  
+|Константа|Значение|Описание:|  
 |--------------|-----------|-----------------|  
-|**adGetRowsRest**|-1|Извлекает остальные записи в **наборе записей**из текущей или закладке, заданной параметром *Start* метода [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) .|  
+|**adGetRowsRest**|-1|Извлекает остальные записи в **наборе записей**из текущей или закладке, заданной параметром *Start* метода [GetRows](./getrows-method-ado.md) .|  
   
 ## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
  Пакет: **com. MS. WFC. Data**  
@@ -38,4 +38,4 @@ ms.locfileid: "88443546"
 |Адоенумс. Жетровсоптион. RESTFUL|  
   
 ## <a name="applies-to"></a>Применение  
- [Метод GetRows (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)
+ [Метод GetRows (ADO)](./getrows-method-ado.md)

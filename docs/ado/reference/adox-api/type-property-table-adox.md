@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7b6e14bb-fb69-4d74-aaca-f5d380f4d887
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 700be4586a1e7808113b6ff20bf5459af3cb1f81
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2bde14ad286e54505cb5476a38cd4080ae43d2e3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439426"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769183"
 ---
 # <a name="type-property-table-adox"></a>Свойство Type (Table) (ADOX)
 Указывает тип таблицы.  
@@ -35,11 +35,11 @@ ms.locfileid: "88439426"
  Это свойство доступно только для чтения.  
   
 ## <a name="applies-to"></a>Применение  
- [Объект Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)  
+ [Объект Table (ADOX)](./table-object-adox.md)  
   
-## <a name="see-also"></a>См. также:  
- [Пример свойства ActiveConnection каталога (Visual Basic)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
- [Пример метода Close соединения, свойство типа таблицы (Visual Basic)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
- [Свойство Type (Column) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)   
- [Свойство Type (Key) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)   
- [Объект Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
+## <a name="see-also"></a>См. также  
+ [Пример свойства ActiveConnection каталога (Visual Basic)](./catalog-activeconnection-property-example-vb.md)   
+ [Пример метода Close соединения, свойство типа таблицы (Visual Basic)](./connection-close-method-table-type-property-example-vb.md)   
+ [Свойство Type (Column) (ADOX)](./type-property-column-adox.md)   
+ [Свойство Type (Key) (ADOX)](./type-property-key-adox.md)   
+ [Объект Table (ADOX)](./table-object-adox.md)

@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 619bc7fd-ad0a-44ea-9678-ad40a662c258
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6f31eb54efbf1901471fc48b7499b7ab6190b680
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8be18e18b890dbe438a0aced23503e690985b5c1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438596"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767373"
 ---
 # <a name="submitchanges-method-example-vbscript"></a>Пример метода SubmitChanges (VBScript)
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- В следующем фрагменте кода показано, как использовать метод [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) с [RDS. Объект элемента управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
+ В следующем фрагменте кода показано, как использовать метод [SubmitChanges](./submitchanges-method-rds.md) с [RDS. Объект элемента управления](./datacontrol-object-rds.md) .  
   
  Чтобы протестировать этот пример, вырежьте и вставьте этот код в нормальный ASP-документ и назовите его **субмитчанжесктрлвбс. ASP**. Сценарий ASP определит ваш сервер.  
   
@@ -117,8 +117,6 @@ End Sub
 <!-- EndCancelUpdateVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект элемента управления (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Метод SubmitChanges (служба удаленных рабочих столов)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
-
-
+## <a name="see-also"></a>См. также  
+ [Объект элемента управления (RDS)](./datacontrol-object-rds.md)   
+ [Метод SubmitChanges (служба удаленных рабочих столов)](./submitchanges-method-rds.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b1e927d6-7d50-4978-9eef-045043cdce7a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e2a52faceafdde92acb3aed1e2a1b765594777e1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0056f965e36fb1fadd3d7f8c08c2514ee2593d46
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451906"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759004"
 ---
 # <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>Шаг 6. Изменения отправлены на сервер (учебник по RDS)
 Если объект **набора записей** редактируется, любые изменения (т. е. добавленные, измененные или удаленные строки) могут быть отправлены обратно на сервер.  
@@ -35,7 +35,7 @@ rs.   ' The equivalent of
 ...  
 ```  
   
- **Часть A** Предположим, что в этом случае вы использовали только [RDS. Элемент управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) данными и объект **набора записей** теперь связаны с **RDS. Элемент управления**. Метод [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) обновляет источник данных любыми изменениями в объекте **набора записей** , если свойства [сервера](../../../ado/reference/rds-api/server-property-rds.md) и [соединения](../../../ado/reference/rds-api/connect-property-rds.md) по-прежнему заданы.  
+ **Часть A** Предположим, что в этом случае вы использовали только [RDS. Элемент управления](../../reference/rds-api/datacontrol-object-rds.md) данными и объект **набора записей** теперь связаны с **RDS. Элемент управления**. Метод [SubmitChanges](../../reference/rds-api/submitchanges-method-rds.md) обновляет источник данных любыми изменениями в объекте **набора записей** , если свойства [сервера](../../reference/rds-api/server-property-rds.md) и [соединения](../../reference/rds-api/connect-property-rds.md) по-прежнему заданы.  
   
 ```vb
 Sub RDSTutorial6A()  
@@ -53,7 +53,7 @@ DC.
 ...  
 ```  
   
- **Часть B** Кроме того, можно обновить сервер с помощью объекта [RDSServer.](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) DataObject, указав соединение и объект **набора записей** .  
+ **Часть B** Кроме того, можно обновить сервер с помощью объекта [RDSServer.](../../reference/rds-api/datafactory-object-rdsserver.md) DataObject, указав соединение и объект **набора записей** .  
   
 ```vb
 Sub RDSTutorial6B()  
@@ -75,7 +75,7 @@ End Sub
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
-## <a name="see-also"></a>См. также:  
- [Поставщик службы удаленного взаимодействия Microsoft OLE DB (поставщик служб ADO)](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md)   
- [Руководство по RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [Учебник по RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
+## <a name="see-also"></a>См. также  
+ [Поставщик службы удаленного взаимодействия Microsoft OLE DB (поставщик служб ADO)](../appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md)   
+ [Руководство по RDS](./rds-tutorial.md)   
+ [Учебник по RDS (VBScript)](./rds-tutorial-vbscript.md)

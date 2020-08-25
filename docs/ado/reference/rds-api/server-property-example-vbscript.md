@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 0fe57af9-a4d0-4986-a2e3-beaa4d26ed58
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a330087a016e4417498e8e96120642428b2e3a08
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f247ac8c0ab4dac5d552bc128f155310c59af70b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438696"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767533"
 ---
 # <a name="server-property-example-vbscript"></a>Пример свойства Server (VBScript)
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- В следующем примере кода показано, как задать [RDS. Параметр элемента управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) данными во время разработки и привязывает его к элементу управления, поддерживающему данные, с помощью поставщика SQLOLEDB. Вырежьте и вставьте этот код в нормальный ASP-документ и назовите его **сервердесигнвбс. ASP**. Сценарий ASP определит ваш сервер.  
+ В следующем примере кода показано, как задать [RDS. Параметр элемента управления](./datacontrol-object-rds.md) данными во время разработки и привязывает его к элементу управления, поддерживающему данные, с помощью поставщика SQLOLEDB. Вырежьте и вставьте этот код в нормальный ASP-документ и назовите его **сервердесигнвбс. ASP**. Сценарий ASP определит ваш сервер.  
   
 ```  
 <!-- BeginServerDesignVBS -->  
@@ -177,40 +177,6 @@ End Sub
 <!-- EndServerRuntimeVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект элемента управления (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Свойство Server (служба удаленных рабочих столов)](../../../ado/reference/rds-api/server-property-rds.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## <a name="see-also"></a>См. также  
+ [Объект элемента управления (RDS)](./datacontrol-object-rds.md)   
+ [Свойство Server (служба удаленных рабочих столов)](./server-property-rds.md)

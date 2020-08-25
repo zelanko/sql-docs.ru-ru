@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: a05a0190-352d-44ff-9488-0c94e9fb656e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 492c385252085b440c536081e569a4a732f10c32
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 645dd3602c97f8ca4bb4fd7df832352bb4cdded0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439296"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768913"
 ---
 # <a name="views-collection-commandtext-property-example-vb"></a>Примеры коллекции Views и свойства CommandText (Visual Basic)
-В следующем коде показано, как использовать свойство [Command](../../../ado/reference/adox-api/command-property-adox.md) для обновления текста представления.  
+В следующем коде показано, как использовать свойство [Command](./command-property-adox.md) для обновления текста представления.  
   
 ```  
 ' BeginViewsCollectionVB  
@@ -77,9 +77,9 @@ End Sub
 ' EndViewsCollectionVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Свойство ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Свойство Command (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
- [Объект View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
- [Коллекция Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+## <a name="see-also"></a>См. также  
+ [Свойство ActiveConnection (ADOX)](./activeconnection-property-adox.md)   
+ [Объект каталога (ADOX)](./catalog-object-adox.md)   
+ [Свойство Command (ADOX)](./command-property-adox.md)   
+ [Объект View (ADOX)](./view-object-adox.md)   
+ [Коллекция Views (ADOX)](./views-collection-adox.md)

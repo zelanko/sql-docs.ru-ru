@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: e3e18da4-0511-4ece-a35d-699978bc28c6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 46ebc9a3d7419912f4e0c7e43beb08d2db57c0af
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7bccf1feaf95417943194eed6e1faccbc83f1060
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438766"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767683"
 ---
 # <a name="readystate-property-example-vbscript"></a>Пример свойства ReadyState (VBScript)
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- В следующем примере показано, как считать свойство [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) объекта [RDS. Объект элемента управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) DataObject во время выполнения в коде VBScript. Свойство **ReadyState** доступно только для чтения.  
+ В следующем примере показано, как считать свойство [ReadyState](./readystate-property-rds.md) объекта [RDS. Объект элемента управления](./datacontrol-object-rds.md) DataObject во время выполнения в коде VBScript. Свойство **ReadyState** доступно только для чтения.  
   
  Чтобы протестировать этот пример, вырежьте и вставьте этот код между \<Body> \</Body> тегами и в обычном HTML-документе и назовите его **рдсреадист. ASP**. Используйте **Find** для поиска файла адовбс. Inc и поместите его в каталог, который планируется использовать. Сценарий ASP определит ваш сервер.  
   
@@ -110,8 +110,6 @@ body {
 <!-- EndReadyStateVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект элемента управления (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Свойство ReadyState (служба удаленных рабочих столов)](../../../ado/reference/rds-api/readystate-property-rds.md)
-
-
+## <a name="see-also"></a>См. также  
+ [Объект элемента управления (RDS)](./datacontrol-object-rds.md)   
+ [Свойство ReadyState (служба удаленных рабочих столов)](./readystate-property-rds.md)

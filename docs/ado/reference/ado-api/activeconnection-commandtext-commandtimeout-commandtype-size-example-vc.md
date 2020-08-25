@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 0d9917c4-9ef0-4d7a-b4ce-4f1fa6ce1817
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 38404272494acfb911d19598ae2358ede14feaae
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dc4e7ee20e4233f5db32a2a80c9eb849fdf6c86a
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451686"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760054"
 ---
 # <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-vc"></a>Пример свойств ActiveConnection, CommandText, CommandTimeout, CommandType, Size и Direction (Visual c++)
-В этом примере для выполнения хранимой процедуры используются свойства [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md), [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md), [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md), [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md), [size](../../../ado/reference/ado-api/size-property-ado-parameter.md)и [Direction](../../../ado/reference/ado-api/direction-property.md) .  
+В этом примере для выполнения хранимой процедуры используются свойства [ActiveConnection](./activeconnection-property-ado.md), [CommandText](./commandtext-property-ado.md), [CommandTimeout](./commandtimeout-property-ado.md), [CommandType](./commandtype-property-ado.md), [size](./size-property-ado-parameter.md)и [Direction](./direction-property.md) .  
   
 ## <a name="example"></a>Пример  
   
@@ -212,9 +212,9 @@ Authors With  25  Percent Royalty
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Свойство ActiveConnection (ADO)](../../../ado/reference/ado-api/activeconnection-property-ado.md)   
- [Свойство CommandText (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
- [Свойство CommandTimeout (ADO)](../../../ado/reference/ado-api/commandtimeout-property-ado.md)   
- [Свойство CommandType (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)   
- [Свойство Direction](../../../ado/reference/ado-api/direction-property.md)   
- [Свойство Size (объект Parameter ADO)](../../../ado/reference/ado-api/size-property-ado-parameter.md)
+ [Свойство ActiveConnection (ADO)](./activeconnection-property-ado.md)   
+ [Свойство CommandText (ADO)](./commandtext-property-ado.md)   
+ [Свойство CommandTimeout (ADO)](./commandtimeout-property-ado.md)   
+ [Свойство CommandType (ADO)](./commandtype-property-ado.md)   
+ [Свойство Direction](./direction-property.md)   
+ [Свойство Size (объект Parameter ADO)](./size-property-ado-parameter.md)

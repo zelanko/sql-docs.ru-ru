@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 95175316-cd10-4cf7-96ba-2a226fd97701
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d2c047ed21662335368f85273ad8c52bf4f5e70f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5f7844278460859de4ef3c5a0ee5cf073548ec81
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438746"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767673"
 ---
 # <a name="recordset-and-sourcerecordset-properties-example-vbscript"></a>Примеры свойств Recordset и SourceRecordset (VBScript)
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- В следующем примере показано, как задать необходимые параметры бизнес-объекта [RDSServer.](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) DataObject, используемого по умолчанию во время выполнения.  
+ В следующем примере показано, как задать необходимые параметры бизнес-объекта [RDSServer.](./datafactory-object-rdsserver.md) DataObject, используемого по умолчанию во время выполнения.  
   
  Чтобы протестировать этот пример, вырежьте и вставьте этот код между \<Body> \</Body> тегами и в обычном HTML-документе и назовите его **рекордсетвбс. ASP**. Сценарий ASP определит ваш сервер.  
   
@@ -128,9 +128,6 @@ CLASSID="CLSID:BD96C556-65A3-11D0-983A-00C04FC29E36">
 <!-- EndRecordsetVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект фактического объекта (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
- [Свойства Recordset и SourceRecordset (служба удаленных рабочих столов)](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)
-
-
-
+## <a name="see-also"></a>См. также  
+ [Объект фактического объекта (RDSServer)](./datafactory-object-rdsserver.md)   
+ [Свойства Recordset и SourceRecordset (служба удаленных рабочих столов)](./recordset-sourcerecordset-properties-rds.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e75240c2-b749-471e-b6ea-98cae232efbe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8a27d7911b00e5172941245ef5dcd587345aa1fc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 066add7729712c6c8c40951a3139dcba00ed5a70
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439106"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768463"
 ---
 # <a name="datafactory-object-rdsserver"></a>Объект DataFactory (RDSServer)
 > [!IMPORTANT]
@@ -29,11 +29,11 @@ ms.locfileid: "88439106"
   
  Объект **RDSServer.** DataObject разработан как объект автоматизации на стороне сервера, который получает клиентские запросы. В реализации Интернета она находится на веб-сервере и создается экземпляром компонента АДИСАПИ. Объект **RDSServer.** DataObject предоставляет доступ на чтение и запись к указанным источникам данных, но не содержит логику проверки или бизнес-правил.  
   
- При использовании метода, доступного как в **RDSServer.** , так и в [RDS. Объекты элементов управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) данными, служба удаленных данных использует **RDS. Версия элемента управления** по умолчанию. По умолчанию предполагается базовый сценарий программирования, где **RDSServer.** DataObject выступает в качестве универсального бизнес-объекта на стороне сервера.  
+ При использовании метода, доступного как в **RDSServer.** , так и в [RDS. Объекты элементов управления](./datacontrol-object-rds.md) данными, служба удаленных данных использует **RDS. Версия элемента управления** по умолчанию. По умолчанию предполагается базовый сценарий программирования, где **RDSServer.** DataObject выступает в качестве универсального бизнес-объекта на стороне сервера.  
   
  Если вы хотите, чтобы веб-приложение обрабатывал обработку на стороне сервера для конкретной задачи, можно заменить **RDSServer.** DataObject на пользовательский бизнес-объект.  
   
- Можно создавать бизнес-объекты на стороне сервера, вызывающие методы **RDSServer.** , такие как [Query](../../../ado/reference/rds-api/query-method-rds.md) и [CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md). Это полезно, если необходимо добавить функциональные возможности в бизнес-объекты, но воспользоваться преимуществами существующих технологий удаленной службы данных.  
+ Можно создавать бизнес-объекты на стороне сервера, вызывающие методы **RDSServer.** , такие как [Query](./query-method-rds.md) и [CreateRecordset](./createrecordset-method-rds.md). Это полезно, если необходимо добавить функциональные возможности в бизнес-объекты, но воспользоваться преимуществами существующих технологий удаленной службы данных.  
   
  Объект **факта** не является надежным для скриптов, выполняемых на стороне клиента.  
   
@@ -41,9 +41,7 @@ ms.locfileid: "88439106"
   
  Этот раздел содержит следующий раздел.  
   
--   [Свойства, методы и события объекта DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver-properties-methods-and-events.md)  
+-   [Свойства, методы и события объекта DataFactory (RDSServer)](./datafactory-object-rdsserver-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также:  
- [Примеры объекта DataFactory, а также методов Query и CreateObject (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)
-
-
+## <a name="see-also"></a>См. также  
+ [Примеры объекта DataFactory, а также методов Query и CreateObject (VBScript)](./datafactory-object-query-method-and-createobject-method-example-vbscript.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c04f910aa169d346868b3fec2f1eccb2e381176e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2f1c68dc55a4ae57283ce4ca7e6d357fd47030e4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439086"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768443"
 ---
 # <a name="execute-method-rds"></a>Метод Execute (служба удаленных рабочих столов)
 Выполняет запрос и создает набор записей ADO для использования в ADO 2,5 и более поздних версиях.  
@@ -49,7 +49,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *лфетчоптионс*  
  Указывает тип асинхронной выборки.  
   
- Дополнительные сведения см. в разделе [свойство FetchOptions (RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md).  
+ Дополнительные сведения см. в разделе [свойство FetchOptions (RDS)](./fetchoptions-property-rds.md).  
   
  *TableID*  
  **Вариант** типа либо VT_EMPTY, либо VT_BSTR. Если это значение имеет тип VT_EMPTY, оно игнорируется. Если он имеет тип VT_BSTR, набор записей создается с помощью **адкмдтабледирект** , а значение, указанное здесь, и параметр *QueryString* игнорируется.  
@@ -82,6 +82,4 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  Параметр *хандлерстринг* может иметь значение null. Что происходит в этом случае, зависит от настройки сервера RDS. Строка обработчика "МСДФМАП. Handler" указывает, что следует использовать предоставляемый корпорацией Майкрософт обработчик (Msdfmap.dll). Строка обработчика "МАСДФМАП. Handler sample.ini" указывает, что следует использовать обработчик Msdfmap.dll и что аргумент "sample.ini" должен передаваться в обработчик. MSDFMAP.dll будет интерпретировать аргумент как направление использования sample.ini для проверки соединения и строк запроса.  
   
 ## <a name="applies-to"></a>Применение  
- [Объект DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
-
+ [Объект DataFactory (RDSServer)](./datafactory-object-rdsserver.md)

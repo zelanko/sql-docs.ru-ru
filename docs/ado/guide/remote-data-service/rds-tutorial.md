@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aedb4037d4f6c37ad70086a4e2a51a6210c219c9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c8200b9bd42d06a52e5786b839a55cce175bb0b2
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452076"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759524"
 ---
 # <a name="rds-tutorial"></a>Учебник по RDS
 В этом учебнике показано, как использовать модель программирования RDS для запроса и обновления источника данных. Во первых, он описывает шаги, необходимые для выполнения этой задачи. Затем этот учебник повторяется в Microsoft® Visual Basic Scripting Edition (в котором используется ADO для классов Windows Foundation (ADO/WFC)).  
@@ -45,7 +45,7 @@ ms.locfileid: "88452076"
   
 -   Вызов серверной программы. Передайте в серверную программу параметры, определяющие источник данных, и выдаваемый командой.  
   
--   Серверная программа получает объект [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) из источника данных, обычно с помощью ADO. При необходимости объект **набора записей** обрабатывается на сервере.  
+-   Серверная программа получает объект [набора записей](../../reference/ado-api/recordset-object-ado.md) из источника данных, обычно с помощью ADO. При необходимости объект **набора записей** обрабатывается на сервере.  
   
 -   Серверная программа возвращает последний объект **набора записей** в клиентское приложение.  
   
@@ -55,20 +55,20 @@ ms.locfileid: "88452076"
   
  Этот учебник содержит следующие разделы.  
   
--   [Шаг 1. Укажите программу сервера (учебник по RDS)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)  
+-   [Шаг 1. Укажите программу сервера (учебник по RDS)](./step-1-specify-a-server-program-rds-tutorial.md)  
   
--   [Шаг 2. Вызовите программу сервера (учебник по RDS)](../../../ado/guide/remote-data-service/step-2-invoke-the-server-program-rds-tutorial.md)  
+-   [Шаг 2. Вызовите программу сервера (учебник по RDS)](./step-2-invoke-the-server-program-rds-tutorial.md)  
   
--   [Шаг 3. Сервер получает набор записей (учебник по RDS)](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)  
+-   [Шаг 3. Сервер получает набор записей (учебник по RDS)](./step-3-server-obtains-a-recordset-rds-tutorial.md)  
   
--   [Шаг 4. Сервер возвращает набор записей (учебник по RDS)](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)  
+-   [Шаг 4. Сервер возвращает набор записей (учебник по RDS)](./step-4-server-returns-the-recordset-rds-tutorial.md)  
   
--   [Шаг 5. DataControl теперь можно использовать (учебник по RDS)](../../../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md)  
+-   [Шаг 5. DataControl теперь можно использовать (учебник по RDS)](./step-5-datacontrol-is-made-usable-rds-tutorial.md)  
   
--   [Шаг 6. Изменения отправлены на сервер (учебник по RDS)](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)  
+-   [Шаг 6. Изменения отправлены на сервер (учебник по RDS)](./step-6-changes-are-sent-to-the-server-rds-tutorial.md)  
   
--   [Учебник по RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)  
+-   [Учебник по RDS (VBScript)](./rds-tutorial-vbscript.md)  
   
 ## <a name="see-also"></a>См. также  
- [Шаг 1. Указание серверной программы (учебник по RDS)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)   
- [Учебник по RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
+ [Шаг 1. Указание серверной программы (учебник по RDS)](./step-1-specify-a-server-program-rds-tutorial.md)   
+ [Учебник по RDS (VBScript)](./rds-tutorial-vbscript.md)

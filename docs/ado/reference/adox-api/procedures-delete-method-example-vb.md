@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 94f1ac93-e778-4a40-a85e-94bce5316ac7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c3f7d26eded130f22bda4f707f451ddf78c4b3d7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7c61d1446158dd74af15ab3ab354546c09aff672
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439616"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769583"
 ---
 # <a name="procedures-delete-method-example-vb"></a>Пример метода Delete коллекции Procedures (Visual Basic)
-В следующем коде показано, как удалить процедуру с помощью метода [Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md) в коллекции [процедур](../../../ado/reference/adox-api/procedures-collection-adox.md) .  
+В следующем коде показано, как удалить процедуру с помощью метода [Delete](./delete-method-adox-collections.md) в коллекции [процедур](./procedures-collection-adox.md) .  
   
 ```  
 ' BeginDeleteProcedureVB  
@@ -55,9 +55,9 @@ End Sub
 ' EndDeleteProcedureVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Свойство ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Метод Delete (ADOX Collections)](../../../ado/reference/adox-api/delete-method-adox-collections.md)   
- [Объект процедуры (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
- [Коллекция Procedures (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)
+## <a name="see-also"></a>См. также  
+ [Свойство ActiveConnection (ADOX)](./activeconnection-property-adox.md)   
+ [Объект каталога (ADOX)](./catalog-object-adox.md)   
+ [Метод Delete (ADOX Collections)](./delete-method-adox-collections.md)   
+ [Объект процедуры (ADOX)](./procedure-object-adox.md)   
+ [Коллекция Procedures (ADOX)](./procedures-collection-adox.md)

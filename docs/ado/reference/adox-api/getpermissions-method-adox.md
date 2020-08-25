@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: df201c1f-c76a-465d-98f0-83b7fc36e6e3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b4ab1ff4d032a1e9aa1bc617d8664b377ac391f2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d9533ca5260a8e5dc900a28d883f66994d7a9669
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440026"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770463"
 ---
 # <a name="getpermissions-method-adox"></a>Метод GetPermissions (ADOX)
-Возвращает разрешения для [группы](../../../ado/reference/adox-api/group-object-adox.md) или [пользователя](../../../ado/reference/adox-api/user-object-adox.md) в контейнере объекта или объекта.  
+Возвращает разрешения для [группы](./group-object-adox.md) или [пользователя](./user-object-adox.md) в контейнере объекта или объекта.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,30 +37,30 @@ ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение **типа Long** , указывающее битовую маску, содержащую разрешения, которые группа или пользователь имеет на объекте. Это значение может быть одной или несколькими константами [ригхтсенум](../../../ado/reference/adox-api/rightsenum.md) .  
+ Возвращает значение **типа Long** , указывающее битовую маску, содержащую разрешения, которые группа или пользователь имеет на объекте. Это значение может быть одной или несколькими константами [ригхтсенум](./rightsenum.md) .  
   
 #### <a name="parameters"></a>Параметры  
- *имя*;  
+ *Имя*  
  Значение **типа Variant** , указывающее имя объекта, для которого задаются разрешения. Задайте для *Name* значение null, если требуется получить разрешения для контейнера объектов.  
   
  *ObjectType*  
- Значение типа **Long** , которое может быть одной из констант [обжекттипинум](../../../ado/reference/adox-api/objecttypeenum.md) , указывающее тип объекта, для которого нужно получить разрешения.  
+ Значение типа **Long** , которое может быть одной из констант [обжекттипинум](./objecttypeenum.md) , указывающее тип объекта, для которого нужно получить разрешения.  
   
  *обжекттипеид*  
- Необязательный параметр. Значение **типа Variant** , указывающее идентификатор GUID для типа объекта поставщика, не определенного спецификацией OLE DB. Этот параметр является обязательным, если для *ObjectType* задано значение **адпермобжпровидерспеЦифик**. в противном случае он не используется.  
+ Необязательный элемент. Значение **типа Variant** , указывающее идентификатор GUID для типа объекта поставщика, не определенного спецификацией OLE DB. Этот параметр является обязательным, если для *ObjectType* задано значение **адпермобжпровидерспеЦифик**. в противном случае он не используется.  
   
 ## <a name="applies-to"></a>Применение  
 
 :::row:::
     :::column:::
-        [Объект Group (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)  
+        [Объект Group (ADOX)](./group-object-adox.md)  
     :::column-end:::
     :::column:::
-        [Объект User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
+        [Объект User (ADOX)](./user-object-adox.md)  
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>См. также:  
- [Примеры методов SetPermissions и Methods (Visual Basic)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
- [Свойство Name (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
- [Метод SetPermissions (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)
+## <a name="see-also"></a>См. также  
+ [Примеры методов SetPermissions и Methods (Visual Basic)](./getpermissions-and-setpermissions-methods-example-vb.md)   
+ [Свойство Name (ADOX)](./name-property-adox.md)   
+ [Метод SetPermissions (ADOX)](./setpermissions-method-adox.md)

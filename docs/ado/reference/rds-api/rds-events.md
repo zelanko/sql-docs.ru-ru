@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e03739e0-8169-46d6-9956-556b644a7645
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9c66bd5fc3c0274985dfcfc1ebbd323b6677b718
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b0874d04d779b517971d215735fe2bb34d1677e4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438806"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767793"
 ---
 # <a name="rds-events"></a>События службы удаленных рабочих столов
 > [!IMPORTANT]
@@ -27,7 +27,5 @@ ms.locfileid: "88438806"
   
 |Событие|Описание|  
 |-|-|  
-|[OnError (RDS)](../../../ado/reference/rds-api/onerror-event-rds.md)|Вызывается при возникновении ошибки во время операции.|  
-|[onReadyStateChange (RDS)](../../../ado/reference/rds-api/onreadystatechange-event-rds.md)|Вызывается при каждом изменении значения свойства **ReadyState** .|
-
-
+|[OnError (RDS)](./onerror-event-rds.md)|Вызывается при возникновении ошибки во время операции.|  
+|[onReadyStateChange (RDS)](./onreadystatechange-event-rds.md)|Вызывается при каждом изменении значения свойства **ReadyState** .|
