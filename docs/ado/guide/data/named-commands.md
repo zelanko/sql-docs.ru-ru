@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 607142ec89a1032fe42bab87c0dfad0f2a276387
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c5b5f21c1af3a3438b9e00cd00f4ed2baf338e2
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453156"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805795"
 ---
 # <a name="named-commands"></a>Именованные команды
-[Создание и выполнение простой команды](../../../ado/guide/data/creating-and-executing-a-simple-command.md) демонстрирует один из способов выполнения команды. Существует другой способ: можно сделать его именованной командой, а затем вызвать эту именованную команду непосредственно в объекте **Connection** (назначенном свойству **ActiveConnection** объекта **Command** ). Именование команды означает присвоение имени свойству **Name** объекта **Command** . Например,  
+[Создание и выполнение простой команды](./creating-and-executing-a-simple-command.md) демонстрирует один из способов выполнения команды. Существует другой способ: можно сделать его именованной командой, а затем вызвать эту именованную команду непосредственно в объекте **Connection** (назначенном свойству **ActiveConnection** объекта **Command** ). Именование команды означает присвоение имени свойству **Name** объекта **Command** . Например,  
   
 ```  
 objCmd.Name = "GetCustomers"  
@@ -90,5 +90,5 @@ ErrHandler:
 'EndNamedCmd  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+## <a name="see-also"></a>См. также  
+ [Объект Connection (ADO)](../../reference/ado-api/connection-object-ado.md)

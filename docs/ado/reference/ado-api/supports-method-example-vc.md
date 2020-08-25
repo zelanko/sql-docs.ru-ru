@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6e174179-9d95-41b9-b72b-6cdbdca6e255
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 03f01a5b8e9779687effd7fad1f3f96cd6cdcfd4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 66592f099b5d125acb92cbcb85bf7e8964aeda8a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441766"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777133"
 ---
 # <a name="supports-method-example-vc"></a>Пример метода Supports (Visual C++)
-В этом примере используется [метод](../../../ado/reference/ado-api/supports-method.md) Supports для вывода параметров, поддерживаемых набором записей, открытым с разными типами курсоров. Для выполнения этого примера требуется функция Дисплайсуппорт.  
+В этом примере используется [метод](./supports-method.md) Supports для вывода параметров, поддерживаемых набором записей, открытым с разными типами курсоров. Для выполнения этого примера требуется функция Дисплайсуппорт.  
   
 ```  
 // SupportsMethodExample.cpp  
@@ -226,6 +226,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Метод Supports](../../../ado/reference/ado-api/supports-method.md)
+## <a name="see-also"></a>См. также  
+ [Объект Recordset (ADO)](./recordset-object-ado.md)   
+ [Метод Supports](./supports-method.md)

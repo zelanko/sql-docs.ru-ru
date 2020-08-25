@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: ffc6e245-4471-42ae-84dd-e85bddfce983
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: beb6afdd93d69ea920acee3840dc6c0bc44d181e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9e0d37d5aad3f27a61cf3ae7c8dad9b27149e09b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444246"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775473"
 ---
 # <a name="cursortypeenum"></a>CursorTypeEnum
-Указывает тип курсора, используемого в объекте [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) .  
+Указывает тип курсора, используемого в объекте [набора записей](./recordset-object-ado.md) .  
   
-|Константа|Значение|Описание|  
+|Константа|Значение|Описание:|  
 |--------------|-----------|-----------------|  
 |**adOpenDynamic**|2|Использует динамический курсор. Видимыми могут быть дополнения, изменения и удаления других пользователей, а также все типы перемещений через **набор записей** , за исключением закладок, если они не поддерживаются поставщиком.|  
 |**адопенфорвардонли**|0|По умолчанию. Использует однопроходный курсор. Идентичен статическому курсору, за исключением того, что можно прокручивать только записи вперед. Это повышает производительность, если необходимо выполнить только один проход по **набору записей**.|  
@@ -46,4 +46,4 @@ ms.locfileid: "88444246"
 |Адоенумс. примеры CursorType. не указано|  
   
 ## <a name="applies-to"></a>Применение  
- [Свойство CursorType (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)
+ [Свойство CursorType (ADO)](./cursortype-property-ado.md)

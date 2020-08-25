@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: adb5c37e-7874-41db-b4ee-572c1323deff
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3c328a3efe858c7abd9872eef0fcd28dfa1ccb36
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2a37d907547359fd1366bc5b756fbcbb65b4ed20
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443636"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775223"
 ---
 # <a name="find-method-example-jscript"></a>Пример метода Find (JScript)
-В этом примере используется метод [Find](../../../ado/reference/ado-api/find-method-ado.md) объекта [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) для поиска и просмотра компаний в базе данных ***Northwind*** , имя которых начинается с буквы G. вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **финджс. ASP**.  
+В этом примере используется метод [Find](./find-method-ado.md) объекта [Recordset](./recordset-object-ado.md) для поиска и просмотра компаний в базе данных ***Northwind*** , имя которых начинается с буквы G. вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **финджс. ASP**.  
   
 ```  
 <!-- BeginFindJS -->  
@@ -153,6 +153,6 @@ BODY {
 <!-- EndFindJS -->  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Метод Find (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+## <a name="see-also"></a>См. также  
+ [Метод Find (ADO)](./find-method-ado.md)   
+ [Объект Recordset (ADO)](./recordset-object-ado.md)

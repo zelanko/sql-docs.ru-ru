@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4de7336a-b5ea-43f1-b750-5fa302b5b756
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9d1da11bab0ba3858eac13f8a1e32259d376f672
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fc8619fd7c803fdbf417368ef8e7e896e1947ab2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444486"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775923"
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vb"></a>Пример свойств ConnectionString, ConnectionTimeout и State (Visual Basic)
-В этом примере демонстрируются различные способы использования свойства [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) для открытия объекта [соединения](../../../ado/reference/ado-api/connection-object-ado.md) . Он также использует свойство [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) для установки времени ожидания соединения, а свойство [State](../../../ado/reference/ado-api/state-property-ado.md) — для проверки состояния соединений. Для выполнения этой процедуры требуется функция-состояние.  
+В этом примере демонстрируются различные способы использования свойства [ConnectionString](./connectionstring-property-ado.md) для открытия объекта [соединения](./connection-object-ado.md) . Он также использует свойство [ConnectionTimeout](./connectiontimeout-property-ado.md) для установки времени ожидания соединения, а свойство [State](./state-property-ado.md) — для проверки состояния соединений. Для выполнения этой процедуры требуется функция-состояние.  
   
 > [!NOTE]
 >  При подключении к поставщику источника данных, который поддерживает проверку подлинности Windows, следует указать **Trusted_Connection = Yes** или **Integrated Security = SSPI** вместо сведений об идентификаторе пользователя и пароле в строке подключения.  
@@ -127,8 +127,8 @@ End Function
 'EndConnectionStringVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Свойство ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
- [Свойство ConnectionTimeout (ADO)](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)   
- [Свойство State (ADO)](../../../ado/reference/ado-api/state-property-ado.md)
+## <a name="see-also"></a>См. также  
+ [Объект Connection (ADO)](./connection-object-ado.md)   
+ [Свойство ConnectionString (ADO)](./connectionstring-property-ado.md)   
+ [Свойство ConnectionTimeout (ADO)](./connectiontimeout-property-ado.md)   
+ [Свойство State (ADO)](./state-property-ado.md)

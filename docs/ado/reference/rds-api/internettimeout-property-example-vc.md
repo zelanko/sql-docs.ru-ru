@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 88b6d05c-d4eb-4ab1-bbe2-95d146237f94
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4a567da551fbadc89ca28e8df169b0149b780897
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 74fc1cb8504e027db7181657cbcc74452cd5dfe4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438936"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768093"
 ---
 # <a name="internettimeout-property-example-vc"></a>Пример свойства InternetTimeout (Visual C++)
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- В этом примере демонстрируется свойство [InternetTimeout](../../../ado/reference/rds-api/internettimeout-property-rds.md) , которое существует в объектах « [элемент управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) данным» и « [пространство](../../../ado/reference/rds-api/dataspace-object-rds.md) ». В этом случае свойство **InternetTimeout** демонстрируется для объекта « **элемент управления** данным», а время ожидания равно 20 секундам.  
+ В этом примере демонстрируется свойство [InternetTimeout](./internettimeout-property-rds.md) , которое существует в объектах « [элемент управления](./datacontrol-object-rds.md) данным» и « [пространство](./dataspace-object-rds.md) ». В этом случае свойство **InternetTimeout** демонстрируется для объекта « **элемент управления** данным», а время ожидания равно 20 секундам.  
   
 ```cpp
 // BeginInternetTimeoutCpp  
@@ -156,7 +156,5 @@ void PrintComError(_com_error &e)
 // EndInternetTimeoutCpp  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Свойство InternetTimeout (служба удаленных рабочих столов)](../../../ado/reference/rds-api/internettimeout-property-rds.md)
-
-
+## <a name="see-also"></a>См. также  
+ [Свойство InternetTimeout (служба удаленных рабочих столов)](./internettimeout-property-rds.md)

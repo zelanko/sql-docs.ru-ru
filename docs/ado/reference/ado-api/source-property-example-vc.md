@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e10d33da-ea30-4138-ae40-e9f6aa9d17d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8b92cb5f1d2ba02b58237f9c7776a4bf243d73a3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 28aca75b9bf0abba7a87a035ebcf565edb0b5fa5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442036"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777383"
 ---
 # <a name="source-property-example-vc"></a>Пример свойства Source (Visual C++)
-В этом примере показано свойство [Source](../../../ado/reference/ado-api/source-property-ado-recordset.md) , открывающее три объекта [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) на основе различных источников данных.  
+В этом примере показано свойство [Source](./source-property-ado-recordset.md) , открывающее три объекта [набора записей](./recordset-object-ado.md) на основе различных источников данных.  
   
 ```  
 // Source_Property_Sample.cpp  
@@ -157,6 +157,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Свойство Source (объект Recordset ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)
+## <a name="see-also"></a>См. также  
+ [Объект Recordset (ADO)](./recordset-object-ado.md)   
+ [Свойство Source (объект Recordset ADO)](./source-property-ado-recordset.md)

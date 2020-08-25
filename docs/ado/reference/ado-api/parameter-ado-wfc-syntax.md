@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6fc5226da0ceeefc6ae961b2a3d358d1dc1955b0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 09d345a0f08d9fa2e9e3696941aba1ef49443efd
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442826"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773473"
 ---
 # <a name="parameter-ado---wfc-syntax"></a>Parameter (ADO — синтаксис WFC)
 ## <a name="package-commswfcdata"></a>упаковать com. MS. WFC. Data  
@@ -66,7 +66,7 @@ public AdoProperties getProperties()
 ```  
   
 ## <a name="parameter-accessor-methods"></a>Методы доступа к параметрам  
- Свойство [value](../../../ado/reference/ado-api/value-property-ado.md) объекта [Parameter](../../../ado/reference/ado-api/parameter-object.md) Возвращает или задает содержимое этого объекта. Содержимое представляется как вариант, тип объекта, которому можно присвоить значение и любой из нескольких типов данных.  
+ Свойство [value](./value-property-ado.md) объекта [Parameter](./parameter-object.md) Возвращает или задает содержимое этого объекта. Содержимое представляется как вариант, тип объекта, которому можно присвоить значение и любой из нескольких типов данных.  
   
  ADO/WFC реализует свойство **value** с помощью метода **GetValue** , который возвращает объект Variant; и метод **SetValue** , принимающий вариант в качестве аргумента. Варианты в некоторых языках очень эффективны, например в Microsoft Visual Basic.  
   
@@ -95,5 +95,5 @@ public boolean isNull()
 public void setNull()  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект Parameter](../../../ado/reference/ado-api/parameter-object.md)
+## <a name="see-also"></a>См. также  
+ [Объект Parameter](./parameter-object.md)

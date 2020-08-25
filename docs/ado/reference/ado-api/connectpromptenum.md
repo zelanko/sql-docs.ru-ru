@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 21026e24-62b7-4cc9-8aef-62c1fc6cba75
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0ad8fe77bb3472931d3b16d5849b047001922c96
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 48d5cdb61cee2051d3469b7cfeee85629521d71e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444416"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775803"
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
 Указывает, должно ли отображаться диалоговое окно для запроса отсутствующих параметров при открытии соединения с источником данных.  
   
-|Константа|Значение|Описание|  
+|Константа|Значение|Описание:|  
 |--------------|-----------|-----------------|  
 |**адпромпталвайс**|1|Всегда запрашивает.|  
 |**adPromptComplete**|2|Запрашивает, требуется ли дополнительная информация.|  
@@ -44,4 +44,4 @@ ms.locfileid: "88444416"
 |Адоенумс. Коннектпромпт. NEVER|  
   
 ## <a name="applies-to"></a>Применение  
- [Свойство Prompt (динамическое) (ADO)](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)
+ [Свойство Prompt (динамическое) (ADO)](./prompt-property-dynamic-ado.md)

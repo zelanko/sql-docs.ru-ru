@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c648b5a8-d4f1-4d16-836e-3957feb03617
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 290155a3e6ea7e8ec0110d2bc2672cc74f6895b2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0df71772820d5871c32e40827400b8cdd40db99d
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451236"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776483"
 ---
 # <a name="appendchunk-method-ado"></a>Метод AppendChunk (ADO)
-Добавляет данные к большому текстовому или двоичному [полю](../../../ado/reference/ado-api/field-object.md)данных или к объекту [параметра](../../../ado/reference/ado-api/parameter-object.md) .  
+Добавляет данные к большому текстовому или двоичному [полю](./field-object.md)данных или к объекту [параметра](./parameter-object.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,21 +38,21 @@ object.AppendChunk Data
  *object*  
  Объект **поля** или **параметра** .  
   
- *Data*  
+ *Данные*  
  **Значение типа Variant** , содержащее данные, добавляемые к объекту.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Используйте метод **AppendChunk** для **поля** или объекта **параметра** , чтобы заполнить его длинными двоичными или символьными данными. В ситуациях, когда память системы ограничена, можно использовать метод **AppendChunk** для обработки длинных значений в частях, а не в полном объеме.  
   
 ## <a name="field"></a>Поле  
- Если бит **адфлдлонг** в свойстве [Attributes](../../../ado/reference/ado-api/attributes-property-ado.md) объекта **field** имеет значение **true**, для этого поля можно использовать метод **AppendChunk** .  
+ Если бит **адфлдлонг** в свойстве [Attributes](./attributes-property-ado.md) объекта **field** имеет значение **true**, для этого поля можно использовать метод **AppendChunk** .  
   
- Первый вызов **AppendChunk** для объекта **field** записывает данные в поле, перезаписывая существующие данные. Последующие вызовы **AppendChunk** вызывают добавление к существующим данным. Если вы добавляете данные в одно поле, а затем задаете или считываете значение другого поля в текущей записи, то ADO предполагает, что добавление данных к первому полю завершено. При повторном вызове метода **AppendChunk** в первом поле ADO интерпретирует вызов как новую операцию **AppendChunk** и перезаписывает существующие данные. Доступ к полям других объектов [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) , которые не являются клонами первого объекта **набора записей** , не приведет к нарушению операций **AppendChunk** .  
+ Первый вызов **AppendChunk** для объекта **field** записывает данные в поле, перезаписывая существующие данные. Последующие вызовы **AppendChunk** вызывают добавление к существующим данным. Если вы добавляете данные в одно поле, а затем задаете или считываете значение другого поля в текущей записи, то ADO предполагает, что добавление данных к первому полю завершено. При повторном вызове метода **AppendChunk** в первом поле ADO интерпретирует вызов как новую операцию **AppendChunk** и перезаписывает существующие данные. Доступ к полям других объектов [набора записей](./recordset-object-ado.md) , которые не являются клонами первого объекта **набора записей** , не приведет к нарушению операций **AppendChunk** .  
   
  Если при вызове **AppendChunk** для объекта **поля** текущая запись отсутствует, возникает ошибка.  
   
 > [!NOTE]
->  Метод **AppendChunk** не работает с объектами **полей** объекта [записи (ADO)](../../../ado/reference/ado-api/record-object-ado.md) . Она не выполняет никаких операций и выдает ошибку во время выполнения.  
+>  Метод **AppendChunk** не работает с объектами **полей** объекта [записи (ADO)](./record-object-ado.md) . Она не выполняет никаких операций и выдает ошибку во время выполнения.  
   
 ## <a name="parameter"></a>Параметр  
  Если бит **адпарамлонг** в свойстве **Attributes** объекта **Parameter** имеет значение **true**, можно использовать метод **AppendChunk** для этого параметра.  
@@ -63,15 +63,15 @@ object.AppendChunk Data
 
 :::row:::
     :::column:::
-        [Объект Field](../../../ado/reference/ado-api/field-object.md)  
+        [Объект Field](./field-object.md)  
     :::column-end:::
     :::column:::
-        [Объект Parameter](../../../ado/reference/ado-api/parameter-object.md)  
+        [Объект Parameter](./parameter-object.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>См. также  
- [Примеры методов AppendChunk и-блока (Visual Basic)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vb.md)   
- [Примеры методов AppendChunk и-блока (Visual c++)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vc.md)   
- [Свойство Attributes (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)   
- [Метод GetChunk (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)
+ [Примеры методов AppendChunk и-блока (Visual Basic)](./appendchunk-and-getchunk-methods-example-vb.md)   
+ [Примеры методов AppendChunk и-блока (Visual c++)](./appendchunk-and-getchunk-methods-example-vc.md)   
+ [Свойство Attributes (ADO)](./attributes-property-ado.md)   
+ [Метод GetChunk (ADO)](./getchunk-method-ado.md)

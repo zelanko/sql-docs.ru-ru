@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 2509b32c-a995-4364-9152-d8c83129bdd8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f226f9687f1bce3def616739f43f4d283d019ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ea9319e89c44b9cbb66b3acecdcbea4afa3e61c4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441446"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776783"
 ---
 # <a name="activeconnection-property-ado-md"></a>Свойство ActiveConnection (многомерные объекты ADO)
-Указывает объект [подключения](../../../ado/reference/ado-api/connection-object-ado.md) ADO, к которому в настоящий момент принадлежит текущий набор ячеек или каталог.  
+Указывает объект [подключения](../ado-api/connection-object-ado.md) ADO, к которому в настоящий момент принадлежит текущий набор ячеек или каталог.  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает **значение типа Variant** , содержащее строку, определяющую соединение или объект **соединения** . Значение по умолчанию — Empty.  
@@ -34,9 +34,9 @@ ms.locfileid: "88441446"
 ## <a name="remarks"></a>Remarks  
  Этому свойству можно присвоить допустимый объект **соединения** ADO или допустимую строку подключения. Если для этого свойства задана строка подключения, поставщик создает новый объект **соединения** , используя это определение, и открывает соединение.  
   
- При использовании аргумента *ActiveConnection* метода [Open](../../../ado/reference/ado-md-api/open-method-ado-md.md) для открытия объекта набора [ячеек](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) свойство **ActiveConnection** будет наследовать значение аргумента.  
+ При использовании аргумента *ActiveConnection* метода [Open](./open-method-ado-md.md) для открытия объекта набора [ячеек](./cellset-object-ado-md.md) свойство **ActiveConnection** будет наследовать значение аргумента.  
   
- Присвоение свойству **ActiveConnection** объекта [каталога](../../../ado/reference/ado-md-api/catalog-object-ado-md.md) значения **Nothing** приведет к освобождению связанных данных, включая данные из коллекции [кубедефс](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md) и любых связанных [объектов измерения](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [иерархии](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [уровня](../../../ado/reference/ado-md-api/level-object-ado-md.md)и [элемента](../../../ado/reference/ado-md-api/member-object-ado-md.md) . Закрытие объекта **соединения** , который использовался для открытия **каталога** , имеет тот же результат, что и присвоение свойству **ActiveConnection** значения **Nothing**.  
+ Присвоение свойству **ActiveConnection** объекта [каталога](./catalog-object-ado-md.md) значения **Nothing** приведет к освобождению связанных данных, включая данные из коллекции [кубедефс](./cubedefs-collection-ado-md.md) и любых связанных [объектов измерения](./dimension-object-ado-md.md), [иерархии](./hierarchy-object-ado-md.md), [уровня](./level-object-ado-md.md)и [элемента](./member-object-ado-md.md) . Закрытие объекта **соединения** , который использовался для открытия **каталога** , имеет тот же результат, что и присвоение свойству **ActiveConnection** значения **Nothing**.  
   
  Изменение базы данных по умолчанию для соединения, на которое ссылается свойство **ActiveConnection** объекта **каталога** , делает недействительным содержимое **каталога**.  
   
@@ -61,14 +61,14 @@ ms.locfileid: "88441446"
 
 :::row:::
     :::column:::
-        [Объект Catalog (многомерные объекты ADO)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)  
+        [Объект Catalog (многомерные объекты ADO)](./catalog-object-ado-md.md)  
     :::column-end:::
     :::column:::
-        [Объект Cellset (многомерные объекты ADO)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
+        [Объект Cellset (многомерные объекты ADO)](./cellset-object-ado-md.md)  
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>См. также:  
- [Пример набора ячеек (Visual Basic)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
- [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Метод Open (многомерные объекты ADO)](../../../ado/reference/ado-md-api/open-method-ado-md.md)
+## <a name="see-also"></a>См. также  
+ [Пример набора ячеек (Visual Basic)](./cellset-example-vb.md)   
+ [Объект Connection (ADO)](../ado-api/connection-object-ado.md)   
+ [Метод Open (многомерные объекты ADO)](./open-method-ado-md.md)

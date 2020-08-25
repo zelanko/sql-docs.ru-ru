@@ -14,26 +14,26 @@ helpviewer_keywords:
 ms.assetid: 78bfa2f0-358b-40bb-be2e-16262752d676
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 05d5d9025eaeb16b668253c2fd49ac87d86cd267
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3229514ea5a549074b8bd1014f311fff442e5305
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441366"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776733"
 ---
 # <a name="ado-md-methods"></a>Методы многомерных объектов ADO
 
 |Метод|Описание|  
 |-|-|  
-|[Закрыть](../../../ado/reference/ado-md-api/close-method-ado-md.md)|Закрывает открытый набор ячеек.|  
-|[GetSchemaObject](../../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)|Извлекает объект схемы объекты данных ActiveX (MD) (измерение, иерархию, уровень или элемент) по уникальному имени.|  
-|[Открыть](../../../ado/reference/ado-md-api/open-method-ado-md.md)|Извлекает результаты многомерного запроса и возвращает результаты в набор ячеек.|  
+|[Закрыть](./close-method-ado-md.md)|Закрывает открытый набор ячеек.|  
+|[GetSchemaObject](./getschemaobject-method-ado-md.md)|Извлекает объект схемы объекты данных ActiveX (MD) (измерение, иерархию, уровень или элемент) по уникальному имени.|  
+|[Открыть](./open-method-ado-md.md)|Извлекает результаты многомерного запроса и возвращает результаты в набор ячеек.|  
   
-## <a name="see-also"></a>См. также:  
- [Справочник по объекты данных ActiveX (MD) API](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
- [Примеры кода объекты данных ActiveX (MD)](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
- [объекты данных ActiveX (MD) коллекции](../../../ado/reference/ado-md-api/ado-md-collections.md)   
- [объекты данных ActiveX (MD) перечислимые константы](../../../ado/reference/ado-md-api/ado-md-enumerated-constants.md)   
- [Объектная модель объекты данных ActiveX (MD)](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
- [объекты данных ActiveX (MD) объекты](../../../ado/reference/ado-md-api/ado-md-objects.md)   
- [Свойства многомерных объектов ADO](../../../ado/reference/ado-md-api/ado-md-properties.md)
+## <a name="see-also"></a>См. также  
+ [Справочник по объекты данных ActiveX (MD) API](./ado-md-object-model.md?view=sql-server-ver15)   
+ [Примеры кода объекты данных ActiveX (MD)](./ado-md-code-examples.md)   
+ [объекты данных ActiveX (MD) коллекции](./ado-md-collections.md)   
+ [объекты данных ActiveX (MD) перечислимые константы](./ado-md-enumerated-constants.md)   
+ [Объектная модель объекты данных ActiveX (MD)](./ado-md-object-model.md)   
+ [объекты данных ActiveX (MD) объекты](./ado-md-objects.md)   
+ [Свойства многомерных объектов ADO](./ado-md-properties.md)

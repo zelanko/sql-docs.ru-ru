@@ -16,31 +16,31 @@ helpviewer_keywords:
 ms.assetid: 4e10cda7-ce81-4466-94c2-844d38191cf1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 35846bf873ff98ff15e2581c36e1963b7ddcd08c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 83ba6960e6e7f81db55f3a8292fd054c1377b106
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444276"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775523"
 ---
 # <a name="cursoroptionenum"></a>CursorOptionEnum
-Указывает, для каких функций должен проверяться метод [поддержки](../../../ado/reference/ado-api/supports-method.md) .  
+Указывает, для каких функций должен проверяться метод [поддержки](./supports-method.md) .  
   
-|Константа|Значение|Описание|  
+|Константа|Значение|Описание:|  
 |--------------|-----------|-----------------|  
-|**ададднев**|0x1000400|Поддерживает метод [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) для добавления новых записей.|  
-|**адаппрокспоситион**|0x4000|Поддерживает свойства [примеры AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) и [примеры absolutepage](../../../ado/reference/ado-api/absolutepage-property-ado.md) .|  
-|**адбукмарк**|0x2000|Поддерживает свойство [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md) для получения доступа к конкретным записям.|  
-|**adDelete**|0x1000800|Поддерживает метод [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) для удаления записей.|  
-|**adFind**|0x80000|Поддерживает метод [Find](../../../ado/reference/ado-api/find-method-ado.md) для поиска строки в [наборе записей](../../../ado/reference/ado-api/recordset-object-ado.md).|  
+|**ададднев**|0x1000400|Поддерживает метод [AddNew](./addnew-method-ado.md) для добавления новых записей.|  
+|**адаппрокспоситион**|0x4000|Поддерживает свойства [примеры AbsolutePosition](./absoluteposition-property-ado.md) и [примеры absolutepage](./absolutepage-property-ado.md) .|  
+|**адбукмарк**|0x2000|Поддерживает свойство [Bookmark](./bookmark-property-ado.md) для получения доступа к конкретным записям.|  
+|**adDelete**|0x1000800|Поддерживает метод [Delete](./delete-method-ado-recordset.md) для удаления записей.|  
+|**adFind**|0x80000|Поддерживает метод [Find](./find-method-ado.md) для поиска строки в [наборе записей](./recordset-object-ado.md).|  
 |**adHoldRecords**|0x100|Получает больше записей или изменяет следующее расположение без фиксации всех ожидающих изменений.|  
-|**адиндекс**|0x100000|Поддерживает свойство [index](../../../ado/reference/ado-api/index-property.md) для именования индекса.|  
-|**adMovePrevious**|0x200|Поддерживает методы [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) и [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) , а также методы [Move](../../../ado/reference/ado-api/move-method-ado.md) или [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) для перемещения текущей позиции записи назад без указания закладок.|  
+|**адиндекс**|0x100000|Поддерживает свойство [index](./index-property.md) для именования индекса.|  
+|**adMovePrevious**|0x200|Поддерживает методы [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) и [MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) , а также методы [Move](./move-method-ado.md) или [GetRows](./getrows-method-ado.md) для перемещения текущей позиции записи назад без указания закладок.|  
 |**аднотифи**|0x40000|Указывает, что базовый поставщик данных поддерживает уведомления (которые определяют, поддерживаются ли события **набора записей** ).|  
-|**адресинк**|0x20000|Поддерживает метод [Resync](../../../ado/reference/ado-api/resync-method.md) для обновления курсора с данными, видимыми в базовой базе данных.|  
-|**адсик**|0x200000|Поддерживает метод [Seek](../../../ado/reference/ado-api/seek-method.md) для поиска строки в **наборе записей**.|  
-|**adUpdate**|0x1008000|Поддерживает метод [Update](../../../ado/reference/ado-api/update-method.md) для изменения существующих данных.|  
-|**adUpdateBatch**|0x10000|Поддерживает пакетное обновление (методы[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) и [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) ) для передачи групп изменений поставщику.|  
+|**адресинк**|0x20000|Поддерживает метод [Resync](./resync-method.md) для обновления курсора с данными, видимыми в базовой базе данных.|  
+|**адсик**|0x200000|Поддерживает метод [Seek](./seek-method.md) для поиска строки в **наборе записей**.|  
+|**adUpdate**|0x1008000|Поддерживает метод [Update](./update-method.md) для изменения существующих данных.|  
+|**adUpdateBatch**|0x10000|Поддерживает пакетное обновление (методы[UpdateBatch](./updatebatch-method.md) и [CancelBatch](./cancelbatch-method-ado.md) ) для передачи групп изменений поставщику.|  
   
 ## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
  Пакет: **com. MS. WFC. Data**  
@@ -62,4 +62,4 @@ ms.locfileid: "88444276"
 |Адоенумс. Курсороптион. UPDATEBATCH|  
   
 ## <a name="applies-to"></a>Применение  
- [Метод Supports](../../../ado/reference/ado-api/supports-method.md)
+ [Метод Supports](./supports-method.md)

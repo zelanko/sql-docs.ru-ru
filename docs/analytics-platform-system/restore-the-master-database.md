@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6d122881f5283da86f66494ee2f049756d151551
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400456"
 ---
 # <a name="restore-the-master-database-in-analytics-platform-system-aps"></a>Восстановление базы данных master в системе аналитики (ТД)
@@ -32,7 +32,7 @@ ms.locfileid: "74400456"
   
 3.  Выберите базу данных master для восстановления.  
   
-4.  Нажмите кнопку **Применить**.  
+4.  Щелкните **Применить**.  
   
 5.  Чтобы выполнить восстановление, SQL Server PDW завершит работу всех служб устройств и отключит всех пользователей. После завершения восстановления SQL Server PDW перезапустит службы устройств.  
   

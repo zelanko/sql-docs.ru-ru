@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 430031bab7e644278693aa26095aaa1724b715ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0fbc77fd5107e5642ba4fabe2f331c803ffde392
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439206"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768643"
 ---
 # <a name="createobject-method-rds"></a>Метод CreateObject (служба удаленных рабочих столов)
 Создает прокси-сервер для целевого бизнес-объекта и возвращает указатель на него. Прокси-пакеты и маршалирует данные в заглушку на стороне сервера для взаимодействия с бизнес-объектом для отправки запросов и данных через Интернет. Для объектов внутрипроцессного компонента прокси-серверы не используются, предоставляется только указатель на объект.  
@@ -42,7 +42,7 @@ ms.locfileid: "88439206"
  Объектная переменная, результатом которой является объект, который является типом, заданным в параметре *ProgID*.  
   
  *Пространство данных*  
- Объектная переменная, представляющая [RDS. Объект пространства](../../../ado/reference/rds-api/dataspace-object-rds.md) данных, используемый для создания экземпляра нового объекта.  
+ Объектная переменная, представляющая [RDS. Объект пространства](./dataspace-object-rds.md) данных, используемый для создания экземпляра нового объекта.  
   
  *ProgID:*  
  **Строковое** значение, содержащее программный идентификатор, указывающий бизнес-объект на стороне сервера, который реализует бизнес-правила приложения.  
@@ -54,11 +54,9 @@ ms.locfileid: "88439206"
  *Протокол HTTP* является стандартным веб-протоколом. *HTTPS* — это защищенный веб-протокол. Используйте *протокол DCOM* при запуске локальной сети без HTTP. *Внутрипроцессный* протокол — это локальная библиотека динамической КОМПОНОВКИ (DLL); Он не использует сеть.  
   
 ## <a name="applies-to"></a>Применение  
- [Объект DataSpace (служба удаленных рабочих столов)](../../../ado/reference/rds-api/dataspace-object-rds.md)  
+ [Объект DataSpace (служба удаленных рабочих столов)](./dataspace-object-rds.md)  
   
-## <a name="see-also"></a>См. также:  
- [Пример объекта факта, метода запроса и метода CreateObject (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)   
- [Пример объекта пространства и метода CreateObject (VBScript)](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)   
- [Метод CreateRecordset (служба удаленных рабочих столов)](../../../ado/reference/rds-api/createrecordset-method-rds.md)
-
-
+## <a name="see-also"></a>См. также  
+ [Пример объекта факта, метода запроса и метода CreateObject (VBScript)](./datafactory-object-query-method-and-createobject-method-example-vbscript.md)   
+ [Пример объекта пространства и метода CreateObject (VBScript)](./dataspace-object-and-createobject-method-example-vbscript.md)   
+ [Метод CreateRecordset (служба удаленных рабочих столов)](./createrecordset-method-rds.md)

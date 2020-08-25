@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: b9b47e57-18a4-4186-aef5-5bd18d7b1d74
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f26e8ab07a5ac51307d3b3da374e982ea5b6f469
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c22667a9cd5855e4715b8aa37774a9137ab3cc4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443116"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774063"
 ---
 # <a name="nativeerror-property-ado"></a>Свойство NativeError (ADO)
-Указывает код ошибки конкретного поставщика для данного объекта [ошибки](../../../ado/reference/ado-api/error-object.md) .  
+Указывает код ошибки конкретного поставщика для данного объекта [ошибки](./error-object.md) .  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение **типа Long** , указывающее код ошибки.  
@@ -35,8 +35,8 @@ ms.locfileid: "88443116"
  Используйте свойство **NativeError** , чтобы получить сведения об ошибке конкретной базы данных для конкретного объекта **ошибки** . Например, при использовании поставщика Microsoft ODBC для OLE DB с базой данных Microsoft SQL Server, машинные коды ошибок, происходящие из SQL Server, проходят через ODBC и поставщик ODBC в свойство ADO **NativeError** .  
   
 ## <a name="applies-to"></a>Применение  
- [Объект Error](../../../ado/reference/ado-api/error-object.md)  
+ [Объект Error](./error-object.md)  
   
-## <a name="see-also"></a>См. также:  
- [Примеры свойств Description, HelpContext, HelpFile, NativeError, Number, Source и SQLState (Visual Basic)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
- [Примеры свойств Description, HelpContext, HelpFile, NativeError, Number, Source и SQLState (Visual c++)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
+## <a name="see-also"></a>См. также  
+ [Примеры свойств Description, HelpContext, HelpFile, NativeError, Number, Source и SQLState (Visual Basic)](./description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
+ [Примеры свойств Description, HelpContext, HelpFile, NativeError, Number, Source и SQLState (Visual c++)](./description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)

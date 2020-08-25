@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a39166406be321d01ab6d0dc2acd2488d7b64da5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ffb627b0994afbe2b51f946e4ab7dca881e9a9a4
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454046"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806545"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Обзор поставщика OLE DB Майкрософт для SQL Server
 Поставщик OLE DB Майкрософт для SQL Server, SQLOLEDB предоставляет ADO доступ к Microsoft SQL Server.
@@ -29,13 +29,13 @@ ms.locfileid: "88454046"
 > Поставщик OLE DB Майкрософт для SQL Server (SQLOLEDB) остается устаревшим и не рекомендуется использовать его для новых задач разработки. Вместо этого используйте новый драйвер [Microsoft OLE DB для SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL), который будет обновлен с самыми последними серверными компонентами.
 
 ## <a name="connection-string-parameters"></a>Параметры строки соединения
- Чтобы подключиться к поставщику, задайте для аргумента *поставщика* в качестве значения свойства [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) значение:
+ Чтобы подключиться к поставщику, задайте для аргумента *поставщика* в качестве значения свойства [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md) значение:
 
 ```vb
 SQLOLEDB
 ```
 
- Это значение также может быть задано или считано с помощью свойства [provider](../../../ado/reference/ado-api/provider-property-ado.md) .
+ Это значение также может быть задано или считано с помощью свойства [provider](../../reference/ado-api/provider-property-ado.md) .
 
 ## <a name="typical-connection-string"></a>Типичная строка подключения
  Типичная строка подключения для этого поставщика:
@@ -60,11 +60,11 @@ User ID=MyUserID;Password=MyPassword;"
 >  При подключении к поставщику источника данных, который поддерживает проверку подлинности Windows, следует указать **Trusted_Connection = Yes** или **Integrated Security = SSPI** вместо сведений об идентификаторе пользователя и пароле в строке подключения.
 
 ## <a name="provider-specific-connection-parameters"></a>Параметры подключения, зависящие от поставщика
- Поставщик поддерживает несколько параметров соединения, зависящих от поставщика, помимо тех, которые определены в ADO. Как и в случае со свойствами соединения ADO, эти свойства, зависящие от поставщика, могут быть заданы через коллекцию [свойств](../../../ado/reference/ado-api/properties-collection-ado.md) [соединения](../../../ado/reference/ado-api/connection-object-ado.md) или могут быть заданы как часть **ConnectionString**.
+ Поставщик поддерживает несколько параметров соединения, зависящих от поставщика, помимо тех, которые определены в ADO. Как и в случае со свойствами соединения ADO, эти свойства, зависящие от поставщика, могут быть заданы через коллекцию [свойств](../../reference/ado-api/properties-collection-ado.md) [соединения](../../reference/ado-api/connection-object-ado.md) или могут быть заданы как часть **ConnectionString**.
 
 |Параметр|Описание|
 |---------------|-----------------|
-|Trusted_Connection|Указывает режим проверки подлинности пользователя. Для этого свойства можно задать значение **Да** или **нет**. Значение по умолчанию — **No**. Если для этого свойства задано значение **Да**, SQLOLEDB использует режим проверки подлинности Microsoft Windows NT для авторизации доступа пользователей к SQL Server базе данных, указанной значениями свойств **Location** и [DataSource](../../../ado/reference/ado-api/datasource-property-ado.md) . Если это свойство имеет значение **нет**, SQLOLEDB использует смешанный режим для авторизации доступа пользователей к базе данных SQL Server. Имя входа и пароль SQL Server указаны в свойствах **идентификатора пользователя** и **пароля** .|
+|Trusted_Connection|Указывает режим проверки подлинности пользователя. Для этого свойства можно задать значение **Да** или **нет**. Значение по умолчанию — **No**. Если для этого свойства задано значение **Да**, SQLOLEDB использует режим проверки подлинности Microsoft Windows NT для авторизации доступа пользователей к SQL Server базе данных, указанной значениями свойств **Location** и [DataSource](../../reference/ado-api/datasource-property-ado.md) . Если это свойство имеет значение **нет**, SQLOLEDB использует смешанный режим для авторизации доступа пользователей к базе данных SQL Server. Имя входа и пароль SQL Server указаны в свойствах **идентификатора пользователя** и **пароля** .|
 |Текущий язык|Указывает SQL Server имя языка. Указывает язык, используемый для выбора и форматирования системных сообщений. Язык должен быть установлен на SQL Server, иначе открытие подключения завершится ошибкой.|
 |Сетевой адрес|Указывает сетевой адрес SQL Server, заданный свойством **Location** .|
 |Network Library|Указывает имя сетевой библиотеки (DLL), используемой для связи с SQL Server. Не должно включать путь или расширение DLL. Значение по умолчанию предоставляется конфигурацией клиента SQL Server.|
@@ -109,7 +109,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 ```
 
 ## <a name="sql-server-features"></a>SQL Server функции
- При использовании SQL Server ADO может использовать XML для ввода **команды** и получать результаты в формате XML-потока, а не в объектах **набора записей** . Дополнительные сведения см. в разделе [Использование потоков для ввода команды](../../../ado/guide/data/command-streams.md) и [получение результирующих наборов в потоках](../../../ado/guide/data/retrieving-resultsets-into-streams.md).
+ При использовании SQL Server ADO может использовать XML для ввода **команды** и получать результаты в формате XML-потока, а не в объектах **набора записей** . Дополнительные сведения см. в разделе [Использование потоков для ввода команды](../data/command-streams.md) и [получение результирующих наборов в потоках](../data/retrieving-resultsets-into-streams.md).
 
 ### <a name="accessing-sql_variant-data-using-mdac-27-mdac-28-or-windows-dac-60"></a>Доступ к данным sql_variant с помощью MDAC 2,7, MDAC 2,8 или Windows DAC 6,0
  Microsoft SQL Server имеет тип данных с именем **sql_variant**. Как и **DBTYPE_VARIANT**OLE DB, тип данных **sql_variant** может хранить данные нескольких разных типов. Однако между **DBTYPE_VARIANT** и **sql_variant**существует несколько ключевых различий. ADO также обрабатывает данные, хранящиеся в виде **sql_variant** , иначе, чем они обрабатывают другие типы данных. В следующем списке описываются проблемы, которые следует учитывать при доступе к SQL Server данным, хранящимся в столбцах типа **sql_variant**.
@@ -134,9 +134,9 @@ EXECUTE SalesByCategory 'Produce', '1995'
  Доступные для прокрутки наборы записей SQLOLEDB поддерживаются SQL Server курсорами. SQL Server накладывает ограничения на курсоры, которые чувствительны к изменениям, внесенным другими пользователями базы данных. В частности, строки в некоторых курсорах не могут быть упорядочены, и попытка создать набор записей с помощью команды, содержащей предложение SQL ORDER BY, может завершиться ошибкой.
 
 ## <a name="dynamic-properties"></a>Динамические свойства
- Поставщик OLE DB Майкрософт для SQL Server вставляет несколько динамических свойств в коллекцию **свойств** неоткрытыго [соединения](../../../ado/reference/ado-api/connection-object-ado.md), [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md)и [командных](../../../ado/reference/ado-api/command-object-ado.md) объектов.
+ Поставщик OLE DB Майкрософт для SQL Server вставляет несколько динамических свойств в коллекцию **свойств** неоткрытыго [соединения](../../reference/ado-api/connection-object-ado.md), [набора записей](../../reference/ado-api/recordset-object-ado.md)и [командных](../../reference/ado-api/command-object-ado.md) объектов.
 
- В следующих таблицах приведены перекрестные индексы имен ADO и OLE DB для каждого динамического свойства. Ссылка на OLE DB программиста ссылается на имя свойства ADO по термину «описание». Дополнительные сведения об этих свойствах можно найти в справочнике по программисту OLE DB. Найдите имя свойства OLE DB в индексе или см. [приложение в: OLE DB свойства](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292).
+ В следующих таблицах приведены перекрестные индексы имен ADO и OLE DB для каждого динамического свойства. Ссылка на OLE DB программиста ссылается на имя свойства ADO по термину «описание». Дополнительные сведения об этих свойствах можно найти в справочнике по программисту OLE DB. Найдите имя свойства OLE DB в индексе или см. [приложение в: OLE DB свойства](/previous-versions/windows/desktop/ms723130(v=vs.85)).
 
 ## <a name="connection-dynamic-properties"></a>Динамические свойства подключения
  Следующие свойства добавляются в коллекцию **Properties** объекта **Connection** .
@@ -356,7 +356,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Корень XML|SSPROP_STREAM_XMLROOT|
 |XSL|SSPROP_STREAM_XSL|
 
- Сведения о конкретной реализации и сведения о функциональных возMicrosoft SQL Serverии OLE DB поставщика см. в разделе [поставщик SQL Server](https://msdn.microsoft.com/adf1d6c4-5930-444a-9248-ff1979729635).
+ Сведения о конкретной реализации и сведения о функциональных возMicrosoft SQL Serverии OLE DB поставщика см. в разделе [поставщик SQL Server](/previous-versions/windows/desktop/ms720897(v=vs.85)).
 
-## <a name="see-also"></a>См. также:
- Property ( [ADO) свойство](../../../ado/reference/ado-api/connectionstring-property-ado.md) [поставщика](../../../ado/reference/ado-api/provider-property-ado.md) (ADO) [объект Recordset Object (](../../../ado/reference/ado-api/recordset-object-ado.md) ADO)
+## <a name="see-also"></a>См. также
+ Property ( [ADO) свойство](../../reference/ado-api/connectionstring-property-ado.md) [поставщика](../../reference/ado-api/provider-property-ado.md) (ADO) [объект Recordset Object (](../../reference/ado-api/recordset-object-ado.md) ADO)

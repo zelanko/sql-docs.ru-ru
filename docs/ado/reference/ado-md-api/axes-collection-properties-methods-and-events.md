@@ -13,24 +13,24 @@ helpviewer_keywords:
 ms.assetid: be459530-6f28-458f-ad70-759eae3ae08c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5e5fdda44ced1510b4a9ca6179cad9a5224dc705
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0cfc62edcff2603d3a2e9e52149fd32597f6eedc
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441345"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776691"
 ---
 # <a name="axes-collection-properties-methods-and-events"></a>Свойства, методы и события коллекции Axes
 ## <a name="properties"></a>Свойства  
- [Count, свойство](../../../ado/reference/ado-api/count-property-ado.md)  
+ [Count, свойство](../ado-api/count-property-ado.md)  
   
- [Свойство элемента](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Свойство элемента](../ado-api/item-property-ado.md)  
   
 ## <a name="methods"></a>Методы  
- [Метод Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Метод Refresh](../ado-api/refresh-method-ado.md)  
   
 ## <a name="events"></a>События  
  Нет.  
   
 ## <a name="see-also"></a>См. также:  
- [Коллекция Axes (многомерные объекты ADO)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)
+ [Коллекция Axes (многомерные объекты ADO)](./axes-collection-ado-md.md)

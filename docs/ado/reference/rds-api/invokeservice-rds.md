@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ad45c676-ec7e-4a3a-9a6b-a54f75eb3012
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4b14c4f2b97f3002291f5be765b1b0dfe6cf4f1d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9367a8766b0a26a4f83869aad1d11a417a03d9c3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438916"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768053"
 ---
 # <a name="invokeservice-rds"></a>InvokeService (служба удаленных рабочих столов)
 Возвращает указатель на запрошенный интерфейс в более совместимой версии объекта.  
@@ -54,9 +54,7 @@ object.InvokeService(REFID riid, IUknown* punkNotSoFunctionalInterface, IUknown*
  Реализация обработчика курсора RDS **инвокесервице** принимает входной набор строк (или несколько результатов), заполняет обработчик курсора из входного набора строк, а затем возвращает указатель на себя.  
   
 ## <a name="applies-to"></a>Применение  
- [Интерфейс IRDSService (служба удаленных рабочих столов)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)  
+ [Интерфейс IRDSService (служба удаленных рабочих столов)](./irdsservice-interface-rds.md)  
   
-## <a name="see-also"></a>См. также:  
- [Методы службы удаленных рабочих столов](../../../ado/reference/rds-api/rds-methods.md)
-
-
+## <a name="see-also"></a>См. также  
+ [Методы службы удаленных рабочих столов](./rds-methods.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 08e5c5bf-f7de-4bf9-97a9-f214c128ad8c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 94c8b64518a714a824fd1d05c69ac6f54467e35f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 70882984404dab2905e10344af88c2d933aceacc
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443536"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774973"
 ---
 # <a name="getrows-method-example-vc"></a>Пример метода GetRows (Visual C++)
-В этом примере метод [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) используется для получения указанного числа строк из [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) и для заполнения массива результирующими данными. Метод **GetRows** возвратит меньше требуемого числа строк в двух случаях: либо при достижении [конца файла](../../../ado/reference/ado-api/bof-eof-properties-ado.md) , либо при попытке **GetRows** получить запись, удаленную другим пользователем. Функция возвращает **значение false** только в том случае, если происходит второй вариант. Для выполнения этой процедуры требуется функция Жетровсок.  
+В этом примере метод [GetRows](./getrows-method-ado.md) используется для получения указанного числа строк из [набора записей](./recordset-object-ado.md) и для заполнения массива результирующими данными. Метод **GetRows** возвратит меньше требуемого числа строк в двух случаях: либо при достижении [конца файла](./bof-eof-properties-ado.md) , либо при попытке **GetRows** получить запись, удаленную другим пользователем. Функция возвращает **значение false** только в том случае, если происходит второй вариант. Для выполнения этой процедуры требуется функция Жетровсок.  
   
 ## <a name="example"></a>Пример  
   
@@ -244,7 +244,7 @@ Paolo Accorti, 8/27/1992
 Pedro Afonso, 12/24/1990  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Свойства BOF, EOF (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
- [Метод GetRows (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+## <a name="see-also"></a>См. также  
+ [Свойства BOF, EOF (ADO)](./bof-eof-properties-ado.md)   
+ [Метод GetRows (ADO)](./getrows-method-ado.md)   
+ [Объект Recordset (ADO)](./recordset-object-ado.md)

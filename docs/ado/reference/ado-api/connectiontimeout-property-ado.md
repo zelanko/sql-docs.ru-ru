@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8904a403-1383-4b4b-b53d-5c01d6f5deac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c117974f9335ef3aa939f742781f3f381ab6cbd2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4391d077621377fb2a21e39ba188864a3c37ea83
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444446"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775863"
 ---
 # <a name="connectiontimeout-property-ado"></a>Свойство ConnectionTimeout (ADO)
 Указывает время ожидания при установлении соединения перед завершением попытки и генерацией ошибки.  
@@ -30,14 +30,14 @@ ms.locfileid: "88444446"
  Задает или возвращает значение **типа Long** , указывающее время ожидания открытия соединения (в секундах). Значение по умолчанию — 15.  
   
 ## <a name="remarks"></a>Remarks  
- Используйте свойство **ConnectionTimeout** для объекта [соединения](../../../ado/reference/ado-api/connection-object-ado.md) , если задержка сетевого трафика или интенсивного использования сервера потребовала для отмены попытки подключения. Если время, заданное свойством **ConnectionTimeout** , проходит до открытия соединения, возникает ошибка, и ADO отменяет попытку. Если присвоить свойству значение 0, то при открытии соединения ADO будет ждать неограниченно долго. Убедитесь, что поставщик, в котором пишется код, поддерживает функцию **ConnectionTimeout** .  
+ Используйте свойство **ConnectionTimeout** для объекта [соединения](./connection-object-ado.md) , если задержка сетевого трафика или интенсивного использования сервера потребовала для отмены попытки подключения. Если время, заданное свойством **ConnectionTimeout** , проходит до открытия соединения, возникает ошибка, и ADO отменяет попытку. Если присвоить свойству значение 0, то при открытии соединения ADO будет ждать неограниченно долго. Убедитесь, что поставщик, в котором пишется код, поддерживает функцию **ConnectionTimeout** .  
   
  Свойство **ConnectionTimeout** доступно для чтения и записи, когда соединение закрывается и доступно только для чтения, когда оно открыто.  
   
 ## <a name="applies-to"></a>Применение  
- [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ [Объект Connection (ADO)](./connection-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
- [Пример свойств ConnectionString, ConnectionTimeout и State (Visual Basic)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
- [Пример свойств ConnectionString, ConnectionTimeout и State (Visual c++)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
- [Свойство CommandTimeout (ADO)](../../../ado/reference/ado-api/commandtimeout-property-ado.md)
+## <a name="see-also"></a>См. также  
+ [Пример свойств ConnectionString, ConnectionTimeout и State (Visual Basic)](./connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
+ [Пример свойств ConnectionString, ConnectionTimeout и State (Visual c++)](./connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
+ [Свойство CommandTimeout (ADO)](./commandtimeout-property-ado.md)

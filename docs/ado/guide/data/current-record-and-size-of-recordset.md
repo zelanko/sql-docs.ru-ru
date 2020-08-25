@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: e63ff331-8655-4be7-82c6-e6cd6cc9d16d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 12d4b9803682e94326636dd27bbc3f134eea23d8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1bf1757eac1d3c94c0d26439c3519060def03e27
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453606"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806213"
 ---
 # <a name="current-record-and-size-of-recordset"></a>Текущая запись и размер набора записей
-В этом разделе описывается, как узнать текущую позицию курсора в образце **набора записей** в [примере кода JScript, чтобы получить набор записей](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md).  
+В этом разделе описывается, как узнать текущую позицию курсора в образце **набора записей** в [примере кода JScript, чтобы получить набор записей](./jscript-code-example-to-return-a-recordset.md).  
   
 ## <a name="current-record"></a>Текущая запись  
  Текущая запись в наборе данных соответствует объекту, на который указывает позицию курсора объекта **Recordset** . Когда объект **набора записей** возвращается из источника данных в результате вызова **Recordset. Open**, **Command.Exeмилые**или **Connection.Exeмилые** (включая **Connection. намедкомманд** и **Connection. StoredProcedure**), курсор устанавливается на первую запись. В образце набора данных первоначальной текущей записью является элемент "дядюшка Боба высохнуть груши".  
@@ -38,14 +38,14 @@ ms.locfileid: "88453606"
   
  В некоторых случаях поставщик или курсор не может определить значение **RecordCount** без предварительной выборки всех записей из источника данных. Чтобы обеспечить точный подсчет, вызовите **набор записей**. Метод **MoveLast** перед вызовом **Recordset. RecordCount**.  
   
- Пример объекта **набора записей** , полученный с помощью [примера кода JScript](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md) , использует однонаправленный курсор, поэтому вызов **RecordCount** для этого объекта всегда дает значение-1. При изменении строки кода, вызывающей **набор записей**. Метод **Open** , как показано в следующем примере, свойство **RecordCount** возвращает фактическое число выбранных записей.  
+ Пример объекта **набора записей** , полученный с помощью [примера кода JScript](./jscript-code-example-to-return-a-recordset.md) , использует однонаправленный курсор, поэтому вызов **RecordCount** для этого объекта всегда дает значение-1. При изменении строки кода, вызывающей **набор записей**. Метод **Open** , как показано в следующем примере, свойство **RecordCount** возвращает фактическое число выбранных записей.  
   
 ```  
 oRs.Open sSQL, sCnStr, adOpenStatic, adLockOptimistic, adCmdText   
 ```  
   
- Это обусловлено тем, что статические курсоры с [поставщиком Microsoft OLE DB для SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) поддерживают **RecordCount**. В этом примере имеется пять записей, поэтому **RecordCount** должен возвращать значение 5.  
+ Это обусловлено тем, что статические курсоры с [поставщиком Microsoft OLE DB для SQL Server](../appendixes/microsoft-ole-db-provider-for-sql-server.md) поддерживают **RecordCount**. В этом примере имеется пять записей, поэтому **RecordCount** должен возвращать значение 5.  
   
  Этот раздел содержит следующий раздел.  
   
- [Границы набора записей](../../../ado/guide/data/boundaries-of-a-recordset.md)
+ [Границы набора записей](./boundaries-of-a-recordset.md)

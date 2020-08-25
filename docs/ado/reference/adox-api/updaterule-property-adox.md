@@ -20,24 +20,24 @@ helpviewer_keywords:
 ms.assetid: f4e21060-40cb-4790-8611-4086a092dda2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e8fba97eb12a79c20322f53dbd8574165dc3dee1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 88223eae0a6a6709dc5c45d2ed0da5e17f3e7c17
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439406"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769123"
 ---
 # <a name="updaterule-property-adox"></a>Свойство UpdateRule (ADOX)
-Указывает действие, выполняемое при обновлении первичного [ключа](../../../ado/reference/adox-api/key-object-adox.md) .  
+Указывает действие, выполняемое при обновлении первичного [ключа](./key-object-adox.md) .  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
- Задает и возвращает значение **типа Long** , которое может быть одной из констант [рулинум](../../../ado/reference/adox-api/ruleenum.md) . Значение по умолчанию — **адриноне**.  
+ Задает и возвращает значение **типа Long** , которое может быть одной из констант [рулинум](./ruleenum.md) . Значение по умолчанию — **адриноне**.  
   
 ## <a name="remarks"></a>Remarks  
- Это свойство доступно только для чтения для объектов [ключей](../../../ado/reference/adox-api/key-object-adox.md) , уже добавленных в коллекцию.  
+ Это свойство доступно только для чтения для объектов [ключей](./key-object-adox.md) , уже добавленных в коллекцию.  
   
 ## <a name="applies-to"></a>Применение  
- [Объект Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
+ [Объект Key (ADOX)](./key-object-adox.md)  
   
-## <a name="see-also"></a>См. также:  
- [Примеры метода Append коллекции Keys, свойства Type объекта Key, а также примеры свойств RelatedColumn, RelatedTable и UpdateRule (Visual Basic)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)
+## <a name="see-also"></a>См. также  
+ [Примеры метода Append коллекции Keys, свойства Type объекта Key, а также примеры свойств RelatedColumn, RelatedTable и UpdateRule (Visual Basic)](./keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)

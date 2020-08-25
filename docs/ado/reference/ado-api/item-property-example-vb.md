@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b4476603-691b-4081-8797-a3d0b331dce5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4ff98b6c2fe1dbb6da0131bf1a1d539fdfb74649
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c85e34201cb37745ef9f09b337b8d1f71dd508af
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443396"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774653"
 ---
 # <a name="item-property-example-vb"></a>Пример свойства Item (Visual Basic)
-В этом примере показано, как свойство [Item](../../../ado/reference/ado-api/item-property-ado.md) получает доступ к членам коллекции. В примере открывается таблица ***authors*** базы данных ***pubs*** с параметризованной командой.  
+В этом примере показано, как свойство [Item](./item-property-ado.md) получает доступ к членам коллекции. В примере открывается таблица ***authors*** базы данных ***pubs*** с параметризованной командой.  
   
- Доступ к параметру в команде, выданной для базы данных, осуществляется из коллекции [параметров](../../../ado/reference/ado-api/parameters-collection-ado.md) объекта [Command](../../../ado/reference/ado-api/command-object-ado.md) по индексу и имени. Затем к полям возвращенного [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) осуществляется доступ из коллекции [полей](../../../ado/reference/ado-api/fields-collection-ado.md) этого объекта по индексу и имени.  
+ Доступ к параметру в команде, выданной для базы данных, осуществляется из коллекции [параметров](./parameters-collection-ado.md) объекта [Command](./command-object-ado.md) по индексу и имени. Затем к полям возвращенного [набора записей](./recordset-object-ado.md) осуществляется доступ из коллекции [полей](./fields-collection-ado.md) этого объекта по индексу и имени.  
   
 ```  
 'BeginItemVB  
@@ -135,9 +135,9 @@ End Sub
 'EndItemVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Коллекция Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Свойство Item (ADO)](../../../ado/reference/ado-api/item-property-ado.md)   
- [Коллекция Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+## <a name="see-also"></a>См. также  
+ [Объект Command (ADO)](./command-object-ado.md)   
+ [Коллекция Fields (ADO)](./fields-collection-ado.md)   
+ [Свойство Item (ADO)](./item-property-ado.md)   
+ [Коллекция Parameters (ADO)](./parameters-collection-ado.md)   
+ [Объект Recordset (ADO)](./recordset-object-ado.md)

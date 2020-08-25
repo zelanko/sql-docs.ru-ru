@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6f3da460-0f49-41e0-999d-a754ec1d887e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3cb43e4ac4774963e79abadc6413882e1d0bce98
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 25f4cea4278421ee79c65c3784f74d36cc35e3c6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442936"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773723"
 ---
 # <a name="openschema-method-example-vc"></a>Пример метода OpenSchema (Visual C++)
-В этом примере используется метод [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) для вывода имени и типа каждой таблицы в базе данных ***pubs*** .  
+В этом примере используется метод [OpenSchema](./openschema-method.md) для вывода имени и типа каждой таблицы в базе данных ***pubs*** .  
   
 ```  
 // OpenSchemaMethodExample.cpp  
@@ -194,5 +194,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Метод OpenSchema](../../../ado/reference/ado-api/openschema-method.md)
+## <a name="see-also"></a>См. также  
+ [Метод OpenSchema](./openschema-method.md)

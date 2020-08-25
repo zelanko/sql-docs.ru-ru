@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 8a74802f-34d6-4676-bf94-07df5f8bff66
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 800534bb36014d3c2e9f733aee23173fbdd28b01
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cc03f9ab55f22289bd159e7d028fd01b0008bcbd
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439016"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768273"
 ---
 # <a name="filtercolumn-filtercriterion-filtervalue-sortcolumn-and-sortdirection-properties-and-reset-method-example-vbscript"></a>Примеры свойств Филтерколумн, Филтеркритерион, FilterValue, SortColumn и SortDirection и метода Reset (VBScript)
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- В следующем примере кода показано, как задать [RDS. Параметр сервера элемента управления](../../../ado/reference/rds-api/datacontrol-object-rds.md) **Server** данными в DesignTime и привязать его к таблице HTML с поддержкой данных, используя источник данных. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **филтерколумнвбс. ASP**.  
+ В следующем примере кода показано, как задать [RDS. Параметр сервера элемента управления](./datacontrol-object-rds.md) **Server** данными в DesignTime и привязать его к таблице HTML с поддержкой данных, используя источник данных. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **филтерколумнвбс. ASP**.  
   
 ```  
 <!-- BeginFilterColumnVBS -->  
@@ -204,13 +204,11 @@ End Sub
 <!-- EndFilterColumnVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект элемента управления (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Свойство Филтерколумн (RDS)](../../../ado/reference/rds-api/filtercolumn-property-rds.md)   
- [Свойство Филтеркритерион (RDS)](../../../ado/reference/rds-api/filtercriterion-property-rds.md)   
- [Свойство FilterValue (RDS)](../../../ado/reference/rds-api/filtervalue-property-rds.md)   
- [Метод Reset (RDS)](../../../ado/reference/rds-api/reset-method-rds.md)   
- [Свойство SortColumn (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)   
- [Свойство SortDirection (служба удаленных рабочих столов)](../../../ado/reference/rds-api/sortdirection-property-rds.md)
-
-
+## <a name="see-also"></a>См. также  
+ [Объект элемента управления (RDS)](./datacontrol-object-rds.md)   
+ [Свойство Филтерколумн (RDS)](./filtercolumn-property-rds.md)   
+ [Свойство Филтеркритерион (RDS)](./filtercriterion-property-rds.md)   
+ [Свойство FilterValue (RDS)](./filtervalue-property-rds.md)   
+ [Метод Reset (RDS)](./reset-method-rds.md)   
+ [Свойство SortColumn (RDS)](./sortcolumn-property-rds.md)   
+ [Свойство SortDirection (служба удаленных рабочих столов)](./sortdirection-property-rds.md)

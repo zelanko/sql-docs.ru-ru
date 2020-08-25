@@ -16,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: e7dcecd3-7dc7-445c-b922-f700c3067fbc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2528c9b7a8cf9eb2918983d90e57ac39e6ee989e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1c7ea7ccbf1a588458db9e213bfa57837e89898f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441456"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776823"
 ---
 # <a name="xactattributeenum"></a>XactAttributeEnum
-Задает атрибуты транзакции для объекта [соединения](../../../ado/reference/ado-api/connection-object-ado.md) .  
+Задает атрибуты транзакции для объекта [соединения](./connection-object-ado.md) .  
   
-|Константа|Значение|Описание|  
+|Константа|Значение|Описание:|  
 |--------------|-----------|-----------------|  
-|**адксактабортретаининг**|262144|Выполняет сохранность прерываний, вызывая [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) для автоматического запуска новой транзакции. Не все поставщики поддерживают такое поведение.|  
-|**адксакткоммитретаининг**|131072|Сохраняет фиксации, вызывая [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) для автоматического запуска новой транзакции. Не все поставщики поддерживают такое поведение.|  
+|**адксактабортретаининг**|262144|Выполняет сохранность прерываний, вызывая [RollbackTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) для автоматического запуска новой транзакции. Не все поставщики поддерживают такое поведение.|  
+|**адксакткоммитретаининг**|131072|Сохраняет фиксации, вызывая [CommitTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) для автоматического запуска новой транзакции. Не все поставщики поддерживают такое поведение.|  
   
 ## <a name="adowfc-equivalent"></a>Эквивалент ADO/WFC  
  Пакет: **com. MS. WFC. Data**  
@@ -40,4 +40,4 @@ ms.locfileid: "88441456"
 |Адоенумс. Ксактаттрибуте. КОММИТРЕТАИНИНГ|  
   
 ## <a name="applies-to"></a>Применение  
- [Свойство Attributes (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)
+ [Свойство Attributes (ADO)](./attributes-property-ado.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 22f23c30-7c21-4fe3-8e76-36cea6448819
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 49c6ae45be2f1d0979f8af827a85080edd919400
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ba3d23cf360285f87b0034e5b73162e7b2408da0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438846"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767913"
 ---
 # <a name="rds-code-examples-in-vbscript"></a>Примеры кода службы удаленных рабочих столов в VBScript
 > [!IMPORTANT]
@@ -34,48 +34,46 @@ ms.locfileid: "88438846"
   
 ## <a name="objects"></a>Объекты  
   
--   [Пример объекта элемента управления DataObject](../../../ado/reference/rds-api/datacontrol-object-example-vbscript.md)  
+-   [Пример объекта элемента управления DataObject](./datacontrol-object-example-vbscript.md)  
   
--   [Пример объекта Space](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)  
+-   [Пример объекта Space](./dataspace-object-and-createobject-method-example-vbscript.md)  
   
--   [Пример объекта на основании факта](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)  
+-   [Пример объекта на основании факта](./datafactory-object-query-method-and-createobject-method-example-vbscript.md)  
   
 ## <a name="methods"></a>Методы  
   
--   [Пример метода Cancel](../../../ado/reference/rds-api/cancel-method-example-vbscript.md)  
+-   [Пример метода Cancel](./cancel-method-example-vbscript.md)  
   
--   [Пример метода CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-example-vbscript.md)  
+-   [Пример метода CancelUpdate](./cancelupdate-method-example-vbscript.md)  
   
--   [Пример метода ConvertToString](../../../ado/reference/rds-api/converttostring-method-example-vbscript.md)  
+-   [Пример метода ConvertToString](./converttostring-method-example-vbscript.md)  
   
--   [Метод CreateObject](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)  
+-   [Метод CreateObject](./dataspace-object-and-createobject-method-example-vbscript.md)  
   
--   [Пример метода CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-example-vbscript.md)  
+-   [Пример метода CreateRecordset](./createrecordset-method-example-vbscript.md)  
   
--   [Пример метода запроса](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)  
+-   [Пример метода запроса](./datafactory-object-query-method-and-createobject-method-example-vbscript.md)  
   
--   [Пример метода Refresh](../../../ado/reference/rds-api/refresh-method-example-vbscript.md)  
+-   [Пример метода Refresh](./refresh-method-example-vbscript.md)  
   
--   [Пример метода Reset](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)  
+-   [Пример метода Reset](./filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)  
   
--   [Пример метода SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-example-vbscript.md)  
+-   [Пример метода SubmitChanges](./submitchanges-method-example-vbscript.md)  
   
 ## <a name="properties"></a>Свойства  
   
--   [Пример свойства Connect](../../../ado/reference/rds-api/connect-property-example-vbscript.md)  
+-   [Пример свойства Connect](./connect-property-example-vbscript.md)  
   
--   [Пример свойств Ексекутеоптионс и FetchOptions](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)  
+-   [Пример свойств Ексекутеоптионс и FetchOptions](./executeoptions-and-fetchoptions-properties-example-vbscript.md)  
   
--   [Пример свойств Филтерколумн, Филтеркритерион, FilterValue, SortColumn и SortDirection](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)  
+-   [Пример свойств Филтерколумн, Филтеркритерион, FilterValue, SortColumn и SortDirection](./filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)  
   
--   [Пример свойства ReadyState](../../../ado/reference/rds-api/readystate-property-example-vbscript.md)  
+-   [Пример свойства ReadyState](./readystate-property-example-vbscript.md)  
   
--   [Пример свойств Recordset и Саурцерекордсет](../../../ado/reference/rds-api/recordset-and-sourcerecordset-properties-example-vbscript.md)  
+-   [Пример свойств Recordset и Саурцерекордсет](./recordset-and-sourcerecordset-properties-example-vbscript.md)  
   
--   [Пример свойства сервера](../../../ado/reference/rds-api/server-property-example-vbscript.md)  
+-   [Пример свойства сервера](./server-property-example-vbscript.md)  
   
--   [Пример свойства SQL](../../../ado/reference/rds-api/sql-property-example-vbscript.md)  
+-   [Пример свойства SQL](./sql-property-example-vbscript.md)  
   
--   [Пример свойства URL](../../../ado/reference/rds-api/url-property-example-vbscript.md)
-
-
+-   [Пример свойства URL](./url-property-example-vbscript.md)

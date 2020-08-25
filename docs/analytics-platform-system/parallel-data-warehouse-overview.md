@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5e609585e464cb52b996f45c7d8c57aaffcd79fe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400935"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>Компоненты параллельного хранилища данных — система аналитики платформы
@@ -66,8 +66,8 @@ To learn more about Analytics Platform System, see:
 ### <a name="admin-console"></a>Административная консоль  
 Консоль администрирования — это веб-приложение, которое представляет сведения о состоянии устройства, работоспособности и производительности.  
   
-### <a name="configuration-manager"></a>Configuration Manager  
-Configuration Manager (dwconfig. exe) — это средство, которое администраторы устройств используют для настройки системы аналитики.  
+### <a name="configuration-manager"></a>диспетчер конфигураций  
+Configuration Manager (dwconfig.exe) — это средство, которое администраторы устройств используют для настройки системы аналитики.  
   
 ### <a name="control-node-databases"></a>Управление базами данных узлов  
 SQL Server управляет всеми базами данных на управляющем узле.  
@@ -138,7 +138,7 @@ Microsoft Hyper-V Server предоставляет простое и надеж
   
 ## <a name="query-tools"></a>Средства запросов   
   
-Запросы записываются с\-помощью языка Transact SQL, измененного в соответствии с природой запросов MPP. Все запросы отправляются в управляющий узел, который создает параллельный план запроса для выполнения запроса на всех разных узлах вычислений.  
+Запросы записываются с помощью языка Transact \- SQL, измененного в соответствии с природой запросов MPP. Все запросы отправляются в управляющий узел, который создает параллельный план запроса для выполнения запроса на всех разных узлах вычислений.  
   
 ### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)  
 SQL Server Data Tools выполняется в Visual Studio и является рекомендуемым средством графического интерфейса пользователя для отправки запросов в SQL Server PDW. Он похож на SQL Server Management Studio, позволяя перемещаться по обозревателю объектов.  
@@ -149,7 +149,7 @@ For more information, see [Install SQL Server database tooling  for Visual Studi
 -->
   
 ### <a name="sqlcmd-command-line-query-tool"></a>Средство запросов командной строки sqlcmd  
-sqlcmd — это SQL Server программа командной строки для выполнения инструкций Transact\-SQL и системных команд. Он работает с SQL Server PDW и является рекомендуемым средством командной строки для запроса SQL Server PDW. С помощью программы sqlcmd можно выполнять\-инструкции Transact SQL в интерактивном режиме из командной строки, из пакетного файла или из Windows PowerShell.  
+sqlcmd — это SQL Server программа командной строки для выполнения инструкций Transact \- SQL и системных команд. Он работает с SQL Server PDW и является рекомендуемым средством командной строки для запроса SQL Server PDW. С помощью программы sqlcmd можно выполнять \- инструкции Transact SQL в интерактивном режиме из командной строки, из пакетного файла или из Windows PowerShell.  
   
 <!-- MISSING LINKS
 
@@ -165,7 +165,7 @@ For more information, see [Connect With SQL Server Integration Services for Quer
 --> 
   
 ### <a name="linked-server"></a>Связанный сервер  
-С помощью SQL Server соединения с связанным сервером можно использовать SQL Server для отправки инструкций Transact\-SQL в SQL Server PDW. 
+С помощью SQL Server соединения с связанным сервером можно использовать SQL Server для отправки инструкций Transact \- SQL в SQL Server PDW. 
 <!-- MISSING LINKS
 For more information, see [Connect With SQL Server Linked Server &#40;SQL Server PDW&#41;](../sqlpdw/connect-with-sql-server-linked-server-sql-server-pdw.md). 
 --> 
@@ -180,7 +180,7 @@ For more information, see [Connect With SQL Server Analysis Services &#40;SQL Se
 
 -->
   
-### <a name="report-builder"></a>построитель отчетов  
+### <a name="report-builder"></a>Построитель отчетов  
 SQL Server PDW можно использовать в качестве источника данных SQL Server для отчетов, разрабатываемых для Reporting Services с помощью SQL Server построитель отчетов. SQL Server PDW также можно использовать в качестве источника SQL Server для моделей отчетов. С помощью диспетчер отчетов или API сервера отчетов можно создать модель из базы данных SQL Server PDW.  
   
 <!-- MISSING LINKS

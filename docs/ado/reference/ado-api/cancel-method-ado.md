@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e0db4e15-6787-41e2-8f13-9e9b524d620a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 24d4beba2c703d2c8e21f51dd5bac9d06444a651
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c40b3f7d0c5a9f6669d41e4f90422dd3ce66ebd5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451066"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776343"
 ---
 # <a name="cancel-method-ado"></a>Метод Cancel (ADO)
 Отменяет выполнение ожидающего асинхронного вызова метода.  
@@ -44,37 +44,37 @@ object.Cancel
   
 |Если *объект* является|Последний асинхронный вызов этого метода завершен|  
 |----------------------|-------------------------------------------------------------|  
-|[Command](../../../ado/reference/ado-api/command-object-ado.md)|[Работать](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
-|[Соединение](../../../ado/reference/ado-api/connection-object-ado.md)|[Выполнить](../../../ado/reference/ado-api/execute-method-ado-connection.md) или [Открыть](../../../ado/reference/ado-api/open-method-ado-connection.md)|  
-|[Запись](../../../ado/reference/ado-api/record-object-ado.md)|[Копирекорд](../../../ado/reference/ado-api/copyrecord-method-ado.md), [делетерекорд](../../../ado/reference/ado-api/deleterecord-method-ado.md), [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)или [Open](../../../ado/reference/ado-api/open-method-ado-record.md)|  
-|[набор записей](../../../ado/reference/ado-api/recordset-object-ado.md)|[Открыть](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
-|[Поток](../../../ado/reference/ado-api/stream-object-ado.md)|[Открыть](../../../ado/reference/ado-api/open-method-ado-stream.md)|  
+|[Команда](./command-object-ado.md)|[Execute](./execute-method-ado-command.md)|  
+|[Соединение](./connection-object-ado.md)|[Выполнить](./execute-method-ado-connection.md) или [Открыть](./open-method-ado-connection.md)|  
+|[Запись](./record-object-ado.md)|[Копирекорд](./copyrecord-method-ado.md), [делетерекорд](./deleterecord-method-ado.md), [MoveRecord](./moverecord-method-ado.md)или [Open](./open-method-ado-record.md)|  
+|[набор записей](./recordset-object-ado.md)|[Открыть](./open-method-ado-recordset.md)|  
+|[Поток](./stream-object-ado.md)|[Открыть](./open-method-ado-stream.md)|  
   
 ## <a name="applies-to"></a>Применение  
 
 :::row:::
     :::column:::
-        [Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
-        [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+        [Объект Command (ADO)](./command-object-ado.md)  
+        [Объект Connection (ADO)](./connection-object-ado.md)  
     :::column-end:::
     :::column:::
-        [Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
-        [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+        [Объект Record (ADO)](./record-object-ado.md)  
+        [Объект Recordset (ADO)](./recordset-object-ado.md)  
     :::column-end:::
     :::column:::
-        [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+        [Объект Stream (ADO)](./stream-object-ado.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>См. также  
- [Пример метода Cancel (Visual Basic)](../../../ado/reference/ado-api/cancel-method-example-vb.md)   
- [Пример метода Cancel (VBScript)](../../../ado/reference/rds-api/cancel-method-example-vbscript.md)   
- [Пример метода Cancel (Visual c++)](../../../ado/reference/ado-api/cancel-method-example-vc.md)   
- [Метод Cancel (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)   
- [Метод CancelBatch (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
- [Метод CancelUpdate (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
- [Метод CancelUpdate (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
- [Метод Execute (команда ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)   
- [Метод Execute (соединение ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)   
- [Метод Open (подключение ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Метод Open (объект Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)
+ [Пример метода Cancel (Visual Basic)](./cancel-method-example-vb.md)   
+ [Пример метода Cancel (VBScript)](../rds-api/cancel-method-example-vbscript.md)   
+ [Пример метода Cancel (Visual c++)](./cancel-method-example-vc.md)   
+ [Метод Cancel (RDS)](../rds-api/cancel-method-rds.md)   
+ [Метод CancelBatch (ADO)](./cancelbatch-method-ado.md)   
+ [Метод CancelUpdate (ADO)](./cancelupdate-method-ado.md)   
+ [Метод CancelUpdate (RDS)](../rds-api/cancelupdate-method-rds.md)   
+ [Метод Execute (команда ADO)](./execute-method-ado-command.md)   
+ [Метод Execute (соединение ADO)](./execute-method-ado-connection.md)   
+ [Метод Open (подключение ADO)](./open-method-ado-connection.md)   
+ [Метод Open (объект Recordset ADO)](./open-method-ado-recordset.md)

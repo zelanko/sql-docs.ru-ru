@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7821e971d32f855fc219a2883f4190b9434d998
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 49964c5dc3f9f6402c853f4adddabd798db4b2f0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442086"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777453"
 ---
 # <a name="sort-property-example-vb"></a>Пример свойства Sort (Visual Basic)
-В этом примере используется свойство [Sort](../../../ado/reference/ado-api/sort-property.md) объекта [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) для изменения порядка строк **набора записей** , производного от таблицы ***authors*** базы данных ***pubs*** . Вторичная служебная программа выводит каждую строку.  
+В этом примере используется свойство [Sort](./sort-property.md) объекта [Recordset](./recordset-object-ado.md) для изменения порядка строк **набора записей** , производного от таблицы ***authors*** базы данных ***pubs*** . Вторичная служебная программа выводит каждую строку.  
   
 ```  
 'BeginSortVB  
@@ -110,6 +110,6 @@ End Sub
 Attribute VB_Name = "Sort"  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Свойство Sort](../../../ado/reference/ado-api/sort-property.md)
+## <a name="see-also"></a>См. также  
+ [Объект Recordset (ADO)](./recordset-object-ado.md)   
+ [Свойство Sort](./sort-property.md)
