@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 808661eb-0d7c-4e6d-8e40-9dc3bef3d77a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7fd002f54010a9bc8d5cf543fe1fd4521bc6d221
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4d63e1ccddf4384a01911738e3eabfddb77cd6be
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443256"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774393"
 ---
 # <a name="mode-property-ado"></a>Свойство Mode (ADO)
-Указывает доступные разрешения для изменения данных в [соединении](../../../ado/reference/ado-api/connection-object-ado.md), [записи](../../../ado/reference/ado-api/record-object-ado.md)или объекте [потока](../../../ado/reference/ado-api/stream-object-ado.md) .  
+Указывает доступные разрешения для изменения данных в [соединении](./connection-object-ado.md), [записи](./record-object-ado.md)или объекте [потока](./stream-object-ado.md) .  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
- Задает или возвращает значение [коннектмодинум](../../../ado/reference/ado-api/connectmodeenum.md) . Значение по умолчанию для **соединения** — **адмодеункновн**. Значение по умолчанию для объекта **Record** — **адмодереад**. Значение по умолчанию для **потока** , связанного с базовым источником (открытым с URL-адресом в качестве источника или в качестве **потока** по умолчанию **записи**), — **адмодереад**. Значение по умолчанию для **потока** , не связанного с базовым источником (экземпляром в памяти), — **адмодеункновн**.  
+ Задает или возвращает значение [коннектмодинум](./connectmodeenum.md) . Значение по умолчанию для **соединения** — **адмодеункновн**. Значение по умолчанию для объекта **Record** — **адмодереад**. Значение по умолчанию для **потока** , связанного с базовым источником (открытым с URL-адресом в качестве источника или в качестве **потока** по умолчанию **записи**), — **адмодереад**. Значение по умолчанию для **потока** , не связанного с базовым источником (экземпляром в памяти), — **адмодеункновн**.  
   
 ## <a name="remarks"></a>Remarks  
  Используйте свойство **mode** , чтобы задать или вернуть разрешения на доступ, используемые поставщиком в текущем соединении. Свойство **mode** можно задать только в том случае, если объект **соединения** закрыт.  
@@ -45,16 +45,16 @@ ms.locfileid: "88443256"
 
 :::row:::
     :::column:::
-        [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+        [Объект Connection (ADO)](./connection-object-ado.md)  
     :::column-end:::
     :::column:::
-        [Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+        [Объект Record (ADO)](./record-object-ado.md)  
     :::column-end:::
     :::column:::
-        [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+        [Объект Stream (ADO)](./stream-object-ado.md)  
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>См. также:  
- [Пример свойств IsolationLevel и Mode (Visual Basic)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)   
- [Пример свойств IsolationLevel и Mode (Visual c++)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)   
+## <a name="see-also"></a>См. также  
+ [Пример свойств IsolationLevel и Mode (Visual Basic)](./isolationlevel-and-mode-properties-example-vb.md)   
+ [Пример свойств IsolationLevel и Mode (Visual c++)](./isolationlevel-and-mode-properties-example-vc.md)

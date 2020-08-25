@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 617ceace87a7f265d3d4db901b0a586481c19e32
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f7adb671b42d17b4abe13733fd912234e79560e3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444456"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775903"
 ---
 # <a name="connectionstring-property-ado"></a>Свойство ConnectionString (ADO)
 Указывает сведения, используемые для установления соединения с источником данных.  
@@ -42,9 +42,9 @@ ms.locfileid: "88444456"
 |*Удаленный сервер =*|Указывает путь к серверу, который будет использоваться при открытии подключения на стороне клиента. (Только для удаленных служб данных.)|  
 |*URL-адрес =*|Указывает строку подключения в виде абсолютного URL-адреса, определяющего ресурс, например файл или каталог.|  
   
- После задания свойства **ConnectionString** и открытия объекта [соединения](../../../ado/reference/ado-api/connection-object-ado.md) поставщик может изменить содержимое свойства, например путем сопоставления имен аргументов, определенных ADO, с их эквивалентами для конкретного поставщика.  
+ После задания свойства **ConnectionString** и открытия объекта [соединения](./connection-object-ado.md) поставщик может изменить содержимое свойства, например путем сопоставления имен аргументов, определенных ADO, с их эквивалентами для конкретного поставщика.  
   
- Свойство **ConnectionString** автоматически наследует значение, используемое для аргумента *ConnectionString* метода [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) , чтобы можно было переопределить текущее свойство **ConnectionString** во время вызова метода **Open** .  
+ Свойство **ConnectionString** автоматически наследует значение, используемое для аргумента *ConnectionString* метода [Open](./open-method-ado-connection.md) , чтобы можно было переопределить текущее свойство **ConnectionString** во время вызова метода **Open** .  
   
  Поскольку аргумент *имени файла* заставляет ADO загружать связанный поставщик, нельзя передавать аргументы *поставщика* и *имени файла* .  
   
@@ -63,9 +63,9 @@ ms.locfileid: "88444456"
 |Значение по умолчанию отсутствует.<br /><br /> Когда приложение ADO выполняется в следующих операционных системах и не указывает поставщик явным образом, ADO возвращает следующую ошибку: "ADODB. Соединение: поставщик не указан, и не назначен поставщик по умолчанию "|Windows 2000 (64-разрядная версия)<br /><br /> Windows XP (64-разрядная версия)<br /><br /> Windows 2003 Server (64-разрядная версия)<br /><br /> Windows Vista (64-разрядная версия)|  
   
 ## <a name="applies-to"></a>Применение  
- [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ [Объект Connection (ADO)](./connection-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
- [Пример свойств ConnectionString, ConnectionTimeout и State (Visual Basic)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
- [Пример свойств ConnectionString, ConnectionTimeout и State (Visual c++)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
- [Приложение А. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md)
+## <a name="see-also"></a>См. также  
+ [Пример свойств ConnectionString, ConnectionTimeout и State (Visual Basic)](./connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
+ [Пример свойств ConnectionString, ConnectionTimeout и State (Visual c++)](./connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
+ [Приложение А. Поставщики](../../guide/appendixes/appendix-a-providers.md)

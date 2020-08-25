@@ -13,66 +13,66 @@ helpviewer_keywords:
 ms.assetid: f571b74d-b796-4009-9c66-6a36ab995a2a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cedd465dd752f1f1757b0467abc755fb96c93020
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 67113c23a84ceaa3ed261efdd98b643d1408228a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444506"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775953"
 ---
 # <a name="connection-object-properties-methods-and-events"></a>Свойства, методы и события объекта Connection
 ## <a name="propertiescollections"></a>Свойства и коллекции  
- [Attributes, свойство](../../../ado/reference/ado-api/attributes-property-ado.md)  
+ [Attributes, свойство](./attributes-property-ado.md)  
   
- [CommandTimeout, свойство](../../../ado/reference/ado-api/commandtimeout-property-ado.md)  
+ [CommandTimeout, свойство](./commandtimeout-property-ado.md)  
   
- [Свойство ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)  
+ [Свойство ConnectionString](./connectionstring-property-ado.md)  
   
- [ConnectionTimeout, свойство](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)  
+ [ConnectionTimeout, свойство](./connectiontimeout-property-ado.md)  
   
- [CursorLocation, свойство](../../../ado/reference/ado-api/cursorlocation-property-ado.md)  
+ [CursorLocation, свойство](./cursorlocation-property-ado.md)  
   
- [Свойство DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)  
+ [Свойство DefaultDatabase](./defaultdatabase-property.md)  
   
- [Коллекция ошибок](../../../ado/reference/ado-api/errors-collection-ado.md)  
+ [Коллекция ошибок](./errors-collection-ado.md)  
   
- [Свойство IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)  
+ [Свойство IsolationLevel](./isolationlevel-property.md)  
   
- [Режим, свойство](../../../ado/reference/ado-api/mode-property-ado.md)  
+ [Режим, свойство](./mode-property-ado.md)  
   
- [Коллекция Properties](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Коллекция Properties](./properties-collection-ado.md)  
   
- [Свойство поставщика](../../../ado/reference/ado-api/provider-property-ado.md)  
+ [Свойство поставщика](./provider-property-ado.md)  
   
- [Свойство State](../../../ado/reference/ado-api/state-property-ado.md)  
+ [Свойство State](./state-property-ado.md)  
   
- [Свойство Version](../../../ado/reference/ado-api/version-property-ado.md)  
+ [Свойство Version](./version-property-ado.md)  
   
 ## <a name="methods"></a>Методы  
- [Методы примеры BeginTrans, CommitTrans и RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)  
+ [Методы примеры BeginTrans, CommitTrans и RollbackTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md)  
   
- [Метод Cancel](../../../ado/reference/ado-api/cancel-method-ado.md)  
+ [Метод Cancel](./cancel-method-ado.md)  
   
- [Метод Close](../../../ado/reference/ado-api/close-method-ado.md)  
+ [Метод Close](./close-method-ado.md)  
   
- [Метод Execute (объект Connection ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)  
+ [Метод Execute (объект Connection ADO)](./execute-method-ado-connection.md)  
   
- [Метод Open (объект Connection ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)  
+ [Метод Open (объект Connection ADO)](./open-method-ado-connection.md)  
   
- [Метод OpenSchema](../../../ado/reference/ado-api/openschema-method.md)  
+ [Метод OpenSchema](./openschema-method.md)  
   
 ## <a name="events"></a>События  
- [События Бегинтранскомплете, Коммиттранскомплете и Роллбакктранскомплете](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)  
+ [События Бегинтранскомплете, Коммиттранскомплете и Роллбакктранскомплете](./begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)  
   
- [События Коннекткомплете и Disconnect](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)  
+ [События Коннекткомплете и Disconnect](./connectcomplete-and-disconnect-events-ado.md)  
   
- [Событие Ексекутекомплете](../../../ado/reference/ado-api/executecomplete-event-ado.md)  
+ [Событие Ексекутекомплете](./executecomplete-event-ado.md)  
   
- [Событие InfoMessage](../../../ado/reference/ado-api/infomessage-event-ado.md)  
+ [Событие InfoMessage](./infomessage-event-ado.md)  
   
- [Событие Виллконнект](../../../ado/reference/ado-api/willconnect-event-ado.md)  
+ [Событие Виллконнект](./willconnect-event-ado.md)  
   
- [Событие WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md)  
+ [Событие WillExecute](./willexecute-event-ado.md)  
   
 ## <a name="see-also"></a>См. также  
- [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [Объект Connection (ADO)](./connection-object-ado.md)

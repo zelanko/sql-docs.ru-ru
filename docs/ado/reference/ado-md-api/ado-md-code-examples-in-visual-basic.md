@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bfb52e8c-cb06-47a0-931c-03b8bdb1a05a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5d1b759d3cd6591eef906b7354a5b8b3d22caf02
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ed25ae6338425438bd696a07c504f26e0a45c043
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441416"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776813"
 ---
 # <a name="ado-md-code-examples-in-visual-basic"></a>Примеры кода многомерных объектов ADO в Visual Basic
 Для следующих примеров требуется Microsoft Visual Basic версии 5,0 с пакетом обновления 3 (SP3) или Visual Basic версии 6,0.  
@@ -28,6 +28,6 @@ ms.locfileid: "88441416"
 > [!NOTE]
 >  Вставьте весь пример кода из начала в конец в редакторе кода. Пример может работать неправильно, если используются частичные примеры или если форматирование абзаца потеряно.  
   
--   [Пример набора ячеек](../../../ado/reference/ado-md-api/cellset-example-vb.md)  
+-   [Пример набора ячеек](./cellset-example-vb.md)  
   
--   [Пример каталога](../../../ado/reference/ado-md-api/catalog-example-vb.md)
+-   [Пример каталога](./catalog-example-vb.md)

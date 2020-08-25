@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: f156aa48-bfc2-40d1-962b-7b08855776c6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 40382c77198a50a08ec41101fbda9c1aafcae08c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 883b9216509248d64e550a0eb3557a61cc0ccdaa
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450791"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776063"
 ---
 # <a name="comparebookmarks-method-example-vb"></a>Пример метода CompareBookmarks (Visual Basic)
-В этом примере демонстрируется метод [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) . Относительное значение закладок редко требуется, если конкретная закладка не является каким-либо специальным.  
+В этом примере демонстрируется метод [CompareBookmarks](./comparebookmarks-method-ado.md) . Относительное значение закладок редко требуется, если конкретная закладка не является каким-либо специальным.  
   
- Назначьте случайную строку [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) , производного от таблицы ***authors*** , в качестве цели поиска. Затем отобразить расположение каждой строки относительно этого целевого объекта.  
+ Назначьте случайную строку [набора записей](./recordset-object-ado.md) , производного от таблицы ***authors*** , в качестве цели поиска. Затем отобразить расположение каждой строки относительно этого целевого объекта.  
   
 ```  
 'BeginCompareBookmarksVB  
@@ -133,7 +133,7 @@ End Sub
 'EndCompareBookmarksVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Метод CompareBookmarks (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)   
- [компаринум](../../../ado/reference/ado-api/compareenum.md)   
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+## <a name="see-also"></a>См. также  
+ [Метод CompareBookmarks (ADO)](./comparebookmarks-method-ado.md)   
+ [компаринум](./compareenum.md)   
+ [Объект Recordset (ADO)](./recordset-object-ado.md)

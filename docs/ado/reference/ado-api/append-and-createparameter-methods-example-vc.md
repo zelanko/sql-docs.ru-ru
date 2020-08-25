@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b57d144c-0a34-49c8-94cf-e5981edfcca6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 832981161e0fcc6ec297186975de33c027cc694f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 17e38f481478a43f59372d5be23fb29b701bc9c2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451276"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776523"
 ---
 # <a name="append-and-createparameter-methods-example-vc"></a>Пример методов Append и CreateParameter (Visual c++)
-В этом примере используются методы [append](../../../ado/reference/ado-api/append-method-ado.md) и [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) для выполнения хранимой процедуры с входным параметром.  
+В этом примере используются методы [append](./append-method-ado.md) и [CreateParameter](./createparameter-method-ado.md) для выполнения хранимой процедуры с входным параметром.  
   
 ## <a name="example"></a>Пример  
   
@@ -203,6 +203,6 @@ Authors with 25 percent royalty
 899-46-2035, Anne  Ringer  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Метод Append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
- [Метод CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)
+## <a name="see-also"></a>См. также  
+ [Метод Append (ADO)](./append-method-ado.md)   
+ [Метод CreateParameter (ADO)](./createparameter-method-ado.md)

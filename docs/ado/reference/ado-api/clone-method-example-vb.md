@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 64cb1753-e074-4a2d-8b74-7c35f3f6f64d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7b58f1f0de4bf3a001d990e34a6f284a3940641b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cede971170b571189d1f0a6fef4b45773cfd7370
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450976"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776263"
 ---
 # <a name="clone-method-example-vb"></a>Пример метода Clone (Visual Basic)
-В этом примере используется метод [clone](../../../ado/reference/ado-api/clone-method-ado.md) для создания копий [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) , а затем пользователь помещает указатель записи каждой копии независимо друг от друга.  
+В этом примере используется метод [clone](./clone-method-ado.md) для создания копий [набора записей](./recordset-object-ado.md) , а затем пользователь помещает указатель записи каждой копии независимо друг от друга.  
   
 ```  
 'BeginCloneVB  
@@ -128,6 +128,6 @@ End Sub
 'EndCloneVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Метод Clone (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)   
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+## <a name="see-also"></a>См. также  
+ [Метод Clone (ADO)](./clone-method-ado.md)   
+ [Объект Recordset (ADO)](./recordset-object-ado.md)

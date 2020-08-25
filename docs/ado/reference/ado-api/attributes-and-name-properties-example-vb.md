@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 258bdce3-1819-44a2-9217-105879c789ef
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ed744b6cb39b37958de8dcd6cb4dd6dde8b2a9a8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2fb0d90d8e6fd5a999d3596af600c140c75e9617
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451226"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776463"
 ---
 # <a name="attributes-and-name-properties-example-vb"></a>Примеры свойств Attributes и Name (Visual Basic)
-В этом примере отображается значение свойства [Attributes](../../../ado/reference/ado-api/attributes-property-ado.md) для объектов [соединения](../../../ado/reference/ado-api/connection-object-ado.md), [поля](../../../ado/reference/ado-api/field-object.md)и [Свойства](../../../ado/reference/ado-api/property-object-ado.md) . В нем используется свойство [Name](../../../ado/reference/ado-api/name-property-ado.md) для вывода имени каждого **поля** и объекта **Свойства** .  
+В этом примере отображается значение свойства [Attributes](./attributes-property-ado.md) для объектов [соединения](./connection-object-ado.md), [поля](./field-object.md)и [Свойства](./property-object-ado.md) . В нем используется свойство [Name](./name-property-ado.md) для вывода имени каждого **поля** и объекта **Свойства** .  
   
 ```  
 ' BeginAttributesVB  
@@ -127,9 +127,9 @@ End Sub
 ' EndAttributesVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Свойство Attributes (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)   
- [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Объект Field](../../../ado/reference/ado-api/field-object.md)   
- [Свойство Name (ADO)](../../../ado/reference/ado-api/name-property-ado.md)   
- [Объект Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)
+## <a name="see-also"></a>См. также  
+ [Свойство Attributes (ADO)](./attributes-property-ado.md)   
+ [Объект Connection (ADO)](./connection-object-ado.md)   
+ [Объект Field](./field-object.md)   
+ [Свойство Name (ADO)](./name-property-ado.md)   
+ [Объект Property (ADO)](./property-object-ado.md)

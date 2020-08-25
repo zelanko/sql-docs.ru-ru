@@ -16,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: be4eda13-d4e4-4d6b-bb0d-3310b0a96fc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b562d480cfbebefdee82703e0c953854de07d064
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cad540a13fbad480f795049df0d0150188df4283
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443746"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775453"
 ---
 # <a name="fieldenum"></a>FieldEnum
-Задает специальные поля, на которые ссылается коллекция [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) объекта [Record](../../../ado/reference/ado-api/record-object-ado.md) .  
+Задает специальные поля, на которые ссылается коллекция [Fields](./fields-collection-ado.md) объекта [Record](./record-object-ado.md) .  
   
 ## <a name="remarks"></a>Remarks  
- Эти константы предоставляют "ярлык" для доступа к специальным полям, связанным с **записью**. Получите объект [поля](../../../ado/reference/ado-api/field-object.md) из коллекции **полей** , а затем получите его содержимое со свойством [value](../../../ado/reference/ado-api/value-property-ado.md) объекта **field** .  
+ Эти константы предоставляют "ярлык" для доступа к специальным полям, связанным с **записью**. Получите объект [поля](./field-object.md) из коллекции **полей** , а затем получите его содержимое со свойством [value](./value-property-ado.md) объекта **field** .  
   
-|Константа|Значение|Описание|  
+|Константа|Значение|Описание:|  
 |--------------|-----------|-----------------|  
-|**аддефаултстреам**|-1|Ссылается на поле, содержащее объект [потока](../../../ado/reference/ado-api/stream-object-ado.md) по умолчанию, связанный с **записью**.|  
+|**аддефаултстреам**|-1|Ссылается на поле, содержащее объект [потока](./stream-object-ado.md) по умолчанию, связанный с **записью**.|  
 |**adRecordURL**|-2|Ссылается на поле, содержащее абсолютную строку URL-адреса для текущей **записи**.|

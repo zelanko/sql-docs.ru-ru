@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 54dfb1dd-636c-4560-8a3f-32b1f6aa07d7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9a285aec87cd2bbdf832d071c99be4a70c5d53a2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2bd196830ad1212d495778d037c915b2f4d86874
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444336"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775653"
 ---
 # <a name="count-property-example-vc"></a>Пример свойства Count (Visual C++)
-В этом примере показано свойство [Count](../../../ado/reference/ado-api/count-property-ado.md) с двумя коллекциями в базе данных ***Employee*** . Свойство получает количество объектов в каждой коллекции и задает верхний предел для циклов, которые перечисляют эти коллекции.  
+В этом примере показано свойство [Count](./count-property-ado.md) с двумя коллекциями в базе данных ***Employee*** . Свойство получает количество объектов в каждой коллекции и задает верхний предел для циклов, которые перечисляют эти коллекции.  
   
 ```  
 // BeginCountCpp.cpp  
@@ -131,5 +131,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Свойство Count (ADO)](../../../ado/reference/ado-api/count-property-ado.md)
+## <a name="see-also"></a>См. также  
+ [Свойство Count (ADO)](./count-property-ado.md)

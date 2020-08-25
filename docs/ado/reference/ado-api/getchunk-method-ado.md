@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: fc268e22-205b-44a3-9038-ffed51e23e10
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 38e1375f0439cbc17d19c3a416bbc51cea01239b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dcf021282d4fce049cd89a154c2d00186b3cbee1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443596"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775083"
 ---
 # <a name="getchunk-method-ado"></a>Метод GetChunk (ADO)
-Возвращает все или часть содержимого большого текстового или двоичного объекта [поля](../../../ado/reference/ado-api/field-object.md) данных.  
+Возвращает все или часть содержимого большого текстового или двоичного объекта [поля](./field-object.md) данных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -46,20 +46,20 @@ variable = field.GetChunk(Size)
   
  Данные, возвращаемые вызовом методаического **блока** , назначаются *переменной*. Если *Размер* больше остальных данных **, метод WebMethod** возвращает только оставшиеся данные без *переменной* заполнения пустыми пробелами. Если поле пустое **, метод WebMethod** возвращает значение null.  
   
- Каждый последующий вызов методаического **блока** извлекает данные, начиная с места, в **котором предыдущий вызов** метода Left был отключен. Однако если вы получаете данные из одного поля, а затем задаете или считываете значение другого поля в текущей записи, то ADO считает, что вы завершили извлечение данных из первого поля. При повторном вызове **метода WebMethod в первом** поле ADO интерпретирует вызов как новую операцию- **блок** и начинает чтение с начала данных. Доступ к полям других объектов [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) , которые не являются клонами первого объекта **набора записей** , не приведет **к нарушению** операций GetObject.  
+ Каждый последующий вызов методаического **блока** извлекает данные, начиная с места, в **котором предыдущий вызов** метода Left был отключен. Однако если вы получаете данные из одного поля, а затем задаете или считываете значение другого поля в текущей записи, то ADO считает, что вы завершили извлечение данных из первого поля. При повторном вызове **метода WebMethod в первом** поле ADO интерпретирует вызов как новую операцию- **блок** и начинает чтение с начала данных. Доступ к полям других объектов [набора записей](./recordset-object-ado.md) , которые не являются клонами первого объекта **набора записей** , не приведет **к нарушению** операций GetObject.  
   
- Если бит **адфлдлонг** в свойстве [Attributes](../../../ado/reference/ado-api/attributes-property-ado.md) объекта **field** имеет значение **true**, для этого поля можно **использовать метод GetObject** .  
+ Если бит **адфлдлонг** в свойстве [Attributes](./attributes-property-ado.md) объекта **field** имеет значение **true**, для этого поля можно **использовать метод GetObject** .  
   
  Если при **использовании метода GetObject** для объекта **поля** нет текущей записи, то происходит ошибка 3021 (нет текущей записи).  
   
 > [!NOTE]
->  Метод **GetObject** не работает с объектами **полей** объекта [Record](../../../ado/reference/ado-api/record-object-ado.md) . Она не выполняет никаких операций и выдает ошибку во время выполнения.  
+>  Метод **GetObject** не работает с объектами **полей** объекта [Record](./record-object-ado.md) . Она не выполняет никаких операций и выдает ошибку во время выполнения.  
   
 ## <a name="applies-to"></a>Применение  
- [Объект Field](../../../ado/reference/ado-api/field-object.md)  
+ [Объект Field](./field-object.md)  
   
-## <a name="see-also"></a>См. также:  
- [Примеры методов AppendChunk и-блока (Visual Basic)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vb.md)   
- [Примеры методов AppendChunk и-блока (Visual c++)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vc.md)   
- [Метод AppendChunk (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
- [Свойство Attributes (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)
+## <a name="see-also"></a>См. также  
+ [Примеры методов AppendChunk и-блока (Visual Basic)](./appendchunk-and-getchunk-methods-example-vb.md)   
+ [Примеры методов AppendChunk и-блока (Visual c++)](./appendchunk-and-getchunk-methods-example-vc.md)   
+ [Метод AppendChunk (ADO)](./appendchunk-method-ado.md)   
+ [Свойство Attributes (ADO)](./attributes-property-ado.md)

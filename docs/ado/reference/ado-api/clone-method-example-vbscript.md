@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e56e93f851d2f5f0dac7df2339dec37c0b6a1ac2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c696fb6be361327944223bab19d1edb0cf35460
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450946"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776243"
 ---
 # <a name="clone-method-example-vbscript"></a>Пример метода Clone (VBScript)
-В этом примере используется метод [clone](../../../ado/reference/ado-api/clone-method-ado.md) для создания копий [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) , а затем пользователь помещает указатель записи каждой копии независимо друг от друга.  
+В этом примере используется метод [clone](./clone-method-ado.md) для создания копий [набора записей](./recordset-object-ado.md) , а затем пользователь помещает указатель записи каждой копии независимо друг от друга.  
   
  Используйте следующий пример на странице Active Server (ASP). В этом примере используется база данных **Northwind** , распространяемая с Microsoft Access. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как Клоневбс. ASP. Результат можно просмотреть в любом клиентском браузере.  
   
@@ -118,6 +118,6 @@ ms.locfileid: "88450946"
 <!-- EndCloneVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Метод Clone (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)   
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+## <a name="see-also"></a>См. также  
+ [Метод Clone (ADO)](./clone-method-ado.md)   
+ [Объект Recordset (ADO)](./recordset-object-ado.md)

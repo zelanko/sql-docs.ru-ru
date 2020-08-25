@@ -13,28 +13,28 @@ helpviewer_keywords:
 ms.assetid: 63b3f9a3-1c36-4d06-a6b0-49b5eb5adf06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cb315cfe0a46e3d3c5ba6bbf4f34044ae0f8fa9a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 254829dcc26a0a73503b7ef79763c05c61c2f8ca
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442806"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773303"
 ---
 # <a name="parameters-collection-properties-methods-and-events"></a>Свойства, методы и события коллекции Parameters
 ## <a name="properties"></a>Свойства  
- [Count, свойство](../../../ado/reference/ado-api/count-property-ado.md)  
+ [Count, свойство](./count-property-ado.md)  
   
- [Свойство элемента](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Свойство элемента](./item-property-ado.md)  
   
 ## <a name="methods"></a>Методы  
- [Метод Append](../../../ado/reference/ado-api/append-method-ado.md)  
+ [Метод Append](./append-method-ado.md)  
   
- [Метод Delete (коллекция Parameters ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)  
+ [Метод Delete (коллекция Parameters ADO)](./delete-method-ado-parameters-collection.md)  
   
- [Метод Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Метод Refresh](./refresh-method-ado.md)  
   
 ## <a name="events"></a>События  
  Нет.  
   
 ## <a name="see-also"></a>См. также:  
- [Коллекция Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)
+ [Коллекция Parameters (ADO)](./parameters-collection-ado.md)

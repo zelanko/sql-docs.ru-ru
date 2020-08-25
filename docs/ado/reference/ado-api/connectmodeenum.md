@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ce1d75faaf4bbaeb941a0da87b68c09744c2a422
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 10bc68683f337f5a0bdf6fc5679c4276925a4234
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444436"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775853"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
-Указывает доступные разрешения для изменения данных в [соединении](../../../ado/reference/ado-api/connection-object-ado.md), открытия [записи](../../../ado/reference/ado-api/record-object-ado.md)или указания значений для свойства [mode](../../../ado/reference/ado-api/mode-property-ado.md) объектов **Record** и [Stream](../../../ado/reference/ado-api/stream-object-ado.md) .  
+Указывает доступные разрешения для изменения данных в [соединении](./connection-object-ado.md), открытия [записи](./record-object-ado.md)или указания значений для свойства [mode](./mode-property-ado.md) объектов **Record** и [Stream](./stream-object-ado.md) .  
   
-|Константа|Значение|Описание|  
+|Константа|Значение|Описание:|  
 |--------------|-----------|-----------------|  
 |**adModeRead**|1|Указывает разрешения только для чтения.|  
 |**adModeReadWrite**|3|Указывает разрешения на чтение и запись.|  
@@ -57,11 +57,11 @@ ms.locfileid: "88444436"
 
 :::row:::
     :::column:::
-        [Свойство Mode (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)  
-        [Метод Open (объект Record ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)  
+        [Свойство Mode (ADO)](./mode-property-ado.md)  
+        [Метод Open (объект Record ADO)](./open-method-ado-record.md)  
     :::column-end:::
     :::column:::
-        [Метод Open (объект Stream ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)  
-        [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+        [Метод Open (объект Stream ADO)](./open-method-ado-stream.md)  
+        [Объект Stream (ADO)](./stream-object-ado.md)  
     :::column-end:::
 :::row-end:::

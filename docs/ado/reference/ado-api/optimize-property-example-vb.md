@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 652194af-cfa4-4aa0-a6d6-fa409bbc3f98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e6dbeea5a053a1395e051939e313b9f672c73d2f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5ee1d8d211c0ceeed02408f559c63b5942aafe05
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442906"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773633"
 ---
 # <a name="optimize-property-example-vb"></a>Пример свойства Optimize (Visual Basic)
-В этом примере демонстрируется динамическое свойство **optimize** объекта [field](../../../ado/reference/ado-api/field-object.md) . Поле ***ZIP*** таблицы ***authors*** в базе данных ***pubs*** не индексируется. Присвоение свойству [optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) значения **true** в поле ***ZIP*** разрешает ADO создавать индексы, повышающие производительность метода [Find](../../../ado/reference/ado-api/find-method-ado.md) .  
+В этом примере демонстрируется динамическое свойство **optimize** объекта [field](./field-object.md) . Поле ***ZIP*** таблицы ***authors*** в базе данных ***pubs*** не индексируется. Присвоение свойству [optimize](./optimize-property-dynamic-ado.md) значения **true** в поле ***ZIP*** разрешает ADO создавать индексы, повышающие производительность метода [Find](./find-method-ado.md) .  
   
 ```  
 'BeginOptimizeVB  
@@ -87,6 +87,6 @@ End Sub
 'EndOptimizeVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект Field](../../../ado/reference/ado-api/field-object.md)   
- [Свойство Optimize (динамическое) (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)
+## <a name="see-also"></a>См. также  
+ [Объект Field](./field-object.md)   
+ [Свойство Optimize (динамическое) (ADO)](./optimize-property-dynamic-ado.md)

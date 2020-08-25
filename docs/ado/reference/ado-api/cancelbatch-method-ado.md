@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: dbdc2574-e44e-4d95-b03d-4a5d9e9adf3c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f8fa4d02dd10325726c83a6b645ebdd5b94397f9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: db1ae959094c07ea44e7e236e540070bea7814e5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451036"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776313"
 ---
 # <a name="cancelbatch-method-ado"></a>Метод CancelBatch (ADO)
 Отменяет ожидающее пакетное обновление.  
@@ -36,27 +36,27 @@ recordset.CancelBatchAffectRecords
   
 #### <a name="parameters"></a>Параметры  
  *аффектрекордс*  
- Необязательный параметр. Значение [аффектенум](../../../ado/reference/ado-api/affectenum.md) , указывающее, сколько записей будет влиять на метод **CancelBatch** .  
+ Необязательный элемент. Значение [аффектенум](./affectenum.md) , указывающее, сколько записей будет влиять на метод **CancelBatch** .  
   
 ## <a name="remarks"></a>Remarks  
- Используйте метод **CancelBatch** , чтобы отменить все ожидающие обновления в [наборе записей](../../../ado/reference/ado-api/recordset-object-ado.md) в режиме пакетного обновления. Если **набор записей** находится в режиме немедленного обновления, вызов **CancelBatch** без **адаффекткуррент** выдает ошибку.  
+ Используйте метод **CancelBatch** , чтобы отменить все ожидающие обновления в [наборе записей](./recordset-object-ado.md) в режиме пакетного обновления. Если **набор записей** находится в режиме немедленного обновления, вызов **CancelBatch** без **адаффекткуррент** выдает ошибку.  
   
- Если редактируется текущая запись или добавляется новая запись при вызове **CancelBatch**, то ADO сначала вызывает метод [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) для отмены любых кэшированных изменений. После этого все ожидающие изменения в **наборе записей** будут отменены.  
+ Если редактируется текущая запись или добавляется новая запись при вызове **CancelBatch**, то ADO сначала вызывает метод [CancelUpdate](./cancelupdate-method-ado.md) для отмены любых кэшированных изменений. После этого все ожидающие изменения в **наборе записей** будут отменены.  
   
- Текущая запись может быть недетерминированной после вызова **CancelBatch** , особенно если вы находились в процессе добавления новой записи. По этой причине лучше установить текущую позицию записи в известное место в **наборе записей** после вызова **CancelBatch** . Например, вызовите метод [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) .  
+ Текущая запись может быть недетерминированной после вызова **CancelBatch** , особенно если вы находились в процессе добавления новой записи. По этой причине лучше установить текущую позицию записи в известное место в **наборе записей** после вызова **CancelBatch** . Например, вызовите метод [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) .  
   
- Если попытка отмены ожидающих обновлений завершается сбоем из-за конфликта с базовыми данными (например, если запись была удалена другим пользователем), поставщик возвращает предупреждения в коллекцию [ошибок](../../../ado/reference/ado-api/errors-collection-ado.md) , но не останавливает выполнение программы. Ошибка времени выполнения возникает только в случае возникновения конфликтов во всех запрошенных записях. Используйте свойство [Filter](../../../ado/reference/ado-api/filter-property.md) (**адфилтераффектедрекордс**) и свойство [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) для обнаружения записей с конфликтами.  
+ Если попытка отмены ожидающих обновлений завершается сбоем из-за конфликта с базовыми данными (например, если запись была удалена другим пользователем), поставщик возвращает предупреждения в коллекцию [ошибок](./errors-collection-ado.md) , но не останавливает выполнение программы. Ошибка времени выполнения возникает только в случае возникновения конфликтов во всех запрошенных записях. Используйте свойство [Filter](./filter-property.md) (**адфилтераффектедрекордс**) и свойство [Status](./status-property-ado-recordset.md) для обнаружения записей с конфликтами.  
   
 ## <a name="applies-to"></a>Применение  
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Объект Recordset (ADO)](./recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
- [Примеры методов UpdateBatch и CancelBatch (Visual Basic)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vb.md)   
- [Примеры методов UpdateBatch и CancelBatch (Visual c++)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vc.md)   
- [Метод Cancel (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
- [Метод Cancel (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)   
- [Метод CancelUpdate (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
- [Метод CancelUpdate (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
- [Метод Clear (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
- [Свойство LockType (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
- [Метод UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)
+## <a name="see-also"></a>См. также  
+ [Примеры методов UpdateBatch и CancelBatch (Visual Basic)](./updatebatch-and-cancelbatch-methods-example-vb.md)   
+ [Примеры методов UpdateBatch и CancelBatch (Visual c++)](./updatebatch-and-cancelbatch-methods-example-vc.md)   
+ [Метод Cancel (ADO)](./cancel-method-ado.md)   
+ [Метод Cancel (RDS)](../rds-api/cancel-method-rds.md)   
+ [Метод CancelUpdate (ADO)](./cancelupdate-method-ado.md)   
+ [Метод CancelUpdate (RDS)](../rds-api/cancelupdate-method-rds.md)   
+ [Метод Clear (ADO)](./clear-method-ado.md)   
+ [Свойство LockType (ADO)](./locktype-property-ado.md)   
+ [Метод UpdateBatch](./updatebatch-method.md)

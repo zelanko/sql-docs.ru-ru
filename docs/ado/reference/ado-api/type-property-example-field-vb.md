@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: accb72f5-a3bd-4a7e-92b6-6da0783b4b75
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 94eeb6eb22e72b6db45d178c9d19ced33009be8e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 79f72b8795fc060a44b83c3587f9243971b7c951
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441726"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777093"
 ---
 # <a name="type-property-example-field-vb"></a>Пример свойства Type (объект Field) (Visual Basic)
-В этом примере показано свойство [Type](../../../ado/reference/ado-api/type-property-ado.md) , в котором отображается имя константы, соответствующее значению свойства [Type](../../../ado/reference/ado-api/type-property-ado.md) всех объектов [field](../../../ado/reference/ado-api/field-object.md) в таблице ***Employees*** . Для выполнения этой процедуры требуется функция FieldType.  
+В этом примере показано свойство [Type](./type-property-ado.md) , в котором отображается имя константы, соответствующее значению свойства [Type](./type-property-ado.md) всех объектов [field](./field-object.md) в таблице ***Employees*** . Для выполнения этой процедуры требуется функция FieldType.  
   
 ```  
 'BeginTypeFieldVB  
@@ -106,6 +106,6 @@ End Sub
 Attribute VB_Name = "TypeField"  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект Field](../../../ado/reference/ado-api/field-object.md)   
- [Свойство Type (ADO)](../../../ado/reference/ado-api/type-property-ado.md)
+## <a name="see-also"></a>См. также  
+ [Объект Field](./field-object.md)   
+ [Свойство Type (ADO)](./type-property-ado.md)

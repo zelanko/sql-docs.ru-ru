@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 49dc9a49-af7b-433b-be36-7a14ca984fb7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3cafee5dbcc5d6469df2d733f1898806069dd112
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d6654adc5cbf5b01435dbc95a2f630cf980cc6d5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451106"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776363"
 ---
 # <a name="cachesize-property-ado"></a>Свойство CacheSize (ADO)
-Указывает число записей из объекта [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) , которые кэшируются локально в памяти.  
+Указывает число записей из объекта [набора записей](./recordset-object-ado.md) , которые кэшируются локально в памяти.  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает **длинное** значение, которое должно быть больше 0. Значение по умолчанию: 1.  
@@ -41,14 +41,14 @@ ms.locfileid: "88451106"
   
  Нулевой параметр **CacheSize** не допускается и возвращает ошибку.  
   
- Записи, полученные из кэша, не отображают параллельные изменения, внесенные другими пользователями в исходные данные. Чтобы принудительно обновить все кэшированные данные, используйте метод [Resync](../../../ado/reference/ado-api/resync-method.md) .  
+ Записи, полученные из кэша, не отображают параллельные изменения, внесенные другими пользователями в исходные данные. Чтобы принудительно обновить все кэшированные данные, используйте метод [Resync](./resync-method.md) .  
   
- Если для **CacheSize** задано значение больше единицы, методы навигации ([Move](../../../ado/reference/ado-api/move-method-ado.md), [MoveFirst, MoveLast, MoveNext и MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) могут привести к перемещению удаленной записи, если удаление происходит после извлечения записей. После первоначальной выборки последующие удаления не будут отражены в кэше данных до тех пор, пока не будет произведена попытка получить доступ к значению данных из удаленной строки. Однако если установить для **CacheSize** значение 1, это не позволит получить доступ к удаленным строкам.  
+ Если для **CacheSize** задано значение больше единицы, методы навигации ([Move](./move-method-ado.md), [MoveFirst, MoveLast, MoveNext и MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) могут привести к перемещению удаленной записи, если удаление происходит после извлечения записей. После первоначальной выборки последующие удаления не будут отражены в кэше данных до тех пор, пока не будет произведена попытка получить доступ к значению данных из удаленной строки. Однако если установить для **CacheSize** значение 1, это не позволит получить доступ к удаленным строкам.  
   
 ## <a name="applies-to"></a>Применение  
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Объект Recordset (ADO)](./recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
- [Пример свойства CacheSize (Visual Basic)](../../../ado/reference/ado-api/cachesize-property-example-vb.md)   
- [Пример свойства CacheSize (Visual c++)](../../../ado/reference/ado-api/cachesize-property-example-vc.md)   
- [Пример свойства CacheSize (JScript)](../../../ado/reference/ado-api/cachesize-property-example-jscript.md)
+## <a name="see-also"></a>См. также  
+ [Пример свойства CacheSize (Visual Basic)](./cachesize-property-example-vb.md)   
+ [Пример свойства CacheSize (Visual c++)](./cachesize-property-example-vc.md)   
+ [Пример свойства CacheSize (JScript)](./cachesize-property-example-jscript.md)

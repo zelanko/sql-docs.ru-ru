@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: b4e2844a-120a-4513-860b-f1b6e4b5dda4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d4ae79c8ee96d94d697ad78cf77f1d96b8c2e4a5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 53c9d3161126a1728335c132fc7886b49297f2cb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439126"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768493"
 ---
 # <a name="datafactory-object-query-method-and-createobject-method-example-vbscript"></a>Примеры объекта DataFactory, а также методов Query и CreateObject (VBScript)
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- В этом примере создается объект [RDSServer.](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) DataObject с помощью метода [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) [RDS. Объект Space](../../../ado/reference/rds-api/dataspace-object-rds.md) . Чтобы протестировать этот пример, вырежьте и вставьте этот код между \<Body> \</Body> тегами и в обычном HTML-документе и назовите его **датафакторивбс. ASP**. Сценарий ASP определит ваш сервер.  
+ В этом примере создается объект [RDSServer.](./datafactory-object-rdsserver.md) DataObject с помощью метода [CreateObject](./createobject-method-rds.md) [RDS. Объект Space](./dataspace-object-rds.md) . Чтобы протестировать этот пример, вырежьте и вставьте этот код между \<Body> \</Body> тегами и в обычном HTML-документе и назовите его **датафакторивбс. ASP**. Сценарий ASP определит ваш сервер.  
   
 ```  
 <!-- BeginDataFactoryVBS -->  
@@ -137,10 +137,8 @@ to bring back a Recordset. </H4>
 <!-- EndDataFactoryVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Метод CreateObject (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)   
- [Объект фактического объекта (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
- [Объект Space (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
- [Метод Query (служба удаленных рабочих столов)](../../../ado/reference/rds-api/query-method-rds.md)
-
-
+## <a name="see-also"></a>См. также  
+ [Метод CreateObject (RDS)](./createobject-method-rds.md)   
+ [Объект фактического объекта (RDSServer)](./datafactory-object-rdsserver.md)   
+ [Объект Space (RDS)](./dataspace-object-rds.md)   
+ [Метод Query (служба удаленных рабочих столов)](./query-method-rds.md)

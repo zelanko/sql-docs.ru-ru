@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb95298fbc88749acdb5058cc45694688e0c2c6e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3974219f4070d38e877ff7fdd4b6c7e3a26adef2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443676"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775313"
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a>Пример свойств Filter и RecordCount (Visual c++)
-В этом примере используется свойство [Filter](../../../ado/reference/ado-api/filter-property.md) для открытия нового [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) на основе указанного условия, примененного к существующему **набору записей**. Для отображения числа записей в двух **наборах записей**используется свойство [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) . Для выполнения этой процедуры требуется функция Филтерфиелд.  
+В этом примере используется свойство [Filter](./filter-property.md) для открытия нового [набора записей](./recordset-object-ado.md) на основе указанного условия, примененного к существующему **набору записей**. Для отображения числа записей в двух **наборах записей**используется свойство [RecordCount](./recordcount-property-ado.md) . Для выполнения этой процедуры требуется функция Филтерфиелд.  
   
 ## <a name="example"></a>Пример  
   
@@ -303,7 +303,7 @@ Ramona Publishers, USA
 Scootney Books, USA  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Свойство Filter](../../../ado/reference/ado-api/filter-property.md)   
- [Свойство RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+## <a name="see-also"></a>См. также  
+ [Свойство Filter](./filter-property.md)   
+ [Свойство RecordCount (ADO)](./recordcount-property-ado.md)   
+ [Объект Recordset (ADO)](./recordset-object-ado.md)

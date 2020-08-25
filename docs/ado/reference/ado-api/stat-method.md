@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5375335fe0964107aed54de71d7e700b0588f209
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e4a79dc76537bbcbabc8b8689638ff9c670413e3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441996"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777363"
 ---
 # <a name="stat-method"></a>Метод Stat
-Извлекает сведения об объекте [потока](../../../ado/reference/ado-api/stream-object-ado.md) .  
+Извлекает сведения об объекте [потока](./stream-object-ado.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -48,7 +48,7 @@ Long stream.Stat(StatStg, StatFlag)
 |STATFLAG_DEFAULT|0|  
 |STATFLAG_NONAME|1|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Версия метода Stat, реализованного для объекта потока ADO, заполняет следующие поля структуры СТАТСТГ:  
   
  *пвкснаме*  
@@ -71,4 +71,4 @@ Long stream.Stat(StatStg, StatFlag)
  Если STATFLAG_NONAME не было указано в параметре Статфлаг и для текущего потока нет доступных имен, это значение будет E_NOTIMPL.  
   
 ## <a name="applies-to"></a>Применение  
- [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
+ [Объект Stream (ADO)](./stream-object-ado.md)

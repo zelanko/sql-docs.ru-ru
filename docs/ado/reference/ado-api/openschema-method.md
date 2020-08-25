@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1b0a92e7079338e290f228603767d6d15a3a351e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cade08630577b32d81643cb30b6a1e20656d95bf
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442926"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773683"
 ---
 # <a name="openschema-method"></a>Метод OpenSchema
 Получает сведения о схеме базы данных от поставщика.  
@@ -35,19 +35,19 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает объект [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) , содержащий сведения о схеме. **Набор записей** будет открыт как статический курсор только для чтения. *QueryType* определяет, какие столбцы отображаются в **наборе записей**.  
+ Возвращает объект [набора записей](./recordset-object-ado.md) , содержащий сведения о схеме. **Набор записей** будет открыт как статический курсор только для чтения. *QueryType* определяет, какие столбцы отображаются в **наборе записей**.  
   
 #### <a name="parameters"></a>Параметры  
  *QueryType*  
- Любое значение [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md) , представляющее тип выполняемого запроса схемы.  
+ Любое значение [SchemaEnum](./schemaenum.md) , представляющее тип выполняемого запроса схемы.  
   
  *Критерии*  
- Необязательный параметр. Массив ограничений запроса для каждого параметра *QueryType* , как указано в [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md).  
+ Необязательный элемент. Массив ограничений запроса для каждого параметра *QueryType* , как указано в [SchemaEnum](./schemaenum.md).  
   
  *счемаид*  
  Идентификатор GUID для запроса схемы поставщика, не определяемый спецификацией OLE DB. Этот параметр является обязательным, если для *QueryType* задано значение **адсчемапровидерспеЦифик**. в противном случае он не используется.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Метод **OpenSchema** возвращает собственные описательные сведения об источнике данных, например о таблицах, которые находятся в источнике данных, столбцах в таблицах и поддерживаемых типах данных.  
   
  Аргумент *QueryType* — это идентификатор GUID, который указывает, какие столбцы (схемы) возвращены. Спецификация OLE DB содержит полный список схем.  
@@ -59,22 +59,22 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  Поставщики не обязаны поддерживать все OLE DB запросы стандартной схемы. В частности, для спецификации OLE DB требуются только **адсчематаблес**, **адсчемаколумнс**и **адсчемапровидертипес** . Однако поставщик не обязан поддерживать ограничения *критерия* , перечисленные выше для этих запросов схемы.  
   
 > [!NOTE]
->  **Использование удаленной службы данных** Метод **OpenSchema** недоступен для объекта [подключения](../../../ado/reference/ado-api/connection-object-ado.md) на стороне клиента.  
+>  **Использование удаленной службы данных** Метод **OpenSchema** недоступен для объекта [подключения](./connection-object-ado.md) на стороне клиента.  
   
 > [!NOTE]
->  В Visual Basic столбцы, имеющие 4-байтное целое число без знака (DBTYPE UI4) в **наборе записей** , возвращенном методом **OpenSchema** для объекта **соединения** , не могут сравниваться с другими переменными. Дополнительные сведения о типах данных OLE DB см. в разделе [типы данных в OLE DB (OLE DB)](https://msdn.microsoft.com/6039292f-74e0-49b2-b133-17bc117ebf6a) и [приложении A: типы данных](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6) в справочнике программиста Microsoft OLE DB.  
+>  В Visual Basic столбцы, имеющие 4-байтное целое число без знака (DBTYPE UI4) в **наборе записей** , возвращенном методом **OpenSchema** для объекта **соединения** , не могут сравниваться с другими переменными. Дополнительные сведения о типах данных OLE DB см. в разделе [типы данных в OLE DB (OLE DB)](/previous-versions/windows/desktop/ms714931(v=vs.85)) и [приложении A: типы данных](/previous-versions/windows/desktop/ms723969(v=vs.85)) в справочнике программиста Microsoft OLE DB.  
   
 > [!NOTE]
 >  **Пользователи Visual C/C++** Если не использовать курсоры на стороне клиента, получение "ORDINAL_POSITION" схемы столбца в ADO возвращает вариант типа VT_R8 в MDAC 2,7, MDAC 2,8 и компонентах доступа к данным Windows (Windows DAC) 6,0, а тип, используемый в MDAC 2,6, был VT_I4. Программы, написанные для MDAC 2,6, которые ищут только вариант, возвращаемый типом VT_I4, будут получать ноль для каждого порядкового номера, если они работают в MDAC 2,7, MDAC 2,8 и Windows DAC 6,0 без изменения. Это изменение произошло из-за того, что тип данных, OLE DB, возвращает DBTYPE_UI4, а в типе VT_I4 со знаком не хватает места для хранения всех возможных значений без необходимости усечения и, следовательно, причиной потери данных.  
   
 ## <a name="applies-to"></a>Применение  
- [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ [Объект Connection (ADO)](./connection-object-ado.md)  
   
 ## <a name="see-also"></a>См. также  
- [Пример метода OpenSchema (Visual Basic)](../../../ado/reference/ado-api/openschema-method-example-vb.md)   
- [Пример метода OpenSchema (Visual c++)](../../../ado/reference/ado-api/openschema-method-example-vc.md)   
- [Метод Open (подключение ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Метод Open (запись ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)   
- [Метод Open (набор записей ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Метод Open (поток ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [Приложение А. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Пример метода OpenSchema (Visual Basic)](./openschema-method-example-vb.md)   
+ [Пример метода OpenSchema (Visual c++)](./openschema-method-example-vc.md)   
+ [Метод Open (подключение ADO)](./open-method-ado-connection.md)   
+ [Метод Open (запись ADO)](./open-method-ado-record.md)   
+ [Метод Open (набор записей ADO)](./open-method-ado-recordset.md)   
+ [Метод Open (поток ADO)](./open-method-ado-stream.md)   
+ [Приложение А. Поставщики](../../guide/appendixes/appendix-a-providers.md)

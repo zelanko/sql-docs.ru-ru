@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f911be2784e849c8feb271127e2a83ed1ce90c4f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 144965d31dbb11da6cbc9a3ee6b23cd79cda800e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451316"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776633"
 ---
 # <a name="adostreamconstruction-interface"></a>Интерфейс ADOStreamConstruction
 Интерфейс **адостреамконструктион** используется для создания объекта **потока** ADO из OLE DB объекта **IStream** в приложении C/C++.  
   
 ## <a name="properties"></a>Свойства  
   
-|Свойство|Описание|  
+|Свойство.|Описание:|  
 |-|-|  
-|[Поток](../../../ado/reference/ado-api/stream-property.md)|Чтение и запись. Возвращает или задает объект OLE DB **потока** .|  
+|[Поток](./stream-property.md)|Чтение и запись. Возвращает или задает объект OLE DB **потока** .|  
   
 ## <a name="methods"></a>Методы  
  Отсутствует.  
@@ -74,4 +74,4 @@ adoStrConstruct->put_Stream(pUnk);
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по API ADO](../../../ado/reference/ado-api/ado-api-reference.md)
+ [Справочник по API ADO](./ado-api-reference.md)

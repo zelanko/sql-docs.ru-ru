@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 02982e6a-ac5f-4af2-b82e-ce12534b84b2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b43e0f505a3c4455768c32abd93dbc89afe04a82
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d26e9311a760e3d4349fdbbcececa9b9533741a4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441466"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776843"
 ---
 # <a name="write-method"></a>Метод Write
-Записывает двоичные данные в объект [потока](../../../ado/reference/ado-api/stream-object-ado.md) .  
+Записывает двоичные данные в объект [потока](./stream-object-ado.md) .  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,15 +41,15 @@ Stream.Write Buffer
 ## <a name="remarks"></a>Remarks  
  Указанные байты записываются в объект **потока** без промежуточных пробелов между каждым байтом.  
   
- Текущей [позицией](../../../ado/reference/ado-api/position-property-ado.md) присваивается байт, следующий за записанными данными. Метод **Write** не усекает остальные данные в потоке. Если вы хотите усечь эти байты, вызовите [сетеос](../../../ado/reference/ado-api/seteos-method.md).  
+ Текущей [позицией](./position-property-ado.md) присваивается байт, следующий за записанными данными. Метод **Write** не усекает остальные данные в потоке. Если вы хотите усечь эти байты, вызовите [сетеос](./seteos-method.md).  
   
- Если вы пишете после текущей позиции [EOS](../../../ado/reference/ado-api/eos-property.md) , [Размер](../../../ado/reference/ado-api/size-property-ado-stream.md) **потока** будет увеличен, чтобы вместить новые байты, а **EOS** перейдет к новому байтовому байту в **потоке**.  
+ Если вы пишете после текущей позиции [EOS](./eos-property.md) , [Размер](./size-property-ado-stream.md) **потока** будет увеличен, чтобы вместить новые байты, а **EOS** перейдет к новому байтовому байту в **потоке**.  
   
 > [!NOTE]
->  Метод **Write** используется с двоичными потоками ([Type](../../../ado/reference/ado-api/type-property-ado-stream.md) — **адтипебинари**). Для текстовых потоков (**Type** — **Адтипетекст**) используйте [WriteText](../../../ado/reference/ado-api/writetext-method.md).  
+>  Метод **Write** используется с двоичными потоками ([Type](./type-property-ado-stream.md) — **адтипебинари**). Для текстовых потоков (**Type** — **Адтипетекст**) используйте [WriteText](./writetext-method.md).  
   
 ## <a name="applies-to"></a>Применение  
- [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+ [Объект Stream (ADO)](./stream-object-ado.md)  
   
-## <a name="see-also"></a>См. также:  
- [Метод WriteText](../../../ado/reference/ado-api/writetext-method.md)
+## <a name="see-also"></a>См. также  
+ [Метод WriteText](./writetext-method.md)

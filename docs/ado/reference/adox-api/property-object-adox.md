@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6a56def6-dbe6-4ccc-a491-8d076889f019
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5a836b5b0778aea77732036d1951db81aa790198
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 75a4722803e66527873f98fe469825d4af82ca33
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439606"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769543"
 ---
 # <a name="property-object-adox"></a>Объект Property (ADOX)
 Представляет характеристику объекта ADOX.  
@@ -27,7 +27,7 @@ ms.locfileid: "88439606"
 ## <a name="remarks"></a>Remarks  
  Объекты ADOX имеют два типа свойств: встроенные и динамические.  
   
- Встроенные свойства — это свойства, которые немедленно доступны для любого нового объекта с помощью синтаксиса MyObject. Property. Они не отображаются как объекты свойств в [коллекции свойств](../../../ado/reference/ado-api/properties-collection-ado.md)объекта, поэтому, хотя их значения можно изменять, их характеристики изменить нельзя.  
+ Встроенные свойства — это свойства, которые немедленно доступны для любого нового объекта с помощью синтаксиса MyObject. Property. Они не отображаются как объекты свойств в [коллекции свойств](../ado-api/properties-collection-ado.md)объекта, поэтому, хотя их значения можно изменять, их характеристики изменить нельзя.  
   
  Динамические свойства определяются базовым поставщиком данных и отображаются в коллекции Properties для соответствующего объекта ADOX.  На динамические свойства можно ссылаться только через коллекцию с помощью синтаксиса MyObject. Properties (0) или MyObject. Properties ("имя").  
   
@@ -35,14 +35,14 @@ ms.locfileid: "88439606"
   
  Объект динамического свойства имеет четыре встроенных свойства.  
   
- Свойство [Name](../../../ado/reference/ado-api/name-property-ado.md) — это строка, идентифицирующая свойство.  
+ Свойство [Name](../ado-api/name-property-ado.md) — это строка, идентифицирующая свойство.  
   
- Свойство [Type](../../../ado/reference/ado-api/type-property-ado.md) — это целое число, указывающее тип данных свойства.  
+ Свойство [Type](../ado-api/type-property-ado.md) — это целое число, указывающее тип данных свойства.  
   
- Свойство [value](../../../ado/reference/ado-api/value-property-ado.md) — это вариант, который содержит значение свойства. Value является свойством по умолчанию для объекта Property.  
+ Свойство [value](../ado-api/value-property-ado.md) — это вариант, который содержит значение свойства. Value является свойством по умолчанию для объекта Property.  
   
- Свойство [Attributes](../../../ado/reference/ado-api/attributes-property-ado.md) является длинным значением, указывающим характеристики свойства, характерного для поставщика.  
+ Свойство [Attributes](../ado-api/attributes-property-ado.md) является длинным значением, указывающим характеристики свойства, характерного для поставщика.  
   
  Этот раздел содержит следующий раздел.  
   
--   [Свойства, методы и события объекта Property (ADOX)](../../../ado/reference/adox-api/adox-property-object-properties-methods-and-events.md)
+-   [Свойства, методы и события объекта Property (ADOX)](./adox-property-object-properties-methods-and-events.md)

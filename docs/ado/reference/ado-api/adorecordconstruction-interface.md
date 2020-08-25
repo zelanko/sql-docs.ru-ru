@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a52b8006ed97809690ec874c27e20ee8f1b05d0f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f93370ae23cd50e1fb494d484756505f69514df1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451336"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776605"
 ---
 # <a name="adorecordconstruction-interface"></a>Интерфейс ADORecordConstruction
 Интерфейс **адорекордконструктион**используется для создания объекта **записи** ADO из объекта **строки** OLE DB в приложении C/C++.  
@@ -30,10 +30,10 @@ ms.locfileid: "88451336"
   
 ## <a name="properties"></a>Свойства  
   
-|Свойство.|Описание|  
+|Свойство.|Описание:|  
 |-|-|  
-|[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|Доступный только на запись.<br />Задает контейнер объекта OLE DB **строки** для этого объекта **записи** ADO.|  
-|[Строка](../../../ado/reference/ado-api/row-property-ado.md)|Чтение и запись.<br />Возвращает или задает OLE DB объект **строки** от или в этом объекте ADO **Record** .|  
+|[ParentRow](./parentrow-property-ado.md)|Доступный только на запись.<br />Задает контейнер объекта OLE DB **строки** для этого объекта **записи** ADO.|  
+|[Строки](./row-property-ado.md)|Чтение и запись.<br />Возвращает или задает OLE DB объект **строки** от или в этом объекте ADO **Record** .|  
   
 ## <a name="methods"></a>Методы  
  Отсутствует.  

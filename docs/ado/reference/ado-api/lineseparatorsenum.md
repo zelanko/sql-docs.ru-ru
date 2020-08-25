@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 0440b793-99c7-49a2-b3e2-ec5b1a7e3e60
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c92b70fdee1fb492b55b18e613284d25277f55b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 50cc4c05319ed146882145e42469ab27c0dec0ab
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443366"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774613"
 ---
 # <a name="lineseparatorsenum"></a>LineSeparatorsEnum
-Задает символ, используемый в качестве разделителя строк в объектах текстового [потока](../../../ado/reference/ado-api/stream-object-ado.md) .  
+Задает символ, используемый в качестве разделителя строк в объектах текстового [потока](./stream-object-ado.md) .  
   
-|Константа|Значение|Описание|  
+|Константа|Значение|Описание:|  
 |--------------|-----------|-----------------|  
 |**adCR**|13|Указывает на возврат каретки.|  
 |**adCRLF**|-1|По умолчанию. Указывает перевод строки возврата каретки.|  
@@ -36,4 +36,4 @@ ms.locfileid: "88443366"
  Эти константы не имеют эквивалентов ADO/WFC.  
   
 ## <a name="applies-to"></a>Применение  
- [Свойство LineSeparator (ADO)](../../../ado/reference/ado-api/lineseparator-property-ado.md)
+ [Свойство LineSeparator (ADO)](./lineseparator-property-ado.md)

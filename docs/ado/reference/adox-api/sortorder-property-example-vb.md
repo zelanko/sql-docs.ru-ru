@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a66fcb11780731424563526d30a4d544c60ea693
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 089c4e7f402e374ab4af43c683270ad488c0f8bb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439506"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769363"
 ---
 # <a name="sortorder-property-example-vb"></a>Пример свойства SortOrder (Visual Basic)
-В этом примере демонстрируется свойство [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) [столбца](../../../ado/reference/adox-api/column-object-adox.md) , добавленного к коллекции [Columns](../../../ado/reference/adox-api/columns-collection-adox.md) [индекса](../../../ado/reference/adox-api/index-object-adox.md). Код добавляет индекс по возрастанию к столбцу Country в таблице **Employees** , а затем отображает записи. Затем код добавляет нисходящий индекс к столбцу Country в таблице **Employees** и снова отображает записи. Отображается разность между индексами по возрастанию и убыванию.  
+В этом примере демонстрируется свойство [SortOrder](./sortorder-property-adox.md) [столбца](./column-object-adox.md) , добавленного к коллекции [Columns](./columns-collection-adox.md) [индекса](./index-object-adox.md). Код добавляет индекс по возрастанию к столбцу Country в таблице **Employees** , а затем отображает записи. Затем код добавляет нисходящий индекс к столбцу Country в таблице **Employees** и снова отображает записи. Отображается разность между индексами по возрастанию и убыванию.  
   
 ```  
 ' BeginSortOrderVB  
@@ -137,8 +137,8 @@ End Sub
 ' EndSortOrderVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [Коллекция Columns (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Объект index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
- [Свойство SortOrder (ADOX)](../../../ado/reference/adox-api/sortorder-property-adox.md)
+## <a name="see-also"></a>См. также  
+ [Объект Column (ADOX)](./column-object-adox.md)   
+ [Коллекция Columns (ADOX)](./columns-collection-adox.md)   
+ [Объект index (ADOX)](./index-object-adox.md)   
+ [Свойство SortOrder (ADOX)](./sortorder-property-adox.md)

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 455db4b01f6e25b6e280a6b33461ed6747cea284
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 89dc7e47bbd286d790086bde5da24e0a3316eef3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443436"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774763"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>Пример свойств IsolationLevel и Mode (Visual c++)
-В этом примере свойство [mode](../../../ado/reference/ado-api/mode-property-ado.md) используется для открытия монопольного соединения, а свойство [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) — для открытия транзакции, которая выполняет изоляцию других транзакций.  
+В этом примере свойство [mode](./mode-property-ado.md) используется для открытия монопольного соединения, а свойство [IsolationLevel](./isolationlevel-property.md) — для открытия транзакции, которая выполняет изоляцию других транзакций.  
   
 ## <a name="example"></a>Пример  
   
@@ -244,6 +244,6 @@ void PrintComError(_com_error &e) {
 **Луковиц, ликс и чесночный: секреты кулинарных Средиземноморье-trad_cook**  
 **50 лет в Буккингхам Palace Китченс-trad_cook**  
 **Суши, кто угодно? — trad_cook**   
-## <a name="see-also"></a>См. также:  
- [IsolationLevel, свойство](../../../ado/reference/ado-api/isolationlevel-property.md)   
- [Свойство Mode (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)
+## <a name="see-also"></a>См. также  
+ [IsolationLevel, свойство](./isolationlevel-property.md)   
+ [Свойство Mode (ADO)](./mode-property-ado.md)

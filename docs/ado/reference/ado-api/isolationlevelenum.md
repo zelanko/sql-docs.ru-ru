@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 8e17a7bc-b8a3-4ae2-b6c9-ce088ad31fdf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c08da68e136d3e2cffbb492f021225a3b895a9e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 03bd95a642f3942275e1ff9d32f1b2d1829b96d3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443416"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774693"
 ---
 # <a name="isolationlevelenum"></a>IsolationLevelEnum
-Задает уровень изоляции транзакции для объекта [соединения](../../../ado/reference/ado-api/connection-object-ado.md) .  
+Задает уровень изоляции транзакции для объекта [соединения](./connection-object-ado.md) .  
   
-|Константа|Значение|Описание|  
+|Константа|Значение|Описание:|  
 |--------------|-----------|-----------------|  
 |**адксактунспеЦифиед**|-1|Указывает, что поставщик использует уровень изоляции, отличный от указанного, но уровень не может быть определен.|  
 |**адксактчаос**|16|Указывает, что ожидающие изменения более строго изолированных транзакций не могут быть перезаписаны.|  
@@ -54,4 +54,4 @@ ms.locfileid: "88443416"
 |Адоенумс. IsolationLevel. SERIALIZABLE|  
   
 ## <a name="applies-to"></a>Применение  
- [Свойство IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)
+ [Свойство IsolationLevel](./isolationlevel-property.md)

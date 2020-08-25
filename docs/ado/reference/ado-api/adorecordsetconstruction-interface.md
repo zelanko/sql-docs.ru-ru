@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3dd1000dce8308ada4044eb9f043097f8767a9c0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c17ccfe0a31714d5e2b3945960a4ff3d2ad55d1e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451326"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776643"
 ---
 # <a name="adorecordsetconstruction-interface"></a>Интерфейс ADORecordsetConstruction
 Интерфейс **адорекордсетконструктион** используется для создания объекта **набора записей** ADO из объекта OLE DB **набора строк** в приложении C/C++.  
@@ -30,11 +30,11 @@ ms.locfileid: "88451326"
   
 ## <a name="properties"></a>Свойства  
   
-|Свойство.|Описание|  
+|Свойство.|Описание:|  
 |-|-|  
-|[Глава](../../../ado/reference/ado-api/chapter-property-ado.md)|Чтение и запись.<br />Получает или задает OLE DB объект **главы** от/в этом объекте ADO **Recordset** .|  
-|[ровпоситион](../../../ado/reference/ado-api/rowposition-property-ado.md)|Чтение и запись.<br />Возвращает или задает OLE DB объект **ровпоситион** из или в этом объекте ADO **Recordset** .|  
-|[Набор строк](../../../ado/reference/ado-api/rowset-property-ado.md)|Чтение и запись.<br />Возвращает или задает OLE DB объект **набора строк** из или в этом объекте ADO **Recordset** .|  
+|[Глава](./chapter-property-ado.md)|Чтение и запись.<br />Получает или задает OLE DB объект **главы** от/в этом объекте ADO **Recordset** .|  
+|[ровпоситион](./rowposition-property-ado.md)|Чтение и запись.<br />Возвращает или задает OLE DB объект **ровпоситион** из или в этом объекте ADO **Recordset** .|  
+|[Набор строк](./rowset-property-ado.md)|Чтение и запись.<br />Возвращает или задает OLE DB объект **набора строк** из или в этом объекте ADO **Recordset** .|  
   
 ## <a name="methods"></a>Методы  
  Отсутствует.  
@@ -79,6 +79,6 @@ ms.locfileid: "88451326"
   
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   
-## <a name="see-also"></a>См. также:  
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Свойство Rowset (ADO)](../../../ado/reference/ado-api/rowset-property-ado.md)
+## <a name="see-also"></a>См. также  
+ [Объект Recordset (ADO)](./recordset-object-ado.md)   
+ [Свойство Rowset (ADO)](./rowset-property-ado.md)

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 29a02992-64be-4fcd-be13-445cba205893
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ce13556c013c527ec16f183001b6042ed501398d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 57375b89595c6ed3e5c377692709deacd8f0ff28
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443056"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773973"
 ---
 # <a name="numericscale-property-ado"></a>Свойство NumericScale (ADO)
-Указывает масштаб числовых значений в объекте [параметра](../../../ado/reference/ado-api/parameter-object.md) или [поля](../../../ado/reference/ado-api/field-object.md) .  
+Указывает масштаб числовых значений в объекте [параметра](./parameter-object.md) или [поля](./field-object.md) .  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает значение **типа Byte** , указывающее количество десятичных разрядов, к которым будут разрешены числовые значения.  
@@ -35,20 +35,20 @@ ms.locfileid: "88443056"
   
  Для объектов **параметров** свойство **NumericScale** доступно для чтения и записи.  
   
- Для объекта **field** **NumericScale** обычно доступен только для чтения. Однако для новых объектов **field** , добавленных к коллекции [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) [записи](../../../ado/reference/ado-api/record-object-ado.md), **NumericScale** доступен только для чтения и записи только после того, как было указано свойство [value](../../../ado/reference/ado-api/value-property-ado.md) для **поля** и поставщик данных успешно добавил новое **поле** , вызвав метод [Update](../../../ado/reference/ado-api/update-method.md) коллекции [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) .  
+ Для объекта **field** **NumericScale** обычно доступен только для чтения. Однако для новых объектов **field** , добавленных к коллекции [Fields](./fields-collection-ado.md) [записи](./record-object-ado.md), **NumericScale** доступен только для чтения и записи только после того, как было указано свойство [value](./value-property-ado.md) для **поля** и поставщик данных успешно добавил новое **поле** , вызвав метод [Update](./update-method.md) коллекции [Fields](./fields-collection-ado.md) .  
   
 ## <a name="applies-to"></a>Применение  
 
 :::row:::
     :::column:::
-        [Объект Field](../../../ado/reference/ado-api/field-object.md)  
+        [Объект Field](./field-object.md)  
     :::column-end:::
     :::column:::
-        [Объект Parameter](../../../ado/reference/ado-api/parameter-object.md)  
+        [Объект Parameter](./parameter-object.md)  
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>См. также:  
- [Пример свойств NumericScale и Precision (Visual Basic)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)   
- [Пример свойств NumericScale и Precision (Visual c++)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)   
- [Свойство Precision (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)
+## <a name="see-also"></a>См. также  
+ [Пример свойств NumericScale и Precision (Visual Basic)](./numericscale-and-precision-properties-example-vb.md)   
+ [Пример свойств NumericScale и Precision (Visual c++)](./numericscale-and-precision-properties-example-vc.md)   
+ [Свойство Precision (ADO)](./precision-property-ado.md)

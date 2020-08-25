@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 911aa1dd-2786-4f34-992c-bb2fbdabcbdf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ba0b69a87f11104888edcfb588d2633414b5a5ff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1e8f38ce47d2b5a48511a2dfe5a8650fc56c7be6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443176"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774263"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript"></a>Пример методов MoveFirst, MoveLast, MoveNext и MovePrevious (VBScript)
-В этом примере используются методы [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)и [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) для перемещения указателя записи [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) на основе указанной команды.  
+В этом примере используются методы [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)и [MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) для перемещения указателя записи [набора записей](./recordset-object-ado.md) на основе указанной команды.  
   
  Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **мовефирствбс. ASP**. Результат можно просмотреть в любом браузере.  
   
@@ -184,6 +184,6 @@ ms.locfileid: "88443176"
 <!-- EndMoveFirstVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Методы MoveFirst, MoveLast, MoveNext и MovePrevious (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
- [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+## <a name="see-also"></a>См. также  
+ [Методы MoveFirst, MoveLast, MoveNext и MovePrevious (ADO)](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
+ [Объект Recordset (ADO)](./recordset-object-ado.md)

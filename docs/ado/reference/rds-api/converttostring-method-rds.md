@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: b3f36bc8-6f69-49b0-83cd-2ccd3afebfbe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 58bfb25264c15f051bfd7144bdcaf01bbd1eda05
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8b3bf5e24fdb3ef05795d4ebd66a65baea984a42
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439196"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768663"
 ---
 # <a name="converttostring-method-rds"></a>Метод ConvertToString (служба удаленных рабочих столов)
-Преобразует [набор записей](../../../ado/reference/ado-api/recordset-object-ado.md) в строку MIME, представляющую данные набора записей.  
+Преобразует [набор записей](../ado-api/recordset-object-ado.md) в строку MIME, представляющую данные набора записей.  
   
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
@@ -36,7 +36,7 @@ DataFactory.ConvertToString(Recordset)
   
 #### <a name="parameters"></a>Параметры  
  *DataFactory*  
- Объектная переменная, представляющая объект [RDSServer.](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) DataObject.  
+ Объектная переменная, представляющая объект [RDSServer.](./datafactory-object-rdsserver.md) DataObject.  
   
  *набор записей*  
  Объектная переменная, представляющая объект **набора записей** .  
@@ -52,10 +52,8 @@ DataFactory.ConvertToString(Recordset)
 >  Если вы используете Active Server страницы для внедрения полученной строки MIME на клиентской HTML-странице, имейте в виду, что версии VBScript, предшествующие версии 2,0, ограничивают размер строки до 32 000. Если это ограничение превышено, возвращается ошибка. При использовании внедрения MIME с помощью файлов. ASP следует относительно малый масштаб запроса. Чтобы устранить эту проблему, скачайте последнюю версию VBScript с веб-сайта технологий Microsoft Windows Script.  
   
 ## <a name="applies-to"></a>Применение  
- [Объект DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
+ [Объект DataFactory (RDSServer)](./datafactory-object-rdsserver.md)  
   
-## <a name="see-also"></a>См. также:  
- [Пример метода ConvertToString (Visual Basic)](../../../ado/reference/ado-api/converttostring-method-example-vb.md)   
- [Пример метода ConvertToString (VBScript)](../../../ado/reference/rds-api/converttostring-method-example-vbscript.md)
-
-
+## <a name="see-also"></a>См. также  
+ [Пример метода ConvertToString (Visual Basic)](../ado-api/converttostring-method-example-vb.md)   
+ [Пример метода ConvertToString (VBScript)](./converttostring-method-example-vbscript.md)
