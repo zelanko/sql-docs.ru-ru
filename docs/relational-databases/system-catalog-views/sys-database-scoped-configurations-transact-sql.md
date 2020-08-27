@@ -19,12 +19,12 @@ ms.assetid: 8899310a-3464-4d38-9f2f-88396c4e7dc2
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||= azure-sqldw-latest
-ms.openlocfilehash: 6edd7864c127ea068e3017c7aa26ad5be86a4c8a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 85b57b65e79dbe72c039f694f0fd3977847230b7
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88323250"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88900975"
 ---
 # <a name="sysdatabase_scoped_configurations-transact-sql"></a>sys. database_scoped_configurations (Transact-SQL)
 
@@ -39,7 +39,6 @@ ms.locfileid: "88323250"
 |**value**|**SQLVARIANT**|Значение, заданное для параметра конфигурации первичной реплики.|
 |**value_for_secondary**|**SQLVARIANT**|Значение, заданное для параметра конфигурации вторичных реплик.|
 |**is_value_default**|**bit** |Указывает, является ли набор значений значением по умолчанию.|
-|**dw_compatibility_level**|**int**|Уровень совместимости (Предварительная версия) базы данных.  Значение по умолчанию — 0 (авто)|
 
 ## <a name="permissions"></a><a name="Permissions"></a> Permissions
 
@@ -51,6 +50,6 @@ ms.locfileid: "88323250"
  
 Параметры конфигурации уровня базы данных будут перенесены вместе с базой данных. Это означает, что при восстановлении или прикреплении заданной базы данных существующие параметры конфигурации будут сохранены.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)
