@@ -3,7 +3,7 @@ description: Метод GetPermissions (ADOX)
 title: Метод PermissionSet (ADOX) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: df201c1f-c76a-465d-98f0-83b7fc36e6e3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d9533ca5260a8e5dc900a28d883f66994d7a9669
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 31d2bd1d17f790a29674b99ee24a668876e53492
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770463"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984425"
 ---
 # <a name="getpermissions-method-adox"></a>Метод GetPermissions (ADOX)
 Возвращает разрешения для [группы](./group-object-adox.md) или [пользователя](./user-object-adox.md) в контейнере объекта или объекта.  
@@ -40,7 +40,7 @@ ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])
  Возвращает значение **типа Long** , указывающее битовую маску, содержащую разрешения, которые группа или пользователь имеет на объекте. Это значение может быть одной или несколькими константами [ригхтсенум](./rightsenum.md) .  
   
 #### <a name="parameters"></a>Параметры  
- *Имя*  
+ *имя*;  
  Значение **типа Variant** , указывающее имя объекта, для которого задаются разрешения. Задайте для *Name* значение null, если требуется получить разрешения для контейнера объектов.  
   
  *ObjectType*  

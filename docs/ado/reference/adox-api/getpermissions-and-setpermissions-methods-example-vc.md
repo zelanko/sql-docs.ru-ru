@@ -3,7 +3,7 @@ description: Примеры методов GetPermissions и SetPermissions (Vis
 title: Примеры методов SetPermissions и Methods (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8c75d547-d3d7-44c4-b7de-eead5d11b92e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9e8d5d9ee99bc1c055846d8f8882ed15907ee3f9
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a6aa56ac29a2360098284de57831638f04bcb47e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770473"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984445"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vc"></a>Примеры методов GetPermissions и SetPermissions (Visual C++)
 В этом примере демонстрируются методы [SetPermissions](./setpermissions-method-adox.md) и [PermissionSet](./getpermissions-method-adox.md) . Следующий код предоставляет пользователю с правами администратора полный доступ к таблице Orders.  

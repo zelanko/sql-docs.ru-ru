@@ -3,7 +3,7 @@ description: Примеры свойств примеры AbsolutePosition и Cu
 title: Примеры свойств примеры AbsolutePosition и CursorLocation (JScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bff98617-a6ba-4f41-9c5f-915161e3ea31
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1fcad0360e9ae15263860c45b9f9c4a96c4d36bc
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 058a6046d7ac4010413bb4d124dd92ff9af902df
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759984"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977235"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-jscript"></a>Примеры свойств примеры AbsolutePosition и CursorLocation (JScript)
 В этом примере показано, как свойство [примеры AbsolutePosition](./absoluteposition-property-ado.md) может отслеживать ход выполнения цикла, который перечисляет все записи [набора записей](./recordset-object-ado.md). Свойство [CursorLocation](./cursorlocation-property-ado.md) используется для включения свойства **примеры AbsolutePosition** путем установки курсора на клиентский курсор. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **абсолутепоситионжс. ASP**.  

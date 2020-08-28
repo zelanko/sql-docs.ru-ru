@@ -3,7 +3,7 @@ description: Примеры свойств PrimaryKey и Unique (Visual Basic)
 title: Пример PrimaryKey и уникальных свойств (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f536acac-06ea-4b39-bfba-ee9902b01615
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aa548ea37ffe3c91e8d36febac9f90cf9498d258
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: d857dfca2b690b06f43b9be50520b4530645128f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769753"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983675"
 ---
 # <a name="primarykey-and-unique-properties-example-vb"></a>Примеры свойств PrimaryKey и Unique (Visual Basic)
 В этом примере демонстрируются свойства [PrimaryKey](./primarykey-property-adox.md) и [UNIQUE](./unique-property-adox.md) [индекса](./index-object-adox.md). Код создает новую таблицу с двумя столбцами. Свойства **PrimaryKey** и **UNIQUE** используются, чтобы сделать один столбец первичным ключом, для которого повторяющиеся значения не допускаются.  

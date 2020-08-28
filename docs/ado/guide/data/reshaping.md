@@ -3,7 +3,7 @@ description: Изменение формы данных
 title: Изменение формы | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b1c965b7-3dad-4de6-9e0e-502ca8785be3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9b0173b04e64365d1dad08ecc5f8d26880d05504
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 04c43b9fcca56959aec242f344da6ec81a825030
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452936"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979775"
 ---
 # <a name="reshaping"></a>Изменение формы данных
 **Набору записей** , созданному предложением команды Shape, может быть присвоено имя *псевдонима* (обычно с ключевым словом AS). Псевдоним **набора записей** в форме может быть указан в совершенно другой команде. Это значит, что можно повторно использовать или *перерисовать*ранее сформированный **набор записей** в новой команде Shape. Для поддержки этой функции ADO предоставляет свойство, а также [изменение имени формы](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md).  

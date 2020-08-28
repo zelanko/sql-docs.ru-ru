@@ -3,7 +3,7 @@ description: Пример кода JScript, возвращающего набо�
 title: Пример кода JScript для возврата набора записей | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 74aad8a6-06cc-4a2c-811a-d78f9b741d84
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e6aea6b2e423dab4fb58b3e683081f7d3fdb6850
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 32c9c97d8baaff41d209a939fdca5d3e5d7a5435
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453206"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980415"
 ---
 # <a name="jscript-code-example-to-return-a-recordset"></a>Пример кода JScript, возвращающего набор записей
 ## <a name="jscript-code-rsjs"></a>Код JScript (rs.js)  

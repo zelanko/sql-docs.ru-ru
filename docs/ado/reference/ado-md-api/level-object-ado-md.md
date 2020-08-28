@@ -3,7 +3,7 @@ description: Объект Level (многомерные объекты ADO)
 title: Объект Level (объекты данных ActiveX (MD)) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3b77a0fad1b2ebe0f03855d9ff6c0ff689599774
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 34dc7bc7eb6d80b3ec50cb1838cda0d0e419053b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778053"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986515"
 ---
 # <a name="level-object-ado-md"></a>Объект Level (многомерные объекты ADO)
 Содержит набор элементов, каждый из которых имеет одинаковый ранг в иерархии.  
@@ -43,11 +43,11 @@ ms.locfileid: "88778053"
   
  Коллекция **Properties** содержит свойства, предоставляемые поставщиком. В следующей таблице перечислены свойства, которые могут быть доступны. Фактический список свойств может отличаться в зависимости от реализации поставщика. Более полный список доступных свойств см. в документации поставщика.  
   
-|Название|Описание:|  
+|Имя|Описание|  
 |----------|-----------------|  
 |CatalogName|Имя каталога, которому принадлежит куб.|  
 |CubeName|Имя куба.|  
-|Описание:|Понятное описание уровня.|  
+|Описание|Понятное описание уровня.|  
 |дименсионуникуенаме|Однозначное имя [измерения](./dimension-object-ado-md.md).|  
 |хиерарчюникуенаме|Однозначное имя иерархии.|  
 |левелкаптион|Метка или заголовок, связанный с уровнем.|  

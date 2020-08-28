@@ -3,7 +3,7 @@ description: Сохранение иерархических наборов за
 title: Сохранение иерархических наборов записей | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 43798bb5-98a6-4ad6-9bf8-78154b3a1827
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4bfcb79e532609ad9b3eeb14fb07dec4fd1239f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9fef0aad67d6d6cd68f50cc8940e2ddf3c53a206
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453056"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980075"
 ---
 # <a name="persisting-hierarchical-recordsets"></a>Сохранение иерархических наборов записей
 Можно сохранить иерархический **набор записей** в файл в формате АДТГ или XML, вызвав метод [Save](../../../ado/reference/ado-api/save-method.md) . Однако при сохранении иерархических **наборов записей**в формате XML применяются два ограничения: невозможно сохранить в XML, если иерархический **набор** записей содержит ожидающие обновления, и нельзя сохранить параметризованный иерархический **набор записей**.  

@@ -1,7 +1,7 @@
 ---
 description: Объекты службы удаленных рабочих столов
 title: Объекты RDS | Документация Майкрософт
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f2ac8b3b-f968-41c4-a504-7aee3538b7c7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 51f325977e068e89e540a798f9bccdfa2c784f8e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: d87feb91df3d01cc7921a027f4fe492b1b493401
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767733"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981615"
 ---
 # <a name="rds-objects"></a>Объекты службы удаленных рабочих столов
 > [!IMPORTANT]

@@ -3,7 +3,7 @@ description: Пример метода Create (Visual C++)
 title: Пример метода Create (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 57fcb0eb-5d40-4ad4-996d-380732de8a3d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 46aaf66f2a715f716162ddab3f1952117fa27694
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 191d5634da4e59b03ee472bf39902a894a61f73f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770793"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984825"
 ---
 # <a name="create-method-example-vc"></a>Пример метода Create (Visual C++)
 В следующем коде показано, как создать новую базу данных Microsoft Jet с помощью метода [CREATE](./create-method-adox.md) .  

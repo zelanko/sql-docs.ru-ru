@@ -3,7 +3,7 @@ description: Пример свойства Value (Visual Basic)
 title: Пример свойства Value (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2d4fe651-ef09-461b-8884-a70b6af4362e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8c388b12b70213afb297508ccac91315d828c9d4
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: f9b3cfe95322801c35f36623b0323ed38b47fcdc
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776943"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987975"
 ---
 # <a name="value-property-example-vb"></a>Пример свойства Value (Visual Basic)
 В этом примере демонстрируется свойство [value](./value-property-ado.md) с объектами [полей](./field-object.md) и [свойств](./property-object-ado.md) путем отображения значений полей и свойств для таблицы ***Employees*** .  

@@ -3,7 +3,7 @@ description: RecordCreateOptionsEnum
 title: Рекордкреатеоптионсенум | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 6d746670-0850-4065-9cd4-168dea1d3ea9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2fba315867e49935557d7bd6b3abe04c942e5a0a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 4393196078b7800e1f1ec324c612918d7b8380e9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772453"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989825"
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
 Указывает, следует ли открыть существующую **запись** или создать новую **запись** для метода [открытия](./open-method-ado-record.md) объекта [записи](./record-object-ado.md) . Значения можно сочетать с оператором AND.  
   
-|Константа|Значение|Описание:|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**adCreateCollection**|0x2000|Создает новую **запись** в узле, указанном параметром *Source* , вместо того, чтобы открывать существующую **запись**. Если источник указывает на существующий узел, возникает ошибка времени выполнения, если **адкреатеколлектион** не объединен с **адопенифексистс** или **адкреатеоверврите**.|  
 |**adCreateNonCollection**|0|Создает новую **запись** типа [адсимплерекорд](./recordtypeenum.md).|  

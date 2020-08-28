@@ -3,7 +3,7 @@ description: Примеры свойств ActualSize и DefinedSize (Visual Bas
 title: Примеры свойств ActualSize и DefinedSize (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bff2c273-b535-4b32-83b3-0336a406859c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2455c3abc11498810722c1ab268e222f737a8650
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 67fd214c594a808955e54edbb9ccb4e7d424e836
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760311"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976935"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vb"></a>Примеры свойств ActualSize и DefinedSize (Visual Basic)
 В этом примере используются свойства [ActualSize](./actualsize-property-ado.md) и [DefinedSize](./definedsize-property.md) для вывода определенного размера и фактического размера поля.  
