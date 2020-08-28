@@ -3,7 +3,7 @@ description: Методы MoveFirst, MoveLast, MoveNext и MovePrevious (ADO)
 title: Методы MoveFirst, MoveLast, MoveNext и MovePrevious (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: a61a01a7-5b33-4150-9126-21dfa63654cb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ed06cde45393f347ed5a001ca7da7f7adde375c3
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: dd050c775c706b3cafe2586eed05d93f9079fe27
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774293"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990555"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-ado"></a>Методы MoveFirst, MoveLast, MoveNext и MovePrevious (ADO)
 Переходит к первой, последней, следующей или предыдущей записи в указанном объекте [набора записей](./recordset-object-ado.md) и делает запись текущей записью.  

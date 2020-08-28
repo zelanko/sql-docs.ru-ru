@@ -3,7 +3,7 @@ description: Примеры методов Open и Close (VBScript)
 title: Пример методов Open и Close (VBScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 66eca011-e258-4d8f-bd67-e017bcf0871b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3847fb3f9beaba4abe7820dae16cd57eba1cedd3
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c126e00d424e01bfa25fd74356678245ca1eac8b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773833"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990365"
 ---
 # <a name="open-and-close-methods-example-vbscript"></a>Примеры методов Open и Close (VBScript)
 В этом примере используются методы [Open](./open-method-ado-recordset.md) и [Close](./close-method-ado.md) как для [набора записей](./recordset-object-ado.md) , так и для объектов [соединения](./connection-object-ado.md) , которые были открыты.  

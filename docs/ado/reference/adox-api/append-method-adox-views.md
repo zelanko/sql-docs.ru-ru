@@ -3,7 +3,7 @@ description: Метод Append (коллекция Views ADOX)
 title: Метод Append (представления ADOX) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 74432aa3bb610b1cd5688e1f52c7d7ea81166f75
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 77682d479d65c7ccc0dd01fd1fd86627a580d8c5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771363"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985395"
 ---
 # <a name="append-method-adox-views"></a>Метод Append (коллекция Views ADOX)
 Создает новый объект [представления](./view-object-adox.md) и добавляет его в коллекцию [представлений](./views-collection-adox.md) .  
@@ -35,7 +35,7 @@ Views.Append Name, Command
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Имя*  
+ *имя*;  
  **Строковое** значение, указывающее имя создаваемого представления.  
   
  *Команда*  

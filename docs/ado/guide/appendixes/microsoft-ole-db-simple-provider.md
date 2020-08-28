@@ -3,7 +3,7 @@ description: Обзор простого поставщика Microsoft OLE DB
 title: Простой поставщик Microsoft OLE DB | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 81d60f33e0e9e055e086d990a681efb74cc943cc
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 4eb4635aafa67d2b6c96f88580811c204ff73423
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806524"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990985"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Обзор простого поставщика Microsoft OLE DB
 Microsoft OLE DB Simple Provider (ОБЕЩАНие) позволяет ADO получать доступ к любым данным, для которых поставщик был написан с помощью [набора средств OLE DB простого поставщика (обещание)](/previous-versions/windows/desktop/ms715822(v=vs.85)). Простые поставщики предназначены для доступа к источникам данных, которым требуется только фундаментальная OLE DBная поддержка, например массивы в памяти или XML-документы.

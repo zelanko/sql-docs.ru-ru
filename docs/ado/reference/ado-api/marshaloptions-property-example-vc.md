@@ -3,7 +3,7 @@ description: Пример свойства MarshalOptions (Visual C++)
 title: Пример свойства MarshalOptions (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a3b6fc09-ce21-450d-9063-bac505208d31
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4e29b5d53b46248ba9ba4017692f51f2c01cbc8b
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: be0ff00fa2f4afd5e003ce37d45b3631512812e1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774473"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990655"
 ---
 # <a name="marshaloptions-property-example-vc"></a>Пример свойства MarshalOptions (Visual C++)
 В этом примере свойство [MarshalOptions](./marshaloptions-property-ado.md) используется для указания того, какие строки отправляются обратно на сервер — все строки или только измененные строки.  

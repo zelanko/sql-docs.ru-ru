@@ -3,7 +3,7 @@ description: Пример свойства Item (Visual C++)
 title: Пример свойства Item (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 05ae3f5a-a0c1-459d-aa7d-ed7f3b2ecd60
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dee5bda39c96dbfe70818a6b0e0aa4eb4f6ee6b7
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 4359302bbd32d110ce55d073f155b74438586563
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774643"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990735"
 ---
 # <a name="item-property-example-vc"></a>Пример свойства Item (Visual C++)
 В этом примере показано, как свойство [Item](./item-property-ado.md) получает доступ к членам коллекции. В примере открывается таблица ***authors*** базы данных ***pubs*** с параметризованной командой.  

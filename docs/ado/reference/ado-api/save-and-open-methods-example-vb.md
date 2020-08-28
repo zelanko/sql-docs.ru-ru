@@ -3,7 +3,7 @@ description: Примеры методов Save и Open (Visual Basic)
 title: Пример методов Save и Open (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 34ad6214f36061ed12577f7ba843a69fc13b7d8a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 14668aba6cbc6817b951820bbdee4d5c69a51bc5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777603"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989365"
 ---
 # <a name="save-and-open-methods-example-vb"></a>Примеры методов Save и Open (Visual Basic)
 В этих трех примерах показано, как можно совместно использовать методы [Save](./save-method.md) и [Open](./open-method-ado-recordset.md) .  

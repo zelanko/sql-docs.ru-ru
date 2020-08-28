@@ -6,7 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.topic: conceptual
 helpviewer_keywords:
 - tasks [ADO]
@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 2fad33fb-c858-4dcb-98dc-3dfd0e555055
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 29aaeac82cc4853e0cd89d0179c988db9748e44e
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 59cb4cceb81861460fbcf7f079801b08319c76d9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805424"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991205"
 ---
 # <a name="ado-programming-task-table"></a>Таблица задач программирования ADO
 В следующей таблице перечислены задачи программирования, содержащиеся в документации *программиста* по программированию ADO, и приведены ссылки на каждую задачу. Эти ссылки могут быть текстовыми описаниями или примерами кода, в которых можно найти сведения о функции ADO, которая выполняет эту задачу.
 
-|Задача «ADO»|Ссылки|
+|Задача «ADO»|Ссылки (на английском языке)|
 |--------------|----------------|
 |Подключение к поставщику данных|[Подключение к источникам данных](./data/connecting-to-data-sources.md)|
 |Исполнение команд или вызов хранимых процедур|[Подготовка и выполнение команд](./data/preparing-and-executing-commands.md)|

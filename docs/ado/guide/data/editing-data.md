@@ -3,7 +3,7 @@ description: Изменение данных
 title: Изменение данных | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ef514f85-c446-4f05-824e-c9313b2ffae1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 01f5f2010491e394addd37511ead8b7ea20136c1
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: b39e62f1d7fc55c2d58b382677efa41e4df784a3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806873"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991345"
 ---
 # <a name="editing-data"></a>Изменение данных
 Мы объяснили, как использовать ADO для подключения к источнику данных, выполнять команду, получать результаты в объекте **набора записей** и перемещаться по **набору записей**. В этом разделе рассматриваются следующие фундаментальные операции ADO: Редактирование данных.  

@@ -3,7 +3,7 @@ description: Свойства ADOX
 title: Свойства ADOX | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aae7fdebfa01972709cd8e84c9e92a59f24acff1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 71c53b9a1f57e5c207500d25f1ab3eb0fec16ad8
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771633"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985595"
 ---
 # <a name="adox-properties"></a>Свойства ADOX
 
-|Свойство.|Описание:|  
+|Свойство|Описание|  
 |-|-|  
 |[ActiveConnection](./activeconnection-property-adox.md)|Указывает объект **соединения** ADO, к которому принадлежит каталог.|  
 |[Атрибуты](./attributes-property-adox.md)|Описывает характеристики столбцов.|  
@@ -36,7 +36,7 @@ ms.locfileid: "88771633"
 |[DeleteRule](./deleterule-property-adox.md)|Указывает действие, выполняемое при удалении первичного ключа.|  
 |[IndexNulls](./indexnulls-property-adox.md)|Указывает, имеют ли записи индекса элементы, имеющие значения NULL в полях индекса.|  
 |[Item](../ado-api/item-property-ado.md)|Указывает конкретный элемент коллекции по имени или порядковому номеру.|  
-|[Имя](./name-property-adox.md)|Указывает имя объекта.|  
+|[имя](./name-property-adox.md);|Указывает имя объекта.|  
 |[NumericScale](./numericscale-property-adox.md)|Указывает Масштаб числового значения в столбце.|  
 |[ParentCatalog](./parentcatalog-property-adox.md)|Указывает родительский каталог таблицы или столбца, чтобы предоставить доступ к свойствам, зависящим от поставщика.|  
 |[Точность](./precision-property-adox.md)|Указывает максимальную точность значений данных в столбце.|  
