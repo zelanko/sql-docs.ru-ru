@@ -3,7 +3,7 @@ description: Метод GetChunk (ADO)
 title: Методического фрагмента данных (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fc268e22-205b-44a3-9038-ffed51e23e10
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dcf021282d4fce049cd89a154c2d00186b3cbee1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 196f41f7828be16c7c38b281edb85774569580a1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775083"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88972915"
 ---
 # <a name="getchunk-method-ado"></a>Метод GetChunk (ADO)
 Возвращает все или часть содержимого большого текстового или двоичного объекта [поля](./field-object.md) данных.  

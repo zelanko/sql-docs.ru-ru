@@ -3,7 +3,7 @@ description: Пример набора записей для проверки д
 title: Пример набора записей для проверки данных | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e770e626-68b1-4ddf-a217-d7b30311e2ee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f4c989667d5b4a5ceb3fb0c4f4d929e49be92e00
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ec44c25bba9c792415c462e3028bbf20d8d3f84e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452916"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979745"
 ---
 # <a name="sample-recordset-for-examining-data"></a>Пример набора записей для проверки данных
 Сначала рассмотрим объект **Recordset** , возвращенный с помощью следующего запроса SQL, выполненного для базы данных "Northwind Sample Data" в Microsoft SQL Server.  
@@ -32,7 +32,7 @@ WHERE CategoryID = 7
   
  Результирующий объект **набора записей** содержит все объекты, которые создает в базе данных, показанной в следующей таблице.  
   
-|ProductID|ProductName|UnitPrice|  
+|ProductID|ProductName|Цена за единицу|  
 |---------------|-----------------|---------------|  
 |7|Дядюшканые груши Высохнутьы Боба|30,0000|  
 |14|тофу|23,2500|  

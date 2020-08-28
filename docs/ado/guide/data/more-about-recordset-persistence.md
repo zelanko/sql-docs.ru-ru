@@ -3,7 +3,7 @@ description: Дополнительные сведения о сохраняем
 title: Дополнительные сведения о сохраняемости наборов записей | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dbdc0b724d96cf541eedb7e26f8b652a280e829a
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 1dca646b07c441a4fccd617723aba98536f1a7e1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805837"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980335"
 ---
 # <a name="more-about-recordset-persistence"></a>Дополнительные сведения о сохраняемости набора записей
 Объект ADO Recordset поддерживает хранение содержимого объекта **набора записей** в файле с помощью метода [Save](../../reference/ado-api/save-method.md) . Сохраняемый файл может находиться на локальном диске, сервере или в качестве URL-адреса на веб – сайте. Позднее файл можно восстановить с помощью метода [Open](../../reference/ado-api/open-method-ado-recordset.md) объекта **Recordset** или метода [EXECUTE](../../reference/ado-api/execute-method-ado-connection.md) объекта [Connection](../../reference/ado-api/connection-object-ado.md) .  

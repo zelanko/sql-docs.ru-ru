@@ -3,7 +3,7 @@ description: Пример свойства Source (Visual C++)
 title: Пример свойства Source (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e10d33da-ea30-4138-ae40-e9f6aa9d17d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 28aca75b9bf0abba7a87a035ebcf565edb0b5fa5
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 7b582582fa3acc91921aeee41a465915979a6c7d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777383"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988895"
 ---
 # <a name="source-property-example-vc"></a>Пример свойства Source (Visual C++)
 В этом примере показано свойство [Source](./source-property-ado-recordset.md) , открывающее три объекта [набора записей](./recordset-object-ado.md) на основе различных источников данных.  

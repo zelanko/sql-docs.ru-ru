@@ -3,7 +3,7 @@ description: Using CacheSize
 title: Использование CacheSize | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ca1c3422-b6a4-4ba6-af55-54f975b698b1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5514f7b3a08d212e435a40341fc32033ec226c78
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 97f6dba7bf01b3236d6b8b00e6338185cf6a8d41
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452586"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979005"
 ---
 # <a name="using-cachesize"></a>Using CacheSize
 Свойство **CacheSize** используется для управления количеством записей, получаемых за один раз в локальную память от поставщика. Например, если **CacheSize** имеет значение 10, после первого открытия объекта **Recordset** поставщик получает первые 10 записей в локальную память. При перемещении по объекту **Recordset** поставщик возвращает данные из буфера локальной памяти. Как только вы перейдете за последнюю запись в кэше, поставщик извлекает следующие 10 записей из источника данных в кэш.  

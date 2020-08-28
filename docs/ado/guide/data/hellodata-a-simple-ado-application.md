@@ -3,7 +3,7 @@ description: 'HelloData: простое приложение ADO'
 title: 'HelloData: простое приложение ADO | Документация Майкрософт'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9d8f8dac5e6a38e1a394c4646849ddd6a5021131
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: bec2b55f7daee865489c3f32e1ee70e53b9102a6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806025"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980635"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: простое приложение ADO
 Это простое приложение проходит через каждую из четырех основных операций ADO: получение, изучение, изменение и обновление данных. Эти операции выполняются с примером базы данных Northwind, входящей в состав SQL Server Microsoft®. Чтобы сосредоточиться на основных принципах работы с ADO и избежать загромождения кода, обработка ошибок в примере минимальна.  
@@ -43,14 +43,14 @@ ms.locfileid: "88806025"
   
  ![Форма Form1 для приложения HelloData VB](../../../ado/guide/data/media/hellodata.gif "HelloData")  
   
-|Тип элемента управления|Свойство.|Значение|  
+|Тип элемента управления|Свойство|Значение|  
 |------------------|--------------|-----------|  
 |Form|Имя|Form1|  
 ||Высота|6500|  
 ||Ширина|6500|  
 |Microsoft DataGrid|Имя|grdDisplay1|  
 |TextBox|Имя|txtDisplay1|  
-||Multiline|true|  
+||Multiline|Да|  
 |Кнопка команды|Имя|кмджетдата|  
 ||Caption|Получение данных|  
 |Кнопка команды|Имя|кмдексаминедата|  

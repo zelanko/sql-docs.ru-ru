@@ -3,7 +3,7 @@ description: Извлечение результирующих наборов в
 title: Извлечение результирующих наборов в потоки | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/20/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 53dcb66eb2abb311b1114928a8696c6502454770
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 13aeddcf9a826cff5caa33172f785f2e42747a3f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452926"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979755"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>Извлечение результирующих наборов в потоки
 Вместо того чтобы получать результаты в традиционном объекте **Recordset** , ADO может получить результаты запроса в потоке. Объект **потока** ADO (или другие объекты, поддерживающие интерфейс **IStream** com, например объекты **запросов** и **ответов** ASP) можно использовать для хранения этих результатов. Одним из способов использования этой функции является получение результатов в формате XML. С SQL Server, например, результаты XML могут возвращаться несколькими способами, например с помощью предложения FOR XML с запросом SQL SELECT или с помощью запроса XPath.  
@@ -179,5 +179,5 @@ adoCmd.Execute , , adExecuteStream
 Response.write "</XML>"  
 ```  
   
-### <a name="remarks"></a>Комментарии  
+### <a name="remarks"></a>Remarks  
  На этом этапе XML передается в браузер клиента и готов к отображению. Это делается с помощью сценария VBScript на стороне клиента для привязки XML-документа к экземпляру модели DOM и циклической обработки каждого дочернего узла для создания списка продуктов в формате HTML.

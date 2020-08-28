@@ -3,7 +3,7 @@ description: Примеры свойств NumericScale и Precision (Visual C++
 title: Пример свойств NumericScale и Precision (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/20/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55d91ba8-4d80-4df6-af8e-060a19ddc138
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8927b2c74b72020485719b9d52e391919e39794c
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: fbca744c17ffd3dfa9b84b679e9efeaf0d27ad9a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773983"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990395"
 ---
 # <a name="numericscale-and-precision-properties-example-vc"></a>Примеры свойств NumericScale и Precision (Visual C++)
 В этом примере используются свойства [NumericScale](./numericscale-property-ado.md) и [Precision](./precision-property-ado.md) для просмотра числа и точности полей в таблице ***скидок*** базы данных ***pubs*** .  

@@ -3,7 +3,7 @@ description: Сохранение данных
 title: Сохранение данных | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a1487cdbba81677cd58e3f130f5d05a8b9337588
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 86789dbce8ab86035f815f36f8eff369b55401a3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453086"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980105"
 ---
 # <a name="persisting-data"></a>Сохранение данных
 Переносные вычисления (например, использование ноутбуков) создавали потребность в приложениях, которые могут работать как в подключенном, так и в отключенном состоянии. В ADO добавлена поддержка, позволяющая разработчику сохранить **набор записей** клиентского курсора на диск и перезагрузить его позже.  
@@ -113,7 +113,7 @@ Destination, PersistFormat
 'EndPersist  
 ```  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Этот раздел содержит следующие подразделы.  
   
 -   [Дополнительные сведения о сохраняемости набора записей](../../../ado/guide/data/more-about-recordset-persistence.md)  

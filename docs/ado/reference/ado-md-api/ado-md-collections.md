@@ -3,7 +3,7 @@ description: Коллекции многомерных объектов ADO
 title: Коллекции объекты данных ActiveX (MD) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 01c53429-ccc9-4077-b738-d3c1f43bd76c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e4fe16d164855230ea0d3d9ce49fc103d17a1d6e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: cdd41be1cf7ed4d412978d387270242874b56d7f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776774"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987575"
 ---
 # <a name="ado-md-collections"></a>Коллекции многомерных объектов ADO
 
-|Коллекция|Описание:|  
+|Коллекция|Описание|  
 |-|-|  
 |[Оси](./axes-collection-ado-md.md)|Содержит объекты **осей** , определяющие набор ячеек.|  
 |[кубедефс](./cubedef-object-ado-md.md)|Содержит объекты **CubeDef** , представляющие куб из многомерного каталога.|  
