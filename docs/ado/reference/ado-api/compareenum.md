@@ -3,7 +3,7 @@ description: CompareEnum
 title: Компаринум | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: bc8f710d-0621-4673-8d8e-0361e44abed0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1caf78c0f15ef2e0a3f4ad6fe73ec44684c0e4ef
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a5a983f1808d71404279c5332aedfcfb1f1501d5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776023"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975025"
 ---
 # <a name="compareenum"></a>CompareEnum
 Задает относительное расположение двух записей, представленных их закладками.  
   
-|Константа|Значение|Описание:|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**adCompareEqual**|1|Указывает, что закладки равны.|  
 |**adCompareGreaterThan**|2|Указывает, что первая закладка находится после второй.|  

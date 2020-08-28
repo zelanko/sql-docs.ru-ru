@@ -1,7 +1,7 @@
 ---
 description: Свойство ReadyState (служба удаленных рабочих столов)
 title: Свойство ReadyState (RDS) | Документация Майкрософт
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9915f76e336f7c8814428440460d1b0bfd7b9288
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 5a7e27abfa2464f84e130d789db93a3d7606df21
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767663"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981485"
 ---
 # <a name="readystate-property-rds"></a>Свойство ReadyState (служба удаленных рабочих столов)
 Указывает ход выполнения объекта " [элемент управления](./datacontrol-object-rds.md) данными" при извлечении данных в объект [набора записей](../ado-api/recordset-object-ado.md) .  
@@ -30,7 +30,7 @@ ms.locfileid: "88767663"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает одно из следующих значений.  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**адкреадистателоадед**|Текущий запрос все еще выполняется и строки не выбраны. **Набор записей** объекта " **элемент управления** " недоступен для использования.|  
 |**адкреадистатеинтерактиве**|Начальный набор строк, полученных текущим запросом, был сохранен в **наборе записей** объекта " **элемент управления** " и доступен для использования. Оставшиеся строки по-прежнему будут выбраны.|  

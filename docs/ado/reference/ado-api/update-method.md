@@ -3,7 +3,7 @@ description: Метод Update
 title: Метод Update | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 819e6ebaa3932f19a693cb3d50651f7c451200e6
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bb673de86d48143a8869460eeab3377f3c0ec0d2
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777003"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988105"
 ---
 # <a name="update-method"></a>Метод Update
 Сохраняет любые изменения, внесенные в текущую строку объекта [набора записей](./recordset-object-ado.md) , или коллекцию [Fields](./fields-collection-ado.md) объекта [Record](./record-object-ado.md) .  

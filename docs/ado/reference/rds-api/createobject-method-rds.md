@@ -3,7 +3,7 @@ description: Метод CreateObject (служба удаленных рабоч
 title: Метод CreateObject (RDS) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0fbc77fd5107e5642ba4fabe2f331c803ffde392
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0fd3e6c7ad67b058920963c7e2dc92f60a2a84d6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768643"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982615"
 ---
 # <a name="createobject-method-rds"></a>Метод CreateObject (служба удаленных рабочих столов)
 Создает прокси-сервер для целевого бизнес-объекта и возвращает указатель на него. Прокси-пакеты и маршалирует данные в заглушку на стороне сервера для взаимодействия с бизнес-объектом для отправки запросов и данных через Интернет. Для объектов внутрипроцессного компонента прокси-серверы не используются, предоставляется только указатель на объект.  

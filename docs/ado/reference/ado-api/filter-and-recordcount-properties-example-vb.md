@@ -3,7 +3,7 @@ description: Примеры свойств Filter и RecordCount (Visual Basic)
 title: Пример свойств Filter и RecordCount (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3bf78308afe6a48a071daa8a68a0a3cfaecd907c
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 7cee9fa6460366dd727c2eb1c6ce26c43286ea51
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775303"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973045"
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>Примеры свойств Filter и RecordCount (Visual Basic)
 Этот пример открывает [набор записей](./recordset-object-ado.md) в таблице Publishers базы данных ***pubs*** . Затем используется свойство [Filter](./filter-property.md) , чтобы ограничить количество видимых записей для издателей в определенной стране или регионе. Свойство **RecordCount** используется для отображения разницы между отфильтрованными и неотфильтрованными наборами записей.  

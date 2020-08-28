@@ -3,7 +3,7 @@ description: Примеры методов примеры BeginTrans, CommitTran
 title: Примеры методов примеры BeginTrans, CommitTrans и RollbackTrans (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: aa7de324-cd71-4bd0-8043-24229f4a785e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9579e5314bb298eed65145548d848e31bf47c1b9
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ac6978aba505110066229bc13f359e9215a25611
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776433"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975925"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vb"></a>Примеры методов примеры BeginTrans, CommitTrans и RollbackTrans (Visual Basic)
 В этом примере изменяется тип книги всех книг психологии в таблице ***titles*** базы данных. После того как метод [примеры BeginTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) запускает транзакцию, которая изолирует все изменения, внесенные в таблицу ***titles*** , метод [CommitTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) сохраняет изменения. Для отмены изменений, сохраненных с помощью метода [Update](./update-method.md) , можно использовать метод [RollbackTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) .  

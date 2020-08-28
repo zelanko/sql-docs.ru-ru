@@ -3,7 +3,7 @@ description: События Бегинтранскомплете, Коммитт
 title: Примеры BeginTrans, CommitTrans, события RollbackTrans (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: ec4e4b38-e9c6-4757-b2ef-4e468ae5f1d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 47f559f839c4dcb6b73b273cd09a0289468f9046
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 91f5d573d62ef5000cdd6ed85a52866a0ee7f544
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776423"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975875"
 ---
 # <a name="begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado"></a>События Бегинтранскомплете, Коммиттранскомплете и Роллбакктранскомплете (ADO)
 Эти события будут вызываться после завершения выполнения связанной операции над объектом [Connection](./connection-object-ado.md) .  

@@ -3,7 +3,7 @@ description: Свойства многомерных объектов ADO
 title: Свойства объекты данных ActiveX (MD) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9f6628f0f172e81a490d0abd6a8cb2ae2a73679e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: e94cb9bbd873c32e17f25c00da719c11c3260162
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776674"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987425"
 ---
 # <a name="ado-md-properties"></a>Свойства многомерных объектов ADO
 
-|Свойство.|Описание:|  
+|Свойство|Описание|  
 |-|-|  
 |[ActiveConnection](./activeconnection-property-ado-md.md)|Указывает объект **подключения** ADO, к которому в настоящий момент принадлежит текущий набор ячеек или каталог.|  
 |[Caption](./caption-property-ado-md.md)|Указывает текст подписи, используемый при отображении объекта **уровня** или **элемента** .|  
@@ -40,7 +40,7 @@ ms.locfileid: "88776674"
 |[FormattedValue](./formattedvalue-property-ado-md.md)|Указывает отформатированное отображение значения ячейки.|  
 |[LevelDepth](./leveldepth-property-ado-md.md)|Указывает количество уровней между корневым элементом иерархии и элементом.|  
 |[LevelName](./levelname-property-ado-md.md)|Указывает имя уровня элемента.|  
-|[Имя](./name-property-ado-md.md)|Указывает имя объекта.|  
+|[имя](./name-property-ado-md.md);|Указывает имя объекта.|  
 |[Ordinal (ячейка)](./ordinal-property-ado-md-cell.md)|Однозначно определяет ячейку по ее положению в наборе ячеек.|  
 |[Ordinal (расположение)](./ordinal-property-ado-md-position.md)|Уникально определяет расположение вдоль оси.|  
 |[Parent](./parent-property-ado-md.md)|Указывает элемент, являющийся родительским по отношению к текущему элементу в иерархии.|  

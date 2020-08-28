@@ -3,7 +3,7 @@ description: AffectEnum
 title: Аффектенум | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 1ab921a0-6c57-43b4-9291-701b2599f3e8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d67a4916328d5d6d435da1b8080be42e52b35f67
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 9673567c17cda79c93fba4e74b104bd0cb42edd7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776653"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976145"
 ---
 # <a name="affectenum"></a>AffectEnum
 Указывает, какие записи затрагиваются операцией.  
   
-|Константа|Значение|Описание:|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**adAffectAll**|3|Если к **набору записей**не применен [Фильтр](./filter-property.md) , затрагивает все записи.<br /><br /> Если для свойства **Filter** задано строковое условие (например, "author = ' Иванов '"), операция затрагивает видимые записи в текущей главе.<br /><br /> Если для свойства **Filter** задан элемент [филтерграупенум](./filtergroupenum.md) или массив закладок, операция повлияет на все строки **набора записей**. **Примечание. адаффекталл** скрывается в обозревателе объектов Visual Basic.|  
 |**адаффекталлчаптерс**|4|Затрагивает все записи во всех соседних главах **набора записей**, включая те, которые не видны через применяемый в данный момент **Фильтр** .|  
