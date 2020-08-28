@@ -3,7 +3,7 @@ description: Поставщик OLE DB для публикации в Интер
 title: Поставщик OLE DB для публикации в Интернете | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d7203dd65a652cfdc71c088777ac9dd42d1da098
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7556d3857142a4762fd411f5175a38c2e4d58cf3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452736"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979365"
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>Поставщик OLE DB для публикации в Интернете
 Объекты [записи](../../../ado/reference/ado-api/record-object-ado.md) и [потока](../../../ado/reference/ado-api/stream-object-ado.md) ADO можно использовать с поставщиком Microsoft OLE DB для публикации в Интернете (поставщик публикации в Интернете) для доступа к ресурсам, таким как веб-папки или файлы, обслуживаемые Microsoft FrontPage, и управления ими. С помощью ADO можно указать источник **записи**, **потока**или [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) в качестве URL-адреса. Затем можно передать, скачать, переместить, скопировать и удалить ресурсы или напрямую управлять свойствами ресурсов.  
@@ -33,19 +33,19 @@ ms.locfileid: "88452736"
   
  Существует три способа подключения ADO к поставщику публикации в Интернете:  
   
--   В строке подключения укажите "URL =". Например:  
+-   В строке подключения укажите "URL =". Пример:  
   
     ```  
     objConn.Open "URL=https://servername"  
     ```  
   
--   Укажите Мсдаипп. DSO для ключевого слова *provider* в строке подключения. Например:  
+-   Укажите Мсдаипп. DSO для ключевого слова *provider* в строке подключения. Пример:  
   
     ```  
     objConn.Open "provider=MSDAIPP.DSO;data source=https://servername"  
     ```  
   
--   Укажите Мсдаипп. DSO для свойства [provider](../../../ado/reference/ado-api/provider-property-ado.md) объекта [Connection](../../../ado/reference/ado-api/connection-object-ado.md) . Например:  
+-   Укажите Мсдаипп. DSO для свойства [provider](../../../ado/reference/ado-api/provider-property-ado.md) объекта [Connection](../../../ado/reference/ado-api/connection-object-ado.md) . Пример:  
   
     ```  
     objConn.Provider = "MSDAIPP.DSO"  

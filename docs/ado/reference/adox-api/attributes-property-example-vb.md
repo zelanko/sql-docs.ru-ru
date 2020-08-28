@@ -3,7 +3,7 @@ description: Пример свойства Attributes (Visual Basic)
 title: Пример свойства Attributes (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c0ed8195-09af-42c8-99c7-038ecc8a5c9f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7907572a282835e8d56150dbd034d530dd646b8a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 28015a4a457ddb4a64c047675d670cbdf4ce0a47
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771333"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985295"
 ---
 # <a name="attributes-property-example-vb"></a>Пример свойства Attributes (Visual Basic)
 В этом примере демонстрируется свойство [Attributes](./attributes-property-adox.md) [столбца](./column-object-adox.md). Задание значения **адколнуллабле** позволяет пользователю задать значение [поля](../ado-api/field-object.md) [набора записей](../ado-api/recordset-object-ado.md) в виде пустой строки. В этом случае пользователь может различать записи, в которых данные не известны, и запись, в которой данные не применяются.  

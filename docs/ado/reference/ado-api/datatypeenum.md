@@ -3,7 +3,7 @@ description: DataTypeEnum
 title: Дататипинум | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ec805f403e3f76cacde3374cda091bf9b587b74c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fd0e2226c0b85b10d7da9f4f14e7068aa25b1d2d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444206"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974245"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 Указывает тип данных [поля](../../../ado/reference/ado-api/field-object.md), [параметра](../../../ado/reference/ado-api/parameter-object.md)или [Свойства](../../../ado/reference/ado-api/property-object-ado.md). Соответствующий индикатор типа OLE DB отображается в круглых скобках в столбце Описание следующей таблицы.  

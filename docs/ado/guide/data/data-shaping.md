@@ -3,7 +3,7 @@ description: Формирование данных
 title: Формирование данных | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 62bd7dc9-45b5-4ca9-8b52-457325e0ce9e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 28893427bc94613f53504cd81c8b14fc5f595e83
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: df2e7f035e5479298887920814947666164f6593
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806942"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991425"
 ---
 # <a name="data-shaping"></a>Формирование данных
 Этот раздел содержит следующие подразделы.  

@@ -3,7 +3,7 @@ description: Шаг 1. Настройка проекта Visual Basic
 title: Шаг 1. Настройка проекта Visual Basic | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 77d3bfa5-fc9f-4a72-93b4-790c7d227988
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d168a136d4cc80999591f0e36cb65abefa9c6c79
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7c0c8208fa8e5352a720ef057bb54d2d0b51b923
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452816"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979545"
 ---
 # <a name="step-1-set-up-the-visual-basic-project"></a>Шаг 1. Настройка проекта Visual Basic
 В этом сценарии предполагается, что у вас есть Microsoft Visual Basic 6,0, ADO 2,5 или более поздней версии и поставщик Microsoft OLE DB для публикации в Интернете в системе. Сначала необходимо создать новый проект, а затем добавить некоторые элементы управления в форму по умолчанию в проекте.  

@@ -3,7 +3,7 @@ description: Метод Execute (объект Connection ADO)
 title: Метод Execute (подключение ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1acbdc4966f46d5e155dab3fac059568699d4727
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8d5f0c63773a0eb07233ffff0eb74f39e45baf33
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443916"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973555"
 ---
 # <a name="execute-method-ado-connection"></a>Метод Execute (объект Connection ADO)
 Выполняет указанный запрос, инструкцию SQL, хранимую процедуру или специфический для поставщика текст.  
@@ -43,10 +43,10 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
  **Строковое** значение, содержащее инструкцию SQL, хранимую процедуру, URL-адрес или определяемый поставщиком текст для выполнения. **При необходимости**можно использовать имена таблиц, но только в том случае, если поставщик поддерживает SQL. Например, если используется имя таблицы «Customers», то ADO автоматически добавляет стандартный синтаксис SQL SELECT для формирования и передачи "SELECT * FROM Customers" в качестве [!INCLUDE[tsql](../../../includes/tsql-md.md)] инструкции поставщику.  
   
  *RecordsAffected*  
- Необязательный параметр. **Длинная** переменная, к которой поставщик возвращает количество записей, затронутых операцией.  
+ Необязательный элемент. **Длинная** переменная, к которой поставщик возвращает количество записей, затронутых операцией.  
   
  *Параметры*  
- Необязательный параметр. Значение **типа Long** , указывающее, как поставщик должен оценивать аргумент CommandText. Может быть битовой маской одного или нескольких значений [коммандтипинум](../../../ado/reference/ado-api/commandtypeenum.md) или [ексекутеоптионенум](../../../ado/reference/ado-api/executeoptionenum.md) .  
+ Необязательный элемент. Значение **типа Long** , указывающее, как поставщик должен оценивать аргумент CommandText. Может быть битовой маской одного или нескольких значений [коммандтипинум](../../../ado/reference/ado-api/commandtypeenum.md) или [ексекутеоптионенум](../../../ado/reference/ado-api/executeoptionenum.md) .  
   
  **Примечание** . Используйте значение **Ексекутеоптионенум** **адексекутенорекордс** для повышения производительности за счет минимизации внутренней обработки и для приложений, которые вы переносите из Visual Basic 6,0.  
   

@@ -3,7 +3,7 @@ description: Статические курсоры
 title: Статические курсоры | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cce93ace-c4ed-4c6c-940c-28a50ff2fd12
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 396083b57ad12b3cf5e917416272ec636696e91a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 65ca384d89c4afbeeb24120debfd2ead5c2716ed
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452826"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979555"
 ---
 # <a name="static-cursors"></a>Статические курсоры
 Статический курсор всегда отображает результирующий набор в том виде, в котором он был при первом открытии курсора. В зависимости от реализации статические курсоры доступны только для чтения или для чтения и записи и обеспечивают прямую и обратную прокрутку. Статический курсор обычно не обнаруживает изменения, внесенные в членство, порядок или значения результирующего набора после открытия курсора. Статические курсоры могут обнаруживать результаты собственных инструкций обновления, удаления и вставки, хотя это и не обязательно.  
@@ -28,7 +28,7 @@ ms.locfileid: "88452826"
   
  Если приложению не требуется обнаруживать изменения данных и требуется прокрутка, то лучшим выбором является статический курсор. Используйте **Адопенстатик курсортипинум** , чтобы указать, что вы хотите использовать статический курсор в ADO.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Однопроходные курсоры](../../../ado/guide/data/forward-only-cursors.md)   
  [Курсоры набора ключей](../../../ado/guide/data/keyset-cursors.md)   
  [Динамические курсоры](../../../ado/guide/data/dynamic-cursors.md)

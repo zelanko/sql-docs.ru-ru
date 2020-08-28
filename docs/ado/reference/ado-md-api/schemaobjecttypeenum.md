@@ -3,7 +3,7 @@ description: SchemaObjectTypeEnum
 title: Счемаобжекттипинум | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: bf53939f-5543-40ac-a707-aa35e9bde1dd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e8a1d6682066a458c614b464f0e73f36c6ced7b9
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 11749d6b2b33d228387e0519bfe8adc449f05b20
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777853"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986015"
 ---
 # <a name="schemaobjecttypeenum"></a>SchemaObjectTypeEnum
 Указывает тип объекта, извлекаемого методом [жетсчемаобжект](./getschemaobject-method-ado-md.md) .  
   
-|Константа|Значение|Описание:|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**адобжекттипедименсион**|1|Объект [Dimension](./dimension-object-ado-md.md) .|  
 |**адобжекттипехиерарчи**|2|Объект [Hierarchy](./hierarchy-object-ado-md.md) .|  

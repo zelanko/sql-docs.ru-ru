@@ -3,7 +3,7 @@ description: Служба курсора Майкрософт для OLE DB (к�
 title: Служба курсора Майкрософт для OLE DB (компонент службы ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4e1f1e1ecfef6725cfb15640486d7aeb63e348af
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 02eaad96593af153b1692beed4bcf846ff92ab7f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806594"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991095"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>Обзор службы курсоров Майкрософт для OLE DB
 Служба курсора Майкрософт для OLE DB дополняет функции поддержки курсоров поставщиками данных. В результате пользователь воспринимает относительно единую функциональность всех поставщиков данных.

@@ -3,7 +3,7 @@ description: Обновление данных
 title: Обновление данных | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6508e4e9-e33a-4dad-b340-5d632fd78a91
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5ea884479e7353b822e8b679a0fff34d70c3fd93
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 417d03c66209a44110aff8d0c8e71845119049f1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452646"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979185"
 ---
 # <a name="updating-data"></a>Обновление данных
 Поведение и функциональность обновления во многом зависят от режима обновления (типа блокировки), типа курсора и положения курсора.  

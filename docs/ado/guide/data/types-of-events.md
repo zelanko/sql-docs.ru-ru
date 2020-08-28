@@ -3,7 +3,7 @@ description: Типы событий
 title: Типы событий | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f3327ea0-635a-43d4-bd78-c1674f62f1a2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3fa59b0faeb5b1c74ccd4dff3f9d3c274a8f12c6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fd226901137e3ad19df84d17467ad2f283430c14
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452686"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979275"
 ---
 # <a name="types-of-events"></a>Типы событий
 Существует два основных типа событий. «Будут события», которые вызываются перед началом операции, обычно включают в себя имя «будет», например **виллчанжерекордсет** или **виллконнект**. События, которые вызываются после завершения события, обычно содержат "Complete" в своих именах, например **рекордчанжекомплете** или **коннекткомплете**. Существуют исключения, такие как **InfoMessage** , но они происходят после завершения связанной операции.  

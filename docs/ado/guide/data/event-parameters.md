@@ -3,7 +3,7 @@ description: Параметры события
 title: Параметры события | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c2da60e0d6ea0652d531b3e8c459617f1d52954b
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: cc36f0ab059bb7b605b02316008a969411663a8d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806854"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991305"
 ---
 # <a name="event-parameters"></a>Параметры события
 Каждый обработчик событий имеет параметр status, который управляет обработчиком событий. Для полных событий этот параметр также используется для указания на успешное или неуспешное завершение операции, создавшей событие. У большинства полных событий также есть параметр ошибки для предоставления сведений об обнаруженной ошибке и один или несколько параметров объекта, которые ссылаются на объекты ADO, используемые для выполнения операции. Например, событие [ексекутекомплете](../../reference/ado-api/executecomplete-event-ado.md) включает параметры объекта для **команды**, **набора записей**и объектов **соединения** , связанных с событием. В следующем примере Microsoft® Visual Basic® можно увидеть объекты Пкомманд, Пконнектион и, которые представляют собой **команды**, **набор записей**и объекты **соединения** , используемые методом **EXECUTE** .  

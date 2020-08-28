@@ -3,7 +3,7 @@ description: Поставщик OLE DB Майкрософт для службы 
 title: Поставщик OLE DB Майкрософт для службы Microsoft Active Directory | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c196b790299c4c241e5c8eda762b43115b71a038
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 08d945b101ac91300793920e3e01ea0a9619b372
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806574"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991055"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Поставщик OLE DB Майкрософт для службы Microsoft Active Directory
 Поставщик интерфейсов служб Active Directory (ADSI) позволяет ADO подключаться к разнородным службам каталогов через ADSI. Это дает приложениям ADO доступ только для чтения к службам каталогов Microsoft Windows NT 4,0 и Microsoft Windows 2000 в дополнение к любым LDAP-совместимым службам каталогов и службами каталогов Novell. Интерфейсы ADSI основаны на модели поставщика, поэтому при наличии нового поставщика, предоставляющего доступ к другому каталогу, приложение ADO будет иметь доступ к нему без проблем. Поставщик ADSI бесплатен и поддерживает Юникод.  
@@ -90,7 +90,7 @@ objectClass='user' AND objectCategory='Person'"
   
  **Доступность стандартных свойств набора записей ADO:**  
   
-|Свойство.|Доступность|  
+|Свойство|Доступность|  
 |--------------|------------------|  
 |[Примеры absolutepage](../../reference/ado-api/absolutepage-property-ado.md)|чтение/запись|  
 |[Примеры AbsolutePosition](../../reference/ado-api/absoluteposition-property-ado.md)|чтение/запись|  

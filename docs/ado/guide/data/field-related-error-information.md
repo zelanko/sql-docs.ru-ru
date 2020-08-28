@@ -3,7 +3,7 @@ description: Сведения о связанных с полями ошибка
 title: Сведения об ошибке, связанные с полем | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5e7b1af4-996b-47c5-9161-c5575ad4fec9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7402b8cf349d95869ff292194ce6d64c3fb6f4bf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: af7aee82f8568cafcc35ac0e78d13386822888fb
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453396"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991265"
 ---
 # <a name="field-related-error-information"></a>Сведения о связанных с полями ошибках
 Если ошибка связана напрямую с полем, например, если данные отсутствуют или неверный тип для поля, можно получить дополнительные сведения о причине проблемы, изучив свойство Status объекта **поля** " **состояние** ". Это свойство было дополнено для предоставления конкретных сведений о проблеме. Так, например, при сбое вызова **UpdateBatch** причину проблемы можно определить, изучив свойство **Status** **полей** в каждой из затронутых записей. Свойство будет содержать одно из значений в константе **фиелдстатусенум** . В следующей таблице приведены значения, представляющие конкретный интерес при возникновении ошибки.  

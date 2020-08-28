@@ -3,7 +3,7 @@ description: Обзор поставщика OLE DB Майкрософт для 
 title: Поставщик OLE DB Майкрософт для ODBC | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2dcd280098a5ca4075f424f12b0abdfede6b7653
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 1bce53fd000baace86d32542d9b9cc843ee68296
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806651"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991025"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Обзор поставщика OLE DB Майкрософт для ODBC
 Для программистов ADO или RDS идеальным миром будет один, в котором каждый источник данных предоставляет интерфейс OLE DB, чтобы ADO мог напрямую обращаться к источнику данных. Хотя все больше поставщиков баз данных реализуют OLE DB интерфейсы, некоторые источники данных пока не предоставляются таким образом. Однако большинство систем СУБД, используемых сегодня, доступны через ODBC.
@@ -173,7 +173,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  Доступность стандартных свойств **набора записей** ADO:
 
-|Свойство.|форвардонли|Динамический|Keyset|Статические|
+|Свойство|форвардонли|Динамический|Keyset|Статические|
 |--------------|-----------------|-------------|------------|------------|
 |[Примеры absolutepage](../../reference/ado-api/absolutepage-property-ado.md)|недоступно|недоступно|чтение/запись|чтение/запись|
 |[Примеры AbsolutePosition](../../reference/ado-api/absoluteposition-property-ado.md)|недоступно|недоступно|чтение/запись|чтение/запись|
