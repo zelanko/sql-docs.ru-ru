@@ -3,7 +3,7 @@ description: Термины глоссария ADO
 title: Термины глоссария ADO | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -11,14 +11,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 109fe50bfabc39abf60e5b06ac63be98affb02fd
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: dd781612557faebd4b6eefb710ffad2379928aee
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805562"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980855"
 ---
 # <a name="ado-glossary-terms"></a>Термины глоссария ADO
 В этом разделе определяются термины, относящиеся к ADO.
@@ -138,7 +138,7 @@ ms.locfileid: "88805562"
  Иерархия в целом иерархия — это упорядоченная структура с верхним и подчиненными уровнями. В ADO иерархические **наборы записей** используются для представления связи «родители-потомки» между записью и главой. Кроме того, в ADO объекты **записи** и **потока** можно использовать для доступа к иерархическим древовидным структурам, таким как папка и документы. Объекты данных ActiveX (MD) также содержит объекты **иерархии** для представления связи между уровнями измерения в кубе OLAP. См. также иерархические наборы записей, связь «родители-потомки», глава, дерево.
 
 ## <a name="i-l"></a>I-L
- ISAPI (интерфейс прикладного программирования Интернет-сервера) — набор функций для Интернет-серверов, таких как Windows NT® Server или Windows 2000 Server под управлением Microsoft® службы IIS (IIS).
+ ISAPI (интерфейс прикладного программирования Интернет-сервера) — набор функций для Интернет-серверов, например сервер Windows NT &reg; Server или windows 2000 под управлением Microsoft &reg; службы IIS (IIS).
 
  Key столбец или столбцы в таблице, однозначно идентифицирующие строку. часто используется для индексирования таблицы.
 

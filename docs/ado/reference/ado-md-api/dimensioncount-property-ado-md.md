@@ -3,7 +3,7 @@ description: Свойство DimensionCount (многомерные объек�
 title: Свойство DimensionCount (объекты данных ActiveX (MD)) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 87929cbc-9c38-491a-8616-62d45c51e299
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db7ae706d497d4d95becf9dd5209f73cdca23211
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 45fabecbd6efa54fc7bf3dbde9a5a0fe10e253b9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778183"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986855"
 ---
 # <a name="dimensioncount-property-ado-md"></a>Свойство DimensionCount (многомерные объекты ADO)
 Указывает количество измерений на [оси](./axis-object-ado-md.md).  

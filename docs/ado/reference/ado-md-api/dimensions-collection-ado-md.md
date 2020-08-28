@@ -3,7 +3,7 @@ description: Коллекция Dimensions (многомерные объект�
 title: Коллекция Dimensions (объекты данных ActiveX (MD)) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: eaf6f4e7-2ea0-49a3-89ee-e219e025257c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 876f2e1907b1f888d388678887cd338b45dcf8b3
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: f9d0358c5c804764273a52ad1df624ffe4f246f0
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778173"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986835"
 ---
 # <a name="dimensions-collection-ado-md"></a>Коллекция Dimensions (многомерные объекты ADO)
 Содержит объекты [измерения](./dimension-object-ado-md.md) , составляющие куб.  

@@ -1,7 +1,7 @@
 ---
 description: Метод SubmitChanges (служба удаленных рабочих столов)
 title: Метод SubmitChanges (RDS) | Документация Майкрософт
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 250062a4-13c4-4bed-807d-8b9ad81536d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 86645c9a8735c8764bbd210e55858a6de81e387d
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bc4b05a804bcb544b2d4b7e532d78d9526c62e92
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767363"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981005"
 ---
 # <a name="submitchanges-method-rds"></a>Метод SubmitChanges (служба удаленных рабочих столов)
 Отправляет ожидающие изменения локально кэшированного и обновляемого [набора записей](../ado-api/recordset-object-ado.md) в источник данных, указанный в свойстве [Connect](./connect-property-rds.md) или в свойстве [URL-адреса](./url-property-rds.md) .  

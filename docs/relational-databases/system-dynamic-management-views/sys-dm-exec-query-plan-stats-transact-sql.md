@@ -18,12 +18,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 6c76005fefffdbce76309762b1d2a1cd81d83537
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0ab11e74205f47d50e927680081e8e13dfee37fb
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474979"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042485"
 ---
 # <a name="sysdm_exec_query_plan_stats-transact-sql"></a>sys. dm_exec_query_plan_stats (Transact-SQL)
 [!INCLUDE[SQL Server 2019](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
@@ -57,44 +57,42 @@ sys.dm_exec_query_plan_stats(plan_handle)
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|
 |**DBID**|**smallint**|Идентификатор базы данных, в контексте которой выполнялась компиляция инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], соответствующей данному плану. Для нерегламентированных и подготовленных инструкций SQL это идентификатор базы данных, в которой происходила компиляция инструкции.<br /><br /> Столбец может содержать значение NULL.|  
-|**ИД**|**int**|Идентификатор объекта (например хранимой процедуры или определяемой пользователем функции) для этого плана запроса. Для нерегламентированных и подготовленных пакетов этот столбец содержит значение **NULL**.<br /><br /> Столбец может содержать значение NULL.|  
+|**objectid**|**int**|Идентификатор объекта (например хранимой процедуры или определяемой пользователем функции) для этого плана запроса. Для нерегламентированных и подготовленных пакетов этот столбец содержит значение **NULL**.<br /><br /> Столбец может содержать значение NULL.|  
 |**number**|**smallint**|Целое число нумерованных хранимых процедур. Например, группа процедур для приложения **orders** может иметь имена вида **orderproc;1**, **orderproc;2** и так далее. Для нерегламентированных и подготовленных пакетов этот столбец содержит значение **NULL**.<br /><br /> Столбец может содержать значение NULL.|  
 |**Шифрование**|**bit**|Указывает, зашифрована ли соответствующая хранимая процедура.<br /><br /> 0 = не зашифрована<br /><br /> 1 = зашифрована<br /><br /> Столбец не может содержать значение NULL.|  
 |**query_plan**|**xml**|Содержит Последнее известное представление среды выполнения Showplan о фактическом плане выполнения запроса, указанном с помощью *plan_handle*. Представление Showplan имеет формат XML. Для каждого пакета, содержащего, например нерегламентированные инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)], вызовы хранимых процедур и вызовы определяемых пользователем функций, формируется один план.<br /><br /> Столбец может содержать значение NULL.| 
 
-## <a name="remarks"></a>Комментарии
-Эта системная функция доступна начиная с версии [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2,4.
-
-Эта функция активируется явным образом и требует включения [флага трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451. Начиная с версии [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5 эта задача выполняется на уровне базы данных в соответствии с инструкциями, которые можно найти в описании параметра LAST_QUERY_PLAN_STATS в статье [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+## <a name="remarks"></a>Remarks
+Это функция, включаемая пользователем. Чтобы включить на уровне сервера, используйте [флаг трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451. Чтобы включить на уровне базы данных, используйте параметр LAST_QUERY_PLAN_STATS в [инструкции ALTER DATABASE scoped CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
 Эта системная функция работает в инфраструктуре профилирования статистики выполнения **упрощенных** запросов. Дополнительные сведения см. в разделе [Инфраструктура профилирования запросов](../../relational-databases/performance/query-profiling-infrastructure.md).  
 
-Выходные данные инструкции Showplan с помощью sys. dm_exec_query_plan_stats содержат следующие сведения:
+Выходные данные инструкции Showplan `sys.dm_exec_query_plan_stats` содержат следующие сведения:
 -  Все сведения времени компиляции, найденные в кэшированном плане
 -  Сведения о среде выполнения, такие как фактическое число строк на оператор, общее время ЦП и время выполнения запроса, сброс предупреждений, фактическое значение DOP, максимальный объем используемой памяти и предоставленная память
 
-В следующих случаях результат инструкции Showplan, **эквивалентный фактическому плану выполнения** , возвращается в **query_plan** столбец возвращаемой таблицы для **sys. dm_exec_query_plan_stats**.  
+В следующих случаях результат инструкции Showplan, **эквивалентный фактическому плану выполнения** , возвращается в **query_plan** столбец возвращаемой таблицы для `sys.dm_exec_query_plan_stats` :  
 
 -   Этот план можно найти в [представлении каталога sys. dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md).     
-    **ПЕРЕТАСКИВАНИ**    
+    **AND**    
 -   Выполняемый запрос является сложным или потребляет ресурсы.
 
-В следующих случаях в столбце **query_plan** возвращаемой таблицы для **sys. dm_exec_query_plan_stats**возвращается **упрощенный результат <sup>1</sup> ** Showplan.  
+В следующих случаях в **query_plan** столбце возвращаемой таблицы возвращается **упрощенный результат <sup>1</sup> ** инструкции Showplan для `sys.dm_exec_query_plan_stats` :  
 
 -   Этот план можно найти в [представлении каталога sys. dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md).     
-    **ПЕРЕТАСКИВАНИ**    
+    **AND**    
 -   Запрос достаточно прост, обычно разбитый на категории в рамках рабочей нагрузки OLTP.
 
-<sup>1</sup> начиная с версии [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2,5 это относится к инструкции Showplan, которая содержит только оператор корневого узла (SELECT). Для [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2,4 это — кэшированный план, доступный через `sys.dm_exec_cached_plans` .
+<sup>1</sup> ссылается на инструкцию Showplan, которая содержит только оператор корневого узла (SELECT).
 
-В следующих случаях выходные данные **sys. dm_exec_query_plan_stats** **не возвращаются** .
+В следующих случаях **выходные данные не возвращаются** из `sys.dm_exec_query_plan_stats` :
 
--   План запроса, указанный с помощью *plan_handle* , был исключен из кэша планов.     
+-   План запроса, указанный с помощью, `plan_handle` был исключен из кэша планов.     
     **OR**    
 -   На первом месте план запроса не был кэширован. Дополнительные сведения см. в разделе [кэширование и повторное использование плана выполнения ](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse).
   
 > [!NOTE] 
-> Из-за ограничения количества вложенных уровней, разрешенных в типе данных **XML** , **sys. dm_exec_query_plan** не может возвращать планы запросов, которые соответствуют или превышают 128 уровней вложенных элементов. В более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] это условие не позволило возвратить план запроса и выдает [ошибку 6335](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999). В [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] пакетах обновления 2 (SP2) и более поздних версиях столбец **query_plan** возвращает значение null.  
+> Из-за ограничения числа вложенных уровней, допустимых в типе данных **XML** , `sys.dm_exec_query_plan` не может возвращать планы запросов, которые соответствуют или превышают 128 уровней вложенных элементов. В более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] это условие не позволило возвратить план запроса и выдает [ошибку 6335](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999). В [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] пакете обновления 2 (SP2) и более поздних версиях `query_plan` столбец возвращает значение null.  
 
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение `VIEW SERVER STATE` на сервере.  
