@@ -3,7 +3,7 @@ description: Метод AppendChunk (ADO)
 title: Метод AppendChunk (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c648b5a8-d4f1-4d16-836e-3957feb03617
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0df71772820d5871c32e40827400b8cdd40db99d
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 260f1bddfe4433e26463bd58b594d2766ccbc531
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776483"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976015"
 ---
 # <a name="appendchunk-method-ado"></a>Метод AppendChunk (ADO)
 Добавляет данные к большому текстовому или двоичному [полю](./field-object.md)данных или к объекту [параметра](./parameter-object.md) .  
@@ -38,7 +38,7 @@ object.AppendChunk Data
  *object*  
  Объект **поля** или **параметра** .  
   
- *Данные*  
+ *Data*  
  **Значение типа Variant** , содержащее данные, добавляемые к объекту.  
   
 ## <a name="remarks"></a>Remarks  

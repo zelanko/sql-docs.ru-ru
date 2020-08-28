@@ -3,7 +3,7 @@ description: Индексы синтаксиса ADO
 title: Индексы синтаксиса ADO | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fad34f61-c34f-4c0b-8ce5-3b8872abfe4e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 55d8f16ee617b74ee98d83a1cdf8dad408cab2f3
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: acb84a462e6648badb71be752342f7fb1f3ae0da
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776612"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976305"
 ---
 # <a name="ado-syntax-indexes"></a>Индексы синтаксиса ADO
 Синтаксис вызова методов и свойств ADO зависит от среды разработки. Остальная часть справочника по языку ADO использует язык программирования Microsoft Visual Basic для иллюстрации синтаксиса методов и свойств ADO. Однако в следующих разделах приведены более подробные примеры синтаксиса в зависимости от языка программирования и методологии.  

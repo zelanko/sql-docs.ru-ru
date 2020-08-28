@@ -3,7 +3,7 @@ description: Примеры свойств примеры AbsolutePosition и Cu
 title: Примеры свойств примеры AbsolutePosition и CursorLocation (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c4755799-c60a-4b5e-a01f-b85dd0e0a7f9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5869e8203ca5e07564a6d3c6bc7767bccfd9d553
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: a693873e674a0a12dc523994faa1eded7e52a3ed
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759964"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977195"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-vb"></a>Примеры свойств примеры AbsolutePosition и CursorLocation (Visual Basic)
 В этом примере показано, как свойство [примеры AbsolutePosition](./absoluteposition-property-ado.md) может отслеживать ход выполнения цикла, который перечисляет все записи [набора записей](./recordset-object-ado.md). Свойство [CursorLocation](./cursorlocation-property-ado.md) используется для включения свойства **примеры AbsolutePosition** путем установки курсора на клиентский курсор.  

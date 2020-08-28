@@ -3,7 +3,7 @@ description: Свойство Status (объект Recordset ADO)
 title: Свойство Status (набор записей ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41d70d89-880f-4850-9d17-19d9790cc8eb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cea09babfd2dacf35705adc71cddcdee99aad544
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 546fc85e2f6fc2753b85a055f597b3d39129dd61
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777303"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988715"
 ---
 # <a name="status-property-ado-recordset"></a>Свойство Status (объект Recordset ADO)
 Указывает состояние текущей записи по отношению к пакетным обновлениям или другим массовым операциям.  
