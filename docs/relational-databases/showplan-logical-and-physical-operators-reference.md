@@ -138,12 +138,12 @@ ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 93640502582b244c4b6e36473a087d84f53423c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 001b08d1a2556e325fd3923928705e2a0df9aeb8
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455500"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760314"
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>Справочник по логическим и физическим операторам Showplan
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -259,7 +259,7 @@ ms.locfileid: "88455500"
 |![Значок оператора курсора Population Query](../relational-databases/media/poulation-query-32x.gif "Значок оператора курсора Population Query")|**Population Query**|Оператор **Population Query** заполняет рабочую таблицу курсора при его открытии.| 
 |![Значок оператора курсора Refresh Query](../relational-databases/media/refresh-query-32x.gif "Значок оператора курсора Refresh Query")|**Refresh Query**|Оператор **Refresh Query** выбирает текущие данные для строк из буфера выборки.| 
 |![Значок оператора Remote Delete](../relational-databases/media/remote-delete-32x.gif "Значок оператора Remote Delete")|**Remote Delete**|Оператор **Remote Delete** удаляет входные строки удаленного объекта. **Remote Delete** является логическим и физическим оператором.| 
-|![Оператор Showplan Remote Index Seek](../relational-databases/media/remote-index-scan-32x.gif "Оператор Showplan Remote Index Seek")|**Remote Index Scan**|Оператор **Remote Index Scan** просматривает удаленный индекс, указанный в столбце Argument. **Remote Index Scan** является логическим и физическим оператором.| 
+|![Оператор Remote Index Scan инструкции Showplan](../relational-databases/media/remote-index-scan-32x.gif "оператор remote index scan инструкции showplan")|**Remote Index Scan**|Оператор **Remote Index Scan** просматривает удаленный индекс, указанный в столбце Argument. **Remote Index Scan** является логическим и физическим оператором.| 
 |![Оператор Showplan Remote Index Seek](../relational-databases/media/remote-index-seek-32x.gif "Оператор Showplan Remote Index Seek")|**Remote Index Seek**|Оператор **Remote Index Seek** использует возможности поиска объекта удаленного индекса, чтобы получить строки. Столбец **Argument** содержит имя используемого удаленного индекса и предикат SEEK:(). **Remote Index Seek** является логическим физическим оператором.| 
 |![Значок оператора Remote Insert](../relational-databases/media/remote-insert-32x.gif "Значок оператора Remote insert")|**Remote Insert**|Оператор **Remote Insert** вставляет входные строки в удаленный объект. **Remote Insert** является логическим и физическим оператором.| 
 |![Значок оператора Remote Query](../relational-databases/media/remote-query-32x.gif "Значок оператора Remote Query")|**Remote Query**|Оператор **Remote Query** отправляет запрос удаленному источнику. Текст запроса, отправленного удаленному серверу, выводится в столбце **Argument** . **Remote Query** является логическим и физическим оператором.| 

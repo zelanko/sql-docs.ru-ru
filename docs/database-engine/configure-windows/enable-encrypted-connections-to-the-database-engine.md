@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ab9b5b9a52656b948a63d2b283a0637f56da5037
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 952f527b248d6491c3a6f3acf3c4e5570e3ad54e
+ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772510"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564664"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Включение зашифрованных соединений для ядра СУБД
 
@@ -123,6 +123,10 @@ ms.locfileid: "85772510"
 9. Щелкните правой кнопкой мыши импортированный сертификат, выберите пункт **Все задачи**, а затем нажмите кнопку **Управление закрытыми ключами**. В диалоговом окне **Безопасность** добавьте разрешение на чтение для учетной записи пользователя, используемой учетной записью службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 10. Чтобы добавить сертификат на компьютер, выполните **Мастер импорта сертификатов**и закройте консоль MMC. Дополнительные сведения о добавлении сертификатов на компьютер см. в документации по Windows.  
+
+> [!IMPORTANT]
+> В рабочей среде рекомендуется получить доверенный сертификат из центра сертификации.    
+> В целях тестирования можно использовать самозаверяющие сертификаты. Чтобы создать самозаверяющий сертификат, см. раздел о [командлете Powershell New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate) или [команде certreq](https://docs.microsoft.com/windows-server/administration/windows-commands/certreq_1).
   
 ## <a name="install-across-multiple-servers"></a>Установка на нескольких серверах
 
@@ -141,7 +145,7 @@ ms.locfileid: "85772510"
 Настройте принудительное использование зашифрованных соединений на сервере.
 
 > [!IMPORTANT]
-> Учетная запись службы SQL Server должна иметь разрешения на чтение для сертификата принудительного шифрования в SQL Server. Для непривилегированной учетной записи службы разрешения на чтение необходимо добавить в сертификат. Несоблюдение этого требования может привести к сбою перезапуска службы SQL Server.
+> Учетная запись службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должна иметь разрешения на чтение для сертификата принудительного шифрования в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для непривилегированной учетной записи службы разрешения на чтение необходимо добавить в сертификат. Несоблюдение этого требования может привести к сбою перезапуска службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
 1. В окне **Диспетчер конфигурации SQL Server** разверните узел **Сетевая конфигурация SQL Server**, щелкните правой кнопкой мыши элемент **Протоколы для** _\<server instance>_ , затем выберите пункт **Свойства**.  
   
@@ -168,7 +172,7 @@ ms.locfileid: "85772510"
   
 ## <a name="use-sql-server-management-studio"></a>Использование среды SQL Server Management Studio
   
-Шифрование соединения из среды SQL Server Management Studio:  
+Чтобы зашифровать подключение из [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
 
 1. На панели инструментов обозревателя объектов нажмите кнопку **Соединить**и выберите **Компонент Database Engine**.  
   
@@ -183,3 +187,4 @@ ms.locfileid: "85772510"
 
 + [Поддержка TLS 1.2 для Microsoft SQL Server](https://support.microsoft.com/kb/3135244)     
 + [Настройка брандмауэра Windows для разрешения доступа к SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)     
++ [Командлет Powershell New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate)

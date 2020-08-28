@@ -1,21 +1,21 @@
 ---
 title: Расширение PowerShell
-description: Узнайте, как установить и использовать расширение PowerShell для Azure Data Studio, которое предоставляет широкие возможности поддержки редактора PowerShell для написания и отладки скриптов.
+description: Узнайте, как установить и использовать расширение PowerShell для Azure Data Studio, которое предоставляет широкие возможности поддержки редактора PowerShell для написания и отладки скриптов.
 ms.custom: seodec18
 ms.date: 04/19/2019
 ms.reviewer: alayu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 manager: matthend
-ms.openlocfilehash: a0c6a37af62422f65329ef1bbe2e66efbdc5eeb0
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: c3edd5b618a6119021a69f90f4e90341ae6360bb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411320"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766543"
 ---
 # <a name="powershell-editor-support-for-azure-data-studio"></a>Поддержка редактора PowerShell для Azure Data Studio
 
@@ -39,7 +39,7 @@ ms.locfileid: "87411320"
 
 ## <a name="installing-the-extension"></a>Установка расширения
 
-Чтобы установить официальный выпуск расширения PowerShell, выполните действия, указанные в [документации по Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/extensions).
+Чтобы установить официальный выпуск расширения PowerShell, выполните действия, указанные в [документации по Azure Data Studio](./extensions.md).
 В области "Расширения" найдите расширение PowerShell и установите его.  Уведомления о последующих обновлениях этого расширения будут приходить автоматически.
 
 Также вы можете установить пакет VSIX со страницы [Выпуски](https://github.com/PowerShell/vscode-powershell/releases) и с помощью командной строки:
@@ -63,8 +63,8 @@ azuredatastudio --install-extension PowerShell-<version>.vsix
 PowerShell Core — это проект с открытым исходным кодом на сайте [GitHub](https://github.com/powershell/powershell).
 Дополнительные сведения об установке PowerShell Core на платформах MacOS или Linux см. в следующих статьях:
 
-- [Установка PowerShell Core в Linux](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
-- [Установка PowerShell Core в macOS](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
+- [Установка PowerShell Core в Linux](/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
+- [Установка PowerShell Core в macOS](/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
 
 ## <a name="example-scripts"></a>Примеры скриптов
 

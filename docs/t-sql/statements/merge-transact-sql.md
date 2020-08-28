@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 67e1fe125172b6f273b27d6fcb2cac3d18d0bb2b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 73181df45ee72cc29bc73b73b40940ce7bb15b15
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88357810"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778563"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -56,7 +56,7 @@ WHERE NOT EXISTS (SELECT col FROM tbl_A A2 WHERE A2.col = tbl_B.col);
 MERGE
     [ TOP ( expression ) [ PERCENT ] ]
     [ INTO ] <target_table> [ WITH ( <merge_hint> ) ] [ [ AS ] table_alias ]  
-    USING <table_source>
+    USING <table_source> [ [ AS ] table_alias ]
     ON <merge_search_condition>  
     [ WHEN MATCHED [ AND <clause_search_condition> ]  
         THEN <merge_matched> ] [ ...n ]  
@@ -125,12 +125,15 @@ TOP ( *expression* ) [ PERCENT ]
 *target_table* не может быть удаленно расположенной таблицей. Для таблицы *target_table* не должно существовать определенных правил.  
   
 [ AS ] *table_alias*  
-Альтернативное имя для ссылок на таблицу.  
+Альтернативное имя для ссылок на таблицу для *target_table*.  
   
 USING \<table_source>  
 Указывает источник данных, который сопоставляется со строками данных в таблице *target_table* на основе условия \<merge_search condition>. Результат этого совпадения обуславливает действия, которые выполняются предложениями WHEN инструкции MERGE. Аргумент \<table_source> может быть удаленной таблицей или производной таблицей, которая обращается к удаленным таблицам.
   
 Аргумент \<table_source> может быть производной таблицей, использующей [конструктор табличных значений](../../t-sql/queries/table-value-constructor-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] для построения таблицы путем указания нескольких строк.  
+  
+ [ AS ] *table_alias*  
+Альтернативное имя для ссылок на таблицу для table_source.   
   
 Дополнительные сведения о синтаксисе и аргументах этого предложения см. в разделе [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md).  
   

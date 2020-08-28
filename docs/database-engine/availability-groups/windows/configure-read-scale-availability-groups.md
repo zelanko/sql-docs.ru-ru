@@ -9,12 +9,12 @@ ms.date: 05/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: high-availability
-ms.openlocfilehash: 89dee4f1fbce612ec3200bf700302f98bd4f9f36
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: 5681516c193a45fb3cee540d21bbc3e88a917d31
+ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565312"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564534"
 ---
 # <a name="configure-read-scale-for-an-always-on-availability-group"></a>Настройка группы доступности Always On для чтения и масштабирования
 
@@ -79,7 +79,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 Подключаться к вторичным репликам только для чтения можно двумя способами.
 * Приложения могут подключаться непосредственно к экземпляру SQL Server, на котором размещена вторичная реплика, и отправлять запросы к базам данных. Дополнительные сведения см. в статье [Вторичные реплики для чтения](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).
-* Приложения также могут использовать маршрутизацию только для чтения, для которой требуется прослушиватель. Дополнительные сведения см. в статье [Маршрутизация только для чтения](listeners-client-connectivity-application-failover.md#ConnectToSecondary).
+* Приложения также могут использовать маршрутизацию только для чтения, для которой требуется прослушиватель. Если вы развертываете сценарий масштабирования для чтения без диспетчера кластеров, можно создать прослушиватель, указывающий на IP-адрес текущей первичной реплики и порт, отличный от того, по которому ожидает передачи данных SQL Server. Необходимо будет повторно создать прослушиватель, чтобы он указывал на новый основной IP-адрес после отработки отказа. Дополнительные сведения см. в статье [Маршрутизация только для чтения](listeners-client-connectivity-application-failover.md#ConnectToSecondary).
 
 ## <a name="fail-over-the-primary-replica-on-a-read-scale-availability-group"></a>Отработка отказа первичной реплики в группе доступности для чтения и масштабирования
 

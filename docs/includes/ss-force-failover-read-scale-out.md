@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: 0933f493ee71fe589842f8636e7364f79a432de0
-ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
+ms.openlocfilehash: aa0b00ec24c96aea37901cc03aac2dda9b20bed2
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88122321"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88655172"
 ---
 Каждая группа доступности имеет только одну первичную реплику. Первичная реплика позволяет выполнять операции чтения и записи. Чтобы изменить первичную реплику, можно выполнить переход на другой ресурс. В группе доступности для обеспечения высокой доступности диспетчер кластеров автоматизирует процесс перехода на другой ресурс. В группе доступности с типом кластера NONE принудительная отработка отказа выполняется вручную. 
 
@@ -43,7 +43,7 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
 
 Чтобы перейти на другой ресурс вручную без потери данных, выполните следующие действия.
 
-1. Выполните для целевой вторичной реплики `SYNCHRONOUS_COMMIT`.
+1. Сделайте текущую основную и целевую вторичную реплику `SYNCHRONOUS_COMMIT`.
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -90,7 +90,7 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
    ALTER AVAILABILITY GROUP ag1 FORCE_FAILOVER_ALLOW_DATA_LOSS; 
    ``` 
 
-1. Чтобы изменить роль предыдущей первичной реплики на `SECONDARY`, выполните на экземпляре SQL Server, где размещена первичная реплика, следующую команду:
+1. Чтобы изменить роль предыдущей первичной реплики на `SECONDARY`, выполните на экземпляре SQL Server, где размещена старая первичная реплика, следующую команду.
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -106,3 +106,5 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
    ALTER DATABASE [db1]
         SET HADR RESUME
    ```
+
+1. Повторно создайте прослушиватель, созданный для масштабирования для чтения, который не управляется диспетчером кластеров. Если исходный прослушиватель указывает на старую основную реплику, удалите его и создайте заново, чтобы он указывал на новую первичную реплику.

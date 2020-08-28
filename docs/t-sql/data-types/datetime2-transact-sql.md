@@ -2,7 +2,7 @@
 description: datetime2 (Transact-SQL)
 title: datetime2 (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 07/23/2017
+ms.date: 08/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: 868017f3-214f-43ef-8536-cc1632a2288f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb7ef589270a5cdcd06d2eac18176ebbf529256d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a64acd93b34a1d919ec271f7a11a3d9edd199d44
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446015"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760334"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
 
@@ -49,7 +49,7 @@ ms.locfileid: "88446015"
 |Диапазоны элементов|ГГГГ представляет собой четырехзначное число от 0001 до 9999, определяющее год.<br /><br /> ММ — двузначное число от 01 до 12, представляющее месяц указанного года.<br /><br /> Обозначение ДД состоит из двух цифр, представляющих день указанного месяца, и принимает значения от 01 до 31 в зависимости от месяца.<br /><br /> Обозначение «чч» состоит из двух цифр, представляющих час, и принимает значения от 00 до 23.<br /><br /> Обозначение «мм» состоит из двух цифр, представляющих минуту, и принимает значения от 00 до 59.<br /><br /> Обозначение «сс» состоит из двух цифр, представляющих секунду, и принимает значения от 00 до 59.<br /><br /> Обозначение n* может содержать от нуля до семи цифр, представляющих доли секунды, и принимает значения от 0 до 9999999. В Informatica доли секунды усекаются при n > 3.|  
 |Длина в символах|Минимальная — 19 позиций (ГГГГ-ММ-ДД чч:мм:сс), максимальная — 27 позиций ((ГГГГ-ММ-ДД чч:мм:сс.0000000)|  
 |Точность, масштаб|От 0 до 7 цифр, с точностью 100 нс. Точность по умолчанию составляет 7 цифр.|  
-|Объем памяти|6 байтов для представления точности меньше 3 цифр.<br/>7 байтов — для точности в 3 или 4 цифры.<br/>Для представления любых других значений точности требуется 8 байтов.<sup>1</sup>|  
+|Объем памяти <sup>1</sup>|6 байтов для представления точности меньше 3 цифр.<br/>7 байтов — для точности в 3 или 4 цифры.<br/>Для представления любых других значений точности требуется 8 байт <sup>2</sup>.|  
 |Точность|100 наносекунд|  
 |Значение по умолчанию|1900-01-01 00:00:00|  
 |Календарь|Григорианский|  
@@ -57,7 +57,9 @@ ms.locfileid: "88446015"
 |Учет и сохранение смещения часового пояса|Нет|  
 |Учет перехода на летнее время|Нет|  
 
-<sup>1</sup> В первом байте значения типа **datetime2** хранится его точность. Это означает, что фактически для хранения значения типа **datetime2** требуется объем памяти, указанный в таблице, плюс еще один байт для хранения точности.  Таким образом, максимальный размер значения типа **datetime2** составляет 9 байтов: 1 байт для хранения точности и еще 8 байтов для хранения данных с максимальной точностью.
+<sup>1</sup> Указанные значения относятся к несжатым rowstore. Использование [сжатия данных](../../relational-databases/data-compression/data-compression.md) или [columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md) может изменить размер хранилища для каждого уровня точности. Кроме того, размер хранилища на диске и в памяти может различаться. Например, значения **datetime2** при использовании пакетного режима всегда требует 8 байт в памяти.
+
+<sup>2</sup> При приведении значения **datetime2** к значению **varbinary** к значению **varbinary** добавляется дополнительный байт для сохранения точности.
 
 Сведения о метаданных типа данных см. в статье [sys.systypes (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md) или [TYPEPROPERTY (Transact-SQL)](../../t-sql/functions/typeproperty-transact-sql.md). В некоторых типах данных дат и времени точность и масштаб разные. Сведения о получении точности и масштаба для столбца см. в статье [COLUMNPROPERTY (Transact-SQL)](../../t-sql/functions/columnproperty-transact-sql.md), [COL_LENGTH (Transact-SQL)](../../t-sql/functions/col-length-transact-sql.md) или [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md).
   

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 86f7046fed39d95748c1f0ba7a7bbf5eb045cc5a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 91d8cdd0c776a7cc8f3e0fcb9ef73da83bf37e6c
+ms.sourcegitcommit: a0245fdae1ff9045f587a3a67b72f34405d35a4f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748416"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88618125"
 ---
 # <a name="deferred-transactions-sql-server"></a>Отложенные транзакции (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,6 +48,14 @@ ms.locfileid: "85748416"
 |Повтор при зеркальном отображении базы данных|Отложенная транзакция|  
 |Файловая группа находится в режиме «вне сети»|Отложенная транзакция|  
   
+### <a name="requirements-and-limitations"></a>Требования и ограничения
+
+ - База данных должна использовать модель полного восстановления или восстановления с неполным протоколированием.
+ - Для базы данных должна быть создана как минимум одна резервная копия базы данных и журнала.
+ - Отложенные транзакции не применяются к ошибкам, возникшим во время отката транзакции после перевода базы данных в режим "в сети" (например, ошибка времени выполнения).
+ - Невозможно отложить транзакции в случае сбоя восстановления во время подключения базы данных.
+ - Некоторые транзакции, такие как системные транзакции (например, выделение страниц) невозможно отложить.
+
 ## <a name="moving-a-transaction-out-of-the-deferred-state"></a>Вывод транзакции из состояния DEFERRED  
   
 > [!IMPORTANT]  

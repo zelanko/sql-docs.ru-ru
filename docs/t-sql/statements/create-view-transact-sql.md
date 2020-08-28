@@ -38,12 +38,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23a71a0ffe8cfa34ee61b5396146d46f8f174bc6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b1545d389f19aeee3c1cefa2e17bcc8c60bcd495
+ms.sourcegitcommit: 71985f03656a30381b2498ac5393aaf86f670bf3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444856"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88602199"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 
@@ -143,8 +143,8 @@ OR ALTER
  CHECK OPTION  
  Обеспечивает соответствие всех выполняемых для представления инструкций, изменяющих данные, критериям, заданным в выражении *select_statement*. Если строка изменяется посредством представления, предложение WITH CHECK OPTION гарантирует, что после фиксации изменений доступ к данным из представления сохранится.  
   
-> [!NOTE]  
->  Любые обновления, произведенные непосредственно в базовых таблицах представления, не проверяются в контексте представления — даже в том случае, если указано предложение CHECK OPTION.  
+> [!NOTE]
+>  CHECK OPTION применяется только к обновлениям, выполненным через представление. Он неприменим к обновлениям, выполненным непосредственно в базовых таблицах представления.  
   
  ENCRYPTION  
  **Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
