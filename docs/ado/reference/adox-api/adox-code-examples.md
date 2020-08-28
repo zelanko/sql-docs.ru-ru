@@ -3,7 +3,7 @@ description: Примеры кода ADOX
 title: Примеры кода ADOX | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 438e4369-f7e8-4dca-a709-dd501a3ca83f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7213d2b6afdad516edc345f58b4c7a3c4d978f08
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0065eec7fc990f536e40969193ccb9aa1b5317d3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771693"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985755"
 ---
 # <a name="adox-code-examples"></a>Примеры кода ADOX
 Используйте приведенные ниже примеры кода, чтобы узнать, как использовать объекты, методы, свойства и события ADOX.  

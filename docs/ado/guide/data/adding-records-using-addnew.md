@@ -3,7 +3,7 @@ description: Добавление записей с помощью метода 
 title: Добавление записей с помощью AddNew | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cab4adff-f22f-4fb1-9217-f8138c795268
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 27b42b9d65a4c00d4786ed900ad35ce00ef4b8f1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 408f93b0054709de09d5556be94371dd9adc472f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453876"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991765"
 ---
 # <a name="adding-records-using-addnew-method"></a>Добавление записей с помощью метода AddNew
 Это базовый синтаксис метода **AddNew** :
@@ -48,5 +48,5 @@ End If
 'EndAddNew1.1
 ```
 
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Remarks
  Поскольку этот код использует несвязанный **набор записей** с курсором на стороне клиента в пакетном режиме, необходимо повторно подключить **набор записей** к источнику данных с помощью нового объекта **соединения** , прежде чем вызывать метод **UpdateBatch** для публикации изменений в базе данных. Это легко сделать с помощью новой функции **жетневконнектион**.

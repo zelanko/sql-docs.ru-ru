@@ -3,7 +3,7 @@ description: Справочник по ошибкам ADO
 title: Справочник по ошибкам ADO | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a286804eb5ea575e259c3b54a106edea83f55f57
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 83f3d5e9408180c4ff513f1457a2972a676fa726
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806701"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991745"
 ---
 # <a name="ado-errors"></a>Ошибки ADO
 Константа **еррорвалуинум** описывает значения ошибок ADO. Полный список этих перечислимых констант, включая значения, см. в [приложении б: ошибки ADO](../appendixes/appendix-b-ado-errors.md). В этом разделе рассматриваются некоторые из наиболее интересных ошибок и описываются некоторые ситуации, которые могут порождать их, или решения для устранения проблемы. В списке указаны константа **еррорвалуинум** и короткое положительное десятичное число.

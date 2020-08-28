@@ -3,7 +3,7 @@ description: Пример коллекции Members (VBScript)
 title: Пример членов (VBScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87bbd4ad-bb1a-4123-93ef-99ef47fd970b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e1da649b752739f9e36fe22ac2c3e61d8b4fba14
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4ca97249cff49d0c85a306b145e189354a918da5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440856"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986305"
 ---
 # <a name="members-example-vbscript"></a>Пример коллекции Members (VBScript)
 В этом примере используется строка запроса многомерных выражений для получения данных OLAP и записывает результирующий набор ячеек в структуру таблицы HTML с помощью функций, охватывающих столбцы, для нескольких измерений наборы ячеек.  

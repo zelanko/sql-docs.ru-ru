@@ -3,7 +3,7 @@ description: Обнаружение и разрешение конфликтов
 title: Обнаружение и разрешение конфликтов | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b9676087d23ff17b7aaa4c4ad6cab20eaec644ca
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: a28fa775c834725504075907f09dc00e95bce1ee
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806904"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991395"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Обнаружение и разрешение конфликтов
 Если вы работаете с набором записей в режиме интерпретации, проблемы с параллелизмом значительно снижаются. С другой стороны, если приложение использует обновление в пакетном режиме, то может быть хорошей шанс, что один пользователь изменит запись, прежде чем изменения, внесенные другим пользователем, редактируют ту же запись, сохраняются. В этом случае вам потребуется, чтобы приложение корректно обрабатывал конфликт. Возможно, вы хотите, чтобы последний пользователь отправлял обновление на сервер "WINS". Или, возможно, вы хотите, чтобы последний пользователь решил, какое обновление должно иметь приоритет, предоставив ему выбор между двумя конфликтующими значениями.  

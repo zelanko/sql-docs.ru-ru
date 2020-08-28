@@ -3,7 +3,7 @@ description: Раздел данных
 title: Раздел данных | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f8cd34a76e2de6a37ee7fe3c647e845c0fbf3fac
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: ac4febc789aca18401380ee8ada7b2ab7f9d30a3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806202"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991455"
 ---
 # <a name="data-section"></a>Раздел данных
 Раздел данных определяет данные набора строк вместе с любыми ожидающими обновлениями, вставками или удалением. Раздел данных может содержать ноль или более строк. Он может содержать только данные из одного набора строк, где строка определяется схемой. Кроме того, как отмечалось ранее, столбцы без данных можно опустить. Если атрибут или подэлемент используется в разделе данных, а эта конструкция не определена в разделе схемы, она не учитывается автоматически.  
   
-## <a name="string"></a>Строковый тип  
+## <a name="string"></a>Строка  
  Зарезервированные XML-символы в текстовых данных должны быть заменены соответствующими сущностями символов. Например, в названии компании Joe «нечего», одинарная кавычка должна быть заменена сущностью. Фактическая строка будет выглядеть следующим образом:  
   
 ```  

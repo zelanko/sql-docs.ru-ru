@@ -3,7 +3,7 @@ description: Определение режима изменения
 title: Определение режима редактирования | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4c7e010d-08cd-4e22-9b32-23c36f02f88c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 788a91fc3de259210a5f2756f148161fbb90308e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ec235cfd012b79449fdebfab9c99399d967ca32f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453506"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991365"
 ---
 # <a name="determining-edit-mode"></a>Определение режима изменения
 ADO поддерживает буфер редактирования, связанный с текущей записью. Свойство **EditMode** указывает, были ли внесены изменения в этот буфер или создана ли новая запись. Используйте **EditMode** , чтобы определить состояние редактирования текущей записи. Вы можете проверить наличие ожидающих изменений в случае, если процесс редактирования был прерван, и определить, нужно ли использовать метод **Update** или **CancelUpdate** .  
