@@ -3,7 +3,7 @@ description: 'Поле (Visual C++ индекс синтаксиса с #import)
 title: 'Поле (Visual C++ индекс синтаксиса с #import) | Документация Майкрософт'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 90cb636a-9416-48a4-b4eb-bb11bbd40950
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c73bc04ebb334927ec7247afa1e38a598e9dc76e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0d9c7abe0375f02d0bb0250d283acca2d5ca1a37
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443756"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973225"
 ---
 # <a name="field-visual-c-syntax-index-with-import"></a>Поле (Visual C++ индекс синтаксиса с #import)
 ## <a name="methods"></a>Методы  
@@ -80,5 +80,5 @@ void PutValue( const _variant_t & pvar );
 __declspec(property(get=GetValue,put=PutValue)) _variant_t Value;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект Field](../../../ado/reference/ado-api/field-object.md)

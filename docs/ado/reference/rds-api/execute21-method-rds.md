@@ -3,7 +3,7 @@ description: Метод Execute21 (служба удаленных рабочи�
 title: Метод Execute21 (RDS) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9ee73221460a177e24317c9c3d7ff9ab5c06dec9
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 84c8c977615fdc99da45a255e5306d4066b13406
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768403"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982315"
 ---
 # <a name="execute21-method-rds"></a>Метод Execute21 (служба удаленных рабочих столов)
 Выполняет запрос и создает набор записей ADO для использования в ADO 2,1.  

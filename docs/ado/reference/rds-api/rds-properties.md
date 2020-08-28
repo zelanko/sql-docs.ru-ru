@@ -1,7 +1,7 @@
 ---
 description: Свойства службы удаленных рабочих столов
 title: Свойства RDS | Документация Майкрософт
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: e4e04cbd-21fc-44a1-9f21-49aa68746934
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6b2a106dadcb8af11dcdd5865472fce1fa2e1be2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a4f47967fc80ba488c57299fe7f94c13d9f9e949
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767743"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981525"
 ---
 # <a name="rds-properties"></a>Свойства службы удаленных рабочих столов
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
-|Свойство.|Описание:|  
+|Свойство|Описание|  
 |-|-|  
 |[Connect (RDS)](./connect-property-rds.md)|Указывает имя базы данных, из которой выполняются операции запроса и обновления.|  
 |[Ексекутеоптионс (RDS)](./executeoptions-property-rds.md)|Указывает, включено ли асинхронное выполнение.|  

@@ -3,7 +3,7 @@ description: Метод Append (ADO)
 title: Метод Append (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 87c4c1b9842dbd104a69ff4ba6a90eae2d7b1369
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 84969b95751726579bdc7d4a61aee311b95b6108
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776513"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976085"
 ---
 # <a name="append-method-ado"></a>Метод Append (ADO)
 Добавляет объект в коллекцию. Если коллекция является [полями](./fields-collection-ado.md), то перед добавлением в коллекцию можно создать новый объект [поля](./field-object.md) .  
@@ -44,7 +44,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *object*  
  Объектная переменная, представляющая объект, который необходимо добавить.  
   
- *Имя*  
+ *имя*;  
  **Строковое** значение, содержащее имя нового объекта **field** и не должно совпадать с именем любого другого объекта в *полях*.  
   
  *Тип*  

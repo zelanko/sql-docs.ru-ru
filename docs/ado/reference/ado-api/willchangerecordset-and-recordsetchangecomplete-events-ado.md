@@ -3,7 +3,7 @@ description: События WillChangeRecordset и RecordsetChangeComplete (ADO)
 title: События Виллчанжерекордсет и Рекордсетчанжекомплете (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d5d44659-e0d9-46d9-a297-99c43555082f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5c88cd48a16907e67813f90c06dd9ce69d11ed30
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c3066ebce2f1f3e96404e933af1c39ad0fdd2659
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776893"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987805"
 ---
 # <a name="willchangerecordset-and-recordsetchangecomplete-events-ado"></a>События WillChangeRecordset и RecordsetChangeComplete (ADO)
 Событие **виллчанжерекордсет** вызывается до того, как ожидающая операция изменяет [набор записей](./recordset-object-ado.md). Событие **рекордсетчанжекомплете** вызывается после изменения **набора записей** .  

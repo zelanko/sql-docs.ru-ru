@@ -3,7 +3,7 @@ description: События WillMove и MoveComplete (ADO)
 title: События Виллмове и Мовекомплете (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1a3d1042-4f30-4526-a0c7-853c242496db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9dbc74fbca54ab1bdafb3c0f2ba941aee49f2213
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 27d86dc84960399be6b5738f72c69430c6834c7e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776853"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987765"
 ---
 # <a name="willmove-and-movecomplete-events-ado"></a>События WillMove и MoveComplete (ADO)
 Событие **виллмове** вызывается до того, как операция ожидает изменения текущей позицией в [наборе записей](./recordset-object-ado.md). Событие **мовекомплете** вызывается после изменения текущей позицией в **наборе записей** .  

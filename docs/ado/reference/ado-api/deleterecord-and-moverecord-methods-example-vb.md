@@ -3,7 +3,7 @@ description: Примеры методов Делетерекорд и MoveRecor
 title: Примеры методов Делетерекорд и MoveRecord (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c3937d1e-9872-47e5-a22e-b147637f2388
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a3cb757703b7eebd3734ee33b97205e6491a4c40
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 382a4e103d1a51067344788b7fe1fdca9f5e1fd4
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444126"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974015"
 ---
 # <a name="deleterecord-and-moverecord-methods-example-vb"></a>Примеры методов Делетерекорд и MoveRecord (Visual Basic)
 В этом примере показано, как копировать, перемещать, изменять и удалять содержимое текстового файла, опубликованного в веб-папке. Другие используемые свойства и методы включают [дочерние элементы](../../../ado/reference/ado-api/getchildren-method-ado.md), [парентурл](../../../ado/reference/ado-api/parenturl-property-ado.md), [источник](../../../ado/reference/ado-api/source-property-ado-record.md)и [запись на диск](../../../ado/reference/ado-api/flush-method-ado.md).  
@@ -149,7 +149,7 @@ End Sub
 'EndDeleteRecordVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Метод Делетерекорд (ADO)](../../../ado/reference/ado-api/deleterecord-method-ado.md)   
  [Метод Flush (ADO)](../../../ado/reference/ado-api/flush-method-ado.md)   
  [Метод дочернего элемента (ADO)](../../../ado/reference/ado-api/getchildren-method-ado.md)   

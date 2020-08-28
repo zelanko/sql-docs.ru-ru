@@ -3,7 +3,7 @@ description: Пример свойств EOS и LineSeparator и метод Ск
 title: Примеры свойств EOS и LineSeparator и метода Скиплине (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 77ce3042-9ebc-44ba-a4ff-0f1b1fd4a9c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3265cf082790da2b9be844bd58b7af466cb45a18
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a6c4bf73832513a09960d221be42c879a3755e29
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444026"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973774"
 ---
 # <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>Пример свойств EOS и LineSeparator и метод Скиплине (Visual Basic)
 В этом примере показано, как управлять потоками текста по одной строке за раз. Отображается результат изменения разделителя строк с символа возврата каретки или перевода строки (**адкрлф**) на символ обратной строки (**адлф**) или возврата каретки (**адкр**).  
@@ -113,7 +113,7 @@ End Sub
 'EndSkipLineVB  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [EOS, свойство](../../../ado/reference/ado-api/eos-property.md)   
  [Свойство LineSeparator (ADO)](../../../ado/reference/ado-api/lineseparator-property-ado.md)   
  [Метод SkipLine](../../../ado/reference/ado-api/skipline-method.md)
