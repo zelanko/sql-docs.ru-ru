@@ -3,7 +3,7 @@ description: Что такое курсор?
 title: Что такое курсор? | Документы Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 596eb4b6-c22f-4cde-b23f-172dd66c3161
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a3fabe19ad59f7e1ee6b24f278c7a5edf1985db6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3090e38507a73d00edbe3bd1cb85e408c88fdba1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452546"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978925"
 ---
 # <a name="what-is-a-cursor"></a>Что такое курсор?
 Операции в реляционной базе данных выполняются над множеством строк. Набор строк, возвращаемый инструкцией SELECT, содержит все строки, которые удовлетворяют условиям, указанным в предложении WHERE инструкции. Такой полный набор строк, возвращаемых инструкцией, называется результирующим набором. Приложения, особенно интерактивные и интерактивные, не всегда эффективно работают с результирующим набором как единое целое. Им нужен механизм, позволяющий обрабатывать одну строку или небольшое их число за один раз. Курсоры являются расширением результирующих наборов, которые предоставляют такой механизм.  

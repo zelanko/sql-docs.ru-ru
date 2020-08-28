@@ -3,7 +3,7 @@ description: Пример методов MoveFirst, MoveLast, MoveNext и MovePr
 title: Перемещение указателя записи в примере с набором записей (VBScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 911aa1dd-2786-4f34-992c-bb2fbdabcbdf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e8f38ce47d2b5a48511a2dfe5a8650fc56c7be6
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 7d6d1fdb55ca18fcbb06fb3cbb9e32f603af4d26
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774263"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990535"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript"></a>Пример методов MoveFirst, MoveLast, MoveNext и MovePrevious (VBScript)
 В этом примере используются методы [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)и [MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) для перемещения указателя записи [набора записей](./recordset-object-ado.md) на основе указанной команды.  

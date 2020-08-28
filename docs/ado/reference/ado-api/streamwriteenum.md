@@ -3,7 +3,7 @@ description: StreamWriteEnum
 title: Стреамвритинум | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: bdbf3405-a0bd-4f02-85d4-e3fe8da3f3f7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 343e5fd45a32e45cda342ab01feb64f379054486
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c09a15f5c5aba9d36f038304b68cc1e64112ade3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777163"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988445"
 ---
 # <a name="streamwriteenum"></a>StreamWriteEnum
 Указывает, добавляется ли разделитель строк к строке, записанной в объект [потока](./stream-object-ado.md) .  
   
-|Константа|Значение|Описание:|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**adWriteChar**|0|По умолчанию. Записывает указанную текстовую строку (заданную параметром *данных* ) в объект **потока** .|  
 |**adWriteLine**|1|Записывает текстовую строку и символ разделителя строки в объект **потока** . Если свойство [LineSeparator](./lineseparator-property-ado.md) не определено, то возвращается ошибка времени выполнения.|  

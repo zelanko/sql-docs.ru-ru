@@ -3,7 +3,7 @@ description: Агрегатные функции, функция CALC и клю�
 title: Агрегатные функции, функция CALC и ключевое слово NEW | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f3ef1ae1b6b5d60774e220cc4594cd54eda291e7
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 1b62e392325306bc358283874f4638077d8a4178
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806960"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991635"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>Агрегатные функции, функция CALC и ключевое слово NEW
 Функция формирования данных поддерживает следующие функции. Имя, присвоенное главе, содержащей столбец для обработки, является *псевдонимом главы*.  

@@ -3,7 +3,7 @@ description: Приложение в. Программирование с пом
 title: Приложение в. Программирование с помощью ADO | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 40af6e70-2a37-480f-aadc-92095d450af7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 43763af1f0a4e48adfd41c0e6d42bf3cbb4f5879
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 63240be1e7e0b9c439f39ee93f09552d4d708caa
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806668"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991155"
 ---
 # <a name="appendix-c-programming-with-ado-in-development-environments"></a>Приложение в. Программирование с помощью ADO в средах разработки
 ADO — это компонент интерфейса автоматизации COM, который можно использовать со многими языками программирования, включая Microsoft Visual Basic, VBScript, JScript и Visual C++. Версия ADO устанавливается с каждым из этих средств и других приложений, таких как Microsoft Office и Microsoft SQL Server.

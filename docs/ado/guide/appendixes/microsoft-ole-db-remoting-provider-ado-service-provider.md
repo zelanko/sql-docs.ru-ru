@@ -3,7 +3,7 @@ description: Поставщик службы удаленного взаимод
 title: Поставщик службы удаленного взаимодействия Microsoft OLE DB (поставщик служб ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2e8520dc35b7a6d913736637cabaf34a2bd60651
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 860d151bb0071db6086629c8893795cadd47b821
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806539"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990995"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Обзор поставщика удаленного взаимодействия Microsoft OLE DB
 Поставщик удаленного взаимодействия Microsoft OLE DB позволяет локальному пользователю на клиентском компьютере запускать поставщики данных на удаленном компьютере. Укажите параметры поставщика данных для удаленного компьютера, как если бы вы были локальным пользователем на удаленном компьютере. Затем укажите параметры, используемые поставщиком удаленного взаимодействия для доступа к удаленному компьютеру. Затем можно получить доступ к удаленному компьютеру так, как если бы вы были локальным пользователем.

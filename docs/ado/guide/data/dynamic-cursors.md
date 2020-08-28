@@ -3,7 +3,7 @@ description: Динамические курсоры
 title: Динамические курсоры | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 00460f30-8cf7-494e-82df-41012f40ae51
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f646a608c8cbc25e16c5200f8271c133a62d3457
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: e8ce85233cec96af3d804652225b4d14698287db
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806153"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991355"
 ---
 # <a name="dynamic-cursors"></a>Динамические курсоры
 Динамические курсоры обнаруживают все изменения, внесенные в строки результирующего набора, независимо от того, происходят ли изменения внутри курсора или другими пользователями за пределами курсора. Все инструкции INSERT, Update и DELETE, сделанные всеми пользователями, видны через курсор. Динамический курсор может обнаруживать любые изменения, внесенные в строки, порядок и значения в результирующем наборе после открытия курсора. Обновления, сделанные за пределами курсора, не видны, пока они не будут зафиксированы (если только уровень изоляции транзакции курсора не задан как "незафиксированный").  

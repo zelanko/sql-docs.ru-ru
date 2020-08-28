@@ -3,7 +3,7 @@ description: Пакетный режим
 title: Пакетный режим | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0cb548e0-fcb4-4c49-98c8-be287911f826
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 353e5ae0fe15fb21f04f6efcc97195a5e237b58e
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: a2cda3a14dc51532d52184f8b2101981d4f36cd3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806396"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991605"
 ---
 # <a name="batch-mode"></a>Пакетный режим
 Пакетный режим действует, если свойство **LockType** имеет значение **адлоккбатчоптимистик** , а пакетное обновление поддерживается поставщиком. Некоторые параметры типа блокировки недоступны в зависимости от положения курсора. Например, тип пессимистической блокировки недоступен, если для **CursorLocation** задано значение **адусеклиент**. И наоборот, поставщик не может поддерживать оптимистичную блокировку пакетной службы, если расположение курсора находится на сервере. Пакетное обновление следует использовать только с курсором KEYSET или static.  

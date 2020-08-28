@@ -3,7 +3,7 @@ description: Примеры методов Append коллекций Groups и U
 title: Пример добавления групп и пользователей, примеры методов ChangePassword (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e7067d0-6405-4c09-bff3-b1c2f2d783e0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c6776783df8ae47cdd15eb1a6a116f25ff038277
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a31781893fc992ff94080621a59c97f628b55f94
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770353"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984355"
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vc"></a>Примеры методов Append коллекций Groups и Users, а также пример метода ChangePassword (Visual C++)
 В этом примере демонстрируется метод [append](./append-method-adox-groups.md) [групп](./groups-collection-adox.md), а также метод [добавления](./append-method-adox-users.md) [пользователей](./users-collection-adox.md) путем добавления новой [группы](./group-object-adox.md) и нового [пользователя](./user-object-adox.md) в систему. Новая **Группа** добавляется в коллекцию **Groups** нового **пользователя**. Таким образом, новый **пользователь** добавляется в **группу**. Кроме того, метод [ChangePassword](./changepassword-method-adox.md) используется для указания пароля **пользователя** .  

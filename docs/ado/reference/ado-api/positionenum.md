@@ -3,7 +3,7 @@ description: PositionEnum
 title: Поситионенум | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: e69af0a5-3405-4b72-9c6e-6b188ff746fd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2d7b443e94f3bea5977aeaf953e84c66c826daeb
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a871f6d2f7b73e7430761318a5acee31f05df3c1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773173"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990075"
 ---
 # <a name="positionenum"></a>PositionEnum
 Задает текущую позиции указателя записи в [наборе записей](./recordset-object-ado.md).  
   
-|Константа|Значение|Описание:|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**adPosBOF**|-2|Указывает, что указатель текущей записи находится на BOF (то есть свойство [BOF](./bof-eof-properties-ado.md) имеет **значение true**).|  
 |**adPosEOF**|–3|Указывает, что указатель текущей записи находится в EOF (то есть свойство [EOF](./bof-eof-properties-ado.md) имеет **значение true**).|  

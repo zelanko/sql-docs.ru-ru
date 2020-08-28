@@ -3,7 +3,7 @@ description: Использование ADO для публикации в Ин�
 title: Использование ADO для публикации в Интернете | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5f08edfbd56b900759c004cbf0fca8a634ab1010
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 774ff9b0728d362822c72047b573ab9def944d18
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452606"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979041"
 ---
 # <a name="using-ado-for-internet-publishing"></a>Использование ADO для публикации в Интернете
 [Поставщик OLE DB для публикации в Интернете](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) показывает конкретный пример доступа к разнородным данным с помощью ADO. Несмотря на то, что примеры в этом разделе относятся к использованию поставщика публикации в Интернете, эти принципы должны быть похожи при использовании ADO с другими поставщиками для разнородных данных, например поставщика в хранилище электронной почты.  
@@ -53,7 +53,7 @@ ms.locfileid: "88452606"
   
 -   [Записи и предоставляемые поставщиком поля](../../../ado/guide/data/records-and-provider-supplied-fields.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
  [Журнал объектов ADO](../../../ado/guide/ado-history.md)

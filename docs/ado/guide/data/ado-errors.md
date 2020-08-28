@@ -3,7 +3,7 @@ description: Ошибки времени выполнения ADO
 title: Ошибки ADO | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9bb84114-a1df-4122-a1b8-ad98dcd85cc3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f753e66e6711c3abcf59e2541b9bad6cd390e71a
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 0b1da9cd8e7afd2b56921fa6b413b5d349d7027f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806685"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991735"
 ---
 # <a name="ado-run-time-errors"></a>Ошибки времени выполнения ADO
 Ошибки ADO сообщаются в программе как ошибки времени выполнения. Для их перехвата и обработкой можно использовать механизм перехвата ошибок на языке программирования. Например, в Visual Basic используйте оператор **On Error** . В Visual C++ это зависит от метода, используемого для доступа к библиотекам ADO. С #import используйте блок **try-catch** . В противном случае программистам C++ необходимо явно получить объект Error, вызвав **жетерроринфо**. Следующая Visual Basic подпроцедура демонстрирует перехват ошибки ADO:

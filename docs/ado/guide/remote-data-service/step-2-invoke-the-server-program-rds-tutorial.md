@@ -3,7 +3,7 @@ description: Шаг 2. Вызовите программу сервера (уч
 title: Шаг 2. вызов серверной программы (учебник по RDS) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5e74c2da-65ee-4de4-8b41-6eac45c3632e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 19f16da3e3501a179bfb28529a9b1a14486aad20
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 4771957c1895f6ac861d04f63a43e32a77e3d931
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759154"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977595"
 ---
 # <a name="step-2-invoke-the-server-program-rds-tutorial"></a>Шаг 2. Вызовите программу сервера (учебник по RDS)
 При вызове метода *прокси-сервера*клиента фактическая программа на сервере выполняет метод. На этом шаге вы выполните запрос на сервере.  

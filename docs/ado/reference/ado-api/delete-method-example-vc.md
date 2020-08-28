@@ -3,7 +3,7 @@ description: Пример метода Delete (Visual C++)
 title: Пример метода Delete (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7cc78fb5-2701-49dc-bc22-06613b10cecb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d67a0a5c73c258bbd2f176897acefd7f2cd8464d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c8f4ef14765cd66c65ec7e306fa2fb8efc8862c1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444116"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974045"
 ---
 # <a name="delete-method-example-vc"></a>Пример метода Delete (Visual C++)
 В этом примере используется метод [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) для удаления указанной записи из [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -294,6 +294,6 @@ MC2222
 BU7832  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Метод Delete (набор записей ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -2,7 +2,7 @@
 description: Индекс динамических свойств ADO
 title: Индекс динамического свойства ADO | Документация Майкрософт
 ms.prod: sql
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4777349384d372355a107cced1503d774ade4f7
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bbf4cdae12da71f5fc4d3b8fbc11b7ca64c46c5b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771743"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976495"
 ---
 # <a name="ado-dynamic-property-index"></a>Индекс динамических свойств ADO
 Поставщики данных, поставщики служб и компоненты служб могут добавлять динамические свойства в коллекции **свойств** неоткрытых [соединений](./connection-object-ado.md) и объектов [набора записей](./recordset-object-ado.md) . Данный поставщик может также вставлять дополнительные свойства при открытии этих объектов. Некоторые из этих свойств перечислены в разделе [динамические свойства ADO](./ado-dynamic-properties.md) . Дополнительные сведения см. в разделе "конкретные поставщики" раздела [приложение A: поставщики](../../guide/appendixes/appendix-a-providers.md) .  

@@ -3,7 +3,7 @@ description: Пример свойства Optimize (Visual Basic)
 title: Пример свойства optimize (Visual Basic) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 652194af-cfa4-4aa0-a6d6-fa409bbc3f98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5ee1d8d211c0ceeed02408f559c63b5942aafe05
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: eeb075e3ad722fa7d449833a6be9b1acaa481eab
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773633"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990275"
 ---
 # <a name="optimize-property-example-vb"></a>Пример свойства Optimize (Visual Basic)
 В этом примере демонстрируется динамическое свойство **optimize** объекта [field](./field-object.md) . Поле ***ZIP*** таблицы ***authors*** в базе данных ***pubs*** не индексируется. Присвоение свойству [optimize](./optimize-property-dynamic-ado.md) значения **true** в поле ***ZIP*** разрешает ADO создавать индексы, повышающие производительность метода [Find](./find-method-ado.md) .  

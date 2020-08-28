@@ -3,7 +3,7 @@ description: Коллекция Users (ADOX)
 title: Коллекция пользователей (ADOX) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0a30fa74-6f10-4410-bd70-882e7c43cd46
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d452075b3659d3ad01ba28540217b8447950084
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a1f511e637696e5b14905bcccba50cb13737d6e7
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769043"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983035"
 ---
 # <a name="users-collection-adox"></a>Коллекция Users (ADOX)
 Содержит все сохраненные [пользовательские](./user-object-adox.md) объекты [каталога](./catalog-object-adox.md) или [группы](./group-object-adox.md).  

@@ -3,7 +3,7 @@ description: Основные принципы объектов данных Act
 title: Основы объекты данных ActiveX (MD) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f6a20d9f-c1ab-474c-b9f3-82277e2a126d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eb14a1b97ba6670b2170021bc354890b41fa01ca
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: b8f213968a55d32cb306891362d6bad9f2fd12cf
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88758794"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978665"
 ---
 # <a name="ado-md-fundamentals"></a>Основные принципы объектов данных ActiveX (MD)
 Microsoft®® ActiveX Data Objects (объекты данных ActiveX (MD)) предоставляет простой доступ к многомерным данным на таких языках, как Microsoft Visual Basic®, Microsoft Visual C++®. Объекты данных ActiveX (MD) расширяет Microsoft ActiveX® объекты данных (ADO) для включения объектов, характерных для многомерных данных, таких как объекты [CubeDef](../../reference/ado-md-api/cubedef-object-ado-md.md) и набор [ячеек](../../reference/ado-md-api/cellset-object-ado-md.md) . С помощью объекты данных ActiveX (MD) можно просматривать многомерную схему, выполнять запросы к кубу и получать результаты.  

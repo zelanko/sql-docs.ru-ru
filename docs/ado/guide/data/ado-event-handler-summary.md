@@ -3,7 +3,7 @@ description: События подключения ADO и записи в наб
 title: Сводка по обработчику событий ADO | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b34f4472-5e04-4a2c-ab64-38d6eca31a69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 46e352b88ea24d264ccde8a4d3932f748082723b
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: ddec7c573c7d208d80fe05dc8f15ba2d0d02c428
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806457"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991725"
 ---
 # <a name="ado-connection-and-recordset-events"></a>События подключения ADO и записи в набор записей
 События могут создаваться двумя объектами ADO: объектом [соединения](../../reference/ado-api/connection-object-ado.md) и объектом [Recordset](../../reference/ado-api/recordset-object-ado.md) . Семейство **коннектионевент** относится к операциям объекта **Connection** , а семейство **рекордсетевент** относится к операциям с объектом **Recordset** .

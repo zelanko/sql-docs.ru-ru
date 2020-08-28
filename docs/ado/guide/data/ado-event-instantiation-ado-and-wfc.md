@@ -3,7 +3,7 @@ description: 'Создание экземпляра события ADO: ADO и W
 title: 'Создание экземпляра события ADO: ADO и WFC | Документация Майкрософт'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 98719e10e837b83ac522743e120f037b1fedbd99
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 906f895eade7120b57d401851a0e19203f943980
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806444"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991715"
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>Создание экземпляра события ADO: ADO и WFC
 Объекты ADO для классов Windows Foundation (ADO/WFC) построены на модели событий ADO и представляют упрощенный прикладной программный интерфейс. Как правило, ADO/WFC перехватывает события ADO, объединяет параметры событий в один класс событий, а затем вызывает обработчик событий.  
