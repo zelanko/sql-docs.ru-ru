@@ -3,7 +3,7 @@ description: Шаг 5. DataControl теперь можно использова
 title: Шаг 5. Использование элемента управления "Управление доступом" (руководство по RDS) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed5c4a24-9804-4c85-817e-317652acb9b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 616b82b397694e4db41f709080dc4beafd945878
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 8aa0697e7f4acbae9fbc25ba3e14bccb4a468499
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759024"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977515"
 ---
 # <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>Шаг 5. DataControl теперь можно использовать (учебник по RDS)
 Возвращаемый объект **набора записей** доступен для использования. Вы можете просматривать, перемещать или изменять его так же, как любой другой **набор записей**. Действия, которые можно выполнять с **набором записей** , зависят от среды. Visual Basic и Visual C++ имеют визуальные элементы управления, которые могут напрямую или косвенно использовать **набор записей** с помощью включения элемента управления данными.  

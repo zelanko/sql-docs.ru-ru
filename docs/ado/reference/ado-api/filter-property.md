@@ -3,7 +3,7 @@ description: Свойство Filter
 title: Свойство Filter | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 03/20/2018
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0e5927c2c3b32540ebfe54307203e0425600e2f2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 2519fdf691cc0f982f16a3aa77fdb66036bd86e8
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775323"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973005"
 ---
 # <a name="filter-property"></a>Свойство Filter
 Указывает фильтр для данных в [наборе записей](./recordset-object-ado.md).  
@@ -94,8 +94,8 @@ ms.locfileid: "88775323"
 |Позволяющ|Не ключи|Один ключ|Несколько ключей|
 |-|--------------|----------------|-------------------|
 |**Не ключи**|+|+|+|
-|**Один ключ**|+|-|Недоступно|
-|**Несколько ключей**|+|Недоступно|+|
+|**Один ключ**|+|-|Н/Д|
+|**Несколько ключей**|+|Н/Д|+|
 |||||
   
 ## <a name="applies-to"></a>Применение

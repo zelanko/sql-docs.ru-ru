@@ -3,7 +3,7 @@ description: Свойство Resync Command (динамическое) (ADO)
 title: Свойство "команда повторной синхронизации" — Dynamic (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4c79843bb3397fee6d4c2d92d9e7905d2db472c3
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 2e882a9c65bf0d54dc9bd9e160edbc67f4e7996b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777683"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989515"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Свойство Resync Command (динамическое) (ADO)
 Указывает указанную пользователем строку команды, которая выдается методом повторной [синхронизации](./resync-method.md) для обновления данных в таблице, указанной в динамическом свойстве [уникальной таблицы](./unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) .  

@@ -3,7 +3,7 @@ description: RecordTypeEnum
 title: Рекордтипинум | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: f557e537-015d-4ba7-8a41-a6f00b366a91
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a1e5a43d2b53a76a21d79ce671004e139dab5e20
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ded4106b770ff62edd4b79401885ee5ce3101798
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771993"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989665"
 ---
 # <a name="recordtypeenum"></a>RecordTypeEnum
 Указывает тип объекта [записи](./record-object-ado.md) .  
   
-|Константа|Значение|Описание:|  
+|Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**adSimpleRecord**|0|Указывает на *простую* запись (не содержит дочерних узлов).|  
 |**adCollectionRecord**|1|Указывает запись *коллекции* (содержит дочерние узлы).|  

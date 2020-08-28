@@ -3,7 +3,7 @@ description: Использование RDS и безопасность
 title: Использование RDS и безопасность | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b8ac3739-05d3-4818-8201-a763795fb8b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 686d3caeb7835d05a4e2eff0c588a4fb2ca18cf4
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 7f357ec4390c6006ba4b522404dc7f15cc4f627f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759494"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977815"
 ---
 # <a name="rds-usage-and-security"></a>Использование RDS и безопасность
 Используйте сведения в этом разделе, чтобы настроить сервер и быстро использовать RDS. В этом разделе приводятся конкретные действия по настройке, которые могут потребоваться при реализации RDS, описаны некоторые ключевые связи между RDS и другими технологиями, а также приведены решения проблем, которые могут возникнуть при настройке решения RDS.  

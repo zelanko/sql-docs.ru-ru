@@ -3,7 +3,7 @@ description: Общие сведения о файле настроек
 title: Общие сведения о файле настройки | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 18c7d09707a69967560765f880a3c6563de1506e
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 9b097d54015d9f48140aafb6feb360b8013edeaf
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759872"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977395"
 ---
 # <a name="understanding-the-customization-file"></a>Общие сведения о файле настроек
 Каждый заголовок раздела в файле настройки состоит из квадратных скобок (**[]**), содержащих тип и параметр. Четыре типа разделов обозначаются строковыми литералами **Connect**, **SQL**, **USERLIST**или **logs**. Параметр является строкой литерала, значением по умолчанию, идентификатором, заданным пользователем, или Nothing.  
@@ -45,7 +45,7 @@ identifier
 |Часть|Описание|  
 |----------|-----------------|  
 |**connect**;|Литеральная строка, которая изменяет строку подключения.|  
-|**sql**|Литеральная строка, которая изменяет командную строку.|  
+|**SQL**|Литеральная строка, которая изменяет командную строку.|  
 |**USERLIST**|Литеральная строка, которая изменяет права доступа конкретного пользователя.|  
 |**журналы**|Литеральная строка, указывающая, что в файле журнала регистрируются операционные ошибки.|  
 |**default**|Литеральная строка, используемая, если идентификатор не указан или не найден.|  

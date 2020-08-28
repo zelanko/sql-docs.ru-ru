@@ -3,7 +3,7 @@ description: Шаг 3. Сервер получает набор записей 
 title: Шаг 3. сервер получает набор записей (учебник по RDS) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9c6779c9-1208-4696-ac51-c39f3a6d9240
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 22664ed2943800702bbb12afe6900c1ca9bac6bd
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 494cf7a3be5206f5fd4f89d3f575989ce51002b9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759124"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977545"
 ---
 # <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>Шаг 3. Сервер получает набор записей (учебник по RDS)
 Серверная программа использует строку подключения и текст команды, чтобы запросить источник данных для нужных строк. ADO обычно используется для получения этого **набора записей**, хотя можно использовать и другие интерфейсы доступа к данным Майкрософт, например OLE DB.  

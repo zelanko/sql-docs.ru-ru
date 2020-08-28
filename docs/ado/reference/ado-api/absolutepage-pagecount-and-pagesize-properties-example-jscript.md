@@ -3,7 +3,7 @@ description: Пример свойств примеры absolutepage, PageCount 
 title: Примеры свойств примеры absolutepage, PageCount и PageSize (JScript) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2db6dd3f-5a9c-438c-ae62-d09242906c98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3f5fb6b387a48fd2c08945bd8047d16f44abaf0
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: c6f2d273b696f19286646525768bfa06a8fe6d55
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760024"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977304"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-jscript"></a>Пример свойств примеры absolutepage, PageCount и PageSize (JScript)
 В этом примере демонстрируются свойства примеры absolutepage, PageCount и PageSize. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **абсолутепажежс. ASP**.  

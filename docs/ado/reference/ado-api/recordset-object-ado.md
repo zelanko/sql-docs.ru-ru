@@ -3,7 +3,7 @@ description: Объект Recordset (ADO)
 title: Объект Recordset (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ede1415f-c3df-4cc5-a05b-2576b2b84b60
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d9fade9e23303c9adaa22cad9822381fd10bb513
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ff23c57ae3ecf25e7328d304f9716ad24f2aba7e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772273"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989744"
 ---
 # <a name="recordset-object-ado"></a>Объект Recordset (ADO)
 Представляет весь набор записей из базовой таблицы или результаты выполненной команды. В любой момент времени объект **Recordset** ссылается только на одну запись в наборе в качестве текущей записи.  

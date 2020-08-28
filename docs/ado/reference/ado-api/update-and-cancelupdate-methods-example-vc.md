@@ -3,7 +3,7 @@ description: Примеры методов Update и CancelUpdate (Visual C++)
 title: Примеры методов Update и CancelUpdate (Visual c++) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cc59d23a-2f38-42f9-8b65-ed89009e87ec
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 60f63706057acffa4e00954c6ff92d77503ec14f
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 9d8277ab358c7eb90737f4da5a0f118d3b087150
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777023"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988115"
 ---
 # <a name="update-and-cancelupdate-methods-example-vc"></a>Примеры методов Update и CancelUpdate (Visual C++)
 В этом примере демонстрируется метод [Update](./update-method.md) в сочетании с методом [CancelUpdate](./cancelupdate-method-ado.md) .  

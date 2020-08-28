@@ -3,7 +3,7 @@ description: Объект DataControl (служба удаленных рабо�
 title: Объект элемента управления (RDS) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f3b31721320c380606c3271b52ae2ad61c808379
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0a282cbb7773bd12aa20f1aad74263d8f287a1dc
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768503"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982475"
 ---
 # <a name="datacontrol-object-rds"></a>Объект DataControl (служба удаленных рабочих столов)
 Привязывает [набор записей](../ado-api/recordset-object-ado.md) запроса данных к одному или нескольким элементам управления (например, текстовому полю, элементу управления сетки или полю со списком) для вывода данных **набора записей** на веб-странице.  
