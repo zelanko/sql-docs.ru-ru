@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: c7e36c968a11b3aaa1e30b39ab120ffbac9bb08f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2fee6052dea18c25b093ee75b53c56b1dd053aad
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892057"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042504"
 ---
 # <a name="configure-polybase-scale-out-groups-on-windows"></a>Настройка масштабируемых групп PolyBase в Windows
 
@@ -34,7 +34,7 @@ ms.locfileid: "85892057"
   
 1. Установите одну и ту же версию SQL Server с PolyBase на все доступные компьютеры (N).
   
-2. Выберите один экземпляр SQL Server в качестве головного узла. Головным узлом можно назначить только экземпляр с установленным SQL Server Enterprise.
+2. Выберите один экземпляр SQL Server в качестве головного узла. 
   
 3. Добавьте в группу остальные экземпляры SQL Server в качестве вычислительных узлов с помощью [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md).
 

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: be72cfb4fd0645af7ca07ae8c1042ec41bf75052
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4c66ddc41fab7366d6419e1906a5bff2ce1b2d12
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882699"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042377"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Заметки о выпуске для SQL Server 2017 на Linux
 
@@ -654,7 +654,7 @@ sudo systemctl start mssql-server
 - [Установка в Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Установка в SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Установка в Ubuntu](quickstart-install-connect-ubuntu.md)
-- [Запуск в Docker](quickstart-install-connect-ubuntu.md)
+- [Запуск в Docker](quickstart-install-connect-docker.md)
 - [Подготовка виртуальной машины SQL в Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 - [Запуск и подключение — облако](quickstart-install-connect-clouds.md)
 
