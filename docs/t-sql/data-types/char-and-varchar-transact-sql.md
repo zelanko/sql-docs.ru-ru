@@ -25,12 +25,12 @@ ms.assetid: 282cd982-f4fb-4b22-b2df-9e8478f13f6a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc348a82811998366494fd2f9464209f44d12204
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dd9c5fc213462de6c1d4f7ddae0b3948957ffa0e
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422928"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042547"
 ---
 # <a name="char-and-varchar-transact-sql"></a>Типы char и varchar (Transact-SQL)
 
@@ -177,11 +177,18 @@ String                                       TruncatedValue
 
 ## <a name="see-also"></a>См. также раздел
 
-[nchar и nvarchar &#40;Transact-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)
-[CAST и CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
-[COLLATE &#40;Transact-SQL&#41;](../../t-sql/statements/collations.md)
-[Преобразование типа данных &#40;ядро СУБД&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)
-[Типы данных &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
+[nchar и nvarchar (Transact-SQL)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)
+
+[Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)
+
+[COLLATE (Transact-SQL)](../../t-sql/statements/collations.md)
+
+[Преобразование типов данных (ядро СУБД)](../../t-sql/data-types/data-type-conversion-database-engine.md)
+
+[Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
+
 [Оценка размера базы данных](../../relational-databases/databases/estimate-the-size-of-a-database.md)
+
 [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md)
+
 [Однобайтовые и многобайтовые кодировки](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)
