@@ -22,12 +22,12 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ca567df477cf06c6f40e7f9a2d7c8b4964eaa6f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1f59f8e08001ac926a0e129944753ecb40153217
+ms.sourcegitcommit: e103ae3f2d05431fdb8334aeaf1ed3b4fa1f593c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88377380"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89225204"
 ---
 # <a name="sysquery_store_runtime_stats-transact-sql"></a>sys. query_store_runtime_stats (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -94,11 +94,11 @@ ms.locfileid: "88377380"
 |**min_log_bytes_used**|**bigint**|Минимальное число байтов в журнале базы данных, используемом планом запроса, в пределах интервала статистической обработки.<br/>**Примечание.** Хранилище данных SQL Azure всегда будет возвращать ноль (0).|
 |**max_log_bytes_used**|**bigint**|Максимальное число байтов в журнале базы данных, используемое планом запроса, в пределах интервала статистической обработки.<br/>**Примечание.** Хранилище данных SQL Azure всегда будет возвращать ноль (0).|
 |**stdev_log_bytes_used**|**float**|Стандартное отклонение числа байтов в журнале базы данных, используемого планом запроса, в пределах интервала статистической обработки.<br/>**Примечание.** Хранилище данных SQL Azure всегда будет возвращать ноль (0).|  
-|**avg_tempdb_space_used**|**float**|Среднее число операций чтения страниц для плана запроса в пределах интервала агрегирования. (выражается числом считанных 8 КБ страниц).<br><br/>**Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|**last_tempdb_space_used**|**bigint**|Последнее число операций чтения страниц для плана запроса в пределах интервала агрегирования. (выражается числом считанных 8 КБ страниц).<br><br/>**Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|**min_tempdb_space_used**|**bigint**|Минимальное число операций чтения страниц для плана запроса в пределах интервала статистической обработки. (выражается числом считанных 8 КБ страниц).<br><br/>**Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|**max_tempdb_space_used**|**bigint**|Максимальное количество операций чтения страниц для плана запроса в пределах интервала статистической обработки. (выражается числом считанных 8 КБ страниц).<br><br/>**Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|**stdev_tempdb_space_used**|**float**|Число чтений страниц стандартное отклонение для плана запроса в пределах интервала агрегирования. (выражается числом считанных 8 КБ страниц).<br><br/>**Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**avg_tempdb_space_used**|**float**|Среднее число операций чтения страниц tempdb для плана запроса в пределах интервала агрегирования. (выражается числом считанных 8 КБ страниц).<br><br/>**Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**last_tempdb_space_used**|**bigint**|Последнее количество операций чтения страниц tempdb для плана запроса в пределах интервала агрегирования. (выражается числом считанных 8 КБ страниц).<br><br/>**Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**min_tempdb_space_used**|**bigint**|Минимальное число операций чтения страниц tempdb для плана запроса в пределах интервала статистической обработки. (выражается числом считанных 8 КБ страниц).<br><br/>**Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**max_tempdb_space_used**|**bigint**|Максимальное количество операций чтения страниц tempdb для плана запроса в пределах интервала статистической обработки. (выражается числом считанных 8 КБ страниц).<br><br/>**Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**stdev_tempdb_space_used**|**float**|Число считываний страниц базы данных tempdb со стандартным отклонением для плана запроса в пределах интервала агрегирования. (выражается числом считанных 8 КБ страниц).<br><br/>**Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
 |**avg_page_server_io_reads**|**float**|Среднее число операций чтения ввода-вывода сервера на странице для плана запроса в пределах интервала агрегирования. (выражается числом считанных 8 КБ страниц).<br><br/>**Применимо к:** Масштабирование базы данных SQL Azure</br>**Примечание.** Хранилище данных SQL Azure, база данных SQL Azure, Управляемый экземпляр Azure SQL (без масштабирования) всегда будет возвращать ноль (0).|
 |**last_page_server_io_reads**|**bigint**|Последнее число операций чтения ввода-вывода сервера на странице для плана запроса в пределах интервала агрегирования. (выражается числом считанных 8 КБ страниц).<br><br/>**Применимо к:** Масштабирование базы данных SQL Azure</br>**Примечание.** Хранилище данных SQL Azure, база данных SQL Azure, Управляемый экземпляр Azure SQL (без масштабирования) всегда будет возвращать ноль (0).|
 |**min_page_server_io_reads**|**bigint**|Минимальное число операций чтения ввода-вывода сервера на странице для плана запроса в пределах интервала агрегирования. (выражается числом считанных 8 КБ страниц).<br><br/>**Применимо к:** Масштабирование базы данных SQL Azure</br>**Примечание.** Хранилище данных SQL Azure, база данных SQL Azure, Управляемый экземпляр Azure SQL (без масштабирования) всегда будет возвращать ноль (0).|
@@ -108,7 +108,7 @@ ms.locfileid: "88377380"
 ## <a name="permissions"></a>Разрешения  
 Требуется разрешение `VIEW DATABASE STATE`.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sys. database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
  [sys. query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
  [sys. query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
