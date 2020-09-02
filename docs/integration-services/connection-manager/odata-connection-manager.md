@@ -80,7 +80,7 @@ ms.locfileid: "88496107"
  URL-адрес службы OData. Например: https://services.odata.org/V3/Northwind/Northwind.svc/.  
   
  **Аутентификация**  
-Выберите один из следующих вариантов.
+Выберите один из следующих параметров:
 -   **Проверка подлинности Windows**. Выберите этот режим для анонимного доступа.
 -   **Обычная проверка подлинности** 
 -   **Microsoft Dynamics AX Online** для Dynamics AX Online

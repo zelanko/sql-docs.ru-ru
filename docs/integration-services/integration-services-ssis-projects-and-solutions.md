@@ -92,7 +92,7 @@ ms.locfileid: "88449846"
   
  В обозревателе решений щелкните правой кнопкой мыши проект служб Integration Services и выберите пункт **Свойства**, чтобы открыть страницу свойств проекта. На вкладке **Общие** окна **Свойства конфигурации** выберите свойство **TargetServerVersion** и затем SQL Server 2017, SQL Server 2016, SQL Server 2014 или SQL Server 2012.  
   
- ![Свойство TargetServerVersion в диалоговом окне "Свойства проекта"](../integration-services/media/targetserverversion2.png "Свойство TargetServerVersion в диалоговом окне "Свойства проекта"")  
+ ![Свойство TargetServerVersion в диалоговом окне Свойства проекта](../integration-services/media/targetserverversion2.png "Свойство TargetServerVersion в диалоговом окне Свойства проекта")  
 
 ## <a name="create-a-new-integration-services-project"></a>Создание нового проекта служб Integration Services  
   

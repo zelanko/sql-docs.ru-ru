@@ -291,7 +291,7 @@ ms.locfileid: "88456876"
  Соединитель с SAP BW (Microsoft®) для Microsoft SQL Server® 2016 выпущен в составе пакета дополнительных компонентов SQL Server 2016. Скачать эти компоненты можно здесь: [Пакет дополнительных компонентов для Microsoft® SQL Server® 2016](https://go.microsoft.com/fwlink/?LinkID=746297).
  
 #### <a name="connectors-v40-for-oracle-and-teradata-released"></a><a name="oracleteradata"></a> Выпуск соединителей версии 4.0 для Oracle и Teradata
-Были выпущены соединители Майкрософт версии&4;.0 для Oracle и Teradata. Скачать их можно здесь: [соединители Microsoft версии 4.0 для Oracle и Teradata](https://www.microsoft.com/download/details.aspx?id=52950).
+Были выпущены соединители Майкрософт версии v4.0 для Oracle и Teradata. Скачать их можно здесь: [соединители Microsoft версии 4.0 для Oracle и Teradata](https://www.microsoft.com/download/details.aspx?id=52950).
 
 ### <a name="connectors-for-analytics-platform-system-pdw-appliance-update-5-released"></a><a name="pdwau5"></a> Выпуск соединителей для системы платформы аналитики (PDW) с обновлением 5
 Были выпущены адаптеры назначения для загрузки данных в PDW с AU5. Сведения о скачивании адаптеров см. в разделе [Analytics платформы System Appliance Update 5 Documentation и клиентские средства](https://www.microsoft.com/download/details.aspx?id=51610).
@@ -327,7 +327,7 @@ ms.locfileid: "88456876"
 
  В обозревателе решений щелкните правой кнопкой мыши проект служб Integration Services и выберите пункт **Свойства**, чтобы открыть страницу свойств проекта. На вкладке **Общие** окна **Свойства конфигурации** выберите свойство **TargetServerVersion** и затем SQL Server 2016, SQL Server 2014 или SQL Server 2012.  
    
- ![Свойство TargetServerVersion в диалоговом окне "Свойства проекта"](../integration-services/media/targetserverversion2.png "Свойство TargetServerVersion в диалоговом окне "Свойства проекта"")  
+ ![Свойство TargetServerVersion в диалоговом окне Свойства проекта](../integration-services/media/targetserverversion2.png "Свойство TargetServerVersion в диалоговом окне Свойства проекта")  
 
 > [!IMPORTANT]
 > При разработке пользовательских расширений для служб SSIS см. разделы [Поддержка нескольких версий в настраиваемых компонентах](../integration-services/extending-packages-custom-objects/support-multi-targeting-in-your-custom-components.md) и [Получение пользовательских расширений служб SSIS, поддерживаемых несколькими версиями SSDT 2015 для SQL Server 2016](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/).  

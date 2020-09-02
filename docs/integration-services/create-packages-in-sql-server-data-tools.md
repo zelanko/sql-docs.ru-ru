@@ -74,7 +74,7 @@ ms.locfileid: "88457570"
   
 2.  На вкладке **Общие** окна **Свойства конфигурации** выберите свойство **TargetServerVersion** и затем SQL Server 2016, SQL Server 2014 или SQL Server 2012.  
   
-     ![Свойство TargetServerVersion в диалоговом окне "Свойства проекта"](../integration-services/media/targetserverversion2.png "Свойство TargetServerVersion в диалоговом окне "Свойства проекта"")  
+     ![Свойство TargetServerVersion в диалоговом окне Свойства проекта](../integration-services/media/targetserverversion2.png "Свойство TargetServerVersion в диалоговом окне Свойства проекта")  
   
  Можно создавать, обслуживать и выполнять пакеты, предназначенные для версий SQL Server 2016, SQL Server 2014 или SQL Server 2012.  
   
