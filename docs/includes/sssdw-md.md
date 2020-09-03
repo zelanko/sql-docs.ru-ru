@@ -1,1 +1,1 @@
- Хранилище данных SQL 
+Azure Synapse Analytics (Хранилище данных SQL)
