@@ -1831,7 +1831,7 @@
           items:
             - name: Создание
               href: relational-databases/tables/create-edge-constraints.md
-            - name: Удалить
+            - name: DELETE
               href: relational-databases/tables/delete-edge-constraint.md
             - name: Изменить
               href: relational-databases/tables/modify-edge-constraint.md
@@ -6222,6 +6222,8 @@
               items:
                 - name: Стойкость шифрования асимметричных ключей
                   href: relational-databases/policy-based-management/asymmetric-keys-encryption-strength.md
+                - name: Файлы резервной копии и файлы базы данных на отдельных устройствах
+                  href: relational-databases/policy-based-management/backup-files-on-separate-devices-from-database-files.md
                 - name: Проверка на наличие проблем задержки в подсистеме дискового ввода-вывода
                   href: relational-databases/policy-based-management/check-disk-input-and-output-subsystem-for-io-delay-problems.md
                 - name: Проверка на наличие проблем повторного чтения в подсистеме дискового ввода-вывода
@@ -6230,6 +6232,8 @@
                   href: relational-databases/policy-based-management/check-integrity-of-database-with-suspect-pages.md
                 - name: Правильное перекрытие параметров affinity mask и affinity input-output mask
                   href: relational-databases/policy-based-management/correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md
+                - name: Модель восстановления базы данных
+                  href: relational-databases/policy-based-management/database-recovery-model.md
                 - name: Отключение предусмотренных по умолчанию файлов журнала трассировки
                   href: relational-databases/policy-based-management/default-trace-log-files-disabled.md
                 - name: Обнаружение неудачно завершившегося запроса ввода-вывода
@@ -6264,6 +6268,8 @@
                   href: relational-databases/policy-based-management/set-the-auto-close-database-option-to-off.md
                 - name: 'Задание значения параметра базы данных AUTO_SHRINK, равного OFF'
                   href: relational-databases/policy-based-management/set-the-auto-shrink-database-option-to-off.md
+                - name: Задание параметров сортировки пользовательских баз данных для сопоставления с базами данных master и шаблонами баз данных
+                  href: relational-databases/policy-based-management/set-collation-of-user-defined-databases-to-match-master-model-databases.md
                 - name: Задание параметра максимальной степени параллелизма для оптимальной производительности
                   href: relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md
                 - name: Задание значения CHECKSUM для параметра базы данных PAGE_VERIFY

@@ -5787,6 +5787,10 @@
       href: ../connect/ruby/step-2-create-a-sql-database-for-ruby-development.md
     - name: "Шаг\_3. Эксперимент, подразумевающий подключение к SQL с помощью Ruby"
       href: ../connect/ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md
+- name: Spark
+  items:
+    - name: Соединитель для SQL Server
+      href: ../connect/spark/connector.md
 - name: ADO
   items:
     - name: Объекты данных Microsoft ActiveX (ADO)

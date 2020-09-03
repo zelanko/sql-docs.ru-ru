@@ -84,10 +84,18 @@
           href: extensibility.md
         - name: Разработка расширений
           href: extension-authoring.md
-        - name: Создание расширений
-          href: tutorial-create-extension.md
         - name: API расширяемости
           href: extensibility-apis.md
+        - name: Расширение раскладки клавиатуры
+          href: extensions/keymap-extension.md
+        - name: Расширение панели мониторинга
+          href: extensions/dashboard-extension.md
+        - name: Расширение записной книжки
+          href: extensions/notebook-extension.md
+        - name: Расширение книги Jupyter
+          href: extensions/jupyter-book-extension.md
+        - name: Расширение мастера
+          href: extensions/wizard-extension.md
     - name: 'Интегрированный терминал (PowerShell, Bash)'
       href: integrated-terminal.md
     - name: сочетания клавиш
