@@ -21,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 55bfc4c575cae194b45e6aa7dbd01fbe38562a82
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6011eb41fd70ca892a940881ceee398a08983952
+ms.sourcegitcommit: ce5197686e8e2592f9e0a4b1a4e8ea0681e26c41
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460673"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89432656"
 ---
 # <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats (база данных SQL Azure)
 
@@ -37,7 +37,7 @@ ms.locfileid: "88460673"
 |Статистика|Тип|Описание|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|Имя базы данных.|  
-|**start_time**|**datetime2**|Дата и время начала интервала статистической обработки в формате UTC. Время всегда кратно 5 минутам. Например:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
+|**start_time**|**datetime2**|Дата и время начала интервала статистической обработки в формате UTC. Время всегда кратно 5 минутам. Пример:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|Дата и время окончания интервала статистической обработки в формате UTC. **End_time** всегда находится в течение 5 минут позже, чем соответствующая **start_time** в той же строке.|  
 |**success_count**|**int**|Число успешных соединений.|  
 |**total_failure_count**|**int**|Общее число неудачных попыток соединения. Это сумма **connection_failure_count**, **terminated_connection_count**и **throttled_connection_count**и не включает события взаимоблокировки.|  
@@ -45,7 +45,7 @@ ms.locfileid: "88460673"
 |**terminated_connection_count**|**int**|**_Применимо только для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] версии 11._**<br /><br /> Число прерванных соединений.|  
 |**throttled_connection_count**|**int**|**_Применимо только для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] версии 11._**<br /><br /> Число регулируемых соединений.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
   
 ### <a name="event-aggregation"></a>Статистическая обработка событий
 
@@ -97,10 +97,10 @@ start_time                    end_time
 ```sql
 SELECT *  
 FROM sys.database_connection_stats
-WHERE start_time>='2011-09-25:12:00:00' and end_time<='2011-09-28 12:00:00';  
+WHERE start_time>='2011-09-25 12:00:00' and end_time<='2011-09-28 12:00:00';  
 ```  
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
  [Устранение неполадок подключения к Базе данных SQL Azure](/azure/sql-database/sql-database-troubleshoot-common-connection-issues)  
   
