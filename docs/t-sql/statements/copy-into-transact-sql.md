@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 54216c027c01855ba5f140e1ad17accba3f9e7f9
-ms.sourcegitcommit: 71985f03656a30381b2498ac5393aaf86f670bf3
+ms.openlocfilehash: e2f225a66be811b3cafe13c0ccf89eb81700a1aa
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88602209"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901572"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (предварительная версия)
 
@@ -432,6 +432,15 @@ WITH (
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>Есть ли ограничения на число или размер файлов?
 Ограничение на количество или размер файлов отсутствует, но для лучшей производительности мы рекомендуем использовать файлы размером не менее 4 МБ.
 
+### <a name="are-there-any-limitations-with-copy-using-synapse-workspaces-preview"></a>Существуют ли какие-либо ограничения для инструкции COPY с использованием рабочих областей Synapse (предварительная версия)?
+
+Проверка подлинности с использованием управляемого удостоверения (MSI) не поддерживается инструкцией COPY или PolyBase (в том числе при использовании в конвейерах). Вы можете столкнуться с таким сообщением об ошибке:
+
+*com.microsoft.sqlserver.jdbc.SQLServerException: Managed Service Identity has not been enabled on this server. Please enable Managed Service Identity and try again.*  (Управляемое удостоверение службы отключено на этом сервере. Включите управляемое удостоверение службы и повторите попытку.)
+
+Проверка подлинности с использованием MSI требуется, когда учетная запись хранения связана с виртуальной сетью. Если ваша учетная запись хранения подключена к виртуальной сети, для загрузки данных вместо COPY или PolyBase используйте BCP или BULK INSERT.
+
+Это ограничение применимо только к пулам SQL, принадлежащим рабочей области Synapse (предварительная версия). Поддержка MSI будет включена в рабочих областях Synapse в предстоящем выпуске. 
 
 Отзывы и сообщения о проблемах направляйте на следующий адрес списка рассылки: sqldwcopypreview@service.microsoft.com
 

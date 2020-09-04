@@ -13,12 +13,12 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b5f8274b7d73bb0119b165b1cfbe65473b499d55
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eb279fea42cd37af2c0e215f8dcd66ddecb766cc
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479826"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042459"
 ---
 # <a name="dbcc-pdw_showspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 
@@ -51,7 +51,7 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
   
 ## <a name="result-sets"></a>Результирующие наборы
 
-Это результирующий набор для всех таблиц.
+Это результирующий набор для всех таблиц.  Перед созданием кэша для реплицированной таблицы Synapse результат DBCC отражает общий размер базовой таблицы циклического перебора из каждой транзакции.  После создания кэша результат отражает общий размер таблиц циклического перебора и кэша.   
   
 |Столбец|Тип данных|Description|  
 |------------|---------------|-----------------|  
@@ -71,7 +71,7 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
 |index_space|BIGINT|Пространство, используемое для индексов, в КБ.||  
 |unused_space|BIGINT|Пространство, которое является частью зарезервированного пространства и не используется, в КБ.||  
 |pdw_node_id|INT|Вычислительный узел, который применяется для предоставления сведений об использовании пространства.||  
-|distribution_id|INT|Распределение, которое применяется для предоставления сведений об использовании пространства.|Для реплицированных таблиц значение равно –1.|  
+|distribution_id|INT|Распределение, которое применяется для предоставления сведений об использовании пространства.|При использовании параллельного хранилища данных значение равно -1 для реплицируемых таблиц.|  
   
 ## <a name="examples-sssdw-and-sspdw"></a>Примеры: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="a-dbcc-pdw_showspaceused-basic-syntax"></a>A. Базовый синтаксис DBCC PDW_SHOWSPACEUSED  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e2e482b8-5f90-48c5-93fb-b412ed52659f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7338ef58a86667b829fc1554660b316690de451a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9848ba94687f6f4555492de868f32431b3e1de84
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425266"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042413"
 ---
 # <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>Подключение к хранилищу BLOB-объектов (мастер импорта и экспорта SQL Server)
 
@@ -52,7 +52,7 @@ ms.locfileid: "88425266"
  Укажите, какой протокол следует использовать для подключения к учетной записи хранения: HTTP или HTTPS.  
   
  **Use local developer account (Использовать локальную учетную запись разработчика)**  
- Укажите, следует ли использовать эмулятор хранения на локальном компьютере.  
+ Укажите, следует ли использовать эмулятор хранения Azure на локальном компьютере.  
   
  **Имя контейнера больших двоичных объектов**  
  Выберите контейнер в списке контейнеров хранилища, который доступен в указанной учетной записи хранения.  

@@ -11,18 +11,18 @@ ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 4b115c4249a0eded065ed95d45a7892ec1595911
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 187dcb7ca6da6802b60b36e2ae7f0fa5c66b0df1
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467546"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88858104"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL) 
 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-  Возвращает план запроса для инструкции [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] без выполнения инструкции. Используйте EXPLAIN, чтобы узнать, каким операциям потребуется перемещение данных, и определить предполагаемые затраты на операции запроса. `WITH RECOMMENDATIONS` применяется к Хранилищу данных SQL Azure (предварительная версия).
+  Возвращает план запроса для инструкции [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] без выполнения инструкции. Используйте EXPLAIN, чтобы узнать, каким операциям потребуется перемещение данных, и определить предполагаемые затраты на операции запроса. `WITH RECOMMENDATIONS` применяется к хранилищу данных SQL Azure.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,7 +37,7 @@ EXPLAIN [WITH_RECOMMENDATIONS] SQL_statement
 
  Инструкция [!INCLUDE[DWsql](../../includes/dwsql-md.md)], в которой будет выполняться команда EXPLAIN. Аргумент *SQL_statement* может быть любой из следующих команд: SELECT, INSERT, UPDATE, DELETE, CREATE TABLE AS SELECT, CREATE REMOTE TABLE.
 
-*WITH_RECOMMENDATIONS* (предварительная версия)
+*WITH_RECOMMENDATIONS* 
 
 Возвращает план запроса с рекомендациями по оптимизации производительности инструкции SQL.  
   

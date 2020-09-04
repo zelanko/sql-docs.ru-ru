@@ -18,12 +18,12 @@ ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c641b2562fa15f17bcb6ce235529916ca70a2a52
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 5a9be69bad3b4cad8265065d393bea75e107492f
+ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646324"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89195101"
 ---
 # <a name="create-unique-constraints"></a>Создание ограничений уникальности
 
@@ -63,9 +63,9 @@ ms.locfileid: "88646324"
   
 3.  В диалоговом окне **Индексы и ключи** нажмите **Добавить**.  
   
-4.  В сетке в разделе **Общие**щелкните **Тип** и выберите **Уникальный ключ** в раскрывающемся списке справа от свойства.  
+4.  В сетке в разделе **Общие** щелкните **Тип** и выберите **Уникальный ключ** в раскрывающемся списке справа от свойства, а затем щелкните **Закрыть**.  
   
-5.  В меню **Файл** выберите команду **Сохранить**_имя_таблицы_.  
+5.  В меню **Файл** выберите команду **Сохранить** _имя_таблицы_.  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
   
@@ -106,7 +106,7 @@ ms.locfileid: "88646324"
   
     ```  
   
-#### <a name="to-create-a-unique-constraint-in-an-new-table"></a>Создание ограничения уникальности в новой таблице  
+#### <a name="to-create-a-unique-constraint-on-a-new-table"></a>Создание ограничения уникальности в новой таблице  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

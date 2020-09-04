@@ -2,7 +2,7 @@
 description: Указания (Transact-SQL) — запросы
 title: Указания запросов (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 09/02/2019
+ms.date: 08/27/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -56,17 +56,17 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: a28e03cd2fb0d5af501f386f9b3a39f7045fd2a9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 28dd70e39079b8c49d38ea0e165224c0d88b7cdd
+ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459217"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89195110"
 ---
 # <a name="hints-transact-sql---query"></a>Указания (Transact-SQL) — запросы
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-Подсказки в запросе указывают, что для запроса должна использоваться заданная подсказка. Они влияют на все операторы в инструкции. Если в основном запросе используется операция UNION, только последний запрос, использующий ее, может содержать предложение OPTION. Подсказки в запросе указываются как часть предложения [OPTION](../../t-sql/queries/option-clause-transact-sql.md). Если оптимизатор запросов не сформирует допустимый план из-за одного или нескольких указаний запроса, возникает ошибка 8622.  
+Указания запросов определяют, что выбранные указания используются в области запроса. Они влияют на все операторы в инструкции. Если в основном запросе используется операция UNION, только последний запрос, использующий ее, может содержать предложение OPTION. Подсказки в запросе указываются как часть предложения [OPTION](../../t-sql/queries/option-clause-transact-sql.md). Если оптимизатор запросов не сформирует допустимый план из-за одного или нескольких указаний запроса, возникает ошибка 8622.  
   
 > [!CAUTION]  
 > Поскольку оптимизатор запросов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обычно выбирает лучший план выполнения запроса, использовать подсказки рекомендуется только опытным разработчикам и администраторам баз данных в самом крайнем случае.  
@@ -86,38 +86,38 @@ ms.locfileid: "88459217"
 ## <a name="syntax"></a>Синтаксис  
   
 ```syntaxsql
-<query_hint > ::=   
+<query_hint> ::=   
 { { HASH | ORDER } GROUP   
   | { CONCAT | HASH | MERGE } UNION   
   | { LOOP | MERGE | HASH } JOIN   
   | EXPAND VIEWS   
-  | FAST number_rows   
+  | FAST <integer_value>   
   | FORCE ORDER   
   | { FORCE | DISABLE } EXTERNALPUSHDOWN
   | { FORCE | DISABLE } SCALEOUTEXECUTION
   | IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX  
   | KEEP PLAN   
   | KEEPFIXED PLAN  
-  | MAX_GRANT_PERCENT = percent  
-  | MIN_GRANT_PERCENT = percent  
-  | MAXDOP number_of_processors   
-  | MAXRECURSION number   
+  | MAX_GRANT_PERCENT = <numeric_value>  
+  | MIN_GRANT_PERCENT = <numeric_value>  
+  | MAXDOP <integer_value>   
+  | MAXRECURSION <integer_value>   
   | NO_PERFORMANCE_SPOOL   
-  | OPTIMIZE FOR ( @variable_name { UNKNOWN | = literal_constant } [ , ...n ] )  
+  | OPTIMIZE FOR ( @variable_name { UNKNOWN | = <literal_constant> } [ , ...n ] )  
   | OPTIMIZE FOR UNKNOWN  
   | PARAMETERIZATION { SIMPLE | FORCED }   
-  | QUERYTRACEON trace_flag   
+  | QUERYTRACEON <integer_value>   
   | RECOMPILE  
   | ROBUST PLAN   
-  | USE HINT ( '<hint_name>' [ , ...n ] )
-  | USE PLAN N'xml_plan'  
-  | TABLE HINT ( exposed_object_name [ , <table_hint> [ [, ]...n ] ] )  
+  | USE HINT ( <use_hint_name> [ , ...n ] )
+  | USE PLAN N'<xml_plan>'  
+  | TABLE HINT ( <exposed_object_name> [ , <table_hint> [ [, ]...n ] ] )  
 }  
   
 <table_hint> ::=  
-[ NOEXPAND ] {   
-    INDEX ( index_value [ ,...n ] ) | INDEX = ( index_value )  
-  | FORCESEEK [( index_value ( index_column_name [,... ] ) ) ]  
+{ NOEXPAND [ , INDEX ( <index_value> [ ,...n ] ) | INDEX = ( <index_value> ) ]  
+  | INDEX ( <index_value> [ ,...n ] ) | INDEX = ( <index_value> )
+  | FORCESEEK [ ( <index_value> ( <index_column_name> [,... ] ) ) ]  
   | FORCESCAN  
   | HOLDLOCK   
   | NOLOCK   
@@ -131,12 +131,33 @@ ms.locfileid: "88459217"
   | ROWLOCK   
   | SERIALIZABLE   
   | SNAPSHOT  
-  | SPATIAL_WINDOW_MAX_CELLS = integer  
+  | SPATIAL_WINDOW_MAX_CELLS = <integer_value>  
   | TABLOCK   
   | TABLOCKX   
   | UPDLOCK   
   | XLOCK  
 }  
+
+<use_hint_name> ::=
+{ 'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS'
+  | 'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES'
+  | 'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'
+  | 'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'
+  | 'DISABLE_DEFERRED_COMPILATION_TV'
+  | 'DISABLE_INTERLEAVED_EXECUTION_TVF'
+  | 'DISABLE_OPTIMIZED_NESTED_LOOP'
+  | 'DISABLE_OPTIMIZER_ROWGOAL'
+  | 'DISABLE_PARAMETER_SNIFFING'
+  | 'DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'
+  | 'DISABLE_TSQL_SCALAR_UDF_INLINING'
+  | 'DISALLOW_BATCH_MODE'
+  | 'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'
+  | 'ENABLE_QUERY_OPTIMIZER_HOTFIXES'
+  | 'FORCE_DEFAULT_CARDINALITY_ESTIMATION'
+  | 'FORCE_LEGACY_CARDINALITY_ESTIMATION'
+  | 'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'
+  | 'QUERY_PLAN_PROFILE' 
+}
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -158,12 +179,13 @@ EXPAND VIEWS
   
 Это указание запроса виртуально запрещает прямое использование индексированных представлений и индексов для индексированных представлений в плане запроса.  
   
-Индексированное представление сохраняет сокращенный вид, если на это представление есть прямая ссылка в части SELECT запроса. Представление также останется сокращенным, если указаны предложения WITH (NOEXPAND) или WITH (NOEXPAND, INDEX(index\_value_ [ **,** _...n_ ] ) ). Дополнительные сведения об указании запроса NOEXPAND см. в разделе [Использование NOEXPAND](../../t-sql/queries/hints-transact-sql-table.md#using-noexpand).  
+> [!NOTE]
+> Индексированное представление сохраняет сокращенный вид, если на это представление есть прямая ссылка в части SELECT запроса. Представление также останется сокращенным, если указаны предложения WITH (NOEXPAND) или WITH (NOEXPAND, INDEX( _<index\_value>_ [ **,** _...n_ ] ) ). Дополнительные сведения об указании запроса NOEXPAND см. в разделе [Использование NOEXPAND](../../t-sql/queries/hints-transact-sql-table.md#using-noexpand).  
   
 Это указание действует только на представления в части SELECT инструкции, в том числе в инструкциях INSERT, UPDATE, MERGE и DELETE.  
   
-FAST _number\_rows_  
-Указывает, что запрос оптимизирован для быстрого получения первых n строк (_number\_rows_). Это неотрицательное целое число. После возвращения первых n строк (_number\_rows_) запрос продолжает выполняться и возвращает полный результирующий набор.  
+FAST _<integer\_value>_  
+Определяет, что запрос оптимизирован для быстрого получения первых строк ( _<integer\_value>_ ). Это неотрицательное целое число. После возврата первых строк ( _<integer\_value>_ ) запрос продолжает выполняться и возвращает полный результирующий набор.  
   
 FORCE ORDER  
 Указывает, что при оптимизации запроса сохраняется порядок соединения, заданный синтаксисом запроса. Использование FORCE ORDER не влияет на возможный реверс ролей в оптимизаторе запросов.  
@@ -190,21 +212,21 @@ KEEPFIXED PLAN
 Принуждает оптимизатор запросов не перекомпилировать запрос при изменении статистики. Указание KEEPFIXED PLAN гарантирует, что запрос будет перекомпилирован только при изменении схемы базовых таблиц или при выполнении для них процедуры **sp_recompile**.  
   
 IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX       
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) и более поздних версий.  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]).  
   
 Предотвращает использование в запросе некластеризованного индекса columnstore с оптимизацией для памяти. Если в запросе содержится указание запроса, исключающее использование индекса columnstore, а также указание индекса для использования индекса columnstore, то данные указания будут конфликтовать между собой, и запрос вернет ошибку.  
   
-MAX_GRANT_PERCENT = _percent_     
+MAX_GRANT_PERCENT = <numeric_value>     
 **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
 
-Максимальный объем предоставленной памяти в PERCENT. Запрос гарантированно не превышает это ограничение. Реальное ограничение может быть ниже, если значение параметра Resource Governor ниже значения в этом указании. Допустимые значения — от 0 до 100.  
+Максимальный объем предоставленной памяти (PERCENT) от заданного ограничения. Запрос гарантированно не превышает это ограничение. Реальное ограничение может быть ниже, если значение параметра Resource Governor ниже значения в этом указании. Допустимые значения — от 0 до 100.  
   
-MIN_GRANT_PERCENT = _percent_        
+MIN_GRANT_PERCENT = <numeric_value>        
 **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 
-Минимальный размер предоставления памяти в PERCENT = % от ограничения по умолчанию. Запрос гарантированно получает MAX(required memory, min grant), поскольку для запуска запроса требуется по меньшей мере необходимый объем памяти. Допустимые значения — от 0 до 100.  
+Минимальный объем предоставленной памяти (PERCENT) от заданного ограничения. Запрос гарантированно получает `MAX(required memory, min grant)`, так как для запуска запроса требуется определенный минимальный объем памяти. Допустимые значения — от 0 до 100.  
  
-MAXDOP _number_      
+MAXDOP <integer_value>      
 **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 Переопределяет параметр конфигурации, задающий **максимальный уровень параллелизма**, в **sp_configure**. Также переопределяет Resource Governor для запроса, в котором указан этот параметр. Указание запроса MAXDOP может превысить значение, настроенное с помощью sp_configure. Если MAXDOP превышает значение, настроенное с помощью Resource Governor, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] использует значение MAXDOP из Resource Governor, как описано в статье [ALTER WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/alter-workload-group-transact-sql.md). Все семантические правила, используемые параметром конфигурации **max degree of parallelism**, применимы при использовании подсказки в запросе MAXDOP. Дополнительные сведения см. в разделе [Настройка параметра конфигурации сервера max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
@@ -212,7 +234,7 @@ MAXDOP _number_
 > [!WARNING]     
 > Если значение MAXDOP равно нулю, сервер выбирает максимальную степень параллелизма.  
   
-MAXRECURSION _number_     
+MAXRECURSION <integer_value>     
 Указывает максимальное число рекурсий, допустимых для данного запроса. _number_ представляет собой неотрицательное целое число от 0 до 32 767. Если указано значение 0, ограничения не применяются. Если этот параметр не указан, для сервера используется ограничение по умолчанию 100.  
   
 Если в процессе выполнения запроса достигнут указанный уровень MAXRECURSION (или уровень по умолчанию), выполнение запроса завершается и возвращается ошибка.  
@@ -226,7 +248,7 @@ NO_PERFORMANCE_SPOOL
   
 Запрещает добавление оператора очередей в планы запроса (за исключением тех планов, когда очередь необходима для гарантированного обеспечения допустимой семантики обновления). В некоторых сценариях оператор очередей может снизить производительность. Например, очередь использует базу данных tempdb, и за нее может возникнуть состязание при наличии множества параллельных запросов, выполняющихся с операциями очереди.  
   
-OPTIMIZE FOR ( _\@variable\_name_ { UNKNOWN | = _literal\_constant }_ [ **,** ..._n_ ] )     
+OPTIMIZE FOR ( _\@variable\_name_ { UNKNOWN | = <literal_constant> }_ [ **,** ..._n_ ] )     
 Указывает оптимизатору запросов, что при компиляции и оптимизации запросов нужно использовать конкретное значение для локальной переменной. Значение используется только в процессе оптимизации запроса, но не в процессе выполнения.  
   
 _\@variable\_name_  
@@ -254,10 +276,14 @@ PARAMETERIZATION { SIMPLE | FORCED }
   
 Значение SIMPLE дает оптимизатору запросов указание использовать простую параметризацию. Значение FORCED предписывает оптимизатору запросов использовать принудительную параметризацию. Дополнительные сведения см. в разделах [Принудительная параметризация](../../relational-databases/query-processing-architecture-guide.md#ForcedParam) и [Простая параметризация](../../relational-databases/query-processing-architecture-guide.md#SimpleParam) в руководстве по архитектуре обработки запросов.  
 
-QUERYTRACEON trace_flag    
-Этот параметр позволяет включить флаг трассировки, влияющий на план, только во время компиляции с одним запросом. Как и другие параметры уровня запроса, его можно использовать вместе со структурами плана, чтобы обеспечить соответствие тексту запроса, выполняемого из любого сеанса, и автоматически применять флаг трассировки, влияющий на план, при компиляции этого запроса. Параметр QUERYTRACEON поддерживается только для флагов трассировки оптимизатора запросов, указанных в таблице в разделе "Дополнительные сведения" и в разделе [Флаги трассировки](../database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Однако этот параметр не возвращает никаких ошибок и предупреждений, если используется неподдерживаемый номер флага трассировки. Если указанный флаг трассировки не относится к плану выполнения запроса, параметр будет игнорироваться без уведомления.
+QUERYTRACEON <integer_value>    
+Этот параметр позволяет включить флаг трассировки, влияющий на план, только во время компиляции с одним запросом. Как и другие параметры уровня запроса, его можно использовать вместе со структурами плана, чтобы обеспечить соответствие тексту запроса, выполняемого из любого сеанса, и автоматически применять флаг трассировки, влияющий на план, при компиляции этого запроса. Параметр QUERYTRACEON поддерживается только для флагов трассировки оптимизатора запросов. Дополнительные сведения см. в статье [о флагах трассировки](../database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
 
-В предложении OPTION можно указать более одного флага трассировки, если QUERYTRACEON trace_flag_number повторяется с разными номерами флагов трассировки.
+> [!NOTE]  
+> Но этот параметр не возвращает сообщение об ошибке или предупреждение, если используется неподдерживаемый номер флага трассировки. Если указанный флаг трассировки не относится к плану выполнения запроса, параметр будет игнорироваться без уведомления.
+
+> [!NOTE]  
+> Чтобы использовать в запросе несколько флагов трассировки, укажите одно указание QUERYTRACEON для каждого номера флага трассировки.
 
 RECOMPILE  
 Указывает [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] создать временный план для запроса, который будет немедленного удален после выполнения запроса. Созданный план запроса не заменяет план, хранимый в кэше, когда тот же запрос выполняется без указания RECOMPILE. Без указания подсказки RECOMPILE компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] кэширует планы запросов и использует их повторно. При компиляции планов запроса указание запроса RECOMPILE использует в запросе текущие значения локальных переменных. Если запрос находится в хранимой процедуре, всем параметрам присваиваются текущие значения.  
@@ -349,12 +375,12 @@ ROBUST PLAN
 > [!IMPORTANT] 
 > Некоторые указания USE HINT могут конфликтовать с флагами трассировки, включенными на глобальном уровне или уровне сеанса, или параметрами конфигурации области баз данных. В этом случае приоритет всегда имеет указание уровня запроса (USE HINT). Если USE HINT конфликтует с другим указанием запроса или флагом трассировки, включенным на уровне запроса (например, с помощью QUERYTRACEON), при попытке выполнить запрос [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выведет ошибку. 
 
-<a name="use-plan"></a> USE PLAN N'_xml\_plan_'  
+<a name="use-plan"></a> USE PLAN N' _<xml\_plan>_ '  
  Указывает оптимизатору запросов использовать существующий план запроса для запроса, определенного параметром **'** _xml\_plan_ **'** . Подсказку USE PLAN нельзя указывать в инструкциях INSERT, UPDATE MERGE и DELETE.  
   
-TABLE HINT **(** _имя\_предоставляемого\_объекта_ [ **,** \<table_hint> [ [ **,** ]..._n_ ] ] **)** . Применяет заданное табличное указание к таблице или представлению, которые соответствуют _имени\_предоставляемого\_объекта_. Табличные указания рекомендуется использовать в качестве подсказок в запросах только в контексте [структуры плана](../../relational-databases/performance/plan-guides.md).  
+TABLE HINT **(** _<exposed\_object\_name>_ [ **,** \<table_hint> [ [ **,** ]..._n_ ] ] **)** Позволяет применить заданное табличное указание к таблице или представлению, которые соответствуют _exposed\_object\_name_. Табличные указания рекомендуется использовать в качестве подсказок в запросах только в контексте [структуры плана](../../relational-databases/performance/plan-guides.md).  
   
- Аргумент _exposed\_object\_name_ может представлять одну из следующих ссылок:  
+ _<exposed\_object\_name>_ может представлять одну из следующих ссылок:  
   
 -   Если в предложении [FROM](../../t-sql/queries/from-transact-sql.md) используется псевдоним таблицы или представления, _exposed\_objeсt\_name_ совпадает с этим псевдонимом.  
   
@@ -362,17 +388,18 @@ TABLE HINT **(** _имя\_предоставляемого\_объекта_ [ **
   
  Если вы укажете _exposed\_object\_name_ без табличного указания, любые индексы, которые указаны в составе табличного указания для этого объекта в запросе, будут игнорироваться. Затем оптимизатор запросов определяет использование индексов. Эта методика позволяет устранить влияние табличного указания INDEX, если нет возможности изменить первоначальный запрос. См. пример К.  
   
-**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( _индекс\_значение_ [ ,..._n_ ] ) \| INDEX = ( _индекс\_значение_ ) \| FORCESEEK [ **(** _индекс\_значение_ **(** _индекс\_столбец\_имя_ [ **,** ... ] **))** ] \| FORCESCAN \| HOLDLOCK \| NOLOCK \| NOWAIT \| PAGLOCK \| READCOMMITTED \| READCOMMITTEDLOCK \| READPAST \| READUNCOMMITTED \| REPEATABLEREAD \| ROWLOCK \| SERIALIZABLE \| SNAPSHOT \| SPATIAL_WINDOW_MAX_CELLS \| TABLOCK \| TABLOCKX \| UPDLOCK \| XLOCK } — это табличное указание применяется в качестве указания запроса к таблице или представлению, которые соответствуют *имени_предоставляемого_объекта*. Описание этих указаний см. в разделе [Табличные указания (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md).  
+**\<table_hint> ::=** { NOEXPAND [ , INDEX ( _<index\_value>_ [ ,...n ] ) | INDEX = ( _<index\_value>_ ) ] \| INDEX ( _<index\_value>_ [ ,...n ] ) | INDEX = ( _<index\_value>_ ) \| FORCESEEK [ **(** _<index\_value>_ **(** _<index\_column\_name>_ [ **,** ... ] **))** ] \| FORCESCAN \| HOLDLOCK \| NOLOCK \| NOWAIT \| PAGLOCK \| READCOMMITTED \| READCOMMITTEDLOCK \| READPAST \| READUNCOMMITTED \| REPEATABLEREAD \| ROWLOCK \| SERIALIZABLE \| SNAPSHOT \| SPATIAL_WINDOW_MAX_CELLS = _<integer\_value>_ \| TABLOCK \| TABLOCKX \| UPDLOCK \| XLOCK }    
+Табличное указание, применяемое в качестве указания запроса к таблице или представлению, которые соответствует *exposed_object_name*. Описание этих указаний см. в разделе [Табличные указания (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md).  
   
- Табличные указания, за исключением INDEX, FORCESCAN и FORCESEEK, не могут использоваться как указания запроса, кроме тех случаев, когда в запросе уже содержится предложение WITH, задающее табличное указание. Дополнительные сведения см. в подразделе "Примечания".  
+ Табличные указания, за исключением INDEX, FORCESCAN и FORCESEEK, не могут использоваться как указания запроса, кроме тех случаев, когда в запросе уже содержится предложение WITH, задающее табличное указание. Дополнительные сведения см. в разделе с [примечаниями](#remarks).  
   
 > [!CAUTION]
-> Указание FORCESEEK с параметрами ограничивает число планов, которые могут быть использованы оптимизатором, в отличие от указания FORCESEEK без параметров. Из-за этого может чаще возникать ошибка "Невозможно сформировать план". В будущих выпусках внутренние изменения оптимизатора могут привести к увеличению числа этих планов.  
+> Указав FORCESEEK с параметрами, вы ограничите число планов, которые может использовать оптимизатор запросов. Из-за этого может чаще возникать ошибка "Невозможно сформировать план". В будущем выпуске внутренние изменения оптимизатора запросов могут привести к увеличению числа этих планов.  
   
 ## <a name="remarks"></a>Remarks  
  Указания запросов нельзя задавать в инструкции INSERT, кроме случая, когда внутри инструкции используется предложение SELECT.  
   
- Указания запросов можно задавать только в запросах верхнего уровня, но не во вложенных запросах. Если табличное указание задается в качестве указания запроса, его можно определить в запросе верхнего уровня или во вложенном запросе. Но при этом значение _exposed\_object\_name_ в предложении TABLE HINT должно точно соответствовать имени, предоставленному в запросе или вложенном запросе.  
+ Указания запросов можно задавать только в запросах верхнего уровня, но не во вложенных запросах. Если табличное указание задается в качестве указания запроса, его можно определить в запросе верхнего уровня или во вложенном запросе. При этом значение _<exposed\_object\_name>_ в предложении TABLE HINT должно точно соответствовать имени, предоставленному в запросе или вложенном запросе.  
   
 ## <a name="specifying-table-hints-as-query-hints"></a>Определение табличных указаний как указаний запроса  
  Табличные указания INDEX, FORCESCAN или FORCESEEK рекомендуется использовать в качестве указаний запроса только в контексте [структуры плана](../../relational-databases/performance/plan-guides.md). Структуры планов полезны, когда нет возможности изменить первоначальный запрос, например, если он является приложением стороннего разработчика. Указание запроса, заданное в структуре плана, добавляется к запросу перед его компиляцией и оптимизацией. В автоматизированных запросах предложение TABLE HINT используется только при тестировании инструкций структуры планов. Для всех других нерегламентированных запросов рекомендуется задавать эти указания только как табличные.  
@@ -383,14 +410,12 @@ TABLE HINT **(** _имя\_предоставляемого\_объекта_ [ **
 -   Представления  
 -   Индексированные представления  
 -   Обобщенные табличные выражения (подсказку необходимо указывать в инструкции SELECT, результирующий набор которой заполняет обобщенное табличное выражение)  
--   Динамические административные представления  
+-   Динамические административные представления
 -   Именованные вложенные запросы  
   
 Вы можете указать табличные указания INDEX, FORCESCAN и FORCESEEK как указания запроса, если в этом запросе не существует табличных указаний. Кроме того, их можно использовать для замены в запросе существующих указаний INDEX, FORCESCAN или FORCESEEK соответственно. 
 
 Табличные указания, за исключением INDEX, FORCESCAN и FORCESEEK, не могут использоваться как указания запроса, кроме тех случаев, когда в запросе уже содержится предложение WITH, задающее табличное указание. В этом случае следует создать аналогичное указание в качестве указания запроса. Чтобы задать аналогичное указание в качестве указания запроса, включите TABLE HINT в предложение OPTION. Эта спецификация сохраняет семантику запроса. Например, если запрос содержит табличное указание NOLOCK, то предложение OPTION в параметре **\@hints** структуры плана также должно содержать указание NOLOCK. См. пример Л. 
-
-В ряде случаев возникает ошибка 8072. Во-первых, если табличное указание, отличное от INDEX, FORCESCAN и FORCESEEK, включено в TABLE HINT в предложении OPTION, но не существует аналогичного указания запроса. Во-вторых — в обратной ситуации. Эта ошибка означает, что предложение OPTION может изменить семантику запроса и запрос завершится с ошибкой.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -599,6 +624,7 @@ EXEC sp_create_plan_guide
     @hints = N'OPTION (TABLE HINT (e, NOLOCK))';  
 GO  
 ```  
+
 ### <a name="l-using-use-hint"></a>М. Указание USE HINT  
  В следующем примере используются указания запросов RECOMPILE и USE HINT. В этом примере используется база данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
@@ -608,6 +634,7 @@ WHERE City = 'SEATTLE' AND PostalCode = 98104
 OPTION (RECOMPILE, USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES', 'DISABLE_PARAMETER_SNIFFING')); 
 GO  
 ```  
+
 ### <a name="m-using-querytraceon-hint"></a>Н. Использование QUERYTRACEON HINT  
  В следующем примере используются указания запроса QUERYTRACEON. В этом примере используется база данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Можно включить все исправления, влияющие на план, которыми управляет флаг трассировки 4199, для конкретного запроса, используя следующий запрос:
   
@@ -624,7 +651,6 @@ SELECT * FROM Person.Address
 WHERE City = 'SEATTLE' AND PostalCode = 98104
 OPTION  (QUERYTRACEON 4199, QUERYTRACEON 4137);
 ```
-
 
 ## <a name="see-also"></a>См. также:  
 [Указания (Transact-SQL)](../../t-sql/queries/hints-transact-sql.md)   

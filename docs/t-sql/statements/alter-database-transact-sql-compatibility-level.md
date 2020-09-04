@@ -25,12 +25,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d470d95b2d6999d4f6825dce63a1a9c5b991d20a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1035d6b4cd6eedd12c2c9a193657fd8741488f2a
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426936"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901141"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)
 
@@ -82,7 +82,12 @@ COMPATIBILITY_LEVEL { 150 \| 140 \| 130 \| 120 \| 110 \| 100 \| 90 \| 80 } — 
 - Если уровень совместимости пользовательской базы данных до обновления был 100 или выше, после обновления он останется таким же.
 - Если уровень совместимости пользовательской базы данных до обновления был равен 90, в обновленной базе данных он получает значение 100, что соответствует минимальному поддерживаемому уровню совместимости в [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
 - Уровням совместимости баз данных tempdb, model, msdb и Resource задается значение уровня по умолчанию для заданной версии [!INCLUDE[ssDE](../../includes/ssde-md.md)]. 
-- Системная база данных master сохраняет уровень совместимости, который она имела до обновления.
+- Системная база данных master сохраняет уровень совместимости, который она имела до обновления. Это не повлияет на поведение пользовательской базы данных. 
+
+При использовании существующих баз данных, работающих на более низких уровнях совместимости, можно оставить прежний уровень совместимости базы данных, если приложению не нужно использовать улучшения, доступные только на более высоком уровне. Если вы разрабатываете новое приложение или включаете новые возможности в существующее, например [интеллектуальную обработку запросов](../../relational-databases/performance/intelligent-query-processing.md) или новые инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], спланируйте повышение уровня совместимости до последнего доступного. Дополнительные сведения см. в разделе [Уровни совместимости и обновления ядра СУБД](../../database-engine/install-windows/compatibility-certification.md#compatibility-levels-and-database-engine-upgrades).     
+
+> [!NOTE]
+> Если пользовательские объекты и зависимости отсутствуют, обновление уровня совместимости по умолчанию обычно происходит без проблем. Дополнительные сведения см. в разделе [Рекомендации](../../relational-databases/databases/master-database.md#recommendations).
 
 Измените уровень совместимости базы данных с помощью инструкции `ALTER DATABASE`. Новый параметр уровня совместимости для базы данных вступит в силу после выдачи `USE <database>` или обработки нового имени входа в этой базе данных в качестве контекста базы данных по умолчанию.
 Чтобы просмотреть текущий уровень совместимости базы данных, запросите столбец `compatibility_level` представления каталога [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).

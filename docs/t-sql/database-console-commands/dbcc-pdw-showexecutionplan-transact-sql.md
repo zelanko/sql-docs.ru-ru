@@ -13,12 +13,12 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b83bba2f706b88e6a11e8efb50aaf5be4c52c152
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a221857278cdd2e8b88d8f6f13084b4def9d3c88
+ms.sourcegitcommit: 173dbecfe78fd1bcc13a922b579a2bb9ad37b713
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417630"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88942307"
 ---
 # <a name="dbcc-pdw_showexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 
@@ -46,7 +46,7 @@ DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )
 
 ## <a name="arguments"></a>Аргументы  
  *distribution_id*  
- Идентификатор распределения, в котором выполняется план запроса. Это целое число; не может быть равно NULL. Используется при разработке для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
+ Идентификатор распределения, в котором выполняется план запроса. Это целое число; не может быть равно NULL. Значение должно находиться в диапазоне от 1 до 60. Используется при разработке для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   
  *pdw_node_id*  
  Идентификатор узла, в котором выполняется план запроса. Это целое число; не может быть равно NULL. Используется для устройства.  

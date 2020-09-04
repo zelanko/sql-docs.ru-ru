@@ -2,7 +2,7 @@
 description: CREATE EXTERNAL LIBRARY (Transact-SQL) — SQL Server
 title: CREATE EXTERNAL LIBRARY (Transact-SQL) — SQL Server | Документация Майкрософт
 ms.custom: ''
-ms.date: 06/10/2020
+ms.date: 08/26/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning
@@ -20,12 +20,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: a625b369deeeae69475c94350b30f68b4cc8e5cc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 244a70115f293b3723359cbb3966db37d240c186
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426716"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042487"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -148,7 +148,9 @@ WITH ( LANGUAGE = <language> )
 
 **library_name**
 
-Библиотеки добавляются в базу данных с областью, ограниченной пользователем. Имена библиотек должны быть уникальными в контексте определенного пользователя или владельца. Например, два пользователя **RUser1** и **RUser2** могут загрузить библиотеку R `ggplot2` индивидуально и по отдельности. Но если пользователь **RUser1** хочет отправить новую версию `ggplot2`, второму экземпляру нужно присвоить другое имя либо он должен заменить существующую библиотеку. 
+Библиотеки, загруженные в экземпляр, могут быть открытыми или закрытыми. Если библиотека создается членом `dbo`, она является открытой и может использоваться всеми пользователями. В противном случае библиотека является закрытой и доступна только этому пользователю.
+
+Имена библиотек должны быть уникальными в контексте определенного пользователя или владельца. Например, два пользователя **RUser1** и **RUser2** могут загрузить библиотеку R `ggplot2` индивидуально и по отдельности. Но если пользователь **RUser1** хочет отправить новую версию `ggplot2`, второму экземпляру нужно присвоить другое имя либо он должен заменить существующую библиотеку.
 
 Имена библиотек не могут присваиваться произвольным образом. Имя библиотеки должно быть таким же, как имя, необходимое для загрузки библиотеки из внешнего скрипта.
 
@@ -228,6 +230,8 @@ WITH ( LANGUAGE = <language> )
 Инструкция `CREATE EXTERNAL LIBRARY` загружает биты библиотеки в базу данных. Библиотека устанавливается, когда пользователь запускает внешний скрипт с помощью [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) и вызывает пакет или библиотеку.
 
 Библиотеки, загруженные в экземпляр, могут быть открытыми или закрытыми. Если библиотека создается членом `dbo`, она является открытой и может использоваться всеми пользователями. В противном случае библиотека является закрытой и доступна только этому пользователю.
+
+Набор пакетов, называемых *системными пакетами*, устанавливается в экземпляре SQL предварительно. Пользователь не может добавлять, обновлять и удалять системные пакеты.
 
 ## <a name="permissions"></a>Разрешения
 

@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: d75f734b3a45942155afaa7a85f4817fe868f3a0
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 1dd62f3d2d0a3ee3b63abd5d01fe33ba7dac196f
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778553"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88900962"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Параметры ALTER DATABASE SET (Transact-SQL)
 
@@ -753,13 +753,13 @@ ON
 Включает хранилище запросов.
 
 OFF      
-Отключает хранилище запросов. OFF — значение по умолчанию. FORCED является необязательным. FORCED прерывает все выполняющиеся фоновые задачи хранилища запросов и пропускает синхронный сброс, когда хранилище запросов отключается. Заставляет хранилище запросов выполнять отключение как можно быстрее. По сути отключает хранилище запросов немедленно. В [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] с накопительным выпуском исправлений 6 реализован параметр FORCED.
+Отключает хранилище запросов. OFF — значение по умолчанию. FORCED является необязательным. FORCED прерывает все выполняющиеся фоновые задачи хранилища запросов и пропускает синхронный сброс, когда хранилище запросов отключается. Приводит к максимально быстрому завершению работы хранилища запросов. FORCED применяется к [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 и более поздним сборкам.
 
 > [!NOTE]  
 > Хранилище запросов нельзя отключить в отдельной базе данных [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и эластичном пуле. При исполнении `ALTER DATABASE [database] SET QUERY_STORE = OFF` будет возвращено предупреждение `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`. 
 
 CLEAR     
-Удаляет содержимое хранилища запросов.
+Удаляет данные, связанные с запросами, из хранилища запросов. ALL является необязательным. ALL удаляет данные и метаданные, связанные с запросами, из хранилища запросов.
 
 OPERATION_MODE { READ_ONLY | READ_WRITE }     
 Описывает режим работы хранилища запросов.
@@ -1227,21 +1227,21 @@ NO_WAIT
 |\<db_user_access_option>|Да|Да|
 |\<db_update_option>|Да|Да|
 |\<delayed_durability_option>|Да|Да|
-|\<external_access_option>|Да|нет|
-|\<cursor_option>|Да|нет|
+|\<external_access_option>|Да|Нет|
+|\<cursor_option>|Да|Нет|
 |\<auto_option>|Да|Нет|
 |\<sql_option>|Да|Нет|
-|\<recovery_option>|Да|нет|
+|\<recovery_option>|Да|Нет|
 |\<target_recovery_time_option>|Нет|Да|
-|\<database_mirroring_option>|нет|Нет|
-|ALLOW_SNAPSHOT_ISOLATION|нет|нет|
-|READ_COMMITTED_SNAPSHOT|нет|Да|
+|\<database_mirroring_option>|Нет|Нет|
+|ALLOW_SNAPSHOT_ISOLATION|нет|Нет|
+|READ_COMMITTED_SNAPSHOT|Нет|Да|
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|Да|Да|
-|\<service_broker_option>|Да|нет|
+|\<service_broker_option>|Да|Нет|
 |DATE_CORRELATION_OPTIMIZATION|Да|Да|
 |\<parameterization_option>|Да|Да|
 |\<change_tracking_option>|Да|Да|
-|\<db_encryption_option>|Да|нет|
+|\<db_encryption_option>|Да|Нет|
 
 Кэш планов для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] очищается при установке одного из следующих параметров.
 
@@ -2200,20 +2200,20 @@ NO_WAIT
 
 |Категория параметров|Может быть указан с другими параметрами|Можно использовать предложение WITH \<termination>.|
 |----------------------|-----------------------------------------|---------------------------------------------|
-|\<auto_option>|Да|нет|
+|\<auto_option>|Да|Нет|
 |\<change_tracking_option>|Да|Да|
-|\<cursor_option>|Да|нет|
-|\<db_encryption_option>|Да|нет|
+|\<cursor_option>|Да|Нет|
+|\<db_encryption_option>|Да|Нет|
 |\<db_update_option>|Да|Да|
 |\<db_user_access_option>|Да|Да|
 |\<delayed_durability_option>|Да|Да|
 |\<parameterization_option>|Да|Да|
-|ALLOW_SNAPSHOT_ISOLATION|нет|нет|
-|READ_COMMITTED_SNAPSHOT|нет|Да|
+|ALLOW_SNAPSHOT_ISOLATION|нет|Нет|
+|READ_COMMITTED_SNAPSHOT|Нет|Да|
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|Да|Да|
 |DATE_CORRELATION_OPTIMIZATION|Да|Да|
 |\<sql_option>|Да|нет|
-|\<target_recovery_time_option>|нет|Да|
+|\<target_recovery_time_option>|Нет|Да|
 
 ## <a name="examples"></a>Примеры
 
