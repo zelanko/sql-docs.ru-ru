@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9958fa6e7efe7b3bc42dd04aebc295f1ee2d0944
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 142783612b495d7968fec1574e182654ac83fb64
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476996"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480674"
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>Операции с данными многомерных выражений — UPDATE CUBE
 
 
-  Инструкция UPDATE CUBE используется для обратной записи данных в любую ячейку куба, которая суммируется с родительским элементом с помощью агрегатного выражения SUM. Дополнительные сведения и пример см. в подразделе «общее представление о выделении» этой записи блога: [Создание приложения обратной записи с Analysis Services (блог)](https://go.microsoft.com/fwlink/?LinkId=394977).  
+  Инструкция UPDATE CUBE используется для обратной записи данных в любую ячейку куба, которая суммируется с родительским элементом с помощью агрегатного выражения SUM. Дополнительные сведения и пример см. в подразделе «общее представление о выделении» этой записи блога: [Создание приложения обратной записи с Analysis Services (блог)](https://docs.microsoft.com/archive/blogs/data_otaku/building-a-writeback-application-with-analysis-services).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -53,7 +53,7 @@ UPDATE [ CUBE ] Cube_Name
  *Weight_Expression*  
  Допустимое числовое многомерное выражение, возвращающее десятичное значение от 0 до 1.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Можно обновить значение указанной конечной или неконечной ячейки куба, по желанию размещая значение для указанной неконечной ячейки в зависимых конечных ячейках. Ячейка, указанная кортежным выражением, может представлять любую ячейку многомерного пространства (другими словами, ячейка необязательно должна быть конечной). Однако ячейка должна быть агрегирована с помощью статистической функции [Sum](../mdx/sum-mdx.md) и не должна содержать вычисляемый элемент в кортеже, который используется для его обнаружения.  
   
  Может оказаться полезным рассматривать инструкцию **Update Cube** как подпрограммы, которая автоматически создает ряд отдельных операций обратной записи в ячейках для конечных и неконечных ячеек, которые будут сведены в указанную сумму.  
@@ -107,7 +107,7 @@ Weight_Expression = <leaf cell value> / <existing value>
 > [!IMPORTANT]  
 >  Если обновленные ячейки не пересекаются, свойство строки подключения **Update Isolation Level** может быть использовано для повышения производительности инструкции UPDATE CUBE.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
  [Инструкции обработки данных многомерных выражений &#40;многомерные выражения&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
   

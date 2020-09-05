@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f45667dad4466789823a8ff36ccc0b665f531db3
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 1aa72c49e5862621da193d4e4a400813c7cd0d91
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813928"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480596"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Новые возможности служб Master Data Services (MDS)
 
@@ -71,7 +71,7 @@ ms.locfileid: "85813928"
   
  Индекс с фрагментацией, превышающей 30 %, перестраивается оперативно. Во время перестроения производительность операций CRUD в соответствующей таблице снижается. Если производительность важна, рекомендуется запускать хранимую процедуру в нерабочие часы. Дополнительные сведения о фрагментации индексов см. в разделе [Reorganize and Rebuild Indexes](../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
- Дополнительные сведения см. в записи [Улучшения производительности и масштабирования в SQL Server 2016](https://go.microsoft.com/fwlink/p/?LinkId=615375)в блоге Master Data Services.  
+ Дополнительные сведения см. в записи [Улучшения производительности и масштабирования в SQL Server 2016](https://techcommunity.microsoft.com/t5/sql-server-integration-services/performance-and-scale-improvement-in-sql-server-2016/ba-p/388225)в блоге Master Data Services.  
   
 ##  <a name="improved-security"></a>Улучшенная безопасность  
   
@@ -123,7 +123,7 @@ ms.locfileid: "85813928"
   
 -   Переименование и скрытие атрибутов имени и кода.  
   
- Дополнительные сведения см. в следующих статьях.  
+ Дополнительные сведения см. в следующих разделах:  
   
 -   [Модели (службы Master Data Services)](../master-data-services/models-master-data-services.md)  
   
@@ -232,7 +232,7 @@ ms.locfileid: "85813928"
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функции, поддерживаемые различными выпусками SQL Server 2016 служб Master Data Services и качества данных](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
  [Устаревшие функции Master Data Services](../master-data-services/deprecated-master-data-services-features.md)  
  [Неподдерживаемые функции служб Master Data Services](../master-data-services/discontinued-master-data-services-features.md)
