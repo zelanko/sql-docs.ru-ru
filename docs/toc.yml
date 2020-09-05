@@ -623,7 +623,7 @@
                   href: relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md
                 - name: Модуль записи VSS и SQL
                   href: relational-databases/backup-restore/sql-server-vss-writer-backup-guide.md
-            - name: Параметр Configuration
+            - name: Конфигурация
               items:
                 - name: Сжатие
                   href: relational-databases/backup-restore/backup-compression-sql-server.md
@@ -1831,7 +1831,7 @@
           items:
             - name: Создание
               href: relational-databases/tables/create-edge-constraints.md
-            - name: Удалить
+            - name: DELETE
               href: relational-databases/tables/delete-edge-constraint.md
             - name: Изменить
               href: relational-databases/tables/modify-edge-constraint.md
@@ -8621,7 +8621,7 @@
                     - name: 'Объекты, поддерживаемые мастером создания скриптов'
                       href: ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
                 - name: Редакторы запросов и текста
-                  href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
+                  href: 'https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15'
                   items:
                     - name: Редактор XML
                       href: ssms/scripting/xml-editor-sql-server-management-studio.md
