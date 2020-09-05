@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a8f4fd055394df55b96b8694621d430bbac6c320
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: b37c0ef345819c313bf2246df1dc01aec21d1299
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812841"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480330"
 ---
 # <a name="administrators-master-data-services"></a>Администраторы (службы Master Data Services)
 
@@ -72,9 +72,9 @@ ms.locfileid: "85812841"
 |Администратор сущности|Может быть администратором сущности на основе разрешений администратора, назначенных ему явно, либо на основе разрешений, полученных в результате членства в некоторой группе.<br /><br /> Имеет доступ только к тем функциональным областям, к которым разрешен доступ.<br /><br /> Автоматически имеет все разрешения на все объекты и элементы в конкретной сущности.<br /><br /> Может утвердить набор ожидающих изменений, если для изменений сущности требуется утверждение.|  
   
 ## <a name="external-resources"></a>Внешние ресурсы  
- Запись блога [Security Improvements](https://go.microsoft.com/fwlink/p/?LinkId=615376)(Улучшения безопасности) на портале msdn.com.  
+ Запись блога [Security Improvements](https://docs.microsoft.com/archive/blogs/e7/improvements-to-autoplay)(Улучшения безопасности) на портале msdn.com.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание администратора модели &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
  [Создание базы данных Master Data Services](../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [Уведомления (службы Master Data Services)](../master-data-services/notifications-master-data-services.md)  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fab6335b-4cae-47de-ae7c-6c4743e0680f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: eb71586e014d9f7faac664c12a57914272428a73
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9d96811924faed2d48c58a3fcc516536e63d7385
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461767"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480328"
 ---
 # <a name="model-object-permissions-master-data-services"></a>Разрешения объекта модели (службы Master Data Services)
 
@@ -41,7 +41,7 @@ ms.locfileid: "88461767"
  Как правило, рекомендуется назначить разрешение **Все** объекту модели, а затем явно назначить разрешение объектам на нижнем уровне.  
   
 ## <a name="external-resources"></a>Внешние ресурсы  
- Запись блога [Security Improvements](https://go.microsoft.com/fwlink/p/?LinkId=615376)(Улучшения безопасности) на портале msdn.com.  
+ Запись блога [Security Improvements](https://docs.microsoft.com/archive/blogs/e7/improvements-to-autoplay)(Улучшения безопасности) на портале msdn.com.  
   
 ## <a name="see-also"></a>См. также:  
  [Назначение разрешений объекта модели &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
