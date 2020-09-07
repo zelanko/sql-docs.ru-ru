@@ -14,31 +14,31 @@
   items:
     - name: Microsoft ADO.NET для SQL Server
       href: ../connect/ado-net/microsoft-ado-net-sql-server.md
-    - name: Начало работы с драйвером SqlClient
+    - name: Начало работы
       href: ../connect/ado-net/get-started-sqlclient-driver.md
       items:
-        - name: "Шаг\_1. Настройка среды разработки для разработки в ADO.NET"
+        - name: "Шаг\_1. Настройка среды разработки"
           href: ../connect/ado-net/step-1-configure-development-environment-ado-net-development.md
-        - name: "Шаг\_2. Создание базы данных SQL для разработки в ADO.NET"
+        - name: "Шаг\_2. Создание базы данных SQL"
           href: ../connect/ado-net/step-2-create-sql-database-ado-net-development.md
-        - name: "Шаг\_3. Эксперимент, подразумевающий подключение к SQL с помощью ADO.NET"
+        - name: "Шаг\_3. Эксперимент, подразумевающий подключение к SQL"
           href: ../connect/ado-net/step-3-connect-sql-ado-net.md
-        - name: "Шаг\_4. Выполнение устойчивого подключения к SQL с помощью ADO.NET"
+        - name: "Шаг\_4. Выполнение устойчивого подключения к SQL"
           href: ../connect/ado-net/step-4-connect-resiliently-sql-ado-net.md
-    - name: Общие сведения о драйвере SqlClient
+    - name: Обзор
       href: ../connect/ado-net/overview-sqlclient-driver.md
       items:
-        - name: Введение в пространство имен Microsoft.Data.SqlClient
+        - name: Пространство имен Microsoft.Data.SqlClient
           href: ../connect/ado-net/introduction-microsoft-data-sqlclient-namespace.md
-        - name: Скачивание поставщика данных Microsoft SqlClient для SQL Server
+        - name: Скачать
           href: ../connect/ado-net/download-microsoft-sqlclient-data-provider.md
-        - name: Включение трассировки событий в SqlClient
-          href: ../connect/ado-net/enable-eventsource-tracing.md
-        - name: Параметры AppContext в SqlClient
-          href: ../connect/ado-net/appcontext-switches.md
-        - name: Жизненный цикл поддержки драйвера SqlClient
+        - name: Жизненный цикл поддержки
           href: ../connect/ado-net/sqlclient-driver-support-lifecycle.md
-        - name: Поиск дополнительных сведений о драйвере SqlClient
+        - name: Включение трассировки событий
+          href: ../connect/ado-net/enable-eventsource-tracing.md
+        - name: Переключения AppContext
+          href: ../connect/ado-net/appcontext-switches.md
+        - name: Поиск дополнительных сведений
           href: ../connect/ado-net/find-additional-sqlclient-driver-information.md
     - name: SQL Server и ADO.NET
       href: ../connect/ado-net/sql/index.md
@@ -163,7 +163,43 @@
   items:
     - name: Microsoft JDBC Driver для SQL Server
       href: ../connect/jdbc/microsoft-jdbc-driver-for-sql-server.md
-    - name: Справочник интерфейса драйвера JDBC
+    - name: Начало работы
+      href: ../connect/jdbc/getting-started-with-the-jdbc-driver.md
+      items:
+        - name: "Шаг\_1. Настройка среды разработки"
+          href: ../connect/jdbc/step-1-configure-development-environment-for-java-development.md
+        - name: "Шаг\_2. Создание базы данных SQL"
+          href: ../connect/jdbc/step-2-create-a-sql-database-for-java-development.md
+        - name: "Шаг\_3. Эксперимент, подразумевающий подключение к SQL"
+          href: ../connect/jdbc/step-3-proof-of-concept-connecting-to-sql-using-java.md
+    - name: Обзор
+      href: ../connect/jdbc/overview-of-the-jdbc-driver.md
+      items:
+        - name: Скачать
+          href: ../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md
+        - name: Заметки о выпуске
+          href: ../connect/jdbc/release-notes-for-the-jdbc-driver.md
+        - name: Требования к системе
+          href: ../connect/jdbc/system-requirements-for-the-jdbc-driver.md
+        - name: Матрица поддержки
+          href: ../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md
+        - name: Использование драйвера
+          href: ../connect/jdbc/using-the-jdbc-driver.md
+        - name: Анализ результатов
+          href: ../connect/jdbc/parsing-the-results.md
+        - name: Использование useFMTOnly
+          href: ../connect/jdbc/using-usefmtonly.md
+        - name: Основные сведения о поддержке Java EE
+          href: ../connect/jdbc/understanding-java-ee-support.md
+        - name: Развертывание драйвера
+          href: ../connect/jdbc/deploying-the-jdbc-driver.md
+        - name: Поиск дополнительных сведений
+          href: ../connect/jdbc/finding-additional-jdbc-driver-information.md
+        - name: Часто задаваемые вопросы
+          href: ../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md
+        - name: Зависимости компонентов
+          href: ../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md
+    - name: Справочник по API
       href: ../connect/jdbc/reference/jdbc-driver-api-reference.md
       items:
         - name: Интерфейс ISQLServerCallableStatement
@@ -2498,43 +2534,7 @@
               items:
                 - name: Поле SSTRANSTIGHTLYCPLD (SQLServerXAResource)
                   href: ../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md
-    - name: Начало работы с драйвером JDBC
-      href: ../connect/jdbc/getting-started-with-the-jdbc-driver.md
-      items:
-        - name: "Шаг\_1. Настройка среды разработки для разработки на\_Java"
-          href: ../connect/jdbc/step-1-configure-development-environment-for-java-development.md
-        - name: "Шаг\_2. Создание базы данных SQL для разработки на\_Java"
-          href: ../connect/jdbc/step-2-create-a-sql-database-for-java-development.md
-        - name: "Шаг\_3. Подтверждение концепции: подключение к SQL с помощью\_Java"
-          href: ../connect/jdbc/step-3-proof-of-concept-connecting-to-sql-using-java.md
-    - name: Общие сведения о драйвере JDBC
-      href: ../connect/jdbc/overview-of-the-jdbc-driver.md
-      items:
-        - name: Скачивание драйвера Microsoft JDBC Driver for SQL Server
-          href: ../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md
-        - name: Анализ результатов
-          href: ../connect/jdbc/parsing-the-results.md
-        - name: Заметки о выпуске для драйвера JDBC
-          href: ../connect/jdbc/release-notes-for-the-jdbc-driver.md
-        - name: Требования к системе для драйвера JDBC
-          href: ../connect/jdbc/system-requirements-for-the-jdbc-driver.md
-        - name: Использование драйвера JDBC
-          href: ../connect/jdbc/using-the-jdbc-driver.md
-        - name: Использование useFMTOnly
-          href: ../connect/jdbc/using-usefmtonly.md
-        - name: Основные сведения о поддержке Java EE
-          href: ../connect/jdbc/understanding-java-ee-support.md
-        - name: Развертывание драйвера JDBC
-          href: ../connect/jdbc/deploying-the-jdbc-driver.md
-        - name: Поиск дополнительных сведений о драйвере JDBC
-          href: ../connect/jdbc/finding-additional-jdbc-driver-information.md
-        - name: Матрица поддержки драйвера Microsoft JDBC Driver for SQL Server
-          href: ../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md
-        - name: Вопросы и ответы по драйверу JDBC
-          href: ../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md
-        - name: Зависимости компонентов Microsoft JDBC Driver для SQL Server
-          href: ../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md
-    - name: Защита приложений драйвера JDBC
+    - name: Защита приложений
       href: ../connect/jdbc/securing-jdbc-driver-applications.md
       items:
         - name: Обеспечение безопасности строк подключений
@@ -2554,7 +2554,7 @@
               href: ../connect/jdbc/configuring-the-client-for-ssl-encryption.md
         - name: Режим FIPS
           href: ../connect/jdbc/fips-mode.md
-    - name: Повышение производительности и надежности с помощью драйвера JDBC
+    - name: Повышение производительности и надежности
       href: ../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md
       items:
         - name: Закрытие неиспользуемых объектов
@@ -2569,7 +2569,7 @@
           href: ../connect/jdbc/sparse-columns.md
         - name: Кэширование метаданных подготовленной инструкции для JDBC Driver
           href: ../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md
-    - name: Диагностика проблем с драйвером JDBC
+    - name: Диагностирование проблем
       href: ../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md
       items:
         - name: Обработка ошибок
@@ -2582,7 +2582,7 @@
           href: ../connect/jdbc/troubleshooting-connectivity.md
         - name: Доступ к диагностическим сведениям в журнале расширенных событий
           href: ../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md
-    - name: Примеры кода приложений драйвера JDBC
+    - name: Примеры кода приложений
       href: ../connect/jdbc/sample-jdbc-driver-applications.md
       items:
         - name: Соединение и извлечение данных
@@ -2621,7 +2621,7 @@
               href: ../connect/jdbc/updating-large-data-sample.md
         - name: Образец обнаружения и классификации данных
           href: ../connect/jdbc/data-discovery-classification-sample.md
-    - name: Соответствие требованиям и юридические аспекты использования драйвера JDBC для SQL
+    - name: Соответствие и юридическая информация
       href: ../connect/jdbc/compliance-and-legal-for-the-jdbc-sql-driver.md
       items:
         - name: Соответствие JDBC 4.1 для JDBC Driver
@@ -2630,25 +2630,25 @@
           href: ../connect/jdbc/jdbc-4-2-compliance-for-the-jdbc-driver.md
         - name: "Соответствие требованиям JDBC\_4.3 для JDBC Driver"
           href: ../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md
-    - name: Руководство по программированию для драйвера JDBC для SQL
+    - name: Руководство по программированию
       href: ../connect/jdbc/programming-guide-for-jdbc-sql-driver.md
       items:
-        - name: Соединение с SQL Server с помощью драйвера JDBC
+        - name: Подключение к SQL
           href: ../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md
-        - name: Основные сведения о типах данных драйвера JDBC
+        - name: Основные сведения о типах данных JDBC
           href: ../connect/jdbc/understanding-the-jdbc-driver-data-types.md
-        - name: Использование инструкций с драйвером JDBC
+        - name: Инструкции using
           href: ../connect/jdbc/using-statements-with-the-jdbc-driver.md
-        - name: Управление результирующими наборами с помощью драйвера JDBC
+        - name: Управление результирующими наборами
           href: ../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md
-        - name: Выполнение транзакций с помощью драйвера JDBC
+        - name: Выполнение транзакций
           href: ../connect/jdbc/performing-transactions-with-the-jdbc-driver.md
-        - name: Обработка метаданных с использованием драйвера JDBC
+        - name: Обработка метаданных
           href: ../connect/jdbc/handling-metadata-with-the-jdbc-driver.md
-        - name: Использование функции Always Encrypted с драйвером JDBC
+        - name: Использование Always Encrypted
           href: ../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md
           items:
-            - name: Использование Always Encrypted с безопасными анклавами с драйвером JDBC
+            - name: Использование Always Encrypted с безопасными анклавами
               href: ../connect/jdbc/using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md
         - name: Статьи руководства
           items:
@@ -2777,17 +2777,19 @@
   items:
     - name: Драйвер Node.js для SQL Server
       href: ../connect/node-js/node-js-driver-for-sql-server.md
-    - name: "Шаг\_1.  Настройка среды разработки для разработки на Node.js"
+    - name: "Шаг\_1.  Настройка среды разработки"
       href: ../connect/node-js/step-1-configure-development-environment-for-node-js-development.md
-    - name: "Шаг\_2. Создание базы данных SQL для разработки на Node.js"
+    - name: "Шаг\_2. Создание базы данных SQL"
       href: ../connect/node-js/step-2-create-a-sql-database-for-node-js-development.md
-    - name: "Шаг\_3. Подтверждение концепции, подразумевающее подключение к SQL с помощью Node.js"
+    - name: "Шаг\_3. Эксперимент, подразумевающий подключение к SQL"
       href: ../connect/node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js.md
 - name: ODBC
   items:
     - name: Microsoft ODBC Driver for SQL Server
       href: ../connect/odbc/microsoft-odbc-driver-for-sql-server.md
-    - name: Linux и Mac
+    - name: Скачать
+      href: ../connect/odbc/download-odbc-driver-for-sql-server.md
+    - name: Linux и macOS
       items:
         - name: Требования к системе
           href: ../connect/odbc/linux-mac/system-requirements.md
@@ -2797,7 +2799,7 @@
           href: ../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md
         - name: Установка драйвера ODBC (macOS)
           href: ../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md
-        - name: Руководства по компонентам
+        - name: Руководства по функциям
           items:
             - name: Ключевые слова строки подключения и имена источников данных (DSN)
               href: ../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md
@@ -2821,27 +2823,27 @@
           href: ../connect/odbc/linux-mac/release-notes-tools.md
         - name: Известные проблемы
           href: ../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md
-        - name: Часто задаваемые вопросы об ODBC в Linux и macOS
+        - name: Часто задаваемые вопросы
           href: ../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md
     - name: Windows
       items:
         - name: Драйвер Microsoft ODBC для SQL Server в Windows
           href: ../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md
-        - name: Функции Microsoft ODBC Driver for SQL Server в Windows
+        - name: Компоненты
           href: ../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md
         - name: Заметки о выпуске
           href: ../connect/odbc/windows/release-notes-odbc-sql-server-windows.md
         - name: 'Системные требования, установка и файлы драйвера'
           href: ../connect/odbc/windows/system-requirements-installation-and-driver-files.md
-        - name: Руководства по компонентам
+        - name: Руководства по функциям
           items:
-            - name: Устойчивость подключения в драйвере ODBC в Windows
+            - name: Устойчивость подключения
               href: ../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md
-            - name: Организация пулов соединений с учетом драйвера в ODBC Driver для SQL Server
+            - name: Организация пулов соединений с учетом драйвера
               href: ../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md
         - name: Образец асинхронного выполнения (метод уведомления)
           href: ../connect/odbc/windows/asynchronous-execution-notification-method-sample.md
-        - name: Разделы справки
+        - name: разделы справки
           items:
             - name: "Экран\_1 мастера источников данных"
               href: ../connect/odbc/windows/dsn-wizard-1.md
@@ -2853,7 +2855,7 @@
               href: ../connect/odbc/windows/dsn-wizard-4.md
             - name: 'SQL Server: диалоговое окно входа'
               href: ../connect/odbc/windows/sql-server-login-dialog.md
-    - name: Руководства по компонентам
+    - name: Руководства по функциям
       items:
         - name: Пользовательские поставщики хранилища ключей
           href: ../connect/odbc/custom-keystore-providers.md
@@ -2871,9 +2873,7 @@
           href: ../connect/odbc/use-xa-with-dtc.md
         - name: Исправления ошибок
           href: ../connect/odbc/bug-fixes.md
-    - name: "Скачивание драйвера ODBC Driver for SQL\_Server"
-      href: ../connect/odbc/download-odbc-driver-for-sql-server.md
-    - name: "Пример приложения с\_ODBC на\_C++"
+    - name: Пример приложения C++
       href: ../connect/odbc/cpp-code-example-app-connect-access-sql-db.md
     - name: "Расширенные параметры\_ODBC"
       items:
@@ -5083,15 +5083,15 @@
   items:
     - name: "Драйвер Microsoft OLE\_DB для SQL\_Server"
       href: ../connect/oledb/oledb-driver-for-sql-server.md
+    - name: Скачать
+      href: ../connect/oledb/download-oledb-driver-for-sql-server.md
     - name: Заметки о выпуске
       href: ../connect/oledb/release-notes-for-oledb-driver-for-sql-server.md
-    - name: Скачать драйвер Microsoft OLE DB для SQL Server
-      href: ../connect/oledb/download-oledb-driver-for-sql-server.md
     - name: Требования к системе
       href: ../connect/oledb/system-requirements-for-oledb-driver-for-sql-server.md
-    - name: "Когда использовать драйвер OLE\_DB для SQL\_Server"
+    - name: Сценарии использования OLE DB Driver
       href: ../connect/oledb/when-to-use-oledb-driver-for-sql-server.md
-    - name: "Дополнительные сведения о драйвере OLE\_DB для SQL\_Server"
+    - name: Дополнительные сведения
       href: ../connect/oledb/finding-more-oledb-driver-for-sql-server-information.md
     - name: Компоненты
       href: ../connect/oledb/features/oledb-driver-for-sql-server-features.md
@@ -5475,38 +5475,38 @@
   items:
     - name: Драйверы Microsoft SQL Server для PHP
       href: ../connect/php/microsoft-php-driver-for-sql-server.md
-    - name: Приступая к работе
+    - name: Начало работы
       href: ../connect/php/getting-started-with-the-php-sql-driver.md
       items:
-        - name: Шаг 1. Настройка среды разработки для разработки PHP
+        - name: "Шаг\_1. Настройка среды разработки"
           href: ../connect/php/step-1-configure-development-environment-for-php-development.md
-        - name: "Шаг\_2. Создание базы данных SQL для разработки на PHP"
+        - name: "Шаг\_2. Создание базы данных SQL"
           href: ../connect/php/step-2-create-a-sql-database-for-php-development.md
-        - name: Шаг 3. Подтверждение концепции путем подключения к SQL Server с помощью PHP
+        - name: "Шаг\_3. Эксперимент, подразумевающий подключение к SQL"
           href: ../connect/php/step-3-proof-of-concept-connecting-to-sql-using-php.md
-        - name: Шаг 4. Выполнение устойчивого подключения к SQL Server с помощью PHP
+        - name: "Шаг\_4. Выполнение устойчивого подключения к SQL"
           href: ../connect/php/step-4-connect-resiliently-to-sql-with-php.md
     - name: Обзор
       href: ../connect/php/overview-of-the-php-sql-driver.md
       items:
+        - name: Скачать
+          href: ../connect/php/download-drivers-php-sql-server.md
+        - name: Установка в Linux и macOS
+          href: ../connect/php/installation-tutorial-linux-mac.md
+        - name: Заметки о выпуске
+          href: ../connect/php/release-notes-php-sql-driver.md
         - name: Требования к системе
           href: ../connect/php/system-requirements-for-the-php-sql-driver.md
-        - name: Скачивание драйверов SQL Server для PHP
-          href: ../connect/php/download-drivers-php-sql-server.md
+        - name: Матрица поддержки
+          href: ../connect/php/microsoft-php-drivers-for-sql-server-support-matrix.md
         - name: Загрузка драйверов
           href: ../connect/php/loading-the-php-sql-driver.md
         - name: Настройка IIS
           href: ../connect/php/configuring-iis-for-php-sql-driver.md
-        - name: Учебник по установке драйверов PHP Linux и Mac
-          href: ../connect/php/installation-tutorial-linux-mac.md
-        - name: Заметки о выпуске
-          href: ../connect/php/release-notes-php-sql-driver.md
         - name: Ресурсы поддержки
           href: ../connect/php/support-resources-for-the-php-sql-driver.md
         - name: Сведения о примерах кода
           href: ../connect/php/about-code-examples-in-the-documentation.md
-        - name: Поддержка матрицы драйверов Майкрософт для PHP для SQL Server
-          href: ../connect/php/microsoft-php-drivers-for-sql-server-support-matrix.md
     - name: Руководство по программированию
       href: ../connect/php/programming-guide-for-php-sql-driver.md
       items:
@@ -5751,9 +5751,9 @@
     - name: Примеры кода
       href: ../connect/php/code-samples-for-php-sql-driver.md
       items:
-        - name: Пример приложения (драйвер PDO_SQLSRV)
+        - name: Пример приложения (PDO_SQLSRV)
           href: ../connect/php/example-application-pdo-sqlsrv-driver.md
-        - name: Пример приложения (драйвер SQLSRV)
+        - name: Пример приложения (SQLSRV)
           href: ../connect/php/example-application-sqlsrv-driver.md
 - name: Python
   items:
@@ -5762,30 +5762,30 @@
     - name: "Драйвер SQL Python\_— pyodbc"
       href: ../connect/python/pyodbc/python-sql-driver-pyodbc.md
       items:
-        - name: "Шаг\_1. Настройка среды разработки для использования pyodbc в Python"
+        - name: "Шаг\_1. Настройка среды разработки"
           href: ../connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md
-        - name: "Шаг\_2. Создание базы данных SQL для разработки с помощью Python pyodbc"
+        - name: "Шаг\_2. Создание базы данных SQL"
           href: ../connect/python/pyodbc/step-2-create-a-sql-database-for-pyodbc-python-development.md
-        - name: "Шаг\_3. Подтверждение концепции, подразумевающее подключение к SQL с помощью pyodbc"
+        - name: "Шаг\_3. Эксперимент, подразумевающий подключение к SQL"
           href: ../connect/python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md
     - name: "Драйвер SQL Python\_— pymssql"
       href: ../connect/python/pymssql/python-sql-driver-pymssql.md
       items:
-        - name: "Шаг\_1. Настройка среды разработки для разработки на Python в pymssql"
+        - name: "Шаг\_1. Настройка среды разработки"
           href: ../connect/python/pymssql/step-1-configure-development-environment-for-pymssql-python-development.md
-        - name: "Шаг\_2. Создание базы данных SQL для разработки на Python в pymssql"
+        - name: "Шаг\_2. Создание базы данных SQL"
           href: ../connect/python/pymssql/step-2-create-a-sql-database-for-pymssql-python-development.md
-        - name: "Шаг\_3. Подтверждение концепции, подразумевающее подключение к SQL с помощью pymssql"
+        - name: "Шаг\_3. Эксперимент, подразумевающий подключение к SQL"
           href: ../connect/python/pymssql/step-3-proof-of-concept-connecting-to-sql-using-pymssql.md
 - name: Ruby
   items:
     - name: Драйвер Ruby для SQL Server
       href: ../connect/ruby/ruby-driver-for-sql-server.md
-    - name: "Шаг\_1. Настройка среды разработки для разработки на языке Ruby"
+    - name: "Шаг\_1. Настройка среды разработки"
       href: ../connect/ruby/step-1-configure-development-environment-for-ruby-development.md
-    - name: "Шаг\_2. Создание базы данных SQL для разработки на языке Ruby"
+    - name: "Шаг\_2. Создание базы данных SQL"
       href: ../connect/ruby/step-2-create-a-sql-database-for-ruby-development.md
-    - name: "Шаг\_3. Эксперимент, подразумевающий подключение к SQL с помощью Ruby"
+    - name: "Шаг\_3. Эксперимент, подразумевающий подключение к SQL"
       href: ../connect/ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md
 - name: Spark
   items:
