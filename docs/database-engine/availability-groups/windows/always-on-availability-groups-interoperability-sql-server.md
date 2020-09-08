@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 26233c296fe6a53e66e45006eed854578a94243f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5a4f41009505a733eb58bef73f55697430550be3
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882418"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480592"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Группы доступности Always On: взаимодействие (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "85882418"
 
   [Руководство по миграции. Миграция на отказоустойчивую кластеризацию и группы доступности SQL Server 2012 с предшествующих кластеров и зеркальных отображений](https://blogs.msdn.microsoft.com/sqlalwayson/2012/04/09/now-available-migration-guide-migrating-to-sql-server-2012-failover-clustering-and-availability-groups-from-prior-clustering-and-mirroring-deployments/)
   [Блоги команды разработчиков SQL Server Always On: официальный блог по SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)
-  [Блоги инженеров CSS SQL Server](https://blogs.msdn.com/b/psssql/)
+  [Блоги инженеров CSS SQL Server](https://docs.microsoft.com/archive/blogs/psssql/)
 
 - **Технические документы**
 

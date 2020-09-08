@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 07b2ffa19412e46b555c9ef8b77372f1b401ea57
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9c80f16b6698b3190b3a32ebd48738a0be3eed6f
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477952"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480941"
 ---
 # <a name="integration-services-ssis-connections"></a>Соединения в службах Integration Services (SSIS)
 
@@ -342,7 +342,7 @@ ms.locfileid: "88477952"
   
 -   Статьи Wiki [Сетевые соединения служб SSIS](https://social.technet.microsoft.com/wiki/contents/articles/sql-server-integration-services-ssis.aspx#Connectivity)на сайте social.technet.microsoft.com  
   
--   Запись блога [Подключение к MySQL из SSIS](https://go.microsoft.com/fwlink/?LinkId=217669)на сайте blogs.msdn.com.  
+-   Запись блога [Подключение к MySQL из SSIS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/connecting-to-mysql-from-ssis/ba-p/387400)на сайте blogs.msdn.com.  
   
 -   Техническая статья [Извлечение и загрузка данных SharePoint в SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=247826)на сайте msdn.microsoft.com.  
   

@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4c92cc173544c1cd7985b3bf58d7ebd22ea100b6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 39f3bd57ced73fb4fb5f5d4a34232b9b2bd7c92e
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759144"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480572"
 ---
 # <a name="server-properties---connections-page"></a>Свойства сервера (страница "Соединения")
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "85759144"
  Просмотр текущих значений для параметров на этой панели. Эти значения доступны только для чтения.  
   
 ## <a name="see-also"></a>См. также:  
- [Параметры (Выполнение запросов: SQL Server: стандарт Страница "Дополнительно")](https://msdn.microsoft.com/library/3ec788c7-22c3-4216-9ad0-81a168d17074)   
+ [Параметры (Выполнение запросов: SQL Server: стандарт Страница "Дополнительно")](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio)   
  [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

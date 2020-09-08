@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 386e58e63ee0f629baf5c9ad3009c678a1a966d1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 16844bfb5c173fdb6527777950a8d80f1b177994
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456876"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480836"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Новые возможности служб Integration Services в SQL Server 2016
 
@@ -363,7 +363,7 @@ ms.locfileid: "88456876"
  Назначение обработки измерений не работает для табличных моделей с уровнем совместимости SQL 2016.  Для обработки табличных данных вам требуется только задача обработки служб Analysis Services и назначение обработки секций. 
 
 ####  <a name="support-for-built-in-r-services"></a><a name="builtinR"></a> Поддержка встроенных служб R  
- Службы SQL Server Integration Services (SSIS) уже поддерживают встроенные службы R в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Службы SSIS можно использовать не только для извлечения данных и загрузки выходных данных анализа, но и для сборки, выполнения и периодического повторного обучения моделей R. Дополнительные сведения см. в следующей записи блога: [Ввод в эксплуатацию проекта машинного обучения с помощью SQL Server 2016 SSIS и служб R](https://blogs.msdn.com/b/ssis/archive/2016/01/12/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services.aspx)(Operationalize your machine learning project using SQL Server 2016 SSIS and R Services). 
+ Службы SQL Server Integration Services (SSIS) уже поддерживают встроенные службы R в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Службы SSIS можно использовать не только для извлечения данных и загрузки выходных данных анализа, но и для сборки, выполнения и периодического повторного обучения моделей R. Дополнительные сведения см. в следующей записи блога: [Ввод в эксплуатацию проекта машинного обучения с помощью SQL Server 2016 SSIS и служб R](https://techcommunity.microsoft.com/t5/sql-server-integration-services/operationalize-your-machine-learning-project-using-sql-server/ba-p/388296)(Operationalize your machine learning project using SQL Server 2016 SSIS and R Services). 
 
 ####  <a name="rich-xml-validation-output-in-the-xml-task"></a><a name="ValidateXML"></a> Подробные данные о проверке XML в задачах XML  
  Активировав в задаче XML свойство **ValidationDetails** , вы сможете получить подробные результаты проверки XML-документа. До появления свойства **ValidationDetails** проверка XML в задачах XML возвращала информацию только о том, есть ошибка в документе или нет. Сведения о самих ошибках и их расположении были недоступны. Теперь, если для свойства **ValidationDetails** задать значение True, выходной файл будет содержать подробные сведения обо всех ошибках, включая номера строк и позиции. Эти сведения можно использовать для анализа, поиска и исправления ошибок в XML-документах. Дополнительные сведения см. в разделе [Validate XML with the XML Task](../integration-services/control-flow/validate-xml-with-the-xml-task.md).  

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: bde7cdd19ac66d30ceee0e73d6ea74ff5a66b2a8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e62b9f4c4de0db24294640cd2013f0fc4b0d6c7b
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717967"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480419"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Обзор процессов восстановления (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -174,7 +174,7 @@ ms.locfileid: "85717967"
   
 Дополнительные сведения о помощнике по восстановлению баз данных см. в блогах по управлению [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
--   [Помощник по восстановлению: общие сведения](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
+-   [Помощник по восстановлению: общие сведения](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-an-introduction)  
   
 -   [Помощник по восстановлению: использование среды SSMS для создания и восстановления раздельных резервных копий](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
 

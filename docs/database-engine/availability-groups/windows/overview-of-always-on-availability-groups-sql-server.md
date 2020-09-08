@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 545cb4fd872602e9af2f600c7b1cca7ee42a07b0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f24efc5f72b0be5b362e3af12ce8b7f21fd7d51b
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896397"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480262"
 ---
 # <a name="what-is-an-always-on-availability-group"></a>Что такое группа доступности Always On?
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -160,7 +160,7 @@ ms.locfileid: "85896397"
   
      [Блоги команды разработчиков SQL Server Always On: официальный блог по SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-     [Блоги инженеров CSS SQL Server](https://blogs.msdn.com/b/psssql/)  
+     [Блоги инженеров CSS SQL Server](https://docs.microsoft.com/archive/blogs/psssql/)  
   
 -   **Видеоролики**  
   

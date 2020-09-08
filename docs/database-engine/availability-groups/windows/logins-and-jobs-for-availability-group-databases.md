@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f474a8f2b5c9d0a22dcbec0caa6b34a369fef009
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 19c0e81facaeb2dc075c600809b2a756488217e4
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895324"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480652"
 ---
 # <a name="manage-logins-for-jobs-using-databases-in-an-always-on-availability-group"></a>Управление именами входа для заданий, использующих базы данных в группе доступности Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "85895324"
 > [!NOTE]  
 >  Эта проблема затрагивает локальные учетные записи Windows на разных компьютерах. Для доменных учетных записей эта проблема не возникает, поскольку идентификатор безопасности там один для всех компьютеров.  
   
- Дополнительные сведения см. в записи [Пользователи, утратившие связь с учетной записью при работе с зеркальным отображением базы данных и доставкой журналов](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (блог Database Engine).  
+ Дополнительные сведения см. в записи [Пользователи, утратившие связь с учетной записью при работе с зеркальным отображением базы данных и доставкой журналов](https://docs.microsoft.com/archive/blogs/sqlserverfaq/orphaned-users-with-database-mirroring-and-log-shipping) (блог Database Engine).  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   

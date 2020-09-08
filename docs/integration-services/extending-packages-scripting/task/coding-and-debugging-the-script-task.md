@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 203c87b39165330d7d58106c4a4d888af11e9751
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2012b96d3b6ddd9e257a47a3b5aed97f9a068c00
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430286"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480801"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>Написание кода и отладка задачи «Скрипт»
 
@@ -248,7 +248,7 @@ To open Help, press F1.
   
 ## <a name="external-resources"></a>Внешние ресурсы  
   
--   Запись в блоге [Затруднения при установке и настройке VSTA для установок SSIS 2008 и R2](https://go.microsoft.com/fwlink/?LinkId=215661) на сайте blogs.msdn.com.  
+-   Запись в блоге [Затруднения при установке и настройке VSTA для установок SSIS 2008 и R2](https://docs.microsoft.com/archive/blogs/jason_howell/vsta-setup-and-configuration-troubles-for-ssis-2008-and-r2-installations) на сайте blogs.msdn.com.  
   
 ## <a name="see-also"></a>См. также:  
  [Ссылки на другие сборки в решениях со скриптами](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)   

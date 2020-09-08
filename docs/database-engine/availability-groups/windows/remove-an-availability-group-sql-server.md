@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4b7f7f62-43a3-49db-a72e-22d4d7c2ddbb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a0cb28f11e04de833dba859bac3ac2a88544120b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d68a51bd65f7339b27e753c47585d85cf05002d2
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888042"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480751"
 ---
 # <a name="remove-an-availability-group-sql-server"></a>Удаление группы доступности (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "85888042"
 -   При использовании группы доступности в режиме «в сети» удаление этой группы из вторичной реплики приведет к переходу первичной реплики в состояние RESTORING. Если возможно, удаляйте группу доступности только с того экземпляра сервера, где размещена первичная реплика.    
 -   Если удалить группу доступности с компьютера, который был удален или исключен из отказоустойчивого кластера WSFC, группа доступности удаляется только локально. 
 -   Старайтесь не удалять группу доступности, если отказоустойчивый кластер Windows Server (WSFC) не имеет кворума. Если необходимо удалить группу доступности, когда нет кворума кластера, то группа доступности метаданных, хранимая в кластере, не удаляется. После того как кластер снова получит кворум, необходимо будет удалить группу доступности еще раз, чтобы удалить ее из кластера WSFC.    
--   На вторичной реплике команда DROP AVAILABILITY GROUP должна использоваться только в экстренных случаях. Это связано с тем, что удаление группы доступности переводит группу в режим «вне сети». При удалении группы доступности из вторичной реплики первичная реплика не может определить, возникло состояние OFFLINE из-за потери кворума, принудительного перехода на другой ресурс или команды DROP AVAILABILITY GROUP. Первичная реплика переходит в состояние RESTORING, чтобы избежать возможной ситуации с дроблением. Дополнительные сведения см. в статье [Поведение инструкции DROP AVAILABILITY GROUP](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (блог инженеров CSS SQL Server).  
+-   На вторичной реплике команда DROP AVAILABILITY GROUP должна использоваться только в экстренных случаях. Это связано с тем, что удаление группы доступности переводит группу в режим «вне сети». При удалении группы доступности из вторичной реплики первичная реплика не может определить, возникло состояние OFFLINE из-за потери кворума, принудительного перехода на другой ресурс или команды DROP AVAILABILITY GROUP. Первичная реплика переходит в состояние RESTORING, чтобы избежать возможной ситуации с дроблением. Дополнительные сведения см. в статье [Поведение инструкции DROP AVAILABILITY GROUP](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-drop-availability-group-behaviors) (блог инженеров CSS SQL Server).  
   
 ##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER. Для удаления группы доступности, которая не размещена на экземпляре локального сервера, необходимо разрешение CONTROL SERVER или разрешение CONTROL для этой группы доступности.  
@@ -101,7 +101,7 @@ ms.locfileid: "85888042"
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> См. также  
   
--   [Принцип работы. Поведение инструкции DROP AVAILABILITY GROUP](https://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (блог инженеров CSS SQL Server)  
+-   [Принцип работы. Поведение инструкции DROP AVAILABILITY GROUP](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-drop-availability-group-behaviors) (блог инженеров CSS SQL Server)  
   
 ## <a name="see-also"></a>См. также:  
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

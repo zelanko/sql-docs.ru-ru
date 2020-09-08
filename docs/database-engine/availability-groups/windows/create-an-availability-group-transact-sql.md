@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 214a1e1aedf3fcc07fa9bcb3367dc43968ea2e72
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3329a02d6e0db06de12587ef716956e74a7a8d61
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431286"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480834"
 ---
 # <a name="create-an-always-on-availability-group-using-transact-sql-t-sql"></a>Создание группы доступности Always On с помощью Transact-SQL (T-SQL)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -505,7 +505,7 @@ GO
   
      [Блоги команды разработчиков SQL Server Always On: официальный блог по SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-     [Блоги инженеров CSS SQL Server](https://blogs.msdn.com/b/psssql/)  
+     [Блоги инженеров CSS SQL Server](https://docs.microsoft.com/archive/blogs/psssql/)  
   
 -   **Видеоролики**  
   

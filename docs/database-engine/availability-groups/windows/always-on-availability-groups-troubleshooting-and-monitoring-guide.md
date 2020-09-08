@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: af11c20870da67f9b6004c4a277c17e277c1ffed
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 096e416b5abaf7e6c148cba469cd4f7453be092e
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922432"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480489"
 ---
 # <a name="monitor-and-troubleshoot-availability-groups"></a>Мониторинг и устранение неполадок групп доступности
  Это руководство поможет вам приступить к мониторингу групп доступности AlwaysOn и устранению некоторых распространенных проблем с ними. Оно предоставляет исходное содержимое, а также целевую страницу с полезной информацией, опубликованной в другом месте. Хотя это руководство не может полностью охватить все возможные проблемы с группами доступности, оно способно указать вам правильное направление для анализа первопричин и разрешения проблем. 
@@ -73,6 +73,6 @@ ms.locfileid: "82922432"
 
 ## <a name="next-steps"></a>Дальнейшие действия  
  [Блог группы разработчиков SQL Server AlwaysOn](https://docs.microsoft.com/archive/blogs/sqlalwayson/)   
- [Блоги инженеров CSS SQL Server](https://blogs.msdn.com/b/psssql/)  
+ [Блоги инженеров CSS SQL Server](https://docs.microsoft.com/archive/blogs/psssql/)  
   
   

@@ -23,19 +23,19 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 64294b819d05e46077fd6a94008d64fc60eb717f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 59a754655eff7c701a91013e686e7ff1105a4cfe
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426726"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283705"
 ---
 # <a name="create-external-resource-pool-transact-sql"></a>CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Создает внешний пул для определения ресурсов для внешних процессов. Пул ресурсов представляет подмножество физических ресурсов (память и ЦП) экземпляра ядра СУБД. Resource Governor может распределять ресурсы сервера по пулам ресурсов, используя до 64 пулов.
 
-::: moniker range="=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 Для [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] в [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] внешний пул управляет `rterm.exe`, `BxlServer.exe` и другими сформированными процессами.
 ::: moniker-end
 
@@ -44,9 +44,27 @@ ms.locfileid: "88426726"
 ::: moniker-end
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
-  
+ 
+
 ## <a name="syntax"></a>Синтаксис  
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+
+```syntaxsql
+CREATE EXTERNAL RESOURCE POOL pool_name  
+[ WITH (  
+    [ MAX_CPU_PERCENT = value ]  
+    [ [ , ] MAX_MEMORY_PERCENT = value ]  
+    [ [ , ] MAX_PROCESSES = value ]   
+    )   
+]  
+[ ; ]  
   
+<CPU_range_spec> ::=    
+{ CPU_ID | CPU_ID  TO CPU_ID } [ ,...n ]  
+```  
+::: moniker-end
+
+::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 ```syntaxsql
 CREATE EXTERNAL RESOURCE POOL pool_name  
 [ WITH (  
@@ -66,17 +84,28 @@ CREATE EXTERNAL RESOURCE POOL pool_name
 <CPU_range_spec> ::=    
 { CPU_ID | CPU_ID  TO CPU_ID } [ ,...n ]  
 ```  
-  
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+::: moniker-end
 
-> [!NOTE]
-> Службы машинного обучения SQL 2019 для Linux не поддерживают возможность задать сходство ЦП.
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Аргументы
 
 *pool_name*  
 Определяемое пользователем имя внешнего пула ресурсов. *pool_name* является буквенно-цифровым и может содержать до 128 символов. Этот аргумент должен быть уникальным внутри экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и должен соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md).  
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+MAX_CPU_PERCENT =*value*  
+Максимальная средняя пропускная способность ЦП для всех запросов во внешнем пуле ресурсов при возникновении состязания за ресурсы ЦП. *value* — целое число. Диапазон допустимых значений для *value* — от 1 до 100.
+
+
+MAX_MEMORY_PERCENT =*value*  
+Указывает общий объем памяти сервера, который может использоваться для запросов в данном внешнем пуле ресурсов. *value* — целое число. Диапазон допустимых значений для *value* — от 1 до 100.
+
+MAX_PROCESSES =*value*  
+Максимально допустимое количество процессов для внешнего пула ресурсов. Укажите 0, чтобы задать неограниченный порог для пула, который впоследствии ограничивается только ресурсами компьютера.
+::: moniker-end
+
+::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 MAX_CPU_PERCENT =*value*  
 Максимальная средняя пропускная способность ЦП для всех запросов во внешнем пуле ресурсов при возникновении состязания за ресурсы ЦП. *value* — целое число. Диапазон допустимых значений для *value* — от 1 до 100.
 
@@ -91,6 +120,7 @@ MAX_MEMORY_PERCENT =*value*
 
 MAX_PROCESSES =*value*  
 Максимально допустимое количество процессов для внешнего пула ресурсов. Укажите 0, чтобы задать неограниченный порог для пула, который впоследствии ограничивается только ресурсами компьютера.
+::: moniker-end
 
 ## <a name="remarks"></a>Remarks
 
@@ -108,6 +138,20 @@ MAX_PROCESSES =*value*
 
 Для внешнего пула использование ЦП ограничено 75 процентами. Максимальный объем памяти — 30 процентов доступной памяти на компьютере.
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+```sql
+CREATE EXTERNAL RESOURCE POOL ep_1
+WITH (  
+    MAX_CPU_PERCENT = 75
+    , MAX_MEMORY_PERCENT = 30
+);
+GO
+ALTER RESOURCE GOVERNOR RECONFIGURE;
+GO
+```
+::: moniker-end
+
+::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 ```sql
 CREATE EXTERNAL RESOURCE POOL ep_1
 WITH (  
@@ -119,7 +163,8 @@ GO
 ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO
 ```
-  
+::: moniker-end
+
 ## <a name="see-also"></a>См. также раздел
 
 + [Параметр конфигурации сервера «external scripts enabled»](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)

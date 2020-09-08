@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 99ea39318e06ba7fbaa6cf3e1147382bb1184a83
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2124351357d52e3389d0db1e58874ffcb46275d6
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88351850"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480707"
 ---
 # <a name="integration-services-ssis-server-and-catalog"></a>Сервер и каталог служб Integration Services (SSIS)
 
@@ -39,7 +39,7 @@ ms.locfileid: "88351850"
 ## <a name="high-availability"></a>Высокий уровень доступности  
  Как и другие пользовательские базы данных, база данных **SSISDB** поддерживает зеркальное отображение базы данных и репликацию. Дополнительные сведения о зеркальном отображении и репликации см. в разделе [Зеркальное отображение базы данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
- Также вы можете обеспечить высокий уровень доступности SSISDB и содержимого с помощью служб SSIS и групп доступности AlwaysOn. Дополнительные сведения см. в статье [Always On для каталога служб SSIS (SSISDB)](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb). Также см. запись в блоге Мэтта Мэссона (Matt Masson) [Службы SSIS с AlwaysOn](https://go.microsoft.com/fwlink/?LinkId=255873) на сайте blogs.msdn.com.  
+ Также вы можете обеспечить высокий уровень доступности SSISDB и содержимого с помощью служб SSIS и групп доступности AlwaysOn. Дополнительные сведения см. в статье [Always On для каталога служб SSIS (SSISDB)](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb). Также см. запись в блоге Мэтта Мэссона (Matt Masson) [Службы SSIS с AlwaysOn](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-with-alwayson/ba-p/388091) на сайте blogs.msdn.com.  
   
 ##  <a name="integration-services-server-in-sql-server-management-studio"></a><a name="ssms"></a> Сервер служб Integration Services в среде SQL Server Management Studio  
  При подключении к экземпляру [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , на котором размещена база данных **SSISDB** , в обозревателе объектов отображаются следующие объекты:  
@@ -61,6 +61,6 @@ ms.locfileid: "88351850"
 -   [Запуск пакетов служб Integration Services (SSIS)](../../integration-services/packages/run-integration-services-ssis-packages.md)  
   
 ## <a name="related-content"></a>См. также  
- Запись в блоге [Службы SSIS с AlwaysOn](https://go.microsoft.com/fwlink/?LinkId=255873) на сайте blogs.msdn.com.  
+ Запись в блоге [Службы SSIS с AlwaysOn](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-with-alwayson/ba-p/388091) на сайте blogs.msdn.com.  
   
   

@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6c37948d8af3aac4b78055f50e29aeb88f238bab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f6daf6002a66dcffc032e9953cf400f91d725d91
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477708"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480913"
 ---
 # <a name="lookup-transformation"></a>Преобразование «Уточняющий запрос»
 
@@ -172,7 +172,7 @@ ms.locfileid: "88477708"
  При выборе любого другого параметра в списке **Метод обработки строк без совпадающих элементов** , строки будут обрабатываться как ошибки. Параметр **Ошибка** доступен на странице **Вывод ошибок** .  
   
 ### <a name="external-resources"></a>Внешние ресурсы  
- Запись в блоге [Режимы кэша уточняющих запросов](https://go.microsoft.com/fwlink/?LinkId=219518) на сайте blogs.msdn.com  
+ Запись в блоге [Режимы кэша уточняющих запросов](https://www.timmitchell.net/post/2019/09/05/ssis-lookup-cache-modes/) на сайте blogs.msdn.com  
   
 ## <a name="lookup-transformation-editor-connection-page"></a>Редактор преобразования «Уточняющий запрос» (страница «Соединение»)
   Используйте страницу **Соединение** диалогового окна **Редактор преобразования «Уточняющий запрос»** для выбора диспетчера соединения. При выборе диспетчера соединений OLE DB также выбирается и запрос, таблица или представление для формирования эталонного набора данных.  
@@ -219,7 +219,7 @@ ms.locfileid: "88477708"
  Просмотрите предварительные результаты, используя диалоговое окно **Предварительный просмотр результатов запроса** . В окне предварительного просмотра может отображаться до 200 строк.  
   
 ### <a name="external-resources"></a>Внешние ресурсы  
- Запись в блоге [Режимы кэша уточняющих запросов](https://go.microsoft.com/fwlink/?LinkId=219518) на сайте blogs.msdn.com  
+ Запись в блоге [Режимы кэша уточняющих запросов](https://www.timmitchell.net/post/2019/09/05/ssis-lookup-cache-modes/) на сайте blogs.msdn.com  
   
 ## <a name="lookup-transformation-editor-columns-page"></a>Редактор преобразования «Уточняющий запрос» (страница «Столбцы»)
   Используйте страницу **Столбцы** диалогового окна **Редактор преобразования «Уточняющий запрос»** , чтобы указать соединение между исходной и ссылочной таблицами и выбрать уточняющие столбцы из ссылочной таблицы.  
@@ -276,7 +276,7 @@ ms.locfileid: "88477708"
  Сопоставить входные столбцы с параметрами, используя диалоговое окно **Установка параметров запроса** .  
   
 ### <a name="external-resources"></a>Внешние ресурсы  
- Запись в блоге [Режимы кэша уточняющих запросов](https://go.microsoft.com/fwlink/?LinkId=219518) на сайте blogs.msdn.com  
+ Запись в блоге [Режимы кэша уточняющих запросов](https://www.timmitchell.net/post/2019/09/05/ssis-lookup-cache-modes/) на сайте blogs.msdn.com  
   
 ## <a name="see-also"></a>См. также  
  [Преобразование «Нечеткий уточняющий запрос»](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
