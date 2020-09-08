@@ -17,14 +17,14 @@ helpviewer_keywords:
 - file backups [SQL Server], backupfile system table
 - backupfile system table
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4a4caafa49aca29e1093ffb6304b292bcd5c7735
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e59789c2d4de9174a43b34881e7b45a914cfd2c3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492825"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89525650"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88492825"
 |**page_size**|**int**|Размер страницы в байтах.|  
 |**file_number**|**numeric (10, 0)**|Идентификационный номер файла уникален в пределах базы данных (соответствует **sys. database_files**.** file_id**).|  
 |**backed_up_page_count**|**numeric (10, 0)**|Количество страниц, для которых были созданы резервные копии. Может иметь значение NULL.|  
-|**file_type**|**char (1)**|Была создана резервная копия одного из файлов:<br /><br /> D = файл данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)];<br /><br /> L = журнал [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)];<br /><br /> F = полнотекстовый каталог.<br /><br /> Может иметь значение NULL.|  
+|**file_type**|**char(1)**|Была создана резервная копия одного из файлов:<br /><br /> D = файл данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)];<br /><br /> L = журнал [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)];<br /><br /> F = полнотекстовый каталог.<br /><br /> Может иметь значение NULL.|  
 |**source_file_block_size**|**numeric (10, 0)**|Устройство, на котором во время создания резервной копии хранились первоначальные данные или журнальный файл. Может иметь значение NULL.|  
 |**file_size**|**numeric(20,0)**|Длина скопированного файла в байтах. Может иметь значение NULL.|  
 |**logical_name**|**nvarchar(128)**|Логическое имя файла, резервная копия которого создана. Может иметь значение NULL.|  
@@ -60,7 +60,7 @@ ms.locfileid: "88492825"
 |**is_readonly**|**bit**|1 = файл только для чтения.|  
 |**is_present**|**bit**|1 = файл содержится в резервном наборе данных.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Инструкция RESTORE VERIFYONLY из *backup_device* with LOADHISTORY заполняет столбцы таблицы **backupmediaset** соответствующими значениями из заголовка набора носителей.  
   
  Чтобы уменьшить количество строк в этой таблице и в других таблицах резервного копирования и журнала, выполните хранимую процедуру [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) .  
