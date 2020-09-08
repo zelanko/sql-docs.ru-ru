@@ -13,14 +13,14 @@ helpviewer_keywords:
 - SQL Server Agent [WMI]
 - WMI Provider for Server Events, about WMI Provider for Server Events
 ms.assetid: 8fd7bd18-76d0-4b28-8fee-8ad861441ab2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2218ed2c3eedafd1c6cab44096eaf356f0a8d492
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: df2e36110a9e4a52a3587644b96994bc040442e8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888170"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89519911"
 ---
 # <a name="understanding-the-wmi-provider-for-server-events"></a>Основные сведения о поставщике WMI для событий сервера
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "85888170"
   
  Управляющие приложения, такие как агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], могут получать доступ к событиям [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью поставщика WMI для событий сервера путем выполнения инструкций WMI Query Language (WQL). WQL является упрощенным подмножеством языка SQL с некоторыми расширениями, специфичными для WMI. При использовании языка WQL приложение получает тип события для определенной базы данных или объекта базы данных. Поставщик WMI для событий сервера преобразовывает запрос в уведомление о событии, создавая уведомление в базе данных-получателе. Дополнительные сведения о работе с уведомлениями о событиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Основные понятия поставщика WMI для событий сервера](https://technet.microsoft.com/library/ms180560.aspx). События, которые могут быть запрошены, перечислены в [поставщике WMI для классов и свойств событий сервера](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
   
- Когда возникает событие, запускающее уведомление о событии для отправки сообщения, оно переходит к предопределенной целевой службе в **базе данных msdb** с именем **SQL/Notifications/ProcessWMIEventProviderNotification/v 1.0**. Служба помещает событие в предопределенную очередь в **базе данных msdb** с именем **WMIEventProviderNotificationQueue**. (Служба и очередь создаются динамически поставщиком при первом соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .) Затем поставщик считывает данные о событиях из этой очереди и преобразует их в формат управляемых объектов (MOF) перед возвратом в приложение. На следующем рисунке показан этот процесс.  
+ Когда возникает событие, запускающее уведомление о событии для отправки сообщения, оно переходит к предопределенной целевой службе в **базе данных msdb** с именем **SQL/Notifications/ProcessWMIEventProviderNotification/v 1.0**. Служба помещает событие в предопределенную очередь в **базе данных msdb** с именем **WMIEventProviderNotificationQueue**. (Служба и очередь создаются динамически поставщиком при первом соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .) Затем поставщик считывает данные о событиях из этой очереди и преобразует их в формат управляемых объектов (MOF) перед возвратом в приложение. Данный процесс показан на следующем рисунке.  
   
  ![Блок-схема поставщика WMI для событий сервера](../../relational-databases/wmi-provider-server-events/media/wmi-provider-functional-spec.gif "Блок-схема поставщика WMI для событий сервера")  
   

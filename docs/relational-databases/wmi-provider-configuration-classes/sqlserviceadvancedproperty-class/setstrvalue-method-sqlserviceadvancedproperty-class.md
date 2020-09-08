@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetStrValue method
 ms.assetid: 1fededc3-81ba-4b08-83f9-189b96140799
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 86a0a552b8d6544a5ea42c175e04396d3dcc48a9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: edadbdf316eaa20a2a701621b82afa609607f721
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427126"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89520510"
 ---
 # <a name="setstrvalue-method-sqlserviceadvancedproperty-class"></a>Метод SetStrValue (класс SqlServiceAdvancedProperty)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -49,10 +49,10 @@ object.SetStrValue(StrValue)
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение uint32, равное 0, если служба изменена успешно, и 1, если запрос не поддерживается. Любое другое значение указывает на ошибку.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Чтобы задать строковое значение, свойство должно иметь тип *string* .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

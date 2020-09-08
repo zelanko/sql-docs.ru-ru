@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - HostName property
 ms.assetid: 3df0ca15-9eca-4cbd-8c39-cb00be6a0215
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 761d0a8b27f3c551907517bfb03751c4bd5434ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c3d347e4067f66d25e03b0af8e0cbb9228dd0a9b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485109"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89520743"
 ---
 # <a name="hostname-property-sqlservice-class"></a>Свойство HostName (класс SqlService)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +43,9 @@ object.HostName [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Строковое значение, определяющее имя узла службы.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   
