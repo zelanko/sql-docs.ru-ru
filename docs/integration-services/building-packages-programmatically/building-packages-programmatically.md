@@ -11,12 +11,12 @@ ms.topic: reference
 ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c6b35aa78b98a681ae7312db2bd9a7b1fb18f482
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 464bc971ca52c1363366ff439bcc5c51f32d5065
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457810"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480785"
 ---
 # <a name="building-packages-programmatically"></a>Программное построение пакетов
 
@@ -40,7 +40,7 @@ ms.locfileid: "88457810"
 > [!NOTE]  
 >  При использовании существующего пакета в качестве шаблона и при изменении существующих столбцов в потоке данных, может понадобиться удалить существующие столбцы и вызывать метод <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReinitializeMetaData%2A> затронутых компонентов.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Создание пакета программным способом](../../integration-services/building-packages-programmatically/creating-a-package-programmatically.md)  
  Описывает создание пакета программным образом.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "88457810"
   
 -   Образцы CodePlex, [Образцы продуктов служб Integration Services](https://go.microsoft.com/fwlink/?LinkID=131204)на сайте www.codeplex.com/MSFTISProdSamples  
   
--   Запись в блоге [Профилирование производительности пользовательских расширений](https://go.microsoft.com/fwlink/?LinkId=238831)на сайте blogs.msdn.com.  
+-   Запись в блоге [Профилирование производительности пользовательских расширений](https://techcommunity.microsoft.com/t5/sql-server-integration-services/performance-profiling-your-custom-extensions/ba-p/387490)на сайте blogs.msdn.com.  
 
 ## <a name="see-also"></a>См. также  
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  

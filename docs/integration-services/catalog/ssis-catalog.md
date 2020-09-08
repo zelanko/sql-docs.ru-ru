@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e507742ac9da235499749ed2345b25cfa11d87e9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c2050734b89c8b5ae74aa40316c9b1f980705dc3
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484913"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480296"
 ---
 # <a name="ssis-catalog"></a>Каталог служб SSIS
 
@@ -40,7 +40,7 @@ ms.locfileid: "88484913"
   
  Чтобы обеспечить поддержку базы данных **SSISDB** , рекомендуется применять предопределенные политики предприятия для управления пользовательскими базами данных. Дополнительные сведения о создании планов обслуживания см. в разделе [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md).  
   
- Каталог базы данных **SSISDB** и база данных **SSISDB** поддерживают Windows PowerShell. Дополнительные сведения об использовании SQL Server с Windows PowerShell см. в разделе [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md). Примеры использования Windows PowerShell для выполнения задач, например таких как развертывание проекта, см. в записи блога [SSIS и Powershell в SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539)на сайте blogs.msdn.com.  
+ Каталог базы данных **SSISDB** и база данных **SSISDB** поддерживают Windows PowerShell. Дополнительные сведения об использовании SQL Server с Windows PowerShell см. в разделе [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md). Примеры использования Windows PowerShell для выполнения задач, например таких как развертывание проекта, см. в записи блога [SSIS и Powershell в SQL Server 2012](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-and-powershell-in-sql-server-2012/ba-p/388015)на сайте blogs.msdn.com.  
   
  Дополнительные сведения о просмотре данных операций см. в разделе [Наблюдение за выполнением пакетов и других операций](../../integration-services/performance/monitor-running-packages-and-other-operations.md).  
   
@@ -360,7 +360,7 @@ ms.locfileid: "88484913"
   
     ```  
   
-     Дополнительные примеры использования Windows PowerShell и пространства имен <xref:Microsoft.SqlServer.Management.IntegrationServices> см. в записи блога [SSIS and PowerShell in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539) (Службы SSIS и PowerShell в SQL Server 2012) на сайте blogs.msdn.com. Общие сведения о пространстве имен и примеры кода см. в записи блога [Обзор модели управляемых объектов каталога служб SSIS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)на сайте blogs.msdn.com.  
+     Дополнительные примеры использования Windows PowerShell и пространства имен <xref:Microsoft.SqlServer.Management.IntegrationServices> см. в записи блога [SSIS and PowerShell in SQL Server 2012](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-and-powershell-in-sql-server-2012/ba-p/388015) (Службы SSIS и PowerShell в SQL Server 2012) на сайте blogs.msdn.com. Общие сведения о пространстве имен и примеры кода см. в записи блога [Обзор модели управляемых объектов каталога служб SSIS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)на сайте blogs.msdn.com.  
 
 ## <a name="catalog-properties-dialog-box"></a>Диалоговое окно свойств каталога
   Диалоговое окно свойств каталога служит для настройки каталога SSISDB. Свойства каталога определяют методы шифрования конфиденциальных данных, параметры хранения данных о версиях операций и проектов, а также время ожидания операций проверки. Каталог служб SSISDB представляет собой центральную точку хранения и администрирования проектов, пакетов, параметров и сред служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -677,8 +677,8 @@ SSISDB не поддерживает ограниченное делегиров
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> См. также  
   
--   Запись в блоге [Службы SSIS и Powershell в SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539)на сайте blogs.msdn.com.  
+-   Запись в блоге [Службы SSIS и Powershell в SQL Server 2012](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-and-powershell-in-sql-server-2012/ba-p/388015)на сайте blogs.msdn.com.  
   
--   Запись в блоге [Советы по управлению доступом к каталогу служб SSIS](https://go.microsoft.com/fwlink/?LinkId=246669)на сайте blogs.msdn.com.  
+-   Запись в блоге [Советы по управлению доступом к каталогу служб SSIS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-catalog-access-control-tips/ba-p/388057)на сайте blogs.msdn.com.  
   
 -   Запись [Обзор модели управляемых объектов каталога служб SSIS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)в блоге blogs.msdn.com.  

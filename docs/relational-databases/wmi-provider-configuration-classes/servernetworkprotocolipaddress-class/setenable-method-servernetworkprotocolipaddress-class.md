@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetEnable method
 ms.assetid: baa86deb-95dd-416f-b2c7-cec1dfb91ab4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 52f19e66fcb11941dadfcaf9e1bb85e8001b0b1f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c8ab50b50fa68f7d3c44d2790ce9f95304dc209c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446172"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89517073"
 ---
 # <a name="setenable-method-servernetworkprotocolipaddress-class"></a>Метод SetEnable (класс ServerNetworkProtocolIPAddress)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +43,9 @@ object.SetEnable()
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение **uint32** , равное 0, если служба изменена успешно, и 1, если запрос не поддерживается. Любое другое значение указывает на ошибку.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

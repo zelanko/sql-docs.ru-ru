@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce049f8c597526187ccce8ba7fdb498d8280cf1f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6e7467127593b5a853bf5c26df75e9bc52ff12e4
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455958"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480943"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Рекомендации по операциям с индексами в режиме "в сети"
 
@@ -73,7 +73,7 @@ ms.locfileid: "88455958"
 
 Дополнительные сведения см. в статье [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md).  
   
-## <a name="performance-considerations"></a>Вопросы производительности
+## <a name="performance-considerations"></a>Рекомендации по производительности
 
 Хотя операции с индексами в сети допускают одновременную работу пользователей, в этом случае они выполняются тем дольше, чем интенсивнее происходит обновление данных. Обычно операции с индексами в сети выполняются медленнее, чем аналогичные операции вне сети, независимо от текущей интенсивности обновления данных.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "88455958"
   
 Поскольку на финальной фазе удерживаются блокировки S-lock и Sch-M, будьте внимательны при выполнении операций с индексами в сети внутри явно объявленных пользовательских транзакций (например: в блоке BEGIN TRANSACTION...COMMIT), поскольку в этом случае блокировка будет удерживаться до окончания транзакции, мешая одновременной работе пользователей.  
   
-Перестроение индекса в сети может привести к увеличению фрагментации, когда оно выполняется с параметрами `MAX DOP > 1` и `ALLOW_PAGE_LOCKS = OFF` . Дополнительные сведения см. в статье [Как это работает. Перестроение индекса в сети может привести к увеличению фрагментации](https://blogs.msdn.com/b/psssql/archive/2012/09/05/how-it-works-online-index-rebuild-can-cause-increased-fragmentation.aspx).  
+Перестроение индекса в сети может привести к увеличению фрагментации, когда оно выполняется с параметрами `MAX DOP > 1` и `ALLOW_PAGE_LOCKS = OFF` . Дополнительные сведения см. в статье [Как это работает. Перестроение индекса в сети может привести к увеличению фрагментации](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-online-index-rebuild-can-cause-increased-fragmentation).  
   
 ## <a name="transaction-log-considerations"></a>Рекомендации по журналу транзакций
 

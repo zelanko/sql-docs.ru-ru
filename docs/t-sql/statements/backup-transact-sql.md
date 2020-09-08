@@ -47,12 +47,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e696c5f44059f47af6f4b27f030c2979a25c1b6d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7b2c1984b18596a8c1c527113232c7637d309359
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496925"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480862"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -440,7 +440,7 @@ BUFFERCOUNT **=** { *buffercount* |  **@** _buffercount\_variable_ } — опр
 Общий объем пространства, используемого буферами, определяется по следующей формуле: `BUFFERCOUNT * MAXTRANSFERSIZE`.
 
 > [!NOTE]
-> Важные сведения об использовании параметра `BUFFERCOUNT` см. в блоге [Неправильный параметр передачи данных BufferCount может привести к OOM](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx).
+> Важные сведения об использовании параметра `BUFFERCOUNT` см. в блоге [Неправильный параметр передачи данных BufferCount может привести к OOM](https://docs.microsoft.com/archive/blogs/sqlserverfaq/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition).
 
 MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } указывает наибольший объем пакета данных в байтах для обмена данными между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и носителем резервного набора. Поддерживаются значения, кратные 65 536 байтам (64 КБ), вплоть до 4 194 304 байт (4 МБ).
 
@@ -1057,7 +1057,7 @@ BUFFERCOUNT **=** { *buffercount* |  **@** _buffercount\_variable_ } — опр
 Общий объем пространства, используемого буферами, определяется по следующей формуле: `BUFFERCOUNT * MAXTRANSFERSIZE`.
 
 > [!NOTE]
-> Важные сведения об использовании параметра `BUFFERCOUNT` см. в блоге [Неправильный параметр передачи данных BufferCount может привести к OOM](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx).
+> Важные сведения об использовании параметра `BUFFERCOUNT` см. в блоге [Неправильный параметр передачи данных BufferCount может привести к OOM](https://docs.microsoft.com/archive/blogs/sqlserverfaq/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition).
 
 MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } указывает наибольший объем пакета данных в байтах для обмена данными между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и носителем резервного набора. Поддерживаются значения, кратные 65 536 байтам (64 КБ), вплоть до 4 194 304 байт (4 МБ).
 

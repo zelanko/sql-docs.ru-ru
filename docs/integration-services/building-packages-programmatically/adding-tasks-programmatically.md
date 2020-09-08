@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f0b5223a2f23760b5c3db8fe5d46c9e1af7a813e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1a14261bb60eece1497594a6aa70b46748ed8cd1
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457877"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480807"
 ---
 # <a name="adding-tasks-programmatically"></a>Программное добавление задач
 
@@ -415,7 +415,7 @@ End Module
 ```  
   
 ## <a name="external-resources"></a>Внешние ресурсы  
- Запись в блоге [EzAPI — обновление для SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=243223) на сайте blogs.msdn.com.  
+ Запись в блоге [EzAPI — обновление для SQL Server 2012](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ezapi-updated-for-sql-server-2012/ba-p/388042) на сайте blogs.msdn.com.  
 
 ## <a name="see-also"></a>См. также:  
  [Соединение задач программным образом](../../integration-services/building-packages-programmatically/connecting-tasks-programmatically.md)  

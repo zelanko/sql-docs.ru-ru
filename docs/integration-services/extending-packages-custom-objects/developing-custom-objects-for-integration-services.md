@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7af6ecdaf2ca7d56142e16b470ed9aeaebaa0e61
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b4887fd9ea7151c75940d919bcec128e4933f05b
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430586"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89479598"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>Разработка пользовательских объектов для служб Integration Services
 
@@ -113,7 +113,7 @@ ms.locfileid: "88430586"
   
 ## <a name="external-resources"></a>Внешние ресурсы  
   
--   Запись в блоге [Процесс построения решения Visual Studio выдает предупреждение о косвенной зависимости от сборки .NET Framework из-за ссылок служб SSIS](https://go.microsoft.com/fwlink/?LinkId=215662) на сайте blogs.msdn.com.  
+-   Запись в блоге [Процесс построения решения Visual Studio выдает предупреждение о косвенной зависимости от сборки .NET Framework из-за ссылок служб SSIS](https://docs.microsoft.com/archive/blogs/jason_howell/visual-studio-2010-solution-build-process-give-a-warning-about-indirect-dependency-on-the-net-framework-assembly-due-to-ssis-references) на сайте blogs.msdn.com.  
   
 ## <a name="see-also"></a>См. также:  
  [Сохранение пользовательских объектов](../../integration-services/extending-packages-custom-objects/persisting-custom-objects.md)   
