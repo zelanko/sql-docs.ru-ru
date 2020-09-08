@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SupportAlias property
 ms.assetid: 1e7a2e87-c356-40a6-a6d9-e492467629f9
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 24eb0c2099dc651ada4d796d9ad65cad747bc67a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6fb8143dd78695ad32028d520263beccdfee40b7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485238"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89521359"
 ---
 # <a name="supportalias-property-clientnetworkprotocol-class"></a>Свойство SupportAlias (класс ClientNetworkProtocol)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ object.SupportAlias [= value]
   
  если значение равно False, сетевой протокол клиента не поддерживает псевдонимы.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
   
 ## <a name="see-also"></a>См. также  
  [Настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx)  
