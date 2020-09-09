@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_table_privileges
 ms.assetid: 0512e688-4fc0-4557-8dc8-016672c1e3fe
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9eb21300720f43d68dc00953e5b760489596145d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0ef4f8bb0971c0f594d07d3f8926a6a4cdae8991
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481038"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549538"
 ---
 # <a name="sp_table_privileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
 
@@ -73,7 +73,7 @@ sp_table_privileges [ @table_name = ] 'table_name'
 |PRIVILEGE|**sysname**|Одно из доступных разрешений на таблицу. Разрешения на таблицу могут быть одним из следующих значений (или другими значениями, поддерживаемыми источником данных, если определена реализация).<br /><br /> SELECT = GRANTEE — может получать данные для одного или нескольких столбцов.<br /><br /> INSERT = GRANTEE — может предоставлять данные для новых строк для одного или нескольких столбцов.<br /><br /> UPDATE = GRANTEE — может изменять существующие данные для одного или нескольких столбцов.<br /><br /> DELETE = GRANTEE — может удалять строки из таблицы.<br /><br /> REFERENCES = GRANTEE — может ссылаться на столбец во внешней таблице в связи «первичный-внешний ключ». В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] связи «первичный ключ-внешний ключ» определяются с ограничениями таблицы.<br /><br /> Область действий, предоставляемая пользователю GRANTEE указанным правом доступа к таблице, зависит от источника данных. Например, права доступа UPDATE могут разрешить пользователю GRANTEE обновлять все столбцы таблицы при работе с одним источником данных и только те столбцы, для которых пользователь GRANTOR имеет разрешение UPDATE, при работе с другим источником данных.|  
 |IS_GRANTABLE|**sysname**|Указывает, может ли пользователь GRANTEE предоставлять разрешения другим пользователям (так называемые разрешения «право передачи»). Может иметь значение YES, NO или NULL. Неизвестное значение (или NULL) относится к источнику данных, к которому не применимо понятие «право передачи».|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Хранимая процедура sp_table_privileges эквивалентна функции ODBC SQLTablePrivileges. Возвращенные результаты упорядочиваются по столбцам TABLE_QUALIFIER, TABLE_OWNER, TABLE_NAME и PRIVILEGE.  
   
 ## <a name="permissions"></a>Разрешения  

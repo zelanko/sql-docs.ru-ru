@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setfilter
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: cf2b3eb0d8d71ce85ac7a5de4fddcd5a34ae97a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8edccbecb7d5a44b2fc8a5eed2297498c0f94bae
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480992"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547850"
 ---
 # <a name="sp_trace_setfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -89,10 +89,10 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |6|Указан недопустимый оператор сравнения.|  
 |7|Указан недопустимый логический оператор.|  
 |9|Указан недопустимый дескриптор трассировки.|  
-|13|Нехватка памяти. Возвращается, когда для выполнения указанного действия недостаточно памяти.|  
+|13|Недостаточно памяти. Возвращается, когда для выполнения указанного действия недостаточно памяти.|  
 |16|Недопустимая функция для данной трассировки.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **sp_trace_setfilter** — это [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранимая процедура, которая выполняет многие действия, ранее выполненные расширенными хранимыми процедурами, доступными в более ранних версиях служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Используйте **sp_trace_setfilter** вместо **xp_trace_set \* фильтрации** расширенных хранимых процедур для создания, применения и удаления фильтров в трассировке. Дополнительные сведения см. [в разделе Фильтрация трассировки](../../relational-databases/sql-trace/filter-a-trace.md).  
   
  Все фильтры для определенного столбца должны быть включены одновременно в одном выполнении **sp_trace_setfilter**. Например, если пользователь собирается применить два фильтра к столбцу имен приложений и один фильтр к столбцу имен пользователей, то ему потребуется указать фильтры для имен приложений последовательно. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает ошибку, когда пользователь пытается указать фильтр по имени приложения в пределах одного хранимого вызова процедуры, за которым указывается фильтр по имени пользователя, после чего — второй фильтр по имени приложения.  
@@ -112,7 +112,7 @@ sp_trace_setfilter  1, 11, 0, 0, N'joe';
 ```  
   
 ## <a name="see-also"></a>См. также  
- [sys. fn_trace_getfilterinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
+ [sys.fn_trace_getfilterinfo (Transact-SQL)](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
  [sys.fn_trace_getinfo (Transact-SQL)](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [Трассировка SQL](../../relational-databases/sql-trace/sql-trace.md)  
   

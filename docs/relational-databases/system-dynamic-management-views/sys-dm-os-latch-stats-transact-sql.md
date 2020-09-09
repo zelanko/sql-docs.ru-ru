@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_latch_stats dynamic management view
 ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 59624b04e417f2b1b7713adec784abca60303504
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1e4e29a7e416a5c3aebb109c871af00bbd31871a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88398530"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548554"
 ---
 # <a name="sysdm_os_latch_stats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "88398530"
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
 На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется  **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Представление динамического управления sys.dm_os_latch_stats может быть использовано для выявления источника состязания между кратковременными блокировками путем исследования относительного числа ожиданий и времени ожидания для различных классов кратковременных блокировок. В некоторых ситуациях возможно устранение состязания между кратковременными блокировками или снижение его остроты. Но возможны и такие ситуации, когда будет необходимо обратиться в службу поддержки пользователей [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
 Очистить содержимое представления sys.dm_os_latch_stats с помощью инструкции `DBCC SQLPERF` можно следующим образом.  
@@ -172,7 +172,7 @@ GO
 |SERVICE_BROKER_MIRROR_ROUTE|Только для внутреннего применения.|  
 |TRACE_ID|Только для внутреннего применения.|  
 |TRACE_AUDIT_ID|Только для внутреннего применения.|  
-|TRACE|Только для внутреннего применения.|  
+|трассировка|Только для внутреннего применения.|  
 |TRACE_CONTROLLER|Только для внутреннего применения.|  
 |TRACE_EVENT_QUEUE|Только для внутреннего применения.|  
 |TRANSACTION_DISTRIBUTED_MARK|Только для внутреннего применения.|  

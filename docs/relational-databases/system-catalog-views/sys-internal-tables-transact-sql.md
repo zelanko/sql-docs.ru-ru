@@ -19,14 +19,14 @@ helpviewer_keywords:
 - internal tables
 - sys.internal_tables catalog view
 ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 73be0af1fd81cfc415417ff2ff233bbfa5e6ca41
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c46f6a7f66ff9dfba0ebf9a7b4dfe4e39eef7033
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447944"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548743"
 ---
 # <a name="sysinternal_tables-transact-sql"></a>sys.internal_tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "88447944"
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Внутренние таблицы размещаются в той же файловой группе, что и родительская сущность. С помощью запроса к каталогу, проиллюстрированного далее в примере Е, можно узнать количество страниц, занимаемых внутренними таблицами под хранение данных «в строке», «вне строки» и данных больших объектов (LOB).  
   
  Для возврата данных об использовании места для внутренних таблиц можно использовать системную процедуру [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) . **sp_spaceused** сообщает внутреннее табличное пространство следующими способами:  
@@ -174,7 +174,7 @@ WHERE internal_type_desc = 'SERVICE_BROKER_MAP';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Представления каталога объектов (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
   

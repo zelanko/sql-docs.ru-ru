@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_cursor
 ms.assetid: 0c836c99-1147-441e-998c-f0a30cd05275
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 97f7d5b17fdd06199b11bfa82c6795407e28127f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c2e24c729dce92d05827466d9931916a9002adc1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493306"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548141"
 ---
 # <a name="sp_describe_cursor-transact-sql"></a>sp_describe_cursor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -79,7 +79,7 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 |cursor_name|**sysname**|Имя курсора из инструкции DECLARE CURSOR. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если курсор создан с помощью присваивания переменной курсора, cursor_name возвращает имя переменной курсора. В более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот выходной столбец возвращает имя, формируемое системой.|  
 |cursor_scope|**tinyint**|1 = LOCAL<br /><br /> 2 = GLOBAL|  
 |status|**int**|Те же значения, которые получены с помощью системной функции CURSOR_STATUS.<br /><br /> 1 = курсор, указанный ссылкой в имени или переменной курсора, открыт. Если курсор нечувствительный, статичный или является набором ключей, он имеет, по крайней мере, одну строку. Если курсор динамический, результирующий набор имеет ноль или более строк.<br /><br /> 0 = курсор, указанный ссылкой в имени или переменной курсора, открыт, но не имеет строк. Динамические курсоры не возвращают это значение.<br /><br /> -1 = курсор, указанный ссылкой в имени или переменной курсора, закрывается.<br /><br /> -2 = применимо только к переменным курсора. Нет курсора, назначенного переменной. Возможно, параметр OUTPUT назначил курсор переменной, но хранимая процедура закрыла курсор перед возвратом.<br /><br /> -3 = курсор или переменная курсора с заданным именем не существует либо переменной не выделен курсор.|  
-|model|**tinyint**|1 = нечувствительный (или статичный)<br /><br /> 2 = набор ключей<br /><br /> 3 = динамический<br /><br /> 4 = перемотка вперед|  
+|для базы данных модели|**tinyint**|1 = нечувствительный (или статичный)<br /><br /> 2 = набор ключей<br /><br /> 3 = динамический<br /><br /> 4 = перемотка вперед|  
 |параллелизм|**tinyint**|1 = только для чтения<br /><br /> 2 = блокирование прокрутки<br /><br /> 3 = оптимистический|  
 |scrollable|**tinyint**|0 = только вперед<br /><br /> 1 = возможна прокрутка|  
 |open_status|**tinyint**|0 = закрыт<br /><br /> 1 = открыт|  
@@ -90,7 +90,7 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 |last_operation|**tinyint**|Последняя операция, выполненная над курсором.<br /><br /> 0 = операции c курсором не выполнялись.<br /><br /> 1 = OPEN;<br /><br /> 2 = FETCH;<br /><br /> 3 = ВСТАВИТЬ<br /><br /> 4 = UPDATE;<br /><br /> 5 = DELETE;<br /><br /> 6 = CLOSE<br /><br /> 7 = DEALLOCATE|  
 |cursor_handle|**int**|Уникальное значение для курсора в пределах сервера.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Процедура sp_describe_cursor описывает такие глобальные для серверного курсора атрибуты как возможность прокрутки и обновления. Используйте процедуру sp_describe_cursor_columns для описания атрибутов результирующего набора, возвращаемого курсором. Процедура sp_describe_cursor_tables используется для получения отчета по базовым таблицам, на которые ссылается курсор. Чтобы получить отчет по серверным курсорам [!INCLUDE[tsql](../../includes/tsql-md.md)], видимым в соединении, используется процедура sp_cursor_list.  
   
  Инструкция DECLARE CURSOR может затребовать тип курсора, который не поддерживается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью инструкции SELECT, содержащейся в DECLARE CURSOR. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] неявно преобразует курсор в тип, который может поддерживаться с использованием инструкции SELECT. Если в инструкции DECLARE CURSOR указано ключевое слово TYPE_WARNING, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отправляет в приложение информационное сообщение о завершении преобразования. Затем можно вызвать sp_describe_cursor, чтобы определить тип реализованного курсора.  

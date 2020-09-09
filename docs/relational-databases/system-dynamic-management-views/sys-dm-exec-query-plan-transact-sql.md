@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_plan dynamic management function
 ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3b4c9264d769b535bcbc3e2f9e38e92d010f2f56
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 741cfebb7eb50e37512a5778691ab61700f9d98e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493731"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548565"
 ---
 # <a name="sysdm_exec_query_plan-transact-sql"></a>sys.dm_exec_query_plan (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,12 +62,12 @@ sys.dm_exec_query_plan(plan_handle)
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**DBID**|**smallint**|Идентификатор базы данных, в контексте которой выполнялась компиляция инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], соответствующей данному плану. Для нерегламентированных и подготовленных инструкций SQL это идентификатор базы данных, в которой происходила компиляция инструкции.<br /><br /> Столбец может содержать значение NULL.|  
-|**ИД**|**int**|Идентификатор объекта (например хранимой процедуры или определяемой пользователем функции) для этого плана запроса. Для нерегламентированных и подготовленных пакетов этот столбец содержит значение **NULL**.<br /><br /> Столбец может содержать значение NULL.|  
+|**objectid**|**int**|Идентификатор объекта (например хранимой процедуры или определяемой пользователем функции) для этого плана запроса. Для нерегламентированных и подготовленных пакетов этот столбец содержит значение **NULL**.<br /><br /> Столбец может содержать значение NULL.|  
 |**number**|**smallint**|Целое число нумерованных хранимых процедур. Например, группа процедур для приложения **orders** может иметь имена вида **orderproc;1**, **orderproc;2** и так далее. Для нерегламентированных и подготовленных пакетов этот столбец содержит значение **NULL**.<br /><br /> Столбец может содержать значение NULL.|  
 |**Шифрование**|**bit**|Указывает, зашифрована ли соответствующая хранимая процедура.<br /><br /> 0 = не зашифрована<br /><br /> 1 = зашифрована<br /><br /> Столбец не может содержать значение NULL.|  
 |**query_plan**|**xml**|Содержит представление Showplan времени компиляции для плана выполнения запроса, указанного в *plan_handle*. Представление Showplan имеет формат XML. Для каждого пакета, содержащего, например нерегламентированные инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)], вызовы хранимых процедур и вызовы определяемых пользователем функций, формируется один план.<br /><br /> Столбец может содержать значение NULL.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  При следующих условиях вывод инструкции Showplan не возвращается в столбец **query_plan** возвращаемой таблицы для функции **sys.dm_exec_query_plan**.  
   
 -   Если план запроса, указанный с помощью *plan_handle* , был исключен из кэша планов, то **query_plan** столбец возвращаемой таблицы имеет значение null. Например, такое условие может возникнуть при наличии задержки между принятием и использованием дескриптора плана функцией **sys.dm_exec_query_plan**.  
@@ -90,7 +90,7 @@ sys.dm_exec_query_plan(plan_handle)
   
  Чтобы просмотреть представление Showplan в формате XML, необходимо выполнить следующие запросы в редакторе запросов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], а затем щелкнуть элемент **ShowPlanXML** в столбце **query_plan** таблицы, возвращаемой функцией **sys.dm_exec_query_plan**. Представление Showplan в формате XML отображается на сводной панели среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Чтобы сохранить XML Showplan в файл, щелкните правой кнопкой мыши **ShowPlanXML** в столбце **query_plan** , выберите команду **сохранить результаты как**, назовите файл в формате \<*file_name*> . sqlplan, например миксмлшовплан. sqlplan.  
   
-### <a name="a-retrieve-the-cached-query-plan-for-a-slow-running-transact-sql-query-or-batch"></a>A. Получение кэшированного плана запроса для медленно выполняемого запроса или пакета Transact-SQL  
+### <a name="a-retrieve-the-cached-query-plan-for-a-slow-running-transact-sql-query-or-batch"></a>А. Получение кэшированного плана запроса для медленно выполняемого запроса или пакета Transact-SQL  
  Планы запросов для различных типов пакетов [!INCLUDE[tsql](../../includes/tsql-md.md)], в том числе нерегламентированных пакетов, хранимых процедур и определяемых пользователем функций, кэшируются в области памяти, называемой кэшем планов. Каждый кэшированный план запроса идентифицируется при помощи уникального идентификатора, дескриптора плана. Чтобы получить план выполнения для определенного запроса или пакета [!INCLUDE[tsql](../../includes/tsql-md.md)], можно указать дескриптор плана при помощи динамического административного представления **sys.dm_exec_query_plan**.  
   
  Если запрос или пакет [!INCLUDE[tsql](../../includes/tsql-md.md)] выполняется длительное время при определенном соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], то для определения причины задержки необходимо получить план выполнения для этого запроса или пакета. В следующем примере показано, как получить представление Showplan в формате XML для медленно выполняемого запроса или пакета.  
@@ -168,7 +168,7 @@ GO
  [sys.dm_exec_cached_plans (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys. dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [sys.dm_exec_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
- [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
+ [sp_who (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [Справочник по логическим и физическим операторам Showplan](../../relational-databases/showplan-logical-and-physical-operators-reference.md)   
  [sys. dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
   

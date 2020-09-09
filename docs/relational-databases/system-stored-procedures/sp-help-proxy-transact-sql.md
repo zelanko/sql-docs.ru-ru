@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_proxy
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ab6a1a976dd70e991b36f51429a96d0be425b152
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f0125bee2811495eefc015e6be65d30b398edeaf
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481192"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549700"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ sp_help_proxy
 |Моментальный снимок|Агент моментальных снимков репликации|  
 |LogReader|Агент чтения журнала репликации|  
 |Distribution|агент распространения репликации|  
-|Объединить|Replication Merge Agent|  
+|Объединение|Replication Merge Agent|  
 |QueueReader|Агент чтения очереди репликации|  
 |ANALYSISQUERY|Команда служб Analysis Services|  
 |ANALYSISCOMMAND|Запрос служб Analysis Services|  
@@ -84,7 +84,7 @@ sp_help_proxy
 |**credential_id**|**int**|Идентификатор учетных данных, связанных с учетной записью-посредником.|  
 |**credential_identity_exists**|**int**|Указывает, существует ли столбец credential_identity. { 0 = не существует, 1 = существует }|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Если параметры не указаны, **sp_help_proxy** выводит сведения для всех прокси-серверов в экземпляре.  
   
  Чтобы определить, какие прокси-серверы могут использоваться для входа в данную подсистему, укажите *имя* и *subsystem_name*. При указании этих аргументов **sp_help_proxy** перечисляет прокси-серверы, к которым может получить доступ указанное имя входа, которые могут использоваться для указанной подсистемы.  
@@ -122,7 +122,7 @@ EXEC dbo.sp_help_proxy
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Агент SQL Server хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
  [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)  

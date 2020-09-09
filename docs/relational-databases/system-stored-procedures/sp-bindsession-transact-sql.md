@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_bindsession
 ms.assetid: 1436fe21-ad00-4a98-aca1-1451a5e571d2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 60345defb9e5038286ddc9e4011525cb516315a9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 900f6383a4a285cac36262096a66e64603467c79
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493492"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548241"
 ---
 # <a name="sp_bindsession-transact-sql"></a>sp_bindsession (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ sp_bindsession { 'bind_token' | NULL }
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Два объединенных сеанса совместно используют только транзакции и блокировки. Каждый сеанс сохраняет свой собственный уровень изоляции, и установка нового уровня изоляции на одном сеансе не затронет уровень изоляции другого сеанса. Каждый сеанс идентифицируется по его учетной записи безопасности и может обращаться только к тем ресурсам базы данных, на которые учетной записи предоставлены разрешения.  
   
  **sp_bindsession** использует маркер привязки для привязки двух или более существующих сеансов клиента. Эти сеансы клиента должны быть на одном экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], от которого был получен токен связывания. Сеанс — это клиент, выполняющий команду. Привязанные сеансы баз данных совместно используют пространство транзакций и блокировок.  

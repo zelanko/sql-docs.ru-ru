@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addtabletocontents
 ms.assetid: 2ea27001-74f4-463e-bf1b-b6b5a86b9219
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d0363795187e586a7a37481505240b74690aa425
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 26b1946d03fe949bd0a2af52ce07d64198dd1bbf
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469773"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548358"
 ---
 # <a name="sp_addtabletocontents-transact-sql"></a>sp_addtabletocontents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_addtabletocontents** используется только в репликации слиянием.  
   
  Строки в *table_name* называются их **ROWGUIDCOL** , а ссылки добавляются в таблицы отслеживания слияния. **sp_addtabletocontents** следует использовать после выполнения операции с массовым копированием данных в таблицу, опубликованную с помощью репликации слиянием. Хранимая процедура инициирует отслеживание строк, которые были скопированы, и обеспечивает их участие в следующей синхронизации.  

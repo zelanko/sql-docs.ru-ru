@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_first_result_set
 ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 451884c5055ee0be3ceeb95f4fe3c9dddb388bc0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9cc2e3bef68a6900d5b9735ef3a5f8a050a34361
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469625"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548142"
 ---
 # <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -105,7 +105,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**tds_collation_id**|**int NULL**|Для внутреннего использования.|  
 |**tds_collation_sort_id**|**tinyint NULL**|Для внутреннего использования.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **sp_describe_first_result_set** гарантирует, что если процедура возвращает первые метаданные результирующего набора для (гипотетического) пакета а и, если впоследствии выполняется пакет (a), пакет будет либо (1) выдаст ошибку времени оптимизации, (2) вызывает ошибку времени выполнения, (3) не возвращает результирующий набор или (4) возвращает первый результирующий набор с теми же метаданными, описанными **sp_describe_first_result_set**.  
   
  Имя, допустимость значений NULL и тип данных могут различаться. Если **sp_describe_first_result_set** возвращает пустой результирующий набор, то гарантируется, что пакетное выполнение вернет не результирующие наборы.  
@@ -207,7 +207,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 1
 |is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|b3|dbo|t|B1|0|  
-|1|2|a|dbo|t|a|1|  
+|1|2|а|dbo|t|a|1|  
   
  В примере используется значение 2, которое показывает, что анализ выполняется так же, как и при подготовке курсора.  
   

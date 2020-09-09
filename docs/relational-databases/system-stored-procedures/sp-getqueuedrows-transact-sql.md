@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_getqueuedrows
 ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6948964a224d0dfe1d36324971608e649ec45d4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8aae51ed8d3806fb32375ddebd6d09c1c6c37d1f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481275"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548043"
 ---
 # <a name="sp_getqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 |**table column1...n**||Значение для каждого столбца таблицы, указанного в *TableName*.|  
 |**msrepl_tran_version**|**uniqueidentifier**|Этот столбец используется для отслеживания изменений для реплицируемых данных и для обнаружения конфликтов на издателе. Этот столбец добавлен к таблице автоматически.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **sp_getqueuedrows** используется на подписчиках, участвующих в обновлении посредством очередей.  
   
  **sp_getqueuedrows** находит строки заданной таблицы в базе данных подписки, которая участвовала в обновлении в очереди, но в настоящее время не разрешено агентом чтения очереди.  

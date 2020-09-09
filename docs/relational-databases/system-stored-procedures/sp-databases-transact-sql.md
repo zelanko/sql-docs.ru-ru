@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_databases
 ms.assetid: 2a83b92a-9ecc-43c4-8ff4-e91e3a940b5a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 427014e08e10a018fd8b04841a1082f2cdce292a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 90fbcbf710f1779ad011163641aa61b14b33c65b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447395"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549906"
 ---
 # <a name="sp_databases-transact-sql"></a>sp_databases (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ sp_databases
 |**DATABASE_SIZE**|**int**|Размер базы данных в килобайтах.|  
 |**ЗАМЕЧАНИЯ**|**varchar (254)**|Для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] это поле всегда возвращает значение NULL.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Возвращаемые имена баз данных могут использоваться в качестве параметров в инструкции USE для изменения текущего контекста базы данных.  
   
  **sp_databases** не имеет эквивалента в открытом подключении к базе данных (ODBC).  

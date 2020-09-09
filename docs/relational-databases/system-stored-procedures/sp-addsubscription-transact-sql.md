@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsubscription
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d3550dad3292c7ff2a226d6bfc21b1f55e148d58
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1cf622748da040060681dac848273238f73c66a5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918948"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548356"
 ---
 # <a name="sp_addsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -137,7 +137,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|true|Агент распространителя не отправляет транзакции, изначально созданные у подписчика, обратно. Используется с двунаправленной репликацией транзакций. Дополнительные сведения см. в разделе [Двунаправленная репликация транзакций](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
+|Да|Агент распространителя не отправляет транзакции, изначально созданные у подписчика, обратно. Используется с двунаправленной репликацией транзакций. Дополнительные сведения см. в статье [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
 |false|Агент распространителя отправляет транзакции, изначально созданные у подписчика, обратно.|  
 |NULL (по умолчанию)|Автоматически устанавливается значение true для подписчика [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и значение false для подписчика, не относящегося к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
@@ -163,7 +163,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|1|Первое|  
+|1|First|  
 |2|Second|  
 |4|Третье|  
 |8|Четвертая|  
@@ -281,7 +281,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|0 (по умолчанию)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Абонент|  
+|0 (по умолчанию)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Абонент|  
 |1|Сервер источника данных ODBC|  
 |2|База данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet|  
 |3|Поставщик OLE DB|  
@@ -292,7 +292,7 @@ sp_addsubscription [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Процедура sp_addsubscription используется в репликации моментальных снимков и репликации транзакций.  
   
  При выполнении процедуры sp_addsubscription членом предопределенной роли сервера sysadmin для создания принудительной подписки задание агента распространителя явно создается и запускается под учетной записью службы агента SQL Server. Рекомендуется выполнить [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) и указать учетные данные другой учетной записи Windows, зависящей от агента, для @job_login и @job_password . Дополнительные сведения см. в статье [Модель безопасности агента репликации](../../relational-databases/replication/security/replication-agent-security-model.md).  
@@ -321,7 +321,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>См. также:  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [Создание подписки для подписчика, не являющегося SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
+ [Создание подписки для подписчика, отличного от подписчика SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
  [sp_changesubstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   

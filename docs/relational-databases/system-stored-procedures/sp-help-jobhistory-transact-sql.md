@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobhistory
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: bf0766388b50fabfe3a0571b5cf4e86ab7e15520
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d805cfb7f6cf682e07e703e6854e25737a82b9cc
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464289"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548001"
 ---
 # <a name="sp_help_jobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -78,8 +78,8 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|**0**|Сбой|  
-|**1**|Выполнено|  
+|**0**|Failed|  
+|**1**|Успешно|  
 |**2**|Повторить (только для этапа)|  
 |**3**|Отменено|  
 |**4**|Сообщение о проценте выполнения|  
@@ -119,7 +119,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**retries_attempted**|**int**|Количество повторных попыток запуска этапа (всегда 0 для журнала заданий).|  
 |**server**|**nvarchar(30)**|Сервер, на котором выполняется задание или этап. Всегда имеет (**Local**).|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **sp_help_jobhistory** возвращает отчет с историей указанных запланированных заданий. Если не указаны параметры, отчет содержит журнал всех заданий в расписании.  
   
 ## <a name="permissions"></a>Разрешения  

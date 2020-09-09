@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helplogins
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 68a90477996c9782722e1a9c0b50f82fd5cf408e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9802a6087bd3747c8fe715d56482b54149ee55d8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489347"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549638"
 ---
 # <a name="sp_helplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Имя входа.|  
-|**ТРАНСЛЯЦИЮ**|**varbinary(85)**|Идентификатор защиты имени входа (SID).|  
+|**SID**|**varbinary(85)**|Идентификатор защиты имени входа (SID).|  
 |**DefDBName**|**sysname**|База данных по умолчанию, которую использует **LoginName** при соединении с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**DefLangName**|**sysname**|Язык по умолчанию, используемый в **LoginName**.|  
 |**Auser**|**char (5)**|Yes = **LoginName** имеет связанное имя пользователя в базе данных.<br /><br /> No = **LoginName** не имеет связанного имени пользователя.|  
@@ -66,7 +66,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |**UserName**|**sysname**|Учетная запись пользователя, сопоставленная с **LoginName** в параметре **dbname**, а роли, в которые находится **LoginName** , являются членами в параметре **dbname**.|  
 |**UserOrAlias**|**char (8)**|MemberOf = **имя пользователя** является ролью.<br /><br /> Пользователь = **username** является учетной записью пользователя.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Перед удалением имени входа используйте **sp_helplogins** , чтобы указать учетные записи пользователей, сопоставленные с именем входа.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -101,7 +101,7 @@ John        pubs     John       User
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Хранимые процедуры безопасности (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_helpdb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
  [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

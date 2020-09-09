@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_droplogin
 ms.assetid: e58684d1-c394-48de-906e-da6ee91100c3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: cb6e3055c886760f51e8dcd303774a2fc76a61c3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cdca4f3aa533344b7e94a6a2dea6f14c35af6fdb
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481367"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548074"
 ---
 # <a name="sp_droplogin-transact-sql"></a>sp_droplogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ sp_droplogin [ @loginame = ] 'login'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **sp_droplogin** вызывает DROP LOGIN.  
   
  **sp_droplogin** не может быть выполнена в пользовательской транзакции.  
@@ -65,7 +65,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Хранимые процедуры безопасности (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [DROP LOGIN &#40;&#41;Transact-SQL ](../../t-sql/statements/drop-login-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

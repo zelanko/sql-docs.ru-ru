@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_browsesnapshotfolder
 ms.assetid: 0872edf2-4038-4bc1-a68d-05ebfad434d2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 11605b404e846db81cd364eac2e9223bf563e3a0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 61ac8c7567247e87afa927348592a0f0dacbb382
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493432"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548259"
 ---
 # <a name="sp_browsesnapshotfolder-transact-sql"></a>sp_browsesnapshotfolder (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -55,7 +55,7 @@ sp_browsesnapshotfolder [@publication= ] 'publication'
 |-----------------|---------------|-----------------|  
 |**snapshot_folder**|**nvarchar(512)**|Полный путь к каталогу моментальных снимков.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **sp_browsesnapshotfolder** используется в репликации моментальных снимков и репликации транзакций.  
   
  Если поля *подписчика* и *SUBSCRIBER_DB* оставлены пустыми, хранимая процедура возвращает папку моментальных снимков самого последнего моментального снимка, который он может найти для публикации. Если указаны поля *подписчика* и *subscriber_db* , хранимая процедура возвращает папку моментальных снимков для указанной подписки. Если для данной публикации не был создан моментальный снимок, то возвращается пустой результирующий набор.  
@@ -65,7 +65,7 @@ sp_browsesnapshotfolder [@publication= ] 'publication'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_browsesnapshotfolder**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

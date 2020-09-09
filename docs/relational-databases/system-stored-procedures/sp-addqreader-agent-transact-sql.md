@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addqreader_agent
 ms.assetid: dc9f591a-e67e-4ba8-bf47-defd5eda0822
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 998a8c27af1a44bc477ab232f3b263a5ea70688f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dae183ab0f04ac343e7836b852a881341f188325
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481515"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549977"
 ---
 # <a name="sp_addqreader_agent-transact-sql"></a>sp_addqreader_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -55,7 +55,7 @@ sp_addqreader_agent [ @job_login = ] 'job_login'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **sp_addqreader_agent** используется в репликации транзакций.  
   
  **sp_addqreader_agent** должны выполняться по крайней мере один раз на распространителе, который поддерживает обновление посредством очередей после [sp_adddistributiondb](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) , но до [sp_addpublication](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md).  
@@ -65,7 +65,7 @@ sp_addqreader_agent [ @job_login = ] 'job_login'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_addqreader_agent**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Включение обновляемых подписок для публикаций транзакций](../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)   
  [Обновление скриптов репликации (программирование репликации на языке Transact-SQL)](../../relational-databases/replication/administration/upgrade-replication-scripts-replication-transact-sql-programming.md)   
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   

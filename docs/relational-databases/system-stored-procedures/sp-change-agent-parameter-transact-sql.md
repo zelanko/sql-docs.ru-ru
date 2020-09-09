@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_change_agent_parameter
 ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a934a171c7bfbe6a80c3540defde8e6861ca0ad6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6020788189dbd352b3a469809e0a95a85a6a5a5f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474468"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548275"
 ---
 # <a name="sp_change_agent_parameter-transact-sql"></a>Хранимая процедура sp_change_agent_parameter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -246,7 +246,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **sp_change_agent_parameter** используется во всех типах репликации.  
   
 ## <a name="permissions"></a>Разрешения  

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobactivity
 ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7dc9650d715468bb66b5594100b0ce605083328e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e137d556413057b409d67c8ead14530d224241e0
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447088"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549712"
 ---
 # <a name="sp_help_jobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -76,7 +76,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**operator_id_netsent**|**int**|ИДЕНТИФИКАЦИОНный номер оператора, уведомленного через **net send** по завершении задания.|  
 |**operator_id_paged**|**int**|Идентификационный номер оператора, которому по пейджеру было послано оповещение об окончании задания.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Эта хранимая процедура создает моментальный снимок текущего состояния заданий. Возвращаемые результаты представляют собой данные на момент выполнения запроса.  
   
  Агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создает идентификатор сеанса каждый раз, когда запускается служба агента. Идентификатор сеанса хранится в таблице **msdb.dbo.sysсеансов**.  
@@ -109,7 +109,7 @@ EXEC dbo.sp_help_jobactivity ;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Агент SQL Server хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
   
   

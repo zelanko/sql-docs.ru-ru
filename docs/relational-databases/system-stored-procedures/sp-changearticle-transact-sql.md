@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changearticle
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 46afab7da64374922f20e5736c2a3d31217056b5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2eb11859c0d0e4552324b0a3d7d5e005f9bd89b7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464488"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548250"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -62,14 +62,14 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**dest_object**||Предоставляется для обратной совместимости. Используйте **dest_table**.|  
 |**dest_table**||Новая целевая таблица.|  
 |**destination_owner**||Имя владельца целевого объекта.|  
-|**Фильтрация**||Новая хранимая процедура для фильтрации таблицы (горизонтальная фильтрация). Значение по умолчанию — NULL. Невозможно изменить для публикаций в одноранговой репликации.|  
+|**filter**||Новая хранимая процедура для фильтрации таблицы (горизонтальная фильтрация). Значение по умолчанию — NULL. Невозможно изменить для публикаций в одноранговой репликации.|  
 |**fire_triggers_on_snapshot**|**true**|Реплицированные пользовательские триггеры срабатывают при применении исходного моментального снимка.<br /><br /> Примечание. для репликации триггеров значение битовой маски *schema_option* должно включать значение **0x100**.|  
 ||**false**|Реплицированные пользовательские триггеры не срабатывают при применении исходного моментального снимка.|  
 |**identity_range**||Управляет размером диапазонов идентификаторов, назначенных на подписчике. В случае одноранговой репликации не поддерживается.|  
 |**ins_cmd**||Инструкция INSERT к выполнению; иначе формируется из журнала.|  
 |**pre_creation_cmd**||Команда предсоздания, которая перед применением синхронизации может полностью или частично удалить данные из целевой таблицы или выполнить ее усечение.|  
 ||**Нет**|Не использует команду.|  
-||**drop**|Удаляет целевую таблицу полностью.|  
+||**тени**|Удаляет целевую таблицу полностью.|  
 ||**delete**|Удаляет целевую таблицу.|  
 ||**TRUNCATE**|Усекает целевую таблицу.|  
 |**pub_identity_range**||Управляет размером диапазонов идентификаторов, назначенных на подписчике. В случае одноранговой репликации не поддерживается.|  
@@ -166,7 +166,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **sp_changearticle** используется в репликации моментальных снимков и репликации транзакций.  
   
  Если статья принадлежит публикации, поддерживающей одноранговую репликацию транзакций, можно изменить только **Описание**, **ins_cmd**, **upd_cmd**и **del_cmd** свойства.  
@@ -195,7 +195,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 -   **destination_owner**  
   
--   **Фильтрация**  
+-   **filter**  
   
 -   **ins_cmd**  
   
@@ -240,8 +240,8 @@ sp_changearticle [ [@publication= ] 'publication' ]
  [Просмотр и изменение свойств статьи](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [Изменение свойств публикации и статьи](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [sp_articlecolumn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
- [sp_droparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
+ [sp_articlecolumn (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
+ [sp_droparticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [sp_helparticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
  [sp_helparticlecolumns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)  
   

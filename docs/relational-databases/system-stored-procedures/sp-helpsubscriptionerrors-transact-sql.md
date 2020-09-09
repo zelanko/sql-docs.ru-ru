@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpsubscriptionerrors
 ms.assetid: 01c8bc21-939e-490d-8cc8-219c068be31e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 02b19fa1272801aaa2ab7f7415c518d4c700412e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c68349a6d696720874be7a72e04d8dd0f48a3472
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485888"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547958"
 ---
 # <a name="sp_helpsubscriptionerrors-transact-sql"></a>sp_helpsubscriptionerrors (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -61,7 +61,7 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
 |**error_type_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**source_type_id**|**int**|Идентификатор типа источника ошибки.|  
 |**source_name**|**nvarchar (100)**|Имя источника ошибки.|  
-|**Error_Code**|**sysname**|Код ошибки.|  
+|**error_code**|**sysname**|Код ошибки.|  
 |**error_text**|**ntext**|Сообщение об ошибке.|  
 |**xact_seqno**|**varbinary (16)**|Регистрационный номер транзакции в журнале, запущенной во время ошибки выполнения пакета. Это последовательный номер журнала транзакций, содержащего первую транзакцию в пакете, выполненном с ошибкой. Он используется только агентами распространителя.|  
 |**command_id**|**int**|Идентификатор команды пакета, выполненного с ошибкой. Это идентификатор первой команды в пакете, завершенном с ошибкой, используемый только агентами распространителя.|  
@@ -70,13 +70,13 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **sp_helpsubscriptionerrors** используется с репликацией моментальных снимков и репликации транзакций.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_helpsubscriptionerrors**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
  [sp_helpsubscription_properties (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   

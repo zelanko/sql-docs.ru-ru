@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_addlinkedsrvlogin
 ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ae1cb5da71d58559598801d7b48a7f361e2317d4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4658625065876f35e3eb892381be67226795584f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474598"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548443"
 ---
 # <a name="sp_addlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +63,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Когда пользователь входит на локальный сервер и выполняет распределенный запрос, который обращается к таблице на связанном сервере, то для открытия таблицы локальный сервер должен войти на связанный сервер под именем данного пользователя. Учетные данные входа, с помощью которых локальный сервер будет входить на связанный сервер, задаются с помощью хранимой процедуры sp_addlinkedsrvlogin.  
   
 > [!NOTE]  
@@ -117,7 +117,7 @@ EXEC sp_addlinkedsrvlogin 'Accounts', 'false', 'Domain\Mary', 'MaryP', 'd89q3w4u
 > [!IMPORTANT]  
 >  В этом примере проверка подлинности Windows не применяется. Пароли передаются в незашифрованном виде. Пароли могут быть видны в определениях источника данных и скриптах, сохраненных на диске и в составе резервных копий, а также в файлах журналов. Никогда не используйте для таких соединений пароль администратора. За инструкциями по безопасности среды обратитесь к сетевому администратору.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Представления каталога связанных серверов &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
  [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_droplinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
