@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_post_msx_operation
 ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: da3d1e8bd762f31a7592d90957c3a8680c29dbfb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 304eef1c0e707ecb77fb8d13d5e2b524eb9e9e00
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489212"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546013"
 ---
 # <a name="sp_post_msx_operation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ sp_post_msx_operation
   
 |Тип объекта|Операция|  
 |-----------------|---------------|  
-|**ДОЛЖНО**|INSERT<br /><br /> UPDATE<br /><br /> DELETE<br /><br /> START<br /><br /> STOP|  
+|**ДОЛЖНО**|INSERT<br /><br /> UPDATE<br /><br /> DELETE<br /><br /> СТАРТ<br /><br /> STOP|  
 |**СЕРВЕРОМ**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
 |**Расписание**|INSERT<br /><br /> UPDATE<br /><br /> DELETE|  
   
@@ -82,7 +82,7 @@ sp_post_msx_operation
 ## <a name="permissions"></a>Разрешения  
  Для выполнения этой хранимой процедуры пользователям должна быть предоставлена предопределенная роль сервера **sysadmin** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_add_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
  [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
  [sp_delete_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   

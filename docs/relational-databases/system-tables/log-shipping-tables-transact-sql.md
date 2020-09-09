@@ -14,21 +14,21 @@ helpviewer_keywords:
 - log shipping [SQL Server], system tables
 - system tables [SQL Server], log shipping
 ms.assetid: f8910aae-2013-4645-880c-134577cbcbe0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 372aa4850633f3fec9789f233fbacba16f960196
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b880d19fe1ee01a7b890cc965384beb49efc77cc
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480786"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547174"
 ---
 # <a name="log-shipping-tables-transact-sql"></a>Таблицы доставки журналов (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   В следующих разделах описываются системные таблицы, в которых хранятся сведения, используемые операциями доставки журналов.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)  
  Сохраняет идентификаторы предупреждений заданий для доставки журналов.  
   

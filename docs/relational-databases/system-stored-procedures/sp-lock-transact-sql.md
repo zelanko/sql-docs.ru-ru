@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_lock
 ms.assetid: 9eaa0ec2-2ad9-457c-ae48-8da92a03dcb0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f8fee809f67de959c7d168ceaac2016b5cddddd9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6af5955121813edaf0580c1c3204f8337d1deade
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481155"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545989"
 ---
 # <a name="sp_lock-transact-sql"></a>sp_lock (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,7 +64,7 @@ sp_lock [ [ @spid1 = ] 'session ID1' ] [ , [@spid2 = ] 'session ID2' ]
 |**Режим**|**nvarchar (8)**|Запрашиваемый режим блокировки. Возможны следующие варианты:<br /><br /> NULL = Блокировки нет. Играет роль заполнителя.<br /><br /> Sch-S = Блокировка стабильности схемы. Заверяет, что элемент схемы, такой как таблица или индекс, не будет удален до тех пор, пока сеанс связи удерживает блокировку стабильности схемы на данный элемент схемы.<br /><br /> Sch-М = Блокировка изменения схемы. Должен поддерживаться любым сеансом связи, во время которого предполагается изменить схему данного ресурса. Заверяет, что другие сеансы не имеют ссылок на обозначенный объект.<br /><br /> S = Коллективная блокировка. Удерживающему сеансу предоставлен коллективный доступ к ресурсу.<br /><br /> U = Блокировка обновления. Указывает блокировку обновления, полученную на ресурсы, которые со временем могут быть обновлены. Используется для предотвращения общей формы взаимоблокировки, которая возникает, когда множество сеансов блокируют ресурсы для потенциального обновления в последующее время;<br /><br /> X = Монопольная блокировка. Удерживающему сеансу предоставлен исключительный доступ к ресурсу.<br /><br /> IS = Блокировка с намерением коллективного доступа. Указывает намерение поместить блокировки типа S на некоторые подчиненные ресурсы в иерархии блокировок.<br /><br /> IU = Блокировка с намерением обновления. Указывает намерение поместить блокировки типа U на некоторые подчиненные ресурсы в иерархии блокировок.<br /><br /> IX = Блокировка с намерением монопольного доступа. Указывает намерение поместить блокировки типа X на некоторые подчиненные ресурсы в иерархии блокировок.<br /><br /> SIU = Коллективная блокировка с намерением обновления. Указывает коллективный доступ к ресурсу с намерением получения блокировок обновления на подчиненные ресурсы в иерархии блокировок.<br /><br /> SIX = Коллективная блокировка с намерением монопольного доступа. Указывает коллективный доступ к ресурсу с намерением получения монопольных блокировок на подчиненные ресурсы в иерархии блокировок.<br /><br /> UIX = Блокировка обновления с намерением монопольного доступа. Указывает блокировку обновления ресурса с намерением получения монопольных блокировок на подчиненные ресурсы в иерархии блокировок.<br /><br /> BU = Блокировка массового обновления. Используется для массовых операций.<br /><br /> RangeS_S = Блокировка разделяемого диапазона ключей и разделяемых ресурсов. Указывает на последовательный просмотр диапазона.<br /><br /> RangeS_U = Блокировка разделяемого диапазона ключей и обновляемых ресурсов. Указывает на последовательное сканирование обновления.<br /><br /> RangeI_N = Блокировка вставляемого диапазона ключей и NULL-ресурсов. Используется для проверки диапазонов, перед тем как вставить новый ключ в индекс.<br /><br /> RangeI_S = блокировка преобразования диапазона ключей. Создается перекрытием блокировок RangeI_N и S;<br /><br /> RangeI_U = Блокировка преобразования диапазона ключей, созданная перекрытием блокировок RangeI_N и U;<br /><br /> RangeI_X = Блокировка преобразования диапазона ключей, созданная перекрытием блокировок RangeI_N и X;<br /><br /> RangeX_S = блокировка преобразования диапазона ключей, созданная перекрытием блокировок RangeI_N и RangeS_S.<br /><br /> RangeX_U = Блокировка преобразования диапазона ключей, созданная перекрытием блокировок RangeI_N и RangeS_U.<br /><br /> RangeX_X = Блокировка монопольного диапазона ключей и монопольных ресурсов. Блокировка диалога, используемая во время обновления ключа в диапазоне.|  
 |**Состояние**|**nvarchar (5)**|Состояние запроса блокировки:<br /><br /> КНВРТ: блокировка преобразуется из другого режима, но преобразование блокируется другим процессом, удерживающим блокировку с конфликтующим режимом.<br /><br /> GRANT: блокировка получена.<br /><br /> WAIT: Блокировка заблокирована другим процессом, удерживающим блокировку с конфликтующим режимом.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Пользователи могут управлять блокировкой операций чтения следующим образом.  
   
 -   Используя SET TRANSACTION ISOLATION LEVEL для указания уровня блокировки для сеанса. Синтаксис и ограничения см. в разделе [SET TRANSACTION изоляцией LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
@@ -100,10 +100,10 @@ GO
   
 ## <a name="see-also"></a>См. также  
  [sys.dm_tran_locks (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)   
- [DB_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/db-name-transact-sql.md)   
- [Инструкция KILL &#40;&#41;Transact-SQL ](../../t-sql/language-elements/kill-transact-sql.md)   
- [OBJECT_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/object-name-transact-sql.md)   
- [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
+ [DB_NAME (Transact-SQL)](../../t-sql/functions/db-name-transact-sql.md)   
+ [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md)   
+ [OBJECT_NAME (Transact-SQL)](../../t-sql/functions/object-name-transact-sql.md)   
+ [sp_who (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys. dm_os_tasks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)   
  [sys.dm_os_threads (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md)  

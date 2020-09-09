@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAGetErrorInfo
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7336be191ea34fcf36b8221b2a1698ae179fa980
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 89bb7dff2131d8463e26754148aa6e8032503fd7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464114"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546023"
 ---
 # <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,13 +72,13 @@ sp_OAGetErrorInfo [ objecttoken ]
   
 |Имена столбцов|Тип данных|Описание|  
 |------------------|---------------|-----------------|  
-|**Error**|**двоичный (4)**|Двоичное представление номера ошибки.|  
+|**Ошибка**|**двоичный (4)**|Двоичное представление номера ошибки.|  
 |**Source**|**nvarchar (NN)**|Источник ошибки.|  
 |**Описание**|**nvarchar (NN)**|Описание ошибки.|  
 |**HelpFile**|**nvarchar (NN)**|Файл справки для источника.|  
 |**Идентификатор справки**|**int**|Идентификатор контекста справки в исходном файле справки.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Каждый вызов хранимой процедуры OLE-автоматизации (кроме **sp_OAGetErrorInfo**) сбрасывает сведения об ошибке; Таким образом, **sp_OAGetErrorInfo** получает сведения об ошибке только для последнего вызова хранимой процедуры OLE Automation. Обратите внимание, что поскольку **sp_OAGetErrorInfo** не сбрасывает сведения об ошибке, ее можно вызывать несколько раз, чтобы получить те же сведения об ошибке.  
   
  В следующей таблице перечисляются ошибки OLE-автоматизации и их наиболее частые причины.  
@@ -122,7 +122,7 @@ BEGIN
 END;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Хранимые процедуры OLE-автоматизации &#40;&#41;Transact — SQL ](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [Пример скрипта OLE-автоматизации](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   

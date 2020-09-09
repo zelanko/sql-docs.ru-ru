@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_undeclared_parameters
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: b93ecf05c0a4b48417240db1b9bf22e1104149a2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f1e2134b008d07a12043c4b1bd4fbf6dc0986d90
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489457"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546176"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)] 
@@ -88,7 +88,7 @@ sp_describe_undeclared_parameters
 |**suggested_tds_type_id**|**int NOT NULL**|Для внутреннего использования.|  
 |**suggested_tds_length**|**int NOT NULL**|Для внутреннего использования.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **sp_describe_undeclared_parameters** всегда возвращает состояние возврата, равное нулю.  
   
  Чаще всего она применяется, когда приложению передается инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)], которая может содержать параметры и должна некоторым образом их обрабатывать. Примером является пользовательский интерфейс (такой как ODBCTest или RowsetViewer), где пользователь передает запрос с синтаксисом параметров ODBC. Приложение должно динамически обнаруживать число параметров и запрашивать каждый параметр у пользователя.  
@@ -170,7 +170,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 -   Простое определение  
   
-     Если параметр E ( \@ p) = \@ p и TT ( \@ p) существует, т. е. Если \@ p является прямым аргументом для одного из выражений, перечисленных в начале шага 2, алгоритм выведения типа выводит тип данных \@ p в значение TT ( \@ p). Например:  
+     Если параметр E ( \@ p) = \@ p и TT ( \@ p) существует, т. е. Если \@ p является прямым аргументом для одного из выражений, перечисленных в начале шага 2, алгоритм выведения типа выводит тип данных \@ p в значение TT ( \@ p). Пример:  
   
     ```sql
     SELECT * FROM t WHERE c1 = @p1 AND @p2 = dbo.tbl(@p3)  
@@ -218,7 +218,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
 1.  Выбран тип данных, который создает наименьшее число неявных преобразований в E ( \@ p). Если определенный тип данных создает тип данных для E ( \@ p), отличный от TT ( \@ p), алгоритм выведения типа считает это дополнительным неявным преобразованием из типа данных E ( \@ p) в TT ( \@ p).  
   
-     Например:  
+     Пример:  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_Int + @p  

@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetBoolValue method
 ms.assetid: 5252b439-fce5-446a-8e57-99e3054bee69
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: db07b4e7dc83cffa60f5005195b9ac945620fe5b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1df2d43182d0f3f096ca6ccc4ddec6a7f5de2896
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427146"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546975"
 ---
 # <a name="setboolvalue-method-sqlserviceadvancedproperty-class"></a>Метод SetBoolValue (класс SqlServiceAdvancedProperty)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -49,10 +49,10 @@ object.SetBoolValue [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение **uint32** , равное 0, если служба изменена успешно, и 1, если запрос не поддерживается. Любое другое значение указывает на ошибку.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Чтобы задать логическое значение, свойство должно иметь логический тип.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

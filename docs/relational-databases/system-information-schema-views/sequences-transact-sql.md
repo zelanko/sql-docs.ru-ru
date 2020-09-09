@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - SEQUENCES view
 - INFORMATION_SCHEMA.SEQUENCES view
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: db4fb9d06a6e2197b16ee7c2eee99029ae09d2a2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7fa13582e155387bbe7b7122e0051d830be2261b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481710"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546341"
 ---
 # <a name="sequences-transact-sql"></a>ПОСЛЕДОВАТЕЛЬНОСТИ (Transact-SQL)
 
@@ -57,7 +57,7 @@ ms.locfileid: "88481710"
 SELECT * FROM test.INFORMATION_SCHEMA.SEQUENCES;
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Представления информационной схемы &#40;&#41;Transact-SQL ](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
 - [sys.sequences (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)

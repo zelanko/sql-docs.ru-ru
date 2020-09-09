@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_table_validation
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 32d347fe40af8f2617f47291d749ef039b0838b3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 88ee13025153fff3018fadfa8d64becf7a534303
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446736"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545938"
 ---
 # <a name="sp_table_validation-transact-sql"></a>sp_table_validation (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -81,7 +81,7 @@ sp_table_validation [ @table = ] 'table'
   
  Если проверка достоверности по количеству строк и ожидаемый номер строки равны числу в таблице, **sp_table_validation** возвращает сообщение о том, что таблица прошла проверку достоверности по количеству строк. В противном случае будет выведено сообщение о том, что таблица может быть не синхронизирована, и отчет, показывающий разницу между ожидаемым и реальным числом строк.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **sp_table_validation** используется во всех типах репликации. **sp_table_validation** не поддерживается для издателей Oracle.  
   
  Контрольная сумма выполняет 32-разрядную циклическую проверку избыточности (CRC) всего образа строки на странице. Она не производит выборочной проверки столбцов и не выполняет операций над представлением или вертикальной секцией таблицы. Кроме того, контрольная сумма пропускает содержимое столбцов **Text** и **Image** (по структуре).  

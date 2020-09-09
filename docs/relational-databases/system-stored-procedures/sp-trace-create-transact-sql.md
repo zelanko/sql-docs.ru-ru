@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_create
 ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8818beb7c8ec4a0ff688f43fe6c3fe3794a573be
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 47e16f40b7cdd9ea9c65d3262487a7a68c8cb6ff
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485608"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547342"
 ---
 # <a name="sp_trace_create-transact-sql"></a>Хранимая процедура sp_trace_create (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -98,11 +98,11 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 |1|Неизвестная ошибка.|  
 |10|Недопустимые параметры. Возвращается, если указанные параметры несовместимы.|  
 |12|Файл не создан.|  
-|13|Нехватка памяти. Возвращается, когда для выполнения указанного действия недостаточно памяти.|  
+|13|Недостаточно памяти. Возвращается, когда для выполнения указанного действия недостаточно памяти.|  
 |14|Недопустимое время останова. Возвращается, если указанное время останова уже прошло.|  
 |15|Недопустимые аргументы. Возвращается, если пользователь ввел несовместимые аргументы.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **sp_trace_create** — это [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранимая процедура, которая выполняет многие действия, ранее выполненные **xp_trace_ \* ** расширенными хранимыми процедурами, доступными в более ранних версиях SQL Server. Используйте **sp_trace_create** вместо:  
   
 -   **xp_trace_addnewqueue**  
@@ -150,8 +150,8 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 ## <a name="see-also"></a>См. также  
  [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
- [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
+ [sp_trace_setfilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
+ [Хранимая процедура sp_trace_setstatus (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
  [Трассировка SQL](../../relational-databases/sql-trace/sql-trace.md)  
   
   

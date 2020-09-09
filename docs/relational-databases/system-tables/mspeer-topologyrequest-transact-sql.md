@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSpeer_topologyrequest
 ms.assetid: c644814b-4e40-44d7-b6b4-5954b0d4db7c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 613f84235f07daceab86300bc72528bd21693175
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f3d04ce7291660b52b6273ee7afb562da4bd4fce
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469042"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547067"
 ---
 # <a name="mspeer_topologyrequest-transact-sql"></a>MSpeer_topologyrequest (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88469042"
 |публикация|**sysname**|Имя публикации, из которой был сформирован запрос состояния топологии.|  
 |sent_date|**datetime**|Дата и время выдачи запроса состояния топологии.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

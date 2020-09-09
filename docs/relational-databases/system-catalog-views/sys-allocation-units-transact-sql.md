@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.allocation_units catalog view
 ms.assetid: ec9de780-68fd-4551-b70b-2d3ab3709b3e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f3d3cfeafa6ef955ba02962b75135a6bd40ac51f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b4e1d8894659b252d4a4888c8fb905df7468eb69
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464856"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546907"
 ---
 # <a name="sysallocation_units-transact-sql"></a>sys.allocation_units (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88464856"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |allocation_unit_id|**bigint**|Идентификатор единицы распределения. Уникален в базе данных.|  
-|type|**tinyint**|Тип единицы распределения:<br /><br /> 0 = удаленная;<br /><br /> 1 = внутристрочные данные (все типы данных, за исключением типов данных LOB);<br /><br /> 2 = данные больших объектов (LOB) (**Text**, **ntext**, **Image**, **XML**, типы больших значений и определяемые пользователем типы данных CLR)<br /><br /> 3 = превышающие размер страницы данные строки.|  
+|тип|**tinyint**|Тип единицы распределения:<br /><br /> 0 = удаленная;<br /><br /> 1 = внутристрочные данные (все типы данных, за исключением типов данных LOB);<br /><br /> 2 = данные больших объектов (LOB) (**Text**, **ntext**, **Image**, **XML**, типы больших значений и определяемые пользователем типы данных CLR)<br /><br /> 3 = превышающие размер страницы данные строки.|  
 |type_desc|**nvarchar(60)**|Описание типа единицы распределения:<br /><br /> **РЫВАЕТ**<br /><br /> **IN_ROW_DATA**<br /><br /> **LOB_DATA**<br /><br /> **ROW_OVERFLOW_DATA**|  
 |container_id|**bigint**|Идентификатор контейнера хранения, связанного с единицей распределения.<br /><br /> Если значение type = 1 или 3, то идентификатор container_id = sys.partitions.hobt_id.<br /><br /> Если тип type равен 2, то идентификатор container_id = sys.partitions.partition_id.<br /><br /> 0 = единица распределения помечена для отложенного удаления|  
 |data_space_id|**int**|Идентификатор файловой группы, в которой находится эта единица распределения.|  
@@ -50,8 +50,8 @@ ms.locfileid: "88464856"
 ## <a name="permissions"></a>Разрешения  
  Необходимо быть членом роли **public**. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также:  
- [sys. partitions &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [sys.partitions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [Представления каталога объектов (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

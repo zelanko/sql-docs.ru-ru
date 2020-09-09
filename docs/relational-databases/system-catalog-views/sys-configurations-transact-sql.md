@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.configurations catalog view
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1b041e0bb17e0c290225ecb951fe26d95ab07770
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6273f057b7733b787ed2ed8e8b61d23fd107fbd7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486464"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546849"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88486464"
 |**is_dynamic**|**bit**|1 = переменная, вступающая в силу после выполнения инструкции RECONFIGURE.|  
 |**is_advanced**|**bit**|1 = переменная отображается, только если задан параметр **Показать адванцедоптион** .|  
   
- ## <a name="remarks"></a>Комментарии
+ ## <a name="remarks"></a>Примечания
   Список всех параметров конфигурации сервера см. в разделе [Параметры конфигурации сервера &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
 > [!NOTE]  
@@ -63,7 +63,7 @@ select * from sys.configurations where value != value_in_use
 
 Если значение соответствует измененному параметру конфигурации, но **value_in_use** не совпадает, то либо команда RECONFIGURE не была выполнена, либо произошел сбой, либо необходимо перезапустить ядро сервера.
 
-Существуют параметры конфигурации, в которых значения и value_in_use могут отличаться, и это ожидаемое поведение. Например:
+Существуют параметры конфигурации, в которых значения и value_in_use могут отличаться, и это ожидаемое поведение. Пример:
 
 "max server memory (МБ)" — значение по умолчанию 0 будет отображаться как value_in_use = 2147483647 "min server memory (МБ)" — значение по умолчанию, равное 0, может отображаться как value_in_use = 8 (32-разрядное) или 16 (64-разрядное). 
 

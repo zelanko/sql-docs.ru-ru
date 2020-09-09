@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_mergecleanupmetadata
 ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 356c0aefb862d37d4c87af995e3b8d676a33e8a3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6f23cb729b98865b6dce4d15dcde555193d313eb
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446950"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546031"
 ---
 # <a name="sp_mergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **sp_mergecleanupmetadata** следует использовать только в топологиях репликации, включающих серверы под управлением более ранних версий, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] чем [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] пакет обновления 1 (SP1). Топологии, включающие только [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] с пакетом обновления 1 (SP1) или более поздние версии, должны использовать очистку метаданных, основанную на сроке хранения. При выполнении этой хранимой процедуры следует помнить о необходимом и, возможно, значительном увеличении файла журнала на компьютере, на котором выполняется хранимая процедура.  
   
 > [!CAUTION]
@@ -116,7 +116,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
  Для использования данной хранимой процедуры на издателе должен использоваться [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Подписчики должны работать под управлением [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] или [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0, с пакетом обновления 2 (SP2).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [MSmerge_genhistory &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)   
  [MSmerge_contents &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)   
  [MSmerge_tombstone &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)  

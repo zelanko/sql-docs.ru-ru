@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_stats dynamic management view
 ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 12ef4ff17b243a674911a9611517529bbe0ce0dc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f2bca0c700f483aced7a4387885649cb0ac2e764
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490003"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546596"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -74,10 +74,10 @@ ms.locfileid: "88490003"
 |**max_elapsed_time**|**bigint**|Максимальное время, когда-либо затраченное на выполнение плана, в микросекундах (но с точностью до миллисекунды).|  
 |**query_hash**|**Binary (8)**|Двоичное хэш-значение рассчитывается для запроса и используется для идентификации запросов с аналогичной логикой. Можно использовать хэш запроса для определения использования статистических ресурсов для запросов, которые отличаются только своими литеральными значениями.|  
 |**query_plan_hash**|**Binary (8)**|Двоичное хэш-значение рассчитывается для плана выполнения запроса и используется для идентификации аналогичных планов выполнения запросов. Можно использовать хэш плана запроса для нахождения совокупной стоимости запросов со схожими планами выполнения.<br /><br /> Значение всегда равно 0x000, если скомпилированная в собственном коде хранимая процедура запрашивает оптимизированную для памяти таблицу.|  
-|**total_rows**|**bigint**|Общее число строк, возвращаемых запросом. Не может иметь значение null.<br /><br /> Значение всегда равно 0, если скомпилированная в собственном коде хранимая процедура запрашивает оптимизированную для памяти таблицу.|  
-|**last_rows**|**bigint**|Число строк, возвращенных последним выполнением запроса. Не может иметь значение null.<br /><br /> Значение всегда равно 0, если скомпилированная в собственном коде хранимая процедура запрашивает оптимизированную для памяти таблицу.|  
-|**min_rows**|**bigint**|Минимальное количество строк, возвращенных запросом во время одного выполнения. Не может иметь значение null.<br /><br /> Значение всегда равно 0, если скомпилированная в собственном коде хранимая процедура запрашивает оптимизированную для памяти таблицу.|  
-|**max_rows**|**bigint**|Максимальное количество строк, возвращенных запросом во время одного выполнения. Не может иметь значение null.<br /><br /> Значение всегда равно 0, если скомпилированная в собственном коде хранимая процедура запрашивает оптимизированную для памяти таблицу.|  
+|**total_rows**|**bigint**|Общее число строк, возвращаемых запросом. Не может иметь значение NULL.<br /><br /> Значение всегда равно 0, если скомпилированная в собственном коде хранимая процедура запрашивает оптимизированную для памяти таблицу.|  
+|**last_rows**|**bigint**|Число строк, возвращенных последним выполнением запроса. Не может иметь значение NULL.<br /><br /> Значение всегда равно 0, если скомпилированная в собственном коде хранимая процедура запрашивает оптимизированную для памяти таблицу.|  
+|**min_rows**|**bigint**|Минимальное количество строк, возвращенных запросом во время одного выполнения. Не может иметь значение NULL.<br /><br /> Значение всегда равно 0, если скомпилированная в собственном коде хранимая процедура запрашивает оптимизированную для памяти таблицу.|  
+|**max_rows**|**bigint**|Максимальное количество строк, возвращенных запросом во время одного выполнения. Не может иметь значение NULL.<br /><br /> Значение всегда равно 0, если скомпилированная в собственном коде хранимая процедура запрашивает оптимизированную для памяти таблицу.|  
 |**statement_sql_handle**|**varbinary (64)**|**Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.<br /><br /> Заполнены значениями, отличными от NULL, только если хранилище запросов включено и сбор статистики для этого конкретного запроса.|  
 |**statement_context_id**|**bigint**|**Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.<br /><br /> Заполнены значениями, отличными от NULL, только если хранилище запросов включено и сбор статистики для этого конкретного запроса.|  
 |**total_dop**|**bigint**|Общая сумма степени параллелизма, которую этот план использовал с момента компиляции. Он всегда будет равен 0 для запроса оптимизированной для памяти таблицы.<br /><br /> **Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий.|  
@@ -104,14 +104,14 @@ ms.locfileid: "88490003"
 |**last_used_threads**|**bigint**|Число использованных параллельных потоков при последнем выполнении плана. Он всегда будет равен 0 для запроса оптимизированной для памяти таблицы.<br /><br /> **Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий.|  
 |**min_used_threads**|**bigint**|Минимальное число использованных параллельных потоков, которое когда-либо использовалось при выполнении одного плана. Он всегда будет равен 0 для запроса оптимизированной для памяти таблицы.<br /><br /> **Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий.|  
 |**max_used_threads**|**bigint**|Максимальное количество использованных параллельных потоков, которое когда-либо использовалось при выполнении одного плана. Он всегда будет равен 0 для запроса оптимизированной для памяти таблицы.<br /><br /> **Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий.|  
-|**total_columnstore_segment_reads**|**bigint**|Общая сумма сегментов columnstore, считанных запросом. Не может иметь значение null.<br /><br /> Область **применения**: начиная с с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**last_columnstore_segment_reads**|**bigint**|Число сегментов columnstore, считанных при последнем выполнении запроса. Не может иметь значение null.<br /><br /> Область **применения**: начиная с с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**min_columnstore_segment_reads**|**bigint**|Минимальное число сегментов columnstore, считываемых запросом во время одного выполнения. Не может иметь значение null.<br /><br /> Область **применения**: начиная с с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**max_columnstore_segment_reads**|**bigint**|Максимальное число сегментов columnstore, считываемых запросом во время одного выполнения. Не может иметь значение null.<br /><br /> Область **применения**: начиная с с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**total_columnstore_segment_skips**|**bigint**|Общая сумма сегментов columnstore, пропущенных запросом. Не может иметь значение null.<br /><br /> Область **применения**: начиная с с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**last_columnstore_segment_skips**|**bigint**|Число сегментов columnstore, пропущенных при последнем выполнении запроса. Не может иметь значение null.<br /><br /> Область **применения**: начиная с с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**min_columnstore_segment_skips**|**bigint**|Минимальное число сегментов columnstore, пропущенных запросом во время одного выполнения. Не может иметь значение null.<br /><br /> Область **применения**: начиная с с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**max_columnstore_segment_skips**|**bigint**|Максимальное число сегментов columnstore, пропущенных запросом во время одного выполнения. Не может иметь значение null.<br /><br /> Область **применения**: начиная с с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|
+|**total_columnstore_segment_reads**|**bigint**|Общая сумма сегментов columnstore, считанных запросом. Не может иметь значение NULL.<br /><br /> Область **применения**: начиная с с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**last_columnstore_segment_reads**|**bigint**|Число сегментов columnstore, считанных при последнем выполнении запроса. Не может иметь значение NULL.<br /><br /> Область **применения**: начиная с с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**min_columnstore_segment_reads**|**bigint**|Минимальное число сегментов columnstore, считываемых запросом во время одного выполнения. Не может иметь значение NULL.<br /><br /> Область **применения**: начиная с с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**max_columnstore_segment_reads**|**bigint**|Максимальное число сегментов columnstore, считываемых запросом во время одного выполнения. Не может иметь значение NULL.<br /><br /> Область **применения**: начиная с с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**total_columnstore_segment_skips**|**bigint**|Общая сумма сегментов columnstore, пропущенных запросом. Не может иметь значение NULL.<br /><br /> Область **применения**: начиная с с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**last_columnstore_segment_skips**|**bigint**|Число сегментов columnstore, пропущенных при последнем выполнении запроса. Не может иметь значение NULL.<br /><br /> Область **применения**: начиная с с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**min_columnstore_segment_skips**|**bigint**|Минимальное число сегментов columnstore, пропущенных запросом во время одного выполнения. Не может иметь значение NULL.<br /><br /> Область **применения**: начиная с с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**max_columnstore_segment_skips**|**bigint**|Максимальное число сегментов columnstore, пропущенных запросом во время одного выполнения. Не может иметь значение NULL.<br /><br /> Область **применения**: начиная с с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|
 |**total_spills**|**bigint**|Общее число страниц, сброшенных при выполнении этого запроса с момента его компиляции.<br /><br /> Область **применения**: начиная с с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**last_spills**|**bigint**|Число страниц, сброшенных при последнем выполнении запроса.<br /><br /> Область **применения**: начиная с с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**min_spills**|**bigint**|Минимальное число страниц, которые этот запрос когда-либо был сброшен во время одного выполнения.<br /><br /> Область **применения**: начиная с с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
@@ -129,7 +129,7 @@ ms.locfileid: "88490003"
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
 На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется  **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
    
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Статистика в представлении обновляется после завершения выполнения запроса.  
   
 ## <a name="examples"></a>Примеры  
@@ -174,7 +174,7 @@ WHERE qt.text like '%SELECT%'
 ORDER BY qs.execution_count DESC;  
 ```  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>Дополнительно  
 [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
 [sys. dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)    
 [sys. dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSdistribution_agents system table
 ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9802c60aed31ec8e5cb04f7d053761382e5f90df
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f2433e5dcc96cc8b60adbc231a4f40e5a726dc62
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454686"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547165"
 ---
 # <a name="msdistribution_agents-transact-sql"></a>MSdistribution_agents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "88454686"
 |**dts_package_name**;|**sysname**|Имя пакета служб DTS. Например, для пакета с именем **DTSPub_Package**укажите `@dts_package_name = N'DTSPub_Package'` .|  
 |**dts_package_password**;|**nvarchar (524)**|Пароль пакета.|  
 |**dts_package_location**.|**int**|Местонахождение пакета. Расположение пакета может быть **распространителем** или **подписчиком**.|  
-|**sid**|**varbinary(85)**|Идентификатор безопасности (SID) агента распространителя или агента слияния при первом выполнении.|  
+|**трансляцию**|**varbinary(85)**|Идентификатор безопасности (SID) агента распространителя или агента слияния при первом выполнении.|  
 |**queue_server**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**subscriber_security_mode**|**smallint**|Режим безопасности, используемый агентом при подключении к подписчику. Предусмотрены следующие режимы:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server проверка подлинности<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Проверка подлинности Windows.|  
 |**subscriber_login**|**sysname**|Имя входа для подключения к подписчику.|  
