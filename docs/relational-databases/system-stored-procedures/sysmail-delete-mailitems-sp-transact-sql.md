@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_delete_mailitems_sp
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ebfd972849ff27ca0f0b6b73117a786c146e610b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a1bcfc2bbd5069e50399eaa6b23fc69938ec6a05
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489008"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538506"
 ---
 # <a name="sysmail_delete_mailitems_sp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Database Mail сообщения и их вложения хранятся в базе данных **msdb** . Сообщения следует периодически удалять, чтобы не допустить роста базы данных **msdb** , чем ожидалось, и в соответствии с программой хранения документов Организации. Используйте **sysmail_delete_mailitems_sp** хранимую процедуру, чтобы окончательно удалить сообщения электронной почты из Database Mail таблиц. Необязательный аргумент позволяет удалить только старые сообщения, указав дату и время. Сообщения, которые старше этого аргумента, будут удалены. Другой необязательный аргумент позволяет удалить только сообщения электронной почты определенного типа, указанные в качестве аргумента **sent_status** . Аргумент необходимо указать либо для ** \@ sent_before** , либо для ** \@ sent_status**. Чтобы удалить все сообщения, используйте ** \@ sent_before = GETDATE ()**.  
   
  Удаление сообщений электронной почты также удаляет вложения, связанные с этими сообщениями. Удаление электронной почты не приводит к удалению соответствующих записей в **sysmail_event_log**. Для удаления элементов из журнала используйте [sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md) .  

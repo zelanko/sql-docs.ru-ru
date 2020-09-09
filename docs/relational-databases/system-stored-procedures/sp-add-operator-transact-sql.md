@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_operator
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a22465af8c3d4e7e3bb0cabd76752d642c2f2423
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e2b67e5754fdc0124d105d99954361535933c88b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447483"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539255"
 ---
 # <a name="sp_add_operator-transact-sql"></a>sp_add_operator (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -59,7 +59,7 @@ sp_add_operator [ @name = ] 'name'
   
 `[ @email_address = ] 'email_address'` Адрес электронной почты оператора. Эта строка передается напрямую в систему электронной почты. *email_address* имеет тип **nvarchar (100)** и значение по умолчанию NULL.  
   
- Можно указать либо физический адрес электронной почты, либо псевдоним для *email_address*. Например:  
+ Можно указать либо физический адрес электронной почты, либо псевдоним для *email_address*. Пример:  
   
  "**jdoe**" или "**jdoe \@ XYZ.com**"  
   
@@ -130,7 +130,7 @@ EXEC dbo.sp_add_operator
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
  [sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
  [sp_update_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   

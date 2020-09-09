@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmergearticles system table
 ms.assetid: e9b1648e-4660-4688-9f56-18b2baf7228c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 677fc8a30daa3b9a921bb194c6f4d06635b43284
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 40701192048b83cae153b06bb5b4a3fdeeac2abf
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427596"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538229"
 ---
 # <a name="sysmergearticles-transact-sql"></a>sysmergearticles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -92,11 +92,11 @@ ms.locfileid: "88427596"
 |**stream_blob_columns**|**bit**|Указывает, применяется ли оптимизация потока данных при репликации столбцов с большими двоичными объектами. **1** означает, что выполняется оптимизация.|  
 |**preserve_rowguidcol**|**bit**|Показывает, использует ли репликация существующий столбец rowguid. Значение **1** означает, что используется существующий столбец ROWGUIDCOL. значение **0** означает, что репликация добавила столбец ROWGUIDCOL.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
- [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
+ [sp_changemergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
  [sp_helpmergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)  
   
   

@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.servers catalog view
 ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f588f0c472432cc4dc68819d32ee57cf65a59358
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bcead6ebe4064dc43e97d0c0aa9d74920f69bbb8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455198"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539586"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "88455198"
   
  Если сопоставление удалено, только те пользователи, которые добавлены явно со связанным или удаленным именем входа, могут просматривать связанные или удаленные сервера соответственно.  Следующие разрешения необходимы для просмотра всех связанных и удаленных серверов после сопоставления имени входа по умолчанию:  
   
-- `ALTER ANY LINKED SERVER` либо `ALTER ANY LOGIN ON SERVER`  
+- `ALTER ANY LINKED SERVER` или `ALTER ANY LOGIN ON SERVER`  
 - Членство в предопределенных ролях сервера **setupadmin** или **sysadmin**  
   
 ## <a name="see-also"></a>См. также  

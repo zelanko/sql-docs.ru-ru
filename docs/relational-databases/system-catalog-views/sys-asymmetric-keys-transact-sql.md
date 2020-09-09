@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.asymmetric_keys catalog view
 ms.assetid: bbca796a-9bb5-4a62-9ca8-1d255984553d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6511df5406c72778b970a317ab7182b9db5bdd7d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d8ff4d42014f0e3b61c4087ae879edfb8f9da744
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486559"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539712"
 ---
 # <a name="sysasymmetric_keys-transact-sql"></a>sys.asymmetric_keys (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88486559"
 |**Microsof**|**char(2)**|Алгоритм, используемый с ключом.<br /><br /> 1R = 512-разрядный RSA<br /><br /> 2R = 1024-разрядный RSA<br /><br /> 3R = 2048-разрядный RSA|  
 |**algorithm_desc**|**nvarchar(60)**|Описание алгоритма, используемого с ключом.<br /><br /> RSA_512<br /><br /> RSA_1024<br /><br /> RSA_2048|  
 |**key_length**|**int**|Длина ключа в битах.|  
-|**sid**|**varbinary(85)**|Идентификатор безопасности имени входа для этого ключа. Для ключей системы расширенного управления ключами это значение будет равно NULL.|  
+|**трансляцию**|**varbinary(85)**|Идентификатор безопасности имени входа для этого ключа. Для ключей системы расширенного управления ключами это значение будет равно NULL.|  
 |**string_sid**|**nvarchar(128)**|Строковое представление входного идентификатора SID ключа. Для ключей системы расширенного управления ключами это значение будет равно NULL.|  
 |**public_key**|**varbinary(max)**|Открытый ключ.|  
 |**attested_by**|**nvarchar(260)**|Только для системного использования.|  

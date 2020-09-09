@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - cdc.<capture_instance>_CT
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c6f91c8064316c8d1fa94b88a4a5c123a652cb5f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0515c57b3c3249cc748c2ab96a12c2c1ef35d700
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454778"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538389"
 ---
 # <a name="cdcltcapture_instancegt_ct-transact-sql"></a>CDC. &lt; &gt;_CT capture_instance (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88454778"
 |*\<captured source table columns>*|непостоянно|Остальные столбцы в таблице изменений — это столбцы из исходной таблицы, определенные, как отслеживаемые при создании экземпляра отслеживания. Если в списке отслеживаемых столбцов не указано ни одного столбца, в эту таблицу включаются все столбцы из исходной таблицы.|  
 |**__ $ command_id** |**int** |Отслеживает порядок операций в рамках транзакции. |  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
 
 Столбец `__$command_id` был представлен в накопительном обновлении в версиях 2012 – 2016. Сведения о версии и загрузке см. в статье базы знаний 3030352 в [исправлении: таблица изменений неправильно упорядочивается для обновленных строк после включения системы отслеживания измененных данных для Microsoft SQL Server базы данных](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you).  Дополнительные сведения см. в разделе [функция CDC может прерываться после обновления до последней версии Cu для SQL Server 2012, 2014 и 2016](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
 

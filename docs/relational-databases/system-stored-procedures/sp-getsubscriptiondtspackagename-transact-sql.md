@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_getsubscriptiondtspackagename
 ms.assetid: 606c40aa-2593-43af-9762-0f260bbb51f2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e21e0ffd1815e56f50f09f08460657a37271ac9d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 03f7e3294a2c8d571031f60eef9f3ab541c9a2d6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481270"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538888"
 ---
 # <a name="sp_getsubscriptiondtspackagename-transact-sql"></a>sp_getsubscriptiondtspackagename (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,7 @@ sp_getsubscriptiondtspackagename [ @publication = ] 'publication'
 |-----------------|---------------|-----------------|  
 |**new_package_name**|**sysname**|Имя пакета служб DTS.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_getsubscriptiondtspackagename** используется в репликации моментальных снимков и репликации транзакций.  
   
 ## <a name="permissions"></a>Разрешения  

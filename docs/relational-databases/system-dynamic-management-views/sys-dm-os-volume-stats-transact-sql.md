@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_volume_stats dynamic management function
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 75e6753328857be7f677a253fde790dd51defc51
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 085659b4c6754bc2de68124dcb7d5c6fbbcdeb16
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474816"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539257"
 ---
 # <a name="sysdm_os_volume_stats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]
@@ -51,19 +51,19 @@ sys.dm_os_volume_stats (database_id, file_id)
 ||||  
 |-|-|-|  
 |**Столбец**|**Data type**|**Описание**|  
-|**database_id**|**int**|Идентификатор базы данных. Не может иметь значение null.|  
-|**file_id**|**int**|Идентификатор файла. Не может иметь значение null.|  
+|**database_id**|**int**|Идентификатор базы данных. Не может иметь значение NULL.|  
+|**file_id**|**int**|Идентификатор файла. Не может иметь значение NULL.|  
 |**volume_mount_point**|**nvarchar(512)**|Точка подключения, с которой ассоциирован корень тома. Может возвращать пустую строку.|  
 |**volume_id**|**nvarchar(512)**|Идентификатор тома операционной системы. Может возвращать пустую строку|  
 |**logical_volume_name**|**nvarchar(512)**|Логическое имя тома. Может возвращать пустую строку|  
 |**file_system_type**|**nvarchar(512)**|Тип файловой системы тома (например, NTFS, FAT, RAW). Может возвращать пустую строку|  
-|**total_bytes**|**bigint**|Общий размер тома в байтах. Не может иметь значение null.|  
-|**available_bytes**|**bigint**|Доступное свободное место на томе. Не может иметь значение null.|  
-|**supports_compression**|**bit**|Указывает, поддерживает ли том сжатие на уровне операционной системы. Не может иметь значение null.|  
-|**supports_alternate_streams**|**bit**|Указывает, поддерживает ли том дополнительные потоки. Не может иметь значение null.|  
-|**supports_sparse_files**|**bit**|Указывает, поддерживает ли том разреженные файлы.  Не может иметь значение null.|  
-|**is_read_only**|**bit**|Указывает, помечен ли том как доступный только для чтения. Не может иметь значение null.|  
-|**is_compressed**|**bit**|Указывает, сжат ли том в настоящее время. Не может иметь значение null.|  
+|**total_bytes**|**bigint**|Общий размер тома в байтах. Не может иметь значение NULL.|  
+|**available_bytes**|**bigint**|Доступное свободное место на томе. Не может иметь значение NULL.|  
+|**supports_compression**|**bit**|Указывает, поддерживает ли том сжатие на уровне операционной системы. Не может иметь значение NULL.|  
+|**supports_alternate_streams**|**bit**|Указывает, поддерживает ли том дополнительные потоки. Не может иметь значение NULL.|  
+|**supports_sparse_files**|**bit**|Указывает, поддерживает ли том разреженные файлы.  Не может иметь значение NULL.|  
+|**is_read_only**|**bit**|Указывает, помечен ли том как доступный только для чтения. Не может иметь значение NULL.|  
+|**is_compressed**|**bit**|Указывает, сжат ли том в настоящее время. Не может иметь значение NULL.|  
   
 ## <a name="security"></a>Безопасность  
   

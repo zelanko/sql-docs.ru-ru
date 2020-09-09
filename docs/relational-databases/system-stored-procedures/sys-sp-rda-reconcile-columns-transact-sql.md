@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reconcile_columns stored procedure
 ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 939bc5cbe299ce144b8617391fd33d740011b08a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1788e373c8bab330182df9338e447946cda87bd3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245751"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538450"
 ---
 # <a name="syssp_rda_reconcile_columns-transact-sql"></a>sys. sp_rda_reconcile_columns (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -54,7 +54,7 @@ sp_rda_reconcile_columns @objname = '@objname'
 ## <a name="permissions"></a>Разрешения  
  Требуются db_owner разрешения.  
    
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Если в удаленной таблице Azure есть столбцы, которых больше нет в таблице SQL Server с поддержкой Stretch Database, эти лишние столбцы не препятствуют нормальной работе службы Stretch Database. При желании вы можете удалить такие столбцы вручную.  
   
 ## <a name="example"></a>Пример  

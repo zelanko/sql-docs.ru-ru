@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_repldone
 ms.assetid: 045d3cd1-712b-44b7-a56a-c9438d4077b9
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e627296cecad35b21c84b928f4474f6302e9214d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7a8e32127986fb67a28abfa2433caefc044ed1b2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725741"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538606"
 ---
 # <a name="sp_repldone-transact-sql"></a>sp_repldone (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,15 +44,15 @@ sp_repldone [ @xactid= ] xactid
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @xactid = ] xactid`Регистрационный номер транзакции в журнале (LSN) первой записи для последней распределенной транзакции сервера. *xactid* является **двоичным (10)** и не имеет значения по умолчанию.  
+`[ @xactid = ] xactid` Регистрационный номер транзакции в журнале (LSN) первой записи для последней распределенной транзакции сервера. *xactid* является **двоичным (10)** и не имеет значения по умолчанию.  
   
-`[ @xact_seqno = ] xact_seqno`Номер LSN последней записи для последней распределенной транзакции сервера. *xact_seqno* является **двоичным (10)** и не имеет значения по умолчанию.  
+`[ @xact_seqno = ] xact_seqno` Номер LSN последней записи для последней распределенной транзакции сервера. *xact_seqno* является **двоичным (10)** и не имеет значения по умолчанию.  
   
-`[ @numtrans = ] numtrans`Число распределенных транзакций. *numtrans* имеет **тип int**и не имеет значения по умолчанию.  
+`[ @numtrans = ] numtrans` Число распределенных транзакций. *numtrans* имеет **тип int**и не имеет значения по умолчанию.  
   
-`[ @time = ] time`Число миллисекунд, необходимых для распределения последнего пакета транзакций. *time* имеет **тип int**и не имеет значения по умолчанию.  
+`[ @time = ] time` Число миллисекунд, необходимых для распределения последнего пакета транзакций. *time* имеет **тип int**и не имеет значения по умолчанию.  
   
-`[ @reset = ] reset`Состояние сброса. *Reset* имеет **тип int**и не имеет значения по умолчанию. Если значение равно **1**, то все реплицированные транзакции в журнале помечаются как распределенные. Если значение **равно 0**, то журнал транзакций сбрасывается до первой реплицированной транзакции, а реплицированные транзакции не помечаются как распределенные. *Сброс* допустим только в том случае, если оба *xactid* и *xact_seqno* имеют значение null.  
+`[ @reset = ] reset` Состояние сброса. *Reset* имеет **тип int**и не имеет значения по умолчанию. Если значение равно **1**, то все реплицированные транзакции в журнале помечаются как распределенные. Если значение **равно 0**, то журнал транзакций сбрасывается до первой реплицированной транзакции, а реплицированные транзакции не помечаются как распределенные. *Сброс* допустим только в том случае, если оба *xactid* и *xact_seqno* имеют значение null.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -80,7 +80,7 @@ EXEC sp_repldone @xactid = NULL, @xact_seqno = NULL, @numtrans = 0, @time = 0, @
 >  Данную процедуру можно использовать в аварийных случаях для усечения журнала транзакций при наличии транзакций, ожидающих репликации.  
   
 ## <a name="see-also"></a>См. также  
- [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
+ [sp_replcmds (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
  [sp_replflush &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
  [sp_repltrans &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

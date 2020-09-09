@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - ExpirationDate property
 ms.assetid: b7fbb9e9-85c1-475b-8e49-7c82fb3740aa
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 879b10b0c0e1027640630ffcb0d3a6b092a22da1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e1340521a683dc410572cb34f2d4ef8daaab9513
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460155"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537796"
 ---
 # <a name="expirationdate-property-securitycertificate-class"></a>Свойство ExpirationDate (класс SecurityCertificate)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +43,9 @@ object.ExpirationDate [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение **UInt32** , указывающее дату истечения срока действия сертификата безопасности.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

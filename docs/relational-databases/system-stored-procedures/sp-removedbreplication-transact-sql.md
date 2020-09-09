@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_removedbreplication
 ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 14c013da5fed9a0a9477692ce6bdda20b5d921a5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 01fc666444891836011b80e77492b1cdebbefff5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751677"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538663"
 ---
 # <a name="sp_removedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,13 +42,13 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @dbname = ] 'dbname'`Имя базы данных. Аргумент*dbname* имеет тип **sysname**и значение по умолчанию NULL. Если значение NULL, используется текущая база данных.  
+`[ @dbname = ] 'dbname'` Имя базы данных. Аргумент*dbname* имеет тип **sysname**и значение по умолчанию NULL. Если значение NULL, используется текущая база данных.  
   
-`[ @type = ] type`Тип репликации, для которого удаляются объекты базы данных. *Type имеет тип* **nvarchar (5)** и может принимать одно из следующих значений.  
+`[ @type = ] type` Тип репликации, для которого удаляются объекты базы данных. *Type имеет тип* **nvarchar (5)** и может принимать одно из следующих значений.  
   
 |||  
 |-|-|  
-|**tran**|Удаляет публикуемые объекты репликации транзакций.|  
+|**Tran**|Удаляет публикуемые объекты репликации транзакций.|  
 |**AutoMerge**|Удаляет публикуемые объекты репликации слиянием.|  
 |**both** (по умолчанию)|Удаляет все публикуемые объекты репликации.|  
   
@@ -83,7 +83,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Отключение публикации и распространения](../../relational-databases/replication/disable-publishing-and-distribution.md)   
+ [Disable Publishing and Distribution](../../relational-databases/replication/disable-publishing-and-distribution.md)  (Отключение публикации и распространения)  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - PropertyType property
 ms.assetid: fc0e4725-979f-4517-a8f5-25436b87f5c2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f05a8c7802389cdc89eef44e59e6bb2a263479cd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1c3bb3ea3bad4087ea88c8abdbd51ed5b1644575
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485198"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537871"
 ---
 # <a name="propertytype-property-clientnetworkprotocolproperty-class"></a>Свойство PropertyType (класс ClientNetworkProtocolProperty)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +43,9 @@ object.PropertyType [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение **uint32** , указывающее тип свойства.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка клиентских протоколов](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   

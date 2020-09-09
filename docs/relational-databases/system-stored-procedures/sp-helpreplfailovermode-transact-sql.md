@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpreplfailovermode
 ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5503291dc5011366ab6fe3b4a2d60b0a1310ba79
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 49573995e7a89b0cb2cc9cdecd55009320f565f4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489296"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538806"
 ---
 # <a name="sp_helpreplfailovermode-transact-sql"></a>Хранимая процедура sp_helpreplfailovermode (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +60,7 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **sp_helpreplfailovermode** используется в репликации моментальных снимков или репликации транзакций, для которой подписки включены для немедленного обновления с обновлением посредством очереди при отработке отказа, в случае сбоя.  
   
 ## <a name="permissions"></a>Разрешения  
