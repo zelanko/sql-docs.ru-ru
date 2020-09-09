@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepullsubscription
 ms.assetid: d63909a0-8ea7-4734-9ce8-8204d936a3e4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: af86ada2400422732d910752538de54f42b01437
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 13e89d2dfe90789071821f7ad6714361f1954a8d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489611"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89529719"
 ---
 # <a name="sp_addmergepullsubscription-transact-sql"></a>sp_addmergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -64,7 +64,7 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **sp_addmergepullsubscription** используется для репликации слиянием.  
   
  Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для синхронизации подписки используется агент, то хранимая процедура [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) должна выполняться на подписчике, чтобы создать агент и задание для синхронизации с публикацией.  

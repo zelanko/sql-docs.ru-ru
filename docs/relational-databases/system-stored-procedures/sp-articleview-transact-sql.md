@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_articleview
 ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5b1d18b8e4249f2948dccb3b042742afe0c0f54a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e2d0efe52bb7f187ebfc981008610be81bc9528e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464542"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89528874"
 ---
 # <a name="sp_articleview-transact-sql"></a>sp_articleview (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -85,7 +85,7 @@ sp_articleview [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_articleview** создает представление, определяющее опубликованную статью, и вставляет идентификатор этого представления в столбец **sync_objid** таблицы [sysarticles &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md) , а также вставляет текст предложения ограничения в столбец **filter_clause** . Если все столбцы реплицируются и отсутствует **filter_clause**, **sync_objid** в таблице [sysarticles &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md) задается идентификатор базовой таблицы, а использование **sp_articleview** не является обязательным.  
   
  Для публикации вертикально фильтруемой таблицы (то есть для фильтрации столбцов) сначала выполняется **sp_addarticle** без параметра *sync_object* , запустите [sp_articlecolumn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) один раз для каждого столбца, который будет реплицирован (определение вертикального фильтра), а затем запустите **sp_articleview** , чтобы создать представление, определяющее опубликованную статью.  
@@ -108,9 +108,9 @@ sp_articleview [ @publication = ] 'publication'
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [Определение и изменение статического строкового фильтра](../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   
  [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [sp_articlefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)   
- [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
- [sp_droparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
+ [sp_articlefilter (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)   
+ [sp_changearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
+ [sp_droparticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [sp_helparticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
  [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

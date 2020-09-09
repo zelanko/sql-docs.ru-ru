@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changelogreader_agent
 ms.assetid: 929b2fa7-1267-41d0-8b69-e9ab26a62c0f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 40356a67f13cc3c83a1a8555bd967b5092ecc65d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b7be6bc9fb6d52508677d75448b429726be005b8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481537"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89528661"
 ---
 # <a name="sp_changelogreader_agent-transact-sql"></a>sp_changelogreader_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -68,7 +68,7 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **sp_changelogreader_agent** используется в репликации транзакций.  
   
  **sp_changelogreader_agent** используется для изменения учетной записи Windows, с которой запускается агент чтения журнала. Можно изменить пароль существующего имени входа в систему Windows или ввести новое имя пользователя Windows и пароль.  

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_apply_job_to_targets
 ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1f821418b5e6a75aa51264abb0d265f907b8957d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a164569a5a62e24dabe0d47839eaa084b32e2efa
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464563"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89529065"
 ---
 # <a name="sp_apply_job_to_targets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **sp_apply_job_to_targets** предоставляет простой способ применения (или удаления) задания с нескольких целевых серверов и является альтернативой вызову **sp_add_jobserver** (или **sp_delete_jobserver**) один раз для каждого требуемого целевого сервера.  
   
 ## <a name="permissions"></a>Разрешения  

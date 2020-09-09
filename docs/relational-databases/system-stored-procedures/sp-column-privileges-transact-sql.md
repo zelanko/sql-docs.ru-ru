@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_column_privileges
 ms.assetid: a3784301-2517-4b1d-bbd9-47404483fad0
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 23dc67e25bdc6d57d2fc487e78dc988924dc800f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 44097fb7340dd61f467b4bb08e0b4a718d6ab323
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481483"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89528579"
 ---
 # <a name="sp_column_privileges-transact-sql"></a>sp_column_privileges (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -72,7 +72,7 @@ sp_column_privileges [ @table_name = ] 'table_name'
 |PRIVILEGE|**varchar (** 32 **)**|Одно из доступных разрешений на доступ к столбцу. Разрешениями для столбца может быть одно из следующих значений (или другие значения, поддерживаемые источником данных для определенных реализаций):<br /><br /> SELECT = пользователь GRANTEE может получать данные для столбцов;<br /><br /> INSERT = пользователь GRANTEE может предоставлять данные для этого столбца, когда новые строки вставляются (этим пользователем) в таблицу;<br /><br /> UPDATE = пользователь GRANTEE может изменять существующие данные в столбце;<br /><br /> REFERENCES = GRANTEE — может ссылаться на столбец во внешней таблице в связи «первичный-внешний ключ». Связи «первичный/внешний ключ» определяются с помощью ограничений таблицы.|  
 |IS_GRANTABLE|**varchar (** 3 **)**|Указывает, разрешено ли пользователю GRANTEE предоставлять разрешения другим пользователям (часто обозначается как разрешение «право передачи»). Может иметь значение YES, NO или NULL. Неизвестное значение или значение NULL, указывает на источник данных, для которого не применимо разрешение «право передачи».|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] разрешения предоставляются инструкцией GRANT и отзываются инструкцией REVOKE.  
   
 ## <a name="permissions"></a>Разрешения  
