@@ -128,7 +128,7 @@ ms.locfileid: "88425196"
      
     - Для успешного выполнения задания с помощью прокси-сервера требуются следующие элементы системы безопасности.
 
-        Credential Login used by the Proxy, the account running the SQL Server Agent and the account running the SQL Server Service require the following permissions:
+        Логин, используемый прокси, учетная запись, использующая агент SQL Server, и учетная запись, использующая службу SQL Server, требуют следующих разрешений:
 
         - Атрибут локальной политики безопасности: Замена токена уровня процесса
         - Полный контроль над %SYSTEMROOT%\Temp 
