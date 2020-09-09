@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - ServerNetworkProtocol class
 ms.assetid: 0f9f7f7d-f8ab-426e-a85d-4eda3a241eb5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 46dea7ba469ffef0b81b3fcaec64384b6a39fadd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d2b54c6139e62aadf4448934c085adb3ee46e4d7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427326"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540056"
 ---
 # <a name="servernetworkprotocol-class"></a>Класс ServerNetworkProtocol
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88427326"
   
 -   включать и отключать сетевой протокол сервера.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

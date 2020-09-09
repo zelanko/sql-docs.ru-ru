@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - StopService method
 ms.assetid: ef8e1856-4930-417a-8f52-be470fd3f15c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7f4c01a00f1ce264cc26ebbfd7f4ad6a682e5ba6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a2fa704782a3c03554bd62260548106002b3dbd3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485103"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540017"
 ---
 # <a name="stopservice-method-sqlservice-class"></a>Метод StopService (класс SqlService)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +43,9 @@ object.StopService()
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение **uint32** равно 0, если запрос **ResumeService** был принят; равно 1, если запрос не поддерживается; и равно любому другому числу для указания ошибки.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

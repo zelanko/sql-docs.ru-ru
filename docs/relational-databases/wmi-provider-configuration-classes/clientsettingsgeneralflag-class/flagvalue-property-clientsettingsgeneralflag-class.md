@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - FlagValue property
 ms.assetid: 7af9e5b2-1b99-4eea-8a49-1129c0d46086
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0e4c94c1a96688859b10418ca0fc1625cb96fe92
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 715a36cc672e48b7b900d9acf167c8637109db91
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427296"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540104"
 ---
 # <a name="flagvalue-property-clientsettingsgeneralflag-class"></a>Свойство FlagValue (класс ClientSettingsGeneralFlag)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +43,9 @@ object.FlagValue [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Логическое значение, указывающее состояние флага.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

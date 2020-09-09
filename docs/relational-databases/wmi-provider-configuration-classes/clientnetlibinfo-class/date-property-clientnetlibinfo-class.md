@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - Date property
 ms.assetid: 4ca7e569-f097-49f7-b83c-795b0f1319ec
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9e3e2cc272cb233e110d331ac5c607e9332954f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c2d87dc569ce146bbdecbabf42cf07a90092af4b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463706"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540832"
 ---
 # <a name="date-property-clientnetlibinfo-class"></a>Свойство Date (класс ClientNetLibInfo)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +43,9 @@ object.Date [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение uint32, определяющее дату файла сетевой библиотеки клиента.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

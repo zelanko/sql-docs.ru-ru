@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - MSrepl_errors system table
 ms.assetid: c6e023c1-2c32-4269-8d76-e442ea309e4b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ab4195f63afdda44bb5e4abff1e27f8738903ea3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5afa86de5a33eab4f7e77da1c825619a738381de
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473212"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540294"
 ---
 # <a name="msrepl_errors-transact-sql"></a>MSrepl_errors (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88473212"
 |**error_type_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**source_type_id**|**int**|Идентификатор типа источника ошибки.|  
 |**source_name**|**nvarchar (100)**|Имя источника ошибки.|  
-|**Error_Code**|**sysname**|Код ошибки.|  
+|**error_code**|**sysname**|Код ошибки.|  
 |**error_text**|**ntext**|Сообщение об ошибке.|  
 |**xact_seqno**|**varbinary (16)**|Порядковый номер транзакции в журнале начальной транзакции для пакета, завершенного с ошибкой. Это последовательный номер журнала транзакций, содержащего первую транзакцию в пакете, выполненном с ошибкой. Он используется только агентами распространителя.|  
 |**command_id**|**int**|Идентификатор команды пакета, завершенного с ошибкой. Это идентификатор первой команды в пакете, завершенном с ошибкой, используемый только агентами распространителя.|  

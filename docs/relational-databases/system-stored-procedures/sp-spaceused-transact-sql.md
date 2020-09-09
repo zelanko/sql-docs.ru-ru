@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_spaceused
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b07a4f8ece975662127797f6f25ecd19ecc759c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5eb32803d759ff89a7c41addde56d9fa5dd76644
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473816"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540500"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -119,7 +119,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(128)**|Имя объекта, для которого были запрошены сведения об используемом пространстве.<br /><br /> Имя схемы объекта не возвращается. Если имя схемы является обязательным, используйте динамические административные представления [sys. dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) или [sys. dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) для получения эквивалентных сведений о размере.|  
-|**сквоз**|**char (20)**|Количество существующих строк в таблице. Если объект указан как очередь компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)], этот столбец указывает число сообщений в очереди.|  
+|**rows**|**char (20)**|Количество существующих строк в таблице. Если объект указан как очередь компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)], этот столбец указывает число сообщений в очереди.|  
 |**процессу**|**varchar (18)**|Общий объем зарезервированного пространства для объекта *objname*.|  
 |**data**|**varchar (18)**|Общий объем пространства, занятого данными в *objname*.|  
 |**index_size**|**varchar (18)**|Общий объем пространства, используемый индексами объекта *objname*.|  
@@ -165,7 +165,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**xtp_used**|**varchar (18)**|Общий размер файлов контрольных точек с состояниями в разделе Создание, активный и целевой объект слияния, в КБ. Это место на диске, активно используемое для данных в оптимизированных для памяти таблицах. Возвращает значение NULL, если база данных не имеет memory_optimized_data файловой группы, имеющей по крайней мере один контейнер. *Этот столбец включается, только если @include_total_xtp_storage = 1*.| 
 |**xtp_pending_truncation**|**varchar (18)**|Общий размер файлов контрольных точек с WAITING_FOR_LOG_TRUNCATION состояния, в КБ. Это место на диске, используемое для файлов контрольных точек, ожидающих очистки, после усечения журнала. Возвращает значение NULL, если база данных не имеет memory_optimized_data файловой группы, имеющей по крайней мере один контейнер. Этот столбец включается только в том случае `@include_total_xtp_storage=1` , если.|
 
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **database_size** обычно превышает сумму **зарезервированного**  +  **нераспределенного пространства** , так как она включает размер файлов журнала, но **зарезервированные** и **unallocated_space** рассматривайте только страницы данных. В некоторых случаях с помощью Azure синапсе Analytics эта инструкция может оказаться недействительной. 
   
  Страницы, используемые XML-индексами и полнотекстовыми индексами, включаются в **index_size** обоих результирующих наборов. Если задано значение *objname* , страницы для XML-индексов и полнотекстовых индексов для объекта также учитываются в общем количестве **зарезервированных** и **index_sizeных** результатов.  
@@ -253,8 +253,8 @@ GO
  [sys.allocation_units (Transact-SQL)](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
- [sys. Objects &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys. partitions &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+ [sys.objects (Transact-SQL)](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.partitions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
