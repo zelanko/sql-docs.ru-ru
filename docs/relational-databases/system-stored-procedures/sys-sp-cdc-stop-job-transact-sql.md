@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_stop_job
 ms.assetid: 421fc21c-c7a4-407c-8b31-359273b68c63
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d4049a54624868862faaf36b2d392836ce115c1d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1b82d231a4633c2aa3ed7b45833009c8a2bc43a5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489057"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89526494"
 ---
 # <a name="syssp_cdc_stop_job-transact-sql"></a>sys.sp_cdc_stop_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -66,7 +66,7 @@ EXEC sys.sp_cdc_stop_job @job_type = N'capture';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [dbo. cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
  [sys. sp_cdc_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-start-job-transact-sql.md)  
   

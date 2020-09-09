@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_scriptdynamicupdproc
 ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 381e2b7ad6c8b463cb410b6d40a6cd6c6b3addec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 03be0aa206a4037de5e09e202e38fcce5ecf5a6c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481133"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89525973"
 ---
 # <a name="sp_scriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ sp_scriptdynamicupdproc [ @artid =] artid
 ## <a name="result-sets"></a>Результирующие наборы  
  Возвращает результирующий набор, состоящий из одного столбца **nvarchar (4000)** . Результирующий набор формирует полную инструкцию CREATE PROCEDURE, служащую для создания пользовательской хранимой процедуры.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **sp_scriptdynamicupdproc** используется в репликации транзакций. По умолчанию, при синтаксисе MCALL в сценарий включаются все столбцы, входящие в инструкцию UPDATE, а для определения измененных столбцов используется битовая карта. Если столбец не изменился, ему присваиваются его же значения, что обычно не приводит ни к каким проблемам. Если столбец является индексированным, выполняются дополнительные операции. При таком динамическом подходе принимаются во внимание только измененные столбцы, в результате чего формируется оптимальная инструкция UPDATE. Однако составление динамической инструкции UPDATE требует дополнительной обработки в период выполнения. Рекомендуется протестировать динамический и статический подходы и выбрать оптимальное решение.  
   
 ## <a name="permissions"></a>Разрешения  

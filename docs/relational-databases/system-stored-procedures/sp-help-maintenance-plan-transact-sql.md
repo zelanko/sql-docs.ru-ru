@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_maintenance_plan
 ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 85a2f93384dbca55e26a38933ab9afd730da9f76
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 99fe08406840229ded741160f855ed60f11e977a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481213"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89527722"
 ---
 # <a name="sp_help_maintenance_plan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -81,7 +81,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 |-----------------|-----------------|  
 |**job_id**|Идентификатор всех заданий, связанных с планом обслуживания. *job_id* имеет тип **uniqueidentifier**.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **sp_help_maintenance_plan** находится в базе данных **msdb** .  
   
 ## <a name="permissions"></a>Разрешения  

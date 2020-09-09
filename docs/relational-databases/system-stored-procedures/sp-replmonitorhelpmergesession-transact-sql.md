@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelpmergesession
 ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5fe48c8ed194434fa71ce3fd01f2a8db93ecac74
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9544a1d11efbd3d956821784257619bb45b7a5cc
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485705"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89526316"
 ---
 # <a name="sp_replmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -87,7 +87,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **sp_replmonitorhelpmergesession** используется для наблюдения за репликацией слиянием.  
   
  При выполнении на подписчике **sp_replmonitorhelpmergesession** возвращает сведения только о последних пяти сеансах агент слияния.  
