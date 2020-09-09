@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - PropertyNumVal property
 ms.assetid: 12b02d97-702b-434f-baf6-e49a6b2cd4de
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b11713099134c61df82edda603796b2080494bb0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 82b10261ba0e753bfec6efc8bae134957cf6a0ce
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485249"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544459"
 ---
 # <a name="propertynumval-property-clientnetworkprotocolproperty-class"></a>Свойство PropertyNumVal (класс ClientNetworkProtocolProperty)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -43,5 +43,5 @@ object.PropertyNumVal [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение u**int32** , задающее числовое значение текущего свойства.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
   

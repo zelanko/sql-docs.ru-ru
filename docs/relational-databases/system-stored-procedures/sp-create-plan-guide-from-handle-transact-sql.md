@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_create_plan_guide_from_handle
 ms.assetid: 02cfb76f-a0f9-4b42-a880-1c3e7d64fe41
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 909bd7489421abb4b9ee1650c267eb7a35c1e072
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ddb185ca0a5cf0e7abe0e51992d3e607555a9ea1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447408"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543625"
 ---
 # <a name="sp_create_plan_guide_from_handle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
   
  Если указано значение NULL или смещение инструкции не задано, структура плана создается для каждой инструкции в пакете с помощью плана запроса для указанного дескриптора плана. Полученные в результате структуры планов эквивалентны структурам планов, применяющим указание запроса USE PLAN для принудительного использования определенного плана.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Структура плана не может быть создана для всех типов инструкций. Если структура плана не может быть создана для какой-либо инструкции в пакете, хранимая процедура пропускает эту инструкцию и переходит к следующей инструкции в пакете. Если инструкция повторяется в одном и том же пакете несколько раз, активируется план для последнего вхождения, а предыдущие планы для инструкции отключаются. Если ни одна из инструкций в пакете не может быть использована в структуре плана, выдается сообщение об ошибке 1053, а данная инструкция завершается неудачно. Рекомендуется всегда получать дескриптор плана из динамического административного представления sys.dm_exec_query_stats для снижения вероятности возникновения этой ошибки.  
   
 > [!IMPORTANT]  
@@ -120,7 +120,7 @@ GO
   
  [!code-sql[PlanGuides#Create_From_Handle2](../../relational-databases/system-stored-procedures/codesnippet/tsql/sp-create-plan-guide-fro_1.sql)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sys. dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [Структуры планов](../../relational-databases/performance/plan-guides.md)   

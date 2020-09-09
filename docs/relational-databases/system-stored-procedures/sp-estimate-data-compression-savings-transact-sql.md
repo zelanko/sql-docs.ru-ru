@@ -17,14 +17,14 @@ helpviewer_keywords:
 - compression [SQL Server], estimating
 - sp_estimate_data_compression_savings
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: dd4479aa059222ea7685cf38b56c98cc22ee94df
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4615bc9a30d28224ee3d1ed906a704af923d046d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469478"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543514"
 ---
 # <a name="sp_estimate_data_compression_savings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -90,7 +90,7 @@ sp_estimate_data_compression_savings
 |sample_size_with_current_compression_setting (КБ)|**bigint**|Размер образца с текущими настройками сжатия. К этим настройкам относится любая фрагментация.|  
 |sample_size_with_requested_compression_setting (КБ)|**bigint**|Размер образца, созданного с использованием запрошенных настроек сжатия, и, если применимо, существующего коэффициента заполнения при отсутствии фрагментации.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Используется `sp_estimate_data_compression_savings` для оценки экономии, которая может возникнуть при включении таблицы или секции для сжатия архива строк, страниц, columnstore или columnstore. Например, если средний размер строки можно уменьшить на 40%, то размер самого объекта также можно потенциально уменьшить на 40%. Но выигрыша можно не получить, поскольку экономия места зависит от коэффициента заполнения и размера строки. Например, если имеется строка размером 8 000 байт и уменьшение ее размера на 40 процентов, можно по-прежнему разместить только одну строку на странице данных. При этом экономия отсутствует.  
   
  Если результаты выполнения хранимой процедуры `sp_estimate_data_compression_savings` показывают, что размер таблицы будет увеличиваться, это означает, что в таблице используется почти полная точность типов данных, а небольшой объем затрат, необходимый для использования сжатого формата, превышает экономию места от самого сжатия. В этом редком случае сжатие включать не следует.  
@@ -149,7 +149,7 @@ GO
 ## <a name="see-also"></a>См. также:  
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)   
- [sys. partitions &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+ [sys.partitions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Реализация сжатия Юникода](../../relational-databases/data-compression/unicode-compression-implementation.md)  
   

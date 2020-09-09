@@ -13,14 +13,14 @@ helpviewer_keywords:
 - dynamic management objects [SQL Server], execution
 - execution-related dynamic management objects [SQL Server]
 ms.assetid: aea07b33-f715-4b61-9d1e-8c77b03e9578
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b77497e87725ad65b766038afc1b50094a2363fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a8c086e5d9cc08af95b027e4ea986845861005a5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88375120"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544892"
 ---
 # <a name="execution-related-dynamic-management-views-and-functions-transact-sql"></a>Динамические административные представления и функции, связанные с выполнением (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -119,7 +119,7 @@ ms.locfileid: "88375120"
 > [!NOTE]  
 >  Динамическое административное представление **sys. dm_exec_query_transformation_stats** идентифицируется только в информационных целях. Не поддерживается. Совместимость с будущими версиями не гарантируется.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Системные представления &#40;&#41;Transact-SQL ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   

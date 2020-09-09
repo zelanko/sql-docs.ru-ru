@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - NumerOfFlags property
 ms.assetid: d720f093-0d67-4e6c-8231-78d9ab853a8f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 478a91ae1d2d4e11cf11a7e1efb95f7db81fb522
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3c684fb64a29bd50a26285a546671a48fbf650f6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446166"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544377"
 ---
 # <a name="numberofflags-property-serversettings-class"></a>Свойство NumberOfFlags (класс ServerSettings)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +43,9 @@ object.NumberOfFlags [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение **UInt32** , указывающее количество общих флагов, связанных с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

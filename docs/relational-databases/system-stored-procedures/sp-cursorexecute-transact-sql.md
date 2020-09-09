@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor_execute
 ms.assetid: 6a204229-0a53-4617-a57e-93d4afbb71ac
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5e712c8fd485a91c3dfcc7b65c5f7c0fb76b15b6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 07795588a4c1d6df43a7041f9254a661e527be14
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464402"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543604"
 ---
 # <a name="sp_cursorexecute-transact-sql"></a>sp_cursorexecute (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -85,7 +85,7 @@ sp_cursorexecute prepared_handle, cursor
 |-1|Число строк неизвестно.|  
 |-n|Действует асинхронное заполнение.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
   
 ## <a name="scrollopt-and-ccopt-parameters"></a>Параметры scrollopt и ccopt  
  *scrollopt* и *ccopt* полезны при прерывании кэшированных планов для кэша сервера, что означает, что подготовленный описатель, идентифицирующий инструкцию, должен быть перекомпилирован. Значения параметров *scrollopt* и *ccopt* должны совпадать со значениями, отправленными в исходном запросе, в sp_cursorprepare.  
@@ -98,7 +98,7 @@ sp_cursorexecute prepared_handle, cursor
 ## <a name="rpc-and-tds-considerations"></a>Замечания по RPC и TDS  
  Входной флажок RPC RETURN_METADATA может быть установлен в значение 1, чтобы в потоке TDS возвращались метаданные списка выбора курсора.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
  [sp_cursorfetch &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

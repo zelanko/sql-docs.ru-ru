@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_stats_histogram dynamic management function
 ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de7e998ff91295c62d28efbcdbde4a40c3bfdf14
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 330053f10b6b57b184d2be26d4181997ed19ba7b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646154"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543984"
 ---
 # <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
 
@@ -63,7 +63,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
 |distinct_range_rows |**bigint** |Предполагаемое количество строк с различающимся значением столбца в пределах шага гистограммы, исключая верхнюю границу. |
 |average_range_rows |**real** |Среднее число строк с повторяющимися значениями столбца в пределах шага гистограммы, за исключением верхней границы ( `RANGE_ROWS / DISTINCT_RANGE_ROWS` для `DISTINCT_RANGE_ROWS > 0` ). |
   
- ## <a name="remarks"></a>Комментарии  
+ ## <a name="remarks"></a>Примечания  
  
  ResultSet для `sys.dm_db_stats_histogram` возвращает сведения, аналогичные `DBCC SHOW_STATISTICS WITH HISTOGRAM` и, а также включает `object_id` , `stats_id` и `step_number` .
 
@@ -146,7 +146,7 @@ WHERE ss.[object_id] = OBJECT_ID('Country')
     AND sh.range_high_key = CAST('Canada' AS CHAR(8));
 ```
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
 [Динамические административные представления и функции, связанные с объектом (Transact-SQL)](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)  
 [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  

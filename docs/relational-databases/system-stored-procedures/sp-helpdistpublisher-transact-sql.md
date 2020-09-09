@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdistpublisher
 ms.assetid: f207c22d-8fb2-4756-8a9d-6c51d6cd3470
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: cb9bfd2bebe5220d992b92251c79df957f3d7077
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 129192de74a83232334437035599cffe24a910d8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474092"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543350"
 ---
 # <a name="sp_helpdistpublisher-transact-sql"></a>Хранимая процедура sp_helpdistpublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -63,7 +63,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **sp_helpdistpublisher** используется во всех типах репликации.  
   
  **sp_helpdistpublisher** не будет отображать имя или пароль издателя в результирующем наборе для имен входа, не являющихся**администраторами** .  
@@ -71,10 +71,10 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 ## <a name="permissions"></a>Разрешения  
  Члены предопределенной роли сервера **sysadmin** могут выполнять **Sp_helpdistpublisher** для любого издателя, использующего локальный сервер в качестве распространителя. Члены предопределенной роли базы данных **db_owner** или роли **replmonitor** в базе данных распространителя могут выполнять **sp_helpdistpublisher** для любого издателя, использующего эту базу данных распространителя. Пользователи из списка доступа к публикации для публикации на указанном *издателе* могут выполнять **sp_helpdistpublisher**. Если параметр *Publisher* не указан, возвращаются сведения для всех издателей, к которым у пользователя есть права доступа.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Просмотр и изменение свойств издателя и распространителя](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
- [sp_changedistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
+ [sp_changedistpublisher (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
  [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)  
   
   

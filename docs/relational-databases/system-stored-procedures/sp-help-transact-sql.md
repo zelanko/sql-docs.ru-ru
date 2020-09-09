@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help
 ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 85fd7be3a9f82b43c19e344602a85e1adf06c68a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21116db0cc5faa63a54ffda5740f1c93df27c676
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486067"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543357"
 ---
 # <a name="sp_help-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -105,8 +105,8 @@ sp_help [ [ @objname = ] 'name' ]
   
         |Имя столбца|Тип данных|Описание|  
         |-----------------|---------------|-----------------|  
-        |**Удостоверение**|**nvarchar (** 128 **)**|Имя столбца, чей тип данных объявлен удостоверением.|  
-        |**Инициализировать**|**numeric**|Стартовое значение для столбца идентификаторов.|  
+        |**Идентификация**|**nvarchar (** 128 **)**|Имя столбца, чей тип данных объявлен удостоверением.|  
+        |**Seed**|**numeric**|Стартовое значение для столбца идентификаторов.|  
         |**Приращение**|**numeric**|Шаг прироста, который следует использовать для значений в этом столбце.|  
         |**Не для репликации**|**int**|Свойство IDENTITY не применяется принудительно, если имя входа репликации, например **склрепл**, вставляет данные в таблицу:<br /><br /> 1 = истина<br /><br /> 0 = ложь|  
   
@@ -159,7 +159,7 @@ sp_help [ [ @objname = ] 'name' ]
         |**Масштаб**|**int**|Число цифр справа от десятичной запятой.|  
         |**Param_order**|**smallint**|Порядок аргумента.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Процедура **sp_help** выполняет поиск объекта только в текущей базе данных.  
   
  Если параметр *Name* не указан, **sp_help** перечисляет имена объектов, владельцев и типы объектов для всех объектов в текущей базе данных. **sp_helptrigger** предоставляет сведения о триггерах.  
@@ -191,14 +191,14 @@ EXEC sp_help 'Person.Person';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_helpindex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
  [sp_helprotect (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
  [sp_helpserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_helptrigger (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
  [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.sysные объекты &#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
   
   

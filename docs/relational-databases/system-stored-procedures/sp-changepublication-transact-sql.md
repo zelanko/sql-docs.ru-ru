@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changepublication
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3bf49c2e7b09e7c0ac3bcaaaf7692889f684875b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 86a86eec0b939a579d01c36d8c9739f8d9251636
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481534"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543730"
 ---
 # <a name="sp_changepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -108,7 +108,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**status**|**active**|Данные публикации становятся доступными подписчику сразу после создания публикации. Не поддерживается для издателей Oracle.|  
 ||**inactive**|Данные публикации недоступны подписчику сразу после создания публикации. Не поддерживается для издателей Oracle.|  
 |**sync_method**|**native**|При синхронизации подписок выполняется массовое копирование таблиц в собственном режиме.|  
-||**символов**|При синхронизации подписок выполняется массовое копирование таблиц в символьном режиме.|  
+||**character**|При синхронизации подписок выполняется массовое копирование таблиц в символьном режиме.|  
 ||**одновременных**|Используется собственный программный вывод для массового копирования всех таблиц, не блокирующий таблицы во время формирования моментальных снимков. Недопустимо для репликации моментальных снимков.|  
 ||**concurrent_c**|Используется символьный программный вывод для массового копирования всех таблиц, не блокирующий таблицы во время формирования моментальных снимков. Недопустимо для репликации моментальных снимков.|  
 |**taskid**||Это свойство устарело и больше не поддерживается.|  
@@ -134,7 +134,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **sp_changepublication** используется в репликации моментальных снимков и репликации транзакций.  
   
  После изменения любого из следующих свойств необходимо создать новый моментальный снимок, а для параметра *force_invalidate_snapshot* необходимо указать значение **1** .  

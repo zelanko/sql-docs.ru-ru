@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_migrate_user_to_contained
 ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 95bd2aa7491b15b2e16172b0761c6dccc8eb5818
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: edabb8a59a672c3ebfe04a799df7901b402fb5b3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446939"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543207"
 ---
 # <a name="sp_migrate_user_to_contained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88446939"
   Преобразует пользователя базы данных, сопоставленного с именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в пользователя автономной базы данных с паролем. В автономной базе данных эта процедура позволяет удалить зависимости от экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на котором установлена база данных. **sp_migrate_user_to_contained** отделяет пользователя от исходного [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имени входа, поэтому для автономной базы данных можно отдельно администрировать такие параметры, как пароль и язык по умолчанию. **sp_migrate_user_to_contained** можно использовать перед перемещением автономной базы данных в другой экземпляр, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] чтобы исключить зависимости от текущих [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имен входа.  
   
 > [!NOTE]
-> Будьте внимательны при использовании **sp_migrate_user_to_contained**, так как вы не сможете отменить этот результат. Эта процедура используется только в автономной базе данных. Дополнительные сведения см. в разделе [автономные базы данных](../../relational-databases/databases/contained-databases.md).  
+> Будьте внимательны при использовании **sp_migrate_user_to_contained**, так как вы не сможете отменить этот результат. Эта процедура используется только в автономной базе данных. Дополнительные сведения см. в разделе [Contained Databases](../../relational-databases/databases/contained-databases.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -55,7 +55,7 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **sp_migrate_user_to_contained** создает пользователя автономной базы данных с паролем независимо от свойств или разрешений имени входа. Например, процедура может быть выполнена, если имя входа отключено или если пользователю отказано **в** доступе к базе данных.  
   
  **sp_migrate_user_to_contained** имеет следующие ограничения.  
@@ -117,7 +117,7 @@ CLOSE user_cursor ;
 DEALLOCATE user_cursor ;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
  [Автономные базы данных](../../relational-databases/databases/contained-databases.md)  
   

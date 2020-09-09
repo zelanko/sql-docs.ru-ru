@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - FileTables [SQL Server], dynamic management views
 ms.assetid: e50a135d-6644-42a4-a0df-1c7a2b722051
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ca18eb28d70fb2b9d479a629545f46bae8ef3d9d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 268499cff0d6d967134cd8d28a6842df04fba0cd
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427856"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544861"
 ---
 # <a name="filestream-and-filetable-dynamic-management-views-transact-sql"></a>Динамические административные представления Filestream and FileTable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,8 +37,8 @@ ms.locfileid: "88427856"
  [sys.dm_filestream_non_transacted_handles (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)  
  Показывает открытые на данный момент нетранзакционные дескрипторы файлов, связанные с данными FileTable.  
 
-## <a name="see-also"></a>См. также:
-[Потока](../../relational-databases/blob/filestream-sql-server.md)
+## <a name="see-also"></a>См. также
+[Файловый поток](../../relational-databases/blob/filestream-sql-server.md)
 <br>[Таблицы FileTable](../../relational-databases/blob/filetables-sql-server.md)
 <br>[Представления каталога Filestream и FileTable (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
 <br>[Системные хранимые процедуры Filestream и FileTable (Transact-SQL)](../system-stored-procedures/filestream-and-filetable-system-stored-procedures.md)

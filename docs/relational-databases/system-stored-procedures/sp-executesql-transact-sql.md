@@ -17,15 +17,15 @@ helpviewer_keywords:
 - sp_executesql
 - dynamic SQL
 ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 492a0db844d0278808bdc8cf6bba27d980447f8d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 61d59f95e0e614d476b77cad53e305f1ca5ba02f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469533"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543444"
 ---
 # <a name="sp_executesql-transact-sql"></a>Хранимая процедура sp_executesql (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -76,7 +76,7 @@ sp_executesql [ @stmt = ] statement
 ## <a name="result-sets"></a>Результирующие наборы  
  Возвращает результирующие наборы всех заданных инструкций SQL, встроенные в строку SQL.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  sp_executesql параметры должны быть указаны в определенном порядке, как описано в разделе "синтаксис" ранее в этом разделе. Если параметры вводятся не в этом порядке, будет выдано сообщение об ошибке.  
   
  Относительно пакетов инструкций, области имен и контекста базы данных процедура sp_executesql ведет себя аналогично инструкции EXECUTE. [!INCLUDE[tsql](../../includes/tsql-md.md)]Инструкция или пакет в \@ параметре sp_executesql stmt не компилируются до тех пор, пока не будет выполнена инструкция sp_executesql. Содержимое \@ stmt компилируется и выполняется в виде плана выполнения, отделенного от плана выполнения пакета, который вызывал sp_executesql. Пакет, содержащийся в процедуре sp_executesql, не может ссылаться на переменные, объявленные в пакете, вызвавшем sp_executesql. Локальные курсоры или переменные в пакете sp_executesql недоступны пакету, вызвавшему sp_executesql. Изменения в контексте базы данных длятся только до завершения выполнения инструкции sp_executesql.  

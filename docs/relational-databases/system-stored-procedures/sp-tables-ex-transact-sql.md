@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_tables_ex
 ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c195e3fa5e932bd1eb844ca5231d67747bc67486
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0156f75940cf5e0d2186625d148850dcfb181ad0
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480990"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544742"
 ---
 # <a name="sp_tables_ex-transact-sql"></a>sp_tables_ex (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,11 +60,11 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**ПСЕВДОНИМ**|Имя псевдонима.|  
 |**GLOBAL TEMPORARY**|Имя временной таблицы, доступной в пределах системы.|  
 |**LOCAL TEMPORARY**|Имя временной таблицы, доступной только для текущего задания.|  
-|**ТЕРМИН**|Имя синонима.|  
+|**SYNONYM**|Имя синонима.|  
 |**СИСТЕМНАЯ ТАБЛИЦА**|Имя системной таблицы.|  
 |**СИСТЕМНОЕ ПРЕДСТАВЛЕНИЕ**|Имя системного представления.|  
-|**Таблица**|Имя пользовательской таблицы.|  
-|**РЕЖИМЕ**|Имя представления.|  
+|**TABLE**|Имя пользовательской таблицы.|  
+|**VIEW**|Имя представления.|  
   
 `[ @fUsePattern = ] 'fUsePattern'` Определяет, будут ли символы **_**, **%** , **[** и **]** интерпретироваться как подстановочные знаки. Допустимые значения: 0 (сопоставление с шаблоном отключено) и 1 (сопоставление с шаблоном включено). *фусепаттерн* имеет **бит**и значение по умолчанию 1.  
   
@@ -81,7 +81,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**TABLE_TYPE**|**varchar(32)**|Таблица, системная таблица или представление.|  
 |**ЗАМЕЧАНИЯ**|**varchar (254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не возвращает значение для этого столбца.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **sp_tables_ex** выполняется путем запроса набора строк TABLES интерфейса **IDBSchemaRowset** поставщика OLE DB, соответствующего *table_server*. Параметры *table_name*, *table_schema*, *table_catalog*и *столбцов* передаются этому интерфейсу для ограничения возвращаемых строк.  
   
  **sp_tables_ex** возвращает пустой результирующий набор, если поставщик OLE DB указанного связанного сервера не поддерживает набор строк TABLES интерфейса **IDBSchemaRowset** .  

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_unsentitems database mail view
 ms.assetid: 993c12da-41e5-4e53-a188-0323feb70c67
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0f17a4cc00724bab836c74ed1622d383d3969b16
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7ef61a0c08d1ddc2e3a268571521b4da47cee90f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419868"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543992"
 ---
 # <a name="sysmail_unsentitems-transact-sql"></a>sysmail_unsentitems (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "88419868"
 |**attach_query_result_as_file**|**bit**|Если значение равно 0, результаты запроса были включены в тело сообщения после его содержимого. Если значение равно 1, результаты были возвращены в виде вложения.|  
 |**query_result_header**|**bit**|Если значение равно 1, результаты запроса содержали заголовки столбцов. Если значение равно 0, результаты запроса не включали заголовков столбцов.|  
 |**query_result_width**|**int**|Параметр **query_result_width** сообщения.|  
-|**query_result_separator**|**char (1)**|Символ, используемый для разделения столбцов в выходных данных запроса.|  
+|**query_result_separator**|**char(1)**|Символ, используемый для разделения столбцов в выходных данных запроса.|  
 |**exclude_query_output**|**bit**|Параметр **exclude_query_output** сообщения. Дополнительные сведения см. в разделе [sp_send_dbmail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).|  
 |**append_query_error**|**bit**|Параметр **append_query_error** сообщения. 0 означает, что компонент Database Mail не отсылает электронное сообщение, если в запросе содержится ошибка.|  
 |**send_request_date**|**datetime**|Дата и время помещения сообщения в очередь почты.|  
@@ -72,7 +72,7 @@ ms.locfileid: "88419868"
 |**last_mod_date**|**datetime**|Дата и время последнего изменения строки.|  
 |**last_mod_user**|**sysname**|Пользователь, внесший последнее изменение в строку.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  При поиске и устранении неполадок в компоненте Database Mail это представление может помочь установить природу проблемы путем отображения числа ожидающих отправки сообщений и продолжительности их ожидания. Если в данный момент сообщения не отправляются, компонент Database Mail может быть не запущен или могут быть проблемы с сетью, что не позволяет компоненту связаться с SMTP-серверами. Если многие неотправленные сообщения имеют одинаковые **profile_id**, возможно, возникла проблема с SMTP-сервером. Попробуйте добавить дополнительные учетные записи в профиль. Если сообщения отправляются, но на ожидание в очереди тратится много времени, возможно, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] требуется больше ресурсов для обработки необходимого объема сообщений.  
   
 ## <a name="permissions"></a>Разрешения  

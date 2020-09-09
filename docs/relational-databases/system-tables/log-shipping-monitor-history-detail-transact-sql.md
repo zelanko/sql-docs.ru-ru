@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_monitor_history_detail system table
 ms.assetid: 7080c888-323b-4206-a1ab-e6c51f9e2579
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f4a3b6562d6b5b01ccf1bf40842dac404b1add1e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 515a2b38f10beca9c4797ce02d48387bfa662707
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485527"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544565"
 ---
 # <a name="log_shipping_monitor_history_detail-transact-sql"></a>log_shipping_monitor_history_detail (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "88485527"
 |**log_time_utc**|**datetime**|Дата и время создания записи по Гринвичу.|  
 |**message**|**nvarchar(max)**|Текст сообщения.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Эта таблица содержит подробное описание агентов доставки журналов. Для обнаружения сеанса агента используйте столбцы **agent_id**, **agent_type**и **session_id**. Чтобы просмотреть данные журнала для сеанса агента, отсортируйте по **log_time**.  
   
  Помимо хранения на удаленном сервере мониторинга, сведения, относящиеся к основному серверу, хранятся на сервере-источнике в его **log_shipping_monitor_history_detail** таблице, а сведения, связанные с сервером-получателем, также хранятся на сервере-получателе в своей **log_shipping_monitor_history_detail** таблице.  

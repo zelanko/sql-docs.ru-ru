@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - PropertyNumVal property
 ms.assetid: 93fce2e8-adf5-48cf-8106-1fead7501a6f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 295794ae460a34f35fce493220cfa4768079ab96
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8b73349e428c7c1fdd4bd529e221ba2227733c26
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427306"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544405"
 ---
 # <a name="propertynumval-property-servernetworkprotocolproperty-class"></a>Свойство PropertyNumVal (класс ServerNetworkProtocolProperty)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ object.PropertyNumVal [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Объект **uint32** , указывающий числовое значение упоминаемого свойства.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
   
 ## <a name="see-also"></a>См. также:  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

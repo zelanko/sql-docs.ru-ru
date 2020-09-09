@@ -18,15 +18,15 @@ helpviewer_keywords:
 - backup media [SQL Server], backupset system table
 - backup sets [SQL Server]
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f5bea32ebd5269ae57d7b754cf20d12a0d695109
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 783452973a10a8f692b7fe3a3406665a2ed0eb86
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492860"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544694"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "88492860"
 |**last_media_number**|**smallint**|Номер носителя, которым заканчивается резервный набор данных. Может иметь значение NULL.|  
 |**catalog_family_number**|**tinyint**|Номер семейства носителя, содержащего начало каталога резервного набора данных. Может иметь значение NULL.|  
 |**catalog_media_number**|**smallint**|Номер носителя, содержащего начало каталога резервного набора данных. Может иметь значение NULL.|  
-|**разместить**|**int**|Позиция резервного набора данных, используемая в операции восстановления для поиска соответствующего резервного набора данных и файлов. Может иметь значение NULL. Дополнительные сведения см. в разделе файл в [BACKUP &#40;&#41;Transact-SQL ](../../t-sql/statements/backup-transact-sql.md).|  
+|**position**|**int**|Позиция резервного набора данных, используемая в операции восстановления для поиска соответствующего резервного набора данных и файлов. Может иметь значение NULL. Дополнительные сведения см. в разделе файл в [BACKUP &#40;&#41;Transact-SQL ](../../t-sql/statements/backup-transact-sql.md).|  
 |**expiration_date**|**datetime**|Дата и время окончания срока действия для резервного набора. Может иметь значение NULL.|  
 |**software_vendor_id**|**int**|Идентификационный номер поставщика программного обеспечения, выполняющего запись заголовка резервного носителя. Может иметь значение NULL.|  
 |**name**|**nvarchar(128)**|Имя резервного набора. Может иметь значение NULL.|  
@@ -65,7 +65,7 @@ ms.locfileid: "88492860"
 |**database_creation_date**|**datetime**|Дата и время изначального создания базы данных. Может иметь значение NULL.|  
 |**backup_start_date**|**datetime**|Дата и время начала операции резервного копирования. Может иметь значение NULL.|  
 |**backup_finish_date**|**datetime**|Дата и время окончания операции резервного копирования. Может иметь значение NULL.|  
-|**type**|**char (1)**|Тип резервного копирования. Возможны следующие варианты:<br /><br /> D = база данных<br /><br /> I = разностное копирование базы данных;<br /><br /> L = журнал<br /><br /> F = копирование файла или файловой группы;<br /><br /> G = разностное копирование файла;<br /><br /> P = частичное копирование;<br /><br /> Q = частичное разностное копирование.<br /><br /> Может иметь значение NULL.|  
+|**type**|**char(1)**|Тип резервного копирования. Возможны следующие варианты:<br /><br /> D = база данных<br /><br /> I = разностное копирование базы данных;<br /><br /> L = журнал<br /><br /> F = копирование файла или файловой группы;<br /><br /> G = разностное копирование файла;<br /><br /> P = частичное копирование;<br /><br /> Q = частичное разностное копирование.<br /><br /> Может иметь значение NULL.|  
 |**sort_order**|**smallint**|Порядок сортировки на сервере, выполняющем операцию резервного копирования. Может иметь значение NULL. Дополнительные сведения о порядках сортировки и параметрах сортировки см. в разделе [Параметры сортировки и поддержка Юникода](../../relational-databases/collations/collation-and-unicode-support.md).|  
 |**code_page**|**smallint**|Кодовая страница на сервере, выполняющем операцию резервного копирования. Может иметь значение NULL. Дополнительные сведения о кодовых страницах см. в разделе [Параметры сортировки и поддержка Юникода](../../relational-databases/collations/collation-and-unicode-support.md).|  
 |**compatibility_level**|**tinyint**|Настройка уровня совместимости для базы данных. Возможны следующие варианты:<br /><br /> 90 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 100 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 110 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 120 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> Может иметь значение NULL.<br /><br /> Дополнительные сведения об уровнях совместимости см. в разделе [Уровень совместимости ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|  
@@ -102,7 +102,7 @@ ms.locfileid: "88492860"
 |**encryptor_thumbprint**|**varbinary(20)**|Отпечаток шифратора, который будет использоваться для поиска сертификата или асимметричного ключа в базе данных. Если резервная копия не была зашифрована, это значение равно NULL.|  
 |**encryptor_type**|**nvarchar(32)**|Тип используемого шифратора: сертификат или асимметричный ключ. . Если резервная копия не была зашифрована, это значение равно NULL.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Инструкция RESTORE VERIFYONLY из *backup_device* with LOADHISTORY заполняет столбец таблицы **backupmediaset** соответствующими значениями из заголовка набора носителей.  
   
  Чтобы уменьшить количество строк в этой таблице и в других таблицах резервного копирования и журнала, выполните хранимую процедуру [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) .  

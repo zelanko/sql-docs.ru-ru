@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursoropen
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1faec2f41d2396102b4ee675f2dac40be4b9b216
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2942c06e5d63c0be25a05cd34e871447a29e7d6d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489511"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543596"
 ---
 # <a name="sp_cursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -148,7 +148,7 @@ sp_cursoropen cursor OUTPUT, stmt
 > [!NOTE]  
 >  Если процедура sp_cursoropen выполнена успешно, то отправляются возвращаемые параметры RPC и результирующий набор с данными формата TDS (0x82 & 0xA1 messages). В случае ошибки отправляется одно или несколько сообщений TDS об ошибках. В любом случае данные строки не будут возвращены, а количество *готовых* сообщений будет равно нулю. Если используется версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ранее 7.0, то возвращаются сообщения 0xa0 и 0xa1 (стандартные для инструкции SELECT) с потоками токенов 0xa5 и 0xa4. Если используется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 7.0, то возвращается сообщение 0x81 (стандартное для инструкций SELECT) с потоками токенов 0xa5 и 0xa4.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
   
 ## <a name="stmt-parameter"></a>Параметр stmt  
  Если аргумент *stmt* задает выполнение хранимой процедуры, входные параметры могут быть либо определены как константы в составе строки *stmt* , либо указаны как аргументы *баундпарам* . Таким образом, объявленные переменные могут передаваться как связанные параметры.  
@@ -211,7 +211,7 @@ sp_cursoropen cursor OUTPUT, stmt
   
  Последующие параметры используются для передачи значений, подставляемых для *имени локальной переменной* в операторе.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_cursorfetch &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
