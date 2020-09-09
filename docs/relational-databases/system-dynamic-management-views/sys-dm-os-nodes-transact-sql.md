@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_nodes dynamic management view
 ms.assetid: c768b67c-82a4-47f5-850b-0ea282358d50
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 716b3c816bb5246f91c25869de7e2647a10bbc64
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 73ebe110b63026ff40978edf8c868504ba72a7be
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447643"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550298"
 ---
 # <a name="sysdm_os_nodes-transact-sql"></a>sys.dm_os_nodes (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88447643"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |node_id|**smallint**|Идентификатор узла.|  
-|node_state_desc|**nvarchar(256)**|Описание состояния узла. Сначала отображаются взаимоисключающие значения, затем все их комбинации. Например:<br /> «В сети», «Недостаток ресурсов потоков», «Отложенный с вытеснением»<br /><br />Существует четыре взаимоисключающих node_state_desc значений. Ниже перечислены их описания.<br /><ul><li>В сети: узел находится в режиме "в сети"<li>ВНЕ сети: узел находится в автономном режиме<li>Бездействие: узел не имеет ожидающих рабочих запросов и перешел в состояние простоя.<li>IDLE_READY: узел не имеет ожидающих рабочих запросов и готов к переходу в состояние простоя.</li></ul><br />Ниже приведены три значения, которые могут быть node_state_desc.<br /><ul><li>DAC: этот узел зарезервирован для [выделенного административного соединения](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).<li>THREAD_RESOURCES_LOW: на этом узле невозможно создать новые потоки из-за нехватки памяти.<li>"ГОРЯЧее" Добавление: указывает, что узлы были добавлены в ответ на событие ЦП "горячего" добавления.</li></ul>|  
+|node_state_desc|**nvarchar(256)**|Описание состояния узла. Сначала отображаются взаимоисключающие значения, затем все их комбинации. Пример:<br /> «В сети», «Недостаток ресурсов потоков», «Отложенный с вытеснением»<br /><br />Существует четыре взаимоисключающих node_state_desc значений. Ниже перечислены их описания.<br /><ul><li>В сети: узел находится в режиме "в сети"<li>ВНЕ сети: узел находится в автономном режиме<li>Бездействие: узел не имеет ожидающих рабочих запросов и перешел в состояние простоя.<li>IDLE_READY: узел не имеет ожидающих рабочих запросов и готов к переходу в состояние простоя.</li></ul><br />Ниже приведены три значения, которые могут быть node_state_desc.<br /><ul><li>DAC: этот узел зарезервирован для [выделенного административного соединения](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).<li>THREAD_RESOURCES_LOW: на этом узле невозможно создать новые потоки из-за нехватки памяти.<li>"ГОРЯЧее" Добавление: указывает, что узлы были добавлены в ответ на событие ЦП "горячего" добавления.</li></ul>|  
 |memory_object_address|**varbinary(8)**|Адрес объекта памяти, связанного с данным узлом. Отношение "один к одному" к [sys. dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md). memory_object_address.|  
 |memory_clerk_address|**varbinary(8)**|Адрес клерка памяти, связанного с данным узлом. Отношение "один к одному" к [sys. dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md). memory_clerk_address.|  
 |io_completion_worker_address|**varbinary(8)**|Адрес исполнителя, связанного с завершением сеанса ввода-вывода для данного узла. Отношение "один к одному" к [sys. dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md). worker_address.|  
@@ -67,7 +67,7 @@ ms.locfileid: "88447643"
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
 На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется  **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
 
-## <a name="see-also"></a>См. также    
+## <a name="see-also"></a>См. также:    
  [SQL Server динамические административные представления, связанные с операционной системой &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [Архитектура Soft-NUMA (SQL Server)](../../database-engine/configure-windows/soft-numa-sql-server.md)  
   

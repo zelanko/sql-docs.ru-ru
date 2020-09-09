@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - DisplayName property
 ms.assetid: 49c408aa-6eb4-45cd-8d5c-60f065f24f5c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a1180c25be8d081d39fed1cc13926391289e5c30
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a3235e2d4f1491ccd7932f1ebb76e2b7eacf9b51
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472706"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550832"
 ---
 # <a name="displayname-property-sqlservice-class"></a>Свойство DisplayName (класс SqlService)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ object.DisplayName [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Строковое значение, определяющее отображаемое имя службы.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Максимальная длина этой строки равна 256 символам. Имя с учетом регистра сохраняется в диспетчере конфигурации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Но сравнения отображаемых имен всегда выполняются без учета регистра.  
   
 ## <a name="example"></a>Пример  

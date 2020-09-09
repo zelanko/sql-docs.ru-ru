@@ -17,16 +17,16 @@ helpviewer_keywords:
 - dm_continuous_copy_status
 - sys.dm_continuous_copy_status
 ms.assetid: 411b2e71-4421-4ef5-900d-5af068750899
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 44da877ab3977f9c17746e935a588cef402c685e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f06228aaec7abb9d9eb7de6237be696319cd661f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460456"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550332"
 ---
 # <a name="sysdm_continuous_copy_status-azure-sql-database"></a>sys.dm_continuous_copy_status (база данных SQL Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -52,14 +52,14 @@ ms.locfileid: "88460456"
 ## <a name="permissions"></a>Разрешения  
  Для получения данных необходимо членство в роли базы данных **db_owner** . Пользователь dbo, члены роли базы данных **DBManager** и имя входа sa могут также запрашивать это представление.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Представление **sys. dm_continuous_copy_status** создается в базе данных **ресурсов** и отображается во всех базах данных, включая логическую реплику. Однако запрос этого представления для логической базы данных master возвращает пустой набор.  
   
  Если отношение непрерывного копирования к базе данных завершается, строка для этой базы данных в представлении **sys. dm_continuous_copy_status** исчезает.  
   
  Как и представление **sys. dm_database_copies** , **sys. dm_continuous_copy_status** отражает состояние отношения непрерывного копирования, в котором база данных является первичной или активной базой данных-получателем. В отличие от **sys. dm_database_copies**, **sys. dm_continuous_copy_status** содержит несколько столбцов, содержащих сведения об операциях и производительности. К этим столбцам относятся **last_replication**и **replication_lag_sec**..  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sys. dm_database_copies &#40;базы данных SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)   
  [Активные хранимые процедуры георепликации &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)  
   
