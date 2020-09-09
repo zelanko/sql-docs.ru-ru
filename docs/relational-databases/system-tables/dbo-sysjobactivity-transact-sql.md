@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sysjobactivity system table
 ms.assetid: fd17cac9-5d1f-4b44-b2dc-ee9346d8bf1e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 75a517f8a55eabbda1c9d50d37c6254079cc33b9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dd0fb9ae28d2101b02feb17bc5b2eacbfcb476a7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446658"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551130"
 ---
 # <a name="dbosysjobactivity-transact-sql"></a>dbo.sysjobactivity (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88446658"
 |**session_id**|**int**|Идентификатор сеанса, хранящегося в таблице **таблице syssessions** базы данных **msdb** .|  
 |**job_id**|**uniqueidentifier**|Идентификатор задания.|  
 |**run_requested_date**|**datetime**|Дата и время последнего запроса на выполнение задания.|  
-|**run_requested_source**|**sysname (nvarchar (128))**|Источник запроса на выполнение задания.<br /><br /> **1** = SOURCE_SCHEDULER<br /><br /> **2** = SOURCE_ALERTER<br /><br /> **3** = SOURCE_BOOT<br /><br /> **4** = SOURCE_USER<br /><br /> **6** = SOURCE_ON_IDLE_SCHEDULE|  
+|**run_requested_source**|**sysname(nvarchar(128))**|Источник запроса на выполнение задания.<br /><br /> **1** = SOURCE_SCHEDULER<br /><br /> **2** = SOURCE_ALERTER<br /><br /> **3** = SOURCE_BOOT<br /><br /> **4** = SOURCE_USER<br /><br /> **6** = SOURCE_ON_IDLE_SCHEDULE|  
 |**queued_date**|**datetime**|Дата и время последней постановки задания в очередь. Если задание запускается немедленно, значение этого столбца равно NULL.|  
 |**start_execution_date**|**datetime**|Дата и время последнего выполнения задания по расписанию.|  
 |**last_executed_step_id**|**int**|Идентификатор последнего выполненного шага задания.|  
@@ -62,7 +62,7 @@ WHERE session_id = (
     SELECT MAX(session_id) FROM msdb.dbo.sysjobactivity); 
 ```
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [dbo.sysjobhistory &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)  
   
   

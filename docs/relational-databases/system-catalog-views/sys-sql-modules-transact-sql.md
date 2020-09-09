@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.sql_modules catalog view
 ms.assetid: 23d3ccd2-f356-4d89-a2cd-bee381243f99
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d465b315fedb484143153e7be97dd2e895faf12
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fef38d2e060e8b9442a29fb83e821de0e93822b5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447803"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551387"
 ---
 # <a name="syssql_modules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "88447803"
 |**inline_type**|**bit**|**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] и более поздних версий.<br /><br />Указывает, включено ли встраивание для модуля в настоящее время. <br /><br />0 = встраивание отключено<br /><br /> 1 = Встраивание включено.<br /><br /> Для скалярных пользовательских функций значение будет равно 1, если встраивание включено (явно или неявно). Значение всегда будет равно 1 для встроенных возвращающие табличное и 0 для других типов модулей.<br />|  
 
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Выражение SQL для ограничения по УМОЛЧАНИю, объект типа D, находится в представлении каталога [sys. default_constraints](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md) . Выражение SQL для ПРОВЕРОЧного ограничения, объект типа C, находится в представлении каталога [sys. CHECK_CONSTRAINTS](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md) .  
   
  Эти сведения также описаны в статье [sys. dm_db_uncontained_entities &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md).  
@@ -70,7 +70,7 @@ ORDER BY o.type;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Представления каталога объектов (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Запросы к системному каталогу SQL Server вопросы и ответы](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   

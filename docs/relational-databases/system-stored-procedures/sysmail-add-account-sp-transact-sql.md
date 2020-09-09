@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_add_account_sp
 ms.assetid: 65e15e2e-107c-49c3-b12c-f4edf0eb1617
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 810e0f32b5a77fa60e2c32c4b9b7259d60fc51d3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 85625e9b8e5a3c1acf5bbc8152b90789f33665ff
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473379"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551107"
 ---
 # <a name="sysmail_add_account_sp-transact-sql"></a>sysmail_add_account_sp (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -81,7 +81,7 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Database Mail предоставляет отдельные параметры для ** \@ email_address**, ** \@ display_name**и ** \@ replyto_address**. Параметр ** \@ email_address** — это адрес, из которого отправляется сообщение. Параметр ** \@ display_name** — это имя, отображаемое в поле **от:** сообщения электронной почты. Параметр ** \@ replyto_address** — это адрес, куда будут отправляться ответы на сообщение электронной почты. Например, учетная запись, используемая для агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], может отправлять сообщения электронной почты с адреса, используемого только агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сообщения с этого адреса должны отображать понятные имена, таким образом получатели могут легко определить, что сообщение отправлено агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если получатель отвечает на сообщение, ответ должен быть доставлен администратору базы данных, а не на адрес агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В этом сценарии в **SqlAgent@Adventure-Works.com** качестве адреса электронной почты используется учетная запись. Отображаемое имя имеет значение **Агент SQL Server автоматической рассылки**. Учетная запись использует **danw@Adventure-Works.com** как ответ на адрес, поэтому ответы на сообщения, отправленные из этой учетной записи, отправляются администратору базы данных, а не адресу электронной почты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента. С помощью указания независимых значений для этих трех параметров компонент Database Mail позволяет настраивать сообщения так, как необходимо.  
   
  Параметр ** \@ mailserver_type** поддерживает значение **"SMTP"**.  
@@ -105,7 +105,7 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
     @mailserver_name = 'smtp.Adventure-Works.com' ;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [Создание учетной записи Database Mail](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [Database Mail хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  

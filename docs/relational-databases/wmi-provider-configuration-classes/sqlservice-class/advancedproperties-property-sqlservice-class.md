@@ -15,14 +15,14 @@ apilocation:
 helpviewer_keywords:
 - AdvancedProperties property
 ms.assetid: 63bcb7e2-1f78-4961-b4b9-1b635a89079b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 95f6b8b63918122d85354f4f30694f22cbbaa4ee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b64912b3197b67da7af24ef0e10a80db3b10186c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472768"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550866"
 ---
 # <a name="advancedproperties-property-sqlservice-class"></a>Свойство AdvancedProperties (класс SqlService)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ object.AdvancedProperties [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Массив объектов [класса класс sqlserviceadvancedproperty](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) , содержащих дополнительные свойства для объекта **SqlService** .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
   
 ## <a name="see-also"></a>См. также:  
  [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
