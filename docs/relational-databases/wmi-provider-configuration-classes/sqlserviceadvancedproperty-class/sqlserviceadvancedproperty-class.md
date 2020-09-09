@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SqlServiceAdvancedProperty class
 ms.assetid: a5d06bde-6058-464c-a4aa-444d83f2331f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7f215ef377153d9c38d2447db70eda4c23292ab8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1e7cb88f8fbb942678c2aaf785a4b04a9297c74f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485066"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545210"
 ---
 # <a name="sqlserviceadvancedproperty-class"></a>Класс SqlServiceAdvancedProperty
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "88485066"
   
  [Начальный и остановленный класс служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx) представляет свойства, которые являются уникальными для службы. Эти свойства отсутствуют в списке свойств, связанных с классом [класса SqlService](https://technet.microsoft.com/library/ms186497.aspx) . Класс [класса класс sqlserviceadvancedproperty](https://technet.microsoft.com/library/ms182447.aspx) позволяет представление строковых, числовых или логических свойств. Этот класс можно использовать для просмотра уникальных свойств заданной службы.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запуск, приостановка и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

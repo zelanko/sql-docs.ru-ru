@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - InstanceName property
 ms.assetid: 7de3c043-6c5a-4663-b960-a80492444a99
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 54903cf47cd0a2be51d1f0f62dfb5ad18fc4bbbf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 49141a00cc7e9192baa1989baa5f91419fea4997
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472871"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545435"
 ---
 # <a name="instancename-property-clientsettingsgeneralflag-class"></a>Свойство InstanceName (класс ClientSettingsGeneralFlag)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +43,9 @@ object.InstanceName [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Строковое выражение, указывающее имя экземпляра клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

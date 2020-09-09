@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - MultiIpConfigurationSupport property
 ms.assetid: 442c6133-4038-42db-a67d-2631285ac76b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: da02aefabf6096712b4d6ccb06622892a20dbbed
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9a0c29f72ab66f008dfe6ddfb87be054501aeb50
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472857"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545491"
 ---
 # <a name="multiipconfigurationsupport-property-servernetworkprotocol-class"></a>Свойство MultiIpConfigurationSupport (класс ServerNetworkProtocol)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ object.MultiIpConfigurationSupport [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Логическое значение, указывающее, поддерживаются ли в сетевом протоколе сервера несколько IP-адресов: **true** , если сетевой протокол сервера поддерживает несколько IP-адресов, или **значение false** , если несколько IP-адресов не поддерживаются сетевым протоколом сервера.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
   
 ## <a name="see-also"></a>См. также:  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

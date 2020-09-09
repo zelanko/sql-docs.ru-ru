@@ -15,14 +15,14 @@ helpviewer_keywords:
 - WQL [WMI]
 - WMI Provider for Server Events, WQL
 ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: bf1f87043075fdf44adec9d61f379f20d898c2fa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 076c91605c245ad49f6c51a2a656d48c7dba2109
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888165"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545180"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>Использование WQL с поставщиком WMI для событий сервера
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -84,7 +84,7 @@ WHERE where_condition
   
  Только `=` операнд можно использовать вместе с **DatabaseName**, **SchemaName**и **objectname**. Другие выражения нельзя использовать с этими свойствами событий.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  *Where_condition* синтаксиса поставщика WMI для событий сервера определяет следующее:  
   
 -   Область, с помощью которой поставщик пытается получить указанный *event_type*: уровень сервера, уровень базы данных или уровень объекта (в настоящее время поддерживается только текущий объект). В конечном счете эта область определяет тип уведомления о событии, создаваемого в базе данных-получателе. Этот процесс называется регистрацией уведомления о событии.  
@@ -141,7 +141,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
     AND ObjectType='Table' AND ObjectName = 'SalesOrderDetail'  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основные понятия о поставщике WMI для событий сервера](https://technet.microsoft.com/library/ms180560.aspx)   
  [Уведомления о событиях (компонент Database Engine)](https://technet.microsoft.com/library/ms182602.aspx)  
   

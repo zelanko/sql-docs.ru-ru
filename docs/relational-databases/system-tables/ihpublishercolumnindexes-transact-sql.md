@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - IHpublishercolumnindexes system table
 ms.assetid: 95b95a1d-b502-4838-825f-82a456487e25
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0efc9145416e468756bbe861e2e3d36631cd25bb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5e8c4f3de523b1809ceed4a71c5384d853f92414
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446598"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545764"
 ---
 # <a name="ihpublishercolumnindexes-transact-sql"></a>IHpublishercolumnindexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88446598"
 |**publisherindex_id**|**int**|Определяет индекс из таблицы [ихпублишериндексес](../../relational-databases/system-tables/ihpublisherindexes-transact-sql.md) , связанной со столбцом.|  
 |**столбец indid**|**int**|Указывает местоположение столбца в опубликованной таблице.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Разнородная репликация базы данных](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  
