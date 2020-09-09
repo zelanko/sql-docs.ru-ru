@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_drop_agent_parameter
 ms.assetid: b99e65ff-9cca-4dce-a2ce-2968de23a76a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 24f037232818ef395bfd52d3734b5de9cce5378b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b63bde66246e24c3971299a668e8a90aa927385a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464406"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89528225"
 ---
 # <a name="sp_drop_agent_parameter-transact-sql"></a>sp_drop_agent_parameter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ sp_drop_agent_parameter [ @profile_id = ] profile_id
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **sp_drop_agent_parameter** используется во всех типах репликации.  
   
 ## <a name="permissions"></a>Разрешения  

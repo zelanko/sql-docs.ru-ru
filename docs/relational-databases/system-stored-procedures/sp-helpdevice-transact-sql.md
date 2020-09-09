@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpdevice
 ms.assetid: 1a5eafa7-384e-4691-ba05-978eb73bbefb
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0da4ef24647edd8de4bda1c412afb1410f9d3c14
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ae8e3db950ceab576786340ca396b25d774cb774
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474129"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89528182"
 ---
 # <a name="sp_helpdevice-transact-sql"></a>sp_helpdevice (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 |**cntrltype**|**smallint**|Тип контроллера устройства.<br /><br /> 2 = дисковое устройство.<br /><br /> 5 = ленточное устройство.|  
 |**size**|**int**|Размер устройства в 2-килобайтовых страницах.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Если указано *имя* , **sp_helpdevice** отображает сведения об указанном устройстве дампа. Если параметр *Name* не указан, **sp_helpdevice** отображает сведения обо всех устройствах дампа в представлении каталога **sys. backup_devices** .  
   
  Устройства дампа добавляются в систему с помощью **sp_addumpdevice**.  

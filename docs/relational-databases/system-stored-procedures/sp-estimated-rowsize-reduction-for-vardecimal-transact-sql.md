@@ -20,14 +20,14 @@ helpviewer_keywords:
 - estimate decimal compression
 - table compression [SQL Server]
 ms.assetid: 0fe45983-f9f2-4c7f-938a-0fd96e1cbe8d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 40347ef5e273b19a4ae04362a5e80b6f8d813e5f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f4ab6fbd33edef26f9cf1d37daf6688a68d8d5eb
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447176"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89527941"
 ---
 # <a name="sp_estimated_rowsize_reduction_for_vardecimal-transact-sql"></a>sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -61,7 +61,7 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
 |**avg_rowlen_vardecimal_format**|**десятичное число (12, 2)**|Представляет средний размер строки при использовании формата хранения vardecimal.|  
 |**row_count**|**int**|Количество строк в таблице.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Используйте **sp_estimated_rowsize_reduction_for_vardecimal** , чтобы оценить экономию результата при включении таблицы для формата хранения vardecimal. Например, если средний размер строки можно уменьшить на 40%, то размер самой таблицы также можно потенциально уменьшить на 40%. Наличие экономии места зависит от коэффициента заполнения и размера строки. Например, если длина строки, составляющая 8 000 байт, уменьшается на 40%, то на странице данных все равно помещается только одна строка, что в результате не дает никакой экономии.  
   
  Если результаты **sp_estimated_rowsize_reduction_for_vardecimal** указывают, что таблица будет расти, это означает, что многие строки в таблице будут использовать почти всю точность десятичных типов данных, а добавление небольших издержек, необходимых для формата хранения vardecimal, больше, чем экономия из формата хранения vardecimal. В этом редком случае формат хранения vardecimal включать не следует.  
