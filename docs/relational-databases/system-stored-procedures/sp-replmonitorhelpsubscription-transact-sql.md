@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelpsubscription
 ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b9597e7a3512307367568ee14800fcbf69a3045f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dab0e5d4f8f655b0e3140878279a8abca090d262
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485695"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543136"
 ---
 # <a name="sp_replmonitorhelpsubscription-transact-sql"></a>Хранимая процедура sp_replmonitorhelpsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -117,7 +117,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **sp_replmonitorhelpsubscription** используется со всеми типами репликации.  
   
  **sp_replmonitorhelpsubscription** упорядочивает результирующий набор на основе серьезности состояния подписки, которая определяется значением *мониторранкинг*. Например, строки всех подписок в состоянии ошибки находятся выше строк подписок с предупреждениями.  

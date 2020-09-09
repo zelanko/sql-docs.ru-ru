@@ -20,14 +20,14 @@ helpviewer_keywords:
 - sys.sp_cdc_help_change_data_capture
 - sp_cdc_help_change_data_capture
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d7b0fa1b0e6219ebfef9f281eec8e8503e22f0b2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 06e66a24884d243ebd5df2698ebb5c86eddf83de
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485557"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541170"
 ---
 # <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -83,7 +83,7 @@ sys.sp_cdc_help_change_data_capture
 |index_column_list|**nvarchar(max)**|Список столбцов индекса, который использовался для уникальной идентификации строк в исходной таблице.|  
 |captured_column_list|**nvarchar(max)**|Список отслеживаемых исходных столбцов.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Если оба *source_schema* и *source_name* по умолчанию имеют значение null или явно задают значение null, эта хранимая процедура возвращает сведения обо всех экземплярах отслеживания базы данных, к которым вызывающий объект имеет доступ. Если *source_schema* и *SOURCE_NAME* не равны NULL, возвращаются только сведения о конкретной именованной таблице с поддержкой.  
   
 ## <a name="permissions"></a>Разрешения  

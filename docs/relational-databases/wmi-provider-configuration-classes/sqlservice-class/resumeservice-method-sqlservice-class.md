@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - ResumeService method
 ms.assetid: 0b0a5f08-b95e-4626-bf81-309da7a0aacd
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7d1e5e368f9fc33898d251f3508f2bcaffd9622f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b5c533cde7bccdbf198e207e6026beb0404f19cd
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460071"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542834"
 ---
 # <a name="resumeservice-method-sqlservice-class"></a>Метод ResumeService (класс SqlService)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +43,9 @@ object.ResumeService()
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение uint32 равно 0, если запрос **ResumeService** был принят; равно 1, если запрос не поддерживается; и равно любому другому числу для указания ошибки.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

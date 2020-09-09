@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - IHpublisherindexes system table
 ms.assetid: 6008ef89-eeb9-46dc-93a2-f7623298cf0f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d86c2f362c3ddf0e6b6cb9e3ff8967f819339820
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5b7e4d37acf72277f88290372a1a7c29b7343473
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419148"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540950"
 ---
 # <a name="ihpublisherindexes-transact-sql"></a>IHpublisherindexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88419148"
 |**name**|**sysname**|Имя опубликованного индекса.|  
 |**type**|**nvarchar(255)**|Поддерживаемый тип индекса из системной таблицы [ихиндекстипес](../../relational-databases/system-tables/ihindextypes-transact-sql.md) .|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Разнородная репликация базы данных](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  

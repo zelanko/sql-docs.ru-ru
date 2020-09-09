@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.schemas catalog view
 ms.assetid: 29af5ce5-2af7-4103-8f08-3ec92603ba05
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a8a48cbf6a2c50bafab98638c94dce8d5b833012
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5ec55904334a360d848e7cc9e661fa365b7968b3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486565"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542720"
 ---
 # <a name="schemas-catalog-views---sysschemas"></a>Представления каталога схем — sys. schemas
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88486565"
 |**schema_id**|**int**|Идентификатор схемы. Уникален в пределах базы данных.|  
 |**principal_id**|**int**|Идентификатор участника, владеющего этой схемой.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
 Схемы баз данных действуют как пространства имен или контейнеры для объектов, таких как таблицы, представления, процедуры и функции, которые можно найти в представлении каталога **sys. Objects** .  
 
 Каждая схема имеет владельца. Владелец является [субъектом](../../relational-databases/security/authentication-access/principals-database-engine.md)безопасности.

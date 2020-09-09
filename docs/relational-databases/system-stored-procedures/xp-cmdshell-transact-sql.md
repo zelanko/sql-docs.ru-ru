@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - xp_cmdshell
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ae4a2ca88d6c0ffd76e489e7cda186bbedf2471a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3333e8d26c6f79bc3f99298e2854f05789caac9f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88374140"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541068"
 ---
 # <a name="xp_cmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +63,7 @@ GO
 The command(s) completed successfully.  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Процесс Windows, порожденный **xp_cmdshell** , имеет те же права безопасности, что и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетная запись службы.  
   
  **xp_cmdshell** работает синхронно. Управление не возвращается участнику до завершения команды ядра.  
@@ -171,7 +171,7 @@ SET @cmd = @var + ' > dir_out.txt';
 EXEC master..xp_cmdshell @cmd;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Общие расширенные хранимые процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [Параметр конфигурации сервера xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)   
  [Настройка контактной зоны](../../relational-databases/security/surface-area-configuration.md)   

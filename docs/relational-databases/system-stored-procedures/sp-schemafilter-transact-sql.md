@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_schemafilter
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ad023dd248b3849e4bb900e1891bd655087a51f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 51edefb63c7ec075e89e9239636207625c4ba1dc
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481107"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541526"
 ---
 # <a name="sp_schemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
 |Значение|Описание|  
 |-----------|-----------------|  
 |**add**|Добавляет указанную схему в список схем, не подходящих для публикации.|  
-|**drop**|Удаляет указанную схему из списка схем, не подходящих для публикации.|  
+|**тени**|Удаляет указанную схему из списка схем, не подходящих для публикации.|  
 |**help**|Возвращает список схем, которые не подходят для публикации.|  
   
 ## <a name="result-sets"></a>Результирующие наборы  
@@ -61,7 +61,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **sp_schemafilter** следует использовать только для разнородных издателей.  
   
 ## <a name="permissions"></a>Разрешения  

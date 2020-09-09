@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergearticle
 ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8775928ede4fd92072bd91e39bc9652bb7db53a5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 994efc8752017757bbced6df16fed2b6a4955eb1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469743"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541916"
 ---
 # <a name="sp_changemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -84,7 +84,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**3**|Фильтрация для статьи дает неперекрывающиеся секции, уникальные для каждой из подписок.<br /><br /> Примечание. Если для **partition_options**указано значение **3** , для каждой секции данных в этой статье может существовать только одна подписка. Если создается вторая подписка, в которой условие фильтрации сводится к той же секции, что и в существующей подписке, то существующая подписка удаляется.|  
 |**pre_creation_command**|**Нет**|Если таблица на подписчике уже существует, не выполняется никаких действий.|  
 ||**delete**|Выполняет удаление, используя предложение WHERE, указанное в фильтре подмножества.|  
-||**drop**|Удаляет таблицу перед ее повторным созданием.|  
+||**тени**|Удаляет таблицу перед ее повторным созданием.|  
 ||**TRUNCATE**|Усекает целевую таблицу.|  
 |**processing_order**||**целое** число, указывающее порядок обработки статей в публикации слиянием.|  
 |**pub_identity_range**||значение типа **bigint** , указывающее размер диапазона, выделенного подписчику с серверной подпиской, если для статьи параметр **identityrangemanagementoption** имеет значение **Auto** или **auto_identity_range** установлен в **значение true**. Этот диапазон идентификаторов резервируется переиздающему подписчику для выделения собственным подписчикам. Применяется только к статье таблицы. Дополнительные сведения см. в подразделе «репликация слиянием» статьи « [Репликация столбцов идентификаторов](../../relational-databases/replication/publish/replicate-identity-columns.md)».|  
@@ -164,7 +164,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **sp_changemergearticle** используется в репликации слиянием.  
   
  Поскольку **sp_changemergearticle** используется для изменения свойств статьи, которые изначально были указаны с помощью [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md), дополнительные сведения об этих свойствах см. в [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) .  
@@ -241,7 +241,7 @@ sp_changemergearticle [ @publication = ] 'publication'
  [Просмотр и изменение свойств статьи](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
  [Изменение свойств публикации и статьи](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
- [sp_dropmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
+ [sp_dropmergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)   
  [sp_helpmergearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)   
  [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

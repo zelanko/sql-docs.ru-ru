@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - IHarticles system table
 ms.assetid: 773ef9b7-c993-4629-9516-70c47b9dcf65
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1ef51387b774f8961cb7abe30f2af4615adc0973
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fc67de5d66f897ccc54a1cc06cf88aac35e572b5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419238"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540975"
 ---
 # <a name="iharticles-transact-sql"></a>IHarticles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88419238"
 |**publisher_id**|**smallint**|Идентификатор издателя, не являющегося SQL Server.|  
 |**creation_script**|**nvarchar(255)**|Скрипт схемы для статьи.|  
 |**del_cmd**|**nvarchar(255)**|Тип команды репликации, используемый при репликационном удалении в статьях таблицы. Дополнительные сведения см. в статье [Указание способа распространения изменений для статей транзакций](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
-|**Фильтрация**|**int**|Этот столбец не используется и включается только для того, чтобы представление [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) таблицы **ихартиклес** , совместимое с представлением [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) , которое используется для SQL Serverных статей ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)).|  
+|**filter**|**int**|Этот столбец не используется и включается только для того, чтобы представление [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) таблицы **ихартиклес** , совместимое с представлением [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) , которое используется для SQL Serverных статей ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)).|  
 |**filter_clause**|**ntext**|Предложение статьи WHERE, используемое для горизонтальной фильтрации и написанное на стандартном языке Transact-SQL, который может интерпретироваться издателем, не являющимся SQL Server.|  
 |**ins_cmd**|**nvarchar(255)**|Тип команды репликации, используемый при репликационной вставке в статьи таблицы. Дополнительные сведения см. в статье [Указание способа распространения изменений для статей транзакций](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
 |**pre_creation_cmd**|**tinyint**|Команда, которую необходимо выполнить перед применением исходного моментального снимка, если объект с тем же именем уже существует на подписчике.<br /><br /> **0** = None — команда не выполняется.<br /><br /> **1** = DROP — удалить целевую таблицу.<br /><br /> **2** = Delete — удаление данных из целевой таблицы.<br /><br /> **3** = TRUNCATE — усечение целевой таблицы.|  
@@ -66,7 +66,7 @@ ms.locfileid: "88419238"
 |**instance_id**|**int**|Определяет текущий экземпляр журнала статьи для опубликованной таблицы.|  
 |**use_default_datatypes**|**bit**|Указывает, использует ли статья сопоставления типов данных по умолчанию; значение **1** указывает, что используются сопоставления типов данных по умолчанию.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Разнородная репликация базы данных](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Таблицы репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации &#40;&#41;Transact-SQL ](../../relational-databases/system-views/replication-views-transact-sql.md)   

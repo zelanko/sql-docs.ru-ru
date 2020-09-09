@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_markpendingschemachange
 ms.assetid: 01100309-7bef-4154-85bf-f18489577e37
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b9e62684057772d18a78694de67928073bc10c8a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0b5b207c4d36e820e6635bd9c8a2e99cdb7e4829
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489235"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541697"
 ---
 # <a name="sp_markpendingschemachange-transact-sql"></a>sp_markpendingschemachange (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ sp_markpendingschemachange [@publication = ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **sp_markpendingschemachange** используется с репликацией слиянием.  
   
  **sp_markpendingschemachange** — это хранимая процедура, предназначенная для поддержки репликации слиянием и используемая только в том случае, если другие корректирующие действия, такие как повторная инициализация, не могли исправить ситуацию или имеют слишком много ресурсов в плане производительности.  

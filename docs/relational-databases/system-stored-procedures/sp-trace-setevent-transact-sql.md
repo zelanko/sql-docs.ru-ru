@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setevent
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9f176957bb975ee08ac6ef508a187b189a6123b4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f678427f05b5c3b136a7dfe18e1f51eb91773b91
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480967"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543009"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>Хранимая процедура sp_trace_setevent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -273,7 +273,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |28|**ObjectType**|Тип объекта, например: таблица, функция или хранимая процедура.|  
 |29|**NestLevel**|Уровень вложенности, на котором выполняется хранимая процедура. См. раздел [@ @NESTLEVEL &#40;TRANSACT-SQL&#41;](../../t-sql/functions/nestlevel-transact-sql.md).|  
 |30|**Состояние**|Состояние сервера в случае ошибки.|  
-|31|**Error**|Номер ошибки.|  
+|31|**Ошибка**|Номер ошибки.|  
 |32|**Режим**|Режим полученной блокировки. Этот столбец не заполняется событием **Lock: Released** .|  
 |33|**Дескриптор**|Дескриптор объекта, относящегося к событию.|  
 |34|**ObjectName**|Имя объекта, к которому выполняется доступ.|  
@@ -289,7 +289,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |44|**ColumnPermissions**|Состояние разрешений на уровне столбцов. Используется событием Security Auditing.|  
 |45|**LinkedServerName**|Имя связанного сервера.|  
 |46|**ProviderName**|Имя поставщика OLE DB.|  
-|47|**Имя_метода**|Имя метода OLE DB.|  
+|47|**MethodName**|Имя метода OLE DB.|  
 |48|**RowCounts**|Количество строк в пакете.|  
 |49|**RequestID**|Идентификатор запроса, содержащего инструкцию.|  
 |50|**XactSequence**|Токен, описывающий текущую транзакцию.|  
@@ -302,10 +302,10 @@ sp_trace_setevent [ @traceid = ] trace_id
 |57|**Тип**|Целое число, значение которого зависит от класса событий, захваченного при трассировке.|  
 |58|**OwnerID**|Тип объекта-владельца блокировки. Только для событий блокировки.|  
 |59|**ParentName**|Имя схемы, в которой находится объект.|  
-|60|**IsSystem**|Указывает, произошло событие в системном или в пользовательском процессе.<br /><br /> **1** = система<br /><br /> **0** = пользователь.|  
-|61|**Собой**|Начальное смещение инструкции в пределах хранимой процедуры или пакета.|  
+|60|**IsSystem**|Указывает, произошло событие в системном или в пользовательском процессе.<br /><br /> **1** = системный процесс<br /><br /> **0** = пользователь.|  
+|61|**Offset**|Начальное смещение инструкции в пределах хранимой процедуры или пакета.|  
 |62|**SourceDatabaseID**|Идентификатор базы данных, в которой находится источник объекта.|  
-|63|**SqlHandle**|64-разрядная версия хэша, основанная на тексте нерегламентированного запроса или базы данных и на идентификаторе объекта SQL. Это значение может быть передано в **sys. dm_exec_sql_text ()** для получения связанного текста SQL.|  
+|63|**SqlHandle**|64-разрядная версия хэша, основанная на тексте нерегламентированного запроса или базы данных и на идентификаторе объекта SQL. Это значение можно передать в функцию **sys.dm_exec_sql_text()** , чтобы получить связанный текст SQL.|  
 |64|**SessionLoginName**|Имя входа пользователя, который инициировал сеанс. Например, при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем **Имя_входа1** и при выполнении инструкции под именем **Имя_входа2**поле **SessionLoginName** будет содержать **Имя_входа1**, а поле **LoginName** — **Имя_входа2**. В данном столбце отображаются имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и Windows.|  
   
  **[ @on =]** *вкл* .  
@@ -336,10 +336,10 @@ sp_trace_setevent [ @traceid = ] trace_id
 |4|Указан недопустимый столбец.|  
 |9|Указан недопустимый дескриптор трассировки.|  
 |11|Указанный столбец используется для внутренних целей и не может быть удален.|  
-|13|Нехватка памяти. Возвращается, когда для выполнения указанного действия недостаточно памяти.|  
+|13|Недостаточно памяти. Возвращается, когда для выполнения указанного действия недостаточно памяти.|  
 |16|Недопустимая функция для данной трассировки.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **sp_trace_setevent** выполняет многие действия, ранее выполненные расширенными хранимыми процедурами, доступными в более ранних версиях служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Используйте **sp_trace_setevent** вместо следующего:  
   
 -   **xp_trace_addnewqueue**  
@@ -357,7 +357,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 ## <a name="permissions"></a>Разрешения  
  Пользователь должен иметь разрешение ALTER TRACE.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sys. fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sys.fn_trace_getinfo (Transact-SQL)](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergepublication
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 46fef8eff54b4a27957191e2456df90ff77f72c4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e909e343a22ca1a249e5de03bc5eb64948e982cd
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474499"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541919"
 ---
 # <a name="sp_changemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -114,7 +114,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**status**|**active**|Публикация находится в активном состоянии.|  
 ||**inactive**|Публикация находится в неактивном состоянии.|  
 |**sync_mode**|**native** или<br /><br /> **машинный код bcp**|Для исходного моментального снимка используются результаты вывода всех таблиц в собственном режиме программы массового копирования.|  
-||**символов**<br /><br /> или **символ bcp**|Для исходного моментального снимка используются результаты вывода всех таблиц в символьном режиме программы массового копирования, что требуется подписчикам, отличным от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+||**character**<br /><br /> или **символ bcp**|Для исходного моментального снимка используются результаты вывода всех таблиц в символьном режиме программы массового копирования, что требуется подписчикам, отличным от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**use_partition_groups**<br /><br /> Примечание. После использования partition_groups, если вы хотите вернуться к использованию **сетупбелонгс**и установить **use_partition_groups = false** в **чанжемержеартикле**, это может быть неправильно отражено после создания моментального снимка. Триггеры, формируемые моментальным снимком, совместимы с группами секций.<br /><br /> Чтобы решить эту проблему, можно установить состояние неактивно, изменить **use_partition_groups**, а затем задать для параметра Состояние значение активно.|**true**|Публикация использует предварительно вычисляемые секции.|  
 ||**false**|Публикация не использует предварительно вычисляемые секции.|  
 |**validate_subscriber_info**||Содержит список функций для получения сведений о подписчике. Затем проверяет условие динамического фильтра, которое используется для подписчика при проверке правильности секционирования данных.|  
@@ -140,7 +140,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **sp_changemergepublication** используется в репликации слиянием.  
   
  Изменение следующих свойств требует создания нового моментального снимка. Для параметра *force_invalidate_snapshot* необходимо указать значение **1** .  

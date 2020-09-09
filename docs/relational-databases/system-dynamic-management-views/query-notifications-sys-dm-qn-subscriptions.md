@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_qn_subscriptions dynamic management view
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2d19178ff8e4b684fbc32fb80d23ee057fb55db7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 47bc6dae0c1164fefbffd0a799b5dbfcf7137bb6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455121"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542397"
 ---
 # <a name="query-notifications---sysdm_qn_subscriptions"></a>Уведомления о запросах — sys. dm_qn_subscriptions
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88455121"
 |-----------------|---------------|-----------------|  
 |**идентификатор**|**int**|Идентификатор подписки.|  
 |**database_id**|**int**|Идентификатор базы данных, для которой был выполнен запрос уведомлений. Эта база данных хранит информацию, относящуюся к данной подписке.|  
-|**sid**|**varbinary(85)**|Идентификатор безопасности участника [системы безопасности] на уровне сервера, который создал подписку и которому она принадлежит.|  
+|**трансляцию**|**varbinary(85)**|Идентификатор безопасности участника [системы безопасности] на уровне сервера, который создал подписку и которому она принадлежит.|  
 |**object_id**|**int**|Идентификатор внутренней таблицы, в которой хранятся данные о параметрах подписки.|  
 |**created**|**datetime**|Дата и время создания подписки.|  
 |**timeout**|**int**|Время ожидания для подписки в секундах. Уведомление будет снабжено меткой, указывающей на то, что оно должно сработать по истечении этого времени.<br /><br /> Примечание. фактическое время срабатывания может быть больше указанного времени ожидания. Однако если изменение, которое сделает подписку недействительной, происходит по истечении заданного времени ожидания, но до запуска подписки, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] гарантирует срабатывание события во время внесения изменений.|  
@@ -43,12 +43,12 @@ ms.locfileid: "88455121"
   
 ## <a name="relationship-cardinalities"></a>Количество элементов связей  
   
-|От|Кому|Включено|Тип|  
+|Исходный тип|Кому|Включено|Тип|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|«многие к одному»|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|«многие к одному»|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Код состояния 0 обозначает неопределенное состояние.  
   
  Следующие коды состояний обозначают, что подписка сработала из-за изменения.  
@@ -58,7 +58,7 @@ ms.locfileid: "88455121"
 |65798|Подписка сработала из-за изменения данных|Подписка сработала из-за операции вставки|  
 |65799|Подписка сработала из-за изменения данных|Удалить|  
 |65800|Подписка сработала из-за изменения данных|Update|  
-|65801|Подписка сработала из-за изменения данных|Объединить|  
+|65801|Подписка сработала из-за изменения данных|Объединение|  
 |65802|Подписка сработала из-за изменения данных|Усечение таблицы|  
 |66048|Подписка сработала из-за изменения времени ожидания|Неопределенный режим INFO|  
 |66315|Подписка сработала из-за изменения объекта|Объект или пользователь удален|  
@@ -131,7 +131,7 @@ WHERE it.internal_type_desc = 'QUERY_NOTIFICATION';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления, связанные с уведомлениями о запросах &#40;языке Transact-SQL&#41;](https://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
  [KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL)](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  

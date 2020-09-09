@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_dbcmptlevel
 ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b1571beb279f20cd5f887589b11c8fc72bec41a5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2c03d436a85e174e1af17e47c8dc27d3ad2d6976
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493410"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541932"
 ---
 # <a name="sp_dbcmptlevel-transact-sql"></a>sp_dbcmptlevel (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -66,7 +66,7 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
   
  Если *имя* указано без *версии*, то [!INCLUDE[ssDE](../../includes/ssde-md.md)] возвращается сообщение, отображающее текущий уровень совместимости указанной базы данных.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Описание уровней совместимости см. в разделе [уровень совместимости ALTER database &#40;&#41;Transact-SQL ](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 ## <a name="permissions"></a>Разрешения  

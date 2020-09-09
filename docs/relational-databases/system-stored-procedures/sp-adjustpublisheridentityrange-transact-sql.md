@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adjustpublisheridentityrange
 ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9315025143c31d6fc1ef76aab4e70578e251694d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cdb8f12f5c5ff3c3c01f5d7cd18827b2fec0e9c8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464597"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541999"
 ---
 # <a name="sp_adjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_adjustpublisheridentityrange** используется во всех типах репликации.  
   
  Агент распространителя или агент слияния являются ответственными за автоматическое изменение границ диапазона идентификаторов публикаций, для которых включено автоматическое определение диапазона на основе пороговых значений. Однако, если по какой-либо причине агент распространения или агент слияния не выполнялись в течение определенного периода времени, а ресурс диапазона идентификаторов интенсивно потребляет точку порогового значения, пользователи могут вызвать **sp_adjustpublisheridentityrange** , чтобы выделить новый диапазон значений для издателя.  
