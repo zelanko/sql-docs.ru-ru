@@ -18,14 +18,14 @@ helpviewer_keywords:
 - extended events [SQL Server], views
 - sys.dm_os_dispatcher_pools DMV
 ms.assetid: b9edbc83-c6bc-4753-9bb5-a454cfe7d6bf
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 768bf4dca3e42837218b49fe863ae45a3daf8630
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a1810098b53ab87f98687a767f384674fcdaa8bc
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481950"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89531984"
 ---
 # <a name="sysdm_os_dispatcher_pools-transact-sql"></a>sys.dm_os_dispatcher_pools (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88481950"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |dispatcher_pool_address|**varbinary(8)**|Адрес пула диспетчеров. dispatcher_pool_address является уникальным. Не допускает значение NULL.|  
-|type|**nvarchar(256)**|Тип пула диспетчеров. Не допускает значение NULL. Существует два типа пулов диспетчеров:<br /><br /> DISP_POOL_XE_ENGINE;<br /><br /> DISP_POOL_XE_SESSION.<br /><br /> Запрос к динамическому административному представлению для полного списка|  
+|тип|**nvarchar(256)**|Тип пула диспетчеров. Не допускает значение NULL. Существует два типа пулов диспетчеров:<br /><br /> DISP_POOL_XE_ENGINE;<br /><br /> DISP_POOL_XE_SESSION.<br /><br /> Запрос к динамическому административному представлению для полного списка|  
 |name|**nvarchar(256)**|Имя пула диспетчеров. Не допускает значение NULL.|  
 |dispatcher_count|**int**|Число активных потоков диспетчеров. Не допускает значение NULL.|  
 |dispatcher_ideal_count|**int**|Число потоков диспетчеров, которые могут быть задействованы по мере роста пула диспетчеров. Не допускает значение NULL.|  
@@ -52,7 +52,7 @@ ms.locfileid: "88481950"
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
 На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется  **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
   
   
 
