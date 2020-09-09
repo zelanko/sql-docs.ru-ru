@@ -36,7 +36,7 @@ ms.locfileid: "88498608"
 > [!IMPORTANT]  
 >  Для целевых столбцов должно быть включено полнотекстовое и семантическое индексирование.  
   
-###  <a name="example-find-the-top-documents-that-are-similar-to-another-document"></a><a name="HowToIdentifySimilar"></a> Example: Find the top documents that are similar to another document  
+###  <a name="example-find-the-top-documents-that-are-similar-to-another-document"></a><a name="HowToIdentifySimilar"></a>Пример. Поиск документов, наиболее похожих на другой документ  
  В следующем примере извлекается до 10 кандидатов, подобных указанному кандидату, обозначенному *\@CandidateID* из таблицы HumanResources.JobCandidateHumanResources.JobCandidate в примере базы данных AdventureWorks2012.  
   
 ```scr  

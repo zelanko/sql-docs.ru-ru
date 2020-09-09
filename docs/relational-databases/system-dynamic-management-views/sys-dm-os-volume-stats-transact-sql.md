@@ -2,7 +2,7 @@
 description: sys.dm_os_volume_stats (Transact-SQL)
 title: sys. dm_os_volume_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 06/06/2019
+ms.date: 09/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 085659b4c6754bc2de68124dcb7d5c6fbbcdeb16
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d6e6eb3ccf2823af437fc37cdddfa2b0b640ae12
+ms.sourcegitcommit: 71a334c5120a1bc3809d7657294fe44f6c909282
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539257"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89614602"
 ---
 # <a name="sysdm_os_volume_stats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]
@@ -53,17 +53,18 @@ sys.dm_os_volume_stats (database_id, file_id)
 |**Столбец**|**Data type**|**Описание**|  
 |**database_id**|**int**|Идентификатор базы данных. Не может иметь значение NULL.|  
 |**file_id**|**int**|Идентификатор файла. Не может иметь значение NULL.|  
-|**volume_mount_point**|**nvarchar(512)**|Точка подключения, с которой ассоциирован корень тома. Может возвращать пустую строку.|  
-|**volume_id**|**nvarchar(512)**|Идентификатор тома операционной системы. Может возвращать пустую строку|  
-|**logical_volume_name**|**nvarchar(512)**|Логическое имя тома. Может возвращать пустую строку|  
-|**file_system_type**|**nvarchar(512)**|Тип файловой системы тома (например, NTFS, FAT, RAW). Может возвращать пустую строку|  
+|**volume_mount_point**|**nvarchar(512)**|Точка подключения, с которой ассоциирован корень тома. Может возвращать пустую строку. Возвращает значение NULL в операционной системе Linux.|  
+|**volume_id**|**nvarchar(512)**|Идентификатор тома операционной системы. Может возвращать пустую строку. Возвращает значение NULL в операционной системе Linux.|  
+|**logical_volume_name**|**nvarchar(512)**|Логическое имя тома. Может возвращать пустую строку. Возвращает значение NULL в операционной системе Linux.|  
+|**file_system_type**|**nvarchar(512)**|Тип файловой системы тома (например, NTFS, FAT, RAW). Может возвращать пустую строку. Возвращает значение NULL в операционной системе Linux.|  
 |**total_bytes**|**bigint**|Общий размер тома в байтах. Не может иметь значение NULL.|  
 |**available_bytes**|**bigint**|Доступное свободное место на томе. Не может иметь значение NULL.|  
-|**supports_compression**|**bit**|Указывает, поддерживает ли том сжатие на уровне операционной системы. Не может иметь значение NULL.|  
-|**supports_alternate_streams**|**bit**|Указывает, поддерживает ли том дополнительные потоки. Не может иметь значение NULL.|  
-|**supports_sparse_files**|**bit**|Указывает, поддерживает ли том разреженные файлы.  Не может иметь значение NULL.|  
-|**is_read_only**|**bit**|Указывает, помечен ли том как доступный только для чтения. Не может иметь значение NULL.|  
-|**is_compressed**|**bit**|Указывает, сжат ли том в настоящее время. Не может иметь значение NULL.|  
+|**supports_compression**|**tinyint**|Указывает, поддерживает ли том сжатие на уровне операционной системы. Не может иметь значение NULL в Windows и возвращает значение NULL в операционной системе Linux.|  
+|**supports_alternate_streams**|**tinyint**|Указывает, поддерживает ли том дополнительные потоки. Не может иметь значение NULL в Windows и возвращает значение NULL в операционной системе Linux.|  
+|**supports_sparse_files**|**tinyint**|Указывает, поддерживает ли том разреженные файлы.  Не может иметь значение NULL в Windows и возвращает значение NULL в операционной системе Linux.|  
+|**is_read_only**|**tinyint**|Указывает, помечен ли том как доступный только для чтения. Не может иметь значение NULL.|  
+|**is_compressed**|**tinyint**|Указывает, сжат ли том в настоящее время. Не может иметь значение NULL в Windows и возвращает значение NULL в операционной системе Linux.|  
+|**incurs_seek_penalty**|**tinyint**|Указывает тип хранилища, поддерживающего этот том. Возможны следующие значения:<br /><br />0: не выполнять поиск на этом томе, как правило, если устройство хранения PMM или SSD<br /><br />1: Поиск штрафов на этом томе, обычно если устройство хранения является HDD<br /><br />2: тип хранилища не может быть определен, если том расположен по UNC-пути или подключенным общим папкам<br /><br />NULL: тип хранилища не может быть определен в операционной системе Linux<br /><br />**Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] )|  
   
 ## <a name="security"></a>Безопасность  
   
