@@ -17,14 +17,14 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_update_collection_item
 ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: bf31cc498e140070b97f76593a8ce675ebd804ac
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2dc7d6967f4bfa7aa1c22f4cfa5c55e06127455b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489115"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89534874"
 ---
 # <a name="sp_syscollector_update_collection_item-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +67,7 @@ sp_syscollector_update_collection_item
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или 1 (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Если набор сбора настроен на режим без кэширования, изменение частоты не учитывается, поскольку этот режим предусматривает выполнение сбора данных и передачу по расписанию, указанному для набора сбора. Чтобы просмотреть состояние набора сбора, выполните следующий запрос. Замените `<collection_item_id>` идентификатором обновляемого элемента сбора.  
   
 ```  
@@ -92,7 +92,7 @@ WHERE collection_item_id = <collection_item_id>;
 ## <a name="examples"></a>Примеры  
  Следующие примеры основаны на элементе сбора, созданном в примере, определенном в [sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md).  
   
-### <a name="a-changing-the-collection-frequency"></a>A. Изменение частоты сбора  
+### <a name="a-changing-the-collection-frequency"></a>А. Изменение частоты сбора  
  В следующем примере изменяется частота сбора для указанного элемента сбора.  
   
 ```  
@@ -139,7 +139,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Системные хранимые процедуры &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Сбор данных](../../relational-databases/data-collection/data-collection.md)   
  [sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
  [syscollector_collection_items (Transact-SQL)](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  

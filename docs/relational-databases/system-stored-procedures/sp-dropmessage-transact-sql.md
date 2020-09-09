@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_dropmessage
 ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 46c95708903063b4fade98e3d45e29e184e93efd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cb4480908dc508fb82e591b2a9dbab448f951961
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474248"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536529"
 ---
 # <a name="sp_dropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,12 +49,12 @@ sp_dropmessage [ @msgnum = ] message_number
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Отсутствует.  
+ Нет.  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в предопределенных ролях сервера **sysadmin** и **serveradmin** .  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Если для *языка*не указано значение **ALL** , все локализованные версии сообщения должны быть удалены до тех пор, пока не будет удалена версия сообщения для английского языка (США).  
   
 ## <a name="examples"></a>Примеры  

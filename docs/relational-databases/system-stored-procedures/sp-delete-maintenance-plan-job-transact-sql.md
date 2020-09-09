@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_maintenance_plan_job
 ms.assetid: 1c2148c3-2928-4d9b-b1c8-3512cfbd6a63
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8aab6443a16b5de89bb3d8764beabfa5dc8beb34
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0b06c9c385d85c1b1a4cb4df79ebb22f70d5abee
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489431"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536574"
 ---
 # <a name="sp_delete_maintenance_plan_job-transact-sql"></a>sp_delete_maintenance_plan_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **sp_delete_maintenance_plan_job** должны запускаться из базы данных **msdb** .  
   
  Когда все задания были удалены из плана обслуживания, рекомендуется выполнить **sp_delete_maintenance_plan_db** , чтобы удалить оставшиеся базы данных из плана.  

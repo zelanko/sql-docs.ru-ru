@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_jobschedule
 ms.assetid: 4df02594-4cd1-49a9-8d97-37c44e4d5423
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 92aa7a001a365ed9d24c0e856b304b723e57c9c0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cf9a58d3be772fc9fa65cdf61ee6a326410314a1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473545"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89534794"
 ---
 # <a name="sp_update_jobschedule-transact-sql"></a>sp_update_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88473545"
 > [!IMPORTANT]
 >  Дополнительные сведения о синтаксисе, используемом в более ранних версиях Microsoft SQL Server, см. в разделе Transact-SQL Референцефор Microsoft SQL Server 2000 *.*  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Расписанием задач теперь можно управлять независимо от них самих. Чтобы обновить расписание, используйте **sp_update_schedule**.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -51,7 +51,7 @@ ms.locfileid: "88473545"
   
  Только члены **sysadmin** могут использовать эту хранимую процедуру для обновления расписаний заданий, принадлежащих другим пользователям.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Агент SQL Server хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_update_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)  
   

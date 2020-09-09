@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_spatial_geometry_histogram
 ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6d6e17d2e4ae048c563a2130918d137d5c186b60
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b74fa91b13b3b7f432a4b647f063a91a76e8c56a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447043"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89535251"
 ---
 # <a name="sp_help_spatial_geometry_histogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -75,7 +75,7 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 ## <a name="permissions"></a>Разрешения  
  Пользователь должен быть членом роли **Public** . Необходимо разрешение READ ACCESS на сервере и объекте.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  В пространственной таблице среды SSMS отображается графическое представление результатов. Можно повторно отправить запрос результатов с использованием пространственного окна для определения приблизительного количества элементов результатов. Объекты в таблице могут занимать более одной ячейки, поэтому сумма количества ячеек может быть больше числа фактических объектов.  
   
  В результирующий набор, в котором указано число объектов, находящихся за пределами ограничивающего прямоугольника или касающихся его, можно добавить дополнительную строку. **Целлид** этой строки равно 0, а **Ячейка** этой строки содержит **LineString** , представляющий ограничивающий прямоугольник. Эта строка представляет все пространство за пределами ограничивающего прямоугольника.  

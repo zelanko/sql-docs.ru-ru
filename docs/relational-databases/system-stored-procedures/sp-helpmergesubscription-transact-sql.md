@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergesubscription
 ms.assetid: da564112-f769-4e67-9251-5699823e8c86
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6892f15293c66e36afe7108047a7e81539559fc1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 48d40b3209311968443a6c6d2b713b4aa1e3d43a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464247"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89535203"
 ---
 # <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,7 +77,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**status**|**int**|Состояние подписки.<br /><br /> **0** = все задания ожидают запуска<br /><br /> **1** = одно или несколько заданий запускаются<br /><br /> **2** = все задания выполнены успешно<br /><br /> **3** = по крайней мере одно задание исполняется<br /><br /> **4** = все задания запланированы и бездействуют<br /><br /> **5** = по крайней мере одно задание пытается выполнить после предыдущего сбоя<br /><br /> **6** = не удалось успешно выполнить по крайней мере одно задание|  
 |**subscriber_type**|**int**|Тип подписчика.|  
 |**subscription_type**|**int**|Тип подписки:<br /><br /> **0** = принудительная отправка<br /><br /> **1** = по запросу<br /><br /> **2** = оба|  
-|**приоритеты**|**float (8)**|Число, показывающее приоритет подписки.|  
+|**priority**|**float (8)**|Число, показывающее приоритет подписки.|  
 |**sync_type**|**tinyint**|Тип синхронизации подписки.|  
 |**description**|**nvarchar(255)**|Короткое описание данной подписки слиянием.|  
 |**merge_jobid**|**двоичный (16)**|Идентификатор задания агента слияния.|  
@@ -93,7 +93,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **sp_helpmergesubscription** используется в репликации слиянием для возврата сведений о подписке, хранящихся на издателе, или при повторной публикации подписчика.  
   
  Для анонимных подписок значение *subscription_type*всегда равно **1** (Pull). Однако для получения сведений о анонимных подписках необходимо выполнить [sp_helpmergepullsubscription](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md) на подписчике.  
