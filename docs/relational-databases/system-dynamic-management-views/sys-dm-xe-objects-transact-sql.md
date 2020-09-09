@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.dm_xe_objects dynamic management view
 - extended events [SQL Server], views
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d01fb234585c5d4d95e80a3d0b1c5a356b589b2c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a0df750dd3f582e712c41a01ce1406586b2cecf6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498317"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536910"
 ---
 # <a name="sysdm_xe_objects-transact-sql"></a>Динамическое административное представление sys.dm_xe_objects (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "88498317"
  |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(60)**|Имя объекта. имя уникально в пределах пакета для конкретного типа объекта. Не допускает значение NULL.|  
-|object_type|**nvarchar(60)**|Тип объекта. object_type является одним из следующих:<br /><br /> event<br /><br /> action<br /><br /> target<br /><br /> pred_source;<br /><br /> pred_compare;<br /><br /> type<br /><br /> Не допускает значение NULL.|  
+|object_type|**nvarchar(60)**|Тип объекта. object_type является одним из следующих:<br /><br /> event<br /><br /> action<br /><br /> target<br /><br /> pred_source;<br /><br /> pred_compare;<br /><br /> тип<br /><br /> Не допускает значение NULL.|  
 |package_guid|**uniqueidentifier**|Идентификатор GUID пакета, который представляет это действие. Обеспечивает связь «многие к одному» со столбцом sys.dm_xe_packages.package_id. Не допускает значение NULL.|  
 |description|**nvarchar(256)**|Описание действия. Описание задается автором пакета. Не допускает значение NULL.|  
 |capabilities|**int**|Битовая карта, описывающая возможности объекта. Допускает значение NULL.|  
@@ -59,11 +59,11 @@ ms.locfileid: "88498317"
   
 ### <a name="relationship-cardinalities"></a>Количество элементов связей  
   
-|От|Кому|Связь|  
+|Исходный тип|Кому|Связь|  
 |----------|--------|------------------|  
 |sys.dm_xe_objects.package_guid|sys.dm_xe_packages.guid|«многие к одному»|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

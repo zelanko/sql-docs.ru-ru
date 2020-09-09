@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - GetCurrentCertificate method
 ms.assetid: 987a2671-1801-45c4-93e6-29f883c58720
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f245bbd7e0e7c43c1401e604ed0b69896de65ee7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1a341dec5f50a798cd2534e102416df2bc21a538
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488487"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537185"
 ---
 # <a name="getcurrentcertificate-method-securitycertificate-class"></a>Метод GetCurrentCertificate (класс SecurityCertificate)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -50,9 +50,9 @@ object.GetCurrentCertificate(SHA , SQLInstance)
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение **uint32** , равное 0, если служба изменена успешно, и 1, если запрос не поддерживается. Любое другое значение указывает на ошибку.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

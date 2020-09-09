@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changedistributor_password
 ms.assetid: 4a496e60-414a-4026-ba7a-3e89391d39b7
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1709bdbb673dcf88ffc9646ded291abb5702412d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9f9f964e2db0c47dcf03b52a65c3a8e7c2599dde
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464498"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536737"
 ---
 # <a name="sp_changedistributor_password-transact-sql"></a>sp_changedistributor_password (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,7 +43,7 @@ sp_changedistributor_password [ @password= ] 'password'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **sp_changedistributor_password** используется во всех типах репликации.  
   
 ## <a name="example"></a>Пример  

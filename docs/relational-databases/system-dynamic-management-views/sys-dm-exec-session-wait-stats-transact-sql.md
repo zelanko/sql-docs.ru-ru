@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - sys.dm_exec_session_wait_stats
 ms.assetid: df84842a-71eb-4fda-b448-5953cf9985dc
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1a856f10e59fa41bc9cd6d27c9c88097aa90c9c4
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6668ab7b975c7325ab4b5d03ca2f30856b2ffbd0
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646374"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537020"
 ---
 # <a name="sysdm_exec_session_wait_stats-transact-sql"></a>sys. dm_exec_session_wait_stats (Transact-SQL)
 
@@ -41,7 +41,7 @@ ms.locfileid: "88646374"
 |max_wait_time_ms|**bigint**|Максимальное время ожидания данного типа.|  
 |signal_wait_time_ms|**bigint**|Разница между временем сигнализации ожидающего потока и временем начала его выполнения.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Это динамическое административное представление сбрасывает сведения для сеанса при открытии сеанса или при сбросе сеанса (если пул соединений).  
   
  Дополнительные сведения о типах ожидания см. в разделе [sys. dm_os_wait_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).  

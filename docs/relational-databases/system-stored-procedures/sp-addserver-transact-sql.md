@@ -19,14 +19,14 @@ helpviewer_keywords:
 - machine names [SQL Server]
 - computer names
 ms.assetid: 160a6b29-5e80-44ab-80ec-77d4280f627c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9483b0629ca0a58b6583bee369987eb7d85a91f5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 058e13e0fd86bb780826265b3c7fe3c2e6339ba1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493516"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536806"
 ---
 # <a name="sp_addserver-transact-sql"></a>sp_addserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +60,7 @@ sp_addserver [ @server = ] 'server' ,
 ## <a name="return-code-values"></a>Значения кода возврата
  0 (успешное завершение) или 1 (неуспешное завершение)
 
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Примечания
  Чтобы задать или очистить параметры сервера, используйте **sp_serveroption**.
 
  **sp_addserver** нельзя использовать внутри определяемой пользователем транзакции.

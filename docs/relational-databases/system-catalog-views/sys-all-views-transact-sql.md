@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.all_views catalog view
 ms.assetid: d8829213-fce2-41c6-9ab2-aaab5836c941
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb880d2f6c18a14303b2c0fd29921f5cb964c73d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0e351487e2c33c91f6d8777d955c5433319e1987
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464918"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537553"
 ---
 # <a name="sysall_views-transact-sql"></a>sys.all_views (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,11 +46,11 @@ ms.locfileid: "88464918"
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Представления каталога объектов (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [DBCC CHECKDB &#40;&#41;Transact-SQL ](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)   
- [ALTER ASSEMBLY &#40;&#41;Transact-SQL ](../../t-sql/statements/alter-assembly-transact-sql.md)   
+ [ALTER ASSEMBLY (Transact-SQL)](../../t-sql/statements/alter-assembly-transact-sql.md)   
  [DBCC CHECKTABLE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)  
   
   

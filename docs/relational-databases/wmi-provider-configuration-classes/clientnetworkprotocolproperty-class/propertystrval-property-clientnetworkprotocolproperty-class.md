@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - PropertyStrVal property
 ms.assetid: eeb15b13-4fee-47ac-81c3-cba19d450bd9
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5795681582fd9dd4243fbd6b01c24ba739b02efa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5200a29adb745f5695826ea26298f17cf9902afa
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485275"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537231"
 ---
 # <a name="propertystrval-property-clientnetworkprotocolproperty-class"></a>Свойство PropertyStrVal (класс ClientNetworkProtocolProperty)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +43,9 @@ object.PropertyStrVal [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Строковое значение, задающее числовое значение текущего свойства.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка клиентских протоколов](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   

@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.dm_xe_session_events dynamic management view
 - extended events [SQL Server], views
 ms.assetid: 4f027b31-4e03-43a6-849d-1ba9d8d34ae8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: cf341fc33337e0205544ce8fbd56b3ead705f894
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3a31075286ec950ba41c6d8280fef436d3ae17bc
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498297"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536933"
 ---
 # <a name="sysdm_xe_session_events-transact-sql"></a>Динамическое административное представление sys.dm_xe_session_events (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,12 +44,12 @@ ms.locfileid: "88498297"
   
 ### <a name="relationship-cardinalities"></a>Количество элементов связей  
   
-|От|Кому|Связь|  
+|Исходный тип|Кому|Связь|  
 |----------|--------|------------------|  
 |sys.dm_xe_session_events.event_session_address|sys.dm_xe_sessions.address|«многие к одному»|  
 |sys. dm_xe_session_events. event_package_guid,<br /><br /> sys. dm_xe_session_events. event_name|sys.dm_xe_objects.name,<br /><br /> sys.dm_xe_objects.package_guid|«многие к одному»|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetNumValue method
 ms.assetid: c292e2ae-6d0a-44ad-ba54-5b0bd705ef37
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7a40a838f9df9621314b87048ec4b5e143f692ce
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c886de5179bbcbfdc81c08e0ac910d0c2272eb39
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472896"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537178"
 ---
 # <a name="setnumvalue-method-clientnetworkprotocolproperty-class"></a>Метод SetNumValue (класс ClientNetworkProtocolProperty)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -49,9 +49,9 @@ object.SetNumValue [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение **uint32** , равное 0, если служба изменена успешно, и 1, если запрос не поддерживается. Любое другое значение указывает на ошибку.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка клиентских протоколов](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   

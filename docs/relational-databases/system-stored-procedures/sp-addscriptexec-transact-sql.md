@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addscriptexec
 ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a133709a8fbaaabd58a9ad00d7298bf34317b0cf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 81d3b8ac9e8eda12ed27099fed5623d0fd3da489
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486367"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536769"
 ---
 # <a name="sp_addscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ sp_addscriptexec [ @publication = ] publication
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **sp_addscriptexec** используется в репликации транзакций и репликации слиянием.  
   
  **sp_addscriptexec** не используется для репликации моментальных снимков.  

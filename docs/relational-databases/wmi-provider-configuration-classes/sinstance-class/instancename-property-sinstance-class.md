@@ -16,14 +16,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - InstanceName property
 ms.assetid: e6472fae-870d-4fb3-84d0-0c8f6599d1d2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 80aa45c1c1eb9bd390d296ea08d6b5d03988c686
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0d71b2b57b553a4f4aeee50e38046e6c19e2d229
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472824"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537136"
 ---
 # <a name="instancename-property-sinstance-class"></a>Свойство InstanceName (класс SInstance)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +43,9 @@ object.InstanceName [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Строковое значение, указывающее имя экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   
