@@ -122,7 +122,7 @@ ON SERVER
 |Термин|Определение|  
 |-|-|
 |*event_session_name*|Имя существующего сеанса событий.|  
-|STATE = START | STOP|Запускает или останавливает сеанс событий. Это аргумент действителен, только если к объекту сеанса событий применяется ALTER EVENT SESSION.|  
+|STATE = START &#124; STOP|Запускает или останавливает сеанс событий. Это аргумент действителен, только если к объекту сеанса событий применяется ALTER EVENT SESSION.|  
 |ADD EVENT \<event_specifier>|Связывает событие, определенное аргументом \<event_specifier>, с сеансом событий.|
 |[*event_module_guid*] *.event_package_name.event_name*|Имя события в пакете событий, где:<br /><br /> -   *event_module_guid* — идентификатор GUID для модуля, содержащего событие;<br />-   *event_package_name* — пакет, который содержит объект действия;<br />-   *event_name* — объект события.<br /><br /> События отображаются в представлении sys.dm_xe_objects со значением object_type, равным "event".|  
 |SET { *event_customizable_attribute*= \<value> [ ,...*n*] }|Указывает настраиваемые атрибуты для события. Настраиваемые атрибуты отображаются в представлении sys.dm_xe_object_columns со значением column_type, равным "customizable", и object_name = *event_name*.|  
