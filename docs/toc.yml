@@ -1831,7 +1831,7 @@
           items:
             - name: Создание
               href: relational-databases/tables/create-edge-constraints.md
-            - name: DELETE
+            - name: Удалить
               href: relational-databases/tables/delete-edge-constraint.md
             - name: Изменить
               href: relational-databases/tables/modify-edge-constraint.md
@@ -9958,10 +9958,16 @@
               href: linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md
         - name: Контейнеры
           items:
-            - name: Настройка контейнеров Docker
-              href: linux/sql-server-linux-configure-docker.md
+            - name: Развертывание и подключение к контейнерам
+              href: linux/sql-server-linux-docker-container-deployment.md
+            - name: Настройка контейнеров
+              href: linux/sql-server-linux-docker-container-configure.md
+            - name: Безопасность контейнера
+              href: linux/sql-server-linux-docker-container-security.md
             - name: Настройка Docker для MSDTC
               href: linux/sql-server-linux-configure-msdtc-docker.md
+            - name: Устранение неполадок с контейнерами Docker
+              href: linux/sql-server-linux-docker-container-troubleshooting.md
         - name: Разработка
           href: linux/sql-server-linux-develop-overview.md
           items:
