@@ -46,7 +46,7 @@ ms.locfileid: "88359450"
   
  Тип возвращаемых данных CLR: **SqlBytes**  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Тип OGC экземпляра **geography** можно определить с помощью метода [STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md).  
   
 ## <a name="examples"></a>Примеры  
@@ -59,6 +59,6 @@ SELECT @g.STAsBinary();
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Методы OGC, применяемые к географическим объектам](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Методы OGC в экземплярах Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

@@ -53,7 +53,7 @@ SET @g = geometry::STGeomFromText('POLYGON EMPTY', 0);
 SELECT @g.STIsEmpty();  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

@@ -44,7 +44,7 @@ ms.locfileid: "88444957"
   
  Тип возвращаемых данных CLR: **SqlInt32**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Этот метод возвращает значение 1, если экземпляр **geometry** не является экземпляром **MultiPoint**, **MultiLineString**, **MultiPolygon** или **GeometryCollection**, либо значение 0, если экземпляр **geometry** пуст.  
   
 > [!NOTE]  

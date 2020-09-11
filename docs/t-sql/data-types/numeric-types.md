@@ -26,7 +26,7 @@ ms.locfileid: "88368830"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает перечисленные ниже **числовые** типы.
   
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>Содержание раздела
 
 [bit (Transact-SQL)](../../t-sql/data-types/bit-transact-sql.md)  
 [decimal и numeric (Transact-SQL)](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)  

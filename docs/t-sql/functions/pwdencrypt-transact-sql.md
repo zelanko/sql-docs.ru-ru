@@ -47,7 +47,7 @@ PWDENCRYPT ( 'password' )
  *password*  
  Подлежит ли пароль шифрованию. Аргумент *password* имеет тип **sysname**.  
   
-## <a name="return-types"></a>Типы возвращаемых данных  
+## <a name="return-types"></a>Типы возвращаемых значений  
  **varbinary(128)**  
   
 ## <a name="permissions"></a>Разрешения  

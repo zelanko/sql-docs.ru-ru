@@ -62,7 +62,7 @@ ms.locfileid: "88430616"
   
  1111111101010101  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Очередность и ассоциативность операторов](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Операторы (выражение служб SSIS)](../../integration-services/expressions/operators-ssis-expression.md)  
   

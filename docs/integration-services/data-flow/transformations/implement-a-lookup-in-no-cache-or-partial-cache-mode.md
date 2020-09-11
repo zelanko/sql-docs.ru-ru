@@ -112,7 +112,7 @@ ms.locfileid: "88430676"
   
 14. Нажмите кнопку **ОК** , чтобы сохранить изменения в преобразовании «Уточняющий запрос», а затем запустите пакет.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Преобразования служб Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

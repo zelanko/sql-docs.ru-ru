@@ -345,7 +345,7 @@ Public Sub Suspend()
 End Sub  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Отладка потока управления](../../../integration-services/troubleshooting/debugging-control-flow.md)  
   
   

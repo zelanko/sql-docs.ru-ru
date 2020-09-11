@@ -44,7 +44,7 @@ ms.locfileid: "88444950"
   
  Тип возвращаемых данных CLR: **SqlInt32**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Этот метод возвращает значение NULL, если экземпляр **geometry** не является многоугольником.  
   
 ## <a name="examples"></a>Примеры  
@@ -56,7 +56,7 @@ SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0),(2 2, 2 1, 
 SELECT @g.STNumInteriorRing();  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   
