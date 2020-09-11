@@ -47,7 +47,7 @@ ms.locfileid: "88496191"
   
 -   **Обработка восстановления**. При запуске экземпляра Oracle CDC его внутреннее состояние восстанавливается из таблиц **xdbcdc_state** и **xdbcdc_staged_transactions** . После восстановления состояния экземпляр CDC продолжает работу как обычно.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обработка ошибок](../../integration-services/change-data-capture/error-handling.md)  
   
   

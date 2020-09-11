@@ -24,14 +24,14 @@ helpviewer_keywords:
 - status information [SQL Server], conversations
 - GET_TRANSMISSION_STATUS statement
 ms.assetid: 621805d5-49ed-4764-b3cb-2ae4a3bf797e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a2523504a518497a86b9d4ebcd15fed2b75ce5af
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1b5e691a1836ee4826ad7d2db3be5b71ccd98fa8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88304731"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549035"
 ---
 # <a name="get_transmission_status-transact-sql"></a>GET_TRANSMISSION_STATUS (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -53,10 +53,10 @@ GET_TRANSMISSION_STATUS ( conversation_handle )
  *conversation_id*  
  Дескриптор диалога для диалога. Этот параметр имеет тип **uniqueidentifier**.  
   
-## <a name="return-types"></a>Типы возвращаемых данных  
+## <a name="return-types"></a>Типы возвращаемых значений  
  **nchar**  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Возвращает строку, описывающую состояние последней попытки передачи, для конкретного диалога. Возвращает пустую строку, если последняя попытка передачи завершилась успешно, если не было предпринято ни одной попытки передачи или если аргумент *conversation_handle* не существует.  
   
  Данные, возвращаемые этой функцией, совпадают с данными, отображаемыми в столбце last_transmission_error представления управления sys.transmission_queue. Однако эта функция может быть использована для нахождения состояния передачи диалогов, у которых на данный момент нет сообщений в очереди передачи.  
@@ -82,7 +82,7 @@ SELECT Status =
   
  В этом случае компонент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не был настроен для разрешения [!INCLUDE[ssSB](../../includes/sssb-md.md)] обмениваться данными по сети.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sys.conversation_endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
  [sys.transmission_queue (Transact-SQL)](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)  
   

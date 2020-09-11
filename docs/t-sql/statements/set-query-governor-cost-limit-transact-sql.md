@@ -21,14 +21,14 @@ helpviewer_keywords:
 - QUERY_GOVERNOR_COST_LIMIT option
 - overriding connection values
 ms.assetid: 3424bb44-6915-462d-a8d7-fe834af81387
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: bef95342402c065b0691e7478a3fc04b26e5495d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bb7b16a18832bbdea950843409b0a17153c7a05b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88304461"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547484"
 ---
 # <a name="set-query_governor_cost_limit-transact-sql"></a>SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +52,7 @@ SET QUERY_GOVERNOR_COST_LIMIT value
   
  Цена запроса — это предполагаемое время в секундах, которое требуется для завершения запроса в конкретной конфигурации оборудования.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Использование инструкции SET QUERY_GOVERNOR_COST_LIMIT относится только к текущему соединению и продолжается в течение текущего соединения. С помощью [параметра конфигурации сервера configure the query governor cost](../../database-engine/configure-windows/configure-the-query-governor-cost-limit-server-configuration-option.md) хранимой процедуры **sp_configure** можно изменить предельное значение стоимости, используемое регулятором запросов в рамках всего сервера. Дополнительные сведения о настройке этого параметра см. в разделах [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) и [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
  Значение параметра SET QUERY_GOVERNOR_COST_LIMIT устанавливается во время выполнения или запуска, но не во время синтаксического анализа.  
