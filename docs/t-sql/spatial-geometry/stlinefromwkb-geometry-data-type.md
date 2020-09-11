@@ -52,7 +52,7 @@ STLineFromWKB ( 'WKB_linestring' , SRID )
   
  Тип OGC: **LineString**  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Этот метод вызывает исключение **FormatException**, если входные данные представлены в неверном формате.  
   
 ## <a name="examples"></a>Примеры  

@@ -53,7 +53,7 @@ STPolyFromWKB ( 'WKB_polygon' , SRID )
   
  Тип OGC: **Polygon**  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Если входные данные имеют неверный формат, метод вызовет исключение **FormatException**.  
   
 ## <a name="examples"></a>Примеры  

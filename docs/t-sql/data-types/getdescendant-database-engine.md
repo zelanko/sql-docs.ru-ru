@@ -56,7 +56,7 @@ SqlHierarchyId GetDescendant ( SqlHierarchyId child1 , SqlHierarchyId child2 )
   
 **Возвращаемый тип CLR:SqlHierarchyId**
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
 Возвращает один дочерний узел, который является потомком родителя.
 -   Если родительская запись — NULL, метод возвращает значение NULL.  
 -   Если родительская запись — не NULL, а потомки child1 и child2 — NULL, метод  возвращает одного потомка данного родителя.  

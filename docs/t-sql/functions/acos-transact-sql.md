@@ -69,7 +69,7 @@ The ACOS of the number is: 3.14159
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 [Математические функции (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)  
 [Функции](../../t-sql/functions/functions.md)
   

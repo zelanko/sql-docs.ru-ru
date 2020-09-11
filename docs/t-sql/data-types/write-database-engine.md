@@ -42,7 +42,7 @@ void Write( BinaryWriter w )
 *w*  
 Объект **BinaryWriter**, в который будет записано двоичное представление этого узла **hierarchyid**.
   
-## <a name="return-types"></a>Типы возвращаемых данных  
+## <a name="return-types"></a>Типы возвращаемых значений  
 **Возвращаемый тип CLR:void**
   
 ## <a name="remarks"></a>Remarks  

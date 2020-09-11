@@ -51,7 +51,7 @@ ms.locfileid: "88417040"
 ## <a name="exceptions"></a>Исключения  
  Этот метод вызывает исключение **ArgumentException**, если экземпляр содержит противоположную границу.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Этот метод всегда возвращает значение NULL, если идентификаторы пространственных ссылок (SRID) экземпляров **geography** не совпадают.  
   
  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] набор возможных результатов, возвращаемый на сервер, был пополнен экземплярами **FullGlobe**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает пространственные экземпляры, размер которых превышает полусферу. Результат может содержать сегменты дуги, только если во входном экземпляре содержатся сегменты дуги. Этот метод не является точным.  
@@ -80,6 +80,6 @@ SELECT @g.STDifference(@h).ToString();
  ```  
   
 ## <a name="see-also"></a>См. также  
- [Методы OGC, применяемые к географическим объектам](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Методы OGC в экземплярах Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

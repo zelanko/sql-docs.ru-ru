@@ -53,7 +53,7 @@ SqlHierarchyId GetAncestor ( int n )
   
 **Возвращаемый тип CLR:SqlHierarchyId**
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
 Используется, чтобы проверить, является ли текущий узел предком для каждого из узлов в выходных данных на указанном уровне.
   
 Если передается число больше значения [GetLevel()](../../t-sql/data-types/getlevel-database-engine.md), возвращается значение NULL.
@@ -119,7 +119,7 @@ SELECT @TargetEmployee.ToString(), @TargetEmployee ;
 this.GetAncestor(1)  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 [IsDescendantOf (ядро СУБД)](../../t-sql/data-types/isdescendantof-database-engine.md)  
 [Справочник по методам типа данных hierarchyid](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [Иерархические данные (SQL Server)](../../relational-databases/hierarchical-data-sql-server.md)  

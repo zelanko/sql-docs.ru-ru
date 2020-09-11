@@ -55,7 +55,7 @@ ms.locfileid: "88346100"
   
  Эти подходы к программированию служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] описаны в этом разделе и демонстрируются на примерах.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о программировании служб Integration Services](../integration-services/integration-services-programming-overview.md)  
  Описывает роли потока управления и потока данных в разработке служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
@@ -81,7 +81,7 @@ ms.locfileid: "88346100"
  [Справочник по сообщениям об ошибках служб Integration Services](../integration-services/integration-services-error-and-message-reference.md)  
  Содержит список стандартных кодов ошибок служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] с символическими именами и описаниями.  
   
-## <a name="related-sections"></a>См. также  
+## <a name="related-sections"></a>Связанные разделы  
  [Инструменты устранения неполадок при разработке пакета](../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
  Описывает возможности и инструментальные средства служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], предназначенные для устранения неполадок в пакетах в процессе разработки.  
   

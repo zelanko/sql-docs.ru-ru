@@ -42,7 +42,7 @@ catalog.set_customized_logging_level_description [ @level_name = ] level_name
   
  Параметр *level_description* имеет тип **nvarchar(1024)**.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="return-codes"></a>Коды возврата  
  0 (успешное завершение)  

@@ -44,7 +44,7 @@ ms.locfileid: "88416940"
   
  Тип возвращаемых данных CLR: **SqlInt32**  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Метод `STDimension()` возвращает значение –1, если экземпляр **geometry** является пустым.  
   
 ## <a name="examples"></a>Примеры  

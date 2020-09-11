@@ -43,9 +43,9 @@ catalog.set_worker_agent_property [ @WorkerAgentId = ] WorkerAgentId
 Имя свойства. Параметр *PropertyName* имеет тип **nvarchar(256)**.
 
 [@PropertyValue =] *PropertyValue*  
-Значение свойства. Параметр *PropertyValue* имеет тип **nvarchar(max)**.
+Значение свойства. Параметр *PropertyValue* имеет тип **nvarchar(max)** .
 
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Примечания
 Допустимыми именами свойств являются **DisplayName**, **Description**, **Tags**.
 
 ## <a name="return-code-value"></a>Значения кодов возврата  

@@ -58,7 +58,7 @@ DROP SENSITIVITY CLASSIFICATION FROM
     - *table_name* — имя таблицы, которая содержит классифицируемый столбец.
     - *column_name* — имя столбца, для которого удаляется классификация.
 
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
 
 - Одна инструкция DROP SENSITIVITY CLASSIFICATION позволяет удалять множество классификаций объектов.
 

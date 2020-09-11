@@ -45,7 +45,7 @@ ms.locfileid: "88422298"
   
  Тип возвращаемых данных CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Этот метод возвращает экземпляр **LineString** с двумя конечными точками, лежащими на границах двух сравниваемых непересекающихся экземпляров **geometry**. Длина возвращаемого экземпляра **LineString** равна кратчайшему расстоянию между двумя экземплярами **geometry**. Пустой экземпляр **LineString** возвращается, когда два экземпляра **geometry** пересекаются друг с другом.  
   
 ## <a name="examples"></a>Примеры  
@@ -68,7 +68,7 @@ ms.locfileid: "88422298"
  SELECT @g1.ShortestLineTo(@g2).ToString();
  ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [ShortestLineTo (тип данных geography)](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  
   
   

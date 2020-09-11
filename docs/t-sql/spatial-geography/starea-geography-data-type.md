@@ -60,5 +60,5 @@ SELECT @g.STArea();
 ```  
   
 ## <a name="see-also"></a>См. также  
-[Методы OGC, применяемые к географическим объектам](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+[Методы OGC в экземплярах Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
