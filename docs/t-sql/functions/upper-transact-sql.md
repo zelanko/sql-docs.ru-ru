@@ -52,7 +52,7 @@ UPPER ( character_expression )
   
  Аргумент *character_expression* должен иметь тип данных, который может быть неявно преобразован в тип **varchar**. В противном случае используйте [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) для явного преобразования *character_expression*.  
   
-## <a name="return-types"></a>Типы возвращаемых данных  
+## <a name="return-types"></a>Типы возвращаемых значений  
  **varchar** или **nvarchar**  
   
 ## <a name="examples"></a>Примеры  

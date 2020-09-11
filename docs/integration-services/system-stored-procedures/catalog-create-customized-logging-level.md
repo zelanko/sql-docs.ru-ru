@@ -76,7 +76,7 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
   
  Параметр *level_id* имеет тип **bigint**.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Чтобы объединить несколько значений в Transact-SQL для аргумента *profile_value* или *events_value*, воспользуйтесь следующим примером. Чтобы записать события OnError (8) и DiagnosticEx (15), необходимо использовать следующую формулу для расчета *events_value*: `2^8 + 2^15 = 33024`.  
   
 ## <a name="return-codes"></a>Коды возврата  
