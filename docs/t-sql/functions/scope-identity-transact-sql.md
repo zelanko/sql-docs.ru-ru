@@ -46,7 +46,7 @@ SCOPE_IDENTITY()
 ## <a name="return-types"></a>Типы возвращаемых данных
  **numeric(38,0)**  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Функции SCOPE_IDENTITY, IDENT_CURRENT и @@IDENTITY идентичны друг другу, так как возвращают значения, вставленные в столбцы идентификаторов.  
   
  Функция IDENT_CURRENT не ограничена областью действия и сеансом, но ограничена указанной таблицей. Функция IDENT_CURRENT возвращает значение, созданное для указанной таблицы в любом сеансе и области. Дополнительные сведения см. в статье [IDENT_CURRENT (Transact-SQL)](../../t-sql/functions/ident-current-transact-sql.md).  

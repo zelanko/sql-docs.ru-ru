@@ -73,7 +73,7 @@ catalog.set_environment_property [ @folder_name = ] folder_name
   
 -   Недопустимое имя среды  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  В этом выпуске может быть задано только свойство `Description`. Значение свойства `Description` не может иметь длину более 4000 символов.  
   
   

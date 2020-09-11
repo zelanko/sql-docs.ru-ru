@@ -41,7 +41,7 @@ ms.locfileid: "88427056"
   
  Тип возвращаемых данных CLR: **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Используйте `MinDbCompatibilityLevel()` для проверки пространственного объекта на совместимость, прежде чем менять уровень совместимости базы данных.  
   
 ## <a name="examples"></a>Примеры  
@@ -68,7 +68,7 @@ ms.locfileid: "88427056"
  END
 ``` 
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Уровень совместимости инструкции ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   
   

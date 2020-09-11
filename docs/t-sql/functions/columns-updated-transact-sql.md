@@ -210,7 +210,7 @@ UPDATE Person.Person
 GO  
 ```  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 [Побитовые операторы (Transact-SQL)](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
 [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)  
 [UPDATE() (Transact-SQL)](../../t-sql/functions/update-trigger-functions-transact-sql.md)

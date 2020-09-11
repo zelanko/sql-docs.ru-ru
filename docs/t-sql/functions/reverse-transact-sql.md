@@ -50,7 +50,7 @@ REVERSE ( string_expression )
 ## <a name="return-types"></a>Типы возвращаемых данных  
  **varchar** или **nvarchar**  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Аргумент *string_expression* должен иметь тип данных, который может быть неявно преобразован в тип **varchar**. В противном случае используйте [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) для явного преобразования *string_expression*.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Дополнительные символы (суррогатные пары)  

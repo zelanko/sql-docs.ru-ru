@@ -76,7 +76,7 @@ SELECT @g.STSymDifference(@h).ToString();
  SELECT @g.STSymDifference('FULLGLOBE').ToString();
  ```  
   
-## <a name="see-also"></a>См. также  
- [Методы OGC, применяемые к географическим объектам](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+## <a name="see-also"></a>См. также:  
+ [Методы OGC в экземплярах Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

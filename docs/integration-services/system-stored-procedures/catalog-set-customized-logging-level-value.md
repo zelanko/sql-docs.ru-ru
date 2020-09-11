@@ -50,7 +50,7 @@ catalog.set_customized_logging_level_value [ @level_name = ] level_name
   
  Параметр *property_value* имеет тип **bigint**.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="return-codes"></a>Коды возврата  
  0 (успешное завершение)  

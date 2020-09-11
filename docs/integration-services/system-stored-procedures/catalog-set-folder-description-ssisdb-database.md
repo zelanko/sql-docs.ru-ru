@@ -42,7 +42,7 @@ catalog.set_folder_description [ @folder_name = ] folder_name
  Описание папки. Параметр *folder_description* имеет тип **nvarchar(MAX)**.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
- None  
+ Нет  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  None  
