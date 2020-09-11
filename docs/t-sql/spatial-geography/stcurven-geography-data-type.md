@@ -51,7 +51,7 @@ ms.locfileid: "88479373"
 ## <a name="exceptions"></a>Исключения  
  Если n < 1, возникает исключение **ArgumentOutOfRangeException**.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Значение **NULL** возвращается при возникновении указанных ниже условий.  
   
 -   Экземпляр **geography** объявлен, но не создан.  

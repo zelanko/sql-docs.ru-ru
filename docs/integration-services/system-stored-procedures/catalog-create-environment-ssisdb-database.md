@@ -69,7 +69,7 @@ catalog.create_environment [ @folder_name = ] folder_name
   
 -   Среда с таким именем уже существует в указанной папке  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Имя среды должно быть уникальным в пределах папки.  
   
   

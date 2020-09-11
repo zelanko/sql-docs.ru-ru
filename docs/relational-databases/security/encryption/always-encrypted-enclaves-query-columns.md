@@ -38,6 +38,6 @@ ms.locfileid: "88482227"
 ## <a name="next-steps"></a>Next Steps
 - [Выполнение запросов к столбцам с помощью Always Encrypted с безопасными анклавами с использованием SSMS](always-encrypted-enclaves-query-columns-ssms.md)
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 - [Руководство. Начало работы с Always Encrypted с безопасными анклавами с использованием SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md)
 

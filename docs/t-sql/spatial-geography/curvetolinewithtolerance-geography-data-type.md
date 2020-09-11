@@ -54,7 +54,7 @@ _relative_
 ## <a name="exceptions"></a>Исключения  
 Если установить погрешность <= 0, возникнет исключение **ArgumentOutOfRange**.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
 Этот метод позволяет указывать допустимое количество ошибок для результирующего объекта **LineString**.  
   
 Метод **CurveToLineWithTolerance** вернет экземпляр **LineString** для экземпляра **CircularString** или **CompoundCurve** и экземпляр **Polygon** для экземпляра **CurvePolygon**.  

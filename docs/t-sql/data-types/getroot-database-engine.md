@@ -50,7 +50,7 @@ static SqlHierarchyId GetRoot ( )
   
 **Возвращаемый тип CLR:SqlHierarchyId**
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
 Используется для определения корневого узла в иерархическом дереве.
   
 ## <a name="examples"></a>Примеры  

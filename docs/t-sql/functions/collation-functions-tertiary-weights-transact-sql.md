@@ -50,7 +50,7 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
 ## <a name="return-types"></a>Типы возвращаемых данных
 Функция `TERTIARY_WEIGHTS` возвращает значение типа **varbinary**, если *non_Unicode_character_string_expression* имеет тип **char** или **varchar**, и значение типа **varbinary(max)**, если *non_Unicode_character_string_expression* имеет тип **varchar(max)**.
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
 Функция `TERTIARY_WEIGHTS` возвращает значение NULL, если в третичных параметрах сортировки SQL не определен аргумент *non_Unicode_character_string_expression*. В приведенной ниже таблице представлены третичные параметры сортировки SQL.
   
 |Идентификатор порядка сортировки|Параметры сортировки SQL|  
@@ -100,7 +100,7 @@ Col2 AS TERTIARY_WEIGHTS(Col1));
 GO   
 ```  
   
-## <a name="see-also"></a>См. также
-[Предложение ORDER BY (Transact-SQL)](../../t-sql/queries/select-order-by-clause-transact-sql.md)
+## <a name="see-also"></a>См. также раздел
+[Предложение ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)
   
   

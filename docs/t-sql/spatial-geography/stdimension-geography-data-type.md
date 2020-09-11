@@ -44,7 +44,7 @@ ms.locfileid: "88479305"
   
  Тип возвращаемых данных CLR: **SqlInt32**  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  STDimension() возвращает значение –1, если экземпляр **geography** пуст.  
   
 ## <a name="examples"></a>Примеры  

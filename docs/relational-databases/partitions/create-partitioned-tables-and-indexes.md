@@ -410,7 +410,7 @@ ms.locfileid: "88482539"
     GO  
     ```  
   
- Дополнительные сведения см. в разделе:  
+ Дополнительные сведения можно найти в разделе  
   
 -   [Параметры инструкции ALTER DATABASE для файлов и файловых групп (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
   

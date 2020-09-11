@@ -84,7 +84,7 @@ cosCalc1  cosCalc2
 -0.58     0.99
 ```
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 [Математические функции (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)
   
   

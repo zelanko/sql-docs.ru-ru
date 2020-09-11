@@ -30,7 +30,7 @@ ms.locfileid: "88493901"
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
 
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Соединение агента с подписчиком**  
  Контекст, в котором агент распространителя и агент слияния устанавливают соединение от распространителя к подписчику. Применяется только к версиям, предшествующим [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
@@ -44,7 +44,7 @@ ms.locfileid: "88493901"
  **Прочее**  
  Содержит сведения о подписчике и типе подписчика.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Просмотр и изменение свойств издателя и распространителя](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [Подписка на публикации](../../relational-databases/replication/subscribe-to-publications.md)  
   

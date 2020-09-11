@@ -29,7 +29,7 @@ ms.locfileid: "88493860"
 
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  Выберите тип подписчика, который должна поддерживать эта публикация.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  

@@ -31,7 +31,7 @@ ms.locfileid: "88484639"
   
  Дополнительные сведения о диспетчере соединений служб Analysis Services см. в разделе [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md).  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Создать соединение с компьютером, на котором выполняются службы Analysis Services**  
  Можно выбрать соединение по умолчанию с сервером, на котором работает экземпляр служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], или создать новое соединение, нажав кнопку **Изменить**.  
   

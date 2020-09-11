@@ -58,7 +58,7 @@ SYSDATETIMEOFFSET ( )
 ## <a name="return-type"></a>Тип возвращаемых данных  
  **datetimeoffset(7)**  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Функция SYSDATETIMEOFFSET может использоваться в инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)] везде, где допустимо использование выражения **datetimeoffset**.  
   
  Функция SYSDATETIMEOFFSET недетерминированная. Невозможно проиндексировать представления и выражения, ссылающиеся на эту функцию в столбце.  
