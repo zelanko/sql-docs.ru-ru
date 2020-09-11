@@ -47,7 +47,7 @@ DROP DATABASE AUDIT SPECIFICATION audit_specification_name
  *audit_specification_name*  
  Имя существующего объекта спецификации аудита.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Инструкция DROP DATABASE AUDIT SPECIFICATION удаляет метаданные спецификации аудита, но не удаляет данные аудита, собранные до вызова команды DROP. Чтобы удалить спецификацию аудита базы данных, ее состояние необходимо установить в положение OFF при помощи инструкции `ALTER DATABASE AUDIT SPECIFICATION`.  
   
 ## <a name="permissions"></a>Разрешения  

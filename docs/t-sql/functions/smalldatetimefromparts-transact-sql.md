@@ -57,10 +57,10 @@ SMALLDATETIMEFROMPARTS ( year, month, day, hour, minute )
  *minute*  
  Целочисленное выражение, задающее минуты.  
   
-## <a name="return-types"></a>Типы возвращаемых данных  
+## <a name="return-types"></a>Типы возвращаемых значений  
  **smalldatetime**  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Эта функция действует как конструктор полностью инициализированного значения **smalldatetime**. Если аргументы недопустимы, то возникает ошибка. Если требуемые аргументы имеют значение NULL, возвращается NULL.  
   
  Для серверов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и выше данная функция может быть удаленной. Она не может быть удаленной для серверов с версией ниже [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

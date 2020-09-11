@@ -71,7 +71,7 @@ SELECT geometry::EnvelopeAggregate(shape).ToString()
 FROM @Geom;
  ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные статические геометрические методы](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   

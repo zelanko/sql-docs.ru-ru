@@ -41,7 +41,7 @@ catalog.rename_folder [ @old_name = ] old_name , [ @new_name = ] new_name
  Новое имя папки. Параметр *new_name* имеет тип **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
- None  
+ Нет  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  None  

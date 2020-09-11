@@ -44,7 +44,7 @@ ms.locfileid: "88445198"
   
  Тип возвращаемых данных CLR: **SqlInt32**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Этот метод подсчитывает число точек в описании экземпляра **geography**. Повторяющиеся точки учитываются, однако соединение точек между сегментами учитывается только один раз. Если экземпляр является коллекцией, этот метод возвращает общее количество точек в каждом из элементов коллекции.  
   
 ## <a name="examples"></a>Примеры  
@@ -75,7 +75,7 @@ SELECT @g.STNumPoints();
  SELECT @g.STNumPoints();
  ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Методы OGC в экземплярах Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

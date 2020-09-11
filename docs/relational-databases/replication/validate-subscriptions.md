@@ -29,7 +29,7 @@ ms.locfileid: "88470136"
 
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Проверить все подписки SQL Server**  
  Выберите, чтобы проверить все подписки SQL Server на данную публикацию.  
   

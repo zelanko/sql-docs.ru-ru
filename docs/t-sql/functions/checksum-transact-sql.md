@@ -106,7 +106,7 @@ GO
   
 Создание индекса по вычисляемому столбцу материализует столбец контрольной суммы, и любые изменения для значения `ProductName` будут распространены на столбец контрольной суммы. Кроме того, индекс можно построить непосредственно на основе столбца, который требуется индексировать. Тем не менее для ключей с длинными значениями обычный индекс действует не так эффективно, как индекс контрольной суммы.
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 [CHECKSUM_AGG (Transact-SQL)](../../t-sql/functions/checksum-agg-transact-sql.md)  
 [HASHBYTES (Transact-SQL)](../../t-sql/functions/hashbytes-transact-sql.md)  
 [BINARY_CHECKSUM (Transact-SQL)](../../t-sql/functions/binary-checksum-transact-sql.md)

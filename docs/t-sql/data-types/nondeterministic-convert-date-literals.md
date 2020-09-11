@@ -143,7 +143,7 @@ YMD-Interpretation--?--NotGuaranteed
 
 
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Задание языка сеанса](../../relational-databases/collations/set-a-session-language.md)
 - [Типы данных и функции даты и времени (Transact-SQL)](../functions/date-and-time-data-types-and-functions-transact-sql.md)

@@ -31,7 +31,7 @@ ms.locfileid: "88470154"
 
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Дата последней попытки проверки**  
  Дата последнего сеанса работы агента слияния, в ходе которого производилась проверка подписки, независимо от успешности этой проверки.  
   
