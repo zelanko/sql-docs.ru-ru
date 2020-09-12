@@ -23,12 +23,12 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
-ms.openlocfilehash: df183fe9b6ee5365f623e59dd1c94738afe5df8d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 053dc2ccc68a7e0479ad1e37a181a25b0cefcc53
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447596"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042755"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys. dm_os_spinlock_stats (Transact-SQL)
 
@@ -51,7 +51,7 @@ ms.locfileid: "88447596"
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
 На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется  **Администратор сервера** или учетная запись **администратора Azure Active Directory** .    
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  
  sys. dm_os_spinlock_stats можно использовать для обнаружения источника конфликтов спина. В некоторых случаях может быть разрешено или устранено состязание за взаимоблокировки. Но возможны и такие ситуации, когда будет необходимо обратиться в службу поддержки пользователей [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
@@ -405,7 +405,7 @@ GO
  
 
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  
  [DBCC SQLPERF (Transact-SQL)](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
  
@@ -413,7 +413,6 @@ GO
 
  [Когда происходит деспин-фактор использования ЦП в SQL Server?](https://techcommunity.microsoft.com/t5/SQL-Server-Support/When-is-Spinlock-a-Significant-Driver-of-CPU-utilization-in-SQL/ba-p/530142)
 
- [Диагностика и разрешение конфликтов спин/блокировок на SQL Server](https://www.microsoft.com/download/details.aspx?id=26666)
   
   
 

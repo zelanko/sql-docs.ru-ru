@@ -10,12 +10,12 @@ ms.assetid: aaa180c2-5e1a-4534-a125-507c647186ab
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2bd0d3a60cfe69ba593be4fae9dec70f64b074de
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 51dc4f1def0f612c0eb074ae1111a177e27c1413
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428206"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042765"
 ---
 # <a name="accessing-sql-server-native-client-diagnostic-information-in-the-extended-events-log"></a>Доступ к SQL Server Native Client диагностическим сведениям в журнале расширенных событий
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88428206"
 >  Эта функция предназначена только для диагностики и устранения неполадок; она может оказаться неприменимой для целей аудита или обеспечения безопасности.  
   
 ## <a name="remarks"></a>Remarks  
- Для операций подключения собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] будет отправлять идентификатор подключения клиента. Если подключение завершилось ошибкой, то можно в кольцевом буфере подключений ([Устранение связанных с подключением неполадок в SQL Server 2008 с использованием кольцевого буфера подключений](https://go.microsoft.com/fwlink/?LinkId=207752)) найти поле **ClientConnectionID** и получить диагностические данные по ошибке подключения. Идентификаторы подключений клиентов регистрируются в кольцевом буфере только при возникновении ошибки. (Если подключение завершилось сбоем до отправки предварительного пакета входа, то идентификатор подключения клиента не формируется.) Идентификатор клиентского соединения — это 16-байтовый идентификатор GUID. Идентификатор подключения клиента также можно найти в расположении вывода расширенных событий, если действие **client_connection_id** добавляется к событиям в сеансе расширенных событий. Если необходима дополнительная помощь в диагностике, то можно включить отслеживание доступа к данным и повторно выполнить команду соединения, а затем отследить в поле **ClientConnectionID** в трассировке доступа к данным операцию, завершившуюся ошибкой.  
+ Для операций подключения собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] будет отправлять идентификатор подключения клиента. Если подключение завершилось ошибкой, то можно в кольцевом буфере подключений ([Устранение связанных с подключением неполадок в SQL Server 2008 с использованием кольцевого буфера подключений](https://techcommunity.microsoft.com/t5/sql-server/connectivity-troubleshooting-in-sql-server-2008-with-the/ba-p/383393)) найти поле **ClientConnectionID** и получить диагностические данные по ошибке подключения. Идентификаторы подключений клиентов регистрируются в кольцевом буфере только при возникновении ошибки. (Если подключение завершилось сбоем до отправки предварительного пакета входа, то идентификатор подключения клиента не формируется.) Идентификатор клиентского соединения — это 16-байтовый идентификатор GUID. Идентификатор подключения клиента также можно найти в расположении вывода расширенных событий, если действие **client_connection_id** добавляется к событиям в сеансе расширенных событий. Если необходима дополнительная помощь в диагностике, то можно включить отслеживание доступа к данным и повторно выполнить команду соединения, а затем отследить в поле **ClientConnectionID** в трассировке доступа к данным операцию, завершившуюся ошибкой.  
   
  Если ODBC используется в собственном клиенте [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и подключение выполнено успешно, то идентификатор подключения клиента можно получить с помощью атрибута **SQL_COPT_SS_CLIENT_CONNECTION_ID** из [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md).  
   
@@ -213,7 +213,7 @@ class Bid2Etw_SQLNCLI11_1_Trace_TextW : Bid2Etw_SQLNCLI11_1_Trace
 };  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обработка ошибок и сообщений](../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
   
