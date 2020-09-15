@@ -8,15 +8,15 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f3d7bd23c2a6b218e56f4de57d5b281b34d0687d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 8273250360c9e60aae8ac1ae19ccebf4d76d8598
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484640"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180434"
 ---
 # <a name="create-a-login-for-sqlrusergroup"></a>Создание учетных данных для SQLRUserGroup
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Создайте [имя входа в SQL Server](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login) для [SQLRUserGroup](../concepts/security.md#sqlrusergroup), когда [соединение с замыканием на себя](../../machine-learning/concepts/security.md#implied-authentication) в скрипте указывает *доверенное подключение* и удостоверение, используемое для выполнения объекта, содержит код учетной записи пользователя Windows.
 

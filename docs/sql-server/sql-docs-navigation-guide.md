@@ -1,7 +1,7 @@
 ---
 title: Советі по навигации в документации SQL Server
 description: В руководстве и советах по навигации в технической документации SQL Server объясняются такие элементы, как главная страница, оглавление, заголовок, а также использование адресной строки и фильтра версий.
-ms.date: 10/15/2019
+ms.date: 08/12/2020
 ms.prod: sql
 ms.technology: release-landing
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: f85c97e36900d3c6f4372004819690a8ede49d22
-ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
+ms.openlocfilehash: cd724e9caf8f104e366e34b7f64f6461681620b0
+ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83731604"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88200309"
 ---
-# <a name="sql-server-docs-navigation-guide"></a>Руководство по навигации в документации по SQL Server 
+# <a name="sql-server-docs-navigation-guide"></a>Руководство по навигации в документации по SQL Server
 
 В этом разделе приводятся некоторые советы и рекомендации по навигации в технической документации по SQL Server.  
 
