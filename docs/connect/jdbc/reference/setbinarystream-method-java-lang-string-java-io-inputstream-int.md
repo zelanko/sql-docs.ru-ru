@@ -1,4 +1,5 @@
 ---
+description: Метод setBinaryStream (java.lang.String, java.io.InputStream, int)
 title: Метод setBinaryStream для входного потока (long) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 567297bf-5bec-46ae-8264-29639b9b4a06
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1badda80dc0a0a82926f7466a407ad5d0f44362b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5b23d225c1cfeef0ca4008b221475af3cc901bfe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80913050"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432466"
 ---
 # <a name="setbinarystream-method--javalangstring-javaioinputstream-int"></a>Метод setBinaryStream (java.lang.String, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -61,6 +62,6 @@ public void setBinaryStream(java.lang.String parameterName,
   
 ## <a name="see-also"></a>См. также:  
  [setBinaryStream &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setbinarystream-sqlservercallablestatement.md)   
- [Элементы SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
+ [Члены SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
   
   

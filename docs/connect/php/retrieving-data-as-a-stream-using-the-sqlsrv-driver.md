@@ -1,4 +1,5 @@
 ---
+description: Извлечение данных в виде потока с помощью драйвера SQLSRV
 title: Извлечение данных в виде потока с помощью драйвера SQLSRV | Документы Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 17dc9129-04cd-430c-b5b3-82824116425d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f4a9ac475c19560b005299410f59e5a45a94197e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: cceb378b0571ff1fb6b3505abd1f6d8f4535a5cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923794"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414450"
 ---
 # <a name="retrieving-data-as-a-stream-using-the-sqlsrv-driver"></a>Извлечение данных в виде потока с помощью драйвера SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "80923794"
   
 3.  Используйте [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) для извлечения полей из строки. Укажите, что данные следует извлечь в виде потока, используя **SQLSRV_PHPTYPE_STREAM(<encoding>)** в качестве третьего параметра в вызове функции. В этой таблице перечислены константы, используемые для задания кодировок и их описаний.  
   
-    |Константа SQLSRV|Description|  
+    |Константа SQLSRV|Описание|  
     |-------------------|---------------|  
     |SQLSRV_ENC_BINARY|Данные возвращаются в виде потока необработанных байтов с сервера без применения кодировки или преобразования.|  
     |SQLSRV_ENC_CHAR|Данные возвращаются в виде 8-битовых символов, как указано в кодовой странице языкового стандарта Windows, установленного в системе. Для всех многобайтовых символов или символов, не соответствующих этой кодовой странице, подставляется однобайтовый символ вопросительного знака (?).|  
@@ -42,7 +43,7 @@ ms.locfileid: "80923794"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |---------|---------------|  
 |[Типы данных, поддерживающие потоки с помощью драйвера SQLSRV](../../connect/php/data-types-with-stream-support-using-the-sqlsrv-driver.md)|Содержит список типов данных SQL Server, которые можно извлечь как потоки.|  
 |[Практическое руководство. Извлечение символьных данных в виде потока с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)|Демонстрирует, как извлекать символьные данные в виде потока.|  

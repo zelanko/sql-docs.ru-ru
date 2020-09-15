@@ -1,4 +1,5 @@
 ---
+description: Метод setDateTimeOffset(int, java.sql.DateTimeOffset) (SQLServerStatement)
 title: setDateTimeOffset (int, java.sql.DateTimeOffset) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e8b6e380-6b53-489b-be73-73fcb5258269
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a45711b4f3007f0f3c91f271542784386db99379
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 219e9a2b275065af96c39d0b66094297e427aa40
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927537"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431996"
 ---
 # <a name="setdatetimeoffsetint-javasqldatetimeoffset-sqlserverstatement"></a>Метод setDateTimeOffset(int, java.sql.DateTimeOffset) (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +49,7 @@ public void setDateTimeOffset(int parameterIndex, DateTimeOffset dateTime)
 |--------------|------------|  
 |DATETIME|Могут вставляться только значения в формате «ГГГГ-ММ-ДД чч:мм:сс[.ннн]»|  
 |smalldatetime|Могут вставляться только значения в формате «ГГГГ-ММ-ДД чч:мм:сс»|  
-|Time|Могут вставляться только значения в формате «чч:мм:сс[.ннннннн]»|  
+|время;|Могут вставляться только значения в формате «чч:мм:сс[.ннннннн]»|  
 |Дата|Могут вставляться только значения в формате «ГГГГ-ММ-ДД»|  
 |datetime2|Могут вставляться только значения в формате «ГГГГ-ММ-ДД чч:мм:сс[.ннннннн]»|  
   

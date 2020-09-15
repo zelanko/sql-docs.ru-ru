@@ -1,4 +1,5 @@
 ---
+description: Метод setCharacterStream (java.lang.String, java.io.Reader, long)
 title: Метод setCharacterStream (java.lang.String, java.io.Reader, long) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 54fb2f13-f8d8-47b5-bec1-4a5af3e86a84
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 304797651e93ea39269b9a68f810a3e98290eac8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9e7b63e52278c3a64f0c7bd4f9c6d5915b3b1f50
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80929059"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432266"
 ---
 # <a name="setcharacterstream-method-javalangstring-javaioreader-long"></a>Метод setCharacterStream (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -56,6 +57,6 @@ public final void setCharacterStream(java.lang.String parameterName
   
 ## <a name="see-also"></a>См. также:  
  [Метод setCharacterStream (SQLServerCallableStatement)](../../../connect/jdbc/reference/setcharacterstream-method-sqlservercallablestatement.md)   
- [Элементы SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
+ [Члены SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Использование предложения HAVING и WHERE в одном запросе (визуальные инструменты для баз данных)
 title: Использование предложений HAVING и WHERE в одном запросе
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ ms.assetid: 1e07cf56-b4b7-4c49-8ddd-c276812a7148
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 511f8a5d8fb239da7f125231083264d798939bbb
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6e02a61bd221c35cac2dfacd51602364035c2ba4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004104"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422948"
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>Использование предложения HAVING и WHERE в одном запросе (визуальные инструменты для баз данных)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -91,5 +92,5 @@ HAVING AVG(price) > 10
   
 ## <a name="see-also"></a>См. также:  
 [Сортировка и группировка результатов запроса](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
-[Резюмирование результатов запроса](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
+[Резюмирование результатов запросов](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_fetch_object
 title: sqlsrv_fetch_object | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 90d900af5fe86862ad59df61d4640e38797c0a01
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1e9b1d3357fe25ffd65492ba21b5dd74c819a66b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893173"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426306"
 ---
 # <a name="sqlsrv_fetch_object"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +43,7 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
   
 *$ctorParams* (НЕОБЯЗАТЕЛЬНО): массив значений, которые передаются в конструктор класса, указанного с помощью параметра *$className*. Если конструктор указанного класса принимает значения параметров, при вызове *$ctorParams* object **sqlsrv_fetch_object**.  
   
-*row* (НЕОБЯЗАТЕЛЬНО): одно из следующих значений, определяющее строку, к которой требуется получить доступ в результирующем наборе, использующем прокручиваемый курсор. (Если указан параметр *row*, необходимо явным образом указать параметры *$className* и *$ctorParams*, даже если для *$className* и *$ctorParams* потребуется указать значение NULL.)  
+*row* [необязательно]: Одно из следующих значений, определяющее строку, к которой требуется получить доступ в результирующем наборе, использующем прокручиваемый курсор. (Если указан параметр *row*, необходимо явным образом указать параметры *$className* и *$ctorParams*, даже если для *$className* и *$ctorParams* потребуется указать значение NULL.)  
   
 -   SQLSRV_SCROLL_NEXT  
   
@@ -58,7 +59,7 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
   
 Дополнительные сведения об этих значениях см. в статье [Указание типа курсора и выбор строк](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).  
   
-*offset* (необязательно): используется с SQLSRV_SCROLL_ABSOLUTE и SQLSRV_SCROLL_RELATIVE для указания извлекаемой строки. Первой записью в результирующем наборе является 0.  
+*offset* [необязательно]: используется в сочетании с SQLSRV_SCROLL_ABSOLUTE и SQLSRV_SCROLL_RELATIVE для определения извлекаемой строки. Первой записью в результирующем наборе является 0.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
 Объект PHP со свойствами, соответствующими именам полей результирующего набора. Значения свойств заполняются соответствующими значениями полей результирующего набора. Если класс, указанный с помощью необязательного параметра *$className* , не существует или отсутствует активный результирующий набор, сопоставленный с указанной инструкцией, возвращается значение **false** . Если больше нет строк для извлечения, возвращается значение **null** .  
@@ -233,7 +234,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-Переменная **sqlsrv_fetch_object** всегда возвращает данные в соответствии с [Default PHP Data Types](../../connect/php/default-php-data-types.md). (Дополнительные сведения об указании типа данных PHP см. в статье [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).)  
+Переменная **sqlsrv_fetch_object** всегда возвращает данные в соответствии с [Default PHP Data Types](../../connect/php/default-php-data-types.md). Дополнительные сведения об указании типа данных PHP см. в статье [Практическое руководство. Указание типов данных PHP](../../connect/php/how-to-specify-php-data-types.md).  
   
 Если возвращается поле без имени, **sqlsrv_fetch_object** отменяет значение поля и выдает предупреждение. Например, рассмотрим эту инструкцию Transact-SQL, которая вставляет значение в таблицу базы данных и извлекает созданный сервером первичный ключ:  
   

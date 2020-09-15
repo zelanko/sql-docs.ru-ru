@@ -1,4 +1,5 @@
 ---
+description: Метод SetEmailConfiguration (WMI MSReportServer_ConfigurationSetting)
 title: Метод SetEmailConfiguration (WMI MSReportServer_ConfigurationSetting) | Документы Майкрософт
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b40a2224-2c90-4d32-892f-1fe73a0591ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3e2b3e3c1d3d9fc5193a8c87c2aa96f9ff2d3ba2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e1d746ec97ef320cb9527d3a4be4dc3011c7b875
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581011"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423108"
 ---
 # <a name="configurationsetting-method---setemailconfiguration"></a>Метод ConfigurationSetting — SetEmailConfiguration
   Настраивает модуль доставки электронной почты, используемый сервером отчетов для отправки электронной почты.  

@@ -1,4 +1,5 @@
 ---
+description: Метод setClob (int, java.io.Reader)
 title: Метод setClob (int, java.io.Reader) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2b3727da-0480-4cea-b8b1-abda90699b84
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 92f59b7bb28ff0ad20eeb133033e7d90a2491a29
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 93c869b07771ef3223901948cb5ce6ccb13d59ee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927145"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432166"
 ---
 # <a name="setclob-method-int-javaioreader"></a>Метод setClob (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,6 +48,6 @@ public final void setClob(int parameterIndex,
   
 ## <a name="see-also"></a>См. также:  
  [Метод setClob (SQLServerPreparedStatement)](../../../connect/jdbc/reference/setclob-method-sqlserverpreparedstatement.md)   
- [Элементы SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
+ [Члены SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Метод ConfigurationSetting — GetDatabaseVersionDisplayName
 title: Метод GetDatabaseVersionDisplayName (WMI) | Документы Майкрософт
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e1286424-7043-4f12-a7ad-1cf69e81baa4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4d29ed7bc6e627f7ed670feca9b98b0b4fac3eb9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 598bc82d266bfff12f085275a03598f2caf6fc48
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570958"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423228"
 ---
 # <a name="configurationsetting-method---getdatabaseversiondisplayname"></a>Метод ConfigurationSetting — GetDatabaseVersionDisplayName
   Возвращает отображаемое имя для указанной строки версии базы данных сервера отчетов.  
@@ -31,10 +32,10 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
 ```  
   
 ## <a name="parameters"></a>Параметры  
- *Версия*  
+ *Version*  
  Строка, содержащая строку версии базы данных сервера отчетов.  
   
- *DisplayName*  
+ *Отображаемое имя*  
  [out] Строка, содержащая отображаемое имя, соответствующее заданной версии.  
   
  *HRESULT*  
@@ -43,7 +44,7 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
 ## <a name="remarks"></a>Remarks  
  Следующая таблица показывает сопоставления версий базы данных с отображаемыми строками.  
   
-|**Выпуск**|**Версия**|**Отображаемое имя**|  
+|**Релиз**|**Version**|**Отображаемое имя**|  
 |-----------------|-----------------|----------------------|  
 |Службы Reporting Services 2005 с пакетом обновления 2 (SP2)|@DBVersion = 'C.0.8.54'|SQL Server 2005 SP2|  
 |Службы Reporting Services 2005 с пакетом обновления 1 (SP1)|@DBVersion = 'C.0.8.43'|SQL Server 2005 SP1|  

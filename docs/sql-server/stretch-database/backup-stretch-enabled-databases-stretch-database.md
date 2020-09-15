@@ -1,4 +1,5 @@
 ---
+description: Резервное копирование баз данных с поддержкой Stretch (Stretch Database)
 title: Резервное копирование баз данных с поддержкой Stretch
 ms.date: 06/14/2016
 ms.service: sql-server-stretch-database
@@ -11,15 +12,15 @@ ms.assetid: 18f0dff0-d8ce-4bee-a935-76ed6dfb3208
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 897f748c5aeab43c7e3ef98f6dbfff84b9da69d7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 38ee204a715e691654e550f849ccf0216c715edc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286308"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423128"
 ---
 # <a name="backup-stretch-enabled-databases-stretch-database"></a>Резервное копирование баз данных с поддержкой Stretch (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
  Резервные копии позволяют восстанавливать базы данных после различных сбоев, ошибок и аварийных ситуаций.  
@@ -63,7 +64,7 @@ Microsoft Azure автоматически архивирует удаленны
 
 ## <a name="see-also"></a>См. также:  
 [Восстановление баз данных с поддержкой Stretch](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)  
- [Управление Stretch Database и устранение связанных с ней неполадок](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)   
+ [Управление службой Stretch Database и устранение неполадок, связанных с ее использованием](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)   
    
   
   

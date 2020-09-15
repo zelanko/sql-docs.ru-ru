@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_configure
 title: sqlsrv_configure | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/26/2018
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9393f975-a4ef-4c50-b4dd-14892fc55cc9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 17c0024e75dacc56b2f5a10d26a899256dbad7fc
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c99aff2e8453a2c2d16db34894935d5b1f7e5ff5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80902790"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88413870"
 ---
 # <a name="sqlsrv_configure"></a>sqlsrv_configure
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

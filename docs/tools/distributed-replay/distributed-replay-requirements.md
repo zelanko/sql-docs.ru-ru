@@ -1,4 +1,5 @@
 ---
+description: Distributed Replay Requirements
 title: Требования распределенного воспроизведения
 titleSuffix: SQL Server Distributed Replay
 ms.prod: sql
@@ -10,12 +11,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 01/18/2018
-ms.openlocfilehash: 26fdf4b982b27b7ad7c4d832b7320a263d4a09ed
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1b75a40618d327c077c36b93d6368e245a2669dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85681671"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414840"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -106,7 +107,7 @@ ms.locfileid: "85681671"
   
 -   SPID  
   
--   Start Time  
+-   Время начала  
   
 -   EndTime  
   
@@ -137,7 +138,7 @@ ms.locfileid: "85681671"
 |--------------------------------|--------------------------------------------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Служба контроллера распределенного воспроизведения|1|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Служба клиента распределенного воспроизведения|16 (физических или виртуальных компьютеров)|  
-|Средство администрирования|Неограниченно|  
+|Средство администрирования|Без ограничений|  
   
 > [!NOTE]  
 >  Хотя на одном компьютере можно устанавливать только один экземпляр программы администрирования, допускается одновременный запуск нескольких экземпляров программы администрирования. Команды, поступающие от нескольких экземпляров программы администрирования, разрешаются в порядке поступления.  

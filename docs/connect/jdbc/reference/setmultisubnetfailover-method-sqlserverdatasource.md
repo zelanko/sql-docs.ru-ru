@@ -1,4 +1,5 @@
 ---
+description: Метод setMultiSubnetFailover (SQLServerDataSource)
 title: Метод setMultiSubnetFailover (SQLServerDataSource) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: 7ffd282d-c2f6-4d1b-a7a6-859d18b388aa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2b24c4bb7cda0bc83a9c3f28591bffeb6226c569
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6a5a196f83820274a657bbadf87de57bab8266a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925713"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431686"
 ---
 # <a name="setmultisubnetfailover-method-sqlserverdatasource"></a>Метод setMultiSubnetFailover (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Задает значение свойства подключения **multiSubnetFailover**.  
+  Устанавливает значение свойства подключения **multiSubnetFailover**.  
   
 ## <a name="syntax"></a>Синтаксис  
   

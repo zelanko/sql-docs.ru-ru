@@ -1,4 +1,5 @@
 ---
+description: Элементы MSReportServer_ConfigurationSetting
 title: Члены MSReportServer_ConfigurationSetting | Документы Майкрософт
 ms.date: 03/20/2017
 ms.prod: reporting-services
@@ -16,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 5e21a53a-a2f8-4b35-a8d9-5483519e3857
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ae51a72f0dc2be73e4175c9e50d03246d5d3b49d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 7643435954c74285992c6a21ebd1df5d8998164b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632544"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423098"
 ---
 # <a name="msreportserver_configurationsetting-members"></a>Элементы MSReportServer_ConfigurationSetting
   Класс MSReportServer_ConfigurationSetting содержит указанные ниже свойства и методы.  
   
 ## <a name="public-properties"></a>Открытые свойства  
   
-|||  
+|Свойство|Описание|  
 |-|-|  
 |[ConnectionPoolSize](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-connectionpoolsize.md)|Возвращает размер пула подключений, который используется сервером отчетов для связи с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)], где размещается база данных сервера отчетов. Только для чтения.|  
 |[DatabaseLogonAccount](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogonaccount.md)|Задает учетную запись для входа, которую сервер отчетов использует для подключения к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)], где размещается база данных сервера отчетов. Только для чтения.|  
@@ -58,7 +59,7 @@ ms.locfileid: "81632544"
   
 ## <a name="public-methods"></a>Открытые методы  
   
-|||  
+|Метод|Описание|  
 |-|-|  
 |[BackupEncryptionKey](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-backupencryptionkey.md)|Создает резервную копию ключа шифрования для экземпляра. Ключ шифрования хранится в зашифрованном виде под защитой пароля.|  
 |[CreateSSLCertificateBinding Method (WMI MSReportServer_ConfigurationSetting)](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-createsslcertificatebinding.md)|Создает привязку к TLS/SSL-сертификату.|  

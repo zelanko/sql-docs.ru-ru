@@ -1,4 +1,5 @@
 ---
+description: Метод RemoveSSLCertificateBindings (WMI MSReportServer_ConfigurationSetting)
 title: Метод RemoveSSLCertificateBindings (WMI MSReportServer_ConfigurationSetting) | Документы Майкрософт
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b8b484c9-04c4-4ae9-980e-67bbe5aa8481
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 11aaa38d8fb06c288399c253d530c1bd8440e597
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: edead6fb553151265556163659eb6b1383918c6d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634567"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423168"
 ---
 # <a name="configurationsetting-method---removesslcertificatebinding"></a>Метод ConfigurationSetting — RemoveSSLCertificateBinding
   Удаляет привязку к TLS/SSL-сертификату.  

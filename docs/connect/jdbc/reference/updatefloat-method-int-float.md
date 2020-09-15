@@ -1,4 +1,5 @@
 ---
+description: Метод updateFloat (int, float)
 title: Метод updateFloat (int, float) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: c9ddcd7d-1dd4-491a-99ff-6cce7f67a73b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7b8cb92a23a9d3c3c9725dc555ff66c967ed4ecd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 08757f382cd247d4b9da233e10d8eec5d906d97d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927868"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431376"
 ---
 # <a name="updatefloat-method-int-float"></a>Метод updateFloat (int, float)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

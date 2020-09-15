@@ -1,4 +1,5 @@
 ---
+description: Проекты (среда SQL Server Management Studio)
 title: Проекты (среда SQL Server Management Studio)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c13af859-ca66-4e43-b76a-0650ac6566c0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 13845b7e7903207f7d5b3c026663d6b1d44d4795
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 321257f45a593afdaf8c69228b2018347074d7ce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011591"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417880"
 ---
 # <a name="projects-sql-server-management-studio"></a>Проекты (среда SQL Server Management Studio)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,17 +48,17 @@ ms.locfileid: "86011591"
   
 |Описание задачи|Раздел|  
 |--------------------|---------|  
-|Описано создание нового проекта в решении.|[Создать проект](../../ssms/solution/create-a-project.md).|  
+|Описано создание нового проекта в решении.|[Создание проекта](../../ssms/solution/create-a-project.md)|  
 |Описано добавление существующего проекта к решению.|[Добавление к решению существующий проект](../../ssms/solution/add-an-existing-project-to-a-solution.md)|  
-|Описано изменение места сохранения файлов проекта по умолчанию.|[Изменение расположения проектов по умолчанию](../../ssms/solution/change-the-default-location-for-projects.md)|  
+|Описано изменение места сохранения файлов проекта по умолчанию.|[Изменение местоположения проектов по умолчанию](../../ssms/solution/change-the-default-location-for-projects.md)|  
 |Описан просмотр текущих свойств проекта.|[Просмотр свойств проекта](../../ssms/solution/view-project-properties.md)|  
-|Описано добавление новых элементов в проект (соединений, файлов скриптов и т. д).|[Добавление новых элементов в проект](../../ssms/solution/add-new-items-to-a-project.md)|  
+|Описано добавление новых элементов в проект (соединений, файлов скриптов и т. д).|[Добавление в проект новые элементы](../../ssms/solution/add-new-items-to-a-project.md)|  
 |Описано создание сведений о подключении для запроса.|[Связь запроса с соединением в проекте](../../ssms/solution/associate-a-query-with-a-connection-in-a-project.md)|  
-|Описано изменение сведений о подключении для запроса.|[Изменение соединения, связанного с запросом](../../ssms/solution/change-the-connection-associated-with-a-query.md)|  
+|Описано изменение сведений о подключении для запроса.|[Изменение связанного с запросом соединения](../../ssms/solution/change-the-connection-associated-with-a-query.md)|  
 |Описано изменение свойств подключения.|[Просмотр или изменение свойств соединения в проекте](../../ssms/solution/view-or-change-the-properties-of-a-connection-in-a-project.md)|  
   
 ## <a name="see-also"></a>См. также:  
 [Обозреватель решений](../../ssms/solution/solution-explorer.md)  
 [Решения (среда SQL Server Management Studio)](../../ssms/solution/solutions-sql-server-management-studio.md)  
-[Обозреватель решений системы управления версиями](https://msdn.microsoft.com/library/ms173879.aspx)  
+[Обозреватель решений для системы управления версиями](https://docs.microsoft.com/sql/ssms/solution/solution-explorer)  
   

@@ -1,4 +1,5 @@
 ---
+description: Метод setEnablePrepareOnFirstPreparedStatementCall (SQLServerDataSource)
 title: Метод setEnablePrepareOnFirstPreparedStatementCall (SQLServerDataSource) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2018
@@ -10,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e4b63853122b14c3d967cb5dbdea3c3a91cf9a19
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 838696d89354d857c86aae0f6191d1dd08fba820
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922379"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431916"
 ---
 # <a name="setenableprepareonfirstpreparedstatementcall-method-sqlserverdatasource"></a>Метод setEnablePrepareOnFirstPreparedStatementCall (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Указывает поведение для конкретного экземпляра соединения. Если значение равно false, первое выполнение подготовленной инструкции вызовет sp_executesql без подготовки инструкции, после второго выполнения будет вызван sp_prepexec и фактически настроен обработчик подготовленной инструкции. При всех последующих выполнениях вызывается sp_execute. Это избавляет от необходимости аннулировать закрываемую подготовленную инструкцию вызовом sp_unprepare, если эта инструкция выполнялась лишь один раз.  
+  Указывает поведение для конкретного экземпляра подключения. Если значение равно false, первое выполнение подготовленной инструкции вызовет sp_executesql без подготовки инструкции, после второго выполнения будет вызван sp_prepexec и фактически настроен обработчик подготовленной инструкции. При всех последующих выполнениях вызывается sp_execute. Это избавляет от необходимости аннулировать закрываемую подготовленную инструкцию вызовом sp_unprepare, если эта инструкция выполнялась лишь один раз.  
 ## <a name="syntax"></a>Синтаксис  
   
 ```

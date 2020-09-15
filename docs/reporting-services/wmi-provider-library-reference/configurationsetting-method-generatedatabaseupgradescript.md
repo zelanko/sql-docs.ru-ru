@@ -1,4 +1,5 @@
 ---
+description: Метод GenerateDatabaseUpgradeScript (WMI MSReportServer_ConfigurationSetting)
 title: Метод GenerateDatabaseUpgradeScript (WMI MSReportServer_ConfigurationSetting) | Документы Майкрософт
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 88534e8e-2877-41cd-b5c2-b1d33a0fd203
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0ffd8985175c7ad2d8acacc95d85bd15ccba1e34
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 85bf6fb0c0dc459fa7626ed9ca5e09f5886c2836
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579961"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423218"
 ---
 # <a name="configurationsetting-method---generatedatabaseupgradescript"></a>Метод ConfigurationSetting — GenerateDatabaseUpgradeScript
   Формирует скрипт, который можно использовать для обновления базы данных сервера отчетов до схемы [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .  

@@ -1,4 +1,5 @@
 ---
+description: Извлечение данных
 title: Получение данных | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/26/2018
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3414992c-61c0-4e7d-b509-72517e52c1bb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 050197fe67724dba3ab2cb3c0de53661487b9ef5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 35a9d9131b7c1cb382ab4e64baa26809d58c90d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928395"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414430"
 ---
 # <a name="retrieving-data"></a>Извлечение данных
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -69,7 +70,7 @@ ms.locfileid: "80928395"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |---------|---------------|  
 |[Извлечение данных в виде потока](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)|Содержит общие сведения о потоковой передаче данных с сервера, а также ссылки на конкретные варианты использования.|  
 |[Использование параметров направления](../../connect/php/using-directional-parameters.md)|Описывает, как использовать параметры направления при вызове хранимой процедуры.|  
@@ -79,7 +80,7 @@ ms.locfileid: "80928395"
 |[Форматирование десятичных строк и денежных значений (драйвер SQLSRV)](../../connect/php/formatting-decimals-sqlsrv-driver.md)|Сведения о том, как форматировать десятичные и денежные значения с помощью драйвера SQLSRV.|  
 |[Форматирование десятичных строк и денежных значений (драйвер PDO_SQLSRV)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)|Сведения о том, как форматировать десятичные и денежные значения с помощью драйвера PDO_SQLSRV.|  
   
-## <a name="related-sections"></a>См. также  
+## <a name="related-sections"></a>Связанные разделы  
 [Практическое руководство. Указание типов данных PHP](../../connect/php/how-to-specify-php-data-types.md)  
   
 ## <a name="see-also"></a>См. также:  
