@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 88e4bea72d38e7c4a60bfb89d9962c58a99e4804
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 0c783f9db966605a3eeccaca453e7a5c249b8495
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89062333"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288256"
 ---
 # <a name="hints-transact-sql---table"></a>Табличные указания (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -307,13 +307,19 @@ READUNCOMMITTED
 Дополнительные сведения об уровнях изоляции см. в разделе [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
 > [!NOTE]  
-> Если выдается сообщение об ошибке 601 при заданном параметре READUNCOMMITTED, ее следует разрешить так же, как и ошибку взаимоблокировки (1205), и затем повторить инструкцию.  
+> Если выдается [сообщение об ошибке 601](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors--2-to-999) при заданном параметре READUNCOMMITTED, ее следует разрешить так же, как и ошибку взаимоблокировки ([сообщение об ошибке 1205](../../relational-databases/errors-events/mssqlserver-1205-database-engine-error.md)), и затем повторить инструкцию.  
   
 REPEATABLEREAD  
 Указывает, что сканирование выполняется с той же семантикой блокировки, что и транзакция, запущенная на уровне изоляции REPEATABLE READ. Дополнительные сведения об уровнях изоляции см. в разделе [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
 ROWLOCK  
-Указывает, что вместо блокировки страниц или таблиц применяются блокировки строк. При указании блокировок строк в транзакциях, выполняемых на уровне изоляции SNAPSHOT, они применяются только в случае, когда подсказка ROWLOCK используется в сочетании с другими табличными подсказками, требующими блокировки, например UPDLOCK или HOLDLOCK.  
+Указывает, что вместо блокировки страниц или таблиц применяются блокировки строк. При указании блокировок строк в транзакциях, выполняемых на уровне изоляции SNAPSHOT, они применяются только в случае, когда подсказка ROWLOCK используется в сочетании с другими табличными подсказками, требующими блокировки, например UPDLOCK или HOLDLOCK. ROWLOCK нельзя использовать с таблицей, имеющей кластеризованный индекс columnstore. В следующем примере в приложении возвращается [ошибка 651](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors--2-to-999).  
+
+```sql 
+UPDATE [dbo].[FactResellerSalesXL_CCI] WITH (ROWLOCK)
+SET UnitPrice = 50
+WHERE ProductKey = 150;
+```  
   
 SERIALIZABLE  
 Равнозначен аргументу HOLDLOCK. Накладывает дополнительные ограничения на совмещаемую блокировку: удерживает ее до завершения транзакции вместо снятия блокировки сразу после того, как таблица или страница данных больше не требуется, независимо от того, завершена ли транзакция. Сканирование выполняется с той же семантикой, что и транзакция, запущенная на уровне изоляции SERIALIZABLE. Дополнительные сведения об уровнях изоляции см. в разделе [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
@@ -321,11 +327,11 @@ SERIALIZABLE
 SNAPSHOT  
 **Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий. 
   
-Доступ к таблице, оптимизированной для памяти, выполняется с изоляцией SNAPSHOT. SNAPSHOT может использоваться только с таблицами, оптимизированными для памяти (не с дисковыми таблицами). Дополнительные сведения см. в разделе [Введение в таблицы, оптимизированные для памяти](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
+Доступ к таблице, оптимизированной для памяти, выполняется с изоляцией SNAPSHOT. SNAPSHOT может использоваться только с таблицами, оптимизированными для памяти (не с дисковыми таблицами), как показано в следующем примере. Дополнительные сведения см. в разделе [Введение в таблицы, оптимизированные для памяти](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
 ```sql 
-SELECT * FROM dbo.Customers AS c   
-WITH (SNAPSHOT)   
+SELECT * 
+FROM dbo.Customers AS c WITH (SNAPSHOT)   
 LEFT JOIN dbo.[Order History] AS oh   
     ON c.customer_id=oh.customer_id;  
 ```  

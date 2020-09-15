@@ -2,7 +2,7 @@
 title: Параметры ALTER DATABASE SET (Transact-SQL) | Документы Майкрософт
 description: Сведения о том, как задать параметры базы данных, например автоматическую настройку, шифрование, хранилище запросов в SQL Server и базе данных SQL Azure.
 ms.custom: ''
-ms.date: 06/22/2020
+ms.date: 09/04/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,6 +22,7 @@ helpviewer_keywords:
 - snapshot isolation framework option
 - checksums [SQL Server]
 - Automatic tuning
+- " Data Retention Policy"
 - query plan regression correction
 - auto_create_statistics
 - auto_update_statistics
@@ -30,12 +31,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 1dd62f3d2d0a3ee3b63abd5d01fe33ba7dac196f
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: c7e35b474e33da25b2d323d4af4aced5c4fe50f1
+ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88900962"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89511306"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Параметры ALTER DATABASE SET (Transact-SQL)
 
@@ -115,6 +116,7 @@ SET
   | <target_recovery_time_option>
   | <termination>
   | <temporal_history_retention>
+  | <data_retention_policy>
 }
 ;
 
@@ -305,6 +307,10 @@ SET
 
 <temporal_history_retention> ::=
     TEMPORAL_HISTORY_RETENTION { ON | OFF }
+
+<data_retention_policy> ::=
+    DATA_RETENTION { ON | OFF }
+
 ```
 
 ## <a name="arguments"></a>Аргументы
@@ -504,6 +510,17 @@ GLOBAL
 Курсор неявно освобождается только при отключении. Дополнительные сведения см. в описании [DECLARE CURSOR (Transact-SQL)](../../t-sql/language-elements/declare-cursor-transact-sql.md).
 
 Вы можете определить состояние этого параметра, проверив столбец `is_local_cursor_default` в представлении каталога [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). Состояние можно также определить, проверив свойство `IsLocalCursorsDefault` функции [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
+
+**\<data_retention_policy> ::=**
+
+**Область применения**: *только* Azure SQL Edge
+
+DATA_RETENTION { ON | OFF }   
+ON    
+Включает очистку базы данных на основе политики хранения данных.
+
+OFF   
+Отключает очистку базы данных на основе политики хранения данных.
 
 **\<database_mirroring>**     
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
@@ -1230,18 +1247,18 @@ NO_WAIT
 |\<external_access_option>|Да|Нет|
 |\<cursor_option>|Да|Нет|
 |\<auto_option>|Да|Нет|
-|\<sql_option>|Да|Нет|
+|\<sql_option>|Да|нет|
 |\<recovery_option>|Да|Нет|
-|\<target_recovery_time_option>|Нет|Да|
-|\<database_mirroring_option>|Нет|Нет|
-|ALLOW_SNAPSHOT_ISOLATION|нет|Нет|
+|\<target_recovery_time_option>|нет|Да|
+|\<database_mirroring_option>|нет|нет|
+|ALLOW_SNAPSHOT_ISOLATION|Нет|нет|
 |READ_COMMITTED_SNAPSHOT|Нет|Да|
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|Да|Да|
 |\<service_broker_option>|Да|Нет|
 |DATE_CORRELATION_OPTIMIZATION|Да|Да|
 |\<parameterization_option>|Да|Да|
 |\<change_tracking_option>|Да|Да|
-|\<db_encryption_option>|Да|Нет|
+|\<db_encryption_option>|Да|нет|
 
 Кэш планов для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] очищается при установке одного из следующих параметров.
 
@@ -2203,17 +2220,17 @@ NO_WAIT
 |\<auto_option>|Да|Нет|
 |\<change_tracking_option>|Да|Да|
 |\<cursor_option>|Да|Нет|
-|\<db_encryption_option>|Да|Нет|
+|\<db_encryption_option>|Да|нет|
 |\<db_update_option>|Да|Да|
 |\<db_user_access_option>|Да|Да|
 |\<delayed_durability_option>|Да|Да|
 |\<parameterization_option>|Да|Да|
-|ALLOW_SNAPSHOT_ISOLATION|нет|Нет|
-|READ_COMMITTED_SNAPSHOT|Нет|Да|
+|ALLOW_SNAPSHOT_ISOLATION|Нет|нет|
+|READ_COMMITTED_SNAPSHOT|нет|Да|
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|Да|Да|
 |DATE_CORRELATION_OPTIMIZATION|Да|Да|
 |\<sql_option>|Да|нет|
-|\<target_recovery_time_option>|Нет|Да|
+|\<target_recovery_time_option>|нет|Да|
 
 ## <a name="examples"></a>Примеры
 

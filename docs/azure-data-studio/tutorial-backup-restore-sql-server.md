@@ -6,17 +6,17 @@ ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu, maghan, sstein
+ms.reviewer: alayu
 ms.custom: seodec18
 ms.date: 11/04/2019
-ms.openlocfilehash: 8594178dc6817cc8b826268c3fd0aebce59af2ec
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a7d3ca36634e449dd26dfdb0df75f09608d25f51
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765803"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283695"
 ---
-# <a name="backup-and-restore-databases-using-azure-data-studio"></a>Резервное копирование и восстановление баз данных с помощью Azure Data Studio
+# <a name="tutorial-backup-and-restore-databases-using-azure-data-studio"></a>Руководство по Резервное копирование и восстановление баз данных с помощью Azure Data Studio
 
 В этом руководстве вы узнаете, как с помощью Azure Data Studio выполнять следующие задачи.
 > [!div class="checklist"]
@@ -45,7 +45,7 @@ ms.locfileid: "88765803"
 3. В этом руководстве используются параметры резервного копирования по умолчанию, поэтому щелкните **Резервное копирование**.
    ![диалоговое окно "Резервное копирование"](./media/tutorial-backup-restore-sql-server/backup-dialog.png)
 
-После того как вы щелкнете **Резервное копирование**, диалоговое окно **Резервное копирование базы данных** закроется и начнется процесс резервного копирования.
+Когда вы щелкнете **Резервное копирование**, диалоговое окно **Резервное копирование базы данных** закроется и начнется процесс резервного копирования.
 
 ## <a name="view-the-backup-status-and-view-the-backup-script"></a>Просмотр состояния резервного копирования и скрипта резервного копирования
 
@@ -63,7 +63,7 @@ ms.locfileid: "88765803"
 
 2. Откройте диалоговое окно **Восстановление базы данных** (щелкните **Восстановление** в мини-приложении **Задачи**).
 
-   ![Задача восстановления](media/tutorial-backup-restore-sql-server/tasks-restore.png)
+   ![Восстановление задач](media/tutorial-backup-restore-sql-server/tasks-restore.png)
 
 3. В поле **Источник восстановления** выберите значение **Файл резервной копии**.
 
@@ -71,8 +71,8 @@ ms.locfileid: "88765803"
 
 5. В разделе **Целевой объект** в поле **Целевая база данных** введите **TutorialDB_Restored**, чтобы восстановить файл резервной копии в новую базу данных. Затем выберите **Восстановить**.
 
-   ![Восстановление](./media/tutorial-backup-restore-sql-server/restore.png)
+   ![Восстановление резервной копии](./media/tutorial-backup-restore-sql-server/restore.png)
 
 6. Чтобы просмотреть состояние операции восстановления, нажмите клавиши **CTRL+T** для открытия **журнала задач**.
 
-   ![Восстановление](./media/tutorial-backup-restore-sql-server/task-history-restore.png)
+   ![Восстановление задачи журнала](./media/tutorial-backup-restore-sql-server/task-history-restore.png)

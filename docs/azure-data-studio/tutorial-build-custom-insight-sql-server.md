@@ -1,20 +1,20 @@
 ---
-title: Руководство по Создание настраиваемого аналитического мини-приложения
+title: Создание настраиваемого аналитического мини-приложения
 description: В этом руководстве показано, как создавать настраиваемые аналитические мини-приложения и добавлять их на панели мониторинга баз данных и сервера в Azure Data Studio.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu, maghan, sstein
+ms.reviewer: alayu
 ms.custom: seodec18
-ms.date: 09/24/2018
-ms.openlocfilehash: efe6473dc716b8e8a2c70349b98e6433105d401a
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.date: 08/26/2020
+ms.openlocfilehash: 0cd248b323ebc6176dbad37f578da1c08141281b
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88745757"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283755"
 ---
 # <a name="tutorial-build-a-custom-insight-widget"></a>Руководство по Создание настраиваемого аналитического мини-приложения
 
@@ -104,7 +104,7 @@ ms.locfileid: "88745757"
 
 7. Сохраните файл *настроек пользователя* и откройте панель мониторинга базы данных *TutorialDB*, чтобы увидеть мини-приложение активных сеансов:
 
-   ![аналитика активных сеансов](./media/tutorial-build-custom-insight-sql-server/insight-activesession-dashboard.png)
+   ![панель мониторинга аналитики активных сеансов](./media/tutorial-build-custom-insight-sql-server/insight-activesession-dashboard.png)
 
 ## <a name="add-details-to-custom-insight"></a>Добавление сведений в настраиваемое аналитическое мини-приложение
 
@@ -159,7 +159,7 @@ ms.locfileid: "88745757"
 
 7. Сохраните файл *настроек пользователя* и откройте панель мониторинга базы данных *TutorialDB*. Нажмите кнопку с многоточием (...) рядом со свойством *My-Widget*, чтобы просмотреть сведения:
 
-    ![аналитика активных сеансов](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
+    ![сведения аналитики активных сеансов](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
 
 ## <a name="next-steps"></a>Дальнейшие действия
 В этом руководстве вы узнали, как выполнять следующие задачи:

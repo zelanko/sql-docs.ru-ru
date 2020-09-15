@@ -5,16 +5,16 @@ ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 01/10/2018
+ms.date: 09/01/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 3db39ed328ca37cbc0eb03b2ce4f8cdbcda268dd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4da229070afa69dc9f6f181ada1db21bc87b713b
+ms.sourcegitcommit: 8689a1abea3e2b768cdf365143b9c229194010c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902308"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89424414"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Развертывание контейнера SQL Server в Kubernetes с помощью служб Azure Kubernetes (AKS)
 
@@ -35,17 +35,17 @@ ms.locfileid: "85902308"
 
 В Kubernetes версии 1.6 и более поздних поддерживаются [классы хранилища](https://kubernetes.io/docs/concepts/storage/storage-classes/), [утверждения постоянного тома](https://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims), а также [тип тома диска Azure](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk). Поддерживается создание собственных экземпляров SQL Server в собственном коде Kubernetes и управление ими. В примере, приведенном в этой статье, показано, как создать [развертывание](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) для достижения высокой доступности, аналогичной экземпляру отказоустойчивого кластера общего диска. В этой конфигурации Kubernetes играет роль оркестратора кластера. При сбое экземпляра SQL Server в контейнере оркестратор загружает другой экземпляр контейнера, который подключается к тому же постоянному хранилищу.
 
-![Схема кластера Kubernetes с SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql.png)
+![Контейнер SQL Server в кластере Kubernetes](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql.png)
 
 На предыдущей схеме `mssql-server` — это контейнер внутри модуля [Pod](https://kubernetes.io/docs/concepts/workloads/pods/pod/). Kubernetes управляет ресурсами в кластере. Применение [набора реплик](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/) гарантирует автоматическое восстановление pod в случае отказа узла. Приложения подключаются к службе. В этом случае служба представляет подсистему балансировки нагрузки, которая содержит IP-адрес, остающийся неизменным в случае отказа `mssql-server`.
 
 На следующей схеме в контейнере `mssql-server` происходит сбой. Как оркестратор Kubernetes гарантирует правильное количество работоспособных экземпляров в наборе реплик и запускает новый контейнер в соответствии с конфигурацией. Оркестратор запускает новый модуль Pod на том же узле, и `mssql-server` повторно подключается к тому же постоянному хранилищу. Служба подключается к повторно созданному `mssql-server`.
 
-![Схема кластера Kubernetes с SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
+![Сбой модуля pod SQL Server в кластере Kubernetes](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
 
 На следующей схеме сбой затронул узел, на котором размещен контейнер `mssql-server`. Оркестратор запускает новый модуль Pod на другом узле, и `mssql-server` повторно подключается к тому же постоянному хранилищу. Служба подключается к повторно созданному `mssql-server`.
 
-![Схема кластера Kubernetes с SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
+![Восстановление модуля pod SQL Server в кластере Kubernetes](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -174,10 +174,12 @@ ms.locfileid: "85902308"
          labels:
            app: mssql
        spec:
-         terminationGracePeriodSeconds: 10
+         terminationGracePeriodSeconds: 30
+         securityContext:
+           fsGroup: 10001
          containers:
          - name: mssql
-           image: mcr.microsoft.com/mssql/server:2017-latest
+           image: mcr.microsoft.com/mssql/server:2019-latest
            ports:
            - containerPort: 1433
            env:
@@ -227,10 +229,12 @@ ms.locfileid: "85902308"
      valueFrom:
        secretKeyRef:
          name: mssql
-         key: SA_PASSWORD 
+         key: SA_PASSWORD
      ```
 
-     Когда Kubernetes развертывает контейнер, он обращается к секрету с именем `mssql`, чтобы получить значение пароля. 
+    Когда Kubernetes развертывает контейнер, он обращается к секрету с именем `mssql`, чтобы получить значение пароля.
+
+   * `securityContext` : SecurityContext определяет права доступа и параметры управления доступом для модуля pod или контейнера. В данном случае он указан на уровне pod, поэтому все контейнеры (в данном случае только один) соответствуют этому контексту безопасности. В контексте безопасности мы определяем fsGroup со значением 10001 (это GID для группы mssql), то есть все процессы контейнера также входят в дополнительный идентификатор группы 10001 (mssql). Владелец тома /var/opt/mssql и все файлы, созданные в этом томе, будут иметь идентификатор группы 10001 (группа mssql).
 
    >[!NOTE]
    >Используя тип службы `LoadBalancer`, экземпляр SQL Server будет доступен удаленно (через Интернет) через порт 1433.
@@ -272,7 +276,19 @@ ms.locfileid: "85902308"
 
    ```azurecli
    az aks browse --resource-group <MyResourceGroup> --name <MyKubernetesClustername>
-   ```  
+   ```
+
+1. Кроме того, вы можете проверить, что контейнер работает как не корневой, выполнив следующую команду:
+
+    ```azurecli
+    kubectl.exe exec <name of SQL POD> -it -- /bin/bash 
+    ```
+
+    Затем выполните команду whoami, и увидите имя пользователя как mmsql. Это не корневой пользователь.
+
+    ```azurecli
+    whoami
+    ```
 
 ## <a name="connect-to-the-sql-server-instance"></a>Подключение к экземпляру SQL Server
 
@@ -285,7 +301,7 @@ ms.locfileid: "85902308"
 * [SSDT](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-ssdt)
 
 * sqlcmd
-   
+
    Чтобы подключиться через `sqlcmd`, используйте следующую команду:
 
    ```cmd
@@ -293,9 +309,9 @@ ms.locfileid: "85902308"
    ```
 
    Измените следующие значения:
-      
-    - `<External IP Address>` — на IP-адрес службы `mssql-deployment`. 
-    - `MyC0m9l&xP@ssw0rd` — на свой пароль.
+
+  * `<External IP Address>` — на IP-адрес службы `mssql-deployment`. 
+  * `MyC0m9l&xP@ssw0rd` — на свой пароль.
 
 ## <a name="verify-failure-and-recovery"></a>Проверка сбоя и восстановление
 
@@ -314,6 +330,7 @@ ms.locfileid: "85902308"
    ```azurecli
    kubectl delete pod mssql-deployment-0
    ```
+
    `mssql-deployment-0` — это значение, возвращенное на предыдущем шаге для имени Pod. 
 
 Kubernetes автоматически повторно создает Pod для восстановления экземпляра SQL Server и подключения к постоянному хранилищу. Используйте `kubectl get pods` для проверки развертывания нового Pod. Используйте `kubectl get services` для проверки того, что IP-адрес контейнера не изменился. 
@@ -333,5 +350,3 @@ Kubernetes автоматически повторно создает Pod для
 
 > [!div class="nextstepaction"]
 >[Введение в Kubernetes](https://docs.microsoft.com/azure/aks/intro-kubernetes)
-
-
