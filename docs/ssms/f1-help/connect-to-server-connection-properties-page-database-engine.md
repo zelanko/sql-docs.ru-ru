@@ -1,4 +1,5 @@
 ---
+description: Соединение с сервером (страница "Свойства подключения") ядра СУБД
 title: Соединение с сервером (страница "Свойства подключения") ядра СУБД
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,19 +14,19 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 08/14/2017
-ms.openlocfilehash: d1136d29ee8ee62648922f008042266a59632475
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: e5b01c75e099facc54c65ce5ef0d4c290ec79694
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87123075"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88370850"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>Соединение с сервером (страница "Свойства подключения") ядра СУБД
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 На этой вкладке можно просмотреть или задать параметры при подключении к экземпляру [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] или регистрации компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)] в списке **Зарегистрированные серверы**. Кнопки**Соединить** и **Параметры** появляются в этом диалоговом окне только при соединении с экземпляром компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)]. Кнопки**Проверить** и **Сохранить** появляются в этом диалоговом окне только при регистрации компонента [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
-**Подключиться к базе данных**  
+**Подключение к базе данных**  
 Выберите базу данных для подключения из списка. При выборе **<default>** будет выполнено подключение к базе данных по умолчанию для сервера. Если выбрано значение **<Browse server>** , можно найти на сервере базу данных для подключения.  
   
 При соединении с экземпляром ядра СУБД [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]необходимо использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и указать базу данных в диалоговом окне **Соединение с сервером** на вкладке **Свойства соединения** . Обязательно установите флажок **Шифрование соединения** .  
@@ -75,5 +76,5 @@ ms.locfileid: "87123075"
 Сохраняет параметры в списке **Зарегистрированные серверы**.  
   
 ## <a name="see-also"></a>См. также:  
-[Диалоговое окно «Свойства соединения»](../../ssms/f1-help/connection-properties-dialog-box.md)  
+[диалоговое окно «Свойства соединения»](../../ssms/f1-help/connection-properties-dialog-box.md)  
   

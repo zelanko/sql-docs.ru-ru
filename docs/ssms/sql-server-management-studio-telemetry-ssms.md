@@ -1,4 +1,5 @@
 ---
+description: Локальный аудит для сбора данных об использовании и данных диагностики в SSMS
 title: Данные об использовании компонентов и данные диагностики
 ms.custom: seo-lt-2019
 ms.date: 04/16/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9e9ecc82ab14bf73ab52219301ca5843673b3ba4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c26ab977839927751903eead0533256ab91fde2c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001583"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88370140"
 ---
 # <a name="local-audit-for-ssms-usage-and-diagnostic-data-collection"></a>Локальный аудит для сбора данных об использовании и данных диагностики в SSMS
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

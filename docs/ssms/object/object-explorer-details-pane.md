@@ -1,4 +1,5 @@
 ---
+description: Область сведений обозревателя объектов
 title: Область сведений обозревателя объектов
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c3a13ad090b378e00ed43d0319100ec8e8a0638
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c9ee38de46d4bcd689c471eb9f32fa79df40fa68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001917"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88370790"
 ---
 # <a name="object-explorer-details-pane"></a>Область сведений обозревателя объектов
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -86,7 +87,7 @@ ms.locfileid: "86001917"
 Страница «Подробности обозревателя объектов» поддерживает выбор нескольких объектов. Например, если в обозревателе объектов выбрано "Таблицы", то в окне "Подробности обозревателя объектов", удерживая нажатой клавишу **CTRL** , можно выбрать несколько таблиц, щелкнуть их правой кнопкой мыши, а затем выбрать **Удалить** или **Создать скрипт для таблицы** , чтобы распространить действие сразу на все выбранные таблицы. Стандартные команды копирования выполняют копирование текста в буфер обмена.  
   
 ## <a name="sql-server-object-search"></a>Поиск объектов SQL Server  
-Подстановочные знаки  
+подстановочные знаки;  
   
 -   Поддерживаются стандартные символы-шаблоны. Например, поиск по **dm_os%counters** вернет как "dm_os_memory_cache_counters", так и "dm_os_performance_counters". Дополнительные сведения см. в разделе [Практическое руководство. Поиск с помощью шаблонов](../../relational-databases/scripting/search-text-with-wildcards.md).  
   
