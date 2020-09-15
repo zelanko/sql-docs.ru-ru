@@ -1,4 +1,5 @@
 ---
+description: Метод setTransactionIsolation (SQLServerConnection)
 title: Метод setTransactionIsolation (SQLServerConnection) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 6a8fa4d3-5237-40f8-8a02-b40a3d7a1131
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 165a2096a1d34152de6956b56d5273f179faf8ea
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 552920c275dee8b1dede1b229b593ce8b7547428
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926469"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88355007"
 ---
 # <a name="settransactionisolation-method-sqlserverconnection"></a>Метод setTransactionIsolation (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

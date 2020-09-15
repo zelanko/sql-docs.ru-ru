@@ -1,4 +1,5 @@
 ---
+description: Элементы SQLServerNClob
 title: Элементы SQLServerNClob | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b063f191-175e-4430-aab7-d88907f4ebec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 80f495051aabf5ecf3d020fc749cfdb4ddfd4c5f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3e23a4a5e9a4cb2d2c2a7ecd93db8615e814652c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923537"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88354460"
 ---
 # <a name="sqlservernclob-members"></a>Элементы SQLServerNClob
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "80923537"
   
 ## <a name="methods"></a>Методы  
   
-|Имя|Description|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[free](../../../connect/jdbc/reference/free-method-sqlservernclob.md)|Этот метод освобождает объект **NCLOB** и ресурсы, занятые им.|  
 |[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlservernclob.md)|Извлекает значение **NCLOB**, обозначенное объектом **java.sql.NClob** в ASCII-потоке.|  
