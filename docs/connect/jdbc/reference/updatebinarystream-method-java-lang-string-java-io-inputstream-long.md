@@ -1,4 +1,5 @@
 ---
+description: Метод updateBinaryStream (java.lang.String, java.io.InputStream, long)
 title: Метод updateBinaryStream (int, java.io.InputStream, long) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d3c0fb5d-ca05-43f7-9f38-fba6cf3705c6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0098e80556a129aad720b133f7eeca1ebfc22b6e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 996116323d93143f2de09ffc2adebbe89adcfac5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924991"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88354190"
 ---
 # <a name="updatebinarystream-method-javalangstring-javaioinputstream-long"></a>Метод updateBinaryStream (java.lang.String, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
