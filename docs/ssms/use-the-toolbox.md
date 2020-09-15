@@ -1,4 +1,5 @@
 ---
+description: Использование панели элементов
 title: Использование панели элементов
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1bf323be4adf219bcf00dbf48fb6c40433b3611d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f1337cc28109bf1fce2d65b9a0bd46a2302e01db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009349"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88315260"
 ---
 # <a name="use-the-toolbox"></a>Использование панели элементов
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "86009349"
   
 Элементы в области элементов группируются в разделы, называемые вкладками. Ниже приведено описание выполнения типичных операций с областью элементов.  
   
-|Чтобы|выполните следующее:|  
+|Кому|выполните следующее:|  
 |------|-----------|  
 |открыть область элементов,|В меню **Вид** выберите пункт **Область элементов**.|  
 |настроить автоматическое закрытие области элементов,|откройте область элементов. В меню **Окно** установите флажок **Автоматически скрывать**.|  

@@ -14,12 +14,12 @@ ms.assetid: dc6a3372-db26-43f0-b7aa-f725acc635c2
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 56da894b141733357ff33ec820073c52836e4cca
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d5499ace3a3a0b0f1ba98b8ae1859b51d9867eeb
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866067"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87397093"
 ---
 # <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>Поддерживаемые сочетания компонентов SharePoint и сервера служб Reporting Services
 
@@ -38,23 +38,23 @@ ms.locfileid: "74866067"
 
 ### <a name="supported-combinations"></a>Поддерживаемые сочетания
 
-||Сервер отчетов|Надстройка|Версия SharePoint|
+|Number|Сервер отчетов|Надстройка|Версия SharePoint|
 |-|-------------------|-------------|------------------------|
 |1|SQL Server 2016|SQL Server 2016|SharePoint 2016|
-|2|SQL Server 2016|SQL Server 2016|SharePoint 2013|
-|3|SQL Server 2014|SQL Server 2014|SharePoint 2013|
-|4|SQL Server 2014|SQL Server 2014|SharePoint 2010|
-|5|SQL Server 2012 с пакетом обновления 4 (SP4)|SQL Server 2014 и SQL Server 2012 с пакетом обновления 4 (SP4)|SharePoint 2013|
-|6|SQL Server 2012 с пакетом обновления 3 (SP3)|SQL Server 2014 и SQL Server 2012 с пакетом обновления 3 (SP3)|SharePoint 2013|
-|7|SQL Server 2012 с пакетом обновления 2 (SP2)|SQL Server 2014 и SQL Server 2012 с пакетом обновления 2 (SP2)|SharePoint 2013|
-|8|SQL Server 2012 с пакетом обновления 1 (SP1)|SQL Server 2014 и SQL Server 2012 с пакетом обновления 1 (SP1)|SharePoint 2013|
-|9|SQL Server 2012 и SQL Server 2012 с пакетом обновления 1 (SP1)*|SQL Server 2014|SharePoint 2010|
-|10|SQL Server 2012|SQL Server 2012|SharePoint 2010|
-|11|SQL Server 2008 R2|SQL Server 2014|SharePoint 2010|
-|12|SQL Server 2008 R2|SQL Server 2012 и SQL Server 2012 с пакетом обновления 1 (SP1) или более поздние версии|SharePoint 2010|
-|13|SQL Server 2008 R2|SQL Server 2008 R2|SharePoint 2010|
+|2|SQL Server 2016|SQL Server 2016|SharePoint 2013|
+|3|SQL Server 2014|SQL Server 2014|SharePoint 2013|
+|4|SQL Server 2014|SQL Server 2014|SharePoint 2010|
+|5|SQL Server 2012 с пакетом обновления 4 (SP4)|SQL Server 2014 и SQL Server 2012 с пакетом обновления 4 (SP4)|SharePoint 2013|
+|6|SQL Server 2012 с пакетом обновления 3 (SP3)|SQL Server 2014 и SQL Server 2012 с пакетом обновления 3 (SP3)|SharePoint 2013|
+|7|SQL Server 2012 с пакетом обновления 2 (SP2)|SQL Server 2014 и SQL Server 2012 с пакетом обновления 2 (SP2)|SharePoint 2013|
+|8|SQL Server 2012 с пакетом обновления 1 (SP1)|SQL Server 2014 и SQL Server 2012 с пакетом обновления 1 (SP1)|SharePoint 2013|
+|9|SQL Server 2012 и SQL Server 2012 с пакетом обновления 1 (SP1)*|SQL Server 2014|SharePoint 2010|
+|10|SQL Server 2012|SQL Server 2012|SharePoint 2010|
+|11|SQL Server 2008 R2|SQL Server 2014|SharePoint 2010|
+|12|SQL Server 2008 R2|SQL Server 2012 и SQL Server 2012 с пакетом обновления 1 (SP1) или более поздние версии|SharePoint 2010|
+|13|SQL Server 2008 R2|SQL Server 2008 R2|SharePoint 2010|
 |14|SQL Server 2008 R2|SQL Server 2008 с пакетом обновления 2 (SP2)|SharePoint 2007|
-|15|SQL Server 2008 с пакетом обновления 2 (SP2)|SQL Server 2008 R2|SharePoint 2010|
+|15|SQL Server 2008 с пакетом обновления 2 (SP2)|SQL Server 2008 R2|SharePoint 2010|
 |16|SQL Server 2008 с пакетом обновления 2 (SP2)|SQL Server 2008 и SQL Server 2008 с пакетом обновления 2 (SP2)|SharePoint 2007|
 
  *Исключение: интеграция с Power View не поддерживается.
@@ -75,7 +75,7 @@ ms.locfileid: "74866067"
 
 - **Обновление.** SharePoint 2010 с установленной надстройкой [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] нельзя обновить на месте до SharePoint 2013. Для SharePoint 2013 требуется надстройка [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] версии SQL Server 2012 с пакетом обновления 1 (SP1) или более поздней и сервер отчетов. Дополнительные сведения по обновлению см. в разделе [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Дальнейшие шаги
 
  [Где найти надстройку службы Reporting Services для продуктов SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)   
  [Возможности, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-components-of-sql-server-2017.md)   

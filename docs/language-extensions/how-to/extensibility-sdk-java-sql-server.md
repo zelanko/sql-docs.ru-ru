@@ -1,6 +1,6 @@
 ---
 title: Пакет Microsoft Extensibility SDK для Java
-description: Узнайте, как реализовать программу Java для SQL Server с помощью пакета Microsoft Extensibility SDK для Java. Пакет SDK — это интерфейс для расширения языка Java, который используется для обмена данными с SQL Server и выполнения кода Java из SQL Server.
+description: Узнайте, как реализовать программу Java для SQL Server с помощью пакета Microsoft Extensibility SDK для Java.
 ms.prod: sql
 ms.technology: language-extensions
 ms.date: 11/05/2019
@@ -9,15 +9,15 @@ author: nelgson
 ms.author: negust
 ms.reviewer: dphansen
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 67e54169dab869751a0e63e9e1e4a2d62a23d34c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 175c96e19c0a15cd2e995c527f869a6f8a2ca7ab
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722568"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173579"
 ---
 # <a name="microsoft-extensibility-sdk-for-java-for-sql-server"></a>Пакет SDK Майкрософт для расширения возможностей Java в SQL Server
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 Узнайте, как реализовать программу Java для SQL Server с помощью пакета Microsoft Extensibility SDK для Java. Пакет SDK — это интерфейс для расширения языка Java, который используется для обмена данными с SQL Server и выполнения кода Java из SQL Server.
 
@@ -92,7 +92,7 @@ public void init(String sessionId, int taskId, int numtask) {}
 
 Он предоставляется в пакете SDK как дополнительный, вспомогательный класс. Если этот класс не используется, реализуйте собственный класс, наследующий классу **AbstractSqlServerExtensionDataset**.  
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Дальнейшие шаги
 
 + [Руководство. Поиск строки с использованием регулярных выражений (regex) в Java](../tutorials/search-for-string-using-regular-expressions-in-java.md)
 + [Как вызвать код Java в SQL Server](call-java-from-sql.md)
