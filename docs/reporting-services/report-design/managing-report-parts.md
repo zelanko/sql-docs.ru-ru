@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 233aa6a48937d26b9e9f9c486f4cda7238245a47
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: a1c8b7ee7baed3008dece84d1a2f7f0f4e28e8f9
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689674"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934274"
 ---
 # <a name="managing-report-parts"></a>Управление элементами отчета
   Элементы отчета могут повторно использоваться в отчетах с разбиением на страницы несколькими пользователями и в нескольких отчетах. Пользователи могут искать элементы отчета на сервере и добавлять их в отчет.  Пользователи могут также получать уведомления об обновлениях для элемента отчета на сервере и заново публиковать новые версии элемента отчета. Права доступа служб отчетов могут влиять на действия по созданию отчетов, а также позволяют управлять ими.  В этом разделе рассматриваются свойства и режимы работы для элементов отчетов после их появления на сервере.  
@@ -90,7 +90,6 @@ ms.locfileid: "83689674"
 ## <a name="see-also"></a>См. также:  
  [Элементы отчета и наборы данных в построителе отчетов](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [Управление содержимым сервера отчетов (службы Reporting Services в основном режиме)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Устранение неполадок в элементах отчета (построитель отчетов и службы SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
  [Элементы отчетов в конструкторе отчетов (SSRS)](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
   
   

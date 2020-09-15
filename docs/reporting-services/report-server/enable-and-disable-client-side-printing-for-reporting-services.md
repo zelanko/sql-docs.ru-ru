@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9ffa8d5781eb3ad7eb95a4dc5b360ad51ede6843
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 4a2f61a8700c24a2cc41192103f57a51befbbd15
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547476"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87390661"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Включение и отключение печати на стороне клиента для служб Reporting Services
 
@@ -32,7 +32,7 @@ ms.locfileid: "84547476"
   
  ![Панель инструментов «Отчеты»](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "Панель инструментов «Отчеты»")  
   
-|||  
+|Взаимодействие|Пользовательский интерфейс|  
 |-|-|  
 |Первое диалоговое окно будет одинаковым во всех браузерах. Здесь вы можете изменить базовые параметры печати, например ориентацию страницы. Когда вы нажмете кнопку **Печать**, дальнейший процесс в разных браузерах будет немного отличаться.|![ssrs_pdfprint_chrome1](../../reporting-services/report-server/media/ssrs-pdfprint-chrome1.png "ssrs_pdfprint_chrome1")|  
 |В браузере Chrome откроется диалоговое окно печати с подробными настройками.   Здесь можно изменить параметры печати, распечатать файл или открыть стандартное для операционной системы диалоговое окно печати.|![ssrs_pdfprint_chrome2](../../reporting-services/report-server/media/ssrs-pdfprint-chrome2.png "ssrs_pdfprint_chrome2") ![ssrs_pdfprint_chrome3.png](../../reporting-services/report-server/media/ssrs-pdfprint-chrome3-png.png "ssrs_pdfprint_chrome3.png")|  

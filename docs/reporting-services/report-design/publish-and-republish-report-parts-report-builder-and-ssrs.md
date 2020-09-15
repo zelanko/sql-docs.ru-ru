@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0c8beab2bdd11e0b8f3b550d46601b5e00069525
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: f8848fb3d8d474083e0ce1a10b7d355a2e4b886e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255227"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87928635"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>Публикация и повторная публикация элементов отчетов (построитель отчетов и службы SSRS)
   Части отчета — это элементы отчета с разбиением на страницы, опубликованные отдельно на сервере отчетов, которые можно повторно использовать в других отчетах с разбиением на страницы. Предусмотрена возможность публикации элемента отчета с настройками по умолчанию в заданном по умолчанию местоположении или изменения таких метаданных элемента отчета, как заголовок и описание, с последующим сохранением где-то в другом месте на сервере отчетов. Можно также сохранить ее на сайте SharePoint, который объединен с сервером отчетов (при наличии соответствующих разрешений).  
@@ -58,8 +58,6 @@ ms.locfileid: "84255227"
 ## <a name="see-also"></a>См. также:  
  [Элементы отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
  [Элементы отчета и наборы данных в построителе отчетов](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [Устранение неполадок в элементах отчета (построитель отчетов и службы SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
- [Проверка наличия обновлений или отключение обновлений (построитель отчетов и службы SSRS)](https://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606)   
  [Просмотр элементов отчета и назначение папки по умолчанию (построитель отчетов и службы SSRS)](../../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
   

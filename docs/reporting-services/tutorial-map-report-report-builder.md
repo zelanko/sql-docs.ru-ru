@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 069fb0c365e3ecb5353e9dad99f116779222af87
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a8977a2b0b90a83e920452d2a843d0c035440113
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248133"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87945230"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Руководство по Отчет-карта (построитель отчетов)
 Этот учебник по [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] позволяет изучить функции карты, которые можно использовать для отображения данных отчета [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы в географическом контексте. 
@@ -33,7 +33,7 @@ ms.locfileid: "87248133"
 На изучение этого руководства потребуется примерно 30 минут.  
   
 ## <a name="requirements"></a>Требования  
-Для работы с учебником сервер отчетов необходимо настроить для поддержки карт Bing в качестве фона. Дополнительные сведения см. в разделе [План поддержки отчетов-карт](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19). 
+Для работы с учебником сервер отчетов необходимо настроить для поддержки карт Bing в качестве фона. Дополнительные сведения см. в разделе [План поддержки отчетов-карт](https://docs.microsoft.com/sql/reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs). 
 
 Дополнительные сведения о требованиях см. в разделе [Предварительные условия для использования учебников (построитель отчетов)](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   

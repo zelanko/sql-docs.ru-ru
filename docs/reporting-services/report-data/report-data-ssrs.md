@@ -10,12 +10,12 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 11/18/2019
-ms.openlocfilehash: ba53401168c1b16bb4b61186c6883f0612b7ba60
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: d9581fe8ae3f250d40eeaf21e76c4e1f373e12cd
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458906"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395345"
 ---
 # <a name="intro-to-report-data-in-sql-server-reporting-services-ssrs"></a>Введение в данные отчета в SQL Server Reporting Services (SSRS)
 
@@ -98,9 +98,8 @@ ms.locfileid: "86458906"
 
  Задачи, связанные с созданием подключений к данным, добавления данных из внешних источников, наборов данных и запросов.  
   
-|||  
+|Общие задачи|Создание ссылок|  
 |-|-|  
-|**Общие задачи**|**Ссылки**|  
 |Создание подключений к данным|[Create data connection strings — Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) (Создание строк подключения к данным (построитель отчетов и службы SSRS))|  
 |Создание наборов данных и запросов|[Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|  
 |Управление источниками данных после их публикации|[Управление источниками данных отчета](../../reporting-services/report-data/manage-report-data-sources.md)|  

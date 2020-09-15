@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 41a0f20b28e54c1680546625ae09df649499b2db
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: 522d18c5eca3f9200f69b68e3f269ce01212a608
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764740"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934233"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Служба и приложения службы Reporting Services в SharePoint
 
@@ -29,7 +29,7 @@ ms.locfileid: "83764740"
   
 ## <a name="creating-a-reporting-services-service-application"></a>Создание приложения службы Reporting Services
 
- Для создания приложений служб Reporting Services можно использовать центр администрирования SharePoint или скрипты PowerShell. Дополнительные сведения об использовании центра администрирования SharePoint см. в разделе "Создание приложения службы Reporting Services" статьи [Установка служб Reporting Services в режиме интеграции с SharePoint для SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c). В подразделе PowerShell этого раздела приведен пример скрипта PowerShell для создания приложений службы.  
+ Для создания приложений служб Reporting Services можно использовать центр администрирования SharePoint или скрипты PowerShell. Дополнительные сведения об использовании центра администрирования SharePoint см. в разделе "Создание приложения службы Reporting Services" статьи [Установка служб Reporting Services в режиме интеграции с SharePoint для SharePoint 2010](https://docs.microsoft.com/sql/reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode). В подразделе PowerShell этого раздела приведен пример скрипта PowerShell для создания приложений службы.  
   
 ## <a name="modify-the-associations-of-the-service-application-with-a-proxy-group"></a>Изменение взаимосвязей приложения службы с использованием группы прокси
 

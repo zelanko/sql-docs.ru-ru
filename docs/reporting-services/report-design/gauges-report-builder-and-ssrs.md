@@ -157,12 +157,12 @@ f1_keywords:
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 24fb81c9714e9008308721906505aab8cc4247fc
-ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
+ms.openlocfilehash: 03c4fa2ddf36130fb9ff96899870207c6427efe1
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84011862"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87939224"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Датчики (построитель отчетов и службы SSRS)
   В отчетах [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы в области данных датчика отображается отдельное значение из набора данных. Отдельный датчик всегда располагается внутри панели датчиков, где можно добавить дочерние или соседние датчики. Панель датчиков также можно применить для создания нескольких датчиков, использующих одинаковые функции, например фильтрацию, группирование или сортировку.  
@@ -283,16 +283,13 @@ ms.locfileid: "84011862"
   
 -   [Установка минимума и максимума на датчике (построитель отчетов и службы SSRS)](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
   
--   [Установка интервала привязки в датчике (построитель отчетов и SSRS)](https://msdn.microsoft.com/0ece7297-6e2f-47fb-835d-b9e9cce53fe2)  
-  
--   [Выбор изображения ы качестве указателя на датчике (построитель отчетов и SSRS)](https://msdn.microsoft.com/9d73b3c3-a068-4868-a2be-0cd261b6e92b)  
+-   [Установка интервала привязки в датчике (построитель отчетов и SSRS)](https://docs.microsoft.com/sql/reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs)  
   
 ##  <a name="in-this-section"></a><a name="InThisSection"></a> в этом разделе  
  В следующих разделах представлены сведения о работе с датчиками.  
   
-|||  
-|-|-|  
 |Термин|Определение|  
+|-|-|  
 |[Форматирование шкал на датчике (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)|Содержит общие сведения о шкалах форматирования датчиков и подробные сведения о параметрах форматирования для шкал радиальных и линейных датчиков.|  
 |[Форматирование указателей на датчике (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|Содержит общие сведения о форматировании указателей датчиков и подробные сведения о параметрах форматирования для стилей указателей, доступных для радиальных и линейных датчиков.|  
 |[Форматирование диапазонов на датчике (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|Содержит сведения о форматировании диапазонов на датчиках, которые позволяют выделить на датчике важные подгруппы значений или визуальную индикацию вхождения значения указателя в определенный диапазон.|  
