@@ -1,4 +1,5 @@
 ---
+description: Основные сведения о владении диаграммами баз данных (визуальные инструменты для баз данных)
 title: Основные сведения о владении диаграммами баз данных
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ ms.assetid: 4a27a48e-c4ef-4017-82b8-0cac4d0bbcac
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 170851e58273695a588b9359ba07460eab6d6884
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d3da1122dcb61b50db189ec798f091496621cbfc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004134"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88312690"
 ---
 # <a name="understand-database-diagram-ownership-visual-database-tools"></a>Основные сведения о владении диаграммами баз данных (визуальные инструменты для баз данных)
 
