@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 15280d88b2219587ee63b15e8e98421be2734fab
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a83e1ea4c96144f7188812522ee121530bac351c
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885941"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178661"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Установите R Server или сервер машинного обучения (изолированный) с помощью программы установки SQL Server
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 Программа установки SQL Server поддерживает вариант установки автономного сервера машинного обучения **как общего компонента**, то есть за пределами SQL Server. Он называется **сервер машинного обучения (изолированный)** и включает Python и R. 
@@ -226,7 +226,7 @@ ms.locfileid: "85885941"
 Разработчики на языке R могут ознакомиться с простыми примерами, а также узнать, как код R работает с SQL Server. Дополнительные сведения см. в следующих статьях.
 
 + [Краткое руководство. Запуск R в T-SQL](../tutorials/quickstart-r-create-script.md)
-+ [Руководство. Аналитические функции в базе данных для разработчиков R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Руководство. Аналитические функции в базе данных для разработчиков R](../tutorials/r-taxi-classification-introduction.md)
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 Разработчики на языке Python могут узнать, как использовать Python с SQL Server, изучив следующие руководства.

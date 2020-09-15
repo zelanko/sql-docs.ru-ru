@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b3c3d469cb016a562f069473923f470ce750dd5e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8c496778731a972603019450be15b3ea72d4c415
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883905"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179803"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>Установка компонентов машинного обучения R и Python SQL Server из командной строки
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 В этой статье приводятся инструкции по установке компонентов машинного обучения SQL Server из командной строки:
 
@@ -216,4 +216,4 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR
 Разработчики на языке R могут ознакомиться с простыми примерами, а также узнать, как код R работает с SQL Server. Дополнительные сведения см. в следующих статьях.
 
 + [Краткое руководство. Запуск R в T-SQL](../tutorials/quickstart-r-create-script.md)
-+ [Руководство. Аналитические функции в базе данных для разработчиков R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Руководство. Аналитические функции в базе данных для разработчиков R](../tutorials/r-taxi-classification-introduction.md)

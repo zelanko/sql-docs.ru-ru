@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 268b8626fc3a121adfded58c1184b332da04139c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5f5cebd0fa6f45530ea5853cf365ea60a4c535ad
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730437"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179719"
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model-that-runs-remotely-on-sql-server"></a>Использование Python с revoscalepy для создания модели, которая выполняется удаленно на SQL Server
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
 
 Библиотека [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) Python от корпорации Майкрософт предоставляет алгоритмы обработки и анализа данных для просмотра, визуализации, преобразования и анализа данных. Эта библиотека имеет стратегическое значение в сценариях интеграции Python в SQL Server. На многоядерном сервере **функции** revoscalepy могут выполняться параллельно. В распределенной архитектуре с центральным сервером и клиентскими рабочими станциями (разными физическими компьютерами, на каждом из которых установлена библиотека **revoscalepy**) можно написать код Python, который запускается локально, но затем его выполнение перемещается на удаленный экземпляр SQL Server, в котором находятся данные.
 
@@ -176,5 +176,5 @@ def test_linmod_sql():
 
 Эти дополнительные примеры и учебники Python демонстрируют комплексные сценарии использования более сложных источников данных, а также использование удаленных контекстов вычислений.
 
-+ [Python в базе данных для разработчиков SQL](sqldev-in-database-python-for-sql-developers.md)
++ [Python в базе данных для разработчиков SQL](python-taxi-classification-introduction.md)
 + [Создание модели прогнозирования с помощью Python и SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/)

@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1af68324f613c0e47cd8cc5eaca73dca5881db04
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a6afdda3975fc8f6c269f9c1fcbca35318f0c4da
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242334"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180003"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Производительность служб R Services: результаты и ресурсы
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Эта статья является четвертой и последней в серии статьей. В ней описывается оптимизация производительности для служб R Services. В этой статье приводятся сводные данные по методам, обобщаются результаты и даются заключения по двум примерам использования, в которых тестировались различные способы оптимизации.
 

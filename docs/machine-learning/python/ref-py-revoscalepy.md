@@ -1,6 +1,6 @@
 ---
 title: Пакет Python revoscalepy
-description: revoscalepy — это пакет Python от корпорации Майкрософт, который поддерживает распределенные вычисления, удаленные контексты вычислений и высокопроизводительные алгоритмы обработки и анализа данных. Этот пакет входит в состав Служб машинного обучения SQL Server.
+description: revoscalepy — это пакет Python от корпорации Майкрософт, который поддерживает распределенные вычисления, удаленные контексты вычислений и высокопроизводительные алгоритмы обработки и анализа данных.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 07/14/2020
@@ -8,15 +8,15 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ae5d05658d94f6967049d9b6857d407286661f3f
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.openlocfilehash: c5932a335dc1789256932f327ba9dab58c6afaf7
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406187"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178628"
 ---
 # <a name="revoscalepy-python-package-in-sql-server-machine-learning-services"></a>revoscalepy (пакет Python в Службах машинного обучения SQL Server)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
 **revoscalepy** — это пакет Python от корпорации Майкрософт, который поддерживает распределенные вычисления, удаленные контексты вычислений и высокопроизводительные алгоритмы обработки и анализа данных. Этот пакет входит в состав [Служб машинного обучения SQL Server](../sql-server-machine-learning-services.md).
 
@@ -105,7 +105,7 @@ ms.locfileid: "86406187"
 
 Когда вы будете готовы инкапсулировать скрипт Python в хранимую процедуру [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), рекомендуется переписать код и оформить его в виде функции, которая содержит четко определенные входные и выходные данные. 
 
-Входные и выходные данные должны быть кадрами данных **Pandas**. После этого вы сможете вызывать хранимую процедуру из любого клиента, который поддерживает T-SQL, без труда передавать запросы SQL в качестве входных данных и сохранять результаты в таблицах SQL. Пример см. в статье об [анализе данных с помощью Python для разработчиков SQL](../tutorials/sqldev-in-database-python-for-sql-developers.md).
+Входные и выходные данные должны быть кадрами данных **Pandas**. После этого вы сможете вызывать хранимую процедуру из любого клиента, который поддерживает T-SQL, без труда передавать запросы SQL в качестве входных данных и сохранять результаты в таблицах SQL. Пример см. в статье об [анализе данных с помощью Python для разработчиков SQL](../tutorials/python-taxi-classification-introduction.md).
 
 ### <a name="using-revoscalepy-with-microsoftml"></a>Использование revoscalepy с microsoftml
 

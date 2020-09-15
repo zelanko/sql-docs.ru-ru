@@ -10,15 +10,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 424d61e24e9cd1163854d86961a34770eee36260
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 07b2cf5a77199f64d89d8dd61f8ec89268d759c5
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730482"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173415"
 ---
 # <a name="python-tutorial-prepare-data-to-train-a-linear-regression-model-with-sql-machine-learning"></a>Учебник по Python. Подготовка данных для обучения модели линейной регрессии с помощью машинного обучения SQL
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Во второй части этого цикла учебников, состоящего из четырех частей, вы подготовите данные из базы данных с помощью Python. Далее в этом цикле вы будете использовать подготовленные данные для обучения и развертывания модели линейной регрессии в Python с помощью Служб машинного обучения SQL Server или в Кластерах больших данных.

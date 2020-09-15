@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a42d3203455d4273410b9b216c19e7a9d1da4e3a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 95390a1eb5418a43883a9605c7498e6a86876e7e
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896380"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178901"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>Настройка клиента обработки и анализа данных для разработки на R в SQL Server
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Интеграция R доступна в SQL Server 2016 и более поздних версиях, если включить параметр для языка R во время установки [служб SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) и [служб машинного обучения SQL Server (в базе данных)](../install/sql-machine-learning-services-windows-install.md). 
 
@@ -38,7 +38,7 @@ ms.locfileid: "85896380"
 
 Для простых сценариев разработки R можно использовать исполняемый файл RGUI, входящий в базовый дистрибутив R в MRO и SQL Server. В этой статье приводятся инструкции по использованию RGUI как для локальных, так и для удаленных сеансов R. Для повышения производительности следует использовать полнофункциональную интегрированную среду разработки, например [RStudio или Visual Studio](#install-ide).
 
-Набор средств SSMS необходимо скачать отдельно. Он подходит для создания и выполнения хранимых процедур в SQL Server, в том числе процедур, содержащих код R. Практически любой код R, написанный в среде разработки, можно внедрять в хранимые процедуры. Вы можете ознакомиться с другими руководствами, чтобы узнать о [SSMS и внедрении кода R](../tutorials/sqldev-in-database-r-for-sql-developers.md).
+Набор средств SSMS необходимо скачать отдельно. Он подходит для создания и выполнения хранимых процедур в SQL Server, в том числе процедур, содержащих код R. Практически любой код R, написанный в среде разработки, можно внедрять в хранимые процедуры. Вы можете ознакомиться с другими руководствами, чтобы узнать о [SSMS и внедрении кода R](../tutorials/r-taxi-classification-introduction.md).
 
 ## <a name="1---install-r-packages"></a>1\. Установка пакетов R
 

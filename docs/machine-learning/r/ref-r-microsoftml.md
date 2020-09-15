@@ -8,15 +8,15 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 28f043ea0005f1020581218c358aed559285a5a4
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.openlocfilehash: d7b48e547d402e15404e39e849c262320c5ee59e
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406177"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179951"
 ---
 # <a name="microsoftml-r-package-in-sql-server-machine-learning-services"></a>MicrosoftML (пакет R в Службах машинного обучения SQL Server)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 **MicrosoftML** — это пакет R от Майкрософт, предоставляющий высокопроизводительные алгоритмы машинного обучения. Он включает в себя функции для обучения и преобразований, оценки, анализа текста и изображений, а также извлечения компонентов для получения значений из существующих данных. Пакет входит в [Службы машинного обучения SQL Server](../sql-server-machine-learning-services.md) и [службы SQL Server 2016 R](sql-server-r-services.md) и поддерживает высокую производительность при работе с большими данными, используя многоядерную обработку и быструю потоковую передачу данных. MicrosoftML также включает многочисленные преобразования для обработки текста и изображений.
 
@@ -152,6 +152,6 @@ logisticRegression(args);
 
 + [Учебники по R](../tutorials/sql-server-r-tutorials.md)
 + [Использование контекстов вычисления](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
-+ [R для разработчиков на SQL: обучение и эксплуатация модели](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [R для разработчиков на SQL: обучение и эксплуатация модели](../tutorials/r-taxi-classification-introduction.md)
 + [Примеры продуктов Майкрософт на сайте GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples)
 + [Справочник по R (Microsoft Machine Learning Server)](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) 

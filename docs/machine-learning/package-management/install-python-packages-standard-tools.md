@@ -9,15 +9,15 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 2ed46c4c4fc79d47bf2ca60b16f7d5563fd15d05
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3bee37788001edabd454891d8e9081814f198490
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723978"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179290"
 ---
 # <a name="install-packages-with-python-tools-on-sql-server"></a>Установка пакетов с инструментами Python в SQL Server
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]
 
 В этой статье описывается, как использовать стандартные средства Python для установки новых пакетов Python в экземпляре Служб машинного обучения SQL Server. Как правило, процесс установки новых пакетов аналогичен процессу в стандартной среде Python. Тем не менее если сервер не подключен к Интернету, необходимы некоторые дополнительные действия.
 

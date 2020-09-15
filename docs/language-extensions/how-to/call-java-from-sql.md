@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5aa8659b57349efb7378209006bbada148206bcb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 04e883861bfd14d5a5b69a080e1ed41bfeccd147
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735121"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180299"
 ---
 # <a name="how-to-call-the-java-runtime-in-sql-server-language-extensions"></a>Вызов среды выполнения Java в расширениях языка SQL Server
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 [Расширения языка SQL Server](../language-extensions-overview.md) используют системную хранимую процедуру [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) в качестве интерфейса для вызова среды выполнения Java. 
 

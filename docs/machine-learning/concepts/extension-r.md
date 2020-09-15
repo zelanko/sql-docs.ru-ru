@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e51e4121a7e941512a84e3acf577af0ff687f4d7
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.openlocfilehash: 02516b35a75c39c967b916d2e424362114008480
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406277"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173281"
 ---
 # <a name="r-language-extension-in-sql-server-machine-learning-services"></a>Расширение языка R в Службах машинного обучения SQL Server
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 В этой статье описывается расширение R для выполнения внешних скриптов Python с помощью [Службы машинного обучения SQL Server](../sql-server-machine-learning-services.md) и [служб SQL Server 2016 Services](../r/sql-server-r-services.md). Расширение добавляет следующее.
 

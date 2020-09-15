@@ -10,16 +10,16 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 877728812d36a7d4db8370254c0fdccbe1011350
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b998c66511dc749002df01349bcb965b7f42e713
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723944"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178912"
 ---
 # <a name="get-r-package-information"></a>Получение сведений о пакете R
 
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 В этой статье описывается, как получить сведения об установленных пакетах R в [Службах машинного обучения в SQL Server](../sql-server-machine-learning-services.md) и [Кластерах больших данных](../../big-data-cluster/machine-learning-services.md). Примеры сценариев R показывают, как получить сведения о пакете, например путь установки и версия.
