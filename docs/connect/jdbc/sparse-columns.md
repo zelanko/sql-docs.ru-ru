@@ -1,4 +1,5 @@
 ---
+description: Разреженные столбцы
 title: Разреженные столбцы | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7d4237e0-818f-4639-9093-d5ac9683fc71
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6767ff420defc32bf91559e11878672012de626b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 406f4fea8df9a3c410f126f5a766aeb2e1ad4bb8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909591"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88396300"
 ---
 # <a name="sparse-columns"></a>Разреженные столбцы
 
@@ -35,7 +36,7 @@ ms.locfileid: "80909591"
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Description
+### <a name="description"></a>Описание
 
 В этом образце показано, как выделить наборы столбцов. Также в нем показано, как анализировать выходные XML-данные набора столбцов для получения данных из разреженных столбцов.
 
