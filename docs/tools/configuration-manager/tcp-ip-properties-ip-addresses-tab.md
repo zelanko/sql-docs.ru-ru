@@ -6,7 +6,7 @@ ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology: configuration
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], listening on
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c68b7a9f1da65862403750e32315ee7168ded6e6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8824963894b70412ff4525f25b40de7ed53ccd3b
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880299"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901055"
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>Свойства TCP/IP (вкладка "IP-адреса")
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -62,8 +62,7 @@ ms.locfileid: "85880299"
  Изучите статьи MSDN **Настройка сервера для прослушивания указанного TCP-порта (диспетчер конфигурации SQL Server)** и **Настройка компонента Database Engine на прослушивание нескольких портов TCP**.  
   
 ## <a name="see-also"></a>См. также:  
- [Выбор сетевого протокола](https://msdn.microsoft.com/library/ms187892(v=sql.120).aspx)   
+ [Выбор сетевого протокола](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
  [Создание допустимой строки подключения с использованием протокола TCP/IP](creating-a-valid-connection-string-using-tcp-ip.md)   
  [Служба обозревателя SQL Server](sql-server-browser-service.md)  
-  
   

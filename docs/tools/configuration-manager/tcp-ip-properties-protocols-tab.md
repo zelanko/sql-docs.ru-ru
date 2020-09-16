@@ -6,19 +6,19 @@ ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology: configuration
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - TCP/IP [SQL Server], configuration options
 ms.assetid: 007638fc-3a24-4460-adbe-545ded5d6f88
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2e9bf22b501a097e59af3bef953ffcbaa26780c1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1b53ae759c4a8875d329f9ac7b443f4168042c96
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880289"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88900927"
 ---
 # <a name="tcpip-properties-protocols-tab"></a>Свойства TCP/IP (вкладка «Протоколы»)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -40,7 +40,6 @@ ms.locfileid: "85880289"
  SQL Server не реализует изменения этого свойства.  
   
 ## <a name="see-also"></a>См. также:  
- [Выбор сетевого протокола](https://msdn.microsoft.com/library/ms187892(v=sql.130).aspx)   
+ [Выбор сетевого протокола](/previous-versions/sql/sql-server-2016/ms187892(v=sql.130))   
  [Создание допустимой строки подключения с использованием протокола TCP/IP](creating-a-valid-connection-string-using-tcp-ip.md)  
-  
   
