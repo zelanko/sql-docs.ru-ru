@@ -1,4 +1,5 @@
 ---
+description: Политика поддержки SQL Server Management Studio (SSMS)
 title: Политика поддержки SQL Server Management Studio (SSMS)
 ms.date: 11/13/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 author: dnethi
 ms.author: dinethi
-ms.openlocfilehash: 2b46da30a4ea3c7548ca4696f144373feea7b986
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 035ea616a92f1760252087bc6a8e27bec3fe2d24
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245666"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497272"
 ---
 # <a name="sql-server-management-studio-ssms-support-policy"></a>Политика поддержки SQL Server Management Studio (SSMS)
 
@@ -43,4 +44,4 @@ ms.locfileid: "75245666"
 
 
 > [!NOTE]
-> Последняя версия Current Branch всегда находится на этапе обслуживания **Полная поддержка**. Это заявление о поддержке означает, что при обнаружении ошибки в коде, для которой требуется критическое обновление, у вас должна быть установлена последняя версия Current Branch, позволяющая получать исправления.
+> Последняя версия Current Branch всегда находится на этапе обслуживания **Полная поддержка**. Это заявление о поддержке означает, что если вы обнаружили ошибку в коде, для которой требуется критическое обновление, то для получения исправления должна быть установлена последняя версия Current Branch.

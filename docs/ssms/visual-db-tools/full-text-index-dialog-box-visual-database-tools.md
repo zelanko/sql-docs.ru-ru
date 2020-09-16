@@ -1,4 +1,5 @@
 ---
+description: Диалоговое окно «Полнотекстовые индексы» (визуальные инструменты для баз данных)
 title: Диалоговое окно "Полнотекстовый индекс"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 8330963e62c3185203c9b25c53785f12ec9fb8be
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 566239ac238afb66650c50cd9d96c8fa81d3f70c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004945"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497147"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>Диалоговое окно «Полнотекстовые индексы» (визуальные инструменты для баз данных)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,13 +55,13 @@ ms.locfileid: "86004945"
 **Категория «Идентификатор»**  
 Когда она открыта, показывает поле имени для этого индекса.  
   
-**Название**  
+**Имя**  
 Отображает установленное системой имя для этого полнотекстового индекса.  
   
 **Категория конструктора таблиц**  
 При развертывании показывает свойства, определяющие выполнение индекса.  
   
-**Активно**  
+**Активен**  
 Указывает на возможность или невозможность выполнения полнотекстового поиска с использованием данного полнотекстового индекса.  
   
 **Настройка отслеживания изменений**  

@@ -1,4 +1,5 @@
 ---
+description: Конструктор SQLServerClob (SQLServerConnection, java.lang.String)
 title: Конструктор SQLServerClob (SQLServerConnection, java.lang.String) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 7058f4f7-ef3e-4d62-90d1-79299708b1eb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cb6b459f8193daebb69ad67ffaab5beab526f710
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7ea4bec9b1d3bc8ab297d548dfb8c94f4007d861
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920387"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478606"
 ---
 # <a name="sqlserverclob-constructor-sqlserverconnection-javalangstring"></a>Конструктор SQLServerClob (SQLServerConnection, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +40,7 @@ public SQLServerClob(SQLServerConnection connection,
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *connection*  
+ *connection*;  
   
  Объект SQLServerConnection.  
   

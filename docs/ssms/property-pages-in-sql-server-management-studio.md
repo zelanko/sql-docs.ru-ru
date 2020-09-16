@@ -1,4 +1,5 @@
 ---
+description: Страницы свойств в среде SQL Server Management Studio
 title: Страницы свойств в среде SQL Server Management Studio
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 719282c3-e9cc-4e0e-9a83-7fb8b8b17f67
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c865561f66f9f40ce131e9b8dce563f77ca187aa
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b6e1d6d0b7f1b3910baa1a81e5fe1a682f6a9ed6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001808"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491828"
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>Страницы свойств в среде SQL Server Management Studio
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "86001808"
   
 В следующей таблице описаны общие элементы диалоговых окон страниц свойств среды [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] .  
   
-|Элемент|Description|  
+|Элемент|Описание|  
 |-----------|---------------|  
 |**По категориям**|Перечисляются все свойства и их значения для выбранного объекта, отсортированные по категориям. В представлении по категориям можно свернуть ту или иную категорию, чтобы сократить число отображаемых свойств. При раскрытии или свертывании категории слева от ее имени появляется знак «плюс» (+) или «минус» (-). Категории перечислены в алфавитном порядке.|  
 |**По алфавиту**|Все свойства и их значения для выбранного объекта перечисляются в алфавитном порядке.|  

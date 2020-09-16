@@ -1,4 +1,5 @@
 ---
+description: Выбор строк для миграции с использованием функции фильтров (Stretch Database)
 title: Выбор строк для миграции с использованием функции фильтров
 ms.date: 06/27/2016
 ms.service: sql-server-stretch-database
@@ -13,15 +14,15 @@ ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 9bb34b5e716f4cb0da7f11e5ce4772f52712127f
-ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
+ms.openlocfilehash: 31199872a4a206469c44f91aa80c3606f129fdb9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82872760"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492617"
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>Выбор строк для миграции с использованием функции фильтров (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Если холодные данные хранятся в отдельной таблице, можно настроить базу данных Stretch, чтобы перенести эту таблицу целиком. С другой стороны, если таблица содержит горячие и холодные данные, строки для миграции можно выбирать с помощью предиката фильтра. Этот предикат фильтра является встроенной функцией с табличным значением. В этой статье описывается создание встроенной функции с табличным значением для выбора строк для миграции.  
@@ -86,7 +87,7 @@ RETURN  SELECT 1 AS is_eligible
   
 -   Сравнение параметра функции с константным выражением. Например, `@column1 < 1000`.  
   
-     Ниже приведен пример, в котором проверяется, меньше ли значение столбца *date*, чем 01.01.2016.  
+     Ниже приведен пример, в котором проверяется, меньше ли значение столбца ** date&lt;, чем 01.01.2016.  
   
     ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate(@column1 datetime)  

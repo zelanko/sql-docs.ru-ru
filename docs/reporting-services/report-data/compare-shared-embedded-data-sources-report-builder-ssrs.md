@@ -1,4 +1,5 @@
 ---
+description: Сравнение общих и внедренных источников данных в построителе отчетов и Reporting Services (SSRS)
 title: Сравнение общих и внедренных источников данных в построителе отчетов и Reporting Services | Документация Майкрософт
 ms.date: 11/18/2019
 ms.prod: reporting-services
@@ -7,12 +8,12 @@ ms.technology: report-data
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 33e257659922e3e0dcf06f559838db0c58f0b18e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 25721242123d34c1cb4b826cd937df2decf02523
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081792"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484997"
 ---
 # <a name="compare-shared-and-embedded-data-sources---report-builder--reporting-services-ssrs"></a>Сравнение общих и внедренных источников данных в построителе отчетов и Reporting Services (SSRS)
 
@@ -38,7 +39,7 @@ ms.locfileid: "77081792"
   
  В следующей таблице приведены все различия между внедренными и общими источниками данных.  
   
-|Description|Внедренный<br /><br /> Источник данных|Совмещаемая блокировка<br /><br /> Источник данных|  
+|Описание|Внедренный<br /><br /> Источник данных|Совмещаемая блокировка<br /><br /> Источник данных|  
 |-----------------|------------------------------|----------------------------|  
 |Подключение к данным внедрено в определение отчета.|![Доступно](../../reporting-services/report-data/media/greencheck.gif "Доступно")||  
 |Указатель на подключение к данным на сервере ответов внедрен в определение отчета.||![Доступно](../../reporting-services/report-data/media/greencheck.gif "Доступно")|  

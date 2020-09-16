@@ -1,4 +1,5 @@
 ---
+description: Создание проекта
 title: Создание проекта
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +13,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 41737a8e6c68c27266feec1be69abee28413d287
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7e3bc58b9f702478bdef96535bc7c784d9e410df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999556"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497364"
 ---
 # <a name="create-a-project"></a>Создание проекта
 
@@ -35,7 +36,7 @@ ms.locfileid: "85999556"
     **Шаблоны**  
     В поле **Шаблоны** выберите шаблон. Краткое описание выбранного шаблона проекта появляется под полем **Шаблоны** .  
   
-    **Название**  
+    **Имя**  
     Введите имя создаваемого проекта скрипта. Папка с именем проекта создается в месте, указанном в поле **Расположение** . Для некоторых проектов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] создаются исходные и прочие вспомогательные файлы, которые добавляются в папку нового проекта.  
   
     > [!NOTE]  
@@ -71,7 +72,7 @@ ms.locfileid: "85999556"
   
     -   Имена, зарезервированные для Microsoft Windows или MS-DOS, такие как ("nul", "aux", "con", "com1", "lpt1" и так далее)  
   
-    **Местоположение**  
+    **Расположение**  
     Укажите расположение, где нужно создать проект, либо выберите его из списка.  
   
     **Обзор**  
@@ -91,7 +92,7 @@ ms.locfileid: "85999556"
     **Добавить к системе управления версиями**  
     Если данный флажок установлен, приложение системы управления версиями откроется при нажатии кнопки **ОК**. Для продолжения задайте все сведения, необходимые приложению системы управления версиями. Для использования этого параметра необходимо установить клиентское приложение системы управления версиями.  
   
-4.  Нажмите кнопку **ОК**.  
+4.  Нажмите кнопку **OK**.  
   
 Проекту скрипта можно назначить имя, но имена папок задаются средой [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] и не могут быть изменены. Можно определить букву диска и путь для общего набора папок, используя диалоговое окно **Добавить новый проект** . Щелкните правой кнопкой мыши значок решения в **обозревателе решений**, а затем щелкните **Добавить**. По умолчанию папка проекта скриптов размещена по пути: "C:\Documents and Settings\\*имя_пользователя*\My Documents\SQL Server Management Studio\Projects\\\".  
   
@@ -99,8 +100,8 @@ ms.locfileid: "85999556"
 
 [Обозреватель решений](../../ssms/solution/solution-explorer.md)  
 [Добавление к решению существующий проект](../../ssms/solution/add-an-existing-project-to-a-solution.md)  
-[Добавление новых элементов в проект](../../ssms/solution/add-new-items-to-a-project.md)  
+[Добавление в проект новые элементы](../../ssms/solution/add-new-items-to-a-project.md)  
 [Добавление существующих элементов в проект](../../ssms/solution/add-existing-items-to-a-project.md)  
-[Изменение расположения проектов по умолчанию](../../ssms/solution/change-the-default-location-for-projects.md)  
+[Изменение местоположения проектов по умолчанию](../../ssms/solution/change-the-default-location-for-projects.md)  
 [Перемещение или удаление элемента или проекта](../../ssms/solution/remove-or-delete-an-item-or-project.md)  
 [Удаление решения](../../ssms/solution/delete-a-solution.md)  

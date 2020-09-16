@@ -1,4 +1,5 @@
 ---
+description: Создание или изменение группы серверов (среда SQL Server Management Studio)
 title: Создание или изменение группы серверов
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -17,12 +18,12 @@ ms.author: maghan
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: eb39627de23f236dcd3a7241f83883b747353501
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ecf61bca3e0780aefedb989ab0d7bd3ead83a3bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001748"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480182"
 ---
 # <a name="create-or-edit-a-server-group-sql-server-management-studio"></a>Создание или изменение группы серверов (среда SQL Server Management Studio)
 
@@ -45,7 +46,7 @@ ms.locfileid: "86001748"
 5. В поле **Выберите место размещения новой группы серверов** выберите размещение группы и нажмите **Сохранить**.  
 
    > [!NOTE]
-   > Также можно создать новую группу серверов при регистрации сервера. Для этого нажмите кнопку **Создать группу**и заполните параметры в диалоговом окне **Новая группа** .  
+   >  Также можно создать новую группу серверов при регистрации сервера. Для этого нажмите кнопку **Создать группу**и заполните параметры в диалоговом окне **Новая группа** .  
 
 ## <a name="see-also"></a>См. также:
 

@@ -1,4 +1,5 @@
 ---
+description: Свойство DatabaseLogonAccount (WMI MSReportServer_ConfigurationSetting)
 title: Свойство DatabaseLogonAccount (WMI MSReportServer_ConfigurationSetting) | Документы Майкрософт
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55f2863f-1ac1-4519-b512-e7f11c0ea5ea
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 603ae515642fa524841c160cafc82c4e8ace3249
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 86be7684080168a7068d7b5768b67e1f27cee2e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571655"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497917"
 ---
 # <a name="configurationsetting-property---databaselogonaccount"></a>Свойство ConfigurationSetting — DatabaseLogonAccount
   Позволяет задать учетную запись входа, используемую сервером отчетов при соединении с его базой данных. Только для чтения.  
@@ -44,7 +45,7 @@ public string DatabaseLogonAccount;
 ## <a name="remarks"></a>Remarks  
  Допустимые значения этого свойства различаются в зависимости от значения свойства [DatabaseLogonType](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogontype.md) .  
   
- Это свойство пропускается, если свойство [DatabaseLogonType](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogontype.md) имеет значение **2 (Служба)** .  
+ Это свойство пропускается, если свойство [DatabaseLogonType](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogontype.md) имеет значение **2 (Служба)**.  
   
 ## <a name="requirements"></a>Требования  
  **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

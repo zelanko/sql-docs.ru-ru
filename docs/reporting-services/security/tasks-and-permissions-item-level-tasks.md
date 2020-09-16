@@ -1,4 +1,5 @@
 ---
+description: Разрешения в задачах на уровне элемента
 title: Задачи уровня элемента | Документы Майкрософт
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -10,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7224b99b721a48f14467da7479137fb4c61d4da9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a6ff9b1cef9a4ee7edf5b71d669416921330e5d3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570279"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492577"
 ---
 # <a name="tasks-and-permissions---item-level-tasks"></a>Разрешения в задачах на уровне элемента
   Задача уровня элемента представляет собой коллекцию разрешений, связанных с отчетом, папкой, моделью отчета, ресурсом или общим источником данных. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] также располагают задачами на уровне системы, которые применяются к сайту сервера отчетов в целом. Дополнительные сведения см. в разделе [Задачи уровня системы](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md). Дополнительные сведения о задачах и правах в целом см. в разделе [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md).  
   
 > [!NOTE]  
->  Если с этими задачами работа ведется программно, необходимо использовать методы, поддерживающие задачу уровня элемента. Дополнительные сведения см. в разделе <xref:ReportService2010.ReportingService2010.ListTasks%2A> и <xref:ReportService2010.ReportingService2010.ListRoles%2A>.  
+>  Если с этими задачами работа ведется программно, необходимо использовать методы, поддерживающие задачу уровня элемента. Дополнительные сведения см. в разделах <xref:ReportService2010.ReportingService2010.ListTasks%2A> и <xref:ReportService2010.ReportingService2010.ListRoles%2A>.  
   
 ## <a name="permissions-in-item-level-tasks"></a>Разрешения в задачах уровня элемента  
  В следующей таблице перечислены задачи уровня элемента, включенные в каждую задачу разрешения, а также элементы, к которым они применяются. Разрешения перечислены здесь только в ознакомительных целях и для более точного описания функций, доступных через каждую задачу.  

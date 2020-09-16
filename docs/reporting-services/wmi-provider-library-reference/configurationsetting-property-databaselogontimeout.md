@@ -1,4 +1,5 @@
 ---
+description: Свойство DatabaseLogonTimeout (WMI MSReportServer_ConfigurationSetting)
 title: Свойство DatabaseLogonTimeout (WMI MSReportServer_ConfigurationSetting) | Документы Майкрософт
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4a65162c-33de-485e-8fd3-2bd6bff8bf8d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 85c6268d58cf96eb086399bf41c05526f8c1593a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0fe9f5020f6731aaf995c57457fee0b5afebefc1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571252"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497897"
 ---
 # <a name="configurationsetting-property---databaselogontimeout"></a>Свойство ConfigurationSetting — DatabaseLogonTimeout
   Указывает число секунд ожидания перед тем, как попытка входа в базу данных сервера отчетов признается неуспешной. Значение **0** указывает на бесконечное время ожидания. Только для чтения.  

@@ -1,4 +1,5 @@
 ---
+description: Параметры (обозреватель объектов SQL Server — страница "Скрипты")
 title: Параметры (обозреватель объектов SQL Server — страница "Скрипты")
 ms.custom: seo-lt-2019
 ms.date: 08/01/2017
@@ -13,16 +14,16 @@ f1_keywords:
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6d1a775e42f37b5b224a2608c9055581376b0985
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f89d245bddec039846aed82168fbe8c687d73e2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001875"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491870"
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>Параметры (обозреватель объектов SQL Server — страница "Скрипты")
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Эта страница используется для задания параметров скриптов, применяемых к следующим командам контекстных меню объектов в **обозревателе объектов**:  
+ Эта страница используется для задания параметров скриптов, применяемых к следующим командам контекстных меню объектов в **обозревателе объектов**:  
   
 -   Команды **Правка** для пользовательских таблиц и представлений.  
   

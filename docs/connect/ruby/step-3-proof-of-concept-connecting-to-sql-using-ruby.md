@@ -1,5 +1,6 @@
 ---
-title: 'Шаг 3. Подтверждение концепции: подключение к SQL с помощью Ruby | Документация Майкрософт'
+description: Шаг 3. Эксперимент, подразумевающий подключение к SQL с помощью Ruby
+title: Шаг 3. Эксперимент, подразумевающий подключение к SQL с помощью Ruby | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/22/2020
 ms.prod: sql
@@ -10,14 +11,14 @@ ms.topic: conceptual
 ms.assetid: cac20b18-0a6d-4243-bbda-a5d1b9476441
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d0431ce7aaa9c7e40196c689591b7d56ec5d42ef
-ms.sourcegitcommit: 4fe7b0d5e8ef1bc076caa3819f7a7b058635a486
+ms.openlocfilehash: 3553f57191dc462067fc48dc1cf2394437912240
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85263788"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484777"
 ---
-# <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>Шаг 3. Подтверждение концепции, подразумевающее подключение к SQL с помощью PHP
+# <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>Шаг 3. Эксперимент, подразумевающий подключение к SQL с помощью Ruby
 
 Этот пример следует рассматривать только как подтверждение концепции.  Пример кода упрощен для ясности и он не обязательно рекомендуется к использованию корпорацией Майкрософт.  
   
@@ -56,7 +57,7 @@ ms.locfileid: "85263788"
   
 ## <a name="step-3--insert-a-row"></a>Шаг 3.  Вставка строки  
   
-В этом примере вы увидите, как безопасно выполнить инструкцию [INSERT](../../t-sql/statements/insert-transact-sql.md) и передать параметры для защиты приложения из значения [внедрения кода SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
+В этом примере показано, как безопасно выполнить инструкцию [INSERT](../../t-sql/statements/insert-transact-sql.md) и передать параметры для защиты от [внедрения кода SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
   
 Чтобы использовать TinyTDS с Azure, рекомендуем выполнить несколько инструкций `SET` , чтобы изменить способ обработки определенной информации в текущем сеансе. Рекомендуемые инструкции `SET` предоставлены в примере кода. Например, инструкция `SET ANSI_NULL_DFLT_ON` позволяет использовать нулевые значения в новых столбцах, даже если допустимость нулевых значений в столбце не указана явным образом.  
   

@@ -1,4 +1,5 @@
 ---
+description: Удаление столбцов из результатов запроса (визуальные инструменты для баз данных)
 title: Удаление столбцов из результатов запроса
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ ms.assetid: a7de7a87-4249-49bd-863d-dc0b40a49e78
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: a8b69a12cd11006b00cabcffd6b3c2f6112bffc5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 04543311664ff4b4988cdf03486103721f821346
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999466"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491662"
 ---
 # <a name="remove-columns-from-query-results-visual-database-tools"></a>Удаление столбцов из результатов запроса (визуальные инструменты для баз данных)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

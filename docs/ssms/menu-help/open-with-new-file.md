@@ -1,4 +1,5 @@
 ---
+description: Открыть с помощью (создать файл)
 title: Открыть с помощью (создать файл)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e1ac269ba2768195448927375b4cbde5713f15f2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e619e457bf538a0a8c75e0615e45ca52567ea43a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001650"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491955"
 ---
 # <a name="open-with-new-file"></a>Открыть с помощью (создать файл)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "86001650"
 Чтобы задать используемый по умолчанию редактор (и параметры языковой кодировки, если возможно) для выбранного типа файла, выберите программу из списка под заголовком **Выберите программу для открытия** и щелкните **Использовать по умолчанию**. В следующий раз при открытии этого типа файла в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]документ будет открыт в новом редакторе, заданном по умолчанию.  
   
 > [!NOTE]  
-> В списке программ под заголовком **Выберите программу для открытия**за именем редактора по умолчанию для выбранного типа файла следует **(По умолчанию)** .  
+> В списке программ под заголовком **Выберите программу для открытия**за именем редактора по умолчанию для выбранного типа файла следует **(По умолчанию)**.  
   
 ## <a name="see-also"></a>См. также:  
 [Связывание расширений файлов с редактором кода](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  

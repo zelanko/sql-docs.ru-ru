@@ -1,4 +1,5 @@
 ---
+description: обозревателе объектов
 title: обозревателе объектов
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -26,14 +27,14 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 4eae86044d8e0ec03268e23abc81df4945b46990
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ea4cde409c05054614a4881b189ebef15abb5fef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245572"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497408"
 ---
-# <a name="object-explorer"></a>обозревателе объектов
+# <a name="object-explorer"></a>Обозреватель объектов
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] предоставляет возможности для управления объектами в экземплярах [!INCLUDE[ssDE](../../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]и [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -43,10 +44,10 @@ ms.locfileid: "87245572"
   
 ## <a name="object-explorer-tasks"></a>Задачи обозревателя объектов  
   
-|Description|Раздел|  
+|Описание|Раздел|  
 |---------------|---------|  
 |Содержит описание процесса открытия обозревателя объектов и настройки параметров, определяющих поведение обозревателя.|[Открытие и настройка обозревателя объектов](../../ssms/object/open-and-configure-object-explorer.md)|  
 |Содержит описание процесса подключения обозревателя объектов к экземплярам [!INCLUDE[ssDE](../../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]и [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|[Подключение к экземпляру из обозревателя объектов](../../ssms/object/connect-to-an-instance-from-object-explorer.md)|  
 |Содержит описание процесса управления объектами, представленными в виде узлов в иерархии обозревателя объектов.|[Управление объектами с помощью обозревателя объектов](../../ssms/object/manage-objects-by-using-object-explorer.md)|  
-|Содержит описание панели сведений обозревателя объектов для просмотра всех объектов сервера и управления ими при помощи пользовательского интерфейса.|[Область сведений в обозревателе объектов](../../ssms/object/object-explorer-details-pane.md)|  
+|Содержит описание панели сведений обозревателя объектов для просмотра всех объектов сервера и управления ими при помощи пользовательского интерфейса.|[Область сведений обозревателя объектов](../../ssms/object/object-explorer-details-pane.md)|  
 |Содержит описание способов выполнения пользовательских отчетов в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|[Пользовательские отчеты в среде Management Studio](../../ssms/object/custom-reports-in-management-studio.md)|

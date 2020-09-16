@@ -1,4 +1,5 @@
 ---
+description: Переименование диаграммы базы данных (визуальные инструменты для баз данных)
 title: Переименование диаграммы базы данных
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ ms.assetid: 27c90b54-cc21-4f2f-a529-eacdc41f302e
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 79d11ec9e6fa2e2b740b492ad6ed5a65443a90b0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f7c26ad67ba91e7cd92cbc9542d1f4aa9a4f3fd3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010686"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491615"
 ---
 # <a name="rename-a-database-diagram-visual-database-tools"></a>Переименование диаграммы базы данных (визуальные инструменты для баз данных)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

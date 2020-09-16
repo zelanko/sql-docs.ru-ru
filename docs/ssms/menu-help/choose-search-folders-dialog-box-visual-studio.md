@@ -1,4 +1,5 @@
 ---
+description: Диалоговое окно «Выбор папок поиска» (Visual Studio)
 title: Диалоговое окно «Выбор папок поиска» (Visual Studio)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 15d6c1e0cf13da4b8dd0fe38ffcf57e555bdd650
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 69c70680431019638dff53664393ce2256a5f01b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85983721"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492010"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>Диалоговое окно «Выбор папок поиска» (Visual Studio)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85983721"
 **Список папок**  
 Выводит диски и папки, доступные на томе, выбранном в раскрывающемся списке **Доступные папки** . Для разворачивания любого диска или папки из списка следует дважды щелкнуть ее. Выберите папку или удерживайте клавиши SHIFT или CONTROL для выбора нескольких папок. Нажмите кнопку **Добавить (>)** , чтобы включить выбранные папки в список **Выбранные папки** .  
   
-**Parent**  
+**Родительский объект**  
 Перемещает курсор в поле **Список папок** на один уровень вверх по иерархии папок.  
   
 **Добавить (>)**  

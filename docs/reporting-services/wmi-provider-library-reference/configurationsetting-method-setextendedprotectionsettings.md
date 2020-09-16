@@ -1,4 +1,5 @@
 ---
+description: Метод SetExtendedProtectionSettings (WMI MSReportServer_ConfigurationSetting)
 title: Метод SetExtendedProtectionSettings (WMI MSReportServer_ConfigurationSetting) | Документы Майкрософт
 ms.date: 03/20/2017
 ms.prod: reporting-services
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2d8e7232-42f4-41b6-98eb-c856f6c85d8c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cbfd4392572713e1c81fef07467842e18549e089
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 80693f5720974bedc8c0d4dae13ed4bb24727980
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65581018"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480646"
 ---
 # <a name="configurationsetting-method---setextendedprotectionsettings"></a>Метод ConfigurationSetting — SetExtendedProtectionSettings
   Метод SetExtendedProtectionSettings устанавливает значения для свойств RSWindowsExtendedProtectionLevel и RSWindowsExtendedProtectionScenario в RSReportServer.config в файле конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  

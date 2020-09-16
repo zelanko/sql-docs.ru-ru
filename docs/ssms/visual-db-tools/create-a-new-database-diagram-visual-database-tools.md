@@ -1,4 +1,5 @@
 ---
+description: Создание новой диаграммы базы данных (визуальные инструменты для баз данных)
 title: Создание диаграммы базы данных
 ms.custom: seo-lt-2019
 ms.date: 09/24/2018
@@ -13,12 +14,12 @@ ms.assetid: 843649c0-10bb-4b6a-9369-6b10733381e9
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: f16ffac1272a0dd9bfc847d33b3232179d306c3d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e8e18123233521999dba0c1d32966177f4a343ee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751453"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480088"
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>Создание новой диаграммы базы данных (визуальные инструменты для баз данных)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

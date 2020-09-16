@@ -1,4 +1,5 @@
 ---
+description: Демонстрационные данные по прибытию авиарейсов для учебников по SQL Server Python и R
 title: Демонстрационные данные по авиарейсам для учебников
 Description: Создание базы данных, содержащей набор данных по авиарейсам из R и Python. Этот набор данных используется в руководствах по Python и R для Служб машинного обучения SQL Server.
 ms.prod: sql
@@ -9,15 +10,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4f697287bff5ad4734d11c3d6391154a3a970470
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e00d3814b20f774568da007ba1e60f6784b1c9fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727998"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484077"
 ---
 #  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>Демонстрационные данные по прибытию авиарейсов для учебников по SQL Server Python и R
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 В этом упражнении мы создадим базу данных SQL Server для хранения данных, импортированных из встроенных демонстрационных наборов данных по авиарейсам R или Python. В дистрибутивах для R и Python представлены одинаковые данные, которые можно импортировать в базу данных SQL Server с помощью Management Studio.
 

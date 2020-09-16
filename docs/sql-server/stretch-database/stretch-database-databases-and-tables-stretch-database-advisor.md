@@ -1,4 +1,5 @@
 ---
+description: Определение баз данных и таблиц для базы данных Stretch Database с помощью Data Migration Assistant
 title: Выявление баз данных и таблиц
 ms.date: 10/30/2017
 ms.service: sql-server-stretch-database
@@ -13,15 +14,15 @@ ms.assetid: 81bd93d8-eef8-4572-88d7-5c37ab5ac2bf
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: ec8df33c7af98889529232bbcd56437745339fba
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8ba45280f9a66c8d2b71841b8cae4272e850628f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73843748"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492605"
 ---
 # <a name="identify-databases-and-tables-for-stretch-database-with-data-migration-assistant"></a>Определение баз данных и таблиц для базы данных Stretch Database с помощью Data Migration Assistant
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Чтобы определить базы данных и таблицы, подходящие для Stretch Database, а также возможные проблемы блокировки, скачайте и запустите Microsoft Data Migration Assistant.
@@ -37,7 +38,7 @@ ms.locfileid: "73843748"
 
 3.  Выберите **SQL Server** в качестве значений параметров **Тип исходного сервера** и **Тип целевого сервера**.
 
-4.  Нажмите кнопку **Создать**. 
+4.  Щелкните **Создать**. 
 
 5. На странице **Параметры** (шаг 1) выберите **Новые рекомендуемые возможности**. При необходимости снимите флажок **Проблемы совместимости**.
 
@@ -56,7 +57,7 @@ ms.locfileid: "73843748"
 
 После выпуска Data Migration Assistant, который заменяет помощника по обновлению и расширяет его возможности, функциональность помощника по Stretch Database включена в это новое средство. Чтобы получить рекомендации, связанные со Stretch Database, не требуется выбирать никаких параметров. При выполнении оценки в Data Migration Assistant результаты, связанные со Stretch Database, отображаются на вкладке **Хранилище** окна **Рекомендуемые возможности**.
   
-## <a name="next-step"></a>Следующий шаг  
+## <a name="next-step"></a>Дальнейшие действия  
  Включите Stretch Database.  
   
 -   Сведения о включении базы данных Stretch для **базы данных**см. в разделе [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md).  

@@ -1,4 +1,5 @@
 ---
+description: Приложение к конфиденциальности в SQL Server
 title: Приложение к конфиденциальности в SQL Server | Документация Майкрософт
 ms.date: 01/19/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ f1_keywords: ''
 helpviewer_keywords: ''
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 9362402d6c02fe7ff140f4105c6f011441c457ad
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0a4675d04349da1a8b1e92ce62b8dde3cbabb542
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916915"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480696"
 ---
 # <a name="sql-server-privacy-supplement"></a>Приложение к конфиденциальности в SQL Server
 
@@ -39,7 +40,7 @@ ms.locfileid: "86916915"
 
 ### <a name="examples-of-access-control"></a>Примеры управления доступом
 
-- паролей
+- Пароли
 - Сертификаты
 
 ### <a name="permitted-usage-scenarios"></a>Разрешенные сценарии использования

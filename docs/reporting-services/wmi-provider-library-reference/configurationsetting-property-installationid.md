@@ -1,4 +1,5 @@
 ---
+description: Свойство InstallationID (WMI MSReportServer_ConfigurationSetting)
 title: Свойство InstallationID (WMI MSReportServer_ConfigurationSetting) | Документы Майкрософт
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 39df58b1-86e0-438e-a22b-280feb3ac033
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a3fb6ba51d875807d4936e90b5d0cd1b3997bc3d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 98b65425eb6e2903189ba6660d9296eb91b37ee8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573551"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497887"
 ---
 # <a name="configurationsetting-property---installationid"></a>Свойство ConfigurationSetting — InstallationID
   Это свойство возвращает уникальный идентификатор для определенного экземпляра сервера отчетов.  

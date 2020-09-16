@@ -1,4 +1,5 @@
 ---
+description: Добавление существующих элементов в проект
 title: Добавление существующих элементов в проект
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 084b3879-e96b-45a7-b421-6a4b0db2b92b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 60939da70ed334f4fc7c020f123fff9441a27088
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3744d99ede7e4f50e7fb4393d8e58cff314f4f06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003310"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480133"
 ---
 # <a name="add-existing-items-to-a-project"></a>Добавление существующих элементов в проект
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -68,6 +69,6 @@ ms.locfileid: "86003310"
   
 ## <a name="see-also"></a>См. также:  
 [Обозреватель решений](../../ssms/solution/solution-explorer.md)  
-[Добавление новых элементов в проект](../../ssms/solution/add-new-items-to-a-project.md)  
+[Добавление в проект новые элементы](../../ssms/solution/add-new-items-to-a-project.md)  
 [Перемещение или удаление элемента или проекта](../../ssms/solution/remove-or-delete-an-item-or-project.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: Внешние инструменты
 title: Внешние инструменты
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7dae88f-0781-4162-96cd-d3a3a4d82035
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3950d93088e98ebb5d69ae4a5647ee64f60a00d2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 280180cda65f72bc2ea3fd4515e12ee46b3879cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001640"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491964"
 ---
 # <a name="external-tools"></a>Внешние инструменты
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,10 +40,10 @@ ms.locfileid: "86001640"
 **Удаление**  
 Удаляет инструмент или команду из списка **Содержимое меню** , а также из меню **Сервис** .  
   
-**Title**  
+**Заголовок**  
 Имя инструмента или команды, появляющихся во вложенном меню **Внешние инструменты** меню **Сервис** . Поместите символ амперсанд перед буквой в имени средства, чтобы использовать эту букву в качестве клавиши быстрого вызова для этого средства. Например: указание `&Spy++` приводит к отображению пункта **Spy++** в меню **Сервис** .  
   
-**Command**  
+**Команда**  
 Указывает путь к файлам с расширениями EXE, COM, PIF, BAT, CMD или к другим файлам, которые планируется запускать. Если установлен флажок `.bat`Использовать окно вывода `.com`, можно просмотреть вывод из файлов типа **,** и других файлов в окне "Вывод".  
   
 **Аргументы**  
@@ -73,7 +74,7 @@ ms.locfileid: "86001640"
   
 3.  В поле **Команда** введите путь к исполняемому файлу консоли управления [!INCLUDE[msCoName](../../includes/msconame_md.md)] , например **C:\WINNT\system32\mmc.exe**.  
   
-4.  В поле **Аргументы** введите путь к MSC-файлу, например **"C:\WINNT\system32\SQLServerManager.msc"** .  
+4.  В поле **Аргументы** введите путь к MSC-файлу, например **"C:\WINNT\system32\SQLServerManager.msc"**.  
   
 > [!NOTE]  
 > Чтобы проверить расположение соответствующих файлов на компьютере, просмотрите свойства ярлыка среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] в меню **Пуск** .  
