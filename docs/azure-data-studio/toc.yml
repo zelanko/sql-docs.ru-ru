@@ -75,7 +75,7 @@
         - name: Расширение PowerShell
           href: powershell-extension.md
         - name: Расширение для Управляемого экземпляра
-          href: azure-sql-managed-instance-extension.md
+          href: extensions/azure-sql-managed-instance-extension.md
         - name: Расширение SandDance
           href: sanddance-extension.md
     - name: Разработка расширений
