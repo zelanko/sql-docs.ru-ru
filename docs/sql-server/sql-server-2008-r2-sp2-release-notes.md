@@ -14,12 +14,12 @@ ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a8ed0a9892110f4469a9adeb4d586c8eec7f081c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a54c7de35f9707701213488a4f51d23d5e314417
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111012"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89570313"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>Заметки о выпуске пакета обновления 2 (SP2) для SQL Server 2008 R2
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "87111012"
 ## <a name="20-before-you-install"></a>2.0 Перед началом установки  
 Сведения об установке обновлений [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] см. в [Документации по службам SQL Server 2008 R2](https://msdn.microsoft.com/library/dd638062(SQL.105).aspx).  
   
-Для получения общих сведений о начале работы и установке SQL Server 2008 R2 см. файл сведений для SQL Server 2008 R2. Файл сведений имеется на установочном носителе. Дополнительные сведения также можно найти на [форумах по SQL Server](https://social.msdn.microsoft.com/Forums/category/sqlserver/).
+Для получения общих сведений о начале работы и установке SQL Server 2008 R2 см. файл сведений для SQL Server 2008 R2. Файл сведений имеется на установочном носителе.
   
 ### <a name="21-choose-the-correct-file-to-download-and-install"></a>2.1 Выбор правильного файла для скачивания и установки  
 Используйте следующую таблицу, чтобы определить, какой файл необходимо загрузить и установить. Перед установкой пакета обновления убедитесь, что соблюдены все требования к системе. Требования к системе приведены на страницах загрузки, ссылки на которые указаны в таблице.  

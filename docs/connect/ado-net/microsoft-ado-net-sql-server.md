@@ -11,12 +11,12 @@ ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 95a53493949b7c024328a7e94870f509f7e7bd99
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 65a9bacead100287a7ddb3be9a18d9b30ae9a313
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922224"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89569928"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET для SQL Server
 
@@ -37,8 +37,8 @@ ADO.NET — это базовая технология доступа к дан�
 * [SQL Server и ADO.NET](./sql/index.md)
   
 ## <a name="community"></a>Сообщество  
-* [Форум по управляемым поставщикам ADO.NET](https://social.msdn.microsoft.com/Forums/adodotnetdataproviders/threads/)  
-* [Форум по наборам данных ADO.NET](https://social.msdn.microsoft.com/Forums/adodotnetdataset/threads)  
+* [Форум по управляемым поставщикам ADO.NET](https://social.msdn.microsoft.com/Forums/en-US/home?forum=adodotnetdataproviders)  
+* [Форум по наборам данных ADO.NET](https://social.msdn.microsoft.com/Forums/en-US/home?forum=adodotnetdataset)  
   
 ## <a name="more-samples"></a>Другие примеры  
 * [Примеры кода ADO.NET](/dotnet/framework/data/adonet/ado-net-code-examples)  

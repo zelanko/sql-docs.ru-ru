@@ -1,4 +1,5 @@
 ---
+description: Создание проектов баз данных с использованием среды SQL Server Management Studio
 title: Создание проектов баз данных
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +16,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: f31fd59b604ad082143dc5189434cc24c660861f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: dffd92620f8975b41f8ea8c13a956c3984e56ea3
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000190"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480116"
 ---
 # <a name="build-database-projects-by-using-sql-server-management-studio"></a>Создание проектов баз данных с использованием среды SQL Server Management Studio
 
@@ -28,7 +29,7 @@ ms.locfileid: "86000190"
 
 Проект скрипта базы данных — это организованный набор скриптов, сведений о соединении и шаблонов, связанных с базой данных или одной из частей базы данных. [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] предоставляет [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для администрирования и проектирования баз данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в контексте проекта скрипта. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] включает конструкторы, редакторы, руководства и мастера, помогающие пользователям в разработке, развертывании и обслуживании баз данных.  
   
-## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
+## <a name="sql-server-management-studio"></a>SQL Server Management Studio.  
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] — это набор административных средств для управления компонентами, относящимися к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Эта интегрированная среда позволяет пользователям выполнять разнообразные задачи, например резервное копирование данных, редактирование запросов и автоматизацию общих функций в одном интерфейсе.  
   
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] включает в себя следующие средства:  
@@ -68,6 +69,5 @@ ms.locfileid: "86000190"
   
 ## <a name="see-also"></a>См. также:  
 [Использование среды SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
-[Создание, анализ и изменение запросов в среде SQL Server Management Studio](https://msdn.microsoft.com/062051e4-4b77-4969-98ae-d2547c24ce3e)  
 [Решения (среда SQL Server Management Studio)](../ssms/solution/solutions-sql-server-management-studio.md)  
   

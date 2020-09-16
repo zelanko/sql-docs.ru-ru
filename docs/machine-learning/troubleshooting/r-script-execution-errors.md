@@ -9,19 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ebcedf2adc48fad6668b30d9c34d21b7557879dc
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 2982a0d449d031ba6f211f29a919c588a507a4ba
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87253761"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89569934"
 ---
 # <a name="common-r-scripting-errors-in-sql-server"></a>Распространенные ошибки скриптов R в SQL Server
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 В этой статье описываются некоторые распространенные ошибки, возникающие при выполнении скриптов R в SQL Server. Этот список не является исчерпывающим. Существует множество пакетов, и ошибки в разных версиях одного пакета могут различаться.
-
-Если вы столкнулись с ошибками скриптов, которые не описаны в этой статье, опубликуйте их на форуме [Machine Learning Server](https://social.msdn.microsoft.com/Forums/home?category=MicrosoftR). На этом форуме оказывается поддержка по вопросам компонентов машинного обучения, используемых в различных продуктах машинного обучения SQL.
 
 ## <a name="valid-script-fails-in-t-sql-or-in-stored-procedures"></a>Сбой допустимого скрипта в T-SQL или хранимых процедурах
 
@@ -100,6 +98,6 @@ remove('name1', 'name2', ...)
 
 [Сбор данных для устранения неполадок машинного обучения](data-collection-ml-troubleshooting-process.md)
 
-[Часто задаваемые вопросы по обновлению и установке](upgrade-and-installation-faq-sql-server-r-services.md)
+[Установка служб машинного обучения SQL Server](../install/sql-machine-learning-services-windows-install.md)
 
 [Устранение неполадок подключений к ядру СУБД](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)
