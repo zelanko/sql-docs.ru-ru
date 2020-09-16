@@ -2,7 +2,7 @@
 title: 'SQL Server 2019: Требования к оборудованию и ПО'
 description: Список требований к оборудованию, программному обеспечению и операционной системе для установки и запуска SQL Server 2019.
 ms.custom: sqlfreshmay19
-ms.date: 02/19/2020
+ms.date: 09/01/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -45,12 +45,12 @@ helpviewer_keywords:
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: 0a8b1dc044dba9fc7ee8fef3623b82405bd9e109
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: c3513b7209cc5f79aa26486540c236ac7b7dca1c
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245641"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288326"
 ---
 # <a name="sql-server-2019-hardware-and-software-requirements"></a>SQL Server 2019: Требования к аппаратному и программному обеспечению
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -113,11 +113,11 @@ ms.locfileid: "87245641"
 | Windows Server 2016 Datacenter    |    Да     |    Да    |    Да   | Да |   Да   |
 | Windows Server 2016 Standard      |    Да     |    Да    |    Да   | Да |   Да   |
 | Windows Server 2016 Essentials    |    Да     |    Да    |    Да   | Да |   Да   |
+| Windows 10 IoT Корпоративная         |    нет      |    Да    |    Да   | нет  |   Да   |
 | Windows 10 Корпоративная             |    нет      |    Да    |    Да   | нет  |   Да   |
 | Windows 10 Профессиональная           |    нет      |    Да    |    Да   | нет  |   Да   |
 | Windows 10 Домашняя                   |    нет      |    Да    |    Да   | нет  |   Да   |
 | &nbsp; | &nbsp; |
-
 
 ### <a name="server-core-support"></a>Поддержка Server Core
 
@@ -203,7 +203,7 @@ ms.locfileid: "87245641"
 Кроме того, вы можете создать [виртуальную машину Azure, в которой уже работает SQL Server](/azure/virtual-machines/windows/sql/quickstart-sql-vm-create-portal), хотя SQL Server на виртуальной машине будет работать медленнее, чем в собственном коде, из-за издержек виртуализации.
 
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Дальнейшие шаги
 
 После ознакомления с требованиями к оборудованию и программному обеспечению для установки SQL Server можно приступить к [планированию установки SQL Server](../../sql-server/install/planning-a-sql-server-installation.md) или просмотреть [рекомендации по обеспечению безопасности SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).
 

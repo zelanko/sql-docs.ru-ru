@@ -3,7 +3,7 @@ title: Создание скриптов
 description: Узнайте, как использовать Мастер формирования и публикации скриптов для создания скриптов Transact-SQL для нескольких объектов и как использовать меню "Скрипт" в обозревателе объектов для создания скриптов для отдельных или нескольких объектов.
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 author: markingmyname
@@ -12,12 +12,12 @@ ms.reviewer: mathoma
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 534d4982f46d0d83cb25718646b018dfa662cc35
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: d3fb8dc9157e7574835ee330b9c9e0f925c6e6f4
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87123135"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901341"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Формирование скриптов (среда SQL Server Management Studio)
 
@@ -67,7 +67,7 @@ ms.locfileid: "87123135"
 
 4. Откройте панель **Подробности обозревателя объектов** . Для этого нажмите клавишу **F7**или откройте меню **Вид** и выберите пункт **Подробности обозревателя объектов**.
 
-    ![Обозреватель объектов](media/generate-scripts-sql-server-management-studio/object-explorer-details-view-menu.png)
+    ![Меню "Вид"](media/generate-scripts-sql-server-management-studio/object-explorer-details-view-menu.png)
 
 5. Щелкните левой кнопкой один из объектов, который нужно включить в скрипт.
 
@@ -75,4 +75,4 @@ ms.locfileid: "87123135"
 
 7. Щелкните правой кнопкой мыши один из выделенных объектов и выберите пункт **Создать скрипт для \<object type>** .
 
-    ![Обозреватель объектов](media/generate-scripts-sql-server-management-studio/object-explorer-details.png)
+    ![Сведения](media/generate-scripts-sql-server-management-studio/object-explorer-details.png)

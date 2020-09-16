@@ -1,11 +1,8 @@
 ---
 title: Перемещение по коду и тексту
 description: 'Узнайте, как перемещаться по документу различными методами: устанавливайте закладки, чтобы легко возвращаться к каким-либо местам, выполняйте добавочный поиск, используйте мышь и клавиатуру, а также используйте команду "Перейти к" для перехода к строке по ее номеру.'
-ms.custom: seo-lt-2019
-ms.date: 03/01/2017
 ms.prod: sql
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - searches [SQL Server Management Studio], incremental
@@ -21,17 +18,22 @@ helpviewer_keywords:
 ms.assetid: f63247ff-9751-4e99-8ee3-0772ad4009d0
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ac0d91b3d6bc3dd6527063a176b0728f96f144e
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 69892b05d5e9d34784a06551b929fe9664e2ca4b
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122595"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093502"
 ---
 # <a name="navigate-code-and-text"></a>Перемещение по коду и тексту
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  По тексту можно перемещаться с помощью:  
+
+По тексту можно перемещаться с помощью:  
   
 -   закладок;  
   
@@ -72,6 +74,4 @@ ms.locfileid: "87122595"
   
 1.  В меню **Правка** выберите пункт **Перейти к** .  
   
-2.  Введите нужный номер строки.  
-  
-  
+2.  Введите нужный номер строки.

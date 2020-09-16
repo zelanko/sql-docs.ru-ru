@@ -17,14 +17,14 @@ helpviewer_keywords:
 - DROP DEFAULT statement
 - defaults [SQL Server], removing
 ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1146be44b4ae2d02c1fcd94c4b0f2d53f52e55e9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ab8d8b67ecc262269e1aa322735ac152329bc36b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478889"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539891"
 ---
 # <a name="drop-default-transact-sql"></a>DROP DEFAULT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +56,7 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
  *default_name*  
  Имя существующего значения по умолчанию. Для просмотра списка значений по умолчанию выполните процедуру **sp_help**. Имена значений по умолчанию должны соответствовать требованиям к именам [идентификаторов](../../relational-databases/databases/database-identifiers.md). Задание имени схемы значения по умолчанию необязательно.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Перед удалением значения по умолчанию отвяжите его, выполнив процедуру **sp_unbindefault**, если это значение по умолчанию в настоящее время привязано к столбцу или псевдониму типа данных.  
   
  После удаления значения по умолчанию из столбца, в котором допускаются значения NULL, везде на место значения вставляется NULL, если добавляются строки и явно не предоставляется никакое значение. После удаления значения по умолчанию из столбца со свойством NOT NULL, если добавляются строки и явно не предоставляется никакое значение, возвращается сообщение об ошибке. Эти строки добавляются позже как часть обычных действий инструкции INSERT.  
@@ -99,7 +99,7 @@ GO
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [CREATE DEFAULT (Transact-SQL)](../../t-sql/statements/create-default-transact-sql.md)   
  [sp_helptext (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
  [sp_help (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   

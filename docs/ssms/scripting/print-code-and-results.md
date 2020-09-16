@@ -1,11 +1,8 @@
 ---
 title: Печать кода и результаты
 description: Сведения о том, как выделить текст цветом при печати. Цвета могут отличаться от тех, что используются для вывода. Сведения о том, как управлять отображением номеров строк в листинге.
-ms.custom: seo-lt-2019
-ms.date: 03/01/2017
 ms.prod: sql
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], printing
@@ -15,17 +12,22 @@ helpviewer_keywords:
 ms.assetid: 6e60173f-77fb-4a3e-a561-62c4d0128b95
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cf3abb5bbecbc93a9a2f86b373f6192b7fbb6169
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 0a498a46d2b3afce46079faaec0ef717836fc973
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122564"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093480"
 ---
 # <a name="print-code-and-results"></a>Печать кода и результаты
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  При печати запроса или файла выделенные цветом элементы печатаются в заданном цвете, если принтер поддерживает цветную печать и она разрешена в настройках принтера.  
+
+При печати запроса или файла выделенные цветом элементы печатаются в заданном цвете, если принтер поддерживает цветную печать и она разрешена в настройках принтера.  
   
  Однако шрифт и цвет текста в редакторе и напечатанном тексте могут различаться. В меню **Сервис** выберите **Параметры**. На вкладке **Среда**щелкните **Шрифты и цвета**, а затем выберите шрифты и цвета для элементов, отображаемых в редакторе, а также шрифты и цвета, применяемые при печати. Так как эти настройки могут различаться, результат вывода может отличаться от отображаемого в редакторе.  
   
