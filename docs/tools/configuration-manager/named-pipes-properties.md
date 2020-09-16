@@ -6,7 +6,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology: configuration
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - pipes [SQL Server]
@@ -17,12 +17,12 @@ ms.assetid: a5fd5b8e-f889-485b-89e3-d4010ec4c6ec
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c4fae15dcdd786b93caf189afb478e435d3fc986
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: efeb00d679ca93e45da50988b36710a8f4c9dbe2
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894848"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88900445"
 ---
 # <a name="named-pipes-properties"></a>Свойства именованных каналов
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -47,7 +47,6 @@ ms.locfileid: "85894848"
   
 ## <a name="see-also"></a>См. также:  
  [Включение или отключение сетевого протокола сервера](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
- [Выбор сетевого протокола](https://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)   
- [Создание допустимой строки подключения, использующей протокол именованных каналов](https://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
-  
+ [Выбор сетевого протокола](/previous-versions/sql/sql-server-2016/ms187892(v=sql.130))   
+ [Создание допустимой строки подключения, использующей протокол именованных каналов](/previous-versions/sql/sql-server-2016/ms189307(v=sql.130))  
   
