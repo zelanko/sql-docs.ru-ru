@@ -1,4 +1,5 @@
 ---
+description: Метод getDateTimeOffset(java.lang.string) (SQLServerResultSet)
 title: Метод getDateTimeOffset(java.lang.string) (SQLServerResultSet) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e585927c-0dee-43fd-b71e-c9f1701790bd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d23de92c75e09e51e8f1f4fbfb3318877646ec1e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ce784e5c85be76a75ca24b02ff5542d902b285ef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80918101"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436336"
 ---
 # <a name="getdatetimeoffsetjavalangstring-sqlserverresultset"></a>Метод getDateTimeOffset(java.lang.string) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

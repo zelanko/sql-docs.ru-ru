@@ -1,4 +1,5 @@
 ---
+description: Метод executeQuery (java.lang.String)
 title: Метод executeQuery (java.lang.String) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 610205c2-6bcd-426c-ad6f-9682551efdec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: edb099aaa88887f96a3a05369373035588f25b74
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: cff547cf27a6ef796e31383e524872717943b860
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922039"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437706"
 ---
 # <a name="executequery-method-javalangstring"></a>Метод executeQuery (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

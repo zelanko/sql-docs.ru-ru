@@ -1,4 +1,5 @@
 ---
+description: Метод executeUpdate (SQLServerStatement)
 title: Метод executeUpdate (SQLServerStatement) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 10ae662a-ce3c-4b24-875c-5c2df319d93b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b05edbe0137ad17c5bc667ac39e10c75b958c647
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 076b3597b19c8593a2d1921984601c6d066058e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924250"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437686"
 ---
 # <a name="executeupdate-method-sqlserverstatement"></a>Метод executeUpdate (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80924250"
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|Имя|Description|  
+|name|Описание|  
 |----------|-----------------|  
 |[executeUpdate (java.lang.String)](../../../connect/jdbc/reference/executeupdate-method-java-lang-string-sqlserverstatement.md)|Выполняет заданную инструкцию SQL, которой может быть инструкция INSERT, UPDATE, DELETE или MERGE, либо инструкцию SQL, не возвращающую значения, например инструкцию SQL DDL.|  
 |[executeUpdate (java.lang.String, int)](../../../connect/jdbc/reference/executeupdate-method-java-lang-string-int.md)|Выполняет заданную инструкцию SQL и уведомляет [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] с помощью заданного флага о том, что автоматически сформированные ключи, созданные этим объектом [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), должны быть доступны для получения.|  

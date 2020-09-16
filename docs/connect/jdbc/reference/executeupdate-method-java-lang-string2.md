@@ -1,4 +1,5 @@
 ---
+description: Метод executeUpdate (java.lang.String)
 title: Метод executeUpdate | Документация Майкрософт
 ms.custom: ''
 ms.date: 02/07/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 91ecb1cd-001d-4ac9-9ae8-5db05c3c2959
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 428127147d00885dc379752e97154e8eabad54d1
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: fcfb5f6bf2c8697b4463b6726b844bd883e05c19
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924208"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437616"
 ---
 # <a name="executeupdate-method-javalangstring"></a>Метод executeUpdate (java.lang.String)
 
@@ -52,6 +53,6 @@ public final int executeUpdate(java.lang.String sql)
 
 [Метод executeUpdate (SQLServerPreparedStatement)](./executeupdate-method-sqlserverpreparedstatement.md)
 
-[Элементы SQLServerPreparedStatement](./sqlserverpreparedstatement-members.md)
+[Члены SQLServerPreparedStatement](./sqlserverpreparedstatement-members.md)
 
 [Класс SQLServerPreparedStatement](./sqlserverpreparedstatement-class.md)

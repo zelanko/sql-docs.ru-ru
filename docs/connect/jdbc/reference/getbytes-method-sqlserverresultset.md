@@ -1,4 +1,5 @@
 ---
+description: Метод getBytes (SQLServerResultSet)
 title: Метод getBytes (SQLServerResultSet) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: d16a0aea-6144-4fcb-bcbc-5d7daa36d327
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d4ad0ac453e5b048c4db9654a28ab3585a0257c0
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 51d42777f17aebf69c0b10aadcbef1d940a7a613
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921571"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436926"
 ---
 # <a name="getbytes-method-sqlserverresultset"></a>Метод getBytes (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80921571"
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|Имя|Description|  
+|name|Описание|  
 |----------|-----------------|  
 |[getBytes (int)](../../../connect/jdbc/reference/getbytes-method-int-sqlserverresultset.md)|Получает значение индекса заданного столбца в текущей строке этого объекта [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) в виде массива типа **byte** на языке программирования Java.|  
 |[getBytes (java.lang.String)](../../../connect/jdbc/reference/getbytes-method-java-lang-string-sqlserverresultset.md)|Получает значение имени заданного столбца в текущей строке этого объекта [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) в виде массива типа **byte** на языке программирования Java.|  
