@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d8ae9d5fee06ae9db1415b53c41a1d1d23633824
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0c31375615a55d6ae8dfa12e9ffddfe921c066c3
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882360"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042845"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>Устранение неполадок: превышение RPO в группе доступности
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "85882360"
   
  Кроме того, полезно проверить два объекта производительности — `SQL Server:Availability Replica > Flow Control Time (ms/sec)` и `SQL Server:Availability Replica > Flow Control/sec`. Умножив эти два значения, можно узнать, сколько времени за последнюю секунду ушло на ожидание очистки управления потоком. Чем больше время ожидания управления потоком, тем ниже скорость отправки.  
   
- Приведенные ниже метрики полезны при диагностике задержки в сети и пропускной способности. Для оценки задержки и использования сети можно применять другие средства Windows, например **ping.exe** и [сетевой монитор](https://www.microsoft.com/download/details.aspx?id=4865).  
+ Приведенные ниже метрики полезны при диагностике задержки в сети и пропускной способности. Для оценки задержки и использования сети можно применять другие средства Windows, например **ping.exe** и [сетевой монитор](https://www.microsoft.com/p/network-monitor-pro-free-edition/9n8gdvj32gp7).  
   
 -   Динамическое административное представление `sys.dm_hadr_database_replica_states, log_send_queue_size`  
   

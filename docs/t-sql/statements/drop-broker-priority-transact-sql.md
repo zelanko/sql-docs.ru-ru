@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - DROP BROKER PRIORITY statement
 ms.assetid: 09ee6c5b-af94-4a4b-a0e2-f9eac50e43aa
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1159080251f5f3706f83d6351525c93db892e3d9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ef86c39af2116d06fab2f56f1ca049342981e63d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496767"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544219"
 ---
 # <a name="drop-broker-priority-transact-sql"></a>DROP BROKER PRIORITY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ DROP BROKER PRIORITY ConversationPriorityName
  *ConversationPriorityName*  
  Задает имя удаляемого приоритета диалога.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  При удалении приоритета диалога любые существующие диалоги продолжают функционировать с уровнями приоритетов, которые были назначены им из приоритета диалога.  
   
 ## <a name="permissions"></a>Разрешения  

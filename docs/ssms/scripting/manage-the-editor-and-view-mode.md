@@ -1,11 +1,8 @@
 ---
 title: Управление режимами редактирования и просмотра
 description: 'Узнайте, как выбрать один из двух режимов представления в SQL Server Management Studio: режим документов с вкладками и режим интерфейса с несколькими документами. Кроме того, узнайте больше о разделенных представлениях, переносе по словам, режиме виртуального пространства, отображении номеров строк, полноэкранном режиме и функции "Автоматически скрыть все".'
-ms.custom: seo-lt-2019
-ms.date: 03/01/2017
 ms.prod: sql
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], managing window behavior
@@ -20,20 +17,26 @@ helpviewer_keywords:
 ms.assetid: 25c58a14-9f94-4296-9770-7d84c6bc3969
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b3017d75cd7222948c63b4883b7935c551f3144
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 1402467a2a030afc77390b5fccb2246fe2ae52c5
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122593"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093440"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>Управление режимами редактирования и просмотра
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  Редактор позволяет управлять способами просмотра кода.  
-  
+
+Редактор позволяет управлять способами просмотра кода.  
+
 ## <a name="changing-the-view-mode"></a>Изменение режима просмотра  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] имеется режим просмотра **Документы с вкладками**, позволяющий открыть одновременно несколько редакторов и документов и переключаться между ними с помощью вкладок в верхней части окна редактора. Также можно открыть среду [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] в режиме интерфейса MDI (Multiple Document Interface), объединяющем окна без вкладок и позволяющем сворачивать окна, располагать их рядом и т. д.  
+
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] имеется режим просмотра **Документы с вкладками**, позволяющий открыть одновременно несколько редакторов и документов и переключаться между ними с помощью вкладок в верхней части окна редактора. Также можно открыть среду [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] в режиме интерфейса MDI (Multiple Document Interface), объединяющем окна без вкладок и позволяющем сворачивать окна, располагать их рядом и т. д.  
   
 #### <a name="to-switch-between-view-modes"></a>Переключение между режимами просмотра  
   

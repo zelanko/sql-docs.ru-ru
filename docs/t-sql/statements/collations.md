@@ -17,15 +17,15 @@ helpviewer_keywords:
 - collations [SQL Server], COLLATE clause
 - COLLATE clause
 ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e6f5df8b371ded189d63095c86baeb417afe4ca4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c3c05cd8fbf9ae131bbb1bc61f18acab043a8228
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496949"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547602"
 ---
 # <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
 
@@ -55,7 +55,7 @@ COLLATE { <collation_name> | database_default }
 
 **database_default** — заставляет предложение COLLATE наследовать параметры сортировки текущей базы данных.
 
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Примечания
 
 Предложение COLLATE можно указывать на нескольких уровнях. В их числе можно назвать следующие:
 
