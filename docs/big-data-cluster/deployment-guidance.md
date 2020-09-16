@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4bca65dbae188c02ddc85bc385f6ada912111efb
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 10c3e83451efd0f7ac5868fd25d540191821b72c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159372"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765773"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в Kubernetes
 
@@ -34,7 +34,7 @@ ms.locfileid: "86159372"
 
 |Выпуск|Примечания|
 |---------|---------|
-|Enterprise<br/>Standard<br/>Разработчик| Выпуск кластера больших данных определяется выпуском основного экземпляра SQL Server. Во время развертывания выпуск Developer развертывается по умолчанию. После развертывания выпуск можно изменить. См. [Настройка основного экземпляра SQL Server](../big-data-cluster/configure-sql-server-master-instance.md). |
+|Enterprise<br/>Standard<br/>Разработчик| Выпуск кластера больших данных определяется выпуском основного экземпляра SQL Server. Во время развертывания выпуск Developer развертывается по умолчанию. После развертывания выпуск можно изменить. См. [Настройка основного экземпляра SQL Server](./configure-sql-server-master-instance.md). |
 
 ## <a name="kubernetes"></a><a id="prereqs"></a> Kubernetes
 

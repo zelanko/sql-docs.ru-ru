@@ -26,12 +26,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: e9b797710617be71643cbe1a7b2c721c90fe5a5e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2457f180cef24b13568a6718128efa78635c3e41
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748617"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714262"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Программа ssbdiagnose (компонент Service Broker)
 
@@ -310,7 +310,7 @@ WHERE database_id = DB_ID();
  Сообщает о проблеме, из-за которой программа **ssbdiagnose** не имеет возможности выполнять анализ конфигурации или мониторинг диалогов.  
   
 ## <a name="sqlcmd-environment-variables"></a>Переменные среды sqlcmd  
- Программа **ssbdiagnose** поддерживает переменные среды SQLCMDSERVER, SQLCMDUSER, SQLCMDPASSWORD и SQLCMDLOGINTIMEOUT, которые также используются программой **sqlcmd** . Они могут быть заданы при помощи команды командной строки SET или команды **setvar** в скриптах [!INCLUDE[tsql](../../includes/tsql-md.md)] , которые выполняются программой **sqlcmd**. Дополнительные сведения об использовании **setvar** в **sqlcmd**см. в разделе [Использование программы sqlcmd с переменными скрипта](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md).  
+ Программа **ssbdiagnose** поддерживает переменные среды SQLCMDSERVER, SQLCMDUSER, SQLCMDPASSWORD и SQLCMDLOGINTIMEOUT, которые также используются программой **sqlcmd** . Они могут быть заданы при помощи команды командной строки SET или команды **setvar** в скриптах [!INCLUDE[tsql](../../includes/tsql-md.md)] , которые выполняются программой **sqlcmd**. Дополнительные сведения об использовании **setvar** в **sqlcmd**см. в разделе [Использование программы sqlcmd с переменными скрипта](../../ssms/scripting/sqlcmd-use-with-scripting-variables.md?view=sql-server-ver15).  
   
 ## <a name="permissions"></a>Разрешения  
  В каждом предложении **connectionoptions** имя входа, указанное в параметре **-E** или **-U** , должно быть членом предопределенной роли сервера **sysadmin** для экземпляра, указанного в параметре **-S**.  
@@ -466,5 +466,4 @@ ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE
  [sys.transmission_queue (Transact-SQL)](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)   
  [sys.conversation_endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
  [sys.conversation_groups (Transact-SQ)](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)  
-  
   

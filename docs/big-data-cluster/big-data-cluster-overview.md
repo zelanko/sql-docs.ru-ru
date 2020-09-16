@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bc83184b6cac6ab574090f8059e2a79fa9ca69ca
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: d21f5c3f572356a18f8567f798af8af10f58c001
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942794"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765743"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>Что такое [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
 
@@ -26,14 +26,14 @@ ms.locfileid: "86942794"
 
 Используйте кластеры больших данных SQL Server для решения следующих задач:
 
-- [Развертывание масштабируемых кластеров](../big-data-cluster/deploy-get-started.md) SQL Server, Spark и контейнеров HDFS, выполняемых в Kubernetes. 
+- [Развертывание масштабируемых кластеров](./deploy-get-started.md) SQL Server, Spark и контейнеров HDFS, выполняемых в Kubernetes. 
 - Чтение, запись и обработка больших данных из Transact-SQL или Spark.
 - Простое объединение и анализ ценных реляционных данных и больших данных крупного объема.
 - Запрос внешних источников данных.
 - Хранение больших данных в HDFS под управлением SQL Server.
 - Запрос данных из нескольких внешних источников данных через кластер.
 - Использование данных для искусственного интеллекта, машинного обучения и других задач анализа.
-- [Развертывание и запуск приложений](../big-data-cluster/concept-application-deployment.md) в [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)].
+- [Развертывание и запуск приложений](./concept-application-deployment.md) в [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)].
 - Виртуализация данных с помощью [Polybase](../relational-databases/polybase/polybase-guide.md). Теперь вы можете запрашивать данные из внешних источников SQL Server, Oracle, Teradata, MongoDB и источников данных ODBC с внешними таблицами.
 - Обеспечение высокой доступности для основного экземпляра SQL Server и всех баз данных с использованием технологии групп доступности Always On.
 

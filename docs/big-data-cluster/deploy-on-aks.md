@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7e46d5bd2ad1fcb300c16ce3883f7b03f493fcdc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d82ac562495e916ce34b591190f6c427e6c8413e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85661084"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765943"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Настройка Службы Kubernetes Azure для развертываний кластера больших данных SQL Server
 
@@ -46,7 +46,7 @@ AKS упрощает создание, настройку и кластера в
    - 24 или более подключенных диска для всех узлов
 
    > [!TIP]
-   > В инфраструктуре Azure предлагается несколько вариантов размера виртуальных машин, дополнительные сведения о тех из них, которые доступны в регионе, где вы планируете выполнить развертывание, см. [здесь](https://docs.microsoft.com/azure/virtual-machines/windows/sizes).
+   > В инфраструктуре Azure предлагается несколько вариантов размера виртуальных машин, дополнительные сведения о тех из них, которые доступны в регионе, где вы планируете выполнить развертывание, см. [здесь](/azure/virtual-machines/windows/sizes).
 
 ## <a name="create-a-resource-group"></a>Создание группы ресурсов
 
@@ -110,7 +110,7 @@ AKS упрощает создание, настройку и кластера в
 
 ## <a name="create-a-kubernetes-cluster"></a>Создание кластера Kubernetes
 
-1. Создайте кластер Kubernetes в AKS с помощью команды [az aks create](https://docs.microsoft.com/cli/azure/aks). В следующем примере создается кластер Kubernetes *kubcluster* с одним узлом агента Linux размером **Standard_L8s**.
+1. Создайте кластер Kubernetes в AKS с помощью команды [az aks create](/cli/azure/aks). В следующем примере создается кластер Kubernetes *kubcluster* с одним узлом агента Linux размером **Standard_L8s**.
 
    Перед выполнением скрипта замените `<version number>` номером версии, определенным на предыдущем шаге.
 
@@ -149,7 +149,7 @@ AKS упрощает создание, настройку и кластера в
 
 ## <a name="connect-to-the-cluster"></a>Подключение к кластеру
 
-1. Чтобы настроить kubectl для подключения к кластеру Kubernetes, выполните команду [az aks get-credentials](https://docs.microsoft.com/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials). На этом шаге выполняется скачивание учетных данных и настройка интерфейса командной строки kubectl для их использования.
+1. Чтобы настроить kubectl для подключения к кластеру Kubernetes, выполните команду [az aks get-credentials](/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials). На этом шаге выполняется скачивание учетных данных и настройка интерфейса командной строки kubectl для их использования.
 
    ```azurecli
    az aks get-credentials --resource-group=sqlbdcgroup --name kubcluster
@@ -165,9 +165,9 @@ AKS упрощает создание, настройку и кластера в
 
 Если у вас возникли проблемы при создании Службы Azure Kubernetes с помощью предыдущих команд, воспользуйтесь следующими способами.
 
-- Убедитесь, что установлена [последняя версия Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest).
+- Убедитесь, что установлена [последняя версия Azure CLI](/cli/azure/install-azure-cli?view=azure-cli-latest).
 - Попробуйте выполнить те же действия, используя другую группу ресурсов и имя кластера.
-- См. [документацию по устранению неполадок, связанных с AKS](https://docs.microsoft.com/azure/aks/troubleshooting).
+- См. [документацию по устранению неполадок, связанных с AKS](/azure/aks/troubleshooting).
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

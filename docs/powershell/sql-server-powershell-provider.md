@@ -3,7 +3,7 @@ title: Поставщик SQL Server PowerShell | Документация Ма�
 description: Узнайте о поставщике SQL Server для Windows PowerShell, который предоставляет доступ к объектам SQL Server с помощью путей, аналогичных путям файловой системы.
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: scripting
+ms.technology: sql-server-powershell
 ms.topic: conceptual
 helpviewer_keywords:
 - PowerShell [SQL Server], provider
@@ -17,12 +17,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 07/31/2019
-ms.openlocfilehash: 9434ad33aee0f00856e4c59ece38c0729830c977
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 06288ab89e61b3ff2203949de2b3ef6373e3aefc
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912474"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714292"
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell, поставщик
 
