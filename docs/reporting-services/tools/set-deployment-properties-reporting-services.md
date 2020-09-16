@@ -14,12 +14,12 @@ ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/15/2019
-ms.openlocfilehash: 45e168c5fa0e0edcb450ca4f302de2676303b5c3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8ebf9f5e6659659543c66634e71b0a4315dcc07e
+ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914892"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512340"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Задание свойства развертывания (службы Reporting Services)
 
@@ -65,7 +65,7 @@ ms.locfileid: "86914892"
   
 10. В текстовое поле **TargetServerURL** введите URL-адрес целевого сервера отчетов. Перед публикацией отчета необходимо задать в этом свойстве правильный URL-адрес сервера отчетов. При публикации на сервере отчетов, работающем в собственном режиме, используйте URL-адрес виртуального каталога сервера отчетов (например, http:*//сервер/сервер_отчетов* или http:*//сервер/сервер_отчетов)*. Это виртуальный каталог сервера отчетов, а не веб-портала.  
   
-     При публикации на сервере отчетов, работающем в режиме интеграции с SharePoint, указывайте URL-адрес сайта SharePoint верхнего уровня или соответствующего подсайта. Если сайт не указан, используется сайт верхнего уровня по умолчанию (например, <https://*servername*>, <https://*servername*/*site*>или <https://*servername*/*site*/*subsite*>).  
+     При публикации на сервере отчетов, работающем в режиме интеграции с SharePoint, указывайте URL-адрес сайта SharePoint верхнего уровня или соответствующего подсайта. Если сайт не указан, используется сайт верхнего уровня по умолчанию (например, `https://*servername*`, `https://*servername*/*site*`или `https://*servername*/*site*/*subsite*`).  
   
 ## <a name="to-set-configuration-manager-properties"></a>Установка свойств диспетчера конфигурации  
   

@@ -1,4 +1,5 @@
 ---
+description: Stretch Database
 title: Stretch Database
 ms.date: 06/27/2016
 ms.service: sql-server-stretch-database
@@ -10,15 +11,15 @@ ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4ff3c8a24624b3833c04b4e6269fb3618b36568f
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 2338cfe80dafb68eefaba3d6302d4afc84a585c6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488368"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497997"
 ---
 # <a name="stretch-database"></a>Stretch Database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Stretch Database прозрачно и безопасно переносит холодные данные в облако Microsoft Azure.  
@@ -73,9 +74,9 @@ ms.locfileid: "81488368"
  Используйте помощник по настройке Stretch Database, компонент помощника SQL Server 2016 по обновлению, для идентификации баз данных и таблиц для Stretch Database. Дополнительные сведения см. в статье [Определение баз данных и таблиц для Stretch Database с использованием помощника Stretch Database](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md). Дополнительные сведения о возможных проблемах с блокировкой см. в статье [Ограничения для Stretch Database](../../sql-server/stretch-database/limitations-for-stretch-database.md).  
 
 ## <a name="test-drive-stretch-database"></a>Проверка Stretch Database  
- **Применение Stretch Database на примере базы данных AdventureWorks.** Чтобы получить образец базы данных AdventureWorks, скачайте по крайней мере файл базы данных и примеры сценариев [здесь](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks). После восстановления образца базы данных в экземпляре SQL Server 2016 распакуйте файлы образцов и откройте файл образцов базы данных Stretch в папке базы данных Stretch. Выполните сценарии в этом файле, чтобы проверить объем пространства, занимаемый данными, до и после включения Stretch Database, для отслеживания хода выполнения миграции данных. Убедитесь, что вы можете запрашивать существующие и вставлять новые данные во время и после миграции данных.  
+ **Проверка Stretch Database с образцом базы данных AdventureWorks.** Чтобы получить образец базы данных AdventureWorks, скачайте по крайней мере файл базы данных и примеры сценариев [здесь](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks). После восстановления образца базы данных в экземпляре SQL Server 2016 распакуйте файлы образцов и откройте файл образцов базы данных Stretch в папке базы данных Stretch. Выполните сценарии в этом файле, чтобы проверить объем пространства, занимаемый данными, до и после включения Stretch Database, для отслеживания хода выполнения миграции данных. Убедитесь, что вы можете запрашивать существующие и вставлять новые данные во время и после миграции данных.  
   
-## <a name="next-step"></a>Следующий шаг  
+## <a name="next-step"></a>Дальнейшие действия  
  **Определение баз данных и таблиц, подходящих для Stretch Database.** Чтобы определить базы данных и таблицы, подходящие для Stretch Database, а также возможные проблемы блокировки, скачайте Data Migration Assistant и выполните оценку. Дополнительные сведения см. в статье [Определение баз данных и таблиц для Stretch Database с использованием помощника Stretch Database](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md).  
   
   

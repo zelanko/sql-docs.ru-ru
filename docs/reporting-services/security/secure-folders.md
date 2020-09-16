@@ -1,4 +1,5 @@
 ---
+description: Обеспечение защиты папок
 title: Обеспечение защиты папок| Документы Майкрософт
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 00bf03cedffd985726eb10e1c048132c415b241e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f873c02fe9cf0657edbaefd7411b6f3409ed1a0d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570561"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498007"
 ---
 # <a name="secure-folders"></a>Обеспечение защиты папок
   Безопасность папок является основой защиты всего содержимого сервера отчетов. Поскольку безопасность является унаследованной в структуре папок, можно определить разрешения определенного доступа для больших или маленьких разделов иерархии папок.  

@@ -1,4 +1,5 @@
 ---
+description: Настройка TLS-соединений на сервере отчетов, работающем в собственном режиме
 title: Настройка TLS-соединений на сервере отчетов в собственном режиме | Документация Майкрософт
 ms.date: 05/14/2019
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8c2bd66eacb5a91def2a9f6c9f7cb2e807e404f1
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 3362783a3558c2ce6d74e68d666bbf791957046a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886501"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498043"
 ---
 # <a name="configure-tls-connections-on-a-native-mode-report-server"></a>Настройка TLS-соединений на сервере отчетов, работающем в собственном режиме
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] В собственном режиме используется HTTP-служба протокола SSL для установления зашифрованного соединения с сервером отчетов. Протокол TLS ранее назывался SSL. Если в локальном хранилище сертификатов на компьютере сервера отчетов установлен CER-файл сертификата, можно связать его с резервированием URL-адресов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для поддержки соединений сервера отчетов через зашифрованный канал.  

@@ -2,19 +2,19 @@
 title: Расширение "Развертывание приложения"
 titleSuffix: SQL Server big data clusters
 description: Развертывание скрипта Python или R в качестве приложения в кластерах больших данных SQL Server.
-author: jeroenterheerdt
-ms.author: jterh
+author: cloudmelon
+ms.author: melqin
 ms.reviewer: mikeray
 ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6698e3beee1df32f6b88fcde2c034f60a4e56f21
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 01ff6844019cfed0dbfa614fee156680ecd8f38e
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728875"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680607"
 ---
 # <a name="how-to-use-visual-studio-code-to-deploy-applications-to-big-data-clusters-2019"></a>Использование Visual Studio Code для развертывания приложений в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -155,7 +155,7 @@ azdata bdc endpoint list
 
 ![Swagger](media/vs-extension/swagger.png)
 
-Дополнительные сведения см. в статье [Использование приложений в кластерах больших данных](big-data-cluster-consume-apps.md).
+Дополнительные сведения см. в статье [Использование приложений в кластерах больших данных](app-consume.md).
 
 ### <a name="app-run"></a>Запуск приложения
 
@@ -199,7 +199,7 @@ azdata bdc endpoint list
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Дополнительные сведения о том, как интегрировать приложения, развернутые в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], в собственные приложения, см. в статье [Использование приложений в кластерах больших данных](big-data-cluster-consume-apps.md). Вы также можете ознакомиться с дополнительными примерами использования расширения в наборе [примеров развертывания приложений](https://aka.ms/sql-app-deploy).
+Дополнительные сведения о том, как интегрировать приложения, развернутые в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], в собственные приложения, см. в статье [Использование приложений в кластерах больших данных](app-consume.md). Вы также можете ознакомиться с дополнительными примерами использования расширения в наборе [примеров развертывания приложений](https://aka.ms/sql-app-deploy).
 
 Дополнительные сведения о [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] см. в статье [Что такое [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
 
