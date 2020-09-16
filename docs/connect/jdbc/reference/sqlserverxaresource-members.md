@@ -1,4 +1,5 @@
 ---
+description: Элементы SQLServerXAResource
 title: Элементы SQLServerXAResource | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a069bf2c-1b70-4817-b084-a508445de799
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6d41f89ce541d6bb6497ad0702511c303704a41b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d0f772627bf8fb2265bfc95d25416d0f64f39601
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925671"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458166"
 ---
 # <a name="sqlserverxaresource-members"></a>Элементы SQLServerXAResource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "80925671"
   
 ## <a name="fields"></a>Поля  
   
-|Имя|Description|  
+|name|Описание|  
 |----------|-----------------|  
 |[SSTRANSTIGHTLYCPLD](../../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md)|Используется для разрешения тесно связанных транзакций XA, имеющих различные идентификаторы ветвей транзакции (XID), но одинаковые глобальные идентификаторы транзакции (GTRID).|  
   
@@ -39,7 +40,7 @@ ms.locfileid: "80925671"
   
 ## <a name="methods"></a>Методы  
   
-|Имя|Description|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[commit](../../../connect/jdbc/reference/commit-method-sqlserverxaresource.md)|Фиксирует глобальную транзакцию, которая указана в заданном объекте Xid.|  
 |[end](../../../connect/jdbc/reference/end-method-sqlserverxaresource.md)|Завершает работу, выполняемую от имени ветви транзакции.|  

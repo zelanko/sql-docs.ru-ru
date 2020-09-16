@@ -1,4 +1,5 @@
 ---
+description: Элементы SQLServerConnection
 title: Элементы SQLServerConnection | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3115a533-756b-4c78-aee9-4ba7253c85e0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3f7000c8737d8d950968a9074e092a88c738941e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 75a3670a0f7e958f1976e387acdaa02a8449d202
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921054"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458286"
 ---
 # <a name="sqlserverconnection-members"></a>Элементы SQLServerConnection
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -27,23 +28,23 @@ ms.locfileid: "80921054"
   
 ## <a name="fields"></a>Поля  
   
-|Имя|Description|  
+|name|Описание|  
 |----------|-----------------|  
 |[TRANSACTION_SNAPSHOT](../../../connect/jdbc/reference/transaction-snapshot-field-sqlserverconnection.md)|Используется для указания уровня изоляции транзакций моментальных снимков.|  
   
 ## <a name="inherited-fields"></a>Наследуемые поля  
   
-|Класс, из которого наследуется:|Description|  
+|Класс, из которого наследуется:|Описание|  
 |---------------------------|-----------------|  
 |java.sql.Connection|TRANSACTION_NONE, TRANSACTION_READ_COMMITTED, TRANSACTION_READ_UNCOMMITTED, TRANSACTION_REPEATABLE_READ, TRANSACTION_SERIALIZABLE|  
   
 ## <a name="methods"></a>Методы  
   
-|Имя|Description|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[clearWarnings](../../../connect/jdbc/reference/clearwarnings-method-sqlserverconnection.md)|Удаляет все предупреждения, включенные в отчет для этого объекта [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).|  
 |[close](../../../connect/jdbc/reference/close-method-sqlserverconnection.md)|Немедленно освобождает базу данных для этого объекта [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) и ресурсы JDBC вместо ожидания их автоматического освобождения.|  
-|[closeUnreferencedPreparedStatementHandles](../../../connect/jdbc/reference/closeunreferencedpreparedstatementhandles-method-sqlserverconnection.md)|Вызывает принудительное выполнение всех запросов отмены подготовки для необработанных и отмененных подготовленных инструкций.| 
+|[closeUnreferencedPreparedStatementHandles](../../../connect/jdbc/reference/closeunreferencedpreparedstatementhandles-method-sqlserverconnection.md)|Вызывает принудительное выполнение всех запросов отмены подготовки для необработанных и отброшенных подготовленных инструкций.| 
 |[commit](../../../connect/jdbc/reference/commit-method-sqlserverconnection.md)|Фиксирует все изменения, выполненные после предыдущей операции фиксации или отката, и снимает в базе данных все блокировки, удерживаемые в настоящее время данным объектом [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).|  
 |[createBlob](../../../connect/jdbc/reference/createblob-method-sqlserverconnection.md)|Создает объект **java.sql.Blob**, не содержащий данных.|  
 |[createClob](../../../connect/jdbc/reference/createclob-method-sqlserverconnection.md)|Создает объект **java.sql.Clob**, не содержащий данных.|  
@@ -54,8 +55,8 @@ ms.locfileid: "80921054"
 |[getCatalog](../../../connect/jdbc/reference/getcatalog-method-sqlserverconnection.md)|Извлекает имя текущего каталога для данного объекта [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).|  
 |[Метод getClientConnectionID (SQLServerConnection)](../../../connect/jdbc/reference/getclientconnectionid-method-sqlserverconnection.md)|Возвращает идентификатор соединения для последней попытки соединения, вне зависимости от того, была ли она успешной.|  
 |[getClientInfo](../../../connect/jdbc/reference/getclientinfo-method-sqlserverconnection.md)|Извлекает дополнительные сведения о свойствах данных клиентов, поддерживаемых драйвером JDBC.|  
-|[getDisableStatementPooling](../../../connect/jdbc/reference/getdisablestatementpooling-method-sqlserverconnection.md)|Возвращает значение свойства подключения **disableStatementPooling**. Этот параметр определяет, включено ли создание пула инструкций для этого подключения.|
-|[getDiscardedServerPreparedStatementCount](../../../connect/jdbc/reference/getdiscardedserverpreparedstatementcount-method-sqlserverconnection.md)|Возвращает количество невыполненных на текущий момент действий отмены подготовки для подготовленных инструкции.|
+|[getDisableStatementPooling](../../../connect/jdbc/reference/getdisablestatementpooling-method-sqlserverconnection.md)|Возвращает значение свойства **disableStatementPooling** для подключения. Этот параметр определяет, включено ли объединение инструкций в пул для этого подключения.|
+|[getDiscardedServerPreparedStatementCount](../../../connect/jdbc/reference/getdiscardedserverpreparedstatementcount-method-sqlserverconnection.md)|Возвращает количество невыполненных на текущий момент действий отмены подготовки для подготовленных инструкций.|
 |[getEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/getenableprepareonfirstpreparedstatementcall-method-sqlserverconnection.md)|Возвращает значение свойства подключения **enablePrepareOnFirstPreparedStatementCall**.|
 |[getHoldability](../../../connect/jdbc/reference/getholdability-method-sqlserverconnection.md)|Извлекает текущую возможность ожидания объектов [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md), созданных с помощью объекта [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).|  
 |[getMetaData](../../../connect/jdbc/reference/getmetadata-method-sqlserverconnection.md)|Извлекает объект [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md), который содержит метаданные базы данных, подключение к которой представляет данный объект [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).|  
@@ -67,7 +68,7 @@ ms.locfileid: "80921054"
 |[getWarnings](../../../connect/jdbc/reference/getwarnings-method-sqlserverconnection.md)|Извлекает первое предупреждение, указанное в отчетах вызовов данного объекта [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).|  
 |[isClosed](../../../connect/jdbc/reference/isclosed-method-sqlserverconnection.md)|Указывает, был ли закрыт этот объект [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).|  
 |[isReadOnly](../../../connect/jdbc/reference/isreadonly-method-sqlserverconnection.md)|Указывает, находится ли этот объект [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) в режиме только для чтения.|  
-|[isStatementPoolingEnabled](../../../connect/jdbc/reference/isstatementpoolingenabled-method-sqlserverconnection.md)|Возвращает сведения о том, включено ли создание пула инструкций для этого подключения.|  
+|[isStatementPoolingEnabled](../../../connect/jdbc/reference/isstatementpoolingenabled-method-sqlserverconnection.md)|Возвращает сведения о том, включено ли объединение инструкций в пул для этого подключения.|  
 |[isValid](../../../connect/jdbc/reference/isvalid-method-sqlserverconnection.md)|Указывает, верно ли, что этот объект [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) не закрыт и до сих пор действителен.|  
 |[nativeSQL](../../../connect/jdbc/reference/nativesql-method-sqlserverconnection.md)|Преобразовывает заданную инструкцию SQL в соответствии с грамматикой SQL сервера базы данных.|  
 |[prepareCall](../../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)|Создает объект [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) для вызова хранимых процедур базы данных.|  

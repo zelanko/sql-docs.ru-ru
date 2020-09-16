@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_field_metadata
 title: sqlsrv_field_metadata | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/31/2020
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - API Reference, sqlsrv_field_metadata
 - sqlsrv_field_metadata
 ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8ef4bd58d352216cd4c64fe6c18a9ffd6dd3b13a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fd0c925808fda11127d1632e62c296f8cce30272
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76939573"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449970"
 ---
 # <a name="sqlsrv_field_metadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,9 +42,9 @@ sqlsrv_field_metadata( resource $stmt)
 ## <a name="return-value"></a>Возвращаемое значение  
 **Массив** массивов или значение **false**. Массив содержит один массив для каждого поля в результирующем наборе. Каждый подмассив имеет ключи, как описано в следующей таблице. Если при извлечении метаданных полей возникает ошибка, возвращается значение **false** .  
   
-|Клавиши|Description|  
+|Клавиши|Описание|  
 |-------|---------------|  
-|Имя|Имя столбца, которому соответствует поле.|  
+|name|Имя столбца, которому соответствует поле.|  
 |Тип|Числовое значение, соответствующее типу SQL.|  
 |Размер|Число символов для полей символьного типа (char(n), varchar(n), nchar(n), nvarchar(n), XML). Число байтов для полей двоичного типа (binary(n), varbinary(n), UDT). Значение**NULL** для других типов данных SQL Server.|  
 |Точность|Точность для типов переменной точности (real, numeric, decimal, datetime2, datetimeoffset и time). Значение**NULL** для других типов данных SQL Server.|  
@@ -64,7 +65,7 @@ sqlsrv_field_metadata( resource $stmt)
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET (-155)|26/34|0/7||  
 |Decimal|SQL_DECIMAL (3)|1/38|0/значение точности||  
 |FLOAT|SQL_FLOAT (6)|4/8|||  
-|image|SQL_LONGVARBINARY (-4)|||2 ГБ|  
+|Изображение|SQL_LONGVARBINARY (-4)|||2 ГБ|  
 |INT|SQL_INTEGER (4)||||  
 |money|SQL_DECIMAL (3)|19/19|4/4||  
 |nchar|SQL_WCHAR (-8)|||0 < *n* < 4000 <sup>1</sup>|  
@@ -75,12 +76,12 @@ sqlsrv_field_metadata( resource $stmt)
 |smalldatetime|SQL_TYPE_TIMESTAMP (93)|16/16|0/0||  
 |smallint|SQL_SMALLINT (5)|||2 байта|  
 |Smallmoney|SQL_DECIMAL (3)|10/10|4/4||  
-|sql_variant|SQL_SS_VARIANT (-150)|||переменная|  
-|text|SQL_LONGVARCHAR (-1)|||2 ГБ|  
+|sql_variant|SQL_SS_VARIANT (-150)|||Переменная|  
+|текст|SQL_LONGVARCHAR (-1)|||2 ГБ|  
 |time|SQL_SS_TIME2 (-154)|8/16|0/7||  
 |TIMESTAMP|SQL_BINARY (-2)|||8 байт|  
 |tinyint|SQL_TINYINT (-6)|||1 байт|  
-|определяемый пользователем тип|SQL_SS_UDT (-151)|||переменная|  
+|определяемый пользователем тип|SQL_SS_UDT (-151)|||Переменная|  
 |UNIQUEIDENTIFIER|SQL_GUID (-11)|||16|  
 |varbinary|SQL_VARBINARY (-3)|||0 < *n* < 8000 <sup>1</sup>|  
 |varchar|SQL_VARCHAR (12)|||0 < *n* < 8000 <sup>1</sup>|  

@@ -1,4 +1,5 @@
 ---
+description: Функции поддержки разных языков JDBC Driver
 title: Функции поддержки разных языков в JDBC Driver | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f02c3aecda4c4d346b72c236156dd2b250ef63a2
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 960f689f39007b4fbe4d7aa01d935ef1aaf640cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924674"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438406"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>Функции поддержки разных языков JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

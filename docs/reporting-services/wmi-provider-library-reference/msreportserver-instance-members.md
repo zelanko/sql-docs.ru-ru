@@ -1,4 +1,5 @@
 ---
+description: Элементы MSReportServer_Instance
 title: Члены MSReportServer_Instance | Документы Майкрософт
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 154b78e6-59cc-44eb-a7d9-34908d1b6b1a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 13b266ed09c4187070403837a47011b30b43aa99
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2f75e1f2cffcbfc09672dc60242ad955360c864f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65572220"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454417"
 ---
 # <a name="msreportserver_instance-members"></a>Элементы MSReportServer_Instance
   Класс MSReportServer_Instance содержит основные сведения, необходимые клиенту для соединения с установленным сервером отчетов.  
   
 ## <a name="public-properties"></a>Открытые свойства  
   
-|||  
+|Свойство|Описание|  
 |-|-|  
 |[EditionID](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionid.md)|Возвращает выпуск сервера отчетов.|  
 |[EditionName](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionname.md)|Возвращает имя выпуска сервера отчетов в немашинном (предназначенном для человека) формате.|  
@@ -38,7 +39,7 @@ ms.locfileid: "65572220"
   
 ## <a name="public-methods"></a>Открытые методы  
   
-|||  
+|Метод|Описание|  
 |-|-|  
 |[Метод GetReportServerUrls (WMI MSReportServer_Instance)](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-methods-getreportserverurls.md)|Выводит список URL-адресов, с помощью которых пользователи могут получать доступ к серверу отчетов и диспетчеру отчетов.|  
   

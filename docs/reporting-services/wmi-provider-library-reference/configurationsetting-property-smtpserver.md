@@ -1,4 +1,5 @@
 ---
+description: Свойство SMTPServer (WMI MSReportServer_ConfigurationSetting)
 title: Свойство SMTPServer (WMI MSReportServer_ConfigurationSetting) | Документы Майкрософт
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8bcceeba-e1a0-44ef-bda1-600c6925e1db
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d54f229624f211d4244224a9b6f4765fd9095542
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4cc952bafb8113a186c9891b47903f637f0b04af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570229"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454444"
 ---
 # <a name="configurationsetting-property---smtpserver"></a>Свойство ConfigurationSetting — SMTPServer
   Возвращает свойство SMTP-сервера из файла конфигурации сервера отчетов. Только для чтения.  

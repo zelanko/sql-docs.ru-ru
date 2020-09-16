@@ -1,4 +1,5 @@
 ---
+description: Использование диспетчера конфигурации служб Reporting Services (собственный режим)
 title: Использование диспетчера конфигурации служб Reporting Services (собственный режим) | Документы Майкрософт
 ms.date: 09/20/2017
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - components [Reporting Services], Reporting Services Configuration tool
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3df5a4c27e5c916d5a2c803d7bd4d40110aabb27
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 03df504d7ffc4c104db9673995fa58e455961ef5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73593785"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454586"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Использование диспетчера конфигурации служб Reporting Services (собственный режим)
 
@@ -76,7 +77,7 @@ ms.locfileid: "73593785"
 
          Выберите **Диспетчер конфигурации служб Reporting Services**.
 
-2. Появится диалоговое окно **Подключение для конфигурации служб Reporting Services** , в котором можно выбрать настраиваемый экземпляр сервера отчетов. Выберите **Подключиться**.
+2. Появится диалоговое окно **Подключение для конфигурации служб Reporting Services** , в котором можно выбрать настраиваемый экземпляр сервера отчетов. Щелкните **Подключить**.
 
 3. В поле **Имя сервера**укажите имя компьютера, на котором установлен экземпляр сервера отчетов. По умолчанию это поле содержит имя локального компьютера, но если необходимо подключиться к серверу отчетов, установленному на другом компьютере, в него можно ввести имя удаленного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
 
@@ -84,9 +85,9 @@ ms.locfileid: "73593785"
 
 5. В списке **Экземпляр сервера отчетов** выберите экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], который необходимо настроить. В списке отображаются только экземпляры сервера отчетов для данной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Более ранние версии служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]настраивать нельзя.
 
-6. Выберите **Подключиться**.
+6. Щелкните **Подключить**.
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Дальнейшие шаги
 
 [Веб-портал](../../reporting-services/web-portal-ssrs-native-mode.md)   
 [Инструментальные средства служб Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   

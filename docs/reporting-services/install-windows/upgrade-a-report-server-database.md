@@ -1,4 +1,5 @@
 ---
+description: Обновление базы данных сервера отчетов
 title: Обновление базы данных сервера отчетов | Документы Майкрософт
 ms.date: 08/17/2018
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4873e91d33363743652f36d15c9015438e479476
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fcf80ef99c06487f25b65a928aab25a24bfccffe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65575233"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446010"
 ---
 # <a name="upgrade-a-report-server-database"></a>Обновление базы данных сервера отчетов
 
@@ -67,7 +68,7 @@ ms.locfileid: "65575233"
 #### <a name="to-upgrade-a-native-mode-database-with-scripts"></a>Обновление базы данных в собственном режиме с помощью скриптов  
  Для обновления базы данных сервера отчетов можно использовать скрипты WMI. Дополнительные сведения см. в статье [Метод GenerateDatabaseUpgradeScript (WMI MSReportServer_ConfigurationSetting)](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md).  
   
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Дальнейшие шаги
 
 [Диспетчер конфигурации служб Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
 [Создание базы данных сервера отчетов](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)  

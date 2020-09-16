@@ -1,4 +1,5 @@
 ---
+description: Оболочки и интерфейсы
 title: Программы-оболочки и интерфейсы | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 27fc9b72-9f21-4728-abcb-5c015f28a6ab
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dc8a8277147dd2dc136379471f6a4f7df789c3ee
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 504527843063bb3d5e3fd4a8c284dfc5e8e25b12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923934"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450056"
 ---
 # <a name="wrappers-and-interfaces"></a>Оболочки и интерфейсы
 
@@ -33,17 +34,17 @@ ms.locfileid: "80923934"
 
 - [Метод isWrapperFor &#40;SQLServerCallableStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md)
 
-- [Метод unwrap &#40;SQLServerCallableStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)
+- [Метод unwrap (SQLServerCallableStatement)](../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)
 
 - [Метод isWrapperFor &#40;SQLServerConnectionPoolDataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverconnectionpooldatasource.md)
 
-- [Метод unwrap &#40;SQLServerConnectionPoolDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverconnectionpooldatasource.md)
+- [Метод unwrap (SQLServerConnectionPoolDataSource)](../../connect/jdbc/reference/unwrap-method-sqlserverconnectionpooldatasource.md)
 
-- [Метод isWrapperFor &#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md)
+- [Метод isWrapperFor (SQLServerDataSource)](../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md)
 
 - [Метод unwrap (SQLServerDataSource)](../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)
 
-- [Метод isWrapperFor &#40;SQLServerPreparedStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverpreparedstatement.md)
+- [Метод isWrapperFor (SQLServerPreparedStatement)](../../connect/jdbc/reference/iswrapperfor-method-sqlserverpreparedstatement.md)
 
 - [Метод unwrap &#40;SQLServerPreparedStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverpreparedstatement.md)
 
@@ -55,7 +56,7 @@ ms.locfileid: "80923934"
 
 - [Метод unwrap (SQLServerXADataSource)](../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)
 
-## <a name="interfaces"></a>Интерфейсы
+## <a name="interfaces"></a>интерфейсов,
 
 Начиная с версии 3.0 драйвера JDBC для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] доступны интерфейсы для сервера приложений, позволяющие осуществлять доступ к методу, определяемому драйвером, из связанного класса. Сервер приложений может поместить класс в оболочку, создав класс-посредник, обеспечивающий определяемые драйвером [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] функции через интерфейс. Драйвер [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] поддерживает интерфейсы, имеющие методы и константы, определяемые драйвером [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], что позволяет серверу приложений создать для класса класс-посредник.
 
@@ -77,7 +78,7 @@ ms.locfileid: "80923934"
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Description
+### <a name="description"></a>Описание
 
 В образце показано, как получить доступ к функции, определяемой драйвером [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], через объект DataSource. Класс DataSource может быть помещен в оболочку сервером приложений. Для доступа к функции или константе, определяемой драйвером JDBC, можно снять оболочку с datasource для интерфейса ISQLServerDataSource и использовать функции, объявленные в данном интерфейсе.
 

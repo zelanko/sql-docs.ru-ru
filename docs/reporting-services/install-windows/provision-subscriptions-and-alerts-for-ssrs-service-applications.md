@@ -1,4 +1,5 @@
 ---
+description: Подготовка подписок и предупреждений для приложений служб SSRS
 title: Подготовка подписок и предупреждений для приложений служб SSRS | Документы Майкрософт
 ms.date: 06/03/2016
 ms.prod: reporting-services
@@ -14,12 +15,12 @@ ms.assetid: d0de3f1f-4887-47fb-bacf-46aaad74c4be
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ef70b3430cc1028b7486bf663280cfcf740d9290
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 28f69b4aa47b45708832162b2b4b8429a847bc65
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62651958"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454536"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>Подготовка подписок и предупреждений для приложений служб SSRS
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и предупреждения данных требуют наличия агента SQL Server, а также настройку разрешений для агента SQL Server. Если появляются сообщения об ошибках, указывающие, что необходим агент SQL Server, хотя агент SQL Server уже запущен, необходимо обновить и проверить разрешения. Этот раздел относится к [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint и здесь описаны три способа обновления разрешений агента SQL Server для подписок [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Вводимые учетные данные для шагов из данного раздела должны иметь достаточные разрешения для предоставления роли RSExecRole прав на выполнение объектов из приложения службы, баз данных msdb и master.  
@@ -30,7 +31,7 @@ ms.locfileid: "62651958"
   
  ![Разрешение для агента SQL Server на доступ к базам данных приложений служб](../../reporting-services/install-windows/media/rs-provisionsqlagent.gif "Разрешение для агента SQL Server на доступ к базам данных приложений служб")  
   
-||Description|  
+||Описание|  
 |------|-----------------|  
 |**1**|Экземпляр компонента SQL Server Database Engine, на котором размещаются базы данных приложения службы Reporting Services.|  
 |**2**|Экземпляр агента SQL Server для экземпляра компонента SQL Server Database Engine.|  
@@ -100,7 +101,7 @@ ms.locfileid: "62651958"
   
     -   При соединении с помощью проверки подлинности SQL Server введите имя входа и пароль.  
   
-3.  Нажмите кнопку **Соединить**.  
+3.  Нажмите кнопку **Подключить**.  
   
 #### <a name="to-run-the-transact-sql-statement"></a>Запуск инструкции Transact-SQL  
   

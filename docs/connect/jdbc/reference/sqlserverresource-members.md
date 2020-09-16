@@ -1,4 +1,5 @@
 ---
+description: Элементы SQLServerResource
 title: Элементы SQLServerResource | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 34b4b2e7-ec00-42aa-82ec-9cb01b538998
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3ca5d44b7b3afb6567e4bb922dd7a21acd8ff21e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 26f1b018689eaee58309e5d2f4f3e30ce14e9e12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925915"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458230"
 ---
 # <a name="sqlserverresource-members"></a>Элементы SQLServerResource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80925915"
   
 ## <a name="constructors"></a>Конструкторы  
   
-|Имя|Description|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[SQLServerResource](../../../connect/jdbc/reference/sqlserverresource-constructor.md)|Инициализирует новый экземпляр класса [SQLServerResource](../../../connect/jdbc/reference/sqlserverresource-class.md). Этот конструктор предназначен только для внутреннего использования.|  
   
@@ -33,13 +34,13 @@ ms.locfileid: "80925915"
   
 ## <a name="inherited-fields"></a>Наследуемые поля  
   
-|Имя|Description|  
+|name|Описание|  
 |----------|-----------------|  
 |java.util.ResourceBundle|родитель|  
   
 ## <a name="methods"></a>Методы  
   
-|Имя|Description|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[getContents](../../../connect/jdbc/reference/getcontents-method-sqlserverresource.md)|Получает данные из строки ошибок. Этот метод предназначен только для внутреннего использования.|  
   

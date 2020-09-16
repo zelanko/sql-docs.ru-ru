@@ -1,4 +1,5 @@
 ---
+description: Элементы SQLServerResultSet
 title: Элементы SQLServerResultSet | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2a438d5d-2d6a-46a0-a2ae-f35fbae4a472
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 17d15be7b332d899aa35a0ce7c3d7c2b9cac1edf
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: dd331cec7252fb0fd0b3099800837cf667fce336
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927122"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458243"
 ---
 # <a name="sqlserverresultset-members"></a>Элементы SQLServerResultSet
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "80927122"
   
 ## <a name="fields"></a>Поля  
   
-|Имя|Description|  
+|name|Описание|  
 |----------|-----------------|  
 |[CONCUR_SS_OPTIMISTIC_CC](../../../connect/jdbc/reference/concur-ss-optimistic-cc-field-sqlserverresultset.md)|Указывает тип оптимистичного параллелизма чтения-записи в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] без блокировки строк.|  
 |[CONCUR_SS_OPTIMISTIC_CCVAL](../../../connect/jdbc/reference/concur-ss-optimistic-ccval-field-sqlserverresultset.md)|Указывает тип оптимистичного параллелизма чтения-записи в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] без блокировки строк.|  
@@ -40,13 +41,13 @@ ms.locfileid: "80927122"
   
 ## <a name="inherited-fields"></a>Наследуемые поля  
   
-|Класс, из которого наследуется:|Description|  
+|Класс, из которого наследуется:|Описание|  
 |---------------------------|-----------------|  
 |java.sql.ResultSet|CLOSE_CURSORS_AT_COMMIT, CONCUR_READ_ONLY, CONCUR_UPDATABLE, FETCH_FORWARD, FETCH_REVERSE, FETCH_UNKNOWN, HOLD_CURSORS_OVER_COMMIT, TYPE_FORWARD_ONLY, TYPE_SCROLL_INSENSITIVE, TYPE_SCROLL_SENSITIVE|  
   
 ## <a name="methods"></a>Методы  
   
-|Имя|Description|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[absolute](../../../connect/jdbc/reference/absolute-method-sqlserverresultset.md)|Перемещает курсор в указанную строку этого объекта [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
 |[afterLast](../../../connect/jdbc/reference/afterlast-method-sqlserverresultset.md)|Перемещает курсор в область за последней строкой этого объекта [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
@@ -105,7 +106,7 @@ ms.locfileid: "80927122"
 |[last](../../../connect/jdbc/reference/last-method-sqlserverresultset.md)|Перемещает курсор в последнюю строку этого объекта [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
 |[moveToCurrentRow](../../../connect/jdbc/reference/movetocurrentrow-method-sqlserverresultset.md)|Перемещает курсор в сохраненное местоположение курсора, обычно в текущую строку.|  
 |[moveToInsertRow](../../../connect/jdbc/reference/movetoinsertrow-method-sqlserverresultset.md)|Перемещает курсор в строку вставки.|  
-|[next](../../../connect/jdbc/reference/next-method-sqlserverresultset.md)|Перемещает курсор на одну строку вниз от текущей позиции.|  
+|[далее](../../../connect/jdbc/reference/next-method-sqlserverresultset.md)|Перемещает курсор на одну строку вниз от текущей позиции.|  
 |[previous](../../../connect/jdbc/reference/previous-method-sqlserverresultset.md)|Перемещает курсор в предыдущую строку этого объекта [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
 |[refreshRow](../../../connect/jdbc/reference/refreshrow-method-sqlserverresultset.md)|Обновляет текущую строку, записывая последнее значение из базы данных.|  
 |[relative](../../../connect/jdbc/reference/relative-method-sqlserverresultset.md)|Перемещает курсор на заданное количество строк относительно текущей строки в положительном или отрицательном направлении.|  

@@ -1,4 +1,5 @@
 ---
+description: Метод updateNString (int, java.lang.String)
 title: Метод updateString (int, java.lang.String) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 1bb909f1-4a96-4be1-adea-36c8d9703112
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e85bffd557a54df44f787716c2660d6e22664796
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8e51a08a67835e7f63cd7baa52268746054bced7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80902880"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457986"
 ---
 # <a name="updatenstring-method-int-javalangstring"></a>Метод updateNString (int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +46,7 @@ public void updateNString(int columnIndex,
 ## <a name="remarks"></a>Remarks  
  Этот метод updateNString задается с помощью метода updateNString в интерфейсе java.sql.ResultSet.  
   
- Этот метод передает **строковое значение** Java в выбранные столбцы **nchar**, **nvarchar(max)** , **ntext** и **xml**. Использование этого метода при работе со столбцами других типов данных приведет к возникновению исключения.  
+ Этот метод передает **строковое значение** Java в выбранные столбцы **nchar**, **nvarchar(max)**, **ntext** и **xml**. Использование этого метода при работе со столбцами других типов данных приведет к возникновению исключения.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод updateNString &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenstring-method-sqlserverresultset.md)   

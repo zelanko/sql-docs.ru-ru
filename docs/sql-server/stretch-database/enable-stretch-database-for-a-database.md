@@ -1,4 +1,5 @@
 ---
+description: Включение Stretch Database для базы данных
 title: Включение Stretch Database для базы данных
 ms.date: 08/05/2016
 ms.service: sql-server-stretch-database
@@ -11,15 +12,15 @@ ms.assetid: 37854256-8c99-4566-a552-432e3ea7c6da
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: db08d84dd1619d8c9e2e4d8e796abdd0c9d202fc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 86ef68956fd948e485b221514dad588af40f4aac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73844593"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454406"
 ---
 # <a name="enable-stretch-database-for-a-database"></a>Включение Stretch Database для базы данных
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Чтобы настроить имеющуюся базу данных для использования со службой Stretch Database, выберите **Задачи | Stretch Database | Включить** для базы данных в SQL Server Management Studio. После этого откроется мастер **включения Stretch Database для базы данных**. Кроме того, вы можете использовать Transact-SQL, чтобы включить Stretch Database для базы данных.  
@@ -131,14 +132,14 @@ GO
     GO
     ```  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Дальнейшие шаги  
 -   [Включение Stretch Database для таблицы](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md), чтобы активировать дополнительные таблицы.  
   
 -   Инструкции по отслеживанию статуса переноса данных см. в разделе [Мониторинг и устранение неполадок переноса данных (Stretch Database)](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md).  
   
 -   [Приостановка и возобновление переноса данных (Stretch Database)](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)  
   
--   [Управление Stretch Database и устранение связанных с ней неполадок](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
+-   [Управление службой Stretch Database и устранение неполадок, связанных с ее использованием](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
   
 -   [Резервное копирование баз данных с поддержкой Stretch](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md)  
   

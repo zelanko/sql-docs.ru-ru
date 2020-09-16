@@ -1,4 +1,5 @@
 ---
+description: добавить зависимости к ресурсу SQL Server
 title: Добавление зависимостей к ресурсу экземпляра отказоустойчивого кластера SQL Server
 descriptoin: Describes how to add dependencies to an Always On failover cluster instance (FCI) resource using the Failover Cluster Manager.
 ms.custom: seo-lt-2019
@@ -15,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: 25dbb751-139b-4c8e-ac62-3ec23110611f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 84633c480003acc62b464c2609d7143051547de9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: edfe4aef388749cf1a9362f31f9ae2668f85b524
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897367"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454446"
 ---
 # <a name="add-dependencies-to-a-sql-server-resource"></a>добавить зависимости к ресурсу SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   В этой статье описывается, как добавлять зависимости к ресурсу экземпляра отказоустойчивого кластера Always On с помощью оснастки "Диспетчер отказоустойчивости кластеров". Оснастка «Диспетчер отказоустойчивости кластеров» — это приложение управления кластером для службы WSFC.  
   
--   **Перед началом работы**  [Ограничения](#Restrictions), [Предварительные условия](#Prerequisites)  
+-   **Перед началом работы:**  [ограничения](#Restrictions), [предварительные требования](#Prerequisites)  
   
--   **Добавление зависимости к ресурсу SQL Server с помощью:** [диспетчера отказоустойчивости кластеров Windows](#WinClusManager)  
+-   **Для добавления зависимости к ресурсу SQL Server используется** [Диспетчер отказоустойчивости кластеров Windows](#WinClusManager)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
@@ -45,13 +46,13 @@ ms.locfileid: "85897367"
   
  Рассмотрим эти дополнительные проблемы.  
   
--   Протокол FTP в репликации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. При работе с экземплярами [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], использующими протокол FTP в репликации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], служба FTP должна использовать один из тех физических дисков, на которых установлен [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], настроенный для использования службы FTP.  
+-   Протокол FTP с репликацией [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . При работе с экземплярами [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , использующими протокол FTP с репликацией [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , служба FTP должна использовать один из тех же физических дисков, которые использует установка [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , настроенная на использование службы FTP.  
   
--   Зависимости ресурса [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Чтобы гарантировать доступность [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] при добавлении ресурса в группу [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и существовании зависимости в ресурсе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[msCoName](../../../includes/msconame-md.md)] рекомендует добавить зависимость в ресурс агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Не добавляйте зависимость на ресурс [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Чтобы гарантировать высокий уровень доступности компьютера, на котором работает [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , необходимо настроить ресурс агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] таким образом, чтобы сбой ресурса агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не влиял на группу [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Чтобы гарантировать доступность [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] при добавлении ресурса в группу [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и существовании зависимости от ресурса [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , [!INCLUDE[msCoName](../../../includes/msconame-md.md)] рекомендует добавить зависимость для ресурса агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Не добавляйте зависимость на ресурс [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Чтобы гарантировать высокий уровень доступности компьютера, на котором работает [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , необходимо настроить ресурс агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] таким образом, чтобы сбой ресурса агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не влиял на группу [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
--   Ресурсы общих папок и принтеров. При установке ресурсов общих папок или кластера печати не следует размещать их на физических дисках, используемых компьютером, на котором работает [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Размещение этих ресурсов на указанных жестких дисках может привести к снижению производительности и возможностей компьютера, на котором работает [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Ресурсы общих папок и принтеров. При добавлении ресурсов общих папок или кластера печати не следует размещать их на физических дисках, используемых компьютером, на котором работает [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Размещение этих ресурсов на указанных жестких дисках может привести к снижению производительности и возможностей компьютера, на котором работает [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   Замечания о координаторе MS DTC. После установки операционной системы и настройки FCI необходимо настроить координатор распределенных транзакций [!INCLUDE[msCoName](../../../includes/msconame-md.md)] (MS DTC) для работы в кластере с помощью оснастки "Диспетчер отказоустойчивости кластеров". Если MS DTC не будет настроен для работы в кластере, это не помешает установке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , но может ограничить функциональные возможности приложений [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+-   Замечания о координаторе MS DTC. После установки операционной системы и настройки FCI необходимо настроить координатор распределенных транзакций ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ) (MS DTC) для работы в кластере с помощью оснастки "Диспетчер отказоустойчивости кластеров". Если MS DTC не будет настроен для работы в кластере, это не помешает установке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , но может ограничить функциональные возможности приложений [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
      Если координатор MS DTC установлен в группе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и имеются зависящие от него ресурсы, то MS DTC не будет доступен, когда эта группа оказывается вне сети или проходит отработку отказа. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] рекомендует поместить координатор MS DTC в отдельную группу с собственным ресурсом физического диска, если это возможно.  
   

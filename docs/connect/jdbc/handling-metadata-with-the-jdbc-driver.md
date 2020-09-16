@@ -1,4 +1,5 @@
 ---
+description: Обработка метаданных с помощью JDBC Driver
 title: Обработка метаданных с помощью JDBC Driver | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5cfb35d4-ddcd-40a2-8091-f29cddc32552
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 859932404e14a9ab1216665d211e1b6734ca9726
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 633629005eef8e9a47f616637e646886666f2200
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924691"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438426"
 ---
 # <a name="handling-metadata-with-the-jdbc-driver"></a>Обработка метаданных с помощью JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "80924691"
   
 ## <a name="in-this-section"></a>В этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Использование метаданных базы данных](../../connect/jdbc/using-database-metadata.md)|Описывает получение метаданных о базе данных, с которой установлено соединение.|  
 |[Использование метаданных результирующего набора](../../connect/jdbc/using-result-set-metadata.md)|Описывает получение метаданных о текущем результирующем наборе.|  

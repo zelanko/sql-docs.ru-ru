@@ -1,4 +1,5 @@
 ---
+description: Миграция из собственного режима в режим интеграции с SharePoint (SSRS)
 title: Миграция из собственного режима в режим интеграции с SharePoint | Документация Майкрософт
 ms.date: 08/17/2017
 ms.prod: reporting-services
@@ -8,12 +9,12 @@ ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4ae49e1110a1d539cbe7095f946be7fc522b80b1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ba6eef61dd79dbbbe97326c888698b69152065ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082621"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454549"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>Миграция из собственного режима в режим интеграции с SharePoint (SSRS)
 
@@ -31,13 +32,13 @@ ms.locfileid: "77082621"
   
 1.  Создание резервных копий и восстановление ключей шифрования. Это ключ, который используется для шифрования данных. Ключ шифрования также используется для шифрования паролей, например паролей, сохраненных для соединения с источниками данных. Но перенести пароли невозможно, поэтому в целевой среде их нужно ввести снова.  
   
-2.  **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .** Запишите скрипт Visual Basic, который вызывает методы SOAP веб-службы сервера отчетов, чтобы копировать данные между базами данных. Используйте служебную программу **RS.exe** для запуска скрипта. Программа RS.exe устанавливается вместе c [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+2.  **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Скрипты RSS.** Запишите скрипт Visual Basic, который вызывает методы SOAP веб-службы сервера отчетов, чтобы копировать данные между базами данных. Используйте служебную программу **RS.exe** для запуска скрипта. Программа RS.exe устанавливается вместе c [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
     -   [Образец скрипта программы rs.exe служб Reporting Services для копирования содержимого между серверами отчетов](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md). Разделы содержат описание того, как использовать образец скрипта, который можно загрузить на сайте CodePlex.  
   
     -   Пример rss-скрипта на сайте CodePlex см. здесь: [Скрипт программы RS.exe служб Reporting Services, который переносит содержимое с одного сервера отчетов на другой](https://azuresql.codeplex.com/releases/view/115207)  
   
-    -   [Работа с отчетами и PowerShell в Reporting Services](../../reporting-services/tools/scripting-and-powershell-with-reporting-services.md)  
+    -   [Сценарии и PowerShell со службами Reporting Services](../../reporting-services/tools/scripting-and-powershell-with-reporting-services.md)  
   
  В следующей таблице перечислены объекты служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , которые можно перенести с помощью скриптов.  
   

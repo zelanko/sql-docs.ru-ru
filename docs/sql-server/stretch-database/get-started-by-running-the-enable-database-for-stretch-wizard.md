@@ -1,4 +1,5 @@
 ---
+description: Запуск мастера включения растяжения для базы данных
 title: Запуск мастера включения растяжения для базы данных
 ms.date: 08/05/2016
 ms.service: sql-server-stretch-database
@@ -21,15 +22,15 @@ ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 5d730c8e71044154b9844174ac8d21837c9ea05f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6b06f82e5c51aa1c3843abec0daa7d3bebabe40a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73843802"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454368"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Запуск мастера включения растяжения для базы данных
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
  Для настройки базы данных для Stretch Database запустите мастер "Включение Stretch Database для базы данных".  Эта статья содержит сведения о параметрах, используемых в этом мастере.  
@@ -62,10 +63,10 @@ ms.locfileid: "73843802"
   
  ![Страница выбора таблиц в мастере Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-2.png "Страница выбора таблиц в мастере Stretch Database")  
   
-|Столбец|Description|  
+|Столбец|Описание|  
 |------------|-----------------|  
 |(нет имени)|Установите флажок в этом столбце для включения растяжения для выбранной таблицы.|  
-|**Название**|Указывает имя таблицы в базе данных.|  
+|**Имя**|Указывает имя таблицы в базе данных.|  
 |(нет имени)|Символ в этом столбце может означать предупреждение, не позволяющее включить поддержку Stretch для выбранной таблицы. Кроме того, он может указывать на проблему блокировки, не позволяющую включить выбранную таблицу для Stretch, например связанную с тем, что в таблице используется неподдерживаемый тип данных. Наведите указатель на символ, чтобы увидеть всплывающую подсказку с дополнительной информацией. Дополнительные сведения см. в статье об [ограничениях для Stretch Database](../../sql-server/stretch-database/limitations-for-stretch-database.md).|  
 |**Растянута**|Указывает, что в таблице уже включена поддержка Stretch.|  
 |**анализа**|Можно перенести всю таблицу (**Вся таблица**) или указать фильтр для одного из столбцов в этой таблице. Если вы хотите отобрать строки для переноса, использую другую функцию фильтра, после выхода из мастера выполните инструкцию ALTER TABLE, чтобы указать функцию фильтра. Дополнительные сведения о функции фильтров см. в статье [Выбор строк для миграции с использованием функции фильтров](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). Дополнительные сведения о способах применения функции см. в статье [Настройка Stretch Database для таблицы](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) или [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md).|  
@@ -169,17 +170,17 @@ ms.locfileid: "73843802"
  ![Страница сводки в мастере Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-8.png "Страница сводки в мастере Stretch Database")  
   
 ##  <a name="results"></a><a name="Results"></a> Результаты  
- Просмотрите результаты операции.  
+ Просмотрите результаты.  
   
  Инструкции по отслеживанию состояния переноса данных см. в статье [Мониторинг переноса данных и устранение неполадок при этой операции (Stretch Database)](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md).  
   
  ![Страница результатов в мастере Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-9.PNG "Страница результатов в мастере Stretch Database")  
   
 ##  <a name="troubleshooting-the-wizard"></a><a name="KnownIssues"></a> Устранение неполадок в работе мастера  
- **Сбой в работе мастера Stretch Database.**  
+ **Сбой в работе мастера подготовки Stretch Database.**  
  Если служба Stretch Database еще не включена на уровне сервера системным администратором и вы запускаете мастер, то его работа завершится неудачно. Попросите системного администратора активировать использование базы данных Stretch на экземпляре локального сервера, а затем повторно запустите мастер. Дополнительные сведения см. в разделе [Обязательное требование: разрешение на включение базы данных Stretch на сервере](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Дальнейшие шаги  
  Включите Stretch Database для других таблиц. Мониторинг миграции данных и управление базами данных и таблицами с поддержкой Stretch.  
   
 -   [Включение Stretch Database для таблицы](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md), чтобы активировать дополнительные таблицы.  
@@ -188,7 +189,7 @@ ms.locfileid: "73843802"
   
 -   [Приостановка и возобновление переноса данных (Stretch Database)](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)  
   
--   [Управление Stretch Database и устранение связанных с ней неполадок](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
+-   [Управление службой Stretch Database и устранение неполадок, связанных с ее использованием](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
   
 -   [Резервное копирование баз данных с поддержкой Stretch](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: Свойства MSReportServer_ConfigurationSetting
 title: Свойства MSReportServer_ConfigurationSetting | Документы Майкрософт
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -16,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: e75fe1e5-197b-4c65-859b-370821cad003
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 634c5065730ea58905f89ac0454cdda53552a126
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 94b199ce85b8f4d9fdea8d377ac0798a3e72f8fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65569100"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454476"
 ---
 # <a name="msreportserver_configurationsetting-properties"></a>Свойства MSReportServer_ConfigurationSetting
   Класс MSReportServer_ConfigurationSetting представляет установочные параметры и параметры времени выполнения для экземпляра сервера отчетов. Эти параметры хранятся в файле конфигурации RSReportServer.config.  
   
 ## <a name="public-properties"></a>Открытые свойства  
   
-|||  
+|Свойство|Описание|  
 |-|-|  
 |[ConnectionPoolSize](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-connectionpoolsize.md)|Возвращает размер пула подключений, который используется сервером отчетов для связи с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)], где размещается база данных сервера отчетов. Только для чтения.|  
 |[DatabaseLogonAccount](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogonaccount.md)|Задает учетную запись входа, которую сервер отчетов использует для подключения к экземпляру компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)], на котором размещена база данных сервера отчетов. Только для чтения.|  
