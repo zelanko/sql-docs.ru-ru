@@ -1,4 +1,5 @@
 ---
+description: Выполнение основных операций с запросами (визуальные инструменты для баз данных)
 title: Выполнение основных операций с запросами
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: 88dbdbfe-bc60-4e11-b338-dbe7f26566d5
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 95811ef98c430bf5b2b0373ad4dcd7a862351b11
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 33488c5a709ca63bf42107ba0476211036735d36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003218"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462761"
 ---
 # <a name="perform-basic-operations-with-queries-visual-database-tools"></a>Выполнение основных операций с запросами (визуальные инструменты для баз данных)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -95,7 +96,7 @@ ms.locfileid: "86003218"
 [Свойства запроса (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/query-properties-visual-database-tools.md)  
 Свойства, доступные для запросов.  
   
-## <a name="related-sections"></a>См. также  
+## <a name="related-sections"></a>Связанные разделы  
 [Типы запросов (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
 Подразделы, в которых рассматриваются запросы, с которыми можно работать в конструкторе запросов и представлений.  
   

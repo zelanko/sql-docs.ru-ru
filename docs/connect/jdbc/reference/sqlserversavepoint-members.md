@@ -1,4 +1,5 @@
 ---
+description: Элементы SQLServerSavepoint
 title: Элементы SQLServerSavepoint | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3aef1550-3798-4095-bd1c-1a4be09804e8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e3adc8469720ec87343325afd552b5630d3c3b39
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c80da4d3b87c379bda298880ae1ac09c300f76e7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927022"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462616"
 ---
 # <a name="sqlserversavepoint-members"></a>Элементы SQLServerSavepoint
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80927022"
   
 ## <a name="constructors"></a>Конструкторы  
   
-|Имя|Description|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[Конструктор SQLServerSavepoint (SQLServerConnection, java.lang.StringName)](../../../connect/jdbc/reference/sqlserversavepoint-constructor-sqlserverconnection-java-lang-stringname.md)|Инициализирует новый экземпляр [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) на основе заданного соединения и имени.|  
   
@@ -36,7 +37,7 @@ ms.locfileid: "80927022"
   
 ## <a name="methods"></a>Методы  
   
-|Имя|Description|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[getLabel](../../../connect/jdbc/reference/getlabel-method-sqlserversavepoint.md)|Возвращает имя метки точки сохранения.|  
 |[getSavepointId](../../../connect/jdbc/reference/getsavepointid-method-sqlserversavepoint.md)|Возвращает идентификатор точки сохранения.|  

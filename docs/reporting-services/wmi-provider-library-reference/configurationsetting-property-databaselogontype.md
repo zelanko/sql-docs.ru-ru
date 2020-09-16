@@ -1,4 +1,5 @@
 ---
+description: Свойство DatabaseLogonType (WMI MSReportServer_ConfigurationSetting)
 title: Свойство DatabaseLogonType (WMI MSReportServer_ConfigurationSetting) | Документы Майкрософт
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6b592582-4c35-4029-ab86-982fff47d8d6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 078c430e2300a0b80f85357f9f962e8e2dd72838
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9536d9cf0d97576558ce378418769e3db4f543da
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570908"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472676"
 ---
 # <a name="configurationsetting-property---databaselogontype"></a>Свойство ConfigurationSetting — DatabaseLogonType
   Определяет, какая учетная запись используется для доступа к базе данных сервера отчетов: учетная запись службы [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, учетная запись пользователя Windows, либо имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Только для чтения.  
@@ -42,7 +43,7 @@ public int DatabaseLogonType;
  [Класс MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Возможны следующие значения.  
+ Доступны следующие значения:  
   
 -   0 для имени входа Windows  
   

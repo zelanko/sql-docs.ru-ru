@@ -1,4 +1,5 @@
 ---
+description: Обновление данных (драйверы Майкрософт для PHP для SQL Server)
 title: Обновление данных (драйверы Майкрософт для PHP для SQL Server) | Документы Майкрософт
 ms.custom: ''
 ms.date: 03/26/2018
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: dd323f83-f415-4fa4-8457-89dad6d321d0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6431ba7d874d93bfac7510eb21815dc79f093694
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 350b0d1cd368664598fa766f125956fb7bedf4f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926850"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466679"
 ---
 # <a name="updating-data-microsoft-drivers-for-php-for-sql-server"></a>Обновление данных (драйверы Майкрософт для PHP для SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,10 +33,10 @@ ms.locfileid: "80926850"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |---------|---------------|  
-|[Практическое руководство. Выполнение параметризованных запросов](../../connect/php/how-to-perform-parameterized-queries.md)|Описывает выполнение параметризованных запросов.|  
-|[Практическое руководство. Отправка данных в виде потока](../../connect/php/how-to-send-data-as-a-stream.md)|Описывает потоковую передачу данных на сервер.|  
+|[Руководство. Выполнение параметризованных запросов](../../connect/php/how-to-perform-parameterized-queries.md)|Описывает выполнение параметризованных запросов.|  
+|[Руководство. Отправка данных в виде потока](../../connect/php/how-to-send-data-as-a-stream.md)|Описывает потоковую передачу данных на сервер.|  
 |[Практическое руководство. Выполнение транзакций](../../connect/php/how-to-perform-transactions.md)|Описывает использование функций **sqlsrv** для выполнения транзакций.|  
   
 ## <a name="see-also"></a>См. также:  

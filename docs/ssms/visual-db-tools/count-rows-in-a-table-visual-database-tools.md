@@ -1,4 +1,5 @@
 ---
+description: подсчитать строки в таблице (визуальные инструменты для баз данных)
 title: Подсчет строк в таблице
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ ms.assetid: dda4296a-1d16-4e77-8d6f-e295f6dd4e87
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 34a37d382d7176f1f1e602aa45a559299d7d43ea
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b4aef31efc3b7636d56d9a4cd1ba1cf07aa22830
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005121"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462879"
 ---
 # <a name="count-rows-in-a-table-visual-database-tools"></a>подсчитать строки в таблице (визуальные инструменты для баз данных)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "86005121"
   
     Конструктор запросов и представлений автоматически заносит значение **Подсчет** в столбец **Group By** на панели критериев и присваивает столбцу, по которому подводится итог, псевдоним столбца. Псевдоним, созданный автоматически, можно заменить более содержательным псевдонимом. Дополнительные сведения см. в разделе [Создание псевдонимов столбцов (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md).  
   
-4.  Выполните запрос.  
+4.  Выполнение запроса.  
   
 ### <a name="to-count-all-the-rows-that-meet-a-condition"></a>Подсчет всех строк, удовлетворяющих условию  
   
@@ -68,7 +69,7 @@ ms.locfileid: "86005121"
   
 6.  В столбце **Фильтр** введите условие для выполнения поиска по столбцу данных.  
   
-7.  Выполните запрос.  
+7.  Выполнение запроса.  
   
 ### <a name="to-count-the-values-in-a-column"></a>Подсчет значений в столбце  
   
@@ -85,7 +86,7 @@ ms.locfileid: "86005121"
     > [!NOTE]  
     > Чтобы подсчитать только уникальные значения, выберите **Count Distinct**.  
   
-5.  Выполните запрос.  
+5.  Выполнение запроса.  
   
 ## <a name="see-also"></a>См. также:  
 [Результаты запросов сортировки и группирования (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  

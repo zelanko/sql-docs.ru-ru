@@ -1,4 +1,5 @@
 ---
+description: Метод supportsCatalogsInProcedureCalls (SQLServerDatabaseMetaData)
 title: Метод supportsCatalogsInProcedureCalls | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 5ec3571a-c7c6-4b94-a9ea-ac08adc7f978
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cbbdde34415a80f24944eb6e50a314f393c175ce
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e5d4a800e7a62728457c09083f8dfa57edc22cf1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80915210"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467066"
 ---
 # <a name="supportscatalogsinprocedurecalls-method-sqlserverdatabasemetadata"></a>Метод supportsCatalogsInProcedureCalls (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

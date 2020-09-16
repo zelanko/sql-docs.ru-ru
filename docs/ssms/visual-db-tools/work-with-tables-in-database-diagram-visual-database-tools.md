@@ -1,4 +1,5 @@
 ---
+description: Работа с таблицами в диаграммах базы данных (визуальные инструменты для баз данных)
 title: Работа с таблицами в диаграммах базы данных
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,12 +16,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 7072233d4a4d509fbb002e9951484f547396dad5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1f947afca06a3f27ae972885b20199917b14862e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002565"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459999"
 ---
 # <a name="work-with-tables-in-database-diagram-visual-database-tools"></a>Работа с таблицами в диаграммах базы данных (визуальные инструменты для баз данных)
 
@@ -50,4 +51,4 @@ ms.locfileid: "86002565"
 
 [Диалоговое окно "Добавление таблицы" (конструктор базы данных) (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/add-table-dialog-box-database-designer-visual-database-tools.md)
 
-## <a name="related-sections"></a>См. также
+## <a name="related-sections"></a>Связанные разделы

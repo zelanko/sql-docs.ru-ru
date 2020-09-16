@@ -1,4 +1,5 @@
 ---
+description: Автоматическое соединение таблиц (визуальные инструменты для баз данных)
 title: Автоматическое соединение таблиц
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,16 +15,16 @@ ms.assetid: f152af82-bcb6-49ca-af19-48cdb7fc9ac6
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: a98ac8db359d4e47911ce3a2ca97b6cdd5494d90
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3efc96cafe9a7759834591473007dd3818b16e25
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011708"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462804"
 ---
 # <a name="join-tables-automatically-visual-database-tools"></a>Автоматическое соединение таблиц (визуальные инструменты для баз данных)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-При добавлении двух или более таблиц в запрос [конструктор запросов и представлений](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) пытается определить, имеется ли между ними связь. Если это так, конструктор запросов и представлений автоматически помещает строки соединения между прямоугольниками, представляющими таблицы или объекты, структурированные в виде таблиц.  
+ При добавлении двух или более таблиц в запрос [конструктор запросов и представлений](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) пытается определить, имеется ли между ними связь. Если это так, конструктор запросов и представлений автоматически помещает строки соединения между прямоугольниками, представляющими таблицы или объекты, структурированные в виде таблиц.  
   
 Конструктор запросов и представлений определяет таблицы как соединенные, если:  
   

@@ -1,4 +1,5 @@
 ---
+description: Настройка масштабного развертывания сервера отчетов, работающего в собственном режиме
 title: Настройка масштабного развертывания сервера отчетов, работающего в собственном режиме | Документы Майкрософт
 ms.date: 11/29/2018
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9822af554536d9168c2ee3dd690c641865e66574
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a8e9e8fab90a0c2f21ae29d113ea896b471177f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73593869"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460006"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>Настройка масштабного развертывания сервера отчетов, работающего в собственном режиме
 
@@ -75,9 +76,9 @@ ms.locfileid: "73593869"
 
 Учетные записи службы, используемые для экземпляра служб Reporting Services, важны при работе с масштабным развертыванием. При развертывании экземпляров служб Reporting Services необходимо выполнить одно из следующих действий.
 
-**Вариант 1.** На всех экземплярах Reporting Services нужно настроить одну и ту же учетную запись домена в качестве учетной записи службы.
+**Вариант 1.** Все экземпляры служб Reporting Services следует настроить с одной и той же учетной записью домена для учетной записи службы.
 
-**Вариант 2.** Каждой отдельной учетной записи службы (независимо от того, входит ли она в домен) нужно предоставить разрешения dbadmin в экземпляре базы данных SQL Server, на котором размещается база данных каталога ReportServer.
+**Вариант 2.** Каждой отдельной учетной записи службы, учетная это запись домена или нет, должны быть предоставлены разрешения dbadmin в экземпляре базы данных SQL Server, на котором размещается база данных каталога сервера отчетов.
 
 Если вы настроили другую конфигурацию, отличную от перечисленных выше, при изменении задач с помощью агента SQL могут возникать временные сбои. Они будут отображаться как ошибки в журнале служб Reporting Services и на веб-портале при редактировании подписки на отчет.
 
@@ -138,13 +139,13 @@ An error occurred within the report server database.  This may be due to a conne
     > [!NOTE]  
     >  **Проблема**. При попытке присоединить экземпляр сервера отчетов Reporting Services к масштабируемому развертыванию могут возникать сообщения об ошибках вида "Отказано в доступе".  
     >   
-    >  **Решение:** Создайте резервную копию ключа шифрования [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] из первого экземпляра [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и восстановите его на втором сервере отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Затем попытайтесь включить в масштабное развертывание [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] второй экземпляр сервера отчетов.  
+    >  **Обходное решение.** Создайте резервную копию ключа шифрования [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] из первого экземпляра [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и восстановите его на второй сервер отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Затем попытайтесь включить в масштабное развертывание [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] второй экземпляр сервера отчетов.  
   
 4.  Теперь оба экземпляра сервера отчетов можно проверить, чтобы убедиться в их рабочем состоянии. Чтобы проверить второй экземпляр, можно при помощи программы настройки служб Reporting Services подключиться к серверу отчетов и щелкнуть **URL-адрес веб-службы** или **URL-адрес диспетчера отчетов**.  
   
  Если серверы отчетов планируется запускать в кластере со сбалансированной нагрузкой, необходима дополнительная настройка. Дополнительные сведения см. в статье [настроить сервер отчетов в кластере с балансированием сетевой нагрузки](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Дальнейшие шаги
 
 [Настройка учетной записи службы](configure-the-report-server-service-account-ssrs-configuration-manager.md)
 [Настройка URL-адреса](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   

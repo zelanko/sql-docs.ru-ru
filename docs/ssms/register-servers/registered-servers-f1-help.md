@@ -1,4 +1,5 @@
 ---
+description: Справка F1 по зарегистрированным серверам
 title: Справка F1 по зарегистрированным серверам
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c011635e676cfc25cb4e5cc5acf357b11700080e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 32adf127957504d85d071e7b59ad0ab6a0590547
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011118"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462950"
 ---
 # <a name="registered-servers-f1-help"></a>Справка F1 по зарегистрированным серверам
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "86011118"
  **Режим проверки подлинности Windows (проверка подлинности Windows)**  
  Подключитесь к экземпляру сервера отчетов, используя учетные данные [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
- **Обычная аутентификация**  
+ **Обычная проверка подлинности**  
  Установите соединение, используя **Обычную проверку подлинности** , если экземпляр служб Reporting Services настроен на использование обычной проверки подлинности.  
   
  **Проверка подлинности с помощью форм**  

@@ -1,4 +1,5 @@
 ---
+description: Создание запросов на вставку результатов (визуальные инструменты для баз данных)
 title: Создание запросов на вставку результатов
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: db85a1a3c3eb10d7fcf67d85964a4dda0ee4bbd2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2cf9d2a167852ba2ad32057c806368f7ff590ec3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010408"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468469"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>Создание запросов на вставку результатов (визуальные инструменты для баз данных)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -81,7 +82,7 @@ WHERE (pub_id = '0766')
   
     Конструктор запросов и представлений добавляет выбранные столбцы к столбцу **Столбец** панели критериев.  
   
-5.  В столбце **Добавить** на панели критериев выберите столбец в целевой таблице для каждого копируемого столбца исходной таблицы. Если строка копируется целиком, выберите *tablename.&#42;* . Столбцы в исходной и целевой таблице должны иметь одинаковые или совместимые типы данных.  
+5.  В столбце **Добавить** на панели критериев выберите столбец в целевой таблице для каждого копируемого столбца исходной таблицы. Если строка копируется целиком, выберите *tablename.&#42;*. Столбцы в исходной и целевой таблице должны иметь одинаковые или совместимые типы данных.  
   
 6.  Чтобы скопировать строки в определенном порядке, укажите порядок сортировки. Дополнительные сведения см. в разделе [Результаты запросов сортировки и группирования (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md).  
   

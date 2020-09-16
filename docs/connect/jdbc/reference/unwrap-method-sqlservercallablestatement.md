@@ -1,4 +1,5 @@
 ---
+description: Метод unwrap (SQLServerCallableStatement)
 title: Метод unwrap (SQLServerCallableStatement) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cbbf2728-b8c8-4c35-875a-6e967c8285dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e65434e03102ca3c407fbee49486c543c63f52d4
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c2909870e0aaa5bdd7db86a567fb11915ede2428
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80907982"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462409"
 ---
 # <a name="unwrap-method-sqlservercallablestatement"></a>Метод unwrap (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +48,7 @@ public <T> T unwrap(Class<T> iface)
   
  [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) реализует интерфейс [ISQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md), расширяющий интерфейс [ISQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md). При вызове этого метода объект развертывается в следующие объекты: [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) и [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md).  
   
- Дополнительные сведения см. в статье об [интерфейсах и программах-оболочках](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ См. сведения об [интерфейсах и программах-оболочках](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
  В следующем примере кода показано, как использовать методы isWrapperFor и unwrap для проверки расширений драйвера и вызова методов, предоставленных поставщиками, например [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) и [getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md).  
   

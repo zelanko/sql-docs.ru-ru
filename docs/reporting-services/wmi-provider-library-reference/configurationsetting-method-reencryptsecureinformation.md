@@ -1,4 +1,5 @@
 ---
+description: Метод ReencryptSecureInformation (WMI MSReportServer_ConfigurationSetting)
 title: Метод ReencryptSecureInformation (WMI MSReportServer_ConfigurationSetting) | Документы Майкрософт
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8a487497-c207-45b2-8c92-87c58cc68716
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 84265b1a72d93a2d8de8332e0309093a9a506ea0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 629df7fb638bbad4df760855ae7963dce763071b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571432"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468980"
 ---
 # <a name="configurationsetting-method---reencryptsecureinformation"></a>Метод ConfigurationSetting — ReencryptSecureInformation
   Создает новый ключ шифрования и повторно зашифровывает с его помощью всю защищенную информацию в каталоге.  

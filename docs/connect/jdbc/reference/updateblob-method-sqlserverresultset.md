@@ -1,4 +1,5 @@
 ---
+description: Метод updateBlob (SQLServerResultSet)
 title: Метод updateBlob (SQLServerResultSet) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 78e367c6-5e4d-4715-8cb7-e841e4f76a7c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ee17a330526c099394145b95b127091ccc1f7fee
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 31cf98c8237267915a137bdba720ac586795ff2f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924770"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462302"
 ---
 # <a name="updateblob-method-sqlserverresultset"></a>Метод updateBlob (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80924770"
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|Имя|Description|  
+|name|Описание|  
 |----------|-----------------|  
 |[updateBlob (int, java.sql.Blob)](../../../connect/jdbc/reference/updateblob-method-int-java-sql-blob.md)|Обновляет значение java.sql.Blob в указанном столбце.|  
 |[updateBlob (int, java.io.InputStream)](../../../connect/jdbc/reference/updateblob-method-int-java-io-inputstream.md)|Обновляет указанный столбец с помощью заданного входного потока.|  

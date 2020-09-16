@@ -1,4 +1,5 @@
 ---
+description: Члены SQLServerStatement
 title: Элементы SQLServerStatement | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 828cbaa9-ea7a-4986-95c3-5ba0d7d01d83
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: efc14978a306266432f0d4c2dc49f97f6a19dc0d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 26430e0617bb562cdd300c56f57e882a2aa7fca4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927002"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462576"
 ---
 # <a name="sqlserverstatement-members"></a>Члены SQLServerStatement
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,13 +31,13 @@ ms.locfileid: "80927002"
   
 ## <a name="inherited-fields"></a>Наследуемые поля  
   
-|Имя|Description|  
+|name|Описание|  
 |----------|-----------------|  
 |java.sql.Statement|CLOSE_ALL_RESULTS, CLOSE_CURRENT_RESULT, EXECUTE_FAILED, KEEP_CURRENT_RESULT, NO_GENERATED_KEYS, RETURN_GENERATED_KEYS, SUCCESS_NO_INFO|  
   
 ## <a name="methods"></a>Методы  
   
-|Имя|Description|  
+|Имя|Описание|  
 |----------|-----------------|  
 |[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverstatement.md)|Добавляет заданную команду SQL в текущий список команд для этого объекта [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).|  
 |[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|Отменяет инструкцию SQL, выполняемую в настоящее время объектом [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).|  

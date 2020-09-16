@@ -1,4 +1,5 @@
 ---
+description: Свойства MSReportServer_Instance
 title: Свойства MSReportServer_Instance | Документы Майкрософт
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: b494fd52-22f0-46af-be35-a1de8a138d95
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d1b8de8961ef9001c7ef94356a2b82bb248271af
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f33795c9b030727e448440d3585e19b2a83fc418
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65569133"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468920"
 ---
 # <a name="msreportserver_instance-properties"></a>Свойства MSReportServer_Instance
   Класс MSReportServer_Instance содержит основные сведения, необходимые клиенту для соединения с установленным сервером отчетов.  
   
 ## <a name="public-properties"></a>Открытые свойства  
   
-|||  
+|Свойство|Описание|  
 |-|-|  
 |[Свойство EditionID (WMI MSReportServer_Instance)](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionid.md)|Возвращает выпуск сервера отчетов.|  
 |[Свойство EditionName (WMI MSReportServer_Instance)](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionname.md)|Возвращает имя выпуска сервера отчетов в немашинном (предназначенном для человека) формате.|  

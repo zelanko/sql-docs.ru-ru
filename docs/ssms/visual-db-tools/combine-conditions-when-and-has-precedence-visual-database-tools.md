@@ -1,4 +1,5 @@
 ---
+description: Объединение условий, если приоритет имеет оператор AND (визуальные инструменты для баз данных)
 title: Объединение условий, если приоритет имеет оператор AND
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,12 +17,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: e5f7932ecfedaace610bb9adc1e76825c8797e0a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6ad323d3efdbb760b315c16d94752d8c658fdab5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005164"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468488"
 ---
 # <a name="combine-conditions-when-and-has-precedence-visual-database-tools"></a>Объединение условий, если приоритет имеет оператор AND (визуальные инструменты для баз данных)
 
@@ -62,7 +63,7 @@ ms.locfileid: "86005164"
   
 ## <a name="see-also"></a>См. также:
 
-[Объединение условий, если приоритет имеет оператор AND](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
-[Обозначения для условий комбинированного поиска на панели критериев](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
+[Соединение условий, если приоритет имеет оператор OR](../../ssms/visual-db-tools/combine-conditions-when-or-has-precedence-visual-database-tools.md)  
+[Обозначения для объединения условий поиска в области условий](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
 [Правила ввода значений для поиска](../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  
-[Определение критериев поиска](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)
+[Задание условий поиска](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)

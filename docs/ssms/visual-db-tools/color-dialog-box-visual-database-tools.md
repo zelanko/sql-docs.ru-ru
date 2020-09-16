@@ -1,4 +1,5 @@
 ---
+description: Диалоговое окно «Цвет» (визуальные инструменты для баз данных)
 title: Диалоговое окно "Цвет"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ ms.assetid: 89a19608-f24c-41fa-a1a9-6e2e2cd952fa
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 6bea7a1e8a660bd9f33112e1bbf8dc737621a8ef
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 98ac865345b0d5e71f1823fcb49d48c729dcb160
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003848"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468503"
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>Диалоговое окно «Цвет» (визуальные инструменты для баз данных)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "86003848"
 Панель яркости  
 Меняйте яркость, светлые и темные оттенки цвета, перетаскивая ползунок. В поле **Яркость**появится соответствующее числовое значение.  
   
-**Color**  
+**Цвет**  
 Отображает выбранный цвет.  
   
 **Hue**  

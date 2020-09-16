@@ -1,4 +1,5 @@
 ---
+description: Метод setObject (SQLServerCallableStatement)
 title: Метод setObject (SQLServerCallableStatement) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 7110f6c5-4af3-4b50-a4d4-1bae1876c70d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3aa1ff07ad7efee98232d2dab3ebf0cb6cbae681
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 649d74846247e3ab1f5825aef7f0282af96815bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920811"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458521"
 ---
 # <a name="setobject-method-sqlservercallablestatement"></a>Метод setObject (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "80920811"
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|Имя|Description|  
+|name|Описание|  
 |----------|-----------------|  
 |[setObject (java.lang.String, java.lang.Object)](../../../connect/jdbc/reference/setobject-method-java-lang-string-java-lang-object.md)|Устанавливает значение указанного параметра с помощью заданного объекта.|  
 |[setObject (java.lang.String, java.lang.Object, int)](../../../connect/jdbc/reference/setobject-method-java-lang-string-java-lang-object-int.md)|Устанавливает значение указанного параметра по заданному объекту и целевому типу.|  

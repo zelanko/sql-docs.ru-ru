@@ -1,4 +1,5 @@
 ---
+description: Класс SQLServerResultSet
 title: Класс SQLServerResultSet | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: eaffcff1-286c-459f-83da-3150778480c9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 32212ca1ced5d042d23efdf9f0f67d43bd6643ff
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f39b678960c18d0b9f4956ed05523ddcb0da965d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925911"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467076"
 ---
 # <a name="sqlserverresultset-class"></a>Класс SQLServerResultSet
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80925911"
   
  **Пакет:** com.microsoft.sqlserver.jdbc  
   
- **Реализация.** [ISQLServerResultSet](../../../connect/jdbc/reference/isqlserverresultset-interface.md)  
+ **Реализует:** [ISQLServerResultSet](../../../connect/jdbc/reference/isqlserverresultset-interface.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,7 +43,7 @@ public final class SQLServerResultSet
   
  Класс SQLServerResultSet предоставляет множество методов, которые позволяют обновить результирующий набор с помощью всех собственных типов данных Java и многих типов объектов Java.  
   
- Этот класс поддерживает распаковку в класс SQLServerResultSet, интерфейс ISQLServerResultSet и интерфейс Java.SQL.Result. См.сведения об [интерфейсах и программах-оболочках](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Этот класс поддерживает распаковку в класс SQLServerResultSet, интерфейс ISQLServerResultSet и интерфейс Java.SQL.Result. См. сведения об [интерфейсах и программах-оболочках](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

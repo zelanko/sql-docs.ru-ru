@@ -1,4 +1,5 @@
 ---
+description: Решения (среда SQL Server Management Studio)
 title: Решения (среда SQL Server Management Studio)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d06a8a05-7201-4055-8cf3-21bcb4e82c25
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7e964439576d46004fc4f499f74340e5ed1a4a2b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 61e10c2e90e7b3942e36c59a2f395b84a7fb3ea3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000782"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468556"
 ---
 # <a name="solutions-sql-server-management-studio"></a>Решения (среда SQL Server Management Studio)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,10 +52,10 @@ ms.locfileid: "86000782"
 |Описывает копирование элементов между проектами.|[Копирование элементов в решении](../../ssms/solution/copy-items-in-a-solution.md)|  
 |Описывает удаление элементов проекта или всего проекта.|[Перемещение или удаление элемента или проекта](../../ssms/solution/remove-or-delete-an-item-or-project.md)|  
 |Описывает перемещение элементов между проектами в решении.|[Перемещение элементов в решении](../../ssms/solution/move-items-in-a-solution.md)|  
-|Описывает переименование решения или элементов в решении.|[Переименование элементов решений и проектов](../../ssms/solution/rename-solutions-and-project-items.md)|  
+|Описывает переименование решения или элементов в решении.|[Переименование решений и элементов проектов](../../ssms/solution/rename-solutions-and-project-items.md)|  
   
 ## <a name="see-also"></a>См. также:  
 [Обозреватель решений](../../ssms/solution/solution-explorer.md)  
 [Проекты (SQL Server Management Studio)](../../ssms/solution/projects-sql-server-management-studio.md)  
-[Обозреватель решений системы управления версиями](https://msdn.microsoft.com/library/ms173879.aspx)  
+[Обозреватель решений для системы управления версиями](https://docs.microsoft.com/sql/ssms/solution/solution-explorer)  
   
