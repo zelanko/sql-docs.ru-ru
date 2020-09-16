@@ -1,26 +1,28 @@
 ---
 title: Открытие редактора (среда SQL Server Management Studio)
 description: Узнайте, как открыть редакторы ядра СУБД, многомерных выражений, расширений интеллектуального анализа данных и XML/A в SQL Server Management Studio.
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
 ms.prod: sql
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab96c21c9ac7d6e8b90564d6759c85744adc27f8
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: c31d10b470271959f7bcb77b821847f9ff45b388
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122575"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093495"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Открытие редактора (среда SQL Server Management Studio)
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  В этом разделе описывается, как открыть редактор запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , редактор многомерных выражений, редактор расширений интеллектуального анализа данных или редактор XML/A в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. После открытия каждое окно редактора отображается в виде вкладки на центральной панели среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+
+В этом разделе описывается, как открыть редактор запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , редактор многомерных выражений, редактор расширений интеллектуального анализа данных или редактор XML/A в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. После открытия каждое окно редактора отображается в виде вкладки на центральной панели среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 ## <a name="before-you-begin"></a>Перед началом  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] поддерживает четыре редактора: редактор запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] для редактирования скриптов [!INCLUDE[tsql](../../includes/tsql-md.md)] , редакторы многомерных выражений (MDX) и расширений интеллектуального анализа данных (DMX) для редактирования скриптов на этих языках, а также редактор XML для аналитики (XML/A) для редактирования скриптов XML/A или XML-файлов. Любой из этих редакторов также может использоваться для изменения текстовых файлов.  
@@ -81,6 +83,4 @@ ms.locfileid: "87122575"
   
 -   Окно **Средство просмотра шаблонов** отображается в правой панели.  
   
--   Дважды щелкните шаблон, чтобы открыть окно «Запрос компонента Database Engine» с текстом шаблона. Например, чтобы открыть шаблон "CREATE DATABASE", откройте папку **Шаблоны SQL Server** , затем папку **Databases** , а затем дважды щелкните **create database**.  
-  
-  
+-   Дважды щелкните шаблон, чтобы открыть окно «Запрос компонента Database Engine» с текстом шаблона. Например, чтобы открыть шаблон "CREATE DATABASE", откройте папку **Шаблоны SQL Server** , затем папку **Databases** , а затем дважды щелкните **create database**.
