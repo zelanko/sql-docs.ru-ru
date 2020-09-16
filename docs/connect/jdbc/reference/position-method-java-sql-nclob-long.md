@@ -1,4 +1,5 @@
 ---
+description: Метод position (java.sql.NClob, long)
 title: Метод position (java.sql.NClob, long) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: f2354278-d128-4cf4-a170-22c05fcb763b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ea868190b635a9471bfad424d6fc74572970799b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e810a05d5c289babe665a398f27a670349c2b304
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67976359"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433016"
 ---
 # <a name="position-method-javasqlnclob-long"></a>Метод position (java.sql.NClob, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

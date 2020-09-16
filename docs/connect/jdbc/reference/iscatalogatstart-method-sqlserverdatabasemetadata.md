@@ -1,4 +1,5 @@
 ---
+description: Метод isCatalogAtStart (SQLServerDatabaseMetaData)
 title: Метод isCatalogAtStart (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 665173d2-14c7-4ce1-954e-4adb53fb9b39
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ee035ae51b99fc325acbbd545d98555416bf6a02
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 115131b5d99d331ca4d0137978d471b2723efc1e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928691"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433616"
 ---
 # <a name="iscatalogatstart-method-sqlserverdatabasemetadata"></a>Метод isCatalogAtStart (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

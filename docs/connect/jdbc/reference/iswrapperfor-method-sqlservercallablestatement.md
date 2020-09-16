@@ -1,4 +1,5 @@
 ---
+description: Метод isWrapperFor (SQLServerCallableStatement)
 title: Метод isWrapperFor (SQLServerCallableStatement) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 71156863-3588-453e-b5a5-0573b2c1bebf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2d023d42019b01c75d4f4552a4d840c3a7787263
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 06840f9562cf0828d6a1524ee15791333bc98beb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926125"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433346"
 ---
 # <a name="iswrapperfor-method-sqlservercallablestatement"></a>Метод isWrapperFor (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +46,7 @@ public boolean isWrapperFor(Class iface)
   
  Если этот метод возвращает значение **true**, вызов метода [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md) с таким же аргументом будет выполнен успешно.  
   
- Дополнительные сведения см. в статье об [интерфейсах и программах-оболочках](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ См. сведения об [интерфейсах и программах-оболочках](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Метод unwrap (SQLServerCallableStatement)](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)   

@@ -1,4 +1,5 @@
 ---
+description: Метод getTypeInfo (SQLServerDatabaseMetaData)
 title: Метод getTypeInfo (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 23208f01-c1bf-4235-b29c-9051d3df59a3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3b007e5db3358cd1af350ac0d87af7df1af18518
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f58266a7b90b88c49aabfb60062e396181f8dde7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80911260"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434016"
 ---
 # <a name="gettypeinfo-method-sqlserverdatabasemetadata"></a>Метод getTypeInfo (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +46,7 @@ public java.sql.ResultSet getTypeInfo()
   
  Результирующий набор, возвращаемый методом getTypeInfo, включает следующие данные:  
   
-|Имя|Тип|Description|  
+|Имя|Тип|Описание|  
 |----------|----------|-----------------|  
 |TYPE_NAME|**String**|Имя типа данных.|  
 |DATA_TYPE|**short**|Тип данных SQL из java.sql.Types.|  
@@ -55,7 +56,7 @@ public java.sql.ResultSet getTypeInfo()
 |CREATE_PARAMS|**String**|Описание создания параметров типа данных.|  
 |NULLABLE|**short**|Указывает, может ли столбец содержать значение NULL. Может иметь одно из следующих значений.<br /><br /> typeNoNulls (0)<br /><br /> typeNullable (1)<br /><br /> typeNullableUnknown (2)|  
 |CASE_SENSITIVE|**boolean**|Указывает, учитывается ли регистр символов для типа данных. Значение "**true**", если регистр символов учитывается, в противном случае — значение "**false**".|  
-|SEARCHABLE|**short**|Указывает, может ли указанный столбец использоваться в предложении SQL WHERE. Может иметь одно из следующих значений.<br /><br /> typePredNone (0)<br /><br /> typePredChar (1)<br /><br /> typePredBasic (2)<br /><br /> typeSeachable (3)|  
+|ДОСТУПНЫЙ ДЛЯ ПОИСКА|**short**|Указывает, может ли указанный столбец использоваться в предложении SQL WHERE. Может иметь одно из следующих значений.<br /><br /> typePredNone (0)<br /><br /> typePredChar (1)<br /><br /> typePredBasic (2)<br /><br /> typeSeachable (3)|  
 |UNSIGNED_ATTRIBUTE|**boolean**|Указывает знак типа данных. Значение "**true**", если тип данных не имеет знака, в противном случае — значение "**false**".|  
 |FIXED_PREC_SCALE|**boolean**|Указывает, что тип данных может быть значением типа money. Значение "**true**", если тип данных является значением типа money, в противном случае — значение "**false**".|  
 |AUTO_INCREMENT|**boolean**|Указывает, что тип данных может быть автоматически увеличен. Значение "**true**", если тип данных может быть автоматически увеличен, в противном случае — значение "**false**".|  

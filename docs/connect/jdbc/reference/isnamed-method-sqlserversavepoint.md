@@ -1,4 +1,5 @@
 ---
+description: Метод isNamed (SQLServerSavepoint)
 title: Метод isNamed (SQLServerSavepoint) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 66bcc445-9226-4419-b845-e0334875c80b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ac7c57f8cbba3f2995f70b9f05f584da413d7b03
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 898a6615ca52b5a989db7f99f31236847c33656c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925849"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433566"
 ---
 # <a name="isnamed-method-sqlserversavepoint"></a>Метод isNamed (SQLServerSavepoint)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

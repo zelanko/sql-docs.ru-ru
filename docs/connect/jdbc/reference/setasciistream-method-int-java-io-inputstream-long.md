@@ -1,4 +1,5 @@
 ---
+description: Метод setAsciiStream (int, java.io.InputStream, long)
 title: Метод setAsciiStream (int, java.io.InputStream, long) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9dfa7781-d72f-407a-a8d4-1c78c9446d09
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e095e139cb4f37fe44c3107d4f3a8f30f038bf06
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5a9417a9c2dfb4d0408f73b08c1bccf6e797b0bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920180"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432646"
 ---
 # <a name="setasciistream-method-int-javaioinputstream-long"></a>Метод setAsciiStream (int, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -56,6 +57,6 @@ public final void setAsciiStream(int parameterIndex,
   
 ## <a name="see-also"></a>См. также:  
  [Метод setAsciiStream (SQLServerPreparedStatement)](../../../connect/jdbc/reference/setasciistream-method-sqlserverpreparedstatement.md)   
- [Элементы SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
+ [Члены SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
   
   
