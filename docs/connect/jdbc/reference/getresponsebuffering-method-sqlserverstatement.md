@@ -1,4 +1,5 @@
 ---
+description: Метод getResponseBuffering (SQLServerStatement)
 title: Метод getResponseBuffering (SQLServerStatement) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: a9a9ffdd-7ce3-4e0a-907c-34d6a54e6865
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5848bd6b1f77d3989bed1300a7127391e1ff3c27
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 08411235fe8e571e9f3bdaf7220f2387d3a0b5c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921868"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434796"
 ---
 # <a name="getresponsebuffering-method-sqlserverstatement"></a>Метод getResponseBuffering (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

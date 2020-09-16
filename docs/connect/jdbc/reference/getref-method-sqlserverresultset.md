@@ -1,4 +1,5 @@
 ---
+description: Метод getRef (SQLServerResultSet)
 title: Метод getRef (SQLServerResultSet) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 7c176547-daae-405e-8fbe-3cdab87ab5e7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e3d1fa0b884f960138386b83111d99defc04c36f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 36bf7786fb36c9a58706a36d01fdbeaa193956f0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925100"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434836"
 ---
 # <a name="getref-method-sqlserverresultset"></a>Метод getRef (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80925100"
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|Имя|Description|  
+|name|Описание|  
 |----------|-----------------|  
 |[getRef (int)](../../../connect/jdbc/reference/getref-method-int-sqlserverresultset.md)|Извлекает значение индекса заданного столбца в текущей строке этого объекта [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) в виде объекта Ref на языке программирования Java.|  
 |[getRef (java.lang.String)](../../../connect/jdbc/reference/getref-method-java-lang-string-sqlserverresultset.md)|Извлекает значение имя заданного столбца в текущей строке этого объекта [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) в виде объекта Ref на языке программирования Java.|  

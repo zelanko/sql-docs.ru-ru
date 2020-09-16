@@ -1,4 +1,5 @@
 ---
+description: Метод getSQLXML (int)
 title: Метод getSQLXML (int) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a1b32d3a-d7c9-4086-ae2b-fc1da96949b1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 88666bac9fce7658389ce5dbd469cb4334aa16ad
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 87e68d936f0d2c868cfb3fb3c63693076bb0e547
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920221"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434476"
 ---
 # <a name="getsqlxml-method-int"></a>Метод getSQLXML (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,6 +46,6 @@ public final java.sql.SQLXML getSQLXML(int parameterIndex)
   
 ## <a name="see-also"></a>См. также:  
  [Метод getSQLXML (SQLServerCallableStatement)](../../../connect/jdbc/reference/getsqlxml-method-sqlservercallablestatement.md)   
- [Элементы SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
+ [Члены SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
   
   

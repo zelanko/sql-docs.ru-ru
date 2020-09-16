@@ -1,4 +1,5 @@
 ---
+description: Метод getServerPreparedStatementDiscardThreshold (SQLServerDataSource)
 title: Метод getServerPreparedStatementDiscardThreshold (SQLServerDataSource) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2018
@@ -10,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ef993e25397be7e8aca1a4b83357bf95ae88693c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e779955f77be3891bb3f7479b4a40fb30b3d56ac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925344"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434546"
 ---
 # <a name="getserverpreparedstatementdiscardthreshold-method-sqlserverdatasource"></a>Метод getServerPreparedStatementDiscardThreshold (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Возвращает значение свойства подключения **serverPreparedStatementDiscardThreshold**. Этот параметр определяет, сколько невыполненных операций отмены для подготовленных инструкций (sp_unprepare) допускается для каждого соединения, прежде чем на сервере будет выполнен вызов очистки необработанных дескрипторов. Когда этот параметр имеет значение не более 1, действия аннулирования выполняются немедленно после завершения подготовленной инструкции. Если это значение превышает 1, эти вызовы объединяются в пакет, чтобы избежать накладных расходов на частый вызов sp_unprepare.
+  Возвращает значение свойства подключения **serverPreparedStatementDiscardThreshold**. Этот параметр определяет, сколько невыполненных операций отмены для подготовленных инструкций (sp_unprepare) допускается для каждого подключения, прежде чем на сервере будет выполнен вызов очистки незавершенных обработчиков. Когда этот параметр имеет значение не более 1, действия аннулирования выполняются немедленно после завершения подготовленной инструкции. Если это значение превышает 1, эти вызовы объединяются в пакет, чтобы избежать накладных расходов на частый вызов sp_unprepare.
 
   
 ## <a name="syntax"></a>Синтаксис  

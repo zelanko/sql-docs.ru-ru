@@ -1,4 +1,5 @@
 ---
+description: Метод getMaxColumnsInTable (SQLServerDatabaseMetaData)
 title: Метод getMaxColumnsInTable (SQLServerDatabaseMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: dbcad2e1-7508-49ff-9f6d-db11200d87b6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7669992b74bbb8b2291a657bb35dadb51a3ec383
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 27938919042b645d6fad7936e2ab7f952865f895
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80907062"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435596"
 ---
 # <a name="getmaxcolumnsintable-method-sqlserverdatabasemetadata"></a>Метод getMaxColumnsInTable (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: Метод getNClob (SQLServerCallableStatement)
 title: Метод getNClob (SQLServerCallableStatement) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9a86daeb-03b2-45ef-82d3-495f33fb0113
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7fd433754785938309eda4c441fdc4463d0fa140
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6076a89104d7ec883dc875ab899a5058e3d7e055
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80905500"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435266"
 ---
 # <a name="getnclob-method-sqlservercallablestatement"></a>Метод getNClob (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80905500"
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|Имя|Description|  
+|name|Описание|  
 |----------|-----------------|  
 |[Метод getNClob (int)](../../../connect/jdbc/reference/getnclob-method-int.md)|Извлекает значение указанного параметра JDBC **NCLOB** в виде объекта **NClob** на языке программирования Java.|  
 |[Метод getNClob (java.lang.String)](../../../connect/jdbc/reference/getnclob-method-java-lang-string.md)|Возвращает значение указанного параметра JDBC **NCLOB** в виде объекта **NClob** на языке программирования Java.|  

@@ -1,4 +1,5 @@
 ---
+description: Метод getReference (SQLServerDataSource)
 title: Метод getReference (SQLServerDataSource) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: b3fb1a97-86ee-4977-adca-c35ae199dbb3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ef07d4a60e3d32faaaabee923c1c23a79ce8b91a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8916c339a4a1d6c8373e3fbaf5a130dcc168155e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928099"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434886"
 ---
 # <a name="getreference-method-sqlserverdatasource"></a>Метод getReference (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,11 +39,11 @@ public javax.naming.Reference getReference()
  Объект Reference.  
   
 ## <a name="remarks"></a>Remarks  
- Этот метод getReference указывается с помощью метода getReference в интерфейсе javax.naming.Referenceable.  
+ Этот метод getReference задается с помощью метода getReference в интерфейсе javax.naming.Referenceable.  
   
  Если в версиях драйвера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC, предшествующих 3.0, метод SQLServerDataSource.setTrustStorePassword вызывался в объекте SQLServerDataSource, пароль присутствовал в объекте, возвращаемом SQLServerDataSource.getReference, что позволяло использовать объект для создания дополнительных соединений. В версии 3.0 драйвера JDBC необходимо установить пароль для объекта, возвращаемого SQLServerDataSource.getReference, перед установлением соединения с объектом.  
   
- Кроме того, если SQLServerDataSource.setTrustStorePassword задается перед привязкой свойств источника данных, необходимо вызвать метод SQLServerDataSource.setTrustStorePassword перед получением соединения. Например,  
+ Кроме того, если SQLServerDataSource.setTrustStorePassword задается перед привязкой свойств источника данных, необходимо вызвать метод SQLServerDataSource.setTrustStorePassword перед получением соединения. Например, примененная к объекту директива  
   
 ```  
 ctx = new InitialContext(System.getProperties());  

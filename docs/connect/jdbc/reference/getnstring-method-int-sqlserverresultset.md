@@ -1,4 +1,5 @@
 ---
+description: Метод getNString (int) (SQLServerResultSet)
 title: Метод getNString (int) (SQLServerResultSet) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c8cc4636-01e9-4dc8-a40c-728337ca08f5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 93d902886e91f145db2550275fc3018714f53945
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 91e6dd1e44620d4e07a8376f78dd93b834dcc609
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80905470"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435246"
 ---
 # <a name="getnstring-method-int-sqlserverresultset"></a>Метод getNString (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +44,7 @@ public java.lang.String getNString(int columnIndex)
 ## <a name="remarks"></a>Remarks  
  Этот метод getNString определен с помощью метода getNString в интерфейсе java.sql.ResultSet.  
   
- Этот метод может использоваться для получения значения из столбца **nvarchar**, **nchar**, **nvarchar(max)** , **ntext** или **xml** в текущей строке объекта [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md). При попытке использования этого метода для получения значений других типов данных возникнет исключение.  
+ Этот метод может использоваться для получения значения из столбца **nvarchar**, **nchar**, **nvarchar(max)**, **ntext** или **xml** в текущей строке объекта [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md). При попытке использования этого метода для получения значений других типов данных возникнет исключение.  
   
 ## <a name="see-also"></a>См. также:  
  [Метод getNString (SQLServerResultSet)](../../../connect/jdbc/reference/getnstring-method-sqlserverresultset.md)   

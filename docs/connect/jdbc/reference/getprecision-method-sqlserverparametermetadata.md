@@ -1,4 +1,5 @@
 ---
+description: Метод getPrecision (SQLServerParameterMetaData)
 title: Метод getPrecision (SQLServerParameterMetaData) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 8bd79484-bab6-423b-978f-d7ec7132ebeb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dbca77be55cd855f2e293324d6cd7c4ca5471b7e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b0af3f0f87c32038b8d6b16839993de5ae6aa056
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925216"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434956"
 ---
 # <a name="getprecision-method-sqlserverparametermetadata"></a>Метод getPrecision (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,6 +54,6 @@ public int getPrecision(int param)
 ## <a name="see-also"></a>См. также:  
  [Методы SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-methods.md)   
  [Элементы SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-members.md)   
- [Класс SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md)  
+ [Класс SQLServerParameterMetaData Class](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md)  
   
   
