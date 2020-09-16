@@ -3,7 +3,7 @@ title: Отладчик Transact-SQL
 description: Узнайте, как запустить пошаговое выполнение кода и просмотреть состояние выполнения с помощью отладчика Transact-SQL, а также как выполнять другие задачи отладки.
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, introduction
@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/22/2020
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7a3f86e5df9c94905089cd5382d3895dd9f01e84
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 3485795f239017df321e862a04c0411a3a9318c0
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246167"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480410"
 ---
 # <a name="transact-sql-debugger"></a>Отладчик Transact-SQL
 
@@ -76,4 +76,4 @@ ms.locfileid: "87246167"
 
 ## <a name="see-also"></a>См. также раздел
 
-[Редакторы запросов и текста (SQL Server Management Studio)](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)
+[Редакторы запросов и текста (SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)

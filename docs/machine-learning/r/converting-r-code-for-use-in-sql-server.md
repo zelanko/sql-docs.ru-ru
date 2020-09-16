@@ -3,21 +3,21 @@ title: Преобразование кода R для SQL
 description: Перенос кода R в хранимую процедуру SQL Server для развертывания решения и доступа к реляционным данным в SQL Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 04/15/2018
+ms.date: 08/28/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 47a96a6bf233a1d8f7fe70df6ab537a31fd2e896
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 009ce927481a455478e170cbe075e920d72571f3
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723879"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288306"
 ---
 # <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>Преобразование кода R для выполнения в экземплярах SQL Server (в базе данных)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 В этой статье приводятся общие рекомендации по изменению кода R для работы в SQL Server. 
 
@@ -121,7 +121,6 @@ ms.locfileid: "85723879"
 
 + Вместе с разработчиком базы данных определите способы повысить производительность с помощью таких возможностей SQL Server, как [оптимизированные для памяти таблицы](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables) или, если вы используете выпуск Enterprise, [Resource Governor](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor).
 
-    Дополнительные сведения см. в статье [Советы и рекомендации по оптимизации SQL Server для служб Analytics Services](https://gallery.cortanaintelligence.com/Tutorial/SQL-Server-Optimization-Tips-and-Tricks-for-Analytics-Services)
 
 ### <a name="step-3-prepare-for-deployment"></a>Шаг 3. Подготовка к развертыванию
 
@@ -135,7 +134,7 @@ ms.locfileid: "85723879"
 
 + Относительно простой код можно внедрить в пользовательскую функцию T-SQL без изменений, как описывается в этих примерах:
 
-    + [Формирование признаков с помощью T-SQL и R](../tutorials/sqldev-create-data-features-using-t-sql.md)
+    + [Формирование признаков с помощью T-SQL и R](../tutorials/r-taxi-classification-create-features.md)
 
 + Для преобразования более сложного кода используйте пакет R **sqlrutils**. С помощью этого пакета опытные пользователи R могут создавать эффективный код хранимых процедур. 
 
@@ -165,6 +164,6 @@ ms.locfileid: "85723879"
 
 + [Создание прогнозной модели для компании по прокату лыжного оборудования с использованием R и SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/)
 
-+ [Аналитика в базе данных для разработчика SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md) — в этой статье показано, как сделать структуру кода R модульной с помощью хранимых процедур
++ [Аналитика в базе данных для разработчика SQL](../tutorials/r-taxi-classification-introduction.md) — в этой статье показано, как сделать структуру кода R модульной с помощью хранимых процедур
 
 + [Решение по обработке и анализу данных](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) — в этой статье приведено сравнение формирования признаков в R и T-SQL

@@ -1,4 +1,5 @@
 ---
+description: Метод getClientConnectionID (SQLServerConnection)
 title: Метод getClientConnectionID (SQLServerConnection) | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: bee39c11-733a-461f-92cc-33efcb2af87d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 461a3a0e217fb2ad973830eaffc86ff048830b83
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 84d4ac45655231430d444781738d47de57f732b8
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80907640"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480778"
 ---
 # <a name="getclientconnectionid-method-sqlserverconnection"></a>Метод getClientConnectionID (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -58,7 +59,7 @@ UUID conid = ((ISQLServerConnection)cn).getClientConnectionId();
   
  Метод **getClientConnectionID** будет работать независимо от того, с какой версией сервера устанавливается соединение, но журналы расширенных событий и записи по ошибкам кольцевого буфера соединений отсутствуют в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2008 R2 и предыдущих версиях.  
   
- Идентификатор соединения можно найти в журнале расширенных событий, чтобы определить, на сервере ли произошла ошибка (если включена регистрация расширенных событий в журнале для идентификатора соединения). Для некоторых ошибок идентификатор соединения можно также найти в кольцевом буфере соединений ([Устранение неполадок подключения в SQL Server 2008 с помощью кольцевого буфера соединений](https://go.microsoft.com/fwlink/?LinkId=207752)). Если в кольцевом буфере соединений идентификатор соединения отсутствует, то скорее всего возникла сетевая ошибка.  
+ Идентификатор соединения можно найти в журнале расширенных событий, чтобы определить, на сервере ли произошла ошибка (если включена регистрация расширенных событий в журнале для идентификатора соединения). Для некоторых ошибок идентификатор соединения можно также найти в кольцевом буфере соединений ([Устранение неполадок подключения в SQL Server 2008 с помощью кольцевого буфера соединений](https://docs.microsoft.com/archive/blogs/sql_protocols/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer)). Если в кольцевом буфере соединений идентификатор соединения отсутствует, то скорее всего возникла сетевая ошибка.  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

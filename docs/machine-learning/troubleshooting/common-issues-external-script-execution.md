@@ -9,19 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 597b656c3f235ae59a22f7e85bf54dcc25fb1873
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: e814e135c7e7054231aea3988a30afe755e1fc9d
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87253745"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89570296"
 ---
 # <a name="troubleshoot-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>Устранение проблем со службой панели запуска и выполнением внешних скриптов в SQL Server
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Эта статья содержит рекомендации по устранению неполадок, связанных с доверенной службой панели запуска SQL Server. Служба панели запуска поддерживает выполнение внешних скриптов для R и Python. Запуску панели запуска SQL Server могут препятствовать различные неполадки, включая проблемы или изменения в конфигурации и отсутствие сетевых протоколов.  
-
-Если возникают проблемы, которые здесь не описаны, вы можете задать вопросы на [форуме Machine Learning Server](https://social.msdn.microsoft.com/Forums/home?category=MicrosoftR).
 
 ## <a name="determine-whether-launchpad-is-running"></a>Определение того, выполняется панель запуска
 
@@ -240,6 +238,6 @@ EXEC sp_execute_external_script @language = N'R',
 
 [Сбор данных для устранения неполадок машинного обучения](data-collection-ml-troubleshooting-process.md)
 
-[Часто задаваемые вопросы по обновлению и установке](upgrade-and-installation-faq-sql-server-r-services.md)
+[Установка служб машинного обучения SQL Server](../install/sql-machine-learning-services-windows-install.md)
 
 [Устранение неполадок подключений к ядру СУБД](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)

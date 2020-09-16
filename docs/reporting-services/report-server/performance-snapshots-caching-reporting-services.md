@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 85afd00f-e8d7-4ef7-9174-2ff84d82f960
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b6abcdaa2fc9a633531fb4d2327aec0f23158c88
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 479347709474b12f84cb451b197a8df323c76e22
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84545516"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480526"
 ---
 # <a name="performance-snapshots-caching-reporting-services"></a>Производительность, моментальные снимки, кэширование (службы Reporting Services)
-  Производительность сервера отчетов зависит от сочетания факторов, которые включают оборудование, количество пользователей, одновременно обращающихся к отчетам, объем данных в отчетах и формат вывода. Чтобы понять, какие факторы производительности характерны для конкретной установки, и какие меры позволят достичь требуемых результатов, необходимо получить базовые данные и выполнить тесты. Дополнительные сведения о средствах и рекомендациях см. в следующих публикациях MSDN: [Reporting Services Performance Optimization](https://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx) (Оптимизация производительности служб Reporting Services) и [Using Visual Studio 2005 to Perform Load Testing on a SQL Server 2005 Reporting Services Report Server](https://go.microsoft.com/fwlink/?LinkID=77519)(Нагрузочное тестирование сервера отчетов служб Reporting Services SQL Server 2005 в среде Visual Studio 2005).  
+  Производительность сервера отчетов зависит от сочетания факторов, которые включают оборудование, количество пользователей, одновременно обращающихся к отчетам, объем данных в отчетах и формат вывода. Чтобы понять, какие факторы производительности характерны для конкретной установки, и какие меры позволят достичь требуемых результатов, необходимо получить базовые данные и выполнить тесты. Дополнительные сведения о средствах и рекомендациях см. в следующих публикациях MSDN: [Reporting Services Performance Optimization](https://docs.microsoft.com/archive/blogs/sqlcat/reporting-services-performance-and-optimization) (Оптимизация производительности служб Reporting Services) и [Using Visual Studio 2005 to Perform Load Testing on a SQL Server 2005 Reporting Services Report Server](https://go.microsoft.com/fwlink/?LinkID=77519)(Нагрузочное тестирование сервера отчетов служб Reporting Services SQL Server 2005 в среде Visual Studio 2005).  
   
  Общие принципы, которыми необходимо руководствоваться, включают следующее.  
   

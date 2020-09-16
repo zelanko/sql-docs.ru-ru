@@ -3,21 +3,21 @@ title: Создание функции из кода R, объединенног
 description: Используйте пакет R sqlrutils в SQL Server для объединения кода языка R в одну функцию, которая может быть передана в качестве аргумента хранимой процедуре.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 04/15/2018
+ms.date: 08/31/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f1a53e3b2c5d6481bea436d7a7b6d045653a9e7d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 0ba94a55144278abd54ebbc2cf038463c3c5f0cb
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483875"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288300"
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>Создание хранимой процедуры с помощью sqlrutils
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 В этой статье описывается преобразование кода R для запуска в качестве хранимой процедуры T-SQL. Для достижения наилучших результатов может потребоваться немного изменить код, чтобы обеспечить возможность параметризации всех входных данных.
 

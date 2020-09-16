@@ -7,15 +7,14 @@ ms.topic: conceptual
 ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: markingmyname
 ms.author: maghan
-ms.reviewer: carlrab
-ms.date: 07/22/2020
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || sql-server-previousversions || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0d4145832aee94a1786308e21ac425081d4d2a88
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.date: 08/12/2020
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 1a933145d646c8e8a0c65151eaff7307066a223d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87237982"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550594"
 ---
 # <a name="install-sql-server-documentation-to-view-offline-in-ssms"></a>Установка документации по SQL Server для просмотра в автономном режиме в SSMS
 
@@ -171,7 +170,7 @@ ms.locfileid: "87237982"
 
 Дополнительные сведения об архивированном содержимом и окне справки см. на приведенных ниже страницах.
 
-- [Электронная документация SQL Server](../sql-server/index.yml?view=sql-server-2016)
-- [Электронная документация SQL Server 2014](/sql/2014-toc/)
+- [Электронная документация SQL Server](../sql-server/index.yml?view=sql-server-2016&preserve-view=true)
+- [Электронная документация SQL Server 2014](https://docs.microsoft.com/previous-versions/sql/2014)
 - [Предыдущие версии электронной документации по SQL Server](previous-versions-sql-server.md)
-- [Система управления версиями в документации по SQL](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016)
+- [Система управления версиями в документации по SQL](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016&preserve-view=true)

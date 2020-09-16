@@ -3,20 +3,20 @@ title: Создание рабочих процессов SSIS и SSRS на яз
 description: Сценарии интеграции, объединяющие Службы машинного обучения SQL Server и R Services, Reporting Services (SSRS) и SQL Server Integration Services (SSIS).
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 03/17/2019
+ms.date: 08/28/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 45443daacecb5423a8c5969b619391fea774bcd6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b907f4837810a2fdfabfbbfabbecc965627b86e9
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85680362"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288295"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>Создание рабочих процессов SSIS и SSRS на языке R в SQL Server
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 В этой статье объясняется, как использовать внедренный скрипт R и Python с использованием возможностей языка и обработки и анализа данных Служб машинного обучения SQL Server с двумя важными компонентами SQL Server: SQL Server Integration Services (SSIS) и SQL Server Reporting Services (SSRS). Библиотеки R и Python в SQL Server предоставляют статистические и прогнозирующие функции. Службы SSIS и SSRS предоставляют согласованное преобразование в извлечении, преобразовании и загрузке и визуализацию соответственно. В этой статье описывается, как объединить все эти функции в этом шаблоне рабочего процесса:
 
@@ -193,19 +193,6 @@ exec predict_species_length 'rxLinMod';
 
 С помощью [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] вы можете выполнять сложные операции в R через хранимые процедуры [!INCLUDE[tsql](../../includes/tsql-md.md)], которые легко можно использовать во множестве средств создания отчетов, включая [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и Power BI.
 
-### <a name="ssrs-example"></a>Пример SSRS
-
-[R Graphics Device for Microsoft Reporting Services (SSRS)](https://rgraphicsdevice.codeplex.com/) (Графическое устройство R для служб Microsoft Reporting Services (SSRS))
-
-Проект CodePlex предоставляет код для создания пользовательского элемента отчета, выполняющего визуализацию графических выходных данных R в виде изображения, которое можно использовать в отчетах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  С помощью пользовательского элемента отчета можно:
-
-+ опубликовать диаграммы и графики, созданные с помощью графического устройства R, на панелях мониторинга [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)];
-
-+ передать параметры [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] графикам R.
-
-> [!NOTE]
-> В этом примере код, который поддерживает графическое устройство R для служб Reporting Services, должен быть установлен на сервере служб Reporting Services, а также в Visual Studio. Кроме того, требуется компиляция и настройка вручную.
-
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Дальнейшие шаги
 
 Примеры служб SSIS и SSRS в этой статье иллюстрируют два варианта выполнения хранимых процедур, содержащих внедренный скрипт R или Python. Ключевая идея в том, что можно сделать скрипт R или Python доступным для любого приложения или средства, которые могут отправить запрос на выполнение хранимой процедуры. Кроме того, со службами SSIS можно создавать пакеты, которые автоматизируют и планируют целый ряд операций, таких как получение данных, очистка, манипуляции и т. д., с помощью функций обработки и анализа данных R или Python, включенных в цепочку операций. Дополнительные сведения и идеи см. в разделе [Использование кода R с хранимыми процедурами в Службах машинного обучения SQL Server](operationalizing-your-r-code.md).

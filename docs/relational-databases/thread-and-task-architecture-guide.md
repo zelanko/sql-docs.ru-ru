@@ -15,12 +15,12 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f61fad1afac14c2e6a27314e2a65371722ee9b23
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 3efda2f67cc2772739a7eaf0a8f1b0dbf947d421
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485585"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076809"
 ---
 # <a name="thread-and-task-architecture-guide"></a>руководство по архитектуре потоков и задач
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -177,9 +177,13 @@ ORDER BY parent_task_address, scheduler_id;
 
 Каждый экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] по умолчанию имеет уровень приоритета 7, что соответствует стандартному уровню. Это значение по умолчанию задает потокам [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] достаточно высокий уровень приоритета, позволяющий им получать достаточно ресурсов ЦП, не снижая производительности других приложений. 
 
+> [!IMPORTANT]  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../includes/ssnotedepfuturedontuse-md.md)]  
+
 Параметр конфигурации [priority boost](../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md) используется для повышения приоритета потоков экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] до уровня 13. Это наивысший приоритет. Этот параметр назначает потокам [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] более высокий приоритет по отношению к другим приложениям. Таким образом, потоки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] всегда будут обслуживаться в первую очередь, а потоки других приложений не смогут занимать ресурсы системы ранее потоков с более высоким приоритетом. Представленные выше меры могут повысить производительность сервера, на котором выполняются только экземпляры [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Однако если в приложении [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] выполняется ресурсоемкая операция, то не рекомендуется присваивать высокий приоритет другим приложениям, чтобы они не вытесняли поток [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
 
 Если на компьютере выполняется несколько экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], то повышение приоритетов одних может привести к снижению производительности других. Кроме того, включение параметра priority boost может привести к простою других приложений и компонентов, выполняемых на компьютере. Таким образом, данный параметр рекомендуется использовать только в строго определенных условиях.
+
 
 ## <a name="hot-add-cpu"></a>ЦП с поддержкой горячей замены
 ЦП с поддержкой горячей замены — это возможность динамически добавлять центральные процессоры в запущенную систему. Добавление центральных процессоров может осуществляться физически — путем добавления нового оборудования, логически — путем аппаратного секционирования в сети, виртуально — через уровень виртуализации. Начиная с [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] поддерживает ЦП с поддержкой горячей замены.

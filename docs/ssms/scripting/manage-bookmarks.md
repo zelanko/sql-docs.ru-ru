@@ -1,29 +1,31 @@
 ---
 title: Управление закладками
 description: Окно "Закладки" в редакторе кода позволяет создавать ссылки на расположения в коде. Сведения о том, как создавать, удалять, активировать и отключать закладки и как использовать их для навигации по коду.
-ms.custom: seo-lt-2019
-ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - bookmarks [SQL Server Management Studio]
 ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4b75287c722757e6bb6f12a7eb282b7f141a9483
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 61053e087f572e586bfd37e20a2efa6e659dabfd
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122606"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093552"
 ---
 # <a name="manage-bookmarks"></a>Управление закладками
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  При работе в редакторе кода в окне **Закладки** можно создавать ссылки на определенные строки кода в документе. Это окно можно открыть из меню **Вид** .  
+
+При работе в редакторе кода в окне **Закладки** можно создавать ссылки на определенные строки кода в документе. Это окно можно открыть из меню **Вид** .  
   
  Для создания закладок и навигации по ним пользуйтесь кнопками, расположенными на панели инструментов **Текстовый редактор** , а также в верхней части окна **Закладки** . Закладки можно добавлять или удалять, включать или отключать, а также организовывать их в папки. Кроме того, определенные команды доступны в контекстном меню в окне **Закладки** . Для добавления или удаления закладки поместите точку вставки на нужной строке в редакторе и нажмите **Переключить закладку**. Для активации закладки отметьте ее флажок в окне **Закладки** ; для отключения (но не удаления) закладки снимите соответствующий флажок.  
   

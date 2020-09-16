@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 68b46562968cd53b0fb12f13cc82fd0b83f6e192
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a8ccec5e37a3ff533f5658b4d9ca529281d46147
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729020"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480472"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>Управление именами входа и заданиями после переключения ролей (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "85729020"
 > [!NOTE]  
 >  Эта проблема затрагивает локальные учетные записи Windows на разных компьютерах. Для доменных учетных записей эта проблема не возникает, поскольку идентификатор безопасности там один для всех компьютеров.  
   
- Дополнительные сведения см. в записи [Пользователи, утратившие связь с учетной записью при работе с зеркальным отображением базы данных и доставкой журналов](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (блог Database Engine).  
+ Дополнительные сведения см. в записи [Пользователи, утратившие связь с учетной записью при работе с зеркальным отображением базы данных и доставкой журналов](https://docs.microsoft.com/archive/blogs/sqlserverfaq/orphaned-users-with-database-mirroring-and-log-shipping) (блог Database Engine).  
   
 ## <a name="jobs"></a>Задания  
  Некоторые задания, например задания резервного копирования, следует рассмотреть особо. Обычно после переключения ролей владельцу базы данных или системному администратору приходится создавать повторно задания для новой базы данных-источника или основной базы данных.  
