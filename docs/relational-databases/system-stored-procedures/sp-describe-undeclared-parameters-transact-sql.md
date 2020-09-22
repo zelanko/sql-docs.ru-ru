@@ -19,12 +19,12 @@ ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: f1e2134b008d07a12043c4b1bd4fbf6dc0986d90
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5ca659670cb68bafa10f758bc2a7997243f5c1a8
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546176"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990132"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)] 
@@ -43,7 +43,7 @@ sp_describe_undeclared_parameters
 ```  
 
 > [!Note] 
-> Чтобы использовать эту хранимую процедуру в Azure синапсе Analytics (прежнее название — SQL DW), уровень совместимости базы данных должен быть больше 10. 
+> Чтобы использовать эту хранимую процедуру в Azure синапсе Analytics (прежнее название — SQL DW), задайте уровень совместимости базы данных 20 или выше.   Чтобы отказаться от этого, измените уровень совместимости базы данных на 10.
 
 ## <a name="arguments"></a>Аргументы  
 `[ \@tsql = ] 'Transact-SQL\_batch'` Одна или несколько [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций. *Transact-SQL_batch* может иметь тип **nvarchar (**_n_**)** или **nvarchar (max)**.  
@@ -88,7 +88,7 @@ sp_describe_undeclared_parameters
 |**suggested_tds_type_id**|**int NOT NULL**|Для внутреннего использования.|  
 |**suggested_tds_length**|**int NOT NULL**|Для внутреннего использования.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_describe_undeclared_parameters** всегда возвращает состояние возврата, равное нулю.  
   
  Чаще всего она применяется, когда приложению передается инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)], которая может содержать параметры и должна некоторым образом их обрабатывать. Примером является пользовательский интерфейс (такой как ODBCTest или RowsetViewer), где пользователь передает запрос с синтаксисом параметров ODBC. Приложение должно динамически обнаруживать число параметров и запрашивать каждый параметр у пользователя.  
@@ -226,7 +226,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      В этом случае E ( \@ p) имеет Col_Int + \@ p, а TT ( \@ p) — **int**. **int** выбирается для \@ p, так как не создает неявных преобразований. Любой другой выбор типа данных требует не меньше одного неявного преобразования.  
   
-2.  Если несколько типов данных имеют минимальное число преобразований, то используется тип данных с максимальным приоритетом. Например.  
+2.  Если несколько типов данных имеют минимальное число преобразований, то используется тип данных с максимальным приоритетом. Например:  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  
@@ -277,7 +277,7 @@ WHERE object_id = @id OR NAME = @name',
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
  [sys. dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
  [sys. dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)
