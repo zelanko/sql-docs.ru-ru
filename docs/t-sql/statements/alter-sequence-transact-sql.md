@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 919b355458d7a3b975906f5bc6f5cb72322fdc2a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ae8e04d348f6a3146030d4f0bf8856b2d343b682
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544246"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688176"
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,6 @@ ms.locfileid: "89544246"
 ## <a name="syntax"></a>Синтаксис  
   
 ```syntaxsql
-  
 ALTER SEQUENCE [schema_name. ] sequence_name  
     [ RESTART [ WITH <constant> ] ]  
     [ INCREMENT BY <constant> ]  
@@ -93,7 +92,7 @@ ALTER SEQUENCE [schema_name. ] sequence_name
 ### <a name="permissions"></a>Разрешения  
  Требуется разрешение **ALTER** для последовательности или разрешение **ALTER** для схемы. Предоставить разрешение **ALTER** для последовательности можно с помощью инструкции **ALTER ON OBJECT** в следующем формате:  
   
-```  
+```sql  
 GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]  
 ```  
   
@@ -108,7 +107,7 @@ GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]
 ### <a name="a-altering-a-sequence"></a>A. Изменение последовательности  
  В приведенном ниже примере создается схема Test и последовательность TestSeq с типом данных **int**, имеющим диапазон от 100 до 200. Последовательность начинается со 125 и увеличивается на 25 при каждом создании номера. Поскольку последовательность зациклена, то при превышении максимального значения 200 она перезапускается с минимального значения 100.  
   
-```  
+```sql  
 CREATE SCHEMA Test ;  
 GO  
   
@@ -126,7 +125,7 @@ GO
   
  В приведенном ниже примере последовательность TestSeq изменяется для работы в диапазоне от 50 до 200. Последовательность перезапускает нумерацию рядов со 100 с увеличением на 50 при каждом формировании номера.  
   
-```  
+```sql  
 ALTER SEQUENCE Test. TestSeq  
     RESTART WITH 100  
     INCREMENT BY 50  
@@ -143,25 +142,25 @@ GO
 ### <a name="b-restarting-a-sequence"></a>Б. Перезапуск последовательности  
  В следующем примере создается последовательность CountBy1. В ней используются значения по умолчанию.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.CountBy1 ;  
 ```  
   
  Для формирования значения последовательности ее владелец выполняет следующую инструкцию:  
   
-```  
+```sql  
 SELECT NEXT VALUE FOR Test.CountBy1  
 ```  
   
  Возвращенное значение -9 223 372 036 854 775 808 — это наименьшее возможное значение для типа данных **bigint**. Владелец решает начать последовательность с 1, однако при ее создании предложение **START WITH** указано не было. Чтобы исправить эту ошибку, владелец выполняет следующую инструкцию.  
   
-```  
+```sql  
 ALTER SEQUENCE Test.CountBy1 RESTART WITH 1 ;  
 ```  
   
  Затем он снова выполняет следующую инструкцию для формирования последовательного номера.  
   
-```  
+```sql  
 SELECT NEXT VALUE FOR Test.CountBy1;  
 ```  
   
@@ -169,11 +168,10 @@ SELECT NEXT VALUE FOR Test.CountBy1;
   
  Последовательность CountBy1 создана со значением по умолчанию NO CYCLE, поэтому она перестанет работать после того, как будет сформирован номер 9 223 372 036 854 775 807. Последующие обращения к этому объекту последовательности будут возвращать ошибку 11728. Следующая инструкция включает зацикливание для объекта и устанавливают его кэш в значение 20.  
   
-```  
+```sql  
 ALTER SEQUENCE Test.CountBy1  
     CYCLE  
-    CACHE 20 ;  
-  
+    CACHE 20 ; 
 ```  
   
  Теперь, когда будет достигнут номер 9 223 372 036 854 775 807, следующим номером будет минимально возможный для этого типа данных — -9 223 372 036 854 775 808.  

@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2dd6b8be1bcaf19c6c5134c70ff60b535e47aa6a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 83ccbac5d01fca3e7ca237e0debedcd4c1ad9e83
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547605"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688810"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -249,7 +249,7 @@ ROWTERMINATOR **='** _row_terminator_ **'** . Указывает признак 
 В этом примере используется следующая таблица:
 
 ```sql
-CREATE TABLE t_float(c1 float, c2 decimal (5,4));
+CREATE TABLE t_float(c1 FLOAT, c2 DECIMAL (5,4));
 ```
 
  Пользователю необходимо выполнить массовый импорт данных в таблицу `t_float`. Файл данных C:\t_float-c.dat содержит данные в экспоненциальном представлении **float**, например:
@@ -398,7 +398,7 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
  В следующем примере производится импорт файла, в котором в качестве признака конца строки используется символ перевода строки, как в файлах UNIX.
 
 ```sql
-DECLARE @bulk_cmd varchar(1000);
+DECLARE @bulk_cmd VARCHAR(1000);
 SET @bulk_cmd = 'BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 FROM ''<drive>:\<path>\<filename>''
 WITH (ROWTERMINATOR = '''+CHAR(10)+''')';

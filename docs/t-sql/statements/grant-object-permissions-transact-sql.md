@@ -17,12 +17,12 @@ ms.assetid: c001c2e7-d092-43d4-8fa6-693b3ec4c3ea
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cca05a701f7ec0255536c496ae5288cd1105835
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1282bdd6c1bfb103a42336fc62289d1949bda07c
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472300"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570585"
 ---
 # <a name="grant-object-permissions-transact-sql"></a>GRANT, предоставление разрешений на объект (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -160,7 +160,7 @@ PRIVILEGES
 ### <a name="a-granting-select-permission-on-a-table"></a>A. Предоставление разрешения SELECT на таблицу  
  В следующем примере предоставляется разрешение `SELECT` пользователю `RosaQdM` на таблицу `Person.Address` в базе данных `AdventureWorks2012`.  
   
-```  
+```sql  
 GRANT SELECT ON OBJECT::Person.Address TO RosaQdM;  
 GO  
 ```  
@@ -168,7 +168,7 @@ GO
 ### <a name="b-granting-execute-permission-on-a-stored-procedure"></a>Б. Предоставление разрешения EXECUTE на хранимую процедуру  
  В следующем примере предоставляется разрешение `EXECUTE` на хранимую процедуру `HumanResources.uspUpdateEmployeeHireInfo` роли приложения `Recruiting11`.  
   
-```  
+```sql  
 USE AdventureWorks2012;   
 GRANT EXECUTE ON OBJECT::HumanResources.uspUpdateEmployeeHireInfo  
     TO Recruiting11;  
@@ -178,7 +178,7 @@ GO
 ### <a name="c-granting-references-permission-on-a-view-with-grant-option"></a>В. Предоставление разрешения REFERENCES на представление с параметром GRANT OPTION  
  В следующем примере предоставляется разрешение `REFERENCES` на столбец `BusinessEntityID` в представлении `HumanResources.vEmployee` пользователю `Wanida` с параметром `GRANT OPTION`.  
   
-```  
+```sql  
 GRANT REFERENCES (BusinessEntityID) ON OBJECT::HumanResources.vEmployee   
     TO Wanida WITH GRANT OPTION;  
 GO  
@@ -187,7 +187,7 @@ GO
 ### <a name="d-granting-select-permission-on-a-table-without-using-the-object-phrase"></a>Г. Предоставление разрешения SELECT на таблицу без использования фразы OBJECT  
  В следующем примере предоставляется разрешение `SELECT` пользователю `RosaQdM` на таблицу `Person.Address` в базе данных `AdventureWorks2012`.  
   
-```  
+```sql  
 GRANT SELECT ON Person.Address TO RosaQdM;  
 GO  
 ```  
@@ -195,7 +195,7 @@ GO
 ### <a name="e-granting-select-permission-on-a-table-to-a-domain-account"></a>Д. Предоставление учетной записи домена разрешения SELECT на таблицу  
  В следующем примере предоставляется разрешение `SELECT` пользователю `AdventureWorks2012\RosaQdM` на таблицу `Person.Address` в базе данных `AdventureWorks2012`.  
   
-```  
+```sql  
 GRANT SELECT ON Person.Address TO [AdventureWorks2012\RosaQdM];  
 GO  
 ```  
@@ -203,7 +203,7 @@ GO
 ### <a name="f-granting-execute-permission-on-a-procedure-to-a-role"></a>Е. Предоставление роли разрешения EXECUTE на процедуру  
  В следующем примере создается роль, а затем ей предоставляется разрешение `EXECUTE` на процедуру `uspGetBillOfMaterials` в базе данных `AdventureWorks2012`.  
   
-```  
+```sql  
 CREATE ROLE newrole ;  
 GRANT EXECUTE ON dbo.uspGetBillOfMaterials TO newrole ;  
 GO  

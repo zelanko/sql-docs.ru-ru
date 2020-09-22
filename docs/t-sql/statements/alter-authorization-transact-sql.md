@@ -27,12 +27,12 @@ ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f47d0489955f0e7104449395a2fe3f8f591a1b1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a2e3c5df24d4d4e5897ad8f48384ac1bc5d49f9e
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88306106"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688274"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
@@ -239,7 +239,7 @@ ALTER AUTHORIZATION ON
   
 Чтобы проверить владельца базы данных Azure AD, выполните следующую команду Transact-SQL в базе данных пользователя (в этом примере `testdb`).  
     
-```    
+```sql    
 SELECT CAST(owner_sid as uniqueidentifier) AS Owner_SID   
 FROM sys.databases   
 WHERE name = 'testdb';  
@@ -248,7 +248,7 @@ WHERE name = 'testdb';
 Выходными данными будет идентификатор (например, 6D8B81F6-7C79-444C-8858-4AF896C03C67), который соответствует ObjectID Azure AD, назначенному `richel@cqclinic.onmicrosoft.com`.  
 Если владельцем базы данных SQL Server является пользователь имени входа, выполните следующую инструкцию в базе данных master для проверки владельца базы данных:  
     
-```    
+```sql    
 SELECT d.name, d.owner_sid, sl.name   
 FROM sys.databases AS d  
 JOIN sys.sql_logins AS sl  
@@ -259,16 +259,19 @@ ON d.owner_sid = sl.sid;
 ### <a name="best-practice"></a>Рекомендации  
   
 Не используйте пользователей Azure AD в качестве отдельных владельцев базы данных — используйте группу Azure AD как член предопределенной роли базы данных **db_owner**. Далее приводятся действия по настройке имени входа в качестве владельца базы данных и назначению группы Azure Active Directory (`mydbogroup`) в качестве члена роли **db_owner**. 
+
 1.  Войдите в SQL Server как администратор Azure AD и измените владельца базы данных на отключенное имя входа для проверки подлинности SQL Server. Например, в базе данных пользователя выполните следующую команду:  
-  ```    
+  ```sql    
   ALTER AUTHORIZATION ON database::testdb TO DisabledLogin;  
-  ```    
+  ```  
+  
 2.  Создайте группу Azure AD, которая должна быть владельцем базы данных, и добавьте ее в качестве пользователя в базу данных пользователя. Пример:  
-  ```    
+  ```sql    
   CREATE USER [mydbogroup] FROM EXTERNAL PROVIDER;  
-  ```    
+  ```   
+  
 3.  В базе данных добавьте пользователя, представляющего группу Azure AD, в предопределенную роль базы данных **db_owner**. Пример:  
-  ```    
+  ```sql    
   ALTER ROLE db_owner ADD MEMBER mydbogroup;  
   ```    
   
@@ -278,7 +281,7 @@ ON d.owner_sid = sl.sid;
   
 Чтобы проверить наличие действующего разрешения dbo у конкретного пользователя, пользователь должен выполнить следующую инструкцию:  
     
-```    
+```sql    
 SELECT IS_MEMBER ('db_owner');  
 ```    
   
@@ -293,21 +296,21 @@ SELECT IS_MEMBER ('db_owner');
 ### <a name="a-transfer-ownership-of-a-table"></a>A. Передача владения таблицей    
  В следующем примере владение таблицей `Sprockets` передается пользователю `MichikoOsada`. Эта таблица расположена в схеме `Parts`.    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON OBJECT::Parts.Sprockets TO MichikoOsada;    
 GO    
 ```    
     
- Запрос также может выглядеть следующим образом:    
+Запрос также может выглядеть следующим образом:    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON Parts.Sprockets TO MichikoOsada;    
 GO    
 ```    
     
- Если объекты схемы не включены в инструкцию, [!INCLUDE[ssDE](../../includes/ssde-md.md)] выполнит поиск объекта в схеме пользователей по умолчанию. Пример:    
+Если объекты схемы не включены в инструкцию, [!INCLUDE[ssDE](../../includes/ssde-md.md)] выполнит поиск объекта в схеме пользователей по умолчанию. Пример:    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON Sprockets TO MichikoOsada;    
 ALTER AUTHORIZATION ON OBJECT::Sprockets TO MichikoOsada;    
 ```    
@@ -315,7 +318,7 @@ ALTER AUTHORIZATION ON OBJECT::Sprockets TO MichikoOsada;
 ### <a name="b-transfer-ownership-of-a-view-to-the-schema-owner"></a>Б. Передача владения представлением владельцу схемы    
  В следующем примере передается владение представлением `ProductionView06` владельцу содержащей его схемы. Это представление расположено в схеме `Production`.    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON OBJECT::Production.ProductionView06 TO SCHEMA OWNER;    
 GO    
 ```    
@@ -323,7 +326,7 @@ GO
 ### <a name="c-transfer-ownership-of-a-schema-to-a-user"></a>В. Передача владения схемой пользователю    
  В следующем примере владение схемой `SeattleProduction11` передается пользователю `SandraAlayo`.    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON SCHEMA::SeattleProduction11 TO SandraAlayo;    
 GO    
 ```    
@@ -333,14 +336,15 @@ GO
     
 **Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON ENDPOINT::CantabSalesServer1 TO JaePak;    
 GO    
 ```    
     
 ### <a name="e-changing-the-owner-of-a-table"></a>Д. Изменение владельца таблицы    
  В каждом из следующих примеров показано изменение владельца таблицы `Sprockets` в базе данных `Parts` на пользователя базы данных `MichikoOsada`.    
-```    
+ 
+```sql    
 ALTER AUTHORIZATION ON Sprockets TO MichikoOsada;    
 ALTER AUTHORIZATION ON dbo.Sprockets TO MichikoOsada;    
 ALTER AUTHORIZATION ON OBJECT::Sprockets TO MichikoOsada;    
@@ -352,14 +356,14 @@ ALTER AUTHORIZATION ON OBJECT::dbo.Sprockets TO MichikoOsada;
     
  В следующем примере показано, как изменить владельца базы данных `Parts` на имя входа `MichikoOsada`.    
     
-```    
+```sql    
 ALTER AUTHORIZATION ON DATABASE::Parts TO MichikoOsada;    
 ```    
   
 ### <a name="g-changing-the-owner-of-a-sql-database-to-an-azure-ad-user"></a>Ж. Изменение владельца базы данных SQL на пользователя Azure AD  
 В следующем примере администратор Azure Active Directory для SQL Server в организации с Active Directory `cqclinic.onmicrosoft.com` может изменить текущую принадлежность базы данных `targetDB` и сделать пользователя AAD `richel@cqclinic.onmicorsoft.com` новым владельцем базы данных с помощью следующей команды:  
     
-```    
+```sql    
 ALTER AUTHORIZATION ON database::targetDB TO [rachel@cqclinic.onmicrosoft.com];   
 ```    
     

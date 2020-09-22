@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 68d6b2a9-c36f-465a-9cd2-01d43a667e99
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 50377ed7b719eee6a135af5db6161d9eed824915
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 67833e662688b6de418fc6d7db169f1107866035
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426626"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688606"
 ---
 # <a name="deny-server-permissions-transact-sql"></a>DENY, запрет разрешений на сервере (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -155,7 +155,7 @@ AS в данной инструкции не дает возможность о�
 ### <a name="a-denying-connect-sql-permission-to-a-sql-server-login-and-principals-to-which-the-login-has-regranted-it"></a>A. Запрет разрешения CONNECT SQL для пользователя SQL Server с указанным именем входа и участников, которым этот пользователь его предоставил  
  В следующем примере разрешение `CONNECT SQL` запрещается для пользователя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с именем входа `Annika` и для участников, которым он предоставил это разрешение.  
   
-```  
+```sql  
 USE master;  
 DENY CONNECT SQL TO Annika CASCADE;  
 GO  
@@ -164,7 +164,7 @@ GO
 ### <a name="b-denying-create-endpoint-permission-to-a-sql-server-login-using-the-as-option"></a>Б. Запрет разрешения CREATE ENDPOINT для пользователя SQL Server с помощью параметра AS  
  В следующем примере разрешение `CREATE ENDPOINT` запрещается для пользователя `ArifS`. Пример использует параметр `AS` для указания пользователя `MandarP` в качестве участника, от которого текущий участник получает права для выполнения.  
   
-```  
+```sql  
 USE master;  
 DENY CREATE ENDPOINT TO ArifS AS MandarP;  
 GO  

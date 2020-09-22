@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 859affa7-0567-47d1-9490-57c1abbd619b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0b3dbb2766d1e42fd1812e9eba5d92c40b324a25
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5b58e181d5defd9ecdd7d4581fe42d0565f8830f
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478937"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688625"
 ---
 # <a name="deny-server-principal-permissions-transact-sql"></a>DENY, запрет разрешения участника на уровне сервера (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -130,7 +130,7 @@ GO
 ### <a name="b-denying-view-definition-permission-with-cascade"></a>Б. Запрещение разрешения VIEW DEFINITION с параметром CASCADE  
  В следующем примере производится запрещение разрешения `VIEW DEFINITION` на имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`EricKurjan` для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`RMeyyappan`. Параметр `CASCADE` указывает, что разрешение `VIEW DEFINITION` на `EricKurjan` будет также запрещено участникам, которым `RMeyyappan` его предоставил ранее.  
   
-```  
+```sql  
 USE master;  
 DENY VIEW DEFINITION ON LOGIN::EricKurjan TO RMeyyappan   
     CASCADE;  
@@ -140,7 +140,7 @@ GO
 ### <a name="c-denying-view-definition-permission-on-a-server-role"></a>В. Запрещение разрешения VIEW DEFINITION для роли сервера  
  В следующем примере разрешение `VIEW DEFINITION` для роли сервера `Sales` запрещается для роли сервера `Auditors`.  
   
-```  
+```sql 
 USE master;  
 DENY VIEW DEFINITION ON SERVER ROLE::Sales TO Auditors ;  
 GO   

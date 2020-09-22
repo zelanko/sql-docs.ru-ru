@@ -18,12 +18,12 @@ ms.author: vanto
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/10/2020
-ms.openlocfilehash: da1072eb299fa4ad65e82210126a9a6f8af25619
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0f0ed0ee3619abae19df06879fbfd1d60b22a0b0
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488136"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688430"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE (Transact-SQL)
 
@@ -113,7 +113,7 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
 
  В следующем примере хранимая процедура `HumanResources.uspUpdateEmployeeLogin` подписывается сертификатом `HumanResourcesDP`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 ADD SIGNATURE TO HumanResources.uspUpdateEmployeeLogin   
     BY CERTIFICATE HumanResourcesDP;  
@@ -124,7 +124,7 @@ GO
 
 В следующем примере создается новая база данных и сертификат для использования в примере. В этом примере будет создана и подписана простая хранимая процедура и выполнена выборка большого двоичного объекта сигнатуры из `sys.crypt_properties`. Подпись удаляется, затем добавляется еще раз. Процедура подписывается с помощью конструкции WITH SIGNATURE.  
   
-```  
+```sql  
 CREATE DATABASE TestSignature ;  
 GO  
 USE TestSignature ;  
@@ -134,6 +134,7 @@ CREATE CERTIFICATE cert_signature_demo
     ENCRYPTION BY PASSWORD = 'pGFD4bb925DGvbd2439587y'  
     WITH SUBJECT = 'ADD SIGNATURE demo';  
 GO  
+
 -- Create a simple procedure.  
 CREATE PROC [sp_signature_demo]  
 AS  
@@ -144,6 +145,7 @@ ADD SIGNATURE TO [sp_signature_demo]
     BY CERTIFICATE [cert_signature_demo]   
     WITH PASSWORD = 'pGFD4bb925DGvbd2439587y' ;  
 GO  
+
 -- Get the signature binary BLOB for the sp_signature_demo procedure.  
 SELECT cp.crypt_property  
     FROM sys.crypt_properties AS cp  
@@ -155,11 +157,12 @@ GO
   
  Подпись `crypt_property`, возвращаемая этой инструкции, будет изменяться каждый раз при создании процедуры. Запишите результат для использования далее в ходе примера. Для этого примера выдается следующий результат: `0x831F5530C86CC8ED606E5BC2720DA835351E46219A6D5DE9CE546297B88AEF3B6A7051891AF3EE7A68EAB37CD8380988B4C3F7469C8EABDD9579A2A5C507A4482905C2F24024FFB2F9BD7A953DD5E98470C4AA90CE83237739BB5FAE7BAC796E7710BDE291B03C43582F6F2D3B381F2102EEF8407731E01A51E24D808D54B373`.  
   
-```  
+```sql  
 -- Drop the signature so that it can be signed again.  
 DROP SIGNATURE FROM [sp_signature_demo]   
     BY CERTIFICATE [cert_signature_demo];  
 GO  
+
 -- Add the signature. Use the signature BLOB obtained earlier.  
 ADD SIGNATURE TO [sp_signature_demo]   
     BY CERTIFICATE [cert_signature_demo]  
@@ -171,14 +174,14 @@ GO
 
 В следующем примере показано, как скрепляющая подпись помогает контролировать доступ к объекту.  
   
-```  
+```sql  
 -- Create tesT1 database  
 CREATE DATABASE testDB;  
 GO  
 USE testDB;  
 GO  
 -- Create table T1  
-CREATE TABLE T1 (c varchar(11));  
+CREATE TABLE T1 (c VARCHAR(11));  
 INSERT INTO T1 VALUES ('This is T1.');  
   
 -- Create a TestUser user to own table T1  
@@ -251,7 +254,6 @@ USE master;
 GO  
 DROP DATABASE testDB;  
 DROP LOGIN Alice;  
-  
 ```  
   
 ## <a name="see-also"></a>См. также:

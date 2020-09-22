@@ -28,12 +28,12 @@ ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2c8b24889e99f5f0f3cdbaaad377a2d4e99f2da3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5eea276766b848033fc0fd8cd7487e7451c779ca
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549334"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688335"
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -45,7 +45,6 @@ ms.locfileid: "89549334"
 ## <a name="syntax"></a>Синтаксис  
   
 ```syntaxsql
-  
 CREATE ROUTE route_name  
 [ AUTHORIZATION owner_name ]  
 WITH    
@@ -73,7 +72,7 @@ WITH
  BROKER_INSTANCE = **'** _broker\_instance\_identifier_ **'**  
  Указывает базу данных, в которой расположена целевая служба. Параметр *broker_instance_identifier* должен являться идентификатором экземпляра брокера для удаленной базы данных. Этот идентификатор можно получить, выполнив следующий запрос в выбранной базе данных:  
   
-```  
+```sql  
 SELECT service_broker_guid  
 FROM sys.databases  
 WHERE database_id = DB_ID()  
@@ -93,7 +92,7 @@ WHERE database_id = DB_ID()
   
  Указанный аргумент *port_number* должен соответствовать номеру порта конечной точки компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на указанном компьютере. Его можно получить, выполнив к выбранной базе данных следующий запрос:  
   
-```  
+```sql  
 SELECT tcpe.port  
 FROM sys.tcp_endpoints AS tcpe  
 INNER JOIN sys.service_broker_endpoints AS ssbe  
@@ -114,7 +113,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  Указанный аргумент *port_number* должен соответствовать номеру порта конечной точки компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на указанном компьютере. Его можно получить, выполнив к выбранной базе данных следующий запрос:  
   
-```  
+```sql  
 SELECT tcpe.port  
 FROM sys.tcp_endpoints AS tcpe  
 INNER JOIN sys.service_broker_endpoints AS ssbe  
@@ -145,7 +144,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 ### <a name="a-creating-a-tcpip-route-by-using-a-dns-name"></a>A. Создание TCP/IP-маршрута с помощью DNS-имени  
  В следующем примере создается маршрут к службе `//Adventure-Works.com/Expenses`. Маршрут указывает, что сообщения для этой службы передаются по протоколу TCP на порт `1234` узла, который определяется DNS-именем `www.Adventure-Works.com`. Целевой сервер доставляет сообщения по прибытию их на экземпляр брокера, определенный уникальным идентификатором `D8D4D268-00A3-4C62-8F91-634B89C1E315`.  
   
-```  
+```sql 
 CREATE ROUTE ExpenseRoute  
     WITH  
     SERVICE_NAME = '//Adventure-Works.com/Expenses',  
@@ -156,7 +155,7 @@ CREATE ROUTE ExpenseRoute
 ### <a name="b-creating-a-tcpip-route-by-using-a-netbios-name"></a>Б. Создание TCP/IP-маршрута с помощью NetBIOS-имени  
  В следующем примере создается маршрут к службе `//Adventure-Works.com/Expenses`. Маршрут указывает, что сообщения для этой службы передаются по протоколу TCP на порт `1234` узла, который определяется NetBIOS-именем `SERVER02`. По прибытии сообщения целевой сервер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] доставляет его экземпляру базы данных, определенному уникальным идентификатором `D8D4D268-00A3-4C62-8F91-634B89C1E315`.  
   
-```  
+```sql  
 CREATE ROUTE ExpenseRoute  
     WITH   
     SERVICE_NAME = '//Adventure-Works.com/Expenses',  
@@ -167,7 +166,7 @@ CREATE ROUTE ExpenseRoute
 ### <a name="c-creating-a-tcpip-route-by-using-an-ip-address"></a>В. Создание TCP/IP-маршрута с помощью IP-адреса  
  В следующем примере создается маршрут к службе `//Adventure-Works.com/Expenses`. Маршрут указывает, что сообщения для этой службы передаются по протоколу TCP на порт `1234` узла с IP-адресом `192.168.10.2`. По прибытии сообщения целевой сервер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] доставляет его экземпляру брокера, определенному уникальным идентификатором `D8D4D268-00A3-4C62-8F91-634B89C1E315`.  
   
-```  
+```sql  
 CREATE ROUTE ExpenseRoute  
     WITH  
     SERVICE_NAME = '//Adventure-Works.com/Expenses',  
@@ -178,7 +177,7 @@ CREATE ROUTE ExpenseRoute
 ### <a name="d-creating-a-route-to-a-forwarding-broker"></a>Г. Создание маршрута к брокеру пересылки  
  В следующем примере создается маршрут к перенаправляющему брокеру на сервере `dispatch.Adventure-Works.com`. Поскольку не заданы ни имя службы, ни идентификатор экземпляра брокера, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует этот маршрут для служб, маршруты которых не определены.  
   
-```  
+```sql  
 CREATE ROUTE ExpenseRoute  
     WITH  
     ADDRESS = 'TCP://dispatch.Adventure-Works.com' ;   
@@ -187,7 +186,7 @@ CREATE ROUTE ExpenseRoute
 ### <a name="e-creating-a-route-to-a-local-service"></a>Д. Создание маршрута к локальной службе  
  В следующем примере создается маршрут к службе `//Adventure-Works.com/LogRequests` в том же экземпляре, что и маршрут.  
   
-```  
+```sql  
 CREATE ROUTE LogRequests  
     WITH  
     SERVICE_NAME = '//Adventure-Works.com/LogRequests',  
@@ -197,7 +196,7 @@ CREATE ROUTE LogRequests
 ### <a name="f-creating-a-route-with-a-specified-lifetime"></a>Е. Создание маршрута с заданным временем существования  
  В следующем примере создается маршрут к службе `//Adventure-Works.com/Expenses`. Срок жизни маршрута равен `259200` секундам, что составляет 72 часа.  
   
-```  
+```sql  
 CREATE ROUTE ExpenseRoute  
     WITH  
     SERVICE_NAME = '//Adventure-Works.com/Expenses',  
@@ -208,7 +207,7 @@ CREATE ROUTE ExpenseRoute
 ### <a name="g-creating-a-route-to-a-mirrored-database"></a>Ж. Создание маршрута к зеркальной базе данных  
  В следующем примере создается маршрут к службе `//Adventure-Works.com/Expenses`. Эта служба размещена на зеркальной базе данных. Одна из зеркальных баз данных расположена по адресу `services.Adventure-Works.com:1234`, вторая — по адресу `services-mirror.Adventure-Works.com:1234`.  
   
-```  
+```sql  
 CREATE ROUTE ExpenseRoute  
     WITH  
     SERVICE_NAME = '//Adventure-Works.com/Expenses',  
@@ -220,7 +219,7 @@ CREATE ROUTE ExpenseRoute
 ### <a name="h-creating-a-route-that-uses-the-service-name-for-routing"></a>З. Создание маршрута, использующего для маршрутизации имя службы  
  В следующем примере создается маршрут, который использует имя службы для определения сетевого адреса, на который будут отправляться сообщения. Обратите внимание, что маршрут, указывающий `'TRANSPORT'` в качестве сетевого адреса, имеет более низкий приоритет совпадения, чем другие маршруты.  
   
-```  
+```sql  
 CREATE ROUTE TransportRoute  
     WITH ADDRESS = 'TRANSPORT' ;  
 ```  

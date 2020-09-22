@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5e14ff0dce201a195fa7a064cc7df604b52b8370
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0f798856f7074aef0318f98d5d9c7415fe3e2846
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544328"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688236"
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -117,14 +117,14 @@ ALTER RESOURCE GOVERNOR
 ### <a name="a-starting-the-resource-governor"></a>A. Запуск регулятора ресурсов  
  При первоначальной установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] регулятор ресурсов отключен. В следующем примере выполняется запуск регулятора ресурсов. После выполнения предыдущей инструкции регулятор ресурсов запускается и может использовать стандартные группы рабочей нагрузки и пулы ресурсов.  
   
-```  
+```sql  
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
 ```  
   
 ### <a name="b-assigning-new-sessions-to-the-default-group"></a>Б. Назначение новых сеансов группе по умолчанию  
  В следующем примере назначаются все новые сеансы группе рабочей нагрузки по умолчанию путем удаления всех существующих функций-классификаторов из конфигурации регулятора ресурсов. Если не назначены функции-классификаторы, все новые сеансы назначаются группе рабочей нагрузки по умолчанию. Это изменение применимо только к новым сеансам. На существующие сеансы оно не влияет.  
   
-```  
+```sql  
 ALTER RESOURCE GOVERNOR WITH (CLASSIFIER_FUNCTION = NULL);  
 GO  
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
@@ -133,7 +133,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 ### <a name="c-creating-and-registering-a-classifier-function"></a>В. Создание и регистрация функции-классификатора  
  В следующем примере создается функция-классификатор с именем `dbo.rgclassifier_v1`. Эта функция классифицирует каждый новый сеанс на основе имени пользователя или имени приложения и назначает запросы сеанса и запросы в группу рабочей нагрузки. Сеансы, которые не сопоставляются с именами определенного пользователя или приложения, назначаются группе рабочей нагрузки по умолчанию. После этого регистрируется функция-классификатор и применяются изменения конфигурации.  
   
-```  
+```sql  
 -- Store the classifier function in the master database.  
 USE master;  
 GO  
@@ -178,14 +178,14 @@ GO
 ### <a name="d-resetting-statistics"></a>Г. Сброс статистики  
  В следующем примере сбрасывается статистика всех групп рабочей нагрузки и пулов ресурсов.  
   
-```  
+```sql 
 ALTER RESOURCE GOVERNOR RESET STATISTICS;  
 ```  
   
 ### <a name="e-setting-the-max_outstanding_io_per_volume-option"></a>Д. Установка параметра MAX_OUTSTANDING_IO_PER_VOLUME  
  В следующем примере для параметра MAX_OUTSTANDING_IO_PER_VOLUME задается значение 20.  
   
-```  
+```sql  
 ALTER RESOURCE GOVERNOR  
 WITH (MAX_OUTSTANDING_IO_PER_VOLUME = 20);   
 ```  

@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9dff53a56e9acd613322be5af1de6e5f0207abd6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 60eca69999f7e21164eac2ce35add549d767dc26
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547590"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688531"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,7 +48,6 @@ ms.locfileid: "89547590"
 ## <a name="syntax"></a>Синтаксис  
   
 ```syntaxsql
-  
 BEGIN DIALOG [ CONVERSATION ] @dialog_handle  
    FROM SERVICE initiator_service_name  
    TO SERVICE 'target_service_name'  
@@ -79,7 +78,7 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
   
  *service_broker_guid* имеет тип **nvarchar(128)**. Чтобы найти *service_broker_guid* для базы данных, выполните следующий запрос в базе данных:  
   
-```  
+```sql  
 SELECT service_broker_guid  
 FROM sys.databases  
 WHERE database_id = DB_ID() ;  
@@ -132,7 +131,7 @@ WHERE database_id = DB_ID() ;
 ### <a name="a-beginning-a-dialog"></a>A. Создание диалога  
  В следующем примере начинается диалог, идентификатор которого сохраняется в параметре `@dialog_handle.`. Служба `//Adventure-Works.com/ExpenseClient` является инициатором диалога, а служба `//Adventure-Works.com/Expenses` — его целевой службой. Этот диалог следует контракту `//Adventure-Works.com/Expenses/ExpenseSubmission`.  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER ;  
   
 BEGIN DIALOG CONVERSATION @dialog_handle  
@@ -144,7 +143,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### <a name="b-beginning-a-dialog-with-an-explicit-lifetime"></a>Б. Создание диалога с явно заданным временем жизни  
  В следующем примере создается двусторонний диалог с сохранением идентификатора диалога в параметре `@dialog_handle`. Служба `//Adventure-Works.com/ExpenseClient` является инициатором диалога, а служба `//Adventure-Works.com/Expenses` — его целевой службой. Этот диалог следует контракту `//Adventure-Works.com/Expenses/ExpenseSubmission`. Если диалог не был закрыт при помощи команды END CONVERSATION в течение `60` секунд, компонент Service Broker завершает этот диалог с ошибкой.  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER ;  
   
 BEGIN DIALOG CONVERSATION @dialog_handle  
@@ -157,7 +156,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### <a name="c-beginning-a-dialog-with-a-specific-broker-instance"></a>В. Создание диалога с определенным экземпляром брокера  
  В следующем примере создается двусторонний диалог с сохранением идентификатора диалога в параметре `@dialog_handle`. Служба `//Adventure-Works.com/ExpenseClient` является инициатором диалога, а служба `//Adventure-Works.com/Expenses` — его целевой службой. Этот диалог следует контракту `//Adventure-Works.com/Expenses/ExpenseSubmission`. Компонент Service Broker перенаправляет сообщения этого диалога компоненту Service Broker с идентификатором GUID `a326e034-d4cf-4e8b-8d98-4d7e1926c904.`  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER ;  
   
 BEGIN DIALOG CONVERSATION @dialog_handle  
@@ -170,7 +169,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### <a name="d-beginning-a-dialog-and-relating-it-to-an-existing-conversation-group"></a>Г. Создание диалога и его соотнесение с существующей группой сообщений  
  В следующем примере создается двусторонний диалог с сохранением идентификатора диалога в параметре `@dialog_handle`. Служба `//Adventure-Works.com/ExpenseClient` является инициатором диалога, а служба `//Adventure-Works.com/Expenses` — его целевой службой. Этот диалог следует контракту `//Adventure-Works.com/Expenses/ExpenseSubmission`. Компонент Service Broker связывает этот диалог с группой сообщений, указанной параметром `@conversation_group_id`, а не создает новую группу сообщений.  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER ;  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER ;  
   
@@ -186,7 +185,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### <a name="e-beginning-a-dialog-with-an-explicit-lifetime-and-relating-the-dialog-to-an-existing-conversation"></a>Д. Создание диалога с явно заданным временем жизни и соотнесение диалога с одним из существующих диалогов  
  В следующем примере создается двусторонний диалог с сохранением идентификатора диалога в параметре `@dialog_handle`. Служба `//Adventure-Works.com/ExpenseClient` является инициатором диалога, а служба `//Adventure-Works.com/Expenses` — его целевой службой. Этот диалог следует контракту `//Adventure-Works.com/Expenses/ExpenseSubmission`. Новый диалог принадлежит к той же группе сообщений, что и `@existing_conversation_handle`. Если диалог не был закрыт при помощи команды END CONVERSATION в течение `600` секунд, компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] завершает этот диалог с ошибкой.  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER  
 DECLARE @existing_conversation_handle UNIQUEIDENTIFIER  
   
@@ -203,7 +202,7 @@ BEGIN DIALOG CONVERSATION @dialog_handle
 ### <a name="f-beginning-a-dialog-with-optional-encryption"></a>Е. Создание диалога с дополнительным шифрованием  
  В следующем примере создается двусторонний диалог с сохранением идентификатора диалога в параметре `@dialog_handle`. Служба `//Adventure-Works.com/ExpenseClient` является инициатором диалога, а служба `//Adventure-Works.com/Expenses` — его целевой службой. Этот диалог следует контракту `//Adventure-Works.com/Expenses/ExpenseSubmission`. Диалог в этом примере разрешает сообщению перемещаться в сети без шифрования в случае, если шифрование недоступно.  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER  
   
 BEGIN DIALOG CONVERSATION @dialog_handle  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a208dc9a99f18a9bfad061afc9caae7f3e859add
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 23ff7a537598cde913635d427bdbd58388e16803
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444659"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570534"
 ---
 # <a name="grant-server-permissions-transact-sql"></a>GRANT, предоставление разрешений на сервер (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -150,7 +150,7 @@ GRANT permission [ ,...n ]
 ### <a name="a-granting-a-permission-to-a-login"></a>A. Предоставление разрешения имени входа  
  В следующем примере разрешение `CONTROL SERVER` предоставляется имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`TerryEminhizer`.  
   
-```  
+```sql  
 USE master;  
 GRANT CONTROL SERVER TO TerryEminhizer;  
 GO  
@@ -159,7 +159,7 @@ GO
 ### <a name="b-granting-a-permission-that-has-grant-permission"></a>Б. Предоставление разрешения, имеющего разрешение GRANT  
  В следующем примере разрешение `ALTER ANY EVENT NOTIFICATION` предоставляется имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`JanethEsteves` с правом предоставлять разрешения другому имени входа.  
   
-```  
+```sql  
 USE master;  
 GRANT ALTER ANY EVENT NOTIFICATION TO JanethEsteves WITH GRANT OPTION;  
 GO  
@@ -168,7 +168,7 @@ GO
 ### <a name="c-granting-a-permission-to-a-server-role"></a>В. Предоставление разрешения роли сервера  
  Следующий пример показывает создание двух ролей сервера с именами `ITDevAdmin` и `ITDevelopers`. Разрешение `ALTER ANY DATABASE` предоставляется определяемой пользователем роли сервера `ITDevAdmin` с параметром `WITH GRANT`, который позволяет роли сервера `ITDevAdmin` повторно присваивать разрешение `ALTER ANY DATABASE`. Затем в примере `ITDevelopers` предоставляется разрешение на использование разрешения `ALTER ANY DATABASE` роли сервера `ITDevAdmin`.  
   
-```  
+```sql  
 USE master;  
 CREATE SERVER ROLE ITDevAdmin ;  
 CREATE SERVER ROLE ITDevelopers ;  
