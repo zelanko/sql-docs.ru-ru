@@ -19,12 +19,12 @@ ms.assetid: d1df8c15-ee73-49eb-9d13-6e98943c3e38
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c34e314e08f206ebfcf34956e7b4555f91166a3e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 79995dc681db76f3de5b6d6af200f6f57f087464
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548291"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989943"
 ---
 # <a name="sp_autostats-transact-sql"></a>Хранимая процедура sp_autostats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -69,13 +69,13 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**Index Name**|**varchar(60)**|Имя индекса или статистики.|  
+|**Index Name**|**sysname**|Имя индекса или статистики.|  
 |**AUTOSTATS**|**varchar (3)**|Текущее значение параметра AUTO_UPDATE_STATISTICS.|  
 |**Последнее обновление**|**datetime**|Дата последнего обновления статистики.|  
   
  Результирующий набор для таблицы или индексированного представления включает статистику, созданную для индексов, статистику по отдельным столбцам, созданную с параметром AUTO_CREATE_STATISTICS и статистикой, созданной с помощью инструкции [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) .  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Если указанный индекс отключен или указанная таблица имеет отключенный кластеризованный индекс, выводится сообщение об ошибке.  
   
  Параметр AUTO_UPDATE_STATISTICS всегда имеет значение OFF для таблиц с оптимизацией памяти.  
