@@ -1,8 +1,8 @@
 ---
 title: Использование встроенной проверки подлинности
-descrption: The Microsoft ODBC Driver for SQL Server on Linux and macOS supports connections that use Kerberos integrated authentication.
+description: Microsoft ODBC Driver for SQL Server на Linux и macOS поддерживает соединения, использующие встроенную проверку подлинности Kerberos.
 ms.custom: ''
-ms.date: 01/20/2017
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,24 +13,26 @@ helpviewer_keywords:
 ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 391d81c46640eb10a0ab2968f278412e55f57611
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b1be7086c66ed6450e8e23f90c0804274bc6b37d
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81629664"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288216"
 ---
 # <a name="using-integrated-authentication"></a>Использование встроенной проверки подлинности
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в Linux и macOS поддерживает соединения, использующие встроенную проверку подлинности Kerberos. Он поддерживает центр распространения ключей (KDC) Kerberos MIT и работает с общим API служб безопасности (GSSAPI) и библиотеками Kerberos версии 5.
-  
+
+Начиная с версии 17.6, драйвер также поддерживает встроенную проверку подлинности с помощью Azure Active Directory с использованием федеративной учетной записи, независимо от ограничений системной библиотеки. Дополнительные сведения см. в статье [Использование Azure Active Directory](../using-azure-active-directory.md).
+
 ## <a name="using-integrated-authentication-to-connect-to-ssnoversion-from-an-odbc-application"></a>Использование встроенной проверки подлинности для подключения к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] из приложения ODBC  
 
 Вы можете включить встроенную проверку подлинности Kerberos, указав **Trusted_Connection=yes** в строке подключения для **SQLDriverConnect** или **SQLConnect**. Пример:  
 
 ```
-Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes  
+Driver='ODBC Driver 17 for SQL Server';Server=your_server;Trusted_Connection=yes  
 ```
   
 При подключении с использованием имени DSN можно также добавить **Trusted_Connection=yes** в запись имени DSN в файле `odbc.ini`.

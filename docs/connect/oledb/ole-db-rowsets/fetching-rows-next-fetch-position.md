@@ -1,6 +1,6 @@
 ---
 title: Позиция следующей выборки (драйвер OLE DB) | Документация Майкрософт
-description: Выборка строк — следующая позиция выборки
+description: OLE DB Driver for SQL Server отслеживает следующую точку извлечения, чтобы последовательность вызовов метода GetNextRows считала весь набор строк.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - OLE DB rowsets, fetching
 - next fetch position
 - rowsets [OLE DB], fetching
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: d6fd65f54f0c6f6aa219595e1948ce758c50b4db
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0ba713e9da40255d992e7cccf8c8430a205cadf4
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244205"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861581"
 ---
 # <a name="fetching-rows---next-fetch-position-ole-db-driver"></a>Выборка строк — позиция следующей выборки (драйвер OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

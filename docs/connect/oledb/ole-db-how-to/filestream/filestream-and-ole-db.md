@@ -1,6 +1,6 @@
 ---
 title: Файловый поток и OLE DB (драйвер OLE DB) | Документация Майкрософт
-description: Filestream и OLE DB
+description: Из четырех примеров в этом разделе вы узнаете, как использовать OLE DB Driver for SQL Server с функцией FILESTREAM.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: b341202b0941fb718bb03eb43e082a3b5af7633e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cf54843d4f033220ecada31291e83d3d39977c07
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244771"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860594"
 ---
 # <a name="filestream-and-ole-db"></a>Filestream и OLE DB
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

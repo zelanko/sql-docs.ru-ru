@@ -1,7 +1,7 @@
 ---
 title: Установка Microsoft ODBC Driver for SQL Server (macOS)
 description: Узнайте, как установить Microsoft ODBC Driver for SQL Server на клиентах macOS, чтобы обеспечить подключение к базе данных.
-ms.date: 03/05/2020
+ms.date: 09/08/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - driver, installing
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9daa17d8619fa05ac9abf52a768740eb3e223c77
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 24ddbbd8adaa646005c8e5ea3c945cb3ab164d48
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488522"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89569824"
 ---
 # <a name="install-the-microsoft-odbc-driver-for-sql-server-macos"></a>Установка Microsoft ODBC Driver for SQL Server (macOS)
 
@@ -70,7 +70,14 @@ brew install msodbcsql@13.1.9.2 mssql-tools@14.0.6.0
 
 ## <a name="troubleshooting"></a>Устранение неполадок
 
-Если не удается установить подключение к SQL Server с помощью драйвера ODBC, см. статью, посвященную известным проблемам при [устранении неполадок подключения](known-issues-in-this-version-of-the-driver.md#connectivity).
+Некоторые пользователи столкнулись с проблемой при попытке подключения после установки драйвера ODBC и получили сообщение об ошибке следующего вида: `"[01000] [unixODBC][Driver Manager]Can't open lib 'ODBC Driver 17 for SQL Server' : file not found (0) (SQLDriverConnect)"`. Возможно, это произошло потому, что не удалось найти зарегистрированные драйверы из-за неправильной настройки unixODBC. В таких случаях проблему можно устранить, создав пару символических ссылок.
+
+```bash
+sudo ln -s /usr/local/etc/odbcinst.ini /etc/odbcinst.ini
+sudo ln -s /usr/local/etc/odbc.ini /etc/odbc.ini
+```
+
+Сведения о других ситуациях, в которых не удается установить подключение к SQL Server с помощью драйвера ODBC, см. в статье, посвященной [устранению известных неполадок подключения](known-issues-in-this-version-of-the-driver.md#connectivity).
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

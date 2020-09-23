@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 952f527b248d6491c3a6f3acf3c4e5570e3ad54e
-ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
+ms.openlocfilehash: ba50d65054b0a72424955f5d669a15d2c1846b67
+ms.sourcegitcommit: 780a81c02bc469c6e62a9c307e56a973239983b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564664"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90027295"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Включение зашифрованных соединений для ядра СУБД
 
@@ -84,7 +84,7 @@ ms.locfileid: "88564664"
 
 - Учетная запись службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должна иметь соответствующее разрешение на доступ к TLS-сертификату.
 
-- Текущее системное время должно превышать значение свойства сертификата **Действителен с** и не превышать значение свойства "Действителен до".
+- Текущее системное время должно превышать значение свойства сертификата **Действителен с** и не превышать значение свойства **Действителен до**.
 
 - Сертификат должен быть предназначен для проверки подлинности сервера. Для этого требуется задать свойству сертификата **Улучшенный ключ** значение **Проверка подлинности сервера (1.3.6.1.5.5.7.3.1)** .
 

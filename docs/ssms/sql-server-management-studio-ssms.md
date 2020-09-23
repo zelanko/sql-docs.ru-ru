@@ -1,6 +1,6 @@
 ---
 title: SQL Server Management Studio (SSMS)
-description: Описание назначения и новых возможностей SQL Server Management Studio (SSMS).
+description: Узнайте о пакете SQL Server Management Studio (SSMS) и его возможностях, в том числе об управлении решениями Analysis Services.
 ms.prod: sql
 ms.technology: ssms
 ms.topic: overview
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - SQL Server Management Studio for Analysis Services
 ms.custom: seo-lt-2019
 ms.date: 09/11/2019
-ms.openlocfilehash: 80f6a13c952c09153713a36e3e0f8f979ee7bcd3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0b46427196ad48bc6dbfaeaca25fa7e327d114f8
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001598"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480461"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>Что такое SQL Server Management Studio (SSMS)?
 
@@ -43,7 +43,7 @@ ms.locfileid: "86001598"
 |**Обозреватель шаблонов** используется для создания файлов со стандартным текстом, которые можно использовать для ускорения разработки запросов и скриптов, и управления ими.|[Обозреватель шаблонов](../ssms/template/template-explorer.md)|  
 |Устаревший **обозреватель решений** используется для создания проектов, применяемых для управления такими элементами администрирования, как скрипты и запросы.|[Обозреватель решений](../ssms/solution/solution-explorer.md)|  
 |Использование инструментов для визуального проектирования, включенных в [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].|[Visual Database Tools](../ssms/visual-db-tools/visual-database-tools.md)|  
-|Использование редакторов языков [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] для интерактивного написания и отладки запросов и скриптов.|[Редакторы запросов и текста](scripting/query-and-text-editors-sql-server-management-studio.md)
+|Использование редакторов языков [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] для интерактивного написания и отладки запросов и скриптов.|[Редакторы запросов и текста](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)
 
 ## <a name="sql-server-management-studio-for-business-intelligence"></a>SQL Server Management Studio для решения задач бизнес-аналитики
 

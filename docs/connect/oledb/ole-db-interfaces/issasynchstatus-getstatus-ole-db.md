@@ -1,6 +1,6 @@
 ---
 title: ISSAsynchStatus::GetStatus (драйвер OLE DB) | Документация Майкрософт
-description: Функция ISSAsynchStatus::GetStatus (OLE DB)
+description: Узнайте, как метод ISSAsynchStatus::GetStatus возвращает состояние асинхронно выполняющейся операции в OLE DB Driver for SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ apiname:
 apitype: COM
 helpviewer_keywords:
 - GetStatus method
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 551a8a20c703786fd782b622d5aa67c957b51580
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0b9d4e6011dac6555db090f5c4d2a68470746a60
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244388"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862196"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>Функция ISSAsynchStatus::GetStatus (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

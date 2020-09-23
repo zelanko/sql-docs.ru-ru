@@ -10,16 +10,16 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 23a3e746996615cac0fa902e21733f9ce3ea4f45
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4e467fb50ae2b2c76deea885990b160745c691eb
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723973"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042530"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Установка новых пакетов R с помощью sqlmlutils
 
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2019 SQL MI](../../includes/applies-to-version/sqlserver2019-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 В этой статье описывается использование функций из пакета [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) для установки новых пакетов R в экземпляре [Служб машинного обучения SQL Server](../sql-server-machine-learning-services.md) и в [кластерах больших данных](../../big-data-cluster/machine-learning-services.md). Устанавливаемые пакеты можно использовать в сценариях R, выполняющихся в базе данных, с помощью инструкции T-SQL [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql).
@@ -38,6 +38,8 @@ ms.locfileid: "85723973"
 - Установите [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) на клиентском компьютере, который используется для подключения к SQL Server. Вы можете использовать другие средства запросов и управления базами данных, но в этой статье рассматривается Azure Data Studio.
 
 ### <a name="other-considerations"></a>Другие замечания
+
+- Установка пакета зависит от экземпляра SQL, базы данных и пользователя, указанных в сведениях о подключении, которые вы укажете для **sqlmlutils**. Чтобы использовать пакет в нескольких экземплярах или базах данных SQL или для разных пользователей, необходимо установить пакет для каждого из них. Исключением является только если пакет устанавливается членом `dbo`, когда пакет *общедоступный* и является общим для всех пользователей. Если пользователь устанавливает более новую версию общедоступного пакета, это не повлияет на общедоступный пакет, но такой пользователь будет иметь доступ к более новой версии.
 
 - Сценарий R, выполняющийся в SQL Server, может использовать только пакеты, установленные в библиотеке экземпляра по умолчанию. SQL Server не может загружать пакеты из внешних библиотек, даже если эти библиотеки находятся на том же компьютере. В их число входят библиотеки R, установленные с другими продуктами Майкрософт.
 

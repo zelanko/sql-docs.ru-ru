@@ -26,20 +26,20 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-ms.date: 07/22/2020
+ms.date: 09/11/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 1898259aef928b749396d0560965aea1d2816624
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 018bce8226fc534694b230c18bb2f272787ec144
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246653"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076769"
 ---
 # <a name="sqlcmd-utility"></a>Служебная программа sqlcmd
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-> Сведения об SQL Server 2014 и более ранние версиях см. в статье о [служебной программе sqlcmd](/previous-versions/sql/2014/tools/sqlcmd-utility?view=sql-server-2014).
+> Сведения об SQL Server 2014 и более ранние версиях см. в статье о [служебной программе sqlcmd](/previous-versions/sql/2014/tools/sqlcmd-utility?view=sql-server-2014&preserve-view=true).
 >
 > Сведения об использовании программы sqlcmd в Linux см. в статье [Установка программ командной строки SQL Server sqlcmd и bcp в Linux](../linux/sql-server-linux-setup-tools.md).
 
@@ -54,25 +54,25 @@ ms.locfileid: "87246653"
 
 ## <a name="download-the-latest-version-of-sqlcmd-utility"></a>Скачивание последней версии служебной программы sqlcmd
 
-**[![download](../ssdt/media/download.png) Скачать программы командной строки Microsoft 15 для SQL Server (х64) (2,6 МБ)](https://go.microsoft.com/fwlink/?linkid=2082790)**
-<br>**[![download](../ssdt/media/download.png) Скачать программы командной строки Microsoft 15 для SQL Server (х86) (2,3 МБ)](https://go.microsoft.com/fwlink/?linkid=2082695)**
+**[![Скачивание sqlcmd для x64](../ssdt/media/download.png) Скачать программы командной строки Microsoft 15 для SQL Server (х64) (2,6 МБ)](https://go.microsoft.com/fwlink/?linkid=2142258)**
+<br>**[![Скачивание sqlcmd для x86](../ssdt/media/download.png) Скачать программы командной строки Microsoft 15 для SQL Server (х86) (2,3 МБ)](https://go.microsoft.com/fwlink/?linkid=2142257)**
 
 Программы командной строки предоставляются в общедоступной версии, тем не менее они выпускаются вместе с пакетом установщика для [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
 **Сведения о версии**
 
-Номер выпуска: 15.0 <br>
-Номер сборки: 15.0.1300.359<br>
-Дата выпуска: 13 марта 2019 г.
+Номер выпуска: 15.0.2<br>
+Номер сборки: 15.0.2000.5<br>
+Дата выпуска: 11 сентября 2020 г.
 
 Новая версия SQLCMD поддерживает проверку подлинности Azure AD, в том числе многофакторную проверку подлинности (MFA) для базы данных SQL, хранилища данных SQL и функции Always Encrypted.
 Новая версия программы BCP поддерживает аутентификацию Azure AD, в том числе многофакторную проверку подлинности (MFA) для базы данных SQL и хранилища данных SQL.
 
 **Требования к системе** Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008–2019.
 
-Этот компонент требует наличия [установщика Windows версии 4.5](https://www.microsoft.com/download/details.aspx?id=8483) и [драйвера Microsoft ODBC 17 для SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
+Этот компонент требует наличия [установщика Windows версии 4.5](https://www.microsoft.com/download/details.aspx?id=8483) и [драйвера Microsoft ODBC 17 для SQL Server](https://aka.ms/downloadmsodbcsql).
  
-Чтобы проверить версию SQLCMD, выполните команду `sqlcmd -?` и убедитесь, что используется версия 15.0.1300.359 или более поздняя.
+Чтобы проверить версию SQLCMD, выполните команду `sqlcmd -?` и убедитесь, что используется версия 15.0.2000.5 или более поздняя.
 
 > [!NOTE]
 > Для поддержки Always Encrypted (`-g`) и проверки подлинности Azure Active Directory (`-G`) требуется версия не ниже 13.1. (На компьютере можно установить несколько версий sqlcmd.exe. Убедитесь, что используется правильная версия. Чтобы определить версию, выполните `sqlcmd -?`.)
@@ -89,8 +89,8 @@ ms.locfileid: "87246653"
 
  Другие разделы: 
 
-- [Запуск программы sqlcmd](../relational-databases/scripting/sqlcmd-start-the-utility.md)   
-- [Использование программы sqlcmd](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
+- [Запуск программы sqlcmd](../ssms/scripting/sqlcmd-start-the-utility.md)
+- [Использование программы sqlcmd](../ssms/scripting/sqlcmd-use-the-utility.md)
   
 ## <a name="syntax"></a>Синтаксис
 
@@ -169,11 +169,11 @@ sqlcmd
 Задает значение `Enabled`для параметра "Шифрование столбцов". Дополнительные сведения см. в разделе [Постоянное шифрование](../relational-databases/security/encryption/always-encrypted-database-engine.md). Поддерживаются только главные ключи, хранящиеся в хранилище сертификатов Windows. Для использования параметра -g требуется версия **sqlcmd** не ниже [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). Чтобы определить версию, выполните `sqlcmd -?`.
 
 **-G**  
-Клиент использует этот переключатель при подключении к базе данных SQL или хранилищу данных SQL, чтобы указать, что проверка подлинности пользователя выполняется с помощью Azure Active Directory. Этот параметр задает переменную скрипта SQLCMDUSEAAD = true программы **sqlcmd** . Для использования параметра -G требуется версия **sqlcmd** не ниже [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). Чтобы определить версию, выполните `sqlcmd -?`. Дополнительные сведения см. в статье [Подключение к базе данных SQL или хранилищу данных SQL с использованием аутентификации Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). Параметр -A не поддерживается вместе с параметром -G.
+Клиент использует этот переключатель при подключении к базе данных SQL или хранилищу данных SQL, чтобы указать, что проверка подлинности пользователя выполняется с помощью Azure Active Directory. Этот параметр задает переменную скрипта SQLCMDUSEAAD = true программы **sqlcmd** . Для использования параметра -G требуется версия **sqlcmd** не ниже [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). Чтобы определить версию, выполните `sqlcmd -?`. Дополнительные сведения см. в статье [Подключение к базе данных SQL или хранилищу данных SQL с использованием аутентификации Azure Active Directory](/azure/azure-sql/database/authentication-aad-overview). Параметр -A не поддерживается вместе с параметром -G.
 
 > [!IMPORTANT]
 > Параметр `-G` применяется только для Базы данных SQL Azure и хранилища данных Azure.
-> Встроенная и интерактивная проверка подлинности AAD в настоящее время не поддерживается в Linux и macOS.
+> Интерактивная проверка подлинности AAD в Linux и macOS в настоящее время не поддерживается. Для интегрированной проверки подлинности AAD требуется [драйвер Microsoft ODBC 17 для SQL Server](https://aka.ms/downloadmsodbcsql) версии 17.6.1 или более поздней, а также правильно настроенная среда Kerberos.
 
 - **Имя пользователя и пароль Azure Active Directory** 
 
@@ -211,7 +211,7 @@ sqlcmd
 
     Интерактивная проверка подлинности Azure AD для Базы данных SQL Azure и Хранилища данных SQL позволяет использовать интерактивный метод, поддерживающий многофакторную проверку подлинности. Дополнительные сведения см. в разделе [Интерактивная проверка подлинности Active Directory](../ssdt/azure-active-directory.md#active-directory-interactive-authentication). 
 
-   Для интерактивного режима Azure AD требуется программа **sqlcmd** [версии 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility) или более поздней, а также [ODBC версии 17.2 или более поздней](https://www.microsoft.com/download/details.aspx?id=56567).  
+   Для интерактивного режима Azure AD требуется программа **sqlcmd** [версии 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility) или более поздней, а также [ODBC версии 17.2 или более поздней](https://aka.ms/downloadmsodbcsql).  
 
    Чтобы включить интерактивную проверку подлинности, укажите аргумент -G только с именем пользователя (-U) без пароля.
 
@@ -235,7 +235,7 @@ sqlcmd
    sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -G -U joe@contoso.com  
    ```
 
-   Если гостевые пользователи есть в определенной службе Azure AD и являются частью группы, которая существует в базе данных SQL, у которой есть разрешения на выполнение команды sqlcmd, используется псевдоним гостевого пользователя (например, *keith0@adventureworks.com* ).
+   Если гостевые пользователи есть в определенной службе Azure AD и являются частью группы, которая существует в базе данных SQL, имеющей разрешения на выполнение команды sqlcmd, используется псевдоним гостевого пользователя (например, *keith0@adventureworks.com* ).
 
   >[!IMPORTANT]
   >Существует известная неполадка при использовании параметра `-G` и `-U` с программой SQLCMD, при которой размещение параметра `-U` перед параметром `-G` может привести к сбою проверки подлинности. Всегда начинайте с использования параметра `-G`, за которым следует параметр `-U`.
@@ -251,7 +251,7 @@ sqlcmd
  Объявляет тип рабочей нагрузки приложения при соединении с сервером. Единственным поддерживаемым в данное время значением является **ReadOnly**. Если параметр **-K** не указан, то программа sqlcmd не будет поддерживать возможность подключения к вторичной реплике в группе доступности AlwaysOn. Дополнительные сведения см. в статье [Активные вторичные реплики: доступ только для чтения к вторичным репликам (группы доступности AlwaysOn)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
   
 **-M** _отработка_отказа_в_сети_с_несколькими_подсетями_  
- Всегда указывайте параметр **-M** при соединении с прослушивателем группы доступности SQL Server или экземпляром отказоустойчивого кластера SQL Server. **-M** обеспечивает более быстрое обнаружение активного (в данный момент) сервера и соединение с ним. Если параметр **-M** не указан, значит **-M** отключен. Дополнительные сведения см. в статьях: [Прослушиватели, подключение клиентов и отработка отказа приложений](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Создание и настройка групп доступности (SQL Server)](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Отказоустойчивая кластеризация и группы доступности AlwaysOn (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx) и [Активные вторичные реплики. Доступ только для чтения к вторичным репликам (группы доступности AlwaysOn)](https://msdn.microsoft.com/library/ff878253.aspx).
+ Всегда указывайте параметр **-M** при соединении с прослушивателем группы доступности SQL Server или экземпляром отказоустойчивого кластера SQL Server. **-M** обеспечивает более быстрое обнаружение активного (в данный момент) сервера и соединение с ним. Если параметр **-M** не указан, значит **-M** отключен. Дополнительные сведения см. в статьях: [Прослушиватели, подключение клиентов и отработка отказа приложений](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Создание и настройка групп доступности (SQL Server)](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Отказоустойчивая кластеризация и группы доступности AlwaysOn (SQL Server)](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) и [Активные вторичные реплики. Доступ только для чтения к вторичным репликам (группы доступности AlwaysOn)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).
   
  **-N**  
  С помощью этого переключателя клиент запрашивает шифрованное соединение.  
@@ -587,9 +587,9 @@ sqlcmd
 |SQLCMDDBNAME|-d|R|""|  
 |SQLCMDLOGINTIMEOUT|-l|Чтение-запись|"8" (секунд)|  
 |SQLCMDSTATTIMEOUT|-T|Чтение-запись|"0" = неограниченное время ожидания|  
-|SQLCMDHEADERS|-H|Чтение-запись|0|  
+|SQLCMDHEADERS|-H|Чтение-запись|"0"|  
 |SQLCMDCOLSEP|-S|Чтение-запись|" "|  
-|SQLCMDCOLWIDTH|-w|Чтение-запись|0|  
+|SQLCMDCOLWIDTH|-w|Чтение-запись|"0"|  
 |SQLCMDPACKETSIZE|-a|R|"4096"|  
 |SQLCMDERRORLEVEL|-M|Чтение-запись|0|  
 |SQLCMDMAXVARTYPEWIDTH|-y|Чтение-запись|«256»|  
@@ -612,7 +612,7 @@ sqlcmd
 |**GO** [*число*]|**:List**|  
 |[ **:** ] **RESET**|**:Error**|  
 |[ **:** ] **ED**|**:Out**|  
-|[ **:** ] **!!**|**:Perftrace**|  
+|[**:**] **!!**|**:Perftrace**|  
 |[ **:** ] **QUIT**|**:Connect**|  
 |[ **:** ] **EXIT**|**:On Error**|  
 |**:r**|**:Help**|  
@@ -928,9 +928,5 @@ sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G -U bob@contoso.com -P 
 - [Изменение скриптов SQLCMD при помощи редактора запросов](~/relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)
 - [Управление шагами задания](~/ssms/agent/manage-job-steps.md)   
 - [Create a CmdExec Job Step](~/ssms/agent/create-a-cmdexec-job-step.md)  
-
-## <a name="feedback"></a>Отзывы
-
-![значок_справки_для_пользователя](../ssms/media/needhelp_person_icon.png) [Форум клиентских средств SQL](https://social.msdn.microsoft.com/Forums/home?forum=sqltools)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

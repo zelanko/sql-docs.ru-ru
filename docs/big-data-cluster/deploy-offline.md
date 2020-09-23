@@ -1,7 +1,7 @@
 ---
 title: Развертывание в автономном режиме
 titleSuffix: SQL Server big data clusters
-description: Сведения о том, как выполнить автономное развертывание кластера больших данных SQL Server.
+description: Узнайте, как выполнить автономное развертывание кластера больших данных SQL Server 2019 и загрузить образы контейнеров в частный репозиторий.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a3e437e722665cb156fbd4c1bb474e1d9f095f95
-ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
+ms.openlocfilehash: c0218bd24bd24ee17a8d6addfbcf071788a48156
+ms.sourcegitcommit: e274d51df09f9163fa6e22b36d48c60bc3d7c7d1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84423163"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89875563"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Выполнение автономного развертывания кластера больших данных SQL Server
 
@@ -80,7 +80,6 @@ ms.locfileid: "84423163"
 - **mssql-security-domainctl**
 - **mssql-security-knox**
 - **mssql-security-support**
-- **mssql-server**
 - **mssql-server-controller**
 - **mssql-server-data**
 - **mssql-ha-operator**

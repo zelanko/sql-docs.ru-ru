@@ -1,6 +1,6 @@
 ---
 title: Получение строк (драйвер OLE DB) | Документация Майкрософт
-description: Получение строк с помощью интерфейса IRowset
+description: Узнайте, как объекты-получатели в OLE DB Driver for SQL Server используют интерфейс IRowset для извлечения строк, получения из них данных и управления строками.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - rowsets [OLE DB], fetching
 - IRowset interface
 - OLE DB Driver for SQL Server, fetching
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 2d803da7e8930eccb66843a025cb3426f5af62f5
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 992ec376a8f881dc06a72a5c9d6502faae9f9cc3
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244200"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862461"
 ---
 # <a name="fetching-rows"></a>Выборка строк
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

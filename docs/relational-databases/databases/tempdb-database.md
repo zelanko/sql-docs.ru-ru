@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
-ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eafc98ea91b60ec21396e1b25eca2684e24f5cfc
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 5090a021f1402c88abf84d502ae3538eeced5bd1
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861360"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076829"
 ---
 # <a name="tempdb-database"></a>tempdb, база данных
 
@@ -228,15 +227,33 @@ GO
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-and-When-To-Memory-Optimized-TempDB-Metadata/player?WT.mc_id=dataexposed-c9-niner]
 
 
+### <a name="configuring-and-using-memory-optimized-tempdb-metadata"></a>Настройка и использование метаданных оптимизированной для памяти базы данных tempdb
+
 Чтобы согласиться на применение этой новой функции, используйте следующий скрипт:
 
 ```sql
-ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON;
 ```
 
 Чтобы это изменение конфигурации вступило в силу, нужно перезапустить службу.
 
-Эта реализация имеет ряд ограничений:
+Вы можете проверить, является ли `tempdb` оптимизированной для памяти, используя следующую команду T-SQL:
+
+```sql
+SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized');
+```
+
+Если по какой-то причине не удается запустить сервер после включения оптимизированных для памяти метаданных `tempdb`, можно обойти эту функцию, запустив экземпляр SQL Server в [минимальной конфигурации](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md) с помощью параметра запуска **-f**. После этого вы можете отключить функцию и перезапустить SQL Server в нормальном режиме.
+
+Чтобы защитить сервер от потенциальных состояний нехватки памяти, можно привязать `tempdb` к [пулу ресурсов](../in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md). В этом случае вместо действий, которые обычно выполняются при привязке пула ресурсов к базе данных, следует использовать команду [`ALTER SERVER`](../../t-sql/statements/alter-server-configuration-transact-sql.md).
+
+```sql
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON (RESOURCE_POOL = 'pool_name');
+```
+
+Кроме того, даже если метаданные оптимизированной для памяти базы данных tempdb уже включены, чтобы это изменение вступило в силу, требуется перезагрузка.
+
+### <a name="memory-optimized-tempdb-limitations"></a>Ограничения оптимизированной для памяти базы данных tempdb
 
 - Включение и отключение функции не является динамическим. Из-за внутренних изменений, которые необходимо внести в структуру `tempdb`, для включения или отключения этой функции требуется перезапуск.
 
@@ -249,12 +266,15 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON
   Пример.
     
   ```sql
-  BEGIN TRAN
+  BEGIN TRAN;
+  
   SELECT *
-  FROM tempdb.sys.tables  -----> Creates a user in-memory OLTP transaction on tempdb
+  FROM tempdb.sys.tables;  -----> Creates a user in-memory OLTP transaction in tempdb
+  
   INSERT INTO <user database>.<schema>.<mem-optimized table>
-  VALUES (1)  ----> Tries to create user in-memory OLTP transaction but will fail
-   COMMIT TRAN
+  VALUES (1); ----> Tries to create a user in-memory OLTP transaction in the user database but will fail
+  
+  COMMIT TRAN;
   ```
     
 - Запросы к таблицам, оптимизированным для памяти, не поддерживают указания блокировки и изоляции, поэтому запросы к представлениям каталога оптимизированной для памяти `tempdb` не будут учитывать указания блокировки и изоляции. Как и в случае с другими системными представлениями каталога в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], все транзакции для системных представлений будут находиться в изоляции `READ COMMITTED` (или `READ COMMITTED SNAPSHOT` в нашем случае).
@@ -265,14 +285,6 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON
 
 > [!NOTE] 
 > Эти ограничения применяются только при создании ссылок на системные представления `tempdb`. При необходимости вы сможете создать временную таблицу в той же транзакции, где обращаетесь к таблице, оптимизированной для памяти, в пользовательской базе данных.
-
-Вы можете проверить, является ли `tempdb` оптимизированной для памяти, используя следующую команду T-SQL:
-
-```
-SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized')
-```
-
-Если по какой-то причине не удается запустить сервер после включения оптимизированных для памяти метаданных `tempdb`, можно обойти эту функцию, запустив экземпляр SQL Server в [минимальной конфигурации](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md) с помощью параметра запуска **-f**. После этого вы можете отключить функцию и перезапустить SQL Server в нормальном режиме.
 
 ## <a name="capacity-planning-for-tempdb-in-sql-server"></a>Планирование ресурсов для tempdb в SQL Server
 Определение требуемого размера `tempdb` в рабочей среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] зависит от многих факторов. Как описано выше, эти факторы включают текущую рабочую нагрузку и используемые функции [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Рекомендуется проанализировать текущую рабочую нагрузку, выполнив следующие задачи в среде тестирования SQL Server:

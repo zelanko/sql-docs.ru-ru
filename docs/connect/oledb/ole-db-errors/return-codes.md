@@ -1,6 +1,6 @@
 ---
 title: Коды возврата (драйвер OLE DB)
-description: Коды возврата
+description: Узнайте о кодах возврата для функций OLE DB Driver for SQL Server и о том, как получить дополнительные сведения о результатах, помимо данных об успешном выполнении.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -20,14 +20,14 @@ helpviewer_keywords:
 - S_OK
 - FAILED macro
 - errors [OLE DB], return codes
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 2c87c3ebe7580fdde67417049c1b889dcd2bee42
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 18d2b3f5029e70379f0692a919aa8fe6cd4ed10b
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244804"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862246"
 ---
 # <a name="return-codes"></a>Коды возврата
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

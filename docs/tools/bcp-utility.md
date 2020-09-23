@@ -27,14 +27,14 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: v-daenge
 ms.custom: seo-lt-2019
-ms.date: 01/23/2020
+ms.date: 09/11/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 8bec01c994df45975ac42faa25f0fb389443eb82
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 61d00005973755588012d0e7e1d9f4be9327fa08
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998540"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076759"
 ---
 # <a name="bcp-utility"></a>Программа bcp
 
@@ -42,7 +42,7 @@ ms.locfileid: "85998540"
 
 > Сведения об использовании программы bcp в Linux см. в статье [Установка программ командной строки SQL Server sqlcmd и bcp в Linux](../linux/sql-server-linux-setup-tools.md).
 >
-> Подробные сведения об использовании программы bcp с Хранилищем данных SQL Azure см. в статье [Data loading strategies for Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp) (Стратегии загрузки данных Хранилища данных SQL Azure).
+> Подробные сведения об использовании программы bcp с Хранилищем данных SQL Azure см. в статье [Data loading strategies for Azure SQL Data Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp) (Стратегии загрузки данных Хранилища данных SQL Azure).
 
 Служебная программа **b**ulk **c**opy **p**rogram (**bcp**) используется для массового копирования данных между экземпляром [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и файлом данных в указанном пользователем формате. С помощью программы **bcp** можно выполнять импорт большого количества новых строк в таблицы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или экспорт данных из таблиц в файлы данных. За исключением случаев использования параметра **queryout** , применение программы не требует знания языка [!INCLUDE[tsql](../includes/tsql-md.md)]. Чтобы выполнить импорт данных в таблицу, необходимо или использовать файл форматирования, созданный для этой таблицы, либо изучить структуру таблицы и типов данных, допустимых для ее столбцов.  
 
@@ -53,16 +53,16 @@ ms.locfileid: "85998540"
 
 ## <a name="download-the-latest-version-of-bcp-utility"></a>Скачивание последней версии программы bcp
 
-**[![download](../ssdt/media/download.png) Скачать программы командной строки Microsoft 15 для SQL Server (х64)](https://go.microsoft.com/fwlink/?linkid=2082790)**
-<br>**[![download](../ssdt/media/download.png) Скачать программы командной строки Microsoft 15 для SQL Server (х86)](https://go.microsoft.com/fwlink/?linkid=2082695)**
+**[![Скачивание bcp для x64](../ssdt/media/download.png) Скачать программы командной строки Microsoft 15 для SQL Server (х64)](https://go.microsoft.com/fwlink/?linkid=2142258)**
+<br>**[![Скачивание bcp для x86](../ssdt/media/download.png) Скачать программы командной строки Microsoft 15 для SQL Server (х86)](https://go.microsoft.com/fwlink/?linkid=2142257)**
 
 Инструменты командной строки предоставляются в общедоступной версии, тем не менее они выпускаются вместе с пакетом установщика для [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
 ### <a name="version-information"></a>Сведения о версии
 
-Номер выпуска: 15.0 <br>
-Номер сборки: 15.0.1300.359<br>
-Дата выпуска: 13 марта 2019 г.
+Номер выпуска: 15.0.2 <br>
+Номер сборки: 15.0.2000.5<br>
+Дата выпуска: 11 сентября 2020 г.
 
 Новая версия SQLCMD поддерживает проверку подлинности Azure AD, в том числе многофакторную проверку подлинности (MFA) для базы данных SQL, хранилища данных SQL и функции Always Encrypted.
 Новая версия программы BCP поддерживает аутентификацию Azure AD, в том числе многофакторную проверку подлинности (MFA) для базы данных SQL и хранилища данных SQL.
@@ -71,9 +71,9 @@ ms.locfileid: "85998540"
 
 Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019.
 
-Этот компонент требует наличия [установщика Windows версии 4.5](https://www.microsoft.com/download/details.aspx?id=8483) и [драйвера Microsoft ODBC 17 для SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
+Этот компонент требует наличия [установщика Windows версии 4.5](https://www.microsoft.com/download/details.aspx?id=8483) и [драйвера Microsoft ODBC 17 для SQL Server](https://aka.ms/downloadmsodbcsql).
 
-Чтобы проверить версию BCP, выполните команду `bcp /v` и убедитесь, что используется версия 15.0.1300.359 или выше.
+Чтобы проверить версию BCP, выполните команду `bcp /v` и убедитесь, что используется версия 15.0.2000.5 или выше.
 
 <table><th>Синтаксис</th><tr><td><pre>
 bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a href="#tbl_name">table_name</a> | <a href="#vw_name">view_name</a> | <a href="#query">"query"</a>}
@@ -124,7 +124,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
  Можно также явным образом указать имя базы данных с помощью параметра **-d**.  
 
- **in** *файл_данных* | **out** *файл_данных* | **queryout** *файл_данных* | **format nul**.  
+ **in** *файл_данных*\|**out** *файл_данных*\|**queryout** *файл_данных*\|**format nul**  
  Указывает направление массового копирования следующим образом:  
   
 - **in**<a name="in"></a> — копирует данные из файла в таблицу или представление базы данных.  
@@ -163,7 +163,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  Дополнительные сведения см. в разделе [Использование символьного формата для импорта и экспорта данных (SQL Server)](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md).  
   
- **-C** { **ACP** | **OEM** | **RAW** | *code_page* }<a name="C"></a>   
+ **-C** { **ACP** \| **OEM** \| **RAW** \| *кодовая_страница* }<a name="C"></a>   
  Указывает кодовую страницу данных в файле данных. Аргумент*code_page* имеет смысл только в том случае, если данные содержат столбцы типа **char**, **varchar**или **text** с символами, коды которых больше 127 или меньше 32.  
   
 > [!NOTE]
@@ -215,7 +215,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
 **-G**<a name="G"></a>
 
- Клиент использует этот переключатель при подключении к базе данных SQL Azure или хранилищу данных SQL Azure, чтобы указать, что проверка подлинности пользователя выполняется с помощью Azure Active Directory. Для использования аргумента -G требуется [версия 14.0.3008.27 или выше](https://go.microsoft.com/fwlink/?LinkID=825643). Чтобы определить версию, выполните команду bcp -v. Дополнительные сведения см. в статье [Use Azure Active Directory Authentication for authentication with SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication) (Использование аутентификации Azure Active Directory для аутентификации с помощью SQL). 
+ Клиент использует этот переключатель при подключении к базе данных SQL Azure или хранилищу данных SQL Azure, чтобы указать, что проверка подлинности пользователя выполняется с помощью Azure Active Directory. Для использования аргумента -G требуется [версия 14.0.3008.27 или выше](https://go.microsoft.com/fwlink/?LinkID=825643). Чтобы определить версию, выполните команду bcp -v. Дополнительные сведения см. в статье [Use Azure Active Directory Authentication for authentication with SQL](/azure/sql-database/sql-database-aad-authentication) (Использование аутентификации Azure Active Directory для аутентификации с помощью SQL). 
 
 > [!IMPORTANT]
 > Параметр **-G** применяется только для базы данных SQL Azure и хранилища данных Azure.
@@ -260,7 +260,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
    Интерактивная проверка подлинности Azure AD для Базы данных SQL Azure и Хранилища данных SQL позволяет использовать интерактивный метод, поддерживающий многофакторную проверку подлинности. Дополнительные сведения см. в разделе [Интерактивная проверка подлинности Active Directory](../ssdt/azure-active-directory.md#active-directory-interactive-authentication).
 
-   Для интерактивного режима Azure AD требуется программа **bcp** [версии 15.0.1000.34](#download-the-latest-version-of-bcp-utility) или выше, а также [ODBC версии 17.2 или выше](https://www.microsoft.com/download/details.aspx?id=56567).  
+   Для интерактивного режима Azure AD требуется программа **bcp** [версии 15.0.1000.34](#download-the-latest-version-of-bcp-utility) или выше, а также [ODBC версии 17.2 или выше](https://aka.ms/downloadmsodbcsql).  
 
    Чтобы включить интерактивную проверку подлинности, укажите аргумент -G только с именем пользователя (-U) без пароля.
 
@@ -278,7 +278,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com
    ```
 
-   Если гостевые пользователи есть в определенной службе Azure AD и являются частью группы, которая существует в базе данных SQL с разрешением на выполнение команды bcp, будет использоваться псевдоним гостевого пользователя (например, *keith0@adventureworks.com* ).
+   Если гостевые пользователи есть в определенной службе Azure AD и являются частью группы, которая существует в Базе данных SQL с разрешением на выполнение команды bcp, будет использоваться псевдоним гостевого пользователя (например, *keith0@adventureworks.com* ).
   
 **-h**_**"указания_загрузки**_[ ,... *n*] **"** <a name="h"></a> — определяет одно или несколько указаний для использования во время массового импорта данных в таблицу или представление.  
   
@@ -415,7 +415,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  **-v**<a name="v"></a>  
  Выводит номер версии и сведения об авторских правах для служебной программы **bcp** .  
   
- **-V** (**80** | **90** | **100** | **110** | **120** | **130)<a name="V"></a>  
+ **-V** (**80** \| **90** \| **100** \| **110** \| **120** \| **130**)<a name="V"></a>  
  Выполняет операцию массового копирования, используя типы данных более ранней версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Этот параметр не запрашивает тип данных каждого поля, он использует значения по умолчанию.  
   
  **80** = [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]  
@@ -444,7 +444,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
 ## <a name="remarks"></a>Примечания<a name="remarks"></a>
 
-- Программа **bcp** 13.0 устанавливается при установке средств [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] . Если установлены средства как [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , так и более ранней версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], то в зависимости от значения переменной среды PATH вместо **bcp** 13.0 необходимо использовать более раннюю версию клиента **bcp** . Переменная среды определяет набор каталогов, используемых Windows для поиска исполняемых файлов. Чтобы определить используемую версию, выполните в командной строке Windows команду **bcp /v** или **bcp -v**. Чтобы получить информацию о том, как задать путь к команде в переменной среды PATH, обратитесь к разделу [Переменные среды](https://docs.microsoft.com/windows/win32/shell/user-environment-variables) или выполните поиск по запросу "Переменные среды" в справке Windows.
+- Программа **bcp** 13.0 устанавливается при установке средств [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] . Если установлены средства как [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , так и более ранней версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], то в зависимости от значения переменной среды PATH вместо **bcp** 13.0 необходимо использовать более раннюю версию клиента **bcp** . Переменная среды определяет набор каталогов, используемых Windows для поиска исполняемых файлов. Чтобы определить используемую версию, выполните в командной строке Windows команду **bcp /v** или **bcp -v**. Чтобы получить информацию о том, как задать путь к команде в переменной среды PATH, обратитесь к разделу [Переменные среды](/windows/win32/shell/user-environment-variables) или выполните поиск по запросу "Переменные среды" в справке Windows.
 
     Чтобы при запуске использовалась последняя версия программы bcp, необходимо удалить все более старые версии программы bcp.
 
@@ -464,7 +464,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
 - Сведения о том, когда в журнале транзакций регистрируются операции вставки строк, выполняемые при массовом импорте, см. в разделе [Предварительные условия для минимального протоколирования массового импорта данных](../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).
 
-- [Использование дополнительных специальных символов](https://docs.microsoft.com/windows-server/administration/windows-commands/set_1#remarks)
+- [Использование дополнительных специальных символов](/windows-server/administration/windows-commands/set_1#remarks)
 
     Символы <, >, |, &, ^ являются специальными символами командной оболочки, и перед ними необходимо указать escape-символы (^) или заключить их в кавычки (например, "StringContaining&Symbol"). Если строка, содержащая специальный символ, заключена в кавычки, кавычки необходимо указывать как часть значения переменной среды.
 
@@ -758,9 +758,5 @@ bcp.exe MyTable in "D:\data.csv" -T -c -C 65001 -t , ...
 - [sp_configure (Transact-SQL)](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 - [sp_tableoption (Transact-SQL)](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)
 - [Файлы форматирования для импорта или экспорта данных (SQL Server)](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)
-
-## <a name="feedback"></a>Отзывы
-
-![значок_справки_для_пользователя](../ssms/media/needhelp_person_icon.png) [Форум клиентских средств SQL](https://social.msdn.microsoft.com/Forums/home?forum=sqltools)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

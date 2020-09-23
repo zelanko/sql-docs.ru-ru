@@ -3,25 +3,25 @@ title: Управление с помощью Resource Governor
 description: Узнайте, как использовать Resource Governor для управления ресурсами ЦП, физическими операциями ввода-вывода и выделением ресурсов памяти для рабочих нагрузок Python и R в службах машинного обучения SQL Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 10/02/2019
+ms.date: 08/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f5a567ee0d4937341bb6d9f62a75955635118d1c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 55fd9d7c699523856ad2623298c62d6f986904a5
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881967"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283555"
 ---
 # <a name="manage-python-and-r-workloads-with-resource-governor-in-sql-server-machine-learning-services"></a>Управление рабочими нагрузками Python и R с помощью Resource Governor в службах машинного обучения SQL Server
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Узнайте, как использовать [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) для управления ресурсами ЦП, физическими операциями ввода-вывода и выделением ресурсов памяти для рабочих нагрузок Python и R в службах машинного обучения SQL Server.
 
-Алгоритмы машинного обучения в Python и R обычно являются ресурсоемкими. В зависимости от приоритетов рабочих нагрузок может потребоваться увеличить или уменьшить объем доступных ресурсов для служб машинного обучения.
+Алгоритмы машинного обучения в Python и R ресурсоемки. В зависимости от приоритетов рабочих нагрузок может потребоваться увеличить или уменьшить объем доступных ресурсов для служб машинного обучения.
 
 Дополнительные сведения см. в разделе [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).
 
@@ -34,9 +34,9 @@ ms.locfileid: "85881967"
 
 ## <a name="manage-resources-with-resource-governor"></a>Управление ресурсами с помощью Resource Governor
  
-По умолчанию внешние процессы используют до 20% общего объема памяти узла на локальном сервере. Пул ресурсов по умолчанию можно изменить, чтобы внести изменения на уровне сервера, а процессы R и Python будут использовать любую емкость, доступную для внешних процессов.
+По умолчанию внешние процессы используют до 20% общего объема памяти узла на локальном сервере. Пул ресурсов по умолчанию можно изменить, чтобы внести изменения на уровне сервера, а процессы R и Python будут использовать любую емкость, доступную для внешних процессов.
 
-Кроме того, можно создать настраиваемые **внешние пулы ресурсов** со связанными группами рабочих нагрузок и классификаторами, чтобы определить выделение ресурсов для запросов, исходящих от конкретных программ или узлов, или в соответствии с другими указанными условиями. Внешний пул ресурсов — это тип пула ресурсов в [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], который помогает управлять процессами R и Python за пределами ядра СУБД.
+При необходимости можно создать настраиваемые **внешние пулы ресурсов** со связанными группами рабочих нагрузок и классификаторами, чтобы определить выделение ресурсов для запросов, исходящих от конкретных программ или узлов, или в соответствии с другими указанными условиями. Внешний пул ресурсов — это тип пула ресурсов в [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], который помогает управлять процессами R и Python за пределами ядра СУБД.
 
 1. [Включите управление ресурсами](https://docs.microsoft.com/sql/relational-databases/resource-governor/enable-resource-governor) (по умолчанию оно отключено).
 

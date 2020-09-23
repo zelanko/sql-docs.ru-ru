@@ -1,6 +1,6 @@
 ---
-title: Поддержка потоковой передачи выходных параметров больших двоичных объектов | Документация Майкрософт
-description: Поддержка потоков для выходных параметров BLOB-объектов
+title: Поддержка потоков для выходных параметров BLOB (драйвер OLE DB)
+description: Дополнительные сведения о поддержке потоковой передачи в OLE DB Driver for SQL Server для выходных параметров BLOB-объектов. В этом примере параметры BLOB-объекта привязываются в качестве интерфейсов ISequentialStream.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB Driver for SQL Server, BLOBs
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 00651e62fbd70c97c783473bfc41421a76cb5e8f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: bf788cfe2e9d8917f0bbc3ad0295230c881724ca
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006796"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862272"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>Поддержка потоков для выходных параметров BLOB
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

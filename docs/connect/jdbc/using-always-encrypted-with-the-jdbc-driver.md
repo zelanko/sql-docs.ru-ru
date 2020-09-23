@@ -2,7 +2,7 @@
 title: Использование функции Always Encrypted с драйвером JDBC
 description: Узнайте, как использовать Always Encrypted в приложении Java с драйвером JDBC для SQL Server для шифрования конфиденциальных данных на сервере.
 ms.custom: ''
-ms.date: 07/10/2020
+ms.date: 08/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b2005416234f517a8414f3d9405968659f7e553a
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: d0623450d73b47328a71bc84e46dda22824eaf5f
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279623"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89570330"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Использование функции Always Encrypted с драйвером JDBC
 
@@ -98,6 +98,9 @@ String connectionUrl = "jdbc:sqlserver://<server>:<port>;user=<user>;password=<p
 ```
 Драйвер JDBC автоматически создает экземпляр объекта **SQLServerColumnEncryptionAzureKeyVaultProvider**, если эти учетные данные существуют в свойствах соединения.
 
+> [!IMPORTANT]
+> Свойства подключения **keyVaultProviderClientId** и **keyVaultProviderClientKey** в версии 8.4.1 не рекомендуются. Вместо этого пользователям рекомендуется использовать **keyStoreAuthentication**, **KeyStorePrincipalId** и **KeyStoreSecret**.
+
 #### <a name="jdbc-driver-version-prior-to-741"></a>Драйвера JDBC до версии 7.4.1
 
 В этом разделе используются версии драйвера JDBC, выпущенные до версии 7.4.1.
@@ -126,6 +129,42 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 >  [azure-activedirectory-library-for-java libraries](https://github.com/AzureAD/azure-activedirectory-library-for-java)
 >
 > Пример включения этих зависимостей в проект Maven см. в статье [Download ADAL4J And AKV Dependencies with Apache Maven](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven) (Загрузка зависимостей ADAL4J и AKV с помощью Apache Maven).
+
+### <a name="using-azure-key-vault-authentication-with-managed-identities"></a>Использование проверки подлинности в Azure Key Vault с помощью управляемых удостоверений
+
+Начиная с JDBC Driver **8.4.1** добавлена поддержка проверки подлинности в Azure Key Vault с помощью управляемых удостоверений.
+
+Если приложение размещено в Azure, пользователь может использовать [управляемые удостоверения](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview) для проверки подлинности в Azure Key Vault, тем самым устраняя необходимость размещать и предоставлять учетные данные в коде. 
+
+#### <a name="connection-properties-for-key-vault-authentication-with-managed-identities"></a>Свойства подключения для проверки подлинности Azure Key Vault с помощью управляемых удостоверений
+
+Для JDBC Driver 8.4.1 и более поздних версий предусмотрены следующие свойства подключения:
+
+| ConnectionProperty    | Возможное связывание значений 1 | Возможное связывание значений 2 | Возможное связывание значений 3 |
+| ---|---|---|----|
+| keyStoreAuthentication| KeyVaultClientSecret   |KeyVaultManagedIdentity |JavaKeyStorePassword |  
+| keyStorePrincipalId   | \<Azure AD Application Client ID\>    | Среда \<Azure AD Application object ID\> (необязательно)| Н/Д |
+| keyStoreSecret        | \<Azure AD Application Client Secret\>|Н/Д|\<secret/password for the Java Key Store\> |
+
+В следующих примерах показано, как свойства подключения используются в строке подключения.
+
+#### <a name="use-managed-identity-to-authenticate-to-akv"></a>Использование управляемого удостоверения для проверки подлинности в AKV
+```
+"jdbc:sqlserver://<server>:<port>;columnEncryptionSetting=Enabled;keyStoreAuthentication=KeyVaultManagedIdentity;"
+```
+#### <a name="use-managed-identity-and-the-principal-id-to-authenticate-to-akv"></a>Использование управляемого удостоверения и идентификатора субъекта для проверки подлинности в AKV
+```
+"jdbc:sqlserver://<server>:<port>;columnEncryptionSetting=Enabled;keyStoreAuthentication=KeyVaultManagedIdentity;keyStorePrincipal=<principalId>"
+```
+#### <a name="use-clientid-and-clientsecret-to-authentication-to-akv"></a>Использование clientId и clientSecret для проверки подлинности в AKV
+```
+"jdbc:sqlserver://<server>:<port>;columnEncryptionSetting=Enabled;keyStoreAuthentication=KeyVaultClientSecret;keyStorePrincipalId=<clientId>;keyStoreSecret=<clientSecret>"
+```
+Пользователям рекомендуется использовать эти свойства подключения, чтобы задать тип проверки подлинности, используемый для хранилищ ключей, вместо использования `SQLServerColumnEncryptionAzureKeyVaultProvider`.
+
+Обратите внимание, что ранее добавленные свойства подключения `keyVaultProviderClientId` и `keyVaultProviderClientKey` больше не рекомендуются и заменены свойствами подключения, описанными выше.
+
+Сведения о настройке управляемых удостоверений см. в статье [Настройка управляемых удостоверений для ресурсов Azure на виртуальной машине с помощью портала Azure](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm).
 
 ### <a name="using-windows-certificate-store-provider"></a>Использование поставщика хранилища сертификатов Windows
 The SQLServerColumnEncryptionCertificateStoreProvider можно использовать для хранения главных ключей столбцов в хранилище сертификатов Windows. Чтобы создать определения главного ключа столбца и ключа шифрования столбцов в базе данных, используйте мастер Always Encrypted в SQL Server Management Studio (SSMS) или другие поддерживаемые инструменты. Этот же мастер можно использовать для создания самозаверяющего сертификата в хранилище сертификатов Windows, который можно использовать в качестве главного ключа столбца для данных Always Encrypted. Дополнительные сведения о синтаксисе T-SQL для главного ключа столбца и ключа шифрования столбца см. в статьях [CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md) и [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../t-sql/statements/create-column-encryption-key-transact-sql.md) соответственно.

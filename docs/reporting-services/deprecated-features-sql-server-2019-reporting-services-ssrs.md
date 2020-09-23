@@ -1,7 +1,7 @@
 ---
 title: Нерекомендуемые функции в Reporting Services версии SQL Server 2019 | Документация Майкрософт
-description: В этой статье перечислены функции, которые будут объявлены нерекомендуемыми в следующей версии SQL Server Reporting Services.
-ms.date: 11/21/2019
+description: В этой статье перечислены функции SQL Server 2019 Reporting Services, которые будут объявлены нерекомендуемыми в следующей версии SQL Server Reporting Services.
+ms.date: 08/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -15,12 +15,12 @@ ms.assetid: 3876c01e-f81d-4cce-9104-5106a8c369e6
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: eaa7edebe99a7c444fe1bfa23971317517399ea2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d3e48ab45f34e583dbbeca883a64d04dc965b018
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74320278"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283821"
 ---
 # <a name="deprecated-features-in-sql-server-2019-reporting-services"></a>Нерекомендуемые функции в Reporting Services версии SQL Server 2019
 
@@ -42,6 +42,7 @@ ms.locfileid: "74320278"
 | Сервер отчетов | Мобильные отчеты и издатель мобильных отчетов | Отчеты Power BI на Сервере отчетов Power BI предлагают возможности мобильности. |
 | Сервер отчетов | Форматы отображения XLS и DOC | Форматы XLSX and DOCX являются доступными и поддерживаемыми. |
 | Сервер отчетов | Atom, веб-канал данных | Поддержка веб-канала данных доступна для общих наборов данных в SSRS и на Сервере отчетов Power BI. |
+| Сервер отчетов | Закрепление в Power BI | Теперь служба Power BI непосредственно поддерживает отчеты с разбивкой на страницы.  |
 
 ## <a name="see-also"></a>См. также раздел
 

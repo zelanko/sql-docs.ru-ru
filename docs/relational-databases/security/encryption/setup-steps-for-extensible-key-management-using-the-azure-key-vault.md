@@ -2,7 +2,7 @@
 title: Настройка расширенного управления ключами прозрачного шифрования данных (TDE) с помощью Azure Key Vault
 description: Установка и настройка SQL Server Connector для Azure Key Vault.
 ms.custom: seo-lt-2019
-ms.date: 06/15/2020
+ms.date: 08/12/2020
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 66cca17f97ed856d30a7098ebc14692db75c19b1
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: e5b18c46f602d24339c092b8f3e622b2a915baeb
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86976904"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042892"
 ---
 # <a name="set-up-sql-server-tde-extensible-key-management-by-using-azure-key-vault"></a>Настройка расширенного управления ключами SQL Server TDE с помощью Azure Key Vault
+
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 В этой статье мы пройдем по шагам установки и настройки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector для Azure Key Vault.  
@@ -41,29 +42,28 @@ ms.locfileid: "86976904"
 
 - Установите версию распространяемого пакета Visual Studio C++, соответствующую используемой версии SQL Server:
   
-  Версия SQL Server  | Распространяемый пакет Visual C++    
-  ---------|--------- 
-  2008, 2008 R2, 2012, 2014 | [Распространяемые пакеты Visual C++ для Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784)    
-  2016 | [Распространяемый пакет Visual C++ для Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48145)    
- 
-  
+  Версия SQL Server  | Распространяемый пакет Visual C++
+  ---------|---------
+  2008, 2008 R2, 2012, 2014 | [Распространяемые пакеты Visual C++ для Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784)
+  2016 | [Распространяемый пакет Visual C++ для Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48145)
+
 ## <a name="step-1-set-up-an-azure-ad-service-principal"></a>Шаг 1. Настройка субъекта-службы Azure AD.
 
 Чтобы предоставить экземпляру SQL Server разрешения на доступ к своему хранилищу ключей Azure, потребуется учетная запись субъекта-службы в Azure AD.  
   
-1.  Войдите на [портал Azure](https://ms.portal.azure.com/) и выполните одно из следующих действий.
+1. Войдите на [портал Azure](https://ms.portal.azure.com/) и выполните одно из следующих действий.
 
-    * Нажмите кнопку **Azure Active Directory**.
+    - Нажмите кнопку **Azure Active Directory**.
 
       ![Снимок экрана: панель "Службы Azure"](../../../relational-databases/security/encryption/media/ekm/ekm-part1-login-portal.png)
 
-    * Выберите **Больше служб**, а затем, в меню **Все службы**, выберите **Azure Active Directory**.
+    - Выберите **Больше служб**, а затем, в меню **Все службы**, выберите **Azure Active Directory**.
 
       ![Снимок экрана: панель "Все службы Azure"](../../../relational-databases/security/encryption/media/ekm/ekm-part1-select-aad.png)  
 
 1. Зарегистрируйте приложение в Azure Active Directory, выполнив следующие действия. (Подробные пошаговые инструкции см. в статье "Получение удостоверения приложения" [записи блога об Azure Key Vault](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/).)
 
-    а. На панели **обзора Azure Active Directory** выберите **Регистрация приложений**. 
+    а. На панели **обзора Azure Active Directory** выберите **Регистрация приложений**.
 
     ![Снимок экрана: панель "Обзор Azure Active Directory"](../../../relational-databases/security/encryption/media/ekm/ekm-part1-aad-app-register.png)
 
@@ -97,7 +97,7 @@ ms.locfileid: "86976904"
 
 ## <a name="azure-portal"></a>[Портал Azure](#tab/portal)
 
-### <a name="create-a-key-vault-by-using-the-azure-portal"></a>Создание хранилища ключей с помощью портала Azure 
+### <a name="create-a-key-vault-by-using-the-azure-portal"></a>Создание хранилища ключей с помощью портала Azure
 
 Портал Azure можно использовать, чтобы создать хранилище ключей, а затем добавить к нему субъект Azure AD.
 
@@ -106,30 +106,30 @@ ms.locfileid: "86976904"
    Все ресурсы Azure, созданные с помощью портала Azure, должны содержаться в группе ресурсов, которая создается для размещения хранилища ключей. Имя ресурса в этом примере — *ContosoDevRG*. Выберите собственные имена для группы ресурсов и хранилища ключей. Имена всех хранилищ ключей должны быть глобально уникальными.
 
    На панели **Создать группу ресурсов** в разделе **Сведения о проекте** введите значения, а затем выберите **Просмотр и создание**.
-      
+
       ![Снимок экрана: панель "Создать группу ресурсов"](../../../relational-databases/security/encryption/media/ekm/ekm-part2-create-resource-group.png)  
 
-1.  Создать хранилище ключей.
+1. Создать хранилище ключей.
 
     На панели **Создать хранилище ключей** выберите вкладку **Основы**, введите соответствующие значения, а затем выберите **Просмотр и создание**.
 
     ![Снимок экрана: панель "Создать хранилище ключей"](../../../relational-databases/security/encryption/media/ekm/ekm-part2-create-key-vault.png)  
 
-1.  На панели **Политики доступа** выберите **Добавить политику доступа**.
+1. На панели **Политики доступа** выберите **Добавить политику доступа**.
 
     ![Снимок экрана со ссылкой "Добавить политику доступа" в области "Политики доступа"](../../../relational-databases/security/encryption/media/ekm/ekm-part2-add-access-policy.png)  
 
-1.  На панели **Добавить политику доступа** выполните следующие действия.
+1. На панели **Добавить политику доступа** выполните следующие действия.
   
     а. В раскрывающемся списке **Настроить из шаблона (необязательно)** выберите **Управление ключами**.
-    
+
     b. На левой панели выберите вкладку **Разрешения ключа**, а затем убедитесь, что выставлены флажки **Получить**, **Список**, **Распаковка ключа** и **Упаковка ключа**.
 
     c. Выберите **Добавить**.
-   
+
     ![Снимок экрана: панель "Добавить политику доступа"](../../../relational-databases/security/encryption/media/ekm/ekm-part2-access-policy-permission.png)
 
-1.  На левой панели выберите вкладку **Выбрать субъект**, а затем выполните следующие действия.
+1. На левой панели выберите вкладку **Выбрать субъект**, а затем выполните следующие действия.
 
     а. На панели **Субъект** в разделе **Выбрать** начните вводить имя приложения Azure AD, а затем в списке результатов выберите приложение, которое нужно добавить.
 
@@ -141,23 +141,26 @@ ms.locfileid: "86976904"
 
     c. В левом нижнем углу выберите **Добавить**, чтобы сохранить изменения.
 
-    ![Снимок экрана: кнопка "Добавить" на панели "Добавить политику доступа"](../../../relational-databases/security/encryption/media/ekm/ekm-part2-add-principal.png)
- 
+    ![Снимок экрана: кнопка "Добавить" на панели "Добавить политику доступа"](../../../relational-databases/security/encryption/media/ekm/ekm-part2-select-principal-new.png)
+
+1. На панели **Key Vault** выберите **Ключи** и введите имя хранилища ключей. Используйте тип ключа **RSA** и задайте размер ключа RSA **2048**. Установите даты активации и истечения срока действия и для параметра **Включен?** выберите значение **Да**.
+
+   ![Снимок экрана: область "Создание ключа"](../../../relational-databases/security/encryption/media/ekm/ekm-part2-add-key-vault-key.png)  
+
 1. На панели **Политики доступа** выберите **Сохранить**.
-   
+  
    ![Снимок экрана: кнопка "Сохранить" на панели "Добавить политику доступа"](../../../relational-databases/security/encryption/media/ekm/ekm-part2-save-access-policy.png)  
- 
+
 ## <a name="powershell"></a>[PowerShell](#tab/powershell)
 
 ### <a name="create-a-key-vault-and-key-by-using-powershell"></a>Создание хранилища ключей и ключа с помощью PowerShell
 
 Ядро СУБД SQL Server будет использовать создаваемые здесь хранилище ключей и ключ для защиты ключа шифрования.  
   
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > Подписка, где создается хранилище ключей, должна находиться в том же Azure AD по умолчанию, где был создан субъект-служба Azure AD. Если вы хотите использовать экземпляр Azure AD, отличный от установленного по умолчанию, чтобы создать субъект-службу для соединителя SQL Server, следует изменить экземпляр Azure AD по умолчанию в своей учетной записи Azure перед созданием хранилища ключей. Чтобы узнать, как изменить используемый по умолчанию экземпляр Azure AD на тот, который вы хотите использовать, см. раздел "Часто задаваемые вопросы" статьи [Обслуживание и устранение неполадок соединителя SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB).  
   
-  
-1.  Установите [Azure PowerShell 5.2.0 или более поздней версии](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) и войдите в него с помощью следующей команды:  
+1. Установите [Azure PowerShell 5.2.0 или более поздней версии](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) и войдите в него с помощью следующей команды:  
   
     ```powershell  
     Connect-AzAccount  
@@ -165,7 +168,7 @@ ms.locfileid: "86976904"
   
     Инструкция возвращает следующие данные:  
   
-    ```  
+    ```console  
     Environment           : AzureCloud  
     Account               : <account_name>  
     TenantId              : <tenant_id>  
@@ -176,7 +179,7 @@ ms.locfileid: "86976904"
     > [!NOTE]  
     > Если у вас есть несколько подписок и необходимо указать одну из них, которую следует использовать для хранилища, воспользуйтесь `Get-AzSubscription` для просмотра подписок и `Select-AzSubscription` для выбора нужной подписки. В противном случае PowerShell выбирает подписку по умолчанию.  
   
-1.  Создайте группу ресурсов.   
+1. Создайте группу ресурсов.
 
     Все ресурсы Azure, созданные с помощью PowerShell, должны содержаться в группе ресурсов, которая создается для размещения хранилища ключей. Имя ресурса в этом примере — *ContosoDevRG*. Выберите собственные имена для группы ресурсов и хранилища ключей. Имена всех хранилищ ключей должны быть глобально уникальными.  
   
@@ -186,19 +189,19 @@ ms.locfileid: "86976904"
   
     Инструкция возвращает следующие данные:  
   
-    ```  
+    ```console
     ResourceGroupName: ContosoDevRG  
     Location         : eastasia  
     ProvisioningState: Succeeded  
-    Tags             :   
+    Tags             :
     ResourceId       : /subscriptions/<subscription_id>/  
                         resourceGroups/ContosoDevRG  
     ```  
   
-    > [!NOTE] 
+    > [!NOTE]
     > Для параметра `-Location` используйте команду `Get-AzureLocation`, чтобы определить, как указать расположение, альтернативное указанному в этом примере. Если требуются дополнительные сведения, введите **Get-Help Get-AzureLocation**.  
   
-1.  Создать хранилище ключей.    
+1. Создать хранилище ключей.
 
     Для командлета `New-AzKeyVault` необходимо указать имя группы ресурсов, имя хранилища ключей и географическое расположение. Например, для хранилища ключей с именем `ContosoEKMKeyVault` выполните:  
   
@@ -211,7 +214,7 @@ ms.locfileid: "86976904"
   
     Инструкция возвращает следующие данные:
 
-    ```  
+    ```console
     Vault Name                       : ContosoEKMKeyVault  
     Resource Group Name              : ContosoDevRG  
     Location                         : East Asia  
@@ -227,19 +230,19 @@ ms.locfileid: "86976904"
     Access Policies                  :  
              Tenant ID              : <tenant_id>  
              Object ID              : <object_id>  
-             Application ID         :   
+             Application ID         :
              Display Name           : <display_name>  
-             Permissions to Keys    : get, create, delete, list, update, import,   
+             Permissions to Keys    : get, create, delete, list, update, import,
                                       backup, restore  
              Permissions to Secrets : all  
     Tags                             :  
     ```  
   
-1.  Предоставляет субъекту-службе Azure AD разрешений для доступа к Azure Key Vault.  
+1. Предоставляет субъекту-службе Azure AD разрешений для доступа к Azure Key Vault.  
   
     Вы можете разрешить другим пользователям или приложениям использовать хранилище ключей.  В нашем примере мы используем субъект-службу, созданную в [Шаге 1: настройка субъекта-службы Azure AD](#step-1-set-up-an-azure-ad-service-principal) для авторизации экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-    > [!IMPORTANT] 
+    > [!IMPORTANT]
     > Субъект-служба Azure Active Directory должен иметь для хранилища ключей по меньшей мере разрешения *get* (получение), *list* (список),*wrapKey* (упаковка ключа) и *unwrapKey* (распаковка ключа).  
   
     Как показано в следующей команде, вы используете **Идентификатор приложения (клиента)** из [Шага 1: настройка субъекта-службы Azure AD](#step-1-set-up-an-azure-ad-service-principal) для параметра `ServicePrincipalName`. `Set-AzKeyVaultAccessPolicy` выполняется в автоматическом режиме и не выводит никаких данных в случае успешного завершения.  
@@ -252,16 +255,15 @@ ms.locfileid: "86976904"
   
     Вызовите командлет `Get-AzKeyVault` , чтобы подтвердить разрешения. В разделе `Access Policies` выходных данных инструкции должно присутствовать имя приложения Azure AD, указанное как другой клиент, имеющий доступ к этому хранилищу ключей.  
   
-       
-1.  Создайте асимметричный ключ в хранилище ключей. Это можно сделать одним из двух способов: импортом существующего ключа или созданием нового ключа.  
-                  
-     > [!NOTE] 
+1. Создайте асимметричный ключ в хранилище ключей. Это можно сделать одним из двух способов: импортом существующего ключа или созданием нового ключа.  
+
+     > [!NOTE]
      > SQL Server поддерживает только 2048-разрядные ключи RSA.
-        
+
 ### <a name="best-practices"></a>Рекомендации
-    
+
 Для обеспечения быстрого восстановления ключей и возможности доступа к данным за пределами Azure мы рекомендуем следующее.
- 
+
 - Создайте ключ шифрования локально, на локальном аппаратном модуле безопасности (HSM). Это должен быть асимметричный ключ RSA 2048, так как SQL Server поддерживает только такие ключи.
 - Импортируйте ключ шифрования в Azure Key Vault. Этот процесс описан в последующих разделах.
 - Перед первым использованием ключа в хранилище ключей Azure создайте резервную копию ключа из Azure Key Vault. Дополнительные сведения см. в описании команды [Backup-AzureKeyVaultKey](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault).
@@ -274,15 +276,15 @@ ms.locfileid: "86976904"
 
 Существует два типа ключей, которые можно создать в Azure Key Vault и которые работают с SQL Server. Оба типа — асимметричные 2048-битные RSA-ключи.  
   
-  - **Защищенные с помощью ПО**. Обрабатываются в программном обеспечении и шифруются в неактивном состоянии. Операции с ключами, защищенными программным обеспечением, выполняются на виртуальных машинах Azure. Рекомендуется использовать этот тип для ключей, которые не используются в рабочем развертывании.  
+- **Защищенные с помощью ПО**. Обрабатываются в программном обеспечении и шифруются в неактивном состоянии. Операции с ключами, защищенными программным обеспечением, выполняются на виртуальных машинах Azure. Рекомендуется использовать этот тип для ключей, которые не используются в рабочем развертывании.  
 
-  - **Защищенные модулем HSM**. Создаются и защищаются с помощью аппаратного модуля безопасности (HSM), что обеспечивает дополнительную защиту. Стоимость составляет около 1 доллара США за версию ключа.  
+- **Защищенные модулем HSM**. Создаются и защищаются с помощью аппаратного модуля безопасности (HSM), что обеспечивает дополнительную защиту. Стоимость составляет около 1 доллара США за версию ключа.  
   
-    > [!IMPORTANT] 
-    > Для соединителя SQL Server используйте только символы a–z, A–Z, 0–9 и "-" при длине не более 26 знаков.   
+    > [!IMPORTANT]
+    > Для соединителя SQL Server используйте только символы a–z, A–Z, 0–9 и "-" при длине не более 26 знаков.
     > Разные версии ключа, имеющие одинаковое имя в хранилище ключей Azure, не будут работать с соединителем [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Чтобы сменить ключ в Azure Key Vault, используемый [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], обратитесь к описанию этапов смены ключей в разделе "А. Инструкции по обслуживанию соединителя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]" статьи [Обслуживание и устранение неполадок соединителя SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md).  
 
-### <a name="import-an-existing-key"></a>Импорт существующего ключа   
+### <a name="import-an-existing-key"></a>Импорт существующего ключа
   
 Если у вас есть 2048-битный RSA-ключ, защищенный программным обеспечением, можно отправить его в свое хранилище ключей Azure. Например, при наличии PFX-файла, сохраненного на диске `C:\\`, в файле с именем *softkey.pfx*, который необходимо отправить в хранилище ключей Azure, чтобы задать переменную `securepfxpwd` в качестве пароля `12987553` для PFX-файла, введите следующую команду:  
   
@@ -298,11 +300,11 @@ $securepfxpwd = ConvertTo-SecureString -String '12987553' `
       -Name 'ContosoFirstKey' -KeyFilePath 'c:\softkey.pfx' `  
       -KeyFilePassword $securepfxpwd $securepfxpwd  -Destination 'HSM'  
 ```  
- 
+
 > [!CAUTION]
 > Импорт асимметричного ключа настоятельно рекомендуется для рабочих сценариев, так как это позволяет администратору передать ключ в систему депонирования ключей. Если в хранилище создается асимметричный ключ, он не может быть передан, так как закрытый ключ не может покидать хранилище. Ключи, используемые для защиты важных данных, должны быть переданы. Потеря асимметричного ключа приведет к невозможности восстановить данные.  
 
-### <a name="create-a-new-key"></a>Создание ключа 
+### <a name="create-a-new-key"></a>Создание ключа
 
 Кроме того, можно создать новый ключ шифрования непосредственно в Azure Key Vault и защитить его с помощью программного обеспечения или модуля HSM.  В этом примере мы создадим ключ, защищенный программным обеспечением, используя командлет `Add-AzureKeyVaultKey`:  
 
@@ -313,7 +315,7 @@ Add-AzureKeyVaultKey -VaultName 'ContosoEKMKeyVault' `
   
 Инструкция возвращает следующие данные:  
   
-```
+```console
 Attributes : Microsoft.Azure.Commands.KeyVault.Models.KeyAttributes  
 Key        :  {"kid":"https:contosoekmkeyvault.azure.net/keys/  
                 ContosoRSAKey0/<guid>","dty":"RSA:,"key_ops": ...  
@@ -324,20 +326,21 @@ Id         : https://contosoekmkeyvault.vault.azure.net:443/
               keys/ContosoRSAKey0/<guid>  
 ```  
 
-> [!IMPORTANT] 
+> [!IMPORTANT]
 > Хранилище ключей поддерживает несколько версий ключа с одним именем, однако для ключей, используемых соединителем [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], не следует применять управление версиями или смену ключей. Если администратору требуется сменить ключ, используемый для шифрования [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], следует создать ключ с другим именем в хранилище и использовать его для шифрования ключа шифрования.  
 
 ---
-       
-## <a name="step-3-install-the-ssnoversion-connector"></a>Шаг 3. Установка соединителя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+
+## <a name="step-3-install-the-ssnoversion-connector"></a>Шаг 3. Установка соединителя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
 
 Скачайте Соединитель SQL Server из [Центра загрузки Майкрософт](https://go.microsoft.com/fwlink/p/?LinkId=521700). Загрузку должен выполнить администратор компьютера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
 
-> [!NOTE] 
-> Версии 1.0.0.440 и старше были заменены и больше не поддерживаются в рабочих средах. Выполните обновление до версии 1.0.1.0 или более поздней, посетив [Центр загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=45344). Используйте инструкции в разделе "Обновление соединителя SQL Server" страницы [Обслуживание и устранение неполадок соединителя SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md).
-
 > [!NOTE]
-> В версии 1.0.5.0 внесено критическое изменение, касающееся алгоритма отпечатков. После обновления до версии 1.0.5.0 восстановление базы данных может завершаться сбоем. Дополнительные сведения см. в [статье базы знаний 447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0).
+> - Соединитель SQL Server версии 1.0.0.440 и более ранних версий были заменены и больше не поддерживаются в рабочих средах. Вместо них используются инструкции на странице [Обслуживание и устранение неполадок соединителя SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) в разделе [Обновление соединителя SQL Server](sql-server-connector-maintenance-troubleshooting.md#upgrade-of--connector).
+> - Начиная с версии 1.0.3.0, соединитель SQL Server передает соответствующие сообщения об ошибках в журналы событий Windows для устранения неполадок.
+> - Начиная с версии 1.0.4.0, доступна поддержка частных облаков Azure, включая Azure для Китая, Azure для Германии и Azure для государственных организаций.
+> - В версии 1.0.5.0 внесено критическое изменение, касающееся алгоритма отпечатков. После обновления до версии 1.0.5.0 восстановление базы данных может завершаться сбоем. Дополнительные сведения см. в [статье базы знаний 447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0).
+> - **Начиная с версии 1.0.7.0, соединитель SQL Server поддерживает фильтрацию сообщений и логику повторных попыток сетевого запроса.**
   
   ![Снимок экрана мастера установки соединителя SQL Server.](../../../relational-databases/security/encryption/media/ekm/ekm-connector-install.png)  
   
@@ -352,14 +355,13 @@ Id         : https://contosoekmkeyvault.vault.azure.net:443/
 - [А. Инструкции по обслуживанию для соединителя SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixA)  
 - [В. Описания кодов ошибок для соединителя SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixC)  
   
-  
 ## <a name="step-4-configure-ssnoversion"></a>Шаг 4. Настройка [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
 Сведения о минимальном уровне разрешений для выполнения каждого из описанных здесь действий см. в разделе [Б. Часто задаваемые вопросы](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB).  
   
-1.  Запустите *sqlcmd.exe* или откройте [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio.  
+1. Запустите *sqlcmd.exe* или откройте [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio.  
   
-1.  Настройте [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для использования расширенного управления ключами, выполнив следующий сценарий [!INCLUDE[tsql](../../../includes/tsql-md.md)]:  
+1. Настройте [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для использования расширенного управления ключами, выполнив следующий сценарий [!INCLUDE[tsql](../../../includes/tsql-md.md)]:  
   
     ```sql  
     -- Enable advanced options.  
@@ -379,16 +381,15 @@ Id         : https://contosoekmkeyvault.vault.azure.net:443/
   
 1. Зарегистрируйте соединитель [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в качестве поставщика расширенного управления ключами с помощью [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-    Создайте поставщик служб шифрования с помощью соединителя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], который является поставщиком расширенного управления ключами для Azure Key Vault.    
-    
+    Создайте поставщик служб шифрования с помощью соединителя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], который является поставщиком расширенного управления ключами для Azure Key Vault.
     В этом примере имя поставщика — `AzureKeyVault_EKM`.  
   
     ```sql  
-    CREATE CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM   
+    CREATE CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM
     FROM FILE = 'C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll';  
     GO  
     ```  
-    
+
     > [!NOTE]
     > Длина пути файла не может превышать 256 символов.  
   
@@ -406,26 +407,26 @@ Id         : https://contosoekmkeyvault.vault.azure.net:443/
   
     - Измените аргумент `IDENTITY` (`ContosoEKMKeyVault`), чтобы он указывал на хранилище ключей Azure.
       - Если используется *глобальная служба Azure*, замените аргумент `IDENTITY` на имя своего хранилища Azure Key Vault из [Шага 2: создание хранилища ключей](#step-2-create-a-key-vault).
-      - Если вы используете *частное облако* Azure (например, Azure для государственных организаций, Azure для Китая (21Vianet) или Azure для Германии), замените аргумент `IDENTITY` на URI хранилища, который возвращается на шаге 3 раздела [Создание хранилища ключей и ключа с помощью PowerShell](#create-a-key-vault-and-key-by-using-powershell). Не включайте https:// в URI хранилища.   
+      - Если вы используете *частное облако* Azure (например, Azure для государственных организаций, Azure для Китая (21Vianet) или Azure для Германии), замените аргумент `IDENTITY` на URI хранилища, который возвращается на шаге 3 раздела [Создание хранилища ключей и ключа с помощью PowerShell](#create-a-key-vault-and-key-by-using-powershell). Не включайте https:// в URI хранилища.
     - Замените первую часть аргумента `SECRET` на идентификатор клиента Azure Active Directory из [Шага 1: настройка субъекта-службы Azure AD](#step-1-set-up-an-azure-ad-service-principal). В этом примере **идентификатором клиента** является `9A57CBC54C4C40E2B517EA677E0EFA00`.  
   
-      > [!IMPORTANT] 
+      > [!IMPORTANT]
       > Необходимо удалить дефисы из идентификатора приложения (клиента).  
   
     - Выполните вторую часть аргумента `SECRET` с **Секретом клиента** из [Шага 1: настройка субъекта-службы Azure AD](#step-1-set-up-an-azure-ad-service-principal).  В этом примере секретом клиента является `08:k?[:XEZFxcwIPvVVZhTjHWXm7w1?m`. Окончательная строка аргумента `SECRET` будет представлять собой длинную последовательность букв и цифр без дефисов.  
   
     ```sql  
     USE master;  
-    CREATE CREDENTIAL sysadmin_ekm_cred   
+    CREATE CREDENTIAL sysadmin_ekm_cred
         WITH IDENTITY = 'ContosoEKMKeyVault',                            -- for public Azure
         -- WITH IDENTITY = 'ContosoEKMKeyVault.vault.usgovcloudapi.net', -- for Azure Government
         -- WITH IDENTITY = 'ContosoEKMKeyVault.vault.azure.cn',          -- for Azure China 21Vianet
         -- WITH IDENTITY = 'ContosoEKMKeyVault.vault.microsoftazure.de', -- for Azure Germany
                --<----Application (Client) ID ---><--Azure AD app (Client) ID secret-->
-        SECRET = '9A57CBC54C4C40E2B517EA677E0EFA0008:k?[:XEZFxcwIPvVVZhTjHWXm7w1?m'   
+        SECRET = '9A57CBC54C4C40E2B517EA677E0EFA0008:k?[:XEZFxcwIPvVVZhTjHWXm7w1?m'
     FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM;  
   
-    -- Add the credential to the SQL Server administrator's domain login   
+    -- Add the credential to the SQL Server administrator's domain login
     ALTER LOGIN [<domain>\<login>]  
     ADD CREDENTIAL sysadmin_ekm_cred;  
     ```  
@@ -440,12 +441,12 @@ Id         : https://contosoekmkeyvault.vault.azure.net:443/
     - Замените `ContosoRSAKey0` на имя ключа в Azure Key Vault.  
   
     ```sql  
-    CREATE ASYMMETRIC KEY EKMSampleASYKey   
+    CREATE ASYMMETRIC KEY EKMSampleASYKey
     FROM PROVIDER [AzureKeyVault_EKM]  
     WITH PROVIDER_KEY_NAME = 'ContosoRSAKey0',  
     CREATION_DISPOSITION = OPEN_EXISTING;  
     ```  
-    
+
 1. Создайте новое имя входа с помощью асимметричного ключа в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], созданного на предыдущем шаге.
 
      ```sql  
@@ -460,7 +461,7 @@ Id         : https://contosoekmkeyvault.vault.azure.net:443/
     --Now drop the credential mapping from the original association
     ALTER LOGIN [<domain>\<login>]
     DROP CREDENTIAL sysadmin_ekm_cred;
-    ```     
+    ```
 
 1. Измените новое имя входа и сопоставьте учетные данные расширенного управления ключами с новым именем входа.
 
@@ -481,19 +482,19 @@ Id         : https://contosoekmkeyvault.vault.azure.net:443/
 
     ```sql  
     --Create an ENCRYPTION KEY using the ASYMMETRIC KEY (EKMSampleASYKey)
-    CREATE DATABASE ENCRYPTION KEY   
-    WITH ALGORITHM = AES_256   
+    CREATE DATABASE ENCRYPTION KEY
+    WITH ALGORITHM = AES_256
     ENCRYPTION BY SERVER ASYMMETRIC KEY EKMSampleASYKey;
-    ```  
+    ```
   
 1. Зашифруйте тестовую базу данных. Включите TDE, установив ENCRYPTION ON.
 
      ```sql  
     --Enable TDE by setting ENCRYPTION ON
-    ALTER DATABASE TestTDE   
+    ALTER DATABASE TestTDE
     SET ENCRYPTION ON;  
      ```  
-    
+
 1. Очистите тестовые объекты. Удалите все объекты, созданные в этом тестовом сценарии.
 
     ```sql  
@@ -511,9 +512,8 @@ Id         : https://contosoekmkeyvault.vault.azure.net:443/
     DROP ASYMMETRIC KEY [EKMSampleASYKey]
     DROP CRYPTOGRAPHIC PROVIDER [AzureKeyVault_EKM]
     ```  
-    
-Примеры сценариев см. в блоге [Прозрачное шифрование данных и расширенное управление ключами SQL Server с помощью Azure Key Vault](https://techcommunity.microsoft.com/t5/sql-server/intro-sql-server-transparent-data-encryption-and-extensible-key/ba-p/1427549).
 
+Примеры сценариев см. в блоге [Прозрачное шифрование данных и расширенное управление ключами SQL Server с помощью Azure Key Vault](https://techcommunity.microsoft.com/t5/sql-server/intro-sql-server-transparent-data-encryption-and-extensible-key/ba-p/1427549).
 
 ## <a name="next-steps"></a>Дальнейшие действия  
   
@@ -521,6 +521,5 @@ Id         : https://contosoekmkeyvault.vault.azure.net:443/
   
 ## <a name="see-also"></a>См. также раздел  
 
-* [Расширенное управление ключами с помощью Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)   
-* [Обслуживание и устранение неполадок соединителя SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)
-
+- [Расширенное управление ключами с помощью Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)
+- [Обслуживание и устранение неполадок соединителя SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)

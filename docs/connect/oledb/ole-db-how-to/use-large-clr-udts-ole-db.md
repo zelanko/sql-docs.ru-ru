@@ -1,6 +1,6 @@
 ---
-title: Использование больших пользовательских типов CLR (OLE DB) | Документация Майкрософт
-description: Использование определяемых пользователем типов больших данных CLR (OLE DB)
+title: Использование определяемых пользователем типов больших данных CLR (драйвер OLE DB)
+description: Пример получения строки с большими определяемыми пользователем типами из результирующего набора в OLE DB Driver for SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: ed3fd1d54b0b505d3ec6486a8d4cff7dee6449fb
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: dda2e8221c825ee9ca5aad3d14eba14c6d7315f2
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007225"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862314"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>Использование определяемых пользователем типов больших данных CLR (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "86007225"
   В этом образце показывается выборка строк с большими, определяемыми пользователем типами из результирующего набора. См. сведения об [больших пользовательских типах CLR (OLE DB)](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md). Данный образец работает с [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] или более поздней версией.  
   
 ## <a name="example"></a>Пример  
- В этом образце содержится два проекта. Один проект создает сборку (библиотеку DLL) из исходного кода на C#. Эта сборка содержит тип CLR. В базу данных будет добавлена таблица. Столбец в этой таблице будет иметь тип, определенный в сборке. По умолчанию в этом образце используется база данных master. Второй проект является собственным приложением C, которое считывает данные из таблицы.  
+ В этом образце содержится два проекта. Один проект создает сборку (библиотеку DLL) из исходного кода на C#. Эта сборка содержит тип CLR. В базу данных будет добавлена таблица. Столбец в таблице будет иметь тип, определенный в сборке. По умолчанию в этом образце будет использоваться база данных master. Второй проект является собственным приложением C, которое считывает данные из таблицы.  
   
  Скомпилируйте первый листинг кода (C#) в DLL-библиотеку.  Затем скопируйте этот DLL-файл в корневой каталог диска C.  
   

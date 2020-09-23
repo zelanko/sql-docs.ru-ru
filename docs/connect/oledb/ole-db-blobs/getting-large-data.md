@@ -1,6 +1,6 @@
 ---
 title: Получение больших объемов данных (драйвер OLE DB) | Документация Майкрософт
-description: Получение больших объемов данных с помощью OLE DB Driver for SQL Server
+description: Из этого примера вы узнаете, как объект-получатель OLE DB Driver for SQL Server может получить значение с большим объемом данных из одного столбца.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - DBPROP_ACCESSORDER property
 - OLE DB Driver for SQL Server, BLOBs
 - large data, OLE objects
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 08c1a4d419317f481994980facb0f625730fe484
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 547f5afc56d0a2cffef0c73c716721fc2dfa9183
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244987"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862303"
 ---
 # <a name="getting-large-data"></a>Возврат больших данных
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

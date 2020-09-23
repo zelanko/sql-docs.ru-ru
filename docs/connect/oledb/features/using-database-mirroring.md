@@ -1,6 +1,6 @@
 ---
 title: Использование зеркального отображения базы данных | Документация Майкрософт
-description: Использование зеркальное отображения базы данных с OLE DB Driver for SQL Server
+description: OLE DB Driver for SQL Server поддерживает зеркальное отображения базы данных. После настройки зеркального отображения разработчикам не нужно предпринимать никаких других действий в отношении базы данных.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - database mirroring [SQL Server], connecting clients to
 - MSOLEDBSQL, database mirroring
 - OLE DB Driver for SQL Server, database mirroring
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: e52ee5af4b95ace60274846853d8d316363fe7da
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b396adab98a22b0f2c38a7f3e6aa4b169f72b395
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006867"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861635"
 ---
 # <a name="using-database-mirroring"></a>Использование зеркального отображения базы данных
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "86006867"
 > [!NOTE]  
 >  Следует явно задать базу данных, которая будет использоваться в соединении, если эту возможность нужно использовать в DSN-именах, строке соединения, свойстве или атрибуте соединения. Если этого не сделать, OLE DB Driver for SQL Server не будет пытаться отработать отказ для базы данных-участника.  
 >   
->  Зеркальное отображение является функциональностью базы данных. Приложения, работающие с несколькими базами данных, возможно, не смогут применить эту функциональность.  
+>  Зеркальное отображение является функциональностью базы данных. Приложения, работающие с несколькими базами данных, возможно, не смогут применить эту функциональность.   
 >   
 >  Кроме того, в именах сервера не учитывается регистр клавиатуры, но имена баз данных зависят от регистра клавиатуры. Поэтому следует убедиться, что в DSN-именах и строках соединения используются символы с одинаковым регистром.  
   

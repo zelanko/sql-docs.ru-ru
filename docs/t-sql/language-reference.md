@@ -16,12 +16,12 @@ ms.assetid: dbba47d7-e08e-4435-b876-35dced1f325d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 362d2643557229b64961217d9a5b5b3c4f784bff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 727dc40389d803cc81bb07011f799bc2d44365a0
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88360700"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076669"
 ---
 # <a name="transact-sql-reference-database-engine"></a>Справочник по Transact-SQL (компонент Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,14 +60,14 @@ ms.locfileid: "88360700"
   
  [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]   
 
-Еще один пример: следующая метка указывает, что раздел применяется только к хранилищу данных SQL Azure и Parallel Data Warehouse.
+Еще один пример: следующая метка указывает, что раздел применяется только к Azure Synapse Analytics и Parallel Data Warehouse.
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../includes/applies-to-version/asa-pdw.md)]
 
 В некоторых случаях функциональность раздела используется продуктом или службой, но поддерживаются не все аргументы. В этом случае дополнительные разделы **относится к** вставляются в описания соответствующих аргументов в теле раздела.  
  
-## <a name="get-help-from-the-msdn-forum"></a>Получение справки на форумах MSDN  
-Справку в Интернете ищите на [форуме MSDN по Transact-SQL](https://social.msdn.microsoft.com/Forums/home).  
+## <a name="get-help-from-microsoft-q--a"></a>Получение помощи на странице вопросов и ответов на сайте Майкрософт  
+Справку в Интернете ищите на [сайте Майкрософт на странице вопросов и ответов на форуме по Transact-SQL](https://docs.microsoft.com/answers/topics/sql-server-transact-sql.html).  
  
 ## <a name="see-other-language-references"></a>Справочники по другим языкам
 Документация по SQL включает и другие справочники по языкам.

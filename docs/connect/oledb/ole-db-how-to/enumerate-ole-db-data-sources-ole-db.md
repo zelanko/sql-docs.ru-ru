@@ -1,6 +1,6 @@
 ---
 title: Перечисление источников данных OLE DB (драйвер OLE DB) | Документация Майкрософт
-description: Перечисление источников данных OLE DB с помощью перечислителя MSOLEDBSQL
+description: Из этого примера вы узнаете, как использовать перечислитель MSOLEDBSQL для получения списка доступных источников данных OLE DB Driver for SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - data sources [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 33006af4eee9d97566144e66c984d55cabd5765d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9b165f5ceb5e8f08539cb48473a6f3d701623f6a
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244819"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861382"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>Перечисление источников данных OLE DB (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

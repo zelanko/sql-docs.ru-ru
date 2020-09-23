@@ -5,16 +5,16 @@ description: Узнайте, как обновлять кластеры боль
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 06/22/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 037c8bd26249ab3dc2cb3d0d8f4adf718f56000e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 345002bdf21ee13fc6d33c9cbc1e9938a8b58377
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243085"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076652"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в режиме Active Directory
 
@@ -31,9 +31,16 @@ ms.locfileid: "87243085"
 
 Чтобы автоматически создать все необходимые объекты в Active Directory, кластеру больших данных требуется во время развертывания учетная запись AD. Эта учетная запись должна иметь разрешения на создание пользователей, групп и учетных записей компьютеров в указанном подразделении.
 
-В описанных ниже действиях предполагается, что у вас уже есть контроллер домена Active Directory. Если у вас нет контроллера домена, полезные пошаговые инструкции содержатся в следующем [руководстве](https://social.technet.microsoft.com/wiki/contents/articles/37528.create-and-configure-active-directory-domain-controller-in-azure-windows-server.aspx).
+>[!IMPORTANT]
+>В зависимости от политики истечения срока действия паролей, заданной на контроллере домена, срок действия паролей для этих учетных записей может истечь. Политика истечения срока действия по умолчанию — 42 дня. Не существует механизма для смены учетных данных для всех учетных записей в BDC, поэтому кластер станет неработоспособным по истечении этого срока действия. Чтобы избежать этой проблемы, обновите политику срока действия учетных записей служб BDC, вследствие чего на контроллере домена не будет задан срок действия пароля. Это действие можно выполнить до или после истечения срока действия. В последнем случае Active Directory повторно активирует пароли с истекшим сроком действия.
+>
+>На рисунке ниже показано, где задать это свойство в ветке "Пользователи и компьютеры" Active Directory.
+>
+>:::image type="content" source="media/deploy-active-directory/image25.png" alt-text="Настройка политики срока действия паролей":::
 
 Список учетных записей и групп AD см. в разделе [Автоматически созданные объекты Active Directory](active-directory-objects.md).
+
+В описанных ниже действиях предполагается, что у вас уже есть контроллер домена Active Directory. Если у вас нет контроллера домена, полезные пошаговые инструкции содержатся в следующем [руководстве](https://social.technet.microsoft.com/wiki/contents/articles/37528.create-and-configure-active-directory-domain-controller-in-azure-windows-server.aspx).
 
 ## <a name="create-ad-objects"></a>Создание объектов AD
 
@@ -180,6 +187,9 @@ export DOMAIN_SERVICE_ACCOUNT_PASSWORD=<AD principal password>
 
 - `security.activeDirectory.realm` **Необязательный параметр**: в большинстве случаев область равна доменному имени. Для случаев, когда они не совпадают, используйте этот параметр для определения имени области (например, `CONTOSO.LOCAL`). Значение, указанное для этого параметра, должно быть полным.
 
+  > [!IMPORTANT]
+  > В настоящее время BDC не поддерживает конфигурацию, в которой имя домена Active Directory отличается от имени **NETBIOS** домена Active Directory.
+
 - `security.activeDirectory.domainDnsName`: Имя домена DNS, которое будет использоваться для кластера (например, `contoso.local`).
 
 - `security.activeDirectory.clusterAdmins`: этот параметр принимает одну группу AD. Область действия группы AD должна быть универсальной или глобальной. Члены этой группы будут иметь роль кластера *bdcAdmin*, которая предоставит им разрешения администратора в кластере. Это означает, что у них есть [разрешения `sysadmin` в SQL Server](../relational-databases/security/authentication-access/server-level-roles.md#fixed-server-level-roles), [разрешения `superuser` в HDFS](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#The_Super-User) и разрешения администратора при подключении к конечной точке контроллера.
@@ -192,6 +202,9 @@ export DOMAIN_SERVICE_ACCOUNT_PASSWORD=<AD principal password>
 Группы Active Directory в этом списке сопоставлены с ролью кластера больших данных *bdcUser*, и им необходимо предоставить доступ к SQL Server (см. раздел [разрешения SQL Server](../relational-databases/security/permissions-hierarchy-database-engine.md)) или HDFS (см. [руководство по разрешениям HDFS](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#:~:text=Permission%20Checks%20%20%20%20Operation%20%20,%20%20N%2FA%20%2029%20more%20rows%20)). При подключении к конечной точке контроллера эти пользователи могут получить только список конечных точек, доступных в кластере, с помощью команды *azdata bdc endpoint list*.
 
 Дополнительные сведения об обновлении групп AD для этих параметров см. в разделе [Управление доступом к кластеру больших данных в режиме Active Directory](manage-user-access.md).
+
+  >[!TIP]
+  >Чтобы включить средства просмотра HDFS при подключении к узлу SQL Server Master в Azure Data Studio, пользователю с ролью bdcUser должны быть предоставлены разрешения VIEW SERVER STATE, так как Azure Data Studio использует DMV *sys.dm_cluster_endpoints*, чтобы получить необходимую конечную точку шлюза Knox для подключения к HDFS.
 
   >[!IMPORTANT]
   >Создайте эти группы в AD перед началом развертывания. Если область для любой из этих групп AD является локальной доменной, развертывание завершается сбоем.
@@ -263,7 +276,7 @@ export DOMAIN_SERVICE_ACCOUNT_PASSWORD=<AD principal password>
   >[!NOTE]
   >Длина имени учетной записи Active Directory должна составлять не более 20 символов. Кластеру больших данных необходимо использовать 8 символов для различения объектов pod и наборов с отслеживанием состояния. В итоге остается 12 символов для префикса учетной записи.
 
-[Проверьте область группы AD](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps), чтобы определить, является ли она DomainLocal.
+[Проверьте область группы AD](/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps), чтобы определить, является ли она DomainLocal.
 
 Если вы еще не выполнили инициализацию файла конфигурации развертывания, можно выполнить эту команду, чтобы получить копию конфигурации. В приведенных ниже примерах используется профиль `kubeadm-prod`, то же касается и `openshift-prod`.
 
@@ -422,7 +435,7 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 
 - До выпуска накопительного пакета обновления 5 (CU5) для SQL Server 2019, разрешен всего один кластер больших данных на домен (Active Directory). Поддержка нескольких кластеров больших данных на домен доступна, начиная с выпуска накопительного пакета обновления 5 (CU5).
 
-- Ни одна из групп AD, указанных в конфигурациях безопасности, не может быть в области DomainLocal. Вы можете проверить область группы AD, выполнив [эти инструкции](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps).
+- Ни одна из групп AD, указанных в конфигурациях безопасности, не может быть в области DomainLocal. Вы можете проверить область группы AD, выполнив [эти инструкции](/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps).
 
 - Учетная запись AD, которая может использоваться для входа в кластер больших данных, разрешена из того же домена, который был настроен для кластера больших данных. Поддержка входов из другого доверенного домена не планируется.
 

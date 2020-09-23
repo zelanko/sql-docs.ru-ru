@@ -1,6 +1,6 @@
 ---
 title: Закладки строк (драйвер OLE DB) | Документация Майкрософт
-description: Закладки в драйвере OLE DB для SQL Server
+description: Узнайте, как объекты-получатели могут быстро возвращаться к строке по закладке при произвольном обращении к строкам в зависимости от значения закладки в OLE DB Driver for SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, bookmarks
 - rowsets [OLE DB], bookmarks
 - OLE DB rowsets, bookmarks
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 4065ae08fe37b42e47ae464a09d2a9e2a9810bb7
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3c5c389b941c6817b55b75e8e04f5c85bfaecbc0
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942256"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862116"
 ---
 # <a name="bookmarks"></a>Закладки
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

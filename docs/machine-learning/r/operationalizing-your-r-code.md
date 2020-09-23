@@ -3,21 +3,21 @@ title: Развертывание кода на языке R в хранимых
 description: Внедрите код R в хранимую процедуру SQL Server, чтобы сделать его доступным для любого клиентского приложения, имеющего доступ к базе данных SQL Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 03/15/2019
+ms.date: 08/28/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9790f5a5d82584bb0d09fda92c1a7048d384e119
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 81cc8f392275093f370a0dda12d1aaf1fca542e5
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242330"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288269"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>Использование кода R с хранимыми процедурами в Службах машинного обучения SQL Server
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 При использовании функций R и Python в Службах машинного обучения SQL Server наиболее распространенный подход к переносу решений в рабочую среду — внедрение кода в хранимые процедуры. В этой статье перечислены ключевые моменты, которые необходимо учитывать разработчику на SQL при вводе кода R в эксплуатацию с помощью SQL Server.
 
@@ -28,14 +28,13 @@ ms.locfileid: "87242330"
 + [Создание и выполнение простых скриптов R в SQL Server](../tutorials/quickstart-r-create-script.md)
 + [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
 
-Более полный пример развертывания кода R в рабочей среде с помощью хранимых процедур можно найти в [руководстве по аналитике данных R для разработчиков SQL](../../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md).
+Более полный пример развертывания кода R в рабочей среде с помощью хранимых процедур можно найти в [руководстве по аналитике данных R для разработчиков SQL](../../machine-learning/tutorials/r-taxi-classification-introduction.md).
 
-## <a name="guidelines-for-optimizing-r-code-for-sql"></a>Рекомендации по оптимизации кода R для SQL
+## <a name="guidelines-for-optimizing-r-code-for-sql"></a>Рекомендации по оптимизации кода R для SQL
 
 Преобразовывать код R в SQL проще, если предварительно произвести некоторые оптимизации. К ним относятся исключение типов данных, вызывающих проблемы, предотвращение ненужных преобразований данных и переработка кода R в один вызов функции, который можно легко параметризировать. Дополнительные сведения см. в разделе:
 
 + [Библиотеки и типы данных R](r-libraries-and-data-types.md)
-+ [Преобразование кода на языке R для использования в службах R](converting-r-code-for-use-in-sql-server.md)
 + [Использование вспомогательных функций sqlrutils](ref-r-sqlrutils.md)
 
 ## <a name="integrate-r-and-python-with-applications"></a>Интеграция кода R и Python с приложениями
@@ -52,11 +51,6 @@ ms.locfileid: "87242330"
 
 + [Полное пошаговое руководство по обработке и анализу данных с помощью R в SQL Server](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
 
-Примеры интеграции оценки в приложение см. в следующих шаблонах решений:
-
-+ [прогнозирование розничной торговли;](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/RetailForecasting/README.md)
-+ [обнаружение мошенничества;](https://github.com/Microsoft/r-server-fraud-detection)
-+ [кластеризация клиентов.](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/r-services/getting-started/customer-clustering)
 
 ## <a name="boost-performance-and-scale"></a>Повышение производительности и масштабируемости
 
@@ -64,22 +58,8 @@ ms.locfileid: "87242330"
 
 Если решение R использует сложные агрегаты или включает в себя большие наборы данных, можно использовать высокоэффективные хранящиеся в памяти агрегаты и индексы columnstore SQL Server и переложить на код R обработку статистических вычислений и оценок.
 
-Дополнительные сведения о повышении производительности в службе машинного обучения SQL Server см. в следующих статьях:
-
-+ [Настройка производительности служб R SQL Server](../../machine-learning/r/sql-server-r-services-performance-tuning.md)
-+ [Советы и рекомендации по оптимизации производительности](https://gallery.cortanaintelligence.com/Tutorial/SQL-Server-Optimization-Tips-and-Tricks-for-Analytics-Services)
-
 ## <a name="adapt-r-code-for-other-platforms-or-compute-contexts"></a>Адаптация кода R для других платформ или контекстов вычисления
 
 Один и тот же код R, который применяется к данным [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], можно использовать повторно для других источников данных, например Spark на базе HDFS, если выбрать [изолированный сервер](../install/sql-machine-learning-standalone-windows-install.md) в программе установки SQL Server или установить сервер Microsoft Machine Learning Server (прежнее название — **Microsoft R Server**):
 
 + [Документация по Machine Learning Server](https://docs.microsoft.com/r-server/)
-
-+ [Знакомство с R и RevoScaleR](https://docs.microsoft.com/r-server/r/tutorial-r-to-revoscaler)
-
-+ [Создание алгоритмов фрагментации](https://docs.microsoft.com/r-server/r/how-to-developer-write-chunking-algorithms)
-
-+ [Вычисления с большими данными в R](https://docs.microsoft.com/r-server/r/tutorial-large-data-tips)
-
-+ [Разработка собственного параллельного алгоритма](https://docs.microsoft.com/r-server/r-reference/revopemar/pemar)
-

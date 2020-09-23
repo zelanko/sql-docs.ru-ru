@@ -12,12 +12,12 @@ ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 212cf0c286ec0f55a76d16c27a66fac6a6f1f5e4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 83d50d14f47c5b25de4bc3749bd2fd06dffff3df
+ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003957"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89195130"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Заметки о выпуске SQL Server Data Tools (SSDT)
 
@@ -44,6 +44,35 @@ GeneMi , 2019/03/22.
 
 P.S.  there's no need to keep this large HTML comment indefinitely.
 -->
+
+## <a name="1596nbsp-ssdt-for-vs-2017"></a>15.9.6,&nbsp; SSDT для VS 2017
+
+_Выпущено_: &nbsp; 31 августа 2020 г.  
+_Номер сборки_: &nbsp; 14.0.16222.0  
+_SSDT для Visual Studio 2017_.
+
+### <a name="whats-new"></a>Новые возможности
+
+| Добавления | Сведения |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Службы Integration Services (SSIS) | Исправлена проблема, когда кнопка **Предварительный просмотр** не работает в источнике OLE DB при подключении к источнику данных SQL Server Analysis Services (SSAS). |
+| Службы Integration Services (SSIS) | Исправлена проблема, из-за которой удаление входных или выходных данных компонента потока данных перед удалением связанного пути может вызвать ошибку COMException. |
+| Службы Integration Services (SSIS) | Исправлена проблема, из-за которой задача обработки SSAS не может подключиться к рабочей области Power BI и обновить ее модели. |
+| Службы Integration Services (SSIS) | Исправлена проблема, из-за которой Visual Studio зависает при отладке задачи или компонента скрипта в среде выполнения x64 для SQL Server 2017. |
+| Службы Integration Services (SSIS) | Исправлена проблема, из-за которой мастер импорта и экспорта аварийно завершает работу при выборе драйвера MySQL в некоторых средах. |
+| Службы Integration Services (SSIS) | Устранены некоторые проблемы, связанные с доступностью и высоким разрешением. |
+| Службы Integration Services (SSIS) | Пользователям разрешено пропускать проверку при открытии пакетов, что повышает производительность. Дополнительные сведения см. в разделе [Ускорение открытия пакетов служб SSIS в SSDT](https://techcommunity.microsoft.com/t5/sql-server-integration-services/accelerate-the-opening-of-ssis-package-in-ssdt/ba-p/1607099). |
+| Службы Integration Services (SSIS) | Заблокировано развертывание в Azure SSIS, если версия целевого сервера отличается от SQL Server 2017. |
+
+### <a name="known-issues"></a>Известные проблемы
+
+| Известная проблема | Сведения |
+| :---------- | :------ |
+| Задача запуска пакетов в службах SSIS не поддерживает отладку, если параметр ExecuteOutOfProcess имеет значение True. | Эта проблема относится только к отладке. Она не влияет на сохранение, развертывание и запуск с использованием DTExec.exe или каталога SSIS. |
+| Источник Power Query может не поддерживать протокол OData версии 4, если службы SQL Server Integration Services и SQL Server Analysis Services установлены в одном экземпляре Visual Studio. | &nbsp; |
+| Источник Power Query может не поддерживать подключение к Oracle с помощью ODBC, если службы SQL Server Integration Services и SQL Server Analysis Services установлены в одном экземпляре Visual Studio. | &nbsp; |
+| Источник Power Query не локализован. | &nbsp; |
+| &nbsp; | &nbsp; |
 
 ## <a name="1595nbsp-ssdt-for-vs-2017"></a>15.9.5,&nbsp; SSDT для Visual Studio 2017
 

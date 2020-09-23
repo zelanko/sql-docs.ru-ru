@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: db412b18a0189f9f68caff79f8e904db5424d673
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6c4ed5c985340e45b46b664dc4b6a53ff70f1b1a
+ms.sourcegitcommit: 83e5cfd2654233befd95e3ff37de936f9dc8549c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244315"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89468349"
 ---
 # <a name="lesson-1-create-a-report-server-project-reporting-services"></a>Урок 1. Создание проекта сервера отчетов (службы Reporting Services)
 
@@ -36,7 +36,8 @@ ms.locfileid: "75244315"
     ![select-report-server-project-template](../reporting-services/media/lesson-1-creating-a-report-server-project-reporting-services/select-report-server-project-template.png)
 
     > [!IMPORTANT]
-    > Если вы работаете в Visual Studio и не видите служб Reporting Services в левом столбце, добавьте конструктор отчетов, установив рабочую нагрузку SSDT. Из меню **Средства** выберите **Получить средства и компоненты...** , а затем в отображаемых рабочих нагрузках выберите **SQL Server Data Tools**. Если вы не видите объекты служб Reporting Services в центральном столбце, добавьте расширения служб Reporting Services. Откройте меню **Средства** и выберите **Расширения и обновления** > **В сети**. В центральном столбце выберите **Проекты Microsoft Reporting Services** > **Скачать** из отображаемого списка расширений. Сведения об SQL Server Data Tools (SSDT) см. [в этой статье](../ssdt/download-sql-server-data-tools-ssdt.md).
+    > Если вы работаете в Visual Studio и не видите служб Reporting Services в левом столбце, добавьте конструктор отчетов, установив рабочую нагрузку SSDT. Из меню **Средства** выберите **Получить средства и компоненты...** , а затем в отображаемых рабочих нагрузках выберите **SQL Server Data Tools**. Если вы не видите объекты служб Reporting Services в центральном столбце, добавьте расширения служб Reporting Services. Откройте меню **Средства** и выберите **Расширения и обновления** > **В сети**. В центральном столбце выберите **Проекты Microsoft Reporting Services** > **Скачать** из отображаемого списка расширений. Сведения об SQL Server Data Tools (SSDT) см. [в этой статье](../ssdt/download-sql-server-data-tools-ssdt.md). Если предыдущие шаги не помогли устранить проблему в Visual Studio 2019, попробуйте установить [расширение проекта службы Microsoft Reporting Service](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio).
+
 
 3. Выберите значок **Проект сервера отчетов** &nbsp;&nbsp;![ssrs_ssdt_report_server_project](media/ssrs-ssdt-report-server-project.png) &nbsp;&nbsp;в центральном столбце диалогового окна **Новый проект**.
 
@@ -60,7 +61,7 @@ ms.locfileid: "75244315"
 
     ![ssrs-ssdt-01-new-report-designer](media/ssrs-ssdt-01-new-report-designer.png)
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Дальнейшие шаги
 
 Итак, вы создали проект отчета Tutorial и отчет Sales Orders. В следующих уроках вы научитесь выполнять такие действия:
 
@@ -68,4 +69,4 @@ ms.locfileid: "75244315"
 - создание набора данных из источника данных;
 - разработка и форматирование макета отчета.
 
-Переходите к статье [Занятие 2. Задание информации о соединении (службы Reporting Services)](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).
+Перейти к уроку 2 [Задание информации о соединении (службы Reporting Services)](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).

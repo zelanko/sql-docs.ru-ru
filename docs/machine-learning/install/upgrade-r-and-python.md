@@ -1,53 +1,46 @@
 ---
-title: Обновление компонентов Python и R
-description: Обновите R и Python в Службах машинного обучения SQL Server или SQL Server R Services, используя sqlbindr.exe для привязки к Machine Learning Server.
+title: Обновление сред выполнения Python и R (привязка)
+description: Обновите среды выполнения R и Python в Службах машинного обучения SQL Server или SQL Server R Services, используя sqlbindr.exe для привязки к Machine Learning Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 04/03/2020
+ms.date: 08/17/2020
 ms.topic: how-to
 author: cawrites
 ms.author: chadam
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 918ab8c2b1e643196e99cd11ff92c07c3978e078
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 63bd14d9229d276966a3e118d097316a3ab58a4f
+ms.sourcegitcommit: 5f658b286f56001b055a8898d97e74906516dc99
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900078"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90009380"
 ---
-# <a name="upgrade-machine-learning-python-and-r-components-in-sql-server-instances"></a>Обновление компонентов машинного обучения (R и Python) в экземплярах SQL Server
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+# <a name="upgrade-python-and-r-runtime-with-binding-in-sql-server-machine-learning-services"></a>Обновление среды выполнения Python и R с помощью привязки в Службах машинного обучения SQL Server
+[!INCLUDE [SQL Server 2016 and 2017](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
 
-Интеграция R и Python в SQL Server включает в себя пакеты с открытым кодом и собственные пакеты Майкрософт.
-                                                                               
-Стандартное обслуживание SQL Server предусматривает следующее:
-                                                                               
-- Пакеты обновляются в соответствии с циклом выпуска SQL Server.
-- Исправления ошибок применяются к существующим пакетам в текущей версии.
-- Обновление основных версий не производится.
+В этой статье описывается, как использовать процесс установки, именуемый **привязкой** для обновления сред выполнения R или Python в [Службах R SQL Server 2016](../r/sql-server-r-services.md) или [Службах машинного обучения SQL Server 2017](../sql-server-machine-learning-services.md).
 
-Вы можете получать [более новые версии Python и R](#version-map) путем *привязки* к **Microsoft Machine Learning Server**. Версия применяется как к Службам машинного обучения SQL Server (в базе данных), так и к SQL Server R Services (в базе данных).
+> [!IMPORTANT]
+> В этой статье описывается старый метод обновления сред выполнения R и Python, называемый *привязкой*. Если вы установили **накопительное обновление 14 или более поздней версии для пакета обновления 2 (SP2) для SQL Server 2016** или **накопительное обновление 22 или более поздней версии для SQL Server 2017**, вместо этого см. как [изменить среду выполнения R или Python по умолчанию на более позднюю версию](change-default-language-runtime-version.md).
 
-Возможность получения новых пакетов предпочтительна, если вы работаете с данными, например специалистом по обработке и анализу данных.
+Вы можете получать [более новые версии Python и R](#version-map) путем *привязки* к Microsoft Machine Learning Server. Версия применяется как к Службам машинного обучения SQL Server (в базе данных), так и к SQL Server R Services (в базе данных).
 
 ## <a name="what-is-binding"></a>Что такое привязка?
 
-Привязка — это процесс установки, который меняет содержимое папок R_SERVICES и PYTHON_SERVICES на более новые исполняемые файлы, библиотеки и инструменты с [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index).
+Привязка — это процесс установки, который меняет содержимое папок **R_SERVICES** и **PYTHON_SERVICES** на более новые исполняемые файлы, библиотеки и инструменты с [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index).
 
-Передаваемые компоненты в составе модели обслуживания изменились.
-
-Обновления службы выполняются по [графику поддержки Microsoft R Server и Machine Learning Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support) согласно [политике современного жизненного цикла](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
+Передаваемые компоненты в составе модели обслуживания изменились. Обновления службы выполняются по [графику поддержки Microsoft R Server и Machine Learning Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support) согласно [политике современного жизненного цикла](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
 
 Привязка не изменяет основные принципы установки, за исключением версий компонентов и служебных обновлений:
 
 - Интеграция Python и R по-прежнему является частью экземпляра ядра СУБД.
 - Лицензирование остается неизменным (привязка не влечет никаких дополнительных затрат).
-- Политики поддержки SQL Server сохраняются для ядра СУБД. 
+- Политики поддержки SQL Server сохраняются для ядра СУБД.
 
 В оставшейся части этой статьи объясняется механизм привязки и принципы его работы для каждой версии SQL Server.
 
 > [!NOTE]
-> Привязка применяется только к экземплярам (в базе данных), связанным с экземплярами SQL Server. В этом случае для установки (автономной) не требуется привязка.
+> Привязка применяется только к экземплярам в базе данных, связанным с экземплярами SQL Server. В этом случае для автономной установки не требуется привязка.
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 **Рекомендации по привязке для SQL Server 2016**
@@ -55,8 +48,8 @@ ms.locfileid: "85900078"
 Для клиентов служб SQL Server 2016 R привязка предоставляет такие преимущества:
 
 - Обновленные пакеты R.
-- Новые пакеты не входят в исходную установку ([Microsoft ML](https://  docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)).
-- Предварительно обученные [модели машинного обучения](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models) для анализа тональности и обнаружения изображений.
+- Новые пакеты не входят в исходную установку ([Microsoft ML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)).
+- Предварительно обученные [модели](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models) машинного обучения для анализа тональности и обнаружения изображений.
 
 Все привязки могут быть дополнительно обновлены при выходе нового главного и второстепенного выпуска [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index).
 ::: moniker-end
@@ -83,17 +76,17 @@ Microsoft R Open (MRO) и R | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1  | R 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 [**Службы машинного обучения SQL Server 2017**](../install/sql-machine-learning-services-windows-install.md)
 
-Компонент |Начальный выпуск | Machine Learning Server 9.3 | | | |
-----------|----------------|---------|-|-|-|-|
-Microsoft R Open (MRO) и R | R 3.3.3 | R 3.4.3 | | | |
-[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) |   9.2 |  9.3 | | | |
-[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| | | |
-[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| 1.0 |  1.0 | | | |
-[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0 |  1.0 | | | |
-Anaconda 4.2 и Python 3.5  | 4.2/3.5.2 | 4.2/3.5.2 | | | |
-[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2  | 9.3| | | |
-[microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| | | |
-[предварительно обученные модели](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models) | 9.2 | 9.3| | | |
+Компонент |Начальный выпуск | Machine Learning Server 9.3 |
+----------|----------------|---------|
+Microsoft R Open (MRO) и R | R 3.3.3 | R 3.4.3 |
+[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) |   9.2 |  9.3 |
+[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) | 9.2  | 9.3|
+[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| 1.0 |  1.0 |
+[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0 |  1.0 |
+Anaconda 4.2 и Python 3.5  | 4.2/3.5.2 | 4.2/3.5.2 |
+[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2  | 9.3|
+[microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2  | 9.3|
+[предварительно обученные модели](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models) | 9.2 | 9.3|
 ::: moniker-end
 
 ## <a name="how-component-upgrade-works"></a>Как работает обновление компонентов

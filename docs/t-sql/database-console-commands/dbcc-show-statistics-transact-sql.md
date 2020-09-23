@@ -34,25 +34,32 @@ ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6c14ef618f8f2e64a4b3a59f7bd29dfaf327b6a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bff0a596c457ee5ce24b665be3897f86e625b3b0
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459908"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076719"
 ---
 # <a name="dbcc-show_statistics-transact-sql"></a>Инструкция DBCC SHOW_STATISTICS (Transact-SQL)
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Инструкция DBCC SHOW_STATISTICS отображает статистику оптимизации текущего запроса для таблицы или индексированного представления. Оптимизатор запросов использует статистику для оценки количества элементов или количества строк в результате запроса, что позволяет оптимизатору запросов создавать высококачественные планы запросов. Например, на основе оценки количества элементов оптимизатор запросов может выбрать в плане запроса оператор поиска по индексу, а не оператор просмотра индекса, повышая производительность запроса за счет использования менее ресурсоемкого поиска по индексу.
+Инструкция DBCC SHOW_STATISTICS отображает статистику оптимизации текущего запроса для таблицы или индексированного представления. Оптимизатор запросов использует статистику, чтобы оценить кратность или число строк в результате запроса. Это позволяет ему создать план запросов высокого качества. Например, на основе оценки количества элементов оптимизатор запросов может выбрать в плане запроса оператор поиска по индексу, а не оператор просмотра индекса, повышая производительность запроса за счет использования менее ресурсоемкого поиска по индексу.
   
-Оптимизатор запросов хранит статистические данные по таблице или индексированному представлению в объекте статистики. Объект статистики для таблицы создается по индексу или списку столбцов таблицы. Объект статистики включает заголовок, содержащий метаданные о статистике, гистограмму, содержащую распределение значений в первом ключевом столбце объекта статистики, и вектор плотностей для измерения корреляции с охватом нескольких столбцов. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] позволяет вычислять оценки количества элементов с применением любых данных в объекте статистики.
+Оптимизатор запросов хранит статистические данные по таблице или индексированному представлению в объекте статистики. Объект статистики для таблицы создается по индексу или списку столбцов таблицы. Объект статистики включает заголовок, содержащий метаданные о статистике, гистограмму, содержащую распределение значений в первом ключевом столбце объекта статистики, и вектор плотностей для измерения корреляции с охватом нескольких столбцов. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] позволяет вычислять оценки количества элементов с применением любых данных в объекте статистики. Дополнительные сведения см. в разделе [Статистика](../../relational-databases/statistics/statistics.md) и [Оценка кратности (SQL Server)](../../relational-databases/performance/cardinality-estimation-sql-server.md).
   
 DBCC SHOW_STATISTICS отображает заголовок, гистограмму и вектор плотностей на основе данных, хранящихся в объекте статистики. Применяемый синтаксис позволяет указывать таблицу или индексированное представление вместе с именем целевого индекса, именем статистики или именем столбца. В этом разделе описывается, как отображать статистику и трактовать отображаемые результаты.
-  
-Дополнительные сведения см. в статье [Managing statistics on tables in SQL Data Warehouse](../../relational-databases/statistics/statistics.md) (Управление статистикой таблиц в хранилище данных SQL).
-  
+
+> [!IMPORTANT]
+> Начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 1 (SP1), DMV [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) позволяет программно получать сведения о заголовке, содержащиеся в объекте статистики, для ненакопительных статистических данных.
+
+> [!IMPORTANT]
+> Начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 1 (SP1) и [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 2 (SP2), DMV [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md) позволяет программно получать сведения о заголовке, содержащиеся в объекте статистики, для накопительных статистических данных.
+
+> [!IMPORTANT]
+> Начиная с накопительного обновления 2 (CU2) [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1), DMV [sys.dm_db_stats_histogram](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) позволяет программно получать данные гистограммы, содержащиеся в объекте статистики.
+
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Синтаксис
@@ -67,10 +74,10 @@ DBCC SHOW_STATISTICS ( table_or_indexed_view_name , target )
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
 
 DBCC SHOW_STATISTICS ( table_name , target )   
-    [ WITH {STAT_HEADER | DENSITY_VECTOR | HISTOGRAM } [ ,...n ] ]  
+    [ WITH { STAT_HEADER | DENSITY_VECTOR | HISTOGRAM } [ ,...n ] ]  
 [;]
 ```
 
@@ -162,15 +169,15 @@ DBCC SHOW_STATISTICS ( table_name , target )
 |(CustomerId, ItemId, Price)|Строки с совпадающими значениями CustomerId, ItemId и Price.|  
   
 ## <a name="restrictions"></a>Ограничения  
- Инструкция DBCC SHOW_STATISTICS не предоставляет статистических данных для пространственного или оптимизированного для памяти xVelocity индексов columnstore.  
+ Инструкция DBCC SHOW_STATISTICS не предоставляет статистических данных для пространственного или оптимизированного для памяти индексов columnstore.  
   
 ## <a name="permissions-for-ssnoversion-and-sssds"></a>Разрешения для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
-Для просмотра объекта статистики у пользователя должно быть разрешение SELECT для таблицы.
+Для просмотра объекта статистики у пользователя должно быть разрешение `SELECT` для таблицы.
 Обратите внимание, что для того, чтобы разрешение SELECT было достаточным для выполнения команды, существуют следующие требования.
 -   Пользователь должен иметь разрешение для всех столбцов в статистическом объекте.  
 -   Пользователь должен иметь разрешение для всех столбцов в условии фильтра (если фильтр задан).  
 -   Таблица не может иметь политику безопасности на уровне строк.
--   Если какие-либо столбцы в объекте статистики замаскированы с помощью правил динамического маскирования данных, то помимо разрешения SELECT у пользователя должно быть разрешение UNMASK.
+-   Если какие-либо столбцы в объекте статистики замаскированы с помощью правил динамического маскирования данных, то помимо разрешения `SELECT` у пользователя должно быть разрешение `UNMASK`.
 
 В версиях, предшествующих [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 1 (SP1), пользователь должен быть владельцем таблицы или членом предопределенной роли сервера `sysadmin`, предопределенной роли базы данных `db_owner` или предопределенной роли базы данных `db_ddladmin`.
 
@@ -178,10 +185,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
  > Чтобы восстановить поведение, доступное в версиях, предшествующих [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 1 (SP1), используйте флаг трассировки 9485.
   
 ## <a name="permissions-for-sssdw-and-sspdw"></a>Разрешения для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-Для DBCC SHOW_STATISTICS необходимо разрешение SELECT на таблицу или членство в одной из следующих ролей:
--   предопределенная роль сервера sysadmin  
--   предопределенная роль базы данных db_owner  
--   предопределенная роль базы данных db_ddladmin  
+DBCC SHOW_STATISTICS требует разрешения `SELECT` для таблицы или членства в предопределенной роли сервера `sysadmin`, предопределенной роли базы данных `db_owner` или предопределенной роли базы данных `db_ddladmin`.  
   
 ## <a name="limitations-and-restrictions-for-sssdw-and-sspdw"></a>Ограничения для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 Инструкция DBCC SHOW_STATISTICS показывает статистику, хранящуюся в базе данных оболочки на уровне управляющего узла. Она не показывает статистику, автоматически созданную [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на вычислительных узлах.
@@ -234,3 +238,4 @@ GO
 [UPDATE STATISTICS (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)  
 [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  
 [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
+[sys.dm_db_incremental_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md)   

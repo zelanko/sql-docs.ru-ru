@@ -2,7 +2,7 @@
 title: Системные требования драйверов Майкрософт для PHP
 description: Драйверы Майкрософт для PHP для SQL Server поддерживают широкий спектр версий PHP, операционных систем и версий SQL Server.
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,14 +11,13 @@ helpviewer_keywords:
 - requirements
 ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
 author: David-Engel
-ms.reviewer: carlrab
 ms.author: v-daenge
-ms.openlocfilehash: 0537f39c83239e148541a4739ccdfb83c8f5e6c9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: e0ae11dd3a13ac8b2071943c49ef1ae4b8c400f4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635703"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540468"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Системные требования драйверов Майкрософт для PHP для SQL Server
 
@@ -47,30 +46,18 @@ ms.locfileid: "81635703"
 
 Если вы скачиваете версию драйвера для 64-разрядной версии Windows, установщик 64-разрядной ODBC установит как 32-разрядную, так и 64-разрядную версии драйвера ODBC. При использовании 32-разрядной версии Windows используйте установщик ODBC x86. На платформах, отличных от Windows, доступны только 64-разрядные версии драйвера.
 
-|Версия драйвера PHP для SQL Server&#8594;<br />&#8595; Версия драйвера ODBC|5.8|5.6|5,3|5,2|4.3|4,0|3.2|
+|Версия драйвера PHP &#8594;<br />&#8595; Версия драйвера ODBC|5.8|5.6|5,3|5,2|4.3|4,0|3.2|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Драйвер ODBC 17+ |Да|Да|Да|Да| | | |
-|Драйвер ODBC 13.1|Да|Да|Да|Да|Да|Да| |
-|Драйвер ODBC 13  | | | | | |Да| |
+|Драйвер ODBC 17+ |Да|Да|Да|Да|   |   |   |
+|Драйвер ODBC 13.1|Да|Да|Да|Да|Да|Да|   |
+|Драйвер ODBC 13  |   |   |   |   |   |Да|   |
 |Драйвер ODBC 11  |Да|Да|Да|Да|Да|Да|Да|
 
 Если вы используете драйвер SQLSRV, [sqlsrv_client_info](sqlsrv-client-info.md) возвращает сведения о том, какая версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft ODBC Driver for SQL Server применяется [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Если вы используете драйвер PDO_SQLSRV, можно применить [PDO::getAttribute](pdo-getattribute.md) для определения версии.
 
 ## <a name="sql-server"></a>SQL Server
 
-Сведения об использовании PHP с Базой данных SQL Azure см. в [этой статье](connecting-to-microsoft-azure-sql-database.md).
-
-|Версия драйвера PHP для SQL Server&#8594;<br />&#8595; версия SQL Server|5.8|5.6|5,3|5,2|4.3|4,0|3.2|
-|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|База данных SQL Azure (все варианты развертывания)        |Да|Да|Да|Да| | | |
-|Azure SQL Synapse  |Да|Да|Да|Да| | | |
-|SQL Server 2019           |Да|Да|Да|Да| | | |
-|SQL Server 2017           |Да|Да|Да|Да| | | |
-|SQL Server 2016           |Да|Да|Да|Да|Да| | |
-|SQL Server 2014           |Да|Да|Да|Да|Да|Да|Да|
-|SQL Server 2012           |Да|Да|Да|Да|Да|Да|Да|
-|SQL Server 2008 R2        | |Да|Да|Да|Да|Да|Да|
-|SQL Server 2008           | | | | |Да|Да|Да|
+Дополнительные сведения о поддерживаемых версиях SQL Server см. в [списке поддерживаемых версий баз данных](microsoft-php-drivers-for-sql-server-support-matrix.md#sql-server-version-certified-compatibility).
 
 ## <a name="operating-systems"></a>Операционные системы
 

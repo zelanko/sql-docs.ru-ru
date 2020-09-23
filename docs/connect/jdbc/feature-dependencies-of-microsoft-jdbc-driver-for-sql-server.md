@@ -2,7 +2,7 @@
 title: Зависимости компонентов Microsoft JDBC Driver
 description: Сведения о зависимостях драйвера Microsoft JDBC Driver for SQL Server и о том, как учитывать их.
 ms.custom: ''
-ms.date: 03/24/2020
+ms.date: 8/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2a08c60322ba4cb75bef804eafb9a3e68e7df5de
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 9e7c01c160848e5a0067db9d37b7e2dbe220386f
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631204"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042437"
 ---
 # <a name="feature-dependencies-of-the-microsoft-jdbc-driver-for-sql-server"></a>Зависимости компонентов Microsoft JDBC Driver для SQL Server
 
@@ -45,20 +45,20 @@ ms.locfileid: "81631204"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>8.2.2.jre11</version>
+    <version>8.4.1.jre11</version>
     <scope>compile</scope>
 </dependency>
 
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>adal4j</artifactId>
-    <version>1.6.4</version>
+    <version>1.6.5</version>
 </dependency>
 
 <dependency>
     <groupId>com.microsoft.rest</groupId>
     <artifactId>client-runtime</artifactId>
-    <version>1.7.0</version>
+    <version>1.7.4</version>
 </dependency>
 ```
 
@@ -68,26 +68,26 @@ ms.locfileid: "81631204"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>8.2.2.jre11</version>
+    <version>8.4.1.jre11</version>
     <scope>compile</scope>
 </dependency>
 
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>adal4j</artifactId>
-    <version>1.6.4</version>
+    <version>1.6.5</version>
 </dependency>
 
 <dependency>
     <groupId>com.microsoft.rest</groupId>
     <artifactId>client-runtime</artifactId>
-    <version>1.7.0</version>
+    <version>1.7.4</version>
 </dependency>
 
 <dependency>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-keyvault</artifactId>
-    <version>1.2.2</version>
+    <version>1.2.4</version>
 </dependency>
 ```
 
@@ -95,6 +95,7 @@ ms.locfileid: "81631204"
 
 ### <a name="working-with-the-azure-key-vault-provider"></a>Использование поставщика Azure Key Vault:
 
+- Драйвер JDBC версии 8.4.1. Версии зависимостей: Azure-Keyvault (версия 1.2.4), Adal4j (версия 1.6.5), Client-Runtime-for-AutoRest (1.7.4) и их зависимости ([пример приложения](azure-key-vault-sample-version-7.0.md)).
 - Драйвер JDBC версии 8.2.2. Версии зависимостей: Azure-Keyvault (версия 1.2.2), Adal4j (версия 1.6.4), Client-Runtime-for-AutoRest (1.7.0) и их зависимости ([пример приложения](azure-key-vault-sample-version-7.0.md)).
 - JDBC driver версии 7.4.1. Версии зависимостей: Azure-Keyvault (версия 1.2.1), Adal4j (версия 1.6.4), Client-Runtime-for-AutoRest (1.6.10) и их зависимости ([пример приложения](azure-key-vault-sample-version-7.0.md)).
 - JDBC driver версии 7.2.2. Версии зависимостей: Azure-Keyvault (версия 1.2.0), Azure-Keyvault-Webkey (версия 1.2.0), Adal4j (версия 1.6.3), Client-Runtime-for-AutoRest (1.6.5) и их зависимости ([пример приложения](azure-key-vault-sample-version-7.0.md)).
@@ -110,7 +111,8 @@ ms.locfileid: "81631204"
 
 ### <a name="working-with-azure-active-directory-authentication"></a>Использование проверки подлинности Azure Active Directory:
 
-- Драйвер JDBC версии 8.2.2. Версии зависимостей: Adal4j (версия 1.6.4), Client-Runtime-for-AutoRest (1.7.0) и их зависимости. В этой версии драйвера файл "sqljdbc_auth.dll" был переименован в "mssql-jdbc_auth-\<версия>-\<arch>.dll".
+- Драйвер JDBC версии 8.4.1. Версии зависимостей: Adal4j (версия 1.6.5), Client-Runtime-for-AutoRest (1.7.4) и их зависимости.
+- Драйвер JDBC версии 8.2.2. Версии зависимостей: Adal4j (версия 1.6.4), Client-Runtime-for-AutoRest (1.7.0) и их зависимости. В этой версии драйвера файл sqljdbc_auth.dll был переименован в mssql-jdbc_auth-\<version>-\<arch>.dll.
 - JDBC driver версии 7.4.1. Версии зависимостей: Adal4j (версия 1.6.4), Client-Runtime-for-AutoRest (1.6.10) и их зависимости.
 - JDBC driver версии 7.2.2. Версии зависимостей: Adal4j (версия 1.6.3), Client-Runtime-for-AutoRest (1.6.5) и их зависимости.
 - JDBC driver версии 7.0.0. Версии зависимостей: Adal4j (версия 1.6.0) и его зависимости.
@@ -122,7 +124,7 @@ ms.locfileid: "81631204"
 
 Для *операционной системы Windows* драйвер по умолчанию ищет файл sqljdbc_auth.dll и не требует установки билетов Kerberos или зависимостей библиотеки Azure. Если файл sqljdbc_auth.dll недоступен, драйвер ищет билет Kerberos для проверки подлинности в Active Directory, как и в других операционных системах.
 
-Начиная с версии драйвера 8.2.2 и далее файл sqljdbc_auth.dll переименован в mssql-jdbc_auth-\<версия>-\<arch>.dll. Пример: 'mssql-jdbc_auth-8.2.2.x64.dll'.
+Начиная с версии драйвера 8.2.2 и далее файл sqljdbc_auth.dll переименован в mssql-jdbc_auth-\<version>-\<arch>.dll. Пример: 'mssql-jdbc_auth-8.2.2.x64.dll'.
 
 Вы можете получить [образец приложения](connecting-using-azure-active-directory-authentication.md), использующего эту функцию.
 

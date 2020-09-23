@@ -26,31 +26,31 @@ ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8b3b9733500dc56f4994dd13fd42939b0885a02
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 583bed1efb0f19b1924fe007be7a6f49c2587a52
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88367790"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076594"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Удаляет все элементы из кэша планов, удаляет заданный план из кэша планов с помощью указания дескриптора плана или дескриптора SQL либо удаляет все записи кэша, связанные с указанным пулом ресурсов.
 
->[!NOTE]
->DBCC FREEPROCCACHE не очищает статистику выполнения для хранимых процедур, скомпилированных в собственном коде. Кэш процедур не содержит сведения о хранимых процедурах, скомпилированных в собственном коде. Все статистические данные выполнения, полученные при выполнении процедур, появятся в динамических административных представлениях (DMV) статистики выполнения: [sys.dm_exec_procedure_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) и [sys.dm_exec_query_plan (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md).  
+> [!NOTE]
+> DBCC FREEPROCCACHE не очищает статистику выполнения для хранимых процедур, скомпилированных в собственном коде. Кэш процедур не содержит сведения о хранимых процедурах, скомпилированных в собственном коде. Все статистические данные выполнения, полученные при выполнении процедур, появятся в динамических административных представлениях (DMV) статистики выполнения: [sys.dm_exec_procedure_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) и [sys.dm_exec_query_plan (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md).  
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Синтаксис  
-Синтаксис для SQL Server:
+Синтаксис для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:
 
 ```sql
 DBCC FREEPROCCACHE [ ( { plan_handle | sql_handle | pool_name } ) ] [ WITH NO_INFOMSGS ]  
 ```  
 
-Синтаксис для хранилища данных SQL Azure и Parallel Data Warehouse:
+Синтаксис для [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] и :[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
   
 ```sql
 DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ] 

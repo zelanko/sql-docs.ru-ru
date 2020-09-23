@@ -1,7 +1,8 @@
 ---
-title: Устойчивость подключения в драйвере ODBC в Windows | Документы Майкрософт
+title: Устойчивость подключения в драйвере ODBC в Windows
+description: Узнайте, как функция устойчивости подключений в драйвере ODBC обеспечивает прозрачное восстановление соединений и улучшает работу приложения, когда сервер закрывает бездействующие подключения.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2c04c0f1573fe3353c7cc65e614b784822e578ce
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 01b8da5d2a7f7c0e49d54a9fe237367ab3ed405f
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928320"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288126"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Устойчивость подключения в драйвере ODBC в Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -23,7 +24,7 @@ ms.locfileid: "80928320"
   Чтобы обеспечить сохранение подключения приложений к [!INCLUDE[ssAzure](../../../includes/ssazure_md.md)], драйвер ODBC в Windows может восстанавливать неактивные соединения.  
   
 > [!IMPORTANT]  
->  Функция устойчивости подключений поддерживается в Базах данных SQL Microsoft Azure и SQL Server 2014 (и более поздних версий).  
+>  Функция устойчивости подключений поддерживается в Базе данных SQL Microsoft Azure и SQL Server 2014 (и более поздних версий).  
   
  Дополнительные сведения об устойчивости неактивных подключений см. в технической статье [Устойчивость неактивных подключений](https://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/Idle%20Connection%20Resiliency.docx).
   
@@ -61,7 +62,7 @@ ms.locfileid: "80928320"
   
  Любая функция, которая выполняет команду на сервере, возвращает следующие коды состояния:  
   
-|Штат|Сообщение|  
+|Состояние|Сообщение|  
 |-----------|-------------|  
 |IMC01|Подключение разорвано, и восстановление невозможно. Драйвер клиента один или несколько раз попытался восстановить соединение, и все попытки завершились со сбоем. Увеличьте значение ConnectRetryCount, чтобы увеличить количество попыток восстановления.|  
 |IMC02|Сервер не подтвердил попытку восстановления, восстановление соединения невозможно.|  
@@ -137,7 +138,7 @@ void func2() {
   
 #define MAXBUFLEN 255  
   
-   SQLCHAR ConnStrIn[MAXBUFLEN] = "DRIVER={ODBC Driver 13 for SQL Server};SERVER=server_that_supports_connection_resiliency;UID=userID;PWD= password_for_userID;ConnectRetryCount=2";
+   SQLCHAR ConnStrIn[MAXBUFLEN] = "DRIVER={ODBC Driver 17 for SQL Server};SERVER=server_that_supports_connection_resiliency;UID=userID;PWD= password_for_userID;ConnectRetryCount=2";
    SQLCHAR ConnStrOut[MAXBUFLEN];
 
    SQLSMALLINT cbConnStrOut = 0;  

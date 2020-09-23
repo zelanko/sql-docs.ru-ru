@@ -1,7 +1,7 @@
 ---
 title: Настройка развертываний
 titleSuffix: SQL Server big data clusters
-description: Сведения о том, как настроить развертывание кластера больших данных с помощью файлов конфигурации.
+description: Сведения о том, как настроить развертывание кластера больших данных с помощью файлов конфигурации, встроенных в средство управления azdata.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ad43f370db096450a88bf1ffe3dd742c86be3206
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: db42b544127041a0d06cce8ff5f94466198bfa9f
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728025"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860572"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Настройка параметров развертывания для кластерных ресурсов и служб
 
@@ -307,58 +307,67 @@ azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "$.spe
 
 ## <a name="configure-storage"></a><a id="storage"></a> Настройка хранилища
 
-Вы также может изменить характеристики и класс хранилища, используемые для каждого пула. В следующем примере пулам носителей и данных назначается пользовательский класс хранения, а также изменяется размер утверждения постоянного тома для хранения данных на 500 ГБ для HDFS (пула хранения) и на 100 ГБ для пула данных. 
+Вы также может изменить характеристики и класс хранилища, используемые для каждого пула. В следующем примере пулам носителей и данных назначается пользовательский класс хранения, а также изменяется размер утверждения постоянного тома для хранения данных на 500 ГБ для HDFS (пула хранения) и на 100 ГБ для главного пула и пула данных. 
 
 > [!TIP]
 > Дополнительные сведения о конфигурации хранилища см. в статье [Сохраняемость данных при использовании кластера больших данных SQL Server в Kubernetes](concept-data-persistence.md).
 
-Сначала создайте файл patch.json, как описано ниже, включающий раздел *storage* в дополнение к *type* и *replicas*.
+Сначала создайте файл patch.json, как показано ниже, чтобы настроить параметры *хранения*.
 
 ```json
 {
-  "patch": [
-    {
-      "op": "replace",
-      "path": "spec.resources.storage-0.spec",
-      "value": {
-        "type": "Storage",
-        "replicas": 2,
-        "storage": {
-          "data": {
-            "size": "500Gi",
-            "className": "myHDFSStorageClass",
-            "accessMode": "ReadWriteOnce"
-          },
-          "logs": {
-            "size": "32Gi",
-            "className": "myHDFSStorageClass",
-            "accessMode": "ReadWriteOnce"
-          }
-        }
-      }
-    },
-    {
-      "op": "replace",
-      "path": "spec.resources.data-0.spec",
-      "value": {
-        "type": "Data",
-        "replicas": 2,
-        "storage": {
-          "data": {
-            "size": "100Gi",
-            "className": "myDataStorageClass",
-            "accessMode": "ReadWriteOnce"
-          },
-          "logs": {
-            "size": "32Gi",
-            "className": "myDataStorageClass",
-            "accessMode": "ReadWriteOnce"
-          }
-        }
-      }
-    }
-  ]
+        "patch": [
+                {
+                        "op": "add",
+                        "path": "spec.resources.storage-0.spec.storage",
+                        "value": {
+                                "data": {
+                                        "size": "500Gi",
+                                        "className": "default",
+                                        "accessMode": "ReadWriteOnce"
+                                },
+                                "logs": {
+                                        "size": "30Gi",
+                                        "className": "default",
+                                        "accessMode": "ReadWriteOnce"
+                                }
+                        }
+                },
+        {
+                        "op": "add",
+                        "path": "spec.resources.master.spec.storage",
+                        "value": {
+                                "data": {
+                                        "size": "100Gi",
+                                        "className": "default",
+                                        "accessMode": "ReadWriteOnce"
+                                },
+                                "logs": {
+                                        "size": "30Gi",
+                                        "className": "default",
+                                        "accessMode": "ReadWriteOnce"
+                                }
+                        }
+                },
+                {
+                        "op": "add",
+                        "path": "spec.resources.data-0.spec.storage",
+                        "value": {
+                                "data": {
+                                        "size": "100Gi",
+                                        "className": "default",
+                                        "accessMode": "ReadWriteOnce"
+                                },
+                                "logs": {
+                                        "size": "30Gi",
+                                        "className": "default",
+                                        "accessMode": "ReadWriteOnce"
+                                }
+                        }
+                }
+        ]
 }
+
 ```
 
 Затем можно использовать команду `azdata bdc config patch`, чтобы обновить файл конфигурации `bdc.json`.
@@ -666,7 +675,7 @@ azdata bdc config patch --config-file custom-bdc/control.json --patch-file elast
 > [!IMPORTANT]
 > Рекомендуется вручную обновить параметр `max_map_count` на каждом узле в кластере Kubernetes в соответствии с инструкциями из [этой статьи](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html).
 
-## <a name="turn-pods-and-nodes-metrics-colelction-onoff"></a>Включение и отключение сбора метрик для модулей pod и узлов
+## <a name="turn-pods-and-nodes-metrics-collection-onoff"></a>Включение и отключение сбора метрик для модулей pod и узлов
 
 В SQL Server 2019 с накопительным пакетом обновления 5 (CU5) появились два параметра для управления сбором метрик для модулей pod и узлов. Если вы используете различные решения для мониторинга инфраструктуры Kubernetes, вы можете отключить встроенный сбор метрик для модулей pod и узлов, присвоив параметрам *allowNodeMetricsCollection* и *allowPodMetricsCollection* значения *false* в файле конфигурации развертывания *control.json*. Для сред OpenShift для этих параметров по умолчанию задано значение *false* во встроенных профилях развертывания, так как сбор метрик модулей pod и узлов требует привилегированных возможностей.
 Выполните следующую команду, чтобы обновить значения этих параметров в пользовательском файле конфигурации с помощью CLI *azdata*.

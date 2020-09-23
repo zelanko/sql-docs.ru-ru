@@ -1,6 +1,6 @@
 ---
 title: Отображение метаданных столбца и каталога для разреженных столбцов (OLE DB) | Документы Майкрософт
-description: Отображение метаданных столбца и каталога для разреженных столбцов (OLE DB)
+description: Из этого примера вы узнаете, как отобразить метаданные столбца и каталога для разреженных столбцов в OLE DB Driver for SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: e82ff159dc39cdeb416395b0686bef755ed60a2a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e47803f6c4dc61c1a13135f3fd4b0bafc91e9646
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008267"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861398"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>Отображение метаданных столбца и каталога для разреженных столбцов (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

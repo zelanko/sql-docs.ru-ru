@@ -1,6 +1,6 @@
 ---
 title: ISSAsynchStatus::Abort (драйвер OLE DB) | Документация Майкрософт
-description: ISSAsynchStatus::Abort (OLE DB)
+description: Узнайте, как метод ISSAsynchStatus::Abort отменяет асинхронно выполняющуюся операцию в OLE DB Driver for SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ apiname:
 apitype: COM
 helpviewer_keywords:
 - Abort method
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: e3c6e3ba45774362834c8a8391f5658670e01434
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cbbef11ae17029500a6910e5b28c121f6312dce2
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244364"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862205"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ HRESULT Abort(
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  S_OK  
- Запрос на отмену асинхронной операции обработан. Это не гарантирует, что сама операция была отменена. Чтобы определить, отменена ли операция, потребитель должен вызвать метод [ISSAsynchStatus::GetStatus](../../oledb/ole-db-interfaces/issasynchstatus-getstatus-ole-db.md) и проверить наличие DB_E_CANCELED; однако это значение может быть не возвращено уже в следующем вызове.  
+ Запрос на отмену асинхронной операции обработан. Это не гарантирует, что сама операция была отменена. Чтобы определить, отменена ли операция, потребитель должен вызвать метод [ISSAsynchStatus::GetStatus](../../oledb/ole-db-interfaces/issasynchstatus-getstatus-ole-db.md) и проверить наличие DB_E_CANCELED; однако это значение может быть не возвращено в следующем вызове.  
   
  DB_E_CANTCANCEL  
  Асинхронную операцию невозможно отменить.  
@@ -64,18 +64,18 @@ HRESULT Abort(
  Значение параметра *hChapter* не равно DB_NULL_HCHAPTER или значение параметра *eOperation* не равно DBASYNCH_OPEN.  
   
  E_UNEXPECTED  
- Метод **ISSAsynchStatus::Abort** был вызван для объекта источника данных, для которого не был вызван или не был завершен метод **IDBInitialize::Initialize**.  
+ Метод `ISSAsynchStatus::Abort` был вызван для объекта источника данных, для которого не был вызван или не был завершен метод `IDBInitialize::Initialize`.  
   
- Метод**ISSAsynchStatus::Abort** был вызван для объекта источника данных, для которого был вызван метод **IDBInitialize::Initialize** , но впоследствии отменен до инициализации, либо истекло время ожидания. Объект источника данных еще не инициализирован.  
+ Метод `ISSAsynchStatus::Abort` был вызван для объекта источника данных, для которого был вызван метод `IDBInitialize::Initialize`, но затем он был отменен до инициализации, или для него истекло время ожидания. Объект источника данных еще не инициализирован.  
   
- Метод **ISSAsynchStatus::Abort** был вызван для набора строк, для которого ранее был вызван метод **ITransaction::Commit** или **ITransaction::Abort**, а набор строк не сохранился после фиксации или отмены и находится в состоянии зомби.  
+ Метод `ISSAsynchStatus::Abort` был вызван для набора строк, для которого ранее был вызван метод `ITransaction::Commit` или `ITransaction::Abort`, а набор строк не сохранился после фиксации или отмены и находится в состоянии зомби.  
   
- Интерфейс**ISSAsynchStatus::Abort** был вызван для набора строк, который был асинхронно отменен на стадии его инициализации. Набор строк находится в состоянии зомби.  
+ Интерфейс`ISSAsynchStatus::Abort` был вызван для набора строк, который был асинхронно отменен на стадии его инициализации. Набор строк находится в состоянии зомби.  
   
 ## <a name="remarks"></a>Remarks  
- При прерывании инициализации набора строк или объекта источника данных набор строк или объект источника данных может перейти в состояние зомби, когда все методы, кроме методов **IUnknown** , возвращают E_UNEXPECTED. В этом случае единственным возможным для потребителя действием является освобождение набора строк или объекта источника данных.  
+ При прерывании инициализации набора строк или объекта источника данных набор строк или объект источника данных может перейти в состояние зомби, когда все методы, кроме методов `IUnknown` , возвращают E_UNEXPECTED. В этом случае единственным возможным для потребителя действием является освобождение набора строк или объекта источника данных.  
   
- При вызове интерфейса **ISSAsynchStatus::Abort** и передаче параметру *eOperation* значения, отличного от DBASYNCHOP_OPEN, возвращается S_OK. Это не подразумевает, что сама операция была завершена или отменена.  
+ При вызове интерфейса `ISSAsynchStatus::Abort` и передаче параметру *eOperation* значения, отличного от DBASYNCHOP_OPEN, возвращается S_OK. Это значение не подразумевает, что сама операция была завершена или отменена.  
   
 ## <a name="see-also"></a>См. также:  
  [Выполнение асинхронных операций](../../oledb/features/performing-asynchronous-operations.md)  

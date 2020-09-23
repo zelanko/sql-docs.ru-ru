@@ -2,7 +2,7 @@
 title: Начало работы с элементами управления средства просмотра отчетов
 description: Элементы управления средства просмотра отчетов можно использовать для интеграции отчетов RDL Reporting Services в приложения WebForms и WinForms.
 ms.custom: seo-lt-2019
-ms.date: 06/03/2020
+ms.date: 09/01/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
@@ -10,22 +10,24 @@ ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a559bdb5b525b8d95c121b8059076d86029a37fd
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 009c70da7365cc232dc5b00da6b4f1f62bfca8e2
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943197"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89569964"
 ---
-# <a name="integrating-reporting-services-using-the-report-viewer-controls---get-started"></a>Начало работы с интеграцией служб Reporting Services с помощью элементов управления средства просмотра отчетов
+# <a name="integrate-reporting-services-using-the-report-viewer-controls---get-started"></a>Интеграция служб Reporting Services с помощью элементов управления средства просмотра отчетов
 
 Элементы управления средства просмотра отчетов можно использовать для интеграции отчетов RDL Reporting Services в приложения WebForms и WinForms. Дополнительные сведения о последних обновлениях см. в статье с [описанием изменений](changelog.md).
 
-## <a name="adding-the-report-viewer-control-to-a-new-web-project"></a>Добавление элемента управления средства просмотра отчетов в новый веб-проект
+## <a name="add-the-report-viewer-control-to-a-new-web-project"></a>Добавление элемента управления средства просмотра отчетов в новый веб-проект
 
 1. Создайте новый **пустой веб-сайт ASP.NET** или откройте существующий проект ASP.NET.
 
-    ![ssRS-Create-New-ASPNET-Project](../../reporting-services/application-integration/media/ssrs-create-new-aspnet-project.png)
+    Вы можете использовать .NET Framework 4.6 или любую более новую версию.
+
+    ![Снимок экрана создания нового пустого веб-сайта ASP.NET.](../../reporting-services/application-integration/media/ssrs-create-new-aspnet-project-4-6.png)
 
 2. Установите пакет NuGet элемента управления средства просмотра отчетов с помощью **консоли диспетчера пакетов NuGet**.
 
@@ -73,7 +75,7 @@ ms.locfileid: "86943197"
 </html>
 ```
 
-## <a name="updating-an-existing-project-to-use-the-report-viewer-control"></a>Обновление имеющегося проекта для использования элемента управления средства просмотра отчетов
+## <a name="update-an-existing-project-to-use-the-report-viewer-control"></a>Обновление имеющегося проекта для использования элемента управления средства просмотра отчетов
 
 Обязательно обновите все ссылки на сборки до версии *15.0.0.0*, в том числе файл web.config проекта и все ASPX-страницы со ссылками на элемент управления "Средство просмотра".
 
@@ -87,7 +89,7 @@ ms.locfileid: "86943197"
   -->
 <configuration>
   <system.web>
-    <compilation debug="true" targetFramework="4.5.2">
+    <compilation debug="true" targetFramework="4.6">
       <assemblies>
         <!-- All assemblies updated to version 15.0.0.0. -->
         <add assembly="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
@@ -104,7 +106,7 @@ ms.locfileid: "86943197"
           type="Microsoft.Reporting.RdlBuildProvider, Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
       </buildProviders>
     </compilation>
-    <httpRuntime targetFramework="4.5.2"/>
+    <httpRuntime targetFramework="4.6"/>
     <httpHandlers>
       <!-- Version updated to 15.0.0.0 -->
       <add path="Reserved.ReportViewerWebControl.axd" verb="*"
@@ -135,18 +137,20 @@ ms.locfileid: "86943197"
 <!DOCTYPE html>
 ```
 
-## <a name="adding-the-report-viewer-control-to-a-new-windows-forms-project"></a>Добавление элемента управления средства просмотра отчетов в новый веб-проект Windows Forms
+## <a name="add-the-report-viewer-control-to-a-new-windows-forms-project"></a>Добавление элемента управления средства просмотра отчетов в новый веб-проект Windows Forms
 
 1. Создайте новое **приложение Windows Forms** или откройте существующий проект.
 
-    ![ssRS-Create-New-winforms-Project](../../reporting-services/application-integration/media/ssrs-create-new-winforms-project.png)
+    Вы можете использовать .NET Framework 4.6 или любую более новую версию.
+    
+    ![Снимок экрана создания нового приложения Windows Forms.](../../reporting-services/application-integration/media/ssrs-create-new-winforms-project-4-6.png)
 
 2. Установите пакет NuGet элемента управления средства просмотра отчетов с помощью **консоли диспетчера пакетов NuGet**.
 
     ```
     Install-Package Microsoft.ReportingServices.ReportViewerControl.WinForms
     ```
-3. Добавьте новый элемент управления из кода или [добавьте элемент управления на панель элементов](#adding-control-to-visual-studio-toolbar).
+3. Добавьте новый элемент управления из кода или [добавьте элемент управления на панель элементов](#add-the-control-to-visual-studio-toolbar).
 
     ```csharp
     private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
@@ -174,7 +178,7 @@ ms.locfileid: "86943197"
 
 При задании значения 100 % для высоты элемента управления "Средство просмотра" необходимо установить для родительского элемента определенную высоту или настроить для всех предков процентное значение высоты.
 
-### <a name="setting-the-height-of-all-the-ancestors-to-100"></a>Настройка значения высоты в 100 % для всех предков
+### <a name="set-the-height-of-all-the-ancestors-to-100"></a>Настройка значения высоты на 100 % для всех предков
 
 ```html
 <!DOCTYPE html>
@@ -199,7 +203,7 @@ ms.locfileid: "86943197"
 </html>
 ```
 
-### <a name="setting-the-parents-height-attribute"></a>Настройка атрибута высоты родительского элемента
+### <a name="set-the-parents-height-attribute"></a>Настройка атрибута высоты родительского элемента
 
 Дополнительные сведения о размерах окна просмотра в процентах см. в разделе [Viewport-percentage lengths](http://www.w3.org/TR/css3-values/#viewport-relative-lengths) (Размеры окна просмотра в процентах).
 
@@ -221,7 +225,7 @@ ms.locfileid: "86943197"
 </html>
 ```
 
-## <a name="adding-control-to-visual-studio-toolbar"></a>Добавление элемента управления на панель элементов Visual Studio
+## <a name="add-the-control-to-visual-studio-toolbar"></a>Добавление элемента управления на панель элементов Visual Studio
 
 Элемент управления средства просмотра отчетов теперь поставляется в виде пакета NuGet и больше не отображается на панели элементов Visual Studio по умолчанию. Вы можете добавить этот элемент управления на панель элементов вручную.
 
@@ -229,15 +233,15 @@ ms.locfileid: "86943197"
 
 2. Удалите элемент управления средства просмотра отчетов, указанный на панели элементов.
 
-    ![ssRS-remove-old-rvcontrol-toolbox](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
+    ![Снимок экрана удаления элемента управления ReportViewer.](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
 
 3. Щелкните правой кнопкой мыши где-либо на панели элементов и выберите пункт **Выбрать элементы...**
 
-    ![ssRS-toolbox-choose-item](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
+    ![Снимок экрана с параметром "Выбрать элементы" на панели элементов.](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
     
 4. В окне **Компоненты .NET Framework** щелкните **Обзор**.
 
-    ![ssRS-toolbox-browse](../../reporting-services/application-integration/media/ssrs-toolbox-browse.png)
+    ![Снимок экрана с кнопкой "Обзор" в диалоговом окне компонентов .NET Framework.](../../reporting-services/application-integration/media/ssrs-toolbox-browse.png)
 
 5. В установленном пакете NuGet выберите **Microsoft.ReportViewer.WinForms.dll** или **Microsoft.ReportViewer.WebForms.dll**.
 
@@ -246,7 +250,7 @@ ms.locfileid: "86943197"
 
 6. Новый элемент управления должен появиться на панели элементов. При необходимости его можно переместить на другую вкладку в панели элементов.
 
-    ![ssRS-toolbox-rvcontrol](../../reporting-services/application-integration/media/ssrs-toolbox-rvcontrol.png)
+    ![Снимок экрана с новым элементом управления ReportViewer на панели элементов.](../../reporting-services/application-integration/media/ssrs-toolbox-rvcontrol.png)
 
 ## <a name="common-issues"></a>Распространенные проблемы
     
@@ -264,12 +268,11 @@ ms.locfileid: "86943197"
 - Microsoft.ReportingServices.ReportViewerControl.Winforms [https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WinForms/](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WinForms/)
 
 
-## <a name="feedback"></a>Отзывы
+## <a name="forum-feedback"></a>Отзыв на форуме
 
-Если у вас возникли проблемы, сообщите об этом на [форумах Reporting Services](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices).
+Если у вас возникли проблемы, сообщите об этом на [форумах Reporting Services](https://docs.microsoft.com/answers/topics/sql-server-reporting-services.html).
 
 ## <a name="see-also"></a>См. также раздел
 
 [Интеграция служб Reporting Services с помощью элементов управления ReportViewer — сбор данных](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
-Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
 

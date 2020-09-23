@@ -1,6 +1,6 @@
 ---
 title: Поддержка типов параметров, возвращающих табличное значение (драйвер OLE DB)
-description: Поддержка типов параметров OLE DB, возвращающих табличные значения
+description: Узнайте, как создать специализированный объект набора строк для возвращающих табличное значение параметров в OLE DB Driver for SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (OLE DB)
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 453609d2d5633b6270ab565a2da50a98c909e86a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1a113783462962eed8af91c0d0f23a6024392b58
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244145"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861876"
 ---
 # <a name="ole-db-table-valued-parameter-type-support"></a>Поддержка типа возвращающего табличное значение параметра OLE DB
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

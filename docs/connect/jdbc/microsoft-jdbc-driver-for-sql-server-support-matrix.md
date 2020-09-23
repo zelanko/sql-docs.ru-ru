@@ -1,8 +1,8 @@
 ---
 title: Матрица поддержки драйвера Microsoft JDBC Driver for SQL Server
-description: В этой статье приведены матрица и политика жизненного цикла поддержки для драйвера Microsoft JDBC Driver for SQL Server.
+description: В этой статье приведены матрица и политика жизненного цикла поддержки для драйвера Microsoft JDBC Driver for SQL Server.
 ms.custom: ''
-ms.date: 03/24/2020
+ms.date: 08/27/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2cd2c88cc64f068cb2926fa17302063bd7f15193
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: f8fc0f34c860c9919d56d3d2c4645e9fea8bb428
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487823"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042405"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Матрица поддержки драйвера Microsoft JDBC Driver for SQL Server
 
@@ -34,9 +34,10 @@ ms.locfileid: "81487823"
   
 |Имя драйвера|Версия пакета драйвера|Применимые JAR(s)|Окончание основной фазы поддержки|
 |-|-|-|-|  
-|Microsoft JDBC Driver 8.2 для SQL Server|8.2|mssql-jdbc-8.2.2.jre13.jar<br> mssql-jdbc-8.2.2.jre11.jar<br> mssql-jdbc-8.2.2.jre8.jar|24 марта 2025 г.|
-|Microsoft JDBC Driver 7.4 для SQL Server|7.4|mssql-jdbc-7.4.1.jre12.jar<br> mssql-jdbc-7.4.1.jre11.jar<br> mssql-jdbc-7.4.1.jre8.jar|2 августа 2024 г.|
-|Microsoft JDBC Driver 7.2 для SQL Server|7.2|mssql-jdbc-7.2.2.jre11.jar<br> mssql-jdbc-7.2.2.jre8.jar|16 апреля 2024 г.|
+|Microsoft JDBC Driver 8.4 для SQL Server|8.4|mssql-jdbc-8.4.1.jre14.jar<br> mssql-jdbc-8.4.1.jre11.jar<br> mssql-jdbc-8.4.1.jre8.jar|31 июля 2025 г.|
+|Microsoft JDBC Driver 8.2 для SQL Server|8.2|mssql-jdbc-8.2.2.jre13.jar<br> mssql-jdbc-8.2.2.jre11.jar<br> mssql-jdbc-8.2.2.jre8.jar|31 января 2025 г.|
+|Microsoft JDBC Driver 7.4 для SQL Server|7.4|mssql-jdbc-7.4.1.jre12.jar<br> mssql-jdbc-7.4.1.jre11.jar<br> mssql-jdbc-7.4.1.jre8.jar|31 июля 2024 г.|
+|Microsoft JDBC Driver 7.2 для SQL Server|7.2|mssql-jdbc-7.2.2.jre11.jar<br> mssql-jdbc-7.2.2.jre8.jar|31 января 2024 г.|
 |Драйвер Microsoft JDBC 7.0 для SQL Server|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|31 июля 2023 г.|
 |Драйвер Microsoft JDBC 6.4 для SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|27 февраля 2023 г.|
 |Microsoft JDBC Driver 6.2 для SQL Server|6.2|mssql-jdbc-6.2.2.jre8.jar<br> mssql-jdbc-6.2.2.jre7.jar|30 июня 2022 г.|
@@ -58,33 +59,31 @@ ms.locfileid: "81487823"
   
 ## <a name="sql-version-compatibility"></a>Совместимость с версиями SQL  
   
-|Версия драйвера|SQL Server 2008|SQL Server 2008 R2;|SQL Server 2012|База данных SQL Azure|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|SQL Server 2019|  
-|-|-|-|-|-|-|-|-|-|-|-|
-|8.2|Нет|Нет|Да|Да|Да|Да|Да|Да|Да|
-|7.4|Нет|Нет|Да|Да|Да|Да|Да|Да|Да|
-|7.2|Нет|Да|Да|Да|Да|Да|Да|Да|Нет|
-|7.0|Нет|Да|Да|Да|Да|Да|Да|Да|Нет|
-|6.4|Нет|Да|Да|Да|Да|Да|Да|Да|Нет|
-|6.2|Да|Да|Да|Да|Да|Да|Да|Да|Нет|
-|6.1|Да|Да|Да|Да|Да|Да|Да|Нет|Нет|
-|6,0|Да|Да|Да|Да|Да|Да|Да|Нет|Нет|
-|4.2|Да|Да|Да|Да|Да|Да|Да|Нет|Нет|
-|4.1|Да|Да|Да|Да|Да|Да|Да|Нет|Нет|
-|4,0|Да|Да|Да|Да|Да|Да|Да|Нет|Нет|
-|3.0|Да|Да|Да<sup>1</sup>|Да<sup>2</sup>|Нет|Да<sup>5</sup>|Нет|Нет|Нет|
-|2.0|Да<sup>3</sup>|Да<sup>3</sup>|Нет|Нет|Нет|Нет|Нет|Нет|Нет|
-|1.2|Да<sup>3</sup>|Нет|Нет|Нет|Нет|Нет|Нет|Нет|Нет|
-|1,1|Нет|Нет|Нет|Нет|Нет|Нет|Нет|Нет|Нет|
-|1.0|Нет|Нет|Нет|Нет|Нет|Нет|Нет|Нет|Нет|
-|2000|Нет|Нет|Нет|Нет|Нет|Нет|Нет|Нет|Нет|
-  
- <sup>1</sup> Microsoft JDBC Driver для SQL Server версии 3.0 может подключаться к SQL Server 2012 в качестве клиента нижнего уровня.  
+|Версия базы данных&nbsp;&#8594;<br />&#8595; Версия драйвера|База данных SQL Azure|Azure Synapse Analytics|Управляемый экземпляр SQL Azure|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2008 R2|SQL Server 2008|
+|---|---|---|---|---|---|---|---|---|---|---|---|
+|8.4|Да|Да|Да|Да|Да|Да|Да|Да|Да|   |   |
+|8.2|Да|Да|Да|Да|Да|Да|Да|Да|Да|   |   |
+|7.4|Да|Да|Да|Да|Да|Да|Да|Да|Да|   |   |
+|7.2|Да|Да|Да|   |Да|Да|Да|Да|Да|Да|   |
+|7.0|Да|Да|Да|   |Да|Да|Да|Да|Да|Да|   |
+|6.4|Да|Да|Да|   |Да|Да|Да|Да|Да|Да|   |
+|6.2|Да|Да|   |   |Да|Да|Да|Да|Да|Да|Да|
+|6.1|Да|   |   |   |   |Да|Да|Да|Да|Да|Да|
+|6,0|Да|   |   |   |   |Да|Да|Да|Да|Да|Да|
+|4.2|Да|   |   |   |   |Да|Да|Да|Да|Да|Да|
+|4.1|Да|   |   |   |   |Да|Да|Да|Да|Да|Да|
+|4,0|Да|   |   |   |   |Да|Да|Да|Да|Да|Да|
+|3.0|Да<sup>2</sup>|   |   |   |   |   |Да<sup>5</sup>|Да<sup>1</sup>|   |Да|Да|
+|2.0|   |   |   |   |   |   |   |   |   |Да<sup>3</sup>|Да<sup>3</sup>|
+|1.2|   |   |   |   |   |   |   |   |   |   |Да<sup>3</sup>|
+
+ <sup>1</sup> Microsoft JDBC Driver для SQL Server версии 3.0 может подключаться SQL Server 2012 в качестве клиента нижнего уровня.  
   
  <sup>2</sup> В версии 3.0 в форме исправления добавлена поддержка базы данных SQL Azure. Мы рекомендуем пользователям баз данных SQL Azure использовать последнюю версию драйвера.  
   
  <sup>3</sup> Microsoft JDBC Driver для SQL Server версии 2.0 и Microsoft JDBC Driver для SQL Server 2005 версии 1.2 могут подключаться к SQL Server 2008 в качестве клиента нижнего уровня. Когда допускается подключение к клиенту более низкого уровня с последующим преобразованием данных, приложения могут выполнять запросы и выполнять обновления для таких новых типов данных SQL Server 2008: time, date, datetime2, datetimeoffset и FILESTREAM. Дополнительные сведения о том, как использовать эти новые типы данных с помощью драйвера JDBC, см. в статьях  [Working with SQL Server 2008 Date/Time Data Types using v1.2 JDBC driver](https://go.microsoft.com/fwlink/?LinkId=145198) (Использование типов данных Date и Time в SQL Server 2008 с помощью драйвера JDBC 1.2) и  [Working with SQL Server 2008 Filestream using v1.2 JDBC driver](https://go.microsoft.com/fwlink/?LinkId=145199)(Использование типа данных Filestream в SQL Server 2008 с помощью драйвера JDBC). Дополнительные сведения об обратной совместимости новых типов данных см. в статьях  [Использование данных даты и времени](https://go.microsoft.com/fwlink/?LinkId=145211)и  [Поддержка FILESTREAM](https://go.microsoft.com/fwlink/?LinkId=145212) в электронной документации по SQL Server.  
   
- <sup>4</sup> Поддержка подключений между Microsoft JDBC Driver и хранилищем Parallel Data Warehouse была впервые реализована в Microsoft JDBC Driver для SQL Server версии 4.0 и в обновлении 3 для устройства Parallel Data Warehouse в Microsoft SQL Server 2008 R2.  
+ <sup>4</sup> Поддержка подключений между Microsoft JDBC Driver и хранилищем Parallel Data Warehouse была впервые реализована в Microsoft JDBC Driver 4.0 для SQL Server и обновлении 3 для устройства Parallel Data Warehouse в Microsoft SQL Server 2008 R2.  
   
  <sup>5</sup> Microsoft JDBC Driver для SQL Server версии 3.0 может подключаться SQL Server 2014 в качестве клиента нижнего уровня.  
   
@@ -92,6 +91,7 @@ ms.locfileid: "81487823"
   
 |Версия драйвера JDBC|Версия JRE|Версия API JDBC|
 |-|-|-|
+|[8.4](release-notes-for-the-jdbc-driver.md#84)|1.8, 11, 14|4.2, 4.3 (частично)|
 |[8.2](release-notes-for-the-jdbc-driver.md#82)|1.8, 11, 13|4.2, 4.3 (частично)|
 |[7.4](release-notes-for-the-jdbc-driver.md#74)|1.8, 11, 12|4.2, 4.3 (частично)|
 |[7.2](release-notes-for-the-jdbc-driver.md#72)|1.8, 11|4.2, 4.3 (частично)|
@@ -112,7 +112,7 @@ ms.locfileid: "81487823"
 
 ## <a name="supported-operating-systems"></a>Поддерживаемые операционные системы
 
-Драйвер JDBC может работать со всеми операционными системами, поддерживающими виртуальную машину Java (JVM). Вот некоторые из наиболее распространенных систем: Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2008 R2, Windows Vista, Linux, Unix, AIX, macOS и др.  
+Драйвер JDBC может работать со всеми операционными системами, поддерживающими виртуальную машину Java (JVM). Вот некоторые из наиболее распространенных систем: Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2008 R2, Linux, Unix, AIX, macOS и др.  
 
 Разработчики JDBC тестируют драйвер в операционных системах Windows, Sun Solaris, SUSE Linux, Ubuntu Linux, CentOS Linux и macOS.
 

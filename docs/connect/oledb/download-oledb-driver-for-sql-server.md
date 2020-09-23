@@ -7,12 +7,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 000d7c39221f54459783fc9117a35a880fb02c92
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: cb1d1cff13865981f30495ac406495593a778180
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006988"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076779"
 ---
 # <a name="download-microsoft-ole-db-driver-for-sql-server"></a>Скачать драйвер Microsoft OLE DB для SQL Server
 
@@ -21,6 +21,8 @@ ms.locfileid: "86006988"
 Драйвер OLE DB для SQL Server — это изолированный прикладной программный интерфейс (API) для доступа к данным, используемый в OLE DB. Драйвер OLE DB для SQL Server есть в Windows и предоставляется в формате одиночной библиотеки динамической компоновки (DLL).
 
 ## <a name="download"></a>Скачивание
+
+Распространяемый установщик Microsoft OLE DB Driver for SQL Server устанавливает клиентские компоненты, необходимые во время выполнения, чтобы воспользоваться преимуществами функциями нового SQL Server. Начиная с версии 18.3, установщик также включает и устанавливает библиотеку проверки подлинности Microsoft Active Directory (ADAL.dll).
 
 Драйвер Microsoft OLE DB 18.4 для SQL Server — это последняя общедоступная версия. Если у вас установлена предыдущая версия, Microsoft OLE DB 18 для SQL Server, при установке 18.4 она обновляется до версии 18.4.
 

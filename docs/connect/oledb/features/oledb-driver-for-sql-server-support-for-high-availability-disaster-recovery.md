@@ -1,6 +1,6 @@
 ---
-title: Поддержка высокого уровня доступности и аварийного восстановления в драйвере OLE DB для SQL Server | Документы Майкрософт
-description: Поддержка высокого уровня доступности и аварийного восстановления в драйвере OLE DB для SQL Server
+title: Поддержка высокого уровня доступности и аварийного восстановления в драйвере OLE DB для SQL Server
+description: Сведения о поддержке высокой доступности и аварийного восстановления драйвером OLE DB Driver for SQL Server при подключении к базам данных с соответствующими настроенными компонентами.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 26c340a10118f115db87c742e570831edc8b65f6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6f7e926485480bb18979350eea69ace972c0a102
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006917"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860707"
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>Поддержка высокого уровня доступности и аварийного восстановления в драйвере OLE DB для SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

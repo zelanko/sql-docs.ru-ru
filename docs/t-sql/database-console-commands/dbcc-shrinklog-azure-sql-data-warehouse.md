@@ -12,12 +12,12 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: dcf3a2f48eab092cf12d229685aa05f9e5e42f69
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bae2ef1468110ba89d77d5f7a6360aecb324abd0
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479803"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076699"
 ---
 # <a name="dbcc-shrinklog-parallel-data-warehouse"></a>DBCC SHRINKLOG (Parallel Data Warehouse)
 
@@ -41,7 +41,7 @@ DBCC SHRINKLOG
 SIZE = { *target_size* [ MB \| **GB** \| TB ]  } \| **DEFAULT**.  
 *target_size* — это желательный размер журнала транзакций во всех вычислительных узлах после выполнения инструкции DBCC SHRINKLOG. Значение должно быть целым числом больше 0.  
 Размер журнала измеряется в мегабайтах (МБ), гигабайтах (ГБ) или терабайтах (ТБ). Это совокупный размер журнала транзакций во всех вычислительных узлах.  
-По умолчанию инструкция DBCC SHRINKLOG уменьшает журнал транзакций до размера, хранящегося в метаданных базы данных. Размер журнала в метаданных определяется параметром LOG_SIZE инструкции [CREATE DATABASE (хранилище данных SQL Azure)](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) или [ALTER DATABASE (хранилище данных SQL Azure)](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md). Инструкция DBCC SHRINKLOG уменьшает журнал транзакций до размера по умолчанию, если указан аргумент `SIZE=DEFAULT` или если отсутствует предложение `SIZE`.
+По умолчанию инструкция DBCC SHRINKLOG уменьшает журнал транзакций до размера, хранящегося в метаданных базы данных. Размер журнала в метаданных определяется параметром LOG_SIZE инструкции [CREATE DATABASE &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) или [ALTER DATABASE &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md). Инструкция DBCC SHRINKLOG уменьшает журнал транзакций до размера по умолчанию, если указан аргумент `SIZE=DEFAULT` или если отсутствует предложение `SIZE`.
   
 WITH NO_INFOMSGS  
 Информационные сообщения не выводятся в результатах DBCC SHRINKLOG.  

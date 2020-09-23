@@ -13,18 +13,18 @@ ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 02/20/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: dbaaa71b61129d0bb1917644c017122e6ed88bf4
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: eed51327477f40aa4e093d9b28cbaa641bfd4a86
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279004"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480536"
 ---
 # <a name="download-sql-server-data-tools-ssdt-for-visual-studio"></a>Скачать SQL Server Data Tools (SSDT) для Visual Studio
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-**SQL Server Data Tools (SSDT)**  — это современное средство разработки, позволяющее создавать реляционные базы данных SQL Server, базы данных SQL Azure, модели данных Analysis Services (AS), пакеты Integration Services (IS) и отчеты Reporting Services (RS). С помощью SSDT вы можете проектировать и развертывать любые типы содержимого SQL Server так же просто, как разрабатывать приложения в Visual Studio.
+**SQL Server Data Tools (SSDT)**  — это современное средство разработки, позволяющее создавать реляционные базы данных SQL Server, базы данных SQL в Azure, модели данных Analysis Services (AS), пакеты Integration Services (IS) и отчеты Reporting Services (RS). С помощью SSDT вы можете проектировать и развертывать любые типы содержимого SQL Server так же просто, как разрабатывать приложения в Visual Studio.
 
 ## <a name="ssdt-for-visual-studio-2019"></a>SSDT для Visual Studio 2019
 
@@ -79,10 +79,10 @@ ms.locfileid: "86279004"
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT для VS 2017 (автономный установщик)
 
-:::image type="icon" source="media/download.png" border="false"::: **[Скачайте SSDT для Visual Studio 2017 (15.9.5)](https://go.microsoft.com/fwlink/?linkid=2131035)**
+:::image type="icon" source="media/download.png" border="false"::: **[Скачать SSDT для Visual Studio 2017 (15.9.6)](https://go.microsoft.com/fwlink/?linkid=2139376)**
 
 > [!IMPORTANT]
-> * Перед установкой SSDT для Visual Studio 2017 (15.9.5) удалите расширения *Проекты Analysis Services* и *Проекты Reporting Services*, если они установлены, а затем закройте все экземпляры Visual Studio. 
+> * Перед установкой SSDT для Visual Studio 2017 (15.9.6) удалите расширения *Проекты Analysis Services* и *Проекты Reporting Services*, если они установлены, а затем закройте все экземпляры Visual Studio. 
 > * Источник Power Query для SQL Server 2017 удален из списка стандартных компонентов. Теперь мы объявили источник Power Query для SQL Server 2017 и 2019 как отдельный компонент, который можно скачать [здесь](https://www.microsoft.com/download/details.aspx?id=100619).
 > * Чтобы спроектировать пакеты с помощью соединителей Oracle и Teradata, а также задать в качестве целевой версию SQL Server, выпущенную до SQL 2019, помимо [соединителя Microsoft Oracle для SQL 2019](https://www.microsoft.com/download/details.aspx?id=58228) и [соединителя Microsoft Teradata для SQL 2019](https://www.microsoft.com/download/details.aspx?id=100599) необходимо установить соответствующую версию соединителя Майкрософт для Oracle и Teradata от Attunity.
 >    * [Соединитель версии 5.0 для Oracle и Teradata от Attunity, предназначенный для SQL Server 2017](https://www.microsoft.com/download/details.aspx?id=55179)
@@ -102,17 +102,17 @@ SSDT для Visual Studio 2017 имеет те же [требования к с
 
 Этот выпуск **SSDT для Visual Studio 2017** можно установить на следующих языках:
 
-* [Китайский (упрощенный)](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x804)
-* [Китайский (традиционный)](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x404)
-* [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x409)
-* [Французский](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x40c)
-* [Немецкий](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x407)
-* [Итальянский](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x410)
-* [Японский](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x411)
-* [Корейский](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x412)
-* [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x416)
-* [Русский](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x419)
-* [Испанский](https://go.microsoft.com/fwlink/?linkid=2131035&clcid=0x40a)
+* [Китайский (упрощенный)](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x804)
+* [Китайский (традиционный)](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x404)
+* [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x409)
+* [Французский](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x40c)
+* [Немецкий](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x407)
+* [Итальянский](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x410)
+* [Японский](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x411)
+* [Корейский](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x412)
+* [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x416)
+* [Русский](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x419)
+* [Испанский](https://go.microsoft.com/fwlink/?linkid=2139376&clcid=0x40a)
 
 ### <a name="considerations-and-limitations"></a>Рекомендации и ограничения
 
@@ -166,7 +166,7 @@ SSDT для Visual Studio 2017 имеет те же [требования к с
 
 * [Форум MSDN по SSDT](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt) 
 
-* [Блог группы разработчиков SSDT](https://blogs.msdn.com/b/ssdt/)
+* [Блог группы разработчиков SSDT](https://docs.microsoft.com/archive/blogs/ssdt/)
 
 * [Справочник по API DACFx](https://msdn.microsoft.com/library/dn645454.aspx)
 

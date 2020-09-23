@@ -3,7 +3,7 @@ title: Мастер формирования и публикации скрип�
 description: Узнайте, как использовать мастер формирования и публикации скриптов с целью создания скриптов для переноса базы данных между экземплярами базы данных. Экземпляры могут быть экземплярами ядра СУБД SQL Server или Базы данных SQL Azure.
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
@@ -44,12 +44,12 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e6b5619628bd9974a2b690fc9c8472543d3ca12
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: bf51bcec55fbd11e386eb127a3bec57f37ec7f37
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122625"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901373"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Мастер формирования и публикации скриптов
 
@@ -128,7 +128,7 @@ ms.locfileid: "87122625"
 
 **Сохранить скрипты в заданном месте** — сохранение одного или нескольких файлов скриптов Transact-SQL в указанном местоположении.
 
-![Сохранять](media/generate-and-publish-scripts-wizard/save.png)
+![Параметр "Сохранить как записную книжку"](media/generate-and-publish-scripts-wizard/save.png)
 
 - **[Save as notebook](../../azure-data-studio/notebooks-guidance.md)** (Сохранить как записную книжку) — сохранение скрипта в одном или нескольких SQL-файлах. Нажмите кнопку обзора ( **...** ), чтобы задать имя и выбрать местоположение файла.
 
@@ -222,7 +222,7 @@ ms.locfileid: "87122625"
 
 ### <a name="summary-page"></a><a name="Summary"></a> Страница «Сводка»
 
-![Сводка](media/generate-and-publish-scripts-wizard/summary.png)
+![Сводка по GS](media/generate-and-publish-scripts-wizard/summary.png)
 
 На этой странице содержится сводка параметров, выбранных в данном мастере. Чтобы изменить параметр, нажмите кнопку **Назад**. Чтобы начать формирование сохраненных или опубликованных скриптов, нажмите кнопку **Далее**.
 

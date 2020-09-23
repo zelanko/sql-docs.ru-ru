@@ -1,6 +1,6 @@
 ---
 title: Сведения о свойствах подключения OLE DB | Документация Майкрософт
-description: О свойствах OLE DB
+description: В OLE DB Driver for SQL Server объект-получатель может устанавливать значения свойств, чтобы запросить определенное поведение объекта. Узнайте, как настроить эти свойства.
 ms.custom: ''
 ms.date: 05/20/2020
 ms.prod: sql
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, properties
 - properties [OLE DB]
 - property values [OLE DB Driver for SQL Server]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: fa2fbb56d9d8926c45970ecddfabd226c87d26e2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 1cd1a9f56ff4ac70ee0802bed3ffc7856c04678e
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004456"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862346"
 ---
 # <a name="about-ole-db-properties"></a>О свойствах OLE DB
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

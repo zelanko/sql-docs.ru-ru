@@ -2,7 +2,7 @@
 title: Заметки о выпуске драйверов Майкрософт для PHP
 description: На этой странице описано, что было изменено в каждой версии драйверов Microsoft для PHP для SQL Server.
 ms.custom: ''
-ms.date: 04/15/2020
+ms.date: 09/11/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e2dc190e617ce9a9ffc3c45a623cb82a78411046
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 90b9a9174f849ac8ec8cb0c1c9674395d5b38325
+ms.sourcegitcommit: 780a81c02bc469c6e62a9c307e56a973239983b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633866"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90027275"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Заметки о выпуске драйверов Майкрософт для PHP для SQL Server
 
@@ -51,7 +51,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - Номер выпуска: 5.8.1
 - Выпущено: 15 апреля 2020 г.
 
-## <a name="whats-new-in-581"></a>Новые возможности версии 5.8.1
+### <a name="whats-new-in-581"></a>Новые возможности версии 5.8.1
 
 | Изменения | Сведения |
 | :------- | :------ |
@@ -70,7 +70,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - Номер выпуска: 5.8.0
 - Выпущено: 31 января 2020 г.
 
-## <a name="whats-new-in-58"></a>Новые возможности в версии 5.8
+### <a name="whats-new-in-58"></a>Новые возможности в версии 5.8
 
 | Изменения | Сведения |
 | :------- | :------ |
@@ -102,7 +102,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - Номер выпуска: 5.6.1
 - Выпущено: 19 марта 2019 г.
 
-## <a name="whats-new-in-561"></a>Новые возможности в версии 5.6.1
+### <a name="whats-new-in-561"></a>Новые возможности в версии 5.6.1
 
 | Изменения | Сведения |
 | :------- | :------ |
@@ -121,7 +121,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - Номер выпуска: 5.6.0
 - Выпущено: 21 февраля 2019 г.
 
-## <a name="whats-new-in-56"></a>Новые возможности в версии 5.6
+### <a name="whats-new-in-56"></a>Новые возможности в версии 5.6
 
 | Изменения | Сведения |
 | :------- | :------ |
@@ -148,7 +148,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - Номер выпуска: 5.3.0
 - Выпущено: 20 июля 2018 г.
 
-## <a name="whats-new-in-53"></a>Новые возможности в:версии 5.3
+### <a name="whats-new-in-53"></a>Новые возможности в:версии 5.3
 
 - Поддержка драйвера Microsoft ODBC Driver 17.2 на всех платформах.
 - Поддержка macOS High Sierra (требуется драйвер ODBC 17 и более поздние версии).
@@ -166,7 +166,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - Номер выпуска: 5.2.0
 - Выпущено: 23 марта 2018 г.
 
-## <a name="whats-new-in-52"></a>Новые возможности в версии 5.2
+### <a name="whats-new-in-52"></a>Новые возможности в версии 5.2
 
 - Поддержка PHP 7.2.1 и более поздних версий в Windows, а также 7.2.0 и более поздних версий на других платформах.
 - Поддержка драйвера Microsoft ODBC 17.
@@ -191,7 +191,7 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - Номер выпуска: 4.3.0
 - Выпущено: 6 июля 2017 г.
 
-## <a name="whats-new-in-43"></a>Новые возможности в версии 4.3
+### <a name="whats-new-in-43"></a>Новые возможности в версии 4.3
 
 - Поддержка PHP 7.1
 - Поддержка macOS Sierra и macOS El Capitan.
@@ -206,14 +206,14 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 ## <a name="40"></a>4,0
 
 ![Скачать](../../ssms/media/download-icon.png) [Скачать пакет Windows](https://go.microsoft.com/fwlink/?linkid=2120448)  
-[Тег выпуска GitHub (пакеты Linux и macOS доступны здесь)](https://github.com/microsoft/msphpsql/releases/tag/v4.0-RTW)
+[Тег выпуска GitHub](https://github.com/microsoft/msphpsql/releases/tag/v4.0-RTW)
 
 ### <a name="version-information"></a>Сведения о версии
 
 - Номер выпуска: 4,0
 - Выпущено: 1 июля 2016 г.
 
-## <a name="whats-new-in-40"></a>Новые возможности в версии 4.0
+### <a name="whats-new-in-40"></a>Новые возможности в версии 4.0
 
 - Поддержка PHP 7.0  
 - Полная поддержка 64-разрядных версий.
@@ -222,14 +222,14 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 ## <a name="32"></a>3.2
 
 ![Скачать](../../ssms/media/download-icon.png) [Скачать пакет Windows](https://go.microsoft.com/fwlink/?linkid=2120449)  
-[Тег выпуска GitHub (пакеты Linux и macOS доступны здесь)](https://github.com/microsoft/msphpsql/releases/tag/v3.2.0.0)
+[Тег выпуска GitHub](https://github.com/microsoft/msphpsql/releases/tag/v3.2.0.0)
 
 ### <a name="version-information"></a>Сведения о версии
 
 - Номер выпуска: 3.2
 - Выпущено: 9 марта 2015 г.
 
-## <a name="whats-new-in-32"></a>Новые возможности в версии 3.2
+### <a name="whats-new-in-32"></a>Новые возможности в версии 3.2
 
 - Поддержка PHP 5.6.  
 - Содержит последние обновления для предыдущих версий PHP 5.5 и 5.4.  
@@ -237,19 +237,24 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 
 ## <a name="31"></a>3.1
 
-[Тег выпуска GitHub (пакеты Linux и macOS доступны здесь)](https://github.com/microsoft/msphpsql/releases/tag/v3.1.0.0)
+![Скачать](../../ssms/media/download-icon.png) [Скачать пакет Windows](https://go.microsoft.com/fwlink/?linkid=2143027)  
+[Тег выпуска GitHub](https://github.com/microsoft/msphpsql/releases/tag/v3.1.0.0)
 
 ### <a name="version-information"></a>Сведения о версии
 
 - Номер выпуска: 3.1
 - Выпущено: 12 декабря 2014 г.
 
-## <a name="whats-new-in-31"></a>Новые возможности в версии 3.1
+### <a name="whats-new-in-31"></a>Новые возможности в версии 3.1
 
 - Поддержка PHP 5.5.  
 - Требуется драйвер Microsoft ODBC Driver 11 для SQL Server. Предыдущие версии требуют наличия SQL Native Client.  
 
-## <a name="whats-new-in-30"></a>Новые возможности в версии 3.0  
+## <a name="30"></a>3.0
+
+![Скачать](../../ssms/media/download-icon.png) [Скачать пакет Windows](https://go.microsoft.com/fwlink/?linkid=2143026)  
+
+### <a name="whats-new-in-30"></a>Новые возможности в версии 3.0  
 
 - Поддержка PHP 5.4.  PHP 5.2 не поддерживается в версии 3 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
 - Добавлен параметр подключения AttachDBFileName. Дополнительные сведения см. в статье [Connection Options](connection-options.md).  
@@ -259,7 +264,9 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 - Поддержка клиентских курсоров (кэширования результирующего набора в памяти). Дополнительные сведения см. в статьях [Типы курсоров &#40;драйвер SQLSRV&#41;](cursor-types-sqlsrv-driver.md) и [Типы курсоров &#40;драйвер PDO_SQLSRV&#41;](cursor-types-pdo-sqlsrv-driver.md).
 - Был добавлен атрибут PDO::ATTR_EMULATE_PREPARE. Подробнее см. в разделе [PDO::prepare](pdo-prepare.md).  
 
-## <a name="whats-new-in-20"></a>Новые возможности версии 2.0
+## <a name="20"></a>2.0
+
+### <a name="whats-new-in-20"></a>Новые возможности версии 2.0
 
 В версии 2.0 была добавлена поддержка драйвера PDO_SQLSRV. Дополнительные сведения см. в статье [Справочник по драйверу PDO_SQLSRV](pdo-sqlsrv-driver-reference.md).  
 

@@ -10,12 +10,12 @@ author: pensivebrian
 ms.author: broneill
 ms.reviewer: alayu; sstein
 ms.date: 06/20/2018
-ms.openlocfilehash: 67fdb2d5d78f5068f8379d046221ceb9c564a176
-ms.sourcegitcommit: 48d60fe6b6991303a88936fb32322c005dfca2d8
+ms.openlocfilehash: 93979ba5b0bf7ffb26726db86dbc5d6ee548df15
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85352431"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283685"
 ---
 # <a name="download-and-install-sqlpackage"></a>Скачивание и установка sqlpackage
 
@@ -63,6 +63,19 @@ ms.locfileid: "85352431"
    $ echo 'export PATH="$PATH:~/sqlpackage"' >> ~/.bash_profile
    $ source ~/.bash_profile
    $ sqlpackage
+   ```
+
+   > [!NOTE]
+   > Возможно, для запуска sqlpackage в macOS потребуется изменить параметры безопасности. Используйте следующие команды для взаимодействия с Gatekeeper из командной строки.
+
+   **До выполнения sqlpackage:**
+   ```bash
+   $ sudo spctl --master-disable
+   ```
+
+   **После выполнения sqlpackage:**
+   ```bash
+   $ sudo spctl --master-enable
    ```
 
 ## <a name="get-sqlpackage-net-core-for-linux"></a>Получение .NET Core sqlpackage для Linux
@@ -123,9 +136,11 @@ ms.locfileid: "85352431"
 - Windows 10
 - Windows 8.1
 - Windows 7 с пакетом обновления 1 (SP1)
-- Windows Server 2008 R2
+- Windows Server Core
+- Windows Server 2008 R2
 - Windows Server 2012 R2
 - Windows Server 2016
+- Windows Server 2019
 
 ### <a name="macos"></a>macOS
 

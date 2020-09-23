@@ -2,7 +2,7 @@
 title: Организация пулов соединений с учетом драйвера в ODBC Driver
 description: Узнайте об усовершенствованиях, внесенных в пул соединений с учетом драйвера в Microsoft ODBC Driver for SQL Server на платформе Windows.
 ms.custom: ''
-ms.date: 05/06/2020
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1e9da7b59f6acccbc95e3d3a797a0a1d507baee4
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: b1d8700e6868781480771c4a62f2a5fc6c92ddfc
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922078"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288116"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>Организация пулов соединений с учетом драйвера в ODBC Driver для SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "82922078"
   
 -   Если существует различие в любом из следующих ключевых слов соединения между строкой подключения и строкой подключения в пуле, соединение в составе пула не используется.  
   
-    |Ключевое слово|Драйвер ODBC 13|Драйвер ODBC 11|
+    |Ключевое слово|Драйвер ODBC 17/13|Драйвер ODBC 11|
     |-|-|-|
     |`Address`|Да|Да|
     |`AnsiNPW`|Да|Да|
@@ -68,7 +68,7 @@ ms.locfileid: "82922078"
     
 - Если существует различие в любом из следующих атрибутов соединения между строкой подключения и строкой подключения в пуле, соединение в составе пула не используется.  
   
-    |attribute|Драйвер ODBC 13|Драйвер ODBC 11|  
+    |attribute|Драйвер ODBC 17/13|Драйвер ODBC 11|  
     |-|-|-|  
     |`SQL_ATTR_CURRENT_CATALOG`|Да|Да|
     |`SQL_ATTR_PACKET_SIZE`|Да|Да|
@@ -94,7 +94,7 @@ ms.locfileid: "82922078"
   
      Эти ключевые слова соединения не учитываются, когда диспетчер драйверов пытается сопоставить соединение с соединением в пуле. (Даже в случае изменения одного из этих параметров существующее соединение можно использовать повторно. Драйвер сбросит параметры при необходимости.) Эти атрибуты можно сбросить на стороне клиента, не выполняя дополнительный вызов по сети.  
   
-    |Ключевое слово|Драйвер ODBC 13|Драйвер ODBC 11|  
+    |Ключевое слово|Драйвер ODBC 17/13|Драйвер ODBC 11|  
     |-|-|-|  
     |`AutoTranslate`|Да|Да|
     |`Description`|Да|Да|
@@ -108,7 +108,7 @@ ms.locfileid: "82922078"
   
      При изменении одного из следующих атрибутов соединения можно повторно использовать существующее соединения.  Драйвер выполнит сброс значения по мере необходимости. Драйвер может сбросить эти атрибуты на стороне клиента без выполнения дополнительного вызова по сети.  
   
-    |attribute|Драйвер ODBC 13|Драйвер ODBC 11|  
+    |attribute|Драйвер ODBC 17/13|Драйвер ODBC 11|  
     |-|-|-|  
     |Все атрибуты инструкции|Да|Да|
     |`SQL_ATTR_AUTOCOMMIT`|Да|Да|
