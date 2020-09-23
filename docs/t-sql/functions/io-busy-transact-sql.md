@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 3c26770c-41ae-4e34-8c82-7bef920ffbca
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a1e8dc46be875a7bd3dbdc31014455c76fa6d510
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2b6aa8b3ccdc0dfb6584f6138059de6686326dca
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459763"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115188"
 ---
 # <a name="x40x40io_busy-transact-sql"></a>&#x40;&#x40;IO_BUSY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88459763"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```syntaxsql  
 @@IO_BUSY  
 ```  
 
@@ -57,7 +57,7 @@ ms.locfileid: "88459763"
 ## <a name="examples"></a>Примеры  
  Следующий код возвращает число миллисекунд, которые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] потратил на выполнение операций ввода-вывода с момента запуска до текущего момента. Во избежание арифметического переполнения при преобразовании значения в микросекунды в этом примере одно из значений преобразуется в тип данных **float**.  
   
-```  
+```sql  
 SELECT @@IO_BUSY*@@TIMETICKS AS 'IO microseconds',   
    GETDATE() AS 'as of';  
 ```  

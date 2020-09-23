@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4f48de11f648d48a3d727514718b8bdd6304ad57
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 39542dd45b9d3aaec1eca6e0fd507f73fe7326a9
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422887"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116950"
 ---
 # <a name="precision-scale-and-length-transact-sql"></a>Точность, масштаб и длина (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -80,7 +80,7 @@ select cast(0.0000009000 as decimal(30,20)) * cast(1.0000000000 as decimal(30,20
 
 Следующее выражение возвращает результат `0.000001`, который помещается в `decimal(38,6)`:
 ```sql
-select cast(0.0000009000 as decimal(30,10)) * cast(1.0000000000 as decimal(30,10)) [decimal(38, 6)]
+SELECT CAST(0.0000009000 AS DECIMAL(30,10)) * CAST(1.0000000000 AS DECIMAL(30,10)) [decimal(38, 6)]
 ```
 В этом случае точность равна 61, а масштаб — 20.
 Масштаб больше 6, а целая часть (`precision-scale = 41`) длиннее 32 разрядов. Это случай (3) в правилах умножения, и типом результата будет `decimal(38,6)`.

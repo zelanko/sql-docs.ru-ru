@@ -20,12 +20,12 @@ ms.assetid: 5a9b8c52-6fb6-4e33-8b02-a878785b2f51
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a866a13a9abf74781e114a1fab4928a0c2cb1042
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e93680972f686b2d596e9c8659d5a4bed90032a4
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445825"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116451"
 ---
 # <a name="exp-transact-sql"></a>EXP (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -61,7 +61,7 @@ EXP ( float_expression )
 ### <a name="a-finding-the-exponent-of-a-number"></a>A. Вычисление экспонента числа  
  В ходе выполнения следующего примера объявляется переменная и возвращается ее экспонента (`10`) с текстовым описанием.  
   
-```  
+```sql  
 DECLARE @var FLOAT  
 SET @var = 10  
 SELECT 'The EXP of the variable is: ' + CONVERT(VARCHAR, EXP(@var))  
@@ -79,7 +79,7 @@ The EXP of the variable is: 22026.5
 ### <a name="b-finding-exponentials-and-natural-logarithms"></a>Б. Нахождение экспонентов и натуральных логарифмов  
  Представленный ниже пример возвращает значение экспоненты, взятой от натурального логарифма `20`, а также значение натурального логарифма, взятого от экспоненты `20`. Так как указанные функции являются обратными друг для друга, то в обоих случаях возвращается значение `20`.  
   
-```  
+```sql  
 SELECT EXP(LOG(20)), LOG(EXP(20))  
 GO  
 ```  
@@ -98,7 +98,7 @@ GO
 ### <a name="c-finding-the-exponent-of-a-number"></a>В. Вычисление экспонента числа  
  В приведенном ниже примере возвращается значение экспоненты указанного значения (`10`).  
   
-```  
+```sql  
 SELECT EXP(10);  
 ```  
   
@@ -112,7 +112,7 @@ SELECT EXP(10);
 ### <a name="d-finding-exponential-values-and-natural-logarithms"></a>Г. Нахождение значений экспоненты и натуральных логарифмов  
  Представленный ниже пример возвращает значение экспоненты, взятой от натурального логарифма `20`, а также значение натурального логарифма, взятого от экспоненты `20`. Так как указанные функции являются обратными друг для друга, то в обоих случаях возвращается значение `20`.  
   
-```  
+```sql  
 SELECT EXP( LOG(20)), LOG( EXP(20));  
 ```  
   

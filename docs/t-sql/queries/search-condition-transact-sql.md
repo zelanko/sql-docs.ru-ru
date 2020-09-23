@@ -38,12 +38,12 @@ ms.assetid: 09974469-c5d2-4be8-bc5a-78e404660b2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d42e04e6701d086784290e6c2ba7d6d9540961e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fc6a1454ba11630128d8ab1ffbb316c6a37ff32f
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467615"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115881"
 ---
 # <a name="search-condition-transact-sql"></a>Условие поиска (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -211,7 +211,7 @@ ms.locfileid: "88467615"
 ### <a name="a-using-where-with-like-and-escape-syntax"></a>A. Использование предложения WHERE с синтаксисом LIKE и ESCAPE  
  В ходе выполнения следующего примера производится поиск строк, для которых элементы столбца `LargePhotoFileName` содержат символы `green_`, а также для символа-шаблона _ используется параметр `ESCAPE`. Без указания параметра `ESCAPE` в ходе выполнения запроса будет производиться поиск всех описанных значений, содержащих слово `green`, за которым следует любой единичный символ, отличный от _.  
   
-```  
+```sql
 USE AdventureWorks2012 ;  
 GO  
 SELECT *   
@@ -222,7 +222,7 @@ WHERE LargePhotoFileName LIKE '%greena_%' ESCAPE 'a' ;
 ### <a name="b-using-where-and-like-syntax-with-unicode-data"></a>Б. Использование предложения WHERE и синтаксиса LIKE с данными в Юникоде  
  В следующем примере используется предложение `WHERE` для отображения всех адресов офисов компаний, находящихся за пределами США (`US`) и в городах, названия которых начинаются с `Pa`.  
   
-```  
+```sql
 USE AdventureWorks2012 ;  
 GO  
 SELECT AddressLine1, AddressLine2, City, PostalCode, CountryRegionCode    
@@ -237,7 +237,7 @@ AND City LIKE N'Pa%' ;
 ### <a name="c-using-where-with-like"></a>В. Использование предложения WHERE с LIKE  
  В следующем примере производится поиск строк, в которых столбец `LastName` содержат символы `and`.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, LastName  
@@ -248,7 +248,7 @@ WHERE LastName LIKE '%and%';
 ### <a name="d-using-where-and-like-syntax-with-unicode-data"></a>Г. Использование предложения WHERE и синтаксиса LIKE с данными в Юникоде  
  В следующем примере используется предложение `WHERE` для выполнения поиска в формате Юникод в столбце `LastName`.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, LastName  

@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 30942bd7f9c5ff8180eb9adfddedff72d1d97f05
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 04e11f27d26a7979dfc84b29d7c7de1b02eb02ab
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552579"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115431"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 
@@ -181,7 +181,7 @@ CONTAINS (
 ```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @SearchWord varchar(30)  
+DECLARE @SearchWord VARCHAR(30)  
 SET @SearchWord ='performance'  
 SELECT Description   
 FROM Production.ProductDescription   
@@ -193,7 +193,7 @@ WHERE CONTAINS(Description, @SearchWord);
 ```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @SearchWord nvarchar(30)  
+DECLARE @SearchWord NVARCHAR(30)  
 SET @SearchWord = N'performance'  
 SELECT Description   
 FROM Production.ProductDescription   
@@ -256,7 +256,7 @@ WHERE CONTAINS(Description, @SearchWord);
   
  По умолчанию настраиваемое выражение с учетом расположения возвращает строки, которые содержат указанные выражения, вне зависимости от расстояния между ними и порядка расположения. Например, для соответствия следующему запросу документ должен просто содержать `term1` и «`term3 term4`» в любом месте, в любом порядке:  
   
-```  
+```sql  
 CONTAINS(column_name, 'NEAR(term1,"term3 term4")')  
 ```  
   
@@ -270,13 +270,13 @@ CONTAINS(column_name, 'NEAR(term1,"term3 term4")')
   
  Например, следующий запрос ищет `AA` и `BB` в любом порядке с максимальным расстоянием в пять выражений.  
   
-```  
+```sql  
 CONTAINS(column_name, 'NEAR((AA,BB),5)')  
 ```  
   
  Строка `AA one two three four five BB` будет найдена. В следующем примере запрос содержит три поисковых выражения — `AA`, `BB` и `CC` с максимальным расстоянием в пять слов:  
   
-```  
+```sql  
 CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')  
 ```  
   
@@ -304,7 +304,7 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
   
  Например, следующее выражение с учетом расположения ищет слова «`Monday`», «`Tuesday`» и «`Wednesday`» в заданном порядке вне зависимости от расстояния между ними:  
   
-```  
+```sql  
 CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')  
 ```  
   
@@ -468,7 +468,7 @@ GO
 ```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @SearchWord nvarchar(30)  
+DECLARE @SearchWord NVARCHAR(30)  
 SET @SearchWord = N'Performance'  
 SELECT Description   
 FROM Production.ProductDescription   

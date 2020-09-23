@@ -35,11 +35,11 @@
     - name: Модули
       items:
         - name: Обзор расширений
-          href: extensions.md
+          href: extensions/add-extensions.md
         - name: "Расширение Azure\_Arc"
           href: extensions/azure-arc-extension.md
         - name: Расширение виртуализации данных
-          href: data-virtualization-extension.md
+          href: extensions/data-virtualization-extension.md
         - name: "Расширение Data\_Explorer"
           href: extensions/kusto-extension.md
         - name: Расширение "Машинное обучение"
@@ -55,39 +55,39 @@
         - name: Расширение для Управляемого экземпляра
           href: extensions/azure-sql-managed-instance-extension.md
         - name: Расширение PostgreSQL
-          href: postgres-extension.md
+          href: extensions/postgres-extension.md
         - name: Расширение PowerShell
-          href: powershell-extension.md
+          href: extensions/powershell-extension.md
         - name: Расширение SandDance
           href: sanddance-extension.md
         - name: Расширение сравнения схем
-          href: schema-compare-extension.md
+          href: extensions/schema-compare-extension.md
         - name: Расширение проектов Баз данных SQL
           items:
             - name: Обзор расширения "Проекты Баз данных SQL"
-              href: sql-database-project-extension.md
+              href: extensions/sql-database-project-extension.md
             - name: Начало работы с расширением "Проекты Баз данных SQL"
-              href: sql-database-project-extension-getting-started.md
+              href: extensions/sql-database-project-extension-getting-started.md
             - name: Сборка и публикация проекта
-              href: sql-database-project-extension-build.md
+              href: extensions/sql-database-project-extension-build.md
             - name: Сборка проекта из командной строки
-              href: sql-database-project-extension-build-from-command-line.md
+              href: extensions/sql-database-project-extension-build-from-command-line.md
         - name: "Агент SQL\_Server"
-          href: sql-server-agent-extension.md
+          href: extensions/sql-server-agent-extension.md
         - name: Расширение центральных серверов управления SQL Server
-          href: sql-server-cms-extension.md
+          href: extensions/sql-server-cms-extension.md
         - name: Расширение DACPAC-файлов SQL Server
-          href: sql-server-dacpac-extension.md
+          href: extensions/sql-server-dacpac-extension.md
         - name: "Импорт SQL\_Server"
-          href: sql-server-import-extension.md
+          href: extensions/sql-server-import-extension.md
         - name: Приложение SQL Server Profiler
-          href: sql-server-profiler-extension.md
+          href: extensions/sql-server-profiler-extension.md
     - name: Разработка расширений
       items:
         - name: Обзор расширяемости
           href: extensibility.md
         - name: Разработка расширений
-          href: extension-authoring.md
+          href: extensions/extension-authoring.md
         - name: API расширяемости
           href: extensibility-apis.md
         - name: Расширение раскладки клавиатуры

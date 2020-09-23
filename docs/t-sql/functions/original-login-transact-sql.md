@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: ddfb0991-cde3-4b97-a5b7-ee450133f160
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f2df0bdf310b0096d1bad89d6815ed4dd1aa65bb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eea845c7ebe9b40db0d5dfc2b09a7f69d94321f2
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88363820"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115858"
 ---
 # <a name="original_login-transact-sql"></a>ORIGINAL_LOGIN (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,8 +38,7 @@ ms.locfileid: "88363820"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
-  
+```syntaxsql
 ORIGINAL_LOGIN( )  
 ```  
   
@@ -58,7 +57,7 @@ ORIGINAL_LOGIN( )
   >[!NOTE]
   > Несмотря на то, что функция ORIGINAL_LOGIN поддерживается в базе данных SQL Azure, приведенный ниже сценарий завершится ошибкой, поскольку *Execute as LOGIN* не поддерживается в базе данных SQL Azure. 
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 --Create a temporary login and user.  

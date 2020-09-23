@@ -22,12 +22,12 @@ ms.assetid: 03871fc6-9592-4016-b0b2-ff543f132b20
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0354d701b2f6037fa9f7489dcc67f344e987dbdc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 07e79295f8beab364037a6ef7143d95745d3fb30
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459876"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116759"
 ---
 # <a name="dense_rank-transact-sql"></a>DENSE_RANK (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88459876"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```syntaxsql  
 DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )  
 ```  
   
@@ -66,7 +66,7 @@ DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )
 ### <a name="a-ranking-rows-within-a-partition"></a>A. Ранжирование строк внутри секции  
 В приведенном ниже примере продукты ранжируются по количеству в указанных местоположениях в описи. Функция `DENSE_RANK` секционирует результирующий набор по `LocationID` и логически сортирует его по `Quantity`. Обратите внимание, что количество продуктов 494 и 495 совпадает. Так как они имеют одинаковое значение количества, им обоим присваивается значение ранга 1.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT i.ProductID, p.Name, i.LocationID, i.Quantity  
@@ -103,7 +103,7 @@ ProductID   Name                               LocationID Quantity Rank
 ### <a name="b-ranking-all-rows-in-a-result-set"></a>Б. Ранжирование всех строк в результирующем наборе  
 В приведенном ниже примере возвращается список первых десяти сотрудников, ранжированных по окладу. Так как в инструкции `SELECT` предложение `PARTITION BY` не указывалось, функция `DENSE_RANK` применялась ко всем строкам результирующего набора.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT TOP(10) BusinessEntityID, Rate,   
@@ -138,7 +138,7 @@ BusinessEntityID Rate                  RankBySalary
 
 Они используются в одном запросе. См. конкретные примеры по каждой ранжирующей функции.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT p.FirstName, p.LastName  
@@ -180,7 +180,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 ### <a name="d-ranking-rows-within-a-partition"></a>Г. Ранжирование строк внутри секции  
 В приведенном ниже примере торговые представители на каждой территории продаж ранжируются в соответствии с общим объемом продаж. Функция `DENSE_RANK` секционирует набор строк по `SalesTerritoryGroup` и логически сортирует результирующий набор по `SalesAmountQuota`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LastName, SUM(SalesAmountQuota) AS TotalSales, SalesTerritoryGroup,  

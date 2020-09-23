@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 15b156950ff752e96dc332c4071dbc748013aa3f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b7a386f058a442a984ba45b3be58bba5e9bb2e1
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459900"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116150"
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,6 @@ ms.locfileid: "88459900"
 ## <a name="syntax"></a>Синтаксис  
   
 ```syntaxsql
-  
 DBCC CHECKFILEGROUP   
 [  
     [ ( { filegroup_name | filegroup_id | 0 }   
@@ -156,7 +155,7 @@ DBCC CHECKFILEGROUP
 -   кроме случаев, когда заданы параметры ESTIMATEONLY или NO_INFOMSGS;  
 -   для текущей базы данных, если база данных не указана, независимо от того, заданы ли какие-либо аргументы (кроме NOINDEX).  
   
-```sql
+```
 DBCC results for 'master'.  
 DBCC results for 'sys.sysrowsetcolumns'.  
 There are 630 rows in 7 pages for object 'sys.sysrowsetcolumns'.  
@@ -174,12 +173,12 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 Если задан аргумент NO_INFOMSGS, инструкция DBCC CHECKFILEGROUP возвращает:
   
-```sql
+```
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
  Если задан аргумент ESTIMATEONLY, инструкция DBCC CHECKFILEGROUP возвращает следующее (значения могут различаться):  
 
-```sql
+```
 Estimated TEMPDB space needed for CHECKALLOC (KB)
 -------------------------------------------------   
 15  
@@ -202,8 +201,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ### <a name="a-checking-the-primary-filegroup-in-the-a-database"></a>A. Проверка файловой группы PRIMARY в базе данных  
 В следующем примере выполняется проверка первичной файловой группы текущей базы данных.
   
-```sql  
-  
+```sql
 DBCC CHECKFILEGROUP;  
 GO  
 ```  
@@ -211,7 +209,7 @@ GO
 ### <a name="b-checking-the-adventureworks-primary-filegroup-without-nonclustered-indexes"></a>Б. Проверка первичной файловой группы (PRIMARY) базы данных AdventureWorks без некластеризованных индексов  
 В приведенном ниже примере выполняется проверка первичной файловой группы базы данных `AdventureWorks2012` (за исключением некластеризованных индексов) путем указания идентификационного номера первичной файловой группы, а также параметра `NOINDEX`.
   
-```sql  
+```sql
 USE AdventureWorks2012;  
 GO  
 DBCC CHECKFILEGROUP (1, NOINDEX);  
@@ -221,7 +219,7 @@ GO
 ### <a name="c-checking-the-primary-filegroup-with-options"></a>В. Проверка первичной файловой группы с параметрами  
 В следующем примере выполняется проверка первичной файловой группы базы данных `master` с указанием параметра `ESTIMATEONLY`.
   
-```sql  
+```sql
 USE master;  
 GO  
 DBCC CHECKFILEGROUP (1)  

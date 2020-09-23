@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9ac95b5d2fc71636ca55a29e0d82a2a35f13b816
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c82909bb5a128ee0a1dff9fa48b0a213a3c931e4
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88306745"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115409"
 ---
 # <a name="table-value-constructor-transact-sql"></a>Конструктор табличных значений (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +35,6 @@ ms.locfileid: "88306745"
 ## <a name="syntax"></a>Синтаксис  
   
 ```syntaxsql
-  
 VALUES ( <row value expression list> ) [ ,...n ]   
   
 <row value expression list> ::=  
@@ -75,7 +74,7 @@ VALUES ( <row value expression list> ) [ ,...n ]
 ```sql
 USE AdventureWorks2012;  
 GO  
-CREATE TABLE dbo.MyProducts (Name varchar(50), ListPrice money);  
+CREATE TABLE dbo.MyProducts (Name VARCHAR(50), ListPrice MONEY);  
 GO  
 -- This statement fails because the third values list contains multiple columns in the subquery.  
 INSERT INTO dbo.MyProducts (Name, ListPrice)  
@@ -100,7 +99,7 @@ GO
  Значения, указанные в инструкции INSERT для нескольких строк, соблюдают правила преобразования типов данных для синтаксиса UNION ALL. В результате выполняется неявное преобразование несовпадающих типов к типу с более высоким [приоритетом](../../t-sql/data-types/data-type-precedence-transact-sql.md). Если неявное преобразование не поддерживается, возвращается ошибка. Например, следующая инструкция вставляет целочисленное значение и символьное значение в столбец типа **char**.  
   
 ```sql
-CREATE TABLE dbo.t (a int, b char);  
+CREATE TABLE dbo.t (a INT, b CHAR);  
 GO  
 INSERT INTO dbo.t VALUES (1,'a'), (2, 1);  
 GO  
@@ -185,7 +184,7 @@ GROUP BY Change;
   Следующий пример демонстрирует использование конструктора табличных значений в виде производной таблицы. Это позволяет вставить более 1000 строк из одного конструктора табличных значений.
   
 ```sql
-CREATE TABLE dbo.Test ([Value] int);  
+CREATE TABLE dbo.Test ([Value] INT);  
   
 INSERT INTO dbo.Test ([Value])  
   SELECT drvd.[NewVal]

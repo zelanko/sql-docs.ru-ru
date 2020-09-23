@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7c4133965870627a475fc7314f55952c38694a6e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7efecb0dbecf4ae7e4d9d142eb6f3bff3f94d616
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426516"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116541"
 ---
 # <a name="replace-value-of-xml-dml"></a>replace value of (XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "88426516"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```sql
+```syntaxsql
 replace value of Expression1   
 with Expression2  
 ```  
@@ -53,7 +53,7 @@ with Expression2
 В следующем примере экземпляр документа сначала присваивается переменной типа  **xml**. Затем инструкции **replace value of** XML DML обновят значения в документе.  
   
 ```sql
-DECLARE @myDoc xml;  
+DECLARE @myDoc XML;  
 SET @myDoc = '<Root>  
 <Location LocationID="10"   
             LaborHours="1.1"  
@@ -67,13 +67,13 @@ SELECT @myDoc;
 -- update text in the first manufacturing step  
 SET @myDoc.modify('  
   replace value of (/Root/Location/step[1]/text())[1]  
-  with     "new text describing the manu step"  
+  with "new text describing the manu step"  
 ');  
 SELECT @myDoc;  
 -- update attribute value  
 SET @myDoc.modify('  
   replace value of (/Root/Location/@LaborHours)[1]  
-  with     "100.0"  
+  with "100.0"  
 ');  
 SELECT @myDoc;  
 ```  
@@ -84,7 +84,7 @@ SELECT @myDoc;
 Можно указать выражение **if** в Expression2 инструкции **replace value of**, как показано в следующем примере. Expression1 определяет, что атрибут LaborHours первого рабочего центра должен быть обновлен. Expression2 использует выражение **if** для определения нового значения атрибута LaborHours.  
   
 ```sql
-DECLARE @myDoc xml  
+DECLARE @myDoc XML  
 SET @myDoc = '<Root>  
 <Location LocationID="10"   
             LaborHours=".1"  
@@ -111,10 +111,10 @@ SELECT @myDoc
 Следующий пример обновляет XML, сохраненный в столбце:  
   
 ```sql
-drop table T  
-go  
-CREATE TABLE T (i int, x xml)  
-go  
+DROP TABLE T  
+GO  
+CREATE TABLE T (i INT, x XML)  
+GO  
 INSERT INTO T VALUES(1,'<Root>  
 <ProductDescription ProductID="1" ProductName="Road Bike">  
 <Features>  
@@ -143,52 +143,53 @@ FROM T
 В примере сначала создается таблица (T) с типизированным столбцом XML в базе данных AdventureWorks. Затем копируются производственные инструкции экземпляра XML из столбца Instructions в таблице ProductModel в таблицу T. После этого вставленные данные применяются к XML в таблице T.  
   
 ```sql
-use AdventureWorks  
-go  
-drop table T  
-go  
-create table T(ProductModelID int primary key,   
-Instructions xml (Production.ManuInstructionsSchemaCollection))  
-go  
-insert  T   
-select ProductModelID, Instructions  
-from Production.ProductModel  
-where ProductModelID=7  
-go  
+USE AdventureWorks  
+GO  
+DROP TABLE T  
+GO  
+CREATE TABLE T(
+  ProductModelID INT PRIMARY KEY,   
+  Instructions XML (Production.ManuInstructionsSchemaCollection))  
+GO  
+INSERT T   
+SELECT ProductModelID, Instructions  
+FROM Production.ProductModel  
+WHERE ProductModelID=7  
+GO
 --insert a new location - <Location 1000/>.   
-update T  
-set Instructions.modify('  
+UPDATE T  
+SET Instructions.modify('  
   declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
 insert <MI:Location LocationID="1000"  LaborHours="1000"  LotSize="1000" >  
            <MI:step>Do something using <MI:tool>hammer</MI:tool></MI:step>  
          </MI:Location>  
   as first  
-  into   (/MI:root)[1]  
+  into (/MI:root)[1]  
 ')  
-go  
-select Instructions  
-from T  
-go  
+GO  
+SELECT Instructions  
+FROM T  
+GO  
 -- Now replace manu. tool in location 1000  
-update T  
-set Instructions.modify('  
+UPDATE T  
+SET Instructions.modify('  
   declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   replace value of (/MI:root/MI:Location/MI:step/MI:tool)[1]   
-  with   "screwdriver"  
+  with "screwdriver"  
 ')  
-go  
-select Instructions  
-from T  
+GO  
+SELECT Instructions  
+FROM T  
 -- Now replace value of lot size  
-update T  
-set Instructions.modify('  
+UPDATE T  
+SET Instructions.modify('  
   declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
   replace value of (/MI:root/MI:Location/@LotSize)[1]   
-  with   500 cast as xs:decimal ?  
+  with 500 cast as xs:decimal ?  
 ')  
-go  
-select Instructions  
-from T  
+GO  
+SELECT Instructions  
+FROM T  
 ```  
   
 Обратите внимание на использование **cast** при замене значения LotSize. Это необходимо, когда значение должно иметь определенный тип. Если бы в этом примере значение было равно 500, явное приведение не требовалось бы.  

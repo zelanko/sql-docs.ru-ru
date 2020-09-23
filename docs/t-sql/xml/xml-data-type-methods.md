@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d112b9c9-be9f-435c-a9e6-d21b65778fb7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ad40f95ce20db318d475f3317e6a2ebfc0b02cf2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b139187edc98242b7b4efc03ebd53a71fe415f3
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414900"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116565"
 ---
 # <a name="xml-data-type-methods"></a>Методы типа данных XML
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +41,9 @@ ms.locfileid: "88414900"
   
  Эти методы вызываются при помощи синтаксиса вызова метода определяемого пользователем типа. Пример:  
   
-```  
+```sql
 SELECT XmlCol.query(' ... ')  
-FROM   Table  
+FROM Table  
 ```  
   
 > [!NOTE]  

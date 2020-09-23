@@ -23,12 +23,12 @@ ms.assetid: be36b3e3-3309-4332-bfb5-c7e9cf8dc8bd
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 197b3c2f473a9711f2bf79e94d400f85224d8235
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0d2e9cd5f22c0aea8b44c0e7db527be893c732f8
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445689"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116650"
 ---
 # <a name="objectpropertyex-transact-sql"></a>OBJECTPROPERTYEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88445689"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```syntaxsql  
 OBJECTPROPERTYEX ( id , property )  
 ```  
   
@@ -178,7 +178,7 @@ OBJECTPROPERTYEX ( id , property )
 ## <a name="remarks"></a>Комментарии  
  Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] предполагает, что объект с идентификатором *object_id* находится в контексте текущей базы данных. Запрос, который ссылается на *object_id* в другой базе данных, вернет значение NULL или неверный результат. Например, в приведенном ниже запросе контекст текущий базы данных — база данных master. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] попытается вернуть значение свойства для указанного аргумента *object_id* в этой базе данных, а не в той, которая указана в запросе. Запрос возвращает неверные результаты, потому что представление `vEmployee` не содержится в базе данных master.  
   
-```  
+```sql  
 USE master;  
 GO  
 SELECT OBJECTPROPERTYEX(OBJECT_ID(N'AdventureWorks2012.HumanResources.vEmployee'), 'IsView');  
@@ -196,7 +196,7 @@ GO
 ### <a name="a-finding-the-base-type-of-an-object"></a>A. Определение базового типа объекта  
  В следующем примере производится создание синонима `MyEmployeeTable` для таблицы `Employee` в базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], а затем для него определяется базовый тип.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE SYNONYM MyEmployeeTable FOR HumanResources.Employee;  
@@ -216,18 +216,17 @@ U
 ### <a name="b-returning-a-property-value"></a>Б. Получение значения свойства  
  Следующий пример показывает, как получить число триггеров UPDATE для указанной таблицы.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT OBJECTPROPERTYEX(OBJECT_ID(N'HumanResources.Employee'), N'TABLEUPDATETRIGGERCOUNT');  
 GO  
-  
 ```  
   
 ### <a name="c-finding-tables-that-have-a-foreign-key-constraint"></a>В. Поиск таблиц с ограничением FOREIGN KEY  
  В следующих примерах для возврата всех таблиц с ограничением внешнего ключа используется свойство `TableHasForeignKey`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT name, object_id, schema_id, type_desc  
@@ -235,7 +234,6 @@ FROM sys.objects
 WHERE OBJECTPROPERTYEX(object_id, N'TableHasForeignKey') = 1  
 ORDER BY name;  
 GO  
-  
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
@@ -243,7 +241,7 @@ GO
 ### <a name="d-finding-the-base-type-of-an-object"></a>Г. Определение базового типа объекта  
  В представленном ниже примере возвращается базовый тип объекта `dbo.DimReseller`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT OBJECTPROPERTYEX ( object_id(N'dbo.DimReseller'), N'BaseType')AS BaseType;  

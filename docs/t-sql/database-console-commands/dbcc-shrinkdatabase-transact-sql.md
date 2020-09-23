@@ -29,12 +29,12 @@ ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: 57cab52a5edfde4e7469243d7d57ede2e22c0161
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: 82a558d445d93e007b9402425426815922c7043b
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076616"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115589"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
 [!INCLUDE [sql-asdb-asa.md](../../includes/applies-to-version/sql-asdb-asa.md)]
@@ -152,7 +152,7 @@ WITH NO_INFOMSGS
 ## <a name="troubleshooting"></a>Устранение неполадок  
 Операции сжатия могут быть блокированы транзакцией, запущенной с [уровнем изоляции, основанным на управлении версиями строк](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md). Например, если выполняется масштабная операция удаления под уровнем изоляции с управлением версиями строк, когда запускается инструкция DBCC SHRINK DATABASE. Когда это происходит, операция сжатия будет ожидать, пока завершится операция удаления, прежде чем приступить к сжатию файлов. При возникновении такого ожидания для операций DBCC SHRINKFILE и DBCC SHRINKDATABASE выводится информационное сообщение (5202 для SHRINKDATABASE и 5203 для SHRINKFILE). Это сообщение выводится в журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] каждые пять минут в течение первого часа, а затем каждый последующий час. Например, журнал ошибок содержит следующее сообщение об ошибке:  
   
-```sql
+```
 DBCC SHRINKDATABASE for database ID 9 is waiting for the snapshot   
 transaction with timestamp 15 and other snapshot transactions linked to   
 timestamp 15 or with timestamps older than 109 to finish.  
@@ -186,7 +186,7 @@ DBCC SHRINKDATABASE (AdventureWorks2012, TRUNCATEONLY);
 ```  
 ### <a name="c-shrinking-an-azure-synapse-analytics-database"></a>В. Сжатие базы данных Azure Synapse Analytics
 
-```
+```sql
 DBCC SHRINKDATABASE (database_A);
 DBCC SHRINKDATABASE (database_B, 10); 
 

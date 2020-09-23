@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 203b53928ee41dcc75194cef6171959cdc08dd71
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7d7d3c9e8fa3e67a4ee6ba5c2eb2590ee65c18b2
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479799"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115584"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +47,6 @@ ms.locfileid: "88479799"
 ## <a name="syntax"></a>Синтаксис  
   
 ```syntaxsql
-  
 DBCC SHRINKFILE   
 (  
     { file_name | file_id }   
@@ -158,7 +157,7 @@ FROM sys.database_files;
 
 Транзакция, запущенная [под уровнем изоляции с управлением версиями строк](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md), может блокировать операции сжатия. Например, если выполняется масштабная операция удаления под уровнем изоляции с управлением версиями строк, запущенная инструкция DBCC SHRINK DATABASE будет ожидать, пока завершится такая операция удаления, прежде чем приступить к сжатию файлов. При возникновении такой блокировки для операций DBCC SHRINKFILE и DBCC SHRINKDATABASE в журнале ошибок SQL Server выводится информационное сообщение (5202 для SHRINKDATABASE и 5203 для SHRINKFILE). Это сообщение регистрируется каждые 5 минут в течение первого часа, а затем по одному разу каждый час Например, если журнал ошибок содержит следующее сообщение об ошибке, произойдет следующая ошибка.
   
-```sql
+```
 DBCC SHRINKFILE for file ID 1 is waiting for the snapshot   
 transaction with timestamp 15 and other snapshot transactions linked to   
 timestamp 15 or with timestamps older than 109 to finish.  

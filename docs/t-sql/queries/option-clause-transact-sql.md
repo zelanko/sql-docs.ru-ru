@@ -22,12 +22,12 @@ ms.assetid: f47e2f3f-9302-4711-9d66-16b1a2a7ffe3
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 362909e9cd98536d97751787820a5df0c08ed101
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 93981415431e8f42e653f5538ca8dd164f482ba2
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459163"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116299"
 ---
 # <a name="option-clause-transact-sql"></a>Предложение OPTION (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -74,7 +74,7 @@ OPTION ( <query_option> [ ,...n ] )
 ### <a name="a-using-an-option-clause-with-a-group-by-clause"></a>A. Использование предложения OPTION с предложением GROUP BY  
  В следующем примере демонстрируется совместное использование предложений `OPTION` и `GROUP BY`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, OrderQty, SUM(LineTotal) AS Total  
@@ -91,7 +91,7 @@ GO
 ### <a name="b-select-statement-with-a-label-in-the-option-clause"></a>Б. Инструкция SELECT с меткой в предложении OPTION  
  В приведенном ниже примере показана простая инструкция [!INCLUDE[ssDW](../../includes/ssdw-md.md)] SELECT с меткой в предложении OPTION.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT * FROM FactResellerSales  
@@ -101,7 +101,7 @@ SELECT * FROM FactResellerSales
 ### <a name="c-select-statement-with-a-query-hint-in-the-option-clause"></a>В. Инструкция SELECT с указанием запроса в предложении OPTION  
  В приведенном ниже примере показана инструкция SELECT, в которой используется указание запроса HASH JOIN в предложении OPTION.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT COUNT (*) FROM dbo.DimCustomer a  
@@ -113,7 +113,7 @@ OPTION (HASH JOIN);
 ### <a name="d-select-statement-with-a-label-and-multiple-query-hints-in-the-option-clause"></a>Г. Инструкция SELECT с меткой и несколькими указаниями запроса в предложении OPTION  
  В приведенном ниже примере инструкция [!INCLUDE[ssDW](../../includes/ssdw-md.md)] SELECT содержит метку и несколько указаний запроса. При выполнении запроса в вычислительных узлах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет применять хэш-соединение или соединение слиянием в зависимости от стратегии, которую [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определит как оптимальную.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT COUNT (*) FROM dbo.DimCustomer a  
@@ -125,7 +125,7 @@ OPTION ( Label = 'CustJoin', HASH JOIN, MERGE JOIN);
 ### <a name="e-using-a-query-hint-when-querying-a-view"></a>Д. Использование указания запроса при запросе представления  
  В приведенном ниже примере создается представление с именем CustomerView, а затем указание запроса HASH JOIN используется в запросе, который ссылается на представление и таблицу.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 CREATE VIEW CustomerView  
@@ -137,14 +137,13 @@ INNER JOIN dbo.FactInternetSales b
 ON (a.CustomerKey = b.CustomerKey)  
 OPTION (HASH JOIN);  
   
-DROP VIEW CustomerView;  
-  
+DROP VIEW CustomerView;
 ```  
   
 ### <a name="f-query-with-a-subselect-and-a-query-hint"></a>Е. Запрос с подвыборкой и указанием запроса  
  В приведенном ниже примере показан запрос, который содержит как подвыборку, так и указание запроса. Указание запроса применяется глобально. Указания запроса нельзя добавлять к инструкции подвыборки.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 CREATE VIEW CustomerView AS  
@@ -160,7 +159,7 @@ OPTION (HASH JOIN);
 ### <a name="g-force-the-join-order-to-match-the-order-in-the-query"></a>Ж. Принудительное соответствие порядка соединения порядку в запросе  
  В приведенном ниже примере с помощью указания FORCE ORDER настраивается принудительное использование планом запроса порядка соединения, указанного в запросе. Это повышает производительность некоторых, но не всех запросов.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 -- Obtain partition numbers, boundary values, boundary value types, and rows per boundary  
@@ -181,7 +180,7 @@ OPTION ( FORCE ORDER )
 ### <a name="h-using-externalpushdown"></a>З. Использование EXTERNALPUSHDOWN  
  В приведенном ниже примере предложение WHERE принудительно передается в задание MapReduce во внешней таблице Hadoop.  
   
-```  
+```sql
 SELECT ID FROM External_Table_AS A   
 WHERE ID < 1000000  
 OPTION (FORCE EXTERNALPUSHDOWN);  
@@ -189,7 +188,7 @@ OPTION (FORCE EXTERNALPUSHDOWN);
   
  В приведенном ниже примере запрещается передача предложения WHERE в задание MapReduce во внешней таблице Hadoop. Все строки будут возвращены В PDW, где применяется предложение WHERE.  
   
-```  
+```sql
 SELECT ID FROM External_Table_AS A   
 WHERE ID < 10  
 OPTION (DISABLE EXTERNALPUSHDOWN);  

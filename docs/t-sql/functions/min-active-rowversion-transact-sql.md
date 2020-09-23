@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 87c89547-8ea1-4820-b75e-36be683e4e10
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7a1c89e9c841e196079e09eecb4e5f359a7f5d32
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+ms.openlocfilehash: 61304621317ee302585102acdd82198fd90baedd
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093418"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115976"
 ---
 # <a name="min_active_rowversion-transact-sql"></a>MIN_ACTIVE_ROWVERSION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "89093418"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```syntaxsql  
 MIN_ACTIVE_ROWVERSION ( ) 
 ```  
   
@@ -46,7 +46,7 @@ MIN_ACTIVE_ROWVERSION ( )
 ## <a name="return-types"></a>Типы возвращаемых данных
  Возвращает значение **binary(8)**.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  MIN_ACTIVE_ROWVERSION — это недетерминированная функция, возвращающая наименьшее активное значение **rowversion** в текущей базе данных. Новое значение **rowversion** обычно формируется, когда в таблице, содержащей столбец с типом **rowversion**, производится операция вставки или обновления. Если в базе данных не существует активных значений, то функция MIN_ACTIVE_ROWVERSION возвращает то же значение, что и @@DBTS + 1.  
   
  Функция MIN_ACTIVE_ROWVERSION полезна, например, когда при синхронизации данных значения **rowversion** используются для группирования наборов изменений. Если приложение использует функцию @@DBTS, а не MIN_ACTIVE_ROWVERSION, могут быть пропущены изменения, произведенные во время синхронизации.  
@@ -56,7 +56,7 @@ MIN_ACTIVE_ROWVERSION ( )
 ## <a name="examples"></a>Примеры  
  В приведенном ниже примере значения **rowversion** возвращаются с помощью функций `MIN_ACTIVE_ROWVERSION` и `@@DBTS`. Обратите внимание, что при отсутствии в базе данных активных транзакций эти значения будут другими.  
   
-```  
+```sql  
 -- Create a table that has a ROWVERSION column in it.  
 CREATE TABLE RowVersionTestTable (rv ROWVERSION)  
 GO  

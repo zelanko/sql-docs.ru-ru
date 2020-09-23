@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 26add1c0-56e5-47a8-b489-ae56784a7ee9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7d68d76993a04de667625bc60a3323cc8fadaeab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 68d147d687b094ee579a904b23910da2ea93bd2b
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468041"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116433"
 ---
 # <a name="filegroup_name-transact-sql"></a>FILEGROUP_NAME (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88468041"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```syntaxsql  
 FILEGROUP_NAME ( filegroup_id )   
 ```  
   
@@ -61,7 +61,7 @@ FILEGROUP_NAME ( filegroup_id )
 ## <a name="examples"></a>Примеры  
 В этом примере показано, как вернуть имя файловой группы для идентификатора файловой группы `1` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql  
 SELECT FILEGROUP_NAME(1) AS [Filegroup Name];  
 GO  
 ```  

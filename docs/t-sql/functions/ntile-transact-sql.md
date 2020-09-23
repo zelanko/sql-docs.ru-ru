@@ -22,12 +22,12 @@ ms.assetid: 1c364511-d72a-4789-8efa-3cf2a1f6b791
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35d727c113b3417aaebcc21b7f512438f6d6f706
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b5193c024a12af667e1765abc24a4ffb8961edbc
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417270"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115982"
 ---
 # <a name="ntile-transact-sql"></a>NTILE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -67,7 +67,7 @@ NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > 
 ### <a name="a-dividing-rows-into-groups"></a>A. Разделение строк на группы  
  Следующий пример делит строки на четыре группы сотрудников по их показателям продаж за текущий год. Так как общее число строк не делится на количество групп, первые две группы будут состоять из четырех строк, а остальные — из трех.  
   
-```  
+```sql  
 USE AdventureWorks2012;   
 GO  
 SELECT p.FirstName, p.LastName  
@@ -111,10 +111,10 @@ Pamela         Ansman-Wolfe          4         1,352,577.13   98027
 ### <a name="b-dividing-the-result-set-by-using-partition-by"></a>Б. Разделение результирующего набора с помощью ключевого слова PARTITION BY  
  В следующем примере к коду из примера A добавляется аргумент `PARTITION BY`. Строки вначале разделяются по столбцу `PostalCode`, а затем разделяются на четыре группы для каждого значения `PostalCode`. В этом примере также объявляется переменная `@NTILE_Var`, которая используется для указания значения параметра *integer_expression*.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @NTILE_Var int = 4;  
+DECLARE @NTILE_Var INT = 4;  
   
 SELECT p.FirstName, p.LastName  
     ,NTILE(@NTILE_Var) OVER(PARTITION BY PostalCode ORDER BY SalesYTD DESC) AS Quartile  
@@ -158,7 +158,7 @@ Lynn         Tsoflias             4        1,421,810.92  98055
 ### <a name="c-dividing-rows-into-groups"></a>В. Разделение строк на группы  
  В приведенном ниже примере функция NTILE используется для разделения множества продавцов на четыре группы в соответствии с назначенными им квотами на продажу в 2003 году. Так как общее число строк не делится на количество групп, первая группа будет состоять из пяти строк, а остальные — из четырех.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT e.LastName, NTILE(4) OVER(ORDER BY SUM(SalesAmountQuota) DESC) AS Quartile,  
@@ -198,7 +198,7 @@ Tsoflias          4          867,000.00
 ### <a name="d-dividing-the-result-set-by-using-partition-by"></a>Г. Разделение результирующего набора с помощью ключевого слова PARTITION BY  
  В приведенном ниже примере к коду из примера A добавляется аргумент PARTITION BY. Строки сначала разделяются по столбцу `SalesTerritoryCountry`, а затем разделяются на две группы для каждого значения `SalesTerritoryCountry`. Обратите внимание на то, что ORDER BY в предложении OVER упорядочивает NTILE, а ORDER BY в инструкции SELECT упорядочивает результирующий набор.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT e.LastName, NTILE(2) OVER(PARTITION BY e.SalesTerritoryKey ORDER BY SUM(SalesAmountQuota) DESC) AS Quartile,  
