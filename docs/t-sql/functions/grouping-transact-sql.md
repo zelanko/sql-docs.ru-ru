@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 4efa3868-1fc4-4626-8fb1-e863cc03e422
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6618a42226981241e893bc0a930b1028af114074
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1bc82a8f0afe1b2758a7c78a88b4813b7d103b4e
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479703"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114802"
 ---
 # <a name="grouping-transact-sql"></a>GROUPING (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -39,8 +39,7 @@ ms.locfileid: "88479703"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
-  
+```syntaxsql
 GROUPING ( <column_expression> )  
 ```  
   
@@ -59,7 +58,7 @@ GROUPING ( <column_expression> )
 ## <a name="examples"></a>Примеры  
  В следующем примере производится группирование `SalesQuota` и статистическая обработка сумм `SaleYTD` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Функция `GROUPING` применяется к столбцу `SalesQuota`.  
   
-```  
+```sql 
 SELECT SalesQuota, SUM(SalesYTD) 'TotalSalesYTD', GROUPING(SalesQuota) AS 'Grouping'  
 FROM Sales.SalesPerson  
 GROUP BY SalesQuota WITH ROLLUP;  
