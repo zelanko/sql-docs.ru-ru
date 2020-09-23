@@ -1831,7 +1831,7 @@
           items:
             - name: Создание
               href: relational-databases/tables/create-edge-constraints.md
-            - name: Удалить
+            - name: DELETE
               href: relational-databases/tables/delete-edge-constraint.md
             - name: Изменить
               href: relational-databases/tables/modify-edge-constraint.md
@@ -10124,6 +10124,18 @@
       href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
     - name: "SQL\_Server на виртуальной машине Azure\_>"
       href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
+- name: "SQL Server с поддержкой Azure\_Arc (предварительная версия)"
+  items:
+    - name: Обзор
+      href: sql-server/azure-arc/overview.md
+    - name: Подключение
+      href: sql-server/azure-arc/connect.md
+    - name: Подключение в большом масштабе
+      href: sql-server/azure-arc/connect-at-scale.md
+    - name: Оценка
+      href: sql-server/azure-arc/assess.md
+    - name: Настройка расширенной защиты данных
+      href: sql-server/azure-arc/configure-advanced-data-security.md
 - name: Ресурсы
   items:
     - name: Автономная документация по SQL Server

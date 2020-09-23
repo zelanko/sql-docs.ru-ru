@@ -34,8 +34,14 @@
   items:
     - name: Модули
       items:
-        - name: Модули
+        - name: Обзор расширений
           href: extensions.md
+        - name: "Расширение Azure\_Arc"
+          href: extensions/azure-arc-extension.md
+        - name: Расширение виртуализации данных
+          href: data-virtualization-extension.md
+        - name: "Расширение Data\_Explorer"
+          href: extensions/kusto-extension.md
         - name: Расширение "Машинное обучение"
           items:
             - name: Обзор расширения "Машинное обучение"
@@ -46,10 +52,16 @@
               href: machine-learning-extension-predictions.md
             - name: Импорт и просмотр моделей
               href: machine-learning-extension-import-view-models.md
+        - name: Расширение для Управляемого экземпляра
+          href: extensions/azure-sql-managed-instance-extension.md
         - name: Расширение PostgreSQL
           href: postgres-extension.md
-        - name: Расширение виртуализации данных
-          href: data-virtualization-extension.md
+        - name: Расширение PowerShell
+          href: powershell-extension.md
+        - name: Расширение SandDance
+          href: sanddance-extension.md
+        - name: Расширение сравнения схем
+          href: schema-compare-extension.md
         - name: Расширение проектов Баз данных SQL
           items:
             - name: Обзор расширения "Проекты Баз данных SQL"
@@ -70,14 +82,6 @@
           href: sql-server-import-extension.md
         - name: Приложение SQL Server Profiler
           href: sql-server-profiler-extension.md
-        - name: Расширение сравнения схем
-          href: schema-compare-extension.md
-        - name: Расширение PowerShell
-          href: powershell-extension.md
-        - name: Расширение для Управляемого экземпляра
-          href: extensions/azure-sql-managed-instance-extension.md
-        - name: Расширение SandDance
-          href: sanddance-extension.md
     - name: Разработка расширений
       items:
         - name: Обзор расширяемости
@@ -114,8 +118,14 @@
           href: notebooks-tutorial-sql-kernel.md
         - name: Использование ядра Python
           href: notebooks-tutorial-python-kernel.md
+        - name: "Использование ядра Data\_Explorer"
+          href: notebooks/notebooks-kusto-kernel.md
         - name: Расширение Kqlmagic
           href: notebooks-kqlmagic.md
+    - name: Развертывание
+      items:
+        - name: Развертывание SQL Azure для пограничных вычислений
+          href: deploy-azure-sql-edge.md
     - name: Панели мониторинга и мини-приложения аналитических сведений
       href: insight-widgets.md
     - name: Фрагменты кода

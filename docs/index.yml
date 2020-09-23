@@ -6,12 +6,12 @@ metadata:
   title: Документация по Microsoft SQL | Документация Майкрософт
   description: 'Узнайте, как использовать возможности SQL Server и SQL Azure для эффективного управления базами данных, размещаемыми как локально, так и в облаке. (Быстрая ссылка: https://aka.ms/sqldocs)'
   ms.topic: hub-page
-  ms.openlocfilehash: 5d7a6ef891d85b55c75af35e26712765f662e9c2
-  ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+  ms.openlocfilehash: 5d6fffc9d875b0581e2358f86cd5e612df5adec9
+  ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 08/06/2020
-  ms.locfileid: "87864545"
+  ms.lasthandoff: 09/22/2020
+  ms.locfileid: "90916413"
 highlightedContent:
   items:
   - title: Попробуйте SQL Server 2019
@@ -90,6 +90,9 @@ conceptualContent:
       itemType: whats-new
     - text: Службы машинного обучения SQL Server
       url: machine-learning/index.yml
+      itemType: whats-new
+    - text: SQL Server с поддержкой Azure Arc (предварительная версия)
+      url: sql-server/azure-arc/overview.md
       itemType: whats-new
   - title: Установка
     links:

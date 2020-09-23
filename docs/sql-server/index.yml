@@ -9,12 +9,12 @@ metadata:
   author: MashaMSFT
   ms.author: mathoma
   ms.date: 10/14/2019
-  ms.openlocfilehash: b65a616e3a4ab3911f746347a1ae5e6f74490b49
-  ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+  ms.openlocfilehash: 31d0046c3a81b84c926a99efce80816c5ef42a88
+  ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 08/07/2020
-  ms.locfileid: "87934140"
+  ms.lasthandoff: 09/22/2020
+  ms.locfileid: "90915481"
 landingContent:
 - title: SQL в Azure
   linkLists:
@@ -58,6 +58,8 @@ landingContent:
       url: ../azure-data-studio/what-is.md
     - text: SQL Server в Linux
       url: ../linux/sql-server-linux-overview.md
+    - text: SQL Server для Azure Arc (предварительная версия)
+      url: azure-arc/overview.md
   - linkListType: quickstart
     links:
     - text: Подключение и отправка запроса (SSMS)
@@ -98,7 +100,7 @@ landingContent:
       url: failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md
     - text: Зеркальное отображение базы данных
       url: ../database-engine/database-mirroring/database-mirroring-sql-server.md
-    - text: Доставка журналов
+    - text: доставка журналов;
       url: ../database-engine/log-shipping/about-log-shipping-sql-server.md
     - text: Репликация
       url: ../relational-databases/replication/sql-server-replication.md

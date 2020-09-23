@@ -37,7 +37,7 @@
       href: ../machine-learning/install/sql-pretrained-models-install.md
     - name: Изменение стандартной среды выполнения Python и R
       href: ../machine-learning/install/change-default-language-runtime-version.md
-    - name: Обновление Python и R
+    - name: Обновление среды выполнения Python и R через привязку
       href: ../machine-learning/install/upgrade-r-and-python.md
     - name: Записные книжки Azure Data Studio
       href: ../machine-learning/install/sql-machine-learning-azure-data-studio.md
