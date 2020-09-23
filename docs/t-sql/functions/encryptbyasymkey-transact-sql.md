@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 86bb2588-ab13-4db2-8f3c-42c9f572a67b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e2a0031163de085d6de07aaf7a0e707a5e5ac5dc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 42ffb61535beefeee149124adf7873cce78c1535
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459784"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111092"
 ---
 # <a name="encryptbyasymkey-transact-sql"></a>ENCRYPTBYASYMKEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -93,7 +93,7 @@ EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )
 ## <a name="examples"></a>Примеры  
 В приведенном ниже примере текст из переменной `@cleartext` шифруется асимметричным ключом `JanainaAsymKey02`. Инструкция вставляет зашифрованные данные в таблицу `ProtectedData04`.  
   
-```  
+```sql  
 INSERT INTO AdventureWorks2012.Sales.ProtectedData04   
     VALUES( N'Data encrypted by asymmetric key ''JanainaAsymKey02''',  
     EncryptByAsymKey(AsymKey_ID('JanainaAsymKey02'), @cleartext) );  

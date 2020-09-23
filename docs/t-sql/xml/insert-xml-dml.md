@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 138f38e4972d2f6a4359bb44194ec8188ff7bee3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 73d68149950542082127e4132db529ad18cbc03d
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496415"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91112502"
 ---
 # <a name="insert-xml-dml"></a>insert (XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,13 +31,11 @@ ms.locfileid: "88496415"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```syntaxsql
-  
-insert   
-      Expression1 (  
-                 {as first | as last} into | after | before  
-                                    Expression2  
-                )  
+```syntaxsql 
+insert Expression1 (  
+{AS first | AS last} INTO | AFTER | BEFORE  
+Expression2  
+)  
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
@@ -63,10 +61,10 @@ insert
 ### <a name="a-inserting-element-nodes-into-the-document"></a>A. Вставка узлов элементов в документ  
  В следующем примере показана вставка элементов в документ. Сначала XML-документ присваивается переменной типа **xml**. Затем с помощью нескольких XML-инструкций DML **insert** демонстрируется вставка узлов элементов в документ. После каждой операции вставки с помощью инструкции SELECT отображается результат.  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
-DECLARE @myDoc xml;         
+DECLARE @myDoc XML;         
 SET @myDoc = '<Root>         
     <ProductDescription ProductID="1" ProductName="Road Bike">         
         <Features>         
@@ -76,30 +74,30 @@ SET @myDoc = '<Root>
 SELECT @myDoc;     
 -- insert first feature child (no need to specify as first or as last)         
 SET @myDoc.modify('         
-insert <Maintenance>3 year parts and labor extended maintenance is available</Maintenance>   
-into (/Root/ProductDescription/Features)[1]') ;  
+INSERT <Maintenance>3 year parts and labor extended maintenance is available</Maintenance>   
+INTO (/Root/ProductDescription/Features)[1]') ;  
 SELECT @myDoc ;        
 -- insert second feature. We want this to be the first in sequence so use 'as first'         
-set @myDoc.modify('         
-insert <Warranty>1 year parts and labor</Warranty>          
-as first         
-into (/Root/ProductDescription/Features)[1]         
+SET @myDoc.modify('         
+INSERT <Warranty>1 year parts and labor</Warranty>          
+AS first         
+INTO (/Root/ProductDescription/Features)[1]         
 ')  ;       
 SELECT @myDoc  ;       
 -- insert third feature child. This one is the last child of <Features> so use 'as last'         
 SELECT @myDoc         
 SET @myDoc.modify('         
-insert <Material>Aluminium</Material>          
-as last         
-into (/Root/ProductDescription/Features)[1]         
+INSERT <Material>Aluminium</Material>          
+AS last         
+INTO (/Root/ProductDescription/Features)[1]         
 ')         
 SELECT @myDoc ;        
 -- Add fourth feature - this time as a sibling (and not a child)         
 -- 'after' keyword is used (instead of as first or as last child)         
 SELECT @myDoc  ;       
-set @myDoc.modify('         
-insert <BikeFrame>Strong long lasting</BikeFrame>   
-after (/Root/ProductDescription/Features/Material)[1]         
+SET @myDoc.modify('         
+INSERT <BikeFrame>Strong long lasting</BikeFrame>   
+AFTER (/Root/ProductDescription/Features/Material)[1]         
 ')  ;       
 SELECT @myDoc;  
 GO  
@@ -110,10 +108,10 @@ GO
 ### <a name="b-inserting-multiple-elements-into-the-document"></a>Б. Вставка нескольких элементов в документ  
  В следующем примере документу сначала назначается переменная типа **xml**. Затем последовательность из двух элементов, представляющих функции продукта, назначается второй переменной типа **xml**. Эта последовательность затем вставляется в первую переменную.  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
-DECLARE @myDoc xml;  
+DECLARE @myDoc XML;  
 SET @myDoc = N'<Root>             
 <ProductDescription ProductID="1" ProductName="Road Bike">             
     <Features> </Features>             
@@ -133,10 +131,10 @@ GO
 ### <a name="c-inserting-attributes-into-a-document"></a>В. Вставка атрибутов в документ  
  В следующем примере показана вставка атрибутов в документ. Сначала документ заносится в переменную типа **xml**. Затем используется серия XML-инструкций DML **insert** для вставки атрибутов в документ. После каждой операции вставки с помощью инструкции SELECT отображается результат.  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
-DECLARE @myDoc xml ;            
+DECLARE @myDoc XML;            
 SET @myDoc =   
 '<Root>             
     <Location LocationID="10" >             
@@ -144,15 +142,15 @@ SET @myDoc =
         <step>Manufacturing step 2 at this work center</step>             
     </Location>             
 </Root>' ;  
-SELECT @myDoc  ;          
+SELECT @myDoc;          
 -- insert LaborHours attribute             
 SET @myDoc.modify('             
 insert attribute LaborHours {".5" }             
-into (/Root/Location[@LocationID=10])[1] ') ;           
-SELECT @myDoc  ;          
+into (/Root/Location[@LocationID=10])[1] ');           
+SELECT @myDoc;          
 -- insert MachineHours attribute but its value is retrived from a sql variable @Hrs             
-DECLARE @Hrs float ;            
-SET @Hrs =.2   ;          
+DECLARE @Hrs FLOAT;            
+SET @Hrs =.2;          
 SET @myDoc.modify('             
 insert attribute MachineHours {sql:variable("@Hrs") }             
 into   (/Root/Location[@LocationID=10])[1] ');            
@@ -164,7 +162,7 @@ insert (
            attribute SetupHours {".5" },             
            attribute SomeOtherAtt {".2"}             
         )             
-into (/Root/Location[@LocationID=10])[1] ');             
+INTO (/Root/Location[@LocationID=10])[1] ');             
 SELECT @myDoc;  
 GO  
 ```  
@@ -172,10 +170,10 @@ GO
 ### <a name="d-inserting-a-comment-node"></a>Г. Вставка узла с комментарием  
  В этом запросе XML-документ сначала присваивается переменной типа **xml**. Затем для вставки узла с комментарием после первого элемента <`step`> используется язык XML DML.  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
-DECLARE @myDoc xml;             
+DECLARE @myDoc XML;             
 SET @myDoc =   
 '<Root>             
     <Location LocationID="10" >             
@@ -194,10 +192,10 @@ GO
 ### <a name="e-inserting-a-processing-instruction"></a>Д. Вставка инструкции по обработке  
  В этом запросе XML-документ сначала присваивается переменной типа **xml**. Затем используется ключевое слово языка XML DML для вставки инструкции по обработке в начало документа.  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
-DECLARE @myDoc xml;  
+DECLARE @myDoc XML;  
 SET @myDoc =   
 '<Root>   
     <Location LocationID="10" >   
@@ -216,10 +214,10 @@ GO
 ### <a name="f-inserting-data-using-a-cdata-section"></a>Е. Вставка данных с помощью раздела CDATA  
  При вставке текста, содержащего недопустимые в XML символы, например < или >, можно использовать разделы CDATA для вставки данных, как показано в следующем запросе. В запросе указывается раздел CDATA, но добавляется он в качестве текстового узла, в котором недопустимые символы преобразуются в сущности. Например, `<` сохраняется как `&lt;`.  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
-DECLARE @myDoc xml;             
+DECLARE @myDoc XML;             
 SET @myDoc =   
 '<Root>             
     <ProductDescription ProductID="1" ProductName="Road Bike">             
@@ -247,10 +245,10 @@ GO
 ### <a name="g-inserting-text-node"></a>Ж. Вставка текстового узла  
  В этом запросе XML-документ сначала присваивается переменной типа **xml**. Затем для вставки текстового узла в качестве первого дочернего узла элемента <`Root`> используется язык XML DML. Для указания текста используется текстовый конструктор.  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
-DECLARE @myDoc xml;  
+DECLARE @myDoc XML;  
 SET @myDoc = '<Root>  
 <ProductDescription ProductID="1" ProductName="Road Bike">  
 <Features>  
@@ -259,7 +257,7 @@ SET @myDoc = '<Root>
 </ProductDescription>  
 </Root>'  
 SELECT @myDoc;  
-set @myDoc.modify('  
+SET @myDoc.modify('  
  insert text{"Product Catalog Description"}   
  as first into (/Root)[1]  
 ');  
@@ -269,11 +267,11 @@ SELECT @myDoc;
 ### <a name="h-inserting-a-new-element-into-an-untyped-xml-column"></a>З. Вставка нового элемента в нетипизированный XML-столбец  
  В следующем примере язык XML DML применяется для обновления экземпляра XML, хранящегося в столбце типа **xml**:  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
-CREATE TABLE T (i int, x xml);  
-go  
+CREATE TABLE T (i INT, x XML);  
+GO  
 INSERT INTO T VALUES(1,'<Root>  
     <ProductDescription ProductID="1" ProductName="Road Bike">  
         <Features>  
@@ -282,7 +280,7 @@ INSERT INTO T VALUES(1,'<Root>
         </Features>  
     </ProductDescription>  
 </Root>');  
-go  
+GO  
 -- insert a new element  
 UPDATE T  
 SET x.modify('insert <Material>Aluminium</Material> as first  
@@ -293,7 +291,7 @@ GO
   
  Опять же, при вставке узла элемента <`Material`> выражение пути должно возвращать одну цель. Это указывается явно путем добавления [1] в конце выражения.  
   
-```  
+```sql
 -- check the update  
 SELECT x.query(' //ProductDescription/Features')  
 FROM T;  
@@ -303,10 +301,10 @@ GO
 ### <a name="i-inserting-based-on-an-if-condition-statement"></a>И. Вставка на основе инструкции с условием  
  В следующем примере в XML-инструкции DML **insert** в качестве части выражения Expression1 указывается условие IF. Если условие возвращает значение True, атрибут добавляется в элемент <`WorkCenter`>.  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
-DECLARE @myDoc xml;  
+DECLARE @myDoc XML;  
 SET @myDoc =   
 '<Root>  
     <Location LocationID="10" LaborHours="1.2" >  
@@ -327,10 +325,10 @@ GO
   
  Ниже приведен похожий пример, отличающийся только тем, что XML-инструкция DML **insert** вставляет элемент в документ, если условие возвращает значение True. То есть в случае, если элемент <`WorkCenter`> содержит два или менее дочерних элементов <`step`>.  
   
-```  
+```sql
 USE AdventureWorks;  
 GO  
-DECLARE @myDoc xml;  
+DECLARE @myDoc XML;  
 SET @myDoc =   
 '<Root>  
     <Location LocationID="10" LaborHours="1.2" >  
@@ -365,13 +363,14 @@ GO
   
  В примере сначала создается таблица (T) с типизированным столбцом типа **xml** в базе данных AdventureWorks. Затем копируются производственные инструкции экземпляра XML из столбца Instructions в таблице ProductModel в таблицу T. После этого вставленные данные применяются к XML в таблице T.  
   
-```  
+```sql
 USE AdventureWorks;  
 GO            
 DROP TABLE T;  
 GO             
-CREATE TABLE T(ProductModelID int primary key,    
-Instructions xml (Production.ManuInstructionsSchemaCollection));  
+CREATE TABLE T(
+  ProductModelID INT PRIMARY KEY,    
+  Instructions XML (Production.ManuInstructionsSchemaCollection));  
 GO  
 INSERT T              
     SELECT ProductModelID, Instructions             
@@ -384,7 +383,7 @@ FROM T;
 --1) insert a new manu. Location. The <Root> specified as              
 -- expression 2 in the insert() must be singleton.      
 UPDATE T   
-set Instructions.modify('   
+SET Instructions.modify('   
 declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";   
 insert <MI:Location LocationID="1000" >   
            <MI:step>New instructions go here</MI:step>   

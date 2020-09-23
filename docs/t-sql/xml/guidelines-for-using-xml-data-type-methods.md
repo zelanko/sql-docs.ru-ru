@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 25452e6ae26e8375799a344f459473db446c2d5e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e8a429071f406be0309d89bbb9ea0253b86905a8
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88355970"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91112311"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>Правила использования методов типа данных XML
 
@@ -33,7 +33,7 @@ ms.locfileid: "88355970"
 Методы типа данных **xml** не могут быть использованы в инструкции PRINT, как показано в следующем примере. Методы типа данных **xml** обрабатываются как подзапросы, а подзапросы в инструкции PRINT не разрешены. В результате следующий пример возвращает ошибку:
 
 ```sql
-DECLARE @x xml
+DECLARE @x XML
 SET @x = '<root>Hello</root>'
 PRINT @x.value('/root[1]', 'varchar(20)') -- will not work because this is treated as a subquery (select top 1 col from table)
 ```
@@ -41,10 +41,10 @@ PRINT @x.value('/root[1]', 'varchar(20)') -- will not work because this is treat
 В качестве решения можно вначале присвоить результат метода **value()** переменной типа **xml**, а потом использовать переменную в запросе.
 
 ```sql
-DECLARE @x xml
-DECLARE @c varchar(max)
+DECLARE @x XML
+DECLARE @c VARCHAR(max)
 SET @x = '<root>Hello</root>'
-SET @c = @x.value('/root[1]', 'varchar(11)')
+SET @c = @x.value('/root[1]', 'VARCHAR(11)')
 PRINT @c
 ```
 
@@ -77,8 +77,8 @@ XQuery [xmldb_test.xmlcol.query()]: Attribute may not appear outside of an eleme
 В этом примере метод **nodes()** создает отдельную строку для каждого элемента `<book>`. Метод **value()** , выполняемый для узла `<book>`, извлекает значение `@genre`, которое, будучи атрибутом, является единственным.
 
 ```sql
-SELECT nref.value('@genre', 'varchar(max)') LastName
-FROM   T CROSS APPLY xCol.nodes('//book') AS R(nref)
+SELECT nref.value('@genre', 'VARCHAR(max)') LastName
+FROM T CROSS APPLY xCol.nodes('//book') AS R(nref)
 ```
 
 Чтобы проверить типы типизированного XML, используется XML-схема. Если в XML-схеме узел указан как единственный, компилятор это учитывает, и ошибки не возникают. В противном случае необходим порядковый номер, выбирающий единственный узел. В частности, применение оси нижнего или этого же уровня (//), такой как `/book//title`, ослабляет вывод единственности элемента `<title>`, несмотря на то что в схеме XML он указан именно так. Поэтому следует переписать его как `(/book//title)[1]`.
@@ -90,22 +90,22 @@ FROM   T CROSS APPLY xCol.nodes('//book') AS R(nref)
 Следующий запрос данных из нетипизированного столбца XML приводит к статической ошибке компиляции. Это объясняется тем, что метод **value()** ожидает в качестве первого аргумента единственный узел, а компилятор не может определить, будет ли в период выполнения существовать только один узел `<last-name>`:
 
 ```sql
-SELECT xCol.value('//author/last-name', 'nvarchar(50)') LastName
-FROM   T
+SELECT xCol.value('//author/last-name', 'NVARCHAR(50)') LastName
+FROM T
 ```
 
 Вот решение этой проблемы, которое возможно как вариант:
 
 ```sql
-SELECT xCol.value('//author/last-name[1]', 'nvarchar(50)') LastName
-FROM   T
+SELECT xCol.value('//author/last-name[1]', 'NVARCHAR(50)') LastName
+FROM T
 ```
 
 Однако это решение не устраняет ошибку, потому что в каждом экземпляре XML могут содержаться несколько узлов `<author>`. Следующий вариант работает:
 
 ```sql
-SELECT xCol.value('(//author/last-name/text())[1]', 'nvarchar(50)') LastName
-FROM   T
+SELECT xCol.value('(//author/last-name/text())[1]', 'NVARCHAR(50)') LastName
+FROM T
 ```
 
 Этот запрос возвращает значение первого элемента `<last-name>` в каждом из экземпляров XML.

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c1050658-b19f-42ee-9a05-ecd6a73b896c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0220753aecbefe19f01b4d0c76151ead8935e57f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0f2c8332aabe8c6583cd76429aaf1679417a956d
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445776"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111110"
 ---
 # <a name="grouping_id-transact-sql"></a>GROUPING_ID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,6 @@ ms.locfileid: "88445776"
 ## <a name="syntax"></a>Синтаксис  
   
 ```syntaxsql
-  
 GROUPING_ID ( <column_expression>[ ,...n ] )  
 ```  
   
@@ -75,7 +74,7 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
   
  Инструкция А:  
   
-```  
+```sql  
 SELECT GROUPING_ID(A,B)  
 FROM T   
 GROUP BY CUBE(A,B)   
@@ -83,7 +82,7 @@ GROUP BY CUBE(A,B)
   
  Инструкция Б:  
   
-```  
+```sql  
 SELECT 3 FROM T GROUP BY ()  
 UNION ALL  
 SELECT 1 FROM T GROUP BY A  
@@ -98,7 +97,7 @@ SELECT 0 FROM T GROUP BY A,B
 ### <a name="a-using-grouping_id-to-identify-grouping-levels"></a>A. Использование функции GROUPING_ID для обозначения уровней группирования  
  В следующем примере показано, как определить итоговое значение количества сотрудников по столбцам `Name` и `Title`, `Name,` а также как вычислить общее количество сотрудников во всей компании в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. В этом примере функция `GROUPING_ID()` используется для создания значения, обозначающего уровень агрегирования, в каждой строке столбца `Title`.  
   
-```  
+```sql  
 SELECT D.Name  
     ,CASE   
     WHEN GROUPING_ID(D.Name, E.JobTitle) = 0 THEN E.JobTitle  
@@ -122,7 +121,7 @@ GROUP BY ROLLUP(D.Name, E.JobTitle);
 #### <a name="simple-example"></a>Простой пример  
  Чтобы воспользоваться следующим кодом для получения только тех строк, в которых подсчитаны данные о количестве сотрудников с разными должностями, удалите символы комментария из предложения `HAVING GROUPING_ID(D.Name, E.JobTitle); = 0` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Чтобы получить только строки с данными о количестве сотрудников в разных отделах, удалите символы комментария из предложения `HAVING GROUPING_ID(D.Name, E.JobTitle) = 1;`.  
   
-```  
+```sql  
 SELECT D.Name  
     ,E.JobTitle  
     ,GROUPING_ID(D.Name, E.JobTitle) AS 'Grouping Level'  
@@ -157,9 +156,9 @@ GROUP BY ROLLUP(D.Name, E.JobTitle)
 #### <a name="complex-example"></a>Сложный пример  
  В следующем примере функция `GROUPING_ID()` используется для фильтрации результирующего набора, содержащего несколько уровней группирования, по уровням группирования. Аналогичный код может использоваться для создания представления, имеющего несколько уровней группирования, и хранимой процедуры, которая вызывает это представление и передает параметр, применяемый для фильтрации этого представления по уровню группирования. В этом примере используется база данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
-DECLARE @Grouping nvarchar(50);  
-DECLARE @GroupingLevel smallint;  
+```sql  
+DECLARE @Grouping NVARCHAR(50);  
+DECLARE @GroupingLevel SMALLINT;  
 SET @Grouping = N'CountryRegionCode Total';  
   
 SELECT @GroupingLevel = (  
@@ -249,14 +248,14 @@ ORDER BY
 #### <a name="rollup-example"></a>Пример применения оператора ROLLUP  
  В этом примере, в отличие от следующего примера с предложением CUBE, появляются не все уровни группирования. Если порядок столбцов в списке `ROLLUP` изменяется, значения уровня в столбце `Grouping Level` также должны быть изменены. В этом примере используется база данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql  
 SELECT DATEPART(yyyy,OrderDate) AS N'Year'  
     ,DATEPART(mm,OrderDate) AS N'Month'  
     ,DATEPART(dd,OrderDate) AS N'Day'  
     ,SUM(TotalDue) AS N'Total Due'  
-    ,CAST(GROUPING(DATEPART(dd,OrderDate))AS char(1)) +   
-        CAST(GROUPING(DATEPART(mm,OrderDate))AS char(1)) +   
-        CAST(GROUPING(DATEPART(yyyy,OrderDate))AS char(1))   
+    ,CAST(GROUPING(DATEPART(dd,OrderDate)) AS CHAR(1)) +   
+        CAST(GROUPING(DATEPART(mm,OrderDate)) AS CHAR(1)) +   
+        CAST(GROUPING(DATEPART(yyyy,OrderDate)) AS CHAR(1))   
      AS N'Bit Vector(base-2)'  
     ,GROUPING_ID(DATEPART(yyyy,OrderDate)  
         ,DATEPART(mm,OrderDate)  
@@ -330,14 +329,14 @@ ORDER BY GROUPING_ID(DATEPART(mm,OrderDate)
   
  В отличие от оператора `ROLLUP` в предыдущем примере, оператор `CUBE` выводит все уровни группирования. Если порядок столбцов в списке `CUBE` изменяется, значения уровня в столбце `Grouping Level` также должны быть изменены. В этом примере используется база данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]  
   
-```  
+```sql  
 SELECT DATEPART(yyyy,OrderDate) AS N'Year'  
     ,DATEPART(mm,OrderDate) AS N'Month'  
     ,DATEPART(dd,OrderDate) AS N'Day'  
     ,SUM(TotalDue) AS N'Total Due'  
-    ,CAST(GROUPING(DATEPART(dd,OrderDate))AS char(1)) +   
-        CAST(GROUPING(DATEPART(mm,OrderDate))AS char(1)) +   
-        CAST(GROUPING(DATEPART(yyyy,OrderDate))AS char(1))   
+    ,CAST(GROUPING(DATEPART(dd,OrderDate)) AS CHAR(1)) +   
+        CAST(GROUPING(DATEPART(mm,OrderDate)) AS CHAR(1)) +   
+        CAST(GROUPING(DATEPART(yyyy,OrderDate)) AS CHAR(1))   
         AS N'Bit Vector(base-2)'  
     ,GROUPING_ID(DATEPART(yyyy,OrderDate)  
         ,DATEPART(mm,OrderDate)  
