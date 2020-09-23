@@ -1,6 +1,6 @@
 ---
 title: Использование MSDeploy с поставщиком dbSqlPackage
-description: Узнайте больше об устаревшем поставщике MSDeploy DbSqlPackage. Просмотрите параметры, примеры и альтернативные средства публикации SQL Server и базы данных SQL Azure.
+description: Узнайте больше об устаревшем поставщике MSDeploy DbSqlPackage. Просмотрите параметры, примеры и альтернативные средства публикации SQL Server и Базы данных SQL Azure.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -10,18 +10,18 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
-ms.openlocfilehash: 5a0bda3b935a7123de3c8766a40e7d7f8df5a0d0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: daeff5e44e714354cb8e0edc525779b197ec7d19
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899745"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934089"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Использование MSDeploy с поставщиком dbSqlPackage
 
-**DbSqlPackage** — это поставщик **MSDeploy**, который обеспечивает взаимодействие с базами данных SQL Server и SQL Azure. **DbSqlPackage** поддерживает следующие действия:  
+**DbSqlPackage** — это поставщик **MSDeploy**, который обеспечивает взаимодействие с базой данных SQL Server или Базой данных SQL Azure. **DbSqlPackage** поддерживает следующие действия:  
   
--   **Extract**: создает файл моментального снимка базы данных (DACPAC) из активной базы данных SQL Server или SQL Azure.  
+-   **Extract**: создает файл моментального снимка базы данных (DACPAC) из активной Базы данных SQL Server или SQL Azure.  
   
 -   **Publish**: выполняет добавочное обновление схемы базы данных в соответствии со схемой исходного DACPAC-файла.  
   
@@ -57,7 +57,7 @@ MSDeploy -verb: MSDeploy-verb -source:dbSqlPackage="Input"[,dbSqlPackage-source-
 |---------|-----------|---------------|  
 |**-source:dbSqlPackage=** {*input*}|**Н/Д**|*input* содержит допустимую строку подключения к SQL Server или SQL Azure либо путь к DACPAC-файлу на диске.<br /><br />**Примечание.** Если в качестве источника входных данных используется строка подключения, в ней поддерживаются только следующие свойства: *InitialCatalog, DataSource, UserID, Password, IntegratedSecurity, Encrypt, TrustServerCertificate* и *ConnectionTimeout*.|  
   
-Если источником входных данных является строка подключения к активной базе данных SQL Server или SQL Azure, **dbSqlPackage** извлекает моментальный снимок базы данных в виде DACPAC-файла из активной базы данных SQL Server или SQL Azure.  
+Если источником входных данных является строка подключения к базе данных SQL Server или Базе данных SQL Azure, **dbSqlPackage** извлекает из этой базы данных ее моментальный снимок в виде DACPAC-файла.  
   
 Для **источника** принимаются следующие параметры:  
   

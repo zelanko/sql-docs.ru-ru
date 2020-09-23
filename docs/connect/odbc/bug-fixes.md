@@ -14,16 +14,24 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: cf563e5d074f9e4629eb3b9f63304104167394a4
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: fb686e3c70723cf847853ad558f47cf37da23972
+ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091808"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87544307"
 ---
 # <a name="list-of-bugs-fixed"></a>Список исправленных ошибок
 
 На этой странице содержится список ошибок, исправленных в каждом выпуске, начиная с [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
+### <a name="bug-fixes-in-the-msconame-odbc-driver-176-for-ssnoversion"></a>Исправления ошибок в [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.6 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
+- Исправлена ошибка ADAL, которая происходит при проверке подлинности с помощью федеративной учетной записи (Windows).
+- Устранена проблема, из-за которой драйвер перестает отвечать на запросы при превышении времени ожидания во время асинхронной операции уведомления.
+- Исправлена работа счетчика ссылок драйвера при обновлении в Alpine Linux.
+- Исправлена версия в зависимости libc6 для Ubuntu.
+- Добавлено отсутствующее определение в msodbcsql.h для Linux и Mac.
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-17522-for-ssnoversion-alpine-linux-only"></a>Исправления ошибок в [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.5.2.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].(только для Alpine Linux)
 

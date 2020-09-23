@@ -2,7 +2,7 @@
 title: Разработчик данных SQL | Документация Майкрософт
 description: Используйте платформу данных SQL от Майкрософт для создания ориентированных на данные решений на мобильных устройствах и рабочих столах для веб-серверов, корпоративных серверов и облака.
 ms.custom: ''
-ms.date: 05/06/2020
+ms.date: 08/05/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -11,25 +11,26 @@ ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0b60eb6ca02ef446fe05bb109123e5c48951905a
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: ff3fb2b5e789d9eb9d89100e1722b37c9eae6385
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922300"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988479"
 ---
 # <a name="sql-data-developer"></a>Разработчик данных SQL
 Используйте платформу данных SQL от Майкрософт для создания ориентированных на данные решений на мобильных устройствах и рабочих столах для веб-серверов, корпоративных серверов и облака.  
 
 ## <a name="sql-data-storage"></a>Хранение данных SQL
 * [Компонент SQL Server Database Engine](../database-engine/configure-windows/sql-server-database-engine.md). Компонент ядра СУБД SQL Server используется для создания реляционных баз данных, для обработки транзакций в сети или для интерактивной аналитической обработки. 
-* [SQL Azure](https://docs.microsoft.com/azure/sql-database/). Использование SQL Azure для перемещения базы данных в облако. 
-* [SQL Compact](https://www.microsoft.com/download/details.aspx?id=30709). SQL Server Compact для создания автономных и периодически подключаемых приложений для мобильных устройств, рабочих столов и веб-клиентов.
+* [Azure SQL.](https://docs.microsoft.com/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview) Использование SQL Azure для перемещения базы данных в облако 
+* [SQL Compact](https://www.microsoft.com/download/details.aspx?id=30709). SQL Server Compact используется для создания автономных и периодически подключаемых приложений для мобильных устройств, рабочих столов и веб-клиентов.
 * [LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md). Используйте LocalDB в процессе разработки для написания и тестирования кода Transact-SQL без необходимости управления полным экземпляром SQL Server.
 
 ## <a name="sql-data-tools"></a>Инструменты SQL Data
-* [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md). Используйте SSDT для создания реляционных баз данных SQL Server, баз данных SQL Azure, пакетов Integration Services, моделей данных Analysis Services и отчетов Reporting Services.
-* [Средства управления SQL Server](../ssms/download-sql-server-management-studio-ssms.md).  Используйте SSMS для настройки, наблюдения и администрирования экземпляров SQL Server.
+* [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md). Azure Data Studio используется в Windows, macOS и Linux для запуска SQL Server, Базы данных SQL Azure, PostgreSQL, Jupyter Notebooks и т. д.
+* [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md). SSDT используется в Visual Studio для создания реляционных баз данных SQL Server, баз данных SQL Azure, пакетов Integration Services, моделей данных Analysis Services и отчетов Reporting Services.
+* [Средства управления SQL Server](../ssms/download-sql-server-management-studio-ssms.md).  SSMS используется в Windows для настройки, мониторинга и администрирования экземпляров SQL Server.
 
 ## <a name="sql-data-access"></a>Доступ к данным SQL
 * [Клиентские драйверы SQL](sql-connection-libraries.md).  Используйте драйверы SQL для подключения, запроса, обновления, вставки или удаления данных из базы данных SQL.

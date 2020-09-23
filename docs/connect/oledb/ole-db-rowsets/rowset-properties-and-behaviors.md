@@ -1,6 +1,6 @@
 ---
 title: Свойства и поведение наборов строк (драйвер OLE DB)
-description: Свойства и поведение наборов строк в OLE DB Driver for SQL Server
+description: Узнайте о свойствах набора строк OLE DB Driver for SQL Server, в том числе их имена и описание.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, rowsets
 - properties [OLE DB]
 - OLE DB rowsets, properties
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: e541289c5ae71a7289cd005ba03ca2f886fc0bb7
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b5d42db2a329290f13917b754a89232e30ae52ed
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244185"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859993"
 ---
 # <a name="rowset-properties-and-behaviors"></a>Свойства и поведение наборов строк
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,6 +1,6 @@
 ---
 title: Установка локализованных версий
-description: Установка локализованных версий SQL Server Management Studio (SSMS)
+description: Установите локализованные версии SQL Server Management Studio (SSMS). Эта статья относится к SSMS 17.x.
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ssms
@@ -9,12 +9,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/25/2019
-ms.openlocfilehash: cc4d98322f0422053402bdf097674c90807e11a1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 044813df5fc1e222c24418c60d0a1c7d40d8c011
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246875"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87523006"
 ---
 # <a name="install-non-english-language-versions-of-sql-server-management-studio-ssms"></a>Установка локализованных версий SQL Server Management Studio (SSMS)
 
@@ -53,4 +53,4 @@ ms.locfileid: "75246875"
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-- [Руководство: SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/tutorials/tutorial-sql-server-management-studio)
+- [Руководство. SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/tutorials/tutorial-sql-server-management-studio)

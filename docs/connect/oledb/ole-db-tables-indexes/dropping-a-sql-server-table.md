@@ -1,6 +1,6 @@
 ---
 title: Удаление таблицы SQL Server (драйвер OLE DB) | Документация Майкрософт
-description: Удаление таблицы из SQL Server с помощью OLE DB Driver for SQL Server
+description: Узнайте, как удалить таблицу SQL Server из базы данных с помощью функции ITableDefinition::DropTable в OLE DB Driver for SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, tables
 - removing tables
 - dropping tables
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 6a913e3fa3d57c8f2e7a51f2b1d5b177361c43ff
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c3bdcc2b2b96c2cd1d9af0bbf7d31457eed71381
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244142"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859400"
 ---
 # <a name="dropping-a-sql-server-table"></a>Удаление таблицы SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

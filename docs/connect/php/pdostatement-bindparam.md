@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::bindParam | Документация Майкрософт
+title: PDOStatement::bindParam
+description: Справочник по API для функции PDOStatement::bindParam в драйвере Microsoft PDO_SQLSRV для PHP для SQL Server.
 ms.custom: ''
-ms.date: 05/22/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 245cdc56e47c87bc5c31435e1967ecb74a8c05bc
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c6b8b1f838ce3351299e4069e80f692efb487df1
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80918769"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646616"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,9 +31,9 @@ bool PDOStatement::bindParam($parameter, &$variable[, $data_type[, $length[, $dr
 ```  
   
 #### <a name="parameters"></a>Параметры  
-$*parameter*: идентификатор параметра (смешанное значение). Для инструкции, использующей именованные заполнители, это имя параметра (:name). Для подготовленной инструкции, использующей синтаксис с вопросительным знаком, это индекс параметра, идущий от единицы.  
+$*parameter*: идентификатор параметра (смешанные значения). Для инструкции, использующей именованные заполнители, это имя параметра (:name). Для подготовленной инструкции, использующей синтаксис с вопросительным знаком, это индекс параметра, идущий от единицы.  
   
-&$*variable*: имя переменной PHP (смешанное значение), привязываемой к параметру инструкции SQL.  
+&$*variable*: имя (смешанные значения) переменной PHP, привязываемой к параметру инструкции SQL.  
   
 $*data_type*: необязательная константа PDO::PARAM_* (целое число). Значение по умолчанию — PDO::PARAM_STR.  
   

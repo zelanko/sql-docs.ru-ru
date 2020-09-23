@@ -1,6 +1,6 @@
 ---
 title: Создание таблицы с использованием rxDataStep
-description: Учебник по RevoScaleR, часть 11. Сведения о создании таблицы SQL Server с помощью языка R на SQL Server.
+description: Узнайте, как перемещать данные между кадрами данных в памяти, контекстом SQL Server и локальными файлами с помощью rxDataStep.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 11/27/2018
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0550c90807328cf89d8d533ac583c8410c79f5c2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e2fcd1719c63d88eb20156aa2c4d84884cca1efc
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728591"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178844"
 ---
 # <a name="create-new-sql-server-table-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>Создание новой таблицы SQL Server с помощью rxDataStep (учебник по SQL Server и RevoScaleR)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Эта часть 11 входит в состав [серии учебников по RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md), посвященной использованию [функций RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) в SQL Server.
 

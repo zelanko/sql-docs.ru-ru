@@ -4,20 +4,21 @@ titleSuffix: ''
 description: R Services — это компонент SQL Server 2016, который дает возможность выполнять скрипты R с реляционными данными. Вы можете использовать платформы и пакеты с открытым кодом и пакеты Майкрософт R для прогнозной аналитики и машинного обучения. Скрипты выполняются в базе данных без перемещения данных за пределы SQL Server или по сети. В этой статье объясняются основы SQL Server R Services.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/12/2019
+ms.date: 08/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 974562d95ebf756de5f95eca0e89a6d5fc6e958f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0fabca5748849e0dd2e708ae02c11dc8f028a14d
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775391"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87898828"
 ---
 # <a name="what-is-sql-server-2016-r-services"></a>Что представляют собой службы SQL Server 2016 R Services?
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+[!INCLUDE[SQL Server 2016 only](../../includes/applies-to-version/sqlserver2016-only.md)]
 
 R Services — это компонент SQL Server 2016, который дает возможность выполнять скрипты R с реляционными данными. Вы можете использовать платформы и пакеты с открытым кодом и [пакеты Майкрософт R](#packages) для прогнозной аналитики и машинного обучения. Скрипты выполняются в базе данных без перемещения данных за пределы SQL Server или по сети. В этой статье объясняются основы SQL Server R Services.
 
@@ -41,7 +42,7 @@ R Services используют платформу расширяемости д
 
 Примеры типов прогнозов, для которых можно использовать SQL Server R Services:
 
-|||
+|Тип прогноза|Пример|
 |-|-|
 |Классификация и категоризация|Автоматическое разделение отзывов клиентов на положительные и отрицательные|
 |Регрессия/прогнозирование непрерывных значений|Прогнозирование стоимости домов на основе размера и расположения|
@@ -58,9 +59,18 @@ R Services используют платформу расширяемости д
 
 <a name="version"></a>
 
-## <a name="r-version"></a>Версия R
+## <a name="r-versions"></a>Версии R
 
-В службы SQL Server 2016 R Services включена версия R 3.2.2. Более новые версии R доступны в [Службах машинного обучения для SQL Server 2017 и более поздних версий](../sql-server-machine-learning-services.md).
+Ниже перечислены версии среды выполнения R, включенные в службы R для SQL Server 2016.
+
+Версия SQL Server | Версии среды выполнения R по умолчанию |
+|-|-|
+| SQL Server 2016 RTM — SP2 CU13 | 3.2.2 |
+| SQL Server 2016 с пакетом обновления 2 (SP2) CU14 и более поздние версии | 3.2.2 и 3.5.2 |
+
+Накопительное обновление (CU) 14 для SQL Server 2016 с пакетом обновления 2 (SP2) и более поздних версий включает в себя более новые среды выполнения R. Дополнительные сведения см. в статье [Изменение версии языковой среды выполнения по умолчанию](../install/change-default-language-runtime-version.md).
+
+Если нужно запустить другие версии R или Python, воспользуйтесь [Службами машинного обучения для SQL Server 2017 и более поздних версий](../sql-server-machine-learning-services.md).
 
 <a name="packages"></a>
 
@@ -89,10 +99,10 @@ R Services используют платформу расширяемости д
 
     + Краткое руководство. [Создание и выполнение простых скриптов R в SQL Server](../tutorials/quickstart-r-create-script.md)
     + Краткое руководство. [Создание и обучение модели прогнозирования на R](../tutorials/quickstart-r-train-score-model.md)
-    + Руководство по [Использование R в T-SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md). Просмотр данных, разработка признаков, обучение и развертывание моделей, создание прогнозов (серия из пяти частей)
+    + Руководство по [Использование R в T-SQL](../tutorials/r-taxi-classification-introduction.md). Просмотр данных, разработка признаков, обучение и развертывание моделей, создание прогнозов (серия из пяти частей)
     + Руководство по [Использование служб R в инструментах R](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md). Просмотр данных, создание графов и графиков, разработка признаков, обучение и развертывание моделей, создание прогнозов (серии из шести частей)
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Дальнейшие шаги
 
 + [Установка SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 + [Настройка клиента обработки и анализа данных для разработки на R](../r/set-up-a-data-science-client.md)

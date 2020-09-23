@@ -1,7 +1,8 @@
 ---
-title: Извлечение символьных данных в виде потока с помощью драйвера SQLSRV | Документы Майкрософт
+title: Извлечение символьных данных в виде потока с помощью драйвера SQLSRV
+description: В этом разделе описывается извлечение символьных данных в виде потока при использовании драйвера Microsoft SQLSRV для PHP для SQL Server.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3c0dbca4-abfc-4449-b133-66c819681840
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a4dfdc85256a5f9e85f8ee4ac5b090a4088e90a9
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f0665f02e81c09a7ac753da738efa6cd92cc62c3
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916270"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680609"
 ---
 # <a name="how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver"></a>Практическое руководство. Извлечение символьных данных в виде потока с помощью драйвера SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

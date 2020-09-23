@@ -2,7 +2,7 @@
 title: Обзор JDBC Driver | Документация Майкрософт
 description: Драйвер Microsoft JDBC Driver for SQL Server совместим со спецификацией Java Database Connectivity (JDBC) 4.2 типа 4, который предоставляет доступ к данным в базах данных SQL.
 ms.custom: ''
-ms.date: 10/28/2019
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,24 +11,24 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a405918283f1e72c63cf56bd6ac9da1bcb498d36
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 5455169782503939330c32829a89bf0701aac25a
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529343"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87943707"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>Общие сведения о JDBC Driver
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Драйвер Microsoft JDBC Driver для SQL Server представляет собой совместимый с Java Database Connectivity (JDBC) 4.2 драйвер типа 4 и обеспечивает надежный доступ к данным SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008 и Базе данных SQL Azure.  
+Драйвер Microsoft JDBC Driver for SQL Server совместим со спецификацией Java Database Connectivity (JDBC) 4.2 типа 4, который предоставляет надежный доступ к данным в базах данных SQL Server и SQL Azure.  
 
 ## <a name="redistribution"></a>Повторное распространение
 
-Драйверы JDBC версий 6.0, 6.2, 6.4 и 7.0 являются распространяемыми. В лицензионном соглашении ознакомьтесь с разделом _Распространяемый код_.
+Драйверы JDBC Driver версий 6.0 и новее являются распространяемыми. В лицензионном соглашении ознакомьтесь с разделом _Распространяемый код_.
 
-Драйверы JDBC версии 4.x являются устаревшими и не поддерживаются. Действие поддержки для версии 4.x прекратилось еще до 2018 г.
+Драйверы JDBC версии 4.x являются устаревшими. Действие поддержки для версии 4.x прекратилось еще до 2018 г.
 
 ## <a name="in-this-section"></a>В этом разделе  
 

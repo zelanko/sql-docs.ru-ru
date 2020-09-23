@@ -2,7 +2,7 @@
 title: Использование базовых типов данных JDBC
 description: Драйвер Microsoft JDBC Driver for SQL Server использует базовые типы данных JDBC для преобразования типов данных SQL Server в формат, который может быть понятен Java.
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 08/24/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 97c0d4b269bfda9a9c01bf8b08f93e2b2f5f83d5
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 3c26c3c065ddf415d966c8fd3613e284c3c7a2b6
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728375"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806999"
 ---
 # <a name="using-basic-data-types"></a>Использование базовых типов данных
 
@@ -35,9 +35,9 @@ ms.locfileid: "81728375"
 | bit                | BIT                                                | Логическое                      |
 | char               | CHAR                                               | Строка                       |
 | Дата               | DATE                                               | java.sql.Date                |
-| DATETIME           | timestamp                                          | java.sql.Timestamp           |
+| datetime<sup>3</sup>          | timestamp                               | java.sql.Timestamp           |
 | datetime2          | timestamp                                          | java.sql.Timestamp           |
-| datetimeoffset (2) | microsoft.sql.Types.DATETIMEOFFSET                 | microsoft.sql.DateTimeOffset |
+| datetimeoffset<sup>2</sup> | microsoft.sql.Types.DATETIMEOFFSET         | microsoft.sql.DateTimeOffset |
 | Decimal            | DECIMAL                                            | java.math.BigDecimal         |
 | FLOAT              | DOUBLE                                             | double                       |
 | Изображение              | LONGVARBINARY                                      | byte[]                       |
@@ -53,7 +53,7 @@ ms.locfileid: "81728375"
 | smallint           | SMALLINT                                           | short                        |
 | smallmoney         | DECIMAL                                            | java.math.BigDecimal         |
 | text               | LONGVARCHAR                                        | Строка                       |
-| time               | TIME (1)                                           | java.sql.Time (1)            |
+| time               | TIME<sup>1</sup>                                   | java.sql.Time<sup>1</sup>            |
 | TIMESTAMP          | BINARY                                             | byte[]                       |
 | tinyint            | TINYINT                                            | short                        |
 | определяемый пользователем тип                | VARBINARY                                          | byte[]                       |
@@ -67,9 +67,11 @@ ms.locfileid: "81728375"
 | geometry           | VARBINARY                                          | byte[]                       |
 | geography          | VARBINARY                                          | byte[]                       |
   
-(1) Чтобы использовать java.sql.Time с типом времени [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], нужно задать для свойства подключения **sendTimeAsDatetime** значение "false" (ложь).  
+<sup>1</sup> Чтобы использовать java.sql.Time с типом времени [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], нужно задать для свойства подключения **sendTimeAsDatetime** значение "false".  
   
-(2) Значения **datetimeoffset** можно получить программным образом с помощью [класса DateTimeOffset](reference/datetimeoffset-class.md).  
+<sup>2</sup> Значения **datetimeoffset** можно получить программным образом с помощью класса [DateTimeOffset](reference/datetimeoffset-class.md).  
+  
+<sup>3</sup> Обратите внимание, что значения java.sql.Timestamp больше нельзя использовать для сравнения значений из столбца datetime, начиная с SQL Server 2016. Это ограничение обусловлено изменением на стороне сервера, которое иначе преобразует datetime в datetime2, в результате чего получаются не равнозначные значения. Чтобы решить эту проблему, можно либо изменить столбцы datetime на datetime2(3), использовать строку вместо java.sql.Timestamp или изменить уровень совместимости базы данных на 120 или ниже.
   
 В следующих разделах приводятся примеры использования драйвера JDBC и базовых типов данных. Более подробный пример использования базовых типов данных в приложении Java см. в разделе [Образец базовых типов данных](basic-data-types-sample.md).  
   
@@ -81,7 +83,7 @@ ms.locfileid: "81728375"
   
 ## <a name="retrieving-data-by-data-type"></a>Извлечение данных по типу данных
 
-Если вам нужно получить из источника данные известного типа, воспользуйтесь одним из методов get\<Тип> класса SQLServerResultSet, также известных как *методы получения*. С методами get\<Тип> можно использовать имя столбца или его индекс:  
+Если вам нужно получить из источника данные известного типа, воспользуйтесь одним из методов get\<Type> класса SQLServerResultSet, также известных как *методы получения*. С методами get\<Type> можно использовать имя столбца или его индекс:  
   
 [!code[JDBC#UsingBasicDataTypes2](codesnippet/Java/using-basic-data-types_2.java)]  
   
@@ -90,7 +92,7 @@ ms.locfileid: "81728375"
 
 ## <a name="updating-data-by-data-type"></a>Обновление данных по типу данных
 
-Если вам нужно обновить значение поля в источнике данных, воспользуйтесь одним из методов update\<тип> класса SQLServerResultSet. В следующем примере для обновления данных в источнике используется метод [updateInt](reference/updateint-method-sqlserverresultset.md) совместно с методом [updateRow](reference/updaterow-method-sqlserverresultset.md):  
+Если вам нужно обновить значение поля в источнике данных, воспользуйтесь одним из методов update\<Type> класса SQLServerResultSet. В следующем примере для обновления данных в источнике используется метод [updateInt](reference/updateint-method-sqlserverresultset.md) совместно с методом [updateRow](reference/updaterow-method-sqlserverresultset.md):  
   
 [!code[JDBC#UsingBasicDataTypes3](codesnippet/Java/using-basic-data-types_3.java)]  
   
@@ -99,7 +101,7 @@ ms.locfileid: "81728375"
   
 ## <a name="updating-data-by-parameterized-query"></a>Обновление по параметризированному запросу
 
-Если вам нужно обновить данные в источнике с помощью параметризированного запроса, вы можете задать тип данных для параметров одним из методов set\<Тип> класса [SQLServerPreparedStatement](reference/sqlserverpreparedstatement-class.md), также известных как *методы задания*. В следующем примере метод [prepareStatement](reference/preparestatement-method-sqlserverconnection.md) используется для предварительной компиляции параметризированного запроса, затем метод [setString](reference/setstring-method-sqlserverpreparedstatement.md) задает строковое значение параметра, после чего вызывается метод [executeUpdate](reference/executeupdate-method.md).  
+Если вам нужно обновить данные в источнике с помощью параметризированного запроса, вы можете задать тип данных для параметров одним из методов set\<Type> класса [SQLServerPreparedStatement](reference/sqlserverpreparedstatement-class.md), также известных как *методы задания*. В следующем примере метод [prepareStatement](reference/preparestatement-method-sqlserverconnection.md) используется для предварительной компиляции параметризированного запроса, затем метод [setString](reference/setstring-method-sqlserverpreparedstatement.md) задает строковое значение параметра, после чего вызывается метод [executeUpdate](reference/executeupdate-method.md).  
   
 [!code[JDBC#UsingBasicDataTypes4](codesnippet/Java/using-basic-data-types_4.java)]  
   
@@ -107,7 +109,7 @@ ms.locfileid: "81728375"
 
 ## <a name="passing-parameters-to-a-stored-procedure"></a>Передача параметров хранимой процедуре
 
-Если вам нужно передать параметры типа хранимой процедуре, вы можете задать параметры по имени или индексу с помощью методов set\<Тип> класса [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). В следующем примере метод [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) используется для вызова хранимой процедуры, затем с помощью метода [setString](../../connect/jdbc/reference/setstring-method-sqlservercallablestatement.md) задается параметр для вызова, после чего вызывается метод [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md).  
+Если вам нужно передать параметры типа хранимой процедуре, вы можете задать параметры по имени или индексу с помощью методов set\<Type> класса [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). В следующем примере метод [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) используется для вызова хранимой процедуры, затем с помощью метода [setString](../../connect/jdbc/reference/setstring-method-sqlservercallablestatement.md) задается параметр для вызова, после чего вызывается метод [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md).  
   
 [!code[JDBC#UsingBasicDataTypes5](codesnippet/Java/using-basic-data-types_5.java)]  
   

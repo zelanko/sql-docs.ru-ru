@@ -1,5 +1,6 @@
 ---
-title: Класс SQLServerDataSource | Документация Майкрософт
+title: Класс SQLServerDataSource Class
+description: Узнайте об общедоступном API-интерфейсе для класса SQLServerDataSource в драйвере JDBC для SQL Server.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 097434fd-2b74-411c-a5ed-eba04481dde5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 253934056218c36d21694869dcc51707e8ab8b5d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 084cf5f7c1b3927f86de1ff4f174a8f8358662d7
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928697"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435362"
 ---
 # <a name="sqlserverdatasource-class"></a>Класс SQLServerDataSource Class
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80928697"
   
  **Пакет:** com.microsoft.sqlserver.jdbc  
   
- **Реализация.** [ISQLServerDataSource](../../../connect/jdbc/reference/isqlserverdatasource-interface.md), DataSource, java.io.Serializable, javax.naming.Referenceable  
+ **Реализует:** [ISQLServerDataSource](../../../connect/jdbc/reference/isqlserverdatasource-interface.md), DataSource, java.io.Serializable, javax.naming.Referenceable  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -34,7 +35,7 @@ public class SQLServerDataSource
 ```  
   
 ## <a name="remarks"></a>Remarks  
- Этот класс поддерживает распаковку в класс SQLServerDataSource, интерфейс ISQLServerDataSource и интерфейс DataSource. Дополнительные сведения см. в статье об [интерфейсах и программах-оболочках](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Этот класс поддерживает распаковку в класс SQLServerDataSource, интерфейс ISQLServerDataSource и интерфейс DataSource. См. сведения об [интерфейсах и программах-оболочках](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

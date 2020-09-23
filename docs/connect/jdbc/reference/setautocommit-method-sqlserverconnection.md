@@ -1,5 +1,6 @@
 ---
-title: Метод setAutoCommit (SQLServerConnection) | Документация Майкрософт
+title: Метод setAutoCommit (SQLServerConnection)
+description: Сведения об общедоступном API-интерфейсе для метода setAutoCommit в классе SQLServerConnection драйвера JDBC для SQL Server.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: db1e22d2-e53f-474e-8c99-cb1fff7f491a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d8595489da0aaf65bc5a8e8892e22eff70ed8873
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 117fa85e5ec6bdd7d0d37de9fc057dd8127cf42a
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80915760"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435372"
 ---
 # <a name="setautocommit-method-sqlserverconnection"></a>Метод setAutoCommit (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,10 +53,8 @@ public void setAutoCommit(boolean value)
  Если режим автоматической фиксации имеет значение **false**, драйвер JDBC неявно запускает новую транзакцию после каждой фиксации.  
   
 > [!NOTE]  
->  Если этот метод вызывается в ходе транзакции, эта транзакция фиксируется.  
+> Если этот метод вызывается в ходе транзакции, эта транзакция фиксируется.  
   
 ## <a name="see-also"></a>См. также:  
- [Элементы SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
+ [Элементы SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)  
  [Класс SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
-  
-  

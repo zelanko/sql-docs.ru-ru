@@ -4,28 +4,29 @@ titleSuffix: ''
 description: Сведения о том, как установить службы SQL Server 2016 R Services в Windows. Службы R Services можно использовать для выполнения скриптов R в базе данных.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 06/03/2020
+ms.date: 08/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: contperfq4
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: af1d1c36971e3c6e47a97874bca26d55694d4491
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 14dca3774771a3cb3a83c99811f3145dfd582de9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246423"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487657"
 ---
 # <a name="install-sql-server-2016-r-services"></a>Установка SQL Server 2016 R Services
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+
+[!INCLUDE[SQL Server 2016 only](../../includes/applies-to-version/sqlserver2016-only.md)]
 
 Сведения о том, как установить службы SQL Server 2016 R Services в Windows. Службы R Services можно использовать для выполнения скриптов R в базе данных.
 
 > [!NOTE]
-> В SQL Server 2017 и более поздних версий R включается в [Службы машинного обучения](../sql-server-machine-learning-services.md) вместе с Python. Если вам требуется R и у вас есть SQL Server 2017 или более поздней версии, см. раздел [Установка Служб машинного обучения SQL Server](sql-machine-learning-services-windows-install.md), чтобы добавить эту функцию.
+> В SQL Server 2017 и более поздних версий R включается в [Службы машинного обучения](../sql-server-machine-learning-services.md) вместе с Python. Если вам требуется R и у вас есть SQL Server 2017 или более поздней версии, сведения о том, как добавить признак, см. в статье [Установка Служб машинного обучения SQL Server](sql-machine-learning-services-windows-install.md).
 
-<a name="bkmk_prereqs"> </a> 
+<a name="bkmk_prereqs"></a>
 
 ## <a name="pre-install-checklist"></a>Контрольный список перед установкой
 
@@ -188,7 +189,10 @@ ms.locfileid: "87246423"
 
 1. Продолжайте работу с мастером, принимая условия лицензионного соглашения для дистрибутива R.
 
-<a name="bkmk_FollowUp"></a> 
+> [!NOTE]
+> Накопительное обновление (CU) 14 и более поздних версий для SQL Server 2016 с пакетом обновления 2 (SP2) включает в себя более новые среды выполнения R. Дополнительные сведения см. в статье [Изменение версии языковой среды выполнения по умолчанию](change-default-language-runtime-version.md).
+
+<a name="bkmk_FollowUp"></a>
 
 ## <a name="additional-configuration"></a>Дополнительная настройка
 
@@ -212,7 +216,7 @@ ms.locfileid: "87246423"
 * [Добавление SQLRUserGroup в качестве пользователя базы данных](../../machine-learning/security/create-a-login-for-sqlrusergroup.md)
 
 > [!NOTE]
-> Не все перечисленные изменения являются обязательными; все они могут оказаться ненужными. Требования зависят от схемы безопасности, в которой установлен ваш SQL Server, и от того, как ваши пользователи должны подключаться к базе данных и запускать внешние скрипты. Дополнительные советы по устранению неполадок см. здесь. [Часто задаваемые вопросы по обновлению и установке](../troubleshooting/upgrade-and-installation-faq-sql-server-r-services.md)
+> Не все перечисленные изменения являются обязательными; все они могут оказаться ненужными. Требования зависят от схемы безопасности, в которой установлен ваш SQL Server, и от того, как ваши пользователи должны подключаться к базе данных и запускать внешние скрипты. Дополнительные инструкции по установке приведены здесь: [Установка служб машинного обучения SQL Server](../install/sql-machine-learning-services-windows-install.md)
 
 ## <a name="suggested-optimizations"></a>Предлагаемые оптимизации
 

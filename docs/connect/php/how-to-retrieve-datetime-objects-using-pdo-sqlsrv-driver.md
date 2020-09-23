@@ -1,22 +1,22 @@
 ---
-title: Как извлечь типы даты и времени в виде объектов даты и времени PHP с помощью драйвера PDO_SQLSRV | Документация Майкрософт
+title: Практическое руководство по извлечению типов даты и времени в виде объектов DateTime PHP с помощью драйвера PDO_SQLSRV
+description: В этом разделе описывается получение типов даты и времени в виде объектов DateTime PHP при использовании драйвера Microsoft PDO_SQLSRV для PHP для SQL Server.
 ms.custom: ''
-ms.date: 02/11/2019
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - date and time types, retrieving as datetime objects
-author: yitam
-ms.author: v-yitam
-manager: v-mabarw
-ms.openlocfilehash: 165e91cee3b0b4592f9b746f8b35b46bc73bce50
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 507dc2a228419fb695d10a437681229ec6586f11
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68264569"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680759"
 ---
 # <a name="how-to-retrieve-date-and-time-types-as-php-datetime-objects-using-the-pdo_sqlsrv-driver"></a>Как извлечь типы даты и времени в виде объектов даты и времени PHP с помощью драйвера PDO_SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "68264569"
 
 ### <a name="to-retrieve-date-and-time-types-as-datetime-objects"></a>Порядок извлечения типов даты и времени в виде объектов DateTime
 
-При использовании PDO_SQLSRV типы даты и времени (**smalldatetime**, **datetime**, **date**, **time**, **datetime2** и **datetimeoffset**) по умолчанию возвращаются в виде строк. Ни PDO::ATTR_STRINGIFY_FETCHES, ни атрибут PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE не оказывает никакого влияния. Чтобы получить типы даты и времени в виде объектов [PHP DateTime](http://php.net/manual/en/class.datetime.php), установите атрибут connection или statement на `PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE` **true** (по умолчанию **false**).
+При использовании PDO_SQLSRV типы даты и времени (**smalldatetime**, **datetime**, **date**, **time**, **datetime2** и **datetimeoffset**) по умолчанию возвращаются в виде строк. Ни PDO::ATTR_STRINGIFY_FETCHES, ни атрибут PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE не оказывает никакого влияния. Чтобы получить типы даты и времени в виде объектов [PHP DateTime](http://php.net/manual/en/class.datetime.php), установите атрибут connection или statement на `PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE`**true** (по умолчанию **false**).
 
 > [!NOTE]
 > Эти атрибуты connection или statement применяются только к обычной выборке типов даты и времени, так как объекты DateTime нельзя указать в качестве параметров вывода.

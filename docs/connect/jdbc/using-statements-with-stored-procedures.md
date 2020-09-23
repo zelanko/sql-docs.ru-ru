@@ -1,5 +1,6 @@
 ---
-title: Использование инструкций с хранимыми процедурами | Документация Майкрософт
+title: Использование инструкций с хранимыми процедурами
+description: Узнайте, как выполнять хранимые процедуры с помощью драйвера Microsoft JDBC для SQL Server и использовать входные и выходные параметры для передачи данных в них и обратно.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 0041f9e1-09b6-4487-b052-afd636c8e89a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2c5cec3ba96a9ce4b96ae3b4dd92299e361902b5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a4848a2b3ecf11699894cb7a8acdcbde39786e53
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923967"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411011"
 ---
 # <a name="using-statements-with-stored-procedures"></a>Использование инструкций с хранимыми процедурами
 
@@ -48,7 +49,7 @@ ms.locfileid: "80923967"
   
 ## <a name="in-this-section"></a>В этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Использование хранимых процедур без параметров](../../connect/jdbc/using-a-stored-procedure-with-no-parameters.md)|Описывает способы использования драйвера JDBC для запуска хранимых процедур, не содержащих входных или выходных параметров.|  
 |[Использование хранимых процедур с входными параметрами](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md)|Описывает способы использования драйвера JDBC для запуска хранимых процедур, содержащих входные параметры.|  

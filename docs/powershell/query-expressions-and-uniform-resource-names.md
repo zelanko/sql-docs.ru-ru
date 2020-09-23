@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: scripting
+ms.technology: sql-server-powershell
 ms.topic: conceptual
 helpviewer_keywords:
 - query expressions
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 84c9067c00962878d058871151eb0e47d06294f2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 26483454e805bf8dcaa780fed352cbe984c61f71
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921230"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714122"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Выражения запросов и универсальные имена ресурсов
 
@@ -91,9 +91,9 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  Перечисляет все объекты, значение указанного строкового свойства которых точно такое же, как комбинация символов, указанная в '*PatternString*'.  
   
  \@*DatePropertyName*= datetime('*DateString*')  
- Перечисляет все объекты, значение указанного свойства даты которых соответствует дате, указанной в '*DateString*'. Значение*DateString* должно иметь формат гггг-мм-дд чч:ми:сс.ммм  
+ Перечисляет все объекты, значение указанного свойства даты которых соответствует дате, указанной в '*DateString*'. Значение*DateString* должно иметь формат гггг-мм-дд чч:ми:сс.ммм.  
   
-|||  
+|Компонент DateString|Описание|  
 |-|-|  
 |гггг|Год из четырех цифр.|  
 |ММ|Месяц из двух цифр (от 01 до 12).|  

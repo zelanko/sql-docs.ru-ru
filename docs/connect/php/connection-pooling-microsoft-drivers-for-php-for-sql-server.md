@@ -1,7 +1,8 @@
 ---
-title: Организация пулов подключений (драйверы Майкрософт для PHP для SQL Server) | Документация Майкрософт
+title: Организация пулов соединений (драйверы Майкрософт для PHP для SQL Server)
+description: Сведения о создании пулов подключений при использовании драйверов Майкрософт для PHP для SQL Server и о том, как они могут отличаться в зависимости от операционной системы.
 ms.custom: ''
-ms.date: 08/01/2018
+ms.date: 08/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4d9a83d4-08de-43a1-975c-0a94005edc94
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 714a3436cc79f3568e14c5e2609e16fd408f288e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 147e744a69850a5c76b9706c03a96fa67d2efb5f
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80900990"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435262"
 ---
 # <a name="connection-pooling-microsoft-drivers-for-php-for-sql-server"></a>Организация пулов соединений (драйверы Майкрософт для PHP для SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "80900990"
   
 -   По умолчанию организация пулов подключений в Windows включена. В Linux и MacOS подключения объединяются в пулы только в том случае, если для ODBC включено группировку подключений (см. раздел [Включение и отключение группировки подключений](#enablingdisabling-connection-pooling) этой статьи). Если группировку подключений включено и вы подключаетесь к серверу, драйвер пытается использовать соединение из пула перед созданием нового. Если в пуле нет эквивалентного соединения, создается новое соединение, которое добавляется в пул. Драйвер определяет эквивалентность соединений путем сравнения строк подключения.  
   
--   При использовании соединения из пула выполняется сброс состояния соединения.  
+-   При использовании соединения из пула выполняется сброс состояния соединения (только Windows).  
   
 -   После закрытия соединение возвращается в пул.  
   
@@ -39,8 +40,12 @@ ms.locfileid: "80900990"
 Можно настроить драйвер на принудительное создание нового подключения (вместо поиска эквивалентного подключения в пуле подключений), задав для атрибута *ConnectionPooling* в строке подключения значение **false** (или 0).  
   
 Когда атрибут *ConnectionPooling* отсутствует в строке подключения или имеет значение **true** (или 1), драйвер создает новое подключение, только если в пуле подключений нет эквивалентного подключения.  
+
+> [!NOTE]  
+> По умолчанию множественные активные результирующие наборы (MARS) включены. При использовании MARS и пулов для правильной работы MARS драйверу требуется более длительное время для сброса соединения на *первом* запросе, таким образом, игнорируя указанное время ожидания запроса. Тем не менее, параметр времени ожидания запроса активируется в последующих запросах.
   
-Сведения о других атрибутах соединения см. в статье [Connection Options](../../connect/php/connection-options.md).  
+При необходимости ознакомьтесь с документом [Практическое руководство, как отключить множественные активные результирующие наборы (функция MARS)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md). Сведения о других атрибутах соединения см. в статье [Connection Options](../../connect/php/connection-options.md).  
+
 ### <a name="linux-and-macos"></a>Linux и macOS
 Атрибут *ConnectionPooling* нельзя использовать для включения или отключения группировки подключений. 
 
@@ -51,7 +56,7 @@ ms.locfileid: "80900990"
 [ODBC]
 Pooling=Yes
 
-[ODBC Driver 13 for SQL Server]
+[ODBC Driver 17 for SQL Server]
 CPTimeout=<int value>
 ```
   
@@ -61,9 +66,9 @@ CPTimeout=<int value>
 [ODBC]
 Pooling=Yes
 
-[ODBC Driver 13 for SQL Server]
-Description=Microsoft ODBC Driver 13 for SQL Server
-Driver=/opt/microsoft/msodbcsql/lib64/libmsodbcsql-13.1.so.3.0
+[ODBC Driver 17 for SQL Server]
+Description=Microsoft ODBC Driver 17 for SQL Server
+Driver=/opt/microsoft/msodbcsql17/lib64/libmsodbcsql-17.5.so.2.1
 UsageCount=1
 CPTimeout=120
 ```
@@ -75,7 +80,7 @@ Pooling=No
 ```
 
 ## <a name="remarks"></a>Remarks
-- В Linux или macOS все подключения будут помещены в пул, если в файле odbcinst.ini включено использование пулов. Это означает, что параметр подключения ConnectionPooling не действует. Чтобы отключить группировку, установите Pooling=No в файле odbcinst.ini и перезагрузите драйверы.
+- В Linux или macOS не рекомендуется использовать пулы соединений с unixODBC ниже версии 2.3.7. Если в файле odbcinst.ini включен пул, то все подключения будут помещены в пул, что означает, что параметр подключения ConnectionPooling не действует. Чтобы отключить группировку, установите Pooling=No в файле odbcinst.ini и перезагрузите драйверы. 
   - unixODBC < = 2.3.4 (Linux и macOS) может не возвращать правильную диагностическую информацию, например сообщения об ошибках, предупреждения и информативные сообщения.
   - По этой причине драйверы SQLSRV и PDO_SQLSRV могут не иметь правильной выборки данных типа long (например, XML, двоичные) в виде строк. В качестве обходного пути можно получить данные типа long в виде потоков. Дополнительные сведения о SQLSRV см. в приведенном ниже примере.
 
@@ -125,7 +130,7 @@ function getColumn($conn)
 
 
 ## <a name="see-also"></a>См. также:  
-[Практическое руководство. Подключение с использованием проверки подлинности Windows](../../connect/php/how-to-connect-using-windows-authentication.md)
+[Руководство. Подключение с помощью проверки подлинности Windows](../../connect/php/how-to-connect-using-windows-authentication.md)
 
-[Практическое руководство. Подключение с использованием проверки подлинности SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
+[Руководство. Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md) (Как установить подключение с использованием проверки подлинности SQL Server)  
   

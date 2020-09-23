@@ -9,21 +9,21 @@ author: dphansen
 ms.author: davidph
 ms.custom: contperfq4
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2142e67f7e758b6e949b160842adc954390b42db
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 914f8626a297dd233d6b22230d579623e0e98cf6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87253769"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495063"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>Известные проблемы служб машинного обучения SQL Server
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 В этой статье описаны известные проблемы или ограничения для компонентов Python и R, предоставляемых в [Службах машинного обучения SQL Server](../sql-server-machine-learning-services.md) и службах [SQL Server 2016 R Services](../r/sql-server-r-services.md).
 
 ## <a name="setup-and-configuration-issues"></a>Проблемы с установкой и настройкой
 
-Описание процессов и часто задаваемые вопросы, связанные с начальной установкой и конфигурацией, см. в разделе [Часто задаваемые вопросы об обновлении и установке](upgrade-and-installation-faq-sql-server-r-services.md). Он содержит сведения об обновлениях, параллельной установке и установке новых компонентов R или Python.
+Описание процессов, связанных с начальной настройкой и конфигурацией, см. в статье [Установка служб машинного обучения SQL Server](../install/sql-machine-learning-services-windows-install.md). Он содержит сведения об обновлениях, параллельной установке и установке новых компонентов R или Python.
 
 ### <a name="1-inconsistent-results-in-mkl-computations-due-to-missing-environment-variable"></a>1. Непоследовательные результаты в вычислениях MKL из-за отсутствия переменной среды
 

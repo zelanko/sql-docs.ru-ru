@@ -1,5 +1,6 @@
 ---
-title: Использование AAD | Документация Майкрософт для SQL Server
+title: Использование Azure Active Directory
+description: Узнайте о методах проверки подлинности Azure Active Directory, доступных в Microsoft OLE DB Driver for SQL Server, которые позволяют подключаться к базам данных SQL Azure.
 ms.custom: ''
 ms.date: 10/11/2019
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: bazizi
 ms.author: v-beaziz
-ms.openlocfilehash: 9c3586c8b51495ed3c49dd88f9f85a2b60d09aa0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e4591d74ba5e11b65cc3ede83533d72a11dbec96
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007258"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87899057"
 ---
 # <a name="using-azure-active-directory"></a>Использование Azure Active Directory
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "86007258"
 
 В версии 18.3 добавлена поддержка следующих методов проверки подлинности:
 - Интерактивная проверка подлинности Azure Active Directory
-- Проверка подлинности MSI Azure Active Directory
+- Проверка подлинности Azure Active Directory с использованием управляемого удостоверения
 
 > [!NOTE]
 > Использование следующих режимов проверки подлинности с параметром `DataTypeCompatibility` (или соответствующего свойства этого элемента) со значением `80` **не** поддерживается:
@@ -39,7 +40,7 @@ ms.locfileid: "86007258"
 > - проверка подлинности Azure Active Directory с помощью маркера доступа;
 > - Интегрированная проверка подлинности Azure Active Directory
 > - Интерактивная проверка подлинности Azure Active Directory
-> - Проверка подлинности MSI Azure Active Directory
+> - Проверка подлинности Azure Active Directory с использованием управляемого удостоверения
 
 ## <a name="connection-string-keywords-and-properties"></a>Ключевые слова и свойства строки подключения
 Для поддержки проверки подлинности Azure Active Directory были введены следующие ключевые слова строки подключения:
@@ -129,7 +130,7 @@ ms.locfileid: "86007258"
 - Использование среды `DBPROP_INIT_PROVIDERSTRING`:
     > Server=[сервер];Database=[база_данных];**Authentication=ActiveDirectoryInteractive**;UID=[имя_пользователя];Encrypt=yes.
 
-### <a name="azure-active-directory-msi-authentication"></a>Проверка подлинности MSI Azure Active Directory
+### <a name="azure-active-directory-managed-identity-authentication"></a>Проверка подлинности Azure Active Directory с использованием управляемого удостоверения
 
 - Использование среды `IDataInitialize::GetDataSource`:
     - Управляемое удостоверение, назначаемое пользователем:

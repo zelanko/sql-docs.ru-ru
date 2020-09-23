@@ -1,5 +1,6 @@
 ---
-title: Метод updateCharacterStream (java.io.Reader) | Документация Майкрософт
+description: Метод updateCharacterStream (java.lang.String, java.io.Reader, int)
+title: Метод updateCharacterStream (java.lang.String, java.io.Reader, int)
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 08cfc4e0-83f0-4f2f-ac55-b381f34fe67f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3009cae84488738a29c20d2780a94d077b81fb1a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b792971c175a7e990d7579379b6a48deb2808dc6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924878"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88353740"
 ---
 # <a name="updatecharacterstream-method-javalangstring-javaioreader-int"></a>Метод updateCharacterStream (java.lang.String, java.io.Reader, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

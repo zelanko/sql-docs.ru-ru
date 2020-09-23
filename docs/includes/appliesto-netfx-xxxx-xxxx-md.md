@@ -1,0 +1,1 @@
+<Token>**ОБЛАСТЬ ПРИМЕНЕНИЯ:** ![Да](media/yes-icon.png).NET Framework ![Нет](media/no-icon.png).NET Core ![Нет](media/no-icon.png).NET Standard </Token>

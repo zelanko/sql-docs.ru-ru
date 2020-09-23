@@ -1,6 +1,6 @@
 ---
 title: Учебник по R. Развертывание модели
-description: Учебник, показывающий, как развернуть модель R в SQL Server для аналитики в базе данных.
+description: Узнайте, как развертывать модели R в рабочей среде, вызывая обученную модель из хранимой процедуры.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 11/26/2018
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bdf7446497d242d3cc2773daad0adfa8d3a700e3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8eccd11403f93b1307995a44d38100d680fa8149
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781782"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179770"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>Развертывание модели R и ее использование в SQL Server (пошаговое руководство)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 На этом занятии вы узнаете, как развертывать модели R в рабочей среде, вызывая обученную модель из хранимой процедуры. Вы можете вызывать хранимую процедуру из R или любого прикладного языка программирования, поддерживающего [!INCLUDE[tsql](../../includes/tsql-md.md)] (например, C#, Java, Python и т. д.), чтобы с помощью модели составлять прогнозы на основе новых наблюдений.
 
@@ -228,6 +228,6 @@ ms.locfileid: "85781782"
 Вы также можете изучить следующие дополнительные примеры и ресурсы:
 
 + [Сценарии и шаблоны решений для обработки и анализа данных](data-science-scenarios-and-solution-templates.md)
-+ [Дополнительные аналитические функции в базе данных для разработчиков SQL (руководство)](sqldev-in-database-r-for-sql-developers.md)
++ [Дополнительные аналитические функции в базе данных для разработчиков SQL (руководство)](r-taxi-classification-introduction.md)
 + [Руководства по Machine Learning Server](https://docs.microsoft.com/machine-learning-server/r/how-to-introduction)
 + [Дополнительные ресурсы по Machine Learning Server](https://docs.microsoft.com//machine-learning-server/resources-more)

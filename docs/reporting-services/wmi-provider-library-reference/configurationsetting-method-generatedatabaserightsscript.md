@@ -1,4 +1,5 @@
 ---
+description: Метод GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting)
 title: Метод GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting) | Документы Майкрософт
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8714aee2b5bb33c84a1d9f11b626d3e21e06ed1f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3a54cd6367cea9caf2f72ec7412d15e878233a51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570970"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423268"
 ---
 # <a name="configurationsetting-method---generatedatabaserightsscript"></a>Метод ConfigurationSetting — GenerateDatabaseRightsScript
   Создает скрипт SQL, с помощью которого пользователям могут предоставляться права доступа к базе данных сервера отчетов и другим базам данных, необходимым для работы сервера отчетов. Ожидается, что участник соединится с базой данных сервера отчетов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и выполнит скрипт.  
@@ -64,7 +65,7 @@ out Int32 HRESULT);
 ## <a name="remarks"></a>Remarks  
  Если параметр *DatabaseName* пуст, *IsRemote* пропускается и значение файла конфигурации сервера отчетов используется в качестве имени базы данных.  
   
- Если параметр *IsWindowsUser* имеет значение **true**, то параметр *UserName* должен иметь вид \<домен>\\<имя_пользователя\>.  
+ Если параметр *IsWindowsUser* имеет значение **true**, то параметр *UserName* должен иметь вид \<domain>\\<username\>.  
   
  Если параметр *IsWindowsUser* имеет значение **true**, то созданный скрипт предоставляет пользователю права для входа на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], при этом база данных сервера отчетов задается в качестве используемой по умолчанию, а также пользователю присваивается роль **RSExec** в базе данных сервера отчетов, во временной базе данных сервера отчетов, в базе данных master и в системной базе данных MSDB.  
   
@@ -74,12 +75,12 @@ out Int32 HRESULT);
   
 |Переведенная учетная запись/идентификатор безопасности|Общее имя|Удаленное имя|  
 |---------------------------------------|-----------------|-----------------|  
-|(S-1-5-18)|Локальная система|\<Домен>\\<имя_компьютера\>$|  
-|.\LocalSystem|Локальная система|\<Домен>\\<имя_компьютера\>$|  
-|ComputerName\LocalSystem|Локальная система|\<Домен>\\<имя_компьютера\>$|  
-|локальная система;|Локальная система|\<Домен>\\<имя_компьютера\>$|  
-|(S-1-5-20)|Сетевая служба.|\<Домен>\\<имя_компьютера\>$|  
-|NT AUTHORITY\NetworkService|Сетевая служба.|\<Домен>\\<имя_компьютера\>$|  
+|(S-1-5-18)|Локальная система|\<Domain>\\<ComputerName\>$|  
+|.\LocalSystem|Локальная система|\<Domain>\\<ComputerName\>$|  
+|ComputerName\LocalSystem|Локальная система|\<Domain>\\<ComputerName\>$|  
+|локальная система;|Локальная система|\<Domain>\\<ComputerName\>$|  
+|(S-1-5-20)|Сетевая служба.|\<Domain>\\<ComputerName\>$|  
+|NT AUTHORITY\NetworkService|Сетевая служба.|\<Domain>\\<ComputerName\>$|  
 |(S-1-5-19)|Локальная служба.|Ошибка — см. ниже.|  
 |NT AUTHORITY\LocalService|Локальная служба.|Ошибка — см. ниже.|  
   
@@ -95,9 +96,9 @@ out Int32 HRESULT);
 |"(local)"||  
 |"LOCAL"||  
 |localhost||  
-|\<Имя_компьютера>|testlab14|  
-|\<Полное_доменное_имя_компьютера>|example.redmond.microsoft.com|  
-|\<IP-адрес>|180.012.345,678|  
+|\<Machinename>|testlab14|  
+|\<MachineFQDN>|example.redmond.microsoft.com|  
+|\<IPAddress>|180.012.345,678|  
   
  Если параметр *IsWindowsUser* имеет значение **true**, то поставщик WMI вызывает метод LookupAccountName для получения идентификатора безопасности для учетной записи, а затем вызывает метод LookupAccountSID, чтобы получить имя для вставки в скрипт [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Это гарантирует, что имя учетной записи успешно пройдет проверку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

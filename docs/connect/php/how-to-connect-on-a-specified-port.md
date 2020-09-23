@@ -1,5 +1,6 @@
 ---
-title: Руководство. Подключение к заданному порту | Документация Майкрософт
+title: Практическое руководство. Подключение к заданному порту
+description: Узнайте, как подключиться к базе данных, настроенной для использования определенного порта, с помощью драйверов Microsoft SQLSRV и PDO_SQLSRV для PHP для SQL Server.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 65a154d1-375c-439b-a653-7815c9d70ff3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 44df1e9c8809fed016a5c041d34f0f46cae83654
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b55f12bbfe4bbe255af2d62c2ed0c5ab3f968e98
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916510"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435230"
 ---
-# <a name="how-to-connect-on-a-specified-port"></a>Руководство. подключиться к заданному порту
+# <a name="how-to-connect-on-a-specified-port"></a>Практическое руководство. Подключение к заданному порту
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Этот раздел описывает подключение к SQL Server по указанном порту с помощью [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  

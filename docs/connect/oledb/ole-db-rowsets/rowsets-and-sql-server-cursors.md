@@ -1,6 +1,6 @@
 ---
 title: Наборы строк и курсоры SQL Server (драйвер OLE DB)
-description: Наборы строк и курсоры SQL Server
+description: Узнайте, как SQL Server возвращает результирующие наборы объектам-получателям и чем результирующие наборы по умолчанию отличаются от серверных курсоров в OLE DB Driver for SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - rowsets [OLE DB], cursors
 - properties [OLE DB]
 - cursors [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 4c87699f389d487354b562fafa8cfab378c2ff0d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fbcac0300b3abe337e39bccb84a78f74e0de61bb
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244159"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859970"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Наборы строк и курсоры SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

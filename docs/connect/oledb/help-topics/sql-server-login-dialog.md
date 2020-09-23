@@ -1,6 +1,6 @@
 ---
 title: Диалоговое окно "Вход в сервер SQL" (OLE DB) | Документация Майкрософт
-description: Использование диалогового окна входа SQL Server
+description: При попытке подключения без указания достаточной информации OLE DB Driver for SQL Server отображает диалоговое окно входа на SQL Server.
 ms.custom: ''
 ms.date: 10/11/2019
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
-ms.openlocfilehash: a05dc6221aee2dbd3b7b97c28e7bfecc9ce325bf
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: af86eae9866960c58ec9967f32a45998e5a91106
+ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85987326"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88147585"
 ---
 # <a name="sql-server-login-dialog-box"></a>Диалоговое окно входа SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,6 +1,6 @@
 ---
 title: Использование режима MARS | Документация Майкрософт
-description: Использование режима MARS
+description: Узнайте, как поддержка множественных активных результирующих наборов упрощает проектирование приложений в SQL Server для выполняющейся в памяти OLTP и драйвера OLE DB.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Multiple Active Result Sets
 - OLE DB Driver for SQL Server, MARS
 - MARS [SQL Server]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: f1fd5ebcdfcf87e8feee0d2ee2accf26d9b85f95
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f9657fed2495ce5543c3fef776e6be3f0851dd88
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006832"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860167"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>Использование режима MARS
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

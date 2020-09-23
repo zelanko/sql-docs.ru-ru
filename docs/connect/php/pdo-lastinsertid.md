@@ -1,7 +1,8 @@
 ---
-title: PDO::lastInsertId | Документация Майкрософт
+title: PDO::lastInsertId
+description: Справочник по API для функции PDO::lastInsertId в драйвере Microsoft PDO_SQLSRV для PHP для SQL Server.
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 0c617b53-a74b-4d5b-b76b-3ec7f1b8e8de
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d63244d93ab8fcbf2cbc6957dc3ddfcef435bb27
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 004125e217b1e2bf79ef26dc9ebffae2877890b2
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919160"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646734"
 ---
 # <a name="pdolastinsertid"></a>PDO::lastInsertId
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

@@ -8,16 +8,16 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 46ad967b9ecd40b84cf7871e7b9ef113fe686953
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 9371d2f988642a5f5ab0e7b715130772a693bb52
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85814064"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173721"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>Демонстрационные данные по работе такси в Нью-Йорке для учебников по Python и R в SQL Server
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 В этой статье объясняется, как настроить демонстрационную базу данных, состоящую из общедоступных данных [Комиссии по такси и лимузинам Нью-Йорка](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml). Эти данные используются в нескольких учебниках по R и Python для аналитики в базе данных в SQL Server. Чтобы пример кода выполнялся быстрее, была создана репрезентативная выборка в объеме 1 % данных. В вашей системе файл резервной копии базы данных немного превышает 90 МБ и представляет 1,7 млн строк в основной таблице данных.
 
@@ -25,8 +25,8 @@ ms.locfileid: "85814064"
 
 Этот набор данных используется в следующих учебниках и кратких руководствах:
 
-+ [Изучение аналитики в базе данных с помощью R в SQL Server](sqldev-in-database-r-for-sql-developers.md)
-+ [Изучение аналитики в базе данных с помощью Python в SQL Server](sqldev-in-database-python-for-sql-developers.md)
++ [Изучение аналитики в базе данных с помощью R в SQL Server](r-taxi-classification-introduction.md)
++ [Изучение аналитики в базе данных с помощью Python в SQL Server](python-taxi-classification-introduction.md)
 
 ## <a name="download-files"></a>Загрузка файлов
 
@@ -37,6 +37,11 @@ ms.locfileid: "85814064"
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 >[!NOTE]
 >Чтобы восстановить пример базы данных в [кластерах больших данных SQL Server](../../big-data-cluster/big-data-cluster-overview.md), скачайте файл [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak) и следуйте указаниям в разделе [Восстановление базы данных на главном экземпляре кластера больших данных SQL Server](../../big-data-cluster/data-ingestion-restore-database.md).
+::: moniker-end
+
+::: moniker range=">=azuresqldb-mi-current||=sqlallproducts-allversions"
+>[!NOTE]
+>Чтобы восстановить пример базы данных в [Службах машинного обучения в Управляемом экземпляре SQL Azure (предварительная версия)](/azure/azure-sql/managed-instance/machine-learning-services-overview), следуйте инструкциям в [кратком руководстве по восстановлению базы данных в Управляемом экземпляре Azure SQL](/azure/azure-sql/managed-instance/restore-sample-database-quickstart), используя BAK-файл демонстрационной базы данных такси Нью-Йорка: [https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak).
 ::: moniker-end
 
 1. Щелкните файл [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak), чтобы скачать файл резервной копии базы данных.
@@ -64,19 +69,19 @@ ms.locfileid: "85814064"
 |**Имя объекта**|**Тип объекта**|**Описание**|
 |----------|------------------------|---------------|
 |**NYCTaxi_Sample** | База данных | Создает базу данных и две таблицы:<br /><br />Таблица dbo.nyctaxi_sample: содержит основной набор данных по работе такси в Нью-Йорке. К таблице добавляется кластеризованный индекс columnstore для оптимизации хранения данных и производительности запросов. В таблицу вставлена выборка, содержащая 1 % от общего набора данных по работе такси в Нью-Йорке.<br /><br />Таблица dbo.nyc_taxi_models: используется для сохранения обученной модели расширенной аналитики.|
-|**fnCalculateDistance** |скалярная функция | Вычисляет прямое расстояние между местами посадки и высадки. Эта функция используется в занятиях [Создание компонентов данных](sqldev-create-data-features-using-t-sql.md), [Обучение и сохранение модели](sqldev-train-and-save-a-model-using-t-sql.md) и [Ввод модели R в эксплуатацию](sqldev-operationalize-the-model.md).|
-|**fnEngineerFeatures** |функция с табличным значением | Создает новые характеристики данных для обучения модели. Эта функция используется в занятиях [Создание характеристик данных](sqldev-create-data-features-using-t-sql.md) и [Ввод модели R в эксплуатацию](sqldev-operationalize-the-model.md).|
+|**fnCalculateDistance** |скалярная функция | Вычисляет прямое расстояние между местами посадки и высадки. Эта функция используется в занятиях [Создание компонентов данных](r-taxi-classification-create-features.md), [Обучение и сохранение модели](r-taxi-classification-train-model.md) и [Ввод модели R в эксплуатацию](r-taxi-classification-deploy-model.md).|
+|**fnEngineerFeatures** |функция с табличным значением | Создает новые характеристики данных для обучения модели. Эта функция используется в занятиях [Создание характеристик данных](r-taxi-classification-create-features.md) и [Ввод модели R в эксплуатацию](r-taxi-classification-deploy-model.md).|
 
 
 Хранимые процедуры создаются с помощью скриптов R и Python, которые можно найти в разных учебниках. В следующей таблице перечислены хранимые процедуры, которые при необходимости можно добавить в демонстрационную базу данных по работе такси в Нью-Йорке при выполнении скриптов из разных занятий.
 
 |**Хранимая процедура**|**Язык**|**Описание**|
 |-------------------------|------------|---------------|
-|**RxPlotHistogram** |R | Вызывает функцию RevoScaleR rxHistogram для построения гистограммы на основе переменной, а затем возвращает диаграмму в виде двоичного объекта. Эта хранимая процедура используется в занятии [Анализ и визуализация данных](sqldev-explore-and-visualize-the-data.md).|
-|**RPlotRHist** |R| Создает график с помощью функции Hist, а затем сохраняет результат в виде локального PDF-файла. Эта хранимая процедура используется в занятии [Анализ и визуализация данных](sqldev-explore-and-visualize-the-data.md).|
-|**RxTrainLogitModel**  |R| Обучает модель логистической регрессии путем вызова пакета R. Модель прогнозирует значение для столбца tipped и обучается на основе случайной выборки, содержащей 70 % данных. Выходными данными хранимой процедуры является обученная модель, которая сохраняется в таблице nyc_taxi_models. Эта хранимая процедура используется в занятии [Обучение и сохранение модели](sqldev-train-and-save-a-model-using-t-sql.md).|
-|**RxPredictBatchOutput**  |R | Вызывает обученную модель для составления прогнозов с ее помощью. Хранимая процедура принимает запрос в качестве входного параметра и возвращает столбец числовых значений, представляющих оценки для входных строк. Эта хранимая процедура используется в занятии [Прогнозирование возможных результатов](sqldev-operationalize-the-model.md).|
-|**RxPredictSingleRow**  |R| Вызывает обученную модель для составления прогнозов с ее помощью. Эта хранимая процедура принимает новое наблюдение в качестве входных данных, причем отдельные значения характеристик передаются как встроенные параметры, и возвращает значение, представляющее прогнозируемый результат для нового наблюдения. Эта хранимая процедура используется в занятии [Прогнозирование возможных результатов](sqldev-operationalize-the-model.md).|
+|**RxPlotHistogram** |R | Вызывает функцию RevoScaleR rxHistogram для построения гистограммы на основе переменной, а затем возвращает диаграмму в виде двоичного объекта. Эта хранимая процедура используется в занятии [Анализ и визуализация данных](r-taxi-classification-explore-data.md).|
+|**RPlotRHist** |R| Создает график с помощью функции Hist, а затем сохраняет результат в виде локального PDF-файла. Эта хранимая процедура используется в занятии [Анализ и визуализация данных](r-taxi-classification-explore-data.md).|
+|**RxTrainLogitModel**  |R| Обучает модель логистической регрессии путем вызова пакета R. Модель прогнозирует значение для столбца tipped и обучается на основе случайной выборки, содержащей 70 % данных. Выходными данными хранимой процедуры является обученная модель, которая сохраняется в таблице nyc_taxi_models. Эта хранимая процедура используется в занятии [Обучение и сохранение модели](r-taxi-classification-train-model.md).|
+|**RxPredictBatchOutput**  |R | Вызывает обученную модель для составления прогнозов с ее помощью. Хранимая процедура принимает запрос в качестве входного параметра и возвращает столбец числовых значений, представляющих оценки для входных строк. Эта хранимая процедура используется в занятии [Прогнозирование возможных результатов](r-taxi-classification-deploy-model.md).|
+|**RxPredictSingleRow**  |R| Вызывает обученную модель для составления прогнозов с ее помощью. Эта хранимая процедура принимает новое наблюдение в качестве входных данных, причем отдельные значения характеристик передаются как встроенные параметры, и возвращает значение, представляющее прогнозируемый результат для нового наблюдения. Эта хранимая процедура используется в занятии [Прогнозирование возможных результатов](r-taxi-classification-deploy-model.md).|
 
 ## <a name="query-the-data"></a>Запрос данных
 
@@ -110,5 +115,5 @@ ms.locfileid: "85814064"
 
 Теперь выборка данных по работе такси в Нью-Йорке готова для использования в практическом обучении.
 
-+ [Изучение аналитики в базе данных с помощью R в SQL Server](sqldev-in-database-r-for-sql-developers.md)
-+ [Изучение аналитики в базе данных с помощью Python в SQL Server](sqldev-in-database-python-for-sql-developers.md)
++ [Изучение аналитики в базе данных с помощью R в SQL Server](r-taxi-classification-introduction.md)
++ [Изучение аналитики в базе данных с помощью Python в SQL Server](python-taxi-classification-introduction.md)

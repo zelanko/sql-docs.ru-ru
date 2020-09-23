@@ -1,5 +1,5 @@
 ---
-title: Драйверы Майкрософт для PHP для SQL Server | Документация Майкрософт
+title: Драйверы Microsoft SQL Server для PHP
 description: Драйвер SQL Server для PHP обеспечивает надежную и масштабируемую интеграцию приложений PHP с сервером SQL Server через расширения PHP.
 ms.custom: ''
 ms.date: 03/26/2018
@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 007bc81ce5528d1f03f73716bf54b325c48a0ff9
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 894361044f45d294ad19f7057c57aa741bb0d454
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486752"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680539"
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Драйверы Microsoft SQL Server для PHP
 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Драйвер SQL Server для PHP обеспечивает надежную и масштабируемую интеграцию приложений PHP с сервером SQL Server. Эти драйверы представляют собой расширения для PHP, которые позволяют считывать и записывать данные SQL Server из скриптов PHP. Драйверы предоставляют интерфейсы для доступа к данным в Базах данных SQL Azure и во всех выпусках SQL Server 2005 и более поздних версий (включая Экспресс-выпуски). Драйвер использует функции PHP (в том числе потоки) для чтения и записи крупных объектов.  
+Драйвер SQL Server для PHP обеспечивает надежную и масштабируемую интеграцию приложений PHP с сервером SQL Server. Эти драйверы представляют собой расширения для PHP, которые позволяют считывать и записывать данные SQL Server из скриптов PHP. Драйверы предоставляют интерфейсы для доступа к данным в Базе данных SQL Azure и во всех выпусках SQL Server 2005 и более поздних версий (включая Экспресс-выпуски). Драйвер использует функции PHP (в том числе потоки) для чтения и записи крупных объектов.  
   
 ## <a name="getting-started"></a>Приступая к работе  
 * [Шаг 1. Настройка среды разработки для разработки на PHP](step-1-configure-development-environment-for-php-development.md)  

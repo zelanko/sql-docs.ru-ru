@@ -1,5 +1,6 @@
 ---
-title: sqlsrv_client_info | Документация Майкрософт
+title: sqlsrv_client_info
+description: Справочник по API для функции sqlsrv_client_info в драйвере SQLSRV для PHP для SQL Server.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3e2d3679-436a-45d8-8bdc-7c633b65a720
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d17d3a49a241ee1ff042fceb3602b1d84f2cca9b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5d1ebcbe7a022d438e1e7e10c42098127496c1f7
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920121"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411190"
 ---
 # <a name="sqlsrv_client_info"></a>sqlsrv_client_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +44,7 @@ sqlsrv_client_info( resource $conn)
   
 **Для PHP для SQL Server версии 3.2 и 3.1**:  
   
-|Клавиши|Description|  
+|Клавиши|Описание|  
 |-------|---------------|  
 |DriverDllName|MSODBCSQL11.DLL (драйвер ODBC 11 для SQL Server)|  
 |DriverODBCVer|Версия ODBC (xx.yy)|  
@@ -52,7 +53,7 @@ sqlsrv_client_info( resource $conn)
   
 **Для PHP для SQL Server версии 3.0 и 2.0**:  
   
-|Клавиши|Description|  
+|Клавиши|Описание|  
 |-------|---------------|  
 |DriverDllName|SQLNCLI10.DLL ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] версии 2.0)|  
 |DriverODBCVer|Версия ODBC (xx.yy)|  

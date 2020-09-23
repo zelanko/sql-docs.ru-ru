@@ -1,21 +1,22 @@
 ---
-title: PDOStatement::getColumnMeta | Документация Майкрософт
+title: PDOStatement::getColumnMeta
+description: Справочник по API для функции PDOStatement::getColumnMeta в драйвере Microsoft PDO_SQLSRV для PHP для SQL Server.
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: c92a21cc-8e53-43d0-a4bf-542c77c100c9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cb7e9e37d568659a71917df66016f2333ed4be46
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e29418276e6209f669ae57160809120d61e19a05
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76918802"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645086"
 ---
 # <a name="pdostatementgetcolumnmeta"></a>PDOStatement::getColumnMeta
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,7 +39,7 @@ array PDOStatement::getColumnMeta ( $column );
 ## <a name="remarks"></a>Remarks  
 В следующей таблице перечислены поля в массиве, возвращенном getColumnMeta.  
   
-|NAME|VALUES|  
+|ИМЯ|VALUES|  
 |--------|----------|  
 |native_type|Указывает тип PHP для столбца. Всегда строка.|  
 |driver:decl_type|Указывает тип SQL, используемый для представления значения столбца в базе данных. Если столбец в результирующем наборе является результатом функции, это значение не возвращается PDOStatement::getColumnMeta.|  
@@ -46,7 +47,7 @@ array PDOStatement::getColumnMeta ( $column );
 |name|Указывает имя столбца в базе данных.|  
 |table|Указывает имя таблицы, содержащей столбец в базе данных. Всегда пусто.|  
 |len|Указывает длину столбца.|  
-|precision|Указывает числовую точность этого столбца.|  
+|точность|Указывает числовую точность этого столбца.|  
 |pdo_type|Указывает тип этого столбца, представленный константами PDO::PARAM_*. Всегда PDO::PARAM_STR (2).|  
   
 Поддержка PDO была добавлена в версии 2.0 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  

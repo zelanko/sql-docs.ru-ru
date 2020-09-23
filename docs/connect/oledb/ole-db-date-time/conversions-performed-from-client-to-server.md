@@ -1,6 +1,6 @@
 ---
 title: Преобразования, выполняемые при передаче от клиента к серверу | Документация Майкрософт
-description: Преобразования, выполняемые при передаче от клиента к серверу
+description: Узнайте о преобразованиях даты и времени, проводимых между клиентским приложением, написанным с помощью OLE DB Driver for SQL Server и SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], client to server
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: ccf1505fd896b627a83fe2ee7b3d1e6e19ab556e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c5a43604c485c2baf7bb5b4430303db7fedd9bd8
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244897"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860224"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>Преобразования, выполняемые при передаче от клиента к серверу
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -70,8 +70,8 @@ ms.locfileid: "87244897"
 |15|Поддерживается семантика преобразования версий, предшествующих [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], для типа **datetime**. Секунды округляются до ближайшей 300-ой секунды.|  
 |16|Поведение преобразования значения (конкретного типа), внедренное в клиентскую структуру SSVARIANT, совпадает с поведением того же значения с тем же типом, не встроенного в структуру SSVARIANT.|  
   
-|Тип|Длина (в символах)|Масштабирование|  
-|-|-|-|  
+| Тип | Длина (в символах) | Масштабирование |  
+| ---- | ----------------- | ----- |  
 |DBTIME2|8, 10..18|0,1..9|  
 |DBTIMESTAMP|19, 21..29|0,1..9|  
 |DBTIMESTAMPOFFSET|26, 28..36|0,1..9|  

@@ -1,7 +1,8 @@
 ---
-title: PDO::quote | Документация Майкрософт
+title: PDO::quote
+description: Справочник по API для функции PDO::quote в драйвере Microsoft PDO_SQLSRV для PHP для SQL Server.
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ab9ddc48-42f8-4edf-aa8b-b0fc66706161
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: db661eea0ea4b3b46e3a73f7e1f4609267bbae41
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2cc39e175c46317428836af6562abc9af3d02dd9
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919062"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645565"
 ---
 # <a name="pdoquote"></a>PDO::quote
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,9 +31,9 @@ string PDO::quote( $string[, $parameter_type ] )
 ```  
   
 #### <a name="parameters"></a>Параметры  
-$*string*: строка для заключения в кавычки.  
+$*string*. Строка для заключения в кавычки.  
   
-$*parameter_type*: необязательный символ (целое число), указывающий тип данных.  Значение по умолчанию — PDO::PARAM_STR.  
+$*parameter_type*. Необязательный символ (целое число), указывающий тип данных.  Значение по умолчанию — PDO::PARAM_STR.  
 
 Новые константы PDO появились в PHP 7.2 для поддержки [сопоставления строк в Юникоде и других кодировках](https://wiki.php.net/rfc/extended-string-types-for-pdo). Строки Юникода можно заключить в кавычки с префиксом N (например, N'string' вместо 'string').
 

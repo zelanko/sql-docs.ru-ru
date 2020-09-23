@@ -1,6 +1,6 @@
 ---
 title: Команды, формирующие результаты с несколькими наборами строк (драйвер OLE DB) | Документация Майкрософт
-description: Команды, формирующие результаты с несколькими наборами строк
+description: Узнайте, как OLE DB Driver for SQL Server возвращает несколько наборов строк для пакетных инструкций SQL и когда хранимые процедуры реализуют пакетные инструкции SQL.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, multiple rowsets
 - commands [OLE DB]
 - multiple-rowset results
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: f24f338252ab788cd395147c0a9a1cfdcd94162a
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 93c2d5ec6f5965edc56fea26b8474d3b8926a0cb
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942806"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860158"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>Команды, формирующие результаты с несколькими наборами строк
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

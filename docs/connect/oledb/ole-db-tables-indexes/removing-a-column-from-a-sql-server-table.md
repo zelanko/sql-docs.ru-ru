@@ -1,6 +1,6 @@
 ---
 title: Удаление столбца из таблицы SQL Server (драйвер OLE DB)
-description: Удаление столбца из таблицы SQL Server с помощью OLE DB Driver for SQL Server
+description: OLE DB Driver for SQL Server предоставляет функцию ITableDefinition::DropColumn function, которая позволяет объектам-получателям удалять столбцы из таблицы SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - removing columns
 - DropColumn function
 - OLE DB Driver for SQL Server, columns
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 7467d30e8cb13badbea21eff9804710ff4361259
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0672669e6d724e7dfcb5338c76694473f078da10
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244115"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859464"
 ---
 # <a name="removing-a-column-from-a-sql-server-table"></a>Удаление столбца из таблицы SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

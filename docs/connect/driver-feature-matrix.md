@@ -2,19 +2,19 @@
 title: Матрица поддержки функций драйверами
 description: Узнайте, какие популярные функции поддерживаются в драйверах для SQL Server и где можно найти сведения о них.
 ms.custom: ''
-ms.date: 06/17/2020
+ms.date: 08/05/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-daenge
-ms.openlocfilehash: a879b3784b19de4e7d30e1af213953b8e592abf9
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 4071353214f7ffde54ecd1097defaa6c60aa19d6
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84947894"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823359"
 ---
 # <a name="driver-feature-support-matrix-for-microsoft-sql-server"></a>Матрица поддержки функций драйверами для Microsoft SQL Server
 
@@ -60,8 +60,8 @@ ms.locfileid: "84947894"
 | [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md) | [Да](odbc/using-always-encrypted-with-the-odbc-driver.md) | [Да](odbc/using-always-encrypted-with-the-odbc-driver.md) | [Да](jdbc/using-always-encrypted-with-the-jdbc-driver.md) |
 | [Always Encrypted с безопасными анклавами](../relational-databases/security/encryption/always-encrypted-enclaves.md) | [Да](odbc/using-always-encrypted-with-the-odbc-driver.md#enabling-always-encrypted-with-secure-enclaves) | [Да](odbc/using-always-encrypted-with-the-odbc-driver.md#enabling-always-encrypted-with-secure-enclaves) | [Да](jdbc/using-always-encrypted-with-the-jdbc-driver.md) | |
 | [Проверка подлинности Azure Active Directory с использованием маркера доступа](/azure/active-directory/develop/access-tokens) | [Да](odbc/using-azure-active-directory.md#authenticating-with-an-access-token) | [Да](odbc/using-azure-active-directory.md#authenticating-with-an-access-token) | [Да](jdbc/connecting-using-azure-active-directory-authentication.md#connecting-using-access-token) | [Да](oledb/features/using-azure-active-directory.md) |
-| [Проверка подлинности Azure Active Directory с использованием пароля](/azure/sql-database/sql-database-aad-authentication) |  [Да](odbc/using-azure-active-directory.md) | [Да](odbc/using-azure-active-directory.md)<sup>[1](#note1)</sup> | [Да](jdbc/connecting-using-azure-active-directory-authentication.md) | [Да](oledb/features/using-azure-active-directory.md) |
-| [Интегрированная проверка подлинности Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | [Да](odbc/using-azure-active-directory.md) | | [Да](jdbc/connecting-using-azure-active-directory-authentication.md) | [Да](oledb/features/using-azure-active-directory.md) |
+| [Проверка подлинности Azure Active Directory с использованием пароля](/azure/sql-database/sql-database-aad-authentication) |  [Да](odbc/using-azure-active-directory.md) | [Да](odbc/using-azure-active-directory.md) | [Да](jdbc/connecting-using-azure-active-directory-authentication.md) | [Да](oledb/features/using-azure-active-directory.md) |
+| [Интегрированная проверка подлинности Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | [Да](odbc/using-azure-active-directory.md) | [Да](odbc/using-azure-active-directory.md) | [Да](jdbc/connecting-using-azure-active-directory-authentication.md) | [Да](oledb/features/using-azure-active-directory.md) |
 | [Интерактивная проверка подлинности Azure Active Directory (MFA)](/azure/sql-database/sql-database-aad-authentication) | [Да](odbc/using-azure-active-directory.md) | | | [Да](oledb/features/using-azure-active-directory.md) |
 | [Проверка подлинности Azure Active Directory с использованием управляемого удостоверения](/azure/active-directory/managed-identities-azure-resources/overview) | [Да](odbc/using-azure-active-directory.md) | [Да](odbc/using-azure-active-directory.md) | [Да](jdbc/connecting-using-azure-active-directory-authentication.md) | [Да](oledb/features/using-azure-active-directory.md) |
 | [Проверка подлинности Azure Active Directory субъекта-службы](/azure/active-directory/develop/app-objects-and-service-principals) | | | | |
@@ -75,14 +75,14 @@ ms.locfileid: "84947894"
 | [Разрешение IP-адресов прозрачной сети](odbc/using-transparent-network-ip-resolution.md) | [Да](odbc/using-transparent-network-ip-resolution.md) | [Да](odbc/using-transparent-network-ip-resolution.md) | [Да](jdbc/setting-the-connection-properties.md) | [Да](oledb/features/using-transparent-network-ip-resolution.md) |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-| <a id="table3"></a>Функция | [Драйверы PHP для SQL Server в Windows](php/microsoft-php-driver-for-sql-server.md)<sup>[2](#note2)</sup> | [Драйверы PHP для SQL Server в Linux и macOS](php/microsoft-php-driver-for-sql-server.md)<sup>[2](#note2)</sup> | [Tedious (Node.js)](node-js/node-js-driver-for-sql-server.md) | [pyODBC (Python)](python/pyodbc/python-sql-driver-pyodbc.md)<sup>[2](#note2)</sup> |
+| <a id="table3"></a>Функция | [Драйверы PHP для SQL Server в Windows](php/microsoft-php-driver-for-sql-server.md)<sup>[1](#note1)</sup> | [Драйверы PHP для SQL Server в Linux и macOS](php/microsoft-php-driver-for-sql-server.md)<sup>[1](#note1)</sup> | [Tedious (Node.js)](node-js/node-js-driver-for-sql-server.md) | [pyODBC (Python)](python/pyodbc/python-sql-driver-pyodbc.md)<sup>[1](#note1)</sup> |
 | :-- | :-- | :-- | :-- | :-- |
 | [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md) | [Да](php/using-always-encrypted-php-drivers.md) | [Да](php/using-always-encrypted-php-drivers.md) | | Да |
 | [Always Encrypted с безопасными анклавами](../relational-databases/security/encryption/always-encrypted-enclaves.md) | [Да](php/always-encrypted-secure-enclaves.md) | [Да](php/always-encrypted-secure-enclaves.md) | | Да |
 | [Проверка подлинности Azure Active Directory с использованием маркера доступа](/azure/active-directory/develop/access-tokens) | [Да](php/azure-active-directory.md) | [Да](php/azure-active-directory.md) | [Да](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | Да |
-| [Проверка подлинности Azure Active Directory с использованием пароля](/azure/sql-database/sql-database-aad-authentication) | [Да](php/azure-active-directory.md) | [Да](php/azure-active-directory.md)<sup>[1](#note1)</sup> | [Да](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | Да |
-| [Интегрированная проверка подлинности Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | | | | Да<sup>[3](#note3)</sup> |
-| [Интерактивная проверка подлинности Azure Active Directory (MFA)](/azure/sql-database/sql-database-aad-authentication) | | | | Да<sup>[3](#note3)</sup> |
+| [Проверка подлинности Azure Active Directory с использованием пароля](/azure/sql-database/sql-database-aad-authentication) | [Да](php/azure-active-directory.md) | [Да](php/azure-active-directory.md) | [Да](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | Да |
+| [Интегрированная проверка подлинности Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | [Да](php/azure-active-directory.md) | [Да](php/azure-active-directory.md) | | Да |
+| [Интерактивная проверка подлинности Azure Active Directory (MFA)](/azure/sql-database/sql-database-aad-authentication) | | | | Да<sup>[2](#note2)</sup> |
 | [Проверка подлинности Azure Active Directory с использованием управляемого удостоверения](/azure/active-directory/managed-identities-azure-resources/overview) | [Да](php/azure-active-directory.md) | [Да](php/azure-active-directory.md) | [Да](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | Да |
 | [Проверка подлинности Azure Active Directory субъекта-службы](/azure/active-directory/develop/app-objects-and-service-principals) | | | | |
 | [Встроенная проверка подлинности Windows](/windows-server/security/windows-authentication/windows-authentication-overview) | [Да](php/how-to-connect-using-windows-authentication.md) | [Да](odbc/linux-mac/using-integrated-authentication.md) | | Да |
@@ -95,11 +95,9 @@ ms.locfileid: "84947894"
 | [Разрешение IP-адресов прозрачной сети](odbc/using-transparent-network-ip-resolution.md) | [Да](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | [Да](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | | [Да](odbc/using-transparent-network-ip-resolution.md) |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-<a id="note1"></a><sup>1</sup> Федеративная проверка подлинности Active Directory без синхронизации хэшей паролей или сквозной проверки подлинности не поддерживается в Linux и macOS.
+<a id="note1"></a><sup>1</sup> Поскольку эти драйверы зависят от Microsoft ODBC Driver for SQL Server, необходимо также использовать версию драйвера, поддерживающую эту функцию.
 
-<a id="note2"></a><sup>2</sup> Поскольку эти драйверы зависят от Microsoft ODBC Driver for SQL Server, необходимо также использовать версию драйвера, поддерживающую эту функцию.
-
-<a id="note3"></a><sup>3</sup> Только в Windows.
+<a id="note2"></a><sup>2</sup> Только в Windows.
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

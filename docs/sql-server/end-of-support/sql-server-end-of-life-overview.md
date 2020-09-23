@@ -1,20 +1,20 @@
 ---
 title: Варианты окончания поддержки
 description: Узнайте о различных опциях, доступных для продуктов SQL Server, поддержка которых подошла к концу, таких как SQL Server 2005, SQL Server 2008 и SQL Server 2008 R2.
-ms.date: 12/18/2019
+ms.date: 08/12/2020
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: pmasl
-monikerRange: =sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d3143a586c54f0c908e80ca9e78041c9f1996931
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 378af311994d2aa478df0c673e0a1f0162d4dbfd
+ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112102"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88200292"
 ---
 # <a name="sql-server-end-of-support-options"></a>Варианты окончания поддержки SQL Server 
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "87112102"
 - [SQL Server 2019](../install/hardware-and-software-requirements-for-installing-sql-server-ver15.md)    
 
 Поддерживаемые обновления версий и выпусков:
-- [SQL Server 2016](../../database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016) 
+- [SQL Server 2016](../../database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016&preserve-view=true) 
 - [SQL Server 2017](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)
 - [SQL Server 2019](../../database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md)
 
@@ -165,7 +165,7 @@ ms.locfileid: "87112102"
 
 - **Затраты** — Отдельная база данных может быть экономичной, так как оборудование, программное обеспечение и обслуживание разгружаются, и вы можете платить за использование на почасовой или посекундной основе. 
 - **Гибкость**. Отдельная база данных отлично подходит для облачных приложений, чувствительных к скорости разработки и оперативности при выводе решений на рынок, а также облачных приложений, для которых требуется запросить внешний доступ.  
-- **Общие функции**. Здесь доступны самые популярные функции [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], но не в таком количестве, как для Управляемого экземпляра Базы данных SQL Azure.  
+- **Общие функции**. Здесь доступны самые популярные функции [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], но не в таком количестве, как для Управляемого экземпляра SQL.  
 - **Быстрое развертывание**. Можно быстро развернуть отдельную базу данных. 
 - **Масштабируемость.** Вы можете быстро и легко увеличивать и уменьшать масштаб, что необходимо Вашему бизнесу, обеспечивая дополнительные преимущества с точки зрения экономии средств. 
 - **Доступность.** Стоимость службы включает в себя как хранение, так и высокий уровень доступности с гарантией доступности 99,995 %.  
@@ -177,7 +177,7 @@ ms.locfileid: "87112102"
 ### <a name="considerations"></a>Рекомендации
 
 - **Ограниченные варианты миграции**:  Можно перенести только одну базу данных за раз, а не весь экземпляр.   
-- **Ограничения возможностей**.  Несмотря на то что наиболее часто используемые [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] функции доступны, набор функций для одной базы данных не является полным, как для управляемого экземпляра [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+- **Ограничения возможностей**.  Несмотря на то что наиболее часто используемые функции Базы данных SQL Azure доступны, набор функций для одной базы данных не является полным, как для Управляемого экземпляра SQL Azure или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 - **Отличия Transact-SQL**.  Существует несколько [!INCLUDE[tsql](../../includes/tsql-md.md)] различий (T-SQL) между отдельной базой данных и локальной[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 - **Ограничения размера**.  Для отдельной базы данных максимальный размер составляет 100 ТБ по сравнению с размером 524 ПБ для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 - **Время обслуживания**. Точное время обслуживания не гарантируется, хотя оно — почти прозрачно. 
@@ -197,9 +197,9 @@ ms.locfileid: "87112102"
 - [Помощник по миграции данных](../../dma/dma-overview.md)
 - [Database Migration Service](/azure/dms/dms-overview)
 
-## <a name="azure-sql-database-managed-instance"></a>Управляемый экземпляр Базы данных SQL Azure
+## <a name="sql-managed-instance"></a>Управляемый экземпляр SQL
 
-Если вы хотите воспользоваться преимуществами разгрузки обслуживания и затрат, но обнаружите набор функций слишком ограниченной отдельной базы данных [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], можно перейти на [Управляемый экземпляр базы данных SQL Azure](/azure/sql-database/sql-database-managed-instance). Управляемый экземпляр похож на локальную [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], не беспокоясь о сбоях оборудования или установке исправлений. Управляемый экземпляр — это коллекция системных и пользовательских баз данных с общим набором ресурсов, которые можно использовать для выполнения большинства операций миграции в облако. Этот вариант подходит для новых приложений или существующих локальных приложений, которые используют последние стабильные возможности [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и переносятся в облако с минимальными изменениями. 
+Если вы хотите воспользоваться преимуществами разгрузки обслуживания и затрат, но считаете, что набор функций отдельной базы данных [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] слишком ограничен, можно перейти на [Управляемый экземпляр SQL](/azure/sql-database/sql-database-managed-instance). Управляемый экземпляр похож на локальную [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], не беспокоясь о сбоях оборудования или установке исправлений. Управляемый экземпляр — это коллекция системных и пользовательских баз данных с общим набором ресурсов, которые можно использовать для выполнения большинства операций миграции в облако. Этот вариант подходит для новых приложений или существующих локальных приложений, которые используют последние стабильные возможности [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и переносятся в облако с минимальными изменениями. 
 
 ### <a name="benefits"></a>Преимущества
 
@@ -225,10 +225,10 @@ ms.locfileid: "87112102"
 
 ### <a name="resources"></a>Ресурсы
 
-[What is Azure SQL Database managed instance?](/azure/sql-database/sql-database-managed-instance)      (Обзор Управляемого экземпляра Базы данных SQL Azure)  
+[Обзор Управляемого экземпляра SQL](/azure/sql-database/sql-database-managed-instance)       
 [Choose the right deployment option in Azure SQL](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)      (Выбор правильного варианта развертывания в SQL Azure)  
 [Azure SQL Database Features](/azure/sql-database/sql-database-features)      (Функции Базы данных SQL Azure)  
-[SQL Server instance migration to Azure SQL Database managed instance](/azure/sql-database/sql-database-managed-instance-migrate)      (Миграция экземпляра SQL Server на управляемый экземпляр базы данных SQL)  
+[Миграция SQL Server в Управляемый экземпляр SQL Azure](/azure/sql-database/sql-database-managed-instance-migrate)       
 [Accelerate migration by migrating multiple databases or entire SQL Servers](/azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration) (Ускорение миграции путем миграции нескольких баз данных или целых серверов SQL Server)       
 
 Инструменты:

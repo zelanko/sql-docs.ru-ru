@@ -2,7 +2,7 @@
 title: Заметки о выпуске ODBC Driver for SQL Server для Windows
 description: В этих заметках о выпуске описываются изменения в каждом выпуске драйвера Microsoft ODBC Driver for SQL Server в Windows.
 ms.custom: ''
-ms.date: 03/10/2020
+ms.date: 07/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,12 +12,12 @@ ms.reviewer: v-chojas
 author: v-makouz
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 5054a00901251bc9b947e7c147619b785f52ae9d
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: d066353c17822781c264388d284949b7b43391de
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728453"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87898818"
 ---
 # <a name="release-notes-for-microsoft-odbc-driver-for-sql-server-on-windows"></a>Заметки о выпуске Microsoft ODBC Driver for SQL Server для Windows
 
@@ -43,13 +43,34 @@ Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
 
+## <a name="176"></a>17.6
+
+![скачать](../../../ssms/media/download-icon.png) [Скачать установщик x64](https://go.microsoft.com/fwlink/?linkid=2137027)  
+![скачать](../../../ssms/media/download-icon.png) [Скачать установщик x86](https://go.microsoft.com/fwlink/?linkid=2137028)  
+
+Номер версии: 17.6.1.1  
+Выпущено: 31 июля 2020 г.
+
+Если необходимо загрузить установщик на языке, отличном от обнаруженного, можно использовать эти прямые ссылки.  
+Для драйвера x64: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x40a)  
+Для драйвера x86: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x40a)
+
+| Добавленная возможность | Сведения |
+| :------- | :------ |
+| Кэширование метаданных для подготовленных инструкций | Подробные сведения см. в статье [Использование Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md). |
+| Атрибут подключения SQL_COPT_SS_AUTOBEGINTXN, определяющий, выполняется ли автоматически инструкция BEGIN TRANSACTION после ROLLBACK или COMMIT. | Подробнее см. статью [DSN and Connection String Keywords and Attributes](../dsn-connection-string-attribute.md) (Ключевые слова и атрибуты строки подключения и имени DSN). |
+| Исправления ошибок. | [Исправления ошибок](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
+## <a name="previous-releases"></a>Предыдущие выпуски
+
 ## <a name="1752"></a>17.5.2
 
 ![скачать](../../../ssms/media/download-icon.png) [Скачать установщик x64](https://go.microsoft.com/fwlink/?linkid=2120137)  
 ![скачать](../../../ssms/media/download-icon.png) [Скачать установщик x86](https://go.microsoft.com/fwlink/?linkid=2120140)  
 
 Номер версии: 17.5.2.1  
-Выпущено: 6 марта 2019 г.
+Выпущено: 6 марта 2020 г.
 
 Если необходимо загрузить установщик на языке, отличном от обнаруженного, можно использовать эти прямые ссылки.  
 Для драйвера x64: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x40a)  
@@ -64,8 +85,6 @@ GeneMi (and CraigG).  2019/03/30.
 | Исправления ошибок. | См. статью [Исправления ошибок](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
-## <a name="previous-releases"></a>Предыдущие выпуски
-
 Чтобы скачать предыдущие версии драйвера ODBC, щелкните заголовки со ссылками в приведенных ниже разделах.
 
 ## <a name="175"></a>17.5
@@ -74,7 +93,7 @@ GeneMi (and CraigG).  2019/03/30.
 ![скачать](../../../ssms/media/download-icon.png) [Скачать установщик x86](https://go.microsoft.com/fwlink/?linkid=2120353)  
 
 Номер версии: 17.5.1.1  
-Выпущено: 31 января 2019 г.
+Выпущено: 31 января 2020 г.
 
 Если необходимо загрузить установщик на языке, отличном от обнаруженного, можно использовать эти прямые ссылки.  
 Для драйвера x64: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x40a)  
@@ -147,7 +166,7 @@ GeneMi (and CraigG).  2019/03/30.
 
 | Добавленная возможность | Сведения |
 | :------------ | :------ |
-| Режим проверки подлинности Управляемого удостоверения службы Azure Active Directory (назначаемого системой и пользователем). | См. статью [Использование Azure Active Directory с драйвером ODBC](../using-azure-active-directory.md). |
+| Режим проверки подлинности Управляемого удостоверения Azure Active Directory (назначаемого системой и пользователем). | См. статью [Использование Azure Active Directory с драйвером ODBC](../using-azure-active-directory.md). |
 | Возможность передавать входные параметры в потоковом режиме для столбцов Always Encrypted. | См. раздел [Ограничения драйвера ODBC при использовании Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted). |
 | Распределенные транзакции XA. | [Использование транзакций XA](../use-xa-with-dtc.md). |
 | Исправления ошибок. | См. статью [Исправления ошибок](../bug-fixes.md). |

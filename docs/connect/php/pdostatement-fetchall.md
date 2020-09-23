@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::fetchAll | Документация Майкрософт
+title: PDOStatement::fetchAll
+description: Справочник по API для функции PDOStatement::fetchAll в драйвере Microsoft PDO_SQLSRV для PHP для SQL Server.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: be74188a-77cd-4d19-b16e-77278373c979
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 71b4bd02d09ee8ab9b4637d0d555cc5b862d84a8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0c3ab50febea25e68b634d2f2afeb6a20b71bf82
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928597"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645101"
 ---
 # <a name="pdostatementfetchall"></a>PDOStatement::fetchAll
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +35,7 @@ $*fetch_style*: символ (целое число), указывающий ф�
   
 $*column_index*: целое число, представляющее возвращаемый столбец, если $*fetch_style* имеет значение PDO::FETCH_COLUMN. Значение по умолчанию равно 0.  
   
-$*ctor_args*: массив параметров для конструктора классов, когда $*fetch_style* имеет значение PDO::FETCH_CLASS или PDO::FETCH_OBJ.  
+$*ctor_args*: массив параметров для конструктора классов, если $*fetch_style* имеет значение PDO::FETCH_CLASS или PDO::FETCH_OBJ.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
 Массив оставшихся строк в результирующем наборе или значение false, если вызов метода завершается ошибкой.  

@@ -1,6 +1,6 @@
 ---
 title: Учебник по R. Создание и сохранение модели
-description: В этом учебнике демонстрируется, как создать языковую модель R, используемую для аналитики в базе данных SQL Server.
+description: Дополнительные сведения о том, как создать модель машинного обучения на языке R, используемую для аналитики в базе данных SQL Server.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 11/26/2018
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8ae0de4af29dd68e71300de52875044a8c2d64b4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9ab81bc27b2dfd8f32004b9289ab02a8ce1d3007
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730434"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178714"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>Создание модели R и ее сохранение в SQL Server (пошаговое руководство)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 На этом шаге вы узнаете, как создать модель машинного обучения и сохранить ее в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. После сохранения модели ее можно вызвать непосредственно из кода [!INCLUDE[tsql](../../includes/tsql-md.md)] с помощью системной хранимой процедуры [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) или [функции PREDICT (T-SQL)](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql).
 

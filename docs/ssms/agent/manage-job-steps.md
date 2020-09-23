@@ -1,4 +1,5 @@
 ---
+description: Управление шагами задания
 title: Управление шагами задания
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -25,18 +26,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5cc337a6a6676e47ac2541d0559829ad4ec6e6ae
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ddcd4cde0412590e051a1d2f34ebce10435b2e55
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247399"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480319"
 ---
 # <a name="manage-job-steps"></a>Управление шагами задания
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> В [Управляемом экземпляре Azure SQL](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) в настоящее время поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия в T-SQL между Управляемым экземпляром SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Шаг задания — это действие, производимое заданием над базой данных или сервером. Каждое задание должно иметь, по крайней мере, один шаг. Шагами задания могут быть:  
   
@@ -162,7 +163,7 @@ Set oServer = nothing
   
 -   Определить сервер базы данных OLAP, на котором необходимо выполнить шаг задания.  
   
--   Ввести инструкцию, которую необходимо выполнить. Для метода **Execute** служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] инструкция должна быть в формате XML. Инструкция может не содержать полный конверт SOAP или XML-файл для метода **Discover** служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]. Обратите внимание, что в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] поддерживаются полные конверты SOAP и метод **Discover** , но поддержки шагов заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] нет.  
+-   Ввести инструкцию, которую необходимо выполнить. Для метода  **Execute** служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] инструкция должна быть в формате XML. Инструкция может не содержать полный конверт SOAP или XML-файл для метода  **Discover** служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]. Обратите внимание, что в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] поддерживаются полные конверты SOAP и метод **Discover** , но поддержки шагов заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] нет.  
   
 ### <a name="analysis-services-query-job-steps"></a>Шаги задания запроса служб Analysis Services  
 При создании шага задания с запросом служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)] необходимо:  
@@ -206,12 +207,12 @@ Set oServer = nothing
 |-|-|  
 |Описывает создание шага задания с помощью исполняемой программы.|[Create a CmdExec Job Step](../../ssms/agent/create-a-cmdexec-job-step.md)|  
 |Описывает, как сбросить разрешения агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Настройка пользователя для создания заданий агента SQL Server и управления заданиями](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
-|Описывает создание шага задания [!INCLUDE[tsql](../../includes/tsql-md.md)] .|[Create a Transact-SQL Job Step](../../ssms/agent/create-a-transact-sql-job-step.md)|  
-|Описывает определение параметров для шагов заданий Transact-SQL агента Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Define Transact-SQL Job Step Options](../../ssms/agent/define-transact-sql-job-step-options.md)|  
+|Описывает создание шага задания [!INCLUDE[tsql](../../includes/tsql-md.md)] .|[Создание шага задания Transact-SQL](../../ssms/agent/create-a-transact-sql-job-step.md)|  
+|Описывает определение параметров для шагов заданий Transact-SQL агента Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Определение параметров для шагов заданий Transact-SQL](../../ssms/agent/define-transact-sql-job-step-options.md)|  
 |Описывает создание шага задания скрипта ActiveX.|[Create an ActiveX Script Job Step](../../ssms/agent/create-an-activex-script-job-step.md)|  
 |Описывает процесс создания и определения шагов заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , выполняющих команды и запросы служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services.|[Create an Analysis Services Job Step](../../ssms/agent/create-an-analysis-services-job-step.md)|  
 |Описывает, какое действие будет выполнять [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , если при выполнении задания происходит ошибка.|[Настройка потока действий системы при успешном или неуспешном выполнении шага задания](../../ssms/agent/set-job-step-success-or-failure-flow.md)|  
-|Описывает, как просмотреть сведения о шаге задания в окне «Свойства шага задания».|[Просмотр сведений о шаге задания](../../ssms/agent/view-job-step-information.md)|  
+|Описывает, как просмотреть сведения о шаге задания в окне «Свойства шага задания».|[View Job Step Information](../../ssms/agent/view-job-step-information.md)|  
 |Описывает, как удалить журнал шага задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Delete a Job Step Log](../../ssms/agent/delete-a-job-step-log.md)|  
   
 ## <a name="see-also"></a>См. также:  

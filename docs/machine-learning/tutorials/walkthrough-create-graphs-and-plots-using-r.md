@@ -1,6 +1,6 @@
 ---
 title: Учебник по R. Создание диаграмм и графиков
-description: В этом учебнике демонстрируется создание диаграмм и графиков с использованием функций языка R в SQL Server.
+description: Узнайте о методах создания графиков и карт на основе данных SQL Server с помощью языка R. Создайте простую гистограмму, а затем разработайте более сложную диаграмму-карту.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 06/13/2019
@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 491c85f0f5c3a9532c6c196e14f49a06998e387e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5b6643cec32cc3581c0f91e4479fff0d908e7532
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781812"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178431"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>Создание диаграмм и графиков с использованием SQL и R (пошаговое руководство)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 В этой части пошагового руководства вы ознакомитесь с методами создания графиков и карт с использованием R на основе данных SQL Server. В рамках этого руководства вы создадите простую гистограмму, а затем разработаете более сложную диаграмму-карту.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Предварительные условия
 
 Для этого этапа требуется продолжение сеанса R из предыдущих этапов этого пошагового руководства. В нем используются строки подключения и объекты источников данных, созданные на этих этапах. Для запуска скрипта используются следующие средства и пакеты.
 
@@ -89,7 +89,7 @@ ms.locfileid: "85781812"
 
     + Строка, начинающаяся с `googmap` , создает карту с указанными координатами в центре.
 
-3. Перейдите в контекст вычислений SQL Server и преобразуйте результаты для просмотра. Для этого необходимо упаковать функцию построения графика в [rxExec](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxexec), как показано ниже. Функция rxExec входит в состав пакета **RevoScaleR** и поддерживает выполнение произвольных функций R в контексте удаленных вычислений.
+3. Перейдите в контекст вычислений SQL Server и преобразуйте результаты для просмотра. Для этого необходимо упаковать функцию построения графика в [rxExec](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxexec), как показано ниже. Функция rxExec входит в состав пакета **RevoScaleR** и поддерживает выполнение произвольных функций R в удаленном контексте вычислений.
 
     ```R
     rxSetComputeContext(sqlcc)
@@ -108,7 +108,7 @@ ms.locfileid: "85781812"
 
     ![Построение графика поездок на такси с помощью пользовательской функции R](media/rsql-e2e-mapplot.png "Построение графика поездок на такси с помощью пользовательской функции R")
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Дальнейшие шаги
 
 > [!div class="nextstepaction"]
 > [Создание характеристик данных с помощью R и SQL](walkthrough-create-data-features.md)

@@ -1,26 +1,26 @@
 ---
-title: Подключение SQL с замыканием на себя
+title: Соединение SQL с замыканием на себя в Python и R
 description: Узнайте, как использовать подключение с замыканием на себя для обратного соединения с SQL Server через ODBC с целью чтения или записи данных из скрипта Python или R, выполняемого с помощью процедуры sp_execute_external_script.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/21/2019
+ms.date: 08/20/2020
 ms.topic: conceptual
 author: Aniruddh25
 ms.author: anmunde
 ms.reviewer: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 00938d1fe628c4984a55cb5c0b76e6910293808a
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 21c32a27a94dcf8a1981f1fde2eb4db0b71b1b8a
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86482675"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714142"
 ---
 # <a name="loopback-connection-to-sql-server-from-a-python-or-r-script"></a>Подключение к SQL Server из скрипта Python или R с замыканием на себя
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-Узнайте, как использовать подключение с замыканием на себя для обратного соединения с SQL Server через [ODBC](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) с целью чтения или записи данных из скрипта Python или R, выполняемого с помощью процедуры `sp_execute_external_script`. Его можно применять, если нельзя использовать аргументы **InputDataSet** и **OutputDataSet** процедуры `sp_execute_external_script`.
+Узнайте, как использовать подключение с замыканием на себя со [Службами машинного обучения](../sql-server-machine-learning-services.md) для обратного соединения с SQL Server через [ODBC](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) с целью чтения или записи данных из скрипта Python или R, выполняемого с помощью процедуры [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Его можно применять, если нельзя использовать аргументы **InputDataSet** и **OutputDataSet** процедуры `sp_execute_external_script`.
 
 ## <a name="connection-string"></a>Строка подключения
 

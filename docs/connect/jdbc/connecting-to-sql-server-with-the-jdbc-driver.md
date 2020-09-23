@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 94bcfbe3-f00e-4774-bda8-bb7577518fec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1089960af020e648586f59914ccc91e99bf0b9af
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: f88a1bbe3554b74e3dae67ddb1fad93122fc41fe
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487969"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988626"
 ---
 # <a name="connecting-to-sql-server-with-the-jdbc-driver"></a>Подключение к SQL Server с помощью JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

@@ -1,6 +1,6 @@
 ---
 title: Вставка данных в возвращающие табличное значение параметры (драйвер OLE DB) | Документация Майкрософт
-description: Использование OLE DB Driver for SQL Server для вставки данных параметры, возвращающие табличные значения
+description: Драйвер OLE DB Driver for SQL Server поддерживает задание объектами-получателями данных для строк параметров с табличными значениями принудительно и по запросу.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters, inserting data into
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 31cfbbd1afd2e5b249c3f3106aec471965038c86
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5317574a09194b2a926bed88de7edf7db913df6a
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244170"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859908"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>Вставка данных в параметры, возвращающие табличные значения
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

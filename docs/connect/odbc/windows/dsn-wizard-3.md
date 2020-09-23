@@ -1,4 +1,5 @@
 ---
+description: Мастер источников данных, экран 3 (ODBC Driver for SQL Server)
 title: Мастер источников данных, экран 3 (драйвер ODBC для SQL Server) | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/27/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1775d89587522e1ad1036d2f0c514c9439b9403b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 48b65f57ac4a47a372ff82db4bc92f5ee631ea36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927912"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462199"
 ---
 # <a name="data-source-wizard-screen-3"></a>Экран 3 мастера источников данных
 
@@ -81,7 +82,7 @@ WHERE "LastName" = 'O''Brien'
 
 Использование устаревшего метода обнаружения метаданных SET FMTONLY при подключении к SQL Server 2012 или более поздней версии. Применяйте этот параметр только в тех случаях, для которых не поддерживается метод [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), например для запросов с временными таблицами. 
 
-### <a name="next"></a>Дальше
+### <a name="next"></a>Следующая
 
 Переход к следующему экрану в мастере.
 
@@ -89,7 +90,7 @@ WHERE "LastName" = 'O''Brien'
 
 Возврат к предыдущему экрану в мастере.
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Дальнейшие шаги
 
 [Экран 2 мастера источников данных](../../../connect/odbc/windows/dsn-wizard-2.md)
 

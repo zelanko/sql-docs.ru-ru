@@ -1,8 +1,8 @@
 ---
-title: Загрузка драйверов Майкрософт для PHP для SQL Server | Документация Майкрософт
+title: Загрузка драйверов Майкрософт для PHP для SQL Server
 description: Скачайте драйверы Майкрософт для PHP для SQL Server, чтобы разрабатывать приложения PHP с подключением к SQL Server и базе данных SQL Azure.
 ms.custom: ''
-ms.date: 05/05/2020
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,16 +10,16 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d3d583113b07c601010c89ef8796614c177c5e20
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 24dfef1b33b2a61c0d82c07ce6306e0b0449b8f3
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487947"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680769"
 ---
 # <a name="download-the-microsoft-drivers-for-php-for-sql-server"></a>Загрузка драйверов Майкрософт для PHP для SQL Server
 
-Драйвер SQL Server для PHP обеспечивает надежную и масштабируемую интеграцию приложений PHP с сервером SQL Server. Эти драйверы представляют собой расширения для PHP, которые позволяют считывать и записывать данные SQL Server из скриптов PHP. Драйверы предоставляют интерфейсы для доступа к данным в Базах данных SQL Azure и во всех выпусках SQL Server 2005 и более поздних версий (включая Экспресс-выпуски). Драйвер использует функции PHP (в том числе потоки) для чтения и записи крупных объектов.
+Драйвер SQL Server для PHP обеспечивает надежную и масштабируемую интеграцию приложений PHP с сервером SQL Server. Эти драйверы представляют собой расширения для PHP, которые позволяют считывать и записывать данные SQL Server из скриптов PHP. Драйверы предоставляют интерфейсы для доступа к данным в Базе данных SQL Azure и во всех выпусках SQL Server 2005 и более поздних версий (включая Экспресс-выпуски). Драйвер использует функции PHP (в том числе потоки) для чтения и записи крупных объектов.
 
 В Linux и macOS драйверы для PHP легко скачать и установить с помощью PECL. Подробнее см. [учебник по установке для Linux и Mac](installation-tutorial-linux-mac.md). Если необходимо скачать и установить драйверы для PHP в Linux и macOS вручную, пакеты для этих платформ можно найти в тегах выпуска GitHub.
 

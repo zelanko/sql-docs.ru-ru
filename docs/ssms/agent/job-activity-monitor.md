@@ -1,4 +1,5 @@
 ---
+description: Монитор активности заданий
 title: Монитор активности заданий
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,23 +15,23 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ef4d3d022a3aa7c42b7d871c8c7b86ac1ec2e70d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1ca055f7a6ae3f8a5c235bf7bb70d81bf668ede8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726975"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468662"
 ---
 # <a name="job-activity-monitor"></a>Монитор активности заданий
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> В [Управляемом экземпляре Azure SQL](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) в настоящее время поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия в T-SQL между Управляемым экземпляром SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Эта страница позволяет просматривать текущую активность заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Выберите пункт **Фильтр** для отбора выводимых заданий. Сетка **Активность заданий агента** доступна только для чтения. Щелкните заголовки столбцов для сортировки этой сетки. Для изменения задания дважды щелкните его, чтобы открыть диалоговое окно **Свойства задания** . Щелкните правой кнопкой мыши задание в сетке, чтобы запустить его на выполнение всех его шагов, запуска определенного шага задания, отключения или включения, обновления, удаления задания, просмотра его журнала и просмотра свойств задания. Нажмите кнопку **Обновить** для обновления сетки с текущими данными.  
   
 ## <a name="options"></a>Параметры  
-**Название**  
+**имя**;  
 Имя задания.  
   
 **Enabled**  
@@ -54,15 +55,15 @@ ms.locfileid: "85726975"
 **Готово к запуску**  
 **Да** , если задание можно запустить; **Нет** , если задание запустить нельзя. Задание нельзя запустить, если оно не содержит шагов или если в нем не указан целевой сервер.  
   
-**Назначено**  
+**Назначенные**  
 **Да** , если заданию назначено расписание; **Нет** , если у задания нет расписания.  
   
-\* Только члены предопределенной роли сервера sysadmin [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и группы администраторов сервера могут видеть значения этого столбца. Члены роли SQLAgentOperatorRole не могут видеть значения в этом столбце.  
+* Только члены предопределенной роли сервера sysadmin [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и группы администраторов сервера могут видеть значения этого столбца. Члены роли SQLAgentOperatorRole не могут видеть значения в этом столбце.  
   
 #### <a name="to-open-the-job-activity-monitor"></a>Как открыть монитор активности заданий  
   
 -   В **обозревателе объектов**разверните сервер, раскройте узел **Агент SQL Server**, щелкните правой кнопкой мыши **Монитор активности заданий**, затем выберите пункт **Просмотр активности заданий**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Наблюдение за активностью заданий](../../ssms/agent/monitor-job-activity.md)  
   

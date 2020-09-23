@@ -1,5 +1,6 @@
 ---
-title: Руководство. Отправка данных в виде потока | Документация Майкрософт
+title: Практическое руководство. Отправка данных в виде потока
+description: Узнайте, как использовать потоки для отправки больших объектов в базу данных с помощью драйверов Microsoft SQLSRV и PDO_SQLSRV для PHP для SQL Server.
 ms.custom: ''
 ms.date: 02/28/2019
 ms.prod: sql
@@ -13,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: ab6b95d6-b6e6-4bd7-a18c-50f2918f7532
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bc5a0c6fc4c6331dfa0398b2d6faca4ac482ffe3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c2d986336a369698b107b2437beae322d91508fb
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80915950"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411441"
 ---
-# <a name="how-to-send-data-as-a-stream"></a>Руководство. отправлять данные в виде потока
+# <a name="how-to-send-data-as-a-stream"></a>Практическое руководство. Отправка данных в виде потока
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] использует преимущества потоков PHP для отправки больших объектов на сервер. Примеры в этой статье демонстрируют процедуру отправки данных в виде потока. Первый пример использует драйвер SQLSRV, чтобы продемонстрировать поведение по умолчанию, которое заключается в отправке всех потоковых данных во время выполнения запроса. Второй пример демонстрирует использование драйвера SQLSRV для отправки на сервер потоковых данных объемом до восьми килобайт (8 КБ) за раз.  

@@ -1,22 +1,22 @@
 ---
-title: Форматирование десятичных строк и денежных значений (драйвер PDO_SQLSRV) | Документация Майкрософт
+title: Форматирование десятичных строк и денежных значений (драйвер PDO_SQLSRV)
+description: Узнайте, как использовать атрибуты PDO::SQLSRV_ATTR_FORMAT_DECIMALS и SQLSRV_ATTR_DECIMAL_PLACES для форматирования десятичных или денежных значений при использовании драйвера PDO_SQLSRV
 ms.custom: ''
-ms.date: 02/11/2019
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - formatting, decimal types, money values
-author: yitam
-ms.author: v-yitam
-manager: v-mabarw
-ms.openlocfilehash: 76c314159faf15e63bf77b17a8a45abf217b205c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ae61b239fca2a923645b9de963309c62a3919b3d
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68265155"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680659"
 ---
 # <a name="formatting-decimal-strings-and-money-values-pdo_sqlsrv-driver"></a>Форматирование десятичных строк и денежных значений (драйвер PDO_SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

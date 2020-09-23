@@ -1,4 +1,5 @@
 ---
+description: Настройка передачи файлов cookie для пользовательской проверки подлинности на веб-портале
 title: Настройка передачи файлов cookie для пользовательской проверки подлинности на веб-портале | Документы Майкрософт
 ms.date: 04/18/2017
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 91aeb053-149e-4562-ae4c-a688d0e1b2ba
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2f3200a17f00efedae3f52be7f3b17df31167765
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 19b799424f0c860fb85ca44f3d539edb009b43ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579428"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454506"
 ---
 # <a name="configure-the-web-portal-to-pass-custom-authentication-cookies"></a>Настройка передачи файлов cookie для пользовательской проверки подлинности на веб-портале
 

@@ -1,6 +1,6 @@
 ---
 title: Использование шаблонов в среде SQL Server Management Studio
-description: Руководство по использованию шаблонов в SSMS.
+description: Сведения о готовых шаблонах Transact-SQL (T-SQL), доступных в среде SQL Server Management Studio (SSMS).
 keywords: SQL Server, SSMS, SQL Server Management Studio, шаблоны
 author: MashaMSFT
 ms.author: mathoma
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - scripts [SQL Server], SQL Server Management Studio
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: 03f42fbffd124fbdaa18578009ce72598a743361
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 60b44b3676f7943cb6a2e5c1fdb7981ca47c965f
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247162"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87522996"
 ---
 # <a name="use-templates-in-sql-server-management-studio"></a>Использование шаблонов в SQL Server Management Studio
 

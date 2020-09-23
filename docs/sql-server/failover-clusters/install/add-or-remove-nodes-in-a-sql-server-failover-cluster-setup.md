@@ -1,6 +1,6 @@
 ---
-title: Добавление и удаление узлов отказоустойчивого кластера
-description: В этой статье описывается, как добавлять или удалять узлы в существующем экземпляре отказоустойчивого кластера SQL Server.
+title: Добавление и удаление узлов экземпляра отказоустойчивого кластера
+description: В этой статье описывается, как добавлять или удалять узлы в существующем экземпляре отказоустойчивого кластера SQL Server группы доступности Always On.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.reviewer: ''
@@ -18,35 +18,37 @@ helpviewer_keywords:
 ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9ae9ae1f58bf615362e16ebffef8926437c99a9f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9162dba1861193bba542feb51bc4c793c2c7d011
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900507"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435574"
 ---
-# <a name="add-or-remove-nodes-in-a-sql-server-failover-cluster-setup"></a>Добавление или удаление узлов отказоустойчивого кластера SQL Server (программа установки)
+# <a name="add-or-remove-nodes-in-a-failover-cluster-instance-setup"></a>Добавление или удаление узлов экземпляра отказоустойчивого кластера SQL Server (программа установки)
+
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  С помощью данной процедуры осуществляется управление узлами в существующем экземпляре отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+
+ С помощью данной процедуры осуществляется управление узлами в существующем экземпляре отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
- Для обновления или удаления отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] необходимо обладать правами локального администратора с разрешением на вход в систему в качестве службы на всех узлах отказоустойчивого кластера. Для локальных установок необходимо запускать программу установки с правами администратора. При установке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] из удаленной общей папки необходимо использовать учетную запись домена с разрешениями на чтение и выполнение для удаленной общей папки.  
+ Чтобы обновить или удалить экземпляр отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], необходимо иметь разрешения локального администратора для входа в систему в качестве службы на все узлы базового отказоустойчивого кластера Windows Server (WSFC). Для локальных установок необходимо запускать программу установки с правами администратора. При установке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] из удаленной общей папки необходимо использовать учетную запись домена с разрешениями на чтение и выполнение для удаленной общей папки.  
   
- Чтобы добавить узел в существующий отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , необходимо запустить программу установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на узле, который добавляется в экземпляр отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Не нужно запускать программу установки на активном узле.  
+ Чтобы добавить узел в существующий отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], необходимо запустить программу установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на узле, который добавляется в экземпляр отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Не нужно запускать программу установки на активном узле.  
   
- Чтобы удалить узел из существующего отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , необходимо запустить программу установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на узле, который удаляется из экземпляра сервера отработки отказа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+ Чтобы удалить узел из существующего отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], необходимо запустить программу установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на узле, который удаляется из экземпляра сервера отработки отказа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Для просмотра шагов добавления или удаления узлов выберите одну из следующих операций:  
   
--   [Добавить узел в существующий отказоустойчивый кластер SQL Server](#Add)  
+-   [Добавление узла в существующий экземпляр отказоустойчивого кластера Always On](#Add)  
   
--   [Удалить узел из существующего отказоустойчивого кластера SQL Server](#Remove)  
+-   [Удаление узла из существующего экземпляра отказоустойчивого кластера Always On](#Remove)  
   
 > [!IMPORTANT]  
->  Буква диска операционной системы для размещения [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] должна совпадать на всех узлах, добавленных к отказоустойчивому кластеру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+>  Буква диска операционной системы для размещения [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] должна совпадать на всех узлах, добавленных к экземпляру отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ##  <a name="add-node"></a><a name="Add"></a> Добавление узла  
   
-#### <a name="to-add-a-node-to-an-existing-ssnoversion-failover-cluster"></a>Добавление узла в существующий отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+#### <a name="to-add-a-node-to-an-existing-ssnoversion-failover-cluster-instance"></a>Добавление узла к существующему экземпляру отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
 1.  Вставьте установочный носитель [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , перейдите в корневую папку и дважды щелкните файл Setup.exe. Для установки из сетевого ресурса перейдите в корневую папку на этом ресурсе и дважды щелкните файл Setup.exe.  
   
@@ -66,7 +68,7 @@ ms.locfileid: "85900507"
   
 8.  При помощи раскрывающегося списка на странице «Конфигурация узла кластера» укажите имя экземпляра отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , который будет изменен во время работы программы установки.  
   
-9. На странице «Конфигурация сервера — Учетные записи служб» укажите учетные записи входа для служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Набор служб, которые можно настроить на этой странице, зависит от компонентов, выбранных при установке. На этой странице имя учетной записи и сведения о типе запуска для отказоустойчивых кластеров будут указаны автоматически в соответствии с параметрами, заданными для активного узла. Необходимо указать пароли для каждой учетной записи. Дополнительные сведения см. в разделах [Настройка сервера — учетные записи служб](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) и [Настройка учетных записей службы Windows и разрешений](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+9. На странице «Конфигурация сервера — Учетные записи служб» укажите учетные записи входа для служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Набор служб, которые можно настроить на этой странице, зависит от компонентов, выбранных при установке. На этой странице имя учетной записи и сведения о типе запуска для экземпляров отказоустойчивых кластеров будут указаны автоматически в соответствии с параметрами, заданными для активного узла. Необходимо указать пароли для каждой учетной записи. Дополнительные сведения см. в разделах [Настройка сервера — учетные записи служб](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) и [Настройка учетных записей службы Windows и разрешений](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      **Примечание по безопасности** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
   
@@ -86,7 +88,7 @@ ms.locfileid: "85900507"
   
 ##  <a name="remove-node"></a><a name="Remove"></a> Удаление узла  
   
-#### <a name="to-remove-a-node-from-an-existing-ssnoversion-failover-cluster"></a>Удаление узла из существующего отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+#### <a name="to-remove-a-node-from-an-existing-ssnoversion-failover-cluster-instance"></a>Удаление узла из существующего экземпляра отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
 1.  Вставьте установочный носитель [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . В корневой папке дважды щелкните файл setup.exe. Для установки из сетевого ресурса перейдите в корневую папку на этом ресурсе и дважды щелкните файл Setup.exe.  
   

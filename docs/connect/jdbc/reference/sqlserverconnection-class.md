@@ -1,5 +1,6 @@
 ---
-title: Класс SQLServerConnection | Документация Майкрософт
+title: Класс SQLServerConnection
+description: Узнайте об общедоступном API-интерфейсе для класса SQLServerConnection в драйвере JDBC для SQL Server.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: 937292a6-1525-423e-a2b2-a18fd34c2893
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6248e126806b15592bbc3d6c458045ca7d9db042
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c6827b79b4d1cc7b3f66db3c53c338614ec49fc3
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920681"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411480"
 ---
 # <a name="sqlserverconnection-class"></a>Класс SQLServerConnection
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Представляет подключение JDBC к базе данных [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Представляет соединение JDBC с базой данных [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  **Пакет:** com.microsoft.sqlserver.jdbc  
   
@@ -41,7 +42,7 @@ public class SQLServerConnection
 > [!NOTE]  
 >  SQLServerConnection не является потокобезопасным. Однако несколько инструкций, созданных из одного соединения, можно обрабатывать одновременно в параллельных потоках.  
   
- Этот класс поддерживает распаковку в класс SQLServerConnection, интерфейс java.sql.connection и интерфейс ISQLServerConnection. Дополнительные сведения см. в статье об [интерфейсах и программах-оболочках](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Этот класс поддерживает распаковку в класс SQLServerConnection, интерфейс java.sql.connection и интерфейс ISQLServerConnection. См. сведения об [интерфейсах и программах-оболочках](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Элементы SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

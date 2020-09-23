@@ -1,5 +1,6 @@
 ---
-title: Диалоговое окно "Вход в сервер SQL" (ODBC) | Документация Майкрософт
+title: Диалоговое окно «Вход в сервер SQL» (ODBC)
+description: Диалоговое окно "Вход в SQL Server" может появиться, когда приложение устанавливает соединение ODBC без указания достаточного количества информации для подключения к базе данных.
 ms.custom: ''
 ms.date: 03/21/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: David-Engel
 ms.author: v-jizho2
-ms.openlocfilehash: 35a9c6b6c254d6ed7c3283aedba15e65b6114579
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7c0a2be5961e4fab07941d999da1a2b2fe5f9dbe
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920127"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87898804"
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>Диалоговое окно «Вход в сервер SQL» (ODBC)
 
@@ -39,6 +40,7 @@ ms.locfileid: "80920127"
 - **Active Directory — пароль** с именем для входа и паролем.
 - **Встроенная проверка подлинности AD DS** с использованием текущей учетной записи зарегистрированного пользователя.
 - **Интерактивная проверка подлинности Active Directory** с использованием имени пользователя
+- Проверка подлинности **управляемого удостоверения службы** с помощью управляемого удостоверения
 
 Дополнительные сведения о режимах проверки подлинности см. в статье [Data Source Wizard Screen 2](../../../connect/odbc/windows/dsn-wizard-2.md) (Экран 2 мастера источников данных).
 
@@ -48,7 +50,7 @@ ms.locfileid: "80920127"
 
 ### <a name="login-id"></a>Идентификатор входа
 
-Указывает имя пользователя SQL Server или Azure Active Directory, используемое для подключения, если для параметра **Режим проверки подлинности** установлено значение **SQL Server**, **Active Directory — пароль** или **Active Directory Interactive** (Интерактивная проверка подлинности Active Directory). В противном случае поле **Имя для входа** будет отключено.
+Указывает имя пользователя SQL Server или Azure Active Directory, используемое для подключения, если для параметра **Режим проверки подлинности** установлено значение **SQL Server**, **Active Directory — пароль** или **Active Directory Interactive** или **Управляемое удостоверение службы**. В противном случае поле **Имя для входа** будет отключено.
 
 ### <a name="password"></a>Пароль
 

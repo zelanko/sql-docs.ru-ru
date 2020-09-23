@@ -1,5 +1,6 @@
 ---
-title: Основные сведения о типах данных JDBC Driver | Документация Майкрософт
+title: Основные сведения о типах данных JDBC Driver
+description: Сведения о типах данных JDBC и о том, как драйвер Microsoft JDBC для SQL Server преобразует эти типы в типы баз данных.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7802328d-4d23-4775-9573-4169b127d258
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 15ecca3277dcba3cd2235da9bff9a8d9fc2e4f6f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 48090db2e671fdfb1fb076645b06c9315b32bdd5
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920275"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87410920"
 ---
 # <a name="understanding-the-jdbc-driver-data-types"></a>Основные сведения о типах данных JDBC Driver
 
@@ -29,7 +30,7 @@ ms.locfileid: "80920275"
   
 ## <a name="in-this-section"></a>В этом разделе  
   
-| Раздел                                                                                                                                            | Description                                                                                                                                                                                                                                                          |
+| Раздел                                                                                                                                            | Описание                                                                                                                                                                                                                                                          |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Использование базовых типов данных](../../connect/jdbc/using-basic-data-types.md)                                                                           | Описывает базовые типы данных JDBC. Включает примеры работы с типами данных при помощи результирующих наборов, параметризованных запросов и хранимых процедур.                                                                                                        |
 | [Настройка способа отправки значений java.sql.Time на сервер](../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md) | Описывает создание дат драйвером JDBC.                                                                                                                                                                                                                       |

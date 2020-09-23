@@ -1,6 +1,6 @@
 ---
 title: API массового копирования для операции пакетной вставки в JDBC
-description: Microsoft JDBC Driver for SQL Server поддерживает использование API-интерфейса массового копирования для пакетных операций вставки в Хранилище данных Azure.
+description: Microsoft JDBC Driver for SQL Server поддерживает использование массового копирования для пакетных операций вставки в хранилище данных Azure для ускорения загрузки данных в базу данных.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 497b68b2b1f19d5d67ca3e790f06844592205d70
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 09eac13d41656721a9a4cc6d8fb8fa9790779018
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633995"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87943033"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>Использование API массового копирования для операции пакетной вставки
 
@@ -71,7 +71,7 @@ Connection connection = DriverManager.getConnection("jdbc:sqlserver://<server>:<
 
 ## <a name="example"></a>Пример
 
-Ниже приведен пример кода, демонстрирующий вариант использования операции пакетной вставки в Хранилище данных Azure с тысячами строк для обоих сценариев (обычная вставка и API массового копирования).
+Ниже приведен пример кода, демонстрирующий вариант использования операции пакетной вставки в Azure Synapse Analytics (хранилище данных SQL) с тысячами строк для обоих сценариев (обычная вставка и API массового копирования).
 
 ```java
     public static void main(String[] args) throws Exception

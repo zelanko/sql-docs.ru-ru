@@ -1,4 +1,5 @@
 ---
+description: MSReportServer_ConfigurationSetting, класс
 title: Класс MSReportServer_ConfigurationSetting | Документы Майкрософт
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 874be718-54b9-49e8-a3d6-b83a0ba13dc3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 74382531162bb691cd47838fa2896169abd7ce58
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e7b535ba8ce57cad4ddf1a43d2bfda97e4a26e25
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65569150"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454431"
 ---
 # <a name="msreportserver_configurationsetting-class"></a>MSReportServer_ConfigurationSetting, класс
   Представляет установочные параметры и параметры времени выполнения для экземпляра сервера отчетов. Эти параметры хранятся в файле конфигурации для сервера отчетов.  
@@ -38,11 +39,11 @@ Public Class MSReportServer_ConfigurationSetting
 public class MSReportServer_ConfigurationSetting  
 ```  
   
-## <a name="thread-safety"></a>Многопоточное использование  
+## <a name="thread-safety"></a>Потокобезопасность  
  Все открытые статические (**Shared** в [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) элементы этого типа можно использовать в многопотоковых операциях. Для элементов экземпляра потокобезопасность не гарантируется.  
   
 ## <a name="example"></a>Пример  
- Чтобы запустить приведенный ниже код, добавьте имя сервера вместо каждого местозаполнителя \<*имя_сервера*>. Путь обновления должен указывать на фактическое расположение установки, если оно отличается от расположения по умолчанию. Приведенный ниже пример кода проходит по всем свойствам класса *MSReportServer_ConfigurationSetting* и выводит на консоль имя каждого свойства и его значение.  
+ Чтобы запустить следующий код, вставьте имя сервера на место каждого местозаполнителя \<*servername*>. Путь обновления должен указывать на фактическое расположение установки, если оно отличается от расположения по умолчанию. Приведенный ниже пример кода проходит по всем свойствам класса *MSReportServer_ConfigurationSetting* и выводит на консоль имя каждого свойства и его значение.  
   
 ```vb  
 Imports System  

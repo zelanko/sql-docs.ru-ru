@@ -1,7 +1,7 @@
 ---
 title: Выполнение заданий Spark. Набор средств Azure для IntelliJ
 titleSuffix: SQL Server Big Data Clusters
-description: Отправка заданий Spark в кластерах больших данных SQL Server в Azure Toolkit for IntelliJ.
+description: Узнайте, как отправлять задания Spark в кластерах больших данных SQL Server в Azure Toolkit for IntelliJ, отправив локальный JAR- или PY-файл.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
@@ -10,12 +10,12 @@ ms.metadata: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 25e200cf5a38a98289dcba91d08a1ce7c0cab340
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8ef3a0d73535061ef2c9f2ce32556a0a86202d70
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726735"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778543"
 ---
 # <a name="submit-spark-jobs-on-big-data-clusters-2019-in-intellij"></a>Отправка заданий Spark в [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в IntelliJ
 
@@ -28,7 +28,7 @@ ms.locfileid: "85726735"
 - Кластер больших данных SQL Server.
 - Пакет SDK для Java Oracle. Его можно установить с [веб-сайта Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 - Среда IntelliJ IDEA. Ее можно установить с [веб-сайта JetBrains](https://www.jetbrains.com/idea/download/).
-- Расширение Azure Toolkit for IntelliJ. Инструкции по установке см. в статье [Установка Azure Toolkit for IntelliJ](https://docs.microsoft.com/azure/azure-toolkit-for-intellij-installation).
+- Расширение Azure Toolkit for IntelliJ. Инструкции по установке см. в статье [Установка Azure Toolkit for IntelliJ](/azure/azure-toolkit-for-intellij-installation).
 
 ## <a name="link-sql-server-big-data-cluster"></a>Связывание с кластером больших данных SQL Server
 1. Откройте средство IntelliJ IDEA.
@@ -118,7 +118,7 @@ ms.locfileid: "85726735"
       ![Значение файлов JAR в диалоговом окне отправки Spark](./media/spark-submit-job-intellij-tool-plugin/jar-files-meaning.png)
 
        > [!NOTE]  
-       > Инструкции по отправке используемых JAR и файлов см. в следующем разделе: [Отправка ресурсов в кластер](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-storage-explorer)
+       > Инструкции по отправке используемых JAR и файлов см. в следующем разделе: [Отправка ресурсов в кластер](/azure/storage/blobs/storage-quickstart-blobs-storage-explorer)
                          
     * **Upload Path** (Путь отправки): можно указать место хранения для отправляемых ресурсов проекта JAR или Scala. Поддерживаются несколько типов хранилищ: **Use Spark interactive session to upload** (Использовать для отправки интерактивный сеанс Spark) и **Use WebHDFS to upload** (Использовать для отправки WebHDFS).
     

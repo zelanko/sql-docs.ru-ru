@@ -1,5 +1,6 @@
 ---
-title: Получение типов даты и времени в виде строк с помощью драйвера SQLSRV | Документация Майкрософт
+title: извлечь типы даты и времени в виде строк с помощью драйвера SQLSRV
+description: Узнайте о получении типов даты и времени в виде строк с помощью драйвера SQLSRV для PHP для SQL Server.
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -12,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 58a974ea-4daf-4e3b-98ed-9731b9c9250f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3b8cd038579c471891e6e9ae0d81075b22016f6d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 51135c202b40cbae5a251a2ab36a695f6981c68e
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916139"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87410970"
 ---
-# <a name="how-to-retrieve-date-and-time-types-as-strings-using-the-sqlsrv-driver"></a>Руководство. извлечь типы даты и времени в виде строк с помощью драйвера SQLSRV
+# <a name="how-to-retrieve-date-and-time-types-as-strings-using-the-sqlsrv-driver"></a>Практическое руководство. Получение типов даты и времени в виде строк с помощью драйвера SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 При использовании драйвера SQLSRV для [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] вы можете получать типы даты и времени (**smalldatetime**, **datetime**, **date**, **time**, **datetime2** и **datetimeoffset**) в формате строк, указав в строке подключения или на уровне инструкции следующий параметр.
@@ -194,4 +195,4 @@ sqlsrv_close($conn);
 ## <a name="see-also"></a>См. также:
 [Извлечение данных](../../connect/php/retrieving-data.md)
 
-[Руководство. Как извлечь типы даты и времени в виде объектов даты и времени PHP с помощью PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).
+[Как извлечь типы даты и времени в виде объектов даты и времени PHP с помощью PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)

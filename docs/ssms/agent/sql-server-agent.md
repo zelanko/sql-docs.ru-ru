@@ -1,4 +1,5 @@
 ---
+description: Агент SQL Server
 title: Агент SQL Server
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,19 +15,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9914ebe147344b24352b97d018166601077a8895
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ec94ebc0b62194a8b6201ccd9a7a2c6cfe8c3ba8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755109"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418020"
 ---
 # <a name="sql-server-agent"></a>Агент SQL Server
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> В [Управляемом экземпляре Azure SQL](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) в настоящее время поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия в T-SQL между Управляемым экземпляром SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это служба Microsoft Windows, выполняющая запланированные административные задачи, которые называются *заданиями* в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
 
@@ -111,20 +112,20 @@ ms.locfileid: "85755109"
   
 Для отправки операторам уведомлений по электронной почте или на пейджер необходимо настроить агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для использования компонента Database Mail. Дополнительные сведения см. в разделе о [компоненте Database Mail](../../relational-databases/database-mail/database-mail.md).  
   
-Можно определить оператора как псевдоним для группы лиц. Таким способом все члены этого псевдонима будут уведомлены одновременно. Дополнительные сведения см. в статье [Операторы](../../ssms/agent/operators.md).  
+Можно определить оператора как псевдоним для группы лиц. Таким способом все члены этого псевдонима будут уведомлены одновременно. Дополнительные сведения см. в разделе [Операторы](../../ssms/agent/operators.md).  
   
 ## <a name="security-for-sql-server-agent-administration"></a><a name="Security"></a>Безопасность при администрировании агента SQL Server  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует предопределенные роли базы данных **SQLAgentUserRole**, **SQLAgentReaderRole** и **SQLAgentOperatorRole** в базе данных **msdb** для управления доступом к агенту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для пользователей, не входящих в предопределенную роль **администратора** сервера. Помимо этих предопределенных ролей базы данных, подсистемы и учетные записи-посредники позволяют администраторам базы данных гарантировать, что каждый шаг задания выполняется с минимальными разрешениями, необходимыми для выполнения задачи.  
   
 ### <a name="roles"></a>Роли  
-Доступ к агенту **имеют члены предопределенных ролей базы данных**SQLAgentUserRole **,** SQLAgentReaderRole **и** SQLAgentOperatorRole **в базе данных**msdb **, а также члены предопределенной роли**  администратора[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сервера. Пользователь, не принадлежащий ни к одной из этих ролей, не может использовать агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения о ролях, используемых агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в разделе [Обеспечение безопасности агента SQL Server](../../ssms/agent/implement-sql-server-agent-security.md).  
+Доступ к агенту **имеют члены предопределенных ролей базы данных**SQLAgentUserRole **,** SQLAgentReaderRole **и** SQLAgentOperatorRole **в базе данных**msdb **, а также члены предопределенной роли ** администратора[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сервера. Пользователь, не принадлежащий ни к одной из этих ролей, не может использовать агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения о ролях, используемых агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в разделе [Обеспечение безопасности агента SQL Server](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ### <a name="subsystems"></a>Подсистемы  
 Подсистема — это предопределенный объект, который содержит функции, доступные шагу задания. Каждая учетная запись-посредник имеет доступ к одной или нескольким подсистемам. Подсистемы обеспечивают безопасность, поскольку разграничивают доступ учетных записей-посредников к функциям. Каждый шаг задания выполняется в контексте учетной записи-посредника, за исключением этапов задания [!INCLUDE[tsql](../../includes/tsql-md.md)] . На этапах задания [!INCLUDE[tsql](../../includes/tsql-md.md)] применяйте команду EXECUTE AS, чтобы задать контекст безопасности для владельца задания.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяет подсистемы, перечисленные в следующей таблице:  
   
-|Имя подсистемы|Description|  
+|Имя подсистемы|Описание|  
 |--------------|-----------|  
 |Скрипт Microsoft ActiveX|Выполните шаг задания со скриптом ActiveX.<br /><br />**Предупреждение** Подсистема сценариев ActiveX будет удалена из агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в последующей версии [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется.|  
 |Операционная система (**CmdExec**)|Запустите исполняемую программу.|  
@@ -164,7 +165,7 @@ ms.locfileid: "85755109"
   
 Используйте следующие задачи, чтобы начать работу с агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
-|Description|Раздел|  
+|Описание|Раздел|  
 |-----------|-----|  
 |Содержит инструкции по настройке агента SQL Server.|[Настройка агента SQL Server](../../ssms/agent/configure-sql-server-agent.md)|  
 |Описывает запуск, остановку и приостановку службы агента SQL Server.|[Запуск, остановка или приостановка службы агента SQL Server](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)|  

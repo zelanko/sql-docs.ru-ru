@@ -1,6 +1,6 @@
 ---
 title: Изменение пароля для проверки подлинности пользователя SQL Server (OLE DB) | Документы Майкрософт
-description: Изменение пароля для проверки подлинности пользователя SQL Server (OLE DB)
+description: Из этого примера вы узнаете, как использовать OLE DB для изменения пароля учетной записи пользователя при проверке подлинности в SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: d56db8fd8ae6deb3f6b3d86aa2c586916176d0a1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ba388925b96be073ed72208b2e795ea0b292cf17
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008250"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860139"
 ---
 # <a name="change-a-sql-server-authentication-user-password-ole-db"></a>Изменения пароля проверки подлинности пользователя SQL Server (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

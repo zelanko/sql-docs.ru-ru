@@ -1,4 +1,5 @@
 ---
+description: Использование токенов в шагах задания
 title: Использование токенов в шагах задания
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -17,18 +18,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6980c7914a10498d2f1d5cc08d60d63d9dd1f0ac
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 933848c0d0056a67a561a6468db8f10c2bd8c478
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895204"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88317640"
 ---
 # <a name="use-tokens-in-job-steps"></a>Использование токенов в шагах задания
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> В [Управляемом экземпляре Azure SQL](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) в настоящее время поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия в T-SQL между Управляемым экземпляром SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент позволяет применять токены в скриптах шагов заданий на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] . Применение токенов при написании шагов заданий обеспечивают такую же гибкость, какую дают переменные при написании программ. После добавления токена в скрипт шага задания агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] замещает токен во время выполнения, до того как шаг задания выполняется подсистемой [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
@@ -36,7 +37,7 @@ ms.locfileid: "85895204"
 ## <a name="understanding-using-tokens"></a>Основные сведения об использовании токенов  
   
 > [!IMPORTANT]  
-> Все пользователи Windows с разрешением на запись в журнал событий Windows могут получить доступ к шагам заданий, которые активированы предупреждениями агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или инструментария WMI. Чтобы избежать этого нарушения безопасности, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] токены агента, которые могут использоваться в заданиях, активированных предупреждениями, по умолчанию отключены. К этим токенам относятся: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**. и **WMI(** _свойство_ **)** . Обратите внимание, что в этом выпуске использование токенов распространяется на все оповещения.  
+> Все пользователи Windows с разрешением на запись в журнал событий Windows могут получить доступ к шагам заданий, которые активированы предупреждениями агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или инструментария WMI. Чтобы избежать этого нарушения безопасности, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] токены агента, которые могут использоваться в заданиях, активированных предупреждениями, по умолчанию отключены. Такими токенами являются **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG** и **WMI(** _property_ **)** . Обратите внимание, что в этом выпуске использование токенов распространяется на все оповещения.  
 >   
 > Если необходимо использовать эти токены, убедитесь, что только члены доверенных групп безопасности Windows, таких как группа «Администраторы», обладают разрешением на работу с журналом событий компьютера, на котором находится [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Затем, чтобы включить эти токены, щелкните правой кнопкой мыши элемент **Агент SQL Server** в обозревателе объектов, выберите пункт меню **Свойства**и на странице **Система предупреждений** установите флажок **Заменить токены всех ответов заданий на предупреждения** .  
   
@@ -61,7 +62,7 @@ ms.locfileid: "85895204"
   
 ### <a name="sql-server-agent-tokens"></a>Токены агента SQL Server  
   
-|Токен|Description|  
+|Токен|Описание|  
 |---------|---------------|  
 |**(A-DBN)**|имя базы данных. Если задание запускается в результате предупреждения, то имя базы данных автоматически замещает в шаге задания этот токен.|  
 |**(A-SVR)**|Имя сервера. Если задание запускается в результате предупреждения, то имя сервера автоматически замещает в шаге задания этот токен.|  
@@ -88,7 +89,7 @@ ms.locfileid: "85895204"
   
 ### <a name="sql-server-agent-escape-macros"></a>Экранирующие макросы агента SQL Server  
   
-|Экранирующие макросы|Description|  
+|Экранирующие макросы|Описание|  
 |-----------------|---------------|  
 |**$(ESCAPE_SQUOTE(** _token\_name_ **))**|Экранирует символы одинарных кавычек (') в строке замещения токена. Замещает символ одинарной кавычки двумя символами одинарной кавычки.|  
 |**$(ESCAPE_DQUOTE(** _token\_name_ **))**|Экранирует символы двойных кавычек (") в строке замещения токена. Замещает символ двойных кавычек двумя символами двойных кавычек.|  

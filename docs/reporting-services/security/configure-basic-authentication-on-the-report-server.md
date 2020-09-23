@@ -1,4 +1,5 @@
 ---
+description: Настройка проверки подлинности Windows на сервере отчетов
 title: Настройка обычной проверки подлинности на сервере отчетов | Документы Майкрософт
 ms.date: 08/26/2016
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 18b08fdca61a423353f53406432791d758818ea0
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 8b2b130f85b556d6fdeb2e3c0c3c4a32644a80d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81625873"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492644"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>Настройка проверки подлинности Windows на сервере отчетов
   По умолчанию службы Reporting Services принимают запросы, в которых задана проверка подлинности NTLM или Negotiated. Если конфигурация развертывания включает клиентские приложения или браузеры, использующие обычную проверку подлинности, то необходимо добавить обычную проверку подлинности в список поддерживаемых типов. Кроме того, если планируется использование построителя отчетов, то необходимо разрешить анонимный доступ к его файлам.  
@@ -36,7 +37,7 @@ ms.locfileid: "81625873"
   
 1.  Откройте файл конфигурации RSReportServer.config в текстовом редакторе.  
   
-     Файл находится в каталоге *\<диск>:* \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer.  
+     Файл находится в каталоге *\<drive>:* \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer.  
   
 2.  Найдите параметр \<**Authentication**>.  
   
@@ -63,7 +64,7 @@ ms.locfileid: "81625873"
           </AuthenticationTypes>  
     ```  
   
-4.  Вставьте ее на место существующих элементов параметра \<**Authentication**>.  
+4.  Вставьте его на место существующих элементов \<**Authentication**>.  
   
      При использовании нескольких типов проверки подлинности добавьте только элемент **RSWindowsBasic** , но не удаляйте элементы для **RSWindowsNegotiate**, **RSWindowsNTLM**или **RSWindowsKerberos**.  
   

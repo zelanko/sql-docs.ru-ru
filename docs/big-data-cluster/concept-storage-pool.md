@@ -1,7 +1,7 @@
 ---
 title: Что такое пул носителей?
 titleSuffix: SQL Server big data clusters
-description: В этой статье описывается пул носителей в кластере больших данных SQL Server 2019.
+description: Сведения о роли пула носителей SQL Server в кластере больших данных SQL Server 2019, а также архитектуре и функциональных возможностях пула носителей SQL.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d7a9d3e9e16eb923e0954154b46362cdc88c0bff
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fd7a38d555cbf6e2f64743f0907fbfbbdec4d41f
+ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730693"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87806501"
 ---
 # <a name="what-is-the-storage-pool-big-data-clusters-2019"></a>Что такое пул носителей ([!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)])?
 

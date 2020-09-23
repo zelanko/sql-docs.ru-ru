@@ -1,4 +1,5 @@
 ---
+description: Перенос установки служб Reporting Services (собственный режим)
 title: Перенос установки служб Reporting Services (собственный режим) | Документация Майкрософт
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -6,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/01/2020
-ms.openlocfilehash: c4a9ea113597324828574560af03db7caaac7cc9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2a0796c1eff4459d37d03a97de8b9eee27e65c4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719274"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454584"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Перенос установки служб Reporting Services (собственный режим)
 
@@ -265,7 +266,7 @@ ms.locfileid: "82719274"
 
 ## <a name="windows-service-group-and-security-acls"></a><a name="bkmk_windowsservice_group"></a> Группа служб Windows и списки управления доступом
 
- В [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] для создания списков управления доступом для всех разделов реестра, файлов и папок, устанавливаемых со службами SQL Server Reporting Services, используется одна группа служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows. Имя этой группы Windows отображается в формате SQLServerReportServerUser$\<*имя_компьютера*>$\<*имя_экземпляра*>.  
+ В [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] для создания списков управления доступом для всех разделов реестра, файлов и папок, устанавливаемых со службами SQL Server Reporting Services, используется одна группа служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows. Имя этой группы Windows отображается в формате SQLServerReportServerUser$\<*computer_name*>$\<*instance_name*>.  
 
 ## <a name="verify-your-deployment"></a><a name="bkmk_verify"></a> Проверка развертывания
 

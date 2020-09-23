@@ -1,7 +1,7 @@
 ---
 title: Управление. Записные книжки Azure Data Studio
 titleSuffix: SQL Server Big Data Clusters
-description: Используйте записную книжку из Azure Data Studio для управления кластером больших данных и устранения его неполадок.
+description: Используйте записную книжку из Azure Data Studio для управления Кластерами больших данных SQL Server и устранения их неполадок.
 author: yualan
 ms.author: alanyu
 ms.reviewer: mikeray
@@ -10,12 +10,12 @@ ms.date: 03/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4d5a1f176cba1212b305f4f2f3b2031e7882d692
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 372520b7bc4d5c80f67e6206194d8e02e2562e7b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85660398"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778533"
 ---
 # <a name="manage-sql-server-big-data-clusters-with-azure-data-studio-notebooks"></a>Управление Кластерами больших данных SQL Server с помощью записных книжек Azure Data Studio
 
@@ -23,7 +23,7 @@ ms.locfileid: "85660398"
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] предоставляет расширение для Azure Data Studio, включающее в себя записные книжки. Записная книжка предоставляет документацию и код, которые можно использовать в Azure Data Studio для управления Кластерами больших данных SQL Server 2019.
 
-[Записные книжки](../azure-data-studio/notebooks-guidance.md), которые изначально были реализованы как проект с открытым кодом, теперь включены в [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download). Вы можете использовать разметку Markdown для текста в текстовых ячейках и одно из доступных ядер для написания кода в ячейках кода.
+[Записные книжки](../azure-data-studio/notebooks-guidance.md), которые изначально были реализованы как проект с открытым кодом, теперь включены в [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-ver15). Вы можете использовать разметку Markdown для текста в текстовых ячейках и одно из доступных ядер для написания кода в ячейках кода.
 
 С помощью записных книжках можно развертывать кластеры больших данных для [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 

@@ -1,4 +1,5 @@
 ---
+description: Свойства предупреждения — создание предупреждения (страница "Ответ")
 title: Свойства предупреждения — создание предупреждения (страница "Ответ")
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,18 +14,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3266ae4e031088a0db6155d5ee20e792b6d9365c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: faf7aaabf1fbd8bdaf4c181288a8c38068d249f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749221"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418450"
 ---
 # <a name="alert-properties---new-alert-response-page"></a>Свойства предупреждения — создание предупреждения (страница "Ответ")
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> В [Управляемом экземпляре Azure SQL](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) в настоящее время поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия в T-SQL между Управляемым экземпляром SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Используйте эту страницу для указания задания, которое необходимо выполнить, и для получения списка операторов, которые должны получать уведомления в ответ на предупреждение агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
@@ -35,7 +36,7 @@ ms.locfileid: "85749221"
 **Создать задание**  
 Откройте диалоговое окно **Создать задание** . Эта кнопка недоступна, если не установлен флажок **Выполнить задание** .  
   
-**Просмотреть задание**  
+**Просмотр задания**  
 Просмотреть или изменить выбранное задание. Этот параметр недоступен, если не установлен флажок **Выполнить задание** .  
   
 **Уведомить операторов**  
@@ -63,6 +64,6 @@ ms.locfileid: "85749221"
 [Оповещения](../../ssms/agent/alerts.md)  
 [Create an Alert Using Severity Level](../../ssms/agent/create-an-alert-using-severity-level.md)  
 [Оповещения](../../ssms/agent/alerts.md)  
-[Edit an Alert](../../ssms/agent/edit-an-alert.md)  
-[Delete an Alert](../../ssms/agent/delete-an-alert.md)  
+[Изменение предупреждения](../../ssms/agent/edit-an-alert.md)  
+[Удаление предупреждения](../../ssms/agent/delete-an-alert.md)  
   

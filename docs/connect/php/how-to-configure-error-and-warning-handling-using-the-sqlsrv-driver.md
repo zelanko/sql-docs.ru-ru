@@ -1,7 +1,8 @@
 ---
-title: Настройка обработки ошибок и предупреждений с помощью драйвера SQLSRV | Документы Майкрософт
+title: Настройка обработки ошибок и предупреждений с помощью драйвера SQLSRV
+description: В этом разделе описывается настройка драйвера SQLSRV для обработки ошибок и предупреждений при использовании драйвера Microsoft SQLSRV для PHP для SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 257c6f53-9137-4619-a613-eee33d2077e8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 07ab941b5813ccd60bb3afcd5ba76718406fb446
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0e4905b618c20d945946831c5492ec0e75ea882d
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916580"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680709"
 ---
 # <a name="how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver"></a>Практическое руководство. Настройка обработки ошибок и предупреждений с помощью драйвера SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

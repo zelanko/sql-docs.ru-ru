@@ -1,5 +1,6 @@
 ---
-title: sqlsrv_prepare | Документация Майкрософт
+title: sqlsrv_prepare
+description: Справочник по API для функции sqlsrv_prepare в драйвере SQLSRV для PHP для SQL Server.
 ms.custom: ''
 ms.date: 04/11/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ef36e929b44517a6e4688346d72923a0a2f897ca
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9e82a25d3386de2f86d7e43fe5bde13eb25c6416
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925498"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435122"
 ---
 # <a name="sqlsrv_prepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,7 +42,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 *$tsql*: выражение Transact-SQL, соответствующее созданной инструкции.  
   
-*$params* (необязательно): **массив** значений, которые соответствуют параметрам в параметризованном запросе. Каждый элемент массива может быть одним из следующих значений:
+*$params* [необязательный параметр]: **массив значений**, которые соответствуют параметрам в параметризованном запросе. Каждый элемент массива может быть одним из следующих значений:
   
 -   Буквенное значение.  
   
@@ -58,16 +59,16 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
     Эти элементы массива описаны в следующей таблице:  
   
-    |Элемент|Description|  
+    |Элемент|Описание|  
     |-----------|---------------|  
     |*&$value*|Буквенное значение или ссылка на переменную PHP.|  
     |*$direction*(необязательно)|Одна из следующих констант **SQLSRV_PARAM_\*** , используемая для указания направления параметра: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. Значение по умолчанию — **SQLSRV_PARAM_IN**.<br /><br />Дополнительные сведения о константах PHP см. в статье [Константы &#40;драйверы Майкрософт для PHP для SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
     |*$phpType*(необязательно)|Константа **SQLSRV_PHPTYPE_\*** , указывающая тип данных PHP для возвращаемого значения.|  
     |*$sqlType*(необязательно)|Константа **SQLSRV_SQLTYPE_\*** , указывающая тип данных SQL Server для входного значения.|  
   
-*$options* (необязательно): ассоциативный массив, который задает <a name="properties">свойства запроса</a>. В приведенной ниже таблице содержится перечень поддерживаемых ключей и соответствующих значений.
+*$options* [необязательный параметр]: ассоциативный массив, который задает <a name="properties">свойства запроса</a>. В приведенной ниже таблице содержится перечень поддерживаемых ключей и соответствующих значений.
 
-|Клавиши|Поддерживаемые значения|Description|  
+|Key|Поддерживаемые значения|Описание|  
 |-------|--------------------|---------------|  
 |ClientBufferMaxKBSize|Положительное целое число|Задает размер буфера, который содержит результирующий набор для клиентского курсора.<br /><br />Значение по умолчанию — 10 240 КБ. Дополнительные сведения см. в статье [Указание типа курсора и выбор строк](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|
 |DecimalPlaces|Целое число от 0 до 4 (включительно)|Указывает число десятичных знаков при форматировании полученных денежных значений.<br /><br />Любое отрицательное целое число или значение больше 4 будет игнорироваться.<br /><br />Этот параметр работает, только если параметру FormatDecimals установлено значение **true**.|
@@ -87,7 +88,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 Сведения об альтернативных стратегиях для записи и чтения больших объемов информации см. в статьях [Пакеты инструкций SQL](../../odbc/reference/develop-app/batches-of-sql-statements.md) и [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
-Дополнительные сведения см. в статье [Практическое руководство. Извлечение параметров вывода с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
+Дополнительные сведения см. в разделе [Как Извлечение параметров вывода с помощью драйвера SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
   
 ## <a name="example"></a>Пример  
 Следующий пример подготавливает и выполняет инструкцию. При выполнении инструкция (см. [sqlsrv_execute](../../connect/php/sqlsrv-execute.md)) обновляет поле в таблице *Sales.SalesOrderDetail* базы данных AdventureWorks. В примере предполагается, что SQL Server и базы данных [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
@@ -252,11 +253,11 @@ sqlsrv_close($conn);
 ## <a name="see-also"></a>См. также:  
 [Справочник по API для драйвера SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
-[Практическое руководство. Выполнение параметризованных запросов](../../connect/php/how-to-perform-parameterized-queries.md)
+[Руководство. Выполнение параметризованных запросов](../../connect/php/how-to-perform-parameterized-queries.md)
 
 [Информация о примерах кода в документации](../../connect/php/about-code-examples-in-the-documentation.md)
 
-[Практическое руководство. Отправка данных в виде потока](../../connect/php/how-to-send-data-as-a-stream.md)
+[Руководство. Отправка данных в виде потока](../../connect/php/how-to-send-data-as-a-stream.md)
 
 [Использование параметров направления](../../connect/php/using-directional-parameters.md)
 

@@ -1,5 +1,6 @@
 ---
-title: Типы курсоров (драйвер SQLSRV) | Документация Майкрософт
+title: Типы курсоров (драйвер SQLSRV)
+description: Узнайте, как использовать типы курсоров для создания результирующего набора с возможностью доступа в произвольном порядке с помощью драйверов Майкрософт для PHP для SQL Server.
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8472d839-8124-4a62-a83c-7e771b0d4962
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 763795618eb90fe24db313b801bc01af3cd6737b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8e72381eed4aa89ccd9656d3eabadb22bccd357d
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928037"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411470"
 ---
 # <a name="cursor-types-sqlsrv-driver"></a>Типы курсоров (драйвер SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "80928037"
   
 Можно создать результирующий набор с прокручиваемым курсором, который позволяет получить доступ к любой строке в результирующем наборе в любом порядке. В следующей таблице перечислены значения, которые можно передать в параметре **Scrollable** в sqlsrv_query или sqlsrv_prepare.  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |----------|---------------|  
 |SQLSRV_CURSOR_FORWARD|Позволяет переместить одну строку за раз, начиная с первой строки результирующего набора и до его конца.<br /><br />Это тип курсора по умолчанию.<br /><br />[sqlsrv_num_rows](../../connect/php/sqlsrv-num-rows.md) возвращает ошибку для результирующих наборов, созданных с этим типом курсора.<br /><br />**forward** является сокращенной формой SQLSRV_CURSOR_FORWARD.|  
 |SQLSRV_CURSOR_STATIC|Позволяет получать доступ к строкам в любом порядке, но не отражает изменения в базе данных.<br /><br />**static** является сокращенной формой SQLSRV_CURSOR_STATIC.|  
@@ -42,7 +43,7 @@ ms.locfileid: "80928037"
   
 В следующей таблице описаны значения, которые можно указать в параметре *row*.  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |-------------|---------------|  
 |SQLSRV_SCROLL_NEXT|Задает следующую строку. Это значение по умолчанию, если параметр *row* для прокручиваемого набора результатов не указан.|  
 |SQLSRV_SCROLL_PRIOR|Указывает строку перед текущей строкой.|  

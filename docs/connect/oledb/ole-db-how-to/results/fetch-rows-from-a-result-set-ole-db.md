@@ -1,6 +1,6 @@
 ---
 title: Получение строк из результирующего набора (драйвер OLE DB) | Документация Майкрософт
-description: Получение строк из результирующего набора с помощью OLE DB Driver for SQL Server
+description: Узнайте, как получить строки из результирующего набора с помощью OLE DB Driver for SQL Server. В этом примере используется образец базы данных AdventureWorks.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - rows [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 26d224012aadbd382ac3db1d66627e2e5b6160fd
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 967b8613902900b436abc6ab282c1cf6329dca71
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244719"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860284"
 ---
 # <a name="fetch-rows-from-a-result-set-ole-db"></a>Выбор строк из результирующего набора (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

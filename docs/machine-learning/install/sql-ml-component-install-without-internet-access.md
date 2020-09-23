@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d51ac079bf06938826bc343b1b3317e558964655
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 2ee1ed401942ac2673e6527a721ba04bcd95b2f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247988"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487647"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Настройка компонентов R и Python SQL Server для машинного обучения на компьютерах без доступа к Интернету
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 По умолчанию установщики подключаются к сайтам загрузки Майкрософт, чтобы получить необходимые и обновленные компоненты для машинного обучения на SQL Server. Если ограничения брандмауэра не позволяют установщику обратиться к этим сайтам, можно использовать устройство, подключенное к Интернету, для загрузки файлов, пересылки файлов на автономный сервер, а затем запустить программу установки.
 
@@ -215,4 +215,4 @@ Release  | Microsoft R Open | Microsoft R Server |
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Сведения о незнакомых сообщениях и записях журнала см. в статье [Вопросы и ответы по установке и обновлению — службы машинного обучения](../troubleshooting/upgrade-and-installation-faq-sql-server-r-services.md).
+Сведения о том, как использовать службы машинного обучения для выполнения скриптов R или Python в базе данных, см. в статье [Установка Служб машинного обучения SQL Server](../install/sql-machine-learning-services-windows-install.md).

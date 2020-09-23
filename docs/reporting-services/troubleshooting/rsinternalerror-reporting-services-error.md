@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 52613d52-fc78-4870-93f0-7d393ab9c335
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3f134f1c071b62c1c32f48855f76f62d5a1b0a69
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: d8df18bf9487d1d8797eff4e60f5ec5eefb87c4f
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487248"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394726"
 ---
 # <a name="rsinternalerror---reporting-services-error"></a>rsInternalError - Ошибка службы Reporting Services
     
 ## <a name="details"></a>Сведения  
   
-|||  
+|Категория|Значение|  
 |-|-|  
 |Название продукта|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |Идентификатор события|rsInternalError|  
@@ -36,7 +36,7 @@ ms.locfileid: "81487248"
  Внутренние ошибки случаются редко. При возникновении такой ошибки дополнительные сведения можно получить в журналах трассировки сервера отчетов. Помимо этого, если вы работаете на компьютере, где произошла ошибка, под учетной записью локального администратора, можно также просмотреть стек вызовов.  
   
 ## <a name="user-action"></a>Действие пользователя  
- Чтобы определить причину появления этого сообщения, просмотрите файлы журналов сервера отчетов, которые находятся в папке \Microsoft SQL Server\MSRS12.\<Имя_экземпляра>\Reporting Services\LogFiles. Дополнительные сведения см. в разделе [Файлы и источники журналов служб Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
+ Чтобы определить причину появления этого сообщения, просмотрите файлы журналов сервера отчетов, которые находятся в папке \Microsoft SQL Server\MSRS12.\<instancename >\Reporting Services\LogFiles. Дополнительные сведения см. в разделе [Файлы и источники журналов служб Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
  Для просмотра стека вызова щелкните правой кнопкой мыши на странице, где произошла ошибка, и выберите команду **Исходный код**. Для просмотра стека вызовов необходимы разрешения администратора на том компьютере, где возникла ошибка.  
   

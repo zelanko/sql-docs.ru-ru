@@ -1,6 +1,6 @@
 ---
 title: Создание объектов RxSqlServerData
-description: Учебник по RevoScaleR, часть 2. Сведения о том, как создавать объекты данных с помощью языка R на SQL Server.
+description: 'Узнайте, как использовать функции RevoScaleR с SQL Server. В этом учебнике мы продолжим создавать базу данных: добавим таблицы и загрузим данные.'
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 11/26/2018
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a2c7daa106429f4db1382a3e73aa6b280b14dc57
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 664deeae61b664d3818f7d748ad6177b79917d86
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728613"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178811"
 ---
 # <a name="create-sql-server-data-objects-using-rxsqlserverdata-sql-server-and-revoscaler-tutorial"></a>Создание объектов данных SQL Server с помощью функции RxSqlServerData (учебник по SQL Server и RevoScaleR)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Эта часть 2 входит в состав [серии учебников по RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md), посвященной использованию [функций RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) в SQL Server.
 
@@ -145,7 +145,7 @@ ms.locfileid: "85728613"
     
     При отсутствии проблем со строкой подключения после небольшой паузы должны появиться результаты наподобие следующих:
   
-    *Всего строк записано: 10 000. Общее время: 0.466* *Прочитано строк: 10 000. Всего обработано строк: 10 000. Общее время обработки блока: 0,577 секунд*
+    *Всего строк записано: 10000, Общее время: 0,466* *Строк считано: 10000, Всего строк обработано: 10000, Общее время фрагмента: 0,577 секунды*
   
 5. Обновите список таблиц. Чтобы проверить, имеет ли каждая переменная правильный тип данных и успешно ли она импортирована, можно щелкнуть таблицу правой кнопкой мыши в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и выбрать пункт **Выделить 1000 верхних строк**.
 
@@ -192,7 +192,7 @@ ms.locfileid: "85728613"
 
 При необходимости можно указать преобразования данных с помощью функций R в аргументах для **rxDataStep**. Примеры этих операций приведены далее в этом учебнике.
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Дальнейшие шаги
 
 > [!div class="nextstepaction"]
 > [Запрос и изменение данных SQL Server](../../machine-learning/tutorials/deepdive-query-and-modify-the-sql-server-data.md)

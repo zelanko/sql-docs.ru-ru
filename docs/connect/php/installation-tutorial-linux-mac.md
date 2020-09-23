@@ -7,26 +7,26 @@ ms.prod_service: connectivity
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
-author: ulvii
-ms.author: v-ulibra
+author: David-Engel
+ms.author: v-daenge
 manager: v-mabarw
-ms.openlocfilehash: 3fc2747f21ff50af6206e59da594c0a06b2bb909
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: ee4938e8a0d226f668fabf3aaf4db1359ab6bf61
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886281"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88807019"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Руководство по установке драйверов Майкрософт для PHP для SQL Server в Linux и MacOS
-В следующих инструкциях предполагается чистая среда и показано, как установить PHP 7.x, драйвер Microsoft ODBC, веб-сервер Apache и драйверы Майкрософт для PHP для SQL Server в Ubuntu 16.04, 18.04 и 19.10, RedHat 7 и 8, Debian 8, 9 и 10, SUSE 12 и 15, Alpine 3.11 и macOS 10.13, 10.14 и 10.15. В этих инструкциях рекомендуется установка драйверов с помощью PECL, но вы можете скачать предварительно созданные двоичные файлы со страницы проекта [драйверов Майкрософт для PHP для SQL Server](https://github.com/Microsoft/msphpsql/releases) на сайте GitHub и установить их по инструкциям из статьи [Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md) (Загрузка драйверов Майкрософт для PHP для SQL Server). Описание процесса загрузки расширений и причины, по которым расширения не добавляются в файл php.ini, см. в статье [о загрузке драйверов](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup).
+В следующих инструкциях предполагается чистая среда и показано, как установить PHP 7.x, драйвер Microsoft ODBC, веб-сервер Apache и драйверы Майкрософт для PHP для SQL Server в Ubuntu 16.04, 18.04 и 20.04, RedHat 7 и 8, Debian 8, 9 и 10, SUSE 12 и 15, Alpine 3.11 и macOS 10.13, 10.14 и 10.15. В этих инструкциях рекомендуется установка драйверов с помощью PECL, но вы можете скачать предварительно созданные двоичные файлы со страницы проекта [драйверов Майкрософт для PHP для SQL Server](https://github.com/Microsoft/msphpsql/releases) на сайте GitHub и установить их по инструкциям из статьи [Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md) (Загрузка драйверов Майкрософт для PHP для SQL Server). Описание процесса загрузки расширений и причины, по которым расширения не добавляются в файл php.ini, см. в статье [о загрузке драйверов](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup).
 
 Эти инструкции по умолчанию устанавливают PHP 7.4 с помощью `pecl install`. Возможно, потребуется сначала выполнить `pecl channel-update pecl.php.net`. Обратите внимание, что некоторые поддерживаемые дистрибутивы Linux по умолчанию используют PHP 7.1 и более ранних версий, которые не поддерживаются последней версией драйверов PHP для SQL Server. Изучите рекомендации в начале каждого раздела, чтобы установить вместо них версию PHP 7.2 или 7.3.
 
 Также включены инструкции по установке диспетчера процессов PHP FastCGI (PHP-FPM) в Ubuntu. Это необходимо, если вместо Apache используется веб-сервер nginx.
 
-## <a name="contents-of-this-page"></a>Содержимое этой страницы:
+## <a name="contents-of-this-page"></a>Содержимое этой страницы
 
-- [Установка драйверов в Ubuntu 16.04, 18.04 и 19.10](#installing-the-drivers-on-ubuntu-1604-1804-and-1910)
+- [Установка драйверов в Ubuntu 16.04, 18.04 и 20.04](#installing-the-drivers-on-ubuntu-1604-1804-and-2004)
 - [Установка драйверов с помощью PHP-FPM в Ubuntu](#installing-the-drivers-with-php-fpm-on-ubuntu)
 - [Установка драйверов в Red Hat 7 и 8](#installing-the-drivers-on-red-hat-7-and-8)
 - [Установка драйверов в Debian 8, 9 и 10](#installing-the-drivers-on-debian-8-9-and-10)
@@ -34,7 +34,7 @@ ms.locfileid: "82886281"
 - [Установка драйверов в Alpine 3.11](#installing-the-drivers-on-alpine-311)
 - [Установка драйверов в macOS High Sierra, Mojave и Catalina](#installing-the-drivers-on-macos-high-sierra-mojave-and-catalina)
 
-## <a name="installing-the-drivers-on-ubuntu-1604-1804-and-1910"></a>Установка драйверов в Ubuntu 16.04, 18.04 и 19.10
+## <a name="installing-the-drivers-on-ubuntu-1604-1804-and-2004"></a>Установка драйверов в Ubuntu 16.04, 18.04 и 20.04
 
 > [!NOTE]
 > Чтобы установить PHP 7.2 или 7.3, замените 7.4 на 7.2 или 7.3 в следующих командах.

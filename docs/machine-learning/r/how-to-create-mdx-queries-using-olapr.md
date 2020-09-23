@@ -1,6 +1,6 @@
 ---
 title: Создание запросов многомерных выражений на языке R с помощью olapR
-description: Использование библиотеки пакетов olapR в SQL Server для написания запросов многомерных выражений в виде скрипта на языке R.
+description: Узнайте, как использовать библиотеки пакетов olapR в SQL Server для написания новых или выполнения имеющихся запросов многомерных выражений в виде скрипта на языке R.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 05/22/2019
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 501449396ee20b763047ac16d23e32b3e98aa366
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5789a0791654b89ac78f9333cb71e10f3ca9322e
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722534"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88173681"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>Создание запросов многомерных выражений на языке R с помощью olapR
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Пакет [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) поддерживает запросы многомерных выражений к кубам, размещенным в SQL Server Analysis Services. Вы можете создавать запросы к существующему кубу, просматривать измерения и другие объекты куба, а также вставлять существующие запросы многомерных выражений для получения данных.
 

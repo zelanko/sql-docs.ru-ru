@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::fetchObject | Документация Майкрософт
+title: PDOStatement::fetchObject
+description: Справочник по API для функции PDOStatement::fetchObject в драйвере Microsoft PDO_SQLSRV для PHP для SQL Server.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 71ad1932-cab3-4c29-8950-f5e82547d3b5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 727f4545e9deb34c564363cd8e3252feeb22ac16
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 459505e3c00a85b6e879e89a3a3b21fb8b3fcf9c
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928588"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645874"
 ---
 # <a name="pdostatementfetchobject"></a>PDOStatement::fetchObject
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,7 +31,7 @@ mixed PDOStatement::fetchObject([ $class_name[,$ctor_args ]] )
 ```  
   
 #### <a name="parameters"></a>Параметры  
-$*имя_класса*: необязательная строка, задающая имя для создаваемого класса. Значение по умолчанию — stdClass.  
+$*class_name*: необязательная строка, задающая имя для создаваемого класса. Значение по умолчанию — stdClass.  
   
 $*ctor_args*: необязательный массив с аргументами для конструктора пользовательских классов.  
   

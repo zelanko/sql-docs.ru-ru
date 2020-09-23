@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ea5c622385b4350fb74362451eef3bb061d78fbc
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: fe4b026047ea98350283c1beedf87988d39df4bd
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86160162"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472340"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-red-hat-openshift-aro"></a>Развертывание кластера больших данных SQL Server в Azure Red Hat OpenShift (ARO) с помощью скрипта Python
 
@@ -24,6 +24,10 @@ ms.locfileid: "86160162"
 
 > [!TIP]
 > ARO — это единственный вариант размещения Kubernetes для кластера больших данных. Сведения о других вариантах развертывания и настройке параметров развертывания см. в статье [Развертывание [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] в Kubernetes](deployment-guidance.md).
+
+
+> [!WARNING]
+> Для постоянных томов, созданных с помощью встроенных классов хранения *managed-premium*, применяется политика освобождения *Удалить*. Поэтому при удалении кластера больших данных SQL Server утверждения постоянных томов удаляются, а затем удаляются и сами тома. Вы должны создавать пользовательские классы хранения с помощью средства подготовки azure-disk с политикой освобождения *Сохранить*, как показано в разделе [Классы хранилищ](/azure/aks/concepts-storage/#storage-classes). В приведенном ниже скрипте используется класс хранения *managed-premium*. Дополнительные сведения см. в статье о [сохраняемости данных](concept-data-persistence.md).
 
 Используемое здесь развертывание кластера больших данных по умолчанию состоит из главного экземпляра SQL, одного экземпляра пула вычислительных ресурсов, двух экземпляров пула данных и двух экземпляров пула носителей. Данные сохраняются с помощью постоянных томов Kubernetes, использующих классы хранения ARO по умолчанию. Конфигурация по умолчанию, применяемая в этом руководстве, подходит для сред разработки и тестирования.
 

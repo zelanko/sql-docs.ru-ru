@@ -1,6 +1,6 @@
 ---
 title: Вызов хранимой процедуры (OLE DB) | Документация Майкрософт
-description: Вызов хранимой процедуры (OLE DB)
+description: Сведения о вызове хранимой процедуры в OLE DB Driver for SQL Server в том числе о способах передачи значений параметров.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - ODBC CALL escape sequence
 - stored procedures [OLE DB], calling
 - OLE DB Driver for SQL Server, stored procedures
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 7835af6a0e0cb42d63dd6670e863d3c0aea28d44
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3df02e0bee4a0e0f83851a913e0e09961e6320c6
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012758"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859111"
 ---
 # <a name="stored-procedures---calling"></a>Вызов хранимых процедур
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

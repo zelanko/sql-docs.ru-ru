@@ -1,4 +1,5 @@
 ---
+description: Мастер источников данных, экран 1 (ODBC Driver for SQL Server)
 title: Мастер источников данных, экран 1 (драйвер ODBC для SQL Server) | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/27/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 28c89bd90a8182a8fd8114de4a9e2ec9da4e9464
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 78009925b5d62e8a314d0a3fdc27c29acaee5c5d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928252"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462228"
 ---
 # <a name="data-source-wizard-screen-1"></a>Экран 1 мастера источников данных
 
@@ -23,11 +24,11 @@ ms.locfileid: "80928252"
     
 ## <a name="options"></a>Параметры
 
-### <a name="name"></a>Имя
+### <a name="name"></a>name
 
 Имя источника данных, используемое приложением ODBC в том случае, если ему необходимо запросить соединение с источником данных. Например, «Персонал». Имя источника данных отображается в диалоговом окне администратора источника данных ODBC.
 
-### <a name="description"></a>Description
+### <a name="description"></a>Описание
 
 Описание источника данных (необязательно). Например, «Дата приема на работу, журнал зарплат и текущий обзор всех сотрудников».
 
@@ -45,10 +46,10 @@ ms.locfileid: "80928252"
 
 Если для соединения с SQL Server нужны только сведения, указанные на этом экране, можно нажать кнопку **Готово**. Для всех атрибутов, указанных на других экранах мастера, используются значения по умолчанию.
 
-### <a name="next"></a>Дальше
+### <a name="next"></a>Следующая
 
 Переход к следующему экрану в мастере, щелкнув ссылку **Далее**.
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Дальнейшие шаги
 
 [Экран 2 мастера источников данных](../../../connect/odbc/windows/dsn-wizard-2.md)

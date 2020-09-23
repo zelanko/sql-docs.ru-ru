@@ -1,4 +1,5 @@
 ---
+description: Свойства категории заданий — создание категории заданий
 title: Свойства категории заданий — создание категории заданий
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,23 +14,23 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6641d782d1cf56647643c6432344018525c1562f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f237b1431d973acffe91a2466d3d48a0d999ddd4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756560"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480368"
 ---
 # <a name="job-categories-properties---new-job-category"></a>Свойства категории заданий — создание категории заданий
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> В [Управляемом экземпляре Azure SQL](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) в настоящее время поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия в T-SQL между Управляемым экземпляром SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Содержит список заданий в одной категории заданий или всех категориях заданий, а также предоставляет возможность добавить новую категорию заданий.  
   
 ## <a name="options"></a>Параметры  
-**Название**  
+**имя**;  
 Введите имя новой категории заданий. Если эта операция выполняется в диалоговом окне «Свойства» категории заданий, просматриваемая категория будет отображена здесь.  
   
 **Задания в этой категории**  

@@ -1,4 +1,5 @@
 ---
+description: Upgrade and Migrate Reporting Services
 title: Обновление и перенос служб Reporting Services | Документы Майкрософт
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,12 +12,12 @@ author: maggiesMSFT
 ms.author: maggies
 ms.topic: conceptual
 ms.date: 05/01/2020
-ms.openlocfilehash: ca9ffd01b7553cb343a83565615a786467371891
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 41add7a1ac27a0fba9eb364ec5e5da3dde37585c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719522"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446092"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
@@ -114,7 +115,7 @@ ms.locfileid: "82719522"
   
 3.  Если процесс обновления может быть продолжен, программа установки предлагает продолжить его выполнение.  
   
-4.  Программа установки создает новые папки для программных файлов служб SQL Server Reporting Services. К числу программных папок для установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] относится MSRS13.\<*имя_экземпляра*>.  
+4.  Программа установки создает новые папки для программных файлов служб SQL Server Reporting Services. К числу программных папок для установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] относится MSRS13.\<*instance name*>.  
   
 5.  Программа установки добавляет программные файлы сервера отчетов служб SQL Server Reporting Services, средства настройки, а также программы командной строки, которые входят в состав компонента сервера отчетов.  
   

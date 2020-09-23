@@ -8,14 +8,14 @@ ms.custom: ''
 ms.topic: article
 ms.date: 03/06/2020
 ms.author: v-daenge
-ms.openlocfilehash: f6f75adc047f39ae3e0e0c21143f64cf57d2803a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: c2f282e9ba4c3b182640989e2365e9be70a258da
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244055"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988509"
 ---
-# <a name="connection-modules-for-microsoft-sql-databases"></a>Модули подключения для баз данных Microsoft SQL
+# <a name="connection-modules-for-microsoft-sql-database"></a>Модули подключения для баз данных Microsoft SQL
 
 В этой статье содержатся ссылки для загрузки модулей подключения или *драйверов*, которые клиентские программы могут использовать для взаимодействия с [Microsoft SQL Server](../relational-databases/database-features.md), а также с двойником в облаке [Базы данных SQL Azure](/azure/sql-database/). Драйверы доступны для различных языков, работающих в следующих операционных системах:
 
@@ -50,7 +50,7 @@ ms.locfileid: "87244055"
 
 ## <a name="drivers-for-orm-access"></a>Драйверы для доступа к ОРС
 
-В следующей таблице приведены примеры платформ объектно-реляционного сопоставления (ОРС), которые используются клиентскими приложениями для подключения к базам данных Microsoft SQL.
+В следующей таблице приведены примеры платформ объектно-реляционного сопоставления (ОРС), которые используются клиентскими приложениями для подключения к базе данных Microsoft SQL.
 
 | Язык | Скачать драйвер ORM |
 | :------- | :------------------ |

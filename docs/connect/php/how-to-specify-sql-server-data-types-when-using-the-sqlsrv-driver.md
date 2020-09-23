@@ -1,7 +1,8 @@
 ---
-title: Практическое руководство. Указание типов данных SQL Server при использовании драйвера SQLSRV | Документы Майкрософт
+title: Практическое руководство по настройке типов данных SQL Server при использовании драйвера SQLSRV
+description: Узнайте, как задать типы данных SQL Server с помощью необязательного массива *$params* в подготовленных инструкциях или прямых запросах при использовании драйвера SQLSRV для PHP.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fcf73cb-5634-4d89-948f-9326f1dbd030
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5ce7e541486412d6c309fdbf1a9fe6d155e38f5a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0720c14429aa4088d906a2063feeb34057065682
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922879"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680573"
 ---
 # <a name="how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver"></a>Практическое руководство. Указание типов данных SQL Server при использовании драйвера SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -143,5 +144,5 @@ sqlsrv_close($conn);
 
 [Преобразование типов данных](../../connect/php/converting-data-types.md)
 
-[Практическое руководство. Отправка и извлечение данных UTF-8 с помощью встроенной поддержки UTF-8](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)  
+[Руководство. отправлять и извлекать данные UTF-8 с помощью встроенной поддержки UTF-8](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)  
   

@@ -9,12 +9,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 299182ad45f8c96f4b2f07d38f1b3f366eea7b33
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c1232571931a8260e545aa21d483a5fbe2d93c70
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923420"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864339"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Новые возможности [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -262,7 +262,7 @@ ms.locfileid: "86923420"
 
 | Новые функции или обновления | Сведения |
 |:---|:---|
-|Поддержка базы данных управляемого экземпляра базы данных SQL Azure| Размещение [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] на управляемом экземпляре. См. раздел [Установка и настройка [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb).|
+|Поддержка баз данных Управляемого экземпляра SQL Azure| Разместите [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] на Управляемом экземпляре SQL Azure. См. раздел [Установка и настройка [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb).|
 |Новые элементы управления HTML| Элементы управления HTML заменяют все бывшие компоненты Silverlight. Зависимость от Silverlight устранена.|
 | &nbsp; | &nbsp; |
 

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9d373e347df9207a3cbea8bd0fc1682a865323c2
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 4eea801493f87b2c6e11cdca0d42143d54f08bff
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458966"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988434"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Источники данных, поддерживаемые службами Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] получают через модульный и расширяемый уровень данных, где работают модули обработки данных. Для получения данных отчета из источника данных необходимо выбрать модуль обработки данных, поддерживающий как тип источника данных, так и версию программного обеспечения источника данных и его платформу (32-разрядная или 64-разрядная [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]).  
@@ -157,7 +157,7 @@ ms.locfileid: "86458966"
   
  Если конструктор запросов используется в графическом режиме, запрос анализируется и, возможно, переписывается. Текстовый конструктор запросов также доступен для написания запросов. Текстовый конструктор запросов можно использовать при необходимости четкого управления синтаксисом [!INCLUDE[tsql](../../includes/tsql-md.md)] в запросе.   
   
- Получение данных из [!INCLUDE[ssSDS](../../includes/sssds-md.md)], хранилища данных SQL и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется аналогично, однако существует ряд требований, относящихся только к [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Дополнительные сведения см. в разделе [Тип соединения SQL Azure (службы SSRS)](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).  
+ Получение данных из [!INCLUDE[ssSDS](../../includes/sssds-md.md)], хранилища данных SQL и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется аналогично, однако существует ряд требований, относящихся только к [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Дополнительные сведения см. в разделе [Тип соединения SQL Azure &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).  
   
  [Назад к таблице источников данных](#DataSourcesTable)  
   

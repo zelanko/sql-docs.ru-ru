@@ -1,5 +1,6 @@
 ---
-title: sqlsrv_errors | Документация Майкрософт
+title: sqlsrv_errors
+description: Справочник по API для функции sqlsrv_errors в драйвере SQLSRV для PHP для SQL Server.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d1fcffec-f34f-46de-9a0e-343f3b5dbae2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ffd866d5e4493fe327dfb29b54d2fadda8cda3be
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c0922e0ec7f3072b15b61f76908116bb86f4fe04
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928218"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435191"
 ---
 # <a name="sqlsrv_errors"></a>sqlsrv_errors
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -71,8 +72,8 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
 |Клавиши|Описание|  
 |-------|---------------|  
 |SQLSTATE|Для ошибок, возникших в драйвере ODBC, SQLSTATE, возвращенный ODBC. Сведения о значениях SQLSTATE для ODBC см. в статье [Коды ошибок ODBC](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).<br /><br />Для ошибок, возникших в [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], SQLSTATE для IMSSP.<br /><br />Для предупреждений, возникших в [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], SQLSTATE для 01SSP.|  
-|код|Для ошибок, возникших в SQL Server, собственный код ошибки SQL Server.<br /><br />Для ошибок, возникших в драйвере ODBC, код ошибки, возвращенный ODBC.<br /><br />Для ошибок, возникших в [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], код ошибки [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] . Дополнительные сведения см. в статье [Handling Errors and Warnings](../../connect/php/handling-errors-and-warnings.md).|  
-|message|Текстовое описание ошибки.|  
+|code|Для ошибок, возникших в SQL Server, собственный код ошибки SQL Server.<br /><br />Для ошибок, возникших в драйвере ODBC, код ошибки, возвращенный ODBC.<br /><br />Для ошибок, возникших в [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], код ошибки [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] . Дополнительные сведения см. в статье [Handling Errors and Warnings](../../connect/php/handling-errors-and-warnings.md).|  
+|сообщение|Текстовое описание ошибки.|  
   
 Доступ к значениям массива можно также осуществить с помощью числовых ключей 0, 1 и 2. Если ошибки или предупреждения отсутствуют, возвращается значение **null** .  
   
