@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 087b92b1bb8bcac9439688790918f46fd609ce96
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 24bdf85af4a165a77694af5e65c262fdf5b97edd
+ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688483"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91136392"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "90688483"
 Регистрирует расширения внешнего языка в базе данных из заданного пути файла или байтового потока. Эта инструкция служит универсальным механизмом для администратора базы данных, позволяющим регистрировать новые расширения внешнего языка на любой платформе операционной системы, поддерживаемой SQL Server. См подробнее о [расширениях языка](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview).
 
 > [!NOTE]
-> Сейчас только **Java** поддерживается как внешний язык. **R** и **Python** являются зарезервированными именами, поэтому создать внешние языки с такими именами невозможно. См. подробнее об использовании **R** и **Python** в документации по [Службам машинного обучения SQL Server](https://docs.microsoft.com/sql/machine-learning/).
+> **R** и **Python** являются зарезервированными именами, поэтому создать внешние языки с такими именами невозможно. См. подробнее об использовании **R** и **Python** в документации по [Службам машинного обучения SQL Server](https://docs.microsoft.com/sql/machine-learning/).
 
 ## <a name="syntax"></a>Синтаксис
 
