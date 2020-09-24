@@ -47,12 +47,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce5edfba05262da83060030aa00117a81e730e24
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d7d731d320c51b70bf73ea76361f9dba283ea38c
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544394"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024493"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 
@@ -149,7 +149,7 @@ ALTER INDEX { index_name | ALL } ON <object>
 ```  
   
 ```syntaxsql
--- Syntax for SQL Data Warehouse and Parallel Data Warehouse 
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse 
   
 ALTER INDEX { index_name | ALL }  
     ON   [ schema_name. ] table_name  
@@ -663,7 +663,7 @@ ABORT
 Дополнительные сведения см. в статье [Реорганизация и перестроение индексов](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
 
 > [!IMPORTANT]
-> Для таблицы Хранилища данных SQL Azure с упорядоченным кластеризованным индексом columnstore `ALTER INDEX REORGANIZE` не будет выполнять повторную сортировку данных. Для повторной сортировки данных используйте `ALTER INDEX REBUILD`.
+> Для таблицы [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] с упорядоченным кластеризованным индексом columnstore `ALTER INDEX REORGANIZE` не будет выполнять повторную сортировку данных. Для повторной сортировки данных используйте `ALTER INDEX REBUILD`.
   
 ## <a name="disabling-indexes"></a><a name="disabling-indexes"></a> Отключение индексов  
 Отключение индексов предотвращает доступ пользователя к индексам в случае использования кластеризованных индексов к данным базовой таблицы. Определение индекса остается в системном каталоге. Отключение некластеризованных индексов или кластеризованных индексов в представлении физически удаляет данные индекса. При отключении кластеризованного индекса блокируется доступ к данным, но данные остаются необслуживаемыми в сбалансированном дереве до тех пор, пока индекс не будет удален или перестроен. Для просмотра состояния включенного или отключенного индекса следует направить запрос в столбец **is_disabled** в представлении каталога **sys.indexes**.  

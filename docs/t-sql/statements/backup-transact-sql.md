@@ -47,12 +47,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7b2c1984b18596a8c1c527113232c7637d309359
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: afcf2e560b5fd4300c02ddf6bcc548ef68fdc05b
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480862"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024573"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -1209,7 +1209,7 @@ DIFFERENTIAL — указывает, что необходимо создать
 
 Требуется разрешение **BACKUP DATABASE** или участие в предопределенной роли базы данных **db_backupoperator**. Создать резервную копию базы данных master может только обычный пользователь, добавленный в предопределенную роль базы данных **db_backupoperator**. Создать резервную копию базы данных master может только роль **sa**, администратор структуры или участники предопределенной роли базы данных **sysadmin**.
 
-Требуется учетная запись Windows с разрешениями на доступ к каталогу резервного копирования, создание такого каталога и запись в него. Необходимо также сохранить имя учетной записи Windows и пароль в [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Чтобы добавить эти сетевые учетные данные для [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте хранимую процедуру [sp_pdw_add_network_credentials (Хранилище данных SQL)](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).
+Требуется учетная запись Windows с разрешениями на доступ к каталогу резервного копирования, создание такого каталога и запись в него. Необходимо также сохранить имя учетной записи Windows и пароль в [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Чтобы добавить эти сетевые учетные данные в [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте хранимую процедуру [sp_pdw_add_network_credentials - [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).
 
 Дополнительные сведения об управлении учетными данными в [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] см. в разделе [Безопасность](#Security).
 
@@ -1222,14 +1222,14 @@ DIFFERENTIAL — указывает, что необходимо создать
 - База данных не существует.
 - Целевой каталог уже существует в общей сетевой папке.
 - Целевая общая сетевая папка недоступна.
-- В целевой общей сетевой папке недостаточно места для хранения резервной копии. Команда BACKUP DATABASE не подтверждает, что дискового пространства достаточно, прежде чем запустить резервное копирование, из-за чего при выполнении инструкции BACKUP DATABASE может возникнуть ошибка нехватки места. В случае нехватки места на диске [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] выполняет откат команды BACKUP DATABASE. Чтобы уменьшить размер базы данных, запустите [DBCC SHRINKLOG (хранилище данных SQL Azure)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)
+- В целевой общей сетевой папке недостаточно места для хранения резервной копии. Команда BACKUP DATABASE не подтверждает, что дискового пространства достаточно, прежде чем запустить резервное копирование, из-за чего при выполнении инструкции BACKUP DATABASE может возникнуть ошибка нехватки места. В случае нехватки места на диске [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] выполняет откат команды BACKUP DATABASE. Чтобы уменьшить размер базы данных, запустите [DBCC SHRINKLOG ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)
 - Попытка запустить резервное копирование в рамках транзакции.
 
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 ## <a name="general-remarks"></a>Общие замечания
 
-Прежде чем выполнять резервное копирование базы данных, воспользуйтесь инструкцией [DBCC SHRINKLOG (хранилище данных SQL Azure)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md), чтобы уменьшить размер базы данных.
+Прежде чем выполнять резервное копирование базы данных, используйте [DBCC SHRINKLOG([!INCLUDE[ssPDW](../../includes/sspdw-md.md)])](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md), чтобы уменьшить размер базы данных. 
 
 Резервная копия [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] хранится в качестве набора файлов в том же каталоге.
 
@@ -1288,9 +1288,9 @@ DIFFERENTIAL — указывает, что необходимо создать
 > [!IMPORTANT]
 > Чтобы снизить риски безопасности в работе с данными, рекомендуется назначить одну учетную запись Windows исключительно для выполнения резервного копирования и восстановления. Предоставьте этой учетной записи разрешения исключительно для расположения резервного копирования.
 
-Имя пользователя и пароль следует сохранить в [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], выполнив хранимую процедуру [sp_pdw_add_network_credentials (Хранилище данных SQL)](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md). [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] использует диспетчер учетных данных Windows для хранения и шифрования имен пользователей и паролей в узле управления и в вычислительных узлах. Учетные данные не архивируются с помощью команды BACKUP DATABASE.
+Имя пользователя и пароль следует сохранить в [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], выполнив хранимую процедуру [sp_pdw_add_network_credentials — [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md). [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] использует диспетчер учетных данных Windows для хранения и шифрования имен пользователей и паролей в узле управления и в вычислительных узлах. Учетные данные не архивируются с помощью команды BACKUP DATABASE.
 
-Чтобы удалить сетевые учетные данные из [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], воспользуйтесь инструкциями из статьи [sp_pdw_remove_network_credentials (SQL Data Warehouse)](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md) (sp_pdw_remove_network_credentials (Хранилище данных SQL)).
+Чтобы удалить сетевые учетные данные из [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], воспользуйтесь инструкциями из раздела [sp_pdw_remove_network_credentials — [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md).
 
 Чтобы перечислить все сетевые учетные данные, сохраненные в [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], воспользуйтесь динамическим административным представлением [sys.dm_pdw_network_credentials](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md).
 

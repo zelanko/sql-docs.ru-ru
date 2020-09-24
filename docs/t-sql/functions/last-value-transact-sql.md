@@ -2,7 +2,7 @@
 description: LAST_VALUE (Transact-SQL)
 title: LAST_VALUE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 10/20/2015
+ms.date: 09/22/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, sql-database
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: fd833e34-8092-42b7-80fc-95ca6b0eab6b
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9f8dba37244085035a95512c3e1430435bd3ee90
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 288b8213bba3623895c8c600f9b398c6e4f608b2
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417300"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90915040"
 ---
 # <a name="last_value-transact-sql"></a>LAST_VALUE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88417300"
   
 ```syntaxsql
   
-LAST_VALUE ( [ scalar_expression ] )   
+LAST_VALUE ( [ scalar_expression ] )  [ IGNORE NULLS | RESPECT NULLS ]
     OVER ( [ partition_by_clause ] order_by_clause rows_range_clause )   
 ```  
   
@@ -47,6 +47,14 @@ LAST_VALUE ( [ scalar_expression ] )
 ## <a name="arguments"></a>Аргументы
  *scalar_expression*  
  Возвращаемое значение. *scalar_expression* может быть столбцом, вложенным запросом или другим выражением, результатом вычисления которого является единичное значение. Другие аналитические функции использовать нельзя.  
+  
+ [ IGNORE NULLS | RESPECT NULLS ]     
+ **Область применения**: SQL Azure для пограничных вычислений
+
+ IGNORE NULLS — пропуск значений NULL в наборе данных при вычислении последнего значения в секции.     
+ RESPECT NULLS — учет значений NULL в наборе данных при вычислении последнего значения в секции.     
+ 
+  Дополнительные сведения см. в разделе [Ввод отсутствующих значений](/azure/azure-sql-edge/imputing-missing-values/).
   
  OVER **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
  *partition_by_clause* делит результирующий набор, полученный с помощью предложения FROM, на секции, к которым применяется функция. Если этот параметр не указан, функция обрабатывает все строки результирующего набора запроса как отдельные группы.  
@@ -154,4 +162,6 @@ BusinessEntityID Quarter     SalesYear   QuotaThisQuarter      DifferenceFromFir
   
 ```  
   
-  
+## <a name="see-also"></a>См. также:  
+
+ [First_Value &#40;Transact-SQL&#41;](first-value-transact-sql.md)  

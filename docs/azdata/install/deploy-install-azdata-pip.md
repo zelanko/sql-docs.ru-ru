@@ -1,7 +1,7 @@
 ---
 title: Установка azdata с помощью pip
-titleSuffix: SQL Server big data clusters
-description: Узнайте, как установить средство azdata для установки кластеров больших данных и управления ими с помощью pip.
+titleSuffix: ''
+description: Узнайте, как установить средство azdata с помощью pip.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,16 +9,16 @@ ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 51faf26a6414854ad3b2b1c2d205304e9b3dfb36
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 6bf2bbff5f1d048895515f18b600cd05acd8ae6f
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89734075"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914945"
 ---
 # <a name="install-azdata-with-pip"></a>Установка `azdata` с помощью `pip`
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/azdata.md)]
 
 В этой статье описывается установка средства `azdata` в Windows или Linux с помощью `pip`.
 
@@ -26,7 +26,7 @@ ms.locfileid: "89734075"
 
 ## <a name="prerequisites"></a><a id="prerequisites"></a> Предварительные требования
 
-`azdata` — это служебная программа командной строки на языке Python, которая позволяет администраторам кластера выполнять начальную загрузку кластера больших данных и управлять им с помощью REST API. Минимальная требуемая версия Python — 3.5. Для загрузки и установки средства `azdata` требуется `pip`. В инструкциях ниже приведены примеры для Windows и Ubuntu. Сведения об установке Python на других платформах см. в [документации по Python](https://wiki.python.org/moin/BeginnersGuide/Download).
+`azdata` — это служебная программа командной строки на языке Python, которая позволяет администраторам кластера выполнять начальную загрузку данных и управлять ими с помощью REST API. Минимальная требуемая версия Python — 3.5. Для загрузки и установки средства `azdata` требуется `pip`. В инструкциях ниже приведены примеры для Windows и Ubuntu. Сведения об установке Python на других платформах см. в [документации по Python](https://wiki.python.org/moin/BeginnersGuide/Download).
 Кроме того, нужно также установить и обновить последнюю версию пакета Python `requests`.
 
 ```bash
@@ -143,3 +143,5 @@ pip3 install -U requests
 ## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения о кластерах больших данных см. в статье [Что такое [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]?](../../big-data-cluster/big-data-cluster-overview.md).
+
+Использование azdata со [службами данных с поддержкой Azure Arc](/azure/azure-arc/data/)

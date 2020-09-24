@@ -4,26 +4,27 @@ titleSuffix: SQL Server big data clusters
 description: Справочная статья по командам контекста azdata.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d3506d3ab1b2fad9d07496d1041773d26aae6d68
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 1d48ef786389c5ef32b1f3fd49c88b0a9d3aac18
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733951"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914741"
 ---
 # <a name="azdata-context"></a>Контекст azdata
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+Применяется к `azdata`
 
-В следующей статье приводятся справочные сведения по командам `sql` в средстве `azdata`. Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md).
+В следующей статье приводятся справочные сведения по командам **sql** в средстве **azdata**. Дополнительные сведения о других командах **azdata** см. в [справочнике по azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Команды
-| Команда | Описание |
+
+|Команда|Описание|
 | --- | --- |
 [azdata context list](#azdata-context-list) | Список доступных контекстов в профиле пользователя.
 [azdata context delete](#azdata-context-delete) | Удаление контекста с заданным пространством имен из профиля пользователя.
@@ -60,7 +61,7 @@ azdata context list --active
 ## <a name="azdata-context-delete"></a>azdata context delete
 Если удаленный контекст был активен, пользователю нужно будет задать новый активный контекст. Для просмотра контекстов, доступных для установки или удаления, используется команда `azdata context list`
 ```bash
-azdata context delete --namespace -n 
+azdata context delete --namespace -ns 
                       
 ```
 ### <a name="examples"></a>Примеры
@@ -69,7 +70,7 @@ azdata context delete --namespace -n
 azdata context delete -n contextNamespace
 ```
 ### <a name="required-parameters"></a>Необходимые параметры
-#### `--namespace -n`
+#### `--namespace -ns`
 Пространство имен контекста, который нужно удалить.
 ### <a name="global-arguments"></a>Глобальные аргументы
 #### `--debug`
@@ -85,7 +86,7 @@ azdata context delete -n contextNamespace
 ## <a name="azdata-context-set"></a>azdata context set
 Для просмотра контекстов, доступных для установки, используется команда `azdata context list`. Если никакие контексты не отображаются, необходимо создать контекст в профиле пользователя, выполнив вход с помощью команды `azdata login`. То, куда выполнен вход, станет активным контекстом. При входе в несколько сущностей можно переключаться между активными контекстами с помощью этой команды. Чтобы увидеть текущий активный контекст, используется команда `azdata context list --active`
 ```bash
-azdata context set --namespace -n 
+azdata context set --namespace -ns 
                    
 ```
 ### <a name="examples"></a>Примеры
@@ -94,7 +95,7 @@ azdata context set --namespace -n
 azdata context set -n contextNamespace
 ```
 ### <a name="required-parameters"></a>Необходимые параметры
-#### `--namespace -n`
+#### `--namespace -ns`
 Пространство имен контекста, который нужно установить.
 ### <a name="global-arguments"></a>Глобальные аргументы
 #### `--debug`
@@ -110,4 +111,7 @@ azdata context set -n contextNamespace
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md). Дополнительные сведения об установке средства `azdata` см. в статье [Установка azdata для управления кластерами больших данных SQL Server 2019](../install/deploy-install-azdata.md).
+Дополнительные сведения о других командах **azdata** см. в [справочнике по azdata](reference-azdata.md). 
+
+Дополнительные сведения об установке средства **azdata** см. в разделе [Установка azdata](..\install\deploy-install-azdata.md).
+

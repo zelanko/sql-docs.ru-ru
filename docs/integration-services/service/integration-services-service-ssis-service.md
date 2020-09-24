@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 08fd5b99d4ffe74bb409db65093a3148dc5f786b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 465aef4e631602a645bbeff5b437cb2f09994d3c
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487726"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990415"
 ---
 # <a name="integration-services-service-ssis-service"></a>Службы Integration Services (службы SSIS)
 
@@ -368,16 +368,14 @@ to the user NT SERVICE\SQLSERVERAGENT SID (S-1-5-80-344959196-2060754871-2302487
   
 6.  Перезапустите службу [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-### <a name="connecting-by-using-a-local-account"></a>Подключение с использованием локальной учетной записи  
- При работе с локальной учетной записью Windows на клиентском компьютере можно подключиться к службе [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на удаленном компьютере, только если локальная учетная запись имеет то же самое имя пользователя и пароль, а на удаленном компьютере имеются соответствующие права.  
+### <a name="connecting-by-using-a-local-account"></a>Подключение с использованием локальной учетной записи
+
+При работе с локальной учетной записью Windows на клиентском компьютере можно подключиться к службе [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на удаленном компьютере, только если локальная учетная запись имеет то же самое имя пользователя и пароль, а на удаленном компьютере имеются соответствующие права.  
   
-### <a name="by-default-the-ssis-service-does-not-support-delegation"></a>По умолчанию службы SSIS не поддерживают делегирование  
-Службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] по умолчанию не поддерживают делегирование учетных данных, которое иногда называют двойным прыжком. В этом сценарии вы работаете на клиентском компьютере, службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] выполняются на втором компьютере, а [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запущен на третьем. Сначала среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] успешно отправляет учетные записи с клиентского компьютера на второй компьютер, где запущены службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Однако затем службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] не могут передать учетные данные со второго компьютера на третий, где работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
+### <a name="ssis-windows-service-doesnt-support-delegation"></a>Служба SSIS Windows не поддерживает делегирование
 
-Можно включить делегирование учетных данных, предоставив право **Доверять этому пользователю делегирование служб (только Kerberos)** учетной записи службы SQL Server, которая запускает службы Integration Services (ISServerExec.exe) в качестве дочернего процесса. Прежде чем предоставить это право, определите, соответствует ли это требованиям безопасности организации.
+Служба SSIS не поддерживают делегирование учетных данных, иногда называемое двойным прыжком. В этом сценарии вы работаете на клиентском компьютере, служба SSIS установлена на втором компьютере, а SQL Server — на третьем. Хотя среда SSMS успешно отправляет учетные записи с клиентского компьютера на второй компьютер (где работает SSIS), служба SSIS не может передать эти учетные данные со второго компьютера на третий, на котором работает SQL Server.
 
-Дополнительные сведения см. в разделе [Getting Cross Domain Kerberos and Delegation working with SSIS Package](https://blogs.msdn.microsoft.com/psssql/2014/06/26/getting-cross-domain-kerberos-and-delegation-working-with-ssis-package/)(Обеспечение междоменной работы Kerberos и делегирования с помощью пакета SSIS).
- 
 ## <a name="configure-the-firewall"></a>Настройка брандмауэра
   
  Система брандмауэра Windows предотвращает несанкционированный доступ к ресурсам компьютера через сетевое подключение. Чтобы получить доступ к службам [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] через этот брандмауэр, необходимо настроить брандмауэр для разрешения доступа.  

@@ -1,7 +1,7 @@
 ---
 title: Установка azdata с помощью zypper
-titleSuffix: SQL Server big data clusters
-description: Сведения о том, как установить средство azdata для установки Кластеров больших данных и управления ими с помощью zypper.
+titleSuffix: ''
+description: Узнайте, как установить средство azdata с помощью zypper.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2445fecc554ff9f7816bbf75483ab49bbee542c1
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 8fdde8b6229bd2fc98005025e17efe97104d2fc1
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89734094"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914891"
 ---
 # <a name="install-azdata-with-zypper"></a>Установка `azdata` с помощью zypper
 
@@ -44,7 +44,7 @@ ms.locfileid: "89734094"
 1. Создание сведений о локальном репозитории
 
    ```bash
-   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2019.repo
+   sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/prod.repo
    ```
 
 1. Установка
@@ -80,3 +80,5 @@ ms.locfileid: "89734094"
 ## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения о кластерах больших данных см. в статье [Что такое [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]?](../../big-data-cluster/big-data-cluster-overview.md).
+
+Использование azdata со [службами данных с поддержкой Azure Arc](/azure/azure-arc/data/)

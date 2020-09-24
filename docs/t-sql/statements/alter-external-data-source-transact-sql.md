@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5d90bacf17953eee4874343fadf2e9daf97a8664
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: a47daa3926f8b6718a459aab203b0e902bf7dafd
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688415"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024483"
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
 
-  Изменяет внешний источник данных, используемый для создания внешней таблицы. Внешний источник данных может быть хранилищем Hadoop или хранилищем BLOB-объектов Azure (WASBS) для SQL Server и хранилищем BLOB-объектов Azure (WASBS) или хранилищем Azure Data Lake (ABFSS/ADL) для Хранилища данных SQL Azure. 
+  Изменяет внешний источник данных, используемый для создания внешней таблицы. Внешний источник данных может быть хранилищем Hadoop, или хранилищем BLOB-объектов Azure (WASBS) для SQL Server и хранилищем BLOB-объектов Azure (WASBS), или хранилищем Azure Data Lake (ABFSS/ADL) для [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]. 
 
 ## <a name="syntax"></a>Синтаксис  
 
@@ -52,7 +52,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
         [, CREDENTIAL = credential_name ] 
 
 -- Modify an external data source pointing to Azure Blob storage or Azure Data Lake storage
--- Applies to: Azure SQL Data Warehouse
+-- Applies to: Azure Synapse Analytics
 ALTER EXTERNAL DATA SOURCE data_source_name
     SET
         [LOCATION = '<location prefix>://<location path>']
@@ -64,7 +64,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 
  LOCATION = '<prefix>://<path>[:<port>]'. Предоставляет протокол, путь и порт для подключения к внешнему источнику данных. Допустимые параметры расположения см. в разделе [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](create-external-data-source-transact-sql.md#location--prefixpathport).
 
- RESOURCE_MANAGER_LOCATION = '\<IP address;Port>' (неприменимо к Хранилищу данных SQL Azure) — указывает расположение диспетчера ресурсов Hadoop. Если аргумент указан, оптимизатор запросов может выбрать предварительную обработку данных для запросов PolyBase с помощью вычислительных мощностей Hadoop. Это решение, принимаемое на основе стоимости. Оно называется передачей предиката и может значительно сократить объем данных, передаваемых между Hadoop и SQL, повышая производительность запросов.
+ RESOURCE_MANAGER_LOCATION = '\<IP address;Port>' (не применяется к [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]) — указывает расположение диспетчера ресурсов Hadoop. Если аргумент указан, оптимизатор запросов может выбрать предварительную обработку данных для запросов PolyBase с помощью вычислительных мощностей Hadoop. Это решение, принимаемое на основе стоимости. Оно называется передачей предиката и может значительно сократить объем данных, передаваемых между Hadoop и SQL, повышая производительность запросов.
 
  CREDENTIAL = Credential_Name Указывает именованные учетные данные. См. раздел [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
@@ -102,7 +102,7 @@ ALTER EXTERNAL DATA SOURCE hadoop_eds SET
     ;
 ```
 
- В следующем примере учетные данные изменяются на новое значение LOCATION. Этот пример представляет собой внешний источник данных, созданный для Хранилища данных SQL Azure. 
+ В следующем примере учетные данные изменяются на новое значение LOCATION. Этот пример представляет собой внешний источник данных, созданный для [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]. 
 
 ```sql  
 ALTER EXTERNAL DATA SOURCE AzureStorage_west SET

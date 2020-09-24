@@ -4,26 +4,27 @@ titleSuffix: SQL Server big data clusters
 description: Справочная статья по командам azdata bdc status.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: daf3115a7ccdd73f86dbaa9766049cd5be1e1eb9
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 2fec875f3093b3419574871cf8bca59b2be1ec2f
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733943"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914751"
 ---
 # <a name="azdata-bdc-status"></a>azdata bdc status
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+Применяется к `azdata`
 
-В следующей статье приводятся справочные сведения по командам `sql` в средстве `azdata`. Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md).
+В следующей статье приводятся справочные сведения по командам **sql** в средстве **azdata**. Дополнительные сведения о других командах **azdata** см. в [справочнике по azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Команды
-| Команда | Описание |
+
+|Команда|Описание|
 | --- | --- |
 [azdata bdc status show](#azdata-bdc-status-show) | Показывает состояние BDC.
 ## <a name="azdata-bdc-status-show"></a>azdata bdc status show
@@ -64,4 +65,7 @@ azdata bdc status show --resource control
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md). Дополнительные сведения об установке средства `azdata` см. в статье [Установка azdata для управления кластерами больших данных SQL Server 2019](../install/deploy-install-azdata.md).
+Дополнительные сведения о других командах **azdata** см. в [справочнике по azdata](reference-azdata.md). 
+
+Дополнительные сведения об установке средства **azdata** см. в разделе [Установка azdata](..\install\deploy-install-azdata.md).
+

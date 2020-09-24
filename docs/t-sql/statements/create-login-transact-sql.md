@@ -28,12 +28,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75866a02dee75aaaccb77e2f870b38222471d8c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b21487a6cfbe896dd81194710784a6cc148d389
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444814"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024266"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -316,7 +316,7 @@ CREATE LOGIN login_name
 
 ## <a name="arguments"></a>Аргументы
 
-*login_name* — указывает имя пользователя для создаваемого имени входа. Отдельные базы данных и пулы баз данных в базе данных SQL Azure и базах данных в Azure Synapse Analytics (ранее — Хранилище данных SQL Azure) поддерживают только имена для входа SQL. Чтобы создать учетные записи для пользователей Azure Active Directory или учетные записей пользователей, не связанные с именем входа, используйте инструкцию [CREATE USER](create-user-transact-sql.md). Дополнительные сведения см. в статье [Управление именами входа в базе данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
+*login_name* — указывает имя пользователя для создаваемого имени входа. Отдельные базы данных и базы данных в пуле на Базе данных SQL Azure, а также базы данных на [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] поддерживают имена для входа SQL. Чтобы создать учетные записи для пользователей Azure Active Directory или учетные записей пользователей, не связанные с именем входа, используйте инструкцию [CREATE USER](create-user-transact-sql.md). Дополнительные сведения см. в статье [Управление именами входа в базе данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
 
 PASSWORD **='** password* *'*  — указывает пароль для создаваемого имени входа SQL. Выбирайте надежные пароли. Дополнительные сведения см. в статьях [Надежные пароли](../../relational-databases/security/strong-passwords.md) и [Политика паролей](../../relational-databases/security/password-policy.md). Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] сохраненные сведения о пароле вычисляются с помощью SHA-512 соленого пароля.
 

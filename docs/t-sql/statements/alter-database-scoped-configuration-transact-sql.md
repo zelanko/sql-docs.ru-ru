@@ -3,7 +3,7 @@ title: ALTER DATABASE SCOPED CONFIGURATION
 description: Включает несколько параметров конфигурации базы данных на уровне отдельной базы данных.
 titleSuffix: SQL Server (Transact-SQL)
 ms.custom: seo-lt-2019
-ms.date: 10/31/2019
+ms.date: 09/15/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
-ms.openlocfilehash: f395ef15f82b4975a3df677abea227e181835e83
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9b3710606df63baaf85134be47fb0fe1643c72f3
+ms.sourcegitcommit: 6d9b6eb2437e780c7881cc516e03c1182fb6892e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537097"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90565089"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -153,7 +153,7 @@ MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 Сведения о настройке этого параметра на уровне экземпляра см. в разделе [Настройка параметра конфигурации сервера max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
 > [!NOTE]
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] использует конфигурацию, где параметру **max degree of parallelism** на уровне сервера всегда задается значение 0. MAXDOP можно настроить для каждой базы данных, как описано в текущей статье. Рекомендации по оптимальной настройке MAXDOP см. в разделе [Дополнительные ресурсы](#additional-resources).
+> В решении [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] конфигурация MAXDOP в области базы данных задается по умолчанию со значением "8" для новых одиночных баз и баз эластичного пула. MAXDOP можно настроить для каждой базы данных, как описано в текущей статье. Рекомендации по оптимальной настройке MAXDOP см. в разделе [Дополнительные ресурсы](#additional-resources).
 
 > [!TIP]
 > Для выполнения этого на уровне запросов используйте [указание запроса](../../t-sql/queries/hints-transact-sql-query.md) **MAXDOP**.    

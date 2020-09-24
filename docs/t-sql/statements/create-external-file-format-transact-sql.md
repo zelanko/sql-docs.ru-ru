@@ -21,12 +21,12 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b8a9c656e63ca975550d0ccffbfb93235f060621
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c1beca4564978fc069a896eadd42ed257dc28414
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547524"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024370"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]
@@ -321,7 +321,7 @@ WITH (
 #### <a name="encoding"></a>ENCODING
    `Encoding = {'UTF8' | 'UTF16'}`
    
- В Хранилище данных SQL Azure и PDW (APS CU7.4) PolyBase может читать текстовые файлы с разделителями в кодировке UTF8 и UTF16-LE. В SQL Server PolyBase не поддерживает чтение файлов в кодировке UTF16.
+ В [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] (APS CU7.4) PolyBase может выполнять чтение текстовых файлов с разделителями в кодировке UTF8 и UTF16-LE. В SQL Server PolyBase не поддерживает чтение файлов в кодировке UTF16.
 
 
 ## <a name="permissions"></a>Разрешения  
@@ -352,7 +352,7 @@ WITH (
 ## <a name="performance"></a>Производительность
  При использовании сжатых файлов всегда приходится идти на компромисс: перенести меньше данных между внешним источником данных и SQL Server, но увеличить использование ресурсов ЦП для сжатия и распаковывания данных.
   
- Сжатые текстовые файлы Gzip разделить невозможно. Чтобы повысить производительность сжатых текстовых файлов Gzip, рекомендуется создать несколько хранимых в одном каталоге файлов во внешнем источнике данных. Такая файловая структура позволяет PolyBase читать и распаковывать данные быстрее, используя несколько процессов чтения и распаковывания. Оптимальное количество сжатых файлов — максимальное число процессов чтения данных на вычислительном узле. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] максимальное число процессов чтения данных на узел составляет 8 для каждого узла. В хранилище данных SQL Azure 2-го поколения это число составляет 20. В [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] максимальное число процессов чтения данных на узел варьируется в зависимости от SLO. См. подробные сведения в разделе [Стратегии и шаблоны загрузки хранилища данных SQL Azure](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/).  
+ Сжатые текстовые файлы Gzip разделить невозможно. Чтобы повысить производительность сжатых текстовых файлов Gzip, рекомендуется создать несколько хранимых в одном каталоге файлов во внешнем источнике данных. Такая файловая структура позволяет PolyBase читать и распаковывать данные быстрее, используя несколько процессов чтения и распаковывания. Оптимальное количество сжатых файлов — максимальное число процессов чтения данных на вычислительном узле. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] максимальное число процессов чтения данных на узел составляет 8 для каждого узла. В [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] 2-го поколения это число составляет 20. В [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] максимальное число процессов чтения данных на узел варьируется в зависимости от SLO. Дополнительные сведения см. в разделе [Шаблоны и стратегии загрузки [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/).  
   
 ## <a name="examples"></a>Примеры  
   
@@ -433,5 +433,5 @@ WITH (
  [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)   
  [CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
- [CREATE TABLE AS SELECT (хранилище данных SQL Azure)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
+ [CREATE TABLE AS SELECT &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
  [sys.external_file_formats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)  

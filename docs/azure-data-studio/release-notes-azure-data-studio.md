@@ -8,17 +8,33 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 08/12/2020
-ms.openlocfilehash: 39deeb94ffa5fb3292f3402c836ec55eb826ebd3
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.date: 09/22/2020
+ms.openlocfilehash: 1eaeb177fbd4cdc16190cbbc40efc76a3b468ac5
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766193"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989987"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Заметки о выпуске для Azure Data Studio
 
-**[Скачайте и установите последний выпуск.](./download-azure-data-studio.md?view=sql-server-ver15)**
+**[Скачайте и установите последний выпуск.](./download-azure-data-studio.md)**
+
+## <a name="september-2020"></a>Сентябрь 2020 г.
+
+22 сентября 2020 г. &nbsp; / &nbsp; версия: 1.22.0
+
+&nbsp;
+
+| Изменение | Сведения |
+| ------ | ------- |
+| Новые функции записной книжки | <br/> &bull; &nbsp; Поддержка совершенно нового интерфейса редактирования текстовых ячеек с широкими возможностями форматирования и мгновенным преобразованием в Markdown; иначе говоря — панели инструментов WYSIWYG (режим точного отображения). <br/> &bull; &nbsp; Поддержка ядра Data Explorer. <br/> &bull; &nbsp; Поддержка закрепления записных книжек. <br/> &bull; &nbsp; Добавлена поддержка новой версии книг Jupyter Book. <br/> &bull; &nbsp; Улучшены сочетания клавиш Jupyter. <br/> &bull; &nbsp; Улучшена производительность загрузки. |
+| Расширение проектов Баз данных SQL | Расширение "Проекты базы данных SQL" теперь позволяет разрабатывать в Azure Data Studio базы данных на основе проектов. Предварительная версия позволяет создавать и публиковать проекты SQL из Azure Data Studio. |
+| Расширение Data Explorer (язык запросов Kusto, или KQL) | Позволяет непосредственно в Azure Data Studio использовать возможности для изучения и аналитики огромного объема данных, получаемых потоковой передачей в реальном времени и хранимых в Azure Data Explorer. Этот предварительный выпуск поддерживает подключение и просмотр кластеров Azure Data Explorer, написание запросов KQL и использование ядра Data Explorer для создания записных книжек. |
+| Расширение Azure Arc | Пользователи могут попробовать общедоступную предварительную версию Azure Arc с помощью Azure Data Studio. В том числе: <br/> &bull; &nbsp; развертывание контроллера данных; <br/> &bull; &nbsp; развертывание Postgres; <br/> &bull; &nbsp; развертывание Управляемого экземпляра для Azure Arc; <br/> &bull; &nbsp; подключение к контроллеру данных; <br/> &bull; &nbsp; доступ к панелям мониторинга службы данных; <br/> &bull; &nbsp; Jupyter Book для Azure Arc. |
+| Параметры развертывания | <br/> &bull; &nbsp; SQL Azure для пограничных вычислений <br/> (потребуется расширение "Развертывание SQL Azure для пограничных вычислений"). |
+| Общедоступная версия расширения "Импорт SQL Server" | Объявлено о выпуске общедоступной версии расширения "Импорт SQL Server". Его функции больше не находятся в предварительной версии. Это расширение упрощает импорт файлов CSV и TXT. Дополнительные сведения о расширении см. в [этой статье](sql-server-import-extension.md). |
+| Устраненные ошибки и проблемы | Полный список исправлений см. на странице [ошибок и проблем в GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22September+2020+Release%22+is%3Aclosed). |
 
 ## <a name="august-2020"></a>Август 2020 г.
 
@@ -29,7 +45,7 @@ ms.locfileid: "88766193"
 | Изменение | Сведения |
 | :----- | :------ |
 | Новые функции записной книжки | &bull; &nbsp; Перемещение расположений ячеек. <br/> &bull; &nbsp; Преобразование ячеек в текстовые ячейки или ячейки с кодом.
-| Средство выбора книг Jupyter | Пользователи теперь могут выбирать книги Jupyter в выпусках Github и с легкостью открывать их в Azure Data Studio. |
+| Средство выбора книг Jupyter | Пользователи теперь могут выбирать книги Jupyter Book в выпусках на GitHub и с легкостью открывать их в Azure Data Studio. |
 | В представление записных книжек добавлен поиск | Пользователи могут легко выполнять поиск по содержимому в записных книжках и в книгах Jupyter. |
 | Устраненные ошибки и проблемы | Полный список исправлений см. на странице [ошибок и проблем в GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22August+2020+Release%22+is%3Aclosed). |
 | &nbsp; | &nbsp; |
@@ -56,7 +72,7 @@ ms.locfileid: "88766193"
 
 &nbsp;
 
-| Change | Сведения |
+| Изменение | Сведения |
 | :----- | :------ |
 | Добавлен новый обзор возможностей | Страница приветствия и палитра команд теперь позволяют пользователям запустить обзор самых популярных возможностей, включая мини-представления "Подключения" и "Записные книжки", а также магазин расширений. |
 | Новые функции записной книжки | &bull; &nbsp; Поддержка заголовков на панели инструментов Markdown<br/> &bull; &nbsp; Параллельный предпросмотр Markdown в текстовых ячейках
@@ -76,7 +92,7 @@ ms.locfileid: "88766193"
 | :----- | :------ |
 | Добавление интеграции Azure Data Studio с порталом Azure | Теперь пользователи могут напрямую запускать портал Azure из подключения к базе данных SQL Azure, Azure Postgres и т. д. |
 | Новые функции записной книжки | &bull; &nbsp; Новая панель инструментов записной книжки <br/> &bull; &nbsp; Новая панель инструментов для изменения ячеек <br/> &bull; &nbsp; Обновления интерфейса для мастера зависимостей Python <br/> &bull; &nbsp; Увеличение расстояния между записными книжками |
-| Объявление о расширении API Оценки SQL | Это расширение добавляет в ADS оценку рекомендаций SQL Server. Оно предоставляет API Оценки SQL, который ранее был доступен для использования только в модуле SqlServer PowerShell и SMO, чтобы вы могли оценивать экземпляры SQL Server и получать для них рекомендации от группы разработчиков SQL Server. Дополнительные сведения об API Оценки SQL и о его возможностях см. [в этой статье](../tools/sql-assessment-api/sql-assessment-api-overview.md?view=sql-server-ver15). |
+| Объявление о расширении API Оценки SQL | Это расширение добавляет в ADS оценку рекомендаций SQL Server. Оно предоставляет API Оценки SQL, который ранее был доступен для использования только в модуле SqlServer PowerShell и SMO, чтобы вы могли оценивать экземпляры SQL Server и получать для них рекомендации от группы разработчиков SQL Server. Дополнительные сведения об API Оценки SQL и о его возможностях см. [в этой статье](../tools/sql-assessment-api/sql-assessment-api-overview.md). |
 | [Усовершенствования расширения машинного обучения](https://go.microsoft.com/fwlink/?linkid=2129918) | Теперь поддерживается Управляемый экземпляр SQL Azure. |
 | Усовершенствования расширения виртуализации данных | Теперь поддерживаются MongoDB и Teradata. |
 | Исправления ошибок расширения Postgres | Исправлена служба Azure MFA. |
@@ -417,10 +433,10 @@ ms.locfileid: "88766193"
 | :----- | :------ |
 | Добавлено [расширение PostgreSQL для Azure Data Studio](postgres-extension.md) | Поддерживаемые функции <br/>&bull; &nbsp; Диалоговое окно подключения <br/>&bull; &nbsp; Обозреватель объектов <br/>&bull; &nbsp; Редактор запросов <br/>&bull; &nbsp; Составление диаграмм <br/>&bull; &nbsp; Панели мониторинга <br/>&bull; &nbsp; Фрагменты кода <br/>&bull; &nbsp; Изменение данных <br/>&bull; &nbsp; Записные книжки |
 | Добавлены записные книжки SQL | Добавлена поддержка ядра SQL во встроенном средстве просмотра записных книжек. <br/>&bull; &nbsp; Поддержка T-SQL <br/>&bull; &nbsp; Поддержка PGSQL |
-| Добавлено расширение PowerShell  | Предоставляет возможности [расширения PowerShell](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell) из VS Code.  |
+| Добавлено расширение PowerShell | Предоставляет возможности [расширения PowerShell](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell) из VS Code.  |
 | Добавлено расширение DACPAC-файлов SQL Server  | Мастер приложений уровня данных перемещен из расширения импорта SQL Server в новое расширение.  |
 | Добавлено расширение сообщества QueryPlan.show | Добавляет поддержку интеграции для визуализации планов запроса.  |
-| Обновлено расширение предварительной версии SQL Server 2019 | &bull; &nbsp; Поддержка Jupyter Notebook, в частности ядер Python3 и Spark, была перемещена в основное средство Azure Data Studio. <br/>&bull; &nbsp; Исправления ошибок в мастере внешних данных  |
+| Обновлено расширение предварительной версии SQL Server 2019 | &bull; &nbsp; Поддержка Jupyter Notebook, в частности ядер Python3 и Spark, была перемещена в основное средство Azure Data Studio. <br/>&bull; &nbsp; Исправления ошибок в мастере внешних данных |
 | Устранены ошибки и проблемы | См. страницу [ошибок и проблем в GitHub](https://github.com/Microsoft/azuredatastudio/milestone/25?closed=1). |
 | &nbsp; | &nbsp; |
 
@@ -446,11 +462,11 @@ ms.locfileid: "88766193"
 
 | Change | Сведения |
 | :----- | :------ |
-| Добавлен пакет расширения **Пакет администрирования для SQL Server**. | Это упрощает установку расширений SQL Server, связанных с администрированием. В том числе:<br/>&bull; &nbsp; [Агент SQL Server](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](./sql-server-profiler-extension.md)<br/>&bull; &nbsp; [Импорт SQL Server](sql-server-import-extension.md?view=sql-server-2017) |
+| Добавлен пакет расширения **Пакет администрирования для SQL Server**. | Это упрощает установку расширений SQL Server, связанных с администрированием. В том числе:<br/>&bull; &nbsp; [Агент SQL Server](sql-server-agent-extension.md)<br/>&bull; &nbsp; [SQL Server Profiler](./sql-server-profiler-extension.md)<br/>&bull; &nbsp; [Импорт SQL Server](sql-server-import-extension.md) |
 | Добавлена поддержка фильтрации расширенных событий в расширении Profiler. | &nbsp; |
 | Добавлена функция "Сохранить как XML", позволяющая сохранять результаты T-SQL в формате XML. | &nbsp; |
 | Добавлены улучшения мастера приложений уровня данных. | &bull; &nbsp; Добавлена кнопка "Создать скрипт"<br/>&bull; &nbsp; Добавлено представление, выводящее предупреждения о возможной потере данных при развертывании |
-| Обновление до расширения предварительной версии SQL Server 2019. | См. [Расширение Data Virtualization](data-virtualization-extension.md?view=sql-server-ver15). |
+| Обновление до расширения предварительной версии SQL Server 2019. | См. [Расширение Data Virtualization](data-virtualization-extension.md). |
 | Для длительных запросов потоковая передача результатов включена по умолчанию. | &nbsp; |
 | Устранены ошибки и проблемы | См. страницу [ошибок и проблем в GitHub](https://github.com/Microsoft/azuredatastudio/milestone/23?closed=1). |
 | &nbsp; | &nbsp; |
@@ -476,9 +492,9 @@ ms.locfileid: "88766193"
 | :----- | :------ |
 | Добавлен новый пользовательский установщик для Windows. | В отличие от имеющегося системного установщика он не требует права администратора. Это также упрощает процесс обновления для пользователей, не являющихся администраторами. |
 | Добавлена поддержка проверки подлинности Azure Active Directory. | &nbsp; |
-| Объявление о Idera SQL DM Performance Insights (предварительная версия). | &nbsp; |
+| Объявлено о выпуске Idera SQL DM Performance Insights (предварительная версия). | &nbsp; |
 | Поддержка мастера приложений уровня данных в расширении импорта SQL Server. | &nbsp; |
-| Обновление до расширения предварительной версии SQL Server 2019. | См. [Расширение Data Virtualization](data-virtualization-extension.md?view=sql-server-ver15). |
+| Обновление до расширения предварительной версии SQL Server 2019. | См. [Расширение Data Virtualization](data-virtualization-extension.md). |
 | Улучшения SQL Server Profiler. | &nbsp; |
 | Потоковая передача результатов для больших запросов (предварительная версия). | &nbsp; |
 | Расширения сообщества: преобразование sp_executesql в SQL и создание базы данных. | &nbsp; |
@@ -493,7 +509,7 @@ ms.locfileid: "88766193"
 
 | Change | Сведения |
 | :----- | :------ |
-| Обновление до расширения предварительной версии SQL Server 2019. | См. [Расширение Data Virtualization](data-virtualization-extension.md?view=sql-server-ver15). |
+| Обновление до расширения предварительной версии SQL Server 2019. | См. [Расширение Data Virtualization](data-virtualization-extension.md). |
 | Появление расширения вставки плана. | &nbsp; |
 | Появление расширения запросов High Color, включая тему редактора SSMS. | &nbsp; |
 | Исправления для расширений агента SQL Server, Profiler и импорта. | &nbsp; |
@@ -523,7 +539,7 @@ ms.locfileid: "88766193"
 | Появление обозревателя ресурсов Azure для просмотра базы данных SQL Azure. | &nbsp; |
 | Улучшение надежности подключений обозревателя объектов и редактора запросов. | &nbsp; |
 | Усовершенствования расширений агента SQL Server. | &nbsp; |
-| Обновление до расширения предварительной версии SQL Server 2019. | См. [Расширение Data Virtualization](data-virtualization-extension.md?view=sql-server-ver15). |
+| Обновление до расширения предварительной версии SQL Server 2019. | См. [Расширение Data Virtualization](data-virtualization-extension.md). |
 | &nbsp; | &nbsp; |
 
 ### <a name="bug-fixes-october-2018"></a>Исправления ошибок, октябрь 2018 г.

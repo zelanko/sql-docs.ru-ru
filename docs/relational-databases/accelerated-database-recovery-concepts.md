@@ -13,18 +13,24 @@ author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: da1baba9e50007358bd7a0f4d550282ee130e4a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b6c05db7b6022aec3b7f6123f0a070f238560db8
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491477"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989894"
 ---
 # <a name="accelerated-database-recovery"></a>Ускоренное восстановление базы данных
 
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-Ускорение восстановления баз данных (ADR) повышает доступность баз данных, особенно при наличии продолжительных транзакций, за счет перепроектирования процесса восстановления ядра СУБД SQL. ADR — это новая функция в SQL Server 2019. Она также доступна для отдельных баз данных и баз данных в пуле в службе "База данных SQL Azure", а также для баз данных в Хранилище данных SQL Azure (в настоящее время в стадии общедоступной предварительной версии). Основные преимущества ADR
+Ускорение восстановления баз данных (ADR) повышает доступность баз данных, особенно при наличии продолжительных транзакций, за счет перепроектирования процесса восстановления ядра СУБД SQL. ADR — это новая функция в SQL Server 2019. 
+
+ADR также может использоваться для баз данных в Базе данных SQL Azure, Управляемом экземпляре SQL Azure и Azure Synapse SQL. В Базе данных SQL и Управляемом экземпляре SQL функция ADR включена по умолчанию и не может быть отключена. 
+
+## <a name="overview"></a>Обзор
+
+Основные преимущества ADR
 
 - **Быстрое и согласованное восстановление баз данных**
 

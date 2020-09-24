@@ -2,7 +2,7 @@
 description: FIRST_VALUE (Transact-SQL)
 title: FIRST_VALUE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 11/10/2016
+ms.date: 09/22/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,25 +20,25 @@ ms.assetid: 1990c3c7-dad2-48db-b2cd-3e8bd2c49d17
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 87c0804ba925600aabe2ac0487befd8cf5bf9363
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: db390dda473d997343de46f9b37a4ab4865ca347
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445786"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90915029"
 ---
 # <a name="first_value-transact-sql"></a>FIRST_VALUE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Возвращает первое значение из упорядоченного набора значений в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  Возвращает первое значение в упорядоченном наборе значений.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```syntaxsql
-FIRST_VALUE ( [scalar_expression ] )   
-    OVER ( [ partition_by_clause ] order_by_clause [ rows_range_clause ] )  
+FIRST_VALUE ( [scalar_expression ] )  [ IGNORE NULLS | RESPECT NULLS ]
+    OVER ( [ partition_by_clause ] order_by_clause [ rows_range_clause ] )
   
 ```  
   
@@ -47,6 +47,14 @@ FIRST_VALUE ( [scalar_expression ] )
 ## <a name="arguments"></a>Аргументы
  *scalar_expression*  
  Возвращаемое значение. *scalar_expression* может быть столбцом, вложенным запросом или другим произвольным выражением, результатом вычисления которого является единичное значение. Другие аналитические функции использовать нельзя.  
+
+ [ IGNORE NULLS | RESPECT NULLS ]     
+ **Область применения**: SQL Azure для пограничных вычислений
+
+ IGNORE NULLS — пропуск значений NULL набора данных при вычислении последнего значения в секции.     
+ RESPECT NULLS — учет значений NULL набора данных при вычислении последнего значения в секции.     
+ 
+  Дополнительные сведения: [Ввод отсутствующих значений](/azure/azure-sql-edge/imputing-missing-values/).
   
  OVER **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
  *partition_by_clause* делит результирующий набор, полученный с помощью предложения FROM, на секции, к которым применяется функция. Если этот параметр не указан, функция обрабатывает все строки результирующего набора запроса как отдельные группы. *order_by_clause* определяет логический порядок, в котором выполняется операция. Аргумент *order_by_clause* является обязательным. *rows_range_clause* еще больше ограничивает строки в пределах секции, задавая начальную и конечную точки. Дополнительные сведения см. в статье [Предложение OVER (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md).  
@@ -126,5 +134,5 @@ Accounts Receivable Specialist      Walton                    62            Poe
   
 ## <a name="see-also"></a>См. также:  
  [Предложение OVER (Transact-SQL)](../../t-sql/queries/select-over-clause-transact-sql.md)  
-  
-  
+ [Last_Value &#40;Transact-SQL&#41;](last-value-transact-sql.md)  
+

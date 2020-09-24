@@ -30,12 +30,12 @@ ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0f7889af18a605ae5c6b02c8eaaac573fec1abc
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: df52bae9824dabc0a3c40ac9f301f2429c54e930
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688840"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990232"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 
@@ -145,7 +145,7 @@ CREATE USER user_name
 > Изменились функции, доступные администратору Azure AD для Управляемого экземпляра SQL Azure после создания. Дополнительные сведения см. в разделе [Новые функции администратора Azure AD для MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse  
+-- Syntax for Azure Synapse Analytics  
   
 CREATE USER user_name   
     [ { { FOR | FROM } { LOGIN login_name }   
@@ -344,7 +344,7 @@ GO
   
  При использовании пользователей автономной базы данных [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] настройте доступ с помощью правила брандмауэра уровня базы данных вместо правила брандмауэра уровня сервера. Дополнительные сведения см. в разделе [sp_set_database_firewall_rule (база данных SQL Azure)](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md).
  
-Для пользователей автономной базы данных [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] и [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] SSMS может поддерживать многофакторную проверку подлинности. Дополнительные сведения см. в разделе [Поддержка SSMS для Azure AD MFA с использованием Базы данных SQL и хранилища данных SQL](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
+Для пользователей автономной базы данных [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] и [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] SSMS может поддерживать многофакторную проверку подлинности. Дополнительные сведения: [Поддержка в SSMS многофакторной проверки подлинности Azure AD для базы данных SQL и [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] ](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
   
 ### <a name="permissions"></a>Разрешения  
  Необходимо разрешение ALTER ANY USER для базы данных.  

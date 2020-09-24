@@ -27,12 +27,12 @@ ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2e3c5df24d4d4e5897ad8f48384ac1bc5d49f9e
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: e1f3c3e7cf586cfe70fc1e8d4198a6708c36d68b
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688274"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024396"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
@@ -81,7 +81,7 @@ ALTER AUTHORIZATION
 
     
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse  
+-- Syntax for Azure Synapse Analytics  
   
 ALTER AUTHORIZATION ON    
     [ <class_type> :: ] <entity_name>     
@@ -129,7 +129,7 @@ ALTER AUTHORIZATION ON
     
 |Class|Продукт|    
 |-|-|    
-|OBJECT|**Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], хранилище данных SQL Azure, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|    
+|OBJECT|**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздние версии, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|    
 |ASSEMBLY|**Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
 |ASYMMETRIC KEY|**Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
 |AVAILABILITY GROUP |**Область применения**: SQL Server 2012 и выше.|
@@ -143,7 +143,7 @@ ALTER AUTHORIZATION ON
 |REMOTE SERVICE BINDING|**Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше.|    
 |ROLE|**Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
 |ROUTE|**Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше.|    
-|SCHEMA|**Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], хранилище данных SQL Azure, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|    
+|SCHEMA|**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздние версии, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|    
 |SEARCH PROPERTY LIST|**Применимо к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
 |SERVER ROLE|**Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше.|    
 |SERVICE|**Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше.|    
@@ -216,7 +216,7 @@ ALTER AUTHORIZATION ON
 -   управляемый пользователь (не группа) или приложение в Azure AD.    
 
 > [!NOTE]  
-> Если новый владелец является пользователем Azure Active Directory, он не может существовать как пользователь в базе данных, где новый владелец станет новым DBO. Такого пользователя Azure AD необходимо удалить из базы данных перед выполнением инструкции ALTER AUTHORIZATION, указав в качестве владельца базы данных нового пользователя. Дополнительные сведения о настройке пользователей Azure Active Directory с базой данных SQL см. в статье [Подключение к базе данных SQL или хранилищу данных SQL с использованием аутентификации Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).   
+> Если новый владелец является пользователем Azure Active Directory, он не может существовать как пользователь в базе данных, где новый владелец станет новым DBO. Такого пользователя Azure AD необходимо удалить из базы данных перед выполнением инструкции ALTER AUTHORIZATION, указав в качестве владельца базы данных нового пользователя. Дополнительные сведения о настройке пользователей Azure Active Directory с базой данных SQL см. в статье [Подключение к базе данных SQL или [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] с использованием проверки подлинности Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).   
   
 **Требования к пользователю, выполняющему инструкцию ALTER AUTHORIZATION**  
 Необходимо подключиться к целевой базе данных, чтобы изменить ее владельца.  

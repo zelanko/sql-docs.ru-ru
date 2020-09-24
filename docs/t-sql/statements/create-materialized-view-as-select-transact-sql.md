@@ -38,18 +38,18 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 8d9dce220699fcdc2448ac19727d34ddd1bdad67
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a63931e71983b0ae5bba99fb13081cc75c93b2cd
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444851"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024535"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-В этой статье приведены сведения об инструкции CREATE MATERIALIZED VIEW AS SELECT T-SQL в службе "Хранилище данных SQL Azure", используемой при разработке решений. Здесь также приведены примеры кодов.
+В этой статье приведены сведения об инструкции CREATE MATERIALIZED VIEW AS SELECT T-SQL в [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], используемой при разработке решений. Здесь также приведены примеры кодов.
 
 Материализованное представление хранит данные, возвращенные запросом определения представления, и автоматически обновляется после изменений данных в базовых таблицах.   Это повышает производительность сложных запросов (обычно запросы с объединениями и агрегатами), а также упрощает обслуживание.   Благодаря возможности автоматического сопоставления плана выполнения материализованное представление не нужно указывать в запросе, чтобы оптимизатор учитывал его при подстановке.  Эта возможность позволяет специалистам по обработке данных реализовать материализованные представления в виде механизма повышения времени отклика запроса без необходимости изменять запросы.  
   
@@ -131,7 +131,7 @@ CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
 |Пользователь указал функцию STDEV(a) в списке SELECT определения материализованного представления, где "a" — это выражение.|SUM(a), COUNT_BIG(a), SUM(square(a))|Автоматически добавляется во время создания материализованного представления.  Вмешательство пользователя не требуется. |
 | | | |
 
-После создания материализованные представления отображаются в SQL Server Management Studio в папке представлений экземпляра службы "Хранилище данных SQL Azure".
+После создания материализованные представления отображаются в SQL Server Management Studio в папке представлений экземпляра [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].
 
 Пользователи могут определить место, используемое материализованным представлением, с помощью инструкций [SP_SPACEUSED](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql?view=azure-sqldw-latest) и [DBCC PDW_SHOWSPACEUSED](/sql/t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql?view=azure-sqldw-latest).  
 
@@ -156,6 +156,6 @@ CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
 [sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest)   
 [sys.pdw_materialized_view_mappings &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql?view=azure-sqldw-latest)   
 [DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-pdw-showmaterializedviewoverhead-transact-sql?view=azure-sqldw-latest)   
-[SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  (Представления каталога в службе "Хранилище данных SQL" и Parallel Data Warehouse)  
-[System views supported in Azure SQL Data Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)  (Системные представления, поддерживаемые в службе "Хранилище данных SQL Azure")  
-[T-SQL statements supported in Azure SQL Data Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements) (Инструкции Т-SQL, поддерживаемые в службе "Хранилище данных SQL Azure")
+Представления каталога [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+[Системные представления, поддерживаемые в Azure[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-system-views)   
+[Инструкции Т-SQL, поддерживаемые в Azure [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-statements)

@@ -1,7 +1,7 @@
 ---
 title: COPY INTO (Transact-SQL) (предварительная версия)
-titleSuffix: (SQL Data Warehouse) - SQL Server
-description: Использование инструкции COPY в хранилище данных SQL Azure для загрузки данных из внешних учетных записей хранения.
+titleSuffix: (Azure Synapse Analytics) - SQL Server
+description: Использование инструкции COPY в Azure Synapse Analytics для загрузки данных из внешних учетных записей хранения.
 ms.date: 08/05/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
@@ -18,18 +18,18 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: e2f225a66be811b3cafe13c0ccf89eb81700a1aa
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 68c4e1d526a1385dee1a5868bbf382b25e21d797
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901572"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024563"
 ---
-# <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (предварительная версия)
+# <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-В этой статье содержатся сведения об использовании инструкции COPY в хранилище данных SQL Azure для загрузки данных из внешних учетных записей хранения. Инструкция COPY обеспечивает наибольшую гибкость приема данных с высокой скоростью передачи в хранилище данных SQL. COPY предоставляет следующие возможности:
+В этой статье объясняется, как использовать инструкцию COPY в [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] для загрузки данных из внешних учетных записей хранения. Инструкция COPY обеспечивает наибольшую гибкость приема данных с высокой пропускной способностью в [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]. COPY предоставляет следующие возможности:
 
 - выполнять загрузку пользователям с более низкими привилегиями, без ограничения разрешений на управление хранилищем данных;
 - выполнять одну инструкцию T-SQL без необходимости создавать дополнительные объекты базы данных;
@@ -40,9 +40,6 @@ ms.locfileid: "88901572"
 - Указать пользовательский символ конца строки для CSV-файлов.
 - Использовать форматы даты SQL Server для CSV-файлов.
 - Указать подстановочные знаки и несколько файлов в пути места хранения.
-
-> [!NOTE]  
-> Сейчас инструкция COPY находится на этапе общедоступной предварительной версии.
 
 Подробные примеры и краткие руководства по использованию инструкции COPY см. в следующей документации.
 
@@ -274,7 +271,7 @@ IDENTITY_INSERT указывает, будет ли значение или зн
 - [ADMINISTER DATABASE BULK OPERATIONS](grant-database-permissions-transact-sql.md?view=azure-sqldw-latest#remarks)
 - [INSERT ](grant-database-permissions-transact-sql.md?view=azure-sqldw-latest#remarks)
 
-Требует разрешений INSERT и ADMINISTER BULK OPERATIONS. В хранилище данных SQL Azure требуются разрешения INSERT и ADMINISTER DATABASE BULK OPERATIONS.
+Требует разрешений INSERT и ADMINISTER BULK OPERATIONS. В [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] требуются разрешения INSERT и ADMINISTER DATABASE BULK OPERATIONS.
 
 ## <a name="examples"></a>Примеры  
 
@@ -398,7 +395,7 @@ WITH (
 ## <a name="faq"></a>ВОПРОСЫ И ОТВЕТЫ
 
 ### <a name="what-is-the-performance-of-the-copy-command-compared-to-polybase"></a>Какова производительность команды COPY по сравнению с PolyBase?
-Производительность команды COPY зависит от рабочей нагрузки. Для обеспечения максимальной производительности при загрузке CSV-файла в общедоступной предварительной версии рекомендуется разделять входные данные на несколько файлов. Поделитесь с нашей командой сведениями о показателях производительности, достигнутых при работе с предварительной версией. sqldwcopypreview@service.microsoft.com
+Производительность команды COPY зависит от рабочей нагрузки. Для обеспечения максимальной производительности при загрузке CSV-файла рекомендуется разделять входные данные на несколько файлов.
 
 ### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-csv-files"></a>Каковы рекомендации по разделению файлов при использовании команды COPY для загрузки CSV-файлов?
 Рекомендации по количеству файлов приведены в таблице ниже. После достижения рекомендуемого количества файлов производительность будет повышаться при увеличении размера файлов. Простая процедура разделения файлов описана в [этой документации](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/how-to-maximize-copy-load-throughput-with-file-splits/ba-p/1314474). 
@@ -446,4 +443,4 @@ WITH (
 
 ## <a name="see-also"></a>См. также раздел  
 
- [Общие сведения о загрузке в хранилище данных SQL](/azure/sql-data-warehouse/design-elt-data-loading)
+ [Обзор загрузки с помощью [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](/azure/sql-data-warehouse/design-elt-data-loading)
