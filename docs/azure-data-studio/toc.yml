@@ -45,13 +45,13 @@
         - name: Расширение "Машинное обучение"
           items:
             - name: Обзор расширения "Машинное обучение"
-              href: machine-learning-extension.md
+              href: extensions/machine-learning-extension.md
             - name: Управление пакетами в базе данных
-              href: machine-learning-extension-manage-packages.md
+              href: extensions/machine-learning-extension-manage-packages.md
             - name: Составление прогнозов
-              href: machine-learning-extension-predictions.md
+              href: extensions/machine-learning-extension-predictions.md
             - name: Импорт и просмотр моделей
-              href: machine-learning-extension-import-view-models.md
+              href: extensions/machine-learning-extension-import-view-models.md
         - name: Расширение для Управляемого экземпляра
           href: extensions/azure-sql-managed-instance-extension.md
         - name: Расширение PostgreSQL
@@ -113,15 +113,15 @@
     - name: Записные книжки
       items:
         - name: Общие сведения о записных книжках
-          href: notebooks-guidance.md
+          href: notebooks/notebooks-guidance.md
         - name: Использование ядра SQL
-          href: notebooks-tutorial-sql-kernel.md
+          href: notebooks/notebooks-sql-kernel.md
         - name: Использование ядра Python
-          href: notebooks-tutorial-python-kernel.md
+          href: notebooks/notebooks-python-kernel.md
         - name: "Использование ядра Data\_Explorer"
           href: notebooks/notebooks-kusto-kernel.md
-        - name: Расширение Kqlmagic
-          href: notebooks-kqlmagic.md
+        - name: Использование Kqlmagic
+          href: notebooks/notebooks-kqlmagic.md
     - name: Развертывание
       items:
         - name: Развертывание SQL Azure для пограничных вычислений
