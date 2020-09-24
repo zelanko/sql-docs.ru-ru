@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 837f0044e39548bcd442b53603a0c320b620fcbd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c956e6a17340e371b7135dcd22f73e2b3165a20d
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459770"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117084"
 ---
 # <a name="is_srvrolemember-transact-sql"></a>Функция IS_SRVROLEMEMBER (Transact-SQL)
 
@@ -38,7 +38,6 @@ ms.locfileid: "88459770"
 ## <a name="syntax"></a>Синтаксис  
   
 ```syntaxsql
-  
 IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )  
 ```  
   
@@ -100,7 +99,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 ## <a name="examples"></a>Примеры  
  В следующем примере показано, является ли имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] текущего пользователя членом предопределенной роли сервера `sysadmin`.  
   
-```  
+```sql  
 IF IS_SRVROLEMEMBER ('sysadmin') = 1  
    print 'Current user''s login is a member of the sysadmin role'  
 ELSE IF IS_SRVROLEMEMBER ('sysadmin') = 0  
@@ -111,7 +110,7 @@ ELSE IF IS_SRVROLEMEMBER ('sysadmin') IS NULL
   
  В приведенном ниже примере указывается, является ли имя входа домена Pat членом предопределенной роли сервера **diskadmin**.  
   
-```  
+```sql  
 SELECT IS_SRVROLEMEMBER('diskadmin', 'Contoso\Pat');  
 ```  
   

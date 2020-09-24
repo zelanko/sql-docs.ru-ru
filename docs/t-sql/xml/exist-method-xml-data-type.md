@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f79e3aed7926b8cd3d123139d317735bc6d94abe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1788db3b0baec4f9ab7279f13ff792e6d7764ea6
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88356390"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117215"
 ---
 # <a name="exist-method-xml-data-type"></a>Метод exist() (тип данных xml)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,8 +35,7 @@ ms.locfileid: "88356390"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
-  
+```syntaxsql
 exist (XQuery)   
 ```  
   
@@ -51,10 +50,10 @@ exist (XQuery)
 > [!NOTE]  
 >  Метод **exist()** возвращает 1 для выражения XQuery, которое возвращает непустой результат. Если указать функции **true()** или **false()** внутри метода **exist()** , то метод **exist()** возвратит 1, так как функции **true()** и **false()** возвращают логические значения True и False соответственно. То есть они возвращают не пустой результат. Поэтому функция **exist()** возвратит 1 (True), как показано в следующем примере:  
   
-```  
-declare @x xml;  
-set @x='';  
-select @x.exist('true()');   
+```sql
+DECLARE @x XML;  
+SET @x='';  
+SELECT @x.exist('true()');   
 ```  
   
 ## <a name="examples"></a>Примеры  
@@ -63,12 +62,12 @@ select @x.exist('true()');
 ### <a name="example-specifying-the-exist-method-against-an-xml-type-variable"></a>Пример Указание метода exist() по отношению к переменной типа xml  
  В следующем примере @x является переменной типа **xml** (нетипизированный xml), а @f является переменной целочисленного типа, которая хранит значение, возвращенное методом **exist()** . Метод **exist()** возвращает значение True (1), если значение даты, хранимое в экземпляре XML, равно `2002-01-01`.  
   
-```  
-declare @x xml;  
-declare @f bit;  
-set @x = '<root Somedate = "2002-01-01Z"/>';  
-set @f = @x.exist('/root[(@Somedate cast as xs:date?) eq xs:date("2002-01-01Z")]');  
-select @f;  
+```sql  
+DECLARE @x XML;  
+DECLARE @f BIT;  
+SET @x = '<root Somedate = "2002-01-01Z"/>';  
+SET @f = @x.exist('/root[(@Somedate cast as xs:date?) eq xs:date("2002-01-01Z")]');  
+SELECT @f;  
 ```  
   
  В сравнении дат в методе **exist()** обратите внимание на следующее:  
@@ -81,9 +80,9 @@ select @f;
   
  Следующий пример похож на предыдущий, отличаясь только наличием элемента <`Somedate`>.  
   
-```  
-DECLARE @x xml;  
-DECLARE @f bit;  
+```sql
+DECLARE @x XML;  
+DECLARE @f BIT;  
 SET @x = '<Somedate>2002-01-01Z</Somedate>';  
 SET @f = @x.exist('/Somedate[(text()[1] cast as xs:date ?) = xs:date("2002-01-01Z") ]')  
 SELECT @f;  
@@ -100,13 +99,13 @@ SELECT @f;
   
  Метод **exist()** , примененный к переменной @x, возвращает значение 1 (True), если документ с инструкциями по производству содержит элемент <`Location`> с атрибутом `LocationID=50`. В противном случае метод возвращает значение 0 (False).  
   
-```  
-DECLARE @x xml (Production.ManuInstructionsSchemaCollection);  
+```sql
+DECLARE @x XML (Production.ManuInstructionsSchemaCollection);  
 SELECT @x=Instructions  
 FROM Production.ProductModel  
 WHERE ProductModelID=67;  
 --SELECT @x  
-DECLARE @f int;  
+DECLARE @f INT;  
 SET @f = @x.exist(' declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
     /AWMI:root/AWMI:Location[@LocationID=50]  
 ');  
@@ -116,7 +115,7 @@ SELECT @f;
 ### <a name="example-specifying-the-exist-method-against-an-xml-type-column"></a>Пример Указание метода exist() по отношению к столбцу типа xml  
  В результате выполнения следующего запроса возвращаются идентификаторы моделей, описание каталогов для которых не включает спецификации, элемент <`Specifications`>:  
   
-```  
+```sql
 SELECT ProductModelID, CatalogDescription.query('  
 declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
     <Product   
@@ -142,7 +141,7 @@ WHERE CatalogDescription.exist('
   
  В этом запросе указаны методы **query()** и **exist()** типа xml, и оба эти метода объявляют одинаковые пространства имен в прологе запроса. В этом случае для объявления префикса и использования его в запросе можно использовать предложение WITH XMLNAMESPACES.  
   
-```  
+```sql
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
 SELECT ProductModelID, CatalogDescription.query('  
     <Product   
