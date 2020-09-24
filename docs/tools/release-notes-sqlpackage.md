@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 84a7a8261e2fc3d2031b1b38b8ee7709ad015e39
-ms.sourcegitcommit: 48d60fe6b6991303a88936fb32322c005dfca2d8
+ms.openlocfilehash: 67e30169af049cbf9c3ac7ee3d06d779b77f67c6
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "85353101"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989437"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Заметки о выпуске SqlPackage.exe
 
@@ -34,6 +34,41 @@ Or, if there is no relationship, remove 'DacFx' from the metadata 'title:'.
 I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
+
+## <a name="186-sqlpackage"></a>sqlpackage 18.6
+
+|Платформа|Скачивание|Дата выпуска|Версия|Сборка
+|:---|:---|:---|:---|:---|
+|Windows|[Установщик MSI](https://go.microsoft.com/fwlink/?linkid=2143544)|18 сентября 2020 г.|18.6|15.0.4897.1|
+|macOS .NET Core |[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2143659)|18 сентября 2020 г.| 18.6|15.0.4897.1|
+|Linux .NET Core |[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2143497)|18 сентября 2020 г.| 18.6|15.0.4897.1|
+|Windows .NET Core |[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2143496)|18 сентября 2020 г.| 18.6|15.0.4897.1|
+
+### <a name="features"></a>Компоненты
+| Компонент | Сведения |
+| :------ | :------ |
+| Платформа | Обновление sqlpackage для поддержки версии .NET Core 3.1. |
+| Always Encrypted | Добавлена поддержка импорта и экспорта в безопасном анклаве для SQL Server 2019. |
+| Развертывание | Добавлена поддержка пропуска таблиц с поддержкой отслеживания измененных данных при экспорте из Базы данных SQL Azure. |
+| Развертывание | Добавлена поддержка параметра индекса OPTIMIZE_FOR_SEQUENTIAL_KEY в Базе данных SQL Azure. |
+| Развертывание | Добавлена поддержка столбцов идентификаторов для Azure Synapse Analytics. | 
+| Справка | Возможность вывода версии sqlpackage в справке (/?) и поддержка параметра /version. | 
+
+### <a name="fixes"></a>Исправления
+| Компонент | Сведения |
+| :------ | :------ | 
+| Развертывание | Исправлен неверный сценарий развертывания, создаваемый при выборе Управляемого экземпляра Базы данных SQL Azure в качестве целевого пользователем, не являющимся sysadmin.  | 
+| Развертывание | Исправлена загрузка участников развертывания при выполнении действий сценария. | 
+| Справка | Вывод корректного затраченного времени в sqlpackage, когда операция длится больше 1 дня. | 
+| Развертывание | Исправлена регистрация DACPAC при развертывании для .NET Core. | 
+| Развертывание | Исправлена обработка параметра /accessToken (/at) в sqlpackage на .NET Core. | 
+| Развертывание | Инструкции ALTER TABLE разрешены в хранимых процедурах как инструкции не верхнего уровня. | 
+| Развертывание | Исправлена проверка материализованных представлений в Azure Synapse Analytics, которая теперь не учитывает регистр. | 
+
+### <a name="known-issues"></a>Известные проблемы
+| Компонент | Сведения |
+| :------ | :------ |
+| Развертывание | Функция управления рабочими нагрузками Azure Synapse Analytics (группы и классификаторы рабочих нагрузок) пока не поддерживается. | 
 
 ## <a name="1851-sqlpackage"></a>18.5.1 sqlpackage
 
@@ -133,7 +168,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | Платформа | sqlpackage .NET Core (общедоступная версия) для macOS, Linux и Windows. | 
 | Безопасность | Удалено подписывание кода SHA1. |
 | Развертывание | Добавлена поддержка новых выпусков базы данных Azure: GeneralPurpose, BusinessCritical, Hyperscale. |
-| Развертывание | Добавлена поддержка Управляемого экземпляра для пользователя и групп AAD. |
+| Развертывание | Добавлена поддержка Управляемого экземпляра для пользователя и групп Azure Active Directory. |
 | Развертывание | Поддержка параметра /AccessToken для sqlpackage в .NET Core. |
 | &nbsp; | &nbsp; |
 

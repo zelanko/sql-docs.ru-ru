@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: 6533133aaac7f2479bb9eea27ef3f6c47e019938
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: eed9e8681ac8b4d0b9bbbe8c8e4f7d7104900bd1
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90942764"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111654"
 ---
 # <a name="kusto-kql-extension-for-azure-data-studio-preview"></a>Расширение Kusto (KQL) для Azure Data Studio (предварительная версия)
 
@@ -45,7 +45,7 @@ ms.locfileid: "90942764"
 
 4. Выберите пункт **Установить**.
 
-:::image type="content" source="media/kusto-extension/kusto-extension-icon.png" alt-text="Расширение Kusto":::
+:::image type="content" source="media/kusto-extension/kusto-extension-icon.png" alt-text="Расширение Data Explorer":::
 
 ## <a name="how-to-connect-to-an-azure-data-explorer-cluster"></a>Порядок подключения к кластеру Azure Data Explorer
 

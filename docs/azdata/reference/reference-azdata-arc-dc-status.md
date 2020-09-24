@@ -1,7 +1,7 @@
 ---
-title: Справочник по azdata bdc spark status
+title: Справочник по azdata arc dc status
 titleSuffix: SQL Server big data clusters
-description: Справочная статья по командам azdata bdc spark status.
+description: Справочная статья по командам azdata arc dc status.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
@@ -9,14 +9,14 @@ ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: da13babdf51bc1b4f7e1afa297e7712994932c64
+ms.openlocfilehash: 82408e8a7f1edb37c33a6f1748119f5ff24f563f
 ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 09/22/2020
-ms.locfileid: "90914553"
+ms.locfileid: "90942916"
 ---
-# <a name="azdata-bdc-spark-status"></a>azdata bdc spark status
+# <a name="azdata-arc-dc-status"></a>azdata arc dc status
 
 Применяется к `azdata`
 
@@ -26,31 +26,21 @@ ms.locfileid: "90914553"
 
 |Команда|Описание|
 | --- | --- |
-[azdata bdc spark status show](#azdata-bdc-spark-status-show) | Состояние службы Spark.
-## <a name="azdata-bdc-spark-status-show"></a>azdata bdc spark status show
-Состояние службы Spark.
+[azdata arc dc status show](#azdata-arc-dc-status-show) | Показывает состояние контроллера данных.
+## <a name="azdata-arc-dc-status-show"></a>azdata arc dc status show
+Показывает состояние контроллера данных.
 ```bash
-azdata bdc spark status show [--resource -r] 
-                             [--all -a]
+azdata arc dc status show [--namespace -ns] 
+                          
 ```
 ### <a name="examples"></a>Примеры
-Получение состояния службы Spark.
+Показывает состояние контроллера данных в определенном пространстве имен.
 ```bash
-azdata bdc spark status show
-```
-Получение состояния службы Spark со всеми экземплярами.
-```bash
-azdata bdc spark status show --all
-```
-Получение состояния ресурса хранилища в составе службы Spark.
-```bash
-azdata bdc spark status show --resource storage-0
+azdata arc dc status show --namespace <ns>
 ```
 ### <a name="optional-parameters"></a>Необязательные параметры
-#### `--resource -r`
-Получение ресурса в этой службе.
-#### `--all -a`
-Отображение всех экземпляров каждого ресурса в службе.
+#### `--namespace -ns`
+Пространство имен Kubernetes, в котором существует контроллер данных.
 ### <a name="global-arguments"></a>Глобальные аргументы
 #### `--debug`
 Повышение уровня детализации журнала для включения всех журналов отладки.

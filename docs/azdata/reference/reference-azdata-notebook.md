@@ -4,26 +4,27 @@ titleSuffix: SQL Server big data clusters
 description: Справочная статья по командам azdata notebook.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a5b30abf0fc8df71a3d791e0bd3927ccbe1e81b1
-ms.sourcegitcommit: 8689a1abea3e2b768cdf365143b9c229194010c0
+ms.openlocfilehash: dc3021cfe40259fdbcff7fab00ef6a7e80e4a2ad
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89734124"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914414"
 ---
 # <a name="azdata-notebook"></a>azdata notebook
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+Применяется к `azdata`
 
-В следующей статье приводятся справочные сведения по командам `notebook` в средстве `azdata`. Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md).
+В следующей статье приводятся справочные сведения по командам **sql** в средстве **azdata**. Дополнительные сведения о других командах **azdata** см. в [справочнике по azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Команды
-| Команда | Описание |
+
+|Команда|Описание|
 | --- | --- |
 [azdata notebook view](#azdata-notebook-view) | Просмотр записной книжки.  Для этого параметра работа останавливается при первой ошибке выполнения в ячейке.
 [azdata notebook run](#azdata-notebook-run) | Запуск записной книжки.  Прекращение выполнения при первой ошибке.
@@ -111,4 +112,7 @@ azdata notebook run --path "/home/me/notebooks/demo_notebook.ipynb"
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md). Дополнительные сведения об установке средства `azdata` см. в статье [Установка azdata для управления кластерами больших данных SQL Server 2019](../install/deploy-install-azdata.md).
+Дополнительные сведения о других командах **azdata** см. в [справочнике по azdata](reference-azdata.md). 
+
+Дополнительные сведения об установке средства **azdata** см. в разделе [Установка azdata](..\install\deploy-install-azdata.md).
+
