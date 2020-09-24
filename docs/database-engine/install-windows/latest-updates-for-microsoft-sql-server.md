@@ -13,12 +13,12 @@ author: tmichael-ms
 ms.author: tmichael
 ms.reviewer: hristins
 mtps_version: v=MSDN.10
-ms.openlocfilehash: 4564af57b070f421d83a6d9df42dfb2545672a23
-ms.sourcegitcommit: 49706fb7efb46ee467e88dc794a1eab916a9af25
+ms.openlocfilehash: 2640a32faa56e938101880791ab6422ad3782ee0
+ms.sourcegitcommit: 658c2e0ad958009ce7f041ba1ec0b4af06887497
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90013687"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91145413"
 ---
 # <a name="latest-updates-for-microsoft-sql-server"></a>Последние обновления для Microsoft SQL Server
 
@@ -36,7 +36,7 @@ ms.locfileid: "90013687"
 
 |Версии продукта   | Последний пакет обновления |  Последний выпуск для общего распространения (GDR) | Последнее накопительное обновление | Дата выпуска накопительного обновления (CU) | Общие рекомендации  |
 |--|--|--|--|--|--|
-|SQL Server 2019|Недоступно|[Статья базы знаний 4517790](https://support.microsoft.com/help/4517790)|CU 7 [(KB 4570012)](https://support.microsoft.com/help/4570012)|02.09.2020|[Установка SQL Server 2019](https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server)|
+|SQL Server 2019|Недоступно|[Статья базы знаний 4517790](https://support.microsoft.com/help/4517790)|Накопительный пакет обновления 6 [(статья базы знаний 4563110)](https://support.microsoft.com/help/4563110)|04.08.2020|[Установка SQL Server 2019](https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server)|
 |SQL Server 2017|Недоступно|[Статья базы знаний 4505224](https://support.microsoft.com/help/4505224)|CU 22 [(статья базы знаний 4577467)](https://support.microsoft.com/help/4577467)|10.09.2020|[Установка SQL Server 2017](https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server)|
 |SQL Server 2016|Пакет обновления 2 [(статья базы знаний 4052908)](https://support.microsoft.com/help/4052908)|[Статья базы знаний 4532097](https://support.microsoft.com/help/4532097)|Накопительный пакет обновления 14 [(статья базы знаний 4564903)](https://support.microsoft.com/kb/4564903)|06.08.2020|[Установка SQL Server 2016](https://technet.microsoft.com/library/bb500469.aspx)|
 |SQL Server 2016|Пакет обновления 1 [(статья базы знаний 3182545)](https://support.microsoft.com/help/3182545/sql-server-2016-service-pack-1-release-information)|[Статья базы знаний 4505219](https://support.microsoft.com/help/4505219)|CU 15 + GDR [(статья базы знаний 4505221)](https://support.microsoft.com/help/4505221)|09.07.2019|[Установка SQL Server 2016](https://technet.microsoft.com/library/bb500469.aspx)|
