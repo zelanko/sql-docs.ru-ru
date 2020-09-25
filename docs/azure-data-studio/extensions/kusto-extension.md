@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: eed9e8681ac8b4d0b9bbbe8c8e4f7d7104900bd1
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 3df020725458318aa1c3936b2b4430582ace8997
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111654"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226829"
 ---
 # <a name="kusto-kql-extension-for-azure-data-studio-preview"></a>Расширение Kusto (KQL) для Azure Data Studio (предварительная версия)
 
@@ -125,6 +125,12 @@ StormEvents
 [Расширение SandDance](https://docs.microsoft.com/sql/azure-data-studio/sanddance-extension) с расширением Kusto (KQL) в Azure Data Studio объединяют сводят вместе широкие возможности интерактивной визуализации. В результирующем наборе запроса KQL нажмите кнопку **Визуализатор**, чтобы запустить [SandDance](https://sanddance.js.org/).
 
 :::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="Визуализация SandDance":::
+
+## <a name="limitations-and-considerations"></a>Ограничения и рекомендации
+
+- Прежде чем выполнять запрос Azure Data Explorer, необходимо выбрать базу данных для кластера этой службы.
+- Если кластер Azure Data Explorer слишком долго бездействует, он может отключиться.
+    - Обходное решение. Отключитесь от кластера и повторите подключение.
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: ab2f062e6dd712e7f001556bb60c10c9ea4fad83
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: efcea597a431d33cfbd2978e36f3b95d27986772
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90942732"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226964"
 ---
 # <a name="create-and-run-a-kusto-kql-notebook-preview"></a>Создание и запуск записной книжки Kusto (KQL) (предварительная версия)
 
@@ -38,7 +38,7 @@ ms.locfileid: "90942732"
 
 1. В Azure Data Studio подключитесь к кластеру Azure Data Explorer.
 
-2. Перейдите в панель **Подключения**, в окне **Серверы** щелкните правой кнопкой мыши базу данных Kusto и выберите *Создать записную книжку*.
+2. Перейдите в панель **Подключения**, в окне **Серверы** щелкните правой кнопкой мыши базу данных Kusto и выберите *Создать записную книжку*. Вы также можете выбрать **Файл** > **Создать записную книжку**.
 
    :::image type="content" source="media/notebooks-kusto-kernel/kusto-new-notebook.png" alt-text="Открытие записной книжки":::
 
@@ -78,7 +78,7 @@ ms.locfileid: "90942732"
 
    :::image type="content" source="media/notebooks-kusto-kernel/kusto-kernel-code.png" alt-text="Блок кода ядра Kusto":::
 
-2. Скопируйте приведенный ниже пример, вставьте его в ячейку и нажмите **Выполнить ячейку**. В этом примере запрашиваются данные StormEvents для конкретного типа событий.
+2. Скопируйте приведенный ниже пример, вставьте его в ячейку и нажмите **Выполнить ячейку**. Этот пример запрашивает данные StormEvents для определенного типа события.
 
    ```kusto
     StormEvents
@@ -103,6 +103,12 @@ ms.locfileid: "90942732"
 ```
 
 :::image type="content" source="media/notebooks-kusto-kernel/run-notebook-save-results.png" alt-text="Сохранение результата":::
+
+## <a name="limitations-and-considerations"></a>Ограничения и рекомендации
+
+- Прежде чем выполнять запрос Azure Data Explorer, необходимо выбрать базу данных для кластера этой службы.
+- Если кластер Azure Data Explorer слишком долго бездействует, он может отключиться.
+    - Обходное решение. Отключитесь от кластера и повторите подключение.
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

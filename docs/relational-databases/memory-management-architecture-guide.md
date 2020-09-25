@@ -11,16 +11,28 @@ ms.topic: conceptual
 helpviewer_keywords:
 - guide, memory management architecture
 - memory management architecture guide
+- PMO
+- Partitioned Memory Objects
+- cmemthread
+- AWE
+- SPA, Single Page Allocator
+- MPA, Multi Page Allocator
+- memory allocation, SQL Server
+- memory pressure, SQL Server
+- stack size, SQL Server
+- buffer manager, SQL Server
+- buffer pool, SQL Server
+- resource monitor, SQL Server
 ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4681cdb7dbca293501902caec456a3e08eac5ba7
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 8677c1e3fff32a5ea2ae43f6437f0d219180123c
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243715"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116226"
 ---
 # <a name="memory-management-architecture-guide"></a>руководство по архитектуре управления памятью
 
@@ -62,7 +74,7 @@ ms.locfileid: "87243715"
 |Привилегия операционной системы на блокировку страниц в памяти (позволяет блокировать физическую память, препятствует вытеснению блокированной памяти). <sup>6</sup> |Выпуски [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard, Enterprise и Developer: требуется для процесса [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для использования механизма AWE. Память, распределенная с использованием механизма AWE, не может быть выгружена. <br> Предоставление данного разрешения без включения AWE не оказывает влияния на сервер. | Используется, только если это необходимо, то есть при наличии признаков того, что процесс sqlservr вытесняется из памяти. В этом случае в журнале ошибок появится ошибка 17890, как в следующем примере: `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`|
 
 <sup>1</sup> 32-разрядные версии недоступны, начиная с [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
-<sup>2</sup> /3gb — это параметр загрузки операционной системы. Дополнительные сведения см. в библиотеке MSDN.  
+<sup>2</sup> /3gb — это параметр загрузки операционной системы.  
 <sup>3</sup> WOW64 (Windows on Windows 64) — режим, в котором 32-разрядная версия [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] запускается в 64-разрядной операционной системе.  
 <sup>4</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition поддерживает до 128 ГБ. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition поддерживает максимум, заданный для операционной системы.  
 <sup>5</sup> Обратите внимание, что параметр awe enabled функции sp_configure в 64-разрядной системе [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]присутствует, но не учитывается.    
@@ -94,8 +106,8 @@ ms.locfileid: "87243715"
 |Одностраничные выделения|Да|Да, объединяются в выделения страниц "Любой размер"|
 |Многостраничные выделения|Нет|Да, объединяются в выделения страниц "Любой размер"|
 |Выделения CLR|нет|Да|
-|Память стеков потоков|Нет|нет|
-|Прямые выделения из Windows|Нет|нет|
+|Память стеков потоков|Нет|Нет|
+|Прямые выделения из Windows|Нет|Нет|
 
 Начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] может выделять больше памяти, чем указано в значении "Макс. памяти сервера". Это поведение может возникать, если значение **_Общая память сервера (КБ)_** уже достигло параметра **_Целевая память сервера (КБ)_** (как указано в параметре "Макс. память сервера"). Если из-за фрагментации памяти недостаточно смежных областей свободной памяти для соответствия требованиям многостраничных запросов памяти (больше 8 КБ), [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] может превысить объем вместо отклонения запроса памяти. 
 
@@ -121,7 +133,7 @@ ms.locfileid: "87243715"
 |-------|-------|-------|
 |Одностраничные выделения|Нет|Нет, объединяется в выделения страниц "Любой размер"|
 |Многостраничные выделения|Да|Нет, объединяется в выделения страниц "Любой размер"|
-|Выделения CLR|Да|да|
+|Выделения CLR|Да|Да|
 |Память стеков потоков|Да|Да|
 |Прямые выделения из Windows|Да|Да|
 
@@ -314,11 +326,24 @@ FROM sys.dm_os_process_memory;
 Защита контрольной суммой, включенная в [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], обеспечивает более надежную проверку целостности данных. Контрольная сумма рассчитывается для данных каждой записанной страницы и сохраняется в колонтитуле. Всякий раз, когда страница с сохраненной контрольной суммой читается с диска, компонент Database Engine повторно вычисляет контрольную сумму для данных страницы и вызывает ошибку 824, если новая контрольная сумма отличается от сохраненной. Защита контрольной суммой может перехватить больше ошибок, чем защита от разрыва страницы, потому что она учитывает каждый байт страницы, однако она более ресурсоемкая. Когда защита контрольной суммой активирована, ошибки, вызванные сбоями питания и поврежденным оборудованием или встроенным ПО, могут быть обнаружены во время чтения страницы с диска диспетчером буферов. Дополнительные сведения о задании контрольной суммы см. в разделе [Параметры ALTER DATABASE SET &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-set-options.md#page_verify).
 
 > [!IMPORTANT]
-> При обновлении пользовательской или системной базы данных до версии [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] или более поздней значение [PAGE_VERIFY](../t-sql/statements/alter-database-transact-sql-set-options.md#page_verify) (NONE или TORN_PAGE_DETECTION) сохраняется. Рекомендуется использовать CHECKSUM.
+> При обновлении пользовательской или системной базы данных до версии [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] или более поздней значение [PAGE_VERIFY](../t-sql/statements/alter-database-transact-sql-set-options.md#page_verify) (NONE или TORN_PAGE_DETECTION) сохраняется. Настоятельно рекомендуется использовать CHECKSUM.
 > Значение TORN_PAGE_DETECTION использует меньше ресурсов, но обеспечивает минимальный вариант защиты CHECKSUM.
 
 ## <a name="understanding-non-uniform-memory-access"></a>Основные сведения о неоднородном доступе к памяти
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] совместим с архитектурой неоднородного доступа к памяти (NUMA) и хорошо работает на оборудовании NUMA без дополнительной настройки. С ростом тактовой частоты и количества процессоров становится труднее сократить время задержки памяти, необходимой для использования дополнительной производительности системы. Для устранения этого недостатка поставщики оборудования применяют большие кэши третьего уровня, но это является всего лишь полумерой. Архитектура NUMA обеспечивает масштабируемое решение для этой проблемы. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] позволяет использовать преимущество компьютеров на основе NUMA без необходимости изменять что-либо в приложении. Дополнительные сведения см. в разделе [Как настроить SQL Server для использования программной архитектуры NUMA](../database-engine/configure-windows/soft-numa-sql-server.md).
+
+## <a name="dynamic-partition-of-memory-objects"></a>Динамическое секционирование объектов памяти
+Распределители кучи, называемые объектами памяти в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], позволяют [!INCLUDE[ssde_md](../includes/ssde_md.md)] выделять память из кучи. Их можно отслеживать с помощью динамического административного представления [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md). CMemThread — это потокобезопасный тип объекта памяти, позволяющий выделять память параллельно из нескольких потоков. Для правильного отслеживания объекты CMemThread пользуются конструкциями синхронизации (мьютекс), чтобы обеспечить обновление критически важных элементов информации одновременно только в одном потоке. 
+
+> [!NOTE]
+> Тип объекта CMemThread используется в базе кода [!INCLUDE[ssde_md](../includes/ssde_md.md)] для множества различных распределений и может быть секционирован глобально, по узлам или по ЦП.   
+
+Однако использование мьютексов может привести к состязанию, если из одного объекта памяти выделяется много потоков в режиме высокой конкуренции. Таким образом, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] имеет концепцию секционированных объектов памяти (PMO) и каждая секция представлена одним объектом CMemThread. Секционирование объекта памяти статически определено и не может быть изменено после создания. Так как шаблоны выделения памяти могут сильно различаться в зависимости от таких факторов, как использование оборудования и памяти, невозможно заранее подготовить идеальный шаблон секционирования. В подавляющем большинстве случаев достаточно использовать одну секцию, но в некоторых сценариях это может привести к состязанию, которое можно предотвратить только с помощью объекта памяти с высоким уровнем секционирования. Не рекомендуется секционировать каждый объект памяти, так как большее количество секций может негативно сказаться на эффективности и вызвать фрагментацию памяти.
+
+> [!NOTE]
+> Прежде чем [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], можно использовать флаг трассировки 8048, чтобы превратить PMO на основе узла в PMO на основе ЦП. Начиная с [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] с пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], эта реакция является динамической и управляется подсистемой.
+
+Начиная с [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] с пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], [!INCLUDE[ssde_md](../includes/ssde_md.md)] может динамически обнаруживать состязание в конкретном объекте CMemThread и менять реализацию объекта между вариантами на основе узла или на основе ЦП. После изменения реализации PMO остается в этом состоянии до тех пор, пока не будет перезапущен процесс [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Состязание в CMemThread можно обнаружить по большому времени ожидания CMEMTHREAD в динамическом административном представлении [sys.dm_os_wait_stats](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md), а также по содержанию столбцов динамического административного представления [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) *contention_factor*, *partition_type*, *exclusive_allocations_count*и *waiting_tasks_count*.
 
 ## <a name="see-also"></a>См. также:
 [Параметры конфигурации сервера «Server Memory»](../database-engine/configure-windows/server-memory-server-configuration-options.md)   

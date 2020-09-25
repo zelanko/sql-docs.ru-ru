@@ -10,12 +10,12 @@ ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 3959d2bbf06cbb5ab106cc805e37f700d3be624f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 97cabcda2e5b680e9fe2d5d6a4f0ce2130e19a27
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88357520"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226884"
 ---
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -23,12 +23,12 @@ ms.locfileid: "88357520"
 Переименовывает созданную пользователем таблицу в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Переименовывает созданную пользователем таблицу, столбец в созданной пользователем таблице или базе данных в [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
 > [!NOTE]
-> Чтобы переименовать базу данных в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], используйте инструкцию [ALTER DATABASE (хранилище данных SQL Azure)](alter-database-transact-sql.md?view=aps-pdw-2016-au7). Чтобы переименовать базу данных в службе базы данных SQL Azure, используйте инструкцию [ALTER DATABASE (база данных SQL Azure)](alter-database-transact-sql.md?view=azuresqldb-mi-current). Чтобы переименовать базу данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], используйте хранимую процедуру [sp_renamedb](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md).
+> Чтобы переименовать базу данных в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], используйте [ALTER DATABASE ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true). Чтобы переименовать базу данных в службе базы данных SQL Azure, используйте инструкцию [ALTER DATABASE (база данных SQL Azure)](alter-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true). Чтобы переименовать базу данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], используйте хранимую процедуру [sp_renamedb](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md).
 
 ## <a name="syntax"></a>Синтаксис
 
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse
+-- Syntax for Azure Synapse Analytics
 
 -- Rename a table.
 RENAME OBJECT [::] [ [ database_name . [schema_name ] ] . ] | [schema_name . ] ] table_name TO new_table_name
@@ -61,7 +61,7 @@ RENAME OBJECT [::] [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* 
 RENAME DATABASE [::] [ *имя_базы_данных* TO *новое_имя_базы_данных* — 
 **применимо к** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-Изменение имени пользовательской базы данных с *имени_базы_данных* на *новое_имя_базы_данных*. Следующие имена баз данных являются [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]зарезервированными и не могут использоваться в качестве нового имени базы данных:
+Измените имя пользовательской базы данных с *имени_базы_данных* на *новое_имя_базы_данных*. Недопустимо переименование в следующие [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]зарезервированные имена баз данных.
 
 - master
 - model
@@ -93,7 +93,7 @@ RENAME OBJECT [::] [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* 
 
 ### <a name="cannot-rename-a-table-in-use"></a>Невозможно переименовать используемую таблицу
 
-Вы не можете переименовать таблицу или базу данных во время использования. Для переименования таблицы требуется монопольная блокировка таблицы. Если таблица используется, может потребоваться завершить сеансы, которые используют таблицу. Для завершения сеанса можно использовать команду KILL. Используйте инструкцию KILL осторожно, так как при завершении сеанса для всей незафиксированной работы будет выполнен откат. К сеансам в хранилище данных SQL добавляется префикс "SID". Префикс "SID" и номер сеанса необходимо указать при вызове команды KILL. В этом примере мы получаем список активных или неактивных сеансов и затем завершаем сеанс "SID1234".
+Вы не можете переименовать таблицу или базу данных во время использования. Для переименования таблицы требуется монопольная блокировка таблицы. Если таблица используется, может потребоваться завершить сеансы, которые используют таблицу. Для завершения сеанса можно использовать команду KILL. Используйте инструкцию KILL осторожно, так как при завершении сеанса для всей незафиксированной работы будет выполнен откат. Сеансы в [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] имеют префикс "SID". Префикс "SID" и номер сеанса необходимо указать при вызове команды KILL. В этом примере мы получаем список активных или неактивных сеансов и затем завершаем сеанс "SID1234".
 
 ### <a name="rename-column-restrictions"></a>Ограничения переименования столбцов
 
@@ -156,7 +156,7 @@ ALTER SCHEMA dbo TRANSFER OBJECT::product.item;
 
 **Применимо к**: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-Важно помнить, что вы не можете переименовать таблицу, которая используется. Для переименования таблицы требуется монопольная блокировка таблицы. Если таблица используется, может потребоваться завершить сеансы, которые используют таблицу. Для завершения сеанса можно использовать команду KILL. Используйте инструкцию KILL осторожно, так как при завершении сеанса для всей незафиксированной работы будет выполнен откат. К сеансам в хранилище данных SQL добавляется префикс "SID". Префикс "SID" и номер сеанса потребуется указать при вызове команды KILL. В этом примере мы получаем список активных или неактивных сеансов и затем завершаем сеанс "SID1234".
+Переименовать таблицу, которая сейчас используется, невозможно. Для переименования таблицы требуется монопольная блокировка таблицы. Если таблица используется, может потребоваться завершить сеансы, которые используют таблицу. Для завершения сеанса можно использовать команду KILL. Используйте инструкцию KILL осторожно, так как при завершении сеанса для всей незафиксированной работы будет выполнен откат. Сеансы в [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] имеют префикс "SID". Префикс "SID" и номер сеанса потребуется указать при вызове команды KILL. В этом примере мы получаем список активных или неактивных сеансов и затем завершаем сеанс "SID1234".
 
 ```sql
 -- View a list of the current sessions

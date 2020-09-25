@@ -41,12 +41,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ea50c64985b67dfbc4221f65dc1f4cc5daaab721
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 12d218ea2075e861b04eb7e3718d630eb19ffe28
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478656"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227278"
 ---
 # <a name="restore-statements-transact-sql"></a>Инструкции RESTORE (Transact-SQL)
 
@@ -65,10 +65,10 @@ ms.locfileid: "88478656"
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [База данных SQL<br /> — управляемый экземпляр](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
+        [База данных SQL<br /> — управляемый экземпляр](restore-statements-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true)
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -737,13 +737,13 @@ RESTORE DATABASE Sales
 
 :::row:::
     :::column:::
-        [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)
+        [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017&preserve-view=true)
     :::column-end:::
     :::column:::
         **_\* База данных SQL<br />Управляемый экземпляр \*_**
     :::column-end:::
     :::column:::
-        [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+        [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016&preserve-view=true)
     :::column-end:::
 :::row-end:::
 
@@ -956,8 +956,8 @@ RESTORE HEADERONLY. Указывает, что необходимо вернут
 Требуется учетная запись Windows с разрешениями на доступ к каталогу резервного копирования и на чтение этого каталога. Необходимо также сохранить имя учетной записи Windows и пароль в [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
 - Чтобы проверить наличие учетных данных, используйте [sys.dm_pdw_network_credentials](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md).
-- Чтобы добавить или обновить учетные данные, используйте [sp_pdw_add_network_credentials (хранилище данных SQL)](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).
-- Чтобы удалить учетные данные из [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте [sp_pdw_remove_network_credentials (хранилище данных SQL)](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md).
+- Для добавления или изменения учетных данных используйте [sp_pdw_add_network_credentials — [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).
+- Чтобы удалить учетные данные из [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте [sp_pdw_remove_network_credentials — [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md).
 
 ## <a name="error-handling"></a>Обработка ошибок
 
@@ -980,13 +980,13 @@ RESTORE HEADERONLY. Указывает, что необходимо вернут
 
 ## <a name="restoring-to-an-appliance-with-a-larger-number-of-compute-nodes"></a>Восстановление на устройство с большим количеством вычислительных узлов
 
-Запустите инструкцию [DBCC SHRINKLOG (хранилище данных SQL Azure)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) после восстановления базы данных с устройства меньшего размера на устройство большего размера, так как при повторном распределении увеличится размер журнала транзакций.
+После восстановления базы данных с устройства меньшего размера на устройство большего размера выполните [DBCC SHRINKLOG ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md), так как повторное распределение увеличит размер журнала транзакций.
 
 Восстановление резервной копии на устройство с большим числом вычислительных узлов приводит к увеличению размера базы данных пропорционально количеству вычислительных узлов.
 
 Например, при восстановлении базы данных размером 60 ГБ с устройства с двумя узлами (30 ГБ на каждом узле) на устройство с шестью узлами [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] создает базу данных размером 180 ГБ (6 узлов по 30 ГБ на каждом узле) на устройстве с шестью узлами. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] изначально восстанавливает базу данных на 2 узла, чтобы она соответствовала исходной конфигурации, и затем перераспределяет данные на все 6 узлов.
 
-После распределения каждый вычислительный узел будет содержать меньше фактических данных и больше свободного пространства, чем каждый исходный узел на исходном устройстве меньшего размера. Используйте дополнительное место для добавления дополнительных данных в базу данных. Если размер восстановленной базы данных больше, чем вам нужно, можно сжать файлы базы данных с помощью инструкции [ALTER DATABASE - PDW](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7).
+После распределения каждый вычислительный узел будет содержать меньше фактических данных и больше свободного пространства, чем каждый исходный узел на исходном устройстве меньшего размера. Используйте дополнительное место для добавления дополнительных данных в базу данных. Если размер восстановленной базы данных больше, чем вам нужно, можно сжать файлы базы данных с помощью инструкции [ALTER DATABASE - PDW](../../t-sql/statements/alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true).
 
 ## <a name="limitations-and-restrictions"></a>ограничения
 
@@ -1038,6 +1038,6 @@ RESTORE HEADERONLY
 Данные заголовка можно использовать для проверки содержимого резервной копии, или чтобы убедиться в том, что целевое устройство восстановления совместимо с исходным устройством резервного копирования, перед восстановлением резервной копии.
 
 ## <a name="see-also"></a>См. также:
-[BACKUP DATABASE — Analytics Platform System](../../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016-au7)     
+[BACKUP DATABASE — Analytics Platform System](../../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true)     
 
 ::: moniker-end

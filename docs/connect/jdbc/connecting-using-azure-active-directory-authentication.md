@@ -2,7 +2,7 @@
 title: Установка подключения с использованием проверки подлинности Azure Active Directory
 description: Узнайте о разработке приложений Java для использования функции проверки подлинности Azure Active Directory в Microsoft JDBC Driver for SQL Server.
 ms.custom: ''
-ms.date: 06/17/2020
+ms.date: 09/23/2020
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ae19b292788af43226de12a342e870768ad2ac26
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: 04e52a1a84bb37fccd90f9ff32e0fdadde8fb2af
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87899019"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117133"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Установка подключения с использованием проверки подлинности Azure Active Directory
 
@@ -33,7 +33,7 @@ ms.locfileid: "87899019"
     * **ActiveDirectoryIntegrated**
         * Поддерживается начиная с версии драйвера **v6.0**. `authentication=ActiveDirectoryIntegrated` может использоваться для подключения к Базе данных или хранилищу данных SQL Azure с помощью встроенной проверки подлинности. Чтобы использовать этот режим проверки подлинности, необходимо объединить локальные службы федерации Active Directory (ADFS) в федерацию с Azure Active Directory в облаке. После настройки вы можете установить подключение, добавив собственную библиотеку "mssql-jdbc_auth-\<version>-\<arch>.dll" в путь к классам приложений в ОС Windows или настроив билет Kerberos для поддержки кроссплатформенной проверки подлинности. Вы сможете получить доступ к Базе данных SQL Azure или хранилищу данных SQL Azure без запроса учетных данных при входе в систему компьютера, присоединенного к домену.
     * **ActiveDirectoryPassword**
-        * Поддерживается начиная с версии драйвера **v6.0**. `authentication=ActiveDirectoryPassword` может использоваться для подключения к базе данных или хранилищу данных SQL Azure с использованием имени и пароля субъекта Azure AD.
+        * Поддерживается, начиная с версии драйвера **v6.0**. `authentication=ActiveDirectoryPassword` может использоваться для подключения к базе данных или хранилищу данных SQL Azure с использованием имени и пароля пользователя Azure AD.
     * **SqlPassword**
         * Используйте `authentication=SqlPassword` для подключения к SQL Server с помощью свойств userName, user и password.
     * **NotSpecified**
@@ -113,7 +113,7 @@ You have successfully logged on as: <your Managed Identity username>
 > [!NOTE]
 >  Если у вас установлена более старая версия драйвера, проверьте наличие соответствующих зависимостей, необходимых для использования этого режима проверки подлинности, перейдя по этой [ссылке](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md). 
 
-Следующий пример иллюстрирует использование режима `authentication=ActiveDirectoryIntegrated`. Запустите этот пример на присоединенном к домену компьютере, включенном в федерацию с Azure Active Directory. Пользователь автономной базы данных, представляющий вашего субъекта Azure Active Directory или одну из групп, к которым вы принадлежите, должен существовать в базе данных и иметь разрешение CONNECT. 
+Следующий пример иллюстрирует использование режима `authentication=ActiveDirectoryIntegrated`. Запустите этот пример на присоединенном к домену компьютере, включенном в федерацию с Azure Active Directory. Пользователь автономной базы данных, представляющий вашего пользователя Azure Active Directory или одну из групп, к которым вы принадлежите, должен существовать в базе данных и иметь разрешение CONNECT. 
 
 Перед сборкой и запуском примера скачайте на клиентский компьютер (компьютер, на котором вы планируете запустить пример) [библиотеку azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) и ее зависимости и включите их в путь сборки Java.
 

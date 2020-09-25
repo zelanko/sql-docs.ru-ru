@@ -31,12 +31,12 @@ ms.assetid: c6258df4-11f1-416a-816b-54f98c11145e
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 717398446aaaa7e6283c6f967bda53bc6e31b1cc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e7c01e9612661d80294cb92e0348428e469b5b2f
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88361470"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226954"
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -58,7 +58,7 @@ BEGIN { TRAN | TRANSACTION }
 ```  
  
 ```syntaxsql
---Applies to Azure SQL Data Warehouse and Parallel Data Warehouse
+--Applies to Azure Synapse Analytics and Parallel Data Warehouse
  
 BEGIN { TRAN | TRANSACTION }   
 [ ; ]  
@@ -148,7 +148,7 @@ COMMIT TRAN T1;
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-using-an-explicit-transaction"></a>A. Использование явной транзакции
-**ПРИМЕНИМО К**: SQL Server (начиная с версии 2008), база данных SQL Azure, хранилище данных SQL Azure, Parallel Data Warehouse
+**ПРИМЕНИМО К:** SQL Server (начиная с версии 2008), База данных SQL Azure, [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], Parallel Data Warehouse
 
 В примере используется база данных AdventureWorks. 
 
@@ -160,7 +160,7 @@ COMMIT;
 ```
 
 ### <a name="b-rolling-back-a-transaction"></a>Б. Откат транзакции
-**ПРИМЕНИМО К**: SQL Server (начиная с версии 2008), база данных SQL Azure, хранилище данных SQL Azure, Parallel Data Warehouse
+**ПРИМЕНИМО К:** SQL Server (начиная с версии 2008), База данных SQL Azure, [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], Parallel Data Warehouse
 
 В приведенном ниже примере демонстрируется результат отката транзакции. В этом примере инструкция ROLLBACK приведет к откату инструкции INSERT, но созданная таблица будет по-прежнему существовать.
 

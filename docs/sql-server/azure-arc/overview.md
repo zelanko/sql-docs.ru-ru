@@ -8,12 +8,13 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 59cbdd31d32014d54240b4c20937918aaa2c0770
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.custom: references_regions
+ms.openlocfilehash: 8312ab1f13d5a85c6dfb43cd29d0ba734846a512
+ms.sourcegitcommit: c0f92739c81221fbcdb7c40b53a71038105df44f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90943017"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91210587"
 ---
 # <a name="azure-arc-enabled-sql-server-preview"></a>SQL Server с поддержкой Azure Arc (предварительная версия)
 
@@ -25,7 +26,7 @@ SQL Server можно установить на виртуальном или ф
 
 Общедоступная предварительная версия SQL Server с поддержкой Azure Arc поддерживает набор решений, которым требуется установка серверного расширения Microsoft Monitoring Agent (MMA) и подключение к рабочей области Azure Log Analytics для сбора данных и создания отчетов. Эти решения включают в себя расширенную защиту данных с помощью Центра безопасности Azure и Azure Sentinel, а также проверки работоспособности среды SQL с помощью функции "Оценка SQL по требованию".
 
-На следующей схеме показана архитектура SQL Server с поддержкой Azure Arc, использующая виртуальное окружение.
+Архитектура SQL Server с поддержкой Azure Arc показана на следующей схеме.
 
 ![Архитектура общедоступной предварительной версии](media/overview/pubic-preview-architecture.png)
 

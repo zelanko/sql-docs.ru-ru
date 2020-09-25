@@ -1,6 +1,6 @@
 ---
-description: Транзакции (хранилище данных SQL)
-title: Транзакции (хранилище данных SQL) | Документы Майкрософт
+title: Транзакции (Azure Synapse Analytics)
+description: Транзакция — это группа инструкций одной или нескольких баз данных, которые либо полностью фиксируются, либо полностью откатываются.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,14 +13,15 @@ ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4928358ca724108611f91e36a480a7bade6d747e
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 4898ed6ddf50e75565d13be5f35b6f833f78d929
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688345"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227482"
 ---
-# <a name="transactions-sql-data-warehouse"></a>Транзакции (хранилище данных SQL)
+# <a name="transactions-azure-synapse-analytics"></a>Транзакции (Azure Synapse Analytics)
+
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Транзакция — это группа инструкций одной или нескольких баз данных, которые либо полностью фиксируются, либо полностью откатываются. Транзакции атомарны, согласованы, изолированы и устойчивы (atomic, consistent, isolated, durable — ACID). Если транзакция выполнена успешно, все инструкции в ней фиксируются. Если транзакция завершается ошибкой, то если хотя бы одна инструкция в группе завершается ошибкой, выполняется откат всей группы.  
@@ -93,7 +94,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
 ## <a name="limitations-and-restrictions"></a>Ограничения  
  Нельзя произвести откат транзакции после вызова инструкции COMMIT, так как измененные данные уже стали частью базы данных.  
   
- Команды [CREATE DATABASE (Хранилище данных SQL Azure)](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) и [DROP DATABASE (Transact-SQL)](../../t-sql/statements/drop-database-transact-sql.md) не могут использоваться в явной транзакции.  
+ Команды [CREATE DATABASE &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) и [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md) недопустимо использовать в явной транзакции.  
   
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] не поддерживает механизм общего доступа к транзакциям. Это означает, что в любой момент времени только один сеанс может работать с транзакцией в системе.  
   
@@ -114,8 +115,7 @@ COMMIT;
 ### <a name="b-rolling-back-a-transaction"></a>Б. Откат транзакции  
  В приведенном ниже примере демонстрируется результат отката транзакции.  В этом примере инструкция ROLLBACK приведет к откату инструкции INSERT, но созданная таблица будет по-прежнему существовать.  
   
-
-```sql
+```sql  
 CREATE TABLE ValueTable (id INT);  
 BEGIN TRANSACTION;  
        INSERT INTO ValueTable VALUES(1);  

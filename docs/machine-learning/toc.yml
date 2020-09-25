@@ -35,6 +35,12 @@
       href: ../machine-learning/install/sql-ml-component-commandline-install.md
     - name: Установка предварительно обученных моделей
       href: ../machine-learning/install/sql-pretrained-models-install.md
+    - name: Установка настраиваемой среды выполнения
+      items:
+        - name: "Установка настраиваемой среды выполнения\_Python"
+          href: ../machine-learning/install/custom-runtime-python.md
+        - name: "Установка настраиваемой среды выполнения\_R"
+          href: ../machine-learning/install/custom-runtime-r.md
     - name: Изменение стандартной среды выполнения Python и R
       href: ../machine-learning/install/change-default-language-runtime-version.md
     - name: Обновление среды выполнения Python и R через привязку

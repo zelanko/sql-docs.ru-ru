@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 439c723463516ad046c6a37a6d327b289efc9eb6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6d263df7b2b76684f121ce9e699fc619370e3ee1
+ms.sourcegitcommit: c0f92739c81221fbcdb7c40b53a71038105df44f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471179"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91210629"
 ---
 # <a name="rebuild-system-databases"></a>Перестроение системных баз данных
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,21 +29,23 @@ ms.locfileid: "88471179"
   
  **В этом разделе**  
   
--   **Перед началом работы**  
+   - **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
      [Предварительные требования](#Prerequisites)  
   
--   **Процедуры**  
+   - **Процедуры**  
   
      [Перестроение системных баз данных](#RebuildProcedure)  
   
      [Перестроение базы данных Resource](#Resource)  
   
-     [Создание новой базы данных msdb](#CreateMSDB)  
+     [Создание новой базы данных msdb](#CreateMSDB) 
+
+     [Перестроение базы данных tempdb](#RebuildTempdb)  
   
--   **Дальнейшие действия.**  
+   - **Дальнейшие действия.**  
   
      [Устранение ошибок перестроения](#Troubleshoot)  
   
@@ -55,15 +57,15 @@ ms.locfileid: "88471179"
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
  Перед перестроением системных баз данных выполните следующие задачи, чтобы иметь возможность восстановить текущие параметры системных баз данных.  
   
-1.  Зарегистрируйте все значения конфигурации на уровне сервера.  
+1. Зарегистрируйте все значения конфигурации на уровне сервера.  
   
-    ```  
+    ```SQL  
     SELECT * FROM sys.configurations;  
     ```  
   
 2.  Зарегистрируйте все исправления, примененные к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], и текущие параметры сортировки. Эти исправления необходимо применить после перестроения системных баз данных.  
   
-    ```  
+    ```SQL  
     SELECT  
     SERVERPROPERTY('ProductVersion ') AS ProductVersion,  
     SERVERPROPERTY('ProductLevel') AS ProductLevel,  
@@ -74,7 +76,7 @@ ms.locfileid: "88471179"
   
 3.  Зарегистрируйте текущее расположение всех файлов данных и журналов для системных баз данных. При перестроении системных баз данных они устанавливаются в исходное расположение. Если системные файлы данных и журналов были перемещены в другие расположения, необходимо вернуть их в исходное место.  
   
-    ```  
+    ```SQL  
     SELECT name, physical_name AS current_file_location  
     FROM sys.master_files  
     WHERE database_id IN (DB_ID('master'), DB_ID('model'), DB_ID('msdb'), DB_ID('tempdb'));  
@@ -158,6 +160,7 @@ ms.locfileid: "88471179"
 6.  На странице **Все готово для восстановления** нажмите кнопку **Исправить**. Страница «Готово» показывает, что операция завершена.  
   
 ##  <a name="create-a-new-msdb-database"></a><a name="CreateMSDB"></a> Создание новой базы данных msdb  
+
  Если база данных **msdb** повреждена и нет резервной копии базы данных **msdb** , можно создать новую базу данных **msdb** с помощью скрипта **instmsdb** .  
   
 > [!WARNING]  
@@ -186,6 +189,33 @@ ms.locfileid: "88471179"
 9. Создайте заново пользовательское содержимое базы данных **msdb** , в том числе задания, оповещения и т. д.  
   
 10. Создайте резервную копию базы данных **msdb** .  
+
+##  <a name="rebuild-the-tempdb-database"></a><a name="RebuildTempdb"></a> Перестроение базы данных tempdb  
+
+Если база данных **tempdb** повреждена и ядро СУБД не запускается, вы можете перестроить **tempdb** без необходимости перестраивать все системные базы.
+  
+1. Переименуйте текущие файлы Tempdb.mdf и Templog.ldf, если они не отсутствуют. 
+1. Запустите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из командной строки, выполнив следующую команду. 
+
+   ```sql
+   sqlservr -c -f -T3608 -T4022 -s <instance> -mSQLCMD
+   ```
+
+   В качестве имени экземпляра по умолчанию используйте MSSQLSERVER, а именованного экземпляра — MSSQL$<имя_экземпляра>. Флаг трассировки 4022 отключает выполнение хранимых процедур запуска. Параметр -mSQLCMD позволяет только [sqlcmd.exe](../../ssms/scripting/sqlcmd-use-the-utility.md) подключаться к серверу (см. [Дополнительные параметры запуска](../../database-engine/configure-windows/database-engine-service-startup-options.md#other-startup-options)).
+
+   > [!Note] 
+   > Сохраняйте окно командной строки открытым после запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В случае закрытия окна командной строки процесс будет завершен.
+
+1. Подключитесь к серверу с помощью **sqlcmd**, а затем сбросьте состояние базы данных tempdb, используя следующую хранимую процедуру.
+
+   ```sql
+   exec master..sp_resetstatus Tempdb
+   ```
+
+1. Завершите работу сервера, нажав в окне командной строки клавиши CTRL+C.
+
+1. Перезапустите службу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Это создаст новый набор файлов базы данных tempdb и восстановит эту базу.
+
   
 ##  <a name="troubleshoot-rebuild-errors"></a><a name="Troubleshoot"></a> Устранение ошибок перестроения  
  Ошибки синтаксиса и ошибки времени выполнения отображаются в окне командной строки. Проверьте инструкцию установки на наличие следующих синтаксических ошибок:  

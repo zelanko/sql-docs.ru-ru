@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 63770bce9243775e8c9c218371f016a23555b146
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c0e716d7405580dcda3cd4f3aa4d175141469b2b
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549033"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227311"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -483,6 +483,9 @@ GO
 ### <a name="e-using-merge-to-do-insert-or-update-on-a-target-edge-table-in-a-graph-database"></a>Д. Выполнение инструкций INSERT или UPDATE в целевой таблице ребер в графовой базе данных с помощью MERGE
 
 В этом примере мы создадим таблицы узлов `Person` и `City`, а также таблицу ребер `livesIn`. Если ребро между таблицами `Person` и `City` не существует, мы добавляем новую строку в таблицу ребер `livesIn` с помощью инструкции MERGE. Если ребро уже существует, мы только обновим атрибут StreetAddress в таблице ребер `livesIn`.
+
+> [!NOTE]
+> Следующий пример действует для SQL Server начиная с версии 2019.
 
 ```sql
 -- CREATE node and edge tables

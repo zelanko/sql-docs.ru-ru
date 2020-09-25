@@ -24,12 +24,12 @@ ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 1ae261b89d375ac13914c87674bdfc43cd0751e9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d263f8db7e95cbc5e961d5b4d3879ce53ce99d47
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547732"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227335"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "89547732"
  Указывает, что контекст выполнения олицетворения — это имя входа. Область олицетворения — это уровень сервера.  
   
 > [!NOTE]  
->  Этот параметр недоступен в автономной базе данных, базе данных SQL или хранилище данных SQL.  
+>  Этот параметр недоступен в автономной базе данных, Базе данных SQL или в [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].  
   
  Пользователь  
  Определяет контекст для олицетворения пользователя в текущей базе данных. Область олицетворения ограничена текущей базой данных. При переключении контекста на пользователя базы данных разрешения уровня сервера этого пользователя не наследуются.  
@@ -96,7 +96,7 @@ ms.locfileid: "89547732"
  При использовании внутри модуля указывает, что инструкции модуля выполняются в контексте вызывающей стороны.
 При использовании вне модуля инструкция не действует.
  > [!NOTE]  
->  Этот параметр недоступен в Хранилище данных SQL.  
+>  Этот параметр не доступен в среде [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].  
   
 ## <a name="remarks"></a>Remarks  
  Изменение в контексте выполнения продолжает действовать до тех пор, пока не произойдет одно из следующих событий.  
@@ -146,7 +146,7 @@ ms.locfileid: "89547732"
 ###  <a name="a-using-execute-as-and-revert-to-switch-context"></a><a name="_exampleA"></a> A. Использование предложений EXECUTE AS и REVERT для переключения контекста  
  В приведенном примере создается стек контекстов выполнения с использованием нескольких участников. Затем инструкция `REVERT` используется для сброса контекста выполнения к предыдущему участнику. Инструкция `REVERT` выполняется множество раз, передвигаясь вверх по стеку до тех пор, пока контекст выполнения не будет установлен на первоначального участника.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 --Create two temporary principals  
@@ -190,7 +190,7 @@ GO
 ### <a name="b-using-the-with-cookie-clause"></a>Б. Использование предложения WITH COOKIE  
  В следующем примере устанавливается контекст выполнения сеанса для определенного пользователя и указывается предложение WITH NO REVERT COOKIE = @*varbinary_variable*. Инструкция `REVERT` обязана указать значение, передаваемое переменной `@cookie` в `EXECUTE AS` инструкции, для успешного возвращения контекста обратно вызывающему. Чтобы запустить этот образец, должно существовать имя входа `login1` и пользователь `user1`, созданные в примере А.  
   
-```  
+```sql
 DECLARE @cookie varbinary(8000);  
 EXECUTE AS USER = 'user1' WITH COOKIE INTO @cookie;  
 -- Store the cookie in a safe location in your application.  

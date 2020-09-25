@@ -33,12 +33,12 @@ ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bdb2964f3881f5f31c451860d4330c05c3c346a0
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 9368fcb80240ddf1520ef1ac0f4d145d20d10ab2
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115838"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226952"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT — GROUP BY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -86,7 +86,7 @@ GROUP BY
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse 
+-- Syntax for Azure Synapse Analytics 
   
 GROUP BY {
       column-name [ WITH (DISTRIBUTED_AGG) ]  
@@ -288,11 +288,11 @@ GROUP BY ALL
 - Применение предложения к столбцам, имеющим атрибут FILESTREAM, приведет к ошибке.
   
 ### <a name="with-distributed_agg"></a>WITH (DISTRIBUTED_AGG)
-Область применения: Хранилище данных SQL Azure и Parallel Data Warehouse
+Область применения: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 Указание запроса DISTRIBUTED_AGG заставляет систему MPP перераспределять таблицу по определенному столбцу до выполнения статистического вычисления. Только один столбец в предложении GROUP BY может иметь указание запроса DISTRIBUTED_AGG. После завершения запроса перераспределенная таблица удаляется. Исходная таблица не изменяется.  
 
-Примечание. Указание запроса DISTRIBUTED_AGG предоставляется для обеспечения обратной совместимости с более ранними версиями Parallel Data Warehouse и не способствует повышению производительности большинства запросов. По умолчанию MPP уже перераспределяет данные для улучшения производительности для статистических вычислений. 
+Примечание. Указание запроса DISTRIBUTED_AGG предоставляется для обеспечения обратной совместимости с более ранними версиями [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] и не улучшает производительность большинства запросов. По умолчанию MPP уже перераспределяет данные для улучшения производительности для статистических вычислений. 
   
 ## <a name="general-remarks"></a>Общие замечания
 
@@ -315,7 +315,7 @@ GROUP BY ALL
   
 ## <a name="limitations-and-restrictions"></a>Ограничения
 
-Область применения: SQL Server (начиная с версии 2008), хранилище данных SQL Azure
+Область применения: SQL Server (начиная с версии 2008) и [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]
 
 ### <a name="maximum-capacity"></a>Максимальная емкость
 
@@ -416,7 +416,7 @@ HAVING DATEPART(yyyy,OrderDate) >= N'2003'
 ORDER BY DATEPART(yyyy,OrderDate);  
 ```  
   
-## <a name="examples-sql-data-warehouse-and-parallel-data-warehouse"></a>Примеры: Хранилище данных SQL и Parallel Data Warehouse  
+## <a name="examples-azure-synapse-analytics-and-parallel-data-warehouse"></a>Примеры: Azure Synapse Analytics и Parallel Data Warehouse  
   
 ### <a name="e-basic-use-of-the-group-by-clause"></a>Д. Базовое использование предложения GROUP BY  
  В следующем примере вычисляется общий объем всех продаж за каждый день. Выводится только одна строка, содержащая общий объем продаж по каждому дню.  

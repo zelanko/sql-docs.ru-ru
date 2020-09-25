@@ -19,12 +19,12 @@ author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d1ba3c44a911130a4f86eb5be3789657b24288b
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 8cf9e3f2273cf4b85365d7c44f9587e02c62b984
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380887"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227061"
 ---
 # <a name="transparent-data-encryption-tde"></a>Прозрачное шифрование данных (TDE)
 
@@ -119,7 +119,7 @@ GO
 Операции шифрования и дешифрования запланированы в фоновых потоках [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Состояние этих операций можно просмотреть в представлениях каталога и динамических административных представлениях в таблице далее в этой статье.
 
 > [!CAUTION]
-> Файлы резервных копий баз данных, в которых включено TDE, также шифруются с помощью ключа шифрования базы данных. Поэтому для восстановления таких резервных копий необходимо иметь сертификат, защищающий ключ шифрования базы данных. Следовательно, в дополнение к резервному копированию базы данных обязательно сохраняйте резервные копии сертификатов сервера. Если сертификат станет недоступным, это приведет к потере данных.
+> Файлы резервной копии для баз данных с TDE-шифрованием также шифруются с помощью ключа шифрования базы данных. Поэтому для восстановления таких резервных копий необходимо иметь сертификат, защищающий ключ шифрования базы данных. Следовательно, в дополнение к резервному копированию базы данных обязательно сохраняйте резервные копии сертификатов сервера. Если сертификат станет недоступным, это приведет к потере данных.
 >
 > Дополнительные сведения см. в статье [SQL Server Certificates and Asymmetric Keys](../../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).
 

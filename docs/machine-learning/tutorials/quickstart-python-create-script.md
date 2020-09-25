@@ -1,49 +1,36 @@
 ---
 title: Краткое руководство. Выполнение скриптов Python
 titleSuffix: SQL machine learning
-description: Сведения о выполнении простых скриптов Python с помощью машинного обучения SQL. Узнайте, как применять хранимую процедуру sp_execute_external_script для выполнения сценария.
+description: Запустите ряд простых сценариев Python с помощью Служб машинного обучения в SQL Server, Кластерах больших данных или Управляемых экземплярах SQL Azure. Узнайте, как применять хранимую процедуру sp_execute_external_script для выполнения сценария.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/21/2020
+ms.date: 09/23/2020
 ms.topic: quickstart
 author: cawrites
 ms.author: chadam
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: adcd1b0fba892e904a3866235e7a59e3d1774f4f
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 2a21e17e5732b8819a955692f2c3721736a533cf
+ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178541"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91136384"
 ---
 # <a name="quickstart-run-simple-python-scripts-with-sql-machine-learning"></a>Краткое руководство. Выполнение простых скриптов Python с использованием машинного обучения SQL
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-В этом кратком руководстве вы запустите ряд простых сценариев Python с помощью [Служб машинного обучения SQL Server](../sql-server-machine-learning-services.md) или в [Кластерах больших данных](../../big-data-cluster/machine-learning-services.md). Также вы узнаете, как применить хранимую процедуру [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) для выполнения скрипта в экземпляре SQL Server.
-::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-В этом кратком руководстве вы запустите ряд простых скриптов Python, используя [Службы машинного обучения SQL Server](../sql-server-machine-learning-services.md). Также вы узнаете, как применить хранимую процедуру [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) для выполнения скрипта в экземпляре SQL Server.
-::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-В этом кратком руководстве вы запустите ряд простых скриптов Python, используя [Службы машинного обучения в управляемом экземпляре SQL Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview). Также вы узнаете, как применить хранимую процедуру [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) для выполнения скрипта в базе данных.
-::: moniker-end
+В этом кратком руководстве вы запустите ряд простых сценариев Python с помощью [Служб машинного обучения SQL Server](../sql-server-machine-learning-services.md), [Служб машинного обучения управляемых экземпляров SQL Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview) или в [Кластерах больших данных SQL Server](../../big-data-cluster/machine-learning-services.md). Также вы узнаете, как применить хранимую процедуру [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) для выполнения скрипта в экземпляре SQL Server.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
 Для работы с этим кратким руководством необходимо следующее.
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-- Службы машинного обучения SQL Server. Сведения об установке Служб машинного обучения см. в [руководстве по установке для Windows](../install/sql-machine-learning-services-windows-install.md) или [руководстве по установке для Linux](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). Можно также [включить Службы машинного обучения в кластерах больших данных SQL Server](../../big-data-cluster/machine-learning-services.md).
-::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-- Службы машинного обучения SQL Server. Сведения об установке Служб машинного обучения см. в [руководстве по установке для Windows](../install/sql-machine-learning-services-windows-install.md). 
-::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-- Службы машинного обучения в управляемом экземпляре SQL Azure. Сведения о регистрации см. в статье [Общие сведения о Службах машинного обучения в управляемом экземпляре SQL Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview).
-::: moniker-end
+- База данных SQL на одной из следующих платформ:
+  - [Службы машинного обучения SQL Server](../sql-server-machine-learning-services.md). Сведения об установке Служб машинного обучения см. в [руководстве по установке для Windows](../install/sql-machine-learning-services-windows-install.md) или [руководстве по установке для Linux](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json).
+  - Кластеры больших данных SQL Server. [Применение служб машинного обучения в кластерах больших данных SQL Server](../../big-data-cluster/machine-learning-services.md).
+  - Службы машинного обучения в управляемом экземпляре SQL Azure. Сведения о регистрации см. в статье [Общие сведения о Службах машинного обучения в управляемом экземпляре SQL Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 
 - Средство для выполнения SQL-запросов, содержащих сценарии Python. В этом кратком руководстве используется [Azure Data Studio](../../azure-data-studio/what-is.md).
 

@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 59a6ff65e25878aefe08cfd87bf1f9e36da7366b
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: f3d2051e7003407a4ba7cbb3fb2ff8682ec6ee8f
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90943044"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227327"
 ---
 # <a name="configure-on-demand-sql-assessment-for-azure-arc-enabled-sql-server-instance"></a>Настройка оценки SQL по запросу для экземпляра SQL Server с поддержкой Azure Arc
 
@@ -37,7 +37,7 @@ ms.locfileid: "90943044"
 
    ![Выбор оценки SQL](media/assess/sql-assessment-heading-sql-server-arc.png)
 
-1. Укажите рабочую папку на компьютере для сбора данных. Данные будут временно храниться в этой папке в ходе сбора и анализа. Если папка не существует, она будет создана автоматически.
+1. Укажите рабочую папку на компьютере для сбора данных. По умолчанию будет использоваться `C:\sql_assessment\work_dir`. Данные будут временно храниться в этой папке в ходе сбора и анализа. Если папка не существует, она будет создана автоматически.
 
 1. Щелкните __Скачать сценарий конфигурации__ и скопируйте скачанный сценарий на целевой компьютер.
 
@@ -76,3 +76,5 @@ Microsoft Monitoring Agent сканирует рабочую папку на н
 ## <a name="next-steps"></a>Дальнейшие действия
 
 Для получения дополнительных сведений ознакомьтесь с документом по SQL Server в разделе [Предварительные требования для оценок по запросу Центра служб](https://docs.microsoft.com/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents).
+
+Комплексная поддержка для Оценки SQL по запросу предоставляется при наличии подписки с Единой поддержкой или поддержкой Premier. Дополнительные сведения: [Поддержка Premier для Azure](https://azure.microsoft.com/support/plans/premier).

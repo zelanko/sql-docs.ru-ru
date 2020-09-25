@@ -22,12 +22,12 @@ ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc6e54c2e820794e3346842d748c4bc0c7384b9b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b0a6f3b475e09a0a154bc6bcee83ca21167295f
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88361170"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227231"
 ---
 # <a name="expressions-transact-sql"></a>Выражения (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "88361170"
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
 
 -- Expression in a SELECT statement  
 <expression> ::=   
@@ -132,7 +132,7 @@ GO
   
  Выражение `1+2` дает результат `3` в каждой строке результирующего набора. Несмотря на то, что выражение `ProductID` формирует уникальное значение для каждой строки в результирующем наборе, в каждой строке содержится только одно значение для `ProductID`.  
  
-- Хранилище данных SQL Azure выделяет фиксированный максимальный объем памяти для каждого потока, чтобы ни один поток не мог использовать всю память.  Часть этой памяти используется для хранения выражений запросов.  Если запрос содержит слишком много выражений и требуемая память превышает внутреннее ограничение, подсистема не будет выполнять его.  Чтобы избежать этой проблемы, пользователь может разделить запрос на несколько запросов с меньшим количеством выражений в каждом. Например, имеется запрос с длинным списком выражений в предложении WHERE: 
+- [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] выделяет фиксированный максимальный объем памяти для каждого потока, чтобы ни один поток не мог использовать всю память целиком.  Часть этой памяти используется для хранения выражений запросов.  Если запрос содержит слишком много выражений и требуемая память превышает внутреннее ограничение, подсистема не будет выполнять его.  Чтобы избежать этой проблемы, пользователь может разделить запрос на несколько запросов с меньшим количеством выражений в каждом. Например, имеется запрос с длинным списком выражений в предложении WHERE: 
 
 ```sql
 DELETE FROM dbo.MyTable 
