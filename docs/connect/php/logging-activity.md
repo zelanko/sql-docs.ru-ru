@@ -2,7 +2,7 @@
 title: Ведение журнала
 description: Узнайте, как настроить различные сочетания параметров ведения журнала при использовании драйверов Майкрософт для PHP для SQL Server.
 ms.custom: ''
-ms.date: 08/10/2020
+ms.date: 09/22/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6301b429191b0f563a5f1dea08bd6e8d92a0c46a
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: 0d5da2aa33741e0c93b067bd942958ca70137d0b
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680549"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024513"
 ---
 # <a name="logging-activity"></a>Ведение журнала
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-По умолчанию ошибки и предупреждения, созданные [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] , не регистрируются в журнале. Эта статья описывает, как настроить ведение журнала.  
+По умолчанию ошибки и предупреждения, созданные [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], не регистрируются в системном журнале PHP. В этом разделе показано, как настроить ведение журнала драйвера. Дополнительные сведения о настройке параметров обработки ошибок PHP, которые не относятся к драйверам, см. в [документации по PHP](https://www.php.net/manual/en/errorfunc.configuration.php).  
   
 ## <a name="logging-activity-using-the-pdo_sqlsrv-driver"></a>Ведение журнала с помощью драйвера PDO_SQLSRV  
 Единственной конфигурацией, доступной для драйвера PDO_SQLSRV, является запись pdo_sqlsrv.log_severity в файле php.ini.  
@@ -53,7 +53,7 @@ PHP считывает файл конфигурации при инициали
 Чтобы включить ведение журнала, можно использовать функцию [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) или изменить файл php.ini. Вы можете вести журнал для инициализаций, соединений, инструкций или функций ошибок. Также можно указать, следует ли вести журналы ошибок, предупреждений и (или) уведомлений.  
   
 > [!NOTE]  
-> Расположение файла журнала можно настроить в файле php.ini.  
+> Расположение файла журнала можно настроить в файле php.ini. Дополнительные сведения см. в [документации по PHP](https://www.php.net/manual/en/errorfunc.configuration.php).  
   
 ### <a name="turning-logging-on"></a>Включение ведения журнала  
 Вы можете включить ведение журнала, воспользовавшись функцией [sqlsrv_configure](../../connect/php/sqlsrv-configure.md), чтобы указать значение для параметра **LogSubsystems**. Например, следующая строка кода настраивает драйвер на регистрацию событий для соединений:  

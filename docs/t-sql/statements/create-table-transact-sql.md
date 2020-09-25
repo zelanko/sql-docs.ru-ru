@@ -2,7 +2,7 @@
 description: Инструкция CREATE TABLE (Transact-SQL)
 title: Инструкция CREATE TABLE (Transact-SQL)
 ms.custom: ''
-ms.date: 09/04/2020
+ms.date: 09/22/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -48,12 +48,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6b55f70cd23047de6fa1b344cbe1c9c89ab3a94c
-ms.sourcegitcommit: 780a81c02bc469c6e62a9c307e56a973239983b6
+ms.openlocfilehash: 1f7e6cc805953007bb83eb5a50db5a39aea9e37b
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90027315"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024583"
 ---
 # <a name="create-table-transact-sql"></a>Инструкция CREATE TABLE (Transact-SQL)
 
@@ -62,13 +62,13 @@ ms.locfileid: "90027315"
 Создает новую таблицу в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 > [!NOTE]
-> Синтаксис [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] см. в статье [CREATE TABLE (хранилище данных SQL Azure)](../../t-sql/statements/create-table-azure-sql-data-warehouse.md).
+> Синтаксис [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] см. в статье [CREATE TABLE ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](../../t-sql/statements/create-table-azure-sql-data-warehouse.md).
 
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="simple-syntax"></a>Простой синтаксис
 
-```
+```syntaxsql
 -- Simple CREATE TABLE Syntax (common if not using options)
 CREATE TABLE
     { database_name.schema_name.table_name | schema_name.table_name | table_name }
@@ -78,7 +78,7 @@ CREATE TABLE
 
 ## <a name="full-syntax"></a>Полный синтаксис
 
-```
+```syntaxsql
 -- Disk-Based CREATE TABLE Syntax
 CREATE TABLE
     { database_name.schema_name.table_name | schema_name.table_name | table_name }
@@ -239,12 +239,12 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
         | OFF ( MIGRATION_STATE = PAUSED )
       }
     ]   
-    [ DATA_DELETION =  {OFF | ON }  
-          [(    
-              [ FILTER_COLUMN = column_name ],   
-              [ RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS 
-                      | MONTH | MONTHS | YEAR | YEARS }}]    
-          )]
+    [ DATA_DELETION = ON  
+          {( 
+             FILTER_COLUMN = column_name,   
+             RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS 
+                              | MONTH | MONTHS | YEAR | YEARS }
+        )}  
      ]
 }
   
@@ -803,13 +803,9 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED } **Применимо к**: [!I
 
 - Укажите `PAUSED` для приостановки миграции данных. Дополнительные сведения см. в разделе [Приостановка и возобновление переноса данных (Stretch Database)](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).
 
-[ DATA_DELETION =  {OFF | ON }  
-          [(  
-              [ FILTER_COLUMN = имя_столбца ],   
-              [ RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS }}]    
-          )]  
-     ]  
-**Применимо к:** *только* Azure SQL Edge
+[DATA_DELETION = ON  
+    {( FILTER_COLUMN = column_name,   
+           RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS } )}] **Применимо к:** *только* Azure SQL Edge
 
 Включает очистку старых или устаревших данных из таблиц в базе данных на основе политики хранения. Дополнительные сведения см. в статье [Включение и отключение хранения данных](https://docs.microsoft.com/azure/azure-sql-edge/data-retention-enable-disable). Для включения хранения данных необходимо указать следующие параметры. 
 

@@ -1,38 +1,41 @@
 ---
 title: Справочник по azdata
 titleSuffix: SQL Server big data clusters
-description: Эта справочная статья содержит описание команд SQL в средстве azdata, а также многие команды azdata.
+description: Справочная статья по командам azdata.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 86b164b4188601af5bcec4aa304701a48b5a5636
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: eba0d35e76a328947747a9ab1857efe81ba90783
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733952"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914714"
 ---
 # <a name="azdata"></a>azdata
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+Применяется к `azdata`
 
-В следующей статье приводятся справочные сведения по командам `sql` в средстве `azdata`. Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata]().
+В следующей статье приводятся справочные сведения по командам **sql** в средстве **azdata**. Дополнительные сведения о других командах **azdata** см. в [справочнике по azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Команды
-| Команда | Описание |
+
+|Команда|Описание|
 | --- | --- |
+|[azdata notebook](reference-azdata-notebook.md) | Команды для просмотра, запуска записных книжек и управления ими из терминала. |
+|[Расширение azdata](reference-azdata-extension.md) | Управление расширениями CLI и их обновление. |
+|[azdata arc](reference-azdata-arc.md) | Команды для использования Azure Arc для служб данных Azure. |
 |[azdata app](reference-azdata-app.md) | Создание, удаление и запуск приложений, а также управление ими. |
 |[azdata bdc](reference-azdata-bdc.md) | Создание кластеров больших данных SQL, а также управление ими и обеспечение работы. |
-|[azdata sql](reference-azdata-sql.md) | Интерфейс командной строки (CLI) Базы данных SQL позволяет пользователю взаимодействовать с SQL Server с помощью T-SQL. |
+|[azdata sql](reference-azdata-sql.md) | Интерфейс командной строки (CLI) баз данных SQL позволяет пользователю взаимодействовать с SQL Server с помощью T-SQL. |
 [azdata login](#azdata-login) | Войдите на конечную точку контроллера кластера и задайте его пространство имен в качестве активного контекста. Чтобы использовать пароль при входе, необходимо задать переменную среды AZDATA_PASSWORD.
 [azdata logout](#azdata-logout) | Выход из кластера.
 |[azdata context](reference-azdata-context.md) | Команды управления контекстом. |
-|[Расширение azdata](reference-azdata-extension.md) | Управление расширениями CLI и их обновление. |
-|[azdata notebook](reference-azdata-notebook.md) | Команды для просмотра, запуска записных книжек и управления ими из терминала. |
+|[azdata postgres](reference-azdata-postgres.md) | Средство выполнения запросов Postgres и интерактивная оболочка. |
 ## <a name="azdata-login"></a>azdata login
 Если кластер развернут, выводит список конечных точек контроллера в процессе развертывания, которые следует использовать для входа.  Если вам не известна конечная точка контроллера, вы можете выполнить вход с использованием конфигурации KUBE кластера в системе, которая по умолчанию располагается в каталоге <user home>/.kube/config, или переменной среды KUBECONFIG, то есть экспортировать KUBECONFIG=path/to/.kube/config.  При входе в систему пространство имен этого кластера будет установлено в ваш активный контекст.
 ```bash
@@ -41,7 +44,7 @@ azdata login [--auth]
              
 [--accept-eula -a]  
              
-[--namespace -n]  
+[--namespace -ns]  
              
 [--username -u]  
              
@@ -79,7 +82,7 @@ azdata login -n ClusterName
 Конечная точка контроллера кластера "https://host:port". Если вы не хотите использовать этот аргумент, можно использовать конфигурацию KUBE на компьютере. Убедитесь, что конфигурация располагается в заданном по умолчанию месте (<user home>/.kube/config) или используйте переменную среды KUBECONFIG.
 #### `--accept-eula -a`
 Вы принимаете условия лицензии? [да/нет]. Если вы не хотите использовать этот аргумент, можно присвоить переменной среды ACCEPT_EULA значение "yes". Условия лицензии для этого продукта можно просмотреть по адресу https://aka.ms/eula-azdata-en.
-#### `--namespace -n`
+#### `--namespace -ns`
 Пространство имен уровня управления кластером.
 #### `--username -u`
 Имя пользователя учетной записи. Если вы не хотите использовать этот аргумент, можно задать переменную среды AZDATA_USERNAME.
@@ -120,4 +123,7 @@ azdata logout
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](). Дополнительные сведения об установке средства `azdata` см. в статье [Установка azdata для управления кластерами больших данных SQL Server 2019](../install/deploy-install-azdata.md).
+Дополнительные сведения о других командах **azdata** см. в [справочнике по azdata](reference-azdata.md). 
+
+Дополнительные сведения об установке средства **azdata** см. в разделе [Установка azdata](..\install\deploy-install-azdata.md).
+

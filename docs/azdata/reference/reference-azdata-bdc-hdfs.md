@@ -1,31 +1,31 @@
 ---
 title: Справочник по azdata bdc hdfs
 titleSuffix: SQL Server big data clusters
-description: Эта справочная статья содержит описание команд SQL в средстве azdata, а также многие команды bdc hdfs.
+description: Справочная статья по командам azdata bdc hdfs.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 17cac3a31309402d01442b598785908cbf345bba
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: 4cc99df7ada4ff4e0aced35c4cbcf4c39e8ca5c5
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733980"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914821"
 ---
 # <a name="azdata-bdc-hdfs"></a>azdata bdc hdfs
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+Применяется к `azdata`
 
-В следующей статье приводятся справочные сведения по командам `sql` в средстве `azdata`. Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md).
+В следующей статье приводятся справочные сведения по командам **sql** в средстве **azdata**. Дополнительные сведения о других командах **azdata** см. в [справочнике по azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Команды
-| Команда | Описание |
+
+|Команда|Описание|
 | --- | --- |
-[azdata bdc hdfs status](reference-azdata-bdc-hdfs-status.md) | Команды состояния службы HDFS.
 [azdata bdc hdfs shell](#azdata-bdc-hdfs-shell) | Оболочка HDFS представляет собой простую интерактивную командную оболочку для файловой системы HDFS.
 [azdata bdc hdfs ls](#azdata-bdc-hdfs-ls) | Перечисление состояния заданного файла или каталога.
 [azdata bdc hdfs exists](#azdata-bdc-hdfs-exists) | Определение существования файла или каталога.  Возвращает значение true, если объект существует, и false в противном случае.
@@ -39,6 +39,7 @@ ms.locfileid: "89733980"
 [azdata bdc hdfs chown](#azdata-bdc-hdfs-chown) | Изменение владельца или группы для указанного файла.
 [azdata bdc hdfs cp](#azdata-bdc-hdfs-cp) | Копирование файла или каталога между локальным компьютером и HDFS.
 [azdata bdc hdfs mount](reference-azdata-bdc-hdfs-mount.md) | Управление подключением удаленных хранилищ в HDFS.
+[azdata bdc hdfs status](reference-azdata-bdc-hdfs-status.md) | Команды состояния службы HDFS.
 ## <a name="azdata-bdc-hdfs-shell"></a>azdata bdc hdfs shell
 Оболочка HDFS представляет собой простую интерактивную командную оболочку для файловой системы HDFS.
 ```bash
@@ -69,7 +70,7 @@ azdata bdc hdfs ls --path -p
 ### <a name="examples"></a>Примеры
 Перечисление состояния
 ```bash
-azdata bdc hdfs ls --path tmp/
+azdata bdc hdfs ls --path "tmp/"
 ```
 ### <a name="required-parameters"></a>Необходимые параметры
 #### `--path -p`
@@ -94,7 +95,7 @@ azdata bdc hdfs exists --path -p
 ### <a name="examples"></a>Примеры
 Проверка существования файла или каталога.
 ```bash
-azdata bdc hdfs exists --path tmp/
+azdata bdc hdfs exists --path "tmp/"
 ```
 ### <a name="required-parameters"></a>Необходимые параметры
 #### `--path -p`
@@ -119,7 +120,7 @@ azdata bdc hdfs mkdir --path -p
 ### <a name="examples"></a>Примеры
 Создание каталога.
 ```bash
-azdata bdc hdfs mkdir --path tmp/
+azdata bdc hdfs mkdir --path "tmp/"
 ```
 ### <a name="required-parameters"></a>Необходимые параметры
 #### `--path -p`
@@ -144,7 +145,7 @@ azdata bdc hdfs mv --source-path -s
 ### <a name="examples"></a>Примеры
 Перемещение файла или каталога.
 ```bash
-azdata bdc hdfs mv --source-path tmp/ --target-path "dest/"
+azdata bdc hdfs mv --source-path "tmp/" --target-path "dest/"
 ```
 ### <a name="required-parameters"></a>Необходимые параметры
 #### `--source-path -s`
@@ -229,7 +230,7 @@ azdata bdc hdfs rm --path -p
 ### <a name="examples"></a>Примеры
 Удаление файла или каталога.
 ```bash
-azdata bdc hdfs rm --path tmp/
+azdata bdc hdfs rm --path "tmp/"
 ```
 ### <a name="required-parameters"></a>Необходимые параметры
 #### `--path -p`
@@ -254,7 +255,7 @@ azdata bdc hdfs rmr --path -p
 ### <a name="examples"></a>Примеры
 Рекурсивное удаление каталога.
 ```bash
-azdata bdc hdfs rmr --path tmp/
+azdata bdc hdfs rmr --path "tmp/"
 ```
 ### <a name="required-parameters"></a>Необходимые параметры
 #### `--path -p`
@@ -358,4 +359,7 @@ azdata bdc hdfs cp --from_path "tmp/test.txt" --to-path "hdfs:/user/me/test.txt"
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md). Дополнительные сведения об установке средства `azdata` см. в статье [Установка azdata для управления кластерами больших данных SQL Server 2019](../install/deploy-install-azdata.md).
+Дополнительные сведения о других командах **azdata** см. в [справочнике по azdata](reference-azdata.md). 
+
+Дополнительные сведения об установке средства **azdata** см. в разделе [Установка azdata](..\install\deploy-install-azdata.md).
+

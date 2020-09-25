@@ -1,31 +1,33 @@
 ---
 title: Справочник по azdata bdc
 titleSuffix: SQL Server big data clusters
-description: Эта справочная статья содержит описание команд SQL в средстве azdata, а также многие команды bdc.
+description: Справочная статья по командам azdata bdc.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dee94bc76f1a59940a753eec6944ccdab8bfc943
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: f3b7d4bd76e1b988fa9481fad18c4573c5b6a13b
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733955"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914732"
 ---
 # <a name="azdata-bdc"></a>azdata bdc
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+Применяется к `azdata`
 
-В следующей статье приводятся справочные сведения по командам `sql` в средстве `azdata`. Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md).
+В следующей статье приводятся справочные сведения по командам **sql** в средстве **azdata**. Дополнительные сведения о других командах **azdata** см. в [справочнике по azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Команды
-| Команда | Описание |
+
+|Команда|Описание|
 | --- | --- |
 [azdata bdc spark](reference-azdata-bdc-spark.md) | Команды Spark позволяют пользователю взаимодействовать с системой Spark, создавая сеансы, инструкции и пакеты и управляя ими.
+[azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | Модуль HDFS предоставляет команды для доступа к файловой системе HDFS.
 [azdata bdc create](#azdata-bdc-create) | Создание кластера больших данных.
 [azdata bdc delete](#azdata-bdc-delete) | Удаление кластера больших данных.
 [azdata bdc upgrade](#azdata-bdc-upgrade) | Обновление образов, развернутых в каждом контейнере в кластере больших данных SQL Server.
@@ -39,7 +41,6 @@ ms.locfileid: "89733955"
 [azdata bdc spark](reference-azdata-bdc-spark.md) | Команды службы Spark.
 [azdata bdc gateway](reference-azdata-bdc-gateway.md) | Команды службы шлюза.
 [azdata bdc app](reference-azdata-bdc-app.md) | Команды службы приложений.
-[azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | Модуль HDFS предоставляет команды для доступа к файловой системе HDFS.
 ## <a name="azdata-bdc-create"></a>azdata bdc create
 Создание кластера больших данных SQL Server. В системе должна быть конфигурация Kubernetes, а также следующие переменные среды: ['AZDATA_USERNAME', 'AZDATA_PASSWORD'].
 ```bash
@@ -73,7 +74,7 @@ azdata bdc create --accept-eula yes --config-profile aks-dev-test --force
 #### `--name -n`
 Имя кластера больших данных, используемого для пространств имен Kubernetes.
 #### `--config-profile -c`
-Профиль конфигурации кластера больших данных, используемый для развертывания кластера: ['openshift-dev-test', 'aro-dev-test-ha', 'aks-dev-test', 'openshift-prod', 'aks-dev-test-ha', 'kubeadm-prod', 'aro-dev-test', 'kubeadm-dev-test']
+Профиль конфигурации кластера больших данных, используемый для развертывания кластера: ['openshift-prod', 'aks-dev-test-ha', 'aro-dev-test-ha', 'aks-dev-test', 'kubeadm-prod', 'aro-dev-test', 'openshift-dev-test', 'kubeadm-dev-test']
 #### `--accept-eula -a`
 Вы принимаете условия лицензии? [да/нет]. Если вы не хотите использовать этот аргумент, можно присвоить переменной среды ACCEPT_EULA значение "yes". Условия лицензии для azdata можно просмотреть по адресу https://aka.ms/eula-azdata-en.
 #### `--node-label -l`
@@ -174,4 +175,7 @@ azdata bdc upgrade -t cu2 --controller-timeout=30 --component-timeout=40 --stabi
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md). Дополнительные сведения об установке средства `azdata` см. в статье [Установка azdata для управления кластерами больших данных SQL Server 2019](../install/deploy-install-azdata.md).
+Дополнительные сведения о других командах **azdata** см. в [справочнике по azdata](reference-azdata.md). 
+
+Дополнительные сведения об установке средства **azdata** см. в разделе [Установка azdata](..\install\deploy-install-azdata.md).
+

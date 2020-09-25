@@ -3,31 +3,29 @@ title: Обновление сред выполнения Python и R (прив�
 description: Обновите среды выполнения R и Python в Службах машинного обучения SQL Server или SQL Server R Services, используя sqlbindr.exe для привязки к Machine Learning Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/17/2020
+ms.date: 09/16/2020
 ms.topic: how-to
 author: cawrites
 ms.author: chadam
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 63bd14d9229d276966a3e118d097316a3ab58a4f
-ms.sourcegitcommit: 5f658b286f56001b055a8898d97e74906516dc99
+ms.openlocfilehash: f6b7d5b0dbff20961b6f719e0e0f3360433712f8
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90009380"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990119"
 ---
 # <a name="upgrade-python-and-r-runtime-with-binding-in-sql-server-machine-learning-services"></a>Обновление среды выполнения Python и R с помощью привязки в Службах машинного обучения SQL Server
 [!INCLUDE [SQL Server 2016 and 2017](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
 
-В этой статье описывается, как использовать процесс установки, именуемый **привязкой** для обновления сред выполнения R или Python в [Службах R SQL Server 2016](../r/sql-server-r-services.md) или [Службах машинного обучения SQL Server 2017](../sql-server-machine-learning-services.md).
+В этой статье описывается, как использовать процесс установки, именуемый **привязкой** для обновления сред выполнения R или Python в [Службах R SQL Server 2016](../r/sql-server-r-services.md) или [Службах машинного обучения SQL Server 2017](../sql-server-machine-learning-services.md). Вы можете получать [более новые версии Python и R](#version-map) путем *привязки* к [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server).
 
 > [!IMPORTANT]
 > В этой статье описывается старый метод обновления сред выполнения R и Python, называемый *привязкой*. Если вы установили **накопительное обновление 14 или более поздней версии для пакета обновления 2 (SP2) для SQL Server 2016** или **накопительное обновление 22 или более поздней версии для SQL Server 2017**, вместо этого см. как [изменить среду выполнения R или Python по умолчанию на более позднюю версию](change-default-language-runtime-version.md).
 
-Вы можете получать [более новые версии Python и R](#version-map) путем *привязки* к Microsoft Machine Learning Server. Версия применяется как к Службам машинного обучения SQL Server (в базе данных), так и к SQL Server R Services (в базе данных).
-
 ## <a name="what-is-binding"></a>Что такое привязка?
 
-Привязка — это процесс установки, который меняет содержимое папок **R_SERVICES** и **PYTHON_SERVICES** на более новые исполняемые файлы, библиотеки и инструменты с [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index).
+Привязка — это процесс установки, который изменяет содержимое папок **R_SERVICES** и **PYTHON_SERVICES** на более новые исполняемые файлы, библиотеки и инструменты с [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server).
 
 Передаваемые компоненты в составе модели обслуживания изменились. Обновления службы выполняются по [графику поддержки Microsoft R Server и Machine Learning Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support) согласно [политике современного жизненного цикла](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
 

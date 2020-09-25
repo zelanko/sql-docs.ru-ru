@@ -10,12 +10,12 @@ author: pensivebrian
 ms.author: broneill
 ms.reviewer: drswkier; sstein
 ms.date: 07/06/2020
-ms.openlocfilehash: 3d162630d029fcde31275ce4d09cfe05bdf78c36
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: dbf4c4de7e8bdcb945f2c11c0b63f7cf75ce318b
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714252"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989447"
 ---
 # <a name="sqlpackageexe"></a>SQLPackage.exe
 
@@ -68,6 +68,13 @@ sqlpackage.exe /TargetFile:"C:\sqlpackageoutput\output_current_version.dacpac" /
 ```
 sqlpackage.exe /Action:Script /SourceFile:"C:\sqlpackageoutput\output_current_version.dacpac" /TargetFile:"C:\sqlpackageoutput\output_target.dacpac" /TargetDatabaseName:"Contoso.Database" /OutputPath:"C:\sqlpackageoutput\output.sql"
  ```
+
+Отображает версию sqlpackage:
+
+```
+sqlpackage.exe /Version
+ ```
+
 
 ## <a name="extract-parameters-and-properties"></a>Извлечение параметров и свойства
 Действие извлечения SqlPackage.exe приводит к созданию схемы активной базы данных из SQL Server или Базы данных SQL Azure в пакет DACPAC (DACPAC-файл). По умолчанию данные в DACPAC-файл не включаются. Чтобы их включить, используйте [действие экспорта](#export-parameters-and-properties). 

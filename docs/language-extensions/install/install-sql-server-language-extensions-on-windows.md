@@ -4,17 +4,17 @@ titleSuffix: ''
 description: Сведения о том, как установить компонент языковых расширений в SQL Server, запустив мастер установки SQL Server.
 author: dphansen
 ms.author: davidph
-ms.date: 11/06/2019
+ms.date: 09/17/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 62a4b97216f990d207070e76eaf38d12154757bf
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 41f0e9f1c4040e9d26432d8635667f045694e314
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173565"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989864"
 ---
 # <a name="install-sql-server-language-extensions-on-windows"></a>Установка расширений языка для SQL Server в Windows
 
@@ -150,8 +150,11 @@ ms.locfileid: "88173565"
 2. Предоставление разрешений AppContainer
 
     ```cmd
-    icacls "<PATH to JRE>" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
+    icacls “<PATH to JRE>” /grant *S-1-15-2-1:(OI)(CI)RX /T
     ```
+    
+    > [!NOTE]
+    > Приведенная выше команда предоставляет разрешения идентификатору безопасности компьютера **S-1-15-2-1**, что эквивалентно разрешению **ALL APPLICATION PACKAGES** (Все пакеты приложений) в английской версии Windows. Кроме того, можно использовать `icacls "<PATH to JRE>" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T` в английской версии Windows.
     
 ## <a name="enable-script-execution"></a>Включение выполнения сценария
 

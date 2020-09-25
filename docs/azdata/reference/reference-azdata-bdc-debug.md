@@ -1,36 +1,37 @@
 ---
 title: Справочник по azdata bdc debug
 titleSuffix: SQL Server big data clusters
-description: Эта справочная статья содержит описание команд SQL в средстве azdata, а также многие команды bdc debug.
+description: Справочная статья по командам azdata bdc debug.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e9d1f561666bf6aefdef6abf4b1daf568a5a89d8
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: fe9f79373bd26ab4b010c63487ffa38de44dae3b
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89734033"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914579"
 ---
 # <a name="azdata-bdc-debug"></a>azdata bdc debug
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+Применяется к `azdata`
 
-В следующей статье приводятся справочные сведения по командам `sql` в средстве `azdata`. Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md).
+В следующей статье приводятся справочные сведения по командам **sql** в средстве **azdata**. Дополнительные сведения о других командах **azdata** см. в [справочнике по azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Команды
-| Команда | Описание |
+
+|Команда|Описание|
 | --- | --- |
 [azdata bdc debug copy-logs](#azdata-bdc-debug-copy-logs) | Копирование журналов.
 [azdata bdc debug dump](#azdata-bdc-debug-dump) | Создание дампа памяти.
 ## <a name="azdata-bdc-debug-copy-logs"></a>azdata bdc debug copy-logs
 Копирование журналов отладки из кластера больших данных. В системе должна быть конфигурация Kubernetes.
 ```bash
-azdata bdc debug copy-logs --namespace -n 
+azdata bdc debug copy-logs --namespace -ns 
                            [--container -c]  
                            
 [--target-folder -d]  
@@ -44,7 +45,7 @@ azdata bdc debug copy-logs --namespace -n
 [--exclude-dumps -ed]
 ```
 ### <a name="required-parameters"></a>Необходимые параметры
-#### `--namespace -n`
+#### `--namespace -ns`
 Имя кластера больших данных, используемого для пространства имен Kubernetes.
 ### <a name="optional-parameters"></a>Необязательные параметры
 #### `--container -c`
@@ -73,13 +74,13 @@ azdata bdc debug copy-logs --namespace -n
 ## <a name="azdata-bdc-debug-dump"></a>azdata bdc debug dump
 Создание дампа памяти и его копирование из контейнера. В системе должна быть конфигурация Kubernetes.
 ```bash
-azdata bdc debug dump --namespace -n 
+azdata bdc debug dump --namespace -ns 
                       [--container -c]  
                       
 [--target-folder -d]
 ```
 ### <a name="required-parameters"></a>Необходимые параметры
-#### `--namespace -n`
+#### `--namespace -ns`
 Имя кластера больших данных, используемого для пространства имен Kubernetes.
 ### <a name="optional-parameters"></a>Необязательные параметры
 #### `--container -c`
@@ -100,4 +101,7 @@ azdata bdc debug dump --namespace -n
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md). Дополнительные сведения об установке средства `azdata` см. в статье [Установка azdata для управления кластерами больших данных SQL Server 2019](../install/deploy-install-azdata.md).
+Дополнительные сведения о других командах **azdata** см. в [справочнике по azdata](reference-azdata.md). 
+
+Дополнительные сведения об установке средства **azdata** см. в разделе [Установка azdata](..\install\deploy-install-azdata.md).
+

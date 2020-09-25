@@ -61,12 +61,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 701b4240ccf6dedd79ce9de7baf22b3ae295baab
-ms.sourcegitcommit: 49706fb7efb46ee467e88dc794a1eab916a9af25
+ms.openlocfilehash: 35c55f7a989899e46c1189909fd4d90041ac8165
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90013697"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024453"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -175,14 +175,15 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
                         )
                       ]
                   }
-            | DATA_DELETION =  OFF | ON  
-                      [(    
-                         [ FILTER_COLUMN = column_name ],   
-                         [ RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS 
-                              | MONTH | MONTHS | YEAR | YEARS }}]    
-                      )]
-          )
-
+            | DATA_DELETION =  
+                {
+                      OFF 
+                    | ON  
+                        [(  [ FILTER_COLUMN = column_name ]   
+                            [, RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS 
+                                    | MONTH | MONTHS | YEAR | YEARS }}]   
+                        )]
+                   }
     | REBUILD
       [ [PARTITION = ALL]
         [ WITH ( <rebuild_option> [ ,...n ] ) ]
@@ -800,11 +801,11 @@ HISTORY_RETENTION_PERIOD = { **INFINITE** \| number {DAY \| DAYS \| WEEK \| WEEK
 
 Определяет ограничение срока хранения данных журнала в темпоральной таблице или отсутствие такого ограничения. Если не указано, подразумевается неограниченный срок хранения.
 
-SET (DATA_DELETION =  OFF | ON  
-            [( [ FILTER_COLUMN = имя_столбца ],    
-                [ RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS }}]    
-            )]    
-          )   
+SET (DATA_DELETION =  
+      { OFF | ON  
+                [(  [ FILTER_COLUMN = column_name ]   
+                    [, RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS }}]   
+                )] }   
 **Применимо к:** *только* Azure SQL Edge
 
 Включает очистку старых или устаревших данных из таблиц в базе данных на основе политики хранения. Дополнительные сведения см. в статье [Включение и отключение хранения данных](https://docs.microsoft.com/azure/azure-sql-edge/data-retention-enable-disable). Для включения хранения данных необходимо указать следующие параметры. 
