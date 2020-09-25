@@ -21,12 +21,12 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab1c584d736208ba871983a6169684607dcb5627
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9e298052726e033724d20d6b1695b1accda4c6ec
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550584"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227138"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 
@@ -115,7 +115,7 @@ ms.locfileid: "89550584"
 |**is_federation_member**|**bit**|Указывает, является ли база данных членом федерации.<br /> **Область применения**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**is_remote_data_archive_enabled**|**bit**|Указывает, растягивается ли база данных.<br /> 0 = база данных не поддерживает Stretch.<br /> 1 = база данных поддерживает Stretch.<br /> **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] )<br /> Дополнительные сведения см. в разделе [Stretch Database](../../sql-server/stretch-database/stretch-database.md).|  
 |**is_mixed_page_allocation_on**|**bit**|Указывает, могут ли таблицы и индексы в базе данных выделять начальные страницы из смешанных экстентов.<br /> 0 = таблицы и индексы в базе данных всегда распределяют начальные страницы из однородных экстентов.<br /> 1 = таблицы и индексы в базе данных могут распределять начальные страницы из смешанных экстентов.<br /> Дополнительные сведения см. в разделе `SET MIXED_PAGE_ALLOCATION` параметр [инструкции ALTER database SET &#40;&#41;TRANSACT-SQL ](../../t-sql/statements/alter-database-transact-sql-set-options.md).<br /> **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] )|  
-|**is_temporal_retention_enabled**|**bit**|Указывает, включена ли задача очистки политики временного хранения.<br /><br />1 = временное хранение включено<br />0 = временное хранение отключено<br />**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
+|**is_temporal_history_retention_enabled**|**bit**|Указывает, включена ли задача очистки политики временного хранения.<br /><br />1 = временное хранение включено<br />0 = временное хранение отключено<br />**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type**|**int**|Параметр сортировки каталога:<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /> **Область применения**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type_desc**|**nvarchar(60)**|Параметр сортировки каталога:<br />DATABASE_DEFAULT<br />SQL_Latin_1_General_CP1_CI_AS<br /> **Область применения**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**physical_database_name**|**nvarchar(128)**|Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — физическое имя базы данных. Для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] — Общий идентификатор для баз данных на сервере. <br />**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
@@ -175,7 +175,7 @@ SELECT a.name, a.is_temporal_history_retention_enabled
 FROM sys.databases AS a;
 ```  
   
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
 - [sys.database_mirroring_witnesses (Transact-SQL)](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)

@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c9b1969f-be1d-4dfb-a33d-551f380b9e27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1c7bc3d91eafbfa72149c5c228afe409b044b089
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d3a7142e60b1abb4f820caf2f75f8ebdec3a0d8a
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427846"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227400"
 ---
 # <a name="sysfn_hadr_is_primary_replica-transact-sql"></a>sys.fn_hadr_is_primary_replica (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -37,8 +37,7 @@ ms.locfileid: "88427846"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
-  
+```syntaxsql
 sys.fn_hadr_is_primary_replica ( 'dbname' )  
 ```  
   
@@ -46,19 +45,18 @@ sys.fn_hadr_is_primary_replica ( 'dbname' )
  "*dbname*"  
  Имя базы данных. Аргумент *dbname* имеет тип sysname.  
   
-## <a name="returns"></a>Возвращаемое значение  
+## <a name="returns"></a>Результаты  
  Возвращает тип данных **bool**: 1, если база данных в текущем экземпляре является первичной репликой, в противном случае — 0.  
   
 ## <a name="remarks"></a>Remarks  
  Используйте эту функцию, чтобы определить, размещается ли первичная реплика указанной базы данных доступности в локальном экземпляре. Образец кода должен быть аналогичен следующему.  
   
-```  
+```sql
 If sys.fn_hadr_is_primary_replica ( @dbname ) <> 1   
 BEGIN  
 -- If this is not the primary replica, exit (probably without error).  
 END  
 -- If this is the primary replica, continue to do the backup.  
-  
 ```  
   
 ## <a name="examples"></a>Примеры  
@@ -66,7 +64,7 @@ END
 ### <a name="a-using-sysfn_hadr_is_primary_replica"></a>A. Использование sys.fn_hadr_is_primary_replica  
  Следующий пример возвращает 1, если указанная база данных на локальном экземпляре является первичной репликой.  
   
-```  
+```sql
 SELECT sys.fn_hadr_is_primary_replica ('TestDB');  
 GO  
 ```    

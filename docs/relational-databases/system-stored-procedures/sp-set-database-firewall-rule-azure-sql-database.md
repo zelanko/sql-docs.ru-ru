@@ -22,15 +22,15 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b43c386f803c1d9fea8a1e7645d1764ece3a7eef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3021389a5223cd45ef7fb2b0b2dba72c51ba7235
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493037"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226872"
 ---
 # <a name="sp_set_database_firewall_rule-azure-sql-database"></a>sp_set_database_firewall_rule (база данных SQL Azure)
-[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
   Создает или обновляет правила брандмауэра уровня базы данных для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] . Правила брандмауэра базы данных можно настроить для базы данных **master** и для пользовательских баз данных на [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Правила брандмауэра базы данных особенно полезны при использовании пользователей автономной базы данных. Дополнительные сведения см. в разделе [Пользователи автономной базы данных — создание переносимой базы данных](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   

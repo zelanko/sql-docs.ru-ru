@@ -35,12 +35,12 @@ ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 810a61f438f88420829bb9656b328b2d93c7ef7b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 93397f5529a30cb0de1ac82ed36ea07fb0dd6c26
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445384"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227238"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>Предложение FROM и JOIN, APPLY, PIVOT (Transact-SQL)
 
@@ -138,7 +138,7 @@ ms.locfileid: "88445384"
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 FROM { <table_source> [ ,...n ] }  
   
@@ -151,7 +151,7 @@ FROM { <table_source> [ ,...n ] }
 }  
   
 <tablesample_clause> ::=
-    TABLESAMPLE ( sample_number [ PERCENT ] ) -- SQL Data Warehouse only  
+    TABLESAMPLE ( sample_number [ PERCENT ] ) -- Azure Synapse Analytics only  
  
 <joined_table> ::=   
 {  
@@ -270,12 +270,12 @@ FROM { <table_source> [ ,...n ] }
  Константное целочисленное выражение, используемое [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для формирования случайного числа. *repeat_seed* имеет тип **bigint**. Если аргумент *repeat_seed* не указан, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] присваивает значение случайным образом. Для определенного значения аргумента *repeat_seed* результат выборки всегда тот же, если в таблице не было произведено никаких изменений. Результат выражения *repeat_seed* должен быть целочисленным значением больше нуля.  
   
 ### <a name="tablesample-clause"></a>Предложение Tablesample
-**Применимо к:** Хранилище данных SQL
+**Применимо к:** [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]
 
  Указывает, что из таблицы возвращается выборка данных. Выборка может быть приблизительной. Это предложение может использоваться в инструкциях SELECT или UPDATE в отношении любой первичной или присоединенной таблицы. TABLESAMPLE не может быть указано для представлений. 
 
  PERCENT  
- Указывает, что из таблицы должен быть извлечен процент строк таблицы, равный значению аргумента *sample_number*. При указании PERCENT хранилище данных SQL возвращает приближенное значение указанного процента. При указании PERCENT выражение *sample_number* должно иметь значение от 0 до 100.  
+ Указывает, что из таблицы должен быть извлечен процент строк таблицы, равный значению аргумента *sample_number*. При указании PERCENT [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] возвращает приближенное значение указанного процента. При указании PERCENT выражение *sample_number* должно иметь значение от 0 до 100.  
 
 
 ### <a name="joined-table"></a>Соединяемая таблица 
