@@ -9,12 +9,12 @@ ms.date: 09/02/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d9c08893006e0b2edf093477259ebed788d49097
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 75af471239529587cf51b151c04a541a612949c0
+ms.sourcegitcommit: 658c2e0ad958009ce7f041ba1ec0b4af06887497
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989997"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91145393"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>Заметки о выпуске Кластеров больших данных SQL Server 2019
 
@@ -62,7 +62,7 @@ ms.locfileid: "90989997"
 
 В следующей таблице указана история выпусков для [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 
-| Выпуск <sup>1</sup> | Версия BDC  | `azdata` Версия <sup>2</sup> | Дата выпуска |
+| Release | Версия BDC  | `azdata` Версия <sup>1</sup> | Дата выпуска |
 |----------------------|--------------|-------------------------------|--------------|
 | [CU6](#cu6)          | 15.0.4053.23 | 20.0.1                        | 04.08.2020   |
 | [CU5](#cu5)          | 15.0.4043.16 | 20.0.0                        | 22.06.2020   |
@@ -72,9 +72,7 @@ ms.locfileid: "90989997"
 | [CU1](#cu1)          | 15.0.4003.23 | 15.0.4003                     | 2020-01-07   |
 | [GDR1](#rtm)         | 15.0.2070.34 | 15.0.2070                     | 2019-11-04   |
 
-<sup>1</sup> Для CU7 не существует обновлений для Кластеров больших данных SQL Server 2019.
-
-<sup>2</sup> Версия `azdata` отражает версию средства во время выпуска CU. Выпуски `azdata` и сервера могу не совпадать, поэтому при установке последних пакетов вы можете получать новые версии. Более новые версии совместимы с ранее выпущенными CU.
+<sup>1</sup> Версия `azdata` отражает версию средства во время выпуска CU. Выпуски `azdata` и сервера могу не совпадать, поэтому при установке последних пакетов вы можете получать новые версии. Более новые версии совместимы с ранее выпущенными CU.
 
 ## <a name="how-to-install-updates"></a>Установка обновлений
 
