@@ -25,12 +25,12 @@ ms.assetid: df955d32-8194-438e-abee-387eebebcbb7
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 465398c82d3720b3af19750aaa8c4cefeaa09665
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 88cdc4c31f94e4f09f73c37993005acb80e5942b
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422678"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379915"
 ---
 # <a name="x40x40spid-transact-sql"></a>&#x40;&#x40;SPID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88422678"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```syntaxsql
 @@SPID  
 ```  
   
@@ -56,7 +56,7 @@ ms.locfileid: "88422678"
 ## <a name="examples"></a>Примеры  
  Этот пример возвращает идентификатор сеанса, имя входа и имя пользователя для текущего пользовательского процесса.  
   
-```  
+```sql  
 SELECT @@SPID AS 'ID', SYSTEM_USER AS 'Login Name', USER AS 'User Name';  
 ```  
   
@@ -71,7 +71,7 @@ ID     Login Name                     User Name
 ## <a name="examples-sssdwfull-and-sspdw"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Этот пример возвращает идентификатор сеанса [!INCLUDE[ssDW](../../includes/ssdw-md.md)], идентификатор сеанса управляющего узла [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], имя входа и имя пользователя для текущего пользовательского процесса.  
   
-```  
+```sql  
 SELECT SESSION_ID() AS ID, @@SPID AS 'Control ID', SYSTEM_USER AS 'Login Name', USER AS 'User Name';  
 ```  
   

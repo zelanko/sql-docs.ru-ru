@@ -24,12 +24,12 @@ ms.assetid: a19c808f-aaf9-4a69-af59-b1a5fc3e5c4c
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 571cd20813376fd3ed25bb89cf49890f8d75f718
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 39c6ae00a1416727740d09f2aab3436f8ef616e7
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111849"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379800"
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "87111849"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```syntaxsql
 SUBSTRING ( expression ,start , length )  
 ```  
   
@@ -78,7 +78,7 @@ SUBSTRING ( expression ,start , length )
 ### <a name="a-using-substring-with-a-character-string"></a>A. Использование SUBSTRING с символьной строкой  
  Следующий пример показывает, как получить часть символьной строки. Из таблицы `sys.databases` этот запрос возвращает имена системных баз данных в первом столбце, первую букву имени базы данных во втором столбце и третий и четвертый символы в последнем столбце.  
   
-```  
+```sql
 SELECT name, SUBSTRING(name, 1, 1) AS Initial ,
 SUBSTRING(name, 3, 2) AS ThirdAndFourthCharacters
 FROM sys.databases  
@@ -98,7 +98,7 @@ WHERE database_id < 5;
   
  Далее показано, как можно вывести второй, третий и четвертый символ строковой константы `abcdef`.  
   
-```  
+```sql
 SELECT x = SUBSTRING('abcdef', 2, 3);  
 ```  
   
@@ -119,7 +119,7 @@ bcd
   
  В приведенном ниже примере показано, как вернуть первые 10 символов из каждого столбца данных **text** и **image** в таблице `pub_info` базы данных `pubs`. Данные **text** возвращаются как **varchar**, а данные **image** — как **varbinary**.  
   
-```  
+```sql
 USE pubs;  
 SELECT pub_id, SUBSTRING(logo, 1, 10) AS logo,   
    SUBSTRING(pr_info, 1, 10) AS pr_info  
@@ -139,7 +139,7 @@ WHERE pub_id = '1756';
   
  В приведенном ниже примере показано влияние функции SUBSTRING на данные типов **text** и **ntext**. Во-первых, пример создает новую таблицу в базе данных `pubs` под именем `npub_info`. Во-вторых, пример создает столбец `pr_info` в таблице `npub_info` из первых 80 символов столбца `pub_info.pr_info` и добавляет `ü` в качестве первого символа. Наконец, с помощью предложения `INNER JOIN` извлекаются все идентификационные номера издателей, а также обработанные функцией `SUBSTRING` значения столбцов типа **text** и **ntext** со сведениями об издателях.  
   
-```  
+```sql
 IF EXISTS (SELECT table_name FROM INFORMATION_SCHEMA.TABLES   
       WHERE table_name = 'npub_info')  
    DROP TABLE npub_info;  
@@ -149,7 +149,7 @@ USE pubs;
 GO  
 CREATE TABLE npub_info  
 (  
- pub_id char(4) NOT NULL  
+ pub_id CHAR(4) NOT NULL  
     REFERENCES publishers(pub_id)  
     CONSTRAINT UPKCL_npubinfo PRIMARY KEY CLUSTERED,  
 pr_info ntext NULL  
@@ -184,7 +184,7 @@ ORDER BY pr.pub_id ASC;
 ### <a name="c-using-substring-with-a-character-string"></a>В. Использование SUBSTRING с символьной строкой  
  Следующий пример показывает, как получить часть символьной строки. Из таблицы `dbo.DimEmployee` данный запрос возвращает фамилию в одном столбце и первую букву имени в другом.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT LastName, SUBSTRING(FirstName, 1, 1) AS Initial  
@@ -205,7 +205,7 @@ Barreto de Mattos    P
   
  В приведенном ниже примере показано, как получить второй, третий и четвертый символы строковой константы `abcdef`.  
   
-```  
+```sql
 USE ssawPDW;  
   
 SELECT TOP 1 SUBSTRING('abcdef', 2, 3) AS x FROM dbo.DimCustomer;  

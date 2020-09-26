@@ -27,12 +27,12 @@ ms.assetid: 11ec7d86-d429-4004-a436-da25df9f8761
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 570372e0ca0f40284f89e862eee75e5a3d419440
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5d441cba0f070f4d93210000f3b497e88ebf9011
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88308420"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380069"
 ---
 # <a name="suser_sname-transact-sql"></a>SUSER_SNAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "88308420"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```syntaxsql
 SUSER_SNAME ( [ server_user_sid ] )   
 ```  
   
@@ -73,7 +73,7 @@ SUSER_SNAME ( [ server_user_sid ] )
 ### <a name="a-using-suser_sname"></a>A. Использование параметра SUSER_SNAME  
  В следующем примере возвращается имя входа для текущего контекста безопасности.  
   
-```  
+```sql
 SELECT SUSER_SNAME();  
 GO  
 ```  
@@ -83,7 +83,7 @@ GO
   
 **Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий
   
-```  
+```sql
 SELECT SUSER_SNAME(0x010500000000000515000000a065cf7e784b9b5fe77c87705a2e0000);  
 GO  
 ```  
@@ -91,7 +91,7 @@ GO
 ### <a name="c-using-suser_sname-as-a-default-constraint"></a>В. Использование параметра SUSER_SNAME в качестве ограничения DEFAULT  
  В следующем примере функция `SUSER_SNAME` используется в качестве ограничения `DEFAULT` в инструкции `CREATE TABLE`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE sname_example  
@@ -110,7 +110,7 @@ GO
   
 **Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий
   
-```  
+```sql
 SELECT SUSER_SNAME();  
 GO  
 EXECUTE AS LOGIN = 'WanidaBenShoof';  
@@ -118,8 +118,7 @@ SELECT SUSER_SNAME();
 REVERT;  
 GO  
 SELECT SUSER_SNAME();  
-GO  
-  
+GO 
 ```  
   
  Ниже приводится результат.  
@@ -135,7 +134,7 @@ sa
 ### <a name="e-using-suser_sname"></a>Д. Использование параметра SUSER_SNAME  
  Следующий пример возвращает имя входа для номера идентификатора безопасности со значением `0x01`.  
   
-```  
+```sql
 SELECT SUSER_SNAME(0x01);  
 GO  
 ```  
@@ -143,7 +142,7 @@ GO
 ### <a name="f-returning-the-current-login"></a>Е. Возвращение текущего имени для входа  
  В приведенном ниже примере возвращается текущее имя для входа.  
   
-```  
+```sql
 SELECT SUSER_SNAME() AS CurrentLogin;  
 GO  
 ```  

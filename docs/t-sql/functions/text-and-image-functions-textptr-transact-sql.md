@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 510f2e6f0097b79cd458907a73ae094ff5cc637d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 83e8edcea68c22bdd14154203c9bf13b84b42156
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422598"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380509"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Функции для работы с изображениями и текстом — TEXTPTR (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,8 +40,7 @@ ms.locfileid: "88422598"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
-  
+```syntaxsql
 TEXTPTR ( column )  
 ```  
   
@@ -78,10 +77,10 @@ TEXTPTR ( column )
 ### <a name="a-using-textptr"></a>A. Использование TEXTPTR  
  На приведенном ниже примере показано, как использовать функцию `TEXTPTR` для нахождения столбца **image**`logo`, связанного с `New Moon Books`, в таблице `pub_info` базы данных `pubs`. Указатель на текст заносится в локальную переменную `@ptrval.`  
   
-```  
+```sql
 USE pubs;  
 GO  
-DECLARE @ptrval varbinary(16);  
+DECLARE @ptrval VARBINARY(16);  
 SELECT @ptrval = TEXTPTR(logo)  
 FROM pub_info pr, publishers p  
 WHERE p.pub_id = pr.pub_id   
@@ -92,8 +91,8 @@ GO
 ### <a name="b-using-textptr-with-in-row-text"></a>Б. Использование TEXTPTR с внутрирядным текстом  
  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] указатель на внутрирядный текст должен использоваться внутри транзакции, как показано в примере.  
   
-```  
-CREATE TABLE t1 (c1 int, c2 text);  
+```sql
+CREATE TABLE t1 (c1 INT, c2 TEXT);  
 EXEC sp_tableoption 't1', 'text in row', 'on';  
 INSERT t1 VALUES ('1', 'This is text.');  
 GO  
@@ -109,7 +108,7 @@ COMMIT;
 ### <a name="c-returning-text-data"></a>В. Возвращение текстовых данных  
  На следующем примере показано, как выбрать столбец `pub_id` и указатель на 16-байтовый текст столбца `pr_info` column из таблицы `pub_info`.  
   
-```  
+```sql
 USE pubs;  
 GO  
 SELECT pub_id, TEXTPTR(pr_info)  
@@ -137,7 +136,7 @@ pub_id
   
  На следующем примере показано, как вернуть первые `8000` байт текста, не используя TEXTPTR.  
   
-```  
+```sql
 USE pubs;  
 GO  
 SET TEXTSIZE 8000;  
@@ -168,10 +167,10 @@ This is sample text data for Lucerne Publishing, publisher 9999 in the pubs data
 ### <a name="d-returning-specific-text-data"></a>Г. Возвращение заданных текстовых данных  
  На приведенном ниже примере показано, как обнаружить столбец `text` (`pr_info`), связанный с `pub_id``0736`, в таблице `pub_info` базы данных `pubs`. Сначала объявляется локальная переменная `@val`. После этого указатель на текст (длинная двоичная строка) записывается в `@val` и передается в качестве параметра в инструкцию `READTEXT`. Тем самым возвращается 10 байт, начиная с пятого (сдвиг равен 4).  
   
-```  
+```sql
 USE pubs;  
 GO  
-DECLARE @val varbinary(16);  
+DECLARE @val VARBINARY(16);  
 SELECT @val = TEXTPTR(pr_info)   
 FROM pub_info  
 WHERE pub_id = '0736';  

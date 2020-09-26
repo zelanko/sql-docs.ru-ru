@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ab8d8b67ecc262269e1aa322735ac152329bc36b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2bb618bfc53e481e2ea7d86749aaf093d3ec2542
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539891"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380049"
 ---
 # <a name="drop-default-transact-sql"></a>DROP DEFAULT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -69,7 +69,7 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
 ### <a name="a-dropping-a-default"></a>A. Удаление значения по умолчанию  
  Если значение по умолчанию не привязано к столбцу или псевдониму типа данных, оно может быть удалено при помощи инструкции DROP DEFAULT. В следующем примере удаляется созданное пользователем значение по умолчанию с именем `datedflt`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT name FROM sys.objects  
@@ -81,7 +81,7 @@ GO
   
  Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], можно использовать следующий синтаксис.  
   
-```  
+```sql  
 DROP DEFAULT IF EXISTS datedflt;  
 GO  
 ```  
@@ -89,7 +89,7 @@ GO
 ### <a name="b-dropping-a-default-that-has-been-bound-to-a-column"></a>Б. Удаление значения по умолчанию, привязанного к столбцу  
  В следующем примере отвязывается значения по умолчанию, связанное со столбцом `EmergencyContactPhone` таблицы `Contact`, затем удаляется само значение с именем `phonedflt`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
    BEGIN   

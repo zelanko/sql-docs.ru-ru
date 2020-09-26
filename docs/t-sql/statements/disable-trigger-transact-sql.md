@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e6529f06-e442-437e-a7bf-41790bc092c5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bf71a24ec82fdfe3f535e5307a6407501fc6f9e3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: bfd3e379dc6be57c5d56abb7ae1a7a662d151cf1
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540740"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380255"
 ---
 # <a name="disable-trigger-transact-sql"></a>DISABLE TRIGGER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -113,12 +113,12 @@ GO
 ### <a name="c-disabling-all-triggers-that-were-defined-with-the-same-scope"></a>В. Отключение всех триггеров, определенных в одной области  
  В следующем примере отключаются все триггеры DLL, созданные в области сервера.  
   
-```  
+```sql  
 DISABLE Trigger ALL ON ALL SERVER;  
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ENABLE TRIGGER (Transact-SQL)](../../t-sql/statements/enable-trigger-transact-sql.md)   
  [ALTER TRIGGER (Transact-SQL)](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)   

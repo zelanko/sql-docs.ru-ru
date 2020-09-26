@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6aca7412-66a5-4fa4-86b2-061512ff2080
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a33cf6c43f2f01e3a897a0491954b98e5739db6e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1ebeeee770fc161d289a10f246559ca353446618
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539835"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380036"
 ---
 # <a name="drop-endpoint-transact-sql"></a>DROP ENDPOINT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,8 +38,7 @@ ms.locfileid: "89539835"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
-  
+```syntaxsql
 DROP ENDPOINT endPointName  
 ```  
   
@@ -49,7 +48,7 @@ DROP ENDPOINT endPointName
  *endPointName*  
  Имя конечной точки, подлежащей удалению.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Инструкции ENDPOINT DDL внутри пользовательской транзакции выполняться не могут.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -58,7 +57,7 @@ DROP ENDPOINT endPointName
 ## <a name="examples"></a>Примеры  
  В следующем примере удаляется созданная ранее конечная точка с именем `sql_endpoint`.  
   
-```  
+```sql  
 DROP ENDPOINT sql_endpoint;  
 ```  
   
