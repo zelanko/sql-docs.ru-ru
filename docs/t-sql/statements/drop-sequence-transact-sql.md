@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c25772d3-61af-4aa7-b58b-a6f67a793e3d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 48192af5515f4a570908870fcdcc1af58b153032
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6a3f9e498ea8d3f81d05be782d7c15ecdfb87e38
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547495"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379739"
 ---
 # <a name="drop-sequence-transact-sql"></a>DROP SEQUENCE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,14 +57,14 @@ DROP SEQUENCE [ IF EXISTS ] { database_name.schema_name.sequence_name | schema_n
  *sequence_name*  
  Имя последовательности, которую нужно удалить. Тип **sysname**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  После создания числа объект последовательности не имеет постоянной связи с созданным им числом, так что объект последовательности можно удалить, несмотря на то, что созданное число еще используется.  
   
  Объект последовательности можно удалить, даже если на него ссылается хранимая процедура или триггер, поскольку он не привязан к схеме. Объект последовательности нельзя удалить, если на него есть ссылка как на значение по умолчанию в таблице. В сообщении об ошибке будет указан объект, который ссылается на последовательность.  
   
  Чтобы получить список всех объектов последовательности в базе данных, выполните следующую инструкцию.  
   
-```  
+```sql  
 SELECT sch.name + '.' + seq.name AS [Sequence schema and name]   
     FROM sys.sequences AS seq  
     JOIN sys.schemas AS sch  
@@ -83,7 +83,7 @@ GO
 ## <a name="examples"></a>Примеры  
  В приведенном ниже примере объект последовательности с именем `CountBy1` удаляется из текущей базы данных.  
   
-```  
+```sql  
 DROP SEQUENCE CountBy1 ;  
 GO  
 ```  

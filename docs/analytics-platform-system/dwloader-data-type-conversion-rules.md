@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: fe5d8790b5adb8477c994d265f458cdb1ceda61a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c1ce48c3352ffbd0a1c112f7fd60db2f0d85c6e6
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401182"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379563"
 ---
 # <a name="data-type-conversion-rules-for-dwloader---parallel-data-warehouse"></a>Правила преобразования типов данных для хранилища данных dwloader-Parallel Data
 В этом разделе описываются форматы входных данных и неявные преобразования типов данных, которые [Dwloader загрузчик командной строки](dwloader.md) при загрузке данных в PDW. Неявные преобразования данных происходят, когда входные данные не соответствуют типу данных в целевой таблице SQL Server PDW. Используйте эти сведения при проектировании процесса загрузки, чтобы убедиться, что данные будут успешно загружены в SQL Server PDW.  
@@ -129,7 +129,7 @@ Dwloader поддерживает следующие форматы данных
 |Десятичный литерал|фффнн. фффн<br /><br />Пример: 1234,5678|Значение, большее 1 или меньшее 0, преобразуется в 1. Например, значения 123,45 и-123,45 преобразуются в 1.|  
   
 ### <a name="decimal-data-type"></a>Тип данных Decimal  
-В следующей таблице определены правила для загрузки литеральных значений в столбец типа **Decimal** (*p, s*). Правила преобразования данных те же, что и для SQL Server. Дополнительные сведения см. в разделе [Преобразование типов данных (ядро СУБД)](https://go.microsoft.com/fwlink/?LinkId=202128) на сайте MSDN.  
+В следующей таблице определены правила для загрузки литеральных значений в столбец типа **Decimal** (*p, s*). Правила преобразования данных те же, что и для SQL Server. Дополнительные сведения см. в разделе [Преобразование типов данных (ядро СУБД)](/previous-versions/sql/sql-server-2008-r2/ms191530(v=sql.105)) на сайте MSDN.  
   
 |Тип входных данных|Примеры входных данных|  
 |-------------------|-----------------------|  
@@ -185,4 +185,3 @@ Dwloader поддерживает следующие форматы данных
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
 
 -->
-  

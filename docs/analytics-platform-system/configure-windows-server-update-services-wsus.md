@@ -9,17 +9,17 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 089b76d7167b8561c93b01837dc2189c833362fd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6882700208e165464261f236cadd00b30503b81f
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76761908"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379582"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Настройка Windows Server Update Services (WSUS) в системе аналитики платформы
 В этих инструкциях описано, как использовать мастер настройки Windows Server Update Services (WSUS) для настройки WSUS для системы платформы аналитики. Прежде чем можно будет применить обновления программного обеспечения к устройству, необходимо настроить службы WSUS. Служба WSUS уже установлена на виртуальной машине VMM устройства.  
   
-Дополнительные сведения о настройке служб WSUS см. в пошаговом [руководству по установке WSUS](https://go.microsoft.com/fwlink/?LinkId=202417) на веб-сайте WSUS. После настройки служб WSUS ознакомьтесь со статьей [Загрузка и применение обновлений майкрософт &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md) для запуска обновления.  
+Дополнительные сведения о настройке служб WSUS см. в пошаговом [руководству по установке WSUS](/windows/deployment/deploy-whats-new) на веб-сайте WSUS. После настройки служб WSUS ознакомьтесь со статьей [Загрузка и применение обновлений майкрософт &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md) для запуска обновления.  
   
 > [!WARNING]  
 > Если во время этого процесса настройки возникнут ошибки, прервите работу и обратитесь в службу поддержки за помощью. Не пропускать ошибки и продолжать процесс после получения ошибок.  
@@ -61,7 +61,7 @@ ms.locfileid: "76761908"
   
         ![Меню панели мониторинга диспетчера сервера](./media/configure-windows-server-update-services-wsus/WSUS_Wiz0.png "WSUS_Wiz0")  
   
-    4.  Если мастер WSUS запускается впервые, может быть предложено настроить каталог для хранения обновлений. `C:\wsus`является соответствующим расположением; Однако вы можете указать другой путь.  
+    4.  Если мастер WSUS запускается впервые, может быть предложено настроить каталог для хранения обновлений. `C:\wsus` является соответствующим расположением; Однако вы можете указать другой путь.  
   
         ![Путь WSUS](./media/configure-windows-server-update-services-wsus/WSUS_Wiz1.png "WSUS_Wiz1")  
   
@@ -83,7 +83,7 @@ ms.locfileid: "76761908"
   
     #### <a name="to-update-by-using-microsoft-update"></a>Обновление с помощью Центр обновления Майкрософт  
   
-    1.  Если вы решили синхронизировать с Центр обновления Майкрософт, не нужно вносить никаких изменений на странице **Выбор вышестоящего сервера** . Щелкните **Далее**.  
+    1.  Если вы решили синхронизировать с Центр обновления Майкрософт, не нужно вносить никаких изменений на странице **Выбор вышестоящего сервера** . Нажмите кнопку **Далее**.  
   
         ![Синхронизация с вышестоящим сервером WSUS](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
   
@@ -203,4 +203,3 @@ ms.locfileid: "76761908"
 6.  Выберите новую группу компьютеров, измените ее **состояние** на **ANY**и нажмите кнопку **Обновить**. Теперь все компьютеры должны быть назначены этой группе и перечислены в правой области. Обычно можно продолжать работу, когда узлы показывают предупреждения, такие, как **этот узел еще не сообщил о состоянии**.  
   
     ![Измените состояние на Any и нажмите кнопку Обновить.](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChangeStatusAnyRefresh.png "SQL_Server_PDW_WSUSChangeStatusAnyRefresh")  
-  
