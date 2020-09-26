@@ -3,18 +3,18 @@ title: Развертывание SQL Azure для пограничных выч
 description: Развертывание экземпляров SQL Azure для пограничных вычислений в Azure Data Studio
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.topic: conceptual
+ms.topic: how-to
 author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan
-ms.custom: seodec18
+ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: eab4881c53ce26790a78a7da69a4bd48731fecfa
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 89732af2b2fc5926193519b4a6508b97ac998c88
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990007"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364121"
 ---
 # <a name="deploy-azure-sql-edge-with-azure-data-studio-preview"></a>Развертывание SQL Azure для пограничных вычислений с Azure Data Studio (предварительная версия)
 

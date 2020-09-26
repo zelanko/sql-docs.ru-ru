@@ -3,18 +3,18 @@ title: Заметки о выпуске
 description: В этой статье содержатся заметки о выпуске Azure Data Studio с ноября 2017 года до настоящего момента. Для многих общих проблем приводятся ссылки на дополнительные сведения.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.topic: conceptual
+ms.topic: overview
 author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 09/22/2020
-ms.openlocfilehash: 1eaeb177fbd4cdc16190cbbc40efc76a3b468ac5
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: aa55d393955eecaa4ba9af947985622334c59141
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989987"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364197"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Заметки о выпуске для Azure Data Studio
 

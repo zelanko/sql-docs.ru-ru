@@ -102,8 +102,6 @@
           href: extensions/wizard-extension.md
     - name: 'Интегрированный терминал (PowerShell, Bash)'
       href: integrated-terminal.md
-    - name: сочетания клавиш
-      href: keyboard-shortcuts.md
     - name: Группы серверов
       href: server-groups.md
     - name: Система управления версиями
@@ -132,14 +130,14 @@
       href: code-snippets.md
     - name: Просмотр ресурсов SQL Azure
       href: azure-resource-explorer.md
+    - name: сочетания клавиш
+      href: keyboard-shortcuts.md
     - name: Сбор данных об использовании
       href: usage-data-collection.md
-    - name: Параметры рабочей области и пользователя
-      href: settings.md
     - name: Проверка подлинности Windows (Kerberos)
       href: enable-kerberos.md
-    - name: Сбор данных об использовании
-      href: usage-data-collection.md
+    - name: Параметры рабочей области и пользователя
+      href: settings.md
 - name: Ссылки
   items:
     - name: Средства SQL
