@@ -61,12 +61,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35c55f7a989899e46c1189909fd4d90041ac8165
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: df75737944bb7d21bf4a3f8884688915eca52827
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024453"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227418"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -1110,7 +1110,7 @@ IF EXISTS
 
 Если вы определили какой-либо из столбцов в инструкции ALTER TABLE с пользовательским типом для среды CLR или с псевдонимом типа данных, вам потребуется разрешение REFERENCES для этого типа.
 
-Для добавления столбца, который обновляет строки таблицы, требуется разрешение **UPDATE** для этой таблицы. Например, добавление столбца **NOT NULL** со значением по умолчанию или добавление столбца идентификаторов, если таблица не пуста.
+Для добавления или изменения столбца, который обновляет строки таблицы, требуется разрешение **UPDATE** для этой таблицы. Например, добавление столбца **NOT NULL** со значением по умолчанию или добавление столбца идентификаторов, если таблица не пуста.
 
 ## <a name="examples"></a><a name="Example_Top"></a> Примеры
 

@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9e945d07f357055904fe31bb54746e94e69a7d46
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: ca8827f5dcee9b25d873ac7fed83679480bedb44
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91137128"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227268"
 ---
 # <a name="install-a-python-custom-runtime-for-sql-server"></a>Установка настраиваемой среды выполнения Python для SQL Server
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -117,7 +117,7 @@ python.exe -m pip install pandas
 2. Give permissions to **SID S-1-15-2-1**.
     ```cmd
     icacls "%PYTHONHOME%" /grant *S-1-15-2-1:(OI)(CI)RX /T
-    
+
 >[!NOTE]
 >The preceding command grants permissions to the computer **SID S-1-15-2-1**, which is equivalent to ALL APPLICATION PACKAGES on an English version of Windows. Alternatively, you can use `icacls "%R_HOME%" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T` on an English version of Windows.
 
@@ -134,7 +134,7 @@ net start MSSQLLAUNCHPAD$MSSQLSERVER
 
 ## <a name="download-python-language-extension"></a>Скачивание расширения языка Python
 
-Скачайте ZIP-файл [python-lang-extension.zip](https://go.microsoft.com/fwlink/?linkid=2143952), содержащий расширение языка Python.
+Скачайте [ZIP-файл с расширением языка Python для Windows](https://github.com/microsoft/sql-server-language-extensions/releases). Рекомендуется использовать версию выпуска в рабочей среде. Используйте версию для отладки в среде разработки или тестирования, так как она предоставляет журналы с подробными сведениями, позволяющими анализировать ошибки.
 
 ## <a name="register-external-language"></a>Регистрация внешнего языка
 
@@ -280,7 +280,7 @@ sudo systemctl restart mssql-launchpadd
 ```
 ## <a name="download-python-language-extension"></a><a name="download-python-linux"></a>Скачивание расширения языка Python
 
-Скачайте ZIP-файл [python-lang-extension.zip](https://go.microsoft.com/fwlink/?linkid=2143793), содержащий расширение языка Python.
+Скачайте [ZIP-файл с расширением языка Python для Linux](https://github.com/microsoft/sql-server-language-extensions/releases). Рекомендуется использовать версию выпуска в рабочей среде. Используйте версию для отладки в среде разработки или тестирования, так как она предоставляет журналы с подробными сведениями, позволяющими анализировать ошибки.
 
 ## <a name="register-external-language"></a>Регистрация внешнего языка
 

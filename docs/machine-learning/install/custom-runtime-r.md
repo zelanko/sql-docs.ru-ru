@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a147dc29131e8764b723bc981567faae9593f369
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: 8d9ba741433cf5e010861dd3096ac9bf8b4f1707
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91137104"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227166"
 ---
 # <a name="install-an-r-custom-runtime-for-sql-server"></a>Установка настраиваемой среды выполнения R для SQL Server
 
@@ -164,7 +164,7 @@ net start MSSQLLAUNCHPAD$MSSQLSERVER
 
 ## <a name="download-r-language-extension"></a>Скачивание расширения языка R
 
-Скачайте ZIP-файл [R-lang-extension.zip](https://go.microsoft.com/fwlink/?linkid=2143953), содержащий расширение языка R.
+Скачайте [ZIP-файл с расширением языка R для Windows](https://github.com/microsoft/sql-server-language-extensions/releases). Рекомендуется использовать версию выпуска в рабочей среде. Используйте версию для отладки в среде разработки или тестирования, так как она предоставляет журналы с подробными сведениями, позволяющими анализировать ошибки.
 
 ## <a name="register-external-language"></a>Регистрация внешнего языка
 
@@ -343,7 +343,7 @@ sudo systemctl restart mssql-launchpadd
 
 ## <a name="download-r-language-extension"></a>Скачивание расширения языка R
 
-Скачайте ZIP-файл [R-lang-extension.zip](https://go.microsoft.com/fwlink/?linkid=2143954), содержащий расширение языка R.
+Скачайте [ZIP-файл с расширением языка R для Linux](https://github.com/microsoft/sql-server-language-extensions/releases). Рекомендуется использовать версию выпуска в рабочей среде. Используйте версию для отладки в среде разработки или тестирования, так как она предоставляет журналы с подробными сведениями, позволяющими анализировать ошибки.
 
 ## <a name="register-external-language"></a>Регистрация внешнего языка
 

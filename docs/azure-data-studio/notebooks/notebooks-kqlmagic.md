@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 04/27/2020
-ms.openlocfilehash: f927f2259c96b0b42e184d0f4b0ee7e49cd5df01
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: 61b87d2dae44f30f84b513f6809ba8597de7712f
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91136859"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226974"
 ---
 # <a name="kqlmagic-in-azure-data-studio"></a>Kqlmagic в Azure Data Studio
 
@@ -107,6 +107,10 @@ ms.locfileid: "91136859"
    ```python
    %kql azureDataExplorer://code;cluster='help';database='Samples'
    ```
+
+    > [!Note]
+    > Если вы используете собственный кластер ADX, включите в строку подключения регион следующим образом:   
+    ```%kql azuredataexplorer://code;cluster='mycluster.westus';database='mykustodb'```
 
    Для проверки подлинности используется имя входа устройства. Скопируйте код из выходных данных и выберите **проверка подлинности**, чтобы открыть браузер, где необходимо вставить код. После успешного выполнения проверки подлинности можно вернуться к Azure Data Studio, чтобы продолжить выполнение остальной части скрипта.
 
@@ -210,7 +214,7 @@ ms.locfileid: "91136859"
 
 1. Убедитесь, что для параметра **Ядро** установлено *Python3*.
 
-   ![Изменить](media/notebooks-kqlmagic/change-kernel.png)
+   ![Change](media/notebooks-kqlmagic/change-kernel.png)
 
 2. Загрузите Kqlmagic.
 
