@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0a06e9b6-a1e4-4293-867b-5c3f5a8ff62c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 645d927a66deba3d19c44872a28abc16b2054fd7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: fc41c7e1a848ffd7b57012f0fbb1093a9115da3e
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539751"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498262"
 ---
 # <a name="sysavailability_replicas-transact-sql"></a>sys.availability_replicas (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,15 +57,15 @@ ms.locfileid: "89539751"
 |**modify_date**|**datetime**|Дата последнего изменения реплики.<br /><br /> NULL = на данном экземпляре сервера реплика отсутствует.|  
 |**backup_priority**|**int**|Представляет определяемый пользователем приоритет выполнения резервного копирования на данной реплике по отношению к другим репликам в той же группе доступности. Значение представляет собой целое число в диапазоне от 0 до 100.<br /><br /> Дополнительные сведения см. в статье [Активные вторичные реплики: резервное копирование во вторичных репликах (группы доступности Always On)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).|  
 |**read_only_routing_url**|**nvarchar(256)**|Конечная точка подключения (URL-адрес) реплики доступности, доступной только для чтения. Дополнительные сведения см. в статье [Настройка маршрутизации только для чтения в группе доступности (SQL Server)](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md).|  
-|**seeding_mode**|**tinyint**|Одно из двух значений: </br></br> 0: вручную </br></br> 1: автоматический|
-|**seeding_mode_desc**|**nvarchar(60)**|Описывает режим заполнения. </br></br> MANUAL </br></br> AUTOMATIC|
+|**seeding_mode**|**tinyint**|Одно из двух значений: </br></br> 0: автоматический </br></br> 1: вручную|
+|**seeding_mode_desc**|**nvarchar(60)**|Описывает режим заполнения. </br></br> AUTOMATIC </br></br>MANUAL|
   
 ## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  Требует разрешения VIEW ANY DEFINITION на экземпляре сервера.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sys.availability_groups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
  [Обзор групп доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Группы доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
