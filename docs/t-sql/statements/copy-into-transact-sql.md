@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL) (предварительная версия)
 titleSuffix: (Azure Synapse Analytics) - SQL Server
 description: Использование инструкции COPY в Azure Synapse Analytics для загрузки данных из внешних учетных записей хранения.
-ms.date: 08/05/2020
+ms.date: 09/25/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 68c4e1d526a1385dee1a5868bbf382b25e21d797
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: 28711d123d4084c973d301f7fa93c9f5d598986f
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024563"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380839"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -136,13 +136,19 @@ WITH
 *CREDENTIAL (IDENTITY = ", SECRET = ")*</br>
 *CREDENTIAL* задает механизм проверки подлинности для доступа к внешней учетной записи хранения. Ниже приведены методы проверки подлинности.
 
-|                          |                CSV                |              Parquet               |                ORC                 |
-| :----------------------: | :-------------------------------: | :-------------------------------:  | :-------------------------------:  |
-|  **Хранилище BLOB-объектов Azure**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |              SAS/KEY               |              SAS/KEY               |
-| **Azure Data Lake 2-го поколения** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS (конечная точка BLOB-объекта)/MSI (конечная точка DFS)/SERVICE PRINCIPAL/KEY/AAD | SAS (конечная точка BLOB-объекта)/MSI (конечная точка DFS)/SERVICE PRINCIPAL/KEY/AAD |
+|                          |                CSV                |                      Parquet                       |                        ORC                         |
+| :----------------------: | :-------------------------------: | :------------------------------------------------: | :------------------------------------------------: |
+|  **Хранилище BLOB-объектов Azure**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |                      SAS/KEY                       |                      SAS/KEY                       |
+| **Azure Data Lake 2-го поколения** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD |
 
+1\. Необходимо использовать конечную точку большого двоичного объекта ( **.blob**. core.windows.net) во внешнем пути к папке.
 
-При проверке подлинности в AAD или общедоступной учетной записи хранения указывать CREDENTIAL не требуется. 
+2\. Необходимо использовать конечную точку dfs ( **.dfs**. core.windows.net) во внешнем пути к папке.
+
+> [!NOTE]  
+>
+> - При проверке подлинности в AAD или общедоступной учетной записи хранения указывать CREDENTIAL не требуется. 
+>  - Если ваша учетная запись хранения связана с виртуальной сетью, необходимо пройти проверку подлинности с использованием MSI (управляемое удостоверение).
 
 - Проверка подлинности на основе подписанных URL-адресов (SAS)
   

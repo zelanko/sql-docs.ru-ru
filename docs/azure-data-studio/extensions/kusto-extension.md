@@ -9,18 +9,20 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: 52f8bb103aad960750a74be1a4e35b0d1d5be5d7
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: fe620c08da690a61d41a0fef5f18132c246ef739
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364071"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379619"
 ---
 # <a name="kusto-kql-extension-for-azure-data-studio-preview"></a>Расширение Kusto (KQL) для Azure Data Studio (предварительная версия)
 
 Расширение Kusto (KQL) для [Azure Data Studio](../what-is.md) позволяет подключаться к кластерам [Azure Data Explorer](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview) и выполнять к ним запросы.
 
-Теперь пользователи могут подключаться к своим кластерам Azure Data Explorer и просматривать их, создавать и выполнять запросы KQL, а также разрабатывать записные книжки с помощью ядра Kusto с технологией IntelliSense. Включив встроенный интерфейс Kusto (KQL) в Azure Data Studio, инженеры данных, аналитики данных и специалисты по обработке и анализу данных могут быстро отслеживать тенденции и аномалии в больших объемах хранимых данных в Azure Data Explorer.
+Теперь пользователи могут создавать и выполнять запросы KQL, а также разрабатывать записные книжки с помощью [ядра Kusto](../notebooks/notebooks-kusto-kernel.md) с технологией IntelliSense.
+
+Включив встроенный интерфейс Kusto (KQL) в Azure Data Studio, инженеры данных, аналитики данных и специалисты по обработке и анализу данных могут быстро отслеживать тенденции и аномалии в больших объемах хранимых данных в Azure Data Explorer.
 
 Сейчас это расширение находится в режиме предварительной версии.
 
@@ -53,7 +55,7 @@ ms.locfileid: "91364071"
 
 Найдите свой кластер Azure Data Explorer на [портале Azure](https://ms.portal.azure.com/#home), а затем найдите универсальный код ресурса (URI) для кластера.
 
-:::image type="content" source="media/kusto-extension/kusto-extension-adx-cluster-uri.png" alt-text="URI":::
+:::image type="content" source="media/kusto-extension/kusto-extension-adx-cluster-uri.png" alt-text="Расширение Data Explorer":::
 
 Вы также можете сразу приступить к работе, используя кластер *help.kusto.windows.net*.
 
@@ -80,7 +82,7 @@ ms.locfileid: "91364071"
     7. Поле **Имя (необязательно)** оставьте пустым.
         1. Это поле можно использовать для присвоения псевдонима вашему серверу.
 
-    :::image type="content" source="media/kusto-extension/kusto-extension-connection-details.png" alt-text="Сведения о подключении":::
+    :::image type="content" source="media/kusto-extension/kusto-extension-connection-details.png" alt-text="Расширение Data Explorer":::
 
 ## <a name="how-to-query-an-azure-data-explorer-database-in-azure-data-studio"></a>Как выполнить запрос к базе данных Azure Data Explorer в Azure Data Studio
 
@@ -118,24 +120,31 @@ StormEvents
 
 Параметры расширения выглядят следующим образом.
 
-:::image type="content" source="media/kusto-extension/kusto-extension-settings.png" alt-text="Параметры расширения Kusto (KQL)":::
+:::image type="content" source="media/kusto-extension/kusto-extension-settings.png" alt-text="Расширение Data Explorer":::
 
 ## <a name="sanddance-visualization"></a>Визуализация SandDance
 
 [Расширение SandDance](https://docs.microsoft.com/sql/azure-data-studio/sanddance-extension) с расширением Kusto (KQL) в Azure Data Studio объединяют сводят вместе широкие возможности интерактивной визуализации. В результирующем наборе запроса KQL нажмите кнопку **Визуализатор**, чтобы запустить [SandDance](https://sanddance.js.org/).
 
-:::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="Визуализация SandDance":::
+:::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="Расширение Data Explorer":::
 
-## <a name="limitations-and-considerations"></a>Ограничения и рекомендации
+## <a name="known-issues"></a>Известные проблемы
 
-- Прежде чем выполнять запрос Azure Data Explorer, необходимо выбрать базу данных для кластера этой службы.
-- Если кластер Azure Data Explorer слишком долго бездействует, он может отключиться.
-    - Обходное решение. Отключитесь от кластера и повторите подключение.
+| Сведения | Обходной путь |
+|---------|------------|
+| [Вьюлет подключения Kusto не работает после перезагрузки](https://github.com/microsoft/azuredatastudio/issues/12475). | Н/Д |
+| [Не удается автоматически выполнить повторное подключение](https://github.com/microsoft/azuredatastudio/issues/11830). | Отключитесь и повторно подключитесь к кластеру Azure Data Explorer. |
+| [Повторное подключение кластера обновления Kusto выполняется неправильно](https://github.com/microsoft/azuredatastudio/issues/11824). | Отключитесь и повторно подключитесь к кластеру Azure Data Explorer. |
+| [При подключении к кластеру вместо базы данных будет выводится панель мониторинга кластера](https://github.com/microsoft/azuredatastudio/issues/12549) | Н/Д |
+| Для каждой таблицы в базе данных кластера данных Azure можно выбрать параметр **SELECT TOP 1000**, но не **TAKE 10**. | Н/Д |
+
+Можно отправить [запрос функции](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=feature_request.md&title=), чтобы оставить отзыв для команды специалистов по продукту.  
+Можно сообщить об [ошибке](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=bug_report.md&title=), чтобы оставить отзыв для команды специалистов по продукту.
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
 - [Создание и запуск записной книжки Kusto](../notebooks/notebooks-kusto-kernel.md)
-- [Записная книжка Kqlmagic в Azure Data Studio](../notebooks-kqlmagic.md)
+- [Записная книжка Kqlmagic в Azure Data Studio](../notebooks/notebooks-kqlmagic.md)
 - [Памятка по преобразованию из SQL в Kusto](https://docs.microsoft.com/azure/data-explorer/kusto/query/sqlcheatsheet)
 - [Что такое Azure Data Explorer?](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview)
 - [Использование визуализации SandDance](https://sanddance.js.org/)

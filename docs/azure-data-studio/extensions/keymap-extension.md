@@ -3,24 +3,24 @@ title: Создание расширения раскладки клавиату
 description: В этом учебнике показано, как создать расширение раскладки клавиатуры, чтобы добавить пользовательские функции для Azure Data Studio.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.topic: how-to
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: b1e1b5fb4d21e153133e76ff612f54c8153e0772
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 76fd809993b47f3ae3dad363887eb9ac735e6b0b
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111658"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364081"
 ---
 # <a name="create-an-azure-data-studio-keymap-extension"></a>Создание расширения раскладки клавиатуры Azure Data Studio
 
 В этом руководстве показано, как создать расширение Azure Data Studio. Расширение создает знакомые настраиваемые сочетания клавиш SSMS в Azure Data Studio.
 
-В этом руководстве вы узнаете, как выполнять следующие задачи.
+В этой статье раскрываются следующие темы:
 > [!div class="checklist"]
 > - Создание проекта расширения
 > - Установка генератора расширений
@@ -41,7 +41,7 @@ ms.locfileid: "91111658"
 
 ## <a name="install-the-extension-generator"></a>Установка генератора расширений
 
-Чтобы упростить процесс создания расширений, мы создали [генератор расширений](https://code.visualstudio.com/docs/extensions/yocode) с помощью Yeoman. Для его установки выполните следующую команду в командной строке.
+Чтобы упростить процесс создания расширений, мы создали [генератор расширений](https://code.visualstudio.com/docs/extensions/yocode) с помощью Yeoman. Для его установки выполните код в командной строке ниже:
 
 ```console
 `npm install -g yo generator-azuredatastudio`
@@ -79,40 +79,9 @@ ms.locfileid: "91111658"
 
 Эти настраиваемые сочетания клавиш можно легко найти и заменить. Выберите *Открыть сочетания клавиш*, чтобы отобразить вкладку **Сочетания клавиш** в Azure Data Studio, выполните поиск строки *запрос* и выберите **Изменить настраиваемое сочетание клавиш**. Закончив изменять настраиваемое сочетание клавиш, вы можете просмотреть обновленное сочетание в файле keybindings.json (чтобы увидеть его, выберите *Открыть сочетания клавиш*).
 
-:::image type="content" source="media/keymap-extension/keyboard-shortcuts.png" alt-text="сочетанием клавиш":::;
+:::image type="content" source="media/keymap-extension/keyboard-shortcuts.png" alt-text="Генератор расширений":::;
 
-:::image type="content" source="media/keymap-extension/key-bindings-json.png" alt-text="Расширение Keybindings.json":::
-
-**Шаг 2. Добавление сочетаний клавиш в расширение**
-
-Чтобы добавить сочетания клавиш в расширение, откройте файл *package.json* (в расширении) и замените раздел `contributes` следующим кодом.
-
-```json
-"contributes": {
-  "keybindings": [
-    {
-      "key": "shift+cmd+e",
-      "command": "runQueryKeyboardAction"
-    },
-    {
-      "key": "ctrl+cmd+e",
-      "command": "workbench.view.explorer"
-    },
-    {
-      "key": "alt+f1",
-      "command": "workbench.action.query.shortcut1"
-    },
-    {
-      "key": "shift+alt+enter",
-      "command": "workbench.action.toggleFullScreen"
-    },
-    {
-      "key": "f8",
-      "command": "workbench.view.connections"
-    },
-    {
-      "key": "ctrl+m",
-      "command": "runCurrentQueryWithActualPlanKeyboardAction"
+:::image type="content" source="media/keymap-extension/key-bindings-json.png" alt-text="Генератор расширений"
     }
   ]
 }
@@ -126,15 +95,15 @@ ms.locfileid: "91111658"
 
 Нажмите клавишу **F5**, чтобы запустить Azure Data Studio в режиме отладки с запущенным расширением.
 
-:::image type="content" source="media/keymap-extension/install-extension.png" alt-text="Установка расширения":::
+:::image type="content" source="media/keymap-extension/install-extension.png" alt-text="Генератор расширений":::
 
-:::image type="content" source="media/keymap-extension/test-extension.png" alt-text="тестирование расширения":::
+:::image type="content" source="media/keymap-extension/test-extension.png" alt-text="Генератор расширений":::
 
 Сочетания клавиш — это одно из самых быстрых для создания расширений, поэтому ваше новое расширение должно работать и быть готовым к совместному использованию.
 
 ## <a name="package-your-extension"></a>Упаковка расширения
 
-Чтобы предоставить общий доступ другим пользователям, нужно упаковать расширение в один файл. Его можно опубликовать в магазине расширений Azure Data Studio или предоставить для общего доступа другим участникам команды или сообщества. Для этого нужно установить другой пакет npm из командной строки.
+Чтобы предоставить общий доступ другим пользователям, нужно упаковать расширение в один файл. Его можно опубликовать в магазине Marketplace расширений Azure Data Studio или предоставить для общего доступа другим участникам команды или сообщества. Для этого нужно установить другой пакет npm из командной строки.
 
 ```console
 `npm install -g vsce`
@@ -154,11 +123,11 @@ ms.locfileid: "91111658"
 
 После этого был создан файл ssmskeymap-0.1.0.vsix, готовый к установке и совместному использованию.
 
-:::image type="content" source="media/keymap-extension/extensions.png" alt-text="Установка":::
+:::image type="content" source="media/keymap-extension/extensions.png" alt-text="Генератор расширений":::
 
 ## <a name="publish-your-extension-to-the-marketplace"></a>Публикация расширения в Marketplace
 
-Магазин расширений Azure Data Studio пока реализован не полностью, но текущая процедура заключается в размещении VSIX расширения где-либо (например, на странице выпуска GitHub) и последующей отправке запроса на вытягивание для обновления [этого JSON-файла](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json) с использованием сведений о расширении.
+Магазин расширений Azure Data Studio Marketplace пока находится в стадии разработки, но текущая процедура заключается в размещении VSIX расширения где-либо (например, на странице выпуска GitHub) и последующей отправке запроса на вытягивание для обновления [этого JSON-файла](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json) с использованием сведений о расширении.
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

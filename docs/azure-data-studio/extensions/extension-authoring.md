@@ -9,14 +9,14 @@ ms.author: maghan
 ms.reviewer: alayu
 ms.custom: ''
 ms.date: 08/26/2020
-ms.openlocfilehash: 9dbb60dab5d2b1a5dc3a95189a93d6617ed83b6b
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 92c6a5d9522d015786eafdefaeea64b46925b92b
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91123431"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364041"
 ---
-# <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>Расширение функциональных возможностей путем создания расширений Azure Data Studio
+# <a name="extend-functionality-by-creating-azure-data-studio-extensions"></a>Расширение функциональных возможностей путем создания расширений Azure Data Studio
 
 Расширения в Azure Data Studio позволяют легко добавлять дополнительные функциональные возможности в базовую установку Azure Data Studio.
 
@@ -26,13 +26,13 @@ ms.locfileid: "91123431"
 
 Если вы хотите расширить возможности Azure Data Studio, то можете создать собственное расширение и опубликовать его в коллекции расширений.
 
-### <a name="writing-an-extension"></a>Написание расширения
+### <a name="write-an-extension"></a>Запись расширений
 
 #### <a name="prerequisites"></a>Предварительные требования
 
 Для разработки расширения необходимо установить [Node.js](https://nodejs.org/) и указать его расположение в переменной `$PATH`. Node.js включает в себя npm, диспетчер пакетов Node.js, который будет использоваться для установки генератора расширений.
 
-Создать расширение можно с помощью генератора расширений Azure Data Studio. [Генератор расширений](https://www.npmjs.com/package/generator-azuredatastudio) Yeoman позволяет очень легко создавать проекты расширений. Чтобы запустить генератор, введите следующую команду в командной строке:
+Создать расширение можно с помощью генератора расширений Azure Data Studio. [Генератор расширений](https://www.npmjs.com/package/generator-azuredatastudio) Yeoman позволяет очень легко создавать проекты расширений. Затем запустите генератор и введите в командной строке следующую команду:
 
 ```console
 npm install -g yo generator-azuredatastudio # Install the generator
@@ -49,12 +49,12 @@ yo azuredatastudio
 
 Для отладки нового расширения можно использовать расширение Visual Studio Code [Отладка Azure Data Studio](https://github.com/kevcunnane/sqlops-debug).
 
-Шаги:
+Отладка расширения:
 
 1. Откройте расширение в [Visual Studio Code](https://code.visualstudio.com/).
 2. Установите расширение "Отладка Azure Data Studio".
-3. Нажмите клавишу **F5** или щелкните значок отладки, а затем выберите **Запустить**.
-4. Новый экземпляр Azure Data Studio запустится в особом режиме (узел разработки расширения) и будет поддерживать ваше расширение.
+3. Нажмите клавишу **F5** или щелкните значок **Отладка**, а затем выберите **Запустить**.
+4. Новый экземпляр Azure Data Studio запустится в особом режиме (узел разработки расширения). Теперь этот новый экземпляр осведомлен о вашем расширении.
 
 ## <a name="create-an-extension-package"></a>Создание пакета расширения
 
@@ -67,24 +67,24 @@ vsce package
 # The myExtensionName.vsix file has now been generated
 ```
 
-С помощью пакета VSIX можно предоставить общий доступ к своему расширению в локальной среде и в частном порядке, поделившись файлом `.vsix` и используя команду **Расширения: установить из файла VSIX** из палитры команд, чтобы установить расширение в Azure Data Studio.
+С помощью пакета VSIX можно предоставить общий доступ к своему расширению в локальной среде и в частном порядке, поделившись файлом VSIX и используя команду **"Расширения": установить из файла VSIX** из палитры команд, чтобы установить расширение в Azure Data Studio.
 
 ## <a name="publish-an-extension"></a>Публикация расширения
 
 Чтобы опубликовать новое расширение в Azure Data Studio, выполните указанное ниже действие.
 
-1. Добавьте расширение в https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json.
-2. В настоящее время мы не поддерживаем размещение расширений сторонних разработчиков, поэтому вместо скачивания расширения в Azure Data Studio есть возможность перехода на страницу скачивания. Чтобы открыть страницу скачивания расширения, задайте значение ресурса "Microsoft.AzureDataStudio.DownloadPage".
+1. Добавьте расширение в [коллекцию расширений](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json).
+2. Сейчас мы не поддерживаем размещение сторонних расширений. Вместо загрузки расширения в Azure Data Studio можно перейти на страницу загрузки. Чтобы открыть страницу скачивания расширения, задайте значение ресурса **Microsoft.AzureDataStudio.DownloadPage**.
 3. Создайте запрос на вытягивание к ветви release/extensions.
 4. Отправьте команде запрос на проверку.
 
 Расширение будет проверено и добавлено в коллекцию расширений.
 
-### <a name="publishing-extension-updates"></a>Публикация обновлений расширения
+### <a name="publish-extension-updates"></a>Публикация обновлений расширения
 
 Процесс публикации обновлений аналогичен процессу публикации расширения. Не забудьте обновить версию в файле package.json.
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Дальнейшие действия
 
 Пошаговые инструкции по началу работы см. в одном из следующих руководств по созданию расширений:
 

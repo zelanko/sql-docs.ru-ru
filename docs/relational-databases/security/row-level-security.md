@@ -18,12 +18,12 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88f809409337557603120cc87a24874319a96c9a
-ms.sourcegitcommit: c5f0c59150c93575bb2bd6f1715b42716001126b
+ms.openlocfilehash: f0e3fc990d2da5c651003224a8d6f60234f02c78
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89392192"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380079"
 ---
 # <a name="row-level-security"></a>Безопасность на уровне строк
 
@@ -348,7 +348,7 @@ INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
 SELECT * FROM Sales;
 ```
 
-Создайте внешнюю таблицу Azure Synapse на основе созданной таблицы Sales.
+Создайте внешнюю таблицу Azure Synapse на основе только что созданной таблицы Sales.
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<user_password>';
@@ -363,7 +363,7 @@ CREATE EXTERNAL TABLE Sales_ext WITH (LOCATION='<your_table_name>', DATA_SOURCE=
 AS SELECT * FROM sales;
 ```
 
-Предоставьте трем пользователям внешней таблицы разрешение SELECT.
+Дайте разрешение на SELECT трем пользователям созданной внешней таблицы Sales_ext.
 
 ```sql
 GRANT SELECT ON Sales_ext TO Sales1;  

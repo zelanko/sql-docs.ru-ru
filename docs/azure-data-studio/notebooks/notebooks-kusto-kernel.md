@@ -9,16 +9,16 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: efcea597a431d33cfbd2978e36f3b95d27986772
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 416fd5aabb07db3deed1d4d78769249a99113216
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226964"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379599"
 ---
 # <a name="create-and-run-a-kusto-kql-notebook-preview"></a>Создание и запуск записной книжки Kusto (KQL) (предварительная версия)
 
-В этой статье показано, как создать и запустить [записную книжку Azure Data Studio](../notebooks-guidance.md) с помощью [расширения Kusto (KQL)](../extensions/kusto-extension.md), подключившись к кластеру Azure Data Explorer.
+В этой статье показано, как создать и запустить [записную книжку Azure Data Studio](./notebooks-guidance.md) с помощью [расширения Kusto (KQL)](../extensions/kusto-extension.md), подключившись к кластеру Azure Data Explorer.
 
 С помощью расширения Kusto (KQL) можно изменить параметр ядра на **Kusto**.
 
@@ -44,7 +44,7 @@ ms.locfileid: "91226964"
 
 3. В качестве **ядра** выберите *Kusto*. Убедитесь, что в меню **Подключиться к** задано имя кластера и база данных. В этой статье мы используем кластер help.kusto.windows.net с данными базы данных Samples.
 
-   :::image type="content" source="media/notebooks-kusto-kernel/set-kusto-kernel.png" alt-text="Заполнение полей "Ядро" и "Присоединить к"":::
+   :::image type="content" source="media/notebooks-kusto-kernel/set-kusto-kernel.png" alt-text="Открытие записной книжки":::
 
 Вы можете сохранить записную книжку с помощью команды **Сохранить** или **Сохранить как...** в меню **Файл**.
 
@@ -56,14 +56,14 @@ ms.locfileid: "91226964"
 
 1. Выберите меню **Присоединить к** на панели инструментов записной книжки, а затем выберите **Изменить подключение**.
 
-   :::image type="content" source="media/notebooks-kusto-kernel/kusto-select-attach-to-change-connections.png" alt-text="Изменение подключений":::
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-select-attach-to-change-connections.png" alt-text="Открытие записной книжки":::
 
    > [!Note]
    > Убедитесь, что поле базы данных заполнено. Для записных книжек Kusto требуется указать базу данных.
 
 2. Теперь можно выбрать последний сервер, использованный для подключения, или ввести сведения о новом подключении.
 
-   :::image type="content" source="media/notebooks-kusto-kernel/kusto-change-connection-cluster.png" alt-text="Выбор другого кластера":::
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-change-connection-cluster.png" alt-text="Открытие записной книжки":::
 
    > [!Note]
    > Укажите имя кластера без `https://`.
@@ -76,7 +76,7 @@ ms.locfileid: "91226964"
 
 1. Добавьте новую ячейку кода, выбрав команду **+Код** на панели инструментов.
 
-   :::image type="content" source="media/notebooks-kusto-kernel/kusto-kernel-code.png" alt-text="Блок кода ядра Kusto":::
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-kernel-code.png" alt-text="Открытие записной книжки":::
 
 2. Скопируйте приведенный ниже пример, вставьте его в ячейку и нажмите **Выполнить ячейку**. Этот пример запрашивает данные StormEvents для определенного типа события.
 
@@ -85,7 +85,7 @@ ms.locfileid: "91226964"
     | where EventType == "Waterspout"
    ```
 
-   :::image type="content" source="media/notebooks-kusto-kernel/run-kusto-notebook-cell.png" alt-text="Выполнение ячейки":::
+   :::image type="content" source="media/notebooks-kusto-kernel/run-kusto-notebook-cell.png" alt-text="Открытие записной книжки":::
 
 ## <a name="save-the-result-or-show-chart"></a>Сохранение результата или отображение диаграммы
 
@@ -102,13 +102,16 @@ ms.locfileid: "91226964"
     | limit 10
 ```
 
-:::image type="content" source="media/notebooks-kusto-kernel/run-notebook-save-results.png" alt-text="Сохранение результата":::
+:::image type="content" source="media/notebooks-kusto-kernel/run-notebook-save-results.png" alt-text="Открытие записной книжки":::
 
-## <a name="limitations-and-considerations"></a>Ограничения и рекомендации
+## <a name="known-issues"></a>Известные проблемы
 
-- Прежде чем выполнять запрос Azure Data Explorer, необходимо выбрать базу данных для кластера этой службы.
-- Если кластер Azure Data Explorer слишком долго бездействует, он может отключиться.
-    - Обходное решение. Отключитесь от кластера и повторите подключение.
+| Сведения | Обходной путь |
+|---------|------------|
+| [В результате запроса отображаются только заголовки столбцов](https://github.com/microsoft/azuredatastudio/issues/12565). | Н/Д |
+
+Можно отправить [запрос функции](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=feature_request.md&title=), чтобы оставить отзыв для команды специалистов по продукту.  
+Можно сообщить об [ошибке](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=bug_report.md&title=), чтобы оставить отзыв для команды специалистов по продукту.
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
