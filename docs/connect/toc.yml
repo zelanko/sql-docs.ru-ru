@@ -5987,8 +5987,6 @@
               href: ../ado/guide/data/handling-errors-in-vbscript.md
             - name: Обработка ошибок в Visual C++
               href: ../ado/guide/data/handling-errors-in-visual-c.md
-            - name: Обработка ошибок в Visual J++
-              href: ../ado/guide/data/handline-errors-in-visual-j.md
             - name: Обработка ошибок в JScript
               href: ../ado/guide/data/handling-errors-in-jscript.md
         - name: Прогнозирование ошибок
@@ -6011,8 +6009,6 @@
               href: ../ado/guide/data/ado-event-instantiation-visual-basic.md
             - name: 'Создание экземпляра события ADO: Visual C++'
               href: ../ado/guide/data/ado-event-instantiation-visual-c.md
-            - name: 'Создание экземпляра события ADO: Visual J++'
-              href: ../ado/guide/data/ado-event-instantiation-visual-j.md
             - name: 'Создание экземпляра события ADO: VBScript'
               href: ../ado/guide/data/ado-event-instantiation-vbscript.md
             - name: 'Создание экземпляра события ADO: JScript'

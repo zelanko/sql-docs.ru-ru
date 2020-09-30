@@ -1831,7 +1831,7 @@
           items:
             - name: Создание
               href: relational-databases/tables/create-edge-constraints.md
-            - name: DELETE
+            - name: Удалить
               href: relational-databases/tables/delete-edge-constraint.md
             - name: Изменить
               href: relational-databases/tables/modify-edge-constraint.md
@@ -4819,6 +4819,10 @@
     - name: "Службы миграции Azure\_>"
       displayName: 'DMS, Data Migration Service, Azure Data Migration Service'
       href: /azure/dms/dms-overview
+    - name: Руководства по переносу
+      items:
+        - name: Из DB2
+          href: sql-server/migrate/guides/db2-to-sql-server.md
     - name: Службы Data Quality Services (DQS)
       items:
         - name: Обзор
