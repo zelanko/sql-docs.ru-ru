@@ -24,13 +24,13 @@ ms.author: drskwier
 manager: viharp
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
-ms.date: 07/22/2020
-ms.openlocfilehash: 2d1eb8e37de9956352dad852d74760fecdc8086b
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.date: 09/28/2020
+ms.openlocfilehash: 502e9674d97addf23c89f4e24eb676c36f1d36fd
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943086"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497742"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Скачивание SQL Server Management Studio (SSMS)
 
@@ -82,6 +82,9 @@ SQL Server Management Studio 18.6:
 ## <a name="previous-versions"></a>Предыдущие версии
 
 Эта статья применима только к последней версии SSMS. Предыдущие версии SSMS можно скачать на [этой странице](../ssms/release-notes-ssms.md#previous-ssms-releases).
+
+> [!NOTE]
+> В декабре 2021 г. выпуски SSMS до версии 18.6 перестанут использовать многофакторную проверку подлинности через Azure Active Directory. Чтобы продолжить использование Azure Active Directory с MFA, установите SSMS как минимум версии 18.6 или обновите среду до этой версии.
 
 ## <a name="unattended-install"></a>Автоматическая установка
 
@@ -145,12 +148,12 @@ SQL Server Management Studio 18.6:
 
 Поддерживаемое оборудование:
 
-- Процессор с тактовой частотой не ниже 1,8 ГГц. Рекомендуется использовать как минимум двухъядерный процессор.
+- Процессор x86 (Intel, AMD) с частотой как минимум 1,8 ГГц. Рекомендуется использовать как минимум двухъядерный процессор.
 - 2 ГБ ОЗУ; рекомендуется 4 ГБ ОЗУ (минимум 2,5 ГБ при выполнении на виртуальной машине)
 - Доступное место на жестком диске объемом от 2 до 10 ГБ
 
 > [!NOTE]
-> SSMS работает только в Windows (AMD или Intel). Если вам требуется средство, которое работает на платформах, отличных от Windows, рассмотрите Azure Data Studio. Azure Data Studio — это новое кроссплатформенное средство для macOS, Linux, а также Windows. Дополнительные сведения см. в разделе [Azure Data Studio](../azure-data-studio/what-is.md).
+> SSMS работает только на Windows. Если вам нужно средство для операционных систем, отличных от Windows, рекомендуем использовать Azure Data Studio. Azure Data Studio — это кроссплатформенное средство для macOS, Linux и Windows. Дополнительные сведения см. в разделе [Azure Data Studio](../azure-data-studio/what-is.md).
 
 [!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
 
