@@ -25,12 +25,12 @@ manager: viharp
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 09/28/2020
-ms.openlocfilehash: 502e9674d97addf23c89f4e24eb676c36f1d36fd
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: 23137d46453189bb5a04c2860ab79c0c66e8d78f
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497742"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603464"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Скачивание SQL Server Management Studio (SSMS)
 
@@ -83,8 +83,7 @@ SQL Server Management Studio 18.6:
 
 Эта статья применима только к последней версии SSMS. Предыдущие версии SSMS можно скачать на [этой странице](../ssms/release-notes-ssms.md#previous-ssms-releases).
 
-> [!NOTE]
-> В декабре 2021 г. выпуски SSMS до версии 18.6 перестанут использовать многофакторную проверку подлинности через Azure Active Directory. Чтобы продолжить использование Azure Active Directory с MFA, установите SSMS как минимум версии 18.6 или обновите среду до этой версии.
+[!INCLUDE[ssms-connect-azure-ad](../includes/ssms-connect-azure-ad.md)]
 
 ## <a name="unattended-install"></a>Автоматическая установка
 

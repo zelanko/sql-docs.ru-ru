@@ -6,12 +6,12 @@ metadata:
   title: Документация по Microsoft SQL | Документация Майкрософт
   description: 'Узнайте, как использовать возможности SQL Server и SQL Azure для эффективного управления базами данных, размещаемыми как локально, так и в облаке. (Быстрая ссылка: https://aka.ms/sqldocs)'
   ms.topic: hub-page
-  ms.openlocfilehash: 5d6fffc9d875b0581e2358f86cd5e612df5adec9
-  ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+  ms.openlocfilehash: 74d8bef8777f43355896af4ab16e5c2ef91a92d7
+  ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 09/22/2020
-  ms.locfileid: "90916413"
+  ms.lasthandoff: 09/30/2020
+  ms.locfileid: "91603434"
 highlightedContent:
   items:
   - title: Попробуйте SQL Server 2019
@@ -45,7 +45,7 @@ productDirectory:
     - url: https://docs.microsoft.com/azure/azure-sql/managed-instance/
       text: Управляемый экземпляр SQL Azure
     - url: https://docs.microsoft.com/azure/azure-sql-edge/overview
-      text: SQL Azure для пограничных вычислений (предварительная версия)
+      text: SQL Azure для пограничных вычислений
     - url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
       text: Azure Synapse Analytics (хранилище данных SQL)
   - title: SQL Server в Linux

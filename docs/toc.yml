@@ -4378,11 +4378,7 @@
         - name: Использование и сбор данных диагностики
           items:
             - name: "Приложение к конфиденциальности в SQL\_Server"
-              items:
-                - name: "SQL Server\_2017 и более ранние версии"
-                  href: sql-server/sql-server-privacy.md
-                - name: "SQL\_Server\_2019"
-                  href: sql-server/sql-server-privacy-ver15.md
+              href: sql-server/sql-server-privacy.md
             - name: "Настройка использования SQL\_Server и данных диагностики"
               href: sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md
             - name: Настройка использования средств и данных диагностики

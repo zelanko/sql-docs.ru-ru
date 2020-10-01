@@ -7,13 +7,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
-ms.date: 12/16/2019
-ms.openlocfilehash: a0ff8c253af6165602b626da9aedbba09bb819f8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 9/2/2020
+ms.openlocfilehash: a955c552ab3e78cd34cbb80269e1910b3a63a560
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253306"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603382"
 ---
 # <a name="create-a-report-server-database-ssrs-configuration-manager"></a>Создание базы данных сервера отчетов (диспетчер конфигурации служб SSRS)  
 
@@ -84,8 +84,6 @@ ms.locfileid: "75253306"
 - [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
 - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
-  
-- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
 
 Если вы создаете базу данных сервера отчетов на удаленном компьютере, настройте подключение через учетную запись пользователя домена или учетную запись службы с сетевым доступом. Если вы используете удаленный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], тщательно выберите правильные учетные данные для подключения сервера отчетов к этому экземпляру. Дополнительные сведения см. в разделе [Настройка соединения с базой данных сервера отчетов &#40;диспетчер конфигурации SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   

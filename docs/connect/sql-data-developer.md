@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ff3fb2b5e789d9eb9d89100e1722b37c9eae6385
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: a6faff357f036f521a88fa37b15db5ead82b5758
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988479"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529405"
 ---
 # <a name="sql-data-developer"></a>Разработчик данных SQL
 Используйте платформу данных SQL от Майкрософт для создания ориентированных на данные решений на мобильных устройствах и рабочих столах для веб-серверов, корпоративных серверов и облака.  
 
 ## <a name="sql-data-storage"></a>Хранение данных SQL
-* [Компонент SQL Server Database Engine](../database-engine/configure-windows/sql-server-database-engine.md). Компонент ядра СУБД SQL Server используется для создания реляционных баз данных, для обработки транзакций в сети или для интерактивной аналитической обработки. 
+* [Компонент SQL Server Database Engine](../database-engine/install-windows/install-sql-server-database-engine.md). Компонент ядра СУБД SQL Server используется для создания реляционных баз данных, для обработки транзакций в сети или для интерактивной аналитической обработки. 
 * [Azure SQL.](https://docs.microsoft.com/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview) Использование SQL Azure для перемещения базы данных в облако 
 * [SQL Compact](https://www.microsoft.com/download/details.aspx?id=30709). SQL Server Compact используется для создания автономных и периодически подключаемых приложений для мобильных устройств, рабочих столов и веб-клиентов.
 * [LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md). Используйте LocalDB в процессе разработки для написания и тестирования кода Transact-SQL без необходимости управления полным экземпляром SQL Server.
