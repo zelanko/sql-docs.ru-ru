@@ -23,12 +23,12 @@ ms.assetid: f468da29-78c3-4f10-8a3c-17905bbf46f2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c14c26591e16c423564acafd9aeb33be6940002f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 677ad00bd29d3f689c1722e1fc1abd65374426a5
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548558"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624781"
 ---
 # <a name="sysdm_exec_dms_workers-transact-sql"></a>sys. dm_exec_dms_workers (Transact-SQL)
 [!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
@@ -39,12 +39,12 @@ ms.locfileid: "89548558"
   
 |Имя столбца|Тип данных|Description|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|`nvarchar(32)`|Запрос, частью которого является эта Рабочая роль DMS. request_id, step_index и dms_step_index формируют ключ для этого представления.||  
+|execution_id|`nvarchar(32)`|Запрос, частью которого является эта Рабочая роль DMS. <br /><br /> execution_id, step_index и dms_step_index образуют ключ для этого представления.||  
 |step_index|`int`|Шаг запроса, частью которого является Рабочая роль DMS.|См. раздел индекс шага в [sys. dm_exec_distributed_request_steps &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  
 |dms_step_index|`int`|Шаг в плане DMS, в котором выполняется этот рабочий процесс.|См [. раздел sys. dm_exec_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
 |compute_node_id|`int`|Узел, на котором запущена Рабочая роль.|См. раздел [sys. dm_exec_compute_nodes &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
 |distribution_id|`int`|||  
-|тип|`nvarcha(32)`|||  
+|тип|`nvarchar(32)`|Тип рабочего потока DMS, представляемый этой записью.|"DIRECT_CONVERTER", "DIRECT_READER", "FILE_READER", "HASH_CONVERTER", "HASH_READER", "ROUNDROBIN_CONVERTER", "EXPORT_READER", "EXTERNAL_READER", "EXTERNAL_WRITER", "PARALLEL_COPY_READER", "REJECT_WRITER", "WRITER"|  
 |status|`nvarchar(32)`|Состояние этого шага|"Pending", "работает", "Complete", "Failed", "Ундофаилед", "Пендингканцел", "recommit", "Undone", "Abortd"|  
 |bytes_per_sec|`bigint`|||  
 |bytes_processed|`bigint`|||  
@@ -63,7 +63,7 @@ ms.locfileid: "89548558"
 |.|`nvarchar(4000)`|||
 |compute_pool_id|`int`|Уникальный идентификатор пула.|
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Устранение неполадок в Polybase с помощью динамических административных представлений](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления, связанные с базами данных &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
