@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 7519b35bb89704acad32f3dfe46c2f916b4dc441
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 2e3490f1a381bbe3a27f9860df2884c759387c39
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951359"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636094"
 ---
 # <a name="configure-distributed-replay-for-database-experimentation-assistant"></a>Настройка распределенное воспроизведение для Database Experimentation Assistant
 
@@ -53,7 +53,7 @@ Database Experimentation Assistant (ДЕА) использует средств�
    `NET STOP "SQL Server Distributed Replay Controller"`</br>
    `NET START "SQL Server Distributed Replay Controller"`
 
-Дополнительные параметры конфигурации см. в разделе [Configure распределенное воспроизведение](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay).
+Дополнительные параметры конфигурации см. в разделе [Configure распределенное воспроизведение](../tools/distributed-replay/configure-distributed-replay.md).
 
 ## <a name="configure-dcom"></a>Настройка DCOM
 
@@ -93,7 +93,7 @@ Database Experimentation Assistant (ДЕА) использует средств�
 
     Если конфигурация прошла успешно, в журнале отображается сообщение, **зарегистрированное с помощью имени \> контроллера <контроллера**.
 
-Дополнительные параметры конфигурации см. в разделе [Configure распределенное воспроизведение](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay).
+Дополнительные параметры конфигурации см. в разделе [Configure распределенное воспроизведение](../tools/distributed-replay/configure-distributed-replay.md).
 
 ## <a name="set-up-distributed-replay-administration-tools"></a>Настройка средств администрирования распределенное воспроизведение
 
@@ -126,6 +126,6 @@ Database Experimentation Assistant (ДЕА) использует средств�
 2. Предоставьте пользователям учетной записи службы клиента разрешения на доступ к базам данных в экземпляре SQL Server. Для выполнения запросов на экземпляре SQL Server необходимы разрешения.
 3. Запустите воспроизведение.
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также раздел
 
 - Сведения о воспроизведении захваченной трассировки в обновленной тестовой среде см. в разделе [Воспроизведение трассировки в Database experimentation Assistant](database-experimentation-assistant-replay-trace.md).

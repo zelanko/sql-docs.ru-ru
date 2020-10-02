@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 4caf97a9afb4a40ba82e2fe6730d46dbdcbea7f6
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 67b427e7d1d73b072ce2ec319bfc3cbcbbcfddf9
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951539"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636104"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Запись трассировки в Database Experimentation Assistant
 
@@ -80,7 +80,7 @@ Database Experimentation Assistant (ДЕА) можно использовать 
 
 В следующей таблице перечислены события и соответствующие данные столбцов, которые ДЕА собирает для трассировок.
   
-|Название мероприятия|Текстовые данные (1)|Двоичные данные (2)|Идентификатор базы данных (3)|Имя узла (8)|Имя приложения (10)|Имя для входа (11)|SPID (12)|Время начала (14)|Время окончания (15)|Имя базы данных (35)|Последовательность событий (51)|Система (60)|  
+|Имя события|Текстовые данные (1)|Двоичные данные (2)|Идентификатор базы данных (3)|Имя узла (8)|Имя приложения (10)|Имя для входа (11)|SPID (12)|Время начала (14)|Время окончания (15)|Имя базы данных (35)|Последовательность событий (51)|Система (60)|  
 |---|---|---|---|---|---|---|---|---|---|---|---|---|  
 |**RPC: завершено (10)**||*|*|*|*|*|*|*|*|*|*|*|  
 |**RPC: запуск (11)**||*|*|*|*|*|*|*||*|*|*|  
@@ -133,7 +133,7 @@ Database Experimentation Assistant (ДЕА) можно использовать 
 
 - Имя компьютера, на котором работает SQL Server, является допустимым. Для подтверждения попробуйте подключиться к компьютеру, на котором работает SQL Server, с помощью SQL Server Management Studio (SSMS).
 - Конфигурация брандмауэра не блокирует подключения к компьютеру, на котором работает SQL Server.
-- Пользователь имеет разрешения, перечисленные в [разделе часто задаваемые вопросы о воспроизведении](https://docs.microsoft.com/sql/dea/database-experimentation-assistant-replay-trace?view=sql-server-ver15#frequently-asked-questions-about-trace-replay).
+- Пользователь имеет разрешения, перечисленные в [разделе часто задаваемые вопросы о воспроизведении](./database-experimentation-assistant-replay-trace.md?view=sql-server-ver15#frequently-asked-questions-about-trace-replay).
 - Имя трассировки не соответствует стандартному соглашению о смене ключей (захват \_ 1). Вместо этого попробуйте использовать такие имена трассировок, как Capture \_ 1A или Capture1.
 
 Ниже приведены некоторые возможные ошибки, которые могут возникнуть, и способы их устранения.
@@ -145,8 +145,8 @@ Database Experimentation Assistant (ДЕА) можно использовать 
 |Сейчас на целевом сервере выполняется трассировка ДЕА.|Активная трассировка уже запущена на целевом сервере. Вы не можете начать новую трассировку, если уже выполняется трассировка на уровне сервера.|  
 |Не удается открыть запрошенную базу данных для записи трассировки. Эта ошибка может быть вызвана неверным именем базы данных.|Указанная база данных не существует или недоступна текущему пользователю. Используйте правильное имя базы данных.|  
 
-Если вы видите другие ошибки с меткой " *код ошибки SQL*", см. раздел [ядро СУБД Errors](https://docs.microsoft.com/sql/relational-databases/errors-events/database-engine-events-and-errors) For detailed descriptions.
+Если вы видите другие ошибки с меткой " *код ошибки SQL*", см. раздел [ядро СУБД Errors](../relational-databases/errors-events/database-engine-events-and-errors.md) For detailed descriptions.
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также раздел
 
 - Сведения о настройке средств распределенное воспроизведение в SQL Server перед воспроизведением захваченной трассировки см. в разделе [настройка распределенное воспроизведение для Database experimentation Assistant](database-experimentation-assistant-configure-replay.md).
