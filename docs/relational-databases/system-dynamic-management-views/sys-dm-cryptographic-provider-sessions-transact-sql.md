@@ -1,6 +1,6 @@
 ---
 description: sys.dm_cryptographic_provider_sessions (Transact-SQL)
-title: sys. dm_cryptographic_provider_sessions (Transact-SQL) | Документация Майкрософт
+title: sys.dm_cryptographic_provider_sessions (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9a4de02b-1a07-4850-979a-0861fddb7f9d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 223d3b1ebac4230436f069c2ec9415e7d57feb3f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e7a9aba28efb9367d6dc935a8bf97141aff22b2c
+ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542305"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91662163"
 ---
 # <a name="sysdm_cryptographic_provider_sessions-transact-sql"></a>sys.dm_cryptographic_provider_sessions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,10 +55,10 @@ sys.dm_cryptographic_provider_sessions(session_identifier)
 |**identity**|**nvarchar(128)**|Идентификатор, используемый для проверки подлинности поставщика служб шифрования.|  
 |**spid**|**short**|Идентификатор SPID сеанса для соединения. Дополнительные сведения см. в статье [@@SPID (Transact-SQL)](../../t-sql/functions/spid-transact-sql.md).|  
   
-## <a name="remarks"></a>Примечания  
- Представление **sys. dm_cryptographic_provider_sessions** является видимым для общедоступного для текущего соединения. Для просмотра всех криптографических соединений необходимо иметь разрешение **Control** Server.  
+## <a name="permissions"></a>Разрешения  
+ Члены роли public Server могут использовать **sys.dm_cryptographic_provider_sessions** для получения сведений о текущем соединении. Для просмотра всех криптографических соединений требуется разрешение **Control** Server.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Представления каталога безопасности (Transact-SQL)](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Расширенное управление ключами (EKM)](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
