@@ -8457,10 +8457,18 @@
           items:
             - name: SQL Server Management Studio (SSMS)
               href: ssms/sql-server-management-studio-ssms.md
-        - name: Учебники
+        - name: Краткие руководства
           items:
             - name: Подключение и отправка запроса к SQL Server
-              href: ssms/tutorials/connect-query-sql-server.md
+              href: ssms/quickstarts/connect-query-sql-server.md
+        - name: Учебники
+          items:
+            - name: "Конфигурация\_SSMS"
+              href: ssms/tutorials/ssms-configuration.md
+            - name: Дополнительные советы и рекомендации
+              href: ssms/tutorials/ssms-tricks.md
+            - name: Объекты скриптов
+              href: ssms/tutorials/scripting-ssms.md
             - name: Импорт неструктурированного файла
               href: relational-databases/import-export/import-flat-file-wizard.md
         - name: Основные понятия
@@ -8747,12 +8755,6 @@
               href: ssms/install-other-languages.md
             - name: "Использование шаблонов в\_SSMS"
               href: ssms/template/templates-ssms.md
-            - name: Объекты скриптов
-              href: ssms/tutorials/scripting-ssms.md
-            - name: "Конфигурация\_SSMS"
-              href: ssms/tutorials/ssms-configuration.md
-            - name: Дополнительные советы и рекомендации
-              href: ssms/tutorials/ssms-tricks.md
             - name: Настройка меню и сочетаний клавиш
               href: ssms/customize-menus-and-shortcut-keys.md
             - name: Настройка инструментария WMI для отображения состояния сервера в инструментальных средствах SQL Server
