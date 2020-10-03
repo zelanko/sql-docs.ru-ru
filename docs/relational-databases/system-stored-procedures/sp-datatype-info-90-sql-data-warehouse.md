@@ -12,12 +12,12 @@ ms.assetid: 1d043964-dc6e-4c3e-ab61-bc444d5e25ae
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d86602d1bbbc308abe13cf2daac8429207d28d4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3834e4f86933a41b4951c80fe7b8a1e9e91e6709
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447328"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670577"
 ---
 # <a name="sp_datatype_info_90-sql-data-warehouse"></a>sp_datatype_info_90 (хранилище данных SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -34,6 +34,8 @@ ms.locfileid: "88447328"
 sp_datatype_info_90 [ [ @data_type = ] data_type ]   
      [ , [ @ODBCVer = ] odbc_version ]   
 ```  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## <a name="arguments"></a>Аргументы  
 `[ @data_type = ] data_type` Номер кода для указанного типа данных. Для получения списка всех типов данных пропустите этот аргумент. *data_type* имеет **тип int**и значение по умолчанию 0.  
@@ -55,7 +57,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 |CREATE_PARAMS|**varchar (** 32 **)**|Описание параметров создания типа данных. Например, **десятичный** тип "точность, масштаб", **float** имеет значение null, а **varchar** — "max_length".|  
 |NULLABLE|**smallint**|Указывает возможность содержать значение NULL.<br /><br /> 1 = значения NULL допускаются.<br /><br /> 0 = значения NULL не допускаются.|  
 |CASE_SENSITIVE|**smallint**|Чувствительность к регистру.<br /><br /> 1 = все столбцы этого типа чувствительны к регистру (для параметров сортировки).<br /><br /> 0 = все столбцы этого типа не чувствительны к регистру.|  
-|ДОСТУПНЫЙ ДЛЯ ПОИСКА|**smallint**|Задает возможность поиска для типа столбца:<br /><br /> 1 = поиск невозможен;<br /><br /> 2 = возможен поиск с оператором LIKE;<br /><br /> 3 = возможен поиск с предложением WHERE;<br /><br /> 4 = возможен поиск с предложением WHERE или оператором LIKE.|  
+|SEARCHABLE|**smallint**|Задает возможность поиска для типа столбца:<br /><br /> 1 = поиск невозможен;<br /><br /> 2 = возможен поиск с оператором LIKE;<br /><br /> 3 = возможен поиск с предложением WHERE;<br /><br /> 4 = возможен поиск с предложением WHERE или оператором LIKE.|  
 |UNSIGNED_ATTRIBUTE|**smallint**|Знак типа данных.<br /><br /> 1 = тип данных без знака.<br /><br /> 0 = тип данных со знаком.|  
 |MONEY|**smallint**|Указывает тип данных **money** .<br /><br /> 1 = тип данных **money** .<br /><br /> 0 = не тип данных **money** .|  
 |AUTO_INCREMENT|**smallint**|Автоматическое приращение.<br /><br /> 1 = автоматическое приращение выполняется.<br /><br /> 0 = автоматическое приращение не выполняется.<br /><br /> NULL = атрибут неприменим.<br /><br /> Приложение может вставлять значение в столбец с этим атрибутом, но не может обновлять значения такого столбца. За исключением типа данных **bit** , AUTO_INCREMENT допустимы только для типов данных, относящихся к категориям точных числовых и приблизительных числовых типов данных.|  
@@ -68,7 +70,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 |INTERVAL_PRECISION|**smallint**|Значение для начальной точности интервала, если *data_type* — **интервал**; в противном случае — NULL.|  
 |USERTYPE|**smallint**|значение **usertype** из таблицы systypes.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  sp_datatype_info эквивалентен SQLGetTypeInfo в ODBC. Возвращаемые этой процедурой результаты упорядочиваются по значению DATA_TYPE, а затем по степени соответствия типа данных аналогичному типу данных ODBC SQL.  
   
 ## <a name="permissions"></a>Разрешения  

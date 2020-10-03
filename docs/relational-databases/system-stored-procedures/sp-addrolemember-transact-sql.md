@@ -19,12 +19,12 @@ ms.assetid: a583c087-bdb3-46d2-b9e5-3921b3e6d10b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 59193e08c71a7827e347be5b06bbe4cc81ffa826
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a5531450e79b036138e581aa0fb8083ebb121c6f
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486372"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670867"
 ---
 # <a name="sp_addrolemember-transact-sql"></a>Хранимая процедура sp_addrolemember (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,6 +41,8 @@ ms.locfileid: "88486372"
 ```syntaxsql
 sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'  
 ```    
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## <a name="arguments"></a>Аргументы  
  [ @rolename =] "*роль*"  
@@ -52,7 +54,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Член роли, добавляемый с помощью процедуры sp_addrolemember, наследует разрешения этой роли. Если добавляемый член — участник уровня Windows, не имеющий соответствующего пользователя базы данных, этот пользователь будет создан, но может быть не полностью сопоставлен с именем входа. Всегда проверяйте, существует ли имя входа, и предоставлен ли ему доступ к базе данных.  
   
  Роль не может быть членом самой себя. Такие «циклические» определения недопустимы, даже если подразумевается только косвенное членство через несколько промежуточных ролей.  
@@ -118,11 +120,11 @@ EXEC sp_addrolemember 'Production', 'UserMary'
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
+ [Хранимые процедуры безопасности (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [sp_addsrvrolemember (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
  [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
- [sp_grantdbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [sp_grantdbaccess (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Роли уровня базы данных](../../relational-databases/security/authentication-access/database-level-roles.md)  
   
   

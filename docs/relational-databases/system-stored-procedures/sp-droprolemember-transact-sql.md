@@ -19,12 +19,12 @@ ms.assetid: c2f19ab1-e742-4d56-ba8e-8ffd40cf4925
 ms.author: vanto
 author: VanMSFT
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1bbd0dfdeedb0954bb82f97dae6419a9a7f2d852
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: af77dc8f8ac53b650b0c04de3ffc46e00df97483
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469570"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670377"
 ---
 # <a name="sp_droprolemember-transact-sql"></a>sp_droprolemember (Transact-SQL)
 
@@ -52,6 +52,8 @@ sp_droprolemember [ @rolename = ] 'role' ,
 sp_droprolemember 'role' ,  
      'security_account'  
 ```  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## <a name="arguments"></a>Аргументы  
 `[ @rolename = ] 'role'` Имя роли, из которой удаляется элемент. Аргумент *Role* имеет тип **sysname**и не имеет значения по умолчанию. *роль* должна существовать в текущей базе данных.  
@@ -61,7 +63,7 @@ sp_droprolemember 'role' ,
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  sp_droprolemember исключает члена из роли базы данных, удаляя строку из таблицы sysmembers. При удалении члена из роли он теряет все разрешения, которые имел как член этой роли.  
   
  Для удаления пользователя из предопределенной роли сервера пользуйтесь хранимой процедурой sp_dropsrvrolemember. Пользователи не могут быть удалены из роли public, а dbo не может быть удален из какой-либо роли.  
@@ -86,9 +88,9 @@ EXEC sp_droprolemember 'Sales', 'JonB'
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
- [sp_droprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)   
+ [Хранимые процедуры безопасности (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Хранимая процедура sp_addrolemember (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
+ [sp_droprole (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)   
  [sp_dropsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
  [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
