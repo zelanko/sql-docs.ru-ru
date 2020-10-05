@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: c90a8050-0ff4-4c83-9925-261f2f2ccfe9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bf89101c070b883fe33cf1b4065f732f2c305943
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 5e6fb32744d64f99beac6c414f1b82581b9fadcb
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88981325"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724276"
 ---
 # <a name="refresh-method-rds"></a>Метод Refresh (служба удаленных рабочих столов)
 Повторно запрашивает источник данных, указанный в свойстве [Connect](./connect-property-rds.md) , и обновляет результаты запроса.  
   
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](/dotnet/framework/wcf/).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,7 +42,7 @@ DataControl.Refresh
  *DataControl*  
  Объектная переменная, представляющая [RDS. Объект элемента управления](./datacontrol-object-rds.md) .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Перед использованием метода **Refresh** необходимо задать свойства [Connect](./connect-property-rds.md), [Server](./server-property-rds.md)и [SQL](./sql-property.md) . Все элементы управления, привязанные к данным, в форме, связанной с **RDS. Объект элемента управления** данные будет отражать новый набор записей. Освобождается существующий объект [набора записей](../ado-api/recordset-object-ado.md) , и все несохраненные изменения отбрасываются. Метод **Refresh** автоматически делает первую запись текущей записью.  
   
  Рекомендуется периодически вызывать метод **Refresh** при работе с данными. Если получить данные и оставить их на клиентском компьютере в течение определенного времени, скорее всего, они устаревают. Возможно, любые внесенные изменения будут завершаться ошибкой, так как другой пользователь мог изменить запись и отправил изменения перед вами.  

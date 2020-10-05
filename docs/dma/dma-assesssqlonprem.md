@@ -15,12 +15,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: f45a598c9e96d33f1edcc41c748a6751df712391
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 5c0ddd9aa7c89f7f77212155a0b85089c34087d9
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886111"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726304"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Выполнение оценки переноса SQL Server с использованием Помощника по миграции данных
 
@@ -151,7 +151,7 @@ ms.locfileid: "82886111"
 
 Это позволяет просматривать объединенные результаты в проекте центра миграции Azure.
 
-Подробное пошаговое руководство по оценке готовности к работе можно найти [здесь](https://docs.microsoft.com/sql/dma/dma-assess-sql-data-estate-to-sqldb?view=sql-server-2017).
+Подробное пошаговое руководство по оценке готовности к работе можно найти [здесь](./dma-assess-sql-data-estate-to-sqldb.md?view=sql-server-2017).
 
    ![Отправка результатов в службу "миграция Azure"](../dma/media/dma-assesssqlonprem/upload-to-azure-migrate.png)
 

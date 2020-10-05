@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 06297993-fe72-4446-aa76-3b8bc25444f6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6ea93fafc19286099970a127bec7d39eb7b707fb
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: da513d9e8659faee766e0f1390facd59fc9c051c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88982665"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91722575"
 ---
 # <a name="connect-property-example-vbscript"></a>Пример свойства Connect (VBScript)
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](/dotnet/framework/wcf/).  
   
  В этом коде показано, как задать свойство [Connect](./connect-property-rds.md) во время разработки:  
   

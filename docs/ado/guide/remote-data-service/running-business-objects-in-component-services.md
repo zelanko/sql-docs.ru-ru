@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 3077d0b6-42d6-4f10-8e5d-42e6204f1109
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4343d8e1bd04d7e8044fa7f3f1b5de6184466d3f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 7e4cafeaf590c07ec52153a2932de3e105e26950
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977725"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91723105"
 ---
 # <a name="running-business-objects-in-component-services"></a>Запуск бизнес-объектов в службах компонентов
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](/dotnet/framework/wcf/).  
   
  Бизнес-объекты могут быть исполняемыми файлами (exe) или библиотеками динамической компоновки (. dll). Конфигурация, используемая для запуска бизнес-объекта, зависит от того, является ли объект файлом DLL или exe:  
   

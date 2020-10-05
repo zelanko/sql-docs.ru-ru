@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 3d1855c4-419c-4810-b5ea-6c874b5e2905
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e0e79cf0185f4657cd8192dd3dcd9bcce47c962e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 031681460a9f5b958bc08f2b39cec6b3ec794623
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977525"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91722965"
 ---
 # <a name="step-4-server-returns-the-recordset-rds-tutorial"></a>Шаг 4. Сервер возвращает набор записей (учебник по RDS)
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](/dotnet/framework/wcf/).  
   
  RDS преобразует полученный объект **набора записей** в форму, которая может быть отправлена обратно клиенту (то есть *маршалирует* **набор записей**). Точный вид преобразования и способ его отправки зависит от того, находится ли сервер в Интернете или интрасети, в локальной сети или в виде библиотеки динамической компоновки. Однако эта информация не является критической. все, что важно, это то, что RDS отправляет **набор записей** обратно клиенту.  
   

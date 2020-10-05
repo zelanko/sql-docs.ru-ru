@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: e382be5f109efff9a0a08eb434017334fe54d2c2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cd20a9ca7a25e1e00613ea5c87baa9eda41accc8
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466757"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726643"
 ---
 # <a name="reference-data-services-in-dqs"></a>Службы эталонных данных в DQS
 
@@ -38,7 +38,7 @@ ms.locfileid: "88466757"
   
  Органичная интеграция между Marketplace и DQS упрощает шаги, связанные с обнаружением, исследованием и получением информации для проектов служб DQS из среды служб DQS. Данные из DQS обрабатываются, что помогает пользователям DQS обеспечивать высокое качество данных за счет нового подхода — использования DQS, Marketplace и поставщиков служб ссылочных данных вместе друг с другом.  
   
- Чтобы использовать эталонные данные из Marketplace в DQS для очистки, требуется наличие ключа учетной записи Marketplace. Ключ учетной записи Marketplace создается бесплатно. Платить нужно только за подписку на платные наборы данных. Сама подписка является бесплатной, также не требуется платить за использование бесплатных наборов данных. Подробные сведения о создании ключа учетной записи Marketplace см. в разделе [Создание учетной записи](https://go.microsoft.com/fwlink/?LinkId=212936) ( https://go.microsoft.com/fwlink/?LinkId=212936) .  
+ Чтобы использовать эталонные данные из Marketplace в DQS для очистки, требуется наличие ключа учетной записи Marketplace. Ключ учетной записи Marketplace создается бесплатно. Платить нужно только за подписку на платные наборы данных. Сама подписка является бесплатной, также не требуется платить за использование бесплатных наборов данных. Подробные сведения о создании ключа учетной записи Marketplace см. в разделе [Создание учетной записи](/previous-versions/azure/ff717655(v=azure.100)) ( https://go.microsoft.com/fwlink/?LinkId=212936) .  
   
  Кроме того, в рамках DQS вы можете выполнить следующие операции Marketplace:  
   
@@ -75,5 +75,4 @@ ms.locfileid: "88466757"
 |Описывает, как настроить в DQS использование служб эталонных данных из Marketplace или от сторонних поставщиков данных с прямым подключением.|[Настройка служб DQS для использования справочных данных](../data-quality-services/configure-dqs-to-use-reference-data.md)|  
 |Описывает, как сопоставить домен/составной домен в базе знаний со службой эталонных данных.|[Добавление домена или составного домена к ссылочным данным](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
 |Описывает очистку данных с использованием службы эталонных данных.|[Очистка данных с использованием набора знаний об эталонных данных &#40;внешних&#41;](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
-  
   

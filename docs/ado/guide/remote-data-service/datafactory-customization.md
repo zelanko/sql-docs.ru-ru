@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 86d77985-a0d0-405a-8587-c85a20540a0e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 014341cc860e9db53447abc5db08169ba0e0b5b4
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ad2204beb3d6c4abd9b1f68ff6814dc99ded6738
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978205"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724745"
 ---
 # <a name="datafactory-customization"></a>Настройка DataFactory
 Служба Remote Data Service (RDS) позволяет легко выполнять доступ к данным в трехуровневой клиентской и серверной системе. Клиентский элемент управления данными задает параметры соединения и командной строки для выполнения запроса к удаленному источнику данных, а также параметры строки подключения и параметров объекта [набора записей](../../reference/ado-api/recordset-object-ado.md) для выполнения обновления.  
   
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](/dotnet/framework/wcf/).  
   
  Параметры передаются в серверную программу, которая выполняет операцию доступа к данным в удаленном источнике данных. RDS предоставляет серверную программу по умолчанию, именуемую объектом [факта RDSServer.](../../reference/rds-api/datafactory-object-rdsserver.md) DataObject. Объект **RDSServer.** DataObject возвращает любой объект **набора записей** , созданный запросом к клиенту.  
   

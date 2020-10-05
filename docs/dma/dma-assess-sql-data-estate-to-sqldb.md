@@ -15,18 +15,18 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4a4b9567865132d355a6285ecc046bfe6b4a3f7a
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 095c14150a3f78f49a8e1dd6d711b5fefc617d49
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864941"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726345"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Оценка готовности SQL Serverного пространства данных для переноса в базу данных SQL Azure с помощью Помощник по миграции данных
 
 Миграция сотен экземпляров SQL Server и тысяч баз данных в базу данных SQL Azure, предлагаемая нашей платформой как услуга (PaaS), является значительной задачей. Чтобы максимально упростить процесс, необходимо быть уверенным в том, что относительная готовность к миграции. Определение низкого уровня фруктов, включая серверы и базы данных, полностью готовые или требующие минимальных усилий для подготовки к миграции, упрощает и ускоряет работу.
 
-В этой статье приводятся пошаговые инструкции по использованию [Помощник по миграции данных](https://docs.microsoft.com/sql/dma/dma-overview?view=sql-server-2017) для суммирования результатов готовности и их последующей поверхности в центре [миграции Azure](https://portal.azure.com/?feature.customPortal=false#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview) .
+В этой статье приводятся пошаговые инструкции по использованию [Помощник по миграции данных](./dma-overview.md?view=sql-server-2017) для суммирования результатов готовности и их последующей поверхности в центре [миграции Azure](https://portal.azure.com/?feature.customPortal=false#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview) .
 
 >
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Data-Migration-Assistant/player?WT.mc_id=dataexposed-c9-niner]

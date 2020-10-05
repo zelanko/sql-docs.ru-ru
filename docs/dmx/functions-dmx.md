@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 70e448c9d47dbffd4bc37e7b4dfd6e96bf0de9dd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b8e5d887195e27f706ef995ff92e32aa41b9149
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88353560"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726200"
 ---
 # <a name="functions-dmx"></a>Функции (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -49,9 +49,9 @@ FROM [TM_Decision_Tree].CONTENT
 ## <a name="stored-procedures"></a>Хранимые процедуры  
  Чтобы расширить функциональность расширений интеллектуального анализа данных можно создавать хранимые процедуры с помощью сред CLR. Например, модель интеллектуального анализа данных дерева регрессии возвращает коэффициенты, такие как A, B и т. д., которые описывают регрессионное уравнение, но модель не возвращает само уравнение, например, + Bx = y. Однако можно написать хранимую процедуру, которая перемещается по схеме содержимого с помощью объекта модели интеллектуального анализа данных и возвращающую уравнение регрессии на выходе. Таким образом, инструкция расширений интеллектуального анализа данных может возвращать список уравнений регрессии как часть результата запроса.  
   
- **Дополнительные сведения:** [Управление сборками многомерной модели](https://docs.microsoft.com/analysis-services/multidimensional-models/multidimensional-model-assemblies-management)  
+ **Дополнительные сведения:** [Управление сборками многомерной модели](/analysis-services/multidimensional-models/multidimensional-model-assemblies-management)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширения интеллектуального анализа данных &#40;Справочник по DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
  [Расширения интеллектуального анализа данных &#40;Справочник по функциям DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Ссылки на операторы расширений интеллектуального анализа данных &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-operator-reference.md)   
@@ -61,5 +61,4 @@ FROM [TM_Decision_Tree].CONTENT
  [Общие прогнозирующие функции &#40;&#41;расширений интеллектуального анализа данных ](../dmx/general-prediction-functions-dmx.md)   
  [Структура и использование прогнозирующих запросов расширений интеллектуального анализа данных](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Общие сведения об инструкции расширения интеллектуального анализа данных SELECT](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

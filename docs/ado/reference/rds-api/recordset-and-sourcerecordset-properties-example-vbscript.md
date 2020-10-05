@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 95175316-cd10-4cf7-96ba-2a226fd97701
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a1f5137a948674bcc9d48f5d4984b9a3e162d0e3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a6784ba51ce7b57a9682cb573bd035f7bd102e3a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88981475"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724311"
 ---
 # <a name="recordset-and-sourcerecordset-properties-example-vbscript"></a>Примеры свойств Recordset и SourceRecordset (VBScript)
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](/dotnet/framework/wcf/).  
   
  В следующем примере показано, как задать необходимые параметры бизнес-объекта [RDSServer.](./datafactory-object-rdsserver.md) DataObject, используемого по умолчанию во время выполнения.  
   

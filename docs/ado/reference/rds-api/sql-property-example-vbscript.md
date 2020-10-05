@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 32c33bcf-3320-4836-9e2e-99c8978ce581
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 346c2b7b5e58b5c32590fd7a60690dd6de0c5bc0
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d201fab02450bb5972d45edaba71d413ded47c26
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88981135"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724211"
 ---
 # <a name="sql-property-example-vbscript"></a>Пример свойства SQL (VBScript)
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](/dotnet/framework/wcf/).  
   
  В следующем примере кода показано, как задать [RDS. Параметр управления](./datacontrol-object-rds.md) данными SQL во время разработки и привязывает его к элементу управления, поддерживающему данные, используя базу данных с именем *pubs*, которая поставляется с Microsoft SQL Server. Чтобы протестировать пример, скопируйте приведенный ниже код в стандартный ASP-документ с именем **склдесигнвбс. ASP** .  
   

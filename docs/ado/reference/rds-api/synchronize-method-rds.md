@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 36cf462cf7f004055acedb215146d6c909175e79
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: e903d5a3d80af26e9fd1ca36920e5b91adb06b1f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980975"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724168"
 ---
 # <a name="synchronize-method-rds"></a>Метод Synchronize (служба удаленных рабочих столов)
 Синхронизирует заданный набор записей с базой данных, указанной в строке подключения для использования в ADO 2,5 и более поздних версиях.  
   
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](/dotnet/framework/wcf/).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -64,7 +64,7 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
  *пинформатион*  
  Указатель на информационную ошибку, возвращенную **инструкцией EXECUTE**. Если значение равно NULL, сведения об ошибке не возвращаются.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Параметр *хандлерстринг* может иметь значение null. Что происходит в этом случае, зависит от настройки сервера RDS. Строка обработчика "МСДФМАП. Handler" указывает, что следует использовать предоставляемый корпорацией Майкрософт обработчик (Msdfmap.dll). Строка обработчика "МАСДФМАП. Handler sample.ini" указывает, что следует использовать обработчик Msdfmap.dll и что аргумент "sample.ini" должен передаваться в обработчик. Msdfmap.dll будет интерпретировать аргумент как направление использования sample.ini для проверки соединения и строк запроса.  
   
 ## <a name="applies-to"></a>Применение  

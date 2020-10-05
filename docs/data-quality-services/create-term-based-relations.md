@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 29d8da0efeb42d554353fa25395b3058e82e3dbf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0dfc837238d20e58b04b66ae4ea998e60ee80247
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487860"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725403"
 ---
 # <a name="create-term-based-relations"></a>Создание связей на основе термина
 
@@ -100,9 +100,8 @@ ms.locfileid: "88487860"
   
 6.  Нажмите кнопку **Применить изменения** , чтобы применить связи домена на основе термина.  
   
-7.  Нажмите кнопку **Готово** , чтобы завершить операцию управления доменами, как описано в разделе [Завершение операции по управлению доменами](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+7.  Нажмите кнопку **Готово** , чтобы завершить операцию управления доменами, как описано в разделе [Завершение операции по управлению доменами](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130)).  
   
 ##  <a name="follow-up-after-creating-term-based-relations"></a><a name="FollowUp"></a> Дальнейшие действия. После создания связей на основе термина  
  После создания связей на основе термина можно выполнить другие задачи управления доменами с текущим доменом, выполнить обнаружение набора знаний для добавления набора знаний к домену или добавить политику сопоставления к домену. Дополнительные сведения см. в разделах [Обнаружение набора знаний](../data-quality-services/perform-knowledge-discovery.md), [Управление доменом](../data-quality-services/managing-a-domain.md) и [Создание политики сопоставления](../data-quality-services/create-a-matching-policy.md).  
-  
   

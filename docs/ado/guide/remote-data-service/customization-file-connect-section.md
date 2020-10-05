@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 19dfe6f81293234d3615d0c3acaae83c50febc1d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c4350cb9aad6e2ef1d9381cffb6e05b13d09c43c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978275"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724785"
 ---
 # <a name="customization-file-connect-section"></a>Настройка раздела подключения файла
 Поведение обработчика по умолчанию заключается в запрете всех подключений. В разделе **Connect** указываются исключения из этого поведения. Например, если все разделы **соединения** отсутствовали или пусты, то по умолчанию соединения устанавливаться не могут.  
@@ -31,7 +31,7 @@ ms.locfileid: "88978275"
 -   Новая строка подключения, которая заменяет строку подключения клиента.  
   
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](/dotnet/framework/wcf/).  
   
 ## <a name="syntax"></a>Синтаксис  
  Запись доступа по умолчанию имеет вид:  
@@ -52,7 +52,7 @@ connectionString
   
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
   
 |Часть|Описание|  
 |----------|-----------------|  

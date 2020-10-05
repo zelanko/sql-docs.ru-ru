@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 5e74c2da-65ee-4de4-8b41-6eac45c3632e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4771957c1895f6ac861d04f63a43e32a77e3d931
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a9238fa208a5ce415986fee05045dc7ea34e0d67
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977595"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91723005"
 ---
 # <a name="step-2-invoke-the-server-program-rds-tutorial"></a>Шаг 2. Вызовите программу сервера (учебник по RDS)
 При вызове метода *прокси-сервера*клиента фактическая программа на сервере выполняет метод. На этом шаге вы выполните запрос на сервере.  
   
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](/dotnet/framework/wcf/).  
   
  **Часть A** Если вы не использовали [RDSServer.](../../reference/rds-api/datafactory-object-rdsserver.md) в этом руководстве, самый удобный способ выполнить это действие — использовать [RDS. Объект элемента управления](../../reference/rds-api/datacontrol-object-rds.md) . **RDS. Элемент управления** данными объединяет предыдущий этап создания учетной записи-посредника, выполняя этот шаг, выполнив запрос.  
   

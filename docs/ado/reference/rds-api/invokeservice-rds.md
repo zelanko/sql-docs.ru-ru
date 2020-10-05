@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: ad45c676-ec7e-4a3a-9a6b-a54f75eb3012
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: acd5dc5f78319c8fc75891dbaad5a98fc4463196
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 8d3dc0ca3744f715f080e5e34a9d4cd5e88bc8b6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88981975"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724495"
 ---
 # <a name="invokeservice-rds"></a>InvokeService (служба удаленных рабочих столов)
 Возвращает указатель на запрошенный интерфейс в более совместимой версии объекта.  
   
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в  [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в  [службу данных WCF](/dotnet/framework/wcf/).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,7 +50,7 @@ object.InvokeService(REFID riid, IUknown* punkNotSoFunctionalInterface, IUknown*
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение HRESULT, указывающее, был ли успешно вызван метод **инвокесервице** .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Реализация обработчика курсора RDS **инвокесервице** принимает входной набор строк (или несколько результатов), заполняет обработчик курсора из входного набора строк, а затем возвращает указатель на себя.  
   
 ## <a name="applies-to"></a>Применение  

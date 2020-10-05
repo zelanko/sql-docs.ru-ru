@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 73ec65fc7de346ada1232bee7a03dce2aedffa68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a229aacb9110bdd5eefa9dc3987ce39fec8a1e66
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466646"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726628"
 ---
 # <a name="set-domain-properties"></a>Установка свойств домена
 
@@ -41,7 +41,7 @@ ms.locfileid: "88466646"
   
 2.  Задайте свойства нового домена после его создания, как описано в разделе [Create a Domain](../data-quality-services/create-a-domain.md).  
   
-3.  Нажмите кнопку **Готово** , чтобы завершить операцию управления доменами, как описано в разделе [Завершение операции по управлению доменами](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+3.  Нажмите кнопку **Готово** , чтобы завершить операцию управления доменами, как описано в разделе [Завершение операции по управлению доменами](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130)).  
   
 ##  <a name="follow-up-after-setting-domain-properties"></a><a name="FollowUp"></a> Дальнейшие действия. После настройки свойств домена  
  После настройки свойств домена можно выполнить другие задачи управления доменами для этого домена, провести обнаружение набора знаний для добавления набора знаний в домен или добавить в домен политику сопоставления. Дополнительные сведения см. в разделах [Обнаружение набора знаний](../data-quality-services/perform-knowledge-discovery.md), [Управление доменом](../data-quality-services/managing-a-domain.md) и [Создание политики сопоставления](../data-quality-services/create-a-matching-policy.md).  
@@ -90,5 +90,4 @@ ms.locfileid: "88466646"
   
 ###  <a name="disable-syntax-error-algorithms"></a><a name="Syntax"></a> Отключить алгоритмы ошибок синтаксиса  
  Если типом данных является **String**, выберите, чтобы службы DQS не определяли синтаксические ошибки в домене в процессе очистки. Установите этот флажок, если определять синтаксические ошибки для этого домена не нужно. Например, синтаксические ошибки не имеют смысла для серийного номера. Этот элемент управления применяется только к данным строкового типа. Службы DQS не будут проверять синтаксические ошибки в данных нестрокового типа.  
-  
   

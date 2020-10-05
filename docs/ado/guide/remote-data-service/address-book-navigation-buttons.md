@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: f0dd84c6-5c33-4ab9-82b4-4c42dfdd2277
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3e78ab8a8a652f07d93f98b144a5a9ba09f5419b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 65d5686dc605e1ba254f4b7c39e879eb59733d79
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978415"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724845"
 ---
 # <a name="address-book-navigation-buttons"></a>Кнопки навигации адресной книги
 В приложении адресной книги отображаются кнопки навигации в нижней части веб-страницы. С помощью кнопок навигации можно перемещаться по данным в сетке HTML путем выбора первой или последней строки данных или строк, примыкающих к текущему выделению.  
   
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](/dotnet/framework/wcf/).  
   
 ## <a name="navigation-sub-procedures"></a>Процедуры навигации  
  Приложение адресной книги содержит несколько процедур, которые позволяют пользователям щелкать **первую**, **следующую**, **предыдущую**и **последнюю** кнопки для перемещения по данным.  

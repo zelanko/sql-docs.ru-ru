@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3886cd500282d34ef07145913e036a6ab4ad4852
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4e9108fc9bc53361a15d144f1f11afa62f9d5a97
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394860"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726053"
 ---
 # <a name="usage-dmx"></a>Использование (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -37,10 +37,10 @@ ms.locfileid: "88394860"
   
  Столбцы, указанные в качестве типа **прогноза** , используются как входные, так и выходные столбцы. Столбцы, указанные как **PredictOnly** , используются только в качестве выходных столбцов. Столбцы типа Predict могут обрабатываться конкретными алгоритмами по-разному.  
   
- Дополнительные сведения о типах использования столбцов, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] поддерживаемых, см. в разделе [столбцы модели интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns).  
+ Дополнительные сведения о типах использования столбцов, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] поддерживаемых, см. в разделе [столбцы модели интеллектуального анализа данных](/analysis-services/data-mining/mining-model-columns).  
   
-## <a name="see-also"></a>См. также:  
- [Алгоритмы интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ данных&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+## <a name="see-also"></a>См. также  
+ [Алгоритмы интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ данных&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [Расширения интеллектуального анализа данных &#40;Справочник по DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
  [Расширения интеллектуального анализа данных &#40;синтаксические&#41; DMX-элементы](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Расширения интеллектуального анализа данных &#40;Справочник по функциям DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
@@ -50,5 +50,4 @@ ms.locfileid: "88394860"
  [Общие прогнозирующие функции &#40;&#41;расширений интеллектуального анализа данных ](../dmx/general-prediction-functions-dmx.md)   
  [Структура и использование прогнозирующих запросов расширений интеллектуального анализа данных](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Общие сведения об инструкции расширения интеллектуального анализа данных SELECT](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

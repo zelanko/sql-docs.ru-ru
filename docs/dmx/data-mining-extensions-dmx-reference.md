@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6197fc8508e1334e5f8afdcb14aeaf7488890159
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bd6830e46f10ba20642d1975f293b72b768f7e5b
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414090"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726257"
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>Справочник по расширениям интеллектуального анализа данных
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "88414090"
   
  Спецификация определяет основу интеллектуального анализа данных как виртуальный объект модели интеллектуального анализа данных. В объекте модели интеллектуального анализа инкапсулируется все, что известно о конкретной модели. Объект модели интеллектуального анализа данных структурируется подобно таблице SQL, со столбцами, типами данных и метаданными, описывающими модель. Такая структура позволяет использовать язык расширений интеллектуального анализа данных, являющийся расширением SQL, для создания моделей и работы с ними.  
   
- **Дополнительные сведения см. в** [&#40;структурах интеллектуального анализа данных Analysis Services&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-structures-analysis-services-data-mining) .  
+ **Дополнительные сведения см. в** [&#40;структурах интеллектуального анализа данных Analysis Services&#41;](/analysis-services/data-mining/mining-structures-analysis-services-data-mining) .  
   
 ##  <a name="dmx-statements"></a><a name="BKMK_DMXStatements"></a> Инструкции расширений интеллектуального анализа данных  
  Инструкции расширений интеллектуального анализа данных могут использоваться для создания, обработки, удаления, копирования, обзора моделей интеллектуального анализа данных и выполнения прогнозирования по ним. В DMX существует два типа операторов: инструкции определения данных и инструкции обработки данных. Каждый тип инструкций может использоваться для выполнения различных видов задач.  
@@ -100,7 +100,7 @@ ms.locfileid: "88414090"
   
  [К списку инструкций DMX](#BKMK_DMXStatements)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширения интеллектуального анализа данных &#40;Справочник по функциям DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Ссылки на операторы расширений интеллектуального анализа данных &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Расширения интеллектуального анализа данных &#40;Справочник по инструкции DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)   
@@ -109,5 +109,4 @@ ms.locfileid: "88414090"
  [Общие прогнозирующие функции &#40;&#41;расширений интеллектуального анализа данных ](../dmx/general-prediction-functions-dmx.md)   
  [Структура и использование прогнозирующих запросов расширений интеллектуального анализа данных](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Общие сведения об инструкции расширения интеллектуального анализа данных SELECT](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

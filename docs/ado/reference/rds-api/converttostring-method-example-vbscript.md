@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: edd0a01c-1a1b-4b91-9966-2529e244abae
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e322ae003540b671e574ef3e8d4bdce3b21be88b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: abb37d28eb40b139a8ea77d13ab24687cab45eb4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88982645"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91722505"
 ---
 # <a name="converttostring-method-example-vbscript"></a>Пример метода ConvertToString (VBScript)
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](/dotnet/framework/wcf/).  
   
  В следующем примере показано, как преобразовать **набор записей** в строку в кодировке MIME с помощью метода **RDSServer. ConvertToString.** Затем показано, как можно преобразовать строку обратно в **набор записей**. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **ConvertToString.htm**.  
   

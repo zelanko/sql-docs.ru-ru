@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d80417306c4fe466003a48739b65c337424487a6
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d234732b90fdd89b6f0e41efe1762bb3a99ddde2
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978475"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724855"
 ---
 # <a name="address-book-command-buttons"></a>Кнопки команд адресной книги
 Приложение адресной книги содержит следующие командные кнопки:  
@@ -33,7 +33,7 @@ ms.locfileid: "88978475"
 -   Кнопка **отменить изменения** , чтобы отменить изменения.  
   
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](/dotnet/framework/wcf/).  
   
 ## <a name="find-button"></a>Кнопка "найти"  
  Нажатие кнопки **найти** активирует процедуру VBScript Find_OnClick, которая создает и ОТПРАВЛЯЕТ запрос SQL. Нажатие этой кнопки заполняет сетку данных.  

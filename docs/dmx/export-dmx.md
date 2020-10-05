@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 689ab632604d26a349dbb3f2a40d5f1b7cf8d702
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2c7f2f5e8e3f46fc8e6301cf2e93afa709207dd0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88353230"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726205"
 ---
 # <a name="export-dmx"></a>EXPORT (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -33,12 +33,12 @@ EXPORT <object type> <object name>[, <object name>] [<object type> <object name>
  Необязательный параметр. Тип экспортируемого объекта (модель или структура интеллектуального анализа данных).  
   
  *имя объекта*  
- Необязательный параметр. Имя экспортируемого объекта.  
+ Необязательный элемент. Имя экспортируемого объекта.  
   
  *filename*  
  Имя и расположение файла для экспорта (аргумент типа string).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Если инструкция указывает модель интеллектуального анализа данных, итоговый файл также содержит связанную структуру интеллектуального анализа данных. Если инструкция указывает **с зависимостями**, все объекты, необходимые для обработки объекта (например, источник данных и представление источника данных), включаются в ABF-файл.  
   
  Для экспорта или импорта объектов из базы данных необходимо быть администратором базы данных или сервера [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -57,11 +57,10 @@ EXPORT MINING STRUCTURE [Targeted Mailing], [Forecasting] MINING MODEL Associati
 EXPORT MINING MODEL [Association] TO 'C:\Association_NEW.abf' WITH DEPENDENCIES  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширения интеллектуального анализа данных &#40;инструкции расширений интеллектуального анализа данных&#41; DDL](../dmx/dmx-statements-data-definition.md)   
  [Расширения интеллектуального анализа данных &#40;инструкции расширений интеллектуального анализа данных&#41;](../dmx/dmx-statements-data-manipulation.md)   
  [Расширения интеллектуального анализа данных &#40;Справочник по инструкции DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)   
  [ИМПОРТ &#40;РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ&#41;](../dmx/import-dmx.md)   
- [Экспорт и импорт объектов интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/data-mining/export-and-import-data-mining-objects)  
-  
+ [Экспорт и импорт объектов интеллектуального анализа данных](/analysis-services/data-mining/export-and-import-data-mining-objects)  
   

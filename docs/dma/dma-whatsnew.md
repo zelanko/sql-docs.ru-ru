@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 19753cddaba236d0de75e492962bd6c8ad2675e2
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 11bbf0a39ed9a9bbaa19992f98e4e23d50d6fbe9
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988497"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727763"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Новые возможности Data Migration Assistant
 
@@ -83,7 +83,7 @@ ms.locfileid: "87988497"
   - Изменения поведения. объекты схемы, о которых сообщается, могут продолжать работать, но могут демонстрировать различные действия, например снижение производительности.
   - Информационные проблемы. Эти объекты не влияют на миграцию, но могут быть устаревшими в SQL Server выпусках функций.
 
-После завершения оценки используйте нашу [Azure Database Migration Service](https://azure.microsoft.com/services/database-migration/) (DMS), чтобы выполнить миграцию баз данных SQL Server в SQL управляемый экземпляр.  DMS поддерживает как [автономные](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance) (одноразовые), так и [оперативные](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online) (с минимальным временем простоя) перенос базы данных в SQL управляемый экземпляр.
+После завершения оценки используйте нашу [Azure Database Migration Service](https://azure.microsoft.com/services/database-migration/) (DMS), чтобы выполнить миграцию баз данных SQL Server в SQL управляемый экземпляр.  DMS поддерживает как [автономные](/azure/dms/tutorial-sql-server-to-managed-instance) (одноразовые), так и [оперативные](/azure/dms/tutorial-sql-server-managed-instance-online) (с минимальным временем простоя) перенос базы данных в SQL управляемый экземпляр.
 
 ## <a name="data-migration-assistant-v40"></a>Помощник по миграции данных версии 4.0
 
@@ -141,7 +141,7 @@ ms.locfileid: "87988497"
 
 ### <a name="migrating-windows-logins"></a>Миграция имен входа Windows
 
-Несмотря на то, что миграция имен входа Active Directory (AD) официально поддерживается SQL Server 2017 в Linux, для успешной работы требуется дополнительная настройка. Подробные сведения о настройке имен входа Active Directory для SQL Server 2017 в Linux см. в статье [Active Directory проверка подлинности с помощью SQL Server на Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-authentication) . После выполнения требуемой настройки процесс установки завершится, и вы сможете выполнить миграцию Active Directory имен входа в обычном режиме. Стандартная проверка подлинности SQL работает должным образом без каких бы то ни было дополнительных настроек.
+Несмотря на то, что миграция имен входа Active Directory (AD) официально поддерживается SQL Server 2017 в Linux, для успешной работы требуется дополнительная настройка. Подробные сведения о настройке имен входа Active Directory для SQL Server 2017 в Linux см. в статье [Active Directory проверка подлинности с помощью SQL Server на Linux](../linux/sql-server-linux-active-directory-authentication.md) . После выполнения требуемой настройки процесс установки завершится, и вы сможете выполнить миграцию Active Directory имен входа в обычном режиме. Стандартная проверка подлинности SQL работает должным образом без каких бы то ни было дополнительных настроек.
 
 ## <a name="data-migration-assistant-v32"></a>Помощник по миграции данных версии 3.2
 
@@ -183,13 +183,13 @@ ms.locfileid: "87988497"
 - Обнаружение проблем, которые могут повлиять на обновление до локальной версии SQL Server. Все результаты описаны как проблемы совместимости, и они подразделяются на следующие области:
   - Критические изменения
   - Изменения в работе
-  - Устаревшие компоненты
+  - Устаревшие функции
 - Обнаружение новых функций в целевой SQL Server платформе, которую может использовать база данных после обновления. Все выводы описаны как рекомендации по функциям и делятся на следующие области:
   - Производительность
   - Безопасность
-  - Хранилище
+  - Служба хранилища
 - Современные возможности для выполнения оценки.
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также
 
 [Обзор Помощника по миграции данных](../dma/dma-overview.md)

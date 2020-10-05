@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 76cddca642fd25bb7e67ec7817c3fe3d1d9da9d7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 35382c7d1d7301d35d8517b62bac352a4ae9fb47
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462052"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726328"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -48,10 +48,10 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  Имя алгоритма интеллектуального анализа данных, определенное текущим поставщиком.  
   
 > [!NOTE]  
->  Список алгоритмов, поддерживаемых текущим поставщиком, можно получить с помощью [DMSCHEMA_MINING_SERVICES набора строк](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126251(v=sql.110)). Сведения о алгоритмах, поддерживаемых в текущем экземпляре [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , см. в разделе [Свойства интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
+>  Список алгоритмов, поддерживаемых текущим поставщиком, можно получить с помощью [DMSCHEMA_MINING_SERVICES набора строк](/previous-versions/sql/sql-server-2012/ms126251(v=sql.110)). Сведения о алгоритмах, поддерживаемых в текущем экземпляре [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , см. в разделе [Свойства интеллектуального анализа данных](/analysis-services/server-properties/data-mining-properties).  
   
  *список параметров*  
- Необязательный параметр. Список параметров, определенных поставщиком для алгоритма и разделенный запятыми.  
+ Необязательный элемент. Список параметров, определенных поставщиком для алгоритма и разделенный запятыми.  
   
  *строка XML*  
  (Только для расширенного использования.) Модель в формате XML (PMML). Строка должна быть заключена в одиночные кавычки (').  
@@ -95,13 +95,13 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  Список типов данных, типов содержимого, распределений столбцов и флагов моделирования, используемых при определении столбца, см. в следующих разделах.  
   
--   [Типы данных (интеллектуальный анализ данных)](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
+-   [Типы данных (интеллектуальный анализ данных)](/analysis-services/data-mining/data-types-data-mining)  
   
--   [Типы содержимого (интеллектуальный анализ данных)](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
+-   [Типы содержимого (интеллектуальный анализ данных)](/analysis-services/data-mining/content-types-data-mining)  
   
--   [Распределения столбцов (интеллектуальный анализ данных)](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
+-   [Распределения столбцов (интеллектуальный анализ данных)](/analysis-services/data-mining/column-distributions-data-mining)  
   
--   [Флаги моделирования (интеллектуальный анализ данных)](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
+-   [Флаги моделирования (интеллектуальный анализ данных)](/analysis-services/data-mining/modeling-flags-data-mining)  
   
  К инструкции можно добавить предложение, описывающее связь между двумя столбцами. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] поддерживает использование следующего \<Column relationship> предложения.  
   
@@ -112,7 +112,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 |Предложение \<prediction>|Описание|  
 |---------------------------|-----------------|  
-|**СФОРМИРОВАТЬ**|Этот столбец может быть спрогнозирован моделью и может включаться во входные варианты для прогноза значений других прогнозируемых столбцов.|  
+|**PREDICT**|Этот столбец может быть спрогнозирован моделью и может включаться во входные варианты для прогноза значений других прогнозируемых столбцов.|  
 |**PREDICT_ONLY**|Данный столбец может быть спрогнозирован с помощью модели, однако его нельзя использовать во входных вариантах для вычисления значений других прогнозируемых столбцов.|  
   
 ### <a name="parameter-definition-list"></a>Список определений параметров  
@@ -122,12 +122,12 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 [<parameter> = <value>, <parameter> = <value>,...]  
 ```  
   
- Список параметров, связанных с каждым алгоритмом, см. в разделе [алгоритмы интеллектуального анализа данных &#40;Analysis Services-&#41;интеллектуального анализа данных ](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
+ Список параметров, связанных с каждым алгоритмом, см. в разделе [алгоритмы интеллектуального анализа данных &#40;Analysis Services-&#41;интеллектуального анализа данных ](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
   
 ## <a name="remarks"></a>Комментарии  
  Если необходимо создать модель со встроенным набором проверочных данных, следует после ALTER MINING STRUCTURE использовать инструкцию CREATE MINING STRUCTURE. При этом не все типы моделей поддерживают набор контрольных данных. Дополнительные сведения см. в статье [CREATE MINING STRUCTURE (DMX)](../dmx/create-mining-structure-dmx.md).  
   
- Пошаговое руководство по созданию модели интеллектуального анализа данных с помощью инструкции КРЕАТЕМОДЕЛ см. в разделе Учебник по DMX-анализу [временных рядов](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
+ Пошаговое руководство по созданию модели интеллектуального анализа данных с помощью инструкции КРЕАТЕМОДЕЛ см. в разделе Учебник по DMX-анализу [временных рядов](/previous-versions/sql/sql-server-2016/cc879270(v=sql.130)).  
   
 ## <a name="naive-bayes-example"></a>Пример упрощенного алгоритма Байеса  
  В следующем примере [!INCLUDE[msCoName](../includes/msconame-md.md)] упрощенный алгоритм Байеса используется для создания новой модели интеллектуального анализа данных. Столбец Bike Buyer определяется как прогнозируемый атрибут.  
@@ -191,5 +191,4 @@ USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP
  [Расширения интеллектуального анализа данных &#40;инструкции расширений интеллектуального анализа данных&#41; DDL](../dmx/dmx-statements-data-definition.md)   
  [Расширения интеллектуального анализа данных &#40;инструкции расширений интеллектуального анализа данных&#41;](../dmx/dmx-statements-data-manipulation.md)   
  [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

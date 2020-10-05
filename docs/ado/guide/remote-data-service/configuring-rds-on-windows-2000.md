@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ef37e858-c05f-4f52-a65f-3ce6037e0d03
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2a35d730981723f83b65867468a809f795fc6d3e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 3c52989f83608b33756ae90778485bfddab08173
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978335"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724805"
 ---
 # <a name="configuring-rds-on-windows-2000"></a>Настройка RDS в Windows 2000
 Если после обновления до Windows 2000 возникают проблемы при получении правильной работы RDS, выполните следующие действия, чтобы устранить проблему.  
@@ -38,7 +38,7 @@ ms.locfileid: "88978335"
  Не забудьте попытаться перезагрузить сервер, если изменения не появятся, чтобы решить проблему на первый момент.  
   
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565). Начиная с Windows 8 и Windows Server 2012 компоненты RDS Server больше не включены в операционную систему Windows. Перенос приложений, использующих RDS, в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](/dotnet/framework/wcf/). Начиная с Windows 8 и Windows Server 2012 компоненты RDS Server больше не включены в операционную систему Windows. Перенос приложений, использующих RDS, в [службу данных WCF](/dotnet/framework/wcf/).  
   
 ## <a name="see-also"></a>См. также  
  [Основные принципы RDS](./rds-fundamentals.md)

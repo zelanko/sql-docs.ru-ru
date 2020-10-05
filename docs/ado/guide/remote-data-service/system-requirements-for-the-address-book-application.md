@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: da385405-1c9a-478b-9bf6-fba70015324c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2e8555a61639ed7019c9972debe916f9f1a64934
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 7edd6f3c383c1563122bff053e39a372dff264b3
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977465"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91722836"
 ---
 # <a name="system-requirements-for-the-address-book-application"></a>Требования к системе для приложения адресной книги
 Чтобы настроить пример приложения адресной книги, необходимо обеспечить соответствие следующим требованиям к программному обеспечению и базе данных:  
   
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](/dotnet/framework/wcf/).  
   
 ## <a name="software-requirements"></a>Требования к программному обеспечению  
  Для запуска этого веб-приложения серверные требования к программному обеспечению включают:  

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b182e4a3a842065152b050ed1b428d71b7d0cf07
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a08ec4809b281205386abad429afe339e0dbb1d1
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426126"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727715"
 ---
 # <a name="predictcaselikelihood-dmx"></a>PredictCaseLikelihood (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -41,7 +41,7 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
 ## <a name="return-type"></a>Тип возвращаемых данных  
  Число с плавающей запятой двойной точности в диапазоне от 0 до 1. Число, более близкое к 1, обозначает большую вероятность вхождения варианта в модель; число, близкое к 0, обозначает меньшую вероятность вхождения варианта в модель.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  По умолчанию результат функции **PredictCaseLikelihood** нормализован. Нормализованные значения, как правило, более эффективны, поскольку в варианте увеличивается число атрибутов и разница между необработанными вероятностями двух вариантов существенно уменьшается.  
   
  Следующее уравнение используется для вычисления нормализованных значений при заданных x и y:  
@@ -80,10 +80,9 @@ NATURAL PREDICTION JOIN
   
  Разница между результатами демонстрирует влияние нормализации. Необработанное значение для **каселикелихуд** предполагает, что вероятность варианта составляет примерно 20 процентов; Однако при нормализации результатов становится очевидно, что вероятность варианта очень мала.  
   
-## <a name="see-also"></a>См. также:  
- [Алгоритмы интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ данных&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+## <a name="see-also"></a>См. также  
+ [Алгоритмы интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ данных&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [Расширения интеллектуального анализа данных &#40;Справочник по функциям DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Функции &#40;&#41;расширений интеллектуального анализа данных ](../dmx/functions-dmx.md)   
  [Общие прогнозирующие функции &#40;&#41;расширений интеллектуального анализа данных ](../dmx/general-prediction-functions-dmx.md)  
-  
   

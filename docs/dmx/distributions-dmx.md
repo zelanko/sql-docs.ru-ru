@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f0aef6ed4b98241b07e84aa11ed6408c600d6ee7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9deb3afaa6d0a4bc90281c2cc3998365eccb9838
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414200"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726226"
 ---
 # <a name="distributions-dmx"></a>Распределения (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -32,12 +32,12 @@ ms.locfileid: "88414200"
  **СЧЕТ**  
  На основе значений столбца непрерывных данных может быть сформирована плоская кривая, на которой все значения являются равновероятными.  
   
- Дополнительные сведения о [!INCLUDE[msCoName](../includes/msconame-md.md)] алгоритмах интеллектуального анализа данных см. в разделе [алгоритмы интеллектуального анализа данных &#40;Analysis Services-&#41;интеллектуального анализа данных ](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining). Алгоритмы интеллектуального анализа данных третьих поставщиков могут также иметь возможность работы с другими типами распределений. Чтобы определить, какие типы распределения поддерживаются алгоритмом, используйте набор строк схемы **SUPPORTED_DISTRIBUTION_FLAGS** .  
+ Дополнительные сведения о [!INCLUDE[msCoName](../includes/msconame-md.md)] алгоритмах интеллектуального анализа данных см. в разделе [алгоритмы интеллектуального анализа данных &#40;Analysis Services-&#41;интеллектуального анализа данных ](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining). Алгоритмы интеллектуального анализа данных третьих поставщиков могут также иметь возможность работы с другими типами распределений. Чтобы определить, какие типы распределения поддерживаются алгоритмом, используйте набор строк схемы **SUPPORTED_DISTRIBUTION_FLAGS** .  
   
- Дополнительные сведения о типах распространения см. в разделе [распределения столбцов &#40;&#41;интеллектуального анализа данных ](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining).  
+ Дополнительные сведения о типах распространения см. в разделе [распределения столбцов &#40;&#41;интеллектуального анализа данных ](/analysis-services/data-mining/column-distributions-data-mining).  
   
-## <a name="see-also"></a>См. также:  
- [Типы содержимого &#40;&#41;интеллектуального анализа данных ](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)   
+## <a name="see-also"></a>См. также  
+ [Типы содержимого &#40;&#41;интеллектуального анализа данных ](/analysis-services/data-mining/content-types-data-mining)   
  [Расширения интеллектуального анализа данных &#40;Справочник по DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
  [Расширения интеллектуального анализа данных &#40;синтаксические&#41; DMX-элементы](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Расширения интеллектуального анализа данных &#40;Справочник по функциям DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
@@ -47,5 +47,4 @@ ms.locfileid: "88414200"
  [Общие прогнозирующие функции &#40;&#41;расширений интеллектуального анализа данных ](../dmx/general-prediction-functions-dmx.md)   
  [Структура и использование прогнозирующих запросов расширений интеллектуального анализа данных](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Общие сведения об инструкции расширения интеллектуального анализа данных SELECT](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

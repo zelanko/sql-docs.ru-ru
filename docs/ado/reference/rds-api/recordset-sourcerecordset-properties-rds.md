@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a29e3fb9-306d-497a-9a59-1856a914e5e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 27b6cf791b3b980000662f2073280d53f24aeaa1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: cdf8a894341343fee7576daed45c75a46857b909
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88981435"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724301"
 ---
 # <a name="recordset-sourcerecordset-properties-rds"></a>Свойства Recordset и SourceRecordset (служба удаленных рабочих столов)
 Указывает объект **набора записей** , возвращенный из пользовательского бизнес-объекта.  
@@ -27,7 +27,7 @@ ms.locfileid: "88981435"
  Область **применения:** [объект элемента управления (RDS)](./datacontrol-object-rds.md)  
   
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](/dotnet/framework/wcf/).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,7 +44,7 @@ Recordset = DataControl.Recordset
  *набор записей*  
  Объектная переменная, представляющая объект **набора записей** .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Свойству **саурцерекордсет** можно присвоить набор [записей](../ado-api/recordset-object-ado.md) , возвращаемый из пользовательского бизнес-объекта.  
   
  Эти свойства позволяют приложению обрабатывать процесс привязки с помощью пользовательского процесса. Они получают набор строк, заключенный в **набор записей** , чтобы можно было напрямую взаимодействовать с **набором записей**, выполняя такие действия, как установка свойств или перебор **набора записей**.  

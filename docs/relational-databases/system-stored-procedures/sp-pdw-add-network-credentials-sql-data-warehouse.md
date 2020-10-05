@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 47782250a0acf14ce0e8b63a2b631acfce9b3583
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d4fea3d262eea3e4e329809137720e94a7af5d93
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474001"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724135"
 ---
 # <a name="sp_pdw_add_network_credentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials (хранилище данных SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -34,7 +34,9 @@ ms.locfileid: "88474001"
   
 sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpasswordꞌ  
 ```  
-  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ## <a name="arguments"></a>Аргументы  
  "*target_server_name*"  
  Указывает имя узла или IP-адрес целевого сервера. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] будет получать доступ к этому серверу с помощью учетных данных пользователя и пароля, переданных этой хранимой процедуре.  

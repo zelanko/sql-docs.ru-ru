@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 2384aab12163f54aa458c857c5b006861572f3fa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ec9540ae9d2b8317cbd49b947345e811b70896a7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462156"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724715"
 ---
 # <a name="manage-dqs-databases"></a>Manage DQS Databases
 
@@ -42,7 +42,7 @@ ms.locfileid: "88462156"
 -   Модель восстановления для баз данных DQS по умолчанию имеет значение **Простая**. В простой модели восстановления ведется минимальное протоколирование транзакций, и усечение журнала выполняется автоматически после завершения транзакции, чтобы освободить место в журнале транзакций (LDF-файле). Подробные сведения о простой модели восстановления см. в разделе [Полные резервные копии баз данных &#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md).  
   
 > [!IMPORTANT]
->  -   В простой модели восстановления, если записи журнала остаются активными в течение длительного времени (например, в продолжительной транзакции), усечение журнала может откладываться, в результате журнал транзакций будет заполняться. Кроме того, усечение журнала не приводит к уменьшению размера физического файла журнала (LDF-файла). Для уменьшения размера физического файла журнала необходимо выполнить его сжатие. Сведения об устранении неполадок с журналом транзакций см. в разделе [Журнал транзакций (SQL Server)](../relational-databases/logs/the-transaction-log-sql-server.md) или в статье службы поддержки Майкрософт по адресу [https://go.microsoft.com/fwlink/?LinkId=237446](https://go.microsoft.com/fwlink/?LinkId=237446).  
+>  -   В простой модели восстановления, если записи журнала остаются активными в течение длительного времени (например, в продолжительной транзакции), усечение журнала может откладываться, в результате журнал транзакций будет заполняться. Кроме того, усечение журнала не приводит к уменьшению размера физического файла журнала (LDF-файла). Для уменьшения размера физического файла журнала необходимо выполнить его сжатие. Сведения об устранении неполадок с журналом транзакций см. в разделе [Журнал транзакций (SQL Server)](../relational-databases/logs/the-transaction-log-sql-server.md) или в статье службы поддержки Майкрософт по адресу [https://go.microsoft.com/fwlink/?LinkId=237446](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).  
 > -   Необходимо регулярно выполнять полное или разностное резервное копирование баз данных DQS, а также создавать резервную копию журнала транзакций, чтобы выполнять восстановление данных на момент времени. Дополнительные сведения см. в разделах [Полные резервные копии баз данных &#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md) и [Создание резервной копии журнала транзакций &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
   
 ##  <a name="detachattach-the-dqs-databases"></a><a name="DetachAttach"></a> Отсоединение и присоединение баз данных DQS  
@@ -57,7 +57,6 @@ ms.locfileid: "88462156"
 |Описывает создание резервных копий и восстановление базы данных DQS.|[Резервное копирование и восстановление баз данных DQS](../data-quality-services/backing-up-and-restoring-dqs-databases.md)|  
 |Описывает, как отсоединять и присоединять базы данных DQS.|[Присоединение и отсоединение баз данных DQS](../data-quality-services/detaching-and-attaching-dqs-databases.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [администрирование DQS](../data-quality-services/dqs-administration.md)  
-  
   

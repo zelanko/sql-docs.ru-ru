@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b34f971-5699-43e7-9b15-137d334fa66e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b63c3925fd70f6075ab1131c275fa5e52a6e3ac8
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 41652f73868380d4902c7c6815a7ee53868c0969
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979125"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724865"
 ---
 # <a name="using-a-connection-object"></a>Использование объекта Connection
 Перед открытием объекта **соединения** необходимо определить определенные сведения об источнике данных и типе соединения. Большая часть этих сведений удерживается параметром *ConnectionString* [метода Open](../../../ado/reference/ado-api/open-method-ado-connection.md) для объекта **Connection** или [свойством ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) объекта **Connection** . Строка подключения состоит из списка пар "аргумент-значение", разделенных точкой с запятой, со значениями, заключенными в одинарные кавычки. Пример:  
@@ -30,7 +30,7 @@ sConn = "Provider='SQLOLEDB';Data Source='MySqlServer';" & _
 ```  
   
 > [!NOTE]
->  В строке подключения можно также указать имя источника данных ODBC (DSN) или файл связи данных (UDL). Дополнительные сведения об именах DSN см. в разделе [Управление источниками данных](../../../odbc/admin/managing-data-sources.md) в справочнике программиста ODBC. Дополнительные сведения о UDL см. в разделе [Общие сведения об API канала передачи данных](https://msdn.microsoft.com/95c180ea-bd4f-4dca-b95a-576afd135bbc) в справочнике по OLE DB программиста.  
+>  В строке подключения можно также указать имя источника данных ODBC (DSN) или файл связи данных (UDL). Дополнительные сведения об именах DSN см. в разделе [Управление источниками данных](../../../odbc/admin/managing-data-sources.md) в справочнике программиста ODBC. Дополнительные сведения о UDL см. в разделе [Общие сведения об API канала передачи данных](/previous-versions/windows/desktop/ms718102(v=vs.85)) в справочнике по OLE DB программиста.  
   
  Как правило, соединение устанавливается путем вызова метода **Connection. Open** с соответствующей *строкой подключения* в качестве параметра. Пример показан в следующем Visual Basic фрагменте кода:  
   

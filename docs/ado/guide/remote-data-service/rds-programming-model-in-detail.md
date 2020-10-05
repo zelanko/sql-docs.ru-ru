@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: af1b575f642159cad84d0ce833bb783cf2363701
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a2b307c89d5e4a25d6963ef100083015ffe6ce74
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977975"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724925"
 ---
 # <a name="rds-programming-model-in-detail"></a>Подробные сведения о модели программирования RDS
 Ниже приведены ключевые элементы модели программирования RDS.  
@@ -32,7 +32,7 @@ ms.locfileid: "88977975"
 -   Событие  
   
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](/dotnet/framework/wcf/).  
   
 ## <a name="rdsdataspace"></a>Клиент. Пространство данных  
  Клиентское приложение должно указать сервер и серверную программу для вызова. В случае возврата приложение получает ссылку на серверную программу и может считать ссылку, как если бы она была самой программой сервера.  

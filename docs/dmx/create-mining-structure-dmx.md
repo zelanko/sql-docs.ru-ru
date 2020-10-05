@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 06f013ccb5c33dfbaba2fe0a0e102a448c17e036
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ab738433380302e0f3d8bc70113aa2a8d13f7ac8
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414030"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726285"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -62,10 +62,10 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  По умолчанию: REPEATABLE (0)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Пользователь определяет структуру интеллектуального анализа данных, указывая список столбцов, при необходимости задавая иерархические связи между столбцами, а также при необходимости выполняя секционирование структуры интеллектуального анализа данных на обучающий и проверочный наборы данных.  
   
- Необязательное ключевое слово SESSION показывает, что структура является временной и ее можно использовать только в течение текущего сеанса. После завершения сеанса структура и любые модели на ее основе удаляются. Чтобы создать временные структуры и модели интеллектуального анализа данных, необходимо сначала задать свойство базы данных AllowSessionMiningModels. Дополнительные сведения см. в статье [Data Mining Properties](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
+ Необязательное ключевое слово SESSION показывает, что структура является временной и ее можно использовать только в течение текущего сеанса. После завершения сеанса структура и любые модели на ее основе удаляются. Чтобы создать временные структуры и модели интеллектуального анализа данных, необходимо сначала задать свойство базы данных AllowSessionMiningModels. Дополнительные сведения см. в статье [Data Mining Properties](/analysis-services/server-properties/data-mining-properties).  
   
 ## <a name="column-definition-list"></a>Список определений столбца  
  Определить структуру интеллектуального анализа данных можно путем включения в список определений каждого столбца следующих сведений.  
@@ -96,13 +96,13 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  Сведения о типах данных, типах содержимого, распределениях столбцов и флагах моделирования, используемых для определения столбца структуры, приведены в следующих разделах.  
   
--   [Типы данных (интеллектуальный анализ данных)](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
+-   [Типы данных (интеллектуальный анализ данных)](/analysis-services/data-mining/data-types-data-mining)  
   
--   [Типы содержимого (интеллектуальный анализ данных)](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
+-   [Типы содержимого (интеллектуальный анализ данных)](/analysis-services/data-mining/content-types-data-mining)  
   
--   [Распределения столбцов (интеллектуальный анализ данных)](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
+-   [Распределения столбцов (интеллектуальный анализ данных)](/analysis-services/data-mining/column-distributions-data-mining)  
   
--   [Флаги моделирования (интеллектуальный анализ данных)](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
+-   [Флаги моделирования (интеллектуальный анализ данных)](/analysis-services/data-mining/modeling-flags-data-mining)  
   
  Для столбца можно определить несколько значений флагов модели. Однако каждому столбцу может соответствовать только один тип содержимого и тип данных.  
   
@@ -113,7 +113,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  Показывает иерархию значений. Назначением столбца RELATED TO может быть ключевой столбец вложенной таблицы, столбец с дискретными значениями из строки вариантов или какой-либо другой столбец с предложением RELATED TO, указывающим на более глубокий уровень иерархии.  
   
 ## <a name="holdout-parameters"></a>Контрольные параметры  
- Если указываются контрольные параметры, создается секция данных структуры. Указанный объем контрольных данных резервируется для проверки, а оставшиеся данные используются для обучения. По умолчанию, если структура интеллектуального анализа данных создается с помощью среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], создается контрольная секция, которая содержит 30% проверочных данных и 70% обучающих данных. Дополнительные сведения см. в статье [Training and Testing Data Sets](https://docs.microsoft.com/analysis-services/data-mining/training-and-testing-data-sets).  
+ Если указываются контрольные параметры, создается секция данных структуры. Указанный объем контрольных данных резервируется для проверки, а оставшиеся данные используются для обучения. По умолчанию, если структура интеллектуального анализа данных создается с помощью среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], создается контрольная секция, которая содержит 30% проверочных данных и 70% обучающих данных. Дополнительные сведения см. в статье [Training and Testing Data Sets](/analysis-services/data-mining/training-and-testing-data-sets).  
   
  При создании структуры интеллектуального анализа данных с помощью расширений интеллектуального анализа данных необходимо вручную указать на необходимость создания контрольной секции.  
   
@@ -178,9 +178,8 @@ CREATE MINING STRUCTURE [New Mailing]
 WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширения интеллектуального анализа данных &#40;инструкции расширений интеллектуального анализа данных&#41; DDL](../dmx/dmx-statements-data-definition.md)   
  [Расширения интеллектуального анализа данных &#40;инструкции расширений интеллектуального анализа данных&#41;](../dmx/dmx-statements-data-manipulation.md)   
  [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

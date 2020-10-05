@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 01044c3a-ed38-4144-bc43-fe38a6d22d04
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 19297daad74fa30bbcdba65dc6e2037ab546f989
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 98c5e5e24952cb0aa4f2c28e50cabd1bd06d64ad
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88981965"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724485"
 ---
 # <a name="irdsservice-interface-rds"></a>Интерфейс IRDSService (служба удаленных рабочих столов)
 Предоставляет метод [инвокесервице (RDS)](./invokeservice-rds.md) , который используется для возвращения указателя на запрошенный интерфейс в более поддерживающей версии объекта.  
   
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](/dotnet/framework/wcf/).  
   
 ## <a name="see-also"></a>См. также  
  [Объекты службы удаленных рабочих столов](./rds-objects.md)

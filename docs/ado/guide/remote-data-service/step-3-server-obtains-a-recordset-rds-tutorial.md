@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 9c6779c9-1208-4696-ac51-c39f3a6d9240
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 494cf7a3be5206f5fd4f89d3f575989ce51002b9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c2c8121e37df7517964ecf4444da763986ff1d94
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977545"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91722975"
 ---
 # <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>Шаг 3. Сервер получает набор записей (учебник по RDS)
 Серверная программа использует строку подключения и текст команды, чтобы запросить источник данных для нужных строк. ADO обычно используется для получения этого **набора записей**, хотя можно использовать и другие интерфейсы доступа к данным Майкрософт, например OLE DB.  
   
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](/dotnet/framework/wcf/).  
   
  Пользовательская серверная программа может выглядеть следующим образом:  
   

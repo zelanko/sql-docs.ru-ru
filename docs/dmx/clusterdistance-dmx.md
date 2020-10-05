@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2c87da38fb2f13c0c79dfc777b52e19139db584c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0dfcf7804455ecb3b16a29a8cab2f61d91df6b1f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431136"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726355"
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -34,10 +34,10 @@ ClusterDistance([<ClusterID expression>])
 ## <a name="return-type"></a>Тип возвращаемых данных  
  Скалярное значение.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Функция **ClusterDistance** Возвращает расстояние между входным вариантом и кластером с наибольшей вероятностью для этого входного варианта.  
   
- В случае кластеризации методом К-средних любой вариант может принадлежать только к одному кластеру с весом членства, равным 1,0, и расстоянием от кластера, всегда равным 0. Однако при использовании метода К-средних предполагается, что каждый кластер имеет центроид. Значение центроида можно получить, выполнив запрос или просмотрев вложенную таблицу NODE_DISTRIBUTION в содержимом модели интеллектуального анализа данных. Дополнительные сведения см. в разделе [Содержимое моделей интеллектуального анализа данных для моделей кластеризации (службы Analysis Services — интеллектуальный анализ данных)](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining).  
+ В случае кластеризации методом К-средних любой вариант может принадлежать только к одному кластеру с весом членства, равным 1,0, и расстоянием от кластера, всегда равным 0. Однако при использовании метода К-средних предполагается, что каждый кластер имеет центроид. Значение центроида можно получить, выполнив запрос или просмотрев вложенную таблицу NODE_DISTRIBUTION в содержимом модели интеллектуального анализа данных. Дополнительные сведения см. в разделе [Содержимое моделей интеллектуального анализа данных для моделей кластеризации (службы Analysis Services — интеллектуальный анализ данных)](/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining).  
   
  Но если используется применяемый по умолчанию метод кластеризации, называемый методом максимизации ожидания (EM), все точки внутри кластера рассматриваются как равновероятные, так что центроид в кластере отсутствует. Значение **ClusterDistance** между конкретным вариантом и определенным кластером *N* вычисляется следующим образом:  
   
@@ -125,10 +125,9 @@ NATURAL PREDICTION JOIN
 |------------------------|  
 |0.97008209236394|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [&#41;расширений интеллектуального анализа данных кластера &#40;](../dmx/cluster-dmx.md)   
  [Расширения интеллектуального анализа данных &#40;Справочник по функциям DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Функции &#40;&#41;расширений интеллектуального анализа данных ](../dmx/functions-dmx.md)   
- [Содержимое моделей интеллектуального анализа данных для моделей кластеризации (службы Analysis Services — интеллектуальный анализ данных)](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  
-  
+ [Содержимое моделей интеллектуального анализа данных для моделей кластеризации (службы Analysis Services — интеллектуальный анализ данных)](/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  
   

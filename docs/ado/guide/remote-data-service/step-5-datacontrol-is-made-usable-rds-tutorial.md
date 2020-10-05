@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: ed5c4a24-9804-4c85-817e-317652acb9b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8aa0697e7f4acbae9fbc25ba3e14bccb4a468499
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 560c5968b3343f2553bc117ebbbdcf06938cc49f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977515"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91722955"
 ---
 # <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>Шаг 5. DataControl теперь можно использовать (учебник по RDS)
 Возвращаемый объект **набора записей** доступен для использования. Вы можете просматривать, перемещать или изменять его так же, как любой другой **набор записей**. Действия, которые можно выполнять с **набором записей** , зависят от среды. Visual Basic и Visual C++ имеют визуальные элементы управления, которые могут напрямую или косвенно использовать **набор записей** с помощью включения элемента управления данными.  
   
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](/dotnet/framework/wcf/).  
   
  Например, при отображении веб-страницы в Microsoft Internet Explorer может потребоваться отобразить данные объекта **набора записей** в визуальном элементе управления. Визуальные элементы управления на веб-странице не могут напрямую обращаться к объекту **Recordset** . Однако они могут получить доступ к объекту **Recordset** через [RDS. Элемент управления](../../reference/rds-api/datacontrol-object-rds.md). **RDS. Элемент управления** данных может использоваться визуальным элементом управления, если его свойство [саурцерекордсет](../../reference/rds-api/recordset-sourcerecordset-properties-rds.md) имеет значение Object **Recordset** .  
   

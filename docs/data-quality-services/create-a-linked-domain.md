@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: b2fb5b1a57b39a91735e213385c7756a7bb05984
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6dbe71b94bfc71cca727f34bb6a4fd4e532455bd
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487883"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725405"
 ---
 # <a name="create-a-linked-domain"></a>Создание связанного домена
 
@@ -63,7 +63,7 @@ ms.locfileid: "88487883"
   
 6.  При необходимости вы можете изменить имя или описание связанного домена на вкладке «Свойства домена».  
   
-7.  Нажмите кнопку **Готово** , чтобы завершить операцию управления доменами, как описано в разделе [Завершение операции по управлению доменами](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+7.  Нажмите кнопку **Готово** , чтобы завершить операцию управления доменами, как описано в разделе [Завершение операции по управлению доменами](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130)).  
   
 ##  <a name="map-two-fields-to-linked-domains"></a><a name="Map"></a> Сопоставьте два поля со связанными доменами  
   
@@ -100,5 +100,4 @@ ms.locfileid: "88487883"
 -   Нельзя создать связанный домен или связанный составной домен для составного домена.  
   
 -   При двойном щелчке связанного домена на любой вкладке «Управление доменами» домен открывается для изменения, а в его строке имени есть отметка, что домен является связанным.  
-  
   

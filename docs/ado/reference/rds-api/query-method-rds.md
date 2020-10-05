@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 20f2480f-3758-405d-a379-05a0dce74796
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 16220bf51fceb83cf22abb2779ad8a5804af4326
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d65da0531e9387e94f4d22c734821779c53b9639
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88981855"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724442"
 ---
 # <a name="query-method-rds"></a>Метод Query (служба удаленных рабочих столов)
 Использует допустимую строку SQL-запроса для возврата [набора записей](../ado-api/recordset-object-ado.md).  
   
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](/dotnet/framework/wcf/).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -47,7 +47,7 @@ Set Recordset = DataFactory.Query(Connection, Query)
  *Запрос*  
  **Строка** , содержащая SQL-запрос.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  В запросе должен использоваться диалект SQL сервера базы данных. Если с выполненным запросом возникла ошибка, возвращается состояние результата. Метод **Query** не выполняет проверку синтаксиса строки **запроса** .  
   
 ## <a name="applies-to"></a>Применение  

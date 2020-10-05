@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: e3e18da4-0511-4ece-a35d-699978bc28c6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5ff6a44ddb09c21bdb2210c4f5e0e4237b315611
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c439b60d8b349fcb7d130ff45b71a4f3a63f576e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88981505"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724325"
 ---
 # <a name="readystate-property-example-vbscript"></a>Пример свойства ReadyState (VBScript)
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](/dotnet/framework/wcf/).  
   
  В следующем примере показано, как считать свойство [ReadyState](./readystate-property-rds.md) объекта [RDS. Объект элемента управления](./datacontrol-object-rds.md) DataObject во время выполнения в коде VBScript. Свойство **ReadyState** доступно только для чтения.  
   

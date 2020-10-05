@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 210363a1a852aa3c059c7929af1c07a9fe32c6ae
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d17fa12aa0b07b265fb8f26b6ac1b6c584015d1e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978235"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724765"
 ---
 # <a name="customization-file-sql-section"></a>Настройка раздела SQL файла
 Раздел **SQL** может содержать новую строку SQL, которая заменяет командную строку клиента. Если в разделе нет строки SQL, раздел будет проигнорирован.  
   
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](/dotnet/framework/wcf/).  
   
  Новая строка SQL может быть *параметризована*. Это значит, что параметры в строке SQL **строки SQL (** обозначенной символом "?") могут быть заменены соответствующими аргументами в *идентификаторе* в строке командной строки клиента (обозначенной с помощью списка с разделителями-запятыми в скобках). Идентификатор и список аргументов ведут себя как вызов функции.  
   

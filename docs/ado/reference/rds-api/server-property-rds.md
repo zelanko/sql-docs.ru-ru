@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 43a92ce6f71d8c9ad4cca25f1c657150b28bde27
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ad10cbb434c1fda57f684438499bf6e4b885cf9b
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88981265"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724242"
 ---
 # <a name="server-property-rds"></a>Свойство Server (служба удаленных рабочих столов)
 Указывает имя службы IIS (IIS) и протокол связи.  
@@ -29,7 +29,7 @@ ms.locfileid: "88981265"
  Свойство **сервера** можно задать во время разработки в тегах объектов[RDS. Объект элемента управления](./datacontrol-object-rds.md) , или во время выполнения в коде скрипта.  
   
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](/dotnet/framework/wcf/).  
   
 ## <a name="syntax"></a>Синтаксис  
  **HTTP**  
@@ -117,7 +117,7 @@ DataControl.Server=""
  *DataControl*  
  Объектная переменная, представляющая **RDS. Объект элемента управления** .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Сервер — это расположение, в котором **RDS. ** Обрабатывается запрос элемента управления (т. е. запрос или обновление). По умолчанию все запросы обрабатываются объектом [RDSServer.](./datafactory-object-rdsserver.md) DataObject, [мсдфмап. Компонент обработчика](../../guide/remote-data-service/datafactory-customization.md) и файл [MSDFMAP.INI](../../guide/remote-data-service/understanding-the-customization-file.md) на указанном сервере. Помните, что при изменении серверов для согласования параметров в старых и новых **MSDFMAP.INI** файлах. Несовместимость может привести к сбою запросов, успешно находящегося на одном сервере, на другом. Если для свойства сервера задана пустая строка "", эти объекты будут использоваться на локальном компьютере.  
   
 ## <a name="applies-to"></a>Применение  

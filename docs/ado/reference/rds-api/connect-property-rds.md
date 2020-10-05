@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dbad5e77-b213-4eb8-aecf-d60f203fdb59
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e956a86333479320fe18114705148bad77ea0440
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 5387745648b4aafa1db9964a8b82d8aa403e8473
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88982675"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91722515"
 ---
 # <a name="connect-property-rds"></a>Свойство Connect (служба удаленных рабочих столов)
 Указывает имя базы данных, из которой выполняются операции запроса и обновления.  
@@ -27,7 +27,7 @@ ms.locfileid: "88982675"
  Свойство **Connect** можно задать во время разработки в [RDS. Теги объекта элемента управления](./datacontrol-object-rds.md) DataObject или во время выполнения в коде скрипта (например, VBScript).  
   
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](/dotnet/framework/wcf/).  
   
 ## <a name="syntax"></a>Синтаксис  
   

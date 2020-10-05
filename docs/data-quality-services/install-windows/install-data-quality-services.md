@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 35ca44da3c63d8de38a342cbf1f63bceb1916e15
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1f1523cde32af2c4a01b7b2838cb0293797afcdb
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462143"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724646"
 ---
 # <a name="install-data-quality-services"></a>Установка служб Data Quality Services
 
@@ -66,7 +66,7 @@ ms.locfileid: "88462143"
 ##  <a name="data-quality-services-installation-tasks"></a><a name="DQSInstallation"></a> Задачи установки служб Data Quality Services  
  Для установки компонентов служб DQS необходимо использовать программу установки [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] . При запуске программы установки SQL Server необходимо пройти несколько страниц мастера установки, чтобы выбрать соответствующие параметры, исходя из своих требований. В следующей таблице перечислены лишь те страницы мастера установки, выбор параметров в которых повлияет на установку служб DQS.  
   
-|Page|Действие|  
+|Страница|Действие|  
 |----------|------------|  
 |Выбор компонентов|Выберите<br /><br /> **Службы Data Quality Services** на странице **Службы компонента Database Engine** , чтобы установить сервер служб [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]. <br />Если вы установите флажок **Службы Data Quality Services** , программа установки SQL Server скопирует файл установщика DQSInstaller.exe в каталог экземпляра SQL Server на данном компьютере. Его необходимо запустить после окончания работы программы установки SQL Server, чтобы *завершить* установку [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] . Кроме того, перед использованием [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] необходимо будет выполнить некоторые дополнительные действия по его настройке. Дополнительные сведения см. в разделе [Действия после установки](#PostInstallationTasks).<br /><br /> **Data Quality Client** , чтобы установить клиент [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)].<br /><br /> Такую **Средства управления — полностью** в разделе **средства управления — основные** для установки [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Она предоставляет графический пользовательский интерфейс для управления экземпляром SQL Server и позволяет выполнять дополнительные задачи после установки, перечисленные в следующем разделе.|  
 |Конфигурация компонента Database Engine|Нажмите кнопку **Добавить текущего пользователя** , чтобы добавить свою учетную запись пользователя в предопределенную роль сервера sysadmin. Это необходимо, чтобы можно было позже запустить файл DQSInstaller.exe и завершить установку [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] .|  
@@ -115,7 +115,7 @@ ms.locfileid: "88462143"
                     [Доступ к данным для операций DQS](../../data-quality-services/install-windows/access-data-for-the-dqs-operations.md).  
   
 ## <a name="see-also"></a>См. также  
- [Видео: Установка и Настройка служб DQS](https://go.microsoft.com/fwlink/?LinkId=238241)   
+ [Видео: Установка и Настройка служб DQS](/previous-versions/dn912438(v=msdn.10))   
  [Обновление сборок SQLCLR после обновления .NET Framework](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
  [Экспорт и Импорт баз знаний DQS с помощью DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)   
  [Обновление служб Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)   
@@ -124,5 +124,4 @@ ms.locfileid: "88462143"
  [SQL Server удаления](../../sql-server/install/uninstall-sql-server.md)   
  [Службы Data Quality Services](../../data-quality-services/data-quality-services.md)   
  [Устранение неполадок во время установки и настройки DQS](https://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  
-  
   

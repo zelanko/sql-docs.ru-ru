@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 82fb1330-d6c6-4c17-ad3e-d417ff822b25
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 588a18179c15f27c00c7e47d871d0c0a9bbddc44
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 5dbeffea507c857aec6554a8f98096d7752fe9fc
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977635"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91723091"
 ---
 # <a name="securing-rds-applications"></a>Защита приложений RDS
 В этом разделе содержатся сведения о безопасности RDS.  
   
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](/dotnet/framework/wcf/).  
   
 ## <a name="microsoft-internet-explorer-security-issues"></a>Проблемы безопасности Microsoft Internet Explorer  
  Благодаря новым усовершенствованиям системы безопасности, добавленным в Microsoft Internet Explorer, некоторые объекты ADO и RDS могут работать только в "безопасных" средах. Для этого необходимо знать об этих проблемах, включая различные зоны, уровни безопасности, жесткое поведение, ненадежные операции и настраиваемые параметры безопасности.  

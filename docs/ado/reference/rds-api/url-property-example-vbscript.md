@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 6ae5ac50-c88c-4262-b7ab-f2b3de382a0b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f0532998b1c887c3a7f5e0b93b90278cb2b37d3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 024ac384ba25dd8c8fbd454d5a94786200aaefd6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980935"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724691"
 ---
 # <a name="url-property-example-vbscript"></a>Пример свойства URL (VBScript)
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](/dotnet/framework/wcf/).  
   
  В следующем коде показано, как задать свойство **URL** на стороне клиента, чтобы указать ASP-файл, который, в свою очередь, обрабатывает отправку изменений в источник данных.  
   

@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 09130db1-6248-4234-a1e5-a9c8e1622c06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d6b93097b3a21e3858139146b50f15ddc79c6569
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2842d51c09585a9b954761ac31484e4cf717a9b4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978135"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724725"
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>Обеспечение достаточного места в TempDB
 Если при обработке объектов [Recordset](../../reference/ado-api/recordset-object-ado.md) , требующих обработки памяти, в Microsoft SQL Server 6,5 возникли ошибки, может потребоваться увеличить размер базы данных tempdb. (Для некоторых запросов требуется временное пространство обработки; например, запрос с предложением ORDER BY требует сортировки **набора записей**, для чего требуется некоторое временное пространство.)  
   
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](/dotnet/framework/wcf/).  
   
 > [!IMPORTANT]
 >  Прочтите эту процедуру перед выполнением действий, так как не так просто сжимать устройство после его расширения.  

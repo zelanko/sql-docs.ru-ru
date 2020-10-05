@@ -14,16 +14,16 @@ ms.assetid: ''
 author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 9a7b077c3046b2f0c7e50b7ec20f68a5544e91e1
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 1dcae45aef82859a961202ff30c3daca18e909b8
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87822199"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726317"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Выполнение оценки миграции службы интеграции SQL Server с Помощник по миграции данных
 
-## <a name="prerequisites"></a>Предварительные условия
+## <a name="prerequisites"></a>Предварительные требования
 
 Чтобы SQL Server оценить пакеты служб Integration Services (SSIS), необходимо установить следующие компоненты с помощью Помощник по миграции данных:
 
@@ -44,7 +44,7 @@ DMA необходимо запустить с **правами админист
 
     Выберите источник как **SQL Server**и задайте тип целевого сервера в качестве **базы данных SQL Azure** или **Azure SQL управляемый экземпляр**.
 
-1. Нажмите **Создать**.
+1. Нажмите кнопку **Создать**.
 
     ![создать оценку](media/dma-assess-ssis/dma-assess-ssis-create.png)
 
@@ -71,8 +71,8 @@ DMA необходимо запустить с **правами админист
 
 ![Просмотр результатов](media/dma-assess-ssis/dma-assess-ssis-result.png)
 
-## <a name="next-steps"></a>Дальнейшие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
-- [Общие сведения о переносе локальных рабочих нагрузок служб SSIS в службы SSIS в ADF](https://docs.microsoft.com/azure/data-factory/scenario-ssis-migration-overview)
-- [Перенос пакетов SQL Server Integration Services в Управляемый экземпляр SQL Azure](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
-- [Повторное развертывание пакетов SQL Server Integration Services в базе данных SQL Azure](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages)
+- [Общие сведения о переносе локальных рабочих нагрузок служб SSIS в службы SSIS в ADF](/azure/data-factory/scenario-ssis-migration-overview)
+- [Перенос пакетов SQL Server Integration Services в Управляемый экземпляр SQL Azure](/azure/dms/how-to-migrate-ssis-packages-managed-instance)
+- [Повторное развертывание пакетов SQL Server Integration Services в базе данных SQL Azure](/azure/dms/how-to-migrate-ssis-packages)

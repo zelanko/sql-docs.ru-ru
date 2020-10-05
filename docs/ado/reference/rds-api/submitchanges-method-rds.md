@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 250062a4-13c4-4bed-807d-8b9ad81536d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bc4b05a804bcb544b2d4b7e532d78d9526c62e92
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 69a76648c676af5c6420cffde930ac76c096276d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88981005"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724178"
 ---
 # <a name="submitchanges-method-rds"></a>Метод SubmitChanges (служба удаленных рабочих столов)
 Отправляет ожидающие изменения локально кэшированного и обновляемого [набора записей](../ado-api/recordset-object-ado.md) в источник данных, указанный в свойстве [Connect](./connect-property-rds.md) или в свойстве [URL-адреса](./url-property-rds.md) .  
   
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](/dotnet/framework/wcf/).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -47,7 +47,7 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
  *набор записей*  
  Объектная переменная, представляющая объект **набора записей** .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Прежде чем использовать метод **SubmitChanges** с RDS, необходимо задать свойства [Connect](./connect-property-rds.md), [Server](./server-property-rds.md)и [SQL](./sql-property.md) **. Объект элемента управления** .  
   
  Если метод [CancelUpdate](./cancelupdate-method-rds.md) вызывается после вызова **SubmitChanges** для того же объекта **Recordset** , вызов **CancelUpdate** завершается ошибкой, поскольку изменения уже были зафиксированы.  

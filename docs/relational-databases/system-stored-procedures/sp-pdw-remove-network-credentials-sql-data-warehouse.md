@@ -15,12 +15,12 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f6ff98a4f17aa39f1b7b85959a68c0f54973a41e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2e05c41cfa226fc2cdc6d2050657b607430f4ef7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473907"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91723993"
 ---
 # <a name="sp_pdw_remove_network_credentials-sql-data-warehouse"></a>sp_pdw_remove_network_credentials (хранилище данных SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -35,7 +35,9 @@ ms.locfileid: "88473907"
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 sp_pdw_remove_network_credentials 'target_server_name'  
-```  
+```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## <a name="arguments"></a>Аргументы  
  "*target_server_name*"  
@@ -56,7 +58,7 @@ sp_pdw_remove_network_credentials 'target_server_name'
  Эта хранимая процедура удаляет сетевые учетные данные из учетной записи NetworkService для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] . Учетная запись NetworkService запускает каждый экземпляр SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на управляющем узле и на вычислительных узлах. Например, при выполнении операции резервного копирования управляющий узел и каждый узел вычислений будут использовать учетные данные учетной записи NetworkService для доступа к целевому серверу.  
   
 ## <a name="metadata"></a>Метаданные  
- Чтобы получить список всех учетных данных и убедиться, что учетные данные были удалены, используйте [инструкцию sys. dm_pdw_network_credentials &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md).  
+ Чтобы получить список всех учетных данных и убедиться, что учетные данные были удалены, используйте [sys.dm_pdw_network_credentials &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md).  
   
  Чтобы добавить учетные данные, используйте [sp_pdw_add_network_credentials &#40;хранилище данных SQL&#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).  
   
