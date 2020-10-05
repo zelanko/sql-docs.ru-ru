@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: e2a48c4d-88b1-43ff-a202-9cdec54997d2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c9d3876b358721c7d63b1bbbb0aca98c56721b83
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 0ad7fcb2bb63d77bd50c89f11e9b818439b0d1d0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977855"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721405"
 ---
 # <a name="rds-tutorial-vbscript"></a>Учебник по RDS (VBScript)
 Это руководство по RDS, написанное на Microsoft Visual Basic Scripting Edition. Описание назначения этого учебника см. в [руководстве по RDS](./rds-tutorial.md).  
   
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](/dotnet/framework/wcf/).  
   
  В этом руководстве [RDS. Элемент управления](../../reference/rds-api/datacontrol-object-rds.md) и [RDS. Пространство](../../reference/rds-api/dataspace-object-rds.md) данных создается во время разработки, то есть они определяются с помощью тегов объектов следующим образом: `<OBJECT>...</OBJECT>` . Кроме того, они могут быть созданы во время выполнения с помощью метода [CreateObject (RDS)](../../reference/rds-api/createobject-method-rds.md) . Например, **RDS. Объект элемента управления** данным можно создать следующим образом:  
   

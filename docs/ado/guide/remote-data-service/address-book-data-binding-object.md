@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d6b6bb99ea218268a7ccb988acb2f49fb4898f32
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 0f5c98370ebb1a1b16e09e900455888d0c201905
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978445"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721575"
 ---
 # <a name="address-book-data-binding-object"></a>Объект привязки данных адресной книги
 Приложение адресной книги использует [RDS. Объект элемента управления](../../reference/rds-api/datacontrol-object-rds.md) данными для привязки данных из базы данных SQL Server к визуальному объекту (в нашем примере это таблица DHTML) на HTML-странице клиента приложения. Логика программы VBScript, управляемой событиями, использует [RDS. Элемент управления](../../reference/rds-api/datacontrol-object-rds.md) для:  
   
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](/dotnet/framework/wcf/).  
   
 -   Выполните запрос к базе данных, отправьте обновления в базу данных и обновите сетку данных.  
   

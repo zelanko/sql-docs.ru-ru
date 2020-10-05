@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 753a4a3d-0fba-40b8-86e7-50b34182ca69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3730b5f9fbadb36db449033d8d0c9167c3a035c9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 0bb4b99b268397ff34d6e4c1a022407379dc1409
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88982275"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91722349"
 ---
 # <a name="executeoptions-and-fetchoptions-properties-example-vbscript"></a>Примеры свойств ExecuteOptions и FetchOptions (VBScript)
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](/dotnet/framework/wcf/).  
   
  В следующем коде показано, как задать свойства [ексекутеоптионс](./executeoptions-property-rds.md) и [FetchOptions](./fetchoptions-property-rds.md) во время разработки. Если оставить это значение неопределенным, **ексекутеоптионс** по умолчанию будет **адцексексинк**. Этот параметр указывает, что при использовании **RDS. ** Вызывается метод Refresh, который будет выполняться в текущем вызывающем потоке, т. е. синхронно. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **ексекутеоптионсдесигнвбс. ASP**.  
   

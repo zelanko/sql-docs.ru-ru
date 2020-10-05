@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 0be98d1a-ab3d-4dce-a166-dacda10d154a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2cbbfaba540f5349fb7cc0291b8259eeda5b0d68
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6681a0b40890db9c344a91adc26694f3e122710d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978055"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721506"
 ---
 # <a name="marking-business-objects-as-safe-for-scripting"></a>Отметка бизнес-объектов как безопасных для скриптов
 > [!IMPORTANT]
->  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](/dotnet/framework/wcf/).  
   
  Чтобы обеспечить безопасную Интернет-среду, необходимо пометить все объекты, экземпляры которых созданы с помощью [RDS. ](../../reference/rds-api/dataspace-object-rds.md) Метод [CreateObject](../../reference/rds-api/createobject-method-rds.md) объекта Space в качестве "безопасного для создания скриптов". Чтобы их можно было использовать в DCOM, необходимо убедиться, что они помечены в области лицензирования системного реестра.  
   
