@@ -1,6 +1,6 @@
 ---
 description: managed_backup.sp_backup_config_basic (Transact-SQL)
-title: managed_backup. sp_backup_config_basic (Transact-SQL) | Документация Майкрософт
+title: managed_backup managed_backup.sp_backup_config_basic (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/03/2016
 ms.prod: sql
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d738a7cf10801366abaebe4ef7857475cd2aad5e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 428dff3f22b5a924f7a208a988334c14ece752a3
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550008"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753738"
 ---
 # <a name="managed_backupsp_backup_config_basic-transact-sql"></a>managed_backup.sp_backup_config_basic (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "89550008"
   Настраивает [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] Основные параметры для конкретной базы данных или для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  Эту процедуру можно вызвать самостоятельно, чтобы создать базовую управляемую конфигурацию резервного копирования. Однако если вы планируете добавить дополнительные функции или пользовательское расписание, сначала настройте эти параметры с помощью [managed_backup. sp_backup_config_advanced &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) и [managed_backup. sp_backup_config_schedule &#40;transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) перед включением управляемого резервного копирования с помощью этой процедуры.  
+>  Эту процедуру можно вызвать самостоятельно, чтобы создать базовую управляемую конфигурацию резервного копирования. Однако если вы планируете добавить дополнительные функции или пользовательское расписание, сначала настройте эти параметры с помощью [managed_backup. sp_backup_config_advanced &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) и [managed_backup. sp_backup_config_schedule &#40;transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) , прежде чем включить управляемое резервное копирование с помощью этой процедуры.  
    
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,7 +54,7 @@ EXEC managed_backup.sp_backup_config_basic
  Имя базы данных для включения управляемого резервного копирования в определенной базе данных.  
   
  @container_url  
- URL-адрес, указывающий расположение резервной копии. Если @credential_name параметр имеет значение null, этот URL-адрес является URL-адресом для контейнера больших двоичных объектов в службе хранилища Azure, а резервные копии используют новую резервную копию для блокировки функциональных возможностей больших двоичных объектов. Дополнительные сведения см. в обзоре [SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Если @credential_name указан параметр, то это URL-адрес учетной записи хранения, и резервные копии используют устаревшие функции резервного копирования для страничных BLOB-объектов.  
+ URL-адрес, указывающий расположение резервной копии. Если @credential_name параметр имеет значение null, этот URL-адрес является URL-адресом для контейнера больших двоичных объектов в службе хранилища Azure, а резервные копии используют новую резервную копию для блокировки функциональных возможностей больших двоичных объектов. Дополнительные сведения см. в обзоре [SAS](/azure/storage/common/storage-sas-overview). Если @credential_name указан параметр, то это URL-адрес учетной записи хранения, и резервные копии используют устаревшие функции резервного копирования для страничных BLOB-объектов.  
   
 > [!NOTE]  
 >  В настоящее время для этого параметра поддерживается только URL-адрес SAS.  
@@ -109,8 +109,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>См. также:  
- [managed_backup. sp_backup_config_advanced &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [managed_backup managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)   
  [managed_backup.sp_backup_config_schedule (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)  
-  
   

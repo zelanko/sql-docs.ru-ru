@@ -34,12 +34,12 @@ ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ae9077610031075f71564eb5938b2a1415842827
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b012aa98d5dd1042a8e6a02ab4e91747ab512667
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454803"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753711"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -145,10 +145,10 @@ CONTAINSTABLE
  <contains_search_condition>  
  Текст, который необходимо найти в столбце *column_name*, и условия соответствия. Дополнительные сведения об условиях поиска см. в разделе [CONTAINS &#40;&#41;Transact-SQL ](../../t-sql/queries/contains-transact-sql.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Полнотекстовые предикаты и функции работают в одной таблице, что следует из наличия предиката FROM. Для поиска в нескольких таблицах используйте в предложении FROM соединенную таблицу, чтобы выполнять поиск в результирующем наборе, который получен в результате соединения нескольких таблиц.  
   
- Возвращаемая таблица содержит столбец с именем **Key** , содержащий значения полнотекстовых ключей. Каждая таблица с полнотекстовым индексом содержит столбец, значения которого гарантированно уникальны, а значения, возвращаемые в **ключевом** столбце, являются значениями полнотекстового ключа строк, соответствующих условию выбора, указанному в условии поиска CONTAINS. Свойство **TableFulltextKeyColumn** , полученное из функции OBJECTPROPERTYEX, предоставляет идентификатор этого уникального ключевого столбца. Чтобы получить идентификатор столбца, связанного с полнотекстовым ключом полнотекстового индекса, используйте представление **sys. fulltext_indexes**. Дополнительные сведения см. в разделе [sys. fulltext_indexes &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
+ Возвращаемая таблица содержит столбец с именем **Key** , содержащий значения полнотекстовых ключей. Каждая таблица с полнотекстовым индексом содержит столбец, значения которого гарантированно уникальны, а значения, возвращаемые в **ключевом** столбце, являются значениями полнотекстового ключа строк, соответствующих условию выбора, указанному в условии поиска CONTAINS. Свойство **TableFulltextKeyColumn** , полученное из функции OBJECTPROPERTYEX, предоставляет идентификатор этого уникального ключевого столбца. Чтобы получить идентификатор столбца, связанного с полнотекстовым ключом полнотекстового индекса, используйте **sys.fulltext_indexes**. Дополнительные сведения см. в разделе [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
   
  Чтобы получить нужные строки первоначальной таблицы, следует указать соединение со строками, возвращаемыми функцией CONTAINSTABLE. Обычно используется следующая форма инструкции SELECT с предложением FROM и функцией CONTAINSTABLE:  
   
@@ -256,7 +256,7 @@ GO
   
  `GO`  
   
-### <a name="e-specifying-the-language-argument"></a>Д. Указание аргумента LANGUAGE  
+### <a name="e-specifying-the-language-argument"></a>E. Указание аргумента LANGUAGE  
  Следующий пример демонстрирует использование аргумента `LANGUAGE`.  
   
 ```  
@@ -281,13 +281,12 @@ GO
 > [!NOTE]  
 >  Аргумент LANGUAGE *language_term* не требуется для использования *top_n_by_rank.*  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Ограничение результатов поиска по РАНГу](../../relational-databases/search/limit-search-results-with-rank.md)   
  [Запрос с полнотекстовым поиском](../../relational-databases/search/query-with-full-text-search.md)   
- [Создание запросов полнотекстового поиска (визуальные инструменты для баз данных)](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
+ [Создание запросов полнотекстового поиска (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/create-full-text-search-queries-visual-database-tools.md)   
  [CONTAINS (Transact-SQL)](../../t-sql/queries/contains-transact-sql.md)   
  [Запрос с полнотекстовым поиском](../../relational-databases/search/query-with-full-text-search.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)  
-  
   

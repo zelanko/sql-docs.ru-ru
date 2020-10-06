@@ -1,6 +1,6 @@
 ---
-description: sys. fn_hadr_distributed_ag_database_replica (Transact-SQL)
-title: sys. fn_hadr_distributed_ag_database_replica (Transact-SQL) | Документация Майкрософт
+description: sys.fn_hadr_distributed_ag_database_replica (Transact-SQL)
+title: sys.fn_hadr_distributed_ag_database_replica (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/14/2016
 ms.prod: sql
@@ -20,14 +20,14 @@ helpviewer_keywords:
 ms.assetid: 0e6202a1-e872-4f53-99d7-c16b6f712efc
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f54cfdf987474435b452421620246b6432892a36
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b87e98f49941cfa9da555d54a10185d21e36d47e
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419508"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753688"
 ---
-# <a name="sysfn_hadr_distributed_ag_database_replica-transact-sql"></a>sys. fn_hadr_distributed_ag_database_replica (Transact-SQL)
+# <a name="sysfn_hadr_distributed_ag_database_replica-transact-sql"></a>sys.fn_hadr_distributed_ag_database_replica (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Используется для преобразования базы данных в распределенной группе доступности в базу данных в локальной группе доступности.  
@@ -57,7 +57,7 @@ sys.fn_hadr_distributed_ag_database_replica( lag_Id, database_id )
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="using-sysfn_hadr_distributed_ag_database_replica"></a>Использование Sys. fn_hadr_distributed_ag_database_replica  
+### <a name="using-sysfn_hadr_distributed_ag_database_replica"></a>Использование sys.fn_hadr_distributed_ag_database_replica  
  В следующем примере идентификатор базы данных передается в распределенной группе доступности. Он возвращает таблицу с ИДЕНТИФИКАТОРом базы данных, связанным с локальной группой доступности.  
   
 ```  
@@ -68,11 +68,10 @@ SELECT * FROM sys.fn_hadr_distributed_ag_database_replica(@lagId, @databaseId)
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции групп доступности Always On &#40;Transact-SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
  [Группы доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [Распределенные группы доступности &#40;группы доступности Always On&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)   
+ [Распределенные группы доступности &#40;группы доступности Always On&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups.md)   
  [CREATE AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/alter-availability-group-transact-sql.md)  
-  
   

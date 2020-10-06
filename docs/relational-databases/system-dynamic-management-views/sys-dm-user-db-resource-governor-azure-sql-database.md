@@ -1,6 +1,6 @@
 ---
-description: sys. dm_user_db_resource_governance (Transact-SQL)
-title: sys. dm_user_db_resource_governance (Transact-SQL) | Документация Майкрософт
+description: sys.dm_user_db_resource_governance (Transact-SQL)
+title: sys.dm_user_db_resource_governance (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/17/2019
 ms.prod: sql
@@ -21,14 +21,14 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 869a5d802e36e74c22a88e599065b04df35c62a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2038883693288a75f9e2dbe17d80b6b9c7474343
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498261"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753730"
 ---
-# <a name="sysdm_user_db_resource_governance-transact-sql"></a>sys. dm_user_db_resource_governance (Transact-SQL)
+# <a name="sysdm_user_db_resource_governance-transact-sql"></a>sys.dm_user_db_resource_governance (Transact-SQL)
 
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
@@ -44,23 +44,23 @@ ms.locfileid: "88498261"
 |**slo_name**|nvarchar|Цель уровня обслуживания, включая создание оборудования.|
 |**dtu_limit**|INT|Предел DTU базы данных (NULL для Виртуальное ядро).|
 |**cpu_limit**|INT|Виртуальное ядро ограничение базы данных (значение NULL для баз данных DTU).|
-|**min_cpu**|tinyint|Значение MIN_CPU_PERCENT пула ресурсов рабочей нагрузки пользователя. См. раздел [Основные понятия пула ресурсов](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts).|
-|**max_cpu**|tinyint|Значение MAX_CPU_PERCENT пула ресурсов рабочей нагрузки пользователя. См. раздел [Основные понятия пула ресурсов](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts).|
-|**cap_cpu**|tinyint|Значение CAP_CPU_PERCENT пула ресурсов рабочей нагрузки пользователя. См. раздел [Основные понятия пула ресурсов](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts).|
+|**min_cpu**|tinyint|Значение MIN_CPU_PERCENT пула ресурсов рабочей нагрузки пользователя. См. раздел [Основные понятия пула ресурсов](../resource-governor/resource-governor-resource-pool.md#resource-pool-concepts).|
+|**max_cpu**|tinyint|Значение MAX_CPU_PERCENT пула ресурсов рабочей нагрузки пользователя. См. раздел [Основные понятия пула ресурсов](../resource-governor/resource-governor-resource-pool.md#resource-pool-concepts).|
+|**cap_cpu**|tinyint|Значение CAP_CPU_PERCENT пула ресурсов рабочей нагрузки пользователя. См. раздел [Основные понятия пула ресурсов](../resource-governor/resource-governor-resource-pool.md#resource-pool-concepts).|
 |**min_cores**|smallint|Только для внутреннего применения.|
-|**max_dop**|smallint|Значение MAX_DOP для группы рабочей нагрузки пользователя. См. раздел [Создание группы рабочей нагрузки](https://docs.microsoft.com/sql/t-sql/statements/create-workload-group-transact-sql).|
-|**min_memory**|INT|Значение MIN_MEMORY_PERCENT пула ресурсов рабочей нагрузки пользователя. См. раздел [Основные понятия пула ресурсов](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts).|
-|**max_memory**|INT|Значение MAX_MEMORY_PERCENT пула ресурсов рабочей нагрузки пользователя. См. раздел [Основные понятия пула ресурсов](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor-resource-pool?#resource-pool-concepts).|
+|**max_dop**|smallint|Значение MAX_DOP для группы рабочей нагрузки пользователя. См. раздел [Создание группы рабочей нагрузки](../../t-sql/statements/create-workload-group-transact-sql.md).|
+|**min_memory**|INT|Значение MIN_MEMORY_PERCENT пула ресурсов рабочей нагрузки пользователя. См. раздел [Основные понятия пула ресурсов](../resource-governor/resource-governor-resource-pool.md#resource-pool-concepts).|
+|**max_memory**|INT|Значение MAX_MEMORY_PERCENT пула ресурсов рабочей нагрузки пользователя. См. раздел [Основные понятия пула ресурсов](../resource-governor/resource-governor-resource-pool.md#resource-pool-concepts).|
 |**max_sessions**|INT|Максимальное число сеансов, разрешенное в группе рабочей нагрузки пользователя.|
-|**max_memory_grant**|INT|Значение REQUEST_MAX_MEMORY_GRANT_PERCENT для группы рабочей нагрузки пользователя. См. раздел [Создание группы рабочей нагрузки](https://docs.microsoft.com/sql/t-sql/statements/create-workload-group-transact-sql).|
+|**max_memory_grant**|INT|Значение REQUEST_MAX_MEMORY_GRANT_PERCENT для группы рабочей нагрузки пользователя. См. раздел [Создание группы рабочей нагрузки](../../t-sql/statements/create-workload-group-transact-sql.md).|
 |**max_db_memory**|INT|Только для внутреннего применения.|
 |**govern_background_io**|bit|Только для внутреннего применения.|
-|**min_db_max_size_in_mb**|BIGINT|Минимальное max_size значение для файла данных в МБ. См. раздел [sys. database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).|
-|**max_db_max_size_in_mb**|BIGINT|Максимальное max_size значение для файла данных в МБ. См. раздел [sys. database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).|
-|**default_db_max_size_in_mb**|BIGINT|Значение max_size по умолчанию для файла данных в МБ. См. раздел [sys. database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).|
-|**db_file_growth_in_mb**|BIGINT|Шаг роста по умолчанию для файла данных в МБ. См. раздел [sys. database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).|
-|**initial_db_file_size_in_mb**|BIGINT|Размер по умолчанию для нового файла данных в МБ. См. раздел [sys. database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).|
-|**log_size_in_mb**|BIGINT|Размер по умолчанию для нового файла журнала в МБ. См. раздел [sys. database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).|
+|**min_db_max_size_in_mb**|BIGINT|Минимальное max_size значение для файла данных в МБ. См. [sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md).|
+|**max_db_max_size_in_mb**|BIGINT|Максимальное max_size значение для файла данных в МБ. См. [sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md).|
+|**default_db_max_size_in_mb**|BIGINT|Значение max_size по умолчанию для файла данных в МБ. См. [sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md).|
+|**db_file_growth_in_mb**|BIGINT|Шаг роста по умолчанию для файла данных в МБ. См. [sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md).|
+|**initial_db_file_size_in_mb**|BIGINT|Размер по умолчанию для нового файла данных в МБ. См. [sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md).|
+|**log_size_in_mb**|BIGINT|Размер по умолчанию для нового файла журнала в МБ. См. [sys.database_files](../system-catalog-views/sys-database-files-transact-sql.md).|
 |**instance_cap_cpu**|INT|Только для внутреннего применения.|
 |**instance_max_log_rate**|BIGINT|Ограничение скорости создания журнала для экземпляра SQL Server, в байтах в секунду. Применяется ко всему журналу, созданному экземпляром, включая `tempdb` и другие системные базы данных. В эластичном пуле применяется к журналу, созданному всеми базами данных в пуле.|
 |**instance_max_worker_threads**|INT|Ограничение рабочего потока для экземпляра SQL Server.|
@@ -95,9 +95,9 @@ ms.locfileid: "88498261"
 
 Для этого представления необходимо разрешение VIEW DATABASE STATE.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 
-Описание руководства по управлению ресурсами в базе данных SQL Azure см. в разделе [ограничения ресурсов базы данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server).
+Описание руководства по управлению ресурсами в базе данных SQL Azure см. в разделе [ограничения ресурсов базы данных SQL](/azure/sql-database/sql-database-resource-limits-database-server).
 
 > [!IMPORTANT]
 > Большая часть данных, возвращаемых этим DMV, предназначена для внутреннего использования и может быть изменена в любое время.
@@ -118,11 +118,11 @@ ORDER BY database_name;
 
 ## <a name="see-also"></a>См. также:
 
-- [Регулятор ресурсов](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor)
-- [sys.dm_resource_governor_resource_pools (Transact-SQL)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql)
-- [sys.dm_resource_governor_workload_groups (Transact-SQL)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql)
-- [sys. dm_resource_governor_resource_pools_history_ex (Transact-SQL)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-history-ex-azure-sql-database)
-- [sys.dm_resource_governor_workload_groups_history_ex (база данных SQL Azure)](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-history-ex-azure-sql-database)
-- [Управление частотой ведения журнала транзакций](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
-- [Ограничения ресурсов на основе DTU для отдельной базы данных](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-single-databases)
-- [Ограничения ресурсов виртуального ядра для отдельной базы данных](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-single-databases)
+- [Регулятор ресурсов](../resource-governor/resource-governor.md)
+- [sys.dm_resource_governor_resource_pools (Transact-SQL)](./sys-dm-resource-governor-resource-pools-transact-sql.md)
+- [sys.dm_resource_governor_workload_groups (Transact-SQL)](./sys-dm-resource-governor-workload-groups-transact-sql.md)
+- [sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)](./sys-dm-resource-governor-resource-pools-history-ex-azure-sql-database.md)
+- [sys.dm_resource_governor_workload_groups_history_ex (база данных SQL Azure)](./sys-dm-resource-governor-workload-groups-history-ex-azure-sql-database.md)
+- [Управление частотой ведения журнала транзакций](/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
+- [Ограничения ресурсов на основе DTU для отдельной базы данных](/azure/sql-database/sql-database-dtu-resource-limits-single-databases)
+- [Ограничения ресурсов виртуального ядра для отдельной базы данных](/azure/sql-database/sql-database-vcore-resource-limits-single-databases)

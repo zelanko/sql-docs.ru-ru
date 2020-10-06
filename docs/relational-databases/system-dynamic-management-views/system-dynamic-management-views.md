@@ -25,12 +25,12 @@ ms.assetid: cf893ecb-0bf6-4cbf-ac00-8a1099e405b1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 94ac37d2e2a908d25c9c4b90c8517d127086ed68
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 34d184b3605cd10d9ca9313028640a5821367e02
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536960"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753876"
 ---
 # <a name="system-dynamic-management-views"></a>Системные динамические административные представления
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,7 +62,7 @@ FROM sys.dm_os_wait_stats;
 > [!NOTE]  
 >  Так как инструкция DENY имеет более высокий приоритет, если пользователю было предоставлено разрешение VIEW SERVER STATE, но был запрет на разрешение VIEW DATABASE STATE, пользователь сможет получать данные области сервера, но не базы данных.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  Динамические административные представления и функции организованы в следующие категории:  
 
 :::row:::
@@ -110,13 +110,13 @@ FROM sys.dm_os_wait_stats;
 
         [Динамические административные представления, связанные с компонентом Service Broker (Transact-SQL)](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)
 
-        [Динамические административные представления и функции, связанные с пространственными данными &#40;языке Transact-SQL&#41;](https://msdn.microsoft.com/library/c542ac38-451f-43a5-bf8c-4edd38bb738e)
+        [Динамические административные представления и функции, связанные с пространственными данными &#40;языке Transact-SQL&#41;](./spatial-data-sys-dm-db-objects-disabled-on-compatibility-level-change.md)
 
         [Динамические административные представления хранилища данных SQL и параллельного хранилища данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)
 
         [SQL Server динамические административные представления, связанные с операционной системой &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)
 
-        [Stretch Database динамические административные представления &#40;&#41;Transact-SQL ](https://msdn.microsoft.com/library/1193efce-a105-49a9-a8b8-26b063485567)
+        [Stretch Database динамические административные представления &#40;&#41;Transact-SQL ]()
 
         [Динамические административные представления и функции, связанные с транзакциями (Transact-SQL)](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)
     :::column-end:::
@@ -125,6 +125,5 @@ FROM sys.dm_os_wait_stats;
 ## <a name="see-also"></a>См. также  
  [GRANT, предоставление разрешений на сервер &#40;&#41;Transact-SQL ](../../t-sql/statements/grant-server-permissions-transact-sql.md)   
  [GRANT, предоставление разрешений на базу данных (Transact-SQL)](../../t-sql/statements/grant-database-permissions-transact-sql.md)   
- [Системные представления &#40;&#41;Transact-SQL ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
-  
+ [Системные представления &#40;&#41;Transact-SQL ](../../t-sql/language-reference.md)  
   

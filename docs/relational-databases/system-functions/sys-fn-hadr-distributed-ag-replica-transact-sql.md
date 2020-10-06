@@ -1,6 +1,6 @@
 ---
-description: sys. fn_hadr_distributed_ag_replica (Transact-SQL)
-title: sys. fn_hadr_distributed_ag_replica (Transact-SQL) | Документация Майкрософт
+description: sys.fn_hadr_distributed_ag_replica (Transact-SQL)
+title: sys.fn_hadr_distributed_ag_replica (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -20,14 +20,14 @@ helpviewer_keywords:
 ms.assetid: a1e5f9cb-c350-4bb4-a04f-7394f6f25d62
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6b7dc6aacf18415b11f5a32e464a57fbbadadc07
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 94672892a8d8d3135bbaa48b6e783504e6094eaf
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427776"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753658"
 ---
-# <a name="sysfn_hadr_distributed_ag_replica-transact-sql"></a>sys. fn_hadr_distributed_ag_replica (Transact-SQL)
+# <a name="sysfn_hadr_distributed_ag_replica-transact-sql"></a>sys.fn_hadr_distributed_ag_replica (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Используется для отображения реплики в распределенной группе доступности в локальной группе доступности.  
@@ -57,7 +57,7 @@ sys.fn_hadr_distributed_ag_replica( lag_Id, replica_id )
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="using-sysfn_hadr_distributed_ag_replica"></a>Использование Sys. fn_hadr_distributed_ag_replica  
+### <a name="using-sysfn_hadr_distributed_ag_replica"></a>Использование sys.fn_hadr_distributed_ag_replica  
  В следующем примере возвращается таблица с идентификатором локальной группы доступности, связанной с указанной распределенной группой доступности и репликой.  
   
 ```  
@@ -68,11 +68,10 @@ SELECT * FROM sys.fn_hadr_distributed_ag_replica(@lagId, @replicaId)
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции группы доступности AlwaysOn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
  [Группы доступности AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [Распределенные группы доступности &#40;группы доступности AlwaysOn&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)  
+ [Распределенные группы доступности &#40;группы доступности AlwaysOn&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups.md)  
  [CREATE AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/alter-availability-group-transact-sql.md)  
-  
   

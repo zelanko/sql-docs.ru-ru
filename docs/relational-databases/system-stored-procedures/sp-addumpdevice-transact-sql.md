@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 91af8d735fb27f5009d4c7067805523f02413ba4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1f17681ffbb922b25cffc6b21ecf2f6317d400db
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550021"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753798"
 ---
 # <a name="sp_addumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [текущей версии](../../sql-server/what-s-new-in-sql-server-2016.md)).  
 
 Добавляет в экземпляр компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устройство резервного копирования.  
   
@@ -77,7 +77,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
  None  
   
 ## <a name="remarks"></a>Remarks  
- **sp_addumpdevice** добавляет устройство резервного копирования в представление каталога **sys. backup_devices** . После этого устройство можно указывать в инструкциях BACKUP и RESTORE по логическому имени. **sp_addumpdevice** не выполняет никакого доступа к физическому устройству. Обращение к нему производится только при выполнении инструкций BACKUP и RESTORE. Создание логического устройства резервного копирования упрощает инструкции BACKUP и RESTORE, позволяя вместо пути устройства в предложениях TAPE = и DISK = указывать имена устройств.  
+ **sp_addumpdevice** добавляет устройство резервного копирования в представление каталога **sys.backup_devices** . После этого устройство можно указывать в инструкциях BACKUP и RESTORE по логическому имени. **sp_addumpdevice** не выполняет никакого доступа к физическому устройству. Обращение к нему производится только при выполнении инструкций BACKUP и RESTORE. Создание логического устройства резервного копирования упрощает инструкции BACKUP и RESTORE, позволяя вместо пути устройства в предложениях TAPE = и DISK = указывать имена устройств.  
   
  При использовании дисковых и файловых устройств резервного копирования проблемы владения и разрешений могут накладываться. Проверьте, даны ли необходимые разрешения на соответствующие файлы учетной записи Windows, от имени которой запущен компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -148,5 +148,4 @@ GO
  [sp_dropdevice (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
  [sys.backup_devices (Transact-SQL)](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
   
