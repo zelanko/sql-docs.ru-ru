@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 96e56120e8573294ddc051932e2b629025cc76de
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5da54333208b1e9781387387374f58a822e08f06
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487997"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728030"
 ---
 # <a name="create-a-cross-domain-rule"></a>Создание междоменного правила
 
@@ -95,9 +95,8 @@ ms.locfileid: "88487997"
   
     6.  После завершения проверки нажмите **Закрыть** в диалоговом окне **Проверка правила для составного домена** .  
   
-2.  Закончив работу со всеми междоменными правилами, нажмите кнопку **Готово** , чтобы завершить действие управления доменами, как описано в разделе [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+2.  Закончив работу со всеми междоменными правилами, нажмите кнопку **Готово** , чтобы завершить действие управления доменами, как описано в разделе [End the Domain Management Activity](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130)).  
   
 ##  <a name="follow-up-after-creating-a-cross-domain-rule"></a><a name="FollowUp"></a> Дальнейшие действия. После создания междоменного правила  
  Создав перекрестное правило, можно выполнить для этого домена другие задачи управления доменами, провести обнаружение знаний для добавления знаний в домен или добавить в домен политику сопоставления. Дополнительные сведения см. в разделах [Обнаружение набора знаний](../data-quality-services/perform-knowledge-discovery.md), [Управление доменом](../data-quality-services/managing-a-domain.md) и [Создание политики сопоставления](../data-quality-services/create-a-matching-policy.md).  
-  
   
