@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ec03d8cd7b6e29bf3241b1646ec7c2e92c41b39a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bb0fe13f5a15a726235c306c7b6b3c6b79bcef2c
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789799"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91669702"
 ---
 # <a name="logging-in-to-sql-server"></a>Вход в систему SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -86,13 +86,12 @@ WHERE session_id = @@SPID;
   
 -   [Поиск и устранение неполадок соединений с SQL Server Database Engine](https://social.technet.microsoft.com/wiki/contents/articles/how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)  
   
--   [Шаги для устранения неполадок с подключением SQL](https://docs.microsoft.com/archive/blogs/sql_protocols/steps-to-troubleshoot-sql-connectivity-issues)  
+-   [Шаги для устранения неполадок с подключением SQL](/archive/blogs/sql_protocols/steps-to-troubleshoot-sql-connectivity-issues)  
   
 ## <a name="related-content"></a>См. также  
  [Выбор режима проверки подлинности](../../relational-databases/security/choose-an-authentication-mode.md)  
   
- [Использование программы sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md)  
+ [Использование программы sqlcmd](../../ssms/scripting/sqlcmd-use-the-utility.md)  
   
  [Создание имени входа](../../t-sql/lesson-2-configuring-permissions-on-database-objects.md)
-  
   

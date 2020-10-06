@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6eafb66e4cc5f14803027d26f88dbf4baafbcd0c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 94fcbdfe06b99e0fb66cb6d462512c7d2a283914
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540638"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497932"
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,7 +42,6 @@ ms.locfileid: "89540638"
 ## <a name="syntax"></a>Синтаксис  
   
 ```syntaxsql
-  
 END CONVERSATION conversation_handle  
    [   [ WITH ERROR = failure_code DESCRIPTION = 'failure_text' ]  
      | [ WITH CLEANUP ]  
@@ -96,14 +95,14 @@ END CONVERSATION conversation_handle
 ### <a name="a-ending-a-conversation"></a>A. Завершение диалога  
  Следующий пример завершает диалог, определяемый дескриптором `@dialog_handle`.  
   
-```  
+```sql 
 END CONVERSATION @dialog_handle ;  
 ```  
   
 ### <a name="b-ending-a-conversation-with-an-error"></a>Б. Завершение диалога с ошибкой  
  В следующем примере диалог, определяемый дескриптором `@dialog_handle`, завершается с ошибкой, если обрабатываемая инструкция сообщила об ошибке. Обратите внимание, что этот упрощенный подход к обработке ошибок может не подойти для некоторых приложений.  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER,  
         @ErrorSave INT,  
         @ErrorDesc NVARCHAR(100) ;  
@@ -128,7 +127,7 @@ COMMIT TRANSACTION ;
 ### <a name="c-cleaning-up-a-conversation-that-cannot-complete-normally"></a>В. Очистка диалога, который не может быть нормально завершен  
  Следующий пример завершает диалог, определяемый дескриптором `@dialog_handle`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] немедленно удаляет все сообщения из очереди обслуживания и очереди передачи, не уведомляя об этом удаленную службу. Поскольку при завершении диалога с очисткой удаленная служба не уведомляется, этот способ следует использовать только в тех случаях, когда удаленная служба недоступна и не может получить сообщение **EndDialog** или **Error**.  
   
-```  
+```sql  
 END CONVERSATION @dialog_handle WITH CLEANUP ;  
 ```  
   

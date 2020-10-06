@@ -24,12 +24,12 @@ ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: d263f8db7e95cbc5e961d5b4d3879ce53ce99d47
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 8f7b4ad559ccafbfd9ac43304a9f1ad6da73b6bd
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227335"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497906"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -146,6 +146,7 @@ ms.locfileid: "91227335"
 ###  <a name="a-using-execute-as-and-revert-to-switch-context"></a><a name="_exampleA"></a> A. Использование предложений EXECUTE AS и REVERT для переключения контекста  
  В приведенном примере создается стек контекстов выполнения с использованием нескольких участников. Затем инструкция `REVERT` используется для сброса контекста выполнения к предыдущему участнику. Инструкция `REVERT` выполняется множество раз, передвигаясь вверх по стеку до тех пор, пока контекст выполнения не будет установлен на первоначального участника.  
   
+
 ```sql
 USE AdventureWorks2012;  
 GO  
@@ -190,8 +191,9 @@ GO
 ### <a name="b-using-the-with-cookie-clause"></a>Б. Использование предложения WITH COOKIE  
  В следующем примере устанавливается контекст выполнения сеанса для определенного пользователя и указывается предложение WITH NO REVERT COOKIE = @*varbinary_variable*. Инструкция `REVERT` обязана указать значение, передаваемое переменной `@cookie` в `EXECUTE AS` инструкции, для успешного возвращения контекста обратно вызывающему. Чтобы запустить этот образец, должно существовать имя входа `login1` и пользователь `user1`, созданные в примере А.  
   
-```sql
-DECLARE @cookie varbinary(8000);  
+
+```sql 
+DECLARE @cookie VARBINARY(8000);  
 EXECUTE AS USER = 'user1' WITH COOKIE INTO @cookie;  
 -- Store the cookie in a safe location in your application.  
 -- Verify the context switch.  
@@ -200,7 +202,7 @@ SELECT SUSER_NAME(), USER_NAME();
 SELECT @cookie;  
 GO  
 -- Use the cookie in the REVERT statement.  
-DECLARE @cookie varbinary(8000);  
+DECLARE @cookie VARBINARY(8000);  
 -- Set the cookie value to the one from the SELECT @cookie statement.  
 SET @cookie = <value from the SELECT @cookie statement>;  
 REVERT WITH COOKIE = @cookie;  

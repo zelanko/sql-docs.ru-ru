@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3969c7e9-ca10-4c67-971b-25d2dfccf650
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3565cb96bc39b1f51cf5c1c64a25abf1766ad695
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3f2dc28c6d703102ef9d01797f1fe2127e0180ab
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426486"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497864"
 ---
 # <a name="revoke-type-permissions-transact-sql"></a>REVOKE, отмена разрешения на тип (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +34,6 @@ ms.locfileid: "88426486"
 ## <a name="syntax"></a>Синтаксис  
   
 ```syntaxsql
-  
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]   
     ON TYPE :: [ schema_name ]. type_name   
     { FROM | TO } <database_principal> [ ,...n ]   
@@ -133,7 +132,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ## <a name="examples"></a>Примеры  
  Следующий код отменяет разрешение `VIEW DEFINITION`, связанное с пользовательским типом `PhoneNumber`, для пользователя `KhalidR`. Параметр `CASCADE` показывает, что разрешение `VIEW DEFINITION` будет также отменено для участников, которым предоставил это разрешение `KhalidR`. `PhoneNumber` расположен в схеме `Telemarketing`.  
   
-```  
+```sql  
 REVOKE VIEW DEFINITION ON TYPE::Telemarketing.PhoneNumber   
     FROM KhalidR CASCADE;  
 GO  

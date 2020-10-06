@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3b79e3a75f0b3590bcc0485a4d24b2a001bd8390
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b299ace817088af33732d9e4a9984d7978709f6c
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548973"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498181"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "89548973"
 ## <a name="syntax"></a>Синтаксис  
   
 ```syntaxsql
-  
 [ WAITFOR ( ]  
     RECEIVE [ TOP ( n ) ]   
         <column_specifier> [ ,...n ]  
@@ -183,14 +182,14 @@ ms.locfileid: "89548973"
 ### <a name="a-receiving-all-columns-for-all-messages-in-a-conversation-group"></a>A. Получение всех столбцов для всех сообщений в группе сообщений  
  На следующем примере показано, как получаются все доступные сообщения для следующей доступной группы сообщений из очереди `ExpenseQueue`. Инструкция возвращает сообщения в виде результирующего набора.  
   
-```  
+```sql  
 RECEIVE * FROM ExpenseQueue ;  
 ```  
   
 ### <a name="b-receiving-specified-columns-for-all-messages-in-a-conversation-group"></a>Б. Получение указанных столбцов для всех сообщений в группе сообщений  
  На следующем примере показано, как получаются все доступные сообщения для следующей доступной группы сообщений из очереди `ExpenseQueue`. Инструкция возвращает сообщения в виде результирующего набора, содержащего столбцы `conversation_handle`, `message_type_name` и `message_body`.  
   
-```  
+```sql  
 RECEIVE conversation_handle, message_type_name, message_body  
 FROM ExpenseQueue ;  
 ```  
@@ -198,14 +197,14 @@ FROM ExpenseQueue ;
 ### <a name="c-receiving-the-first-available-message-in-the-queue"></a>В. Получение первого доступного сообщения в очереди  
  На следующем примере показано, как в качестве результирующего набора возвращается первое доступное сообщение из очереди `ExpenseQueue`.  
   
-```  
+```sql  
 RECEIVE TOP (1) * FROM ExpenseQueue ;  
 ```  
   
 ### <a name="d-receiving-all-messages-for-a-specified-conversation"></a>Г. Получение всех сообщений для указанного диалога  
  На следующем примере показано, как в качестве результирующего набора возвращаются все доступные сообщения для указанного диалога из очереди `ExpenseQueue`.  
   
-```  
+```sql  
 DECLARE @conversation_handle UNIQUEIDENTIFIER ;  
   
 SET @conversation_handle = <retrieve conversation from database> ;  
@@ -218,7 +217,7 @@ WHERE conversation_handle = @conversation_handle ;
 ### <a name="e-receiving-messages-for-a-specified-conversation-group"></a>Д. Получение сообщений для заданной группы сообщений  
  На следующем примере показано, как в качестве результирующего набора возвращаются все доступные сообщения для указанной группы сообщений из очереди `ExpenseQueue`.  
   
-```  
+```sql  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER ;  
   
 SET @conversation_group_id =   
@@ -232,7 +231,7 @@ WHERE conversation_group_id = @conversation_group_id ;
 ### <a name="f-receiving-into-a-table-variable"></a>Е. Получение сообщений в табличную переменную  
  На следующем примере показано, как в табличную переменную принимаются все доступные сообщения для указанной группы диалога из очереди `ExpenseQueue`.  
   
-```  
+```sql  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER ;  
   
 DECLARE @procTable TABLE(  
@@ -264,7 +263,7 @@ WHERE conversation_group_id = @conversation_group_id ;
 ### <a name="g-receiving-messages-and-waiting-indefinitely"></a>Ж. Получение сообщений без ограничения времени ожидания  
  На следующем примере показано, как получаются все доступные сообщения для следующей доступной группы сообщений в очереди `ExpenseQueue`. Инструкция ожидает до тех пор, пока по крайней мере одно сообщение не станет доступным, после чего возвращает результирующий набор, содержащий все столбцы сообщения.  
   
-```  
+```sql  
 WAITFOR (  
     RECEIVE *  
     FROM ExpenseQueue) ;  
@@ -273,7 +272,7 @@ WAITFOR (
 ### <a name="h-receiving-messages-and-waiting-for-a-specified-interval"></a>З. Получение сообщений с ожиданием в течение указанного интервала времени  
  На следующем примере показано, как получаются все доступные сообщения для следующей доступной группы сообщений в очереди `ExpenseQueue`. Инструкция ожидает в течение 60 секунд или до тех пор, пока по крайней мере одно сообщение не станет доступным (в зависимости от того, что произойдет раньше). Инструкция возвращает результирующий набор, который содержит все столбцы сообщения, если доступно хотя бы одно сообщение. В противном случае инструкция возвращает пустой результирующий набор.  
   
-```  
+```sql  
 WAITFOR (  
     RECEIVE *  
     FROM ExpenseQueue ),  
@@ -283,7 +282,7 @@ TIMEOUT 60000 ;
 ### <a name="i-receiving-messages-modifying-the-type-of-a-column"></a>И. Получение сообщений с изменением типа столбца  
  На следующем примере показано, как получаются все доступные сообщения для следующей доступной группы сообщений в очереди `ExpenseQueue`. Если тип сообщения указывает на то, что сообщение содержит документ XML, инструкция преобразует тело сообщения в XML.  
   
-```  
+```sql  
 WAITFOR (  
     RECEIVE message_type_name,  
         CASE  
@@ -297,7 +296,7 @@ TIMEOUT 60000 ;
 ### <a name="j-receiving-a-message-extracting-data-from-the-message-body-retrieving-conversation-state"></a>К. Получение сообщений, извлечение данных из тела сообщения, извлечение состояния диалога  
  На следующем примере показано, как получается следующее доступное сообщение в очереди `ExpenseQueue` для следующей доступной группы сообщений. Если сообщение имеет тип `//Adventure-Works.com/Expenses/SubmitExpense`, инструкция извлекает из тела сообщения идентификатор служащего и список элементов. Инструкция извлекает также состояние для диалога из таблицы `ConversationState`.  
   
-```  
+```sql  
 WAITFOR(  
     RECEIVE   
     TOP(1)  

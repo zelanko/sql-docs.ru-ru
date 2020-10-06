@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 75409024-f150-4326-af16-9d60e900df18
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 03dc120975d50edb743911b3c9973b94a15b3ceb
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 1e2b53af6fd42d77e2169862074ac61c63dc5042
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485371"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498007"
 ---
 # <a name="revoke-server-principal-permissions-transact-sql"></a>REVOKE, отмена разрешений участника на уровне сервера (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,6 @@ ms.locfileid: "86485371"
 ## <a name="syntax"></a>Синтаксис  
   
 ```syntaxsql
-  
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }   
     ON   
     { [ LOGIN :: SQL_Server_login ]  
@@ -119,7 +118,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
 ### <a name="a-revoking-impersonate-permission-on-a-login"></a>A. Отмена разрешения IMPERSONATE на имя входа  
  Следующий пример отменяет разрешение `IMPERSONATE` на имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`WanidaBenshoof` для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], созданного из пользователя Windows `AdvWorks\YoonM`.  
   
-```  
+```sql  
 USE master;  
 REVOKE IMPERSONATE ON LOGIN::WanidaBenshoof FROM [AdvWorks\YoonM];  
 GO  
@@ -128,7 +127,7 @@ GO
 ### <a name="b-revoking-view-definition-permission-with-cascade"></a>Б. Отмена разрешения VIEW DEFINITION с параметром CASCADE  
  Следующий пример отменяет разрешение `VIEW DEFINITION` для имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`EricKurjan` от имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`RMeyyappan`. Параметр `CASCADE` показывает, что разрешение `VIEW DEFINITION` для `EricKurjan` будет также отменено для участников, которым `RMeyyappan` предоставил это разрешение.  
   
-```  
+```sql  
 USE master;  
 REVOKE VIEW DEFINITION ON LOGIN::EricKurjan FROM RMeyyappan   
     CASCADE;  
@@ -138,7 +137,7 @@ GO
 ### <a name="c-revoking-view-definition-permission-on-a-server-role"></a>В. Отмена разрешения VIEW DEFINITION для роли сервера  
  В следующем примере разрешение `VIEW DEFINITION` для роли сервера `Sales` отменяется для роли сервера `Auditors`.  
   
-```  
+```sql  
 USE master;  
 REVOKE VIEW DEFINITION ON SERVER ROLE::Sales TO Auditors ;  
 GO   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a576ea3ed8aa89f8a0ff8bc77fcacaa895660892
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a9fbbb9a3827533e2572e5c22e66f2205bfacb32
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882382"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91669567"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>Используйте диалоговое окно «Создание группы доступности» (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -149,12 +149,11 @@ ms.locfileid: "85882382"
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> См. также  
   
--   [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
 ## <a name="see-also"></a>См. также:  
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Конечная точка зеркального отображения базы данных (SQL Server)](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
-  
   

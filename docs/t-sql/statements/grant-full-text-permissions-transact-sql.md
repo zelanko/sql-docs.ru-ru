@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: fdb64e09-222a-47fe-b08b-999264ca261d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e466840015f0b5d82a8e6430434239db6655ee81
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d966e11f3bb545ec4ac71a412958fc36de6885ee
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472242"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497754"
 ---
 # <a name="grant-full-text-permissions-transact-sql"></a>GRANT, предоставление разрешений на полнотекстовые объекты (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -138,7 +138,7 @@ AS *granting_principal*
 ### <a name="a-granting-permissions-to-a-full-text-catalog"></a>A. Предоставление разрешений на полнотекстовый каталог  
  В следующем примере пользователю `Ted` предоставляется разрешение `CONTROL` на полнотекстовый каталог `ProductCatalog`.  
   
-```  
+```sql  
 GRANT CONTROL  
     ON FULLTEXT CATALOG :: ProductCatalog  
     TO Ted ;  
@@ -147,7 +147,7 @@ GRANT CONTROL
 ### <a name="b-granting-permissions-to-a-stoplist"></a>Б. Предоставление разрешений на список стоп-слов  
  В следующем примере пользователю `Mary` предоставляется разрешение `VIEW DEFINITION` на список полнотекстовых стоп-слов `ProductStoplist`.  
   
-```  
+```sql  
 GRANT VIEW DEFINITION  
     ON FULLTEXT STOPLIST :: ProductStoplist  
     TO Mary ;  

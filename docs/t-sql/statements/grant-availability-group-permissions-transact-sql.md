@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 060eb839-666a-4046-9e1d-5edc9ea75a11
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7c25b8f0395694bdb85cddbb5ec1bf0abf86c9d4
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: ddfdccc63f826fb634edb4fcb2d75c0fa188ecfb
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483605"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498177"
 ---
 # <a name="grant-availability-group-permissions-transact-sql"></a>GRANT (предоставление) разрешений группы доступности (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -104,7 +104,7 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 ### <a name="a-granting-view-definition-permission-on-an-availability-group"></a>A. Предоставление разрешения VIEW DEFINITION для группы доступности  
  Следующий код предоставляет разрешение `VIEW DEFINITION` в группе доступности `MyAg` для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пользователя `ZArifin`.  
   
-```  
+```sql  
 USE master;  
 GRANT VIEW DEFINITION ON AVAILABILITY GROUP::MyAg TO ZArifin;  
 GO  
@@ -113,7 +113,7 @@ GO
 ### <a name="b-granting-take-ownership-permission-with-the-grant-option"></a>Б. Предоставление разрешения TAKE OWNERSHIP с параметром GRANT OPTION  
  В следующем примере предоставляется разрешение `TAKE OWNERSHIP` на группу доступности `MyAg` в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пользователю `PKomosinski` с параметром `GRANT OPTION`.  
   
-```  
+```sql  
 USE master;  
 GRANT TAKE OWNERSHIP ON AVAILABILITY GROUP::MyAg TO PKomosinski   
     WITH GRANT OPTION;  
@@ -123,7 +123,7 @@ GO
 ### <a name="c-granting-control-permission-on-an-availability-group"></a>В. Предоставление разрешения CONTROL для группы доступности  
  Следующий код предоставляет разрешение  `CONTROL` в группе доступности `MyAg`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пользователю `PKomosinski`. Разрешение CONTROL дает пользователю полный контроль над группой доступности, даже если он не является владельцем группы доступности. Инструкции по изменению владельца базы данных см. в статье [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
-```  
+```sql  
 USE master;  
 GRANT CONTROL ON AVAILABILITY GROUP::MyAg TO PKomosinski;  
 GO  

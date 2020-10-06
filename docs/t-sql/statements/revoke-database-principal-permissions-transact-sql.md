@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8114ca6e50f28c4c603285affd05478c297bf881
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 5926b71c2626ddea858190b6a135151abaa28586
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485149"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497805"
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE, отмена разрешений на участника базы данных (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,6 @@ ms.locfileid: "86485149"
 ## <a name="syntax"></a>Синтаксис  
   
 ```syntaxsql
-  
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]    
     ON   
     {  [ USER :: database_user ]  
@@ -165,7 +164,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ### <a name="a-revoking-control-permission-on-a-user-from-another-user"></a>A. Отмена разрешения CONTROL на пользователя у другого пользователя  
  В следующем примере у пользователя `CONTROL` отменяется разрешение [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] на пользователя `Wanida` базы данных `RolandX`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE CONTROL ON USER::Wanida FROM RolandX;  
 GO  
@@ -174,7 +173,7 @@ GO
 ### <a name="b-revoking-view-definition-permission-on-a-role-from-a-user-to-which-it-was-granted-with-grant-option"></a>Б. Отмена разрешения VIEW DEFINITION на роль у пользователя, которому оно было предоставлено с параметром WITH GRANT OPTION  
  В следующем примере у пользователя `VIEW DEFINITION` отменяется разрешение [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] на роль `SammamishParking` базы данных `JinghaoLiu`. Параметр `CASCADE` указан, поскольку пользователю `JinghaoLiu` было предоставлено разрешение `VIEW DEFINITION` с параметром `WITH GRANT OPTION`.  
   
-```  
+```sql 
 USE AdventureWorks2012;  
 REVOKE VIEW DEFINITION ON ROLE::SammamishParking   
     FROM JinghaoLiu CASCADE;  
@@ -186,7 +185,7 @@ GO
   
 **Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE IMPERSONATE ON USER::HamithaL FROM AccountsPayable17;  
 GO    

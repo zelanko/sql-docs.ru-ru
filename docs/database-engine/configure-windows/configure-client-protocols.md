@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3dfa2702-ba65-43b4-a777-6727846e133a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5cca0b54c983fe7a4ef122a45070e53d2143a05e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cdb6f1d2db5a2a390f75a4215dce490625fcc699
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85697981"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91669674"
 ---
 # <a name="configure-client-protocols"></a>настройка клиентских протоколов
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "85697981"
   
 -   Настройте отдельное клиентское приложение для использования другого сетевого протокола, создав псевдоним. Дополнительные сведения см. в разделе [Создание или удаление псевдонима сервера для использования клиентом (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md).  
   
--   Для некоторых клиентских приложений, например sqlcmd.exe, можно указать протокол как часть строки соединения. Дополнительные сведения см. в разделе [Подключение к компоненту Database Engine при помощи программы sqlcmd](../../relational-databases/scripting/sqlcmd-connect-to-the-database-engine.md).  
+-   Для некоторых клиентских приложений, например sqlcmd.exe, можно указать протокол как часть строки соединения. Дополнительные сведения см. в разделе [Подключение к компоненту Database Engine при помощи программы sqlcmd](../../ssms/scripting/sqlcmd-connect-to-the-database-engine.md).  
   
 ##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> Использование диспетчера конфигурации SQL Server  
   
@@ -68,5 +68,4 @@ ms.locfileid: "85697981"
   
 ## <a name="see-also"></a>См. также:  
  [Настройка параметра конфигурации сервера «remote login timeout»](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md)  
-  
   

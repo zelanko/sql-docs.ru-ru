@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: d686f2f5-e03a-4ffe-a566-6036628f46f1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f644ba5a1e42c309cc481d2ba7b42e6973d940e3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 77977886f4ccfca9fa41e4bdb685ac76ff96ff99
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496724"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497852"
 ---
 # <a name="drop-xml-schema-collection-transact-sql"></a>DROP XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,8 +39,7 @@ ms.locfileid: "88496724"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
-  
+```syntaxsql
 DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier  
 ```  
   
@@ -53,7 +52,7 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
 *sql_identifier*  
 Имя удаляемой коллекции схем XML.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
 Удаление коллекции XML-схем является транзакционной операцией. Если удалить коллекцию схем XML внутри транзакции, а потом сделать откат, коллекция XML-схем не будет удалена.  
   
 Коллекцию XML-схем нельзя удалить, если она используется. Таким образом, удаляемая коллекция не может быть в любом из следующих состояний:  
@@ -64,7 +63,7 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
   
 -   той, на которую ссылается привязанная к схеме функция или хранимая процедура. Например, следующая функция блокирует коллекцию XML-схем `MyCollection`, так как функция включает `WITH SCHEMABINDING`. Если удалить ее, блокировки на XML SCHEMA COLLECTION не будет.  
   
-    ```  
+    ```sql  
     CREATE FUNCTION dbo.MyFunction()  
     RETURNS int  
     WITH SCHEMABINDING  
@@ -82,7 +81,7 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
 ## <a name="examples"></a>Примеры  
 Следующий пример демонстрирует удаление коллекции XML-схем.  
   
-```  
+```sql  
 DROP XML SCHEMA COLLECTION ManuInstructionsSchemaCollection;  
 GO  
 ```  

@@ -47,12 +47,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: afcf2e560b5fd4300c02ddf6bcc548ef68fdc05b
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: d043d7613467381b0c19dfb2ac2ee2ee4ec0e523
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024573"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529425"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -1229,7 +1229,7 @@ DIFFERENTIAL — указывает, что необходимо создать
 ::: moniker range=">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 ## <a name="general-remarks"></a>Общие замечания
 
-Прежде чем выполнять резервное копирование базы данных, используйте [DBCC SHRINKLOG([!INCLUDE[ssPDW](../../includes/sspdw-md.md)])](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md), чтобы уменьшить размер базы данных. 
+Прежде чем выполнять резервное копирование базы данных, используйте [DBCC SHRINKLOG([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md), чтобы уменьшить размер базы данных.
 
 Резервная копия [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] хранится в качестве набора файлов в том же каталоге.
 

@@ -1,22 +1,27 @@
 ---
 title: Краткое руководство. Расширенные события в SQL Server
 description: Это краткое руководство поможет вам использовать расширенные события, которые являются упрощенной системой мониторинга производительности, позволяющей получать данные, необходимые для отслеживания и устранения неполадок в SQL Server.
-ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: xevents
 ms.topic: quickstart
+f1_keywords:
+- sql11.ssms.XeNewEventSession.General.f1
+- sql11.ssms.XeNewEventSession.Events.f1
+- sql11.ssms.XeNewEventSession.Targets.f1
+- sql11.ssms.XeNewEventSession.Advanced.f1
 ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
+ms.reviewer: maghan
+ms.date: 04/16/2020
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7b32ac9e1d88953cd8c8fccf3e010d01d5a6bcc5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 18e0b44567d2e6a06dfc243231aebe6f9be11222
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783497"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624791"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>Краткое руководство. Расширенные события в SQL Server
 

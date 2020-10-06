@@ -24,12 +24,12 @@ ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 1ac73076f7528b8c7fcb329540211cce9eee891e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e8ae0325029d458df85c3250e96002a075945f88
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496699"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498039"
 ---
 # <a name="revert-transact-sql"></a>REVERT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]   
@@ -40,8 +40,7 @@ ms.locfileid: "88496699"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
-  
+```syntaxsql
 REVERT  
     [ WITH COOKIE = @varbinary_variable ]  
 ```  
@@ -55,7 +54,7 @@ REVERT
 ## <a name="remarks"></a>Комментарии  
  Инструкцию REVERT можно указывать внутри модуля, такого как хранимая процедура или определяемая пользователем функция, или в качестве изолированной инструкции. При указании внутри модуля инструкция REVERT применима только к инструкциям EXECUTE AS, определенным в модуле. Например, следующая хранимая процедура выполняет инструкцию `EXECUTE AS`, за которой следует инструкция `REVERT`.  
   
-```  
+```sql  
 CREATE PROCEDURE dbo.usp_myproc   
   WITH EXECUTE AS CALLER  
 AS   
@@ -69,7 +68,7 @@ GO
   
  Предположим, что в сеансе, в котором работает хранимая процедура, контекст выполнения сеанса явно изменен на `login1`, как показано в следующем примере.  
   
-```  
+```sql 
   -- Sets the execution context of the session to 'login1'.  
 EXECUTE AS LOGIN = 'login1';  
 GO  
@@ -93,7 +92,7 @@ EXECUTE dbo.usp_myproc;
 ### <a name="a-using-execute-as-and-revert-to-switch-context"></a>A. Использование предложений EXECUTE AS и REVERT для переключения контекста  
  В следующем примере создается стек контекста выполнения при помощи нескольких участников. Затем используется инструкция REVERT для переустановки контекста выполнения на предыдущего участника. Инструкция REVERT выполняется множество раз, передвигаясь вверх по стеку, до тех пор, пока не будет установлен контекст выполнения первоначального участника.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 -- Create two temporary principals.  
@@ -137,8 +136,8 @@ GO
 ### <a name="b-using-the-with-cookie-clause"></a>Б. Использование предложения WITH COOKIE  
  В приведенном ниже примере устанавливается контекст выполнения сеанса для определенного пользователя и указывается предложение WITH NO REVERT COOKIE = @*varbinary_variable*. Инструкция `REVERT` обязана указать значение, передаваемое переменной `@cookie` в `EXECUTE AS` инструкции, для успешного возвращения контекста обратно вызывающему. Чтобы запустить этот образец, должно существовать имя входа `login1` и пользователь `user1`, созданные в примере А.  
   
-```  
-DECLARE @cookie varbinary(100);  
+```sql 
+DECLARE @cookie VARBINARY(100);  
 EXECUTE AS USER = 'user1' WITH COOKIE INTO @cookie;  
 -- Store the cookie somewhere safe in your application.  
 -- Verify the context switch.  
@@ -147,7 +146,7 @@ SELECT SUSER_NAME(), USER_NAME();
 SELECT @cookie;  
 GO  
 -- Use the cookie in the REVERT statement.  
-DECLARE @cookie varbinary(100);  
+DECLARE @cookie VARBINARY(100);  
 -- Set the cookie value to the one from the SELECT @cookie statement.  
 SET @cookie = <value from the SELECT @cookie statement>;  
 REVERT WITH COOKIE = @cookie;  

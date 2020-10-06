@@ -18,12 +18,12 @@ ms.assetid: 442acfc6-af97-40a3-b546-91cd485ee2be
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 811839abf78b331c2726f42bd4d2dacff74ac0fe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e27ea765f590b0f1726371343fef48ac5afc64e0
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496658"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498145"
 ---
 # <a name="revoke-database-permissions-transact-sql"></a>REVOKE, отмена разрешения на базу данных (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,6 @@ ms.locfileid: "88496658"
 ## <a name="syntax"></a>Синтаксис  
   
 ```syntaxsql
-  
 REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ]    
     { TO | FROM } <database_principal> [ ,...n ]   
         [ CASCADE ]  
@@ -212,7 +211,7 @@ permission | ALL [ PRIVILEGES ]
   
 **Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE CREATE CERTIFICATE FROM MelanieK;  
 GO  
@@ -223,7 +222,7 @@ GO
   
 **Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE REFERENCES FROM AuditMonitor;  
 GO  
@@ -232,7 +231,7 @@ GO
 ### <a name="c-revoking-view-definition-with-cascade"></a>В. Отмена разрешения VIEW DEFINITION с параметром CASCADE  
  В следующем примере производится отмена разрешения `VIEW DEFINITION` на базу данных `AdventureWorks2012` для пользователя `CarmineEs` и всех участников, которым `CarmineEs` предоставил разрешение `VIEW DEFINITION`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE VIEW DEFINITION FROM CarmineEs CASCADE;  
 GO  
