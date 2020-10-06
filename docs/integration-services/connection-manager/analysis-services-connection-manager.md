@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f9cadad-a1d0-4db5-98f5-df5dbbec1be4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6fc6be0059b1e49c5db9cf2ced79e66c6b523b5c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 633dd8288a9168422d0e5187caa1265615911a8a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478276"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726707"
 ---
 # <a name="analysis-services-connection-manager"></a>диспетчер соединений служб Analysis Services
 
@@ -31,7 +31,7 @@ ms.locfileid: "88478276"
   
  Обе задачи, такие как «Выполнение инструкции DDL службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] » и «Обработка службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] », а также назначения, такие как «Обучение модели интеллектуального анализа данных», используют диспетчер соединений служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
- Дополнительные сведения о базах данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] см. в разделе [Базы данных многомерных моделей (службы SSAS)](https://docs.microsoft.com/analysis-services/multidimensional-models/multidimensional-model-databases-ssas).  
+ Дополнительные сведения о базах данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] см. в разделе [Базы данных многомерных моделей (службы SSAS)](/analysis-services/multidimensional-models/multidimensional-model-databases-ssas).  
   
 ## <a name="configuration-of-the-analysis-services-connection-manager"></a>Настройка диспетчера соединений служб Analysis Services  
  Если добавить к пакету диспетчер соединений служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] со службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] устанавливает свойства диспетчера соединений и добавляет диспетчер соединений в коллекцию **Соединения** пакета. Свойству **ConnectionManagerType** диспетчера соединений присваивается значение **MSOLAP100**.  
@@ -45,7 +45,7 @@ ms.locfileid: "88478276"
 -   При подключении к экземпляру служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]указать метод проверки подлинности.  
 
 > [!NOTE]    
->  Если вы используете SSIS в Фабрике данных Azure (ADF) и хотите подключиться к экземпляру служб Azure Analysis Services (AAS), нужно использовать не учетную запись с многофакторной идентификацией (MFA), а субъект-службу или учетную запись, которая не требует взаимодействия или MFA. Инструкции по созданию такой учетной записи и назначению ей роли администратора сервера см. [здесь](https://docs.microsoft.com/azure/analysis-services/analysis-services-service-principal). Затем выберите **Использовать указанные имя пользователя и пароль** для входа на сервер в диспетчере подключений и, наконец, введите `User name: app:YourApplicationID` и `Password: YourAuthorizationKey`.
+>  Если вы используете SSIS в Фабрике данных Azure (ADF) и хотите подключиться к экземпляру служб Azure Analysis Services (AAS), нужно использовать не учетную запись с многофакторной идентификацией (MFA), а субъект-службу или учетную запись, которая не требует взаимодействия или MFA. Инструкции по созданию такой учетной записи и назначению ей роли администратора сервера см. [здесь](/azure/analysis-services/analysis-services-service-principal). Затем выберите **Использовать указанные имя пользователя и пароль** для входа на сервер в диспетчере подключений и, наконец, введите `User name: app:YourApplicationID` и `Password: YourAuthorizationKey`.
   
 -   Обозначает, будет ли соединение, созданное из диспетчера соединений, сохранено во время выполнения.  
   
@@ -56,5 +56,4 @@ ms.locfileid: "88478276"
 -   [Справочник по пользовательскому интерфейсу: диалоговое окно "Добавление диспетчера подключений служб Analysis Services"](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  Дополнительные сведения о программной настройке диспетчера подключений см. в разделах <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> и [Добавление соединений программным образом](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
-  
   

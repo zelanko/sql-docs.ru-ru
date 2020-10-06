@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 019078bc-44ee-4975-9169-0f9a89e3f3be
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 982ff5a4a48c22de9521d2df5d56cd31919794f5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ebe86146e2ce4f25f05c9948071d3fc7a4d4edb8
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88351440"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728060"
 ---
 # <a name="file-connection-manager"></a>диспетчер соединения файлов
 
@@ -64,7 +64,7 @@ ms.locfileid: "88351440"
   
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../includes/ssis-md.md)] или программными средствами.  
   
- Дополнительные сведения о свойствах, которые можно задавать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в статье [Файл/папка](../../integration-services/connection-manager/file-connection-manager-editor.md).  
+ Дополнительные сведения о свойствах, которые можно задавать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в статье [Файл/папка]().  
   
  Дополнительные сведения о программной настройке диспетчера подключений см. в разделах <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> и [Добавление соединений программным образом](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
@@ -94,5 +94,4 @@ ms.locfileid: "88351440"
   
  **Обзор**  
  Выберите файл или папку в диалоговом окне **Выбор файла** или **Выбор папки** .  
-  
   

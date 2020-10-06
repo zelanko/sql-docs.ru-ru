@@ -109,7 +109,7 @@ QUIT
 | Средство | Описание |
 | ---- | ----------- |
 | [Azure Data Studio](../azure-data-studio/index.yml) | Кроссплатформенная служебная программа управления базами данных с графическим пользовательским интерфейсом. |
-| [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | Кроссплатформенный редактор кода с графическим пользовательским интерфейсом, позволяющий выполнять инструкции Transact-SQL в выражениях mssql. |
+| [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md) | Кроссплатформенный редактор кода с графическим пользовательским интерфейсом, позволяющий выполнять инструкции Transact-SQL в выражениях mssql. |
 | [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | Кроссплатформенное средство для автоматизации и настройки на основе командлетов. |
 | [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | Кроссплатформенный интерфейс командной строки для выполнения команд Transact-SQL. |
 

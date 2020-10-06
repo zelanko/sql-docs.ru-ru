@@ -16,12 +16,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 193280bb5e7f702336bf31fde363db08f437cc9b
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 7bbd02e21b369732da72d7dbd7563d32f81c2a46
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91113336"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727953"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>Настройка прослушивателя для группы доступности Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -196,11 +196,11 @@ ms.locfileid: "91113336"
     ```  
   
     > [!NOTE]  
-    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом **Get-Help**  в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом **Get-Help**  в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Настройка и использование поставщика SQL Server PowerShell**  
   
--   [Поставщик SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [Поставщик SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
   
 ## <a name="troubleshooting"></a>Устранение неполадок  
   
@@ -306,21 +306,21 @@ Start-Clustergroup yourListenerGroupName
   
         3.  Добавление зависимости в ресурс группы доступности WSFC.  
   
-         Дополнительные сведения о диалоговых окнах и вкладках диспетчера отказоустойчивости кластеров см. в статье [Пользовательский интерфейс: оснастка "Диспетчер отказоустойчивости кластеров"](https://technet.microsoft.com/library/cc772502.aspx).  
+         Дополнительные сведения о диалоговых окнах и вкладках диспетчера отказоустойчивости кластеров см. в статье [Пользовательский интерфейс: оснастка "Диспетчер отказоустойчивости кластеров"](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772502(v=ws.11)).  
   
     -   **С помощью Windows PowerShell для отказоустойчивых кластеров.**  
   
         1.  Используйте командлет [Add-ClusterResource](https://technet.microsoft.com/library/ee460983.aspx) , чтобы создать ресурсы сетевого имени и IP-адреса.  
   
-        2.  Используйте командлет [Start-ClusterResource](https://technet.microsoft.com/library/ee461056.aspx) , чтобы запустить ресурс сетевого имени.  
+        2.  Используйте командлет [Start-ClusterResource](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461056(v=technet.10)) , чтобы запустить ресурс сетевого имени.  
   
-        3.  Используйте командлет [Add-ClusterResourceDependency](https://technet.microsoft.com/library/ee461014.aspx) , чтобы задать зависимость между сетевым именем и существующим ресурсом группы доступности SQL Server.  
+        3.  Используйте командлет [Add-ClusterResourceDependency](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461014(v=technet.10)) , чтобы задать зависимость между сетевым именем и существующим ресурсом группы доступности SQL Server.  
   
-         Сведения об использовании Windows PowerShell для отказоустойчивых кластеров см. в разделе [Общие сведения о командах диспетчера сервера](https://technet.microsoft.com/library/cc732757.aspx#BKMK_wps).  
+         Сведения об использовании Windows PowerShell для отказоустойчивых кластеров см. в разделе [Общие сведения о командах диспетчера сервера](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732757(v=ws.11)#BKMK_wps).  
   
 2.  Запустите прослушивание [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в новом прослушивателе. После создания дополнительного прослушивателя подключитесь к экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на котором размещается первичная реплика группы доступности, и измените порт прослушивателя с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell.  
   
- Дополнительные сведения см. в разделе [Способ создания нескольких прослушивателей для одной группы доступности](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao/) (блог группы разработчиков SQL Server AlwaysOn).  
+ Дополнительные сведения см. в разделе [Способ создания нескольких прослушивателей для одной группы доступности](/archive/blogs/sqlalwayson/how-to-create-multiple-listeners-for-same-availability-group-goden-yao) (блог группы разработчиков SQL Server AlwaysOn).  
   
  
   
@@ -329,4 +329,3 @@ Start-Clustergroup yourListenerGroupName
 Теперь, когда прослушиватель создан, настройте приложение для [подключения к прослушивателю](listeners-client-connectivity-application-failover.md). Вы также можете ознакомиться с различными [стратегиями мониторинга группы доступности](monitoring-of-availability-groups-sql-server.md), чтобы обеспечить работоспособность группы доступности.
 
 Можно также [просмотреть свойства прослушивателя](view-availability-group-listener-properties-sql-server.md) или узнать, как при необходимости [удалить прослушиватель](remove-an-availability-group-listener-sql-server.md). 
-  

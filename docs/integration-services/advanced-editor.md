@@ -17,12 +17,12 @@ f1_keywords:
 ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 343ebe85334869f97b374e5386c05b47fbc8b48e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ca689a290e266c3e8476034ba0c8e7ec4737cef4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478081"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724315"
 ---
 # <a name="advanced-editor"></a>Расширенный редактор
 
@@ -47,11 +47,11 @@ ms.locfileid: "88478081"
   
  Отображаемые свойства зависят от компонента. Дополнительные сведения о свойствах, которые могут отображаться в компоненте **Расширенный редактор**, см. в следующих разделах:  
   
--   [Общие свойства](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Общие свойства](./data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 -   [Пользовательские свойства преобразований](../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
--   [Свойства пути](https://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)  
+-   [Свойства пути](./data-flow/integration-services-paths.md)  
   
  Дополнительные сведения о конкретном изменяемом компоненте см. в описании компонента в разделе «Элементы потока данных» документации «Объекты и основные понятия для служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ».  
   
@@ -59,5 +59,4 @@ ms.locfileid: "88478081"
   
 ## <a name="see-also"></a>См. также  
  [Справочник по сообщениям об ошибках служб Integration Services](../integration-services/integration-services-error-and-message-reference.md)  
-  
   

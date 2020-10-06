@@ -11,12 +11,12 @@ ms.assetid: a47c5005-20e3-4880-945c-9f78d311af7a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1b4c7725de6d0381f80a5cc90beaf54d7101fa82
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 1b5232854920083c685e426e0ca55eeb9a065c70
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115639"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726505"
 ---
 # <a name="how-to-cluster-the-dtc-service-for-an-always-on-availability-group"></a>Кластеризация службы DTC для группы доступности Always On
 
@@ -36,7 +36,7 @@ ms.locfileid: "91115639"
 |Задача|Справочник|  
 |-----------------|----------|  
 |Диск общего хранилища.|[Настройка диска общего хранилища](https://msdn.microsoft.com/library/cc982358(v=bts.10).aspx). Рекомендуется использовать букву диска **M**.|
-|Уникальный ресурс сетевого имени DTC.  Имя будет зарегистрировано как объект-компьютер кластера в Active Directory.<br /><br />Убедитесь, что выполняется одно из следующих условий:<br /><br />• Пользователь, создающий ресурс сетевого имени DTC, имеет разрешение на создание объектов-компьютеров для подразделения или контейнера, где будет размещаться ресурс сетевого имени DTC.<br /><br />• Если у пользователя нет разрешения на создание объектов-компьютеров, попросите администратора домена предварительно подготовить объект-компьютер кластера для ресурса сетевого имени DTC.|[Предварительная подготовка кластеризованных объектов-компьютеров в доменных службах Active Directory](https://technet.microsoft.com/library/dn466519(v=ws.11).aspx)|
+|Уникальный ресурс сетевого имени DTC.  Имя будет зарегистрировано как объект-компьютер кластера в Active Directory.<br /><br />Убедитесь, что выполняется одно из следующих условий:<br /><br />• Пользователь, создающий ресурс сетевого имени DTC, имеет разрешение на создание объектов-компьютеров для подразделения или контейнера, где будет размещаться ресурс сетевого имени DTC.<br /><br />• Если у пользователя нет разрешения на создание объектов-компьютеров, попросите администратора домена предварительно подготовить объект-компьютер кластера для ресурса сетевого имени DTC.|[Предварительная подготовка кластеризованных объектов-компьютеров в доменных службах Active Directory](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn466519(v=ws.11))|
 |Допустимый и доступный статический IP-адрес и соответствующая маска подсети.||
 
 ## <a name="cluster-the-dtc-resource"></a>Кластеризация ресурса DTC
@@ -47,7 +47,7 @@ ms.locfileid: "91115639"
 
 |Задача|Справочник|  
 |-----------------|----------|  
-|Включение безопасного сетевого доступа для кластеризованного ресурса DTC.|[Включение безопасного сетевого доступа для MS DTC](https://technet.microsoft.com/library/cc753620(v=ws.10).aspx)|
+|Включение безопасного сетевого доступа для кластеризованного ресурса DTC.|[Включение безопасного сетевого доступа для MS DTC](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753620(v=ws.10))|
 |Остановка и отключение локальной службы DTC.|[Настройка запуска службы](https://technet.microsoft.com/library/cc755249(v=ws.11).aspx)|
 |Отключение и включение службы SQL Server для каждого экземпляра в группе доступности.  Отработка отказа группы доступности при необходимости.|[Выполнение запланированного перехода на другой ресурс вручную для группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br />[Запуск, остановка, приостановка, возобновление и перезапуск компонента Database Engine, агента SQL и службы браузера SQL Server](../../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)|
 
@@ -60,13 +60,13 @@ ms.locfileid: "91115639"
 ### <a name="resources"></a>РЕСУРСЫ
 
 
-[Дополнительные сведения о тестировании DTC в группах доступности:](https://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/)
+[Дополнительные сведения о тестировании DTC в группах доступности:](/archive/blogs/dataplatform/sql-server-2016-dtc-support-in-availability-groups)
 
 [Отслеживание групп доступности](monitor-availability-groups-transact-sql.md)
 
 [Создание группы доступности](create-an-availability-group-transact-sql.md)
 
 
-[SQL Server 2016 DTC Support in Availability Groups](https://blogs.technet.microsoft.com/dataplatform/2016/01/25/sql-server-2016-dtc-support-in-availability-groups/) (Поддержка DTC для SQL Server 2016 в группах доступности) 
+[SQL Server 2016 DTC Support in Availability Groups](/archive/blogs/dataplatform/sql-server-2016-dtc-support-in-availability-groups) (Поддержка DTC для SQL Server 2016 в группах доступности) 
 
 [Внешняя ссылка: Configure DTC for a clustered instance of SQL Server with Windows Server 2008 R2](https://sqlha.com/2013/03/12/how-to-properly-configure-dtc-for-clustered-instances-of-sql-server-with-windows-server-2008-r2/) (Настройка DTC для кластеризованного экземпляра SQL Server с Windows Server 2008 R2)

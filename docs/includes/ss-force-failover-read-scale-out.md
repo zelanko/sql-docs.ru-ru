@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: aa0b00ec24c96aea37901cc03aac2dda9b20bed2
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: eeef45e1678a1770f2dd0fc89c38943fa76cef72
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88655172"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726444"
 ---
 Каждая группа доступности имеет только одну первичную реплику. Первичная реплика позволяет выполнять операции чтения и записи. Чтобы изменить первичную реплику, можно выполнить переход на другой ресурс. В группе доступности для обеспечения высокой доступности диспетчер кластеров автоматизирует процесс перехода на другой ресурс. В группе доступности с типом кластера NONE принудительная отработка отказа выполняется вручную. 
 
@@ -98,7 +98,7 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
    ```
 
    > [!NOTE] 
-   > Для удаления группы доступности используйте [DROP AVAILABILITY GROUP](https://docs.microsoft.com/sql/t-sql/statements/drop-availability-group-transact-sql). Для группы доступности, созданной с типом кластера NONE или EXTERNAL, выполните команду на всех репликах, входящих в группу доступности.
+   > Для удаления группы доступности используйте [DROP AVAILABILITY GROUP](../t-sql/statements/drop-availability-group-transact-sql.md). Для группы доступности, созданной с типом кластера NONE или EXTERNAL, выполните команду на всех репликах, входящих в группу доступности.
 
 1. Возобновите перемещение данных, выполните следующую команду для каждой базы данных в группе доступности на экземпляре SQL Server, на котором размещена первичная реплика: 
 

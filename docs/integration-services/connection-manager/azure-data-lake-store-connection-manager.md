@@ -13,12 +13,12 @@ ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: Lingxi-Li
 ms.author: lingxl
 ms.reviewer: maghan
-ms.openlocfilehash: e128b510c9bd40eedd89f7750c65bbd03a7d8670
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aff32d53b663aa34b036fcfdb9202f7dadcd1ff5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477989"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724554"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Диспетчер подключений Azure Data Lake Store
 
@@ -45,7 +45,7 @@ ms.locfileid: "88477989"
     1.  Если вы выбрали вариант **Удостоверение пользователя Azure AD**, выполните указанные ниже действия.
         1. Укажите значения в полях **Имя пользователя** и **Пароль**. 
     
-        2. Чтобы проверить подключение, нажмите кнопку **Проверить подключение**. Если вы или администратор клиента ранее не давали согласия на разрешение доступа к данным Data Lake Storage 1-го поколения со стороны служб SSIS, выберите **Принять** при появлении соответствующего запроса. Дополнительные сведения о предоставлении согласия см. в разделе [Интеграция приложений с Azure Active Directory](https://docs.microsoft.com/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad).
+        2. Чтобы проверить подключение, нажмите кнопку **Проверить подключение**. Если вы или администратор клиента ранее не давали согласия на разрешение доступа к данным Data Lake Storage 1-го поколения со стороны служб SSIS, выберите **Принять** при появлении соответствующего запроса. Дополнительные сведения о предоставлении согласия см. в разделе [Интеграция приложений с Azure Active Directory](/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad).
     
         > [!NOTE] 
         > При выборе варианта проверки подлинности **Удостоверение пользователя Azure AD** многофакторная проверка подлинности и проверка подлинности учетной записи Майкрософт не поддерживаются.
@@ -53,7 +53,7 @@ ms.locfileid: "88477989"
     2. Если вы выбрали вариант **Удостоверение службы Azure AD**, выполните указанные ниже действия.
         1. Создайте приложение и субъект-службу Azure Active Directory (AAD) для доступа к данным Azure Data Lake Storage 1-го поколения.
     
-        2. Назначьте приложению AAD соответствующие разрешения на доступ к ресурсам Azure Data Lake Storage 1-го поколения. Дополнительные сведения об этом параметре проверки подлинности см. в разделе [Использовать портал для создания приложения и службы-участника, который имеет доступ к ресурсам Active Directory](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal).
+        2. Назначьте приложению AAD соответствующие разрешения на доступ к ресурсам Azure Data Lake Storage 1-го поколения. Дополнительные сведения об этом параметре проверки подлинности см. в разделе [Использовать портал для создания приложения и службы-участника, который имеет доступ к ресурсам Active Directory](/azure/azure-resource-manager/resource-group-create-service-principal-portal).
     
         3. Укажите значения в полях **Идентификатор клиента**, **Секретный ключ** и **Имя клиента**.
     
@@ -63,5 +63,4 @@ ms.locfileid: "88477989"
 
 ## <a name="view-the-properties-of-the-connection-manager"></a>Просмотр свойств диспетчера подключений
 Свойства созданного диспетчера соединений можно просмотреть в окне **Свойства** .  
-  
   

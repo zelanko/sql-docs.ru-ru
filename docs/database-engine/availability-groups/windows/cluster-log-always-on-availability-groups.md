@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1240bc202344762a48f4dde8e32b69789f1c0f46
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 754169b501dbc468e0e48f04e71534db61d80192
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114128"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726498"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Создание и анализ журнала CLUSTER.LOG для группы доступности Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "91114128"
   
 1.  Используйте команду `cluster /log /g` в командной строке. Эта команда создает журналы кластера в каталоге \windows\cluster\reports на каждом узле WSFC. Преимуществом этого метода является то, что с помощью параметра `/level` можно указать уровень детализации создаваемых журналов. Недостатком является то, что невозможно задать целевой каталог для создаваемых журналов кластера. Дополнительные сведения см. в статье [Создание cluster.log в рамках отказоустойчивой кластеризации Windows Server 2008](https://techcommunity.microsoft.com/t5/failover-clustering/how-to-create-the-cluster-log-in-windows-server-2008-failover/ba-p/371283).  
   
-2.  Используйте командлет [Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx) PowerShell. Преимущество этого метода заключается в том, что можно создать журнал кластера со всех узлов в один конечный каталог на узле, где выполняется командлет. Недостатком является то, что невозможно указать уровень детализации создаваемых журналов.  
+2.  Используйте командлет [Get-ClusterLog](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461045(v=technet.10)) PowerShell. Преимущество этого метода заключается в том, что можно создать журнал кластера со всех узлов в один конечный каталог на узле, где выполняется командлет. Недостатком является то, что невозможно указать уровень детализации создаваемых журналов.  
   
  Приведенные ниже команды PowerShell создают журналы кластера со всех узлов кластера за последние 15 минут и помещают их в текущий каталог. Эти команду нужно выполнять в окне PowerShell с правами администратора.  
   
@@ -55,7 +55,7 @@ Get-ClusterLog -TimeSpan 15 -Destination .
 8.  Еще раз щелкните правой кнопкой мыши ресурс группы доступности и выберите **Bring this resource online** (Перевести этот ресурс в режим "в сети").  
   
 ## <a name="availability-group-resource-events"></a>События для ресурса группы доступности  
- В приведенной ниже таблице перечислены различные виды событий в CLUSTER.LOG, относящиеся к ресурсу группы доступности. Дополнительные сведения о подсистеме размещения ресурсов (RHS) и мониторе управления ресурсами (RCM) в кластере WSFC см. в разделе [Подсистема размещения ресурсов (RHS) в отказоустойчивых кластерах Windows Server 2008](https://blogs.technet.com/b/askcore/archive/2009/11/23/resource-hosting-subsystem-rhs-in-windows-server-2008-failover-clusters.aspx).  
+ В приведенной ниже таблице перечислены различные виды событий в CLUSTER.LOG, относящиеся к ресурсу группы доступности. Дополнительные сведения о подсистеме размещения ресурсов (RHS) и мониторе управления ресурсами (RCM) в кластере WSFC см. в разделе [Подсистема размещения ресурсов (RHS) в отказоустойчивых кластерах Windows Server 2008](/archive/blogs/askcore/resource-hosting-subsystem-rhs-in-windows-server-2008-failover-clusters).  
   
 |Идентификатор|Источник|Пример из CLUSTER.LOG|  
 |----------------|------------|------------------------------|  
@@ -76,5 +76,4 @@ Get-ClusterLog -TimeSpan 15 -Destination .
 3.  Измените значение **SeparateMonitor** на **1**.  
   
 4.  Перезапустите кластерную службу для своей группы доступности в кластере WSFC.  
-  
   

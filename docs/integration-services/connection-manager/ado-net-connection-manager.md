@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2e12c6d57b9505bfefaae5c7fae87e03375c4e9d
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 7009bdcb9ef2d740a200d8edad74e7559882d7c5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864671"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726735"
 ---
 # <a name="adonet-connection-manager"></a>Диспетчер соединений ADO.NET
 
@@ -42,7 +42,7 @@ ms.locfileid: "87864671"
   
 |Тип данных SQL Server|Результат|  
 |--------------------------|------------|  
-|**time**, **datetimeoffset**|Выполнение пакета завершается неудачей, если в пакете не используются параметризованные команды SQL. Чтобы применить параметризованные команды SQL, используйте в пакете задачу «Выполнение SQL». Дополнительные сведения см. в разделах [Задача "Выполнение SQL"](../../integration-services/control-flow/execute-sql-task.md) и [Параметры и коды возврата в задаче "Выполнение SQL"](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).|  
+|**time**, **datetimeoffset**|Выполнение пакета завершается неудачей, если в пакете не используются параметризованные команды SQL. Чтобы применить параметризованные команды SQL, используйте в пакете задачу «Выполнение SQL». Дополнительные сведения см. в разделах [Задача "Выполнение SQL"](../../integration-services/control-flow/execute-sql-task.md) и [Параметры и коды возврата в задаче "Выполнение SQL"](../control-flow/execute-sql-task.md).|  
 |**datetime2**|Диспетчер соединений [!INCLUDE[vstecado](../../includes/vstecado-md.md)] отбрасывает миллисекунды.|  
   
 > [!NOTE]  
@@ -62,7 +62,7 @@ ms.locfileid: "87864671"
   
 Многие параметры конфигурации диспетчера соединений [!INCLUDE[vstecado](../../includes/vstecado-md.md)] зависят от используемого им поставщика .NET.  
   
-Дополнительные сведения о свойствах, которые можно задавать в конструкторе [!INCLUDE[ssIS](../../includes/ssis-md.md)], см. в [следующем разделе](../../integration-services/connection-manager/configure-ado-net-connection-manager.md).  
+Дополнительные сведения о свойствах, которые можно задавать в конструкторе [!INCLUDE[ssIS](../../includes/ssis-md.md)], см. в [следующем разделе]().  
   
  Дополнительные сведения о программной настройке диспетчера подключений см. в разделах <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> и [Добавление соединений программным образом](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
@@ -85,22 +85,22 @@ ms.locfileid: "87864671"
 Выберите подключение и затем удалите его, щелкнув **Удалить**.  
   
 #### <a name="managed-identities-for-azure-resources-authentication"></a>Управляемые удостоверения для проверки подлинности ресурсов Azure
-При выполнении пакетов служб SSIS в [Azure-SSIS Integration Runtime в Фабрике данных Azure](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime) вы можете использовать [управляемое удостоверение](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity), связанное с вашей фабрикой данных, для проверки подлинности базы данных SQL Azure или Управляемого экземпляра SQL Azure. С помощью этого удостоверения назначенная фабрика может обращаться к данным и копировать их из вашей базы данных или в нее.
+При выполнении пакетов служб SSIS в [Azure-SSIS Integration Runtime в Фабрике данных Azure](/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime) вы можете использовать [управляемое удостоверение](/azure/data-factory/connector-azure-sql-database#managed-identity), связанное с вашей фабрикой данных, для проверки подлинности базы данных SQL Azure или Управляемого экземпляра SQL Azure. С помощью этого удостоверения назначенная фабрика может обращаться к данным и копировать их из вашей базы данных или в нее.
 
 > [!NOTE]
->  При использовании проверки подлинности Azure Active Directory (Azure AD), включая проверку подлинности с помощью управляемого удостоверения, для подключения к базе данных SQL Azure или Управляемому экземпляру SQL Azure могут возникнуть проблемы, связанные со сбоем при выполнении пакета или непредвиденным изменением поведения. Дополнительные сведения см. в разделе о [функциях и ограничениях Azure AD](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations).
+>  При использовании проверки подлинности Azure Active Directory (Azure AD), включая проверку подлинности с помощью управляемого удостоверения, для подключения к базе данных SQL Azure или Управляемому экземпляру SQL Azure могут возникнуть проблемы, связанные со сбоем при выполнении пакета или непредвиденным изменением поведения. Дополнительные сведения см. в разделе о [функциях и ограничениях Azure AD](/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations).
 
 Чтобы использовать проверку подлинности управляемого удостоверения для базы данных SQL Azure, выполните следующие действия для настройки базы данных:
 
-1. [Подготовьте администратора Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-azure-sql-database-server) для своего сервера SQL Azure на портале Azure, если вы еще этого не сделали. Администратор Azure AD может быть пользователем Azure AD или группой Azure AD. Если вы предоставляете группе с управляемым удостоверением роль администратора, пропустите шаги 2 и 3. Администратор будет иметь полный доступ к базе данных.
+1. [Подготовьте администратора Azure Active Directory](/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-azure-sql-database-server) для своего сервера SQL Azure на портале Azure, если вы еще этого не сделали. Администратор Azure AD может быть пользователем Azure AD или группой Azure AD. Если вы предоставляете группе с управляемым удостоверением роль администратора, пропустите шаги 2 и 3. Администратор будет иметь полный доступ к базе данных.
 
-1. [Создайте пользователей автономной базы данных](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities) для управляемого удостоверения фабрики данных. Подключитесь к базе данных, откуда или куда вы хотите скопировать данные с помощью таких средств, как SSMS, с используя удостоверение Azure AD, которое имеет по меньшей мере разрешение ALTER ANY USER. Выполните следующий код T-SQL: 
+1. [Создайте пользователей автономной базы данных](/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities) для управляемого удостоверения фабрики данных. Подключитесь к базе данных, откуда или куда вы хотите скопировать данные с помощью таких средств, как SSMS, с используя удостоверение Azure AD, которое имеет по меньшей мере разрешение ALTER ANY USER. Выполните следующий код T-SQL: 
     
     ```sql
     CREATE USER [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. Предоставьте управляемому удостоверению фабрики данных необходимые разрешения, как обычно делаете это для пользователей SQL и других лиц. Сведения о соответствующих ролях см. в статье [Роли уровня базы данных](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles). Выполните следующий код. Дополнительные параметры см. в [этом документе](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql).
+1. Предоставьте управляемому удостоверению фабрики данных необходимые разрешения, как обычно делаете это для пользователей SQL и других лиц. Сведения о соответствующих ролях см. в статье [Роли уровня базы данных](../../relational-databases/security/authentication-access/database-level-roles.md). Выполните следующий код. Дополнительные параметры см. в [этом документе](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md).
 
     ```sql
     EXEC sp_addrolemember [role name], [your data factory name];
@@ -108,21 +108,21 @@ ms.locfileid: "87864671"
 
 Чтобы использовать проверку подлинности с помощью управляемого удостоверения для Управляемого экземпляра SQL Azure, выполните следующие действия по настройке базы данных:
     
-1. [Подготовьте администратора Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance) для своего управляемого экземпляра на портале Azure, если вы еще этого не сделали. Администратор Azure AD может быть пользователем Azure AD или группой Azure AD. Если вы предоставляете группе с управляемым удостоверением роль администратора, пропустите шаги 2–4. Администратор будет иметь полный доступ к базе данных.
+1. [Подготовьте администратора Azure Active Directory](/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance) для своего управляемого экземпляра на портале Azure, если вы еще этого не сделали. Администратор Azure AD может быть пользователем Azure AD или группой Azure AD. Если вы предоставляете группе с управляемым удостоверением роль администратора, пропустите шаги 2–4. Администратор будет иметь полный доступ к базе данных.
 
-1. [Создайте имена входа](https://docs.microsoft.com/sql/t-sql/statements/create-login-transact-sql?view=azuresqldb-mi-current) для управляемого удостоверения фабрики данных. В SQL Server Management Studio (SSMS) подключитесь к управляемому экземпляру с помощью учетной записи SQL Server с ролью **sysadmin**. Запустите следующий код T-SQL для базы данных **master**:
+1. [Создайте имена входа](../../t-sql/statements/create-login-transact-sql.md?view=azuresqldb-mi-current) для управляемого удостоверения фабрики данных. В SQL Server Management Studio (SSMS) подключитесь к управляемому экземпляру с помощью учетной записи SQL Server с ролью **sysadmin**. Запустите следующий код T-SQL для базы данных **master**:
 
     ```sql
     CREATE LOGIN [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. [Создайте пользователей автономной базы данных](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities) для управляемого удостоверения фабрики данных. Подключитесь к базе данных, откуда или куда вы хотите скопировать данные, запустите следующий код T-SQL: 
+1. [Создайте пользователей автономной базы данных](/azure/sql-database/sql-database-aad-authentication-configure#create-contained-database-users-in-your-database-mapped-to-azure-ad-identities) для управляемого удостоверения фабрики данных. Подключитесь к базе данных, откуда или куда вы хотите скопировать данные, запустите следующий код T-SQL: 
   
     ```sql
     CREATE USER [your data factory name] FROM EXTERNAL PROVIDER;
     ```
 
-1. Предоставьте управляемому удостоверению фабрики данных необходимые разрешения, как обычно делаете это для пользователей SQL и других лиц. Выполните следующий код. Дополнительные параметры см. в [этом документе](https://docs.microsoft.com/sql/t-sql/statements/alter-role-transact-sql?view=azuresqldb-mi-current).
+1. Предоставьте управляемому удостоверению фабрики данных необходимые разрешения, как обычно делаете это для пользователей SQL и других лиц. Выполните следующий код. Дополнительные параметры см. в [этом документе](../../t-sql/statements/alter-role-transact-sql.md?view=azuresqldb-mi-current).
 
     ```sql
     ALTER ROLE [role name e.g., db_owner] ADD MEMBER [your data factory name];
@@ -134,14 +134,13 @@ ms.locfileid: "87864671"
     > [!NOTE]
     >  Сейчас свойство `ConnectUsingManagedIdentity` диспетчера подключений не оказывает никакого влияния (то есть проверка подлинности с помощью управляемого удостоверения не работает) при выполнении пакета SSIS в конструкторе SSIS или [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server.
     
-- **Настройка во время выполнения.** При выполнении пакета с помощью [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/integration-services/ssis-quickstart-run-ssms) или [действия "Выполнить пакет SSIS" Фабрики данных Azure](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity) найдите диспетчер подключений ADO.NET. Установите для его свойства `ConnectUsingManagedIdentity` значение `True`.
+- **Настройка во время выполнения.** При выполнении пакета с помощью [SQL Server Management Studio (SSMS)](../ssis-quickstart-run-ssms.md) или [действия "Выполнить пакет SSIS" Фабрики данных Azure](/azure/data-factory/how-to-invoke-ssis-package-ssis-activity) найдите диспетчер подключений ADO.NET. Установите для его свойства `ConnectUsingManagedIdentity` значение `True`.
     > [!NOTE]
     >  В Azure-SSIS Integration Runtime все остальные методы проверки подлинности (например, встроенная аутентификация и пароль), предварительно настроенные в диспетчере подключений ADO.NET, переопределяются, если для подключения к базе данных используется проверка подлинности с помощью управляемого удостоверения.
 
 > [!NOTE]
->  Чтобы настроить проверку подлинности с помощью управляемого удостоверения для существующих пакетов, рекомендуем как минимум однократно перестроить проект SSIS с использованием [конструктора SSIS последней версии](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt). Повторно разверните этот проект служб SSIS в Azure-SSIS Integration Runtime, чтобы новое свойство `ConnectUsingManagedIdentity` диспетчера подключений автоматически добавилось во все диспетчеры подключений ADO.NET в проекте SSIS. Кроме того, можно непосредственно переопределить свойство, указав при выполнении путь **\Package.Connections[{имя_диспетчера_подключений}].Properties[ConnectUsingManagedIdentity]** .
+>  Чтобы настроить проверку подлинности с помощью управляемого удостоверения для существующих пакетов, рекомендуем как минимум однократно перестроить проект SSIS с использованием [конструктора SSIS последней версии](../../ssdt/download-sql-server-data-tools-ssdt.md). Повторно разверните этот проект служб SSIS в Azure-SSIS Integration Runtime, чтобы новое свойство `ConnectUsingManagedIdentity` диспетчера подключений автоматически добавилось во все диспетчеры подключений ADO.NET в проекте SSIS. Кроме того, можно непосредственно переопределить свойство, указав при выполнении путь **\Package.Connections[{имя_диспетчера_подключений}].Properties[ConnectUsingManagedIdentity]** .
 
 ## <a name="see-also"></a>См. также раздел  
  [Соединения в службах Integration Services (SSIS)](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
-  
   

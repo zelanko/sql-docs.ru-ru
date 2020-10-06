@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8b621eca278c73b357b8d7c91c63dfc23a6147fc
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: de57f7518136cecca09041e0ce93971aeebe9fd9
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115827"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724576"
 ---
 # <a name="policy-based-management-for-operational-issues-with-always-on-availability-groups"></a>Управление проблемами в работе на основе политик с использованием групп доступности Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "91115827"
   
  Определяемая пользователем политика может использовать доступные аспекты управления на основе политик, включая те из них, которые применяются в стандартных политиках AlwaysOn (см. подраздел [Стандартные политики и проблемы](#Always OnPBM)выше в этом разделе). Аспект сервера содержит следующие свойства для наблюдения за исправностью [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]: (**IsHadrEnabled** и **HadrManagerStatus**). Аспект сервера содержит также следующие свойства политики для наблюдения за конфигурацией кластера WSFC. **ClusterQuorumType** и **ClusterQuorumState**.  
   
- Дополнительные сведения см. в записи [Модель исправности AlwaysOn, часть 2. Расширение модели исправности](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/the-alwayson-health-model-part-2-extending-the-health-model/) (в блоге SQL Server AlwaysOn Team; на английском языке).  
+ Дополнительные сведения см. в записи [Модель исправности AlwaysOn, часть 2. Расширение модели исправности](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model) (в блоге SQL Server AlwaysOn Team; на английском языке).  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
@@ -106,16 +106,15 @@ ms.locfileid: "91115827"
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> См. также  
   
--   [Модель исправности AlwaysOn, часть 1. Архитектура модели исправности](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/08/the-alwayson-health-model-part-1-health-model-architecture/)  
+-   [Модель исправности AlwaysOn, часть 1. Архитектура модели исправности](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-1-health-model-architecture)  
   
--   [Модель исправности AlwaysOn, часть 2. Расширение модели исправности](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/the-alwayson-health-model-part-2-extending-the-health-model/)  
+-   [Модель исправности AlwaysOn, часть 2. Расширение модели исправности](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)  
   
--   [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
 ## <a name="see-also"></a>См. также:  
  [Группы доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Администрирование группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md)   
  [Отслеживание групп доступности (SQL Server)](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
-  
   

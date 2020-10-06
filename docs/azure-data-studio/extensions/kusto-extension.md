@@ -9,16 +9,16 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: fe620c08da690a61d41a0fef5f18132c246ef739
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: 2ffe3945f8dd7e8c0ce9cf504c09622ca1a20331
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379619"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725193"
 ---
 # <a name="kusto-kql-extension-for-azure-data-studio-preview"></a>Расширение Kusto (KQL) для Azure Data Studio (предварительная версия)
 
-Расширение Kusto (KQL) для [Azure Data Studio](../what-is.md) позволяет подключаться к кластерам [Azure Data Explorer](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview) и выполнять к ним запросы.
+Расширение Kusto (KQL) для [Azure Data Studio](../what-is.md) позволяет подключаться к кластерам [Azure Data Explorer](/azure/data-explorer/data-explorer-overview) и выполнять к ним запросы.
 
 Теперь пользователи могут создавать и выполнять запросы KQL, а также разрабатывать записные книжки с помощью [ядра Kusto](../notebooks/notebooks-kusto-kernel.md) с технологией IntelliSense.
 
@@ -33,7 +33,7 @@ ms.locfileid: "91379619"
 Также необходимы следующие компоненты.
 
 - [Установленное решение Azure Data Studio](../download-azure-data-studio.md).
-- [Кластер и база данных Azure Data Explorer](https://docs.microsoft.com/azure/data-explorer/create-cluster-database-portal).
+- [Кластер и база данных Azure Data Explorer](/azure/data-explorer/create-cluster-database-portal).
 
 ## <a name="install-the-kusto-kql-extension"></a>Установка расширения Kusto (KQL)
 
@@ -104,7 +104,7 @@ StormEvents
 | where EventType == "Waterspout"
 ```
 
-Дополнительные сведения о создании запросов KQL см. в статье [Написание запросов для Azure Data Explorer](https://docs.microsoft.com/azure/data-explorer/write-queries#overview-of-the-query-language)
+Дополнительные сведения о создании запросов KQL см. в статье [Написание запросов для Azure Data Explorer](/azure/data-explorer/write-queries#overview-of-the-query-language)
 
 ## <a name="view-extension-settings"></a>Просмотр параметров расширения
 
@@ -124,7 +124,7 @@ StormEvents
 
 ## <a name="sanddance-visualization"></a>Визуализация SandDance
 
-[Расширение SandDance](https://docs.microsoft.com/sql/azure-data-studio/sanddance-extension) с расширением Kusto (KQL) в Azure Data Studio объединяют сводят вместе широкие возможности интерактивной визуализации. В результирующем наборе запроса KQL нажмите кнопку **Визуализатор**, чтобы запустить [SandDance](https://sanddance.js.org/).
+[Расширение SandDance](../sanddance-extension.md) с расширением Kusto (KQL) в Azure Data Studio объединяют сводят вместе широкие возможности интерактивной визуализации. В результирующем наборе запроса KQL нажмите кнопку **Визуализатор**, чтобы запустить [SandDance](https://sanddance.js.org/).
 
 :::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="Расширение Data Explorer":::
 
@@ -145,6 +145,6 @@ StormEvents
 
 - [Создание и запуск записной книжки Kusto](../notebooks/notebooks-kusto-kernel.md)
 - [Записная книжка Kqlmagic в Azure Data Studio](../notebooks/notebooks-kqlmagic.md)
-- [Памятка по преобразованию из SQL в Kusto](https://docs.microsoft.com/azure/data-explorer/kusto/query/sqlcheatsheet)
-- [Что такое Azure Data Explorer?](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview)
+- [Памятка по преобразованию из SQL в Kusto](/azure/data-explorer/kusto/query/sqlcheatsheet)
+- [Что такое Azure Data Explorer?](/azure/data-explorer/data-explorer-overview)
 - [Использование визуализации SandDance](https://sanddance.js.org/)

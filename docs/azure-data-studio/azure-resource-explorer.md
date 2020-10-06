@@ -9,19 +9,19 @@ ms.author: yanacai
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 5b4081d98a30daa61a1e10ecf4faa6000a0fe11c
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 972e715de4ec8504c488ce70c47fecc3f04b3fca
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364164"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725235"
 ---
 # <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>Просмотр ресурсов SQL Azure и управление ими с помощью обозревателя ресурсов Azure
 
 Этот документ описывает, как просматривать ресурсы Azure SQL Server, базы данных SQL Azure и Управляемого экземпляра Azure SQL и управлять ими с помощью обозревателя ресурсов Azure в [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)].
 
 >[!NOTE]
->Обозреватель ресурсов Azure поддерживается в SQL Server 2019. После этого вы сможете установить расширение с помощью [диспетчера расширений](extensions.md) или команды **Файл** > **Установить пакет из пакета VSIX**.
+>Обозреватель ресурсов Azure поддерживается в SQL Server 2019. После этого вы сможете установить расширение с помощью [диспетчера расширений](./extensions/add-extensions.md) или команды **Файл** > **Установить пакет из пакета VSIX**.
 
 ## <a name="connect-to-azure"></a>Подключение к Azure
 

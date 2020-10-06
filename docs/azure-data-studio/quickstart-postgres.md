@@ -9,12 +9,12 @@ ms.reviewer: alayu, maghan, sstein
 ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
-ms.openlocfilehash: 99e52735f317a538c9a11d3c048c513b153d5da7
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 5a66f349658c8470a3e4408953cc6121ffff74b4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766553"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725118"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-postgresql"></a>Краткое руководство. Использование Azure Data Studio для подключения и запросов к PostgreSQL
 
@@ -25,7 +25,7 @@ ms.locfileid: "88766553"
 Для работы с этим кратким руководством вам потребуется Azure Data Studio, расширение PostgreSQL для Azure Data Studio, а также доступ к серверу PostgreSQL.
 
 - [Установите Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15).
-- [Установите расширение PostgreSQL для Azure Data Studio](postgres-extension.md).
+- [Установите расширение PostgreSQL для Azure Data Studio](./extensions/postgres-extension.md).
 - [Установите PostgreSQL](https://www.postgresql.org/download/). (Кроме того, вы можете создать базу данных Postgres в облаке с помощью команды [az postgres up](/azure/postgresql/quickstart-create-server-up-azure-cli).) 
 
 ## <a name="connect-to-postgresql"></a>Подключение к PostgreSQL
@@ -133,4 +133,4 @@ ms.locfileid: "88766553"
 
 ## <a name="next-steps"></a>Next Steps
 
-См. сведения о [сценариях, доступных для Postgres в Azure Data Studio](postgres-extension.md).
+См. сведения о [сценариях, доступных для Postgres в Azure Data Studio](./extensions/postgres-extension.md).

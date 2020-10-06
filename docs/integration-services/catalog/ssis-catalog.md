@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8a821c49ba80ce3e51c4a12f0c0d7dee660384d3
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: dd2fffbce8d2db5bb5bafbcb49b1f37ea48873c7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990394"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726055"
 ---
 # <a name="ssis-catalog"></a>Каталог служб SSIS
 
@@ -40,7 +40,7 @@ ms.locfileid: "90990394"
   
  Чтобы обеспечить поддержку базы данных **SSISDB** , рекомендуется применять предопределенные политики предприятия для управления пользовательскими базами данных. Дополнительные сведения о создании планов обслуживания см. в разделе [Maintenance Plans](../../relational-databases/maintenance-plans/maintenance-plans.md).  
   
- Каталог базы данных **SSISDB** и база данных **SSISDB** поддерживают Windows PowerShell. Дополнительные сведения об использовании SQL Server с Windows PowerShell см. в разделе [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md). Примеры использования Windows PowerShell для выполнения задач, например таких как развертывание проекта, см. в записи блога [SSIS и Powershell в SQL Server 2012](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-and-powershell-in-sql-server-2012/ba-p/388015)на сайте blogs.msdn.com.  
+ Каталог базы данных **SSISDB** и база данных **SSISDB** поддерживают Windows PowerShell. Дополнительные сведения об использовании SQL Server с Windows PowerShell см. в разделе [SQL Server PowerShell](../../powershell/sql-server-powershell.md). Примеры использования Windows PowerShell для выполнения задач, например таких как развертывание проекта, см. в записи блога [SSIS и Powershell в SQL Server 2012](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-and-powershell-in-sql-server-2012/ba-p/388015)на сайте blogs.msdn.com.  
   
  Дополнительные сведения о просмотре данных операций см. в разделе [Наблюдение за выполнением пакетов и других операций](../../integration-services/performance/monitor-running-packages-and-other-operations.md).  
   
@@ -416,7 +416,7 @@ ms.locfileid: "90990394"
   
     ```  
   
-3.  Выполните резервное копирование базы данных SSISDB с помощью диалогового окна **Создание резервной копии базы данных** в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в разделе [Как создать резервную копию базы данных (среда SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812).  
+3.  Выполните резервное копирование базы данных SSISDB с помощью диалогового окна **Создание резервной копии базы данных** в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения см. в разделе [Как создать резервную копию базы данных (среда SQL Server Management Studio)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
 4.  Создайте скрипт CREATE LOGIN для ## MS_SSISServerCleanupJobLogin ##, выполнив следующие действия. Дополнительные сведения см. в разделе [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md).  
   
@@ -440,7 +440,7 @@ ms.locfileid: "90990394"
   
 ### <a name="to-restore-the-ssis-database"></a>Восстановление базы данных служб SSIS  
   
-1.  Если база данных SSISDB восстанавливается из копии в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], где каталог SSISDB никогда не создавался, включите среду CLR с помощью хранимой процедуры `sp_configure`. Дополнительные сведения см. в разделах [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) и [Параметр clr enabled](https://go.microsoft.com/fwlink/?LinkId=231855).  
+1.  Если база данных SSISDB восстанавливается из копии в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], где каталог SSISDB никогда не создавался, включите среду CLR с помощью хранимой процедуры `sp_configure`. Дополнительные сведения см. в разделах [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) и [Параметр clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md).  
   
     ```  
     use master   
@@ -456,7 +456,7 @@ ms.locfileid: "90990394"
            FROM Executable File = 'C:\Program Files\Microsoft SQL Server\YourSQLServerDefaultCompatibilityLevel\DTS\Binn\Microsoft.SqlServer.IntegrationServices.Server.dll'  
     ```  
 
-    Для значения `YourSQLServerDefaultCompatibilityLevel` см. [список уровней совместимости SQL Server по умолчанию](https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-ver15#arguments).
+    Для значения `YourSQLServerDefaultCompatibilityLevel` см. [список уровней совместимости SQL Server по умолчанию](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?view=sql-server-ver15#arguments).
   
     [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] требуют предоставления разрешения UNSAFE для имени входа, поскольку имени входа необходим дополнительный доступ к ресурсам, на которые существуют ограничения, например API-интерфейс Microsoft Win32. Дополнительные сведения о коде разрешения UNSAFE см. в разделе [Creating an Assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
 
@@ -679,4 +679,4 @@ SSISDB не поддерживает ограниченное делегиров
   
 -   Запись в блоге [Советы по управлению доступом к каталогу служб SSIS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-catalog-access-control-tips/ba-p/388057)на сайте blogs.msdn.com.  
   
--   Запись [Обзор модели управляемых объектов каталога служб SSIS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)в блоге blogs.msdn.com.  
+-   Запись [Обзор модели управляемых объектов каталога служб SSIS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)в блоге blogs.msdn.com.

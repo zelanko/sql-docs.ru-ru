@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b8839d71-13b7-41f2-a434-cb95020e79d7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 291a9fd0e0138eeb7b304e673f404163217f9ae5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 63e02be4fe2c7fdd1c0293cd5e76dcb9e0adca22
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431076"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725981"
 ---
 # <a name="back-up-database-task"></a>Задача «Создание резервной копии базы данных»
 
@@ -55,6 +55,5 @@ ms.locfileid: "88431076"
   
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе:  
   
--   [Задание свойств задач или контейнеров](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
-  
+-   [Задание свойств задач или контейнеров](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   

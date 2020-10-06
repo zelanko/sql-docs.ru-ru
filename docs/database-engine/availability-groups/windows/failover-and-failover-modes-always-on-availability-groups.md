@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 769000368599b2dc4e39b851d3d0def2f8b40a38
-ms.sourcegitcommit: 8689a1abea3e2b768cdf365143b9c229194010c0
+ms.openlocfilehash: 99155a11cfa3b8837dfec41a9163db6b9c56a925
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89424434"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727908"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Отработка отказа и режимы отработки отказа (группы доступности AlwaysOn)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -143,7 +143,7 @@ ms.locfileid: "89424434"
   
 -   Кластер WSFC имеет кворум. Дополнительные сведения см. в статье [Режимы кворума и конфигурация голосования WSFC (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
   
--   Первичная реплика стала недоступной и уровни условий перехода на другой ресурс, заданные гибкой политикой отработки отказа, были удовлетворены. Дополнительные сведения об уровнях условий перехода на другой ресурс см. в статье [Гибкая политика отработки отказа для автоматического перехода на другой ресурс группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
+-   Первичная реплика стала недоступной и уровни условий перехода на другой ресурс, заданные гибкой политикой отработки отказа, были удовлетворены. Дополнительные сведения об уровнях условий перехода на другой ресурс см. в статье [Гибкая политика отработки отказа для автоматического перехода на другой ресурс группы доступности (SQL Server)](./configure-flexible-automatic-failover-policy.md).  
   
 ###  <a name="how-automatic-failover-works"></a><a name="HowAutoFoWorks"></a> Принцип работы автоматической отработки отказа  
  Автоматический переход на другой ресурс включает в себя следующие действия.  
@@ -348,9 +348,9 @@ ms.locfileid: "89424434"
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> См. также  
   
--   [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
--   [Блог команды разработчиков SQL Server Always On: официальный блог по SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Блог команды разработчиков SQL Server Always On: официальный блог по SQL Server Always On](/archive/blogs/sqlalwayson/)  
   
 ## <a name="see-also"></a>См. также:  
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
@@ -358,6 +358,5 @@ ms.locfileid: "89424434"
  [Отказоустойчивая кластеризация Windows Server (WSFC) с SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [Транзакции между базами данных и распределенные транзакции для групп доступности AlwaysOn и зеркального отображения базы данных (SQL Server)](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)   
  [Политика отработки отказа для экземпляров откзоустойчивого кластера](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
- [Гибкая политика отработки отказа для автоматического перехода на другой ресурс группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)  
-  
+ [Гибкая политика отработки отказа для автоматического перехода на другой ресурс группы доступности (SQL Server)](./configure-flexible-automatic-failover-policy.md)  
   

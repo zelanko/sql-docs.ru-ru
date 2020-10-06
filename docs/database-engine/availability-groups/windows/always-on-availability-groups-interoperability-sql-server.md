@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f0038fb53bb0f50dfd11551bed9a7c17a41971a1
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 286a3e31caad83c421865626eee28d9f7d3f91f1
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115710"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726585"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Группы доступности Always On: взаимодействие (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -63,15 +63,15 @@ ms.locfileid: "91115710"
 
 - **Блоги**
 
-  [Руководство по миграции. Миграция на отказоустойчивую кластеризацию и группы доступности SQL Server 2012 с предшествующих кластеров и зеркальных отображений](https://blogs.msdn.microsoft.com/sqlalwayson/2012/04/09/now-available-migration-guide-migrating-to-sql-server-2012-failover-clustering-and-availability-groups-from-prior-clustering-and-mirroring-deployments/)
-  [Блоги команды разработчиков SQL Server Always On: официальный блог по SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)
-  [Блоги инженеров CSS SQL Server](https://docs.microsoft.com/archive/blogs/psssql/)
+  [Руководство по миграции. Миграция на отказоустойчивую кластеризацию и группы доступности SQL Server 2012 с предшествующих кластеров и зеркальных отображений](/archive/blogs/sqlalwayson/now-available-migration-guide-migrating-to-sql-server-2012-failover-clustering-and-availability-groups-from-prior-clustering-and-mirroring-deployments)
+  [Блоги команды разработчиков SQL Server Always On: официальный блог по SQL Server Always On](/archive/blogs/sqlalwayson/)
+  [Блоги инженеров CSS SQL Server](/archive/blogs/psssql/)
 
 - **Технические документы**
 
-  [Руководство по миграции. Переход на группы доступности Always On с предыдущих развертываний, сочетающих зеркальное отображение базы данных и доставку журналов](https://msdn.microsoft.com/library/jj635217)
-  [Руководство по решениям режима Always On в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)
-  [Технические документы Майкрософт по SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)
+  [Руководство по миграции. Переход на группы доступности Always On с предыдущих развертываний, сочетающих зеркальное отображение базы данных и доставку журналов](/previous-versions/sql/sql-server-2012/jj635217(v=msdn.10))
+  [Руководство по решениям режима Always On в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))
+  [Технические документы Майкрософт по SQL Server 2012](https://social.technet.microsoft.com/wiki/contents/articles/13146.white-paper-gallery-for-sql-server.aspx#[Category]SQLServer2012)
   [Технические документы группы консультантов по SQL Server](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)
 
 ## <a name="see-also"></a>См. также:

@@ -12,12 +12,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 45699c76ef91d76c94dc5829a8f8d328662f6a6a
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 2c56b8595955caef35d5ff1e591eed417a831a48
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114691"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726567"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Службы Analysis Services с группами доступности AlwaysOn
 
@@ -222,7 +222,6 @@ ms.locfileid: "91114691"
  [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Активные вторичные реплики. Доступ только для чтения к вторичным репликам (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [Политики AlwaysOn на случай проблем в работе с группами доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)   
- [Создание источника данных (многомерные службы SSAS)](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
- [Включение обратной записи в измерение](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback)  
-  
+ [Создание источника данных (многомерные службы SSAS)](/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
+ [Включение обратной записи в измерение](/analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback)  
   

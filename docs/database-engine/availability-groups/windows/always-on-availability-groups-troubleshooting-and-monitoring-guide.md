@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 28d57d973f0c1c33e46930c8fb0277aec70dc89f
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: e3ca428410760ac224cccf513aa8e8ed2a3060e4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115056"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726551"
 ---
 # <a name="monitor-and-troubleshoot-availability-groups"></a>Мониторинг и устранение неполадок групп доступности
  Это руководство поможет вам приступить к мониторингу групп доступности AlwaysOn и устранению некоторых распространенных проблем с ними. Оно предоставляет исходное содержимое, а также целевую страницу с полезной информацией, опубликованной в другом месте. Хотя это руководство не может полностью охватить все возможные проблемы с группами доступности, оно способно указать вам правильное направление для анализа первопричин и разрешения проблем. 
@@ -35,7 +35,7 @@ ms.locfileid: "91115056"
 |[Устранение неполадок: превышение RTO в группе доступности](troubleshoot-availability-group-exceeded-rto.md)|Производительность|После автоматического перехода на другой ресурс или планового перехода на другой ресурс вручную без потери данных время перехода на другой ресурс превышает цель времени восстановления (RTO). Или при оценке времени перехода на другой ресурс для вторичной реплики с синхронной фиксацией (например, партнера по обеспечению автоматической отработки отказа) вы обнаруживаете, что оно превышает RTO.|  
 |[Устранение неполадок: превышение RPO в группе доступности](troubleshoot-availability-group-exceeded-rpo.md)|Производительность|После принудительного перехода на другой ресурс вручную потеря данных превышает RPO. Или при расчете возможной потери данных для вторичной реплики с асинхронной фиксацией вы обнаруживаете, что она превышает RPO.|  
 |[Устранение неполадок: изменения в первичной реплике не отражены во вторичной](troubleshoot-primary-changes-not-reflected-on-secondary.md)|Производительность|Клиентское приложение успешно изменяет первичную реплику, но запрос вторичной реплики показывает, что это изменение не отражено.|  
-|[Устранение неполадок: высокое значение типа ожидания HADR_SYNC_COMMIT для групп доступности AlwaysOn](https://blogs.msdn.microsoft.com/sql_server_team/troubleshooting-high-hadr_sync_commit-wait-type-with-always-on-availability-groups/)|Производительность|Если HADR_SYNC_COMMIT слишком длинный, в потоке перемещения данных или фиксировании журнала вторичной реплики возникает проблема производительности.|  
+|[Устранение неполадок: высокое значение типа ожидания HADR_SYNC_COMMIT для групп доступности AlwaysOn](/archive/blogs/sql_server_team/troubleshooting-high-hadr_sync_commit-wait-type-with-always-on-availability-groups)|Производительность|Если HADR_SYNC_COMMIT слишком длинный, в потоке перемещения данных или фиксировании журнала вторичной реплики возникает проблема производительности.|  
 
 ##  <a name="useful-tools-for-troubleshooting"></a><a name="BKMK_TOOLS"></a> Полезные инструменты для устранения неполадок  
  При настройке или выполнении групп доступности можно использовать различные инструменты для диагностирования различных типов проблем. Приведенная ниже таблица содержит ссылки на полезные сведения об инструментах.  
@@ -64,15 +64,14 @@ ms.locfileid: "91115056"
 |-----------|-----------------|  
 |[Мониторинг производительности для групп доступности AlwaysOn](monitor-performance-for-always-on-availability-groups.md)|Описание процесса синхронизации данных для групп доступности, шлюзы управления потоком и метрики, которые могут пригодиться при мониторинге группы доступности, а также процесса сбора метрик RTO и RPO.|  
 |[Отслеживание групп доступности (SQL Server)](monitoring-of-availability-groups-sql-server.md)|Сведения о средствах наблюдения за группой доступности.|  
-|[Модель работоспособности AlwaysOn, часть 1. Архитектура модели работоспособности](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-1-health-model-architecture)|Общие сведения о модели работоспособности AlwaysOn.|  
-|[Модель работоспособности AlwaysOn, часть 2. Расширение модели работоспособности](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)|Описание настройки модели работоспособности AlwaysOn и панели мониторинга AlwaysOn для отображения дополнительных сведений.|  
-|[Мониторинг работоспособности AlwaysOn с использованием PowerShell, часть 1. Общий обзор командлетов](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview)|Общий обзор командлетов AlwaysOn PowerShell, которые можно использовать для наблюдения за работоспособностью группы доступности.|  
-|[Мониторинг работоспособности AlwaysOn с использованием PowerShell, часть 2. Расширенное использование командлетов](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage)|Сведения о расширенном использовании командлетов AlwaysOn PowerShell для наблюдения за работоспособностью группы доступности.|  
-|[Мониторинг работоспособности AlwaysOn с использованием PowerShell, часть 3. Простое приложение для мониторинга](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application)|Описание автоматического мониторинга группы доступности с помощью приложения.|  
-|[Мониторинг работоспособности AlwaysOn с использованием PowerShell, часть 4. Интеграция с агентом SQL Server](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent)|Сведения об интеграции мониторинга группы доступности с агентом SQL Server и настройке уведомления соответствующих сторон при возникновении проблем.|  
+|[Модель работоспособности AlwaysOn, часть 1. Архитектура модели работоспособности](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-1-health-model-architecture)|Общие сведения о модели работоспособности AlwaysOn.|  
+|[Модель работоспособности AlwaysOn, часть 2. Расширение модели работоспособности](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)|Описание настройки модели работоспособности AlwaysOn и панели мониторинга AlwaysOn для отображения дополнительных сведений.|  
+|[Мониторинг работоспособности AlwaysOn с использованием PowerShell, часть 1. Общий обзор командлетов](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview)|Общий обзор командлетов AlwaysOn PowerShell, которые можно использовать для наблюдения за работоспособностью группы доступности.|  
+|[Мониторинг работоспособности AlwaysOn с использованием PowerShell, часть 2. Расширенное использование командлетов](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage)|Сведения о расширенном использовании командлетов AlwaysOn PowerShell для наблюдения за работоспособностью группы доступности.|  
+|[Мониторинг работоспособности AlwaysOn с использованием PowerShell, часть 3. Простое приложение для мониторинга](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application)|Описание автоматического мониторинга группы доступности с помощью приложения.|  
+|[Мониторинг работоспособности AlwaysOn с использованием PowerShell, часть 4. Интеграция с агентом SQL Server](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent)|Сведения об интеграции мониторинга группы доступности с агентом SQL Server и настройке уведомления соответствующих сторон при возникновении проблем.|  
 
 ## <a name="next-steps"></a>Дальнейшие действия  
- [Блог группы разработчиков SQL Server AlwaysOn](https://docs.microsoft.com/archive/blogs/sqlalwayson/)   
- [Блоги инженеров CSS SQL Server](https://docs.microsoft.com/archive/blogs/psssql/)  
-  
+ [Блог группы разработчиков SQL Server AlwaysOn](/archive/blogs/sqlalwayson/)   
+ [Блоги инженеров CSS SQL Server](/archive/blogs/psssql/)  
   

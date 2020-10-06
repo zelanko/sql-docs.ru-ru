@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 50499b52303952556f54ac1a0fd9e446d53d5ad5
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: ebe23aa1fb252ce19f887b225527c3ec7a3339c6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91113646"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726472"
 ---
 # <a name="configure-backups-on-secondary-replicas-of-an-always-on-availability-group"></a>Настройка резервных копий вторичных реплик группы доступности Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -154,13 +154,13 @@ ms.locfileid: "91113646"
     ```  
   
 > [!NOTE]  
->  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом **Get-Help** в среде PowerShell [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+>  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом **Get-Help** в среде PowerShell [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Настройка и использование поставщика SQL Server PowerShell**  
   
--   [Поставщик SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [Поставщик SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
   
--   [Получение справок по SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
+-   [Получение справок по SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
 ##  <a name="follow-up-after-configuring-backup-on-secondary-replicas"></a><a name="FollowUp"></a> Дальнейшие действия. После настройки резервного копирования во вторичных репликах  
  Чтобы настройка автоматического резервного копирования учитывалась для данной группы доступности на каждом экземпляре сервера, где размещена реплика доступности, приоритет резервного копирования которой больше нуля (>0), необходимо создать скрипты заданий резервного копирования для баз данных в группе доступности. Чтобы определить, является ли текущая реплика предпочитаемой репликой резервного копирования, выполните функцию [sys.fn_hadr_backup_is_preferred_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) в скрипте резервного копирования. Если реплика доступности, размещенная на текущем экземпляре сервера, является предпочтительной для резервного копирования, эта функция возвращает значение 1. В противном случае функция возвращает значение 0. С помощью простого скрипта для каждой реплики доступности, который запрашивает эту функцию, можно определить, какая реплика должна выполнять данное задание резервного копирования. Например, типичный фрагмент скрипта задания резервного копирования выглядит следующим образом:  
@@ -192,12 +192,11 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> См. также  
   
--   [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
--   [Блоги команды разработчиков SQL Server AlwaysOn: официальный блог по SQL Server AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Блоги команды разработчиков SQL Server AlwaysOn: официальный блог по SQL Server AlwaysOn](/archive/blogs/sqlalwayson/)  
   
 ## <a name="see-also"></a>См. также:  
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Активные вторичные реплики: резервное копирование во вторичных репликах (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
-  
   

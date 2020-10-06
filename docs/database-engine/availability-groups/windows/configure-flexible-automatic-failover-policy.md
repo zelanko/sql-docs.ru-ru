@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 31a68fa84d408a83412144bf6ace80a252f35dc2
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 471038dea4e921b1bb9de97cae77330155e9aca3
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91113669"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727972"
 ---
 # <a name="configure-a-flexible-automatic-failover-policy-for-an-always-on-availability-group"></a>Настройка гибкой политики автоматического перехода на другой ресурс для группы доступности Always On
 
@@ -104,7 +104,7 @@ ms.locfileid: "91113669"
         |4|Четыре|В случае ошибки сервера средней значимости. Удовлетворяется любое условие более низкого значения, или возникает ошибка сервера средней значимости.|  
         |5|Пять|При любых подходящих условиях сбоя. Удовлетворяется любое условие более низкого значения, или возникает подходящее условие сбоя.|  
   
-         Дополнительные сведения об уровнях условий перехода на другой ресурс см. в статье [Гибкая политика отработки отказа для автоматического перехода на другой ресурс группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
+         Дополнительные сведения об уровнях условий перехода на другой ресурс см. в статье [Гибкая политика отработки отказа для автоматического перехода на другой ресурс группы доступности (SQL Server)]().  
   
     -   Чтобы настроить пороговое значение ожидания проверки работоспособности, используйте параметр HEALTH_CHECK_TIMEOUT = *n*, где *n* является целым числом от 15000 миллисекунд (15 секунд) до 4294967295 миллисекунд. Значение по умолчанию — 30 000 миллисекунд (30 секунд)  
   
@@ -132,7 +132,7 @@ ms.locfileid: "91113669"
         |**OnModerateServerError**|Четыре|В случае ошибки сервера средней значимости. Удовлетворяется любое условие более низкого значения, или возникает ошибка сервера средней значимости.|  
         |**OnAnyQualifiedFailureConditions**|Пять|При любых подходящих условиях сбоя. Удовлетворяется любое условие более низкого значения, или возникает подходящее условие сбоя.|  
   
-         Дополнительные сведения об уровнях условий перехода на другой ресурс см. в статье [Гибкая политика отработки отказа для автоматического перехода на другой ресурс группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
+         Дополнительные сведения об уровнях условий перехода на другой ресурс см. в статье [Гибкая политика отработки отказа для автоматического перехода на другой ресурс группы доступности (SQL Server)]().  
   
          Например, следующая команда изменяет уровень условия сбоя для существующей группы доступности `AG1`до уровня 1.  
   
@@ -153,13 +153,13 @@ ms.locfileid: "91113669"
         ```  
   
 > [!NOTE]  
->  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом **Get-Help** в среде PowerShell [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+>  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом **Get-Help** в среде PowerShell [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Настройка и использование поставщика SQL Server PowerShell**  
   
--   [Поставщик SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [Поставщик SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
   
--   [Получение справок по SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
+-   [Получение справок по SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
 
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
  **To configure automatic failover**  
@@ -181,5 +181,4 @@ ms.locfileid: "91113669"
  [Отказоустойчивая кластеризация Windows Server (WSFC) с SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [Политика отработки отказа для экземпляров откзоустойчивого кластера](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
  [sp_server_diagnostics (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)  
-  
   

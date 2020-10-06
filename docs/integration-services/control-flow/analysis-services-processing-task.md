@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2287bb2e429eba74f7ca98dcdf2b18b8d11cfda2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2db38d2ad6c102b47b2a9f3349a3877a9d55a4c4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88349990"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727606"
 ---
 # <a name="analysis-services-processing-task"></a>задача «Обработка средствами Analysis Services»
 
@@ -75,7 +75,7 @@ ms.locfileid: "88349990"
   
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе:  
   
--   [Задание свойств задач или контейнеров](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Задание свойств задач или контейнеров](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-analysis-services-processing-task"></a>Настройка задачи «Обработка средствами Analysis Services» программными средствами  
  Дополнительные сведения об установке этих свойств программными средствами см. в следующем разделе.  
@@ -123,7 +123,7 @@ ms.locfileid: "88349990"
 |--------------|-----------------|  
 |**Имени объекта**|Позволяет отобразить список имен заданных объектов.|  
 |**Тип**|Позволяет отобразить список типов заданных объектов.|  
-|**Параметры обработки**|Выберите из списка параметр обработки.<br /><br /> **См. также**: [Обработка многомерной модели (службы Analysis Services)](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
+|**Параметры обработки**|Выберите из списка параметр обработки.<br /><br /> **См. также**: [Обработка многомерной модели (службы Analysis Services)](/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**Параметры**|Позволяет отобразить список настроек обработки для заданных объектов.|  
   
  **Добавление**  
@@ -135,7 +135,7 @@ ms.locfileid: "88349990"
  **Анализ влияния**  
  Выполните анализ влияния на выбранный объект.  
   
- **См. также:** [Диалоговое окно "Анализ влияния" (службы Analysis Services — многомерные данные)](https://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
+ **См. также:** [Диалоговое окно "Анализ влияния" (службы Analysis Services — многомерные данные)](/analysis-services/analysis-services-overview?viewFallbackFrom=sql-server-ver15)  
   
  **Сводка о настройках пакета**  
  
@@ -150,4 +150,4 @@ ms.locfileid: "88349990"
  **Изменить настройки**  
  Измените параметры обработки и действия при ошибках в ключах измерения.  
   
- **См. также:** [Диалоговое окно "Изменение настроек" (службы Analysis Services — многомерные данные)](https://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
+ **См. также:** [Диалоговое окно "Изменение настроек" (службы Analysis Services — многомерные данные)](/analysis-services/analysis-services-overview?viewFallbackFrom=sql-server-ver15)

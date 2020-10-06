@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c483cab97fe4eb218ef1e823f53ed4cb6a7fd5f2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8ee2ebd23e6be8b78eee221b3e55485633b38786
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457580"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724570"
 ---
 # <a name="control-flow"></a>Поток управления
 
@@ -62,7 +62,7 @@ ms.locfileid: "88457580"
   
 -   Добавление диспетчеров соединений.  
   
-     Многим задачам требуется соединение с источником данных, поэтому необходимо добавить диспетчеры соединений, запрашиваемые задачей для пакета. Контейнер «цикл по каждому элементу» также может затребовать диспетчер соединений, в зависимости от используемого им типа перечислителя. Добавление диспетчеров соединений возможно в процессе поэлементного построения потока управления или до начала конструирования потока управления. Дополнительные сведения см. в разделах [Соединения в службах Integration Services (SSIS)](../../integration-services/connection-manager/integration-services-ssis-connections.md) и [Создание диспетчеров соединений](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
+     Многим задачам требуется соединение с источником данных, поэтому необходимо добавить диспетчеры соединений, запрашиваемые задачей для пакета. Контейнер «цикл по каждому элементу» также может затребовать диспетчер соединений, в зависимости от используемого им типа перечислителя. Добавление диспетчеров соединений возможно в процессе поэлементного построения потока управления или до начала конструирования потока управления. Дополнительные сведения см. в разделах [Соединения в службах Integration Services (SSIS)](../../integration-services/connection-manager/integration-services-ssis-connections.md) и [Создание диспетчеров соединений](../connection-manager/integration-services-ssis-connections.md).  
   
  Конструктор служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] также включает много возможностей разработки, которые можно использовать для управления областью конструктора и производить самодокументирование потока управления.  
   
@@ -70,8 +70,7 @@ ms.locfileid: "88457580"
   
 -   [Добавление задачи или контейнера в поток управления или удалить их из него](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
--   [Задание свойств задач или контейнеров](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Задание свойств задач или контейнеров](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 -   [Группирование и разгруппирование компонентов](../../integration-services/group-or-ungroup-components.md)  
-  
   

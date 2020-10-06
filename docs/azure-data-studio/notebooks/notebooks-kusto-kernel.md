@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: 416fd5aabb07db3deed1d4d78769249a99113216
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: a8379e10e8c3e3af64381e9a4536b253e203964e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379599"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725128"
 ---
 # <a name="create-and-run-a-kusto-kql-notebook-preview"></a>Создание и запуск записной книжки Kusto (KQL) (предварительная версия)
 
@@ -28,7 +28,7 @@ ms.locfileid: "91379599"
 
 Если у вас еще нет подписки Azure, создайте [бесплатную учетную запись](https://azure.microsoft.com/free/) Azure, прежде чем начинать работу.
 
-- [Кластер Azure Data Explorer с базой данных, к которой можно подключаться](https://docs.microsoft.com/azure/data-explorer/create-cluster-database-portal).
+- [Кластер Azure Data Explorer с базой данных, к которой можно подключаться](/azure/data-explorer/create-cluster-database-portal).
 - [Azure Data Studio](../download-azure-data-studio.md).
 - [Расширение Kusto (KQL) для Azure Data Studio](../extensions/kusto-extension.md).
 
@@ -118,6 +118,6 @@ ms.locfileid: "91379599"
 Дополнительные сведения о записных книжках:
 
 - [Расширение Kusto (KQL) для Azure Data Studio](../extensions/kusto-extension.md)
-- [Использование записных книжек в Azure Data Studio](../notebooks-guidance.md)
-- [Создание и запуск записной книжки Python](../notebooks-tutorial-python-kernel.md)
-- [Создание и запуск записной книжки SQL Server](../notebooks-tutorial-sql-kernel.md)
+- [Использование записных книжек в Azure Data Studio](./notebooks-guidance.md)
+- [Создание и запуск записной книжки Python](./notebooks-python-kernel.md)
+- [Создание и запуск записной книжки SQL Server](./notebooks-sql-kernel.md)

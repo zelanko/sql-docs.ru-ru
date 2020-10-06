@@ -9,12 +9,12 @@ ms.author: aanelson
 ms.reviewer: alayu, maghan, sstein
 ms.custom: ''
 ms.date: 04/19/2019
-ms.openlocfilehash: 522f6c862f4c136afb0c7794d90ed83c83169d0c
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: ede862fe5bbfe975e7c8694782960ced974122b6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91123341"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725139"
 ---
 # <a name="powershell-editor-support-for-azure-data-studio"></a>Поддержка редактора PowerShell для Azure Data Studio
 
@@ -62,8 +62,8 @@ azuredatastudio --install-extension PowerShell-<version>.vsix
 PowerShell Core — это проект с открытым исходным кодом на сайте [GitHub](https://github.com/powershell/powershell).
 Дополнительные сведения об установке PowerShell Core на платформах MacOS или Linux см. в следующих статьях:
 
-- [Установка PowerShell Core в Linux](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux)
-- [Установка PowerShell Core в macOS](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos)
+- [Установка PowerShell Core в Linux](/powershell/scripting/install/installing-powershell-core-on-linux)
+- [Установка PowerShell Core в macOS](/powershell/scripting/install/installing-powershell-core-on-macos)
 
 ## <a name="example-scripts"></a>Примеры скриптов
 

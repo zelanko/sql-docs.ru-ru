@@ -9,16 +9,16 @@ ms.author: alayu
 ms.reviewer: maghan, sstein
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: a541b994b33355fb5df8ebf856681d588e82cc2d
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 3bcdd76cf143c94dc1e200a21972d00419f26b96
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111744"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725215"
 ---
 # <a name="azure-arc-extension-for-azure-data-studio-preview"></a>Расширение Azure Arc для Azure Data Studio (предварительная версия)
 
-[Расширение Azure Arc (предварительная версия)](https://aka.ms/azurearcdata-docs) предназначено для создания ресурсов служб данных Arc Azure и управления ими.
+[Расширение Azure Arc (предварительная версия)](/azure/azure-arc/data/) предназначено для создания ресурсов служб данных Arc Azure и управления ими.
 
 **Ниже указаны основные действия, выполняемые с помощью расширения.**
 - Создание ресурса
@@ -61,4 +61,4 @@ ms.locfileid: "91111744"
 Эти панели мониторинга предоставляют дополнительные сведения о ресурсе, а также возможность открытия его на портале Azure.
 
 ## <a name="next-steps"></a>Дальнейшие действия
-Чтобы узнать больше о службах данных Azure Arc, [ознакомьтесь с документацией.](https://aka.ms/azurearcdata-docs)
+Чтобы узнать больше о службах данных Azure Arc, [ознакомьтесь с документацией.](/azure/azure-arc/data/)

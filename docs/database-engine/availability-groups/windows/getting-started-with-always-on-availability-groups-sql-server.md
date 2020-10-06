@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9466f9434ff06d22b7dcabc1d42da6d1bae76014
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 0a180d924a4033b45bdcfe60746110bc560aa470
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115059"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727882"
 ---
 # <a name="getting-started-with-always-on-availability-groups"></a>Начало работы с группами доступности Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "91115059"
   
 |Задача|Ссылка|  
 |----------|----------|  
-|Изменение [гибкой политики отработки отказа](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md) группы доступности для управления условиями, вызвавшими автоматический переход на другой ресурс. Эта политика актуальна, только если возможна автоматическая отработка отказа.|[Настройка гибкой политики отработки отказа группы доступности](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md)|  
+|Изменение [гибкой политики отработки отказа](./configure-flexible-automatic-failover-policy.md) группы доступности для управления условиями, вызвавшими автоматический переход на другой ресурс. Эта политика актуальна, только если возможна автоматическая отработка отказа.|[Настройка гибкой политики отработки отказа группы доступности](../../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md)|  
 |Выполнение запланированного перехода на другой ресурс вручную или принудительный переход на другой ресурс вручную (с возможной потерей данных), который обычно называется *принудительная отработка отказа*. Дополнительные сведения см. далее в подразделе [Отработка отказа и режимы отработки отказа (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).|[Выполнение запланированного перехода на другой ресурс вручную](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br /> [Выполнение принудительного перехода на другой ресурс вручную](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)|  
 |Используйте стандартный набор политик для просмотра работоспособности группы доступности, ее реплик и баз данных.|[Использование управления на основе политик для просмотра работоспособности группы доступности](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)<br /><br /> [Использование панели мониторинга группы AlwaysOn](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)|  
 |Добавление или удаление вторичной реплики.|[Добавление вторичной реплики](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)<br /><br /> [Удаление вторичной реплики](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md)|  
@@ -90,9 +90,9 @@ ms.locfileid: "91115059"
   
 -   **Видео: подробнее об AlwaysOn.**  [Microsoft SQL Server с рабочим названием Denali AlwaysOn, часть 2. Создание критически важного решения по обеспечению высокого уровня доступности с использованием AlwaysOn](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
--   **Технический документ:**  [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   **Технический документ:**  [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
--   **Блоги**  [Блог команды разработчиков SQL Server Always On: официальный блог по SQL Server Always On](https://blogs.msdn.microsoft.com/sqlAlwaysOn/)  
+-   **Блоги**  [Блог команды разработчиков SQL Server Always On: официальный блог по SQL Server Always On](/archive/blogs/sqlalwayson/)  
   
 ## <a name="see-also"></a>См. также:  
  [Группы доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
@@ -102,5 +102,4 @@ ms.locfileid: "91115059"
  [Отслеживание групп доступности (SQL Server)](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)   
  [Общие сведения об инструкциях Transact-SQL для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md)   
  [Обзор командлетов PowerShell для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
-  
   

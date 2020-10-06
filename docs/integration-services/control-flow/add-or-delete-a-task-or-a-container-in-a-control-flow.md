@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bc573bfaf7f68102631e4e65c607e76062c147ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 41a59d34bd6b84388f9fc32443b703bdf94f3239
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88350070"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728105"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>Добавление задачи или контейнера в поток управления или удалить их из него
 
@@ -100,9 +100,9 @@ ms.locfileid: "88350070"
   
 4.  В области конструктора на вкладке **Поток управления** щелкните правой кнопкой мыши задачу или контейнер, затем выберите пункт **Изменить** , чтобы открыть соответствующий редактор задачи или контейнера.  
   
-     Сведения о настройке контейнера "цикл по элементам" см. в разделе [Настройка контейнера "цикл по элементам"](https://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5).  
+     Сведения о настройке контейнера "цикл по элементам" см. в разделе [Настройка контейнера "цикл по элементам"](./for-loop-container.md).  
   
-     Сведения о настройке контейнера "цикл по каждому элементу" см. в разделе [Настройка контейнера "цикл по каждому элементу"](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+     Сведения о настройке контейнера "цикл по каждому элементу" см. в разделе [Настройка контейнера "цикл по каждому элементу"](./foreach-loop-container.md).  
   
     > [!NOTE]  
     >  У контейнера последовательности нет настраиваемого редактора.  
@@ -119,5 +119,4 @@ ms.locfileid: "88350070"
  [Задачи служб Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Контейнеры служб Integration Services](../../integration-services/control-flow/integration-services-containers.md)   
  [Поток управления](../../integration-services/control-flow/control-flow.md)  
-  
   

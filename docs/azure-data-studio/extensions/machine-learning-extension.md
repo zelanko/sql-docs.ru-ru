@@ -9,12 +9,12 @@ ms.author: davidph
 ms.reviewer: sstein
 ms.custom: ''
 ms.date: 05/19/2020
-ms.openlocfilehash: bc3039207e083d2afc8f0850a6328facd1f1916f
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: 77cb3141a27fa8e68f8cdfb556784cc63fd07543
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91137120"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725149"
 ---
 # <a name="machine-learning-extension-for-azure-data-studio-preview"></a>Расширение "Машинное обучение" для Azure Data Studio (предварительная версия)
 
@@ -24,7 +24,7 @@ ms.locfileid: "91137120"
 
 На компьютере, на котором выполняется Azure Data Studio, должны быть установлены перечисленные ниже необходимые компоненты.
 
-- [Python 3](https://www.python.org/downloads/). После установки Python необходимо указать локальный путь к папке установки Python в разделе [Параметры расширения](#settings). Если вы использовали [записную книжку ядра Python](../notebooks-tutorial-python-kernel.md) в Azure Data Studio, то расширение по умолчанию будет использовать путь из этой записной книжки.
+- [Python 3](https://www.python.org/downloads/). После установки Python необходимо указать локальный путь к папке установки Python в разделе [Параметры расширения](#settings). Если вы использовали [записную книжку ядра Python](../notebooks/notebooks-python-kernel.md) в Azure Data Studio, то расширение по умолчанию будет использовать путь из этой записной книжки.
 
 - [Драйвер Microsoft ODBC 17 для SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md) для Windows, macOS или Linux.
 
@@ -87,7 +87,7 @@ _Компоненты для установки:_
 
 1. Убедитесь, что флажок **Машинное обучение: включить Python** установлен. Этот флажок устанавливается по умолчанию.
 
-1. Укажите путь к вашей существующей установке Python в поле **Машинное обучение: путь Python**. Это может быть полный путь к исполняемому файлу Python или папка, где находится этот исполняемый файл. Если вы использовали [записную книжку ядра Python](../notebooks-tutorial-python-kernel.md) в Azure Data Studio, то расширение по умолчанию будет использовать путь из этой записной книжки.
+1. Укажите путь к вашей существующей установке Python в поле **Машинное обучение: путь Python**. Это может быть полный путь к исполняемому файлу Python или папка, где находится этот исполняемый файл. Если вы использовали [записную книжку ядра Python](../notebooks/notebooks-python-kernel.md) в Azure Data Studio, то расширение по умолчанию будет использовать путь из этой записной книжки.
 
 ### <a name="enable-r"></a>Включение R
 
@@ -114,6 +114,6 @@ _Компоненты для установки:_
 - [Управление пакетами в базе данных](machine-learning-extension-manage-packages.md)
 - [Составление прогнозов](machine-learning-extension-predictions.md)
 - [Импорт или просмотр моделей](machine-learning-extension-import-view-models.md)
-- [Записные книжки в Azure Data Studio](../notebooks-guidance.md)
+- [Записные книжки в Azure Data Studio](../notebooks/notebooks-guidance.md)
 - [Документация по машинному обучению на SQL](../../machine-learning/index.yml)
 - [Машинное обучение и ИИ с применением ONNX в SQL для пограничных вычислений (предварительная версия)](/azure/azure-sql-edge/onnx-overview)

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2496345f217f61f3729a6bf657a882e045cc130b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6a2b82bede4fd6c04bd1d72f24b9cdb2a0e6fe34
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88350000"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727611"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Задача «Выполнение инструкции DDL служб Analysis Services»
 
@@ -45,9 +45,9 @@ ms.locfileid: "88350000"
 ## <a name="ddl-statements"></a>Инструкции DDL  
  Инструкции DDL представлены как инструкции в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language (ASSL) и встроены в команду XML для аналитики (XMLA).  
   
--   ASSL используется для определения и описания экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , базы данных и объектов базы данных, которые он содержит. Дополнительные сведения см. в разделе [Справочник по языку ASSL](https://docs.microsoft.com/analysis-services/assl/analysis-services-scripting-language-assl-for-xmla).  
+-   ASSL используется для определения и описания экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , базы данных и объектов базы данных, которые он содержит. Дополнительные сведения см. в разделе [Справочник по языку ASSL](/analysis-services/assl/analysis-services-scripting-language-assl-for-xmla).  
   
--   XML для аналитики — это язык команд, используемый для отправки команд-действий, таких как «Создать», «Изменить» или «Обработать», экземпляру служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Дополнительные сведения см. в разделе [Справочник по XML для аналитики (XMLA)](https://docs.microsoft.com/analysis-services/xmla/xml-for-analysis-xmla-reference).  
+-   XML для аналитики — это язык команд, используемый для отправки команд-действий, таких как «Создать», «Изменить» или «Обработать», экземпляру служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Дополнительные сведения см. в разделе [Справочник по XML для аналитики (XMLA)](/analysis-services/xmla/xml-for-analysis-xmla-reference).  
   
  Если DDL-код хранится в отдельном файле, задача «Выполнение инструкции DDL служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] » использует диспетчер подключения файлов для указания пути файла. Дополнительные сведения см. в статье [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md).  
   
@@ -229,7 +229,7 @@ ms.locfileid: "88350000"
   
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе:  
   
--   [Задание свойств задач или контейнеров](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Задание свойств задач или контейнеров](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-analysis-services-execute-ddl-task"></a>Программная настройка задачи «Выполнение инструкции DDL служб Analysis Services»  
  Дополнительные сведения об установке этих свойств программными средствами см. в следующем разделе.  
@@ -284,4 +284,3 @@ ms.locfileid: "88350000"
  Выберите переменную в списке или щелкните \<**New variable...**> и создайте переменную с помощью диалогового окна **Добавление переменной**.  
   
  **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md)  
-  

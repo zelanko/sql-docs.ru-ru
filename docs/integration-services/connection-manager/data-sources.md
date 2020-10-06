@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6d622a00995ec8a371ef531994e4f18c61173a20
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 25c17b0d61c5e1f58932eb6abc035e7862dcbe6e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477996"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728071"
 ---
 # <a name="data-sources-for-ssisnoversion-packages"></a>Источники данных для пакетов [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]
 
@@ -31,7 +31,7 @@ ms.locfileid: "88477996"
   
 > **ПРИМЕЧАНИЕ.** Источники данных можно добавлять только в проекты, использующие модель развертывания пакета. Если проект был настроен для использования модели развертывания проекта, то вместо источников данных используются созданные на уровне проекта диспетчеры соединений, которые позволяют использовать соединения совместно.  
 >   
->  Дополнительные сведения о моделях развертывания см. в разделе [Deployment of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md). Сведения о преобразовании проектов в модели развертывания проектов см. в разделе [Deploy Projects to Integration Services Server](https://msdn.microsoft.com/library/hh231102.aspx).  
+>  Дополнительные сведения о моделях развертывания см. в разделе [Deployment of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md). Сведения о преобразовании проектов в модели развертывания проектов см. в разделе [Deploy Projects to Integration Services Server](../packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  Применение источников данных в пакетах служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] дает следующие преимущества.  
   
@@ -47,5 +47,4 @@ ms.locfileid: "88477996"
  Объект источника данных представляет собой простое соединение с источником данных и предоставляет доступ к объектам в хранилище, на которое он ссылается. Например, исходный объект данных, подключающийся к образцу базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]AdventureWorks, включает все 60 таблиц базы данных.  
   
  Между источником данных и диспетчерами соединений, ссылающимися на него, нет зависимостей. Если источник данных больше не входит в проект, пакет по-прежнему остается правильным, так как информация об источнике данных, например тип и строка соединения, включается в определение пакета.  
-  
   

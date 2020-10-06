@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3fa77d1c6796220937a6966a5e4202c7f029ddd8
-ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
+ms.openlocfilehash: 10517361b14711595b08a2c4761a368666b764b1
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87790327"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726575"
 ---
 # <a name="driver-and-client-connectivity-support-for-availability-groups"></a>Поддержка возможности подключения драйвера и клиента для групп доступности
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,14 +41,14 @@ ms.locfileid: "87790327"
 |ADO.NET с платформой .NET Framework 4.0 с улучшением подключения*|Да|Да|Да|Да|Да|  
 |ADO.NET с платформой .NET Framework 3.5 с пакетом обновления 1 (SP1) с улучшением подключения**|Да|Да|Да|Да|Да|  
 |[Microsoft ODBC Driver 13.1+ для SQL Server](../../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)|Да|Да|Да|Да|Да|
-|[Microsoft JDBC Driver 4.0+ для SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md)|Да|Да|Да|Да|Да| 
-|[Драйвер Microsoft OLE DB для SQL Server](../../../connect/jdbc/microsoft-jdbc-driver-for-sql-server.md)|Да|Да|Да|Да|Да| 
+|[Microsoft JDBC Driver 4.0+ для SQL Server](../../../connect/jdbc/microsoft-jdbc-driver-for-sql-server.md)|Да|Да|Да|Да|Да| 
+|[Драйвер Microsoft OLE DB для SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md)|Да|Да|Да|Да|Да| 
   
  * Скачайте исправление подключения для ADO.NET с платформой .NET Framework 4.0: [https://support.microsoft.com/kb/2600211](https://support.microsoft.com/kb/2600211).  
   
  ** Скачайте исправление подключения для ADO.NET с платформой .NET Framework 3.5 с пакетом обновления 1 (SP1): [https://support.microsoft.com/kb/2654347](https://support.microsoft.com/kb/2654347).  
  
- * Скачайте новый драйвер Microsoft OLE DB для SQL Server: [https://aka.ms/downloadmsoledbsql](https://aka.ms/downloadmsoledbsql).  
+ * Скачайте новый драйвер Microsoft OLE DB для SQL Server: [https://aka.ms/downloadmsoledbsql](../../../connect/oledb/download-oledb-driver-for-sql-server.md).  
 
 > [!IMPORTANT]  
 >  Для подключения к прослушивателю группы доступности клиент должен использовать строку подключения TCP.  
@@ -65,10 +65,9 @@ ms.locfileid: "87790327"
  [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Сведения о доступе клиентского подключения к репликам доступности (SQL Server)](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
- [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)   
- [Блог команды разработчиков SQL Server Always On: официальный блог команды разработчиков SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)   
+ [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))   
+ [Блог команды разработчиков SQL Server Always On: официальный блог команды разработчиков SQL Server Always On](/archive/blogs/sqlalwayson/)   
  [На компьютерах под управлением Windows Server 2003, Windows Vista, Windows Server 2008, Windows 7 или Windows Server 2008 R2 происходит долговременная задержка при повторном подключении с помощью протокола IPSec](https://support.microsoft.com/kb/980915)   
  [Службе кластера необходимо около 30 секунд для отработки отказа IP-адресов IPv6 в Windows Server 2008 R2](https://support.microsoft.com/kb/2578113)   
  [Медленная отработка отказа при отсутствии маршрутизатора между кластером и сервером приложений](https://support.microsoft.com/kb/2582281)  
-  
   

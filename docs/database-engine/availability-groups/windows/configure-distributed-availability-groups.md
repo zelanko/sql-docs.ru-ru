@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5a6e5f2051a0e6937cd26d9ceec06d42ccbeb201
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 537dbc1d60fc707f3d00aacd85e1ec5e335519c0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115658"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727985"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>Настройка распределенной группы доступности Always On  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -177,7 +177,7 @@ GO
 ```  
   
 > [!NOTE]  
->  **LISTENER_URL** указывает прослушиватель для каждой группы доступности, а также конечную точку зеркального отображения базы данных для группы доступности. В этом примере это порт `5022` (а не порт `60173` , который использовался для создания прослушивателя). Если вы используете подсистему балансировки нагрузки, например в Azure, [добавьте правило балансировки нагрузки для порта распределенной группы доступности](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group). Добавьте правило для порта прослушивателя в дополнение к порту экземпляра SQL Server. 
+>  **LISTENER_URL** указывает прослушиватель для каждой группы доступности, а также конечную точку зеркального отображения базы данных для группы доступности. В этом примере это порт `5022` (а не порт `60173` , который использовался для создания прослушивателя). Если вы используете подсистему балансировки нагрузки, например в Azure, [добавьте правило балансировки нагрузки для порта распределенной группы доступности](/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group). Добавьте правило для порта прослушивателя в дополнение к порту экземпляра SQL Server. 
 
 ### <a name="cancel-automatic-seeding-to-forwarder"></a>Отменить автоматическое заполнение для сервера пересылки
 
@@ -392,5 +392,4 @@ ALTER AVAILABILITY GROUP [SQLFCIDAG]
 
  [CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)  
-  
   

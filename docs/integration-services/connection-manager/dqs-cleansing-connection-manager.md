@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: faa1eedd-db14-41e5-8e58-8f0f6f561e42
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 051a2c558675d4d80b0b414668fcd3c4cb824478
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 33586839b3efb0c8c93786a2e020228a44dc6bbc
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477957"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726701"
 ---
 # <a name="dqs-cleansing-connection-manager"></a>Диспетчер соединений «Очистка DQS»
 
@@ -31,8 +31,7 @@ ms.locfileid: "88477957"
 >  Диспетчер соединений «Очистка DQS» поддерживает только проверку подлинности Windows.  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../includes/ssis-md.md)] или программными средствами. Дополнительные сведения о свойствах, которые можно установить в конструкторе [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в статье [Диалоговое окно редактора преобразования "Очистка DQS"](../../integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md).  
+ Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../includes/ssis-md.md)] или программными средствами. Дополнительные сведения о свойствах, которые можно установить в конструкторе [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в статье [Диалоговое окно редактора преобразования "Очистка DQS"](../data-flow/transformations/dqs-cleansing-transformation.md).  
   
  Дополнительные сведения о настройке диспетчера подключений программным образом см. в документации по классу <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> в руководстве для разработчиков.  
-  
   

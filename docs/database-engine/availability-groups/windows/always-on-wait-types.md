@@ -10,18 +10,18 @@ ms.topic: how-to
 ms.assetid: afa8caff-f325-48d9-a8ef-a30beab60389
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 50886885852fd9ffe2d759be779989cb221cf76f
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 2a04953b5881362dbae6a83ea874dc9ed0207a7a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115799"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724564"
 ---
 # <a name="identify-waits-associated-with-availability-groups"></a>Идентификация задержек, связанных с группами доступности
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   При устранении неполадок с задержкой для групп доступности AlwaysOn можно отслеживать накапливаемую статистику ожидания с помощью зависящих от групп доступности типов ожидания в динамическом административном представлении [sys.dm_os_wait_stats (Transact-SQL)](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).  
   
- Общие сведения об использовании статистики ожидания см. в разделе [Ожидания и очереди в SQL Server 2005](https://technet.microsoft.com/library/cc966413.aspx). Этот документ был написан для SQL Server 2005, но сведения в нем актуальны и для более поздних версий SQL Server.  
+ Общие сведения об использовании статистики ожидания см. в разделе [Ожидания и очереди в SQL Server 2005](/previous-versions/sql/sql-server-2005/administrator/cc966413(v=technet.10)). Этот документ был написан для SQL Server 2005, но сведения в нем актуальны и для более поздних версий SQL Server.  
   
 ## <a name="query-for-availability-groups-wait-types"></a>Запрос для типов ожидания групп доступности  
  Чтобы получить всю статистику ожидания по типам ожидания групп доступности, используйте следующий запрос T-SQL:  
@@ -53,5 +53,4 @@ ORDER BY map_key ASC
   
 ## <a name="next-steps"></a>Дальнейшие действия  
  [Типы ожиданий](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md#WaitTypes)  
-  
   

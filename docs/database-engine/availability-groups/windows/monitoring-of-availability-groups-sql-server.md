@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1d5e3291-0d0a-45a1-88e5-1fc242d17210
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 238c31cf94df05dfb172695d2984df8f3b815342
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9cf9343673732daee37aacb0a37943dc8be67616
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900369"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727847"
 ---
 # <a name="tools-to-monitor-always-on-availability-groups"></a>"Средства для отслеживания групп доступности Always On"
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -37,34 +37,33 @@ ms.locfileid: "85900369"
   
 -   **Блоги**  
   
-     [Модель исправности AlwaysOn, часть 1. Архитектура модели исправности](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/08/the-alwayson-health-model-part-1-health-model-architecture/)  
+     [Модель исправности AlwaysOn, часть 1. Архитектура модели исправности](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-1-health-model-architecture)  
   
-     [Модель исправности AlwaysOn, часть 2. Расширение модели исправности](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/the-alwayson-health-model-part-2-extending-the-health-model/)  
+     [Модель исправности AlwaysOn, часть 2. Расширение модели исправности](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)  
   
-     [Мониторинг исправности AlwaysOn с использованием PowerShell, часть 1. Общий обзор командлетов](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview/)  
+     [Мониторинг исправности AlwaysOn с использованием PowerShell, часть 1. Общий обзор командлетов](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview)  
   
-     [Мониторинг исправности AlwaysOn с использованием PowerShell, часть 2. Расширенное использование командлетов](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage/)  
+     [Мониторинг исправности AlwaysOn с использованием PowerShell, часть 2. Расширенное использование командлетов](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage)  
   
-     [Мониторинг исправности AlwaysOn с использованием PowerShell, часть 3. Простое приложение для мониторинга](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/14/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application/)  
+     [Мониторинг исправности AlwaysOn с использованием PowerShell, часть 3. Простое приложение для мониторинга](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application)  
   
-     [Мониторинг исправности AlwaysOn с использованием PowerShell, часть 4. Интеграция с агентом SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/15/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent/)  
+     [Мониторинг исправности AlwaysOn с использованием PowerShell, часть 4. Интеграция с агентом SQL Server](/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent)  
   
-     [Блоги команды разработчиков SQL Server AlwaysOn: официальный блог по SQL Server AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [Блоги команды разработчиков SQL Server AlwaysOn: официальный блог по SQL Server AlwaysOn](/archive/blogs/sqlalwayson/)  
   
-     [Блоги инженеров CSS SQL Server](https://blogs.msdn.microsoft.com/psssql/)  
+     [Блоги инженеров CSS SQL Server](/archive/blogs/psssql/)  
   
 -   **Технические документы**  
   
-     [Технические документы Майкрософт Microsoft по SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
+     [Технические документы Майкрософт Microsoft по SQL Server 2012](https://social.technet.microsoft.com/wiki/contents/articles/13146.white-paper-gallery-for-sql-server.aspx#[Category]SQLServer2012)  
   
      [Технические документы группы консультантов по SQL Server](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   
 ## <a name="see-also"></a>См. также:  
  [Представления каталога групп доступности AlwaysOn (Transact-SQL)](../../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
  [Динамические представления управления и функции, связанные с группами доступности AlwaysOn (Transact-SQL)](../../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
- [Гибкая политика отработки отказа для автоматического перехода на другой ресурс группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)   
+ [Гибкая политика отработки отказа для автоматического перехода на другой ресурс группы доступности (SQL Server)](./configure-flexible-automatic-failover-policy.md)   
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Автоматическое восстановление страниц (группы доступности: зеркальное отображение баз данных)](../../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [Использование панели мониторинга AlwaysOn (среда SQL Server Management Studio)](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
-  
   

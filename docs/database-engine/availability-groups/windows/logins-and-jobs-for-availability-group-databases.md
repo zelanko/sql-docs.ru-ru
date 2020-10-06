@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 35ea24eb9d4f5007bf45602cceca97811ef282fc
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 57af8645045039923fa59bacbc232bca8e435c91
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116966"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726373"
 ---
 # <a name="manage-logins-for-jobs-using-databases-in-an-always-on-availability-group"></a>Управление именами входа для заданий, использующих базы данных в группе доступности Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "91116966"
 > [!NOTE]  
 >  Эта проблема затрагивает локальные учетные записи Windows на разных компьютерах. Для доменных учетных записей эта проблема не возникает, поскольку идентификатор безопасности там один для всех компьютеров.  
   
- Дополнительные сведения см. в записи [Пользователи, утратившие связь с учетной записью при работе с зеркальным отображением базы данных и доставкой журналов](https://docs.microsoft.com/archive/blogs/sqlserverfaq/orphaned-users-with-database-mirroring-and-log-shipping) (блог Database Engine).  
+ Дополнительные сведения см. в записи [Пользователи, утратившие связь с учетной записью при работе с зеркальным отображением базы данных и доставкой журналов](/archive/blogs/sqlserverfaq/orphaned-users-with-database-mirroring-and-log-shipping) (блог Database Engine).  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
@@ -70,5 +70,4 @@ ms.locfileid: "91116966"
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Автономные базы данных](../../../relational-databases/databases/contained-databases.md)   
  [Создание заданий](../../../ssms/agent/create-jobs.md)  
-  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e17ac9823d0c8c0425f7a5c7dbdb550431374c78
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: aaf5b4f4c8e93d3f36ddbd4768ebf2e453112fae
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896077"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726379"
 ---
 # <a name="prepare-a-secondary-database-for-an-always-on-availability-group"></a>Подготовка базы данных-получателя для присоединения к группе доступности Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -239,13 +239,13 @@ ms.locfileid: "85896077"
 4.  Чтобы восстановить резервные копии базы данных и журналов для каждой базы данных-источника, используйте командлет **restore-SqlDatabase** , указывая параметр восстановления **NoRecovery** . Если пути к файлам различны на компьютерах, на которых размещена основная реплика и целевая вторичная реплика, также следует использовать параметр восстановления **RelocateFile** .  
   
     > [!NOTE]  
-    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом **Get-Help** в среде PowerShell [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом **Get-Help** в среде PowerShell [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
 5.  Чтобы завершить настройку базы данных-получателя, необходимо присоединить ее к группе доступности. Дополнительные сведения см. в разделе [Присоединение базы данных-получателя к группе доступности (SQL Server)](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
  **Настройка и использование поставщика SQL Server PowerShell**  
   
--   [Поставщик SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [Поставщик SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
   
 ###  <a name="sample-backup-and-restore-script-and-command"></a><a name="ExamplePSscript"></a> Образцы скрипта и команды резервного копирования и восстановления  
  Следующие команды PowerShell создают полную резервную копию базы данных и журнала транзакций в общей сетевой папке и восстанавливают базу данных из этой папки. В этом примере предполагается, что путь к файлам, в которые выполняется восстановление базы данных, такой же, как и путь к файлам базы данных, резервная копия которых была создана.  
@@ -271,5 +271,4 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -R
  [Аргументы инструкции RESTORE (Transact-SQL)](../../../t-sql/statements/restore-statements-arguments-transact-sql.md)   
  [RESTORE (Transact-SQL)](../../../t-sql/statements/restore-statements-transact-sql.md)   
  [Устранение неполадок с операцией добавления файла, давшей сбой (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
-  
   

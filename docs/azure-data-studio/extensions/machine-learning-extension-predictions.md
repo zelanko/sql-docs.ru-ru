@@ -9,12 +9,12 @@ ms.author: davidph
 ms.reviewer: sstein
 ms.custom: ''
 ms.date: 06/09/2020
-ms.openlocfilehash: ad98cd8d9cdeb282a13ff35c278fd1c2a26df2b4
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: 2b68f15f69d3efb0a773022e87615d298da07706
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91137123"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725160"
 ---
 # <a name="make-predictions-with-machine-learning-extension-for-azure-data-studio-preview"></a>Создание прогнозов с помощью расширения машинного обучения для Azure Data Studio (предварительная версия)
 
@@ -55,7 +55,7 @@ Azure Data Studio создаст новый запрос T-SQL с [PREDICT](../.
 - [Расширение "Машинное обучение" для Azure Data Studio](machine-learning-extension.md)
 - [Управление пакетами в базе данных](machine-learning-extension-manage-packages.md)
 - [Импорт или просмотр моделей](machine-learning-extension-import-view-models.md)
-- [Записные книжки в Azure Data Studio](../notebooks-guidance.md)
+- [Записные книжки в Azure Data Studio](../notebooks/notebooks-guidance.md)
 - [Документация по машинному обучению на SQL](../../machine-learning/index.yml)
 - [Службы машинного обучения в управляемом экземпляре SQL Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview)
 - [Машинное обучение и ИИ с применением ONNX в SQL для пограничных вычислений (предварительная версия)](/azure/azure-sql-edge/onnx-overview)

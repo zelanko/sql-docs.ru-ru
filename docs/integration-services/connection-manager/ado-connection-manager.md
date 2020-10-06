@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 490418bc-5ef1-41b8-a9c8-de38aa96e0f6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5e909c0a84ae4f57e5eb6cbd6bf7041cf2361b62
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 420e34cc54d83d2f9f01aee1b794c7f37080c493
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394400"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724572"
 ---
 # <a name="ado-connection-manager"></a>Диспетчер соединений ADO
 
@@ -36,7 +36,7 @@ ms.locfileid: "88394400"
   
 |Тип данных SQL Server|Результат|  
 |--------------------------|------------|  
-|**time**, **datetimeoffset**|Выполнение пакета завершается неудачей, если в пакете не используются параметризованные команды SQL. Чтобы применить параметризованные команды SQL, используйте в пакете задачу «Выполнение SQL». Дополнительные сведения см. в разделах [Задача "Выполнение SQL"](../../integration-services/control-flow/execute-sql-task.md) и [Параметры и коды возврата в задаче "Выполнение SQL"](https://msdn.microsoft.com/library/a3ca65e8-65cf-4272-9a81-765a706b8663).|  
+|**time**, **datetimeoffset**|Выполнение пакета завершается неудачей, если в пакете не используются параметризованные команды SQL. Чтобы применить параметризованные команды SQL, используйте в пакете задачу «Выполнение SQL». Дополнительные сведения см. в разделах [Задача "Выполнение SQL"](../../integration-services/control-flow/execute-sql-task.md) и [Параметры и коды возврата в задаче "Выполнение SQL"](../control-flow/execute-sql-task.md).|  
 |**datetime2**|Диспетчер соединений ADO усекает значение миллисекунд.|  
   
 > [!NOTE]  
@@ -57,11 +57,10 @@ ms.locfileid: "88394400"
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующем разделе:  
   
--   [Настройка диспетчера подключений OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)  
+-   [Настройка диспетчера подключений OLE DB](./ole-db-connection-manager.md)  
   
  Дополнительные сведения о программной настройке диспетчера подключений см. в разделах <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> и [Добавление соединений программным образом](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
 ## <a name="see-also"></a>См. также  
  [Соединения в службах Integration Services (SSIS)](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
-  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0d58122aeba74489981a387c2477699784778a60
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7eb223aaa1ab8ece253e90db998b258e843f225e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394050"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724995"
 ---
 # <a name="msmq-connection-manager"></a>диспетчер соединений MSMQ
 
@@ -52,7 +52,7 @@ ms.locfileid: "88394050"
 ## <a name="configuration-of-the-msmq-connection-manager"></a>Настройка диспетчера соединений MSMQ  
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../includes/ssis-md.md)] или программными средствами.  
   
- Дополнительные сведения о свойствах, которые можно задавать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в статье [Редактор диспетчера MSMQ-сеансов](../../integration-services/connection-manager/msmq-connection-manager-editor.md).  
+ Дополнительные сведения о свойствах, которые можно задавать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в статье [Редактор диспетчера MSMQ-сеансов]().  
   
  Дополнительные сведения о программной настройке диспетчера подключений см. в разделах <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> и [Добавление соединений программным образом](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
   
@@ -87,5 +87,4 @@ ms.locfileid: "88394050"
 ## <a name="see-also"></a>См. также:  
  [Задача «Очередь сообщений»](../../integration-services/control-flow/message-queue-task.md)   
  [Соединения в службах Integration Services (SSIS)](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
-  
   

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1fc520e8c1f9044b86bea23ae226d14de4a3088e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b395bda0eb9c5eaa8ff5bf34fa7ed1f8bf18df8f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431066"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726009"
 ---
 # <a name="bulk-insert-task"></a>задача «Массовая вставка»
 
@@ -101,7 +101,7 @@ ms.locfileid: "88431066"
   
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе:  
   
--   [Задание свойств задач или контейнеров](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Задание свойств задач или контейнеров](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ### <a name="programmatic-configuration-of-the-bulk-insert-task"></a>Настройка задачи «Массовая вставка» программными средствами  
  Дополнительные сведения об установке этих свойств программными средствами см. в следующем разделе.  
@@ -109,13 +109,13 @@ ms.locfileid: "88431066"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.BulkInsertTask.BulkInsertTask>  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- [Задание свойств задач или контейнеров](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+ [Задание свойств задач или контейнеров](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="related-content"></a>См. также  
   
 -   Техническая статья [В системах, поддерживающих контроль учетных записей, может быть получена ошибка «Не удалось подготовить массовую вставку данных служб SSIS»](https://go.microsoft.com/fwlink/?LinkId=233693)на сайте support.microsoft.com.  
   
--   Техническая статья [Руководство по производительности загрузки данных](https://go.microsoft.com/fwlink/?LinkId=233700)на сайте msdn.microsoft.com.  
+-   Техническая статья [Руководство по производительности загрузки данных](/previous-versions/sql/sql-server-2008/dd425070(v=sql.100))на сайте msdn.microsoft.com.  
   
 -   Техническая статья [Использование служб SQL Server Integration Services для массовой загрузки данных](https://go.microsoft.com/fwlink/?LinkId=233701)размещена на сайте simple-talk.com.  
   
@@ -217,4 +217,3 @@ ms.locfileid: "88431066"
   
 > [!NOTE]  
 >  Каждая строка, которая не может быть импортирована операцией массовой загрузки, считается за одну ошибку.  
-  

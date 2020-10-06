@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f24efc5f72b0be5b362e3af12ce8b7f21fd7d51b
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 41bb72eefbfac24da8c390cea2bb9fa741e7255f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480262"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727841"
 ---
 # <a name="what-is-an-always-on-availability-group"></a>Что такое группа доступности Always On?
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "89480262"
   
     -   **Автоматический переход на другой ресурс** (без потери данных)  
   
-         Автоматический переход на другой ресурс возникает в ответ на сбой, в результате которого синхронизируемая вторичная реплика принимает первичную роль (с гарантированной защитой данных). Когда прежняя первичная реплика становится доступной, она принимает вторичную роль. Для автоматического перехода на другой ресурс требуется, чтобы первичная реплика и целевая вторичная реплика работали в режиме синхронной фиксации, а режим отработки отказа имел значение «Автоматический». Помимо этого, вторичная реплика уже должна быть синхронизирована, иметь WSFC-кворум и отвечать условиям, указанным в [гибкой политике перехода на другой ресурс](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)для группы доступности.  
+         Автоматический переход на другой ресурс возникает в ответ на сбой, в результате которого синхронизируемая вторичная реплика принимает первичную роль (с гарантированной защитой данных). Когда прежняя первичная реплика становится доступной, она принимает вторичную роль. Для автоматического перехода на другой ресурс требуется, чтобы первичная реплика и целевая вторичная реплика работали в режиме синхронной фиксации, а режим отработки отказа имел значение «Автоматический». Помимо этого, вторичная реплика уже должна быть синхронизирована, иметь WSFC-кворум и отвечать условиям, указанным в [гибкой политике перехода на другой ресурс](./configure-flexible-automatic-failover-policy.md)для группы доступности.  
   
         > [!IMPORTANT]  
         >  Экземпляры отказоустойчивого кластера SQL Server не поддерживают автоматический переход на другой ресурс с учетом групп доступности, поэтому любая реплика доступности, размещенная в них, должна быть настроена для перехода на другой ресурс вручную.  
@@ -156,11 +156,11 @@ ms.locfileid: "89480262"
   
 -   **Блоги**  
   
-     [Обучающая серия Always ON — HADRON. Использование рабочего пула для баз данных с HADRON](https://docs.microsoft.com/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)  
+     [Обучающая серия Always ON — HADRON. Использование рабочего пула для баз данных с HADRON](/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)  
   
-     [Блоги команды разработчиков SQL Server Always On: официальный блог по SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [Блоги команды разработчиков SQL Server Always On: официальный блог по SQL Server Always On](/archive/blogs/sqlalwayson/)  
   
-     [Блоги инженеров CSS SQL Server](https://docs.microsoft.com/archive/blogs/psssql/)  
+     [Блоги инженеров CSS SQL Server](/archive/blogs/psssql/)  
   
 -   **Видеоролики**  
   
@@ -170,9 +170,9 @@ ms.locfileid: "89480262"
   
 -   **Технические документы**  
   
-     [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
-     [Технические документы Майкрософт Microsoft по SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
+     [Технические документы Майкрософт Microsoft по SQL Server 2012](https://social.technet.microsoft.com/wiki/contents/articles/13146.white-paper-gallery-for-sql-server.aspx#[Category]SQLServer2012)  
   
      [Технические документы группы консультантов по SQL Server](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   
@@ -188,4 +188,3 @@ ms.locfileid: "89480262"
  [Активные вторичные реплики: резервное копирование во вторичных репликах (группы доступности Always On)](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
  [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
-   

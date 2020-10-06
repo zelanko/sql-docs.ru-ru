@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 21ef6f741ebfdd035630a40aba431c08a1ff9341
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: beb42ea05e69b9c806b0a0306b91e9c333bdd631
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431036"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725972"
 ---
 # <a name="data-flow-task"></a>Задача потока данных
 
@@ -108,7 +108,7 @@ ms.locfileid: "88431036"
   
  Дополнительные сведения о настройке этих свойств в окне **Свойства** см. в следующем разделе:  
   
--   [Задание свойств задач или контейнеров](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Задание свойств задач или контейнеров](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-data-flow-task"></a>Настройка задачи «Поток данных» программными средствами  
  Дополнительные сведения о программном добавлении задачи потока данных к пакету и установке свойств потока данных, см. в следующем разделе:  
@@ -116,9 +116,8 @@ ms.locfileid: "88431036"
 -   [Добавление задачи потока данных программным образом](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- [Задание свойств задач или контейнеров](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+ [Задание свойств задач или контейнеров](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="related-content"></a>См. также  
- Видеоматериал [Распространитель сбалансированных данных](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)на узле Technet.microsoft.com (на английском языке).  
-  
+ Видеоматериал [Распространитель сбалансированных данных](/previous-versions/dn912438(v=msdn.10))на узле Technet.microsoft.com (на английском языке).  
   

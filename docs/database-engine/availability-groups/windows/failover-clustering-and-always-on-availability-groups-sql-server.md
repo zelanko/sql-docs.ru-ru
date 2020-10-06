@@ -18,12 +18,12 @@ ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c10980b60d41f107ff0104eedd5b51aa40cd6a6e
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: eed9c3c7644345da76cda9882844e553691b9683
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480656"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727885"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Отказоустойчивая кластеризация и группы доступности AlwaysOn (SQL Server)
 
@@ -74,7 +74,7 @@ ms.locfileid: "89480656"
  **Параметры политики перехода на другой ресурс для группы доступности применимы ко всем репликам, независимо от того, размещаются ли они в автономном экземпляре или экземпляре FCI.  
   
 > [!NOTE]  
->  Дополнительные сведения о **числе узлов** в FCI и **группах доступности Always On** для разных выпусков [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] см. в разделе [Функции, поддерживаемые выпусками SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
+>  Дополнительные сведения о **числе узлов** в FCI и **группах доступности Always On** для разных выпусков [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] см. в разделе [Функции, поддерживаемые выпусками SQL Server 2012](/previous-versions/sql/sql-server-2012/cc645993(v=sql.110)) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>Рекомендации для размещения реплики доступности на FCI  
   
@@ -107,23 +107,23 @@ ms.locfileid: "89480656"
 -   **Не используйте диспетчер отказоустойчивого кластеров для перемещения групп доступности на другие узлы или резервные группы доступности.** Диспетчер отказоустойчивого кластера не имеет сведений о состоянии синхронизации реплик доступности, и это может привести к длительному простою. Необходимо использовать [!INCLUDE[tsql](../../../includes/tsql-md.md)] или среду [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
 
   >[!WARNING]
-  > Если с помощью диспетчера отказоустойчивости кластеров переместить *экземпляр отказоустойчивого кластера* с группой доступности на узел, который *уже* содержит реплику той же группы доступности, это может привести к потере этой реплики. Таким образом, эта реплика не будет включена на целевом узле. Один узел отказоустойчивого кластера не может содержать более одной реплики той же группы доступности. Дополнительные сведения о том, как это происходит, и шаги восстановления см. в записи блога [Issue: Replica Unexpectedly Dropped in Availability Group](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/) (Проблема: неожиданное удаление реплики в группе доступности). 
+  > Если с помощью диспетчера отказоустойчивости кластеров переместить *экземпляр отказоустойчивого кластера* с группой доступности на узел, который *уже* содержит реплику той же группы доступности, это может привести к потере этой реплики. Таким образом, эта реплика не будет включена на целевом узле. Один узел отказоустойчивого кластера не может содержать более одной реплики той же группы доступности. Дополнительные сведения о том, как это происходит, и шаги восстановления см. в записи блога [Issue: Replica Unexpectedly Dropped in Availability Group](/archive/blogs/alwaysonpro/issue-replica-unexpectedly-dropped-in-availability-group) (Проблема: неожиданное удаление реплики в группе доступности). 
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> См. также  
   
 -   **Блоги**  
   
-     [Настроить отказоустойчивую кластеризацию Windows для SQL Server (группы доступности или экземпляр отказоустойчивого кластера) с ограниченной безопасностью](https://blogs.msdn.microsoft.com/sqlalwayson/2012/06/05/configure-windows-failover-clustering-for-sql-server-availability-group-or-fci-with-limited-security/)  
+     [Настроить отказоустойчивую кластеризацию Windows для SQL Server (группы доступности или экземпляр отказоустойчивого кластера) с ограниченной безопасностью](/archive/blogs/sqlalwayson/configure-windows-failover-clustering-for-sql-server-availability-group-or-fci-with-limited-security)  
   
-     [Блоги команды разработчиков SQL Server AlwaysOn: официальный блог по SQL Server AlwaysOn](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [Блоги команды разработчиков SQL Server AlwaysOn: официальный блог по SQL Server AlwaysOn](/archive/blogs/sqlalwayson/)  
   
-     [Блоги инженеров CSS SQL Server](https://docs.microsoft.com/archive/blogs/psssql/)  
+     [Блоги инженеров CSS SQL Server](/archive/blogs/psssql/)  
   
 -   **Технические документы**  
   
-     [Руководство по архитектуре AlwaysOn. Построение решения для обеспечения высокого уровня доступности и аварийного восстановления с помощью экземпляров отказоустойчивого кластера и групп доступности](https://msdn.microsoft.com/library/jj215886.aspx)  
+     [Руководство по архитектуре AlwaysOn. Построение решения для обеспечения высокого уровня доступности и аварийного восстановления с помощью экземпляров отказоустойчивого кластера и групп доступности](/previous-versions/sql/sql-server-2012/jj215886(v=msdn.10))  
   
-     [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
      [Технические документы Майкрософт Microsoft по SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
@@ -134,5 +134,4 @@ ms.locfileid: "89480656"
  [Включение и отключение групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)   
  [Отслеживание групп доступности (Transact-SQL)](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [Экземпляры отказоустойчивого кластера (режим AlwaysOn) (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  
-  
   
