@@ -1,6 +1,6 @@
 ---
-description: Шаг 3. Эксперимент, подразумевающий подключение к SQL с помощью Ruby
-title: Шаг 3. Эксперимент, подразумевающий подключение к SQL с помощью Ruby | Документация Майкрософт
+title: Шаг 3. Эксперимент, подразумевающий подключение к SQL с помощью Ruby
+description: Шаг 3 — это подтверждение концепции, которое показывает, как можно подключиться к SQL Server с помощью Ruby. В этих простых примерах демонстрируется выделение и вставка данных.
 ms.custom: ''
 ms.date: 06/22/2020
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cac20b18-0a6d-4243-bbda-a5d1b9476441
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3553f57191dc462067fc48dc1cf2394437912240
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2289009f4f0dc6d8e48dc5a6cccd58695d667da9
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484777"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603311"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>Шаг 3. Эксперимент, подразумевающий подключение к SQL с помощью Ruby
 

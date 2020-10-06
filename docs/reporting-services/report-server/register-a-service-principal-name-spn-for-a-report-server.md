@@ -1,7 +1,7 @@
 ---
 title: Регистрация имени субъекта-службы для сервера отчетов | Документы Майкрософт
 description: Узнайте, как создать имя субъекта-службы для службы сервера отчетов, если она выполняется от имени пользователя домена и в сети используется проверка подлинности Kerberos.
-ms.date: 02/12/2020
+ms.date: 09/24/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d5f52195deab514d4f7bcc03c77d9cb9a5c69b3
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 4fad93d5682a8e3cfdd6fdf5341944c4b4b58a83
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84544506"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603173"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>зарегистрировать имя участника-службы для сервера отчетов
   При развертывании служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в сети, где для взаимной проверки подлинности используется протокол Kerberos, а сервер отчетов настроен для запуска от учетной записи пользователя домена, необходимо создать для службы сервера отчетов имя участника-службы (SPN).  
@@ -32,10 +32,10 @@ ms.locfileid: "84544506"
   
 ## <a name="syntax"></a>Синтаксис  
 
-При управлении именами субъектов-служб с помощью SetSPN имя субъекта-службы должно быть введено в правильном формате. SPN имеет следующий формат: `<serviceclass>/host:<por>`. Синтаксис команд, применяющийся в программе SetSPN для создания имени участника-службы для сервера отчетов, выглядит следующим образом.  
+При управлении именами субъектов-служб с помощью SetSPN имя субъекта-службы должно быть введено в правильном формате. Формат имени субъекта-службы HTTP — `http/host`. Синтаксис команд, применяющийся в программе SetSPN для создания имени участника-службы для сервера отчетов, выглядит следующим образом.  
   
 ```  
-Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>  
+Setspn -s http/<computer-name>.<domain-name> <domain-user-account>  
 ```  
   
  **SetSPN** входит в комплект Windows Server. Аргумент **-s** добавляет имена субъектов-служб после проверки на отсутствие дубликатов. **Примечание. -s** доступен в Windows Server, начиная с Windows Server 2008.  
@@ -57,10 +57,10 @@ Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>
 4.  Скопируйте следующую команду, заменив заполнители значениями для конкретной сети:  
   
     ```  
-    Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>  
+    Setspn -s http/<computer-name>.<domain-name> <domain-user-account>  
     ```  
   
-    Например: `Setspn -s http/MyReportServer.MyDomain.com:80 MyDomainUser`  
+    Например: `Setspn -s http/MyReportServer.MyDomain.com MyDomainUser`  
   
 5.  Выполните команду.  
   

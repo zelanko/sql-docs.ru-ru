@@ -2,7 +2,7 @@
 title: Основные сведения о транзакциях XA
 description: Microsoft JDBC Driver для SQL Server обеспечивает поддержку дополнительных распределенных транзакций на платформе Java, Enterprise Edition/JDBC 2.0.
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 09/29/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ff48d23727c8dd48048293dd34127b6acbb3f005
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: f64cbc7b054f6e60285b3a34921e3219ddd507ff
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84294004"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529335"
 ---
 # <a name="understanding-xa-transactions"></a>Основные сведения о транзакциях XA
 
@@ -63,7 +63,7 @@ ms.locfileid: "84294004"
 > Компоненты распределенных транзакций JDBC находятся в каталоге XA в каталоге установки драйвера JDBC. К этим компонентам относятся файлы xa_install.sql и sqljdbc_xa.dll. Если на разных клиентах установлены разные версии драйвера JDBC, рекомендуется использовать последнюю версию sqljdbc_xa.dll на сервере.  
 
 > [!NOTE]  
-> Начиная с общедоступной предварительной версии CTP 2.0 SQL Server 2019, компоненты распределенных транзакций JDBC XA включены в ядро SQL Server, и их можно включить или отключить с помощью системной хранимой процедуры.
+> Начиная с накопительного пакета обновления 16 SQL Server 2017 и в SQL Server 2019, компоненты распределенных транзакций JDBC XA включены в ядро SQL Server, и их можно включить или отключить с помощью системной хранимой процедуры.
 > Чтобы необходимые компоненты могли выполнять распределенные транзакции XA с помощью драйвера JDBC, выполните следующую сохраненную процедуру.
 >
 > EXEC sp_sqljdbc_xa_install
@@ -170,14 +170,14 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL<version>.<insta
   
 ### <a name="configuring-the-user-defined-roles"></a>Настройка определяемых пользователем ролей
 
-Чтобы предоставить определенному пользователю разрешения для участия в распределенных транзакциях через драйвер JDBC, его необходимо включить в роль SqlJDBCXAUser. Например, следующий код [!INCLUDE[tsql](../../includes/tsql-md.md)] позволяет добавить пользователя с именем shelby (стандартное имя входа пользователя SQL) в роль SqlJDBCXAUser:  
+Чтобы предоставить определенному пользователю разрешения для участия в распределенных транзакциях через драйвер JDBC, его необходимо включить в роль SqlJDBCXAUser. Например, следующий код [!INCLUDE[tsql](../../includes/tsql-md.md)] позволяет добавить пользователя с именем shelly (стандартное имя входа пользователя SQL) в роль SqlJDBCXAUser:  
 
 ```sql
 USE master  
 GO  
-EXEC sp_grantdbaccess 'shelby', 'shelby'  
+EXEC sp_grantdbaccess 'shelly', 'shelly'  
 GO  
-EXEC sp_addrolemember [SqlJDBCXAUser], 'shelby'  
+EXEC sp_addrolemember [SqlJDBCXAUser], 'shelly'  
 ```
 
 Определяемые пользователем роли SQL определяются в рамках базы данных. Чтобы создать собственную роль в целях безопасности, необходимо определить роль в каждой базе данных и добавлять пользователей отдельно для каждой базы данных. Роль SqlJDBCXAUser строго определена в базе данных master, так как она используется для предоставления доступа к расширенным хранимым процедурам SQL JDBC, находящимся в базе данных master. Сначала необходимо предоставить отдельным пользователям доступ к базе данных master, а затем выполнить вход в базу данных master и предоставить этим пользователям доступ к роли SqlJDBCXAUser.  

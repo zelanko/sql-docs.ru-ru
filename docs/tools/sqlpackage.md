@@ -9,13 +9,13 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 ms.reviewer: drswkier; sstein
-ms.date: 07/06/2020
-ms.openlocfilehash: dbf4c4de7e8bdcb945f2c11c0b63f7cf75ce318b
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.date: 09/29/2020
+ms.openlocfilehash: 52a67ff5c77bebb1fb122af29759b9a440ef6931
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989447"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498210"
 ---
 # <a name="sqlpackageexe"></a>SQLPackage.exe
 
@@ -136,7 +136,7 @@ sqlpackage.exe /Version
 |---|---|---|---|
 |**/Action:**|**/a**|Публикация|Указывает действие, подлежащее выполнению. |
 |**/AccessToken:**|**/at**|{строка}| Указывает маркер доступа для проверки подлинности на основе маркеров. Этот маркер используется при подключении к целевой базе данных. |
-|**/AzureKeyVaultAuthMethod:**|**/akv**|{Interactive&#124;ClientIdSecret}|Указывает способ проверки подлинности для доступа к Azure Key Vault. |
+|**/AzureKeyVaultAuthMethod:**|**/akv**|{Interactive&#124;ClientIdSecret}|Указывает метод проверки подлинности, используемый для доступа к Azure KeyVault, если операция публикации включает изменения в зашифрованную таблицу или столбец. |
 |**/ClientId:**|**/cid**|{строка}|Указывает идентификатор клиента, который будет использоваться при проверке подлинности в Azure Key Vault при необходимости. |
 |**/DeployScriptPath:**|**/dsp**|{строка}|Указывает необязательный путь для вывода скрипта развертывания. В среде Azure при использовании команд TSQL для создания или изменения базы данных master скрипт будет записан по тому же пути, но с именем выходного файла Filename_Master.sql. |
 |**/DeployReportPath:**|**/drp**|{строка}|Указывает необязательный путь для вывода XML-файла отчета о развертывании. |
@@ -313,7 +313,7 @@ sqlpackage.exe /Version
 |**/p:**|TableData=(STRING)|Указывает таблицу, из которой будут извлечены данные. Укажите имя таблицы со скобками или без скобок. Имя должно быть указано в формате: имя_схемы.идентификатор_таблицы. Этот параметр можно указывать несколько раз.|
 |**/p:**|TempDirectoryForTableData=(STRING)|Указывает временный каталог, используемый для буферизации табличных данных перед записью в файл пакета.|
 |**/p:**|TargetEngineVersion=({Default&#124;Latest&#124;V11&#124;V12} 'Latest')|Указывает предполагаемую версию целевой подсистемы. Это влияет на разрешение объектов, поддерживаемых серверами базы данных SQL Azure с возможностями версии 12, например оптимизированные для памяти таблицы в созданном BACPAC-элементе.|
-|**/p:**|VerifyFullTextDocumentTypesSupported=(BOOLEAN)|Указывает, следует ли проверять поддерживаемые типы полнотекстовых документов для базы данных SQL Microsoft Azure версии 12.|
+|**/p:**|VerifyFullTextDocumentTypesSupported=(BOOLEAN)|Указывает, следует ли проверять поддерживаемые типы полнотекстовых документов для базы данных Microsoft Azure SQL версии 12.|
   
 ## <a name="import-parameters-and-properties"></a>Параметры и свойства импорта
 

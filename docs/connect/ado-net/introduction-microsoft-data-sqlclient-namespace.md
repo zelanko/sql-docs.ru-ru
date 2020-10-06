@@ -1,7 +1,7 @@
 ---
 title: Введение в пространство имен Microsoft.Data.SqlClient
-description: Вводная страница для пространства имен Microsoft.Data.SqlClient.
-ms.date: 06/23/2019
+description: Узнайте подробнее о пространстве имен Microsoft.Data.SqlClient и о том, почему это предпочтительный способ подключения к SQL для приложений .NET.
+ms.date: 09/29/2020
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 3a4f0611d3708aba9557deb81ab702f29e7a7462
-ms.sourcegitcommit: 22f687e9e8b4f37b877b2d19c5090dade8fa26d0
+ms.openlocfilehash: c3af23cb3816ad45fa75516633749d1f011c930d
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334585"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529355"
 ---
 # <a name="introduction-to-microsoftdatasqlclient-namespace"></a>Введение в пространство имен Microsoft.Data.SqlClient
 
@@ -206,7 +206,7 @@ namespace Microsoft.Data.SqlClient.DataClassification
 
 ### <a name="utf-8-support"></a>Поддержка UTF-8.
 
-Поддержка UTF-8 не требует изменения кода приложения. Эти изменения SqlClient оптимизируют связь между клиентом и сервером, когда сервер поддерживает UTF-8, а базовым параметром сортировки столбца является UTF-8. См. раздел о UTF-8 в статье [Новые возможности SQL Server 2019 (15.x)](../../sql-server/what-s-new-in-sql-server-ver15.md).
+Поддержка UTF-8 не требует изменения кода приложения. Эти изменения SqlClient оптимизируют связь между клиентом и сервером, когда сервер поддерживает UTF-8, а базовым параметром сортировки столбца является UTF-8. См. раздел о UTF-8 в статье [Новые возможности SQL Server 2019](../../sql-server/what-s-new-in-sql-server-ver15.md).
 
 ### <a name="always-encrypted-with-enclaves"></a>Always encrypted с безопасными анклавами
 

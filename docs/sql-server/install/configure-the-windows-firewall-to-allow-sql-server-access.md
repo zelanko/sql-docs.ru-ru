@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dce5cf7e83be47bda2bcfef17b4602eb5f2fb49e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d6a8f6d48800dfd47454d92a7dca0a5a0b58b80f
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87238534"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497736"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -127,20 +127,20 @@ ms.locfileid: "87238534"
   
  В качестве альтернативы настройке именованного экземпляра для прослушивания фиксированного порта можно создать в брандмауэре исключение для программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например **sqlservr.exe** (для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]). Это хороший выход из положения, однако номер порта не будет отображаться в столбце **Локальный порт** на странице **Правила для входящих подключений** оснастки "Брандмауэр Windows в режиме повышенной безопасности". В результате аудит открытых портов станет сложнее. Еще один нюанс заключается в том, что при применении совокупного обновления или пакета обновления может измениться путь к исполняемому файлу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , что сделает правило брандмауэра недействительным.  
   
-##### <a name="to-add-a-program-exception-to-the-firewall-using-windows-firewall-with-advanced-security"></a>Добавление в брандмауэр исключения для программы при помощи элемента "Брандмауэр Windows в режиме повышенной безопасности"
+##### <a name="to-add-a-program-exception-to-the-firewall-using-windows-defender-firewall-with-advanced-security"></a>Добавление в брандмауэр исключения для программы при помощи элемента "Брандмауэр Защитника Windows в режиме повышенной безопасности"
   
-1. В меню "Пуск" наберите *wf.msc*. Щелкните **Брандмауэр Windows в режиме повышенной безопасности**.
+1. В меню "Пуск" наберите *wf.msc*. Нажмите клавишу ВВОД или выберите результат поиска "wf.msc", чтобы открыть **Брандмауэр Защитника Windows в режиме повышенной безопасности**.
 1. В левой панели щелкните **Правила для входящих подключений**.
 1. В правой панели в разделе **Действия** нажмите кнопку **Создать правило...** . Откроется **мастер создания правила для нового входящего подключения**.
 1. В разделе **Тип правила**выберите **Программа**. Выберите **Далее**.
 1. В разделе **Программа** выберите **Путь к программе**. Нажмите кнопку **Обзор** и найдите файл программы SQL Server. Этот файл называется sqlservr.exe. Обычно он находится в папке:
 
-   `C:\Program Files\Microsoft SQL Server\MSSQL13.<InstanceName>\MSSQL\Binn\sqlservr.exe`
+   `C:\Program Files\Microsoft SQL Server\MSSQL15.<InstanceName>\MSSQL\Binn\sqlservr.exe`
 
    Выберите **Далее**.
 
-1. В разделе **Действие** выберите вариант **Разрешить соединение**.  
-1. В разделе "Профиль" включите все три профиля. Выберите **Далее**.
+1. В разделе **Действие** выберите вариант **Разрешить подключение**. Выберите **Далее**.
+1. В разделе **Профиль** включите все три профиля. Выберите **Далее**.
 1. В поле **Имя**введите имя правила. Нажмите кнопку **Готово**.
 
 Дополнительные сведения о конечных точках см. в разделах [Настройка ядра СУБД на прослушивание нескольких портов TCP](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) и [Представления каталога конечных точек (Transact-SQL)](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md). 

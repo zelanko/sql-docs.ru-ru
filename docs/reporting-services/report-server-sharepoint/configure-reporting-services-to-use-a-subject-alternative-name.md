@@ -1,35 +1,37 @@
 ---
-title: Настройка использования альтернативного имени субъекта в Reporting Services | Документы Майкрософт
-description: Узнайте, как настроить службы SQL Server Reporting Services так, чтобы в них использовалось альтернативное имя субъекта (SAN), изменив файл rsreportserver.config и используя средство Netsh.exe.
-ms.date: 09/25/2017
+title: Настройка использования альтернативного имени субъекта в Reporting Services (SAN) | Документы Майкрософт
+description: Узнайте, как настроить службы SQL Server Reporting Services и Сервер отчетов Power BI так, чтобы в них использовалось альтернативное имя субъекта (SAN), изменив файл rsreportserver.config и используя средство Netsh.exe.
+ms.date: 09/27/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.technology: report-server-sharepoint
+ms.technology: security
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ecb4b0be06731070c0852f23375fafea0eed4434
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: cf1db4f6e07609ce6da38569732f7dba333f86ff
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767064"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497208"
 ---
-# <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>Настройка использования альтернативного имени субъекта в Reporting Services
+# <a name="configure-reporting-services-to-use-a-subject-alternative-name-san"></a>Настройка использования альтернативного имени субъекта в Reporting Services (SAN)
 
-В этом разделе объясняется, как настроить службы Reporting Services (SSRS) так, чтобы в них использовалось альтернативное имя субъекта (SAN), изменив файл rsreportserver.config и используя средство Netsh.exe.
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
-Инструкции применяются к URL-адресу службы отчетов, а также URL-адресу веб-службы.
+В этом разделе объясняется, как настроить службы Reporting Services (SSRS) и Сервер отчетов Power BI так, чтобы в них использовалось альтернативное имя субъекта (SAN), изменив файл rsreportserver.config и используя средство Netsh.exe.
 
-Чтобы использовать SAN, TLS/SSL-сертификат должен быть зарегистрирован на сервере, подписан и иметь закрытый ключ. Самозаверяющий сертификат использовать невозможно.  
+Эти инструкции относятся к URL-адресу веб-службы, а также к URL-адресу веб-портала в средстве Configuration Manager сервера отчетов.
+
+Чтобы использовать SAN, TLS/SSL-сертификат должен быть зарегистрирован на сервере, подписан и иметь закрытый ключ. Самозаверяющий сертификат использовать невозможно.
+
+URL-адреса в Reporting Services и Сервере отчетов Power BI можно настроить на использование сертификата TLS/SSL. Обычно сертификат имеет только имя субъекта, которое позволяет ему использовать только один URL-адрес для сеанса TLS (ранее —SSL). SAN — это дополнительное поле в сертификате, которое позволяет службе TLS прослушивать множество URL-адресов, а также совместно использовать порт TLS с другими приложениями. Например, SAN может быть похожим на `www.myreports.com`.
+
+Дополнительные сведения о параметрах TLS для служб Reporting Services см. в разделе [Настройка соединений TLS для сервера отчетов, работающего в собственном режиме](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
- URL-адреса в службах Reporting Services можно настроить для использования TLS/SSL-сертификата. Обычно сертификат имеет только имя субъекта, которое позволяет ему использовать только один URL-адрес для сеанса TLS (ранее —SSL). SAN — это дополнительное поле в сертификате, которое позволяет службе TLS прослушивать множество URL-адресов, а также совместно использовать порт TLS с другими приложениями. SAN выглядит следующим образом: `www.s2.com`.  
+## <a name="configure-to-use-a-subject-alternative-name-for-web-service-url"></a>Настройка для использования альтернативного имени субъекта для URL-адреса веб-службы
   
- Дополнительные сведения о параметрах TLS для служб Reporting Services см. в разделе [Настройка соединений TLS для сервера отчетов, работающего в собственном режиме](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
-  
-## <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>Настройка SSRS для использования альтернативного имени субъекта для URL-адреса веб-службы
-  
-1.  Запустите диспетчер конфигурации служб Reporting Services.  
+1.  Запустите диспетчер конфигурации Configuration Manager сервера отчетов.  
   
      Дополнительные сведения см. в разделе [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
@@ -41,21 +43,33 @@ ms.locfileid: "83767064"
   
 3.  Откройте файл rsreportserver.config.  
   
-     Файл для служб SSRS в собственном режиме находится в следующей папке по умолчанию:  
+     Файл для служб SSRS 2016 в собственном режиме находится в следующей папке по умолчанию:  
   
     ```  
-    \Program Files\Microsoft SQL Server\MSRS11.MSSQLSERVER\Reporting Services\ReportServer  
+    \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer  
     ```  
   
-4.  Скопируйте раздел URL-адреса для приложения веб-службы сервера отчетов.  
+     Файл для служб SSRS 2017 и более поздней версии находится в следующей папке по умолчанию:  
+  
+    ```  
+    \Program Files\Microsoft SQL Server Reporting Services\SSRS\ReportServer  
+    ```  
+    
+     Файл для Сервера отчетов Power BI находится в следующей папке по умолчанию:  
+  
+    ```  
+    \Program Files\Microsoft Power BI Report Server\PBIRS\ReportServer  
+    ```  
+  
+4.  Скопируйте раздел URL-адреса для приложения **ReportServerWebService**.
   
      Например, следующий исходный раздел URL-адреса:  
   
     ```  
         <URL>  
-         <UrlString>https://localhost:443</UrlString>  
-         <AccountSid>S-1-5-20</AccountSid>  
-         <AccountName>NT Authority\NetworkService</AccountName>  
+         <UrlString>https://+:443</UrlString>  
+         <AccountSid>S-1-5-80-2885764129-887777008-271615777-1616004480-2722851051</AccountSid>  
+         <AccountName>NT Service\ReportServer</AccountName>  
         </URL>  
   
     ```  
@@ -64,21 +78,25 @@ ms.locfileid: "83767064"
   
     ```  
     <URL>  
-         <UrlString>https://www.s1.com:443</UrlString>  
-         <AccountSid>S-1-5-20</AccountSid>  
-         <AccountName>NT Authority\NetworkService</AccountName>  
+         <UrlString>https://+:443</UrlString>  
+         <AccountSid>S-1-5-80-2885764129-887777008-271615777-1616004480-2722851051</AccountSid>  
+         <AccountName>NT Service\ReportServer</AccountName>  
         </URL>  
         <URL>  
-         <UrlString>https://www.s2.com:443</UrlString>  
-         <AccountSid>S-1-5-20</AccountSid>  
-         <AccountName>NT Authority\NetworkService</AccountName>  
+         <UrlString>https://www.myreports.com:443</UrlString>  
+         <AccountSid>S-1-5-80-2885764129-887777008-271615777-1616004480-2722851051/AccountSid>  
+         <AccountName>NT Service\ReportServer</AccountName>  
         </URL>  
   
     ```  
   
+  > [!TIP]  
+>  * Для SSRS 2017 и более поздних версий значение `AccountSid` составляет `S-1-5-80-4050220999-2730734961-1537482082-519850261-379003301`, а значение `AccountName` — `NT SERVICE\SQLServerReportingServices`.
+>  * Для Сервера отчетов Power BI значение `AccountSid` составляет `S-1-5-80-1730998386-2757299892-37364343-1607169425-3512908663`, а значение `AccountName` — `NT SERVICE\PowerBIReportServer`.
+  
 5.  Сохраните файл rsreportserver.config.  
   
-6.  Откройте командную строку от имени администратора и запустите средство Netsh.exe.  
+6.  Откройте командную строку от **имени администратора** и запустите средство Netsh.exe.  
   
     ```  
     C:\windows\system32\netsh  
@@ -99,11 +117,11 @@ ms.locfileid: "83767064"
      Появится запись, аналогичная следующей.  
   
     ```  
-    Reserved URL            : https:// www.s1.com:443/ReportServer/  
+    Reserved URL            : https://+:443/ReportServer/  
         User: NT SERVICE\ReportServer  
             Listen: Yes  
             Delegate: No  
-            SDDL: D:(A;;GX;;;S-1-5-80-1234567890-123456789-123456789-123456789-1234567890)  
+            SDDL: D:(A;;GX;;;S-1-5-80-2885764129-887777008-271615777-1616004480-2722851051)  
     ```  
   
      urlacl — это DACL (список управления доступом на уровне пользователей) для зарезервированного URL-адреса.  
@@ -111,12 +129,28 @@ ms.locfileid: "83767064"
 9. Создайте альтернативное имя субъекта с тем же пользователем и SDDL как существующую запись, введя следующее.  
   
     ```  
-    netsh http>add urlacl  url=https://www.s2.com:443/ReportServer    
-    user="NT Service\ReportServer" sddl=D:(A;;GX;;;S-1-5-80-1234567980-12346579-123456789-123456789-1234567890)  
+    netsh http>add urlacl  url=https://www.myreports.com:443/ReportServer    
+    user="NT Service\ReportServer" sddl=D:(A;;GX;;;S-1-5-80-2885764129-887777008-271615777-1616004480-2722851051)  
   
     ```  
   
-10. Щелкните на странице **Состояние сервера отчетов** диспетчера конфигурации Reporting Services кнопку **Остановить** , а затем нажмите **Запустить** , чтобы перезапустить сервер отчетов.  
+10. Для **URL-адреса веб-портала**создайте новую запись для альтернативного имени субъекта, введя следующее:
+
+    ```  
+    netsh http>add urlacl  url=https://www.myreports.com:443/Reports  
+    user="NT Service\ReportServer" sddl=D:(A;;GX;;;S-1-5-80-2885764129-887777008-271615777-1616004480-2722851051)  
+  
+    ```  
+> [!TIP]  
+>  * Для SSRS 2017 и более поздних версий значение `user` составляет `NT SERVICE\SQLServerReportingServices`, а значение `sddl` — `D:(A;;GX;;;S-1-5-80-4050220999-2730734961-1537482082-519850261-379003301)`.
+>  * Для Сервера отчетов Power BI значение `user` составляет `NT SERVICE\PowerBIReportServer`, а значение `sddl` — `S-1-5-80-1730998386-2757299892-37364343-1607169425-3512908663`.
+
+> [!NOTE]  
+> Для Сервера отчетов Power BI необходимо создать две дополнительные записи для альтернативного имени субъекта, введя следующее:
+>  * `add urlacl url=https://www.myreports.com:443/PowerBI user="NT SERVICE\PowerBIReportServer" sddl=D:(A;;GX;;;S-1-5-80-1730998386-2757299892-37364343-1607169425-3512908663)`
+>  * `add urlacl url=https://www.myreports.com:443/wopi user="NT SERVICE\PowerBIReportServer" sddl=D:(A;;GX;;;S-1-5-80-1730998386-2757299892-37364343-1607169425-3512908663)`
+
+11. Щелкните на странице **Состояние сервера отчетов** диспетчера конфигурации сервера отчетов кнопку **Остановить**, а затем нажмите **Запустить**, чтобы перезапустить сервер отчетов.  
   
 ## <a name="see-also"></a>См. также раздел
 

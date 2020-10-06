@@ -3,22 +3,32 @@ title: Заметки о выпуске
 description: В этой статье содержатся заметки о выпуске Azure Data Studio с ноября 2017 года до настоящего момента. Для многих общих проблем приводятся ссылки на дополнительные сведения.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.topic: overview
+ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 09/22/2020
-ms.openlocfilehash: aa55d393955eecaa4ba9af947985622334c59141
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.date: 09/30/2020
+ms.openlocfilehash: fdcba98194643a823d7cef79dde0e8be335f056d
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364197"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603471"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Заметки о выпуске для Azure Data Studio
 
 **[Скачайте и установите последний выпуск.](./download-azure-data-studio.md)**
+
+## <a name="september-2020-hotfix"></a>Сентябрь 2020 г. (исправление)
+
+30 сентября 2020 г. &nbsp; / &nbsp; версия: 1.22.1
+
+&nbsp;
+
+| Изменение | Сведения |
+| ------ | ------- |
+| Устраненные ошибки и проблемы | Полный список исправлений см. на странице [ошибок и проблем в GitHub](https://github.com/microsoft/azuredatastudio/releases/tag/untagged-ca77e3ca71bd29150699). |
 
 ## <a name="september-2020"></a>Сентябрь 2020 г.
 
@@ -72,7 +82,7 @@ ms.locfileid: "91364197"
 
 &nbsp;
 
-| Изменение | Сведения |
+| Change | Сведения |
 | :----- | :------ |
 | Добавлен новый обзор возможностей | Страница приветствия и палитра команд теперь позволяют пользователям запустить обзор самых популярных возможностей, включая мини-представления "Подключения" и "Записные книжки", а также магазин расширений. |
 | Новые функции записной книжки | &bull; &nbsp; Поддержка заголовков на панели инструментов Markdown<br/> &bull; &nbsp; Параллельный предпросмотр Markdown в текстовых ячейках
